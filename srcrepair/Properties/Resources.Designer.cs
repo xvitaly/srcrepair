@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace srcrepair.Properties
-{
-
-
+namespace srcrepair.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,49 +22,113 @@ namespace srcrepair.Properties
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("srcrepair.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Source Repair.
+        /// </summary>
+        internal static string AppName {
+            get {
+                return ResourceManager.GetString("AppName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Обнаружено исключение, которое мы не смогли обработать. Пожалуйста, сообщите разработчикам на email: vitaly@easycoding.org..
+        /// </summary>
+        internal static string GeneralErrorDetected {
+            get {
+                return ResourceManager.GetString("GeneralErrorDetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Выполнить очистку?.
+        /// </summary>
+        internal static string PS_ExecuteMSG {
+            get {
+                return ResourceManager.GetString("PS_ExecuteMSG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Вы неправильно выбрали язык Steam из выпадающего списка, поэтому будет использоваться английский!.
+        /// </summary>
+        internal static string PS_NoLangSelected {
+            get {
+                return ResourceManager.GetString("PS_NoLangSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Вы ничего не выбрали! Выберите хотя бы одну из опций очистки и повторите запуск!.
+        /// </summary>
+        internal static string PS_NothingSelected {
+            get {
+                return ResourceManager.GetString("PS_NothingSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Внимание! В памяти был обнаружен запущенный процесс Steam. Steam был успешно завершён..
+        /// </summary>
+        internal static string PS_ProcessDetected {
+            get {
+                return ResourceManager.GetString("PS_ProcessDetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Очистка успешно выполнена! Спасибо за использование программы. Теперь Вы можете запустить Steam!.
+        /// </summary>
+        internal static string PS_SeqCompleted {
+            get {
+                return ResourceManager.GetString("PS_SeqCompleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ключи реестра, относящиеся к Steam не обнаружены. Вам не нужна их чистка. Нажмите OK для выхода из программы!.
+        /// </summary>
+        internal static string SteamNotDetected {
+            get {
+                return ResourceManager.GetString("SteamNotDetected", resourceCulture);
             }
         }
     }

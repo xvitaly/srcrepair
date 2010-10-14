@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("srcrepair")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Source Repair")]
+[assembly: AssemblyDescription("Source Repair")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("EasyCoding")]
-[assembly: AssemblyProduct("srcrepair")]
-[assembly: AssemblyCopyright("Copyright © EasyCoding 2010")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("EasyCoding Team")]
+[assembly: AssemblyProduct("Source Repair")]
+[assembly: AssemblyCopyright("(c) 2005-2011 EasyCoding Team. All rights reserved.")]
+[assembly: AssemblyTrademark("TF2 Repair, EasyCoding, EasyCoding Software Group and EasyCoding Team are trademarks of EasyCoding Team.")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("0.1.0.11")]
+[assembly: AssemblyFileVersion("0.1.0.11")]

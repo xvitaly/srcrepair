@@ -70,6 +70,15 @@
             this.L_GT_ResHor = new System.Windows.Forms.Label();
             this.ConfigEditor = new System.Windows.Forms.TabPage();
             this.ProblemSolver = new System.Windows.Forms.TabPage();
+            this.PS_GB_Remover = new System.Windows.Forms.GroupBox();
+            this.PS_GB_AdvFeat = new System.Windows.Forms.GroupBox();
+            this.PS_GB_SInfo = new System.Windows.Forms.GroupBox();
+            this.PS_GB_Solver = new System.Windows.Forms.GroupBox();
+            this.PS_ExecuteNow = new System.Windows.Forms.Button();
+            this.PS_SteamLang = new System.Windows.Forms.ComboBox();
+            this.L_PS_SteamLang = new System.Windows.Forms.Label();
+            this.PS_CleanRegistry = new System.Windows.Forms.CheckBox();
+            this.PS_CleanBlobs = new System.Windows.Forms.CheckBox();
             this.FPSCfgInstall = new System.Windows.Forms.TabPage();
             this.RescueCentre = new System.Windows.Forms.TabPage();
             this.LoginSel = new System.Windows.Forms.ComboBox();
@@ -101,6 +110,8 @@
             this.GraphicTweaker.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResVert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResHor)).BeginInit();
+            this.ProblemSolver.SuspendLayout();
+            this.PS_GB_Solver.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.StatusBar.SuspendLayout();
             this.SuspendLayout();
@@ -601,13 +612,113 @@
             // 
             // ProblemSolver
             // 
+            this.ProblemSolver.Controls.Add(this.PS_GB_Remover);
+            this.ProblemSolver.Controls.Add(this.PS_GB_AdvFeat);
+            this.ProblemSolver.Controls.Add(this.PS_GB_SInfo);
+            this.ProblemSolver.Controls.Add(this.PS_GB_Solver);
             this.ProblemSolver.Location = new System.Drawing.Point(4, 22);
             this.ProblemSolver.Name = "ProblemSolver";
             this.ProblemSolver.Padding = new System.Windows.Forms.Padding(3);
             this.ProblemSolver.Size = new System.Drawing.Size(462, 379);
             this.ProblemSolver.TabIndex = 2;
-            this.ProblemSolver.Text = "Устранение проблем";
+            this.ProblemSolver.Text = "Устранение проблем и очистка";
             this.ProblemSolver.UseVisualStyleBackColor = true;
+            // 
+            // PS_GB_Remover
+            // 
+            this.PS_GB_Remover.Location = new System.Drawing.Point(296, 6);
+            this.PS_GB_Remover.Name = "PS_GB_Remover";
+            this.PS_GB_Remover.Size = new System.Drawing.Size(160, 367);
+            this.PS_GB_Remover.TabIndex = 3;
+            this.PS_GB_Remover.TabStop = false;
+            this.PS_GB_Remover.Text = "Удалить:";
+            // 
+            // PS_GB_AdvFeat
+            // 
+            this.PS_GB_AdvFeat.Location = new System.Drawing.Point(6, 315);
+            this.PS_GB_AdvFeat.Name = "PS_GB_AdvFeat";
+            this.PS_GB_AdvFeat.Size = new System.Drawing.Size(284, 58);
+            this.PS_GB_AdvFeat.TabIndex = 2;
+            this.PS_GB_AdvFeat.TabStop = false;
+            this.PS_GB_AdvFeat.Text = "Специальные функции";
+            // 
+            // PS_GB_SInfo
+            // 
+            this.PS_GB_SInfo.Location = new System.Drawing.Point(6, 147);
+            this.PS_GB_SInfo.Name = "PS_GB_SInfo";
+            this.PS_GB_SInfo.Size = new System.Drawing.Size(284, 162);
+            this.PS_GB_SInfo.TabIndex = 1;
+            this.PS_GB_SInfo.TabStop = false;
+            this.PS_GB_SInfo.Text = "Информация о текущей установке Steam";
+            // 
+            // PS_GB_Solver
+            // 
+            this.PS_GB_Solver.Controls.Add(this.PS_ExecuteNow);
+            this.PS_GB_Solver.Controls.Add(this.PS_SteamLang);
+            this.PS_GB_Solver.Controls.Add(this.L_PS_SteamLang);
+            this.PS_GB_Solver.Controls.Add(this.PS_CleanRegistry);
+            this.PS_GB_Solver.Controls.Add(this.PS_CleanBlobs);
+            this.PS_GB_Solver.Location = new System.Drawing.Point(6, 6);
+            this.PS_GB_Solver.Name = "PS_GB_Solver";
+            this.PS_GB_Solver.Size = new System.Drawing.Size(284, 135);
+            this.PS_GB_Solver.TabIndex = 0;
+            this.PS_GB_Solver.TabStop = false;
+            this.PS_GB_Solver.Text = "Устранение проблем Steam";
+            // 
+            // PS_ExecuteNow
+            // 
+            this.PS_ExecuteNow.Enabled = false;
+            this.PS_ExecuteNow.Location = new System.Drawing.Point(93, 96);
+            this.PS_ExecuteNow.Name = "PS_ExecuteNow";
+            this.PS_ExecuteNow.Size = new System.Drawing.Size(101, 23);
+            this.PS_ExecuteNow.TabIndex = 4;
+            this.PS_ExecuteNow.Text = "Выполнить!";
+            this.PS_ExecuteNow.UseVisualStyleBackColor = true;
+            this.PS_ExecuteNow.Click += new System.EventHandler(this.PS_ExecuteNow_Click);
+            // 
+            // PS_SteamLang
+            // 
+            this.PS_SteamLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PS_SteamLang.Enabled = false;
+            this.PS_SteamLang.FormattingEnabled = true;
+            this.PS_SteamLang.Items.AddRange(new object[] {
+            "Английский (English)",
+            "Русский  (Russian)"});
+            this.PS_SteamLang.Location = new System.Drawing.Point(140, 69);
+            this.PS_SteamLang.Name = "PS_SteamLang";
+            this.PS_SteamLang.Size = new System.Drawing.Size(129, 21);
+            this.PS_SteamLang.TabIndex = 3;
+            // 
+            // L_PS_SteamLang
+            // 
+            this.L_PS_SteamLang.AutoSize = true;
+            this.L_PS_SteamLang.Location = new System.Drawing.Point(12, 72);
+            this.L_PS_SteamLang.Name = "L_PS_SteamLang";
+            this.L_PS_SteamLang.Size = new System.Drawing.Size(122, 13);
+            this.L_PS_SteamLang.TabIndex = 2;
+            this.L_PS_SteamLang.Text = "Выберите язык Steam:";
+            // 
+            // PS_CleanRegistry
+            // 
+            this.PS_CleanRegistry.AutoSize = true;
+            this.PS_CleanRegistry.Location = new System.Drawing.Point(15, 42);
+            this.PS_CleanRegistry.Name = "PS_CleanRegistry";
+            this.PS_CleanRegistry.Size = new System.Drawing.Size(266, 17);
+            this.PS_CleanRegistry.TabIndex = 1;
+            this.PS_CleanRegistry.Text = "Очистить записи Steam, хранящиеся в реестре";
+            this.PS_CleanRegistry.UseVisualStyleBackColor = true;
+            this.PS_CleanRegistry.CheckedChanged += new System.EventHandler(this.PS_CleanRegistry_CheckedChanged);
+            // 
+            // PS_CleanBlobs
+            // 
+            this.PS_CleanBlobs.AutoSize = true;
+            this.PS_CleanBlobs.Location = new System.Drawing.Point(15, 19);
+            this.PS_CleanBlobs.Name = "PS_CleanBlobs";
+            this.PS_CleanBlobs.Size = new System.Drawing.Size(233, 17);
+            this.PS_CleanBlobs.TabIndex = 0;
+            this.PS_CleanBlobs.Text = "Очистить .blob-файлы из каталога Steam";
+            this.PS_CleanBlobs.UseVisualStyleBackColor = true;
+            this.PS_CleanBlobs.CheckedChanged += new System.EventHandler(this.PS_CleanBlobs_CheckedChanged);
             // 
             // FPSCfgInstall
             // 
@@ -831,6 +942,9 @@
             this.GraphicTweaker.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResVert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResHor)).EndInit();
+            this.ProblemSolver.ResumeLayout(false);
+            this.PS_GB_Solver.ResumeLayout(false);
+            this.PS_GB_Solver.PerformLayout();
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
             this.StatusBar.ResumeLayout(false);
@@ -911,6 +1025,15 @@
         private System.Windows.Forms.ComboBox GT_HDR;
         private System.Windows.Forms.ComboBox GT_DxMode;
         private System.Windows.Forms.Button GT_SaveApply;
+        private System.Windows.Forms.GroupBox PS_GB_Remover;
+        private System.Windows.Forms.GroupBox PS_GB_AdvFeat;
+        private System.Windows.Forms.GroupBox PS_GB_SInfo;
+        private System.Windows.Forms.GroupBox PS_GB_Solver;
+        private System.Windows.Forms.Button PS_ExecuteNow;
+        private System.Windows.Forms.ComboBox PS_SteamLang;
+        private System.Windows.Forms.Label L_PS_SteamLang;
+        private System.Windows.Forms.CheckBox PS_CleanRegistry;
+        private System.Windows.Forms.CheckBox PS_CleanBlobs;
     }
 }
 
