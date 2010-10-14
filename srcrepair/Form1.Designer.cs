@@ -1100,7 +1100,7 @@
             // 
             // MNUGroup2
             // 
-            this.MNUGroup2.Image = global::srcrepair.Properties.Resources.tf_ru;
+            this.MNUGroup2.Image = global::srcrepair.Properties.Resources.tfru;
             this.MNUGroup2.Name = "MNUGroup2";
             this.MNUGroup2.Size = new System.Drawing.Size(293, 22);
             this.MNUGroup2.Text = "&Team-Fortress.ru";

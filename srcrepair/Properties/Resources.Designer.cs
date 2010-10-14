@@ -202,16 +202,23 @@ namespace srcrepair.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap tf_ru {
+        internal static System.Drawing.Icon TF2Repair {
             get {
-                object obj = ResourceManager.GetObject("tf-ru", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                object obj = ResourceManager.GetObject("TF2Repair", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
         internal static System.Drawing.Bitmap tf2world {
             get {
                 object obj = ResourceManager.GetObject("tf2world", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap tfru {
+            get {
+                object obj = ResourceManager.GetObject("tfru", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

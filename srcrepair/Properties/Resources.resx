@@ -142,7 +142,7 @@
   <data name="bug" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bug.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tf-ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="tfru" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tf-ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="installer" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -188,5 +188,8 @@
   </data>
   <data name="Info" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TF2Repair" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\TF2Repair.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
