@@ -117,36 +117,76 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AppName" xml:space="preserve">
-    <value>Source Repair</value>
-    <comment>Хранит название приложения</comment>
+  <data name="PS_SeqCompleted" xml:space="preserve">
+    <value>Очистка успешно выполнена! Спасибо за использование программы. Теперь Вы можете запустить Steam!</value>
+    <comment>Сообщение об успешном завершении очистки</comment>
   </data>
-  <data name="GeneralErrorDetected" xml:space="preserve">
-    <value>Обнаружено исключение, которое мы не смогли обработать. Пожалуйста, сообщите разработчикам на email: vitaly@easycoding.org.</value>
-    <comment>Сообщение, выдаваемое при различных исключениях...</comment>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PS_ExecuteMSG" xml:space="preserve">
     <value>Выполнить очистку?</value>
     <comment>Вопрос, задаваемый пользователю о необходимости выполнения очистки</comment>
   </data>
-  <data name="PS_NoLangSelected" xml:space="preserve">
-    <value>Вы неправильно выбрали язык Steam из выпадающего списка, поэтому будет использоваться английский!</value>
-    <comment>Сообщение, выдаваемое при неправильном выборе языка из выпадающего списка</comment>
+  <data name="GeneralErrorDetected" xml:space="preserve">
+    <value>Обнаружено исключение, которое мы не смогли обработать. Пожалуйста, сообщите разработчикам на email: vitaly@easycoding.org.</value>
+    <comment>Сообщение, выдаваемое при различных исключениях...</comment>
+  </data>
+  <data name="tf2world" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tf2world.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="report" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bug" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bug.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tf-ru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tf-ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="installer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\installer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EasyCoding" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EasyCoding.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PS_NothingSelected" xml:space="preserve">
     <value>Вы ничего не выбрали! Выберите хотя бы одну из опций очистки и повторите запуск!</value>
     <comment>Сообщение, выдаваемое при отсутствии отмеченных чекбоксов</comment>
   </data>
-  <data name="PS_ProcessDetected" xml:space="preserve">
-    <value>Внимание! В памяти был обнаружен запущенный процесс Steam. Steam был успешно завершён.</value>
-    <comment>Сообщение, выдаваемое при обнаружении в памяти активного процесса Steam.exe</comment>
+  <data name="PS_NoLangSelected" xml:space="preserve">
+    <value>Вы неправильно выбрали язык Steam из выпадающего списка, поэтому будет использоваться английский!</value>
+    <comment>Сообщение, выдаваемое при неправильном выборе языка из выпадающего списка</comment>
   </data>
-  <data name="PS_SeqCompleted" xml:space="preserve">
-    <value>Очистка успешно выполнена! Спасибо за использование программы. Теперь Вы можете запустить Steam!</value>
-    <comment>Сообщение об успешном завершении очистки</comment>
+  <data name="hint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SteamNotDetected" xml:space="preserve">
     <value>Ключи реестра, относящиеся к Steam не обнаружены. Вам не нужна их чистка. Нажмите OK для выхода из программы!</value>
     <comment>Сообщение, выдаваемое при отсутствии в реестре ключей Steam</comment>
+  </data>
+  <data name="Wizard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Wizard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="steam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\steam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>Source Repair</value>
+    <comment>Хранит название приложения</comment>
+  </data>
+  <data name="PS_ProcessDetected" xml:space="preserve">
+    <value>Внимание! В памяти был обнаружен запущенный процесс Steam. Steam был успешно завершён.</value>
+    <comment>Сообщение, выдаваемое при обнаружении в памяти активного процесса Steam.exe</comment>
+  </data>
+  <data name="Help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

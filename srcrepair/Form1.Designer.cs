@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainW));
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
             this.GT_SaveApply = new System.Windows.Forms.Button();
@@ -71,8 +72,27 @@
             this.ConfigEditor = new System.Windows.Forms.TabPage();
             this.ProblemSolver = new System.Windows.Forms.TabPage();
             this.PS_GB_Remover = new System.Windows.Forms.GroupBox();
+            this.PS_AllowRemCtrls = new System.Windows.Forms.CheckBox();
+            this.PS_RemGraphOpts = new System.Windows.Forms.Button();
+            this.PS_RemDemos = new System.Windows.Forms.Button();
+            this.PS_RemScreenShots = new System.Windows.Forms.Button();
+            this.PS_RemNavFiles = new System.Windows.Forms.Button();
+            this.PS_RemSoundCache = new System.Windows.Forms.Button();
+            this.PS_RemGraphCache = new System.Windows.Forms.Button();
+            this.PS_RemOldCfgs = new System.Windows.Forms.Button();
+            this.PS_RemOldSpray = new System.Windows.Forms.Button();
+            this.PS_RemDnlCache = new System.Windows.Forms.Button();
+            this.PS_RemCustMaps = new System.Windows.Forms.Button();
             this.PS_GB_AdvFeat = new System.Windows.Forms.GroupBox();
+            this.PS_ResetSettings = new System.Windows.Forms.Button();
             this.PS_GB_SInfo = new System.Windows.Forms.GroupBox();
+            this.PS_WarningMsg = new System.Windows.Forms.Label();
+            this.PS_PathDetector = new System.Windows.Forms.Label();
+            this.PS_RSteamLogin = new System.Windows.Forms.Label();
+            this.PS_RSteamPath = new System.Windows.Forms.Label();
+            this.L_PS_PathDetector = new System.Windows.Forms.Label();
+            this.L_PS_RSteamLogin = new System.Windows.Forms.Label();
+            this.L_PS_RSteamPath = new System.Windows.Forms.Label();
             this.PS_GB_Solver = new System.Windows.Forms.GroupBox();
             this.PS_ExecuteNow = new System.Windows.Forms.Button();
             this.PS_SteamLang = new System.Windows.Forms.ComboBox();
@@ -111,6 +131,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResVert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResHor)).BeginInit();
             this.ProblemSolver.SuspendLayout();
+            this.PS_GB_Remover.SuspendLayout();
+            this.PS_GB_AdvFeat.SuspendLayout();
+            this.PS_GB_SInfo.SuspendLayout();
             this.PS_GB_Solver.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.StatusBar.SuspendLayout();
@@ -626,6 +649,17 @@
             // 
             // PS_GB_Remover
             // 
+            this.PS_GB_Remover.Controls.Add(this.PS_AllowRemCtrls);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemGraphOpts);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemDemos);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemScreenShots);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemNavFiles);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemSoundCache);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemGraphCache);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemOldCfgs);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemOldSpray);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemDnlCache);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemCustMaps);
             this.PS_GB_Remover.Location = new System.Drawing.Point(296, 6);
             this.PS_GB_Remover.Name = "PS_GB_Remover";
             this.PS_GB_Remover.Size = new System.Drawing.Size(160, 367);
@@ -633,8 +667,120 @@
             this.PS_GB_Remover.TabStop = false;
             this.PS_GB_Remover.Text = "Удалить:";
             // 
+            // PS_AllowRemCtrls
+            // 
+            this.PS_AllowRemCtrls.AutoSize = true;
+            this.PS_AllowRemCtrls.Location = new System.Drawing.Point(15, 28);
+            this.PS_AllowRemCtrls.Name = "PS_AllowRemCtrls";
+            this.PS_AllowRemCtrls.Size = new System.Drawing.Size(132, 17);
+            this.PS_AllowRemCtrls.TabIndex = 10;
+            this.PS_AllowRemCtrls.Text = "Разрешить удаление";
+            this.PS_AllowRemCtrls.UseVisualStyleBackColor = true;
+            this.PS_AllowRemCtrls.CheckedChanged += new System.EventHandler(this.PS_AllowRemCtrls_CheckedChanged);
+            // 
+            // PS_RemGraphOpts
+            // 
+            this.PS_RemGraphOpts.Enabled = false;
+            this.PS_RemGraphOpts.Location = new System.Drawing.Point(6, 328);
+            this.PS_RemGraphOpts.Name = "PS_RemGraphOpts";
+            this.PS_RemGraphOpts.Size = new System.Drawing.Size(148, 23);
+            this.PS_RemGraphOpts.TabIndex = 9;
+            this.PS_RemGraphOpts.Text = "Настройки графики";
+            this.PS_RemGraphOpts.UseVisualStyleBackColor = true;
+            // 
+            // PS_RemDemos
+            // 
+            this.PS_RemDemos.Enabled = false;
+            this.PS_RemDemos.Location = new System.Drawing.Point(6, 299);
+            this.PS_RemDemos.Name = "PS_RemDemos";
+            this.PS_RemDemos.Size = new System.Drawing.Size(148, 23);
+            this.PS_RemDemos.TabIndex = 8;
+            this.PS_RemDemos.Text = "Записанные демки";
+            this.PS_RemDemos.UseVisualStyleBackColor = true;
+            // 
+            // PS_RemScreenShots
+            // 
+            this.PS_RemScreenShots.Enabled = false;
+            this.PS_RemScreenShots.Location = new System.Drawing.Point(6, 270);
+            this.PS_RemScreenShots.Name = "PS_RemScreenShots";
+            this.PS_RemScreenShots.Size = new System.Drawing.Size(148, 23);
+            this.PS_RemScreenShots.TabIndex = 7;
+            this.PS_RemScreenShots.Text = "Все скриншоты";
+            this.PS_RemScreenShots.UseVisualStyleBackColor = true;
+            // 
+            // PS_RemNavFiles
+            // 
+            this.PS_RemNavFiles.Enabled = false;
+            this.PS_RemNavFiles.Location = new System.Drawing.Point(6, 240);
+            this.PS_RemNavFiles.Name = "PS_RemNavFiles";
+            this.PS_RemNavFiles.Size = new System.Drawing.Size(148, 23);
+            this.PS_RemNavFiles.TabIndex = 6;
+            this.PS_RemNavFiles.Text = "Навигацию ботов";
+            this.PS_RemNavFiles.UseVisualStyleBackColor = true;
+            // 
+            // PS_RemSoundCache
+            // 
+            this.PS_RemSoundCache.Enabled = false;
+            this.PS_RemSoundCache.Location = new System.Drawing.Point(6, 211);
+            this.PS_RemSoundCache.Name = "PS_RemSoundCache";
+            this.PS_RemSoundCache.Size = new System.Drawing.Size(148, 23);
+            this.PS_RemSoundCache.TabIndex = 5;
+            this.PS_RemSoundCache.Text = "Звуковой кэш";
+            this.PS_RemSoundCache.UseVisualStyleBackColor = true;
+            // 
+            // PS_RemGraphCache
+            // 
+            this.PS_RemGraphCache.Enabled = false;
+            this.PS_RemGraphCache.Location = new System.Drawing.Point(6, 182);
+            this.PS_RemGraphCache.Name = "PS_RemGraphCache";
+            this.PS_RemGraphCache.Size = new System.Drawing.Size(148, 23);
+            this.PS_RemGraphCache.TabIndex = 4;
+            this.PS_RemGraphCache.Text = "Графический кэш";
+            this.PS_RemGraphCache.UseVisualStyleBackColor = true;
+            // 
+            // PS_RemOldCfgs
+            // 
+            this.PS_RemOldCfgs.Enabled = false;
+            this.PS_RemOldCfgs.Location = new System.Drawing.Point(6, 153);
+            this.PS_RemOldCfgs.Name = "PS_RemOldCfgs";
+            this.PS_RemOldCfgs.Size = new System.Drawing.Size(148, 23);
+            this.PS_RemOldCfgs.TabIndex = 3;
+            this.PS_RemOldCfgs.Text = "Все конфиги";
+            this.PS_RemOldCfgs.UseVisualStyleBackColor = true;
+            // 
+            // PS_RemOldSpray
+            // 
+            this.PS_RemOldSpray.Enabled = false;
+            this.PS_RemOldSpray.Location = new System.Drawing.Point(6, 124);
+            this.PS_RemOldSpray.Name = "PS_RemOldSpray";
+            this.PS_RemOldSpray.Size = new System.Drawing.Size(148, 23);
+            this.PS_RemOldSpray.TabIndex = 2;
+            this.PS_RemOldSpray.Text = "Кэш спреев";
+            this.PS_RemOldSpray.UseVisualStyleBackColor = true;
+            // 
+            // PS_RemDnlCache
+            // 
+            this.PS_RemDnlCache.Enabled = false;
+            this.PS_RemDnlCache.Location = new System.Drawing.Point(6, 95);
+            this.PS_RemDnlCache.Name = "PS_RemDnlCache";
+            this.PS_RemDnlCache.Size = new System.Drawing.Size(148, 23);
+            this.PS_RemDnlCache.TabIndex = 1;
+            this.PS_RemDnlCache.Text = "Кэш загрузок";
+            this.PS_RemDnlCache.UseVisualStyleBackColor = true;
+            // 
+            // PS_RemCustMaps
+            // 
+            this.PS_RemCustMaps.Enabled = false;
+            this.PS_RemCustMaps.Location = new System.Drawing.Point(6, 66);
+            this.PS_RemCustMaps.Name = "PS_RemCustMaps";
+            this.PS_RemCustMaps.Size = new System.Drawing.Size(148, 23);
+            this.PS_RemCustMaps.TabIndex = 0;
+            this.PS_RemCustMaps.Text = "Кастомные карты";
+            this.PS_RemCustMaps.UseVisualStyleBackColor = true;
+            // 
             // PS_GB_AdvFeat
             // 
+            this.PS_GB_AdvFeat.Controls.Add(this.PS_ResetSettings);
             this.PS_GB_AdvFeat.Location = new System.Drawing.Point(6, 315);
             this.PS_GB_AdvFeat.Name = "PS_GB_AdvFeat";
             this.PS_GB_AdvFeat.Size = new System.Drawing.Size(284, 58);
@@ -642,14 +788,90 @@
             this.PS_GB_AdvFeat.TabStop = false;
             this.PS_GB_AdvFeat.Text = "Специальные функции";
             // 
+            // PS_ResetSettings
+            // 
+            this.PS_ResetSettings.Location = new System.Drawing.Point(11, 19);
+            this.PS_ResetSettings.Name = "PS_ResetSettings";
+            this.PS_ResetSettings.Size = new System.Drawing.Size(258, 23);
+            this.PS_ResetSettings.TabIndex = 0;
+            this.PS_ResetSettings.Text = "Восстановить настройки TF2 по умолчанию";
+            this.PS_ResetSettings.UseVisualStyleBackColor = true;
+            // 
             // PS_GB_SInfo
             // 
+            this.PS_GB_SInfo.Controls.Add(this.PS_WarningMsg);
+            this.PS_GB_SInfo.Controls.Add(this.PS_PathDetector);
+            this.PS_GB_SInfo.Controls.Add(this.PS_RSteamLogin);
+            this.PS_GB_SInfo.Controls.Add(this.PS_RSteamPath);
+            this.PS_GB_SInfo.Controls.Add(this.L_PS_PathDetector);
+            this.PS_GB_SInfo.Controls.Add(this.L_PS_RSteamLogin);
+            this.PS_GB_SInfo.Controls.Add(this.L_PS_RSteamPath);
             this.PS_GB_SInfo.Location = new System.Drawing.Point(6, 147);
             this.PS_GB_SInfo.Name = "PS_GB_SInfo";
             this.PS_GB_SInfo.Size = new System.Drawing.Size(284, 162);
             this.PS_GB_SInfo.TabIndex = 1;
             this.PS_GB_SInfo.TabStop = false;
             this.PS_GB_SInfo.Text = "Информация о текущей установке Steam";
+            // 
+            // PS_WarningMsg
+            // 
+            this.PS_WarningMsg.Location = new System.Drawing.Point(12, 82);
+            this.PS_WarningMsg.Name = "PS_WarningMsg";
+            this.PS_WarningMsg.Size = new System.Drawing.Size(257, 77);
+            this.PS_WarningMsg.TabIndex = 6;
+            this.PS_WarningMsg.Text = "Steam установлен верно: логин и путь к каталогу (папке) Steam не содержат запрещё" +
+                "нных символов: букв национальных алфавитов (русских, немецких, французских и т.д" +
+                ".) и символов Юникода.";
+            // 
+            // PS_PathDetector
+            // 
+            this.PS_PathDetector.ForeColor = System.Drawing.Color.Green;
+            this.PS_PathDetector.Location = new System.Drawing.Point(72, 60);
+            this.PS_PathDetector.Name = "PS_PathDetector";
+            this.PS_PathDetector.Size = new System.Drawing.Size(209, 13);
+            this.PS_PathDetector.TabIndex = 5;
+            this.PS_PathDetector.Text = "Не обнаружено non-ASCII символов";
+            // 
+            // PS_RSteamLogin
+            // 
+            this.PS_RSteamLogin.Location = new System.Drawing.Point(90, 38);
+            this.PS_RSteamLogin.Name = "PS_RSteamLogin";
+            this.PS_RSteamLogin.Size = new System.Drawing.Size(179, 13);
+            this.PS_RSteamLogin.TabIndex = 4;
+            // 
+            // PS_RSteamPath
+            // 
+            this.PS_RSteamPath.Location = new System.Drawing.Point(90, 16);
+            this.PS_RSteamPath.Name = "PS_RSteamPath";
+            this.PS_RSteamPath.Size = new System.Drawing.Size(179, 13);
+            this.PS_RSteamPath.TabIndex = 3;
+            // 
+            // L_PS_PathDetector
+            // 
+            this.L_PS_PathDetector.AutoSize = true;
+            this.L_PS_PathDetector.Location = new System.Drawing.Point(12, 60);
+            this.L_PS_PathDetector.Name = "L_PS_PathDetector";
+            this.L_PS_PathDetector.Size = new System.Drawing.Size(64, 13);
+            this.L_PS_PathDetector.TabIndex = 2;
+            this.L_PS_PathDetector.Text = "Пров. пути:";
+            // 
+            // L_PS_RSteamLogin
+            // 
+            this.L_PS_RSteamLogin.AutoSize = true;
+            this.L_PS_RSteamLogin.Location = new System.Drawing.Point(12, 38);
+            this.L_PS_RSteamLogin.Name = "L_PS_RSteamLogin";
+            this.L_PS_RSteamLogin.Size = new System.Drawing.Size(74, 13);
+            this.L_PS_RSteamLogin.TabIndex = 1;
+            this.L_PS_RSteamLogin.Text = "Логин Steam:";
+            // 
+            // L_PS_RSteamPath
+            // 
+            this.L_PS_RSteamPath.AutoSize = true;
+            this.L_PS_RSteamPath.Location = new System.Drawing.Point(12, 16);
+            this.L_PS_RSteamPath.Name = "L_PS_RSteamPath";
+            this.L_PS_RSteamPath.Size = new System.Drawing.Size(76, 13);
+            this.L_PS_RSteamPath.TabIndex = 0;
+            this.L_PS_RSteamPath.Text = "Путь к Steam:";
             // 
             // PS_GB_Solver
             // 
@@ -776,6 +998,7 @@
             // 
             // MNUShowEdHint
             // 
+            this.MNUShowEdHint.Image = global::srcrepair.Properties.Resources.hint;
             this.MNUShowEdHint.Name = "MNUShowEdHint";
             this.MNUShowEdHint.Size = new System.Drawing.Size(297, 22);
             this.MNUShowEdHint.Text = "&Показать подсказку";
@@ -787,18 +1010,21 @@
             // 
             // MNUFPSWizard
             // 
+            this.MNUFPSWizard.Image = global::srcrepair.Properties.Resources.Wizard;
             this.MNUFPSWizard.Name = "MNUFPSWizard";
             this.MNUFPSWizard.Size = new System.Drawing.Size(297, 22);
             this.MNUFPSWizard.Text = "Ма&стер создания FPS-конфига...";
             // 
             // MNUReportBuilder
             // 
+            this.MNUReportBuilder.Image = global::srcrepair.Properties.Resources.report;
             this.MNUReportBuilder.Name = "MNUReportBuilder";
             this.MNUReportBuilder.Size = new System.Drawing.Size(297, 22);
             this.MNUReportBuilder.Text = "Создание отч&ёта для Техподдержки...";
             // 
             // MNUInstaller
             // 
+            this.MNUInstaller.Image = global::srcrepair.Properties.Resources.installer;
             this.MNUInstaller.Name = "MNUInstaller";
             this.MNUInstaller.Size = new System.Drawing.Size(297, 22);
             this.MNUInstaller.Text = "Ус&тановщик спреев, демок и конфигов...";
@@ -810,6 +1036,7 @@
             // 
             // MNUExit
             // 
+            this.MNUExit.Image = global::srcrepair.Properties.Resources.Exit;
             this.MNUExit.Name = "MNUExit";
             this.MNUExit.Size = new System.Drawing.Size(297, 22);
             this.MNUExit.Text = "&Выход";
@@ -833,24 +1060,28 @@
             // 
             // MNUHelp
             // 
+            this.MNUHelp.Image = global::srcrepair.Properties.Resources.Help;
             this.MNUHelp.Name = "MNUHelp";
             this.MNUHelp.Size = new System.Drawing.Size(293, 22);
             this.MNUHelp.Text = "Справоч&ная система Source Repair";
             // 
             // MNUOpinion
             // 
+            this.MNUOpinion.Image = global::srcrepair.Properties.Resources.Home;
             this.MNUOpinion.Name = "MNUOpinion";
             this.MNUOpinion.Size = new System.Drawing.Size(293, 22);
             this.MNUOpinion.Text = "В&ысказать мнение о программе авторам";
             // 
             // MNUReportBug
             // 
+            this.MNUReportBug.Image = global::srcrepair.Properties.Resources.bug;
             this.MNUReportBug.Name = "MNUReportBug";
             this.MNUReportBug.Size = new System.Drawing.Size(293, 22);
             this.MNUReportBug.Text = "Сообщить об ошибке в программе";
             // 
             // MNUSteamGroup
             // 
+            this.MNUSteamGroup.Image = global::srcrepair.Properties.Resources.steam;
             this.MNUSteamGroup.Name = "MNUSteamGroup";
             this.MNUSteamGroup.Size = new System.Drawing.Size(293, 22);
             this.MNUSteamGroup.Text = "Оф&ициальная группа программы в Steam";
@@ -862,18 +1093,21 @@
             // 
             // MNUGroup1
             // 
+            this.MNUGroup1.Image = global::srcrepair.Properties.Resources.EasyCoding;
             this.MNUGroup1.Name = "MNUGroup1";
             this.MNUGroup1.Size = new System.Drawing.Size(293, 22);
             this.MNUGroup1.Text = "&EasyCoding Team";
             // 
             // MNUGroup2
             // 
+            this.MNUGroup2.Image = global::srcrepair.Properties.Resources.tf_ru;
             this.MNUGroup2.Name = "MNUGroup2";
             this.MNUGroup2.Size = new System.Drawing.Size(293, 22);
             this.MNUGroup2.Text = "&Team-Fortress.ru";
             // 
             // MNUGroup3
             // 
+            this.MNUGroup3.Image = global::srcrepair.Properties.Resources.tf2world;
             this.MNUGroup3.Name = "MNUGroup3";
             this.MNUGroup3.Size = new System.Drawing.Size(293, 22);
             this.MNUGroup3.Text = "T&F2World.ru";
@@ -885,6 +1119,7 @@
             // 
             // MNUAbout
             // 
+            this.MNUAbout.Image = global::srcrepair.Properties.Resources.Info;
             this.MNUAbout.Name = "MNUAbout";
             this.MNUAbout.Size = new System.Drawing.Size(293, 22);
             this.MNUAbout.Text = "&О программе";
@@ -931,6 +1166,7 @@
             this.Controls.Add(this.MainTabControl);
             this.Controls.Add(this.MainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.MainMenu;
             this.MaximizeBox = false;
             this.Name = "frmMainW";
@@ -943,6 +1179,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResVert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResHor)).EndInit();
             this.ProblemSolver.ResumeLayout(false);
+            this.PS_GB_Remover.ResumeLayout(false);
+            this.PS_GB_Remover.PerformLayout();
+            this.PS_GB_AdvFeat.ResumeLayout(false);
+            this.PS_GB_SInfo.ResumeLayout(false);
+            this.PS_GB_SInfo.PerformLayout();
             this.PS_GB_Solver.ResumeLayout(false);
             this.PS_GB_Solver.PerformLayout();
             this.MainMenu.ResumeLayout(false);
@@ -1034,6 +1275,25 @@
         private System.Windows.Forms.Label L_PS_SteamLang;
         private System.Windows.Forms.CheckBox PS_CleanRegistry;
         private System.Windows.Forms.CheckBox PS_CleanBlobs;
+        private System.Windows.Forms.Label PS_WarningMsg;
+        private System.Windows.Forms.Label PS_PathDetector;
+        private System.Windows.Forms.Label PS_RSteamLogin;
+        private System.Windows.Forms.Label PS_RSteamPath;
+        private System.Windows.Forms.Label L_PS_PathDetector;
+        private System.Windows.Forms.Label L_PS_RSteamLogin;
+        private System.Windows.Forms.Label L_PS_RSteamPath;
+        private System.Windows.Forms.Button PS_ResetSettings;
+        private System.Windows.Forms.CheckBox PS_AllowRemCtrls;
+        private System.Windows.Forms.Button PS_RemGraphOpts;
+        private System.Windows.Forms.Button PS_RemDemos;
+        private System.Windows.Forms.Button PS_RemScreenShots;
+        private System.Windows.Forms.Button PS_RemNavFiles;
+        private System.Windows.Forms.Button PS_RemSoundCache;
+        private System.Windows.Forms.Button PS_RemGraphCache;
+        private System.Windows.Forms.Button PS_RemOldCfgs;
+        private System.Windows.Forms.Button PS_RemOldSpray;
+        private System.Windows.Forms.Button PS_RemDnlCache;
+        private System.Windows.Forms.Button PS_RemCustMaps;
     }
 }
 

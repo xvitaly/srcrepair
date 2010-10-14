@@ -103,5 +103,19 @@ namespace srcrepair
                 }
             }
         }
+
+        private void PS_AllowRemCtrls_CheckedChanged(object sender, EventArgs e)
+        {
+            PS_RemCustMaps.Enabled = PS_AllowRemCtrls.Checked;
+            PS_RemDnlCache.Enabled = PS_AllowRemCtrls.Checked;
+            PS_RemOldSpray.Enabled = PS_AllowRemCtrls.Checked;
+            PS_RemOldCfgs.Enabled = PS_AllowRemCtrls.Checked;
+            PS_RemGraphCache.Enabled = PS_AllowRemCtrls.Checked;
+            PS_RemSoundCache.Enabled = PS_AllowRemCtrls.Checked;
+            PS_RemNavFiles.Enabled = PS_AllowRemCtrls.Checked;
+            PS_RemScreenShots.Enabled = PS_AllowRemCtrls.Checked;
+            PS_RemDemos.Enabled = PS_AllowRemCtrls.Checked;
+            PS_RemGraphOpts.Enabled = PS_AllowRemCtrls.Checked;
+        }
     }
 }
