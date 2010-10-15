@@ -151,5 +151,66 @@ namespace srcrepair
             // Закрываем ключ...
             RegLangKey.Close();
         }
+
+        public static int GetSRCDWord(string CVar, string CApp)
+        {
+            // Подключаем реестр и открываем ключ только для чтения...
+            RegistryKey ResKey = Registry.LocalMachine.OpenSubKey("Software\\Valve\\Source\\" + CApp + "\\Settings", false);
+
+            // Создаём переменную для хранения результатов...
+            int ResInt = -1;
+
+            // Проверяем чтобы ключ реестр существовал и был доступен...
+            if (ResKey != null)
+            {
+                // Получаем значение открытого ключа...
+                ResInt = (int)ResKey.GetValue(CVar);
+
+                // Проверяем чтобы значение существовало...
+                if (ResInt == null)
+                {
+                    // Значение не существует, поэтому сгенерируем исключение для обработки в основном коде...
+                    throw new System.NullReferenceException("Exception: requested value does not exists!");
+                }
+            }
+
+            // Закрываем открытый ранее ключ реестра...
+            ResKey.Close();
+
+            // Возвращаем результат...
+            return ResInt;
+        }
+
+        public static void WriteSRCDWord(string CVar, int CValue, string CApp)
+        {
+            // Подключаем реестр и открываем ключ для чтения и записи...
+            RegistryKey ResKey = Registry.LocalMachine.OpenSubKey("Software\\Valve\\Source\\" + CApp + "\\Settings", true);
+
+            // Записываем в реестр...
+            ResKey.SetValue(CVar, CValue);
+
+            // Закрываем открытый ранее ключ реестра...
+            ResKey.Close();
+        }
+
+        public static void RemoveRegistryKeyLM(string RKey)
+        {
+            // Удаляем запрощенную ветку рекурсивно из HKLM...
+            Registry.LocalMachine.DeleteSubKeyTree(RKey, false);
+        }
+
+        public static void RemoveRegistryKeyCU(string RKey)
+        {
+            // Удаляем запрощенную ветку рекурсивно из HKCU...
+            Registry.CurrentUser.DeleteSubKeyTree(RKey, false);
+        }
+
+        public static string ReadTextFileNow(string FileName)
+        {
+            // Считываем всё содержимое файла...
+            string TextFile = File.ReadAllText(FileName);
+            // Возвращаем результат...
+            return TextFile;
+        }
     }
 }
