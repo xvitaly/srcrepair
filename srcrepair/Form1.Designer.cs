@@ -126,6 +126,8 @@
             this.StatusBar = new System.Windows.Forms.StatusStrip();
             this.SB_Info = new System.Windows.Forms.ToolStripStatusLabel();
             this.SB_Status = new System.Windows.Forms.ToolStripStatusLabel();
+            this.AppSelector = new System.Windows.Forms.ComboBox();
+            this.L_AppSelector = new System.Windows.Forms.Label();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResVert)).BeginInit();
@@ -234,6 +236,7 @@
             this.GT_LaunchOptions_Btn.Name = "GT_LaunchOptions_Btn";
             this.GT_LaunchOptions_Btn.Size = new System.Drawing.Size(22, 22);
             this.GT_LaunchOptions_Btn.TabIndex = 36;
+            this.GT_LaunchOptions_Btn.TabStop = false;
             this.GT_LaunchOptions_Btn.Text = "?";
             this.GT_LaunchOptions_Btn.UseVisualStyleBackColor = true;
             // 
@@ -589,6 +592,7 @@
             this.GT_ResVert_Btn.Name = "GT_ResVert_Btn";
             this.GT_ResVert_Btn.Size = new System.Drawing.Size(22, 22);
             this.GT_ResVert_Btn.TabIndex = 5;
+            this.GT_ResVert_Btn.TabStop = false;
             this.GT_ResVert_Btn.Text = "?";
             this.GT_ResVert_Btn.UseVisualStyleBackColor = true;
             // 
@@ -611,6 +615,7 @@
             this.GT_ResHor_Btn.Name = "GT_ResHor_Btn";
             this.GT_ResHor_Btn.Size = new System.Drawing.Size(22, 22);
             this.GT_ResHor_Btn.TabIndex = 2;
+            this.GT_ResHor_Btn.TabStop = false;
             this.GT_ResHor_Btn.Text = "?";
             this.GT_ResHor_Btn.UseVisualStyleBackColor = true;
             // 
@@ -794,7 +799,7 @@
             this.PS_ResetSettings.Name = "PS_ResetSettings";
             this.PS_ResetSettings.Size = new System.Drawing.Size(258, 23);
             this.PS_ResetSettings.TabIndex = 0;
-            this.PS_ResetSettings.Text = "Восстановить настройки TF2 по умолчанию";
+            this.PS_ResetSettings.Text = "Восстановить настройки игры по умолчанию";
             this.PS_ResetSettings.UseVisualStyleBackColor = true;
             // 
             // PS_GB_SInfo
@@ -965,8 +970,9 @@
             // LoginSel
             // 
             this.LoginSel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LoginSel.Enabled = false;
             this.LoginSel.FormattingEnabled = true;
-            this.LoginSel.Location = new System.Drawing.Point(239, 37);
+            this.LoginSel.Location = new System.Drawing.Point(325, 35);
             this.LoginSel.Name = "LoginSel";
             this.LoginSel.Size = new System.Drawing.Size(149, 21);
             this.LoginSel.TabIndex = 1;
@@ -1127,11 +1133,11 @@
             // L_LoginSel
             // 
             this.L_LoginSel.AutoSize = true;
-            this.L_LoginSel.Location = new System.Drawing.Point(75, 40);
+            this.L_LoginSel.Location = new System.Drawing.Point(248, 38);
             this.L_LoginSel.Name = "L_LoginSel";
-            this.L_LoginSel.Size = new System.Drawing.Size(158, 13);
+            this.L_LoginSel.Size = new System.Drawing.Size(74, 13);
             this.L_LoginSel.TabIndex = 3;
-            this.L_LoginSel.Text = "Выберите Ваш логин в Steam:";
+            this.L_LoginSel.Text = "Логин Steam:";
             // 
             // StatusBar
             // 
@@ -1155,11 +1161,39 @@
             this.SB_Status.Size = new System.Drawing.Size(224, 17);
             this.SB_Status.Text = "Все системы работают в штатном режиме.";
             // 
+            // AppSelector
+            // 
+            this.AppSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AppSelector.FormattingEnabled = true;
+            this.AppSelector.Items.AddRange(new object[] {
+            "Team Fortress 2",
+            "Counter-Strike: Source",
+            "Garry\'s Mod",
+            "Day of Defeat: Source",
+            "Half-Life 2",
+            "Half-Life 2 Episode One",
+            "Half-Life 2 Episode Two"});
+            this.AppSelector.Location = new System.Drawing.Point(93, 35);
+            this.AppSelector.Name = "AppSelector";
+            this.AppSelector.Size = new System.Drawing.Size(142, 21);
+            this.AppSelector.TabIndex = 5;
+            // 
+            // L_AppSelector
+            // 
+            this.L_AppSelector.AutoSize = true;
+            this.L_AppSelector.Location = new System.Drawing.Point(13, 38);
+            this.L_AppSelector.Name = "L_AppSelector";
+            this.L_AppSelector.Size = new System.Drawing.Size(74, 13);
+            this.L_AppSelector.TabIndex = 6;
+            this.L_AppSelector.Text = "Приложение:";
+            // 
             // frmMainW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(494, 504);
+            this.Controls.Add(this.L_AppSelector);
+            this.Controls.Add(this.AppSelector);
             this.Controls.Add(this.StatusBar);
             this.Controls.Add(this.L_LoginSel);
             this.Controls.Add(this.LoginSel);
@@ -1294,6 +1328,8 @@
         private System.Windows.Forms.Button PS_RemOldSpray;
         private System.Windows.Forms.Button PS_RemDnlCache;
         private System.Windows.Forms.Button PS_RemCustMaps;
+        private System.Windows.Forms.ComboBox AppSelector;
+        private System.Windows.Forms.Label L_AppSelector;
     }
 }
 
