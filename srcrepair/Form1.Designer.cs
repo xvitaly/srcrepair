@@ -70,6 +70,19 @@
             this.GT_ResHor_Btn = new System.Windows.Forms.Button();
             this.L_GT_ResHor = new System.Windows.Forms.Label();
             this.ConfigEditor = new System.Windows.Forms.TabPage();
+            this.CE_Toolbar = new System.Windows.Forms.ToolStrip();
+            this.CE_New = new System.Windows.Forms.ToolStripButton();
+            this.CE_Open = new System.Windows.Forms.ToolStripButton();
+            this.CE_Save = new System.Windows.Forms.ToolStripButton();
+            this.CE_SaveAs = new System.Windows.Forms.ToolStripButton();
+            this.CE_Print = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.CE_Cut = new System.Windows.Forms.ToolStripButton();
+            this.CE_Copy = new System.Windows.Forms.ToolStripButton();
+            this.CE_Paste = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.CE_ShowHint = new System.Windows.Forms.ToolStripButton();
+            this.CE_Editor = new System.Windows.Forms.DataGridView();
             this.ProblemSolver = new System.Windows.Forms.TabPage();
             this.PS_GB_Remover = new System.Windows.Forms.GroupBox();
             this.PS_AllowRemCtrls = new System.Windows.Forms.CheckBox();
@@ -128,10 +141,15 @@
             this.SB_Status = new System.Windows.Forms.ToolStripStatusLabel();
             this.AppSelector = new System.Windows.Forms.ComboBox();
             this.L_AppSelector = new System.Windows.Forms.Label();
+            this.CE_CVName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CE_CVal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResVert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResHor)).BeginInit();
+            this.ConfigEditor.SuspendLayout();
+            this.CE_Toolbar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CE_Editor)).BeginInit();
             this.ProblemSolver.SuspendLayout();
             this.PS_GB_Remover.SuspendLayout();
             this.PS_GB_AdvFeat.SuspendLayout();
@@ -630,6 +648,8 @@
             // 
             // ConfigEditor
             // 
+            this.ConfigEditor.Controls.Add(this.CE_Toolbar);
+            this.ConfigEditor.Controls.Add(this.CE_Editor);
             this.ConfigEditor.Location = new System.Drawing.Point(4, 22);
             this.ConfigEditor.Name = "ConfigEditor";
             this.ConfigEditor.Padding = new System.Windows.Forms.Padding(3);
@@ -637,6 +657,130 @@
             this.ConfigEditor.TabIndex = 1;
             this.ConfigEditor.Text = "Редактор конфигов";
             this.ConfigEditor.UseVisualStyleBackColor = true;
+            // 
+            // CE_Toolbar
+            // 
+            this.CE_Toolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CE_New,
+            this.CE_Open,
+            this.CE_Save,
+            this.CE_SaveAs,
+            this.CE_Print,
+            this.toolStripSeparator,
+            this.CE_Cut,
+            this.CE_Copy,
+            this.CE_Paste,
+            this.toolStripSeparator1,
+            this.CE_ShowHint});
+            this.CE_Toolbar.Location = new System.Drawing.Point(3, 3);
+            this.CE_Toolbar.Name = "CE_Toolbar";
+            this.CE_Toolbar.Size = new System.Drawing.Size(456, 25);
+            this.CE_Toolbar.TabIndex = 1;
+            this.CE_Toolbar.Text = "CE_Toolbar";
+            // 
+            // CE_New
+            // 
+            this.CE_New.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_New.Image = ((System.Drawing.Image)(resources.GetObject("CE_New.Image")));
+            this.CE_New.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CE_New.Name = "CE_New";
+            this.CE_New.Size = new System.Drawing.Size(23, 22);
+            this.CE_New.Text = "Создать новый конфиг";
+            // 
+            // CE_Open
+            // 
+            this.CE_Open.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_Open.Image = ((System.Drawing.Image)(resources.GetObject("CE_Open.Image")));
+            this.CE_Open.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CE_Open.Name = "CE_Open";
+            this.CE_Open.Size = new System.Drawing.Size(23, 22);
+            this.CE_Open.Text = "Открыть конфиг из файла";
+            // 
+            // CE_Save
+            // 
+            this.CE_Save.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_Save.Image = ((System.Drawing.Image)(resources.GetObject("CE_Save.Image")));
+            this.CE_Save.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CE_Save.Name = "CE_Save";
+            this.CE_Save.Size = new System.Drawing.Size(23, 22);
+            this.CE_Save.Text = "Сохранить изменения в файл";
+            // 
+            // CE_SaveAs
+            // 
+            this.CE_SaveAs.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_SaveAs.Image = ((System.Drawing.Image)(resources.GetObject("CE_SaveAs.Image")));
+            this.CE_SaveAs.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CE_SaveAs.Name = "CE_SaveAs";
+            this.CE_SaveAs.Size = new System.Drawing.Size(23, 22);
+            this.CE_SaveAs.Text = "Сохранить конфиг как...";
+            // 
+            // CE_Print
+            // 
+            this.CE_Print.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_Print.Image = ((System.Drawing.Image)(resources.GetObject("CE_Print.Image")));
+            this.CE_Print.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CE_Print.Name = "CE_Print";
+            this.CE_Print.Size = new System.Drawing.Size(23, 22);
+            this.CE_Print.Text = "Распечатать конфиг...";
+            // 
+            // toolStripSeparator
+            // 
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // CE_Cut
+            // 
+            this.CE_Cut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_Cut.Image = ((System.Drawing.Image)(resources.GetObject("CE_Cut.Image")));
+            this.CE_Cut.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CE_Cut.Name = "CE_Cut";
+            this.CE_Cut.Size = new System.Drawing.Size(23, 22);
+            this.CE_Cut.Text = "Вырезать";
+            // 
+            // CE_Copy
+            // 
+            this.CE_Copy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_Copy.Image = ((System.Drawing.Image)(resources.GetObject("CE_Copy.Image")));
+            this.CE_Copy.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CE_Copy.Name = "CE_Copy";
+            this.CE_Copy.Size = new System.Drawing.Size(23, 22);
+            this.CE_Copy.Text = "Копировать";
+            // 
+            // CE_Paste
+            // 
+            this.CE_Paste.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_Paste.Image = ((System.Drawing.Image)(resources.GetObject("CE_Paste.Image")));
+            this.CE_Paste.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CE_Paste.Name = "CE_Paste";
+            this.CE_Paste.Size = new System.Drawing.Size(23, 22);
+            this.CE_Paste.Text = "Вставить";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // CE_ShowHint
+            // 
+            this.CE_ShowHint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_ShowHint.Image = ((System.Drawing.Image)(resources.GetObject("CE_ShowHint.Image")));
+            this.CE_ShowHint.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CE_ShowHint.Name = "CE_ShowHint";
+            this.CE_ShowHint.Size = new System.Drawing.Size(23, 22);
+            this.CE_ShowHint.Text = "Подсказка (F1)";
+            // 
+            // CE_Editor
+            // 
+            this.CE_Editor.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.CE_Editor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CE_Editor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CE_CVName,
+            this.CE_CVal});
+            this.CE_Editor.Location = new System.Drawing.Point(6, 29);
+            this.CE_Editor.Name = "CE_Editor";
+            this.CE_Editor.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CE_Editor.Size = new System.Drawing.Size(450, 344);
+            this.CE_Editor.TabIndex = 0;
             // 
             // ProblemSolver
             // 
@@ -1187,6 +1331,18 @@
             this.L_AppSelector.TabIndex = 6;
             this.L_AppSelector.Text = "Приложение:";
             // 
+            // CE_CVName
+            // 
+            this.CE_CVName.HeaderText = "Переменная";
+            this.CE_CVName.Name = "CE_CVName";
+            this.CE_CVName.Width = 135;
+            // 
+            // CE_CVal
+            // 
+            this.CE_CVal.HeaderText = "Значение переменной";
+            this.CE_CVal.Name = "CE_CVal";
+            this.CE_CVal.Width = 255;
+            // 
             // frmMainW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1212,6 +1368,11 @@
             this.GraphicTweaker.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResVert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResHor)).EndInit();
+            this.ConfigEditor.ResumeLayout(false);
+            this.ConfigEditor.PerformLayout();
+            this.CE_Toolbar.ResumeLayout(false);
+            this.CE_Toolbar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CE_Editor)).EndInit();
             this.ProblemSolver.ResumeLayout(false);
             this.PS_GB_Remover.ResumeLayout(false);
             this.PS_GB_Remover.PerformLayout();
@@ -1330,6 +1491,21 @@
         private System.Windows.Forms.Button PS_RemCustMaps;
         private System.Windows.Forms.ComboBox AppSelector;
         private System.Windows.Forms.Label L_AppSelector;
+        private System.Windows.Forms.DataGridView CE_Editor;
+        private System.Windows.Forms.ToolStrip CE_Toolbar;
+        private System.Windows.Forms.ToolStripButton CE_New;
+        private System.Windows.Forms.ToolStripButton CE_Open;
+        private System.Windows.Forms.ToolStripButton CE_Save;
+        private System.Windows.Forms.ToolStripButton CE_Print;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
+        private System.Windows.Forms.ToolStripButton CE_Cut;
+        private System.Windows.Forms.ToolStripButton CE_Copy;
+        private System.Windows.Forms.ToolStripButton CE_Paste;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton CE_ShowHint;
+        private System.Windows.Forms.ToolStripButton CE_SaveAs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CE_CVName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CE_CVal;
     }
 }
 
