@@ -91,6 +91,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Закрыть приложение? Все несохранённые изменения будут потеряны!.
+        /// </summary>
+        internal static string FrmCloseQuery {
+            get {
+                return ResourceManager.GetString("FrmCloseQuery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Обнаружено исключение, которое мы не смогли обработать. Пожалуйста, сообщите разработчикам на email: vitaly@easycoding.org..
         /// </summary>
         internal static string GeneralErrorDetected {

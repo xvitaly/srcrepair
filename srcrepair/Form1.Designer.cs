@@ -83,6 +83,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.CE_ShowHint = new System.Windows.Forms.ToolStripButton();
             this.CE_Editor = new System.Windows.Forms.DataGridView();
+            this.CE_CVName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CE_CVal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProblemSolver = new System.Windows.Forms.TabPage();
             this.PS_GB_Remover = new System.Windows.Forms.GroupBox();
             this.PS_AllowRemCtrls = new System.Windows.Forms.CheckBox();
@@ -141,8 +143,6 @@
             this.SB_Status = new System.Windows.Forms.ToolStripStatusLabel();
             this.AppSelector = new System.Windows.Forms.ComboBox();
             this.L_AppSelector = new System.Windows.Forms.Label();
-            this.CE_CVName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CE_CVal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResVert)).BeginInit();
@@ -782,6 +782,18 @@
             this.CE_Editor.Size = new System.Drawing.Size(450, 344);
             this.CE_Editor.TabIndex = 0;
             // 
+            // CE_CVName
+            // 
+            this.CE_CVName.HeaderText = "Переменная";
+            this.CE_CVName.Name = "CE_CVName";
+            this.CE_CVName.Width = 135;
+            // 
+            // CE_CVal
+            // 
+            this.CE_CVal.HeaderText = "Значение переменной";
+            this.CE_CVal.Name = "CE_CVal";
+            this.CE_CVal.Width = 255;
+            // 
             // ProblemSolver
             // 
             this.ProblemSolver.Controls.Add(this.PS_GB_Remover);
@@ -1331,18 +1343,6 @@
             this.L_AppSelector.TabIndex = 6;
             this.L_AppSelector.Text = "Приложение:";
             // 
-            // CE_CVName
-            // 
-            this.CE_CVName.HeaderText = "Переменная";
-            this.CE_CVName.Name = "CE_CVName";
-            this.CE_CVName.Width = 135;
-            // 
-            // CE_CVal
-            // 
-            this.CE_CVal.HeaderText = "Значение переменной";
-            this.CE_CVal.Name = "CE_CVal";
-            this.CE_CVal.Width = 255;
-            // 
             // frmMainW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1362,6 +1362,7 @@
             this.Name = "frmMainW";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Source Repair .NET (версия ####)";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMainW_FormClosing);
             this.Load += new System.EventHandler(this.frmMainW_Load);
             this.MainTabControl.ResumeLayout(false);
             this.GraphicTweaker.ResumeLayout(false);

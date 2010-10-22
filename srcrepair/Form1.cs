@@ -117,5 +117,22 @@ namespace srcrepair
             PS_RemDemos.Enabled = PS_AllowRemCtrls.Checked;
             PS_RemGraphOpts.Enabled = PS_AllowRemCtrls.Checked;
         }
+
+        private void frmMainW_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Создаём MessageBox...
+            DialogResult UserConfirmation = MessageBox.Show(Properties.Resources.FrmCloseQuery, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            // Запрашиваем подтверждение у пользователя на закрытие формы...
+            if (UserConfirmation == DialogResult.Yes)
+            {
+                // Подтверждение получено, закрываем форму...
+                e.Cancel = false;
+            }
+            else
+            {
+                // Пользователь передумал, отменяем закрытие формы...
+                e.Cancel = true;
+            }
+        }
     }
 }
