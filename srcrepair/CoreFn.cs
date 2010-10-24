@@ -153,7 +153,7 @@ namespace srcrepair
         public static int GetSRCDWord(string CVar, string CApp)
         {
             // Подключаем реестр и открываем ключ только для чтения...
-            RegistryKey ResKey = Registry.LocalMachine.OpenSubKey("Software\\Valve\\Source\\" + CApp + "\\Settings", false);
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey("Software\\Valve\\Source\\" + CApp + "\\Settings", false);
 
             // Создаём переменную для хранения результатов...
             int ResInt = -1;

@@ -277,6 +277,284 @@ namespace srcrepair
             {
                 LoginSel.Enabled = false;
             }
+
+            // Начинаем заполнять таблицу...
+
+            // Получаем значение разрешения по горизонтали
+            try
+            {
+                GT_ResHor.Value = CoreFn.GetSRCDWord("ScreenWidth", GV.SmallAppName);
+            }
+            catch
+            {
+                GT_ResHor.Value = 800;
+            }
+
+            // Получаем значение разрешения по вертикали
+            try
+            {
+                GT_ResVert.Value = CoreFn.GetSRCDWord("ScreenHeight", GV.SmallAppName);
+            }
+            catch
+            {
+                GT_ResVert.Value = 600;
+            }
+
+            // Получаем режим окна (ScreenWindowed): 1-window, 0-fullscreen
+            try
+            {
+                GT_ScreenType.SelectedIndex = CoreFn.GetSRCDWord("ScreenWindowed", GV.SmallAppName);
+            }
+            catch
+            {
+                GT_ScreenType.SelectedIndex = 0;
+            }
+
+            // Получаем детализацию моделей (r_rootlod): 0-high, 1-med, 2-low
+            try
+            {
+                switch (CoreFn.GetSRCDWord("r_rootlod", GV.SmallAppName))
+                {
+                    case 0: GT_ModelQuality.SelectedIndex = 2;
+                        break;
+                    case 1: GT_ModelQuality.SelectedIndex = 1;
+                        break;
+                    case 2: GT_ModelQuality.SelectedIndex = 0;
+                        break;
+                }
+            }
+            catch
+            {
+                GT_ModelQuality.SelectedIndex = 1;
+            }
+
+            // Получаем детализацию текстур (mat_picmip): 0-high, 1-med, 2-low
+            try
+            {
+                switch (CoreFn.GetSRCDWord("mat_picmip", GV.SmallAppName))
+                {
+                    case 0: GT_TextureQuality.SelectedIndex = 2;
+                        break;
+                    case 1: GT_TextureQuality.SelectedIndex = 1;
+                        break;
+                    case 2: GT_TextureQuality.SelectedIndex = 0;
+                        break;
+                }
+            }
+            catch
+            {
+                GT_TextureQuality.SelectedIndex = 1;
+            }
+
+            // Получаем настройки шейдеров (mat_reducefillrate): 0-high, 1-low
+            try
+            {
+                switch (CoreFn.GetSRCDWord("mat_reducefillrate", GV.SmallAppName))
+                {
+                    case 0: GT_ShaderQuality.SelectedIndex = 1;
+                        break;
+                    case 1: GT_ShaderQuality.SelectedIndex = 0;
+                        break;
+                }
+            }
+            catch
+            {
+                GT_ShaderQuality.SelectedIndex = 0;
+            }
+
+            // Начинаем работать над отражениями (здесь сложнее)
+            try
+            {
+                switch (CoreFn.GetSRCDWord("r_waterforceexpensive", GV.SmallAppName))
+                {
+                    case 0: GT_WaterQuality.SelectedIndex = 0;
+                        break;
+                    case 1:
+                        switch (CoreFn.GetSRCDWord("r_waterforcereflectentities", GV.SmallAppName))   
+                        {
+                            case 0: GT_WaterQuality.SelectedIndex = 1;
+                                break;
+                            case 1: GT_WaterQuality.SelectedIndex = 2;
+                                break;
+                        }
+                        break;
+                }
+            }
+            catch
+            {
+                GT_WaterQuality.SelectedIndex = 1;
+            }
+
+            // Получаем настройки теней (r_shadowrendertotexture): 0-low, 1-high
+            try
+            {
+                switch (CoreFn.GetSRCDWord("r_shadowrendertotexture", GV.SmallAppName))
+                {
+                    case 0: GT_ShadowQuality.SelectedIndex = 0;
+                        break;
+                    case 1: GT_ShadowQuality.SelectedIndex = 1;
+                        break;
+                }
+            }
+            catch
+            {
+                GT_ShadowQuality.SelectedIndex = 1;
+            }
+
+            // Получаем настройки коррекции цвета (mat_colorcorrection): 0-off, 1-on
+            try
+            {
+                switch (CoreFn.GetSRCDWord("mat_colorcorrection", GV.SmallAppName))
+                {
+                    case 0: GT_ColorCorrectionT.SelectedIndex = 0;
+                        break;
+                    case 1: GT_ColorCorrectionT.SelectedIndex = 1;
+                        break;
+                }
+            }
+            catch
+            {
+                GT_ColorCorrectionT.SelectedIndex = 1;
+            }
+
+            // Получаем настройки сглаживания (mat_antialias): 1-off, 2-2x, 4-4x, etc
+            // 2x MSAA - 2:0; 4xMSAA - 4:0; 8xCSAA - 4:2; 16xCSAA - 4:4; 8xMSAA - 8:0; 16xQ CSAA - 8:2;
+            try
+            {
+                switch (CoreFn.GetSRCDWord("mat_antialias", GV.SmallAppName))
+                {
+                    case 0: GT_AntiAliasing.SelectedIndex = 0;
+                        break;
+                    case 1: GT_AntiAliasing.SelectedIndex = 0;
+                        break;
+                    case 2: GT_AntiAliasing.SelectedIndex = 1;
+                        break;
+                    case 4:
+                        switch (CoreFn.GetSRCDWord("mat_aaquality", GV.SmallAppName))
+                        {
+                            case 0: GT_AntiAliasing.SelectedIndex = 2;
+                                break;
+                            case 2: GT_AntiAliasing.SelectedIndex = 3;
+                                break;
+                            case 4: GT_AntiAliasing.SelectedIndex = 4;
+                                break;
+                        }
+                        break;
+                    case 8:
+                        switch (CoreFn.GetSRCDWord("mat_aaquality", GV.SmallAppName))
+                        {
+                            case 0: GT_AntiAliasing.SelectedIndex = 5;
+                                break;
+                            case 2: GT_AntiAliasing.SelectedIndex = 6;
+                                break;
+                        }
+                        break;
+                }
+            }
+            catch
+            {
+                GT_AntiAliasing.SelectedIndex = 0;
+            }
+
+            // Получаем настройки анизотропии (mat_forceaniso): 1-off, etc
+            try
+            {
+                switch (CoreFn.GetSRCDWord("mat_forceaniso", GV.SmallAppName))
+                {
+                    case 1:
+                        switch (CoreFn.GetSRCDWord("mat_trilinear", GV.SmallAppName))
+                        {
+                            case 0: GT_Filtering.SelectedIndex = 0;
+                                break;
+                            case 1: GT_Filtering.SelectedIndex = 1;
+                                break;
+                        }
+                        break;
+                    case 2: GT_Filtering.SelectedIndex = 2;
+                        break;
+                    case 4: GT_Filtering.SelectedIndex = 3;
+                        break;
+                    case 8: GT_Filtering.SelectedIndex = 4;
+                        break;
+                    case 16: GT_Filtering.SelectedIndex = 5;
+                        break;
+                }
+            }
+            catch
+            {
+                GT_Filtering.SelectedIndex = 1;
+            }
+
+            // Получаем настройки вертикальной синхронизации (mat_vsync): 0-off, 1-on
+            try
+            {
+                switch (CoreFn.GetSRCDWord("mat_vsync", GV.SmallAppName))
+                {
+                    case 0: GT_VSync.SelectedIndex = 0;
+                        break;
+                    case 1: GT_VSync.SelectedIndex = 1;
+                        break;
+                }
+            }
+            catch
+            {
+                GT_VSync.SelectedIndex = 0;
+            }
+
+            // Получаем настройки размытия движения (MotionBlur): 0-off, 1-on
+            try
+            {
+                switch (CoreFn.GetSRCDWord("MotionBlur", GV.SmallAppName))
+                {
+                    case 0: GT_MotionBlur.SelectedIndex = 0;
+                        break;
+                    case 1: GT_MotionBlur.SelectedIndex = 1;
+                        break;
+                }
+            }
+            catch
+            {
+                GT_MotionBlur.SelectedIndex = 0;
+            }
+
+            // Получаем настройки режима рендера (DXLevel_V1):
+            // 80-DirectX 8.0; 81-DirectX 8.1; 90-DirectX 9.0; 95-DirectX 9.0c
+            try
+            {
+                switch (CoreFn.GetSRCDWord("DXLevel_V1", GV.SmallAppName))
+                {
+                    case 80: GT_DxMode.SelectedIndex = 0;
+                        break;
+                    case 81: GT_DxMode.SelectedIndex = 1;
+                        break;
+                    case 90: GT_DxMode.SelectedIndex = 2;
+                        break;
+                    case 95: GT_DxMode.SelectedIndex = 3;
+                        break;
+                }
+            }
+            catch
+            {
+                GT_DxMode.SelectedIndex = 3;
+            }
+
+            // Получаем настройки HDR (mat_hdr_level): 0-off,1-bloom,2-Full
+            try
+            {
+                switch (CoreFn.GetSRCDWord("mat_hdr_level", GV.SmallAppName))
+                {
+                    case 0: GT_HDR.SelectedIndex = 0;
+                        break;
+                    case 1: GT_HDR.SelectedIndex = 1;
+                        break;
+                    case 2: GT_HDR.SelectedIndex = 2;
+                        break;
+                }
+            }
+            catch
+            {
+                GT_HDR.SelectedIndex = 2;
+            }
         }
     }
 }
