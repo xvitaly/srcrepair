@@ -196,4 +196,28 @@
     <value>Закрыть приложение? Все несохранённые изменения будут потеряны!</value>
     <comment>Сообщение, выдаваемое при закрытии основной формы.</comment>
   </data>
+  <data name="NotImplementedYet" xml:space="preserve">
+    <value>Извините, но данная функция ещё не реализована!</value>
+    <comment>Сообщение, выдаваемое при запуске ещё не реализованной функции</comment>
+  </data>
+  <data name="SteamPathCancel" xml:space="preserve">
+    <value>Вы отказались вводить путь к Steam, поэтому программа будет завершена!</value>
+    <comment>Сообщение при нажатии кнопки Cancel InputBox'а</comment>
+  </data>
+  <data name="SteamPathEnterErr" xml:space="preserve">
+    <value>Вы указали неправильный путь! Программа будет завершена.</value>
+    <comment>Сообщение при вводе неверного пути</comment>
+  </data>
+  <data name="SteamPathEnterText" xml:space="preserve">
+    <value>Укажите путь к установленному Steam:</value>
+    <comment>Текст InputBox'а ввода пути Steam</comment>
+  </data>
+  <data name="SteamPathEnterTitle" xml:space="preserve">
+    <value>Укажите путь к Steam</value>
+    <comment>Заголовок InputBox'а ввода пути Steam</comment>
+  </data>
+  <data name="SteamPathNotDetected" xml:space="preserve">
+    <value>Произошла критическая ошибка: не могу получить путь к Steam из реестра, поэтому Вам придётся вручную указать правильный путь!</value>
+    <comment>Сообщение, выдаваемое при невозможности автоматически получить путь к установленному клиенту Steam</comment>
+  </data>
 </root>

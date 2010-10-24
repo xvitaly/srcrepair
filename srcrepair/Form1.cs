@@ -19,6 +19,60 @@ namespace srcrepair
         private void frmMainW_Load(object sender, EventArgs e)
         {
             // Событие инициализации формы...
+            
+            // Получаем путь к каталогу приложения...
+            System.Reflection.Assembly Assmbl = System.Reflection.Assembly.GetEntryAssembly();
+            GV.FullAppPath = CoreFn.IncludeTrDelim(System.IO.Path.GetDirectoryName(Assmbl.Location));
+
+            // Найдём и завершим в памяти процесс Steam...
+            if (CoreFn.ProcessTerminate("Steam") != 0)
+            {
+                MessageBox.Show(Properties.Resources.PS_ProcessDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            // Получаем параметры командной строки, переданные приложению...
+            string[] CMDLineArgs = Environment.GetCommandLineArgs();
+
+            // Ищем параметр командной строки path...
+            if (CoreFn.FindCommandLineSwitch(CMDLineArgs, "-path"))
+            {
+                // Параметр найден, считываем следующий за ним параметр с путём к Steam...
+                GV.FullSteamPath = CoreFn.IncludeTrDelim(CMDLineArgs[CoreFn.FindStringInStrArray(CMDLineArgs, "-path") + 1]);
+            }
+            else
+            {
+                // Параметр не найден, поэтому получим из реестра...
+                try
+                {
+                    // Получаем из реестра...
+                    GV.FullSteamPath = CoreFn.IncludeTrDelim(CoreFn.GetSteamPath());
+                }
+                catch
+                {
+                    // Произошло исключение, пользователю придётся ввести путь самостоятельно!
+                    MessageBox.Show(Properties.Resources.SteamPathNotDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string Buf = "";
+                    if (CoreFn.InputBox(Properties.Resources.SteamPathEnterTitle, Properties.Resources.SteamPathEnterText, ref Buf) == DialogResult.OK)
+                    {
+                        Buf = CoreFn.IncludeTrDelim(Buf);
+                        if (!(System.IO.File.Exists(Buf + "Steam.exe")))
+                        {
+                            MessageBox.Show(Properties.Resources.SteamPathEnterErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            Application.Exit();
+                        }
+                        else
+                        {
+                            GV.FullSteamPath = Buf;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(Properties.Resources.SteamPathCancel, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Application.Exit();
+                    }
+                }
+            }
+
         }
 
         private void PS_CleanBlobs_CheckedChanged(object sender, EventArgs e)
@@ -35,14 +89,7 @@ namespace srcrepair
 
         private void PS_CleanRegistry_CheckedChanged(object sender, EventArgs e)
         {
-            if (PS_CleanRegistry.Checked)
-            {
-                PS_SteamLang.Enabled = true;
-            }
-            else
-            {
-                PS_SteamLang.Enabled = false;
-            }
+            PS_SteamLang.Enabled = PS_CleanRegistry.Checked;
 
             if (PS_CleanRegistry.Checked || PS_CleanBlobs.Checked)
             {
@@ -75,7 +122,7 @@ namespace srcrepair
                     if (PS_CleanBlobs.Checked)
                     {
                         // Чистим блобы...
-                        CoreFn.CleanBlobsNow(CoreFn.FullSteamPath);
+                        CoreFn.CleanBlobsNow(GV.FullSteamPath);
                     }
 
                     // Проверяем нужно ли чистить реестр...
@@ -120,18 +167,56 @@ namespace srcrepair
 
         private void frmMainW_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Создаём MessageBox...
-            DialogResult UserConfirmation = MessageBox.Show(Properties.Resources.FrmCloseQuery, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            // Запрашиваем подтверждение у пользователя на закрытие формы...
-            if (UserConfirmation == DialogResult.Yes)
+            // Проверим, делал ли что-то пользователь с формой. Если не делал - не будем
+            // спрашивать и завершим форму автоматически...
+            if (LoginSel.Enabled)
             {
-                // Подтверждение получено, закрываем форму...
-                e.Cancel = false;
+                // Создаём MessageBox...
+                DialogResult UserConfirmation = MessageBox.Show(Properties.Resources.FrmCloseQuery, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                // Запрашиваем подтверждение у пользователя на закрытие формы...
+                if (UserConfirmation == DialogResult.Yes)
+                {
+                    // Подтверждение получено, закрываем форму...
+                    e.Cancel = false;
+                }
+                else
+                {
+                    // Пользователь передумал, отменяем закрытие формы...
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        private void AppSelector_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Начинаем определять нужные нам значения переменных...
+            switch (AppSelector.SelectedIndex)
+            {
+                case 0:
+                    GV.FullAppName = "team fortress 2";
+                    GV.SmallAppName = "tf";
+                    break;
+                case 1:
+                    GV.FullAppName = "counter-strike source";
+                    GV.SmallAppName = "cstrike";
+                    break;
+                case 2:
+                    GV.FullAppName = "garrysmod";
+                    GV.SmallAppName = "garrysmod";
+                    break;
+                default:
+                    AppSelector.SelectedIndex = -1;
+                    break;
+            }
+
+            // Если выбор верный, включаем контрол выбора логина Steam...
+            if (AppSelector.SelectedIndex != -1)
+            {
+                LoginSel.Enabled = true;
             }
             else
             {
-                // Пользователь передумал, отменяем закрытие формы...
-                e.Cancel = true;
+                LoginSel.Enabled = false;
             }
         }
     }

@@ -144,6 +144,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Извините, но данная функция ещё не реализована!.
+        /// </summary>
+        internal static string NotImplementedYet {
+            get {
+                return ResourceManager.GetString("NotImplementedYet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Выполнить очистку?.
         /// </summary>
         internal static string PS_ExecuteMSG {
@@ -208,6 +217,51 @@ namespace srcrepair.Properties {
         internal static string SteamNotDetected {
             get {
                 return ResourceManager.GetString("SteamNotDetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Вы отказались вводить путь к Steam, поэтому программа будет завершена!.
+        /// </summary>
+        internal static string SteamPathCancel {
+            get {
+                return ResourceManager.GetString("SteamPathCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Вы указали неправильный путь! Программа будет завершена..
+        /// </summary>
+        internal static string SteamPathEnterErr {
+            get {
+                return ResourceManager.GetString("SteamPathEnterErr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Укажите путь к установленному Steam:.
+        /// </summary>
+        internal static string SteamPathEnterText {
+            get {
+                return ResourceManager.GetString("SteamPathEnterText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Укажите путь к Steam.
+        /// </summary>
+        internal static string SteamPathEnterTitle {
+            get {
+                return ResourceManager.GetString("SteamPathEnterTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Произошла критическая ошибка: не могу получить путь к Steam из реестра, поэтому Вам придётся вручную указать правильный путь!.
+        /// </summary>
+        internal static string SteamPathNotDetected {
+            get {
+                return ResourceManager.GetString("SteamPathNotDetected", resourceCulture);
             }
         }
         

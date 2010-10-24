@@ -1333,6 +1333,7 @@
             this.AppSelector.Name = "AppSelector";
             this.AppSelector.Size = new System.Drawing.Size(142, 21);
             this.AppSelector.TabIndex = 5;
+            this.AppSelector.SelectedIndexChanged += new System.EventHandler(this.AppSelector_SelectedIndexChanged);
             // 
             // L_AppSelector
             // 
