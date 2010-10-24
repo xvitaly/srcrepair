@@ -228,7 +228,7 @@ namespace srcrepair
         {
             // Проверим, делал ли что-то пользователь с формой. Если не делал - не будем
             // спрашивать и завершим форму автоматически...
-            if (LoginSel.Enabled)
+            if (AppSelector.Enabled)
             {
                 // Создаём MessageBox...
                 DialogResult UserConfirmation = MessageBox.Show(Properties.Resources.FrmCloseQuery, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -277,6 +277,12 @@ namespace srcrepair
             {
                 LoginSel.Enabled = false;
             }
+
+            // Генерируем полный путь до каталога управляемого приложения...
+            GV.FullAppPath = CoreFn.IncludeTrDelim(GV.FullSteamPath + "steamapps\\" + LoginSel.Text + "\\" + GV.FullAppName + "\\" + GV.SmallAppName);
+
+            // Включаем основные элементы управления (контролы)...
+            MainTabControl.Enabled = true;
 
             // Начинаем заполнять таблицу...
 
@@ -555,6 +561,12 @@ namespace srcrepair
             {
                 GT_HDR.SelectedIndex = 2;
             }
+        }
+
+        private void LoginSel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //
+            AppSelector.Enabled = true;
         }
     }
 }

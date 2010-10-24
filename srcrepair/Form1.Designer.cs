@@ -166,6 +166,7 @@
             this.MainTabControl.Controls.Add(this.ProblemSolver);
             this.MainTabControl.Controls.Add(this.FPSCfgInstall);
             this.MainTabControl.Controls.Add(this.RescueCentre);
+            this.MainTabControl.Enabled = false;
             this.MainTabControl.Location = new System.Drawing.Point(12, 64);
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.SelectedIndex = 0;
@@ -1126,12 +1127,12 @@
             // LoginSel
             // 
             this.LoginSel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.LoginSel.Enabled = false;
             this.LoginSel.FormattingEnabled = true;
-            this.LoginSel.Location = new System.Drawing.Point(325, 35);
+            this.LoginSel.Location = new System.Drawing.Point(90, 35);
             this.LoginSel.Name = "LoginSel";
             this.LoginSel.Size = new System.Drawing.Size(149, 21);
             this.LoginSel.TabIndex = 1;
+            this.LoginSel.SelectedIndexChanged += new System.EventHandler(this.LoginSel_SelectedIndexChanged);
             // 
             // MainMenu
             // 
@@ -1289,7 +1290,7 @@
             // L_LoginSel
             // 
             this.L_LoginSel.AutoSize = true;
-            this.L_LoginSel.Location = new System.Drawing.Point(248, 38);
+            this.L_LoginSel.Location = new System.Drawing.Point(13, 38);
             this.L_LoginSel.Name = "L_LoginSel";
             this.L_LoginSel.Size = new System.Drawing.Size(74, 13);
             this.L_LoginSel.TabIndex = 3;
@@ -1320,12 +1321,13 @@
             // AppSelector
             // 
             this.AppSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AppSelector.Enabled = false;
             this.AppSelector.FormattingEnabled = true;
             this.AppSelector.Items.AddRange(new object[] {
             "Team Fortress 2",
             "Counter-Strike: Source",
             "Garry\'s Mod"});
-            this.AppSelector.Location = new System.Drawing.Point(93, 35);
+            this.AppSelector.Location = new System.Drawing.Point(340, 35);
             this.AppSelector.Name = "AppSelector";
             this.AppSelector.Size = new System.Drawing.Size(142, 21);
             this.AppSelector.TabIndex = 5;
@@ -1334,7 +1336,7 @@
             // L_AppSelector
             // 
             this.L_AppSelector.AutoSize = true;
-            this.L_AppSelector.Location = new System.Drawing.Point(13, 38);
+            this.L_AppSelector.Location = new System.Drawing.Point(260, 38);
             this.L_AppSelector.Name = "L_AppSelector";
             this.L_AppSelector.Size = new System.Drawing.Size(74, 13);
             this.L_AppSelector.TabIndex = 6;
