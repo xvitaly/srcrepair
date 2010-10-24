@@ -220,4 +220,28 @@
     <value>Произошла критическая ошибка: не могу получить путь к Steam из реестра, поэтому Вам придётся вручную указать правильный путь!</value>
     <comment>Сообщение, выдаваемое при невозможности автоматически получить путь к установленному клиенту Steam</comment>
   </data>
+  <data name="InputBoxCancelBtnName" xml:space="preserve">
+    <value>Отмена</value>
+    <comment>Текст кнопки Cancel в InputBox'ах</comment>
+  </data>
+  <data name="ParamError" xml:space="preserve">
+    <value>Обнаружен параметр командной строки, но не обнаружено его значение, поэтому игнорируем данный параметр!</value>
+    <comment>Сообщение, выдаваемое при отсутствии значения параметра командной строки</comment>
+  </data>
+  <data name="SteamLoginCancel" xml:space="preserve">
+    <value>Вы отказались вводить свой логин Steam, поэтому работа программы невозможна. Повторите запуск позднее и введите правильный логин!</value>
+    <comment>Сообщение, выдаваемое при отказе пользователя ввести свой логин Steam</comment>
+  </data>
+  <data name="SteamLoginEnterText" xml:space="preserve">
+    <value>Введите Ваш логин Steam:</value>
+    <comment>Текст InputBox'а ввода логина</comment>
+  </data>
+  <data name="SteamLoginEnterTitle" xml:space="preserve">
+    <value>Ввод логина</value>
+    <comment>Заголовок InputBox'а ввода логина</comment>
+  </data>
+  <data name="SteamLoginsNotDetected" xml:space="preserve">
+    <value>Внимание! Source Repair не смог получить список активных логинов Steam, поэтому Вам придётся ввести его вручную.</value>
+    <comment>Сообщение, выдаваемое при невозможности получить список логинов Steam</comment>
+  </data>
 </root>

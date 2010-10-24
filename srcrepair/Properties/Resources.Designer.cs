@@ -136,6 +136,15 @@ namespace srcrepair.Properties {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to Отмена.
+        /// </summary>
+        internal static string InputBoxCancelBtnName {
+            get {
+                return ResourceManager.GetString("InputBoxCancelBtnName", resourceCulture);
+            }
+        }
+        
         internal static System.Drawing.Bitmap installer {
             get {
                 object obj = ResourceManager.GetObject("installer", resourceCulture);
@@ -149,6 +158,15 @@ namespace srcrepair.Properties {
         internal static string NotImplementedYet {
             get {
                 return ResourceManager.GetString("NotImplementedYet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Обнаружен параметр командной строки, но не обнаружено его значение, поэтому игнорируем данный параметр!.
+        /// </summary>
+        internal static string ParamError {
+            get {
+                return ResourceManager.GetString("ParamError", resourceCulture);
             }
         }
         
@@ -208,6 +226,42 @@ namespace srcrepair.Properties {
             get {
                 object obj = ResourceManager.GetObject("steam", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Вы отказались вводить свой логин Steam, поэтому работа программы невозможна. Повторите запуск позднее и введите правильный логин!.
+        /// </summary>
+        internal static string SteamLoginCancel {
+            get {
+                return ResourceManager.GetString("SteamLoginCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Введите Ваш логин Steam:.
+        /// </summary>
+        internal static string SteamLoginEnterText {
+            get {
+                return ResourceManager.GetString("SteamLoginEnterText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ввод логина.
+        /// </summary>
+        internal static string SteamLoginEnterTitle {
+            get {
+                return ResourceManager.GetString("SteamLoginEnterTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Внимание! Source Repair не смог получить список активных логинов Steam, поэтому Вам придётся ввести его вручную..
+        /// </summary>
+        internal static string SteamLoginsNotDetected {
+            get {
+                return ResourceManager.GetString("SteamLoginsNotDetected", resourceCulture);
             }
         }
         

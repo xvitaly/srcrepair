@@ -73,6 +73,65 @@ namespace srcrepair
                 }
             }
 
+            // Ищем параметр командной строки login...
+            if (CoreFn.FindCommandLineSwitch(CMDLineArgs, "-login"))
+            {
+                // Параметр найден, добавим его и отключим автоопределение...
+                try
+                {
+                    // Добавляем параметр в ComboBox...
+                    LoginSel.Items.Add((string)CMDLineArgs[CoreFn.FindStringInStrArray(CMDLineArgs, "-login") + 1]);
+                }
+                catch
+                {
+                    // Произошло исключение, поэтому просто выдадим сообщение...
+                    MessageBox.Show(Properties.Resources.ParamError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                // Параметр не найден, будем использовать автоопределение...
+                // Создаём объект DirInfo...
+                System.IO.DirectoryInfo DInfo = new System.IO.DirectoryInfo(GV.FullSteamPath + "steamapps\\");
+                // Получаем список директорий из текущего...
+                System.IO.DirectoryInfo[] DirList = DInfo.GetDirectories();
+                // Обходим созданный массив в поиске нужных нам логинов...
+                foreach (System.IO.DirectoryInfo DItem in DirList)
+                {
+                    // Фильтруем известные каталоги...
+                    if ((DItem.Name != "common") && (DItem.Name != "sourcemods") && (DItem.Name != "media"))
+                    {
+                        // Добавляем найденный логин в список ComboBox...
+                        LoginSel.Items.Add((string)DItem.Name);
+                    }
+                }
+            }
+
+            // Проверим, были ли логины добавлены в список...
+            if (LoginSel.Items.Count == 0)
+            {
+                // Логинов не было найдено, поэтому запросим у пользователя...
+                // Описываем буферную переменную...
+                string SBuf = "";
+                
+                // Запускаем цикл с постусловием...
+                do
+                {
+                    // Отображаем InputBox, а также анализируем ввод пользователя...
+                    if ((CoreFn.InputBox(Properties.Resources.SteamLoginEnterTitle, Properties.Resources.SteamLoginEnterText, ref SBuf) == DialogResult.Cancel) || (SBuf == ""))
+                    {
+                        // Пользователь нажал Cancel, либо ввёл пустую строку, поэтому
+                        // выводим сообщение и завершаем работу приложения...
+                        MessageBox.Show(Properties.Resources.SteamLoginCancel, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        Application.Exit();
+                    };
+                } while (!(System.IO.Directory.Exists(GV.FullSteamPath + "steamapps\\" + SBuf + "\\")));
+                
+                // Добавляем полученный логин в список...
+                LoginSel.Items.Add((string)SBuf);
+            }
+
+            // TODO: Реализовать проверку на наличие non-ASCII символов в пути...
         }
 
         private void PS_CleanBlobs_CheckedChanged(object sender, EventArgs e)

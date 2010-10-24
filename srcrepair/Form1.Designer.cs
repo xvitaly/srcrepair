@@ -1324,11 +1324,7 @@
             this.AppSelector.Items.AddRange(new object[] {
             "Team Fortress 2",
             "Counter-Strike: Source",
-            "Garry\'s Mod",
-            "Day of Defeat: Source",
-            "Half-Life 2",
-            "Half-Life 2 Episode One",
-            "Half-Life 2 Episode Two"});
+            "Garry\'s Mod"});
             this.AppSelector.Location = new System.Drawing.Point(93, 35);
             this.AppSelector.Name = "AppSelector";
             this.AppSelector.Size = new System.Drawing.Size(142, 21);

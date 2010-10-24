@@ -268,7 +268,7 @@ namespace srcrepair
             textBox.Text = value;
 
             buttonOk.Text = "OK";
-            buttonCancel.Text = "Cancel";
+            buttonCancel.Text = Properties.Resources.InputBoxCancelBtnName;
             buttonOk.DialogResult = DialogResult.OK;
             buttonCancel.DialogResult = DialogResult.Cancel;
 
