@@ -153,6 +153,24 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Внимание! В памяти обнаружен активный процесс.
+        /// </summary>
+        internal static string KillMessage1 {
+            get {
+                return ResourceManager.GetString("KillMessage1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Настоятельно рекомендуется завершить его работу во избежании серьёзных ошибок. Завершить работу этого процесса сейчас.
+        /// </summary>
+        internal static string KillMessage2 {
+            get {
+                return ResourceManager.GetString("KillMessage2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Извините, но данная функция ещё не реализована!.
         /// </summary>
         internal static string NotImplementedYet {

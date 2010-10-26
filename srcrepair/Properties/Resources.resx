@@ -244,4 +244,12 @@
     <value>Внимание! Source Repair не смог получить список активных логинов Steam, поэтому Вам придётся ввести его вручную.</value>
     <comment>Сообщение, выдаваемое при невозможности получить список логинов Steam</comment>
   </data>
+  <data name="KillMessage1" xml:space="preserve">
+    <value>Внимание! В памяти обнаружен активный процесс</value>
+    <comment>Сообщение, используемое функцией ProcessTerminate.</comment>
+  </data>
+  <data name="KillMessage2" xml:space="preserve">
+    <value>Настоятельно рекомендуется завершить его работу во избежании серьёзных ошибок. Завершить работу этого процесса сейчас</value>
+    <comment>Сообщение, используемое функцией ProcessTerminate.</comment>
+  </data>
 </root>

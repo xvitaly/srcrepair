@@ -61,7 +61,7 @@ namespace srcrepair
 
         /* Эта функция возвращает PID процесса если он был найден в памяти и
          * завершает, либо 0 если процесс не был найден. */
-        public static int ProcessTerminate(string ProcessName)
+        public static int ProcessTerminate(string ProcessName, bool ShowConfirmationMsg)
         {
             // Обнуляем PID...
             int ProcID = 0;
@@ -72,8 +72,22 @@ namespace srcrepair
             // Запускаем цикл по поиску и завершению процессов...
             foreach (Process ResName in LocalByName)
             {
-                ProcID = ResName.Id; // Сохраняем PID процесса...
-                ResName.Kill(); // Завершаем процесс...
+                if (ShowConfirmationMsg) // Проверим, нужно ли подтверждение...
+                {
+                    // Запросим подтверждение...
+                    DialogResult UserConfirmation = MessageBox.Show(Properties.Resources.KillMessage1 + " " + ResName.ProcessName + "! " + Properties.Resources.KillMessage2, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (UserConfirmation == DialogResult.Yes)
+                    {
+                        ProcID = ResName.Id;
+                        ResName.Kill();
+                    }
+                }
+                else
+                {
+                    // Подтверждение не требуется, завершаем процесс...
+                    ProcID = ResName.Id; // Сохраняем PID процесса...
+                    ResName.Kill(); // Завершаем процесс...
+                }
             }
 
             // Возвращаем PID как результат функции...
@@ -150,6 +164,8 @@ namespace srcrepair
             RegLangKey.Close();
         }
 
+        /* Эта функция получает из реестра значение нужной нам переменной
+         * для указанного игрового приложения. */
         public static int GetSRCDWord(string CVar, string CApp)
         {
             // Подключаем реестр и открываем ключ только для чтения...
@@ -179,6 +195,8 @@ namespace srcrepair
             return ResInt;
         }
 
+        /* Эта процедура записывает в реестр новое значение нужной нам переменной
+         * для указанного игрового приложения. */
         public static void WriteSRCDWord(string CVar, int CValue, string CApp)
         {
             // Подключаем реестр и открываем ключ для чтения и записи...
@@ -191,18 +209,22 @@ namespace srcrepair
             ResKey.Close();
         }
 
+        /* Эта функция удаляет нужный ключ из ветки HKEY_LOCAL_MACHINE... */
         public static void RemoveRegistryKeyLM(string RKey)
         {
             // Удаляем запрощенную ветку рекурсивно из HKLM...
             Registry.LocalMachine.DeleteSubKeyTree(RKey, false);
         }
 
+        /* Эта функция удаляет нужный ключ из ветки HKEY_CURRENT_USER... */
         public static void RemoveRegistryKeyCU(string RKey)
         {
             // Удаляем запрощенную ветку рекурсивно из HKCU...
             Registry.CurrentUser.DeleteSubKeyTree(RKey, false);
         }
 
+        /* Эта функция считывает содержимое текстового файла в строку и
+         * возвращает в качестве результата. */
         public static string ReadTextFileNow(string FileName)
         {
             // Считываем всё содержимое файла...
@@ -211,17 +233,14 @@ namespace srcrepair
             return TextFile;
         }
 
+        /* Эта функция ищет указанную строку в массиве строк и возвращает её индекс,
+         * либо -1 если такой строки в массиве не найдено. */
         public static int FindStringInStrArray(string[] SourceStr, string What)
         {
             int StrNum;
             int StrIndex = -1;
             for (StrNum = 0; StrNum < SourceStr.Length; StrNum++)
             {
-                /*StrIndex = SourceStr[StrNum].IndexOf(What);
-                if (StrIndex >= 0)
-                {
-                    break;
-                }*/
                 if (SourceStr[StrNum] == What)
                 {
                     StrIndex = StrNum;
@@ -230,20 +249,10 @@ namespace srcrepair
             return StrIndex;
         }
 
+        /* Эта функция ищет в массиве строк нужный нам параметр командной строки
+         * и возвращает true если параметр был найден, либо false если нет. */
         public static bool FindCommandLineSwitch(string[] Source, string CLineArg)
         {
-            /*int StrNum;
-            int StrIndex = 0;
-            bool TempRes = false;
-            for (StrNum = 0; StrNum < Source.Length; StrNum++)
-            {
-                StrIndex = Source[StrNum].IndexOf(CLineArg);
-                if (StrIndex >= 0)
-                {
-                    TempRes = true;
-                    break;
-                }
-            }*/
             if (FindStringInStrArray(Source, CLineArg) != -1)
             {
                 return true;

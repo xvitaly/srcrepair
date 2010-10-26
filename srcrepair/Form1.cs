@@ -25,7 +25,7 @@ namespace srcrepair
             GV.FullAppPath = CoreFn.IncludeTrDelim(System.IO.Path.GetDirectoryName(Assmbl.Location));
 
             // Найдём и завершим в памяти процесс Steam...
-            if (CoreFn.ProcessTerminate("Steam") != 0)
+            if (CoreFn.ProcessTerminate("Steam", true) != 0)
             {
                 MessageBox.Show(Properties.Resources.PS_ProcessDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -172,7 +172,7 @@ namespace srcrepair
                 if ((PS_CleanBlobs.Checked) || (PS_CleanRegistry.Checked))
                 {
                     // Найдём и завершим работу клиента Steam...
-                    if (CoreFn.ProcessTerminate("Steam") != 0)
+                    if (CoreFn.ProcessTerminate("Steam", false) != 0)
                     {
                         MessageBox.Show(Properties.Resources.PS_ProcessDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
