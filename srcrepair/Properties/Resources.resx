@@ -252,4 +252,20 @@
     <value>Настоятельно рекомендуется завершить его работу во избежании серьёзных ошибок. Завершить работу этого процесса сейчас</value>
     <comment>Сообщение, используемое функцией ProcessTerminate.</comment>
   </data>
+  <data name="StatusAppChanged" xml:space="preserve">
+    <value>Приложение успешно переключено. Управляем:</value>
+    <comment>Сообщение об успешном переключении управляемого приложения</comment>
+  </data>
+  <data name="StatusLoginChanged" xml:space="preserve">
+    <value>Логин Steam был успешно сменён. Продолжаем работу с новым...</value>
+    <comment>Сообщение о смене логина</comment>
+  </data>
+  <data name="StatusSApp" xml:space="preserve">
+    <value>Пожалуйста, выберите управляемое приложение из списка!</value>
+    <comment>Сообщение о необходимости выбора управляемого приложения</comment>
+  </data>
+  <data name="StatusSLogin" xml:space="preserve">
+    <value>Пожалуйста, выберите Ваш логин Steam из списка!</value>
+    <comment>Сообщение о необходимости выбора логина</comment>
+  </data>
 </root>

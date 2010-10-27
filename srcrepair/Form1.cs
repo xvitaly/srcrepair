@@ -23,6 +23,12 @@ namespace srcrepair
             // Получаем путь к каталогу приложения...
             System.Reflection.Assembly Assmbl = System.Reflection.Assembly.GetEntryAssembly();
             GV.FullAppPath = CoreFn.IncludeTrDelim(System.IO.Path.GetDirectoryName(Assmbl.Location));
+            
+            // Получаем информацию о версии нашего приложения...
+            GV.AppVersionInfo = Assmbl.GetName().Version.ToString();
+
+            // Вставляем информацию о версии в заголовок формы...
+            this.Text += " (version " + GV.AppVersionInfo + ")";
 
             // Найдём и завершим в памяти процесс Steam...
             if (CoreFn.ProcessTerminate("Steam", true) != 0)
@@ -132,6 +138,9 @@ namespace srcrepair
             }
 
             // TODO: Реализовать проверку на наличие non-ASCII символов в пути...
+
+            // Выводим сообщение в строку статуса...
+            SB_Status.Text = Properties.Resources.StatusSLogin;
         }
 
         private void PS_CleanBlobs_CheckedChanged(object sender, EventArgs e)
@@ -561,12 +570,23 @@ namespace srcrepair
             {
                 GT_HDR.SelectedIndex = 2;
             }
+
+            // Выводим сообщение о завершении считывания в статус-бар...
+            SB_Status.Text = Properties.Resources.StatusAppChanged + " " + AppSelector.SelectedItem.ToString() + ".";
         }
 
         private void LoginSel_SelectedIndexChanged(object sender, EventArgs e)
         {
             //
             AppSelector.Enabled = true;
+            if (AppSelector.SelectedIndex == -1)
+            {
+                SB_Status.Text = Properties.Resources.StatusSApp;
+            }
+            else
+            {
+                SB_Status.Text = Properties.Resources.StatusLoginChanged;
+            }
         }
     }
 }

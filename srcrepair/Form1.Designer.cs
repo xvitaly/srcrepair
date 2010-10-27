@@ -1360,7 +1360,7 @@
             this.MaximizeBox = false;
             this.Name = "frmMainW";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Source Repair .NET (версия ####)";
+            this.Text = "Source Repair .NET";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMainW_FormClosing);
             this.Load += new System.EventHandler(this.frmMainW_Load);
             this.MainTabControl.ResumeLayout(false);

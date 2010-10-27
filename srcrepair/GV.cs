@@ -26,5 +26,9 @@ namespace srcrepair
         /* В этой переменной мы будем хранить краткое имя управляемого приложения
          * для служебных целей (SteamAlias). */
         public static string SmallAppName;
+
+        /* В этой переменной мы будем хранить полную информацию о версии
+         * приложения для служебных целей. */
+        public static string AppVersionInfo;
     }
 }

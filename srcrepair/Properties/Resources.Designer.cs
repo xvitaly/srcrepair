@@ -240,6 +240,42 @@ namespace srcrepair.Properties {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to Приложение успешно переключено. Управляем:.
+        /// </summary>
+        internal static string StatusAppChanged {
+            get {
+                return ResourceManager.GetString("StatusAppChanged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Логин Steam был успешно сменён. Продолжаем работу с новым....
+        /// </summary>
+        internal static string StatusLoginChanged {
+            get {
+                return ResourceManager.GetString("StatusLoginChanged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пожалуйста, выберите управляемое приложение из списка!.
+        /// </summary>
+        internal static string StatusSApp {
+            get {
+                return ResourceManager.GetString("StatusSApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пожалуйста, выберите Ваш логин Steam из списка!.
+        /// </summary>
+        internal static string StatusSLogin {
+            get {
+                return ResourceManager.GetString("StatusSLogin", resourceCulture);
+            }
+        }
+        
         internal static System.Drawing.Bitmap steam {
             get {
                 object obj = ResourceManager.GetObject("steam", resourceCulture);
