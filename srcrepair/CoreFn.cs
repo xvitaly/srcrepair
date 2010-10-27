@@ -200,10 +200,10 @@ namespace srcrepair
         public static void WriteSRCDWord(string CVar, int CValue, string CApp)
         {
             // Подключаем реестр и открываем ключ для чтения и записи...
-            RegistryKey ResKey = Registry.LocalMachine.OpenSubKey("Software\\Valve\\Source\\" + CApp + "\\Settings", true);
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey("Software\\Valve\\Source\\" + CApp + "\\Settings", true);
 
             // Записываем в реестр...
-            ResKey.SetValue(CVar, CValue);
+            ResKey.SetValue(CVar, CValue, RegistryValueKind.DWord);
 
             // Закрываем открытый ранее ключ реестра...
             ResKey.Close();
