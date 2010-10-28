@@ -588,5 +588,299 @@ namespace srcrepair
                 SB_Status.Text = Properties.Resources.StatusLoginChanged;
             }
         }
+
+        private void GT_Maximum_Graphics_Click(object sender, EventArgs e)
+        {
+            // Нажатие этой кнопки устанавливает графические настройки на рекомендуемый максимум...
+            // Зададим вопрос, а нужно ли это юзеру?
+            DialogResult UserConfirmation = MessageBox.Show(Properties.Resources.GT_MaxPerfMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (UserConfirmation == DialogResult.Yes)
+            {
+                // Пользователь согласился, продолжаем...
+                GT_ScreenType.SelectedIndex = 0; // полноэкранный режим
+                GT_ModelQuality.SelectedIndex = 2; // высокая детализация моделей
+                GT_TextureQuality.SelectedIndex = 2; // высокая детализация текстур
+                GT_ShaderQuality.SelectedIndex = 1; // высокое качество шейдерных эффектов
+                GT_WaterQuality.SelectedIndex = 1; // отражать мир в воде
+                GT_WaterQuality.SelectedIndex = 1; // высокое качество теней
+                GT_ColorCorrectionT.SelectedIndex = 1; // корренкция цвета включена
+                GT_AntiAliasing.SelectedIndex = 0; // сглаживание выключено
+                GT_Filtering.SelectedIndex = 3; // анизотропная фильтрация 4x
+                GT_VSync.SelectedIndex = 0; // вертикальная синхронизация выключена
+                GT_MotionBlur.SelectedIndex = 0; // размытие движения выключено
+                GT_DxMode.SelectedIndex = 3; // режим DirecX 9.0c
+                GT_HDR.SelectedIndex = 2; // HDR полные
+                MessageBox.Show(Properties.Resources.GT_PerfSet, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void GT_Maximum_Performance_Click(object sender, EventArgs e)
+        {
+            // Нажатие этой кнопки устанавливает графические настройки на рекомендуемый минимум...
+            // Спросим пользователя.
+            DialogResult UserConfirmation = MessageBox.Show(Properties.Resources.GT_MinPerfMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (UserConfirmation == DialogResult.Yes)
+            {
+                // Пользователь согласился, продолжаем...
+                GT_ScreenType.SelectedIndex = 0; // полноэкранный режим
+                GT_ModelQuality.SelectedIndex = 0; // низкая детализация моделей
+                GT_TextureQuality.SelectedIndex = 0; // низкая детализация текстур
+                GT_ShaderQuality.SelectedIndex = 0; // низкое качество шейдерных эффектов
+                GT_WaterQuality.SelectedIndex = 0; // простые отражения в воде
+                GT_WaterQuality.SelectedIndex = 0; // низкое качество теней
+                GT_ColorCorrectionT.SelectedIndex = 0; // корренкция цвета выключена
+                GT_AntiAliasing.SelectedIndex = 0; // сглаживание выключено
+                GT_Filtering.SelectedIndex = 1; // трилинейная фильтрация текстур
+                GT_VSync.SelectedIndex = 0; // вертикальная синхронизация выключена
+                GT_MotionBlur.SelectedIndex = 0; // размытие движения выключено
+                // Спросим у пользователя о режиме DirectX...
+                UserConfirmation = MessageBox.Show(Properties.Resources.GT_DxLevelMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (UserConfirmation == DialogResult.Yes)
+                {
+                    GT_DxMode.SelectedIndex = 0; // режим DirecX 8.0
+                }
+                else
+                {
+                    GT_DxMode.SelectedIndex = 3; // режим DirecX 9.0c
+                }
+                GT_HDR.SelectedIndex = 0; // эффекты HDR выключены
+                MessageBox.Show(Properties.Resources.GT_PerfSet, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void GT_SaveApply_Click(object sender, EventArgs e)
+        {
+            // Сохраняем изменения в графических настройках...
+            // Запрашиваем подтверждение у пользователя...
+            DialogResult UserConfirmation = MessageBox.Show(Properties.Resources.GT_SaveMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (UserConfirmation == DialogResult.Yes)
+            {
+                // TODO: сделать бэкапирование...
+                
+                // Запишем в реестр настройки разрешения экрана...
+                // По горизонтали (ScreenWidth):
+                CoreFn.WriteSRCDWord("ScreenWidth", (int)GT_ResHor.Value, GV.SmallAppName);
+
+                // По вертикали (ScreenHeight):
+                CoreFn.WriteSRCDWord("ScreenWidth", (int)GT_ResVert.Value, GV.SmallAppName);
+
+                // Запишем в реестр настройки режима запуска приложения (ScreenWindowed):
+                switch (GT_ScreenType.SelectedIndex)
+                {
+                    case 0: CoreFn.WriteSRCDWord("ScreenWindowed", 0, GV.SmallAppName);
+                        break;
+                    case 1: CoreFn.WriteSRCDWord("ScreenWindowed", 1, GV.SmallAppName);
+                        break;
+                }
+
+                // Запишем в реестр настройки детализации моделей (r_rootlod):
+                switch (GT_ModelQuality.SelectedIndex)
+                {
+                    case 0: CoreFn.WriteSRCDWord("r_rootlod", 2, GV.SmallAppName);
+                        break;
+                    case 1: CoreFn.WriteSRCDWord("r_rootlod", 1, GV.SmallAppName);
+                        break;
+                    case 2: CoreFn.WriteSRCDWord("r_rootlod", 0, GV.SmallAppName);
+                        break;
+                }
+
+                // Запишем в реестр настройки детализации текстур (mat_picmip):
+                switch (GT_TextureQuality.SelectedIndex)
+                {
+                    case 0: CoreFn.WriteSRCDWord("mat_picmip", 2, GV.SmallAppName);
+                        break;
+                    case 1: CoreFn.WriteSRCDWord("mat_picmip", 1, GV.SmallAppName);
+                        break;
+                    case 2: CoreFn.WriteSRCDWord("mat_picmip", 0, GV.SmallAppName);
+                        break;
+                }
+
+                // Запишем в реестр настройки качества шейдерных эффектов (mat_reducefillrate):
+                switch (GT_ShaderQuality.SelectedIndex)
+                {
+                    case 0: CoreFn.WriteSRCDWord("mat_reducefillrate", 1, GV.SmallAppName);
+                        break;
+                    case 1: CoreFn.WriteSRCDWord("mat_reducefillrate", 0, GV.SmallAppName);
+                        break;
+                }
+
+                // Запишем в реестр настройки отражений в воде (r_waterforceexpensive и r_waterforcereflectentities):
+                switch (GT_WaterQuality.SelectedIndex)
+                {
+                    case 0:
+                        // Simple reflections
+                        CoreFn.WriteSRCDWord("r_waterforceexpensive", 0, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("r_waterforcereflectentities", 0, GV.SmallAppName);
+                        break;
+                    case 1:
+                        // Reflect world
+                        CoreFn.WriteSRCDWord("r_waterforceexpensive", 1, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("r_waterforcereflectentities", 0, GV.SmallAppName);
+                        break;
+                    case 2:
+                        // Reflect all
+                        CoreFn.WriteSRCDWord("r_waterforceexpensive", 1, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("r_waterforcereflectentities", 1, GV.SmallAppName);
+                        break;
+                }
+
+                // Запишем в реестр настройки прорисовки теней (r_shadowrendertotexture):
+                switch (GT_ShadowQuality.SelectedIndex)
+                {
+                    case 0: CoreFn.WriteSRCDWord("r_shadowrendertotexture", 0, GV.SmallAppName);
+                        break;
+                    case 1: CoreFn.WriteSRCDWord("r_shadowrendertotexture", 1, GV.SmallAppName);
+                        break;
+                }
+
+                // Запишем в реестр настройки коррекции цвета (mat_colorcorrection):
+                switch (GT_ColorCorrectionT.SelectedIndex)
+                {
+                    case 0: CoreFn.WriteSRCDWord("mat_colorcorrection", 0, GV.SmallAppName);
+                        break;
+                    case 1: CoreFn.WriteSRCDWord("mat_colorcorrection", 1, GV.SmallAppName);
+                        break;
+                }
+
+                // Запишем в реестр настройки сглаживания (mat_antialias и mat_aaquality):
+                switch (GT_AntiAliasing.SelectedIndex)
+                {
+                    case 0:
+                        // Нет сглаживания
+                        CoreFn.WriteSRCDWord("mat_antialias", 1, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("mat_aaquality", 0, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("ScreenMSAA", 0, GV.SmallAppName); // Дублируем значение mat_antialias
+                        CoreFn.WriteSRCDWord("ScreenMSAAQuality", 0, GV.SmallAppName); // Дублируем значение mat_aaquality
+                        break;
+                    case 1:
+                        // 2x MSAA
+                        CoreFn.WriteSRCDWord("mat_antialias", 2, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("mat_aaquality", 0, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("ScreenMSAA", 2, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("ScreenMSAAQuality", 0, GV.SmallAppName);
+                        break;
+                    case 2:
+                        // 4x MSAA
+                        CoreFn.WriteSRCDWord("mat_antialias", 4, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("mat_aaquality", 0, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("ScreenMSAA", 4, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("ScreenMSAAQuality", 0, GV.SmallAppName);
+                        break;
+                    case 3:
+                        // 8x CSAA
+                        CoreFn.WriteSRCDWord("mat_antialias", 4, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("mat_aaquality", 2, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("ScreenMSAA", 4, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("ScreenMSAAQuality", 2, GV.SmallAppName);
+                        break;
+                    case 4:
+                        // 16x CSAA
+                        CoreFn.WriteSRCDWord("mat_antialias", 4, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("mat_aaquality", 4, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("ScreenMSAA", 4, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("ScreenMSAAQuality", 4, GV.SmallAppName);
+                        break;
+                    case 5:
+                        // 8x MSAA
+                        CoreFn.WriteSRCDWord("mat_antialias", 8, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("mat_aaquality", 0, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("ScreenMSAA", 8, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("ScreenMSAAQuality", 0, GV.SmallAppName);
+                        break;
+                    case 6:
+                        // 16xQ CSAA
+                        CoreFn.WriteSRCDWord("mat_antialias", 8, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("mat_aaquality", 2, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("ScreenMSAA", 8, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("ScreenMSAAQuality", 2, GV.SmallAppName);
+                        break;
+                }
+
+                // Запишем в реестр настройки фильтрации (mat_forceaniso):
+                switch (GT_Filtering.SelectedIndex)
+                {
+                    case 0:
+                        // Билинейная
+                        CoreFn.WriteSRCDWord("mat_forceaniso", 1, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("mat_trilinear", 0, GV.SmallAppName);
+                        break;
+                    case 1:
+                        // Трилинейная
+                        CoreFn.WriteSRCDWord("mat_forceaniso", 1, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("mat_trilinear", 1, GV.SmallAppName);
+                        break;
+                    case 2:
+                        // Анизотропная 2x
+                        CoreFn.WriteSRCDWord("mat_forceaniso", 2, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("mat_trilinear", 0, GV.SmallAppName);
+                        break;
+                    case 3:
+                        // Анизотропная 4x
+                        CoreFn.WriteSRCDWord("mat_forceaniso", 4, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("mat_trilinear", 0, GV.SmallAppName);
+                        break;
+                    case 4:
+                        // Анизотропная 8x
+                        CoreFn.WriteSRCDWord("mat_forceaniso", 8, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("mat_trilinear", 0, GV.SmallAppName);
+                        break;
+                    case 5:
+                        // Анизотропная 16x
+                        CoreFn.WriteSRCDWord("mat_forceaniso", 16, GV.SmallAppName);
+                        CoreFn.WriteSRCDWord("mat_trilinear", 0, GV.SmallAppName);
+                        break;
+                }
+
+                // Запишем в реестр настройки вертикальной синхронизации (mat_vsync):
+                switch (GT_VSync.SelectedIndex)
+                {
+                    case 0: CoreFn.WriteSRCDWord("mat_vsync", 0, GV.SmallAppName);
+                        break;
+                    case 1: CoreFn.WriteSRCDWord("mat_vsync", 1, GV.SmallAppName);
+                        break;
+                }
+
+                // Запишем в реестр настройки размытия движения (MotionBlur):
+                switch (GT_MotionBlur.SelectedIndex)
+                {
+                    case 0: CoreFn.WriteSRCDWord("MotionBlur", 0, GV.SmallAppName);
+                        break;
+                    case 1: CoreFn.WriteSRCDWord("MotionBlur", 1, GV.SmallAppName);
+                        break;
+                }
+
+                // Запишем в реестр настройки режима DirectX (DXLevel_V1):
+                switch (GT_DxMode.SelectedIndex)
+                {
+                    case 0: CoreFn.WriteSRCDWord("DXLevel_V1", 80, GV.SmallAppName); // DirectX 8.0
+                        break;
+                    case 1: CoreFn.WriteSRCDWord("DXLevel_V1", 81, GV.SmallAppName); // DirectX 8.1
+                        break;
+                    case 2: CoreFn.WriteSRCDWord("DXLevel_V1", 90, GV.SmallAppName); // DirectX 9.0
+                        break;
+                    case 3: CoreFn.WriteSRCDWord("DXLevel_V1", 95, GV.SmallAppName); // DirectX 9.0c
+                        break;
+                }
+
+                // Запишем в реестр настройки HDR (mat_hdr_level):
+                switch (GT_HDR.SelectedIndex)
+                {
+                    case 0: CoreFn.WriteSRCDWord("mat_hdr_level", 0, GV.SmallAppName);
+                        break;
+                    case 1: CoreFn.WriteSRCDWord("mat_hdr_level", 1, GV.SmallAppName);
+                        break;
+                    case 2: CoreFn.WriteSRCDWord("mat_hdr_level", 2, GV.SmallAppName);
+                        break;
+                }
+
+                // Запишем в реестр пользовательскую строку запуска TF2...
+                // TODO: реализовать возможность записывать параметры строки запуска...
+
+                // Закончили запись основных настроек, указанных пользователем или выбранных по умолчанию...
+
+                // Выводим подтверждающее сообщение...
+                MessageBox.Show(Properties.Resources.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

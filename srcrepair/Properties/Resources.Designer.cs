@@ -108,6 +108,60 @@ namespace srcrepair.Properties {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to Включить DirectX 8 режим рендера? Это значительно увеличит производительность игры..
+        /// </summary>
+        internal static string GT_DxLevelMsg {
+            get {
+                return ResourceManager.GetString("GT_DxLevelMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Вы действительно хотите установить настройки графики TF2 на рекомендуемый максимум? Для этого потребуется мощный компютер!.
+        /// </summary>
+        internal static string GT_MaxPerfMsg {
+            get {
+                return ResourceManager.GetString("GT_MaxPerfMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Вы действительно хотите установить все настройки видео на минимальные? Это увеличит FPS, но ухудшит графику в игре..
+        /// </summary>
+        internal static string GT_MinPerfMsg {
+            get {
+                return ResourceManager.GetString("GT_MinPerfMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Готово. Не забудьте подкорректировать и сохранить изменения в настройках!.
+        /// </summary>
+        internal static string GT_PerfSet {
+            get {
+                return ResourceManager.GetString("GT_PerfSet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сохранить сделанные Вами изменения?.
+        /// </summary>
+        internal static string GT_SaveMsg {
+            get {
+                return ResourceManager.GetString("GT_SaveMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Изменения были успешно сохранены!.
+        /// </summary>
+        internal static string GT_SaveSuccess {
+            get {
+                return ResourceManager.GetString("GT_SaveSuccess", resourceCulture);
+            }
+        }
+        
         internal static System.Drawing.Bitmap Help {
             get {
                 object obj = ResourceManager.GetObject("Help", resourceCulture);

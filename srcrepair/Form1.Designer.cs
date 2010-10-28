@@ -229,6 +229,7 @@
             this.GT_SaveApply.TabIndex = 39;
             this.GT_SaveApply.Text = "Сохранить";
             this.GT_SaveApply.UseVisualStyleBackColor = true;
+            this.GT_SaveApply.Click += new System.EventHandler(this.GT_SaveApply_Click);
             // 
             // GT_Maximum_Performance
             // 
@@ -238,6 +239,7 @@
             this.GT_Maximum_Performance.TabIndex = 38;
             this.GT_Maximum_Performance.Text = "Максимальная производительность";
             this.GT_Maximum_Performance.UseVisualStyleBackColor = true;
+            this.GT_Maximum_Performance.Click += new System.EventHandler(this.GT_Maximum_Performance_Click);
             // 
             // GT_Maximum_Graphics
             // 
@@ -247,6 +249,7 @@
             this.GT_Maximum_Graphics.TabIndex = 37;
             this.GT_Maximum_Graphics.Text = "Максимум графики";
             this.GT_Maximum_Graphics.UseVisualStyleBackColor = true;
+            this.GT_Maximum_Graphics.Click += new System.EventHandler(this.GT_Maximum_Graphics_Click);
             // 
             // GT_LaunchOptions_Btn
             // 
