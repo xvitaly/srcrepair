@@ -263,6 +263,24 @@ namespace srcrepair
             }
         }
 
+        /* Эта функция устанавливает требуемый FPS-конфиг... */
+        public static void InstallConfigNow(string ConfName)
+        {
+            // Пробуем установить конфиг...
+            try
+            {
+                // Устанавливаем...
+                File.Copy(GV.FullAppPath + "cfgs\\" + GV.SmallAppName + "\\" + ConfName, GV.FullGamePath + "cfg\\autoexec.cfg", true);
+                // Выводим сообщение об успешной установке...
+                MessageBox.Show(Properties.Resources.FP_InstallSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                // Установка не удалась. Выводим сообщение об этом...
+                MessageBox.Show(Properties.Resources.FP_InstallFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         // Источник данной функции: http://www.csharp-examples.net/inputbox/ //
         public static DialogResult InputBox(string title, string promptText, ref string value)
         {

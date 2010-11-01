@@ -151,6 +151,7 @@
             this.SB_Status = new System.Windows.Forms.ToolStripStatusLabel();
             this.AppSelector = new System.Windows.Forms.ComboBox();
             this.L_AppSelector = new System.Windows.Forms.Label();
+            this.LogWriter = new System.Diagnostics.EventLog();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResVert)).BeginInit();
@@ -167,6 +168,7 @@
             this.FP_GB_Desc.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.StatusBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogWriter)).BeginInit();
             this.SuspendLayout();
             // 
             // MainTabControl
@@ -1152,6 +1154,7 @@
             this.FP_Uninstall.TabIndex = 5;
             this.FP_Uninstall.Text = "Удалить имеющийся конфиг";
             this.FP_Uninstall.UseVisualStyleBackColor = true;
+            this.FP_Uninstall.Click += new System.EventHandler(this.FP_Uninstall_Click);
             // 
             // FP_Install
             // 
@@ -1161,6 +1164,7 @@
             this.FP_Install.TabIndex = 4;
             this.FP_Install.Text = "Установить выбранный конфиг";
             this.FP_Install.UseVisualStyleBackColor = true;
+            this.FP_Install.Click += new System.EventHandler(this.FP_Install_Click);
             // 
             // FP_GB_Desc
             // 
@@ -1435,6 +1439,12 @@
             this.L_AppSelector.TabIndex = 6;
             this.L_AppSelector.Text = "Приложение:";
             // 
+            // LogWriter
+            // 
+            this.LogWriter.Log = "Application";
+            this.LogWriter.Source = "Source Repair";
+            this.LogWriter.SynchronizingObject = this;
+            // 
             // frmMainW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1481,6 +1491,7 @@
             this.MainMenu.PerformLayout();
             this.StatusBar.ResumeLayout(false);
             this.StatusBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogWriter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1610,6 +1621,7 @@
         private System.Windows.Forms.Label L_FP_ConfigSel;
         private System.Windows.Forms.Label FP_TopLabel;
         private System.Windows.Forms.CheckBox FP_CreateBackUp;
+        private System.Diagnostics.EventLog LogWriter;
     }
 }
 

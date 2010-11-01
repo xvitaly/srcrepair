@@ -919,5 +919,73 @@ namespace srcrepair
                 FP_Description.Text = Properties.Resources.FP_NoDescr;
             }
         }
+
+        private void FP_Install_Click(object sender, EventArgs e)
+        {
+            // Начинаем устанавливать FPS-конфиг в управляемое приложение...
+            if (FP_ConfigSel.SelectedIndex != -1)
+            {
+                DialogResult UserConfirmation = MessageBox.Show(Properties.Resources.FP_InstallQuestion, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (UserConfirmation == DialogResult.Yes)
+                {
+                    // Проверим, не нужно ли создавать резервную копию...
+                    if (FP_CreateBackUp.Checked)
+                    {
+                        // Создаём резервную копию...
+                        // TODO: реализовать возможность создания резервных копий...
+                    }
+
+                    // Устанавливаем...
+                    CoreFn.InstallConfigNow(FP_ConfigSel.Text);
+
+                    // Отобразим значок предупреждения на странице графических настроек...
+                    // TODO: реализовать значок...
+                }
+            }
+            else
+            {
+                // Пользователь не выбрал конфиг. Сообщим об этом...
+                MessageBox.Show(Properties.Resources.FP_NothingSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void FP_Uninstall_Click(object sender, EventArgs e)
+        {
+            // Начинаем удаление установленного конфига...
+            // Генерируем имя файла с полным путём до него...
+            string CfgFile = GV.FullGamePath + "cfg\\autoexec.cfg";
+            // Проверяем, существует ли файл...
+            if (System.IO.File.Exists(CfgFile))
+            {
+                // Файл существует. Запросим подтверждение на удаление...
+                DialogResult UserConfirmation = MessageBox.Show(Properties.Resources.FP_RemoveQuestion, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (UserConfirmation == DialogResult.Yes)
+                {
+                    // Создадим бэкап если установлен флажок...
+                    if (FP_CreateBackUp.Checked)
+                    {
+                        // Создаём резервную копию...
+                        // TODO: реализовать возможность создания резервных копий...
+                    }
+
+                    try
+                    {
+                        // Удалим файл...
+                        System.IO.File.Delete(CfgFile);
+                        // Выводим сообщение об успешном удалении...
+                        MessageBox.Show(Properties.Resources.FP_RemoveSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch
+                    {
+                        // Произошло исключение при попытке удаления. Уведомим пользователя об этом...
+                        MessageBox.Show(Properties.Resources.FP_RemoveFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show(Properties.Resources.FP_RemoveNotExists, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

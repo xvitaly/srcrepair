@@ -91,6 +91,33 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Произошла критическая ошибка: невозможно установить выбранный конфиг!.
+        /// </summary>
+        internal static string FP_InstallFailed {
+            get {
+                return ResourceManager.GetString("FP_InstallFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Внимание! Установка FPS-конфига снизит все графические настройки на абсолютный минимум, что приведёт к значительному ухудшению качества графики игры и увеличению производительности игры. Вы уверены, что хотите установить FPS-конфиг?.
+        /// </summary>
+        internal static string FP_InstallQuestion {
+            get {
+                return ResourceManager.GetString("FP_InstallQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Конфиг был успешно установлен!.
+        /// </summary>
+        internal static string FP_InstallSuccessful {
+            get {
+                return ResourceManager.GetString("FP_InstallSuccessful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Внимание! Для выбранной игры у нас нет FPS-конфигов, поэтому данная страница будет недоступна!.
         /// </summary>
         internal static string FP_NoCfgGame {
@@ -105,6 +132,51 @@ namespace srcrepair.Properties {
         internal static string FP_NoDescr {
             get {
                 return ResourceManager.GetString("FP_NoDescr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Вы не выбрали FPS-конфиг из списка. Выберите конфиг и повторите попытку!.
+        /// </summary>
+        internal static string FP_NothingSelected {
+            get {
+                return ResourceManager.GetString("FP_NothingSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Произошла ошибка при удалении установленного конфига!.
+        /// </summary>
+        internal static string FP_RemoveFailed {
+            get {
+                return ResourceManager.GetString("FP_RemoveFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Нечего удалять: для текущей игры FPS-конфиги не установлены!.
+        /// </summary>
+        internal static string FP_RemoveNotExists {
+            get {
+                return ResourceManager.GetString("FP_RemoveNotExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Вы уверены что хотите удалить конфиг?.
+        /// </summary>
+        internal static string FP_RemoveQuestion {
+            get {
+                return ResourceManager.GetString("FP_RemoveQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Установленный FPS-конфиг был успешно удалён!.
+        /// </summary>
+        internal static string FP_RemoveSuccessful {
+            get {
+                return ResourceManager.GetString("FP_RemoveSuccessful", resourceCulture);
             }
         }
         
