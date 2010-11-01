@@ -91,6 +91,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Внимание! Для выбранной игры у нас нет FPS-конфигов, поэтому данная страница будет недоступна!.
+        /// </summary>
+        internal static string FP_NoCfgGame {
+            get {
+                return ResourceManager.GetString("FP_NoCfgGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Закрыть приложение? Все несохранённые изменения будут потеряны!.
         /// </summary>
         internal static string FrmCloseQuery {

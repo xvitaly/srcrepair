@@ -288,7 +288,7 @@ namespace srcrepair
             }
 
             // Генерируем полный путь до каталога управляемого приложения...
-            GV.FullAppPath = CoreFn.IncludeTrDelim(GV.FullSteamPath + "steamapps\\" + LoginSel.Text + "\\" + GV.FullAppName + "\\" + GV.SmallAppName);
+            GV.FullGamePath = CoreFn.IncludeTrDelim(GV.FullSteamPath + "steamapps\\" + LoginSel.Text + "\\" + GV.FullAppName + "\\" + GV.SmallAppName);
 
             // Включаем основные элементы управления (контролы)...
             MainTabControl.Enabled = true;
@@ -569,6 +569,30 @@ namespace srcrepair
             catch
             {
                 GT_HDR.SelectedIndex = 2;
+            }
+
+            // Очистим список FPS-конфигов...
+            FP_ConfigSel.Items.Clear();
+
+            // Считаем имеющиеся FPS-конфиги...
+            try
+            {
+                // Открываем каталог...
+                System.IO.DirectoryInfo DInfo = new System.IO.DirectoryInfo(GV.FullAppPath + "cfgs\\" + GV.SmallAppName + "\\");
+                // Считываем список файлов по заданной маске...
+                System.IO.FileInfo[] DirList = DInfo.GetFiles("*.cfg");
+                foreach (System.IO.FileInfo DItem in DirList)
+                {
+                    // Обрабатываем найденное...
+                    if (DItem.Name != "config_default.cfg")
+                    {
+                        FP_ConfigSel.Items.Add((string)DItem.Name);
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show(Properties.Resources.FP_NoCfgGame, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             // Выводим сообщение о завершении считывания в статус-бар...
