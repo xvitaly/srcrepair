@@ -143,6 +143,13 @@
             this.SB_Status = new System.Windows.Forms.ToolStripStatusLabel();
             this.AppSelector = new System.Windows.Forms.ComboBox();
             this.L_AppSelector = new System.Windows.Forms.Label();
+            this.FP_TopLabel = new System.Windows.Forms.Label();
+            this.L_FP_ConfigSel = new System.Windows.Forms.Label();
+            this.FP_ConfigSel = new System.Windows.Forms.ComboBox();
+            this.FP_GB_Desc = new System.Windows.Forms.GroupBox();
+            this.FP_Description = new System.Windows.Forms.Label();
+            this.FP_Install = new System.Windows.Forms.Button();
+            this.FP_Uninstall = new System.Windows.Forms.Button();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResVert)).BeginInit();
@@ -155,8 +162,10 @@
             this.PS_GB_AdvFeat.SuspendLayout();
             this.PS_GB_SInfo.SuspendLayout();
             this.PS_GB_Solver.SuspendLayout();
+            this.FPSCfgInstall.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.StatusBar.SuspendLayout();
+            this.FP_GB_Desc.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTabControl
@@ -1109,6 +1118,12 @@
             // 
             // FPSCfgInstall
             // 
+            this.FPSCfgInstall.Controls.Add(this.FP_Uninstall);
+            this.FPSCfgInstall.Controls.Add(this.FP_Install);
+            this.FPSCfgInstall.Controls.Add(this.FP_GB_Desc);
+            this.FPSCfgInstall.Controls.Add(this.FP_ConfigSel);
+            this.FPSCfgInstall.Controls.Add(this.L_FP_ConfigSel);
+            this.FPSCfgInstall.Controls.Add(this.FP_TopLabel);
             this.FPSCfgInstall.Location = new System.Drawing.Point(4, 22);
             this.FPSCfgInstall.Name = "FPSCfgInstall";
             this.FPSCfgInstall.Padding = new System.Windows.Forms.Padding(3);
@@ -1345,6 +1360,68 @@
             this.L_AppSelector.TabIndex = 6;
             this.L_AppSelector.Text = "Приложение:";
             // 
+            // FP_TopLabel
+            // 
+            this.FP_TopLabel.Location = new System.Drawing.Point(9, 12);
+            this.FP_TopLabel.Name = "FP_TopLabel";
+            this.FP_TopLabel.Size = new System.Drawing.Size(450, 96);
+            this.FP_TopLabel.TabIndex = 0;
+            this.FP_TopLabel.Text = resources.GetString("FP_TopLabel.Text");
+            // 
+            // L_FP_ConfigSel
+            // 
+            this.L_FP_ConfigSel.AutoSize = true;
+            this.L_FP_ConfigSel.Location = new System.Drawing.Point(69, 123);
+            this.L_FP_ConfigSel.Name = "L_FP_ConfigSel";
+            this.L_FP_ConfigSel.Size = new System.Drawing.Size(154, 13);
+            this.L_FP_ConfigSel.TabIndex = 1;
+            this.L_FP_ConfigSel.Text = "Выберите один из конфигов:";
+            // 
+            // FP_ConfigSel
+            // 
+            this.FP_ConfigSel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FP_ConfigSel.FormattingEnabled = true;
+            this.FP_ConfigSel.Location = new System.Drawing.Point(240, 120);
+            this.FP_ConfigSel.Name = "FP_ConfigSel";
+            this.FP_ConfigSel.Size = new System.Drawing.Size(148, 21);
+            this.FP_ConfigSel.TabIndex = 2;
+            // 
+            // FP_GB_Desc
+            // 
+            this.FP_GB_Desc.Controls.Add(this.FP_Description);
+            this.FP_GB_Desc.Location = new System.Drawing.Point(23, 159);
+            this.FP_GB_Desc.Name = "FP_GB_Desc";
+            this.FP_GB_Desc.Size = new System.Drawing.Size(414, 165);
+            this.FP_GB_Desc.TabIndex = 3;
+            this.FP_GB_Desc.TabStop = false;
+            this.FP_GB_Desc.Text = "Подробное описание выбранного конфига";
+            // 
+            // FP_Description
+            // 
+            this.FP_Description.Location = new System.Drawing.Point(17, 27);
+            this.FP_Description.Name = "FP_Description";
+            this.FP_Description.Size = new System.Drawing.Size(377, 123);
+            this.FP_Description.TabIndex = 0;
+            this.FP_Description.Text = "Выберите конфиг из списка выше!";
+            // 
+            // FP_Install
+            // 
+            this.FP_Install.Location = new System.Drawing.Point(23, 339);
+            this.FP_Install.Name = "FP_Install";
+            this.FP_Install.Size = new System.Drawing.Size(197, 23);
+            this.FP_Install.TabIndex = 4;
+            this.FP_Install.Text = "Установить выбранный конфиг";
+            this.FP_Install.UseVisualStyleBackColor = true;
+            // 
+            // FP_Uninstall
+            // 
+            this.FP_Uninstall.Location = new System.Drawing.Point(240, 339);
+            this.FP_Uninstall.Name = "FP_Uninstall";
+            this.FP_Uninstall.Size = new System.Drawing.Size(197, 23);
+            this.FP_Uninstall.TabIndex = 5;
+            this.FP_Uninstall.Text = "Удалить имеющийся конфиг";
+            this.FP_Uninstall.UseVisualStyleBackColor = true;
+            // 
             // frmMainW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1384,10 +1461,13 @@
             this.PS_GB_SInfo.PerformLayout();
             this.PS_GB_Solver.ResumeLayout(false);
             this.PS_GB_Solver.PerformLayout();
+            this.FPSCfgInstall.ResumeLayout(false);
+            this.FPSCfgInstall.PerformLayout();
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
             this.StatusBar.ResumeLayout(false);
             this.StatusBar.PerformLayout();
+            this.FP_GB_Desc.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1509,6 +1589,13 @@
         private System.Windows.Forms.ToolStripButton CE_SaveAs;
         private System.Windows.Forms.DataGridViewTextBoxColumn CE_CVName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CE_CVal;
+        private System.Windows.Forms.Button FP_Uninstall;
+        private System.Windows.Forms.Button FP_Install;
+        private System.Windows.Forms.GroupBox FP_GB_Desc;
+        private System.Windows.Forms.Label FP_Description;
+        private System.Windows.Forms.ComboBox FP_ConfigSel;
+        private System.Windows.Forms.Label L_FP_ConfigSel;
+        private System.Windows.Forms.Label FP_TopLabel;
     }
 }
 
