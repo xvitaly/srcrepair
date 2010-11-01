@@ -906,5 +906,18 @@ namespace srcrepair
                 MessageBox.Show(Properties.Resources.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void FP_ConfigSel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Получаем описание выбранного пользователем конфига...
+            try
+            {
+                FP_Description.Text = CoreFn.ReadTextFileNow(GV.FullAppPath + "cfgs\\" + GV.SmallAppName + "\\" + System.IO.Path.GetFileNameWithoutExtension(FP_ConfigSel.Text) + ".txt");
+            }
+            catch
+            {
+                FP_Description.Text = Properties.Resources.FP_NoDescr;
+            }
+        }
     }
 }

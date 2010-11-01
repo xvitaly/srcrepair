@@ -100,6 +100,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to К сожалению, описание выбранного Вами конфига недоступно. Приносим извинения за доставленные неудобства..
+        /// </summary>
+        internal static string FP_NoDescr {
+            get {
+                return ResourceManager.GetString("FP_NoDescr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Закрыть приложение? Все несохранённые изменения будут потеряны!.
         /// </summary>
         internal static string FrmCloseQuery {
