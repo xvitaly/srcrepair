@@ -315,6 +315,13 @@ namespace srcrepair
             }
         }
 
+        /* Эта функция изменяет статус приложения, а также
+         * пишет его в системный журнал (если включено). */
+        public static void WriteToLog(string CurrentStatus)
+        {
+            GV.ApplicationMemoryLog += WriteDateToString(DateTime.Now, false) + ": " + CurrentStatus + "\n";
+        }
+
         // Источник данной функции: http://www.csharp-examples.net/inputbox/ //
         public static DialogResult InputBox(string title, string promptText, ref string value)
         {

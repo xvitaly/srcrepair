@@ -20,6 +20,9 @@ namespace srcrepair
         {
             // Событие инициализации формы...
             
+            // Начинаем лог...
+            CoreFn.WriteToLog("Application " + Properties.Resources.AppName + " started.");
+
             // Получаем путь к каталогу приложения...
             System.Reflection.Assembly Assmbl = System.Reflection.Assembly.GetEntryAssembly();
             GV.FullAppPath = CoreFn.IncludeTrDelim(System.IO.Path.GetDirectoryName(Assmbl.Location));
@@ -246,6 +249,14 @@ namespace srcrepair
                 {
                     // Подтверждение получено, закрываем форму...
                     e.Cancel = false;
+                    // Пишем в лог о закрытии приложения...
+                    CoreFn.WriteToLog("Application terminated by user.");
+                    // Проверяем, можно ли писать лог в журнал Windows...
+                    if (GV.EnableEventLogging)
+                    {
+                        // Записываем лог в системный журнал Windows...
+                        LogWriter.WriteEntry(GV.ApplicationMemoryLog, System.Diagnostics.EventLogEntryType.Information, 250, 5);
+                    }
                 }
                 else
                 {
@@ -611,6 +622,8 @@ namespace srcrepair
 
             // Выводим сообщение о завершении считывания в статус-бар...
             SB_Status.Text = Properties.Resources.StatusAppChanged + " " + AppSelector.SelectedItem.ToString() + ".";
+            // Пишем в лог...
+            CoreFn.WriteToLog(SB_Status.Text);
         }
 
         private void LoginSel_SelectedIndexChanged(object sender, EventArgs e)
