@@ -69,6 +69,15 @@ namespace srcrepair.Properties {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to Произошла ошибка при создании резервной копии. Резервная копия не была создана!.
+        /// </summary>
+        internal static string BackUpCreationFailed {
+            get {
+                return ResourceManager.GetString("BackUpCreationFailed", resourceCulture);
+            }
+        }
+        
         internal static System.Drawing.Bitmap bug {
             get {
                 object obj = ResourceManager.GetObject("bug", resourceCulture);
@@ -204,6 +213,15 @@ namespace srcrepair.Properties {
         internal static string GT_DxLevelMsg {
             get {
                 return ResourceManager.GetString("GT_DxLevelMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Внимание! Обнаружен установленный FPS-конфиг, поэтому настройки с этой страницы кроме режима DirectX будут игнорироваться игрой до удаления FPS-конфига..
+        /// </summary>
+        internal static string GT_FPSCfgDetected {
+            get {
+                return ResourceManager.GetString("GT_FPSCfgDetected", resourceCulture);
             }
         }
         

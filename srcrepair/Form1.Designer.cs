@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainW));
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
+            this.GT_Warning = new System.Windows.Forms.PictureBox();
             this.GT_SaveApply = new System.Windows.Forms.Button();
             this.GT_Maximum_Performance = new System.Windows.Forms.Button();
             this.GT_Maximum_Graphics = new System.Windows.Forms.Button();
@@ -154,6 +155,7 @@
             this.LogWriter = new System.Diagnostics.EventLog();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GT_Warning)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResVert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResHor)).BeginInit();
             this.ConfigEditor.SuspendLayout();
@@ -187,6 +189,7 @@
             // 
             // GraphicTweaker
             // 
+            this.GraphicTweaker.Controls.Add(this.GT_Warning);
             this.GraphicTweaker.Controls.Add(this.GT_SaveApply);
             this.GraphicTweaker.Controls.Add(this.GT_Maximum_Performance);
             this.GraphicTweaker.Controls.Add(this.GT_Maximum_Graphics);
@@ -232,6 +235,18 @@
             this.GraphicTweaker.TabIndex = 0;
             this.GraphicTweaker.Text = "Графические настройки";
             this.GraphicTweaker.UseVisualStyleBackColor = true;
+            // 
+            // GT_Warning
+            // 
+            this.GT_Warning.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GT_Warning.Image = ((System.Drawing.Image)(resources.GetObject("GT_Warning.Image")));
+            this.GT_Warning.Location = new System.Drawing.Point(408, 329);
+            this.GT_Warning.Name = "GT_Warning";
+            this.GT_Warning.Size = new System.Drawing.Size(32, 32);
+            this.GT_Warning.TabIndex = 40;
+            this.GT_Warning.TabStop = false;
+            this.GT_Warning.Visible = false;
+            this.GT_Warning.Click += new System.EventHandler(this.GT_Warning_Click);
             // 
             // GT_SaveApply
             // 
@@ -1469,6 +1484,7 @@
             this.MainTabControl.ResumeLayout(false);
             this.GraphicTweaker.ResumeLayout(false);
             this.GraphicTweaker.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GT_Warning)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResVert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResHor)).EndInit();
             this.ConfigEditor.ResumeLayout(false);
@@ -1622,6 +1638,7 @@
         private System.Windows.Forms.Label FP_TopLabel;
         private System.Windows.Forms.CheckBox FP_CreateBackUp;
         private System.Diagnostics.EventLog LogWriter;
+        private System.Windows.Forms.PictureBox GT_Warning;
     }
 }
 

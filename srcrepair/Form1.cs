@@ -290,6 +290,10 @@ namespace srcrepair
             // Генерируем полный путь до каталога управляемого приложения...
             GV.FullGamePath = CoreFn.IncludeTrDelim(GV.FullSteamPath + "steamapps\\" + LoginSel.Text + "\\" + GV.FullAppName + "\\" + GV.SmallAppName);
 
+            // Заполняем другие служебные переменные...
+            GV.FullCfgPath = GV.FullGamePath + "cfg\\";
+            GV.FullBackUpDirPath = GV.FullAppPath + "backups\\" + GV.SmallAppName + "\\";
+            
             // Включаем основные элементы управления (контролы)...
             MainTabControl.Enabled = true;
 
@@ -571,6 +575,16 @@ namespace srcrepair
                 GT_HDR.SelectedIndex = 2;
             }
 
+            // Проверим, установлен ли FPS-конфиг...
+            if (System.IO.File.Exists(GV.FullCfgPath + "autoexec.cfg"))
+            {
+                GT_Warning.Visible = true;
+            }
+            else
+            {
+                GT_Warning.Visible = false;
+            }
+            
             // Очистим список FPS-конфигов...
             FP_ConfigSel.Items.Clear();
 
@@ -932,7 +946,7 @@ namespace srcrepair
                     if (FP_CreateBackUp.Checked)
                     {
                         // Создаём резервную копию...
-                        // TODO: реализовать возможность создания резервных копий...
+                        CoreFn.CreateBackUpNow(FP_ConfigSel.Text);
                     }
 
                     try
@@ -941,15 +955,14 @@ namespace srcrepair
                         CoreFn.InstallConfigNow(FP_ConfigSel.Text);
                         // Выводим сообщение об успешной установке...
                         MessageBox.Show(Properties.Resources.FP_InstallSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // Отобразим значок предупреждения на странице графических настроек...
+                        GT_Warning.Visible = true;
                     }
                     catch
                     {
                         // Установка не удалась. Выводим сообщение об этом...
                         MessageBox.Show(Properties.Resources.FP_InstallFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-
-                    // Отобразим значок предупреждения на странице графических настроек...
-                    // TODO: реализовать значок...
                 }
             }
             else
@@ -963,7 +976,7 @@ namespace srcrepair
         {
             // Начинаем удаление установленного конфига...
             // Генерируем имя файла с полным путём до него...
-            string CfgFile = GV.FullGamePath + "cfg\\autoexec.cfg";
+            string CfgFile = GV.FullCfgPath + "autoexec.cfg";
             // Проверяем, существует ли файл...
             if (System.IO.File.Exists(CfgFile))
             {
@@ -975,7 +988,7 @@ namespace srcrepair
                     if (FP_CreateBackUp.Checked)
                     {
                         // Создаём резервную копию...
-                        // TODO: реализовать возможность создания резервных копий...
+                        CoreFn.CreateBackUpNow("autoexec.cfg");
                     }
 
                     try
@@ -984,6 +997,8 @@ namespace srcrepair
                         System.IO.File.Delete(CfgFile);
                         // Выводим сообщение об успешном удалении...
                         MessageBox.Show(Properties.Resources.FP_RemoveSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // Скрываем значок предупреждения на странице графических настроек...
+                        GT_Warning.Visible = false;
                     }
                     catch
                     {
@@ -996,6 +1011,12 @@ namespace srcrepair
             {
                 MessageBox.Show(Properties.Resources.FP_RemoveNotExists, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void GT_Warning_Click(object sender, EventArgs e)
+        {
+            // Выдадим сообщение о наличии FPS-конфига...
+            MessageBox.Show(Properties.Resources.GT_FPSCfgDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

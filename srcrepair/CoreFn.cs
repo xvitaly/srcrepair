@@ -267,7 +267,44 @@ namespace srcrepair
         public static void InstallConfigNow(string ConfName)
         {
             // Устанавливаем...
-            File.Copy(GV.FullAppPath + "cfgs\\" + GV.SmallAppName + "\\" + ConfName, GV.FullGamePath + "cfg\\autoexec.cfg", true);
+            File.Copy(GV.FullAppPath + "cfgs\\" + GV.SmallAppName + "\\" + ConfName, GV.FullCfgPath + "autoexec.cfg", true);
+        }
+
+        /* Эта функция генерирует ДДММГГЧЧММСС из указанного времени в строку.
+         * Применяется для служебных целей. */
+        public static string SetYMDHMSToStr(DateTime XDate)
+        {
+            // Возвращаем строку с результатом...
+            return XDate.Day.ToString() + XDate.Month.ToString() + XDate.Year.ToString() + XDate.Hour.ToString() + XDate.Minute.ToString() + XDate.Second.ToString();
+        }
+
+        /* Эта функция создаёт резервную копию конфига, имя которого передано
+         * в параметре. */
+        public static void CreateBackUpNow(string ConfName)
+        {
+            // Сначала проверим, существует ли запрошенный файл...
+            if (File.Exists(GV.FullCfgPath + ConfName))
+            {
+                // Проверяем чтобы каталог для бэкапов существовал...
+                if (!(Directory.Exists(GV.FullBackUpDirPath)))
+                {
+                    // Каталоги не существуют. Создадим общий каталог для резервных копий...
+                    Directory.CreateDirectory(GV.FullBackUpDirPath);
+                    // ...и реестра...
+                    Directory.CreateDirectory(GV.FullBackUpDirPath + "registry\\");
+                }
+                
+                try
+                {
+                    // Копируем оригинальный файл в файл бэкапа...
+                    File.Copy(GV.FullCfgPath + ConfName, GV.FullBackUpDirPath + ConfName + "." + CoreFn.SetYMDHMSToStr(DateTime.Now), true);
+                }
+                catch
+                {
+                    // Произошло исключение. Уведомим пользователя об этом...
+                    MessageBox.Show(Properties.Resources.BackUpCreationFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
 
         // Источник данной функции: http://www.csharp-examples.net/inputbox/ //
