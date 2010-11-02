@@ -272,10 +272,18 @@ namespace srcrepair
 
         /* Эта функция генерирует ДДММГГЧЧММСС из указанного времени в строку.
          * Применяется для служебных целей. */
-        public static string SetYMDHMSToStr(DateTime XDate)
+        public static string WriteDateToString(DateTime XDate, bool MicroDate)
         {
-            // Возвращаем строку с результатом...
-            return XDate.Day.ToString() + XDate.Month.ToString() + XDate.Year.ToString() + XDate.Hour.ToString() + XDate.Minute.ToString() + XDate.Second.ToString();
+            if (MicroDate)
+            {
+                // Возвращаем строку с результатом (краткой датой)...
+                return XDate.Day.ToString() + XDate.Month.ToString() + XDate.Year.ToString() + XDate.Hour.ToString() + XDate.Minute.ToString() + XDate.Second.ToString();
+            }
+            else
+            {
+                // Возвращаем строку с результатом (датой по ГОСТу)...
+                return XDate.Day.ToString() + "." + XDate.Month.ToString() + "." + XDate.Year.ToString() + " " + XDate.Hour.ToString() + ":" + XDate.Minute.ToString() + ":" + XDate.Second.ToString();
+            }
         }
 
         /* Эта функция создаёт резервную копию конфига, имя которого передано
@@ -297,7 +305,7 @@ namespace srcrepair
                 try
                 {
                     // Копируем оригинальный файл в файл бэкапа...
-                    File.Copy(GV.FullCfgPath + ConfName, GV.FullBackUpDirPath + ConfName + "." + CoreFn.SetYMDHMSToStr(DateTime.Now), true);
+                    File.Copy(GV.FullCfgPath + ConfName, GV.FullBackUpDirPath + ConfName + "." + CoreFn.WriteDateToString(DateTime.Now, true), true);
                 }
                 catch
                 {
