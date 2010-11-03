@@ -253,7 +253,7 @@
     <comment>Сообщение, используемое функцией ProcessTerminate.</comment>
   </data>
   <data name="StatusAppChanged" xml:space="preserve">
-    <value>Приложение успешно переключено. Управляем:</value>
+    <value>Управляем приложением:</value>
     <comment>Сообщение об успешном переключении управляемого приложения</comment>
   </data>
   <data name="StatusLoginChanged" xml:space="preserve">

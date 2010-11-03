@@ -403,7 +403,7 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Приложение успешно переключено. Управляем:.
+        ///   Looks up a localized string similar to Управляем приложением:.
         /// </summary>
         internal static string StatusAppChanged {
             get {

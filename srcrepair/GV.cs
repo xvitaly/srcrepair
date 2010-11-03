@@ -38,13 +38,5 @@ namespace srcrepair
         /* В этой переменной мы будем хранить полный путь до каталога с
          * резервными копиями управляемого приложения. */
         public static string FullBackUpDirPath;
-
-        /* В этой переменной мы будем хранить подробный журнал работы
-         * приложения для дальнейшей обработки и записи в лог. */
-        public static string ApplicationMemoryLog = "";
-
-        /* Указываем разрешить или запретить запись событий программы
-         * в системный журнал Windows. */
-        public static bool EnableEventLogging = true;
     }
 }
