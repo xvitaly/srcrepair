@@ -482,6 +482,33 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Внимание! В пути к Steam обнаружены недопустимые символы: русские, немецкие и т.д. буквы, либо символы Юникода. Steam и TF2 будут работать с ошибками. Переустановите Steam в папку, путь до которой будет содержать только латинские буквы..
+        /// </summary>
+        internal static string SteamNonASCIIDetected {
+            get {
+                return ResourceManager.GetString("SteamNonASCIIDetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Внимание! В пути к Steam обнаружены недопустимые символы. Steam и TF2 будут работать с ошибками. Переустановите Steam в папку, путь до которой будет содержать только латинские буквы..
+        /// </summary>
+        internal static string SteamNonASCIISmall {
+            get {
+                return ResourceManager.GetString("SteamNonASCIISmall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Обнаружены запрещённые символы!.
+        /// </summary>
+        internal static string SteamNonASCIITitle {
+            get {
+                return ResourceManager.GetString("SteamNonASCIITitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ключи реестра, относящиеся к Steam не обнаружены. Вам не нужна их чистка. Нажмите OK для выхода из программы!.
         /// </summary>
         internal static string SteamNotDetected {

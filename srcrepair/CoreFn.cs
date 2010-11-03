@@ -7,6 +7,7 @@ using System.Diagnostics; // для управления процессами...
 using Microsoft.Win32; // для работы с реестром...
 using System.Windows.Forms; // для работы с формами (в нашем случае - InputBox)...
 using System.Drawing; // аналогично Forms...
+using System.Text.RegularExpressions; // для работы с регулярными выражениями...
 
 namespace srcrepair
 {
@@ -313,6 +314,28 @@ namespace srcrepair
                     MessageBox.Show(Properties.Resources.BackUpCreationFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+        }
+
+        /* Эта функция проверяет наличие не-ASCII-символов в строке. Возвращает True
+         * если не обнаружено запрещённых симолов и False - если они были обнаружены. */
+        public static bool CheckNonASCII(string Path)
+        {
+            // Проверяем строку на соответствие регулярному выражению...
+            //return Regex.IsMatch(Path, "");
+            bool Result = true; // переменная для промежуточного результата...
+            for (int i = 1; i < Path.Length; i++) // запускаем цикл...
+            {
+                // Проверяем, соответствует ли символ шаблону допустимых символов...
+                if (!(Regex.IsMatch(Path[i].ToString(), "[0-9a-zA-Z :()\\\\]")))
+                {
+                    // Не соответствует, следовательно найден недопустимый.
+                    // Вернём False и прекратим цикл, т.к. дальнейшая проверка бессмысленна...
+                    Result = false;
+                    break;
+                }
+            }
+            // Возвращаем результат функции...
+            return Result;
         }
 
         // Источник данной функции: http://www.csharp-examples.net/inputbox/ //

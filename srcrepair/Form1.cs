@@ -137,7 +137,19 @@ namespace srcrepair
                 LoginSel.Items.Add((string)SBuf);
             }
 
-            // TODO: Реализовать проверку на наличие non-ASCII символов в пути...
+            // Укажем путь к Steam на странице "Устранение проблем"...
+            PS_RSteamPath.Text = GV.FullSteamPath;
+            
+            // Проверим на наличие запрещённых символов в пути к установленному клиенту Steam...
+            if (!(CoreFn.CheckNonASCII(GV.FullSteamPath)))
+            {
+                // Запрещённые символы найдены!
+                PS_PathDetector.Text = Properties.Resources.SteamNonASCIITitle;
+                PS_PathDetector.ForeColor = Color.Red;
+                PS_WarningMsg.Text = Properties.Resources.SteamNonASCIISmall;
+                PS_WarningMsg.ForeColor = Color.Red;
+                MessageBox.Show(Properties.Resources.SteamNonASCIIDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
             // Выводим сообщение в строку статуса...
             SB_Status.Text = Properties.Resources.StatusSLogin;
@@ -615,7 +627,7 @@ namespace srcrepair
 
         private void LoginSel_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //
+            // Логин выбран, включаем контролы...
             AppSelector.Enabled = true;
             if (AppSelector.SelectedIndex == -1)
             {
@@ -625,6 +637,9 @@ namespace srcrepair
             {
                 SB_Status.Text = Properties.Resources.StatusLoginChanged;
             }
+
+            // Выводим логин на страницу "Устранение проблем"...
+            PS_RSteamLogin.Text = LoginSel.Text;
         }
 
         private void GT_Maximum_Graphics_Click(object sender, EventArgs e)
