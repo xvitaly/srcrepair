@@ -150,9 +150,11 @@
             this.StatusBar = new System.Windows.Forms.StatusStrip();
             this.SB_Info = new System.Windows.Forms.ToolStripStatusLabel();
             this.SB_Status = new System.Windows.Forms.ToolStripStatusLabel();
+            this.SB_App = new System.Windows.Forms.ToolStripStatusLabel();
             this.AppSelector = new System.Windows.Forms.ComboBox();
             this.L_AppSelector = new System.Windows.Forms.Label();
-            this.SB_App = new System.Windows.Forms.ToolStripStatusLabel();
+            this.CE_OpenCfgDialog = new System.Windows.Forms.OpenFileDialog();
+            this.CE_SaveCfgDialog = new System.Windows.Forms.SaveFileDialog();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_Warning)).BeginInit();
@@ -1433,6 +1435,14 @@
             this.SB_Status.Text = "Все системы работают в штатном режиме.";
             this.SB_Status.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // SB_App
+            // 
+            this.SB_App.AutoSize = false;
+            this.SB_App.Name = "SB_App";
+            this.SB_App.Size = new System.Drawing.Size(124, 17);
+            this.SB_App.Text = "Counter-Strike: Source";
+            this.SB_App.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // AppSelector
             // 
             this.AppSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1457,13 +1467,16 @@
             this.L_AppSelector.TabIndex = 6;
             this.L_AppSelector.Text = "Приложение:";
             // 
-            // SB_App
+            // CE_OpenCfgDialog
             // 
-            this.SB_App.AutoSize = false;
-            this.SB_App.Name = "SB_App";
-            this.SB_App.Size = new System.Drawing.Size(124, 17);
-            this.SB_App.Text = "Counter-Strike: Source";
-            this.SB_App.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CE_OpenCfgDialog.DefaultExt = "cfg";
+            this.CE_OpenCfgDialog.Filter = "Файлы конфигов (*.cfg)|*.cfg";
+            // 
+            // CE_SaveCfgDialog
+            // 
+            this.CE_SaveCfgDialog.CreatePrompt = true;
+            this.CE_SaveCfgDialog.DefaultExt = "cfg";
+            this.CE_SaveCfgDialog.Filter = "Файлы конфигов (*.cfg)|*.cfg";
             // 
             // frmMainW
             // 
@@ -1643,6 +1656,8 @@
         private System.Windows.Forms.CheckBox FP_CreateBackUp;
         private System.Windows.Forms.PictureBox GT_Warning;
         private System.Windows.Forms.ToolStripStatusLabel SB_App;
+        private System.Windows.Forms.OpenFileDialog CE_OpenCfgDialog;
+        private System.Windows.Forms.SaveFileDialog CE_SaveCfgDialog;
     }
 }
 
