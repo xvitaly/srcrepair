@@ -85,6 +85,33 @@ namespace srcrepair.Properties {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to Внимание! При попытке открыть файл произошла ошибка. Возможно, файл открыт с ошибками. Пожалуйста, сообщите о ней в наш багтрекер (Справка - Сообщить об ошибке в программе)..
+        /// </summary>
+        internal static string CE_ExceptionDetected {
+            get {
+                return ResourceManager.GetString("CE_ExceptionDetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Невозможно считать содержимое конфига, т.к. файл не найден!.
+        /// </summary>
+        internal static string CE_OpenFailed {
+            get {
+                return ResourceManager.GetString("CE_OpenFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Внимание! Настоятельно не рекомендуется редактировать этот файл, т.к. это может привести к непредсказуемым последствиям. Редактируйте его на свой страх и риск..
+        /// </summary>
+        internal static string CE_RestConfigOpenWarn {
+            get {
+                return ResourceManager.GetString("CE_RestConfigOpenWarn", resourceCulture);
+            }
+        }
+        
         internal static System.Drawing.Bitmap EasyCoding {
             get {
                 object obj = ResourceManager.GetObject("EasyCoding", resourceCulture);

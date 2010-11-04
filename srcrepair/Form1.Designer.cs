@@ -728,6 +728,7 @@
             this.CE_Open.Name = "CE_Open";
             this.CE_Open.Size = new System.Drawing.Size(23, 22);
             this.CE_Open.Text = "Открыть конфиг из файла";
+            this.CE_Open.Click += new System.EventHandler(this.CE_Open_Click);
             // 
             // CE_Save
             // 
