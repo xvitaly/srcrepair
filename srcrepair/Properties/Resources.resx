@@ -252,16 +252,16 @@
     <value>Настоятельно рекомендуется завершить его работу во избежании серьёзных ошибок. Завершить работу этого процесса сейчас</value>
     <comment>Сообщение, используемое функцией ProcessTerminate.</comment>
   </data>
-  <data name="StatusAppChanged" xml:space="preserve">
-    <value>Управляем приложением:</value>
-    <comment>Сообщение об успешном переключении управляемого приложения</comment>
+  <data name="StatusNormal" xml:space="preserve">
+    <value>Все системы работают в штатном режиме.</value>
+    <comment>Сообщение об успешном завершении инициализации</comment>
   </data>
   <data name="StatusLoginChanged" xml:space="preserve">
     <value>Логин Steam был успешно сменён. Продолжаем работу с новым...</value>
     <comment>Сообщение о смене логина</comment>
   </data>
   <data name="StatusSApp" xml:space="preserve">
-    <value>Пожалуйста, выберите управляемое приложение из списка!</value>
+    <value>Пожалуйста, выберите приложение из списка!</value>
     <comment>Сообщение о необходимости выбора управляемого приложения</comment>
   </data>
   <data name="StatusSLogin" xml:space="preserve">
@@ -351,5 +351,13 @@
   <data name="SteamNonASCIITitle" xml:space="preserve">
     <value>Обнаружены запрещённые символы!</value>
     <comment>Текст для детектора</comment>
+  </data>
+  <data name="StatusOpenedFile" xml:space="preserve">
+    <value>Сейчас в редакторе открыт файл:</value>
+    <comment>Сообщение строки статуса об открытом файле...</comment>
+  </data>
+  <data name="UnnamedFileName" xml:space="preserve">
+    <value>Безымянный.cfg</value>
+    <comment>Стандартное имя для файла без имени</comment>
   </data>
 </root>

@@ -152,6 +152,7 @@
             this.SB_Status = new System.Windows.Forms.ToolStripStatusLabel();
             this.AppSelector = new System.Windows.Forms.ComboBox();
             this.L_AppSelector = new System.Windows.Forms.Label();
+            this.SB_App = new System.Windows.Forms.ToolStripStatusLabel();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_Warning)).BeginInit();
@@ -715,6 +716,7 @@
             this.CE_New.Name = "CE_New";
             this.CE_New.Size = new System.Drawing.Size(23, 22);
             this.CE_New.Text = "Создать новый конфиг";
+            this.CE_New.Click += new System.EventHandler(this.CE_New_Click);
             // 
             // CE_Open
             // 
@@ -1410,7 +1412,8 @@
             // 
             this.StatusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SB_Info,
-            this.SB_Status});
+            this.SB_Status,
+            this.SB_App});
             this.StatusBar.Location = new System.Drawing.Point(0, 482);
             this.StatusBar.Name = "StatusBar";
             this.StatusBar.Size = new System.Drawing.Size(494, 22);
@@ -1424,9 +1427,11 @@
             // 
             // SB_Status
             // 
+            this.SB_Status.AutoSize = false;
             this.SB_Status.Name = "SB_Status";
-            this.SB_Status.Size = new System.Drawing.Size(224, 17);
+            this.SB_Status.Size = new System.Drawing.Size(308, 17);
             this.SB_Status.Text = "Все системы работают в штатном режиме.";
+            this.SB_Status.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // AppSelector
             // 
@@ -1451,6 +1456,14 @@
             this.L_AppSelector.Size = new System.Drawing.Size(74, 13);
             this.L_AppSelector.TabIndex = 6;
             this.L_AppSelector.Text = "Приложение:";
+            // 
+            // SB_App
+            // 
+            this.SB_App.AutoSize = false;
+            this.SB_App.Name = "SB_App";
+            this.SB_App.Size = new System.Drawing.Size(124, 17);
+            this.SB_App.Text = "Counter-Strike: Source";
+            this.SB_App.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmMainW
             // 
@@ -1629,6 +1642,7 @@
         private System.Windows.Forms.Label FP_TopLabel;
         private System.Windows.Forms.CheckBox FP_CreateBackUp;
         private System.Windows.Forms.PictureBox GT_Warning;
+        private System.Windows.Forms.ToolStripStatusLabel SB_App;
     }
 }
 

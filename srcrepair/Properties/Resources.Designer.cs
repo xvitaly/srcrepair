@@ -403,15 +403,6 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Управляем приложением:.
-        /// </summary>
-        internal static string StatusAppChanged {
-            get {
-                return ResourceManager.GetString("StatusAppChanged", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Логин Steam был успешно сменён. Продолжаем работу с новым....
         /// </summary>
         internal static string StatusLoginChanged {
@@ -421,7 +412,25 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Пожалуйста, выберите управляемое приложение из списка!.
+        ///   Looks up a localized string similar to Все системы работают в штатном режиме..
+        /// </summary>
+        internal static string StatusNormal {
+            get {
+                return ResourceManager.GetString("StatusNormal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Сейчас в редакторе открыт файл:.
+        /// </summary>
+        internal static string StatusOpenedFile {
+            get {
+                return ResourceManager.GetString("StatusOpenedFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пожалуйста, выберите приложение из списка!.
         /// </summary>
         internal static string StatusSApp {
             get {
@@ -580,6 +589,15 @@ namespace srcrepair.Properties {
             get {
                 object obj = ResourceManager.GetObject("tfru", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Безымянный.cfg.
+        /// </summary>
+        internal static string UnnamedFileName {
+            get {
+                return ResourceManager.GetString("UnnamedFileName", resourceCulture);
             }
         }
         

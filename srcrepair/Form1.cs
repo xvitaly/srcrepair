@@ -16,6 +16,8 @@ namespace srcrepair
             InitializeComponent();
         }
 
+        private string CFGFileName;
+        
         private void frmMainW_Load(object sender, EventArgs e)
         {
             // Событие инициализации формы...
@@ -622,7 +624,8 @@ namespace srcrepair
             }
 
             // Выводим сообщение о завершении считывания в статус-бар...
-            SB_Status.Text = Properties.Resources.StatusAppChanged + " " + AppSelector.SelectedItem.ToString() + ".";
+            SB_Status.Text = Properties.Resources.StatusNormal;
+            SB_App.Text = AppSelector.SelectedItem.ToString();
         }
 
         private void LoginSel_SelectedIndexChanged(object sender, EventArgs e)
@@ -1032,6 +1035,14 @@ namespace srcrepair
         {
             // Выдадим сообщение о наличии FPS-конфига...
             MessageBox.Show(Properties.Resources.GT_FPSCfgDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void CE_New_Click(object sender, EventArgs e)
+        {
+            // Создаём новый файл...
+            CE_Editor.Rows.Clear();
+            CFGFileName = "";
+            SB_Status.Text = Properties.Resources.StatusOpenedFile + " " + Properties.Resources.UnnamedFileName;
         }
     }
 }
