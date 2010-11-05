@@ -86,6 +86,33 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Сохранить файл конфигурации?.
+        /// </summary>
+        internal static string CE_CfgSV {
+            get {
+                return ResourceManager.GetString("CE_CfgSV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Внимание! Во время сохранения файла произошла ошибка. Файл не был сохранён!.
+        /// </summary>
+        internal static string CE_CfgSVVEx {
+            get {
+                return ResourceManager.GetString("CE_CfgSVVEx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Создать резервную копию файла.
+        /// </summary>
+        internal static string CE_CreateBackUp {
+            get {
+                return ResourceManager.GetString("CE_CreateBackUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Внимание! При попытке открыть файл произошла ошибка. Возможно, файл открыт с ошибками. Пожалуйста, сообщите о ней в наш багтрекер (Справка - Сообщить об ошибке в программе)..
         /// </summary>
         internal static string CE_ExceptionDetected {

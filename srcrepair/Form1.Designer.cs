@@ -738,6 +738,7 @@
             this.CE_Save.Name = "CE_Save";
             this.CE_Save.Size = new System.Drawing.Size(23, 22);
             this.CE_Save.Text = "Сохранить изменения в файл";
+            this.CE_Save.Click += new System.EventHandler(this.CE_Save_Click);
             // 
             // CE_SaveAs
             // 
@@ -747,6 +748,7 @@
             this.CE_SaveAs.Name = "CE_SaveAs";
             this.CE_SaveAs.Size = new System.Drawing.Size(23, 22);
             this.CE_SaveAs.Text = "Сохранить конфиг как...";
+            this.CE_SaveAs.Click += new System.EventHandler(this.CE_SaveAs_Click);
             // 
             // CE_Print
             // 

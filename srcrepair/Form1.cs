@@ -16,7 +16,15 @@ namespace srcrepair
             InitializeComponent();
         }
 
+        /* В этой переменной будем хранить имя открытого конфига для служебных целей. */
         private string CFGFileName;
+
+        /* Эта функция сохраняет содержимое таблицы в файл конфигурации, указанный в
+         * параметре. Используется в Save и SaveAs Редактора конфигов. */
+        private void WriteTableToFileNow(string Path)
+        {
+            //
+        }
         
         private void frmMainW_Load(object sender, EventArgs e)
         {
@@ -1049,7 +1057,7 @@ namespace srcrepair
         {
             // Прочитаем конфиг и заполним его содержимым нашу таблицу редактора...
             
-            // Указываем стартовый каталог в диалоге открытия файла на каталог с конфигами TF2...
+            // Указываем стартовый каталог в диалоге открытия файла на каталог с конфигами игры...
             CE_OpenCfgDialog.InitialDirectory = GV.FullCfgPath;
 
             // Считывает файл конфига и помещает записи в таблицу
@@ -1140,6 +1148,60 @@ namespace srcrepair
                 {
                     MessageBox.Show(Properties.Resources.CE_OpenFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+            }
+        }
+
+        private void CE_Save_Click(object sender, EventArgs e)
+        {
+            CE_SaveCfgDialog.InitialDirectory = GV.FullCfgPath; // Указываем путь по умолчанию к конфигам управляемого приложения...
+            DialogResult UserConfirmation = MessageBox.Show(Properties.Resources.CE_CfgSV, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (UserConfirmation == DialogResult.Yes) // Спрашиваем пользователя о необходимости сохранения файла...
+            {
+                if (!(String.IsNullOrEmpty(CFGFileName))) // Проверяем, открыт ли какой-либо файл...
+                {
+                    // Будем бэкапировать только файлы, находящиеся в каталоге /cfg/
+                    // управляемоего приложения. Остальные - нет.
+                    if (System.IO.File.Exists(GV.FullCfgPath + CFGFileName))
+                    {
+                        // Спрашиваем пользователя о создании резервной копии...
+                        UserConfirmation = MessageBox.Show(Properties.Resources.CE_CreateBackUp, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (UserConfirmation == DialogResult.Yes)
+                        {
+                            CoreFn.CreateBackUpNow(CFGFileName);
+                        }
+                    }
+                    try
+                    {
+                        //WriteTableToFileNow(CFGFileName);
+                        WriteTableToFileNow(CE_OpenCfgDialog.FileName);
+                    }
+                    catch
+                    {
+                        // Произошла ошибка при сохранении файла...
+                        MessageBox.Show(Properties.Resources.CE_CfgSVVEx, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    // Файл не был открыт. Нужно сохранить и дать имя...
+                    DialogResult SaveResult = CE_SaveCfgDialog.ShowDialog(); // Отображаем стандартный диалог сохранения файла...
+                    if (SaveResult == DialogResult.OK)
+                    {
+                        WriteTableToFileNow(CE_SaveCfgDialog.FileName);
+                        CFGFileName = System.IO.Path.GetFileName(CE_SaveCfgDialog.FileName);
+                        SB_Status.Text = Properties.Resources.StatusOpenedFile + " " + CFGFileName;
+                    }
+                }
+            }
+        }
+
+        private void CE_SaveAs_Click(object sender, EventArgs e)
+        {
+            CE_SaveCfgDialog.InitialDirectory = GV.FullCfgPath;
+            DialogResult SaveResult = CE_SaveCfgDialog.ShowDialog();
+            if (SaveResult == DialogResult.OK)
+            {
+                WriteTableToFileNow(CE_SaveCfgDialog.FileName);
             }
         }
     }
