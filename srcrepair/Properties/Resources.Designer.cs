@@ -61,6 +61,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Внимание! Программа запущена нет от учётной записи с правами администратора, поэтому некоторые функции будут отключены. Чтобы получить к ним доступ, перезапустите её с првами администратора!.
+        /// </summary>
+        internal static string AppLaunchedNotAdmin {
+            get {
+                return ResourceManager.GetString("AppLaunchedNotAdmin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Source Repair.
         /// </summary>
         internal static string AppName {

@@ -8,6 +8,7 @@ using Microsoft.Win32; // для работы с реестром...
 using System.Windows.Forms; // для работы с формами (в нашем случае - InputBox)...
 using System.Drawing; // аналогично Forms...
 using System.Text.RegularExpressions; // для работы с регулярными выражениями...
+using System.Security.Principal; // для определения прав админа...
 
 namespace srcrepair
 {
@@ -234,6 +235,27 @@ namespace srcrepair
             return TextFile;
         }
 
+        /* Эта функция проверяет есть ли у пользователя, с правами которого запускается
+         * программа, привилегии локального администратора. */
+        public static bool IsCurrentUserAdmin()
+        {
+            bool Result; // Переменная для хранения результата...
+            try
+            {
+                // Получаем сведения...
+                WindowsPrincipal UP = new WindowsPrincipal(WindowsIdentity.GetCurrent());
+                // Проверяем, состоит ли пользователь в группе администраторов...
+                Result = UP.IsInRole(WindowsBuiltInRole.Administrator);
+            }
+            catch
+            {
+                // Произошло исключение. Пользователь не администратор...
+                Result = false;
+            }
+            // Возвращает результат...
+            return Result;
+        }
+        
         /* Эта функция ищет указанную строку в массиве строк и возвращает её индекс,
          * либо -1 если такой строки в массиве не найдено. */
         public static int FindStringInStrArray(string[] SourceStr, string What)
