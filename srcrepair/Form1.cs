@@ -302,22 +302,53 @@ namespace srcrepair
 
         private void AppSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Создаём буферную переменную для дальнейшего использования...
+            string ptha = "";
+
+            /* Значение локальной переменной ptha:
+             * LoginSel.Text - для GCF-приложний (логин Steam);
+             * common - для NCF-приложений.
+             */
+            
             // Начинаем определять нужные нам значения переменных...
             switch (AppSelector.SelectedIndex)
             {
-                case 0:
-                    GV.FullAppName = "team fortress 2";
-                    GV.SmallAppName = "tf";
+                case 0: // Team Fortress 2
+                    GV.FullAppName = "team fortress 2"; // имя каталога...
+                    GV.SmallAppName = "tf"; // имя индивидуального подкаталога...
+                    ptha = LoginSel.Text; // это GCF-приложение...
                     break;
-                case 1:
+                case 1: // Counter-Strike: Source
                     GV.FullAppName = "counter-strike source";
                     GV.SmallAppName = "cstrike";
+                    ptha = LoginSel.Text;
                     break;
-                case 2:
+                case 2: // Garry's Mod
                     GV.FullAppName = "garrysmod";
                     GV.SmallAppName = "garrysmod";
+                    ptha = LoginSel.Text;
                     break;
-                default:
+                case 3: // Left 4 Dead 1
+                    GV.FullAppName = "left 4 dead"; // имя каталога...
+                    GV.SmallAppName = "l4d"; // имя индивидуального подкаталога...
+                    ptha = "common"; // это NCF-приложение...
+                    break;
+                case 4: // Left 4 Dead 2
+                    GV.FullAppName = "left 4 dead 2";
+                    GV.SmallAppName = "l4d2";
+                    ptha = "common";
+                    break;
+                case 5: // Alien Swarm
+                    GV.FullAppName = "alien swarm";
+                    GV.SmallAppName = "swarm";
+                    ptha = "common";
+                    break;
+                case 6: // Day of Defeat: Source
+                    GV.FullAppName = "day of defeat source";
+                    GV.SmallAppName = "dod";
+                    ptha = LoginSel.Text;
+                    break;
+                default: // Ничего не выбрано
                     AppSelector.SelectedIndex = -1;
                     break;
             }
@@ -333,7 +364,7 @@ namespace srcrepair
             }
 
             // Генерируем полный путь до каталога управляемого приложения...
-            GV.FullGamePath = CoreFn.IncludeTrDelim(GV.FullSteamPath + "steamapps\\" + LoginSel.Text + "\\" + GV.FullAppName + "\\" + GV.SmallAppName);
+            GV.FullGamePath = CoreFn.IncludeTrDelim(GV.FullSteamPath + "steamapps\\" + ptha + "\\" + GV.FullAppName + "\\" + GV.SmallAppName);
 
             // Заполняем другие служебные переменные...
             GV.FullCfgPath = GV.FullGamePath + "cfg\\";
@@ -1102,7 +1133,7 @@ namespace srcrepair
                     CE_Editor.Rows.Clear(); // Очищаем область редактирования...
                     try
                     {
-                        using (System.IO.StreamReader OpenedConfig = new System.IO.StreamReader(@Buf)) // Открываем файл таким способом...
+                        using (System.IO.StreamReader OpenedConfig = new System.IO.StreamReader(@Buf, System.Text.Encoding.GetEncoding(1251))) // Открываем файл таким способом...
                         {
                             // Будем читать поток построчно...
                             while (OpenedConfig.Peek() >= 0)

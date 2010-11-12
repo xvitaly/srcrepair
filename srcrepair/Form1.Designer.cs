@@ -1443,7 +1443,7 @@
             this.SB_App.AutoSize = false;
             this.SB_App.Name = "SB_App";
             this.SB_App.Size = new System.Drawing.Size(124, 17);
-            this.SB_App.Text = "Counter-Strike: Source";
+            this.SB_App.Text = "Ничего не выбрано";
             this.SB_App.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // AppSelector
@@ -1454,7 +1454,11 @@
             this.AppSelector.Items.AddRange(new object[] {
             "Team Fortress 2",
             "Counter-Strike: Source",
-            "Garry\'s Mod"});
+            "Garry\'s Mod",
+            "Left 4 Dead",
+            "Left 4 Dead 2",
+            "Alien Swarm",
+            "Day of Defeat: Source"});
             this.AppSelector.Location = new System.Drawing.Point(340, 35);
             this.AppSelector.Name = "AppSelector";
             this.AppSelector.Size = new System.Drawing.Size(142, 21);
