@@ -117,21 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="PS_SeqCompleted" xml:space="preserve">
-    <value>Очистка успешно выполнена! Спасибо за использование программы. Теперь Вы можете запустить Steam!</value>
-    <comment>Сообщение об успешном завершении очистки</comment>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PS_ExecuteMSG" xml:space="preserve">
-    <value>Выполнить очистку?</value>
-    <comment>Вопрос, задаваемый пользователю о необходимости выполнения очистки</comment>
-  </data>
-  <data name="GeneralErrorDetected" xml:space="preserve">
-    <value>Обнаружено исключение, которое мы не смогли обработать. Пожалуйста, сообщите разработчикам на email: vitaly@easycoding.org.</value>
-    <comment>Сообщение, выдаваемое при различных исключениях...</comment>
   </data>
   <data name="tf2world" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tf2world.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,20 +139,8 @@
   <data name="EasyCoding" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EasyCoding.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PS_NothingSelected" xml:space="preserve">
-    <value>Вы ничего не выбрали! Выберите хотя бы одну из опций очистки и повторите запуск!</value>
-    <comment>Сообщение, выдаваемое при отсутствии отмеченных чекбоксов</comment>
-  </data>
-  <data name="PS_NoLangSelected" xml:space="preserve">
-    <value>Вы неправильно выбрали язык Steam из выпадающего списка, поэтому будет использоваться английский!</value>
-    <comment>Сообщение, выдаваемое при неправильном выборе языка из выпадающего списка</comment>
-  </data>
   <data name="hint" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SteamNotDetected" xml:space="preserve">
-    <value>Ключи реестра, относящиеся к Steam не обнаружены. Вам не нужна их чистка. Нажмите OK для выхода из программы!</value>
-    <comment>Сообщение, выдаваемое при отсутствии в реестре ключей Steam</comment>
   </data>
   <data name="Wizard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Wizard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,14 +151,6 @@
   <data name="Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AppName" xml:space="preserve">
-    <value>Source Repair</value>
-    <comment>Хранит название приложения</comment>
-  </data>
-  <data name="PS_ProcessDetected" xml:space="preserve">
-    <value>Внимание! В памяти был обнаружен запущенный процесс Steam. Steam был успешно завершён.</value>
-    <comment>Сообщение, выдаваемое при обнаружении в памяти активного процесса Steam.exe</comment>
-  </data>
   <data name="Help" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -191,201 +159,5 @@
   </data>
   <data name="TF2Repair" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\TF2Repair.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FrmCloseQuery" xml:space="preserve">
-    <value>Закрыть приложение? Все несохранённые изменения будут потеряны!</value>
-    <comment>Сообщение, выдаваемое при закрытии основной формы.</comment>
-  </data>
-  <data name="NotImplementedYet" xml:space="preserve">
-    <value>Извините, но данная функция ещё не реализована!</value>
-    <comment>Сообщение, выдаваемое при запуске ещё не реализованной функции</comment>
-  </data>
-  <data name="SteamPathCancel" xml:space="preserve">
-    <value>Вы отказались вводить путь к Steam, поэтому программа будет завершена!</value>
-    <comment>Сообщение при нажатии кнопки Cancel InputBox'а</comment>
-  </data>
-  <data name="SteamPathEnterErr" xml:space="preserve">
-    <value>Вы указали неправильный путь! Программа будет завершена.</value>
-    <comment>Сообщение при вводе неверного пути</comment>
-  </data>
-  <data name="SteamPathEnterText" xml:space="preserve">
-    <value>Укажите путь к установленному Steam:</value>
-    <comment>Текст InputBox'а ввода пути Steam</comment>
-  </data>
-  <data name="SteamPathEnterTitle" xml:space="preserve">
-    <value>Укажите путь к Steam</value>
-    <comment>Заголовок InputBox'а ввода пути Steam</comment>
-  </data>
-  <data name="SteamPathNotDetected" xml:space="preserve">
-    <value>Произошла критическая ошибка: не могу получить путь к Steam из реестра, поэтому Вам придётся вручную указать правильный путь!</value>
-    <comment>Сообщение, выдаваемое при невозможности автоматически получить путь к установленному клиенту Steam</comment>
-  </data>
-  <data name="InputBoxCancelBtnName" xml:space="preserve">
-    <value>Отмена</value>
-    <comment>Текст кнопки Cancel в InputBox'ах</comment>
-  </data>
-  <data name="ParamError" xml:space="preserve">
-    <value>Обнаружен параметр командной строки, но не обнаружено его значение, поэтому игнорируем данный параметр!</value>
-    <comment>Сообщение, выдаваемое при отсутствии значения параметра командной строки</comment>
-  </data>
-  <data name="SteamLoginCancel" xml:space="preserve">
-    <value>Вы отказались вводить свой логин Steam, поэтому работа программы невозможна. Повторите запуск позднее и введите правильный логин!</value>
-    <comment>Сообщение, выдаваемое при отказе пользователя ввести свой логин Steam</comment>
-  </data>
-  <data name="SteamLoginEnterText" xml:space="preserve">
-    <value>Введите Ваш логин Steam:</value>
-    <comment>Текст InputBox'а ввода логина</comment>
-  </data>
-  <data name="SteamLoginEnterTitle" xml:space="preserve">
-    <value>Ввод логина</value>
-    <comment>Заголовок InputBox'а ввода логина</comment>
-  </data>
-  <data name="SteamLoginsNotDetected" xml:space="preserve">
-    <value>Внимание! Source Repair не смог получить список активных логинов Steam, поэтому Вам придётся ввести его вручную.</value>
-    <comment>Сообщение, выдаваемое при невозможности получить список логинов Steam</comment>
-  </data>
-  <data name="KillMessage1" xml:space="preserve">
-    <value>Внимание! В памяти обнаружен активный процесс</value>
-    <comment>Сообщение, используемое функцией ProcessTerminate.</comment>
-  </data>
-  <data name="KillMessage2" xml:space="preserve">
-    <value>Настоятельно рекомендуется завершить его работу во избежании серьёзных ошибок. Завершить работу этого процесса сейчас</value>
-    <comment>Сообщение, используемое функцией ProcessTerminate.</comment>
-  </data>
-  <data name="StatusNormal" xml:space="preserve">
-    <value>Все системы работают в штатном режиме.</value>
-    <comment>Сообщение об успешном завершении инициализации</comment>
-  </data>
-  <data name="StatusLoginChanged" xml:space="preserve">
-    <value>Логин Steam был успешно сменён. Продолжаем работу с новым...</value>
-    <comment>Сообщение о смене логина</comment>
-  </data>
-  <data name="StatusSApp" xml:space="preserve">
-    <value>Пожалуйста, выберите приложение из списка!</value>
-    <comment>Сообщение о необходимости выбора управляемого приложения</comment>
-  </data>
-  <data name="StatusSLogin" xml:space="preserve">
-    <value>Пожалуйста, выберите Ваш логин Steam из списка!</value>
-    <comment>Сообщение о необходимости выбора логина</comment>
-  </data>
-  <data name="GT_DxLevelMsg" xml:space="preserve">
-    <value>Включить DirectX 8 режим рендера? Это значительно увеличит производительность игры.</value>
-    <comment>Сообщение, выдаваемое при запросе у пользователя режима рендера DirectX</comment>
-  </data>
-  <data name="GT_MaxPerfMsg" xml:space="preserve">
-    <value>Вы действительно хотите установить настройки графики TF2 на рекомендуемый максимум? Для этого потребуется мощный компютер!</value>
-    <comment>Сообщение, выдаваемое при попытке установить графические настройки на рекомендуемый максимум</comment>
-  </data>
-  <data name="GT_MinPerfMsg" xml:space="preserve">
-    <value>Вы действительно хотите установить все настройки видео на минимальные? Это увеличит FPS, но ухудшит графику в игре.</value>
-    <comment>Сообщение, выдаваемое при попытке установить графические настройки на рекомендуемый минимум</comment>
-  </data>
-  <data name="GT_PerfSet" xml:space="preserve">
-    <value>Готово. Не забудьте подкорректировать и сохранить изменения в настройках!</value>
-    <comment>Сообщение, выдаваемое при завершении автоматического выставления настроек по параметрам</comment>
-  </data>
-  <data name="GT_SaveMsg" xml:space="preserve">
-    <value>Сохранить сделанные Вами изменения?</value>
-    <comment>Сообщение, выдаваемое при попытке сохранить изменения</comment>
-  </data>
-  <data name="GT_SaveSuccess" xml:space="preserve">
-    <value>Изменения были успешно сохранены!</value>
-    <comment>Сообщение, выдаваемое при завершении сохранения изменений</comment>
-  </data>
-  <data name="FP_NoCfgGame" xml:space="preserve">
-    <value>Внимание! Для выбранной игры у нас нет FPS-конфигов, поэтому данная страница будет недоступна!</value>
-    <comment>Сообщение, выдаваемое при невозможности загрузить список FPS-конфигов...</comment>
-  </data>
-  <data name="FP_NoDescr" xml:space="preserve">
-    <value>К сожалению, описание выбранного Вами конфига недоступно. Приносим извинения за доставленные неудобства.</value>
-    <comment>Сообщение, выдаваемое при невозможности получить описание выбранного конфига</comment>
-  </data>
-  <data name="FP_InstallFailed" xml:space="preserve">
-    <value>Произошла критическая ошибка: невозможно установить выбранный конфиг!</value>
-    <comment>Сообщение об ошибке при установке</comment>
-  </data>
-  <data name="FP_InstallQuestion" xml:space="preserve">
-    <value>Внимание! Установка FPS-конфига снизит все графические настройки на абсолютный минимум, что приведёт к значительному ухудшению качества графики игры и увеличению производительности игры. Вы уверены, что хотите установить FPS-конфиг?</value>
-    <comment>Сообщение, выдаваемое при попытке установить FPS-конфиг</comment>
-  </data>
-  <data name="FP_InstallSuccessful" xml:space="preserve">
-    <value>Конфиг был успешно установлен!</value>
-    <comment>Сообщение об успешной установке конфига</comment>
-  </data>
-  <data name="FP_NothingSelected" xml:space="preserve">
-    <value>Вы не выбрали FPS-конфиг из списка. Выберите конфиг и повторите попытку!</value>
-    <comment>Сообщение, выдаваемое если пользователь не выбрал FPS-конфиг для установки</comment>
-  </data>
-  <data name="FP_RemoveFailed" xml:space="preserve">
-    <value>Произошла ошибка при удалении установленного конфига!</value>
-    <comment>Сообщение, выдаваемое при ошибке удаления имеющегося конфига</comment>
-  </data>
-  <data name="FP_RemoveNotExists" xml:space="preserve">
-    <value>Нечего удалять: для текущей игры FPS-конфиги не установлены!</value>
-    <comment>Сообщение, выдаваемое при отсутствии установленного FPS-конфига в управляемом приложении</comment>
-  </data>
-  <data name="FP_RemoveQuestion" xml:space="preserve">
-    <value>Вы уверены что хотите удалить конфиг?</value>
-    <comment>Сообщение, выдаваемое при попытке удалить установленный конфиг</comment>
-  </data>
-  <data name="FP_RemoveSuccessful" xml:space="preserve">
-    <value>Установленный FPS-конфиг был успешно удалён!</value>
-    <comment>Сообщение, выдаваемое при успешном удалении FPS-конфига</comment>
-  </data>
-  <data name="BackUpCreationFailed" xml:space="preserve">
-    <value>Произошла ошибка при создании резервной копии. Резервная копия не была создана!</value>
-    <comment>Сообщение, выдаваемое при ошибке создания резервной копии</comment>
-  </data>
-  <data name="GT_FPSCfgDetected" xml:space="preserve">
-    <value>Внимание! Обнаружен установленный FPS-конфиг, поэтому настройки с этой страницы кроме режима DirectX будут игнорироваться игрой до удаления FPS-конфига.</value>
-    <comment>Сообщение, выдаваемое при щелчке по значку предупреждения об установленном FPS-конфиге</comment>
-  </data>
-  <data name="SteamNonASCIIDetected" xml:space="preserve">
-    <value>Внимание! В пути к Steam обнаружены недопустимые символы: русские, немецкие и т.д. буквы, либо символы Юникода. Steam и TF2 будут работать с ошибками. Переустановите Steam в папку, путь до которой будет содержать только латинские буквы.</value>
-    <comment>Сообщение, выдаваемое при обнаружении в пути к Steam запрещённых символов</comment>
-  </data>
-  <data name="SteamNonASCIISmall" xml:space="preserve">
-    <value>Внимание! В пути к Steam обнаружены недопустимые символы. Steam и TF2 будут работать с ошибками. Переустановите Steam в папку, путь до которой будет содержать только латинские буквы.</value>
-    <comment>Сообщение для детектора</comment>
-  </data>
-  <data name="SteamNonASCIITitle" xml:space="preserve">
-    <value>Обнаружены запрещённые символы!</value>
-    <comment>Текст для детектора</comment>
-  </data>
-  <data name="StatusOpenedFile" xml:space="preserve">
-    <value>Сейчас в редакторе открыт файл:</value>
-    <comment>Сообщение строки статуса об открытом файле...</comment>
-  </data>
-  <data name="UnnamedFileName" xml:space="preserve">
-    <value>Безымянный.cfg</value>
-    <comment>Стандартное имя для файла без имени</comment>
-  </data>
-  <data name="CE_RestConfigOpenWarn" xml:space="preserve">
-    <value>Внимание! Настоятельно не рекомендуется редактировать этот файл, т.к. это может привести к непредсказуемым последствиям. Редактируйте его на свой страх и риск.</value>
-    <comment>Сообщение, выдаваемое при попытке открытия файла config.cfg</comment>
-  </data>
-  <data name="CE_ExceptionDetected" xml:space="preserve">
-    <value>Внимание! При попытке открыть файл произошла ошибка. Возможно, файл открыт с ошибками. Пожалуйста, сообщите о ней в наш багтрекер (Справка - Сообщить об ошибке в программе).</value>
-    <comment>Сообщение, выдаваемое при возникновении исключения при попытке открыть файл конфига</comment>
-  </data>
-  <data name="CE_OpenFailed" xml:space="preserve">
-    <value>Невозможно считать содержимое конфига, т.к. файл не найден!</value>
-    <comment>Сообщение при попытке открыть несуществующий файл</comment>
-  </data>
-  <data name="CE_CreateBackUp" xml:space="preserve">
-    <value>Создать резервную копию файла</value>
-    <comment>Сообщение, выдаваемое при сохранении файла о необходимости создания резервной копии</comment>
-  </data>
-  <data name="CE_CfgSV" xml:space="preserve">
-    <value>Сохранить файл конфигурации?</value>
-    <comment>Сообщение, выдаваемое при сохранении файла</comment>
-  </data>
-  <data name="CE_CfgSVVEx" xml:space="preserve">
-    <value>Внимание! Во время сохранения файла произошла ошибка. Файл не был сохранён!</value>
-    <comment>Сообщение, выдаваемое при возникновении исключения при попытке сохранить содержимое таблицы редактора в файл</comment>
-  </data>
-  <data name="AppLaunchedNotAdmin" xml:space="preserve">
-    <value>Внимание! Программа запущена нет от учётной записи с правами администратора, поэтому некоторые функции будут отключены. Чтобы получить к ним доступ, перезапустите её с првами администратора!</value>
-    <comment>Сообщение, выдаваемое при запуске программы от ограниченной учётной записи</comment>
   </data>
 </root>
