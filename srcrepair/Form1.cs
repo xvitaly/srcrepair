@@ -27,15 +27,21 @@ namespace srcrepair
             RM = new ResourceManager("srcrepair.AppStrings", typeof(frmMainW).Assembly);
         }
 
+        #region Internal Variables
+
         /* В этой переменной будем хранить имя открытого конфига для служебных целей. */
         private string CFGFileName;
+
+        #endregion
+
+        #region Internal Functions
 
         /*
          * Реализуем аналог полезной дельфийской фукнции IncludeTrailingPathDelimiter,
          * которая возвращает строку, добавив на конец обратный слэш если его нет,
          * либо возвращает ту же строку, если обратный слэш уже присутствует.
          */
-        public static string IncludeTrDelim(string SourceStr)
+        private static string IncludeTrDelim(string SourceStr)
         {
             // Проверяем наличие закрывающего слэша у строки, переданной как параметр...
             if (SourceStr[SourceStr.Length - 1] != '\\')
@@ -52,7 +58,7 @@ namespace srcrepair
          * Эта функция получает из реестра и возвращает путь к установленному
          * клиенту Steam.
          */
-        public static string GetSteamPath()
+        private static string GetSteamPath()
         {
             // Подключаем реестр и открываем ключ только для чтения...
             RegistryKey ResKey = Registry.LocalMachine.OpenSubKey("Software\\Valve\\Steam", false);
@@ -85,7 +91,7 @@ namespace srcrepair
          * Эта функция возвращает PID процесса если он был найден в памяти и
          * завершает, либо 0 если процесс не был найден.
          */
-        public static int ProcessTerminate(string ProcessName, bool ShowConfirmationMsg)
+        private static int ProcessTerminate(string ProcessName, bool ShowConfirmationMsg)
         {
             // Обнуляем PID...
             int ProcID = 0;
@@ -122,7 +128,7 @@ namespace srcrepair
          * Эта функция очищает блобы (файлы с расширением *.blob) из каталога Steam.
          * В качестве параметра ей передаётся полный путь к каталогу Steam.
          */
-        public static void CleanBlobsNow(string SteamPath)
+        private static void CleanBlobsNow(string SteamPath)
         {
             // Инициализируем буферную переменную, в которой будем хранить имя файла...
             string FileName;
@@ -152,7 +158,7 @@ namespace srcrepair
          * Эта функция удаляет значения реестра, отвечающие за настройки клиента
          * Steam, а также записывает значение языка.
          */
-        public static void CleanRegistryNow(int LangCode)
+        private static void CleanRegistryNow(int LangCode)
         {
             // Удаляем ключ HKEY_LOCAL_MACHINE\Software\Valve рекурсивно...
             Registry.LocalMachine.DeleteSubKeyTree("Software\\Valve", false);
@@ -196,7 +202,7 @@ namespace srcrepair
          * Эта функция получает из реестра значение нужной нам переменной
          * для указанного игрового приложения.
          */
-        public static int GetSRCDWord(string CVar, string CApp)
+        private static int GetSRCDWord(string CVar, string CApp)
         {
             // Подключаем реестр и открываем ключ только для чтения...
             RegistryKey ResKey = Registry.CurrentUser.OpenSubKey("Software\\Valve\\Source\\" + CApp + "\\Settings", false);
@@ -229,7 +235,7 @@ namespace srcrepair
          * Эта процедура записывает в реестр новое значение нужной нам переменной
          * для указанного игрового приложения.
          */
-        public static void WriteSRCDWord(string CVar, int CValue, string CApp)
+        private static void WriteSRCDWord(string CVar, int CValue, string CApp)
         {
             // Подключаем реестр и открываем ключ для чтения и записи...
             RegistryKey ResKey = Registry.CurrentUser.OpenSubKey("Software\\Valve\\Source\\" + CApp + "\\Settings", true);
@@ -244,7 +250,7 @@ namespace srcrepair
         /*
          * Эта функция удаляет нужный ключ из ветки HKEY_LOCAL_MACHINE...
          */
-        public static void RemoveRegistryKeyLM(string RKey)
+        private static void RemoveRegistryKeyLM(string RKey)
         {
             // Удаляем запрощенную ветку рекурсивно из HKLM...
             Registry.LocalMachine.DeleteSubKeyTree(RKey, false);
@@ -253,7 +259,7 @@ namespace srcrepair
         /*
          * Эта функция удаляет нужный ключ из ветки HKEY_CURRENT_USER...
          */
-        public static void RemoveRegistryKeyCU(string RKey)
+        private static void RemoveRegistryKeyCU(string RKey)
         {
             // Удаляем запрощенную ветку рекурсивно из HKCU...
             Registry.CurrentUser.DeleteSubKeyTree(RKey, false);
@@ -263,7 +269,7 @@ namespace srcrepair
          * Эта функция считывает содержимое текстового файла в строку и
          * возвращает в качестве результата.
          */
-        public static string ReadTextFileNow(string FileName)
+        private static string ReadTextFileNow(string FileName)
         {
             // Считываем всё содержимое файла...
             string TextFile = File.ReadAllText(FileName);
@@ -275,7 +281,7 @@ namespace srcrepair
          * Эта функция проверяет есть ли у пользователя, с правами которого запускается
          * программа, привилегии локального администратора.
          */
-        public static bool IsCurrentUserAdmin()
+        private static bool IsCurrentUserAdmin()
         {
             bool Result; // Переменная для хранения результата...
             try
@@ -298,7 +304,7 @@ namespace srcrepair
          * Эта функция ищет указанную строку в массиве строк и возвращает её индекс,
          * либо -1 если такой строки в массиве не найдено.
          */
-        public static int FindStringInStrArray(string[] SourceStr, string What)
+        private static int FindStringInStrArray(string[] SourceStr, string What)
         {
             int StrNum;
             int StrIndex = -1;
@@ -316,7 +322,7 @@ namespace srcrepair
          * Эта функция ищет в массиве строк нужный нам параметр командной строки
          * и возвращает true если параметр был найден, либо false если нет.
          */
-        public static bool FindCommandLineSwitch(string[] Source, string CLineArg)
+        private static bool FindCommandLineSwitch(string[] Source, string CLineArg)
         {
             if (FindStringInStrArray(Source, CLineArg) != -1)
             {
@@ -331,7 +337,7 @@ namespace srcrepair
         /*
          * Эта функция устанавливает требуемый FPS-конфиг...
          */
-        public static void InstallConfigNow(string ConfName)
+        private static void InstallConfigNow(string ConfName)
         {
             // Устанавливаем...
             File.Copy(GV.FullAppPath + "cfgs\\" + GV.SmallAppName + "\\" + ConfName, GV.FullCfgPath + "autoexec.cfg", true);
@@ -341,7 +347,7 @@ namespace srcrepair
          * Эта функция генерирует ДДММГГЧЧММСС из указанного времени в строку.
          * Применяется для служебных целей.
          */
-        public static string WriteDateToString(DateTime XDate, bool MicroDate)
+        private static string WriteDateToString(DateTime XDate, bool MicroDate)
         {
             if (MicroDate)
             {
@@ -359,7 +365,7 @@ namespace srcrepair
          * Эта функция создаёт резервную копию конфига, имя которого передано
          * в параметре.
          */
-        public static void CreateBackUpNow(string ConfName)
+        private static void CreateBackUpNow(string ConfName)
         {
             // Сначала проверим, существует ли запрошенный файл...
             if (File.Exists(GV.FullCfgPath + ConfName))
@@ -390,7 +396,7 @@ namespace srcrepair
          * Эта функция проверяет наличие не-ASCII-символов в строке. Возвращает True
          * если не обнаружено запрещённых симолов и False - если они были обнаружены.
          */
-        public static bool CheckNonASCII(string Path)
+        private static bool CheckNonASCII(string Path)
         {
             // Проверяем строку на соответствие регулярному выражению...
             //return Regex.IsMatch(Path, "");
@@ -414,7 +420,7 @@ namespace srcrepair
          * Эта функция запускает указанное в параметре SAppName приложение на
          * выполнение с параметрами, указанными в SParameters и ждёт его завершения...
          */
-        public static void StartProcessAndWait(string SAppName, string SParameters)
+        private static void StartProcessAndWait(string SAppName, string SParameters)
         {
             // Запускаем процесс...
             Process NewProcess = Process.Start(SAppName, SParameters);
@@ -427,7 +433,7 @@ namespace srcrepair
         }
 
         // Источник данной функции: http://www.csharp-examples.net/inputbox/ //
-        public static DialogResult InputBox(string title, string promptText, ref string value)
+        private static DialogResult InputBox(string title, string promptText, ref string value)
         {
             Form form = new Form();
             Label label = new Label();
@@ -487,7 +493,9 @@ namespace srcrepair
                 CFile.Close(); // закрываем файл
             }
         }
-        
+
+        #endregion
+
         private void frmMainW_Load(object sender, EventArgs e)
         {
             // Событие инициализации формы...
