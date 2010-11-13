@@ -223,6 +223,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Выберите конфиг из списка выше!.
+        /// </summary>
+        internal static string FP_SelectFromList {
+            get {
+                return ResourceManager.GetString("FP_SelectFromList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Закрыть приложение? Все несохранённые изменения будут потеряны!.
         /// </summary>
         internal static string FrmCloseQuery {

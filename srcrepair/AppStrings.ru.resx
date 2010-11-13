@@ -341,4 +341,8 @@
     <value>Безымянный.cfg</value>
     <comment>Стандартное имя для файла без имени</comment>
   </data>
+  <data name="FP_SelectFromList" xml:space="preserve">
+    <value>Выберите конфиг из списка выше!</value>
+    <comment>Сообщение о необходимости выбрать FPS-конфиг из списка</comment>
+  </data>
 </root>

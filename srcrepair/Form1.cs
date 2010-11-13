@@ -1129,6 +1129,7 @@ namespace srcrepair
                 System.IO.DirectoryInfo DInfo = new System.IO.DirectoryInfo(GV.FullAppPath + "cfgs\\" + GV.SmallAppName + "\\");
                 // Считываем список файлов по заданной маске...
                 System.IO.FileInfo[] DirList = DInfo.GetFiles("*.cfg");
+                // Начинаем обход массива...
                 foreach (System.IO.FileInfo DItem in DirList)
                 {
                     // Обрабатываем найденное...
@@ -1137,10 +1138,24 @@ namespace srcrepair
                         FP_ConfigSel.Items.Add((string)DItem.Name);
                     }
                 }
+                // Проверяем, нашлись ли конфиги...
+                if (FP_ConfigSel.Items.Count >= 1)
+                {
+                    FP_Description.Text = RM.GetString("FP_SelectFromList");
+                    FP_Description.ForeColor = Color.Black;
+                    FP_Install.Enabled = true;
+                    FP_ConfigSel.Enabled = true;
+                }
             }
             catch
             {
-                MessageBox.Show(RM.GetString("FP_NoCfgGame"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // FPS-конфигов для выбранного приложения не найдено.
+                // Выводим текст об этом...
+                FP_Description.Text = RM.GetString("FP_NoCfgGame");
+                FP_Description.ForeColor = Color.Red;
+                // ...и блокируем контролы, отвечающие за установку...
+                FP_Install.Enabled = false;
+                FP_ConfigSel.Enabled = false;
             }
 
             // Выводим сообщение о завершении считывания в статус-бар...
