@@ -72,12 +72,15 @@
     <Compile Include="GV.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AppStrings.en-US.resx" />
     <EmbeddedResource Include="AppStrings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="AppStrings.ru.resx" />
     <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.ru.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
