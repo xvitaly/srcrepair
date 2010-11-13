@@ -136,8 +136,8 @@
   <data name="GT_Warning.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK/QAA
-        Cv0BS5xZCwAABcRJREFUWEftlmtsk1UYx9u+l7Yr3brB6ICxjXUbmLEIUQJGiRLjBXXFES9R/GTiBxYN
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK+wAA
+        CvsBy58dkAAABcRJREFUWEftlmtsk1UYx9u+l7Yr3brB6ICxjXUbmLEIUQJGiRLjBXXFES9R/GTiBxYN
         Ufxm+IQmukQEx4a0K2Njt27r7t3WXZwy50YEN8VFQAg3o2ZqgLFL17c9j//zdpAwxm6JITE2+ee8l/Oe
         5/f8n3OpVqPRCNB9/XGA+6n7Glx1f0HZr19jETpdaannu5N3lDhsiyLN0oLGWRCAxSwLZ8pS1rNv9Tfo
         hED+M+Ye9xGbcYHJzN+BT7MT5WCXuZ/6RFLVq6OJS0v32J9dvBAX5geQvsosDDcl7GR9emK9UI9M7BuB
@@ -186,6 +186,12 @@
   <data name="GT_LaunchOptions.Size" type="System.Drawing.Size, System.Drawing">
     <value>251, 20</value>
   </data>
+  <data name="L_GT_HDR.Size" type="System.Drawing.Size, System.Drawing">
+    <value>31, 13</value>
+  </data>
+  <data name="L_GT_HDR.Text" xml:space="preserve">
+    <value>HDR</value>
+  </data>
   <data name="L_GT_DxMode.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 13</value>
   </data>
@@ -197,6 +203,18 @@
   </data>
   <data name="L_GT_MotionBlur.Text" xml:space="preserve">
     <value>Размытие движения</value>
+  </data>
+  <data name="GT_HDR.Items" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="GT_HDR.Items2" xml:space="preserve">
+    <value>Полные</value>
+  </data>
+  <data name="GT_MotionBlur.Items" xml:space="preserve">
+    <value>Выключено</value>
+  </data>
+  <data name="GT_MotionBlur.Items1" xml:space="preserve">
+    <value>Включено</value>
   </data>
   <data name="L_GT_VSync.Size" type="System.Drawing.Size, System.Drawing">
     <value>126, 13</value>
@@ -216,6 +234,33 @@
   <data name="L_GT_AntiAliasing.Text" xml:space="preserve">
     <value>Сглаживание</value>
   </data>
+  <data name="GT_VSync.Items" xml:space="preserve">
+    <value>Выключена</value>
+  </data>
+  <data name="GT_VSync.Items1" xml:space="preserve">
+    <value>Включена</value>
+  </data>
+  <data name="GT_Filtering.Items" xml:space="preserve">
+    <value>Билинейная</value>
+  </data>
+  <data name="GT_Filtering.Items1" xml:space="preserve">
+    <value>Трилинейная</value>
+  </data>
+  <data name="GT_Filtering.Items2" xml:space="preserve">
+    <value>Анизотропная 2X</value>
+  </data>
+  <data name="GT_Filtering.Items3" xml:space="preserve">
+    <value>Анизотропная 4X</value>
+  </data>
+  <data name="GT_Filtering.Items4" xml:space="preserve">
+    <value>Анизотропная 8X</value>
+  </data>
+  <data name="GT_Filtering.Items5" xml:space="preserve">
+    <value>Анизотропная 16X</value>
+  </data>
+  <data name="GT_AntiAliasing.Items" xml:space="preserve">
+    <value>Нет</value>
+  </data>
   <data name="L_GT_ColorCorrectionT.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 13</value>
   </data>
@@ -233,6 +278,27 @@
   </data>
   <data name="L_GT_WaterQuality.Text" xml:space="preserve">
     <value>Отражения в воде</value>
+  </data>
+  <data name="GT_ColorCorrectionT.Items" xml:space="preserve">
+    <value>Выключена</value>
+  </data>
+  <data name="GT_ColorCorrectionT.Items1" xml:space="preserve">
+    <value>Включена</value>
+  </data>
+  <data name="GT_ShadowQuality.Items" xml:space="preserve">
+    <value>Низкая</value>
+  </data>
+  <data name="GT_ShadowQuality.Items1" xml:space="preserve">
+    <value>Высокая</value>
+  </data>
+  <data name="GT_WaterQuality.Items" xml:space="preserve">
+    <value>Простые</value>
+  </data>
+  <data name="GT_WaterQuality.Items1" xml:space="preserve">
+    <value>Отражать мир</value>
+  </data>
+  <data name="GT_WaterQuality.Items2" xml:space="preserve">
+    <value>Отражать всё</value>
   </data>
   <data name="L_GT_ShaderQuality.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 13</value>
@@ -252,6 +318,30 @@
   <data name="L_GT_ModelQuality.Text" xml:space="preserve">
     <value>Детализация моделей</value>
   </data>
+  <data name="GT_ShaderQuality.Items" xml:space="preserve">
+    <value>Низк.</value>
+  </data>
+  <data name="GT_ShaderQuality.Items1" xml:space="preserve">
+    <value>Высок.</value>
+  </data>
+  <data name="GT_TextureQuality.Items" xml:space="preserve">
+    <value>Низкая</value>
+  </data>
+  <data name="GT_TextureQuality.Items1" xml:space="preserve">
+    <value>Средняя</value>
+  </data>
+  <data name="GT_TextureQuality.Items2" xml:space="preserve">
+    <value>Высокая</value>
+  </data>
+  <data name="GT_ModelQuality.Items" xml:space="preserve">
+    <value>Низкая</value>
+  </data>
+  <data name="GT_ModelQuality.Items1" xml:space="preserve">
+    <value>Средняя</value>
+  </data>
+  <data name="GT_ModelQuality.Items2" xml:space="preserve">
+    <value>Высокая</value>
+  </data>
   <data name="L_GT_ScreenType.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 13</value>
   </data>
@@ -263,6 +353,12 @@
   </data>
   <data name="L_GT_ResVert.Text" xml:space="preserve">
     <value>Разрешение по вертикали</value>
+  </data>
+  <data name="GT_ScreenType.Items" xml:space="preserve">
+    <value>Полноэкранный</value>
+  </data>
+  <data name="GT_ScreenType.Items1" xml:space="preserve">
+    <value>Оконный</value>
   </data>
   <data name="L_GT_ResHor.Size" type="System.Drawing.Size, System.Drawing">
     <value>137, 13</value>
