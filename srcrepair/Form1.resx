@@ -1259,7 +1259,7 @@
     <value>23, 22</value>
   </data>
   <data name="CE_New.Text" xml:space="preserve">
-    <value>Создать новый конфиг</value>
+    <value>Create new config</value>
   </data>
   <data name="CE_Open.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1285,7 +1285,7 @@
     <value>23, 22</value>
   </data>
   <data name="CE_Open.Text" xml:space="preserve">
-    <value>Открыть конфиг из файла</value>
+    <value>Open config from file</value>
   </data>
   <data name="CE_Save.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1310,7 +1310,7 @@
     <value>23, 22</value>
   </data>
   <data name="CE_Save.Text" xml:space="preserve">
-    <value>Сохранить изменения в файл</value>
+    <value>Save config</value>
   </data>
   <data name="CE_SaveAs.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1334,7 +1334,7 @@
     <value>23, 22</value>
   </data>
   <data name="CE_SaveAs.Text" xml:space="preserve">
-    <value>Сохранить конфиг как...</value>
+    <value>Save config as...</value>
   </data>
   <data name="CE_Print.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1359,7 +1359,7 @@
     <value>23, 22</value>
   </data>
   <data name="CE_Print.Text" xml:space="preserve">
-    <value>Распечатать конфиг...</value>
+    <value>Print config...</value>
   </data>
   <data name="toolStripSeparator.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -1384,7 +1384,7 @@
     <value>23, 22</value>
   </data>
   <data name="CE_Cut.Text" xml:space="preserve">
-    <value>Вырезать</value>
+    <value>Cut</value>
   </data>
   <data name="CE_Copy.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1408,7 +1408,7 @@
     <value>23, 22</value>
   </data>
   <data name="CE_Copy.Text" xml:space="preserve">
-    <value>Копировать</value>
+    <value>Copy</value>
   </data>
   <data name="CE_Paste.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1434,7 +1434,7 @@
     <value>23, 22</value>
   </data>
   <data name="CE_Paste.Text" xml:space="preserve">
-    <value>Вставить</value>
+    <value>Paste</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -1462,7 +1462,7 @@
     <value>23, 22</value>
   </data>
   <data name="CE_ShowHint.Text" xml:space="preserve">
-    <value>Подсказка (F1)</value>
+    <value>Show hint (F1)</value>
   </data>
   <data name="CE_Toolbar.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -1492,7 +1492,7 @@
     <value>True</value>
   </metadata>
   <data name="CE_CVName.HeaderText" xml:space="preserve">
-    <value>Переменная</value>
+    <value>Variable</value>
   </data>
   <data name="CE_CVName.Width" type="System.Int32, mscorlib">
     <value>135</value>
@@ -1501,7 +1501,7 @@
     <value>True</value>
   </metadata>
   <data name="CE_CVal.HeaderText" xml:space="preserve">
-    <value>Значение переменной</value>
+    <value>Value</value>
   </data>
   <data name="CE_CVal.Width" type="System.Int32, mscorlib">
     <value>255</value>
@@ -1564,13 +1564,13 @@
     <value>15, 28</value>
   </data>
   <data name="PS_AllowRemCtrls.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 17</value>
+    <value>97, 17</value>
   </data>
   <data name="PS_AllowRemCtrls.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
   <data name="PS_AllowRemCtrls.Text" xml:space="preserve">
-    <value>Разрешить удаление</value>
+    <value>Enable buttons</value>
   </data>
   <data name="&gt;&gt;PS_AllowRemCtrls.Name" xml:space="preserve">
     <value>PS_AllowRemCtrls</value>
@@ -1597,7 +1597,7 @@
     <value>9</value>
   </data>
   <data name="PS_RemGraphOpts.Text" xml:space="preserve">
-    <value>Настройки графики</value>
+    <value>Graphical settings</value>
   </data>
   <data name="&gt;&gt;PS_RemGraphOpts.Name" xml:space="preserve">
     <value>PS_RemGraphOpts</value>
@@ -1624,7 +1624,7 @@
     <value>8</value>
   </data>
   <data name="PS_RemDemos.Text" xml:space="preserve">
-    <value>Записанные демки</value>
+    <value>All recorded demos</value>
   </data>
   <data name="&gt;&gt;PS_RemDemos.Name" xml:space="preserve">
     <value>PS_RemDemos</value>
@@ -1651,7 +1651,7 @@
     <value>7</value>
   </data>
   <data name="PS_RemScreenShots.Text" xml:space="preserve">
-    <value>Все скриншоты</value>
+    <value>All screenshots</value>
   </data>
   <data name="&gt;&gt;PS_RemScreenShots.Name" xml:space="preserve">
     <value>PS_RemScreenShots</value>
@@ -1678,7 +1678,7 @@
     <value>6</value>
   </data>
   <data name="PS_RemNavFiles.Text" xml:space="preserve">
-    <value>Навигацию ботов</value>
+    <value>Bot navigation files</value>
   </data>
   <data name="&gt;&gt;PS_RemNavFiles.Name" xml:space="preserve">
     <value>PS_RemNavFiles</value>
@@ -1705,7 +1705,7 @@
     <value>5</value>
   </data>
   <data name="PS_RemSoundCache.Text" xml:space="preserve">
-    <value>Звуковой кэш</value>
+    <value>Sound cache</value>
   </data>
   <data name="&gt;&gt;PS_RemSoundCache.Name" xml:space="preserve">
     <value>PS_RemSoundCache</value>
@@ -1732,7 +1732,7 @@
     <value>4</value>
   </data>
   <data name="PS_RemGraphCache.Text" xml:space="preserve">
-    <value>Графический кэш</value>
+    <value>Graphic cache</value>
   </data>
   <data name="&gt;&gt;PS_RemGraphCache.Name" xml:space="preserve">
     <value>PS_RemGraphCache</value>
@@ -1759,7 +1759,7 @@
     <value>3</value>
   </data>
   <data name="PS_RemOldCfgs.Text" xml:space="preserve">
-    <value>Все конфиги</value>
+    <value>All configs</value>
   </data>
   <data name="&gt;&gt;PS_RemOldCfgs.Name" xml:space="preserve">
     <value>PS_RemOldCfgs</value>
@@ -1786,7 +1786,7 @@
     <value>2</value>
   </data>
   <data name="PS_RemOldSpray.Text" xml:space="preserve">
-    <value>Кэш спреев</value>
+    <value>Spray cache</value>
   </data>
   <data name="&gt;&gt;PS_RemOldSpray.Name" xml:space="preserve">
     <value>PS_RemOldSpray</value>
@@ -1813,7 +1813,7 @@
     <value>1</value>
   </data>
   <data name="PS_RemDnlCache.Text" xml:space="preserve">
-    <value>Кэш загрузок</value>
+    <value>Download cache</value>
   </data>
   <data name="&gt;&gt;PS_RemDnlCache.Name" xml:space="preserve">
     <value>PS_RemDnlCache</value>
@@ -1840,7 +1840,7 @@
     <value>0</value>
   </data>
   <data name="PS_RemCustMaps.Text" xml:space="preserve">
-    <value>Кастомные карты</value>
+    <value>Custom maps</value>
   </data>
   <data name="&gt;&gt;PS_RemCustMaps.Name" xml:space="preserve">
     <value>PS_RemCustMaps</value>
@@ -1864,7 +1864,7 @@
     <value>3</value>
   </data>
   <data name="PS_GB_Remover.Text" xml:space="preserve">
-    <value>Удалить:</value>
+    <value>Cleanup:</value>
   </data>
   <data name="&gt;&gt;PS_GB_Remover.Name" xml:space="preserve">
     <value>PS_GB_Remover</value>
@@ -1888,7 +1888,7 @@
     <value>0</value>
   </data>
   <data name="PS_ResetSettings.Text" xml:space="preserve">
-    <value>Восстановить настройки игры по умолчанию</value>
+    <value>Restore default game settings</value>
   </data>
   <data name="&gt;&gt;PS_ResetSettings.Name" xml:space="preserve">
     <value>PS_ResetSettings</value>
@@ -1912,7 +1912,7 @@
     <value>2</value>
   </data>
   <data name="PS_GB_AdvFeat.Text" xml:space="preserve">
-    <value>Специальные функции</value>
+    <value>Advanced features</value>
   </data>
   <data name="&gt;&gt;PS_GB_AdvFeat.Name" xml:space="preserve">
     <value>PS_GB_AdvFeat</value>
@@ -1936,7 +1936,7 @@
     <value>6</value>
   </data>
   <data name="PS_WarningMsg.Text" xml:space="preserve">
-    <value>Steam установлен верно: логин и путь к каталогу (папке) Steam не содержат запрещённых символов: букв национальных алфавитов (русских, немецких, французских и т.д.) и символов Юникода.</value>
+    <value>Steam installed correctly: Steam login and directory path does not contain illegal characters: letters of national alphabets (Russian, German, French, etc.) and Unicode characters.</value>
   </data>
   <data name="&gt;&gt;PS_WarningMsg.Name" xml:space="preserve">
     <value>PS_WarningMsg</value>
@@ -1960,7 +1960,7 @@
     <value>5</value>
   </data>
   <data name="PS_PathDetector.Text" xml:space="preserve">
-    <value>Не обнаружено non-ASCII символов</value>
+    <value>Non-ASCII symbols not detected</value>
   </data>
   <data name="&gt;&gt;PS_PathDetector.Name" xml:space="preserve">
     <value>PS_PathDetector</value>
@@ -2023,13 +2023,13 @@
     <value>12, 60</value>
   </data>
   <data name="L_PS_PathDetector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 13</value>
+    <value>65, 13</value>
   </data>
   <data name="L_PS_PathDetector.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="L_PS_PathDetector.Text" xml:space="preserve">
-    <value>Пров. пути:</value>
+    <value>Path check:</value>
   </data>
   <data name="&gt;&gt;L_PS_PathDetector.Name" xml:space="preserve">
     <value>L_PS_PathDetector</value>
@@ -2050,13 +2050,13 @@
     <value>12, 38</value>
   </data>
   <data name="L_PS_RSteamLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 13</value>
+    <value>65, 13</value>
   </data>
   <data name="L_PS_RSteamLogin.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="L_PS_RSteamLogin.Text" xml:space="preserve">
-    <value>Логин Steam:</value>
+    <value>Steam login:</value>
   </data>
   <data name="&gt;&gt;L_PS_RSteamLogin.Name" xml:space="preserve">
     <value>L_PS_RSteamLogin</value>
@@ -2077,13 +2077,13 @@
     <value>12, 16</value>
   </data>
   <data name="L_PS_RSteamPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 13</value>
+    <value>64, 13</value>
   </data>
   <data name="L_PS_RSteamPath.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="L_PS_RSteamPath.Text" xml:space="preserve">
-    <value>Путь к Steam:</value>
+    <value>Steam path:</value>
   </data>
   <data name="&gt;&gt;L_PS_RSteamPath.Name" xml:space="preserve">
     <value>L_PS_RSteamPath</value>
@@ -2107,7 +2107,7 @@
     <value>1</value>
   </data>
   <data name="PS_GB_SInfo.Text" xml:space="preserve">
-    <value>Информация о текущей установке Steam</value>
+    <value>Steam general infomation</value>
   </data>
   <data name="&gt;&gt;PS_GB_SInfo.Name" xml:space="preserve">
     <value>PS_GB_SInfo</value>
@@ -2134,7 +2134,7 @@
     <value>4</value>
   </data>
   <data name="PS_ExecuteNow.Text" xml:space="preserve">
-    <value>Выполнить!</value>
+    <value>Cleanup Now!</value>
   </data>
   <data name="&gt;&gt;PS_ExecuteNow.Name" xml:space="preserve">
     <value>PS_ExecuteNow</value>
@@ -2152,10 +2152,10 @@
     <value>False</value>
   </data>
   <data name="PS_SteamLang.Items" xml:space="preserve">
-    <value>Английский (English)</value>
+    <value>English</value>
   </data>
   <data name="PS_SteamLang.Items1" xml:space="preserve">
-    <value>Русский  (Russian)</value>
+    <value>Russian</value>
   </data>
   <data name="PS_SteamLang.Location" type="System.Drawing.Point, System.Drawing">
     <value>140, 69</value>
@@ -2185,13 +2185,13 @@
     <value>12, 72</value>
   </data>
   <data name="L_PS_SteamLang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 13</value>
+    <value>120, 13</value>
   </data>
   <data name="L_PS_SteamLang.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="L_PS_SteamLang.Text" xml:space="preserve">
-    <value>Выберите язык Steam:</value>
+    <value>Select Steam language:</value>
   </data>
   <data name="&gt;&gt;L_PS_SteamLang.Name" xml:space="preserve">
     <value>L_PS_SteamLang</value>
@@ -2212,13 +2212,13 @@
     <value>15, 42</value>
   </data>
   <data name="PS_CleanRegistry.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 17</value>
+    <value>169, 17</value>
   </data>
   <data name="PS_CleanRegistry.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="PS_CleanRegistry.Text" xml:space="preserve">
-    <value>Очистить записи Steam, хранящиеся в реестре</value>
+    <value>Clean all Steam registry entries</value>
   </data>
   <data name="&gt;&gt;PS_CleanRegistry.Name" xml:space="preserve">
     <value>PS_CleanRegistry</value>
@@ -2239,13 +2239,13 @@
     <value>15, 19</value>
   </data>
   <data name="PS_CleanBlobs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 17</value>
+    <value>199, 17</value>
   </data>
   <data name="PS_CleanBlobs.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="PS_CleanBlobs.Text" xml:space="preserve">
-    <value>Очистить .blob-файлы из каталога Steam</value>
+    <value>Clean .blob files from Steam directory</value>
   </data>
   <data name="&gt;&gt;PS_CleanBlobs.Name" xml:space="preserve">
     <value>PS_CleanBlobs</value>
@@ -2269,7 +2269,7 @@
     <value>0</value>
   </data>
   <data name="PS_GB_Solver.Text" xml:space="preserve">
-    <value>Устранение проблем Steam</value>
+    <value>Steam problem solver</value>
   </data>
   <data name="&gt;&gt;PS_GB_Solver.Name" xml:space="preserve">
     <value>PS_GB_Solver</value>
@@ -2317,13 +2317,13 @@
     <value>157, 138</value>
   </data>
   <data name="FP_CreateBackUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 17</value>
+    <value>140, 17</value>
   </data>
   <data name="FP_CreateBackUp.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
   <data name="FP_CreateBackUp.Text" xml:space="preserve">
-    <value>Создать резервную копию</value>
+    <value>Create backup of config</value>
   </data>
   <data name="&gt;&gt;FP_CreateBackUp.Name" xml:space="preserve">
     <value>FP_CreateBackUp</value>
@@ -2347,7 +2347,7 @@
     <value>5</value>
   </data>
   <data name="FP_Uninstall.Text" xml:space="preserve">
-    <value>Удалить имеющийся конфиг</value>
+    <value>Remove installed config</value>
   </data>
   <data name="&gt;&gt;FP_Uninstall.Name" xml:space="preserve">
     <value>FP_Uninstall</value>
@@ -2371,7 +2371,7 @@
     <value>4</value>
   </data>
   <data name="FP_Install.Text" xml:space="preserve">
-    <value>Установить выбранный конфиг</value>
+    <value>Install selected config</value>
   </data>
   <data name="&gt;&gt;FP_Install.Name" xml:space="preserve">
     <value>FP_Install</value>
@@ -2416,7 +2416,7 @@
     <value>3</value>
   </data>
   <data name="FP_GB_Desc.Text" xml:space="preserve">
-    <value>Подробное описание выбранного конфига</value>
+    <value>Description of selected FPS-config</value>
   </data>
   <data name="&gt;&gt;FP_GB_Desc.Name" xml:space="preserve">
     <value>FP_GB_Desc</value>
@@ -2458,13 +2458,13 @@
     <value>69, 114</value>
   </data>
   <data name="L_FP_ConfigSel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 13</value>
+    <value>155, 13</value>
   </data>
   <data name="L_FP_ConfigSel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="L_FP_ConfigSel.Text" xml:space="preserve">
-    <value>Выберите один из конфигов:</value>
+    <value>Select one of available configs:</value>
   </data>
   <data name="&gt;&gt;L_FP_ConfigSel.Name" xml:space="preserve">
     <value>L_FP_ConfigSel</value>
@@ -2488,7 +2488,7 @@
     <value>0</value>
   </data>
   <data name="FP_TopLabel.Text" xml:space="preserve">
-    <value>На этой странице Вы можете установить один из доступных и протестированных нами FPS-конфигов в игру. Конфиг представляет собой файл autoexec.cfg, который способен значительно увеличить производительность игры с потерей качества выдаваемой картинки. Установленный конфиг Вы можете редактировать в Редакторе. Внимание! Если Вы используете конфиг, то редактор графических настроек не сможет редактировать их (настройки, полученные из конфига имеют более высокий приоритет).</value>
+    <value>On this page you can install one of available and tested by us FPS-configs into the game. FPS-config is a file autoexec.cfg, which can significantly increase the performance of the game with loss of a picture quality. You can edit installed FPS-config manually later in Config Editor tab. Attention! If you use FPS-config the Graphic Tweaker will not be able to edit graphic settings (the settings obtained from the config have higher priority).</value>
   </data>
   <data name="&gt;&gt;FP_TopLabel.Name" xml:space="preserve">
     <value>FP_TopLabel</value>
@@ -2605,40 +2605,40 @@
     <value>17, 17</value>
   </metadata>
   <data name="MNUShowEdHint.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 22</value>
+    <value>251, 22</value>
   </data>
   <data name="MNUShowEdHint.Text" xml:space="preserve">
-    <value>&amp;Показать подсказку</value>
+    <value>Show hint</value>
   </data>
   <data name="MNUSep1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 6</value>
+    <value>248, 6</value>
   </data>
   <data name="MNUFPSWizard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 22</value>
+    <value>251, 22</value>
   </data>
   <data name="MNUFPSWizard.Text" xml:space="preserve">
-    <value>Ма&amp;стер создания FPS-конфига...</value>
+    <value>FPS-config Wizard...</value>
   </data>
   <data name="MNUReportBuilder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 22</value>
+    <value>251, 22</value>
   </data>
   <data name="MNUReportBuilder.Text" xml:space="preserve">
-    <value>Создание отч&amp;ёта для Техподдержки...</value>
+    <value>Create a report for the Support...</value>
   </data>
   <data name="MNUInstaller.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 22</value>
+    <value>251, 22</value>
   </data>
   <data name="MNUInstaller.Text" xml:space="preserve">
-    <value>Ус&amp;тановщик спреев, демок и конфигов...</value>
+    <value>Spray, demo and config installer...</value>
   </data>
   <data name="MNUSep2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 6</value>
+    <value>248, 6</value>
   </data>
   <data name="MNUExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 22</value>
+    <value>251, 22</value>
   </data>
   <data name="MNUExit.Text" xml:space="preserve">
-    <value>&amp;Выход</value>
+    <value>Exit</value>
   </data>
   <data name="ToolsMNU.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
@@ -2647,58 +2647,58 @@
     <value>&amp;Tools</value>
   </data>
   <data name="MNUHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 22</value>
+    <value>257, 22</value>
   </data>
   <data name="MNUHelp.Text" xml:space="preserve">
-    <value>Справоч&amp;ная система Source Repair</value>
+    <value>Source Repair online help</value>
   </data>
   <data name="MNUOpinion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 22</value>
+    <value>257, 22</value>
   </data>
   <data name="MNUOpinion.Text" xml:space="preserve">
-    <value>В&amp;ысказать мнение о программе авторам</value>
+    <value>Express an opinion</value>
   </data>
   <data name="MNUReportBug.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 22</value>
+    <value>257, 22</value>
   </data>
   <data name="MNUReportBug.Text" xml:space="preserve">
-    <value>Сообщить об ошибке в программе</value>
+    <value>Report a bug</value>
   </data>
   <data name="MNUSteamGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 22</value>
+    <value>257, 22</value>
   </data>
   <data name="MNUSteamGroup.Text" xml:space="preserve">
-    <value>Оф&amp;ициальная группа программы в Steam</value>
+    <value>Source Repair's official Steam group</value>
   </data>
   <data name="MNUSep3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 6</value>
+    <value>254, 6</value>
   </data>
   <data name="MNUGroup1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 22</value>
+    <value>257, 22</value>
   </data>
   <data name="MNUGroup1.Text" xml:space="preserve">
     <value>&amp;EasyCoding Team</value>
   </data>
   <data name="MNUGroup2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 22</value>
+    <value>257, 22</value>
   </data>
   <data name="MNUGroup2.Text" xml:space="preserve">
     <value>&amp;Team-Fortress.ru</value>
   </data>
   <data name="MNUGroup3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 22</value>
+    <value>257, 22</value>
   </data>
   <data name="MNUGroup3.Text" xml:space="preserve">
     <value>T&amp;F2World.ru</value>
   </data>
   <data name="MNUSep4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>290, 6</value>
+    <value>254, 6</value>
   </data>
   <data name="MNUAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 22</value>
+    <value>257, 22</value>
   </data>
   <data name="MNUAbout.Text" xml:space="preserve">
-    <value>&amp;О программе</value>
+    <value>About Source Repair...</value>
   </data>
   <data name="HelpMNU.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 20</value>
@@ -2761,19 +2761,16 @@
     <value>126, 17</value>
   </metadata>
   <data name="SB_Info.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 17</value>
+    <value>42, 17</value>
   </data>
   <data name="SB_Info.Text" xml:space="preserve">
-    <value>Статус:</value>
+    <value>Status:</value>
   </data>
   <data name="SB_Status.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="SB_Status.Size" type="System.Drawing.Size, System.Drawing">
     <value>308, 17</value>
-  </data>
-  <data name="SB_Status.Text" xml:space="preserve">
-    <value>Все системы работают в штатном режиме.</value>
   </data>
   <data name="SB_Status.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -2884,13 +2881,13 @@
     <value>333, 17</value>
   </metadata>
   <data name="CE_OpenCfgDialog.Filter" xml:space="preserve">
-    <value>Файлы конфигов (*.cfg)|*.cfg</value>
+    <value>Config files (*.cfg)|*.cfg</value>
   </data>
   <metadata name="CE_SaveCfgDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>475, 17</value>
   </metadata>
   <data name="CE_SaveCfgDialog.Filter" xml:space="preserve">
-    <value>Файлы конфигов (*.cfg)|*.cfg</value>
+    <value>Config files (*.cfg)|*.cfg</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3071,7 +3068,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Source Repair .NET</value>
+    <value>Source Repair</value>
   </data>
   <data name="&gt;&gt;CE_New.Name" xml:space="preserve">
     <value>CE_New</value>

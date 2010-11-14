@@ -1304,8 +1304,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton CE_ShowHint;
         private System.Windows.Forms.ToolStripButton CE_SaveAs;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CE_CVName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CE_CVal;
         private System.Windows.Forms.Button FP_Uninstall;
         private System.Windows.Forms.Button FP_Install;
         private System.Windows.Forms.GroupBox FP_GB_Desc;
@@ -1318,6 +1316,8 @@
         private System.Windows.Forms.ToolStripStatusLabel SB_App;
         private System.Windows.Forms.OpenFileDialog CE_OpenCfgDialog;
         private System.Windows.Forms.SaveFileDialog CE_SaveCfgDialog;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CE_CVName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CE_CVal;
     }
 }
 
