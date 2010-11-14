@@ -118,231 +118,174 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppLaunchedNotAdmin" xml:space="preserve">
-    <value>Внимание! Программа запущена нет от учётной записи с правами администратора, поэтому некоторые функции будут отключены. Чтобы получить к ним доступ, перезапустите её с првами администратора!</value>
-    <comment>Сообщение, выдаваемое при запуске программы от ограниченной учётной записи</comment>
+    <value>Attention! The program is not started from an account with administrator privileges, so some features are disabled. To access them, then restart it as root!</value>
   </data>
   <data name="BackUpCreationFailed" xml:space="preserve">
-    <value>Произошла ошибка при создании резервной копии. Резервная копия не была создана!</value>
-    <comment>Сообщение, выдаваемое при ошибке создания резервной копии</comment>
+    <value>An error occurred while creating the backup. Backup has been created!</value>
   </data>
   <data name="CE_CfgSV" xml:space="preserve">
-    <value>Сохранить файл конфигурации?</value>
-    <comment>Сообщение, выдаваемое при сохранении файла</comment>
+    <value>Save the configuration file?</value>
   </data>
   <data name="CE_CfgSVVEx" xml:space="preserve">
-    <value>Внимание! Во время сохранения файла произошла ошибка. Файл не был сохранён!</value>
-    <comment>Сообщение, выдаваемое при возникновении исключения при попытке сохранить содержимое таблицы редактора в файл</comment>
+    <value>Attention! When saving a file error occurred. File was not saved!</value>
   </data>
   <data name="CE_CreateBackUp" xml:space="preserve">
-    <value>Создать резервную копию файла</value>
-    <comment>Сообщение, выдаваемое при сохранении файла о необходимости создания резервной копии</comment>
+    <value>Create a backup file</value>
   </data>
   <data name="CE_ExceptionDetected" xml:space="preserve">
-    <value>Внимание! При попытке открыть файл произошла ошибка. Возможно, файл открыт с ошибками. Пожалуйста, сообщите о ней в наш багтрекер (Справка - Сообщить об ошибке в программе).</value>
-    <comment>Сообщение, выдаваемое при возникновении исключения при попытке открыть файл конфига</comment>
+    <value>Attention! When you try to open the file the error occurred. The file may open correctly. Please report it to our bugtracker (Help - Report an error in the program).</value>
   </data>
   <data name="CE_OpenFailed" xml:space="preserve">
-    <value>Невозможно считать содержимое конфига, т.к. файл не найден!</value>
-    <comment>Сообщение при попытке открыть несуществующий файл</comment>
+    <value>Can not read the contents of the config, as file not found!</value>
   </data>
   <data name="CE_RestConfigOpenWarn" xml:space="preserve">
-    <value>Внимание! Настоятельно не рекомендуется редактировать этот файл, т.к. это может привести к непредсказуемым последствиям. Редактируйте его на свой страх и риск.</value>
-    <comment>Сообщение, выдаваемое при попытке открытия файла config.cfg</comment>
+    <value>Attention! It is not recommended to edit this file, because this may lead to unpredictable consequences. Edit it at your own risk.</value>
   </data>
   <data name="FP_InstallFailed" xml:space="preserve">
-    <value>Произошла критическая ошибка: невозможно установить выбранный конфиг!</value>
-    <comment>Сообщение об ошибке при установке</comment>
+    <value>A critical error: can not install the selected config!</value>
   </data>
   <data name="FP_InstallQuestion" xml:space="preserve">
-    <value>Внимание! Установка FPS-конфига снизит все графические настройки на абсолютный минимум, что приведёт к значительному ухудшению качества графики игры и увеличению производительности игры. Вы уверены, что хотите установить FPS-конфиг?</value>
-    <comment>Сообщение, выдаваемое при попытке установить FPS-конфиг</comment>
+    <value>Attention! Setting FPS-config reduce all graphics settings to the absolute minimum that will lead to significant deterioration of the quality of game graphics and game performance increase. Are you sure you want to set the FPS-config?</value>
   </data>
   <data name="FP_InstallSuccessful" xml:space="preserve">
-    <value>Конфиг был успешно установлен!</value>
-    <comment>Сообщение об успешной установке конфига</comment>
+    <value>Config has been successfully installed!</value>
   </data>
   <data name="FP_NoCfgGame" xml:space="preserve">
-    <value>Внимание! Для выбранной игры у нас нет FPS-конфигов, поэтому данная страница будет недоступна!</value>
-    <comment>Сообщение, выдаваемое при невозможности загрузить список FPS-конфигов...</comment>
+    <value>Attention! For the selected game we do not have FPS-config, so this page will be disabled!</value>
   </data>
   <data name="FP_NoDescr" xml:space="preserve">
-    <value>К сожалению, описание выбранного Вами конфига недоступно. Приносим извинения за доставленные неудобства.</value>
-    <comment>Сообщение, выдаваемое при невозможности получить описание выбранного конфига</comment>
+    <value>Unfortunately, the description of the chosen config is not available. We apologize for any inconvenience.</value>
   </data>
   <data name="FP_NothingSelected" xml:space="preserve">
     <value>Вы не выбрали FPS-конфиг из списка. Выберите конфиг и повторите попытку!</value>
-    <comment>Сообщение, выдаваемое если пользователь не выбрал FPS-конфиг для установки</comment>
   </data>
   <data name="FP_RemoveFailed" xml:space="preserve">
-    <value>Произошла ошибка при удалении установленного конфига!</value>
-    <comment>Сообщение, выдаваемое при ошибке удаления имеющегося конфига</comment>
+    <value>An error occurred while removing the installed config!</value>
   </data>
   <data name="FP_RemoveNotExists" xml:space="preserve">
-    <value>Нечего удалять: для текущей игры FPS-конфиги не установлены!</value>
-    <comment>Сообщение, выдаваемое при отсутствии установленного FPS-конфига в управляемом приложении</comment>
+    <value>Needless to delete: FPS-config for the current game is not installed!</value>
   </data>
   <data name="FP_RemoveQuestion" xml:space="preserve">
-    <value>Вы уверены что хотите удалить конфиг?</value>
-    <comment>Сообщение, выдаваемое при попытке удалить установленный конфиг</comment>
+    <value>Are you sure you want to delete installed config?</value>
   </data>
   <data name="FP_RemoveSuccessful" xml:space="preserve">
-    <value>Установленный FPS-конфиг был успешно удалён!</value>
-    <comment>Сообщение, выдаваемое при успешном удалении FPS-конфига</comment>
+    <value>Installed FPS-config has been successfully deleted!</value>
   </data>
   <data name="FrmCloseQuery" xml:space="preserve">
-    <value>Закрыть приложение? Все несохранённые изменения будут потеряны!</value>
-    <comment>Сообщение, выдаваемое при закрытии основной формы.</comment>
+    <value>Close application? Any unsaved changes will be lost!</value>
   </data>
   <data name="GeneralErrorDetected" xml:space="preserve">
-    <value>Обнаружено исключение, которое мы не смогли обработать. Пожалуйста, сообщите разработчикам на email: vitaly@easycoding.org.</value>
-    <comment>Сообщение, выдаваемое при различных исключениях...</comment>
+    <value>Found an unhandled exception. Please inform the developers email: vitaly@easycoding.org.</value>
   </data>
   <data name="GT_DxLevelMsg" xml:space="preserve">
-    <value>Включить DirectX 8 режим рендера? Это значительно увеличит производительность игры.</value>
-    <comment>Сообщение, выдаваемое при запросе у пользователя режима рендера DirectX</comment>
+    <value>Enable DirectX 8 mode rendering? This will significantly increase the performance of the game.</value>
   </data>
   <data name="GT_FPSCfgDetected" xml:space="preserve">
-    <value>Внимание! Обнаружен установленный FPS-конфиг, поэтому настройки с этой страницы кроме режима DirectX будут игнорироваться игрой до удаления FPS-конфига.</value>
-    <comment>Сообщение, выдаваемое при щелчке по значку предупреждения об установленном FPS-конфиге</comment>
+    <value>Attention! An installed FPS-config detected, so the settings from this page except the DirectX mode will be ignored by the game until you remove this config.</value>
   </data>
   <data name="GT_MaxPerfMsg" xml:space="preserve">
-    <value>Вы действительно хотите установить настройки графики TF2 на рекомендуемый максимум? Для этого потребуется мощный компютер!</value>
-    <comment>Сообщение, выдаваемое при попытке установить графические настройки на рекомендуемый максимум</comment>
+    <value>Do you really want to set the graphics settings to the recommended maximum? This will require a powerful computer!</value>
   </data>
   <data name="GT_MinPerfMsg" xml:space="preserve">
-    <value>Вы действительно хотите установить все настройки видео на минимальные? Это увеличит FPS, но ухудшит графику в игре.</value>
-    <comment>Сообщение, выдаваемое при попытке установить графические настройки на рекомендуемый минимум</comment>
+    <value>Do you really want to install all the video settings to minimum? This will increase the FPS, but worsen the graphics in the game.</value>
   </data>
   <data name="GT_PerfSet" xml:space="preserve">
-    <value>Готово. Не забудьте подкорректировать и сохранить изменения в настройках!</value>
-    <comment>Сообщение, выдаваемое при завершении автоматического выставления настроек по параметрам</comment>
+    <value>Done. Do not forget to adjust and save the changes in the settings!</value>
   </data>
   <data name="GT_SaveMsg" xml:space="preserve">
-    <value>Сохранить сделанные Вами изменения?</value>
-    <comment>Сообщение, выдаваемое при попытке сохранить изменения</comment>
+    <value>Save your changes?</value>
   </data>
   <data name="GT_SaveSuccess" xml:space="preserve">
-    <value>Изменения были успешно сохранены!</value>
-    <comment>Сообщение, выдаваемое при завершении сохранения изменений</comment>
+    <value>Changes have been successfully saved!</value>
   </data>
   <data name="InputBoxCancelBtnName" xml:space="preserve">
-    <value>Отмена</value>
-    <comment>Текст кнопки Cancel в InputBox'ах</comment>
+    <value>Cancel</value>
   </data>
   <data name="KillMessage1" xml:space="preserve">
-    <value>Внимание! В памяти обнаружен активный процесс</value>
-    <comment>Сообщение, используемое функцией ProcessTerminate.</comment>
+    <value>Attention! In memory detected an active process</value>
   </data>
   <data name="KillMessage2" xml:space="preserve">
-    <value>Настоятельно рекомендуется завершить его работу во избежании серьёзных ошибок. Завершить работу этого процесса сейчас</value>
-    <comment>Сообщение, используемое функцией ProcessTerminate.</comment>
+    <value>It is strongly recommended to complete its work in order to avoid serious mistakes. Terminate that process right now?</value>
   </data>
   <data name="NotImplementedYet" xml:space="preserve">
-    <value>Извините, но данная функция ещё не реализована!</value>
-    <comment>Сообщение, выдаваемое при запуске ещё не реализованной функции</comment>
+    <value>Sorry, but this feature is not yet implemented!</value>
   </data>
   <data name="ParamError" xml:space="preserve">
-    <value>Обнаружен параметр командной строки, но не обнаружено его значение, поэтому игнорируем данный параметр!</value>
-    <comment>Сообщение, выдаваемое при отсутствии значения параметра командной строки</comment>
+    <value>Discovered the command line parameter, but not found its value, so ignore this option!</value>
   </data>
   <data name="PS_ExecuteMSG" xml:space="preserve">
-    <value>Выполнить очистку?</value>
-    <comment>Вопрос, задаваемый пользователю о необходимости выполнения очистки</comment>
+    <value>Perform the cleanup?</value>
   </data>
   <data name="PS_NoLangSelected" xml:space="preserve">
-    <value>Вы неправильно выбрали язык Steam из выпадающего списка, поэтому будет использоваться английский!</value>
-    <comment>Сообщение, выдаваемое при неправильном выборе языка из выпадающего списка</comment>
+    <value>You chose the wrong language Steam from the dropdown list, so we will use English!</value>
   </data>
   <data name="PS_NothingSelected" xml:space="preserve">
-    <value>Вы ничего не выбрали! Выберите хотя бы одну из опций очистки и повторите запуск!</value>
-    <comment>Сообщение, выдаваемое при отсутствии отмеченных чекбоксов</comment>
+    <value>You do not choose! Please select at least one of the options of cleaning and run the cleanup again!</value>
   </data>
   <data name="PS_ProcessDetected" xml:space="preserve">
-    <value>Внимание! В памяти был обнаружен запущенный процесс Steam. Steam был успешно завершён.</value>
-    <comment>Сообщение, выдаваемое при обнаружении в памяти активного процесса Steam.exe</comment>
+    <value>Attention! Steam was found in memory. Steam has been successfully terminated.</value>
   </data>
   <data name="PS_SeqCompleted" xml:space="preserve">
-    <value>Очистка успешно выполнена! Спасибо за использование программы. Теперь Вы можете запустить Steam!</value>
-    <comment>Сообщение об успешном завершении очистки</comment>
+    <value>Cleanup completed successfully! Thank you for using the program. Now you can run Steam!</value>
   </data>
   <data name="StatusLoginChanged" xml:space="preserve">
-    <value>Логин Steam был успешно сменён. Продолжаем работу с новым...</value>
-    <comment>Сообщение о смене логина</comment>
+    <value>Steam login was successfully changed. Let's continue to work with the new one...</value>
   </data>
   <data name="StatusNormal" xml:space="preserve">
-    <value>Все системы работают в штатном режиме.</value>
-    <comment>Сообщение об успешном завершении инициализации</comment>
+    <value>All systems are working normally.</value>
   </data>
   <data name="StatusOpenedFile" xml:space="preserve">
-    <value>Сейчас в редакторе открыт файл:</value>
-    <comment>Сообщение строки статуса об открытом файле...</comment>
+    <value>Opened file in Config Editor:</value>
   </data>
   <data name="StatusSApp" xml:space="preserve">
-    <value>Пожалуйста, выберите приложение из списка!</value>
-    <comment>Сообщение о необходимости выбора управляемого приложения</comment>
+    <value>Please select game from the list!</value>
   </data>
   <data name="StatusSLogin" xml:space="preserve">
-    <value>Пожалуйста, выберите Ваш логин Steam из списка!</value>
-    <comment>Сообщение о необходимости выбора логина</comment>
+    <value>Please select your Steam login from the list!</value>
   </data>
   <data name="SteamLoginCancel" xml:space="preserve">
-    <value>Вы отказались вводить свой логин Steam, поэтому работа программы невозможна. Повторите запуск позднее и введите правильный логин!</value>
-    <comment>Сообщение, выдаваемое при отказе пользователя ввести свой логин Steam</comment>
+    <value>You refused to enter your login Steam, so the work program is impossible. Restart this application later and enter the correct login!</value>
   </data>
   <data name="SteamLoginEnterText" xml:space="preserve">
-    <value>Введите Ваш логин Steam:</value>
-    <comment>Текст InputBox'а ввода логина</comment>
+    <value>Please enter your Steam login:</value>
   </data>
   <data name="SteamLoginEnterTitle" xml:space="preserve">
-    <value>Ввод логина</value>
-    <comment>Заголовок InputBox'а ввода логина</comment>
+    <value>Enter Steam login</value>
   </data>
   <data name="SteamLoginsNotDetected" xml:space="preserve">
-    <value>Внимание! Source Repair не смог получить список активных логинов Steam, поэтому Вам придётся ввести его вручную.</value>
-    <comment>Сообщение, выдаваемое при невозможности получить список логинов Steam</comment>
+    <value>Attention! Source Repair was unable to get a list of active logins Steam, so you have to enter it manually.</value>
   </data>
   <data name="SteamNonASCIIDetected" xml:space="preserve">
-    <value>Внимание! В пути к Steam обнаружены недопустимые символы: русские, немецкие и т.д. буквы, либо символы Юникода. Steam и TF2 будут работать с ошибками. Переустановите Steam в папку, путь до которой будет содержать только латинские буквы.</value>
-    <comment>Сообщение, выдаваемое при обнаружении в пути к Steam запрещённых символов</comment>
+    <value>Attention! On the way to Steam detected invalid characters: Russian, German, etc. letters, or Unicode characters. Steam and the games will not work correctly. Reinstall Steam folder, the path to which will contain only latin symbols.</value>
   </data>
   <data name="SteamNonASCIISmall" xml:space="preserve">
-    <value>Внимание! В пути к Steam обнаружены недопустимые символы. Steam и TF2 будут работать с ошибками. Переустановите Steam в папку, путь до которой будет содержать только латинские буквы.</value>
-    <comment>Сообщение для детектора</comment>
+    <value>Attention! On the way to Steam detected invalid characters. Steam and the games will not work correctly. Reinstall Steam to folder, the path to which will contain only latin symbols.</value>
   </data>
   <data name="SteamNonASCIITitle" xml:space="preserve">
-    <value>Обнаружены запрещённые символы!</value>
-    <comment>Текст для детектора</comment>
+    <value>Disallowed characters detected!</value>
   </data>
   <data name="SteamNotDetected" xml:space="preserve">
-    <value>Ключи реестра, относящиеся к Steam не обнаружены. Вам не нужна их чистка. Нажмите OK для выхода из программы!</value>
-    <comment>Сообщение, выдаваемое при отсутствии в реестре ключей Steam</comment>
+    <value>Registry keys related to Steam is not found. You do not need their cleaning. Click OK to exit the program!</value>
   </data>
   <data name="SteamPathCancel" xml:space="preserve">
-    <value>Вы отказались вводить путь к Steam, поэтому программа будет завершена!</value>
-    <comment>Сообщение при нажатии кнопки Cancel InputBox'а</comment>
+    <value>You refused to enter the path to Steam, so the program will be terminated!</value>
   </data>
   <data name="SteamPathEnterErr" xml:space="preserve">
-    <value>Вы указали неправильный путь! Программа будет завершена.</value>
-    <comment>Сообщение при вводе неверного пути</comment>
+    <value>You have entered the wrong path! The program will be terminated.</value>
   </data>
   <data name="SteamPathEnterText" xml:space="preserve">
-    <value>Укажите путь к установленному Steam:</value>
-    <comment>Текст InputBox'а ввода пути Steam</comment>
+    <value>Specify the path to Steam:</value>
   </data>
   <data name="SteamPathEnterTitle" xml:space="preserve">
-    <value>Укажите путь к Steam</value>
-    <comment>Заголовок InputBox'а ввода пути Steam</comment>
+    <value>Specify the path to Steam</value>
   </data>
   <data name="SteamPathNotDetected" xml:space="preserve">
-    <value>Произошла критическая ошибка: не могу получить путь к Steam из реестра, поэтому Вам придётся вручную указать правильный путь!</value>
-    <comment>Сообщение, выдаваемое при невозможности автоматически получить путь к установленному клиенту Steam</comment>
+    <value>Warning! Critical error occured: can not get the path to the Steam from the registry, so you'll have to manually specify the correct path!</value>
   </data>
   <data name="UnnamedFileName" xml:space="preserve">
-    <value>Безымянный.cfg</value>
-    <comment>Стандартное имя для файла без имени</comment>
+    <value>Unnamed.cfg</value>
   </data>
   <data name="FP_SelectFromList" xml:space="preserve">
-    <value>Выберите конфиг из списка выше!</value>
-    <comment>Сообщение о необходимости выбрать FPS-конфиг из списка</comment>
+    <value>Select the config file from the list above!</value>
   </data>
 </root>

@@ -61,7 +61,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Внимание! Программа запущена нет от учётной записи с правами администратора, поэтому некоторые функции будут отключены. Чтобы получить к ним доступ, перезапустите её с првами администратора!.
+        ///   Looks up a localized string similar to Attention! The program is not started from an account with administrator privileges, so some features are disabled. To access them, then restart it as root!.
         /// </summary>
         internal static string AppLaunchedNotAdmin {
             get {
@@ -70,7 +70,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Произошла ошибка при создании резервной копии. Резервная копия не была создана!.
+        ///   Looks up a localized string similar to An error occurred while creating the backup. Backup has been created!.
         /// </summary>
         internal static string BackUpCreationFailed {
             get {
@@ -79,7 +79,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Сохранить файл конфигурации?.
+        ///   Looks up a localized string similar to Save the configuration file?.
         /// </summary>
         internal static string CE_CfgSV {
             get {
@@ -88,7 +88,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Внимание! Во время сохранения файла произошла ошибка. Файл не был сохранён!.
+        ///   Looks up a localized string similar to Attention! When saving a file error occurred. File was not saved!.
         /// </summary>
         internal static string CE_CfgSVVEx {
             get {
@@ -97,7 +97,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Создать резервную копию файла.
+        ///   Looks up a localized string similar to Create a backup file.
         /// </summary>
         internal static string CE_CreateBackUp {
             get {
@@ -106,7 +106,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Внимание! При попытке открыть файл произошла ошибка. Возможно, файл открыт с ошибками. Пожалуйста, сообщите о ней в наш багтрекер (Справка - Сообщить об ошибке в программе)..
+        ///   Looks up a localized string similar to Attention! When you try to open the file the error occurred. The file may open correctly. Please report it to our bugtracker (Help - Report an error in the program)..
         /// </summary>
         internal static string CE_ExceptionDetected {
             get {
@@ -115,7 +115,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Невозможно считать содержимое конфига, т.к. файл не найден!.
+        ///   Looks up a localized string similar to Can not read the contents of the config, as file not found!.
         /// </summary>
         internal static string CE_OpenFailed {
             get {
@@ -124,7 +124,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Внимание! Настоятельно не рекомендуется редактировать этот файл, т.к. это может привести к непредсказуемым последствиям. Редактируйте его на свой страх и риск..
+        ///   Looks up a localized string similar to Attention! It is not recommended to edit this file, because this may lead to unpredictable consequences. Edit it at your own risk..
         /// </summary>
         internal static string CE_RestConfigOpenWarn {
             get {
@@ -133,7 +133,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Произошла критическая ошибка: невозможно установить выбранный конфиг!.
+        ///   Looks up a localized string similar to A critical error: can not install the selected config!.
         /// </summary>
         internal static string FP_InstallFailed {
             get {
@@ -142,7 +142,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Внимание! Установка FPS-конфига снизит все графические настройки на абсолютный минимум, что приведёт к значительному ухудшению качества графики игры и увеличению производительности игры. Вы уверены, что хотите установить FPS-конфиг?.
+        ///   Looks up a localized string similar to Attention! Setting FPS-config reduce all graphics settings to the absolute minimum that will lead to significant deterioration of the quality of game graphics and game performance increase. Are you sure you want to set the FPS-config?.
         /// </summary>
         internal static string FP_InstallQuestion {
             get {
@@ -151,7 +151,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Конфиг был успешно установлен!.
+        ///   Looks up a localized string similar to Config has been successfully installed!.
         /// </summary>
         internal static string FP_InstallSuccessful {
             get {
@@ -160,7 +160,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Внимание! Для выбранной игры у нас нет FPS-конфигов, поэтому данная страница будет недоступна!.
+        ///   Looks up a localized string similar to Attention! For the selected game we do not have FPS-config, so this page will be disabled!.
         /// </summary>
         internal static string FP_NoCfgGame {
             get {
@@ -169,7 +169,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to К сожалению, описание выбранного Вами конфига недоступно. Приносим извинения за доставленные неудобства..
+        ///   Looks up a localized string similar to Unfortunately, the description of the chosen config is not available. We apologize for any inconvenience..
         /// </summary>
         internal static string FP_NoDescr {
             get {
@@ -187,7 +187,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Произошла ошибка при удалении установленного конфига!.
+        ///   Looks up a localized string similar to An error occurred while removing the installed config!.
         /// </summary>
         internal static string FP_RemoveFailed {
             get {
@@ -196,7 +196,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Нечего удалять: для текущей игры FPS-конфиги не установлены!.
+        ///   Looks up a localized string similar to Needless to delete: FPS-config for the current game is not installed!.
         /// </summary>
         internal static string FP_RemoveNotExists {
             get {
@@ -205,7 +205,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Вы уверены что хотите удалить конфиг?.
+        ///   Looks up a localized string similar to Are you sure you want to delete installed config?.
         /// </summary>
         internal static string FP_RemoveQuestion {
             get {
@@ -214,7 +214,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Установленный FPS-конфиг был успешно удалён!.
+        ///   Looks up a localized string similar to Installed FPS-config has been successfully deleted!.
         /// </summary>
         internal static string FP_RemoveSuccessful {
             get {
@@ -223,7 +223,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Выберите конфиг из списка выше!.
+        ///   Looks up a localized string similar to Select the config file from the list above!.
         /// </summary>
         internal static string FP_SelectFromList {
             get {
@@ -232,7 +232,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Закрыть приложение? Все несохранённые изменения будут потеряны!.
+        ///   Looks up a localized string similar to Close application? Any unsaved changes will be lost!.
         /// </summary>
         internal static string FrmCloseQuery {
             get {
@@ -241,7 +241,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Обнаружено исключение, которое мы не смогли обработать. Пожалуйста, сообщите разработчикам на email: vitaly@easycoding.org..
+        ///   Looks up a localized string similar to Found an unhandled exception. Please inform the developers email: vitaly@easycoding.org..
         /// </summary>
         internal static string GeneralErrorDetected {
             get {
@@ -250,7 +250,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Включить DirectX 8 режим рендера? Это значительно увеличит производительность игры..
+        ///   Looks up a localized string similar to Enable DirectX 8 mode rendering? This will significantly increase the performance of the game..
         /// </summary>
         internal static string GT_DxLevelMsg {
             get {
@@ -259,7 +259,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Внимание! Обнаружен установленный FPS-конфиг, поэтому настройки с этой страницы кроме режима DirectX будут игнорироваться игрой до удаления FPS-конфига..
+        ///   Looks up a localized string similar to Attention! An installed FPS-config detected, so the settings from this page except the DirectX mode will be ignored by the game until you remove this config..
         /// </summary>
         internal static string GT_FPSCfgDetected {
             get {
@@ -268,7 +268,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Вы действительно хотите установить настройки графики TF2 на рекомендуемый максимум? Для этого потребуется мощный компютер!.
+        ///   Looks up a localized string similar to Do you really want to set the graphics settings to the recommended maximum? This will require a powerful computer!.
         /// </summary>
         internal static string GT_MaxPerfMsg {
             get {
@@ -277,7 +277,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Вы действительно хотите установить все настройки видео на минимальные? Это увеличит FPS, но ухудшит графику в игре..
+        ///   Looks up a localized string similar to Do you really want to install all the video settings to minimum? This will increase the FPS, but worsen the graphics in the game..
         /// </summary>
         internal static string GT_MinPerfMsg {
             get {
@@ -286,7 +286,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Готово. Не забудьте подкорректировать и сохранить изменения в настройках!.
+        ///   Looks up a localized string similar to Done. Do not forget to adjust and save the changes in the settings!.
         /// </summary>
         internal static string GT_PerfSet {
             get {
@@ -295,7 +295,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Сохранить сделанные Вами изменения?.
+        ///   Looks up a localized string similar to Save your changes?.
         /// </summary>
         internal static string GT_SaveMsg {
             get {
@@ -304,7 +304,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Изменения были успешно сохранены!.
+        ///   Looks up a localized string similar to Changes have been successfully saved!.
         /// </summary>
         internal static string GT_SaveSuccess {
             get {
@@ -313,7 +313,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Отмена.
+        ///   Looks up a localized string similar to Cancel.
         /// </summary>
         internal static string InputBoxCancelBtnName {
             get {
@@ -322,7 +322,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Внимание! В памяти обнаружен активный процесс.
+        ///   Looks up a localized string similar to Attention! In memory detected an active process.
         /// </summary>
         internal static string KillMessage1 {
             get {
@@ -331,7 +331,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Настоятельно рекомендуется завершить его работу во избежании серьёзных ошибок. Завершить работу этого процесса сейчас.
+        ///   Looks up a localized string similar to It is strongly recommended to complete its work in order to avoid serious mistakes. Terminate that process right now?.
         /// </summary>
         internal static string KillMessage2 {
             get {
@@ -340,7 +340,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Извините, но данная функция ещё не реализована!.
+        ///   Looks up a localized string similar to Sorry, but this feature is not yet implemented!.
         /// </summary>
         internal static string NotImplementedYet {
             get {
@@ -349,7 +349,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Обнаружен параметр командной строки, но не обнаружено его значение, поэтому игнорируем данный параметр!.
+        ///   Looks up a localized string similar to Discovered the command line parameter, but not found its value, so ignore this option!.
         /// </summary>
         internal static string ParamError {
             get {
@@ -358,7 +358,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Выполнить очистку?.
+        ///   Looks up a localized string similar to Perform the cleanup?.
         /// </summary>
         internal static string PS_ExecuteMSG {
             get {
@@ -367,7 +367,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Вы неправильно выбрали язык Steam из выпадающего списка, поэтому будет использоваться английский!.
+        ///   Looks up a localized string similar to You chose the wrong language Steam from the dropdown list, so we will use English!.
         /// </summary>
         internal static string PS_NoLangSelected {
             get {
@@ -376,7 +376,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Вы ничего не выбрали! Выберите хотя бы одну из опций очистки и повторите запуск!.
+        ///   Looks up a localized string similar to You do not choose! Please select at least one of the options of cleaning and run the cleanup again!.
         /// </summary>
         internal static string PS_NothingSelected {
             get {
@@ -385,7 +385,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Внимание! В памяти был обнаружен запущенный процесс Steam. Steam был успешно завершён..
+        ///   Looks up a localized string similar to Attention! Steam was found in memory. Steam has been successfully terminated..
         /// </summary>
         internal static string PS_ProcessDetected {
             get {
@@ -394,7 +394,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Очистка успешно выполнена! Спасибо за использование программы. Теперь Вы можете запустить Steam!.
+        ///   Looks up a localized string similar to Cleanup completed successfully! Thank you for using the program. Now you can run Steam!.
         /// </summary>
         internal static string PS_SeqCompleted {
             get {
@@ -403,7 +403,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Логин Steam был успешно сменён. Продолжаем работу с новым....
+        ///   Looks up a localized string similar to Steam login was successfully changed. Let&apos;s continue to work with the new one....
         /// </summary>
         internal static string StatusLoginChanged {
             get {
@@ -412,7 +412,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Все системы работают в штатном режиме..
+        ///   Looks up a localized string similar to All systems are working normally..
         /// </summary>
         internal static string StatusNormal {
             get {
@@ -421,7 +421,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Сейчас в редакторе открыт файл:.
+        ///   Looks up a localized string similar to Opened file in Config Editor:.
         /// </summary>
         internal static string StatusOpenedFile {
             get {
@@ -430,7 +430,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Пожалуйста, выберите приложение из списка!.
+        ///   Looks up a localized string similar to Please select game from the list!.
         /// </summary>
         internal static string StatusSApp {
             get {
@@ -439,7 +439,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Пожалуйста, выберите Ваш логин Steam из списка!.
+        ///   Looks up a localized string similar to Please select your Steam login from the list!.
         /// </summary>
         internal static string StatusSLogin {
             get {
@@ -448,7 +448,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Вы отказались вводить свой логин Steam, поэтому работа программы невозможна. Повторите запуск позднее и введите правильный логин!.
+        ///   Looks up a localized string similar to You refused to enter your login Steam, so the work program is impossible. Restart this application later and enter the correct login!.
         /// </summary>
         internal static string SteamLoginCancel {
             get {
@@ -457,7 +457,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Введите Ваш логин Steam:.
+        ///   Looks up a localized string similar to Please enter your Steam login:.
         /// </summary>
         internal static string SteamLoginEnterText {
             get {
@@ -466,7 +466,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ввод логина.
+        ///   Looks up a localized string similar to Enter Steam login.
         /// </summary>
         internal static string SteamLoginEnterTitle {
             get {
@@ -475,7 +475,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Внимание! Source Repair не смог получить список активных логинов Steam, поэтому Вам придётся ввести его вручную..
+        ///   Looks up a localized string similar to Attention! Source Repair was unable to get a list of active logins Steam, so you have to enter it manually..
         /// </summary>
         internal static string SteamLoginsNotDetected {
             get {
@@ -484,7 +484,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Внимание! В пути к Steam обнаружены недопустимые символы: русские, немецкие и т.д. буквы, либо символы Юникода. Steam и TF2 будут работать с ошибками. Переустановите Steam в папку, путь до которой будет содержать только латинские буквы..
+        ///   Looks up a localized string similar to Attention! On the way to Steam detected invalid characters: Russian, German, etc. letters, or Unicode characters. Steam and the games will not work correctly. Reinstall Steam folder, the path to which will contain only latin symbols..
         /// </summary>
         internal static string SteamNonASCIIDetected {
             get {
@@ -493,7 +493,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Внимание! В пути к Steam обнаружены недопустимые символы. Steam и TF2 будут работать с ошибками. Переустановите Steam в папку, путь до которой будет содержать только латинские буквы..
+        ///   Looks up a localized string similar to Attention! On the way to Steam detected invalid characters. Steam and the games will not work correctly. Reinstall Steam to folder, the path to which will contain only latin symbols..
         /// </summary>
         internal static string SteamNonASCIISmall {
             get {
@@ -502,7 +502,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Обнаружены запрещённые символы!.
+        ///   Looks up a localized string similar to Disallowed characters detected!.
         /// </summary>
         internal static string SteamNonASCIITitle {
             get {
@@ -511,7 +511,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ключи реестра, относящиеся к Steam не обнаружены. Вам не нужна их чистка. Нажмите OK для выхода из программы!.
+        ///   Looks up a localized string similar to Registry keys related to Steam is not found. You do not need their cleaning. Click OK to exit the program!.
         /// </summary>
         internal static string SteamNotDetected {
             get {
@@ -520,7 +520,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Вы отказались вводить путь к Steam, поэтому программа будет завершена!.
+        ///   Looks up a localized string similar to You refused to enter the path to Steam, so the program will be terminated!.
         /// </summary>
         internal static string SteamPathCancel {
             get {
@@ -529,7 +529,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Вы указали неправильный путь! Программа будет завершена..
+        ///   Looks up a localized string similar to You have entered the wrong path! The program will be terminated..
         /// </summary>
         internal static string SteamPathEnterErr {
             get {
@@ -538,7 +538,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Укажите путь к установленному Steam:.
+        ///   Looks up a localized string similar to Specify the path to Steam:.
         /// </summary>
         internal static string SteamPathEnterText {
             get {
@@ -547,7 +547,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Укажите путь к Steam.
+        ///   Looks up a localized string similar to Specify the path to Steam.
         /// </summary>
         internal static string SteamPathEnterTitle {
             get {
@@ -556,7 +556,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Произошла критическая ошибка: не могу получить путь к Steam из реестра, поэтому Вам придётся вручную указать правильный путь!.
+        ///   Looks up a localized string similar to Warning! Critical error occured: can not get the path to the Steam from the registry, so you&apos;ll have to manually specify the correct path!.
         /// </summary>
         internal static string SteamPathNotDetected {
             get {
@@ -565,7 +565,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Безымянный.cfg.
+        ///   Looks up a localized string similar to Unnamed.cfg.
         /// </summary>
         internal static string UnnamedFileName {
             get {
