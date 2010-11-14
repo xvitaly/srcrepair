@@ -504,13 +504,6 @@ namespace srcrepair
             // Получаем параметры командной строки, переданные приложению...
             string[] CMDLineArgs = Environment.GetCommandLineArgs();
             
-            // Ищем параметр командной строки /russian...
-            if (FindCommandLineSwitch(CMDLineArgs, "/russian"))
-            {
-                // Параметр задан. Меняем язык приложения на русский...
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
-            }
-            
             // Получаем путь к каталогу приложения...
             System.Reflection.Assembly Assmbl = System.Reflection.Assembly.GetEntryAssembly();
             GV.FullAppPath = IncludeTrDelim(System.IO.Path.GetDirectoryName(Assmbl.Location));
