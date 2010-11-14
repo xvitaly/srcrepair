@@ -12,6 +12,7 @@ using Microsoft.Win32; // для работы с реестром...
 using System.Text.RegularExpressions; // для работы с регулярными выражениями...
 using System.Security.Principal; // для определения прав админа...
 using System.Threading; // для управления потоками...
+using System.Globalization; // для управления локализациями...
 using System.Resources; // для управления ресурсами...
 
 namespace srcrepair
@@ -500,6 +501,16 @@ namespace srcrepair
         {
             // Событие инициализации формы...
 
+            // Получаем параметры командной строки, переданные приложению...
+            string[] CMDLineArgs = Environment.GetCommandLineArgs();
+            
+            // Ищем параметр командной строки /russian...
+            if (FindCommandLineSwitch(CMDLineArgs, "/russian"))
+            {
+                // Параметр задан. Меняем язык приложения на русский...
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
+            }
+            
             // Получаем путь к каталогу приложения...
             System.Reflection.Assembly Assmbl = System.Reflection.Assembly.GetEntryAssembly();
             GV.FullAppPath = IncludeTrDelim(System.IO.Path.GetDirectoryName(Assmbl.Location));
@@ -527,14 +538,11 @@ namespace srcrepair
                 MessageBox.Show(RM.GetString("PS_ProcessDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            // Получаем параметры командной строки, переданные приложению...
-            string[] CMDLineArgs = Environment.GetCommandLineArgs();
-
             // Ищем параметр командной строки path...
-            if (FindCommandLineSwitch(CMDLineArgs, "-path"))
+            if (FindCommandLineSwitch(CMDLineArgs, "/path"))
             {
                 // Параметр найден, считываем следующий за ним параметр с путём к Steam...
-                GV.FullSteamPath = IncludeTrDelim(CMDLineArgs[FindStringInStrArray(CMDLineArgs, "-path") + 1]);
+                GV.FullSteamPath = IncludeTrDelim(CMDLineArgs[FindStringInStrArray(CMDLineArgs, "/path") + 1]);
             }
             else
             {
@@ -571,13 +579,13 @@ namespace srcrepair
             }
 
             // Ищем параметр командной строки login...
-            if (FindCommandLineSwitch(CMDLineArgs, "-login"))
+            if (FindCommandLineSwitch(CMDLineArgs, "/login"))
             {
                 // Параметр найден, добавим его и отключим автоопределение...
                 try
                 {
                     // Добавляем параметр в ComboBox...
-                    LoginSel.Items.Add((string)CMDLineArgs[FindStringInStrArray(CMDLineArgs, "-login") + 1]);
+                    LoginSel.Items.Add((string)CMDLineArgs[FindStringInStrArray(CMDLineArgs, "/login") + 1]);
                 }
                 catch
                 {
