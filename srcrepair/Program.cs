@@ -20,9 +20,14 @@ namespace srcrepair
             string[] CMDLineA = Environment.GetCommandLineArgs();
             for (int StrNum = 0; StrNum < CMDLineA.Length; StrNum++)
             {
-                if (CMDLineA[StrNum] == "/russian")
+                switch (CMDLineA[StrNum])
                 {
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
+                    case "/russian":
+                        Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
+                        break;
+                    case "/english":
+                        Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+                        break;
                 }
             }
             Application.Run(new frmMainW());
