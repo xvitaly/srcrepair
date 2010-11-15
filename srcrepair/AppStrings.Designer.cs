@@ -322,7 +322,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attention! In memory detected an active process.
+        ///   Looks up a localized string similar to To work correctly, this programm needs.
         /// </summary>
         internal static string KillMessage1 {
             get {
@@ -331,7 +331,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to It is strongly recommended to complete its work in order to avoid serious mistakes. Terminate that process right now?.
+        ///   Looks up a localized string similar to to be shut down. Proceed?.
         /// </summary>
         internal static string KillMessage2 {
             get {
@@ -385,7 +385,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attention! Steam was found in memory. Steam has been successfully terminated..
+        ///   Looks up a localized string similar to Steam has been successfully terminated..
         /// </summary>
         internal static string PS_ProcessDetected {
             get {

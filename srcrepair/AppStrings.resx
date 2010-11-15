@@ -202,10 +202,10 @@
     <value>Cancel</value>
   </data>
   <data name="KillMessage1" xml:space="preserve">
-    <value>Attention! In memory detected an active process</value>
+    <value>To work correctly, this programm needs</value>
   </data>
   <data name="KillMessage2" xml:space="preserve">
-    <value>It is strongly recommended to complete its work in order to avoid serious mistakes. Terminate that process right now?</value>
+    <value>to be shut down. Proceed?</value>
   </data>
   <data name="NotImplementedYet" xml:space="preserve">
     <value>Sorry, but this feature is not yet implemented!</value>
@@ -223,7 +223,7 @@
     <value>You do not choose! Please select at least one of the options of cleaning and run the cleanup again!</value>
   </data>
   <data name="PS_ProcessDetected" xml:space="preserve">
-    <value>Attention! Steam was found in memory. Steam has been successfully terminated.</value>
+    <value>Steam has been successfully terminated.</value>
   </data>
   <data name="PS_SeqCompleted" xml:space="preserve">
     <value>Cleanup completed successfully! Thank you for using the program. Now you can run Steam!</value>

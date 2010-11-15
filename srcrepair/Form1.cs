@@ -106,7 +106,7 @@ namespace srcrepair
                 if (ShowConfirmationMsg) // Проверим, нужно ли подтверждение...
                 {
                     // Запросим подтверждение...
-                    DialogResult UserConfirmation = MessageBox.Show(RM.GetString("KillMessage1") + " " + ResName.ProcessName + "! " + RM.GetString("KillMessage2"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult UserConfirmation = MessageBox.Show(RM.GetString("KillMessage1") + " " + ResName.ProcessName + " " + RM.GetString("KillMessage2"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (UserConfirmation == DialogResult.Yes)
                     {
                         ProcID = ResName.Id;
