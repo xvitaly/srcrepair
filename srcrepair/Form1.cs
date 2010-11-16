@@ -106,7 +106,7 @@ namespace srcrepair
                 if (ShowConfirmationMsg) // Проверим, нужно ли подтверждение...
                 {
                     // Запросим подтверждение...
-                    DialogResult UserConfirmation = MessageBox.Show(RM.GetString("KillMessage1") + " " + ResName.ProcessName + " " + RM.GetString("KillMessage2"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("ST_KillMessage"), ResName.ProcessName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (UserConfirmation == DialogResult.Yes)
                     {
                         ProcID = ResName.Id;
@@ -528,7 +528,7 @@ namespace srcrepair
             // Найдём и завершим в памяти процесс Steam...
             if (ProcessTerminate("Steam", true) != 0)
             {
-                MessageBox.Show(RM.GetString("PS_ProcessDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(RM.GetString("PS_ProcessTerminated"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             // Ищем параметр командной строки path...

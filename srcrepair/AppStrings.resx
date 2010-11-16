@@ -201,11 +201,8 @@
   <data name="InputBoxCancelBtnName" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="KillMessage1" xml:space="preserve">
-    <value>To work correctly, this programm needs</value>
-  </data>
-  <data name="KillMessage2" xml:space="preserve">
-    <value>to be shut down. Proceed?</value>
+  <data name="ST_KillMessage" xml:space="preserve">
+    <value>To work correctly, this programm needs {0} to be shut down. Proceed?</value>
   </data>
   <data name="NotImplementedYet" xml:space="preserve">
     <value>Sorry, but this feature is not yet implemented!</value>
@@ -222,7 +219,7 @@
   <data name="PS_NothingSelected" xml:space="preserve">
     <value>You do not choose! Please select at least one of the options of cleaning and run the cleanup again!</value>
   </data>
-  <data name="PS_ProcessDetected" xml:space="preserve">
+  <data name="PS_ProcessTerminated" xml:space="preserve">
     <value>Steam has been successfully terminated.</value>
   </data>
   <data name="PS_SeqCompleted" xml:space="preserve">

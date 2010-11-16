@@ -322,24 +322,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to To work correctly, this programm needs.
-        /// </summary>
-        internal static string KillMessage1 {
-            get {
-                return ResourceManager.GetString("KillMessage1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to to be shut down. Proceed?.
-        /// </summary>
-        internal static string KillMessage2 {
-            get {
-                return ResourceManager.GetString("KillMessage2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Sorry, but this feature is not yet implemented!.
         /// </summary>
         internal static string NotImplementedYet {
@@ -387,9 +369,9 @@ namespace srcrepair {
         /// <summary>
         ///   Looks up a localized string similar to Steam has been successfully terminated..
         /// </summary>
-        internal static string PS_ProcessDetected {
+        internal static string PS_ProcessTerminated {
             get {
-                return ResourceManager.GetString("PS_ProcessDetected", resourceCulture);
+                return ResourceManager.GetString("PS_ProcessTerminated", resourceCulture);
             }
         }
         
@@ -399,6 +381,15 @@ namespace srcrepair {
         internal static string PS_SeqCompleted {
             get {
                 return ResourceManager.GetString("PS_SeqCompleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To work correctly, this programm needs {0} to be shut down. Proceed?.
+        /// </summary>
+        internal static string ST_KillMessage {
+            get {
+                return ResourceManager.GetString("ST_KillMessage", resourceCulture);
             }
         }
         

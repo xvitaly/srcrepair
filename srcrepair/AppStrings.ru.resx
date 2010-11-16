@@ -229,12 +229,8 @@
     <value>Отмена</value>
     <comment>Текст кнопки Cancel в InputBox'ах</comment>
   </data>
-  <data name="KillMessage1" xml:space="preserve">
-    <value>Внимание! В памяти обнаружен активный процесс</value>
-    <comment>Сообщение, используемое функцией ProcessTerminate.</comment>
-  </data>
-  <data name="KillMessage2" xml:space="preserve">
-    <value>Настоятельно рекомендуется завершить его работу во избежании серьёзных ошибок. Завершить работу этого процесса сейчас</value>
+  <data name="ST_KillMessage" xml:space="preserve">
+    <value>Внимание! В памяти обнаружен активный процесс {0}! Настоятельно рекомендуется завершить его работу во избежании серьёзных ошибок. Завершить работу этого процесса сейчас?</value>
     <comment>Сообщение, используемое функцией ProcessTerminate.</comment>
   </data>
   <data name="NotImplementedYet" xml:space="preserve">
@@ -257,7 +253,7 @@
     <value>Вы ничего не выбрали! Выберите хотя бы одну из опций очистки и повторите запуск!</value>
     <comment>Сообщение, выдаваемое при отсутствии отмеченных чекбоксов</comment>
   </data>
-  <data name="PS_ProcessDetected" xml:space="preserve">
+  <data name="PS_ProcessTerminated" xml:space="preserve">
     <value>Внимание! В памяти был обнаружен запущенный процесс Steam. Steam был успешно завершён.</value>
     <comment>Сообщение, выдаваемое при обнаружении в памяти активного процесса Steam.exe</comment>
   </data>
