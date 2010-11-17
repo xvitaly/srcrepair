@@ -753,6 +753,7 @@ namespace srcrepair
             PS_RemScreenShots.Enabled = PS_AllowRemCtrls.Checked;
             PS_RemDemos.Enabled = PS_AllowRemCtrls.Checked;
             PS_RemGraphOpts.Enabled = PS_AllowRemCtrls.Checked;
+            PS_RemOldBin.Enabled = PS_AllowRemCtrls.Checked;
         }
 
         private void frmMainW_FormClosing(object sender, FormClosingEventArgs e)
@@ -841,7 +842,8 @@ namespace srcrepair
             }
 
             // Генерируем полный путь до каталога управляемого приложения...
-            GV.FullGamePath = IncludeTrDelim(GV.FullSteamPath + "steamapps\\" + ptha + "\\" + GV.FullAppName + "\\" + GV.SmallAppName);
+            GV.GamePath = IncludeTrDelim(GV.FullSteamPath + "steamapps\\" + ptha + "\\" + GV.FullAppName);
+            GV.FullGamePath = IncludeTrDelim(GV.GamePath + GV.SmallAppName);
 
             // Заполняем другие служебные переменные...
             GV.FullCfgPath = GV.FullGamePath + "cfg\\";
@@ -1925,6 +1927,26 @@ namespace srcrepair
                 {
                     // Удаляем ключ HKEY_CURRENT_USER\Software\Valve\Source\tf\Settings из реестра...
                     Registry.CurrentUser.DeleteSubKeyTree("Software\\Valve\\Source\\" + GV.SmallAppName + "\\Settings", false);
+                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void PS_RemOldBin_Click(object sender, EventArgs e)
+        {
+            // Удаляем старые бинарники...
+            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (UserConfirmation == DialogResult.Yes)
+            {
+                try
+                {
+                    System.IO.Directory.Delete(GV.GamePath + "bin\\", true); // Удаляем бинарники...
+                    System.IO.Directory.Delete(GV.GamePath + "platform\\", true); // Удаляем настройки платформы...
+                    System.IO.Directory.Delete(GV.FullGamePath + "bin\\", true); // Удаляем библиотеки игры...
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch

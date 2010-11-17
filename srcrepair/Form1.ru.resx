@@ -538,6 +538,9 @@
   <data name="PS_GB_Remover.Text" xml:space="preserve">
     <value>Удалить:</value>
   </data>
+  <data name="PS_RemOldBin.Text" xml:space="preserve">
+    <value>Старые бинарники</value>
+  </data>
   <data name="PS_AllowRemCtrls.Size" type="System.Drawing.Size, System.Drawing">
     <value>132, 17</value>
   </data>
