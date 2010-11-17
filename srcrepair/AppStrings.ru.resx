@@ -341,4 +341,14 @@
     <value>Выберите конфиг из списка выше!</value>
     <comment>Сообщение о необходимости выбрать FPS-конфиг из списка</comment>
   </data>
+  <data name="PS_CleanupErr" xml:space="preserve">
+    <value>Во время удаления файлов произошла ошибка. Некоторые файлы не были удалены!</value>
+  </data>
+  <data name="PS_CleanupExecuteQ" xml:space="preserve">
+    <value>Полностью удалить {0}?</value>
+    <comment>Сообщение, выдаваемое при запуске очистки</comment>
+  </data>
+  <data name="PS_CleanupSuccess" xml:space="preserve">
+    <value>Процесс очистки успешно завершён!</value>
+  </data>
 </root>

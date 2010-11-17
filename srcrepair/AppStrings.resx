@@ -285,4 +285,13 @@
   <data name="FP_SelectFromList" xml:space="preserve">
     <value>Select the config file from the list above!</value>
   </data>
+  <data name="PS_CleanupErr" xml:space="preserve">
+    <value>Error occured while deleting files. Some files were not deleted!</value>
+  </data>
+  <data name="PS_CleanupExecuteQ" xml:space="preserve">
+    <value>Clean {0}?</value>
+  </data>
+  <data name="PS_CleanupSuccess" xml:space="preserve">
+    <value>Cleanup was successfully completed!</value>
+  </data>
 </root>

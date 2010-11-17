@@ -669,6 +669,21 @@
   <data name="&gt;&gt;ConfigEditor.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="PS_AllowRemCtrls.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="PS_AllowRemCtrls.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 28</value>
+  </data>
+  <data name="PS_AllowRemCtrls.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 17</value>
+  </data>
+  <data name="PS_AllowRemCtrls.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="PS_AllowRemCtrls.Text" xml:space="preserve">
+    <value>Enable buttons</value>
+  </data>
   <data name="&gt;&gt;PS_AllowRemCtrls.Name" xml:space="preserve">
     <value>PS_AllowRemCtrls</value>
   </data>
@@ -680,6 +695,21 @@
   </data>
   <data name="&gt;&gt;PS_AllowRemCtrls.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="PS_RemGraphOpts.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="PS_RemGraphOpts.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 328</value>
+  </data>
+  <data name="PS_RemGraphOpts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 23</value>
+  </data>
+  <data name="PS_RemGraphOpts.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="PS_RemGraphOpts.Text" xml:space="preserve">
+    <value>Graphical settings</value>
   </data>
   <data name="&gt;&gt;PS_RemGraphOpts.Name" xml:space="preserve">
     <value>PS_RemGraphOpts</value>
@@ -693,6 +723,21 @@
   <data name="&gt;&gt;PS_RemGraphOpts.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="PS_RemDemos.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="PS_RemDemos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 299</value>
+  </data>
+  <data name="PS_RemDemos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 23</value>
+  </data>
+  <data name="PS_RemDemos.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="PS_RemDemos.Text" xml:space="preserve">
+    <value>All recorded demos</value>
+  </data>
   <data name="&gt;&gt;PS_RemDemos.Name" xml:space="preserve">
     <value>PS_RemDemos</value>
   </data>
@@ -704,6 +749,21 @@
   </data>
   <data name="&gt;&gt;PS_RemDemos.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="PS_RemScreenShots.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="PS_RemScreenShots.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 270</value>
+  </data>
+  <data name="PS_RemScreenShots.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 23</value>
+  </data>
+  <data name="PS_RemScreenShots.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="PS_RemScreenShots.Text" xml:space="preserve">
+    <value>All screenshots</value>
   </data>
   <data name="&gt;&gt;PS_RemScreenShots.Name" xml:space="preserve">
     <value>PS_RemScreenShots</value>
@@ -717,6 +777,21 @@
   <data name="&gt;&gt;PS_RemScreenShots.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="PS_RemNavFiles.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="PS_RemNavFiles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 240</value>
+  </data>
+  <data name="PS_RemNavFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 23</value>
+  </data>
+  <data name="PS_RemNavFiles.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="PS_RemNavFiles.Text" xml:space="preserve">
+    <value>Bot navigation files</value>
+  </data>
   <data name="&gt;&gt;PS_RemNavFiles.Name" xml:space="preserve">
     <value>PS_RemNavFiles</value>
   </data>
@@ -728,6 +803,21 @@
   </data>
   <data name="&gt;&gt;PS_RemNavFiles.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="PS_RemSoundCache.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="PS_RemSoundCache.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 211</value>
+  </data>
+  <data name="PS_RemSoundCache.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 23</value>
+  </data>
+  <data name="PS_RemSoundCache.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="PS_RemSoundCache.Text" xml:space="preserve">
+    <value>Sound cache</value>
   </data>
   <data name="&gt;&gt;PS_RemSoundCache.Name" xml:space="preserve">
     <value>PS_RemSoundCache</value>
@@ -741,6 +831,21 @@
   <data name="&gt;&gt;PS_RemSoundCache.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="PS_RemGraphCache.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="PS_RemGraphCache.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 182</value>
+  </data>
+  <data name="PS_RemGraphCache.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 23</value>
+  </data>
+  <data name="PS_RemGraphCache.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="PS_RemGraphCache.Text" xml:space="preserve">
+    <value>Graphic cache</value>
+  </data>
   <data name="&gt;&gt;PS_RemGraphCache.Name" xml:space="preserve">
     <value>PS_RemGraphCache</value>
   </data>
@@ -752,6 +857,21 @@
   </data>
   <data name="&gt;&gt;PS_RemGraphCache.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="PS_RemOldCfgs.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="PS_RemOldCfgs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 153</value>
+  </data>
+  <data name="PS_RemOldCfgs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 23</value>
+  </data>
+  <data name="PS_RemOldCfgs.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="PS_RemOldCfgs.Text" xml:space="preserve">
+    <value>All configs</value>
   </data>
   <data name="&gt;&gt;PS_RemOldCfgs.Name" xml:space="preserve">
     <value>PS_RemOldCfgs</value>
@@ -765,6 +885,21 @@
   <data name="&gt;&gt;PS_RemOldCfgs.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="PS_RemOldSpray.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="PS_RemOldSpray.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 124</value>
+  </data>
+  <data name="PS_RemOldSpray.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 23</value>
+  </data>
+  <data name="PS_RemOldSpray.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="PS_RemOldSpray.Text" xml:space="preserve">
+    <value>Spray cache</value>
+  </data>
   <data name="&gt;&gt;PS_RemOldSpray.Name" xml:space="preserve">
     <value>PS_RemOldSpray</value>
   </data>
@@ -777,6 +912,21 @@
   <data name="&gt;&gt;PS_RemOldSpray.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="PS_RemDnlCache.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="PS_RemDnlCache.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 95</value>
+  </data>
+  <data name="PS_RemDnlCache.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 23</value>
+  </data>
+  <data name="PS_RemDnlCache.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="PS_RemDnlCache.Text" xml:space="preserve">
+    <value>Download cache</value>
+  </data>
   <data name="&gt;&gt;PS_RemDnlCache.Name" xml:space="preserve">
     <value>PS_RemDnlCache</value>
   </data>
@@ -788,6 +938,21 @@
   </data>
   <data name="&gt;&gt;PS_RemDnlCache.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="PS_RemCustMaps.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="PS_RemCustMaps.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 66</value>
+  </data>
+  <data name="PS_RemCustMaps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 23</value>
+  </data>
+  <data name="PS_RemCustMaps.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="PS_RemCustMaps.Text" xml:space="preserve">
+    <value>Custom maps</value>
   </data>
   <data name="&gt;&gt;PS_RemCustMaps.Name" xml:space="preserve">
     <value>PS_RemCustMaps</value>
@@ -969,21 +1134,6 @@
   <data name="&gt;&gt;PS_GB_SInfo.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="PS_ExecuteNow.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="PS_ExecuteNow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 96</value>
-  </data>
-  <data name="PS_ExecuteNow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 23</value>
-  </data>
-  <data name="PS_ExecuteNow.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="PS_ExecuteNow.Text" xml:space="preserve">
-    <value>Cleanup Now!</value>
-  </data>
   <data name="&gt;&gt;PS_ExecuteNow.Name" xml:space="preserve">
     <value>PS_ExecuteNow</value>
   </data>
@@ -995,24 +1145,6 @@
   </data>
   <data name="&gt;&gt;PS_ExecuteNow.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="PS_SteamLang.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="PS_SteamLang.Items" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="PS_SteamLang.Items1" xml:space="preserve">
-    <value>Russian</value>
-  </data>
-  <data name="PS_SteamLang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 69</value>
-  </data>
-  <data name="PS_SteamLang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 21</value>
-  </data>
-  <data name="PS_SteamLang.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
   </data>
   <data name="&gt;&gt;PS_SteamLang.Name" xml:space="preserve">
     <value>PS_SteamLang</value>
@@ -1026,21 +1158,6 @@
   <data name="&gt;&gt;PS_SteamLang.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="L_PS_SteamLang.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_PS_SteamLang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 72</value>
-  </data>
-  <data name="L_PS_SteamLang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 13</value>
-  </data>
-  <data name="L_PS_SteamLang.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="L_PS_SteamLang.Text" xml:space="preserve">
-    <value>Select Steam language:</value>
-  </data>
   <data name="&gt;&gt;L_PS_SteamLang.Name" xml:space="preserve">
     <value>L_PS_SteamLang</value>
   </data>
@@ -1053,21 +1170,6 @@
   <data name="&gt;&gt;L_PS_SteamLang.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="PS_CleanRegistry.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="PS_CleanRegistry.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 42</value>
-  </data>
-  <data name="PS_CleanRegistry.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 17</value>
-  </data>
-  <data name="PS_CleanRegistry.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="PS_CleanRegistry.Text" xml:space="preserve">
-    <value>Clean all Steam registry entries</value>
-  </data>
   <data name="&gt;&gt;PS_CleanRegistry.Name" xml:space="preserve">
     <value>PS_CleanRegistry</value>
   </data>
@@ -1079,21 +1181,6 @@
   </data>
   <data name="&gt;&gt;PS_CleanRegistry.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="PS_CleanBlobs.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="PS_CleanBlobs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 19</value>
-  </data>
-  <data name="PS_CleanBlobs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 17</value>
-  </data>
-  <data name="PS_CleanBlobs.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="PS_CleanBlobs.Text" xml:space="preserve">
-    <value>Clean .blob files from Steam directory</value>
   </data>
   <data name="&gt;&gt;PS_CleanBlobs.Name" xml:space="preserve">
     <value>PS_CleanBlobs</value>
@@ -2709,303 +2796,6 @@
   <data name="CE_CVal.Width" type="System.Int32, mscorlib">
     <value>255</value>
   </data>
-  <data name="PS_AllowRemCtrls.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="PS_AllowRemCtrls.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 28</value>
-  </data>
-  <data name="PS_AllowRemCtrls.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 17</value>
-  </data>
-  <data name="PS_AllowRemCtrls.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="PS_AllowRemCtrls.Text" xml:space="preserve">
-    <value>Enable buttons</value>
-  </data>
-  <data name="&gt;&gt;PS_AllowRemCtrls.Name" xml:space="preserve">
-    <value>PS_AllowRemCtrls</value>
-  </data>
-  <data name="&gt;&gt;PS_AllowRemCtrls.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_AllowRemCtrls.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_AllowRemCtrls.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PS_RemGraphOpts.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="PS_RemGraphOpts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 328</value>
-  </data>
-  <data name="PS_RemGraphOpts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 23</value>
-  </data>
-  <data name="PS_RemGraphOpts.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="PS_RemGraphOpts.Text" xml:space="preserve">
-    <value>Graphical settings</value>
-  </data>
-  <data name="&gt;&gt;PS_RemGraphOpts.Name" xml:space="preserve">
-    <value>PS_RemGraphOpts</value>
-  </data>
-  <data name="&gt;&gt;PS_RemGraphOpts.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemGraphOpts.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemGraphOpts.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="PS_RemDemos.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="PS_RemDemos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 299</value>
-  </data>
-  <data name="PS_RemDemos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 23</value>
-  </data>
-  <data name="PS_RemDemos.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="PS_RemDemos.Text" xml:space="preserve">
-    <value>All recorded demos</value>
-  </data>
-  <data name="&gt;&gt;PS_RemDemos.Name" xml:space="preserve">
-    <value>PS_RemDemos</value>
-  </data>
-  <data name="&gt;&gt;PS_RemDemos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemDemos.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemDemos.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="PS_RemScreenShots.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="PS_RemScreenShots.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 270</value>
-  </data>
-  <data name="PS_RemScreenShots.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 23</value>
-  </data>
-  <data name="PS_RemScreenShots.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="PS_RemScreenShots.Text" xml:space="preserve">
-    <value>All screenshots</value>
-  </data>
-  <data name="&gt;&gt;PS_RemScreenShots.Name" xml:space="preserve">
-    <value>PS_RemScreenShots</value>
-  </data>
-  <data name="&gt;&gt;PS_RemScreenShots.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemScreenShots.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemScreenShots.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="PS_RemNavFiles.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="PS_RemNavFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 240</value>
-  </data>
-  <data name="PS_RemNavFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 23</value>
-  </data>
-  <data name="PS_RemNavFiles.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="PS_RemNavFiles.Text" xml:space="preserve">
-    <value>Bot navigation files</value>
-  </data>
-  <data name="&gt;&gt;PS_RemNavFiles.Name" xml:space="preserve">
-    <value>PS_RemNavFiles</value>
-  </data>
-  <data name="&gt;&gt;PS_RemNavFiles.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemNavFiles.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemNavFiles.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="PS_RemSoundCache.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="PS_RemSoundCache.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 211</value>
-  </data>
-  <data name="PS_RemSoundCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 23</value>
-  </data>
-  <data name="PS_RemSoundCache.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="PS_RemSoundCache.Text" xml:space="preserve">
-    <value>Sound cache</value>
-  </data>
-  <data name="&gt;&gt;PS_RemSoundCache.Name" xml:space="preserve">
-    <value>PS_RemSoundCache</value>
-  </data>
-  <data name="&gt;&gt;PS_RemSoundCache.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemSoundCache.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemSoundCache.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="PS_RemGraphCache.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="PS_RemGraphCache.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 182</value>
-  </data>
-  <data name="PS_RemGraphCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 23</value>
-  </data>
-  <data name="PS_RemGraphCache.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="PS_RemGraphCache.Text" xml:space="preserve">
-    <value>Graphic cache</value>
-  </data>
-  <data name="&gt;&gt;PS_RemGraphCache.Name" xml:space="preserve">
-    <value>PS_RemGraphCache</value>
-  </data>
-  <data name="&gt;&gt;PS_RemGraphCache.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemGraphCache.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemGraphCache.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="PS_RemOldCfgs.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="PS_RemOldCfgs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 153</value>
-  </data>
-  <data name="PS_RemOldCfgs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 23</value>
-  </data>
-  <data name="PS_RemOldCfgs.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="PS_RemOldCfgs.Text" xml:space="preserve">
-    <value>All configs</value>
-  </data>
-  <data name="&gt;&gt;PS_RemOldCfgs.Name" xml:space="preserve">
-    <value>PS_RemOldCfgs</value>
-  </data>
-  <data name="&gt;&gt;PS_RemOldCfgs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemOldCfgs.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemOldCfgs.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="PS_RemOldSpray.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="PS_RemOldSpray.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 124</value>
-  </data>
-  <data name="PS_RemOldSpray.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 23</value>
-  </data>
-  <data name="PS_RemOldSpray.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="PS_RemOldSpray.Text" xml:space="preserve">
-    <value>Spray cache</value>
-  </data>
-  <data name="&gt;&gt;PS_RemOldSpray.Name" xml:space="preserve">
-    <value>PS_RemOldSpray</value>
-  </data>
-  <data name="&gt;&gt;PS_RemOldSpray.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemOldSpray.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemOldSpray.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="PS_RemDnlCache.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="PS_RemDnlCache.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 95</value>
-  </data>
-  <data name="PS_RemDnlCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 23</value>
-  </data>
-  <data name="PS_RemDnlCache.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="PS_RemDnlCache.Text" xml:space="preserve">
-    <value>Download cache</value>
-  </data>
-  <data name="&gt;&gt;PS_RemDnlCache.Name" xml:space="preserve">
-    <value>PS_RemDnlCache</value>
-  </data>
-  <data name="&gt;&gt;PS_RemDnlCache.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemDnlCache.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemDnlCache.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="PS_RemCustMaps.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="PS_RemCustMaps.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 66</value>
-  </data>
-  <data name="PS_RemCustMaps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 23</value>
-  </data>
-  <data name="PS_RemCustMaps.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="PS_RemCustMaps.Text" xml:space="preserve">
-    <value>Custom maps</value>
-  </data>
-  <data name="&gt;&gt;PS_RemCustMaps.Name" xml:space="preserve">
-    <value>PS_RemCustMaps</value>
-  </data>
-  <data name="&gt;&gt;PS_RemCustMaps.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemCustMaps.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemCustMaps.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
   <data name="PS_ResetSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 19</value>
   </data>
@@ -3200,6 +2990,144 @@
   </data>
   <data name="&gt;&gt;L_PS_RSteamPath.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="PS_ExecuteNow.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="PS_ExecuteNow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 96</value>
+  </data>
+  <data name="PS_ExecuteNow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 23</value>
+  </data>
+  <data name="PS_ExecuteNow.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="PS_ExecuteNow.Text" xml:space="preserve">
+    <value>Cleanup Now!</value>
+  </data>
+  <data name="&gt;&gt;PS_ExecuteNow.Name" xml:space="preserve">
+    <value>PS_ExecuteNow</value>
+  </data>
+  <data name="&gt;&gt;PS_ExecuteNow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_ExecuteNow.Parent" xml:space="preserve">
+    <value>PS_GB_Solver</value>
+  </data>
+  <data name="&gt;&gt;PS_ExecuteNow.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PS_SteamLang.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="PS_SteamLang.Items" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="PS_SteamLang.Items1" xml:space="preserve">
+    <value>Russian</value>
+  </data>
+  <data name="PS_SteamLang.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 69</value>
+  </data>
+  <data name="PS_SteamLang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 21</value>
+  </data>
+  <data name="PS_SteamLang.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;PS_SteamLang.Name" xml:space="preserve">
+    <value>PS_SteamLang</value>
+  </data>
+  <data name="&gt;&gt;PS_SteamLang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_SteamLang.Parent" xml:space="preserve">
+    <value>PS_GB_Solver</value>
+  </data>
+  <data name="&gt;&gt;PS_SteamLang.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="L_PS_SteamLang.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_PS_SteamLang.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 72</value>
+  </data>
+  <data name="L_PS_SteamLang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 13</value>
+  </data>
+  <data name="L_PS_SteamLang.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="L_PS_SteamLang.Text" xml:space="preserve">
+    <value>Select Steam language:</value>
+  </data>
+  <data name="&gt;&gt;L_PS_SteamLang.Name" xml:space="preserve">
+    <value>L_PS_SteamLang</value>
+  </data>
+  <data name="&gt;&gt;L_PS_SteamLang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_PS_SteamLang.Parent" xml:space="preserve">
+    <value>PS_GB_Solver</value>
+  </data>
+  <data name="&gt;&gt;L_PS_SteamLang.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="PS_CleanRegistry.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="PS_CleanRegistry.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 42</value>
+  </data>
+  <data name="PS_CleanRegistry.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 17</value>
+  </data>
+  <data name="PS_CleanRegistry.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="PS_CleanRegistry.Text" xml:space="preserve">
+    <value>Clean all Steam registry entries</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanRegistry.Name" xml:space="preserve">
+    <value>PS_CleanRegistry</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanRegistry.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanRegistry.Parent" xml:space="preserve">
+    <value>PS_GB_Solver</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanRegistry.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="PS_CleanBlobs.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="PS_CleanBlobs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 19</value>
+  </data>
+  <data name="PS_CleanBlobs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 17</value>
+  </data>
+  <data name="PS_CleanBlobs.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="PS_CleanBlobs.Text" xml:space="preserve">
+    <value>Clean .blob files from Steam directory</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanBlobs.Name" xml:space="preserve">
+    <value>PS_CleanBlobs</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanBlobs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanBlobs.Parent" xml:space="preserve">
+    <value>PS_GB_Solver</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanBlobs.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="FP_CreateBackUp.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>

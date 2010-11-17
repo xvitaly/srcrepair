@@ -705,60 +705,70 @@
             resources.ApplyResources(this.PS_RemGraphOpts, "PS_RemGraphOpts");
             this.PS_RemGraphOpts.Name = "PS_RemGraphOpts";
             this.PS_RemGraphOpts.UseVisualStyleBackColor = true;
+            this.PS_RemGraphOpts.Click += new System.EventHandler(this.PS_RemGraphOpts_Click);
             // 
             // PS_RemDemos
             // 
             resources.ApplyResources(this.PS_RemDemos, "PS_RemDemos");
             this.PS_RemDemos.Name = "PS_RemDemos";
             this.PS_RemDemos.UseVisualStyleBackColor = true;
+            this.PS_RemDemos.Click += new System.EventHandler(this.PS_RemDemos_Click);
             // 
             // PS_RemScreenShots
             // 
             resources.ApplyResources(this.PS_RemScreenShots, "PS_RemScreenShots");
             this.PS_RemScreenShots.Name = "PS_RemScreenShots";
             this.PS_RemScreenShots.UseVisualStyleBackColor = true;
+            this.PS_RemScreenShots.Click += new System.EventHandler(this.PS_RemScreenShots_Click);
             // 
             // PS_RemNavFiles
             // 
             resources.ApplyResources(this.PS_RemNavFiles, "PS_RemNavFiles");
             this.PS_RemNavFiles.Name = "PS_RemNavFiles";
             this.PS_RemNavFiles.UseVisualStyleBackColor = true;
+            this.PS_RemNavFiles.Click += new System.EventHandler(this.PS_RemNavFiles_Click);
             // 
             // PS_RemSoundCache
             // 
             resources.ApplyResources(this.PS_RemSoundCache, "PS_RemSoundCache");
             this.PS_RemSoundCache.Name = "PS_RemSoundCache";
             this.PS_RemSoundCache.UseVisualStyleBackColor = true;
+            this.PS_RemSoundCache.Click += new System.EventHandler(this.PS_RemSoundCache_Click);
             // 
             // PS_RemGraphCache
             // 
             resources.ApplyResources(this.PS_RemGraphCache, "PS_RemGraphCache");
             this.PS_RemGraphCache.Name = "PS_RemGraphCache";
             this.PS_RemGraphCache.UseVisualStyleBackColor = true;
+            this.PS_RemGraphCache.Click += new System.EventHandler(this.PS_RemGraphCache_Click);
             // 
             // PS_RemOldCfgs
             // 
             resources.ApplyResources(this.PS_RemOldCfgs, "PS_RemOldCfgs");
             this.PS_RemOldCfgs.Name = "PS_RemOldCfgs";
             this.PS_RemOldCfgs.UseVisualStyleBackColor = true;
+            this.PS_RemOldCfgs.Click += new System.EventHandler(this.PS_RemOldCfgs_Click);
             // 
             // PS_RemOldSpray
             // 
             resources.ApplyResources(this.PS_RemOldSpray, "PS_RemOldSpray");
             this.PS_RemOldSpray.Name = "PS_RemOldSpray";
             this.PS_RemOldSpray.UseVisualStyleBackColor = true;
+            this.PS_RemOldSpray.Click += new System.EventHandler(this.PS_RemOldSpray_Click);
             // 
             // PS_RemDnlCache
             // 
             resources.ApplyResources(this.PS_RemDnlCache, "PS_RemDnlCache");
             this.PS_RemDnlCache.Name = "PS_RemDnlCache";
             this.PS_RemDnlCache.UseVisualStyleBackColor = true;
+            this.PS_RemDnlCache.Click += new System.EventHandler(this.PS_RemDnlCache_Click);
             // 
             // PS_RemCustMaps
             // 
             resources.ApplyResources(this.PS_RemCustMaps, "PS_RemCustMaps");
             this.PS_RemCustMaps.Name = "PS_RemCustMaps";
             this.PS_RemCustMaps.UseVisualStyleBackColor = true;
+            this.PS_RemCustMaps.Click += new System.EventHandler(this.PS_RemCustMaps_Click);
             // 
             // PS_GB_AdvFeat
             // 

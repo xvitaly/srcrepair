@@ -340,6 +340,33 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error occured while deleting files. Some files were not deleted!.
+        /// </summary>
+        internal static string PS_CleanupErr {
+            get {
+                return ResourceManager.GetString("PS_CleanupErr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clean {0}?.
+        /// </summary>
+        internal static string PS_CleanupExecuteQ {
+            get {
+                return ResourceManager.GetString("PS_CleanupExecuteQ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cleanup was successfully completed!.
+        /// </summary>
+        internal static string PS_CleanupSuccess {
+            get {
+                return ResourceManager.GetString("PS_CleanupSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Perform the cleanup?.
         /// </summary>
         internal static string PS_ExecuteMSG {

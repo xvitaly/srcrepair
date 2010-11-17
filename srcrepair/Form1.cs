@@ -433,6 +433,24 @@ namespace srcrepair
             }
         }
 
+        /*
+         * Эта функция удаляет файлы в заданной папке по указанной в параметре
+         * CleanupMask маске.
+         */
+        private static void CleanDirectoryNow(string DirPath, string CleanupMask)
+        {
+            // Открываем каталог...
+            System.IO.DirectoryInfo DInfo = new System.IO.DirectoryInfo(DirPath);
+            // Считываем список файлов по заданной маске...
+            System.IO.FileInfo[] DirList = DInfo.GetFiles(CleanupMask);
+            // Начинаем обход массива...
+            foreach (System.IO.FileInfo DItem in DirList)
+            {
+                // Обрабатываем найденное...
+                DItem.Delete(); // Удаляем файл...
+            }
+        }
+
         // Источник данной функции: http://www.csharp-examples.net/inputbox/ //
         private static DialogResult InputBox(string title, string promptText, ref string value)
         {
@@ -1732,6 +1750,187 @@ namespace srcrepair
             if (SaveResult == DialogResult.OK)
             {
                 WriteTableToFileNow(CE_SaveCfgDialog.FileName);
+            }
+        }
+
+        private void PS_RemCustMaps_Click(object sender, EventArgs e)
+        {
+            // Удаляем кастомные (нестандартные) карты...
+            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (UserConfirmation == DialogResult.Yes)
+            {
+                try
+                {
+                    CleanDirectoryNow(GV.FullGamePath + "maps\\", "*.bsp");
+                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void PS_RemDnlCache_Click(object sender, EventArgs e)
+        {
+            // Удаляем кэш загрузок...
+            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (UserConfirmation == DialogResult.Yes)
+            {
+                try
+                {
+                    CleanDirectoryNow(GV.FullGamePath + "downloads\\", "*.dat");
+                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void PS_RemOldSpray_Click(object sender, EventArgs e)
+        {
+            // Удаляем кэш спреев...
+            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (UserConfirmation == DialogResult.Yes)
+            {
+                try
+                {
+                    CleanDirectoryNow(GV.FullGamePath + "materials\\temp\\", "*.vtf");
+                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void PS_RemOldCfgs_Click(object sender, EventArgs e)
+        {
+            // Удаляем все конфиги...
+            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (UserConfirmation == DialogResult.Yes)
+            {
+                try
+                {
+                    CleanDirectoryNow(GV.FullGamePath + "cfg\\", "*.*");
+                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void PS_RemGraphCache_Click(object sender, EventArgs e)
+        {
+            // Удаляем графический кэш...
+            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (UserConfirmation == DialogResult.Yes)
+            {
+                try
+                {
+                    CleanDirectoryNow(GV.FullGamePath + "maps\\graphs\\", "*.*");
+                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void PS_RemSoundCache_Click(object sender, EventArgs e)
+        {
+            // Удаляем звуковой кэш...
+            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (UserConfirmation == DialogResult.Yes)
+            {
+                try
+                {
+                    CleanDirectoryNow(GV.FullGamePath + "maps\\soundcache\\", "*.*");
+                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void PS_RemNavFiles_Click(object sender, EventArgs e)
+        {
+            // Удаляем файлы навигации ботов...
+            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (UserConfirmation == DialogResult.Yes)
+            {
+                try
+                {
+                    CleanDirectoryNow(GV.FullGamePath + "maps\\", "*.nav");
+                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void PS_RemScreenShots_Click(object sender, EventArgs e)
+        {
+            // Удаляем все скриншоты...
+            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (UserConfirmation == DialogResult.Yes)
+            {
+                try
+                {
+                    CleanDirectoryNow(GV.FullGamePath + "screenshots\\", "*.*");
+                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void PS_RemDemos_Click(object sender, EventArgs e)
+        {
+            // Удаляем все записанные демки...
+            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (UserConfirmation == DialogResult.Yes)
+            {
+                try
+                {
+                    CleanDirectoryNow(GV.FullGamePath, "*.dem");
+                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void PS_RemGraphOpts_Click(object sender, EventArgs e)
+        {
+            // Удаляем графические настройки...
+            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (UserConfirmation == DialogResult.Yes)
+            {
+                try
+                {
+                    // Удаляем ключ HKEY_CURRENT_USER\Software\Valve\Source\tf\Settings из реестра...
+                    Registry.CurrentUser.DeleteSubKeyTree("Software\\Valve\\Source\\tf\\Settings", false);
+                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
     }
