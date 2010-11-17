@@ -1924,7 +1924,7 @@ namespace srcrepair
                 try
                 {
                     // Удаляем ключ HKEY_CURRENT_USER\Software\Valve\Source\tf\Settings из реестра...
-                    Registry.CurrentUser.DeleteSubKeyTree("Software\\Valve\\Source\\tf\\Settings", false);
+                    Registry.CurrentUser.DeleteSubKeyTree("Software\\Valve\\Source\\" + GV.SmallAppName + "\\Settings", false);
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
