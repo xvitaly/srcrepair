@@ -294,4 +294,7 @@
   <data name="PS_CleanupSuccess" xml:space="preserve">
     <value>Cleanup was successfully completed!</value>
   </data>
+  <data name="AppLangPrefix" xml:space="preserve">
+    <value>en</value>
+  </data>
 </root>

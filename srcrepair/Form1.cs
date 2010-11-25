@@ -1500,7 +1500,7 @@ namespace srcrepair
             // Получаем описание выбранного пользователем конфига...
             try
             {
-                FP_Description.Text = ReadTextFileNow(GV.FullAppPath + "cfgs\\" + GV.SmallAppName + "\\" + System.IO.Path.GetFileNameWithoutExtension(FP_ConfigSel.Text) + ".txt");
+                FP_Description.Text = ReadTextFileNow(GV.FullAppPath + "cfgs\\" + GV.SmallAppName + "\\" + System.IO.Path.GetFileNameWithoutExtension(FP_ConfigSel.Text) + "_" + RM.GetString("AppLangPrefix") + ".txt");
             }
             catch
             {

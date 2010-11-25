@@ -351,4 +351,8 @@
   <data name="PS_CleanupSuccess" xml:space="preserve">
     <value>Процесс очистки успешно завершён!</value>
   </data>
+  <data name="AppLangPrefix" xml:space="preserve">
+    <value>ru</value>
+    <comment>Префикс/постфикс файлов текущего языка</comment>
+  </data>
 </root>

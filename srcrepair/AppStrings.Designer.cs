@@ -61,6 +61,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to en.
+        /// </summary>
+        internal static string AppLangPrefix {
+            get {
+                return ResourceManager.GetString("AppLangPrefix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Attention! The program is not started from an account with administrator privileges, so some features are disabled. To access them, then restart it as root!.
         /// </summary>
         internal static string AppLaunchedNotAdmin {
