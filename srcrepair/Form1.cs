@@ -1955,5 +1955,25 @@ namespace srcrepair
                 }
             }
         }
+
+        private void GT_ResHor_Btn_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void GT_ResVert_Btn_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void GT_LaunchOptions_Btn_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void PS_ResetSettings_Click(object sender, EventArgs e)
+        {
+            //
+        }
     }
 }
