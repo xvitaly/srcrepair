@@ -297,4 +297,16 @@
   <data name="AppLangPrefix" xml:space="preserve">
     <value>en</value>
   </data>
+  <data name="GT_ResMsg" xml:space="preserve">
+    <value>Specify the {0} resolution of the monitor or window. You must specify an integer.</value>
+  </data>
+  <data name="GT_ResMsgHor" xml:space="preserve">
+    <value>horisontal</value>
+  </data>
+  <data name="GT_ResMsgVert" xml:space="preserve">
+    <value>vertical</value>
+  </data>
+  <data name="PS_ResetSettingsMsg" xml:space="preserve">
+    <value>Are you sure you want to restore factory game settings? This will remove all non-standard and old files and settings stored in Windows registry.</value>
+  </data>
 </root>

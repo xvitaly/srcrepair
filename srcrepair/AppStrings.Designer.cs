@@ -304,6 +304,33 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Specify the {0} resolution of the monitor or window. You must specify an integer..
+        /// </summary>
+        internal static string GT_ResMsg {
+            get {
+                return ResourceManager.GetString("GT_ResMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to horisontal.
+        /// </summary>
+        internal static string GT_ResMsgHor {
+            get {
+                return ResourceManager.GetString("GT_ResMsgHor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to vertical.
+        /// </summary>
+        internal static string GT_ResMsgVert {
+            get {
+                return ResourceManager.GetString("GT_ResMsgVert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save your changes?.
         /// </summary>
         internal static string GT_SaveMsg {
@@ -408,6 +435,15 @@ namespace srcrepair {
         internal static string PS_ProcessTerminated {
             get {
                 return ResourceManager.GetString("PS_ProcessTerminated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to restore factory game settings? This will remove all non-standard and old files and settings stored in Windows registry..
+        /// </summary>
+        internal static string PS_ResetSettingsMsg {
+            get {
+                return ResourceManager.GetString("PS_ResetSettingsMsg", resourceCulture);
             }
         }
         

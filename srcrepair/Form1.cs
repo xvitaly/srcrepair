@@ -216,13 +216,6 @@ namespace srcrepair
             {
                 // Получаем значение открытого ключа...
                 ResInt = (int)ResKey.GetValue(CVar);
-
-                // Проверяем чтобы значение существовало...
-                if (ResInt == null)
-                {
-                    // Значение не существует, поэтому сгенерируем исключение для обработки в основном коде...
-                    throw new System.NullReferenceException("Exception: requested value does not exists!");
-                }
             }
 
             // Закрываем открытый ранее ключ реестра...
@@ -1958,22 +1951,39 @@ namespace srcrepair
 
         private void GT_ResHor_Btn_Click(object sender, EventArgs e)
         {
-            //
+            // Выводим краткую справку о вводе разрешения по горизонтали...
+            MessageBox.Show(String.Format(RM.GetString("GT_ResMsg"), RM.GetString("GT_ResMsgHor")), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void GT_ResVert_Btn_Click(object sender, EventArgs e)
         {
-            //
+            // Выводим краткую справку о вводе разрешения по вертикали...
+            MessageBox.Show(String.Format(RM.GetString("GT_ResMsg"), RM.GetString("GT_ResMsgVert")), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void GT_LaunchOptions_Btn_Click(object sender, EventArgs e)
         {
-            //
+            // Выводим краткую справку о строке параметров запуска...
+            MessageBox.Show(RM.GetString("NotImplementedYet"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void PS_ResetSettings_Click(object sender, EventArgs e)
         {
-            //
+            // Удаляем все настройки...
+            DialogResult UserConfirmation = MessageBox.Show(RM.GetString("PS_ResetSettingsMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (UserConfirmation == DialogResult.Yes)
+            {
+                try
+                {
+                    System.IO.Directory.Delete(GV.GamePath, true); // Удаляем всю папку с файлами игры...
+                    Registry.CurrentUser.DeleteSubKeyTree("Software\\Valve\\Source\\" + GV.SmallAppName + "\\Settings", false); // Удаляем настройки видео...
+                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
     }
 }

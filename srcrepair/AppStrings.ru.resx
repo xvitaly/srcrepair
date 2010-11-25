@@ -355,4 +355,20 @@
     <value>ru</value>
     <comment>Префикс/постфикс файлов текущего языка</comment>
   </data>
+  <data name="GT_ResMsg" xml:space="preserve">
+    <value>Укажите разрешение монитора или окна по {0}. Необходимо указать целое число.</value>
+    <comment>Сообщение с подсказкой при вводе разрешения</comment>
+  </data>
+  <data name="GT_ResMsgHor" xml:space="preserve">
+    <value>горизонтали</value>
+    <comment>Подстановка для сообщения</comment>
+  </data>
+  <data name="GT_ResMsgVert" xml:space="preserve">
+    <value>вертикали</value>
+    <comment>Подстановка для сообщения</comment>
+  </data>
+  <data name="PS_ResetSettingsMsg" xml:space="preserve">
+    <value>Вы уверены, что хотите сбросить все настройки игры? Будут удалены все нестандартные и старые файлы, а также настройки, хранящиеся в реестре.</value>
+    <comment>Сообщение, выдаваемое при попытке сбросить все настройки</comment>
+  </data>
 </root>
