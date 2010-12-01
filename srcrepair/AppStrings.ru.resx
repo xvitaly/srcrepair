@@ -190,7 +190,7 @@
     <comment>Сообщение, выдаваемое при успешном удалении FPS-конфига</comment>
   </data>
   <data name="FrmCloseQuery" xml:space="preserve">
-    <value>Закрыть приложение? Все несохранённые изменения будут потеряны!</value>
+    <value>Закрыть приложение {0}? Все несохранённые изменения будут потеряны!</value>
     <comment>Сообщение, выдаваемое при закрытии основной формы.</comment>
   </data>
   <data name="GeneralErrorDetected" xml:space="preserve">

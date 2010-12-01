@@ -757,7 +757,7 @@ namespace srcrepair
             if (AppSelector.Enabled)
             {
                 // Создаём MessageBox...
-                DialogResult UserConfirmation = MessageBox.Show(RM.GetString("FrmCloseQuery"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("FrmCloseQuery"), GV.AppName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 // Запрашиваем подтверждение у пользователя на закрытие формы...
                 if (UserConfirmation == DialogResult.Yes)
                 {
