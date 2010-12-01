@@ -457,6 +457,60 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Close.
+        /// </summary>
+        internal static string RPB_CloseCpt {
+            get {
+                return ResourceManager.GetString("RPB_CloseCpt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Report with the name {0} has been successfully created! Now we will open the directory with generated report file in order that you can upload it to technical support service..
+        /// </summary>
+        internal static string RPB_ComprGen {
+            get {
+                return ResourceManager.GetString("RPB_ComprGen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Working... Please wait..
+        /// </summary>
+        internal static string RPB_CptWrk {
+            get {
+                return ResourceManager.GetString("RPB_CptWrk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error has occurred. Unable to execute tool Microsoft System Information. Perhaps it is not installed on this operating system. Creating a report is impossible..
+        /// </summary>
+        internal static string RPB_GenException {
+            get {
+                return ResourceManager.GetString("RPB_GenException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generate report now?.
+        /// </summary>
+        internal static string RPB_GenQst {
+            get {
+                return ResourceManager.GetString("RPB_GenQst", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The process will take a lot of time. Please be patient!.
+        /// </summary>
+        internal static string RPB_GenWarn {
+            get {
+                return ResourceManager.GetString("RPB_GenWarn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to To work correctly, this programm needs {0} to be shut down. Proceed?.
         /// </summary>
         internal static string ST_KillMessage {

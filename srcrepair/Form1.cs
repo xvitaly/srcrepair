@@ -19,7 +19,7 @@ namespace srcrepair
 {
     public partial class frmMainW : Form
     {
-        private static ResourceManager RM; // Описываем менеджер ресурсов...
+        public static ResourceManager RM; // Описываем менеджер ресурсов...
         public frmMainW()
         {
             // Инициализация...
@@ -341,7 +341,7 @@ namespace srcrepair
          * Эта функция генерирует ДДММГГЧЧММСС из указанного времени в строку.
          * Применяется для служебных целей.
          */
-        private static string WriteDateToString(DateTime XDate, bool MicroDate)
+        public static string WriteDateToString(DateTime XDate, bool MicroDate)
         {
             if (MicroDate)
             {
@@ -414,7 +414,7 @@ namespace srcrepair
          * Эта функция запускает указанное в параметре SAppName приложение на
          * выполнение с параметрами, указанными в SParameters и ждёт его завершения...
          */
-        private static void StartProcessAndWait(string SAppName, string SParameters)
+        public static void StartProcessAndWait(string SAppName, string SParameters)
         {
             // Запускаем процесс...
             Process NewProcess = Process.Start(SAppName, SParameters);

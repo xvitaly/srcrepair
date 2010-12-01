@@ -309,4 +309,22 @@
   <data name="PS_ResetSettingsMsg" xml:space="preserve">
     <value>Are you sure you want to restore factory game settings? This will remove all non-standard and old files and settings stored in Windows registry.</value>
   </data>
+  <data name="RPB_CloseCpt" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="RPB_ComprGen" xml:space="preserve">
+    <value>Report with the name {0} has been successfully created! Now we will open the directory with generated report file in order that you can upload it to technical support service.</value>
+  </data>
+  <data name="RPB_CptWrk" xml:space="preserve">
+    <value>Working... Please wait.</value>
+  </data>
+  <data name="RPB_GenException" xml:space="preserve">
+    <value>An error has occurred. Unable to execute tool Microsoft System Information. Perhaps it is not installed on this operating system. Creating a report is impossible.</value>
+  </data>
+  <data name="RPB_GenQst" xml:space="preserve">
+    <value>Generate report now?</value>
+  </data>
+  <data name="RPB_GenWarn" xml:space="preserve">
+    <value>The process will take a lot of time. Please be patient!</value>
+  </data>
 </root>
