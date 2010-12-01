@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCompany("EasyCoding Team")]
 [assembly: AssemblyProduct("Source Repair")]
 [assembly: AssemblyCopyright("(c) 2005-2011 EasyCoding Team. All rights reserved.")]
-[assembly: AssemblyTrademark("TF2 Repair, EasyCoding, EasyCoding Software Group and EasyCoding Team are trademarks of EasyCoding Team.")]
+[assembly: AssemblyTrademark("EasyCoding, EasyCoding Software Group and EasyCoding Team are trademarks of EasyCoding Team.")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.1.0.11")]
-[assembly: AssemblyFileVersion("0.1.0.11")]
+[assembly: AssemblyVersion("0.1.0.64")]
+[assembly: AssemblyFileVersion("0.1.0.64")]

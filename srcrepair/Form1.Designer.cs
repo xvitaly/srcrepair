@@ -992,9 +992,10 @@
             // 
             // MNUShowEdHint
             // 
+            resources.ApplyResources(this.MNUShowEdHint, "MNUShowEdHint");
             this.MNUShowEdHint.Image = global::srcrepair.Properties.Resources.hint;
             this.MNUShowEdHint.Name = "MNUShowEdHint";
-            resources.ApplyResources(this.MNUShowEdHint, "MNUShowEdHint");
+            this.MNUShowEdHint.Click += new System.EventHandler(this.MNUShowEdHint_Click);
             // 
             // MNUSep1
             // 
@@ -1003,21 +1004,24 @@
             // 
             // MNUFPSWizard
             // 
+            resources.ApplyResources(this.MNUFPSWizard, "MNUFPSWizard");
             this.MNUFPSWizard.Image = global::srcrepair.Properties.Resources.Wizard;
             this.MNUFPSWizard.Name = "MNUFPSWizard";
-            resources.ApplyResources(this.MNUFPSWizard, "MNUFPSWizard");
+            this.MNUFPSWizard.Click += new System.EventHandler(this.MNUFPSWizard_Click);
             // 
             // MNUReportBuilder
             // 
             this.MNUReportBuilder.Image = global::srcrepair.Properties.Resources.report;
             this.MNUReportBuilder.Name = "MNUReportBuilder";
             resources.ApplyResources(this.MNUReportBuilder, "MNUReportBuilder");
+            this.MNUReportBuilder.Click += new System.EventHandler(this.MNUReportBuilder_Click);
             // 
             // MNUInstaller
             // 
+            resources.ApplyResources(this.MNUInstaller, "MNUInstaller");
             this.MNUInstaller.Image = global::srcrepair.Properties.Resources.installer;
             this.MNUInstaller.Name = "MNUInstaller";
-            resources.ApplyResources(this.MNUInstaller, "MNUInstaller");
+            this.MNUInstaller.Click += new System.EventHandler(this.MNUInstaller_Click);
             // 
             // MNUSep2
             // 
@@ -1029,6 +1033,7 @@
             this.MNUExit.Image = global::srcrepair.Properties.Resources.Exit;
             this.MNUExit.Name = "MNUExit";
             resources.ApplyResources(this.MNUExit, "MNUExit");
+            this.MNUExit.Click += new System.EventHandler(this.MNUExit_Click);
             // 
             // HelpMNU
             // 
@@ -1063,6 +1068,7 @@
             this.MNUReportBug.Image = global::srcrepair.Properties.Resources.bug;
             this.MNUReportBug.Name = "MNUReportBug";
             resources.ApplyResources(this.MNUReportBug, "MNUReportBug");
+            this.MNUReportBug.Click += new System.EventHandler(this.MNUReportBug_Click);
             // 
             // MNUSteamGroup
             // 
@@ -1103,6 +1109,7 @@
             this.MNUAbout.Image = global::srcrepair.Properties.Resources.Info;
             this.MNUAbout.Name = "MNUAbout";
             resources.ApplyResources(this.MNUAbout, "MNUAbout");
+            this.MNUAbout.Click += new System.EventHandler(this.MNUAbout_Click);
             // 
             // L_LoginSel
             // 

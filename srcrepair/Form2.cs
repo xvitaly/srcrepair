@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace srcrepair
 {
-    partial class Form2 : Form
+    partial class frmAbout : Form
     {
-        public Form2()
+        public frmAbout()
         {
             InitializeComponent();
             this.Text = String.Format("About {0}", AssemblyTitle);

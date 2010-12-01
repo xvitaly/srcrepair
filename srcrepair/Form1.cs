@@ -534,7 +534,8 @@ namespace srcrepair
             GV.AppVersionInfo = Assmbl.GetName().Version.ToString();
 
             // Вставляем информацию о версии в заголовок формы...
-            this.Text += " (version " + GV.AppVersionInfo + ")";
+            //this.Text += " (version " + GV.AppVersionInfo + ")";
+            this.Text = String.Format(this.Text, GV.AppVersionInfo);
 
             // Найдём и завершим в памяти процесс Steam...
             if (ProcessTerminate("Steam", true) != 0)
@@ -1172,6 +1173,11 @@ namespace srcrepair
                 FP_ConfigSel.Enabled = false;
             }
 
+            // Включаем заблокированные ранее контролы...
+            MNUShowEdHint.Enabled = true;
+            MNUFPSWizard.Enabled = true;
+            MNUInstaller.Enabled = true;
+            
             // Выводим сообщение о завершении считывания в статус-бар...
             SB_Status.Text = RM.GetString("StatusNormal");
             SB_App.Text = AppSelector.SelectedItem.ToString();
@@ -1984,6 +1990,51 @@ namespace srcrepair
                     MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+        }
+
+        private void MNUShowEdHint_Click(object sender, EventArgs e)
+        {
+            // Покажем подсказку...
+        }
+
+        private void MNUReportBuilder_Click(object sender, EventArgs e)
+        {
+            // Запускаем форму создания отчёта для Техподдержки...
+            frmRepBuilder RBF = new frmRepBuilder();
+            RBF.ShowDialog();
+        }
+
+        private void MNUInstaller_Click(object sender, EventArgs e)
+        {
+            // Запускаем форму установщика спреев, демок и конфигов...
+            frmInstaller InstF = new frmInstaller();
+            InstF.ShowDialog();
+        }
+
+        private void MNUExit_Click(object sender, EventArgs e)
+        {
+            // Завершаем работу программы...
+            Close();
+        }
+
+        private void MNUFPSWizard_Click(object sender, EventArgs e)
+        {
+            // Запускаем форму мастера FPS-конфигов...
+            frmFPGen FPFrm = new frmFPGen();
+            FPFrm.ShowDialog();
+        }
+
+        private void MNUAbout_Click(object sender, EventArgs e)
+        {
+            // Отобразим форму "О программе"...
+            frmAbout AboutFrm = new frmAbout();
+            AboutFrm.ShowDialog();
+        }
+
+        private void MNUReportBug_Click(object sender, EventArgs e)
+        {
+            // Открываем в браузере страницу сообщения об ошибке в багтрекере гуглкода...
+            Process.Start("http://code.google.com/p/srcrepair/issues/entry");
         }
     }
 }
