@@ -33,4 +33,5 @@ namespace srcrepair
             Application.Run(new frmMainW());
         }
     }
+    public delegate void CFGEdDelegate(string Cv, string Cn);
 }

@@ -115,7 +115,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attention! When you try to open the file the error occurred. The file may open correctly. Please report it to our bugtracker (Help - Report an error in the program)..
+        ///   Looks up a localized string similar to Warning! Parse error detected. Probably the config is opened not completely or with errors..
         /// </summary>
         internal static string CE_ExceptionDetected {
             get {

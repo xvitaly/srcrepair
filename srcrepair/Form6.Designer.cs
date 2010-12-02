@@ -29,12 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFPGen));
+            this.GenerateCFG = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // GenerateCFG
+            // 
+            resources.ApplyResources(this.GenerateCFG, "GenerateCFG");
+            this.GenerateCFG.Name = "GenerateCFG";
+            this.GenerateCFG.UseVisualStyleBackColor = true;
+            this.GenerateCFG.Click += new System.EventHandler(this.GenerateCFG_Click);
             // 
             // frmFPGen
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.GenerateCFG);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -45,5 +54,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button GenerateCFG;
     }
 }

@@ -11,9 +11,17 @@ namespace srcrepair
 {
     public partial class frmFPGen : Form
     {
-        public frmFPGen()
+        private CFGEdDelegate CETableAdd;
+
+        public frmFPGen(CFGEdDelegate sender)
         {
             InitializeComponent();
+            CETableAdd = sender;
+        }
+
+        private void GenerateCFG_Click(object sender, EventArgs e)
+        {
+            //
         }
     }
 }

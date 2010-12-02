@@ -133,7 +133,7 @@
     <value>Create a backup file</value>
   </data>
   <data name="CE_ExceptionDetected" xml:space="preserve">
-    <value>Attention! When you try to open the file the error occurred. The file may open correctly. Please report it to our bugtracker (Help - Report an error in the program).</value>
+    <value>Warning! Parse error detected. Probably the config is opened not completely or with errors.</value>
   </data>
   <data name="CE_OpenFailed" xml:space="preserve">
     <value>Can not read the contents of the config, as file not found!</value>

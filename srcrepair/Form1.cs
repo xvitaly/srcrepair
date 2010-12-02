@@ -506,6 +506,15 @@ namespace srcrepair
             }
         }
 
+        /*
+         * Эта функция используется для записи значений в таблицу Редактора конфигов.
+         * Используется делегатом. Прямой вызов не допускается.
+         */
+        private void AddRowToTable(string Cv, string Cn)
+        {
+            CE_Editor.Rows.Add(Cv, Cn);
+        }
+
         #endregion
 
         private void frmMainW_Load(object sender, EventArgs e)
@@ -2020,7 +2029,7 @@ namespace srcrepair
         private void MNUFPSWizard_Click(object sender, EventArgs e)
         {
             // Запускаем форму мастера FPS-конфигов...
-            frmFPGen FPFrm = new frmFPGen();
+            frmFPGen FPFrm = new frmFPGen(new CFGEdDelegate(AddRowToTable));
             FPFrm.ShowDialog();
         }
 
