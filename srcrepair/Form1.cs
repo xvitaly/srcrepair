@@ -811,12 +811,12 @@ namespace srcrepair
                     break;
                 case 3: // Left 4 Dead 1
                     GV.FullAppName = "left 4 dead"; // имя каталога...
-                    GV.SmallAppName = "l4d"; // имя индивидуального подкаталога...
+                    GV.SmallAppName = "left4dead"; // имя индивидуального подкаталога...
                     ptha = "common"; // это NCF-приложение...
                     break;
                 case 4: // Left 4 Dead 2
                     GV.FullAppName = "left 4 dead 2";
-                    GV.SmallAppName = "l4d2";
+                    GV.SmallAppName = "left4dead2";
                     ptha = "common";
                     break;
                 case 5: // Alien Swarm
