@@ -241,6 +241,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Your own FPS-config was successfully generated and loaded to Config Editor. You can now edit it manually. Please save it as autoexec.cfg to apply in game..
+        /// </summary>
+        internal static string FPW_Success {
+            get {
+                return ResourceManager.GetString("FPW_Success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Close application {0}? Any unsaved changes will be lost!.
         /// </summary>
         internal static string FrmCloseQuery {

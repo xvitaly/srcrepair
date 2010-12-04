@@ -119,17 +119,17 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="GenerateCFG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>109, 213</value>
+    <value>89, 384</value>
   </data>
   <data name="GenerateCFG.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>176, 23</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="GenerateCFG.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="GenerateCFG.Text" xml:space="preserve">
-    <value>Generate!</value>
+    <value>Generate and send to Editor!</value>
   </data>
   <data name="&gt;&gt;GenerateCFG.Name" xml:space="preserve">
     <value>GenerateCFG</value>
@@ -141,6 +141,466 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;GenerateCFG.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TextureQuality.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="TextureQuality.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 39</value>
+  </data>
+  <data name="TextureQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 24</value>
+  </data>
+  <data name="TextureQuality.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TextureQuality.Text" xml:space="preserve">
+    <value>Texture quality</value>
+  </data>
+  <data name="&gt;&gt;TextureQuality.Name" xml:space="preserve">
+    <value>TextureQuality</value>
+  </data>
+  <data name="&gt;&gt;TextureQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextureQuality.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextureQuality.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>315, 31</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Welcome! This plug-in can help you create your own FPS-config for the game selected in the Main window.</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="TextureQualityBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextureQualityBox.Items" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="TextureQualityBox.Items1" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="TextureQualityBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 41</value>
+  </data>
+  <data name="TextureQualityBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 21</value>
+  </data>
+  <data name="TextureQualityBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;TextureQualityBox.Name" xml:space="preserve">
+    <value>TextureQualityBox</value>
+  </data>
+  <data name="&gt;&gt;TextureQualityBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextureQualityBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;TextureQualityBox.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="ModelQuality.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 69</value>
+  </data>
+  <data name="ModelQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 24</value>
+  </data>
+  <data name="ModelQuality.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="ModelQuality.Text" xml:space="preserve">
+    <value>Model quality</value>
+  </data>
+  <data name="&gt;&gt;ModelQuality.Name" xml:space="preserve">
+    <value>ModelQuality</value>
+  </data>
+  <data name="&gt;&gt;ModelQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ModelQuality.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ModelQuality.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="ModelQualityBox.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ModelQualityBox.Items" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="ModelQualityBox.Items1" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="ModelQualityBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 71</value>
+  </data>
+  <data name="ModelQualityBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 21</value>
+  </data>
+  <data name="ModelQualityBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;ModelQualityBox.Name" xml:space="preserve">
+    <value>ModelQualityBox</value>
+  </data>
+  <data name="&gt;&gt;ModelQualityBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ModelQualityBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ModelQualityBox.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="DisableRagdollPhys.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DisableRagdollPhys.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 99</value>
+  </data>
+  <data name="DisableRagdollPhys.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 17</value>
+  </data>
+  <data name="DisableRagdollPhys.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="DisableRagdollPhys.Text" xml:space="preserve">
+    <value>Disable ragdoll physics</value>
+  </data>
+  <data name="&gt;&gt;DisableRagdollPhys.Name" xml:space="preserve">
+    <value>DisableRagdollPhys</value>
+  </data>
+  <data name="&gt;&gt;DisableRagdollPhys.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DisableRagdollPhys.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DisableRagdollPhys.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="DisableShadows.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DisableShadows.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 122</value>
+  </data>
+  <data name="DisableShadows.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 17</value>
+  </data>
+  <data name="DisableShadows.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="DisableShadows.Text" xml:space="preserve">
+    <value>Totally disable shadows: static and dynamic</value>
+  </data>
+  <data name="&gt;&gt;DisableShadows.Name" xml:space="preserve">
+    <value>DisableShadows</value>
+  </data>
+  <data name="&gt;&gt;DisableShadows.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DisableShadows.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DisableShadows.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="ReduceWaterQuality.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ReduceWaterQuality.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 145</value>
+  </data>
+  <data name="ReduceWaterQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>263, 17</value>
+  </data>
+  <data name="ReduceWaterQuality.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="ReduceWaterQuality.Text" xml:space="preserve">
+    <value>Reduce water quality and disable water reflections</value>
+  </data>
+  <data name="&gt;&gt;ReduceWaterQuality.Name" xml:space="preserve">
+    <value>ReduceWaterQuality</value>
+  </data>
+  <data name="&gt;&gt;ReduceWaterQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ReduceWaterQuality.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ReduceWaterQuality.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="DisableEffects.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DisableEffects.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 168</value>
+  </data>
+  <data name="DisableEffects.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 17</value>
+  </data>
+  <data name="DisableEffects.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="DisableEffects.Text" xml:space="preserve">
+    <value>Disable advanced effects: HDR, Bloom, Motion Blur</value>
+  </data>
+  <data name="&gt;&gt;DisableEffects.Name" xml:space="preserve">
+    <value>DisableEffects</value>
+  </data>
+  <data name="&gt;&gt;DisableEffects.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DisableEffects.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DisableEffects.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="EnableTrilinearF.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="EnableTrilinearF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 191</value>
+  </data>
+  <data name="EnableTrilinearF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 17</value>
+  </data>
+  <data name="EnableTrilinearF.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="EnableTrilinearF.Text" xml:space="preserve">
+    <value>Use Trilinear texture filtration instead of anisotrophic</value>
+  </data>
+  <data name="&gt;&gt;EnableTrilinearF.Name" xml:space="preserve">
+    <value>EnableTrilinearF</value>
+  </data>
+  <data name="&gt;&gt;EnableTrilinearF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EnableTrilinearF.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;EnableTrilinearF.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="DisableDecals.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DisableDecals.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 214</value>
+  </data>
+  <data name="DisableDecals.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 17</value>
+  </data>
+  <data name="DisableDecals.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="DisableDecals.Text" xml:space="preserve">
+    <value>Disable decals and sprays</value>
+  </data>
+  <data name="&gt;&gt;DisableDecals.Name" xml:space="preserve">
+    <value>DisableDecals</value>
+  </data>
+  <data name="&gt;&gt;DisableDecals.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DisableDecals.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DisableDecals.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="DisableShaderE.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DisableShaderE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 237</value>
+  </data>
+  <data name="DisableShaderE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 17</value>
+  </data>
+  <data name="DisableShaderE.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="DisableShaderE.Text" xml:space="preserve">
+    <value>Disable shader effects and dynamic lights</value>
+  </data>
+  <data name="&gt;&gt;DisableShaderE.Name" xml:space="preserve">
+    <value>DisableShaderE</value>
+  </data>
+  <data name="&gt;&gt;DisableShaderE.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DisableShaderE.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DisableShaderE.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="DisableBreaks.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DisableBreaks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 260</value>
+  </data>
+  <data name="DisableBreaks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 17</value>
+  </data>
+  <data name="DisableBreaks.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="DisableBreaks.Text" xml:space="preserve">
+    <value>Disable prop. damage</value>
+  </data>
+  <data name="&gt;&gt;DisableBreaks.Name" xml:space="preserve">
+    <value>DisableBreaks</value>
+  </data>
+  <data name="&gt;&gt;DisableBreaks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DisableBreaks.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DisableBreaks.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="EnableHardOpt.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="EnableHardOpt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 283</value>
+  </data>
+  <data name="EnableHardOpt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 17</value>
+  </data>
+  <data name="EnableHardOpt.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="EnableHardOpt.Text" xml:space="preserve">
+    <value>Enable hardware optimizations</value>
+  </data>
+  <data name="&gt;&gt;EnableHardOpt.Name" xml:space="preserve">
+    <value>EnableHardOpt</value>
+  </data>
+  <data name="&gt;&gt;EnableHardOpt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EnableHardOpt.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;EnableHardOpt.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="DisableSmallObjs.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DisableSmallObjs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 306</value>
+  </data>
+  <data name="DisableSmallObjs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 17</value>
+  </data>
+  <data name="DisableSmallObjs.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="DisableSmallObjs.Text" xml:space="preserve">
+    <value>Disable small props on maps</value>
+  </data>
+  <data name="&gt;&gt;DisableSmallObjs.Name" xml:space="preserve">
+    <value>DisableSmallObjs</value>
+  </data>
+  <data name="&gt;&gt;DisableSmallObjs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DisableSmallObjs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DisableSmallObjs.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="EnablePreload.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="EnablePreload.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 329</value>
+  </data>
+  <data name="EnablePreload.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 17</value>
+  </data>
+  <data name="EnablePreload.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="EnablePreload.Text" xml:space="preserve">
+    <value>Enable maps, textures, models, etc. preload</value>
+  </data>
+  <data name="&gt;&gt;EnablePreload.Name" xml:space="preserve">
+    <value>EnablePreload</value>
+  </data>
+  <data name="&gt;&gt;EnablePreload.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EnablePreload.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;EnablePreload.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="DisableVSync.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="DisableVSync.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 352</value>
+  </data>
+  <data name="DisableVSync.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 17</value>
+  </data>
+  <data name="DisableVSync.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="DisableVSync.Text" xml:space="preserve">
+    <value>Disable vertical synchronization</value>
+  </data>
+  <data name="&gt;&gt;DisableVSync.Name" xml:space="preserve">
+    <value>DisableVSync</value>
+  </data>
+  <data name="&gt;&gt;DisableVSync.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DisableVSync.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DisableVSync.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -150,9 +610,32 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>292, 266</value>
+    <value>339, 429</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARoAAAAJAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAKAAAACgAAAAQAGCgNABkrGQANFSgAqdDiAA0WSwAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAHQAAACuAAAAvwAAAL8AAACnAQ0VjgbM7/QAudblAJ7c/AAA
+        AI4AAAANAAAAAAAAAAAAAAAAAAAAAAAAAHcFBQX0ExMT+iQkJPsmJib7Gxsb+hITFPYd1eX9AOf//wSp
+        3P0DGSbDAAECFAAAAAAAAAAAAAAAAAEBAQsfHx/nEBAQ/xUVFf8eHh7/KCgo/zQ0NP9CpKz/hPz//yX1
+        //8ItOL+A2eb6wAGDSUAAAAAAAAAAAAAAAADAwMsLCws/xYWFv9ubm7/QEBA/x0dHv8WGBz/Dk1f/y1y
+        iP8X1/3/PEpP/zs7O/sCAgJzAAAAAAAAAAAAAAAACQkJCSMjI+o/P1H/dnbK/0pKxP80NMP/JSW7/xYW
+        rv8KGqD/BI7m/xkZNf9CQkL+DAwMSAAAAAAAAAAAAAAAAAAAAAAODg46WlqB556exP97e5D/Q0NU/zk5
+        T/8rK03/HR1U/wwQb/8NDXPZGBgZSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAENDRJV+fn7/UFBQ/y4u
+        Lv91dHT/MjIy/xwcHP8WFhb/CwsemwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAtLS2OZGRk/0BA
+        QP8zMzP/Li4u/1FRUf8gICD/HBwc/xAQEJgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJycnpkpK
+        Sv9FRUX/Ojo6/zMzM/8sLCz/NjY2/x8fH/8VFRWpAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwc
+        HMAqKir/Ghoa/xwcHP8nJyf/ODg4/zw8PP87Ozv/HR0dzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAPDw9DNTU1yFVVVfl2dnb/lpaW/6urq/+urq77ZmZmzzIyMq0LCwsVAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAREREEFRUVGRsbGyIeHh4bIiIiBgAAAAAWFhYNTk5OmjY2NhQAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEhISBCBgYGYIiIiAQAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKioqAQAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA==
+</value>
+  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
   </data>

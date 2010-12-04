@@ -2028,9 +2028,12 @@ namespace srcrepair
 
         private void MNUFPSWizard_Click(object sender, EventArgs e)
         {
+            // Очистим Редактор конфигов...
+            CE_New.PerformClick();
             // Запускаем форму мастера FPS-конфигов...
             frmFPGen FPFrm = new frmFPGen(new CFGEdDelegate(AddRowToTable));
             FPFrm.ShowDialog();
+            MainTabControl.SelectedIndex = 1;
         }
 
         private void MNUAbout_Click(object sender, EventArgs e)
