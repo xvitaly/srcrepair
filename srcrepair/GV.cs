@@ -65,5 +65,11 @@ namespace srcrepair
          * резервными копиями управляемого приложения.
          */
         public static string FullBackUpDirPath;
+
+        /*
+         * Эта переменная будет указывать на тип управляемого приложения:
+         * стандартное GCF, либо нестандартное NCF, с которым много проблем.
+         */
+        public static bool IsGCFApp;
     }
 }
