@@ -13,12 +13,12 @@ namespace srcrepair
         public frmAbout()
         {
             InitializeComponent();
-            this.Text = String.Format("About {0}", AssemblyTitle);
-            this.labelProductName.Text = AssemblyProduct;
-            this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
+            this.Text = String.Format("About {0}...", AssemblyTitle);
+            this.labelProductName.Text = String.Format(AssemblyProduct + " ({0})", AssemblyVersion);
+            this.labelVersion.Text = String.Format("Version: {0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
-            this.textBoxDescription.Text = AssemblyDescription;
+            //this.textBoxDescription.Text = AssemblyDescription;
         }
 
         #region Assembly Attribute Accessors
@@ -104,6 +104,11 @@ namespace srcrepair
         private void okButton_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnContact_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("skype:easycoding?chat");
         }
     }
 }
