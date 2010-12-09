@@ -466,6 +466,42 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There was an error during file installation. Please try again later!.
+        /// </summary>
+        internal static string QI_Excpt {
+            get {
+                return ResourceManager.GetString("QI_Excpt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Generate VMT file automatically?.
+        /// </summary>
+        internal static string QI_GenVMTMsg {
+            get {
+                return ResourceManager.GetString("QI_GenVMTMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installation completed successfully!.
+        /// </summary>
+        internal static string QI_InstSuccessfull {
+            get {
+                return ResourceManager.GetString("QI_InstSuccessfull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please select file before pressing this button and try again!.
+        /// </summary>
+        internal static string QI_InstUnav {
+            get {
+                return ResourceManager.GetString("QI_InstUnav", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Close.
         /// </summary>
         internal static string RPB_CloseCpt {

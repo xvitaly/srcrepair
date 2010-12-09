@@ -330,4 +330,16 @@
   <data name="FPW_Success" xml:space="preserve">
     <value>Your own FPS-config was successfully generated and loaded to Config Editor. You can now edit it manually. Please save it as autoexec.cfg to apply in game.</value>
   </data>
+  <data name="QI_Excpt" xml:space="preserve">
+    <value>There was an error during file installation. Please try again later!</value>
+  </data>
+  <data name="QI_GenVMTMsg" xml:space="preserve">
+    <value>Generate VMT file automatically?</value>
+  </data>
+  <data name="QI_InstSuccessfull" xml:space="preserve">
+    <value>Installation completed successfully!</value>
+  </data>
+  <data name="QI_InstUnav" xml:space="preserve">
+    <value>Please select file before pressing this button and try again!</value>
+  </data>
 </root>

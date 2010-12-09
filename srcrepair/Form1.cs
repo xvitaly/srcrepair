@@ -42,7 +42,7 @@ namespace srcrepair
          * которая возвращает строку, добавив на конец обратный слэш если его нет,
          * либо возвращает ту же строку, если обратный слэш уже присутствует.
          */
-        private static string IncludeTrDelim(string SourceStr)
+        public static string IncludeTrDelim(string SourceStr)
         {
             // Проверяем наличие закрывающего слэша у строки, переданной как параметр...
             if (SourceStr[SourceStr.Length - 1] != '\\')
