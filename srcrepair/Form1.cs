@@ -10,6 +10,7 @@ using System.IO; // для работы с файлами...
 using System.Diagnostics; // для управления процессами...
 using Microsoft.Win32; // для работы с реестром...
 using System.Text.RegularExpressions; // для работы с регулярными выражениями...
+using System.Reflection; // для управления сборками...
 using System.Security.Principal; // для определения прав админа...
 using System.Threading; // для управления потоками...
 using System.Globalization; // для управления локализациями...
@@ -62,7 +63,7 @@ namespace srcrepair
         private static string GetSteamPath()
         {
             // Подключаем реестр и открываем ключ только для чтения...
-            RegistryKey ResKey = Registry.LocalMachine.OpenSubKey("Software\\Valve\\Steam", false);
+            RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"Software\Valve\Steam", false);
 
             // Создаём строку для хранения результатов...
             string ResString = "";
@@ -74,7 +75,7 @@ namespace srcrepair
                 ResString = (string)ResKey.GetValue("InstallPath");
 
                 // Проверяем чтобы значение существовало...
-                if (ResString == null)
+                if (String.IsNullOrEmpty(ResString))
                 {
                     // Значение не существует, поэтому сгенерируем исключение для обработки в основном коде...
                     throw new System.NullReferenceException("Exception: No InstallPath value detected! Please run Steam.");
@@ -162,10 +163,10 @@ namespace srcrepair
         private static void CleanRegistryNow(int LangCode)
         {
             // Удаляем ключ HKEY_LOCAL_MACHINE\Software\Valve рекурсивно...
-            Registry.LocalMachine.DeleteSubKeyTree("Software\\Valve", false);
+            Registry.LocalMachine.DeleteSubKeyTree(@"Software\Valve", false);
 
             // Удаляем ключ HKEY_CURRENT_USER\Software\Valve рекурсивно...
-            Registry.CurrentUser.DeleteSubKeyTree("Software\\Valve", false);
+            Registry.CurrentUser.DeleteSubKeyTree(@"Software\Valve", false);
 
             // Начинаем вставлять значение языка клиента Steam...
             // Инициализируем буферную переменную для хранения названия языка...
@@ -186,7 +187,7 @@ namespace srcrepair
             }
 
             // Подключаем реестр и создаём ключ HKEY_CURRENT_USER\Software\Valve\Steam...
-            RegistryKey RegLangKey = Registry.CurrentUser.CreateSubKey("Software\\Valve\\Steam");
+            RegistryKey RegLangKey = Registry.CurrentUser.CreateSubKey(@"Software\Valve\Steam");
 
             // Если не было ошибок, записываем значение...
             if (RegLangKey != null)
@@ -206,7 +207,7 @@ namespace srcrepair
         private static int GetSRCDWord(string CVar, string CApp)
         {
             // Подключаем реестр и открываем ключ только для чтения...
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey("Software\\Valve\\Source\\" + CApp + "\\Settings", false);
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Source\" + CApp + @"\Settings", false);
 
             // Создаём переменную для хранения результатов...
             int ResInt = -1;
@@ -232,7 +233,7 @@ namespace srcrepair
         private static void WriteSRCDWord(string CVar, int CValue, string CApp)
         {
             // Подключаем реестр и открываем ключ для чтения и записи...
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey("Software\\Valve\\Source\\" + CApp + "\\Settings", true);
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Source\" + CApp + @"\Settings", true);
 
             // Записываем в реестр...
             ResKey.SetValue(CVar, CValue, RegistryValueKind.DWord);
@@ -334,7 +335,7 @@ namespace srcrepair
         private static void InstallConfigNow(string ConfName)
         {
             // Устанавливаем...
-            File.Copy(GV.FullAppPath + "cfgs\\" + GV.SmallAppName + "\\" + ConfName, GV.FullCfgPath + "autoexec.cfg", true);
+            File.Copy(GV.FullAppPath + @"cfgs\" + GV.SmallAppName + @"\" + ConfName, GV.FullCfgPath + "autoexec.cfg", true);
         }
 
         /*
@@ -370,7 +371,7 @@ namespace srcrepair
                     // Каталоги не существуют. Создадим общий каталог для резервных копий...
                     Directory.CreateDirectory(GV.FullBackUpDirPath);
                     // ...и реестра...
-                    Directory.CreateDirectory(GV.FullBackUpDirPath + "registry\\");
+                    Directory.CreateDirectory(GV.FullBackUpDirPath + @"registry\");
                 }
 
                 try
@@ -433,11 +434,11 @@ namespace srcrepair
         private static void CleanDirectoryNow(string DirPath, string CleanupMask)
         {
             // Открываем каталог...
-            System.IO.DirectoryInfo DInfo = new System.IO.DirectoryInfo(DirPath);
+            DirectoryInfo DInfo = new DirectoryInfo(DirPath);
             // Считываем список файлов по заданной маске...
-            System.IO.FileInfo[] DirList = DInfo.GetFiles(CleanupMask);
+            FileInfo[] DirList = DInfo.GetFiles(CleanupMask);
             // Начинаем обход массива...
-            foreach (System.IO.FileInfo DItem in DirList)
+            foreach (FileInfo DItem in DirList)
             {
                 // Обрабатываем найденное...
                 DItem.Delete(); // Удаляем файл...
@@ -492,7 +493,7 @@ namespace srcrepair
         private void WriteTableToFileNow(string Path)
         {
             // Начинаем сохранять содержимое редактора в файл...
-            using (System.IO.StreamWriter CFile = new System.IO.StreamWriter(Path))
+            using (StreamWriter CFile = new StreamWriter(Path))
             {
                 CFile.WriteLine("// Generated by " + GV.AppName + " //"); // Вставляем сообщение ;-).
                 CFile.WriteLine(); // вставляем пустую строку
@@ -525,8 +526,8 @@ namespace srcrepair
             string[] CMDLineArgs = Environment.GetCommandLineArgs();
             
             // Получаем путь к каталогу приложения...
-            System.Reflection.Assembly Assmbl = System.Reflection.Assembly.GetEntryAssembly();
-            GV.FullAppPath = IncludeTrDelim(System.IO.Path.GetDirectoryName(Assmbl.Location));
+            Assembly Assmbl = Assembly.GetEntryAssembly();
+            GV.FullAppPath = IncludeTrDelim(Path.GetDirectoryName(Assmbl.Location));
 
             // Проверяем, запущена ли программа с правами администратора...
             if (!(IsCurrentUserAdmin()))
@@ -574,7 +575,7 @@ namespace srcrepair
                     if (InputBox(RM.GetString("SteamPathEnterTitle"), RM.GetString("SteamPathEnterText"), ref Buf) == DialogResult.OK)
                     {
                         Buf = IncludeTrDelim(Buf);
-                        if (!(System.IO.File.Exists(Buf + "Steam.exe")))
+                        if (!(File.Exists(Buf + "Steam.exe")))
                         {
                             MessageBox.Show(RM.GetString("SteamPathEnterErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             Application.Exit();
@@ -611,11 +612,11 @@ namespace srcrepair
             {
                 // Параметр не найден, будем использовать автоопределение...
                 // Создаём объект DirInfo...
-                System.IO.DirectoryInfo DInfo = new System.IO.DirectoryInfo(GV.FullSteamPath + "steamapps\\");
+                DirectoryInfo DInfo = new DirectoryInfo(GV.FullSteamPath + @"steamapps\");
                 // Получаем список директорий из текущего...
-                System.IO.DirectoryInfo[] DirList = DInfo.GetDirectories();
+                DirectoryInfo[] DirList = DInfo.GetDirectories();
                 // Обходим созданный массив в поиске нужных нам логинов...
-                foreach (System.IO.DirectoryInfo DItem in DirList)
+                foreach (DirectoryInfo DItem in DirList)
                 {
                     // Фильтруем известные каталоги...
                     if ((DItem.Name != "common") && (DItem.Name != "sourcemods") && (DItem.Name != "media"))
@@ -644,7 +645,7 @@ namespace srcrepair
                         MessageBox.Show(RM.GetString("SteamLoginCancel"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         Application.Exit();
                     };
-                } while (!(System.IO.Directory.Exists(GV.FullSteamPath + "steamapps\\" + SBuf + "\\")));
+                } while (!(Directory.Exists(GV.FullSteamPath + @"steamapps\" + SBuf + @"\")));
                 
                 // Добавляем полученный логин в список...
                 LoginSel.Items.Add((string)SBuf);
@@ -852,12 +853,12 @@ namespace srcrepair
             }
 
             // Генерируем полный путь до каталога управляемого приложения...
-            GV.GamePath = IncludeTrDelim(GV.FullSteamPath + "steamapps\\" + ptha + "\\" + GV.FullAppName);
+            GV.GamePath = IncludeTrDelim(GV.FullSteamPath + @"steamapps\" + ptha + @"\" + GV.FullAppName);
             GV.FullGamePath = IncludeTrDelim(GV.GamePath + GV.SmallAppName);
 
             // Заполняем другие служебные переменные...
-            GV.FullCfgPath = GV.FullGamePath + "cfg\\";
-            GV.FullBackUpDirPath = GV.FullAppPath + "backups\\" + GV.SmallAppName + "\\";
+            GV.FullCfgPath = GV.FullGamePath + @"cfg\";
+            GV.FullBackUpDirPath = GV.FullAppPath + @"backups\" + GV.SmallAppName + @"\";
             
             // Включаем основные элементы управления (контролы)...
             MainTabControl.Enabled = true;
@@ -1159,7 +1160,7 @@ namespace srcrepair
             }
 
             // Проверим, установлен ли FPS-конфиг...
-            if (System.IO.File.Exists(GV.FullCfgPath + "autoexec.cfg"))
+            if (File.Exists(GV.FullCfgPath + "autoexec.cfg"))
             {
                 GT_Warning.Visible = true;
             }
@@ -1175,11 +1176,11 @@ namespace srcrepair
             try
             {
                 // Открываем каталог...
-                System.IO.DirectoryInfo DInfo = new System.IO.DirectoryInfo(GV.FullAppPath + "cfgs\\" + GV.SmallAppName + "\\");
+                DirectoryInfo DInfo = new DirectoryInfo(GV.FullAppPath + @"cfgs\" + GV.SmallAppName + @"\");
                 // Считываем список файлов по заданной маске...
-                System.IO.FileInfo[] DirList = DInfo.GetFiles("*.cfg");
+                FileInfo[] DirList = DInfo.GetFiles("*.cfg");
                 // Начинаем обход массива...
-                foreach (System.IO.FileInfo DItem in DirList)
+                foreach (FileInfo DItem in DirList)
                 {
                     // Обрабатываем найденное...
                     if (DItem.Name != "config_default.cfg")
@@ -1542,7 +1543,7 @@ namespace srcrepair
             // Получаем описание выбранного пользователем конфига...
             try
             {
-                FP_Description.Text = ReadTextFileNow(GV.FullAppPath + "cfgs\\" + GV.SmallAppName + "\\" + System.IO.Path.GetFileNameWithoutExtension(FP_ConfigSel.Text) + "_" + RM.GetString("AppLangPrefix") + ".txt");
+                FP_Description.Text = ReadTextFileNow(GV.FullAppPath + @"cfgs\" + GV.SmallAppName + @"\" + Path.GetFileNameWithoutExtension(FP_ConfigSel.Text) + "_" + RM.GetString("AppLangPrefix") + ".txt");
             }
             catch
             {
@@ -1594,7 +1595,7 @@ namespace srcrepair
             // Генерируем имя файла с полным путём до него...
             string CfgFile = GV.FullCfgPath + "autoexec.cfg";
             // Проверяем, существует ли файл...
-            if (System.IO.File.Exists(CfgFile))
+            if (File.Exists(CfgFile))
             {
                 // Файл существует. Запросим подтверждение на удаление...
                 DialogResult UserConfirmation = MessageBox.Show(RM.GetString("FP_RemoveQuestion"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -1610,7 +1611,7 @@ namespace srcrepair
                     try
                     {
                         // Удалим файл...
-                        System.IO.File.Delete(CfgFile);
+                        File.Delete(CfgFile);
                         // Выводим сообщение об успешном удалении...
                         MessageBox.Show(RM.GetString("FP_RemoveSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         // Скрываем значок предупреждения на странице графических настроек...
@@ -1658,10 +1659,10 @@ namespace srcrepair
                 string Buf = CE_OpenCfgDialog.FileName; // Получаем имя файла с полным путём...
                 string ImpStr; // Строка для парсинга...
                 string CVarName, CVarContent;
-                if (System.IO.File.Exists(Buf)) // Проверяем, существует ли файл...
+                if (File.Exists(Buf)) // Проверяем, существует ли файл...
                 {
                     // Файл существует. Продолжаем...
-                    CFGFileName = System.IO.Path.GetFileName(Buf); // Получаем имя открытого в Редакторе файла без пути...
+                    CFGFileName = Path.GetFileName(Buf); // Получаем имя открытого в Редакторе файла без пути...
                     if (CFGFileName == "config.cfg") // Проверяем, не открыл ли пользователь файл config.cfg и, если да, то сообщаем об этом...
                     {
                         MessageBox.Show(RM.GetString("CE_RestConfigOpenWarn"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -1669,7 +1670,7 @@ namespace srcrepair
                     CE_Editor.Rows.Clear(); // Очищаем область редактирования...
                     try
                     {
-                        using (System.IO.StreamReader OpenedConfig = new System.IO.StreamReader(@Buf, System.Text.Encoding.Default)) // Открываем файл таким способом...
+                        using (StreamReader OpenedConfig = new StreamReader(@Buf, Encoding.Default)) // Открываем файл таким способом...
                         {
                             // Будем читать поток построчно...
                             while (OpenedConfig.Peek() >= 0)
@@ -1752,7 +1753,7 @@ namespace srcrepair
                 {
                     // Будем бэкапировать только файлы, находящиеся в каталоге /cfg/
                     // управляемоего приложения. Остальные - нет.
-                    if (System.IO.File.Exists(GV.FullCfgPath + CFGFileName))
+                    if (File.Exists(GV.FullCfgPath + CFGFileName))
                     {
                         // Спрашиваем пользователя о создании резервной копии...
                         UserConfirmation = MessageBox.Show(RM.GetString("CE_CreateBackUp"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -1779,7 +1780,7 @@ namespace srcrepair
                     if (SaveResult == DialogResult.OK)
                     {
                         WriteTableToFileNow(CE_SaveCfgDialog.FileName);
-                        CFGFileName = System.IO.Path.GetFileName(CE_SaveCfgDialog.FileName);
+                        CFGFileName = Path.GetFileName(CE_SaveCfgDialog.FileName);
                         CE_OpenCfgDialog.FileName = CE_SaveCfgDialog.FileName;
                         SB_Status.Text = RM.GetString("StatusOpenedFile") + " " + CFGFileName;
                     }
@@ -1805,7 +1806,7 @@ namespace srcrepair
             {
                 try
                 {
-                    CleanDirectoryNow(GV.FullGamePath + "maps\\", "*.bsp");
+                    CleanDirectoryNow(GV.FullGamePath + @"maps\", "*.bsp");
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -1823,7 +1824,7 @@ namespace srcrepair
             {
                 try
                 {
-                    CleanDirectoryNow(GV.FullGamePath + "downloads\\", "*.dat");
+                    CleanDirectoryNow(GV.FullGamePath + @"downloads\", "*.dat");
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -1841,7 +1842,7 @@ namespace srcrepair
             {
                 try
                 {
-                    CleanDirectoryNow(GV.FullGamePath + "materials\\temp\\", "*.vtf");
+                    CleanDirectoryNow(GV.FullGamePath + @"materials\temp\", "*.vtf");
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -1859,7 +1860,7 @@ namespace srcrepair
             {
                 try
                 {
-                    CleanDirectoryNow(GV.FullGamePath + "cfg\\", "*.*");
+                    CleanDirectoryNow(GV.FullGamePath + @"cfg\", "*.*");
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -1877,7 +1878,7 @@ namespace srcrepair
             {
                 try
                 {
-                    CleanDirectoryNow(GV.FullGamePath + "maps\\graphs\\", "*.*");
+                    CleanDirectoryNow(GV.FullGamePath + @"maps\graphs\", "*.*");
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -1895,7 +1896,7 @@ namespace srcrepair
             {
                 try
                 {
-                    CleanDirectoryNow(GV.FullGamePath + "maps\\soundcache\\", "*.*");
+                    CleanDirectoryNow(GV.FullGamePath + @"maps\soundcache\", "*.*");
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -1913,7 +1914,7 @@ namespace srcrepair
             {
                 try
                 {
-                    CleanDirectoryNow(GV.FullGamePath + "maps\\", "*.nav");
+                    CleanDirectoryNow(GV.FullGamePath + @"maps\", "*.nav");
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -1931,7 +1932,7 @@ namespace srcrepair
             {
                 try
                 {
-                    CleanDirectoryNow(GV.FullGamePath + "screenshots\\", "*.*");
+                    CleanDirectoryNow(GV.FullGamePath + @"screenshots\", "*.*");
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -1968,7 +1969,7 @@ namespace srcrepair
                 try
                 {
                     // Удаляем ключ HKEY_CURRENT_USER\Software\Valve\Source\tf\Settings из реестра...
-                    Registry.CurrentUser.DeleteSubKeyTree("Software\\Valve\\Source\\" + GV.SmallAppName + "\\Settings", false);
+                    Registry.CurrentUser.DeleteSubKeyTree(@"Software\Valve\Source\" + GV.SmallAppName + @"\Settings", false);
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -1986,9 +1987,9 @@ namespace srcrepair
             {
                 try
                 {
-                    System.IO.Directory.Delete(GV.GamePath + "bin\\", true); // Удаляем бинарники...
-                    System.IO.Directory.Delete(GV.GamePath + "platform\\", true); // Удаляем настройки платформы...
-                    System.IO.Directory.Delete(GV.FullGamePath + "bin\\", true); // Удаляем библиотеки игры...
+                    Directory.Delete(GV.GamePath + @"bin\", true); // Удаляем бинарники...
+                    Directory.Delete(GV.GamePath + @"platform\", true); // Удаляем настройки платформы...
+                    Directory.Delete(GV.FullGamePath + @"bin\", true); // Удаляем библиотеки игры...
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -2024,8 +2025,8 @@ namespace srcrepair
             {
                 try
                 {
-                    System.IO.Directory.Delete(GV.GamePath, true); // Удаляем всю папку с файлами игры...
-                    Registry.CurrentUser.DeleteSubKeyTree("Software\\Valve\\Source\\" + GV.SmallAppName + "\\Settings", false); // Удаляем настройки видео...
+                    Directory.Delete(GV.GamePath, true); // Удаляем всю папку с файлами игры...
+                    Registry.CurrentUser.DeleteSubKeyTree(@"Software\Valve\Source\" + GV.SmallAppName + @"\Settings", false); // Удаляем настройки видео...
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
