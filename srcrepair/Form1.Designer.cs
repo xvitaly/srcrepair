@@ -1031,6 +1031,7 @@
             // BUT_Refresh
             // 
             this.BUT_Refresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BUT_Refresh.Image = global::srcrepair.Properties.Resources.Refresh;
             resources.ApplyResources(this.BUT_Refresh, "BUT_Refresh");
             this.BUT_Refresh.Name = "BUT_Refresh";
             this.BUT_Refresh.Click += new System.EventHandler(this.BUT_Refresh_Click);
@@ -1043,6 +1044,7 @@
             // BUT_RestoreB
             // 
             this.BUT_RestoreB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BUT_RestoreB.Image = global::srcrepair.Properties.Resources.Restore;
             resources.ApplyResources(this.BUT_RestoreB, "BUT_RestoreB");
             this.BUT_RestoreB.Name = "BUT_RestoreB";
             this.BUT_RestoreB.Click += new System.EventHandler(this.BUT_RestoreB_Click);
@@ -1050,6 +1052,7 @@
             // BUT_DelB
             // 
             this.BUT_DelB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BUT_DelB.Image = global::srcrepair.Properties.Resources.Delete;
             resources.ApplyResources(this.BUT_DelB, "BUT_DelB");
             this.BUT_DelB.Name = "BUT_DelB";
             this.BUT_DelB.Click += new System.EventHandler(this.BUT_DelB_Click);
