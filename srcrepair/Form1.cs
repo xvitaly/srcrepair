@@ -2110,7 +2110,7 @@ namespace srcrepair
                 // Получаем имя файла...
                 string FName = BU_ListTable.Rows[BU_ListTable.CurrentRow.Index].Cells[4].Value.ToString();
                 // Запрашиваем подтверждение...
-                DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("BU_QMsg"), FName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("BU_QMsg"), Path.GetFileNameWithoutExtension(FName), BU_ListTable.Rows[BU_ListTable.CurrentRow.Index].Cells[3].Value.ToString()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (UserConfirmation == DialogResult.Yes)
                 {
                     // Проверяем что восстанавливать: конфиг или реестр...
@@ -2180,6 +2180,26 @@ namespace srcrepair
                     MessageBox.Show(RM.GetString("BU_DelFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
+        }
+
+        private void BUT_CrBkupReg_ButtonClick(object sender, EventArgs e)
+        {
+            MessageBox.Show(RM.GetString("BU_TBSelCat"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void BUT_L_GameSettings_Click(object sender, EventArgs e)
+        {
+            // Создадим резервную копию графических настроек игры...
+        }
+
+        private void BUT_L_AllSteam_Click(object sender, EventArgs e)
+        {
+            // Создадим резервную копию всех настроек Steam...
+        }
+
+        private void BUT_L_AllSRC_Click(object sender, EventArgs e)
+        {
+            // Созданим резервную копию графических настроек всех Source-игр...
         }
     }
 }

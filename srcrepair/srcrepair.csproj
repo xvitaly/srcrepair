@@ -230,6 +230,7 @@
     <None Include="Resources\Info.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Add.png" />
     <Content Include="TF2Repair.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

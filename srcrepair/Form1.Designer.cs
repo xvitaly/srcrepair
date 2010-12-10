@@ -127,11 +127,21 @@
             this.FP_TopLabel = new System.Windows.Forms.Label();
             this.RescueCentre = new System.Windows.Forms.TabPage();
             this.BU_ListTable = new System.Windows.Forms.DataGridView();
+            this.BEd_BName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BEd_BType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BEd_BSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BEd_BData = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BEd_BRealName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BU_BToolbar = new System.Windows.Forms.ToolStrip();
             this.BUT_Refresh = new System.Windows.Forms.ToolStripButton();
             this.BUT_Sep1 = new System.Windows.Forms.ToolStripSeparator();
             this.BUT_RestoreB = new System.Windows.Forms.ToolStripButton();
             this.BUT_DelB = new System.Windows.Forms.ToolStripButton();
+            this.BUT_Sep2 = new System.Windows.Forms.ToolStripSeparator();
+            this.BUT_CrBkupReg = new System.Windows.Forms.ToolStripSplitButton();
+            this.BUT_L_GameSettings = new System.Windows.Forms.ToolStripMenuItem();
+            this.BUT_L_AllSteam = new System.Windows.Forms.ToolStripMenuItem();
+            this.BUT_L_AllSRC = new System.Windows.Forms.ToolStripMenuItem();
             this.LoginSel = new System.Windows.Forms.ComboBox();
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.ToolsMNU = new System.Windows.Forms.ToolStripMenuItem();
@@ -162,11 +172,6 @@
             this.L_AppSelector = new System.Windows.Forms.Label();
             this.CE_OpenCfgDialog = new System.Windows.Forms.OpenFileDialog();
             this.CE_SaveCfgDialog = new System.Windows.Forms.SaveFileDialog();
-            this.BEd_BName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BEd_BType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BEd_BSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BEd_BData = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BEd_BRealName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_Warning)).BeginInit();
@@ -996,13 +1001,45 @@
             this.BU_ListTable.Name = "BU_ListTable";
             this.BU_ListTable.ReadOnly = true;
             // 
+            // BEd_BName
+            // 
+            resources.ApplyResources(this.BEd_BName, "BEd_BName");
+            this.BEd_BName.Name = "BEd_BName";
+            this.BEd_BName.ReadOnly = true;
+            // 
+            // BEd_BType
+            // 
+            resources.ApplyResources(this.BEd_BType, "BEd_BType");
+            this.BEd_BType.Name = "BEd_BType";
+            this.BEd_BType.ReadOnly = true;
+            // 
+            // BEd_BSize
+            // 
+            resources.ApplyResources(this.BEd_BSize, "BEd_BSize");
+            this.BEd_BSize.Name = "BEd_BSize";
+            this.BEd_BSize.ReadOnly = true;
+            // 
+            // BEd_BData
+            // 
+            resources.ApplyResources(this.BEd_BData, "BEd_BData");
+            this.BEd_BData.Name = "BEd_BData";
+            this.BEd_BData.ReadOnly = true;
+            // 
+            // BEd_BRealName
+            // 
+            resources.ApplyResources(this.BEd_BRealName, "BEd_BRealName");
+            this.BEd_BRealName.Name = "BEd_BRealName";
+            this.BEd_BRealName.ReadOnly = true;
+            // 
             // BU_BToolbar
             // 
             this.BU_BToolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BUT_Refresh,
             this.BUT_Sep1,
             this.BUT_RestoreB,
-            this.BUT_DelB});
+            this.BUT_DelB,
+            this.BUT_Sep2,
+            this.BUT_CrBkupReg});
             resources.ApplyResources(this.BU_BToolbar, "BU_BToolbar");
             this.BU_BToolbar.Name = "BU_BToolbar";
             // 
@@ -1034,6 +1071,44 @@
             resources.ApplyResources(this.BUT_DelB, "BUT_DelB");
             this.BUT_DelB.Name = "BUT_DelB";
             this.BUT_DelB.Click += new System.EventHandler(this.BUT_DelB_Click);
+            // 
+            // BUT_Sep2
+            // 
+            this.BUT_Sep2.Name = "BUT_Sep2";
+            resources.ApplyResources(this.BUT_Sep2, "BUT_Sep2");
+            // 
+            // BUT_CrBkupReg
+            // 
+            this.BUT_CrBkupReg.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BUT_CrBkupReg.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BUT_L_GameSettings,
+            this.BUT_L_AllSteam,
+            this.BUT_L_AllSRC});
+            this.BUT_CrBkupReg.Image = global::srcrepair.Properties.Resources.Add;
+            resources.ApplyResources(this.BUT_CrBkupReg, "BUT_CrBkupReg");
+            this.BUT_CrBkupReg.Name = "BUT_CrBkupReg";
+            this.BUT_CrBkupReg.ButtonClick += new System.EventHandler(this.BUT_CrBkupReg_ButtonClick);
+            // 
+            // BUT_L_GameSettings
+            // 
+            this.BUT_L_GameSettings.Image = global::srcrepair.Properties.Resources.Add;
+            this.BUT_L_GameSettings.Name = "BUT_L_GameSettings";
+            resources.ApplyResources(this.BUT_L_GameSettings, "BUT_L_GameSettings");
+            this.BUT_L_GameSettings.Click += new System.EventHandler(this.BUT_L_GameSettings_Click);
+            // 
+            // BUT_L_AllSteam
+            // 
+            this.BUT_L_AllSteam.Image = global::srcrepair.Properties.Resources.Add;
+            this.BUT_L_AllSteam.Name = "BUT_L_AllSteam";
+            resources.ApplyResources(this.BUT_L_AllSteam, "BUT_L_AllSteam");
+            this.BUT_L_AllSteam.Click += new System.EventHandler(this.BUT_L_AllSteam_Click);
+            // 
+            // BUT_L_AllSRC
+            // 
+            this.BUT_L_AllSRC.Image = global::srcrepair.Properties.Resources.Add;
+            this.BUT_L_AllSRC.Name = "BUT_L_AllSRC";
+            resources.ApplyResources(this.BUT_L_AllSRC, "BUT_L_AllSRC");
+            this.BUT_L_AllSRC.Click += new System.EventHandler(this.BUT_L_AllSRC_Click);
             // 
             // LoginSel
             // 
@@ -1246,36 +1321,6 @@
             this.CE_SaveCfgDialog.DefaultExt = "cfg";
             resources.ApplyResources(this.CE_SaveCfgDialog, "CE_SaveCfgDialog");
             // 
-            // BEd_BName
-            // 
-            resources.ApplyResources(this.BEd_BName, "BEd_BName");
-            this.BEd_BName.Name = "BEd_BName";
-            this.BEd_BName.ReadOnly = true;
-            // 
-            // BEd_BType
-            // 
-            resources.ApplyResources(this.BEd_BType, "BEd_BType");
-            this.BEd_BType.Name = "BEd_BType";
-            this.BEd_BType.ReadOnly = true;
-            // 
-            // BEd_BSize
-            // 
-            resources.ApplyResources(this.BEd_BSize, "BEd_BSize");
-            this.BEd_BSize.Name = "BEd_BSize";
-            this.BEd_BSize.ReadOnly = true;
-            // 
-            // BEd_BData
-            // 
-            resources.ApplyResources(this.BEd_BData, "BEd_BData");
-            this.BEd_BData.Name = "BEd_BData";
-            this.BEd_BData.ReadOnly = true;
-            // 
-            // BEd_BRealName
-            // 
-            resources.ApplyResources(this.BEd_BRealName, "BEd_BRealName");
-            this.BEd_BRealName.Name = "BEd_BRealName";
-            this.BEd_BRealName.ReadOnly = true;
-            // 
             // frmMainW
             // 
             resources.ApplyResources(this, "$this");
@@ -1469,6 +1514,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BSize;
         private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BData;
         private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BRealName;
+        private System.Windows.Forms.ToolStripSplitButton BUT_CrBkupReg;
+        private System.Windows.Forms.ToolStripSeparator BUT_Sep2;
+        private System.Windows.Forms.ToolStripMenuItem BUT_L_GameSettings;
+        private System.Windows.Forms.ToolStripMenuItem BUT_L_AllSteam;
+        private System.Windows.Forms.ToolStripMenuItem BUT_L_AllSRC;
     }
 }
 

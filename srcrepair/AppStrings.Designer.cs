@@ -124,7 +124,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Restore file {0}?.
+        ///   Looks up a localized string similar to Restore file {0} of {1}?.
         /// </summary>
         internal static string BU_QMsg {
             get {
@@ -147,6 +147,15 @@ namespace srcrepair {
         internal static string BU_RestSuccessful {
             get {
                 return ResourceManager.GetString("BU_RestSuccessful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please select item from drop-down list!.
+        /// </summary>
+        internal static string BU_TBSelCat {
+            get {
+                return ResourceManager.GetString("BU_TBSelCat", resourceCulture);
             }
         }
         

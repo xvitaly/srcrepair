@@ -436,7 +436,7 @@
     <comment>Сообщение при пустом списке резервных копий</comment>
   </data>
   <data name="BU_QMsg" xml:space="preserve">
-    <value>Вы уверены, что хотите восстановить файл {0}?</value>
+    <value>Вы уверены, что хотите восстановить файл {0} от {1}?</value>
     <comment>Сообщение при попытке восстановить файл резервной копии</comment>
   </data>
   <data name="BU_RestFailed" xml:space="preserve">
@@ -446,5 +446,9 @@
   <data name="BU_RestSuccessful" xml:space="preserve">
     <value>Резервная копия была успешно восстановлена!</value>
     <comment>Сообщение об успешном восстановлении резервной копиии</comment>
+  </data>
+  <data name="BU_TBSelCat" xml:space="preserve">
+    <value>Пожалуйста выберите резервную копию чего Вы хотите создать из выпадающего списка!</value>
+    <comment>Сообщение при прямом нажатии на кнопку создания резервных копий реестра</comment>
   </data>
 </root>
