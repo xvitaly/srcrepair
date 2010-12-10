@@ -88,6 +88,69 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There was an error occured. File was not removed!.
+        /// </summary>
+        internal static string BU_DelFailed {
+            get {
+                return ResourceManager.GetString("BU_DelFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove selected backup file?.
+        /// </summary>
+        internal static string BU_DelMsg {
+            get {
+                return ResourceManager.GetString("BU_DelMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Backup was successfully removed!.
+        /// </summary>
+        internal static string BU_DelSuccessful {
+            get {
+                return ResourceManager.GetString("BU_DelSuccessful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No backup files detected. Please, refresh list and try again later!.
+        /// </summary>
+        internal static string BU_NoFiles {
+            get {
+                return ResourceManager.GetString("BU_NoFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restore file {0}?.
+        /// </summary>
+        internal static string BU_QMsg {
+            get {
+                return ResourceManager.GetString("BU_QMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There was an error occured. BackUp was not restored!.
+        /// </summary>
+        internal static string BU_RestFailed {
+            get {
+                return ResourceManager.GetString("BU_RestFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BackUp was successfully restored!.
+        /// </summary>
+        internal static string BU_RestSuccessful {
+            get {
+                return ResourceManager.GetString("BU_RestSuccessful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save the configuration file?.
         /// </summary>
         internal static string CE_CfgSV {

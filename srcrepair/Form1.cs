@@ -2091,7 +2091,7 @@ namespace srcrepair
             DirectoryInfo DInfo = new DirectoryInfo(GV.FullBackUpDirPath);
             // Считываем список файлов по заданной маске...
             FileInfo[] DirList = DInfo.GetFiles("*.*");
-            //
+            // Инициализируем буферную переменную...
             string Buf;
             // Начинаем обход массива...
             foreach (FileInfo DItem in DirList)
@@ -2105,11 +2105,81 @@ namespace srcrepair
         private void BUT_RestoreB_Click(object sender, EventArgs e)
         {
             // Восстановим выделенный бэкап...
+            if (BU_ListTable.Rows.Count > 0)
+            {
+                // Получаем имя файла...
+                string FName = BU_ListTable.Rows[BU_ListTable.CurrentRow.Index].Cells[4].Value.ToString();
+                // Запрашиваем подтверждение...
+                DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("BU_QMsg"), FName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (UserConfirmation == DialogResult.Yes)
+                {
+                    // Проверяем что восстанавливать: конфиг или реестр...
+                    if (Path.GetExtension(FName) != ".reg")
+                    {
+                        // Сохраняем оригинальное имя файла резервной копии для функции копирования...
+                        string OrigName = FName;
+                        // Отбрасываем двойное расширение...
+                        FName = Path.GetFileNameWithoutExtension(FName);
+                        try
+                        {
+                            // Копируем файл...
+                            File.Copy(GV.FullBackUpDirPath + OrigName, GV.FullCfgPath + FName, true);
+                            // Показываем сообщение об успешном восстановлении...
+                            MessageBox.Show(RM.GetString("BU_RestSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch
+                        {
+                            // Произошло исключение...
+                            MessageBox.Show(RM.GetString("BU_RestFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    else
+                    {
+                        // Восстанавливаем файл реестра...
+                        try
+                        {
+                            // Восстанавливаем...
+                            Process.Start("regedit.exe", @"/s """ + GV.FullBackUpDirPath + FName + @"""");
+                            // Показываем сообщение об успешном восстановлении...
+                            MessageBox.Show(RM.GetString("BU_RestSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch
+                        {
+                            // Произошло исключение...
+                            MessageBox.Show(RM.GetString("BU_RestFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show(RM.GetString("BU_NoFiles"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void BUT_DelB_Click(object sender, EventArgs e)
         {
             // Удалим выбранный бэкап...
+            string FName = BU_ListTable.Rows[BU_ListTable.CurrentRow.Index].Cells[4].Value.ToString();
+            // Запросим подтверждение...
+            DialogResult UserConfirmation = MessageBox.Show(RM.GetString("BU_DelMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (UserConfirmation == DialogResult.Yes)
+            {
+                try
+                {
+                    // Удаляем файл...
+                    File.Delete(GV.FullBackUpDirPath + BU_ListTable.Rows[BU_ListTable.CurrentRow.Index].Cells[4].Value.ToString());
+                    // Удаляем строку...
+                    BU_ListTable.Rows.Remove(BU_ListTable.CurrentRow);
+                    // Показываем сообщение об успешном удалении...
+                    MessageBox.Show(RM.GetString("BU_DelSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    // Произошло исключение при попытке удаления файла резервной копии...
+                    MessageBox.Show(RM.GetString("BU_DelFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
     }
 }

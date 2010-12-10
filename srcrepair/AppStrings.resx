@@ -342,4 +342,25 @@
   <data name="QI_InstUnav" xml:space="preserve">
     <value>Please select file before pressing this button and try again!</value>
   </data>
+  <data name="BU_DelFailed" xml:space="preserve">
+    <value>There was an error occured. File was not removed!</value>
+  </data>
+  <data name="BU_DelMsg" xml:space="preserve">
+    <value>Remove selected backup file?</value>
+  </data>
+  <data name="BU_DelSuccessful" xml:space="preserve">
+    <value>Backup was successfully removed!</value>
+  </data>
+  <data name="BU_NoFiles" xml:space="preserve">
+    <value>No backup files detected. Please, refresh list and try again later!</value>
+  </data>
+  <data name="BU_QMsg" xml:space="preserve">
+    <value>Restore file {0}?</value>
+  </data>
+  <data name="BU_RestFailed" xml:space="preserve">
+    <value>There was an error occured. BackUp was not restored!</value>
+  </data>
+  <data name="BU_RestSuccessful" xml:space="preserve">
+    <value>BackUp was successfully restored!</value>
+  </data>
 </root>
