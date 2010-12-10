@@ -49,3 +49,7 @@ Team Fortress 2 Logo - Lopagof - CC3 - http://www.iconspedia.com/icon/team-fortr
 --------------------------------------------------------------------------------------------------------
 Wrench Icon - Brsev - CC3 - http://www.iconspedia.com/icon/wrench-14054.html
 --------------------------------------------------------------------------------------------------------
+Refresh.ico - GNOME icon artists - GPLv2 - http://www.iconspedia.com/icon/gnome-view-refresh-111-4.html
+--------------------------------------------------------------------------------------------------------
+Restore.ico - GNOME icon artists - GPLv2 - http://www.iconspedia.com/icon/gnome-edit-undo-11006.html
+--------------------------------------------------------------------------------------------------------

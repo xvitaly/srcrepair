@@ -126,6 +126,16 @@
             this.L_FP_ConfigSel = new System.Windows.Forms.Label();
             this.FP_TopLabel = new System.Windows.Forms.Label();
             this.RescueCentre = new System.Windows.Forms.TabPage();
+            this.BU_ListTable = new System.Windows.Forms.DataGridView();
+            this.BEd_BName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BEd_BType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BEd_BData = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BEd_BRealName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BU_BToolbar = new System.Windows.Forms.ToolStrip();
+            this.BUT_Refresh = new System.Windows.Forms.ToolStripButton();
+            this.BUT_Sep1 = new System.Windows.Forms.ToolStripSeparator();
+            this.BUT_RestoreB = new System.Windows.Forms.ToolStripButton();
+            this.BUT_DelB = new System.Windows.Forms.ToolStripButton();
             this.LoginSel = new System.Windows.Forms.ComboBox();
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.ToolsMNU = new System.Windows.Forms.ToolStripMenuItem();
@@ -171,6 +181,9 @@
             this.PS_GB_Solver.SuspendLayout();
             this.FPSCfgInstall.SuspendLayout();
             this.FP_GB_Desc.SuspendLayout();
+            this.RescueCentre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BU_ListTable)).BeginInit();
+            this.BU_BToolbar.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.StatusBar.SuspendLayout();
             this.SuspendLayout();
@@ -599,6 +612,7 @@
             // CE_Save
             // 
             this.CE_Save.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_Save.Image = global::srcrepair.Properties.Resources.Save;
             resources.ApplyResources(this.CE_Save, "CE_Save");
             this.CE_Save.Name = "CE_Save";
             this.CE_Save.Click += new System.EventHandler(this.CE_Save_Click);
@@ -606,6 +620,7 @@
             // CE_SaveAs
             // 
             this.CE_SaveAs.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_SaveAs.Image = global::srcrepair.Properties.Resources.SaveAs;
             resources.ApplyResources(this.CE_SaveAs, "CE_SaveAs");
             this.CE_SaveAs.Name = "CE_SaveAs";
             this.CE_SaveAs.Click += new System.EventHandler(this.CE_SaveAs_Click);
@@ -957,9 +972,87 @@
             // 
             // RescueCentre
             // 
+            this.RescueCentre.Controls.Add(this.BU_ListTable);
+            this.RescueCentre.Controls.Add(this.BU_BToolbar);
             resources.ApplyResources(this.RescueCentre, "RescueCentre");
             this.RescueCentre.Name = "RescueCentre";
             this.RescueCentre.UseVisualStyleBackColor = true;
+            // 
+            // BU_ListTable
+            // 
+            this.BU_ListTable.AllowUserToAddRows = false;
+            this.BU_ListTable.AllowUserToDeleteRows = false;
+            this.BU_ListTable.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.BU_ListTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BU_ListTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.BEd_BName,
+            this.BEd_BType,
+            this.BEd_BData,
+            this.BEd_BRealName});
+            resources.ApplyResources(this.BU_ListTable, "BU_ListTable");
+            this.BU_ListTable.MultiSelect = false;
+            this.BU_ListTable.Name = "BU_ListTable";
+            this.BU_ListTable.ReadOnly = true;
+            // 
+            // BEd_BName
+            // 
+            resources.ApplyResources(this.BEd_BName, "BEd_BName");
+            this.BEd_BName.Name = "BEd_BName";
+            this.BEd_BName.ReadOnly = true;
+            // 
+            // BEd_BType
+            // 
+            resources.ApplyResources(this.BEd_BType, "BEd_BType");
+            this.BEd_BType.Name = "BEd_BType";
+            this.BEd_BType.ReadOnly = true;
+            // 
+            // BEd_BData
+            // 
+            resources.ApplyResources(this.BEd_BData, "BEd_BData");
+            this.BEd_BData.Name = "BEd_BData";
+            this.BEd_BData.ReadOnly = true;
+            // 
+            // BEd_BRealName
+            // 
+            resources.ApplyResources(this.BEd_BRealName, "BEd_BRealName");
+            this.BEd_BRealName.Name = "BEd_BRealName";
+            this.BEd_BRealName.ReadOnly = true;
+            // 
+            // BU_BToolbar
+            // 
+            this.BU_BToolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BUT_Refresh,
+            this.BUT_Sep1,
+            this.BUT_RestoreB,
+            this.BUT_DelB});
+            resources.ApplyResources(this.BU_BToolbar, "BU_BToolbar");
+            this.BU_BToolbar.Name = "BU_BToolbar";
+            // 
+            // BUT_Refresh
+            // 
+            this.BUT_Refresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.BUT_Refresh, "BUT_Refresh");
+            this.BUT_Refresh.Name = "BUT_Refresh";
+            this.BUT_Refresh.Click += new System.EventHandler(this.BUT_Refresh_Click);
+            // 
+            // BUT_Sep1
+            // 
+            this.BUT_Sep1.Name = "BUT_Sep1";
+            resources.ApplyResources(this.BUT_Sep1, "BUT_Sep1");
+            // 
+            // BUT_RestoreB
+            // 
+            this.BUT_RestoreB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.BUT_RestoreB, "BUT_RestoreB");
+            this.BUT_RestoreB.Name = "BUT_RestoreB";
+            this.BUT_RestoreB.Click += new System.EventHandler(this.BUT_RestoreB_Click);
+            // 
+            // BUT_DelB
+            // 
+            this.BUT_DelB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.BUT_DelB, "BUT_DelB");
+            this.BUT_DelB.Name = "BUT_DelB";
+            this.BUT_DelB.Click += new System.EventHandler(this.BUT_DelB_Click);
             // 
             // LoginSel
             // 
@@ -1211,6 +1304,11 @@
             this.FPSCfgInstall.ResumeLayout(false);
             this.FPSCfgInstall.PerformLayout();
             this.FP_GB_Desc.ResumeLayout(false);
+            this.RescueCentre.ResumeLayout(false);
+            this.RescueCentre.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BU_ListTable)).EndInit();
+            this.BU_BToolbar.ResumeLayout(false);
+            this.BU_BToolbar.PerformLayout();
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
             this.StatusBar.ResumeLayout(false);
@@ -1349,6 +1447,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CE_CVName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CE_CVal;
         private System.Windows.Forms.Button PS_RemOldBin;
+        private System.Windows.Forms.DataGridView BU_ListTable;
+        private System.Windows.Forms.ToolStrip BU_BToolbar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BRealName;
+        private System.Windows.Forms.ToolStripButton BUT_Refresh;
+        private System.Windows.Forms.ToolStripSeparator BUT_Sep1;
+        private System.Windows.Forms.ToolStripButton BUT_RestoreB;
+        private System.Windows.Forms.ToolStripButton BUT_DelB;
     }
 }
 

@@ -400,39 +400,8 @@
   <data name="CE_Open.Text" xml:space="preserve">
     <value>Открыть конфиг из файла</value>
   </data>
-  <data name="CE_Save.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAixJREFUOE+tk91L
-        k3EUx/cvdN9N0EW3NTWGa7EaPOUcyqphWBG9PZEv5dJlmqhYmUYtXyBb4dJJy+kknFT4BqZIjaFMJUsz
-        V7TEoabYRDD49ju/6Pm1Mi+iH5zLz+c855zvo1L9j/fsaRRUvvZltHmX8Ni9gMaGCO47ZlBb8wn22yHc
-        KJ9CackECgteIy93FBfOB6H0JrC3B6ipXsVGb2V1Dca0XhxOe8JLEXhbF7mgsuLLX3mCIwsr2G1+DrVa
-        huWQRwjcj+a5oLTk87qCn/D78CLiTD4UXJ7GAXOTEDjrZ7ngku3dH4Jf4ZHJCLZJXlhzxpGa4hSCurth
-        LsjOGo0R/A4PBsPYrHdDlgMwmRxCUF31kQvkMwFFsB7c4/+ATYkNOHL0BZKSaoXgZuU0urvATgkcP/kK
-        lmMDfNu0MJqZPps6/4D7cNDSCUmyC8HVskl0+MAyADS5vrG7f0X59Tm+VFoYzZyZEVTg5NR2GAwVQnCl
-        cByeZuChc40FJwpjek5MmU/YkH6uiHdOTmHwfg/0+jIhsOWNMRiouhPlnUnAQoI4rYSht7MYm5qDnHsN
-        e41tHNbucUGnKxICiqXjHpTPJgHBZ/Nv4U1oHqGZJVwstiNe72JwI+J3PYA2MV8IMjOG2dzLfOatBg+2
-        7JDQ0tEPX9cguvv8GHg5hH0mC9S6eiQweLumDhqNVQgo06dP9fN4UsIoJHRnOhVtmxZGM1NXKoJ3JmTH
-        Cv71r/4OTrQ4xWMwWlcAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="CE_Save.Text" xml:space="preserve">
     <value>Сохранить изменения в файл</value>
-  </data>
-  <data name="CE_SaveAs.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAgxJREFUOE+lkvtL
-        U2EYx+0PEbtpFwnBKPGKiJImGP0gYhIYs1E5GF5gIxkpA00JRSmMEF0ohMh+GaRWYlqabMVcNdS2QpaI
-        VqiDIYhk397vA6fXhCjyhYdzeM/5fp7vczkAdeL2cwho7v/wWzT1zcN+Pwhr51uY2/y41PQaF+wzKKiZ
-        QvaN58g0jyLd5KEUcQbg+84P/Cm2tncQjW3j68YWIqubCC3FcOJc478BAuGoZM6zvoRnakXEruEIjhc4
-        /g5gZop9c+voGAyLbQIfeBZxLL9BA1jzXvuGbWamuKh+GmmVbswE19A59FEBbmoAG7YbsLtm2mZmiml9
-        cvabNDwpz6YB7LYBoMXCumkJr7LOmnnHzBQ/9X2Bo2cOibm1GsBREbAQiYmw/8lnuCeWkVzcgnZlnw1j
-        3HV/wuNXK6i/9x5Hc6wawDlTXHbLJ+LZUBQPRyKwdQdxutwl1h+NLXHh5Ht1ewBHsiwawCW57HyDAfWR
-        dvl0uhZQ1eqX8aVc7EKLqrum651ATLf9OJx5XQM4KmY0xPzZ0hFAiQJnXB0WwME0E3IsL5B17ZlADqWb
-        NYDrOepdlcysmTWWOrxqbceRWtaLk0VO1XW72D5Vckd2gMBfq8zdpmUG62NJvKM4+XyziDk24xmfWoGE
-        s1c0gHPmbrPTpHNJKOCo2G1mZs20zcwUJ5yp1AB5+8/zEwgF5GMVDxh4AAAAAElFTkSuQmCC
-</value>
   </data>
   <data name="CE_SaveAs.Text" xml:space="preserve">
     <value>Сохранить конфиг как...</value>
@@ -663,6 +632,56 @@
   </data>
   <data name="FP_TopLabel.Text" xml:space="preserve">
     <value>На этой странице Вы можете установить один из доступных и протестированных нами FPS-конфигов в игру. Конфиг представляет собой файл autoexec.cfg, который способен значительно увеличить производительность игры с потерей качества выдаваемой картинки. Установленный конфиг Вы можете редактировать в Редакторе. Внимание! Если Вы используете конфиг, то редактор графических настроек не сможет редактировать их (настройки, полученные из конфига имеют более высокий приоритет).</value>
+  </data>
+  <data name="BUT_Refresh.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAzVJREFUOE9jYICC
+        ////M8HYIBrIZ0TmQ8WYgOLMmHL19WDNeuE9aiaJs5tts+Ztc8xZfNg5b8le54wF820TJqeoBHbIwAzU
+        Cu2SUPLpSIQaBNGs5N0Wb5226JtV1sr/9vmr/nlUbP3vU7vzv1/t9n+hzbv+x7du+uiQMmcan0WFSlT1
+        il0uGXM2wF0ooHZIz61k8TfrnBXfLVLnXrFKXrTOKHbGQqfcRddD67f+y5ly4n/90gv/Z+68+b918bHv
+        W84+/e9duGgR3ACdqAld9lmLfnqVrevxqd5SYpO5VBAkKW9fzyEf3uHpW7H8cOeq8/+nbbn+e/6eu79X
+        H3/y3z5j9kK4Aao+XRsDajZNKpp1wSe4fleYXswi7tDQVczAoGRkgIaPTfzUGYv23f4/bfONL7P33Pvv
+        kDF3PtgArdB6Np2QyXVliy/KzJx5htW+fj8LWCMIQDWrBPS59S499mH9qSf/52y/82v2vkf/nTLnIryg
+        HdRn7Za7NNqjYG6IbkhfiE5IX7S6X2c0yHAGj4nshlGTp8bXrtkc17BhaWzj+iWJLZvXq/r3JMC94JA2
+        e3790nP/25ee+z17x7V//WvO/tcN7mtEuAI1TeROPMEn7d7uDU8PLjnzF0zedvf/rJ03vy/ce+u/UcLM
+        6XDNoLAAesW1eBF3eOsu56rF1ywSug+UC9nWL4O7wD134cJ5e+/+n7Htyvfp267+z+zc8UQvorcY6A1e
+        mCKz6MV8oc07syNadhXYpy98KuPRNQFugG/RkoVrTzz5P3Pv3T+z9tz937Ts7L/0/gPAqFpyTyd8Ur+M
+        U02AqtecXJuspRvNkuff9Srb9F/AptQebkBg7sQ1JVN3vJExCKiPb1rxuHDO+f9x3Uf/BTcf+O9bveO/
+        S/H6/za5y/9bpK/+61m157+We/E0qGZIbKnYZszil9EJBDJ5GVh47MQ0XLr0AmpPW6bOeW+TvfK3Xe7a
+        /2ZJS3/phnZeF9VyqwCqEwJi7npoNAMTDB9YAIgVQdkClAhBSYSBmduBjV8+kFNIJZSZW9wRKs4JpPmA
+        mA3uBSgDlKlAmB2IeaCKuIA0KxDDsjYwkTGAMBwAAOpLY8O3wHmFAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="BUT_RestoreB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAlNJREFUOE9jYEAD
+        ////ZwJiRnRxovirVjEwgxQeW8kpfX6DZOr/egYmojSCFME0n5zPIHHnZNq120f8NsPE9+9nYMFrEEzB
+        4QUM2s8v59z8///4/9uH/daANP3/zwD2DoiGsVEMq4c68+RqbucX11pf/v+95f/vjwv/fng27cezyxnX
+        bx5wWX14uaAnSBNILVZDTq2RTPvwrPPb/x9L/v982/Xn78dJ//99nvL//7cp//986v737Xnd/yvbTeZs
+        m8jAjuwquEuu7jFd8/NF7P8Pt4R/frot/x+E31+X/PfuttSvd7fVfny6r/f7+9OA/6e3qk6FuQTFG6AA
+        PLNede7720b/X19h+PPyAuO/dzeU/r+7qfb//S3R/68uMP59dYnh75vrNv9PLuCxQw50lMA5u0mt5/V1
+        8/8fbwv+v7bf7OSxZaLxt3forXp5xfwP0ODfH24r/7+wSbUfxQCoUxhh0fjwsGTlp/t+/2/u11sCc+bZ
+        DYpFb65r/f94i/f/pW06KLGD7BXG0FBIQtozX7b60QGFLTDJi31cRi8v6Px4d0Py/7MzSpOxuQCmFhTn
+        IMziasmgA6TZQBIb+xWm/Hgk/f/NZdW/7eUc4DAAArBlMABKsqxADIombiDmh7J5pzeKT/tyX+3//5cq
+        //trxLuhGkBq4fkFpBlkE0yjMJAtAcTiqooMZh/uaP74dFPpb2OOUAfUUB4gzYnsArCTgZgDiEGSINtB
+        hoiBaGcLZg8zXRZbqI28UItQXADzBsggkGtAhoG8AjIQhEEAJAdig+RQsjoAQ9YLH4Nhb5UAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="BUT_DelB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAW5JREFUOE+FkjFr
+        AkEQha8SbMTKwkLEQgQRsRHFxsZSxMLOH2BhI1jYWljYWGvpn0hIF0QlCUQMhHAkEAJJTBNSpEk52Td3
+        s+zp3Sk8FnW+92Zm17Lcz/tySS+zGcn3oNOeTOh1sfDWAT7M57TvdGjbbgea2IMBQetqlR5HI6fOhFf1
+        Om0bDV8TE96USgShGwttIxkwBHfI7ERgAeXc9XpOFygWUE4U4XcU2cMhJ94UCrTJ5Vgno4oJCmFipggM
+        AyhwT/jjuE2krdNprbAl63G4CwVdx2K0ise1ds3m2Wu2MDMKr6JRD3yfTPKSQ98JYL4RlWqmA4YeUim+
+        Zl8TgZEs6beJBEECP2UyBJ2McgzrdPdhIRngczZLH8UiS5vgSaLtSzdZz27Mi2LAb/k8HdSCv8tllt3v
+        Oy/xIhJh6fZ9lgUTJAP8rdVYn9Opsw+MIAZhm963WvRTqdCfCvgaj73LxCh33e7Ze0bbOlmF/wNyRHbQ
+        M5ybIQAAAABJRU5ErkJggg==
+</value>
   </data>
   <data name="LoginSel.Location" type="System.Drawing.Point, System.Drawing">
     <value>93, 35</value>

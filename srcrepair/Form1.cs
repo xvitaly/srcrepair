@@ -2083,5 +2083,20 @@ namespace srcrepair
             // Открываем в браузере страницу сообщения об ошибке в багтрекере гуглкода...
             Process.Start("http://code.google.com/p/srcrepair/issues/entry");
         }
+
+        private void BUT_Refresh_Click(object sender, EventArgs e)
+        {
+            // Считаем список резервных копий и заполним таблицу...
+        }
+
+        private void BUT_RestoreB_Click(object sender, EventArgs e)
+        {
+            // Восстановим выделенный бэкап...
+        }
+
+        private void BUT_DelB_Click(object sender, EventArgs e)
+        {
+            // Удалим выбранный бэкап...
+        }
     }
 }
