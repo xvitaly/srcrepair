@@ -638,37 +638,43 @@
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAzVJREFUOE9jYICC
         ////M8HYIBrIZ0TmQ8WYgOLMmHL19WDNeuE9aiaJs5tts+Ztc8xZfNg5b8le54wF820TJqeoBHbIwAzU
-        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
+        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
-        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
+        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
 </value>
+  </data>
+  <data name="BUT_Refresh.Text" xml:space="preserve">
+    <value>Обновить список резервных копий...</value>
   </data>
   <data name="BUT_RestoreB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAlNJREFUOE9jYEAD
         ////ZwJiRnRxovirVjEwgxQeW8kpfX6DZOr/egYmojSCFME0n5zPIHHnZNq120f8NsPE9+9nYMFrEEzB
-        4QUM2s8v59z8///4/9uH/daANP3/zwD2DoiGsVEMq4c68+RqbucX11pf/v+95f/vjwv/fng27cezyxnX
-        bx5wWX14uaAnSBNILVZDTq2RTPvwrPPb/x9L/v982/Xn78dJ//99nvL//7cp//986v737Xnd/yvbTeZs
-        m8jAjuwquEuu7jFd8/NF7P8Pt4R/frot/x+E31+X/PfuttSvd7fVfny6r/f7+9OA/6e3qk6FuQTFG6AA
-        PLNede7720b/X19h+PPyAuO/dzeU/r+7qfb//S3R/68uMP59dYnh75vrNv9PLuCxQw50lMA5u0mt5/V1
-        8/8fbwv+v7bf7OSxZaLxt3forXp5xfwP0ODfH24r/7+wSbUfxQCoUxhh0fjwsGTlp/t+/2/u11sCc+bZ
-        DYpFb65r/f94i/f/pW06KLGD7BXG0FBIQtozX7b60QGFLTDJi31cRi8v6Px4d0Py/7MzSpOxuQCmFhTn
-        IMziasmgA6TZQBIb+xWm/Hgk/f/NZdW/7eUc4DAAArBlMABKsqxADIombiDmh7J5pzeKT/tyX+3//5cq
-        //trxLuhGkBq4fkFpBlkE0yjMJAtAcTiqooMZh/uaP74dFPpb2OOUAfUUB4gzYnsArCTgZgDiEGSINtB
-        hoiBaGcLZg8zXRZbqI28UItQXADzBsggkGtAhoG8AjIQhEEAJAdig+RQsjoAQ9YLH4Nhb5UAAAAASUVO
+        4QUM2s8v59z8///4/9uH/daANP3/zwD2DoiGsVEMq4c68+RqbucX11pf/v+95f/P9wv/vns27cezyxnX
+        bx5wWX14uaAnSBNILVZDTq2RTPvwrP3b/x9L/n9/3fHn78dJ//99nvL//7cp/3996Pz37Xnd/yvbTeZs
+        m8jAjuwquEuu7jFd8/NF7P93t4R/frot/x+E316V/PfmtuSvN7fVfny4r/P7+9OA/6e3qk6FuQTFG6AA
+        PLNede7720b/X15h+PP8HOO/dzeU/r+7qfb//S3R/y/OMf59cYHh75vrNv9PLuCxQw50lMA5u0mt5/V1
+        8/8fbwv+v7bf7OSxZaLxt3forXp+xfQP0ODfH24r/7+wSbUfxQCoUxhh0fjwsGTlp/t+/2/u11sCc+bZ
+        DYpFb65r/f94i/f/pW06KLGD7BXG0FBIQtozX7b60QGFLTDJi31cRi/P6fx4d0Py/7MzSpOxuQCmFhTn
+        IMziasmgA6TZQBIb+xWm/Hgk/f/VRdW/7eUc4DAAArBlMABKsqxADIombiDmh7J5pzeKT/tyX+3//5cq
+        //trxLuhGkBq4fkFpBlkE0yjMJAtAcTiqooMZu/uaP74cF3pb2OOUAfUUB4gzYnsArCTgZgDiEGSINtB
+        hoiBaGcLZg8zXRZbqI28UItQXADzBsggkGtAhoG8AjIQhEEAJAdig+RQsjoAs3gK3K4r9CsAAAAASUVO
         RK5CYII=
 </value>
+  </data>
+  <data name="BUT_RestoreB.Text" xml:space="preserve">
+    <value>Восстановить выбранную резервную копию</value>
   </data>
   <data name="BUT_DelB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -682,6 +688,30 @@
         Oy/xIhJh6fZ9lgUTJAP8rdVYn9Opsw+MIAZhm963WvRTqdCfCvgaj73LxCh33e7Ze0bbOlmF/wNyRHbQ
         M5ybIQAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="BUT_DelB.Text" xml:space="preserve">
+    <value>Удалить выбранную резервную копию</value>
+  </data>
+  <data name="BUT_CrBkupReg.Text" xml:space="preserve">
+    <value>Создать резервную копию реестра</value>
+  </data>
+  <data name="BUT_L_GameSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>293, 22</value>
+  </data>
+  <data name="BUT_L_GameSettings.Text" xml:space="preserve">
+    <value>Создать бэкап графических настроек</value>
+  </data>
+  <data name="BUT_L_AllSteam.Size" type="System.Drawing.Size, System.Drawing">
+    <value>293, 22</value>
+  </data>
+  <data name="BUT_L_AllSteam.Text" xml:space="preserve">
+    <value>Создать бэкап всех настроек Steam</value>
+  </data>
+  <data name="BUT_L_AllSRC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>293, 22</value>
+  </data>
+  <data name="BUT_L_AllSRC.Text" xml:space="preserve">
+    <value>Создать бэкап настроек всех Source-игр</value>
   </data>
   <data name="LoginSel.Location" type="System.Drawing.Point, System.Drawing">
     <value>93, 35</value>
@@ -811,6 +841,18 @@
   </data>
   <data name="CE_SaveCfgDialog.Filter" xml:space="preserve">
     <value>Файлы конфигов (*.cfg)|*.cfg</value>
+  </data>
+  <data name="BEd_BName.HeaderText" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="BEd_BType.HeaderText" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="BEd_BSize.HeaderText" xml:space="preserve">
+    <value>Размер</value>
+  </data>
+  <data name="BEd_BData.HeaderText" xml:space="preserve">
+    <value>Дата</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -366,4 +366,13 @@
   <data name="BU_TBSelCat" xml:space="preserve">
     <value>Please select item from drop-down list!</value>
   </data>
+  <data name="BU_RegCreate" xml:space="preserve">
+    <value>Create registry backup now?</value>
+  </data>
+  <data name="BU_RegDone" xml:space="preserve">
+    <value>Registry backup was successfully created!</value>
+  </data>
+  <data name="BU_RegErr" xml:space="preserve">
+    <value>There was an error occured. Backup file was not created!</value>
+  </data>
 </root>

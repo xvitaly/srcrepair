@@ -133,6 +133,33 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create registry backup now?.
+        /// </summary>
+        internal static string BU_RegCreate {
+            get {
+                return ResourceManager.GetString("BU_RegCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registry backup was successfully created!.
+        /// </summary>
+        internal static string BU_RegDone {
+            get {
+                return ResourceManager.GetString("BU_RegDone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There was an error occured. Backup file was not created!.
+        /// </summary>
+        internal static string BU_RegErr {
+            get {
+                return ResourceManager.GetString("BU_RegErr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to There was an error occured. BackUp was not restored!.
         /// </summary>
         internal static string BU_RestFailed {
