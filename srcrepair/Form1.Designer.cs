@@ -127,6 +127,11 @@
             this.FP_TopLabel = new System.Windows.Forms.Label();
             this.RescueCentre = new System.Windows.Forms.TabPage();
             this.BU_ListTable = new System.Windows.Forms.DataGridView();
+            this.BEd_BName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BEd_BType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BEd_BSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BEd_BData = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BEd_BRealName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BU_BToolbar = new System.Windows.Forms.ToolStrip();
             this.BUT_Refresh = new System.Windows.Forms.ToolStripButton();
             this.BUT_Sep1 = new System.Windows.Forms.ToolStripSeparator();
@@ -167,11 +172,6 @@
             this.L_AppSelector = new System.Windows.Forms.Label();
             this.CE_OpenCfgDialog = new System.Windows.Forms.OpenFileDialog();
             this.CE_SaveCfgDialog = new System.Windows.Forms.SaveFileDialog();
-            this.BEd_BName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BEd_BType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BEd_BSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BEd_BData = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BEd_BRealName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_Warning)).BeginInit();
@@ -196,18 +196,17 @@
             // 
             // MainTabControl
             // 
-            resources.ApplyResources(this.MainTabControl, "MainTabControl");
             this.MainTabControl.Controls.Add(this.GraphicTweaker);
             this.MainTabControl.Controls.Add(this.ConfigEditor);
             this.MainTabControl.Controls.Add(this.ProblemSolver);
             this.MainTabControl.Controls.Add(this.FPSCfgInstall);
             this.MainTabControl.Controls.Add(this.RescueCentre);
+            resources.ApplyResources(this.MainTabControl, "MainTabControl");
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.SelectedIndex = 0;
             // 
             // GraphicTweaker
             // 
-            resources.ApplyResources(this.GraphicTweaker, "GraphicTweaker");
             this.GraphicTweaker.Controls.Add(this.GT_Warning);
             this.GraphicTweaker.Controls.Add(this.GT_SaveApply);
             this.GraphicTweaker.Controls.Add(this.GT_Maximum_Performance);
@@ -247,13 +246,14 @@
             this.GraphicTweaker.Controls.Add(this.GT_ScreenType);
             this.GraphicTweaker.Controls.Add(this.GT_ResHor_Btn);
             this.GraphicTweaker.Controls.Add(this.L_GT_ResHor);
+            resources.ApplyResources(this.GraphicTweaker, "GraphicTweaker");
             this.GraphicTweaker.Name = "GraphicTweaker";
             this.GraphicTweaker.UseVisualStyleBackColor = true;
             // 
             // GT_Warning
             // 
-            resources.ApplyResources(this.GT_Warning, "GT_Warning");
             this.GT_Warning.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.GT_Warning, "GT_Warning");
             this.GT_Warning.Name = "GT_Warning";
             this.GT_Warning.TabStop = false;
             this.GT_Warning.Click += new System.EventHandler(this.GT_Warning_Click);
@@ -281,8 +281,8 @@
             // 
             // GT_LaunchOptions_Btn
             // 
-            resources.ApplyResources(this.GT_LaunchOptions_Btn, "GT_LaunchOptions_Btn");
             this.GT_LaunchOptions_Btn.Cursor = System.Windows.Forms.Cursors.Help;
+            resources.ApplyResources(this.GT_LaunchOptions_Btn, "GT_LaunchOptions_Btn");
             this.GT_LaunchOptions_Btn.Name = "GT_LaunchOptions_Btn";
             this.GT_LaunchOptions_Btn.TabStop = false;
             this.GT_LaunchOptions_Btn.UseVisualStyleBackColor = true;
@@ -315,18 +315,17 @@
             // 
             // GT_HDR
             // 
-            resources.ApplyResources(this.GT_HDR, "GT_HDR");
             this.GT_HDR.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GT_HDR.FormattingEnabled = true;
             this.GT_HDR.Items.AddRange(new object[] {
             resources.GetString("GT_HDR.Items"),
             resources.GetString("GT_HDR.Items1"),
             resources.GetString("GT_HDR.Items2")});
+            resources.ApplyResources(this.GT_HDR, "GT_HDR");
             this.GT_HDR.Name = "GT_HDR";
             // 
             // GT_DxMode
             // 
-            resources.ApplyResources(this.GT_DxMode, "GT_DxMode");
             this.GT_DxMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GT_DxMode.FormattingEnabled = true;
             this.GT_DxMode.Items.AddRange(new object[] {
@@ -334,6 +333,7 @@
             resources.GetString("GT_DxMode.Items1"),
             resources.GetString("GT_DxMode.Items2"),
             resources.GetString("GT_DxMode.Items3")});
+            resources.ApplyResources(this.GT_DxMode, "GT_DxMode");
             this.GT_DxMode.Name = "GT_DxMode";
             // 
             // GT_ResVert
@@ -378,12 +378,12 @@
             // 
             // GT_MotionBlur
             // 
-            resources.ApplyResources(this.GT_MotionBlur, "GT_MotionBlur");
             this.GT_MotionBlur.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GT_MotionBlur.FormattingEnabled = true;
             this.GT_MotionBlur.Items.AddRange(new object[] {
             resources.GetString("GT_MotionBlur.Items"),
             resources.GetString("GT_MotionBlur.Items1")});
+            resources.ApplyResources(this.GT_MotionBlur, "GT_MotionBlur");
             this.GT_MotionBlur.Name = "GT_MotionBlur";
             // 
             // L_GT_VSync
@@ -403,17 +403,16 @@
             // 
             // GT_VSync
             // 
-            resources.ApplyResources(this.GT_VSync, "GT_VSync");
             this.GT_VSync.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GT_VSync.FormattingEnabled = true;
             this.GT_VSync.Items.AddRange(new object[] {
             resources.GetString("GT_VSync.Items"),
             resources.GetString("GT_VSync.Items1")});
+            resources.ApplyResources(this.GT_VSync, "GT_VSync");
             this.GT_VSync.Name = "GT_VSync";
             // 
             // GT_Filtering
             // 
-            resources.ApplyResources(this.GT_Filtering, "GT_Filtering");
             this.GT_Filtering.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GT_Filtering.FormattingEnabled = true;
             this.GT_Filtering.Items.AddRange(new object[] {
@@ -423,11 +422,11 @@
             resources.GetString("GT_Filtering.Items3"),
             resources.GetString("GT_Filtering.Items4"),
             resources.GetString("GT_Filtering.Items5")});
+            resources.ApplyResources(this.GT_Filtering, "GT_Filtering");
             this.GT_Filtering.Name = "GT_Filtering";
             // 
             // GT_AntiAliasing
             // 
-            resources.ApplyResources(this.GT_AntiAliasing, "GT_AntiAliasing");
             this.GT_AntiAliasing.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GT_AntiAliasing.FormattingEnabled = true;
             this.GT_AntiAliasing.Items.AddRange(new object[] {
@@ -438,6 +437,7 @@
             resources.GetString("GT_AntiAliasing.Items4"),
             resources.GetString("GT_AntiAliasing.Items5"),
             resources.GetString("GT_AntiAliasing.Items6")});
+            resources.ApplyResources(this.GT_AntiAliasing, "GT_AntiAliasing");
             this.GT_AntiAliasing.Name = "GT_AntiAliasing";
             // 
             // L_GT_ColorCorrectionT
@@ -457,33 +457,33 @@
             // 
             // GT_ColorCorrectionT
             // 
-            resources.ApplyResources(this.GT_ColorCorrectionT, "GT_ColorCorrectionT");
             this.GT_ColorCorrectionT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GT_ColorCorrectionT.FormattingEnabled = true;
             this.GT_ColorCorrectionT.Items.AddRange(new object[] {
             resources.GetString("GT_ColorCorrectionT.Items"),
             resources.GetString("GT_ColorCorrectionT.Items1")});
+            resources.ApplyResources(this.GT_ColorCorrectionT, "GT_ColorCorrectionT");
             this.GT_ColorCorrectionT.Name = "GT_ColorCorrectionT";
             // 
             // GT_ShadowQuality
             // 
-            resources.ApplyResources(this.GT_ShadowQuality, "GT_ShadowQuality");
             this.GT_ShadowQuality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GT_ShadowQuality.FormattingEnabled = true;
             this.GT_ShadowQuality.Items.AddRange(new object[] {
             resources.GetString("GT_ShadowQuality.Items"),
             resources.GetString("GT_ShadowQuality.Items1")});
+            resources.ApplyResources(this.GT_ShadowQuality, "GT_ShadowQuality");
             this.GT_ShadowQuality.Name = "GT_ShadowQuality";
             // 
             // GT_WaterQuality
             // 
-            resources.ApplyResources(this.GT_WaterQuality, "GT_WaterQuality");
             this.GT_WaterQuality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GT_WaterQuality.FormattingEnabled = true;
             this.GT_WaterQuality.Items.AddRange(new object[] {
             resources.GetString("GT_WaterQuality.Items"),
             resources.GetString("GT_WaterQuality.Items1"),
             resources.GetString("GT_WaterQuality.Items2")});
+            resources.ApplyResources(this.GT_WaterQuality, "GT_WaterQuality");
             this.GT_WaterQuality.Name = "GT_WaterQuality";
             // 
             // L_GT_ShaderQuality
@@ -503,34 +503,34 @@
             // 
             // GT_ShaderQuality
             // 
-            resources.ApplyResources(this.GT_ShaderQuality, "GT_ShaderQuality");
             this.GT_ShaderQuality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GT_ShaderQuality.FormattingEnabled = true;
             this.GT_ShaderQuality.Items.AddRange(new object[] {
             resources.GetString("GT_ShaderQuality.Items"),
             resources.GetString("GT_ShaderQuality.Items1")});
+            resources.ApplyResources(this.GT_ShaderQuality, "GT_ShaderQuality");
             this.GT_ShaderQuality.Name = "GT_ShaderQuality";
             // 
             // GT_TextureQuality
             // 
-            resources.ApplyResources(this.GT_TextureQuality, "GT_TextureQuality");
             this.GT_TextureQuality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GT_TextureQuality.FormattingEnabled = true;
             this.GT_TextureQuality.Items.AddRange(new object[] {
             resources.GetString("GT_TextureQuality.Items"),
             resources.GetString("GT_TextureQuality.Items1"),
             resources.GetString("GT_TextureQuality.Items2")});
+            resources.ApplyResources(this.GT_TextureQuality, "GT_TextureQuality");
             this.GT_TextureQuality.Name = "GT_TextureQuality";
             // 
             // GT_ModelQuality
             // 
-            resources.ApplyResources(this.GT_ModelQuality, "GT_ModelQuality");
             this.GT_ModelQuality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GT_ModelQuality.FormattingEnabled = true;
             this.GT_ModelQuality.Items.AddRange(new object[] {
             resources.GetString("GT_ModelQuality.Items"),
             resources.GetString("GT_ModelQuality.Items1"),
             resources.GetString("GT_ModelQuality.Items2")});
+            resources.ApplyResources(this.GT_ModelQuality, "GT_ModelQuality");
             this.GT_ModelQuality.Name = "GT_ModelQuality";
             // 
             // L_GT_ScreenType
@@ -545,8 +545,8 @@
             // 
             // GT_ResVert_Btn
             // 
-            resources.ApplyResources(this.GT_ResVert_Btn, "GT_ResVert_Btn");
             this.GT_ResVert_Btn.Cursor = System.Windows.Forms.Cursors.Help;
+            resources.ApplyResources(this.GT_ResVert_Btn, "GT_ResVert_Btn");
             this.GT_ResVert_Btn.Name = "GT_ResVert_Btn";
             this.GT_ResVert_Btn.TabStop = false;
             this.GT_ResVert_Btn.UseVisualStyleBackColor = true;
@@ -554,18 +554,18 @@
             // 
             // GT_ScreenType
             // 
-            resources.ApplyResources(this.GT_ScreenType, "GT_ScreenType");
             this.GT_ScreenType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GT_ScreenType.FormattingEnabled = true;
             this.GT_ScreenType.Items.AddRange(new object[] {
             resources.GetString("GT_ScreenType.Items"),
             resources.GetString("GT_ScreenType.Items1")});
+            resources.ApplyResources(this.GT_ScreenType, "GT_ScreenType");
             this.GT_ScreenType.Name = "GT_ScreenType";
             // 
             // GT_ResHor_Btn
             // 
-            resources.ApplyResources(this.GT_ResHor_Btn, "GT_ResHor_Btn");
             this.GT_ResHor_Btn.Cursor = System.Windows.Forms.Cursors.Help;
+            resources.ApplyResources(this.GT_ResHor_Btn, "GT_ResHor_Btn");
             this.GT_ResHor_Btn.Name = "GT_ResHor_Btn";
             this.GT_ResHor_Btn.TabStop = false;
             this.GT_ResHor_Btn.UseVisualStyleBackColor = true;
@@ -578,15 +578,14 @@
             // 
             // ConfigEditor
             // 
-            resources.ApplyResources(this.ConfigEditor, "ConfigEditor");
             this.ConfigEditor.Controls.Add(this.CE_Toolbar);
             this.ConfigEditor.Controls.Add(this.CE_Editor);
+            resources.ApplyResources(this.ConfigEditor, "ConfigEditor");
             this.ConfigEditor.Name = "ConfigEditor";
             this.ConfigEditor.UseVisualStyleBackColor = true;
             // 
             // CE_Toolbar
             // 
-            resources.ApplyResources(this.CE_Toolbar, "CE_Toolbar");
             this.CE_Toolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CE_New,
             this.CE_Open,
@@ -599,86 +598,87 @@
             this.CE_Paste,
             this.toolStripSeparator1,
             this.CE_ShowHint});
+            resources.ApplyResources(this.CE_Toolbar, "CE_Toolbar");
             this.CE_Toolbar.Name = "CE_Toolbar";
             // 
             // CE_New
             // 
-            resources.ApplyResources(this.CE_New, "CE_New");
             this.CE_New.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.CE_New, "CE_New");
             this.CE_New.Name = "CE_New";
             this.CE_New.Click += new System.EventHandler(this.CE_New_Click);
             // 
             // CE_Open
             // 
-            resources.ApplyResources(this.CE_Open, "CE_Open");
             this.CE_Open.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.CE_Open, "CE_Open");
             this.CE_Open.Name = "CE_Open";
             this.CE_Open.Click += new System.EventHandler(this.CE_Open_Click);
             // 
             // CE_Save
             // 
-            resources.ApplyResources(this.CE_Save, "CE_Save");
             this.CE_Save.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.CE_Save.Image = global::srcrepair.Properties.Resources.Save;
+            resources.ApplyResources(this.CE_Save, "CE_Save");
             this.CE_Save.Name = "CE_Save";
             this.CE_Save.Click += new System.EventHandler(this.CE_Save_Click);
             // 
             // CE_SaveAs
             // 
-            resources.ApplyResources(this.CE_SaveAs, "CE_SaveAs");
             this.CE_SaveAs.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.CE_SaveAs.Image = global::srcrepair.Properties.Resources.SaveAs;
+            resources.ApplyResources(this.CE_SaveAs, "CE_SaveAs");
             this.CE_SaveAs.Name = "CE_SaveAs";
             this.CE_SaveAs.Click += new System.EventHandler(this.CE_SaveAs_Click);
             // 
             // CE_Print
             // 
-            resources.ApplyResources(this.CE_Print, "CE_Print");
             this.CE_Print.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.CE_Print, "CE_Print");
             this.CE_Print.Name = "CE_Print";
             // 
             // toolStripSeparator
             // 
-            resources.ApplyResources(this.toolStripSeparator, "toolStripSeparator");
             this.toolStripSeparator.Name = "toolStripSeparator";
+            resources.ApplyResources(this.toolStripSeparator, "toolStripSeparator");
             // 
             // CE_Cut
             // 
-            resources.ApplyResources(this.CE_Cut, "CE_Cut");
             this.CE_Cut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.CE_Cut, "CE_Cut");
             this.CE_Cut.Name = "CE_Cut";
             // 
             // CE_Copy
             // 
-            resources.ApplyResources(this.CE_Copy, "CE_Copy");
             this.CE_Copy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.CE_Copy, "CE_Copy");
             this.CE_Copy.Name = "CE_Copy";
             // 
             // CE_Paste
             // 
-            resources.ApplyResources(this.CE_Paste, "CE_Paste");
             this.CE_Paste.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.CE_Paste, "CE_Paste");
             this.CE_Paste.Name = "CE_Paste";
             // 
             // toolStripSeparator1
             // 
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
             // CE_ShowHint
             // 
-            resources.ApplyResources(this.CE_ShowHint, "CE_ShowHint");
             this.CE_ShowHint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.CE_ShowHint, "CE_ShowHint");
             this.CE_ShowHint.Name = "CE_ShowHint";
             // 
             // CE_Editor
             // 
-            resources.ApplyResources(this.CE_Editor, "CE_Editor");
             this.CE_Editor.BackgroundColor = System.Drawing.SystemColors.Window;
             this.CE_Editor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CE_Editor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CE_CVName,
             this.CE_CVal});
+            resources.ApplyResources(this.CE_Editor, "CE_Editor");
             this.CE_Editor.Name = "CE_Editor";
             // 
             // CE_CVName
@@ -693,17 +693,16 @@
             // 
             // ProblemSolver
             // 
-            resources.ApplyResources(this.ProblemSolver, "ProblemSolver");
             this.ProblemSolver.Controls.Add(this.PS_GB_Remover);
             this.ProblemSolver.Controls.Add(this.PS_GB_AdvFeat);
             this.ProblemSolver.Controls.Add(this.PS_GB_SInfo);
             this.ProblemSolver.Controls.Add(this.PS_GB_Solver);
+            resources.ApplyResources(this.ProblemSolver, "ProblemSolver");
             this.ProblemSolver.Name = "ProblemSolver";
             this.ProblemSolver.UseVisualStyleBackColor = true;
             // 
             // PS_GB_Remover
             // 
-            resources.ApplyResources(this.PS_GB_Remover, "PS_GB_Remover");
             this.PS_GB_Remover.Controls.Add(this.PS_RemOldBin);
             this.PS_GB_Remover.Controls.Add(this.PS_AllowRemCtrls);
             this.PS_GB_Remover.Controls.Add(this.PS_RemGraphOpts);
@@ -716,6 +715,7 @@
             this.PS_GB_Remover.Controls.Add(this.PS_RemOldSpray);
             this.PS_GB_Remover.Controls.Add(this.PS_RemDnlCache);
             this.PS_GB_Remover.Controls.Add(this.PS_RemCustMaps);
+            resources.ApplyResources(this.PS_GB_Remover, "PS_GB_Remover");
             this.PS_GB_Remover.Name = "PS_GB_Remover";
             this.PS_GB_Remover.TabStop = false;
             // 
@@ -805,8 +805,8 @@
             // 
             // PS_GB_AdvFeat
             // 
-            resources.ApplyResources(this.PS_GB_AdvFeat, "PS_GB_AdvFeat");
             this.PS_GB_AdvFeat.Controls.Add(this.PS_ResetSettings);
+            resources.ApplyResources(this.PS_GB_AdvFeat, "PS_GB_AdvFeat");
             this.PS_GB_AdvFeat.Name = "PS_GB_AdvFeat";
             this.PS_GB_AdvFeat.TabStop = false;
             // 
@@ -819,7 +819,6 @@
             // 
             // PS_GB_SInfo
             // 
-            resources.ApplyResources(this.PS_GB_SInfo, "PS_GB_SInfo");
             this.PS_GB_SInfo.Controls.Add(this.PS_WarningMsg);
             this.PS_GB_SInfo.Controls.Add(this.PS_PathDetector);
             this.PS_GB_SInfo.Controls.Add(this.PS_RSteamLogin);
@@ -827,6 +826,7 @@
             this.PS_GB_SInfo.Controls.Add(this.L_PS_PathDetector);
             this.PS_GB_SInfo.Controls.Add(this.L_PS_RSteamLogin);
             this.PS_GB_SInfo.Controls.Add(this.L_PS_RSteamPath);
+            resources.ApplyResources(this.PS_GB_SInfo, "PS_GB_SInfo");
             this.PS_GB_SInfo.Name = "PS_GB_SInfo";
             this.PS_GB_SInfo.TabStop = false;
             // 
@@ -837,8 +837,8 @@
             // 
             // PS_PathDetector
             // 
-            resources.ApplyResources(this.PS_PathDetector, "PS_PathDetector");
             this.PS_PathDetector.ForeColor = System.Drawing.Color.Green;
+            resources.ApplyResources(this.PS_PathDetector, "PS_PathDetector");
             this.PS_PathDetector.Name = "PS_PathDetector";
             // 
             // PS_RSteamLogin
@@ -868,12 +868,12 @@
             // 
             // PS_GB_Solver
             // 
-            resources.ApplyResources(this.PS_GB_Solver, "PS_GB_Solver");
             this.PS_GB_Solver.Controls.Add(this.PS_ExecuteNow);
             this.PS_GB_Solver.Controls.Add(this.PS_SteamLang);
             this.PS_GB_Solver.Controls.Add(this.L_PS_SteamLang);
             this.PS_GB_Solver.Controls.Add(this.PS_CleanRegistry);
             this.PS_GB_Solver.Controls.Add(this.PS_CleanBlobs);
+            resources.ApplyResources(this.PS_GB_Solver, "PS_GB_Solver");
             this.PS_GB_Solver.Name = "PS_GB_Solver";
             this.PS_GB_Solver.TabStop = false;
             // 
@@ -886,8 +886,8 @@
             // 
             // PS_SteamLang
             // 
-            resources.ApplyResources(this.PS_SteamLang, "PS_SteamLang");
             this.PS_SteamLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.PS_SteamLang, "PS_SteamLang");
             this.PS_SteamLang.FormattingEnabled = true;
             this.PS_SteamLang.Items.AddRange(new object[] {
             resources.GetString("PS_SteamLang.Items"),
@@ -915,7 +915,6 @@
             // 
             // FPSCfgInstall
             // 
-            resources.ApplyResources(this.FPSCfgInstall, "FPSCfgInstall");
             this.FPSCfgInstall.Controls.Add(this.FP_CreateBackUp);
             this.FPSCfgInstall.Controls.Add(this.FP_Uninstall);
             this.FPSCfgInstall.Controls.Add(this.FP_Install);
@@ -923,6 +922,7 @@
             this.FPSCfgInstall.Controls.Add(this.FP_ConfigSel);
             this.FPSCfgInstall.Controls.Add(this.L_FP_ConfigSel);
             this.FPSCfgInstall.Controls.Add(this.FP_TopLabel);
+            resources.ApplyResources(this.FPSCfgInstall, "FPSCfgInstall");
             this.FPSCfgInstall.Name = "FPSCfgInstall";
             this.FPSCfgInstall.UseVisualStyleBackColor = true;
             // 
@@ -948,8 +948,8 @@
             // 
             // FP_GB_Desc
             // 
-            resources.ApplyResources(this.FP_GB_Desc, "FP_GB_Desc");
             this.FP_GB_Desc.Controls.Add(this.FP_Description);
+            resources.ApplyResources(this.FP_GB_Desc, "FP_GB_Desc");
             this.FP_GB_Desc.Name = "FP_GB_Desc";
             this.FP_GB_Desc.TabStop = false;
             // 
@@ -960,9 +960,9 @@
             // 
             // FP_ConfigSel
             // 
-            resources.ApplyResources(this.FP_ConfigSel, "FP_ConfigSel");
             this.FP_ConfigSel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FP_ConfigSel.FormattingEnabled = true;
+            resources.ApplyResources(this.FP_ConfigSel, "FP_ConfigSel");
             this.FP_ConfigSel.Name = "FP_ConfigSel";
             this.FP_ConfigSel.SelectedIndexChanged += new System.EventHandler(this.FP_ConfigSel_SelectedIndexChanged);
             // 
@@ -978,15 +978,14 @@
             // 
             // RescueCentre
             // 
-            resources.ApplyResources(this.RescueCentre, "RescueCentre");
             this.RescueCentre.Controls.Add(this.BU_ListTable);
             this.RescueCentre.Controls.Add(this.BU_BToolbar);
+            resources.ApplyResources(this.RescueCentre, "RescueCentre");
             this.RescueCentre.Name = "RescueCentre";
             this.RescueCentre.UseVisualStyleBackColor = true;
             // 
             // BU_ListTable
             // 
-            resources.ApplyResources(this.BU_ListTable, "BU_ListTable");
             this.BU_ListTable.AllowUserToAddRows = false;
             this.BU_ListTable.AllowUserToDeleteRows = false;
             this.BU_ListTable.BackgroundColor = System.Drawing.SystemColors.Window;
@@ -997,296 +996,10 @@
             this.BEd_BSize,
             this.BEd_BData,
             this.BEd_BRealName});
+            resources.ApplyResources(this.BU_ListTable, "BU_ListTable");
             this.BU_ListTable.MultiSelect = false;
             this.BU_ListTable.Name = "BU_ListTable";
             this.BU_ListTable.ReadOnly = true;
-            // 
-            // BU_BToolbar
-            // 
-            resources.ApplyResources(this.BU_BToolbar, "BU_BToolbar");
-            this.BU_BToolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BUT_Refresh,
-            this.BUT_Sep1,
-            this.BUT_RestoreB,
-            this.BUT_DelB,
-            this.BUT_Sep2,
-            this.BUT_CrBkupReg});
-            this.BU_BToolbar.Name = "BU_BToolbar";
-            // 
-            // BUT_Refresh
-            // 
-            resources.ApplyResources(this.BUT_Refresh, "BUT_Refresh");
-            this.BUT_Refresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BUT_Refresh.Name = "BUT_Refresh";
-            this.BUT_Refresh.Click += new System.EventHandler(this.BUT_Refresh_Click);
-            // 
-            // BUT_Sep1
-            // 
-            resources.ApplyResources(this.BUT_Sep1, "BUT_Sep1");
-            this.BUT_Sep1.Name = "BUT_Sep1";
-            // 
-            // BUT_RestoreB
-            // 
-            resources.ApplyResources(this.BUT_RestoreB, "BUT_RestoreB");
-            this.BUT_RestoreB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BUT_RestoreB.Name = "BUT_RestoreB";
-            this.BUT_RestoreB.Click += new System.EventHandler(this.BUT_RestoreB_Click);
-            // 
-            // BUT_DelB
-            // 
-            resources.ApplyResources(this.BUT_DelB, "BUT_DelB");
-            this.BUT_DelB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BUT_DelB.Name = "BUT_DelB";
-            this.BUT_DelB.Click += new System.EventHandler(this.BUT_DelB_Click);
-            // 
-            // BUT_Sep2
-            // 
-            resources.ApplyResources(this.BUT_Sep2, "BUT_Sep2");
-            this.BUT_Sep2.Name = "BUT_Sep2";
-            // 
-            // BUT_CrBkupReg
-            // 
-            resources.ApplyResources(this.BUT_CrBkupReg, "BUT_CrBkupReg");
-            this.BUT_CrBkupReg.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BUT_CrBkupReg.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BUT_L_GameSettings,
-            this.BUT_L_AllSteam,
-            this.BUT_L_AllSRC});
-            this.BUT_CrBkupReg.Image = global::srcrepair.Properties.Resources.Add;
-            this.BUT_CrBkupReg.Name = "BUT_CrBkupReg";
-            this.BUT_CrBkupReg.ButtonClick += new System.EventHandler(this.BUT_CrBkupReg_ButtonClick);
-            // 
-            // BUT_L_GameSettings
-            // 
-            resources.ApplyResources(this.BUT_L_GameSettings, "BUT_L_GameSettings");
-            this.BUT_L_GameSettings.Image = global::srcrepair.Properties.Resources.Add;
-            this.BUT_L_GameSettings.Name = "BUT_L_GameSettings";
-            this.BUT_L_GameSettings.Click += new System.EventHandler(this.BUT_L_GameSettings_Click);
-            // 
-            // BUT_L_AllSteam
-            // 
-            resources.ApplyResources(this.BUT_L_AllSteam, "BUT_L_AllSteam");
-            this.BUT_L_AllSteam.Image = global::srcrepair.Properties.Resources.Add;
-            this.BUT_L_AllSteam.Name = "BUT_L_AllSteam";
-            this.BUT_L_AllSteam.Click += new System.EventHandler(this.BUT_L_AllSteam_Click);
-            // 
-            // BUT_L_AllSRC
-            // 
-            resources.ApplyResources(this.BUT_L_AllSRC, "BUT_L_AllSRC");
-            this.BUT_L_AllSRC.Image = global::srcrepair.Properties.Resources.Add;
-            this.BUT_L_AllSRC.Name = "BUT_L_AllSRC";
-            this.BUT_L_AllSRC.Click += new System.EventHandler(this.BUT_L_AllSRC_Click);
-            // 
-            // LoginSel
-            // 
-            resources.ApplyResources(this.LoginSel, "LoginSel");
-            this.LoginSel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.LoginSel.FormattingEnabled = true;
-            this.LoginSel.Name = "LoginSel";
-            this.LoginSel.SelectedIndexChanged += new System.EventHandler(this.LoginSel_SelectedIndexChanged);
-            // 
-            // MainMenu
-            // 
-            resources.ApplyResources(this.MainMenu, "MainMenu");
-            this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolsMNU,
-            this.HelpMNU});
-            this.MainMenu.Name = "MainMenu";
-            // 
-            // ToolsMNU
-            // 
-            resources.ApplyResources(this.ToolsMNU, "ToolsMNU");
-            this.ToolsMNU.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MNUShowEdHint,
-            this.MNUSep1,
-            this.MNUFPSWizard,
-            this.MNUReportBuilder,
-            this.MNUInstaller,
-            this.MNUSep2,
-            this.MNUExit});
-            this.ToolsMNU.Name = "ToolsMNU";
-            // 
-            // MNUShowEdHint
-            // 
-            resources.ApplyResources(this.MNUShowEdHint, "MNUShowEdHint");
-            this.MNUShowEdHint.Image = global::srcrepair.Properties.Resources.hint;
-            this.MNUShowEdHint.Name = "MNUShowEdHint";
-            this.MNUShowEdHint.Click += new System.EventHandler(this.MNUShowEdHint_Click);
-            // 
-            // MNUSep1
-            // 
-            resources.ApplyResources(this.MNUSep1, "MNUSep1");
-            this.MNUSep1.Name = "MNUSep1";
-            // 
-            // MNUFPSWizard
-            // 
-            resources.ApplyResources(this.MNUFPSWizard, "MNUFPSWizard");
-            this.MNUFPSWizard.Image = global::srcrepair.Properties.Resources.Wizard;
-            this.MNUFPSWizard.Name = "MNUFPSWizard";
-            this.MNUFPSWizard.Click += new System.EventHandler(this.MNUFPSWizard_Click);
-            // 
-            // MNUReportBuilder
-            // 
-            resources.ApplyResources(this.MNUReportBuilder, "MNUReportBuilder");
-            this.MNUReportBuilder.Image = global::srcrepair.Properties.Resources.report;
-            this.MNUReportBuilder.Name = "MNUReportBuilder";
-            this.MNUReportBuilder.Click += new System.EventHandler(this.MNUReportBuilder_Click);
-            // 
-            // MNUInstaller
-            // 
-            resources.ApplyResources(this.MNUInstaller, "MNUInstaller");
-            this.MNUInstaller.Image = global::srcrepair.Properties.Resources.installer;
-            this.MNUInstaller.Name = "MNUInstaller";
-            this.MNUInstaller.Click += new System.EventHandler(this.MNUInstaller_Click);
-            // 
-            // MNUSep2
-            // 
-            resources.ApplyResources(this.MNUSep2, "MNUSep2");
-            this.MNUSep2.Name = "MNUSep2";
-            // 
-            // MNUExit
-            // 
-            resources.ApplyResources(this.MNUExit, "MNUExit");
-            this.MNUExit.Image = global::srcrepair.Properties.Resources.Exit;
-            this.MNUExit.Name = "MNUExit";
-            this.MNUExit.Click += new System.EventHandler(this.MNUExit_Click);
-            // 
-            // HelpMNU
-            // 
-            resources.ApplyResources(this.HelpMNU, "HelpMNU");
-            this.HelpMNU.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MNUHelp,
-            this.MNUOpinion,
-            this.MNUReportBug,
-            this.MNUSteamGroup,
-            this.MNUSep3,
-            this.MNUGroup1,
-            this.MNUGroup2,
-            this.MNUGroup3,
-            this.MNUSep4,
-            this.MNUAbout});
-            this.HelpMNU.Name = "HelpMNU";
-            // 
-            // MNUHelp
-            // 
-            resources.ApplyResources(this.MNUHelp, "MNUHelp");
-            this.MNUHelp.Image = global::srcrepair.Properties.Resources.Help;
-            this.MNUHelp.Name = "MNUHelp";
-            // 
-            // MNUOpinion
-            // 
-            resources.ApplyResources(this.MNUOpinion, "MNUOpinion");
-            this.MNUOpinion.Image = global::srcrepair.Properties.Resources.Home;
-            this.MNUOpinion.Name = "MNUOpinion";
-            // 
-            // MNUReportBug
-            // 
-            resources.ApplyResources(this.MNUReportBug, "MNUReportBug");
-            this.MNUReportBug.Image = global::srcrepair.Properties.Resources.bug;
-            this.MNUReportBug.Name = "MNUReportBug";
-            this.MNUReportBug.Click += new System.EventHandler(this.MNUReportBug_Click);
-            // 
-            // MNUSteamGroup
-            // 
-            resources.ApplyResources(this.MNUSteamGroup, "MNUSteamGroup");
-            this.MNUSteamGroup.Image = global::srcrepair.Properties.Resources.steam;
-            this.MNUSteamGroup.Name = "MNUSteamGroup";
-            // 
-            // MNUSep3
-            // 
-            resources.ApplyResources(this.MNUSep3, "MNUSep3");
-            this.MNUSep3.Name = "MNUSep3";
-            // 
-            // MNUGroup1
-            // 
-            resources.ApplyResources(this.MNUGroup1, "MNUGroup1");
-            this.MNUGroup1.Image = global::srcrepair.Properties.Resources.EasyCoding;
-            this.MNUGroup1.Name = "MNUGroup1";
-            // 
-            // MNUGroup2
-            // 
-            resources.ApplyResources(this.MNUGroup2, "MNUGroup2");
-            this.MNUGroup2.Image = global::srcrepair.Properties.Resources.tfru;
-            this.MNUGroup2.Name = "MNUGroup2";
-            // 
-            // MNUGroup3
-            // 
-            resources.ApplyResources(this.MNUGroup3, "MNUGroup3");
-            this.MNUGroup3.Image = global::srcrepair.Properties.Resources.tf2world;
-            this.MNUGroup3.Name = "MNUGroup3";
-            // 
-            // MNUSep4
-            // 
-            resources.ApplyResources(this.MNUSep4, "MNUSep4");
-            this.MNUSep4.Name = "MNUSep4";
-            // 
-            // MNUAbout
-            // 
-            resources.ApplyResources(this.MNUAbout, "MNUAbout");
-            this.MNUAbout.Image = global::srcrepair.Properties.Resources.Info;
-            this.MNUAbout.Name = "MNUAbout";
-            this.MNUAbout.Click += new System.EventHandler(this.MNUAbout_Click);
-            // 
-            // L_LoginSel
-            // 
-            resources.ApplyResources(this.L_LoginSel, "L_LoginSel");
-            this.L_LoginSel.Name = "L_LoginSel";
-            // 
-            // StatusBar
-            // 
-            resources.ApplyResources(this.StatusBar, "StatusBar");
-            this.StatusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.SB_Info,
-            this.SB_Status,
-            this.SB_App});
-            this.StatusBar.Name = "StatusBar";
-            // 
-            // SB_Info
-            // 
-            resources.ApplyResources(this.SB_Info, "SB_Info");
-            this.SB_Info.Name = "SB_Info";
-            // 
-            // SB_Status
-            // 
-            resources.ApplyResources(this.SB_Status, "SB_Status");
-            this.SB_Status.Name = "SB_Status";
-            // 
-            // SB_App
-            // 
-            resources.ApplyResources(this.SB_App, "SB_App");
-            this.SB_App.Name = "SB_App";
-            // 
-            // AppSelector
-            // 
-            resources.ApplyResources(this.AppSelector, "AppSelector");
-            this.AppSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.AppSelector.FormattingEnabled = true;
-            this.AppSelector.Items.AddRange(new object[] {
-            resources.GetString("AppSelector.Items"),
-            resources.GetString("AppSelector.Items1"),
-            resources.GetString("AppSelector.Items2"),
-            resources.GetString("AppSelector.Items3"),
-            resources.GetString("AppSelector.Items4"),
-            resources.GetString("AppSelector.Items5"),
-            resources.GetString("AppSelector.Items6")});
-            this.AppSelector.Name = "AppSelector";
-            this.AppSelector.SelectedIndexChanged += new System.EventHandler(this.AppSelector_SelectedIndexChanged);
-            // 
-            // L_AppSelector
-            // 
-            resources.ApplyResources(this.L_AppSelector, "L_AppSelector");
-            this.L_AppSelector.Name = "L_AppSelector";
-            // 
-            // CE_OpenCfgDialog
-            // 
-            this.CE_OpenCfgDialog.DefaultExt = "cfg";
-            resources.ApplyResources(this.CE_OpenCfgDialog, "CE_OpenCfgDialog");
-            // 
-            // CE_SaveCfgDialog
-            // 
-            this.CE_SaveCfgDialog.CreatePrompt = true;
-            this.CE_SaveCfgDialog.DefaultExt = "cfg";
-            resources.ApplyResources(this.CE_SaveCfgDialog, "CE_SaveCfgDialog");
             // 
             // BEd_BName
             // 
@@ -1317,6 +1030,296 @@
             resources.ApplyResources(this.BEd_BRealName, "BEd_BRealName");
             this.BEd_BRealName.Name = "BEd_BRealName";
             this.BEd_BRealName.ReadOnly = true;
+            // 
+            // BU_BToolbar
+            // 
+            this.BU_BToolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BUT_Refresh,
+            this.BUT_Sep1,
+            this.BUT_RestoreB,
+            this.BUT_DelB,
+            this.BUT_Sep2,
+            this.BUT_CrBkupReg});
+            resources.ApplyResources(this.BU_BToolbar, "BU_BToolbar");
+            this.BU_BToolbar.Name = "BU_BToolbar";
+            // 
+            // BUT_Refresh
+            // 
+            this.BUT_Refresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BUT_Refresh.Image = global::srcrepair.Properties.Resources.Refresh;
+            resources.ApplyResources(this.BUT_Refresh, "BUT_Refresh");
+            this.BUT_Refresh.Name = "BUT_Refresh";
+            this.BUT_Refresh.Click += new System.EventHandler(this.BUT_Refresh_Click);
+            // 
+            // BUT_Sep1
+            // 
+            this.BUT_Sep1.Name = "BUT_Sep1";
+            resources.ApplyResources(this.BUT_Sep1, "BUT_Sep1");
+            // 
+            // BUT_RestoreB
+            // 
+            this.BUT_RestoreB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BUT_RestoreB.Image = global::srcrepair.Properties.Resources.Restore;
+            resources.ApplyResources(this.BUT_RestoreB, "BUT_RestoreB");
+            this.BUT_RestoreB.Name = "BUT_RestoreB";
+            this.BUT_RestoreB.Click += new System.EventHandler(this.BUT_RestoreB_Click);
+            // 
+            // BUT_DelB
+            // 
+            this.BUT_DelB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BUT_DelB.Image = global::srcrepair.Properties.Resources.Delete;
+            resources.ApplyResources(this.BUT_DelB, "BUT_DelB");
+            this.BUT_DelB.Name = "BUT_DelB";
+            this.BUT_DelB.Click += new System.EventHandler(this.BUT_DelB_Click);
+            // 
+            // BUT_Sep2
+            // 
+            this.BUT_Sep2.Name = "BUT_Sep2";
+            resources.ApplyResources(this.BUT_Sep2, "BUT_Sep2");
+            // 
+            // BUT_CrBkupReg
+            // 
+            this.BUT_CrBkupReg.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BUT_CrBkupReg.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BUT_L_GameSettings,
+            this.BUT_L_AllSteam,
+            this.BUT_L_AllSRC});
+            this.BUT_CrBkupReg.Image = global::srcrepair.Properties.Resources.Add;
+            resources.ApplyResources(this.BUT_CrBkupReg, "BUT_CrBkupReg");
+            this.BUT_CrBkupReg.Name = "BUT_CrBkupReg";
+            this.BUT_CrBkupReg.ButtonClick += new System.EventHandler(this.BUT_CrBkupReg_ButtonClick);
+            // 
+            // BUT_L_GameSettings
+            // 
+            this.BUT_L_GameSettings.Image = global::srcrepair.Properties.Resources.Add;
+            this.BUT_L_GameSettings.Name = "BUT_L_GameSettings";
+            resources.ApplyResources(this.BUT_L_GameSettings, "BUT_L_GameSettings");
+            this.BUT_L_GameSettings.Click += new System.EventHandler(this.BUT_L_GameSettings_Click);
+            // 
+            // BUT_L_AllSteam
+            // 
+            this.BUT_L_AllSteam.Image = global::srcrepair.Properties.Resources.Add;
+            this.BUT_L_AllSteam.Name = "BUT_L_AllSteam";
+            resources.ApplyResources(this.BUT_L_AllSteam, "BUT_L_AllSteam");
+            this.BUT_L_AllSteam.Click += new System.EventHandler(this.BUT_L_AllSteam_Click);
+            // 
+            // BUT_L_AllSRC
+            // 
+            this.BUT_L_AllSRC.Image = global::srcrepair.Properties.Resources.Add;
+            this.BUT_L_AllSRC.Name = "BUT_L_AllSRC";
+            resources.ApplyResources(this.BUT_L_AllSRC, "BUT_L_AllSRC");
+            this.BUT_L_AllSRC.Click += new System.EventHandler(this.BUT_L_AllSRC_Click);
+            // 
+            // LoginSel
+            // 
+            this.LoginSel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LoginSel.FormattingEnabled = true;
+            resources.ApplyResources(this.LoginSel, "LoginSel");
+            this.LoginSel.Name = "LoginSel";
+            this.LoginSel.SelectedIndexChanged += new System.EventHandler(this.LoginSel_SelectedIndexChanged);
+            // 
+            // MainMenu
+            // 
+            this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolsMNU,
+            this.HelpMNU});
+            resources.ApplyResources(this.MainMenu, "MainMenu");
+            this.MainMenu.Name = "MainMenu";
+            // 
+            // ToolsMNU
+            // 
+            this.ToolsMNU.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MNUShowEdHint,
+            this.MNUSep1,
+            this.MNUFPSWizard,
+            this.MNUReportBuilder,
+            this.MNUInstaller,
+            this.MNUSep2,
+            this.MNUExit});
+            this.ToolsMNU.Name = "ToolsMNU";
+            resources.ApplyResources(this.ToolsMNU, "ToolsMNU");
+            // 
+            // MNUShowEdHint
+            // 
+            resources.ApplyResources(this.MNUShowEdHint, "MNUShowEdHint");
+            this.MNUShowEdHint.Image = global::srcrepair.Properties.Resources.hint;
+            this.MNUShowEdHint.Name = "MNUShowEdHint";
+            this.MNUShowEdHint.Click += new System.EventHandler(this.MNUShowEdHint_Click);
+            // 
+            // MNUSep1
+            // 
+            this.MNUSep1.Name = "MNUSep1";
+            resources.ApplyResources(this.MNUSep1, "MNUSep1");
+            // 
+            // MNUFPSWizard
+            // 
+            resources.ApplyResources(this.MNUFPSWizard, "MNUFPSWizard");
+            this.MNUFPSWizard.Image = global::srcrepair.Properties.Resources.Wizard;
+            this.MNUFPSWizard.Name = "MNUFPSWizard";
+            this.MNUFPSWizard.Click += new System.EventHandler(this.MNUFPSWizard_Click);
+            // 
+            // MNUReportBuilder
+            // 
+            this.MNUReportBuilder.Image = global::srcrepair.Properties.Resources.report;
+            this.MNUReportBuilder.Name = "MNUReportBuilder";
+            resources.ApplyResources(this.MNUReportBuilder, "MNUReportBuilder");
+            this.MNUReportBuilder.Click += new System.EventHandler(this.MNUReportBuilder_Click);
+            // 
+            // MNUInstaller
+            // 
+            resources.ApplyResources(this.MNUInstaller, "MNUInstaller");
+            this.MNUInstaller.Image = global::srcrepair.Properties.Resources.installer;
+            this.MNUInstaller.Name = "MNUInstaller";
+            this.MNUInstaller.Click += new System.EventHandler(this.MNUInstaller_Click);
+            // 
+            // MNUSep2
+            // 
+            this.MNUSep2.Name = "MNUSep2";
+            resources.ApplyResources(this.MNUSep2, "MNUSep2");
+            // 
+            // MNUExit
+            // 
+            this.MNUExit.Image = global::srcrepair.Properties.Resources.Exit;
+            this.MNUExit.Name = "MNUExit";
+            resources.ApplyResources(this.MNUExit, "MNUExit");
+            this.MNUExit.Click += new System.EventHandler(this.MNUExit_Click);
+            // 
+            // HelpMNU
+            // 
+            this.HelpMNU.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MNUHelp,
+            this.MNUOpinion,
+            this.MNUReportBug,
+            this.MNUSteamGroup,
+            this.MNUSep3,
+            this.MNUGroup1,
+            this.MNUGroup2,
+            this.MNUGroup3,
+            this.MNUSep4,
+            this.MNUAbout});
+            this.HelpMNU.Name = "HelpMNU";
+            resources.ApplyResources(this.HelpMNU, "HelpMNU");
+            // 
+            // MNUHelp
+            // 
+            this.MNUHelp.Image = global::srcrepair.Properties.Resources.Help;
+            this.MNUHelp.Name = "MNUHelp";
+            resources.ApplyResources(this.MNUHelp, "MNUHelp");
+            // 
+            // MNUOpinion
+            // 
+            this.MNUOpinion.Image = global::srcrepair.Properties.Resources.Home;
+            this.MNUOpinion.Name = "MNUOpinion";
+            resources.ApplyResources(this.MNUOpinion, "MNUOpinion");
+            // 
+            // MNUReportBug
+            // 
+            this.MNUReportBug.Image = global::srcrepair.Properties.Resources.bug;
+            this.MNUReportBug.Name = "MNUReportBug";
+            resources.ApplyResources(this.MNUReportBug, "MNUReportBug");
+            this.MNUReportBug.Click += new System.EventHandler(this.MNUReportBug_Click);
+            // 
+            // MNUSteamGroup
+            // 
+            this.MNUSteamGroup.Image = global::srcrepair.Properties.Resources.steam;
+            this.MNUSteamGroup.Name = "MNUSteamGroup";
+            resources.ApplyResources(this.MNUSteamGroup, "MNUSteamGroup");
+            // 
+            // MNUSep3
+            // 
+            this.MNUSep3.Name = "MNUSep3";
+            resources.ApplyResources(this.MNUSep3, "MNUSep3");
+            // 
+            // MNUGroup1
+            // 
+            this.MNUGroup1.Image = global::srcrepair.Properties.Resources.EasyCoding;
+            this.MNUGroup1.Name = "MNUGroup1";
+            resources.ApplyResources(this.MNUGroup1, "MNUGroup1");
+            // 
+            // MNUGroup2
+            // 
+            this.MNUGroup2.Image = global::srcrepair.Properties.Resources.tfru;
+            this.MNUGroup2.Name = "MNUGroup2";
+            resources.ApplyResources(this.MNUGroup2, "MNUGroup2");
+            // 
+            // MNUGroup3
+            // 
+            this.MNUGroup3.Image = global::srcrepair.Properties.Resources.tf2world;
+            this.MNUGroup3.Name = "MNUGroup3";
+            resources.ApplyResources(this.MNUGroup3, "MNUGroup3");
+            // 
+            // MNUSep4
+            // 
+            this.MNUSep4.Name = "MNUSep4";
+            resources.ApplyResources(this.MNUSep4, "MNUSep4");
+            // 
+            // MNUAbout
+            // 
+            this.MNUAbout.Image = global::srcrepair.Properties.Resources.Info;
+            this.MNUAbout.Name = "MNUAbout";
+            resources.ApplyResources(this.MNUAbout, "MNUAbout");
+            this.MNUAbout.Click += new System.EventHandler(this.MNUAbout_Click);
+            // 
+            // L_LoginSel
+            // 
+            resources.ApplyResources(this.L_LoginSel, "L_LoginSel");
+            this.L_LoginSel.Name = "L_LoginSel";
+            // 
+            // StatusBar
+            // 
+            this.StatusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SB_Info,
+            this.SB_Status,
+            this.SB_App});
+            resources.ApplyResources(this.StatusBar, "StatusBar");
+            this.StatusBar.Name = "StatusBar";
+            // 
+            // SB_Info
+            // 
+            this.SB_Info.Name = "SB_Info";
+            resources.ApplyResources(this.SB_Info, "SB_Info");
+            // 
+            // SB_Status
+            // 
+            resources.ApplyResources(this.SB_Status, "SB_Status");
+            this.SB_Status.Name = "SB_Status";
+            // 
+            // SB_App
+            // 
+            resources.ApplyResources(this.SB_App, "SB_App");
+            this.SB_App.Name = "SB_App";
+            // 
+            // AppSelector
+            // 
+            this.AppSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.AppSelector, "AppSelector");
+            this.AppSelector.FormattingEnabled = true;
+            this.AppSelector.Items.AddRange(new object[] {
+            resources.GetString("AppSelector.Items"),
+            resources.GetString("AppSelector.Items1"),
+            resources.GetString("AppSelector.Items2"),
+            resources.GetString("AppSelector.Items3"),
+            resources.GetString("AppSelector.Items4"),
+            resources.GetString("AppSelector.Items5"),
+            resources.GetString("AppSelector.Items6")});
+            this.AppSelector.Name = "AppSelector";
+            this.AppSelector.SelectedIndexChanged += new System.EventHandler(this.AppSelector_SelectedIndexChanged);
+            // 
+            // L_AppSelector
+            // 
+            resources.ApplyResources(this.L_AppSelector, "L_AppSelector");
+            this.L_AppSelector.Name = "L_AppSelector";
+            // 
+            // CE_OpenCfgDialog
+            // 
+            this.CE_OpenCfgDialog.DefaultExt = "cfg";
+            resources.ApplyResources(this.CE_OpenCfgDialog, "CE_OpenCfgDialog");
+            // 
+            // CE_SaveCfgDialog
+            // 
+            this.CE_SaveCfgDialog.CreatePrompt = true;
+            this.CE_SaveCfgDialog.DefaultExt = "cfg";
+            resources.ApplyResources(this.CE_SaveCfgDialog, "CE_SaveCfgDialog");
             // 
             // frmMainW
             // 
