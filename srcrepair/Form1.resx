@@ -2532,10 +2532,7 @@
     <value>True</value>
   </metadata>
   <data name="BEd_BName.HeaderText" xml:space="preserve">
-    <value>BackUp name</value>
-  </data>
-  <data name="BEd_BName.Width" type="System.Int32, mscorlib">
-    <value>125</value>
+    <value>Name</value>
   </data>
   <metadata name="BEd_BType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2544,7 +2541,16 @@
     <value>Type</value>
   </data>
   <data name="BEd_BType.Width" type="System.Int32, mscorlib">
-    <value>110</value>
+    <value>90</value>
+  </data>
+  <metadata name="BEd_BSize.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="BEd_BSize.HeaderText" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="BEd_BSize.Width" type="System.Int32, mscorlib">
+    <value>45</value>
   </data>
   <metadata name="BEd_BData.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3267,30 +3273,6 @@
   <data name="&gt;&gt;CE_CVal.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BEd_BName.Name" xml:space="preserve">
-    <value>BEd_BName</value>
-  </data>
-  <data name="&gt;&gt;BEd_BName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BEd_BType.Name" xml:space="preserve">
-    <value>BEd_BType</value>
-  </data>
-  <data name="&gt;&gt;BEd_BType.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BEd_BData.Name" xml:space="preserve">
-    <value>BEd_BData</value>
-  </data>
-  <data name="&gt;&gt;BEd_BData.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BEd_BRealName.Name" xml:space="preserve">
-    <value>BEd_BRealName</value>
-  </data>
-  <data name="&gt;&gt;BEd_BRealName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;BUT_Refresh.Name" xml:space="preserve">
     <value>BUT_Refresh</value>
   </data>
@@ -3458,6 +3440,36 @@
   </data>
   <data name="&gt;&gt;CE_SaveCfgDialog.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BEd_BName.Name" xml:space="preserve">
+    <value>BEd_BName</value>
+  </data>
+  <data name="&gt;&gt;BEd_BName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BEd_BType.Name" xml:space="preserve">
+    <value>BEd_BType</value>
+  </data>
+  <data name="&gt;&gt;BEd_BType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BEd_BSize.Name" xml:space="preserve">
+    <value>BEd_BSize</value>
+  </data>
+  <data name="&gt;&gt;BEd_BSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BEd_BData.Name" xml:space="preserve">
+    <value>BEd_BData</value>
+  </data>
+  <data name="&gt;&gt;BEd_BData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BEd_BRealName.Name" xml:space="preserve">
+    <value>BEd_BRealName</value>
+  </data>
+  <data name="&gt;&gt;BEd_BRealName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmMainW</value>

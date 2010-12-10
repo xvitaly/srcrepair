@@ -127,10 +127,6 @@
             this.FP_TopLabel = new System.Windows.Forms.Label();
             this.RescueCentre = new System.Windows.Forms.TabPage();
             this.BU_ListTable = new System.Windows.Forms.DataGridView();
-            this.BEd_BName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BEd_BType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BEd_BData = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BEd_BRealName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BU_BToolbar = new System.Windows.Forms.ToolStrip();
             this.BUT_Refresh = new System.Windows.Forms.ToolStripButton();
             this.BUT_Sep1 = new System.Windows.Forms.ToolStripSeparator();
@@ -166,6 +162,11 @@
             this.L_AppSelector = new System.Windows.Forms.Label();
             this.CE_OpenCfgDialog = new System.Windows.Forms.OpenFileDialog();
             this.CE_SaveCfgDialog = new System.Windows.Forms.SaveFileDialog();
+            this.BEd_BName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BEd_BType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BEd_BSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BEd_BData = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BEd_BRealName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_Warning)).BeginInit();
@@ -987,36 +988,13 @@
             this.BU_ListTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BEd_BName,
             this.BEd_BType,
+            this.BEd_BSize,
             this.BEd_BData,
             this.BEd_BRealName});
             resources.ApplyResources(this.BU_ListTable, "BU_ListTable");
             this.BU_ListTable.MultiSelect = false;
             this.BU_ListTable.Name = "BU_ListTable";
             this.BU_ListTable.ReadOnly = true;
-            // 
-            // BEd_BName
-            // 
-            resources.ApplyResources(this.BEd_BName, "BEd_BName");
-            this.BEd_BName.Name = "BEd_BName";
-            this.BEd_BName.ReadOnly = true;
-            // 
-            // BEd_BType
-            // 
-            resources.ApplyResources(this.BEd_BType, "BEd_BType");
-            this.BEd_BType.Name = "BEd_BType";
-            this.BEd_BType.ReadOnly = true;
-            // 
-            // BEd_BData
-            // 
-            resources.ApplyResources(this.BEd_BData, "BEd_BData");
-            this.BEd_BData.Name = "BEd_BData";
-            this.BEd_BData.ReadOnly = true;
-            // 
-            // BEd_BRealName
-            // 
-            resources.ApplyResources(this.BEd_BRealName, "BEd_BRealName");
-            this.BEd_BRealName.Name = "BEd_BRealName";
-            this.BEd_BRealName.ReadOnly = true;
             // 
             // BU_BToolbar
             // 
@@ -1268,6 +1246,36 @@
             this.CE_SaveCfgDialog.DefaultExt = "cfg";
             resources.ApplyResources(this.CE_SaveCfgDialog, "CE_SaveCfgDialog");
             // 
+            // BEd_BName
+            // 
+            resources.ApplyResources(this.BEd_BName, "BEd_BName");
+            this.BEd_BName.Name = "BEd_BName";
+            this.BEd_BName.ReadOnly = true;
+            // 
+            // BEd_BType
+            // 
+            resources.ApplyResources(this.BEd_BType, "BEd_BType");
+            this.BEd_BType.Name = "BEd_BType";
+            this.BEd_BType.ReadOnly = true;
+            // 
+            // BEd_BSize
+            // 
+            resources.ApplyResources(this.BEd_BSize, "BEd_BSize");
+            this.BEd_BSize.Name = "BEd_BSize";
+            this.BEd_BSize.ReadOnly = true;
+            // 
+            // BEd_BData
+            // 
+            resources.ApplyResources(this.BEd_BData, "BEd_BData");
+            this.BEd_BData.Name = "BEd_BData";
+            this.BEd_BData.ReadOnly = true;
+            // 
+            // BEd_BRealName
+            // 
+            resources.ApplyResources(this.BEd_BRealName, "BEd_BRealName");
+            this.BEd_BRealName.Name = "BEd_BRealName";
+            this.BEd_BRealName.ReadOnly = true;
+            // 
             // frmMainW
             // 
             resources.ApplyResources(this, "$this");
@@ -1452,14 +1460,15 @@
         private System.Windows.Forms.Button PS_RemOldBin;
         private System.Windows.Forms.DataGridView BU_ListTable;
         private System.Windows.Forms.ToolStrip BU_BToolbar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BRealName;
         private System.Windows.Forms.ToolStripButton BUT_Refresh;
         private System.Windows.Forms.ToolStripSeparator BUT_Sep1;
         private System.Windows.Forms.ToolStripButton BUT_RestoreB;
         private System.Windows.Forms.ToolStripButton BUT_DelB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BSize;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BRealName;
     }
 }
 

@@ -370,8 +370,6 @@ namespace srcrepair
                 {
                     // Каталоги не существуют. Создадим общий каталог для резервных копий...
                     Directory.CreateDirectory(GV.FullBackUpDirPath);
-                    // ...и реестра...
-                    Directory.CreateDirectory(GV.FullBackUpDirPath + @"registry\");
                 }
 
                 try
@@ -1563,7 +1561,7 @@ namespace srcrepair
                     if (FP_CreateBackUp.Checked)
                     {
                         // Создаём резервную копию...
-                        CreateBackUpNow(FP_ConfigSel.Text);
+                        CreateBackUpNow("autoexec.cfg");
                     }
 
                     try
@@ -2087,6 +2085,21 @@ namespace srcrepair
         private void BUT_Refresh_Click(object sender, EventArgs e)
         {
             // Считаем список резервных копий и заполним таблицу...
+            // Очистим таблицу...
+            BU_ListTable.Rows.Clear();
+            // Открываем каталог...
+            DirectoryInfo DInfo = new DirectoryInfo(GV.FullBackUpDirPath);
+            // Считываем список файлов по заданной маске...
+            FileInfo[] DirList = DInfo.GetFiles("*.*");
+            //
+            string Buf;
+            // Начинаем обход массива...
+            foreach (FileInfo DItem in DirList)
+            {
+                // Обрабатываем найденное...
+                if (DItem.Extension == ".reg") { Buf = "Registry"; } else { Buf = "Config"; }
+                BU_ListTable.Rows.Add(Path.GetFileNameWithoutExtension(DItem.Name), Buf, DItem.Length / 1024, DItem.CreationTime, DItem.Name);
+            }
         }
 
         private void BUT_RestoreB_Click(object sender, EventArgs e)
