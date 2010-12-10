@@ -1315,10 +1315,18 @@ namespace srcrepair
             DialogResult UserConfirmation = MessageBox.Show(RM.GetString("GT_SaveMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (UserConfirmation == DialogResult.Yes)
             {
-                // TODO: сделать бэкапирование...
-
                 if (GV.IsGCFApp)
                 {
+                    // Создаём резервную копию...
+                    try
+                    {
+                        CreateRegBackUpNow(@"HKEY_CURRENT_USER\Software\Valve\Source\" + GV.SmallAppName + @"\Settings", "Game_AutoBackUp");
+                    }
+                    catch
+                    {
+                        // Подавляем сообщение об ошибке если оно возникнет...
+                    }
+                    
                     // Запишем в реестр настройки разрешения экрана...
                     // По горизонтали (ScreenWidth):
                     WriteSRCDWord("ScreenWidth", (int)GT_ResHor.Value, GV.SmallAppName);
@@ -1980,6 +1988,17 @@ namespace srcrepair
             DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (UserConfirmation == DialogResult.Yes)
             {
+                // Создаём резервную копию...
+                try
+                {
+                    CreateRegBackUpNow(@"HKEY_CURRENT_USER\Software\Valve\Source\" + GV.SmallAppName + @"\Settings", "Game_AutoBackUp");
+                }
+                catch
+                {
+                    // Подавляем сообщение об ошибке если оно возникнет...
+                }
+
+                // Работаем...
                 try
                 {
                     // Удаляем ключ HKEY_CURRENT_USER\Software\Valve\Source\tf\Settings из реестра...
@@ -2037,6 +2056,17 @@ namespace srcrepair
             DialogResult UserConfirmation = MessageBox.Show(RM.GetString("PS_ResetSettingsMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (UserConfirmation == DialogResult.Yes)
             {
+                // Создаём резервную копию...
+                try
+                {
+                    CreateRegBackUpNow(@"HKEY_CURRENT_USER\Software\Valve\Source\" + GV.SmallAppName + @"\Settings", "Game_AutoBackUp");
+                }
+                catch
+                {
+                    // Подавляем сообщение об ошибке если оно возникнет...
+                }
+                
+                // Работаем...
                 try
                 {
                     Directory.Delete(GV.GamePath, true); // Удаляем всю папку с файлами игры...
@@ -2208,7 +2238,7 @@ namespace srcrepair
             // Создадим резервную копию графических настроек игры...
             try
             {
-                CreateRegBackUpNow(@"HKEY_CURRENT_USER\Software\Valve\Source\" + GV.SmallAppName + @"\Settings", "Steam_BackUp");
+                CreateRegBackUpNow(@"HKEY_CURRENT_USER\Software\Valve\Source\" + GV.SmallAppName + @"\Settings", "Game_Options");
                 MessageBox.Show(RM.GetString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
@@ -2240,7 +2270,7 @@ namespace srcrepair
             // Созданим резервную копию графических настроек всех Source-игр...
             try
             {
-                CreateRegBackUpNow(@"HKEY_CURRENT_USER\Software\Valve\Source", "Steam_BackUp");
+                CreateRegBackUpNow(@"HKEY_CURRENT_USER\Software\Valve\Source", "Source_Options");
                 MessageBox.Show(RM.GetString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
