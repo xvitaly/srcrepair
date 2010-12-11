@@ -1223,7 +1223,6 @@ namespace srcrepair
             }
 
             // Включаем заблокированные ранее контролы...
-            MNUShowEdHint.Enabled = true;
             MNUFPSWizard.Enabled = true;
             MNUInstaller.Enabled = true;
             
@@ -2284,6 +2283,41 @@ namespace srcrepair
             catch
             {
                 MessageBox.Show(RM.GetString("BU_RegErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void MainTabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Проверяем открыта ли страница "Редактор конфигов"...
+            if (MainTabControl.SelectedIndex == 1)
+            {
+                // Включаем заблокированный контрол...
+                MNUShowEdHint.Enabled = true;
+                // Проверяем открыт ли файл в Редакторе конфигов...
+                if (String.IsNullOrEmpty(CFGFileName))
+                {
+                    // Нет, не открыт. Выводим имя "Безымянный.cfg"...
+                    SB_Status.Text = RM.GetString("StatusOpenedFile") + " " + RM.GetString("UnnamedFileName");
+                }
+                else
+                {
+                    // Да, открыт. Выводим настоящее имя...
+                    SB_Status.Text = RM.GetString("StatusOpenedFile") + " " + CFGFileName;
+                }
+            }
+            else
+            {
+                // Открыта другая страница...
+                // Блокируем контрол подсказки...
+                MNUShowEdHint.Enabled = false;
+                // ...и выводим стандартное сообщение в статус-бар...
+                SB_Status.Text = RM.GetString("StatusNormal");
+            }
+
+            // Проверяем, открыта ли страница "Резервные копии"...
+            if (MainTabControl.SelectedIndex == 4)
+            {
+                BUT_Refresh.PerformClick();
             }
         }
     }
