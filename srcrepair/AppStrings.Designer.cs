@@ -115,6 +115,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There was an error occured. Can&apos;t get list of backups. Create at least one backup and try again later..
+        /// </summary>
+        internal static string BU_ListLdFailed {
+            get {
+                return ResourceManager.GetString("BU_ListLdFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No backup files detected. Please, refresh list and try again later!.
         /// </summary>
         internal static string BU_NoFiles {

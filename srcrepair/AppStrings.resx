@@ -375,4 +375,7 @@
   <data name="BU_RegErr" xml:space="preserve">
     <value>There was an error occured. Backup file was not created!</value>
   </data>
+  <data name="BU_ListLdFailed" xml:space="preserve">
+    <value>There was an error occured. Can't get list of backups. Create at least one backup and try again later.</value>
+  </data>
 </root>
