@@ -2988,15 +2988,6 @@
     <value>Garry's Mod</value>
   </data>
   <data name="AppSelector.Items3" xml:space="preserve">
-    <value>Left 4 Dead</value>
-  </data>
-  <data name="AppSelector.Items4" xml:space="preserve">
-    <value>Left 4 Dead 2</value>
-  </data>
-  <data name="AppSelector.Items5" xml:space="preserve">
-    <value>Alien Swarm</value>
-  </data>
-  <data name="AppSelector.Items6" xml:space="preserve">
     <value>Day of Defeat: Source</value>
   </data>
   <data name="AppSelector.Location" type="System.Drawing.Point, System.Drawing">

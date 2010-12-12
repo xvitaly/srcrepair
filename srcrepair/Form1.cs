@@ -838,30 +838,30 @@ namespace srcrepair
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                case 3: // Left 4 Dead 1
-                    GV.FullAppName = "left 4 dead"; // имя каталога...
-                    GV.SmallAppName = "left4dead"; // имя индивидуального подкаталога...
-                    ptha = "common"; // это NCF-приложение...
-                    GV.IsGCFApp = false;
-                    break;
-                case 4: // Left 4 Dead 2
-                    GV.FullAppName = "left 4 dead 2";
-                    GV.SmallAppName = "left4dead2";
-                    ptha = "common";
-                    GV.IsGCFApp = false;
-                    break;
-                case 5: // Alien Swarm
-                    GV.FullAppName = "alien swarm";
-                    GV.SmallAppName = "swarm";
-                    ptha = "common";
-                    GV.IsGCFApp = false;
-                    break;
-                case 6: // Day of Defeat: Source
+                case 3: // Day of Defeat: Source
                     GV.FullAppName = "day of defeat source";
                     GV.SmallAppName = "dod";
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
+                /*case 4: // Left 4 Dead 1
+                    GV.FullAppName = "left 4 dead"; // имя каталога...
+                    GV.SmallAppName = "left4dead"; // имя индивидуального подкаталога...
+                    ptha = "common"; // это NCF-приложение...
+                    GV.IsGCFApp = false;
+                    break;
+                case 5: // Left 4 Dead 2
+                    GV.FullAppName = "left 4 dead 2";
+                    GV.SmallAppName = "left4dead2";
+                    ptha = "common";
+                    GV.IsGCFApp = false;
+                    break;
+                case 6: // Alien Swarm
+                    GV.FullAppName = "alien swarm";
+                    GV.SmallAppName = "swarm";
+                    ptha = "common";
+                    GV.IsGCFApp = false;
+                    break;*/
                 default: // Ничего не выбрано
                     AppSelector.SelectedIndex = -1;
                     break;
