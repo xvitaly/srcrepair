@@ -1207,12 +1207,14 @@
             this.MNUHelp.Image = global::srcrepair.Properties.Resources.Help;
             this.MNUHelp.Name = "MNUHelp";
             resources.ApplyResources(this.MNUHelp, "MNUHelp");
+            this.MNUHelp.Click += new System.EventHandler(this.MNUHelp_Click);
             // 
             // MNUOpinion
             // 
             this.MNUOpinion.Image = global::srcrepair.Properties.Resources.Home;
             this.MNUOpinion.Name = "MNUOpinion";
             resources.ApplyResources(this.MNUOpinion, "MNUOpinion");
+            this.MNUOpinion.Click += new System.EventHandler(this.MNUOpinion_Click);
             // 
             // MNUReportBug
             // 
@@ -1226,6 +1228,7 @@
             this.MNUSteamGroup.Image = global::srcrepair.Properties.Resources.steam;
             this.MNUSteamGroup.Name = "MNUSteamGroup";
             resources.ApplyResources(this.MNUSteamGroup, "MNUSteamGroup");
+            this.MNUSteamGroup.Click += new System.EventHandler(this.MNUSteamGroup_Click);
             // 
             // MNUSep3
             // 
@@ -1237,18 +1240,21 @@
             this.MNUGroup1.Image = global::srcrepair.Properties.Resources.EasyCoding;
             this.MNUGroup1.Name = "MNUGroup1";
             resources.ApplyResources(this.MNUGroup1, "MNUGroup1");
+            this.MNUGroup1.Click += new System.EventHandler(this.MNUGroup1_Click);
             // 
             // MNUGroup2
             // 
             this.MNUGroup2.Image = global::srcrepair.Properties.Resources.tfru;
             this.MNUGroup2.Name = "MNUGroup2";
             resources.ApplyResources(this.MNUGroup2, "MNUGroup2");
+            this.MNUGroup2.Click += new System.EventHandler(this.MNUGroup2_Click);
             // 
             // MNUGroup3
             // 
             this.MNUGroup3.Image = global::srcrepair.Properties.Resources.tf2world;
             this.MNUGroup3.Name = "MNUGroup3";
             resources.ApplyResources(this.MNUGroup3, "MNUGroup3");
+            this.MNUGroup3.Click += new System.EventHandler(this.MNUGroup3_Click);
             // 
             // MNUSep4
             // 

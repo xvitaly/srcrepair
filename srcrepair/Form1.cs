@@ -2360,5 +2360,35 @@ namespace srcrepair
                 MessageBox.Show(RM.GetString("CE_ClSelErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void MNUHelp_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://www.easycoding.org/projects/srcrepair/help");
+        }
+
+        private void MNUOpinion_Click(object sender, EventArgs e)
+        {
+            Process.Start("mailto:srcrepair@easycoding.org?subject=SRC Repair Opinion");
+        }
+
+        private void MNUSteamGroup_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://steamcommunity.com/groups/srcrepair");
+        }
+
+        private void MNUGroup1_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://www.easycoding.org/");
+        }
+
+        private void MNUGroup2_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://www.team-fortress.ru/");
+        }
+
+        private void MNUGroup3_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://tf2world.ru/");
+        }
     }
 }
