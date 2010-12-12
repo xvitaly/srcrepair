@@ -214,6 +214,24 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unfortunately we have no description for this variable. You can help by sending it to us..
+        /// </summary>
+        internal static string CE_ClNoDescr {
+            get {
+                return ResourceManager.GetString("CE_ClNoDescr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No variables detected in selected row!.
+        /// </summary>
+        internal static string CE_ClSelErr {
+            get {
+                return ResourceManager.GetString("CE_ClSelErr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create a backup file.
         /// </summary>
         internal static string CE_CreateBackUp {

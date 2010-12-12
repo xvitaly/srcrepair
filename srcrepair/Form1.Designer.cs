@@ -671,6 +671,7 @@
             this.CE_ShowHint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.CE_ShowHint, "CE_ShowHint");
             this.CE_ShowHint.Name = "CE_ShowHint";
+            this.CE_ShowHint.Click += new System.EventHandler(this.CE_ShowHint_Click);
             // 
             // CE_Editor
             // 

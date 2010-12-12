@@ -530,6 +530,17 @@ namespace srcrepair
             }
         }
 
+        /*
+         * Эта функция возвращает описание переданной в качестве параметра
+         * переменной, получая эту информацию из ресурса CVList с учётом
+         * локализации.
+         */
+        private static string GetCVDescription(string CVar)
+        {
+            ResourceManager DM = new ResourceManager("srcrepair.CVList", typeof(frmMainW).Assembly);
+            return DM.GetString(CVar);
+        }
+
         #endregion
 
         private void frmMainW_Load(object sender, EventArgs e)
@@ -2082,6 +2093,7 @@ namespace srcrepair
         private void MNUShowEdHint_Click(object sender, EventArgs e)
         {
             // Покажем подсказку...
+            CE_ShowHint.PerformClick();
         }
 
         private void MNUReportBuilder_Click(object sender, EventArgs e)
@@ -2318,6 +2330,34 @@ namespace srcrepair
             if (MainTabControl.SelectedIndex == 4)
             {
                 BUT_Refresh.PerformClick();
+            }
+        }
+
+        private void CE_ShowHint_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string Buf = CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[0].Value.ToString();
+                if (!(String.IsNullOrEmpty(Buf)))
+                {
+                    Buf = GetCVDescription(Buf);
+                    if (!(String.IsNullOrEmpty(Buf)))
+                    {
+                        MessageBox.Show(Buf, GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(RM.GetString("CE_ClNoDescr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(RM.GetString("CE_ClSelErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch
+            {
+                MessageBox.Show(RM.GetString("CE_ClSelErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
