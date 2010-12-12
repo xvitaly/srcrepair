@@ -1,0 +1,1329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="bind" xml:space="preserve">
+    <value>Назначает какое-либо игровое действие клавише.</value>
+  </data>
+  <data name="budget_show_history" xml:space="preserve">
+    <value>Отключает / включает историю графики.</value>
+  </data>
+  <data name="bugreporter_uploadasync" xml:space="preserve">
+    <value>Позволяет асинхронную загрузку на сервер данных для встроенного в игру багрепортера.</value>
+  </data>
+  <data name="cam_collision" xml:space="preserve">
+    <value>При установке значения 1, при просмотре от третьего лица, камера будет избегать прохождения через стены.</value>
+  </data>
+  <data name="cam_idealdelta" xml:space="preserve">
+    <value>Скорость движения камеры при нахождении идеального угла обзора при просмотре от третьего лица.</value>
+  </data>
+  <data name="cam_ideallag" xml:space="preserve">
+    <value>Задержка при нахождении идеального угла обзора при просмотре от третьего лица.</value>
+  </data>
+  <data name="cc_lang" xml:space="preserve">
+    <value>Язык субтитров (по умолчанию – язык клиента Steam).</value>
+  </data>
+  <data name="cc_linger_time" xml:space="preserve">
+    <value>Время задержки субтитров.</value>
+  </data>
+  <data name="cc_predisplay_time" xml:space="preserve">
+    <value>Задержка отображения субтитров.</value>
+  </data>
+  <data name="cc_subtitles" xml:space="preserve">
+    <value>Если включено, то звуковые эффекты не будут отображаться в субтитрах (только речь (например, не будут отображаться звуки ранения игрока)).</value>
+  </data>
+  <data name="closecaption" xml:space="preserve">
+    <value>Закрыть главу.</value>
+  </data>
+  <data name="cl_allowdownload" xml:space="preserve">
+    <value>Разрешить скачивание с сервера спреев, текстур, моделей, карт, звуков и т.д.</value>
+  </data>
+  <data name="cl_allowupload" xml:space="preserve">
+    <value>Разрешить загрузку на сервер данных: личного спрея и т.д.</value>
+  </data>
+  <data name="cl_autoreload" xml:space="preserve">
+    <value>Автоматическая перезарядка.</value>
+  </data>
+  <data name="cl_autorezoom" xml:space="preserve">
+    <value>Автоматическое возвращение зума, при стрельбе снайпером.</value>
+  </data>
+  <data name="cl_autowepswitch" xml:space="preserve">
+    <value>1 - автоматически переключаться на более мощное оружие при его подборе; 0 - оставить текущее.</value>
+  </data>
+  <data name="cl_burninggibs" xml:space="preserve">
+    <value>Устанавливая "1", огонь от взрыва будет поджигать не только игроков, но и останки тел.</value>
+  </data>
+  <data name="cl_c4dynamiclight" xml:space="preserve">
+    <value>1 - включить динамическое освещение мигающей лампочки C4; 0 - отключить.</value>
+  </data>
+  <data name="cl_chatfilters" xml:space="preserve">
+    <value>Настройки фильтров чата.</value>
+  </data>
+  <data name="cl_class" xml:space="preserve">
+    <value>Класс по умолчанию при подключении к серверу.</value>
+  </data>
+  <data name="cl_clearhinthistory" xml:space="preserve">
+    <value>Очищает память подсказок на стороне клиента.</value>
+  </data>
+  <data name="cl_cmdrate" xml:space="preserve">
+    <value>Количество пакетов, которые клиент может отослать серверу.</value>
+  </data>
+  <data name="cl_crosshairalpha" xml:space="preserve">
+    <value>Уровень прозрачности прицела; 0 - выкл.</value>
+  </data>
+  <data name="cl_crosshaircolor" xml:space="preserve">
+    <value>Цвет прицела: 0 - зелёный; 1 - красный; 2 - синий; 3 - жёлтый.</value>
+  </data>
+  <data name="cl_crosshairscale" xml:space="preserve">
+    <value>Размер прицела: 0 - Авто; 600 - крупный; 768 - средний; 1200 - мелкий.</value>
+  </data>
+  <data name="cl_crosshairusealpha" xml:space="preserve">
+    <value>Прозрачность прицела: 0 - выкл; 1 - вкл.</value>
+  </data>
+  <data name="cl_crosshair_blue" xml:space="preserve">
+    <value>Синяя составляющая цвета перекрестия прицела.</value>
+  </data>
+  <data name="cl_crosshair_file" xml:space="preserve">
+    <value>Файл перекрестия прицела.</value>
+  </data>
+  <data name="cl_crosshair_green" xml:space="preserve">
+    <value>Зелёная составляющая цвета перекрестия прицела.</value>
+  </data>
+  <data name="cl_crosshair_red" xml:space="preserve">
+    <value>Красная составляющая цвета перекрестия прицела.</value>
+  </data>
+  <data name="cl_crosshair_scale" xml:space="preserve">
+    <value>Размер перекрестия прицела.</value>
+  </data>
+  <data name="cl_debugrumble" xml:space="preserve">
+    <value>Включает / отключает отладку шумовых эффектов.</value>
+  </data>
+  <data name="cl_detaildist" xml:space="preserve">
+    <value>Определяет диапазон, в которых подробно указаны реквизиты (например, трава).</value>
+  </data>
+  <data name="cl_detailfade" xml:space="preserve">
+    <value>Определяет дистанцию, на которой реквизиты начинают исчезать.</value>
+  </data>
+  <data name="cl_downloadfilter" xml:space="preserve">
+    <value>Определяет, какие файлы могут быть загружены с сервера: all - все файлы, none - никакие (загрузка запрещена), nosounds - разрешено всё, кроме звуков.</value>
+  </data>
+  <data name="cl_drawmonitors" xml:space="preserve">
+    <value>Рендеринг внутриигровых "мониторов" которые включают зарендеренные 3D картинки.</value>
+  </data>
+  <data name="cl_dynamiccrosshair" xml:space="preserve">
+    <value>1 - включает динамический прицел, увеличивающийся во время бега, либо прыжков; 0 - выключает.</value>
+  </data>
+  <data name="cl_ejectbrass" xml:space="preserve">
+    <value>Отображение гильз.</value>
+  </data>
+  <data name="cl_forcepreload" xml:space="preserve">
+    <value>Загрузка информации о текстурах и моделях в начале карты.</value>
+  </data>
+  <data name="cl_hud_minmode" xml:space="preserve">
+    <value>Установите "1", чтобы включить отображение HUD в минимальном режиме.</value>
+  </data>
+  <data name="cl_interp" xml:space="preserve">
+    <value>Временной промежуток, через который происходит интерполяция (0,05 = 50 мс).</value>
+  </data>
+  <data name="cl_interp_ratio" xml:space="preserve">
+    <value>Число промежутков между "интерполированием" мира.</value>
+  </data>
+  <data name="cl_interp_threadmodeticks" xml:space="preserve">
+    <value>Дополнительная интерполяция.</value>
+  </data>
+  <data name="cl_lagcompensation" xml:space="preserve">
+    <value>Производит компенсацию лагов на стороне сервера.</value>
+  </data>
+  <data name="cl_lagcomp_errorcheck" xml:space="preserve">
+    <value>Проверяет ошибки позиции игрока.</value>
+  </data>
+  <data name="cl_logofile" xml:space="preserve">
+    <value>Указать файл личного спрея для использования на серверах.</value>
+  </data>
+  <data name="cl_minmodels" xml:space="preserve">
+    <value>1 - использовать только одну модель игрока (как в первых бетах CSS); 0 - использовать 4 стандартные модели.</value>
+  </data>
+  <data name="cl_min_ct" xml:space="preserve">
+    <value>Задаёт номер модели спецназа, который будет использоваться в режиме одной модели (1-4).</value>
+  </data>
+  <data name="cl_min_t" xml:space="preserve">
+    <value>Задаёт номер модели террористов, который будет использоваться в режиме одной модели (1-4).</value>
+  </data>
+  <data name="cl_mouselook" xml:space="preserve">
+    <value>1 - включить обзор с помощью мыши; 0 - только с клавиатуры. Нельзя сменить, находясь на сервере.</value>
+  </data>
+  <data name="cl_muzzleflash_dlight_1st" xml:space="preserve">
+    <value>Динамический свет 1го порядка от вспышек выстрелов.</value>
+  </data>
+  <data name="cl_new_impact_effects" xml:space="preserve">
+    <value>Пыль, песок и другие погодные эффекты.</value>
+  </data>
+  <data name="cl_observercrosshair" xml:space="preserve">
+    <value>1 - включить прицел в режиме спектра (зрителя); 0 - выключить.</value>
+  </data>
+  <data name="cl_phys_props_enable" xml:space="preserve">
+    <value>Отключает / включает физику мелких объектов.</value>
+  </data>
+  <data name="cl_phys_props_max" xml:space="preserve">
+    <value>Количество одновременно просчитываемых мелких предметов.</value>
+  </data>
+  <data name="cl_predict" xml:space="preserve">
+    <value>Производит прогнозирование движений игрока на стороне клиента.</value>
+  </data>
+  <data name="cl_predictweapons" xml:space="preserve">
+    <value>Производит прогнозирование эффектов оружия на стороне клиента.</value>
+  </data>
+  <data name="cl_pred_optimize" xml:space="preserve">
+    <value>Оптимизация для не копирования данных если небыло обновление сети (1), а также для не переадресации если не было ошибок (2).</value>
+  </data>
+  <data name="cl_radaralpha" xml:space="preserve">
+    <value>Задаёт уровень прозрачности радара.</value>
+  </data>
+  <data name="cl_radar_locked" xml:space="preserve">
+    <value>1 - включить статический радар, не зависящий от поворотов игрока.</value>
+  </data>
+  <data name="cl_ragdoll_collide" xml:space="preserve">
+    <value>Просчет пересекающихся трупов (трупы не будут проваливаться друг в друга, а будут складываться "кучкой").</value>
+  </data>
+  <data name="cl_ragdoll_fade_time" xml:space="preserve">
+    <value>Время исчезновения трупов (время, через которое трупы будут исчезать).</value>
+  </data>
+  <data name="cl_ragdoll_physics_enable" xml:space="preserve">
+    <value>Включает / отключает физику трупов (если отключено, они будут висеть в воздухе).</value>
+  </data>
+  <data name="cl_righthand" xml:space="preserve">
+    <value>1 - отображать оружие в правой руке; 0 - оружие отображается в левой руке (по умолчанию).</value>
+  </data>
+  <data name="cl_rumblescale" xml:space="preserve">
+    <value>Устанавливает чувствительность шумовых эффектов.</value>
+  </data>
+  <data name="cl_showfps" xml:space="preserve">
+    <value>Показывает текущий фпс на экране (количество кадров в секунду).</value>
+  </data>
+  <data name="cl_showhelp" xml:space="preserve">
+    <value>Показывает помощь на экране.</value>
+  </data>
+  <data name="cl_showpluginmessages" xml:space="preserve">
+    <value>Позволяет плагинам показывать вам сообщения.</value>
+  </data>
+  <data name="cl_show_splashes" xml:space="preserve">
+    <value>Брызги воды.</value>
+  </data>
+  <data name="cl_smooth" xml:space="preserve">
+    <value>Сглаживание ошибок прогнозирования.</value>
+  </data>
+  <data name="cl_smoothtime" xml:space="preserve">
+    <value>Время, нужное для сглаживания ошибок прогнозирования.</value>
+  </data>
+  <data name="cl_soundfile" xml:space="preserve">
+    <value>Звуковой файл игрока (предположение: звона смерти).</value>
+  </data>
+  <data name="cl_spec_mode" xml:space="preserve">
+    <value>Настройки режима зрителя (спектатора).</value>
+  </data>
+  <data name="cl_team" xml:space="preserve">
+    <value>Команда по умолчанию при подключении к серверу.</value>
+  </data>
+  <data name="cl_threaded_bone_setup" xml:space="preserve">
+    <value>Параллельная обработка "C_BaseAnimating".</value>
+  </data>
+  <data name="cl_timeout" xml:space="preserve">
+    <value>Через сколько секунд, не получая пакетов от сервера, клиент отсоеденится от сервера.</value>
+  </data>
+  <data name="cl_updaterate" xml:space="preserve">
+    <value>Количество пакетов, которые клиент может получить от сервера.</value>
+  </data>
+  <data name="cl_wpn_sway_interp" xml:space="preserve">
+    <value>Интерполяция поведения оружия в руках.</value>
+  </data>
+  <data name="commentary" xml:space="preserve">
+    <value>Включает / отключает комментарии разработчиков при запуске listen-сервера.</value>
+  </data>
+  <data name="con_enable" xml:space="preserve">
+    <value>Активировать / отключить консоль разработчика (по умолчанию вызывается клавишей тильда).</value>
+  </data>
+  <data name="decalfrequency" xml:space="preserve">
+    <value>Время в секундах, по истечении которого игрок сможет поместить свой спрей снова.</value>
+  </data>
+  <data name="developer" xml:space="preserve">
+    <value>Последние сообщения из консоли разработчика в левом углу экрана.</value>
+  </data>
+  <data name="dsp_enhance_stereo" xml:space="preserve">
+    <value>Эффект расширения стереобазы.</value>
+  </data>
+  <data name="dsp_slow_cpu" xml:space="preserve">
+    <value>Режим слабого CPU при обработке звука. Выставив 1, снижается качество звуковых эффектов DSP, но повышается производительность.</value>
+  </data>
+  <data name="dsp_spatial" xml:space="preserve">
+    <value>Громкость окружающей среды (пространства).</value>
+  </data>
+  <data name="dsp_speaker" xml:space="preserve">
+    <value>Громкость речи.</value>
+  </data>
+  <data name="dsp_volume" xml:space="preserve">
+    <value>0 - без звука; 1 - есть звук.</value>
+  </data>
+  <data name="dsp_water" xml:space="preserve">
+    <value>Громкость воды.</value>
+  </data>
+  <data name="echo" xml:space="preserve">
+    <value>Выводит сообщение в консоль разработчика.</value>
+  </data>
+  <data name="flex_smooth" xml:space="preserve">
+    <value>Изменение контроллера анимации.</value>
+  </data>
+  <data name="fov_desired" xml:space="preserve">
+    <value>Угол обзора.</value>
+  </data>
+  <data name="fps_max" xml:space="preserve">
+    <value>Задаёт максимальный FPS.</value>
+  </data>
+  <data name="func_break_max_pieces" xml:space="preserve">
+    <value>Количество осколков от частиц, таких как Gibs.</value>
+  </data>
+  <data name="g15_update_msec" xml:space="preserve">
+    <value>Интервал обновления клавиатуры Logitech G-15.</value>
+  </data>
+  <data name="gl_clear" xml:space="preserve">
+    <value>Буфер случайного цвета каждого кадра.</value>
+  </data>
+  <data name="hostname" xml:space="preserve">
+    <value>Название Вашего сервера. Обязательно пишется в кавычках!</value>
+  </data>
+  <data name="hud_achievement_count" xml:space="preserve">
+    <value>Максимальное кол-во достижений, которые могут быть показаны на экране.</value>
+  </data>
+  <data name="hud_achievement_description" xml:space="preserve">
+    <value>Показать полное описание достижений.</value>
+  </data>
+  <data name="hud_achievement_glowtime" xml:space="preserve">
+    <value>Продолжительность свечения вокруг достижения.</value>
+  </data>
+  <data name="hud_achievement_tracker" xml:space="preserve">
+    <value>Скрывать / показывать прогресс выполнения достижения.</value>
+  </data>
+  <data name="hud_centerid" xml:space="preserve">
+    <value>1 - отображать имя игрока в центре экрана; 0 - в левом нижнем углу.</value>
+  </data>
+  <data name="hud_classautokill" xml:space="preserve">
+    <value>После выбора нового класса, вы автоматически умираете.</value>
+  </data>
+  <data name="hud_combattext" xml:space="preserve">
+    <value>Показывать урон при попаданиях в противника.</value>
+  </data>
+  <data name="hud_deathnotice_time" xml:space="preserve">
+    <value>Задаёт время, в течение которого на экране будет отображаться информация об убийствах.</value>
+  </data>
+  <data name="hud_drawhistory_time" xml:space="preserve">
+    <value>Задаёт время, в течение которого на экране будет отображаться история покупок.</value>
+  </data>
+  <data name="hud_escort_test_speed" xml:space="preserve">
+    <value>Как долго будет отображаться панель уведомлений.</value>
+  </data>
+  <data name="hud_fastswitch" xml:space="preserve">
+    <value>Быстрое переключение оружия.</value>
+  </data>
+  <data name="hud_medicautocallers" xml:space="preserve">
+    <value>Автоматический вызов медика, отображающий товарищей с заданным здоровьем.</value>
+  </data>
+  <data name="hud_medicautocallersthreshold" xml:space="preserve">
+    <value>Количество здоровья, при которых срабатывает автоматический вызов медика.</value>
+  </data>
+  <data name="hud_medichealtargetmarker" xml:space="preserve">
+    <value>Маркер лечения, который лучше выделяет лечимую вами цель.</value>
+  </data>
+  <data name="hud_saytext_time" xml:space="preserve">
+    <value>Сколько времени будут показываться сообщения в чате.</value>
+  </data>
+  <data name="hud_showtargetid" xml:space="preserve">
+    <value>1 - включить отображение имени игрока при наведении прицела на него.</value>
+  </data>
+  <data name="hud_takesshots" xml:space="preserve">
+    <value>Авто скриншот таблицы результатов в конце каждой карты.</value>
+  </data>
+  <data name="joyadvancedupdate" xml:space="preserve">
+    <value>Обновляет текущие настройки джойстика.</value>
+  </data>
+  <data name="joystick" xml:space="preserve">
+    <value>Выключает / включает джойстик.</value>
+  </data>
+  <data name="joy_advanced" xml:space="preserve">
+    <value>Необходима в joystick.cfg перед установкой клавиш, чувствительности и порога.</value>
+  </data>
+  <data name="joy_advaxisr" xml:space="preserve">
+    <value>Ось R: обычно, это ось вращения (поворота).</value>
+  </data>
+  <data name="joy_advaxisu" xml:space="preserve">
+    <value>Ось U.</value>
+  </data>
+  <data name="joy_advaxisv" xml:space="preserve">
+    <value>Ось V.</value>
+  </data>
+  <data name="joy_advaxisx" xml:space="preserve">
+    <value>Ось X: обычно, это главная X-ось контроллера.</value>
+  </data>
+  <data name="joy_advaxisy" xml:space="preserve">
+    <value>Ось Y: обычно, это главная Y-ось контроллера.</value>
+  </data>
+  <data name="joy_advaxisz" xml:space="preserve">
+    <value>Ось Z: обычно, это главная Z-ось или дроссель контроллера.</value>
+  </data>
+  <data name="joy_autoaimdampen" xml:space="preserve">
+    <value>Определяет, как будет измеряться ход стика, когда оружие направлено на действительную цель.</value>
+  </data>
+  <data name="joy_autoaimdampenrange" xml:space="preserve">
+    <value>Диапазон стика, когда применен autoaimdampen.</value>
+  </data>
+  <data name="joy_autosprint" xml:space="preserve">
+    <value>Автоматический спринт при передвижении с помощью аналогового джойстика.</value>
+  </data>
+  <data name="joy_axisbutton_threshold" xml:space="preserve">
+    <value>Диапазон аналоговой оси до того, как зарегистрировано нажатие кнопки.</value>
+  </data>
+  <data name="joy_diagonalpov" xml:space="preserve">
+    <value>POV работает и по диагонали тоже.</value>
+  </data>
+  <data name="joy_display_input" xml:space="preserve">
+    <value>Записывать информацию джойстика в лог консоли разработчика.</value>
+  </data>
+  <data name="joy_forwardsensitivity" xml:space="preserve">
+    <value>Определяет количество движения джойстика для максимальной скорости передвижения вперед и назад.</value>
+  </data>
+  <data name="joy_forwardthreshold" xml:space="preserve">
+    <value>Определяет "мертвую зону" для перемещения вперед и назад.</value>
+  </data>
+  <data name="joy_inverty" xml:space="preserve">
+    <value>Инвертировать ли ось Y джойстика для обзора.</value>
+  </data>
+  <data name="joy_lowend" xml:space="preserve">
+    <value>Определяет величину физического диапазона контроллера, который Вы хотите исключить как "внутреннюю зону".</value>
+  </data>
+  <data name="joy_lowmap" xml:space="preserve">
+    <value>Определяет величину действительного диапазона контроллера, сопоставленную "внутренней зоне".</value>
+  </data>
+  <data name="joy_name" xml:space="preserve">
+    <value>Название вашего джойстика.</value>
+  </data>
+  <data name="joy_pitchsensitivity" xml:space="preserve">
+    <value>Определяет скорость или коэффициент, используемый при обзоре вверх и вниз.</value>
+  </data>
+  <data name="joy_pitchthreshold" xml:space="preserve">
+    <value>Определяет "мёртвую зону" для обзора вверх и вниз.</value>
+  </data>
+  <data name="joy_response_look" xml:space="preserve">
+    <value>Режим отклика джойстика для взгляда: 0 - линейный; 1 - квадратный; 2 - кубический; 3 - квадратный экстремальный; 4 - другой.</value>
+  </data>
+  <data name="joy_response_move" xml:space="preserve">
+    <value>Режим ответа стика передвижения: 0 - линейный; 1 - квадратный; 2 - кубический; 3 - квадратный экстремальный; 4 - другой.</value>
+  </data>
+  <data name="joy_sidesensitivity" xml:space="preserve">
+    <value>Определяет величину передвижения джойстика, необходимую для максимальной скорости передвижения из стороны в сторону.</value>
+  </data>
+  <data name="joy_sidethreshold" xml:space="preserve">
+    <value>Определяет "мертвую зону" для передвижения из стороны в сторону.</value>
+  </data>
+  <data name="joy_wingmanwarrior_centerhack" xml:space="preserve">
+    <value>Исправляет проблему центрирования с джойстиком Wingman Warrior.</value>
+  </data>
+  <data name="joy_wingmanwarrior_turnhack" xml:space="preserve">
+    <value>Исправляет проблему вращения с джойстиком Wingman Warrior.</value>
+  </data>
+  <data name="joy_xcontroller_cfg_loaded" xml:space="preserve">
+    <value>Загружать или нет конфиг 360controller.cfg.</value>
+  </data>
+  <data name="joy_yawsensitivity" xml:space="preserve">
+    <value>Определяет скорость или коэффициент, используемый при обзоре влево или вправо.</value>
+  </data>
+  <data name="joy_yawthreshold" xml:space="preserve">
+    <value>Определяет "мертвую зону" для обзора влево или вправо.</value>
+  </data>
+  <data name="jpeg_quality" xml:space="preserve">
+    <value>Качество скриншота, снятого в формате JPEG командой jpeg консоли.</value>
+  </data>
+  <data name="lod_transitiondist" xml:space="preserve">
+    <value>Расстояние на котором "lod" снижается на объектах.</value>
+  </data>
+  <data name="log" xml:space="preserve">
+    <value>При установке значения on будет включена запись логов консоли в файл; при установке off - выключена.</value>
+  </data>
+  <data name="mapcyclefile" xml:space="preserve">
+    <value>Имя файла со списком и порядком следования карт.</value>
+  </data>
+  <data name="mat_aaquality" xml:space="preserve">
+    <value>Качество полноэкранного сглаживания.</value>
+  </data>
+  <data name="mat_antialias" xml:space="preserve">
+    <value>Полноэкранное сглаживание.</value>
+  </data>
+  <data name="mat_autoexposure_max" xml:space="preserve">
+    <value>Максимальная яркость экрана.</value>
+  </data>
+  <data name="mat_autoexposure_min" xml:space="preserve">
+    <value>Минимальная яркость экрана.</value>
+  </data>
+  <data name="mat_bloomscale" xml:space="preserve">
+    <value>Bloom-эффект.</value>
+  </data>
+  <data name="mat_bloom_scalefactor_scalar" xml:space="preserve">
+    <value>Регулировка интенсивности Bloom эффекта.</value>
+  </data>
+  <data name="mat_bufferprimitives" xml:space="preserve">
+    <value>Кэширование графических примитивов.</value>
+  </data>
+  <data name="mat_bumpmap" xml:space="preserve">
+    <value>Бампмэппинг.</value>
+  </data>
+  <data name="mat_clipz" xml:space="preserve">
+    <value>0 - ликвидирует проблемы с DirectX9 у некоторых видеокарт nVIDIA.</value>
+  </data>
+  <data name="mat_colcorrection_disableentities" xml:space="preserve">
+    <value>Отключает "энтити" цветокоррекции на карте.</value>
+  </data>
+  <data name="mat_colorcorrection" xml:space="preserve">
+    <value>Коррекция цвета.</value>
+  </data>
+  <data name="mat_compressedtextures" xml:space="preserve">
+    <value>Сжатие текстур.</value>
+  </data>
+  <data name="mat_configcurrent" xml:space="preserve">
+    <value>Отображает конфигурацию текущей контрольной панели видео для текстурного маппинга.</value>
+  </data>
+  <data name="mat_debug_postprocessing_effects" xml:space="preserve">
+    <value>0 - выкл; 1 - отображает постпроцессинговые алгоритмы в квадрантах экрана; 2 - отображает постпроцессинг в центре экрана.</value>
+  </data>
+  <data name="mat_diffuse" xml:space="preserve">
+    <value>Устанавливая значение "0", всё становится чёрным.</value>
+  </data>
+  <data name="mat_disablehwmorph" xml:space="preserve">
+    <value>Отключает аппаратный морфинг для некоторых модов.</value>
+  </data>
+  <data name="mat_disable_bloom" xml:space="preserve">
+    <value>Принудительное отключение эффекта Bloom.</value>
+  </data>
+  <data name="mat_disable_lightwarp" xml:space="preserve">
+    <value>Точное описание не известно, но относится к 1D текстурам как затенение.</value>
+  </data>
+  <data name="mat_drawtexturescale" xml:space="preserve">
+    <value>Включает вид сглаживания текстур.</value>
+  </data>
+  <data name="mat_drawtitlesafe" xml:space="preserve">
+    <value>Включает видимый оверлей.</value>
+  </data>
+  <data name="mat_dxlevel" xml:space="preserve">
+    <value>Устанавливает режим DirectX (настоятельно не рекомендуется использовать в конфигах!).</value>
+  </data>
+  <data name="mat_envmapsize" xml:space="preserve">
+    <value>История изображений в недостижимых областях карты, таких как SkyBox.</value>
+  </data>
+  <data name="mat_envmaptgasize" xml:space="preserve">
+    <value>Отвечает за размер SkyBox.</value>
+  </data>
+  <data name="mat_fastnobump" xml:space="preserve">
+    <value>Алгоритм отрисовки объемных текстур.</value>
+  </data>
+  <data name="mat_fastspecular" xml:space="preserve">
+    <value>Алгоритм отрисовки гладких поверхностей.</value>
+  </data>
+  <data name="mat_filterlightmaps" xml:space="preserve">
+    <value>Фильтр освещения.</value>
+  </data>
+  <data name="mat_filtertextures" xml:space="preserve">
+    <value>Фильтр текстур.</value>
+  </data>
+  <data name="mat_forceaniso" xml:space="preserve">
+    <value>Анизотропная фильтрация текстур.</value>
+  </data>
+  <data name="mat_forcehardwaresync" xml:space="preserve">
+    <value>Работает вместе с вертикальной сихронизацией, позволяет увеличить частоту кадров, если это возможно.</value>
+  </data>
+  <data name="mat_forcemanagedtextureintohardware" xml:space="preserve">
+    <value>Очищение текстур в видеопамяти.</value>
+  </data>
+  <data name="mat_hdr_enabled" xml:space="preserve">
+    <value>Эффект подстраивания видимости при переходе из областей с разным уровнем освещенности (HDR).</value>
+  </data>
+  <data name="mat_hdr_level" xml:space="preserve">
+    <value>Качество эффектов HDR.</value>
+  </data>
+  <data name="mat_lightmap_pfms" xml:space="preserve">
+    <value>Выводит файлы .pfm, содержащие данные о "лайтмапах" для каждой страницы, когда уровень существует.</value>
+  </data>
+  <data name="mat_max_worldmesh_vertices" xml:space="preserve">
+    <value>Удерживает текстуры от вытягивания.</value>
+  </data>
+  <data name="mat_mipmaptextures" xml:space="preserve">
+    <value>Изменение качества текстур с расстоянием.</value>
+  </data>
+  <data name="mat_monitorgamma" xml:space="preserve">
+    <value>Гамма.</value>
+  </data>
+  <data name="mat_motion_blur_forward_enabled" xml:space="preserve">
+    <value>Размытие при движении.</value>
+  </data>
+  <data name="mat_parallaxmap" xml:space="preserve">
+    <value>Цветокоррекция MIP-уровней 2 - карты нормалей; 1 - все остальное.</value>
+  </data>
+  <data name="mat_picmip" xml:space="preserve">
+    <value>Качество детализации текстур.</value>
+  </data>
+  <data name="mat_postprocessing_combine" xml:space="preserve">
+    <value>Объединяет Bloom, программное сглаживание и цветокоррекцию в один постпроцессинговый алгоритм.</value>
+  </data>
+  <data name="mat_queue_mode" xml:space="preserve">
+    <value>Количество ядер процессора, задействованных для игры.</value>
+  </data>
+  <data name="mat_reducefillrate" xml:space="preserve">
+    <value>Качество шейдерных эффектов (эффектов, реализуемых с помощью шейдеров).</value>
+  </data>
+  <data name="mat_savechanges" xml:space="preserve">
+    <value>Сохраняет текущую конфигурацию видео в реестре Windows (категорически не рекомендуется использовать в конфигах!).</value>
+  </data>
+  <data name="mat_shadowstate" xml:space="preserve">
+    <value>Относится к теням (работает только с r_shadows).</value>
+  </data>
+  <data name="mat_showlowresimage" xml:space="preserve">
+    <value>Устанавливая "1", полностью искажаются текстуры, прирост фпс на слабых компьютерах большой, но он того не стоит.</value>
+  </data>
+  <data name="mat_showmaterials" xml:space="preserve">
+    <value>Отображает инструменты.</value>
+  </data>
+  <data name="mat_showmaterialsverbose" xml:space="preserve">
+    <value>Отображает инструменты №2.</value>
+  </data>
+  <data name="mat_showtextures" xml:space="preserve">
+    <value>Отображает используемые текстуры.</value>
+  </data>
+  <data name="mat_showwatertextures" xml:space="preserve">
+    <value>Уменьшает текстуры воды (чтобы уменьшить влияние GPU на процессор).</value>
+  </data>
+  <data name="mat_software_aa_blur_one_pixel_lines" xml:space="preserve">
+    <value>Как много программного сглаживания требуется, чтобы сгладить линию толщиной в один пиксель (0.0 – не требуется), (1.0 - много).</value>
+  </data>
+  <data name="mat_software_aa_debug" xml:space="preserve">
+    <value>Режим отладки программного сглаживания.</value>
+  </data>
+  <data name="mat_software_aa_edge_threshold" xml:space="preserve">
+    <value>Software AA – регулирует чувствительность обнаружения краев шейдеров у программного сглаживания – меньшее значение сгладит больше краев, большее значение сгладит меньше.</value>
+  </data>
+  <data name="mat_software_aa_quality" xml:space="preserve">
+    <value>Качество программного сглаживания: (0 - 5-tap filter), (1 - 9-tap filter).</value>
+  </data>
+  <data name="mat_software_aa_strength" xml:space="preserve">
+    <value>Производит программный А-А постпроцессинг (альтернативно/дополнительно к MSAA).</value>
+  </data>
+  <data name="mat_software_aa_tap_offset" xml:space="preserve">
+    <value>По умолчанию 1.0 - меньшее значение, сделает изображение более четкое, значение выше сделает его размытым.</value>
+  </data>
+  <data name="mat_specular" xml:space="preserve">
+    <value>Отключает / включает блеск во время убер-заряда.</value>
+  </data>
+  <data name="mat_spewvertexandpixelshaders" xml:space="preserve">
+    <value>Выводит в консоль разработчика вертексные и фрагментные шейдеры, загруженные в настоящий момент.</value>
+  </data>
+  <data name="mat_supportflashlight" xml:space="preserve">
+    <value>0 – не поддерживает вспышки (не загружает комбинации шейдера для вспышек); 1 – вспышки поддерживаются.</value>
+  </data>
+  <data name="mat_texture_limit" xml:space="preserve">
+    <value>Если значение этой команды не равно 1, система ограничит количество текстурной памяти, используемой во фрейме. Полезно для определения клифов производительности. Значение в килобайтах.</value>
+  </data>
+  <data name="mat_texture_list" xml:space="preserve">
+    <value>Для режима отладки отображает список текстур, используемых во фрейме.</value>
+  </data>
+  <data name="mat_texture_list_all" xml:space="preserve">
+    <value>Если значение этой команды отлично от нуля, то панель списка текстур будет показывать все загруженные в настоящий момент текстуры.</value>
+  </data>
+  <data name="mat_texture_list_txlod" xml:space="preserve">
+    <value>Регулирует степень детализации последней просмотренной текстуры (+1 – увеличить разрешение, -1 – уменьшить разрешение).</value>
+  </data>
+  <data name="mat_texture_list_view" xml:space="preserve">
+    <value>Если значение этой команды отлично от нуля, то панель списка текстур будет отображать иконки загруженных в настоящих момент текстур.</value>
+  </data>
+  <data name="mat_tonemap_algorithm" xml:space="preserve">
+    <value>0 - оригинальный алгоритм; 1 - новый алгоритм.</value>
+  </data>
+  <data name="mat_tonemap_min_avglum" xml:space="preserve">
+    <value>Software AA – производит программный постпроцесс сглаживания. Значение команды устанавливает жесткость эффекта. (0.0 – выкл.).</value>
+  </data>
+  <data name="mat_trilinear" xml:space="preserve">
+    <value>1 - трилинейная фильтрация текстур; 0 - билинейная фильтрация текстур.</value>
+  </data>
+  <data name="mat_use_compressed_hdr_textures" xml:space="preserve">
+    <value>Использовать сжатые HDR-текстуры.</value>
+  </data>
+  <data name="mat_vsync" xml:space="preserve">
+    <value>Вертикальная синхронизация.</value>
+  </data>
+  <data name="mat_wateroverlaysize" xml:space="preserve">
+    <value>Устанавливает разрешение искажения воды.</value>
+  </data>
+  <data name="mp_allowspectators" xml:space="preserve">
+    <value>1 - разрешает игрокам присоединяться к команде зрителей; 0 - запрещает.</value>
+  </data>
+  <data name="mp_autoteambalance" xml:space="preserve">
+    <value>1 - включает автобалансировку команд (не работает в режиме чемпионата); 0 - выключает.</value>
+  </data>
+  <data name="mp_bonusroundtime" xml:space="preserve">
+    <value>Время в секундах для режима унижения (добивания противников) после победы в раунде.</value>
+  </data>
+  <data name="mp_chattime" xml:space="preserve">
+    <value>Время отображения (в секундах) таблицы результатов после окончания карты.</value>
+  </data>
+  <data name="mp_decals" xml:space="preserve">
+    <value>Cколько следов от пуль будет оставаться на стенах (0 - отключить декали и спреи).</value>
+  </data>
+  <data name="mp_disable_respawn_times" xml:space="preserve">
+    <value>1 - включает быстрый респаун; 0 - выключает.</value>
+  </data>
+  <data name="mp_enableroundwaittime" xml:space="preserve">
+    <value>1 - включить время на ожидание игроков до начала карты; 0 - раунд будет начат сразу, без ожидания игроков.</value>
+  </data>
+  <data name="mp_flashlight" xml:space="preserve">
+    <value>Разрешить использование фонаря на сервере (в TF2 недоступно).</value>
+  </data>
+  <data name="mp_footsteps" xml:space="preserve">
+    <value>1 - игроки смогут слышать звуки шагов; 0 - звуки шагов не слышны никому.</value>
+  </data>
+  <data name="mp_forcecamera" xml:space="preserve">
+    <value>1 - после смерти разрешено наблюдать только за своей командой; 0 - за любой командой.</value>
+  </data>
+  <data name="mp_friendlyfire" xml:space="preserve">
+    <value>1 - включает огонь по своим; 0 - выключает.</value>
+  </data>
+  <data name="mp_idledealmethod" xml:space="preserve">
+    <value>Какое действие выполнять с простаивающими (AFK): 0 - никакого; 1 - переслать в зрители; 2 - кикнуть.</value>
+  </data>
+  <data name="mp_idlemaxtime" xml:space="preserve">
+    <value>Через сколько минут простоя игрока выполнять действие: кикнуть или отправить в зрители (0 - отключить).</value>
+  </data>
+  <data name="mp_maxrounds" xml:space="preserve">
+    <value>Максимальное число раундов на карте. 0 - без ограничений.</value>
+  </data>
+  <data name="mp_restartgame" xml:space="preserve">
+    <value>Время в секундах, через которое карта будет перезапущена.</value>
+  </data>
+  <data name="mp_restartround" xml:space="preserve">
+    <value>Время в секундах, через которое раунд будет перезапущен (не рекомендуется использовать в конфигах).</value>
+  </data>
+  <data name="mp_teams_unbalance_limit" xml:space="preserve">
+    <value>Задаёт максимальное число несбалансированных игроков.</value>
+  </data>
+  <data name="mp_timelimit" xml:space="preserve">
+    <value>Лимит времени на карте. 0 - без ограничений.</value>
+  </data>
+  <data name="mp_tournament" xml:space="preserve">
+    <value>1 - включает режим чемпионата; 0 - отключает.</value>
+  </data>
+  <data name="mp_tournament_allow_non_admin_restart" xml:space="preserve">
+    <value>1 - позволить не администраторам перезапускать чемпионат; 0 - только администратор может перезапустить чемпионат.</value>
+  </data>
+  <data name="mp_tournament_restart" xml:space="preserve">
+    <value>Перезапустить чемпионат.</value>
+  </data>
+  <data name="mp_tournament_stopwatch" xml:space="preserve">
+    <value>1 - включить таймер в режиме чемпионата (рекомендуется на картах dustbowl, gravelpit и т.п.).</value>
+  </data>
+  <data name="mp_usehwmmodels" xml:space="preserve">
+    <value>Отключает / включает модели, используемые в "Meet The" видео.</value>
+  </data>
+  <data name="mp_usehwmvcds" xml:space="preserve">
+    <value>Отключает / включает анимацию, используемую в "Meet The" видео.</value>
+  </data>
+  <data name="muzzleflash_light" xml:space="preserve">
+    <value>Динамический (отраженный) свет от вспышек.</value>
+  </data>
+  <data name="m_customaccel" xml:space="preserve">
+    <value>Пользовательское ускорение мыши (акселерация).</value>
+  </data>
+  <data name="m_customaccel_exponent" xml:space="preserve">
+    <value>Измерение коэффициента пропорциональности акселерации.</value>
+  </data>
+  <data name="m_customaccel_max" xml:space="preserve">
+    <value>Максимальный коэффициент пропорциональности акселерации.</value>
+  </data>
+  <data name="m_customaccel_scale" xml:space="preserve">
+    <value>Пользовательское значение акселерации мышки.</value>
+  </data>
+  <data name="m_filter" xml:space="preserve">
+    <value>Режим фильтрации (сглаживания) мыши.</value>
+  </data>
+  <data name="m_forward" xml:space="preserve">
+    <value>Устанавливает множитель чуствительности скорости движения мыши вперёд.</value>
+  </data>
+  <data name="m_mouseaccel1" xml:space="preserve">
+    <value>Windows ускорение мышки, первоначальный порог (2x движения).</value>
+  </data>
+  <data name="m_mouseaccel2" xml:space="preserve">
+    <value>Windows ускорение мышки, средний порог (4x движения).</value>
+  </data>
+  <data name="m_pitch" xml:space="preserve">
+    <value>Устанавливает множитель чувствительности скорости движения вверх/вниз у мыши.</value>
+  </data>
+  <data name="m_side" xml:space="preserve">
+    <value>Устанавливает множитель чувствительности скорости перемещения у мыши.</value>
+  </data>
+  <data name="m_yaw" xml:space="preserve">
+    <value>Устанавливает множитель чувствительности скорости поворотов влево-вправо.</value>
+  </data>
+  <data name="name" xml:space="preserve">
+    <value>Ник. Существует лишь для обратной совместимости. Ник берётся из клиента Steam.</value>
+  </data>
+  <data name="net_graph" xml:space="preserve">
+    <value>Включает (1-3) / выключает (0) вывод на экран информации о FPS, сети, потерях пакетов.</value>
+  </data>
+  <data name="net_graphheight" xml:space="preserve">
+    <value>Высота net_graph панели.</value>
+  </data>
+  <data name="net_graphpos" xml:space="preserve">
+    <value>Положение вывода net_graph на экране.</value>
+  </data>
+  <data name="net_graphproportionalfont" xml:space="preserve">
+    <value>Размер шрифта вывода net_graph.</value>
+  </data>
+  <data name="net_graphshowinterp" xml:space="preserve">
+    <value>Отображать / скрывать информацию о интерполяции в выводе net_graph.</value>
+  </data>
+  <data name="net_graphshowlatency" xml:space="preserve">
+    <value>Отображать / скрывать информацию о пинге в выводе net_graph.</value>
+  </data>
+  <data name="net_graphtext" xml:space="preserve">
+    <value>Текст net_graph.</value>
+  </data>
+  <data name="net_maxfilesize" xml:space="preserve">
+    <value>Максимальный размер файла.</value>
+  </data>
+  <data name="npc_height_adjust" xml:space="preserve">
+    <value>Включает тест мод для высоты "adjustmen".</value>
+  </data>
+  <data name="overview_alpha" xml:space="preserve">
+    <value>Прозрачность карты при обзоре.</value>
+  </data>
+  <data name="overview_health" xml:space="preserve">
+    <value>Отображает здоровье игроков при обзоре карты (на миникарте).</value>
+  </data>
+  <data name="overview_locked" xml:space="preserve">
+    <value>Закрепляет угол обзора. Закрепляет карту.</value>
+  </data>
+  <data name="overview_mode" xml:space="preserve">
+    <value>Обзор режима набора карт.</value>
+  </data>
+  <data name="overview_names" xml:space="preserve">
+    <value>Отображает имена игроков при обзоре карты (на миникарте).</value>
+  </data>
+  <data name="overview_tracks" xml:space="preserve">
+    <value>Отображает пути игроков при обзоре карты.</value>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>Пароль доступа к серверу.</value>
+  </data>
+  <data name="props_break_max_pieces" xml:space="preserve">
+    <value>Количество осколков от мелких предметов.</value>
+  </data>
+  <data name="rcon_password" xml:space="preserve">
+    <value>Пароль для удалённого (RCON) администрирования сервера.</value>
+  </data>
+  <data name="rope_averagelight" xml:space="preserve">
+    <value>Среднее cubemap освещение проводов.</value>
+  </data>
+  <data name="rope_collide" xml:space="preserve">
+    <value>Позволяет сталкиваться проводам с миром.</value>
+  </data>
+  <data name="rope_shake" xml:space="preserve">
+    <value>Отключает / включает раскачивание проводов.</value>
+  </data>
+  <data name="rope_smooth" xml:space="preserve">
+    <value>Сглаживание отрисовки проводов.</value>
+  </data>
+  <data name="rope_smooth_enlarge" xml:space="preserve">
+    <value>Сглаживать провода в пространстве экрана.</value>
+  </data>
+  <data name="rope_subdiv" xml:space="preserve">
+    <value>Количество звеньев в проводах.</value>
+  </data>
+  <data name="rope_wind_dist" xml:space="preserve">
+    <value>Влияние ветра на провода.</value>
+  </data>
+  <data name="r_3dnow" xml:space="preserve">
+    <value>Отключает / включает 3DNow код (на процессорах AMD).</value>
+  </data>
+  <data name="r_3dsky" xml:space="preserve">
+    <value>3D фоны (например, здания).</value>
+  </data>
+  <data name="r_ambientboost" xml:space="preserve">
+    <value>Выставляет ускорение окружающих условий, если они полностью загружены местным освещением.</value>
+  </data>
+  <data name="r_ambientfactor" xml:space="preserve">
+    <value>Ускоряет куб окружающей среды на величину не более указанного значения.</value>
+  </data>
+  <data name="r_ambientmin" xml:space="preserve">
+    <value>Порог, выше которого куб окружающей среды не ускорится.</value>
+  </data>
+  <data name="r_cheapwateren" xml:space="preserve">
+    <value>Прорисовка воды и дна.</value>
+  </data>
+  <data name="r_cleardecals" xml:space="preserve">
+    <value>Использование: r_cleardecals &lt;постоянная&gt;.</value>
+  </data>
+  <data name="r_decals" xml:space="preserve">
+    <value>Cколько следов от пуль будет оставаться на стенах (0 - отключить декали и спреи).</value>
+  </data>
+  <data name="r_decalstaticprops" xml:space="preserve">
+    <value>Статичные декали.</value>
+  </data>
+  <data name="r_decal_cullsize" xml:space="preserve">
+    <value>Расстояние, на котором видны пулевые отверстия. Более высокое число = более короткая дистанция.</value>
+  </data>
+  <data name="r_dopixelvisibility" xml:space="preserve">
+    <value>Отключает / включает "чёрточки" на источниках освещения.</value>
+  </data>
+  <data name="r_drawbatchdecals" xml:space="preserve">
+    <value>Прорисовывать пакетные декали.</value>
+  </data>
+  <data name="r_drawdetailprops" xml:space="preserve">
+    <value>Отключает / включает детализацию мелких предметов.</value>
+  </data>
+  <data name="r_drawflecks" xml:space="preserve">
+    <value>Прорисовка мелких осколков и пыли вокруг точки вхождения пули.</value>
+  </data>
+  <data name="r_drawmodeldecals" xml:space="preserve">
+    <value>Декали на моделях игроков.</value>
+  </data>
+  <data name="r_drawviewmodel" xml:space="preserve">
+    <value>Отключает / включает прорисовку модели оружия в руке игрока.</value>
+  </data>
+  <data name="r_dynamic" xml:space="preserve">
+    <value>Динамическое освещение объектов.</value>
+  </data>
+  <data name="r_eyes" xml:space="preserve">
+    <value>Прорисовка анимации глаз.</value>
+  </data>
+  <data name="r_fastzreject" xml:space="preserve">
+    <value>Ускорение алгоритма просчета "перспективы", если поддерживается видеоускорителем.</value>
+  </data>
+  <data name="r_flashlightdepthtexture" xml:space="preserve">
+    <value>Глубина освещения текстур, 1 - высокая, 0 - низкая.</value>
+  </data>
+  <data name="r_flex" xml:space="preserve">
+    <value>Прорисовка лицевой анимации.</value>
+  </data>
+  <data name="r_flushlod" xml:space="preserve">
+    <value>Сбрасывает и перезагружает LOD.</value>
+  </data>
+  <data name="r_forcewaterleaf" xml:space="preserve">
+    <value>Качество обзора при нахождении под водой.</value>
+  </data>
+  <data name="r_lightaverage" xml:space="preserve">
+    <value>Усреднение света.</value>
+  </data>
+  <data name="r_lightcache_zbuffercache" xml:space="preserve">
+    <value>Освещение моделей в тени.</value>
+  </data>
+  <data name="r_lightinterp" xml:space="preserve">
+    <value>Интерполяция света.</value>
+  </data>
+  <data name="r_lod" xml:space="preserve">
+    <value>Степень детализации объектов и текстур.</value>
+  </data>
+  <data name="r_maxdlights" xml:space="preserve">
+    <value>Максимальное количество динамических источников света, отображаемых на экране.</value>
+  </data>
+  <data name="r_maxmodeldecal" xml:space="preserve">
+    <value>Максимальное количество декалей, которые могут быть наложены на модель.</value>
+  </data>
+  <data name="r_occludermincount" xml:space="preserve">
+    <value>Задаёт минимальное число преград, которое должно быть использовано.</value>
+  </data>
+  <data name="r_occlusion" xml:space="preserve">
+    <value>Использование "occlusion" системы движка Source Engine.</value>
+  </data>
+  <data name="r_proplightingfromdisk" xml:space="preserve">
+    <value>Освещение пропов с диска: 0 - выкл, 1 - вкл, 2 - показывать ошибки.</value>
+  </data>
+  <data name="r_propsmaxdist" xml:space="preserve">
+    <value>Максимальное расстояние отрисовки мелких предметов. (бутылки, осколки).</value>
+  </data>
+  <data name="r_queued_decals" xml:space="preserve">
+    <value>Использовать очередь декалей. Немного разгружает работу рендера декалей.</value>
+  </data>
+  <data name="r_radiosity" xml:space="preserve">
+    <value>Освещение оружия и рук.</value>
+  </data>
+  <data name="r_renderoverlayfragment" xml:space="preserve">
+    <value>Отключает / включает наложенные на текстуры объекты (плакаты на стенах и т.д.).</value>
+  </data>
+  <data name="r_rootlod" xml:space="preserve">
+    <value>Качество детализации моделей.</value>
+  </data>
+  <data name="r_ropetranslucent" xml:space="preserve">
+    <value>Прозрачность канатов.</value>
+  </data>
+  <data name="r_shadowmaxrendered" xml:space="preserve">
+    <value>Максимальное количество отображаемых теней.</value>
+  </data>
+  <data name="r_shadowrendertotexture" xml:space="preserve">
+    <value>Качество прорисовки теней.</value>
+  </data>
+  <data name="r_shadows" xml:space="preserve">
+    <value>Динамические тени (от объектов и моделей) на местности.</value>
+  </data>
+  <data name="r_spray_lifetime" xml:space="preserve">
+    <value>Сколько раундов будут видны спреи игроков.</value>
+  </data>
+  <data name="r_sse2" xml:space="preserve">
+    <value>Отключает / включает SSE2 код.</value>
+  </data>
+  <data name="r_teeth" xml:space="preserve">
+    <value>Прорисовка анимации рта и зубов.</value>
+  </data>
+  <data name="r_unloadlightmaps" xml:space="preserve">
+    <value>Перезагружает текстуры и освещение. Может помочь после alt+tab (сворачивания), когда появляются розовые текстуры.</value>
+  </data>
+  <data name="r_visambient" xml:space="preserve">
+    <value>Рисует примеры листового освещения окружающей среды.</value>
+  </data>
+  <data name="r_waterdrawreflection" xml:space="preserve">
+    <value>Отражения в воде.</value>
+  </data>
+  <data name="r_waterforceexpensive" xml:space="preserve">
+    <value>Отключает / включает сложные отражения в воде.</value>
+  </data>
+  <data name="r_waterforcereflectentities" xml:space="preserve">
+    <value>Отражения в воде.</value>
+  </data>
+  <data name="r_worldlights" xml:space="preserve">
+    <value>Количество источников света мира, "vertex".</value>
+  </data>
+  <data name="scene_showlook" xml:space="preserve">
+    <value>Воспроизводя, показывает обзор.</value>
+  </data>
+  <data name="scene_showmoveto" xml:space="preserve">
+    <value>Воспроизводя, показывает конечное положение.</value>
+  </data>
+  <data name="sensitivity" xml:space="preserve">
+    <value>Задаёт чуствительность мыши.</value>
+  </data>
+  <data name="showhitlocation" xml:space="preserve">
+    <value>Показывает местоположение "hit".</value>
+  </data>
+  <data name="skill" xml:space="preserve">
+    <value>Уровень игры (1-3). Не используется.</value>
+  </data>
+  <data name="snd_mixahead" xml:space="preserve">
+    <value>Размер звукового буфера.</value>
+  </data>
+  <data name="snd_musicvolume" xml:space="preserve">
+    <value>Громкость музыки.</value>
+  </data>
+  <data name="spec_scoreboard" xml:space="preserve">
+    <value>1 - включить режим таблицы результатов в обычном режиме как в режиме спектра (зрителя).</value>
+  </data>
+  <data name="sv_allowdownload" xml:space="preserve">
+    <value>Разрешить скачивание файлов с сервера (например, нестандартных звуков, карт и т.д.).</value>
+  </data>
+  <data name="sv_allowupload" xml:space="preserve">
+    <value>Разрешить загрузку файлов клиентов на сервер (например, спреев).</value>
+  </data>
+  <data name="sv_alltalk" xml:space="preserve">
+    <value>1 - все могут говорить в микрофон; 0 - у каждой команды свой голосовой чат.</value>
+  </data>
+  <data name="sv_backspeed" xml:space="preserve">
+    <value>Скорость движения назад (спиной вперёд).</value>
+  </data>
+  <data name="sv_cheats" xml:space="preserve">
+    <value>1 - включить команды, помеченные как читы (достижения будут недоступны для всех играющих на сервере); 0 - выключить.</value>
+  </data>
+  <data name="sv_consistency" xml:space="preserve">
+    <value>1 - проверять целостность файлов клиентов по контрольным суммам при подключении к серверу; 0 - не проверять.</value>
+  </data>
+  <data name="sv_contact" xml:space="preserve">
+    <value>Адрес электронной почты администратора сервера.</value>
+  </data>
+  <data name="sv_disablefreezecam" xml:space="preserve">
+    <value>Отключить камеру смерти (freezecam) на сервере.</value>
+  </data>
+  <data name="sv_forcepreload" xml:space="preserve">
+    <value>Принудительная предзагрузка данных.</value>
+  </data>
+  <data name="sv_hudhint_sound" xml:space="preserve">
+    <value>Отключить воспроизведение звуков при появлении подсказок/событий интерфейса.</value>
+  </data>
+  <data name="sv_lan" xml:space="preserve">
+    <value>0 - Интернет-сервер; 1 - сервер, доступный только в локальной сети.</value>
+  </data>
+  <data name="sv_logbans" xml:space="preserve">
+    <value>Записывать в лог файл информацию о банах.</value>
+  </data>
+  <data name="sv_logecho" xml:space="preserve">
+    <value>Записывать в лог сервера содержимое текстового чата обеих команд, а также общего текстового чата.</value>
+  </data>
+  <data name="sv_logfile" xml:space="preserve">
+    <value>Включает / отключает ведение серверных логов.</value>
+  </data>
+  <data name="sv_logflush" xml:space="preserve">
+    <value>Перезаписывать лог файл сервера при каждой смене карты или перезапуске сервера.</value>
+  </data>
+  <data name="sv_logsdir" xml:space="preserve">
+    <value>Папка в каталоге сервера, в которой будут храниться логи.</value>
+  </data>
+  <data name="sv_log_onefile" xml:space="preserve">
+    <value>Включает / отключает создание одного лог-файла сервера вместо множества.</value>
+  </data>
+  <data name="sv_maxrate" xml:space="preserve">
+    <value>Максимально возможное значение Rate для клиентов.</value>
+  </data>
+  <data name="sv_maxupdaterate" xml:space="preserve">
+    <value>Максимально возможное значение updaterate для клиентов.</value>
+  </data>
+  <data name="sv_minrate" xml:space="preserve">
+    <value>Минимально возможное значение Rate для клиентов.</value>
+  </data>
+  <data name="sv_minupdaterate" xml:space="preserve">
+    <value>Минимально возможное значение updaterate для клиентов.</value>
+  </data>
+  <data name="sv_nomvp" xml:space="preserve">
+    <value>Отключить выдачу звёзд MVP (лучший игрок раунда).</value>
+  </data>
+  <data name="sv_nonemesis" xml:space="preserve">
+    <value>Отключить систему превосходств на сервере (только для CSS).</value>
+  </data>
+  <data name="sv_nostats" xml:space="preserve">
+    <value>Полностью отключить статистику на сервере.</value>
+  </data>
+  <data name="sv_nowinpanel" xml:space="preserve">
+    <value>Отключить панель, отображающую трёх лучших игроков, факты о раунде и т.п.</value>
+  </data>
+  <data name="sv_pausable" xml:space="preserve">
+    <value>Позволять ставить игру на паузу командой pause в консоли.</value>
+  </data>
+  <data name="sv_rcon_banpenalty" xml:space="preserve">
+    <value>Время в секундах, на которое будет забанен по IP неверно указавший RCON-пароль сервера.</value>
+  </data>
+  <data name="sv_rcon_maxfailures" xml:space="preserve">
+    <value>Количество неправильных попыток ввода RCON-пароля, после исчерпания которых пользователь будет забанен.</value>
+  </data>
+  <data name="sv_region" xml:space="preserve">
+    <value>Задаёт региональную принадлежность сервера (Европа (в т.ч. и Россия) - 3); -1 - не задано.</value>
+  </data>
+  <data name="sv_skyname" xml:space="preserve">
+    <value>Текущее название skybox текстуры.</value>
+  </data>
+  <data name="sv_stats" xml:space="preserve">
+    <value>1 - записывать статистическую информацию; 0 - не записывать.</value>
+  </data>
+  <data name="sv_timeout" xml:space="preserve">
+    <value>Таймаут в секундах, по истечении которого игрок будет кикнут с сервера.</value>
+  </data>
+  <data name="sv_unlockedchapters" xml:space="preserve">
+    <value>Разблокированные уровни (является читом; используется лишь в синглплеере HL2, Portal и модов).</value>
+  </data>
+  <data name="sv_voiceenable" xml:space="preserve">
+    <value>1 - включить общение через микрофон; 0 - выключить (снижает нагрузку на канал сервера).</value>
+  </data>
+  <data name="tf_birthday" xml:space="preserve">
+    <value>1 - включает режим дня рождения (колпаки на персонажах, вместо крови гайки и болты и т.д.); 0 - выключает.</value>
+  </data>
+  <data name="tf_build_menu_controller_mode" xml:space="preserve">
+    <value>Использовать консольные меню постройки объектов: 1 - вкл; 0 - выкл. Включает один PDA (постройка и уничтожение) вместо двух (отдельно постройка и отдельно уничтожение).</value>
+  </data>
+  <data name="tf_damage_disablespread" xml:space="preserve">
+    <value>1 - запретить распределённый дамаг; 0 - разрешить.</value>
+  </data>
+  <data name="tf_dingalingaling" xml:space="preserve">
+    <value>Отключает / включает звук при попадании в противника.</value>
+  </data>
+  <data name="tf_dingaling_pitchmaxdmg" xml:space="preserve">
+    <value>Устанавливает желаемый тон звука сильного попадания.</value>
+  </data>
+  <data name="tf_dingaling_pitchmindmg" xml:space="preserve">
+    <value>Устанавливает желаемый тон звука слабого попадания.</value>
+  </data>
+  <data name="tf_dingaling_volume" xml:space="preserve">
+    <value>Громкость звука, проигрываемого при попадании в противника.</value>
+  </data>
+  <data name="tf_dingaling_wav_override" xml:space="preserve">
+    <value>Можно использовать любой другой звук попадания, закачав его в папку "sounds" и указав полное имя файла без пути.</value>
+  </data>
+  <data name="tf_disguise_menu_controller_mode" xml:space="preserve">
+    <value>Использовать консольные меню маскировки: 1 - вкл; 0 - выкл.</value>
+  </data>
+  <data name="tf_hud_num_building_alert_beeps" xml:space="preserve">
+    <value>Количество предупреждающих сигналов перед тем, как новое предупреждение отобразится на объектах в строительном дисплее инженера.</value>
+  </data>
+  <data name="tf_tournament_hide_domination_icons" xml:space="preserve">
+    <value>1 - скрывает иконки превосходств над игроками в режиме чемпионата.</value>
+  </data>
+  <data name="tf_weapon_criticals" xml:space="preserve">
+    <value>1 - включает критические выстрелы (криты); 0 - выключает.</value>
+  </data>
+  <data name="tf_weapon_select_demo_start_delay" xml:space="preserve">
+    <value>Задержка между респауном и доставанием оружия.</value>
+  </data>
+  <data name="tf_weapon_select_demo_time" xml:space="preserve">
+    <value>Время, чтобы достать оружие: 0 - выкл.</value>
+  </data>
+  <data name="tv_enable" xml:space="preserve">
+    <value>1 - включает после следующей смены карты SourceTV на сервере; 0 - выключает.</value>
+  </data>
+  <data name="tv_maxclients" xml:space="preserve">
+    <value>Максимальное число клиентов, которые смогут подключиться к SourceTV-серверу; 0 - не допускать клиентов вообще.</value>
+  </data>
+  <data name="tv_name" xml:space="preserve">
+    <value>Ник SourceTV-бота.</value>
+  </data>
+  <data name="tv_nochat" xml:space="preserve">
+    <value>Не позволять общаться в чате спектаторам SourceTV-сервера.</value>
+  </data>
+  <data name="tv_password" xml:space="preserve">
+    <value>Задаёт пароль для подключения зрителей к SourceTV.</value>
+  </data>
+  <data name="viewmodel_fov" xml:space="preserve">
+    <value>Визуальная отдалённость оружия.</value>
+  </data>
+  <data name="viewmodel_fov_demo" xml:space="preserve">
+    <value>Визуальная отдалённость оружия при просмотре демок.</value>
+  </data>
+  <data name="violence_ablood" xml:space="preserve">
+    <value>Чужая кровь.</value>
+  </data>
+  <data name="violence_agibs" xml:space="preserve">
+    <value>Чужие лица.</value>
+  </data>
+  <data name="violence_hblood" xml:space="preserve">
+    <value>Человеческая кровь.</value>
+  </data>
+  <data name="violence_hgibs" xml:space="preserve">
+    <value>Человеческие лица.</value>
+  </data>
+  <data name="voice_enable" xml:space="preserve">
+    <value>Голосовой чат: 1 - включить; 0 - выключить.</value>
+  </data>
+  <data name="voice_forcemicrecord" xml:space="preserve">
+    <value>Принудительная запись с микрофона.</value>
+  </data>
+  <data name="voice_modenable" xml:space="preserve">
+    <value>Голосовой чат.</value>
+  </data>
+  <data name="voice_scale" xml:space="preserve">
+    <value>Уровень громкости звука.</value>
+  </data>
+  <data name="volume" xml:space="preserve">
+    <value>Громкость звука в игре.</value>
+  </data>
+  <data name="zoom_sensitivity_ratio" xml:space="preserve">
+    <value>Задаёт множитель чувствительности мыши при активном прицеле снайперских винтовок.</value>
+  </data>
+</root>
