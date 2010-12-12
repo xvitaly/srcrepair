@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Source Repair")]
-[assembly: AssemblyDescription("Source Repair")]
+[assembly: AssemblyTitle("SRC Repair")]
+[assembly: AssemblyDescription("SRC Repair")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("EasyCoding Team")]
-[assembly: AssemblyProduct("Source Repair")]
+[assembly: AssemblyProduct("SRC Repair")]
 [assembly: AssemblyCopyright("(c) 2005-2011 EasyCoding Team. All rights reserved.")]
 [assembly: AssemblyTrademark("EasyCoding, EasyCoding Software Group and EasyCoding Team are trademarks of EasyCoding Team.")]
 [assembly: AssemblyCulture("")]

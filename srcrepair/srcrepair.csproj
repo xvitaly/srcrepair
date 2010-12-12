@@ -95,6 +95,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CVList.resx</DependentUpon>
     </Compile>
+    <Compile Include="CVList.ru.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CVList.ru.resx</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,7 +151,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CVList.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CVList.ru.resx" />
+    <EmbeddedResource Include="CVList.ru.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CVList.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

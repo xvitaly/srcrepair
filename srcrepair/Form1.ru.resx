@@ -633,24 +633,36 @@
   <data name="FP_TopLabel.Text" xml:space="preserve">
     <value>На этой странице Вы можете установить один из доступных и протестированных нами FPS-конфигов в игру. Конфиг представляет собой файл autoexec.cfg, который способен значительно увеличить производительность игры с потерей качества выдаваемой картинки. Установленный конфиг Вы можете редактировать в Редакторе. Внимание! Если Вы используете конфиг, то редактор графических настроек не сможет редактировать их (настройки, полученные из конфига имеют более высокий приоритет).</value>
   </data>
+  <data name="BEd_BName.HeaderText" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="BEd_BType.HeaderText" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="BEd_BSize.HeaderText" xml:space="preserve">
+    <value>Размер</value>
+  </data>
+  <data name="BEd_BData.HeaderText" xml:space="preserve">
+    <value>Дата</value>
+  </data>
   <data name="BUT_Refresh.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
-        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
+        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
 </value>
   </data>
   <data name="BUT_Refresh.Text" xml:space="preserve">
@@ -659,18 +671,18 @@
   <data name="BUT_RestoreB.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAlNJREFUOE9jYEAD
-        ////ZwJiRnRxovirVjEwgxQeW8kpfX6DZOr/egYmojSCFME0n5zPIHHnZNq120f8NsPE9+9nYMFrEEzB
-        4QUM2s8v59z8///4/9uH/daANP3/zwD2DoiGsVEMq4c68+RqbucX11pf/v+95f/P9wv/vns27cezyxnX
-        bx5wWX14uaAnSBNILVZDTq2RTPvwrP3b/x9L/n9/3fHn78dJ//99nvL//7cp/3996Pz37Xnd/yvbTeZs
-        m8jAjuwquEuu7jFd8/NF7P93t4R/frot/x+E316V/PfmtuSvN7fVfny4r/P7+9OA/6e3qk6FuQTFG6AA
-        PLNede7720b/X15h+PP8HOO/dzeU/r+7qfb//S3R/y/OMf59cYHh75vrNv9PLuCxQw50lMA5u0mt5/V1
-        8/8fbwv+v7bf7OSxZaLxt3forXp+xfQP0ODfH24r/7+wSbUfxQCoUxhh0fjwsGTlp/t+/2/u11sCc+bZ
-        DYpFb65r/f94i/f/pW06KLGD7BXG0FBIQtozX7b60QGFLTDJi31cRi/P6fx4d0Py/7MzSpOxuQCmFhTn
-        IMziasmgA6TZQBIb+xWm/Hgk/f/VRdW/7eUc4DAAArBlMABKsqxADIombiDmh7J5pzeKT/tyX+3//5cq
-        //trxLuhGkBq4fkFpBlkE0yjMJAtAcTiqooMZu/uaP74cF3pb2OOUAfUUB4gzYnsArCTgZgDiEGSINtB
-        hoiBaGcLZg8zXRZbqI28UItQXADzBsggkGtAhoG8AjIQhEEAJAdig+RQsjoAs3gK3K4r9CsAAAAASUVO
-        RK5CYII=
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAlJJREFUOE+NU19I
+        U2EU/6arNB1hYvMika7uoFw+iK2C6sWCehm9+Bg9JT345EtEkvhQCkWjWvZSaCBFc5CZWQ/ChIWx8qLl
+        2tyuMBK823J/nMW6a7s7fWfdT3ZFwg9+nO/ec87v/M75vo+QTQsAyih0m/9v69vpJOUYOPOysmFujLsC
+        vaRsW4kYxJK9Q6R+ydvpFz/Y3rD/bjfR/5eIBXiGSXNkoSsI8BFEj82FSQCk2A5atteQ9aoyvaNV7VH/
+        rRjkJkBOPlMS0qAsLVwNBKfPjnpe1FzAJIzdkuSTi+tck25nQB6BzI/+vJJ+AIWfDoCMA7KpgUImchN8
+        79qeTN4nu0pVbSj5NnXMlY1egkSoNrsuHgBE3McVVkXuT1w0y6lwc+73ykX4/JZ/xJRo2sABzr7in6bE
+        Voj6SF4SdIXkogmSQTOkQnUQEXRKZI4o8cAp8A5XnykdumY4wrj57mrgOKTFGvC7rd6Z53WXxfctTsnX
+        lqfEuTXxIMyP83YNgSpFx47xu4e7vh62QdDdMsJkCmNN3fHAEUiHDPB10qI5ndJWdB0d/y7S1ND+G8vT
+        jRPM+eXe7taYYJGTixxIs6aHWylgsXjmCP25k8RC7U50vLY3OuTlBojN80r/tYriDOgqFmMLr+wOCjym
+        Koo96t7wuM84+CtsBogdAnuP8Y6agLEb7wWTsRJLrKX7egoj30SsiaXDcspvUvq69g6opNXUVpYqKEqm
+        qKBAJ1ZHkn1o20+Un7ce1Z9WKxrUQhoFrA0kQjVIhq0gIQIX+nCPPs1T/wtu7wq8p8zqhQAAAABJRU5E
+        rkJggg==
 </value>
   </data>
   <data name="BUT_RestoreB.Text" xml:space="preserve">
@@ -726,37 +738,37 @@
     <value>&amp;Инструменты</value>
   </data>
   <data name="MNUShowEdHint.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 22</value>
+    <value>316, 22</value>
   </data>
   <data name="MNUShowEdHint.Text" xml:space="preserve">
     <value>&amp;Показать подсказку</value>
   </data>
   <data name="MNUSep1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 6</value>
+    <value>313, 6</value>
   </data>
   <data name="MNUFPSWizard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 22</value>
+    <value>316, 22</value>
   </data>
   <data name="MNUFPSWizard.Text" xml:space="preserve">
     <value>Ма&amp;стер создания FPS-конфига...</value>
   </data>
   <data name="MNUReportBuilder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 22</value>
+    <value>316, 22</value>
   </data>
   <data name="MNUReportBuilder.Text" xml:space="preserve">
     <value>Создание отч&amp;ёта для Техподдержки...</value>
   </data>
   <data name="MNUInstaller.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 22</value>
+    <value>316, 22</value>
   </data>
   <data name="MNUInstaller.Text" xml:space="preserve">
     <value>Ус&amp;тановщик спреев, демок и конфигов...</value>
   </data>
   <data name="MNUSep2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 6</value>
+    <value>313, 6</value>
   </data>
   <data name="MNUExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>297, 22</value>
+    <value>316, 22</value>
   </data>
   <data name="MNUExit.Text" xml:space="preserve">
     <value>&amp;Выход</value>
@@ -841,18 +853,6 @@
   </data>
   <data name="CE_SaveCfgDialog.Filter" xml:space="preserve">
     <value>Файлы конфигов (*.cfg)|*.cfg</value>
-  </data>
-  <data name="BEd_BName.HeaderText" xml:space="preserve">
-    <value>Имя</value>
-  </data>
-  <data name="BEd_BType.HeaderText" xml:space="preserve">
-    <value>Тип</value>
-  </data>
-  <data name="BEd_BSize.HeaderText" xml:space="preserve">
-    <value>Размер</value>
-  </data>
-  <data name="BEd_BData.HeaderText" xml:space="preserve">
-    <value>Дата</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1021,6 +1021,6 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Source Repair OSE Beta (версия {0})</value>
+    <value>SRC Repair OSE Beta (версия {0})</value>
   </data>
 </root>

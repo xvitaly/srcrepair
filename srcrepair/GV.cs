@@ -10,7 +10,7 @@ namespace srcrepair
         /*
          * Эта константа хранит имя приложения для служебных целей
          */
-        public const string AppName = "Source Repair";
+        public const string AppName = "SRC Repair";
         
         /*
          * В этой переменной мы будем хранить полный путь к каталогу установленного
