@@ -432,7 +432,7 @@
     <comment>Сообщение, выдаваемое в случае успешного удаления файла резервной копии</comment>
   </data>
   <data name="BU_NoFiles" xml:space="preserve">
-    <value>Список резервных копий пуст. Восстанавливать нечего!</value>
+    <value>Действие невозможно: список резервных копий пуст!</value>
     <comment>Сообщение при пустом списке резервных копий</comment>
   </data>
   <data name="BU_QMsg" xml:space="preserve">

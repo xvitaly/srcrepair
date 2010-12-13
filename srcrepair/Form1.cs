@@ -2224,26 +2224,33 @@ namespace srcrepair
 
         private void BUT_DelB_Click(object sender, EventArgs e)
         {
-            // Удалим выбранный бэкап...
-            string FName = BU_ListTable.Rows[BU_ListTable.CurrentRow.Index].Cells[4].Value.ToString();
-            // Запросим подтверждение...
-            DialogResult UserConfirmation = MessageBox.Show(RM.GetString("BU_DelMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (UserConfirmation == DialogResult.Yes)
+            if (BU_ListTable.Rows.Count > 0)
             {
-                try
+                // Удалим выбранный бэкап...
+                string FName = BU_ListTable.Rows[BU_ListTable.CurrentRow.Index].Cells[4].Value.ToString();
+                // Запросим подтверждение...
+                DialogResult UserConfirmation = MessageBox.Show(RM.GetString("BU_DelMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (UserConfirmation == DialogResult.Yes)
                 {
-                    // Удаляем файл...
-                    File.Delete(GV.FullBackUpDirPath + BU_ListTable.Rows[BU_ListTable.CurrentRow.Index].Cells[4].Value.ToString());
-                    // Удаляем строку...
-                    BU_ListTable.Rows.Remove(BU_ListTable.CurrentRow);
-                    // Показываем сообщение об успешном удалении...
-                    MessageBox.Show(RM.GetString("BU_DelSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    try
+                    {
+                        // Удаляем файл...
+                        File.Delete(GV.FullBackUpDirPath + BU_ListTable.Rows[BU_ListTable.CurrentRow.Index].Cells[4].Value.ToString());
+                        // Удаляем строку...
+                        BU_ListTable.Rows.Remove(BU_ListTable.CurrentRow);
+                        // Показываем сообщение об успешном удалении...
+                        MessageBox.Show(RM.GetString("BU_DelSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch
+                    {
+                        // Произошло исключение при попытке удаления файла резервной копии...
+                        MessageBox.Show(RM.GetString("BU_DelFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
-                catch
-                {
-                    // Произошло исключение при попытке удаления файла резервной копии...
-                    MessageBox.Show(RM.GetString("BU_DelFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+            }
+            else
+            {
+                MessageBox.Show(RM.GetString("BU_NoFiles"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

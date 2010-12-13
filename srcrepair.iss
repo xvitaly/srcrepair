@@ -25,7 +25,7 @@ OutputDir=E:\VSBuilds
 OutputBaseFilename=srcrepair_beta_82
 SetupIconFile=E:\SVN\srcrepair\srcrepair\TF2Repair.ico
 ;UninstallDisplayIcon={app}\MyProg.exe,1
-Compression=lzma
+Compression=lzma2
 SolidCompression=yes
 ; "ArchitecturesInstallIn64BitMode=x64" requests that the install be
 ; done in "64-bit mode" on x64, meaning it should use the native
@@ -40,7 +40,7 @@ VersionInfoCopyright=(c) 2005-2011 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
 
 [Languages]
-Name: "english"; MessagesFile: "compiler:Default.isl"
+;Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"
 
 [Tasks]
@@ -84,6 +84,7 @@ Name: "{group}\Τΰιλ ReadMe"; Filename: "{app}\readme.txt"; Tasks: copyreadme
 
 [Run]
 Filename: "{app}\srcrepair.exe"; Description: "{cm:LaunchProgram,SRC Repair}"; Flags: nowait postinstall skipifsilent
+
 
 
 
