@@ -1342,7 +1342,7 @@ namespace srcrepair
                     WriteSRCDWord("ScreenWidth", (int)GT_ResHor.Value, GV.SmallAppName);
 
                     // По вертикали (ScreenHeight):
-                    WriteSRCDWord("ScreenWidth", (int)GT_ResVert.Value, GV.SmallAppName);
+                    WriteSRCDWord("ScreenHeight", (int)GT_ResVert.Value, GV.SmallAppName);
 
                     // Запишем в реестр настройки режима запуска приложения (ScreenWindowed):
                     switch (GT_ScreenType.SelectedIndex)
@@ -2375,7 +2375,14 @@ namespace srcrepair
 
         private void MNUOpinion_Click(object sender, EventArgs e)
         {
-            Process.Start("mailto:srcrepair@easycoding.org?subject=SRC Repair Opinion");
+            try
+            {
+                Process.Start("mailto:srcrepair@easycoding.org?subject=SRC Repair Opinion");
+            }
+            catch
+            {
+                Process.Start("http://www.easycoding.org/projects/srcrepair#respond");
+            }
         }
 
         private void MNUSteamGroup_Click(object sender, EventArgs e)

@@ -14,7 +14,7 @@ namespace srcrepair
         {
             InitializeComponent();
             this.Text = String.Format("About {0}...", AssemblyTitle);
-            this.labelProductName.Text = String.Format(AssemblyProduct + " ({0})", AssemblyVersion);
+            this.labelProductName.Text = String.Format(AssemblyProduct + " OSE {0}", AssemblyVersion);
             this.labelVersion.Text = String.Format("Version: {0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
@@ -108,7 +108,14 @@ namespace srcrepair
 
         private void btnContact_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("skype:easycoding?chat");
+            try
+            {
+                System.Diagnostics.Process.Start("skype:easycoding?chat");
+            }
+            catch
+            {
+                System.Diagnostics.Process.Start("steam://friends/message/76561197994204416");
+            }
         }
     }
 }
