@@ -3797,75 +3797,6 @@
   <metadata name="MainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="ToolsMNU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
-  </data>
-  <data name="ToolsMNU.Text" xml:space="preserve">
-    <value>&amp;Tools</value>
-  </data>
-  <data name="MNUHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 22</value>
-  </data>
-  <data name="MNUHelp.Text" xml:space="preserve">
-    <value>Source Repair online help</value>
-  </data>
-  <data name="MNUOpinion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 22</value>
-  </data>
-  <data name="MNUOpinion.Text" xml:space="preserve">
-    <value>Express an opinion</value>
-  </data>
-  <data name="MNUReportBug.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 22</value>
-  </data>
-  <data name="MNUReportBug.Text" xml:space="preserve">
-    <value>Report a bug</value>
-  </data>
-  <data name="MNUSteamGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 22</value>
-  </data>
-  <data name="MNUSteamGroup.Text" xml:space="preserve">
-    <value>Source Repair's official Steam group</value>
-  </data>
-  <data name="MNUSep3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 6</value>
-  </data>
-  <data name="MNUGroup1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 22</value>
-  </data>
-  <data name="MNUGroup1.Text" xml:space="preserve">
-    <value>&amp;EasyCoding Team</value>
-  </data>
-  <data name="MNUGroup2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 22</value>
-  </data>
-  <data name="MNUGroup2.Text" xml:space="preserve">
-    <value>&amp;Team-Fortress.ru</value>
-  </data>
-  <data name="MNUGroup3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 22</value>
-  </data>
-  <data name="MNUGroup3.Text" xml:space="preserve">
-    <value>T&amp;F2World.ru</value>
-  </data>
-  <data name="MNUSep4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 6</value>
-  </data>
-  <data name="MNUAbout.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Shift+F1</value>
-  </data>
-  <data name="MNUAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 22</value>
-  </data>
-  <data name="MNUAbout.Text" xml:space="preserve">
-    <value>About Source Repair...</value>
-  </data>
-  <data name="HelpMNU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
-  </data>
-  <data name="HelpMNU.Text" xml:space="preserve">
-    <value>&amp;Help</value>
-  </data>
   <data name="MainMenu.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -3889,6 +3820,12 @@
   </data>
   <data name="&gt;&gt;MainMenu.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="ToolsMNU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="ToolsMNU.Text" xml:space="preserve">
+    <value>&amp;Tools</value>
   </data>
   <data name="MNUShowEdHint.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -3946,6 +3883,69 @@
   </data>
   <data name="MNUExit.Text" xml:space="preserve">
     <value>Exit</value>
+  </data>
+  <data name="HelpMNU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="HelpMNU.Text" xml:space="preserve">
+    <value>&amp;Help</value>
+  </data>
+  <data name="MNUHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 22</value>
+  </data>
+  <data name="MNUHelp.Text" xml:space="preserve">
+    <value>Source Repair online help</value>
+  </data>
+  <data name="MNUOpinion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 22</value>
+  </data>
+  <data name="MNUOpinion.Text" xml:space="preserve">
+    <value>Express an opinion</value>
+  </data>
+  <data name="MNUReportBug.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 22</value>
+  </data>
+  <data name="MNUReportBug.Text" xml:space="preserve">
+    <value>Report a bug</value>
+  </data>
+  <data name="MNUSteamGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 22</value>
+  </data>
+  <data name="MNUSteamGroup.Text" xml:space="preserve">
+    <value>Source Repair's official Steam group</value>
+  </data>
+  <data name="MNUSep3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>254, 6</value>
+  </data>
+  <data name="MNUGroup1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 22</value>
+  </data>
+  <data name="MNUGroup1.Text" xml:space="preserve">
+    <value>&amp;EasyCoding Team</value>
+  </data>
+  <data name="MNUGroup2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 22</value>
+  </data>
+  <data name="MNUGroup2.Text" xml:space="preserve">
+    <value>&amp;Team-Fortress.ru</value>
+  </data>
+  <data name="MNUGroup3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 22</value>
+  </data>
+  <data name="MNUGroup3.Text" xml:space="preserve">
+    <value>T&amp;F2World.ru</value>
+  </data>
+  <data name="MNUSep4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>254, 6</value>
+  </data>
+  <data name="MNUAbout.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Shift+F1</value>
+  </data>
+  <data name="MNUAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 22</value>
+  </data>
+  <data name="MNUAbout.Text" xml:space="preserve">
+    <value>About Source Repair...</value>
   </data>
   <data name="L_LoginSel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4036,6 +4036,21 @@
   </data>
   <data name="AppSelector.Items3" xml:space="preserve">
     <value>Day of Defeat: Source</value>
+  </data>
+  <data name="AppSelector.Items4" xml:space="preserve">
+    <value>Age of Chivalry</value>
+  </data>
+  <data name="AppSelector.Items5" xml:space="preserve">
+    <value>D.I.P.R.I.P.: Warm Up</value>
+  </data>
+  <data name="AppSelector.Items6" xml:space="preserve">
+    <value>Dystopia</value>
+  </data>
+  <data name="AppSelector.Items7" xml:space="preserve">
+    <value>Insurgency</value>
+  </data>
+  <data name="AppSelector.Items8" xml:space="preserve">
+    <value>Zombie Panic! Source</value>
   </data>
   <data name="AppSelector.Location" type="System.Drawing.Point, System.Drawing">
     <value>328, 35</value>

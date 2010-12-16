@@ -844,6 +844,36 @@ namespace srcrepair
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
+                case 4: // Age of Chivalry
+                    GV.FullAppName = "age of chivalry";
+                    GV.SmallAppName = "ageofchivalry";
+                    ptha = LoginSel.Text;
+                    GV.IsGCFApp = true;
+                    break;
+                case 5: // D.I.P.R.I.P.: Warm Up
+                    GV.FullAppName = "diprip warm up";
+                    GV.SmallAppName = "diprip";
+                    ptha = LoginSel.Text;
+                    GV.IsGCFApp = true;
+                    break;
+                case 6: // Dystopia
+                    GV.FullAppName = "dystopia";
+                    GV.SmallAppName = "Dystopia";
+                    ptha = LoginSel.Text;
+                    GV.IsGCFApp = true;
+                    break;
+                case 7: // Insurgency
+                    GV.FullAppName = "insurgency";
+                    GV.SmallAppName = "insurgency";
+                    ptha = LoginSel.Text;
+                    GV.IsGCFApp = true;
+                    break;
+                case 8: // Zombie Panic! Source
+                    GV.FullAppName = "zombie panic! source";
+                    GV.SmallAppName = "zps";
+                    ptha = LoginSel.Text;
+                    GV.IsGCFApp = true;
+                    break;
                 /*case 4: // Left 4 Dead 1
                     GV.FullAppName = "left 4 dead"; // имя каталога...
                     GV.SmallAppName = "left4dead"; // имя индивидуального подкаталога...
