@@ -874,19 +874,19 @@ namespace srcrepair
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                /*case 4: // Left 4 Dead 1
+                /*case 9: // Left 4 Dead 1
                     GV.FullAppName = "left 4 dead"; // имя каталога...
                     GV.SmallAppName = "left4dead"; // имя индивидуального подкаталога...
                     ptha = "common"; // это NCF-приложение...
                     GV.IsGCFApp = false;
                     break;
-                case 5: // Left 4 Dead 2
+                case 10: // Left 4 Dead 2
                     GV.FullAppName = "left 4 dead 2";
                     GV.SmallAppName = "left4dead2";
                     ptha = "common";
                     GV.IsGCFApp = false;
                     break;
-                case 6: // Alien Swarm
+                case 11: // Alien Swarm
                     GV.FullAppName = "alien swarm";
                     GV.SmallAppName = "swarm";
                     ptha = "common";

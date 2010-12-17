@@ -1326,4 +1326,157 @@
   <data name="zoom_sensitivity_ratio" xml:space="preserve">
     <value>Задаёт множитель чувствительности мыши при активном прицеле снайперских винтовок.</value>
   </data>
+  <data name="bot" xml:space="preserve">
+    <value>Добавить бота. Помечена как чит.</value>
+  </data>
+  <data name="bot_changeclass" xml:space="preserve">
+    <value>Принудительно сменить класс ботам.</value>
+  </data>
+  <data name="bot_changeteams" xml:space="preserve">
+    <value>Заставить ботов сменить команду.</value>
+  </data>
+  <data name="bot_dontmove" xml:space="preserve">
+    <value>Заставить ботов стоять на месте.</value>
+  </data>
+  <data name="bot_jump" xml:space="preserve">
+    <value>Заставить ботов прыгнуть.</value>
+  </data>
+  <data name="bot_kill" xml:space="preserve">
+    <value>Убить бота. В качестве параметра передать ник бота.</value>
+  </data>
+  <data name="bot_mimic" xml:space="preserve">
+    <value>Боты повторяют движение указанного в параметре игрока.</value>
+  </data>
+  <data name="bot_mimic_inverse" xml:space="preserve">
+    <value>Боты повторяют движение игрока наоборот.</value>
+  </data>
+  <data name="bot_randomnames" xml:space="preserve">
+    <value>Выдавать ботам случайные ники.</value>
+  </data>
+  <data name="bot_teleport" xml:space="preserve">
+    <value>Телепортировать выбранного бота в указанную позицию. Использовать как: bot_teleport &lt;bot name&gt; &lt;X&gt; &lt;Y&gt; &lt;Z&gt; &lt;Pitch&gt; &lt;Yaw&gt; &lt;Roll&gt;.</value>
+  </data>
+  <data name="hud_reloadscheme" xml:space="preserve">
+    <value>Перезагружает HUD (позволяет настраивать худ, не выходя из игры)</value>
+  </data>
+  <data name="mp_fadetoblack" xml:space="preserve">
+    <value>После смерти игрока экран будет чернеть до его возрождения.</value>
+  </data>
+  <data name="mp_fraglimit" xml:space="preserve">
+    <value>Количество фрагов, после которых карта заканчивается. 0 - лимит отсутствует.</value>
+  </data>
+  <data name="mp_respawnwavetime" xml:space="preserve">
+    <value>Задаёт время до респауна (возрождения) игрока.</value>
+  </data>
+  <data name="mp_stalemate_enable" xml:space="preserve">
+    <value>Включает / выключает режим Мгновенной смерти.</value>
+  </data>
+  <data name="mp_time_between_capscoring" xml:space="preserve">
+    <value>Задержка между захватом точки и засчитыванием этого.</value>
+  </data>
+  <data name="mp_windifference" xml:space="preserve">
+    <value>Разница между счетом команд до того, как сервер сменит карту.</value>
+  </data>
+  <data name="mp_winlimit" xml:space="preserve">
+    <value>Максимальное количество очков, по достижении которого сервер сменит карту.</value>
+  </data>
+  <data name="rate" xml:space="preserve">
+    <value>Количество байтов, которые клиент может получить от сервера за секунду.</value>
+  </data>
+  <data name="sv_allow_color_correction" xml:space="preserve">
+    <value>Разрешить / запретить клиентам использовать цветовую коррекцию.</value>
+  </data>
+  <data name="sv_allow_wait_command" xml:space="preserve">
+    <value>Разрешает или запрещает использование комманды wait клиентам, подключенным к серверу. Установка 0 повреждает большую часть клиентских скриптов. Рекомендуется для CW.</value>
+  </data>
+  <data name="sv_client_cmdrate_difference" xml:space="preserve">
+    <value>Задаёт максимальную разницу между значениями переменных sv_mincmdrate и sv_maxcmdrate на клиенте.</value>
+  </data>
+  <data name="sv_client_max_interp_ratio" xml:space="preserve">
+    <value>Ограничивает значение cl_interp_ratio у подключенных клиентов (только пока они находятся на сервере). Если значение переменной равно -1, то ограничение отсутствует.</value>
+  </data>
+  <data name="sv_client_min_interp_ratio" xml:space="preserve">
+    <value>Ограничивает значение cl_interp_ratio у подключенных клиентов (только пока они находятся на сервере). Если значение переменной равно -1, то ограничение отсутствует.</value>
+  </data>
+  <data name="sv_maxcmdrate" xml:space="preserve">
+    <value>Устанавливает максимальное значение cl_cmdrate для клиентов.</value>
+  </data>
+  <data name="sv_mincmdrate" xml:space="preserve">
+    <value>Устанавливает минимальное значение cl_cmdrate для клиентов.</value>
+  </data>
+  <data name="sv_pure" xml:space="preserve">
+    <value>Разрешить (0) / запретить (1 или 2) использование нестандартных файлов (кастомные модели, текстуры).</value>
+  </data>
+  <data name="sv_pure_kick_clients" xml:space="preserve">
+    <value>Если значение этой команды равно 1, то сервер будет кикать клиентов с изменёнными файлами игры.</value>
+  </data>
+  <data name="tf_bot_add" xml:space="preserve">
+    <value>Добавить умного бота.</value>
+  </data>
+  <data name="tf_bot_force_class" xml:space="preserve">
+    <value>Установить класс для всех ботов на сервере.</value>
+  </data>
+  <data name="tf_bot_kick" xml:space="preserve">
+    <value>Кикнуть бота / указанное число ботов.</value>
+  </data>
+  <data name="tf_bot_kick_all" xml:space="preserve">
+    <value>Кикнуть всех ботов с сервера.</value>
+  </data>
+  <data name="tf_bot_sniper_personal_space_range" xml:space="preserve">
+    <value>Предел видимости ботов-снайперов.</value>
+  </data>
+  <data name="tf_ctf_bonus_time" xml:space="preserve">
+    <value>Длительность критов после захвата флага на CTF-картах.</value>
+  </data>
+  <data name="tf_playergib" xml:space="preserve">
+    <value>Включает / выключает "мясо" от взрывов тел игроков.</value>
+  </data>
+  <data name="tf_use_fixed_weaponspreads" xml:space="preserve">
+    <value>Включить / выключить фиксированный разброс пуль в таких оружиях, как дробовики.</value>
+  </data>
+  <data name="tv_autorecord" xml:space="preserve">
+    <value>Включить / выключить автоматическую запись каждой игры. Формат файла: auto-YYYYMMDD-hhmm-map.dem.</value>
+  </data>
+  <data name="tv_chattimelimit" xml:space="preserve">
+    <value>Лимит на количество сообщений зрителей на сервере SourceTV.</value>
+  </data>
+  <data name="tv_debug" xml:space="preserve">
+    <value>Показать отладочную информацию.</value>
+  </data>
+  <data name="tv_delay" xml:space="preserve">
+    <value>Задержка SourceTV в секундах.</value>
+  </data>
+  <data name="tv_delaymapchange" xml:space="preserve">
+    <value>После смены карты будет ли SourceTV продолжать показывать последние секунды, указанные в tv_delay.</value>
+  </data>
+  <data name="tv_dispatchmode" xml:space="preserve">
+    <value>Перенаправление клиентов на relay-прокси: 0 - никогда, 1 - при необходимости, 2 - всегда.</value>
+  </data>
+  <data name="tv_maxrate" xml:space="preserve">
+    <value>Устанавливает максимально допустимую пропускную способность, для одного клиента.</value>
+  </data>
+  <data name="tv_port" xml:space="preserve">
+    <value>Вручную указать порт для SourceTV.</value>
+  </data>
+  <data name="tv_record" xml:space="preserve">
+    <value>Начать запись SourceTV-демки с указанным в качестве параметра именем.</value>
+  </data>
+  <data name="tv_relaypassword" xml:space="preserve">
+    <value>Пароль на подключение для прокси серверов.</value>
+  </data>
+  <data name="tv_retry" xml:space="preserve">
+    <value>Перепоключает SourceTV на последний известный адрес (только для прокси серверов).</value>
+  </data>
+  <data name="tv_status" xml:space="preserve">
+    <value>Показать подробную информацию о текущем сервере SourceTV и активной трансляции.</value>
+  </data>
+  <data name="tv_stop" xml:space="preserve">
+    <value>Остановить трансляцию через SourceTV и прекратить запись демки (если было включено).</value>
+  </data>
+  <data name="tv_stoprecord" xml:space="preserve">
+    <value>Остановить запись SourceTV-демки.</value>
+  </data>
+  <data name="tv_transmitall" xml:space="preserve">
+    <value>Выключить режим авто-режиссёра. Пользователь сможет управлять камерой самостоятельно.</value>
+  </data>
 </root>

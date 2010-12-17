@@ -12,7 +12,7 @@ AppVerName=SRC Repair Beta
 AppPublisher=EasyCoding Team
 AppPublisherURL=http://www.easycoding.org/projects/srcrepair
 ; AppVersion отображается в Установка/Удаление программ в дополнительной информации.
-AppVersion=0.1.0.82
+AppVersion=0.1.0.96
 AppSupportURL=http://www.easycoding.org/projects/srcrepair
 AppUpdatesURL=http://www.easycoding.org/projects/srcrepair
 DefaultDirName={pf}\SRC Repair
@@ -22,7 +22,7 @@ LicenseFile=E:\VSBuilds\GPL.txt
 InfoBeforeFile=E:\VSBuilds\readme.txt
 OutputDir=E:\VSBuilds
 ;OutputBaseFilename=SRCRepair_Setup
-OutputBaseFilename=srcrepair_beta_82
+OutputBaseFilename=srcrepair_beta_96
 SetupIconFile=E:\SVN\srcrepair\srcrepair\TF2Repair.ico
 ;UninstallDisplayIcon={app}\MyProg.exe,1
 Compression=lzma2
@@ -34,7 +34,7 @@ SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64
 
 ; Тут указываем данные, которые будут добавлены в свойства установщика
-VersionInfoVersion=0.1.0.82
+VersionInfoVersion=0.1.0.96
 VersionInfoDescription=Программа установки SRC Repair
 VersionInfoCopyright=(c) 2005-2011 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
@@ -84,6 +84,7 @@ Name: "{group}\Файл ReadMe"; Filename: "{app}\readme.txt"; Tasks: copyreadme
 
 [Run]
 Filename: "{app}\srcrepair.exe"; Description: "{cm:LaunchProgram,SRC Repair}"; Flags: nowait postinstall skipifsilent
+
 
 
 
