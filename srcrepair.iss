@@ -19,7 +19,7 @@ DefaultDirName={pf}\SRC Repair
 DefaultGroupName=SRC Repair
 AllowNoIcons=yes
 LicenseFile=E:\VSBuilds\GPL.txt
-InfoBeforeFile=E:\VSBuilds\readme.txt
+;InfoBeforeFile=E:\VSBuilds\readme.txt
 OutputDir=E:\VSBuilds
 ;OutputBaseFilename=SRCRepair_Setup
 OutputBaseFilename=srcrepair_beta_96
@@ -46,14 +46,15 @@ Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
-Name: "copylicence"; Description: "Скопировать лицензионное соглашение в папку SRC Repair"; GroupDescription: "Дополнительные возможности:"
-Name: "copyreadme"; Description: "Скопировать файл ReadMe в папку SRC Repair"; GroupDescription: "Дополнительные возможности:"
+;Name: "copylicence"; Description: "Скопировать лицензионное соглашение в папку SRC Repair"; GroupDescription: "Дополнительные возможности:"
+;Name: "copyreadme"; Description: "Скопировать файл ReadMe в папку SRC Repair"; GroupDescription: "Дополнительные возможности:"
+Name: "inst7z"; Description: "Установить плагин поддержки LZMA сжатия"; GroupDescription: "Дополнительные возможности:"
 Name: "betashortuts"; Description: "Создать ярлыки запуска локализованных версий"; GroupDescription: "Дополнительные возможности:"
 
 [Files]
 ; Устанавливаем readme и файл лицензии...
-Source: "E:\VSBuilds\GPL.txt"; DestDir: "{app}"; Flags: ignoreversion; Tasks: copylicence
-Source: "E:\VSBuilds\readme.txt"; DestDir: "{app}"; Flags: ignoreversion; Tasks: copyreadme
+Source: "E:\VSBuilds\GPL.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "E:\VSBuilds\readme.txt"; DestDir: "{app}"; Flags: ignoreversion
 ; Устанавливаем 32-битную версию...
 Source: "E:\VSBuilds\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion; Check: not Is64BitInstallMode
 Source: "E:\VSBuilds\ru\srcrepair.resources.dll"; DestDir: "{app}\ru\"; Flags: ignoreversion; Check: not Is64BitInstallMode
@@ -63,6 +64,7 @@ Source: "E:\VSBuilds\x64\ru\srcrepair.resources.dll"; DestDir: "{app}\ru\"; Flag
 ; Устанавливаем остальные файлы...
 Source: "E:\VSBuilds\backups\*"; DestDir: "{app}\backups\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "E:\VSBuilds\cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "E:\VSBuilds\7z\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Tasks: inst7z
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
@@ -79,11 +81,12 @@ Name: "{commondesktop}\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: desk
 ; Создаём ярлык на панели быстрого запуска (если выбрано)...
 Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: quicklaunchicon
 ; Создаём ярлыки для файлов с лицензионным соглашением и ReadMe, но только если эти опции выбраны...
-Name: "{group}\Лицензионное соглашение"; Filename: "{app}\GPL.txt"; Tasks: copylicence
-Name: "{group}\Файл ReadMe"; Filename: "{app}\readme.txt"; Tasks: copyreadme
+Name: "{group}\Лицензионное соглашение"; Filename: "{app}\GPL.txt"
+Name: "{group}\Файл ReadMe"; Filename: "{app}\readme.txt"
 
 [Run]
 Filename: "{app}\srcrepair.exe"; Description: "{cm:LaunchProgram,SRC Repair}"; Flags: nowait postinstall skipifsilent
+
 
 
 
