@@ -51,6 +51,7 @@ namespace srcrepair
                     string Params = "/report " + '"' + GV.FullAppPath + RepName + '"'; // Генерируем параметы для exe-файла...
                     try
                     {
+                        // Запускаем последовательность...
                         frmMainW.StartProcessAndWait(FilePath, Params);
                         if (Compress.Checked)
                         {
@@ -62,14 +63,15 @@ namespace srcrepair
                         {
                             MessageBox.Show(String.Format(frmMainW.RM.GetString("RPB_Generated"), RepName), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
+                        
+                        // Открываем каталог с отчётами в Windows Explorer...
+                        Process.Start(GV.FullAppPath);
                     }
                     catch
                     {
+                        // Произошло исключение...
                         MessageBox.Show(frmMainW.RM.GetString("RPB_GenException"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-
-                    // Открываем каталог с отчётами в Windows Explorer...
-                    Process.Start(GV.FullAppPath);
 
                     // Снова активируем кнопку...
                     GenerateNow.Text = frmMainW.RM.GetString("RPB_CloseCpt");
