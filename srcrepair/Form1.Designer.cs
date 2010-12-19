@@ -172,6 +172,7 @@
             this.L_AppSelector = new System.Windows.Forms.Label();
             this.CE_OpenCfgDialog = new System.Windows.Forms.OpenFileDialog();
             this.CE_SaveCfgDialog = new System.Windows.Forms.SaveFileDialog();
+            this.FldrBrwse = new System.Windows.Forms.FolderBrowserDialog();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_Warning)).BeginInit();
@@ -1331,6 +1332,10 @@
             this.CE_SaveCfgDialog.DefaultExt = "cfg";
             resources.ApplyResources(this.CE_SaveCfgDialog, "CE_SaveCfgDialog");
             // 
+            // FldrBrwse
+            // 
+            this.FldrBrwse.ShowNewFolderButton = false;
+            // 
             // frmMainW
             // 
             resources.ApplyResources(this, "$this");
@@ -1529,6 +1534,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BSize;
         private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BData;
         private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BRealName;
+        private System.Windows.Forms.FolderBrowserDialog FldrBrwse;
     }
 }
 

@@ -597,9 +597,11 @@ namespace srcrepair
                     // Произошло исключение, пользователю придётся ввести путь самостоятельно!
                     MessageBox.Show(RM.GetString("SteamPathNotDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     string Buf = "";
-                    if (InputBox(RM.GetString("SteamPathEnterTitle"), RM.GetString("SteamPathEnterText"), ref Buf) == DialogResult.OK)
+                    FldrBrwse.Description = RM.GetString("SteamPathEnterText"); // Указываем текст в диалоге поиска каталога...
+                    DialogResult OpenResult = FldrBrwse.ShowDialog(); // Отображаем стандартный диалог поиска каталога...
+                    if (OpenResult == DialogResult.OK)
                     {
-                        Buf = IncludeTrDelim(Buf);
+                        Buf = IncludeTrDelim(FldrBrwse.SelectedPath);
                         if (!(File.Exists(Buf + "Steam.exe")))
                         {
                             MessageBox.Show(RM.GetString("SteamPathEnterErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);

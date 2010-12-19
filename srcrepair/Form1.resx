@@ -4112,6 +4112,9 @@
   <data name="CE_SaveCfgDialog.Filter" xml:space="preserve">
     <value>Config files (*.cfg)|*.cfg</value>
   </data>
+  <metadata name="FldrBrwse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>733, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -4598,6 +4601,12 @@
   </data>
   <data name="&gt;&gt;CE_SaveCfgDialog.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FldrBrwse.Name" xml:space="preserve">
+    <value>FldrBrwse</value>
+  </data>
+  <data name="&gt;&gt;FldrBrwse.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmMainW</value>
