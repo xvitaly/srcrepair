@@ -117,5 +117,18 @@ namespace srcrepair
                 System.Diagnostics.Process.Start("steam://friends/message/76561197994204416");
             }
         }
+
+        private void frmAbout_Load(object sender, EventArgs e)
+        {
+            // Проверяем систему на НГ (диапазон от 30.12.XXXX до 10.1.XXXX)...
+            DateTime XDate = DateTime.Now; // Получаем текущую дату...
+            if (((Convert.ToInt32(XDate.Month) == 12) && ((Convert.ToInt32(XDate.Day) >= 20)
+                && (Convert.ToInt32(XDate.Day) <= 31))) || ((Convert.ToInt32(XDate.Month) == 1)
+                    && ((Convert.ToInt32(XDate.Day) >= 1) && (Convert.ToInt32(XDate.Day) <= 10))))
+            {
+                // НГ! Меняем логотип программы на специально заготовленный...
+                iconApp.Image = Properties.Resources.Xmas;
+            }
+        }
     }
 }

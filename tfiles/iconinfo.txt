@@ -53,3 +53,5 @@ Refresh.ico - GNOME icon artists - GPLv2 - http://www.iconspedia.com/icon/gnome-
 --------------------------------------------------------------------------------------------------------
 Restore.ico - GNOME icon artists - GPLv2 - http://www.iconspedia.com/icon/gnome-edit-undo-11006.html
 --------------------------------------------------------------------------------------------------------
+Xmas.png - Iconspedia - Free - http://www.iconspedia.com/icon/santa-hat-17458.html
+--------------------------------------------------------------------------------------------------------

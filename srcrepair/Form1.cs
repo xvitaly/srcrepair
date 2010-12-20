@@ -243,24 +243,6 @@ namespace srcrepair
         }
 
         /*
-         * Эта функция удаляет нужный ключ из ветки HKEY_LOCAL_MACHINE...
-         */
-        private static void RemoveRegistryKeyLM(string RKey)
-        {
-            // Удаляем запрощенную ветку рекурсивно из HKLM...
-            Registry.LocalMachine.DeleteSubKeyTree(RKey, false);
-        }
-
-        /*
-         * Эта функция удаляет нужный ключ из ветки HKEY_CURRENT_USER...
-         */
-        private static void RemoveRegistryKeyCU(string RKey)
-        {
-            // Удаляем запрощенную ветку рекурсивно из HKCU...
-            Registry.CurrentUser.DeleteSubKeyTree(RKey, false);
-        }
-
-        /*
          * Эта функция считывает содержимое текстового файла в строку и
          * возвращает в качестве результата.
          */

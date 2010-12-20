@@ -199,5 +199,12 @@ namespace srcrepair.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        internal static System.Drawing.Bitmap Xmas {
+            get {
+                object obj = ResourceManager.GetObject("Xmas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

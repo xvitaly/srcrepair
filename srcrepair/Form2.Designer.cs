@@ -28,7 +28,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAbout));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.iconApp = new System.Windows.Forms.PictureBox();
             this.labelProductName = new System.Windows.Forms.Label();
             this.labelVersion = new System.Windows.Forms.Label();
             this.labelCompanyName = new System.Windows.Forms.Label();
@@ -37,14 +37,14 @@
             this.labelFlags = new System.Windows.Forms.Label();
             this.labelCopyright = new System.Windows.Forms.Label();
             this.okButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconApp)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // iconApp
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
+            resources.ApplyResources(this.iconApp, "iconApp");
+            this.iconApp.Name = "iconApp";
+            this.iconApp.TabStop = false;
             // 
             // labelProductName
             // 
@@ -103,14 +103,15 @@
             this.Controls.Add(this.labelCompanyName);
             this.Controls.Add(this.labelVersion);
             this.Controls.Add(this.labelProductName);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.iconApp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAbout";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.frmAbout_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.iconApp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,7 +119,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox iconApp;
         private System.Windows.Forms.Label labelProductName;
         private System.Windows.Forms.Label labelVersion;
         private System.Windows.Forms.Label labelCompanyName;
