@@ -12,7 +12,7 @@ AppVerName=SRC Repair Beta
 AppPublisher=EasyCoding Team
 AppPublisherURL=http://www.easycoding.org/projects/srcrepair
 ; AppVersion отображается в Установка/Удаление программ в дополнительной информации.
-AppVersion=0.1.0.96
+AppVersion=0.1.0.118
 AppSupportURL=http://www.easycoding.org/projects/srcrepair
 AppUpdatesURL=http://www.easycoding.org/projects/srcrepair
 DefaultDirName={pf}\SRC Repair
@@ -22,7 +22,7 @@ LicenseFile=E:\VSBuilds\GPL.txt
 ;InfoBeforeFile=E:\VSBuilds\readme.txt
 OutputDir=E:\VSBuilds
 ;OutputBaseFilename=SRCRepair_Setup
-OutputBaseFilename=srcrepair_beta_96
+OutputBaseFilename=srcrepair_beta_118
 SetupIconFile=E:\SVN\srcrepair\srcrepair\TF2Repair.ico
 ;UninstallDisplayIcon={app}\MyProg.exe,1
 Compression=lzma2
@@ -34,7 +34,7 @@ SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64
 
 ; Тут указываем данные, которые будут добавлены в свойства установщика
-VersionInfoVersion=0.1.0.96
+VersionInfoVersion=0.1.0.118
 VersionInfoDescription=Программа установки SRC Repair
 VersionInfoCopyright=(c) 2005-2011 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
@@ -65,6 +65,7 @@ Source: "E:\VSBuilds\x64\ru\srcrepair.resources.dll"; DestDir: "{app}\ru\"; Flag
 Source: "E:\VSBuilds\backups\*"; DestDir: "{app}\backups\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "E:\VSBuilds\cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "E:\VSBuilds\7z\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Tasks: inst7z
+Source: "E:\VSBuilds\nfx\*"; DestDir: "{app}\nfx\"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
@@ -83,8 +84,10 @@ Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\SRC Repair"; Filen
 ; Создаём ярлыки для файлов с лицензионным соглашением и ReadMe, но только если эти опции выбраны...
 Name: "{group}\Лицензионное соглашение"; Filename: "{app}\GPL.txt"
 Name: "{group}\Файл ReadMe"; Filename: "{app}\readme.txt"
+Name: "{group}\Установить .NET Framework 4"; Filename: "{app}\nfx\dotNetFx40_Full_setup.exe"
 
 [Run]
+Filename: "{app}\nfx\dotNetFx40_Full_setup.exe"; Description: "Установить .NET Framework 4"; Flags: nowait postinstall skipifsilent unchecked
 Filename: "{app}\srcrepair.exe"; Description: "{cm:LaunchProgram,SRC Repair}"; Flags: nowait postinstall skipifsilent
 
 
