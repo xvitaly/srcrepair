@@ -89,7 +89,6 @@
             this.ProblemSolver = new System.Windows.Forms.TabPage();
             this.PS_GB_Remover = new System.Windows.Forms.GroupBox();
             this.PS_RemOldBin = new System.Windows.Forms.Button();
-            this.PS_AllowRemCtrls = new System.Windows.Forms.CheckBox();
             this.PS_RemGraphOpts = new System.Windows.Forms.Button();
             this.PS_RemDemos = new System.Windows.Forms.Button();
             this.PS_RemScreenShots = new System.Windows.Forms.Button();
@@ -707,7 +706,6 @@
             // PS_GB_Remover
             // 
             this.PS_GB_Remover.Controls.Add(this.PS_RemOldBin);
-            this.PS_GB_Remover.Controls.Add(this.PS_AllowRemCtrls);
             this.PS_GB_Remover.Controls.Add(this.PS_RemGraphOpts);
             this.PS_GB_Remover.Controls.Add(this.PS_RemDemos);
             this.PS_GB_Remover.Controls.Add(this.PS_RemScreenShots);
@@ -728,13 +726,6 @@
             this.PS_RemOldBin.Name = "PS_RemOldBin";
             this.PS_RemOldBin.UseVisualStyleBackColor = true;
             this.PS_RemOldBin.Click += new System.EventHandler(this.PS_RemOldBin_Click);
-            // 
-            // PS_AllowRemCtrls
-            // 
-            resources.ApplyResources(this.PS_AllowRemCtrls, "PS_AllowRemCtrls");
-            this.PS_AllowRemCtrls.Name = "PS_AllowRemCtrls";
-            this.PS_AllowRemCtrls.UseVisualStyleBackColor = true;
-            this.PS_AllowRemCtrls.CheckedChanged += new System.EventHandler(this.PS_AllowRemCtrls_CheckedChanged);
             // 
             // PS_RemGraphOpts
             // 
@@ -1366,7 +1357,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.CE_Editor)).EndInit();
             this.ProblemSolver.ResumeLayout(false);
             this.PS_GB_Remover.ResumeLayout(false);
-            this.PS_GB_Remover.PerformLayout();
             this.PS_GB_AdvFeat.ResumeLayout(false);
             this.PS_GB_SInfo.ResumeLayout(false);
             this.PS_GB_SInfo.PerformLayout();
@@ -1477,7 +1467,6 @@
         private System.Windows.Forms.Label L_PS_RSteamLogin;
         private System.Windows.Forms.Label L_PS_RSteamPath;
         private System.Windows.Forms.Button PS_ResetSettings;
-        private System.Windows.Forms.CheckBox PS_AllowRemCtrls;
         private System.Windows.Forms.Button PS_RemGraphOpts;
         private System.Windows.Forms.Button PS_RemDemos;
         private System.Windows.Forms.Button PS_RemScreenShots;

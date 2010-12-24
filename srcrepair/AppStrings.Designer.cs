@@ -376,7 +376,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Close application {0}? Any unsaved changes will be lost!.
+        ///   Looks up a localized string similar to Close {0}? Any unsaved changes will be lost!.
         /// </summary>
         internal static string FrmCloseQuery {
             get {
@@ -736,7 +736,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You refused to enter your login Steam, so the work program is impossible. Restart this application later and enter the correct login!.
+        ///   Looks up a localized string similar to You refused to enter your login Steam, so the work program is impossible. Restart this program later and enter the correct login!.
         /// </summary>
         internal static string SteamLoginCancel {
             get {

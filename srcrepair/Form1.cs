@@ -772,21 +772,6 @@ namespace srcrepair
             }
         }
 
-        private void PS_AllowRemCtrls_CheckedChanged(object sender, EventArgs e)
-        {
-            PS_RemCustMaps.Enabled = PS_AllowRemCtrls.Checked;
-            PS_RemDnlCache.Enabled = PS_AllowRemCtrls.Checked;
-            PS_RemOldSpray.Enabled = PS_AllowRemCtrls.Checked;
-            PS_RemOldCfgs.Enabled = PS_AllowRemCtrls.Checked;
-            PS_RemGraphCache.Enabled = PS_AllowRemCtrls.Checked;
-            PS_RemSoundCache.Enabled = PS_AllowRemCtrls.Checked;
-            PS_RemNavFiles.Enabled = PS_AllowRemCtrls.Checked;
-            PS_RemScreenShots.Enabled = PS_AllowRemCtrls.Checked;
-            PS_RemDemos.Enabled = PS_AllowRemCtrls.Checked;
-            PS_RemGraphOpts.Enabled = PS_AllowRemCtrls.Checked;
-            PS_RemOldBin.Enabled = PS_AllowRemCtrls.Checked;
-        }
-
         private void frmMainW_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Проверим, делал ли что-то пользователь с формой. Если не делал - не будем
@@ -923,7 +908,6 @@ namespace srcrepair
             if (GV.IsGCFApp)
             {
                 // Включим модули очистки...
-                PS_AllowRemCtrls.Enabled = true;
                 PS_ResetSettings.Enabled = true;
 
                 // Начинаем заполнять таблицу...
@@ -1207,7 +1191,7 @@ namespace srcrepair
             else
             {
                 // Отключим модули очистки...
-                PS_AllowRemCtrls.Enabled = false;
+                // TODO: Вписать сюда отключение кнопок...
                 PS_ResetSettings.Enabled = false;
                 
                 // Приложение NCF, поэтому настройки хранятся не в реестре, а в
@@ -2280,7 +2264,7 @@ namespace srcrepair
 
         private void BUT_CrBkupReg_ButtonClick(object sender, EventArgs e)
         {
-            MessageBox.Show(RM.GetString("BU_TBSelCat"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            BUT_CrBkupReg.ShowDropDown();
         }
 
         private void BUT_L_GameSettings_Click(object sender, EventArgs e)
