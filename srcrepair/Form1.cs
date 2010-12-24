@@ -1810,44 +1810,36 @@ namespace srcrepair
         private void CE_Save_Click(object sender, EventArgs e)
         {
             CE_SaveCfgDialog.InitialDirectory = GV.FullCfgPath; // Указываем путь по умолчанию к конфигам управляемого приложения...
-            DialogResult UserConfirmation = MessageBox.Show(RM.GetString("CE_CfgSV"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (UserConfirmation == DialogResult.Yes) // Спрашиваем пользователя о необходимости сохранения файла...
+            if (!(String.IsNullOrEmpty(CFGFileName))) // Проверяем, открыт ли какой-либо файл...
             {
-                if (!(String.IsNullOrEmpty(CFGFileName))) // Проверяем, открыт ли какой-либо файл...
+                // Будем бэкапировать только файлы, находящиеся в каталоге /cfg/
+                // управляемоего приложения. Остальные - нет.
+                if (File.Exists(GV.FullCfgPath + CFGFileName))
                 {
-                    // Будем бэкапировать только файлы, находящиеся в каталоге /cfg/
-                    // управляемоего приложения. Остальные - нет.
-                    if (File.Exists(GV.FullCfgPath + CFGFileName))
-                    {
-                        // Спрашиваем пользователя о создании резервной копии...
-                        UserConfirmation = MessageBox.Show(RM.GetString("CE_CreateBackUp"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (UserConfirmation == DialogResult.Yes)
-                        {
-                            CreateBackUpNow(CFGFileName);
-                        }
-                    }
-                    try
-                    {
-                        //WriteTableToFileNow(CFGFileName);
-                        WriteTableToFileNow(CE_OpenCfgDialog.FileName);
-                    }
-                    catch
-                    {
-                        // Произошла ошибка при сохранении файла...
-                        MessageBox.Show(RM.GetString("CE_CfgSVVEx"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                    // Создаём резервную копию...
+                    CreateBackUpNow(CFGFileName);
                 }
-                else
+                try
                 {
-                    // Файл не был открыт. Нужно сохранить и дать имя...
-                    DialogResult SaveResult = CE_SaveCfgDialog.ShowDialog(); // Отображаем стандартный диалог сохранения файла...
-                    if (SaveResult == DialogResult.OK)
-                    {
-                        WriteTableToFileNow(CE_SaveCfgDialog.FileName);
-                        CFGFileName = Path.GetFileName(CE_SaveCfgDialog.FileName);
-                        CE_OpenCfgDialog.FileName = CE_SaveCfgDialog.FileName;
-                        SB_Status.Text = RM.GetString("StatusOpenedFile") + " " + CFGFileName;
-                    }
+                    //WriteTableToFileNow(CFGFileName);
+                    WriteTableToFileNow(CE_OpenCfgDialog.FileName);
+                }
+                catch
+                {
+                    // Произошла ошибка при сохранении файла...
+                    MessageBox.Show(RM.GetString("CE_CfgSVVEx"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                // Файл не был открыт. Нужно сохранить и дать имя...
+                DialogResult SaveResult = CE_SaveCfgDialog.ShowDialog(); // Отображаем стандартный диалог сохранения файла...
+                if (SaveResult == DialogResult.OK)
+                {
+                    WriteTableToFileNow(CE_SaveCfgDialog.FileName);
+                    CFGFileName = Path.GetFileName(CE_SaveCfgDialog.FileName);
+                    CE_OpenCfgDialog.FileName = CE_SaveCfgDialog.FileName;
+                    SB_Status.Text = RM.GetString("StatusOpenedFile") + " " + CFGFileName;
                 }
             }
         }
