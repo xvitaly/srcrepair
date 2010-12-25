@@ -541,6 +541,25 @@ namespace srcrepair
             return DM.GetString(CVar);
         }
 
+        /*
+         * Эта функция разрешает/блокирует кнопки, отвечающие за
+         * очистку (актуально для NCF-приложений).
+         */
+        private void EnableCleanButtons(bool BStatus)
+        {
+            PS_RemCustMaps.Enabled = BStatus;
+            PS_RemDnlCache.Enabled = BStatus;
+            PS_RemOldSpray.Enabled = BStatus;
+            PS_RemOldCfgs.Enabled = BStatus;
+            PS_RemGraphCache.Enabled = BStatus;
+            PS_RemSoundCache.Enabled = BStatus;
+            PS_RemNavFiles.Enabled = BStatus;
+            PS_RemScreenShots.Enabled = BStatus;
+            PS_RemDemos.Enabled = BStatus;
+            PS_RemGraphOpts.Enabled = BStatus;
+            PS_RemOldBin.Enabled = BStatus;
+        }
+
         #endregion
 
         private void frmMainW_Load(object sender, EventArgs e)
@@ -909,6 +928,7 @@ namespace srcrepair
             {
                 // Включим модули очистки...
                 PS_ResetSettings.Enabled = true;
+                EnableCleanButtons(true);
 
                 // Начинаем заполнять таблицу...
 
@@ -1191,8 +1211,8 @@ namespace srcrepair
             else
             {
                 // Отключим модули очистки...
-                // TODO: Вписать сюда отключение кнопок...
                 PS_ResetSettings.Enabled = false;
+                EnableCleanButtons(false);
                 
                 // Приложение NCF, поэтому настройки хранятся не в реестре, а в
                 // файле video.txt. Будем парсить...
