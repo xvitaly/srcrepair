@@ -64,7 +64,7 @@ namespace srcrepair
         public static string IncludeTrDelim(string SourceStr)
         {
             // Проверяем наличие закрывающего слэша у строки, переданной как параметр...
-            if (SourceStr[SourceStr.Length - 1] != '\\')
+            if (SourceStr[SourceStr.Length - 1] != Path.DirectorySeparatorChar)
             {
                 // Закрывающего слэша не найдено, поэтому добавим его...
                 SourceStr += Path.DirectorySeparatorChar.ToString();
