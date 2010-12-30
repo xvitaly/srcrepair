@@ -2398,7 +2398,15 @@ namespace srcrepair
 
         private void MNUHelp_Click(object sender, EventArgs e)
         {
-            Process.Start("http://www.easycoding.org/projects/srcrepair/help");
+            string HelpFilePath = String.Format(GV.FullAppPath + "srcrepair_{0}.chm", RM.GetString("AppLangPrefix"));
+            if (File.Exists(HelpFilePath))
+            {
+                Process.Start(HelpFilePath);
+            }
+            else
+            {
+                Process.Start(String.Format("http://code.google.com/p/srcrepair/wiki/UserManual_{0}", RM.GetString("AppLangPrefix")));
+            }
         }
 
         private void MNUOpinion_Click(object sender, EventArgs e)
@@ -2418,19 +2426,14 @@ namespace srcrepair
             Process.Start("http://steamcommunity.com/groups/srcrepair");
         }
 
-        private void MNUGroup1_Click(object sender, EventArgs e)
+        private void MNULnkEasyCoding_Click(object sender, EventArgs e)
         {
             Process.Start("http://www.easycoding.org/");
         }
 
-        private void MNUGroup2_Click(object sender, EventArgs e)
+        private void MNULnkTFRU_Click(object sender, EventArgs e)
         {
             Process.Start("http://www.team-fortress.ru/");
-        }
-
-        private void MNUGroup3_Click(object sender, EventArgs e)
-        {
-            Process.Start("http://tf2world.ru/");
         }
     }
 }

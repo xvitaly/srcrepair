@@ -157,9 +157,8 @@
             this.MNUReportBug = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSteamGroup = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep3 = new System.Windows.Forms.ToolStripSeparator();
-            this.MNUGroup1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNUGroup2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNUGroup3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNULnkEasyCoding = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNULnkTFRU = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep4 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.L_LoginSel = new System.Windows.Forms.Label();
@@ -1186,9 +1185,8 @@
             this.MNUReportBug,
             this.MNUSteamGroup,
             this.MNUSep3,
-            this.MNUGroup1,
-            this.MNUGroup2,
-            this.MNUGroup3,
+            this.MNULnkEasyCoding,
+            this.MNULnkTFRU,
             this.MNUSep4,
             this.MNUAbout});
             this.HelpMNU.Name = "HelpMNU";
@@ -1227,26 +1225,19 @@
             this.MNUSep3.Name = "MNUSep3";
             resources.ApplyResources(this.MNUSep3, "MNUSep3");
             // 
-            // MNUGroup1
+            // MNULnkEasyCoding
             // 
-            this.MNUGroup1.Image = global::srcrepair.Properties.Resources.EasyCoding;
-            this.MNUGroup1.Name = "MNUGroup1";
-            resources.ApplyResources(this.MNUGroup1, "MNUGroup1");
-            this.MNUGroup1.Click += new System.EventHandler(this.MNUGroup1_Click);
+            this.MNULnkEasyCoding.Image = global::srcrepair.Properties.Resources.EasyCoding;
+            this.MNULnkEasyCoding.Name = "MNULnkEasyCoding";
+            resources.ApplyResources(this.MNULnkEasyCoding, "MNULnkEasyCoding");
+            this.MNULnkEasyCoding.Click += new System.EventHandler(this.MNULnkEasyCoding_Click);
             // 
-            // MNUGroup2
+            // MNULnkTFRU
             // 
-            this.MNUGroup2.Image = global::srcrepair.Properties.Resources.tfru;
-            this.MNUGroup2.Name = "MNUGroup2";
-            resources.ApplyResources(this.MNUGroup2, "MNUGroup2");
-            this.MNUGroup2.Click += new System.EventHandler(this.MNUGroup2_Click);
-            // 
-            // MNUGroup3
-            // 
-            this.MNUGroup3.Image = global::srcrepair.Properties.Resources.tf2world;
-            this.MNUGroup3.Name = "MNUGroup3";
-            resources.ApplyResources(this.MNUGroup3, "MNUGroup3");
-            this.MNUGroup3.Click += new System.EventHandler(this.MNUGroup3_Click);
+            this.MNULnkTFRU.Image = global::srcrepair.Properties.Resources.tfru;
+            this.MNULnkTFRU.Name = "MNULnkTFRU";
+            resources.ApplyResources(this.MNULnkTFRU, "MNULnkTFRU");
+            this.MNULnkTFRU.Click += new System.EventHandler(this.MNULnkTFRU_Click);
             // 
             // MNUSep4
             // 
@@ -1403,9 +1394,8 @@
         private System.Windows.Forms.ToolStripMenuItem MNUReportBug;
         private System.Windows.Forms.ToolStripMenuItem MNUSteamGroup;
         private System.Windows.Forms.ToolStripSeparator MNUSep3;
-        private System.Windows.Forms.ToolStripMenuItem MNUGroup1;
-        private System.Windows.Forms.ToolStripMenuItem MNUGroup2;
-        private System.Windows.Forms.ToolStripMenuItem MNUGroup3;
+        private System.Windows.Forms.ToolStripMenuItem MNULnkEasyCoding;
+        private System.Windows.Forms.ToolStripMenuItem MNULnkTFRU;
         private System.Windows.Forms.ToolStripSeparator MNUSep4;
         private System.Windows.Forms.ToolStripMenuItem MNUAbout;
         private System.Windows.Forms.Label L_LoginSel;

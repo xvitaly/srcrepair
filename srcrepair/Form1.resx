@@ -2780,23 +2780,17 @@
   <data name="MNUSep3.Size" type="System.Drawing.Size, System.Drawing">
     <value>254, 6</value>
   </data>
-  <data name="MNUGroup1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MNULnkEasyCoding.Size" type="System.Drawing.Size, System.Drawing">
     <value>257, 22</value>
   </data>
-  <data name="MNUGroup1.Text" xml:space="preserve">
+  <data name="MNULnkEasyCoding.Text" xml:space="preserve">
     <value>&amp;EasyCoding Team</value>
   </data>
-  <data name="MNUGroup2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MNULnkTFRU.Size" type="System.Drawing.Size, System.Drawing">
     <value>257, 22</value>
   </data>
-  <data name="MNUGroup2.Text" xml:space="preserve">
+  <data name="MNULnkTFRU.Text" xml:space="preserve">
     <value>&amp;Team-Fortress.ru</value>
-  </data>
-  <data name="MNUGroup3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 22</value>
-  </data>
-  <data name="MNUGroup3.Text" xml:space="preserve">
-    <value>T&amp;F2World.ru</value>
   </data>
   <data name="MNUSep4.Size" type="System.Drawing.Size, System.Drawing">
     <value>254, 6</value>
@@ -3435,22 +3429,16 @@
   <data name="&gt;&gt;MNUSep3.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MNUGroup1.Name" xml:space="preserve">
-    <value>MNUGroup1</value>
+  <data name="&gt;&gt;MNULnkEasyCoding.Name" xml:space="preserve">
+    <value>MNULnkEasyCoding</value>
   </data>
-  <data name="&gt;&gt;MNUGroup1.Type" xml:space="preserve">
+  <data name="&gt;&gt;MNULnkEasyCoding.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MNUGroup2.Name" xml:space="preserve">
-    <value>MNUGroup2</value>
+  <data name="&gt;&gt;MNULnkTFRU.Name" xml:space="preserve">
+    <value>MNULnkTFRU</value>
   </data>
-  <data name="&gt;&gt;MNUGroup2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MNUGroup3.Name" xml:space="preserve">
-    <value>MNUGroup3</value>
-  </data>
-  <data name="&gt;&gt;MNUGroup3.Type" xml:space="preserve">
+  <data name="&gt;&gt;MNULnkTFRU.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUSep4.Name" xml:space="preserve">
