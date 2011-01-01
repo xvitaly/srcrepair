@@ -697,6 +697,18 @@ namespace srcrepair
                 LoginSel.Items.Add((string)SBuf);
             }
 
+            // Выводим сообщение в строку статуса...
+            SB_Status.Text = RM.GetString("StatusSLogin");
+
+            // Проверяем единственный ли логин Steam на этом ПК...
+            if (LoginSel.Items.Count == 1)
+            {
+                // Да, единственный. Выберем его...
+                LoginSel.SelectedIndex = 0;
+                // Заменим содержимое строки состояния на требование выбора игры...
+                SB_Status.Text = RM.GetString("StatusSApp");
+            }
+
             // Укажем путь к Steam на странице "Устранение проблем"...
             PS_RSteamPath.Text = GV.FullSteamPath;
             
@@ -710,9 +722,6 @@ namespace srcrepair
                 PS_WarningMsg.ForeColor = Color.Red;
                 MessageBox.Show(RM.GetString("SteamNonASCIIDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-            // Выводим сообщение в строку статуса...
-            SB_Status.Text = RM.GetString("StatusSLogin");
         }
 
         private void PS_CleanBlobs_CheckedChanged(object sender, EventArgs e)
