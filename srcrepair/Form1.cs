@@ -2444,5 +2444,12 @@ namespace srcrepair
         {
             Process.Start("http://www.team-fortress.ru/");
         }
+
+        private void MNUHEd_Click(object sender, EventArgs e)
+        {
+            // Отобразим форму редактора файла hosts...
+            frmHEd HEdFrm = new frmHEd();
+            HEdFrm.ShowDialog();
+        }
     }
 }

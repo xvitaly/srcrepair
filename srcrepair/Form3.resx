@@ -117,27 +117,50 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="HDV_IPAddr.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="HDV_Domain.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="HDV_IPAddr.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="HDV_Domain.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="HEd_MTool.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="HEd_MMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>125, 17</value>
+  </metadata>
+  <metadata name="HEd_MStatus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>239, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>375, 235</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Source Repair Options</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Form3</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
+        AADx8fEAEhISAgAAABwGBwYwBQUFLgUFBS4FBQUuBQUFLgUFBS4EBQUuBAUFLgQFBS4GBgYwAAAAHxIS
+        EgXx8fEA8PDwABERERGXmZjN09XU+sfJyfHKy8vzyszL88rMy/PKzMzzyszL88rMy/PIysnx1NbV+ZWX
+        ltEREREY8PDwAPHx8QA5PDsV09XV8/z//v/z9vX+9/j4//f5+P/6+/r//Pz7//v8+//7/fz/+fv6/v//
+        ///U1dXyJCUkFe7u7gD6+voAlZuZEdPV1Ozu8fD/6evq/e3v7v7w9fb+7fT2/u/19/70+fv+8/T0/u/w
+        8P319/b/1dbV7IeLiBH4+PgA+fr6AJKXlRLU19bu8PPy/+nr6v7d4uP/v7Oq/7aWgP+0mYT/xrSr/+Hl
+        5//u8O/+9/j4/9XX1u6Pk5ES+vr6APr6+gCUmZcS1NjX7u7w7v/p8vP+xaeX/16Ja/+JeE7/qmY1/2mC
+        Yf++rZ//8PT1/vP19P/V19buj5SSEvn6+QD5+voAlpuaEtTW1e7t8/P/4drV/qh8Vv8mtaH/eJRz/7J1
+        SP8zspv/mYdm/+fc2P7x9/f/1NbV7pKWlBL5+voA+fr6AJmemxLS1tPu7vX2/8zEuP6IgFr/kpFs/7mN
+        ZP9Uv6f/MMKw/3WObv/Yw7f+8Pn6/9PV0+6UmZcS+fr6APr6+gCboJ0S0tbU7urw8P/TzMP+Tph9/6Ca
+        dv/dmXH/fsCn/0jCrP9NnYP/283E/uvz8//S1dPtlpqZEvn6+gD6+voAnKOgEtTY1u7k6uj/6uXk/oyo
+        lf9Xp4v/tamG/6+0lP9Gspj/l6aT/+ro5v7m7ev/09bV75edmxP6+voA+vr6AJ6koRLV2dfu5uvo/+Ho
+        5v7k39z/t6eU/3+ehf+snoL/v6iU/9/e2//Z4N7+19vZ/8LHxeGbop8M+vr6APr6+gChpqMS1trZ7ujt
+        6v/h5eP+4unn/+bs6//j3Nn/2tzY/+Do5//W3tz/xMnH+sPIxf+epKKXlZubAPr6+gL6+voAo6mmEtjc
+        2ezp7ev/4ufk/eHm4/7f5OH+3ubk/t3k4v7Z39v909jW+u/x8P/EysfasLGwGrm4uAD7+/sC+vr6AKOo
+        pRTc397z7/Lx/+bq6f7m6uj/4+jm/+Hm4//e5OH/2uDe/eLl4/+7xMHgsbW0Kv///wD///8C////APv7
+        +wCrsa4FzdHPvOfp6O/h5OLl4eTi59/i4efe4eDn3eHf6Nbc2uK/wb+kl6elHbzCwwD///8C////AP//
+        /wD///8A+vv6APf4+Ab5+fkN+fn5DPn5+Qz5+fkM+fn5DPn6+Qz4+PgK9vb2APr7+gD7+/sC////AP//
+        /wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA==
+</value>
   </data>
 </root>

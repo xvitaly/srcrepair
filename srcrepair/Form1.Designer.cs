@@ -171,6 +171,7 @@
             this.CE_OpenCfgDialog = new System.Windows.Forms.OpenFileDialog();
             this.CE_SaveCfgDialog = new System.Windows.Forms.SaveFileDialog();
             this.FldrBrwse = new System.Windows.Forms.FolderBrowserDialog();
+            this.MNUHEd = new System.Windows.Forms.ToolStripMenuItem();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_Warning)).BeginInit();
@@ -1127,6 +1128,7 @@
             this.MNUFPSWizard,
             this.MNUReportBuilder,
             this.MNUInstaller,
+            this.MNUHEd,
             this.MNUSep2,
             this.MNUExit});
             this.ToolsMNU.Name = "ToolsMNU";
@@ -1317,6 +1319,13 @@
             // FldrBrwse
             // 
             this.FldrBrwse.ShowNewFolderButton = false;
+            // 
+            // MNUHEd
+            // 
+            this.MNUHEd.Image = global::srcrepair.Properties.Resources.hosts;
+            this.MNUHEd.Name = "MNUHEd";
+            resources.ApplyResources(this.MNUHEd, "MNUHEd");
+            this.MNUHEd.Click += new System.EventHandler(this.MNUHEd_Click);
             // 
             // frmMainW
             // 
@@ -1514,6 +1523,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BData;
         private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BRealName;
         private System.Windows.Forms.FolderBrowserDialog FldrBrwse;
+        private System.Windows.Forms.ToolStripMenuItem MNUHEd;
     }
 }
 

@@ -27,9 +27,9 @@ using System.Windows.Forms;
 
 namespace srcrepair
 {
-    public partial class Form3 : Form
+    public partial class frmHEd : Form
     {
-        public Form3()
+        public frmHEd()
         {
             InitializeComponent();
         }
