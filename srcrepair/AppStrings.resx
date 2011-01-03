@@ -384,4 +384,7 @@
   <data name="CE_ClSelErr" xml:space="preserve">
     <value>No variables detected in selected row!</value>
   </data>
+  <data name="AHE_ExceptionDetected" xml:space="preserve">
+    <value>Warning! Parse error detected. Probably file {0} is opened not completely or with errors.</value>
+  </data>
 </root>

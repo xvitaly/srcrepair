@@ -61,6 +61,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Warning! Parse error detected. Probably file {0} is opened not completely or with errors..
+        /// </summary>
+        internal static string AHE_ExceptionDetected {
+            get {
+                return ResourceManager.GetString("AHE_ExceptionDetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to en.
         /// </summary>
         internal static string AppLangPrefix {

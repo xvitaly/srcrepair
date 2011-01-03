@@ -97,6 +97,7 @@
             this.HEd_T_Refresh.Name = "HEd_T_Refresh";
             this.HEd_T_Refresh.Size = new System.Drawing.Size(23, 22);
             this.HEd_T_Refresh.Text = "toolStripButton1";
+            this.HEd_T_Refresh.Click += new System.EventHandler(this.HEd_T_Refresh_Click);
             // 
             // HEd_T_Save
             // 
@@ -228,6 +229,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Advanced Hosts Editor";
+            this.Load += new System.EventHandler(this.frmHEd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HEd_Table)).EndInit();
             this.HEd_MTool.ResumeLayout(false);
             this.HEd_MTool.PerformLayout();
