@@ -55,3 +55,5 @@ Restore.ico - GNOME icon artists - GPLv2 - http://www.iconspedia.com/icon/gnome-
 --------------------------------------------------------------------------------------------------------
 Xmas.png - Iconspedia - Free - http://www.iconspedia.com/icon/santa-hat-17458.html
 --------------------------------------------------------------------------------------------------------
+HostEd.ico - GNOME icon artists - GPLv2 - http://www.iconspedia.com/icon/gnome-text-html-11177.html
+--------------------------------------------------------------------------------------------------------
