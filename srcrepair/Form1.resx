@@ -3780,7 +3780,7 @@
     <value>271, 6</value>
   </data>
   <data name="MNUExit.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>F10</value>
+    <value>Ctrl+Q</value>
   </data>
   <data name="MNUExit.Size" type="System.Drawing.Size, System.Drawing">
     <value>274, 22</value>
@@ -4422,6 +4422,12 @@
   <data name="&gt;&gt;MNUInstaller.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;MNUHEd.Name" xml:space="preserve">
+    <value>MNUHEd</value>
+  </data>
+  <data name="&gt;&gt;MNUHEd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;MNUSep2.Name" xml:space="preserve">
     <value>MNUSep2</value>
   </data>
@@ -4529,12 +4535,6 @@
   </data>
   <data name="&gt;&gt;FldrBrwse.Type" xml:space="preserve">
     <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MNUHEd.Name" xml:space="preserve">
-    <value>MNUHEd</value>
-  </data>
-  <data name="&gt;&gt;MNUHEd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmMainW</value>

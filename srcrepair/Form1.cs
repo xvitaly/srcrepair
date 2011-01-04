@@ -582,6 +582,7 @@ namespace srcrepair
                 // Блокируем контролы, требующие для своей работы прав админа...
                 PS_CleanRegistry.Enabled = false;
                 PS_SteamLang.Enabled = false;
+                MNUHEd.Enabled = false;
             }
             
             // Получаем информацию о версии нашего приложения...
@@ -804,7 +805,7 @@ namespace srcrepair
         {
             // Проверим, делал ли что-то пользователь с формой. Если не делал - не будем
             // спрашивать и завершим форму автоматически...
-            if (AppSelector.Enabled)
+            if ((AppSelector.Enabled) && (AppSelector.SelectedIndex != -1))
             {
                 // Создаём MessageBox...
                 DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("FrmCloseQuery"), GV.AppName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);

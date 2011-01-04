@@ -129,5 +129,35 @@ namespace srcrepair
                 MessageBox.Show(String.Format(frmMainW.RM.GetString("AHE_ExceptionDetected"), HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void HEd_T_Save_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void HEd_M_Quit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void HEd_M_HBack_Click(object sender, EventArgs e)
+        {
+            // BackUp
+        }
+
+        private void HEd_M_RestDef_Click(object sender, EventArgs e)
+        {
+            // Restore default
+        }
+
+        private void HEd_M_OnlHelp_Click(object sender, EventArgs e)
+        {
+            // Help
+        }
+
+        private void HEd_M_About_Click(object sender, EventArgs e)
+        {
+            // About
+        }
     }
 }

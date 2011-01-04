@@ -149,6 +149,7 @@
             this.MNUFPSWizard = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUReportBuilder = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUInstaller = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUHEd = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep2 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUExit = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpMNU = new System.Windows.Forms.ToolStripMenuItem();
@@ -171,7 +172,6 @@
             this.CE_OpenCfgDialog = new System.Windows.Forms.OpenFileDialog();
             this.CE_SaveCfgDialog = new System.Windows.Forms.SaveFileDialog();
             this.FldrBrwse = new System.Windows.Forms.FolderBrowserDialog();
-            this.MNUHEd = new System.Windows.Forms.ToolStripMenuItem();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_Warning)).BeginInit();
@@ -1167,6 +1167,13 @@
             this.MNUInstaller.Name = "MNUInstaller";
             this.MNUInstaller.Click += new System.EventHandler(this.MNUInstaller_Click);
             // 
+            // MNUHEd
+            // 
+            this.MNUHEd.Image = global::srcrepair.Properties.Resources.hosts;
+            this.MNUHEd.Name = "MNUHEd";
+            resources.ApplyResources(this.MNUHEd, "MNUHEd");
+            this.MNUHEd.Click += new System.EventHandler(this.MNUHEd_Click);
+            // 
             // MNUSep2
             // 
             this.MNUSep2.Name = "MNUSep2";
@@ -1319,13 +1326,6 @@
             // FldrBrwse
             // 
             this.FldrBrwse.ShowNewFolderButton = false;
-            // 
-            // MNUHEd
-            // 
-            this.MNUHEd.Image = global::srcrepair.Properties.Resources.hosts;
-            this.MNUHEd.Name = "MNUHEd";
-            resources.ApplyResources(this.MNUHEd, "MNUHEd");
-            this.MNUHEd.Click += new System.EventHandler(this.MNUHEd_Click);
             // 
             // frmMainW
             // 

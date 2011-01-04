@@ -107,6 +107,7 @@
             this.HEd_T_Save.Name = "HEd_T_Save";
             this.HEd_T_Save.Size = new System.Drawing.Size(23, 22);
             this.HEd_T_Save.Text = "toolStripButton1";
+            this.HEd_T_Save.Click += new System.EventHandler(this.HEd_T_Save_Click);
             // 
             // HEd_MMenu
             // 
@@ -133,22 +134,28 @@
             // 
             this.HEd_M_Refresh.Image = global::srcrepair.Properties.Resources.Refresh;
             this.HEd_M_Refresh.Name = "HEd_M_Refresh";
-            this.HEd_M_Refresh.Size = new System.Drawing.Size(123, 22);
+            this.HEd_M_Refresh.ShortcutKeys = System.Windows.Forms.Keys.F5;
+            this.HEd_M_Refresh.Size = new System.Drawing.Size(152, 22);
             this.HEd_M_Refresh.Text = "&Refresh";
+            this.HEd_M_Refresh.Click += new System.EventHandler(this.HEd_T_Refresh_Click);
             // 
             // HEd_M_Save
             // 
             this.HEd_M_Save.Image = global::srcrepair.Properties.Resources.Save;
             this.HEd_M_Save.Name = "HEd_M_Save";
-            this.HEd_M_Save.Size = new System.Drawing.Size(123, 22);
+            this.HEd_M_Save.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.HEd_M_Save.Size = new System.Drawing.Size(152, 22);
             this.HEd_M_Save.Text = "&Save";
+            this.HEd_M_Save.Click += new System.EventHandler(this.HEd_T_Save_Click);
             // 
             // HEd_M_Quit
             // 
             this.HEd_M_Quit.Image = global::srcrepair.Properties.Resources.Exit;
             this.HEd_M_Quit.Name = "HEd_M_Quit";
-            this.HEd_M_Quit.Size = new System.Drawing.Size(123, 22);
+            this.HEd_M_Quit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.HEd_M_Quit.Size = new System.Drawing.Size(152, 22);
             this.HEd_M_Quit.Text = "&Quit";
+            this.HEd_M_Quit.Click += new System.EventHandler(this.HEd_M_Quit_Click);
             // 
             // HEd_M_Adv
             // 
@@ -165,6 +172,7 @@
             this.HEd_M_HBack.Name = "HEd_M_HBack";
             this.HEd_M_HBack.Size = new System.Drawing.Size(177, 22);
             this.HEd_M_HBack.Text = "&BackUp hosts file";
+            this.HEd_M_HBack.Click += new System.EventHandler(this.HEd_M_HBack_Click);
             // 
             // HEd_M_RestDef
             // 
@@ -172,6 +180,7 @@
             this.HEd_M_RestDef.Name = "HEd_M_RestDef";
             this.HEd_M_RestDef.Size = new System.Drawing.Size(177, 22);
             this.HEd_M_RestDef.Text = "R&estore default file";
+            this.HEd_M_RestDef.Click += new System.EventHandler(this.HEd_M_RestDef_Click);
             // 
             // HEd_M_Hlp
             // 
@@ -186,8 +195,10 @@
             // 
             this.HEd_M_OnlHelp.Image = global::srcrepair.Properties.Resources.Help;
             this.HEd_M_OnlHelp.Name = "HEd_M_OnlHelp";
+            this.HEd_M_OnlHelp.ShortcutKeys = System.Windows.Forms.Keys.F1;
             this.HEd_M_OnlHelp.Size = new System.Drawing.Size(157, 22);
             this.HEd_M_OnlHelp.Text = "&Online help";
+            this.HEd_M_OnlHelp.Click += new System.EventHandler(this.HEd_M_OnlHelp_Click);
             // 
             // HEd_M_About
             // 
@@ -195,6 +206,7 @@
             this.HEd_M_About.Name = "HEd_M_About";
             this.HEd_M_About.Size = new System.Drawing.Size(157, 22);
             this.HEd_M_About.Text = "Abo&ut plugin...";
+            this.HEd_M_About.Click += new System.EventHandler(this.HEd_M_About_Click);
             // 
             // HEd_MStatus
             // 
