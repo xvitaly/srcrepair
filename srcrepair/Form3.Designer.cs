@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHEd));
             this.HEd_Table = new System.Windows.Forms.DataGridView();
+            this.HDV_IPAddr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HDV_Domain = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HEd_MTool = new System.Windows.Forms.ToolStrip();
             this.HEd_T_Refresh = new System.Windows.Forms.ToolStripButton();
             this.HEd_T_Save = new System.Windows.Forms.ToolStripButton();
@@ -41,15 +43,12 @@
             this.HEd_M_Save = new System.Windows.Forms.ToolStripMenuItem();
             this.HEd_M_Quit = new System.Windows.Forms.ToolStripMenuItem();
             this.HEd_M_Adv = new System.Windows.Forms.ToolStripMenuItem();
-            this.HEd_M_HBack = new System.Windows.Forms.ToolStripMenuItem();
             this.HEd_M_RestDef = new System.Windows.Forms.ToolStripMenuItem();
             this.HEd_M_Hlp = new System.Windows.Forms.ToolStripMenuItem();
             this.HEd_M_OnlHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.HEd_M_About = new System.Windows.Forms.ToolStripMenuItem();
             this.HEd_MStatus = new System.Windows.Forms.StatusStrip();
             this.HEd_St_Wrn = new System.Windows.Forms.ToolStripStatusLabel();
-            this.HDV_IPAddr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HDV_Domain = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.HEd_Table)).BeginInit();
             this.HEd_MTool.SuspendLayout();
             this.HEd_MMenu.SuspendLayout();
@@ -65,6 +64,16 @@
             this.HDV_IPAddr,
             this.HDV_Domain});
             this.HEd_Table.Name = "HEd_Table";
+            // 
+            // HDV_IPAddr
+            // 
+            resources.ApplyResources(this.HDV_IPAddr, "HDV_IPAddr");
+            this.HDV_IPAddr.Name = "HDV_IPAddr";
+            // 
+            // HDV_Domain
+            // 
+            resources.ApplyResources(this.HDV_Domain, "HDV_Domain");
+            this.HDV_Domain.Name = "HDV_Domain";
             // 
             // HEd_MTool
             // 
@@ -148,16 +157,8 @@
             // 
             resources.ApplyResources(this.HEd_M_Adv, "HEd_M_Adv");
             this.HEd_M_Adv.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.HEd_M_HBack,
             this.HEd_M_RestDef});
             this.HEd_M_Adv.Name = "HEd_M_Adv";
-            // 
-            // HEd_M_HBack
-            // 
-            resources.ApplyResources(this.HEd_M_HBack, "HEd_M_HBack");
-            this.HEd_M_HBack.Image = global::srcrepair.Properties.Resources.Add;
-            this.HEd_M_HBack.Name = "HEd_M_HBack";
-            this.HEd_M_HBack.Click += new System.EventHandler(this.HEd_M_HBack_Click);
             // 
             // HEd_M_RestDef
             // 
@@ -199,16 +200,8 @@
             // 
             resources.ApplyResources(this.HEd_St_Wrn, "HEd_St_Wrn");
             this.HEd_St_Wrn.Name = "HEd_St_Wrn";
-            // 
-            // HDV_IPAddr
-            // 
-            resources.ApplyResources(this.HDV_IPAddr, "HDV_IPAddr");
-            this.HDV_IPAddr.Name = "HDV_IPAddr";
-            // 
-            // HDV_Domain
-            // 
-            resources.ApplyResources(this.HDV_Domain, "HDV_Domain");
-            this.HDV_Domain.Name = "HDV_Domain";
+            this.HEd_St_Wrn.MouseEnter += new System.EventHandler(this.HEd_St_Wrn_MouseEnter);
+            this.HEd_St_Wrn.MouseLeave += new System.EventHandler(this.HEd_St_Wrn_MouseLeave);
             // 
             // frmHEd
             // 
@@ -248,7 +241,6 @@
         private System.Windows.Forms.ToolStripMenuItem HEd_M_Refresh;
         private System.Windows.Forms.ToolStripMenuItem HEd_M_Save;
         private System.Windows.Forms.ToolStripMenuItem HEd_M_Adv;
-        private System.Windows.Forms.ToolStripMenuItem HEd_M_HBack;
         private System.Windows.Forms.ToolStripMenuItem HEd_M_RestDef;
         private System.Windows.Forms.ToolStripMenuItem HEd_M_Hlp;
         private System.Windows.Forms.ToolStripMenuItem HEd_M_OnlHelp;

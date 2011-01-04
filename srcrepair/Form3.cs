@@ -129,11 +129,9 @@ namespace srcrepair
         
         private void frmHEd_Load(object sender, EventArgs e)
         {
-            // Проверим наличие прав админа...
-
-            // Получим путь к файлу hosts (вдруг он переопределён каким-либо зловредом)...
             try
             {
+                // Получим путь к файлу hosts (вдруг он переопределён каким-либо зловредом)...
                 RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\Tcpip\Parameters", false);
                 if (ResKey != null)
                 {
@@ -149,9 +147,9 @@ namespace srcrepair
             // Сгенерируем полный путь к файлу hosts...
             HostsFilePath = frmMainW.IncludeTrDelim(HostsFilePath) + "hosts";
 
-            // Считаем содержимое...
             try
             {
+                // Считаем содержимое...
                 ReadHostsToTable(HostsFilePath);
             }
             catch
@@ -191,11 +189,6 @@ namespace srcrepair
             Close();
         }
 
-        private void HEd_M_HBack_Click(object sender, EventArgs e)
-        {
-            // BackUp
-        }
-
         private void HEd_M_RestDef_Click(object sender, EventArgs e)
         {
             // Restore default
@@ -231,6 +224,16 @@ namespace srcrepair
             {
                 // Подавляем возможные сообщения об ошибках...
             }
+        }
+
+        private void HEd_St_Wrn_MouseEnter(object sender, EventArgs e)
+        {
+            HEd_St_Wrn.ForeColor = Color.Red;
+        }
+
+        private void HEd_St_Wrn_MouseLeave(object sender, EventArgs e)
+        {
+            HEd_St_Wrn.ForeColor = Color.Black;
         }
     }
 }
