@@ -70,6 +70,33 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Restore default Hosts file?.
+        /// </summary>
+        internal static string AHE_RestDef {
+            get {
+                return ResourceManager.GetString("AHE_RestDef", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File hosts was successfully saved!.
+        /// </summary>
+        internal static string AHE_Saved {
+            get {
+                return ResourceManager.GetString("AHE_Saved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Attention! An error occurred while writing to file {0}. Maybe you have not enough rights for this or someone is blocking write attempts..
+        /// </summary>
+        internal static string AHE_SaveException {
+            get {
+                return ResourceManager.GetString("AHE_SaveException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to en.
         /// </summary>
         internal static string AppLangPrefix {

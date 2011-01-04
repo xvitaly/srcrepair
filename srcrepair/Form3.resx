@@ -117,22 +117,234 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="HDV_IPAddr.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="HDV_Domain.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="HEd_MTool.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="HEd_MMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>125, 17</value>
-  </metadata>
-  <metadata name="HEd_MStatus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>239, 17</value>
-  </metadata>
+  <data name="HEd_M_RestDef.Text" xml:space="preserve">
+    <value>R&amp;estore default file</value>
+  </data>
+  <data name="&gt;&gt;HEd_MStatus.Name" xml:space="preserve">
+    <value>HEd_MStatus</value>
+  </data>
+  <data name="&gt;&gt;HEd_M_Hlp.Name" xml:space="preserve">
+    <value>HEd_M_Hlp</value>
+  </data>
+  <data name="&gt;&gt;HEd_M_File.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HEd_M_About.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="HEd_MMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;HEd_M_Quit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HEd_T_Refresh.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="HEd_M_OnlHelp.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F1</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="HEd_M_Adv.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 20</value>
+  </data>
+  <data name="HEd_MStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 298</value>
+  </data>
+  <data name="HDV_Domain.HeaderText" xml:space="preserve">
+    <value>Domain Name</value>
+  </data>
+  <data name="HEd_M_Quit.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Q</value>
+  </data>
+  <data name="&gt;&gt;HDV_IPAddr.Name" xml:space="preserve">
+    <value>HDV_IPAddr</value>
+  </data>
+  <data name="&gt;&gt;HEd_T_RemRw.Name" xml:space="preserve">
+    <value>HEd_T_RemRw</value>
+  </data>
+  <data name="&gt;&gt;HEd_MTool.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HEd_T_RemRw.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="HEd_M_About.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="HDV_IPAddr.HeaderText" xml:space="preserve">
+    <value>IP Address</value>
+  </data>
+  <data name="&gt;&gt;HDV_IPAddr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HEd_MTool.Text" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="HEd_St_Wrn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>347, 17</value>
+  </data>
+  <data name="HEd_Table.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 52</value>
+  </data>
+  <data name="HEd_MStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>388, 22</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="HEd_M_File.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 20</value>
+  </data>
+  <data name="&gt;&gt;HEd_MMenu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;HDV_Domain.Name" xml:space="preserve">
+    <value>HDV_Domain</value>
+  </data>
+  <data name="&gt;&gt;HEd_T_RemRw.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HEd_M_About.Text" xml:space="preserve">
+    <value>Abo&amp;ut plugin...</value>
+  </data>
+  <data name="&gt;&gt;HEd_M_OnlHelp.Name" xml:space="preserve">
+    <value>HEd_M_OnlHelp</value>
+  </data>
+  <data name="&gt;&gt;HEd_MStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HEd_T_Refresh.Name" xml:space="preserve">
+    <value>HEd_T_Refresh</value>
+  </data>
+  <data name="HEd_T_Save.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="&gt;&gt;HEd_St_Wrn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HEd_M_Save.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="HDV_Domain.Width" type="System.Int32, mscorlib">
+    <value>190</value>
+  </data>
+  <data name="&gt;&gt;HEd_Table.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="HEd_MTool.Size" type="System.Drawing.Size, System.Drawing">
+    <value>388, 25</value>
+  </data>
+  <data name="HEd_St_Wrn.Text" xml:space="preserve">
+    <value>Use this tool on your own risk. Wrong parameters can damage system!</value>
+  </data>
+  <data name="HEd_M_Save.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 22</value>
+  </data>
+  <data name="&gt;&gt;HEd_MTool.Name" xml:space="preserve">
+    <value>HEd_MTool</value>
+  </data>
+  <data name="&gt;&gt;HEd_Table.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HEd_Table.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="HEd_M_Refresh.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F5</value>
+  </data>
+  <data name="HEd_M_Refresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 22</value>
+  </data>
+  <data name="HEd_T_Refresh.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="HEd_M_Adv.Text" xml:space="preserve">
+    <value>&amp;Advanced</value>
+  </data>
+  <data name="&gt;&gt;HEd_T_Save.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HEd_MMenu.Name" xml:space="preserve">
+    <value>HEd_MMenu</value>
+  </data>
+  <data name="HEd_M_Hlp.Text" xml:space="preserve">
+    <value>&amp;Help</value>
+  </data>
+  <data name="HEd_Table.Size" type="System.Drawing.Size, System.Drawing">
+    <value>388, 246</value>
+  </data>
+  <data name="HEd_M_OnlHelp.Text" xml:space="preserve">
+    <value>&amp;Online help</value>
+  </data>
+  <data name="HEd_MStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;HEd_MTool.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="HEd_M_Save.Text" xml:space="preserve">
+    <value>&amp;Save</value>
+  </data>
+  <data name="HDV_IPAddr.Width" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="&gt;&gt;HEd_M_Quit.Name" xml:space="preserve">
+    <value>HEd_M_Quit</value>
+  </data>
+  <data name="&gt;&gt;HEd_M_HBack.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HEd_T_Refresh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HEd_M_OnlHelp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HEd_M_RestDef.Name" xml:space="preserve">
+    <value>HEd_M_RestDef</value>
+  </data>
+  <data name="&gt;&gt;HEd_M_Save.Name" xml:space="preserve">
+    <value>HEd_M_Save</value>
+  </data>
+  <data name="HEd_T_RemRw.Text" xml:space="preserve">
+    <value>Delete entry</value>
+  </data>
+  <data name="&gt;&gt;HEd_M_Refresh.Name" xml:space="preserve">
+    <value>HEd_M_Refresh</value>
+  </data>
+  <data name="HEd_MTool.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="&gt;&gt;HEd_M_HBack.Name" xml:space="preserve">
+    <value>HEd_M_HBack</value>
+  </data>
+  <data name="&gt;&gt;HEd_M_Hlp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HEd_MStatus.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="HEd_M_Save.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+S</value>
+  </data>
+  <data name="HEd_T_RemRw.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="HEd_MTool.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;HEd_T_Save.Name" xml:space="preserve">
+    <value>HEd_T_Save</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
@@ -157,4 +369,124 @@
         AAAAAAAAAAAAAA==
 </value>
   </data>
+  <data name="&gt;&gt;HEd_M_Adv.Name" xml:space="preserve">
+    <value>HEd_M_Adv</value>
+  </data>
+  <data name="HEd_T_Save.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="HEd_MMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="HEd_Table.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="HEd_M_RestDef.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 22</value>
+  </data>
+  <data name="HEd_T_Refresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="HEd_M_Quit.Text" xml:space="preserve">
+    <value>&amp;Quit</value>
+  </data>
+  <data name="&gt;&gt;HEd_MStatus.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="HEd_MMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>388, 24</value>
+  </data>
+  <data name="&gt;&gt;HEd_MMenu.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="HEd_M_OnlHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="&gt;&gt;HEd_M_RestDef.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HEd_T_Save.Text" xml:space="preserve">
+    <value>Save changes</value>
+  </data>
+  <data name="&gt;&gt;HDV_Domain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HEd_St_Wrn.Name" xml:space="preserve">
+    <value>HEd_St_Wrn</value>
+  </data>
+  <data name="HEd_M_HBack.Text" xml:space="preserve">
+    <value>&amp;BackUp hosts file</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmHEd</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Advanced Hosts Editor</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="HEd_M_Quit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 22</value>
+  </data>
+  <data name="HEd_M_Refresh.Text" xml:space="preserve">
+    <value>&amp;Refresh</value>
+  </data>
+  <data name="HEd_M_Hlp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="&gt;&gt;HEd_Table.Name" xml:space="preserve">
+    <value>HEd_Table</value>
+  </data>
+  <data name="&gt;&gt;HEd_M_File.Name" xml:space="preserve">
+    <value>HEd_M_File</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>388, 320</value>
+  </data>
+  <data name="&gt;&gt;HEd_M_About.Name" xml:space="preserve">
+    <value>HEd_M_About</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HEd_M_Adv.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HEd_MTool.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;HEd_MMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HEd_M_HBack.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 22</value>
+  </data>
+  <data name="HEd_M_File.Text" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
+  <data name="&gt;&gt;HEd_M_Refresh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="HDV_IPAddr.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="HEd_MMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>125, 17</value>
+  </metadata>
+  <metadata name="HEd_MStatus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>239, 17</value>
+  </metadata>
+  <metadata name="HEd_MTool.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="HDV_Domain.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

@@ -479,4 +479,16 @@
     <value>Во время открытия файла {0} произошла ошибка. Файл может быть открыт некорректно!</value>
     <comment>Сообщение, выдаваемое при возникновении исключения во время парсинга файла Hosts</comment>
   </data>
+  <data name="AHE_RestDef" xml:space="preserve">
+    <value>Восстановить стандартные значения файла Hosts?</value>
+    <comment>Вопрос о восстановлении стандартного файла Hosts</comment>
+  </data>
+  <data name="AHE_Saved" xml:space="preserve">
+    <value>Изменения в файле hosts были успешно сохранены!</value>
+    <comment>Сообщение об успешном сохранении файла hosts</comment>
+  </data>
+  <data name="AHE_SaveException" xml:space="preserve">
+    <value>Внимание! Произошла ошибка во время записи в файл {0}. Возможно, у вас недостаточно для этого прав, либо кто-то блокирует попытку записи.</value>
+    <comment>Сообщение, выдаваемое при ошибке записи в файл hosts</comment>
+  </data>
 </root>
