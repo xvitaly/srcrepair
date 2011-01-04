@@ -261,18 +261,6 @@ namespace srcrepair
         }
 
         /*
-         * Эта функция считывает содержимое текстового файла в строку и
-         * возвращает в качестве результата.
-         */
-        private static string ReadTextFileNow(string FileName)
-        {
-            // Считываем всё содержимое файла...
-            string TextFile = File.ReadAllText(FileName);
-            // Возвращаем результат...
-            return TextFile;
-        }
-
-        /*
          * Эта функция проверяет есть ли у пользователя, с правами которого запускается
          * программа, привилегии локального администратора.
          */
@@ -1621,7 +1609,7 @@ namespace srcrepair
             // Получаем описание выбранного пользователем конфига...
             try
             {
-                FP_Description.Text = ReadTextFileNow(GV.FullAppPath + @"cfgs\" + GV.SmallAppName + @"\" + Path.GetFileNameWithoutExtension(FP_ConfigSel.Text) + "_" + RM.GetString("AppLangPrefix") + ".txt");
+                FP_Description.Text = File.ReadAllText(GV.FullAppPath + @"cfgs\" + GV.SmallAppName + @"\" + Path.GetFileNameWithoutExtension(FP_ConfigSel.Text) + "_" + RM.GetString("AppLangPrefix") + ".txt");
             }
             catch
             {
