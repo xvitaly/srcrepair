@@ -12,7 +12,7 @@ AppVerName=SRC Repair Beta
 AppPublisher=EasyCoding Team
 AppPublisherURL=http://www.easycoding.org/projects/srcrepair
 ; AppVersion отображается в Установка/Удаление программ в дополнительной информации.
-AppVersion=0.1.0.145
+AppVersion=0.1.0.146
 AppSupportURL=http://www.easycoding.org/projects/srcrepair
 AppUpdatesURL=http://www.easycoding.org/projects/srcrepair
 DefaultDirName={pf}\SRC Repair
@@ -22,7 +22,7 @@ LicenseFile=E:\VSBuilds\GPL.txt
 ;InfoBeforeFile=E:\VSBuilds\readme.txt
 OutputDir=E:\VSBuilds
 ;OutputBaseFilename=SRCRepair_Setup
-OutputBaseFilename=srcrepair_beta_145
+OutputBaseFilename=srcrepair_beta_146
 SetupIconFile=E:\SVN\srcrepair\srcrepair\TF2Repair.ico
 ;UninstallDisplayIcon={app}\MyProg.exe,1
 Compression=lzma2
@@ -34,7 +34,7 @@ SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64
 
 ; Тут указываем данные, которые будут добавлены в свойства установщика
-VersionInfoVersion=0.1.0.145
+VersionInfoVersion=0.1.0.146
 VersionInfoDescription=Программа установки SRC Repair
 VersionInfoCopyright=(c) 2005-2011 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
@@ -55,12 +55,16 @@ Name: "betashortuts"; Description: "Создать ярлыки запуска локализованных версий
 ; Устанавливаем readme и файл лицензии...
 Source: "E:\VSBuilds\GPL.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "E:\VSBuilds\readme.txt"; DestDir: "{app}"; Flags: ignoreversion
+; Копируем открытый ключ...
+Source: "E:\VSBuilds\vitaly_public.asc"; DestDir: "{app}"; Flags: ignoreversion
 ; Устанавливаем 32-битную версию...
 Source: "E:\VSBuilds\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion; Check: not Is64BitInstallMode
-Source: "E:\VSBuilds\ru\srcrepair.resources.dll"; DestDir: "{app}\ru\"; Flags: ignoreversion; Check: not Is64BitInstallMode
+Source: "E:\VSBuilds\srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Check: not Is64BitInstallMode
+Source: "E:\VSBuilds\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: not Is64BitInstallMode
 ; Устанавливаем 64-битную версию...
 Source: "E:\VSBuilds\x64\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion; Check: Is64BitInstallMode
-Source: "E:\VSBuilds\x64\ru\srcrepair.resources.dll"; DestDir: "{app}\ru\"; Flags: ignoreversion; Check: Is64BitInstallMode
+Source: "E:\VSBuilds\x64\srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Check: Is64BitInstallMode
+Source: "E:\VSBuilds\x64\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: Is64BitInstallMode
 ; Устанавливаем остальные файлы...
 Source: "E:\VSBuilds\backups\*"; DestDir: "{app}\backups\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "E:\VSBuilds\cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
