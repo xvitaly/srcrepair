@@ -65,6 +65,7 @@
             // 
             resources.ApplyResources(this.btnContact, "btnContact");
             this.btnContact.Name = "btnContact";
+            this.btnContact.TabStop = false;
             this.btnContact.UseVisualStyleBackColor = true;
             this.btnContact.Click += new System.EventHandler(this.btnContact_Click);
             // 
@@ -73,6 +74,7 @@
             resources.ApplyResources(this.textBoxDescription, "textBoxDescription");
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.ReadOnly = true;
+            this.textBoxDescription.TabStop = false;
             // 
             // labelFlags
             // 

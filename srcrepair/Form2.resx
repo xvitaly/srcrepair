@@ -314,7 +314,7 @@
     <value>197, 24</value>
   </data>
   <data name="labelProductName.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="labelProductName.Text" xml:space="preserve">
     <value>%PRODUCT_NAME%</value>
@@ -338,7 +338,7 @@
     <value>122, 16</value>
   </data>
   <data name="labelVersion.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="labelVersion.Text" xml:space="preserve">
     <value>%APPVERSION%</value>
@@ -362,7 +362,7 @@
     <value>122, 14</value>
   </data>
   <data name="labelCompanyName.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="labelCompanyName.Text" xml:space="preserve">
     <value>%COMPANY_NAME%</value>
@@ -386,7 +386,7 @@
     <value>122, 23</value>
   </data>
   <data name="btnContact.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="btnContact.Text" xml:space="preserve">
     <value>Contact author</value>
@@ -417,7 +417,7 @@
     <value>241, 91</value>
   </data>
   <data name="textBoxDescription.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="textBoxDescription.Text" xml:space="preserve">
     <value>Author: V1TSK (vitaly@easycoding.org)
@@ -450,7 +450,7 @@ Translators:
     <value>122, 46</value>
   </data>
   <data name="labelFlags.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>4</value>
   </data>
   <data name="labelFlags.Text" xml:space="preserve">
     <value>Compiled for Windows NT only (x86/x64). App edition: OSE. Flags: null.</value>
@@ -474,7 +474,7 @@ Translators:
     <value>241, 34</value>
   </data>
   <data name="labelCopyright.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>5</value>
   </data>
   <data name="labelCopyright.Text" xml:space="preserve">
     <value>%COPYRIGHT%</value>
@@ -498,7 +498,7 @@ Translators:
     <value>101, 23</value>
   </data>
   <data name="okButton.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="okButton.Text" xml:space="preserve">
     <value>OK</value>

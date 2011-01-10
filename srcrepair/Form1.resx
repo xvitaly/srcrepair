@@ -117,7 +117,924 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;GT_Warning.Name" xml:space="preserve">
+    <value>GT_Warning</value>
+  </data>
+  <data name="&gt;&gt;GT_Warning.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_Warning.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_Warning.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GT_SaveApply.Name" xml:space="preserve">
+    <value>GT_SaveApply</value>
+  </data>
+  <data name="&gt;&gt;GT_SaveApply.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_SaveApply.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_SaveApply.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GT_Maximum_Performance.Name" xml:space="preserve">
+    <value>GT_Maximum_Performance</value>
+  </data>
+  <data name="&gt;&gt;GT_Maximum_Performance.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_Maximum_Performance.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_Maximum_Performance.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;GT_Maximum_Graphics.Name" xml:space="preserve">
+    <value>GT_Maximum_Graphics</value>
+  </data>
+  <data name="&gt;&gt;GT_Maximum_Graphics.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_Maximum_Graphics.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_Maximum_Graphics.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;GT_LaunchOptions_Btn.Name" xml:space="preserve">
+    <value>GT_LaunchOptions_Btn</value>
+  </data>
+  <data name="&gt;&gt;GT_LaunchOptions_Btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_LaunchOptions_Btn.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_LaunchOptions_Btn.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;L_GT_LaunchOptions.Name" xml:space="preserve">
+    <value>L_GT_LaunchOptions</value>
+  </data>
+  <data name="&gt;&gt;L_GT_LaunchOptions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_LaunchOptions.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;L_GT_LaunchOptions.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;GT_LaunchOptions.Name" xml:space="preserve">
+    <value>GT_LaunchOptions</value>
+  </data>
+  <data name="&gt;&gt;GT_LaunchOptions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_LaunchOptions.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_LaunchOptions.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;L_GT_HDR.Name" xml:space="preserve">
+    <value>L_GT_HDR</value>
+  </data>
+  <data name="&gt;&gt;L_GT_HDR.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_HDR.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;L_GT_HDR.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;L_GT_DxMode.Name" xml:space="preserve">
+    <value>L_GT_DxMode</value>
+  </data>
+  <data name="&gt;&gt;L_GT_DxMode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_DxMode.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;L_GT_DxMode.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;L_GT_MotionBlur.Name" xml:space="preserve">
+    <value>L_GT_MotionBlur</value>
+  </data>
+  <data name="&gt;&gt;L_GT_MotionBlur.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_MotionBlur.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;L_GT_MotionBlur.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;GT_HDR.Name" xml:space="preserve">
+    <value>GT_HDR</value>
+  </data>
+  <data name="&gt;&gt;GT_HDR.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_HDR.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_HDR.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;GT_DxMode.Name" xml:space="preserve">
+    <value>GT_DxMode</value>
+  </data>
+  <data name="&gt;&gt;GT_DxMode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_DxMode.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_DxMode.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;GT_ResVert.Name" xml:space="preserve">
+    <value>GT_ResVert</value>
+  </data>
+  <data name="&gt;&gt;GT_ResVert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_ResVert.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_ResVert.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;GT_ResHor.Name" xml:space="preserve">
+    <value>GT_ResHor</value>
+  </data>
+  <data name="&gt;&gt;GT_ResHor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_ResHor.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_ResHor.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;GT_MotionBlur.Name" xml:space="preserve">
+    <value>GT_MotionBlur</value>
+  </data>
+  <data name="&gt;&gt;GT_MotionBlur.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_MotionBlur.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_MotionBlur.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;L_GT_VSync.Name" xml:space="preserve">
+    <value>L_GT_VSync</value>
+  </data>
+  <data name="&gt;&gt;L_GT_VSync.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_VSync.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;L_GT_VSync.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;L_GT_Filtering.Name" xml:space="preserve">
+    <value>L_GT_Filtering</value>
+  </data>
+  <data name="&gt;&gt;L_GT_Filtering.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_Filtering.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;L_GT_Filtering.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;L_GT_AntiAliasing.Name" xml:space="preserve">
+    <value>L_GT_AntiAliasing</value>
+  </data>
+  <data name="&gt;&gt;L_GT_AntiAliasing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_AntiAliasing.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;L_GT_AntiAliasing.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;GT_VSync.Name" xml:space="preserve">
+    <value>GT_VSync</value>
+  </data>
+  <data name="&gt;&gt;GT_VSync.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_VSync.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_VSync.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;GT_Filtering.Name" xml:space="preserve">
+    <value>GT_Filtering</value>
+  </data>
+  <data name="&gt;&gt;GT_Filtering.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_Filtering.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_Filtering.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;GT_AntiAliasing.Name" xml:space="preserve">
+    <value>GT_AntiAliasing</value>
+  </data>
+  <data name="&gt;&gt;GT_AntiAliasing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_AntiAliasing.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_AntiAliasing.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ColorCorrectionT.Name" xml:space="preserve">
+    <value>L_GT_ColorCorrectionT</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ColorCorrectionT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ColorCorrectionT.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ColorCorrectionT.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ShadowQuality.Name" xml:space="preserve">
+    <value>L_GT_ShadowQuality</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ShadowQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ShadowQuality.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ShadowQuality.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;L_GT_WaterQuality.Name" xml:space="preserve">
+    <value>L_GT_WaterQuality</value>
+  </data>
+  <data name="&gt;&gt;L_GT_WaterQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_WaterQuality.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;L_GT_WaterQuality.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;GT_ColorCorrectionT.Name" xml:space="preserve">
+    <value>GT_ColorCorrectionT</value>
+  </data>
+  <data name="&gt;&gt;GT_ColorCorrectionT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_ColorCorrectionT.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_ColorCorrectionT.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;GT_ShadowQuality.Name" xml:space="preserve">
+    <value>GT_ShadowQuality</value>
+  </data>
+  <data name="&gt;&gt;GT_ShadowQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_ShadowQuality.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_ShadowQuality.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;GT_WaterQuality.Name" xml:space="preserve">
+    <value>GT_WaterQuality</value>
+  </data>
+  <data name="&gt;&gt;GT_WaterQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_WaterQuality.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_WaterQuality.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ShaderQuality.Name" xml:space="preserve">
+    <value>L_GT_ShaderQuality</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ShaderQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ShaderQuality.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ShaderQuality.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;L_GT_TextureQuality.Name" xml:space="preserve">
+    <value>L_GT_TextureQuality</value>
+  </data>
+  <data name="&gt;&gt;L_GT_TextureQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_TextureQuality.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;L_GT_TextureQuality.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ModelQuality.Name" xml:space="preserve">
+    <value>L_GT_ModelQuality</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ModelQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ModelQuality.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ModelQuality.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;GT_ShaderQuality.Name" xml:space="preserve">
+    <value>GT_ShaderQuality</value>
+  </data>
+  <data name="&gt;&gt;GT_ShaderQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_ShaderQuality.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_ShaderQuality.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;GT_TextureQuality.Name" xml:space="preserve">
+    <value>GT_TextureQuality</value>
+  </data>
+  <data name="&gt;&gt;GT_TextureQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_TextureQuality.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_TextureQuality.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;GT_ModelQuality.Name" xml:space="preserve">
+    <value>GT_ModelQuality</value>
+  </data>
+  <data name="&gt;&gt;GT_ModelQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_ModelQuality.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_ModelQuality.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ScreenType.Name" xml:space="preserve">
+    <value>L_GT_ScreenType</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ScreenType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ScreenType.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ScreenType.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ResVert.Name" xml:space="preserve">
+    <value>L_GT_ResVert</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ResVert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ResVert.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ResVert.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;GT_ResVert_Btn.Name" xml:space="preserve">
+    <value>GT_ResVert_Btn</value>
+  </data>
+  <data name="&gt;&gt;GT_ResVert_Btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_ResVert_Btn.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_ResVert_Btn.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;GT_ScreenType.Name" xml:space="preserve">
+    <value>GT_ScreenType</value>
+  </data>
+  <data name="&gt;&gt;GT_ScreenType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_ScreenType.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_ScreenType.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;GT_ResHor_Btn.Name" xml:space="preserve">
+    <value>GT_ResHor_Btn</value>
+  </data>
+  <data name="&gt;&gt;GT_ResHor_Btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_ResHor_Btn.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_ResHor_Btn.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ResHor.Name" xml:space="preserve">
+    <value>L_GT_ResHor</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ResHor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ResHor.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ResHor.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="GraphicTweaker.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GraphicTweaker.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="GraphicTweaker.Size" type="System.Drawing.Size, System.Drawing">
+    <value>462, 379</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GraphicTweaker.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GraphicTweaker.Text" xml:space="preserve">
+    <value>Graphic Tweaker</value>
+  </data>
+  <data name="&gt;&gt;GraphicTweaker.Name" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GraphicTweaker.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GraphicTweaker.Parent" xml:space="preserve">
+    <value>MainTabControl</value>
+  </data>
+  <data name="&gt;&gt;GraphicTweaker.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="CE_Toolbar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>225, 17</value>
+  </metadata>
+  <data name="&gt;&gt;CE_Toolbar.Name" xml:space="preserve">
+    <value>CE_Toolbar</value>
+  </data>
+  <data name="&gt;&gt;CE_Toolbar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CE_Toolbar.Parent" xml:space="preserve">
+    <value>ConfigEditor</value>
+  </data>
+  <data name="&gt;&gt;CE_Toolbar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;CE_Editor.Name" xml:space="preserve">
+    <value>CE_Editor</value>
+  </data>
+  <data name="&gt;&gt;CE_Editor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CE_Editor.Parent" xml:space="preserve">
+    <value>ConfigEditor</value>
+  </data>
+  <data name="&gt;&gt;CE_Editor.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ConfigEditor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="ConfigEditor.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="ConfigEditor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>462, 379</value>
+  </data>
+  <data name="ConfigEditor.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="ConfigEditor.Text" xml:space="preserve">
+    <value>Config Editor</value>
+  </data>
+  <data name="&gt;&gt;ConfigEditor.Name" xml:space="preserve">
+    <value>ConfigEditor</value>
+  </data>
+  <data name="&gt;&gt;ConfigEditor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ConfigEditor.Parent" xml:space="preserve">
+    <value>MainTabControl</value>
+  </data>
+  <data name="&gt;&gt;ConfigEditor.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_Remover.Name" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_Remover.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_Remover.Parent" xml:space="preserve">
+    <value>ProblemSolver</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_Remover.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_AdvFeat.Name" xml:space="preserve">
+    <value>PS_GB_AdvFeat</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_AdvFeat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_AdvFeat.Parent" xml:space="preserve">
+    <value>ProblemSolver</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_AdvFeat.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_SInfo.Name" xml:space="preserve">
+    <value>PS_GB_SInfo</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_SInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_SInfo.Parent" xml:space="preserve">
+    <value>ProblemSolver</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_SInfo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_Solver.Name" xml:space="preserve">
+    <value>PS_GB_Solver</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_Solver.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_Solver.Parent" xml:space="preserve">
+    <value>ProblemSolver</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_Solver.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ProblemSolver.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="ProblemSolver.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="ProblemSolver.Size" type="System.Drawing.Size, System.Drawing">
+    <value>462, 379</value>
+  </data>
+  <data name="ProblemSolver.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="ProblemSolver.Text" xml:space="preserve">
+    <value>Troubleshooting &amp; Cleanup</value>
+  </data>
+  <data name="&gt;&gt;ProblemSolver.Name" xml:space="preserve">
+    <value>ProblemSolver</value>
+  </data>
+  <data name="&gt;&gt;ProblemSolver.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProblemSolver.Parent" xml:space="preserve">
+    <value>MainTabControl</value>
+  </data>
+  <data name="&gt;&gt;ProblemSolver.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;FP_CreateBackUp.Name" xml:space="preserve">
+    <value>FP_CreateBackUp</value>
+  </data>
+  <data name="&gt;&gt;FP_CreateBackUp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FP_CreateBackUp.Parent" xml:space="preserve">
+    <value>FPSCfgInstall</value>
+  </data>
+  <data name="&gt;&gt;FP_CreateBackUp.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;FP_Uninstall.Name" xml:space="preserve">
+    <value>FP_Uninstall</value>
+  </data>
+  <data name="&gt;&gt;FP_Uninstall.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FP_Uninstall.Parent" xml:space="preserve">
+    <value>FPSCfgInstall</value>
+  </data>
+  <data name="&gt;&gt;FP_Uninstall.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;FP_Install.Name" xml:space="preserve">
+    <value>FP_Install</value>
+  </data>
+  <data name="&gt;&gt;FP_Install.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FP_Install.Parent" xml:space="preserve">
+    <value>FPSCfgInstall</value>
+  </data>
+  <data name="&gt;&gt;FP_Install.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;FP_GB_Desc.Name" xml:space="preserve">
+    <value>FP_GB_Desc</value>
+  </data>
+  <data name="&gt;&gt;FP_GB_Desc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FP_GB_Desc.Parent" xml:space="preserve">
+    <value>FPSCfgInstall</value>
+  </data>
+  <data name="&gt;&gt;FP_GB_Desc.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;FP_ConfigSel.Name" xml:space="preserve">
+    <value>FP_ConfigSel</value>
+  </data>
+  <data name="&gt;&gt;FP_ConfigSel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FP_ConfigSel.Parent" xml:space="preserve">
+    <value>FPSCfgInstall</value>
+  </data>
+  <data name="&gt;&gt;FP_ConfigSel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;L_FP_ConfigSel.Name" xml:space="preserve">
+    <value>L_FP_ConfigSel</value>
+  </data>
+  <data name="&gt;&gt;L_FP_ConfigSel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_FP_ConfigSel.Parent" xml:space="preserve">
+    <value>FPSCfgInstall</value>
+  </data>
+  <data name="&gt;&gt;L_FP_ConfigSel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;FP_TopLabel.Name" xml:space="preserve">
+    <value>FP_TopLabel</value>
+  </data>
+  <data name="&gt;&gt;FP_TopLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FP_TopLabel.Parent" xml:space="preserve">
+    <value>FPSCfgInstall</value>
+  </data>
+  <data name="&gt;&gt;FP_TopLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="FPSCfgInstall.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="FPSCfgInstall.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="FPSCfgInstall.Size" type="System.Drawing.Size, System.Drawing">
+    <value>462, 379</value>
+  </data>
+  <data name="FPSCfgInstall.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="FPSCfgInstall.Text" xml:space="preserve">
+    <value>FPS-Configs</value>
+  </data>
+  <data name="&gt;&gt;FPSCfgInstall.Name" xml:space="preserve">
+    <value>FPSCfgInstall</value>
+  </data>
+  <data name="&gt;&gt;FPSCfgInstall.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FPSCfgInstall.Parent" xml:space="preserve">
+    <value>MainTabControl</value>
+  </data>
+  <data name="&gt;&gt;FPSCfgInstall.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="BEd_BName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="BEd_BName.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <metadata name="BEd_BType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="BEd_BType.HeaderText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="BEd_BType.Width" type="System.Int32, mscorlib">
+    <value>90</value>
+  </data>
+  <metadata name="BEd_BSize.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="BEd_BSize.HeaderText" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="BEd_BSize.Width" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <metadata name="BEd_BData.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="BEd_BData.HeaderText" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="BEd_BData.Width" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <metadata name="BEd_BRealName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="BEd_BRealName.HeaderText" xml:space="preserve">
+    <value>RealName</value>
+  </data>
+  <data name="BEd_BRealName.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="BU_ListTable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 31</value>
+  </data>
+  <data name="BU_ListTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 342</value>
+  </data>
+  <data name="BU_ListTable.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;BU_ListTable.Name" xml:space="preserve">
+    <value>BU_ListTable</value>
+  </data>
+  <data name="&gt;&gt;BU_ListTable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BU_ListTable.Parent" xml:space="preserve">
+    <value>RescueCentre</value>
+  </data>
+  <data name="&gt;&gt;BU_ListTable.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="BU_BToolbar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>617, 17</value>
+  </metadata>
+  <data name="BUT_Refresh.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="BUT_Refresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="BUT_Refresh.Text" xml:space="preserve">
+    <value>Update BackUp list...</value>
+  </data>
+  <data name="BUT_Sep1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="BUT_RestoreB.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="BUT_RestoreB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="BUT_RestoreB.Text" xml:space="preserve">
+    <value>Restore BackUp</value>
+  </data>
+  <data name="BUT_DelB.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="BUT_DelB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="BUT_DelB.Text" xml:space="preserve">
+    <value>Delete BackUp</value>
+  </data>
+  <data name="BUT_Sep2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="BUT_CrBkupReg.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="BUT_CrBkupReg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 22</value>
+  </data>
+  <data name="BUT_CrBkupReg.Text" xml:space="preserve">
+    <value>Create registry backup...</value>
+  </data>
+  <data name="BU_BToolbar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="BU_BToolbar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>456, 25</value>
+  </data>
+  <data name="BU_BToolbar.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;BU_BToolbar.Name" xml:space="preserve">
+    <value>BU_BToolbar</value>
+  </data>
+  <data name="&gt;&gt;BU_BToolbar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BU_BToolbar.Parent" xml:space="preserve">
+    <value>RescueCentre</value>
+  </data>
+  <data name="&gt;&gt;BU_BToolbar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RescueCentre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="RescueCentre.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="RescueCentre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>462, 379</value>
+  </data>
+  <data name="RescueCentre.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="RescueCentre.Text" xml:space="preserve">
+    <value>BackUp Center</value>
+  </data>
+  <data name="&gt;&gt;RescueCentre.Name" xml:space="preserve">
+    <value>RescueCentre</value>
+  </data>
+  <data name="&gt;&gt;RescueCentre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RescueCentre.Parent" xml:space="preserve">
+    <value>MainTabControl</value>
+  </data>
+  <data name="&gt;&gt;RescueCentre.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="MainTabControl.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="MainTabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 64</value>
+  </data>
+  <data name="MainTabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>470, 405</value>
+  </data>
+  <data name="MainTabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;MainTabControl.Name" xml:space="preserve">
+    <value>MainTabControl</value>
+  </data>
+  <data name="&gt;&gt;MainTabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MainTabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MainTabControl.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="GT_Warning.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -156,7 +1073,6 @@
   <data name="GT_Warning.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 32</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="GT_Warning.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
@@ -182,7 +1098,7 @@
     <value>155, 23</value>
   </data>
   <data name="GT_SaveApply.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
+    <value>37</value>
   </data>
   <data name="GT_SaveApply.Text" xml:space="preserve">
     <value>Save settings</value>
@@ -206,7 +1122,7 @@
     <value>205, 23</value>
   </data>
   <data name="GT_Maximum_Performance.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
+    <value>36</value>
   </data>
   <data name="GT_Maximum_Performance.Text" xml:space="preserve">
     <value>Maximum performance</value>
@@ -230,7 +1146,7 @@
     <value>205, 23</value>
   </data>
   <data name="GT_Maximum_Graphics.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
+    <value>35</value>
   </data>
   <data name="GT_Maximum_Graphics.Text" xml:space="preserve">
     <value>Maximum graphics</value>
@@ -254,7 +1170,7 @@
     <value>22, 22</value>
   </data>
   <data name="GT_LaunchOptions_Btn.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
+    <value>34</value>
   </data>
   <data name="GT_LaunchOptions_Btn.Text" xml:space="preserve">
     <value>?</value>
@@ -281,7 +1197,7 @@
     <value>83, 13</value>
   </data>
   <data name="L_GT_LaunchOptions.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
+    <value>32</value>
   </data>
   <data name="L_GT_LaunchOptions.Text" xml:space="preserve">
     <value>Launch options:</value>
@@ -308,7 +1224,7 @@
     <value>308, 20</value>
   </data>
   <data name="GT_LaunchOptions.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
+    <value>33</value>
   </data>
   <data name="&gt;&gt;GT_LaunchOptions.Name" xml:space="preserve">
     <value>GT_LaunchOptions</value>
@@ -332,7 +1248,7 @@
     <value>108, 13</value>
   </data>
   <data name="L_GT_HDR.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
+    <value>30</value>
   </data>
   <data name="L_GT_HDR.Text" xml:space="preserve">
     <value>High Dynamic Range</value>
@@ -359,7 +1275,7 @@
     <value>71, 13</value>
   </data>
   <data name="L_GT_DxMode.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
+    <value>28</value>
   </data>
   <data name="L_GT_DxMode.Text" xml:space="preserve">
     <value>DirectX mode</value>
@@ -386,7 +1302,7 @@
     <value>60, 13</value>
   </data>
   <data name="L_GT_MotionBlur.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
+    <value>26</value>
   </data>
   <data name="L_GT_MotionBlur.Text" xml:space="preserve">
     <value>Motion Blur</value>
@@ -419,7 +1335,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_HDR.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
+    <value>31</value>
   </data>
   <data name="&gt;&gt;GT_HDR.Name" xml:space="preserve">
     <value>GT_HDR</value>
@@ -473,7 +1389,7 @@
     <value>113, 20</value>
   </data>
   <data name="GT_ResVert.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;GT_ResVert.Name" xml:space="preserve">
     <value>GT_ResVert</value>
@@ -494,7 +1410,7 @@
     <value>107, 20</value>
   </data>
   <data name="GT_ResHor.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;GT_ResHor.Name" xml:space="preserve">
     <value>GT_ResHor</value>
@@ -521,7 +1437,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_MotionBlur.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
+    <value>27</value>
   </data>
   <data name="&gt;&gt;GT_MotionBlur.Name" xml:space="preserve">
     <value>GT_MotionBlur</value>
@@ -545,7 +1461,7 @@
     <value>106, 13</value>
   </data>
   <data name="L_GT_VSync.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
+    <value>24</value>
   </data>
   <data name="L_GT_VSync.Text" xml:space="preserve">
     <value>Wait for vertical sync</value>
@@ -572,7 +1488,7 @@
     <value>72, 13</value>
   </data>
   <data name="L_GT_Filtering.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
+    <value>22</value>
   </data>
   <data name="L_GT_Filtering.Text" xml:space="preserve">
     <value>Filtering mode</value>
@@ -599,7 +1515,7 @@
     <value>89, 13</value>
   </data>
   <data name="L_GT_AntiAliasing.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
+    <value>20</value>
   </data>
   <data name="L_GT_AntiAliasing.Text" xml:space="preserve">
     <value>Antialiasing mode</value>
@@ -629,7 +1545,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_VSync.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
+    <value>25</value>
   </data>
   <data name="&gt;&gt;GT_VSync.Name" xml:space="preserve">
     <value>GT_VSync</value>
@@ -668,7 +1584,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_Filtering.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
+    <value>23</value>
   </data>
   <data name="&gt;&gt;GT_Filtering.Name" xml:space="preserve">
     <value>GT_Filtering</value>
@@ -710,7 +1626,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_AntiAliasing.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="&gt;&gt;GT_AntiAliasing.Name" xml:space="preserve">
     <value>GT_AntiAliasing</value>
@@ -734,7 +1650,7 @@
     <value>81, 13</value>
   </data>
   <data name="L_GT_ColorCorrectionT.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+    <value>18</value>
   </data>
   <data name="L_GT_ColorCorrectionT.Text" xml:space="preserve">
     <value>Color correction</value>
@@ -761,7 +1677,7 @@
     <value>74, 13</value>
   </data>
   <data name="L_GT_ShadowQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+    <value>16</value>
   </data>
   <data name="L_GT_ShadowQuality.Text" xml:space="preserve">
     <value>Shadow detail</value>
@@ -788,7 +1704,7 @@
     <value>64, 13</value>
   </data>
   <data name="L_GT_WaterQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>14</value>
   </data>
   <data name="L_GT_WaterQuality.Text" xml:space="preserve">
     <value>Water detail</value>
@@ -818,7 +1734,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_ColorCorrectionT.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+    <value>19</value>
   </data>
   <data name="&gt;&gt;GT_ColorCorrectionT.Name" xml:space="preserve">
     <value>GT_ColorCorrectionT</value>
@@ -845,7 +1761,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_ShadowQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="&gt;&gt;GT_ShadowQuality.Name" xml:space="preserve">
     <value>GT_ShadowQuality</value>
@@ -875,7 +1791,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_WaterQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="&gt;&gt;GT_WaterQuality.Name" xml:space="preserve">
     <value>GT_WaterQuality</value>
@@ -899,7 +1815,7 @@
     <value>69, 13</value>
   </data>
   <data name="L_GT_ShaderQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>12</value>
   </data>
   <data name="L_GT_ShaderQuality.Text" xml:space="preserve">
     <value>Shader detail</value>
@@ -926,7 +1842,7 @@
     <value>71, 13</value>
   </data>
   <data name="L_GT_TextureQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="L_GT_TextureQuality.Text" xml:space="preserve">
     <value>Texture detail</value>
@@ -953,7 +1869,7 @@
     <value>64, 13</value>
   </data>
   <data name="L_GT_ModelQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>8</value>
   </data>
   <data name="L_GT_ModelQuality.Text" xml:space="preserve">
     <value>Model detail</value>
@@ -983,7 +1899,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_ShaderQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>13</value>
   </data>
   <data name="&gt;&gt;GT_ShaderQuality.Name" xml:space="preserve">
     <value>GT_ShaderQuality</value>
@@ -1013,7 +1929,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_TextureQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="&gt;&gt;GT_TextureQuality.Name" xml:space="preserve">
     <value>GT_TextureQuality</value>
@@ -1043,7 +1959,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_ModelQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;GT_ModelQuality.Name" xml:space="preserve">
     <value>GT_ModelQuality</value>
@@ -1067,7 +1983,7 @@
     <value>70, 13</value>
   </data>
   <data name="L_GT_ScreenType.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="L_GT_ScreenType.Text" xml:space="preserve">
     <value>Display mode</value>
@@ -1094,7 +2010,7 @@
     <value>90, 13</value>
   </data>
   <data name="L_GT_ResVert.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>3</value>
   </data>
   <data name="L_GT_ResVert.Text" xml:space="preserve">
     <value>Vertical resolution</value>
@@ -1148,7 +2064,7 @@
     <value>131, 21</value>
   </data>
   <data name="GT_ScreenType.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;GT_ScreenType.Name" xml:space="preserve">
     <value>GT_ScreenType</value>
@@ -1196,7 +2112,7 @@
     <value>102, 13</value>
   </data>
   <data name="L_GT_ResHor.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="L_GT_ResHor.Text" xml:space="preserve">
     <value>Horisontal resolution</value>
@@ -1212,34 +2128,6 @@
   </data>
   <data name="&gt;&gt;L_GT_ResHor.ZOrder" xml:space="preserve">
     <value>38</value>
-  </data>
-  <data name="GraphicTweaker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="GraphicTweaker.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="GraphicTweaker.Size" type="System.Drawing.Size, System.Drawing">
-    <value>462, 379</value>
-  </data>
-  <data name="GraphicTweaker.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="GraphicTweaker.Text" xml:space="preserve">
-    <value>Graphic Tweaker</value>
-  </data>
-  <data name="&gt;&gt;GraphicTweaker.Name" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GraphicTweaker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GraphicTweaker.Parent" xml:space="preserve">
-    <value>MainTabControl</value>
-  </data>
-  <data name="&gt;&gt;GraphicTweaker.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="CE_Toolbar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>225, 17</value>
@@ -1443,7 +2331,7 @@
     <value>456, 25</value>
   </data>
   <data name="CE_Toolbar.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="CE_Toolbar.Text" xml:space="preserve">
     <value>CE_Toolbar</value>
@@ -1463,6 +2351,36 @@
   <metadata name="CE_CVName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="CE_CVal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="CE_Editor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 29</value>
+  </data>
+  <data name="CE_Editor.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="CE_Editor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>450, 344</value>
+  </data>
+  <data name="CE_Editor.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;CE_Editor.Name" xml:space="preserve">
+    <value>CE_Editor</value>
+  </data>
+  <data name="&gt;&gt;CE_Editor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CE_Editor.Parent" xml:space="preserve">
+    <value>ConfigEditor</value>
+  </data>
+  <data name="&gt;&gt;CE_Editor.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="CE_CVName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="CE_CVName.HeaderText" xml:space="preserve">
     <value>Variable</value>
   </data>
@@ -1478,56 +2396,161 @@
   <data name="CE_CVal.Width" type="System.Int32, mscorlib">
     <value>255</value>
   </data>
-  <data name="CE_Editor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 29</value>
+  <data name="&gt;&gt;PS_RemOldBin.Name" xml:space="preserve">
+    <value>PS_RemOldBin</value>
   </data>
-  <data name="CE_Editor.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Vertical</value>
+  <data name="&gt;&gt;PS_RemOldBin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="CE_Editor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>450, 344</value>
+  <data name="&gt;&gt;PS_RemOldBin.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
   </data>
-  <data name="CE_Editor.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;PS_RemOldBin.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;CE_Editor.Name" xml:space="preserve">
-    <value>CE_Editor</value>
+  <data name="&gt;&gt;PS_RemGraphOpts.Name" xml:space="preserve">
+    <value>PS_RemGraphOpts</value>
   </data>
-  <data name="&gt;&gt;CE_Editor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;PS_RemGraphOpts.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;CE_Editor.Parent" xml:space="preserve">
-    <value>ConfigEditor</value>
+  <data name="&gt;&gt;PS_RemGraphOpts.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
   </data>
-  <data name="&gt;&gt;CE_Editor.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;PS_RemGraphOpts.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="ConfigEditor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
+  <data name="&gt;&gt;PS_RemDemos.Name" xml:space="preserve">
+    <value>PS_RemDemos</value>
   </data>
-  <data name="ConfigEditor.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="&gt;&gt;PS_RemDemos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ConfigEditor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>462, 379</value>
+  <data name="&gt;&gt;PS_RemDemos.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
   </data>
-  <data name="ConfigEditor.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;PS_RemDemos.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="ConfigEditor.Text" xml:space="preserve">
-    <value>Config Editor</value>
+  <data name="&gt;&gt;PS_RemScreenShots.Name" xml:space="preserve">
+    <value>PS_RemScreenShots</value>
   </data>
-  <data name="&gt;&gt;ConfigEditor.Name" xml:space="preserve">
-    <value>ConfigEditor</value>
+  <data name="&gt;&gt;PS_RemScreenShots.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ConfigEditor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;PS_RemScreenShots.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
   </data>
-  <data name="&gt;&gt;ConfigEditor.Parent" xml:space="preserve">
-    <value>MainTabControl</value>
+  <data name="&gt;&gt;PS_RemScreenShots.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="&gt;&gt;ConfigEditor.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;PS_RemNavFiles.Name" xml:space="preserve">
+    <value>PS_RemNavFiles</value>
+  </data>
+  <data name="&gt;&gt;PS_RemNavFiles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemNavFiles.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_RemNavFiles.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;PS_RemSoundCache.Name" xml:space="preserve">
+    <value>PS_RemSoundCache</value>
+  </data>
+  <data name="&gt;&gt;PS_RemSoundCache.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemSoundCache.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_RemSoundCache.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;PS_RemGraphCache.Name" xml:space="preserve">
+    <value>PS_RemGraphCache</value>
+  </data>
+  <data name="&gt;&gt;PS_RemGraphCache.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemGraphCache.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_RemGraphCache.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;PS_RemOldCfgs.Name" xml:space="preserve">
+    <value>PS_RemOldCfgs</value>
+  </data>
+  <data name="&gt;&gt;PS_RemOldCfgs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemOldCfgs.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_RemOldCfgs.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;PS_RemOldSpray.Name" xml:space="preserve">
+    <value>PS_RemOldSpray</value>
+  </data>
+  <data name="&gt;&gt;PS_RemOldSpray.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemOldSpray.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_RemOldSpray.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;PS_RemDnlCache.Name" xml:space="preserve">
+    <value>PS_RemDnlCache</value>
+  </data>
+  <data name="&gt;&gt;PS_RemDnlCache.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemDnlCache.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_RemDnlCache.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;PS_RemCustMaps.Name" xml:space="preserve">
+    <value>PS_RemCustMaps</value>
+  </data>
+  <data name="&gt;&gt;PS_RemCustMaps.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemCustMaps.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_RemCustMaps.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="PS_GB_Remover.Location" type="System.Drawing.Point, System.Drawing">
+    <value>296, 6</value>
+  </data>
+  <data name="PS_GB_Remover.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 367</value>
+  </data>
+  <data name="PS_GB_Remover.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="PS_GB_Remover.Text" xml:space="preserve">
+    <value>Cleanup:</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_Remover.Name" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_Remover.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_Remover.Parent" xml:space="preserve">
+    <value>ProblemSolver</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_Remover.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="PS_RemOldBin.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 328</value>
@@ -1536,7 +2559,7 @@
     <value>148, 23</value>
   </data>
   <data name="PS_RemOldBin.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="PS_RemOldBin.Text" xml:space="preserve">
     <value>Old binaries</value>
@@ -1793,42 +2816,6 @@
   <data name="&gt;&gt;PS_RemCustMaps.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="PS_GB_Remover.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 6</value>
-  </data>
-  <data name="PS_GB_Remover.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 367</value>
-  </data>
-  <data name="PS_GB_Remover.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="PS_GB_Remover.Text" xml:space="preserve">
-    <value>Cleanup:</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_Remover.Name" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_Remover.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_Remover.Parent" xml:space="preserve">
-    <value>ProblemSolver</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_Remover.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PS_ResetSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 19</value>
-  </data>
-  <data name="PS_ResetSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 23</value>
-  </data>
-  <data name="PS_ResetSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="PS_ResetSettings.Text" xml:space="preserve">
-    <value>Restore default game settings</value>
-  </data>
   <data name="&gt;&gt;PS_ResetSettings.Name" xml:space="preserve">
     <value>PS_ResetSettings</value>
   </data>
@@ -1864,6 +2851,138 @@
   </data>
   <data name="&gt;&gt;PS_GB_AdvFeat.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="PS_ResetSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 19</value>
+  </data>
+  <data name="PS_ResetSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 23</value>
+  </data>
+  <data name="PS_ResetSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="PS_ResetSettings.Text" xml:space="preserve">
+    <value>Restore default game settings</value>
+  </data>
+  <data name="&gt;&gt;PS_ResetSettings.Name" xml:space="preserve">
+    <value>PS_ResetSettings</value>
+  </data>
+  <data name="&gt;&gt;PS_ResetSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_ResetSettings.Parent" xml:space="preserve">
+    <value>PS_GB_AdvFeat</value>
+  </data>
+  <data name="&gt;&gt;PS_ResetSettings.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;PS_WarningMsg.Name" xml:space="preserve">
+    <value>PS_WarningMsg</value>
+  </data>
+  <data name="&gt;&gt;PS_WarningMsg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_WarningMsg.Parent" xml:space="preserve">
+    <value>PS_GB_SInfo</value>
+  </data>
+  <data name="&gt;&gt;PS_WarningMsg.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;PS_PathDetector.Name" xml:space="preserve">
+    <value>PS_PathDetector</value>
+  </data>
+  <data name="&gt;&gt;PS_PathDetector.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_PathDetector.Parent" xml:space="preserve">
+    <value>PS_GB_SInfo</value>
+  </data>
+  <data name="&gt;&gt;PS_PathDetector.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;PS_RSteamLogin.Name" xml:space="preserve">
+    <value>PS_RSteamLogin</value>
+  </data>
+  <data name="&gt;&gt;PS_RSteamLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RSteamLogin.Parent" xml:space="preserve">
+    <value>PS_GB_SInfo</value>
+  </data>
+  <data name="&gt;&gt;PS_RSteamLogin.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;PS_RSteamPath.Name" xml:space="preserve">
+    <value>PS_RSteamPath</value>
+  </data>
+  <data name="&gt;&gt;PS_RSteamPath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RSteamPath.Parent" xml:space="preserve">
+    <value>PS_GB_SInfo</value>
+  </data>
+  <data name="&gt;&gt;PS_RSteamPath.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;L_PS_PathDetector.Name" xml:space="preserve">
+    <value>L_PS_PathDetector</value>
+  </data>
+  <data name="&gt;&gt;L_PS_PathDetector.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_PS_PathDetector.Parent" xml:space="preserve">
+    <value>PS_GB_SInfo</value>
+  </data>
+  <data name="&gt;&gt;L_PS_PathDetector.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;L_PS_RSteamLogin.Name" xml:space="preserve">
+    <value>L_PS_RSteamLogin</value>
+  </data>
+  <data name="&gt;&gt;L_PS_RSteamLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_PS_RSteamLogin.Parent" xml:space="preserve">
+    <value>PS_GB_SInfo</value>
+  </data>
+  <data name="&gt;&gt;L_PS_RSteamLogin.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;L_PS_RSteamPath.Name" xml:space="preserve">
+    <value>L_PS_RSteamPath</value>
+  </data>
+  <data name="&gt;&gt;L_PS_RSteamPath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_PS_RSteamPath.Parent" xml:space="preserve">
+    <value>PS_GB_SInfo</value>
+  </data>
+  <data name="&gt;&gt;L_PS_RSteamPath.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="PS_GB_SInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 147</value>
+  </data>
+  <data name="PS_GB_SInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 162</value>
+  </data>
+  <data name="PS_GB_SInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="PS_GB_SInfo.Text" xml:space="preserve">
+    <value>Steam general infomation</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_SInfo.Name" xml:space="preserve">
+    <value>PS_GB_SInfo</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_SInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_SInfo.Parent" xml:space="preserve">
+    <value>ProblemSolver</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_SInfo.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="PS_WarningMsg.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 82</value>
@@ -1920,7 +3039,7 @@
     <value>179, 13</value>
   </data>
   <data name="PS_RSteamLogin.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;PS_RSteamLogin.Name" xml:space="preserve">
     <value>PS_RSteamLogin</value>
@@ -1941,7 +3060,7 @@
     <value>179, 13</value>
   </data>
   <data name="PS_RSteamPath.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;PS_RSteamPath.Name" xml:space="preserve">
     <value>PS_RSteamPath</value>
@@ -1965,7 +3084,7 @@
     <value>65, 13</value>
   </data>
   <data name="L_PS_PathDetector.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="L_PS_PathDetector.Text" xml:space="preserve">
     <value>Path check:</value>
@@ -1992,7 +3111,7 @@
     <value>65, 13</value>
   </data>
   <data name="L_PS_RSteamLogin.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="L_PS_RSteamLogin.Text" xml:space="preserve">
     <value>Steam login:</value>
@@ -2036,29 +3155,89 @@
   <data name="&gt;&gt;L_PS_RSteamPath.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="PS_GB_SInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 147</value>
+  <data name="&gt;&gt;PS_ExecuteNow.Name" xml:space="preserve">
+    <value>PS_ExecuteNow</value>
   </data>
-  <data name="PS_GB_SInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>284, 162</value>
+  <data name="&gt;&gt;PS_ExecuteNow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="PS_GB_SInfo.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;PS_ExecuteNow.Parent" xml:space="preserve">
+    <value>PS_GB_Solver</value>
+  </data>
+  <data name="&gt;&gt;PS_ExecuteNow.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;PS_SteamLang.Name" xml:space="preserve">
+    <value>PS_SteamLang</value>
+  </data>
+  <data name="&gt;&gt;PS_SteamLang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_SteamLang.Parent" xml:space="preserve">
+    <value>PS_GB_Solver</value>
+  </data>
+  <data name="&gt;&gt;PS_SteamLang.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="PS_GB_SInfo.Text" xml:space="preserve">
-    <value>Steam general infomation</value>
+  <data name="&gt;&gt;L_PS_SteamLang.Name" xml:space="preserve">
+    <value>L_PS_SteamLang</value>
   </data>
-  <data name="&gt;&gt;PS_GB_SInfo.Name" xml:space="preserve">
-    <value>PS_GB_SInfo</value>
+  <data name="&gt;&gt;L_PS_SteamLang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;PS_GB_SInfo.Type" xml:space="preserve">
+  <data name="&gt;&gt;L_PS_SteamLang.Parent" xml:space="preserve">
+    <value>PS_GB_Solver</value>
+  </data>
+  <data name="&gt;&gt;L_PS_SteamLang.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanRegistry.Name" xml:space="preserve">
+    <value>PS_CleanRegistry</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanRegistry.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanRegistry.Parent" xml:space="preserve">
+    <value>PS_GB_Solver</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanRegistry.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanBlobs.Name" xml:space="preserve">
+    <value>PS_CleanBlobs</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanBlobs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanBlobs.Parent" xml:space="preserve">
+    <value>PS_GB_Solver</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanBlobs.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="PS_GB_Solver.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="PS_GB_Solver.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 135</value>
+  </data>
+  <data name="PS_GB_Solver.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="PS_GB_Solver.Text" xml:space="preserve">
+    <value>Clean Steam settings and blobs</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_Solver.Name" xml:space="preserve">
+    <value>PS_GB_Solver</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_Solver.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;PS_GB_SInfo.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PS_GB_Solver.Parent" xml:space="preserve">
     <value>ProblemSolver</value>
   </data>
-  <data name="&gt;&gt;PS_GB_SInfo.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;PS_GB_Solver.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="PS_ExecuteNow.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2198,57 +3377,6 @@
   <data name="&gt;&gt;PS_CleanBlobs.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="PS_GB_Solver.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
-  </data>
-  <data name="PS_GB_Solver.Size" type="System.Drawing.Size, System.Drawing">
-    <value>284, 135</value>
-  </data>
-  <data name="PS_GB_Solver.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="PS_GB_Solver.Text" xml:space="preserve">
-    <value>Clean Steam settings and blobs</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_Solver.Name" xml:space="preserve">
-    <value>PS_GB_Solver</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_Solver.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_Solver.Parent" xml:space="preserve">
-    <value>ProblemSolver</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_Solver.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="ProblemSolver.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="ProblemSolver.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="ProblemSolver.Size" type="System.Drawing.Size, System.Drawing">
-    <value>462, 379</value>
-  </data>
-  <data name="ProblemSolver.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="ProblemSolver.Text" xml:space="preserve">
-    <value>Troubleshooting &amp; Cleanup</value>
-  </data>
-  <data name="&gt;&gt;ProblemSolver.Name" xml:space="preserve">
-    <value>ProblemSolver</value>
-  </data>
-  <data name="&gt;&gt;ProblemSolver.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ProblemSolver.Parent" xml:space="preserve">
-    <value>MainTabControl</value>
-  </data>
-  <data name="&gt;&gt;ProblemSolver.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="FP_CreateBackUp.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2259,7 +3387,7 @@
     <value>140, 17</value>
   </data>
   <data name="FP_CreateBackUp.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>3</value>
   </data>
   <data name="FP_CreateBackUp.Text" xml:space="preserve">
     <value>Create backup of config</value>
@@ -2283,7 +3411,7 @@
     <value>197, 23</value>
   </data>
   <data name="FP_Uninstall.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="FP_Uninstall.Text" xml:space="preserve">
     <value>Remove installed config</value>
@@ -2307,7 +3435,7 @@
     <value>197, 23</value>
   </data>
   <data name="FP_Install.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="FP_Install.Text" xml:space="preserve">
     <value>Install selected config</value>
@@ -2323,6 +3451,42 @@
   </data>
   <data name="&gt;&gt;FP_Install.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;FP_Description.Name" xml:space="preserve">
+    <value>FP_Description</value>
+  </data>
+  <data name="&gt;&gt;FP_Description.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FP_Description.Parent" xml:space="preserve">
+    <value>FP_GB_Desc</value>
+  </data>
+  <data name="&gt;&gt;FP_Description.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="FP_GB_Desc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 161</value>
+  </data>
+  <data name="FP_GB_Desc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>414, 163</value>
+  </data>
+  <data name="FP_GB_Desc.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="FP_GB_Desc.Text" xml:space="preserve">
+    <value>Description of selected FPS-config</value>
+  </data>
+  <data name="&gt;&gt;FP_GB_Desc.Name" xml:space="preserve">
+    <value>FP_GB_Desc</value>
+  </data>
+  <data name="&gt;&gt;FP_GB_Desc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FP_GB_Desc.Parent" xml:space="preserve">
+    <value>FPSCfgInstall</value>
+  </data>
+  <data name="&gt;&gt;FP_GB_Desc.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="FP_Description.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 25</value>
@@ -2344,30 +3508,6 @@
   </data>
   <data name="&gt;&gt;FP_Description.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="FP_GB_Desc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 161</value>
-  </data>
-  <data name="FP_GB_Desc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>414, 163</value>
-  </data>
-  <data name="FP_GB_Desc.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="FP_GB_Desc.Text" xml:space="preserve">
-    <value>Description of selected FPS-config</value>
-  </data>
-  <data name="&gt;&gt;FP_GB_Desc.Name" xml:space="preserve">
-    <value>FP_GB_Desc</value>
-  </data>
-  <data name="&gt;&gt;FP_GB_Desc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FP_GB_Desc.Parent" xml:space="preserve">
-    <value>FPSCfgInstall</value>
-  </data>
-  <data name="&gt;&gt;FP_GB_Desc.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="FP_ConfigSel.Location" type="System.Drawing.Point, System.Drawing">
     <value>229, 111</value>
@@ -2441,132 +3581,6 @@
   <data name="&gt;&gt;FP_TopLabel.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="FPSCfgInstall.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="FPSCfgInstall.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="FPSCfgInstall.Size" type="System.Drawing.Size, System.Drawing">
-    <value>462, 379</value>
-  </data>
-  <data name="FPSCfgInstall.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="FPSCfgInstall.Text" xml:space="preserve">
-    <value>FPS-Configs</value>
-  </data>
-  <data name="&gt;&gt;FPSCfgInstall.Name" xml:space="preserve">
-    <value>FPSCfgInstall</value>
-  </data>
-  <data name="&gt;&gt;FPSCfgInstall.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FPSCfgInstall.Parent" xml:space="preserve">
-    <value>MainTabControl</value>
-  </data>
-  <data name="&gt;&gt;FPSCfgInstall.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <metadata name="BEd_BName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="BEd_BName.HeaderText" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <metadata name="BEd_BType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="BEd_BType.HeaderText" xml:space="preserve">
-    <value>Type</value>
-  </data>
-  <data name="BEd_BType.Width" type="System.Int32, mscorlib">
-    <value>90</value>
-  </data>
-  <metadata name="BEd_BSize.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="BEd_BSize.HeaderText" xml:space="preserve">
-    <value>Size</value>
-  </data>
-  <data name="BEd_BSize.Width" type="System.Int32, mscorlib">
-    <value>45</value>
-  </data>
-  <metadata name="BEd_BData.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="BEd_BData.HeaderText" xml:space="preserve">
-    <value>Data</value>
-  </data>
-  <data name="BEd_BData.Width" type="System.Int32, mscorlib">
-    <value>150</value>
-  </data>
-  <metadata name="BEd_BRealName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="BEd_BRealName.HeaderText" xml:space="preserve">
-    <value>RealName</value>
-  </data>
-  <data name="BEd_BRealName.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="BU_ListTable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 31</value>
-  </data>
-  <data name="BU_ListTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>453, 342</value>
-  </data>
-  <data name="BU_ListTable.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;BU_ListTable.Name" xml:space="preserve">
-    <value>BU_ListTable</value>
-  </data>
-  <data name="&gt;&gt;BU_ListTable.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BU_ListTable.Parent" xml:space="preserve">
-    <value>RescueCentre</value>
-  </data>
-  <data name="&gt;&gt;BU_ListTable.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="BU_BToolbar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>617, 17</value>
-  </metadata>
-  <data name="BUT_Refresh.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="BUT_Refresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="BUT_Refresh.Text" xml:space="preserve">
-    <value>Update BackUp list...</value>
-  </data>
-  <data name="BUT_Sep1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
-  <data name="BUT_RestoreB.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="BUT_RestoreB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="BUT_RestoreB.Text" xml:space="preserve">
-    <value>Restore BackUp</value>
-  </data>
-  <data name="BUT_DelB.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="BUT_DelB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 22</value>
-  </data>
-  <data name="BUT_DelB.Text" xml:space="preserve">
-    <value>Delete BackUp</value>
-  </data>
-  <data name="BUT_Sep2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
   <data name="BUT_L_GameSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 22</value>
   </data>
@@ -2585,87 +3599,6 @@
   <data name="BUT_L_AllSRC.Text" xml:space="preserve">
     <value>BackUp all Source games settings</value>
   </data>
-  <data name="BUT_CrBkupReg.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="BUT_CrBkupReg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 22</value>
-  </data>
-  <data name="BUT_CrBkupReg.Text" xml:space="preserve">
-    <value>Create registry backup...</value>
-  </data>
-  <data name="BU_BToolbar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="BU_BToolbar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>456, 25</value>
-  </data>
-  <data name="BU_BToolbar.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;BU_BToolbar.Name" xml:space="preserve">
-    <value>BU_BToolbar</value>
-  </data>
-  <data name="&gt;&gt;BU_BToolbar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BU_BToolbar.Parent" xml:space="preserve">
-    <value>RescueCentre</value>
-  </data>
-  <data name="&gt;&gt;BU_BToolbar.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RescueCentre.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="RescueCentre.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="RescueCentre.Size" type="System.Drawing.Size, System.Drawing">
-    <value>462, 379</value>
-  </data>
-  <data name="RescueCentre.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="RescueCentre.Text" xml:space="preserve">
-    <value>BackUp Center</value>
-  </data>
-  <data name="&gt;&gt;RescueCentre.Name" xml:space="preserve">
-    <value>RescueCentre</value>
-  </data>
-  <data name="&gt;&gt;RescueCentre.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RescueCentre.Parent" xml:space="preserve">
-    <value>MainTabControl</value>
-  </data>
-  <data name="&gt;&gt;RescueCentre.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="MainTabControl.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="MainTabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 64</value>
-  </data>
-  <data name="MainTabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>470, 405</value>
-  </data>
-  <data name="MainTabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;MainTabControl.Name" xml:space="preserve">
-    <value>MainTabControl</value>
-  </data>
-  <data name="&gt;&gt;MainTabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MainTabControl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MainTabControl.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <data name="LoginSel.Location" type="System.Drawing.Point, System.Drawing">
     <value>84, 35</value>
   </data>
@@ -2673,7 +3606,7 @@
     <value>155, 21</value>
   </data>
   <data name="LoginSel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;LoginSel.Name" xml:space="preserve">
     <value>LoginSel</value>
@@ -2690,6 +3623,36 @@
   <metadata name="MainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="MainMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="MainMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>494, 24</value>
+  </data>
+  <data name="MainMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="MainMenu.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.Name" xml:space="preserve">
+    <value>MainMenu</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MainMenu.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="ToolsMNU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="ToolsMNU.Text" xml:space="preserve">
+    <value>&amp;Tools</value>
+  </data>
   <data name="MNUShowEdHint.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -2753,11 +3716,11 @@
   <data name="MNUExit.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
-  <data name="ToolsMNU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
+  <data name="HelpMNU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
   </data>
-  <data name="ToolsMNU.Text" xml:space="preserve">
-    <value>&amp;Tools</value>
+  <data name="HelpMNU.Text" xml:space="preserve">
+    <value>&amp;Help</value>
   </data>
   <data name="MNUHelp.Size" type="System.Drawing.Size, System.Drawing">
     <value>257, 22</value>
@@ -2810,36 +3773,6 @@
   <data name="MNUAbout.Text" xml:space="preserve">
     <value>About Source Repair...</value>
   </data>
-  <data name="HelpMNU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
-  </data>
-  <data name="HelpMNU.Text" xml:space="preserve">
-    <value>&amp;Help</value>
-  </data>
-  <data name="MainMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="MainMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>494, 24</value>
-  </data>
-  <data name="MainMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="MainMenu.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.Name" xml:space="preserve">
-    <value>MainMenu</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MainMenu.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <data name="L_LoginSel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2850,7 +3783,7 @@
     <value>65, 13</value>
   </data>
   <data name="L_LoginSel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="L_LoginSel.Text" xml:space="preserve">
     <value>Steam login:</value>
@@ -2870,6 +3803,27 @@
   <metadata name="StatusBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>126, 17</value>
   </metadata>
+  <data name="StatusBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 482</value>
+  </data>
+  <data name="StatusBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>494, 22</value>
+  </data>
+  <data name="StatusBar.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.Name" xml:space="preserve">
+    <value>StatusBar</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;StatusBar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="SB_Info.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 17</value>
   </data>
@@ -2893,27 +3847,6 @@
   </data>
   <data name="SB_App.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
-  </data>
-  <data name="StatusBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 482</value>
-  </data>
-  <data name="StatusBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>494, 22</value>
-  </data>
-  <data name="StatusBar.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;StatusBar.Name" xml:space="preserve">
-    <value>StatusBar</value>
-  </data>
-  <data name="&gt;&gt;StatusBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;StatusBar.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;StatusBar.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="AppSelector.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2952,7 +3885,7 @@
     <value>160, 21</value>
   </data>
   <data name="AppSelector.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;AppSelector.Name" xml:space="preserve">
     <value>AppSelector</value>
@@ -2976,7 +3909,7 @@
     <value>38, 13</value>
   </data>
   <data name="L_AppSelector.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>3</value>
   </data>
   <data name="L_AppSelector.Text" xml:space="preserve">
     <value>Game:</value>

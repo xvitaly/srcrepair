@@ -126,7 +126,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="GenerateCFG.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>17</value>
   </data>
   <data name="GenerateCFG.Text" xml:space="preserve">
     <value>Generate and send to Editor!</value>
@@ -178,7 +178,7 @@
     <value>315, 31</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Welcome! This plug-in can help you create your own FPS-config for the game selected in the Main window.</value>
@@ -211,7 +211,7 @@
     <value>141, 21</value>
   </data>
   <data name="TextureQualityBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;TextureQualityBox.Name" xml:space="preserve">
     <value>TextureQualityBox</value>
@@ -232,7 +232,7 @@
     <value>168, 24</value>
   </data>
   <data name="ModelQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="ModelQuality.Text" xml:space="preserve">
     <value>Model quality</value>
@@ -265,7 +265,7 @@
     <value>141, 21</value>
   </data>
   <data name="ModelQualityBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;ModelQualityBox.Name" xml:space="preserve">
     <value>ModelQualityBox</value>
@@ -289,7 +289,7 @@
     <value>133, 17</value>
   </data>
   <data name="DisableRagdollPhys.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="DisableRagdollPhys.Text" xml:space="preserve">
     <value>Disable ragdoll physics</value>
@@ -316,7 +316,7 @@
     <value>232, 17</value>
   </data>
   <data name="DisableShadows.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="DisableShadows.Text" xml:space="preserve">
     <value>Totally disable shadows: static and dynamic</value>
@@ -343,7 +343,7 @@
     <value>263, 17</value>
   </data>
   <data name="ReduceWaterQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="ReduceWaterQuality.Text" xml:space="preserve">
     <value>Reduce water quality and disable water reflections</value>
@@ -370,7 +370,7 @@
     <value>271, 17</value>
   </data>
   <data name="DisableEffects.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="DisableEffects.Text" xml:space="preserve">
     <value>Disable advanced effects: HDR, Bloom, Motion Blur</value>
@@ -397,7 +397,7 @@
     <value>268, 17</value>
   </data>
   <data name="EnableTrilinearF.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="EnableTrilinearF.Text" xml:space="preserve">
     <value>Use Trilinear texture filtration instead of anisotrophic</value>
@@ -424,7 +424,7 @@
     <value>149, 17</value>
   </data>
   <data name="DisableDecals.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="DisableDecals.Text" xml:space="preserve">
     <value>Disable decals and sprays</value>
@@ -451,7 +451,7 @@
     <value>221, 17</value>
   </data>
   <data name="DisableShaderE.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>11</value>
   </data>
   <data name="DisableShaderE.Text" xml:space="preserve">
     <value>Disable shader effects and dynamic lights</value>
@@ -478,7 +478,7 @@
     <value>129, 17</value>
   </data>
   <data name="DisableBreaks.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>12</value>
   </data>
   <data name="DisableBreaks.Text" xml:space="preserve">
     <value>Disable prop. damage</value>
@@ -505,7 +505,7 @@
     <value>169, 17</value>
   </data>
   <data name="EnableHardOpt.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>13</value>
   </data>
   <data name="EnableHardOpt.Text" xml:space="preserve">
     <value>Enable hardware optimizations</value>
@@ -532,7 +532,7 @@
     <value>159, 17</value>
   </data>
   <data name="DisableSmallObjs.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>14</value>
   </data>
   <data name="DisableSmallObjs.Text" xml:space="preserve">
     <value>Disable small props on maps</value>
@@ -559,7 +559,7 @@
     <value>231, 17</value>
   </data>
   <data name="EnablePreload.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+    <value>15</value>
   </data>
   <data name="EnablePreload.Text" xml:space="preserve">
     <value>Enable maps, textures, models, etc. preload</value>
@@ -586,7 +586,7 @@
     <value>174, 17</value>
   </data>
   <data name="DisableVSync.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>16</value>
   </data>
   <data name="DisableVSync.Text" xml:space="preserve">
     <value>Disable vertical synchronization</value>

@@ -57,12 +57,12 @@
             // 
             // HEd_Table
             // 
-            resources.ApplyResources(this.HEd_Table, "HEd_Table");
             this.HEd_Table.BackgroundColor = System.Drawing.SystemColors.Window;
             this.HEd_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.HEd_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.HDV_IPAddr,
             this.HDV_Domain});
+            resources.ApplyResources(this.HEd_Table, "HEd_Table");
             this.HEd_Table.Name = "HEd_Table";
             // 
             // HDV_IPAddr
@@ -77,129 +77,129 @@
             // 
             // HEd_MTool
             // 
-            resources.ApplyResources(this.HEd_MTool, "HEd_MTool");
             this.HEd_MTool.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.HEd_T_Refresh,
             this.HEd_T_Save,
             this.toolStripSeparator1,
             this.HEd_T_RemRw});
+            resources.ApplyResources(this.HEd_MTool, "HEd_MTool");
             this.HEd_MTool.Name = "HEd_MTool";
             // 
             // HEd_T_Refresh
             // 
-            resources.ApplyResources(this.HEd_T_Refresh, "HEd_T_Refresh");
             this.HEd_T_Refresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.HEd_T_Refresh.Image = global::srcrepair.Properties.Resources.Refresh;
+            resources.ApplyResources(this.HEd_T_Refresh, "HEd_T_Refresh");
             this.HEd_T_Refresh.Name = "HEd_T_Refresh";
             this.HEd_T_Refresh.Click += new System.EventHandler(this.HEd_T_Refresh_Click);
             // 
             // HEd_T_Save
             // 
-            resources.ApplyResources(this.HEd_T_Save, "HEd_T_Save");
             this.HEd_T_Save.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.HEd_T_Save.Image = global::srcrepair.Properties.Resources.Save;
+            resources.ApplyResources(this.HEd_T_Save, "HEd_T_Save");
             this.HEd_T_Save.Name = "HEd_T_Save";
             this.HEd_T_Save.Click += new System.EventHandler(this.HEd_T_Save_Click);
             // 
             // toolStripSeparator1
             // 
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
             // HEd_T_RemRw
             // 
-            resources.ApplyResources(this.HEd_T_RemRw, "HEd_T_RemRw");
             this.HEd_T_RemRw.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.HEd_T_RemRw.Image = global::srcrepair.Properties.Resources.Delete;
+            resources.ApplyResources(this.HEd_T_RemRw, "HEd_T_RemRw");
             this.HEd_T_RemRw.Name = "HEd_T_RemRw";
             this.HEd_T_RemRw.Click += new System.EventHandler(this.HEd_T_RemRw_Click);
             // 
             // HEd_MMenu
             // 
-            resources.ApplyResources(this.HEd_MMenu, "HEd_MMenu");
             this.HEd_MMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.HEd_M_File,
             this.HEd_M_Adv,
             this.HEd_M_Hlp});
+            resources.ApplyResources(this.HEd_MMenu, "HEd_MMenu");
             this.HEd_MMenu.Name = "HEd_MMenu";
             // 
             // HEd_M_File
             // 
-            resources.ApplyResources(this.HEd_M_File, "HEd_M_File");
             this.HEd_M_File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.HEd_M_Refresh,
             this.HEd_M_Save,
             this.HEd_M_Quit});
             this.HEd_M_File.Name = "HEd_M_File";
+            resources.ApplyResources(this.HEd_M_File, "HEd_M_File");
             // 
             // HEd_M_Refresh
             // 
-            resources.ApplyResources(this.HEd_M_Refresh, "HEd_M_Refresh");
             this.HEd_M_Refresh.Image = global::srcrepair.Properties.Resources.Refresh;
             this.HEd_M_Refresh.Name = "HEd_M_Refresh";
+            resources.ApplyResources(this.HEd_M_Refresh, "HEd_M_Refresh");
             this.HEd_M_Refresh.Click += new System.EventHandler(this.HEd_T_Refresh_Click);
             // 
             // HEd_M_Save
             // 
-            resources.ApplyResources(this.HEd_M_Save, "HEd_M_Save");
             this.HEd_M_Save.Image = global::srcrepair.Properties.Resources.Save;
             this.HEd_M_Save.Name = "HEd_M_Save";
+            resources.ApplyResources(this.HEd_M_Save, "HEd_M_Save");
             this.HEd_M_Save.Click += new System.EventHandler(this.HEd_T_Save_Click);
             // 
             // HEd_M_Quit
             // 
-            resources.ApplyResources(this.HEd_M_Quit, "HEd_M_Quit");
             this.HEd_M_Quit.Image = global::srcrepair.Properties.Resources.Exit;
             this.HEd_M_Quit.Name = "HEd_M_Quit";
+            resources.ApplyResources(this.HEd_M_Quit, "HEd_M_Quit");
             this.HEd_M_Quit.Click += new System.EventHandler(this.HEd_M_Quit_Click);
             // 
             // HEd_M_Adv
             // 
-            resources.ApplyResources(this.HEd_M_Adv, "HEd_M_Adv");
             this.HEd_M_Adv.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.HEd_M_RestDef});
             this.HEd_M_Adv.Name = "HEd_M_Adv";
+            resources.ApplyResources(this.HEd_M_Adv, "HEd_M_Adv");
             // 
             // HEd_M_RestDef
             // 
-            resources.ApplyResources(this.HEd_M_RestDef, "HEd_M_RestDef");
             this.HEd_M_RestDef.Image = global::srcrepair.Properties.Resources.Restore;
             this.HEd_M_RestDef.Name = "HEd_M_RestDef";
+            resources.ApplyResources(this.HEd_M_RestDef, "HEd_M_RestDef");
             this.HEd_M_RestDef.Click += new System.EventHandler(this.HEd_M_RestDef_Click);
             // 
             // HEd_M_Hlp
             // 
-            resources.ApplyResources(this.HEd_M_Hlp, "HEd_M_Hlp");
             this.HEd_M_Hlp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.HEd_M_OnlHelp,
             this.HEd_M_About});
             this.HEd_M_Hlp.Name = "HEd_M_Hlp";
+            resources.ApplyResources(this.HEd_M_Hlp, "HEd_M_Hlp");
             // 
             // HEd_M_OnlHelp
             // 
-            resources.ApplyResources(this.HEd_M_OnlHelp, "HEd_M_OnlHelp");
             this.HEd_M_OnlHelp.Image = global::srcrepair.Properties.Resources.Help;
             this.HEd_M_OnlHelp.Name = "HEd_M_OnlHelp";
+            resources.ApplyResources(this.HEd_M_OnlHelp, "HEd_M_OnlHelp");
             this.HEd_M_OnlHelp.Click += new System.EventHandler(this.HEd_M_OnlHelp_Click);
             // 
             // HEd_M_About
             // 
-            resources.ApplyResources(this.HEd_M_About, "HEd_M_About");
             this.HEd_M_About.Image = global::srcrepair.Properties.Resources.Info;
             this.HEd_M_About.Name = "HEd_M_About";
+            resources.ApplyResources(this.HEd_M_About, "HEd_M_About");
             this.HEd_M_About.Click += new System.EventHandler(this.HEd_M_About_Click);
             // 
             // HEd_MStatus
             // 
-            resources.ApplyResources(this.HEd_MStatus, "HEd_MStatus");
             this.HEd_MStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.HEd_St_Wrn});
+            resources.ApplyResources(this.HEd_MStatus, "HEd_MStatus");
             this.HEd_MStatus.Name = "HEd_MStatus";
             // 
             // HEd_St_Wrn
             // 
-            resources.ApplyResources(this.HEd_St_Wrn, "HEd_St_Wrn");
             this.HEd_St_Wrn.Name = "HEd_St_Wrn";
+            resources.ApplyResources(this.HEd_St_Wrn, "HEd_St_Wrn");
             this.HEd_St_Wrn.MouseEnter += new System.EventHandler(this.HEd_St_Wrn_MouseEnter);
             this.HEd_St_Wrn.MouseLeave += new System.EventHandler(this.HEd_St_Wrn_MouseLeave);
             // 
