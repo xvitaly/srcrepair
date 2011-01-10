@@ -125,8 +125,7 @@ namespace srcrepair
                 if (ShowConfirmationMsg) // Проверим, нужно ли подтверждение...
                 {
                     // Запросим подтверждение...
-                    DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("ST_KillMessage"), ResName.ProcessName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (UserConfirmation == DialogResult.Yes)
+                    if (MessageBox.Show(String.Format(RM.GetString("ST_KillMessage"), ResName.ProcessName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         ProcID = ResName.Id;
                         ResName.Kill();
@@ -508,8 +507,7 @@ namespace srcrepair
          */
         private static void CreateRegBackUpNow(string RKey, string FileName)
         {
-            DialogResult UserConfirmation = MessageBox.Show(RM.GetString("BU_RegCreate"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (UserConfirmation == DialogResult.Yes)
+            if (MessageBox.Show(RM.GetString("BU_RegCreate"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 // Генерируем строку с параметрами...
                 string Params = @"/ea """ + GV.FullBackUpDirPath + FileName + "_" + WriteDateToString(DateTime.Now, true) + @".reg""" + " " + RKey;
@@ -606,8 +604,7 @@ namespace srcrepair
                     MessageBox.Show(RM.GetString("SteamPathNotDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     string Buf = "";
                     FldrBrwse.Description = RM.GetString("SteamPathEnterText"); // Указываем текст в диалоге поиска каталога...
-                    DialogResult OpenResult = FldrBrwse.ShowDialog(); // Отображаем стандартный диалог поиска каталога...
-                    if (OpenResult == DialogResult.OK)
+                    if (FldrBrwse.ShowDialog() == DialogResult.OK) // Отображаем стандартный диалог поиска каталога...
                     {
                         Buf = IncludeTrDelim(FldrBrwse.SelectedPath);
                         if (!(File.Exists(Buf + "Steam.exe")))
@@ -744,8 +741,7 @@ namespace srcrepair
             // Начинаем очистку...
 
             // Запрашиваем подтверждение у пользователя...
-            DialogResult UserConfirmation = MessageBox.Show(RM.GetString("PS_ExecuteMSG"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (UserConfirmation == DialogResult.Yes)
+            if (MessageBox.Show(RM.GetString("PS_ExecuteMSG"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 // Подтверждение получено...
                 if ((PS_CleanBlobs.Checked) || (PS_CleanRegistry.Checked))
@@ -795,10 +791,8 @@ namespace srcrepair
             // спрашивать и завершим форму автоматически...
             if ((AppSelector.Enabled) && (AppSelector.SelectedIndex != -1))
             {
-                // Создаём MessageBox...
-                DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("FrmCloseQuery"), GV.AppName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 // Запрашиваем подтверждение у пользователя на закрытие формы...
-                if (UserConfirmation == DialogResult.Yes)
+                if (MessageBox.Show(String.Format(RM.GetString("FrmCloseQuery"), GV.AppName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     // Подтверждение получено, закрываем форму...
                     e.Cancel = false;
@@ -1297,8 +1291,7 @@ namespace srcrepair
         {
             // Нажатие этой кнопки устанавливает графические настройки на рекомендуемый максимум...
             // Зададим вопрос, а нужно ли это юзеру?
-            DialogResult UserConfirmation = MessageBox.Show(RM.GetString("GT_MaxPerfMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (UserConfirmation == DialogResult.Yes)
+            if (MessageBox.Show(RM.GetString("GT_MaxPerfMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 // Пользователь согласился, продолжаем...
                 GT_ScreenType.SelectedIndex = 0; // полноэкранный режим
@@ -1322,8 +1315,7 @@ namespace srcrepair
         {
             // Нажатие этой кнопки устанавливает графические настройки на рекомендуемый минимум...
             // Спросим пользователя.
-            DialogResult UserConfirmation = MessageBox.Show(RM.GetString("GT_MinPerfMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (UserConfirmation == DialogResult.Yes)
+            if (MessageBox.Show(RM.GetString("GT_MinPerfMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 // Пользователь согласился, продолжаем...
                 GT_ScreenType.SelectedIndex = 0; // полноэкранный режим
@@ -1338,8 +1330,7 @@ namespace srcrepair
                 GT_VSync.SelectedIndex = 0; // вертикальная синхронизация выключена
                 GT_MotionBlur.SelectedIndex = 0; // размытие движения выключено
                 // Спросим у пользователя о режиме DirectX...
-                UserConfirmation = MessageBox.Show(RM.GetString("GT_DxLevelMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (UserConfirmation == DialogResult.Yes)
+                if (MessageBox.Show(RM.GetString("GT_DxLevelMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     GT_DxMode.SelectedIndex = 0; // режим DirecX 8.0
                 }
@@ -1356,8 +1347,7 @@ namespace srcrepair
         {
             // Сохраняем изменения в графических настройках...
             // Запрашиваем подтверждение у пользователя...
-            DialogResult UserConfirmation = MessageBox.Show(RM.GetString("GT_SaveMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (UserConfirmation == DialogResult.Yes)
+            if (MessageBox.Show(RM.GetString("GT_SaveMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (GV.IsGCFApp)
                 {
@@ -1622,8 +1612,7 @@ namespace srcrepair
             // Начинаем устанавливать FPS-конфиг в управляемое приложение...
             if (FP_ConfigSel.SelectedIndex != -1)
             {
-                DialogResult UserConfirmation = MessageBox.Show(RM.GetString("FP_InstallQuestion"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (UserConfirmation == DialogResult.Yes)
+                if (MessageBox.Show(RM.GetString("FP_InstallQuestion"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     // Проверим, не нужно ли создавать резервную копию...
                     if (FP_CreateBackUp.Checked)
@@ -1664,8 +1653,7 @@ namespace srcrepair
             if (File.Exists(CfgFile))
             {
                 // Файл существует. Запросим подтверждение на удаление...
-                DialogResult UserConfirmation = MessageBox.Show(RM.GetString("FP_RemoveQuestion"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (UserConfirmation == DialogResult.Yes)
+                if (MessageBox.Show(RM.GetString("FP_RemoveQuestion"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     // Создадим бэкап если установлен флажок...
                     if (FP_CreateBackUp.Checked)
@@ -1718,8 +1706,7 @@ namespace srcrepair
             CE_OpenCfgDialog.InitialDirectory = GV.FullCfgPath;
 
             // Считывает файл конфига и помещает записи в таблицу
-            DialogResult OpenResult = CE_OpenCfgDialog.ShowDialog(); // Отображаем стандартный диалог открытия файла...
-            if (OpenResult == DialogResult.OK)
+            if (CE_OpenCfgDialog.ShowDialog() == DialogResult.OK) // Отображаем стандартный диалог открытия файла...
             {
                 //
                 string Buf = CE_OpenCfgDialog.FileName; // Получаем имя файла с полным путём...
@@ -1835,8 +1822,7 @@ namespace srcrepair
             else
             {
                 // Файл не был открыт. Нужно сохранить и дать имя...
-                DialogResult SaveResult = CE_SaveCfgDialog.ShowDialog(); // Отображаем стандартный диалог сохранения файла...
-                if (SaveResult == DialogResult.OK)
+                if (CE_SaveCfgDialog.ShowDialog() == DialogResult.OK) // Отображаем стандартный диалог сохранения файла...
                 {
                     WriteTableToFileNow(CE_SaveCfgDialog.FileName);
                     CFGFileName = Path.GetFileName(CE_SaveCfgDialog.FileName);
@@ -1849,8 +1835,7 @@ namespace srcrepair
         private void CE_SaveAs_Click(object sender, EventArgs e)
         {
             CE_SaveCfgDialog.InitialDirectory = GV.FullCfgPath;
-            DialogResult SaveResult = CE_SaveCfgDialog.ShowDialog();
-            if (SaveResult == DialogResult.OK)
+            if (CE_SaveCfgDialog.ShowDialog() == DialogResult.OK)
             {
                 WriteTableToFileNow(CE_SaveCfgDialog.FileName);
             }
@@ -1859,8 +1844,7 @@ namespace srcrepair
         private void PS_RemCustMaps_Click(object sender, EventArgs e)
         {
             // Удаляем кастомные (нестандартные) карты...
-            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (UserConfirmation == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
@@ -1877,8 +1861,7 @@ namespace srcrepair
         private void PS_RemDnlCache_Click(object sender, EventArgs e)
         {
             // Удаляем кэш загрузок...
-            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (UserConfirmation == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
@@ -1895,8 +1878,7 @@ namespace srcrepair
         private void PS_RemOldSpray_Click(object sender, EventArgs e)
         {
             // Удаляем кэш спреев...
-            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (UserConfirmation == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
@@ -1913,8 +1895,7 @@ namespace srcrepair
         private void PS_RemOldCfgs_Click(object sender, EventArgs e)
         {
             // Удаляем все конфиги...
-            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (UserConfirmation == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
@@ -1931,8 +1912,7 @@ namespace srcrepair
         private void PS_RemGraphCache_Click(object sender, EventArgs e)
         {
             // Удаляем графический кэш...
-            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (UserConfirmation == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
@@ -1949,8 +1929,7 @@ namespace srcrepair
         private void PS_RemSoundCache_Click(object sender, EventArgs e)
         {
             // Удаляем звуковой кэш...
-            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (UserConfirmation == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
@@ -1967,8 +1946,7 @@ namespace srcrepair
         private void PS_RemNavFiles_Click(object sender, EventArgs e)
         {
             // Удаляем файлы навигации ботов...
-            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (UserConfirmation == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
@@ -1985,8 +1963,7 @@ namespace srcrepair
         private void PS_RemScreenShots_Click(object sender, EventArgs e)
         {
             // Удаляем все скриншоты...
-            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (UserConfirmation == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
@@ -2003,8 +1980,7 @@ namespace srcrepair
         private void PS_RemDemos_Click(object sender, EventArgs e)
         {
             // Удаляем все записанные демки...
-            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (UserConfirmation == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
@@ -2021,8 +1997,7 @@ namespace srcrepair
         private void PS_RemGraphOpts_Click(object sender, EventArgs e)
         {
             // Удаляем графические настройки...
-            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (UserConfirmation == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 // Создаём резервную копию...
                 try
@@ -2051,8 +2026,7 @@ namespace srcrepair
         private void PS_RemOldBin_Click(object sender, EventArgs e)
         {
             // Удаляем старые бинарники...
-            DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (UserConfirmation == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
@@ -2089,8 +2063,7 @@ namespace srcrepair
         private void PS_ResetSettings_Click(object sender, EventArgs e)
         {
             // Удаляем все настройки...
-            DialogResult UserConfirmation = MessageBox.Show(RM.GetString("PS_ResetSettingsMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (UserConfirmation == DialogResult.Yes)
+            if (MessageBox.Show(RM.GetString("PS_ResetSettingsMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 // Создаём резервную копию...
                 try
@@ -2200,9 +2173,9 @@ namespace srcrepair
             {
                 // Получаем имя файла...
                 string FName = BU_ListTable.Rows[BU_ListTable.CurrentRow.Index].Cells[4].Value.ToString();
+                
                 // Запрашиваем подтверждение...
-                DialogResult UserConfirmation = MessageBox.Show(String.Format(RM.GetString("BU_QMsg"), Path.GetFileNameWithoutExtension(FName), BU_ListTable.Rows[BU_ListTable.CurrentRow.Index].Cells[3].Value.ToString()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (UserConfirmation == DialogResult.Yes)
+                if (MessageBox.Show(String.Format(RM.GetString("BU_QMsg"), Path.GetFileNameWithoutExtension(FName), BU_ListTable.Rows[BU_ListTable.CurrentRow.Index].Cells[3].Value.ToString()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     // Проверяем что восстанавливать: конфиг или реестр...
                     if (Path.GetExtension(FName) != ".reg")
@@ -2255,8 +2228,7 @@ namespace srcrepair
                 // Удалим выбранный бэкап...
                 string FName = BU_ListTable.Rows[BU_ListTable.CurrentRow.Index].Cells[4].Value.ToString();
                 // Запросим подтверждение...
-                DialogResult UserConfirmation = MessageBox.Show(RM.GetString("BU_DelMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (UserConfirmation == DialogResult.Yes)
+                if (MessageBox.Show(RM.GetString("BU_DelMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     try
                     {
