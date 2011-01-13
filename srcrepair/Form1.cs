@@ -884,25 +884,31 @@ namespace srcrepair
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                case 11: // Zombie Panic! Source
+                case 11: // Synergy
+                    GV.FullAppName = "synergy";
+                    GV.SmallAppName = "synergy";
+                    ptha = LoginSel.Text;
+                    GV.IsGCFApp = true;
+                    break;
+                case 12: // Zombie Panic! Source
                     GV.FullAppName = "zombie panic! source";
                     GV.SmallAppName = "zps";
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                /*case 12: // Left 4 Dead 1
+                /*case 13: // Left 4 Dead 1
                     GV.FullAppName = "left 4 dead"; // имя каталога...
                     GV.SmallAppName = "left4dead"; // имя индивидуального подкаталога...
                     ptha = "common"; // это NCF-приложение...
                     GV.IsGCFApp = false;
                     break;
-                case 13: // Left 4 Dead 2
+                case 14: // Left 4 Dead 2
                     GV.FullAppName = "left 4 dead 2";
                     GV.SmallAppName = "left4dead2";
                     ptha = "common";
                     GV.IsGCFApp = false;
                     break;
-                case 14: // Alien Swarm
+                case 15: // Alien Swarm
                     GV.FullAppName = "alien swarm";
                     GV.SmallAppName = "swarm";
                     ptha = "common";
