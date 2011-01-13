@@ -2946,6 +2946,9 @@
     <value>Insurgency</value>
   </data>
   <data name="AppSelector.Items9" xml:space="preserve">
+    <value>Pirates, Vikings, &amp; Knights II</value>
+  </data>
+  <data name="AppSelector.Items10" xml:space="preserve">
     <value>Zombie Panic! Source</value>
   </data>
   <data name="AppSelector.Location" type="System.Drawing.Point, System.Drawing">

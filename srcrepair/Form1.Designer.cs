@@ -1304,7 +1304,8 @@
             resources.GetString("AppSelector.Items6"),
             resources.GetString("AppSelector.Items7"),
             resources.GetString("AppSelector.Items8"),
-            resources.GetString("AppSelector.Items9")});
+            resources.GetString("AppSelector.Items9"),
+            resources.GetString("AppSelector.Items10")});
             this.AppSelector.Name = "AppSelector";
             this.AppSelector.SelectedIndexChanged += new System.EventHandler(this.AppSelector_SelectedIndexChanged);
             // 
