@@ -830,61 +830,67 @@ namespace srcrepair
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                case 2: // Garry's Mod
-                    GV.FullAppName = "garrysmod";
-                    GV.SmallAppName = "garrysmod";
-                    ptha = LoginSel.Text;
-                    GV.IsGCFApp = true;
-                    break;
-                case 3: // Day of Defeat: Source
+                case 2: // Day of Defeat: Source
                     GV.FullAppName = "day of defeat source";
                     GV.SmallAppName = "dod";
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                case 4: // Age of Chivalry
+                case 3: // Half-Life 2: Deathmatch
+                    GV.FullAppName = "half-life 2 deathmatch";
+                    GV.SmallAppName = "hl2mp";
+                    ptha = LoginSel.Text;
+                    GV.IsGCFApp = true;
+                    break;
+                case 4: // Garry's Mod
+                    GV.FullAppName = "garrysmod";
+                    GV.SmallAppName = "garrysmod";
+                    ptha = LoginSel.Text;
+                    GV.IsGCFApp = true;
+                    break;
+                case 5: // Age of Chivalry
                     GV.FullAppName = "age of chivalry";
                     GV.SmallAppName = "ageofchivalry";
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                case 5: // D.I.P.R.I.P.: Warm Up
+                case 6: // D.I.P.R.I.P.: Warm Up
                     GV.FullAppName = "diprip warm up";
                     GV.SmallAppName = "diprip";
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                case 6: // Dystopia
+                case 7: // Dystopia
                     GV.FullAppName = "dystopia";
                     GV.SmallAppName = "Dystopia";
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                case 7: // Insurgency
+                case 8: // Insurgency
                     GV.FullAppName = "insurgency";
                     GV.SmallAppName = "insurgency";
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                case 8: // Zombie Panic! Source
+                case 9: // Zombie Panic! Source
                     GV.FullAppName = "zombie panic! source";
                     GV.SmallAppName = "zps";
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                /*case 9: // Left 4 Dead 1
+                /*case 10: // Left 4 Dead 1
                     GV.FullAppName = "left 4 dead"; // имя каталога...
                     GV.SmallAppName = "left4dead"; // имя индивидуального подкаталога...
                     ptha = "common"; // это NCF-приложение...
                     GV.IsGCFApp = false;
                     break;
-                case 10: // Left 4 Dead 2
+                case 11: // Left 4 Dead 2
                     GV.FullAppName = "left 4 dead 2";
                     GV.SmallAppName = "left4dead2";
                     ptha = "common";
                     GV.IsGCFApp = false;
                     break;
-                case 11: // Alien Swarm
+                case 12: // Alien Swarm
                     GV.FullAppName = "alien swarm";
                     GV.SmallAppName = "swarm";
                     ptha = "common";
