@@ -1,0 +1,4 @@
+﻿One of the most effective FPS configs. Makes TF2 look like a 16-bit game. Strongly recommended for old or low-end PCs and graphics cards. This config gives the greatest FPS increase.
+
+FPS increase: Maximum
+Graphics degradation: 16-bit style

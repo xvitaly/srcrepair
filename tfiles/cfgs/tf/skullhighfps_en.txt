@@ -1,0 +1,4 @@
+﻿Skull's config. Practically the same as bon's one but the with slightly better graphics than the one from bonhighfps config. Recommended for use on low-end laptops and old PCs.
+
+FPS increase: High
+Graphics degradation: Some
