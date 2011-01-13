@@ -2949,6 +2949,9 @@
     <value>Pirates, Vikings, &amp; Knights II</value>
   </data>
   <data name="AppSelector.Items10" xml:space="preserve">
+    <value>Smashball</value>
+  </data>
+  <data name="AppSelector.Items11" xml:space="preserve">
     <value>Zombie Panic! Source</value>
   </data>
   <data name="AppSelector.Location" type="System.Drawing.Point, System.Drawing">
