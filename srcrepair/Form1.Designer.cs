@@ -80,6 +80,8 @@
             this.CE_Cut = new System.Windows.Forms.ToolStripButton();
             this.CE_Copy = new System.Windows.Forms.ToolStripButton();
             this.CE_Paste = new System.Windows.Forms.ToolStripButton();
+            this.CE_ToolSep1 = new System.Windows.Forms.ToolStripSeparator();
+            this.CE_RmRow = new System.Windows.Forms.ToolStripButton();
             this.CE_ToolSep2 = new System.Windows.Forms.ToolStripSeparator();
             this.CE_ShowHint = new System.Windows.Forms.ToolStripButton();
             this.CE_Editor = new System.Windows.Forms.DataGridView();
@@ -171,8 +173,6 @@
             this.CE_OpenCfgDialog = new System.Windows.Forms.OpenFileDialog();
             this.CE_SaveCfgDialog = new System.Windows.Forms.SaveFileDialog();
             this.FldrBrwse = new System.Windows.Forms.FolderBrowserDialog();
-            this.CE_RmRow = new System.Windows.Forms.ToolStripButton();
-            this.CE_ToolSep1 = new System.Windows.Forms.ToolStripSeparator();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_Warning)).BeginInit();
@@ -659,6 +659,19 @@
             resources.ApplyResources(this.CE_Paste, "CE_Paste");
             this.CE_Paste.Name = "CE_Paste";
             this.CE_Paste.Click += new System.EventHandler(this.CE_Paste_Click);
+            // 
+            // CE_ToolSep1
+            // 
+            this.CE_ToolSep1.Name = "CE_ToolSep1";
+            resources.ApplyResources(this.CE_ToolSep1, "CE_ToolSep1");
+            // 
+            // CE_RmRow
+            // 
+            this.CE_RmRow.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_RmRow.Image = global::srcrepair.Properties.Resources.Delete;
+            resources.ApplyResources(this.CE_RmRow, "CE_RmRow");
+            this.CE_RmRow.Name = "CE_RmRow";
+            this.CE_RmRow.Click += new System.EventHandler(this.CE_RmRow_Click);
             // 
             // CE_ToolSep2
             // 
@@ -1329,19 +1342,6 @@
             // FldrBrwse
             // 
             this.FldrBrwse.ShowNewFolderButton = false;
-            // 
-            // CE_RmRow
-            // 
-            this.CE_RmRow.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CE_RmRow.Image = global::srcrepair.Properties.Resources.Delete;
-            resources.ApplyResources(this.CE_RmRow, "CE_RmRow");
-            this.CE_RmRow.Name = "CE_RmRow";
-            this.CE_RmRow.Click += new System.EventHandler(this.CE_RmRow_Click);
-            // 
-            // CE_ToolSep1
-            // 
-            this.CE_ToolSep1.Name = "CE_ToolSep1";
-            resources.ApplyResources(this.CE_ToolSep1, "CE_ToolSep1");
             // 
             // frmMainW
             // 
