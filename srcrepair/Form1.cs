@@ -2436,5 +2436,53 @@ namespace srcrepair
             frmHEd HEdFrm = new frmHEd();
             HEdFrm.ShowDialog();
         }
+
+        private void CE_RmRow_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (CE_Editor.Rows.Count > 0)
+                {
+                    CE_Editor.Rows.Remove(CE_Editor.CurrentRow);
+                }
+            }
+            catch
+            {
+                // Подавляем возможные сообщения об ошибках...
+            }
+        }
+
+        private void CE_Copy_Click(object sender, EventArgs e)
+        {
+            if (CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value != null)
+            {
+                Clipboard.SetText(CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value.ToString());
+            }
+        }
+
+        private void CE_Cut_Click(object sender, EventArgs e)
+        {
+            if (CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value != null)
+            {
+                // Копируем в буфер...
+                Clipboard.SetText(CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value.ToString());
+                // Удаляем из ячейки...
+                CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value = null;
+            }
+        }
+
+        private void CE_Paste_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Clipboard.ContainsText())
+                {
+                    CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value = Clipboard.GetText();
+                }
+            }
+            catch
+            {
+            }
+        }
     }
 }

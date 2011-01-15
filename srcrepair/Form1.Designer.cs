@@ -76,12 +76,11 @@
             this.CE_Open = new System.Windows.Forms.ToolStripButton();
             this.CE_Save = new System.Windows.Forms.ToolStripButton();
             this.CE_SaveAs = new System.Windows.Forms.ToolStripButton();
-            this.CE_Print = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.CE_ToolSep0 = new System.Windows.Forms.ToolStripSeparator();
             this.CE_Cut = new System.Windows.Forms.ToolStripButton();
             this.CE_Copy = new System.Windows.Forms.ToolStripButton();
             this.CE_Paste = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.CE_ToolSep2 = new System.Windows.Forms.ToolStripSeparator();
             this.CE_ShowHint = new System.Windows.Forms.ToolStripButton();
             this.CE_Editor = new System.Windows.Forms.DataGridView();
             this.CE_CVName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -172,6 +171,8 @@
             this.CE_OpenCfgDialog = new System.Windows.Forms.OpenFileDialog();
             this.CE_SaveCfgDialog = new System.Windows.Forms.SaveFileDialog();
             this.FldrBrwse = new System.Windows.Forms.FolderBrowserDialog();
+            this.CE_RmRow = new System.Windows.Forms.ToolStripButton();
+            this.CE_ToolSep1 = new System.Windows.Forms.ToolStripSeparator();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_Warning)).BeginInit();
@@ -592,12 +593,13 @@
             this.CE_Open,
             this.CE_Save,
             this.CE_SaveAs,
-            this.CE_Print,
-            this.toolStripSeparator,
+            this.CE_ToolSep0,
             this.CE_Cut,
             this.CE_Copy,
             this.CE_Paste,
-            this.toolStripSeparator1,
+            this.CE_ToolSep1,
+            this.CE_RmRow,
+            this.CE_ToolSep2,
             this.CE_ShowHint});
             resources.ApplyResources(this.CE_Toolbar, "CE_Toolbar");
             this.CE_Toolbar.Name = "CE_Toolbar";
@@ -632,39 +634,36 @@
             this.CE_SaveAs.Name = "CE_SaveAs";
             this.CE_SaveAs.Click += new System.EventHandler(this.CE_SaveAs_Click);
             // 
-            // CE_Print
+            // CE_ToolSep0
             // 
-            this.CE_Print.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.CE_Print, "CE_Print");
-            this.CE_Print.Name = "CE_Print";
-            // 
-            // toolStripSeparator
-            // 
-            this.toolStripSeparator.Name = "toolStripSeparator";
-            resources.ApplyResources(this.toolStripSeparator, "toolStripSeparator");
+            this.CE_ToolSep0.Name = "CE_ToolSep0";
+            resources.ApplyResources(this.CE_ToolSep0, "CE_ToolSep0");
             // 
             // CE_Cut
             // 
             this.CE_Cut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.CE_Cut, "CE_Cut");
             this.CE_Cut.Name = "CE_Cut";
+            this.CE_Cut.Click += new System.EventHandler(this.CE_Cut_Click);
             // 
             // CE_Copy
             // 
             this.CE_Copy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.CE_Copy, "CE_Copy");
             this.CE_Copy.Name = "CE_Copy";
+            this.CE_Copy.Click += new System.EventHandler(this.CE_Copy_Click);
             // 
             // CE_Paste
             // 
             this.CE_Paste.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.CE_Paste, "CE_Paste");
             this.CE_Paste.Name = "CE_Paste";
+            this.CE_Paste.Click += new System.EventHandler(this.CE_Paste_Click);
             // 
-            // toolStripSeparator1
+            // CE_ToolSep2
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            this.CE_ToolSep2.Name = "CE_ToolSep2";
+            resources.ApplyResources(this.CE_ToolSep2, "CE_ToolSep2");
             // 
             // CE_ShowHint
             // 
@@ -1331,6 +1330,19 @@
             // 
             this.FldrBrwse.ShowNewFolderButton = false;
             // 
+            // CE_RmRow
+            // 
+            this.CE_RmRow.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_RmRow.Image = global::srcrepair.Properties.Resources.Delete;
+            resources.ApplyResources(this.CE_RmRow, "CE_RmRow");
+            this.CE_RmRow.Name = "CE_RmRow";
+            this.CE_RmRow.Click += new System.EventHandler(this.CE_RmRow_Click);
+            // 
+            // CE_ToolSep1
+            // 
+            this.CE_ToolSep1.Name = "CE_ToolSep1";
+            resources.ApplyResources(this.CE_ToolSep1, "CE_ToolSep1");
+            // 
             // frmMainW
             // 
             resources.ApplyResources(this, "$this");
@@ -1487,12 +1499,11 @@
         private System.Windows.Forms.ToolStripButton CE_New;
         private System.Windows.Forms.ToolStripButton CE_Open;
         private System.Windows.Forms.ToolStripButton CE_Save;
-        private System.Windows.Forms.ToolStripButton CE_Print;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
+        private System.Windows.Forms.ToolStripSeparator CE_ToolSep0;
         private System.Windows.Forms.ToolStripButton CE_Cut;
         private System.Windows.Forms.ToolStripButton CE_Copy;
         private System.Windows.Forms.ToolStripButton CE_Paste;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator CE_ToolSep2;
         private System.Windows.Forms.ToolStripButton CE_ShowHint;
         private System.Windows.Forms.ToolStripButton CE_SaveAs;
         private System.Windows.Forms.Button FP_Uninstall;
@@ -1528,6 +1539,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BRealName;
         private System.Windows.Forms.FolderBrowserDialog FldrBrwse;
         private System.Windows.Forms.ToolStripMenuItem MNUHEd;
+        private System.Windows.Forms.ToolStripSeparator CE_ToolSep1;
+        private System.Windows.Forms.ToolStripButton CE_RmRow;
     }
 }
 
