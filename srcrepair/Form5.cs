@@ -50,7 +50,6 @@ namespace srcrepair
             {
                 CFile.WriteLine(@"""UnlitGeneric""");
                 CFile.WriteLine("{");
-                string AAA = "\t" + @"""$basetexture""	""vgui\logos\" + Path.GetFileNameWithoutExtension(FileName) + @"""";
                 CFile.WriteLine("\t" + @"""$basetexture""	""vgui\logos\" + Path.GetFileNameWithoutExtension(FileName) + @"""");
                 CFile.WriteLine("\t" + @"""$translucent"" ""1""");
                 CFile.WriteLine("\t" + @"""$ignorez"" ""1""");
@@ -80,8 +79,7 @@ namespace srcrepair
             else
             {
                 // Файл не найден, спросим нужно ли создать...
-                DialogResult UserConfirmation = MessageBox.Show(frmMainW.RM.GetString("QI_GenVMTMsg"), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (UserConfirmation == DialogResult.Yes)
+                if (MessageBox.Show(frmMainW.RM.GetString("QI_GenVMTMsg"), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     // Да, нужно.
                     UseVMT = true;
@@ -103,8 +101,7 @@ namespace srcrepair
         private void btnBrowse_Click(object sender, EventArgs e)
         {
             // Открываем диалоговое окно выбора файла и записываем путь в Edit...
-            DialogResult OpenResult = openDialog.ShowDialog();
-            if (OpenResult == DialogResult.OK)
+            if (openDialog.ShowDialog() == DialogResult.OK)
             {
                 InstallPath.Text = openDialog.FileName;
             }
@@ -123,6 +120,8 @@ namespace srcrepair
                         case ".dem": InstallFileNow(InstallPath.Text, ""); // Будем устанавливать демку...
                             break;
                         case ".cfg": InstallFileNow(InstallPath.Text, @"cfg\"); // Будем устанавливать конфиг...
+                            break;
+                        case ".bsp": InstallFileNow(InstallPath.Text, @"maps\"); // Будем устанавливать карту...
                             break;
                         case ".vtf": InstallSprayNow(InstallPath.Text); // Будем устанавливай спрей...
                             break;

@@ -117,6 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="MainTabControl.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="GraphicTweaker.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="GT_Warning.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="GT_Warning.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -175,6 +184,9 @@
   <data name="&gt;&gt;GT_Warning.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="GT_SaveApply.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_SaveApply.Location" type="System.Drawing.Point, System.Drawing">
     <value>148, 338</value>
   </data>
@@ -199,6 +211,9 @@
   <data name="&gt;&gt;GT_SaveApply.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="GT_Maximum_Performance.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_Maximum_Performance.Location" type="System.Drawing.Point, System.Drawing">
     <value>235, 300</value>
   </data>
@@ -223,6 +238,9 @@
   <data name="&gt;&gt;GT_Maximum_Performance.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="GT_Maximum_Graphics.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_Maximum_Graphics.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 300</value>
   </data>
@@ -247,6 +265,9 @@
   <data name="&gt;&gt;GT_Maximum_Graphics.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="GT_LaunchOptions_Btn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_LaunchOptions_Btn.Location" type="System.Drawing.Point, System.Drawing">
     <value>418, 262</value>
   </data>
@@ -271,6 +292,9 @@
   <data name="&gt;&gt;GT_LaunchOptions_Btn.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="L_GT_LaunchOptions.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_GT_LaunchOptions.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -298,6 +322,9 @@
   <data name="&gt;&gt;L_GT_LaunchOptions.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="GT_LaunchOptions.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_LaunchOptions.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -322,6 +349,9 @@
   <data name="&gt;&gt;GT_LaunchOptions.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <metadata name="L_GT_HDR.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_GT_HDR.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -349,6 +379,9 @@
   <data name="&gt;&gt;L_GT_HDR.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <metadata name="L_GT_DxMode.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_GT_DxMode.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -376,6 +409,9 @@
   <data name="&gt;&gt;L_GT_DxMode.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <metadata name="L_GT_MotionBlur.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_GT_MotionBlur.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -403,6 +439,9 @@
   <data name="&gt;&gt;L_GT_MotionBlur.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <metadata name="GT_HDR.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_HDR.Items" xml:space="preserve">
     <value>None</value>
   </data>
@@ -433,6 +472,9 @@
   <data name="&gt;&gt;GT_HDR.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <metadata name="GT_DxMode.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_DxMode.Items" xml:space="preserve">
     <value>DirectX 8.0</value>
   </data>
@@ -466,6 +508,9 @@
   <data name="&gt;&gt;GT_DxMode.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <metadata name="GT_ResVert.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_ResVert.Location" type="System.Drawing.Point, System.Drawing">
     <value>162, 33</value>
   </data>
@@ -487,6 +532,9 @@
   <data name="&gt;&gt;GT_ResVert.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <metadata name="GT_ResHor.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_ResHor.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 33</value>
   </data>
@@ -508,6 +556,9 @@
   <data name="&gt;&gt;GT_ResHor.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
+  <metadata name="GT_MotionBlur.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_MotionBlur.Items" xml:space="preserve">
     <value>Disabled</value>
   </data>
@@ -535,6 +586,9 @@
   <data name="&gt;&gt;GT_MotionBlur.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
+  <metadata name="L_GT_VSync.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_GT_VSync.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -562,6 +616,9 @@
   <data name="&gt;&gt;L_GT_VSync.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
+  <metadata name="L_GT_Filtering.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_GT_Filtering.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -589,6 +646,9 @@
   <data name="&gt;&gt;L_GT_Filtering.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
+  <metadata name="L_GT_AntiAliasing.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_GT_AntiAliasing.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -616,6 +676,9 @@
   <data name="&gt;&gt;L_GT_AntiAliasing.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
+  <metadata name="GT_VSync.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_VSync.Items" xml:space="preserve">
     <value>Disabled</value>
   </data>
@@ -643,6 +706,9 @@
   <data name="&gt;&gt;GT_VSync.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
+  <metadata name="GT_Filtering.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_Filtering.Items" xml:space="preserve">
     <value>Bilinear</value>
   </data>
@@ -682,6 +748,9 @@
   <data name="&gt;&gt;GT_Filtering.ZOrder" xml:space="preserve">
     <value>19</value>
   </data>
+  <metadata name="GT_AntiAliasing.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_AntiAliasing.Items" xml:space="preserve">
     <value>None</value>
   </data>
@@ -724,6 +793,9 @@
   <data name="&gt;&gt;GT_AntiAliasing.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
+  <metadata name="L_GT_ColorCorrectionT.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_GT_ColorCorrectionT.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -751,6 +823,9 @@
   <data name="&gt;&gt;L_GT_ColorCorrectionT.ZOrder" xml:space="preserve">
     <value>21</value>
   </data>
+  <metadata name="L_GT_ShadowQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_GT_ShadowQuality.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -778,6 +853,9 @@
   <data name="&gt;&gt;L_GT_ShadowQuality.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
+  <metadata name="L_GT_WaterQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_GT_WaterQuality.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -805,6 +883,9 @@
   <data name="&gt;&gt;L_GT_WaterQuality.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
+  <metadata name="GT_ColorCorrectionT.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_ColorCorrectionT.Items" xml:space="preserve">
     <value>Disabled</value>
   </data>
@@ -832,6 +913,9 @@
   <data name="&gt;&gt;GT_ColorCorrectionT.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
+  <metadata name="GT_ShadowQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_ShadowQuality.Items" xml:space="preserve">
     <value>Low</value>
   </data>
@@ -859,6 +943,9 @@
   <data name="&gt;&gt;GT_ShadowQuality.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
+  <metadata name="GT_WaterQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_WaterQuality.Items" xml:space="preserve">
     <value>Simple reflections</value>
   </data>
@@ -889,6 +976,9 @@
   <data name="&gt;&gt;GT_WaterQuality.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
+  <metadata name="L_GT_ShaderQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_GT_ShaderQuality.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -916,6 +1006,9 @@
   <data name="&gt;&gt;L_GT_ShaderQuality.ZOrder" xml:space="preserve">
     <value>27</value>
   </data>
+  <metadata name="L_GT_TextureQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_GT_TextureQuality.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -943,6 +1036,9 @@
   <data name="&gt;&gt;L_GT_TextureQuality.ZOrder" xml:space="preserve">
     <value>28</value>
   </data>
+  <metadata name="L_GT_ModelQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_GT_ModelQuality.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -970,6 +1066,9 @@
   <data name="&gt;&gt;L_GT_ModelQuality.ZOrder" xml:space="preserve">
     <value>29</value>
   </data>
+  <metadata name="GT_ShaderQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_ShaderQuality.Items" xml:space="preserve">
     <value>Low</value>
   </data>
@@ -997,6 +1096,9 @@
   <data name="&gt;&gt;GT_ShaderQuality.ZOrder" xml:space="preserve">
     <value>30</value>
   </data>
+  <metadata name="GT_TextureQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_TextureQuality.Items" xml:space="preserve">
     <value>Low</value>
   </data>
@@ -1027,6 +1129,9 @@
   <data name="&gt;&gt;GT_TextureQuality.ZOrder" xml:space="preserve">
     <value>31</value>
   </data>
+  <metadata name="GT_ModelQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_ModelQuality.Items" xml:space="preserve">
     <value>Low</value>
   </data>
@@ -1057,6 +1162,9 @@
   <data name="&gt;&gt;GT_ModelQuality.ZOrder" xml:space="preserve">
     <value>32</value>
   </data>
+  <metadata name="L_GT_ScreenType.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_GT_ScreenType.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1084,6 +1192,9 @@
   <data name="&gt;&gt;L_GT_ScreenType.ZOrder" xml:space="preserve">
     <value>33</value>
   </data>
+  <metadata name="L_GT_ResVert.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_GT_ResVert.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1111,6 +1222,9 @@
   <data name="&gt;&gt;L_GT_ResVert.ZOrder" xml:space="preserve">
     <value>34</value>
   </data>
+  <metadata name="GT_ResVert_Btn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_ResVert_Btn.Location" type="System.Drawing.Point, System.Drawing">
     <value>281, 31</value>
   </data>
@@ -1135,6 +1249,9 @@
   <data name="&gt;&gt;GT_ResVert_Btn.ZOrder" xml:space="preserve">
     <value>35</value>
   </data>
+  <metadata name="GT_ScreenType.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_ScreenType.Items" xml:space="preserve">
     <value>Full screen</value>
   </data>
@@ -1162,6 +1279,9 @@
   <data name="&gt;&gt;GT_ScreenType.ZOrder" xml:space="preserve">
     <value>36</value>
   </data>
+  <metadata name="GT_ResHor_Btn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_ResHor_Btn.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 31</value>
   </data>
@@ -1186,6 +1306,9 @@
   <data name="&gt;&gt;GT_ResHor_Btn.ZOrder" xml:space="preserve">
     <value>37</value>
   </data>
+  <metadata name="L_GT_ResHor.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_GT_ResHor.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1241,8 +1364,14 @@
   <data name="&gt;&gt;GraphicTweaker.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="ConfigEditor.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="CE_Toolbar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>225, 17</value>
+  </metadata>
+  <metadata name="CE_Toolbar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <data name="CE_New.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1460,6 +1589,9 @@
   <data name="&gt;&gt;CE_Toolbar.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="CE_Editor.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="CE_CVName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1529,6 +1661,15 @@
   <data name="&gt;&gt;ConfigEditor.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="ProblemSolver.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_GB_Remover.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_RemOldBin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PS_RemOldBin.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 328</value>
   </data>
@@ -1553,6 +1694,9 @@
   <data name="&gt;&gt;PS_RemOldBin.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="PS_RemGraphOpts.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PS_RemGraphOpts.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 280</value>
   </data>
@@ -1577,6 +1721,9 @@
   <data name="&gt;&gt;PS_RemGraphOpts.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="PS_RemDemos.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PS_RemDemos.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 251</value>
   </data>
@@ -1601,6 +1748,9 @@
   <data name="&gt;&gt;PS_RemDemos.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="PS_RemScreenShots.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PS_RemScreenShots.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 222</value>
   </data>
@@ -1625,6 +1775,9 @@
   <data name="&gt;&gt;PS_RemScreenShots.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="PS_RemNavFiles.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PS_RemNavFiles.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 193</value>
   </data>
@@ -1649,6 +1802,9 @@
   <data name="&gt;&gt;PS_RemNavFiles.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="PS_RemSoundCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PS_RemSoundCache.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 164</value>
   </data>
@@ -1673,6 +1829,9 @@
   <data name="&gt;&gt;PS_RemSoundCache.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="PS_RemGraphCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PS_RemGraphCache.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 135</value>
   </data>
@@ -1697,6 +1856,9 @@
   <data name="&gt;&gt;PS_RemGraphCache.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <metadata name="PS_RemOldCfgs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PS_RemOldCfgs.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 106</value>
   </data>
@@ -1721,6 +1883,9 @@
   <data name="&gt;&gt;PS_RemOldCfgs.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <metadata name="PS_RemOldSpray.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PS_RemOldSpray.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 77</value>
   </data>
@@ -1745,6 +1910,9 @@
   <data name="&gt;&gt;PS_RemOldSpray.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <metadata name="PS_RemDnlCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PS_RemDnlCache.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 48</value>
   </data>
@@ -1769,6 +1937,9 @@
   <data name="&gt;&gt;PS_RemDnlCache.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <metadata name="PS_RemCustMaps.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PS_RemCustMaps.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 19</value>
   </data>
@@ -1817,6 +1988,12 @@
   <data name="&gt;&gt;PS_GB_Remover.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="PS_GB_AdvFeat.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_ResetSettings.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PS_ResetSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 19</value>
   </data>
@@ -1865,6 +2042,12 @@
   <data name="&gt;&gt;PS_GB_AdvFeat.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="PS_GB_SInfo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_WarningMsg.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PS_WarningMsg.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 82</value>
   </data>
@@ -1889,6 +2072,9 @@
   <data name="&gt;&gt;PS_WarningMsg.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="PS_PathDetector.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PS_PathDetector.Location" type="System.Drawing.Point, System.Drawing">
     <value>72, 60</value>
   </data>
@@ -1913,6 +2099,9 @@
   <data name="&gt;&gt;PS_PathDetector.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="PS_RSteamLogin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PS_RSteamLogin.Location" type="System.Drawing.Point, System.Drawing">
     <value>90, 38</value>
   </data>
@@ -1934,6 +2123,9 @@
   <data name="&gt;&gt;PS_RSteamLogin.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="PS_RSteamPath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PS_RSteamPath.Location" type="System.Drawing.Point, System.Drawing">
     <value>90, 16</value>
   </data>
@@ -1955,6 +2147,9 @@
   <data name="&gt;&gt;PS_RSteamPath.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="L_PS_PathDetector.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_PS_PathDetector.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1982,6 +2177,9 @@
   <data name="&gt;&gt;L_PS_PathDetector.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="L_PS_RSteamLogin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_PS_RSteamLogin.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2009,6 +2207,9 @@
   <data name="&gt;&gt;L_PS_RSteamLogin.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="L_PS_RSteamPath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_PS_RSteamPath.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2060,6 +2261,12 @@
   <data name="&gt;&gt;PS_GB_SInfo.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="PS_GB_Solver.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_ExecuteNow.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PS_ExecuteNow.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -2087,6 +2294,9 @@
   <data name="&gt;&gt;PS_ExecuteNow.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="PS_SteamLang.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PS_SteamLang.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -2117,6 +2327,9 @@
   <data name="&gt;&gt;PS_SteamLang.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="L_PS_SteamLang.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_PS_SteamLang.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2144,6 +2357,9 @@
   <data name="&gt;&gt;L_PS_SteamLang.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="PS_CleanRegistry.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PS_CleanRegistry.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2171,6 +2387,9 @@
   <data name="&gt;&gt;PS_CleanRegistry.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="PS_CleanBlobs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="PS_CleanBlobs.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2249,6 +2468,12 @@
   <data name="&gt;&gt;ProblemSolver.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="FPSCfgInstall.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="FP_CreateBackUp.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="FP_CreateBackUp.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2276,6 +2501,9 @@
   <data name="&gt;&gt;FP_CreateBackUp.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="FP_Uninstall.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="FP_Uninstall.Location" type="System.Drawing.Point, System.Drawing">
     <value>240, 339</value>
   </data>
@@ -2300,6 +2528,9 @@
   <data name="&gt;&gt;FP_Uninstall.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="FP_Install.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="FP_Install.Location" type="System.Drawing.Point, System.Drawing">
     <value>23, 339</value>
   </data>
@@ -2324,6 +2555,12 @@
   <data name="&gt;&gt;FP_Install.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="FP_GB_Desc.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="FP_Description.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="FP_Description.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 25</value>
   </data>
@@ -2369,6 +2606,9 @@
   <data name="&gt;&gt;FP_GB_Desc.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="FP_ConfigSel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="FP_ConfigSel.Location" type="System.Drawing.Point, System.Drawing">
     <value>229, 111</value>
   </data>
@@ -2390,6 +2630,9 @@
   <data name="&gt;&gt;FP_ConfigSel.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="L_FP_ConfigSel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_FP_ConfigSel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2417,6 +2660,9 @@
   <data name="&gt;&gt;L_FP_ConfigSel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="FP_TopLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="FP_TopLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 12</value>
   </data>
@@ -2468,6 +2714,12 @@
   <data name="&gt;&gt;FPSCfgInstall.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="RescueCentre.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="BU_ListTable.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="BEd_BName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -2533,6 +2785,9 @@
   </data>
   <metadata name="BU_BToolbar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>617, 17</value>
+  </metadata>
+  <metadata name="BU_BToolbar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <data name="BUT_Refresh.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -2666,6 +2921,9 @@
   <data name="&gt;&gt;MainTabControl.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="LoginSel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="LoginSel.Location" type="System.Drawing.Point, System.Drawing">
     <value>84, 35</value>
   </data>
@@ -2689,6 +2947,9 @@
   </data>
   <metadata name="MainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="MainMenu.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <data name="MNUShowEdHint.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2840,6 +3101,9 @@
   <data name="&gt;&gt;MainMenu.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <metadata name="L_LoginSel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_LoginSel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2869,6 +3133,9 @@
   </data>
   <metadata name="StatusBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>126, 17</value>
+  </metadata>
+  <metadata name="StatusBar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <data name="SB_Info.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 17</value>
@@ -2915,6 +3182,9 @@
   <data name="&gt;&gt;StatusBar.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="AppSelector.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="AppSelector.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -2978,6 +3248,9 @@
   <data name="&gt;&gt;AppSelector.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="L_AppSelector.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="L_AppSelector.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -3021,6 +3294,9 @@
     <value>733, 17</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
@@ -3195,11 +3471,14 @@
         AAA=
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>SRC Repair OSE Beta (version {0})</value>
+    <value>SRC Repair OSE (version {0})</value>
   </data>
   <data name="&gt;&gt;CE_New.Name" xml:space="preserve">
     <value>CE_New</value>

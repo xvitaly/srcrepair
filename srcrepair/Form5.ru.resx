@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="labelWelcome.Text" xml:space="preserve">
-    <value>Здесь Вы можете установить спрей, демку, либо нестандартный конфиг в выбранную в главном окне игру.</value>
+    <value>Здесь Вы можете установить спрей, демку, карту, либо нестандартный конфиг в выбранную в главном окне игру.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="labelPath.Size" type="System.Drawing.Size, System.Drawing">
@@ -134,9 +134,33 @@
     <value>Установить</value>
   </data>
   <data name="openDialog.Filter" xml:space="preserve">
-    <value>Файлы спреев (*.vtf)|*.vtf|Файлы демок (*.dem)|*.dem|Файлы конфигов (*.cfg)|*.cfg</value>
+    <value>Файлы спреев (*.vtf)|*.vtf|Файлы демок (*.dem)|*.dem|Файлы конфигов (*.cfg)|*.cfg|Файлы карт (*.bsp)|*.bsp</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAACAAAABwAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAA
+        AAkAAAAFAAAADwAAACYCAwM0AgQENgIEBDYCBAQ2AgQENgIEBDYCBAU2AgQENgIEBDYCBAQ2AwUENgME
+        BDUAAAAsAAAAGAAAAAQVHR1IcJGX5X6boel9mqDnepee6HqYoOl5l57ofpyj6X+couh9mp/ofZqf6HqY
+        nudxk5rsHigpXgAAAAoAAAAAJzQ2SXeYof9VV1n+WVtd/0xOT/9YW1z/V1pb/z9BQv9jZWb/T1JS/0xO
+        T/88PT79b42W/zVGSGIAAAAAAAAAACYyNEVsi5L/Pz4+/kVEQ/43Njb+PT08/lJRUf5FRUT+UlFR/jw7
+        O/4xMTH+MS8u/GeDiv8zREdcAAAAAAAAAAAmMjRGdZSc/3Z2dv+Ghob/cXFx/1BQUP9QUFD/V1dX/1FR
+        Uf9DRET/T09P/zY1Nf1mgon/NkZIXQAAAAAAAAAAJDEyRpS0u/9zdHT/P0BA/4+QkP9iY2P/Ozw8/zo7
+        O/9dXl7/e3x8/3p7fP9iYWH9g6Cn/zVGSF0AAAAAAAAAACYzNUaUsrr/ZmJi/05LSv9wbGv/SkdG/xkW
+        Ff8nJCP/XVpZ/zk2Nf8mIyL/WVRT/X2Zn/84SUtdAAAAAAAAAAAmMTNDl7vD/2p+g/99j5T/an2D/09i
+        Z/9RZGn/TmJn/1xwdf9ccHb/Vmpv/2V4fP2bvcb/NURHWwAAAAAAAAAAMzc4aJWjp/+To6f8kaGk/5Sl
+        qf+cq6//m6uu/5urrv+XqKv/l6er/5mprf+Vpan7mair/zxCQ3gAAAAAAAAAAEJDQ32SkpH/g4KB+oeF
+        hP+HhIP/hYOC/4WDg/+Fg4P/hoSD/4aDg/+Fg4P/g4KB+5GQj/9JSkuNAAAAAAAAAABISkp+qKqq/5ma
+        mvadn5//nqCg/5+goP+dn5//nZ+f/56goP+foKD/n6Cg/5qbm/amqKj/UFJTjQAAAAAAAAAALC0tUbW4
+        uP+vsLD+q6ys/aWlpf6foaH/qqur/6ytrf+jo6P/n5+f/qKiov2qq6v9v8HC/z5AQGoAAAAAAQEBAQAA
+        AAAtLi9OV1hYoqalpfumpqb/n5+f/LW1tf63t7f+p6en/Kampv+bmpr8U1RUoDs9PWMAAAABAAAAAAAA
+        AAABAQEBAQEBAQAAAABJSUl3r6+v/sfHx//W1tb+19fX/tDQ0P+3t7f+SkpKdwAAAAABAQEBAAAAAQAA
+        AAAAAAAAAAAAAAICAgQDAwMFAAAAACQkJEFxcXGsnp6e25+fn9tzc3OsJSUlQQAAAAADAwMEAwMDBAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA==
+</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Установщик спреев, демок и конфигов</value>
+    <value>Установщик спреев, демок, конфигов и карт</value>
   </data>
 </root>
