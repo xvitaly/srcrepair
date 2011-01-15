@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="GenerateCFG.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="GenerateCFG.Location" type="System.Drawing.Point, System.Drawing">
     <value>89, 384</value>
@@ -143,6 +146,9 @@
   <data name="&gt;&gt;GenerateCFG.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
+  <metadata name="TextureQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="TextureQuality.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -171,6 +177,9 @@
   <data name="&gt;&gt;TextureQuality.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
+  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 9</value>
   </data>
@@ -195,6 +204,9 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
+  <metadata name="TextureQualityBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="TextureQualityBox.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -225,6 +237,9 @@
   <data name="&gt;&gt;TextureQualityBox.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
+  <metadata name="ModelQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="ModelQuality.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 69</value>
   </data>
@@ -249,6 +264,9 @@
   <data name="&gt;&gt;ModelQuality.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
+  <metadata name="ModelQualityBox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="ModelQualityBox.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -279,6 +297,9 @@
   <data name="&gt;&gt;ModelQualityBox.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <metadata name="DisableRagdollPhys.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="DisableRagdollPhys.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -306,6 +327,9 @@
   <data name="&gt;&gt;DisableRagdollPhys.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <metadata name="DisableShadows.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="DisableShadows.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -333,6 +357,9 @@
   <data name="&gt;&gt;DisableShadows.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <metadata name="ReduceWaterQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="ReduceWaterQuality.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -360,6 +387,9 @@
   <data name="&gt;&gt;ReduceWaterQuality.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <metadata name="DisableEffects.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="DisableEffects.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -387,6 +417,9 @@
   <data name="&gt;&gt;DisableEffects.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <metadata name="EnableTrilinearF.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="EnableTrilinearF.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -414,6 +447,9 @@
   <data name="&gt;&gt;EnableTrilinearF.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <metadata name="DisableDecals.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="DisableDecals.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -441,6 +477,9 @@
   <data name="&gt;&gt;DisableDecals.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <metadata name="DisableShaderE.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="DisableShaderE.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -468,6 +507,9 @@
   <data name="&gt;&gt;DisableShaderE.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="DisableBreaks.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="DisableBreaks.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -495,6 +537,9 @@
   <data name="&gt;&gt;DisableBreaks.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="EnableHardOpt.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="EnableHardOpt.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -522,6 +567,9 @@
   <data name="&gt;&gt;EnableHardOpt.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="DisableSmallObjs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="DisableSmallObjs.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -549,6 +597,9 @@
   <data name="&gt;&gt;DisableSmallObjs.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="EnablePreload.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="EnablePreload.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -576,6 +627,9 @@
   <data name="&gt;&gt;EnablePreload.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="DisableVSync.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="DisableVSync.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -604,6 +658,9 @@
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">

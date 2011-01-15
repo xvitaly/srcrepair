@@ -192,8 +192,7 @@ namespace srcrepair
         private void HEd_M_RestDef_Click(object sender, EventArgs e)
         {
             // Restore default
-            DialogResult UserConfirmation = MessageBox.Show(frmMainW.RM.GetString("AHE_RestDef"), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (UserConfirmation == DialogResult.Yes)
+            if (MessageBox.Show(frmMainW.RM.GetString("AHE_RestDef"), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 HEd_Table.Rows.Clear();
                 HEd_Table.Rows.Add("127.0.0.1", "localhost");

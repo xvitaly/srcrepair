@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="iconApp.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="iconApp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -301,6 +304,9 @@
   <data name="&gt;&gt;iconApp.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <metadata name="labelProductName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="labelProductName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -331,6 +337,9 @@
   <data name="&gt;&gt;labelProductName.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <metadata name="labelVersion.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="labelVersion.Location" type="System.Drawing.Point, System.Drawing">
     <value>131, 36</value>
   </data>
@@ -355,6 +364,9 @@
   <data name="&gt;&gt;labelVersion.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <metadata name="labelCompanyName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="labelCompanyName.Location" type="System.Drawing.Point, System.Drawing">
     <value>131, 52</value>
   </data>
@@ -379,6 +391,9 @@
   <data name="&gt;&gt;labelCompanyName.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="btnContact.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnContact.Location" type="System.Drawing.Point, System.Drawing">
     <value>131, 69</value>
   </data>
@@ -403,6 +418,9 @@
   <data name="&gt;&gt;btnContact.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="textBoxDescription.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="textBoxDescription.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 189</value>
   </data>
@@ -443,6 +461,9 @@ Translators:
   <data name="&gt;&gt;textBoxDescription.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="labelFlags.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="labelFlags.Location" type="System.Drawing.Point, System.Drawing">
     <value>131, 95</value>
   </data>
@@ -467,6 +488,9 @@ Translators:
   <data name="&gt;&gt;labelFlags.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="labelCopyright.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="labelCopyright.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 152</value>
   </data>
@@ -491,6 +515,9 @@ Translators:
   <data name="&gt;&gt;labelCopyright.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="okButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="okButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>89, 297</value>
   </data>
@@ -516,6 +543,9 @@ Translators:
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
