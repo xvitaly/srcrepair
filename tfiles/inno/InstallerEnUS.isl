@@ -1,7 +1,7 @@
 [CustomMessages]
-InstLZMAPlugin=Install LZMA comperession plugin
+InstLZMAPlugin=Install LZMA compression plugin
 AdvFeatGroupDesc=Advanced features:
-InstCreateLocShcuts=Create localized versions shortcuts
+InstCreateLocShcuts=Create shortcuts for localized versions
 ShcLicenseAgrr=License agreement
 ShcReadme=Readme
 ShcNETFx=Install Microsoft .NET Framework 4
