@@ -6,13 +6,13 @@
 ; NOTE: The value of AppId uniquely identifies this application.
 ; Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{FD3AA10F-074D-457B-822B-EECF180D6EAB}
+AppId={{77A71DAB-56AA-4F33-BDE8-F00798468B9D}
 AppName=SRC Repair
-AppVerName=SRC Repair Beta
+AppVerName=SRC Repair
 AppPublisher=EasyCoding Team
 AppPublisherURL=http://www.easycoding.org/projects/srcrepair
 ; AppVersion отображается в Установка/Удаление программ в дополнительной информации.
-AppVersion=0.1.0.146
+AppVersion=1.0.0.200
 AppSupportURL=http://www.easycoding.org/projects/srcrepair
 AppUpdatesURL=http://www.easycoding.org/projects/srcrepair
 DefaultDirName={pf}\SRC Repair
@@ -22,7 +22,7 @@ LicenseFile=E:\VSBuilds\GPL.txt
 ;InfoBeforeFile=E:\VSBuilds\readme.txt
 OutputDir=E:\VSBuilds
 ;OutputBaseFilename=SRCRepair_Setup
-OutputBaseFilename=srcrepair_beta_146
+OutputBaseFilename=srcrepair_10_final
 SetupIconFile=E:\SVN\srcrepair\srcrepair\TF2Repair.ico
 ;UninstallDisplayIcon={app}\MyProg.exe,1
 Compression=lzma2
@@ -34,22 +34,22 @@ SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64
 
 ; Тут указываем данные, которые будут добавлены в свойства установщика
-VersionInfoVersion=0.1.0.146
-VersionInfoDescription=Программа установки SRC Repair
+VersionInfoVersion=1.0.0.200
+VersionInfoDescription=SRC Repair Setup
 VersionInfoCopyright=(c) 2005-2011 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
 
 [Languages]
-;Name: "english"; MessagesFile: "compiler:Default.isl"
-Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"
+Name: "english"; MessagesFile: "compiler:Default.isl,InstallerEnUS.isl"
+Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl,InstallerRus.isl"
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 ;Name: "copylicence"; Description: "Скопировать лицензионное соглашение в папку SRC Repair"; GroupDescription: "Дополнительные возможности:"
 ;Name: "copyreadme"; Description: "Скопировать файл ReadMe в папку SRC Repair"; GroupDescription: "Дополнительные возможности:"
-Name: "inst7z"; Description: "Установить плагин поддержки LZMA сжатия"; GroupDescription: "Дополнительные возможности:"
-Name: "betashortuts"; Description: "Создать ярлыки запуска локализованных версий"; GroupDescription: "Дополнительные возможности:"
+Name: "inst7z"; Description: "{cm:InstLZMAPlugin}"; GroupDescription: "{cm:AdvFeatGroupDesc}"
+Name: "betashortuts"; Description: "{cm:InstCreateLocShcuts}"; GroupDescription: "{cm:AdvFeatGroupDesc}"
 
 [Files]
 ; Устанавливаем readme и файл лицензии...
@@ -76,8 +76,8 @@ Source: "E:\VSBuilds\nfx\*"; DestDir: "{app}\nfx\"; Flags: ignoreversion recurse
 ; Создаём ярлык для приложения...
 Name: "{group}\SRC Repair"; Filename: "{app}\srcrepair.exe"
 ; Создаём ярлыки для запуска локализованных версий (только если пользователь выбрал этот пункт)...
-Name: "{group}\SRC Repair (русская версия)"; Filename: "{app}\srcrepair.exe"; Parameters: "/russian"; Tasks: betashortuts
-Name: "{group}\SRC Repair (English)"; Filename: "{app}\srcrepair.exe"; Parameters: "/english"; Tasks: betashortuts
+Name: "{group}\SRC Repair ({cm:ShcMLnRU})"; Filename: "{app}\srcrepair.exe"; Parameters: "/russian"; Tasks: betashortuts
+Name: "{group}\SRC Repair ({cm:ShcMLnEN})"; Filename: "{app}\srcrepair.exe"; Parameters: "/english"; Tasks: betashortuts
 ; Создаём стандартные ярлыки для справки и удаления...
 Name: "{group}\{cm:ProgramOnTheWeb,SRC Repair}"; Filename: "http://www.easycoding.org/projects/srcrepair"
 Name: "{group}\{cm:UninstallProgram,SRC Repair}"; Filename: "{uninstallexe}"
@@ -86,12 +86,12 @@ Name: "{commondesktop}\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: desk
 ; Создаём ярлык на панели быстрого запуска (если выбрано)...
 Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: quicklaunchicon
 ; Создаём ярлыки для файлов с лицензионным соглашением и ReadMe, но только если эти опции выбраны...
-Name: "{group}\Лицензионное соглашение"; Filename: "{app}\GPL.txt"
-Name: "{group}\Файл ReadMe"; Filename: "{app}\readme.txt"
-Name: "{group}\Установить .NET Framework 4"; Filename: "{app}\nfx\dotNetFx40_Full_setup.exe"
+Name: "{group}\{cm:ShcLicenseAgrr}"; Filename: "{app}\GPL.txt"
+Name: "{group}\{cm:ShcReadme}"; Filename: "{app}\readme.txt"
+Name: "{group}\{cm:ShcNETFx}"; Filename: "{app}\nfx\dotNetFx40_Full_setup.exe"
 
 [Run]
-Filename: "{app}\nfx\dotNetFx40_Full_setup.exe"; Description: "Установить .NET Framework 4"; Flags: nowait postinstall skipifsilent unchecked
+Filename: "{app}\nfx\dotNetFx40_Full_setup.exe"; Description: "{cm:ShcNETFx}"; Flags: nowait postinstall skipifsilent unchecked
 Filename: "{app}\srcrepair.exe"; Description: "{cm:LaunchProgram,SRC Repair}"; Flags: nowait postinstall skipifsilent
 
 
