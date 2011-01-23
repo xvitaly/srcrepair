@@ -1845,6 +1845,18 @@ namespace srcrepair
             }
             else
             {
+                // Зададим стандартное имя (см. issue 21)...
+                if (!(File.Exists(GV.FullCfgPath + "autoexec.cfg")))
+                {
+                    // Файл autoexec.cfg не существует, поэтому предложим это имя...
+                    CE_SaveCfgDialog.FileName = "autoexec.cfg";
+                }
+                else
+                {
+                    // Файл существует, поэтому предложим стандартное имя безымянного конфига...
+                    CE_SaveCfgDialog.FileName = RM.GetString("UnnamedFileName");
+                }
+
                 // Файл не был открыт. Нужно сохранить и дать имя...
                 if (CE_SaveCfgDialog.ShowDialog() == DialogResult.OK) // Отображаем стандартный диалог сохранения файла...
                 {
