@@ -412,7 +412,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Close {0}? Any unsaved changes will be lost!.
+        ///   Looks up a localized string similar to Close {0}?.
         /// </summary>
         internal static string FrmCloseQuery {
             get {
