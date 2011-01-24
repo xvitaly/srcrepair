@@ -145,7 +145,7 @@ namespace srcrepair
             }
 
             // Сгенерируем полный путь к файлу hosts...
-            HostsFilePath = frmMainW.IncludeTrDelim(HostsFilePath) + "hosts";
+            HostsFilePath = CoreLib.IncludeTrDelim(HostsFilePath) + "hosts";
 
             try
             {

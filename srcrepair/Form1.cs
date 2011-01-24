@@ -27,10 +27,7 @@ using System.Windows.Forms; // для работы с формами...
 using System.IO; // для работы с файлами...
 using System.Diagnostics; // для управления процессами...
 using Microsoft.Win32; // для работы с реестром...
-using System.Text.RegularExpressions; // для работы с регулярными выражениями...
 using System.Reflection; // для управления сборками...
-using System.Security.Principal; // для определения прав админа...
-using System.Threading; // для управления потоками...
 using System.Globalization; // для управления локализациями...
 using System.Resources; // для управления ресурсами...
 
@@ -57,297 +54,19 @@ namespace srcrepair
         #region Internal Functions
 
         /*
-         * Реализуем аналог полезной дельфийской фукнции IncludeTrailingPathDelimiter,
-         * которая возвращает строку, добавив на конец обратный слэш если его нет,
-         * либо возвращает ту же строку, если обратный слэш уже присутствует.
-         */
-        public static string IncludeTrDelim(string SourceStr)
-        {
-            // Проверяем наличие закрывающего слэша у строки, переданной как параметр...
-            if (SourceStr[SourceStr.Length - 1] != Path.DirectorySeparatorChar)
-            {
-                // Закрывающего слэша не найдено, поэтому добавим его...
-                SourceStr += Path.DirectorySeparatorChar.ToString();
-            }
-
-            // Возвращаем результат...
-            return SourceStr;
-        }
-
-        /*
-         * Эта функция получает из реестра и возвращает путь к установленному
-         * клиенту Steam.
-         */
-        private static string GetSteamPath()
-        {
-            // Подключаем реестр и открываем ключ только для чтения...
-            RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"Software\Valve\Steam", false);
-
-            // Создаём строку для хранения результатов...
-            string ResString = "";
-
-            // Проверяем чтобы ключ реестр существовал и был доступен...
-            if (ResKey != null)
-            {
-                // Получаем значение открытого ключа...
-                ResString = (string)ResKey.GetValue("InstallPath");
-
-                // Проверяем чтобы значение существовало...
-                if (String.IsNullOrEmpty(ResString))
-                {
-                    // Значение не существует, поэтому сгенерируем исключение для обработки в основном коде...
-                    throw new System.NullReferenceException("Exception: No InstallPath value detected! Please run Steam.");
-                }
-            }
-
-            // Закрываем открытый ранее ключ реестра...
-            ResKey.Close();
-
-            // Возвращаем результат...
-            return ResString;
-        }
-
-        /*
-         * Эта функция возвращает PID процесса если он был найден в памяти и
-         * завершает, либо 0 если процесс не был найден.
-         */
-        private static int ProcessTerminate(string ProcessName, bool ShowConfirmationMsg)
-        {
-            // Обнуляем PID...
-            int ProcID = 0;
-
-            // Фильтруем список процессов по заданной маске в параметрах и вставляем в массив...
-            Process[] LocalByName = Process.GetProcessesByName(ProcessName);
-
-            // Запускаем цикл по поиску и завершению процессов...
-            foreach (Process ResName in LocalByName)
-            {
-                if (ShowConfirmationMsg) // Проверим, нужно ли подтверждение...
-                {
-                    // Запросим подтверждение...
-                    if (MessageBox.Show(String.Format(RM.GetString("ST_KillMessage"), ResName.ProcessName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        ProcID = ResName.Id;
-                        ResName.Kill();
-                    }
-                }
-                else
-                {
-                    // Подтверждение не требуется, завершаем процесс...
-                    ProcID = ResName.Id; // Сохраняем PID процесса...
-                    ResName.Kill(); // Завершаем процесс...
-                }
-            }
-
-            // Возвращаем PID как результат функции...
-            return ProcID;
-        }
-
-        /*
-         * Эта функция очищает блобы (файлы с расширением *.blob) из каталога Steam.
-         * В качестве параметра ей передаётся полный путь к каталогу Steam.
-         */
-        private static void CleanBlobsNow(string SteamPath)
-        {
-            // Инициализируем буферную переменную, в которой будем хранить имя файла...
-            string FileName;
-
-            // Генерируем имя первого кандидата на удаление с полным путём до него...
-            FileName = SteamPath + "AppUpdateStats.blob";
-
-            // Проверяем существует ли данный файл...
-            if (File.Exists(FileName))
-            {
-                // Удаляем...
-                File.Delete(FileName);
-            }
-
-            // Аналогично генерируем имя второго кандидата...
-            FileName = SteamPath + "ClientRegistry.blob";
-
-            // Проверяем, существует ли файл...
-            if (File.Exists(FileName))
-            {
-                // Удаляем...
-                File.Delete(FileName);
-            }
-        }
-
-        /*
-         * Эта функция удаляет значения реестра, отвечающие за настройки клиента
-         * Steam, а также записывает значение языка.
-         */
-        private static void CleanRegistryNow(int LangCode)
-        {
-            // Удаляем ключ HKEY_LOCAL_MACHINE\Software\Valve рекурсивно...
-            Registry.LocalMachine.DeleteSubKeyTree(@"Software\Valve", false);
-
-            // Удаляем ключ HKEY_CURRENT_USER\Software\Valve рекурсивно...
-            Registry.CurrentUser.DeleteSubKeyTree(@"Software\Valve", false);
-
-            // Начинаем вставлять значение языка клиента Steam...
-            // Инициализируем буферную переменную для хранения названия языка...
-            string XLang;
-
-            // Генерируем...
-            switch (LangCode)
-            {
-                case 0:
-                    XLang = "english";
-                    break;
-                case 1:
-                    XLang = "russian";
-                    break;
-                default:
-                    XLang = "english";
-                    break;
-            }
-
-            // Подключаем реестр и создаём ключ HKEY_CURRENT_USER\Software\Valve\Steam...
-            RegistryKey RegLangKey = Registry.CurrentUser.CreateSubKey(@"Software\Valve\Steam");
-
-            // Если не было ошибок, записываем значение...
-            if (RegLangKey != null)
-            {
-                // Записываем значение в реестр...
-                RegLangKey.SetValue("language", XLang);
-            }
-
-            // Закрываем ключ...
-            RegLangKey.Close();
-        }
-
-        /*
-         * Эта функция получает из реестра значение нужной нам переменной
-         * для указанного игрового приложения.
-         */
-        private static int GetSRCDWord(string CVar, string CApp)
-        {
-            // Подключаем реестр и открываем ключ только для чтения...
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Source\" + CApp + @"\Settings", false);
-
-            // Создаём переменную для хранения результатов...
-            int ResInt = -1;
-
-            // Проверяем чтобы ключ реестр существовал и был доступен...
-            if (ResKey != null)
-            {
-                // Получаем значение открытого ключа...
-                ResInt = (int)ResKey.GetValue(CVar);
-            }
-
-            // Закрываем открытый ранее ключ реестра...
-            ResKey.Close();
-
-            // Возвращаем результат...
-            return ResInt;
-        }
-
-        /*
-         * Эта процедура записывает в реестр новое значение нужной нам переменной
-         * для указанного игрового приложения.
-         */
-        private static void WriteSRCDWord(string CVar, int CValue, string CApp)
-        {
-            // Подключаем реестр и открываем ключ для чтения и записи...
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Source\" + CApp + @"\Settings", true);
-
-            // Записываем в реестр...
-            ResKey.SetValue(CVar, CValue, RegistryValueKind.DWord);
-
-            // Закрываем открытый ранее ключ реестра...
-            ResKey.Close();
-        }
-
-        /*
-         * Эта функция проверяет есть ли у пользователя, с правами которого запускается
-         * программа, привилегии локального администратора.
-         */
-        private static bool IsCurrentUserAdmin()
-        {
-            bool Result; // Переменная для хранения результата...
-            try
-            {
-                // Получаем сведения...
-                WindowsPrincipal UP = new WindowsPrincipal(WindowsIdentity.GetCurrent());
-                // Проверяем, состоит ли пользователь в группе администраторов...
-                Result = UP.IsInRole(WindowsBuiltInRole.Administrator);
-            }
-            catch
-            {
-                // Произошло исключение. Пользователь не администратор...
-                Result = false;
-            }
-            // Возвращает результат...
-            return Result;
-        }
-
-        /*
-         * Эта функция ищет указанную строку в массиве строк и возвращает её индекс,
-         * либо -1 если такой строки в массиве не найдено.
-         */
-        private static int FindStringInStrArray(string[] SourceStr, string What)
-        {
-            int StrNum;
-            int StrIndex = -1;
-            for (StrNum = 0; StrNum < SourceStr.Length; StrNum++)
-            {
-                if (SourceStr[StrNum] == What)
-                {
-                    StrIndex = StrNum;
-                }
-            }
-            return StrIndex;
-        }
-
-        /*
-         * Эта функция ищет в массиве строк нужный нам параметр командной строки
-         * и возвращает true если параметр был найден, либо false если нет.
-         */
-        private static bool FindCommandLineSwitch(string[] Source, string CLineArg)
-        {
-            if (FindStringInStrArray(Source, CLineArg) != -1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        /*
          * Эта функция устанавливает требуемый FPS-конфиг...
          */
-        private static void InstallConfigNow(string ConfName)
+        private void InstallConfigNow(string ConfName)
         {
             // Устанавливаем...
             File.Copy(GV.FullAppPath + @"cfgs\" + GV.SmallAppName + @"\" + ConfName, GV.FullCfgPath + "autoexec.cfg", true);
         }
 
         /*
-         * Эта функция генерирует ДДММГГЧЧММСС из указанного времени в строку.
-         * Применяется для служебных целей.
-         */
-        public static string WriteDateToString(DateTime XDate, bool MicroDate)
-        {
-            if (MicroDate)
-            {
-                // Возвращаем строку с результатом (краткой датой)...
-                return XDate.Day.ToString() + XDate.Month.ToString() + XDate.Year.ToString() + XDate.Hour.ToString() + XDate.Minute.ToString() + XDate.Second.ToString();
-            }
-            else
-            {
-                // Возвращаем строку с результатом (датой по ГОСТу)...
-                return XDate.Day.ToString() + "." + XDate.Month.ToString() + "." + XDate.Year.ToString() + " " + XDate.Hour.ToString() + ":" + XDate.Minute.ToString() + ":" + XDate.Second.ToString();
-            }
-        }
-
-        /*
          * Эта функция создаёт резервную копию конфига, имя которого передано
          * в параметре.
          */
-        private static void CreateBackUpNow(string ConfName)
+        private void CreateBackUpNow(string ConfName)
         {
             // Сначала проверим, существует ли запрошенный файл...
             if (File.Exists(GV.FullCfgPath + ConfName))
@@ -362,7 +81,7 @@ namespace srcrepair
                 try
                 {
                     // Копируем оригинальный файл в файл бэкапа...
-                    File.Copy(GV.FullCfgPath + ConfName, GV.FullBackUpDirPath + ConfName + "." + WriteDateToString(DateTime.Now, true), true);
+                    File.Copy(GV.FullCfgPath + ConfName, GV.FullBackUpDirPath + ConfName + "." + CoreLib.WriteDateToString(DateTime.Now, true), true);
                 }
                 catch
                 {
@@ -372,66 +91,8 @@ namespace srcrepair
             }
         }
 
-        /*
-         * Эта функция проверяет наличие не-ASCII-символов в строке. Возвращает True
-         * если не обнаружено запрещённых симолов и False - если они были обнаружены.
-         */
-        private static bool CheckNonASCII(string Path)
-        {
-            // Проверяем строку на соответствие регулярному выражению...
-            //return Regex.IsMatch(Path, "");
-            bool Result = true; // переменная для промежуточного результата...
-            for (int i = 1; i < Path.Length; i++) // запускаем цикл...
-            {
-                // Проверяем, соответствует ли символ шаблону допустимых символов...
-                if (!(Regex.IsMatch(Path[i].ToString(), "[0-9a-zA-Z :()\\\\]")))
-                {
-                    // Не соответствует, следовательно найден недопустимый.
-                    // Вернём False и прекратим цикл, т.к. дальнейшая проверка бессмысленна...
-                    Result = false;
-                    break;
-                }
-            }
-            // Возвращаем результат функции...
-            return Result;
-        }
-
-        /*
-         * Эта функция запускает указанное в параметре SAppName приложение на
-         * выполнение с параметрами, указанными в SParameters и ждёт его завершения...
-         */
-        public static void StartProcessAndWait(string SAppName, string SParameters)
-        {
-            // Запускаем процесс...
-            Process NewProcess = Process.Start(SAppName, SParameters);
-            // Ждём завершения процесса...
-            while (!(NewProcess.HasExited))
-            {
-                // Заставляем приложение "заснуть"...
-                Thread.Sleep(600);
-            }
-        }
-
-        /*
-         * Эта функция удаляет файлы в заданной папке по указанной в параметре
-         * CleanupMask маске.
-         */
-        private static void CleanDirectoryNow(string DirPath, string CleanupMask)
-        {
-            // Открываем каталог...
-            DirectoryInfo DInfo = new DirectoryInfo(DirPath);
-            // Считываем список файлов по заданной маске...
-            FileInfo[] DirList = DInfo.GetFiles(CleanupMask);
-            // Начинаем обход массива...
-            foreach (FileInfo DItem in DirList)
-            {
-                // Обрабатываем найденное...
-                DItem.Delete(); // Удаляем файл...
-            }
-        }
-
         // Источник данной функции: http://www.csharp-examples.net/inputbox/ //
-        private static DialogResult InputBox(string title, string promptText, ref string value)
+        private DialogResult InputBox(string title, string promptText, ref string value)
         {
             Form form = new Form();
             Label label = new Label();
@@ -505,14 +166,14 @@ namespace srcrepair
          * Эта функция используется для создания резервной копии выбранной ветки
          * реестра в переданный в параметре файл.
          */
-        private static void CreateRegBackUpNow(string RKey, string FileName)
+        private void CreateRegBackUpNow(string RKey, string FileName)
         {
             if (MessageBox.Show(RM.GetString("BU_RegCreate"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 // Генерируем строку с параметрами...
-                string Params = @"/ea """ + GV.FullBackUpDirPath + FileName + "_" + WriteDateToString(DateTime.Now, true) + @".reg""" + " " + RKey;
+                string Params = @"/ea """ + GV.FullBackUpDirPath + FileName + "_" + CoreLib.WriteDateToString(DateTime.Now, true) + @".reg""" + " " + RKey;
                 // Запускаем и ждём завершения...
-                StartProcessAndWait("regedit.exe", Params);
+                CoreLib.StartProcessAndWait("regedit.exe", Params);
             }
         }
 
@@ -521,7 +182,7 @@ namespace srcrepair
          * переменной, получая эту информацию из ресурса CVList с учётом
          * локализации.
          */
-        private static string GetCVDescription(string CVar)
+        private string GetCVDescription(string CVar)
         {
             ResourceManager DM = new ResourceManager("srcrepair.CVList", typeof(frmMainW).Assembly);
             return DM.GetString(CVar);
@@ -557,10 +218,10 @@ namespace srcrepair
             
             // Получаем путь к каталогу приложения...
             Assembly Assmbl = Assembly.GetEntryAssembly();
-            GV.FullAppPath = IncludeTrDelim(Path.GetDirectoryName(Assmbl.Location));
+            GV.FullAppPath = CoreLib.IncludeTrDelim(Path.GetDirectoryName(Assmbl.Location));
 
             // Проверяем, запущена ли программа с правами администратора...
-            if (!(IsCurrentUserAdmin()))
+            if (!(CoreLib.IsCurrentUserAdmin()))
             {
                 // Программа запущена с правами пользователя, поэтому принимаем меры...
                 // Выводим сообщение об этом...
@@ -579,16 +240,16 @@ namespace srcrepair
             this.Text = String.Format(this.Text, GV.AppVersionInfo);
 
             // Найдём и завершим в памяти процесс Steam...
-            if (ProcessTerminate("Steam", true) != 0)
+            if (CoreLib.ProcessTerminate("Steam", true, RM.GetString("ST_KillMessage")) != 0)
             {
                 MessageBox.Show(RM.GetString("PS_ProcessTerminated"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             // Ищем параметр командной строки path...
-            if (FindCommandLineSwitch(CMDLineArgs, "/path"))
+            if (CoreLib.FindCommandLineSwitch(CMDLineArgs, "/path"))
             {
                 // Параметр найден, считываем следующий за ним параметр с путём к Steam...
-                GV.FullSteamPath = IncludeTrDelim(CMDLineArgs[FindStringInStrArray(CMDLineArgs, "/path") + 1]);
+                GV.FullSteamPath = CoreLib.IncludeTrDelim(CMDLineArgs[CoreLib.FindStringInStrArray(CMDLineArgs, "/path") + 1]);
             }
             else
             {
@@ -596,7 +257,7 @@ namespace srcrepair
                 try
                 {
                     // Получаем из реестра...
-                    GV.FullSteamPath = IncludeTrDelim(GetSteamPath());
+                    GV.FullSteamPath = CoreLib.IncludeTrDelim(CoreLib.GetSteamPath());
                 }
                 catch
                 {
@@ -606,7 +267,7 @@ namespace srcrepair
                     FldrBrwse.Description = RM.GetString("SteamPathEnterText"); // Указываем текст в диалоге поиска каталога...
                     if (FldrBrwse.ShowDialog() == DialogResult.OK) // Отображаем стандартный диалог поиска каталога...
                     {
-                        Buf = IncludeTrDelim(FldrBrwse.SelectedPath);
+                        Buf = CoreLib.IncludeTrDelim(FldrBrwse.SelectedPath);
                         if (!(File.Exists(Buf + "Steam.exe")))
                         {
                             MessageBox.Show(RM.GetString("SteamPathEnterErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -626,13 +287,13 @@ namespace srcrepair
             }
 
             // Ищем параметр командной строки login...
-            if (FindCommandLineSwitch(CMDLineArgs, "/login"))
+            if (CoreLib.FindCommandLineSwitch(CMDLineArgs, "/login"))
             {
                 // Параметр найден, добавим его и отключим автоопределение...
                 try
                 {
                     // Добавляем параметр в ComboBox...
-                    LoginSel.Items.Add((string)CMDLineArgs[FindStringInStrArray(CMDLineArgs, "/login") + 1]);
+                    LoginSel.Items.Add((string)CMDLineArgs[CoreLib.FindStringInStrArray(CMDLineArgs, "/login") + 1]);
                 }
                 catch
                 {
@@ -699,7 +360,7 @@ namespace srcrepair
             PS_RSteamPath.Text = GV.FullSteamPath;
             
             // Проверим на наличие запрещённых символов в пути к установленному клиенту Steam...
-            if (!(CheckNonASCII(GV.FullSteamPath)))
+            if (!(CoreLib.CheckNonASCII(GV.FullSteamPath)))
             {
                 // Запрещённые символы найдены!
                 PS_PathDetector.Text = RM.GetString("SteamNonASCIITitle");
@@ -747,7 +408,7 @@ namespace srcrepair
                 if ((PS_CleanBlobs.Checked) || (PS_CleanRegistry.Checked))
                 {
                     // Найдём и завершим работу клиента Steam...
-                    if (ProcessTerminate("Steam", false) != 0)
+                    if (CoreLib.ProcessTerminate("Steam", false, "") != 0)
                     {
                         MessageBox.Show(RM.GetString("PS_ProcessDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
@@ -756,7 +417,7 @@ namespace srcrepair
                     if (PS_CleanBlobs.Checked)
                     {
                         // Чистим блобы...
-                        CleanBlobsNow(GV.FullSteamPath);
+                        CoreLib.CleanBlobsNow(GV.FullSteamPath);
                     }
 
                     // Проверяем нужно ли чистить реестр...
@@ -766,13 +427,13 @@ namespace srcrepair
                         if (PS_SteamLang.SelectedIndex != -1)
                         {
                             // Всё в порядке, чистим реестр...
-                            CleanRegistryNow(PS_SteamLang.SelectedIndex);
+                            CoreLib.CleanRegistryNow(PS_SteamLang.SelectedIndex);
                         }
                         else
                         {
                             // Пользователь не выбрал язык, поэтому будем использовать английский...
                             MessageBox.Show(RM.GetString("PS_NoLangSelected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            CleanRegistryNow(0);
+                            CoreLib.CleanRegistryNow(0);
                         }
                     }
 
@@ -930,8 +591,8 @@ namespace srcrepair
             }
 
             // Генерируем полный путь до каталога управляемого приложения...
-            GV.GamePath = IncludeTrDelim(GV.FullSteamPath + @"steamapps\" + ptha + @"\" + GV.FullAppName);
-            GV.FullGamePath = IncludeTrDelim(GV.GamePath + GV.SmallAppName);
+            GV.GamePath = CoreLib.IncludeTrDelim(GV.FullSteamPath + @"steamapps\" + ptha + @"\" + GV.FullAppName);
+            GV.FullGamePath = CoreLib.IncludeTrDelim(GV.GamePath + GV.SmallAppName);
 
             // Заполняем другие служебные переменные...
             GV.FullCfgPath = GV.FullGamePath + @"cfg\";
@@ -951,7 +612,7 @@ namespace srcrepair
                 // Получаем значение разрешения по горизонтали
                 try
                 {
-                    GT_ResHor.Value = GetSRCDWord("ScreenWidth", GV.SmallAppName);
+                    GT_ResHor.Value = CoreLib.GetSRCDWord("ScreenWidth", GV.SmallAppName);
                 }
                 catch
                 {
@@ -961,7 +622,7 @@ namespace srcrepair
                 // Получаем значение разрешения по вертикали
                 try
                 {
-                    GT_ResVert.Value = GetSRCDWord("ScreenHeight", GV.SmallAppName);
+                    GT_ResVert.Value = CoreLib.GetSRCDWord("ScreenHeight", GV.SmallAppName);
                 }
                 catch
                 {
@@ -971,7 +632,7 @@ namespace srcrepair
                 // Получаем режим окна (ScreenWindowed): 1-window, 0-fullscreen
                 try
                 {
-                    GT_ScreenType.SelectedIndex = GetSRCDWord("ScreenWindowed", GV.SmallAppName);
+                    GT_ScreenType.SelectedIndex = CoreLib.GetSRCDWord("ScreenWindowed", GV.SmallAppName);
                 }
                 catch
                 {
@@ -981,7 +642,7 @@ namespace srcrepair
                 // Получаем детализацию моделей (r_rootlod): 0-high, 1-med, 2-low
                 try
                 {
-                    switch (GetSRCDWord("r_rootlod", GV.SmallAppName))
+                    switch (CoreLib.GetSRCDWord("r_rootlod", GV.SmallAppName))
                     {
                         case 0: GT_ModelQuality.SelectedIndex = 2;
                             break;
@@ -999,7 +660,7 @@ namespace srcrepair
                 // Получаем детализацию текстур (mat_picmip): 0-high, 1-med, 2-low
                 try
                 {
-                    switch (GetSRCDWord("mat_picmip", GV.SmallAppName))
+                    switch (CoreLib.GetSRCDWord("mat_picmip", GV.SmallAppName))
                     {
                         case 0: GT_TextureQuality.SelectedIndex = 2;
                             break;
@@ -1017,7 +678,7 @@ namespace srcrepair
                 // Получаем настройки шейдеров (mat_reducefillrate): 0-high, 1-low
                 try
                 {
-                    switch (GetSRCDWord("mat_reducefillrate", GV.SmallAppName))
+                    switch (CoreLib.GetSRCDWord("mat_reducefillrate", GV.SmallAppName))
                     {
                         case 0: GT_ShaderQuality.SelectedIndex = 1;
                             break;
@@ -1033,12 +694,12 @@ namespace srcrepair
                 // Начинаем работать над отражениями (здесь сложнее)
                 try
                 {
-                    switch (GetSRCDWord("r_waterforceexpensive", GV.SmallAppName))
+                    switch (CoreLib.GetSRCDWord("r_waterforceexpensive", GV.SmallAppName))
                     {
                         case 0: GT_WaterQuality.SelectedIndex = 0;
                             break;
                         case 1:
-                            switch (GetSRCDWord("r_waterforcereflectentities", GV.SmallAppName))
+                            switch (CoreLib.GetSRCDWord("r_waterforcereflectentities", GV.SmallAppName))
                             {
                                 case 0: GT_WaterQuality.SelectedIndex = 1;
                                     break;
@@ -1056,7 +717,7 @@ namespace srcrepair
                 // Получаем настройки теней (r_shadowrendertotexture): 0-low, 1-high
                 try
                 {
-                    switch (GetSRCDWord("r_shadowrendertotexture", GV.SmallAppName))
+                    switch (CoreLib.GetSRCDWord("r_shadowrendertotexture", GV.SmallAppName))
                     {
                         case 0: GT_ShadowQuality.SelectedIndex = 0;
                             break;
@@ -1072,7 +733,7 @@ namespace srcrepair
                 // Получаем настройки коррекции цвета (mat_colorcorrection): 0-off, 1-on
                 try
                 {
-                    switch (GetSRCDWord("mat_colorcorrection", GV.SmallAppName))
+                    switch (CoreLib.GetSRCDWord("mat_colorcorrection", GV.SmallAppName))
                     {
                         case 0: GT_ColorCorrectionT.SelectedIndex = 0;
                             break;
@@ -1089,7 +750,7 @@ namespace srcrepair
                 // 2x MSAA - 2:0; 4xMSAA - 4:0; 8xCSAA - 4:2; 16xCSAA - 4:4; 8xMSAA - 8:0; 16xQ CSAA - 8:2;
                 try
                 {
-                    switch (GetSRCDWord("mat_antialias", GV.SmallAppName))
+                    switch (CoreLib.GetSRCDWord("mat_antialias", GV.SmallAppName))
                     {
                         case 0: GT_AntiAliasing.SelectedIndex = 0;
                             break;
@@ -1098,7 +759,7 @@ namespace srcrepair
                         case 2: GT_AntiAliasing.SelectedIndex = 1;
                             break;
                         case 4:
-                            switch (GetSRCDWord("mat_aaquality", GV.SmallAppName))
+                            switch (CoreLib.GetSRCDWord("mat_aaquality", GV.SmallAppName))
                             {
                                 case 0: GT_AntiAliasing.SelectedIndex = 2;
                                     break;
@@ -1109,7 +770,7 @@ namespace srcrepair
                             }
                             break;
                         case 8:
-                            switch (GetSRCDWord("mat_aaquality", GV.SmallAppName))
+                            switch (CoreLib.GetSRCDWord("mat_aaquality", GV.SmallAppName))
                             {
                                 case 0: GT_AntiAliasing.SelectedIndex = 5;
                                     break;
@@ -1127,10 +788,10 @@ namespace srcrepair
                 // Получаем настройки анизотропии (mat_forceaniso): 1-off, etc
                 try
                 {
-                    switch (GetSRCDWord("mat_forceaniso", GV.SmallAppName))
+                    switch (CoreLib.GetSRCDWord("mat_forceaniso", GV.SmallAppName))
                     {
                         case 1:
-                            switch (GetSRCDWord("mat_trilinear", GV.SmallAppName))
+                            switch (CoreLib.GetSRCDWord("mat_trilinear", GV.SmallAppName))
                             {
                                 case 0: GT_Filtering.SelectedIndex = 0;
                                     break;
@@ -1156,7 +817,7 @@ namespace srcrepair
                 // Получаем настройки вертикальной синхронизации (mat_vsync): 0-off, 1-on
                 try
                 {
-                    switch (GetSRCDWord("mat_vsync", GV.SmallAppName))
+                    switch (CoreLib.GetSRCDWord("mat_vsync", GV.SmallAppName))
                     {
                         case 0: GT_VSync.SelectedIndex = 0;
                             break;
@@ -1172,7 +833,7 @@ namespace srcrepair
                 // Получаем настройки размытия движения (MotionBlur): 0-off, 1-on
                 try
                 {
-                    switch (GetSRCDWord("MotionBlur", GV.SmallAppName))
+                    switch (CoreLib.GetSRCDWord("MotionBlur", GV.SmallAppName))
                     {
                         case 0: GT_MotionBlur.SelectedIndex = 0;
                             break;
@@ -1189,7 +850,7 @@ namespace srcrepair
                 // 80-DirectX 8.0; 81-DirectX 8.1; 90-DirectX 9.0; 95-DirectX 9.0c
                 try
                 {
-                    switch (GetSRCDWord("DXLevel_V1", GV.SmallAppName))
+                    switch (CoreLib.GetSRCDWord("DXLevel_V1", GV.SmallAppName))
                     {
                         case 80: GT_DxMode.SelectedIndex = 0;
                             break;
@@ -1209,7 +870,7 @@ namespace srcrepair
                 // Получаем настройки HDR (mat_hdr_level): 0-off,1-bloom,2-Full
                 try
                 {
-                    switch (GetSRCDWord("mat_hdr_level", GV.SmallAppName))
+                    switch (CoreLib.GetSRCDWord("mat_hdr_level", GV.SmallAppName))
                     {
                         case 0: GT_HDR.SelectedIndex = 0;
                             break;
@@ -1387,48 +1048,48 @@ namespace srcrepair
                     
                     // Запишем в реестр настройки разрешения экрана...
                     // По горизонтали (ScreenWidth):
-                    WriteSRCDWord("ScreenWidth", (int)GT_ResHor.Value, GV.SmallAppName);
+                    CoreLib.WriteSRCDWord("ScreenWidth", (int)GT_ResHor.Value, GV.SmallAppName);
 
                     // По вертикали (ScreenHeight):
-                    WriteSRCDWord("ScreenHeight", (int)GT_ResVert.Value, GV.SmallAppName);
+                    CoreLib.WriteSRCDWord("ScreenHeight", (int)GT_ResVert.Value, GV.SmallAppName);
 
                     // Запишем в реестр настройки режима запуска приложения (ScreenWindowed):
                     switch (GT_ScreenType.SelectedIndex)
                     {
-                        case 0: WriteSRCDWord("ScreenWindowed", 0, GV.SmallAppName);
+                        case 0: CoreLib.WriteSRCDWord("ScreenWindowed", 0, GV.SmallAppName);
                             break;
-                        case 1: WriteSRCDWord("ScreenWindowed", 1, GV.SmallAppName);
+                        case 1: CoreLib.WriteSRCDWord("ScreenWindowed", 1, GV.SmallAppName);
                             break;
                     }
 
                     // Запишем в реестр настройки детализации моделей (r_rootlod):
                     switch (GT_ModelQuality.SelectedIndex)
                     {
-                        case 0: WriteSRCDWord("r_rootlod", 2, GV.SmallAppName);
+                        case 0: CoreLib.WriteSRCDWord("r_rootlod", 2, GV.SmallAppName);
                             break;
-                        case 1: WriteSRCDWord("r_rootlod", 1, GV.SmallAppName);
+                        case 1: CoreLib.WriteSRCDWord("r_rootlod", 1, GV.SmallAppName);
                             break;
-                        case 2: WriteSRCDWord("r_rootlod", 0, GV.SmallAppName);
+                        case 2: CoreLib.WriteSRCDWord("r_rootlod", 0, GV.SmallAppName);
                             break;
                     }
 
                     // Запишем в реестр настройки детализации текстур (mat_picmip):
                     switch (GT_TextureQuality.SelectedIndex)
                     {
-                        case 0: WriteSRCDWord("mat_picmip", 2, GV.SmallAppName);
+                        case 0: CoreLib.WriteSRCDWord("mat_picmip", 2, GV.SmallAppName);
                             break;
-                        case 1: WriteSRCDWord("mat_picmip", 1, GV.SmallAppName);
+                        case 1: CoreLib.WriteSRCDWord("mat_picmip", 1, GV.SmallAppName);
                             break;
-                        case 2: WriteSRCDWord("mat_picmip", 0, GV.SmallAppName);
+                        case 2: CoreLib.WriteSRCDWord("mat_picmip", 0, GV.SmallAppName);
                             break;
                     }
 
                     // Запишем в реестр настройки качества шейдерных эффектов (mat_reducefillrate):
                     switch (GT_ShaderQuality.SelectedIndex)
                     {
-                        case 0: WriteSRCDWord("mat_reducefillrate", 1, GV.SmallAppName);
+                        case 0: CoreLib.WriteSRCDWord("mat_reducefillrate", 1, GV.SmallAppName);
                             break;
-                        case 1: WriteSRCDWord("mat_reducefillrate", 0, GV.SmallAppName);
+                        case 1: CoreLib.WriteSRCDWord("mat_reducefillrate", 0, GV.SmallAppName);
                             break;
                     }
 
@@ -1437,36 +1098,36 @@ namespace srcrepair
                     {
                         case 0:
                             // Simple reflections
-                            WriteSRCDWord("r_waterforceexpensive", 0, GV.SmallAppName);
-                            WriteSRCDWord("r_waterforcereflectentities", 0, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("r_waterforceexpensive", 0, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("r_waterforcereflectentities", 0, GV.SmallAppName);
                             break;
                         case 1:
                             // Reflect world
-                            WriteSRCDWord("r_waterforceexpensive", 1, GV.SmallAppName);
-                            WriteSRCDWord("r_waterforcereflectentities", 0, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("r_waterforceexpensive", 1, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("r_waterforcereflectentities", 0, GV.SmallAppName);
                             break;
                         case 2:
                             // Reflect all
-                            WriteSRCDWord("r_waterforceexpensive", 1, GV.SmallAppName);
-                            WriteSRCDWord("r_waterforcereflectentities", 1, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("r_waterforceexpensive", 1, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("r_waterforcereflectentities", 1, GV.SmallAppName);
                             break;
                     }
 
                     // Запишем в реестр настройки прорисовки теней (r_shadowrendertotexture):
                     switch (GT_ShadowQuality.SelectedIndex)
                     {
-                        case 0: WriteSRCDWord("r_shadowrendertotexture", 0, GV.SmallAppName);
+                        case 0: CoreLib.WriteSRCDWord("r_shadowrendertotexture", 0, GV.SmallAppName);
                             break;
-                        case 1: WriteSRCDWord("r_shadowrendertotexture", 1, GV.SmallAppName);
+                        case 1: CoreLib.WriteSRCDWord("r_shadowrendertotexture", 1, GV.SmallAppName);
                             break;
                     }
 
                     // Запишем в реестр настройки коррекции цвета (mat_colorcorrection):
                     switch (GT_ColorCorrectionT.SelectedIndex)
                     {
-                        case 0: WriteSRCDWord("mat_colorcorrection", 0, GV.SmallAppName);
+                        case 0: CoreLib.WriteSRCDWord("mat_colorcorrection", 0, GV.SmallAppName);
                             break;
-                        case 1: WriteSRCDWord("mat_colorcorrection", 1, GV.SmallAppName);
+                        case 1: CoreLib.WriteSRCDWord("mat_colorcorrection", 1, GV.SmallAppName);
                             break;
                     }
 
@@ -1475,52 +1136,52 @@ namespace srcrepair
                     {
                         case 0:
                             // Нет сглаживания
-                            WriteSRCDWord("mat_antialias", 1, GV.SmallAppName);
-                            WriteSRCDWord("mat_aaquality", 0, GV.SmallAppName);
-                            WriteSRCDWord("ScreenMSAA", 0, GV.SmallAppName); // Дублируем значение mat_antialias
-                            WriteSRCDWord("ScreenMSAAQuality", 0, GV.SmallAppName); // Дублируем значение mat_aaquality
+                            CoreLib.WriteSRCDWord("mat_antialias", 1, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_aaquality", 0, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("ScreenMSAA", 0, GV.SmallAppName); // Дублируем значение mat_antialias
+                            CoreLib.WriteSRCDWord("ScreenMSAAQuality", 0, GV.SmallAppName); // Дублируем значение mat_aaquality
                             break;
                         case 1:
                             // 2x MSAA
-                            WriteSRCDWord("mat_antialias", 2, GV.SmallAppName);
-                            WriteSRCDWord("mat_aaquality", 0, GV.SmallAppName);
-                            WriteSRCDWord("ScreenMSAA", 2, GV.SmallAppName);
-                            WriteSRCDWord("ScreenMSAAQuality", 0, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_antialias", 2, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_aaquality", 0, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("ScreenMSAA", 2, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("ScreenMSAAQuality", 0, GV.SmallAppName);
                             break;
                         case 2:
                             // 4x MSAA
-                            WriteSRCDWord("mat_antialias", 4, GV.SmallAppName);
-                            WriteSRCDWord("mat_aaquality", 0, GV.SmallAppName);
-                            WriteSRCDWord("ScreenMSAA", 4, GV.SmallAppName);
-                            WriteSRCDWord("ScreenMSAAQuality", 0, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_antialias", 4, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_aaquality", 0, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("ScreenMSAA", 4, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("ScreenMSAAQuality", 0, GV.SmallAppName);
                             break;
                         case 3:
                             // 8x CSAA
-                            WriteSRCDWord("mat_antialias", 4, GV.SmallAppName);
-                            WriteSRCDWord("mat_aaquality", 2, GV.SmallAppName);
-                            WriteSRCDWord("ScreenMSAA", 4, GV.SmallAppName);
-                            WriteSRCDWord("ScreenMSAAQuality", 2, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_antialias", 4, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_aaquality", 2, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("ScreenMSAA", 4, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("ScreenMSAAQuality", 2, GV.SmallAppName);
                             break;
                         case 4:
                             // 16x CSAA
-                            WriteSRCDWord("mat_antialias", 4, GV.SmallAppName);
-                            WriteSRCDWord("mat_aaquality", 4, GV.SmallAppName);
-                            WriteSRCDWord("ScreenMSAA", 4, GV.SmallAppName);
-                            WriteSRCDWord("ScreenMSAAQuality", 4, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_antialias", 4, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_aaquality", 4, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("ScreenMSAA", 4, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("ScreenMSAAQuality", 4, GV.SmallAppName);
                             break;
                         case 5:
                             // 8x MSAA
-                            WriteSRCDWord("mat_antialias", 8, GV.SmallAppName);
-                            WriteSRCDWord("mat_aaquality", 0, GV.SmallAppName);
-                            WriteSRCDWord("ScreenMSAA", 8, GV.SmallAppName);
-                            WriteSRCDWord("ScreenMSAAQuality", 0, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_antialias", 8, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_aaquality", 0, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("ScreenMSAA", 8, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("ScreenMSAAQuality", 0, GV.SmallAppName);
                             break;
                         case 6:
                             // 16xQ CSAA
-                            WriteSRCDWord("mat_antialias", 8, GV.SmallAppName);
-                            WriteSRCDWord("mat_aaquality", 2, GV.SmallAppName);
-                            WriteSRCDWord("ScreenMSAA", 8, GV.SmallAppName);
-                            WriteSRCDWord("ScreenMSAAQuality", 2, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_antialias", 8, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_aaquality", 2, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("ScreenMSAA", 8, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("ScreenMSAAQuality", 2, GV.SmallAppName);
                             break;
                     }
 
@@ -1529,75 +1190,75 @@ namespace srcrepair
                     {
                         case 0:
                             // Билинейная
-                            WriteSRCDWord("mat_forceaniso", 1, GV.SmallAppName);
-                            WriteSRCDWord("mat_trilinear", 0, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_forceaniso", 1, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_trilinear", 0, GV.SmallAppName);
                             break;
                         case 1:
                             // Трилинейная
-                            WriteSRCDWord("mat_forceaniso", 1, GV.SmallAppName);
-                            WriteSRCDWord("mat_trilinear", 1, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_forceaniso", 1, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_trilinear", 1, GV.SmallAppName);
                             break;
                         case 2:
                             // Анизотропная 2x
-                            WriteSRCDWord("mat_forceaniso", 2, GV.SmallAppName);
-                            WriteSRCDWord("mat_trilinear", 0, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_forceaniso", 2, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_trilinear", 0, GV.SmallAppName);
                             break;
                         case 3:
                             // Анизотропная 4x
-                            WriteSRCDWord("mat_forceaniso", 4, GV.SmallAppName);
-                            WriteSRCDWord("mat_trilinear", 0, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_forceaniso", 4, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_trilinear", 0, GV.SmallAppName);
                             break;
                         case 4:
                             // Анизотропная 8x
-                            WriteSRCDWord("mat_forceaniso", 8, GV.SmallAppName);
-                            WriteSRCDWord("mat_trilinear", 0, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_forceaniso", 8, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_trilinear", 0, GV.SmallAppName);
                             break;
                         case 5:
                             // Анизотропная 16x
-                            WriteSRCDWord("mat_forceaniso", 16, GV.SmallAppName);
-                            WriteSRCDWord("mat_trilinear", 0, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_forceaniso", 16, GV.SmallAppName);
+                            CoreLib.WriteSRCDWord("mat_trilinear", 0, GV.SmallAppName);
                             break;
                     }
 
                     // Запишем в реестр настройки вертикальной синхронизации (mat_vsync):
                     switch (GT_VSync.SelectedIndex)
                     {
-                        case 0: WriteSRCDWord("mat_vsync", 0, GV.SmallAppName);
+                        case 0: CoreLib.WriteSRCDWord("mat_vsync", 0, GV.SmallAppName);
                             break;
-                        case 1: WriteSRCDWord("mat_vsync", 1, GV.SmallAppName);
+                        case 1: CoreLib.WriteSRCDWord("mat_vsync", 1, GV.SmallAppName);
                             break;
                     }
 
                     // Запишем в реестр настройки размытия движения (MotionBlur):
                     switch (GT_MotionBlur.SelectedIndex)
                     {
-                        case 0: WriteSRCDWord("MotionBlur", 0, GV.SmallAppName);
+                        case 0: CoreLib.WriteSRCDWord("MotionBlur", 0, GV.SmallAppName);
                             break;
-                        case 1: WriteSRCDWord("MotionBlur", 1, GV.SmallAppName);
+                        case 1: CoreLib.WriteSRCDWord("MotionBlur", 1, GV.SmallAppName);
                             break;
                     }
 
                     // Запишем в реестр настройки режима DirectX (DXLevel_V1):
                     switch (GT_DxMode.SelectedIndex)
                     {
-                        case 0: WriteSRCDWord("DXLevel_V1", 80, GV.SmallAppName); // DirectX 8.0
+                        case 0: CoreLib.WriteSRCDWord("DXLevel_V1", 80, GV.SmallAppName); // DirectX 8.0
                             break;
-                        case 1: WriteSRCDWord("DXLevel_V1", 81, GV.SmallAppName); // DirectX 8.1
+                        case 1: CoreLib.WriteSRCDWord("DXLevel_V1", 81, GV.SmallAppName); // DirectX 8.1
                             break;
-                        case 2: WriteSRCDWord("DXLevel_V1", 90, GV.SmallAppName); // DirectX 9.0
+                        case 2: CoreLib.WriteSRCDWord("DXLevel_V1", 90, GV.SmallAppName); // DirectX 9.0
                             break;
-                        case 3: WriteSRCDWord("DXLevel_V1", 95, GV.SmallAppName); // DirectX 9.0c
+                        case 3: CoreLib.WriteSRCDWord("DXLevel_V1", 95, GV.SmallAppName); // DirectX 9.0c
                             break;
                     }
 
                     // Запишем в реестр настройки HDR (mat_hdr_level):
                     switch (GT_HDR.SelectedIndex)
                     {
-                        case 0: WriteSRCDWord("mat_hdr_level", 0, GV.SmallAppName);
+                        case 0: CoreLib.WriteSRCDWord("mat_hdr_level", 0, GV.SmallAppName);
                             break;
-                        case 1: WriteSRCDWord("mat_hdr_level", 1, GV.SmallAppName);
+                        case 1: CoreLib.WriteSRCDWord("mat_hdr_level", 1, GV.SmallAppName);
                             break;
-                        case 2: WriteSRCDWord("mat_hdr_level", 2, GV.SmallAppName);
+                        case 2: CoreLib.WriteSRCDWord("mat_hdr_level", 2, GV.SmallAppName);
                             break;
                     }
                 }
@@ -1884,7 +1545,7 @@ namespace srcrepair
             {
                 try
                 {
-                    CleanDirectoryNow(GV.FullGamePath + @"maps\", "*.bsp");
+                    CoreLib.CleanDirectoryNow(GV.FullGamePath + @"maps\", "*.bsp");
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -1901,7 +1562,7 @@ namespace srcrepair
             {
                 try
                 {
-                    CleanDirectoryNow(GV.FullGamePath + @"downloads\", "*.dat");
+                    CoreLib.CleanDirectoryNow(GV.FullGamePath + @"downloads\", "*.dat");
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -1918,7 +1579,7 @@ namespace srcrepair
             {
                 try
                 {
-                    CleanDirectoryNow(GV.FullGamePath + @"materials\temp\", "*.vtf");
+                    CoreLib.CleanDirectoryNow(GV.FullGamePath + @"materials\temp\", "*.vtf");
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -1935,7 +1596,7 @@ namespace srcrepair
             {
                 try
                 {
-                    CleanDirectoryNow(GV.FullGamePath + @"cfg\", "*.*");
+                    CoreLib.CleanDirectoryNow(GV.FullGamePath + @"cfg\", "*.*");
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -1952,7 +1613,7 @@ namespace srcrepair
             {
                 try
                 {
-                    CleanDirectoryNow(GV.FullGamePath + @"maps\graphs\", "*.*");
+                    CoreLib.CleanDirectoryNow(GV.FullGamePath + @"maps\graphs\", "*.*");
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -1969,7 +1630,7 @@ namespace srcrepair
             {
                 try
                 {
-                    CleanDirectoryNow(GV.FullGamePath + @"maps\soundcache\", "*.*");
+                    CoreLib.CleanDirectoryNow(GV.FullGamePath + @"maps\soundcache\", "*.*");
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -1986,7 +1647,7 @@ namespace srcrepair
             {
                 try
                 {
-                    CleanDirectoryNow(GV.FullGamePath + @"maps\", "*.nav");
+                    CoreLib.CleanDirectoryNow(GV.FullGamePath + @"maps\", "*.nav");
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -2003,7 +1664,7 @@ namespace srcrepair
             {
                 try
                 {
-                    CleanDirectoryNow(GV.FullGamePath + @"screenshots\", "*.*");
+                    CoreLib.CleanDirectoryNow(GV.FullGamePath + @"screenshots\", "*.*");
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -2020,7 +1681,7 @@ namespace srcrepair
             {
                 try
                 {
-                    CleanDirectoryNow(GV.FullGamePath, "*.dem");
+                    CoreLib.CleanDirectoryNow(GV.FullGamePath, "*.dem");
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch

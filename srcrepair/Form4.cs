@@ -72,16 +72,16 @@ namespace srcrepair
                     }
                     // Начинаем создавать отчёт...
                     string FilePath = "msinfo32.exe"; // Указываем имя exe-файла для запуска
-                    string FileName = "Report_" + frmMainW.WriteDateToString(DateTime.Now, true);
+                    string FileName = "Report_" + CoreLib.WriteDateToString(DateTime.Now, true);
                     string RepName = FileName + ".txt";
                     string Params = "/report " + '"' + RepDir + RepName + '"'; // Генерируем параметы для exe-файла...
                     try
                     {
                         // Запускаем последовательность...
-                        frmMainW.StartProcessAndWait(FilePath, Params);
+                        CoreLib.StartProcessAndWait(FilePath, Params);
                         if (Compress.Checked)
                         {
-                            frmMainW.StartProcessAndWait(GV.FullAppPath + "7z.exe", "a " + @"Reports\" + FileName + ".7z " + @"Reports\" + RepName);
+                            CoreLib.StartProcessAndWait(GV.FullAppPath + "7z.exe", "a " + @"Reports\" + FileName + ".7z " + @"Reports\" + RepName);
                             File.Delete(RepDir + RepName); // удаляем несжатый отчёт
                             MessageBox.Show(String.Format(frmMainW.RM.GetString("RPB_ComprGen"), FileName), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
