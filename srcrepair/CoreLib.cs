@@ -280,16 +280,10 @@ namespace srcrepair
          */
         public static string WriteDateToString(DateTime XDate, bool MicroDate)
         {
-            if (MicroDate)
-            {
-                // Возвращаем строку с результатом (краткой датой)...
-                return XDate.Day.ToString() + XDate.Month.ToString() + XDate.Year.ToString() + XDate.Hour.ToString() + XDate.Minute.ToString() + XDate.Second.ToString();
-            }
-            else
-            {
-                // Возвращаем строку с результатом (датой по ГОСТу)...
-                return XDate.Day.ToString() + "." + XDate.Month.ToString() + "." + XDate.Year.ToString() + " " + XDate.Hour.ToString() + ":" + XDate.Minute.ToString() + ":" + XDate.Second.ToString();
-            }
+            return MicroDate ? XDate.Day.ToString() + XDate.Month.ToString() + XDate.Year.ToString() +
+                XDate.Hour.ToString() + XDate.Minute.ToString() + XDate.Second.ToString() :
+                XDate.Day.ToString() + "." + XDate.Month.ToString() + "." + XDate.Year.ToString() + " " +
+                XDate.Hour.ToString() + ":" + XDate.Minute.ToString() + ":" + XDate.Second.ToString();
         }
 
         /*
