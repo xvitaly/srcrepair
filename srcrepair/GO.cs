@@ -11,6 +11,5 @@ namespace srcrepair
         public static bool EnableLogs = false;
         public static bool HideNotInstalled = true;
         public static bool HideNonCritMsgs = false;
-        public static string PathToClean = "";
     }
 }

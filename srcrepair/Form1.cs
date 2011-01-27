@@ -1541,7 +1541,7 @@ namespace srcrepair
         private void PS_RemCustMaps_Click(object sender, EventArgs e)
         {
             // Удаляем кастомные (нестандартные) карты...
-            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            /*if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 try
                 {
@@ -1552,7 +1552,9 @@ namespace srcrepair
                 {
                     MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            }
+            }*/
+            frmCleaner FCl = new frmCleaner(GV.FullGamePath + @"maps\", "*.bsp", ((Button)sender).Text.ToLower());
+            FCl.ShowDialog();
         }
 
         private void PS_RemDnlCache_Click(object sender, EventArgs e)
