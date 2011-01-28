@@ -207,6 +207,11 @@ namespace srcrepair
             PS_RemOldBin.Enabled = BStatus;
         }
 
+        /*
+         * Эта функция отображает диалоговое окно менеджера быстрой очистки.
+         * В качестве параметров выступают путь к каталогу очистки, маска
+         * файлов и текст для заголовка.
+         */
         private void OpenCleanupWindow(string Path, string Mask, string LText)
         {
             frmCleaner FCl = new frmCleaner(Path, Mask, LText);
