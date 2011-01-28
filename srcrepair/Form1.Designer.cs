@@ -88,9 +88,10 @@
             this.CE_CVName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CE_CVal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProblemSolver = new System.Windows.Forms.TabPage();
-            this.PS_GB_Remover = new System.Windows.Forms.GroupBox();
+            this.PS_GB_AdvRepr = new System.Windows.Forms.GroupBox();
             this.PS_RemOldBin = new System.Windows.Forms.Button();
             this.PS_RemGraphOpts = new System.Windows.Forms.Button();
+            this.PS_GB_Remover = new System.Windows.Forms.GroupBox();
             this.PS_RemDemos = new System.Windows.Forms.Button();
             this.PS_RemScreenShots = new System.Windows.Forms.Button();
             this.PS_RemNavFiles = new System.Windows.Forms.Button();
@@ -182,6 +183,7 @@
             this.CE_Toolbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CE_Editor)).BeginInit();
             this.ProblemSolver.SuspendLayout();
+            this.PS_GB_AdvRepr.SuspendLayout();
             this.PS_GB_Remover.SuspendLayout();
             this.PS_GB_AdvFeat.SuspendLayout();
             this.PS_GB_SInfo.SuspendLayout();
@@ -707,6 +709,7 @@
             // 
             // ProblemSolver
             // 
+            this.ProblemSolver.Controls.Add(this.PS_GB_AdvRepr);
             this.ProblemSolver.Controls.Add(this.PS_GB_Remover);
             this.ProblemSolver.Controls.Add(this.PS_GB_AdvFeat);
             this.ProblemSolver.Controls.Add(this.PS_GB_SInfo);
@@ -715,22 +718,13 @@
             this.ProblemSolver.Name = "ProblemSolver";
             this.ProblemSolver.UseVisualStyleBackColor = true;
             // 
-            // PS_GB_Remover
+            // PS_GB_AdvRepr
             // 
-            this.PS_GB_Remover.Controls.Add(this.PS_RemOldBin);
-            this.PS_GB_Remover.Controls.Add(this.PS_RemGraphOpts);
-            this.PS_GB_Remover.Controls.Add(this.PS_RemDemos);
-            this.PS_GB_Remover.Controls.Add(this.PS_RemScreenShots);
-            this.PS_GB_Remover.Controls.Add(this.PS_RemNavFiles);
-            this.PS_GB_Remover.Controls.Add(this.PS_RemSoundCache);
-            this.PS_GB_Remover.Controls.Add(this.PS_RemGraphCache);
-            this.PS_GB_Remover.Controls.Add(this.PS_RemOldCfgs);
-            this.PS_GB_Remover.Controls.Add(this.PS_RemOldSpray);
-            this.PS_GB_Remover.Controls.Add(this.PS_RemDnlCache);
-            this.PS_GB_Remover.Controls.Add(this.PS_RemCustMaps);
-            resources.ApplyResources(this.PS_GB_Remover, "PS_GB_Remover");
-            this.PS_GB_Remover.Name = "PS_GB_Remover";
-            this.PS_GB_Remover.TabStop = false;
+            this.PS_GB_AdvRepr.Controls.Add(this.PS_RemOldBin);
+            this.PS_GB_AdvRepr.Controls.Add(this.PS_RemGraphOpts);
+            resources.ApplyResources(this.PS_GB_AdvRepr, "PS_GB_AdvRepr");
+            this.PS_GB_AdvRepr.Name = "PS_GB_AdvRepr";
+            this.PS_GB_AdvRepr.TabStop = false;
             // 
             // PS_RemOldBin
             // 
@@ -745,6 +739,21 @@
             this.PS_RemGraphOpts.Name = "PS_RemGraphOpts";
             this.PS_RemGraphOpts.UseVisualStyleBackColor = true;
             this.PS_RemGraphOpts.Click += new System.EventHandler(this.PS_RemGraphOpts_Click);
+            // 
+            // PS_GB_Remover
+            // 
+            this.PS_GB_Remover.Controls.Add(this.PS_RemDemos);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemScreenShots);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemNavFiles);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemSoundCache);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemGraphCache);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemOldCfgs);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemOldSpray);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemDnlCache);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemCustMaps);
+            resources.ApplyResources(this.PS_GB_Remover, "PS_GB_Remover");
+            this.PS_GB_Remover.Name = "PS_GB_Remover";
+            this.PS_GB_Remover.TabStop = false;
             // 
             // PS_RemDemos
             // 
@@ -1372,6 +1381,7 @@
             this.CE_Toolbar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CE_Editor)).EndInit();
             this.ProblemSolver.ResumeLayout(false);
+            this.PS_GB_AdvRepr.ResumeLayout(false);
             this.PS_GB_Remover.ResumeLayout(false);
             this.PS_GB_AdvFeat.ResumeLayout(false);
             this.PS_GB_SInfo.ResumeLayout(false);
@@ -1482,7 +1492,6 @@
         private System.Windows.Forms.Label L_PS_RSteamLogin;
         private System.Windows.Forms.Label L_PS_RSteamPath;
         private System.Windows.Forms.Button PS_ResetSettings;
-        private System.Windows.Forms.Button PS_RemGraphOpts;
         private System.Windows.Forms.Button PS_RemDemos;
         private System.Windows.Forms.Button PS_RemScreenShots;
         private System.Windows.Forms.Button PS_RemNavFiles;
@@ -1520,7 +1529,6 @@
         private System.Windows.Forms.SaveFileDialog CE_SaveCfgDialog;
         private System.Windows.Forms.DataGridViewTextBoxColumn CE_CVName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CE_CVal;
-        private System.Windows.Forms.Button PS_RemOldBin;
         private System.Windows.Forms.DataGridView BU_ListTable;
         private System.Windows.Forms.ToolStrip BU_BToolbar;
         private System.Windows.Forms.ToolStripButton BUT_Refresh;
@@ -1541,6 +1549,9 @@
         private System.Windows.Forms.ToolStripMenuItem MNUHEd;
         private System.Windows.Forms.ToolStripSeparator CE_ToolSep1;
         private System.Windows.Forms.ToolStripButton CE_RmRow;
+        private System.Windows.Forms.GroupBox PS_GB_AdvRepr;
+        private System.Windows.Forms.Button PS_RemOldBin;
+        private System.Windows.Forms.Button PS_RemGraphOpts;
     }
 }
 

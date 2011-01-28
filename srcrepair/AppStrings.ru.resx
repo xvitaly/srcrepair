@@ -345,7 +345,7 @@
     <value>Во время удаления файлов произошла ошибка. Некоторые файлы не были удалены!</value>
   </data>
   <data name="PS_CleanupExecuteQ" xml:space="preserve">
-    <value>Полностью удалить {0}?</value>
+    <value>Удалить {0}?</value>
     <comment>Сообщение, выдаваемое при запуске очистки</comment>
   </data>
   <data name="PS_CleanupSuccess" xml:space="preserve">
@@ -490,5 +490,13 @@
   <data name="AHE_SaveException" xml:space="preserve">
     <value>Внимание! Произошла ошибка во время записи в файл {0}. Возможно, у вас недостаточно для этого прав, либо кто-то блокирует попытку записи.</value>
     <comment>Сообщение, выдаваемое при ошибке записи в файл hosts</comment>
+  </data>
+  <data name="PS_LoadErr" xml:space="preserve">
+    <value>Файлы для удаления не найдены! Очистка не требуется.</value>
+    <comment>Сообщение, выдаваемое при невозможности загрузить список файлов для очистки</comment>
+  </data>
+  <data name="PS_SelectItemsMsg" xml:space="preserve">
+    <value>Файлы для очистки не выбраны! Пожалуйста выберите файлы для очистки из списка и повторите попытку.</value>
+    <comment>Сообщение при запуске процедуры очистки при отсутствии выбранных файлов</comment>
   </data>
 </root>

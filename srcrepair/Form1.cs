@@ -207,6 +207,12 @@ namespace srcrepair
             PS_RemOldBin.Enabled = BStatus;
         }
 
+        private void OpenCleanupWindow(string Path, string Mask, string LText)
+        {
+            frmCleaner FCl = new frmCleaner(Path, Mask, LText);
+            FCl.ShowDialog();
+        }
+
         #endregion
 
         private void frmMainW_Load(object sender, EventArgs e)
@@ -1541,156 +1547,55 @@ namespace srcrepair
         private void PS_RemCustMaps_Click(object sender, EventArgs e)
         {
             // Удаляем кастомные (нестандартные) карты...
-            /*if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-            {
-                try
-                {
-                    CoreLib.CleanDirectoryNow(GV.FullGamePath + @"maps\", "*.bsp");
-                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch
-                {
-                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }*/
-            frmCleaner FCl = new frmCleaner(GV.FullGamePath + @"maps\", "*.bsp", ((Button)sender).Text.ToLower());
-            FCl.ShowDialog();
+            OpenCleanupWindow(GV.FullGamePath + @"maps\", "*.bsp", ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemDnlCache_Click(object sender, EventArgs e)
         {
             // Удаляем кэш загрузок...
-            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-            {
-                try
-                {
-                    CoreLib.CleanDirectoryNow(GV.FullGamePath + @"downloads\", "*.dat");
-                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch
-                {
-                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
+            OpenCleanupWindow(GV.FullGamePath + @"downloads\", "*.dat", ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemOldSpray_Click(object sender, EventArgs e)
         {
             // Удаляем кэш спреев...
-            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-            {
-                try
-                {
-                    CoreLib.CleanDirectoryNow(GV.FullGamePath + @"materials\temp\", "*.vtf");
-                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch
-                {
-                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
+            OpenCleanupWindow(GV.FullGamePath + @"materials\temp\", "*.vtf", ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemOldCfgs_Click(object sender, EventArgs e)
         {
             // Удаляем все конфиги...
-            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-            {
-                try
-                {
-                    CoreLib.CleanDirectoryNow(GV.FullGamePath + @"cfg\", "*.*");
-                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch
-                {
-                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
+            OpenCleanupWindow(GV.FullGamePath + @"cfg\", "*.*", ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemGraphCache_Click(object sender, EventArgs e)
         {
             // Удаляем графический кэш...
-            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-            {
-                try
-                {
-                    CoreLib.CleanDirectoryNow(GV.FullGamePath + @"maps\graphs\", "*.*");
-                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch
-                {
-                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
+            OpenCleanupWindow(GV.FullGamePath + @"maps\graphs\", "*.*", ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemSoundCache_Click(object sender, EventArgs e)
         {
             // Удаляем звуковой кэш...
-            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-            {
-                try
-                {
-                    CoreLib.CleanDirectoryNow(GV.FullGamePath + @"maps\soundcache\", "*.*");
-                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch
-                {
-                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
+            OpenCleanupWindow(GV.FullGamePath + @"maps\soundcache\", "*.*", ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemNavFiles_Click(object sender, EventArgs e)
         {
             // Удаляем файлы навигации ботов...
-            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-            {
-                try
-                {
-                    CoreLib.CleanDirectoryNow(GV.FullGamePath + @"maps\", "*.nav");
-                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch
-                {
-                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
+            OpenCleanupWindow(GV.FullGamePath + @"maps\", "*.nav", ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemScreenShots_Click(object sender, EventArgs e)
         {
             // Удаляем все скриншоты...
-            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-            {
-                try
-                {
-                    CoreLib.CleanDirectoryNow(GV.FullGamePath + @"screenshots\", "*.*");
-                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch
-                {
-                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
+            OpenCleanupWindow(GV.FullGamePath + @"screenshots\", "*.*", ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemDemos_Click(object sender, EventArgs e)
         {
             // Удаляем все записанные демки...
-            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-            {
-                try
-                {
-                    CoreLib.CleanDirectoryNow(GV.FullGamePath, "*.dem");
-                    MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch
-                {
-                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
+            OpenCleanupWindow(GV.FullGamePath, "*.dem", ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemGraphOpts_Click(object sender, EventArgs e)

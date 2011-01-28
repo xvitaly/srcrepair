@@ -1651,20 +1651,23 @@
   <metadata name="ProblemSolver.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="PS_GB_Remover.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="PS_GB_AdvRepr.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="PS_RemOldBin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="PS_RemOldBin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="PS_RemOldBin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 328</value>
+    <value>6, 48</value>
   </data>
   <data name="PS_RemOldBin.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 23</value>
   </data>
   <data name="PS_RemOldBin.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>1</value>
   </data>
   <data name="PS_RemOldBin.Text" xml:space="preserve">
     <value>Old binaries</value>
@@ -1676,7 +1679,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PS_RemOldBin.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
+    <value>PS_GB_AdvRepr</value>
   </data>
   <data name="&gt;&gt;PS_RemOldBin.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -1684,14 +1687,17 @@
   <metadata name="PS_RemGraphOpts.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="PS_RemGraphOpts.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="PS_RemGraphOpts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 280</value>
+    <value>6, 19</value>
   </data>
   <data name="PS_RemGraphOpts.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 23</value>
   </data>
   <data name="PS_RemGraphOpts.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>0</value>
   </data>
   <data name="PS_RemGraphOpts.Text" xml:space="preserve">
     <value>Graphical settings</value>
@@ -1703,11 +1709,38 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PS_RemGraphOpts.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
+    <value>PS_GB_AdvRepr</value>
   </data>
   <data name="&gt;&gt;PS_RemGraphOpts.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="PS_GB_AdvRepr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>296, 293</value>
+  </data>
+  <data name="PS_GB_AdvRepr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 80</value>
+  </data>
+  <data name="PS_GB_AdvRepr.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="PS_GB_AdvRepr.Text" xml:space="preserve">
+    <value>Advanced cleanup:</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_AdvRepr.Name" xml:space="preserve">
+    <value>PS_GB_AdvRepr</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_AdvRepr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_AdvRepr.Parent" xml:space="preserve">
+    <value>ProblemSolver</value>
+  </data>
+  <data name="&gt;&gt;PS_GB_AdvRepr.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="PS_GB_Remover.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="PS_RemDemos.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1733,7 +1766,7 @@
     <value>PS_GB_Remover</value>
   </data>
   <data name="&gt;&gt;PS_RemDemos.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <metadata name="PS_RemScreenShots.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1760,7 +1793,7 @@
     <value>PS_GB_Remover</value>
   </data>
   <data name="&gt;&gt;PS_RemScreenShots.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <metadata name="PS_RemNavFiles.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1787,7 +1820,7 @@
     <value>PS_GB_Remover</value>
   </data>
   <data name="&gt;&gt;PS_RemNavFiles.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <metadata name="PS_RemSoundCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1814,7 +1847,7 @@
     <value>PS_GB_Remover</value>
   </data>
   <data name="&gt;&gt;PS_RemSoundCache.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <metadata name="PS_RemGraphCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1841,7 +1874,7 @@
     <value>PS_GB_Remover</value>
   </data>
   <data name="&gt;&gt;PS_RemGraphCache.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <metadata name="PS_RemOldCfgs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1868,7 +1901,7 @@
     <value>PS_GB_Remover</value>
   </data>
   <data name="&gt;&gt;PS_RemOldCfgs.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <metadata name="PS_RemOldSpray.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1895,7 +1928,7 @@
     <value>PS_GB_Remover</value>
   </data>
   <data name="&gt;&gt;PS_RemOldSpray.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>6</value>
   </data>
   <metadata name="PS_RemDnlCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1922,7 +1955,7 @@
     <value>PS_GB_Remover</value>
   </data>
   <data name="&gt;&gt;PS_RemDnlCache.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>7</value>
   </data>
   <metadata name="PS_RemCustMaps.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1949,13 +1982,13 @@
     <value>PS_GB_Remover</value>
   </data>
   <data name="&gt;&gt;PS_RemCustMaps.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="PS_GB_Remover.Location" type="System.Drawing.Point, System.Drawing">
     <value>296, 6</value>
   </data>
   <data name="PS_GB_Remover.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 367</value>
+    <value>160, 281</value>
   </data>
   <data name="PS_GB_Remover.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1973,7 +2006,7 @@
     <value>ProblemSolver</value>
   </data>
   <data name="&gt;&gt;PS_GB_Remover.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="PS_GB_AdvFeat.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2027,7 +2060,7 @@
     <value>ProblemSolver</value>
   </data>
   <data name="&gt;&gt;PS_GB_AdvFeat.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="PS_GB_SInfo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2246,7 +2279,7 @@
     <value>ProblemSolver</value>
   </data>
   <data name="&gt;&gt;PS_GB_SInfo.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <metadata name="PS_GB_Solver.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2426,7 +2459,7 @@
     <value>ProblemSolver</value>
   </data>
   <data name="&gt;&gt;PS_GB_Solver.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="ProblemSolver.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>

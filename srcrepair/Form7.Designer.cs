@@ -55,12 +55,15 @@
             this.CM_FTable.GridLines = true;
             this.CM_FTable.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.CM_FTable.Location = new System.Drawing.Point(12, 41);
+            this.CM_FTable.MultiSelect = false;
             this.CM_FTable.Name = "CM_FTable";
+            this.CM_FTable.ShowGroups = false;
             this.CM_FTable.ShowItemToolTips = true;
             this.CM_FTable.Size = new System.Drawing.Size(397, 183);
             this.CM_FTable.TabIndex = 1;
             this.CM_FTable.UseCompatibleStateImageBehavior = false;
             this.CM_FTable.View = System.Windows.Forms.View.Details;
+            this.CM_FTable.DoubleClick += new System.EventHandler(this.CM_FTable_DoubleClick);
             this.CM_FTable.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CM_FTable_KeyDown);
             // 
             // FName

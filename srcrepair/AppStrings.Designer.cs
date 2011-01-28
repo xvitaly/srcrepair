@@ -583,6 +583,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cleanup is not required..
+        /// </summary>
+        internal static string PS_LoadErr {
+            get {
+                return ResourceManager.GetString("PS_LoadErr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You chose the wrong language Steam from the dropdown list, so we will use English!.
         /// </summary>
         internal static string PS_NoLangSelected {
@@ -615,6 +624,15 @@ namespace srcrepair {
         internal static string PS_ResetSettingsMsg {
             get {
                 return ResourceManager.GetString("PS_ResetSettingsMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Files for cleanup is not selected! Please select files and try again later..
+        /// </summary>
+        internal static string PS_SelectItemsMsg {
+            get {
+                return ResourceManager.GetString("PS_SelectItemsMsg", resourceCulture);
             }
         }
         
