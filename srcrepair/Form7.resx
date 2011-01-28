@@ -117,4 +117,190 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="CM_WelcMsg.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="CM_WelcMsg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
+  <data name="CM_WelcMsg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>397, 29</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CM_WelcMsg.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="CM_WelcMsg.Text" xml:space="preserve">
+    <value>Please check the list of files to be deleted and confirm the deletion. Not selected files will not be deleted!</value>
+  </data>
+  <data name="&gt;&gt;CM_WelcMsg.Name" xml:space="preserve">
+    <value>CM_WelcMsg</value>
+  </data>
+  <data name="&gt;&gt;CM_WelcMsg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CM_WelcMsg.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CM_WelcMsg.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="CM_FTable.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="FName.Text" xml:space="preserve">
+    <value>File name</value>
+  </data>
+  <data name="FName.Width" type="System.Int32, mscorlib">
+    <value>295</value>
+  </data>
+  <data name="FSize.Text" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="FSize.Width" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="CM_FTable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 41</value>
+  </data>
+  <data name="CM_FTable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>397, 183</value>
+  </data>
+  <data name="CM_FTable.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;CM_FTable.Name" xml:space="preserve">
+    <value>CM_FTable</value>
+  </data>
+  <data name="&gt;&gt;CM_FTable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CM_FTable.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CM_FTable.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="CM_Info.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="CM_Info.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 227</value>
+  </data>
+  <data name="CM_Info.Size" type="System.Drawing.Size, System.Drawing">
+    <value>400, 17</value>
+  </data>
+  <data name="CM_Info.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="CM_Info.Text" xml:space="preserve">
+    <value>We can free up to {0} MB hard-disk space after cleanup.</value>
+  </data>
+  <data name="CM_Info.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;CM_Info.Name" xml:space="preserve">
+    <value>CM_Info</value>
+  </data>
+  <data name="&gt;&gt;CM_Info.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CM_Info.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CM_Info.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="CM_Clean.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="CM_Clean.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 256</value>
+  </data>
+  <data name="CM_Clean.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 23</value>
+  </data>
+  <data name="CM_Clean.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="CM_Clean.Text" xml:space="preserve">
+    <value>Execute cleanup</value>
+  </data>
+  <data name="&gt;&gt;CM_Clean.Name" xml:space="preserve">
+    <value>CM_Clean</value>
+  </data>
+  <data name="&gt;&gt;CM_Clean.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CM_Clean.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CM_Clean.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="CM_Cancel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="CM_Cancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 256</value>
+  </data>
+  <data name="CM_Cancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 23</value>
+  </data>
+  <data name="CM_Cancel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="CM_Cancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;CM_Cancel.Name" xml:space="preserve">
+    <value>CM_Cancel</value>
+  </data>
+  <data name="&gt;&gt;CM_Cancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CM_Cancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CM_Cancel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>421, 295</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>SRC Repair's Cleaner - {0}</value>
+  </data>
+  <data name="&gt;&gt;FName.Name" xml:space="preserve">
+    <value>FName</value>
+  </data>
+  <data name="&gt;&gt;FName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FSize.Name" xml:space="preserve">
+    <value>FSize</value>
+  </data>
+  <data name="&gt;&gt;FSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmCleaner</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
