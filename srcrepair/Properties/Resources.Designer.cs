@@ -179,6 +179,13 @@ namespace srcrepair.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap TextEditor {
+            get {
+                object obj = ResourceManager.GetObject("TextEditor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Icon TF2Repair {
             get {
                 object obj = ResourceManager.GetObject("TF2Repair", resourceCulture);

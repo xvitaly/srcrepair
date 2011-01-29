@@ -1298,6 +1298,8 @@ namespace srcrepair
             {
                 FP_Description.Text = RM.GetString("FP_NoDescr");
             }
+            // Включаем кнопку открытия конфига в Блокноте...
+            FP_OpenNotepad.Enabled = true;
         }
 
         private void FP_Install_Click(object sender, EventArgs e)
@@ -2065,6 +2067,11 @@ namespace srcrepair
             catch
             {
             }
+        }
+
+        private void FP_OpenNotepad_Click(object sender, EventArgs e)
+        {
+            Process.Start("notepad.exe", GV.FullAppPath + @"cfgs\" + GV.SmallAppName + @"\" + FP_ConfigSel.Text);
         }
     }
 }

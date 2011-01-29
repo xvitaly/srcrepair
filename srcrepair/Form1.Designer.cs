@@ -118,6 +118,7 @@
             this.PS_CleanRegistry = new System.Windows.Forms.CheckBox();
             this.PS_CleanBlobs = new System.Windows.Forms.CheckBox();
             this.FPSCfgInstall = new System.Windows.Forms.TabPage();
+            this.FP_OpenNotepad = new System.Windows.Forms.Button();
             this.FP_CreateBackUp = new System.Windows.Forms.CheckBox();
             this.FP_Uninstall = new System.Windows.Forms.Button();
             this.FP_Install = new System.Windows.Forms.Button();
@@ -930,6 +931,7 @@
             // 
             // FPSCfgInstall
             // 
+            this.FPSCfgInstall.Controls.Add(this.FP_OpenNotepad);
             this.FPSCfgInstall.Controls.Add(this.FP_CreateBackUp);
             this.FPSCfgInstall.Controls.Add(this.FP_Uninstall);
             this.FPSCfgInstall.Controls.Add(this.FP_Install);
@@ -940,6 +942,15 @@
             resources.ApplyResources(this.FPSCfgInstall, "FPSCfgInstall");
             this.FPSCfgInstall.Name = "FPSCfgInstall";
             this.FPSCfgInstall.UseVisualStyleBackColor = true;
+            // 
+            // FP_OpenNotepad
+            // 
+            resources.ApplyResources(this.FP_OpenNotepad, "FP_OpenNotepad");
+            this.FP_OpenNotepad.Image = global::srcrepair.Properties.Resources.TextEditor;
+            this.FP_OpenNotepad.Name = "FP_OpenNotepad";
+            this.FP_OpenNotepad.TabStop = false;
+            this.FP_OpenNotepad.UseVisualStyleBackColor = true;
+            this.FP_OpenNotepad.Click += new System.EventHandler(this.FP_OpenNotepad_Click);
             // 
             // FP_CreateBackUp
             // 
@@ -1552,6 +1563,7 @@
         private System.Windows.Forms.GroupBox PS_GB_AdvRepr;
         private System.Windows.Forms.Button PS_RemOldBin;
         private System.Windows.Forms.Button PS_RemGraphOpts;
+        private System.Windows.Forms.Button FP_OpenNotepad;
     }
 }
 

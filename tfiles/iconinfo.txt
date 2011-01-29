@@ -57,3 +57,5 @@ Xmas.png - Iconspedia - Free - http://www.iconspedia.com/icon/santa-hat-17458.ht
 --------------------------------------------------------------------------------------------------------
 HostEd.ico - GNOME icon artists - GPLv2 - http://www.iconspedia.com/icon/gnome-text-html-11177.html
 --------------------------------------------------------------------------------------------------------
+TextEditor.png - GNOME icon artists - GPLv2 - http://www.iconspedia.com/icon/gnome-edit-undo-11006.html
+--------------------------------------------------------------------------------------------------------
