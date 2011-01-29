@@ -1,4 +1,4 @@
-; Скрипт программы установки программы SRC Repair
+; Скрипт программы (мастера) установки SRC Repair.
 ; 
 ; Copyright 2011 EasyCoding Team (ECTeam).
 ; Copyright 2005 - 2011 EasyCoding Team.
