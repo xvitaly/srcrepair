@@ -87,7 +87,7 @@ namespace srcrepair
          * Эта функция возвращает PID процесса если он был найден в памяти и
          * завершает, либо 0 если процесс не был найден.
          */
-        public static int ProcessTerminate(string ProcessName, bool ShowConfirmationMsg, string ConfMsg)
+        public static int ProcessTerminate(string ProcessName)
         {
             // Обнуляем PID...
             int ProcID = 0;
@@ -98,25 +98,27 @@ namespace srcrepair
             // Запускаем цикл по поиску и завершению процессов...
             foreach (Process ResName in LocalByName)
             {
-                if (ShowConfirmationMsg) // Проверим, нужно ли подтверждение...
-                {
-                    // Запросим подтверждение...
-                    if (MessageBox.Show(String.Format(ConfMsg, ResName.ProcessName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        ProcID = ResName.Id;
-                        ResName.Kill();
-                    }
-                }
-                else
-                {
-                    // Подтверждение не требуется, завершаем процесс...
-                    ProcID = ResName.Id; // Сохраняем PID процесса...
-                    ResName.Kill(); // Завершаем процесс...
-                }
+                ProcID = ResName.Id; // Сохраняем PID процесса...
+                ResName.Kill(); // Завершаем процесс...
             }
 
             // Возвращаем PID как результат функции...
             return ProcID;
+        }
+
+        /*
+         * Второй вариант функции. Запрашивает подтверждение и снимает процесс.
+         */
+        public static void ProcessTerminate(string ProcessName, string ConfMsg)
+        {
+            Process[] LocalByName = Process.GetProcessesByName(ProcessName);
+            foreach (Process ResName in LocalByName)
+            {
+                if (MessageBox.Show(String.Format(ConfMsg, ResName.ProcessName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    ResName.Kill();
+                }
+            }
         }
 
         /*

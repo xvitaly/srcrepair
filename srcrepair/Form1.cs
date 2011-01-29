@@ -251,10 +251,7 @@ namespace srcrepair
             this.Text = String.Format(this.Text, GV.AppVersionInfo);
 
             // Найдём и завершим в памяти процесс Steam...
-            if (CoreLib.ProcessTerminate("Steam", true, RM.GetString("ST_KillMessage")) != 0)
-            {
-                MessageBox.Show(RM.GetString("PS_ProcessTerminated"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            CoreLib.ProcessTerminate("Steam", RM.GetString("ST_KillMessage"));
 
             // Ищем параметр командной строки path...
             if (CoreLib.FindCommandLineSwitch(CMDLineArgs, "/path"))
@@ -419,7 +416,7 @@ namespace srcrepair
                 if ((PS_CleanBlobs.Checked) || (PS_CleanRegistry.Checked))
                 {
                     // Найдём и завершим работу клиента Steam...
-                    if (CoreLib.ProcessTerminate("Steam", false, "") != 0)
+                    if (CoreLib.ProcessTerminate("Steam") != 0)
                     {
                         MessageBox.Show(RM.GetString("PS_ProcessDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
