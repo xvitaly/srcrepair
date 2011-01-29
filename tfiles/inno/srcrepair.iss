@@ -40,8 +40,8 @@ VersionInfoCopyright=(c) 2005-2011 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
 
 [Languages]
-Name: "english"; MessagesFile: "compiler:Default.isl,InstallerEnUS.isl"
-Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl,InstallerRus.isl"
+Name: "english"; MessagesFile: "compiler:Default.isl,en-US.isl"
+Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl,ru-RU.isl"
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
@@ -77,8 +77,8 @@ Source: "E:\VSBuilds\nfx\*"; DestDir: "{app}\nfx\"; Flags: ignoreversion recurse
 ; —оздаЄм €рлык дл€ приложени€...
 Name: "{group}\SRC Repair"; Filename: "{app}\srcrepair.exe"
 ; —оздаЄм €рлыки дл€ запуска локализованных версий (только если пользователь выбрал этот пункт)...
-Name: "{group}\SRC Repair ({cm:ShcMLnRU})"; Filename: "{app}\srcrepair.exe"; Parameters: "/russian"; Tasks: betashortuts
-Name: "{group}\SRC Repair ({cm:ShcMLnEN})"; Filename: "{app}\srcrepair.exe"; Parameters: "/english"; Tasks: betashortuts
+Name: "{group}\{cm:ShcLocFldr}\SRC Repair ({cm:ShcMLnRU})"; Filename: "{app}\srcrepair.exe"; Parameters: "/russian"; Tasks: betashortuts
+Name: "{group}\{cm:ShcLocFldr}\SRC Repair ({cm:ShcMLnEN})"; Filename: "{app}\srcrepair.exe"; Parameters: "/english"; Tasks: betashortuts
 ; —оздаЄм стандартные €рлыки дл€ справки и удалени€...
 Name: "{group}\{cm:ProgramOnTheWeb,SRC Repair}"; Filename: "http://www.easycoding.org/projects/srcrepair"
 Name: "{group}\{cm:UninstallProgram,SRC Repair}"; Filename: "{uninstallexe}"

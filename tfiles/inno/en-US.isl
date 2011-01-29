@@ -8,3 +8,4 @@ ShcNETFx=Install Microsoft .NET Framework 4
 ShcMLnRU=Russian
 ShcMLnEN=English
 ShcChlog=Full changelog
+ShcLocFldr=Localized

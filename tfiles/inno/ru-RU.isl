@@ -8,3 +8,4 @@ ShcNETFx=Установить Microsoft .NET Framework 4
 ShcMLnRU=русская версия
 ShcMLnEN=английская версия
 ShcChlog=История версий
+ShcLocFldr=Локализованные
