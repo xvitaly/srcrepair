@@ -377,6 +377,13 @@ namespace srcrepair
                 PS_WarningMsg.ForeColor = Color.Red;
                 MessageBox.Show(RM.GetString("SteamNonASCIIDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            // Укажем путь к пользовательским данным и создадим если не существует...
+            GV.AppUserDir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + Path.DirectorySeparatorChar + GV.AppName + Path.DirectorySeparatorChar;
+            if (!(Directory.Exists(GV.AppUserDir)))
+            {
+                Directory.CreateDirectory(GV.AppUserDir);
+            }
         }
 
         private void PS_CleanBlobs_CheckedChanged(object sender, EventArgs e)
@@ -604,7 +611,7 @@ namespace srcrepair
 
             // Заполняем другие служебные переменные...
             GV.FullCfgPath = GV.FullGamePath + @"cfg\";
-            GV.FullBackUpDirPath = GV.FullAppPath + @"backups\" + GV.SmallAppName + @"\";
+            GV.FullBackUpDirPath = GV.AppUserDir + @"backups\" + GV.SmallAppName + @"\";
             
             // Включаем основные элементы управления (контролы)...
             MainTabControl.Enabled = true;

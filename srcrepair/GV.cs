@@ -5,7 +5,7 @@ using System.Text;
 
 namespace srcrepair
 {
-    class GV
+    public class GV
     {
         /*
          * Эта константа хранит имя приложения для служебных целей
@@ -23,6 +23,12 @@ namespace srcrepair
          * SRCRepair для служебных целей.
          */
         public static string FullAppPath;
+
+        /*
+         * В этой переменной будем хранить путь до каталога пользователя
+         * программы. Используется для служебных целей.
+         */
+        public static string AppUserDir;
 
         /*
          * В этой переменной будем хранить полный путь к каталогу игры, которой

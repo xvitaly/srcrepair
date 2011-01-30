@@ -30,7 +30,7 @@ using System.Threading; // для управления потоками...
 
 namespace srcrepair
 {
-    class CoreLib
+    public class CoreLib
     {
         /*
          * Реализуем аналог полезной дельфийской фукнции IncludeTrailingPathDelimiter,

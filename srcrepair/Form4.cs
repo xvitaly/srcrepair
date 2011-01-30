@@ -63,7 +63,7 @@ namespace srcrepair
                     GenerateNow.Text = frmMainW.RM.GetString("RPB_CptWrk");
                     this.ControlBox = false;
                     // Сгенерируем путь для каталога с рапортами...
-                    string RepDir = GV.FullAppPath + @"\Reports\";
+                    string RepDir = GV.AppUserDir + @"reports\";
                     // Проверим чтобы каталог для рапортов существовал...
                     if (!Directory.Exists(RepDir))
                     {
@@ -81,7 +81,7 @@ namespace srcrepair
                         CoreLib.StartProcessAndWait(FilePath, Params);
                         if (Compress.Checked)
                         {
-                            CoreLib.StartProcessAndWait(GV.FullAppPath + "7z.exe", "a " + @"Reports\" + FileName + ".7z " + @"Reports\" + RepName);
+                            CoreLib.StartProcessAndWait(GV.FullAppPath + "7z.exe", "a " + @"""" + RepDir + FileName + ".7z" + @"""" + " " + @"""" + RepDir + RepName + @"""");
                             File.Delete(RepDir + RepName); // удаляем несжатый отчёт
                             MessageBox.Show(String.Format(frmMainW.RM.GetString("RPB_ComprGen"), FileName), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
