@@ -402,4 +402,10 @@
   <data name="PS_SelectItemsMsg" xml:space="preserve">
     <value>Files for cleanup is not selected! Please select files and try again later.</value>
   </data>
+  <data name="AppNoGamesDetected" xml:space="preserve">
+    <value>Attention! On the selected Steam we can't detect any installed supported games. Please run your desired game from Steam at least once. After that, they will appear in the list and you will be able to manage them by this program.</value>
+  </data>
+  <data name="AppNoSTADetected" xml:space="preserve">
+    <value>Fatal error! Can't read directory SteamApps. Maybe it does not exists or you do not have necessary rights. Further program execution is impossible. Install and run at least one game from Steam and then use this program again.</value>
+  </data>
 </root>

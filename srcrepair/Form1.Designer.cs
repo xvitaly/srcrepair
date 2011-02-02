@@ -1326,20 +1326,6 @@
             this.AppSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.AppSelector, "AppSelector");
             this.AppSelector.FormattingEnabled = true;
-            this.AppSelector.Items.AddRange(new object[] {
-            resources.GetString("AppSelector.Items"),
-            resources.GetString("AppSelector.Items1"),
-            resources.GetString("AppSelector.Items2"),
-            resources.GetString("AppSelector.Items3"),
-            resources.GetString("AppSelector.Items4"),
-            resources.GetString("AppSelector.Items5"),
-            resources.GetString("AppSelector.Items6"),
-            resources.GetString("AppSelector.Items7"),
-            resources.GetString("AppSelector.Items8"),
-            resources.GetString("AppSelector.Items9"),
-            resources.GetString("AppSelector.Items10"),
-            resources.GetString("AppSelector.Items11"),
-            resources.GetString("AppSelector.Items12")});
             this.AppSelector.Name = "AppSelector";
             this.AppSelector.SelectedIndexChanged += new System.EventHandler(this.AppSelector_SelectedIndexChanged);
             // 

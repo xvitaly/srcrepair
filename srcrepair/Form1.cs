@@ -218,6 +218,42 @@ namespace srcrepair
             FCl.ShowDialog();
         }
 
+        /*
+         * Эта функция определяет установленные игры и заполняет комбо-бокс
+         * выбора доступных управляемых игр.
+         */
+        private void DetectInstalledGames(string SearchPath)
+        {
+            // Очистим список игр...
+            AppSelector.Items.Clear();
+            // Ищем Team Fortress 2...
+            if (Directory.Exists(SearchPath + @"team fortress 2\")) { AppSelector.Items.Add((string)"Team Fortress 2"); }
+            // Ищем Counter-Strike: Source...
+            if (Directory.Exists(SearchPath + @"counter-strike source\")) { AppSelector.Items.Add((string)"Counter-Strike: Source"); }
+            // Ищем Day of Defeat: Source...
+            if (Directory.Exists(SearchPath + @"day of defeat source\")) { AppSelector.Items.Add((string)"Day of Defeat: Source"); }
+            // Ищем Half-Life 2: Deathmatch...
+            if (Directory.Exists(SearchPath + @"half-life 2 deathmatch\")) { AppSelector.Items.Add((string)"Half-Life 2: Deathmatch"); }
+            // Ищем Garry's Mod...
+            if (Directory.Exists(SearchPath + @"garrysmod\")) { AppSelector.Items.Add((string)"Garry's Mod"); }
+            // Ищем Age of Chivalry...
+            if (Directory.Exists(SearchPath + @"age of chivalry\")) { AppSelector.Items.Add((string)"Age of Chivalry"); }
+            // Ищем D.I.P.R.I.P.: Warm Up...
+            if (Directory.Exists(SearchPath + @"diprip warm up\")) { AppSelector.Items.Add((string)"D.I.P.R.I.P.: Warm Up"); }
+            // Ищем Dystopia...
+            if (Directory.Exists(SearchPath + @"dystopia\")) { AppSelector.Items.Add((string)"Dystopia"); }
+            // Ищем Insurgency...
+            if (Directory.Exists(SearchPath + @"insurgency\")) { AppSelector.Items.Add((string)"Insurgency"); }
+            // Ищем Pirates, Vikings, & Knights II...
+            if (Directory.Exists(SearchPath + @"pirates, vikings, and knights ii\")) { AppSelector.Items.Add((string)"Pirates, Vikings, & Knights II"); }
+            // Ищем Smashball...
+            if (Directory.Exists(SearchPath + @"smashball\")) { AppSelector.Items.Add((string)"Smashball"); }
+            // Ищем Synergy...
+            if (Directory.Exists(SearchPath + @"synergy\")) { AppSelector.Items.Add((string)"Synergy"); }
+            // Ищем Zombie Panic! Source...
+            if (Directory.Exists(SearchPath + @"zombie panic! source\")) { AppSelector.Items.Add((string)"Zombie Panic! Source"); }
+        }
+
         #endregion
 
         private void frmMainW_Load(object sender, EventArgs e)
@@ -279,7 +315,7 @@ namespace srcrepair
                         if (!(File.Exists(Buf + "Steam.exe")))
                         {
                             MessageBox.Show(RM.GetString("SteamPathEnterErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            Application.Exit();
+                            Environment.Exit(7);
                         }
                         else
                         {
@@ -289,7 +325,7 @@ namespace srcrepair
                     else
                     {
                         MessageBox.Show(RM.GetString("SteamPathCancel"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        Application.Exit();
+                        Environment.Exit(7);
                     }
                 }
             }
@@ -312,19 +348,27 @@ namespace srcrepair
             else
             {
                 // Параметр не найден, будем использовать автоопределение...
-                // Создаём объект DirInfo...
-                DirectoryInfo DInfo = new DirectoryInfo(GV.FullSteamPath + @"steamapps\");
-                // Получаем список директорий из текущего...
-                DirectoryInfo[] DirList = DInfo.GetDirectories();
-                // Обходим созданный массив в поиске нужных нам логинов...
-                foreach (DirectoryInfo DItem in DirList)
+                try
                 {
-                    // Фильтруем известные каталоги...
-                    if ((DItem.Name != "common") && (DItem.Name != "sourcemods") && (DItem.Name != "media"))
+                    // Создаём объект DirInfo...
+                    DirectoryInfo DInfo = new DirectoryInfo(GV.FullSteamPath + @"steamapps\");
+                    // Получаем список директорий из текущего...
+                    DirectoryInfo[] DirList = DInfo.GetDirectories();
+                    // Обходим созданный массив в поиске нужных нам логинов...
+                    foreach (DirectoryInfo DItem in DirList)
                     {
-                        // Добавляем найденный логин в список ComboBox...
-                        LoginSel.Items.Add((string)DItem.Name);
+                        // Фильтруем известные каталоги...
+                        if ((DItem.Name != "common") && (DItem.Name != "sourcemods") && (DItem.Name != "media"))
+                        {
+                            // Добавляем найденный логин в список ComboBox...
+                            LoginSel.Items.Add((string)DItem.Name);
+                        }
                     }
+                }
+                catch
+                {
+                    MessageBox.Show(RM.GetString("AppNoSTADetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Environment.Exit(6);
                 }
             }
 
@@ -344,7 +388,7 @@ namespace srcrepair
                         // Пользователь нажал Cancel, либо ввёл пустую строку, поэтому
                         // выводим сообщение и завершаем работу приложения...
                         MessageBox.Show(RM.GetString("SteamLoginCancel"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        Application.Exit();
+                        Environment.Exit(7);
                     };
                 } while (!(Directory.Exists(GV.FullSteamPath + @"steamapps\" + SBuf + @"\")));
                 
@@ -360,8 +404,11 @@ namespace srcrepair
             {
                 // Да, единственный. Выберем его...
                 LoginSel.SelectedIndex = 0;
-                // Заменим содержимое строки состояния на требование выбора игры...
-                SB_Status.Text = RM.GetString("StatusSApp");
+                if (AppSelector.SelectedIndex == -1)
+                {
+                    // Заменим содержимое строки состояния на требование выбора игры...
+                    SB_Status.Text = RM.GetString("StatusSApp");
+                }
             }
 
             // Укажем путь к Steam на странице "Устранение проблем"...
@@ -456,7 +503,7 @@ namespace srcrepair
                     MessageBox.Show(RM.GetString("PS_SeqCompleted"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Завершаем работу приложения...
-                    Application.Exit();
+                    Environment.Exit(0);
                 }
             }
         }
@@ -492,81 +539,81 @@ namespace srcrepair
              */
             
             // Начинаем определять нужные нам значения переменных...
-            switch (AppSelector.SelectedIndex)
+            switch (AppSelector.Text)
             {
-                case 0: // Team Fortress 2
+                case "Team Fortress 2": // Team Fortress 2
                     GV.FullAppName = "team fortress 2"; // имя каталога...
                     GV.SmallAppName = "tf"; // имя индивидуального подкаталога...
                     ptha = LoginSel.Text; // это GCF-приложение...
                     GV.IsGCFApp = true;
                     break;
-                case 1: // Counter-Strike: Source
+                case "Counter-Strike: Source": // Counter-Strike: Source
                     GV.FullAppName = "counter-strike source";
                     GV.SmallAppName = "cstrike";
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                case 2: // Day of Defeat: Source
+                case "Day of Defeat: Source": // Day of Defeat: Source
                     GV.FullAppName = "day of defeat source";
                     GV.SmallAppName = "dod";
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                case 3: // Half-Life 2: Deathmatch
+                case "Half-Life 2: Deathmatch": // Half-Life 2: Deathmatch
                     GV.FullAppName = "half-life 2 deathmatch";
                     GV.SmallAppName = "hl2mp";
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                case 4: // Garry's Mod
+                case "Garry's Mod": // Garry's Mod
                     GV.FullAppName = "garrysmod";
                     GV.SmallAppName = "garrysmod";
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                case 5: // Age of Chivalry
+                case "Age of Chivalry": // Age of Chivalry
                     GV.FullAppName = "age of chivalry";
                     GV.SmallAppName = "ageofchivalry";
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                case 6: // D.I.P.R.I.P.: Warm Up
+                case "D.I.P.R.I.P.: Warm Up": // D.I.P.R.I.P.: Warm Up
                     GV.FullAppName = "diprip warm up";
                     GV.SmallAppName = "diprip";
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                case 7: // Dystopia
+                case "Dystopia": // Dystopia
                     GV.FullAppName = "dystopia";
                     GV.SmallAppName = "Dystopia";
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                case 8: // Insurgency
+                case "Insurgency": // Insurgency
                     GV.FullAppName = "insurgency";
                     GV.SmallAppName = "insurgency";
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                case 9: // Pirates, Vikings, & Knights II
+                case "Pirates, Vikings, & Knights II": // Pirates, Vikings, & Knights II
                     GV.FullAppName = "pirates, vikings, and knights ii";
                     GV.SmallAppName = "pvkii";
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                case 10: // Smashball
+                case "Smashball": // Smashball
                     GV.FullAppName = "smashball";
                     GV.SmallAppName = "Smashball";
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                case 11: // Synergy
+                case "Synergy": // Synergy
                     GV.FullAppName = "synergy";
                     GV.SmallAppName = "synergy";
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                case 12: // Zombie Panic! Source
+                case "Zombie Panic! Source": // Zombie Panic! Source
                     GV.FullAppName = "zombie panic! source";
                     GV.SmallAppName = "zps";
                     ptha = LoginSel.Text;
@@ -967,7 +1014,7 @@ namespace srcrepair
             
             // Выводим сообщение о завершении считывания в статус-бар...
             SB_Status.Text = RM.GetString("StatusNormal");
-            SB_App.Text = AppSelector.SelectedItem.ToString();
+            SB_App.Text = AppSelector.Text;
         }
 
         private void LoginSel_SelectedIndexChanged(object sender, EventArgs e)
@@ -985,6 +1032,22 @@ namespace srcrepair
 
             // Выводим логин на страницу "Устранение проблем"...
             PS_RSteamLogin.Text = LoginSel.Text;
+
+            // Начинаем определять установленные игры...
+            DetectInstalledGames(GV.FullSteamPath + @"steamapps\" + LoginSel.Text + @"\");
+
+            // Проверим нашлись ли игры...
+            if (AppSelector.Items.Count == 0)
+            {
+                // Нет, не нашлись, выведем сообщение...
+                MessageBox.Show(RM.GetString("AppNoGamesDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            if (AppSelector.Items.Count == 1)
+            {
+                AppSelector.SelectedIndex = 0;
+                SB_Status.Text = RM.GetString("StatusNormal");
+            }
         }
 
         private void GT_Maximum_Graphics_Click(object sender, EventArgs e)

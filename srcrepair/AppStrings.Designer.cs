@@ -115,6 +115,24 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Attention! On the selected Steam we can&apos;t detect any installed supported games. Please run your desired game from Steam at least once. After that, they will appear in the list and you will be able to manage them by this program..
+        /// </summary>
+        internal static string AppNoGamesDetected {
+            get {
+                return ResourceManager.GetString("AppNoGamesDetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fatal error! Can&apos;t read directory SteamApps. Maybe it does not exists or you do not have necessary rights. Further program execution is impossible. Install and run at least one game from Steam and then use this program again..
+        /// </summary>
+        internal static string AppNoSTADetected {
+            get {
+                return ResourceManager.GetString("AppNoSTADetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occurred while creating the backup. Backup has been created!.
         /// </summary>
         internal static string BackUpCreationFailed {
