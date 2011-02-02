@@ -9,3 +9,4 @@ ShcMLnRU=русская версия
 ShcMLnEN=английская версия
 ShcChlog=История версий
 ShcLocFldr=Локализованные
+ShcLocTexts=Информация

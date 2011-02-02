@@ -9,3 +9,4 @@ ShcMLnRU=Russian
 ShcMLnEN=English
 ShcChlog=Full changelog
 ShcLocFldr=Localized
+ShcLocTexts=Information

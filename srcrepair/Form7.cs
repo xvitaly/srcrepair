@@ -77,6 +77,7 @@ namespace srcrepair
             {
                 MessageBox.Show(frmMainW.RM.GetString("PS_LoadErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 CM_Clean.Enabled = false;
+                this.Close();
             }
             // Указываем сколько МБ освободится при удалении всех файлов...
             CM_Info.Text = String.Format(CM_Info.Text, (TotalSize / 1024 / 1024).ToString());
@@ -114,8 +115,12 @@ namespace srcrepair
                                     }
                                 }
                             }
+                            
                             // Выводим сообщение об успешном окончании очистки...
                             MessageBox.Show(frmMainW.RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            // Закрываем форму...
+                            this.Close();
                         }
                         catch
                         {

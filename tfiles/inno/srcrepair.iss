@@ -23,7 +23,7 @@ AppVerName=SRC Repair
 AppPublisher=EasyCoding Team
 AppPublisherURL=http://www.easycoding.org/projects/srcrepair
 ; AppVersion отображаетс€ в ”становка/”даление программ в дополнительной информации.
-AppVersion=1.0.0.200
+AppVersion=2.0.0.236
 AppSupportURL=http://www.easycoding.org/projects/srcrepair
 AppUpdatesURL=http://www.easycoding.org/projects/srcrepair
 DefaultDirName={pf}\SRC Repair
@@ -32,8 +32,8 @@ AllowNoIcons=yes
 LicenseFile=E:\VSBuilds\GPL.txt
 ;InfoBeforeFile=E:\VSBuilds\readme.txt
 OutputDir=E:\VSBuilds
-;OutputBaseFilename=SRCRepair_Setup
-OutputBaseFilename=srcrepair_10_final
+;OutputBaseFilename=srcrepair_20_final
+OutputBaseFilename=srcrepair_beta_236
 SetupIconFile=E:\SVN\srcrepair\srcrepair\TF2Repair.ico
 ;UninstallDisplayIcon={app}\MyProg.exe,1
 Compression=lzma2
@@ -45,7 +45,7 @@ SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64
 
 ; “ут указываем данные, которые будут добавлены в свойства установщика
-VersionInfoVersion=1.0.0.200
+VersionInfoVersion=2.0.0.236
 VersionInfoDescription=SRC Repair Setup
 VersionInfoCopyright=(c) 2005-2011 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
@@ -78,7 +78,6 @@ Source: "E:\VSBuilds\x64\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion;
 Source: "E:\VSBuilds\x64\srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Check: Is64BitInstallMode
 Source: "E:\VSBuilds\x64\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: Is64BitInstallMode
 ; ”станавливаем остальные файлы...
-Source: "E:\VSBuilds\backups\*"; DestDir: "{app}\backups\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "E:\VSBuilds\cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "E:\VSBuilds\7z\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Tasks: inst7z
 Source: "E:\VSBuilds\nfx\*"; DestDir: "{app}\nfx\"; Flags: ignoreversion recursesubdirs createallsubdirs
@@ -87,20 +86,20 @@ Source: "E:\VSBuilds\nfx\*"; DestDir: "{app}\nfx\"; Flags: ignoreversion recurse
 [Icons]
 ; —оздаЄм €рлык дл€ приложени€...
 Name: "{group}\SRC Repair"; Filename: "{app}\srcrepair.exe"
+; —оздаЄм €рлыки дл€ файлов с лицензионным соглашением и ReadMe...
+Name: "{group}\{cm:ShcLocTexts}\{cm:ShcLicenseAgrr}"; Filename: "{app}\GPL.txt"
+Name: "{group}\{cm:ShcLocTexts}\{cm:ShcReadme}"; Filename: "{app}\readme.txt"
+Name: "{group}\{cm:ShcLocTexts}\{cm:ShcChlog}"; Filename: "{app}\changelog.txt"
 ; —оздаЄм €рлыки дл€ запуска локализованных версий (только если пользователь выбрал этот пункт)...
 Name: "{group}\{cm:ShcLocFldr}\SRC Repair ({cm:ShcMLnRU})"; Filename: "{app}\srcrepair.exe"; Parameters: "/russian"; Tasks: betashortuts
 Name: "{group}\{cm:ShcLocFldr}\SRC Repair ({cm:ShcMLnEN})"; Filename: "{app}\srcrepair.exe"; Parameters: "/english"; Tasks: betashortuts
 ; —оздаЄм стандартные €рлыки дл€ справки и удалени€...
-Name: "{group}\{cm:ProgramOnTheWeb,SRC Repair}"; Filename: "http://www.easycoding.org/projects/srcrepair"
+Name: "{group}\{cm:ShcLocTexts}\{cm:ProgramOnTheWeb,SRC Repair}"; Filename: "http://www.easycoding.org/projects/srcrepair"
 Name: "{group}\{cm:UninstallProgram,SRC Repair}"; Filename: "{uninstallexe}"
 ; —оздаЄм €рлык на рабочем столе (если выбрано)...
 Name: "{commondesktop}\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: desktopicon
 ; —оздаЄм €рлык на панели быстрого запуска (если выбрано)...
 Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: quicklaunchicon
-; —оздаЄм €рлыки дл€ файлов с лицензионным соглашением и ReadMe...
-Name: "{group}\{cm:ShcLicenseAgrr}"; Filename: "{app}\GPL.txt"
-Name: "{group}\{cm:ShcReadme}"; Filename: "{app}\readme.txt"
-Name: "{group}\{cm:ShcChlog}"; Filename: "{app}\changelog.txt"
 ; —оздаЄм €рлык дл€ установщика среды Microsoft .NET Framework 4...
 Name: "{group}\{cm:ShcNETFx}"; Filename: "{app}\nfx\dotNetFx40_Full_setup.exe"
 
