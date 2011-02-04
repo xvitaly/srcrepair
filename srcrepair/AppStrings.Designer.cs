@@ -142,6 +142,60 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Graph. options autobackup of.
+        /// </summary>
+        internal static string BU_BName_GameAuto {
+            get {
+                return ResourceManager.GetString("BU_BName_GameAuto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Graph. settings of.
+        /// </summary>
+        internal static string BU_BName_GRGame {
+            get {
+                return ResourceManager.GetString("BU_BName_GRGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All SRC graph. settings of.
+        /// </summary>
+        internal static string BU_BName_SRCAll {
+            get {
+                return ResourceManager.GetString("BU_BName_SRCAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Steam options of.
+        /// </summary>
+        internal static string BU_BName_SteamAll {
+            get {
+                return ResourceManager.GetString("BU_BName_SteamAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Config.
+        /// </summary>
+        internal static string BU_BType_Cfg {
+            get {
+                return ResourceManager.GetString("BU_BType_Cfg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registry.
+        /// </summary>
+        internal static string BU_BType_Reg {
+            get {
+                return ResourceManager.GetString("BU_BType_Reg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to There was an error occured. File was not removed!.
         /// </summary>
         internal static string BU_DelFailed {

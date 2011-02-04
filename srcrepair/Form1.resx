@@ -2773,6 +2773,9 @@
   <data name="BEd_BName.HeaderText" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="BEd_BName.Width" type="System.Int32, mscorlib">
+    <value>145</value>
+  </data>
   <metadata name="BEd_BType.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -2780,7 +2783,7 @@
     <value>Type</value>
   </data>
   <data name="BEd_BType.Width" type="System.Int32, mscorlib">
-    <value>90</value>
+    <value>70</value>
   </data>
   <metadata name="BEd_BSize.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2789,7 +2792,7 @@
     <value>Size</value>
   </data>
   <data name="BEd_BSize.Width" type="System.Int32, mscorlib">
-    <value>45</value>
+    <value>50</value>
   </data>
   <metadata name="BEd_BData.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2798,7 +2801,7 @@
     <value>Data</value>
   </data>
   <data name="BEd_BData.Width" type="System.Int32, mscorlib">
-    <value>150</value>
+    <value>120</value>
   </data>
   <metadata name="BEd_BRealName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -408,4 +408,22 @@
   <data name="AppNoSTADetected" xml:space="preserve">
     <value>Fatal error! Can't read directory SteamApps. Maybe it does not exists or you do not have necessary rights. Further program execution is impossible. Install and run at least one game from Steam and then use this program again.</value>
   </data>
+  <data name="BU_BName_GameAuto" xml:space="preserve">
+    <value>Graph. options autobackup of</value>
+  </data>
+  <data name="BU_BName_GRGame" xml:space="preserve">
+    <value>Graph. settings of</value>
+  </data>
+  <data name="BU_BName_SRCAll" xml:space="preserve">
+    <value>All SRC graph. settings of</value>
+  </data>
+  <data name="BU_BName_SteamAll" xml:space="preserve">
+    <value>Steam options of</value>
+  </data>
+  <data name="BU_BType_Cfg" xml:space="preserve">
+    <value>Config</value>
+  </data>
+  <data name="BU_BType_Reg" xml:space="preserve">
+    <value>Registry</value>
+  </data>
 </root>

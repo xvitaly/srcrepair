@@ -1537,11 +1537,6 @@
         private System.Windows.Forms.ToolStripMenuItem BUT_L_GameSettings;
         private System.Windows.Forms.ToolStripMenuItem BUT_L_AllSteam;
         private System.Windows.Forms.ToolStripMenuItem BUT_L_AllSRC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BSize;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BRealName;
         private System.Windows.Forms.FolderBrowserDialog FldrBrwse;
         private System.Windows.Forms.ToolStripMenuItem MNUHEd;
         private System.Windows.Forms.ToolStripSeparator CE_ToolSep1;
@@ -1550,6 +1545,11 @@
         private System.Windows.Forms.Button PS_RemOldBin;
         private System.Windows.Forms.Button PS_RemGraphOpts;
         private System.Windows.Forms.Button FP_OpenNotepad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BSize;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BRealName;
     }
 }
 

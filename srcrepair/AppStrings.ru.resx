@@ -507,4 +507,27 @@
     <value>Критическая ошибка! Не могу прочитать каталог SteamApps. Возможно, он не существует, либо у Вас нет прав на его чтение. Дальнейшее выполнение программы невозможно. Установите и запустите хотя бы одну игру из Steam, затем данную программу.</value>
     <comment>Сообщение, выдаваемое при возникновении исключения при открытии каталога SteamApps</comment>
   </data>
+  <data name="BU_BName_GameAuto" xml:space="preserve">
+    <value>Автокопия настроек игры от</value>
+  </data>
+  <data name="BU_BName_GRGame" xml:space="preserve">
+    <value>Граф. настройки от</value>
+    <comment>Имя для отображения в списке бэкапов реестра (графические настройки)</comment>
+  </data>
+  <data name="BU_BName_SRCAll" xml:space="preserve">
+    <value>Граф. настройки всех игр от</value>
+    <comment>Имя для отображения в списке бэкапов реестра (графические настройки всех Source-игр)</comment>
+  </data>
+  <data name="BU_BName_SteamAll" xml:space="preserve">
+    <value>Настройки Steam от</value>
+    <comment>Имя для отображения в списке бэкапов реестра (настройки Steam)</comment>
+  </data>
+  <data name="BU_BType_Cfg" xml:space="preserve">
+    <value>Конфиг</value>
+    <comment>Тип бэкапа: конфиг</comment>
+  </data>
+  <data name="BU_BType_Reg" xml:space="preserve">
+    <value>Реестр</value>
+    <comment>Тип бэкапа: реестр</comment>
+  </data>
 </root>

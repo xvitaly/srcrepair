@@ -1827,14 +1827,42 @@ namespace srcrepair
                 DirectoryInfo DInfo = new DirectoryInfo(GV.FullBackUpDirPath);
                 // Считываем список файлов по заданной маске...
                 FileInfo[] DirList = DInfo.GetFiles("*.*");
-                // Инициализируем буферную переменную...
-                string Buf;
+                // Инициализируем буферные переменные...
+                string Buf, BufName;
                 // Начинаем обход массива...
                 foreach (FileInfo DItem in DirList)
                 {
                     // Обрабатываем найденное...
-                    if (DItem.Extension == ".reg") { Buf = "Registry"; } else { Buf = "Config"; }
-                    BU_ListTable.Rows.Add(Path.GetFileNameWithoutExtension(DItem.Name), Buf, DItem.Length / 1024, DItem.CreationTime, DItem.Name);
+                    BufName = Path.GetFileNameWithoutExtension(DItem.Name);
+                    if (DItem.Extension == ".reg")
+                    {
+                        // Бэкап реестра...
+                        Buf = RM.GetString("BU_BType_Reg");
+                        // Заполним человеческое описание...
+                        if (BufName.IndexOf("Game_Options") != -1)
+                        {
+                            BufName = RM.GetString("BU_BName_GRGame") + " " + DItem.CreationTime;
+                        }
+                        if (BufName.IndexOf("Source_Options") != -1)
+                        {
+                            BufName = RM.GetString("BU_BName_SRCAll") + " " + DItem.CreationTime;
+                        }
+                        if (BufName.IndexOf("Steam_BackUp") != -1)
+                        {
+                            BufName = RM.GetString("BU_BName_SteamAll") + " " + DItem.CreationTime;
+                        }
+                        if (BufName.IndexOf("Game_AutoBackUp") != -1)
+                        {
+                            BufName = RM.GetString("BU_BName_GameAuto") + " " + DItem.CreationTime;
+                        }
+                        
+                    }
+                    else
+                    {
+                        // Бэкап конфига...
+                        Buf = RM.GetString("BU_BType_Cfg");
+                    }
+                    BU_ListTable.Rows.Add(BufName, Buf, (DItem.Length / 1024).ToString() + " KB", DItem.CreationTime, DItem.Name);
                 }
             }
             catch
