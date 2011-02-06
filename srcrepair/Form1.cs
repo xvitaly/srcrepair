@@ -30,6 +30,7 @@ using Microsoft.Win32; // для работы с реестром...
 using System.Reflection; // для управления сборками...
 using System.Globalization; // для управления локализациями...
 using System.Resources; // для управления ресурсами...
+using System.Net; // для скачивания файлов...
 
 namespace srcrepair
 {
@@ -277,6 +278,7 @@ namespace srcrepair
                 PS_CleanRegistry.Enabled = false;
                 PS_SteamLang.Enabled = false;
                 MNUHEd.Enabled = false;
+                MNUUpdateCheck.Enabled = false;
             }
             
             // Получаем информацию о версии нашего приложения...
@@ -2170,6 +2172,39 @@ namespace srcrepair
         private void FP_OpenNotepad_Click(object sender, EventArgs e)
         {
             Process.Start("notepad.exe", GV.FullAppPath + @"cfgs\" + GV.SmallAppName + @"\" + FP_ConfigSel.Text);
+        }
+
+        private void MNUUpdateCheck_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string NewVersion, UpdateURI, DnlStr;
+                // Получаем файл с номером версии и ссылкой на новую...
+                using (WebClient Downloader = new WebClient())
+                {
+                    DnlStr = Downloader.DownloadString("http://www.easycoding.org/files/srcrep_ver.txt");
+                }
+                // Мы получили URL и версию...
+                NewVersion = DnlStr.Substring(0, DnlStr.IndexOf("!")); // Получаем версию...
+                UpdateURI = DnlStr.Remove(0, DnlStr.IndexOf("!") + 1); // Получаем URL...
+                // Проверим, совпадают ли билды текущей версии и последней...
+                if (NewVersion.Substring(NewVersion.LastIndexOf(".") + 1) != GV.AppVersionInfo.Substring(NewVersion.LastIndexOf(".") + 1))
+                {
+                    // Доступна новая версия, отобразим модуль обновления...
+                    frmUpdate UpdFrm = new frmUpdate(NewVersion, UpdateURI);
+                    UpdFrm.ShowDialog();
+                }
+                else
+                {
+                    // Новых версий не обнаружено.
+                    MessageBox.Show(RM.GetString("UPD_LatestInstalled"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch
+            {
+                // Произошло исключение...
+                MessageBox.Show(RM.GetString("UPD_ExceptionDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

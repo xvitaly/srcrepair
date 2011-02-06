@@ -159,6 +159,7 @@
             this.MNUHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUOpinion = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUReportBug = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUUpdateCheck = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSteamGroup = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep3 = new System.Windows.Forms.ToolStripSeparator();
             this.MNULnkEasyCoding = new System.Windows.Forms.ToolStripMenuItem();
@@ -1224,6 +1225,7 @@
             this.MNUHelp,
             this.MNUOpinion,
             this.MNUReportBug,
+            this.MNUUpdateCheck,
             this.MNUSteamGroup,
             this.MNUSep3,
             this.MNULnkEasyCoding,
@@ -1253,6 +1255,13 @@
             this.MNUReportBug.Name = "MNUReportBug";
             resources.ApplyResources(this.MNUReportBug, "MNUReportBug");
             this.MNUReportBug.Click += new System.EventHandler(this.MNUReportBug_Click);
+            // 
+            // MNUUpdateCheck
+            // 
+            this.MNUUpdateCheck.Image = global::srcrepair.Properties.Resources.Globe;
+            this.MNUUpdateCheck.Name = "MNUUpdateCheck";
+            resources.ApplyResources(this.MNUUpdateCheck, "MNUUpdateCheck");
+            this.MNUUpdateCheck.Click += new System.EventHandler(this.MNUUpdateCheck_Click);
             // 
             // MNUSteamGroup
             // 
@@ -1550,6 +1559,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BSize;
         private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BData;
         private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BRealName;
+        private System.Windows.Forms.ToolStripMenuItem MNUUpdateCheck;
     }
 }
 

@@ -986,5 +986,50 @@ namespace srcrepair {
                 return ResourceManager.GetString("UnnamedFileName", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to download updates! Allow the program to get data from the Internet and try again later..
+        /// </summary>
+        internal static string UPD_DownloadException {
+            get {
+                return ResourceManager.GetString("UPD_DownloadException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while checking for updates! Allow the program to get data from the Internet and try again later..
+        /// </summary>
+        internal static string UPD_ExceptionDetected {
+            get {
+                return ResourceManager.GetString("UPD_ExceptionDetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update is not required because you have the latest version of the program..
+        /// </summary>
+        internal static string UPD_LatestInstalled {
+            get {
+                return ResourceManager.GetString("UPD_LatestInstalled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to run installer. The program has not been updated. Run the update again later!.
+        /// </summary>
+        internal static string UPD_UpdateFailure {
+            get {
+                return ResourceManager.GetString("UPD_UpdateFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The new version has been successfully received from server. We will install it now!.
+        /// </summary>
+        internal static string UPD_UpdateSuccessful {
+            get {
+                return ResourceManager.GetString("UPD_UpdateSuccessful", resourceCulture);
+            }
+        }
     }
 }

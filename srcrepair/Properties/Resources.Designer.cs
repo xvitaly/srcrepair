@@ -95,6 +95,13 @@ namespace srcrepair.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Globe {
+            get {
+                object obj = ResourceManager.GetObject("Globe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Help {
             get {
                 object obj = ResourceManager.GetObject("Help", resourceCulture);

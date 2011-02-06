@@ -59,3 +59,5 @@ HostEd.ico - GNOME icon artists - GPLv2 - http://www.iconspedia.com/icon/gnome-t
 --------------------------------------------------------------------------------------------------------
 TextEditor.png - GNOME icon artists - GPLv2 - http://www.iconspedia.com/icon/gnome-edit-undo-11006.html
 --------------------------------------------------------------------------------------------------------
+Globe.ico - PixelMixer - ÑÑ3 - http://www.iconspedia.com/icon/globe-11618.html
+--------------------------------------------------------------------------------------------------------

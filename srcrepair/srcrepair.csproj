@@ -143,6 +143,12 @@
     <Compile Include="Form7.Designer.cs">
       <DependentUpon>Form7.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8.Designer.cs">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </Compile>
     <Compile Include="GO.cs" />
     <Compile Include="GV.cs" />
     <Compile Include="Program.cs" />
@@ -204,6 +210,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form7.ru.resx">
       <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8.resx">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8.ru.resx">
+      <DependentUpon>Form8.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -269,6 +281,7 @@
     <None Include="Resources\Xmas.png" />
     <None Include="Resources\hosts.png" />
     <None Include="Resources\TextEditor.png" />
+    <None Include="Resources\Globe.png" />
     <Content Include="TF2Repair.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
