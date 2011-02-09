@@ -139,6 +139,7 @@
             this.BUT_Sep1 = new System.Windows.Forms.ToolStripSeparator();
             this.BUT_RestoreB = new System.Windows.Forms.ToolStripButton();
             this.BUT_DelB = new System.Windows.Forms.ToolStripButton();
+            this.BUT_OpenNpad = new System.Windows.Forms.ToolStripButton();
             this.BUT_Sep2 = new System.Windows.Forms.ToolStripSeparator();
             this.BUT_CrBkupReg = new System.Windows.Forms.ToolStripSplitButton();
             this.BUT_L_GameSettings = new System.Windows.Forms.ToolStripMenuItem();
@@ -1065,6 +1066,7 @@
             this.BUT_Sep1,
             this.BUT_RestoreB,
             this.BUT_DelB,
+            this.BUT_OpenNpad,
             this.BUT_Sep2,
             this.BUT_CrBkupReg});
             resources.ApplyResources(this.BU_BToolbar, "BU_BToolbar");
@@ -1098,6 +1100,14 @@
             resources.ApplyResources(this.BUT_DelB, "BUT_DelB");
             this.BUT_DelB.Name = "BUT_DelB";
             this.BUT_DelB.Click += new System.EventHandler(this.BUT_DelB_Click);
+            // 
+            // BUT_OpenNpad
+            // 
+            this.BUT_OpenNpad.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BUT_OpenNpad.Image = global::srcrepair.Properties.Resources.TextEditor;
+            resources.ApplyResources(this.BUT_OpenNpad, "BUT_OpenNpad");
+            this.BUT_OpenNpad.Name = "BUT_OpenNpad";
+            this.BUT_OpenNpad.Click += new System.EventHandler(this.BUT_OpenNpad_Click);
             // 
             // BUT_Sep2
             // 
@@ -1560,6 +1570,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BData;
         private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BRealName;
         private System.Windows.Forms.ToolStripMenuItem MNUUpdateCheck;
+        private System.Windows.Forms.ToolStripButton BUT_OpenNpad;
     }
 }
 

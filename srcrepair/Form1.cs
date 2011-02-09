@@ -2206,5 +2206,18 @@ namespace srcrepair
                 MessageBox.Show(RM.GetString("UPD_ExceptionDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void BUT_OpenNpad_Click(object sender, EventArgs e)
+        {
+            if (BU_ListTable.Rows.Count > 0)
+            {
+                // Откроем выбранный бэкап в Блокноте Windows...
+                Process.Start("notepad.exe", GV.FullBackUpDirPath + BU_ListTable.Rows[BU_ListTable.CurrentRow.Index].Cells[4].Value.ToString());
+            }
+            else
+            {
+                MessageBox.Show(RM.GetString("BU_NoFiles"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

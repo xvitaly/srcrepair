@@ -2869,6 +2869,15 @@
   <data name="BUT_DelB.Text" xml:space="preserve">
     <value>Delete BackUp</value>
   </data>
+  <data name="BUT_OpenNpad.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="BUT_OpenNpad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="BUT_OpenNpad.Text" xml:space="preserve">
+    <value>Open BackUp in Notepad</value>
+  </data>
   <data name="BUT_Sep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
   </data>
@@ -3630,6 +3639,12 @@
     <value>BUT_DelB</value>
   </data>
   <data name="&gt;&gt;BUT_DelB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BUT_OpenNpad.Name" xml:space="preserve">
+    <value>BUT_OpenNpad</value>
+  </data>
+  <data name="&gt;&gt;BUT_OpenNpad.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;BUT_Sep2.Name" xml:space="preserve">
