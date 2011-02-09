@@ -1830,7 +1830,7 @@ namespace srcrepair
         private void MNUExit_Click(object sender, EventArgs e)
         {
             // Завершаем работу программы...
-            Close();
+            Environment.Exit(0);
         }
 
         private void MNUFPSWizard_Click(object sender, EventArgs e)
