@@ -223,16 +223,30 @@ namespace srcrepair
          * Эта функция определяет установленные игры и заполняет комбо-бокс
          * выбора доступных управляемых игр.
          */
-        private void DetectInstalledGames(string SearchPath)
+        private void DetectInstalledGames(string SteamPath, string SteamLogin, bool AddSinglePlayer)
         {
             // Очистим список игр...
             AppSelector.Items.Clear();
+            // Сгенерируем путь для поиска GCF-приложений...
+            string SearchPath = SteamPath + @"steamapps\" + SteamLogin + @"\";
             // Ищем Team Fortress 2...
             if (Directory.Exists(SearchPath + @"team fortress 2\")) { AppSelector.Items.Add((string)"Team Fortress 2"); }
             // Ищем Counter-Strike: Source...
             if (Directory.Exists(SearchPath + @"counter-strike source\")) { AppSelector.Items.Add((string)"Counter-Strike: Source"); }
             // Ищем Day of Defeat: Source...
             if (Directory.Exists(SearchPath + @"day of defeat source\")) { AppSelector.Items.Add((string)"Day of Defeat: Source"); }
+            // Проверим нужно ли добавлять в список одиночные игры...
+            if (AddSinglePlayer)
+            {
+                // Ищем Half-Life 2...
+                if (Directory.Exists(SearchPath + @"half-life 2\")) { AppSelector.Items.Add((string)"Half-Life 2"); }
+                // Ищем Half-Life 2: Episode One...
+                if (Directory.Exists(SearchPath + @"half-life 2 episode one\")) { AppSelector.Items.Add((string)"Half-Life 2: Episode One"); }
+                // Ищем Half-Life 2: Episode Two...
+                if (Directory.Exists(SearchPath + @"half-life 2 episode two\")) { AppSelector.Items.Add((string)"Half-Life 2: Episode Two"); }
+                // Ищем Portal...
+                if (Directory.Exists(SearchPath + @"portal\")) { AppSelector.Items.Add((string)"Portal"); }
+            }
             // Ищем Half-Life 2: Deathmatch...
             if (Directory.Exists(SearchPath + @"half-life 2 deathmatch\")) { AppSelector.Items.Add((string)"Half-Life 2: Deathmatch"); }
             // Ищем Garry's Mod...
@@ -567,6 +581,30 @@ namespace srcrepair
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
+                case "Half-Life 2": // Half-Life 2
+                    GV.FullAppName = "half-life 2";
+                    GV.SmallAppName = "hl2";
+                    ptha = LoginSel.Text;
+                    GV.IsGCFApp = true;
+                    break;
+                case "Half-Life 2: Episode One": // Half-Life 2: Episode One
+                    GV.FullAppName = "half-life 2 episode one";
+                    GV.SmallAppName = "episodic";
+                    ptha = LoginSel.Text;
+                    GV.IsGCFApp = true;
+                    break;
+                case "Half-Life 2: Episode Two": // Half-Life 2: Episode Two
+                    GV.FullAppName = "half-life 2 episode two";
+                    GV.SmallAppName = "ep2";
+                    ptha = LoginSel.Text;
+                    GV.IsGCFApp = true;
+                    break;
+                case "Portal": // Portal
+                    GV.FullAppName = "portal";
+                    GV.SmallAppName = "portal";
+                    ptha = LoginSel.Text;
+                    GV.IsGCFApp = true;
+                    break;
                 case "Garry's Mod": // Garry's Mod
                     GV.FullAppName = "garrysmod";
                     GV.SmallAppName = "garrysmod";
@@ -621,19 +659,19 @@ namespace srcrepair
                     ptha = LoginSel.Text;
                     GV.IsGCFApp = true;
                     break;
-                /*case 13: // Left 4 Dead 1
+                /*case "Left 4 Dead": // Left 4 Dead 1
                     GV.FullAppName = "left 4 dead"; // имя каталога...
                     GV.SmallAppName = "left4dead"; // имя индивидуального подкаталога...
                     ptha = "common"; // это NCF-приложение...
                     GV.IsGCFApp = false;
                     break;
-                case 14: // Left 4 Dead 2
+                case "Left 4 Dead 2": // Left 4 Dead 2
                     GV.FullAppName = "left 4 dead 2";
                     GV.SmallAppName = "left4dead2";
                     ptha = "common";
                     GV.IsGCFApp = false;
                     break;
-                case 15: // Alien Swarm
+                case "Alien Swarm": // Alien Swarm
                     GV.FullAppName = "alien swarm";
                     GV.SmallAppName = "swarm";
                     ptha = "common";
@@ -1036,7 +1074,7 @@ namespace srcrepair
             PS_RSteamLogin.Text = LoginSel.Text;
 
             // Начинаем определять установленные игры...
-            DetectInstalledGames(GV.FullSteamPath + @"steamapps\" + LoginSel.Text + @"\");
+            DetectInstalledGames(GV.FullSteamPath, LoginSel.Text, true);
 
             // Проверим нашлись ли игры...
             if (AppSelector.Items.Count == 0)
