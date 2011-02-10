@@ -671,6 +671,12 @@
   <data name="MNUShowEdHint.Text" xml:space="preserve">
     <value>&amp;Показать подсказку</value>
   </data>
+  <data name="MNUAppOptions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 22</value>
+  </data>
+  <data name="MNUAppOptions.Text" xml:space="preserve">
+    <value>Н&amp;астройки SRC Repair...</value>
+  </data>
   <data name="MNUSep1.Size" type="System.Drawing.Size, System.Drawing">
     <value>313, 6</value>
   </data>

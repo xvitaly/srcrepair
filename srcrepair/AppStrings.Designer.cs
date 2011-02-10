@@ -610,6 +610,24 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Attention! An error occurred while saving!.
+        /// </summary>
+        internal static string Opts_Error {
+            get {
+                return ResourceManager.GetString("Opts_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Application settings were saved successfully. Attention! Some of them will be activated only after restarting the program..
+        /// </summary>
+        internal static string Opts_Saved {
+            get {
+                return ResourceManager.GetString("Opts_Saved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Discovered the command line parameter, but not found its value, so ignore this option!.
         /// </summary>
         internal static string ParamError {

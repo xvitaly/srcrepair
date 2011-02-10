@@ -149,6 +149,7 @@
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.ToolsMNU = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUShowEdHint = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUAppOptions = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep1 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUFPSWizard = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUReportBuilder = new System.Windows.Forms.ToolStripMenuItem();
@@ -1167,6 +1168,7 @@
             // 
             this.ToolsMNU.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MNUShowEdHint,
+            this.MNUAppOptions,
             this.MNUSep1,
             this.MNUFPSWizard,
             this.MNUReportBuilder,
@@ -1183,6 +1185,13 @@
             this.MNUShowEdHint.Image = global::srcrepair.Properties.Resources.hint;
             this.MNUShowEdHint.Name = "MNUShowEdHint";
             this.MNUShowEdHint.Click += new System.EventHandler(this.MNUShowEdHint_Click);
+            // 
+            // MNUAppOptions
+            // 
+            this.MNUAppOptions.Image = global::srcrepair.Properties.Resources.Options;
+            this.MNUAppOptions.Name = "MNUAppOptions";
+            resources.ApplyResources(this.MNUAppOptions, "MNUAppOptions");
+            this.MNUAppOptions.Click += new System.EventHandler(this.MNUAppOptions_Click);
             // 
             // MNUSep1
             // 
@@ -1571,6 +1580,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BRealName;
         private System.Windows.Forms.ToolStripMenuItem MNUUpdateCheck;
         private System.Windows.Forms.ToolStripButton BUT_OpenNpad;
+        private System.Windows.Forms.ToolStripMenuItem MNUAppOptions;
     }
 }
 

@@ -441,4 +441,10 @@
   <data name="UPD_UpdateSuccessful" xml:space="preserve">
     <value>The new version has been successfully received from server. We will install it now!</value>
   </data>
+  <data name="Opts_Error" xml:space="preserve">
+    <value>Attention! An error occurred while saving!</value>
+  </data>
+  <data name="Opts_Saved" xml:space="preserve">
+    <value>Application settings were saved successfully. Attention! Some of them will be activated only after restarting the program.</value>
+  </data>
 </root>

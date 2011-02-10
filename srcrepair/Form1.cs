@@ -346,6 +346,19 @@ namespace srcrepair
                 }
             }
 
+            // Считаем настройки программы из реестра...
+            try
+            {
+                GO.ConfirmExit = CoreLib.GetAppBool("ConfirmExit", GV.AppName, GO.ConfirmExit);
+                GO.ShowSinglePlayer = CoreLib.GetAppBool("ShowSinglePlayer", GV.AppName, GO.ShowSinglePlayer);
+            }
+            catch
+            {
+                // Произошло исключение, поэтому зададим стандартные значения вручную...
+                GO.ConfirmExit = true;
+                GO.ShowSinglePlayer = true;
+            }
+
             // Ищем параметр командной строки login...
             if (CoreLib.FindCommandLineSwitch(CMDLineArgs, "/login"))
             {
@@ -526,20 +539,23 @@ namespace srcrepair
 
         private void frmMainW_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Проверим, делал ли что-то пользователь с формой. Если не делал - не будем
-            // спрашивать и завершим форму автоматически...
-            if ((AppSelector.Enabled) && (AppSelector.SelectedIndex != -1))
+            if (GO.ConfirmExit)
             {
-                // Запрашиваем подтверждение у пользователя на закрытие формы...
-                if (MessageBox.Show(String.Format(RM.GetString("FrmCloseQuery"), GV.AppName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                // Проверим, делал ли что-то пользователь с формой. Если не делал - не будем
+                // спрашивать и завершим форму автоматически...
+                if ((AppSelector.Enabled) && (AppSelector.SelectedIndex != -1))
                 {
-                    // Подтверждение получено, закрываем форму...
-                    e.Cancel = false;
-                }
-                else
-                {
-                    // Пользователь передумал, отменяем закрытие формы...
-                    e.Cancel = true;
+                    // Запрашиваем подтверждение у пользователя на закрытие формы...
+                    if (MessageBox.Show(String.Format(RM.GetString("FrmCloseQuery"), GV.AppName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                    {
+                        // Подтверждение получено, закрываем форму...
+                        e.Cancel = false;
+                    }
+                    else
+                    {
+                        // Пользователь передумал, отменяем закрытие формы...
+                        e.Cancel = true;
+                    }
                 }
             }
         }
@@ -1074,7 +1090,7 @@ namespace srcrepair
             PS_RSteamLogin.Text = LoginSel.Text;
 
             // Начинаем определять установленные игры...
-            DetectInstalledGames(GV.FullSteamPath, LoginSel.Text, true);
+            DetectInstalledGames(GV.FullSteamPath, LoginSel.Text, GO.ShowSinglePlayer);
 
             // Проверим нашлись ли игры...
             if (AppSelector.Items.Count == 0)
@@ -2256,6 +2272,13 @@ namespace srcrepair
             {
                 MessageBox.Show(RM.GetString("BU_NoFiles"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void MNUAppOptions_Click(object sender, EventArgs e)
+        {
+            // Показываем форму настроек...
+            frmOptions OptsFrm = new frmOptions();
+            OptsFrm.ShowDialog();
         }
     }
 }

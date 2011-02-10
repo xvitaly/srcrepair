@@ -363,5 +363,47 @@ namespace srcrepair
                 DItem.Delete(); // Удаляем файл...
             }
         }
+
+        /*
+         * Эта функция получает из реестра значение указанной переменной
+         * булевского типа. При отсутствии ключа или значение - возвращается
+         * значение по умолчанию, переданное в качестве параметра.
+         */
+        public static bool GetAppBool(string CVar, string Subkey, bool Default)
+        {
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\" + Subkey, false);
+            bool Result = Default;
+            if (ResKey != null)
+            {
+                object RetObj = ResKey.GetValue(CVar);
+                if (RetObj != null)
+                {
+                    Result = Convert.ToBoolean((int)RetObj);
+                }
+                ResKey.Close();
+            }
+            return Result;
+        }
+
+        /*
+         * Эта функция проверяет существование указанного ключа в HKCU
+         * и при отсутствии создаёт автоматически.
+         */
+        public static void CheckRegKeyAndCreateCU(string KeyName)
+        {
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(KeyName, false);
+            if (ResKey == null) { Registry.CurrentUser.CreateSubKey(KeyName); } else { ResKey.Close(); }
+        }
+        
+        /*
+         * Эта функция записывает в реестр параметр-булево настроек
+         * программы.
+         */
+        public static void WriteAppBool(string CVar, string Subkey, bool CValue)
+        {
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\" + Subkey, true);
+            ResKey.SetValue(CVar, Convert.ToInt32(CValue), RegistryValueKind.DWord);
+            ResKey.Close();
+        }
     }
 }
