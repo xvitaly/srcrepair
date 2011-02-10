@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOptions));
             this.GB_MainOpts = new System.Windows.Forms.GroupBox();
+            this.MO_SortGameList = new System.Windows.Forms.CheckBox();
             this.MO_HideNotInst = new System.Windows.Forms.CheckBox();
             this.MO_ConfirmExit = new System.Windows.Forms.CheckBox();
             this.MO_ShowSingle = new System.Windows.Forms.CheckBox();
@@ -40,12 +41,19 @@
             // 
             // GB_MainOpts
             // 
+            this.GB_MainOpts.Controls.Add(this.MO_SortGameList);
             this.GB_MainOpts.Controls.Add(this.MO_HideNotInst);
             this.GB_MainOpts.Controls.Add(this.MO_ConfirmExit);
             this.GB_MainOpts.Controls.Add(this.MO_ShowSingle);
             resources.ApplyResources(this.GB_MainOpts, "GB_MainOpts");
             this.GB_MainOpts.Name = "GB_MainOpts";
             this.GB_MainOpts.TabStop = false;
+            // 
+            // MO_SortGameList
+            // 
+            resources.ApplyResources(this.MO_SortGameList, "MO_SortGameList");
+            this.MO_SortGameList.Name = "MO_SortGameList";
+            this.MO_SortGameList.UseVisualStyleBackColor = true;
             // 
             // MO_HideNotInst
             // 
@@ -109,5 +117,6 @@
         private System.Windows.Forms.CheckBox MO_HideNotInst;
         private System.Windows.Forms.Button MO_Okay;
         private System.Windows.Forms.Button MO_Cancel;
+        private System.Windows.Forms.CheckBox MO_SortGameList;
     }
 }

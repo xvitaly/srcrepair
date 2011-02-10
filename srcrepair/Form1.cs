@@ -267,6 +267,17 @@ namespace srcrepair
             if (Directory.Exists(SearchPath + @"synergy\")) { AppSelector.Items.Add((string)"Synergy"); }
             // Ищем Zombie Panic! Source...
             if (Directory.Exists(SearchPath + @"zombie panic! source\")) { AppSelector.Items.Add((string)"Zombie Panic! Source"); }
+
+            /*
+            // Начинаем искать NCF-приложения...
+            SearchPath = SteamPath + @"steamapps\common\";
+            // Ищем Left 4 Dead...
+            if (Directory.Exists(SearchPath + @"left 4 dead\")) { AppSelector.Items.Add((string)"Left 4 Dead"); }
+            // Ищем Left 4 Dead 2...
+            if (Directory.Exists(SearchPath + @"left 4 dead 2\")) { AppSelector.Items.Add((string)"Left 4 Dead 2"); }
+            // Ищем Alien Swarm...
+            if (Directory.Exists(SearchPath + @"alien swarm\")) { AppSelector.Items.Add((string)"Alien Swarm"); }
+            */
         }
 
         #endregion
@@ -351,13 +362,18 @@ namespace srcrepair
             {
                 GO.ConfirmExit = CoreLib.GetAppBool("ConfirmExit", GV.AppName, GO.ConfirmExit);
                 GO.ShowSinglePlayer = CoreLib.GetAppBool("ShowSinglePlayer", GV.AppName, GO.ShowSinglePlayer);
+                GO.SortGamesList = CoreLib.GetAppBool("SortGameList", GV.AppName, GO.SortGamesList);
             }
             catch
             {
                 // Произошло исключение, поэтому зададим стандартные значения вручную...
                 GO.ConfirmExit = true;
                 GO.ShowSinglePlayer = true;
+                GO.SortGamesList = true;
             }
+
+            // Применим некоторые настройки...
+            AppSelector.Sorted = GO.SortGamesList;
 
             // Ищем параметр командной строки login...
             if (CoreLib.FindCommandLineSwitch(CMDLineArgs, "/login"))

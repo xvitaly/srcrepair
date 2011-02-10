@@ -117,22 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="GB_MainOpts.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="MO_HideNotInst.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="MO_SortGameList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 88</value>
+  </data>
+  <data name="MO_SortGameList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>293, 17</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MO_SortGameList.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="MO_SortGameList.Text" xml:space="preserve">
+    <value>Sort list of games by name</value>
+  </data>
+  <data name="&gt;&gt;MO_SortGameList.Name" xml:space="preserve">
+    <value>MO_SortGameList</value>
+  </data>
+  <data name="&gt;&gt;MO_SortGameList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MO_SortGameList.Parent" xml:space="preserve">
+    <value>GB_MainOpts</value>
+  </data>
+  <data name="&gt;&gt;MO_SortGameList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="MO_HideNotInst.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="MO_HideNotInst.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 65</value>
   </data>
   <data name="MO_HideNotInst.Size" type="System.Drawing.Size, System.Drawing">
-    <value>323, 17</value>
+    <value>293, 17</value>
   </data>
   <data name="MO_HideNotInst.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -150,16 +168,13 @@
     <value>GB_MainOpts</value>
   </data>
   <data name="&gt;&gt;MO_HideNotInst.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
-  <metadata name="MO_ConfirmExit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="MO_ConfirmExit.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 42</value>
   </data>
   <data name="MO_ConfirmExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>323, 17</value>
+    <value>293, 17</value>
   </data>
   <data name="MO_ConfirmExit.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -177,16 +192,13 @@
     <value>GB_MainOpts</value>
   </data>
   <data name="&gt;&gt;MO_ConfirmExit.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
-  <metadata name="MO_ShowSingle.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="MO_ShowSingle.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 19</value>
   </data>
   <data name="MO_ShowSingle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>323, 17</value>
+    <value>293, 17</value>
   </data>
   <data name="MO_ShowSingle.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -204,13 +216,13 @@
     <value>GB_MainOpts</value>
   </data>
   <data name="&gt;&gt;MO_ShowSingle.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="GB_MainOpts.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
   </data>
   <data name="GB_MainOpts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>359, 93</value>
+    <value>315, 119</value>
   </data>
   <data name="GB_MainOpts.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -227,11 +239,8 @@
   <data name="&gt;&gt;GB_MainOpts.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="MO_Okay.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="MO_Okay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>89, 120</value>
+    <value>68, 137</value>
   </data>
   <data name="MO_Okay.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 23</value>
@@ -254,11 +263,8 @@
   <data name="&gt;&gt;MO_Okay.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="MO_Cancel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="MO_Cancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>211, 120</value>
+    <value>190, 137</value>
   </data>
   <data name="MO_Cancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 23</value>
@@ -284,14 +290,11 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>383, 162</value>
+    <value>340, 172</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

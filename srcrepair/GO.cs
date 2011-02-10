@@ -10,5 +10,6 @@ namespace srcrepair
         public static bool ShowSinglePlayer = true;
         public static bool HideNotInstalled = true;
         public static bool ConfirmExit = true;
+        public static bool SortGamesList = true;
     }
 }

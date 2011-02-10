@@ -22,6 +22,7 @@ namespace srcrepair
             MO_ShowSingle.Checked = GO.ShowSinglePlayer;
             MO_ConfirmExit.Checked = GO.ConfirmExit;
             MO_HideNotInst.Checked = GO.HideNotInstalled;
+            MO_SortGameList.Checked = GO.SortGamesList;
             // Укажем название приложения в заголовке окна...
             this.Text = String.Format(this.Text, GV.AppName);
         }
@@ -32,6 +33,7 @@ namespace srcrepair
             GO.ShowSinglePlayer = MO_ShowSingle.Checked;
             GO.ConfirmExit = MO_ConfirmExit.Checked;
             GO.HideNotInstalled = MO_HideNotInst.Checked;
+            GO.SortGamesList = MO_SortGameList.Checked;
             
             try
             {
@@ -41,6 +43,7 @@ namespace srcrepair
                 // Запишем настройки в реестр...
                 CoreLib.WriteAppBool("ShowSinglePlayer", GV.AppName, MO_ShowSingle.Checked);
                 CoreLib.WriteAppBool("ConfirmExit", GV.AppName, MO_ConfirmExit.Checked);
+                CoreLib.WriteAppBool("SortGameList", GV.AppName, MO_SortGameList.Checked);
                 //CoreLib.WriteAppBool("HideNotInstalled", GV.AppName, MO_HideNotInst.Checked);
                 
                 // Показываем сообщение...
