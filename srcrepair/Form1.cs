@@ -1934,7 +1934,7 @@ namespace srcrepair
                         // Бэкап конфига...
                         Buf = RM.GetString("BU_BType_Cfg");
                     }
-                    BU_ListTable.Rows.Add(BufName, Buf, (DItem.Length / 1024).ToString() + " KB", DItem.CreationTime, DItem.Name);
+                    BU_ListTable.Rows.Add(BufName, Buf, CoreLib.SclBytes(DItem.Length), DItem.CreationTime, DItem.Name);
                 }
             }
             catch

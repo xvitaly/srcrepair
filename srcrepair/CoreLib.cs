@@ -405,5 +405,24 @@ namespace srcrepair
             ResKey.SetValue(CVar, Convert.ToInt32(CValue), RegistryValueKind.DWord);
             ResKey.Close();
         }
+
+        /*
+         * Эта функция форматирует размер файла для удобства пользователя.
+         * Файлы от 0 до 1 КБ - 1 записываются в байтах, от 1 КБ до
+         * 1 МБ - 1 - в килобайтах, от 1 МБ до 1 ГБ - 1 - в мегабайтах.
+         */
+        public static string SclBytes(long InpNumber)
+        {
+            // Проверяем на размер в байтах...
+            if ((InpNumber >= 0) && (InpNumber <= 1023)) { return InpNumber.ToString() + " B"; }
+            // ...килобайтах...
+            if ((InpNumber >= 1024) && (InpNumber <= 1048575)) { return (InpNumber / 1024).ToString() + " KB"; }
+            // ...мегабайтах...
+            if ((InpNumber >= 1048576) && (InpNumber <= 1073741823)) { return (InpNumber / 1024 / 1024).ToString() + " MB"; }
+            // ...гигабайтах.
+            if ((InpNumber >= 1073741823) && (InpNumber <= 1099511627775)) { return (InpNumber / 1024 / 1024 / 1024).ToString() + " GB"; }
+            // Если размер всё-таки больше, выведем просто строку...
+            return InpNumber.ToString();
+        }
     }
 }

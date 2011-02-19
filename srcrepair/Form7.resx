@@ -199,7 +199,7 @@
     <value>2</value>
   </data>
   <data name="CM_Info.Text" xml:space="preserve">
-    <value>We can free up to {0} MB hard-disk space after cleanup.</value>
+    <value>We can free up to {0} hard-disk space after cleanup.</value>
   </data>
   <data name="CM_Info.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>

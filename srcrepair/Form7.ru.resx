@@ -127,7 +127,7 @@
     <value>Размер</value>
   </data>
   <data name="CM_Info.Text" xml:space="preserve">
-    <value>В результате очистки может быть освобождено до {0} МБ.</value>
+    <value>В результате очистки может быть освобождено до {0}.</value>
   </data>
   <data name="CM_Clean.Text" xml:space="preserve">
     <value>Выполнить очистку</value>
