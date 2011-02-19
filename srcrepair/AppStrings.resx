@@ -289,7 +289,7 @@
     <value>Error occured while deleting files. Some files were not deleted!</value>
   </data>
   <data name="PS_CleanupExecuteQ" xml:space="preserve">
-    <value>Clean {0}?</value>
+    <value>Clean selected {0}?</value>
   </data>
   <data name="PS_CleanupSuccess" xml:space="preserve">
     <value>Cleanup was successfully completed!</value>
@@ -446,5 +446,8 @@
   </data>
   <data name="Opts_Saved" xml:space="preserve">
     <value>Application settings were saved successfully. Attention! Some of them will be activated only after restarting the program.</value>
+  </data>
+  <data name="PS_CleanupFull" xml:space="preserve">
+    <value>Clean {0}?</value>
   </data>
 </root>

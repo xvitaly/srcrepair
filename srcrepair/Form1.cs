@@ -1747,7 +1747,7 @@ namespace srcrepair
         private void PS_RemGraphOpts_Click(object sender, EventArgs e)
         {
             // Удаляем графические настройки...
-            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupFull"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 // Создаём резервную копию...
                 try
@@ -1776,7 +1776,7 @@ namespace srcrepair
         private void PS_RemOldBin_Click(object sender, EventArgs e)
         {
             // Удаляем старые бинарники...
-            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupExecuteQ"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupFull"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 try
                 {

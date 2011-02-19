@@ -646,11 +646,20 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Clean {0}?.
+        ///   Looks up a localized string similar to Clean selected {0}?.
         /// </summary>
         internal static string PS_CleanupExecuteQ {
             get {
                 return ResourceManager.GetString("PS_CleanupExecuteQ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clean {0}?.
+        /// </summary>
+        internal static string PS_CleanupFull {
+            get {
+                return ResourceManager.GetString("PS_CleanupFull", resourceCulture);
             }
         }
         

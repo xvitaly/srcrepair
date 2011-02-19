@@ -345,7 +345,7 @@
     <value>Во время удаления файлов произошла ошибка. Некоторые файлы не были удалены!</value>
   </data>
   <data name="PS_CleanupExecuteQ" xml:space="preserve">
-    <value>Удалить {0}?</value>
+    <value>Удалить выбранные файлы ({0})?</value>
     <comment>Сообщение, выдаваемое при запуске очистки</comment>
   </data>
   <data name="PS_CleanupSuccess" xml:space="preserve">
@@ -557,5 +557,9 @@
   <data name="Opts_Saved" xml:space="preserve">
     <value>Настройки были успешно сохранены. Внимание! Некоторые из них будут задействованы только после перезапуска программы.</value>
     <comment>Сообщение при успешном сохранении настроек программы</comment>
+  </data>
+  <data name="PS_CleanupFull" xml:space="preserve">
+    <value>Удалить {0}?</value>
+    <comment>Сообщение, выдаваемое при полном удалении ряда файлов</comment>
   </data>
 </root>
