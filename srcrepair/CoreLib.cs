@@ -295,15 +295,28 @@ namespace srcrepair
         }
 
         /*
+         * Эта функция преобразует число в строку с добавлением незначащих нулей
+         * перед числами с 0 до 9 включительно. Используется для служебных целей.
+         */
+        private static string SimpleIntStrWNull(int Numb)
+        {
+            string Result;
+            if ((Numb >= 0) && (Numb <= 9)) { Result = "0" + Numb.ToString(); } else { Result = Numb.ToString(); }
+            return Result;
+        }
+
+        /*
          * Эта функция генерирует ДДММГГЧЧММСС из указанного времени в строку.
          * Применяется для служебных целей.
          */
         public static string WriteDateToString(DateTime XDate, bool MicroDate)
         {
-            return MicroDate ? XDate.Day.ToString() + XDate.Month.ToString() + XDate.Year.ToString() +
-                XDate.Hour.ToString() + XDate.Minute.ToString() + XDate.Second.ToString() :
-                XDate.Day.ToString() + "." + XDate.Month.ToString() + "." + XDate.Year.ToString() + " " +
-                XDate.Hour.ToString() + ":" + XDate.Minute.ToString() + ":" + XDate.Second.ToString();
+            return MicroDate ? SimpleIntStrWNull(XDate.Day) + SimpleIntStrWNull(XDate.Month) +
+                SimpleIntStrWNull(XDate.Year) + SimpleIntStrWNull(XDate.Hour) +
+                SimpleIntStrWNull(XDate.Minute) + SimpleIntStrWNull(XDate.Second) :
+                SimpleIntStrWNull(XDate.Day) + "." + SimpleIntStrWNull(XDate.Month) + "." +
+                SimpleIntStrWNull(XDate.Year) + " " + SimpleIntStrWNull(XDate.Hour) + ":" +
+                SimpleIntStrWNull(XDate.Minute) + ":" + SimpleIntStrWNull(XDate.Second);
         }
 
         /*

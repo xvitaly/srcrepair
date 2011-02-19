@@ -126,6 +126,9 @@
   <data name="FSize.Text" xml:space="preserve">
     <value>Размер</value>
   </data>
+  <data name="FDate.Text" xml:space="preserve">
+    <value>Дата изменения</value>
+  </data>
   <data name="CM_Info.Text" xml:space="preserve">
     <value>В результате очистки может быть освобождено до {0}.</value>
   </data>

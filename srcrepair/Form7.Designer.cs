@@ -33,6 +33,7 @@
             this.CM_FTable = new System.Windows.Forms.ListView();
             this.FName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FSize = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.CM_Info = new System.Windows.Forms.Label();
             this.CM_Clean = new System.Windows.Forms.Button();
             this.CM_Cancel = new System.Windows.Forms.Button();
@@ -48,7 +49,8 @@
             this.CM_FTable.CheckBoxes = true;
             this.CM_FTable.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.FName,
-            this.FSize});
+            this.FSize,
+            this.FDate});
             this.CM_FTable.GridLines = true;
             this.CM_FTable.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             resources.ApplyResources(this.CM_FTable, "CM_FTable");
@@ -68,6 +70,10 @@
             // FSize
             // 
             resources.ApplyResources(this.FSize, "FSize");
+            // 
+            // FDate
+            // 
+            resources.ApplyResources(this.FDate, "FDate");
             // 
             // CM_Info
             // 
@@ -117,5 +123,6 @@
         private System.Windows.Forms.Button CM_Cancel;
         private System.Windows.Forms.ColumnHeader FName;
         private System.Windows.Forms.ColumnHeader FSize;
+        private System.Windows.Forms.ColumnHeader FDate;
     }
 }
