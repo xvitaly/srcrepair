@@ -1941,6 +1941,8 @@ namespace srcrepair
             {
                 // Произошло исключение...
                 MessageBox.Show(RM.GetString("BU_ListLdFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // Создадим каталог для резервных копий...
+                Directory.CreateDirectory(GV.FullBackUpDirPath);
             }
         }
 
