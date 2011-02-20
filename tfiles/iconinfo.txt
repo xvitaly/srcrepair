@@ -33,7 +33,7 @@ open.ico - VisualPharm - CC3 - http://www.iconspedia.com/icon/open--851.html
 --------------------------------------------------------------------------------------------------------
 report.ico - ArtistValley - CL - http://www.iconspedia.com/icon/task-report-hot-3-17.html
 --------------------------------------------------------------------------------------------------------
-Screwdriver.ico - Babasse - http://www.iconspedia.com/icon/screwdriver-1468.html
+Screwdriver.png - Babasse - http://www.iconspedia.com/icon/screwdriver-1468.html
 --------------------------------------------------------------------------------------------------------
 steam.ico - Valve Corporation - P - http://store.steampowered.com/
 --------------------------------------------------------------------------------------------------------
@@ -62,4 +62,10 @@ TextEditor.png - GNOME icon artists - GPLv2 - http://www.iconspedia.com/icon/gno
 Globe.ico - PixelMixer - ÑÑ3 - http://www.iconspedia.com/icon/globe-11618.html
 --------------------------------------------------------------------------------------------------------
 Options.ico - Ahmad Hania - ÑÑ3 - http://www.iconspedia.com/icon/options-1321-.html
+--------------------------------------------------------------------------------------------------------
+Config.png - Asher Abbasi - CC3 - http://www.iconspedia.com/icon/systemconfiguration-12064.html
+--------------------------------------------------------------------------------------------------------
+BackUp.png - Icontoaster - Free - http://www.iconspedia.com/icon/backup-2047.html
+--------------------------------------------------------------------------------------------------------
+Graphics.png - GNOME icon artists - GPLv2 - http://www.iconspedia.com/icon/gnome-applications-graphics-10-46.html
 --------------------------------------------------------------------------------------------------------

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainW));
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
@@ -145,6 +146,7 @@
             this.BUT_L_GameSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.BUT_L_AllSteam = new System.Windows.Forms.ToolStripMenuItem();
             this.BUT_L_AllSRC = new System.Windows.Forms.ToolStripMenuItem();
+            this.TabIcons = new System.Windows.Forms.ImageList(this.components);
             this.LoginSel = new System.Windows.Forms.ComboBox();
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.ToolsMNU = new System.Windows.Forms.ToolStripMenuItem();
@@ -209,6 +211,7 @@
             this.MainTabControl.Controls.Add(this.FPSCfgInstall);
             this.MainTabControl.Controls.Add(this.RescueCentre);
             resources.ApplyResources(this.MainTabControl, "MainTabControl");
+            this.MainTabControl.ImageList = this.TabIcons;
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.SelectedIndex = 0;
             this.MainTabControl.SelectedIndexChanged += new System.EventHandler(this.MainTabControl_SelectedIndexChanged);
@@ -1148,6 +1151,16 @@
             resources.ApplyResources(this.BUT_L_AllSRC, "BUT_L_AllSRC");
             this.BUT_L_AllSRC.Click += new System.EventHandler(this.BUT_L_AllSRC_Click);
             // 
+            // TabIcons
+            // 
+            this.TabIcons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("TabIcons.ImageStream")));
+            this.TabIcons.TransparentColor = System.Drawing.Color.Transparent;
+            this.TabIcons.Images.SetKeyName(0, "Graphics.png");
+            this.TabIcons.Images.SetKeyName(1, "TextEditor.png");
+            this.TabIcons.Images.SetKeyName(2, "Screwdriver.png");
+            this.TabIcons.Images.SetKeyName(3, "Config.png");
+            this.TabIcons.Images.SetKeyName(4, "BackUp.png");
+            // 
             // LoginSel
             // 
             this.LoginSel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1581,6 +1594,7 @@
         private System.Windows.Forms.ToolStripMenuItem MNUUpdateCheck;
         private System.Windows.Forms.ToolStripButton BUT_OpenNpad;
         private System.Windows.Forms.ToolStripMenuItem MNUAppOptions;
+        private System.Windows.Forms.ImageList TabIcons;
     }
 }
 
