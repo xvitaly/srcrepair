@@ -285,9 +285,6 @@ namespace srcrepair
         private void frmMainW_Load(object sender, EventArgs e)
         {
             // Событие инициализации формы...
-
-            // Получаем параметры командной строки, переданные приложению...
-            string[] CMDLineArgs = Environment.GetCommandLineArgs();
             
             // Получаем путь к каталогу приложения...
             Assembly Assmbl = Assembly.GetEntryAssembly();
@@ -316,44 +313,35 @@ namespace srcrepair
             // Найдём и завершим в памяти процесс Steam...
             CoreLib.ProcessTerminate("Steam", RM.GetString("ST_KillMessage"));
 
-            // Ищем параметр командной строки path...
-            if (CoreLib.FindCommandLineSwitch(CMDLineArgs, "/path"))
+            // Узнаем путь к установленному клиенту Steam...
+            try
             {
-                // Параметр найден, считываем следующий за ним параметр с путём к Steam...
-                GV.FullSteamPath = CoreLib.IncludeTrDelim(CMDLineArgs[CoreLib.FindStringInStrArray(CMDLineArgs, "/path") + 1]);
+                // Получаем из реестра...
+                GV.FullSteamPath = CoreLib.IncludeTrDelim(CoreLib.GetSteamPath());
             }
-            else
+            catch
             {
-                // Параметр не найден, поэтому получим из реестра...
-                try
+                // Произошло исключение, пользователю придётся ввести путь самостоятельно!
+                MessageBox.Show(RM.GetString("SteamPathNotDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string Buf = "";
+                FldrBrwse.Description = RM.GetString("SteamPathEnterText"); // Указываем текст в диалоге поиска каталога...
+                if (FldrBrwse.ShowDialog() == DialogResult.OK) // Отображаем стандартный диалог поиска каталога...
                 {
-                    // Получаем из реестра...
-                    GV.FullSteamPath = CoreLib.IncludeTrDelim(CoreLib.GetSteamPath());
-                }
-                catch
-                {
-                    // Произошло исключение, пользователю придётся ввести путь самостоятельно!
-                    MessageBox.Show(RM.GetString("SteamPathNotDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    string Buf = "";
-                    FldrBrwse.Description = RM.GetString("SteamPathEnterText"); // Указываем текст в диалоге поиска каталога...
-                    if (FldrBrwse.ShowDialog() == DialogResult.OK) // Отображаем стандартный диалог поиска каталога...
+                    Buf = CoreLib.IncludeTrDelim(FldrBrwse.SelectedPath);
+                    if (!(File.Exists(Buf + "Steam.exe")))
                     {
-                        Buf = CoreLib.IncludeTrDelim(FldrBrwse.SelectedPath);
-                        if (!(File.Exists(Buf + "Steam.exe")))
-                        {
-                            MessageBox.Show(RM.GetString("SteamPathEnterErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            Environment.Exit(7);
-                        }
-                        else
-                        {
-                            GV.FullSteamPath = Buf;
-                        }
+                        MessageBox.Show(RM.GetString("SteamPathEnterErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Environment.Exit(7);
                     }
                     else
                     {
-                        MessageBox.Show(RM.GetString("SteamPathCancel"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        Environment.Exit(7);
+                        GV.FullSteamPath = Buf;
                     }
+                }
+                else
+                {
+                    MessageBox.Show(RM.GetString("SteamPathCancel"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Environment.Exit(7);
                 }
             }
 
@@ -375,46 +363,28 @@ namespace srcrepair
             // Применим некоторые настройки...
             AppSelector.Sorted = GO.SortGamesList;
 
-            // Ищем параметр командной строки login...
-            if (CoreLib.FindCommandLineSwitch(CMDLineArgs, "/login"))
+            // Определим логины пользователей Steam на данном ПК...
+            try
             {
-                // Параметр найден, добавим его и отключим автоопределение...
-                try
+                // Создаём объект DirInfo...
+                DirectoryInfo DInfo = new DirectoryInfo(GV.FullSteamPath + @"steamapps\");
+                // Получаем список директорий из текущего...
+                DirectoryInfo[] DirList = DInfo.GetDirectories();
+                // Обходим созданный массив в поиске нужных нам логинов...
+                foreach (DirectoryInfo DItem in DirList)
                 {
-                    // Добавляем параметр в ComboBox...
-                    LoginSel.Items.Add((string)CMDLineArgs[CoreLib.FindStringInStrArray(CMDLineArgs, "/login") + 1]);
-                }
-                catch
-                {
-                    // Произошло исключение, поэтому просто выдадим сообщение...
-                    MessageBox.Show(RM.GetString("ParamError"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                // Параметр не найден, будем использовать автоопределение...
-                try
-                {
-                    // Создаём объект DirInfo...
-                    DirectoryInfo DInfo = new DirectoryInfo(GV.FullSteamPath + @"steamapps\");
-                    // Получаем список директорий из текущего...
-                    DirectoryInfo[] DirList = DInfo.GetDirectories();
-                    // Обходим созданный массив в поиске нужных нам логинов...
-                    foreach (DirectoryInfo DItem in DirList)
+                    // Фильтруем известные каталоги...
+                    if ((DItem.Name != "common") && (DItem.Name != "sourcemods") && (DItem.Name != "media"))
                     {
-                        // Фильтруем известные каталоги...
-                        if ((DItem.Name != "common") && (DItem.Name != "sourcemods") && (DItem.Name != "media"))
-                        {
-                            // Добавляем найденный логин в список ComboBox...
-                            LoginSel.Items.Add((string)DItem.Name);
-                        }
+                        // Добавляем найденный логин в список ComboBox...
+                        LoginSel.Items.Add((string)DItem.Name);
                     }
                 }
-                catch
-                {
-                    MessageBox.Show(RM.GetString("AppNoSTADetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Environment.Exit(6);
-                }
+            }
+            catch
+            {
+                MessageBox.Show(RM.GetString("AppNoSTADetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(6);
             }
 
             // Проверим, были ли логины добавлены в список...

@@ -78,10 +78,15 @@ namespace srcrepair
             if (ResKey != null)
             {
                 // Получаем значение открытого ключа...
-                ResString = (string)ResKey.GetValue("InstallPath");
+                object ResObj = ResKey.GetValue("InstallPath");
 
                 // Проверяем чтобы значение существовало...
-                if (String.IsNullOrEmpty(ResString))
+                if (ResObj != null)
+                {
+                    // Существует, возвращаем...
+                    ResString = Convert.ToString(ResObj);
+                }
+                else
                 {
                     // Значение не существует, поэтому сгенерируем исключение для обработки в основном коде...
                     throw new System.NullReferenceException("Exception: No InstallPath value detected! Please run Steam.");
@@ -223,7 +228,19 @@ namespace srcrepair
             if (ResKey != null)
             {
                 // Получаем значение открытого ключа...
-                ResInt = (int)ResKey.GetValue(CVar);
+                object ResObj = ResKey.GetValue(CVar);
+
+                // Проверяем существование значения...
+                if (ResObj != null)
+                {
+                    // Возвращаем результат...
+                    ResInt = Convert.ToInt32(ResObj);
+                }
+                else
+                {
+                    // Значение не существует, генерируем исключение...
+                    throw new System.NullReferenceException("Specified value does not exists!");
+                }
             }
 
             // Закрываем открытый ранее ключ реестра...
@@ -270,40 +287,6 @@ namespace srcrepair
             }
             // Возвращает результат...
             return Result;
-        }
-
-        /*
-         * Эта функция ищет указанную строку в массиве строк и возвращает её индекс,
-         * либо -1 если такой строки в массиве не найдено.
-         */
-        public static int FindStringInStrArray(string[] SourceStr, string What)
-        {
-            int StrNum;
-            int StrIndex = -1;
-            for (StrNum = 0; StrNum < SourceStr.Length; StrNum++)
-            {
-                if (SourceStr[StrNum] == What)
-                {
-                    StrIndex = StrNum;
-                }
-            }
-            return StrIndex;
-        }
-
-        /*
-         * Эта функция ищет в массиве строк нужный нам параметр командной строки
-         * и возвращает true если параметр был найден, либо false если нет.
-         */
-        public static bool FindCommandLineSwitch(string[] Source, string CLineArg)
-        {
-            if (FindStringInStrArray(Source, CLineArg) != -1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
         }
 
         /*
