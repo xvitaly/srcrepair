@@ -79,7 +79,7 @@ namespace srcrepair
             else
             {
                 // Файл не найден, спросим нужно ли создать...
-                if (MessageBox.Show(frmMainW.RM.GetString("QI_GenVMTMsg"), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show(CoreLib.GetLocalizedString("QI_GenVMTMsg"), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     // Да, нужно.
                     UseVMT = true;
@@ -128,18 +128,18 @@ namespace srcrepair
                     }
 
                     // Выведем сообщение...
-                    MessageBox.Show(frmMainW.RM.GetString("QI_InstSuccessfull"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(CoreLib.GetLocalizedString("QI_InstSuccessfull"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
                 {
                     // Произошло исключение, выведем сообщение...
-                    MessageBox.Show(frmMainW.RM.GetString("QI_Excpt"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(CoreLib.GetLocalizedString("QI_Excpt"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
                 // Пользователь ничего не выбрал для установки, укажем ему на это...
-                MessageBox.Show(frmMainW.RM.GetString("QI_InstUnav"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(CoreLib.GetLocalizedString("QI_InstUnav"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

@@ -58,7 +58,7 @@ namespace srcrepair
             if (File.Exists(GV.AppUserDir + Path.GetFileName(UpdateURI)))
             {
                 // Существует, покажем сообщение...
-                MessageBox.Show(frmMainW.RM.GetString("UPD_UpdateSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Запустим...
                 Process.Start(GV.AppUserDir + Path.GetFileName(UpdateURI));                
                 // Завершим работу программы...
@@ -67,7 +67,7 @@ namespace srcrepair
             else
             {
                 // Файл не существует: ошибка обновления...
-                MessageBox.Show(frmMainW.RM.GetString("UPD_UpdateFailure"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateFailure"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 // Закроем форму...
                 this.Close();
             }
@@ -95,7 +95,7 @@ namespace srcrepair
             }
             catch
             {
-                MessageBox.Show(frmMainW.RM.GetString("UPD_DownloadException"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(CoreLib.GetLocalizedString("UPD_DownloadException"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

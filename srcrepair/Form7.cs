@@ -76,7 +76,7 @@ namespace srcrepair
             // Выдадим сообщение если очищать нечего...
             if (CM_FTable.Items.Count == 0)
             {
-                MessageBox.Show(frmMainW.RM.GetString("PS_LoadErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(CoreLib.GetLocalizedString("PS_LoadErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 CM_Clean.Enabled = false;
                 this.Close();
             }
@@ -101,7 +101,7 @@ namespace srcrepair
             {
                 if (CM_FTable.CheckedItems.Count > 0)
                 {
-                    if (MessageBox.Show(String.Format(frmMainW.RM.GetString("PS_CleanupExecuteQ"), CleanInfo), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                    if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("PS_CleanupExecuteQ"), CleanInfo), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
                         try
                         {
@@ -118,7 +118,7 @@ namespace srcrepair
                             }
                             
                             // Выводим сообщение об успешном окончании очистки...
-                            MessageBox.Show(frmMainW.RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             // Закрываем форму...
                             this.Close();
@@ -126,18 +126,18 @@ namespace srcrepair
                         catch
                         {
                             // Произошло исключение...
-                            MessageBox.Show(frmMainW.RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                 }
                 else
                 {
-                    MessageBox.Show(frmMainW.RM.GetString("PS_SelectItemsMsg"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(CoreLib.GetLocalizedString("PS_SelectItemsMsg"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show(frmMainW.RM.GetString("PS_LoadErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(CoreLib.GetLocalizedString("PS_LoadErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

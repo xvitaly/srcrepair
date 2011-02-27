@@ -47,7 +47,7 @@ namespace srcrepair
                 //CoreLib.WriteAppBool("HideNotInstalled", GV.AppName, MO_HideNotInst.Checked);
                 
                 // Показываем сообщение...
-                MessageBox.Show(frmMainW.RM.GetString("Opts_Saved"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(CoreLib.GetLocalizedString("Opts_Saved"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
                 // Закрываем форму...
                 this.Close();
@@ -55,7 +55,7 @@ namespace srcrepair
             catch
             {
                 // Произошло исключение, выведем сообщение...
-                MessageBox.Show(frmMainW.RM.GetString("Opts_Error"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(CoreLib.GetLocalizedString("Opts_Error"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

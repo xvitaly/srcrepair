@@ -53,14 +53,14 @@ namespace srcrepair
 
         private void GenerateNow_Click(object sender, EventArgs e)
         {
-            if (GenerateNow.Text != frmMainW.RM.GetString("RPB_CloseCpt"))
+            if (GenerateNow.Text != CoreLib.GetLocalizedString("RPB_CloseCpt"))
             {
-                MessageBox.Show(frmMainW.RM.GetString("RPB_GenWarn"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (MessageBox.Show(frmMainW.RM.GetString("RPB_GenQst"), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                MessageBox.Show(CoreLib.GetLocalizedString("RPB_GenWarn"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (MessageBox.Show(CoreLib.GetLocalizedString("RPB_GenQst"), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     // Отключим кнопку...
                     GenerateNow.Enabled = false;
-                    GenerateNow.Text = frmMainW.RM.GetString("RPB_CptWrk");
+                    GenerateNow.Text = CoreLib.GetLocalizedString("RPB_CptWrk");
                     this.ControlBox = false;
                     // Сгенерируем путь для каталога с рапортами...
                     string RepDir = GV.AppUserDir + @"reports\";
@@ -83,11 +83,11 @@ namespace srcrepair
                         {
                             CoreLib.StartProcessAndWait(GV.FullAppPath + "7z.exe", "a " + @"""" + RepDir + FileName + ".7z" + @"""" + " " + @"""" + RepDir + RepName + @"""");
                             File.Delete(RepDir + RepName); // удаляем несжатый отчёт
-                            MessageBox.Show(String.Format(frmMainW.RM.GetString("RPB_ComprGen"), FileName), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show(String.Format(CoreLib.GetLocalizedString("RPB_ComprGen"), FileName), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
-                            MessageBox.Show(String.Format(frmMainW.RM.GetString("RPB_Generated"), RepName), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show(String.Format(CoreLib.GetLocalizedString("RPB_Generated"), RepName), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         
                         // Открываем каталог с отчётами в Windows Explorer...
@@ -96,11 +96,11 @@ namespace srcrepair
                     catch
                     {
                         // Произошло исключение...
-                        MessageBox.Show(frmMainW.RM.GetString("RPB_GenException"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(CoreLib.GetLocalizedString("RPB_GenException"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
                     // Снова активируем кнопку...
-                    GenerateNow.Text = frmMainW.RM.GetString("RPB_CloseCpt");
+                    GenerateNow.Text = CoreLib.GetLocalizedString("RPB_CloseCpt");
                     GenerateNow.Enabled = true;
                     this.ControlBox = true;
                 }

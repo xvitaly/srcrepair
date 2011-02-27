@@ -154,7 +154,7 @@ namespace srcrepair
             }
             catch
             {
-                MessageBox.Show(String.Format(frmMainW.RM.GetString("AHE_ExceptionDetected"), HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AHE_ExceptionDetected"), HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -166,7 +166,7 @@ namespace srcrepair
             }
             catch
             {
-                MessageBox.Show(String.Format(frmMainW.RM.GetString("AHE_ExceptionDetected"), HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AHE_ExceptionDetected"), HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -176,11 +176,11 @@ namespace srcrepair
             try
             {
                 WriteTableToHosts(HostsFilePath);
-                MessageBox.Show(frmMainW.RM.GetString("AHE_Saved"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(CoreLib.GetLocalizedString("AHE_Saved"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show(String.Format(frmMainW.RM.GetString("AHE_SaveException"), HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AHE_SaveException"), HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -192,7 +192,7 @@ namespace srcrepair
         private void HEd_M_RestDef_Click(object sender, EventArgs e)
         {
             // Restore default
-            if (MessageBox.Show(frmMainW.RM.GetString("AHE_RestDef"), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(CoreLib.GetLocalizedString("AHE_RestDef"), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 HEd_Table.Rows.Clear();
                 HEd_Table.Rows.Add("127.0.0.1", "localhost");
@@ -202,7 +202,7 @@ namespace srcrepair
 
         private void HEd_M_OnlHelp_Click(object sender, EventArgs e)
         {
-            Process.Start(String.Format("http://code.google.com/p/srcrepair/wiki/HostsEditorPlugin_{0}", frmMainW.RM.GetString("AppLangPrefix")));
+            Process.Start(String.Format("http://code.google.com/p/srcrepair/wiki/HostsEditorPlugin_{0}", CoreLib.GetLocalizedString("AppLangPrefix")));
         }
 
         private void HEd_M_About_Click(object sender, EventArgs e)

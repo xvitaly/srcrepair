@@ -147,7 +147,7 @@ namespace srcrepair
             }
 
             // Выводим сообщение пользователю...
-            MessageBox.Show(frmMainW.RM.GetString("FPW_Success"), "FPS-Config builder plug-in", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(CoreLib.GetLocalizedString("FPW_Success"), "FPS-Config builder plug-in", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Завершаем работу плагина...
             Close();

@@ -26,12 +26,24 @@ using System.Diagnostics; // для управления процессами...
 using Microsoft.Win32; // для работы с реестром...
 using System.Text.RegularExpressions;  // для работы с регулярными выражениями...
 using System.Security.Principal; // для определения прав админа...
+using System.Resources; // для управления ресурсами...
 using System.Threading; // для управления потоками...
 
 namespace srcrepair
 {
     public class CoreLib
     {
+        /*
+         * Эта функция позволяет получить локализованную строку по её ID
+         * согласно текущим региональным настройкам Windows. Рекомендуется
+         * применять только в формах, чтобы не нарушать ООП.
+         */
+        public static string GetLocalizedString(string MsgId)
+        {
+            ResourceManager RMLocal = new ResourceManager("srcrepair.AppStrings", typeof(frmMainW).Assembly);
+            return RMLocal.GetString(MsgId);
+        }
+        
         /*
          * Реализуем аналог полезной дельфийской фукнции IncludeTrailingPathDelimiter,
          * которая возвращает строку, добавив на конец обратный слэш если его нет,
