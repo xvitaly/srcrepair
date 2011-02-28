@@ -63,6 +63,8 @@ Name: "inst7z"; Description: "{cm:InstLZMAPlugin}"; GroupDescription: "{cm:AdvFe
 Name: "betashortuts"; Description: "{cm:InstCreateLocShcuts}"; GroupDescription: "{cm:AdvFeatGroupDesc}"
 
 [Files]
+; Копируем библиотеку, используемую для скачивания файлов...
+Source: E:\VSBuilds\dll\isxdl.dll; DestDir: {tmp}; Flags: dontcopy
 ; Устанавливаем readme и файл лицензии...
 Source: "E:\VSBuilds\GPL.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "E:\VSBuilds\readme.txt"; DestDir: "{app}"; Flags: ignoreversion
@@ -80,7 +82,7 @@ Source: "E:\VSBuilds\x64\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recur
 ; Устанавливаем остальные файлы...
 Source: "E:\VSBuilds\cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "E:\VSBuilds\7z\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Tasks: inst7z
-Source: "E:\VSBuilds\nfx\*"; DestDir: "{app}\nfx\"; Flags: ignoreversion recursesubdirs createallsubdirs
+;Source: "E:\VSBuilds\nfx\*"; DestDir: "{app}\nfx\"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
@@ -101,7 +103,7 @@ Name: "{commondesktop}\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: desk
 ; Создаём ярлык на панели быстрого запуска (если выбрано)...
 Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: quicklaunchicon
 ; Создаём ярлык для установщика среды Microsoft .NET Framework 4...
-Name: "{group}\{cm:ShcNETFx}"; Filename: "{app}\nfx\dotNetFx40_Full_setup.exe"
+;Name: "{group}\{cm:ShcNETFx}"; Filename: "{app}\nfx\dotNetFx40_Full_setup.exe"
 
 [Registry]
 ; Задаём базовые настройки программы для текущего пользователя...
@@ -111,10 +113,115 @@ Root: HKCU; Subkey: "Software\SRC Repair"; ValueType: dword; ValueName: "ShowSin
 Root: HKCU; Subkey: "Software\SRC Repair"; ValueType: dword; ValueName: "SortGameList"; ValueData: "1"
 
 [Run]
-Filename: "{app}\nfx\dotNetFx40_Full_setup.exe"; Description: "{cm:ShcNETFx}"; Flags: nowait postinstall skipifsilent unchecked
+;Filename: "{app}\nfx\dotNetFx40_Full_setup.exe"; Description: "{cm:ShcNETFx}"; Flags: nowait postinstall skipifsilent unchecked
 Filename: "{app}\srcrepair.exe"; Description: "{cm:LaunchProgram,SRC Repair}"; Flags: nowait postinstall skipifsilent
 
+[Code]
+// **************************************************************************** //
+// Original .NET detection code by Hector Sosa, Jr (systemwidgets.com).
+// Modified by V1TSK (vitaly@easycoding.org) for SRC Repair.
+// License: GNU GPL version 3 (GPLv3).
+// **************************************************************************** //
+var
+  dotnetRedistPath: string;
+  downloadNeeded: boolean;
+  dotNetNeeded: boolean;
+  memoDependenciesNeeded: string;
 
+const
+  dotnetRedistURL = 'http://download.microsoft.com/download/1/B/E/1BE39E79-7E39-46A3-96FF-047F95396215/dotNetFx40_Full_setup.exe';
+
+procedure isxdl_AddFile(URL, Filename: PAnsiChar); external 'isxdl_AddFile@files:isxdl.dll stdcall';
+function isxdl_DownloadFiles(hWnd: Integer): Integer; external 'isxdl_DownloadFiles@files:isxdl.dll stdcall';
+function isxdl_SetOption(Option, Value: PAnsiChar): Integer; external 'isxdl_SetOption@files:isxdl.dll stdcall';
+
+function InitializeSetup(): Boolean;
+
+begin
+  Result := true;
+  dotNetNeeded := false;
+  if (not RegKeyExists(HKLM, 'Software\Microsoft\.NETFramework\policy\v4.0')) then
+    begin
+      dotNetNeeded := true;
+       if (not IsAdminLoggedOn()) then
+          begin
+            MsgBox(ExpandConstant('{cm:DnlNetReqAdm}'), mbInformation, MB_OK);
+            Result := false;
+          end
+            else
+              begin
+                memoDependenciesNeeded := memoDependenciesNeeded + '      Microsoft .NET Framework 4.0' #13;
+                dotnetRedistPath := ExpandConstant('{src}\dotNetFx40_Full_setup.exe');
+                if not FileExists(dotnetRedistPath) then
+                  begin
+                    dotnetRedistPath := ExpandConstant('{tmp}\dotNetFx40_Full_setup.exe');
+                    if not FileExists(dotnetRedistPath) then
+                      begin
+                        isxdl_AddFile(dotnetRedistURL, dotnetRedistPath);
+                        downloadNeeded := true;
+                      end
+                  end;
+                SetIniString('install', 'dotnetRedist', dotnetRedistPath, ExpandConstant('{tmp}\dep.ini'));
+              end
+    end
+end;
+
+function NextButtonClick(CurPage: Integer): Boolean;
+var
+  hWnd: Integer;
+  ResultCode: Integer;
+begin
+  Result := true;
+  if CurPage = wpReady then
+    begin
+      hWnd := StrToInt(ExpandConstant('{wizardhwnd}'));
+      if (downloadNeeded and (dotNetNeeded = true)) then
+        begin
+          isxdl_SetOption('label', ExpandConstant('{cm:DnlNetLabelW}'));
+          isxdl_SetOption('description', ExpandConstant('{cm:DnlNetTextW}'));
+          if isxdl_DownloadFiles(hWnd) = 0 then
+            Result := false;
+        end;
+      if (dotNetNeeded = true) then
+        begin
+          if Exec(ExpandConstant(dotnetRedistPath), '', '', SW_SHOW, ewWaitUntilTerminated, ResultCode) then
+            begin
+              if (not (ResultCode = 0)) then
+                begin
+                  Result := false;
+                end
+            end
+              else
+                begin
+                  Result := false;
+                end
+        end;
+    end;
+end;
+
+function UpdateReadyMemo(Space, NewLine, MemoUserInfoInfo, MemoDirInfo, MemoTypeInfo, MemoComponentsInfo, MemoGroupInfo, MemoTasksInfo: String): String;
+var
+  s: string;
+begin
+  // Добавляем зависимости...
+  if memoDependenciesNeeded <> '' then
+    s := s + ExpandConstant('{cm:DnlDepText}') + NewLine + memoDependenciesNeeded + NewLine;
+  // Добавляем путь установки...
+  s := s + MemoDirInfo + NewLine + NewLine;
+  // Добавляем информацию...
+  if  MemoTypeInfo <> '' then
+    s := s + MemoTypeInfo + NewLine;
+  // Добавляем инфо о компонентах...
+  if MemoComponentsInfo <> '' then
+    s := s + MemoComponentsInfo + NewLine;
+  // Добавляем инфо о группе в меню Пуск...
+  if MemoGroupInfo <> '' then
+    s := s + MemoGroupInfo + NewLine + NewLine;
+  // Добавляем инфо о задачах...
+  if MemoTasksInfo <> '' then
+    s := s + MemoTasksInfo + NewLine;
+  Result := s
+end;
 
 
 
