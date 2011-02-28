@@ -1104,7 +1104,7 @@ namespace srcrepair
                 GT_TextureQuality.SelectedIndex = 2; // высокая детализация текстур
                 GT_ShaderQuality.SelectedIndex = 1; // высокое качество шейдерных эффектов
                 GT_WaterQuality.SelectedIndex = 1; // отражать мир в воде
-                GT_WaterQuality.SelectedIndex = 1; // высокое качество теней
+                GT_ShadowQuality.SelectedIndex = 1; // высокое качество теней
                 GT_ColorCorrectionT.SelectedIndex = 1; // корренкция цвета включена
                 GT_AntiAliasing.SelectedIndex = 0; // сглаживание выключено
                 GT_Filtering.SelectedIndex = 3; // анизотропная фильтрация 4x
@@ -1128,7 +1128,7 @@ namespace srcrepair
                 GT_TextureQuality.SelectedIndex = 0; // низкая детализация текстур
                 GT_ShaderQuality.SelectedIndex = 0; // низкое качество шейдерных эффектов
                 GT_WaterQuality.SelectedIndex = 0; // простые отражения в воде
-                GT_WaterQuality.SelectedIndex = 0; // низкое качество теней
+                GT_ShadowQuality.SelectedIndex = 0; // низкое качество теней
                 GT_ColorCorrectionT.SelectedIndex = 0; // корренкция цвета выключена
                 GT_AntiAliasing.SelectedIndex = 0; // сглаживание выключено
                 GT_Filtering.SelectedIndex = 1; // трилинейная фильтрация текстур
