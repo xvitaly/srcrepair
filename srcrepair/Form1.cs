@@ -874,6 +874,64 @@ namespace srcrepair
             }
         }
 
+        /*
+         * Эта функция считывает файлы резервных копий из указанного
+         * каталога и помещает в таблицу...
+         */
+        private void ReadBackUpList2Table(string BUpDir)
+        {
+            // Считаем список резервных копий и заполним таблицу...
+            // Очистим таблицу...
+            BU_LVTable.Items.Clear();
+            // Открываем каталог...
+            DirectoryInfo DInfo = new DirectoryInfo(BUpDir);
+            // Считываем список файлов по заданной маске...
+            FileInfo[] DirList = DInfo.GetFiles("*.*");
+            // Инициализируем буферные переменные...
+            string Buf, BufName;
+            // Начинаем обход массива...
+            foreach (FileInfo DItem in DirList)
+            {
+                // Обрабатываем найденное...
+                BufName = Path.GetFileNameWithoutExtension(DItem.Name);
+                if (DItem.Extension == ".reg")
+                {
+                    // Бэкап реестра...
+                    Buf = RM.GetString("BU_BType_Reg");
+                    // Заполним человеческое описание...
+                    if (BufName.IndexOf("Game_Options") != -1)
+                    {
+                        BufName = RM.GetString("BU_BName_GRGame") + " " + DItem.CreationTime;
+                    }
+                    if (BufName.IndexOf("Source_Options") != -1)
+                    {
+                        BufName = RM.GetString("BU_BName_SRCAll") + " " + DItem.CreationTime;
+                    }
+                    if (BufName.IndexOf("Steam_BackUp") != -1)
+                    {
+                        BufName = RM.GetString("BU_BName_SteamAll") + " " + DItem.CreationTime;
+                    }
+                    if (BufName.IndexOf("Game_AutoBackUp") != -1)
+                    {
+                        BufName = RM.GetString("BU_BName_GameAuto") + " " + DItem.CreationTime;
+                    }
+
+                }
+                else
+                {
+                    // Бэкап конфига...
+                    Buf = RM.GetString("BU_BType_Cfg");
+                }
+                // Добавляем в таблицу...
+                ListViewItem LvItem = new ListViewItem(BufName);
+                LvItem.SubItems.Add(Buf);
+                LvItem.SubItems.Add(CoreLib.SclBytes(DItem.Length));
+                LvItem.SubItems.Add(CoreLib.WriteDateToString(DItem.CreationTime, false));
+                LvItem.SubItems.Add(DItem.Name);
+                BU_LVTable.Items.Add(LvItem);
+            }
+        }
+
         #endregion
 
         private void frmMainW_Load(object sender, EventArgs e)
@@ -1380,6 +1438,9 @@ namespace srcrepair
             // Выводим сообщение о завершении считывания в статус-бар...
             SB_Status.Text = RM.GetString("StatusNormal");
             SB_App.Text = AppSelector.Text;
+
+            // Считаем список бэкапов...
+            try { ReadBackUpList2Table(GV.FullBackUpDirPath); } catch { Directory.CreateDirectory(GV.FullBackUpDirPath); }
         }
 
         private void LoginSel_SelectedIndexChanged(object sender, EventArgs e)
@@ -1892,59 +1953,10 @@ namespace srcrepair
         }
 
         private void BUT_Refresh_Click(object sender, EventArgs e)
-        {
-            // Считаем список резервных копий и заполним таблицу...
-            // Очистим таблицу...
-            BU_LVTable.Items.Clear();
+        {            
             try
             {
-                // Открываем каталог...
-                DirectoryInfo DInfo = new DirectoryInfo(GV.FullBackUpDirPath);
-                // Считываем список файлов по заданной маске...
-                FileInfo[] DirList = DInfo.GetFiles("*.*");
-                // Инициализируем буферные переменные...
-                string Buf, BufName;
-                // Начинаем обход массива...
-                foreach (FileInfo DItem in DirList)
-                {
-                    // Обрабатываем найденное...
-                    BufName = Path.GetFileNameWithoutExtension(DItem.Name);
-                    if (DItem.Extension == ".reg")
-                    {
-                        // Бэкап реестра...
-                        Buf = RM.GetString("BU_BType_Reg");
-                        // Заполним человеческое описание...
-                        if (BufName.IndexOf("Game_Options") != -1)
-                        {
-                            BufName = RM.GetString("BU_BName_GRGame") + " " + DItem.CreationTime;
-                        }
-                        if (BufName.IndexOf("Source_Options") != -1)
-                        {
-                            BufName = RM.GetString("BU_BName_SRCAll") + " " + DItem.CreationTime;
-                        }
-                        if (BufName.IndexOf("Steam_BackUp") != -1)
-                        {
-                            BufName = RM.GetString("BU_BName_SteamAll") + " " + DItem.CreationTime;
-                        }
-                        if (BufName.IndexOf("Game_AutoBackUp") != -1)
-                        {
-                            BufName = RM.GetString("BU_BName_GameAuto") + " " + DItem.CreationTime;
-                        }
-                        
-                    }
-                    else
-                    {
-                        // Бэкап конфига...
-                        Buf = RM.GetString("BU_BType_Cfg");
-                    }
-                    // Добавляем в таблицу...
-                    ListViewItem LvItem = new ListViewItem(BufName);
-                    LvItem.SubItems.Add(Buf);
-                    LvItem.SubItems.Add(CoreLib.SclBytes(DItem.Length));
-                    LvItem.SubItems.Add(CoreLib.WriteDateToString(DItem.CreationTime, false));
-                    LvItem.SubItems.Add(DItem.Name);
-                    BU_LVTable.Items.Add(LvItem);
-                }
+                ReadBackUpList2Table(GV.FullBackUpDirPath);
             }
             catch
             {
@@ -2145,12 +2157,6 @@ namespace srcrepair
                 MNUShowEdHint.Enabled = false;
                 // ...и выводим стандартное сообщение в статус-бар...
                 SB_Status.Text = RM.GetString("StatusNormal");
-            }
-
-            // Проверяем, открыта ли страница "Резервные копии"...
-            if (MainTabControl.SelectedIndex == 4)
-            {
-                BUT_Refresh.PerformClick();
             }
         }
 
