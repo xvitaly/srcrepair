@@ -129,12 +129,12 @@
             this.L_FP_ConfigSel = new System.Windows.Forms.Label();
             this.FP_TopLabel = new System.Windows.Forms.Label();
             this.RescueCentre = new System.Windows.Forms.TabPage();
-            this.BU_ListTable = new System.Windows.Forms.DataGridView();
-            this.BEd_BName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BEd_BType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BEd_BSize = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BEd_BData = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BEd_BRealName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BU_LVTable = new System.Windows.Forms.ListView();
+            this.BU_LV_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.BU_LV_Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.BU_LV_Size = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.BU_LV_Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.BU_LV_RealName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BU_BToolbar = new System.Windows.Forms.ToolStrip();
             this.BUT_Refresh = new System.Windows.Forms.ToolStripButton();
             this.BUT_Sep1 = new System.Windows.Forms.ToolStripSeparator();
@@ -197,7 +197,6 @@
             this.FPSCfgInstall.SuspendLayout();
             this.FP_GB_Desc.SuspendLayout();
             this.RescueCentre.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BU_ListTable)).BeginInit();
             this.BU_BToolbar.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.StatusBar.SuspendLayout();
@@ -1010,58 +1009,51 @@
             // 
             // RescueCentre
             // 
-            this.RescueCentre.Controls.Add(this.BU_ListTable);
+            this.RescueCentre.Controls.Add(this.BU_LVTable);
             this.RescueCentre.Controls.Add(this.BU_BToolbar);
             resources.ApplyResources(this.RescueCentre, "RescueCentre");
             this.RescueCentre.Name = "RescueCentre";
             this.RescueCentre.UseVisualStyleBackColor = true;
             // 
-            // BU_ListTable
+            // BU_LVTable
             // 
-            this.BU_ListTable.AllowUserToAddRows = false;
-            this.BU_ListTable.AllowUserToDeleteRows = false;
-            this.BU_ListTable.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.BU_ListTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.BU_ListTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.BEd_BName,
-            this.BEd_BType,
-            this.BEd_BSize,
-            this.BEd_BData,
-            this.BEd_BRealName});
-            resources.ApplyResources(this.BU_ListTable, "BU_ListTable");
-            this.BU_ListTable.MultiSelect = false;
-            this.BU_ListTable.Name = "BU_ListTable";
-            this.BU_ListTable.ReadOnly = true;
+            this.BU_LVTable.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.BU_LV_Name,
+            this.BU_LV_Type,
+            this.BU_LV_Size,
+            this.BU_LV_Date,
+            this.BU_LV_RealName});
+            this.BU_LVTable.FullRowSelect = true;
+            this.BU_LVTable.GridLines = true;
+            this.BU_LVTable.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.BU_LVTable.HideSelection = false;
+            resources.ApplyResources(this.BU_LVTable, "BU_LVTable");
+            this.BU_LVTable.MultiSelect = false;
+            this.BU_LVTable.Name = "BU_LVTable";
+            this.BU_LVTable.ShowGroups = false;
+            this.BU_LVTable.UseCompatibleStateImageBehavior = false;
+            this.BU_LVTable.View = System.Windows.Forms.View.Details;
+            this.BU_LVTable.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.BU_LVTable_ColumnWidthChanging);
             // 
-            // BEd_BName
+            // BU_LV_Name
             // 
-            resources.ApplyResources(this.BEd_BName, "BEd_BName");
-            this.BEd_BName.Name = "BEd_BName";
-            this.BEd_BName.ReadOnly = true;
+            resources.ApplyResources(this.BU_LV_Name, "BU_LV_Name");
             // 
-            // BEd_BType
+            // BU_LV_Type
             // 
-            resources.ApplyResources(this.BEd_BType, "BEd_BType");
-            this.BEd_BType.Name = "BEd_BType";
-            this.BEd_BType.ReadOnly = true;
+            resources.ApplyResources(this.BU_LV_Type, "BU_LV_Type");
             // 
-            // BEd_BSize
+            // BU_LV_Size
             // 
-            resources.ApplyResources(this.BEd_BSize, "BEd_BSize");
-            this.BEd_BSize.Name = "BEd_BSize";
-            this.BEd_BSize.ReadOnly = true;
+            resources.ApplyResources(this.BU_LV_Size, "BU_LV_Size");
             // 
-            // BEd_BData
+            // BU_LV_Date
             // 
-            resources.ApplyResources(this.BEd_BData, "BEd_BData");
-            this.BEd_BData.Name = "BEd_BData";
-            this.BEd_BData.ReadOnly = true;
+            resources.ApplyResources(this.BU_LV_Date, "BU_LV_Date");
             // 
-            // BEd_BRealName
+            // BU_LV_RealName
             // 
-            resources.ApplyResources(this.BEd_BRealName, "BEd_BRealName");
-            this.BEd_BRealName.Name = "BEd_BRealName";
-            this.BEd_BRealName.ReadOnly = true;
+            resources.ApplyResources(this.BU_LV_RealName, "BU_LV_RealName");
             // 
             // BU_BToolbar
             // 
@@ -1431,7 +1423,6 @@
             this.FP_GB_Desc.ResumeLayout(false);
             this.RescueCentre.ResumeLayout(false);
             this.RescueCentre.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BU_ListTable)).EndInit();
             this.BU_BToolbar.ResumeLayout(false);
             this.BU_BToolbar.PerformLayout();
             this.MainMenu.ResumeLayout(false);
@@ -1567,7 +1558,6 @@
         private System.Windows.Forms.SaveFileDialog CE_SaveCfgDialog;
         private System.Windows.Forms.DataGridViewTextBoxColumn CE_CVName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CE_CVal;
-        private System.Windows.Forms.DataGridView BU_ListTable;
         private System.Windows.Forms.ToolStrip BU_BToolbar;
         private System.Windows.Forms.ToolStripButton BUT_Refresh;
         private System.Windows.Forms.ToolStripSeparator BUT_Sep1;
@@ -1586,15 +1576,16 @@
         private System.Windows.Forms.Button PS_RemOldBin;
         private System.Windows.Forms.Button PS_RemGraphOpts;
         private System.Windows.Forms.Button FP_OpenNotepad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BSize;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BEd_BRealName;
         private System.Windows.Forms.ToolStripMenuItem MNUUpdateCheck;
         private System.Windows.Forms.ToolStripButton BUT_OpenNpad;
         private System.Windows.Forms.ToolStripMenuItem MNUAppOptions;
         private System.Windows.Forms.ImageList TabIcons;
+        private System.Windows.Forms.ListView BU_LVTable;
+        private System.Windows.Forms.ColumnHeader BU_LV_Name;
+        private System.Windows.Forms.ColumnHeader BU_LV_Type;
+        private System.Windows.Forms.ColumnHeader BU_LV_Size;
+        private System.Windows.Forms.ColumnHeader BU_LV_Date;
+        private System.Windows.Forms.ColumnHeader BU_LV_RealName;
     }
 }
 

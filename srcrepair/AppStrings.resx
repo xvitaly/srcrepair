@@ -453,4 +453,7 @@
   <data name="GT_SaveFailure" xml:space="preserve">
     <value>An error occurred while saving graphical settings!</value>
   </data>
+  <data name="BU_NoSelected" xml:space="preserve">
+    <value>Action is impossible: no files selected!</value>
+  </data>
 </root>

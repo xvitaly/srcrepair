@@ -117,6 +117,88 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="GraphicTweaker.Text" xml:space="preserve">
+    <value>Графические настройки</value>
+  </data>
+  <data name="ConfigEditor.Text" xml:space="preserve">
+    <value>Редактор конфигов</value>
+  </data>
+  <data name="ProblemSolver.Text" xml:space="preserve">
+    <value>Устранение проблем и очистка</value>
+  </data>
+  <data name="FPSCfgInstall.Text" xml:space="preserve">
+    <value>FPS-конфиги</value>
+  </data>
+  <data name="RescueCentre.Text" xml:space="preserve">
+    <value>Резервные копии</value>
+  </data>
+  <data name="TabIcons.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADs
+        DQAAAk1TRnQBSQFMAgEBBQEAAQkBAAEEAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/0EAAbwO7wG8MAAB7Q5D
+        AewwAAHvBBQBEwESAhMBEgETAhQCEwHtMAAB9wQUAeoB6wHqARIB6wFtARMDFAHsMAAB9wEUARMBFAES
+        AW0B6gESARMBEgLqARQCEwHsMAAB9wMTAeoB6wESARQCEwHrAW0DEwHsMAAB9wETARIBEwFtAesBEgIT
+        AeoB7AHqARMCEgHsMAABkgQSAeoB6wLqAW0B6gQSAewwAAHtBBIBbQHsAusB7AFtBBIB6zAAAewFEgFt
+        A+sFEgFtMAAB7QETBBIJEwHsMAAB7wEUBRMIEgH3MAABvAHtAuwB7QGSAe8IvAHwdQAL8DQAAvAGAALw
+        BAAM8AIAAQcBbQHvAgcCvAHwBQAD8AEADPABAALwAQABvAHvAwcB7wHsA3MB7AEHAbwBBwHwAQAB7AFu
+        AXMJbgHrAwAB7AGSAfABvAIHA+8BBwG8AfAEAAHvAfcK7wH3Ae8BAAHvARUCEQHsAZIBegN5ApoBdAEc
+        ArwBAAHvAf8E9AL/A/QB/wGSAQAC8AEAAZIB7QMAAbwBBwHvAZIC7AHtAfcBBwEAAQcM/wHvAQABvAHt
+        ARQBEgEUAXQBeQFWATUBVwF6AXQBmgF5Ae8CAAHvAfQB8wH0AfMB/wLzBP8B9wEAA/ABAAGSAe0BAALw
+        AwABvAEHAu8BBwEAAbwB8gL0AvACvALxAv8B9AG8AQAB8AEAAewB7QHrAXQBeQFXAVYBVwF0ASABRgFM
+        AXkCAAHvAfQD8gH0AbwBHAEaAbwB8QH2Ae0BAAG8AgAB8AEAAZIB7QEAA/AHAAG8AfMB9AHxAbwC8gHx
+        AgcB9AH/AfQBvAEAAvABvAGSAfcBvAF0AlcBeQFMAUcBIAFSAXkBmQEAAe8B9ALzAfQB8wH0ARoBegFS
+        AQcB9AH3AQAB8AMAAfABAAGSAe0BAALwAgAE8AEAAbwB8wHxAbwC9AHxAfIB8wG8AQcB8gH/AbwDAAHw
+        AQADvAF0AXkBegF0AUYBTAF6AXkBmQEAAe8E8wH0Af8BGwJTAXUB9AHvAQAB8AQAAfABAAHtAZICBwcA
+        AbwB8wHwAvIBBwHxAvAB8wEHAfIB/wG8AwAB8AG8AQABHAHyAbwBSwF5AXoBdAFzAewBeQGZAQABBwXy
+        AfMB/wEbAlMBdAHvAQAB8AQAAvABAAHsAUwBbgEAAbwB8AQAAbwB8gG8AfABBwHwAv8B8AHyAfEBvAHz
+        AbwEAAHwAQABmQF0AZkBdAFRAXkBcwKLARwBmQEAAQcC8gHxAfMC8gHzAfQBGgJTAXQBvAYAAfABAAFu
+        AeMBbwH3AQAC8AMAAbwB8gG8AfAB7wHwAv8C8QHyAbwB8wG8BAAB8AEHAZkBegFSAXkBdAFSAXMCtAF0
+        AbwBAAEHAvIB8QLyAfEC8wH0ARoBdQFZAXQBvAcAAbwB7AFvAUsB7AG8AQAB8AIAAbwB8wHwAQcBvAHv
+        AvABBwH0AfIB8QH0AbwCAAHwAQABdAF5AZkBeQGZA3QBUgFzAnkCAAG8AfEB8wHyAvMB8gHzAfQB8wH0
+        AbwBUgF6AXQHAAHwAQAB7AESAhQB7wEAAfABAAG8AfMB8AEHArwB7wEHAfIB9AHwAfIB9AG8AQAB8AEA
+        AbwCeQF0AbwBBwF5AnQBUgF0AXkBvAIAAbwJ8AG8AfEB7wF0AZkHAALwAQACEgEUAQ8B9wIAAbwB8gH0
+        AfECBwLwAfIBvAHxAfQB8wG8AQAB8AEAAbwBdAF5AXQBvAEHAnkBUgF0AVIBkwEAAfACAAHvCQcB7wsA
+        AfABAAGSAREBEgEUAUMBBwEAAbwB8gLzAbwB8AEHAbwB8AHxAfMB8QHwAbwCAAHwAQABmQd5A3QBvAMA
+        DvAJAAHwAQAB6wERARIBFAHqAQABvAHyA/MB9AHyAfME9AEHAQAB8AIAAfABAAG8AZkDeQGZAQcB8AEA
+        ARwB7wMAAfAJAAHwDQAB8AEAAewBQwFLAW4BAAG8AfIB9ALzBfQB8wEHAQAB8AQAAfAHAALwAQAB8AQA
+        CfAPAAHwAQAB7wFuAe8BAAHwCgcBAALwAQABQgFNAT4HAAE+AwABKAMAAUADAAEgAwABAQEAAQEGAAEB
+        FgAD/wEAAv9uAAL/BgAB+AcAAvMBwAEDAQAB+AGAAQQBgAEAAYABAwGAAQcBgAEBAgABgAECAU4BAAGA
+        AQEBAAEBAYABAgEkAeABgAEBAUABAQGAAQIB0gE/AYABAQIAAYABAgHpATABgAEBAdABAAGAAQIB9AE/
+        AYABAQHIAQABgAECAfIBJwGAAQEB6AEAAYABAQH6ARMBgAEBAeABAAGAAQAB/gEFAYABAQGgAQEBgAEA
+        Af4BggGAAQEBQAEBAYABAAH+AUEBgAEBAUABAgHAAQcB/wFAAYABAQGgAQEBwAEAAf8BoAGAAQIB0AEJ
+        Ad8B9wH/AdABgAEFAe8B5QHgAQ8B/wHoAYABCQs=
+</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="GT_Warning.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -351,9 +433,6 @@
   <data name="L_GT_ResHor.Text" xml:space="preserve">
     <value>Разрешение по горизонт.</value>
   </data>
-  <data name="GraphicTweaker.Text" xml:space="preserve">
-    <value>Графические настройки</value>
-  </data>
   <data name="CE_New.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -476,8 +555,8 @@
   <data name="CE_CVal.HeaderText" xml:space="preserve">
     <value>Значение переменной</value>
   </data>
-  <data name="ConfigEditor.Text" xml:space="preserve">
-    <value>Редактор конфигов</value>
+  <data name="PS_GB_AdvRepr.Text" xml:space="preserve">
+    <value>Расширенная очистка:</value>
   </data>
   <data name="PS_RemOldBin.Text" xml:space="preserve">
     <value>Старые бинарники</value>
@@ -485,8 +564,8 @@
   <data name="PS_RemGraphOpts.Text" xml:space="preserve">
     <value>Настройки графики</value>
   </data>
-  <data name="PS_GB_AdvRepr.Text" xml:space="preserve">
-    <value>Расширенная очистка:</value>
+  <data name="PS_GB_Remover.Text" xml:space="preserve">
+    <value>Быстрая очистка:</value>
   </data>
   <data name="PS_RemDemos.Text" xml:space="preserve">
     <value>Записанные демки</value>
@@ -515,14 +594,14 @@
   <data name="PS_RemCustMaps.Text" xml:space="preserve">
     <value>Кастомные карты</value>
   </data>
-  <data name="PS_GB_Remover.Text" xml:space="preserve">
-    <value>Быстрая очистка:</value>
+  <data name="PS_GB_AdvFeat.Text" xml:space="preserve">
+    <value>Специальные функции</value>
   </data>
   <data name="PS_ResetSettings.Text" xml:space="preserve">
     <value>Восстановить настройки игры по умолчанию</value>
   </data>
-  <data name="PS_GB_AdvFeat.Text" xml:space="preserve">
-    <value>Специальные функции</value>
+  <data name="PS_GB_SInfo.Text" xml:space="preserve">
+    <value>Информация о текущей установке Steam</value>
   </data>
   <data name="PS_WarningMsg.Text" xml:space="preserve">
     <value>Steam установлен верно: логин и путь к каталогу (папке) Steam не содержат запрещённых символов: букв национальных алфавитов (русских, немецких, французских и т.д.) и символов Юникода.</value>
@@ -548,8 +627,8 @@
   <data name="L_PS_RSteamPath.Text" xml:space="preserve">
     <value>Путь к Steam:</value>
   </data>
-  <data name="PS_GB_SInfo.Text" xml:space="preserve">
-    <value>Информация о текущей установке Steam</value>
+  <data name="PS_GB_Solver.Text" xml:space="preserve">
+    <value>Устранение проблем Steam</value>
   </data>
   <data name="PS_ExecuteNow.Text" xml:space="preserve">
     <value>Выполнить!</value>
@@ -578,12 +657,6 @@
   <data name="PS_CleanBlobs.Text" xml:space="preserve">
     <value>Очистить .blob-файлы из каталога Steam</value>
   </data>
-  <data name="PS_GB_Solver.Text" xml:space="preserve">
-    <value>Устранение проблем Steam</value>
-  </data>
-  <data name="ProblemSolver.Text" xml:space="preserve">
-    <value>Устранение проблем и очистка</value>
-  </data>
   <data name="FP_CreateBackUp.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 17</value>
   </data>
@@ -608,20 +681,17 @@
   <data name="FP_TopLabel.Text" xml:space="preserve">
     <value>На этой странице Вы можете установить один из доступных и протестированных нами FPS-конфигов в игру. Конфиг представляет собой файл autoexec.cfg, который способен значительно увеличить производительность игры с потерей качества выдаваемой картинки. Установленный конфиг Вы можете редактировать в Редакторе. Внимание! Если Вы используете конфиг, то редактор графических настроек не сможет редактировать их (настройки, полученные из конфига имеют более высокий приоритет).</value>
   </data>
-  <data name="FPSCfgInstall.Text" xml:space="preserve">
-    <value>FPS-конфиги</value>
-  </data>
-  <data name="BEd_BName.HeaderText" xml:space="preserve">
+  <data name="BU_LV_Name.Text" xml:space="preserve">
     <value>Имя</value>
   </data>
-  <data name="BEd_BType.HeaderText" xml:space="preserve">
+  <data name="BU_LV_Type.Text" xml:space="preserve">
     <value>Тип</value>
   </data>
-  <data name="BEd_BSize.HeaderText" xml:space="preserve">
+  <data name="BU_LV_Size.Text" xml:space="preserve">
     <value>Размер</value>
   </data>
-  <data name="BEd_BData.HeaderText" xml:space="preserve">
-    <value>Дата</value>
+  <data name="BU_LV_Date.Text" xml:space="preserve">
+    <value>Дата создания</value>
   </data>
   <data name="BUT_Refresh.Text" xml:space="preserve">
     <value>Обновить список резервных копий...</value>
@@ -634,6 +704,9 @@
   </data>
   <data name="BUT_OpenNpad.Text" xml:space="preserve">
     <value>Открыть выбранную резервную копию в Блокноте</value>
+  </data>
+  <data name="BUT_CrBkupReg.Text" xml:space="preserve">
+    <value>Создать резервную копию реестра</value>
   </data>
   <data name="BUT_L_GameSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>293, 22</value>
@@ -653,17 +726,17 @@
   <data name="BUT_L_AllSRC.Text" xml:space="preserve">
     <value>Создать бэкап настроек всех Source-игр</value>
   </data>
-  <data name="BUT_CrBkupReg.Text" xml:space="preserve">
-    <value>Создать резервную копию реестра</value>
-  </data>
-  <data name="RescueCentre.Text" xml:space="preserve">
-    <value>Резервные копии</value>
-  </data>
   <data name="LoginSel.Location" type="System.Drawing.Point, System.Drawing">
     <value>93, 35</value>
   </data>
   <data name="LoginSel.Size" type="System.Drawing.Size, System.Drawing">
     <value>146, 21</value>
+  </data>
+  <data name="ToolsMNU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 20</value>
+  </data>
+  <data name="ToolsMNU.Text" xml:space="preserve">
+    <value>&amp;Инструменты</value>
   </data>
   <data name="MNUShowEdHint.Size" type="System.Drawing.Size, System.Drawing">
     <value>316, 22</value>
@@ -713,11 +786,11 @@
   <data name="MNUExit.Text" xml:space="preserve">
     <value>&amp;Выход</value>
   </data>
-  <data name="ToolsMNU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 20</value>
+  <data name="HelpMNU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 20</value>
   </data>
-  <data name="ToolsMNU.Text" xml:space="preserve">
-    <value>&amp;Инструменты</value>
+  <data name="HelpMNU.Text" xml:space="preserve">
+    <value>&amp;Справка</value>
   </data>
   <data name="MNUHelp.Size" type="System.Drawing.Size, System.Drawing">
     <value>293, 22</value>
@@ -766,12 +839,6 @@
   </data>
   <data name="MNUAbout.Text" xml:space="preserve">
     <value>&amp;О программе</value>
-  </data>
-  <data name="HelpMNU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 20</value>
-  </data>
-  <data name="HelpMNU.Text" xml:space="preserve">
-    <value>&amp;Справка</value>
   </data>
   <data name="L_LoginSel.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 13</value>

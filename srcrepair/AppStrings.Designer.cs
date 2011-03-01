@@ -241,6 +241,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Action is impossible: no files selected!.
+        /// </summary>
+        internal static string BU_NoSelected {
+            get {
+                return ResourceManager.GetString("BU_NoSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Restore file {0} of {1}?.
         /// </summary>
         internal static string BU_QMsg {
