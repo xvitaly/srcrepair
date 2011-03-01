@@ -1336,6 +1336,9 @@ namespace srcrepair
             // Очистим список FPS-конфигов...
             FP_ConfigSel.Items.Clear();
 
+            // Отключим кнопку редактирования FPS-конфигов...
+            FP_OpenNotepad.Enabled = false;
+
             // Считаем имеющиеся FPS-конфиги...
             try
             {
@@ -1370,6 +1373,7 @@ namespace srcrepair
                 // ...и блокируем контролы, отвечающие за установку...
                 FP_Install.Enabled = false;
                 FP_ConfigSel.Enabled = false;
+                FP_OpenNotepad.Enabled = false;
             }
 
             // Включаем заблокированные ранее контролы...
@@ -2040,6 +2044,7 @@ namespace srcrepair
             {
                 CreateRegBackUpNow(@"HKEY_CURRENT_USER\Software\Valve\Source\" + GV.SmallAppName + @"\Settings", "Game_Options", GV.FullBackUpDirPath);
                 MessageBox.Show(RM.GetString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                BUT_Refresh.PerformClick();
             }
             catch
             {
@@ -2056,6 +2061,8 @@ namespace srcrepair
                 CreateRegBackUpNow(@"HKEY_CURRENT_USER\Software\Valve", "Steam_BackUp", GV.FullBackUpDirPath);
                 // Выводим сообщение...
                 MessageBox.Show(RM.GetString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Обновим список бэкапов...
+                BUT_Refresh.PerformClick();
             }
             catch
             {
@@ -2072,6 +2079,7 @@ namespace srcrepair
             {
                 CreateRegBackUpNow(@"HKEY_CURRENT_USER\Software\Valve\Source", "Source_Options", GV.FullBackUpDirPath);
                 MessageBox.Show(RM.GetString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                BUT_Refresh.PerformClick();
             }
             catch
             {
