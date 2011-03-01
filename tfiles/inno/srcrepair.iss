@@ -143,26 +143,26 @@ begin
   if (not RegKeyExists(HKLM, 'Software\Microsoft\.NETFramework\policy\v4.0')) then
     begin
       dotNetNeeded := true;
-       if (not IsAdminLoggedOn()) then
-          begin
-            MsgBox(ExpandConstant('{cm:DnlNetReqAdm}'), mbInformation, MB_OK);
-            Result := false;
-          end
-            else
-              begin
-                memoDependenciesNeeded := memoDependenciesNeeded + '      Microsoft .NET Framework 4.0' #13;
-                dotnetRedistPath := ExpandConstant('{src}\dotNetFx40_Full_setup.exe');
-                if not FileExists(dotnetRedistPath) then
-                  begin
-                    dotnetRedistPath := ExpandConstant('{tmp}\dotNetFx40_Full_setup.exe');
-                    if not FileExists(dotnetRedistPath) then
-                      begin
-                        isxdl_AddFile(dotnetRedistURL, dotnetRedistPath);
-                        downloadNeeded := true;
-                      end
-                  end;
-                SetIniString('install', 'dotnetRedist', dotnetRedistPath, ExpandConstant('{tmp}\dep.ini'));
-              end
+      if (not IsAdminLoggedOn()) then
+         begin
+           MsgBox(ExpandConstant('{cm:DnlNetReqAdm}'), mbInformation, MB_OK);
+           Result := false;
+         end
+           else
+             begin
+               memoDependenciesNeeded := memoDependenciesNeeded + '      Microsoft .NET Framework 4.0' #13;
+               dotnetRedistPath := ExpandConstant('{src}\dotNetFx40_Full_setup.exe');
+               if not FileExists(dotnetRedistPath) then
+                 begin
+                   dotnetRedistPath := ExpandConstant('{tmp}\dotNetFx40_Full_setup.exe');
+                   if not FileExists(dotnetRedistPath) then
+                     begin
+                       isxdl_AddFile(dotnetRedistURL, dotnetRedistPath);
+                       downloadNeeded := true;
+                     end
+                 end;
+               SetIniString('install', 'dotnetRedist', dotnetRedistPath, ExpandConstant('{tmp}\dep.ini'));
+             end
     end
 end;
 
@@ -177,6 +177,7 @@ begin
       hWnd := StrToInt(ExpandConstant('{wizardhwnd}'));
       if (downloadNeeded and (dotNetNeeded = true)) then
         begin
+          MsgBox(ExpandConstant('{cm:DnlNetNeeded}'), mbInformation, MB_OK);
           isxdl_SetOption('label', ExpandConstant('{cm:DnlNetLabelW}'));
           isxdl_SetOption('description', ExpandConstant('{cm:DnlNetTextW}'));
           if isxdl_DownloadFiles(hWnd) = 0 then
