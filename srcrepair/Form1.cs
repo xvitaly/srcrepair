@@ -1063,6 +1063,13 @@ namespace srcrepair
                 LoginSel.Items.Add((string)SBuf);
             }
 
+            // Укажем путь к пользовательским данным и создадим если не существует...
+            GV.AppUserDir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + Path.DirectorySeparatorChar + GV.AppName + Path.DirectorySeparatorChar;
+            if (!(Directory.Exists(GV.AppUserDir)))
+            {
+                Directory.CreateDirectory(GV.AppUserDir);
+            }
+
             // Выводим сообщение в строку статуса...
             SB_Status.Text = RM.GetString("StatusSLogin");
 
@@ -1090,13 +1097,6 @@ namespace srcrepair
                 PS_WarningMsg.Text = RM.GetString("SteamNonASCIISmall");
                 PS_WarningMsg.ForeColor = Color.Red;
                 MessageBox.Show(RM.GetString("SteamNonASCIIDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-            // Укажем путь к пользовательским данным и создадим если не существует...
-            GV.AppUserDir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + Path.DirectorySeparatorChar + GV.AppName + Path.DirectorySeparatorChar;
-            if (!(Directory.Exists(GV.AppUserDir)))
-            {
-                Directory.CreateDirectory(GV.AppUserDir);
             }
         }
 
