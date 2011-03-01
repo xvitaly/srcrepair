@@ -5,7 +5,7 @@ using System.Text;
 
 namespace srcrepair
 {
-    class GO
+    public class GO
     {
         public static bool ShowSinglePlayer = true;
         public static bool HideNotInstalled = true;
