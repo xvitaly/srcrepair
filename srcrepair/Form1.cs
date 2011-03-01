@@ -169,13 +169,10 @@ namespace srcrepair
          */
         private void CreateRegBackUpNow(string RKey, string FileName, string DestDir)
         {
-            if (MessageBox.Show(RM.GetString("BU_RegCreate"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                // Генерируем строку с параметрами...
-                string Params = @"/ea """ + DestDir + FileName + "_" + CoreLib.WriteDateToString(DateTime.Now, true) + @".reg""" + " " + RKey;
-                // Запускаем и ждём завершения...
-                CoreLib.StartProcessAndWait("regedit.exe", Params);
-            }
+            // Генерируем строку с параметрами...
+            string Params = @"/ea """ + DestDir + FileName + "_" + CoreLib.WriteDateToString(DateTime.Now, true) + @".reg""" + " " + RKey;
+            // Запускаем и ждём завершения...
+            CoreLib.StartProcessAndWait("regedit.exe", Params);
         }
 
         /*
@@ -1492,8 +1489,17 @@ namespace srcrepair
                         // Подавляем сообщение об ошибке если оно возникнет...
                     }
                     
-                    // Записываем выбранные настройки в реестр...
-                    WriteGCFGameSettings(GV.SmallAppName);
+                    try
+                    {
+                        // Записываем выбранные настройки в реестр...
+                        WriteGCFGameSettings(GV.SmallAppName);
+                        // Выводим подтверждающее сообщение...
+                        MessageBox.Show(RM.GetString("GT_SaveSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch
+                    {
+                        MessageBox.Show(RM.GetString("GT_SaveFailure"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
                 else
                 {
@@ -1506,9 +1512,6 @@ namespace srcrepair
                 // TODO: реализовать возможность записывать параметры строки запуска...
 
                 // Закончили запись основных настроек, указанных пользователем или выбранных по умолчанию...
-
-                // Выводим подтверждающее сообщение...
-                MessageBox.Show(RM.GetString("GT_SaveSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -2039,51 +2042,60 @@ namespace srcrepair
 
         private void BUT_L_GameSettings_Click(object sender, EventArgs e)
         {
-            // Создадим резервную копию графических настроек игры...
-            try
+            if (MessageBox.Show(RM.GetString("BU_RegCreate"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                CreateRegBackUpNow(@"HKEY_CURRENT_USER\Software\Valve\Source\" + GV.SmallAppName + @"\Settings", "Game_Options", GV.FullBackUpDirPath);
-                MessageBox.Show(RM.GetString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                BUT_Refresh.PerformClick();
-            }
-            catch
-            {
-                MessageBox.Show(RM.GetString("BU_RegErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // Создадим резервную копию графических настроек игры...
+                try
+                {
+                    CreateRegBackUpNow(@"HKEY_CURRENT_USER\Software\Valve\Source\" + GV.SmallAppName + @"\Settings", "Game_Options", GV.FullBackUpDirPath);
+                    MessageBox.Show(RM.GetString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    BUT_Refresh.PerformClick();
+                }
+                catch
+                {
+                    MessageBox.Show(RM.GetString("BU_RegErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 
         private void BUT_L_AllSteam_Click(object sender, EventArgs e)
         {
-            // Создадим резервную копию всех настроек Steam...
-            try
+            if (MessageBox.Show(RM.GetString("BU_RegCreate"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                // Создаём...
-                CreateRegBackUpNow(@"HKEY_CURRENT_USER\Software\Valve", "Steam_BackUp", GV.FullBackUpDirPath);
-                // Выводим сообщение...
-                MessageBox.Show(RM.GetString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // Обновим список бэкапов...
-                BUT_Refresh.PerformClick();
-            }
-            catch
-            {
-                // Произошло исключение, уведомим пользователя...
-                MessageBox.Show(RM.GetString("BU_RegErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // Создадим резервную копию всех настроек Steam...
+                try
+                {
+                    // Создаём...
+                    CreateRegBackUpNow(@"HKEY_CURRENT_USER\Software\Valve", "Steam_BackUp", GV.FullBackUpDirPath);
+                    // Выводим сообщение...
+                    MessageBox.Show(RM.GetString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Обновим список бэкапов...
+                    BUT_Refresh.PerformClick();
+                }
+                catch
+                {
+                    // Произошло исключение, уведомим пользователя...
+                    MessageBox.Show(RM.GetString("BU_RegErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             
         }
 
         private void BUT_L_AllSRC_Click(object sender, EventArgs e)
         {
-            // Созданим резервную копию графических настроек всех Source-игр...
-            try
+            if (MessageBox.Show(RM.GetString("BU_RegCreate"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                CreateRegBackUpNow(@"HKEY_CURRENT_USER\Software\Valve\Source", "Source_Options", GV.FullBackUpDirPath);
-                MessageBox.Show(RM.GetString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                BUT_Refresh.PerformClick();
-            }
-            catch
-            {
-                MessageBox.Show(RM.GetString("BU_RegErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // Созданим резервную копию графических настроек всех Source-игр...
+                try
+                {
+                    CreateRegBackUpNow(@"HKEY_CURRENT_USER\Software\Valve\Source", "Source_Options", GV.FullBackUpDirPath);
+                    MessageBox.Show(RM.GetString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    BUT_Refresh.PerformClick();
+                }
+                catch
+                {
+                    MessageBox.Show(RM.GetString("BU_RegErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 

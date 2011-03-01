@@ -574,6 +574,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while saving graphical settings!.
+        /// </summary>
+        internal static string GT_SaveFailure {
+            get {
+                return ResourceManager.GetString("GT_SaveFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save your changes?.
         /// </summary>
         internal static string GT_SaveMsg {

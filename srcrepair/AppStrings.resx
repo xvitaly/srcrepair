@@ -450,4 +450,7 @@
   <data name="PS_CleanupFull" xml:space="preserve">
     <value>Clean {0}?</value>
   </data>
+  <data name="GT_SaveFailure" xml:space="preserve">
+    <value>An error occurred while saving graphical settings!</value>
+  </data>
 </root>
