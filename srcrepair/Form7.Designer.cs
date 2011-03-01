@@ -51,6 +51,7 @@
             this.FName,
             this.FSize,
             this.FDate});
+            this.CM_FTable.FullRowSelect = true;
             this.CM_FTable.GridLines = true;
             this.CM_FTable.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             resources.ApplyResources(this.CM_FTable, "CM_FTable");
