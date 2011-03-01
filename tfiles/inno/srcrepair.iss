@@ -152,10 +152,10 @@ begin
              begin
                memoDependenciesNeeded := memoDependenciesNeeded + '      Microsoft .NET Framework 4.0' #13;
                dotnetRedistPath := ExpandConstant('{src}\dotNetFx40_Full_setup.exe');
-               if not FileExists(dotnetRedistPath) then
+               if (not FileExists(dotnetRedistPath)) then
                  begin
                    dotnetRedistPath := ExpandConstant('{tmp}\dotNetFx40_Full_setup.exe');
-                   if not FileExists(dotnetRedistPath) then
+                   if (not FileExists(dotnetRedistPath)) then
                      begin
                        isxdl_AddFile(dotnetRedistURL, dotnetRedistPath);
                        downloadNeeded := true;
@@ -172,7 +172,7 @@ var
   ResultCode: Integer;
 begin
   Result := true;
-  if CurPage = wpReady then
+  if (CurPage = wpReady) then
     begin
       hWnd := StrToInt(ExpandConstant('{wizardhwnd}'));
       if (downloadNeeded and (dotNetNeeded = true)) then
@@ -180,12 +180,12 @@ begin
           MsgBox(ExpandConstant('{cm:DnlNetNeeded}'), mbInformation, MB_OK);
           isxdl_SetOption('label', ExpandConstant('{cm:DnlNetLabelW}'));
           isxdl_SetOption('description', ExpandConstant('{cm:DnlNetTextW}'));
-          if isxdl_DownloadFiles(hWnd) = 0 then
+          if (isxdl_DownloadFiles(hWnd) = 0) then
             Result := false;
         end;
       if (dotNetNeeded = true) then
         begin
-          if Exec(ExpandConstant(dotnetRedistPath), '', '', SW_SHOW, ewWaitUntilTerminated, ResultCode) then
+          if (Exec(ExpandConstant(dotnetRedistPath), '', '', SW_SHOW, ewWaitUntilTerminated, ResultCode)) then
             begin
               if (not (ResultCode = 0)) then
                 begin
@@ -205,21 +205,21 @@ var
   s: string;
 begin
   // Добавляем зависимости...
-  if memoDependenciesNeeded <> '' then
+  if (memoDependenciesNeeded <> '') then
     s := s + ExpandConstant('{cm:DnlDepText}') + NewLine + memoDependenciesNeeded + NewLine;
   // Добавляем путь установки...
   s := s + MemoDirInfo + NewLine + NewLine;
   // Добавляем информацию...
-  if  MemoTypeInfo <> '' then
+  if  (MemoTypeInfo <> '') then
     s := s + MemoTypeInfo + NewLine;
   // Добавляем инфо о компонентах...
-  if MemoComponentsInfo <> '' then
+  if (MemoComponentsInfo <> '') then
     s := s + MemoComponentsInfo + NewLine;
   // Добавляем инфо о группе в меню Пуск...
-  if MemoGroupInfo <> '' then
+  if (MemoGroupInfo <> '') then
     s := s + MemoGroupInfo + NewLine + NewLine;
   // Добавляем инфо о задачах...
-  if MemoTasksInfo <> '' then
+  if (MemoTasksInfo <> '') then
     s := s + MemoTasksInfo + NewLine;
   Result := s
 end;
