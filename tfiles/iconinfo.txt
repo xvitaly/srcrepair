@@ -69,3 +69,5 @@ BackUp.png - Icontoaster - Free - http://www.iconspedia.com/icon/backup-2047.htm
 --------------------------------------------------------------------------------------------------------
 Graphics.png - GNOME icon artists - GPLv2 - http://www.iconspedia.com/icon/gnome-applications-graphics-10-46.html
 --------------------------------------------------------------------------------------------------------
+Search.png - Flahorn - CCNC - http://www.iconspedia.com/icon/search-26-2.html
+--------------------------------------------------------------------------------------------------------

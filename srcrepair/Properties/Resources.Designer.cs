@@ -186,6 +186,13 @@ namespace srcrepair.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Search {
+            get {
+                object obj = ResourceManager.GetObject("Search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap steam {
             get {
                 object obj = ResourceManager.GetObject("steam", resourceCulture);

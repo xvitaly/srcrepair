@@ -2360,5 +2360,25 @@ namespace srcrepair
             e.NewWidth = BU_LVTable.Columns[e.ColumnIndex].Width;
             e.Cancel = true;
         }
+
+        private void BUT_ExploreBUp_Click(object sender, EventArgs e)
+        {
+            if (BU_LVTable.Items.Count > 0)
+            {
+                if (BU_LVTable.SelectedItems.Count > 0)
+                {
+                    // Откроем выбранный бэкап в Проводнике Windows...
+                    Process.Start("explorer.exe", @"/select," + @"""" + GV.FullBackUpDirPath + BU_LVTable.SelectedItems[0].SubItems[4].Text + @"""");
+                }
+                else
+                {
+                    MessageBox.Show(RM.GetString("BU_NoSelected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show(RM.GetString("BU_NoFiles"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

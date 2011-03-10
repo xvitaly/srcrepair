@@ -295,6 +295,7 @@
     <None Include="Resources\TextEditor.png" />
     <None Include="Resources\Globe.png" />
     <None Include="Resources\Options.png" />
+    <None Include="Resources\Search.png" />
     <Content Include="TF2Repair.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

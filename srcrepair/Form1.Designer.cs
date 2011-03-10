@@ -140,8 +140,10 @@
             this.BUT_Sep1 = new System.Windows.Forms.ToolStripSeparator();
             this.BUT_RestoreB = new System.Windows.Forms.ToolStripButton();
             this.BUT_DelB = new System.Windows.Forms.ToolStripButton();
-            this.BUT_OpenNpad = new System.Windows.Forms.ToolStripButton();
             this.BUT_Sep2 = new System.Windows.Forms.ToolStripSeparator();
+            this.BUT_OpenNpad = new System.Windows.Forms.ToolStripButton();
+            this.BUT_ExploreBUp = new System.Windows.Forms.ToolStripButton();
+            this.BUT_Sep3 = new System.Windows.Forms.ToolStripSeparator();
             this.BUT_CrBkupReg = new System.Windows.Forms.ToolStripSplitButton();
             this.BUT_L_GameSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.BUT_L_AllSteam = new System.Windows.Forms.ToolStripMenuItem();
@@ -1062,8 +1064,10 @@
             this.BUT_Sep1,
             this.BUT_RestoreB,
             this.BUT_DelB,
-            this.BUT_OpenNpad,
             this.BUT_Sep2,
+            this.BUT_OpenNpad,
+            this.BUT_ExploreBUp,
+            this.BUT_Sep3,
             this.BUT_CrBkupReg});
             resources.ApplyResources(this.BU_BToolbar, "BU_BToolbar");
             this.BU_BToolbar.Name = "BU_BToolbar";
@@ -1097,6 +1101,11 @@
             this.BUT_DelB.Name = "BUT_DelB";
             this.BUT_DelB.Click += new System.EventHandler(this.BUT_DelB_Click);
             // 
+            // BUT_Sep2
+            // 
+            this.BUT_Sep2.Name = "BUT_Sep2";
+            resources.ApplyResources(this.BUT_Sep2, "BUT_Sep2");
+            // 
             // BUT_OpenNpad
             // 
             this.BUT_OpenNpad.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -1105,10 +1114,18 @@
             this.BUT_OpenNpad.Name = "BUT_OpenNpad";
             this.BUT_OpenNpad.Click += new System.EventHandler(this.BUT_OpenNpad_Click);
             // 
-            // BUT_Sep2
+            // BUT_ExploreBUp
             // 
-            this.BUT_Sep2.Name = "BUT_Sep2";
-            resources.ApplyResources(this.BUT_Sep2, "BUT_Sep2");
+            this.BUT_ExploreBUp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BUT_ExploreBUp.Image = global::srcrepair.Properties.Resources.Search;
+            resources.ApplyResources(this.BUT_ExploreBUp, "BUT_ExploreBUp");
+            this.BUT_ExploreBUp.Name = "BUT_ExploreBUp";
+            this.BUT_ExploreBUp.Click += new System.EventHandler(this.BUT_ExploreBUp_Click);
+            // 
+            // BUT_Sep3
+            // 
+            this.BUT_Sep3.Name = "BUT_Sep3";
+            resources.ApplyResources(this.BUT_Sep3, "BUT_Sep3");
             // 
             // BUT_CrBkupReg
             // 
@@ -1564,7 +1581,7 @@
         private System.Windows.Forms.ToolStripButton BUT_RestoreB;
         private System.Windows.Forms.ToolStripButton BUT_DelB;
         private System.Windows.Forms.ToolStripSplitButton BUT_CrBkupReg;
-        private System.Windows.Forms.ToolStripSeparator BUT_Sep2;
+        private System.Windows.Forms.ToolStripSeparator BUT_Sep3;
         private System.Windows.Forms.ToolStripMenuItem BUT_L_GameSettings;
         private System.Windows.Forms.ToolStripMenuItem BUT_L_AllSteam;
         private System.Windows.Forms.ToolStripMenuItem BUT_L_AllSRC;
@@ -1586,6 +1603,8 @@
         private System.Windows.Forms.ColumnHeader BU_LV_Size;
         private System.Windows.Forms.ColumnHeader BU_LV_Date;
         private System.Windows.Forms.ColumnHeader BU_LV_RealName;
+        private System.Windows.Forms.ToolStripButton BUT_ExploreBUp;
+        private System.Windows.Forms.ToolStripSeparator BUT_Sep2;
     }
 }
 

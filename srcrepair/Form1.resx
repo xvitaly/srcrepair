@@ -2872,6 +2872,9 @@
   <data name="BUT_DelB.Text" xml:space="preserve">
     <value>Delete BackUp</value>
   </data>
+  <data name="BUT_Sep2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
   <data name="BUT_OpenNpad.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -2881,7 +2884,16 @@
   <data name="BUT_OpenNpad.Text" xml:space="preserve">
     <value>Open BackUp in Notepad</value>
   </data>
-  <data name="BUT_Sep2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BUT_ExploreBUp.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="BUT_ExploreBUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="BUT_ExploreBUp.Text" xml:space="preserve">
+    <value>Show BackUp file in Windows Explorer</value>
+  </data>
+  <data name="BUT_Sep3.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
   </data>
   <data name="BUT_L_GameSettings.Size" type="System.Drawing.Size, System.Drawing">
@@ -3726,16 +3738,28 @@
   <data name="&gt;&gt;BUT_DelB.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;BUT_Sep2.Name" xml:space="preserve">
+    <value>BUT_Sep2</value>
+  </data>
+  <data name="&gt;&gt;BUT_Sep2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;BUT_OpenNpad.Name" xml:space="preserve">
     <value>BUT_OpenNpad</value>
   </data>
   <data name="&gt;&gt;BUT_OpenNpad.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BUT_Sep2.Name" xml:space="preserve">
-    <value>BUT_Sep2</value>
+  <data name="&gt;&gt;BUT_ExploreBUp.Name" xml:space="preserve">
+    <value>BUT_ExploreBUp</value>
   </data>
-  <data name="&gt;&gt;BUT_Sep2.Type" xml:space="preserve">
+  <data name="&gt;&gt;BUT_ExploreBUp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BUT_Sep3.Name" xml:space="preserve">
+    <value>BUT_Sep3</value>
+  </data>
+  <data name="&gt;&gt;BUT_Sep3.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;BUT_CrBkupReg.Name" xml:space="preserve">
