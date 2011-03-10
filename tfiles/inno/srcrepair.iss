@@ -23,7 +23,7 @@ AppVerName=SRC Repair
 AppPublisher=EasyCoding Team
 AppPublisherURL=http://www.easycoding.org/projects/srcrepair
 ; AppVersion отображается в Установка/Удаление программ в дополнительной информации.
-AppVersion=1.7.0.256
+AppVersion=2.0.0.299
 AppSupportURL=http://www.easycoding.org/projects/srcrepair
 AppUpdatesURL=http://www.easycoding.org/projects/srcrepair
 DefaultDirName={pf}\SRC Repair
@@ -32,8 +32,8 @@ AllowNoIcons=yes
 LicenseFile=E:\VSBuilds\GPL.txt
 ;InfoBeforeFile=E:\VSBuilds\readme.txt
 OutputDir=E:\VSBuilds
-OutputBaseFilename=srcrepair_17_final
-;OutputBaseFilename=srcrepair_beta_256
+;OutputBaseFilename=srcrepair_20_final
+OutputBaseFilename=srcrepair_beta_299
 SetupIconFile=E:\SVN\srcrepair\srcrepair\TF2Repair.ico
 ;UninstallDisplayIcon={app}\MyProg.exe,1
 Compression=lzma2
@@ -45,7 +45,7 @@ SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64
 
 ; Тут указываем данные, которые будут добавлены в свойства установщика
-VersionInfoVersion=1.7.0.256
+VersionInfoVersion=2.0.0.299
 VersionInfoDescription=SRC Repair Setup
 VersionInfoCopyright=(c) 2005-2011 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
@@ -223,12 +223,3 @@ begin
     s := s + MemoTasksInfo + NewLine;
   Result := s
 end;
-
-
-
-
-
-
-
-
-

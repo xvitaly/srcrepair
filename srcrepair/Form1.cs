@@ -2215,7 +2215,14 @@ namespace srcrepair
 
         private void MNUSteamGroup_Click(object sender, EventArgs e)
         {
-            Process.Start("http://steamcommunity.com/groups/srcrepair");
+            try
+            {
+                Process.Start("steam://url/GroupSteamIDPage/103582791431662552");
+            }
+            catch
+            {
+                Process.Start("http://steamcommunity.com/groups/srcrepair");
+            }
         }
 
         private void MNULnkEasyCoding_Click(object sender, EventArgs e)
