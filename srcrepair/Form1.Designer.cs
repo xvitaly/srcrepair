@@ -1415,6 +1415,7 @@
             this.MaximizeBox = false;
             this.Name = "frmMainW";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMainW_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMainW_FormClosed);
             this.Load += new System.EventHandler(this.frmMainW_Load);
             this.MainTabControl.ResumeLayout(false);
             this.GraphicTweaker.ResumeLayout(false);

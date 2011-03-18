@@ -43,6 +43,12 @@ namespace srcrepair
             InitializeComponent();
             // Создаём экземпляр менеджера ресурсов с нужным нам ресурсом...
             RM = new ResourceManager("srcrepair.AppStrings", typeof(frmMainW).Assembly);
+            // Импортируем настройки из предыдущей версии...
+            if (Properties.Settings.Default.CallUpgrade)
+            {
+                Properties.Settings.Default.Upgrade();
+                Properties.Settings.Default.CallUpgrade = false;
+            }
         }
 
         #region Internal Variables
@@ -997,23 +1003,8 @@ namespace srcrepair
                 }
             }
 
-            // Считаем настройки программы из реестра...
-            try
-            {
-                GO.ConfirmExit = CoreLib.GetAppBool("ConfirmExit", GV.AppName, GO.ConfirmExit);
-                GO.ShowSinglePlayer = CoreLib.GetAppBool("ShowSinglePlayer", GV.AppName, GO.ShowSinglePlayer);
-                GO.SortGamesList = CoreLib.GetAppBool("SortGameList", GV.AppName, GO.SortGamesList);
-            }
-            catch
-            {
-                // Произошло исключение, поэтому зададим стандартные значения вручную...
-                GO.ConfirmExit = true;
-                GO.ShowSinglePlayer = true;
-                GO.SortGamesList = true;
-            }
-
             // Применим некоторые настройки...
-            AppSelector.Sorted = GO.SortGamesList;
+            AppSelector.Sorted = Properties.Settings.Default.SortGamesList;
 
             // Определим логины пользователей Steam на данном ПК...
             try
@@ -1177,7 +1168,7 @@ namespace srcrepair
 
         private void frmMainW_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (GO.ConfirmExit)
+            if (Properties.Settings.Default.ConfirmExit)
             {
                 // Проверим, делал ли что-то пользователь с формой. Если не делал - не будем
                 // спрашивать и завершим форму автоматически...
@@ -1460,7 +1451,7 @@ namespace srcrepair
             PS_RSteamLogin.Text = LoginSel.Text;
 
             // Начинаем определять установленные игры...
-            DetectInstalledGames(GV.FullSteamPath, LoginSel.Text, GO.ShowSinglePlayer);
+            DetectInstalledGames(GV.FullSteamPath, LoginSel.Text, Properties.Settings.Default.ShowSinglePlayer);
 
             // Проверим нашлись ли игры...
             if (AppSelector.Items.Count == 0)
@@ -2379,6 +2370,12 @@ namespace srcrepair
             {
                 MessageBox.Show(RM.GetString("BU_NoFiles"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void frmMainW_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Форма была закрыта, сохраняем настройки приложения...
+            Properties.Settings.Default.Save();
         }
     }
 }

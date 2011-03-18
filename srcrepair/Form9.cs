@@ -19,10 +19,11 @@ namespace srcrepair
         private void frmOptions_Load(object sender, EventArgs e)
         {
             // Считаем текущие настройки...
-            MO_ShowSingle.Checked = GO.ShowSinglePlayer;
-            MO_ConfirmExit.Checked = GO.ConfirmExit;
-            MO_HideNotInst.Checked = GO.HideNotInstalled;
-            MO_SortGameList.Checked = GO.SortGamesList;
+            MO_ShowSingle.Checked = Properties.Settings.Default.ShowSinglePlayer;
+            MO_ConfirmExit.Checked = Properties.Settings.Default.ConfirmExit;
+            MO_HideNotInst.Checked = Properties.Settings.Default.HideNotInstalled;
+            MO_SortGameList.Checked = Properties.Settings.Default.SortGamesList;
+
             // Укажем название приложения в заголовке окна...
             this.Text = String.Format(this.Text, GV.AppName);
         }
@@ -30,33 +31,16 @@ namespace srcrepair
         private void MO_Okay_Click(object sender, EventArgs e)
         {
             // Сохраняем настройки для текущего сеанса...
-            GO.ShowSinglePlayer = MO_ShowSingle.Checked;
-            GO.ConfirmExit = MO_ConfirmExit.Checked;
-            GO.HideNotInstalled = MO_HideNotInst.Checked;
-            GO.SortGamesList = MO_SortGameList.Checked;
-            
-            try
-            {
-                // Проверим и создадим ключ реестра для хранения настроек...
-                CoreLib.CheckRegKeyAndCreateCU(@"Software\" + GV.AppName);
-                
-                // Запишем настройки в реестр...
-                CoreLib.WriteAppBool("ShowSinglePlayer", GV.AppName, MO_ShowSingle.Checked);
-                CoreLib.WriteAppBool("ConfirmExit", GV.AppName, MO_ConfirmExit.Checked);
-                CoreLib.WriteAppBool("SortGameList", GV.AppName, MO_SortGameList.Checked);
-                //CoreLib.WriteAppBool("HideNotInstalled", GV.AppName, MO_HideNotInst.Checked);
-                
-                // Показываем сообщение...
-                MessageBox.Show(CoreLib.GetLocalizedString("Opts_Saved"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-                // Закрываем форму...
-                this.Close();
-            }
-            catch
-            {
-                // Произошло исключение, выведем сообщение...
-                MessageBox.Show(CoreLib.GetLocalizedString("Opts_Error"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            Properties.Settings.Default.ShowSinglePlayer = MO_ShowSingle.Checked;
+            Properties.Settings.Default.ConfirmExit = MO_ConfirmExit.Checked;
+            Properties.Settings.Default.HideNotInstalled = MO_HideNotInst.Checked;
+            Properties.Settings.Default.SortGamesList = MO_SortGameList.Checked;
+            // Сохраняем настройки...
+            Properties.Settings.Default.Save();
+            // Показываем сообщение...
+            MessageBox.Show(CoreLib.GetLocalizedString("Opts_Saved"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Закрываем форму...
+            this.Close();
         }
 
         private void MO_Cancel_Click(object sender, EventArgs e)
