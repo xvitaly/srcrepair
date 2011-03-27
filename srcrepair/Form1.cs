@@ -979,27 +979,36 @@ namespace srcrepair
             }
             catch
             {
-                // Произошло исключение, пользователю придётся ввести путь самостоятельно!
-                MessageBox.Show(RM.GetString("SteamPathNotDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                string Buf = "";
-                FldrBrwse.Description = RM.GetString("SteamPathEnterText"); // Указываем текст в диалоге поиска каталога...
-                if (FldrBrwse.ShowDialog() == DialogResult.OK) // Отображаем стандартный диалог поиска каталога...
+                // Найдём путь...
+                if (!(String.IsNullOrWhiteSpace(Properties.Settings.Default.LastSteamPath)) && File.Exists(Properties.Settings.Default.LastSteamPath + "Steam.exe"))
                 {
-                    Buf = CoreLib.IncludeTrDelim(FldrBrwse.SelectedPath);
-                    if (!(File.Exists(Buf + "Steam.exe")))
-                    {
-                        MessageBox.Show(RM.GetString("SteamPathEnterErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        Environment.Exit(7);
-                    }
-                    else
-                    {
-                        GV.FullSteamPath = Buf;
-                    }
+                    GV.FullSteamPath = Properties.Settings.Default.LastSteamPath;
                 }
                 else
                 {
-                    MessageBox.Show(RM.GetString("SteamPathCancel"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Environment.Exit(7);
+                    // Произошло исключение, пользователю придётся ввести путь самостоятельно!
+                    MessageBox.Show(RM.GetString("SteamPathNotDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string Buf = "";
+                    FldrBrwse.Description = RM.GetString("SteamPathEnterText"); // Указываем текст в диалоге поиска каталога...
+                    if (FldrBrwse.ShowDialog() == DialogResult.OK) // Отображаем стандартный диалог поиска каталога...
+                    {
+                        Buf = CoreLib.IncludeTrDelim(FldrBrwse.SelectedPath);
+                        if (!(File.Exists(Buf + "Steam.exe")))
+                        {
+                            MessageBox.Show(RM.GetString("SteamPathEnterErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            Environment.Exit(7);
+                        }
+                        else
+                        {
+                            GV.FullSteamPath = Buf;
+                            Properties.Settings.Default.LastSteamPath = GV.FullSteamPath;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(RM.GetString("SteamPathCancel"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Environment.Exit(7);
+                    }
                 }
             }
 

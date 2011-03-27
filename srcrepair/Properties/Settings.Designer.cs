@@ -82,5 +82,17 @@ namespace srcrepair.Properties {
                 this["CallUpgrade"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LastSteamPath {
+            get {
+                return ((string)(this["LastSteamPath"]));
+            }
+            set {
+                this["LastSteamPath"] = value;
+            }
+        }
     }
 }
