@@ -570,4 +570,20 @@
     <value>Действие невозможно: не выбрано ни одного файла!</value>
     <comment>Сообщение при отсутствии выделенных файлов в списке резервных копий</comment>
   </data>
+  <data name="KB_ExException" xml:space="preserve">
+    <value>Произошла ошибка при выполнении. Убедитесь, что у Вас есть права администратора!</value>
+    <comment>Сообщение при возникновении исключения при попытке отключения клавиш</comment>
+  </data>
+  <data name="KB_ExQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите {0}?</value>
+    <comment>Сообщение при попытке отключения клавиш</comment>
+  </data>
+  <data name="KB_ExRestore" xml:space="preserve">
+    <value>Восстановить настройки по умолчанию?</value>
+    <comment>Сообщение при попытке восстановить настройки по умолчанию</comment>
+  </data>
+  <data name="KB_ExSuccess" xml:space="preserve">
+    <value>Требуемое действие успешно выполнено! Выполненные настройки будут применены после перезагрузки системы.</value>
+    <comment>Сообщение об успешном отключении клавиш</comment>
+  </data>
 </root>

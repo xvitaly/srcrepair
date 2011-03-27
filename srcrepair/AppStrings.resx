@@ -456,4 +456,16 @@
   <data name="BU_NoSelected" xml:space="preserve">
     <value>Action is impossible: no files selected!</value>
   </data>
+  <data name="KB_ExException" xml:space="preserve">
+    <value>An error occurred during execution. Make sure you have administrator rights!</value>
+  </data>
+  <data name="KB_ExQuestion" xml:space="preserve">
+    <value>Are you sure you want to {0}?</value>
+  </data>
+  <data name="KB_ExRestore" xml:space="preserve">
+    <value>Restore default settings?</value>
+  </data>
+  <data name="KB_ExSuccess" xml:space="preserve">
+    <value>The required action successfully completed!</value>
+  </data>
 </root>

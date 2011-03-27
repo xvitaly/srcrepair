@@ -71,3 +71,5 @@ Graphics.png - GNOME icon artists - GPLv2 - http://www.iconspedia.com/icon/gnome
 --------------------------------------------------------------------------------------------------------
 Search.png - Flahorn - CCNC - http://www.iconspedia.com/icon/search-26-2.html
 --------------------------------------------------------------------------------------------------------
+Keyboard.ico - GNOME icon artists - GPLv2 - http://www.iconspedia.com/icon/gnome-preferences-desktop-keyboard-1113-.html
+--------------------------------------------------------------------------------------------------------

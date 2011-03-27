@@ -159,6 +159,7 @@
             this.MNUReportBuilder = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUInstaller = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUHEd = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUWinMnuDisabler = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep2 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUExit = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpMNU = new System.Windows.Forms.ToolStripMenuItem();
@@ -1196,6 +1197,7 @@
             this.MNUReportBuilder,
             this.MNUInstaller,
             this.MNUHEd,
+            this.MNUWinMnuDisabler,
             this.MNUSep2,
             this.MNUExit});
             this.ToolsMNU.Name = "ToolsMNU";
@@ -1247,6 +1249,13 @@
             this.MNUHEd.Name = "MNUHEd";
             resources.ApplyResources(this.MNUHEd, "MNUHEd");
             this.MNUHEd.Click += new System.EventHandler(this.MNUHEd_Click);
+            // 
+            // MNUWinMnuDisabler
+            // 
+            this.MNUWinMnuDisabler.Image = global::srcrepair.Properties.Resources.Keyboard;
+            this.MNUWinMnuDisabler.Name = "MNUWinMnuDisabler";
+            resources.ApplyResources(this.MNUWinMnuDisabler, "MNUWinMnuDisabler");
+            this.MNUWinMnuDisabler.Click += new System.EventHandler(this.MNUWinMnuDisabler_Click);
             // 
             // MNUSep2
             // 
@@ -1606,6 +1615,7 @@
         private System.Windows.Forms.ColumnHeader BU_LV_RealName;
         private System.Windows.Forms.ToolStripButton BUT_ExploreBUp;
         private System.Windows.Forms.ToolStripSeparator BUT_Sep2;
+        private System.Windows.Forms.ToolStripMenuItem MNUWinMnuDisabler;
     }
 }
 

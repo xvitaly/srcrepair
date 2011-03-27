@@ -959,6 +959,7 @@ namespace srcrepair
                 PS_SteamLang.Enabled = false;
                 MNUHEd.Enabled = false;
                 MNUUpdateCheck.Enabled = false;
+                MNUWinMnuDisabler.Enabled = false;
             }
             
             // Получаем информацию о версии нашего приложения...
@@ -2385,6 +2386,13 @@ namespace srcrepair
         {
             // Форма была закрыта, сохраняем настройки приложения...
             Properties.Settings.Default.Save();
+        }
+
+        private void MNUWinMnuDisabler_Click(object sender, EventArgs e)
+        {
+            // Показываем модуля отключения клавиш...
+            frmKBHelper KBHlp = new frmKBHelper();
+            KBHlp.ShowDialog();
         }
     }
 }

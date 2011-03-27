@@ -144,6 +144,13 @@ namespace srcrepair.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Keyboard {
+            get {
+                object obj = ResourceManager.GetObject("Keyboard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Options {
             get {
                 object obj = ResourceManager.GetObject("Options", resourceCulture);

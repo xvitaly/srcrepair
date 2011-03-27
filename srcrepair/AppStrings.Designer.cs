@@ -619,6 +619,42 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred during execution. Make sure you have administrator rights!.
+        /// </summary>
+        internal static string KB_ExException {
+            get {
+                return ResourceManager.GetString("KB_ExException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to {0}?.
+        /// </summary>
+        internal static string KB_ExQuestion {
+            get {
+                return ResourceManager.GetString("KB_ExQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restore default settings?.
+        /// </summary>
+        internal static string KB_ExRestore {
+            get {
+                return ResourceManager.GetString("KB_ExRestore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The required action successfully completed!.
+        /// </summary>
+        internal static string KB_ExSuccess {
+            get {
+                return ResourceManager.GetString("KB_ExSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sorry, but this feature is not yet implemented!.
         /// </summary>
         internal static string NotImplementedYet {

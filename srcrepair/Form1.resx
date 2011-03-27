@@ -3158,6 +3158,12 @@
   <data name="MNUHEd.Text" xml:space="preserve">
     <value>&amp;Advanced Hosts Editor...</value>
   </data>
+  <data name="MNUWinMnuDisabler.Size" type="System.Drawing.Size, System.Drawing">
+    <value>274, 22</value>
+  </data>
+  <data name="MNUWinMnuDisabler.Text" xml:space="preserve">
+    <value>S&amp;ystem buttons disabler...</value>
+  </data>
   <data name="MNUSep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>271, 6</value>
   </data>
@@ -3838,6 +3844,12 @@
     <value>MNUHEd</value>
   </data>
   <data name="&gt;&gt;MNUHEd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUWinMnuDisabler.Name" xml:space="preserve">
+    <value>MNUWinMnuDisabler</value>
+  </data>
+  <data name="&gt;&gt;MNUWinMnuDisabler.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUSep2.Name" xml:space="preserve">
