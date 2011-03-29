@@ -310,6 +310,7 @@
     <None Include="Resources\Options.png" />
     <None Include="Resources\Search.png" />
     <None Include="Resources\Keyboard.png" />
+    <None Include="Resources\Shopcart.png" />
     <Content Include="TF2Repair.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -170,6 +170,7 @@
             this.MNUSteamGroup = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep3 = new System.Windows.Forms.ToolStripSeparator();
             this.MNULnkEasyCoding = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUGameStore = new System.Windows.Forms.ToolStripMenuItem();
             this.MNULnkTFRU = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep4 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUAbout = new System.Windows.Forms.ToolStripMenuItem();
@@ -1279,6 +1280,7 @@
             this.MNUSteamGroup,
             this.MNUSep3,
             this.MNULnkEasyCoding,
+            this.MNUGameStore,
             this.MNULnkTFRU,
             this.MNUSep4,
             this.MNUAbout});
@@ -1331,6 +1333,13 @@
             this.MNULnkEasyCoding.Name = "MNULnkEasyCoding";
             resources.ApplyResources(this.MNULnkEasyCoding, "MNULnkEasyCoding");
             this.MNULnkEasyCoding.Click += new System.EventHandler(this.MNULnkEasyCoding_Click);
+            // 
+            // MNUGameStore
+            // 
+            this.MNUGameStore.Image = global::srcrepair.Properties.Resources.Shopcart;
+            this.MNUGameStore.Name = "MNUGameStore";
+            resources.ApplyResources(this.MNUGameStore, "MNUGameStore");
+            this.MNUGameStore.Click += new System.EventHandler(this.MNUGameStore_Click);
             // 
             // MNULnkTFRU
             // 
@@ -1616,6 +1625,7 @@
         private System.Windows.Forms.ToolStripButton BUT_ExploreBUp;
         private System.Windows.Forms.ToolStripSeparator BUT_Sep2;
         private System.Windows.Forms.ToolStripMenuItem MNUWinMnuDisabler;
+        private System.Windows.Forms.ToolStripMenuItem MNUGameStore;
     }
 }
 
