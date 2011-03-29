@@ -28,6 +28,7 @@ using System.Text.RegularExpressions;  // для работы с регуляр�
 using System.Security.Principal; // для определения прав админа...
 using System.Resources; // для управления ресурсами...
 using System.Threading; // для управления потоками...
+using System.Net; // для скачивания файлов...
 
 namespace srcrepair
 {
@@ -431,6 +432,18 @@ namespace srcrepair
             if ((InpNumber >= 1073741823) && (InpNumber <= 1099511627775)) { return (InpNumber / 1024 / 1024 / 1024).ToString() + " GB"; }
             // Если размер всё-таки больше, выведем просто строку...
             return InpNumber.ToString();
+        }
+
+        /*
+         * Эта функция проверяет наличие обновлений для программы. При обнаружении возвращает
+         * логическое булево True, иначе - False. Используется в модуле автообновления.
+         */
+        public static bool AutoUpdateCheck(string CurrentVersion, string ChURI)
+        {
+            string NewVersion, DnlStr;
+            using (WebClient Downloader = new WebClient()) { DnlStr = Downloader.DownloadString(ChURI); }
+            NewVersion = DnlStr.Substring(0, DnlStr.IndexOf("!"));
+            if (NewVersion != CurrentVersion) { return true; } else { return false; }
         }
     }
 }

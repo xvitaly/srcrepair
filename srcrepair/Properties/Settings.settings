@@ -20,5 +20,14 @@
     <Setting Name="LastSteamPath" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="EnableAutoUpdate" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="LastUpdateTime" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UpdateChURI" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://www.easycoding.org/files/srcrep_ver.txt</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -117,6 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="MO_AutoUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 17</value>
+  </data>
+  <data name="MO_AutoUpdate.Text" xml:space="preserve">
+    <value>Включить автоматическое обновление</value>
+  </data>
   <data name="MO_SortGameList.Text" xml:space="preserve">
     <value>Сортировать список игр по алфавиту</value>
   </data>
@@ -132,7 +139,6 @@
   <data name="MO_Cancel.Text" xml:space="preserve">
     <value>Отмена</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA

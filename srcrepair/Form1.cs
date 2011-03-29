@@ -1099,6 +1099,27 @@ namespace srcrepair
                 PS_WarningMsg.ForeColor = Color.Red;
                 MessageBox.Show(RM.GetString("SteamNonASCIIDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            try
+            {
+                // Проверим наличие обновлений программы (если разрешено в настройках)...
+                if (Properties.Settings.Default.EnableAutoUpdate && (Properties.Settings.Default.LastUpdateTime != null))
+                {
+                    TimeSpan TS = DateTime.Now - Properties.Settings.Default.LastUpdateTime;
+                    if (TS.Days >= 6)
+                    {
+                        // Требуется проверка обновлений...
+                        if (CoreLib.AutoUpdateCheck(GV.AppVersionInfo, Properties.Settings.Default.UpdateChURI))
+                        {
+                            // Доступны обновления...
+                            MessageBox.Show(String.Format(RM.GetString("AppUpdateAvailable"), GV.AppName), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        // Установим время последней проверки обновлений...
+                        Properties.Settings.Default.LastUpdateTime = DateTime.Now;
+                    }
+                }
+            }
+            catch { }
         }
 
         private void PS_CleanBlobs_CheckedChanged(object sender, EventArgs e)
@@ -2304,8 +2325,10 @@ namespace srcrepair
                 // Получаем файл с номером версии и ссылкой на новую...
                 using (WebClient Downloader = new WebClient())
                 {
-                    DnlStr = Downloader.DownloadString("http://www.easycoding.org/files/srcrep_ver.txt");
+                    DnlStr = Downloader.DownloadString(Properties.Settings.Default.UpdateChURI);
                 }
+                // Установим дату последней проверки обновлений...
+                Properties.Settings.Default.LastUpdateTime = DateTime.Now;
                 // Мы получили URL и версию...
                 NewVersion = DnlStr.Substring(0, DnlStr.IndexOf("!")); // Получаем версию...
                 UpdateURI = DnlStr.Remove(0, DnlStr.IndexOf("!") + 1); // Получаем URL...

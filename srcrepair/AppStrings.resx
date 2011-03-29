@@ -468,4 +468,7 @@
   <data name="KB_ExSuccess" xml:space="preserve">
     <value>The required action successfully completed!</value>
   </data>
+  <data name="AppUpdateAvailable" xml:space="preserve">
+    <value>Notice! Update for {0} is available. We recommend you upgrade as soon as possible via the menu Help - Check for updates, or manually.</value>
+  </data>
 </root>
