@@ -27,7 +27,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="UpdateChURI" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://www.easycoding.org/files/srcrep_ver.txt</Value>
+      <Value Profile="(Default)">http://srcrepair.googlecode.com/svn/trunk/tfiles/update/srcrep_ver.txt</Value>
     </Setting>
   </Settings>
 </SettingsFile>

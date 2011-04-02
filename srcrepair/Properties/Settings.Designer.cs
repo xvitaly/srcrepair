@@ -120,7 +120,7 @@ namespace srcrepair.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://www.easycoding.org/files/srcrep_ver.txt")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://srcrepair.googlecode.com/svn/trunk/tfiles/update/srcrep_ver.txt")]
         public string UpdateChURI {
             get {
                 return ((string)(this["UpdateChURI"]));
