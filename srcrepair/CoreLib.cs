@@ -425,11 +425,11 @@ namespace srcrepair
             // Проверяем на размер в байтах...
             if ((InpNumber >= 0) && (InpNumber <= 1023)) { return InpNumber.ToString() + " B"; }
             // ...килобайтах...
-            if ((InpNumber >= 1024) && (InpNumber <= 1048575)) { return (InpNumber / 1024).ToString() + " KB"; }
+            if ((InpNumber >= 1024) && (InpNumber <= 1048575)) { return (Math.Round((float)InpNumber / 1024, 2)).ToString() + " KB"; }
             // ...мегабайтах...
-            if ((InpNumber >= 1048576) && (InpNumber <= 1073741823)) { return (InpNumber / 1024 / 1024).ToString() + " MB"; }
+            if ((InpNumber >= 1048576) && (InpNumber <= 1073741823)) { return (Math.Round((float)InpNumber / 1024 / 1024, 2)).ToString() + " MB"; }
             // ...гигабайтах.
-            if ((InpNumber >= 1073741823) && (InpNumber <= 1099511627775)) { return (InpNumber / 1024 / 1024 / 1024).ToString() + " GB"; }
+            if ((InpNumber >= 1073741823) && (InpNumber <= 1099511627775)) { return (Math.Round((float)InpNumber / 1024 / 1024 / 1024, 2)).ToString() + " GB"; }
             // Если размер всё-таки больше, выведем просто строку...
             return InpNumber.ToString();
         }
