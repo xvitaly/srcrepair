@@ -211,6 +211,7 @@
             this.Controls.Add(this.HEd_MTool);
             this.Controls.Add(this.HEd_MMenu);
             this.Controls.Add(this.HEd_Table);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.HEd_MMenu;
             this.MaximizeBox = false;

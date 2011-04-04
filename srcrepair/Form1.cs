@@ -41,13 +41,25 @@ namespace srcrepair
         {
             // Инициализация...
             InitializeComponent();
+            
             // Создаём экземпляр менеджера ресурсов с нужным нам ресурсом...
             RM = new ResourceManager("srcrepair.AppStrings", typeof(frmMainW).Assembly);
+            
             // Импортируем настройки из предыдущей версии...
             if (Properties.Settings.Default.CallUpgrade)
             {
                 Properties.Settings.Default.Upgrade();
                 Properties.Settings.Default.CallUpgrade = false;
+            }
+            
+            // Проверим на первый запуск...
+            if (Properties.Settings.Default.IsFirstRun)
+            {
+                // Это первый запуск программы от текущего профиля или из текущего каталога...
+                // Установим дату последней проверки обновлений в сегодняшнюю...
+                Properties.Settings.Default.LastUpdateTime = DateTime.Now;
+                // Первый запуск состоялся, поэтому переведём значение переменной в false...
+                Properties.Settings.Default.IsFirstRun = false;
             }
         }
 
@@ -1105,8 +1117,9 @@ namespace srcrepair
                 // Проверим наличие обновлений программы (если разрешено в настройках)...
                 if (Properties.Settings.Default.EnableAutoUpdate && (Properties.Settings.Default.LastUpdateTime != null))
                 {
+                    // Вычисляем разницу между текущей датой и датой последнего обновления...
                     TimeSpan TS = DateTime.Now - Properties.Settings.Default.LastUpdateTime;
-                    if (TS.Days >= 6)
+                    if (TS.Days >= 7) // Проверяем не прошла ли неделя с момента последней прверки...
                     {
                         // Требуется проверка обновлений...
                         if (CoreLib.AutoUpdateCheck(GV.AppVersionInfo, Properties.Settings.Default.UpdateChURI))

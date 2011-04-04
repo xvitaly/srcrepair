@@ -105,6 +105,7 @@
             this.Controls.Add(this.CM_Info);
             this.Controls.Add(this.CM_FTable);
             this.Controls.Add(this.CM_WelcMsg);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

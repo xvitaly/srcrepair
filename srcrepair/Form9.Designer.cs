@@ -106,6 +106,7 @@
             this.Controls.Add(this.MO_Cancel);
             this.Controls.Add(this.MO_Okay);
             this.Controls.Add(this.GB_MainOpts);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

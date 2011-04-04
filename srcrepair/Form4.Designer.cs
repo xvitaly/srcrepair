@@ -59,6 +59,7 @@
             this.Controls.Add(this.GenerateNow);
             this.Controls.Add(this.Compress);
             this.Controls.Add(this.WelcomeLabel);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -81,6 +81,7 @@
             this.Controls.Add(this.InstallPath);
             this.Controls.Add(this.labelPath);
             this.Controls.Add(this.labelWelcome);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

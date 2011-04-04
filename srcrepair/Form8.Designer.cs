@@ -73,6 +73,7 @@
             this.Controls.Add(this.DnlInstall);
             this.Controls.Add(this.LWelcome);
             this.Controls.Add(this.LCurrVersion);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

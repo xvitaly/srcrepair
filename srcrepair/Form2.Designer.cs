@@ -109,6 +109,7 @@
             this.Controls.Add(this.labelVersion);
             this.Controls.Add(this.labelProductName);
             this.Controls.Add(this.iconApp);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

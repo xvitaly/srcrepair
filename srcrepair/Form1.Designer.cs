@@ -1428,6 +1428,7 @@
             this.Controls.Add(this.LoginSel);
             this.Controls.Add(this.MainTabControl);
             this.Controls.Add(this.MainMenu);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.MainMenu;
             this.MaximizeBox = false;
