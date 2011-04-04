@@ -435,6 +435,18 @@ namespace srcrepair
         }
 
         /*
+         * Эта функция проверяет является ли версия, указанная в параметре
+         * NewVer, новее, чем CurrVer. Используется модулем проверки обновлений
+         * и модулем автоматического обновления.
+         */
+        public static bool CompareVersions(string CurrVer, string NewVer)
+        {
+            Version CVer = new Version(CurrVer);
+            Version NVer = new Version(NewVer);
+            if (NVer > CVer) { return true; } else { return false; }
+        }
+
+        /*
          * Эта функция проверяет наличие обновлений для программы. При обнаружении возвращает
          * логическое булево True, иначе - False. Используется в модуле автообновления.
          */
@@ -443,7 +455,7 @@ namespace srcrepair
             string NewVersion, DnlStr;
             using (WebClient Downloader = new WebClient()) { DnlStr = Downloader.DownloadString(ChURI); }
             NewVersion = DnlStr.Substring(0, DnlStr.IndexOf("!"));
-            if (NewVersion != CurrentVersion) { return true; } else { return false; }
+            if (CompareVersions(CurrentVersion, NewVersion)) { return true; } else { return false; }
         }
     }
 }
