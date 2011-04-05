@@ -34,22 +34,26 @@ namespace srcrepair
 {
     public class CoreLib
     {
-        /*
-         * Эта функция позволяет получить локализованную строку по её ID
-         * согласно текущим региональным настройкам Windows. Рекомендуется
-         * применять только в формах, чтобы не нарушать ООП.
-         */
+        /// <summary>
+        /// Эта функция позволяет получить локализованную строку по её ID
+        /// согласно текущим региональным настройкам Windows. Рекомендуется
+        /// применять только в формах, чтобы не нарушать ООП.
+        /// </summary>
+        /// <param name="MsgId">ID сообщения в ресурсе</param>
+        /// <returns>Локализованная строка</returns>
         public static string GetLocalizedString(string MsgId)
         {
             ResourceManager RMLocal = new ResourceManager("srcrepair.AppStrings", typeof(frmMainW).Assembly);
             return RMLocal.GetString(MsgId);
         }
-        
-        /*
-         * Реализуем аналог полезной дельфийской фукнции IncludeTrailingPathDelimiter,
-         * которая возвращает строку, добавив на конец обратный слэш если его нет,
-         * либо возвращает ту же строку, если обратный слэш уже присутствует.
-         */
+
+        /// <summary>
+        /// Аналог полезной дельфийской фукнции IncludeTrailingPathDelimiter,
+        /// которая возвращает строку, добавив на конец обратный слэш если его нет,
+        /// либо возвращает ту же строку, если обратный слэш уже присутствует.
+        /// </summary>
+        /// <param name="SourceStr">Исходная строка</param>
+        /// <returns>Строка с закрывающим слэшем</returns>
         public static string IncludeTrDelim(string SourceStr)
         {
             // Проверяем наличие закрывающего слэша у строки, переданной как параметр...
@@ -63,10 +67,10 @@ namespace srcrepair
             return SourceStr;
         }
 
-        /*
-         * Эта функция получает из реестра и возвращает путь к установленному
-         * клиенту Steam.
-         */
+        /// <summary>
+        /// Получает из реестра и возвращает путь к установленному клиенту Steam.
+        /// </summary>
+        /// <returns>Путь к клиенту Steam</returns>
         public static string GetSteamPath()
         {
             // Подключаем реестр и открываем ключ только для чтения...
@@ -101,10 +105,11 @@ namespace srcrepair
             return ResString;
         }
 
-        /*
-         * Эта функция возвращает PID процесса если он был найден в памяти и
-         * завершает, либо 0 если процесс не был найден.
-         */
+        /// <summary>
+        /// Возвращает PID процесса если он был найден в памяти и завершает его.
+        /// </summary>
+        /// <param name="ProcessName">Имя образа процесса</param>
+        /// <returns>PID снятого процесса, либо 0 если процесс не был найден</returns>
         public static int ProcessTerminate(string ProcessName)
         {
             // Обнуляем PID...
@@ -124,9 +129,11 @@ namespace srcrepair
             return ProcID;
         }
 
-        /*
-         * Второй вариант функции. Запрашивает подтверждение и снимает процесс.
-         */
+        /// <summary>
+        /// Запрашивает подтверждение и снимает процесс.
+        /// </summary>
+        /// <param name="ProcessName">Имя образа процесса</param>
+        /// <param name="ConfMsg">Текст сообщения</param>
         public static void ProcessTerminate(string ProcessName, string ConfMsg)
         {
             Process[] LocalByName = Process.GetProcessesByName(ProcessName);
@@ -139,10 +146,10 @@ namespace srcrepair
             }
         }
 
-        /*
-         * Эта функция очищает блобы (файлы с расширением *.blob) из каталога Steam.
-         * В качестве параметра ей передаётся полный путь к каталогу Steam.
-         */
+        /// <summary>
+        /// Очищает блобы (файлы с расширением *.blob) из каталога Steam.
+        /// </summary>
+        /// <param name="SteamPath">Полный путь к каталогу Steam</param>
         public static void CleanBlobsNow(string SteamPath)
         {
             // Инициализируем буферную переменную, в которой будем хранить имя файла...
@@ -169,10 +176,11 @@ namespace srcrepair
             }
         }
 
-        /*
-         * Эта функция удаляет значения реестра, отвечающие за настройки клиента
-         * Steam, а также записывает значение языка.
-         */
+        /// <summary>
+        /// Удаляет значения реестра, отвечающие за настройки клиента Steam,
+        /// а также записывает значение языка.
+        /// </summary>
+        /// <param name="LangCode">ID языка Steam</param>
         public static void CleanRegistryNow(int LangCode)
         {
             // Удаляем ключ HKEY_LOCAL_MACHINE\Software\Valve рекурсивно...
@@ -213,10 +221,13 @@ namespace srcrepair
             RegLangKey.Close();
         }
 
-        /*
-         * Эта функция получает из реестра значение нужной нам переменной
-         * для указанного игрового приложения.
-         */
+        /// <summary>
+        /// Получает из реестра значение нужной нам переменной для
+        /// указанного игрового приложения.
+        /// </summary>
+        /// <param name="CVar">Название переменной</param>
+        /// <param name="CApp">Короткое имя приложения</param>
+        /// <returns>Значение переменной</returns>
         public static int GetSRCDWord(string CVar, string CApp)
         {
             // Подключаем реестр и открываем ключ только для чтения...
@@ -251,10 +262,13 @@ namespace srcrepair
             return ResInt;
         }
 
-        /*
-         * Эта процедура записывает в реестр новое значение нужной нам переменной
-         * для указанного игрового приложения.
-         */
+        /// <summary>
+        /// Записывает в реестр новое значение нужной нам переменной для
+        /// указанного игрового приложения.
+        /// </summary>
+        /// <param name="CVar">Название переменной</param>
+        /// <param name="CValue">Значение переменной</param>
+        /// <param name="CApp">Короткое имя приложения</param>
         public static void WriteSRCDWord(string CVar, int CValue, string CApp)
         {
             // Подключаем реестр и открываем ключ для чтения и записи...
@@ -267,10 +281,11 @@ namespace srcrepair
             ResKey.Close();
         }
 
-        /*
-         * Эта функция проверяет есть ли у пользователя, с правами которого запускается
-         * программа, привилегии локального администратора.
-         */
+        /// <summary>
+        /// Проверяет есть ли у пользователя, с правами которого запускается
+        /// программа, привилегии локального администратора.
+        /// </summary>
+        /// <returns>Булево true если есть</returns>
         public static bool IsCurrentUserAdmin()
         {
             bool Result; // Переменная для хранения результата...
@@ -290,10 +305,12 @@ namespace srcrepair
             return Result;
         }
 
-        /*
-         * Эта функция преобразует число в строку с добавлением незначащих нулей
-         * перед числами с 0 до 9 включительно. Используется для служебных целей.
-         */
+        /// <summary>
+        /// Преобразует число в строку с добавлением незначащих нулей перед
+        /// числами с 0 до 9 включительно. Используется для служебных целей.
+        /// </summary>
+        /// <param name="Numb">Число</param>
+        /// <returns>Число с незначащим нулём в виде строки</returns>
         private static string SimpleIntStrWNull(int Numb)
         {
             string Result;
@@ -301,10 +318,13 @@ namespace srcrepair
             return Result;
         }
 
-        /*
-         * Эта функция генерирует ДДММГГЧЧММСС из указанного времени в строку.
-         * Применяется для служебных целей.
-         */
+        /// <summary>
+        /// Генерирует ДДММГГЧЧММСС из указанного времени в строку.
+        /// Применяется для служебных целей.
+        /// </summary>
+        /// <param name="XDate">Дата и время для преобразования</param>
+        /// <param name="MicroDate">Микро или по ГОСТ</param>
+        /// <returns>Строка в выбранном формате</returns>
         public static string WriteDateToString(DateTime XDate, bool MicroDate)
         {
             return MicroDate ? SimpleIntStrWNull(XDate.Day) + SimpleIntStrWNull(XDate.Month) +
@@ -315,10 +335,11 @@ namespace srcrepair
                 SimpleIntStrWNull(XDate.Minute) + ":" + SimpleIntStrWNull(XDate.Second);
         }
 
-        /*
-         * Эта функция проверяет наличие не-ASCII-символов в строке. Возвращает True
-         * если не обнаружено запрещённых симолов и False - если они были обнаружены.
-         */
+        /// <summary>
+        /// Проверяет наличие не-ASCII-символов в строке.
+        /// </summary>
+        /// <param name="Path">Путь для проверки</param>
+        /// <returns>Возвращает True если не обнаружено запрещённых симолов</returns>
         public static bool CheckNonASCII(string Path)
         {
             // Проверяем строку на соответствие регулярному выражению...
@@ -339,10 +360,11 @@ namespace srcrepair
             return Result;
         }
 
-        /*
-         * Эта функция запускает указанное в параметре SAppName приложение на
-         * выполнение с параметрами, указанными в SParameters и ждёт его завершения...
-         */
+        /// <summary>
+        /// Запускает указанное приложение и ждёт его завершения.
+        /// </summary>
+        /// <param name="SAppName">Путь к приложению или его имя</param>
+        /// <param name="SParameters">Параметры запуска</param>
         public static void StartProcessAndWait(string SAppName, string SParameters)
         {
             // Запускаем процесс...
@@ -355,10 +377,11 @@ namespace srcrepair
             }
         }
 
-        /*
-         * Эта функция удаляет файлы в заданной папке по указанной в параметре
-         * CleanupMask маске.
-         */
+        /// <summary>
+        /// Удаляет файлы в заданной папке по указанной маске.
+        /// </summary>
+        /// <param name="DirPath">Каталог для работы</param>
+        /// <param name="CleanupMask">Маска файлов для удаления</param>
         public static void CleanDirectoryNow(string DirPath, string CleanupMask)
         {
             // Открываем каталог...
@@ -373,11 +396,14 @@ namespace srcrepair
             }
         }
 
-        /*
-         * Эта функция получает из реестра значение указанной переменной
-         * булевского типа. При отсутствии ключа или значение - возвращается
-         * значение по умолчанию, переданное в качестве параметра.
-         */
+        /// <summary>
+        /// Получает из реестра значение указанной переменной булевского типа.
+        /// При отсутствии ключа или значение - возвращается значение по умолчанию.
+        /// </summary>
+        /// <param name="CVar">Название переменной</param>
+        /// <param name="Subkey">Подключ в HKCU</param>
+        /// <param name="Default">Значение по умолчанию</param>
+        /// <returns>Значение запрошенной переменной</returns>
         public static bool GetAppBool(string CVar, string Subkey, bool Default)
         {
             RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\" + Subkey, false);
@@ -394,20 +420,23 @@ namespace srcrepair
             return Result;
         }
 
-        /*
-         * Эта функция проверяет существование указанного ключа в HKCU
-         * и при отсутствии создаёт автоматически.
-         */
+        /// <summary>
+        /// Проверяет существование указанного ключа в HKCU и при
+        /// отсутствии создаёт автоматически.
+        /// </summary>
+        /// <param name="KeyName">Ключ реестра для проверки</param>
         public static void CheckRegKeyAndCreateCU(string KeyName)
         {
             RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(KeyName, false);
             if (ResKey == null) { Registry.CurrentUser.CreateSubKey(KeyName); } else { ResKey.Close(); }
         }
-        
-        /*
-         * Эта функция записывает в реестр параметр-булево настроек
-         * программы.
-         */
+
+        /// <summary>
+        /// Записывает в реестр параметр-булево настроек программы.
+        /// </summary>
+        /// <param name="CVar">Название переменной</param>
+        /// <param name="Subkey">Подключ в HKCU</param>
+        /// <param name="CValue">Значение переменной</param>
         public static void WriteAppBool(string CVar, string Subkey, bool CValue)
         {
             RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\" + Subkey, true);
@@ -415,11 +444,13 @@ namespace srcrepair
             ResKey.Close();
         }
 
-        /*
-         * Эта функция форматирует размер файла для удобства пользователя.
-         * Файлы от 0 до 1 КБ - 1 записываются в байтах, от 1 КБ до
-         * 1 МБ - 1 - в килобайтах, от 1 МБ до 1 ГБ - 1 - в мегабайтах.
-         */
+        /// <summary>
+        /// Форматирует размер файла для удобства пользователя.
+        /// Файлы от 0 до 1 КБ - 1 записываются в байтах, от 1 КБ до
+        /// 1 МБ - 1 - в килобайтах, от 1 МБ до 1 ГБ - 1 - в мегабайтах.
+        /// </summary>
+        /// <param name="InpNumber">Размер файла в байтах</param>
+        /// <returns>Форматированная строка</returns>
         public static string SclBytes(long InpNumber)
         {
             // Проверяем на размер в байтах...
@@ -434,11 +465,14 @@ namespace srcrepair
             return InpNumber.ToString();
         }
 
-        /*
-         * Эта функция проверяет является ли версия, указанная в параметре
-         * NewVer, новее, чем CurrVer. Используется модулем проверки обновлений
-         * и модулем автоматического обновления.
-         */
+        /// <summary>
+        /// Проверяет является ли версия, указанная в параметре
+        /// NewVer, новее, чем CurrVer. Используется модулем проверки обновлений
+        /// и модулем автоматического обновления.
+        /// </summary>
+        /// <param name="CurrVer">Текущая версия</param>
+        /// <param name="NewVer">Новая версия</param>
+        /// <returns>Возвращает true, если новее</returns>
         public static bool CompareVersions(string CurrVer, string NewVer)
         {
             Version CVer = new Version(CurrVer);
@@ -446,10 +480,12 @@ namespace srcrepair
             if (NVer > CVer) { return true; } else { return false; }
         }
 
-        /*
-         * Эта функция проверяет наличие обновлений для программы. При обнаружении возвращает
-         * логическое булево True, иначе - False. Используется в модуле автообновления.
-         */
+        /// <summary>
+        /// Проверяет наличие обновлений для программы. Используется в модуле автообновления.
+        /// </summary>
+        /// <param name="CurrentVersion">Текущая версия</param>
+        /// <param name="ChURI">URL проверки обновлений</param>
+        /// <returns>Возвращает true при обнаружении обновлений</returns>
         public static bool AutoUpdateCheck(string CurrentVersion, string ChURI)
         {
             string NewVersion, DnlStr;

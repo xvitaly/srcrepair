@@ -72,19 +72,25 @@ namespace srcrepair
 
         #region Internal Functions
 
-        /*
-         * Эта функция устанавливает требуемый FPS-конфиг...
-         */
+        /// <summary>
+        /// Устанавливает требуемый FPS-конфиг.
+        /// </summary>
+        /// <param name="ConfName">Имя конфига</param>
+        /// <param name="AppPath">Путь к программе SRC Repair</param>
+        /// <param name="DirName">Короткое имя игры</param>
+        /// <param name="DestPath">Каталог назначения</param>
         private void InstallConfigNow(string ConfName, string AppPath, string DirName, string DestPath)
         {
             // Устанавливаем...
             File.Copy(AppPath + @"cfgs\" + DirName + @"\" + ConfName, DestPath + "autoexec.cfg", true);
         }
 
-        /*
-         * Эта функция создаёт резервную копию конфига, имя которого передано
-         * в параметре.
-         */
+        /// <summary>
+        /// Создаёт резервную копию конфига, имя которого передано в параметре.
+        /// </summary>
+        /// <param name="ConfName">Имя конфига без пути</param>
+        /// <param name="ConfigDir">Путь к каталогу с конфигом</param>
+        /// <param name="BackUpDir">Путь к каталогу с резервными копиями</param>
         private void CreateBackUpNow(string ConfName, string ConfigDir, string BackUpDir)
         {
             // Сначала проверим, существует ли запрошенный файл...
@@ -110,7 +116,13 @@ namespace srcrepair
             }
         }
 
-        // Источник данной функции: http://www.csharp-examples.net/inputbox/ //
+        /// <summary>
+        /// Отображает InputBox. Источник данной функции: http://www.csharp-examples.net/inputbox/
+        /// </summary>
+        /// <param name="title">Заголовок InputBox'а</param>
+        /// <param name="promptText">Текст сообщения InputBox'а</param>
+        /// <param name="value">Стартовое значение и результат</param>
+        /// <returns>Значение типа DialogResult</returns>
         private DialogResult InputBox(string title, string promptText, ref string value)
         {
             Form form = new Form();
@@ -152,9 +164,13 @@ namespace srcrepair
             value = textBox.Text;
             return dialogResult;
         }
-        
-        /* Эта функция сохраняет содержимое таблицы в файл конфигурации, указанный в
-         * параметре. Используется в Save и SaveAs Редактора конфигов. */
+
+        /// <summary>
+        /// Сохраняет содержимое таблицы в файл конфигурации, указанный в
+        /// параметре. Используется в Save и SaveAs Редактора конфигов.
+        /// </summary>
+        /// <param name="Path">Полный путь к файлу конфига</param>
+        /// <param name="XAppName">Название программы</param>
         private void WriteTableToFileNow(string Path, string XAppName)
         {
             // Начинаем сохранять содержимое редактора в файл...
@@ -172,19 +188,24 @@ namespace srcrepair
             }
         }
 
-        /*
-         * Эта функция используется для записи значений в таблицу Редактора конфигов.
-         * Используется делегатом. Прямой вызов не допускается.
-         */
+        /// <summary>
+        /// Используется для записи значений в таблицу Редактора конфигов.
+        /// Используется делегатом. Прямой вызов не допускается.
+        /// </summary>
+        /// <param name="Cv">Название переменной</param>
+        /// <param name="Cn">Значение переменной</param>
         private void AddRowToTable(string Cv, string Cn)
         {
             CE_Editor.Rows.Add(Cv, Cn);
         }
 
-        /*
-         * Эта функция используется для создания резервной копии выбранной ветки
-         * реестра в переданный в параметре файл.
-         */
+        /// <summary>
+        /// Используется для создания резервной копии выбранной ветки
+        /// реестра в переданный в параметре файл.
+        /// </summary>
+        /// <param name="RKey">Ветка реестра для резервирования</param>
+        /// <param name="FileName">Имя файла резервной копии</param>
+        /// <param name="DestDir">Каталог с резервными копиями</param>
         private void CreateRegBackUpNow(string RKey, string FileName, string DestDir)
         {
             // Генерируем строку с параметрами...
@@ -193,21 +214,23 @@ namespace srcrepair
             CoreLib.StartProcessAndWait("regedit.exe", Params);
         }
 
-        /*
-         * Эта функция возвращает описание переданной в качестве параметра
-         * переменной, получая эту информацию из ресурса CVList с учётом
-         * локализации.
-         */
+        /// <summary>
+        /// Возвращает описание переданной в качестве параметра переменной, получая
+        /// эту информацию из ресурса CVList с учётом локализации.
+        /// </summary>
+        /// <param name="CVar">Название переменной</param>
+        /// <returns>Описание переменной с учётом локализации</returns>
         private string GetCVDescription(string CVar)
         {
             ResourceManager DM = new ResourceManager("srcrepair.CVList", typeof(frmMainW).Assembly);
             return DM.GetString(CVar);
         }
 
-        /*
-         * Эта функция разрешает/блокирует кнопки, отвечающие за
-         * очистку (актуально для NCF-приложений).
-         */
+        /// <summary>
+        /// Разрешает/блокирует кнопки, отвечающие за очистку (актуально
+        /// для NCF-приложений).
+        /// </summary>
+        /// <param name="BStatus">Новый статус</param>
         private void EnableCleanButtons(bool BStatus)
         {
             PS_RemCustMaps.Enabled = BStatus;
@@ -223,21 +246,25 @@ namespace srcrepair
             PS_RemOldBin.Enabled = BStatus;
         }
 
-        /*
-         * Эта функция отображает диалоговое окно менеджера быстрой очистки.
-         * В качестве параметров выступают путь к каталогу очистки, маска
-         * файлов и текст для заголовка.
-         */
+        /// <summary>
+        /// Отображает диалоговое окно менеджера быстрой очистки.
+        /// </summary>
+        /// <param name="Path">Путь к каталогу очистки</param>
+        /// <param name="Mask">Маска файлов, подлежащих очистке</param>
+        /// <param name="LText">Текст заголовка</param>
         private void OpenCleanupWindow(string Path, string Mask, string LText)
         {
             frmCleaner FCl = new frmCleaner(Path, Mask, LText);
             FCl.ShowDialog();
         }
 
-        /*
-         * Эта функция определяет установленные игры и заполняет комбо-бокс
-         * выбора доступных управляемых игр.
-         */
+        /// <summary>
+        /// Определяет установленные игры и заполняет комбо-бокс выбора
+        /// доступных управляемых игр.
+        /// </summary>
+        /// <param name="SteamPath">Путь к клиенту Steam</param>
+        /// <param name="SteamLogin">Логин Steam</param>
+        /// <param name="AddSinglePlayer">Добавлять в список или нет одиночные игры</param>
         private void DetectInstalledGames(string SteamPath, string SteamLogin, bool AddSinglePlayer)
         {
             // Очистим список игр...
@@ -295,9 +322,10 @@ namespace srcrepair
             */
         }
 
-        /*
-         * Эта функция записывает настройки GCF-игры в реестр Windows.
-         */
+        /// <summary>
+        /// Записывает настройки GCF-игры в реестр Windows.
+        /// </summary>
+        /// <param name="SAppName">Краткое имя игры</param>
         private void WriteGCFGameSettings(string SAppName)
         {
             // Запишем в реестр настройки разрешения экрана...
@@ -517,10 +545,11 @@ namespace srcrepair
             }
         }
 
-        /*
-         * Эта функция получает настройки GCF-игры из реестра и заполняет
-         * полученными данными страницу графического твикера.
-         */
+        /// <summary>
+        /// Получает настройки GCF-игры из реестра и заполняет полученными
+        /// данными страницу графического твикера.
+        /// </summary>
+        /// <param name="SAppName">Краткое имя игры</param>
         private void ReadGCFGameSettings(string SAppName)
         {
             // Получаем значение разрешения по горизонтали
@@ -800,10 +829,11 @@ namespace srcrepair
             }
         }
 
-        /*
-         * Эта функция открывает конфиг, имя которого передано в качестве
-         * параметра и заполняет им Редактор конфигов с одноимённой страницы.
-         */
+        /// <summary>
+        /// Открывает конфиг, имя которого передано в качестве параметра
+        /// и заполняет им Редактор конфигов с одноимённой страницы.
+        /// </summary>
+        /// <param name="ConfFileName">Полный путь к файлу конфига</param>
         private void ReadConfigFromFile(string ConfFileName)
         {
             string Buf = ConfFileName; // Получаем имя файла с полным путём...
@@ -892,10 +922,10 @@ namespace srcrepair
             }
         }
 
-        /*
-         * Эта функция считывает файлы резервных копий из указанного
-         * каталога и помещает в таблицу...
-         */
+        /// <summary>
+        /// Считывает файлы резервных копий из указанного каталога и помещает в таблицу.
+        /// </summary>
+        /// <param name="BUpDir">Путь к каталогу с резервными копиями</param>
         private void ReadBackUpList2Table(string BUpDir)
         {
             // Считаем список резервных копий и заполним таблицу...
