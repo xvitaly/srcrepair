@@ -29,5 +29,8 @@
     <Setting Name="IsFirstRun" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="GameListFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">games.xml</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -126,5 +126,17 @@ namespace srcrepair.Properties {
                 this["IsFirstRun"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("games.xml")]
+        public string GameListFile {
+            get {
+                return ((string)(this["GameListFile"]));
+            }
+            set {
+                this["GameListFile"] = value;
+            }
+        }
     }
 }
