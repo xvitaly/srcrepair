@@ -31,7 +31,7 @@ DefaultGroupName=SRC Repair
 AllowNoIcons=yes
 SourceDir=E:\VSBuilds
 LicenseFile=GPL.txt
-InfoBeforeFile=readme.txt
+;InfoBeforeFile=readme.txt
 OutputDir=E:\VSBuilds
 ;OutputBaseFilename=srcrepair_20_final
 OutputBaseFilename=srcrepair_beta_299
@@ -52,8 +52,8 @@ VersionInfoCopyright=(c) 2005-2011 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
 
 [Languages]
-Name: "english"; MessagesFile: "compiler:Default.isl,en-US.isl"
-Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl,ru-RU.isl"
+Name: "english"; MessagesFile: "compiler:Default.isl,en-US.isl"; InfoBeforeFile: "readme_en.txt"
+Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl,ru-RU.isl"; InfoBeforeFile: "readme.txt"
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
@@ -69,6 +69,7 @@ Source: "dll\isxdl.dll"; DestDir: {tmp}; Flags: dontcopy
 ; Устанавливаем readme, файл лицензии и список изменений...
 Source: "GPL.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "readme.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "readme_en.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "changelog.txt"; DestDir: "{app}"; Flags: ignoreversion
 ; Копируем открытый ключ...
 Source: "vitaly_public.asc"; DestDir: "{app}"; Flags: ignoreversion
@@ -95,7 +96,7 @@ Source: "7z\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createalls
 Name: "{group}\SRC Repair"; Filename: "{app}\srcrepair.exe"
 ; Создаём ярлыки для файлов с лицензионным соглашением и ReadMe...
 Name: "{group}\{cm:ShcLocTexts}\{cm:ShcLicenseAgrr}"; Filename: "{app}\GPL.txt"
-Name: "{group}\{cm:ShcLocTexts}\{cm:ShcReadme}"; Filename: "{app}\readme.txt"
+Name: "{group}\{cm:ShcLocTexts}\{cm:ShcReadme}"; Filename: "{app}\{cm:ShcReadmeFile}"
 Name: "{group}\{cm:ShcLocTexts}\{cm:ShcChlog}"; Filename: "{app}\changelog.txt"
 ; Создаём ярлыки для запуска локализованных версий (только если пользователь выбрал этот пункт)...
 Name: "{group}\{cm:ShcLocFldr}\SRC Repair ({cm:ShcMLnRU})"; Filename: "{app}\srcrepair.exe"; Parameters: "/russian"; Tasks: betashortuts
@@ -112,10 +113,10 @@ Name: "{group}\{cm:ShcNETFx}"; Filename: "{cm:ShcNFxUrl}"
 
 [Registry]
 ; Задаём базовые настройки программы для текущего пользователя...
-Root: HKCU; Subkey: "Software\SRC Repair"; Flags: uninsdeletekey
-Root: HKCU; Subkey: "Software\SRC Repair"; ValueType: dword; ValueName: "ConfirmExit"; ValueData: "1"
-Root: HKCU; Subkey: "Software\SRC Repair"; ValueType: dword; ValueName: "ShowSinglePlayer"; ValueData: "1"
-Root: HKCU; Subkey: "Software\SRC Repair"; ValueType: dword; ValueName: "SortGameList"; ValueData: "1"
+;Root: HKCU; Subkey: "Software\SRC Repair"; Flags: uninsdeletekey
+;Root: HKCU; Subkey: "Software\SRC Repair"; ValueType: dword; ValueName: "ConfirmExit"; ValueData: "1"
+;Root: HKCU; Subkey: "Software\SRC Repair"; ValueType: dword; ValueName: "ShowSinglePlayer"; ValueData: "1"
+;Root: HKCU; Subkey: "Software\SRC Repair"; ValueType: dword; ValueName: "SortGameList"; ValueData: "1"
 
 [Run]
 ;Filename: "{app}\nfx\dotNetFx40_Full_setup.exe"; Description: "{cm:ShcNETFx}"; Flags: nowait postinstall skipifsilent unchecked

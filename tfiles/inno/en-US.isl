@@ -16,3 +16,4 @@ DnlNetLabelW=Downloading Microsoft .NET Framework 4.0
 DnlNetTextW=This program needs to install the Microsoft .NET Framework 4.0. Please wait while Setup is downloading extra files to your computer.
 DnlNetReqAdm=This program needs the Microsoft .NET Framework 4.0 to be installed by an Administrator!
 DnlNetNeeded=SRC Repair requires Microsoft. NET Framework 4, but it is not found on your computer. The setup will download and install it from Microsoft Download servers. If you have a firewall installed, allow the installer access to the Internet.
+ShcReadmeFile=readme_en.txt
