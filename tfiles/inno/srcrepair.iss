@@ -29,12 +29,13 @@ AppUpdatesURL=http://www.easycoding.org/projects/srcrepair
 DefaultDirName={pf}\SRC Repair
 DefaultGroupName=SRC Repair
 AllowNoIcons=yes
-LicenseFile=E:\VSBuilds\GPL.txt
-;InfoBeforeFile=E:\VSBuilds\readme.txt
+SourceDir=E:\VSBuilds
+LicenseFile=GPL.txt
+InfoBeforeFile=readme.txt
 OutputDir=E:\VSBuilds
 ;OutputBaseFilename=srcrepair_20_final
 OutputBaseFilename=srcrepair_beta_299
-SetupIconFile=E:\SVN\srcrepair\srcrepair\TF2Repair.ico
+SetupIconFile=srcrepair.ico
 ;UninstallDisplayIcon={app}\MyProg.exe,1
 Compression=lzma2
 SolidCompression=yes
@@ -64,25 +65,29 @@ Name: "betashortuts"; Description: "{cm:InstCreateLocShcuts}"; GroupDescription:
 
 [Files]
 ; Копируем библиотеку, используемую для скачивания файлов...
-Source: E:\VSBuilds\dll\isxdl.dll; DestDir: {tmp}; Flags: dontcopy
-; Устанавливаем readme и файл лицензии...
-Source: "E:\VSBuilds\GPL.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\VSBuilds\readme.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "E:\VSBuilds\changelog.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "dll\isxdl.dll"; DestDir: {tmp}; Flags: dontcopy
+; Устанавливаем readme, файл лицензии и список изменений...
+Source: "GPL.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "readme.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "changelog.txt"; DestDir: "{app}"; Flags: ignoreversion
 ; Копируем открытый ключ...
-Source: "E:\VSBuilds\vitaly_public.asc"; DestDir: "{app}"; Flags: ignoreversion
+Source: "vitaly_public.asc"; DestDir: "{app}"; Flags: ignoreversion
 ; Устанавливаем 32-битную версию...
-Source: "E:\VSBuilds\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion; Check: not Is64BitInstallMode
-Source: "E:\VSBuilds\srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Check: not Is64BitInstallMode
-Source: "E:\VSBuilds\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: not Is64BitInstallMode
+Source: "srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion; Check: not Is64BitInstallMode
+Source: "srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Check: not Is64BitInstallMode
+Source: "ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: not Is64BitInstallMode
 ; Устанавливаем 64-битную версию...
-Source: "E:\VSBuilds\x64\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion; Check: Is64BitInstallMode
-Source: "E:\VSBuilds\x64\srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Check: Is64BitInstallMode
-Source: "E:\VSBuilds\x64\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: Is64BitInstallMode
+Source: "x64\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion; Check: Is64BitInstallMode
+Source: "x64\srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Check: Is64BitInstallMode
+Source: "x64\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: Is64BitInstallMode
+; Копируем файл стандартных настроек программы...
+Source: "srcrepair.exe.config"; DestDir: "{app}"; Flags: ignoreversion
+; Копируем файл со списком поддерживаемых игр и их параметрами...
+Source: "Games.xml"; DestDir: "{app}"; Flags: ignoreversion
 ; Устанавливаем остальные файлы...
-Source: "E:\VSBuilds\cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "E:\VSBuilds\7z\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Tasks: inst7z
-;Source: "E:\VSBuilds\nfx\*"; DestDir: "{app}\nfx\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "7z\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Tasks: inst7z
+;Source: "nfx\*"; DestDir: "{app}\nfx\"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
