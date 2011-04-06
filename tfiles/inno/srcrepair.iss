@@ -84,7 +84,7 @@ Source: "x64\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs cr
 ; Копируем файл стандартных настроек программы...
 Source: "srcrepair.exe.config"; DestDir: "{app}"; Flags: ignoreversion
 ; Копируем файл со списком поддерживаемых игр и их параметрами...
-Source: "Games.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "games.xml"; DestDir: "{app}"; Flags: ignoreversion
 ; Устанавливаем остальные файлы...
 Source: "cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "7z\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Tasks: inst7z
@@ -110,13 +110,6 @@ Name: "{commondesktop}\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: desk
 Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: quicklaunchicon
 ; Создаём ярлык для установщика среды Microsoft .NET Framework 4...
 Name: "{group}\{cm:ShcNETFx}"; Filename: "{cm:ShcNFxUrl}"
-
-[Registry]
-; Задаём базовые настройки программы для текущего пользователя...
-;Root: HKCU; Subkey: "Software\SRC Repair"; Flags: uninsdeletekey
-;Root: HKCU; Subkey: "Software\SRC Repair"; ValueType: dword; ValueName: "ConfirmExit"; ValueData: "1"
-;Root: HKCU; Subkey: "Software\SRC Repair"; ValueType: dword; ValueName: "ShowSinglePlayer"; ValueData: "1"
-;Root: HKCU; Subkey: "Software\SRC Repair"; ValueType: dword; ValueName: "SortGameList"; ValueData: "1"
 
 [Run]
 ;Filename: "{app}\nfx\dotNetFx40_Full_setup.exe"; Description: "{cm:ShcNETFx}"; Flags: nowait postinstall skipifsilent unchecked
