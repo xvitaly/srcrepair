@@ -123,17 +123,14 @@
   <metadata name="MO_AutoUpdate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="MO_AutoUpdate.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="MO_AutoUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 111</value>
+    <value>16, 88</value>
   </data>
   <data name="MO_AutoUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 17</value>
+    <value>267, 17</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="MO_AutoUpdate.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
@@ -156,10 +153,10 @@
     <value>True</value>
   </metadata>
   <data name="MO_SortGameList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 88</value>
+    <value>16, 65</value>
   </data>
   <data name="MO_SortGameList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 17</value>
+    <value>267, 17</value>
   </data>
   <data name="MO_SortGameList.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -186,10 +183,10 @@
     <value>False</value>
   </data>
   <data name="MO_HideNotInst.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 65</value>
+    <value>16, 42</value>
   </data>
   <data name="MO_HideNotInst.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 17</value>
+    <value>267, 17</value>
   </data>
   <data name="MO_HideNotInst.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -213,10 +210,10 @@
     <value>True</value>
   </metadata>
   <data name="MO_ConfirmExit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 42</value>
+    <value>16, 19</value>
   </data>
   <data name="MO_ConfirmExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 17</value>
+    <value>267, 17</value>
   </data>
   <data name="MO_ConfirmExit.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -236,38 +233,11 @@
   <data name="&gt;&gt;MO_ConfirmExit.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="MO_ShowSingle.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="MO_ShowSingle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 19</value>
-  </data>
-  <data name="MO_ShowSingle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 17</value>
-  </data>
-  <data name="MO_ShowSingle.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="MO_ShowSingle.Text" xml:space="preserve">
-    <value>Show singleplayer games in list</value>
-  </data>
-  <data name="&gt;&gt;MO_ShowSingle.Name" xml:space="preserve">
-    <value>MO_ShowSingle</value>
-  </data>
-  <data name="&gt;&gt;MO_ShowSingle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MO_ShowSingle.Parent" xml:space="preserve">
-    <value>GB_MainOpts</value>
-  </data>
-  <data name="&gt;&gt;MO_ShowSingle.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="GB_MainOpts.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
   </data>
   <data name="GB_MainOpts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>315, 142</value>
+    <value>300, 120</value>
   </data>
   <data name="GB_MainOpts.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -288,7 +258,7 @@
     <value>True</value>
   </metadata>
   <data name="MO_Okay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 169</value>
+    <value>61, 148</value>
   </data>
   <data name="MO_Okay.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 23</value>
@@ -315,7 +285,7 @@
     <value>True</value>
   </metadata>
   <data name="MO_Cancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 169</value>
+    <value>183, 148</value>
   </data>
   <data name="MO_Cancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 23</value>
@@ -348,7 +318,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>340, 210</value>
+    <value>325, 185</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

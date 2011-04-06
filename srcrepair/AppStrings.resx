@@ -471,4 +471,7 @@
   <data name="AppUpdateAvailable" xml:space="preserve">
     <value>Notice! Update for {0} is available. We recommend you upgrade as soon as possible via the menu Help - Check for updates, or manually.</value>
   </data>
+  <data name="AppXMLParseError" xml:space="preserve">
+    <value>An error occurred while parsing XML file with a list of games. Perhaps it is missing or damaged. Please reinstall the program.</value>
+  </data>
 </root>

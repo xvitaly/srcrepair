@@ -19,7 +19,6 @@ namespace srcrepair
         private void frmOptions_Load(object sender, EventArgs e)
         {
             // Считаем текущие настройки...
-            MO_ShowSingle.Checked = Properties.Settings.Default.ShowSinglePlayer;
             MO_ConfirmExit.Checked = Properties.Settings.Default.ConfirmExit;
             MO_HideNotInst.Checked = Properties.Settings.Default.HideNotInstalled;
             MO_SortGameList.Checked = Properties.Settings.Default.SortGamesList;
@@ -32,15 +31,10 @@ namespace srcrepair
         private void MO_Okay_Click(object sender, EventArgs e)
         {
             // Сохраняем настройки для текущего сеанса...
-            Properties.Settings.Default.ShowSinglePlayer = MO_ShowSingle.Checked;
             Properties.Settings.Default.ConfirmExit = MO_ConfirmExit.Checked;
             Properties.Settings.Default.HideNotInstalled = MO_HideNotInst.Checked;
             Properties.Settings.Default.SortGamesList = MO_SortGameList.Checked;
             Properties.Settings.Default.EnableAutoUpdate = MO_AutoUpdate.Checked;
-            if (MO_AutoUpdate.Checked)
-            {
-                Properties.Settings.Default.LastUpdateTime = DateTime.Now;
-            }
             // Сохраняем настройки...
             Properties.Settings.Default.Save();
             // Показываем сообщение...

@@ -34,7 +34,6 @@
             this.MO_SortGameList = new System.Windows.Forms.CheckBox();
             this.MO_HideNotInst = new System.Windows.Forms.CheckBox();
             this.MO_ConfirmExit = new System.Windows.Forms.CheckBox();
-            this.MO_ShowSingle = new System.Windows.Forms.CheckBox();
             this.MO_Okay = new System.Windows.Forms.Button();
             this.MO_Cancel = new System.Windows.Forms.Button();
             this.GB_MainOpts.SuspendLayout();
@@ -46,7 +45,6 @@
             this.GB_MainOpts.Controls.Add(this.MO_SortGameList);
             this.GB_MainOpts.Controls.Add(this.MO_HideNotInst);
             this.GB_MainOpts.Controls.Add(this.MO_ConfirmExit);
-            this.GB_MainOpts.Controls.Add(this.MO_ShowSingle);
             resources.ApplyResources(this.GB_MainOpts, "GB_MainOpts");
             this.GB_MainOpts.Name = "GB_MainOpts";
             this.GB_MainOpts.TabStop = false;
@@ -74,12 +72,6 @@
             resources.ApplyResources(this.MO_ConfirmExit, "MO_ConfirmExit");
             this.MO_ConfirmExit.Name = "MO_ConfirmExit";
             this.MO_ConfirmExit.UseVisualStyleBackColor = true;
-            // 
-            // MO_ShowSingle
-            // 
-            resources.ApplyResources(this.MO_ShowSingle, "MO_ShowSingle");
-            this.MO_ShowSingle.Name = "MO_ShowSingle";
-            this.MO_ShowSingle.UseVisualStyleBackColor = true;
             // 
             // MO_Okay
             // 
@@ -114,7 +106,6 @@
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.frmOptions_Load);
             this.GB_MainOpts.ResumeLayout(false);
-            this.GB_MainOpts.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -123,7 +114,6 @@
 
         private System.Windows.Forms.GroupBox GB_MainOpts;
         private System.Windows.Forms.CheckBox MO_ConfirmExit;
-        private System.Windows.Forms.CheckBox MO_ShowSingle;
         private System.Windows.Forms.CheckBox MO_HideNotInst;
         private System.Windows.Forms.Button MO_Okay;
         private System.Windows.Forms.Button MO_Cancel;

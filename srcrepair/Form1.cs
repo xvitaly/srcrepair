@@ -31,6 +31,7 @@ using System.Reflection; // для управления сборками...
 using System.Globalization; // для управления локализациями...
 using System.Resources; // для управления ресурсами...
 using System.Net; // для скачивания файлов...
+using System.Xml; // для разбора (парсинга) XML...
 
 namespace srcrepair
 {
@@ -264,62 +265,35 @@ namespace srcrepair
         /// </summary>
         /// <param name="SteamPath">Путь к клиенту Steam</param>
         /// <param name="SteamLogin">Логин Steam</param>
-        /// <param name="AddSinglePlayer">Добавлять в список или нет одиночные игры</param>
-        private void DetectInstalledGames(string SteamPath, string SteamLogin, bool AddSinglePlayer)
+        private void DetectInstalledGames(string SteamPath, string SteamLogin)
         {
             // Очистим список игр...
             AppSelector.Items.Clear();
-            // Сгенерируем путь для поиска GCF-приложений...
-            string SearchPath = SteamPath + @"steamapps\" + SteamLogin + @"\";
-            // Ищем Team Fortress 2...
-            if (Directory.Exists(SearchPath + @"team fortress 2\")) { AppSelector.Items.Add((string)"Team Fortress 2"); }
-            // Ищем Counter-Strike: Source...
-            if (Directory.Exists(SearchPath + @"counter-strike source\")) { AppSelector.Items.Add((string)"Counter-Strike: Source"); }
-            // Ищем Day of Defeat: Source...
-            if (Directory.Exists(SearchPath + @"day of defeat source\")) { AppSelector.Items.Add((string)"Day of Defeat: Source"); }
-            // Проверим нужно ли добавлять в список одиночные игры...
-            if (AddSinglePlayer)
-            {
-                // Ищем Half-Life 2...
-                if (Directory.Exists(SearchPath + @"half-life 2\")) { AppSelector.Items.Add((string)"Half-Life 2"); }
-                // Ищем Half-Life 2: Episode One...
-                if (Directory.Exists(SearchPath + @"half-life 2 episode one\")) { AppSelector.Items.Add((string)"Half-Life 2: Episode One"); }
-                // Ищем Half-Life 2: Episode Two...
-                if (Directory.Exists(SearchPath + @"half-life 2 episode two\")) { AppSelector.Items.Add((string)"Half-Life 2: Episode Two"); }
-                // Ищем Portal...
-                if (Directory.Exists(SearchPath + @"portal\")) { AppSelector.Items.Add((string)"Portal"); }
-            }
-            // Ищем Half-Life 2: Deathmatch...
-            if (Directory.Exists(SearchPath + @"half-life 2 deathmatch\")) { AppSelector.Items.Add((string)"Half-Life 2: Deathmatch"); }
-            // Ищем Garry's Mod...
-            if (Directory.Exists(SearchPath + @"garrysmod\")) { AppSelector.Items.Add((string)"Garry's Mod"); }
-            // Ищем Age of Chivalry...
-            if (Directory.Exists(SearchPath + @"age of chivalry\")) { AppSelector.Items.Add((string)"Age of Chivalry"); }
-            // Ищем D.I.P.R.I.P.: Warm Up...
-            if (Directory.Exists(SearchPath + @"diprip warm up\")) { AppSelector.Items.Add((string)"D.I.P.R.I.P.: Warm Up"); }
-            // Ищем Dystopia...
-            if (Directory.Exists(SearchPath + @"dystopia\")) { AppSelector.Items.Add((string)"Dystopia"); }
-            // Ищем Insurgency...
-            if (Directory.Exists(SearchPath + @"insurgency\")) { AppSelector.Items.Add((string)"Insurgency"); }
-            // Ищем Pirates, Vikings, & Knights II...
-            if (Directory.Exists(SearchPath + @"pirates, vikings, and knights ii\")) { AppSelector.Items.Add((string)"Pirates, Vikings, & Knights II"); }
-            // Ищем Smashball...
-            if (Directory.Exists(SearchPath + @"smashball\")) { AppSelector.Items.Add((string)"Smashball"); }
-            // Ищем Synergy...
-            if (Directory.Exists(SearchPath + @"synergy\")) { AppSelector.Items.Add((string)"Synergy"); }
-            // Ищем Zombie Panic! Source...
-            if (Directory.Exists(SearchPath + @"zombie panic! source\")) { AppSelector.Items.Add((string)"Zombie Panic! Source"); }
 
-            /*
-            // Начинаем искать NCF-приложения...
-            SearchPath = SteamPath + @"steamapps\common\";
-            // Ищем Left 4 Dead...
-            if (Directory.Exists(SearchPath + @"left 4 dead\")) { AppSelector.Items.Add((string)"Left 4 Dead"); }
-            // Ищем Left 4 Dead 2...
-            if (Directory.Exists(SearchPath + @"left 4 dead 2\")) { AppSelector.Items.Add((string)"Left 4 Dead 2"); }
-            // Ищем Alien Swarm...
-            if (Directory.Exists(SearchPath + @"alien swarm\")) { AppSelector.Items.Add((string)"Alien Swarm"); }
-            */
+            // Опишем заготовки путей для GCF и NCF...
+            string SearchPathGCF = SteamPath + @"steamapps\" + SteamLogin + @"\";
+            string SearchPathNCF = SteamPath + @"steamapps\common\";
+
+            // Начинаем парсить...
+            XmlDocument XMLD = new XmlDocument(); // Создаём объект документа XML...
+            FileStream XMLFS = new FileStream("Games.xml", FileMode.Open, FileAccess.Read); // Создаём поток с XML-файлом...
+            XMLD.Load(XMLFS); // Загружаем поток в объект XML документа...
+            XmlNodeList XMLNodeList = XMLD.GetElementsByTagName("Game"); // Получаем список игр с параметрами...
+            for (int i = 0; i < XMLNodeList.Count; i++) // Обходим полученный список в цикле...
+            {
+                XmlElement GameID = (XmlElement)XMLD.GetElementsByTagName("Game")[i]; // Получаем элемент...
+                if (XMLD.GetElementsByTagName("IsGCF")[i].InnerText == "1") // Проверяем GCF или NCF...
+                {
+                    // GCF-приложение...
+                    if (Directory.Exists(SearchPathGCF + XMLD.GetElementsByTagName("DirName")[i].InnerText + @"\")) { AppSelector.Items.Add((string)GameID.GetAttribute("Name")); }
+                }
+                else
+                {
+                    // NCF-приложение...
+                    if (Directory.Exists(SearchPathNCF + XMLD.GetElementsByTagName("DirName")[i].InnerText + @"\")) { AppSelector.Items.Add((string)GameID.GetAttribute("Name")); }
+                }
+            }
+            XMLFS.Close(); // Закрываем файловый поток...
         }
 
         /// <summary>
@@ -1274,131 +1248,37 @@ namespace srcrepair
              */
             
             // Начинаем определять нужные нам значения переменных...
-            switch (AppSelector.Text)
+            try
             {
-                case "Team Fortress 2": // Team Fortress 2
-                    GV.FullAppName = "team fortress 2"; // имя каталога...
-                    GV.SmallAppName = "tf"; // имя индивидуального подкаталога...
-                    ptha = LoginSel.Text; // это GCF-приложение...
-                    GV.IsGCFApp = true;
-                    break;
-                case "Counter-Strike: Source": // Counter-Strike: Source
-                    GV.FullAppName = "counter-strike source";
-                    GV.SmallAppName = "cstrike";
-                    ptha = LoginSel.Text;
-                    GV.IsGCFApp = true;
-                    break;
-                case "Day of Defeat: Source": // Day of Defeat: Source
-                    GV.FullAppName = "day of defeat source";
-                    GV.SmallAppName = "dod";
-                    ptha = LoginSel.Text;
-                    GV.IsGCFApp = true;
-                    break;
-                case "Half-Life 2: Deathmatch": // Half-Life 2: Deathmatch
-                    GV.FullAppName = "half-life 2 deathmatch";
-                    GV.SmallAppName = "hl2mp";
-                    ptha = LoginSel.Text;
-                    GV.IsGCFApp = true;
-                    break;
-                case "Half-Life 2": // Half-Life 2
-                    GV.FullAppName = "half-life 2";
-                    GV.SmallAppName = "hl2";
-                    ptha = LoginSel.Text;
-                    GV.IsGCFApp = true;
-                    break;
-                case "Half-Life 2: Episode One": // Half-Life 2: Episode One
-                    GV.FullAppName = "half-life 2 episode one";
-                    GV.SmallAppName = "episodic";
-                    ptha = LoginSel.Text;
-                    GV.IsGCFApp = true;
-                    break;
-                case "Half-Life 2: Episode Two": // Half-Life 2: Episode Two
-                    GV.FullAppName = "half-life 2 episode two";
-                    GV.SmallAppName = "ep2";
-                    ptha = LoginSel.Text;
-                    GV.IsGCFApp = true;
-                    break;
-                case "Portal": // Portal
-                    GV.FullAppName = "portal";
-                    GV.SmallAppName = "portal";
-                    ptha = LoginSel.Text;
-                    GV.IsGCFApp = true;
-                    break;
-                case "Garry's Mod": // Garry's Mod
-                    GV.FullAppName = "garrysmod";
-                    GV.SmallAppName = "garrysmod";
-                    ptha = LoginSel.Text;
-                    GV.IsGCFApp = true;
-                    break;
-                case "Age of Chivalry": // Age of Chivalry
-                    GV.FullAppName = "age of chivalry";
-                    GV.SmallAppName = "ageofchivalry";
-                    ptha = LoginSel.Text;
-                    GV.IsGCFApp = true;
-                    break;
-                case "D.I.P.R.I.P.: Warm Up": // D.I.P.R.I.P.: Warm Up
-                    GV.FullAppName = "diprip warm up";
-                    GV.SmallAppName = "diprip";
-                    ptha = LoginSel.Text;
-                    GV.IsGCFApp = true;
-                    break;
-                case "Dystopia": // Dystopia
-                    GV.FullAppName = "dystopia";
-                    GV.SmallAppName = "Dystopia";
-                    ptha = LoginSel.Text;
-                    GV.IsGCFApp = true;
-                    break;
-                case "Insurgency": // Insurgency
-                    GV.FullAppName = "insurgency";
-                    GV.SmallAppName = "insurgency";
-                    ptha = LoginSel.Text;
-                    GV.IsGCFApp = true;
-                    break;
-                case "Pirates, Vikings, & Knights II": // Pirates, Vikings, & Knights II
-                    GV.FullAppName = "pirates, vikings, and knights ii";
-                    GV.SmallAppName = "pvkii";
-                    ptha = LoginSel.Text;
-                    GV.IsGCFApp = true;
-                    break;
-                case "Smashball": // Smashball
-                    GV.FullAppName = "smashball";
-                    GV.SmallAppName = "Smashball";
-                    ptha = LoginSel.Text;
-                    GV.IsGCFApp = true;
-                    break;
-                case "Synergy": // Synergy
-                    GV.FullAppName = "synergy";
-                    GV.SmallAppName = "synergy";
-                    ptha = LoginSel.Text;
-                    GV.IsGCFApp = true;
-                    break;
-                case "Zombie Panic! Source": // Zombie Panic! Source
-                    GV.FullAppName = "zombie panic! source";
-                    GV.SmallAppName = "zps";
-                    ptha = LoginSel.Text;
-                    GV.IsGCFApp = true;
-                    break;
-                /*case "Left 4 Dead": // Left 4 Dead 1
-                    GV.FullAppName = "left 4 dead"; // имя каталога...
-                    GV.SmallAppName = "left4dead"; // имя индивидуального подкаталога...
-                    ptha = "common"; // это NCF-приложение...
-                    GV.IsGCFApp = false;
-                    break;
-                case "Left 4 Dead 2": // Left 4 Dead 2
-                    GV.FullAppName = "left 4 dead 2";
-                    GV.SmallAppName = "left4dead2";
-                    ptha = "common";
-                    GV.IsGCFApp = false;
-                    break;
-                case "Alien Swarm": // Alien Swarm
-                    GV.FullAppName = "alien swarm";
-                    GV.SmallAppName = "swarm";
-                    ptha = "common";
-                    GV.IsGCFApp = false;
-                    break;*/
-                default: // Ничего не выбрано
-                    AppSelector.SelectedIndex = -1;
-                    break;
+                XmlDocument XMLD = new XmlDocument();
+                FileStream XMLFS = new FileStream("Games.xml", FileMode.Open, FileAccess.Read);
+                XMLD.Load(XMLFS);
+                XmlNodeList XMLNodeList = XMLD.GetElementsByTagName("Game");
+                for (int i = 0; i < XMLNodeList.Count; i++)
+                {
+                    XmlElement GameID = (XmlElement)XMLD.GetElementsByTagName("Game")[i];
+                    if (GameID.GetAttribute("Name") == AppSelector.Text)
+                    {
+                        GV.FullAppName = XMLD.GetElementsByTagName("DirName")[i].InnerText;
+                        GV.SmallAppName = XMLD.GetElementsByTagName("SmallName")[i].InnerText;
+                        if (XMLD.GetElementsByTagName("IsGCF")[i].InnerText == "1")
+                        {
+                            GV.IsGCFApp = true;
+                            ptha = LoginSel.Text;
+                        }
+                        else
+                        {
+                            GV.IsGCFApp = false;
+                            ptha = "common";
+                        }
+                        break;
+                    }
+                }
+                XMLFS.Close();
+            }
+            catch
+            {
+                MessageBox.Show(RM.GetString("AppXMLParseError"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             // Если выбор верный, включаем контрол выбора логина Steam...
@@ -1525,7 +1405,14 @@ namespace srcrepair
             PS_RSteamLogin.Text = LoginSel.Text;
 
             // Начинаем определять установленные игры...
-            DetectInstalledGames(GV.FullSteamPath, LoginSel.Text, Properties.Settings.Default.ShowSinglePlayer);
+            try
+            {
+                DetectInstalledGames(GV.FullSteamPath, LoginSel.Text);
+            }
+            catch
+            {
+                MessageBox.Show(RM.GetString("AppXMLParseError"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             // Проверим нашлись ли игры...
             if (AppSelector.Items.Count == 0)

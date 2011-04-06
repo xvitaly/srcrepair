@@ -142,6 +142,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while parsing XML file with a list of games. Perhaps it is missing or damaged. Please reinstall the program..
+        /// </summary>
+        internal static string AppXMLParseError {
+            get {
+                return ResourceManager.GetString("AppXMLParseError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occurred while creating the backup. Backup has been created!.
         /// </summary>
         internal static string BackUpCreationFailed {

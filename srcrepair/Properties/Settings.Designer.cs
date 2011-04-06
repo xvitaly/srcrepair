@@ -26,18 +26,6 @@ namespace srcrepair.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool ShowSinglePlayer {
-            get {
-                return ((bool)(this["ShowSinglePlayer"]));
-            }
-            set {
-                this["ShowSinglePlayer"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool HideNotInstalled {
             get {
                 return ((bool)(this["HideNotInstalled"]));
