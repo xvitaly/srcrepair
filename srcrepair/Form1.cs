@@ -1412,6 +1412,7 @@ namespace srcrepair
             catch
             {
                 MessageBox.Show(RM.GetString("AppXMLParseError"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(16);
             }
 
             // Проверим нашлись ли игры...
