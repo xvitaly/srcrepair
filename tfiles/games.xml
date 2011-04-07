@@ -85,4 +85,9 @@
     <DirName>zombie panic! source</DirName>
     <SmallName>zps</SmallName>
   </Game>
+  <Game Name="Portal 2">
+    <IsGCF>1</IsGCF>
+    <DirName>portal 2</DirName>
+    <SmallName>portal2</SmallName>
+  </Game>
 </Games>
