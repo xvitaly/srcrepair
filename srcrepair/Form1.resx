@@ -3218,6 +3218,12 @@
   <data name="MNULnkEasyCoding.Text" xml:space="preserve">
     <value>&amp;EasyCoding Team</value>
   </data>
+  <data name="MNUDonate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 22</value>
+  </data>
+  <data name="MNUDonate.Text" xml:space="preserve">
+    <value>&amp;Donate</value>
+  </data>
   <data name="MNUGameStore.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 22</value>
   </data>
@@ -3913,6 +3919,12 @@
     <value>MNULnkEasyCoding</value>
   </data>
   <data name="&gt;&gt;MNULnkEasyCoding.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUDonate.Name" xml:space="preserve">
+    <value>MNUDonate</value>
+  </data>
+  <data name="&gt;&gt;MNUDonate.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUGameStore.Name" xml:space="preserve">

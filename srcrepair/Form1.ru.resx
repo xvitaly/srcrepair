@@ -831,6 +831,12 @@
   <data name="MNULnkEasyCoding.Size" type="System.Drawing.Size, System.Drawing">
     <value>293, 22</value>
   </data>
+  <data name="MNUDonate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>293, 22</value>
+  </data>
+  <data name="MNUDonate.Text" xml:space="preserve">
+    <value>Внести по&amp;жертвование</value>
+  </data>
   <data name="MNUGameStore.Size" type="System.Drawing.Size, System.Drawing">
     <value>293, 22</value>
   </data>

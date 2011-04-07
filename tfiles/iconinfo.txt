@@ -75,3 +75,5 @@ Keyboard.ico - GNOME icon artists - GPLv2 - http://www.iconspedia.com/icon/gnome
 --------------------------------------------------------------------------------------------------------
 Shopcart.png - Fasticon - FreeNC - http://www.iconspedia.com/icon/shopcart-6254.html
 --------------------------------------------------------------------------------------------------------
+Donate.png - Customicondesign - FreeNC - http://www.iconspedia.com/icon/us-dollar-18656.html
+--------------------------------------------------------------------------------------------------------
