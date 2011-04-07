@@ -2397,7 +2397,7 @@ namespace srcrepair
 
         private void MNUDonate_Click(object sender, EventArgs e)
         {
-            Process.Start(String.Format("http://code.google.com/p/srcrepair/wiki/Donate_{0}", RM.GetString("AppLangPrefix")));
+            Process.Start("http://code.google.com/p/srcrepair/wiki/Donate");
         }
     }
 }

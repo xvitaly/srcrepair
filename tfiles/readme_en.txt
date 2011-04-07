@@ -2,9 +2,9 @@
 
 Before using, please, read official Wiki: http://code.google.com/p/srcrepair/wiki/MainPage_en (hosted on Google Code).
 
-You can join official SRC Repair group at Steam Community: http://steamcommunity.com/groups/srcrepair. You will get info about fresh updates as soon as they go public.
+You can join official SRC Repair group at Steam Community: http://steamcommunity.com/groups/srcrepair. You will get info about fresh updates as soon as they released.
 
-Before using it is strongly recommended to manually make backup of Steam folder and Steam registry keys.(with the help of tool on "Backups" tab).
+Before using it is strongly recommended to manually make backup of Steam folder and Steam registry keys (with the help of tool on "Backups" tab).
 
 Thanks to:
  * Ctrl+C – daily testing, configs' description;
