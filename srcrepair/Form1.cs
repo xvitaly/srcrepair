@@ -235,14 +235,14 @@ namespace srcrepair
         private void EnableCleanButtons(bool BStatus)
         {
             PS_RemCustMaps.Enabled = BStatus;
-            PS_RemDnlCache.Enabled = BStatus;
-            PS_RemOldSpray.Enabled = BStatus;
-            PS_RemOldCfgs.Enabled = BStatus;
+            //PS_RemDnlCache.Enabled = BStatus;
+            //PS_RemOldSpray.Enabled = BStatus;
+            //PS_RemOldCfgs.Enabled = BStatus;
             PS_RemGraphCache.Enabled = BStatus;
             PS_RemSoundCache.Enabled = BStatus;
             PS_RemNavFiles.Enabled = BStatus;
-            PS_RemScreenShots.Enabled = BStatus;
-            PS_RemDemos.Enabled = BStatus;
+            //PS_RemScreenShots.Enabled = BStatus;
+            //PS_RemDemos.Enabled = BStatus;
             PS_RemGraphOpts.Enabled = BStatus;
             PS_RemOldBin.Enabled = BStatus;
         }
@@ -954,6 +954,28 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Обнуляет контролы на странице графических настроек. Функция-заглушка.
+        /// </summary>
+        private void NullGraphOptions()
+        {
+            GT_ResHor.Value = 640;
+            GT_ResVert.Value = 480;
+            GT_ScreenType.SelectedIndex = -1;
+            GT_ModelQuality.SelectedIndex = -1;
+            GT_TextureQuality.SelectedIndex = -1;
+            GT_ShaderQuality.SelectedIndex = -1;
+            GT_WaterQuality.SelectedIndex = -1;
+            GT_ShadowQuality.SelectedIndex = -1;
+            GT_ColorCorrectionT.SelectedIndex = -1;
+            GT_AntiAliasing.SelectedIndex = -1;
+            GT_Filtering.SelectedIndex = -1;
+            GT_VSync.SelectedIndex = -1;
+            GT_MotionBlur.SelectedIndex = -1;
+            GT_DxMode.SelectedIndex = -1;
+            GT_HDR.SelectedIndex = -1;
+        }
+
         #endregion
 
         private void frmMainW_Load(object sender, EventArgs e)
@@ -1307,6 +1329,11 @@ namespace srcrepair
                 // Включим модули очистки...
                 PS_ResetSettings.Enabled = true;
                 EnableCleanButtons(true);
+                
+                // Включаем контролы на странице графических настроек...
+                GT_SaveApply.Enabled = true;
+                GT_Maximum_Graphics.Enabled = true;
+                GT_Maximum_Performance.Enabled = true;
 
                 // Начинаем заполнять таблицу...
                 ReadGCFGameSettings(GV.SmallAppName);
@@ -1316,6 +1343,12 @@ namespace srcrepair
                 // Отключим модули очистки...
                 PS_ResetSettings.Enabled = false;
                 EnableCleanButtons(false);
+                
+                // Отключаем контролы на странице графических настроек и зануляем их...
+                GT_SaveApply.Enabled = false;
+                GT_Maximum_Graphics.Enabled = false;
+                GT_Maximum_Performance.Enabled = false;
+                NullGraphOptions();
                 
                 // Приложение NCF, поэтому настройки хранятся не в реестре, а в
                 // файле video.txt. Будем парсить...
