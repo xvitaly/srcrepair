@@ -594,4 +594,8 @@
     <value>Произошла ошибка при разборе XML файла со списком игр. Возможно он отсутствует или повреждён. Пожалуйста, переустановите программу.</value>
     <comment>Сообщение, выдаваемое при возникновении исключения при разборе (парсинге) XML</comment>
   </data>
+  <data name="AppShopURL" xml:space="preserve">
+    <value>http://www.gamemarket.biz/ref/487</value>
+    <comment>URL Интернет-магазина игр для меню Справка</comment>
+  </data>
 </root>

@@ -2385,14 +2385,7 @@ namespace srcrepair
         private void MNUGameStore_Click(object sender, EventArgs e)
         {
             // Для России и СНГ открываем Gamemarket, для остальных - Steam Store...
-            if (System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName == "ru")
-            {
-                Process.Start("http://www.gamemarket.biz/ref/487");
-            }
-            else
-            {
-                Process.Start("http://store.steampowered.com/");
-            }
+            Process.Start(RM.GetString("AppShopURL"));
         }
 
         private void MNUDonate_Click(object sender, EventArgs e)

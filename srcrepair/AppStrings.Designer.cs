@@ -133,6 +133,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to http://store.steampowered.com/.
+        /// </summary>
+        internal static string AppShopURL {
+            get {
+                return ResourceManager.GetString("AppShopURL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Notice! Update for {0} is available. We recommend you upgrade as soon as possible via the menu Help - Check for updates, or manually..
         /// </summary>
         internal static string AppUpdateAvailable {
