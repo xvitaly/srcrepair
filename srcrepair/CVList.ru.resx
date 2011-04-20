@@ -1479,4 +1479,61 @@
   <data name="tv_transmitall" xml:space="preserve">
     <value>Выключить режим авто-режиссёра. Пользователь сможет управлять камерой самостоятельно.</value>
   </data>
+  <data name="cl_gameserver_create_identity" xml:space="preserve">
+    <value>Сгенерировать уникальный токен для идентификации владельца выделенного сервера.</value>
+  </data>
+  <data name="cl_gameserver_list" xml:space="preserve">
+    <value>Показать полный список серверов, владельцем которых записан текущий аккаунт Steam.</value>
+  </data>
+  <data name="hud_combattext_healing" xml:space="preserve">
+    <value>Показывать наряду с нанесённым уроном и количество очков лечения.</value>
+  </data>
+  <data name="nextmap" xml:space="preserve">
+    <value>Полное название следующей карты, например, cp_dustbowl.</value>
+  </data>
+  <data name="sv_allow_votes" xml:space="preserve">
+    <value>Разрешить/запретить игрокам запускать голосования на сервере.</value>
+  </data>
+  <data name="sv_use_steam_voice" xml:space="preserve">
+    <value>Разрешить/запретить использование нового голосового движка вместо классического.</value>
+  </data>
+  <data name="sv_vote_allow_specators" xml:space="preserve">
+    <value>Разрешить/запретить голосовать зрителям.</value>
+  </data>
+  <data name="sv_vote_failure_timer" xml:space="preserve">
+    <value>Голосование, потерпевшее неудачу не может быть запущено повторно ранее указанного временного интервала.</value>
+  </data>
+  <data name="sv_vote_issue_changelevel_allowed" xml:space="preserve">
+    <value>Разрешить/запретить голосования за смену карты.</value>
+  </data>
+  <data name="sv_vote_issue_kick_allowed" xml:space="preserve">
+    <value>Разрешить/запретить голосования за кик игрока с сервера вне зависимости от его статуса (игрок или администратор).</value>
+  </data>
+  <data name="sv_vote_issue_nextlevel_allowed" xml:space="preserve">
+    <value>Разрешить/запретить голосование за следующую карту.</value>
+  </data>
+  <data name="sv_vote_issue_nextlevel_allowextend" xml:space="preserve">
+    <value>Разрешить/запретить во время голосования за следующую карту продлять текущую.</value>
+  </data>
+  <data name="sv_vote_issue_nextlevel_choicesmode" xml:space="preserve">
+    <value>Разрешить/запретить отображение в списке голосования за следующую карту наименее популярных на текущем сервере.</value>
+  </data>
+  <data name="sv_vote_issue_restart_game_allowed" xml:space="preserve">
+    <value>Разрешить/запретить голосование за рестарт карты.</value>
+  </data>
+  <data name="sv_vote_issue_scramble_teams_allowed" xml:space="preserve">
+    <value>Разрешить/запретить голосование за перемешивание команд.</value>
+  </data>
+  <data name="sv_vote_kick_ban_duration" xml:space="preserve">
+    <value>Время в минутах, на которое будет забанен игрок, выброшенный с сервера голосованием.</value>
+  </data>
+  <data name="tf_flag_caps_per_round" xml:space="preserve">
+    <value>Количество захватов флага до победы на CTF-картах.</value>
+  </data>
+  <data name="tf_server_identity_account_id" xml:space="preserve">
+    <value>SteamID владельца сервера.</value>
+  </data>
+  <data name="tf_server_identity_token" xml:space="preserve">
+    <value>Идентификационный ключ владельца сервера. Получается путём ввода cl_gameserver_create_identity в консоли клиента.</value>
+  </data>
 </root>
