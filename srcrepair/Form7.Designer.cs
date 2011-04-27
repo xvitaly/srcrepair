@@ -90,6 +90,7 @@
             // 
             // CM_Cancel
             // 
+            this.CM_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this.CM_Cancel, "CM_Cancel");
             this.CM_Cancel.Name = "CM_Cancel";
             this.CM_Cancel.UseVisualStyleBackColor = true;
@@ -97,8 +98,10 @@
             // 
             // frmCleaner
             // 
+            this.AcceptButton = this.CM_Clean;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.CM_Cancel;
             this.ControlBox = false;
             this.Controls.Add(this.CM_Cancel);
             this.Controls.Add(this.CM_Clean);
