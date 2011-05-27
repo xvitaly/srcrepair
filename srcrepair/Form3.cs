@@ -37,10 +37,16 @@ namespace srcrepair
             InitializeComponent();
         }
 
-        private const string PluginName = "Advanced Hosts Editor";
-        
-        private string HostsFilePath = "";
+        #region IC
+        private const string PluginName = "Micro Hosts Editor";
+        private const string PluginVersion = "0.2";
+        #endregion
 
+        #region IV
+        private string HostsFilePath = "";
+        #endregion
+
+        #region IM
         private void ReadHostsToTable(string FilePath)
         {
             // Очистим таблицу...
@@ -129,6 +135,9 @@ namespace srcrepair
         
         private void frmHEd_Load(object sender, EventArgs e)
         {
+            // Укажем версию в заголовке главной формы...
+            this.Text = String.Format(this.Text, PluginVersion);
+
             try
             {
                 // Получим путь к файлу hosts (вдруг он переопределён каким-либо зловредом)...
@@ -147,6 +156,9 @@ namespace srcrepair
             // Сгенерируем полный путь к файлу hosts...
             HostsFilePath = CoreLib.IncludeTrDelim(HostsFilePath) + "hosts";
 
+            // Запишем путь в статусную строку...
+            HEd_St_Wrn.Text = HostsFilePath;
+            
             try
             {
                 // Считаем содержимое...
@@ -207,7 +219,7 @@ namespace srcrepair
 
         private void HEd_M_About_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(String.Format("{0} for {1} by {2}. Version: {3}.", PluginName, GV.AppName, "V1TSK", "1.0a"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(String.Format("{0} for {1} by {2}. Version: {3}.", PluginName, GV.AppName, "V1TSK", PluginVersion), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void HEd_T_RemRw_Click(object sender, EventArgs e)
@@ -234,5 +246,58 @@ namespace srcrepair
         {
             HEd_St_Wrn.ForeColor = Color.Black;
         }
+
+        private void HEd_St_Wrn_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AHE_HMessg"), HostsFilePath), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                Process.Start("explorer.exe", @"/select," + @"""" + HostsFilePath + @"""");
+            }
+        }
+
+        private void HEd_T_Cut_Click(object sender, EventArgs e)
+        {
+            if (HEd_Table.Rows[HEd_Table.CurrentRow.Index].Cells[HEd_Table.CurrentCell.ColumnIndex].Value != null)
+            {
+                // Копируем в буфер...
+                Clipboard.SetText(HEd_Table.Rows[HEd_Table.CurrentRow.Index].Cells[HEd_Table.CurrentCell.ColumnIndex].Value.ToString());
+                // Удаляем из ячейки...
+                HEd_Table.Rows[HEd_Table.CurrentRow.Index].Cells[HEd_Table.CurrentCell.ColumnIndex].Value = null;
+            }
+        }
+
+        private void HEd_T_Copy_Click(object sender, EventArgs e)
+        {
+            if (HEd_Table.Rows[HEd_Table.CurrentRow.Index].Cells[HEd_Table.CurrentCell.ColumnIndex].Value != null)
+            {
+                Clipboard.SetText(HEd_Table.Rows[HEd_Table.CurrentRow.Index].Cells[HEd_Table.CurrentCell.ColumnIndex].Value.ToString());
+            }
+        }
+
+        private void HEd_T_Paste_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (Clipboard.ContainsText())
+                {
+                    HEd_Table.Rows[HEd_Table.CurrentRow.Index].Cells[HEd_Table.CurrentCell.ColumnIndex].Value = Clipboard.GetText();
+                }
+            }
+            catch
+            {
+            }
+        }
+
+        private void HEd_M_Notepad_Click(object sender, EventArgs e)
+        {
+            // Откроем файл Hosts в Блокноте...
+            Process.Start("notepad.exe", @"""" + HostsFilePath + @"""");
+        }
+
+        private void HEd_M_RepBug_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://code.google.com/p/mhed/issues/entry");
+        }
+        #endregion
     }
 }

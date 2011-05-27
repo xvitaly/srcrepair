@@ -598,4 +598,8 @@
     <value>http://www.gamemarket.biz/ref/487</value>
     <comment>URL Интернет-магазина игр для меню Справка</comment>
   </data>
+  <data name="AHE_HMessg" xml:space="preserve">
+    <value>Активный файл hosts расположен в: {0}. Показать в Проводнике?</value>
+    <comment>Сообщение, выдаваемое при вызове функции вывода пути к файлу hosts</comment>
+  </data>
 </root>

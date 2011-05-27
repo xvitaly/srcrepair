@@ -70,6 +70,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hosts file: {0}. Show it in Windows Explorer?.
+        /// </summary>
+        internal static string AHE_HMessg {
+            get {
+                return ResourceManager.GetString("AHE_HMessg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Restore default Hosts file?.
         /// </summary>
         internal static string AHE_RestDef {
