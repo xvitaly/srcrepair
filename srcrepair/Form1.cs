@@ -83,7 +83,7 @@ namespace srcrepair
         private void InstallConfigNow(string ConfName, string AppPath, string DirName, string DestPath)
         {
             // Устанавливаем...
-            File.Copy(AppPath + @"cfgs\" + DirName + @"\" + ConfName, DestPath + "autoexec.cfg", true);
+            File.Copy(AppPath + "cfgs" + Path.DirectorySeparatorChar + DirName + Path.DirectorySeparatorChar + ConfName, DestPath + "autoexec.cfg", true);
         }
 
         /// <summary>
@@ -271,8 +271,8 @@ namespace srcrepair
             AppSelector.Items.Clear();
 
             // Опишем заготовки путей для GCF и NCF...
-            string SearchPathGCF = SteamPath + @"steamapps\" + SteamLogin + @"\";
-            string SearchPathNCF = SteamPath + @"steamapps\common\";
+            string SearchPathGCF = SteamPath + "steamapps" + Path.DirectorySeparatorChar + SteamLogin + Path.DirectorySeparatorChar;
+            string SearchPathNCF = SteamPath + "steamapps" + Path.DirectorySeparatorChar + "common" + Path.DirectorySeparatorChar;
 
             // Начинаем парсить...
             XmlDocument XMLD = new XmlDocument(); // Создаём объект документа XML...
@@ -285,12 +285,12 @@ namespace srcrepair
                 if (XMLD.GetElementsByTagName("IsGCF")[i].InnerText == "1") // Проверяем GCF или NCF...
                 {
                     // GCF-приложение...
-                    if (Directory.Exists(SearchPathGCF + XMLD.GetElementsByTagName("DirName")[i].InnerText + @"\")) { AppSelector.Items.Add((string)GameID.GetAttribute("Name")); }
+                    if (Directory.Exists(SearchPathGCF + XMLD.GetElementsByTagName("DirName")[i].InnerText + Path.DirectorySeparatorChar)) { AppSelector.Items.Add((string)GameID.GetAttribute("Name")); }
                 }
                 else
                 {
                     // NCF-приложение...
-                    if (Directory.Exists(SearchPathNCF + XMLD.GetElementsByTagName("DirName")[i].InnerText + @"\")) { AppSelector.Items.Add((string)GameID.GetAttribute("Name")); }
+                    if (Directory.Exists(SearchPathNCF + XMLD.GetElementsByTagName("DirName")[i].InnerText + Path.DirectorySeparatorChar)) { AppSelector.Items.Add((string)GameID.GetAttribute("Name")); }
                 }
             }
             XMLFS.Close(); // Закрываем файловый поток...
@@ -1058,7 +1058,7 @@ namespace srcrepair
             try
             {
                 // Создаём объект DirInfo...
-                DirectoryInfo DInfo = new DirectoryInfo(GV.FullSteamPath + @"steamapps\");
+                DirectoryInfo DInfo = new DirectoryInfo(GV.FullSteamPath + "steamapps" + Path.DirectorySeparatorChar);
                 // Получаем список директорий из текущего...
                 DirectoryInfo[] DirList = DInfo.GetDirectories();
                 // Обходим созданный массив в поиске нужных нам логинов...
@@ -1096,7 +1096,7 @@ namespace srcrepair
                         MessageBox.Show(RM.GetString("SteamLoginCancel"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         Environment.Exit(7);
                     };
-                } while (!(Directory.Exists(GV.FullSteamPath + @"steamapps\" + SBuf + @"\")));
+                } while (!(Directory.Exists(GV.FullSteamPath + "steamapps" + Path.DirectorySeparatorChar + SBuf + Path.DirectorySeparatorChar)));
                 
                 // Добавляем полученный логин в список...
                 LoginSel.Items.Add((string)SBuf);
@@ -1314,12 +1314,12 @@ namespace srcrepair
             }
 
             // Генерируем полный путь до каталога управляемого приложения...
-            GV.GamePath = CoreLib.IncludeTrDelim(GV.FullSteamPath + @"steamapps\" + ptha + @"\" + GV.FullAppName);
+            GV.GamePath = CoreLib.IncludeTrDelim(GV.FullSteamPath + "steamapps" + Path.DirectorySeparatorChar + ptha + Path.DirectorySeparatorChar + GV.FullAppName);
             GV.FullGamePath = CoreLib.IncludeTrDelim(GV.GamePath + GV.SmallAppName);
 
             // Заполняем другие служебные переменные...
-            GV.FullCfgPath = GV.FullGamePath + @"cfg\";
-            GV.FullBackUpDirPath = GV.AppUserDir + @"backups\" + GV.SmallAppName + @"\";
+            GV.FullCfgPath = GV.FullGamePath + "cfg" + Path.DirectorySeparatorChar;
+            GV.FullBackUpDirPath = GV.AppUserDir + "backups" + Path.DirectorySeparatorChar + GV.SmallAppName + Path.DirectorySeparatorChar;
             
             // Включаем основные элементы управления (контролы)...
             MainTabControl.Enabled = true;
@@ -1376,7 +1376,7 @@ namespace srcrepair
             try
             {
                 // Открываем каталог...
-                DirectoryInfo DInfo = new DirectoryInfo(GV.FullAppPath + @"cfgs\" + GV.SmallAppName + @"\");
+                DirectoryInfo DInfo = new DirectoryInfo(GV.FullAppPath + "cfgs" + Path.DirectorySeparatorChar + GV.SmallAppName + Path.DirectorySeparatorChar);
                 // Считываем список файлов по заданной маске...
                 FileInfo[] DirList = DInfo.GetFiles("*.cfg");
                 // Начинаем обход массива...
@@ -1567,7 +1567,7 @@ namespace srcrepair
             // Получаем описание выбранного пользователем конфига...
             try
             {
-                FP_Description.Text = File.ReadAllText(GV.FullAppPath + @"cfgs\" + GV.SmallAppName + @"\" + Path.GetFileNameWithoutExtension(FP_ConfigSel.Text) + "_" + RM.GetString("AppLangPrefix") + ".txt");
+                FP_Description.Text = File.ReadAllText(GV.FullAppPath + "cfgs" + Path.DirectorySeparatorChar + GV.SmallAppName + Path.DirectorySeparatorChar + Path.GetFileNameWithoutExtension(FP_ConfigSel.Text) + "_" + RM.GetString("AppLangPrefix") + ".txt");
             }
             catch
             {
@@ -1743,49 +1743,49 @@ namespace srcrepair
         private void PS_RemCustMaps_Click(object sender, EventArgs e)
         {
             // Удаляем кастомные (нестандартные) карты...
-            OpenCleanupWindow(GV.FullGamePath + @"maps\", "*.bsp", ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(GV.FullGamePath + "maps" + Path.DirectorySeparatorChar, "*.bsp", ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemDnlCache_Click(object sender, EventArgs e)
         {
             // Удаляем кэш загрузок...
-            OpenCleanupWindow(GV.FullGamePath + @"downloads\", "*.dat", ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(GV.FullGamePath + "downloads" + Path.DirectorySeparatorChar, "*.dat", ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemOldSpray_Click(object sender, EventArgs e)
         {
             // Удаляем кэш спреев...
-            OpenCleanupWindow(GV.FullGamePath + @"materials\temp\", "*.vtf", ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(GV.FullGamePath + "materials" + Path.DirectorySeparatorChar + "temp" + Path.DirectorySeparatorChar, "*.vtf", ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemOldCfgs_Click(object sender, EventArgs e)
         {
             // Удаляем все конфиги...
-            OpenCleanupWindow(GV.FullGamePath + @"cfg\", "*.*", ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(GV.FullGamePath + "cfg" + Path.DirectorySeparatorChar, "*.*", ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemGraphCache_Click(object sender, EventArgs e)
         {
             // Удаляем графический кэш...
-            OpenCleanupWindow(GV.FullGamePath + @"maps\graphs\", "*.*", ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(GV.FullGamePath + "maps" + Path.DirectorySeparatorChar + "graphs" + Path.DirectorySeparatorChar, "*.*", ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemSoundCache_Click(object sender, EventArgs e)
         {
             // Удаляем звуковой кэш...
-            OpenCleanupWindow(GV.FullGamePath + @"maps\soundcache\", "*.*", ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(GV.FullGamePath + "maps" + Path.DirectorySeparatorChar + "soundcache" + Path.DirectorySeparatorChar, "*.*", ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemNavFiles_Click(object sender, EventArgs e)
         {
             // Удаляем файлы навигации ботов...
-            OpenCleanupWindow(GV.FullGamePath + @"maps\", "*.nav", ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(GV.FullGamePath + "maps" + Path.DirectorySeparatorChar, "*.nav", ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemScreenShots_Click(object sender, EventArgs e)
         {
             // Удаляем все скриншоты...
-            OpenCleanupWindow(GV.FullGamePath + @"screenshots\", "*.*", ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(GV.FullGamePath + "screenshots" + Path.DirectorySeparatorChar, "*.*", ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemDemos_Click(object sender, EventArgs e)
@@ -1830,9 +1830,9 @@ namespace srcrepair
             {
                 try
                 {
-                    Directory.Delete(GV.GamePath + @"bin\", true); // Удаляем бинарники...
-                    Directory.Delete(GV.GamePath + @"platform\", true); // Удаляем настройки платформы...
-                    Directory.Delete(GV.FullGamePath + @"bin\", true); // Удаляем библиотеки игры...
+                    Directory.Delete(GV.GamePath + "bin" + Path.DirectorySeparatorChar, true); // Удаляем бинарники...
+                    Directory.Delete(GV.GamePath + "platform" + Path.DirectorySeparatorChar, true); // Удаляем настройки платформы...
+                    Directory.Delete(GV.FullGamePath + "bin" + Path.DirectorySeparatorChar, true); // Удаляем библиотеки игры...
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -2278,7 +2278,7 @@ namespace srcrepair
 
         private void FP_OpenNotepad_Click(object sender, EventArgs e)
         {
-            Process.Start("notepad.exe", GV.FullAppPath + @"cfgs\" + GV.SmallAppName + @"\" + FP_ConfigSel.Text);
+            Process.Start("notepad.exe", GV.FullAppPath + "cfgs" + Path.DirectorySeparatorChar + GV.SmallAppName + Path.DirectorySeparatorChar + FP_ConfigSel.Text);
         }
 
         private void MNUUpdateCheck_Click(object sender, EventArgs e)

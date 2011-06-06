@@ -63,7 +63,7 @@ namespace srcrepair
                     GenerateNow.Text = CoreLib.GetLocalizedString("RPB_CptWrk");
                     this.ControlBox = false;
                     // Сгенерируем путь для каталога с рапортами...
-                    string RepDir = GV.AppUserDir + @"reports\";
+                    string RepDir = GV.AppUserDir + @"reports" + Path.DirectorySeparatorChar;
                     // Проверим чтобы каталог для рапортов существовал...
                     if (!Directory.Exists(RepDir))
                     {
