@@ -1230,8 +1230,8 @@ namespace srcrepair
                     // Выполнение закончено, выведем сообщение о завершении...
                     MessageBox.Show(RM.GetString("PS_SeqCompleted"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Завершаем работу приложения...
-                    Environment.Exit(0);
+                    // Запустим Steam...
+                    if (File.Exists(Path.Combine(GV.FullSteamPath, "Steam.exe"))) { Process.Start(Path.Combine(GV.FullSteamPath, "Steam.exe")); }
                 }
             }
         }

@@ -223,7 +223,7 @@
     <value>Steam has been successfully terminated.</value>
   </data>
   <data name="PS_SeqCompleted" xml:space="preserve">
-    <value>Cleanup completed successfully! Thank you for using the program. Now you can run Steam!</value>
+    <value>Cleanup completed successfully. Steam will run in recovery mode right now!</value>
   </data>
   <data name="StatusLoginChanged" xml:space="preserve">
     <value>Steam login was successfully changed. Let's continue to work with the new one...</value>

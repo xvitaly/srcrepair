@@ -826,7 +826,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cleanup completed successfully! Thank you for using the program. Now you can run Steam!.
+        ///   Looks up a localized string similar to Cleanup completed successfully. Steam will run in recovery mode right now!.
         /// </summary>
         internal static string PS_SeqCompleted {
             get {

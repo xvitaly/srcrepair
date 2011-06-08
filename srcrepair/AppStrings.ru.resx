@@ -258,7 +258,7 @@
     <comment>Сообщение, выдаваемое при обнаружении в памяти активного процесса Steam.exe</comment>
   </data>
   <data name="PS_SeqCompleted" xml:space="preserve">
-    <value>Очистка успешно выполнена! Спасибо за использование программы. Теперь Вы можете запустить Steam!</value>
+    <value>Очистка успешно выполнена. Steam будет запущен в режиме восстановления прямо сейчас!</value>
     <comment>Сообщение об успешном завершении очистки</comment>
   </data>
   <data name="StatusLoginChanged" xml:space="preserve">
