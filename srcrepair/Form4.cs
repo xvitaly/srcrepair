@@ -41,7 +41,7 @@ namespace srcrepair
         private void frmRepBuilder_Load(object sender, EventArgs e)
         {
             // Событие создания формы...
-            if ((File.Exists(GV.FullAppPath + "7z.exe")) && (File.Exists(GV.FullAppPath + "7z.dll")))
+            if ((File.Exists(Path.Combine(GV.FullAppPath, "7z.exe"))) && (File.Exists(Path.Combine(GV.FullAppPath, "7z.dll"))))
             {
                 Compress.Enabled = true;
             }
@@ -63,7 +63,7 @@ namespace srcrepair
                     GenerateNow.Text = CoreLib.GetLocalizedString("RPB_CptWrk");
                     this.ControlBox = false;
                     // Сгенерируем путь для каталога с рапортами...
-                    string RepDir = GV.AppUserDir + "reports" + Path.DirectorySeparatorChar;
+                    string RepDir = CoreLib.IncludeTrDelim(Path.Combine(GV.AppUserDir, "reports"));
                     // Проверим чтобы каталог для рапортов существовал...
                     if (!Directory.Exists(RepDir))
                     {

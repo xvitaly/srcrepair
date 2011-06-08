@@ -55,12 +55,12 @@ namespace srcrepair
         private void FileDownloader_Completed(object sender, AsyncCompletedEventArgs e)
         {
             // Проверим чтобы полученный файл существовал...
-            if (File.Exists(GV.AppUserDir + Path.GetFileName(UpdateURI)))
+            if (File.Exists(Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI))))
             {
                 // Существует, покажем сообщение...
                 MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Запустим...
-                Process.Start(GV.AppUserDir + Path.GetFileName(UpdateURI));                
+                Process.Start(Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI)));
                 // Завершим работу программы...
                 Environment.Exit(9);
             }
@@ -90,7 +90,7 @@ namespace srcrepair
                     FileDownloader.DownloadFileCompleted += new AsyncCompletedEventHandler(FileDownloader_Completed);
                     FileDownloader.DownloadProgressChanged += new DownloadProgressChangedEventHandler(FileDownloader_ProgressChanged);
                     // Скачиваем файл...
-                    FileDownloader.DownloadFileAsync(new Uri(UpdateURI), GV.AppUserDir + Path.GetFileName(UpdateURI));
+                    FileDownloader.DownloadFileAsync(new Uri(UpdateURI), Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI)));
                 }
             }
             catch

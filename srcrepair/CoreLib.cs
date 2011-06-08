@@ -156,7 +156,7 @@ namespace srcrepair
             string FileName;
 
             // Генерируем имя первого кандидата на удаление с полным путём до него...
-            FileName = SteamPath + "AppUpdateStats.blob";
+            FileName = Path.Combine(SteamPath, "AppUpdateStats.blob");
 
             // Проверяем существует ли данный файл...
             if (File.Exists(FileName))
@@ -166,7 +166,7 @@ namespace srcrepair
             }
 
             // Аналогично генерируем имя второго кандидата...
-            FileName = SteamPath + "ClientRegistry.blob";
+            FileName = Path.Combine(SteamPath, "ClientRegistry.blob");
 
             // Проверяем, существует ли файл...
             if (File.Exists(FileName))
@@ -231,7 +231,7 @@ namespace srcrepair
         public static int GetSRCDWord(string CVar, string CApp)
         {
             // Подключаем реестр и открываем ключ только для чтения...
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Source\" + CApp + @"\Settings", false);
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(Path.Combine(@"Software\Valve\Source\", CApp, "Settings"), false);
 
             // Создаём переменную для хранения результатов...
             int ResInt = -1;
@@ -272,7 +272,7 @@ namespace srcrepair
         public static void WriteSRCDWord(string CVar, int CValue, string CApp)
         {
             // Подключаем реестр и открываем ключ для чтения и записи...
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Source\" + CApp + @"\Settings", true);
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(Path.Combine(@"Software\Valve\Source\", CApp, "Settings"), true);
 
             // Записываем в реестр...
             ResKey.SetValue(CVar, CValue, RegistryValueKind.DWord);
@@ -406,7 +406,7 @@ namespace srcrepair
         /// <returns>Значение запрошенной переменной</returns>
         public static bool GetAppBool(string CVar, string Subkey, bool Default)
         {
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\" + Subkey, false);
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(Path.Combine("Software", Subkey), false);
             bool Result = Default;
             if (ResKey != null)
             {
@@ -439,7 +439,7 @@ namespace srcrepair
         /// <param name="CValue">Значение переменной</param>
         public static void WriteAppBool(string CVar, string Subkey, bool CValue)
         {
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\" + Subkey, true);
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(Path.Combine("Software", Subkey), true);
             ResKey.SetValue(CVar, Convert.ToInt32(CValue), RegistryValueKind.DWord);
             ResKey.Close();
         }
