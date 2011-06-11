@@ -1536,4 +1536,19 @@
   <data name="tf_server_identity_token" xml:space="preserve">
     <value>Идентификационный ключ владельца сервера. Получается путём ввода cl_gameserver_create_identity в консоли клиента.</value>
   </data>
+  <data name="mp_scrambleteams" xml:space="preserve">
+    <value>Перемешать команды и перезапустить раунд.</value>
+  </data>
+  <data name="mp_scrambleteams_auto" xml:space="preserve">
+    <value>Включить / выключить автоматическое перемешивание команд при достижении указанного условия побед.</value>
+  </data>
+  <data name="mp_scrambleteams_auto_windifference" xml:space="preserve">
+    <value>Максимальное число побед одной команды над другой, при достижении которого команды будут перемешаны.</value>
+  </data>
+  <data name="sv_vote_issue_nextlevel_prevent_change" xml:space="preserve">
+    <value>Отключает возможность запуска голосования за следующую карту, если она уже выбрана.</value>
+  </data>
+  <data name="tf_arena_max_streak" xml:space="preserve">
+    <value>Команды будут перемешаны, если одна из них достигнет указанного числа побед.</value>
+  </data>
 </root>

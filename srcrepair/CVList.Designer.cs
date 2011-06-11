@@ -88,6 +88,33 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Scramble the teams and restart the game..
+        /// </summary>
+        internal static string mp_scrambleteams {
+            get {
+                return ResourceManager.GetString("mp_scrambleteams", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Server will automatically scramble the teams if criteria met. Only works on dedicated servers..
+        /// </summary>
+        internal static string mp_scrambleteams_auto {
+            get {
+                return ResourceManager.GetString("mp_scrambleteams_auto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number of round wins a team must lead by in order to trigger an auto scramble..
+        /// </summary>
+        internal static string mp_scrambleteams_auto_windifference {
+            get {
+                return ResourceManager.GetString("mp_scrambleteams_auto_windifference", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Allow voting?.
         /// </summary>
         internal static string sv_allow_votes {
@@ -169,6 +196,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Prevent voting on the next level if one has already been set..
+        /// </summary>
+        internal static string sv_vote_issue_nextlevel_prevent_change {
+            get {
+                return ResourceManager.GetString("sv_vote_issue_nextlevel_prevent_change", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Allow votes to restart the game?.
         /// </summary>
         internal static string sv_vote_issue_restart_game_allowed {
@@ -192,6 +228,15 @@ namespace srcrepair {
         internal static string sv_vote_kick_ban_duration {
             get {
                 return ResourceManager.GetString("sv_vote_kick_ban_duration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Teams will be scrambled if one team reaches this streak..
+        /// </summary>
+        internal static string tf_arena_max_streak {
+            get {
+                return ResourceManager.GetString("tf_arena_max_streak", resourceCulture);
             }
         }
         

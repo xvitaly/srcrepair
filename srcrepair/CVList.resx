@@ -126,6 +126,15 @@
   <data name="hud_combattext_healing" xml:space="preserve">
     <value>Display the amount of healing done per second.</value>
   </data>
+  <data name="mp_scrambleteams" xml:space="preserve">
+    <value>Scramble the teams and restart the game.</value>
+  </data>
+  <data name="mp_scrambleteams_auto" xml:space="preserve">
+    <value>Server will automatically scramble the teams if criteria met. Only works on dedicated servers.</value>
+  </data>
+  <data name="mp_scrambleteams_auto_windifference" xml:space="preserve">
+    <value>Number of round wins a team must lead by in order to trigger an auto scramble.</value>
+  </data>
   <data name="sv_allow_votes" xml:space="preserve">
     <value>Allow voting?</value>
   </data>
@@ -153,6 +162,9 @@
   <data name="sv_vote_issue_nextlevel_choicesmode" xml:space="preserve">
     <value>Present players with a list of maps with the lowest playtimes to choose from?</value>
   </data>
+  <data name="sv_vote_issue_nextlevel_prevent_change" xml:space="preserve">
+    <value>Prevent voting on the next level if one has already been set.</value>
+  </data>
   <data name="sv_vote_issue_restart_game_allowed" xml:space="preserve">
     <value>Allow votes to restart the game?</value>
   </data>
@@ -161,6 +173,9 @@
   </data>
   <data name="sv_vote_kick_ban_duration" xml:space="preserve">
     <value>How long should a kick vote ban someone from the server? (in minutes)</value>
+  </data>
+  <data name="tf_arena_max_streak" xml:space="preserve">
+    <value>Teams will be scrambled if one team reaches this streak.</value>
   </data>
   <data name="tf_server_identity_account_id" xml:space="preserve">
     <value>Owner's SteamID.</value>
