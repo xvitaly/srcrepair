@@ -1342,7 +1342,7 @@ namespace srcrepair
             {
                 // Отключим модули очистки...
                 PS_ResetSettings.Enabled = false;
-                EnableCleanButtons(false);
+                if (!(Properties.Settings.Default.AllowNCFUnsafeOps)) { EnableCleanButtons(false); }
                 
                 // Отключаем контролы на странице графических настроек и зануляем их...
                 GT_SaveApply.Enabled = false;

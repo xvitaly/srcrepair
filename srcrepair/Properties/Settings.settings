@@ -32,5 +32,8 @@
     <Setting Name="GameListFile" Type="System.String" Scope="Application">
       <Value Profile="(Default)">games.xml</Value>
     </Setting>
+    <Setting Name="AllowNCFUnsafeOps" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

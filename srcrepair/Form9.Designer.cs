@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOptions));
             this.GB_MainOpts = new System.Windows.Forms.GroupBox();
+            this.MO_AllowUnsafeNCFOps = new System.Windows.Forms.CheckBox();
             this.MO_AutoUpdate = new System.Windows.Forms.CheckBox();
             this.MO_SortGameList = new System.Windows.Forms.CheckBox();
             this.MO_HideNotInst = new System.Windows.Forms.CheckBox();
@@ -41,6 +42,7 @@
             // 
             // GB_MainOpts
             // 
+            this.GB_MainOpts.Controls.Add(this.MO_AllowUnsafeNCFOps);
             this.GB_MainOpts.Controls.Add(this.MO_AutoUpdate);
             this.GB_MainOpts.Controls.Add(this.MO_SortGameList);
             this.GB_MainOpts.Controls.Add(this.MO_HideNotInst);
@@ -48,6 +50,12 @@
             resources.ApplyResources(this.GB_MainOpts, "GB_MainOpts");
             this.GB_MainOpts.Name = "GB_MainOpts";
             this.GB_MainOpts.TabStop = false;
+            // 
+            // MO_AllowUnsafeNCFOps
+            // 
+            resources.ApplyResources(this.MO_AllowUnsafeNCFOps, "MO_AllowUnsafeNCFOps");
+            this.MO_AllowUnsafeNCFOps.Name = "MO_AllowUnsafeNCFOps";
+            this.MO_AllowUnsafeNCFOps.UseVisualStyleBackColor = true;
             // 
             // MO_AutoUpdate
             // 
@@ -106,6 +114,7 @@
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.frmOptions_Load);
             this.GB_MainOpts.ResumeLayout(false);
+            this.GB_MainOpts.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -119,5 +128,6 @@
         private System.Windows.Forms.Button MO_Cancel;
         private System.Windows.Forms.CheckBox MO_SortGameList;
         private System.Windows.Forms.CheckBox MO_AutoUpdate;
+        private System.Windows.Forms.CheckBox MO_AllowUnsafeNCFOps;
     }
 }

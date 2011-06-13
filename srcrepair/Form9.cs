@@ -23,6 +23,7 @@ namespace srcrepair
             MO_HideNotInst.Checked = Properties.Settings.Default.HideNotInstalled;
             MO_SortGameList.Checked = Properties.Settings.Default.SortGamesList;
             MO_AutoUpdate.Checked = Properties.Settings.Default.EnableAutoUpdate;
+            MO_AllowUnsafeNCFOps.Checked = Properties.Settings.Default.AllowNCFUnsafeOps;
 
             // Укажем название приложения в заголовке окна...
             this.Text = String.Format(this.Text, GV.AppName);
@@ -35,6 +36,7 @@ namespace srcrepair
             Properties.Settings.Default.HideNotInstalled = MO_HideNotInst.Checked;
             Properties.Settings.Default.SortGamesList = MO_SortGameList.Checked;
             Properties.Settings.Default.EnableAutoUpdate = MO_AutoUpdate.Checked;
+            Properties.Settings.Default.AllowNCFUnsafeOps = MO_AllowUnsafeNCFOps.Checked;
             // Сохраняем настройки...
             Properties.Settings.Default.Save();
             // Показываем сообщение...

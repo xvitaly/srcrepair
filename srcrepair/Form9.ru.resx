@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="MO_AllowUnsafeNCFOps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 17</value>
+  </data>
+  <data name="MO_AllowUnsafeNCFOps.Text" xml:space="preserve">
+    <value>Разрешить небезопасные операции для NCF-игр</value>
+  </data>
   <data name="MO_AutoUpdate.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 17</value>
   </data>
@@ -132,9 +138,6 @@
   </data>
   <data name="MO_ConfirmExit.Text" xml:space="preserve">
     <value>Подтверждать выход из программы</value>
-  </data>
-  <data name="MO_ShowSingle.Text" xml:space="preserve">
-    <value>Показывать синглплеерные игры в списке</value>
   </data>
   <data name="MO_Cancel.Text" xml:space="preserve">
     <value>Отмена</value>

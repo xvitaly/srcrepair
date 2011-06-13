@@ -135,5 +135,17 @@ namespace srcrepair.Properties {
                 return ((string)(this["GameListFile"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool AllowNCFUnsafeOps {
+            get {
+                return ((bool)(this["AllowNCFUnsafeOps"]));
+            }
+            set {
+                this["AllowNCFUnsafeOps"] = value;
+            }
+        }
     }
 }
