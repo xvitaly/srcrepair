@@ -480,4 +480,7 @@
   <data name="AHE_HMessg" xml:space="preserve">
     <value>Hosts file: {0}. Show it in Windows Explorer?</value>
   </data>
+  <data name="AppDefaultSteamLangID" xml:space="preserve">
+    <value>0</value>
+  </data>
 </root>

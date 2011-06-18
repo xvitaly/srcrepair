@@ -602,4 +602,8 @@
     <value>Активный файл hosts расположен в: {0}. Показать в Проводнике?</value>
     <comment>Сообщение, выдаваемое при вызове функции вывода пути к файлу hosts</comment>
   </data>
+  <data name="AppDefaultSteamLangID" xml:space="preserve">
+    <value>1</value>
+    <comment>Номер языка клиента Steam по умолчанию из раскрывающегося списка на странице устранения проблем и очистки</comment>
+  </data>
 </root>

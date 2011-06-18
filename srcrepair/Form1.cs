@@ -1175,7 +1175,11 @@ namespace srcrepair
 
         private void PS_CleanRegistry_CheckedChanged(object sender, EventArgs e)
         {
+            // Включаем список с доступными языками клиента Steam...
             PS_SteamLang.Enabled = PS_CleanRegistry.Checked;
+
+            // Выбираем язык по умолчанию согласно языку приложения...
+            PS_SteamLang.SelectedIndex = Convert.ToInt32(RM.GetString("AppDefaultSteamLangID"));
 
             if (PS_CleanRegistry.Checked || PS_CleanBlobs.Checked)
             {

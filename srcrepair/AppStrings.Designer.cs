@@ -106,6 +106,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 0.
+        /// </summary>
+        internal static string AppDefaultSteamLangID {
+            get {
+                return ResourceManager.GetString("AppDefaultSteamLangID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to en.
         /// </summary>
         internal static string AppLangPrefix {
