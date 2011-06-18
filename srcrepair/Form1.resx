@@ -1515,9 +1515,6 @@
   <data name="CE_Paste.Text" xml:space="preserve">
     <value>Paste</value>
   </data>
-  <data name="CE_ToolSep1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
-  </data>
   <data name="CE_RmRow.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -1526,6 +1523,18 @@
   </data>
   <data name="CE_RmRow.Text" xml:space="preserve">
     <value>Delete selected row</value>
+  </data>
+  <data name="CE_ToolSep1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="CE_OpenInNotepad.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="CE_OpenInNotepad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="CE_OpenInNotepad.Text" xml:space="preserve">
+    <value>Open config in Notepad</value>
   </data>
   <data name="CE_ToolSep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -3663,16 +3672,22 @@
   <data name="&gt;&gt;CE_Paste.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;CE_RmRow.Name" xml:space="preserve">
+    <value>CE_RmRow</value>
+  </data>
+  <data name="&gt;&gt;CE_RmRow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;CE_ToolSep1.Name" xml:space="preserve">
     <value>CE_ToolSep1</value>
   </data>
   <data name="&gt;&gt;CE_ToolSep1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;CE_RmRow.Name" xml:space="preserve">
-    <value>CE_RmRow</value>
+  <data name="&gt;&gt;CE_OpenInNotepad.Name" xml:space="preserve">
+    <value>CE_OpenInNotepad</value>
   </data>
-  <data name="&gt;&gt;CE_RmRow.Type" xml:space="preserve">
+  <data name="&gt;&gt;CE_OpenInNotepad.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;CE_ToolSep2.Name" xml:space="preserve">

@@ -81,8 +81,9 @@
             this.CE_Cut = new System.Windows.Forms.ToolStripButton();
             this.CE_Copy = new System.Windows.Forms.ToolStripButton();
             this.CE_Paste = new System.Windows.Forms.ToolStripButton();
-            this.CE_ToolSep1 = new System.Windows.Forms.ToolStripSeparator();
             this.CE_RmRow = new System.Windows.Forms.ToolStripButton();
+            this.CE_ToolSep1 = new System.Windows.Forms.ToolStripSeparator();
+            this.CE_OpenInNotepad = new System.Windows.Forms.ToolStripButton();
             this.CE_ToolSep2 = new System.Windows.Forms.ToolStripSeparator();
             this.CE_ShowHint = new System.Windows.Forms.ToolStripButton();
             this.CE_Editor = new System.Windows.Forms.DataGridView();
@@ -610,8 +611,9 @@
             this.CE_Cut,
             this.CE_Copy,
             this.CE_Paste,
-            this.CE_ToolSep1,
             this.CE_RmRow,
+            this.CE_ToolSep1,
+            this.CE_OpenInNotepad,
             this.CE_ToolSep2,
             this.CE_ShowHint});
             resources.ApplyResources(this.CE_Toolbar, "CE_Toolbar");
@@ -673,11 +675,6 @@
             this.CE_Paste.Name = "CE_Paste";
             this.CE_Paste.Click += new System.EventHandler(this.CE_Paste_Click);
             // 
-            // CE_ToolSep1
-            // 
-            this.CE_ToolSep1.Name = "CE_ToolSep1";
-            resources.ApplyResources(this.CE_ToolSep1, "CE_ToolSep1");
-            // 
             // CE_RmRow
             // 
             this.CE_RmRow.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -685,6 +682,19 @@
             resources.ApplyResources(this.CE_RmRow, "CE_RmRow");
             this.CE_RmRow.Name = "CE_RmRow";
             this.CE_RmRow.Click += new System.EventHandler(this.CE_RmRow_Click);
+            // 
+            // CE_ToolSep1
+            // 
+            this.CE_ToolSep1.Name = "CE_ToolSep1";
+            resources.ApplyResources(this.CE_ToolSep1, "CE_ToolSep1");
+            // 
+            // CE_OpenInNotepad
+            // 
+            this.CE_OpenInNotepad.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_OpenInNotepad.Image = global::srcrepair.Properties.Resources.TextEditor;
+            resources.ApplyResources(this.CE_OpenInNotepad, "CE_OpenInNotepad");
+            this.CE_OpenInNotepad.Name = "CE_OpenInNotepad";
+            this.CE_OpenInNotepad.Click += new System.EventHandler(this.CE_OpenInNotepad_Click);
             // 
             // CE_ToolSep2
             // 
@@ -1640,6 +1650,7 @@
         private System.Windows.Forms.ToolStripMenuItem MNUWinMnuDisabler;
         private System.Windows.Forms.ToolStripMenuItem MNUGameStore;
         private System.Windows.Forms.ToolStripMenuItem MNUDonate;
+        private System.Windows.Forms.ToolStripButton CE_OpenInNotepad;
     }
 }
 

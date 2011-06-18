@@ -2403,5 +2403,10 @@ namespace srcrepair
         {
             Properties.Settings.Default.FPConfCreateBackUps = FP_CreateBackUp.Checked;
         }
+
+        private void CE_OpenInNotepad_Click(object sender, EventArgs e)
+        {
+            Process.Start("Notepad.exe", CE_OpenCfgDialog.FileName);
+        }
     }
 }
