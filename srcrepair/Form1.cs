@@ -1053,6 +1053,7 @@ namespace srcrepair
 
             // Применим некоторые настройки...
             AppSelector.Sorted = Properties.Settings.Default.SortGamesList;
+            FP_CreateBackUp.Checked = Properties.Settings.Default.FPConfCreateBackUps;
 
             // Определим логины пользователей Steam на данном ПК...
             try
@@ -2396,6 +2397,11 @@ namespace srcrepair
         private void MNUDonate_Click(object sender, EventArgs e)
         {
             Process.Start("http://code.google.com/p/srcrepair/wiki/Donate");
+        }
+
+        private void FP_CreateBackUp_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.FPConfCreateBackUps = FP_CreateBackUp.Checked;
         }
     }
 }

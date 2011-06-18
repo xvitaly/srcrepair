@@ -147,5 +147,17 @@ namespace srcrepair.Properties {
                 this["AllowNCFUnsafeOps"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FPConfCreateBackUps {
+            get {
+                return ((bool)(this["FPConfCreateBackUps"]));
+            }
+            set {
+                this["FPConfCreateBackUps"] = value;
+            }
+        }
     }
 }

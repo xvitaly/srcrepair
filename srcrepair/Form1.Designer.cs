@@ -968,6 +968,7 @@
             resources.ApplyResources(this.FP_CreateBackUp, "FP_CreateBackUp");
             this.FP_CreateBackUp.Name = "FP_CreateBackUp";
             this.FP_CreateBackUp.UseVisualStyleBackColor = true;
+            this.FP_CreateBackUp.CheckedChanged += new System.EventHandler(this.FP_CreateBackUp_CheckedChanged);
             // 
             // FP_Uninstall
             // 
