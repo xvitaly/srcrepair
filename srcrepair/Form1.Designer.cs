@@ -1023,6 +1023,7 @@
             // 
             // BU_LVTable
             // 
+            this.BU_LVTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.BU_LVTable.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.BU_LV_Name,
             this.BU_LV_Type,

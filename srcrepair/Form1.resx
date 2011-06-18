@@ -2813,10 +2813,10 @@
     <value>False</value>
   </data>
   <data name="BU_LVTable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 31</value>
+    <value>0, 28</value>
   </data>
   <data name="BU_LVTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>462, 347</value>
+    <value>462, 349</value>
   </data>
   <data name="BU_LVTable.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
