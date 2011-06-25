@@ -482,20 +482,32 @@
   <data name="ConfigEditor.Text" xml:space="preserve">
     <value>Редактор конфигов</value>
   </data>
+  <data name="PS_ResetSettings.Text" xml:space="preserve">
+    <value>Восстановить настройки игры по умолчанию</value>
+  </data>
   <data name="PS_RemOldBin.Text" xml:space="preserve">
-    <value>Старые бинарники</value>
+    <value>Очистить старые бинарники и лаунчеры</value>
   </data>
   <data name="PS_RemGraphOpts.Text" xml:space="preserve">
-    <value>Настройки графики</value>
+    <value>Очистить графические настройки игры</value>
   </data>
   <data name="PS_GB_AdvRepr.Text" xml:space="preserve">
     <value>Расширенная очистка:</value>
+  </data>
+  <data name="PS_RemReplays.Text" xml:space="preserve">
+    <value>Реплеи (повторы)</value>
+  </data>
+  <data name="PS_RemModels.Text" xml:space="preserve">
+    <value>Кастомные модели</value>
+  </data>
+  <data name="PS_RemTextures.Text" xml:space="preserve">
+    <value>Кастомные текстуры</value>
   </data>
   <data name="PS_RemDemos.Text" xml:space="preserve">
     <value>Записанные демки</value>
   </data>
   <data name="PS_RemScreenShots.Text" xml:space="preserve">
-    <value>Все скриншоты</value>
+    <value>Скриншоты</value>
   </data>
   <data name="PS_RemNavFiles.Text" xml:space="preserve">
     <value>Навигацию ботов</value>
@@ -507,7 +519,7 @@
     <value>Графический кэш</value>
   </data>
   <data name="PS_RemOldCfgs.Text" xml:space="preserve">
-    <value>Все конфиги</value>
+    <value>Конфиги игры</value>
   </data>
   <data name="PS_RemOldSpray.Text" xml:space="preserve">
     <value>Кэш спреев</value>
@@ -519,25 +531,16 @@
     <value>Кастомные карты</value>
   </data>
   <data name="PS_GB_Remover.Text" xml:space="preserve">
-    <value>Быстрая очистка:</value>
-  </data>
-  <data name="PS_ResetSettings.Text" xml:space="preserve">
-    <value>Восстановить настройки игры по умолчанию</value>
-  </data>
-  <data name="PS_GB_AdvFeat.Text" xml:space="preserve">
-    <value>Специальные функции</value>
-  </data>
-  <data name="PS_WarningMsg.Text" xml:space="preserve">
-    <value>Steam установлен верно: логин и путь к каталогу (папке) Steam не содержат запрещённых символов: букв национальных алфавитов (русских, немецких, французских и т.д.) и символов Юникода.</value>
+    <value>Безопасная очистка:</value>
   </data>
   <data name="PS_PathDetector.Text" xml:space="preserve">
     <value>Не обнаружено non-ASCII символов</value>
   </data>
   <data name="L_PS_PathDetector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 13</value>
+    <value>190, 13</value>
   </data>
   <data name="L_PS_PathDetector.Text" xml:space="preserve">
-    <value>Пров. пути:</value>
+    <value>Проверка пути: успешно завершено</value>
   </data>
   <data name="L_PS_RSteamLogin.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 13</value>

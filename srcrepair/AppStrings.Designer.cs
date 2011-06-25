@@ -1033,6 +1033,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Steam installed correctly: Steam login and directory path does not contain illegal characters: letters of national alphabets (Russian, German, French, etc.) and Unicode characters..
+        /// </summary>
+        internal static string SteamNonASCIINotDetected {
+            get {
+                return ResourceManager.GetString("SteamNonASCIINotDetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Attention! On the way to Steam detected invalid characters. Steam and the games will not work correctly. Reinstall Steam to folder, the path to which will contain only latin symbols..
         /// </summary>
         internal static string SteamNonASCIISmall {

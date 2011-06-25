@@ -42,13 +42,15 @@ namespace srcrepair
         private string CleanDir; // Здесь будем хранить каталог для очистки,...
         private string CleanMask; // ...маску...
         private string CleanInfo; // ...и информацию о том, что будем очищать.
+        private long TotalSize = 0; // Задаём и обнуляем счётчик общего размера удаляемых файлов...
 
-        private void frmCleaner_Load(object sender, EventArgs e)
+        /// <summary>
+        /// Ищет и добавляет файлы для удаления в таблицу модуля очистки.
+        /// </summary>
+        /// <param name="CleanDir">Каталог для выполнения очистки</param>
+        /// <param name="CleanMask">Маска файлов для очистки</param>
+        private void DetectFilesForCleanup(string CleanDir, string CleanMask)
         {
-            // Изменяем заголовок окна...
-            this.Text = String.Format(this.Text, CleanInfo);
-            // Задаём и обнуляем счётчик общего размера удаляемых файлов...
-            long TotalSize = 0;
             // Запускаем...
             try
             {
@@ -68,16 +70,39 @@ namespace srcrepair
                     CM_FTable.Items.Add(LvItem); // Вставляем в таблицу...
                     TotalSize += DItem.Length; // Инкрементируем общий счётчик...
                 }
+                // Если задана маска любых файлов, пройдём по подкаталогам рекурсивно...
+                if (CleanMask == "*.*")
+                {
+                    // Получим список подкаталогов в искомом и обойдём их все...
+                    foreach (DirectoryInfo Dir in DInfo.GetDirectories())
+                    {
+                        // Вызовем функцию рекурсивно...
+                        DetectFilesForCleanup(Dir.FullName, CleanMask);
+                    }
+                }
             }
             catch
             {
                 // Подавляем возможные сообщения...
             }
-            // Выдадим сообщение если очищать нечего...
+        }
+
+        private void frmCleaner_Load(object sender, EventArgs e)
+        {
+            // Изменяем заголовок окна...
+            this.Text = String.Format(this.Text, CleanInfo);
+            
+            // Запускаем очистку согласно полученным параметрам...
+            DetectFilesForCleanup(CleanDir, CleanMask);
+            
+            // Проверим есть ли кандидаты для удаления (очистки)...
             if (CM_FTable.Items.Count == 0)
             {
+                // Выдадим сообщение если очищать нечего...
                 MessageBox.Show(CoreLib.GetLocalizedString("PS_LoadErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // Отключим кнопку запуска очистки...
                 CM_Clean.Enabled = false;
+                // Закроем форму.
                 this.Close();
             }
             // Указываем сколько МБ освободится при удалении всех файлов...
@@ -110,9 +135,9 @@ namespace srcrepair
                             {
                                 if (LVI.Checked)
                                 {
-                                    if (File.Exists(Path.Combine(CleanDir, LVI.Text)))
+                                    if (File.Exists(LVI.ToolTipText))
                                     {
-                                        File.Delete(Path.Combine(CleanDir, LVI.Text));
+                                        File.Delete(LVI.ToolTipText);
                                     }
                                 }
                             }
@@ -149,7 +174,7 @@ namespace srcrepair
         private void CM_FTable_DoubleClick(object sender, EventArgs e)
         {
             // Запускаем Проводник и выделяем в нём выбранный пользователем файл...
-            Process.Start("explorer.exe", @"/select," + @"""" + CleanDir + CM_FTable.SelectedItems[0].SubItems[0].Text + @"""");
+            Process.Start("explorer.exe", @"/select," + @"""" + CM_FTable.SelectedItems[0].ToolTipText + @"""");
         }
     }
 }

@@ -245,6 +245,8 @@ namespace srcrepair
             //PS_RemDemos.Enabled = BStatus;
             PS_RemGraphOpts.Enabled = BStatus;
             PS_RemOldBin.Enabled = BStatus;
+            PS_RemTextures.Enabled = BStatus;
+            PS_RemModels.Enabled = BStatus;
         }
 
         /// <summary>
@@ -1134,8 +1136,6 @@ namespace srcrepair
                 // Запрещённые символы найдены!
                 PS_PathDetector.Text = RM.GetString("SteamNonASCIITitle");
                 PS_PathDetector.ForeColor = Color.Red;
-                PS_WarningMsg.Text = RM.GetString("SteamNonASCIISmall");
-                PS_WarningMsg.ForeColor = Color.Red;
                 MessageBox.Show(RM.GetString("SteamNonASCIIDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
@@ -2407,6 +2407,36 @@ namespace srcrepair
         private void CE_OpenInNotepad_Click(object sender, EventArgs e)
         {
             Process.Start("Notepad.exe", CE_OpenCfgDialog.FileName);
+        }
+
+        private void PS_PathDetector_Click(object sender, EventArgs e)
+        {
+            if (((Label)sender).ForeColor == Color.Red)
+            {
+                MessageBox.Show(RM.GetString("SteamNonASCIISmall"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show(RM.GetString("SteamNonASCIINotDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void PS_RemVideos_Click(object sender, EventArgs e)
+        {
+            // Удаляем все кастомные текстуры...
+            OpenCleanupWindow(CoreLib.IncludeTrDelim(Path.Combine(GV.FullGamePath, "materials")), "*.*", ((Button)sender).Text.ToLower());
+        }
+
+        private void PS_RemModels_Click(object sender, EventArgs e)
+        {
+            // Удаляем все кастомные модели...
+            OpenCleanupWindow(CoreLib.IncludeTrDelim(Path.Combine(GV.FullGamePath, "models")), "*.*", ((Button)sender).Text.ToLower());
+        }
+
+        private void PS_RemReplays_Click(object sender, EventArgs e)
+        {
+            // Удаляем все реплеи...
+            OpenCleanupWindow(CoreLib.IncludeTrDelim(Path.Combine(GV.FullGamePath, "replay")), "*.*", ((Button)sender).Text.ToLower());
         }
     }
 }
