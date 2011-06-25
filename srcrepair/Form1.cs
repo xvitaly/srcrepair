@@ -1377,6 +1377,9 @@ namespace srcrepair
             // Отключим кнопку редактирования FPS-конфигов...
             FP_OpenNotepad.Enabled = false;
 
+            // Отключим кнопку установки FPS-конфигов...
+            FP_Install.Enabled = false;
+
             // Считаем имеющиеся FPS-конфиги...
             try
             {
@@ -1398,7 +1401,6 @@ namespace srcrepair
                 {
                     FP_Description.Text = RM.GetString("FP_SelectFromList");
                     FP_Description.ForeColor = Color.Black;
-                    FP_Install.Enabled = true;
                     FP_ConfigSel.Enabled = true;
                 }
             }
@@ -1581,6 +1583,8 @@ namespace srcrepair
             }
             // Включаем кнопку открытия конфига в Блокноте...
             FP_OpenNotepad.Enabled = true;
+            // Включаем кнопку установки конфига...
+            FP_Install.Enabled = true;
         }
 
         private void FP_Install_Click(object sender, EventArgs e)
@@ -1803,7 +1807,7 @@ namespace srcrepair
         private void PS_RemGraphOpts_Click(object sender, EventArgs e)
         {
             // Удаляем графические настройки...
-            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupFull"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(((Button)sender).Text + "?", GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 // Создаём резервную копию...
                 try
@@ -1832,7 +1836,7 @@ namespace srcrepair
         private void PS_RemOldBin_Click(object sender, EventArgs e)
         {
             // Удаляем старые бинарники...
-            if (MessageBox.Show(String.Format(RM.GetString("PS_CleanupFull"), ((Button)sender).Text.ToLower()), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(((Button)sender).Text + "?", GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 try
                 {
@@ -2421,12 +2425,6 @@ namespace srcrepair
             }
         }
 
-        private void PS_RemVideos_Click(object sender, EventArgs e)
-        {
-            // Удаляем все кастомные текстуры...
-            OpenCleanupWindow(CoreLib.IncludeTrDelim(Path.Combine(GV.FullGamePath, "materials")), "*.*", ((Button)sender).Text.ToLower());
-        }
-
         private void PS_RemModels_Click(object sender, EventArgs e)
         {
             // Удаляем все кастомные модели...
@@ -2437,6 +2435,12 @@ namespace srcrepair
         {
             // Удаляем все реплеи...
             OpenCleanupWindow(CoreLib.IncludeTrDelim(Path.Combine(GV.FullGamePath, "replay")), "*.*", ((Button)sender).Text.ToLower());
+        }
+
+        private void PS_RemTextures_Click(object sender, EventArgs e)
+        {
+            // Удаляем все кастомные текстуры...
+            OpenCleanupWindow(CoreLib.IncludeTrDelim(Path.Combine(GV.FullGamePath, "materials")), "*.*", ((Button)sender).Text.ToLower());
         }
     }
 }

@@ -173,6 +173,8 @@ namespace srcrepair
 
         private void CM_FTable_DoubleClick(object sender, EventArgs e)
         {
+            // Исправим известный баг VS с обработчиком двойного клика, снимающим флажок у файла.
+            if (!(CM_FTable.SelectedItems[0].Checked)) { CM_FTable.SelectedItems[0].Checked = true; } else { CM_FTable.SelectedItems[0].Checked = false; }
             // Запускаем Проводник и выделяем в нём выбранный пользователем файл...
             Process.Start("explorer.exe", @"/select," + @"""" + CM_FTable.SelectedItems[0].ToolTipText + @"""");
         }
