@@ -108,6 +108,7 @@
             this.PS_RemDnlCache = new System.Windows.Forms.Button();
             this.PS_RemCustMaps = new System.Windows.Forms.Button();
             this.PS_GB_SInfo = new System.Windows.Forms.GroupBox();
+            this.PS_RPDtResult = new System.Windows.Forms.Label();
             this.PS_PathDetector = new System.Windows.Forms.Label();
             this.PS_RSteamLogin = new System.Windows.Forms.Label();
             this.PS_RSteamPath = new System.Windows.Forms.Label();
@@ -873,6 +874,7 @@
             // 
             // PS_GB_SInfo
             // 
+            this.PS_GB_SInfo.Controls.Add(this.PS_RPDtResult);
             this.PS_GB_SInfo.Controls.Add(this.PS_PathDetector);
             this.PS_GB_SInfo.Controls.Add(this.PS_RSteamLogin);
             this.PS_GB_SInfo.Controls.Add(this.PS_RSteamPath);
@@ -882,6 +884,11 @@
             resources.ApplyResources(this.PS_GB_SInfo, "PS_GB_SInfo");
             this.PS_GB_SInfo.Name = "PS_GB_SInfo";
             this.PS_GB_SInfo.TabStop = false;
+            // 
+            // PS_RPDtResult
+            // 
+            resources.ApplyResources(this.PS_RPDtResult, "PS_RPDtResult");
+            this.PS_RPDtResult.Name = "PS_RPDtResult";
             // 
             // PS_PathDetector
             // 
@@ -1664,6 +1671,7 @@
         private System.Windows.Forms.Button PS_RemReplays;
         private System.Windows.Forms.Button PS_RemModels;
         private System.Windows.Forms.Button PS_RemTextures;
+        private System.Windows.Forms.Label PS_RPDtResult;
     }
 }
 

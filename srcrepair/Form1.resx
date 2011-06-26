@@ -813,15 +813,63 @@
   <metadata name="PS_GB_AdvRepr.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="PS_GB_Remover.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="PS_ResetSettings.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="PS_GB_SInfo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="PS_RemOldBin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="PS_GB_Solver.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="PS_RemGraphOpts.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="&gt;&gt;PS_ResetSettings.Name" xml:space="preserve">
+    <value>PS_ResetSettings</value>
+  </data>
+  <data name="&gt;&gt;PS_ResetSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_ResetSettings.Parent" xml:space="preserve">
+    <value>PS_GB_AdvRepr</value>
+  </data>
+  <data name="&gt;&gt;PS_ResetSettings.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;PS_RemOldBin.Name" xml:space="preserve">
+    <value>PS_RemOldBin</value>
+  </data>
+  <data name="&gt;&gt;PS_RemOldBin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemOldBin.Parent" xml:space="preserve">
+    <value>PS_GB_AdvRepr</value>
+  </data>
+  <data name="&gt;&gt;PS_RemOldBin.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;PS_RemGraphOpts.Name" xml:space="preserve">
+    <value>PS_RemGraphOpts</value>
+  </data>
+  <data name="&gt;&gt;PS_RemGraphOpts.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemGraphOpts.Parent" xml:space="preserve">
+    <value>PS_GB_AdvRepr</value>
+  </data>
+  <data name="&gt;&gt;PS_RemGraphOpts.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="PS_GB_AdvRepr.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 267</value>
+  </data>
+  <data name="PS_GB_AdvRepr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 106</value>
+  </data>
+  <data name="PS_GB_AdvRepr.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="PS_GB_AdvRepr.Text" xml:space="preserve">
+    <value>Advanced cleanup:</value>
+  </data>
   <data name="&gt;&gt;PS_GB_AdvRepr.Name" xml:space="preserve">
     <value>PS_GB_AdvRepr</value>
   </data>
@@ -833,6 +881,201 @@
   </data>
   <data name="&gt;&gt;PS_GB_AdvRepr.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <metadata name="PS_GB_Remover.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_RemReplays.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_RemModels.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_RemTextures.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_RemDemos.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_RemScreenShots.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_RemNavFiles.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_RemSoundCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_RemGraphCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_RemOldCfgs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_RemOldSpray.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_RemDnlCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_RemCustMaps.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="&gt;&gt;PS_RemReplays.Name" xml:space="preserve">
+    <value>PS_RemReplays</value>
+  </data>
+  <data name="&gt;&gt;PS_RemReplays.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemReplays.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_RemReplays.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;PS_RemModels.Name" xml:space="preserve">
+    <value>PS_RemModels</value>
+  </data>
+  <data name="&gt;&gt;PS_RemModels.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemModels.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_RemModels.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;PS_RemTextures.Name" xml:space="preserve">
+    <value>PS_RemTextures</value>
+  </data>
+  <data name="&gt;&gt;PS_RemTextures.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemTextures.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_RemTextures.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;PS_RemDemos.Name" xml:space="preserve">
+    <value>PS_RemDemos</value>
+  </data>
+  <data name="&gt;&gt;PS_RemDemos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemDemos.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_RemDemos.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;PS_RemScreenShots.Name" xml:space="preserve">
+    <value>PS_RemScreenShots</value>
+  </data>
+  <data name="&gt;&gt;PS_RemScreenShots.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemScreenShots.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_RemScreenShots.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;PS_RemNavFiles.Name" xml:space="preserve">
+    <value>PS_RemNavFiles</value>
+  </data>
+  <data name="&gt;&gt;PS_RemNavFiles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemNavFiles.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_RemNavFiles.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;PS_RemSoundCache.Name" xml:space="preserve">
+    <value>PS_RemSoundCache</value>
+  </data>
+  <data name="&gt;&gt;PS_RemSoundCache.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemSoundCache.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_RemSoundCache.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;PS_RemGraphCache.Name" xml:space="preserve">
+    <value>PS_RemGraphCache</value>
+  </data>
+  <data name="&gt;&gt;PS_RemGraphCache.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemGraphCache.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_RemGraphCache.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;PS_RemOldCfgs.Name" xml:space="preserve">
+    <value>PS_RemOldCfgs</value>
+  </data>
+  <data name="&gt;&gt;PS_RemOldCfgs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemOldCfgs.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_RemOldCfgs.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;PS_RemOldSpray.Name" xml:space="preserve">
+    <value>PS_RemOldSpray</value>
+  </data>
+  <data name="&gt;&gt;PS_RemOldSpray.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemOldSpray.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_RemOldSpray.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;PS_RemDnlCache.Name" xml:space="preserve">
+    <value>PS_RemDnlCache</value>
+  </data>
+  <data name="&gt;&gt;PS_RemDnlCache.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemDnlCache.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_RemDnlCache.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;PS_RemCustMaps.Name" xml:space="preserve">
+    <value>PS_RemCustMaps</value>
+  </data>
+  <data name="&gt;&gt;PS_RemCustMaps.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RemCustMaps.Parent" xml:space="preserve">
+    <value>PS_GB_Remover</value>
+  </data>
+  <data name="&gt;&gt;PS_RemCustMaps.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="PS_GB_Remover.Location" type="System.Drawing.Point, System.Drawing">
+    <value>296, 6</value>
+  </data>
+  <data name="PS_GB_Remover.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 367</value>
+  </data>
+  <data name="PS_GB_Remover.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="PS_GB_Remover.Text" xml:space="preserve">
+    <value>Safe cleanup:</value>
   </data>
   <data name="&gt;&gt;PS_GB_Remover.Name" xml:space="preserve">
     <value>PS_GB_Remover</value>
@@ -846,6 +1089,216 @@
   <data name="&gt;&gt;PS_GB_Remover.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="PS_GB_SInfo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_RPDtResult.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="PS_RPDtResult.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 60</value>
+  </data>
+  <data name="PS_RPDtResult.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 13</value>
+  </data>
+  <data name="PS_RPDtResult.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="PS_RPDtResult.Text" xml:space="preserve">
+    <value>successfully completed</value>
+  </data>
+  <data name="&gt;&gt;PS_RPDtResult.Name" xml:space="preserve">
+    <value>PS_RPDtResult</value>
+  </data>
+  <data name="&gt;&gt;PS_RPDtResult.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RPDtResult.Parent" xml:space="preserve">
+    <value>PS_GB_SInfo</value>
+  </data>
+  <data name="&gt;&gt;PS_RPDtResult.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="PS_PathDetector.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="PS_PathDetector.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 86</value>
+  </data>
+  <data name="PS_PathDetector.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 13</value>
+  </data>
+  <data name="PS_PathDetector.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="PS_PathDetector.Text" xml:space="preserve">
+    <value>Non-ASCII symbols not detected</value>
+  </data>
+  <data name="PS_PathDetector.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;PS_PathDetector.Name" xml:space="preserve">
+    <value>PS_PathDetector</value>
+  </data>
+  <data name="&gt;&gt;PS_PathDetector.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_PathDetector.Parent" xml:space="preserve">
+    <value>PS_GB_SInfo</value>
+  </data>
+  <data name="&gt;&gt;PS_PathDetector.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="PS_RSteamLogin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="PS_RSteamLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 38</value>
+  </data>
+  <data name="PS_RSteamLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 13</value>
+  </data>
+  <data name="PS_RSteamLogin.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;PS_RSteamLogin.Name" xml:space="preserve">
+    <value>PS_RSteamLogin</value>
+  </data>
+  <data name="&gt;&gt;PS_RSteamLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RSteamLogin.Parent" xml:space="preserve">
+    <value>PS_GB_SInfo</value>
+  </data>
+  <data name="&gt;&gt;PS_RSteamLogin.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="PS_RSteamPath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="PS_RSteamPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 16</value>
+  </data>
+  <data name="PS_RSteamPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 13</value>
+  </data>
+  <data name="PS_RSteamPath.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;PS_RSteamPath.Name" xml:space="preserve">
+    <value>PS_RSteamPath</value>
+  </data>
+  <data name="&gt;&gt;PS_RSteamPath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_RSteamPath.Parent" xml:space="preserve">
+    <value>PS_GB_SInfo</value>
+  </data>
+  <data name="&gt;&gt;PS_RSteamPath.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="L_PS_PathDetector.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_PS_PathDetector.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_PS_PathDetector.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 60</value>
+  </data>
+  <data name="L_PS_PathDetector.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 13</value>
+  </data>
+  <data name="L_PS_PathDetector.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="L_PS_PathDetector.Text" xml:space="preserve">
+    <value>Path check:</value>
+  </data>
+  <data name="&gt;&gt;L_PS_PathDetector.Name" xml:space="preserve">
+    <value>L_PS_PathDetector</value>
+  </data>
+  <data name="&gt;&gt;L_PS_PathDetector.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_PS_PathDetector.Parent" xml:space="preserve">
+    <value>PS_GB_SInfo</value>
+  </data>
+  <data name="&gt;&gt;L_PS_PathDetector.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="L_PS_RSteamLogin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_PS_RSteamLogin.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_PS_RSteamLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 38</value>
+  </data>
+  <data name="L_PS_RSteamLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 13</value>
+  </data>
+  <data name="L_PS_RSteamLogin.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="L_PS_RSteamLogin.Text" xml:space="preserve">
+    <value>Steam login:</value>
+  </data>
+  <data name="&gt;&gt;L_PS_RSteamLogin.Name" xml:space="preserve">
+    <value>L_PS_RSteamLogin</value>
+  </data>
+  <data name="&gt;&gt;L_PS_RSteamLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_PS_RSteamLogin.Parent" xml:space="preserve">
+    <value>PS_GB_SInfo</value>
+  </data>
+  <data name="&gt;&gt;L_PS_RSteamLogin.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="L_PS_RSteamPath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_PS_RSteamPath.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_PS_RSteamPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 16</value>
+  </data>
+  <data name="L_PS_RSteamPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="L_PS_RSteamPath.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="L_PS_RSteamPath.Text" xml:space="preserve">
+    <value>Steam path:</value>
+  </data>
+  <data name="&gt;&gt;L_PS_RSteamPath.Name" xml:space="preserve">
+    <value>L_PS_RSteamPath</value>
+  </data>
+  <data name="&gt;&gt;L_PS_RSteamPath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_PS_RSteamPath.Parent" xml:space="preserve">
+    <value>PS_GB_SInfo</value>
+  </data>
+  <data name="&gt;&gt;L_PS_RSteamPath.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="PS_GB_SInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 147</value>
+  </data>
+  <data name="PS_GB_SInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 114</value>
+  </data>
+  <data name="PS_GB_SInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="PS_GB_SInfo.Text" xml:space="preserve">
+    <value>Steam general infomation</value>
+  </data>
   <data name="&gt;&gt;PS_GB_SInfo.Name" xml:space="preserve">
     <value>PS_GB_SInfo</value>
   </data>
@@ -857,6 +1310,96 @@
   </data>
   <data name="&gt;&gt;PS_GB_SInfo.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <metadata name="PS_GB_Solver.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_ExecuteNow.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_SteamLang.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="L_PS_SteamLang.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_CleanRegistry.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PS_CleanBlobs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="&gt;&gt;PS_ExecuteNow.Name" xml:space="preserve">
+    <value>PS_ExecuteNow</value>
+  </data>
+  <data name="&gt;&gt;PS_ExecuteNow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_ExecuteNow.Parent" xml:space="preserve">
+    <value>PS_GB_Solver</value>
+  </data>
+  <data name="&gt;&gt;PS_ExecuteNow.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;PS_SteamLang.Name" xml:space="preserve">
+    <value>PS_SteamLang</value>
+  </data>
+  <data name="&gt;&gt;PS_SteamLang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_SteamLang.Parent" xml:space="preserve">
+    <value>PS_GB_Solver</value>
+  </data>
+  <data name="&gt;&gt;PS_SteamLang.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;L_PS_SteamLang.Name" xml:space="preserve">
+    <value>L_PS_SteamLang</value>
+  </data>
+  <data name="&gt;&gt;L_PS_SteamLang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_PS_SteamLang.Parent" xml:space="preserve">
+    <value>PS_GB_Solver</value>
+  </data>
+  <data name="&gt;&gt;L_PS_SteamLang.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanRegistry.Name" xml:space="preserve">
+    <value>PS_CleanRegistry</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanRegistry.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanRegistry.Parent" xml:space="preserve">
+    <value>PS_GB_Solver</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanRegistry.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanBlobs.Name" xml:space="preserve">
+    <value>PS_CleanBlobs</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanBlobs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanBlobs.Parent" xml:space="preserve">
+    <value>PS_GB_Solver</value>
+  </data>
+  <data name="&gt;&gt;PS_CleanBlobs.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="PS_GB_Solver.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="PS_GB_Solver.Size" type="System.Drawing.Size, System.Drawing">
+    <value>284, 135</value>
+  </data>
+  <data name="PS_GB_Solver.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="PS_GB_Solver.Text" xml:space="preserve">
+    <value>Clean Steam settings and blobs</value>
   </data>
   <data name="&gt;&gt;PS_GB_Solver.Name" xml:space="preserve">
     <value>PS_GB_Solver</value>
@@ -906,18 +1449,27 @@
   <metadata name="FP_OpenNotepad.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="FP_OpenNotepad.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="FP_OpenNotepad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>374, 106</value>
-  </data>
-  <data name="FP_OpenNotepad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 23</value>
-  </data>
-  <data name="FP_OpenNotepad.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
+  <metadata name="FP_CreateBackUp.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="FP_Uninstall.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="FP_Install.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="FP_GB_Desc.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="FP_ConfigSel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="L_FP_ConfigSel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="FP_TopLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="&gt;&gt;FP_OpenNotepad.Name" xml:space="preserve">
     <value>FP_OpenNotepad</value>
   </data>
@@ -929,24 +1481,6 @@
   </data>
   <data name="&gt;&gt;FP_OpenNotepad.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <metadata name="FP_CreateBackUp.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="FP_CreateBackUp.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="FP_CreateBackUp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>157, 138</value>
-  </data>
-  <data name="FP_CreateBackUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 17</value>
-  </data>
-  <data name="FP_CreateBackUp.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="FP_CreateBackUp.Text" xml:space="preserve">
-    <value>Create backup of config</value>
   </data>
   <data name="&gt;&gt;FP_CreateBackUp.Name" xml:space="preserve">
     <value>FP_CreateBackUp</value>
@@ -960,21 +1494,6 @@
   <data name="&gt;&gt;FP_CreateBackUp.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="FP_Uninstall.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="FP_Uninstall.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 339</value>
-  </data>
-  <data name="FP_Uninstall.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 23</value>
-  </data>
-  <data name="FP_Uninstall.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="FP_Uninstall.Text" xml:space="preserve">
-    <value>Remove installed config</value>
-  </data>
   <data name="&gt;&gt;FP_Uninstall.Name" xml:space="preserve">
     <value>FP_Uninstall</value>
   </data>
@@ -986,24 +1505,6 @@
   </data>
   <data name="&gt;&gt;FP_Uninstall.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <metadata name="FP_Install.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="FP_Install.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="FP_Install.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 339</value>
-  </data>
-  <data name="FP_Install.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 23</value>
-  </data>
-  <data name="FP_Install.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="FP_Install.Text" xml:space="preserve">
-    <value>Install selected config</value>
   </data>
   <data name="&gt;&gt;FP_Install.Name" xml:space="preserve">
     <value>FP_Install</value>
@@ -1017,36 +1518,6 @@
   <data name="&gt;&gt;FP_Install.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="FP_GB_Desc.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="FP_Description.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="&gt;&gt;FP_Description.Name" xml:space="preserve">
-    <value>FP_Description</value>
-  </data>
-  <data name="&gt;&gt;FP_Description.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FP_Description.Parent" xml:space="preserve">
-    <value>FP_GB_Desc</value>
-  </data>
-  <data name="&gt;&gt;FP_Description.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="FP_GB_Desc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 161</value>
-  </data>
-  <data name="FP_GB_Desc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>414, 163</value>
-  </data>
-  <data name="FP_GB_Desc.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="FP_GB_Desc.Text" xml:space="preserve">
-    <value>Description of selected FPS-config</value>
-  </data>
   <data name="&gt;&gt;FP_GB_Desc.Name" xml:space="preserve">
     <value>FP_GB_Desc</value>
   </data>
@@ -1058,18 +1529,6 @@
   </data>
   <data name="&gt;&gt;FP_GB_Desc.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <metadata name="FP_ConfigSel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="FP_ConfigSel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 108</value>
-  </data>
-  <data name="FP_ConfigSel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 21</value>
-  </data>
-  <data name="FP_ConfigSel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
   </data>
   <data name="&gt;&gt;FP_ConfigSel.Name" xml:space="preserve">
     <value>FP_ConfigSel</value>
@@ -1083,24 +1542,6 @@
   <data name="&gt;&gt;FP_ConfigSel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="L_FP_ConfigSel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_FP_ConfigSel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_FP_ConfigSel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 111</value>
-  </data>
-  <data name="L_FP_ConfigSel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 13</value>
-  </data>
-  <data name="L_FP_ConfigSel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="L_FP_ConfigSel.Text" xml:space="preserve">
-    <value>Select one of available configs:</value>
-  </data>
   <data name="&gt;&gt;L_FP_ConfigSel.Name" xml:space="preserve">
     <value>L_FP_ConfigSel</value>
   </data>
@@ -1112,21 +1553,6 @@
   </data>
   <data name="&gt;&gt;L_FP_ConfigSel.ZOrder" xml:space="preserve">
     <value>6</value>
-  </data>
-  <metadata name="FP_TopLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="FP_TopLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 12</value>
-  </data>
-  <data name="FP_TopLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>450, 96</value>
-  </data>
-  <data name="FP_TopLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="FP_TopLabel.Text" xml:space="preserve">
-    <value>On this page you can install one of available and tested by us FPS-configs into the game. FPS-config is a file autoexec.cfg, which can significantly increase the performance of the game with loss of a picture quality. You can edit installed FPS-config manually later in Config Editor tab. Attention! If you use FPS-config the Graphic Tweaker will not be able to edit graphic settings (the settings obtained from the config have higher priority).</value>
   </data>
   <data name="&gt;&gt;FP_TopLabel.Name" xml:space="preserve">
     <value>FP_TopLabel</value>
@@ -2810,78 +3236,6 @@
   <data name="CE_CVal.Width" type="System.Int32, mscorlib">
     <value>255</value>
   </data>
-  <metadata name="PS_GB_AdvRepr.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_ResetSettings.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_RemOldBin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_RemGraphOpts.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="&gt;&gt;PS_ResetSettings.Name" xml:space="preserve">
-    <value>PS_ResetSettings</value>
-  </data>
-  <data name="&gt;&gt;PS_ResetSettings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_ResetSettings.Parent" xml:space="preserve">
-    <value>PS_GB_AdvRepr</value>
-  </data>
-  <data name="&gt;&gt;PS_ResetSettings.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;PS_RemOldBin.Name" xml:space="preserve">
-    <value>PS_RemOldBin</value>
-  </data>
-  <data name="&gt;&gt;PS_RemOldBin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemOldBin.Parent" xml:space="preserve">
-    <value>PS_GB_AdvRepr</value>
-  </data>
-  <data name="&gt;&gt;PS_RemOldBin.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;PS_RemGraphOpts.Name" xml:space="preserve">
-    <value>PS_RemGraphOpts</value>
-  </data>
-  <data name="&gt;&gt;PS_RemGraphOpts.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemGraphOpts.Parent" xml:space="preserve">
-    <value>PS_GB_AdvRepr</value>
-  </data>
-  <data name="&gt;&gt;PS_RemGraphOpts.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="PS_GB_AdvRepr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 267</value>
-  </data>
-  <data name="PS_GB_AdvRepr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>284, 106</value>
-  </data>
-  <data name="PS_GB_AdvRepr.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="PS_GB_AdvRepr.Text" xml:space="preserve">
-    <value>Advanced cleanup:</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_AdvRepr.Name" xml:space="preserve">
-    <value>PS_GB_AdvRepr</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_AdvRepr.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_AdvRepr.Parent" xml:space="preserve">
-    <value>ProblemSolver</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_AdvRepr.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="PS_ResetSettings.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -2968,213 +3322,6 @@
   </data>
   <data name="&gt;&gt;PS_RemGraphOpts.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <metadata name="PS_GB_Remover.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_RemReplays.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_RemModels.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_RemTextures.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_RemDemos.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_RemScreenShots.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_RemNavFiles.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_RemSoundCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_RemGraphCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_RemOldCfgs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_RemOldSpray.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_RemDnlCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_RemCustMaps.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="&gt;&gt;PS_RemReplays.Name" xml:space="preserve">
-    <value>PS_RemReplays</value>
-  </data>
-  <data name="&gt;&gt;PS_RemReplays.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemReplays.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemReplays.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;PS_RemModels.Name" xml:space="preserve">
-    <value>PS_RemModels</value>
-  </data>
-  <data name="&gt;&gt;PS_RemModels.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemModels.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemModels.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;PS_RemTextures.Name" xml:space="preserve">
-    <value>PS_RemTextures</value>
-  </data>
-  <data name="&gt;&gt;PS_RemTextures.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemTextures.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemTextures.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;PS_RemDemos.Name" xml:space="preserve">
-    <value>PS_RemDemos</value>
-  </data>
-  <data name="&gt;&gt;PS_RemDemos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemDemos.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemDemos.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;PS_RemScreenShots.Name" xml:space="preserve">
-    <value>PS_RemScreenShots</value>
-  </data>
-  <data name="&gt;&gt;PS_RemScreenShots.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemScreenShots.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemScreenShots.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;PS_RemNavFiles.Name" xml:space="preserve">
-    <value>PS_RemNavFiles</value>
-  </data>
-  <data name="&gt;&gt;PS_RemNavFiles.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemNavFiles.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemNavFiles.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;PS_RemSoundCache.Name" xml:space="preserve">
-    <value>PS_RemSoundCache</value>
-  </data>
-  <data name="&gt;&gt;PS_RemSoundCache.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemSoundCache.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemSoundCache.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;PS_RemGraphCache.Name" xml:space="preserve">
-    <value>PS_RemGraphCache</value>
-  </data>
-  <data name="&gt;&gt;PS_RemGraphCache.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemGraphCache.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemGraphCache.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;PS_RemOldCfgs.Name" xml:space="preserve">
-    <value>PS_RemOldCfgs</value>
-  </data>
-  <data name="&gt;&gt;PS_RemOldCfgs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemOldCfgs.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemOldCfgs.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;PS_RemOldSpray.Name" xml:space="preserve">
-    <value>PS_RemOldSpray</value>
-  </data>
-  <data name="&gt;&gt;PS_RemOldSpray.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemOldSpray.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemOldSpray.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;PS_RemDnlCache.Name" xml:space="preserve">
-    <value>PS_RemDnlCache</value>
-  </data>
-  <data name="&gt;&gt;PS_RemDnlCache.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemDnlCache.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemDnlCache.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;PS_RemCustMaps.Name" xml:space="preserve">
-    <value>PS_RemCustMaps</value>
-  </data>
-  <data name="&gt;&gt;PS_RemCustMaps.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RemCustMaps.Parent" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_RemCustMaps.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="PS_GB_Remover.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 6</value>
-  </data>
-  <data name="PS_GB_Remover.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 367</value>
-  </data>
-  <data name="PS_GB_Remover.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="PS_GB_Remover.Text" xml:space="preserve">
-    <value>Safe cleanup:</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_Remover.Name" xml:space="preserve">
-    <value>PS_GB_Remover</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_Remover.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_Remover.Parent" xml:space="preserve">
-    <value>ProblemSolver</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_Remover.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <metadata name="PS_RemReplays.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3500,393 +3647,6 @@
   <data name="&gt;&gt;PS_RemCustMaps.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <metadata name="PS_GB_SInfo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_PathDetector.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_RSteamLogin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_RSteamPath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="L_PS_PathDetector.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="L_PS_RSteamLogin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="L_PS_RSteamPath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="&gt;&gt;PS_PathDetector.Name" xml:space="preserve">
-    <value>PS_PathDetector</value>
-  </data>
-  <data name="&gt;&gt;PS_PathDetector.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_PathDetector.Parent" xml:space="preserve">
-    <value>PS_GB_SInfo</value>
-  </data>
-  <data name="&gt;&gt;PS_PathDetector.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamLogin.Name" xml:space="preserve">
-    <value>PS_RSteamLogin</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamLogin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamLogin.Parent" xml:space="preserve">
-    <value>PS_GB_SInfo</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamLogin.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamPath.Name" xml:space="preserve">
-    <value>PS_RSteamPath</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamPath.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamPath.Parent" xml:space="preserve">
-    <value>PS_GB_SInfo</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamPath.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;L_PS_PathDetector.Name" xml:space="preserve">
-    <value>L_PS_PathDetector</value>
-  </data>
-  <data name="&gt;&gt;L_PS_PathDetector.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_PS_PathDetector.Parent" xml:space="preserve">
-    <value>PS_GB_SInfo</value>
-  </data>
-  <data name="&gt;&gt;L_PS_PathDetector.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;L_PS_RSteamLogin.Name" xml:space="preserve">
-    <value>L_PS_RSteamLogin</value>
-  </data>
-  <data name="&gt;&gt;L_PS_RSteamLogin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_PS_RSteamLogin.Parent" xml:space="preserve">
-    <value>PS_GB_SInfo</value>
-  </data>
-  <data name="&gt;&gt;L_PS_RSteamLogin.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;L_PS_RSteamPath.Name" xml:space="preserve">
-    <value>L_PS_RSteamPath</value>
-  </data>
-  <data name="&gt;&gt;L_PS_RSteamPath.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_PS_RSteamPath.Parent" xml:space="preserve">
-    <value>PS_GB_SInfo</value>
-  </data>
-  <data name="&gt;&gt;L_PS_RSteamPath.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="PS_GB_SInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 147</value>
-  </data>
-  <data name="PS_GB_SInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>284, 114</value>
-  </data>
-  <data name="PS_GB_SInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="PS_GB_SInfo.Text" xml:space="preserve">
-    <value>Steam general infomation</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_SInfo.Name" xml:space="preserve">
-    <value>PS_GB_SInfo</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_SInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_SInfo.Parent" xml:space="preserve">
-    <value>ProblemSolver</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_SInfo.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="PS_PathDetector.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="PS_PathDetector.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 86</value>
-  </data>
-  <data name="PS_PathDetector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 13</value>
-  </data>
-  <data name="PS_PathDetector.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="PS_PathDetector.Text" xml:space="preserve">
-    <value>Non-ASCII symbols not detected</value>
-  </data>
-  <data name="PS_PathDetector.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;PS_PathDetector.Name" xml:space="preserve">
-    <value>PS_PathDetector</value>
-  </data>
-  <data name="&gt;&gt;PS_PathDetector.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_PathDetector.Parent" xml:space="preserve">
-    <value>PS_GB_SInfo</value>
-  </data>
-  <data name="&gt;&gt;PS_PathDetector.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="PS_RSteamLogin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="PS_RSteamLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 38</value>
-  </data>
-  <data name="PS_RSteamLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 13</value>
-  </data>
-  <data name="PS_RSteamLogin.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamLogin.Name" xml:space="preserve">
-    <value>PS_RSteamLogin</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamLogin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamLogin.Parent" xml:space="preserve">
-    <value>PS_GB_SInfo</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamLogin.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="PS_RSteamPath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="PS_RSteamPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 16</value>
-  </data>
-  <data name="PS_RSteamPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 13</value>
-  </data>
-  <data name="PS_RSteamPath.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamPath.Name" xml:space="preserve">
-    <value>PS_RSteamPath</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamPath.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamPath.Parent" xml:space="preserve">
-    <value>PS_GB_SInfo</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamPath.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="L_PS_PathDetector.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_PS_PathDetector.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_PS_PathDetector.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 60</value>
-  </data>
-  <data name="L_PS_PathDetector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 13</value>
-  </data>
-  <data name="L_PS_PathDetector.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="L_PS_PathDetector.Text" xml:space="preserve">
-    <value>Path check: Successfully completed</value>
-  </data>
-  <data name="&gt;&gt;L_PS_PathDetector.Name" xml:space="preserve">
-    <value>L_PS_PathDetector</value>
-  </data>
-  <data name="&gt;&gt;L_PS_PathDetector.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_PS_PathDetector.Parent" xml:space="preserve">
-    <value>PS_GB_SInfo</value>
-  </data>
-  <data name="&gt;&gt;L_PS_PathDetector.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <metadata name="L_PS_RSteamLogin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_PS_RSteamLogin.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_PS_RSteamLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 38</value>
-  </data>
-  <data name="L_PS_RSteamLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 13</value>
-  </data>
-  <data name="L_PS_RSteamLogin.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="L_PS_RSteamLogin.Text" xml:space="preserve">
-    <value>Steam login:</value>
-  </data>
-  <data name="&gt;&gt;L_PS_RSteamLogin.Name" xml:space="preserve">
-    <value>L_PS_RSteamLogin</value>
-  </data>
-  <data name="&gt;&gt;L_PS_RSteamLogin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_PS_RSteamLogin.Parent" xml:space="preserve">
-    <value>PS_GB_SInfo</value>
-  </data>
-  <data name="&gt;&gt;L_PS_RSteamLogin.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <metadata name="L_PS_RSteamPath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_PS_RSteamPath.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_PS_RSteamPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 16</value>
-  </data>
-  <data name="L_PS_RSteamPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 13</value>
-  </data>
-  <data name="L_PS_RSteamPath.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="L_PS_RSteamPath.Text" xml:space="preserve">
-    <value>Steam path:</value>
-  </data>
-  <data name="&gt;&gt;L_PS_RSteamPath.Name" xml:space="preserve">
-    <value>L_PS_RSteamPath</value>
-  </data>
-  <data name="&gt;&gt;L_PS_RSteamPath.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_PS_RSteamPath.Parent" xml:space="preserve">
-    <value>PS_GB_SInfo</value>
-  </data>
-  <data name="&gt;&gt;L_PS_RSteamPath.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <metadata name="PS_GB_Solver.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_ExecuteNow.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_SteamLang.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="L_PS_SteamLang.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_CleanRegistry.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="PS_CleanBlobs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="&gt;&gt;PS_ExecuteNow.Name" xml:space="preserve">
-    <value>PS_ExecuteNow</value>
-  </data>
-  <data name="&gt;&gt;PS_ExecuteNow.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_ExecuteNow.Parent" xml:space="preserve">
-    <value>PS_GB_Solver</value>
-  </data>
-  <data name="&gt;&gt;PS_ExecuteNow.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;PS_SteamLang.Name" xml:space="preserve">
-    <value>PS_SteamLang</value>
-  </data>
-  <data name="&gt;&gt;PS_SteamLang.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_SteamLang.Parent" xml:space="preserve">
-    <value>PS_GB_Solver</value>
-  </data>
-  <data name="&gt;&gt;PS_SteamLang.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;L_PS_SteamLang.Name" xml:space="preserve">
-    <value>L_PS_SteamLang</value>
-  </data>
-  <data name="&gt;&gt;L_PS_SteamLang.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_PS_SteamLang.Parent" xml:space="preserve">
-    <value>PS_GB_Solver</value>
-  </data>
-  <data name="&gt;&gt;L_PS_SteamLang.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;PS_CleanRegistry.Name" xml:space="preserve">
-    <value>PS_CleanRegistry</value>
-  </data>
-  <data name="&gt;&gt;PS_CleanRegistry.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_CleanRegistry.Parent" xml:space="preserve">
-    <value>PS_GB_Solver</value>
-  </data>
-  <data name="&gt;&gt;PS_CleanRegistry.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;PS_CleanBlobs.Name" xml:space="preserve">
-    <value>PS_CleanBlobs</value>
-  </data>
-  <data name="&gt;&gt;PS_CleanBlobs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_CleanBlobs.Parent" xml:space="preserve">
-    <value>PS_GB_Solver</value>
-  </data>
-  <data name="&gt;&gt;PS_CleanBlobs.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="PS_GB_Solver.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
-  </data>
-  <data name="PS_GB_Solver.Size" type="System.Drawing.Size, System.Drawing">
-    <value>284, 135</value>
-  </data>
-  <data name="PS_GB_Solver.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="PS_GB_Solver.Text" xml:space="preserve">
-    <value>Clean Steam settings and blobs</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_Solver.Name" xml:space="preserve">
-    <value>PS_GB_Solver</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_Solver.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_Solver.Parent" xml:space="preserve">
-    <value>ProblemSolver</value>
-  </data>
-  <data name="&gt;&gt;PS_GB_Solver.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <metadata name="PS_ExecuteNow.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -4040,6 +3800,162 @@
   <data name="&gt;&gt;PS_CleanBlobs.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="FP_OpenNotepad.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="FP_OpenNotepad.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="FP_OpenNotepad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>374, 106</value>
+  </data>
+  <data name="FP_OpenNotepad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 23</value>
+  </data>
+  <data name="FP_OpenNotepad.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;FP_OpenNotepad.Name" xml:space="preserve">
+    <value>FP_OpenNotepad</value>
+  </data>
+  <data name="&gt;&gt;FP_OpenNotepad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FP_OpenNotepad.Parent" xml:space="preserve">
+    <value>FPSCfgInstall</value>
+  </data>
+  <data name="&gt;&gt;FP_OpenNotepad.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="FP_CreateBackUp.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="FP_CreateBackUp.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="FP_CreateBackUp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>157, 138</value>
+  </data>
+  <data name="FP_CreateBackUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 17</value>
+  </data>
+  <data name="FP_CreateBackUp.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="FP_CreateBackUp.Text" xml:space="preserve">
+    <value>Create backup of config</value>
+  </data>
+  <data name="&gt;&gt;FP_CreateBackUp.Name" xml:space="preserve">
+    <value>FP_CreateBackUp</value>
+  </data>
+  <data name="&gt;&gt;FP_CreateBackUp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FP_CreateBackUp.Parent" xml:space="preserve">
+    <value>FPSCfgInstall</value>
+  </data>
+  <data name="&gt;&gt;FP_CreateBackUp.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="FP_Uninstall.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="FP_Uninstall.Location" type="System.Drawing.Point, System.Drawing">
+    <value>240, 339</value>
+  </data>
+  <data name="FP_Uninstall.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 23</value>
+  </data>
+  <data name="FP_Uninstall.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="FP_Uninstall.Text" xml:space="preserve">
+    <value>Remove installed config</value>
+  </data>
+  <data name="&gt;&gt;FP_Uninstall.Name" xml:space="preserve">
+    <value>FP_Uninstall</value>
+  </data>
+  <data name="&gt;&gt;FP_Uninstall.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FP_Uninstall.Parent" xml:space="preserve">
+    <value>FPSCfgInstall</value>
+  </data>
+  <data name="&gt;&gt;FP_Uninstall.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="FP_Install.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="FP_Install.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="FP_Install.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 339</value>
+  </data>
+  <data name="FP_Install.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 23</value>
+  </data>
+  <data name="FP_Install.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="FP_Install.Text" xml:space="preserve">
+    <value>Install selected config</value>
+  </data>
+  <data name="&gt;&gt;FP_Install.Name" xml:space="preserve">
+    <value>FP_Install</value>
+  </data>
+  <data name="&gt;&gt;FP_Install.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FP_Install.Parent" xml:space="preserve">
+    <value>FPSCfgInstall</value>
+  </data>
+  <data name="&gt;&gt;FP_Install.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="FP_GB_Desc.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="FP_Description.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="&gt;&gt;FP_Description.Name" xml:space="preserve">
+    <value>FP_Description</value>
+  </data>
+  <data name="&gt;&gt;FP_Description.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FP_Description.Parent" xml:space="preserve">
+    <value>FP_GB_Desc</value>
+  </data>
+  <data name="&gt;&gt;FP_Description.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="FP_GB_Desc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 161</value>
+  </data>
+  <data name="FP_GB_Desc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>414, 163</value>
+  </data>
+  <data name="FP_GB_Desc.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="FP_GB_Desc.Text" xml:space="preserve">
+    <value>Description of selected FPS-config</value>
+  </data>
+  <data name="&gt;&gt;FP_GB_Desc.Name" xml:space="preserve">
+    <value>FP_GB_Desc</value>
+  </data>
+  <data name="&gt;&gt;FP_GB_Desc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FP_GB_Desc.Parent" xml:space="preserve">
+    <value>FPSCfgInstall</value>
+  </data>
+  <data name="&gt;&gt;FP_GB_Desc.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <metadata name="FP_Description.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -4063,6 +3979,87 @@
   </data>
   <data name="&gt;&gt;FP_Description.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <metadata name="FP_ConfigSel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="FP_ConfigSel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 108</value>
+  </data>
+  <data name="FP_ConfigSel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 21</value>
+  </data>
+  <data name="FP_ConfigSel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;FP_ConfigSel.Name" xml:space="preserve">
+    <value>FP_ConfigSel</value>
+  </data>
+  <data name="&gt;&gt;FP_ConfigSel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FP_ConfigSel.Parent" xml:space="preserve">
+    <value>FPSCfgInstall</value>
+  </data>
+  <data name="&gt;&gt;FP_ConfigSel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="L_FP_ConfigSel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_FP_ConfigSel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_FP_ConfigSel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>48, 111</value>
+  </data>
+  <data name="L_FP_ConfigSel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 13</value>
+  </data>
+  <data name="L_FP_ConfigSel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="L_FP_ConfigSel.Text" xml:space="preserve">
+    <value>Select one of available configs:</value>
+  </data>
+  <data name="&gt;&gt;L_FP_ConfigSel.Name" xml:space="preserve">
+    <value>L_FP_ConfigSel</value>
+  </data>
+  <data name="&gt;&gt;L_FP_ConfigSel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_FP_ConfigSel.Parent" xml:space="preserve">
+    <value>FPSCfgInstall</value>
+  </data>
+  <data name="&gt;&gt;L_FP_ConfigSel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <metadata name="FP_TopLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="FP_TopLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 12</value>
+  </data>
+  <data name="FP_TopLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>450, 96</value>
+  </data>
+  <data name="FP_TopLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="FP_TopLabel.Text" xml:space="preserve">
+    <value>On this page you can install one of available and tested by us FPS-configs into the game. FPS-config is a file autoexec.cfg, which can significantly increase the performance of the game with loss of a picture quality. You can edit installed FPS-config manually later in Config Editor tab. Attention! If you use FPS-config the Graphic Tweaker will not be able to edit graphic settings (the settings obtained from the config have higher priority).</value>
+  </data>
+  <data name="&gt;&gt;FP_TopLabel.Name" xml:space="preserve">
+    <value>FP_TopLabel</value>
+  </data>
+  <data name="&gt;&gt;FP_TopLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FP_TopLabel.Parent" xml:space="preserve">
+    <value>FPSCfgInstall</value>
+  </data>
+  <data name="&gt;&gt;FP_TopLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <metadata name="BU_LVTable.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
