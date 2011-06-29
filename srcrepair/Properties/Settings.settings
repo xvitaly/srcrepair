@@ -38,5 +38,8 @@
     <Setting Name="FPConfCreateBackUps" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="DebugLogFileName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">debug.log</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

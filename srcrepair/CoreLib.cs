@@ -493,5 +493,50 @@ namespace srcrepair
             NewVersion = DnlStr.Substring(0, DnlStr.IndexOf("!"));
             if (CompareVersions(CurrentVersion, NewVersion)) { return true; } else { return false; }
         }
+
+        /// <summary>
+        /// Функция, записывающая в лог-файл текст исключения, дату его возникновения
+        /// и другую отладочную информацию, а также выводящая дружественное сообщение для
+        /// пользователя и подробное для разработчика.
+        /// </summary>
+        /// <param name="FrindlyMsg">Понятное пользователю сообщение</param>
+        /// <param name="DevMsg">Отладочное сообщение</param>
+        /// <param name="DevMethod">Метод, вызвавший исключение</param>
+        /// <param name="MsgIcon">Тип иконки: предупреждение, ошибка и т.д.</param>
+        public static void HandleExceptionEx(string FrindlyMsg, string DevMsg, string DevMethod, MessageBoxIcon MsgIcon)
+        {
+            string ResultString = String.Format("{0} raised by: {1}", DevMsg, DevMethod);
+            #if DEBUG
+            // Для режима отладки покажем сообщение, понятное разработчикам...
+            MessageBox.Show(ResultString, GV.AppName, MessageBoxButtons.OK, MsgIcon);
+            #else
+            // Для обычного режима покажем обычное сообщение...
+            MessageBox.Show(FrindlyMsg, GV.AppName, MessageBoxButtons.OK, MsgIcon);
+            #endif
+            // Запишем в файл...
+            try
+            {
+                // Сгенерируем путь к файлу с логом...
+                string DebugFileName = Path.Combine(GV.AppUserDir, Properties.Settings.Default.DebugLogFileName);
+                // Если файл не существует, создадим его и сразу закроем...
+                if (!File.Exists(DebugFileName))
+                {
+                    using (FileStream fs = File.Create(DebugFileName)) // Создаём...
+                    {
+                        // Закрываем...
+                        fs.Close();
+                    }
+                }
+                // Начинаем записывать в лог-файл...
+                using (StreamWriter DFile = new StreamWriter(DebugFileName, true))
+                {
+                    // Делаем запись...
+                    DFile.WriteLine(String.Format("{0}: {1}", WriteDateToString(DateTime.Now, false), ResultString));
+                    // Закрываем файл...
+                    DFile.Close();
+                }
+            }
+            catch { /* Подавляем исключения... */ }
+        }
     }
 }

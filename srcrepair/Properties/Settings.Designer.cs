@@ -159,5 +159,14 @@ namespace srcrepair.Properties {
                 this["FPConfCreateBackUps"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("debug.log")]
+        public string DebugLogFileName {
+            get {
+                return ((string)(this["DebugLogFileName"]));
+            }
+        }
     }
 }
