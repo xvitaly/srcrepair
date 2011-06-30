@@ -210,7 +210,7 @@ namespace srcrepair
         private void CreateRegBackUpNow(string RKey, string FileName, string DestDir)
         {
             // Генерируем строку с параметрами...
-            string Params = @"/ea """ + DestDir + FileName + "_" + CoreLib.WriteDateToString(DateTime.Now, true) + @".reg""" + " " + RKey;
+            string Params = @"/ea """ + CoreLib.IncludeTrDelim(DestDir) + FileName + "_" + CoreLib.WriteDateToString(DateTime.Now, true) + @".reg""" + " " + RKey;
             // Запускаем и ждём завершения...
             CoreLib.StartProcessAndWait("regedit.exe", Params);
         }
@@ -339,6 +339,8 @@ namespace srcrepair
                 case 1: CoreLib.WriteSRCDWord("mat_picmip", 1, SAppName);
                     break;
                 case 2: CoreLib.WriteSRCDWord("mat_picmip", 0, SAppName);
+                    break;
+                case 3: CoreLib.WriteSRCDWord("mat_picmip", -1, SAppName);
                     break;
             }
 
@@ -581,6 +583,8 @@ namespace srcrepair
             {
                 switch (CoreLib.GetSRCDWord("mat_picmip", SAppName))
                 {
+                    case -1: GT_TextureQuality.SelectedIndex = 3;
+                        break;
                     case 0: GT_TextureQuality.SelectedIndex = 2;
                         break;
                     case 1: GT_TextureQuality.SelectedIndex = 1;

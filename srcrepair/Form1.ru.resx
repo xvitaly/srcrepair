@@ -318,6 +318,9 @@
   <data name="GT_TextureQuality.Items2" xml:space="preserve">
     <value>Высокая</value>
   </data>
+  <data name="GT_TextureQuality.Items3" xml:space="preserve">
+    <value>Очень высокая</value>
+  </data>
   <data name="GT_ModelQuality.Items" xml:space="preserve">
     <value>Низкая</value>
   </data>

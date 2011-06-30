@@ -535,7 +535,8 @@
             this.GT_TextureQuality.Items.AddRange(new object[] {
             resources.GetString("GT_TextureQuality.Items"),
             resources.GetString("GT_TextureQuality.Items1"),
-            resources.GetString("GT_TextureQuality.Items2")});
+            resources.GetString("GT_TextureQuality.Items2"),
+            resources.GetString("GT_TextureQuality.Items3")});
             resources.ApplyResources(this.GT_TextureQuality, "GT_TextureQuality");
             this.GT_TextureQuality.Name = "GT_TextureQuality";
             // 
