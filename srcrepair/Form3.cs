@@ -154,7 +154,7 @@ namespace srcrepair
             }
 
             // Сгенерируем полный путь к файлу hosts...
-            HostsFilePath = Path.Combine(HostsFilePath + "hosts");
+            HostsFilePath = Path.Combine(HostsFilePath, "hosts");
 
             // Запишем путь в статусную строку...
             HEd_St_Wrn.Text = HostsFilePath;
