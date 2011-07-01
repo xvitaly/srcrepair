@@ -1702,7 +1702,7 @@ namespace srcrepair
             {
                 // Будем бэкапировать только файлы, находящиеся в каталоге /cfg/
                 // управляемоего приложения. Остальные - нет.
-                if (File.Exists(GV.FullCfgPath + CFGFileName))
+                if (File.Exists(Path.Combine(GV.FullCfgPath, CFGFileName)))
                 {
                     // Создаём резервную копию...
                     CreateBackUpNow(CFGFileName, GV.FullCfgPath, GV.FullBackUpDirPath);
