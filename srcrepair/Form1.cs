@@ -240,7 +240,7 @@ namespace srcrepair
             //PS_RemOldCfgs.Enabled = BStatus;
             PS_RemGraphCache.Enabled = BStatus;
             PS_RemSoundCache.Enabled = BStatus;
-            PS_RemNavFiles.Enabled = BStatus;
+            PS_RemSecndCache.Enabled = BStatus;
             //PS_RemScreenShots.Enabled = BStatus;
             //PS_RemDemos.Enabled = BStatus;
             PS_RemGraphOpts.Enabled = BStatus;
@@ -1788,12 +1788,6 @@ namespace srcrepair
             OpenCleanupWindow(Path.Combine(GV.FullGamePath, "maps", "soundcache"), "*.*", ((Button)sender).Text.ToLower());
         }
 
-        private void PS_RemNavFiles_Click(object sender, EventArgs e)
-        {
-            // Удаляем файлы навигации ботов...
-            OpenCleanupWindow(Path.Combine(GV.FullGamePath, "maps"), "*.nav", ((Button)sender).Text.ToLower());
-        }
-
         private void PS_RemScreenShots_Click(object sender, EventArgs e)
         {
             // Удаляем все скриншоты...
@@ -2446,6 +2440,12 @@ namespace srcrepair
         {
             // Удаляем все кастомные текстуры...
             OpenCleanupWindow(Path.Combine(GV.FullGamePath, "materials"), "*.*", ((Button)sender).Text.ToLower());
+        }
+
+        private void PS_RemSecndCache_Click(object sender, EventArgs e)
+        {
+            // Удаляем содержимое вторичного кэша загрузок...
+            OpenCleanupWindow(Path.Combine(GV.FullGamePath, "cache"), "*.*", ((Button)sender).Text.ToLower());
         }
     }
 }

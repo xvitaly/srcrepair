@@ -512,8 +512,8 @@
   <data name="PS_RemScreenShots.Text" xml:space="preserve">
     <value>Скриншоты</value>
   </data>
-  <data name="PS_RemNavFiles.Text" xml:space="preserve">
-    <value>Навигацию ботов</value>
+  <data name="PS_RemSecndCache.Text" xml:space="preserve">
+    <value>Вторичный кэш</value>
   </data>
   <data name="PS_RemSoundCache.Text" xml:space="preserve">
     <value>Звуковой кэш</value>

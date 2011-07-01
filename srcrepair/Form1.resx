@@ -942,7 +942,7 @@
   <metadata name="PS_RemScreenShots.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="PS_RemNavFiles.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="PS_RemSecndCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="PS_RemSoundCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1023,16 +1023,16 @@
   <data name="&gt;&gt;PS_RemScreenShots.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;PS_RemNavFiles.Name" xml:space="preserve">
-    <value>PS_RemNavFiles</value>
+  <data name="&gt;&gt;PS_RemSecndCache.Name" xml:space="preserve">
+    <value>PS_RemSecndCache</value>
   </data>
-  <data name="&gt;&gt;PS_RemNavFiles.Type" xml:space="preserve">
+  <data name="&gt;&gt;PS_RemSecndCache.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;PS_RemNavFiles.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PS_RemSecndCache.Parent" xml:space="preserve">
     <value>PS_GB_Remover</value>
   </data>
-  <data name="&gt;&gt;PS_RemNavFiles.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;PS_RemSecndCache.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="&gt;&gt;PS_RemSoundCache.Name" xml:space="preserve">
@@ -3326,31 +3326,31 @@
   <data name="&gt;&gt;PS_RemScreenShots.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="PS_RemNavFiles.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="PS_RemSecndCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="PS_RemNavFiles.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="PS_RemSecndCache.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 191</value>
   </data>
-  <data name="PS_RemNavFiles.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PS_RemSecndCache.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 23</value>
   </data>
-  <data name="PS_RemNavFiles.TabIndex" type="System.Int32, mscorlib">
+  <data name="PS_RemSecndCache.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="PS_RemNavFiles.Text" xml:space="preserve">
-    <value>Bot navigation files</value>
+  <data name="PS_RemSecndCache.Text" xml:space="preserve">
+    <value>Secondary cache</value>
   </data>
-  <data name="&gt;&gt;PS_RemNavFiles.Name" xml:space="preserve">
-    <value>PS_RemNavFiles</value>
+  <data name="&gt;&gt;PS_RemSecndCache.Name" xml:space="preserve">
+    <value>PS_RemSecndCache</value>
   </data>
-  <data name="&gt;&gt;PS_RemNavFiles.Type" xml:space="preserve">
+  <data name="&gt;&gt;PS_RemSecndCache.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;PS_RemNavFiles.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PS_RemSecndCache.Parent" xml:space="preserve">
     <value>PS_GB_Remover</value>
   </data>
-  <data name="&gt;&gt;PS_RemNavFiles.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;PS_RemSecndCache.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <metadata name="PS_RemSoundCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

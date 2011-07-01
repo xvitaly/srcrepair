@@ -100,7 +100,7 @@
             this.PS_RemTextures = new System.Windows.Forms.Button();
             this.PS_RemDemos = new System.Windows.Forms.Button();
             this.PS_RemScreenShots = new System.Windows.Forms.Button();
-            this.PS_RemNavFiles = new System.Windows.Forms.Button();
+            this.PS_RemSecndCache = new System.Windows.Forms.Button();
             this.PS_RemSoundCache = new System.Windows.Forms.Button();
             this.PS_RemGraphCache = new System.Windows.Forms.Button();
             this.PS_RemOldCfgs = new System.Windows.Forms.Button();
@@ -778,7 +778,7 @@
             this.PS_GB_Remover.Controls.Add(this.PS_RemTextures);
             this.PS_GB_Remover.Controls.Add(this.PS_RemDemos);
             this.PS_GB_Remover.Controls.Add(this.PS_RemScreenShots);
-            this.PS_GB_Remover.Controls.Add(this.PS_RemNavFiles);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemSecndCache);
             this.PS_GB_Remover.Controls.Add(this.PS_RemSoundCache);
             this.PS_GB_Remover.Controls.Add(this.PS_RemGraphCache);
             this.PS_GB_Remover.Controls.Add(this.PS_RemOldCfgs);
@@ -824,12 +824,12 @@
             this.PS_RemScreenShots.UseVisualStyleBackColor = true;
             this.PS_RemScreenShots.Click += new System.EventHandler(this.PS_RemScreenShots_Click);
             // 
-            // PS_RemNavFiles
+            // PS_RemSecndCache
             // 
-            resources.ApplyResources(this.PS_RemNavFiles, "PS_RemNavFiles");
-            this.PS_RemNavFiles.Name = "PS_RemNavFiles";
-            this.PS_RemNavFiles.UseVisualStyleBackColor = true;
-            this.PS_RemNavFiles.Click += new System.EventHandler(this.PS_RemNavFiles_Click);
+            resources.ApplyResources(this.PS_RemSecndCache, "PS_RemSecndCache");
+            this.PS_RemSecndCache.Name = "PS_RemSecndCache";
+            this.PS_RemSecndCache.UseVisualStyleBackColor = true;
+            this.PS_RemSecndCache.Click += new System.EventHandler(this.PS_RemSecndCache_Click);
             // 
             // PS_RemSoundCache
             // 
@@ -1600,7 +1600,7 @@
         private System.Windows.Forms.Button PS_ResetSettings;
         private System.Windows.Forms.Button PS_RemDemos;
         private System.Windows.Forms.Button PS_RemScreenShots;
-        private System.Windows.Forms.Button PS_RemNavFiles;
+        private System.Windows.Forms.Button PS_RemSecndCache;
         private System.Windows.Forms.Button PS_RemSoundCache;
         private System.Windows.Forms.Button PS_RemGraphCache;
         private System.Windows.Forms.Button PS_RemOldCfgs;
