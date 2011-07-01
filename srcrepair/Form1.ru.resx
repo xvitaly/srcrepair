@@ -157,7 +157,7 @@
     <value>Максимальная производительность</value>
   </data>
   <data name="GT_Maximum_Graphics.Text" xml:space="preserve">
-    <value>Максимум графики</value>
+    <value>Максимальное качество</value>
   </data>
   <data name="L_GT_LaunchOptions.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 13</value>
