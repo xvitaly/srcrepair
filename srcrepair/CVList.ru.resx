@@ -1551,4 +1551,145 @@
   <data name="tf_arena_max_streak" xml:space="preserve">
     <value>Команды будут перемешаны, если одна из них достигнет указанного числа побед.</value>
   </data>
+  <data name="exec" xml:space="preserve">
+    <value>Выполняет другой конфиг, имя которого указано после пробела. Допускаются относительные пути.</value>
+  </data>
+  <data name="host_framerate" xml:space="preserve">
+    <value>Множитель ускорения при проигрывании демок.</value>
+  </data>
+  <data name="mp_autocrosshair" xml:space="preserve">
+    <value>Разрешает / запрещает использование игроками автоприцеливания.</value>
+  </data>
+  <data name="mp_playerid" xml:space="preserve">
+    <value>Управляет выводом информации об игроке, находящимся под прицелом: 0 - обо всех, 1 - только товарищей по команде, 2 - отключено.</value>
+  </data>
+  <data name="mp_playerid_delay" xml:space="preserve">
+    <value>Задержка перед отображением информации об игроке.</value>
+  </data>
+  <data name="mp_playerid_hold" xml:space="preserve">
+    <value>Время, в течение которого после ухода прицела информация будет оставаться на экране.</value>
+  </data>
+  <data name="mp_stalemate_timelimit" xml:space="preserve">
+    <value>Лимит времени раунда в режиме Мгновенной смерти.</value>
+  </data>
+  <data name="setpause" xml:space="preserve">
+    <value>Разрешает / запрещает использование команды pause.</value>
+  </data>
+  <data name="sv_accelerate" xml:space="preserve">
+    <value>Задаёт ускорение по земле.</value>
+  </data>
+  <data name="sv_airaccelerate" xml:space="preserve">
+    <value>Задаёт ускорение в воздухе.</value>
+  </data>
+  <data name="sv_downloadurl" xml:space="preserve">
+    <value>URL внешнего веб-сервера с именем каталога, с которого клиенты будут скачивать нестандартные файлы (реализация fast download).</value>
+  </data>
+  <data name="sv_enableoldqueries" xml:space="preserve">
+    <value>Разрешить / запретить старый тип запросов к серверу (GoldSrc).</value>
+  </data>
+  <data name="sv_footsteps" xml:space="preserve">
+    <value>1 - игроки смогут слышать звуки шагов; 0 - звуки шагов не слышны никому.</value>
+  </data>
+  <data name="sv_friction" xml:space="preserve">
+    <value>Задаёт коэффициент трения при нахождении игрока на земле.</value>
+  </data>
+  <data name="sv_gravity" xml:space="preserve">
+    <value>Задаёт уровень гравитации на сервере. Стандарт - 800.</value>
+  </data>
+  <data name="sv_lagflushbonecache" xml:space="preserve">
+    <value>Flushes entity bone cache on lag compensation.</value>
+  </data>
+  <data name="sv_maxunlag" xml:space="preserve">
+    <value>Максимальное значение лагокомпенсации.</value>
+  </data>
+  <data name="sv_maxvelocity" xml:space="preserve">
+    <value>Maximum speed any ballistically moving object is allowed to attain per axis.</value>
+  </data>
+  <data name="sv_max_usercmd_future_ticks" xml:space="preserve">
+    <value>Prevents clients from running usercmds too far in the future. Prevents speed hacks.</value>
+  </data>
+  <data name="sv_pushaway_force" xml:space="preserve">
+    <value>How hard physics objects are pushed away from the players on the server.</value>
+  </data>
+  <data name="sv_pushaway_max_force" xml:space="preserve">
+    <value>Maximum amount of force applied to physics objects by players.</value>
+  </data>
+  <data name="sv_pushaway_min_player_speed" xml:space="preserve">
+    <value>If a player is moving slower than this, don't push away physics objects (enables ducking behind things).</value>
+  </data>
+  <data name="sv_rollangle" xml:space="preserve">
+    <value>Максимально видимый угол крена.</value>
+  </data>
+  <data name="sv_rollspeed" xml:space="preserve">
+    <value>200.</value>
+  </data>
+  <data name="sv_showimpacts" xml:space="preserve">
+    <value>Shows client (red) and server (blue) bullet impact point (1 - both, 2 - client-only, 3 - server-only).</value>
+  </data>
+  <data name="sv_showplayerhitboxes" xml:space="preserve">
+    <value>Show lag compensated hitboxes for the specified player index whenever a player fires.</value>
+  </data>
+  <data name="sv_specaccelerate" xml:space="preserve">
+    <value>Задаёт ускорение зрителя в режиме свободного полёта.</value>
+  </data>
+  <data name="sv_specnoclip" xml:space="preserve">
+    <value>Разрешить зрителям использовать режим свободного полёта.</value>
+  </data>
+  <data name="sv_specspeed" xml:space="preserve">
+    <value>Задаёт скорость зрителя в режиме свободного полёта.</value>
+  </data>
+  <data name="sv_stepsize" xml:space="preserve">
+    <value>Длина шага в юнитах.</value>
+  </data>
+  <data name="sv_turbophysics" xml:space="preserve">
+    <value>Разрешает / запрещает перемещение физических объектов игроком (используется клавиша +use).</value>
+  </data>
+  <data name="sv_unlag" xml:space="preserve">
+    <value>Включает / отключает систему лагокомпенсации.</value>
+  </data>
+  <data name="sv_unlag_fixstuck" xml:space="preserve">
+    <value>Disallow backtracking a player for lag compensation if it will cause them to become stuck.</value>
+  </data>
+  <data name="sv_wateraccelerate" xml:space="preserve">
+    <value>Задаёт ускорение в воде.</value>
+  </data>
+  <data name="sv_waterdist" xml:space="preserve">
+    <value>Vertical view fixup when eyes are near water plane.</value>
+  </data>
+  <data name="sv_waterfriction" xml:space="preserve">
+    <value>Задаёт коэффициент трения в воде.</value>
+  </data>
+  <data name="tf_tournament_classlimit_demoman" xml:space="preserve">
+    <value>Задаёт максимальное количество игроков класса Подрывник в команде.</value>
+  </data>
+  <data name="tf_tournament_classlimit_engineer" xml:space="preserve">
+    <value>Задаёт максимальное количество игроков класса Инженер в команде.</value>
+  </data>
+  <data name="tf_tournament_classlimit_heavy" xml:space="preserve">
+    <value>Задаёт максимальное количество игроков класса Пулемётчик в команде.</value>
+  </data>
+  <data name="tf_tournament_classlimit_medic" xml:space="preserve">
+    <value>Задаёт максимальное количество игроков класса Медик в команде.</value>
+  </data>
+  <data name="tf_tournament_classlimit_pyro" xml:space="preserve">
+    <value>Задаёт максимальное количество игроков класса Поджигатель в команде.</value>
+  </data>
+  <data name="tf_tournament_classlimit_scout" xml:space="preserve">
+    <value>Задаёт максимальное количество игроков класса Разведчик в команде.</value>
+  </data>
+  <data name="tf_tournament_classlimit_sniper" xml:space="preserve">
+    <value>Задаёт максимальное количество игроков класса Снайпер в команде.</value>
+  </data>
+  <data name="tf_tournament_classlimit_soldier" xml:space="preserve">
+    <value>Задаёт максимальное количество игроков класса Солдат в команде.</value>
+  </data>
+  <data name="tf_tournament_classlimit_spy" xml:space="preserve">
+    <value>Задаёт максимальное количество игроков класса Шпион в команде.</value>
+  </data>
+  <data name="writeid" xml:space="preserve">
+    <value>Разрешает запись перманентных банов по SteamID в файл banned_user.cfg.</value>
+  </data>
+  <data name="writeip" xml:space="preserve">
+    <value>Разрешает запись перманентных банов по IP-адресу в файл banned_ip.cfg.</value>
+  </data>
 </root>
