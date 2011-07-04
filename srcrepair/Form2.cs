@@ -132,13 +132,13 @@ namespace srcrepair
             }
             catch
             {
-                System.Diagnostics.Process.Start("steam://friends/message/76561197994204416");
+                System.Diagnostics.Process.Start("http://www.easycoding.org/about");
             }
         }
 
         private void frmAbout_Load(object sender, EventArgs e)
         {
-            // Проверяем систему на НГ (диапазон от 30.12.XXXX до 10.1.XXXX)...
+            // Проверяем систему на НГ (диапазон от 20.12.XXXX до 10.1.XXXX+1)...
             DateTime XDate = DateTime.Now; // Получаем текущую дату...
             if (((Convert.ToInt32(XDate.Month) == 12) && ((Convert.ToInt32(XDate.Day) >= 20)
                 && (Convert.ToInt32(XDate.Day) <= 31))) || ((Convert.ToInt32(XDate.Month) == 1)

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOptions));
             this.GB_MainOpts = new System.Windows.Forms.GroupBox();
+            this.MO_RemEmptyDirs = new System.Windows.Forms.CheckBox();
             this.MO_AllowUnsafeNCFOps = new System.Windows.Forms.CheckBox();
             this.MO_AutoUpdate = new System.Windows.Forms.CheckBox();
             this.MO_SortGameList = new System.Windows.Forms.CheckBox();
@@ -42,6 +43,7 @@
             // 
             // GB_MainOpts
             // 
+            this.GB_MainOpts.Controls.Add(this.MO_RemEmptyDirs);
             this.GB_MainOpts.Controls.Add(this.MO_AllowUnsafeNCFOps);
             this.GB_MainOpts.Controls.Add(this.MO_AutoUpdate);
             this.GB_MainOpts.Controls.Add(this.MO_SortGameList);
@@ -50,6 +52,12 @@
             resources.ApplyResources(this.GB_MainOpts, "GB_MainOpts");
             this.GB_MainOpts.Name = "GB_MainOpts";
             this.GB_MainOpts.TabStop = false;
+            // 
+            // MO_RemEmptyDirs
+            // 
+            resources.ApplyResources(this.MO_RemEmptyDirs, "MO_RemEmptyDirs");
+            this.MO_RemEmptyDirs.Name = "MO_RemEmptyDirs";
+            this.MO_RemEmptyDirs.UseVisualStyleBackColor = true;
             // 
             // MO_AllowUnsafeNCFOps
             // 
@@ -129,5 +137,6 @@
         private System.Windows.Forms.CheckBox MO_SortGameList;
         private System.Windows.Forms.CheckBox MO_AutoUpdate;
         private System.Windows.Forms.CheckBox MO_AllowUnsafeNCFOps;
+        private System.Windows.Forms.CheckBox MO_RemEmptyDirs;
     }
 }

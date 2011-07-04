@@ -486,4 +486,7 @@
   <data name="SteamNonASCIINotDetected" xml:space="preserve">
     <value>Steam installed correctly: Steam login and directory path does not contain illegal characters: letters of national alphabets (Russian, German, French, etc.) and Unicode characters.</value>
   </data>
+  <data name="PS_CleanEmptyDirsError" xml:space="preserve">
+    <value>An error occurred during the clean up empty directories! Maybe you do not have appropriate access rights.</value>
+  </data>
 </root>

@@ -736,6 +736,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred during the clean up empty directories! Maybe you do not have appropriate access rights..
+        /// </summary>
+        internal static string PS_CleanEmptyDirsError {
+            get {
+                return ResourceManager.GetString("PS_CleanEmptyDirsError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error occured while deleting files. Some files were not deleted!.
         /// </summary>
         internal static string PS_CleanupErr {

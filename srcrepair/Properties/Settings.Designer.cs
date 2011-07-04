@@ -168,5 +168,17 @@ namespace srcrepair.Properties {
                 return ((string)(this["DebugLogFileName"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool RemoveEmptyDirs {
+            get {
+                return ((bool)(this["RemoveEmptyDirs"]));
+            }
+            set {
+                this["RemoveEmptyDirs"] = value;
+            }
+        }
     }
 }

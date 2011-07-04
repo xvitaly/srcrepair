@@ -497,7 +497,7 @@ Translators:
     <value>4</value>
   </data>
   <data name="labelFlags.Text" xml:space="preserve">
-    <value>Compiled for Windows NT only (x86/x64). App edition: OSE. Flags: null.</value>
+    <value>Licensed under the terms of GNU GPLv3. Content license: CC3.</value>
   </data>
   <data name="&gt;&gt;labelFlags.Name" xml:space="preserve">
     <value>labelFlags</value>

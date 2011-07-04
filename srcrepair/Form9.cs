@@ -1,4 +1,22 @@
-﻿using System;
+﻿/*
+ * Модуль настроек программы SRC Repair.
+ * 
+ * Copyright 2011 EasyCoding Team (ECTeam).
+ * Copyright 2005 - 2011 EasyCoding Team.
+ * 
+ * Лицензия: GPL v3 (см. файл GPL.txt).
+ * Лицензия контента: Creative Commons 3.0 BY.
+ * 
+ * Запрещается использовать этот файл при использовании любой
+ * лицензии, отличной от GNU GPL версии 3 и с ней совместимой.
+ * 
+ * Официальный блог EasyCoding Team: http://www.easycoding.org/
+ * Официальная страница проекта: http://www.easycoding.org/projects/srcrepair
+ * 
+ * Более подробная инфорация о программе в readme.txt,
+ * о лицензии - в GPL.txt.
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,6 +42,7 @@ namespace srcrepair
             MO_SortGameList.Checked = Properties.Settings.Default.SortGamesList;
             MO_AutoUpdate.Checked = Properties.Settings.Default.EnableAutoUpdate;
             MO_AllowUnsafeNCFOps.Checked = Properties.Settings.Default.AllowNCFUnsafeOps;
+            MO_RemEmptyDirs.Checked = Properties.Settings.Default.RemoveEmptyDirs;
 
             // Укажем название приложения в заголовке окна...
             this.Text = String.Format(this.Text, GV.AppName);
@@ -37,6 +56,7 @@ namespace srcrepair
             Properties.Settings.Default.SortGamesList = MO_SortGameList.Checked;
             Properties.Settings.Default.EnableAutoUpdate = MO_AutoUpdate.Checked;
             Properties.Settings.Default.AllowNCFUnsafeOps = MO_AllowUnsafeNCFOps.Checked;
+            Properties.Settings.Default.RemoveEmptyDirs = MO_RemEmptyDirs.Checked;
             // Сохраняем настройки...
             Properties.Settings.Default.Save();
             // Показываем сообщение...

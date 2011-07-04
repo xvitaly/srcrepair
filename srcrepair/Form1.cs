@@ -247,6 +247,7 @@ namespace srcrepair
             PS_RemOldBin.Enabled = BStatus;
             PS_RemTextures.Enabled = BStatus;
             PS_RemModels.Enabled = BStatus;
+            PS_RemReplays.Enabled = BStatus;
         }
 
         /// <summary>

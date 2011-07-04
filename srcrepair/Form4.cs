@@ -81,7 +81,7 @@ namespace srcrepair
                         CoreLib.StartProcessAndWait(FilePath, Params);
                         if (Compress.Checked)
                         {
-                            CoreLib.StartProcessAndWait(GV.FullAppPath + "7z.exe", "a " + @"""" + RepDir + FileName + ".7z" + @"""" + " " + @"""" + RepDir + RepName + @"""");
+                            CoreLib.StartProcessAndWait(GV.FullAppPath + Path.DirectorySeparatorChar + "7z.exe", "a " + @"""" + RepDir + FileName + ".7z" + @"""" + " " + @"""" + RepDir + RepName + @"""");
                             File.Delete(RepDir + RepName); // удаляем несжатый отчёт
                             MessageBox.Show(String.Format(CoreLib.GetLocalizedString("RPB_ComprGen"), FileName), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
