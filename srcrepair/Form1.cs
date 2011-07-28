@@ -2293,6 +2293,11 @@ namespace srcrepair
 
         private void MNUUpdateCheck_Click(object sender, EventArgs e)
         {
+            // Сохраним текущее содержимое статусной строки...
+            string StatusBarCurrText = SB_Status.Text;
+            // Выведем сообщение о проверке обновлений...
+            SB_Status.Text = RM.GetString("AppCheckingForUpdates");
+            // Начинаем проверку...
             try
             {
                 string NewVersion, UpdateURI, DnlStr;
@@ -2324,6 +2329,8 @@ namespace srcrepair
                 // Произошло исключение...
                 MessageBox.Show(RM.GetString("UPD_ExceptionDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            // Вернём предыдущее содержимое строки статуса...
+            SB_Status.Text = StatusBarCurrText;
         }
 
         private void BUT_OpenNpad_Click(object sender, EventArgs e)
