@@ -2373,7 +2373,7 @@ namespace srcrepair
                 if (BU_LVTable.SelectedItems.Count > 0)
                 {
                     // Откроем выбранный бэкап в Проводнике Windows...
-                    Process.Start("explorer.exe", @"/select," + @"""" + GV.FullBackUpDirPath + BU_LVTable.SelectedItems[0].SubItems[4].Text + @"""");
+                    Process.Start("explorer.exe", @"/select," + @"""" + Path.Combine(GV.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text) + @"""");
                 }
                 else
                 {
