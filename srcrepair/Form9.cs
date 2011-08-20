@@ -43,6 +43,7 @@ namespace srcrepair
             MO_AutoUpdate.Checked = Properties.Settings.Default.EnableAutoUpdate;
             MO_AllowUnsafeNCFOps.Checked = Properties.Settings.Default.AllowNCFUnsafeOps;
             MO_RemEmptyDirs.Checked = Properties.Settings.Default.RemoveEmptyDirs;
+            MO_PrefHelpSystem.SelectedIndex = Properties.Settings.Default.PreferedHelpSystem;
 
             // Укажем название приложения в заголовке окна...
             this.Text = String.Format(this.Text, GV.AppName);
@@ -57,6 +58,7 @@ namespace srcrepair
             Properties.Settings.Default.EnableAutoUpdate = MO_AutoUpdate.Checked;
             Properties.Settings.Default.AllowNCFUnsafeOps = MO_AllowUnsafeNCFOps.Checked;
             Properties.Settings.Default.RemoveEmptyDirs = MO_RemEmptyDirs.Checked;
+            Properties.Settings.Default.PreferedHelpSystem = MO_PrefHelpSystem.SelectedIndex;
             // Сохраняем настройки...
             Properties.Settings.Default.Save();
             // Показываем сообщение...

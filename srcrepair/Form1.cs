@@ -2190,6 +2190,7 @@ namespace srcrepair
 
         private void MNUHelp_Click(object sender, EventArgs e)
         {
+            // Проверим наличие локальной справки в формате CHM...
             string HelpFilePath = String.Format(GV.FullAppPath + "srcrepair_{0}.chm", RM.GetString("AppLangPrefix"));
             if (File.Exists(HelpFilePath))
             {
@@ -2197,7 +2198,15 @@ namespace srcrepair
             }
             else
             {
-                Process.Start(String.Format("http://code.google.com/p/srcrepair/wiki/UserManual_{0}", RM.GetString("AppLangPrefix")));
+                // Выбираем какую онлайновую справочную систему использовать.
+                // Используем Switch, т.к. их может быть больше двух.
+                switch (Properties.Settings.Default.PreferedHelpSystem)
+                {
+                    case 0: Process.Start("http://www.easycoding.org/projects/srcrepair/help");
+                        break;
+                    case 1: Process.Start(String.Format("http://code.google.com/p/srcrepair/wiki/UserManual_{0}", RM.GetString("AppLangPrefix")));
+                        break;
+                }
             }
         }
 

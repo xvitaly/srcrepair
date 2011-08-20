@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOptions));
             this.GB_MainOpts = new System.Windows.Forms.GroupBox();
+            this.MO_PrefHelpSystem = new System.Windows.Forms.ComboBox();
+            this.MO_L_HelpSystem = new System.Windows.Forms.Label();
             this.MO_RemEmptyDirs = new System.Windows.Forms.CheckBox();
             this.MO_AllowUnsafeNCFOps = new System.Windows.Forms.CheckBox();
             this.MO_AutoUpdate = new System.Windows.Forms.CheckBox();
@@ -43,6 +45,8 @@
             // 
             // GB_MainOpts
             // 
+            this.GB_MainOpts.Controls.Add(this.MO_PrefHelpSystem);
+            this.GB_MainOpts.Controls.Add(this.MO_L_HelpSystem);
             this.GB_MainOpts.Controls.Add(this.MO_RemEmptyDirs);
             this.GB_MainOpts.Controls.Add(this.MO_AllowUnsafeNCFOps);
             this.GB_MainOpts.Controls.Add(this.MO_AutoUpdate);
@@ -52,6 +56,21 @@
             resources.ApplyResources(this.GB_MainOpts, "GB_MainOpts");
             this.GB_MainOpts.Name = "GB_MainOpts";
             this.GB_MainOpts.TabStop = false;
+            // 
+            // MO_PrefHelpSystem
+            // 
+            this.MO_PrefHelpSystem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MO_PrefHelpSystem.FormattingEnabled = true;
+            this.MO_PrefHelpSystem.Items.AddRange(new object[] {
+            resources.GetString("MO_PrefHelpSystem.Items"),
+            resources.GetString("MO_PrefHelpSystem.Items1")});
+            resources.ApplyResources(this.MO_PrefHelpSystem, "MO_PrefHelpSystem");
+            this.MO_PrefHelpSystem.Name = "MO_PrefHelpSystem";
+            // 
+            // MO_L_HelpSystem
+            // 
+            resources.ApplyResources(this.MO_L_HelpSystem, "MO_L_HelpSystem");
+            this.MO_L_HelpSystem.Name = "MO_L_HelpSystem";
             // 
             // MO_RemEmptyDirs
             // 
@@ -138,5 +157,7 @@
         private System.Windows.Forms.CheckBox MO_AutoUpdate;
         private System.Windows.Forms.CheckBox MO_AllowUnsafeNCFOps;
         private System.Windows.Forms.CheckBox MO_RemEmptyDirs;
+        private System.Windows.Forms.ComboBox MO_PrefHelpSystem;
+        private System.Windows.Forms.Label MO_L_HelpSystem;
     }
 }

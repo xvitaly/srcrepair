@@ -120,14 +120,74 @@
   <metadata name="GB_MainOpts.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="MO_PrefHelpSystem.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="MO_PrefHelpSystem.Items" xml:space="preserve">
+    <value>Official site</value>
+  </data>
+  <data name="MO_PrefHelpSystem.Items1" xml:space="preserve">
+    <value>Official Wiki</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="MO_PrefHelpSystem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 157</value>
+  </data>
+  <data name="MO_PrefHelpSystem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 21</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MO_PrefHelpSystem.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;MO_PrefHelpSystem.Name" xml:space="preserve">
+    <value>MO_PrefHelpSystem</value>
+  </data>
+  <data name="&gt;&gt;MO_PrefHelpSystem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MO_PrefHelpSystem.Parent" xml:space="preserve">
+    <value>GB_MainOpts</value>
+  </data>
+  <data name="&gt;&gt;MO_PrefHelpSystem.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="MO_L_HelpSystem.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="MO_L_HelpSystem.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MO_L_HelpSystem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 160</value>
+  </data>
+  <data name="MO_L_HelpSystem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 13</value>
+  </data>
+  <data name="MO_L_HelpSystem.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="MO_L_HelpSystem.Text" xml:space="preserve">
+    <value>Select help source:</value>
+  </data>
+  <data name="&gt;&gt;MO_L_HelpSystem.Name" xml:space="preserve">
+    <value>MO_L_HelpSystem</value>
+  </data>
+  <data name="&gt;&gt;MO_L_HelpSystem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MO_L_HelpSystem.Parent" xml:space="preserve">
+    <value>GB_MainOpts</value>
+  </data>
+  <data name="&gt;&gt;MO_L_HelpSystem.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="MO_RemEmptyDirs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="MO_RemEmptyDirs.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="MO_RemEmptyDirs.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 134</value>
   </data>
@@ -150,7 +210,7 @@
     <value>GB_MainOpts</value>
   </data>
   <data name="&gt;&gt;MO_RemEmptyDirs.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <metadata name="MO_AllowUnsafeNCFOps.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -180,7 +240,7 @@
     <value>GB_MainOpts</value>
   </data>
   <data name="&gt;&gt;MO_AllowUnsafeNCFOps.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <metadata name="MO_AutoUpdate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -207,7 +267,7 @@
     <value>GB_MainOpts</value>
   </data>
   <data name="&gt;&gt;MO_AutoUpdate.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <metadata name="MO_SortGameList.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -234,7 +294,7 @@
     <value>GB_MainOpts</value>
   </data>
   <data name="&gt;&gt;MO_SortGameList.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <metadata name="MO_HideNotInst.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -264,7 +324,7 @@
     <value>GB_MainOpts</value>
   </data>
   <data name="&gt;&gt;MO_HideNotInst.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <metadata name="MO_ConfirmExit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -291,13 +351,13 @@
     <value>GB_MainOpts</value>
   </data>
   <data name="&gt;&gt;MO_ConfirmExit.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="GB_MainOpts.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
   </data>
   <data name="GB_MainOpts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 166</value>
+    <value>300, 195</value>
   </data>
   <data name="GB_MainOpts.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -318,7 +378,7 @@
     <value>True</value>
   </metadata>
   <data name="MO_Okay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 194</value>
+    <value>60, 222</value>
   </data>
   <data name="MO_Okay.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 23</value>
@@ -345,7 +405,7 @@
     <value>True</value>
   </metadata>
   <data name="MO_Cancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 194</value>
+    <value>182, 222</value>
   </data>
   <data name="MO_Cancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 23</value>
@@ -378,7 +438,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>325, 233</value>
+    <value>325, 260</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
