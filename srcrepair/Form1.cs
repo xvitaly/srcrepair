@@ -1012,7 +1012,11 @@ namespace srcrepair
 
             // Вставляем информацию о версии в заголовок формы...
             //this.Text += " (version " + GV.AppVersionInfo + ")";
+            #if DEBUG
+            this.Text = String.Format(this.Text, GV.AppVersionInfo + " (unstable debug build)");
+            #else
             this.Text = String.Format(this.Text, GV.AppVersionInfo);
+            #endif
 
             // Найдём и завершим в памяти процесс Steam...
             CoreLib.ProcessTerminate("Steam", RM.GetString("ST_KillMessage"));
