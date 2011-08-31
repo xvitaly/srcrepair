@@ -1692,4 +1692,7 @@
   <data name="writeip" xml:space="preserve">
     <value>Разрешает запись перманентных банов по IP-адресу в файл banned_ip.cfg.</value>
   </data>
+  <data name="cl_showbackpackrarities" xml:space="preserve">
+    <value>Включает / отключает отображение ценности предметов в рюкзаке TF2 как во время торговли.</value>
+  </data>
 </root>
