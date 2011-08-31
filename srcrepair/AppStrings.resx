@@ -474,9 +474,6 @@
   <data name="AppXMLParseError" xml:space="preserve">
     <value>An error occurred while parsing XML file with a list of games. Perhaps it is missing or damaged. Please reinstall the program.</value>
   </data>
-  <data name="AppShopURL" xml:space="preserve">
-    <value>http://store.steampowered.com/</value>
-  </data>
   <data name="AHE_HMessg" xml:space="preserve">
     <value>Hosts file: {0}. Show it in Windows Explorer?</value>
   </data>

@@ -174,7 +174,6 @@
             this.MNUSep3 = new System.Windows.Forms.ToolStripSeparator();
             this.MNULnkEasyCoding = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUDonate = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNUGameStore = new System.Windows.Forms.ToolStripMenuItem();
             this.MNULnkTFRU = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep4 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUAbout = new System.Windows.Forms.ToolStripMenuItem();
@@ -1316,7 +1315,6 @@
             this.MNUSep3,
             this.MNULnkEasyCoding,
             this.MNUDonate,
-            this.MNUGameStore,
             this.MNULnkTFRU,
             this.MNUSep4,
             this.MNUAbout});
@@ -1376,13 +1374,6 @@
             this.MNUDonate.Name = "MNUDonate";
             resources.ApplyResources(this.MNUDonate, "MNUDonate");
             this.MNUDonate.Click += new System.EventHandler(this.MNUDonate_Click);
-            // 
-            // MNUGameStore
-            // 
-            this.MNUGameStore.Image = global::srcrepair.Properties.Resources.Shopcart;
-            this.MNUGameStore.Name = "MNUGameStore";
-            resources.ApplyResources(this.MNUGameStore, "MNUGameStore");
-            this.MNUGameStore.Click += new System.EventHandler(this.MNUGameStore_Click);
             // 
             // MNULnkTFRU
             // 
@@ -1666,7 +1657,6 @@
         private System.Windows.Forms.ToolStripButton BUT_ExploreBUp;
         private System.Windows.Forms.ToolStripSeparator BUT_Sep2;
         private System.Windows.Forms.ToolStripMenuItem MNUWinMnuDisabler;
-        private System.Windows.Forms.ToolStripMenuItem MNUGameStore;
         private System.Windows.Forms.ToolStripMenuItem MNUDonate;
         private System.Windows.Forms.ToolStripButton CE_OpenInNotepad;
         private System.Windows.Forms.Button PS_RemReplays;

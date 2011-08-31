@@ -2412,12 +2412,6 @@ namespace srcrepair
             KBHlp.ShowDialog();
         }
 
-        private void MNUGameStore_Click(object sender, EventArgs e)
-        {
-            // Для России и СНГ открываем Gamemarket, для остальных - Steam Store...
-            Process.Start(RM.GetString("AppShopURL"));
-        }
-
         private void MNUDonate_Click(object sender, EventArgs e)
         {
             Process.Start("http://code.google.com/p/srcrepair/wiki/Donate");
