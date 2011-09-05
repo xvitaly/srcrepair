@@ -538,5 +538,22 @@ namespace srcrepair
             }
             catch { /* Подавляем исключения... */ }
         }
+
+        /// <summary>
+        /// Проверяет существование в реестре требуемого ключа. При отсутствии оного
+        /// возвращает false.
+        /// </summary>
+        /// <param name="Subkey">Подключ реестра для проверки</param>
+        public static bool CheckIfHKCUSKeyExists(string Subkey)
+        {
+            // Открываем проверяемый ключ реестра... При ошибке вернёт null.
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(Subkey, false);
+            // Получаем результат проверки...
+            bool Result = (ResKey == null) ? false : true;
+            // Если ключ был успешно открыт, закрываем.
+            if (Result) { ResKey.Close(); }
+            // Возвращаем результат функции...
+            return Result;
+        }
     }
 }
