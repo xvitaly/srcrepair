@@ -1127,10 +1127,24 @@ namespace srcrepair
             {
                 // Да, единственный. Выберем его...
                 LoginSel.SelectedIndex = 0;
+                Properties.Settings.Default.LastSIDId = 1;
                 if (AppSelector.SelectedIndex == -1)
                 {
                     // Заменим содержимое строки состояния на требование выбора игры...
                     SB_Status.Text = RM.GetString("StatusSApp");
+                }
+            }
+            else
+            {
+                // Логин не единственный, проверим предыдущий выбор...
+                if (LoginSel.Items.Count > Properties.Settings.Default.LastSIDId)
+                {
+                    // Выбираем...
+                    LoginSel.SelectedIndex = Properties.Settings.Default.LastSIDId;
+                }
+                else
+                {
+                    Properties.Settings.Default.LastSIDId = -1;
                 }
             }
 
@@ -1431,6 +1445,9 @@ namespace srcrepair
             SB_Status.Text = RM.GetString("StatusNormal");
             SB_App.Text = AppSelector.Text;
 
+            // Сохраним ID последней выбранной игры...
+            Properties.Settings.Default.LastGameId = AppSelector.SelectedIndex;
+
             // Считаем список бэкапов...
             try { ReadBackUpList2Table(GV.FullBackUpDirPath); } catch { Directory.CreateDirectory(GV.FullBackUpDirPath); }
         }
@@ -1439,6 +1456,7 @@ namespace srcrepair
         {
             // Логин выбран, включаем контролы...
             AppSelector.Enabled = true;
+            Properties.Settings.Default.LastSIDId = LoginSel.SelectedIndex;
             if (AppSelector.SelectedIndex == -1)
             {
                 SB_Status.Text = RM.GetString("StatusSApp");
@@ -1474,6 +1492,18 @@ namespace srcrepair
             {
                 AppSelector.SelectedIndex = 0;
                 SB_Status.Text = RM.GetString("StatusNormal");
+            }
+            else
+            {
+                // Выберем последнюю использованную игру...
+                if (AppSelector.Items.Count > Properties.Settings.Default.LastGameId)
+                {
+                    AppSelector.SelectedIndex = Properties.Settings.Default.LastGameId;
+                }
+                else
+                {
+                    Properties.Settings.Default.LastGameId = -1;
+                }
             }
         }
 

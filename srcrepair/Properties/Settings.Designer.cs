@@ -192,5 +192,29 @@ namespace srcrepair.Properties {
                 this["PreferedHelpSystem"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("-1")]
+        public int LastSIDId {
+            get {
+                return ((int)(this["LastSIDId"]));
+            }
+            set {
+                this["LastSIDId"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("-1")]
+        public int LastGameId {
+            get {
+                return ((int)(this["LastGameId"]));
+            }
+            set {
+                this["LastGameId"] = value;
+            }
+        }
     }
 }
