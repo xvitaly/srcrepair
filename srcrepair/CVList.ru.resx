@@ -1845,4 +1845,82 @@
   <data name="youtube_username" xml:space="preserve">
     <value>Логин пользователя на YouTube.</value>
   </data>
+  <data name="cam_snapto" xml:space="preserve">
+    <value>Устанавливает высоту расположения камеры при использовании вида от третьего лица.</value>
+  </data>
+  <data name="cl_chatfilter_version" xml:space="preserve">
+    <value>Версия фильтра чата (не используется, объявлена устаревшей).</value>
+  </data>
+  <data name="cl_playerspraydisable" xml:space="preserve">
+    <value>Отключает (1) / включает (0) отображение пользовательских спреев.</value>
+  </data>
+  <data name="cl_spec_carrieditems" xml:space="preserve">
+    <value>Включает / отключает отображение нестандартных вещей, экипированных игроками, во время нахождения в режиме зрителя.</value>
+  </data>
+  <data name="cl_training_completed_with_classes" xml:space="preserve">
+    <value>Внутренняя переменная: список классов, тренировку которыми пользователь уже закончил.</value>
+  </data>
+  <data name="cl_use_tournament_specgui" xml:space="preserve">
+    <value>Включает / отключает расширенный интерфейс зрителя в режиме чемпионата.</value>
+  </data>
+  <data name="commentary_firstrun" xml:space="preserve">
+    <value>Внутренняя переменная: первый ли запуск режима комментариев разработчика.</value>
+  </data>
+  <data name="console" xml:space="preserve">
+    <value>Включает / отключает консоль разработчика.</value>
+  </data>
+  <data name="c_maxdistance" xml:space="preserve">
+    <value>Задаёт максимальную дистанцию камеры при использовании вида от третьего лица.</value>
+  </data>
+  <data name="c_maxyaw" xml:space="preserve">
+    <value>Задаёт максимальный YAW при использовании вида от третьего лица.</value>
+  </data>
+  <data name="c_mindistance" xml:space="preserve">
+    <value>Задаёт минимальную дистанцию камеры при использовании вида от третьего лица.</value>
+  </data>
+  <data name="c_minyaw" xml:space="preserve">
+    <value>Задаёт минимальный YAW при использовании вида от третьего лица.</value>
+  </data>
+  <data name="hud_draw_fixed_reticle" xml:space="preserve">
+    <value>Рисовать фиксированную сетку HUD.</value>
+  </data>
+  <data name="net_scale" xml:space="preserve">
+    <value>Задаёт расположение шкалы.</value>
+  </data>
+  <data name="replay_editor_fov_mousewheel_invert" xml:space="preserve">
+    <value>Инвертировать колесо мыши в редакторе реплеев (повторов).</value>
+  </data>
+  <data name="replay_enablerenderpreview" xml:space="preserve">
+    <value>Включает / отключает просмотр при рендеринге.</value>
+  </data>
+  <data name="replay_movie_export_last_dir" xml:space="preserve">
+    <value>Содержит путь к каталогу, в который Вы экспортировали видео из реплеев в последний раз.</value>
+  </data>
+  <data name="replay_quitmsg_dontaskagain" xml:space="preserve">
+    <value>Отключает (1) / включает предупреждение о выходе из игры при наличии сохранённых реплеев.</value>
+  </data>
+  <data name="r_mmx" xml:space="preserve">
+    <value>Включает / отключает поддержку MMX.</value>
+  </data>
+  <data name="sb_dontshow_maxplayer_warning" xml:space="preserve">
+    <value>Отключает (1) / включает отображение сообщения о максимальном количестве игроков.</value>
+  </data>
+  <data name="suitvolume" xml:space="preserve">
+    <value>Задаёт громкость HEV-костюма.</value>
+  </data>
+  <data name="tf_quickplay_lastviewedmode" xml:space="preserve">
+    <value>Внутренняя переменная: последний выбранный режим в меню быстрой игры.</value>
+  </data>
+  <data name="tf_recent_achievements" xml:space="preserve">
+    <value>Номера последних выполненных достижений для отображения в главном меню TF2.</value>
+  </data>
+  <data name="tf_server_identity_disable_quickplay" xml:space="preserve">
+    <value>Включает / отключает запрет на отображение игрового сервера в списке быстрой игры.</value>
+  </data>
+  <data name="tf_sniper_fullcharge_bell" xml:space="preserve">
+    <value>Включает / отключает звук при достижении 100% заряда снайперской винтовки.</value>
+  </data>
+  <data name="youtube_http_proxy" xml:space="preserve">
+    <value>HTTP прокси-сервер, используемый при загрузке роликов на YouTube.</value>
+  </data>
 </root>
