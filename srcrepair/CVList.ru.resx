@@ -1695,4 +1695,154 @@
   <data name="cl_showbackpackrarities" xml:space="preserve">
     <value>Включает / отключает отображение ценности предметов в рюкзаке TF2 как во время торговли.</value>
   </data>
+  <data name="cl_clanid" xml:space="preserve">
+    <value>ID Steam группы клана, в котором состоит игрок.</value>
+  </data>
+  <data name="cl_clantag" xml:space="preserve">
+    <value>Тег клана, в котором состоит игрок (устарело, заменено на clanid).</value>
+  </data>
+  <data name="cl_disablehtmlmotd" xml:space="preserve">
+    <value>Отключает (1) / включает (0) сообщения дня (MOTD) в формате HTML. Настоятельно рекомендуется значение 1 для защиты от вредоносных скриптов.</value>
+  </data>
+  <data name="cl_flipviewmodels" xml:space="preserve">
+    <value>0 - отображать оружие в правой руке руке (стандарт); 1 - в левой.</value>
+  </data>
+  <data name="cl_hudhint_sound" xml:space="preserve">
+    <value>Включает / отключает звук при появлении подсказок на экране.</value>
+  </data>
+  <data name="cl_notifications_max_num_visible" xml:space="preserve">
+    <value>Задаёт максимальное число одновременно выводимых на экран всплывающих сообщений.</value>
+  </data>
+  <data name="cl_notifications_move_time" xml:space="preserve">
+    <value>Время в секундах, по истечение которого всплывающее сообщение будет автоматически скрыто (если оно не касается Вас).</value>
+  </data>
+  <data name="cl_notifications_show_ingame" xml:space="preserve">
+    <value>Включает / отключает всплывающие сообщения во время игры (например об увеличении уровня оружия, вызовах на дуэль или предложениях торговли).</value>
+  </data>
+  <data name="cl_thirdperson" xml:space="preserve">
+    <value>Включить / выключить вид от третьего лица (работает только при включённом sv_cheats).</value>
+  </data>
+  <data name="cl_trading_show_requests_from" xml:space="preserve">
+    <value>Задаёт параметр от кого Вы хотите получать предложения торговли. Значение 4 - ни от кого (Вам не смогут отправить запрос, однако Вы сможете).</value>
+  </data>
+  <data name="crosshair" xml:space="preserve">
+    <value>Включает / отключает метку прицела.</value>
+  </data>
+  <data name="hud_freezecamhide" xml:space="preserve">
+    <value>Скрыть HUD при сохранении скриншота убийцы.</value>
+  </data>
+  <data name="replay_block_dump_interval" xml:space="preserve">
+    <value>Периодичность, с которой сервер сохраняет данные повторов.</value>
+  </data>
+  <data name="replay_enable" xml:space="preserve">
+    <value>Включает / отключает систему записи реплеев (повторов).</value>
+  </data>
+  <data name="replay_fileserver_host" xml:space="preserve">
+    <value>Имя хоста или IP адрес веб-сервера, с которого будут скачиваться реплеи клиентами.</value>
+  </data>
+  <data name="replay_fileserver_offload_enable" xml:space="preserve">
+    <value>Включает / отключает выгрузку реплеев на удалённый сервер (FTP).</value>
+  </data>
+  <data name="replay_fileserver_offload_hostname" xml:space="preserve">
+    <value>Имя хоста сервера, на который игровой будет выгружать реплеи.</value>
+  </data>
+  <data name="replay_fileserver_offload_login" xml:space="preserve">
+    <value>Логин (имя пользователя), используемый для авторизации на удалённом сервере, на который будут выгружаться реплеи.</value>
+  </data>
+  <data name="replay_fileserver_offload_maxuploads" xml:space="preserve">
+    <value>Максимальное количество параллельных сессий выгрузки файлов на удалённый сервер.</value>
+  </data>
+  <data name="replay_fileserver_offload_password" xml:space="preserve">
+    <value>Пароль, используемый для авторизации на удалённом сервере, на который будут выгружаться реплеи.</value>
+  </data>
+  <data name="replay_fileserver_offload_port" xml:space="preserve">
+    <value>Порт сервера, на который будут выгружаться реплеи.</value>
+  </data>
+  <data name="replay_fileserver_offload_protocol" xml:space="preserve">
+    <value>Протокол для загрузки файлов на веб-сервер (если игровой и веб серверы находятся на разных машинах).</value>
+  </data>
+  <data name="replay_fileserver_offload_proxy_host" xml:space="preserve">
+    <value>Имя хоста или IP прокси-сервера, используемого при загрузке реплеев на FTP.</value>
+  </data>
+  <data name="replay_fileserver_offload_proxy_port" xml:space="preserve">
+    <value>Порт прокси-сервера, используемого при загрузке реплеев на FTP.</value>
+  </data>
+  <data name="replay_fileserver_offload_remotepath" xml:space="preserve">
+    <value>Удалённый каталог на сервере, в который будут выгружаться реплеи.</value>
+  </data>
+  <data name="replay_fileserver_offload_useproxy" xml:space="preserve">
+    <value>Включить / выключить прокси сервер при загрузке реплеев на FTP-сервер.</value>
+  </data>
+  <data name="replay_fileserver_path" xml:space="preserve">
+    <value>Удалённый каталог на веб-сервере с реплеями.</value>
+  </data>
+  <data name="replay_fileserver_port" xml:space="preserve">
+    <value>Порт веб-сервера, с которого будут скачиваться реплеи клиентами.</value>
+  </data>
+  <data name="replay_fileserver_protocol" xml:space="preserve">
+    <value>Протокол, по которому клиенты будут загружать файлы повторов.</value>
+  </data>
+  <data name="replay_local_fileserver_path" xml:space="preserve">
+    <value>Локальный каталог веб-сервера, в который игровой будет сохранять реплеи (используйте только если веб и игровой серверы находятся на одной машине).</value>
+  </data>
+  <data name="tf_bot_kill" xml:space="preserve">
+    <value>Убить всех ботов.</value>
+  </data>
+  <data name="tf_coach_request_nevershowagain" xml:space="preserve">
+    <value>1 - никогда не отображать сообщение о необходимости тренера.</value>
+  </data>
+  <data name="tf_explanations_backpackpanel" xml:space="preserve">
+    <value>Включает / отключает панель описания вещей в TF2.</value>
+  </data>
+  <data name="tf_explanations_store" xml:space="preserve">
+    <value>Включает / отключает панель описания в магазине MannCo.</value>
+  </data>
+  <data name="tf_explanations_tradingpanel" xml:space="preserve">
+    <value>Включает / отключает панель описания в окне торговли предметами TF2.</value>
+  </data>
+  <data name="tf_medieval_thirdperson" xml:space="preserve">
+    <value>Включает / отключает режим вида от третьего лица на серверах режима Средневековье.</value>
+  </data>
+  <data name="tf_medigun_autoheal" xml:space="preserve">
+    <value>Включает / отключает автоматическое лечение медицинской пушки.</value>
+  </data>
+  <data name="tf_particles_disable_weather" xml:space="preserve">
+    <value>Отключает (1) / включает (0) погодные эффекты на картах.</value>
+  </data>
+  <data name="tf_remember_activeweapon" xml:space="preserve">
+    <value>Включает / отключает сохранение последнего выбранного оружия между жизнями.</value>
+  </data>
+  <data name="tf_remember_lastswitched" xml:space="preserve">
+    <value>Включает / отключает сохранение предыдущего активного оружия между жизнями.</value>
+  </data>
+  <data name="tf_respawn_on_loadoutchanges" xml:space="preserve">
+    <value>Включает / отключает автоматический респаун при смене экипировки класса.</value>
+  </data>
+  <data name="tf_simple_disguise_menu" xml:space="preserve">
+    <value>Включает / отключает упрощённое меню маскировки для класса Шпион.</value>
+  </data>
+  <data name="tf_testitem_recent" xml:space="preserve">
+    <value>Хранит путь последнего сохранённого файла с тестовыми предметами (используется на карте itemtest).</value>
+  </data>
+  <data name="tf_training_has_prompted_for_forums" xml:space="preserve">
+    <value>Внутренняя переменная: предлагалось ли пользователю посетить официальный форум игры.</value>
+  </data>
+  <data name="tf_training_has_prompted_for_loadout" xml:space="preserve">
+    <value>Внутренняя переменная: предлагалось ли пользователю ознакомиться с работой рюкзака.</value>
+  </data>
+  <data name="tf_training_has_prompted_for_offline_practice" xml:space="preserve">
+    <value>Внутренняя переменная: предлагалось ли пользователю пройти оффлайновую практику с ботами.</value>
+  </data>
+  <data name="tf_training_has_prompted_for_options" xml:space="preserve">
+    <value>Внутренняя переменная: предлагалось ли пользователю зайти в настройки.</value>
+  </data>
+  <data name="tf_training_has_prompted_for_training" xml:space="preserve">
+    <value>Внутренняя переменная: предлагалось ли пользователю пройти тренировку.</value>
+  </data>
+  <data name="thirdperson" xml:space="preserve">
+    <value>Включить / выключить вид от третьего лица (работает только при включённом sv_cheats).</value>
+  </data>
+  <data name="youtube_username" xml:space="preserve">
+    <value>Логин пользователя на YouTube.</value>
+  </data>
 </root>
