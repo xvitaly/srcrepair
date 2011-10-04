@@ -77,5 +77,17 @@ namespace srcrepair
          * стандартное GCF, либо нестандартное NCF, с которым много проблем.
          */
         public static bool IsGCFApp;
+
+        /*
+         * Эта переменная хранит ID игры по базе данных Steam. Используется
+         * для служебных целей.
+         */
+        public static string GameInternalID;
+
+        /*
+         * Служебная переменная. Используется для указания доступности
+         * редактора чёрного списка серверов.
+         */
+        public static string GameBLEnabled;
     }
 }

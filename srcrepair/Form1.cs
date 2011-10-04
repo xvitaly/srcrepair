@@ -306,7 +306,7 @@ namespace srcrepair
         private void WriteGCFGameSettings(string SAppName)
         {
             // Сгенерируем полный путь...
-            string SubkeyR = Path.Combine(@"Software\Valve\Source\", SAppName, "Settings");
+            string SubkeyR = Path.Combine("Software", "Valve", "Source", SAppName, "Settings");
             
             // Запишем в реестр настройки разрешения экрана...
             // По горизонтали (ScreenWidth):
@@ -535,7 +535,7 @@ namespace srcrepair
         private void ReadGCFGameSettings(string SAppName)
         {
             // Генерируем полный путь к ветке реестра нужного приложения...
-            string SubkeyR = Path.Combine(@"Software\Valve\Source\", SAppName, "Settings");
+            string SubkeyR = Path.Combine("Software", "Valve", "Source", SAppName, "Settings");
             
             // Получаем значение разрешения по горизонтали
             try
@@ -989,6 +989,28 @@ namespace srcrepair
             GT_HDR.SelectedIndex = -1;
         }
 
+        /// <summary>
+        /// Считывает текущий статус Steam Cloud и указывает его в контрол.
+        /// </summary>
+        private void GetCloudStatus(string GID)
+        {
+            try
+            {
+                if (CoreLib.GetAppBool("Cloud", Path.Combine("Valve", "Steam", "Apps", GID), false))
+                {
+                    SB_App.Text = "Steam Cloud: " + RM.GetString("SteamCloudStatusOn");
+                }
+                else
+                {
+                    SB_App.Text = "Steam Cloud: " + RM.GetString("SteamCloudStatusOff");
+                }
+            }
+            catch
+            {
+                SB_App.Text = "Steam Cloud: " + "UNKNOWN";
+            }
+        }
+
         #endregion
 
         private void frmMainW_Load(object sender, EventArgs e)
@@ -1315,6 +1337,8 @@ namespace srcrepair
                     {
                         GV.FullAppName = XMLD.GetElementsByTagName("DirName")[i].InnerText;
                         GV.SmallAppName = XMLD.GetElementsByTagName("SmallName")[i].InnerText;
+                        GV.GameInternalID = XMLD.GetElementsByTagName("SID")[i].InnerText;
+                        GV.GameBLEnabled = XMLD.GetElementsByTagName("IsMP")[i].InnerText;
                         if (XMLD.GetElementsByTagName("IsGCF")[i].InnerText == "1")
                         {
                             GV.IsGCFApp = true;
@@ -1451,7 +1475,7 @@ namespace srcrepair
             SB_Status.Text = RM.GetString("StatusNormal");
             
             // Считаем текущий статус Steam Cloud...
-            SB_App.Text = AppSelector.Text;
+            GetCloudStatus(GV.GameInternalID);
 
             // Сохраним ID последней выбранной игры...
             Properties.Settings.Default.LastGameId = AppSelector.SelectedIndex;
@@ -2503,6 +2527,18 @@ namespace srcrepair
         {
             // Удаляем содержимое вторичного кэша загрузок...
             OpenCleanupWindow(Path.Combine(GV.FullGamePath, "cache"), "*.*", ((Button)sender).Text.ToLower());
+        }
+
+        private void SB_App_DoubleClick(object sender, EventArgs e)
+        {
+            // Переключим статус Steam Cloud для управляемого приложения...
+            string SubkeyR = Path.Combine("Valve", "Steam", "Apps", GV.GameInternalID);
+            // Запишем в реестр...
+            CoreLib.WriteAppBool("Cloud", SubkeyR, !(CoreLib.GetAppBool("Cloud", SubkeyR, false)));
+            // Получим новый статус...
+            GetCloudStatus(GV.GameInternalID);
+            // Выведем сообщение...
+            MessageBox.Show(RM.GetString("SteamCloudChanged"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

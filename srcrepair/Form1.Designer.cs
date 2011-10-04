@@ -1421,7 +1421,9 @@
             // SB_App
             // 
             resources.ApplyResources(this.SB_App, "SB_App");
+            this.SB_App.DoubleClickEnabled = true;
             this.SB_App.Name = "SB_App";
+            this.SB_App.DoubleClick += new System.EventHandler(this.SB_App_DoubleClick);
             // 
             // AppSelector
             // 

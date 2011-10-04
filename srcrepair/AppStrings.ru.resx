@@ -614,4 +614,16 @@
     <value>Идёт проверка обновлений... Пожалуйста, подождите!</value>
     <comment>Сообщение о запущенной проверке обновлений для строки статуса</comment>
   </data>
+  <data name="SteamCloudChanged" xml:space="preserve">
+    <value>Настройки Steam Cloud были успешно переключены!</value>
+    <comment>Сообщение при переключении настроек Steam Cloud</comment>
+  </data>
+  <data name="SteamCloudStatusOff" xml:space="preserve">
+    <value>выключен</value>
+    <comment>Текст в строке состояния (Cloud выключён)</comment>
+  </data>
+  <data name="SteamCloudStatusOn" xml:space="preserve">
+    <value>включён</value>
+    <comment>Текст в строке состояния (Cloud включён)</comment>
+  </data>
 </root>

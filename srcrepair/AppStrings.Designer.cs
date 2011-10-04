@@ -997,6 +997,33 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Steam Cloud settings was successfully changed!.
+        /// </summary>
+        internal static string SteamCloudChanged {
+            get {
+                return ResourceManager.GetString("SteamCloudChanged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to disabled.
+        /// </summary>
+        internal static string SteamCloudStatusOff {
+            get {
+                return ResourceManager.GetString("SteamCloudStatusOff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to enabled.
+        /// </summary>
+        internal static string SteamCloudStatusOn {
+            get {
+                return ResourceManager.GetString("SteamCloudStatusOn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You refused to enter your login Steam, so the work program is impossible. Restart this program later and enter the correct login!.
         /// </summary>
         internal static string SteamLoginCancel {

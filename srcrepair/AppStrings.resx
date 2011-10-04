@@ -489,4 +489,13 @@
   <data name="AppCheckingForUpdates" xml:space="preserve">
     <value>Checking for Updates... Please wait.</value>
   </data>
+  <data name="SteamCloudChanged" xml:space="preserve">
+    <value>Steam Cloud settings was successfully changed!</value>
+  </data>
+  <data name="SteamCloudStatusOff" xml:space="preserve">
+    <value>disabled</value>
+  </data>
+  <data name="SteamCloudStatusOn" xml:space="preserve">
+    <value>enabled</value>
+  </data>
 </root>
