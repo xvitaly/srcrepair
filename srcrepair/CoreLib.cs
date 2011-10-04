@@ -226,12 +226,12 @@ namespace srcrepair
         /// указанного игрового приложения.
         /// </summary>
         /// <param name="CVar">Название переменной</param>
-        /// <param name="CApp">Короткое имя приложения</param>
+        /// <param name="CKey">Ключ реестра, который будем просматривать</param>
         /// <returns>Значение переменной</returns>
-        public static int GetSRCDWord(string CVar, string CApp)
+        public static int GetSRCDWord(string CVar, string CKey)
         {
             // Подключаем реестр и открываем ключ только для чтения...
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(Path.Combine(@"Software\Valve\Source\", CApp, "Settings"), false);
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(CKey, false);
 
             // Создаём переменную для хранения результатов...
             int ResInt = -1;
@@ -268,11 +268,11 @@ namespace srcrepair
         /// </summary>
         /// <param name="CVar">Название переменной</param>
         /// <param name="CValue">Значение переменной</param>
-        /// <param name="CApp">Короткое имя приложения</param>
-        public static void WriteSRCDWord(string CVar, int CValue, string CApp)
+        /// <param name="CKey">Ключ реестра</param>
+        public static void WriteSRCDWord(string CVar, int CValue, string CKey)
         {
             // Подключаем реестр и открываем ключ для чтения и записи...
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(Path.Combine(@"Software\Valve\Source\", CApp, "Settings"), true);
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(CKey, true);
 
             // Записываем в реестр...
             ResKey.SetValue(CVar, CValue, RegistryValueKind.DWord);

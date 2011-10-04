@@ -305,52 +305,55 @@ namespace srcrepair
         /// <param name="SAppName">Краткое имя игры</param>
         private void WriteGCFGameSettings(string SAppName)
         {
+            // Сгенерируем полный путь...
+            string SubkeyR = Path.Combine(@"Software\Valve\Source\", SAppName, "Settings");
+            
             // Запишем в реестр настройки разрешения экрана...
             // По горизонтали (ScreenWidth):
-            CoreLib.WriteSRCDWord("ScreenWidth", (int)GT_ResHor.Value, SAppName);
+            CoreLib.WriteSRCDWord("ScreenWidth", (int)GT_ResHor.Value, SubkeyR);
 
             // По вертикали (ScreenHeight):
-            CoreLib.WriteSRCDWord("ScreenHeight", (int)GT_ResVert.Value, SAppName);
+            CoreLib.WriteSRCDWord("ScreenHeight", (int)GT_ResVert.Value, SubkeyR);
 
             // Запишем в реестр настройки режима запуска приложения (ScreenWindowed):
             switch (GT_ScreenType.SelectedIndex)
             {
-                case 0: CoreLib.WriteSRCDWord("ScreenWindowed", 0, SAppName);
+                case 0: CoreLib.WriteSRCDWord("ScreenWindowed", 0, SubkeyR);
                     break;
-                case 1: CoreLib.WriteSRCDWord("ScreenWindowed", 1, SAppName);
+                case 1: CoreLib.WriteSRCDWord("ScreenWindowed", 1, SubkeyR);
                     break;
             }
 
             // Запишем в реестр настройки детализации моделей (r_rootlod):
             switch (GT_ModelQuality.SelectedIndex)
             {
-                case 0: CoreLib.WriteSRCDWord("r_rootlod", 2, SAppName);
+                case 0: CoreLib.WriteSRCDWord("r_rootlod", 2, SubkeyR);
                     break;
-                case 1: CoreLib.WriteSRCDWord("r_rootlod", 1, SAppName);
+                case 1: CoreLib.WriteSRCDWord("r_rootlod", 1, SubkeyR);
                     break;
-                case 2: CoreLib.WriteSRCDWord("r_rootlod", 0, SAppName);
+                case 2: CoreLib.WriteSRCDWord("r_rootlod", 0, SubkeyR);
                     break;
             }
 
             // Запишем в реестр настройки детализации текстур (mat_picmip):
             switch (GT_TextureQuality.SelectedIndex)
             {
-                case 0: CoreLib.WriteSRCDWord("mat_picmip", 2, SAppName);
+                case 0: CoreLib.WriteSRCDWord("mat_picmip", 2, SubkeyR);
                     break;
-                case 1: CoreLib.WriteSRCDWord("mat_picmip", 1, SAppName);
+                case 1: CoreLib.WriteSRCDWord("mat_picmip", 1, SubkeyR);
                     break;
-                case 2: CoreLib.WriteSRCDWord("mat_picmip", 0, SAppName);
+                case 2: CoreLib.WriteSRCDWord("mat_picmip", 0, SubkeyR);
                     break;
-                case 3: CoreLib.WriteSRCDWord("mat_picmip", -1, SAppName);
+                case 3: CoreLib.WriteSRCDWord("mat_picmip", -1, SubkeyR);
                     break;
             }
 
             // Запишем в реестр настройки качества шейдерных эффектов (mat_reducefillrate):
             switch (GT_ShaderQuality.SelectedIndex)
             {
-                case 0: CoreLib.WriteSRCDWord("mat_reducefillrate", 1, SAppName);
+                case 0: CoreLib.WriteSRCDWord("mat_reducefillrate", 1, SubkeyR);
                     break;
-                case 1: CoreLib.WriteSRCDWord("mat_reducefillrate", 0, SAppName);
+                case 1: CoreLib.WriteSRCDWord("mat_reducefillrate", 0, SubkeyR);
                     break;
             }
 
@@ -359,36 +362,36 @@ namespace srcrepair
             {
                 case 0:
                     // Simple reflections
-                    CoreLib.WriteSRCDWord("r_waterforceexpensive", 0, SAppName);
-                    CoreLib.WriteSRCDWord("r_waterforcereflectentities", 0, SAppName);
+                    CoreLib.WriteSRCDWord("r_waterforceexpensive", 0, SubkeyR);
+                    CoreLib.WriteSRCDWord("r_waterforcereflectentities", 0, SubkeyR);
                     break;
                 case 1:
                     // Reflect world
-                    CoreLib.WriteSRCDWord("r_waterforceexpensive", 1, SAppName);
-                    CoreLib.WriteSRCDWord("r_waterforcereflectentities", 0, SAppName);
+                    CoreLib.WriteSRCDWord("r_waterforceexpensive", 1, SubkeyR);
+                    CoreLib.WriteSRCDWord("r_waterforcereflectentities", 0, SubkeyR);
                     break;
                 case 2:
                     // Reflect all
-                    CoreLib.WriteSRCDWord("r_waterforceexpensive", 1, SAppName);
-                    CoreLib.WriteSRCDWord("r_waterforcereflectentities", 1, SAppName);
+                    CoreLib.WriteSRCDWord("r_waterforceexpensive", 1, SubkeyR);
+                    CoreLib.WriteSRCDWord("r_waterforcereflectentities", 1, SubkeyR);
                     break;
             }
 
             // Запишем в реестр настройки прорисовки теней (r_shadowrendertotexture):
             switch (GT_ShadowQuality.SelectedIndex)
             {
-                case 0: CoreLib.WriteSRCDWord("r_shadowrendertotexture", 0, SAppName);
+                case 0: CoreLib.WriteSRCDWord("r_shadowrendertotexture", 0, SubkeyR);
                     break;
-                case 1: CoreLib.WriteSRCDWord("r_shadowrendertotexture", 1, SAppName);
+                case 1: CoreLib.WriteSRCDWord("r_shadowrendertotexture", 1, SubkeyR);
                     break;
             }
 
             // Запишем в реестр настройки коррекции цвета (mat_colorcorrection):
             switch (GT_ColorCorrectionT.SelectedIndex)
             {
-                case 0: CoreLib.WriteSRCDWord("mat_colorcorrection", 0, SAppName);
+                case 0: CoreLib.WriteSRCDWord("mat_colorcorrection", 0, SubkeyR);
                     break;
-                case 1: CoreLib.WriteSRCDWord("mat_colorcorrection", 1, SAppName);
+                case 1: CoreLib.WriteSRCDWord("mat_colorcorrection", 1, SubkeyR);
                     break;
             }
 
@@ -397,52 +400,52 @@ namespace srcrepair
             {
                 case 0:
                     // Нет сглаживания
-                    CoreLib.WriteSRCDWord("mat_antialias", 1, SAppName);
-                    CoreLib.WriteSRCDWord("mat_aaquality", 0, SAppName);
-                    CoreLib.WriteSRCDWord("ScreenMSAA", 0, SAppName); // Дублируем значение mat_antialias
-                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 0, SAppName); // Дублируем значение mat_aaquality
+                    CoreLib.WriteSRCDWord("mat_antialias", 1, SubkeyR);
+                    CoreLib.WriteSRCDWord("mat_aaquality", 0, SubkeyR);
+                    CoreLib.WriteSRCDWord("ScreenMSAA", 0, SubkeyR); // Дублируем значение mat_antialias
+                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 0, SubkeyR); // Дублируем значение mat_aaquality
                     break;
                 case 1:
                     // 2x MSAA
-                    CoreLib.WriteSRCDWord("mat_antialias", 2, SAppName);
-                    CoreLib.WriteSRCDWord("mat_aaquality", 0, SAppName);
-                    CoreLib.WriteSRCDWord("ScreenMSAA", 2, SAppName);
-                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 0, SAppName);
+                    CoreLib.WriteSRCDWord("mat_antialias", 2, SubkeyR);
+                    CoreLib.WriteSRCDWord("mat_aaquality", 0, SubkeyR);
+                    CoreLib.WriteSRCDWord("ScreenMSAA", 2, SubkeyR);
+                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 0, SubkeyR);
                     break;
                 case 2:
                     // 4x MSAA
-                    CoreLib.WriteSRCDWord("mat_antialias", 4, SAppName);
-                    CoreLib.WriteSRCDWord("mat_aaquality", 0, SAppName);
-                    CoreLib.WriteSRCDWord("ScreenMSAA", 4, SAppName);
-                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 0, SAppName);
+                    CoreLib.WriteSRCDWord("mat_antialias", 4, SubkeyR);
+                    CoreLib.WriteSRCDWord("mat_aaquality", 0, SubkeyR);
+                    CoreLib.WriteSRCDWord("ScreenMSAA", 4, SubkeyR);
+                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 0, SubkeyR);
                     break;
                 case 3:
                     // 8x CSAA
-                    CoreLib.WriteSRCDWord("mat_antialias", 4, SAppName);
-                    CoreLib.WriteSRCDWord("mat_aaquality", 2, SAppName);
-                    CoreLib.WriteSRCDWord("ScreenMSAA", 4, SAppName);
-                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 2, SAppName);
+                    CoreLib.WriteSRCDWord("mat_antialias", 4, SubkeyR);
+                    CoreLib.WriteSRCDWord("mat_aaquality", 2, SubkeyR);
+                    CoreLib.WriteSRCDWord("ScreenMSAA", 4, SubkeyR);
+                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 2, SubkeyR);
                     break;
                 case 4:
                     // 16x CSAA
-                    CoreLib.WriteSRCDWord("mat_antialias", 4, SAppName);
-                    CoreLib.WriteSRCDWord("mat_aaquality", 4, SAppName);
-                    CoreLib.WriteSRCDWord("ScreenMSAA", 4, SAppName);
-                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 4, SAppName);
+                    CoreLib.WriteSRCDWord("mat_antialias", 4, SubkeyR);
+                    CoreLib.WriteSRCDWord("mat_aaquality", 4, SubkeyR);
+                    CoreLib.WriteSRCDWord("ScreenMSAA", 4, SubkeyR);
+                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 4, SubkeyR);
                     break;
                 case 5:
                     // 8x MSAA
-                    CoreLib.WriteSRCDWord("mat_antialias", 8, SAppName);
-                    CoreLib.WriteSRCDWord("mat_aaquality", 0, SAppName);
-                    CoreLib.WriteSRCDWord("ScreenMSAA", 8, SAppName);
-                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 0, SAppName);
+                    CoreLib.WriteSRCDWord("mat_antialias", 8, SubkeyR);
+                    CoreLib.WriteSRCDWord("mat_aaquality", 0, SubkeyR);
+                    CoreLib.WriteSRCDWord("ScreenMSAA", 8, SubkeyR);
+                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 0, SubkeyR);
                     break;
                 case 6:
                     // 16xQ CSAA
-                    CoreLib.WriteSRCDWord("mat_antialias", 8, SAppName);
-                    CoreLib.WriteSRCDWord("mat_aaquality", 2, SAppName);
-                    CoreLib.WriteSRCDWord("ScreenMSAA", 8, SAppName);
-                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 2, SAppName);
+                    CoreLib.WriteSRCDWord("mat_antialias", 8, SubkeyR);
+                    CoreLib.WriteSRCDWord("mat_aaquality", 2, SubkeyR);
+                    CoreLib.WriteSRCDWord("ScreenMSAA", 8, SubkeyR);
+                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 2, SubkeyR);
                     break;
             }
 
@@ -451,75 +454,75 @@ namespace srcrepair
             {
                 case 0:
                     // Билинейная
-                    CoreLib.WriteSRCDWord("mat_forceaniso", 1, SAppName);
-                    CoreLib.WriteSRCDWord("mat_trilinear", 0, SAppName);
+                    CoreLib.WriteSRCDWord("mat_forceaniso", 1, SubkeyR);
+                    CoreLib.WriteSRCDWord("mat_trilinear", 0, SubkeyR);
                     break;
                 case 1:
                     // Трилинейная
-                    CoreLib.WriteSRCDWord("mat_forceaniso", 1, SAppName);
-                    CoreLib.WriteSRCDWord("mat_trilinear", 1, SAppName);
+                    CoreLib.WriteSRCDWord("mat_forceaniso", 1, SubkeyR);
+                    CoreLib.WriteSRCDWord("mat_trilinear", 1, SubkeyR);
                     break;
                 case 2:
                     // Анизотропная 2x
-                    CoreLib.WriteSRCDWord("mat_forceaniso", 2, SAppName);
-                    CoreLib.WriteSRCDWord("mat_trilinear", 0, SAppName);
+                    CoreLib.WriteSRCDWord("mat_forceaniso", 2, SubkeyR);
+                    CoreLib.WriteSRCDWord("mat_trilinear", 0, SubkeyR);
                     break;
                 case 3:
                     // Анизотропная 4x
-                    CoreLib.WriteSRCDWord("mat_forceaniso", 4, SAppName);
-                    CoreLib.WriteSRCDWord("mat_trilinear", 0, SAppName);
+                    CoreLib.WriteSRCDWord("mat_forceaniso", 4, SubkeyR);
+                    CoreLib.WriteSRCDWord("mat_trilinear", 0, SubkeyR);
                     break;
                 case 4:
                     // Анизотропная 8x
-                    CoreLib.WriteSRCDWord("mat_forceaniso", 8, SAppName);
-                    CoreLib.WriteSRCDWord("mat_trilinear", 0, SAppName);
+                    CoreLib.WriteSRCDWord("mat_forceaniso", 8, SubkeyR);
+                    CoreLib.WriteSRCDWord("mat_trilinear", 0, SubkeyR);
                     break;
                 case 5:
                     // Анизотропная 16x
-                    CoreLib.WriteSRCDWord("mat_forceaniso", 16, SAppName);
-                    CoreLib.WriteSRCDWord("mat_trilinear", 0, SAppName);
+                    CoreLib.WriteSRCDWord("mat_forceaniso", 16, SubkeyR);
+                    CoreLib.WriteSRCDWord("mat_trilinear", 0, SubkeyR);
                     break;
             }
 
             // Запишем в реестр настройки вертикальной синхронизации (mat_vsync):
             switch (GT_VSync.SelectedIndex)
             {
-                case 0: CoreLib.WriteSRCDWord("mat_vsync", 0, SAppName);
+                case 0: CoreLib.WriteSRCDWord("mat_vsync", 0, SubkeyR);
                     break;
-                case 1: CoreLib.WriteSRCDWord("mat_vsync", 1, SAppName);
+                case 1: CoreLib.WriteSRCDWord("mat_vsync", 1, SubkeyR);
                     break;
             }
 
             // Запишем в реестр настройки размытия движения (MotionBlur):
             switch (GT_MotionBlur.SelectedIndex)
             {
-                case 0: CoreLib.WriteSRCDWord("MotionBlur", 0, SAppName);
+                case 0: CoreLib.WriteSRCDWord("MotionBlur", 0, SubkeyR);
                     break;
-                case 1: CoreLib.WriteSRCDWord("MotionBlur", 1, SAppName);
+                case 1: CoreLib.WriteSRCDWord("MotionBlur", 1, SubkeyR);
                     break;
             }
 
             // Запишем в реестр настройки режима DirectX (DXLevel_V1):
             switch (GT_DxMode.SelectedIndex)
             {
-                case 0: CoreLib.WriteSRCDWord("DXLevel_V1", 80, SAppName); // DirectX 8.0
+                case 0: CoreLib.WriteSRCDWord("DXLevel_V1", 80, SubkeyR); // DirectX 8.0
                     break;
-                case 1: CoreLib.WriteSRCDWord("DXLevel_V1", 81, SAppName); // DirectX 8.1
+                case 1: CoreLib.WriteSRCDWord("DXLevel_V1", 81, SubkeyR); // DirectX 8.1
                     break;
-                case 2: CoreLib.WriteSRCDWord("DXLevel_V1", 90, SAppName); // DirectX 9.0
+                case 2: CoreLib.WriteSRCDWord("DXLevel_V1", 90, SubkeyR); // DirectX 9.0
                     break;
-                case 3: CoreLib.WriteSRCDWord("DXLevel_V1", 95, SAppName); // DirectX 9.0c
+                case 3: CoreLib.WriteSRCDWord("DXLevel_V1", 95, SubkeyR); // DirectX 9.0c
                     break;
             }
 
             // Запишем в реестр настройки HDR (mat_hdr_level):
             switch (GT_HDR.SelectedIndex)
             {
-                case 0: CoreLib.WriteSRCDWord("mat_hdr_level", 0, SAppName);
+                case 0: CoreLib.WriteSRCDWord("mat_hdr_level", 0, SubkeyR);
                     break;
-                case 1: CoreLib.WriteSRCDWord("mat_hdr_level", 1, SAppName);
+                case 1: CoreLib.WriteSRCDWord("mat_hdr_level", 1, SubkeyR);
                     break;
-                case 2: CoreLib.WriteSRCDWord("mat_hdr_level", 2, SAppName);
+                case 2: CoreLib.WriteSRCDWord("mat_hdr_level", 2, SubkeyR);
                     break;
             }
         }
@@ -531,10 +534,13 @@ namespace srcrepair
         /// <param name="SAppName">Краткое имя игры</param>
         private void ReadGCFGameSettings(string SAppName)
         {
+            // Генерируем полный путь к ветке реестра нужного приложения...
+            string SubkeyR = Path.Combine(@"Software\Valve\Source\", SAppName, "Settings");
+            
             // Получаем значение разрешения по горизонтали
             try
             {
-                GT_ResHor.Value = CoreLib.GetSRCDWord("ScreenWidth", SAppName);
+                GT_ResHor.Value = CoreLib.GetSRCDWord("ScreenWidth", SubkeyR);
             }
             catch
             {
@@ -544,7 +550,7 @@ namespace srcrepair
             // Получаем значение разрешения по вертикали
             try
             {
-                GT_ResVert.Value = CoreLib.GetSRCDWord("ScreenHeight", SAppName);
+                GT_ResVert.Value = CoreLib.GetSRCDWord("ScreenHeight", SubkeyR);
             }
             catch
             {
@@ -554,7 +560,7 @@ namespace srcrepair
             // Получаем режим окна (ScreenWindowed): 1-window, 0-fullscreen
             try
             {
-                GT_ScreenType.SelectedIndex = CoreLib.GetSRCDWord("ScreenWindowed", SAppName);
+                GT_ScreenType.SelectedIndex = CoreLib.GetSRCDWord("ScreenWindowed", SubkeyR);
             }
             catch
             {
@@ -564,7 +570,7 @@ namespace srcrepair
             // Получаем детализацию моделей (r_rootlod): 0-high, 1-med, 2-low
             try
             {
-                switch (CoreLib.GetSRCDWord("r_rootlod", SAppName))
+                switch (CoreLib.GetSRCDWord("r_rootlod", SubkeyR))
                 {
                     case 0: GT_ModelQuality.SelectedIndex = 2;
                         break;
@@ -582,7 +588,7 @@ namespace srcrepair
             // Получаем детализацию текстур (mat_picmip): 0-high, 1-med, 2-low
             try
             {
-                switch (CoreLib.GetSRCDWord("mat_picmip", SAppName))
+                switch (CoreLib.GetSRCDWord("mat_picmip", SubkeyR))
                 {
                     case -1: GT_TextureQuality.SelectedIndex = 3;
                         break;
@@ -602,7 +608,7 @@ namespace srcrepair
             // Получаем настройки шейдеров (mat_reducefillrate): 0-high, 1-low
             try
             {
-                switch (CoreLib.GetSRCDWord("mat_reducefillrate", SAppName))
+                switch (CoreLib.GetSRCDWord("mat_reducefillrate", SubkeyR))
                 {
                     case 0: GT_ShaderQuality.SelectedIndex = 1;
                         break;
@@ -618,12 +624,12 @@ namespace srcrepair
             // Начинаем работать над отражениями (здесь сложнее)
             try
             {
-                switch (CoreLib.GetSRCDWord("r_waterforceexpensive", SAppName))
+                switch (CoreLib.GetSRCDWord("r_waterforceexpensive", SubkeyR))
                 {
                     case 0: GT_WaterQuality.SelectedIndex = 0;
                         break;
                     case 1:
-                        switch (CoreLib.GetSRCDWord("r_waterforcereflectentities", SAppName))
+                        switch (CoreLib.GetSRCDWord("r_waterforcereflectentities", SubkeyR))
                         {
                             case 0: GT_WaterQuality.SelectedIndex = 1;
                                 break;
@@ -641,7 +647,7 @@ namespace srcrepair
             // Получаем настройки теней (r_shadowrendertotexture): 0-low, 1-high
             try
             {
-                switch (CoreLib.GetSRCDWord("r_shadowrendertotexture", SAppName))
+                switch (CoreLib.GetSRCDWord("r_shadowrendertotexture", SubkeyR))
                 {
                     case 0: GT_ShadowQuality.SelectedIndex = 0;
                         break;
@@ -657,7 +663,7 @@ namespace srcrepair
             // Получаем настройки коррекции цвета (mat_colorcorrection): 0-off, 1-on
             try
             {
-                switch (CoreLib.GetSRCDWord("mat_colorcorrection", SAppName))
+                switch (CoreLib.GetSRCDWord("mat_colorcorrection", SubkeyR))
                 {
                     case 0: GT_ColorCorrectionT.SelectedIndex = 0;
                         break;
@@ -674,7 +680,7 @@ namespace srcrepair
             // 2x MSAA - 2:0; 4xMSAA - 4:0; 8xCSAA - 4:2; 16xCSAA - 4:4; 8xMSAA - 8:0; 16xQ CSAA - 8:2;
             try
             {
-                switch (CoreLib.GetSRCDWord("mat_antialias", SAppName))
+                switch (CoreLib.GetSRCDWord("mat_antialias", SubkeyR))
                 {
                     case 0: GT_AntiAliasing.SelectedIndex = 0;
                         break;
@@ -683,7 +689,7 @@ namespace srcrepair
                     case 2: GT_AntiAliasing.SelectedIndex = 1;
                         break;
                     case 4:
-                        switch (CoreLib.GetSRCDWord("mat_aaquality", SAppName))
+                        switch (CoreLib.GetSRCDWord("mat_aaquality", SubkeyR))
                         {
                             case 0: GT_AntiAliasing.SelectedIndex = 2;
                                 break;
@@ -694,7 +700,7 @@ namespace srcrepair
                         }
                         break;
                     case 8:
-                        switch (CoreLib.GetSRCDWord("mat_aaquality", SAppName))
+                        switch (CoreLib.GetSRCDWord("mat_aaquality", SubkeyR))
                         {
                             case 0: GT_AntiAliasing.SelectedIndex = 5;
                                 break;
@@ -712,10 +718,10 @@ namespace srcrepair
             // Получаем настройки анизотропии (mat_forceaniso): 1-off, etc
             try
             {
-                switch (CoreLib.GetSRCDWord("mat_forceaniso", SAppName))
+                switch (CoreLib.GetSRCDWord("mat_forceaniso", SubkeyR))
                 {
                     case 1:
-                        switch (CoreLib.GetSRCDWord("mat_trilinear", SAppName))
+                        switch (CoreLib.GetSRCDWord("mat_trilinear", SubkeyR))
                         {
                             case 0: GT_Filtering.SelectedIndex = 0;
                                 break;
@@ -741,7 +747,7 @@ namespace srcrepair
             // Получаем настройки вертикальной синхронизации (mat_vsync): 0-off, 1-on
             try
             {
-                switch (CoreLib.GetSRCDWord("mat_vsync", SAppName))
+                switch (CoreLib.GetSRCDWord("mat_vsync", SubkeyR))
                 {
                     case 0: GT_VSync.SelectedIndex = 0;
                         break;
@@ -757,7 +763,7 @@ namespace srcrepair
             // Получаем настройки размытия движения (MotionBlur): 0-off, 1-on
             try
             {
-                switch (CoreLib.GetSRCDWord("MotionBlur", SAppName))
+                switch (CoreLib.GetSRCDWord("MotionBlur", SubkeyR))
                 {
                     case 0: GT_MotionBlur.SelectedIndex = 0;
                         break;
@@ -774,7 +780,7 @@ namespace srcrepair
             // 80-DirectX 8.0; 81-DirectX 8.1; 90-DirectX 9.0; 95-DirectX 9.0c
             try
             {
-                switch (CoreLib.GetSRCDWord("DXLevel_V1", SAppName))
+                switch (CoreLib.GetSRCDWord("DXLevel_V1", SubkeyR))
                 {
                     case 80: GT_DxMode.SelectedIndex = 0;
                         break;
@@ -794,7 +800,7 @@ namespace srcrepair
             // Получаем настройки HDR (mat_hdr_level): 0-off,1-bloom,2-Full
             try
             {
-                switch (CoreLib.GetSRCDWord("mat_hdr_level", SAppName))
+                switch (CoreLib.GetSRCDWord("mat_hdr_level", SubkeyR))
                 {
                     case 0: GT_HDR.SelectedIndex = 0;
                         break;
@@ -1443,6 +1449,8 @@ namespace srcrepair
             
             // Выводим сообщение о завершении считывания в статус-бар...
             SB_Status.Text = RM.GetString("StatusNormal");
+            
+            // Считаем текущий статус Steam Cloud...
             SB_App.Text = AppSelector.Text;
 
             // Сохраним ID последней выбранной игры...
