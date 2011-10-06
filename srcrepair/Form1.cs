@@ -1606,7 +1606,7 @@ namespace srcrepair
                     // Создаём резервную копию...
                     try
                     {
-                        CreateRegBackUpNow(Path.Combine(@"HKEY_CURRENT_USER\Software\Valve\Source\", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
+                        CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
                     }
                     catch
                     {
@@ -1877,7 +1877,7 @@ namespace srcrepair
                 // Создаём резервную копию...
                 try
                 {
-                    CreateRegBackUpNow(Path.Combine(@"HKEY_CURRENT_USER\Software\Valve\Source\", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
+                    CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
                 }
                 catch
                 {
@@ -1888,7 +1888,7 @@ namespace srcrepair
                 try
                 {
                     // Удаляем ключ HKEY_CURRENT_USER\Software\Valve\Source\tf\Settings из реестра...
-                    Registry.CurrentUser.DeleteSubKeyTree(Path.Combine(@"HKEY_CURRENT_USER\Software\Valve\Source\", GV.SmallAppName, "Settings"), false);
+                    Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), false);
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -1948,7 +1948,7 @@ namespace srcrepair
                 // Создаём резервную копию...
                 try
                 {
-                    CreateRegBackUpNow(Path.Combine(@"HKEY_CURRENT_USER\Software\Valve\Source\", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
+                    CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
                 }
                 catch
                 {
@@ -1959,7 +1959,7 @@ namespace srcrepair
                 try
                 {
                     if (Directory.Exists(GV.GamePath)) { Directory.Delete(GV.GamePath, true); } // Удаляем всю папку с файлами игры...
-                    Registry.CurrentUser.DeleteSubKeyTree(Path.Combine(@"HKEY_CURRENT_USER\Software\Valve\Source\", GV.SmallAppName, "Settings"), false); // Удаляем настройки видео...
+                    Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), false); // Удаляем настройки видео...
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
@@ -2145,7 +2145,7 @@ namespace srcrepair
                 // Создадим резервную копию графических настроек игры...
                 try
                 {
-                    CreateRegBackUpNow(Path.Combine(@"HKEY_CURRENT_USER\Software\Valve\Source\", GV.SmallAppName, "Settings"), "Game_Options", GV.FullBackUpDirPath);
+                    CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_Options", GV.FullBackUpDirPath);
                     MessageBox.Show(RM.GetString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     BUT_Refresh.PerformClick();
                 }
@@ -2164,7 +2164,7 @@ namespace srcrepair
                 try
                 {
                     // Создаём...
-                    CreateRegBackUpNow(@"HKEY_CURRENT_USER\Software\Valve", "Steam_BackUp", GV.FullBackUpDirPath);
+                    CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve"), "Steam_BackUp", GV.FullBackUpDirPath);
                     // Выводим сообщение...
                     MessageBox.Show(RM.GetString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     // Обновим список бэкапов...
@@ -2186,7 +2186,7 @@ namespace srcrepair
                 // Созданим резервную копию графических настроек всех Source-игр...
                 try
                 {
-                    CreateRegBackUpNow(@"HKEY_CURRENT_USER\Software\Valve\Source", "Source_Options", GV.FullBackUpDirPath);
+                    CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source"), "Source_Options", GV.FullBackUpDirPath);
                     MessageBox.Show(RM.GetString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     BUT_Refresh.PerformClick();
                 }
