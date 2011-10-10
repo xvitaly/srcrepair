@@ -1255,7 +1255,7 @@
     <value>Громкость звука, проигрываемого при попадании в противника.</value>
   </data>
   <data name="tf_dingaling_wav_override" xml:space="preserve">
-    <value>Можно использовать любой другой звук попадания, закачав его в папку "sounds" и указав полное имя файла без пути.</value>
+    <value>Можно использовать любой другой звук попадания, закачав его в папку "sounds" и указав полное имя файла без пути. Больше не используется. Для указания кастомного звука, переименуйте свой файл в hitsound.wav и поместите в каталог tf/sound/ui/.</value>
   </data>
   <data name="tf_disguise_menu_controller_mode" xml:space="preserve">
     <value>Использовать консольные меню маскировки: 1 - вкл; 0 - выкл.</value>
@@ -1922,5 +1922,179 @@
   </data>
   <data name="youtube_http_proxy" xml:space="preserve">
     <value>HTTP прокси-сервер, используемый при загрузке роликов на YouTube.</value>
+  </data>
+  <data name="changelevel" xml:space="preserve">
+    <value>Сменить карту на сервере. В качестве параметра присутствует название карты, которая будет запущена сервером.</value>
+  </data>
+  <data name="cl_ask_blacklist_opt_out" xml:space="preserve">
+    <value>Включить / выключить отображение вопроса о добавлении сервера в чёрный список после быстрого отключения от него.</value>
+  </data>
+  <data name="cl_ask_favorite_opt_out" xml:space="preserve">
+    <value>Включить / выключить отображение вопроса о добавлении сервера, находящегося в Избранном, в чёрный список после быстрого отключения от него.</value>
+  </data>
+  <data name="cl_drawhud" xml:space="preserve">
+    <value>Включить / выключить отображение HUD.</value>
+  </data>
+  <data name="cl_showpos" xml:space="preserve">
+    <value>Включить / выключить отображение координат на карте и скорости перемещения игрока.</value>
+  </data>
+  <data name="cl_yawspeed" xml:space="preserve">
+    <value>Задаёт скорость стрейфа.</value>
+  </data>
+  <data name="cvarlist" xml:space="preserve">
+    <value>Вывести в консоль полный список переменных сервера или клиента.</value>
+  </data>
+  <data name="demoui" xml:space="preserve">
+    <value>Отобразить окно проигрывателя демок (равносильно нажатию комбинации Shift+F2 в главном меню).</value>
+  </data>
+  <data name="dropitem" xml:space="preserve">
+    <value>Выбросить документы или оружие, находящееся в руках игрока.</value>
+  </data>
+  <data name="endmovie" xml:space="preserve">
+    <value>Прекращает работу модуля записи.</value>
+  </data>
+  <data name="explode" xml:space="preserve">
+    <value>Выполняет суицид путём взрыва.</value>
+  </data>
+  <data name="find" xml:space="preserve">
+    <value>Найти команду.</value>
+  </data>
+  <data name="hurtme" xml:space="preserve">
+    <value>Нанести требуемый урон себе.</value>
+  </data>
+  <data name="jointeam" xml:space="preserve">
+    <value>Позволяет присоединиться к команде. Возможные варианты: red, blue, auto, spectator.</value>
+  </data>
+  <data name="jpeg" xml:space="preserve">
+    <value>Сделать скриншот в формате JPEG.</value>
+  </data>
+  <data name="kill" xml:space="preserve">
+    <value>Выполняет суицид.</value>
+  </data>
+  <data name="map" xml:space="preserve">
+    <value>Сменить карту и перезапустить сервер. Не используется, объявлена устаревшей.</value>
+  </data>
+  <data name="maps" xml:space="preserve">
+    <value>Вывести в консоль полный список установленных карт на клиенте/сервере.</value>
+  </data>
+  <data name="mp_waitingforplayerscancel" xml:space="preserve">
+    <value>Значение 1 отключит функцию ожидание игроков до начала раунда.</value>
+  </data>
+  <data name="nextlevel" xml:space="preserve">
+    <value>Задаёт название следующей карты.</value>
+  </data>
+  <data name="rcon" xml:space="preserve">
+    <value>Позволяет выполнять команды на удалённом сервере.</value>
+  </data>
+  <data name="rcon_address" xml:space="preserve">
+    <value>Задаёт IP-адрес удалённого сервера, на котором необходимо выполнить команду.</value>
+  </data>
+  <data name="record" xml:space="preserve">
+    <value>Начинает запись демки. В качестве параметра выступает имя файла (расширение не обязательно).</value>
+  </data>
+  <data name="restart" xml:space="preserve">
+    <value>Перезапустить игровой сервер.</value>
+  </data>
+  <data name="retry" xml:space="preserve">
+    <value>Переподключиться к текущему серверу, либо подключиться к последнему серверу, на котором Вы находились.</value>
+  </data>
+  <data name="screenshot" xml:space="preserve">
+    <value>Сделать скриншот.</value>
+  </data>
+  <data name="startmovie" xml:space="preserve">
+    <value>Открывает модуль записи во время проигрывания демки, позволяющий экспортировать видео в формат AVI.</value>
+  </data>
+  <data name="status" xml:space="preserve">
+    <value>Вывести в консоль информацию о карте, соединении и игроках.</value>
+  </data>
+  <data name="stop" xml:space="preserve">
+    <value>Останавливает запрос демки и сохраняет получившийся файл.</value>
+  </data>
+  <data name="taunt" xml:space="preserve">
+    <value>Выполнить насмешку.</value>
+  </data>
+  <data name="tf_allow_player_use" xml:space="preserve">
+    <value>Разрешить / запретить использование команды use на игрокам на сервере.</value>
+  </data>
+  <data name="tf_forced_holiday" xml:space="preserve">
+    <value>Включает / отключает на сервере праздничный режим: 0 - выключено, 2 - хэллоуин, 3 - день рождения.</value>
+  </data>
+  <data name="tf_medieval" xml:space="preserve">
+    <value>Включает / отключает режим Средневековье на любой карте. Вступает в силу только после её смены.</value>
+  </data>
+  <data name="tf_overtime_nag" xml:space="preserve">
+    <value>Включает / отключает бесконечную фразу "дополнительное время".</value>
+  </data>
+  <data name="unbind" xml:space="preserve">
+    <value>Отменяет назначение игрового действия клавише.</value>
+  </data>
+  <data name="build" xml:space="preserve">
+    <value>Построить предмет (пушку, раздатчик или телепорт).</value>
+  </data>
+  <data name="changeclass" xml:space="preserve">
+    <value>Вызвать меню смены класса.</value>
+  </data>
+  <data name="changeteam" xml:space="preserve">
+    <value>Вызвать меню смены команды.</value>
+  </data>
+  <data name="cl_decline_first_notification" xml:space="preserve">
+    <value>Ответить отрицательно на всплывающее уведомление (торговля, дуэли и т.д.).</value>
+  </data>
+  <data name="cl_trigger_first_notification" xml:space="preserve">
+    <value>Ответить утвердительно на всплывающее уведомление (торговля, дуэли и т.д.).</value>
+  </data>
+  <data name="disguiseteam" xml:space="preserve">
+    <value>Сменить цвет команды маскировки при игре за класс Шпион.</value>
+  </data>
+  <data name="duck" xml:space="preserve">
+    <value>Присесть.</value>
+  </data>
+  <data name="inspect" xml:space="preserve">
+    <value>Обследовать игрока Вашей команды, на которого указывает перекрестие прицела, на наличие нестандартных предметов.</value>
+  </data>
+  <data name="invnext" xml:space="preserve">
+    <value>Следующее оружие.</value>
+  </data>
+  <data name="invprev" xml:space="preserve">
+    <value>Предыдущее оружие.</value>
+  </data>
+  <data name="jump" xml:space="preserve">
+    <value>Осуществить прыжок.</value>
+  </data>
+  <data name="lastinv" xml:space="preserve">
+    <value>Переключиться на предыдущее оружие.</value>
+  </data>
+  <data name="open_charinfo_backpack" xml:space="preserve">
+    <value>Открыть рюкзак TF2.</value>
+  </data>
+  <data name="open_charinfo_direct" xml:space="preserve">
+    <value>Открыть экпировку класса TF2.</value>
+  </data>
+  <data name="pause" xml:space="preserve">
+    <value>Приостановить игру (если разрешено на сервере).</value>
+  </data>
+  <data name="reload" xml:space="preserve">
+    <value>Перезарядить оружие.</value>
+  </data>
+  <data name="save_replay" xml:space="preserve">
+    <value>Сохраняет реплей (повтор) на сервере, на котором они включены.</value>
+  </data>
+  <data name="say" xml:space="preserve">
+    <value>Открыть окно общего чата.</value>
+  </data>
+  <data name="say_team" xml:space="preserve">
+    <value>Открыть окно командного чата.</value>
+  </data>
+  <data name="showmapinfo" xml:space="preserve">
+    <value>Выводит информацию о текущей карте, позволяет просмотреть обучающее видео.</value>
+  </data>
+  <data name="showscores" xml:space="preserve">
+    <value>Открыть таблицу лидеров.</value>
+  </data>
+  <data name="toggleconsole" xml:space="preserve">
+    <value>Показать / скрыть консоль разработчика.</value>
+  </data>
+  <data name="use_action_slot_item" xml:space="preserve">
+    <value>Выполнить действие из слота Action, либо альтернативную насмешку.</value>
   </data>
 </root>
