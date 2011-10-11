@@ -474,7 +474,7 @@
 </value>
   </data>
   <data name="CE_ShowHint.Text" xml:space="preserve">
-    <value>Подсказка (F1)</value>
+    <value>Подсказка (F7)</value>
   </data>
   <data name="CE_CVName.HeaderText" xml:space="preserve">
     <value>Переменная</value>

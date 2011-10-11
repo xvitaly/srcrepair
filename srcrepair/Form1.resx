@@ -1565,7 +1565,7 @@
     <value>23, 22</value>
   </data>
   <data name="CE_ShowHint.Text" xml:space="preserve">
-    <value>Show hint (F1)</value>
+    <value>Show hint (F7)</value>
   </data>
   <data name="CE_Toolbar.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -3171,7 +3171,7 @@
     <value>False</value>
   </data>
   <data name="MNUShowEdHint.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>F1</value>
+    <value>F7</value>
   </data>
   <data name="MNUShowEdHint.Size" type="System.Drawing.Size, System.Drawing">
     <value>274, 22</value>
@@ -3250,6 +3250,9 @@
   </data>
   <data name="ToolsMNU.Text" xml:space="preserve">
     <value>&amp;Tools</value>
+  </data>
+  <data name="MNUHelp.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F1</value>
   </data>
   <data name="MNUHelp.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 22</value>
