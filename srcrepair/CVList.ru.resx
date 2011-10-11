@@ -2097,4 +2097,40 @@
   <data name="use_action_slot_item" xml:space="preserve">
     <value>Выполнить действие из слота Action, либо альтернативную насмешку.</value>
   </data>
+  <data name="banid" xml:space="preserve">
+    <value>Забанить игрока с указанным в параметре SteamID на указанное количество минут.</value>
+  </data>
+  <data name="banip" xml:space="preserve">
+    <value>Забанить игрока с указанным в параметре IP-адресом на указанное количество минут.</value>
+  </data>
+  <data name="kick" xml:space="preserve">
+    <value>Кикнуть игрока с сервера.</value>
+  </data>
+  <data name="sm_cancelvote" xml:space="preserve">
+    <value>Отменить запущенное на сервере голосование (SM).</value>
+  </data>
+  <data name="sm_csay" xml:space="preserve">
+    <value>Написать заданный текст по центру экрана для всех игроков (SM).</value>
+  </data>
+  <data name="sm_cvar" xml:space="preserve">
+    <value>Изменить значение переменной на сервере (SM).</value>
+  </data>
+  <data name="sm_hsay" xml:space="preserve">
+    <value>Написать заданный текст в виде сообщения для всех игроков (SM).</value>
+  </data>
+  <data name="sm_rcon" xml:space="preserve">
+    <value>Выполнить команду на удалённом сервере (SM).</value>
+  </data>
+  <data name="sm_say" xml:space="preserve">
+    <value>Написать заданный текст в чат как администратор (SM).</value>
+  </data>
+  <data name="tf_medieval_autorp" xml:space="preserve">
+    <value>Включить / выключить декорирование сообщений общего чата в режиме Средневековье. Исправляет ошибку в английской версии, когда русский текст вставлялся без пробелов.</value>
+  </data>
+  <data name="unbindall" xml:space="preserve">
+    <value>Удаляет все назначения игровых действий клавишам. Для восстановления используйте функцию сброса настроек клавиатуры.</value>
+  </data>
+  <data name="voicemenu" xml:space="preserve">
+    <value>Вызов меню голосовых команд.</value>
+  </data>
 </root>

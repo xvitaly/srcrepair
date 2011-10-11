@@ -117,14 +117,137 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="bind" xml:space="preserve">
+    <value>Binds a key with a command.</value>
+  </data>
+  <data name="changelevel" xml:space="preserve">
+    <value>Changes the map.</value>
+  </data>
+  <data name="cl_ask_blacklist_opt_out" xml:space="preserve">
+    <value>0/1 - turns question whether to blacklist a server after leaving after a short amount of time off/on.</value>
+  </data>
+  <data name="cl_ask_favorite_opt_out" xml:space="preserve">
+    <value>0/1 - turns question whether to favorite a server after leaving after a longer amount of time off/on.</value>
+  </data>
+  <data name="cl_autoreload" xml:space="preserve">
+    <value>0/1 - turns automatic reloading off/on.</value>
+  </data>
+  <data name="cl_autorezoom" xml:space="preserve">
+    <value>0/1 - turns Sniper Rifle re-zoom off/on.</value>
+  </data>
+  <data name="cl_burninggibs" xml:space="preserve">
+    <value>0/1 - burning gibs off/on.</value>
+  </data>
+  <data name="cl_crosshair_file" xml:space="preserve">
+    <value>Sets crosshair picture. "" is standard-crosshairs.</value>
+  </data>
+  <data name="cl_drawhud" xml:space="preserve">
+    <value>Hides/shows the HUD - sv_cheats 1 required.</value>
+  </data>
+  <data name="cl_flipviewmodels" xml:space="preserve">
+    <value>0/1 - sets viewmodels normal/inverted(left-handed) - does not work while connected to a server.</value>
+  </data>
   <data name="cl_gameserver_create_identity" xml:space="preserve">
     <value>Create identity for dedicated server.</value>
   </data>
   <data name="cl_gameserver_list" xml:space="preserve">
     <value>List all of the game server accounts owned by the currently logged in Steam account.</value>
   </data>
+  <data name="cl_interp" xml:space="preserve">
+    <value>Sets how far character models are interpolated (drawn away from their actual position) in the world, a good standard value for hitscan weapons is 0.034.</value>
+  </data>
+  <data name="cl_new_impact_effects" xml:space="preserve">
+    <value>0/1 - turns new, better looking impact effects off/on, most noticeable on glass.</value>
+  </data>
+  <data name="cl_ragdoll_collide" xml:space="preserve">
+    <value>0/1 - turns ragdoll collisions on/off.</value>
+  </data>
+  <data name="cl_ragdoll_fade_time" xml:space="preserve">
+    <value>Sets time until ragdolls disappear.</value>
+  </data>
+  <data name="cl_showbackpackrarities" xml:space="preserve">
+    <value>0/1 - turns color-coded items in backpack off/on.</value>
+  </data>
+  <data name="cl_showfps" xml:space="preserve">
+    <value>0/1/2 - shows framerate (off/real-time/rounded).</value>
+  </data>
+  <data name="cl_showpos" xml:space="preserve">
+    <value>0/1 - shows the map coordinates and movement speed of the player.</value>
+  </data>
+  <data name="cl_spec_carrieditems" xml:space="preserve">
+    <value>Shows non-standard items being carried by player you're spectating.</value>
+  </data>
+  <data name="cl_yawspeed" xml:space="preserve">
+    <value>Sets the speed at which your character turns when using the +left and +right commands.</value>
+  </data>
+  <data name="cvarlist" xml:space="preserve">
+    <value>View complete cvar list.</value>
+  </data>
+  <data name="demoui" xml:space="preserve">
+    <value>Brings up a toolbox for replays (Shift+F2 will also bring up the tool box).</value>
+  </data>
+  <data name="dropitem" xml:space="preserve">
+    <value>Drop the flag or intelligence.</value>
+  </data>
+  <data name="endmovie" xml:space="preserve">
+    <value>Stops source recorder.</value>
+  </data>
+  <data name="exec" xml:space="preserve">
+    <value>Execute config file.</value>
+  </data>
+  <data name="explode" xml:space="preserve">
+    <value>Commit suicide by exploding into gibs.</value>
+  </data>
+  <data name="find" xml:space="preserve">
+    <value>F search function that displays all commands with searched term.</value>
+  </data>
+  <data name="fov_desired" xml:space="preserve">
+    <value>70-90 - set desired field of view (higher values show more of the battlefield at the cost of fps).</value>
+  </data>
+  <data name="host_framerate" xml:space="preserve">
+    <value>Tells the source recorder to record at a constant framerate.</value>
+  </data>
+  <data name="host_timescale" xml:space="preserve">
+    <value>Use in conjunction with host_framerate to produce a smooth video output.</value>
+  </data>
+  <data name="hud_combattext" xml:space="preserve">
+    <value>0/1 - turns the damage text above enemies off/on.</value>
+  </data>
   <data name="hud_combattext_healing" xml:space="preserve">
     <value>Display the amount of healing done per second.</value>
+  </data>
+  <data name="hud_reloadscheme" xml:space="preserve">
+    <value>Use this to fix various HUD-color errors or lingering Crit-effects.</value>
+  </data>
+  <data name="hurtme" xml:space="preserve">
+    <value>Deals given amount of damage (can be negative for extra health). Requires sv_cheats 1.</value>
+  </data>
+  <data name="jointeam" xml:space="preserve">
+    <value>Force team (red/blue/auto/spectator). Use this if you are stuck in "dead spectator" mode when too many people attempt to join a team at the same time.</value>
+  </data>
+  <data name="jpeg" xml:space="preserve">
+    <value>Take a jpeg screenshot.</value>
+  </data>
+  <data name="kill" xml:space="preserve">
+    <value>Commit suicide.</value>
+  </data>
+  <data name="map" xml:space="preserve">
+    <value>Changes the map and restarts the server.</value>
+  </data>
+  <data name="maps" xml:space="preserve">
+    <value>Display list of maps.</value>
+  </data>
+  <data name="mp_autoteambalance" xml:space="preserve">
+    <value>Cvar for automatic team balancing.</value>
+  </data>
+  <data name="mp_disable_respawn_times" xml:space="preserve">
+    <value>Cvar for respawn times.</value>
+  </data>
+  <data name="mp_idledealmethod" xml:space="preserve">
+    <value>Cvar for managing idle players.</value>
+  </data>
+  <data name="mp_restartgame" xml:space="preserve">
+    <value>Restarts the round and resets the round time.</value>
   </data>
   <data name="mp_scrambleteams" xml:space="preserve">
     <value>Scramble the teams and restart the game.</value>
@@ -135,8 +258,68 @@
   <data name="mp_scrambleteams_auto_windifference" xml:space="preserve">
     <value>Number of round wins a team must lead by in order to trigger an auto scramble.</value>
   </data>
+  <data name="mp_teams_unbalance_limit" xml:space="preserve">
+    <value>Cvar for team force balance.</value>
+  </data>
+  <data name="mp_timelimit" xml:space="preserve">
+    <value>Cvar for map timelimit.</value>
+  </data>
+  <data name="mp_usehwmmodels" xml:space="preserve">
+    <value>1 - makes use of the high-polygon class models used in the 'Meet the Team' videos.</value>
+  </data>
+  <data name="mp_usehwmvcds" xml:space="preserve">
+    <value>1 - makes use of the high-polygon class models used in the 'Meet the Team' videos.</value>
+  </data>
+  <data name="mp_waitingforplayerscancel" xml:space="preserve">
+    <value>1 - cancels "waiting for players..." time.</value>
+  </data>
+  <data name="net_graph" xml:space="preserve">
+    <value>Depending on the input value, different amounts of information will be shown such as ping, fps, lerp, packet loss, etc.</value>
+  </data>
+  <data name="nextlevel" xml:space="preserve">
+    <value>Sets the next map to be played.</value>
+  </data>
+  <data name="rcon" xml:space="preserve">
+    <value>Executes an rcon command.</value>
+  </data>
+  <data name="rcon_address" xml:space="preserve">
+    <value>Sets the server address to send rcon commands to (if not set, console sends the command to the server that the player is currently in instead).</value>
+  </data>
+  <data name="rcon_password" xml:space="preserve">
+    <value>Gives player access to rcon commands.</value>
+  </data>
+  <data name="record" xml:space="preserve">
+    <value>Records a demo.</value>
+  </data>
+  <data name="restart" xml:space="preserve">
+    <value>Restarts the current server.</value>
+  </data>
+  <data name="retry" xml:space="preserve">
+    <value>Retry connection to last server.</value>
+  </data>
+  <data name="r_drawviewmodel" xml:space="preserve">
+    <value>Turns viewmodels on and off.</value>
+  </data>
+  <data name="startmovie" xml:space="preserve">
+    <value>Opens up the source recorder during demo play back and allows for high quality avi format recording.</value>
+  </data>
+  <data name="status" xml:space="preserve">
+    <value>Display map and connection status.</value>
+  </data>
+  <data name="stop" xml:space="preserve">
+    <value>Stops the recording of a demo.</value>
+  </data>
   <data name="sv_allow_votes" xml:space="preserve">
     <value>Allow voting?</value>
+  </data>
+  <data name="sv_cheats" xml:space="preserve">
+    <value>0/1 - turns cheats off/on.</value>
+  </data>
+  <data name="sv_lan" xml:space="preserve">
+    <value>Cvar for local area network.</value>
+  </data>
+  <data name="sv_pure" xml:space="preserve">
+    <value>Cvar for managing custom content.</value>
   </data>
   <data name="sv_use_steam_voice" xml:space="preserve">
     <value>Use new voice codec instead of old.</value>
@@ -174,13 +357,70 @@
   <data name="sv_vote_kick_ban_duration" xml:space="preserve">
     <value>How long should a kick vote ban someone from the server? (in minutes)</value>
   </data>
+  <data name="tf_allow_player_use" xml:space="preserve">
+    <value>0/1 - disallows/allows the +use command on a server, useful for some custom maps, standard is 0.</value>
+  </data>
   <data name="tf_arena_max_streak" xml:space="preserve">
     <value>Teams will be scrambled if one team reaches this streak.</value>
+  </data>
+  <data name="tf_damage_disablespread" xml:space="preserve">
+    <value>0/1 - turns random damage-spread (+-10%) for weapons off/on.</value>
+  </data>
+  <data name="tf_dingalingaling" xml:space="preserve">
+    <value>0/1 - turns weapon hit sound off/on.</value>
+  </data>
+  <data name="tf_dingaling_pitchmaxdmg" xml:space="preserve">
+    <value>Sets the pitch when doing maximum damage with your weapon, a lower pitch is recommended in most cases, standard is 100.</value>
+  </data>
+  <data name="tf_dingaling_pitchmindmg" xml:space="preserve">
+    <value>Sets the pitch when doing minimum damage with your weapon, a higher pitch is recommended in most cases, standard is 100.</value>
+  </data>
+  <data name="tf_dingaling_volume" xml:space="preserve">
+    <value>Sets the volume for hit sounds, standard is 1.00.</value>
+  </data>
+  <data name="tf_dingaling_wav_override" xml:space="preserve">
+    <value>Allows using a custom hit sound. No longer used. To use a custom hit sound, rename your sound file "hitsound.wav", and place it in the "tf/sound/ui/" folder.</value>
+  </data>
+  <data name="tf_forced_holiday" xml:space="preserve">
+    <value>0/2/3 - enables holiday mode (0 = default; 2 = halloween; 3 = birthday).</value>
+  </data>
+  <data name="tf_medieval" xml:space="preserve">
+    <value>0/1 - enables Medieval mode on the server, requires map change to take effect.</value>
+  </data>
+  <data name="tf_medieval_autorp" xml:space="preserve">
+    <value>0/1 - enables/disables automatic medieval-style text modification in the chat box.</value>
+  </data>
+  <data name="tf_medieval_thirdperson" xml:space="preserve">
+    <value>0/1 - toggles third person view during Medieval mode.</value>
+  </data>
+  <data name="tf_medigun_autoheal" xml:space="preserve">
+    <value>0/1 - turns automatic healing without holding the left mouse button off/on.</value>
+  </data>
+  <data name="tf_overtime_nag" xml:space="preserve">
+    <value>0/1 - turns endless shouting of "OVERTIME!" in Overtime off/on.</value>
   </data>
   <data name="tf_server_identity_account_id" xml:space="preserve">
     <value>Owner's SteamID.</value>
   </data>
   <data name="tf_server_identity_token" xml:space="preserve">
     <value>Owner's identity token.</value>
+  </data>
+  <data name="tf_use_fixed_weaponspreads" xml:space="preserve">
+    <value>0/1 - turns fixed, consistent spread for weapons like Shotgun, Scattergun and Shortstop off/on.</value>
+  </data>
+  <data name="tf_weapon_criticals" xml:space="preserve">
+    <value>0/1 - turns random criticals off/on.</value>
+  </data>
+  <data name="unbind" xml:space="preserve">
+    <value>Unbinds a key.</value>
+  </data>
+  <data name="use" xml:space="preserve">
+    <value>Used to equip the specified weapon or execute action.</value>
+  </data>
+  <data name="viewmodel_fov" xml:space="preserve">
+    <value>Sets distance in which your weapons are drawn, higher values show more of the weapon and arms but may show missing parts.</value>
+  </data>
+  <data name="zoom_sensitivity_ratio" xml:space="preserve">
+    <value>Sets the ratio of sensitivity while zoomed in with the Sniper Rifle with accordance to actual sensitivity.</value>
   </data>
 </root>
