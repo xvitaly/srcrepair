@@ -2133,4 +2133,31 @@
   <data name="voicemenu" xml:space="preserve">
     <value>Вызов меню голосовых команд.</value>
   </data>
+  <data name="cl_steamscreenshots" xml:space="preserve">
+    <value>Включает / отключает автоматическу загрузку скриншотов игры в SteamCloud.</value>
+  </data>
+  <data name="mp_show_voice_icons" xml:space="preserve">
+    <value>Включает / отключает отображение значков над игроками, использующими голосовой чат.</value>
+  </data>
+  <data name="sb_close_browser_on_connect" xml:space="preserve">
+    <value>Включает / отключает автоматическое скрытие браузера серверов при подключении к серверу.</value>
+  </data>
+  <data name="sixense_always_draw_crosshair" xml:space="preserve">
+    <value>Всегда отображать метку прицела при использовании манипулятора Razer Hydra.</value>
+  </data>
+  <data name="sixense_enabled" xml:space="preserve">
+    <value>Включает / отключает поддержку манипулятора Razer Hydra.</value>
+  </data>
+  <data name="sixense_filter_level" xml:space="preserve">
+    <value>Задаёт режим фильтрации манипулятора Razer Hydra.</value>
+  </data>
+  <data name="sixense_mode" xml:space="preserve">
+    <value>Задаёт режим работы манипулятора Razer Hydra.</value>
+  </data>
+  <data name="tf_allow_taunt_switch" xml:space="preserve">
+    <value>Разрешает (1 или 2) / запрещает (0) переключение оружия во время выполнения насмешки.</value>
+  </data>
+  <data name="tf_show_voice_icons" xml:space="preserve">
+    <value>Включает / отключает отображение значков над игроками, использующими голосовой чат. Объявлена устаревшей, поэтому используйте mp_show_voice_icons вместо неё.</value>
+  </data>
 </root>
