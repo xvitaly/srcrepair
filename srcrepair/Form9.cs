@@ -44,6 +44,7 @@ namespace srcrepair
             MO_AllowUnsafeNCFOps.Checked = Properties.Settings.Default.AllowNCFUnsafeOps;
             MO_RemEmptyDirs.Checked = Properties.Settings.Default.RemoveEmptyDirs;
             MO_PrefHelpSystem.SelectedIndex = Properties.Settings.Default.PreferedHelpSystem;
+            MO_EnableAppLogs.Checked = Properties.Settings.Default.EnableDebugLog;
 
             // Укажем название приложения в заголовке окна...
             this.Text = String.Format(this.Text, GV.AppName);
@@ -59,6 +60,7 @@ namespace srcrepair
             Properties.Settings.Default.AllowNCFUnsafeOps = MO_AllowUnsafeNCFOps.Checked;
             Properties.Settings.Default.RemoveEmptyDirs = MO_RemEmptyDirs.Checked;
             Properties.Settings.Default.PreferedHelpSystem = MO_PrefHelpSystem.SelectedIndex;
+            Properties.Settings.Default.EnableDebugLog = MO_EnableAppLogs.Checked;
             // Сохраняем настройки...
             Properties.Settings.Default.Save();
             // Показываем сообщение...

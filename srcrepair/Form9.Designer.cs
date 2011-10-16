@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOptions));
             this.GB_MainOpts = new System.Windows.Forms.GroupBox();
+            this.MO_EnableAppLogs = new System.Windows.Forms.CheckBox();
             this.MO_PrefHelpSystem = new System.Windows.Forms.ComboBox();
             this.MO_L_HelpSystem = new System.Windows.Forms.Label();
             this.MO_RemEmptyDirs = new System.Windows.Forms.CheckBox();
@@ -45,6 +46,7 @@
             // 
             // GB_MainOpts
             // 
+            this.GB_MainOpts.Controls.Add(this.MO_EnableAppLogs);
             this.GB_MainOpts.Controls.Add(this.MO_PrefHelpSystem);
             this.GB_MainOpts.Controls.Add(this.MO_L_HelpSystem);
             this.GB_MainOpts.Controls.Add(this.MO_RemEmptyDirs);
@@ -56,6 +58,12 @@
             resources.ApplyResources(this.GB_MainOpts, "GB_MainOpts");
             this.GB_MainOpts.Name = "GB_MainOpts";
             this.GB_MainOpts.TabStop = false;
+            // 
+            // MO_EnableAppLogs
+            // 
+            resources.ApplyResources(this.MO_EnableAppLogs, "MO_EnableAppLogs");
+            this.MO_EnableAppLogs.Name = "MO_EnableAppLogs";
+            this.MO_EnableAppLogs.UseVisualStyleBackColor = true;
             // 
             // MO_PrefHelpSystem
             // 
@@ -159,5 +167,6 @@
         private System.Windows.Forms.CheckBox MO_RemEmptyDirs;
         private System.Windows.Forms.ComboBox MO_PrefHelpSystem;
         private System.Windows.Forms.Label MO_L_HelpSystem;
+        private System.Windows.Forms.CheckBox MO_EnableAppLogs;
     }
 }

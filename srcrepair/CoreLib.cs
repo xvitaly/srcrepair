@@ -495,6 +495,41 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Функция, записывающая в лог-файл строку. Например, сообщение об ошибке.
+        /// </summary>
+        /// <param name="TextMessage">Сообщение для записи в лог</param>
+        /// <param name="LogFile">Имя файла с логом</param>
+        public static void WriteStringToLog(string TextMessage)
+        {
+            if (Properties.Settings.Default.EnableDebugLog) // Пишем в лог если включено...
+            {
+                try // Начинаем работу...
+                {
+                    // Сгенерируем путь к файлу с логом...
+                    string DebugFileName = Path.Combine(GV.AppUserDir, Properties.Settings.Default.DebugLogFileName);
+                    // Если файл не существует, создадим его и сразу закроем...
+                    if (!File.Exists(DebugFileName))
+                    {
+                        using (FileStream fs = File.Create(DebugFileName)) // Создаём...
+                        {
+                            // Закрываем...
+                            fs.Close();
+                        }
+                    }
+                    // Начинаем записывать в лог-файл...
+                    using (StreamWriter DFile = new StreamWriter(DebugFileName, true))
+                    {
+                        // Делаем запись...
+                        DFile.WriteLine(String.Format("{0}: {1}", WriteDateToString(DateTime.Now, false), TextMessage));
+                        // Закрываем файл...
+                        DFile.Close();
+                    }
+                }
+                catch { /* Подавляем исключения... */ }
+            }
+        }
+        
+        /// <summary>
         /// Функция, записывающая в лог-файл текст исключения, дату его возникновения
         /// и другую отладочную информацию, а также выводящая дружественное сообщение для
         /// пользователя и подробное для разработчика.
@@ -505,7 +540,7 @@ namespace srcrepair
         /// <param name="MsgIcon">Тип иконки: предупреждение, ошибка и т.д.</param>
         public static void HandleExceptionEx(string FrindlyMsg, string DevMsg, string DevMethod, MessageBoxIcon MsgIcon)
         {
-            string ResultString = String.Format("{0} raised by: {1}", DevMsg, DevMethod);
+            string ResultString = String.Format("{0} Raised by: {1}.", DevMsg, DevMethod);
             #if DEBUG
             // Для режима отладки покажем сообщение, понятное разработчикам...
             MessageBox.Show(ResultString, GV.AppName, MessageBoxButtons.OK, MsgIcon);
@@ -514,29 +549,7 @@ namespace srcrepair
             MessageBox.Show(FrindlyMsg, GV.AppName, MessageBoxButtons.OK, MsgIcon);
             #endif
             // Запишем в файл...
-            try
-            {
-                // Сгенерируем путь к файлу с логом...
-                string DebugFileName = Path.Combine(GV.AppUserDir, Properties.Settings.Default.DebugLogFileName);
-                // Если файл не существует, создадим его и сразу закроем...
-                if (!File.Exists(DebugFileName))
-                {
-                    using (FileStream fs = File.Create(DebugFileName)) // Создаём...
-                    {
-                        // Закрываем...
-                        fs.Close();
-                    }
-                }
-                // Начинаем записывать в лог-файл...
-                using (StreamWriter DFile = new StreamWriter(DebugFileName, true))
-                {
-                    // Делаем запись...
-                    DFile.WriteLine(String.Format("{0}: {1}", WriteDateToString(DateTime.Now, false), ResultString));
-                    // Закрываем файл...
-                    DFile.Close();
-                }
-            }
-            catch { /* Подавляем исключения... */ }
+            WriteStringToLog(ResultString);
         }
 
         /// <summary>

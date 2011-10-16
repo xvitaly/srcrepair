@@ -109,10 +109,10 @@ namespace srcrepair
                     // Копируем оригинальный файл в файл бэкапа...
                     File.Copy(Path.Combine(ConfigDir, ConfName), Path.Combine(BackUpDir, ConfName + "." + CoreLib.WriteDateToString(DateTime.Now, true)), true);
                 }
-                catch
+                catch (Exception Ex)
                 {
                     // Произошло исключение. Уведомим пользователя об этом...
-                    MessageBox.Show(RM.GetString("BackUpCreationFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(RM.GetString("BackUpCreationFailed"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -896,11 +896,10 @@ namespace srcrepair
                     }
                     SB_Status.Text = RM.GetString("StatusOpenedFile") + " " + CFGFileName;
                 }
-                catch
+                catch (Exception Ex)
                 {
                     // Произошло исключение...
-                    // Подавляем сообщение об этом. Юзеру не обязательно знать...
-                    MessageBox.Show(RM.GetString("CE_ExceptionDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(RM.GetString("CE_ExceptionDetected"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
             else
@@ -1021,6 +1020,13 @@ namespace srcrepair
             Assembly Assmbl = Assembly.GetEntryAssembly();
             GV.FullAppPath = Path.GetDirectoryName(Assmbl.Location);
 
+            // Укажем путь к пользовательским данным и создадим если не существует...
+            GV.AppUserDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), GV.AppName);
+            if (!(Directory.Exists(GV.AppUserDir)))
+            {
+                Directory.CreateDirectory(GV.AppUserDir);
+            }
+
             // Проверяем, запущена ли программа с правами администратора...
             if (!(CoreLib.IsCurrentUserAdmin()))
             {
@@ -1055,7 +1061,7 @@ namespace srcrepair
                 // Получаем из реестра...
                 GV.FullSteamPath = CoreLib.GetSteamPath();
             }
-            catch
+            catch (Exception Ex)
             {
                 // Найдём путь...
                 if (!(String.IsNullOrWhiteSpace(Properties.Settings.Default.LastSteamPath)) && File.Exists(Path.Combine(Properties.Settings.Default.LastSteamPath, "Steam.exe")))
@@ -1065,13 +1071,14 @@ namespace srcrepair
                 else
                 {
                     // Произошло исключение, пользователю придётся ввести путь самостоятельно!
-                    MessageBox.Show(RM.GetString("SteamPathNotDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    CoreLib.HandleExceptionEx(RM.GetString("SteamPathNotDetected"), Ex.Message, Ex.Source, MessageBoxIcon.Error);
                     FldrBrwse.Description = RM.GetString("SteamPathEnterText"); // Указываем текст в диалоге поиска каталога...
                     if (FldrBrwse.ShowDialog() == DialogResult.OK) // Отображаем стандартный диалог поиска каталога...
                     {
                         if (!(File.Exists(Path.Combine(FldrBrwse.SelectedPath, "Steam.exe"))))
                         {
                             MessageBox.Show(RM.GetString("SteamPathEnterErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            CoreLib.WriteStringToLog("Invalid Steam directory entered by user.");
                             Environment.Exit(7);
                         }
                         else
@@ -1083,6 +1090,7 @@ namespace srcrepair
                     else
                     {
                         MessageBox.Show(RM.GetString("SteamPathCancel"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        CoreLib.WriteStringToLog("User closed opendir window.");
                         Environment.Exit(7);
                     }
                 }
@@ -1110,9 +1118,9 @@ namespace srcrepair
                     }
                 }
             }
-            catch
+            catch (Exception Ex)
             {
-                MessageBox.Show(RM.GetString("AppNoSTADetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CoreLib.HandleExceptionEx(RM.GetString("AppNoSTADetected"), Ex.Message, Ex.Source, MessageBoxIcon.Error);
                 Environment.Exit(6);
             }
 
@@ -1131,20 +1139,14 @@ namespace srcrepair
                     {
                         // Пользователь нажал Cancel, либо ввёл пустую строку, поэтому
                         // выводим сообщение и завершаем работу приложения...
-                        MessageBox.Show(RM.GetString("SteamLoginCancel"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show(RM.GetString("SteamLoginCancel"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        CoreLib.WriteStringToLog("User cancelled Login dialog.");
                         Environment.Exit(7);
                     };
                 } while (!(Directory.Exists(Path.Combine(GV.FullSteamPath, "steamapps", SBuf))));
                 
                 // Добавляем полученный логин в список...
                 LoginSel.Items.Add((string)SBuf);
-            }
-
-            // Укажем путь к пользовательским данным и создадим если не существует...
-            GV.AppUserDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), GV.AppName);
-            if (!(Directory.Exists(GV.AppUserDir)))
-            {
-                Directory.CreateDirectory(GV.AppUserDir);
             }
 
             // Выводим сообщение в строку статуса...
@@ -1186,6 +1188,7 @@ namespace srcrepair
                 PS_PathDetector.Text = RM.GetString("SteamNonASCIITitle");
                 PS_PathDetector.ForeColor = Color.Red;
                 MessageBox.Show(RM.GetString("SteamNonASCIIDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CoreLib.WriteStringToLog(String.Format("NonASCII characters detected. Steam path: {0}.", GV.FullSteamPath));
             }
 
             try
@@ -1354,9 +1357,9 @@ namespace srcrepair
                 }
                 XMLFS.Close();
             }
-            catch
+            catch (Exception Ex)
             {
-                MessageBox.Show(RM.GetString("AppXMLParseError"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CoreLib.HandleExceptionEx(RM.GetString("AppXMLParseError"), Ex.Message, Ex.Source, MessageBoxIcon.Error);
             }
 
             // Если выбор верный, включаем контрол выбора логина Steam...
@@ -1506,9 +1509,9 @@ namespace srcrepair
             {
                 DetectInstalledGames(GV.FullSteamPath, LoginSel.Text);
             }
-            catch
+            catch (Exception Ex)
             {
-                MessageBox.Show(RM.GetString("AppXMLParseError"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CoreLib.HandleExceptionEx(RM.GetString("AppXMLParseError"), Ex.Message, Ex.Source, MessageBoxIcon.Error);
                 Environment.Exit(16);
             }
 
@@ -1622,9 +1625,9 @@ namespace srcrepair
                         // Выводим подтверждающее сообщение...
                         MessageBox.Show(RM.GetString("GT_SaveSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    catch
+                    catch (Exception Ex)
                     {
-                        MessageBox.Show(RM.GetString("GT_SaveFailure"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        CoreLib.HandleExceptionEx(RM.GetString("GT_SaveFailure"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                     }
                 }
                 else
@@ -1681,10 +1684,10 @@ namespace srcrepair
                         // Отобразим значок предупреждения на странице графических настроек...
                         GT_Warning.Visible = true;
                     }
-                    catch
+                    catch (Exception Ex)
                     {
                         // Установка не удалась. Выводим сообщение об этом...
-                        MessageBox.Show(RM.GetString("FP_InstallFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        CoreLib.HandleExceptionEx(RM.GetString("FP_InstallFailed"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -1722,10 +1725,10 @@ namespace srcrepair
                         // Скрываем значок предупреждения на странице графических настроек...
                         GT_Warning.Visible = false;
                     }
-                    catch
+                    catch (Exception Ex)
                     {
                         // Произошло исключение при попытке удаления. Уведомим пользователя об этом...
-                        MessageBox.Show(RM.GetString("FP_RemoveFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        CoreLib.HandleExceptionEx(RM.GetString("FP_RemoveFailed"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -1781,10 +1784,10 @@ namespace srcrepair
                     //WriteTableToFileNow(CFGFileName);
                     WriteTableToFileNow(CE_OpenCfgDialog.FileName, GV.AppName);
                 }
-                catch
+                catch (Exception Ex)
                 {
                     // Произошла ошибка при сохранении файла...
-                    MessageBox.Show(RM.GetString("CE_CfgSVVEx"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(RM.GetString("CE_CfgSVVEx"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
             else
@@ -1891,9 +1894,9 @@ namespace srcrepair
                     Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), false);
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch
+                catch (Exception Ex)
                 {
-                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(RM.GetString("PS_CleanupErr"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -1915,9 +1918,9 @@ namespace srcrepair
                     if (File.Exists(Buf)) { File.Delete(Buf); } // Удаляем основной лаунчер...
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch
+                catch (Exception Ex)
                 {
-                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(RM.GetString("PS_CleanupErr"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -1962,9 +1965,9 @@ namespace srcrepair
                     Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), false); // Удаляем настройки видео...
                     MessageBox.Show(RM.GetString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch
+                catch (Exception Ex)
                 {
-                    MessageBox.Show(RM.GetString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(RM.GetString("PS_CleanupErr"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -2024,10 +2027,10 @@ namespace srcrepair
             {
                 ReadBackUpList2Table(GV.FullBackUpDirPath);
             }
-            catch
+            catch (Exception Ex)
             {
                 // Произошло исключение...
-                MessageBox.Show(RM.GetString("BU_ListLdFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CoreLib.HandleExceptionEx(RM.GetString("BU_ListLdFailed"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 // Создадим каталог для резервных копий...
                 Directory.CreateDirectory(GV.FullBackUpDirPath);
             }
@@ -2060,10 +2063,10 @@ namespace srcrepair
                                 // Показываем сообщение об успешном восстановлении...
                                 MessageBox.Show(RM.GetString("BU_RestSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
-                            catch
+                            catch (Exception Ex)
                             {
                                 // Произошло исключение...
-                                MessageBox.Show(RM.GetString("BU_RestFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                CoreLib.HandleExceptionEx(RM.GetString("BU_RestFailed"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                             }
                         }
                         else
@@ -2076,10 +2079,10 @@ namespace srcrepair
                                 // Показываем сообщение об успешном восстановлении...
                                 MessageBox.Show(RM.GetString("BU_RestSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
-                            catch
+                            catch (Exception Ex)
                             {
                                 // Произошло исключение...
-                                MessageBox.Show(RM.GetString("BU_RestFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                CoreLib.HandleExceptionEx(RM.GetString("BU_RestFailed"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                             }
                         }
                     }
@@ -2115,10 +2118,10 @@ namespace srcrepair
                             // Показываем сообщение об успешном удалении...
                             MessageBox.Show(RM.GetString("BU_DelSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        catch
+                        catch (Exception Ex)
                         {
                             // Произошло исключение при попытке удаления файла резервной копии...
-                            MessageBox.Show(RM.GetString("BU_DelFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            CoreLib.HandleExceptionEx(RM.GetString("BU_DelFailed"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                         }
                     }
                 }
@@ -2149,9 +2152,9 @@ namespace srcrepair
                     MessageBox.Show(RM.GetString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     BUT_Refresh.PerformClick();
                 }
-                catch
+                catch (Exception Ex)
                 {
-                    MessageBox.Show(RM.GetString("BU_RegErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(RM.GetString("BU_RegErr"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -2170,10 +2173,10 @@ namespace srcrepair
                     // Обновим список бэкапов...
                     BUT_Refresh.PerformClick();
                 }
-                catch
+                catch (Exception Ex)
                 {
                     // Произошло исключение, уведомим пользователя...
-                    MessageBox.Show(RM.GetString("BU_RegErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(RM.GetString("BU_RegErr"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
             
@@ -2190,9 +2193,9 @@ namespace srcrepair
                     MessageBox.Show(RM.GetString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     BUT_Refresh.PerformClick();
                 }
-                catch
+                catch (Exception Ex)
                 {
-                    MessageBox.Show(RM.GetString("BU_RegErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(RM.GetString("BU_RegErr"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -2403,10 +2406,10 @@ namespace srcrepair
                     MessageBox.Show(RM.GetString("UPD_LatestInstalled"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch
+            catch (Exception Ex)
             {
                 // Произошло исключение...
-                MessageBox.Show(RM.GetString("UPD_ExceptionDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CoreLib.HandleExceptionEx(RM.GetString("UPD_ExceptionDetected"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
             }
             // Вернём предыдущее содержимое строки статуса...
             SB_Status.Text = StatusBarCurrText;
