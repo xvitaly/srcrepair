@@ -93,9 +93,9 @@ namespace srcrepair
                     FileDownloader.DownloadFileAsync(new Uri(UpdateURI), Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI)));
                 }
             }
-            catch
+            catch (Exception Ex)
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("UPD_DownloadException"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_DownloadException"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
             }
         }
     }

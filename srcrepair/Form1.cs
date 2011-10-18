@@ -112,7 +112,7 @@ namespace srcrepair
                 catch (Exception Ex)
                 {
                     // Произошло исключение. Уведомим пользователя об этом...
-                    CoreLib.HandleExceptionEx(RM.GetString("BackUpCreationFailed"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(RM.GetString("BackUpCreationFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -899,7 +899,7 @@ namespace srcrepair
                 catch (Exception Ex)
                 {
                     // Произошло исключение...
-                    CoreLib.HandleExceptionEx(RM.GetString("CE_ExceptionDetected"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(RM.GetString("CE_ExceptionDetected"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
             else
@@ -1071,7 +1071,7 @@ namespace srcrepair
                 else
                 {
                     // Произошло исключение, пользователю придётся ввести путь самостоятельно!
-                    CoreLib.HandleExceptionEx(RM.GetString("SteamPathNotDetected"), Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                    CoreLib.HandleExceptionEx(RM.GetString("SteamPathNotDetected"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
                     FldrBrwse.Description = RM.GetString("SteamPathEnterText"); // Указываем текст в диалоге поиска каталога...
                     if (FldrBrwse.ShowDialog() == DialogResult.OK) // Отображаем стандартный диалог поиска каталога...
                     {
@@ -1120,7 +1120,7 @@ namespace srcrepair
             }
             catch (Exception Ex)
             {
-                CoreLib.HandleExceptionEx(RM.GetString("AppNoSTADetected"), Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                CoreLib.HandleExceptionEx(RM.GetString("AppNoSTADetected"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
                 Environment.Exit(6);
             }
 
@@ -1263,24 +1263,38 @@ namespace srcrepair
                     // Проверяем нужно ли чистить блобы...
                     if (PS_CleanBlobs.Checked)
                     {
-                        // Чистим блобы...
-                        CoreLib.CleanBlobsNow(GV.FullSteamPath);
+                        try
+                        {
+                            // Чистим блобы...
+                            CoreLib.CleanBlobsNow(GV.FullSteamPath);
+                        }
+                        catch (Exception Ex)
+                        {
+                            CoreLib.HandleExceptionEx(RM.GetString("PS_CleanException"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                        }
                     }
 
                     // Проверяем нужно ли чистить реестр...
                     if (PS_CleanRegistry.Checked)
                     {
-                        // Проверяем выбрал ли пользователь язык из выпадающего списка...
-                        if (PS_SteamLang.SelectedIndex != -1)
+                        try
                         {
-                            // Всё в порядке, чистим реестр...
-                            CoreLib.CleanRegistryNow(PS_SteamLang.SelectedIndex);
+                            // Проверяем выбрал ли пользователь язык из выпадающего списка...
+                            if (PS_SteamLang.SelectedIndex != -1)
+                            {
+                                // Всё в порядке, чистим реестр...
+                                CoreLib.CleanRegistryNow(PS_SteamLang.SelectedIndex);
+                            }
+                            else
+                            {
+                                // Пользователь не выбрал язык, поэтому будем использовать английский...
+                                MessageBox.Show(RM.GetString("PS_NoLangSelected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                CoreLib.CleanRegistryNow(0);
+                            }
                         }
-                        else
+                        catch (Exception Ex)
                         {
-                            // Пользователь не выбрал язык, поэтому будем использовать английский...
-                            MessageBox.Show(RM.GetString("PS_NoLangSelected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            CoreLib.CleanRegistryNow(0);
+                            CoreLib.HandleExceptionEx(RM.GetString("PS_CleanException"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                         }
                     }
 
@@ -1359,7 +1373,7 @@ namespace srcrepair
             }
             catch (Exception Ex)
             {
-                CoreLib.HandleExceptionEx(RM.GetString("AppXMLParseError"), Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                CoreLib.HandleExceptionEx(RM.GetString("AppXMLParseError"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
             }
 
             // Если выбор верный, включаем контрол выбора логина Steam...
@@ -1511,7 +1525,7 @@ namespace srcrepair
             }
             catch (Exception Ex)
             {
-                CoreLib.HandleExceptionEx(RM.GetString("AppXMLParseError"), Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                CoreLib.HandleExceptionEx(RM.GetString("AppXMLParseError"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
                 Environment.Exit(16);
             }
 
@@ -1627,7 +1641,7 @@ namespace srcrepair
                     }
                     catch (Exception Ex)
                     {
-                        CoreLib.HandleExceptionEx(RM.GetString("GT_SaveFailure"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                        CoreLib.HandleExceptionEx(RM.GetString("GT_SaveFailure"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                     }
                 }
                 else
@@ -1687,7 +1701,7 @@ namespace srcrepair
                     catch (Exception Ex)
                     {
                         // Установка не удалась. Выводим сообщение об этом...
-                        CoreLib.HandleExceptionEx(RM.GetString("FP_InstallFailed"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                        CoreLib.HandleExceptionEx(RM.GetString("FP_InstallFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -1728,7 +1742,7 @@ namespace srcrepair
                     catch (Exception Ex)
                     {
                         // Произошло исключение при попытке удаления. Уведомим пользователя об этом...
-                        CoreLib.HandleExceptionEx(RM.GetString("FP_RemoveFailed"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                        CoreLib.HandleExceptionEx(RM.GetString("FP_RemoveFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -1787,7 +1801,7 @@ namespace srcrepair
                 catch (Exception Ex)
                 {
                     // Произошла ошибка при сохранении файла...
-                    CoreLib.HandleExceptionEx(RM.GetString("CE_CfgSVVEx"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(RM.GetString("CE_CfgSVVEx"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
             else
@@ -1896,7 +1910,7 @@ namespace srcrepair
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.HandleExceptionEx(RM.GetString("PS_CleanupErr"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(RM.GetString("PS_CleanupErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -1920,7 +1934,7 @@ namespace srcrepair
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.HandleExceptionEx(RM.GetString("PS_CleanupErr"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(RM.GetString("PS_CleanupErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -1967,7 +1981,7 @@ namespace srcrepair
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.HandleExceptionEx(RM.GetString("PS_CleanupErr"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(RM.GetString("PS_CleanupErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -2030,7 +2044,7 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 // Произошло исключение...
-                CoreLib.HandleExceptionEx(RM.GetString("BU_ListLdFailed"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                CoreLib.HandleExceptionEx(RM.GetString("BU_ListLdFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 // Создадим каталог для резервных копий...
                 Directory.CreateDirectory(GV.FullBackUpDirPath);
             }
@@ -2066,7 +2080,7 @@ namespace srcrepair
                             catch (Exception Ex)
                             {
                                 // Произошло исключение...
-                                CoreLib.HandleExceptionEx(RM.GetString("BU_RestFailed"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                                CoreLib.HandleExceptionEx(RM.GetString("BU_RestFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                             }
                         }
                         else
@@ -2082,7 +2096,7 @@ namespace srcrepair
                             catch (Exception Ex)
                             {
                                 // Произошло исключение...
-                                CoreLib.HandleExceptionEx(RM.GetString("BU_RestFailed"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                                CoreLib.HandleExceptionEx(RM.GetString("BU_RestFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                             }
                         }
                     }
@@ -2121,7 +2135,7 @@ namespace srcrepair
                         catch (Exception Ex)
                         {
                             // Произошло исключение при попытке удаления файла резервной копии...
-                            CoreLib.HandleExceptionEx(RM.GetString("BU_DelFailed"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                            CoreLib.HandleExceptionEx(RM.GetString("BU_DelFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                         }
                     }
                 }
@@ -2154,7 +2168,7 @@ namespace srcrepair
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.HandleExceptionEx(RM.GetString("BU_RegErr"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(RM.GetString("BU_RegErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -2176,7 +2190,7 @@ namespace srcrepair
                 catch (Exception Ex)
                 {
                     // Произошло исключение, уведомим пользователя...
-                    CoreLib.HandleExceptionEx(RM.GetString("BU_RegErr"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(RM.GetString("BU_RegErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
             
@@ -2195,7 +2209,7 @@ namespace srcrepair
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.HandleExceptionEx(RM.GetString("BU_RegErr"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(RM.GetString("BU_RegErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -2409,7 +2423,7 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 // Произошло исключение...
-                CoreLib.HandleExceptionEx(RM.GetString("UPD_ExceptionDetected"), Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                CoreLib.HandleExceptionEx(RM.GetString("UPD_ExceptionDetected"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
             }
             // Вернём предыдущее содержимое строки статуса...
             SB_Status.Text = StatusBarCurrText;

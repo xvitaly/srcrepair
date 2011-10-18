@@ -535,15 +535,16 @@ namespace srcrepair
         /// пользователя и подробное для разработчика.
         /// </summary>
         /// <param name="FrindlyMsg">Понятное пользователю сообщение</param>
+        /// <param name="WTitle">Текст в заголовке сообщения об ошибке</param>
         /// <param name="DevMsg">Отладочное сообщение</param>
         /// <param name="DevMethod">Метод, вызвавший исключение</param>
         /// <param name="MsgIcon">Тип иконки: предупреждение, ошибка и т.д.</param>
-        public static void HandleExceptionEx(string FrindlyMsg, string DevMsg, string DevMethod, MessageBoxIcon MsgIcon)
+        public static void HandleExceptionEx(string FrindlyMsg, string WTitle, string DevMsg, string DevMethod, MessageBoxIcon MsgIcon)
         {
             string ResultString = String.Format("{0} Raised by: {1}.", DevMsg, DevMethod);
             #if DEBUG
             // Для режима отладки покажем сообщение, понятное разработчикам...
-            MessageBox.Show(ResultString, GV.AppName, MessageBoxButtons.OK, MsgIcon);
+            MessageBox.Show(ResultString, WTitle, MessageBoxButtons.OK, MsgIcon);
             #else
             // Для обычного режима покажем обычное сообщение...
             MessageBox.Show(FrindlyMsg, GV.AppName, MessageBoxButtons.OK, MsgIcon);

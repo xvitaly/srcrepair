@@ -61,9 +61,9 @@ namespace srcrepair
                     MessageBox.Show(CoreLib.GetLocalizedString("KB_ExSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
-                catch
+                catch (Exception Ex)
                 {
-                    MessageBox.Show(CoreLib.GetLocalizedString("KB_ExException"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("KB_ExException"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -80,9 +80,9 @@ namespace srcrepair
                     MessageBox.Show(CoreLib.GetLocalizedString("KB_ExSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
-                catch
+                catch (Exception Ex)
                 {
-                    MessageBox.Show(CoreLib.GetLocalizedString("KB_ExException"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("KB_ExException"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -99,9 +99,9 @@ namespace srcrepair
                     MessageBox.Show(CoreLib.GetLocalizedString("KB_ExSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
-                catch
+                catch (Exception Ex)
                 {
-                    MessageBox.Show(CoreLib.GetLocalizedString("KB_ExException"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("KB_ExException"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -118,9 +118,9 @@ namespace srcrepair
                     MessageBox.Show(CoreLib.GetLocalizedString("KB_ExSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
-                catch
+                catch (Exception Ex)
                 {
-                    MessageBox.Show(CoreLib.GetLocalizedString("KB_ExException"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("KB_ExException"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -136,9 +136,9 @@ namespace srcrepair
                     MessageBox.Show(CoreLib.GetLocalizedString("KB_ExSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
-                catch
+                catch (Exception Ex)
                 {
-                    MessageBox.Show(CoreLib.GetLocalizedString("KB_ExException"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("KB_ExException"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }

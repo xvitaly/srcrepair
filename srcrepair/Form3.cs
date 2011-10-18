@@ -164,9 +164,9 @@ namespace srcrepair
                 // Считаем содержимое...
                 ReadHostsToTable(HostsFilePath);
             }
-            catch
+            catch (Exception Ex)
             {
-                MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AHE_ExceptionDetected"), HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CoreLib.HandleExceptionEx(String.Format(CoreLib.GetLocalizedString("AHE_ExceptionDetected"), HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
             }
         }
 
@@ -176,9 +176,9 @@ namespace srcrepair
             {
                 ReadHostsToTable(HostsFilePath);
             }
-            catch
+            catch (Exception Ex)
             {
-                MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AHE_ExceptionDetected"), HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CoreLib.HandleExceptionEx(String.Format(CoreLib.GetLocalizedString("AHE_ExceptionDetected"), HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
             }
         }
 
@@ -190,9 +190,9 @@ namespace srcrepair
                 WriteTableToHosts(HostsFilePath);
                 MessageBox.Show(CoreLib.GetLocalizedString("AHE_Saved"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch
+            catch (Exception Ex)
             {
-                MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AHE_SaveException"), HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CoreLib.HandleExceptionEx(String.Format(CoreLib.GetLocalizedString("AHE_SaveException"), HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
             }
         }
 

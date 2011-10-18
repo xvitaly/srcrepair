@@ -169,9 +169,9 @@ namespace srcrepair
                                 {
                                     RemoveEmptyDirectories(CleanDir);
                                 }
-                                catch
+                                catch (Exception Ex)
                                 {
-                                    MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanEmptyDirsError"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanEmptyDirsError"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                                 }
                             }
 
@@ -181,10 +181,10 @@ namespace srcrepair
                             // Закрываем форму...
                             this.Close();
                         }
-                        catch
+                        catch (Exception Ex)
                         {
                             // Произошло исключение...
-                            MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                         }
                     }
                 }

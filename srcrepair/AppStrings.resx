@@ -498,4 +498,7 @@
   <data name="SteamCloudStatusOn" xml:space="preserve">
     <value>enabled</value>
   </data>
+  <data name="PS_CleanException" xml:space="preserve">
+    <value>An error occurred during cleanup. Perhaps you have no rights necessary for this action.</value>
+  </data>
 </root>

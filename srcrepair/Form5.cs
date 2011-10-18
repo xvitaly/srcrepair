@@ -130,10 +130,10 @@ namespace srcrepair
                     // Выведем сообщение...
                     MessageBox.Show(CoreLib.GetLocalizedString("QI_InstSuccessfull"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch
+                catch (Exception Ex)
                 {
                     // Произошло исключение, выведем сообщение...
-                    MessageBox.Show(CoreLib.GetLocalizedString("QI_Excpt"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("QI_Excpt"), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
             else

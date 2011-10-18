@@ -93,10 +93,10 @@ namespace srcrepair
                         // Открываем каталог с отчётами в Windows Explorer...
                         Process.Start(RepDir);
                     }
-                    catch
+                    catch (Exception Ex)
                     {
                         // Произошло исключение...
-                        MessageBox.Show(CoreLib.GetLocalizedString("RPB_GenException"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("RPB_GenException"), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                     }
 
                     // Снова активируем кнопку...
