@@ -1339,6 +1339,72 @@
   <data name="&gt;&gt;L_GT_ResHor.ZOrder" xml:space="preserve">
     <value>38</value>
   </data>
+  <metadata name="GT_NCFWarnText.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_NCFWarnText.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="GT_NCFWarnText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 65</value>
+  </data>
+  <data name="GT_NCFWarnText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>344, 135</value>
+  </data>
+  <data name="GT_NCFWarnText.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="GT_NCFWarnText.Text" xml:space="preserve">
+    <value>The controls on this page have been disabled because you have chosen experimentally supported game which settings are stored in the cloud. You can load graphics settings file in a text editor to manually edit. Changes made in this file take effect the next time you start the game. Be extremely careful.</value>
+  </data>
+  <data name="GT_NCFWarnText.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="GT_NCFWarnText.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;GT_NCFWarnText.Name" xml:space="preserve">
+    <value>GT_NCFWarnText</value>
+  </data>
+  <data name="&gt;&gt;GT_NCFWarnText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_NCFWarnText.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_NCFWarnText.ZOrder" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <metadata name="GT_NCF_LoadNotepad.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_NCF_LoadNotepad.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 226</value>
+  </data>
+  <data name="GT_NCF_LoadNotepad.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 23</value>
+  </data>
+  <data name="GT_NCF_LoadNotepad.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="GT_NCF_LoadNotepad.Text" xml:space="preserve">
+    <value>Load settings file in a text editor</value>
+  </data>
+  <data name="GT_NCF_LoadNotepad.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_LoadNotepad.Name" xml:space="preserve">
+    <value>GT_NCF_LoadNotepad</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_LoadNotepad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_LoadNotepad.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_LoadNotepad.ZOrder" xml:space="preserve">
+    <value>40</value>
+  </data>
   <data name="GraphicTweaker.ImageIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>

@@ -142,6 +142,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to File with graphical settings was not found. Please run the game at least once..
+        /// </summary>
+        internal static string AppNCFCFGNotExists {
+            get {
+                return ResourceManager.GetString("AppNCFCFGNotExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Attention! On the selected Steam we can&apos;t detect any installed supported games. Please run your desired game from Steam at least once. After that, they will appear in the list and you will be able to manage them by this program..
         /// </summary>
         internal static string AppNoGamesDetected {

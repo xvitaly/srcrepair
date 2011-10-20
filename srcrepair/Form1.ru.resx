@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="GT_NCF_LoadNotepad.Text" xml:space="preserve">
+    <value>Редактировать файл настроек</value>
+  </data>
+  <data name="GT_NCFWarnText.Text" xml:space="preserve">
+    <value>Элементы управления на этой странице были отключены, так как Вы выбрали экспериментально поддерживаемую игру, настройки которой хранятся в облаке. Вы можете загрузить файл графических настроек в текстовый редактор для ручного редактирования. Изменения, внесённые в данный файл, вступят в силу при следующем запуске игры. Будьте крайне осторожны.</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="GT_Warning.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

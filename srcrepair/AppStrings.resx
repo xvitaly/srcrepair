@@ -501,4 +501,7 @@
   <data name="PS_CleanException" xml:space="preserve">
     <value>An error occurred during cleanup. Perhaps you have no rights necessary for this action.</value>
   </data>
+  <data name="AppNCFCFGNotExists" xml:space="preserve">
+    <value>File with graphical settings was not found. Please run the game at least once.</value>
+  </data>
 </root>

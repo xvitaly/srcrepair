@@ -71,6 +71,8 @@
             this.GT_ScreenType = new System.Windows.Forms.ComboBox();
             this.GT_ResHor_Btn = new System.Windows.Forms.Button();
             this.L_GT_ResHor = new System.Windows.Forms.Label();
+            this.GT_NCFWarnText = new System.Windows.Forms.Label();
+            this.GT_NCF_LoadNotepad = new System.Windows.Forms.Button();
             this.ConfigEditor = new System.Windows.Forms.TabPage();
             this.CE_Toolbar = new System.Windows.Forms.ToolStrip();
             this.CE_New = new System.Windows.Forms.ToolStripButton();
@@ -262,6 +264,8 @@
             this.GraphicTweaker.Controls.Add(this.GT_ScreenType);
             this.GraphicTweaker.Controls.Add(this.GT_ResHor_Btn);
             this.GraphicTweaker.Controls.Add(this.L_GT_ResHor);
+            this.GraphicTweaker.Controls.Add(this.GT_NCFWarnText);
+            this.GraphicTweaker.Controls.Add(this.GT_NCF_LoadNotepad);
             resources.ApplyResources(this.GraphicTweaker, "GraphicTweaker");
             this.GraphicTweaker.Name = "GraphicTweaker";
             this.GraphicTweaker.UseVisualStyleBackColor = true;
@@ -592,6 +596,18 @@
             // 
             resources.ApplyResources(this.L_GT_ResHor, "L_GT_ResHor");
             this.L_GT_ResHor.Name = "L_GT_ResHor";
+            // 
+            // GT_NCFWarnText
+            // 
+            resources.ApplyResources(this.GT_NCFWarnText, "GT_NCFWarnText");
+            this.GT_NCFWarnText.Name = "GT_NCFWarnText";
+            // 
+            // GT_NCF_LoadNotepad
+            // 
+            resources.ApplyResources(this.GT_NCF_LoadNotepad, "GT_NCF_LoadNotepad");
+            this.GT_NCF_LoadNotepad.Name = "GT_NCF_LoadNotepad";
+            this.GT_NCF_LoadNotepad.UseVisualStyleBackColor = true;
+            this.GT_NCF_LoadNotepad.Click += new System.EventHandler(this.GT_NCF_LoadNotepad_Click);
             // 
             // ConfigEditor
             // 
@@ -1665,6 +1681,8 @@
         private System.Windows.Forms.Button PS_RemModels;
         private System.Windows.Forms.Button PS_RemTextures;
         private System.Windows.Forms.Label PS_RPDtResult;
+        private System.Windows.Forms.Button GT_NCF_LoadNotepad;
+        private System.Windows.Forms.Label GT_NCFWarnText;
     }
 }
 

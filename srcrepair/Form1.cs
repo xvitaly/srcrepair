@@ -1010,6 +1010,55 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Переключает вид страницы графического твикера с GCF на NCF приложение
+        /// и наоборот.
+        /// </summary>
+        /// <param name="GCFGame">Тип управляемого приложения</param>
+        private void SetGTOptsType(bool GCFGame)
+        {
+            GT_ResHor.Visible = GCFGame;
+            GT_ResVert.Visible = GCFGame;
+            GT_ScreenType.Visible = GCFGame;
+            GT_ModelQuality.Visible = GCFGame;
+            GT_TextureQuality.Visible = GCFGame;
+            GT_ShaderQuality.Visible = GCFGame;
+            GT_WaterQuality.Visible = GCFGame;
+            GT_ShadowQuality.Visible = GCFGame;
+            GT_ColorCorrectionT.Visible = GCFGame;
+            GT_AntiAliasing.Visible = GCFGame;
+            GT_Filtering.Visible = GCFGame;
+            GT_VSync.Visible = GCFGame;
+            GT_MotionBlur.Visible = GCFGame;
+            GT_DxMode.Visible = GCFGame;
+            GT_HDR.Visible = GCFGame;
+            L_GT_ResHor.Visible = GCFGame;
+            L_GT_ResVert.Visible = GCFGame;
+            L_GT_ScreenType.Visible = GCFGame;
+            L_GT_ModelQuality.Visible = GCFGame;
+            L_GT_TextureQuality.Visible = GCFGame;
+            L_GT_ShaderQuality.Visible = GCFGame;
+            L_GT_WaterQuality.Visible = GCFGame;
+            L_GT_ShadowQuality.Visible = GCFGame;
+            L_GT_ColorCorrectionT.Visible = GCFGame;
+            L_GT_AntiAliasing.Visible = GCFGame;
+            L_GT_Filtering.Visible = GCFGame;
+            L_GT_VSync.Visible = GCFGame;
+            L_GT_MotionBlur.Visible = GCFGame;
+            L_GT_DxMode.Visible = GCFGame;
+            L_GT_HDR.Visible = GCFGame;
+            L_GT_LaunchOptions.Visible = GCFGame;
+            GT_LaunchOptions.Visible = GCFGame;
+            GT_LaunchOptions_Btn.Visible = GCFGame;
+            GT_ResHor_Btn.Visible = GCFGame;
+            GT_ResVert_Btn.Visible = GCFGame;
+            GT_Maximum_Graphics.Visible = GCFGame;
+            GT_Maximum_Performance.Visible = GCFGame;
+            GT_NCFWarnText.Visible = !GCFGame;
+            GT_NCF_LoadNotepad.Visible = !GCFGame;
+            GT_SaveApply.Visible = GCFGame;
+        }
+
         #endregion
 
         private void frmMainW_Load(object sender, EventArgs e)
@@ -1397,16 +1446,14 @@ namespace srcrepair
             // Включаем основные элементы управления (контролы)...
             MainTabControl.Enabled = true;
 
+            // Переключаем графический твикер в режим GCF/NCF...
+            if (GT_ResHor.Visible != GV.IsGCFApp) { SetGTOptsType(GV.IsGCFApp); }
+
             if (GV.IsGCFApp)
             {
                 // Включим модули очистки...
                 PS_ResetSettings.Enabled = true;
                 EnableCleanButtons(true);
-                
-                // Включаем контролы на странице графических настроек...
-                GT_SaveApply.Enabled = true;
-                GT_Maximum_Graphics.Enabled = true;
-                GT_Maximum_Performance.Enabled = true;
 
                 // Начинаем заполнять таблицу...
                 ReadGCFGameSettings(GV.SmallAppName);
@@ -1417,11 +1464,7 @@ namespace srcrepair
                 PS_ResetSettings.Enabled = false;
                 if (!(Properties.Settings.Default.AllowNCFUnsafeOps)) { EnableCleanButtons(false); }
                 
-                // Отключаем контролы на странице графических настроек и зануляем их...
-                GT_SaveApply.Enabled = false;
-                GT_Maximum_Graphics.Enabled = false;
-                GT_Maximum_Performance.Enabled = false;
-                NullGraphOptions();
+                //NullGraphOptions();
                 
                 // Приложение NCF, поэтому настройки хранятся не в реестре, а в
                 // файле video.txt. Будем парсить...
@@ -2556,6 +2599,19 @@ namespace srcrepair
             GetCloudStatus(GV.GameInternalID);
             // Выведем сообщение...
             MessageBox.Show(RM.GetString("SteamCloudChanged"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void GT_NCF_LoadNotepad_Click(object sender, EventArgs e)
+        {
+            string CfFileName = Path.Combine(GV.FullGamePath, "cfg", "video.txt");
+            if (File.Exists(CfFileName))
+            {
+                Process.Start("Notepad.exe", CfFileName);
+            }
+            else
+            {
+                MessageBox.Show(RM.GetString("AppNCFCFGNotExists"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
