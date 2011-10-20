@@ -634,4 +634,12 @@
     <value>Файл с графическими настройками игры не найден. Перед редактированием хотя бы один раз запустите игру!</value>
     <comment>Сообщение, выдаваемое при отсутствии на диске файла video.txt NCF-приложений</comment>
   </data>
+  <data name="AppSafeClnStTextOff" xml:space="preserve">
+    <value>SafeCleanup: ВЫКЛ</value>
+    <comment>Текст для строки состояния (режим безопасной очистки выключен)</comment>
+  </data>
+  <data name="AppSafeClnStTextOn" xml:space="preserve">
+    <value>SafeCleanup: ВКЛ</value>
+    <comment>Текст для строки состояния (режим безопасной очистки включён)</comment>
+  </data>
 </root>

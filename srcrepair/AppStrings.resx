@@ -504,4 +504,10 @@
   <data name="AppNCFCFGNotExists" xml:space="preserve">
     <value>File with graphical settings was not found. Please run the game at least once.</value>
   </data>
+  <data name="AppSafeClnStTextOff" xml:space="preserve">
+    <value>SafeCleanup: OFF</value>
+  </data>
+  <data name="AppSafeClnStTextOn" xml:space="preserve">
+    <value>SafeCleanup: ON</value>
+  </data>
 </root>

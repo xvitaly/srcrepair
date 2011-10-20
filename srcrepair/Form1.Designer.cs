@@ -125,7 +125,6 @@
             this.PS_CleanBlobs = new System.Windows.Forms.CheckBox();
             this.FPSCfgInstall = new System.Windows.Forms.TabPage();
             this.FP_OpenNotepad = new System.Windows.Forms.Button();
-            this.FP_CreateBackUp = new System.Windows.Forms.CheckBox();
             this.FP_Uninstall = new System.Windows.Forms.Button();
             this.FP_Install = new System.Windows.Forms.Button();
             this.FP_GB_Desc = new System.Windows.Forms.GroupBox();
@@ -989,7 +988,6 @@
             // FPSCfgInstall
             // 
             this.FPSCfgInstall.Controls.Add(this.FP_OpenNotepad);
-            this.FPSCfgInstall.Controls.Add(this.FP_CreateBackUp);
             this.FPSCfgInstall.Controls.Add(this.FP_Uninstall);
             this.FPSCfgInstall.Controls.Add(this.FP_Install);
             this.FPSCfgInstall.Controls.Add(this.FP_GB_Desc);
@@ -1008,13 +1006,6 @@
             this.FP_OpenNotepad.TabStop = false;
             this.FP_OpenNotepad.UseVisualStyleBackColor = true;
             this.FP_OpenNotepad.Click += new System.EventHandler(this.FP_OpenNotepad_Click);
-            // 
-            // FP_CreateBackUp
-            // 
-            resources.ApplyResources(this.FP_CreateBackUp, "FP_CreateBackUp");
-            this.FP_CreateBackUp.Name = "FP_CreateBackUp";
-            this.FP_CreateBackUp.UseVisualStyleBackColor = true;
-            this.FP_CreateBackUp.CheckedChanged += new System.EventHandler(this.FP_CreateBackUp_CheckedChanged);
             // 
             // FP_Uninstall
             // 
@@ -1438,6 +1429,7 @@
             // 
             resources.ApplyResources(this.SB_App, "SB_App");
             this.SB_App.DoubleClickEnabled = true;
+            this.SB_App.Image = global::srcrepair.Properties.Resources.green_circle;
             this.SB_App.Name = "SB_App";
             this.SB_App.DoubleClick += new System.EventHandler(this.SB_App_DoubleClick);
             // 
@@ -1637,7 +1629,6 @@
         private System.Windows.Forms.ComboBox FP_ConfigSel;
         private System.Windows.Forms.Label L_FP_ConfigSel;
         private System.Windows.Forms.Label FP_TopLabel;
-        private System.Windows.Forms.CheckBox FP_CreateBackUp;
         private System.Windows.Forms.PictureBox GT_Warning;
         private System.Windows.Forms.ToolStripStatusLabel SB_App;
         private System.Windows.Forms.OpenFileDialog CE_OpenCfgDialog;

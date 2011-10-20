@@ -1059,6 +1059,24 @@ namespace srcrepair
             GT_SaveApply.Visible = GCFGame;
         }
 
+        /// <summary>
+        /// Изменяет вид значка и текст безопасной очистки в соответствии с её статусом
+        /// в строке состояния программы.
+        /// </summary>
+        private void CheckSafeClnStatus()
+        {
+            if (Properties.Settings.Default.SafeCleanup)
+            {
+                SB_App.Text = RM.GetString("AppSafeClnStTextOn");
+                SB_App.Image = Properties.Resources.green_circle;
+            }
+            else
+            {
+                SB_App.Text = RM.GetString("AppSafeClnStTextOff");
+                SB_App.Image = Properties.Resources.red_circle;
+            }
+        }
+
         #endregion
 
         private void frmMainW_Load(object sender, EventArgs e)
@@ -1147,7 +1165,9 @@ namespace srcrepair
 
             // Применим некоторые настройки...
             AppSelector.Sorted = Properties.Settings.Default.SortGamesList;
-            FP_CreateBackUp.Checked = Properties.Settings.Default.FPConfCreateBackUps;
+
+            // Укажем статус Безопасной очистки...
+            CheckSafeClnStatus();
 
             // Определим логины пользователей Steam на данном ПК...
             try
@@ -1533,9 +1553,6 @@ namespace srcrepair
             
             // Выводим сообщение о завершении считывания в статус-бар...
             SB_Status.Text = RM.GetString("StatusNormal");
-            
-            // Считаем текущий статус Steam Cloud...
-            GetCloudStatus(GV.GameInternalID);
 
             // Сохраним ID последней выбранной игры...
             Properties.Settings.Default.LastGameId = AppSelector.SelectedIndex;
@@ -1726,7 +1743,7 @@ namespace srcrepair
                 if (MessageBox.Show(RM.GetString("FP_InstallQuestion"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     // Проверим, не нужно ли создавать резервную копию...
-                    if (FP_CreateBackUp.Checked)
+                    if (Properties.Settings.Default.SafeCleanup)
                     {
                         // Создаём резервную копию...
                         CreateBackUpNow("autoexec.cfg", GV.FullCfgPath, GV.FullBackUpDirPath);
@@ -1767,7 +1784,7 @@ namespace srcrepair
                 if (MessageBox.Show(RM.GetString("FP_RemoveQuestion"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
                     // Создадим бэкап если установлен флажок...
-                    if (FP_CreateBackUp.Checked)
+                    if (Properties.Settings.Default.SafeCleanup)
                     {
                         // Создаём резервную копию...
                         CreateBackUpNow("autoexec.cfg", GV.FullCfgPath, GV.FullBackUpDirPath);
@@ -2543,11 +2560,6 @@ namespace srcrepair
             Process.Start("http://code.google.com/p/srcrepair/wiki/Donate");
         }
 
-        private void FP_CreateBackUp_CheckedChanged(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.FPConfCreateBackUps = FP_CreateBackUp.Checked;
-        }
-
         private void CE_OpenInNotepad_Click(object sender, EventArgs e)
         {
             Process.Start("Notepad.exe", CE_OpenCfgDialog.FileName);
@@ -2591,14 +2603,10 @@ namespace srcrepair
 
         private void SB_App_DoubleClick(object sender, EventArgs e)
         {
-            // Переключим статус Steam Cloud для управляемого приложения...
-            string SubkeyR = Path.Combine("Valve", "Steam", "Apps", GV.GameInternalID);
-            // Запишем в реестр...
-            CoreLib.WriteAppBool("Cloud", SubkeyR, !(CoreLib.GetAppBool("Cloud", SubkeyR, false)));
-            // Получим новый статус...
-            GetCloudStatus(GV.GameInternalID);
-            // Выведем сообщение...
-            MessageBox.Show(RM.GetString("SteamCloudChanged"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Переключим статус безопасной очистки...
+            Properties.Settings.Default.SafeCleanup = !Properties.Settings.Default.SafeCleanup;
+            // Обновим статусную строку...
+            CheckSafeClnStatus();
         }
 
         private void GT_NCF_LoadNotepad_Click(object sender, EventArgs e)

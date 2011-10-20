@@ -2642,7 +2642,7 @@
     <value>False</value>
   </data>
   <data name="FP_OpenNotepad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>374, 106</value>
+    <value>373, 114</value>
   </data>
   <data name="FP_OpenNotepad.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 23</value>
@@ -2662,36 +2662,6 @@
   <data name="&gt;&gt;FP_OpenNotepad.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="FP_CreateBackUp.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="FP_CreateBackUp.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="FP_CreateBackUp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>157, 138</value>
-  </data>
-  <data name="FP_CreateBackUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 17</value>
-  </data>
-  <data name="FP_CreateBackUp.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="FP_CreateBackUp.Text" xml:space="preserve">
-    <value>Create backup of config</value>
-  </data>
-  <data name="&gt;&gt;FP_CreateBackUp.Name" xml:space="preserve">
-    <value>FP_CreateBackUp</value>
-  </data>
-  <data name="&gt;&gt;FP_CreateBackUp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FP_CreateBackUp.Parent" xml:space="preserve">
-    <value>FPSCfgInstall</value>
-  </data>
-  <data name="&gt;&gt;FP_CreateBackUp.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <metadata name="FP_Uninstall.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -2702,7 +2672,7 @@
     <value>197, 23</value>
   </data>
   <data name="FP_Uninstall.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="FP_Uninstall.Text" xml:space="preserve">
     <value>Remove installed config</value>
@@ -2717,7 +2687,7 @@
     <value>FPSCfgInstall</value>
   </data>
   <data name="&gt;&gt;FP_Uninstall.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <metadata name="FP_Install.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2732,7 +2702,7 @@
     <value>197, 23</value>
   </data>
   <data name="FP_Install.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="FP_Install.Text" xml:space="preserve">
     <value>Install selected config</value>
@@ -2747,7 +2717,7 @@
     <value>FPSCfgInstall</value>
   </data>
   <data name="&gt;&gt;FP_Install.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <metadata name="FP_GB_Desc.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2755,6 +2725,9 @@
   <metadata name="FP_Description.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="FP_Description.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="FP_Description.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 25</value>
   </data>
@@ -2777,13 +2750,13 @@
     <value>0</value>
   </data>
   <data name="FP_GB_Desc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 161</value>
+    <value>23, 155</value>
   </data>
   <data name="FP_GB_Desc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>414, 163</value>
+    <value>414, 169</value>
   </data>
   <data name="FP_GB_Desc.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="FP_GB_Desc.Text" xml:space="preserve">
     <value>Description of selected FPS-config</value>
@@ -2798,13 +2771,13 @@
     <value>FPSCfgInstall</value>
   </data>
   <data name="&gt;&gt;FP_GB_Desc.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <metadata name="FP_ConfigSel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="FP_ConfigSel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 108</value>
+    <value>208, 115</value>
   </data>
   <data name="FP_ConfigSel.Size" type="System.Drawing.Size, System.Drawing">
     <value>159, 21</value>
@@ -2822,7 +2795,7 @@
     <value>FPSCfgInstall</value>
   </data>
   <data name="&gt;&gt;FP_ConfigSel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <metadata name="L_FP_ConfigSel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2831,7 +2804,7 @@
     <value>True</value>
   </data>
   <data name="L_FP_ConfigSel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 111</value>
+    <value>47, 119</value>
   </data>
   <data name="L_FP_ConfigSel.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 13</value>
@@ -2852,7 +2825,7 @@
     <value>FPSCfgInstall</value>
   </data>
   <data name="&gt;&gt;L_FP_ConfigSel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <metadata name="FP_TopLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2879,7 +2852,7 @@
     <value>FPSCfgInstall</value>
   </data>
   <data name="&gt;&gt;FP_TopLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="FPSCfgInstall.ImageIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -3467,8 +3440,14 @@
   <data name="SB_App.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="SB_App.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="SB_App.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 17</value>
+  </data>
+  <data name="SB_App.Text" xml:space="preserve">
+    <value>SafeCleanup status</value>
   </data>
   <data name="SB_App.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>

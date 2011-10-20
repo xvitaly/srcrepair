@@ -77,3 +77,7 @@ Shopcart.png - Fasticon - FreeNC - http://www.iconspedia.com/icon/shopcart-6254.
 --------------------------------------------------------------------------------------------------------
 Donate.png - Customicondesign - FreeNC - http://www.iconspedia.com/icon/us-dollar-18656.html
 --------------------------------------------------------------------------------------------------------
+green_circle.png - Chris Ringeisen - CCNC - http://www.iconspedia.com/icon/green-circle-icon-25988.html
+--------------------------------------------------------------------------------------------------------
+red_circle.png - Chris Ringeisen - CCNC - http://www.iconspedia.com/icon/red-circle-icon-25995.html
+--------------------------------------------------------------------------------------------------------

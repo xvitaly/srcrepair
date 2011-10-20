@@ -169,6 +169,24 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SafeCleanup: OFF.
+        /// </summary>
+        internal static string AppSafeClnStTextOff {
+            get {
+                return ResourceManager.GetString("AppSafeClnStTextOff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SafeCleanup: ON.
+        /// </summary>
+        internal static string AppSafeClnStTextOn {
+            get {
+                return ResourceManager.GetString("AppSafeClnStTextOn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Notice! Update for {0} is available. We recommend you upgrade as soon as possible via the menu Help - Check for updates, or manually..
         /// </summary>
         internal static string AppUpdateAvailable {
