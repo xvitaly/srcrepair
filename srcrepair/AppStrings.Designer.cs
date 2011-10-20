@@ -178,7 +178,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SafeCleanup: OFF.
+        ///   Looks up a localized string similar to BackUps: OFF.
         /// </summary>
         internal static string AppSafeClnStTextOff {
             get {
@@ -187,7 +187,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SafeCleanup: ON.
+        ///   Looks up a localized string similar to BackUps: ON.
         /// </summary>
         internal static string AppSafeClnStTextOn {
             get {

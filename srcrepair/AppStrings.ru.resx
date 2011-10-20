@@ -635,11 +635,11 @@
     <comment>Сообщение, выдаваемое при отсутствии на диске файла video.txt NCF-приложений</comment>
   </data>
   <data name="AppSafeClnStTextOff" xml:space="preserve">
-    <value>SafeCleanup: ВЫКЛ</value>
+    <value>Рез. копии: ВЫКЛ</value>
     <comment>Текст для строки состояния (режим безопасной очистки выключен)</comment>
   </data>
   <data name="AppSafeClnStTextOn" xml:space="preserve">
-    <value>SafeCleanup: ВКЛ</value>
+    <value>Рез. копии: ВКЛ</value>
     <comment>Текст для строки состояния (режим безопасной очистки включён)</comment>
   </data>
   <data name="AppSafeClnDisabled" xml:space="preserve">

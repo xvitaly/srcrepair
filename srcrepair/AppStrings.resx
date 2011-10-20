@@ -505,10 +505,10 @@
     <value>File with graphical settings was not found. Please run the game at least once.</value>
   </data>
   <data name="AppSafeClnStTextOff" xml:space="preserve">
-    <value>SafeCleanup: OFF</value>
+    <value>BackUps: OFF</value>
   </data>
   <data name="AppSafeClnStTextOn" xml:space="preserve">
-    <value>SafeCleanup: ON</value>
+    <value>BackUps: ON</value>
   </data>
   <data name="AppSafeClnDisabled" xml:space="preserve">
     <value>Attention! You have disabled SafeClean module, so backups will not be created until its re-activation.</value>
