@@ -167,6 +167,81 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Очищает блобы (файлы с расширением *.blob) из каталога Steam.
+        /// </summary>
+        /// <param name="SteamPath">Полный путь к каталогу Steam</param>
+        private void CleanBlobsNow(string SteamPath)
+        {
+            // Инициализируем буферную переменную, в которой будем хранить имя файла...
+            string FileName;
+
+            // Генерируем имя первого кандидата на удаление с полным путём до него...
+            FileName = Path.Combine(SteamPath, "AppUpdateStats.blob");
+
+            // Проверяем существует ли данный файл...
+            if (File.Exists(FileName))
+            {
+                // Удаляем...
+                File.Delete(FileName);
+            }
+
+            // Аналогично генерируем имя второго кандидата...
+            FileName = Path.Combine(SteamPath, "ClientRegistry.blob");
+
+            // Проверяем, существует ли файл...
+            if (File.Exists(FileName))
+            {
+                // Удаляем...
+                File.Delete(FileName);
+            }
+        }
+
+        /// <summary>
+        /// Удаляет значения реестра, отвечающие за настройки клиента Steam,
+        /// а также записывает значение языка.
+        /// </summary>
+        /// <param name="LangCode">ID языка Steam</param>
+        private void CleanRegistryNow(int LangCode)
+        {
+            // Удаляем ключ HKEY_LOCAL_MACHINE\Software\Valve рекурсивно...
+            Registry.LocalMachine.DeleteSubKeyTree(Path.Combine("Software", "Valve"), false);
+
+            // Удаляем ключ HKEY_CURRENT_USER\Software\Valve рекурсивно...
+            Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("Software", "Valve"), false);
+
+            // Начинаем вставлять значение языка клиента Steam...
+            // Инициализируем буферную переменную для хранения названия языка...
+            string XLang;
+
+            // Генерируем...
+            switch (LangCode)
+            {
+                case 0:
+                    XLang = "english";
+                    break;
+                case 1:
+                    XLang = "russian";
+                    break;
+                default:
+                    XLang = "english";
+                    break;
+            }
+
+            // Подключаем реестр и создаём ключ HKEY_CURRENT_USER\Software\Valve\Steam...
+            RegistryKey RegLangKey = Registry.CurrentUser.CreateSubKey(Path.Combine("Software", "Valve", "Steam"));
+
+            // Если не было ошибок, записываем значение...
+            if (RegLangKey != null)
+            {
+                // Записываем значение в реестр...
+                RegLangKey.SetValue("language", XLang);
+            }
+
+            // Закрываем ключ...
+            RegLangKey.Close();
+        }
+
+        /// <summary>
         /// Сохраняет содержимое таблицы в файл конфигурации, указанный в
         /// параметре. Используется в Save и SaveAs Редактора конфигов.
         /// </summary>
@@ -1335,7 +1410,7 @@ namespace srcrepair
                         try
                         {
                             // Чистим блобы...
-                            CoreLib.CleanBlobsNow(GV.FullSteamPath);
+                            CleanBlobsNow(GV.FullSteamPath);
                         }
                         catch (Exception Ex)
                         {
@@ -1352,13 +1427,13 @@ namespace srcrepair
                             if (PS_SteamLang.SelectedIndex != -1)
                             {
                                 // Всё в порядке, чистим реестр...
-                                CoreLib.CleanRegistryNow(PS_SteamLang.SelectedIndex);
+                                CleanRegistryNow(PS_SteamLang.SelectedIndex);
                             }
                             else
                             {
                                 // Пользователь не выбрал язык, поэтому будем использовать английский...
                                 MessageBox.Show(RM.GetString("PS_NoLangSelected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                CoreLib.CleanRegistryNow(0);
+                                CleanRegistryNow(0);
                             }
                         }
                         catch (Exception Ex)
@@ -1681,19 +1756,22 @@ namespace srcrepair
                 if (GV.IsGCFApp)
                 {
                     // Создаём резервную копию...
-                    try
+                    if (Properties.Settings.Default.SafeCleanup)
                     {
-                        CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
-                    }
-                    catch
-                    {
-                        // Подавляем сообщение об ошибке если оно возникнет...
+                        try
+                        {
+                            CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
+                        }
+                        catch
+                        {
+                            // Подавляем сообщение об ошибке если оно возникнет...
+                        }
                     }
                     
                     try
                     {
                         // Проверим существование ключа реестра и в случае необходимости создадим...
-                        if (!(CoreLib.CheckIfHKCUSKeyExists(Path.Combine(@"Software\Valve\Source\", GV.SmallAppName, "Settings")))) { Registry.CurrentUser.CreateSubKey(Path.Combine(@"Software\Valve\Source\", GV.SmallAppName, "Settings")); }
+                        if (!(CoreLib.CheckIfHKCUSKeyExists(Path.Combine("Software", "Valve", "Source", GV.SmallAppName, "Settings")))) { Registry.CurrentUser.CreateSubKey(Path.Combine("Software", "Valve", "Source", GV.SmallAppName, "Settings")); }
                         // Записываем выбранные настройки в реестр...
                         WriteGCFGameSettings(GV.SmallAppName);
                         // Выводим подтверждающее сообщение...
@@ -1706,7 +1784,7 @@ namespace srcrepair
                 }
                 else
                 {
-                    // Это NCG-приложение, поэтому будем записывать настройки в файл...
+                    // Это NCF-приложение, поэтому будем записывать настройки в файл...
 
                     // TODO: реализовать запись таблицы в файл...
                 }
@@ -1783,7 +1861,7 @@ namespace srcrepair
                 // Файл существует. Запросим подтверждение на удаление...
                 if (MessageBox.Show(RM.GetString("FP_RemoveQuestion"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
-                    // Создадим бэкап если установлен флажок...
+                    // Создадим бэкап если включена безопасная очистка...
                     if (Properties.Settings.Default.SafeCleanup)
                     {
                         // Создаём резервную копию...
@@ -1848,11 +1926,16 @@ namespace srcrepair
             {
                 // Будем бэкапировать только файлы, находящиеся в каталоге /cfg/
                 // управляемоего приложения. Остальные - нет.
-                if (File.Exists(Path.Combine(GV.FullCfgPath, CFGFileName)))
+                if (Properties.Settings.Default.SafeCleanup)
                 {
-                    // Создаём резервную копию...
-                    CreateBackUpNow(CFGFileName, GV.FullCfgPath, GV.FullBackUpDirPath);
+                    if (File.Exists(Path.Combine(GV.FullCfgPath, CFGFileName)))
+                    {
+                        // Создаём резервную копию...
+                        CreateBackUpNow(CFGFileName, GV.FullCfgPath, GV.FullBackUpDirPath);
+                    }
                 }
+
+                // Начинаем сохранение...
                 try
                 {
                     //WriteTableToFileNow(CFGFileName);
@@ -1952,13 +2035,16 @@ namespace srcrepair
             if (MessageBox.Show(((Button)sender).Text + "?", GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 // Создаём резервную копию...
-                try
+                if (Properties.Settings.Default.SafeCleanup)
                 {
-                    CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
-                }
-                catch
-                {
-                    // Подавляем сообщение об ошибке если оно возникнет...
+                    try
+                    {
+                        CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
+                    }
+                    catch
+                    {
+                        // Подавляем сообщение об ошибке если оно возникнет...
+                    }
                 }
 
                 // Работаем...
@@ -2023,13 +2109,16 @@ namespace srcrepair
             if (MessageBox.Show(RM.GetString("PS_ResetSettingsMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 // Создаём резервную копию...
-                try
+                if (Properties.Settings.Default.SafeCleanup)
                 {
-                    CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
-                }
-                catch
-                {
-                    // Подавляем сообщение об ошибке если оно возникнет...
+                    try
+                    {
+                        CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
+                    }
+                    catch
+                    {
+                        // Подавляем сообщение об ошибке если оно возникнет...
+                    }
                 }
                 
                 // Работаем...
@@ -2562,7 +2651,14 @@ namespace srcrepair
 
         private void CE_OpenInNotepad_Click(object sender, EventArgs e)
         {
-            Process.Start("Notepad.exe", CE_OpenCfgDialog.FileName);
+            if (!(String.IsNullOrEmpty(CFGFileName)))
+            {
+                Process.Start("Notepad.exe", CE_OpenCfgDialog.FileName);
+            }
+            else
+            {
+                MessageBox.Show(RM.GetString("CE_NoFileOpened"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void PS_PathDetector_Click(object sender, EventArgs e)

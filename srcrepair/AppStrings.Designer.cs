@@ -448,6 +448,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Open file to use this feature..
+        /// </summary>
+        internal static string CE_NoFileOpened {
+            get {
+                return ResourceManager.GetString("CE_NoFileOpened", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Can not read the contents of the config, as file not found!.
         /// </summary>
         internal static string CE_OpenFailed {

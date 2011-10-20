@@ -513,4 +513,7 @@
   <data name="AppSafeClnDisabled" xml:space="preserve">
     <value>Attention! You have disabled SafeClean module, so backups will not be created until its re-activation.</value>
   </data>
+  <data name="CE_NoFileOpened" xml:space="preserve">
+    <value>Open file to use this feature.</value>
+  </data>
 </root>
