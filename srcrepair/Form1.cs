@@ -2605,6 +2605,11 @@ namespace srcrepair
         {
             // Переключим статус безопасной очистки...
             Properties.Settings.Default.SafeCleanup = !Properties.Settings.Default.SafeCleanup;
+            // Сообщим пользователю если он отключил безопасную очистку...
+            if (!Properties.Settings.Default.SafeCleanup)
+            {
+                MessageBox.Show(RM.GetString("AppSafeClnDisabled"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             // Обновим статусную строку...
             CheckSafeClnStatus();
         }

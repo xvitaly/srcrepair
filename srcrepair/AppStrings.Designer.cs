@@ -169,6 +169,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Attention! You have disabled SafeClean module, so backups will not be created until its re-activation..
+        /// </summary>
+        internal static string AppSafeClnDisabled {
+            get {
+                return ResourceManager.GetString("AppSafeClnDisabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SafeCleanup: OFF.
         /// </summary>
         internal static string AppSafeClnStTextOff {
