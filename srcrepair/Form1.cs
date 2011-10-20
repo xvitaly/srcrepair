@@ -1466,9 +1466,6 @@ namespace srcrepair
             // Включаем основные элементы управления (контролы)...
             MainTabControl.Enabled = true;
 
-            // Переключаем графический твикер в режим GCF/NCF...
-            if (GT_ResHor.Visible != GV.IsGCFApp) { SetGTOptsType(GV.IsGCFApp); }
-
             if (GV.IsGCFApp)
             {
                 // Включим модули очистки...
@@ -1491,6 +1488,9 @@ namespace srcrepair
                 
                 // TODO: реализовать парсинг файла video.txt и заполнить таблицу из него...
             }
+
+            // Переключаем графический твикер в режим GCF/NCF...
+            if (PS_ResetSettings.Enabled == GV.IsGCFApp) { SetGTOptsType(GV.IsGCFApp); }
 
             // Проверим, установлен ли FPS-конфиг...
             if (File.Exists(Path.Combine(GV.FullCfgPath, "autoexec.cfg")))
