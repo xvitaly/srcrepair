@@ -23,7 +23,7 @@ AppVerName=SRC Repair
 AppPublisher=EasyCoding Team
 AppPublisherURL=http://www.easycoding.org/
 ; AppVersion отображается в Установка/Удаление программ в дополнительной информации.
-AppVersion=4.0.0.401
+AppVersion=5.0.0.428
 AppSupportURL=http://code.google.com/p/srcrepair/wiki/Support
 AppUpdatesURL=http://code.google.com/p/srcrepair/downloads/list
 DefaultDirName={pf}\SRC Repair
@@ -33,8 +33,8 @@ SourceDir=E:\VSBuilds
 LicenseFile=GPL.txt
 ;InfoBeforeFile=readme.txt
 OutputDir=E:\VSBuilds
-OutputBaseFilename=srcrepair_40_final
-;OutputBaseFilename=srcrepair_beta_401
+OutputBaseFilename=srcrepair_50_final
+;OutputBaseFilename=srcrepair_beta_428
 SetupIconFile=srcrepair.ico
 UninstallDisplayIcon={app}\srcrepair.exe
 Compression=lzma2
@@ -46,7 +46,7 @@ SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64
 
 ; Тут указываем данные, которые будут добавлены в свойства установщика
-VersionInfoVersion=4.0.0.401
+VersionInfoVersion=5.0.0.428
 VersionInfoDescription=SRC Repair Setup
 VersionInfoCopyright=(c) 2005-2011 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
@@ -62,6 +62,7 @@ Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescrip
 ;Name: "copyreadme"; Description: "Скопировать файл ReadMe в папку SRC Repair"; GroupDescription: "Дополнительные возможности:"
 Name: "inst7z"; Description: "{cm:InstLZMAPlugin}"; GroupDescription: "{cm:AdvFeatGroupDesc}"
 Name: "betashortuts"; Description: "{cm:InstCreateLocShcuts}"; GroupDescription: "{cm:AdvFeatGroupDesc}"
+Name: "isexpf"; Description: "{cm:InstExpFeatures}"; GroupDescription: "{cm:AdvFeatGroupDesc}"; Flags: unchecked
 
 [Files]
 ; Копируем библиотеку, используемую для скачивания файлов...
@@ -71,6 +72,8 @@ Source: "GPL.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "readme.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "readme_en.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "changelog.txt"; DestDir: "{app}"; Flags: ignoreversion
+; Копируем файл со списком поддерживаемых игр и их параметрами...
+Source: "games.xml"; DestDir: "{app}"; Flags: ignoreversion
 ; Копируем открытый ключ...
 Source: "vitaly_public.asc"; DestDir: "{app}"; Flags: ignoreversion
 ; Устанавливаем 32-битную версию...
@@ -83,8 +86,8 @@ Source: "x64\srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Check: 
 Source: "x64\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: Is64BitInstallMode
 ; Копируем файл стандартных настроек программы...
 Source: "srcrepair.exe.config"; DestDir: "{app}"; Flags: ignoreversion
-; Копируем файл со списком поддерживаемых игр и их параметрами...
-Source: "games.xml"; DestDir: "{app}"; Flags: ignoreversion
+; Копируем файл с интегрированным экспериментальным списком поддерживаемых игр...
+Source: "games_exp.xml"; DestDir: "{app}"; DestName: "games.xml"; Flags: ignoreversion; Tasks: isexpf
 ; Устанавливаем остальные файлы...
 Source: "cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "7z\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Tasks: inst7z
