@@ -1284,7 +1284,7 @@ namespace srcrepair
                         // Пользователь нажал Cancel, либо ввёл пустую строку, поэтому
                         // выводим сообщение и завершаем работу приложения...
                         MessageBox.Show(RM.GetString("SteamLoginCancel"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        CoreLib.WriteStringToLog("User cancelled Login dialog.");
+                        CoreLib.WriteStringToLog("User cancelled login dialog.");
                         Environment.Exit(7);
                     };
                 } while (!(Directory.Exists(Path.Combine(GV.FullSteamPath, "steamapps", SBuf))));
@@ -1669,6 +1669,10 @@ namespace srcrepair
             {
                 // Нет, не нашлись, выведем сообщение...
                 MessageBox.Show(RM.GetString("AppNoGamesDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // Запишем в лог...
+                CoreLib.WriteStringToLog(String.Format("No games detected. Steam located as: {0}. User login: {1}.", GV.FullSteamPath, LoginSel.Text));
+                // Завершим работу приложения...
+                Environment.Exit(11);
             }
 
             // При наличии единственной игры в списке, выберем её автоматически...
