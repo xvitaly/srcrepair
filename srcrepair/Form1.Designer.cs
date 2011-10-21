@@ -88,6 +88,7 @@
             this.CE_OpenInNotepad = new System.Windows.Forms.ToolStripButton();
             this.CE_ToolSep2 = new System.Windows.Forms.ToolStripSeparator();
             this.CE_ShowHint = new System.Windows.Forms.ToolStripButton();
+            this.CE_OpenCVList = new System.Windows.Forms.ToolStripButton();
             this.CE_Editor = new System.Windows.Forms.DataGridView();
             this.CE_CVName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CE_CVal = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -631,7 +632,8 @@
             this.CE_ToolSep1,
             this.CE_OpenInNotepad,
             this.CE_ToolSep2,
-            this.CE_ShowHint});
+            this.CE_ShowHint,
+            this.CE_OpenCVList});
             resources.ApplyResources(this.CE_Toolbar, "CE_Toolbar");
             this.CE_Toolbar.Name = "CE_Toolbar";
             // 
@@ -723,6 +725,14 @@
             resources.ApplyResources(this.CE_ShowHint, "CE_ShowHint");
             this.CE_ShowHint.Name = "CE_ShowHint";
             this.CE_ShowHint.Click += new System.EventHandler(this.CE_ShowHint_Click);
+            // 
+            // CE_OpenCVList
+            // 
+            this.CE_OpenCVList.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_OpenCVList.Image = global::srcrepair.Properties.Resources.source;
+            resources.ApplyResources(this.CE_OpenCVList, "CE_OpenCVList");
+            this.CE_OpenCVList.Name = "CE_OpenCVList";
+            this.CE_OpenCVList.Click += new System.EventHandler(this.CE_OpenCVList_Click);
             // 
             // CE_Editor
             // 
@@ -1674,6 +1684,7 @@
         private System.Windows.Forms.Label PS_RPDtResult;
         private System.Windows.Forms.Button GT_NCF_LoadNotepad;
         private System.Windows.Forms.Label GT_NCFWarnText;
+        private System.Windows.Forms.ToolStripButton CE_OpenCVList;
     }
 }
 

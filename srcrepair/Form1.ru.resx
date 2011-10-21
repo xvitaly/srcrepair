@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GT_NCF_LoadNotepad.Text" xml:space="preserve">
-    <value>Редактировать файл настроек</value>
-  </data>
-  <data name="GT_NCFWarnText.Text" xml:space="preserve">
-    <value>Элементы управления на этой странице были отключены, так как Вы выбрали экспериментально поддерживаемую игру, настройки которой хранятся в облаке. Вы можете загрузить файл графических настроек в текстовый редактор для ручного редактирования. Изменения, внесённые в данный файл, вступят в силу при следующем запуске игры. Будьте крайне осторожны.</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="GT_Warning.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -360,6 +354,12 @@
   <data name="L_GT_ResHor.Text" xml:space="preserve">
     <value>Разрешение по горизонт.</value>
   </data>
+  <data name="GT_NCFWarnText.Text" xml:space="preserve">
+    <value>Элементы управления на этой странице были отключены, так как Вы выбрали экспериментально поддерживаемую игру, настройки которой хранятся в облаке. Вы можете загрузить файл графических настроек в текстовый редактор для ручного редактирования. Изменения, внесённые в данный файл, вступят в силу при следующем запуске игры. Будьте крайне осторожны.</value>
+  </data>
+  <data name="GT_NCF_LoadNotepad.Text" xml:space="preserve">
+    <value>Редактировать файл настроек</value>
+  </data>
   <data name="GraphicTweaker.Text" xml:space="preserve">
     <value>Графические настройки</value>
   </data>
@@ -482,6 +482,9 @@
   <data name="CE_ShowHint.Text" xml:space="preserve">
     <value>Подсказка (F7)</value>
   </data>
+  <data name="CE_OpenCVList.Text" xml:space="preserve">
+    <value>Русскоязычное описание переменных</value>
+  </data>
   <data name="CE_CVName.HeaderText" xml:space="preserve">
     <value>Переменная</value>
   </data>
@@ -601,12 +604,6 @@
   </data>
   <data name="ProblemSolver.Text" xml:space="preserve">
     <value>Устранение проблем и очистка</value>
-  </data>
-  <data name="FP_CreateBackUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 17</value>
-  </data>
-  <data name="FP_CreateBackUp.Text" xml:space="preserve">
-    <value>Создать резервную копию</value>
   </data>
   <data name="FP_Uninstall.Text" xml:space="preserve">
     <value>Удалить имеющийся конфиг</value>

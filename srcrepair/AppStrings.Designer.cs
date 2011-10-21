@@ -115,6 +115,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to http://developer.valvesoftware.com/wiki/Console_Command_List.
+        /// </summary>
+        internal static string AppCVListURL {
+            get {
+                return ResourceManager.GetString("AppCVListURL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 0.
         /// </summary>
         internal static string AppDefaultSteamLangID {

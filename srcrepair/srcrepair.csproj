@@ -314,6 +314,7 @@
     <None Include="Resources\Donate.png" />
     <None Include="Resources\red_circle.png" />
     <None Include="Resources\green_circle.png" />
+    <None Include="Resources\source.png" />
     <Content Include="TF2Repair.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

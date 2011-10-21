@@ -1633,6 +1633,15 @@
   <data name="CE_ShowHint.Text" xml:space="preserve">
     <value>Show hint (F7)</value>
   </data>
+  <data name="CE_OpenCVList.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="CE_OpenCVList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="CE_OpenCVList.Text" xml:space="preserve">
+    <value>Show full cvarlist</value>
+  </data>
   <data name="CE_Toolbar.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
@@ -3805,6 +3814,12 @@
     <value>CE_ShowHint</value>
   </data>
   <data name="&gt;&gt;CE_ShowHint.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CE_OpenCVList.Name" xml:space="preserve">
+    <value>CE_OpenCVList</value>
+  </data>
+  <data name="&gt;&gt;CE_OpenCVList.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;CE_CVName.Name" xml:space="preserve">

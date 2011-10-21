@@ -2223,6 +2223,8 @@ namespace srcrepair
                             {
                                 // Копируем файл...
                                 File.Copy(Path.Combine(GV.FullBackUpDirPath, OrigName), Path.Combine(GV.FullCfgPath, FName), true);
+                                // Если восстановили autoexec.cfg, отображаем значок на странице графического твикера...
+                                if (FName == "autoexec.cfg") { GT_Warning.Visible = true; }
                                 // Показываем сообщение об успешном восстановлении...
                                 MessageBox.Show(RM.GetString("BU_RestSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
@@ -2721,6 +2723,11 @@ namespace srcrepair
             {
                 MessageBox.Show(RM.GetString("AppNCFCFGNotExists"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void CE_OpenCVList_Click(object sender, EventArgs e)
+        {
+            Process.Start(RM.GetString("AppCVListURL"));
         }
     }
 }

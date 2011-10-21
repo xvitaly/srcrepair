@@ -516,4 +516,7 @@
   <data name="CE_NoFileOpened" xml:space="preserve">
     <value>Open file to use this feature.</value>
   </data>
+  <data name="AppCVListURL" xml:space="preserve">
+    <value>http://developer.valvesoftware.com/wiki/Console_Command_List</value>
+  </data>
 </root>

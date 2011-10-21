@@ -650,4 +650,8 @@
     <value>Для использования этой функции откройте файл.</value>
     <comment>Сообщение, выдаваемое при использовании функции, требующей открытого файла в Редакторе конфигов</comment>
   </data>
+  <data name="AppCVListURL" xml:space="preserve">
+    <value>http://www.easycoding.org/projects/srcrepair/cvarlist</value>
+    <comment>URL описания переменных</comment>
+  </data>
 </root>
