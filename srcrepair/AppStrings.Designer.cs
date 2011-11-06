@@ -106,6 +106,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} is already running. Starting the second copy is not allowed!.
+        /// </summary>
+        internal static string AppAlreadyLaunched {
+            get {
+                return ResourceManager.GetString("AppAlreadyLaunched", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Checking for Updates... Please wait..
         /// </summary>
         internal static string AppCheckingForUpdates {

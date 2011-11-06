@@ -654,4 +654,8 @@
     <value>http://www.easycoding.org/projects/srcrepair/cvarlist</value>
     <comment>URL описания переменных</comment>
   </data>
+  <data name="AppAlreadyLaunched" xml:space="preserve">
+    <value>Программа {0} уже запущена. Запуск второй копии невозможен!</value>
+    <comment>Сообщение, выдаваемое при обнаружении в памяти активного процесса программы</comment>
+  </data>
 </root>

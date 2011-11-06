@@ -519,4 +519,7 @@
   <data name="AppCVListURL" xml:space="preserve">
     <value>http://developer.valvesoftware.com/wiki/Console_Command_List</value>
   </data>
+  <data name="AppAlreadyLaunched" xml:space="preserve">
+    <value>{0} is already running. Starting the second copy is not allowed!</value>
+  </data>
 </root>

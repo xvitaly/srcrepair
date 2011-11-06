@@ -1067,6 +1067,6 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>SRC Repair OSE (версия {0})</value>
+    <value>SRC Repair OSE (версия {0}, платформа {1})</value>
   </data>
 </root>

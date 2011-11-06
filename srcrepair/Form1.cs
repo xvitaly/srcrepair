@@ -1157,10 +1157,17 @@ namespace srcrepair
         private void frmMainW_Load(object sender, EventArgs e)
         {
             // Событие инициализации формы...
-            
+
             // Получаем путь к каталогу приложения...
             Assembly Assmbl = Assembly.GetEntryAssembly();
             GV.FullAppPath = Path.GetDirectoryName(Assmbl.Location);
+
+            // Проверим на уже запущенный процесс программы...
+            if (CoreLib.FindProcess(Assmbl.GetName().Name.ToString()) != 0)
+            {
+                MessageBox.Show(String.Format(RM.GetString("AppAlreadyLaunched"), GV.AppName), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(22);
+            }
 
             // Укажем путь к пользовательским данным и создадим если не существует...
             GV.AppUserDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), GV.AppName);
@@ -1189,9 +1196,9 @@ namespace srcrepair
             // Вставляем информацию о версии в заголовок формы...
             //this.Text += " (version " + GV.AppVersionInfo + ")";
             #if DEBUG
-            this.Text = String.Format(this.Text, GV.AppVersionInfo + " (unstable debug build)");
+            this.Text = String.Format(this.Text, GV.AppVersionInfo + " (debug build)", Assmbl.GetName().ProcessorArchitecture.ToString());
             #else
-            this.Text = String.Format(this.Text, GV.AppVersionInfo);
+            this.Text = String.Format(this.Text, GV.AppVersionInfo, Assmbl.GetName().ProcessorArchitecture.ToString());
             #endif
 
             // Найдём и завершим в памяти процесс Steam...

@@ -147,6 +147,19 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Возвращает PID процесса если он был найден в памяти.
+        /// </summary>
+        /// <param name="ProcessName">Имя образа процесса</param>
+        /// <returns>PID процесса, либо 0 если процесс не был найден</returns>
+        public static int FindProcess(string ProcessName)
+        {
+            int ProcID = 0;
+            Process[] LocalByName = Process.GetProcessesByName(ProcessName);
+            foreach (Process ResName in LocalByName) { ProcID = ResName.Id; }
+            return ProcID;
+        }
+
+        /// <summary>
         /// Получает из реестра значение нужной нам переменной для
         /// указанного игрового приложения.
         /// </summary>
