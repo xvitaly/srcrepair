@@ -2268,4 +2268,13 @@
   <data name="wait" xml:space="preserve">
     <value>Ожидает указанное в параметре количество тиков (не кадров) до запуска следующей команды. Может быть отключена на сервере. Используется в скриптах.</value>
   </data>
+  <data name="bot_auto_vacate" xml:space="preserve">
+    <value>Разрешить / запретить ботам освобождать места для присоединившихся игроков.</value>
+  </data>
+  <data name="bot_defer_to_human" xml:space="preserve">
+    <value>0 - боты будут пытаться самостоятельно выполнить цель карты (освободить заложников, либо заложить C4); 1 - боты будут позволять игроку выполнить цель карты.</value>
+  </data>
+  <data name="bot_walk" xml:space="preserve">
+    <value>Force the bots to walk.</value>
+  </data>
 </root>
