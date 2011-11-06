@@ -1586,6 +1586,9 @@ namespace srcrepair
             // Отключим кнопку установки FPS-конфигов...
             FP_Install.Enabled = false;
 
+            // Закроем открытые конфиги в редакторе...
+            if (!(String.IsNullOrEmpty(CFGFileName))) { CE_New.PerformClick(); }
+
             // Считаем имеющиеся FPS-конфиги...
             try
             {
