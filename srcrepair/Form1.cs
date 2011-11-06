@@ -1163,7 +1163,8 @@ namespace srcrepair
             GV.FullAppPath = Path.GetDirectoryName(Assmbl.Location);
 
             // Проверим на уже запущенный процесс программы...
-            if (CoreLib.FindProcess(Assmbl.GetName().Name.ToString()) != 0)
+            int AppPid = CoreLib.FindProcess(Assmbl.GetName().Name.ToString());
+            if ((AppPid != 0) && (AppPid != Process.GetCurrentProcess().Id))
             {
                 MessageBox.Show(String.Format(RM.GetString("AppAlreadyLaunched"), GV.AppName), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(22);
