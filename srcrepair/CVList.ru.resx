@@ -2160,4 +2160,106 @@
   <data name="tf_show_voice_icons" xml:space="preserve">
     <value>Включает / отключает отображение значков над игроками, использующими голосовой чат. Объявлена устаревшей, поэтому используйте mp_show_voice_icons вместо неё.</value>
   </data>
+  <data name="alias" xml:space="preserve">
+    <value>Создаёт макрокоманду для дальнейшего использования в скриптах.</value>
+  </data>
+  <data name="bot_allow_grenades" xml:space="preserve">
+    <value>Разрешить / запретить ботам использовать ручные гранаты.</value>
+  </data>
+  <data name="bot_allow_machine_guns" xml:space="preserve">
+    <value>Разрешить / запретить ботам использовать тяжёлые пулемёты.</value>
+  </data>
+  <data name="bot_allow_pistols" xml:space="preserve">
+    <value>Разрешить / запретить ботам использовать пистолеты.</value>
+  </data>
+  <data name="bot_allow_rifles" xml:space="preserve">
+    <value>Разрешить / запретить ботам использовать штурмовые винтовки.</value>
+  </data>
+  <data name="bot_allow_rogues" xml:space="preserve">
+    <value>Разрешить / запретить ботам не следовать приказам игрока.</value>
+  </data>
+  <data name="bot_allow_shotguns" xml:space="preserve">
+    <value>Разрешить / запретить ботам использовать дробовики.</value>
+  </data>
+  <data name="bot_allow_snipers" xml:space="preserve">
+    <value>Разрешить / запретить ботам использовать снайперские винтовки.</value>
+  </data>
+  <data name="bot_allow_sub_machine_guns" xml:space="preserve">
+    <value>Разрешить / запретить ботам использовать пистолеты-пулемёты.</value>
+  </data>
+  <data name="bot_all_weapons" xml:space="preserve">
+    <value>Разрешить / запретить ботам использовать любое оружие.</value>
+  </data>
+  <data name="bot_auto_follow" xml:space="preserve">
+    <value>Включает / отключает режим следования ботов за игроком.</value>
+  </data>
+  <data name="bot_chatter" xml:space="preserve">
+    <value>Задаёт способ "общения" ботов с игроком: normal, minimal, radio, off. Значение указывается строго в кавычках.</value>
+  </data>
+  <data name="bot_difficulty" xml:space="preserve">
+    <value>Задаёт сложность ботов: 0 - 3 (низкая - максимальная).</value>
+  </data>
+  <data name="bot_join_after_player" xml:space="preserve">
+    <value>Включает / отключает режим входа ботов в игру только после реальных игроков.</value>
+  </data>
+  <data name="bot_join_team" xml:space="preserve">
+    <value>Команда, к которой разрешено подключаться ботам.</value>
+  </data>
+  <data name="bot_prefix" xml:space="preserve">
+    <value>Задаёт префикс, который будет указан перед никами ботов.</value>
+  </data>
+  <data name="bot_quota" xml:space="preserve">
+    <value>Включает ботов и задаёт их максимальное количество на сервере.</value>
+  </data>
+  <data name="bot_quota_mode" xml:space="preserve">
+    <value>Включает / отключает режим балансировки ботов в зависимости от количества реальных игроков на сервере. Допустимые значения: normal (балансировка отключена) и fill (боты будут уходить и освобождать места игрокам).</value>
+  </data>
+  <data name="mp_autokick" xml:space="preserve">
+    <value>Включает / отключает автоматический кик игроков, нарушающих правила сервера (убийства заложников и т.д.).</value>
+  </data>
+  <data name="mp_buytime" xml:space="preserve">
+    <value>Время в минутах, разрешённое для покупки в CS:S.</value>
+  </data>
+  <data name="mp_c4timer" xml:space="preserve">
+    <value>Задаёт время в секундах, по истечению которого установленная C4 взорвётся.</value>
+  </data>
+  <data name="mp_dynamicpricing" xml:space="preserve">
+    <value>Разрешает / запрещает динамические цены на оружие в CS:S.</value>
+  </data>
+  <data name="mp_freezetime" xml:space="preserve">
+    <value>Задаёт время, отведённое на покупку снаряжения до начала раунда.</value>
+  </data>
+  <data name="mp_hostagepenalty" xml:space="preserve">
+    <value>Задаёт максимальное количество убитых заложников игрокм до применения к нему мер наказания. 0 - отключить.</value>
+  </data>
+  <data name="mp_spawnprotectiontime" xml:space="preserve">
+    <value>Задаёт время защиты игрока после респауна (в секундах). 0 - защита отключена.</value>
+  </data>
+  <data name="mp_startmoney" xml:space="preserve">
+    <value>Задаёт стартовую сумму денежных средств, выдаваемых игрокам при входе на сервер. Минимальное значение 800, максимальное - 16000.</value>
+  </data>
+  <data name="mp_tkpunish" xml:space="preserve">
+    <value>Включает / отключает наказание за тимкилл (убийство товарищей по команде).</value>
+  </data>
+  <data name="sv_bounce" xml:space="preserve">
+    <value>Множитель, используемый при расчётах столкновений между физическими объектами.</value>
+  </data>
+  <data name="sv_client_interpolate" xml:space="preserve">
+    <value>Разрешает / запрещает клиентскую интерполяцию.</value>
+  </data>
+  <data name="sv_client_predict" xml:space="preserve">
+    <value>Разрешает / запрещает систему укадывания тиков на стороне клиента.</value>
+  </data>
+  <data name="sv_maxspeed" xml:space="preserve">
+    <value>Задаёт максимальную скорость перемещения игроков на сервере.</value>
+  </data>
+  <data name="sv_rcon_minfailures" xml:space="preserve">
+    <value>Задаёт разрешённое количество неправильных вводов RCON-пароля, при исчерпании которых пользователь будет автоматически забанен.</value>
+  </data>
+  <data name="sv_rcon_minfailuretime" xml:space="preserve">
+    <value>Задаёт время в секундах до обнуления счётчика неправильных вводов RCON-пароля.</value>
+  </data>
+  <data name="sv_stopspeed" xml:space="preserve">
+    <value>Задаёт скорость остановки игрока после бега.</value>
+  </data>
 </root>

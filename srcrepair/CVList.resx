@@ -423,4 +423,7 @@
   <data name="zoom_sensitivity_ratio" xml:space="preserve">
     <value>Sets the ratio of sensitivity while zoomed in with the Sniper Rifle with accordance to actual sensitivity.</value>
   </data>
+  <data name="sv_bounce" xml:space="preserve">
+    <value>Bounce multiplier for when physically simulated objects collide with other objects.</value>
+  </data>
 </root>
