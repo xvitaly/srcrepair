@@ -2277,4 +2277,91 @@
   <data name="bot_walk" xml:space="preserve">
     <value>Force the bots to walk.</value>
   </data>
+  <data name="changelevel2" xml:space="preserve">
+    <value>Сменить карту на сервере и кикнуть всех игроков с него. В качестве параметра присутствует название карты, которая будет запущена сервером.</value>
+  </data>
+  <data name="motdfile" xml:space="preserve">
+    <value>Задаёт имя файла с сообщением дня (Message Of The Day). Файл должен находиться в каталоге с сервером. URL недопустимы.</value>
+  </data>
+  <data name="mp_logmessages" xml:space="preserve">
+    <value>Включает / отключает запись в лог-файл всех пользовательских сообщений.</value>
+  </data>
+  <data name="pausable" xml:space="preserve">
+    <value>Позволять ставить игру на паузу командой pause в консоли.</value>
+  </data>
+  <data name="physgun_limited" xml:space="preserve">
+    <value>Включает / отключает ограничения для физической пушки.</value>
+  </data>
+  <data name="sbox_allownpcs" xml:space="preserve">
+    <value>Включает / отключает возможность вызова на сервере NPC (ботов).</value>
+  </data>
+  <data name="sbox_godmode" xml:space="preserve">
+    <value>Включает / отключает режим неуязвимости на сервере.</value>
+  </data>
+  <data name="sbox_maxballoons" xml:space="preserve">
+    <value>Задаёт максимальное количество шариков для каждого пользователя на сервере.</value>
+  </data>
+  <data name="sbox_maxbuttons" xml:space="preserve">
+    <value>Задаёт максимальное количество кнопок для каждого пользователя на сервере.</value>
+  </data>
+  <data name="sbox_maxdynamite" xml:space="preserve">
+    <value>Задаёт максимальное количество взрывчатки (динамитов) для каждого пользователя на сервере.</value>
+  </data>
+  <data name="sbox_maxeffects" xml:space="preserve">
+    <value>Задаёт максимальное количество эффектов (effects) для каждого пользователя на сервере.</value>
+  </data>
+  <data name="sbox_maxemitters" xml:space="preserve">
+    <value>Задаёт максимальное количество эмиттеров для каждого пользователя на сервере.</value>
+  </data>
+  <data name="sbox_maxhoverballs" xml:space="preserve">
+    <value>Задаёт максимальное количество ховерболов для каждого пользователя на сервере.</value>
+  </data>
+  <data name="sbox_maxlamps" xml:space="preserve">
+    <value>Задаёт максимальное количество ламп и иных источников света для каждого пользователя на сервере.</value>
+  </data>
+  <data name="sbox_maxnpcs" xml:space="preserve">
+    <value>Задаёт максимальное количество NPC для каждого пользователя на сервере. Рекомендуемое значение 0 для защиты сервера.</value>
+  </data>
+  <data name="sbox_maxprops" xml:space="preserve">
+    <value>Задаёт максимальное количество предметов для каждого пользователя на сервере.</value>
+  </data>
+  <data name="sbox_maxragdolls" xml:space="preserve">
+    <value>Задаёт максимальное количество рэгдоллов для каждого пользователя на сервере. Рекомендуемое значение 0 для защиты сервера.</value>
+  </data>
+  <data name="sbox_maxsents" xml:space="preserve">
+    <value>Задаёт максимальное количество sent для каждого пользователя на сервере.</value>
+  </data>
+  <data name="sbox_maxthrusters" xml:space="preserve">
+    <value>Задаёт максимальное количество thrusterов для каждого пользователя на сервере.</value>
+  </data>
+  <data name="sbox_maxvehicles" xml:space="preserve">
+    <value>Задаёт максимальное количество машин для каждого пользователя на сервере.</value>
+  </data>
+  <data name="sbox_maxwheels" xml:space="preserve">
+    <value>Задаёт максимальное количество колёс для каждого пользователя на сервере.</value>
+  </data>
+  <data name="sbox_noclip" xml:space="preserve">
+    <value>Разрешает / запрещает использование режима свободного полёта (noclip) при строительстве.</value>
+  </data>
+  <data name="sbox_playergod" xml:space="preserve">
+    <value>Включает / отключает неуязвимость игроков на сервере.</value>
+  </data>
+  <data name="sbox_plpldamage" xml:space="preserve">
+    <value>Запретить (1) / разрешить (0) игрокам атаковать друг друга на сервере.</value>
+  </data>
+  <data name="sm_nextmap" xml:space="preserve">
+    <value>Задаёт следующую карту, которая будет установлена сервером при наличии установленного SourceMod.</value>
+  </data>
+  <data name="sv_defaultgamemode" xml:space="preserve">
+    <value>Задаёт игровой режим, который будет запущен при старте выделенного сервера. Значение по умолчанию - sandbox.</value>
+  </data>
+  <data name="sv_password" xml:space="preserve">
+    <value>Задаёт пароль для входа на сервер.</value>
+  </data>
+  <data name="sv_registration_successful" xml:space="preserve">
+    <value>Принимает значение 1 при успешной регистрации выделенного сервера на сервере Valve. Во всех остальных случаях - 0.</value>
+  </data>
+  <data name="sv_tags" xml:space="preserve">
+    <value>Содержит теги сервера, которые передаются на мастер-сервер Valve и используются при поиске. Не рекомендуется изменять.</value>
+  </data>
 </root>
