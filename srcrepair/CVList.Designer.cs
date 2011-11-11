@@ -673,6 +673,33 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Maximum connections per second to respond to from a single IP address..
+        /// </summary>
+        internal static string sv_max_connects_sec {
+            get {
+                return ResourceManager.GetString("sv_max_connects_sec", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maximum connections per second to respond to from anywhere..
+        /// </summary>
+        internal static string sv_max_connects_sec_global {
+            get {
+                return ResourceManager.GetString("sv_max_connects_sec_global", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Window over which to average connections per second averages..
+        /// </summary>
+        internal static string sv_max_connects_window {
+            get {
+                return ResourceManager.GetString("sv_max_connects_window", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cvar for managing custom content..
         /// </summary>
         internal static string sv_pure {

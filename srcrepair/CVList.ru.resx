@@ -2364,4 +2364,49 @@
   <data name="sv_tags" xml:space="preserve">
     <value>Содержит теги сервера, которые передаются на мастер-сервер Valve и используются при поиске. Не рекомендуется изменять.</value>
   </data>
+  <data name="ai_disable" xml:space="preserve">
+    <value>Отключает (1) / включает (0) искусственный интеллект (AI) всех NPC на карте.</value>
+  </data>
+  <data name="buddha" xml:space="preserve">
+    <value>Включить режим неуязвимости. Аналогично god, но игрок получает урон до достижения 1 hp, затем становится полностью неузвимым. Помечен как чит.</value>
+  </data>
+  <data name="firstperson" xml:space="preserve">
+    <value>Вернуться к виду от первого лица.</value>
+  </data>
+  <data name="give" xml:space="preserve">
+    <value>Выдать требуемое оружие игроку. В качестве параметра выступает внутреннее название оружия. Помечена как чит.</value>
+  </data>
+  <data name="god" xml:space="preserve">
+    <value>Включить режим неуязвимости. Игрок не получает урон. Помечен как чит.</value>
+  </data>
+  <data name="help" xml:space="preserve">
+    <value>Выдать краткую справку о консольной команде или переменной.</value>
+  </data>
+  <data name="mat_depthbias_normal" xml:space="preserve">
+    <value>Включить / отключить отображение сквозь стены. Помечена как чит.</value>
+  </data>
+  <data name="nav_generate" xml:space="preserve">
+    <value>Позволяет создать навигационные поинты для использования ботами с AI. Создание может занять много времени.</value>
+  </data>
+  <data name="noclip" xml:space="preserve">
+    <value>Включить / отключить режим свободного полёта. Помечена как чит.</value>
+  </data>
+  <data name="notarget" xml:space="preserve">
+    <value>Включить / отключить видимость игрока для NPC. Помечена как чит.</value>
+  </data>
+  <data name="npc_create" xml:space="preserve">
+    <value>Создать NPC на карте в позиции перекрестия прицела. В качестве параметра выступает внутреннее имя. Помечена как чит.</value>
+  </data>
+  <data name="sv_infinite_aux_power" xml:space="preserve">
+    <value>Включить / отключить бесконечную энергию HEV-костюма.</value>
+  </data>
+  <data name="sv_max_connects_sec" xml:space="preserve">
+    <value>Задаёт максимальное количество входящих соединений в секунду с одного IP.</value>
+  </data>
+  <data name="sv_max_connects_sec_global" xml:space="preserve">
+    <value>Задаёт максимальное количество входящих соединений для всего сервера с любых IP-адресов.</value>
+  </data>
+  <data name="sv_max_connects_window" xml:space="preserve">
+    <value>Window over which to average connections per second averages.</value>
+  </data>
 </root>

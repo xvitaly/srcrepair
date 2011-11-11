@@ -426,4 +426,13 @@
   <data name="sv_bounce" xml:space="preserve">
     <value>Bounce multiplier for when physically simulated objects collide with other objects.</value>
   </data>
+  <data name="sv_max_connects_sec" xml:space="preserve">
+    <value>Maximum connections per second to respond to from a single IP address.</value>
+  </data>
+  <data name="sv_max_connects_sec_global" xml:space="preserve">
+    <value>Maximum connections per second to respond to from anywhere.</value>
+  </data>
+  <data name="sv_max_connects_window" xml:space="preserve">
+    <value>Window over which to average connections per second averages.</value>
+  </data>
 </root>
