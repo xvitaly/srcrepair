@@ -1162,14 +1162,6 @@ namespace srcrepair
             Assembly Assmbl = Assembly.GetEntryAssembly();
             GV.FullAppPath = Path.GetDirectoryName(Assmbl.Location);
 
-            // Проверим на уже запущенный процесс программы...
-            int AppPid = CoreLib.FindProcess(Assmbl.GetName().Name.ToString());
-            if ((AppPid != 0) && (AppPid != Process.GetCurrentProcess().Id))
-            {
-                MessageBox.Show(String.Format(RM.GetString("AppAlreadyLaunched"), GV.AppName), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Environment.Exit(22);
-            }
-
             // Укажем путь к пользовательским данным и создадим если не существует...
             GV.AppUserDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), GV.AppName);
             if (!(Directory.Exists(GV.AppUserDir)))

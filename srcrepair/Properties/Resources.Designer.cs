@@ -67,6 +67,15 @@ namespace srcrepair.Properties {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to The program is already running. Starting the second copy is not allowed..
+        /// </summary>
+        internal static string AppAlrLaunched {
+            get {
+                return ResourceManager.GetString("AppAlrLaunched", resourceCulture);
+            }
+        }
+        
         internal static System.Drawing.Bitmap bug {
             get {
                 object obj = ResourceManager.GetObject("bug", resourceCulture);
