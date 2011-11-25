@@ -1497,7 +1497,7 @@
   <data name="sv_use_steam_voice" xml:space="preserve">
     <value>Разрешить/запретить использование нового голосового движка вместо классического.</value>
   </data>
-  <data name="sv_vote_allow_specators" xml:space="preserve">
+  <data name="sv_vote_allow_spectators" xml:space="preserve">
     <value>Разрешить/запретить голосовать зрителям.</value>
   </data>
   <data name="sv_vote_failure_timer" xml:space="preserve">
@@ -2408,5 +2408,290 @@
   </data>
   <data name="sv_max_connects_window" xml:space="preserve">
     <value>Window over which to average connections per second averages.</value>
+  </data>
+  <data name="mp_allowNPCs" xml:space="preserve">
+    <value>Разрешить / запретить NPC на сервере.</value>
+  </data>
+  <data name="mp_clan_readyrestart" xml:space="preserve">
+    <value>Включить / отключить автоматический перезапуск матча после получение статуса Готов в режиме чемпионата.</value>
+  </data>
+  <data name="mp_clan_ready_signal" xml:space="preserve">
+    <value>Включить / отключить режим, при котором только клан-лидер может запустить матч в режиме чемпионата.</value>
+  </data>
+  <data name="mp_defaultteam" xml:space="preserve">
+    <value>Задаёт команду по умолчанию для присоединения.</value>
+  </data>
+  <data name="mp_disable_autokick" xml:space="preserve">
+    <value>Запретить автоматический кик игрока с определённым ID с сервера.</value>
+  </data>
+  <data name="mp_falldamage" xml:space="preserve">
+    <value>Задаёт коэффициент повреждений при падении с высоты.</value>
+  </data>
+  <data name="mp_forceautoteam" xml:space="preserve">
+    <value>Включить / отключить автоматическое присоединение игрока к случайной команде при заходе на сервер.</value>
+  </data>
+  <data name="mp_forcerespawn" xml:space="preserve">
+    <value>Включить / отключить автоматический респаун игроков.</value>
+  </data>
+  <data name="mp_forcerespawnplayers" xml:space="preserve">
+    <value>Вызвать принудительный респаун всех мёртвых игроков.</value>
+  </data>
+  <data name="mp_forcewin" xml:space="preserve">
+    <value>Вызвать победу одной из команд вне зависимости от счёта.</value>
+  </data>
+  <data name="mp_highlander" xml:space="preserve">
+    <value>Включает / отключает режим Хайлендера и устанавливает лимит по одному игроку каждого класса.</value>
+  </data>
+  <data name="mp_humans_must_join_team" xml:space="preserve">
+    <value>Включает возможность людям зайти только за определённую команду (red, blue или spectator). Другую команду смогут занять только боты.</value>
+  </data>
+  <data name="mp_match_end_at_timelimit" xml:space="preserve">
+    <value>Включает / отключает окончание матча по истечении времени на карту.</value>
+  </data>
+  <data name="mp_showrespawntimes" xml:space="preserve">
+    <value>Включить / выключить отображение счётчика времени до возрождения.</value>
+  </data>
+  <data name="mp_stalemate_meleeonly" xml:space="preserve">
+    <value>Включить / отключить режим использования только оружия ближнего боя во время Мгновенной смерти.</value>
+  </data>
+  <data name="mp_switchteams" xml:space="preserve">
+    <value>Поменять команды местами и перезапустить игру.</value>
+  </data>
+  <data name="mp_tournament_whitelist" xml:space="preserve">
+    <value>Задаёт имя файла со списком разрешённых оружий для использования в режиме чемпионата.</value>
+  </data>
+  <data name="mp_waitingforplayers_cancel" xml:space="preserve">
+    <value>Остановить этап ожидания игроков.</value>
+  </data>
+  <data name="mp_waitingforplayers_restart" xml:space="preserve">
+    <value>Перезапустить этап ожидания игроков сервером.</value>
+  </data>
+  <data name="mp_weaponstay" xml:space="preserve">
+    <value>Оружие остаётся на карте после смерти игрока.</value>
+  </data>
+  <data name="mp_windifference_min" xml:space="preserve">
+    <value>Задаёт минимальное число очков команды, необходимое для смены карты из-за mp_windifference.</value>
+  </data>
+  <data name="sv_allow_voice_from_file" xml:space="preserve">
+    <value>Разрешить / запретить клиентам проигрывать файлы в голосовой чат.</value>
+  </data>
+  <data name="sv_autosave" xml:space="preserve">
+    <value>Включить / отключить автоматическое сохранение при смене уровня.</value>
+  </data>
+  <data name="sv_benchmark" xml:space="preserve">
+    <value>Включить / отключить запуск теста производительности при смене карты.</value>
+  </data>
+  <data name="sv_benchmark_autovprofrecord" xml:space="preserve">
+    <value>Включить / отключить запись отладочного файла во время выполнения теста производительности.</value>
+  </data>
+  <data name="sv_benchmark_force_start" xml:space="preserve">
+    <value>Запустить тест производительности. Не рекомендуется использовать.</value>
+  </data>
+  <data name="sv_benchmark_freeroam" xml:space="preserve">
+    <value>Разрешить / запретить свободное перемещение игрока во время выполнения теста производительности.</value>
+  </data>
+  <data name="sv_clearhinthistory" xml:space="preserve">
+    <value>Очистить кэш подсказок, отображаемых в консоли игрока во время набора команды.</value>
+  </data>
+  <data name="sv_debug_player_use" xml:space="preserve">
+    <value>Включить / отключить визуализацию использования команды +use.</value>
+  </data>
+  <data name="sv_filterban" xml:space="preserve">
+    <value>Включить / отключить фильтрацию по IP.</value>
+  </data>
+  <data name="sv_logblocks" xml:space="preserve">
+    <value>Включить / отключить запись в лог (журнал) информации о заблокированных неверных запросах. Может значительно увеличить размер логов.</value>
+  </data>
+  <data name="sv_logdownloadlist" xml:space="preserve">
+    <value>Включить / отключить запись в лог (журнал) информации о загрузках.</value>
+  </data>
+  <data name="sv_maxreplay" xml:space="preserve">
+    <value>Задаёт максимальную длительность реплея (повтора) в секундах. 0 - без ограничений.</value>
+  </data>
+  <data name="sv_noclipduringpause" xml:space="preserve">
+    <value>Включить / отключить режим свободного полёта во время приостановки игры (для создания скриншотов и т.д.).</value>
+  </data>
+  <data name="sv_noclipspeed" xml:space="preserve">
+    <value>Задаёт скорость игрока во время нахождения в режиме свободного полёта.</value>
+  </data>
+  <data name="sv_npc_talker_maxdist" xml:space="preserve">
+    <value>Задаёт дистанцию, на которой NPC не сможет разговаривать с игроком.</value>
+  </data>
+  <data name="sv_precacheinfo" xml:space="preserve">
+    <value>Включить / отключить отображение информации о предварительном кэшировании. Используется при отладке.</value>
+  </data>
+  <data name="sv_pure_trace" xml:space="preserve">
+    <value>Включить / отключить вывод информации о проверке файлов игроков и их CRC32.</value>
+  </data>
+  <data name="sv_querycache_stats" xml:space="preserve">
+    <value>Включить / отключить вывод информации о кэше запросов.</value>
+  </data>
+  <data name="sv_rcon_log" xml:space="preserve">
+    <value>Включить / отключить запись в лог сервера активности удалённых пользователей.</value>
+  </data>
+  <data name="sv_showlagcompensation" xml:space="preserve">
+    <value>Включить / отключить отображение отладочной информации системы лагокомпенсации.</value>
+  </data>
+  <data name="sv_stickysprint_default" xml:space="preserve">
+    <value>Задаёт ускорение для пайп по умолчанию.</value>
+  </data>
+  <data name="sv_vehicle_autoaim_scale" xml:space="preserve">
+    <value>Задаёт параметры авто-прицеливания техники.</value>
+  </data>
+  <data name="sv_visiblemaxplayers" xml:space="preserve">
+    <value>Задаёт видимое клиентам максимальное число игроков на сервере.</value>
+  </data>
+  <data name="sv_voicecodec" xml:space="preserve">
+    <value>Позволяет указать DLL-файл кодека, который будет использоваться для кодирования голоса. Указывайте имя DLL-файла без расширения.</value>
+  </data>
+  <data name="tf_always_deathanim" xml:space="preserve">
+    <value>Включить / выключить принудительное проигрывание анимации смерти.</value>
+  </data>
+  <data name="tf_arena_first_blood" xml:space="preserve">
+    <value>Включить / выключить награду "Первая кровь" в режиме Арена.</value>
+  </data>
+  <data name="tf_arena_override_cap_enable_time" xml:space="preserve">
+    <value>Задаёт время в секундах, по истечении которого точка станет доступна для захвата. -1 - по умолчанию для карты.</value>
+  </data>
+  <data name="tf_arena_preround_time" xml:space="preserve">
+    <value>Задаёт длительность подготовки в режиме Арена.</value>
+  </data>
+  <data name="tf_arena_round_time" xml:space="preserve">
+    <value>Задаёт время, отведённое на раунд, в режиме Арена.</value>
+  </data>
+  <data name="tf_arena_use_queue" xml:space="preserve">
+    <value>Включает / отключает очередь ожидающих игроков в режиме Арена.</value>
+  </data>
+  <data name="tf_birthday_ball_chance" xml:space="preserve">
+    <value>Задаёт шанс появления пляжного мяча в процентах на респауне Синих при включённом режиме дня рождения.</value>
+  </data>
+  <data name="tf_bot_ammo_search_range" xml:space="preserve">
+    <value>Задаёт максимальную дистанцию поиска металла ботами.</value>
+  </data>
+  <data name="tf_bot_auto_vacate" xml:space="preserve">
+    <value>Включить / отключить автоматический выход ботов с сервера для освобождения места игрокам.</value>
+  </data>
+  <data name="tf_bot_difficulty" xml:space="preserve">
+    <value>Задаёт сложность ботов: 0 (легко) - 3 (эксперт).</value>
+  </data>
+  <data name="tf_bot_join_after_player" xml:space="preserve">
+    <value>Боты будут подключаться только после игрока.</value>
+  </data>
+  <data name="tf_bot_melee_only" xml:space="preserve">
+    <value>Разрешить / запретить ботам использовать только оружие ближнего боя.</value>
+  </data>
+  <data name="tf_bot_offline_practice" xml:space="preserve">
+    <value>Включить / отключить режим оффлайновой практики.</value>
+  </data>
+  <data name="tf_bot_quota" xml:space="preserve">
+    <value>Задаёт количество ботов на сервере.</value>
+  </data>
+  <data name="tf_bot_quota_mode" xml:space="preserve">
+    <value>Задаёт режим балансировки ботов на сервере. Допустимые варианты: "normal", "fill" и "'match".</value>
+  </data>
+  <data name="tf_bot_taunt_victim_chance" xml:space="preserve">
+    <value>Задаёт шанс выполнения ботом насмешки после убийства игрока.</value>
+  </data>
+  <data name="tf_damage_multiplier_blue" xml:space="preserve">
+    <value>Задаёт множитель, на которой будет умножен весь урон, получаемый командой Синих.</value>
+  </data>
+  <data name="tf_damage_multiplier_red" xml:space="preserve">
+    <value>Задаёт множитель, на которой будет умножен весь урон, получаемый командой Красных.</value>
+  </data>
+  <data name="tf_eyeball_boss_acceleration" xml:space="preserve">
+    <value>Задаёт максимальное ускорение Моноклуса.</value>
+  </data>
+  <data name="tf_eyeball_boss_attack_range" xml:space="preserve">
+    <value>Задаёт максимальную дистанцию для атаки Моноклуса.</value>
+  </data>
+  <data name="tf_eyeball_boss_debug" xml:space="preserve">
+    <value>Включает / отключает режим отладки Моноклуса.</value>
+  </data>
+  <data name="tf_eyeball_boss_health_at_level_2" xml:space="preserve">
+    <value>Задаёт HP Моноклуса на уровне 2.</value>
+  </data>
+  <data name="tf_eyeball_boss_health_base" xml:space="preserve">
+    <value>Задаёт базовое HP Моноклуса.</value>
+  </data>
+  <data name="tf_eyeball_boss_health_per_level" xml:space="preserve">
+    <value>Задаёт максимальный прирост HP Моноклуса на каждом из уровней.</value>
+  </data>
+  <data name="tf_eyeball_boss_health_per_player" xml:space="preserve">
+    <value>Задаёт прирост HP Моноклуса на каждом из уровней в зависимости от числа игроков (на одного игрока).</value>
+  </data>
+  <data name="tf_eyeball_boss_hover_height" xml:space="preserve">
+    <value>Задаёт максимальную высоту Моноклуса.</value>
+  </data>
+  <data name="tf_eyeball_boss_lifetime" xml:space="preserve">
+    <value>Задаёт время жизни моноклуса (по умолчанию 120 секунд).</value>
+  </data>
+  <data name="tf_eyeball_boss_speed" xml:space="preserve">
+    <value>Задаёт скорость Моноклуса при перемещении по карте.</value>
+  </data>
+  <data name="tf_halloween_boss_spawn_interval" xml:space="preserve">
+    <value>Задаёт время между появлениями Пешего всадника без головы.</value>
+  </data>
+  <data name="tf_halloween_bot_attack_range" xml:space="preserve">
+    <value>Задаёт максимальную дистанцию атаки Пешего всадника без головы.</value>
+  </data>
+  <data name="tf_halloween_bot_health_base" xml:space="preserve">
+    <value>Задаёт базовое HP Пешего всадника без головы.</value>
+  </data>
+  <data name="tf_halloween_bot_health_per_player" xml:space="preserve">
+    <value>Задаёт количество HP, которое будет добавлено Пешего всадника без головы на каждого игрока (умножается на количество игроков).</value>
+  </data>
+  <data name="tf_halloween_bot_min_player_count" xml:space="preserve">
+    <value>Задаёт минимальное количество игроков, необходимых для появления Пешего всадника без головы.</value>
+  </data>
+  <data name="tf_halloween_bot_speed" xml:space="preserve">
+    <value>Задаёт максимальную скорость перемещения Пешего всадника без головы по карте.</value>
+  </data>
+  <data name="tf_highfive_debug" xml:space="preserve">
+    <value>Включает / отключает режим отладки насмешки Дай пять.</value>
+  </data>
+  <data name="tf_highfive_hintcount" xml:space="preserve">
+    <value>Включает / отключает вывод информации о том, сколько раз выполнена насмешка Дай пять на сервере.</value>
+  </data>
+  <data name="tf_hud_notification_duration" xml:space="preserve">
+    <value>Задаёт время отображения информации на HUD игроков до её исчезновения.</value>
+  </data>
+  <data name="tf_mark" xml:space="preserve">
+    <value>Устанавливает атрибут для выбранной области.</value>
+  </data>
+  <data name="tf_matchmaking_max_search_time" xml:space="preserve">
+    <value>Задаёт максимальное время поиска подходящего сервера для быстрой игры.</value>
+  </data>
+  <data name="tf_matchmaking_noob_hours_played" xml:space="preserve">
+    <value>Количество часов, до истечения которых игрок считается начинающим.</value>
+  </data>
+  <data name="tf_matchmaking_noob_map_score_boost" xml:space="preserve">
+    <value>Множитель очков начинающего игрока.</value>
+  </data>
+  <data name="tf_pressandhold_minduration" xml:space="preserve">
+    <value>Минимальное время, необходимое для активации насмешки, требующей двух игроков.</value>
+  </data>
+  <data name="tf_show_blocked_areas" xml:space="preserve">
+    <value>Включить / отключить отображение закрытых областей на карте.</value>
+  </data>
+  <data name="tf_show_control_points" xml:space="preserve">
+    <value>Включить / отключить отображение контрольных точек.</value>
+  </data>
+  <data name="tf_show_enemy_invasion_areas" xml:space="preserve">
+    <value>Включить / отключить подсветку областей, на которых находится враг. Помечена как чит.</value>
+  </data>
+  <data name="tf_show_sentry_danger" xml:space="preserve">
+    <value>Включить / отключить отображение полей видимости турелей.</value>
+  </data>
+  <data name="tf_show_sniper_areas" xml:space="preserve">
+    <value>Включить / отключить отображение областей для снайперов.</value>
+  </data>
+  <data name="tf_spectator_target_location" xml:space="preserve">
+    <value>Задаёт расположение панели зрителя.</value>
+  </data>
+  <data name="tf_stats_nogameplaycheck" xml:space="preserve">
+    <value>Запретить / разрешить проверку правильности игровых данных.</value>
+  </data>
+  <data name="tf_teamtalk" xml:space="preserve">
+    <value>Включить / отключить возможность общаться мёртвым игрокам с живыми.</value>
   </data>
 </root>
