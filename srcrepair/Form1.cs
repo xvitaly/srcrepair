@@ -1453,22 +1453,25 @@ namespace srcrepair
 
         private void frmMainW_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (Properties.Settings.Default.ConfirmExit)
+            if (e.CloseReason == CloseReason.UserClosing)
             {
-                // Проверим, делал ли что-то пользователь с формой. Если не делал - не будем
-                // спрашивать и завершим форму автоматически...
-                if ((AppSelector.Enabled) && (AppSelector.SelectedIndex != -1))
+                if (Properties.Settings.Default.ConfirmExit)
                 {
-                    // Запрашиваем подтверждение у пользователя на закрытие формы...
-                    if (MessageBox.Show(String.Format(RM.GetString("FrmCloseQuery"), GV.AppName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                    // Проверим, делал ли что-то пользователь с формой. Если не делал - не будем
+                    // спрашивать и завершим форму автоматически...
+                    if ((AppSelector.Enabled) && (AppSelector.SelectedIndex != -1))
                     {
-                        // Подтверждение получено, закрываем форму...
-                        e.Cancel = false;
-                    }
-                    else
-                    {
-                        // Пользователь передумал, отменяем закрытие формы...
-                        e.Cancel = true;
+                        // Запрашиваем подтверждение у пользователя на закрытие формы...
+                        if (MessageBox.Show(String.Format(RM.GetString("FrmCloseQuery"), GV.AppName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                        {
+                            // Подтверждение получено, закрываем форму...
+                            e.Cancel = false;
+                        }
+                        else
+                        {
+                            // Пользователь передумал, отменяем закрытие формы...
+                            e.Cancel = true;
+                        }
                     }
                 }
             }
