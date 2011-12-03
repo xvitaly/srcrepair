@@ -165,6 +165,10 @@
             this.MNUInstaller = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUHEd = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUWinMnuDisabler = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUExtClnSub = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUExtClnCache = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUExtClnOverlay = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUExtClnOverlayHTCache = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep2 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUExit = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpMNU = new System.Windows.Forms.ToolStripMenuItem();
@@ -1250,6 +1254,7 @@
             this.MNUInstaller,
             this.MNUHEd,
             this.MNUWinMnuDisabler,
+            this.MNUExtClnSub,
             this.MNUSep2,
             this.MNUExit});
             this.ToolsMNU.Name = "ToolsMNU";
@@ -1308,6 +1313,37 @@
             this.MNUWinMnuDisabler.Name = "MNUWinMnuDisabler";
             resources.ApplyResources(this.MNUWinMnuDisabler, "MNUWinMnuDisabler");
             this.MNUWinMnuDisabler.Click += new System.EventHandler(this.MNUWinMnuDisabler_Click);
+            // 
+            // MNUExtClnSub
+            // 
+            this.MNUExtClnSub.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MNUExtClnCache,
+            this.MNUExtClnOverlay,
+            this.MNUExtClnOverlayHTCache});
+            this.MNUExtClnSub.Image = global::srcrepair.Properties.Resources.clean;
+            this.MNUExtClnSub.Name = "MNUExtClnSub";
+            resources.ApplyResources(this.MNUExtClnSub, "MNUExtClnSub");
+            // 
+            // MNUExtClnCache
+            // 
+            this.MNUExtClnCache.Image = global::srcrepair.Properties.Resources.clean;
+            this.MNUExtClnCache.Name = "MNUExtClnCache";
+            resources.ApplyResources(this.MNUExtClnCache, "MNUExtClnCache");
+            this.MNUExtClnCache.Click += new System.EventHandler(this.MNUExtClnCache_Click);
+            // 
+            // MNUExtClnOverlay
+            // 
+            this.MNUExtClnOverlay.Image = global::srcrepair.Properties.Resources.clean;
+            this.MNUExtClnOverlay.Name = "MNUExtClnOverlay";
+            resources.ApplyResources(this.MNUExtClnOverlay, "MNUExtClnOverlay");
+            this.MNUExtClnOverlay.Click += new System.EventHandler(this.MNUExtClnOverlay_Click);
+            // 
+            // MNUExtClnOverlayHTCache
+            // 
+            this.MNUExtClnOverlayHTCache.Image = global::srcrepair.Properties.Resources.clean;
+            this.MNUExtClnOverlayHTCache.Name = "MNUExtClnOverlayHTCache";
+            resources.ApplyResources(this.MNUExtClnOverlayHTCache, "MNUExtClnOverlayHTCache");
+            this.MNUExtClnOverlayHTCache.Click += new System.EventHandler(this.MNUExtClnOverlayHTCache_Click);
             // 
             // MNUSep2
             // 
@@ -1685,6 +1721,10 @@
         private System.Windows.Forms.Button GT_NCF_LoadNotepad;
         private System.Windows.Forms.Label GT_NCFWarnText;
         private System.Windows.Forms.ToolStripButton CE_OpenCVList;
+        private System.Windows.Forms.ToolStripMenuItem MNUExtClnSub;
+        private System.Windows.Forms.ToolStripMenuItem MNUExtClnCache;
+        private System.Windows.Forms.ToolStripMenuItem MNUExtClnOverlay;
+        private System.Windows.Forms.ToolStripMenuItem MNUExtClnOverlayHTCache;
     }
 }
 

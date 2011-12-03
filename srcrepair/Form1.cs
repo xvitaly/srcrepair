@@ -2736,5 +2736,23 @@ namespace srcrepair
         {
             Process.Start(RM.GetString("AppCVListURL"));
         }
+
+        private void MNUExtClnCache_Click(object sender, EventArgs e)
+        {
+            // Очистим HTML-кэш внутреннего браузера Steam...
+            OpenCleanupWindow(Path.Combine(GV.FullSteamPath, "config", "htmlcache"), "*.*", ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+        }
+
+        private void MNUExtClnOverlay_Click(object sender, EventArgs e)
+        {
+            // Очистим HTML-кэш браузера оверлея...
+            OpenCleanupWindow(Path.Combine(GV.FullSteamPath, "config", "overlayhtmlcache"), "*.*", ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+        }
+
+        private void MNUExtClnOverlayHTCache_Click(object sender, EventArgs e)
+        {
+            // Очистим HTTP-кэш...
+            OpenCleanupWindow(Path.Combine(GV.FullSteamPath, "appcache", "httpcache"), "*.*", ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+        }
     }
 }

@@ -3281,6 +3281,30 @@
   <data name="MNUWinMnuDisabler.Text" xml:space="preserve">
     <value>S&amp;ystem buttons disabler...</value>
   </data>
+  <data name="MNUExtClnCache.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 22</value>
+  </data>
+  <data name="MNUExtClnCache.Text" xml:space="preserve">
+    <value>&amp;Steam HTML cache...</value>
+  </data>
+  <data name="MNUExtClnOverlay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 22</value>
+  </data>
+  <data name="MNUExtClnOverlay.Text" xml:space="preserve">
+    <value>&amp;Overlay HTML cache...</value>
+  </data>
+  <data name="MNUExtClnOverlayHTCache.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 22</value>
+  </data>
+  <data name="MNUExtClnOverlayHTCache.Text" xml:space="preserve">
+    <value>&amp;HTTP cache...</value>
+  </data>
+  <data name="MNUExtClnSub.Size" type="System.Drawing.Size, System.Drawing">
+    <value>274, 22</value>
+  </data>
+  <data name="MNUExtClnSub.Text" xml:space="preserve">
+    <value>Exten&amp;ded Steam cleanup</value>
+  </data>
   <data name="MNUSep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>271, 6</value>
   </data>
@@ -4407,6 +4431,30 @@
     <value>MNUWinMnuDisabler</value>
   </data>
   <data name="&gt;&gt;MNUWinMnuDisabler.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnSub.Name" xml:space="preserve">
+    <value>MNUExtClnSub</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnSub.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnCache.Name" xml:space="preserve">
+    <value>MNUExtClnCache</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnCache.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnOverlay.Name" xml:space="preserve">
+    <value>MNUExtClnOverlay</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnOverlay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnOverlayHTCache.Name" xml:space="preserve">
+    <value>MNUExtClnOverlayHTCache</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnOverlayHTCache.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUSep2.Name" xml:space="preserve">
