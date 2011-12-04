@@ -1457,21 +1457,16 @@ namespace srcrepair
             {
                 if (Properties.Settings.Default.ConfirmExit)
                 {
-                    // Проверим, делал ли что-то пользователь с формой. Если не делал - не будем
-                    // спрашивать и завершим форму автоматически...
-                    if ((AppSelector.Enabled) && (AppSelector.SelectedIndex != -1))
+                    // Запрашиваем подтверждение у пользователя на закрытие формы...
+                    if (MessageBox.Show(String.Format(RM.GetString("FrmCloseQuery"), GV.AppName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
-                        // Запрашиваем подтверждение у пользователя на закрытие формы...
-                        if (MessageBox.Show(String.Format(RM.GetString("FrmCloseQuery"), GV.AppName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-                        {
-                            // Подтверждение получено, закрываем форму...
-                            e.Cancel = false;
-                        }
-                        else
-                        {
-                            // Пользователь передумал, отменяем закрытие формы...
-                            e.Cancel = true;
-                        }
+                        // Подтверждение получено, закрываем форму...
+                        e.Cancel = false;
+                    }
+                    else
+                    {
+                        // Пользователь передумал, отменяем закрытие формы...
+                        e.Cancel = true;
                     }
                 }
             }

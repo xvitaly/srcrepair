@@ -3282,22 +3282,22 @@
     <value>S&amp;ystem buttons disabler...</value>
   </data>
   <data name="MNUExtClnCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 22</value>
+    <value>183, 22</value>
   </data>
   <data name="MNUExtClnCache.Text" xml:space="preserve">
-    <value>&amp;Steam HTML cache...</value>
+    <value>&amp;Steam HTML cache</value>
   </data>
   <data name="MNUExtClnOverlay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 22</value>
+    <value>183, 22</value>
   </data>
   <data name="MNUExtClnOverlay.Text" xml:space="preserve">
-    <value>&amp;Overlay HTML cache...</value>
+    <value>&amp;Overlay HTML cache</value>
   </data>
   <data name="MNUExtClnOverlayHTCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 22</value>
+    <value>183, 22</value>
   </data>
   <data name="MNUExtClnOverlayHTCache.Text" xml:space="preserve">
-    <value>&amp;HTTP cache...</value>
+    <value>&amp;HTTP cache</value>
   </data>
   <data name="MNUExtClnSub.Size" type="System.Drawing.Size, System.Drawing">
     <value>274, 22</value>
