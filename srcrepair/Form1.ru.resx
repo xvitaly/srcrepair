@@ -796,22 +796,22 @@
     <value>&amp;Модуль отключения системных клавиш...</value>
   </data>
   <data name="MNUExtClnCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 22</value>
+    <value>231, 22</value>
   </data>
   <data name="MNUExtClnCache.Text" xml:space="preserve">
-    <value>&amp;Очистить HTML-кэш клиента...</value>
+    <value>&amp;Очистить HTML-кэш клиента</value>
   </data>
   <data name="MNUExtClnOverlay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 22</value>
+    <value>231, 22</value>
   </data>
   <data name="MNUExtClnOverlay.Text" xml:space="preserve">
-    <value>Оч&amp;истить HTML-кэш оверлея...</value>
+    <value>Оч&amp;истить HTML-кэш оверлея</value>
   </data>
   <data name="MNUExtClnOverlayHTCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 22</value>
+    <value>231, 22</value>
   </data>
   <data name="MNUExtClnOverlayHTCache.Text" xml:space="preserve">
-    <value>Очис&amp;тить HTTP-кэш...</value>
+    <value>Очис&amp;тить HTTP-кэш</value>
   </data>
   <data name="MNUExtClnSub.Size" type="System.Drawing.Size, System.Drawing">
     <value>316, 22</value>
