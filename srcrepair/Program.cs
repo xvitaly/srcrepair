@@ -26,18 +26,7 @@ namespace srcrepair
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 string[] CMDLineA = Environment.GetCommandLineArgs();
-                for (int StrNum = 0; StrNum < CMDLineA.Length; StrNum++)
-                {
-                    switch (CMDLineA[StrNum])
-                    {
-                        case "/russian":
-                            Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
-                            break;
-                        case "/english":
-                            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
-                            break;
-                    }
-                }
+                if (CMDLineA.Length > 2) { if (CMDLineA[1] == "/lang") { try { Thread.CurrentThread.CurrentUICulture = new CultureInfo(CMDLineA[2]); } catch { MessageBox.Show(Properties.Resources.AppUnsupportedLanguage, GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } } }
                 Application.Run(new frmMainW());
             }
         }

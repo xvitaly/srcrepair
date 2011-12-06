@@ -76,6 +76,15 @@ namespace srcrepair.Properties {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to The specified locale is not supported at this time, so will use the default language..
+        /// </summary>
+        internal static string AppUnsupportedLanguage {
+            get {
+                return ResourceManager.GetString("AppUnsupportedLanguage", resourceCulture);
+            }
+        }
+        
         internal static System.Drawing.Bitmap bug {
             get {
                 object obj = ResourceManager.GetObject("bug", resourceCulture);
