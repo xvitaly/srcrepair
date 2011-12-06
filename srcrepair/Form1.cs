@@ -1458,16 +1458,7 @@ namespace srcrepair
                 if (Properties.Settings.Default.ConfirmExit)
                 {
                     // Запрашиваем подтверждение у пользователя на закрытие формы...
-                    if (MessageBox.Show(String.Format(RM.GetString("FrmCloseQuery"), GV.AppName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-                    {
-                        // Подтверждение получено, закрываем форму...
-                        e.Cancel = false;
-                    }
-                    else
-                    {
-                        // Пользователь передумал, отменяем закрытие формы...
-                        e.Cancel = true;
-                    }
+                    e.Cancel = !(MessageBox.Show(String.Format(RM.GetString("FrmCloseQuery"), GV.AppName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes);
                 }
             }
         }
