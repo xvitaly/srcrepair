@@ -86,6 +86,7 @@
             this.CE_RmRow = new System.Windows.Forms.ToolStripButton();
             this.CE_ToolSep1 = new System.Windows.Forms.ToolStripSeparator();
             this.CE_OpenInNotepad = new System.Windows.Forms.ToolStripButton();
+            this.CE_ManualBackUpCfg = new System.Windows.Forms.ToolStripButton();
             this.CE_ToolSep2 = new System.Windows.Forms.ToolStripSeparator();
             this.CE_ShowHint = new System.Windows.Forms.ToolStripButton();
             this.CE_OpenCVList = new System.Windows.Forms.ToolStripButton();
@@ -635,6 +636,7 @@
             this.CE_RmRow,
             this.CE_ToolSep1,
             this.CE_OpenInNotepad,
+            this.CE_ManualBackUpCfg,
             this.CE_ToolSep2,
             this.CE_ShowHint,
             this.CE_OpenCVList});
@@ -717,6 +719,14 @@
             resources.ApplyResources(this.CE_OpenInNotepad, "CE_OpenInNotepad");
             this.CE_OpenInNotepad.Name = "CE_OpenInNotepad";
             this.CE_OpenInNotepad.Click += new System.EventHandler(this.CE_OpenInNotepad_Click);
+            // 
+            // CE_ManualBackUpCfg
+            // 
+            this.CE_ManualBackUpCfg.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_ManualBackUpCfg.Image = global::srcrepair.Properties.Resources.backup;
+            resources.ApplyResources(this.CE_ManualBackUpCfg, "CE_ManualBackUpCfg");
+            this.CE_ManualBackUpCfg.Name = "CE_ManualBackUpCfg";
+            this.CE_ManualBackUpCfg.Click += new System.EventHandler(this.CE_ManualBackUpCfg_Click);
             // 
             // CE_ToolSep2
             // 
@@ -1725,6 +1735,7 @@
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnCache;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnOverlay;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnOverlayHTCache;
+        private System.Windows.Forms.ToolStripButton CE_ManualBackUpCfg;
     }
 }
 

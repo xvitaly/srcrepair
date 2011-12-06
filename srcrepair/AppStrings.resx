@@ -522,4 +522,7 @@
   <data name="AppAlreadyLaunched" xml:space="preserve">
     <value>{0} is already running. Starting the second copy is not allowed!</value>
   </data>
+  <data name="CE_BackUpCreated" xml:space="preserve">
+    <value>Backup of {0} was successfully created!</value>
+  </data>
 </root>

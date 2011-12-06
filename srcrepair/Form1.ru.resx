@@ -463,6 +463,9 @@
   <data name="CE_OpenInNotepad.Text" xml:space="preserve">
     <value>Открыть конфиг в Блокноте</value>
   </data>
+  <data name="CE_ManualBackUpCfg.Text" xml:space="preserve">
+    <value>Создать бэкап конфига</value>
+  </data>
   <data name="CE_ShowHint.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

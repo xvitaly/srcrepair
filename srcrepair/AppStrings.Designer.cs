@@ -412,6 +412,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Backup of {0} was successfully created!.
+        /// </summary>
+        internal static string CE_BackUpCreated {
+            get {
+                return ResourceManager.GetString("CE_BackUpCreated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save the configuration file?.
         /// </summary>
         internal static string CE_CfgSV {

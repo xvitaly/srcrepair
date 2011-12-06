@@ -1605,6 +1605,15 @@
   <data name="CE_OpenInNotepad.Text" xml:space="preserve">
     <value>Open config in Notepad</value>
   </data>
+  <data name="CE_ManualBackUpCfg.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="CE_ManualBackUpCfg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="CE_ManualBackUpCfg.Text" xml:space="preserve">
+    <value>BackUp current config file</value>
+  </data>
   <data name="CE_ToolSep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
   </data>
@@ -4239,6 +4248,12 @@
     <value>CE_OpenInNotepad</value>
   </data>
   <data name="&gt;&gt;CE_OpenInNotepad.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CE_ManualBackUpCfg.Name" xml:space="preserve">
+    <value>CE_ManualBackUpCfg</value>
+  </data>
+  <data name="&gt;&gt;CE_ManualBackUpCfg.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;CE_ToolSep2.Name" xml:space="preserve">

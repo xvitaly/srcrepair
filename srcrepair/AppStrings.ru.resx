@@ -270,7 +270,7 @@
     <comment>Сообщение об успешном завершении инициализации</comment>
   </data>
   <data name="StatusOpenedFile" xml:space="preserve">
-    <value>Сейчас в редакторе открыт файл:</value>
+    <value>В редакторе открыт файл:</value>
     <comment>Сообщение строки статуса об открытом файле...</comment>
   </data>
   <data name="StatusSApp" xml:space="preserve">
@@ -657,5 +657,9 @@
   <data name="AppAlreadyLaunched" xml:space="preserve">
     <value>Программа {0} уже запущена. Запуск второй копии невозможен!</value>
     <comment>Сообщение, выдаваемое при обнаружении в памяти активного процесса программы</comment>
+  </data>
+  <data name="CE_BackUpCreated" xml:space="preserve">
+    <value>Резервная копия файла {0} была успешено создана!</value>
+    <comment>Сообщение при успешном создании резервной копии в ручном режиме</comment>
   </data>
 </root>

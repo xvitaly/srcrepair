@@ -2743,5 +2743,21 @@ namespace srcrepair
             // Очистим HTTP-кэш...
             OpenCleanupWindow(Path.Combine(GV.FullSteamPath, "appcache", "httpcache"), "*.*", ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
+
+        private void CE_ManualBackUpCfg_Click(object sender, EventArgs e)
+        {
+            if (!(String.IsNullOrEmpty(CFGFileName)))
+            {
+                if (File.Exists(Path.Combine(GV.FullCfgPath, CFGFileName)))
+                {
+                    CreateBackUpNow(CFGFileName, GV.FullCfgPath, GV.FullBackUpDirPath);
+                    MessageBox.Show(String.Format(RM.GetString("CE_BackUpCreated"), CFGFileName), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show(RM.GetString("CE_NoFileOpened"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
