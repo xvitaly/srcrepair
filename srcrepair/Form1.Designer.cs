@@ -170,6 +170,11 @@
             this.MNUExtClnCache = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnOverlay = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnOverlayHTCache = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUExtClnLogs = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUExtClnGIcons = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUExtClnGameStats = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUExtClnErrDumps = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUExtClnCloudLocal = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep2 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUExit = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpMNU = new System.Windows.Forms.ToolStripMenuItem();
@@ -1329,7 +1334,12 @@
             this.MNUExtClnSub.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MNUExtClnCache,
             this.MNUExtClnOverlay,
-            this.MNUExtClnOverlayHTCache});
+            this.MNUExtClnOverlayHTCache,
+            this.MNUExtClnLogs,
+            this.MNUExtClnGIcons,
+            this.MNUExtClnGameStats,
+            this.MNUExtClnErrDumps,
+            this.MNUExtClnCloudLocal});
             this.MNUExtClnSub.Image = global::srcrepair.Properties.Resources.clean;
             this.MNUExtClnSub.Name = "MNUExtClnSub";
             resources.ApplyResources(this.MNUExtClnSub, "MNUExtClnSub");
@@ -1354,6 +1364,41 @@
             this.MNUExtClnOverlayHTCache.Name = "MNUExtClnOverlayHTCache";
             resources.ApplyResources(this.MNUExtClnOverlayHTCache, "MNUExtClnOverlayHTCache");
             this.MNUExtClnOverlayHTCache.Click += new System.EventHandler(this.MNUExtClnOverlayHTCache_Click);
+            // 
+            // MNUExtClnLogs
+            // 
+            this.MNUExtClnLogs.Image = global::srcrepair.Properties.Resources.clean;
+            this.MNUExtClnLogs.Name = "MNUExtClnLogs";
+            resources.ApplyResources(this.MNUExtClnLogs, "MNUExtClnLogs");
+            this.MNUExtClnLogs.Click += new System.EventHandler(this.MNUExtClnLogs_Click);
+            // 
+            // MNUExtClnGIcons
+            // 
+            this.MNUExtClnGIcons.Image = global::srcrepair.Properties.Resources.clean;
+            this.MNUExtClnGIcons.Name = "MNUExtClnGIcons";
+            resources.ApplyResources(this.MNUExtClnGIcons, "MNUExtClnGIcons");
+            this.MNUExtClnGIcons.Click += new System.EventHandler(this.MNUExtClnGIcons_Click);
+            // 
+            // MNUExtClnGameStats
+            // 
+            this.MNUExtClnGameStats.Image = global::srcrepair.Properties.Resources.clean;
+            this.MNUExtClnGameStats.Name = "MNUExtClnGameStats";
+            resources.ApplyResources(this.MNUExtClnGameStats, "MNUExtClnGameStats");
+            this.MNUExtClnGameStats.Click += new System.EventHandler(this.MNUExtClnGameStats_Click);
+            // 
+            // MNUExtClnErrDumps
+            // 
+            this.MNUExtClnErrDumps.Image = global::srcrepair.Properties.Resources.clean;
+            this.MNUExtClnErrDumps.Name = "MNUExtClnErrDumps";
+            resources.ApplyResources(this.MNUExtClnErrDumps, "MNUExtClnErrDumps");
+            this.MNUExtClnErrDumps.Click += new System.EventHandler(this.MNUExtClnErrDumps_Click);
+            // 
+            // MNUExtClnCloudLocal
+            // 
+            this.MNUExtClnCloudLocal.Image = global::srcrepair.Properties.Resources.clean;
+            this.MNUExtClnCloudLocal.Name = "MNUExtClnCloudLocal";
+            resources.ApplyResources(this.MNUExtClnCloudLocal, "MNUExtClnCloudLocal");
+            this.MNUExtClnCloudLocal.Click += new System.EventHandler(this.MNUExtClnCloudLocal_Click);
             // 
             // MNUSep2
             // 
@@ -1736,6 +1781,11 @@
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnOverlay;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnOverlayHTCache;
         private System.Windows.Forms.ToolStripButton CE_ManualBackUpCfg;
+        private System.Windows.Forms.ToolStripMenuItem MNUExtClnLogs;
+        private System.Windows.Forms.ToolStripMenuItem MNUExtClnGIcons;
+        private System.Windows.Forms.ToolStripMenuItem MNUExtClnGameStats;
+        private System.Windows.Forms.ToolStripMenuItem MNUExtClnErrDumps;
+        private System.Windows.Forms.ToolStripMenuItem MNUExtClnCloudLocal;
     }
 }
 

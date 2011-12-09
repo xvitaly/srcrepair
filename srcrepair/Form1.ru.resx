@@ -799,22 +799,52 @@
     <value>&amp;Модуль отключения системных клавиш...</value>
   </data>
   <data name="MNUExtClnCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 22</value>
+    <value>245, 22</value>
   </data>
   <data name="MNUExtClnCache.Text" xml:space="preserve">
-    <value>&amp;Очистить HTML-кэш клиента</value>
+    <value>HTML-&amp;кэш клиента</value>
   </data>
   <data name="MNUExtClnOverlay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 22</value>
+    <value>245, 22</value>
   </data>
   <data name="MNUExtClnOverlay.Text" xml:space="preserve">
-    <value>Оч&amp;истить HTML-кэш оверлея</value>
+    <value>HTML-к&amp;эш оверлея</value>
   </data>
   <data name="MNUExtClnOverlayHTCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 22</value>
+    <value>245, 22</value>
   </data>
   <data name="MNUExtClnOverlayHTCache.Text" xml:space="preserve">
-    <value>Очис&amp;тить HTTP-кэш</value>
+    <value>HTTP-кэ&amp;ш</value>
+  </data>
+  <data name="MNUExtClnLogs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 22</value>
+  </data>
+  <data name="MNUExtClnLogs.Text" xml:space="preserve">
+    <value>&amp;Журналы работы Steam</value>
+  </data>
+  <data name="MNUExtClnGIcons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 22</value>
+  </data>
+  <data name="MNUExtClnGIcons.Text" xml:space="preserve">
+    <value>Кэш&amp;ированные значки игр</value>
+  </data>
+  <data name="MNUExtClnGameStats.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 22</value>
+  </data>
+  <data name="MNUExtClnGameStats.Text" xml:space="preserve">
+    <value>&amp;Локальная игровая статистика</value>
+  </data>
+  <data name="MNUExtClnErrDumps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 22</value>
+  </data>
+  <data name="MNUExtClnErrDumps.Text" xml:space="preserve">
+    <value>К&amp;раш-дампы</value>
+  </data>
+  <data name="MNUExtClnCloudLocal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 22</value>
+  </data>
+  <data name="MNUExtClnCloudLocal.Text" xml:space="preserve">
+    <value>Локаль&amp;ная копия Cloud</value>
   </data>
   <data name="MNUExtClnSub.Size" type="System.Drawing.Size, System.Drawing">
     <value>316, 22</value>

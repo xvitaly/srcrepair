@@ -3308,6 +3308,36 @@
   <data name="MNUExtClnOverlayHTCache.Text" xml:space="preserve">
     <value>&amp;HTTP cache</value>
   </data>
+  <data name="MNUExtClnLogs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 22</value>
+  </data>
+  <data name="MNUExtClnLogs.Text" xml:space="preserve">
+    <value>S&amp;team logs</value>
+  </data>
+  <data name="MNUExtClnGIcons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 22</value>
+  </data>
+  <data name="MNUExtClnGIcons.Text" xml:space="preserve">
+    <value>&amp;Game icons</value>
+  </data>
+  <data name="MNUExtClnGameStats.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 22</value>
+  </data>
+  <data name="MNUExtClnGameStats.Text" xml:space="preserve">
+    <value>&amp;Local game stats</value>
+  </data>
+  <data name="MNUExtClnErrDumps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 22</value>
+  </data>
+  <data name="MNUExtClnErrDumps.Text" xml:space="preserve">
+    <value>Steam &amp;error dumps</value>
+  </data>
+  <data name="MNUExtClnCloudLocal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 22</value>
+  </data>
+  <data name="MNUExtClnCloudLocal.Text" xml:space="preserve">
+    <value>Clo&amp;ud local storage</value>
+  </data>
   <data name="MNUExtClnSub.Size" type="System.Drawing.Size, System.Drawing">
     <value>274, 22</value>
   </data>
@@ -4470,6 +4500,36 @@
     <value>MNUExtClnOverlayHTCache</value>
   </data>
   <data name="&gt;&gt;MNUExtClnOverlayHTCache.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnLogs.Name" xml:space="preserve">
+    <value>MNUExtClnLogs</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnLogs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnGIcons.Name" xml:space="preserve">
+    <value>MNUExtClnGIcons</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnGIcons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnGameStats.Name" xml:space="preserve">
+    <value>MNUExtClnGameStats</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnGameStats.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnErrDumps.Name" xml:space="preserve">
+    <value>MNUExtClnErrDumps</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnErrDumps.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnCloudLocal.Name" xml:space="preserve">
+    <value>MNUExtClnCloudLocal</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnCloudLocal.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUSep2.Name" xml:space="preserve">

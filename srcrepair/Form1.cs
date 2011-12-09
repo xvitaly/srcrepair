@@ -2759,5 +2759,35 @@ namespace srcrepair
                 MessageBox.Show(RM.GetString("CE_NoFileOpened"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void MNUExtClnLogs_Click(object sender, EventArgs e)
+        {
+            // Очистим логи клиента Steam...
+            OpenCleanupWindow(Path.Combine(GV.FullSteamPath, "logs"), "*.*", ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+        }
+
+        private void MNUExtClnGIcons_Click(object sender, EventArgs e)
+        {
+            // Очистим кэшированные значки игр...
+            OpenCleanupWindow(Path.Combine(GV.FullSteamPath, "steam", "games"), "*.*", ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+        }
+
+        private void MNUExtClnGameStats_Click(object sender, EventArgs e)
+        {
+            // Очистим кэшированную статистику игр...
+            OpenCleanupWindow(Path.Combine(GV.FullSteamPath, "appcache", "stats"), "*.*", ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+        }
+
+        private void MNUExtClnErrDumps_Click(object sender, EventArgs e)
+        {
+            // Очистим краш-дампы...
+            OpenCleanupWindow(Path.Combine(GV.FullSteamPath, "dumps"), "*.*", ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+        }
+
+        private void MNUExtClnCloudLocal_Click(object sender, EventArgs e)
+        {
+            // Очистим локальное зеркало Cloud...
+            OpenCleanupWindow(Path.Combine(GV.FullSteamPath, "userdata"), "*.*", ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+        }
     }
 }
