@@ -1659,12 +1659,19 @@ namespace srcrepair
             // Проверим нашлись ли игры...
             if (AppSelector.Items.Count == 0)
             {
-                // Нет, не нашлись, выведем сообщение...
-                MessageBox.Show(RM.GetString("AppNoGamesDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 // Запишем в лог...
                 CoreLib.WriteStringToLog(String.Format("No games detected. Steam located as: {0}. User login: {1}.", GV.FullSteamPath, LoginSel.Text));
-                // Завершим работу приложения...
-                Environment.Exit(11);
+                if (LoginSel.Items.Count > 1)
+                {
+                    MessageBox.Show(RM.GetString("AppChangeLogin"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    // Нет, не нашлись, выведем сообщение...
+                    MessageBox.Show(RM.GetString("AppNoGamesDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    // Завершим работу приложения...
+                    Environment.Exit(11);
+                }
             }
 
             // При наличии единственной игры в списке, выберем её автоматически...
