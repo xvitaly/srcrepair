@@ -78,12 +78,11 @@ namespace srcrepair
         /// </summary>
         /// <param name="ConfName">Имя конфига</param>
         /// <param name="AppPath">Путь к программе SRC Repair</param>
-        /// <param name="DirName">Короткое имя игры</param>
         /// <param name="DestPath">Каталог назначения</param>
-        private void InstallConfigNow(string ConfName, string AppPath, string DirName, string DestPath)
+        private void InstallConfigNow(string ConfName, string AppPath, string DestPath)
         {
             // Устанавливаем...
-            File.Copy(Path.Combine(AppPath, "cfgs", DirName, ConfName), Path.Combine(DestPath, "autoexec.cfg"), true);
+            File.Copy(Path.Combine(AppPath, "cfgs", ConfName), Path.Combine(DestPath, "autoexec.cfg"), true);
         }
 
         /// <summary>
@@ -1255,7 +1254,7 @@ namespace srcrepair
                 foreach (DirectoryInfo DItem in DirList)
                 {
                     // Фильтруем известные каталоги...
-                    if ((DItem.Name != "common") && (DItem.Name != "sourcemods") && (DItem.Name != "media") && (DItem.Name != "staging") && (DItem.Name != "temp"))
+                    if ((DItem.Name != "common") && (DItem.Name != "sourcemods") && (DItem.Name != "media") && (DItem.Name != "staging") && (DItem.Name != "temp") && (DItem.Name != "build"))
                     {
                         // Добавляем найденный логин в список ComboBox...
                         LoginSel.Items.Add((string)DItem.Name);
@@ -1582,7 +1581,7 @@ namespace srcrepair
             try
             {
                 // Открываем каталог...
-                DirectoryInfo DInfo = new DirectoryInfo(Path.Combine(GV.FullAppPath, "cfgs", GV.SmallAppName));
+                DirectoryInfo DInfo = new DirectoryInfo(Path.Combine(GV.FullAppPath, "cfgs"));
                 // Считываем список файлов по заданной маске...
                 FileInfo[] DirList = DInfo.GetFiles("*.cfg");
                 // Начинаем обход массива...
@@ -1804,7 +1803,7 @@ namespace srcrepair
             // Получаем описание выбранного пользователем конфига...
             try
             {
-                FP_Description.Text = File.ReadAllText(Path.Combine(GV.FullAppPath, "cfgs", GV.SmallAppName, Path.GetFileNameWithoutExtension(FP_ConfigSel.Text) + "_" + RM.GetString("AppLangPrefix") + ".txt"));
+                FP_Description.Text = File.ReadAllText(Path.Combine(GV.FullAppPath, "cfgs", Path.GetFileNameWithoutExtension(FP_ConfigSel.Text) + "_" + RM.GetString("AppLangPrefix") + ".txt"));
             }
             catch
             {
@@ -1833,7 +1832,7 @@ namespace srcrepair
                     try
                     {
                         // Устанавливаем...
-                        InstallConfigNow(FP_ConfigSel.Text, GV.FullAppPath, GV.SmallAppName, GV.FullCfgPath);
+                        InstallConfigNow(FP_ConfigSel.Text, GV.FullAppPath, GV.FullCfgPath);
                         // Выводим сообщение об успешной установке...
                         MessageBox.Show(RM.GetString("FP_InstallSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         // Отобразим значок предупреждения на странице графических настроек...
@@ -2538,7 +2537,7 @@ namespace srcrepair
 
         private void FP_OpenNotepad_Click(object sender, EventArgs e)
         {
-            Process.Start("notepad.exe", Path.Combine(GV.FullAppPath, "cfgs", GV.SmallAppName, FP_ConfigSel.Text));
+            Process.Start("notepad.exe", Path.Combine(GV.FullAppPath, "cfgs", FP_ConfigSel.Text));
         }
 
         private void MNUUpdateCheck_Click(object sender, EventArgs e)
