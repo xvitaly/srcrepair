@@ -482,10 +482,10 @@
     <value>DirectX 8.1</value>
   </data>
   <data name="GT_DxMode.Items2" xml:space="preserve">
-    <value>DirectX 9.0 Plain</value>
+    <value>DirectX 9.0a</value>
   </data>
   <data name="GT_DxMode.Items3" xml:space="preserve">
-    <value>DirectX 9.0c Full</value>
+    <value>DirectX 9.0c</value>
   </data>
   <data name="GT_DxMode.Location" type="System.Drawing.Point, System.Drawing">
     <value>162, 228</value>
