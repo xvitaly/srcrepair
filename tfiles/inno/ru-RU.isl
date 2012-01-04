@@ -18,3 +18,5 @@ DnlNetReqAdm=Эта программа требует Microsoft .NET Framework 4.0, который может б
 DnlNetNeeded=Для работы программы SRC Repair требуется установленный пакет Microsoft .NET Framework 4, однако на Вашем компьютере он не обнаружен. Сейчас будет произведена его загрузка и установка с сервера Microsoft Download. Если у Вас установлен брандмауэр, разрешите программе установки доступ в Интернет.
 ShcReadmeFile=readme.txt
 InstExpFeatures=Включить экспериментальные функции
+RepAppErrText=Сообщить об ошибке в программе
+InstDebugInfo=Установить отладочную информацию

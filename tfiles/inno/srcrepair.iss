@@ -23,7 +23,7 @@ AppVerName=SRC Repair
 AppPublisher=EasyCoding Team
 AppPublisherURL=http://www.easycoding.org/
 ; AppVersion отображается в Установка/Удаление программ в дополнительной информации.
-AppVersion=6.0.0.473
+AppVersion=7.0.0.486
 AppSupportURL=http://code.google.com/p/srcrepair/wiki/Support
 AppUpdatesURL=http://code.google.com/p/srcrepair/downloads/list
 DefaultDirName={pf}\SRC Repair
@@ -33,8 +33,8 @@ SourceDir=E:\VSBuilds
 LicenseFile=GPL.txt
 ;InfoBeforeFile=readme.txt
 OutputDir=E:\VSBuilds
-OutputBaseFilename=srcrepair_60_final
-;OutputBaseFilename=srcrepair_beta_473
+OutputBaseFilename=srcrepair_70_final
+;OutputBaseFilename=srcrepair_beta_486
 SetupIconFile=srcrepair.ico
 UninstallDisplayIcon={app}\srcrepair.exe
 Compression=lzma2
@@ -46,9 +46,9 @@ SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64
 
 ; Тут указываем данные, которые будут добавлены в свойства установщика
-VersionInfoVersion=6.0.0.473
+VersionInfoVersion=7.0.0.486
 VersionInfoDescription=SRC Repair Setup
-VersionInfoCopyright=(c) 2005-2011 EasyCoding Team. All rights reserved.
+VersionInfoCopyright=(c) 2005-2012 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
 
 [Languages]
@@ -63,6 +63,7 @@ Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescrip
 Name: "inst7z"; Description: "{cm:InstLZMAPlugin}"; GroupDescription: "{cm:AdvFeatGroupDesc}"
 Name: "betashortuts"; Description: "{cm:InstCreateLocShcuts}"; GroupDescription: "{cm:AdvFeatGroupDesc}"
 Name: "isexpf"; Description: "{cm:InstExpFeatures}"; GroupDescription: "{cm:AdvFeatGroupDesc}"; Flags: unchecked
+Name: "insdebginf"; Description: "{cm:InstDebugInfo}"; GroupDescription: "{cm:AdvFeatGroupDesc}"; Flags: unchecked
 
 [Files]
 ; Копируем библиотеку, используемую для скачивания файлов...
@@ -78,10 +79,12 @@ Source: "games.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "vitaly_public.asc"; DestDir: "{app}"; Flags: ignoreversion
 ; Устанавливаем 32-битную версию...
 Source: "srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion; Check: not Is64BitInstallMode
+Source: "srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion; Check: not Is64BitInstallMode; Tasks: insdebginf
 Source: "srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Check: not Is64BitInstallMode
 Source: "ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: not Is64BitInstallMode
 ; Устанавливаем 64-битную версию...
 Source: "x64\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion; Check: Is64BitInstallMode
+Source: "x64\srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion; Check: Is64BitInstallMode; Tasks: insdebginf
 Source: "x64\srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Check: Is64BitInstallMode
 Source: "x64\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: Is64BitInstallMode
 ; Копируем файл стандартных настроек программы...
@@ -107,6 +110,8 @@ Name: "{group}\{cm:ShcLocFldr}\SRC Repair ({cm:ShcMLnEN})"; Filename: "{app}\src
 ; Создаём стандартные ярлыки для справки и удаления...
 Name: "{group}\{cm:ShcLocTexts}\{cm:ProgramOnTheWeb,SRC Repair}"; Filename: "http://www.easycoding.org/projects/srcrepair"
 Name: "{group}\{cm:UninstallProgram,SRC Repair}"; Filename: "{uninstallexe}"
+; Создаём ярлык для багтрекера...
+Name: "{group}\{cm:RepAppErrText}"; Filename: "http://code.google.com/p/srcrepair/issues/entry"
 ; Создаём ярлык на рабочем столе (если выбрано)...
 Name: "{commondesktop}\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: desktopicon
 ; Создаём ярлык на панели быстрого запуска (если выбрано)...
