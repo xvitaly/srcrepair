@@ -1,1 +1,1 @@
-6.0.0.473!http://srcrepair.googlecode.com/files/srcrepair_60_final.exe
+7.0.0.486!http://srcrepair.googlecode.com/files/srcrepair_70_final.exe
