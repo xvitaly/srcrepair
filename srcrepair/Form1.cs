@@ -1173,7 +1173,11 @@ namespace srcrepair
             {
                 // Программа запущена с правами пользователя, поэтому принимаем меры...
                 // Выводим сообщение об этом...
-                MessageBox.Show(RM.GetString("AppLaunchedNotAdmin"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (Properties.Settings.Default.AllowNonAdmDialog)
+                {
+                    MessageBox.Show(RM.GetString("AppLaunchedNotAdmin"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Properties.Settings.Default.AllowNonAdmDialog = false;
+                }
                 // Блокируем контролы, требующие для своей работы прав админа...
                 PS_CleanRegistry.Enabled = false;
                 PS_SteamLang.Enabled = false;
