@@ -183,30 +183,6 @@ namespace srcrepair.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("-1")]
-        public int LastSIDId {
-            get {
-                return ((int)(this["LastSIDId"]));
-            }
-            set {
-                this["LastSIDId"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("-1")]
-        public int LastGameId {
-            get {
-                return ((int)(this["LastGameId"]));
-            }
-            set {
-                this["LastGameId"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool EnableDebugLog {
             get {
@@ -226,6 +202,30 @@ namespace srcrepair.Properties {
             }
             set {
                 this["SafeCleanup"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LastGameName {
+            get {
+                return ((string)(this["LastGameName"]));
+            }
+            set {
+                this["LastGameName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LastLoginName {
+            get {
+                return ((string)(this["LastLoginName"]));
+            }
+            set {
+                this["LastLoginName"] = value;
             }
         }
     }
