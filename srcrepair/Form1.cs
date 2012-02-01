@@ -311,7 +311,7 @@ namespace srcrepair
             PS_RemCustMaps.Enabled = BStatus;
             //PS_RemDnlCache.Enabled = BStatus;
             //PS_RemOldSpray.Enabled = BStatus;
-            //PS_RemOldCfgs.Enabled = BStatus;
+            PS_RemSounds.Enabled = BStatus;
             PS_RemGraphCache.Enabled = BStatus;
             PS_RemSoundCache.Enabled = BStatus;
             PS_RemSecndCache.Enabled = BStatus;
