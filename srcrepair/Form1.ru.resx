@@ -533,8 +533,8 @@
   <data name="PS_RemGraphCache.Text" xml:space="preserve">
     <value>Графический кэш</value>
   </data>
-  <data name="PS_RemOldCfgs.Text" xml:space="preserve">
-    <value>Конфиги игры</value>
+  <data name="PS_RemSounds.Text" xml:space="preserve">
+    <value>Кастомные звуки</value>
   </data>
   <data name="PS_RemOldSpray.Text" xml:space="preserve">
     <value>Кэш спреев</value>

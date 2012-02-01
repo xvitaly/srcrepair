@@ -107,7 +107,7 @@
             this.PS_RemSecndCache = new System.Windows.Forms.Button();
             this.PS_RemSoundCache = new System.Windows.Forms.Button();
             this.PS_RemGraphCache = new System.Windows.Forms.Button();
-            this.PS_RemOldCfgs = new System.Windows.Forms.Button();
+            this.PS_RemSounds = new System.Windows.Forms.Button();
             this.PS_RemOldSpray = new System.Windows.Forms.Button();
             this.PS_RemDnlCache = new System.Windows.Forms.Button();
             this.PS_RemCustMaps = new System.Windows.Forms.Button();
@@ -824,7 +824,7 @@
             this.PS_GB_Remover.Controls.Add(this.PS_RemSecndCache);
             this.PS_GB_Remover.Controls.Add(this.PS_RemSoundCache);
             this.PS_GB_Remover.Controls.Add(this.PS_RemGraphCache);
-            this.PS_GB_Remover.Controls.Add(this.PS_RemOldCfgs);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemSounds);
             this.PS_GB_Remover.Controls.Add(this.PS_RemOldSpray);
             this.PS_GB_Remover.Controls.Add(this.PS_RemDnlCache);
             this.PS_GB_Remover.Controls.Add(this.PS_RemCustMaps);
@@ -888,12 +888,12 @@
             this.PS_RemGraphCache.UseVisualStyleBackColor = true;
             this.PS_RemGraphCache.Click += new System.EventHandler(this.PS_RemGraphCache_Click);
             // 
-            // PS_RemOldCfgs
+            // PS_RemSounds
             // 
-            resources.ApplyResources(this.PS_RemOldCfgs, "PS_RemOldCfgs");
-            this.PS_RemOldCfgs.Name = "PS_RemOldCfgs";
-            this.PS_RemOldCfgs.UseVisualStyleBackColor = true;
-            this.PS_RemOldCfgs.Click += new System.EventHandler(this.PS_RemOldCfgs_Click);
+            resources.ApplyResources(this.PS_RemSounds, "PS_RemSounds");
+            this.PS_RemSounds.Name = "PS_RemSounds";
+            this.PS_RemSounds.UseVisualStyleBackColor = true;
+            this.PS_RemSounds.Click += new System.EventHandler(this.PS_RemSounds_Click);
             // 
             // PS_RemOldSpray
             // 
@@ -1705,7 +1705,7 @@
         private System.Windows.Forms.Button PS_RemSecndCache;
         private System.Windows.Forms.Button PS_RemSoundCache;
         private System.Windows.Forms.Button PS_RemGraphCache;
-        private System.Windows.Forms.Button PS_RemOldCfgs;
+        private System.Windows.Forms.Button PS_RemSounds;
         private System.Windows.Forms.Button PS_RemOldSpray;
         private System.Windows.Forms.Button PS_RemDnlCache;
         private System.Windows.Forms.Button PS_RemCustMaps;

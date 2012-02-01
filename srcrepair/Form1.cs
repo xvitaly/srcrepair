@@ -1989,12 +1989,6 @@ namespace srcrepair
             OpenCleanupWindow(Path.Combine(GV.FullGamePath, "materials", "temp"), "*.vtf", ((Button)sender).Text.ToLower());
         }
 
-        private void PS_RemOldCfgs_Click(object sender, EventArgs e)
-        {
-            // Удаляем все конфиги...
-            OpenCleanupWindow(Path.Combine(GV.FullGamePath, "cfg"), "*.*", ((Button)sender).Text.ToLower());
-        }
-
         private void PS_RemGraphCache_Click(object sender, EventArgs e)
         {
             // Удаляем графический кэш...
@@ -2782,6 +2776,12 @@ namespace srcrepair
         {
             // Очистим локальное зеркало Cloud...
             OpenCleanupWindow(Path.Combine(GV.FullSteamPath, "userdata"), "*.*", ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+        }
+
+        private void PS_RemSounds_Click(object sender, EventArgs e)
+        {
+            // Удаляем кастомные звуки...
+            OpenCleanupWindow(Path.Combine(GV.FullGamePath, "sound"), "*.*", ((Button)sender).Text.ToLower());
         }
     }
 }
