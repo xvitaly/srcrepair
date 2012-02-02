@@ -32,11 +32,11 @@
             this.labelProductName = new System.Windows.Forms.Label();
             this.labelVersion = new System.Windows.Forms.Label();
             this.labelCompanyName = new System.Windows.Forms.Label();
-            this.btnContact = new System.Windows.Forms.Button();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.labelFlags = new System.Windows.Forms.Label();
             this.labelCopyright = new System.Windows.Forms.Label();
             this.okButton = new System.Windows.Forms.Button();
+            this.labelLaunches = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.iconApp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,14 +60,6 @@
             // 
             resources.ApplyResources(this.labelCompanyName, "labelCompanyName");
             this.labelCompanyName.Name = "labelCompanyName";
-            // 
-            // btnContact
-            // 
-            resources.ApplyResources(this.btnContact, "btnContact");
-            this.btnContact.Name = "btnContact";
-            this.btnContact.TabStop = false;
-            this.btnContact.UseVisualStyleBackColor = true;
-            this.btnContact.Click += new System.EventHandler(this.btnContact_Click);
             // 
             // textBoxDescription
             // 
@@ -94,17 +86,22 @@
             this.okButton.UseVisualStyleBackColor = true;
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
+            // labelLaunches
+            // 
+            resources.ApplyResources(this.labelLaunches, "labelLaunches");
+            this.labelLaunches.Name = "labelLaunches";
+            // 
             // frmAbout
             // 
             this.AcceptButton = this.okButton;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.okButton;
+            this.Controls.Add(this.labelLaunches);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.labelCopyright);
             this.Controls.Add(this.labelFlags);
             this.Controls.Add(this.textBoxDescription);
-            this.Controls.Add(this.btnContact);
             this.Controls.Add(this.labelCompanyName);
             this.Controls.Add(this.labelVersion);
             this.Controls.Add(this.labelProductName);
@@ -129,11 +126,11 @@
         private System.Windows.Forms.Label labelProductName;
         private System.Windows.Forms.Label labelVersion;
         private System.Windows.Forms.Label labelCompanyName;
-        private System.Windows.Forms.Button btnContact;
         private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.Label labelFlags;
         private System.Windows.Forms.Label labelCopyright;
         private System.Windows.Forms.Button okButton;
+        private System.Windows.Forms.Label labelLaunches;
 
     }
 }

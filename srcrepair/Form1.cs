@@ -62,6 +62,9 @@ namespace srcrepair
                 // Первый запуск состоялся, поэтому переведём значение переменной в false...
                 Properties.Settings.Default.IsFirstRun = false;
             }
+
+            // Инкрементируем счётчик запусков программы...
+            Properties.Settings.Default.StatsLaunches++;
         }
 
         #region Internal Variables

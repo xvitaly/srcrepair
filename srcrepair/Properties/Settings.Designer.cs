@@ -249,5 +249,17 @@ namespace srcrepair.Properties {
                 return ((bool)(this["IsPortable"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public long StatsLaunches {
+            get {
+                return ((long)(this["StatsLaunches"]));
+            }
+            set {
+                this["StatsLaunches"] = value;
+            }
+        }
     }
 }

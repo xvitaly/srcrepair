@@ -391,33 +391,6 @@
   <data name="&gt;&gt;labelCompanyName.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="btnContact.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="btnContact.Location" type="System.Drawing.Point, System.Drawing">
-    <value>131, 69</value>
-  </data>
-  <data name="btnContact.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 23</value>
-  </data>
-  <data name="btnContact.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="btnContact.Text" xml:space="preserve">
-    <value>Contact author</value>
-  </data>
-  <data name="&gt;&gt;btnContact.Name" xml:space="preserve">
-    <value>btnContact</value>
-  </data>
-  <data name="&gt;&gt;btnContact.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnContact.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnContact.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <metadata name="textBoxDescription.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -444,6 +417,7 @@ Special thanks to:
  - Ctrl+C - testing and FPS-configs description;
  - naym - testing, bug-reporting;
  - Evg - reporting, feature requests;
+ - CAMCOH - testing, bug-reporting;
  - bon - testing, FPS-config and russian translation of variables list.
 
 Graphics by:
@@ -483,7 +457,7 @@ Translators:
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxDescription.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <metadata name="labelFlags.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -510,7 +484,7 @@ Translators:
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelFlags.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <metadata name="labelCopyright.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -537,7 +511,7 @@ Translators:
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelCopyright.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="okButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -564,6 +538,33 @@ Translators:
     <value>$this</value>
   </data>
   <data name="&gt;&gt;okButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="labelLaunches.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="labelLaunches.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 74</value>
+  </data>
+  <data name="labelLaunches.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 16</value>
+  </data>
+  <data name="labelLaunches.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="labelLaunches.Text" xml:space="preserve">
+    <value>Launches: {0}</value>
+  </data>
+  <data name="&gt;&gt;labelLaunches.Name" xml:space="preserve">
+    <value>labelLaunches</value>
+  </data>
+  <data name="&gt;&gt;labelLaunches.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLaunches.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelLaunches.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
