@@ -1162,7 +1162,16 @@ namespace srcrepair
             GV.FullAppPath = Path.GetDirectoryName(Assmbl.Location);
 
             // Укажем путь к пользовательским данным и создадим если не существует...
-            GV.AppUserDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), GV.AppName);
+            if (Properties.Settings.Default.IsPortable) // Проверим на Portable-версию...
+            {
+                // Portable-версия. Будем хранить файлы бэкапов и конфигов в каталоге приложения...
+                GV.AppUserDir = Path.Combine(GV.FullAppPath, "portable");
+            }
+            else
+            {
+                // Обычная версия. Будем использовать каталог %APPDATA% пользователя...
+                GV.AppUserDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), GV.AppName);
+            }
             if (!(Directory.Exists(GV.AppUserDir)))
             {
                 Directory.CreateDirectory(GV.AppUserDir);

@@ -240,5 +240,14 @@ namespace srcrepair.Properties {
                 this["AllowNonAdmDialog"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool IsPortable {
+            get {
+                return ((bool)(this["IsPortable"]));
+            }
+        }
     }
 }
