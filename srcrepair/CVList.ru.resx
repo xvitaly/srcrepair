@@ -2694,4 +2694,13 @@
   <data name="tf_teamtalk" xml:space="preserve">
     <value>Включить / отключить возможность общаться мёртвым игрокам с живыми.</value>
   </data>
+  <data name="sv_restrict_aspect_ratio_fov" xml:space="preserve">
+    <value>Включает / отключает ограничение эффективного угла обзора для игроков с широкоформатными мониторами.</value>
+  </data>
+  <data name="tv_relayvoice" xml:space="preserve">
+    <value>Включает / отключает трансляцию голосового чата зрителям SourceTV-сервера.</value>
+  </data>
+  <data name="sbox_weapons" xml:space="preserve">
+    <value>Включает / отключает спаун игрока с оружием.</value>
+  </data>
 </root>
