@@ -507,5 +507,57 @@ namespace srcrepair
             // Возвращаем результат функции...
             return Result;
         }
+
+        /// <summary>
+        /// Возвращает первую строку, в которой встречается параметр.
+        /// </summary>
+        /// <param name="Rx">Подстрока для поиска</param>
+        /// <param name="FileName">Имя файла</param>
+        public static string FindLineContText(string Rx, string FileName)
+        {
+            string ImpStr;
+            string Result = null;
+            using (StreamReader TxtFl = new StreamReader(FileName, Encoding.Default))
+            {
+                while (TxtFl.Peek() >= 0)
+                {
+                    ImpStr = TxtFl.ReadLine();
+                    ImpStr = ImpStr.Trim();
+                    if (!(String.IsNullOrEmpty(ImpStr)))
+                    {
+                        if (ImpStr.IndexOf(Rx) != -1)
+                        {
+                            Result = ImpStr;
+                            break;
+                        }
+                    }
+                }
+            }
+            return Result;
+        }
+
+        /// <summary>
+        /// Возвращает значение переменной, переданной в параметре, хранящейся в файле.
+        /// </summary>
+        /// <param name="CVar">Переменная</param>
+        /// <param name="CFileName">Имя файла конфига</param>
+        public static string GetNCFDWord(string CVar, string CFileName)
+        {
+            string Result = null;
+            try
+            {
+                string CVLine = FindLineContText(CVar, CFileName);
+                if (!(String.IsNullOrEmpty(CVLine)))
+                {
+                    while (CVLine.IndexOf("\t") != -1) { CVLine = CVLine.Replace("\t", " "); }
+                    while (CVLine.IndexOf("  ") != -1) { CVLine = CVLine.Replace("  ", " "); }
+                    CVLine = CVLine.Substring(CVLine.LastIndexOf(" "));
+                    while (CVLine.IndexOf(@"""") != -1) { CVLine = CVLine.Replace(@"""", ""); }
+                    Result = CVLine.Trim();
+                }
+            }
+            catch { }
+            return Result;
+        }
     }
 }
