@@ -1984,20 +1984,35 @@ namespace srcrepair
             // Зададим вопрос, а нужно ли это юзеру?
             if (MessageBox.Show(RM.GetString("GT_MaxPerfMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                // Пользователь согласился, продолжаем...
-                GT_ScreenType.SelectedIndex = 0; // полноэкранный режим
-                GT_ModelQuality.SelectedIndex = 2; // высокая детализация моделей
-                GT_TextureQuality.SelectedIndex = 2; // высокая детализация текстур
-                GT_ShaderQuality.SelectedIndex = 1; // высокое качество шейдерных эффектов
-                GT_WaterQuality.SelectedIndex = 1; // отражать мир в воде
-                GT_ShadowQuality.SelectedIndex = 1; // высокое качество теней
-                GT_ColorCorrectionT.SelectedIndex = 1; // корренкция цвета включена
-                GT_AntiAliasing.SelectedIndex = 0; // сглаживание выключено
-                GT_Filtering.SelectedIndex = 3; // анизотропная фильтрация 4x
-                GT_VSync.SelectedIndex = 0; // вертикальная синхронизация выключена
-                GT_MotionBlur.SelectedIndex = 0; // размытие движения выключено
-                GT_DxMode.SelectedIndex = 3; // режим DirecX 9.0c
-                GT_HDR.SelectedIndex = 2; // HDR полные
+                if (GV.IsGCFApp)
+                {
+                    // Пользователь согласился, продолжаем...
+                    GT_ScreenType.SelectedIndex = 0; // полноэкранный режим
+                    GT_ModelQuality.SelectedIndex = 2; // высокая детализация моделей
+                    GT_TextureQuality.SelectedIndex = 2; // высокая детализация текстур
+                    GT_ShaderQuality.SelectedIndex = 1; // высокое качество шейдерных эффектов
+                    GT_WaterQuality.SelectedIndex = 1; // отражать мир в воде
+                    GT_ShadowQuality.SelectedIndex = 1; // высокое качество теней
+                    GT_ColorCorrectionT.SelectedIndex = 1; // корренкция цвета включена
+                    GT_AntiAliasing.SelectedIndex = 0; // сглаживание выключено
+                    GT_Filtering.SelectedIndex = 3; // анизотропная фильтрация 4x
+                    GT_VSync.SelectedIndex = 0; // вертикальная синхронизация выключена
+                    GT_MotionBlur.SelectedIndex = 0; // размытие движения выключено
+                    GT_DxMode.SelectedIndex = 3; // режим DirecX 9.0c
+                    GT_HDR.SelectedIndex = 2; // HDR полные
+                }
+                else
+                {
+                    GT_NCF_DispMode.SelectedIndex = 0;
+                    GT_NCF_AntiAlias.SelectedIndex = 2;
+                    GT_NCF_Filtering.SelectedIndex = 3;
+                    GT_NCF_VSync.SelectedIndex = 0;
+                    GT_NCF_Multicore.SelectedIndex = 1;
+                    GT_NCF_ShaderE.SelectedIndex = 3;
+                    GT_NCF_EffectD.SelectedIndex = 2;
+                    GT_NCF_MemPool.SelectedIndex = 2;
+                    GT_NCF_Quality.SelectedIndex = 2;
+                }
                 MessageBox.Show(RM.GetString("GT_PerfSet"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -2008,28 +2023,43 @@ namespace srcrepair
             // Спросим пользователя.
             if (MessageBox.Show(RM.GetString("GT_MinPerfMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                // Пользователь согласился, продолжаем...
-                GT_ScreenType.SelectedIndex = 0; // полноэкранный режим
-                GT_ModelQuality.SelectedIndex = 0; // низкая детализация моделей
-                GT_TextureQuality.SelectedIndex = 0; // низкая детализация текстур
-                GT_ShaderQuality.SelectedIndex = 0; // низкое качество шейдерных эффектов
-                GT_WaterQuality.SelectedIndex = 0; // простые отражения в воде
-                GT_ShadowQuality.SelectedIndex = 0; // низкое качество теней
-                GT_ColorCorrectionT.SelectedIndex = 0; // корренкция цвета выключена
-                GT_AntiAliasing.SelectedIndex = 0; // сглаживание выключено
-                GT_Filtering.SelectedIndex = 1; // трилинейная фильтрация текстур
-                GT_VSync.SelectedIndex = 0; // вертикальная синхронизация выключена
-                GT_MotionBlur.SelectedIndex = 0; // размытие движения выключено
-                // Спросим у пользователя о режиме DirectX...
-                if (MessageBox.Show(RM.GetString("GT_DxLevelMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (GV.IsGCFApp)
                 {
-                    GT_DxMode.SelectedIndex = 0; // режим DirecX 8.0
+                    // Пользователь согласился, продолжаем...
+                    GT_ScreenType.SelectedIndex = 0; // полноэкранный режим
+                    GT_ModelQuality.SelectedIndex = 0; // низкая детализация моделей
+                    GT_TextureQuality.SelectedIndex = 0; // низкая детализация текстур
+                    GT_ShaderQuality.SelectedIndex = 0; // низкое качество шейдерных эффектов
+                    GT_WaterQuality.SelectedIndex = 0; // простые отражения в воде
+                    GT_ShadowQuality.SelectedIndex = 0; // низкое качество теней
+                    GT_ColorCorrectionT.SelectedIndex = 0; // корренкция цвета выключена
+                    GT_AntiAliasing.SelectedIndex = 0; // сглаживание выключено
+                    GT_Filtering.SelectedIndex = 1; // трилинейная фильтрация текстур
+                    GT_VSync.SelectedIndex = 0; // вертикальная синхронизация выключена
+                    GT_MotionBlur.SelectedIndex = 0; // размытие движения выключено
+                    // Спросим у пользователя о режиме DirectX...
+                    if (MessageBox.Show(RM.GetString("GT_DxLevelMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        GT_DxMode.SelectedIndex = 0; // режим DirecX 8.0
+                    }
+                    else
+                    {
+                        GT_DxMode.SelectedIndex = 3; // режим DirecX 9.0c
+                    }
+                    GT_HDR.SelectedIndex = 0; // эффекты HDR выключены
                 }
                 else
                 {
-                    GT_DxMode.SelectedIndex = 3; // режим DirecX 9.0c
+                    GT_NCF_DispMode.SelectedIndex = 0;
+                    GT_NCF_AntiAlias.SelectedIndex = 0;
+                    GT_NCF_Filtering.SelectedIndex = 1;
+                    GT_NCF_VSync.SelectedIndex = 0;
+                    GT_NCF_Multicore.SelectedIndex = 1;
+                    GT_NCF_ShaderE.SelectedIndex = 0;
+                    GT_NCF_EffectD.SelectedIndex = 0;
+                    GT_NCF_MemPool.SelectedIndex = 0;
+                    GT_NCF_Quality.SelectedIndex = 0;
                 }
-                GT_HDR.SelectedIndex = 0; // эффекты HDR выключены
                 MessageBox.Show(RM.GetString("GT_PerfSet"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
