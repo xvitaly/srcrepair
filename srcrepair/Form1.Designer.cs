@@ -32,13 +32,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainW));
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
-            this.GT_Warning = new System.Windows.Forms.PictureBox();
-            this.GT_SaveApply = new System.Windows.Forms.Button();
-            this.GT_Maximum_Performance = new System.Windows.Forms.Button();
-            this.GT_Maximum_Graphics = new System.Windows.Forms.Button();
-            this.GT_LaunchOptions_Btn = new System.Windows.Forms.Button();
-            this.L_GT_LaunchOptions = new System.Windows.Forms.Label();
-            this.GT_LaunchOptions = new System.Windows.Forms.TextBox();
+            this.GT_NCF_Group = new System.Windows.Forms.Panel();
+            this.GT_NCF_VSync = new System.Windows.Forms.ComboBox();
+            this.L_GT_NCF_VSync = new System.Windows.Forms.Label();
+            this.GT_NCF_Filtering = new System.Windows.Forms.ComboBox();
+            this.L_GT_NCF_Filtering = new System.Windows.Forms.Label();
+            this.GT_NCF_AntiAlias = new System.Windows.Forms.ComboBox();
+            this.L_GT_NCF_AntiAlias = new System.Windows.Forms.Label();
+            this.GT_NCF_DispMode = new System.Windows.Forms.ComboBox();
+            this.L_GT_NCF_DispMode = new System.Windows.Forms.Label();
+            this.L_GT_NCF_VertRes = new System.Windows.Forms.Label();
+            this.GT_NCF_Ratio = new System.Windows.Forms.ComboBox();
+            this.L_GT_NCF_Ratio = new System.Windows.Forms.Label();
+            this.L_GT_NCF_Brightness = new System.Windows.Forms.Label();
+            this.GT_NCF_Brightness = new System.Windows.Forms.TrackBar();
+            this.GT_NCF_VertRes = new System.Windows.Forms.NumericUpDown();
+            this.GT_NCF_HorRes = new System.Windows.Forms.NumericUpDown();
+            this.L_GT_NCF_HorRes = new System.Windows.Forms.Label();
+            this.GT_GCF_Group = new System.Windows.Forms.Panel();
             this.L_GT_HDR = new System.Windows.Forms.Label();
             this.L_GT_DxMode = new System.Windows.Forms.Label();
             this.L_GT_MotionBlur = new System.Windows.Forms.Label();
@@ -71,8 +82,13 @@
             this.GT_ScreenType = new System.Windows.Forms.ComboBox();
             this.GT_ResHor_Btn = new System.Windows.Forms.Button();
             this.L_GT_ResHor = new System.Windows.Forms.Label();
-            this.GT_NCFWarnText = new System.Windows.Forms.Label();
-            this.GT_NCF_LoadNotepad = new System.Windows.Forms.Button();
+            this.GT_Warning = new System.Windows.Forms.PictureBox();
+            this.GT_SaveApply = new System.Windows.Forms.Button();
+            this.GT_Maximum_Performance = new System.Windows.Forms.Button();
+            this.GT_Maximum_Graphics = new System.Windows.Forms.Button();
+            this.GT_LaunchOptions_Btn = new System.Windows.Forms.Button();
+            this.L_GT_LaunchOptions = new System.Windows.Forms.Label();
+            this.GT_LaunchOptions = new System.Windows.Forms.TextBox();
             this.ConfigEditor = new System.Windows.Forms.TabPage();
             this.CE_Toolbar = new System.Windows.Forms.ToolStrip();
             this.CE_New = new System.Windows.Forms.ToolStripButton();
@@ -199,11 +215,26 @@
             this.CE_OpenCfgDialog = new System.Windows.Forms.OpenFileDialog();
             this.CE_SaveCfgDialog = new System.Windows.Forms.SaveFileDialog();
             this.FldrBrwse = new System.Windows.Forms.FolderBrowserDialog();
+            this.L_GT_NCF_Multicore = new System.Windows.Forms.Label();
+            this.GT_NCF_Multicore = new System.Windows.Forms.ComboBox();
+            this.L_GT_NCF_ShaderE = new System.Windows.Forms.Label();
+            this.GT_NCF_ShaderE = new System.Windows.Forms.ComboBox();
+            this.L_GT_NCF_EffectD = new System.Windows.Forms.Label();
+            this.GT_NCF_EffectD = new System.Windows.Forms.ComboBox();
+            this.L_GT_NCF_MemPool = new System.Windows.Forms.Label();
+            this.GT_NCF_MemPool = new System.Windows.Forms.ComboBox();
+            this.L_GT_NCF_GPULev = new System.Windows.Forms.Label();
+            this.GT_NCF_GPULev = new System.Windows.Forms.NumericUpDown();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GT_Warning)).BeginInit();
+            this.GT_NCF_Group.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GT_NCF_Brightness)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GT_NCF_VertRes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GT_NCF_HorRes)).BeginInit();
+            this.GT_GCF_Group.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResVert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResHor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GT_Warning)).BeginInit();
             this.ConfigEditor.SuspendLayout();
             this.CE_Toolbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CE_Editor)).BeginInit();
@@ -218,6 +249,7 @@
             this.BU_BToolbar.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.StatusBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GT_NCF_GPULev)).BeginInit();
             this.SuspendLayout();
             // 
             // MainTabControl
@@ -235,6 +267,8 @@
             // 
             // GraphicTweaker
             // 
+            this.GraphicTweaker.Controls.Add(this.GT_NCF_Group);
+            this.GraphicTweaker.Controls.Add(this.GT_GCF_Group);
             this.GraphicTweaker.Controls.Add(this.GT_Warning);
             this.GraphicTweaker.Controls.Add(this.GT_SaveApply);
             this.GraphicTweaker.Controls.Add(this.GT_Maximum_Performance);
@@ -242,91 +276,202 @@
             this.GraphicTweaker.Controls.Add(this.GT_LaunchOptions_Btn);
             this.GraphicTweaker.Controls.Add(this.L_GT_LaunchOptions);
             this.GraphicTweaker.Controls.Add(this.GT_LaunchOptions);
-            this.GraphicTweaker.Controls.Add(this.L_GT_HDR);
-            this.GraphicTweaker.Controls.Add(this.L_GT_DxMode);
-            this.GraphicTweaker.Controls.Add(this.L_GT_MotionBlur);
-            this.GraphicTweaker.Controls.Add(this.GT_HDR);
-            this.GraphicTweaker.Controls.Add(this.GT_DxMode);
-            this.GraphicTweaker.Controls.Add(this.GT_ResVert);
-            this.GraphicTweaker.Controls.Add(this.GT_ResHor);
-            this.GraphicTweaker.Controls.Add(this.GT_MotionBlur);
-            this.GraphicTweaker.Controls.Add(this.L_GT_VSync);
-            this.GraphicTweaker.Controls.Add(this.L_GT_Filtering);
-            this.GraphicTweaker.Controls.Add(this.L_GT_AntiAliasing);
-            this.GraphicTweaker.Controls.Add(this.GT_VSync);
-            this.GraphicTweaker.Controls.Add(this.GT_Filtering);
-            this.GraphicTweaker.Controls.Add(this.GT_AntiAliasing);
-            this.GraphicTweaker.Controls.Add(this.L_GT_ColorCorrectionT);
-            this.GraphicTweaker.Controls.Add(this.L_GT_ShadowQuality);
-            this.GraphicTweaker.Controls.Add(this.L_GT_WaterQuality);
-            this.GraphicTweaker.Controls.Add(this.GT_ColorCorrectionT);
-            this.GraphicTweaker.Controls.Add(this.GT_ShadowQuality);
-            this.GraphicTweaker.Controls.Add(this.GT_WaterQuality);
-            this.GraphicTweaker.Controls.Add(this.L_GT_ShaderQuality);
-            this.GraphicTweaker.Controls.Add(this.L_GT_TextureQuality);
-            this.GraphicTweaker.Controls.Add(this.L_GT_ModelQuality);
-            this.GraphicTweaker.Controls.Add(this.GT_ShaderQuality);
-            this.GraphicTweaker.Controls.Add(this.GT_TextureQuality);
-            this.GraphicTweaker.Controls.Add(this.GT_ModelQuality);
-            this.GraphicTweaker.Controls.Add(this.L_GT_ScreenType);
-            this.GraphicTweaker.Controls.Add(this.L_GT_ResVert);
-            this.GraphicTweaker.Controls.Add(this.GT_ResVert_Btn);
-            this.GraphicTweaker.Controls.Add(this.GT_ScreenType);
-            this.GraphicTweaker.Controls.Add(this.GT_ResHor_Btn);
-            this.GraphicTweaker.Controls.Add(this.L_GT_ResHor);
-            this.GraphicTweaker.Controls.Add(this.GT_NCFWarnText);
-            this.GraphicTweaker.Controls.Add(this.GT_NCF_LoadNotepad);
             resources.ApplyResources(this.GraphicTweaker, "GraphicTweaker");
             this.GraphicTweaker.Name = "GraphicTweaker";
             this.GraphicTweaker.UseVisualStyleBackColor = true;
             // 
-            // GT_Warning
+            // GT_NCF_Group
             // 
-            this.GT_Warning.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.GT_Warning, "GT_Warning");
-            this.GT_Warning.Name = "GT_Warning";
-            this.GT_Warning.TabStop = false;
-            this.GT_Warning.Click += new System.EventHandler(this.GT_Warning_Click);
+            this.GT_NCF_Group.Controls.Add(this.GT_NCF_GPULev);
+            this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_GPULev);
+            this.GT_NCF_Group.Controls.Add(this.GT_NCF_MemPool);
+            this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_MemPool);
+            this.GT_NCF_Group.Controls.Add(this.GT_NCF_EffectD);
+            this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_EffectD);
+            this.GT_NCF_Group.Controls.Add(this.GT_NCF_ShaderE);
+            this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_ShaderE);
+            this.GT_NCF_Group.Controls.Add(this.GT_NCF_Multicore);
+            this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_Multicore);
+            this.GT_NCF_Group.Controls.Add(this.GT_NCF_VSync);
+            this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_VSync);
+            this.GT_NCF_Group.Controls.Add(this.GT_NCF_Filtering);
+            this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_Filtering);
+            this.GT_NCF_Group.Controls.Add(this.GT_NCF_AntiAlias);
+            this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_AntiAlias);
+            this.GT_NCF_Group.Controls.Add(this.GT_NCF_DispMode);
+            this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_DispMode);
+            this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_VertRes);
+            this.GT_NCF_Group.Controls.Add(this.GT_NCF_Ratio);
+            this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_Ratio);
+            this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_Brightness);
+            this.GT_NCF_Group.Controls.Add(this.GT_NCF_Brightness);
+            this.GT_NCF_Group.Controls.Add(this.GT_NCF_VertRes);
+            this.GT_NCF_Group.Controls.Add(this.GT_NCF_HorRes);
+            this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_HorRes);
+            resources.ApplyResources(this.GT_NCF_Group, "GT_NCF_Group");
+            this.GT_NCF_Group.Name = "GT_NCF_Group";
             // 
-            // GT_SaveApply
+            // GT_NCF_VSync
             // 
-            resources.ApplyResources(this.GT_SaveApply, "GT_SaveApply");
-            this.GT_SaveApply.Name = "GT_SaveApply";
-            this.GT_SaveApply.UseVisualStyleBackColor = true;
-            this.GT_SaveApply.Click += new System.EventHandler(this.GT_SaveApply_Click);
+            this.GT_NCF_VSync.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GT_NCF_VSync.FormattingEnabled = true;
+            resources.ApplyResources(this.GT_NCF_VSync, "GT_NCF_VSync");
+            this.GT_NCF_VSync.Name = "GT_NCF_VSync";
             // 
-            // GT_Maximum_Performance
+            // L_GT_NCF_VSync
             // 
-            resources.ApplyResources(this.GT_Maximum_Performance, "GT_Maximum_Performance");
-            this.GT_Maximum_Performance.Name = "GT_Maximum_Performance";
-            this.GT_Maximum_Performance.UseVisualStyleBackColor = true;
-            this.GT_Maximum_Performance.Click += new System.EventHandler(this.GT_Maximum_Performance_Click);
+            resources.ApplyResources(this.L_GT_NCF_VSync, "L_GT_NCF_VSync");
+            this.L_GT_NCF_VSync.Name = "L_GT_NCF_VSync";
             // 
-            // GT_Maximum_Graphics
+            // GT_NCF_Filtering
             // 
-            resources.ApplyResources(this.GT_Maximum_Graphics, "GT_Maximum_Graphics");
-            this.GT_Maximum_Graphics.Name = "GT_Maximum_Graphics";
-            this.GT_Maximum_Graphics.UseVisualStyleBackColor = true;
-            this.GT_Maximum_Graphics.Click += new System.EventHandler(this.GT_Maximum_Graphics_Click);
+            this.GT_NCF_Filtering.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GT_NCF_Filtering.FormattingEnabled = true;
+            resources.ApplyResources(this.GT_NCF_Filtering, "GT_NCF_Filtering");
+            this.GT_NCF_Filtering.Name = "GT_NCF_Filtering";
             // 
-            // GT_LaunchOptions_Btn
+            // L_GT_NCF_Filtering
             // 
-            this.GT_LaunchOptions_Btn.Cursor = System.Windows.Forms.Cursors.Help;
-            resources.ApplyResources(this.GT_LaunchOptions_Btn, "GT_LaunchOptions_Btn");
-            this.GT_LaunchOptions_Btn.Name = "GT_LaunchOptions_Btn";
-            this.GT_LaunchOptions_Btn.TabStop = false;
-            this.GT_LaunchOptions_Btn.UseVisualStyleBackColor = true;
-            this.GT_LaunchOptions_Btn.Click += new System.EventHandler(this.GT_LaunchOptions_Btn_Click);
+            resources.ApplyResources(this.L_GT_NCF_Filtering, "L_GT_NCF_Filtering");
+            this.L_GT_NCF_Filtering.Name = "L_GT_NCF_Filtering";
             // 
-            // L_GT_LaunchOptions
+            // GT_NCF_AntiAlias
             // 
-            resources.ApplyResources(this.L_GT_LaunchOptions, "L_GT_LaunchOptions");
-            this.L_GT_LaunchOptions.Name = "L_GT_LaunchOptions";
+            this.GT_NCF_AntiAlias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GT_NCF_AntiAlias.FormattingEnabled = true;
+            resources.ApplyResources(this.GT_NCF_AntiAlias, "GT_NCF_AntiAlias");
+            this.GT_NCF_AntiAlias.Name = "GT_NCF_AntiAlias";
             // 
-            // GT_LaunchOptions
+            // L_GT_NCF_AntiAlias
             // 
-            resources.ApplyResources(this.GT_LaunchOptions, "GT_LaunchOptions");
-            this.GT_LaunchOptions.Name = "GT_LaunchOptions";
+            resources.ApplyResources(this.L_GT_NCF_AntiAlias, "L_GT_NCF_AntiAlias");
+            this.L_GT_NCF_AntiAlias.Name = "L_GT_NCF_AntiAlias";
+            // 
+            // GT_NCF_DispMode
+            // 
+            this.GT_NCF_DispMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GT_NCF_DispMode.FormattingEnabled = true;
+            resources.ApplyResources(this.GT_NCF_DispMode, "GT_NCF_DispMode");
+            this.GT_NCF_DispMode.Name = "GT_NCF_DispMode";
+            // 
+            // L_GT_NCF_DispMode
+            // 
+            resources.ApplyResources(this.L_GT_NCF_DispMode, "L_GT_NCF_DispMode");
+            this.L_GT_NCF_DispMode.Name = "L_GT_NCF_DispMode";
+            // 
+            // L_GT_NCF_VertRes
+            // 
+            resources.ApplyResources(this.L_GT_NCF_VertRes, "L_GT_NCF_VertRes");
+            this.L_GT_NCF_VertRes.Name = "L_GT_NCF_VertRes";
+            // 
+            // GT_NCF_Ratio
+            // 
+            this.GT_NCF_Ratio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GT_NCF_Ratio.FormattingEnabled = true;
+            resources.ApplyResources(this.GT_NCF_Ratio, "GT_NCF_Ratio");
+            this.GT_NCF_Ratio.Name = "GT_NCF_Ratio";
+            // 
+            // L_GT_NCF_Ratio
+            // 
+            resources.ApplyResources(this.L_GT_NCF_Ratio, "L_GT_NCF_Ratio");
+            this.L_GT_NCF_Ratio.Name = "L_GT_NCF_Ratio";
+            // 
+            // L_GT_NCF_Brightness
+            // 
+            resources.ApplyResources(this.L_GT_NCF_Brightness, "L_GT_NCF_Brightness");
+            this.L_GT_NCF_Brightness.Name = "L_GT_NCF_Brightness";
+            // 
+            // GT_NCF_Brightness
+            // 
+            this.GT_NCF_Brightness.BackColor = System.Drawing.SystemColors.Window;
+            resources.ApplyResources(this.GT_NCF_Brightness, "GT_NCF_Brightness");
+            this.GT_NCF_Brightness.Maximum = 26;
+            this.GT_NCF_Brightness.Minimum = 18;
+            this.GT_NCF_Brightness.Name = "GT_NCF_Brightness";
+            this.GT_NCF_Brightness.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.GT_NCF_Brightness.Value = 18;
+            // 
+            // GT_NCF_VertRes
+            // 
+            resources.ApplyResources(this.GT_NCF_VertRes, "GT_NCF_VertRes");
+            this.GT_NCF_VertRes.Maximum = new decimal(new int[] {
+            4096,
+            0,
+            0,
+            0});
+            this.GT_NCF_VertRes.Minimum = new decimal(new int[] {
+            480,
+            0,
+            0,
+            0});
+            this.GT_NCF_VertRes.Name = "GT_NCF_VertRes";
+            this.GT_NCF_VertRes.Value = new decimal(new int[] {
+            480,
+            0,
+            0,
+            0});
+            // 
+            // GT_NCF_HorRes
+            // 
+            resources.ApplyResources(this.GT_NCF_HorRes, "GT_NCF_HorRes");
+            this.GT_NCF_HorRes.Maximum = new decimal(new int[] {
+            4096,
+            0,
+            0,
+            0});
+            this.GT_NCF_HorRes.Minimum = new decimal(new int[] {
+            640,
+            0,
+            0,
+            0});
+            this.GT_NCF_HorRes.Name = "GT_NCF_HorRes";
+            this.GT_NCF_HorRes.Value = new decimal(new int[] {
+            800,
+            0,
+            0,
+            0});
+            // 
+            // L_GT_NCF_HorRes
+            // 
+            resources.ApplyResources(this.L_GT_NCF_HorRes, "L_GT_NCF_HorRes");
+            this.L_GT_NCF_HorRes.Name = "L_GT_NCF_HorRes";
+            // 
+            // GT_GCF_Group
+            // 
+            this.GT_GCF_Group.Controls.Add(this.L_GT_HDR);
+            this.GT_GCF_Group.Controls.Add(this.L_GT_DxMode);
+            this.GT_GCF_Group.Controls.Add(this.L_GT_MotionBlur);
+            this.GT_GCF_Group.Controls.Add(this.GT_HDR);
+            this.GT_GCF_Group.Controls.Add(this.GT_DxMode);
+            this.GT_GCF_Group.Controls.Add(this.GT_ResVert);
+            this.GT_GCF_Group.Controls.Add(this.GT_ResHor);
+            this.GT_GCF_Group.Controls.Add(this.GT_MotionBlur);
+            this.GT_GCF_Group.Controls.Add(this.L_GT_VSync);
+            this.GT_GCF_Group.Controls.Add(this.L_GT_Filtering);
+            this.GT_GCF_Group.Controls.Add(this.L_GT_AntiAliasing);
+            this.GT_GCF_Group.Controls.Add(this.GT_VSync);
+            this.GT_GCF_Group.Controls.Add(this.GT_Filtering);
+            this.GT_GCF_Group.Controls.Add(this.GT_AntiAliasing);
+            this.GT_GCF_Group.Controls.Add(this.L_GT_ColorCorrectionT);
+            this.GT_GCF_Group.Controls.Add(this.L_GT_ShadowQuality);
+            this.GT_GCF_Group.Controls.Add(this.L_GT_WaterQuality);
+            this.GT_GCF_Group.Controls.Add(this.GT_ColorCorrectionT);
+            this.GT_GCF_Group.Controls.Add(this.GT_ShadowQuality);
+            this.GT_GCF_Group.Controls.Add(this.GT_WaterQuality);
+            this.GT_GCF_Group.Controls.Add(this.L_GT_ShaderQuality);
+            this.GT_GCF_Group.Controls.Add(this.L_GT_TextureQuality);
+            this.GT_GCF_Group.Controls.Add(this.L_GT_ModelQuality);
+            this.GT_GCF_Group.Controls.Add(this.GT_ShaderQuality);
+            this.GT_GCF_Group.Controls.Add(this.GT_TextureQuality);
+            this.GT_GCF_Group.Controls.Add(this.GT_ModelQuality);
+            this.GT_GCF_Group.Controls.Add(this.L_GT_ScreenType);
+            this.GT_GCF_Group.Controls.Add(this.L_GT_ResVert);
+            this.GT_GCF_Group.Controls.Add(this.GT_ResVert_Btn);
+            this.GT_GCF_Group.Controls.Add(this.GT_ScreenType);
+            this.GT_GCF_Group.Controls.Add(this.GT_ResHor_Btn);
+            this.GT_GCF_Group.Controls.Add(this.L_GT_ResHor);
+            resources.ApplyResources(this.GT_GCF_Group, "GT_GCF_Group");
+            this.GT_GCF_Group.Name = "GT_GCF_Group";
             // 
             // L_GT_HDR
             // 
@@ -581,7 +726,6 @@
             this.GT_ResVert_Btn.Name = "GT_ResVert_Btn";
             this.GT_ResVert_Btn.TabStop = false;
             this.GT_ResVert_Btn.UseVisualStyleBackColor = true;
-            this.GT_ResVert_Btn.Click += new System.EventHandler(this.GT_ResVert_Btn_Click);
             // 
             // GT_ScreenType
             // 
@@ -600,24 +744,59 @@
             this.GT_ResHor_Btn.Name = "GT_ResHor_Btn";
             this.GT_ResHor_Btn.TabStop = false;
             this.GT_ResHor_Btn.UseVisualStyleBackColor = true;
-            this.GT_ResHor_Btn.Click += new System.EventHandler(this.GT_ResHor_Btn_Click);
             // 
             // L_GT_ResHor
             // 
             resources.ApplyResources(this.L_GT_ResHor, "L_GT_ResHor");
             this.L_GT_ResHor.Name = "L_GT_ResHor";
             // 
-            // GT_NCFWarnText
+            // GT_Warning
             // 
-            resources.ApplyResources(this.GT_NCFWarnText, "GT_NCFWarnText");
-            this.GT_NCFWarnText.Name = "GT_NCFWarnText";
+            this.GT_Warning.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.GT_Warning, "GT_Warning");
+            this.GT_Warning.Name = "GT_Warning";
+            this.GT_Warning.TabStop = false;
+            this.GT_Warning.Click += new System.EventHandler(this.GT_Warning_Click);
             // 
-            // GT_NCF_LoadNotepad
+            // GT_SaveApply
             // 
-            resources.ApplyResources(this.GT_NCF_LoadNotepad, "GT_NCF_LoadNotepad");
-            this.GT_NCF_LoadNotepad.Name = "GT_NCF_LoadNotepad";
-            this.GT_NCF_LoadNotepad.UseVisualStyleBackColor = true;
-            this.GT_NCF_LoadNotepad.Click += new System.EventHandler(this.GT_NCF_LoadNotepad_Click);
+            resources.ApplyResources(this.GT_SaveApply, "GT_SaveApply");
+            this.GT_SaveApply.Name = "GT_SaveApply";
+            this.GT_SaveApply.UseVisualStyleBackColor = true;
+            this.GT_SaveApply.Click += new System.EventHandler(this.GT_SaveApply_Click);
+            // 
+            // GT_Maximum_Performance
+            // 
+            resources.ApplyResources(this.GT_Maximum_Performance, "GT_Maximum_Performance");
+            this.GT_Maximum_Performance.Name = "GT_Maximum_Performance";
+            this.GT_Maximum_Performance.UseVisualStyleBackColor = true;
+            this.GT_Maximum_Performance.Click += new System.EventHandler(this.GT_Maximum_Performance_Click);
+            // 
+            // GT_Maximum_Graphics
+            // 
+            resources.ApplyResources(this.GT_Maximum_Graphics, "GT_Maximum_Graphics");
+            this.GT_Maximum_Graphics.Name = "GT_Maximum_Graphics";
+            this.GT_Maximum_Graphics.UseVisualStyleBackColor = true;
+            this.GT_Maximum_Graphics.Click += new System.EventHandler(this.GT_Maximum_Graphics_Click);
+            // 
+            // GT_LaunchOptions_Btn
+            // 
+            this.GT_LaunchOptions_Btn.Cursor = System.Windows.Forms.Cursors.Help;
+            resources.ApplyResources(this.GT_LaunchOptions_Btn, "GT_LaunchOptions_Btn");
+            this.GT_LaunchOptions_Btn.Name = "GT_LaunchOptions_Btn";
+            this.GT_LaunchOptions_Btn.TabStop = false;
+            this.GT_LaunchOptions_Btn.UseVisualStyleBackColor = true;
+            this.GT_LaunchOptions_Btn.Click += new System.EventHandler(this.GT_LaunchOptions_Btn_Click);
+            // 
+            // L_GT_LaunchOptions
+            // 
+            resources.ApplyResources(this.L_GT_LaunchOptions, "L_GT_LaunchOptions");
+            this.L_GT_LaunchOptions.Name = "L_GT_LaunchOptions";
+            // 
+            // GT_LaunchOptions
+            // 
+            resources.ApplyResources(this.GT_LaunchOptions, "GT_LaunchOptions");
+            this.GT_LaunchOptions.Name = "GT_LaunchOptions";
             // 
             // ConfigEditor
             // 
@@ -1562,6 +1741,64 @@
             // 
             this.FldrBrwse.ShowNewFolderButton = false;
             // 
+            // L_GT_NCF_Multicore
+            // 
+            resources.ApplyResources(this.L_GT_NCF_Multicore, "L_GT_NCF_Multicore");
+            this.L_GT_NCF_Multicore.Name = "L_GT_NCF_Multicore";
+            // 
+            // GT_NCF_Multicore
+            // 
+            this.GT_NCF_Multicore.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GT_NCF_Multicore.FormattingEnabled = true;
+            resources.ApplyResources(this.GT_NCF_Multicore, "GT_NCF_Multicore");
+            this.GT_NCF_Multicore.Name = "GT_NCF_Multicore";
+            // 
+            // L_GT_NCF_ShaderE
+            // 
+            resources.ApplyResources(this.L_GT_NCF_ShaderE, "L_GT_NCF_ShaderE");
+            this.L_GT_NCF_ShaderE.Name = "L_GT_NCF_ShaderE";
+            // 
+            // GT_NCF_ShaderE
+            // 
+            this.GT_NCF_ShaderE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GT_NCF_ShaderE.FormattingEnabled = true;
+            resources.ApplyResources(this.GT_NCF_ShaderE, "GT_NCF_ShaderE");
+            this.GT_NCF_ShaderE.Name = "GT_NCF_ShaderE";
+            // 
+            // L_GT_NCF_EffectD
+            // 
+            resources.ApplyResources(this.L_GT_NCF_EffectD, "L_GT_NCF_EffectD");
+            this.L_GT_NCF_EffectD.Name = "L_GT_NCF_EffectD";
+            // 
+            // GT_NCF_EffectD
+            // 
+            this.GT_NCF_EffectD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GT_NCF_EffectD.FormattingEnabled = true;
+            resources.ApplyResources(this.GT_NCF_EffectD, "GT_NCF_EffectD");
+            this.GT_NCF_EffectD.Name = "GT_NCF_EffectD";
+            // 
+            // L_GT_NCF_MemPool
+            // 
+            resources.ApplyResources(this.L_GT_NCF_MemPool, "L_GT_NCF_MemPool");
+            this.L_GT_NCF_MemPool.Name = "L_GT_NCF_MemPool";
+            // 
+            // GT_NCF_MemPool
+            // 
+            this.GT_NCF_MemPool.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GT_NCF_MemPool.FormattingEnabled = true;
+            resources.ApplyResources(this.GT_NCF_MemPool, "GT_NCF_MemPool");
+            this.GT_NCF_MemPool.Name = "GT_NCF_MemPool";
+            // 
+            // L_GT_NCF_GPULev
+            // 
+            resources.ApplyResources(this.L_GT_NCF_GPULev, "L_GT_NCF_GPULev");
+            this.L_GT_NCF_GPULev.Name = "L_GT_NCF_GPULev";
+            // 
+            // GT_NCF_GPULev
+            // 
+            resources.ApplyResources(this.GT_NCF_GPULev, "GT_NCF_GPULev");
+            this.GT_NCF_GPULev.Name = "GT_NCF_GPULev";
+            // 
             // frmMainW
             // 
             resources.ApplyResources(this, "$this");
@@ -1584,9 +1821,16 @@
             this.MainTabControl.ResumeLayout(false);
             this.GraphicTweaker.ResumeLayout(false);
             this.GraphicTweaker.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GT_Warning)).EndInit();
+            this.GT_NCF_Group.ResumeLayout(false);
+            this.GT_NCF_Group.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GT_NCF_Brightness)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GT_NCF_VertRes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GT_NCF_HorRes)).EndInit();
+            this.GT_GCF_Group.ResumeLayout(false);
+            this.GT_GCF_Group.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResVert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResHor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GT_Warning)).EndInit();
             this.ConfigEditor.ResumeLayout(false);
             this.ConfigEditor.PerformLayout();
             this.CE_Toolbar.ResumeLayout(false);
@@ -1610,6 +1854,7 @@
             this.MainMenu.PerformLayout();
             this.StatusBar.ResumeLayout(false);
             this.StatusBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GT_NCF_GPULev)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1647,43 +1892,11 @@
         private System.Windows.Forms.StatusStrip StatusBar;
         private System.Windows.Forms.ToolStripStatusLabel SB_Info;
         private System.Windows.Forms.ToolStripStatusLabel SB_Status;
-        private System.Windows.Forms.Button GT_ResHor_Btn;
-        private System.Windows.Forms.Label L_GT_ResHor;
-        private System.Windows.Forms.ComboBox GT_ScreenType;
-        private System.Windows.Forms.Label L_GT_ScreenType;
-        private System.Windows.Forms.Label L_GT_ResVert;
-        private System.Windows.Forms.Button GT_ResVert_Btn;
-        private System.Windows.Forms.ComboBox GT_ShaderQuality;
-        private System.Windows.Forms.ComboBox GT_TextureQuality;
-        private System.Windows.Forms.ComboBox GT_ModelQuality;
-        private System.Windows.Forms.Label L_GT_ShaderQuality;
-        private System.Windows.Forms.Label L_GT_TextureQuality;
-        private System.Windows.Forms.Label L_GT_ModelQuality;
-        private System.Windows.Forms.Label L_GT_ColorCorrectionT;
-        private System.Windows.Forms.Label L_GT_ShadowQuality;
-        private System.Windows.Forms.Label L_GT_WaterQuality;
-        private System.Windows.Forms.ComboBox GT_ColorCorrectionT;
-        private System.Windows.Forms.ComboBox GT_ShadowQuality;
-        private System.Windows.Forms.ComboBox GT_WaterQuality;
-        private System.Windows.Forms.Label L_GT_VSync;
-        private System.Windows.Forms.Label L_GT_Filtering;
-        private System.Windows.Forms.Label L_GT_AntiAliasing;
-        private System.Windows.Forms.ComboBox GT_VSync;
-        private System.Windows.Forms.ComboBox GT_Filtering;
-        private System.Windows.Forms.ComboBox GT_AntiAliasing;
-        private System.Windows.Forms.NumericUpDown GT_ResVert;
-        private System.Windows.Forms.NumericUpDown GT_ResHor;
-        private System.Windows.Forms.ComboBox GT_MotionBlur;
         private System.Windows.Forms.Button GT_Maximum_Performance;
         private System.Windows.Forms.Button GT_Maximum_Graphics;
         private System.Windows.Forms.Button GT_LaunchOptions_Btn;
         private System.Windows.Forms.Label L_GT_LaunchOptions;
         private System.Windows.Forms.TextBox GT_LaunchOptions;
-        private System.Windows.Forms.Label L_GT_HDR;
-        private System.Windows.Forms.Label L_GT_DxMode;
-        private System.Windows.Forms.Label L_GT_MotionBlur;
-        private System.Windows.Forms.ComboBox GT_HDR;
-        private System.Windows.Forms.ComboBox GT_DxMode;
         private System.Windows.Forms.Button GT_SaveApply;
         private System.Windows.Forms.GroupBox PS_GB_Remover;
         private System.Windows.Forms.GroupBox PS_GB_SInfo;
@@ -1773,8 +1986,6 @@
         private System.Windows.Forms.Button PS_RemModels;
         private System.Windows.Forms.Button PS_RemTextures;
         private System.Windows.Forms.Label PS_RPDtResult;
-        private System.Windows.Forms.Button GT_NCF_LoadNotepad;
-        private System.Windows.Forms.Label GT_NCFWarnText;
         private System.Windows.Forms.ToolStripButton CE_OpenCVList;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnSub;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnCache;
@@ -1786,6 +1997,66 @@
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnGameStats;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnErrDumps;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnCloudLocal;
+        private System.Windows.Forms.Panel GT_GCF_Group;
+        private System.Windows.Forms.Label L_GT_HDR;
+        private System.Windows.Forms.Label L_GT_DxMode;
+        private System.Windows.Forms.Label L_GT_MotionBlur;
+        private System.Windows.Forms.ComboBox GT_HDR;
+        private System.Windows.Forms.ComboBox GT_DxMode;
+        private System.Windows.Forms.NumericUpDown GT_ResVert;
+        private System.Windows.Forms.NumericUpDown GT_ResHor;
+        private System.Windows.Forms.ComboBox GT_MotionBlur;
+        private System.Windows.Forms.Label L_GT_VSync;
+        private System.Windows.Forms.Label L_GT_Filtering;
+        private System.Windows.Forms.Label L_GT_AntiAliasing;
+        private System.Windows.Forms.ComboBox GT_VSync;
+        private System.Windows.Forms.ComboBox GT_Filtering;
+        private System.Windows.Forms.ComboBox GT_AntiAliasing;
+        private System.Windows.Forms.Label L_GT_ColorCorrectionT;
+        private System.Windows.Forms.Label L_GT_ShadowQuality;
+        private System.Windows.Forms.Label L_GT_WaterQuality;
+        private System.Windows.Forms.ComboBox GT_ColorCorrectionT;
+        private System.Windows.Forms.ComboBox GT_ShadowQuality;
+        private System.Windows.Forms.ComboBox GT_WaterQuality;
+        private System.Windows.Forms.Label L_GT_ShaderQuality;
+        private System.Windows.Forms.Label L_GT_TextureQuality;
+        private System.Windows.Forms.Label L_GT_ModelQuality;
+        private System.Windows.Forms.ComboBox GT_ShaderQuality;
+        private System.Windows.Forms.ComboBox GT_TextureQuality;
+        private System.Windows.Forms.ComboBox GT_ModelQuality;
+        private System.Windows.Forms.Label L_GT_ScreenType;
+        private System.Windows.Forms.Label L_GT_ResVert;
+        private System.Windows.Forms.Button GT_ResVert_Btn;
+        private System.Windows.Forms.ComboBox GT_ScreenType;
+        private System.Windows.Forms.Button GT_ResHor_Btn;
+        private System.Windows.Forms.Label L_GT_ResHor;
+        private System.Windows.Forms.Panel GT_NCF_Group;
+        private System.Windows.Forms.ComboBox GT_NCF_Ratio;
+        private System.Windows.Forms.Label L_GT_NCF_Ratio;
+        private System.Windows.Forms.Label L_GT_NCF_Brightness;
+        private System.Windows.Forms.TrackBar GT_NCF_Brightness;
+        private System.Windows.Forms.NumericUpDown GT_NCF_VertRes;
+        private System.Windows.Forms.NumericUpDown GT_NCF_HorRes;
+        private System.Windows.Forms.Label L_GT_NCF_HorRes;
+        private System.Windows.Forms.Label L_GT_NCF_VertRes;
+        private System.Windows.Forms.ComboBox GT_NCF_VSync;
+        private System.Windows.Forms.Label L_GT_NCF_VSync;
+        private System.Windows.Forms.ComboBox GT_NCF_Filtering;
+        private System.Windows.Forms.Label L_GT_NCF_Filtering;
+        private System.Windows.Forms.ComboBox GT_NCF_AntiAlias;
+        private System.Windows.Forms.Label L_GT_NCF_AntiAlias;
+        private System.Windows.Forms.ComboBox GT_NCF_DispMode;
+        private System.Windows.Forms.Label L_GT_NCF_DispMode;
+        private System.Windows.Forms.NumericUpDown GT_NCF_GPULev;
+        private System.Windows.Forms.Label L_GT_NCF_GPULev;
+        private System.Windows.Forms.ComboBox GT_NCF_MemPool;
+        private System.Windows.Forms.Label L_GT_NCF_MemPool;
+        private System.Windows.Forms.ComboBox GT_NCF_EffectD;
+        private System.Windows.Forms.Label L_GT_NCF_EffectD;
+        private System.Windows.Forms.ComboBox GT_NCF_ShaderE;
+        private System.Windows.Forms.Label L_GT_NCF_ShaderE;
+        private System.Windows.Forms.ComboBox GT_NCF_Multicore;
+        private System.Windows.Forms.Label L_GT_NCF_Multicore;
     }
 }
 

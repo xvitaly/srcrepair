@@ -123,10 +123,1809 @@
   <metadata name="GraphicTweaker.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="GT_Warning.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="GT_NCF_Group.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="GT_NCF_GPULev.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="GT_NCF_GPULev.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 225</value>
+  </data>
+  <data name="GT_NCF_GPULev.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 20</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GT_NCF_GPULev.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_GPULev.Name" xml:space="preserve">
+    <value>GT_NCF_GPULev</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_GPULev.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_GPULev.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_GPULev.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="L_GT_NCF_GPULev.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_NCF_GPULev.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_NCF_GPULev.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 208</value>
+  </data>
+  <data name="L_GT_NCF_GPULev.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 13</value>
+  </data>
+  <data name="L_GT_NCF_GPULev.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="L_GT_NCF_GPULev.Text" xml:space="preserve">
+    <value>GPU level:</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_GPULev.Name" xml:space="preserve">
+    <value>L_GT_NCF_GPULev</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_GPULev.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_GPULev.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_GPULev.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="GT_NCF_MemPool.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_NCF_MemPool.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 224</value>
+  </data>
+  <data name="GT_NCF_MemPool.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 21</value>
+  </data>
+  <data name="GT_NCF_MemPool.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_MemPool.Name" xml:space="preserve">
+    <value>GT_NCF_MemPool</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_MemPool.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_MemPool.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_MemPool.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="L_GT_NCF_MemPool.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_NCF_MemPool.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_NCF_MemPool.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 208</value>
+  </data>
+  <data name="L_GT_NCF_MemPool.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 13</value>
+  </data>
+  <data name="L_GT_NCF_MemPool.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="L_GT_NCF_MemPool.Text" xml:space="preserve">
+    <value>Paged memory pool:</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_MemPool.Name" xml:space="preserve">
+    <value>L_GT_NCF_MemPool</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_MemPool.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_MemPool.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_MemPool.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="GT_NCF_EffectD.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_NCF_EffectD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 224</value>
+  </data>
+  <data name="GT_NCF_EffectD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 21</value>
+  </data>
+  <data name="GT_NCF_EffectD.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_EffectD.Name" xml:space="preserve">
+    <value>GT_NCF_EffectD</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_EffectD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_EffectD.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_EffectD.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="L_GT_NCF_EffectD.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_NCF_EffectD.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_NCF_EffectD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 208</value>
+  </data>
+  <data name="L_GT_NCF_EffectD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 13</value>
+  </data>
+  <data name="L_GT_NCF_EffectD.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="L_GT_NCF_EffectD.Text" xml:space="preserve">
+    <value>Effect detail:</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_EffectD.Name" xml:space="preserve">
+    <value>L_GT_NCF_EffectD</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_EffectD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_EffectD.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_EffectD.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="GT_NCF_ShaderE.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_NCF_ShaderE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 175</value>
+  </data>
+  <data name="GT_NCF_ShaderE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 21</value>
+  </data>
+  <data name="GT_NCF_ShaderE.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_ShaderE.Name" xml:space="preserve">
+    <value>GT_NCF_ShaderE</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_ShaderE.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_ShaderE.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_ShaderE.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <metadata name="L_GT_NCF_ShaderE.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_NCF_ShaderE.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_NCF_ShaderE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 159</value>
+  </data>
+  <data name="L_GT_NCF_ShaderE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
+  </data>
+  <data name="L_GT_NCF_ShaderE.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="L_GT_NCF_ShaderE.Text" xml:space="preserve">
+    <value>Shader detail:</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_ShaderE.Name" xml:space="preserve">
+    <value>L_GT_NCF_ShaderE</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_ShaderE.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_ShaderE.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_ShaderE.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <metadata name="GT_NCF_Multicore.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_NCF_Multicore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>165, 175</value>
+  </data>
+  <data name="GT_NCF_Multicore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 21</value>
+  </data>
+  <data name="GT_NCF_Multicore.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_Multicore.Name" xml:space="preserve">
+    <value>GT_NCF_Multicore</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_Multicore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_Multicore.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_Multicore.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <metadata name="L_GT_NCF_Multicore.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_NCF_Multicore.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_NCF_Multicore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 159</value>
+  </data>
+  <data name="L_GT_NCF_Multicore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 13</value>
+  </data>
+  <data name="L_GT_NCF_Multicore.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="L_GT_NCF_Multicore.Text" xml:space="preserve">
+    <value>Multicore rendering:</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_Multicore.Name" xml:space="preserve">
+    <value>L_GT_NCF_Multicore</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_Multicore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_Multicore.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_Multicore.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <metadata name="GT_NCF_VSync.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_NCF_VSync.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 175</value>
+  </data>
+  <data name="GT_NCF_VSync.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 21</value>
+  </data>
+  <data name="GT_NCF_VSync.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_VSync.Name" xml:space="preserve">
+    <value>GT_NCF_VSync</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_VSync.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_VSync.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_VSync.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <metadata name="L_GT_NCF_VSync.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_NCF_VSync.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_NCF_VSync.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 159</value>
+  </data>
+  <data name="L_GT_NCF_VSync.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 13</value>
+  </data>
+  <data name="L_GT_NCF_VSync.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="L_GT_NCF_VSync.Text" xml:space="preserve">
+    <value>Wait for vertical sync:</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_VSync.Name" xml:space="preserve">
+    <value>L_GT_NCF_VSync</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_VSync.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_VSync.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_VSync.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <metadata name="GT_NCF_Filtering.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_NCF_Filtering.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 126</value>
+  </data>
+  <data name="GT_NCF_Filtering.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 21</value>
+  </data>
+  <data name="GT_NCF_Filtering.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_Filtering.Name" xml:space="preserve">
+    <value>GT_NCF_Filtering</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_Filtering.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_Filtering.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_Filtering.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <metadata name="L_GT_NCF_Filtering.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_NCF_Filtering.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_NCF_Filtering.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 110</value>
+  </data>
+  <data name="L_GT_NCF_Filtering.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="L_GT_NCF_Filtering.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="L_GT_NCF_Filtering.Text" xml:space="preserve">
+    <value>Filtering mode:</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_Filtering.Name" xml:space="preserve">
+    <value>L_GT_NCF_Filtering</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_Filtering.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_Filtering.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_Filtering.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <metadata name="GT_NCF_AntiAlias.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_NCF_AntiAlias.Location" type="System.Drawing.Point, System.Drawing">
+    <value>166, 126</value>
+  </data>
+  <data name="GT_NCF_AntiAlias.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 21</value>
+  </data>
+  <data name="GT_NCF_AntiAlias.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_AntiAlias.Name" xml:space="preserve">
+    <value>GT_NCF_AntiAlias</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_AntiAlias.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_AntiAlias.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_AntiAlias.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <metadata name="L_GT_NCF_AntiAlias.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_NCF_AntiAlias.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_NCF_AntiAlias.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 110</value>
+  </data>
+  <data name="L_GT_NCF_AntiAlias.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 13</value>
+  </data>
+  <data name="L_GT_NCF_AntiAlias.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="L_GT_NCF_AntiAlias.Text" xml:space="preserve">
+    <value>Anti-Aliasing mode:</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_AntiAlias.Name" xml:space="preserve">
+    <value>L_GT_NCF_AntiAlias</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_AntiAlias.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_AntiAlias.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_AntiAlias.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <metadata name="GT_NCF_DispMode.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_NCF_DispMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 126</value>
+  </data>
+  <data name="GT_NCF_DispMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 21</value>
+  </data>
+  <data name="GT_NCF_DispMode.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_DispMode.Name" xml:space="preserve">
+    <value>GT_NCF_DispMode</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_DispMode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_DispMode.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_DispMode.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <metadata name="L_GT_NCF_DispMode.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_NCF_DispMode.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_NCF_DispMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 110</value>
+  </data>
+  <data name="L_GT_NCF_DispMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 13</value>
+  </data>
+  <data name="L_GT_NCF_DispMode.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="L_GT_NCF_DispMode.Text" xml:space="preserve">
+    <value>Display mode:</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_DispMode.Name" xml:space="preserve">
+    <value>L_GT_NCF_DispMode</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_DispMode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_DispMode.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_DispMode.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <metadata name="L_GT_NCF_VertRes.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_NCF_VertRes.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_NCF_VertRes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 13</value>
+  </data>
+  <data name="L_GT_NCF_VertRes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 13</value>
+  </data>
+  <data name="L_GT_NCF_VertRes.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="L_GT_NCF_VertRes.Text" xml:space="preserve">
+    <value>Vertical resolution:</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_VertRes.Name" xml:space="preserve">
+    <value>L_GT_NCF_VertRes</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_VertRes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_VertRes.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_VertRes.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <metadata name="GT_NCF_Ratio.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_NCF_Ratio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 29</value>
+  </data>
+  <data name="GT_NCF_Ratio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 21</value>
+  </data>
+  <data name="GT_NCF_Ratio.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_Ratio.Name" xml:space="preserve">
+    <value>GT_NCF_Ratio</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_Ratio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_Ratio.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_Ratio.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <metadata name="L_GT_NCF_Ratio.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_NCF_Ratio.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_NCF_Ratio.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 13</value>
+  </data>
+  <data name="L_GT_NCF_Ratio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 13</value>
+  </data>
+  <data name="L_GT_NCF_Ratio.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="L_GT_NCF_Ratio.Text" xml:space="preserve">
+    <value>Aspect ratio:</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_Ratio.Name" xml:space="preserve">
+    <value>L_GT_NCF_Ratio</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_Ratio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_Ratio.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_Ratio.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <metadata name="L_GT_NCF_Brightness.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_NCF_Brightness.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_NCF_Brightness.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 71</value>
+  </data>
+  <data name="L_GT_NCF_Brightness.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 13</value>
+  </data>
+  <data name="L_GT_NCF_Brightness.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="L_GT_NCF_Brightness.Text" xml:space="preserve">
+    <value>Brightness:</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_Brightness.Name" xml:space="preserve">
+    <value>L_GT_NCF_Brightness</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_Brightness.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_Brightness.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_Brightness.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <metadata name="GT_NCF_Brightness.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_NCF_Brightness.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 56</value>
+  </data>
+  <data name="GT_NCF_Brightness.Size" type="System.Drawing.Size, System.Drawing">
+    <value>360, 45</value>
+  </data>
+  <data name="GT_NCF_Brightness.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_Brightness.Name" xml:space="preserve">
+    <value>GT_NCF_Brightness</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_Brightness.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TrackBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_Brightness.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_Brightness.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <metadata name="GT_NCF_VertRes.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_NCF_VertRes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>162, 29</value>
+  </data>
+  <data name="GT_NCF_VertRes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 20</value>
+  </data>
+  <data name="GT_NCF_VertRes.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_VertRes.Name" xml:space="preserve">
+    <value>GT_NCF_VertRes</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_VertRes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_VertRes.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_VertRes.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <metadata name="GT_NCF_HorRes.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_NCF_HorRes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 30</value>
+  </data>
+  <data name="GT_NCF_HorRes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 20</value>
+  </data>
+  <data name="GT_NCF_HorRes.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_HorRes.Name" xml:space="preserve">
+    <value>GT_NCF_HorRes</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_HorRes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_HorRes.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_HorRes.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <metadata name="L_GT_NCF_HorRes.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_NCF_HorRes.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="L_GT_NCF_HorRes.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L_GT_NCF_HorRes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 13</value>
+  </data>
+  <data name="L_GT_NCF_HorRes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 13</value>
+  </data>
+  <data name="L_GT_NCF_HorRes.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="L_GT_NCF_HorRes.Text" xml:space="preserve">
+    <value>Horisontal resolution:</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_HorRes.Name" xml:space="preserve">
+    <value>L_GT_NCF_HorRes</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_HorRes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_HorRes.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_HorRes.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="GT_NCF_Group.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="GT_NCF_Group.Size" type="System.Drawing.Size, System.Drawing">
+    <value>462, 258</value>
+  </data>
+  <data name="GT_NCF_Group.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="GT_NCF_Group.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_Group.Name" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_Group.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_Group.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_NCF_Group.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="GT_GCF_Group.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="L_GT_HDR.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_HDR.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_HDR.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L_GT_HDR.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 208</value>
+  </data>
+  <data name="L_GT_HDR.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 13</value>
+  </data>
+  <data name="L_GT_HDR.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="L_GT_HDR.Text" xml:space="preserve">
+    <value>High Dynamic Range</value>
+  </data>
+  <data name="&gt;&gt;L_GT_HDR.Name" xml:space="preserve">
+    <value>L_GT_HDR</value>
+  </data>
+  <data name="&gt;&gt;L_GT_HDR.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_HDR.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_HDR.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="L_GT_DxMode.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_DxMode.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_DxMode.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L_GT_DxMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 208</value>
+  </data>
+  <data name="L_GT_DxMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
+  </data>
+  <data name="L_GT_DxMode.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="L_GT_DxMode.Text" xml:space="preserve">
+    <value>DirectX mode</value>
+  </data>
+  <data name="&gt;&gt;L_GT_DxMode.Name" xml:space="preserve">
+    <value>L_GT_DxMode</value>
+  </data>
+  <data name="&gt;&gt;L_GT_DxMode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_DxMode.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_DxMode.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="L_GT_MotionBlur.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_MotionBlur.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_MotionBlur.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L_GT_MotionBlur.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 208</value>
+  </data>
+  <data name="L_GT_MotionBlur.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 13</value>
+  </data>
+  <data name="L_GT_MotionBlur.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="L_GT_MotionBlur.Text" xml:space="preserve">
+    <value>Motion Blur</value>
+  </data>
+  <data name="&gt;&gt;L_GT_MotionBlur.Name" xml:space="preserve">
+    <value>L_GT_MotionBlur</value>
+  </data>
+  <data name="&gt;&gt;L_GT_MotionBlur.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_MotionBlur.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_MotionBlur.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="GT_HDR.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_HDR.Items" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="GT_HDR.Items1" xml:space="preserve">
+    <value>Bloom</value>
+  </data>
+  <data name="GT_HDR.Items2" xml:space="preserve">
+    <value>Full</value>
+  </data>
+  <data name="GT_HDR.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 224</value>
+  </data>
+  <data name="GT_HDR.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 21</value>
+  </data>
+  <data name="GT_HDR.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;GT_HDR.Name" xml:space="preserve">
+    <value>GT_HDR</value>
+  </data>
+  <data name="&gt;&gt;GT_HDR.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_HDR.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_HDR.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="GT_DxMode.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_DxMode.Items" xml:space="preserve">
+    <value>DirectX 8.0</value>
+  </data>
+  <data name="GT_DxMode.Items1" xml:space="preserve">
+    <value>DirectX 8.1</value>
+  </data>
+  <data name="GT_DxMode.Items2" xml:space="preserve">
+    <value>DirectX 9.0a</value>
+  </data>
+  <data name="GT_DxMode.Items3" xml:space="preserve">
+    <value>DirectX 9.0c</value>
+  </data>
+  <data name="GT_DxMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>166, 224</value>
+  </data>
+  <data name="GT_DxMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 21</value>
+  </data>
+  <data name="GT_DxMode.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;GT_DxMode.Name" xml:space="preserve">
+    <value>GT_DxMode</value>
+  </data>
+  <data name="&gt;&gt;GT_DxMode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_DxMode.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_DxMode.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="GT_ResVert.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_ResVert.Location" type="System.Drawing.Point, System.Drawing">
+    <value>166, 29</value>
+  </data>
+  <data name="GT_ResVert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 20</value>
+  </data>
+  <data name="GT_ResVert.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;GT_ResVert.Name" xml:space="preserve">
+    <value>GT_ResVert</value>
+  </data>
+  <data name="&gt;&gt;GT_ResVert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_ResVert.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_ResVert.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="GT_ResHor.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_ResHor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 29</value>
+  </data>
+  <data name="GT_ResHor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 20</value>
+  </data>
+  <data name="GT_ResHor.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GT_ResHor.Name" xml:space="preserve">
+    <value>GT_ResHor</value>
+  </data>
+  <data name="&gt;&gt;GT_ResHor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_ResHor.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_ResHor.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <metadata name="GT_MotionBlur.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_MotionBlur.Items" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="GT_MotionBlur.Items1" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="GT_MotionBlur.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 224</value>
+  </data>
+  <data name="GT_MotionBlur.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 21</value>
+  </data>
+  <data name="GT_MotionBlur.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;GT_MotionBlur.Name" xml:space="preserve">
+    <value>GT_MotionBlur</value>
+  </data>
+  <data name="&gt;&gt;GT_MotionBlur.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_MotionBlur.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_MotionBlur.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <metadata name="L_GT_VSync.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_VSync.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_VSync.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L_GT_VSync.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 159</value>
+  </data>
+  <data name="L_GT_VSync.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 13</value>
+  </data>
+  <data name="L_GT_VSync.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="L_GT_VSync.Text" xml:space="preserve">
+    <value>Wait for vertical sync</value>
+  </data>
+  <data name="&gt;&gt;L_GT_VSync.Name" xml:space="preserve">
+    <value>L_GT_VSync</value>
+  </data>
+  <data name="&gt;&gt;L_GT_VSync.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_VSync.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_VSync.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <metadata name="L_GT_Filtering.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_Filtering.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_Filtering.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L_GT_Filtering.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 159</value>
+  </data>
+  <data name="L_GT_Filtering.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 13</value>
+  </data>
+  <data name="L_GT_Filtering.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="L_GT_Filtering.Text" xml:space="preserve">
+    <value>Filtering mode</value>
+  </data>
+  <data name="&gt;&gt;L_GT_Filtering.Name" xml:space="preserve">
+    <value>L_GT_Filtering</value>
+  </data>
+  <data name="&gt;&gt;L_GT_Filtering.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_Filtering.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_Filtering.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <metadata name="L_GT_AntiAliasing.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_AntiAliasing.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_AntiAliasing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L_GT_AntiAliasing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 159</value>
+  </data>
+  <data name="L_GT_AntiAliasing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 13</value>
+  </data>
+  <data name="L_GT_AntiAliasing.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="L_GT_AntiAliasing.Text" xml:space="preserve">
+    <value>Antialiasing mode</value>
+  </data>
+  <data name="&gt;&gt;L_GT_AntiAliasing.Name" xml:space="preserve">
+    <value>L_GT_AntiAliasing</value>
+  </data>
+  <data name="&gt;&gt;L_GT_AntiAliasing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_AntiAliasing.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_AntiAliasing.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <metadata name="GT_VSync.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_VSync.Items" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="GT_VSync.Items1" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="GT_VSync.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 175</value>
+  </data>
+  <data name="GT_VSync.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 21</value>
+  </data>
+  <data name="GT_VSync.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;GT_VSync.Name" xml:space="preserve">
+    <value>GT_VSync</value>
+  </data>
+  <data name="&gt;&gt;GT_VSync.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_VSync.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_VSync.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <metadata name="GT_Filtering.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_Filtering.Items" xml:space="preserve">
+    <value>Bilinear</value>
+  </data>
+  <data name="GT_Filtering.Items1" xml:space="preserve">
+    <value>Trilinear</value>
+  </data>
+  <data name="GT_Filtering.Items2" xml:space="preserve">
+    <value>Anisotropic 2X</value>
+  </data>
+  <data name="GT_Filtering.Items3" xml:space="preserve">
+    <value>Anisotropic 4X</value>
+  </data>
+  <data name="GT_Filtering.Items4" xml:space="preserve">
+    <value>Anisotropic 8X</value>
+  </data>
+  <data name="GT_Filtering.Items5" xml:space="preserve">
+    <value>Anisotropic 16X</value>
+  </data>
+  <data name="GT_Filtering.Location" type="System.Drawing.Point, System.Drawing">
+    <value>166, 175</value>
+  </data>
+  <data name="GT_Filtering.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 21</value>
+  </data>
+  <data name="GT_Filtering.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;GT_Filtering.Name" xml:space="preserve">
+    <value>GT_Filtering</value>
+  </data>
+  <data name="&gt;&gt;GT_Filtering.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_Filtering.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_Filtering.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <metadata name="GT_AntiAliasing.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_AntiAliasing.Items" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="GT_AntiAliasing.Items1" xml:space="preserve">
+    <value>2X MSAA</value>
+  </data>
+  <data name="GT_AntiAliasing.Items2" xml:space="preserve">
+    <value>4X MSAA</value>
+  </data>
+  <data name="GT_AntiAliasing.Items3" xml:space="preserve">
+    <value>8X CSAA</value>
+  </data>
+  <data name="GT_AntiAliasing.Items4" xml:space="preserve">
+    <value>16X CSAA</value>
+  </data>
+  <data name="GT_AntiAliasing.Items5" xml:space="preserve">
+    <value>8X MSAA</value>
+  </data>
+  <data name="GT_AntiAliasing.Items6" xml:space="preserve">
+    <value>16XQ CSAA</value>
+  </data>
+  <data name="GT_AntiAliasing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 175</value>
+  </data>
+  <data name="GT_AntiAliasing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 21</value>
+  </data>
+  <data name="GT_AntiAliasing.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;GT_AntiAliasing.Name" xml:space="preserve">
+    <value>GT_AntiAliasing</value>
+  </data>
+  <data name="&gt;&gt;GT_AntiAliasing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_AntiAliasing.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_AntiAliasing.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <metadata name="L_GT_ColorCorrectionT.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_ColorCorrectionT.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_ColorCorrectionT.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L_GT_ColorCorrectionT.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 110</value>
+  </data>
+  <data name="L_GT_ColorCorrectionT.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
+  </data>
+  <data name="L_GT_ColorCorrectionT.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="L_GT_ColorCorrectionT.Text" xml:space="preserve">
+    <value>Color correction</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ColorCorrectionT.Name" xml:space="preserve">
+    <value>L_GT_ColorCorrectionT</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ColorCorrectionT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ColorCorrectionT.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ColorCorrectionT.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <metadata name="L_GT_ShadowQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_ShadowQuality.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_ShadowQuality.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L_GT_ShadowQuality.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 110</value>
+  </data>
+  <data name="L_GT_ShadowQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 13</value>
+  </data>
+  <data name="L_GT_ShadowQuality.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="L_GT_ShadowQuality.Text" xml:space="preserve">
+    <value>Shadow detail</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ShadowQuality.Name" xml:space="preserve">
+    <value>L_GT_ShadowQuality</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ShadowQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ShadowQuality.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ShadowQuality.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <metadata name="L_GT_WaterQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_WaterQuality.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_WaterQuality.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L_GT_WaterQuality.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 110</value>
+  </data>
+  <data name="L_GT_WaterQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="L_GT_WaterQuality.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="L_GT_WaterQuality.Text" xml:space="preserve">
+    <value>Water detail</value>
+  </data>
+  <data name="&gt;&gt;L_GT_WaterQuality.Name" xml:space="preserve">
+    <value>L_GT_WaterQuality</value>
+  </data>
+  <data name="&gt;&gt;L_GT_WaterQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_WaterQuality.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_WaterQuality.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <metadata name="GT_ColorCorrectionT.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_ColorCorrectionT.Items" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="GT_ColorCorrectionT.Items1" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="GT_ColorCorrectionT.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 126</value>
+  </data>
+  <data name="GT_ColorCorrectionT.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 21</value>
+  </data>
+  <data name="GT_ColorCorrectionT.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;GT_ColorCorrectionT.Name" xml:space="preserve">
+    <value>GT_ColorCorrectionT</value>
+  </data>
+  <data name="&gt;&gt;GT_ColorCorrectionT.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_ColorCorrectionT.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_ColorCorrectionT.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <metadata name="GT_ShadowQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_ShadowQuality.Items" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="GT_ShadowQuality.Items1" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="GT_ShadowQuality.Location" type="System.Drawing.Point, System.Drawing">
+    <value>166, 126</value>
+  </data>
+  <data name="GT_ShadowQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 21</value>
+  </data>
+  <data name="GT_ShadowQuality.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;GT_ShadowQuality.Name" xml:space="preserve">
+    <value>GT_ShadowQuality</value>
+  </data>
+  <data name="&gt;&gt;GT_ShadowQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_ShadowQuality.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_ShadowQuality.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <metadata name="GT_WaterQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_WaterQuality.Items" xml:space="preserve">
+    <value>Simple reflections</value>
+  </data>
+  <data name="GT_WaterQuality.Items1" xml:space="preserve">
+    <value>Reflect world</value>
+  </data>
+  <data name="GT_WaterQuality.Items2" xml:space="preserve">
+    <value>Reflect all</value>
+  </data>
+  <data name="GT_WaterQuality.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 126</value>
+  </data>
+  <data name="GT_WaterQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 21</value>
+  </data>
+  <data name="GT_WaterQuality.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;GT_WaterQuality.Name" xml:space="preserve">
+    <value>GT_WaterQuality</value>
+  </data>
+  <data name="&gt;&gt;GT_WaterQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_WaterQuality.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_WaterQuality.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <metadata name="L_GT_ShaderQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_ShaderQuality.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_ShaderQuality.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L_GT_ShaderQuality.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 61</value>
+  </data>
+  <data name="L_GT_ShaderQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 13</value>
+  </data>
+  <data name="L_GT_ShaderQuality.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="L_GT_ShaderQuality.Text" xml:space="preserve">
+    <value>Shader detail</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ShaderQuality.Name" xml:space="preserve">
+    <value>L_GT_ShaderQuality</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ShaderQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ShaderQuality.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ShaderQuality.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <metadata name="L_GT_TextureQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_TextureQuality.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_TextureQuality.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L_GT_TextureQuality.Location" type="System.Drawing.Point, System.Drawing">
+    <value>163, 61</value>
+  </data>
+  <data name="L_GT_TextureQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
+  </data>
+  <data name="L_GT_TextureQuality.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="L_GT_TextureQuality.Text" xml:space="preserve">
+    <value>Texture detail</value>
+  </data>
+  <data name="&gt;&gt;L_GT_TextureQuality.Name" xml:space="preserve">
+    <value>L_GT_TextureQuality</value>
+  </data>
+  <data name="&gt;&gt;L_GT_TextureQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_TextureQuality.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_TextureQuality.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <metadata name="L_GT_ModelQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_ModelQuality.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_ModelQuality.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L_GT_ModelQuality.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 61</value>
+  </data>
+  <data name="L_GT_ModelQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="L_GT_ModelQuality.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="L_GT_ModelQuality.Text" xml:space="preserve">
+    <value>Model detail</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ModelQuality.Name" xml:space="preserve">
+    <value>L_GT_ModelQuality</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ModelQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ModelQuality.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ModelQuality.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <metadata name="GT_ShaderQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_ShaderQuality.Items" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="GT_ShaderQuality.Items1" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="GT_ShaderQuality.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 77</value>
+  </data>
+  <data name="GT_ShaderQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 21</value>
+  </data>
+  <data name="GT_ShaderQuality.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;GT_ShaderQuality.Name" xml:space="preserve">
+    <value>GT_ShaderQuality</value>
+  </data>
+  <data name="&gt;&gt;GT_ShaderQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_ShaderQuality.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_ShaderQuality.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <metadata name="GT_TextureQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_TextureQuality.Items" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="GT_TextureQuality.Items1" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="GT_TextureQuality.Items2" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="GT_TextureQuality.Items3" xml:space="preserve">
+    <value>Very high</value>
+  </data>
+  <data name="GT_TextureQuality.Location" type="System.Drawing.Point, System.Drawing">
+    <value>166, 77</value>
+  </data>
+  <data name="GT_TextureQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 21</value>
+  </data>
+  <data name="GT_TextureQuality.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;GT_TextureQuality.Name" xml:space="preserve">
+    <value>GT_TextureQuality</value>
+  </data>
+  <data name="&gt;&gt;GT_TextureQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_TextureQuality.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_TextureQuality.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <metadata name="GT_ModelQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_ModelQuality.Items" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="GT_ModelQuality.Items1" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="GT_ModelQuality.Items2" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="GT_ModelQuality.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 77</value>
+  </data>
+  <data name="GT_ModelQuality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 21</value>
+  </data>
+  <data name="GT_ModelQuality.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;GT_ModelQuality.Name" xml:space="preserve">
+    <value>GT_ModelQuality</value>
+  </data>
+  <data name="&gt;&gt;GT_ModelQuality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_ModelQuality.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_ModelQuality.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <metadata name="L_GT_ScreenType.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_ScreenType.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_ScreenType.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L_GT_ScreenType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 13</value>
+  </data>
+  <data name="L_GT_ScreenType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 13</value>
+  </data>
+  <data name="L_GT_ScreenType.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="L_GT_ScreenType.Text" xml:space="preserve">
+    <value>Display mode</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ScreenType.Name" xml:space="preserve">
+    <value>L_GT_ScreenType</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ScreenType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ScreenType.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ScreenType.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <metadata name="L_GT_ResVert.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_ResVert.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_ResVert.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L_GT_ResVert.Location" type="System.Drawing.Point, System.Drawing">
+    <value>162, 13</value>
+  </data>
+  <data name="L_GT_ResVert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 13</value>
+  </data>
+  <data name="L_GT_ResVert.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="L_GT_ResVert.Text" xml:space="preserve">
+    <value>Vertical resolution</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ResVert.Name" xml:space="preserve">
+    <value>L_GT_ResVert</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ResVert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ResVert.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ResVert.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <metadata name="GT_ResVert_Btn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_ResVert_Btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="GT_ResVert_Btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>285, 27</value>
+  </data>
+  <data name="GT_ResVert_Btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 22</value>
+  </data>
+  <data name="GT_ResVert_Btn.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="GT_ResVert_Btn.Text" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="&gt;&gt;GT_ResVert_Btn.Name" xml:space="preserve">
+    <value>GT_ResVert_Btn</value>
+  </data>
+  <data name="&gt;&gt;GT_ResVert_Btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_ResVert_Btn.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_ResVert_Btn.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <metadata name="GT_ScreenType.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_ScreenType.Items" xml:space="preserve">
+    <value>Full screen</value>
+  </data>
+  <data name="GT_ScreenType.Items1" xml:space="preserve">
+    <value>Windowed</value>
+  </data>
+  <data name="GT_ScreenType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>313, 29</value>
+  </data>
+  <data name="GT_ScreenType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 21</value>
+  </data>
+  <data name="GT_ScreenType.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;GT_ScreenType.Name" xml:space="preserve">
+    <value>GT_ScreenType</value>
+  </data>
+  <data name="&gt;&gt;GT_ScreenType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_ScreenType.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_ScreenType.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <metadata name="GT_ResHor_Btn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="GT_ResHor_Btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="GT_ResHor_Btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 27</value>
+  </data>
+  <data name="GT_ResHor_Btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 22</value>
+  </data>
+  <data name="GT_ResHor_Btn.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="GT_ResHor_Btn.Text" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="&gt;&gt;GT_ResHor_Btn.Name" xml:space="preserve">
+    <value>GT_ResHor_Btn</value>
+  </data>
+  <data name="&gt;&gt;GT_ResHor_Btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_ResHor_Btn.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_ResHor_Btn.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <metadata name="L_GT_ResHor.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_ResHor.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_ResHor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L_GT_ResHor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 13</value>
+  </data>
+  <data name="L_GT_ResHor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 13</value>
+  </data>
+  <data name="L_GT_ResHor.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="L_GT_ResHor.Text" xml:space="preserve">
+    <value>Horisontal resolution</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ResHor.Name" xml:space="preserve">
+    <value>L_GT_ResHor</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ResHor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ResHor.Parent" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ResHor.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="GT_GCF_Group.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="GT_GCF_Group.Size" type="System.Drawing.Size, System.Drawing">
+    <value>462, 258</value>
+  </data>
+  <data name="GT_GCF_Group.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GT_GCF_Group.Name" xml:space="preserve">
+    <value>GT_GCF_Group</value>
+  </data>
+  <data name="&gt;&gt;GT_GCF_Group.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_GCF_Group.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_GCF_Group.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="GT_Warning.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="GT_Warning.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -165,7 +1964,6 @@
   <data name="GT_Warning.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 32</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="GT_Warning.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
@@ -182,7 +1980,7 @@
     <value>GraphicTweaker</value>
   </data>
   <data name="&gt;&gt;GT_Warning.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <metadata name="GT_SaveApply.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -194,7 +1992,7 @@
     <value>155, 23</value>
   </data>
   <data name="GT_SaveApply.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
+    <value>7</value>
   </data>
   <data name="GT_SaveApply.Text" xml:space="preserve">
     <value>Save settings</value>
@@ -209,7 +2007,7 @@
     <value>GraphicTweaker</value>
   </data>
   <data name="&gt;&gt;GT_SaveApply.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <metadata name="GT_Maximum_Performance.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -221,7 +2019,7 @@
     <value>205, 23</value>
   </data>
   <data name="GT_Maximum_Performance.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
+    <value>6</value>
   </data>
   <data name="GT_Maximum_Performance.Text" xml:space="preserve">
     <value>Maximum performance</value>
@@ -236,7 +2034,7 @@
     <value>GraphicTweaker</value>
   </data>
   <data name="&gt;&gt;GT_Maximum_Performance.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <metadata name="GT_Maximum_Graphics.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -248,7 +2046,7 @@
     <value>205, 23</value>
   </data>
   <data name="GT_Maximum_Graphics.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
+    <value>5</value>
   </data>
   <data name="GT_Maximum_Graphics.Text" xml:space="preserve">
     <value>Maximum graphics</value>
@@ -263,7 +2061,7 @@
     <value>GraphicTweaker</value>
   </data>
   <data name="&gt;&gt;GT_Maximum_Graphics.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <metadata name="GT_LaunchOptions_Btn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -275,7 +2073,7 @@
     <value>22, 22</value>
   </data>
   <data name="GT_LaunchOptions_Btn.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
+    <value>4</value>
   </data>
   <data name="GT_LaunchOptions_Btn.Text" xml:space="preserve">
     <value>?</value>
@@ -290,7 +2088,7 @@
     <value>GraphicTweaker</value>
   </data>
   <data name="&gt;&gt;GT_LaunchOptions_Btn.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <metadata name="L_GT_LaunchOptions.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -305,7 +2103,7 @@
     <value>83, 13</value>
   </data>
   <data name="L_GT_LaunchOptions.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
+    <value>2</value>
   </data>
   <data name="L_GT_LaunchOptions.Text" xml:space="preserve">
     <value>Launch options:</value>
@@ -320,7 +2118,7 @@
     <value>GraphicTweaker</value>
   </data>
   <data name="&gt;&gt;L_GT_LaunchOptions.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <metadata name="GT_LaunchOptions.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -335,7 +2133,7 @@
     <value>308, 20</value>
   </data>
   <data name="GT_LaunchOptions.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;GT_LaunchOptions.Name" xml:space="preserve">
     <value>GT_LaunchOptions</value>
@@ -347,1063 +2145,7 @@
     <value>GraphicTweaker</value>
   </data>
   <data name="&gt;&gt;GT_LaunchOptions.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <metadata name="L_GT_HDR.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_GT_HDR.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_GT_HDR.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 212</value>
-  </data>
-  <data name="L_GT_HDR.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 13</value>
-  </data>
-  <data name="L_GT_HDR.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="L_GT_HDR.Text" xml:space="preserve">
-    <value>High Dynamic Range</value>
-  </data>
-  <data name="&gt;&gt;L_GT_HDR.Name" xml:space="preserve">
-    <value>L_GT_HDR</value>
-  </data>
-  <data name="&gt;&gt;L_GT_HDR.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_GT_HDR.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;L_GT_HDR.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <metadata name="L_GT_DxMode.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_GT_DxMode.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_GT_DxMode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 212</value>
-  </data>
-  <data name="L_GT_DxMode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 13</value>
-  </data>
-  <data name="L_GT_DxMode.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="L_GT_DxMode.Text" xml:space="preserve">
-    <value>DirectX mode</value>
-  </data>
-  <data name="&gt;&gt;L_GT_DxMode.Name" xml:space="preserve">
-    <value>L_GT_DxMode</value>
-  </data>
-  <data name="&gt;&gt;L_GT_DxMode.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_GT_DxMode.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;L_GT_DxMode.ZOrder" xml:space="preserve">
     <value>8</value>
-  </data>
-  <metadata name="L_GT_MotionBlur.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_GT_MotionBlur.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_GT_MotionBlur.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 212</value>
-  </data>
-  <data name="L_GT_MotionBlur.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 13</value>
-  </data>
-  <data name="L_GT_MotionBlur.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="L_GT_MotionBlur.Text" xml:space="preserve">
-    <value>Motion Blur</value>
-  </data>
-  <data name="&gt;&gt;L_GT_MotionBlur.Name" xml:space="preserve">
-    <value>L_GT_MotionBlur</value>
-  </data>
-  <data name="&gt;&gt;L_GT_MotionBlur.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_GT_MotionBlur.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;L_GT_MotionBlur.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <metadata name="GT_HDR.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_HDR.Items" xml:space="preserve">
-    <value>None</value>
-  </data>
-  <data name="GT_HDR.Items1" xml:space="preserve">
-    <value>Bloom</value>
-  </data>
-  <data name="GT_HDR.Items2" xml:space="preserve">
-    <value>Full</value>
-  </data>
-  <data name="GT_HDR.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 228</value>
-  </data>
-  <data name="GT_HDR.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 21</value>
-  </data>
-  <data name="GT_HDR.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="&gt;&gt;GT_HDR.Name" xml:space="preserve">
-    <value>GT_HDR</value>
-  </data>
-  <data name="&gt;&gt;GT_HDR.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_HDR.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GT_HDR.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <metadata name="GT_DxMode.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_DxMode.Items" xml:space="preserve">
-    <value>DirectX 8.0</value>
-  </data>
-  <data name="GT_DxMode.Items1" xml:space="preserve">
-    <value>DirectX 8.1</value>
-  </data>
-  <data name="GT_DxMode.Items2" xml:space="preserve">
-    <value>DirectX 9.0a</value>
-  </data>
-  <data name="GT_DxMode.Items3" xml:space="preserve">
-    <value>DirectX 9.0c</value>
-  </data>
-  <data name="GT_DxMode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>162, 228</value>
-  </data>
-  <data name="GT_DxMode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 21</value>
-  </data>
-  <data name="GT_DxMode.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="&gt;&gt;GT_DxMode.Name" xml:space="preserve">
-    <value>GT_DxMode</value>
-  </data>
-  <data name="&gt;&gt;GT_DxMode.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_DxMode.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GT_DxMode.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <metadata name="GT_ResVert.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_ResVert.Location" type="System.Drawing.Point, System.Drawing">
-    <value>162, 33</value>
-  </data>
-  <data name="GT_ResVert.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 20</value>
-  </data>
-  <data name="GT_ResVert.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;GT_ResVert.Name" xml:space="preserve">
-    <value>GT_ResVert</value>
-  </data>
-  <data name="&gt;&gt;GT_ResVert.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_ResVert.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GT_ResVert.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <metadata name="GT_ResHor.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_ResHor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 33</value>
-  </data>
-  <data name="GT_ResHor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 20</value>
-  </data>
-  <data name="GT_ResHor.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;GT_ResHor.Name" xml:space="preserve">
-    <value>GT_ResHor</value>
-  </data>
-  <data name="&gt;&gt;GT_ResHor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_ResHor.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GT_ResHor.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <metadata name="GT_MotionBlur.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_MotionBlur.Items" xml:space="preserve">
-    <value>Disabled</value>
-  </data>
-  <data name="GT_MotionBlur.Items1" xml:space="preserve">
-    <value>Enabled</value>
-  </data>
-  <data name="GT_MotionBlur.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 228</value>
-  </data>
-  <data name="GT_MotionBlur.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 21</value>
-  </data>
-  <data name="GT_MotionBlur.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="&gt;&gt;GT_MotionBlur.Name" xml:space="preserve">
-    <value>GT_MotionBlur</value>
-  </data>
-  <data name="&gt;&gt;GT_MotionBlur.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_MotionBlur.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GT_MotionBlur.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <metadata name="L_GT_VSync.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_GT_VSync.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_GT_VSync.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 163</value>
-  </data>
-  <data name="L_GT_VSync.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 13</value>
-  </data>
-  <data name="L_GT_VSync.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="L_GT_VSync.Text" xml:space="preserve">
-    <value>Wait for vertical sync</value>
-  </data>
-  <data name="&gt;&gt;L_GT_VSync.Name" xml:space="preserve">
-    <value>L_GT_VSync</value>
-  </data>
-  <data name="&gt;&gt;L_GT_VSync.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_GT_VSync.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;L_GT_VSync.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <metadata name="L_GT_Filtering.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_GT_Filtering.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_GT_Filtering.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 163</value>
-  </data>
-  <data name="L_GT_Filtering.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 13</value>
-  </data>
-  <data name="L_GT_Filtering.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="L_GT_Filtering.Text" xml:space="preserve">
-    <value>Filtering mode</value>
-  </data>
-  <data name="&gt;&gt;L_GT_Filtering.Name" xml:space="preserve">
-    <value>L_GT_Filtering</value>
-  </data>
-  <data name="&gt;&gt;L_GT_Filtering.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_GT_Filtering.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;L_GT_Filtering.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <metadata name="L_GT_AntiAliasing.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_GT_AntiAliasing.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_GT_AntiAliasing.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 163</value>
-  </data>
-  <data name="L_GT_AntiAliasing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 13</value>
-  </data>
-  <data name="L_GT_AntiAliasing.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="L_GT_AntiAliasing.Text" xml:space="preserve">
-    <value>Antialiasing mode</value>
-  </data>
-  <data name="&gt;&gt;L_GT_AntiAliasing.Name" xml:space="preserve">
-    <value>L_GT_AntiAliasing</value>
-  </data>
-  <data name="&gt;&gt;L_GT_AntiAliasing.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_GT_AntiAliasing.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;L_GT_AntiAliasing.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <metadata name="GT_VSync.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_VSync.Items" xml:space="preserve">
-    <value>Disabled</value>
-  </data>
-  <data name="GT_VSync.Items1" xml:space="preserve">
-    <value>Enabled</value>
-  </data>
-  <data name="GT_VSync.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 179</value>
-  </data>
-  <data name="GT_VSync.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 21</value>
-  </data>
-  <data name="GT_VSync.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;GT_VSync.Name" xml:space="preserve">
-    <value>GT_VSync</value>
-  </data>
-  <data name="&gt;&gt;GT_VSync.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_VSync.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GT_VSync.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <metadata name="GT_Filtering.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_Filtering.Items" xml:space="preserve">
-    <value>Bilinear</value>
-  </data>
-  <data name="GT_Filtering.Items1" xml:space="preserve">
-    <value>Trilinear</value>
-  </data>
-  <data name="GT_Filtering.Items2" xml:space="preserve">
-    <value>Anisotropic 2X</value>
-  </data>
-  <data name="GT_Filtering.Items3" xml:space="preserve">
-    <value>Anisotropic 4X</value>
-  </data>
-  <data name="GT_Filtering.Items4" xml:space="preserve">
-    <value>Anisotropic 8X</value>
-  </data>
-  <data name="GT_Filtering.Items5" xml:space="preserve">
-    <value>Anisotropic 16X</value>
-  </data>
-  <data name="GT_Filtering.Location" type="System.Drawing.Point, System.Drawing">
-    <value>162, 179</value>
-  </data>
-  <data name="GT_Filtering.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 21</value>
-  </data>
-  <data name="GT_Filtering.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;GT_Filtering.Name" xml:space="preserve">
-    <value>GT_Filtering</value>
-  </data>
-  <data name="&gt;&gt;GT_Filtering.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_Filtering.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GT_Filtering.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <metadata name="GT_AntiAliasing.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_AntiAliasing.Items" xml:space="preserve">
-    <value>None</value>
-  </data>
-  <data name="GT_AntiAliasing.Items1" xml:space="preserve">
-    <value>2X MSAA</value>
-  </data>
-  <data name="GT_AntiAliasing.Items2" xml:space="preserve">
-    <value>4X MSAA</value>
-  </data>
-  <data name="GT_AntiAliasing.Items3" xml:space="preserve">
-    <value>8X CSAA</value>
-  </data>
-  <data name="GT_AntiAliasing.Items4" xml:space="preserve">
-    <value>16X CSAA</value>
-  </data>
-  <data name="GT_AntiAliasing.Items5" xml:space="preserve">
-    <value>8X MSAA</value>
-  </data>
-  <data name="GT_AntiAliasing.Items6" xml:space="preserve">
-    <value>16XQ CSAA</value>
-  </data>
-  <data name="GT_AntiAliasing.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 179</value>
-  </data>
-  <data name="GT_AntiAliasing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 21</value>
-  </data>
-  <data name="GT_AntiAliasing.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;GT_AntiAliasing.Name" xml:space="preserve">
-    <value>GT_AntiAliasing</value>
-  </data>
-  <data name="&gt;&gt;GT_AntiAliasing.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_AntiAliasing.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GT_AntiAliasing.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <metadata name="L_GT_ColorCorrectionT.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_GT_ColorCorrectionT.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_GT_ColorCorrectionT.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 114</value>
-  </data>
-  <data name="L_GT_ColorCorrectionT.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 13</value>
-  </data>
-  <data name="L_GT_ColorCorrectionT.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="L_GT_ColorCorrectionT.Text" xml:space="preserve">
-    <value>Color correction</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ColorCorrectionT.Name" xml:space="preserve">
-    <value>L_GT_ColorCorrectionT</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ColorCorrectionT.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ColorCorrectionT.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ColorCorrectionT.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <metadata name="L_GT_ShadowQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_GT_ShadowQuality.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_GT_ShadowQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 114</value>
-  </data>
-  <data name="L_GT_ShadowQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 13</value>
-  </data>
-  <data name="L_GT_ShadowQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="L_GT_ShadowQuality.Text" xml:space="preserve">
-    <value>Shadow detail</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ShadowQuality.Name" xml:space="preserve">
-    <value>L_GT_ShadowQuality</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ShadowQuality.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ShadowQuality.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ShadowQuality.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <metadata name="L_GT_WaterQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_GT_WaterQuality.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_GT_WaterQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 114</value>
-  </data>
-  <data name="L_GT_WaterQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 13</value>
-  </data>
-  <data name="L_GT_WaterQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="L_GT_WaterQuality.Text" xml:space="preserve">
-    <value>Water detail</value>
-  </data>
-  <data name="&gt;&gt;L_GT_WaterQuality.Name" xml:space="preserve">
-    <value>L_GT_WaterQuality</value>
-  </data>
-  <data name="&gt;&gt;L_GT_WaterQuality.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_GT_WaterQuality.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;L_GT_WaterQuality.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <metadata name="GT_ColorCorrectionT.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_ColorCorrectionT.Items" xml:space="preserve">
-    <value>Disabled</value>
-  </data>
-  <data name="GT_ColorCorrectionT.Items1" xml:space="preserve">
-    <value>Enabled</value>
-  </data>
-  <data name="GT_ColorCorrectionT.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 130</value>
-  </data>
-  <data name="GT_ColorCorrectionT.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 21</value>
-  </data>
-  <data name="GT_ColorCorrectionT.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;GT_ColorCorrectionT.Name" xml:space="preserve">
-    <value>GT_ColorCorrectionT</value>
-  </data>
-  <data name="&gt;&gt;GT_ColorCorrectionT.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_ColorCorrectionT.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GT_ColorCorrectionT.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <metadata name="GT_ShadowQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_ShadowQuality.Items" xml:space="preserve">
-    <value>Low</value>
-  </data>
-  <data name="GT_ShadowQuality.Items1" xml:space="preserve">
-    <value>High</value>
-  </data>
-  <data name="GT_ShadowQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>162, 130</value>
-  </data>
-  <data name="GT_ShadowQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 21</value>
-  </data>
-  <data name="GT_ShadowQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;GT_ShadowQuality.Name" xml:space="preserve">
-    <value>GT_ShadowQuality</value>
-  </data>
-  <data name="&gt;&gt;GT_ShadowQuality.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_ShadowQuality.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GT_ShadowQuality.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <metadata name="GT_WaterQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_WaterQuality.Items" xml:space="preserve">
-    <value>Simple reflections</value>
-  </data>
-  <data name="GT_WaterQuality.Items1" xml:space="preserve">
-    <value>Reflect world</value>
-  </data>
-  <data name="GT_WaterQuality.Items2" xml:space="preserve">
-    <value>Reflect all</value>
-  </data>
-  <data name="GT_WaterQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 130</value>
-  </data>
-  <data name="GT_WaterQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 21</value>
-  </data>
-  <data name="GT_WaterQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;GT_WaterQuality.Name" xml:space="preserve">
-    <value>GT_WaterQuality</value>
-  </data>
-  <data name="&gt;&gt;GT_WaterQuality.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_WaterQuality.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GT_WaterQuality.ZOrder" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <metadata name="L_GT_ShaderQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_GT_ShaderQuality.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_GT_ShaderQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 65</value>
-  </data>
-  <data name="L_GT_ShaderQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 13</value>
-  </data>
-  <data name="L_GT_ShaderQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="L_GT_ShaderQuality.Text" xml:space="preserve">
-    <value>Shader detail</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ShaderQuality.Name" xml:space="preserve">
-    <value>L_GT_ShaderQuality</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ShaderQuality.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ShaderQuality.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ShaderQuality.ZOrder" xml:space="preserve">
-    <value>27</value>
-  </data>
-  <metadata name="L_GT_TextureQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_GT_TextureQuality.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_GT_TextureQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 65</value>
-  </data>
-  <data name="L_GT_TextureQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 13</value>
-  </data>
-  <data name="L_GT_TextureQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="L_GT_TextureQuality.Text" xml:space="preserve">
-    <value>Texture detail</value>
-  </data>
-  <data name="&gt;&gt;L_GT_TextureQuality.Name" xml:space="preserve">
-    <value>L_GT_TextureQuality</value>
-  </data>
-  <data name="&gt;&gt;L_GT_TextureQuality.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_GT_TextureQuality.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;L_GT_TextureQuality.ZOrder" xml:space="preserve">
-    <value>28</value>
-  </data>
-  <metadata name="L_GT_ModelQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_GT_ModelQuality.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_GT_ModelQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 65</value>
-  </data>
-  <data name="L_GT_ModelQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 13</value>
-  </data>
-  <data name="L_GT_ModelQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="L_GT_ModelQuality.Text" xml:space="preserve">
-    <value>Model detail</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ModelQuality.Name" xml:space="preserve">
-    <value>L_GT_ModelQuality</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ModelQuality.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ModelQuality.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ModelQuality.ZOrder" xml:space="preserve">
-    <value>29</value>
-  </data>
-  <metadata name="GT_ShaderQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_ShaderQuality.Items" xml:space="preserve">
-    <value>Low</value>
-  </data>
-  <data name="GT_ShaderQuality.Items1" xml:space="preserve">
-    <value>High</value>
-  </data>
-  <data name="GT_ShaderQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 81</value>
-  </data>
-  <data name="GT_ShaderQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 21</value>
-  </data>
-  <data name="GT_ShaderQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;GT_ShaderQuality.Name" xml:space="preserve">
-    <value>GT_ShaderQuality</value>
-  </data>
-  <data name="&gt;&gt;GT_ShaderQuality.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_ShaderQuality.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GT_ShaderQuality.ZOrder" xml:space="preserve">
-    <value>30</value>
-  </data>
-  <metadata name="GT_TextureQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_TextureQuality.Items" xml:space="preserve">
-    <value>Low</value>
-  </data>
-  <data name="GT_TextureQuality.Items1" xml:space="preserve">
-    <value>Medium</value>
-  </data>
-  <data name="GT_TextureQuality.Items2" xml:space="preserve">
-    <value>High</value>
-  </data>
-  <data name="GT_TextureQuality.Items3" xml:space="preserve">
-    <value>Very high</value>
-  </data>
-  <data name="GT_TextureQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>162, 81</value>
-  </data>
-  <data name="GT_TextureQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 21</value>
-  </data>
-  <data name="GT_TextureQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;GT_TextureQuality.Name" xml:space="preserve">
-    <value>GT_TextureQuality</value>
-  </data>
-  <data name="&gt;&gt;GT_TextureQuality.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_TextureQuality.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GT_TextureQuality.ZOrder" xml:space="preserve">
-    <value>31</value>
-  </data>
-  <metadata name="GT_ModelQuality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_ModelQuality.Items" xml:space="preserve">
-    <value>Low</value>
-  </data>
-  <data name="GT_ModelQuality.Items1" xml:space="preserve">
-    <value>Medium</value>
-  </data>
-  <data name="GT_ModelQuality.Items2" xml:space="preserve">
-    <value>High</value>
-  </data>
-  <data name="GT_ModelQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 81</value>
-  </data>
-  <data name="GT_ModelQuality.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 21</value>
-  </data>
-  <data name="GT_ModelQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;GT_ModelQuality.Name" xml:space="preserve">
-    <value>GT_ModelQuality</value>
-  </data>
-  <data name="&gt;&gt;GT_ModelQuality.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_ModelQuality.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GT_ModelQuality.ZOrder" xml:space="preserve">
-    <value>32</value>
-  </data>
-  <metadata name="L_GT_ScreenType.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_GT_ScreenType.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_GT_ScreenType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 17</value>
-  </data>
-  <data name="L_GT_ScreenType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 13</value>
-  </data>
-  <data name="L_GT_ScreenType.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="L_GT_ScreenType.Text" xml:space="preserve">
-    <value>Display mode</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ScreenType.Name" xml:space="preserve">
-    <value>L_GT_ScreenType</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ScreenType.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ScreenType.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ScreenType.ZOrder" xml:space="preserve">
-    <value>33</value>
-  </data>
-  <metadata name="L_GT_ResVert.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_GT_ResVert.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_GT_ResVert.Location" type="System.Drawing.Point, System.Drawing">
-    <value>158, 17</value>
-  </data>
-  <data name="L_GT_ResVert.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 13</value>
-  </data>
-  <data name="L_GT_ResVert.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="L_GT_ResVert.Text" xml:space="preserve">
-    <value>Vertical resolution</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ResVert.Name" xml:space="preserve">
-    <value>L_GT_ResVert</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ResVert.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ResVert.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ResVert.ZOrder" xml:space="preserve">
-    <value>34</value>
-  </data>
-  <metadata name="GT_ResVert_Btn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_ResVert_Btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 31</value>
-  </data>
-  <data name="GT_ResVert_Btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 22</value>
-  </data>
-  <data name="GT_ResVert_Btn.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="GT_ResVert_Btn.Text" xml:space="preserve">
-    <value>?</value>
-  </data>
-  <data name="&gt;&gt;GT_ResVert_Btn.Name" xml:space="preserve">
-    <value>GT_ResVert_Btn</value>
-  </data>
-  <data name="&gt;&gt;GT_ResVert_Btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_ResVert_Btn.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GT_ResVert_Btn.ZOrder" xml:space="preserve">
-    <value>35</value>
-  </data>
-  <metadata name="GT_ScreenType.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_ScreenType.Items" xml:space="preserve">
-    <value>Full screen</value>
-  </data>
-  <data name="GT_ScreenType.Items1" xml:space="preserve">
-    <value>Windowed</value>
-  </data>
-  <data name="GT_ScreenType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>309, 33</value>
-  </data>
-  <data name="GT_ScreenType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 21</value>
-  </data>
-  <data name="GT_ScreenType.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;GT_ScreenType.Name" xml:space="preserve">
-    <value>GT_ScreenType</value>
-  </data>
-  <data name="&gt;&gt;GT_ScreenType.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_ScreenType.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GT_ScreenType.ZOrder" xml:space="preserve">
-    <value>36</value>
-  </data>
-  <metadata name="GT_ResHor_Btn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_ResHor_Btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 31</value>
-  </data>
-  <data name="GT_ResHor_Btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 22</value>
-  </data>
-  <data name="GT_ResHor_Btn.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="GT_ResHor_Btn.Text" xml:space="preserve">
-    <value>?</value>
-  </data>
-  <data name="&gt;&gt;GT_ResHor_Btn.Name" xml:space="preserve">
-    <value>GT_ResHor_Btn</value>
-  </data>
-  <data name="&gt;&gt;GT_ResHor_Btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_ResHor_Btn.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GT_ResHor_Btn.ZOrder" xml:space="preserve">
-    <value>37</value>
-  </data>
-  <metadata name="L_GT_ResHor.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_GT_ResHor.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_GT_ResHor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 17</value>
-  </data>
-  <data name="L_GT_ResHor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 13</value>
-  </data>
-  <data name="L_GT_ResHor.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="L_GT_ResHor.Text" xml:space="preserve">
-    <value>Horisontal resolution</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ResHor.Name" xml:space="preserve">
-    <value>L_GT_ResHor</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ResHor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ResHor.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;L_GT_ResHor.ZOrder" xml:space="preserve">
-    <value>38</value>
-  </data>
-  <metadata name="GT_NCFWarnText.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_NCFWarnText.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9.75pt</value>
-  </data>
-  <data name="GT_NCFWarnText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 65</value>
-  </data>
-  <data name="GT_NCFWarnText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>344, 135</value>
-  </data>
-  <data name="GT_NCFWarnText.TabIndex" type="System.Int32, mscorlib">
-    <value>38</value>
-  </data>
-  <data name="GT_NCFWarnText.Text" xml:space="preserve">
-    <value>The controls on this page have been disabled because you have chosen experimentally supported game which settings are stored in the cloud. You can load graphics settings file in a text editor to manually edit. Changes made in this file take effect the next time you start the game. Be extremely careful.</value>
-  </data>
-  <data name="GT_NCFWarnText.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="GT_NCFWarnText.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;GT_NCFWarnText.Name" xml:space="preserve">
-    <value>GT_NCFWarnText</value>
-  </data>
-  <data name="&gt;&gt;GT_NCFWarnText.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_NCFWarnText.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GT_NCFWarnText.ZOrder" xml:space="preserve">
-    <value>39</value>
-  </data>
-  <metadata name="GT_NCF_LoadNotepad.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_NCF_LoadNotepad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 226</value>
-  </data>
-  <data name="GT_NCF_LoadNotepad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 23</value>
-  </data>
-  <data name="GT_NCF_LoadNotepad.TabIndex" type="System.Int32, mscorlib">
-    <value>39</value>
-  </data>
-  <data name="GT_NCF_LoadNotepad.Text" xml:space="preserve">
-    <value>Load settings file in a text editor</value>
-  </data>
-  <data name="GT_NCF_LoadNotepad.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;GT_NCF_LoadNotepad.Name" xml:space="preserve">
-    <value>GT_NCF_LoadNotepad</value>
-  </data>
-  <data name="&gt;&gt;GT_NCF_LoadNotepad.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_NCF_LoadNotepad.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GT_NCF_LoadNotepad.ZOrder" xml:space="preserve">
-    <value>40</value>
   </data>
   <data name="GraphicTweaker.ImageIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1411,7 +2153,6 @@
   <data name="GraphicTweaker.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 23</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="GraphicTweaker.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>

@@ -556,7 +556,7 @@ namespace srcrepair
                     Result = CVLine.Trim();
                 }
             }
-            catch { }
+            catch (Exception ex) { WriteStringToLog(ex.Message); }
             return Result;
         }
     }

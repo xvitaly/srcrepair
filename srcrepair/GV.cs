@@ -89,5 +89,11 @@ namespace srcrepair
          * редактора чёрного списка серверов.
          */
         public static string GameBLEnabled;
+
+        /*
+         * В этой переменной хранится путь к файлу с настройками видео,
+         * используется в NCF-играх.
+         */
+        public static string VideoCfgFile;
     }
 }

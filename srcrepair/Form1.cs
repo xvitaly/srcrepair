@@ -1094,46 +1094,8 @@ namespace srcrepair
         /// <param name="GCFGame">Тип управляемого приложения</param>
         private void SetGTOptsType(bool GCFGame)
         {
-            GT_ResHor.Visible = GCFGame;
-            GT_ResVert.Visible = GCFGame;
-            GT_ScreenType.Visible = GCFGame;
-            GT_ModelQuality.Visible = GCFGame;
-            GT_TextureQuality.Visible = GCFGame;
-            GT_ShaderQuality.Visible = GCFGame;
-            GT_WaterQuality.Visible = GCFGame;
-            GT_ShadowQuality.Visible = GCFGame;
-            GT_ColorCorrectionT.Visible = GCFGame;
-            GT_AntiAliasing.Visible = GCFGame;
-            GT_Filtering.Visible = GCFGame;
-            GT_VSync.Visible = GCFGame;
-            GT_MotionBlur.Visible = GCFGame;
-            GT_DxMode.Visible = GCFGame;
-            GT_HDR.Visible = GCFGame;
-            L_GT_ResHor.Visible = GCFGame;
-            L_GT_ResVert.Visible = GCFGame;
-            L_GT_ScreenType.Visible = GCFGame;
-            L_GT_ModelQuality.Visible = GCFGame;
-            L_GT_TextureQuality.Visible = GCFGame;
-            L_GT_ShaderQuality.Visible = GCFGame;
-            L_GT_WaterQuality.Visible = GCFGame;
-            L_GT_ShadowQuality.Visible = GCFGame;
-            L_GT_ColorCorrectionT.Visible = GCFGame;
-            L_GT_AntiAliasing.Visible = GCFGame;
-            L_GT_Filtering.Visible = GCFGame;
-            L_GT_VSync.Visible = GCFGame;
-            L_GT_MotionBlur.Visible = GCFGame;
-            L_GT_DxMode.Visible = GCFGame;
-            L_GT_HDR.Visible = GCFGame;
-            L_GT_LaunchOptions.Visible = GCFGame;
-            GT_LaunchOptions.Visible = GCFGame;
-            GT_LaunchOptions_Btn.Visible = GCFGame;
-            GT_ResHor_Btn.Visible = GCFGame;
-            GT_ResVert_Btn.Visible = GCFGame;
-            GT_Maximum_Graphics.Visible = GCFGame;
-            GT_Maximum_Performance.Visible = GCFGame;
-            GT_NCFWarnText.Visible = !GCFGame;
-            GT_NCF_LoadNotepad.Visible = !GCFGame;
-            GT_SaveApply.Visible = GCFGame;
+            GT_GCF_Group.Visible = GCFGame;
+            GT_NCF_Group.Visible = !GCFGame;
         }
 
         /// <summary>
@@ -1532,6 +1494,7 @@ namespace srcrepair
             // Заполняем другие служебные переменные...
             GV.FullCfgPath = Path.Combine(GV.FullGamePath, "cfg");
             GV.FullBackUpDirPath = Path.Combine(GV.AppUserDir, "backups", GV.SmallAppName);
+            GV.VideoCfgFile = Path.Combine(GV.FullGamePath, "cfg", "video.txt");
             
             // Включаем основные элементы управления (контролы)...
             MainTabControl.Enabled = true;
@@ -2706,19 +2669,6 @@ namespace srcrepair
             }
             // Обновим статусную строку...
             CheckSafeClnStatus();
-        }
-
-        private void GT_NCF_LoadNotepad_Click(object sender, EventArgs e)
-        {
-            string CfFileName = Path.Combine(GV.FullGamePath, "cfg", "video.txt");
-            if (File.Exists(CfFileName))
-            {
-                Process.Start("Notepad.exe", CfFileName);
-            }
-            else
-            {
-                MessageBox.Show(RM.GetString("AppNCFCFGNotExists"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
         }
 
         private void CE_OpenCVList_Click(object sender, EventArgs e)
