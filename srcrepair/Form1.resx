@@ -793,7 +793,7 @@
     <value>NoControl</value>
   </data>
   <data name="L_GT_ShaderQuality.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 61</value>
+    <value>306, 61</value>
   </data>
   <data name="L_GT_ShaderQuality.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 13</value>
@@ -1789,7 +1789,7 @@
     <value>True</value>
   </data>
   <data name="L_GT_NCF_VertRes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 13</value>
+    <value>158, 13</value>
   </data>
   <data name="L_GT_NCF_VertRes.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 13</value>
@@ -1852,7 +1852,7 @@
     <value>True</value>
   </data>
   <data name="L_GT_NCF_Ratio.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 13</value>
+    <value>303, 13</value>
   </data>
   <data name="L_GT_NCF_Ratio.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 13</value>
