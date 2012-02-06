@@ -605,6 +605,119 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Сохраняет графические настройки игры в файл.
+        /// </summary>
+        /// <param name="VFileName">Имя файла опций</param>
+        private void WriteNCFGameSettings(string VFileName)
+        {
+            // Начинаем сохранять содержимое редактора в файл...
+            using (StreamWriter CFile = new StreamWriter(VFileName))
+            {
+                string Templt = "\t" + @"""" + "{0}" + @"""" + "\t\t" + @"""" + "{1}" + @"""";
+                // Вставляем стандартный заголовок...
+                CFile.WriteLine(@"""" + "VideoConfig" + @"""");
+                CFile.WriteLine("{");
+                // Вставляем параметры...
+                // Обычные эффекты...
+                CFile.WriteLine(String.Format(Templt, "setting.cpu_level", GT_NCF_EffectD.SelectedIndex.ToString()));
+                // Шейдерные эффекты...
+                CFile.WriteLine(String.Format(Templt, "setting.gpu_level", GT_NCF_ShaderE.SelectedIndex.ToString()));
+                // Настройки сглаживания...
+                switch (GT_NCF_AntiAlias.SelectedIndex)
+                {
+                    case 0: CFile.WriteLine(String.Format(Templt, "setting.mat_antialias", "1"));
+                        CFile.WriteLine(String.Format(Templt, "setting.mat_aaquality", "0"));
+                        break;
+                    case 1: CFile.WriteLine(String.Format(Templt, "setting.mat_antialias", "2"));
+                        CFile.WriteLine(String.Format(Templt, "setting.mat_aaquality", "0"));
+                        break;
+                    case 2: CFile.WriteLine(String.Format(Templt, "setting.mat_antialias", "4"));
+                        CFile.WriteLine(String.Format(Templt, "setting.mat_aaquality", "0"));
+                        break;
+                    case 3: CFile.WriteLine(String.Format(Templt, "setting.mat_antialias", "4"));
+                        CFile.WriteLine(String.Format(Templt, "setting.mat_aaquality", "2"));
+                        break;
+                    case 4: CFile.WriteLine(String.Format(Templt, "setting.mat_antialias", "4"));
+                        CFile.WriteLine(String.Format(Templt, "setting.mat_aaquality", "4"));
+                        break;
+                    case 5: CFile.WriteLine(String.Format(Templt, "setting.mat_antialias", "8"));
+                        CFile.WriteLine(String.Format(Templt, "setting.mat_aaquality", "0"));
+                        break;
+                    case 6: CFile.WriteLine(String.Format(Templt, "setting.mat_antialias", "8"));
+                        CFile.WriteLine(String.Format(Templt, "setting.mat_aaquality", "2"));
+                        break;
+                }
+                // Фильтрация...
+                switch (GT_NCF_Filtering.SelectedIndex)
+                {
+                    case 0: CFile.WriteLine(String.Format(Templt, "setting.mat_forceaniso", "0"));
+                        break;
+                    case 1: CFile.WriteLine(String.Format(Templt, "setting.mat_forceaniso", "1"));
+                        break;
+                    case 2: CFile.WriteLine(String.Format(Templt, "setting.mat_forceaniso", "2"));
+                        break;
+                    case 3: CFile.WriteLine(String.Format(Templt, "setting.mat_forceaniso", "4"));
+                        break;
+                    case 4: CFile.WriteLine(String.Format(Templt, "setting.mat_forceaniso", "8"));
+                        break;
+                    case 5: CFile.WriteLine(String.Format(Templt, "setting.mat_forceaniso", "16"));
+                        break;
+                }
+                // Вертикальная синхронизация...
+                switch (GT_NCF_VSync.SelectedIndex)
+                {
+                    case 0: CFile.WriteLine(String.Format(Templt, "setting.mat_vsync", "0"));
+                        CFile.WriteLine(String.Format(Templt, "setting.mat_triplebuffered", "0"));
+                        break;
+                    case 1: CFile.WriteLine(String.Format(Templt, "setting.mat_vsync", "1"));
+                        CFile.WriteLine(String.Format(Templt, "setting.mat_triplebuffered", "0"));
+                        break;
+                    case 2: CFile.WriteLine(String.Format(Templt, "setting.mat_vsync", "1"));
+                        CFile.WriteLine(String.Format(Templt, "setting.mat_triplebuffered", "1"));
+                        break;
+                }
+                // Настройки зернистости...
+                CFile.WriteLine(String.Format(Templt, "setting.mat_grain_scale_override", "1"));
+                // Настройки гаммы...
+                CFile.WriteLine(String.Format(Templt, "setting.mat_monitorgamma", (((float)GT_NCF_Brightness.Value / 10).ToString() + "00000")).Replace(",", "."));
+                // Настройки качества моделей и текстур...
+                CFile.WriteLine(String.Format(Templt, "setting.gpu_mem_level", GT_NCF_Quality.SelectedIndex.ToString()));
+                // Настройки пула памяти...
+                CFile.WriteLine(String.Format(Templt, "setting.mem_level", GT_NCF_MemPool.SelectedIndex.ToString()));
+                // Настройки многоядерного рендеринга...
+                switch (GT_NCF_Multicore.SelectedIndex)
+                {
+                    case 0: CFile.WriteLine(String.Format(Templt, "setting.mat_queue_mode", "0"));
+                        break;
+                    case 1: CFile.WriteLine(String.Format(Templt, "setting.mat_queue_mode", "-1"));
+                        break;
+                }
+                // Настройки разрешения...
+                CFile.WriteLine(String.Format(Templt, "setting.defaultres", GT_NCF_HorRes.Value.ToString()));
+                CFile.WriteLine(String.Format(Templt, "setting.defaultresheight", GT_NCF_VertRes.Value.ToString()));
+                // Настройки соотношения сторон...
+                CFile.WriteLine(String.Format(Templt, "setting.aspectratiomode", GT_NCF_Ratio.SelectedIndex.ToString()));
+                // Настройки режима...
+                switch (GT_NCF_DispMode.SelectedIndex)
+                {
+                    case 0: CFile.WriteLine(String.Format(Templt, "setting.fullscreen", "1"));
+                        CFile.WriteLine(String.Format(Templt, "setting.nowindowborder", "0"));
+                        break;
+                    case 1: CFile.WriteLine(String.Format(Templt, "setting.fullscreen", "0"));
+                        CFile.WriteLine(String.Format(Templt, "setting.nowindowborder", "0"));
+                        break;
+                    case 2: CFile.WriteLine(String.Format(Templt, "setting.fullscreen", "1"));
+                        CFile.WriteLine(String.Format(Templt, "setting.nowindowborder", "1"));
+                        break;
+                }
+                // Завершающая скобка...
+                CFile.WriteLine("}");
+                // Закрываем файл...
+                CFile.Close();
+            }
+        }
+
+        /// <summary>
         /// Получает настройки GCF-игры из реестра и заполняет полученными
         /// данными страницу графического твикера.
         /// </summary>
@@ -1959,8 +2072,36 @@ namespace srcrepair
                 else
                 {
                     // Это NCF-приложение, поэтому будем записывать настройки в файл...
-
-                    // TODO: реализовать запись таблицы в файл...
+                    if ((GT_NCF_Quality.SelectedIndex != -1) && (GT_NCF_MemPool.SelectedIndex != -1)
+                        && (GT_NCF_EffectD.SelectedIndex != -1) && (GT_NCF_ShaderE.SelectedIndex != -1)
+                        && (GT_NCF_Multicore.SelectedIndex != -1) && (GT_NCF_VSync.SelectedIndex != -1)
+                        && (GT_NCF_Filtering.SelectedIndex != -1) && (GT_NCF_AntiAlias.SelectedIndex != -1)
+                        && (GT_NCF_DispMode.SelectedIndex != -1) && (GT_NCF_Ratio.SelectedIndex != -1))
+                    {
+                        // Создадим бэкап файла с графическими настройками...
+                        if (Properties.Settings.Default.SafeCleanup)
+                        {
+                            if (File.Exists(GV.VideoCfgFile))
+                            {
+                                CreateBackUpNow(Path.GetFileName(GV.VideoCfgFile), Path.GetDirectoryName(GV.VideoCfgFile), GV.FullBackUpDirPath);
+                            }
+                        }
+                        
+                        // Записываем...
+                        try
+                        {
+                            WriteNCFGameSettings(GV.VideoCfgFile);
+                            MessageBox.Show(RM.GetString("GT_SaveSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception Ex)
+                        {
+                            CoreLib.HandleExceptionEx(RM.GetString("GT_NCFFailure"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(RM.GetString("GT_NCFNReady"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
 
                 // Запишем в реестр пользовательскую строку запуска TF2...

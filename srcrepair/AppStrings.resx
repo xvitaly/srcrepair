@@ -528,4 +528,10 @@
   <data name="AppChangeLogin" xml:space="preserve">
     <value>Attention! On the selected Steam login we can't detect any installed supported games. Please select another login from list.</value>
   </data>
+  <data name="GT_NCFFailure" xml:space="preserve">
+    <value>An error occurred while saving the game graphics settings into a file!</value>
+  </data>
+  <data name="GT_NCFNReady" xml:space="preserve">
+    <value>Warning! To save the graphical settings, you must fill in all the forms!</value>
+  </data>
 </root>

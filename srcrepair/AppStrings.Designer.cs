@@ -673,6 +673,24 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while saving the game graphics settings into a file!.
+        /// </summary>
+        internal static string GT_NCFFailure {
+            get {
+                return ResourceManager.GetString("GT_NCFFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warning! To save the graphical settings, you must fill in all the forms!.
+        /// </summary>
+        internal static string GT_NCFNReady {
+            get {
+                return ResourceManager.GetString("GT_NCFNReady", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Done. Do not forget to adjust and save the changes in the settings!.
         /// </summary>
         internal static string GT_PerfSet {
