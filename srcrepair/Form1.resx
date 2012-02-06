@@ -126,65 +126,83 @@
   <metadata name="GT_NCF_Group.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="GT_NCF_GPULev.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="GT_NCF_Quality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="GT_NCF_GPULev.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 225</value>
+  <data name="GT_NCF_Quality.Items" xml:space="preserve">
+    <value>Low</value>
   </data>
-  <data name="GT_NCF_GPULev.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 20</value>
+  <data name="GT_NCF_Quality.Items1" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="GT_NCF_Quality.Items2" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="GT_NCF_Quality.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 224</value>
+  </data>
+  <data name="GT_NCF_Quality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 21</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="GT_NCF_GPULev.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;GT_NCF_GPULev.Name" xml:space="preserve">
-    <value>GT_NCF_GPULev</value>
-  </data>
-  <data name="&gt;&gt;GT_NCF_GPULev.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_NCF_GPULev.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
-  </data>
-  <data name="&gt;&gt;GT_NCF_GPULev.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="L_GT_NCF_GPULev.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_GT_NCF_GPULev.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_GT_NCF_GPULev.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 208</value>
-  </data>
-  <data name="L_GT_NCF_GPULev.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 13</value>
-  </data>
-  <data name="L_GT_NCF_GPULev.TabIndex" type="System.Int32, mscorlib">
+  <data name="GT_NCF_Quality.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
-  <data name="L_GT_NCF_GPULev.Text" xml:space="preserve">
-    <value>GPU level:</value>
+  <data name="&gt;&gt;GT_NCF_Quality.Name" xml:space="preserve">
+    <value>GT_NCF_Quality</value>
   </data>
-  <data name="&gt;&gt;L_GT_NCF_GPULev.Name" xml:space="preserve">
-    <value>L_GT_NCF_GPULev</value>
+  <data name="&gt;&gt;GT_NCF_Quality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;L_GT_NCF_GPULev.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_GT_NCF_GPULev.Parent" xml:space="preserve">
+  <data name="&gt;&gt;GT_NCF_Quality.Parent" xml:space="preserve">
     <value>GT_NCF_Group</value>
   </data>
-  <data name="&gt;&gt;L_GT_NCF_GPULev.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;GT_NCF_Quality.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="L_GT_NCF_Quality.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_GT_NCF_Quality.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_GT_NCF_Quality.Location" type="System.Drawing.Point, System.Drawing">
+    <value>303, 208</value>
+  </data>
+  <data name="L_GT_NCF_Quality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 13</value>
+  </data>
+  <data name="L_GT_NCF_Quality.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="L_GT_NCF_Quality.Text" xml:space="preserve">
+    <value>Model and texture detail:</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_Quality.Name" xml:space="preserve">
+    <value>L_GT_NCF_Quality</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_Quality.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_Quality.Parent" xml:space="preserve">
+    <value>GT_NCF_Group</value>
+  </data>
+  <data name="&gt;&gt;L_GT_NCF_Quality.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="GT_NCF_MemPool.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="GT_NCF_MemPool.Items" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="GT_NCF_MemPool.Items1" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="GT_NCF_MemPool.Items2" xml:space="preserve">
+    <value>High</value>
+  </data>
   <data name="GT_NCF_MemPool.Location" type="System.Drawing.Point, System.Drawing">
     <value>165, 224</value>
   </data>
@@ -239,6 +257,15 @@
   <metadata name="GT_NCF_EffectD.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="GT_NCF_EffectD.Items" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="GT_NCF_EffectD.Items1" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="GT_NCF_EffectD.Items2" xml:space="preserve">
+    <value>High</value>
+  </data>
   <data name="GT_NCF_EffectD.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 224</value>
   </data>
@@ -293,6 +320,18 @@
   <metadata name="GT_NCF_ShaderE.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="GT_NCF_ShaderE.Items" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="GT_NCF_ShaderE.Items1" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="GT_NCF_ShaderE.Items2" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="GT_NCF_ShaderE.Items3" xml:space="preserve">
+    <value>Very High</value>
+  </data>
   <data name="GT_NCF_ShaderE.Location" type="System.Drawing.Point, System.Drawing">
     <value>306, 175</value>
   </data>
@@ -347,6 +386,12 @@
   <metadata name="GT_NCF_Multicore.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="GT_NCF_Multicore.Items" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="GT_NCF_Multicore.Items1" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
   <data name="GT_NCF_Multicore.Location" type="System.Drawing.Point, System.Drawing">
     <value>165, 175</value>
   </data>
@@ -401,6 +446,15 @@
   <metadata name="GT_NCF_VSync.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="GT_NCF_VSync.Items" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="GT_NCF_VSync.Items1" xml:space="preserve">
+    <value>Enabled (double buffered)</value>
+  </data>
+  <data name="GT_NCF_VSync.Items2" xml:space="preserve">
+    <value>Enabled (triple buffered)</value>
+  </data>
   <data name="GT_NCF_VSync.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 175</value>
   </data>
@@ -455,6 +509,24 @@
   <metadata name="GT_NCF_Filtering.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="GT_NCF_Filtering.Items" xml:space="preserve">
+    <value>Bilinear</value>
+  </data>
+  <data name="GT_NCF_Filtering.Items1" xml:space="preserve">
+    <value>Trilinear</value>
+  </data>
+  <data name="GT_NCF_Filtering.Items2" xml:space="preserve">
+    <value>Anisotropic 2X</value>
+  </data>
+  <data name="GT_NCF_Filtering.Items3" xml:space="preserve">
+    <value>Anisotropic 4X</value>
+  </data>
+  <data name="GT_NCF_Filtering.Items4" xml:space="preserve">
+    <value>Anisotropic 8X</value>
+  </data>
+  <data name="GT_NCF_Filtering.Items5" xml:space="preserve">
+    <value>Anisotropic 16X</value>
+  </data>
   <data name="GT_NCF_Filtering.Location" type="System.Drawing.Point, System.Drawing">
     <value>306, 126</value>
   </data>
@@ -509,6 +581,27 @@
   <metadata name="GT_NCF_AntiAlias.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="GT_NCF_AntiAlias.Items" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="GT_NCF_AntiAlias.Items1" xml:space="preserve">
+    <value>2X MSAA</value>
+  </data>
+  <data name="GT_NCF_AntiAlias.Items2" xml:space="preserve">
+    <value>4X MSAA</value>
+  </data>
+  <data name="GT_NCF_AntiAlias.Items3" xml:space="preserve">
+    <value>8X CSAA</value>
+  </data>
+  <data name="GT_NCF_AntiAlias.Items4" xml:space="preserve">
+    <value>16X CSAA</value>
+  </data>
+  <data name="GT_NCF_AntiAlias.Items5" xml:space="preserve">
+    <value>8X MSAA</value>
+  </data>
+  <data name="GT_NCF_AntiAlias.Items6" xml:space="preserve">
+    <value>16XQ CSAA</value>
+  </data>
   <data name="GT_NCF_AntiAlias.Location" type="System.Drawing.Point, System.Drawing">
     <value>166, 126</value>
   </data>
@@ -563,6 +656,15 @@
   <metadata name="GT_NCF_DispMode.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="GT_NCF_DispMode.Items" xml:space="preserve">
+    <value>Full screen</value>
+  </data>
+  <data name="GT_NCF_DispMode.Items1" xml:space="preserve">
+    <value>Windowed</value>
+  </data>
+  <data name="GT_NCF_DispMode.Items2" xml:space="preserve">
+    <value>Windowed (no border)</value>
+  </data>
   <data name="GT_NCF_DispMode.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 126</value>
   </data>
@@ -647,6 +749,15 @@
   <metadata name="GT_NCF_Ratio.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="GT_NCF_Ratio.Items" xml:space="preserve">
+    <value>Normal (4:3)</value>
+  </data>
+  <data name="GT_NCF_Ratio.Items1" xml:space="preserve">
+    <value>Widescreen (16:9)</value>
+  </data>
+  <data name="GT_NCF_Ratio.Items2" xml:space="preserve">
+    <value>Widescreen (16:10)</value>
+  </data>
   <data name="GT_NCF_Ratio.Location" type="System.Drawing.Point, System.Drawing">
     <value>306, 29</value>
   </data>

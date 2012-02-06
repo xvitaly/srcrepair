@@ -33,6 +33,16 @@
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
             this.GT_NCF_Group = new System.Windows.Forms.Panel();
+            this.GT_NCF_Quality = new System.Windows.Forms.ComboBox();
+            this.L_GT_NCF_Quality = new System.Windows.Forms.Label();
+            this.GT_NCF_MemPool = new System.Windows.Forms.ComboBox();
+            this.L_GT_NCF_MemPool = new System.Windows.Forms.Label();
+            this.GT_NCF_EffectD = new System.Windows.Forms.ComboBox();
+            this.L_GT_NCF_EffectD = new System.Windows.Forms.Label();
+            this.GT_NCF_ShaderE = new System.Windows.Forms.ComboBox();
+            this.L_GT_NCF_ShaderE = new System.Windows.Forms.Label();
+            this.GT_NCF_Multicore = new System.Windows.Forms.ComboBox();
+            this.L_GT_NCF_Multicore = new System.Windows.Forms.Label();
             this.GT_NCF_VSync = new System.Windows.Forms.ComboBox();
             this.L_GT_NCF_VSync = new System.Windows.Forms.Label();
             this.GT_NCF_Filtering = new System.Windows.Forms.ComboBox();
@@ -215,16 +225,6 @@
             this.CE_OpenCfgDialog = new System.Windows.Forms.OpenFileDialog();
             this.CE_SaveCfgDialog = new System.Windows.Forms.SaveFileDialog();
             this.FldrBrwse = new System.Windows.Forms.FolderBrowserDialog();
-            this.L_GT_NCF_Multicore = new System.Windows.Forms.Label();
-            this.GT_NCF_Multicore = new System.Windows.Forms.ComboBox();
-            this.L_GT_NCF_ShaderE = new System.Windows.Forms.Label();
-            this.GT_NCF_ShaderE = new System.Windows.Forms.ComboBox();
-            this.L_GT_NCF_EffectD = new System.Windows.Forms.Label();
-            this.GT_NCF_EffectD = new System.Windows.Forms.ComboBox();
-            this.L_GT_NCF_MemPool = new System.Windows.Forms.Label();
-            this.GT_NCF_MemPool = new System.Windows.Forms.ComboBox();
-            this.L_GT_NCF_GPULev = new System.Windows.Forms.Label();
-            this.GT_NCF_GPULev = new System.Windows.Forms.NumericUpDown();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             this.GT_NCF_Group.SuspendLayout();
@@ -249,7 +249,6 @@
             this.BU_BToolbar.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.StatusBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GT_NCF_GPULev)).BeginInit();
             this.SuspendLayout();
             // 
             // MainTabControl
@@ -282,8 +281,8 @@
             // 
             // GT_NCF_Group
             // 
-            this.GT_NCF_Group.Controls.Add(this.GT_NCF_GPULev);
-            this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_GPULev);
+            this.GT_NCF_Group.Controls.Add(this.GT_NCF_Quality);
+            this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_Quality);
             this.GT_NCF_Group.Controls.Add(this.GT_NCF_MemPool);
             this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_MemPool);
             this.GT_NCF_Group.Controls.Add(this.GT_NCF_EffectD);
@@ -311,10 +310,94 @@
             resources.ApplyResources(this.GT_NCF_Group, "GT_NCF_Group");
             this.GT_NCF_Group.Name = "GT_NCF_Group";
             // 
+            // GT_NCF_Quality
+            // 
+            this.GT_NCF_Quality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GT_NCF_Quality.FormattingEnabled = true;
+            this.GT_NCF_Quality.Items.AddRange(new object[] {
+            resources.GetString("GT_NCF_Quality.Items"),
+            resources.GetString("GT_NCF_Quality.Items1"),
+            resources.GetString("GT_NCF_Quality.Items2")});
+            resources.ApplyResources(this.GT_NCF_Quality, "GT_NCF_Quality");
+            this.GT_NCF_Quality.Name = "GT_NCF_Quality";
+            // 
+            // L_GT_NCF_Quality
+            // 
+            resources.ApplyResources(this.L_GT_NCF_Quality, "L_GT_NCF_Quality");
+            this.L_GT_NCF_Quality.Name = "L_GT_NCF_Quality";
+            // 
+            // GT_NCF_MemPool
+            // 
+            this.GT_NCF_MemPool.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GT_NCF_MemPool.FormattingEnabled = true;
+            this.GT_NCF_MemPool.Items.AddRange(new object[] {
+            resources.GetString("GT_NCF_MemPool.Items"),
+            resources.GetString("GT_NCF_MemPool.Items1"),
+            resources.GetString("GT_NCF_MemPool.Items2")});
+            resources.ApplyResources(this.GT_NCF_MemPool, "GT_NCF_MemPool");
+            this.GT_NCF_MemPool.Name = "GT_NCF_MemPool";
+            // 
+            // L_GT_NCF_MemPool
+            // 
+            resources.ApplyResources(this.L_GT_NCF_MemPool, "L_GT_NCF_MemPool");
+            this.L_GT_NCF_MemPool.Name = "L_GT_NCF_MemPool";
+            // 
+            // GT_NCF_EffectD
+            // 
+            this.GT_NCF_EffectD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GT_NCF_EffectD.FormattingEnabled = true;
+            this.GT_NCF_EffectD.Items.AddRange(new object[] {
+            resources.GetString("GT_NCF_EffectD.Items"),
+            resources.GetString("GT_NCF_EffectD.Items1"),
+            resources.GetString("GT_NCF_EffectD.Items2")});
+            resources.ApplyResources(this.GT_NCF_EffectD, "GT_NCF_EffectD");
+            this.GT_NCF_EffectD.Name = "GT_NCF_EffectD";
+            // 
+            // L_GT_NCF_EffectD
+            // 
+            resources.ApplyResources(this.L_GT_NCF_EffectD, "L_GT_NCF_EffectD");
+            this.L_GT_NCF_EffectD.Name = "L_GT_NCF_EffectD";
+            // 
+            // GT_NCF_ShaderE
+            // 
+            this.GT_NCF_ShaderE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GT_NCF_ShaderE.FormattingEnabled = true;
+            this.GT_NCF_ShaderE.Items.AddRange(new object[] {
+            resources.GetString("GT_NCF_ShaderE.Items"),
+            resources.GetString("GT_NCF_ShaderE.Items1"),
+            resources.GetString("GT_NCF_ShaderE.Items2"),
+            resources.GetString("GT_NCF_ShaderE.Items3")});
+            resources.ApplyResources(this.GT_NCF_ShaderE, "GT_NCF_ShaderE");
+            this.GT_NCF_ShaderE.Name = "GT_NCF_ShaderE";
+            // 
+            // L_GT_NCF_ShaderE
+            // 
+            resources.ApplyResources(this.L_GT_NCF_ShaderE, "L_GT_NCF_ShaderE");
+            this.L_GT_NCF_ShaderE.Name = "L_GT_NCF_ShaderE";
+            // 
+            // GT_NCF_Multicore
+            // 
+            this.GT_NCF_Multicore.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GT_NCF_Multicore.FormattingEnabled = true;
+            this.GT_NCF_Multicore.Items.AddRange(new object[] {
+            resources.GetString("GT_NCF_Multicore.Items"),
+            resources.GetString("GT_NCF_Multicore.Items1")});
+            resources.ApplyResources(this.GT_NCF_Multicore, "GT_NCF_Multicore");
+            this.GT_NCF_Multicore.Name = "GT_NCF_Multicore";
+            // 
+            // L_GT_NCF_Multicore
+            // 
+            resources.ApplyResources(this.L_GT_NCF_Multicore, "L_GT_NCF_Multicore");
+            this.L_GT_NCF_Multicore.Name = "L_GT_NCF_Multicore";
+            // 
             // GT_NCF_VSync
             // 
             this.GT_NCF_VSync.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GT_NCF_VSync.FormattingEnabled = true;
+            this.GT_NCF_VSync.Items.AddRange(new object[] {
+            resources.GetString("GT_NCF_VSync.Items"),
+            resources.GetString("GT_NCF_VSync.Items1"),
+            resources.GetString("GT_NCF_VSync.Items2")});
             resources.ApplyResources(this.GT_NCF_VSync, "GT_NCF_VSync");
             this.GT_NCF_VSync.Name = "GT_NCF_VSync";
             // 
@@ -327,6 +410,13 @@
             // 
             this.GT_NCF_Filtering.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GT_NCF_Filtering.FormattingEnabled = true;
+            this.GT_NCF_Filtering.Items.AddRange(new object[] {
+            resources.GetString("GT_NCF_Filtering.Items"),
+            resources.GetString("GT_NCF_Filtering.Items1"),
+            resources.GetString("GT_NCF_Filtering.Items2"),
+            resources.GetString("GT_NCF_Filtering.Items3"),
+            resources.GetString("GT_NCF_Filtering.Items4"),
+            resources.GetString("GT_NCF_Filtering.Items5")});
             resources.ApplyResources(this.GT_NCF_Filtering, "GT_NCF_Filtering");
             this.GT_NCF_Filtering.Name = "GT_NCF_Filtering";
             // 
@@ -339,6 +429,14 @@
             // 
             this.GT_NCF_AntiAlias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GT_NCF_AntiAlias.FormattingEnabled = true;
+            this.GT_NCF_AntiAlias.Items.AddRange(new object[] {
+            resources.GetString("GT_NCF_AntiAlias.Items"),
+            resources.GetString("GT_NCF_AntiAlias.Items1"),
+            resources.GetString("GT_NCF_AntiAlias.Items2"),
+            resources.GetString("GT_NCF_AntiAlias.Items3"),
+            resources.GetString("GT_NCF_AntiAlias.Items4"),
+            resources.GetString("GT_NCF_AntiAlias.Items5"),
+            resources.GetString("GT_NCF_AntiAlias.Items6")});
             resources.ApplyResources(this.GT_NCF_AntiAlias, "GT_NCF_AntiAlias");
             this.GT_NCF_AntiAlias.Name = "GT_NCF_AntiAlias";
             // 
@@ -351,6 +449,10 @@
             // 
             this.GT_NCF_DispMode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GT_NCF_DispMode.FormattingEnabled = true;
+            this.GT_NCF_DispMode.Items.AddRange(new object[] {
+            resources.GetString("GT_NCF_DispMode.Items"),
+            resources.GetString("GT_NCF_DispMode.Items1"),
+            resources.GetString("GT_NCF_DispMode.Items2")});
             resources.ApplyResources(this.GT_NCF_DispMode, "GT_NCF_DispMode");
             this.GT_NCF_DispMode.Name = "GT_NCF_DispMode";
             // 
@@ -368,6 +470,10 @@
             // 
             this.GT_NCF_Ratio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GT_NCF_Ratio.FormattingEnabled = true;
+            this.GT_NCF_Ratio.Items.AddRange(new object[] {
+            resources.GetString("GT_NCF_Ratio.Items"),
+            resources.GetString("GT_NCF_Ratio.Items1"),
+            resources.GetString("GT_NCF_Ratio.Items2")});
             resources.ApplyResources(this.GT_NCF_Ratio, "GT_NCF_Ratio");
             this.GT_NCF_Ratio.Name = "GT_NCF_Ratio";
             // 
@@ -1741,64 +1847,6 @@
             // 
             this.FldrBrwse.ShowNewFolderButton = false;
             // 
-            // L_GT_NCF_Multicore
-            // 
-            resources.ApplyResources(this.L_GT_NCF_Multicore, "L_GT_NCF_Multicore");
-            this.L_GT_NCF_Multicore.Name = "L_GT_NCF_Multicore";
-            // 
-            // GT_NCF_Multicore
-            // 
-            this.GT_NCF_Multicore.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.GT_NCF_Multicore.FormattingEnabled = true;
-            resources.ApplyResources(this.GT_NCF_Multicore, "GT_NCF_Multicore");
-            this.GT_NCF_Multicore.Name = "GT_NCF_Multicore";
-            // 
-            // L_GT_NCF_ShaderE
-            // 
-            resources.ApplyResources(this.L_GT_NCF_ShaderE, "L_GT_NCF_ShaderE");
-            this.L_GT_NCF_ShaderE.Name = "L_GT_NCF_ShaderE";
-            // 
-            // GT_NCF_ShaderE
-            // 
-            this.GT_NCF_ShaderE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.GT_NCF_ShaderE.FormattingEnabled = true;
-            resources.ApplyResources(this.GT_NCF_ShaderE, "GT_NCF_ShaderE");
-            this.GT_NCF_ShaderE.Name = "GT_NCF_ShaderE";
-            // 
-            // L_GT_NCF_EffectD
-            // 
-            resources.ApplyResources(this.L_GT_NCF_EffectD, "L_GT_NCF_EffectD");
-            this.L_GT_NCF_EffectD.Name = "L_GT_NCF_EffectD";
-            // 
-            // GT_NCF_EffectD
-            // 
-            this.GT_NCF_EffectD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.GT_NCF_EffectD.FormattingEnabled = true;
-            resources.ApplyResources(this.GT_NCF_EffectD, "GT_NCF_EffectD");
-            this.GT_NCF_EffectD.Name = "GT_NCF_EffectD";
-            // 
-            // L_GT_NCF_MemPool
-            // 
-            resources.ApplyResources(this.L_GT_NCF_MemPool, "L_GT_NCF_MemPool");
-            this.L_GT_NCF_MemPool.Name = "L_GT_NCF_MemPool";
-            // 
-            // GT_NCF_MemPool
-            // 
-            this.GT_NCF_MemPool.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.GT_NCF_MemPool.FormattingEnabled = true;
-            resources.ApplyResources(this.GT_NCF_MemPool, "GT_NCF_MemPool");
-            this.GT_NCF_MemPool.Name = "GT_NCF_MemPool";
-            // 
-            // L_GT_NCF_GPULev
-            // 
-            resources.ApplyResources(this.L_GT_NCF_GPULev, "L_GT_NCF_GPULev");
-            this.L_GT_NCF_GPULev.Name = "L_GT_NCF_GPULev";
-            // 
-            // GT_NCF_GPULev
-            // 
-            resources.ApplyResources(this.GT_NCF_GPULev, "GT_NCF_GPULev");
-            this.GT_NCF_GPULev.Name = "GT_NCF_GPULev";
-            // 
             // frmMainW
             // 
             resources.ApplyResources(this, "$this");
@@ -1854,7 +1902,6 @@
             this.MainMenu.PerformLayout();
             this.StatusBar.ResumeLayout(false);
             this.StatusBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GT_NCF_GPULev)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2047,8 +2094,7 @@
         private System.Windows.Forms.Label L_GT_NCF_AntiAlias;
         private System.Windows.Forms.ComboBox GT_NCF_DispMode;
         private System.Windows.Forms.Label L_GT_NCF_DispMode;
-        private System.Windows.Forms.NumericUpDown GT_NCF_GPULev;
-        private System.Windows.Forms.Label L_GT_NCF_GPULev;
+        private System.Windows.Forms.Label L_GT_NCF_Quality;
         private System.Windows.Forms.ComboBox GT_NCF_MemPool;
         private System.Windows.Forms.Label L_GT_NCF_MemPool;
         private System.Windows.Forms.ComboBox GT_NCF_EffectD;
@@ -2057,6 +2103,7 @@
         private System.Windows.Forms.Label L_GT_NCF_ShaderE;
         private System.Windows.Forms.ComboBox GT_NCF_Multicore;
         private System.Windows.Forms.Label L_GT_NCF_Multicore;
+        private System.Windows.Forms.ComboBox GT_NCF_Quality;
     }
 }
 
