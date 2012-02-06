@@ -95,5 +95,11 @@ namespace srcrepair
          * используется в NCF-играх.
          */
         public static string VideoCfgFile;
+
+        /*
+         * Содержит имя каталога с конфигами. Используется в последних
+         * играх.
+         */
+        public static string ConfDir;
     }
 }

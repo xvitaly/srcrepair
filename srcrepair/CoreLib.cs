@@ -541,9 +541,9 @@ namespace srcrepair
         /// </summary>
         /// <param name="CVar">Переменная</param>
         /// <param name="CFileName">Имя файла конфига</param>
-        public static string GetNCFDWord(string CVar, string CFileName)
+        public static int GetNCFDWord(string CVar, string CFileName)
         {
-            string Result = null;
+            string Result = "";
             try
             {
                 string CVLine = FindLineContText(CVar, CFileName);
@@ -557,7 +557,27 @@ namespace srcrepair
                 }
             }
             catch (Exception ex) { WriteStringToLog(ex.Message); }
-            return Result;
+            return Convert.ToInt32(Result);
+        }
+
+        public static double GetNCFDble(string CVar, string CFileName)
+        {
+            string Result = "";
+            try
+            {
+                string CVLine = FindLineContText(CVar, CFileName);
+                if (!(String.IsNullOrEmpty(CVLine)))
+                {
+                    while (CVLine.IndexOf("\t") != -1) { CVLine = CVLine.Replace("\t", " "); }
+                    CVLine = CVLine.Replace(".", ",");
+                    while (CVLine.IndexOf("  ") != -1) { CVLine = CVLine.Replace("  ", " "); }
+                    CVLine = CVLine.Substring(CVLine.LastIndexOf(" "));
+                    while (CVLine.IndexOf(@"""") != -1) { CVLine = CVLine.Replace(@"""", ""); }
+                    Result = CVLine.Trim();
+                }
+            }
+            catch (Exception ex) { WriteStringToLog(ex.Message); }
+            return Double.Parse(Result);
         }
     }
 }

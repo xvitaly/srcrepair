@@ -894,6 +894,210 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Получает настройки NCF-игры из файла и заполняет ими таблицу
+        /// графического твикера программы.
+        /// </summary>
+        /// <param name="VFileName">Путь к файлу с настройками</param>
+        private void ReadNCFGameSettings(string VFileName)
+        {
+            // Получаем значение разрешения по горизонтали...
+            try
+            {
+                GT_NCF_HorRes.Value = CoreLib.GetNCFDWord("setting.defaultres", VFileName);
+            }
+            catch
+            {
+                GT_NCF_HorRes.Value = 800;
+            }
+            // Получаем значение разрешения по вертикали...
+            try
+            {
+                GT_NCF_VertRes.Value = CoreLib.GetNCFDWord("setting.defaultresheight", VFileName);
+            }
+            catch
+            {
+                GT_NCF_VertRes.Value = 600;
+            }
+            // Получаем настройки соотношения сторон...
+            try
+            {
+                GT_NCF_Ratio.SelectedIndex = CoreLib.GetNCFDWord("setting.aspectratiomode", VFileName);
+            }
+            catch
+            {
+                GT_NCF_Ratio.SelectedIndex = -1;
+            }
+            // Получаем настройки яркости...
+            try
+            {
+                GT_NCF_Brightness.Value = Convert.ToInt32(CoreLib.GetNCFDble("setting.mat_monitorgamma", VFileName) * 10);
+            }
+            catch
+            {
+                GT_NCF_Brightness.Value = 18;
+            }
+            // Получаем настройки режима...
+            try
+            {
+                switch (CoreLib.GetNCFDWord("setting.fullscreen", VFileName))
+                {
+                    case 0:
+                        switch (CoreLib.GetNCFDWord("setting.nowindowborder", VFileName))
+                        {
+                            case 0: GT_NCF_DispMode.SelectedIndex = 1;
+                                break;
+                            case 1: GT_NCF_DispMode.SelectedIndex = 2;
+                                break;
+                        }
+                        break;
+                    case 1: GT_NCF_DispMode.SelectedIndex = 0;
+                        break;
+                }
+            }
+            catch
+            {
+                GT_NCF_DispMode.SelectedIndex = -1;
+            }
+            // Получаем настройки сглаживания текстур...
+            try
+            {
+                switch (CoreLib.GetNCFDWord("setting.mat_antialias", VFileName))
+                {
+                    case 0: GT_NCF_AntiAlias.SelectedIndex = 0;
+                        break;
+                    case 1: GT_NCF_AntiAlias.SelectedIndex = 0;
+                        break;
+                    case 2: GT_NCF_AntiAlias.SelectedIndex = 1;
+                        break;
+                    case 4:
+                        switch (CoreLib.GetNCFDWord("setting.mat_aaquality", VFileName))
+                        {
+                            case 0: GT_NCF_AntiAlias.SelectedIndex = 2;
+                                break;
+                            case 2: GT_NCF_AntiAlias.SelectedIndex = 3;
+                                break;
+                            case 4: GT_NCF_AntiAlias.SelectedIndex = 4;
+                                break;
+                        }
+                        break;
+                    case 8:
+                        switch (CoreLib.GetNCFDWord("setting.mat_aaquality", VFileName))
+                        {
+                            case 0: GT_NCF_AntiAlias.SelectedIndex = 5;
+                                break;
+                            case 2: GT_NCF_AntiAlias.SelectedIndex = 6;
+                                break;
+                        }
+                        break;
+                }
+            }
+            catch
+            {
+                GT_NCF_AntiAlias.SelectedIndex = -1;
+            }
+            // Получаем настройки фильтрации текстур...
+            try
+            {
+                switch (CoreLib.GetNCFDWord("setting.mat_forceaniso", VFileName))
+                {
+                    case 0: GT_NCF_Filtering.SelectedIndex = 0;
+                        break;
+                    case 1: GT_NCF_Filtering.SelectedIndex = 1;
+                        break;
+                    case 2: GT_NCF_Filtering.SelectedIndex = 2;
+                        break;
+                    case 4: GT_NCF_Filtering.SelectedIndex = 3;
+                        break;
+                    case 8: GT_NCF_Filtering.SelectedIndex = 4;
+                        break;
+                    case 16: GT_NCF_Filtering.SelectedIndex = 5;
+                        break;
+                }
+            }
+            catch
+            {
+                GT_NCF_Filtering.SelectedIndex = -1;
+            }
+            // Получаем настройки вертикальной синхронизации...
+            try
+            {
+                switch (CoreLib.GetNCFDWord("setting.mat_vsync", VFileName))
+                {
+                    case 0: GT_NCF_VSync.SelectedIndex = 0;
+                        break;
+                    case 1:
+                        switch (CoreLib.GetNCFDWord("setting.mat_triplebuffered", VFileName))
+                        {
+                            case 0: GT_NCF_VSync.SelectedIndex = 1;
+                                break;
+                            case 1: GT_NCF_VSync.SelectedIndex = 2;
+                                break;
+                        }
+                        break;
+                }
+            }
+            catch
+            {
+                GT_NCF_VSync.SelectedIndex = -1;
+            }
+            // Получаем настройки многоядерного рендеринга...
+            try
+            {
+                switch (CoreLib.GetNCFDWord("setting.mat_queue_mode", VFileName))
+                {
+                    case -1: GT_NCF_Multicore.SelectedIndex = 1;
+                        break;
+                    case 0: GT_NCF_Multicore.SelectedIndex = 0;
+                        break;
+                    case 1: GT_NCF_Multicore.SelectedIndex = 1;
+                        break;
+                    case 2: GT_NCF_Multicore.SelectedIndex = 1;
+                        break;
+                }
+            }
+            catch
+            {
+                GT_NCF_Multicore.SelectedIndex = -1;
+            }
+            // Получаем настройки качества шейдерных эффектов...
+            try
+            {
+                GT_NCF_ShaderE.SelectedIndex = CoreLib.GetNCFDWord("setting.gpu_level", VFileName);
+            }
+            catch
+            {
+                GT_NCF_ShaderE.SelectedIndex = -1;
+            }
+            // Получаем настройки эффектов...
+            try
+            {
+                GT_NCF_EffectD.SelectedIndex = CoreLib.GetNCFDWord("setting.cpu_level", VFileName);
+            }
+            catch
+            {
+                GT_NCF_EffectD.SelectedIndex = -1;
+            }
+            // Получаем настройки пула памяти...
+            try
+            {
+                GT_NCF_MemPool.SelectedIndex = CoreLib.GetNCFDWord("setting.mem_level", VFileName);
+            }
+            catch
+            {
+                GT_NCF_MemPool.SelectedIndex = -1;
+            }
+            // Получаем настройки качества моделей и текстур...
+            try
+            {
+                GT_NCF_Quality.SelectedIndex = CoreLib.GetNCFDWord("setting.gpu_mem_level", VFileName);
+            }
+            catch
+            {
+                GT_NCF_Quality.SelectedIndex = -1;
+            }
+        }
+
+        /// <summary>
         /// Открывает конфиг, имя которого передано в качестве параметра
         /// и заполняет им Редактор конфигов с одноимённой страницы.
         /// </summary>
@@ -1457,6 +1661,7 @@ namespace srcrepair
                         GV.SmallAppName = XMLD.GetElementsByTagName("SmallName")[i].InnerText;
                         GV.GameInternalID = XMLD.GetElementsByTagName("SID")[i].InnerText;
                         GV.GameBLEnabled = XMLD.GetElementsByTagName("IsMP")[i].InnerText;
+                        GV.ConfDir = XMLD.GetElementsByTagName("VFDir")[i].InnerText;
                         if (XMLD.GetElementsByTagName("IsGCF")[i].InnerText == "1")
                         {
                             GV.IsGCFApp = true;
@@ -1494,7 +1699,7 @@ namespace srcrepair
             // Заполняем другие служебные переменные...
             GV.FullCfgPath = Path.Combine(GV.FullGamePath, "cfg");
             GV.FullBackUpDirPath = Path.Combine(GV.AppUserDir, "backups", GV.SmallAppName);
-            GV.VideoCfgFile = Path.Combine(GV.FullGamePath, "cfg", "video.txt");
+            GV.VideoCfgFile = Path.Combine(GV.GamePath, GV.ConfDir, "cfg", "video.txt");
             
             // Включаем основные элементы управления (контролы)...
             MainTabControl.Enabled = true;
@@ -1515,11 +1720,15 @@ namespace srcrepair
                 if (!(Properties.Settings.Default.AllowNCFUnsafeOps)) { EnableCleanButtons(false); }
                 
                 //NullGraphOptions();
-                
-                // Приложение NCF, поэтому настройки хранятся не в реестре, а в
-                // файле video.txt. Будем парсить...
-                
-                // TODO: реализовать парсинг файла video.txt и заполнить таблицу из него...
+
+                if (File.Exists(GV.VideoCfgFile))
+                {
+                    ReadNCFGameSettings(GV.VideoCfgFile);
+                }
+                else
+                {
+                    MessageBox.Show("AAA");
+                }
             }
 
             // Переключаем графический твикер в режим GCF/NCF...
