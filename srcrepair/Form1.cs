@@ -1365,21 +1365,19 @@ namespace srcrepair
         /// </summary>
         private void NullGraphOptions()
         {
-            GT_ResHor.Value = 640;
-            GT_ResVert.Value = 480;
-            GT_ScreenType.SelectedIndex = -1;
-            GT_ModelQuality.SelectedIndex = -1;
-            GT_TextureQuality.SelectedIndex = -1;
-            GT_ShaderQuality.SelectedIndex = -1;
-            GT_WaterQuality.SelectedIndex = -1;
-            GT_ShadowQuality.SelectedIndex = -1;
-            GT_ColorCorrectionT.SelectedIndex = -1;
-            GT_AntiAliasing.SelectedIndex = -1;
-            GT_Filtering.SelectedIndex = -1;
-            GT_VSync.SelectedIndex = -1;
-            GT_MotionBlur.SelectedIndex = -1;
-            GT_DxMode.SelectedIndex = -1;
-            GT_HDR.SelectedIndex = -1;
+            GT_NCF_HorRes.Value = 640;
+            GT_NCF_VertRes.Value = 480;
+            GT_NCF_Brightness.Value = 18;
+            GT_NCF_Ratio.SelectedIndex = -1;
+            GT_NCF_DispMode.SelectedIndex = -1;
+            GT_NCF_AntiAlias.SelectedIndex = -1;
+            GT_NCF_Filtering.SelectedIndex = -1;
+            GT_NCF_VSync.SelectedIndex = -1;
+            GT_NCF_Multicore.SelectedIndex = -1;
+            GT_NCF_ShaderE.SelectedIndex = -1;
+            GT_NCF_EffectD.SelectedIndex = -1;
+            GT_NCF_MemPool.SelectedIndex = -1;
+            GT_NCF_Quality.SelectedIndex = -1;
         }
 
         /// <summary>
@@ -1831,8 +1829,6 @@ namespace srcrepair
                 // Отключим модули очистки...
                 PS_ResetSettings.Enabled = false;
                 if (!(Properties.Settings.Default.AllowNCFUnsafeOps)) { EnableCleanButtons(false); }
-                
-                //NullGraphOptions();
 
                 if (File.Exists(GV.VideoCfgFile))
                 {
@@ -1840,7 +1836,7 @@ namespace srcrepair
                 }
                 else
                 {
-                    MessageBox.Show("AAA");
+                    NullGraphOptions();
                 }
             }
 
