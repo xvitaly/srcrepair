@@ -2554,10 +2554,21 @@ namespace srcrepair
                             string OrigName = FName;
                             // Отбрасываем двойное расширение...
                             FName = Path.GetFileNameWithoutExtension(FName);
+                            string DestDirW;
+                            // Определяем в какой каталог помещать восстановленный файл...
+                            switch (Path.GetExtension(FName))
+                            {
+                                case ".cfg": DestDirW = GV.FullCfgPath;
+                                    break;
+                                case ".txt": DestDirW = Path.Combine(GV.GamePath, GV.ConfDir, "cfg");
+                                    break;
+                                default: DestDirW = GV.FullCfgPath;
+                                    break;
+                            }
                             try
                             {
                                 // Копируем файл...
-                                File.Copy(Path.Combine(GV.FullBackUpDirPath, OrigName), Path.Combine(GV.FullCfgPath, FName), true);
+                                File.Copy(Path.Combine(GV.FullBackUpDirPath, OrigName), Path.Combine(DestDirW, FName), true);
                                 // Если восстановили autoexec.cfg, отображаем значок на странице графического твикера...
                                 if (FName == "autoexec.cfg") { GT_Warning.Visible = true; }
                                 // Показываем сообщение об успешном восстановлении...
