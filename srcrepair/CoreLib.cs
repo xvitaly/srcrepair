@@ -537,6 +537,19 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Извлекает значение переменной из строки.
+        /// </summary>
+        /// <param name="LineA">Строка для извлечения</param>
+        public static string ExtractCVFromLine(string LineA)
+        {
+            while (LineA.IndexOf("\t") != -1) { LineA = LineA.Replace("\t", " "); }
+            while (LineA.IndexOf("  ") != -1) { LineA = LineA.Replace("  ", " "); }
+            LineA = LineA.Substring(LineA.LastIndexOf(" "));
+            while (LineA.IndexOf(@"""") != -1) { LineA = LineA.Replace(@"""", ""); }
+            return LineA.Trim();
+        }
+
+        /// <summary>
         /// Возвращает значение переменной, переданной в параметре, хранящейся в файле.
         /// </summary>
         /// <param name="CVar">Переменная</param>
@@ -547,36 +560,26 @@ namespace srcrepair
             try
             {
                 string CVLine = FindLineContText(CVar, CFileName);
-                if (!(String.IsNullOrEmpty(CVLine)))
-                {
-                    while (CVLine.IndexOf("\t") != -1) { CVLine = CVLine.Replace("\t", " "); }
-                    while (CVLine.IndexOf("  ") != -1) { CVLine = CVLine.Replace("  ", " "); }
-                    CVLine = CVLine.Substring(CVLine.LastIndexOf(" "));
-                    while (CVLine.IndexOf(@"""") != -1) { CVLine = CVLine.Replace(@"""", ""); }
-                    Result = CVLine.Trim();
-                }
+                if (!(String.IsNullOrEmpty(CVLine))) { Result = ExtractCVFromLine(CVLine); }
             }
-            catch (Exception ex) { WriteStringToLog(ex.Message); }
+            catch (Exception Ex) { WriteStringToLog(Ex.Message); }
             return Convert.ToInt32(Result);
         }
 
+        /// <summary>
+        /// Возвращает значение переменной типа double, переданной в параметре, хранящейся в файле.
+        /// </summary>
+        /// <param name="CVar">Переменная</param>
+        /// <param name="CFileName">Имя файла конфига</param>
         public static double GetNCFDble(string CVar, string CFileName)
         {
             string Result = "";
             try
             {
                 string CVLine = FindLineContText(CVar, CFileName);
-                if (!(String.IsNullOrEmpty(CVLine)))
-                {
-                    while (CVLine.IndexOf("\t") != -1) { CVLine = CVLine.Replace("\t", " "); }
-                    CVLine = CVLine.Replace(".", ",");
-                    while (CVLine.IndexOf("  ") != -1) { CVLine = CVLine.Replace("  ", " "); }
-                    CVLine = CVLine.Substring(CVLine.LastIndexOf(" "));
-                    while (CVLine.IndexOf(@"""") != -1) { CVLine = CVLine.Replace(@"""", ""); }
-                    Result = CVLine.Trim();
-                }
+                if (!(String.IsNullOrEmpty(CVLine))) { Result = ExtractCVFromLine(CVLine); Result = Result.Replace(".", ","); }
             }
-            catch (Exception ex) { WriteStringToLog(ex.Message); }
+            catch (Exception Ex) { WriteStringToLog(Ex.Message); }
             return Double.Parse(Result);
         }
     }
