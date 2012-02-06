@@ -117,59 +117,177 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="GT_NCF_Quality.Items" xml:space="preserve">
+    <value>Низкое</value>
+  </data>
+  <data name="GT_NCF_Quality.Items1" xml:space="preserve">
+    <value>Среднее</value>
+  </data>
+  <data name="GT_NCF_Quality.Items2" xml:space="preserve">
+    <value>Высокое</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="GT_Warning.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        RU5ErkJggg==
-</value>
+  <data name="L_GT_NCF_Quality.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 13</value>
   </data>
-  <data name="GT_SaveApply.Text" xml:space="preserve">
-    <value>Сохранить</value>
+  <data name="L_GT_NCF_Quality.Text" xml:space="preserve">
+    <value>Качество мод. и текстур:</value>
   </data>
-  <data name="GT_Maximum_Performance.Text" xml:space="preserve">
-    <value>Максимальная производительность</value>
+  <data name="GT_NCF_MemPool.Items" xml:space="preserve">
+    <value>Низкий</value>
   </data>
-  <data name="GT_Maximum_Graphics.Text" xml:space="preserve">
-    <value>Максимальное качество</value>
+  <data name="GT_NCF_MemPool.Items1" xml:space="preserve">
+    <value>Средний</value>
   </data>
-  <data name="L_GT_LaunchOptions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 13</value>
+  <data name="GT_NCF_MemPool.Items2" xml:space="preserve">
+    <value>Высокий</value>
   </data>
-  <data name="L_GT_LaunchOptions.Text" xml:space="preserve">
-    <value>Параметры запуска игры:</value>
+  <data name="L_GT_NCF_MemPool.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 13</value>
   </data>
-  <data name="GT_LaunchOptions.Location" type="System.Drawing.Point, System.Drawing">
-    <value>161, 264</value>
+  <data name="L_GT_NCF_MemPool.Text" xml:space="preserve">
+    <value>Доступный пул памяти:</value>
   </data>
-  <data name="GT_LaunchOptions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>251, 20</value>
+  <data name="GT_NCF_EffectD.Items" xml:space="preserve">
+    <value>Низкая</value>
+  </data>
+  <data name="GT_NCF_EffectD.Items1" xml:space="preserve">
+    <value>Средняя</value>
+  </data>
+  <data name="GT_NCF_EffectD.Items2" xml:space="preserve">
+    <value>Высокая</value>
+  </data>
+  <data name="L_GT_NCF_EffectD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 13</value>
+  </data>
+  <data name="L_GT_NCF_EffectD.Text" xml:space="preserve">
+    <value>Детальность эффектов:</value>
+  </data>
+  <data name="GT_NCF_ShaderE.Items" xml:space="preserve">
+    <value>Низкие</value>
+  </data>
+  <data name="GT_NCF_ShaderE.Items1" xml:space="preserve">
+    <value>Средние</value>
+  </data>
+  <data name="GT_NCF_ShaderE.Items2" xml:space="preserve">
+    <value>Высокие</value>
+  </data>
+  <data name="GT_NCF_ShaderE.Items3" xml:space="preserve">
+    <value>Очень высокие</value>
+  </data>
+  <data name="L_GT_NCF_ShaderE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 13</value>
+  </data>
+  <data name="L_GT_NCF_ShaderE.Text" xml:space="preserve">
+    <value>Шейдерные эффекты:</value>
+  </data>
+  <data name="GT_NCF_Multicore.Items" xml:space="preserve">
+    <value>Отключён</value>
+  </data>
+  <data name="GT_NCF_Multicore.Items1" xml:space="preserve">
+    <value>Включён</value>
+  </data>
+  <data name="L_GT_NCF_Multicore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 13</value>
+  </data>
+  <data name="L_GT_NCF_Multicore.Text" xml:space="preserve">
+    <value>Многоядерный рендер:</value>
+  </data>
+  <data name="GT_NCF_VSync.Items" xml:space="preserve">
+    <value>Отключена</value>
+  </data>
+  <data name="GT_NCF_VSync.Items1" xml:space="preserve">
+    <value>Включена (двойной буфер)</value>
+  </data>
+  <data name="GT_NCF_VSync.Items2" xml:space="preserve">
+    <value>Включена (тройной буфер)</value>
+  </data>
+  <data name="L_GT_NCF_VSync.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 13</value>
+  </data>
+  <data name="L_GT_NCF_VSync.Text" xml:space="preserve">
+    <value>Верт. синхронизация:</value>
+  </data>
+  <data name="GT_NCF_Filtering.Items" xml:space="preserve">
+    <value>Билинейная</value>
+  </data>
+  <data name="GT_NCF_Filtering.Items1" xml:space="preserve">
+    <value>Трилинейная</value>
+  </data>
+  <data name="GT_NCF_Filtering.Items2" xml:space="preserve">
+    <value>Анизотропная 2X</value>
+  </data>
+  <data name="GT_NCF_Filtering.Items3" xml:space="preserve">
+    <value>Анизотропная 4X</value>
+  </data>
+  <data name="GT_NCF_Filtering.Items4" xml:space="preserve">
+    <value>Анизотропная 8X</value>
+  </data>
+  <data name="GT_NCF_Filtering.Items5" xml:space="preserve">
+    <value>Анизотропная 16X</value>
+  </data>
+  <data name="L_GT_NCF_Filtering.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 13</value>
+  </data>
+  <data name="L_GT_NCF_Filtering.Text" xml:space="preserve">
+    <value>Режим фильтрации:</value>
+  </data>
+  <data name="GT_NCF_AntiAlias.Items" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="L_GT_NCF_AntiAlias.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 13</value>
+  </data>
+  <data name="L_GT_NCF_AntiAlias.Text" xml:space="preserve">
+    <value>Режим сглаживания:</value>
+  </data>
+  <data name="GT_NCF_DispMode.Items" xml:space="preserve">
+    <value>На весь экран</value>
+  </data>
+  <data name="GT_NCF_DispMode.Items1" xml:space="preserve">
+    <value>В окне</value>
+  </data>
+  <data name="GT_NCF_DispMode.Items2" xml:space="preserve">
+    <value>В окне (без рамки)</value>
+  </data>
+  <data name="L_GT_NCF_DispMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 13</value>
+  </data>
+  <data name="L_GT_NCF_DispMode.Text" xml:space="preserve">
+    <value>Режим отображения:</value>
+  </data>
+  <data name="L_GT_NCF_VertRes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 13</value>
+  </data>
+  <data name="L_GT_NCF_VertRes.Text" xml:space="preserve">
+    <value>Разрешение по вертик.:</value>
+  </data>
+  <data name="GT_NCF_Ratio.Items" xml:space="preserve">
+    <value>Обычный (4:3)</value>
+  </data>
+  <data name="GT_NCF_Ratio.Items1" xml:space="preserve">
+    <value>Широкий (16:9)</value>
+  </data>
+  <data name="GT_NCF_Ratio.Items2" xml:space="preserve">
+    <value>Широкий (16:10)</value>
+  </data>
+  <data name="L_GT_NCF_Ratio.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 13</value>
+  </data>
+  <data name="L_GT_NCF_Ratio.Text" xml:space="preserve">
+    <value>Формат экрана:</value>
+  </data>
+  <data name="L_GT_NCF_Brightness.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="L_GT_NCF_Brightness.Text" xml:space="preserve">
+    <value>Яркость:</value>
+  </data>
+  <data name="L_GT_NCF_HorRes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 13</value>
+  </data>
+  <data name="L_GT_NCF_HorRes.Text" xml:space="preserve">
+    <value>Разрешение по горизонт.:</value>
   </data>
   <data name="L_GT_HDR.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
@@ -354,11 +472,58 @@
   <data name="L_GT_ResHor.Text" xml:space="preserve">
     <value>Разрешение по горизонт.</value>
   </data>
-  <data name="GT_NCFWarnText.Text" xml:space="preserve">
-    <value>Элементы управления на этой странице были отключены, так как Вы выбрали экспериментально поддерживаемую игру, настройки которой хранятся в облаке. Вы можете загрузить файл графических настроек в текстовый редактор для ручного редактирования. Изменения, внесённые в данный файл, вступят в силу при следующем запуске игры. Будьте крайне осторожны.</value>
+  <data name="GT_Warning.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        RU5ErkJggg==
+</value>
   </data>
-  <data name="GT_NCF_LoadNotepad.Text" xml:space="preserve">
-    <value>Редактировать файл настроек</value>
+  <data name="GT_SaveApply.Text" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="GT_Maximum_Performance.Text" xml:space="preserve">
+    <value>Максимальная производительность</value>
+  </data>
+  <data name="GT_Maximum_Graphics.Text" xml:space="preserve">
+    <value>Максимальное качество</value>
+  </data>
+  <data name="L_GT_LaunchOptions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 13</value>
+  </data>
+  <data name="L_GT_LaunchOptions.Text" xml:space="preserve">
+    <value>Параметры запуска игры:</value>
+  </data>
+  <data name="GT_LaunchOptions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>161, 264</value>
+  </data>
+  <data name="GT_LaunchOptions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 20</value>
   </data>
   <data name="GraphicTweaker.Text" xml:space="preserve">
     <value>Графические настройки</value>
