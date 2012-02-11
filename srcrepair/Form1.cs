@@ -2659,7 +2659,17 @@ namespace srcrepair
                 // Создадим резервную копию графических настроек игры...
                 try
                 {
-                    CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_Options", GV.FullBackUpDirPath);
+                    if (GV.IsGCFApp)
+                    {
+                        CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_Options", GV.FullBackUpDirPath);
+                    }
+                    else
+                    {
+                        if (File.Exists(GV.VideoCfgFile))
+                        {
+                            CreateBackUpNow(Path.GetFileName(GV.VideoCfgFile), Path.GetDirectoryName(GV.VideoCfgFile), GV.FullBackUpDirPath);
+                        }
+                    }
                     MessageBox.Show(RM.GetString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     BUT_Refresh.PerformClick();
                 }
