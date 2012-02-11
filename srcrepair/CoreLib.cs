@@ -513,7 +513,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="Rx">Подстрока для поиска</param>
         /// <param name="FileName">Имя файла</param>
-        public static string FindLineContText(string Rx, string FileName)
+        private static string FindLineContText(string Rx, string FileName)
         {
             string ImpStr;
             string Result = null;
@@ -540,7 +540,7 @@ namespace srcrepair
         /// Извлекает значение переменной из строки.
         /// </summary>
         /// <param name="LineA">Строка для извлечения</param>
-        public static string ExtractCVFromLine(string LineA)
+        private static string ExtractCVFromLine(string LineA)
         {
             while (LineA.IndexOf("\t") != -1) { LineA = LineA.Replace("\t", " "); }
             while (LineA.IndexOf("  ") != -1) { LineA = LineA.Replace("  ", " "); }
