@@ -8,9 +8,15 @@ namespace srcrepair
     public class GV
     {
         /*
-         * Эта константа хранит имя приложения для служебных целей
+         * Эта константа хранит имя приложения для служебных целей.
          */
         public const string AppName = "SRC Repair";
+
+        /*
+         * Этот массив содержит имена службных каталогов Steam, которые не будет
+         * отображаться в списке доступных для выбора логинов.
+         */
+        public static string[] InternalDirs = { "common", "sourcemods", "media", "staging", "temp", "build", "downloading" };
         
         /*
          * В этой переменной мы будем хранить полный путь к каталогу установленного
