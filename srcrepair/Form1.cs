@@ -1547,7 +1547,7 @@ namespace srcrepair
                 foreach (DirectoryInfo DItem in DirList)
                 {
                     // Фильтруем известные каталоги...
-                    if ((DItem.Name != "common") && (DItem.Name != "sourcemods") && (DItem.Name != "media") && (DItem.Name != "staging") && (DItem.Name != "temp") && (DItem.Name != "build"))
+                    if ((DItem.Name != "common") && (DItem.Name != "sourcemods") && (DItem.Name != "media") && (DItem.Name != "staging") && (DItem.Name != "temp") && (DItem.Name != "build") && (DItem.Name != "downloading"))
                     {
                         // Добавляем найденный логин в список ComboBox...
                         LoginSel.Items.Add((string)DItem.Name);
