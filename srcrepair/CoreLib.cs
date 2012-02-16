@@ -29,6 +29,7 @@ using System.Security.Principal; // для определения прав ад�
 using System.Resources; // для управления ресурсами...
 using System.Threading; // для управления потоками...
 using System.Net; // для скачивания файлов...
+using System.Security.Cryptography; // для расчёта хешей...
 
 namespace srcrepair
 {
@@ -581,6 +582,21 @@ namespace srcrepair
             }
             catch (Exception Ex) { WriteStringToLog(Ex.Message); }
             return Double.Parse(Result);
+        }
+
+        /// <summary>
+        /// Вычисляет MD5 хеш файла.
+        /// </summary>
+        /// <param name="FileName">Имя файла</param>
+        public static string CalculateFileMD5(string FileName)
+        {
+            FileStream FileP = new FileStream(FileName, FileMode.Open);
+            MD5 MD5Crypt = new MD5CryptoServiceProvider();
+            byte[] RValue = MD5Crypt.ComputeHash(FileP);
+            FileP.Close();
+            StringBuilder StrRes = new StringBuilder();
+            for (int i = 0; i < RValue.Length; i++) { StrRes.Append(RValue[i].ToString("x2")); }
+            return StrRes.ToString();
         }
     }
 }

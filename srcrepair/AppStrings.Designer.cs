@@ -1285,6 +1285,24 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Update is not required because you have the latest version of the game database..
+        /// </summary>
+        internal static string UPD_GamL_Latest {
+            get {
+                return ResourceManager.GetString("UPD_GamL_Latest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The game database has been updated successfully. Restart this program or choose a different Steam login..
+        /// </summary>
+        internal static string UPD_GamL_Updated {
+            get {
+                return ResourceManager.GetString("UPD_GamL_Updated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update is not required because you have the latest version of the program..
         /// </summary>
         internal static string UPD_LatestInstalled {

@@ -1473,6 +1473,7 @@ namespace srcrepair
                 MNUHEd.Enabled = false;
                 MNUUpdateCheck.Enabled = false;
                 MNUWinMnuDisabler.Enabled = false;
+                MNUUpGameDB.Enabled = false;
             }
             
             // Получаем информацию о версии нашего приложения...
@@ -3141,6 +3142,55 @@ namespace srcrepair
         {
             // Удаляем кастомные звуки...
             OpenCleanupWindow(Path.Combine(GV.FullGamePath, "sound"), "*.*", ((Button)sender).Text.ToLower());
+        }
+
+        private void MNUUpGameDB_Click(object sender, EventArgs e)
+        {
+            // Обновим базу поддерживаемых программой игр...
+            // Сохраним текущее содержимое статусной строки...
+            string StatusBarCurrText = SB_Status.Text;
+            // Выведем сообщение о проверке обновлений...
+            SB_Status.Text = RM.GetString("AppCheckingForUpdates");
+            // Начинаем проверку...
+            try
+            {
+                // Получаем файл с номером версии и ссылкой на новую...
+                string DBHash;
+                using (WebClient Downloader = new WebClient())
+                {
+                    // Получим хеш...
+                    DBHash = Downloader.DownloadString(Properties.Settings.Default.UpdateGameDBHash);
+                    CoreLib.WriteStringToLog(String.Format("Notice: Received server hash of the game database {0}.", DBHash));
+                }
+                // Рассчитаем хеш текущего файла...
+                string CurrHash = CoreLib.CalculateFileMD5(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile));
+                CoreLib.WriteStringToLog(String.Format("Notice: Hash of existing file {0}: {1}.", Properties.Settings.Default.GameListFile, CurrHash));
+                if (CurrHash != DBHash)
+                {
+                    // Хеши не совпадают, будем обновлять...
+                    using (WebClient Downloader = new WebClient())
+                    {
+                        // Получаем свежую базу данных...
+                        CoreLib.WriteStringToLog("Updating the game database from server...");
+                        Downloader.DownloadFile(new Uri(Properties.Settings.Default.UpdateGameDBFile), Properties.Settings.Default.GameListFile);
+                        CoreLib.WriteStringToLog("The game database has been updated successfully.");
+                    }
+                    // Выводим сообщение об успешном обновлении...
+                    MessageBox.Show(RM.GetString("UPD_GamL_Updated"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    // Хеши совпали, обновление не требуется...
+                    MessageBox.Show(RM.GetString("UPD_GamL_Latest"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception Ex)
+            {
+                // Произошло исключение...
+                CoreLib.HandleExceptionEx(RM.GetString("UPD_ExceptionDetected"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+            }
+            // Вернём предыдущее содержимое строки статуса...
+            SB_Status.Text = StatusBarCurrText;
         }
     }
 }

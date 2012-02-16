@@ -261,5 +261,23 @@ namespace srcrepair.Properties {
                 this["StatsLaunches"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://srcrepair.googlecode.com/svn/trunk/tfiles/games.xml")]
+        public string UpdateGameDBFile {
+            get {
+                return ((string)(this["UpdateGameDBFile"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://srcrepair.googlecode.com/svn/trunk/tfiles/games.md5")]
+        public string UpdateGameDBHash {
+            get {
+                return ((string)(this["UpdateGameDBHash"]));
+            }
+        }
     }
 }

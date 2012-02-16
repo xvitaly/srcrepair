@@ -208,6 +208,7 @@
             this.MNUOpinion = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUReportBug = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUUpdateCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUUpGameDB = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSteamGroup = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep3 = new System.Windows.Forms.ToolStripSeparator();
             this.MNULnkEasyCoding = new System.Windows.Forms.ToolStripMenuItem();
@@ -1704,6 +1705,7 @@
             this.MNUOpinion,
             this.MNUReportBug,
             this.MNUUpdateCheck,
+            this.MNUUpGameDB,
             this.MNUSteamGroup,
             this.MNUSep3,
             this.MNULnkEasyCoding,
@@ -1741,6 +1743,13 @@
             this.MNUUpdateCheck.Name = "MNUUpdateCheck";
             resources.ApplyResources(this.MNUUpdateCheck, "MNUUpdateCheck");
             this.MNUUpdateCheck.Click += new System.EventHandler(this.MNUUpdateCheck_Click);
+            // 
+            // MNUUpGameDB
+            // 
+            this.MNUUpGameDB.Image = global::srcrepair.Properties.Resources.Refresh;
+            this.MNUUpGameDB.Name = "MNUUpGameDB";
+            resources.ApplyResources(this.MNUUpGameDB, "MNUUpGameDB");
+            this.MNUUpGameDB.Click += new System.EventHandler(this.MNUUpGameDB_Click);
             // 
             // MNUSteamGroup
             // 
@@ -2104,6 +2113,7 @@
         private System.Windows.Forms.ComboBox GT_NCF_Multicore;
         private System.Windows.Forms.Label L_GT_NCF_Multicore;
         private System.Windows.Forms.ComboBox GT_NCF_Quality;
+        private System.Windows.Forms.ToolStripMenuItem MNUUpGameDB;
     }
 }
 

@@ -65,5 +65,11 @@
     <Setting Name="StatsLaunches" Type="System.Int64" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="UpdateGameDBFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://srcrepair.googlecode.com/svn/trunk/tfiles/games.xml</Value>
+    </Setting>
+    <Setting Name="UpdateGameDBHash" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://srcrepair.googlecode.com/svn/trunk/tfiles/games.md5</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
