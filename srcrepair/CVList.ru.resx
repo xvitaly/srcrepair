@@ -2703,4 +2703,7 @@
   <data name="sbox_weapons" xml:space="preserve">
     <value>Включает / отключает спаун игрока с оружием.</value>
   </data>
+  <data name="glow_outline_effect_enable" xml:space="preserve">
+    <value>Включает / отключает эффект свечения особых объектов (например, вагонетки) через стены.</value>
+  </data>
 </root>
