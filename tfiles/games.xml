@@ -200,4 +200,12 @@
     <SID>730</SID>
     <IsMP>0</IsMP>
   </Game>
+  <Game Name="Nuclear Dawn">
+    <IsGCF>0</IsGCF>
+    <DirName>nuclear dawn</DirName>
+    <SmallName>nucleardawn</SmallName>
+    <VFDir>nucleardawn</VFDir>
+    <SID>17710</SID>
+    <IsMP>0</IsMP>
+  </Game>
 </Games>
