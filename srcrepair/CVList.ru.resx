@@ -2706,4 +2706,34 @@
   <data name="glow_outline_effect_enable" xml:space="preserve">
     <value>Включает / отключает эффект свечения особых объектов (например, вагонетки) через стены.</value>
   </data>
+  <data name="cl_bob_lower_amt" xml:space="preserve">
+    <value>Включает / отключает смещение оружия при беге.</value>
+  </data>
+  <data name="cl_crosshairdot" xml:space="preserve">
+    <value>Включает / отключает перекрестие прицела в виде точки.</value>
+  </data>
+  <data name="cl_crosshairsize" xml:space="preserve">
+    <value>Задаёт размер перекрестия прицела.</value>
+  </data>
+  <data name="cl_viewmodel_shift_left_amt" xml:space="preserve">
+    <value>Включает / отключает движение левой руки при приседании игрока.</value>
+  </data>
+  <data name="cl_viewmodel_shift_right_amt" xml:space="preserve">
+    <value>Включает / отключает движение правой руки при приседании игрока.</value>
+  </data>
+  <data name="fog_enable" xml:space="preserve">
+    <value>Включает / отключает эффект тумана.</value>
+  </data>
+  <data name="r_drawtracers" xml:space="preserve">
+    <value>Включает / отключает трассы пуль при стрельбе.</value>
+  </data>
+  <data name="viewmodel_offset_x" xml:space="preserve">
+    <value>Задаёт смещение оружия на экране по оси X.</value>
+  </data>
+  <data name="viewmodel_offset_y" xml:space="preserve">
+    <value>Задаёт смещение оружия на экране по оси Y.</value>
+  </data>
+  <data name="viewmodel_offset_z" xml:space="preserve">
+    <value>Задаёт смещение оружия на экране по оси Z.</value>
+  </data>
 </root>
