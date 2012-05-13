@@ -540,4 +540,10 @@
   <data name="UPD_GamL_Updated" xml:space="preserve">
     <value>The game database has been updated successfully. Restart this program or choose a different Steam login.</value>
   </data>
+  <data name="AHE_KRegErr" xml:space="preserve">
+    <value>Unable to get path to the Hosts file from registry. Will try standard path.</value>
+  </data>
+  <data name="AHE_NoFileDetected" xml:space="preserve">
+    <value>The Hosts file on the resulting path {0} could not be found.</value>
+  </data>
 </root>

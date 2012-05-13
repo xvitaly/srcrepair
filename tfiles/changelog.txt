@@ -1,4 +1,8 @@
 ﻿ChangeLog:
+Версия 9.0 Final r??? (?? июня 2012):
+ * применены изменения, сделанные ранее в Micro Hosts Editor;
+ * 
+
 Версия 8.0 Final r525 (16 февраля 2012):
  * добавлена полная поддержка любых NCF-игр (с поддержкой графического твикера);
  * добавлена полная поддержка следующих игр Valve: Left 4 Dead, Left 4 Dead 2, Portal 2, Alien Swarm, Dota 2 Beta, Counter-Strike Global Offensive;
