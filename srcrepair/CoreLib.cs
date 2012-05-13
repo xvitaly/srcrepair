@@ -33,7 +33,7 @@ using System.Security.Cryptography; // для расчёта хешей...
 
 namespace srcrepair
 {
-    public class CoreLib
+    public sealed class CoreLib
     {
         /// <summary>
         /// Эта функция позволяет получить локализованную строку по её ID

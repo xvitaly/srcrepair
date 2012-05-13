@@ -5,7 +5,7 @@ using System.Text;
 
 namespace srcrepair
 {
-    public class GV
+    public sealed class GV
     {
         /*
          * Эта константа хранит имя приложения для служебных целей.
