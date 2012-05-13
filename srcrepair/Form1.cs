@@ -53,8 +53,6 @@ namespace srcrepair
             if (Properties.Settings.Default.IsFirstRun)
             {
                 // Это первый запуск программы от текущего профиля или из текущего каталога...
-                // Установим дату последней проверки обновлений в сегодняшнюю...
-                Properties.Settings.Default.LastUpdateTime = DateTime.Now;
                 // Первый запуск состоялся, поэтому переведём значение переменной в false...
                 Properties.Settings.Default.IsFirstRun = false;
             }
@@ -1630,8 +1628,11 @@ namespace srcrepair
                             // Доступны обновления...
                             MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AppUpdateAvailable"), GV.AppName), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        // Установим время последней проверки обновлений...
-                        Properties.Settings.Default.LastUpdateTime = DateTime.Now;
+                        else
+                        {
+                            // Установим время последней проверки обновлений...
+                            Properties.Settings.Default.LastUpdateTime = DateTime.Now;
+                        }
                     }
                 }
             }
