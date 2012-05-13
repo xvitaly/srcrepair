@@ -1641,14 +1641,7 @@ namespace srcrepair
 
         private void PS_CleanBlobs_CheckedChanged(object sender, EventArgs e)
         {
-            if (PS_CleanBlobs.Checked || PS_CleanRegistry.Checked)
-            {
-                PS_ExecuteNow.Enabled = true;
-            }
-            else
-            {
-                PS_ExecuteNow.Enabled = false;
-            }
+            PS_ExecuteNow.Enabled = PS_CleanBlobs.Checked || PS_CleanRegistry.Checked;
         }
 
         private void PS_CleanRegistry_CheckedChanged(object sender, EventArgs e)
@@ -1659,14 +1652,7 @@ namespace srcrepair
             // Выбираем язык по умолчанию согласно языку приложения...
             PS_SteamLang.SelectedIndex = Convert.ToInt32(CoreLib.GetLocalizedString("AppDefaultSteamLangID"));
 
-            if (PS_CleanRegistry.Checked || PS_CleanBlobs.Checked)
-            {
-                PS_ExecuteNow.Enabled = true;
-            }
-            else
-            {
-                PS_ExecuteNow.Enabled = false;
-            }
+            PS_ExecuteNow.Enabled = PS_CleanRegistry.Checked || PS_CleanBlobs.Checked;
         }
 
         private void PS_ExecuteNow_Click(object sender, EventArgs e)
