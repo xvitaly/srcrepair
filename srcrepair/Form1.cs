@@ -1381,14 +1381,7 @@ namespace srcrepair
         {
             try
             {
-                if (CoreLib.GetAppBool("Cloud", Path.Combine("Valve", "Steam", "Apps", GID), false))
-                {
-                    SB_App.Text = "Steam Cloud: " + CoreLib.GetLocalizedString("SteamCloudStatusOn");
-                }
-                else
-                {
-                    SB_App.Text = "Steam Cloud: " + CoreLib.GetLocalizedString("SteamCloudStatusOff");
-                }
+                SB_App.Text = CoreLib.GetAppBool("Cloud", Path.Combine("Valve", "Steam", "Apps", GID), false) ? "Steam Cloud: " + CoreLib.GetLocalizedString("SteamCloudStatusOn") : "Steam Cloud: " + CoreLib.GetLocalizedString("SteamCloudStatusOff");
             }
             catch
             {
@@ -1778,14 +1771,7 @@ namespace srcrepair
             }
 
             // Если выбор верный, включаем контрол выбора логина Steam...
-            if (AppSelector.SelectedIndex != -1)
-            {
-                LoginSel.Enabled = true;
-            }
-            else
-            {
-                LoginSel.Enabled = false;
-            }
+            LoginSel.Enabled = AppSelector.SelectedIndex != -1;
 
             // Генерируем полный путь до каталога управляемого приложения...
             GV.GamePath = Path.Combine(GV.FullSteamPath, "steamapps", ptha, GV.FullAppName);
@@ -1828,14 +1814,7 @@ namespace srcrepair
             if (PS_ResetSettings.Enabled == GV.IsGCFApp) { SetGTOptsType(GV.IsGCFApp); }
 
             // Проверим, установлен ли FPS-конфиг...
-            if (File.Exists(Path.Combine(GV.FullCfgPath, "autoexec.cfg")))
-            {
-                GT_Warning.Visible = true;
-            }
-            else
-            {
-                GT_Warning.Visible = false;
-            }
+            GT_Warning.Visible = File.Exists(Path.Combine(GV.FullCfgPath, "autoexec.cfg"));
             
             // Очистим список FPS-конфигов...
             FP_ConfigSel.Items.Clear();
@@ -1904,14 +1883,7 @@ namespace srcrepair
             // Логин выбран, включаем контролы...
             AppSelector.Enabled = true;
             Properties.Settings.Default.LastLoginName = LoginSel.Text;
-            if (AppSelector.SelectedIndex == -1)
-            {
-                SB_Status.Text = CoreLib.GetLocalizedString("StatusSApp");
-            }
-            else
-            {
-                SB_Status.Text = CoreLib.GetLocalizedString("StatusLoginChanged");
-            }
+            SB_Status.Text = (AppSelector.SelectedIndex == -1) ? CoreLib.GetLocalizedString("StatusSApp") : CoreLib.GetLocalizedString("StatusLoginChanged");
 
             // Выводим логин на страницу "Устранение проблем"...
             PS_RSteamLogin.Text = LoginSel.Text;
@@ -2713,16 +2685,7 @@ namespace srcrepair
                 // Включаем заблокированный контрол...
                 MNUShowEdHint.Enabled = true;
                 // Проверяем открыт ли файл в Редакторе конфигов...
-                if (String.IsNullOrEmpty(CFGFileName))
-                {
-                    // Нет, не открыт. Выводим имя "Безымянный.cfg"...
-                    SB_Status.Text = CoreLib.GetLocalizedString("StatusOpenedFile") + " " + CoreLib.GetLocalizedString("UnnamedFileName");
-                }
-                else
-                {
-                    // Да, открыт. Выводим настоящее имя...
-                    SB_Status.Text = CoreLib.GetLocalizedString("StatusOpenedFile") + " " + CFGFileName;
-                }
+                SB_Status.Text = String.IsNullOrEmpty(CFGFileName) ? CoreLib.GetLocalizedString("StatusOpenedFile") + " " + CoreLib.GetLocalizedString("UnnamedFileName") : SB_Status.Text = CoreLib.GetLocalizedString("StatusOpenedFile") + " " + CFGFileName;
             }
             else
             {
