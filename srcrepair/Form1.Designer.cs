@@ -201,7 +201,6 @@
             this.MNUExtClnGameStats = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnErrDumps = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnCloudLocal = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNUExtClnDnlCache = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnBuildCache = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep2 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUExit = new System.Windows.Forms.ToolStripMenuItem();
@@ -1628,7 +1627,6 @@
             this.MNUExtClnGameStats,
             this.MNUExtClnErrDumps,
             this.MNUExtClnCloudLocal,
-            this.MNUExtClnDnlCache,
             this.MNUExtClnBuildCache});
             this.MNUExtClnSub.Image = global::srcrepair.Properties.Resources.clean;
             this.MNUExtClnSub.Name = "MNUExtClnSub";
@@ -1689,13 +1687,6 @@
             this.MNUExtClnCloudLocal.Name = "MNUExtClnCloudLocal";
             resources.ApplyResources(this.MNUExtClnCloudLocal, "MNUExtClnCloudLocal");
             this.MNUExtClnCloudLocal.Click += new System.EventHandler(this.MNUExtClnCloudLocal_Click);
-            // 
-            // MNUExtClnDnlCache
-            // 
-            this.MNUExtClnDnlCache.Image = global::srcrepair.Properties.Resources.clean;
-            this.MNUExtClnDnlCache.Name = "MNUExtClnDnlCache";
-            resources.ApplyResources(this.MNUExtClnDnlCache, "MNUExtClnDnlCache");
-            this.MNUExtClnDnlCache.Click += new System.EventHandler(this.MNUExtClnDnlCache_Click);
             // 
             // MNUExtClnBuildCache
             // 
@@ -2132,7 +2123,6 @@
         private System.Windows.Forms.Label L_GT_NCF_Multicore;
         private System.Windows.Forms.ComboBox GT_NCF_Quality;
         private System.Windows.Forms.ToolStripMenuItem MNUUpGameDB;
-        private System.Windows.Forms.ToolStripMenuItem MNUExtClnDnlCache;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnBuildCache;
     }
 }
