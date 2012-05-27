@@ -2736,4 +2736,16 @@
   <data name="viewmodel_offset_z" xml:space="preserve">
     <value>Задаёт смещение оружия на экране по оси Z.</value>
   </data>
+  <data name="changelevel_next" xml:space="preserve">
+    <value>Функция, позволяющая сменить карту на следующую прямо сейчас.</value>
+  </data>
+  <data name="mp_restartgame_immediate" xml:space="preserve">
+    <value>Функция, аналогичная mp_restartgame, но перезапускающая карту немедленно без ожидания.</value>
+  </data>
+  <data name="sv_lowedict_action" xml:space="preserve">
+    <value>Действие, которое будет выполнено при недостатке запаса операций в движке Source: 0 - ничего не делать; 1 - записывать ошибку в файл логов; 2 - попытаться перезапустить игру, если это возможно; 3 - перезапустить карту; 4 - сменить карту на следующую в списке карт сервера.</value>
+  </data>
+  <data name="sv_lowedict_threshold" xml:space="preserve">
+    <value>Управляет поведением игры при недостатке запаса операций в движке Source.</value>
+  </data>
 </root>
