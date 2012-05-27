@@ -3138,5 +3138,41 @@ namespace srcrepair
             // Вернём предыдущее содержимое строки статуса...
             SB_Status.Text = StatusBarCurrText;
         }
+
+        private void MNUExtClnDnlCache_Click(object sender, EventArgs e)
+        {
+            // Очистим кэш загрузок игр с новой системой контента...
+            if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("PS_CleanupFull"), ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", "")), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                try
+                {
+                    string ClDir = Path.Combine(GV.FullSteamPath, "steamapps", "downloading");
+                    if (Directory.Exists(ClDir)) { Directory.Delete(ClDir, true); }
+                    MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception Ex)
+                {
+                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void MNUExtClnBuildCache_Click(object sender, EventArgs e)
+        {
+            // Очистим кэш сборки обновлений игр с новой системой контента...
+            if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("PS_CleanupFull"), ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", "")), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                try
+                {
+                    string ClDir = Path.Combine(GV.FullSteamPath, "steamapps", "temp");
+                    if (Directory.Exists(ClDir)) { Directory.Delete(ClDir, true); }
+                    MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception Ex)
+                {
+                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                }
+            }
+        }
     }
 }

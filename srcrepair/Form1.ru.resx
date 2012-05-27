@@ -1011,6 +1011,18 @@
   <data name="MNUExtClnCloudLocal.Text" xml:space="preserve">
     <value>Локаль&amp;ная копия Cloud</value>
   </data>
+  <data name="MNUExtClnDnlCache.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 22</value>
+  </data>
+  <data name="MNUExtClnDnlCache.Text" xml:space="preserve">
+    <value>Кэш &amp;загрузок Steam игр</value>
+  </data>
+  <data name="MNUExtClnBuildCache.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 22</value>
+  </data>
+  <data name="MNUExtClnBuildCache.Text" xml:space="preserve">
+    <value>Кэш о&amp;бновлений Steam игр</value>
+  </data>
   <data name="MNUExtClnSub.Size" type="System.Drawing.Size, System.Drawing">
     <value>316, 22</value>
   </data>
