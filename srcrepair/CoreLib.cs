@@ -287,7 +287,7 @@ namespace srcrepair
             for (int i = 1; i < Path.Length; i++) // запускаем цикл...
             {
                 // Проверяем, соответствует ли символ шаблону допустимых символов...
-                if (!(Regex.IsMatch(Path[i].ToString(), "[0-9a-zA-Z :()\\\\]")))
+                if (!(Regex.IsMatch(Path[i].ToString(), "[0-9a-zA-Z :()/\\\\]")))
                 {
                     // Не соответствует, следовательно найден недопустимый.
                     // Вернём False и прекратим цикл, т.к. дальнейшая проверка бессмысленна...
@@ -597,6 +597,21 @@ namespace srcrepair
             StringBuilder StrRes = new StringBuilder();
             for (int i = 0; i < RValue.Length; i++) { StrRes.Append(RValue[i].ToString("x2")); }
             return StrRes.ToString();
+        }
+
+        /// <summary>
+        /// Определяет платформу, на которой запущено приложение. 0-Win, 1-Mac, 2-Linux.
+        /// </summary>
+        public static int DetectRunningOS()
+        {
+            switch (Environment.OSVersion.Platform)
+            {
+                case PlatformID.Unix:
+                    if (Directory.Exists("/Applications") & Directory.Exists("/System") & Directory.Exists("/Users") & Directory.Exists("/Volumes")) { return 1; } else { return 2; }
+                case PlatformID.MacOSX:
+                    return 1;
+                default: return 0;
+            }
         }
     }
 }
