@@ -17,6 +17,16 @@ namespace srcrepair
          * отображаться в списке доступных для выбора логинов.
          */
         public static string[] InternalDirs = { "common", "sourcemods", "media", "staging", "temp", "build", "downloading" };
+
+        /*
+         * Хранит код платформы запуска приложения...
+         */
+        public static int RunningPlatform;
+
+        /*
+         * Хранит имя бинарного файла клиента Steam в зависимости от платформы...
+         */
+        public static string SteamExecuttable;
         
         /*
          * В этой переменной мы будем хранить полный путь к каталогу установленного

@@ -1428,6 +1428,12 @@ namespace srcrepair
             Assembly Assmbl = Assembly.GetEntryAssembly();
             GV.FullAppPath = Path.GetDirectoryName(Assmbl.Location);
 
+            // Определим платформу и версию ОС, на которой запускается приложение...
+            GV.RunningPlatform = CoreLib.DetectRunningOS();
+
+            // Укажем имя бинарника клиента Steam в зависимости от платформы...
+            GV.SteamExecuttable = (GV.RunningPlatform == 0) ? "Steam.exe" : "Steam";
+
             // Укажем путь к пользовательским данным и создадим если не существует...
             if (Properties.Settings.Default.IsPortable) // Проверим на Portable-версию...
             {
@@ -1486,7 +1492,7 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 // Найдём путь...
-                if (!(String.IsNullOrWhiteSpace(Properties.Settings.Default.LastSteamPath)) && File.Exists(Path.Combine(Properties.Settings.Default.LastSteamPath, "Steam.exe")))
+                if (!(String.IsNullOrWhiteSpace(Properties.Settings.Default.LastSteamPath)) && File.Exists(Path.Combine(Properties.Settings.Default.LastSteamPath, GV.SteamExecuttable)))
                 {
                     GV.FullSteamPath = Properties.Settings.Default.LastSteamPath;
                 }
@@ -1497,7 +1503,7 @@ namespace srcrepair
                     FldrBrwse.Description = CoreLib.GetLocalizedString("SteamPathEnterText"); // Указываем текст в диалоге поиска каталога...
                     if (FldrBrwse.ShowDialog() == DialogResult.OK) // Отображаем стандартный диалог поиска каталога...
                     {
-                        if (!(File.Exists(Path.Combine(FldrBrwse.SelectedPath, "Steam.exe"))))
+                        if (!(File.Exists(Path.Combine(FldrBrwse.SelectedPath, GV.SteamExecuttable))))
                         {
                             MessageBox.Show(CoreLib.GetLocalizedString("SteamPathEnterErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             CoreLib.WriteStringToLog("Invalid Steam directory entered by user.");
@@ -1706,7 +1712,7 @@ namespace srcrepair
                     MessageBox.Show(CoreLib.GetLocalizedString("PS_SeqCompleted"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Запустим Steam...
-                    if (File.Exists(Path.Combine(GV.FullSteamPath, "Steam.exe"))) { Process.Start(Path.Combine(GV.FullSteamPath, "Steam.exe")); }
+                    if (File.Exists(Path.Combine(GV.FullSteamPath, GV.SteamExecuttable))) { Process.Start(Path.Combine(GV.FullSteamPath, GV.SteamExecuttable)); }
                 }
             }
         }

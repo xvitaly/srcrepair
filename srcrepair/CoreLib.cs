@@ -600,8 +600,9 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Определяет платформу, на которой запущено приложение. 0-Win, 1-Mac, 2-Linux.
+        /// Определяет платформу, на которой запущено приложение.
         /// </summary>
+        /// <returns>0 - Win, 1 - Mac, 2 - Linux.</returns>
         public static int DetectRunningOS()
         {
             switch (Environment.OSVersion.Platform)
