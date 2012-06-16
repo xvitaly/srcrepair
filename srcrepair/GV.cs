@@ -24,6 +24,11 @@ namespace srcrepair
         public static int RunningPlatform;
 
         /*
+         * Хранит имя платформы запуска приложения...
+         */
+        public static string PlatformFriendlyName;
+
+        /*
          * Хранит имя бинарного файла клиента Steam в зависимости от платформы...
          */
         public static string SteamExecuttable;

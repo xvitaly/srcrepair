@@ -32,7 +32,7 @@ namespace srcrepair
         {
             InitializeComponent();
             this.Text = String.Format("About {0}...", AssemblyTitle);
-            this.labelProductName.Text = String.Format(AssemblyProduct + " OSE {0}", AssemblyVersion);
+            this.labelProductName.Text = AssemblyProduct + " OSE";
             this.labelVersion.Text = String.Format("Version: {0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;

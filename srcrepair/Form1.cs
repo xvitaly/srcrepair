@@ -1418,6 +1418,44 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Требует указать путь к Steam вручную при невозможности автоопределения.
+        /// </summary>
+        private string GetPathByMEnter()
+        {
+            string Result = null;
+            FldrBrwse.Description = CoreLib.GetLocalizedString("SteamPathEnterText"); // Указываем текст в диалоге поиска каталога...
+            if (FldrBrwse.ShowDialog() == DialogResult.OK) // Отображаем стандартный диалог поиска каталога...
+            {
+                if (!(File.Exists(Path.Combine(FldrBrwse.SelectedPath, GV.SteamExecuttable))))
+                {
+                    MessageBox.Show(CoreLib.GetLocalizedString("SteamPathEnterErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    CoreLib.WriteStringToLog("Invalid Steam directory entered by user.");
+                    Environment.Exit(7);
+                }
+                else
+                {
+                    Result = FldrBrwse.SelectedPath;
+                }
+            }
+            else
+            {
+                MessageBox.Show(CoreLib.GetLocalizedString("SteamPathCancel"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CoreLib.WriteStringToLog("User closed opendir window.");
+                Environment.Exit(7);
+            }
+            return Result;
+        }
+
+        /// <summary>
+        /// Проверяет значение OldPath на наличие верного пути к клиенту Steam.
+        /// </summary>
+        /// <param name="OldPath">Проверяемый путь</param>
+        private string CheckLastSteamPath(string OldPath)
+        {
+            return (!(String.IsNullOrWhiteSpace(OldPath)) && File.Exists(Path.Combine(OldPath, GV.SteamExecuttable))) ? OldPath : GetPathByMEnter();
+        }
+
         #endregion
 
         private void frmMainW_Load(object sender, EventArgs e)
@@ -1430,9 +1468,6 @@ namespace srcrepair
 
             // Определим платформу и версию ОС, на которой запускается приложение...
             GV.RunningPlatform = CoreLib.DetectRunningOS();
-
-            // Укажем имя бинарника клиента Steam в зависимости от платформы...
-            GV.SteamExecuttable = (GV.RunningPlatform == 0) ? "Steam.exe" : "Steam";
 
             // Укажем путь к пользовательским данным и создадим если не существует...
             if (Properties.Settings.Default.IsPortable) // Проверим на Portable-версию...
@@ -1450,79 +1485,69 @@ namespace srcrepair
                 Directory.CreateDirectory(GV.AppUserDir);
             }
 
-            // Проверяем, запущена ли программа с правами администратора...
-            if (!(CoreLib.IsCurrentUserAdmin()))
+            // Начинаем платформо-зависимые процедуры...
+            switch (GV.RunningPlatform)
             {
-                // Программа запущена с правами пользователя, поэтому принимаем меры...
-                // Выводим сообщение об этом...
-                if (Properties.Settings.Default.AllowNonAdmDialog)
-                {
-                    MessageBox.Show(CoreLib.GetLocalizedString("AppLaunchedNotAdmin"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Properties.Settings.Default.AllowNonAdmDialog = false;
-                }
-                // Блокируем контролы, требующие для своей работы прав админа...
-                PS_CleanRegistry.Enabled = false;
-                PS_SteamLang.Enabled = false;
-                MNUHEd.Enabled = false;
-                MNUUpdateCheck.Enabled = false;
-                MNUWinMnuDisabler.Enabled = false;
-                MNUUpGameDB.Enabled = false;
+                case 1: // MacOS...
+                    {
+                        GV.SteamExecuttable = "Steam";
+                        GV.PlatformFriendlyName = "MacOS";
+                        GV.FullSteamPath = CheckLastSteamPath(Properties.Settings.Default.LastSteamPath);
+                    }
+                    break;
+                case 2: // Linux...
+                    {
+                        GV.SteamExecuttable = "Steam";
+                        GV.PlatformFriendlyName = "Linux";
+                        GV.FullSteamPath = CheckLastSteamPath(Properties.Settings.Default.LastSteamPath);
+                    }
+                    break;
+                default: // Windows
+                    {
+                        GV.SteamExecuttable = "Steam.exe";
+                        GV.PlatformFriendlyName = "Windows";
+
+                        // Проверяем, запущена ли программа с правами администратора...
+                        if (!(CoreLib.IsCurrentUserAdmin()))
+                        {
+                            // Программа запущена с правами пользователя, поэтому принимаем меры...
+                            // Выводим сообщение об этом...
+                            if (Properties.Settings.Default.AllowNonAdmDialog)
+                            {
+                                MessageBox.Show(CoreLib.GetLocalizedString("AppLaunchedNotAdmin"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                Properties.Settings.Default.AllowNonAdmDialog = false;
+                            }
+                            // Блокируем контролы, требующие для своей работы прав админа...
+                            PS_CleanRegistry.Enabled = false;
+                            PS_SteamLang.Enabled = false;
+                            MNUHEd.Enabled = false;
+                            MNUUpdateCheck.Enabled = false;
+                            MNUWinMnuDisabler.Enabled = false;
+                            MNUUpGameDB.Enabled = false;
+                        }
+
+                        // Узнаем путь к установленному клиенту Steam...
+                        try { GV.FullSteamPath = CoreLib.GetSteamPath(); } catch { GV.FullSteamPath = CheckLastSteamPath(Properties.Settings.Default.LastSteamPath); }
+                    }
+                    break;
             }
-            
+
+            // Сохраним последний путь к Steam в файл конфигурации...
+            Properties.Settings.Default.LastSteamPath = GV.FullSteamPath;
+
             // Получаем информацию о версии нашего приложения...
             GV.AppVersionInfo = Assmbl.GetName().Version.ToString();
 
             // Вставляем информацию о версии в заголовок формы...
             //this.Text += " (version " + GV.AppVersionInfo + ")";
             #if DEBUG
-            this.Text = String.Format(this.Text, GV.AppVersionInfo + " (debug build)", Assmbl.GetName().ProcessorArchitecture.ToString());
+            this.Text = String.Format(this.Text, GV.PlatformFriendlyName, GV.AppVersionInfo + " (debug)", Assmbl.GetName().ProcessorArchitecture.ToString());
             #else
-            this.Text = String.Format(this.Text, GV.AppVersionInfo, Assmbl.GetName().ProcessorArchitecture.ToString());
+            this.Text = String.Format(this.Text, GV.PlatformFriendlyName, GV.AppVersionInfo, Assmbl.GetName().ProcessorArchitecture.ToString());
             #endif
 
             // Найдём и завершим в памяти процесс Steam...
             CoreLib.ProcessTerminate("Steam", CoreLib.GetLocalizedString("ST_KillMessage"));
-
-            // Узнаем путь к установленному клиенту Steam...
-            try
-            {
-                // Получаем из реестра...
-                GV.FullSteamPath = CoreLib.GetSteamPath();
-            }
-            catch (Exception Ex)
-            {
-                // Найдём путь...
-                if (!(String.IsNullOrWhiteSpace(Properties.Settings.Default.LastSteamPath)) && File.Exists(Path.Combine(Properties.Settings.Default.LastSteamPath, GV.SteamExecuttable)))
-                {
-                    GV.FullSteamPath = Properties.Settings.Default.LastSteamPath;
-                }
-                else
-                {
-                    // Произошло исключение, пользователю придётся ввести путь самостоятельно!
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("SteamPathNotDetected"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
-                    FldrBrwse.Description = CoreLib.GetLocalizedString("SteamPathEnterText"); // Указываем текст в диалоге поиска каталога...
-                    if (FldrBrwse.ShowDialog() == DialogResult.OK) // Отображаем стандартный диалог поиска каталога...
-                    {
-                        if (!(File.Exists(Path.Combine(FldrBrwse.SelectedPath, GV.SteamExecuttable))))
-                        {
-                            MessageBox.Show(CoreLib.GetLocalizedString("SteamPathEnterErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            CoreLib.WriteStringToLog("Invalid Steam directory entered by user.");
-                            Environment.Exit(7);
-                        }
-                        else
-                        {
-                            GV.FullSteamPath = FldrBrwse.SelectedPath;
-                            Properties.Settings.Default.LastSteamPath = GV.FullSteamPath;
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show(CoreLib.GetLocalizedString("SteamPathCancel"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        CoreLib.WriteStringToLog("User closed opendir window.");
-                        Environment.Exit(7);
-                    }
-                }
-            }
 
             // Применим некоторые настройки...
             AppSelector.Sorted = Properties.Settings.Default.SortGamesList;
