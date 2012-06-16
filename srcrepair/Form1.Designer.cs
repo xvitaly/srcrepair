@@ -571,6 +571,7 @@
             this.GT_ResVert_Btn.Name = "GT_ResVert_Btn";
             this.GT_ResVert_Btn.TabStop = false;
             this.GT_ResVert_Btn.UseVisualStyleBackColor = true;
+            this.GT_ResVert_Btn.Click += new System.EventHandler(this.GT_ResVert_Btn_Click);
             // 
             // GT_ScreenType
             // 
@@ -589,6 +590,7 @@
             this.GT_ResHor_Btn.Name = "GT_ResHor_Btn";
             this.GT_ResHor_Btn.TabStop = false;
             this.GT_ResHor_Btn.UseVisualStyleBackColor = true;
+            this.GT_ResHor_Btn.Click += new System.EventHandler(this.GT_ResHor_Btn_Click);
             // 
             // L_GT_ResHor
             // 
