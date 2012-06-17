@@ -169,6 +169,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fatal error occurred! The application will be terminated..
+        /// </summary>
+        internal static string AppGenericError {
+            get {
+                return ResourceManager.GetString("AppGenericError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to en.
         /// </summary>
         internal static string AppLangPrefix {

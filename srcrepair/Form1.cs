@@ -1429,9 +1429,7 @@ namespace srcrepair
             {
                 if (!(File.Exists(Path.Combine(FldrBrwse.SelectedPath, GV.SteamExecuttable))))
                 {
-                    MessageBox.Show(CoreLib.GetLocalizedString("SteamPathEnterErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    CoreLib.WriteStringToLog("Invalid Steam directory entered by user.");
-                    Environment.Exit(7);
+                    throw new FileNotFoundException("Invalid Steam directory entered by user", Path.Combine(FldrBrwse.SelectedPath, GV.SteamExecuttable));
                 }
                 else
                 {
@@ -1440,9 +1438,7 @@ namespace srcrepair
             }
             else
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("SteamPathCancel"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                CoreLib.WriteStringToLog("User closed opendir window.");
-                Environment.Exit(7);
+                throw new OperationCanceledException("User closed opendir window");
             }
             return Result;
         }
@@ -1454,6 +1450,32 @@ namespace srcrepair
         private string CheckLastSteamPath(string OldPath)
         {
             return (!(String.IsNullOrWhiteSpace(OldPath)) && File.Exists(Path.Combine(OldPath, GV.SteamExecuttable))) ? OldPath : GetPathByMEnter();
+        }
+
+        /// <summary>
+        /// Получает путь и обрабатывает возможные исключения.
+        /// </summary>
+        private void ValidateAndHandle()
+        {
+            try
+            {
+                GV.FullSteamPath = CheckLastSteamPath(Properties.Settings.Default.LastSteamPath);
+            }
+            catch (FileNotFoundException Ex)
+            {
+                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("SteamPathEnterErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                Environment.Exit(7);
+            }
+            catch (OperationCanceledException Ex)
+            {
+                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("SteamPathCancel"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                Environment.Exit(19);
+            }
+            catch (Exception Ex)
+            {
+                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppGenericError"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                Environment.Exit(24);
+            }
         }
 
         #endregion
@@ -1492,14 +1514,14 @@ namespace srcrepair
                     {
                         GV.SteamExecuttable = "Steam";
                         GV.PlatformFriendlyName = "MacOS";
-                        GV.FullSteamPath = CheckLastSteamPath(Properties.Settings.Default.LastSteamPath);
+                        ValidateAndHandle();
                     }
                     break;
                 case 2: // Linux...
                     {
                         GV.SteamExecuttable = "Steam";
                         GV.PlatformFriendlyName = "Linux";
-                        GV.FullSteamPath = CheckLastSteamPath(Properties.Settings.Default.LastSteamPath);
+                        ValidateAndHandle();
                     }
                     break;
                 default: // Windows
@@ -1527,7 +1549,7 @@ namespace srcrepair
                         }
 
                         // Узнаем путь к установленному клиенту Steam...
-                        try { GV.FullSteamPath = CoreLib.GetSteamPath(); } catch { GV.FullSteamPath = CheckLastSteamPath(Properties.Settings.Default.LastSteamPath); }
+                        try { GV.FullSteamPath = CoreLib.GetSteamPath(); } catch { ValidateAndHandle(); }
                     }
                     break;
             }

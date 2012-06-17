@@ -546,4 +546,7 @@
   <data name="AHE_NoFileDetected" xml:space="preserve">
     <value>The Hosts file on the resulting path {0} could not be found.</value>
   </data>
+  <data name="AppGenericError" xml:space="preserve">
+    <value>Fatal error occurred! The application will be terminated.</value>
+  </data>
 </root>
