@@ -23,8 +23,11 @@ FPS-config or spray into game. SRC Repair does not needs any configuration to wo
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/bin/
 mkdir -p %{buildroot}/usr/share/srcrepair/
+mkdir -p %{buildroot}/usr/share/applications/
 cp -fpr srcrepair %{buildroot}/usr/bin/
+cp -fpr srcrepair.desktop %{buildroot}/usr/share/applications/
 rm -f srcrepair
+rm -f srcrepair.desktop
 cp -fpr * %{buildroot}/usr/share/srcrepair/
 chmod +x %{buildroot}/usr/bin/srcrepair
 
@@ -32,6 +35,7 @@ chmod +x %{buildroot}/usr/bin/srcrepair
 
 %files
 /usr/bin/srcrepair
+/usr/share/applications/srcrepair.desktop
 /usr/share/srcrepair/srcrepair.exe
 /usr/share/srcrepair/srcrepair.exe.config
 /usr/share/srcrepair/srcrepair.exe.sig
