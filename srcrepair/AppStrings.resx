@@ -549,4 +549,7 @@
   <data name="AppGenericError" xml:space="preserve">
     <value>Fatal error occurred! The application will be terminated.</value>
   </data>
+  <data name="AppFeatureUnavailable" xml:space="preserve">
+    <value>Sorry, but the selected feature is not available for this platform!</value>
+  </data>
 </root>

@@ -1478,6 +1478,20 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Устанавливает статус элементам управления, зависящим от платформы или спец. прав.
+        /// </summary>
+        /// <param name="State">Устанавливаемый статус</param>
+        private void ChangePrvControlState(bool State)
+        {
+            PS_CleanRegistry.Enabled = State;
+            PS_SteamLang.Enabled = State;
+            MNUHEd.Enabled = State;
+            MNUUpdateCheck.Enabled = State;
+            MNUWinMnuDisabler.Enabled = State;
+            MNUUpGameDB.Enabled = State;
+        }
+
         #endregion
 
         private void frmMainW_Load(object sender, EventArgs e)
@@ -1515,6 +1529,8 @@ namespace srcrepair
                         GV.SteamExecuttable = "Steam";
                         GV.PlatformFriendlyName = "MacOS";
                         ValidateAndHandle();
+                        ChangePrvControlState(false);
+                        MNUReportBuilder.Enabled = false;
                     }
                     break;
                 case 2: // Linux...
@@ -1522,6 +1538,10 @@ namespace srcrepair
                         GV.SteamExecuttable = "Steam";
                         GV.PlatformFriendlyName = "Linux";
                         ValidateAndHandle();
+                        
+                        // Отключаем контролы, недоступные для данной платформы...
+                        ChangePrvControlState(false);
+                        MNUReportBuilder.Enabled = false;
                     }
                     break;
                 default: // Windows
@@ -1540,12 +1560,7 @@ namespace srcrepair
                                 Properties.Settings.Default.AllowNonAdmDialog = false;
                             }
                             // Блокируем контролы, требующие для своей работы прав админа...
-                            PS_CleanRegistry.Enabled = false;
-                            PS_SteamLang.Enabled = false;
-                            MNUHEd.Enabled = false;
-                            MNUUpdateCheck.Enabled = false;
-                            MNUWinMnuDisabler.Enabled = false;
-                            MNUUpGameDB.Enabled = false;
+                            ChangePrvControlState(false);
                         }
 
                         // Узнаем путь к установленному клиенту Steam...
@@ -1734,24 +1749,31 @@ namespace srcrepair
                     // Проверяем нужно ли чистить реестр...
                     if (PS_CleanRegistry.Checked)
                     {
-                        try
+                        if (GV.RunningPlatform == 0)
                         {
-                            // Проверяем выбрал ли пользователь язык из выпадающего списка...
-                            if (PS_SteamLang.SelectedIndex != -1)
+                            try
                             {
-                                // Всё в порядке, чистим реестр...
-                                CleanRegistryNow(PS_SteamLang.SelectedIndex);
+                                // Проверяем выбрал ли пользователь язык из выпадающего списка...
+                                if (PS_SteamLang.SelectedIndex != -1)
+                                {
+                                    // Всё в порядке, чистим реестр...
+                                    CleanRegistryNow(PS_SteamLang.SelectedIndex);
+                                }
+                                else
+                                {
+                                    // Пользователь не выбрал язык, поэтому будем использовать английский...
+                                    MessageBox.Show(CoreLib.GetLocalizedString("PS_NoLangSelected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    CleanRegistryNow(0);
+                                }
                             }
-                            else
+                            catch (Exception Ex)
                             {
-                                // Пользователь не выбрал язык, поэтому будем использовать английский...
-                                MessageBox.Show(CoreLib.GetLocalizedString("PS_NoLangSelected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                CleanRegistryNow(0);
+                                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanException"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                             }
                         }
-                        catch (Exception Ex)
+                        else
                         {
-                            CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanException"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                            MessageBox.Show(CoreLib.GetLocalizedString("AppFeatureUnavailable"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
 
@@ -2179,6 +2201,8 @@ namespace srcrepair
 
                     try
                     {
+                        // Создадим каталог если он не существует...
+                        if (!Directory.Exists(GV.FullCfgPath)) { Directory.CreateDirectory(GV.FullCfgPath); }
                         // Устанавливаем...
                         InstallConfigNow(FP_ConfigSel.Text, GV.FullAppPath, GV.FullCfgPath);
                         // Выводим сообщение об успешной установке...
@@ -2487,9 +2511,16 @@ namespace srcrepair
 
         private void MNUReportBuilder_Click(object sender, EventArgs e)
         {
-            // Запускаем форму создания отчёта для Техподдержки...
-            frmRepBuilder RBF = new frmRepBuilder();
-            RBF.ShowDialog();
+            if (GV.RunningPlatform == 0)
+            {
+                // Запускаем форму создания отчёта для Техподдержки...
+                frmRepBuilder RBF = new frmRepBuilder();
+                RBF.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show(CoreLib.GetLocalizedString("AppFeatureUnavailable"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void MNUInstaller_Click(object sender, EventArgs e)
@@ -2896,44 +2927,51 @@ namespace srcrepair
 
         private void MNUUpdateCheck_Click(object sender, EventArgs e)
         {
-            // Сохраним текущее содержимое статусной строки...
-            string StatusBarCurrText = SB_Status.Text;
-            // Выведем сообщение о проверке обновлений...
-            SB_Status.Text = CoreLib.GetLocalizedString("AppCheckingForUpdates");
-            // Начинаем проверку...
-            try
+            if (GV.RunningPlatform == 0)
             {
-                string NewVersion, UpdateURI, DnlStr;
-                // Получаем файл с номером версии и ссылкой на новую...
-                using (WebClient Downloader = new WebClient())
+                // Сохраним текущее содержимое статусной строки...
+                string StatusBarCurrText = SB_Status.Text;
+                // Выведем сообщение о проверке обновлений...
+                SB_Status.Text = CoreLib.GetLocalizedString("AppCheckingForUpdates");
+                // Начинаем проверку...
+                try
                 {
-                    DnlStr = Downloader.DownloadString(Properties.Settings.Default.UpdateChURI);
+                    string NewVersion, UpdateURI, DnlStr;
+                    // Получаем файл с номером версии и ссылкой на новую...
+                    using (WebClient Downloader = new WebClient())
+                    {
+                        DnlStr = Downloader.DownloadString(Properties.Settings.Default.UpdateChURI);
+                    }
+                    // Установим дату последней проверки обновлений...
+                    Properties.Settings.Default.LastUpdateTime = DateTime.Now;
+                    // Мы получили URL и версию...
+                    NewVersion = DnlStr.Substring(0, DnlStr.IndexOf("!")); // Получаем версию...
+                    UpdateURI = DnlStr.Remove(0, DnlStr.IndexOf("!") + 1); // Получаем URL...
+                    // Проверим, является ли версия на сервере новее, чем текущая...
+                    if (CoreLib.CompareVersions(GV.AppVersionInfo, NewVersion))
+                    {
+                        // Доступна новая версия, отобразим модуль обновления...
+                        frmUpdate UpdFrm = new frmUpdate(NewVersion, UpdateURI);
+                        UpdFrm.ShowDialog();
+                    }
+                    else
+                    {
+                        // Новых версий не обнаружено.
+                        MessageBox.Show(CoreLib.GetLocalizedString("UPD_LatestInstalled"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                // Установим дату последней проверки обновлений...
-                Properties.Settings.Default.LastUpdateTime = DateTime.Now;
-                // Мы получили URL и версию...
-                NewVersion = DnlStr.Substring(0, DnlStr.IndexOf("!")); // Получаем версию...
-                UpdateURI = DnlStr.Remove(0, DnlStr.IndexOf("!") + 1); // Получаем URL...
-                // Проверим, является ли версия на сервере новее, чем текущая...
-                if (CoreLib.CompareVersions(GV.AppVersionInfo, NewVersion))
+                catch (Exception Ex)
                 {
-                    // Доступна новая версия, отобразим модуль обновления...
-                    frmUpdate UpdFrm = new frmUpdate(NewVersion, UpdateURI);
-                    UpdFrm.ShowDialog();
+                    // Произошло исключение...
+                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_ExceptionDetected"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
-                else
-                {
-                    // Новых версий не обнаружено.
-                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_LatestInstalled"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                // Вернём предыдущее содержимое строки статуса...
+                SB_Status.Text = StatusBarCurrText;
             }
-            catch (Exception Ex)
+            else
             {
-                // Произошло исключение...
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_ExceptionDetected"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                MessageBox.Show(CoreLib.GetLocalizedString("AppFeatureUnavailable"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            // Вернём предыдущее содержимое строки статуса...
-            SB_Status.Text = StatusBarCurrText;
         }
 
         private void BUT_OpenNpad_Click(object sender, EventArgs e)
@@ -2997,9 +3035,16 @@ namespace srcrepair
 
         private void MNUWinMnuDisabler_Click(object sender, EventArgs e)
         {
-            // Показываем модуля отключения клавиш...
-            frmKBHelper KBHlp = new frmKBHelper();
-            KBHlp.ShowDialog();
+            if (GV.RunningPlatform == 0)
+            {
+                // Показываем модуля отключения клавиш...
+                frmKBHelper KBHlp = new frmKBHelper();
+                KBHlp.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show(CoreLib.GetLocalizedString("AppFeatureUnavailable"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void MNUDonate_Click(object sender, EventArgs e)

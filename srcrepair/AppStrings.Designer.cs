@@ -169,6 +169,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sorry, but the selected feature is not available for this platform!.
+        /// </summary>
+        internal static string AppFeatureUnavailable {
+            get {
+                return ResourceManager.GetString("AppFeatureUnavailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fatal error occurred! The application will be terminated..
         /// </summary>
         internal static string AppGenericError {
