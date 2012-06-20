@@ -74,4 +74,4 @@ chmod +x %{buildroot}/usr/bin/srcrepair
 /usr/share/srcrepair/GPL.txt
 /usr/share/srcrepair/readme.txt
 /usr/share/srcrepair/readme_en.txt
-/usr/share/srcrepair/vitaly_public.asc
+/usr/share/srcrepair/pubkey.asc
