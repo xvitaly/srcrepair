@@ -10,7 +10,7 @@ Source: %{name}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-root
 Vendor: EasyCoding Team
 Packager: V1TSK <vitaly@easycoding.org>
-Requires: mono-winforms
+Requires: mono-winforms >= 2.10
 
 %description
 SRC Repair is a free tool that can be used for tuning & restoring Steam and all Source engine games.
