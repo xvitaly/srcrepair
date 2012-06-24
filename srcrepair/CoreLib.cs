@@ -614,5 +614,12 @@ namespace srcrepair
                 default: return 0;
             }
         }
+
+        /// <summary>
+        /// Добавляет переменную и значение в Редактор конфигов.
+        /// </summary>
+        /// <param name="Cv">Название переменной</param>
+        /// <param name="Cn">Значение переменной</param>
+        public delegate void CFGEdDelegate(string Cv, string Cn);
     }
 }

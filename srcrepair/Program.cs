@@ -31,5 +31,4 @@ namespace srcrepair
             }
         }
     }
-    public delegate void CFGEdDelegate(string Cv, string Cn);
 }

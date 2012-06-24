@@ -2541,7 +2541,7 @@ namespace srcrepair
             // Очистим Редактор конфигов...
             CE_New.PerformClick();
             // Запускаем форму мастера FPS-конфигов...
-            frmFPGen FPFrm = new frmFPGen(new CFGEdDelegate(AddRowToTable));
+            frmFPGen FPFrm = new frmFPGen(new CoreLib.CFGEdDelegate(AddRowToTable));
             FPFrm.ShowDialog();
             MainTabControl.SelectedIndex = 1;
         }

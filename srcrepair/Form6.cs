@@ -29,9 +29,9 @@ namespace srcrepair
 {
     public partial class frmFPGen : Form
     {
-        private CFGEdDelegate CETableAdd;
+        private CoreLib.CFGEdDelegate CETableAdd;
 
-        public frmFPGen(CFGEdDelegate sender)
+        public frmFPGen(CoreLib.CFGEdDelegate sender)
         {
             InitializeComponent();
             CETableAdd = sender;
