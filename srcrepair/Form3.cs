@@ -173,7 +173,7 @@ namespace srcrepair
             }
             else
             {
-                HostsFilePath = Path.Combine("etc", "hosts");
+                HostsFilePath = Path.Combine("/etc", "hosts");
             }
 
             // Проверим существование файла...
