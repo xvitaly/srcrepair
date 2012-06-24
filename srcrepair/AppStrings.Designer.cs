@@ -88,6 +88,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Local admin rights is required to perform requested action!.
+        /// </summary>
+        internal static string AHE_NoAdminRights {
+            get {
+                return ResourceManager.GetString("AHE_NoAdminRights", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The Hosts file on the resulting path {0} could not be found..
         /// </summary>
         internal static string AHE_NoFileDetected {

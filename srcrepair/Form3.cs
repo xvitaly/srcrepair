@@ -39,7 +39,7 @@ namespace srcrepair
 
         #region IC
         private const string PluginName = "Micro Hosts Editor";
-        private const string PluginVersion = "0.3";
+        private const string PluginVersion = "0.4";
         #endregion
 
         #region IV
@@ -133,6 +133,18 @@ namespace srcrepair
         
         private void frmHEd_Load(object sender, EventArgs e)
         {
+            // Проверим наличие прав администратора. Если они отсутствуют - отключим функции сохранения...
+            if (!(CoreLib.IsCurrentUserAdmin()))
+            {
+                HEd_M_Save.Enabled = false;
+                HEd_T_Save.Enabled = false;
+                HEd_M_RestDef.Enabled = false;
+                HEd_Table.ReadOnly = true;
+                HEd_T_Cut.Enabled = false;
+                HEd_T_Paste.Enabled = false;
+                HEd_T_RemRw.Enabled = false;
+            }
+
             // Укажем версию в заголовке главной формы...
             this.Text = String.Format(this.Text, PluginVersion);
 
@@ -201,15 +213,22 @@ namespace srcrepair
 
         private void HEd_T_Save_Click(object sender, EventArgs e)
         {
-            // Сохраняем файл...
-            try
+            // Сохраняем файл если есть соответствующие права...
+            if (CoreLib.IsCurrentUserAdmin())
             {
-                WriteTableToHosts(HostsFilePath);
-                MessageBox.Show(CoreLib.GetLocalizedString("AHE_Saved"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    WriteTableToHosts(HostsFilePath);
+                    MessageBox.Show(CoreLib.GetLocalizedString("AHE_Saved"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception Ex)
+                {
+                    CoreLib.HandleExceptionEx(String.Format(CoreLib.GetLocalizedString("AHE_SaveException"), HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                }
             }
-            catch (Exception Ex)
+            else
             {
-                CoreLib.HandleExceptionEx(String.Format(CoreLib.GetLocalizedString("AHE_SaveException"), HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                MessageBox.Show(String.Format(CoreLib.GetLocalizedString(""), HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

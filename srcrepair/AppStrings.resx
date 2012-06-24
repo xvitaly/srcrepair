@@ -552,4 +552,7 @@
   <data name="AppFeatureUnavailable" xml:space="preserve">
     <value>Sorry, but the selected feature is not available for this platform!</value>
   </data>
+  <data name="AHE_NoAdminRights" xml:space="preserve">
+    <value>Local admin rights is required to perform requested action!</value>
+  </data>
 </root>
