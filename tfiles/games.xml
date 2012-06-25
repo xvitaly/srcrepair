@@ -8,6 +8,14 @@
     <SID>440</SID>
     <IsMP>1</IsMP>
   </Game>
+  <Game Name="Team Fortress 2 Beta">
+    <IsGCF>1</IsGCF>
+    <DirName>team fortress 2 beta</DirName>
+    <SmallName>tf_beta</SmallName>
+    <VFDir>tf_beta</VFDir>
+    <SID>520</SID>
+    <IsMP>1</IsMP>
+  </Game>
   <Game Name="Counter-Strike: Source">
     <IsGCF>1</IsGCF>
     <DirName>counter-strike source</DirName>
