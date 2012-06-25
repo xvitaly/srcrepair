@@ -56,6 +56,14 @@
     <SID>420</SID>
     <IsMP>0</IsMP>
   </Game>
+  <Game Name="Half-Life 2: Lost Coast">
+    <IsGCF>1</IsGCF>
+    <DirName>half-life 2 lostcoast</DirName>
+    <SmallName>lostcoast</SmallName>
+    <VFDir>lostcoast</VFDir>
+    <SID>340</SID>
+    <IsMP>0</IsMP>
+  </Game>
   <Game Name="Portal">
     <IsGCF>1</IsGCF>
     <DirName>portal</DirName>
@@ -184,6 +192,14 @@
     <SID>620</SID>
     <IsMP>0</IsMP>
   </Game>
+  <Game Name="Dota 2">
+    <IsGCF>0</IsGCF>
+    <DirName>dota 2</DirName>
+    <SmallName>dota</SmallName>
+    <VFDir>dota</VFDir>
+    <SID>570</SID>
+    <IsMP>0</IsMP>
+  </Game>
   <Game Name="Dota 2 Beta">
     <IsGCF>0</IsGCF>
     <DirName>dota 2 beta</DirName>
@@ -206,6 +222,94 @@
     <SmallName>nucleardawn</SmallName>
     <VFDir>nucleardawn</VFDir>
     <SID>17710</SID>
+    <IsMP>0</IsMP>
+  </Game>
+  <Game Name="Postal III">
+    <IsGCF>0</IsGCF>
+    <DirName>postal iii</DirName>
+    <SmallName>p3</SmallName>
+    <VFDir>p3</VFDir>
+    <SID>10220</SID>
+    <IsMP>0</IsMP>
+  </Game>
+  <Game Name="E.Y.E.: Divine Cybermancy">
+    <IsGCF>0</IsGCF>
+    <DirName>eye</DirName>
+    <SmallName>EYE</SmallName>
+    <VFDir>EYE</VFDir>
+    <SID>91700</SID>
+    <IsMP>0</IsMP>
+  </Game>
+  <Game Name="Dark Messiah MM SP">
+    <IsGCF>1</IsGCF>
+    <DirName>dark messiah might and magic single player</DirName>
+    <SmallName>mm</SmallName>
+    <VFDir>mm</VFDir>
+    <SID>2100</SID>
+    <IsMP>0</IsMP>
+  </Game>
+  <Game Name="Dark Messiah MM MP">
+    <IsGCF>1</IsGCF>
+    <DirName>dark messiah might and magic multiplayer</DirName>
+    <SmallName>mm</SmallName>
+    <VFDir>mm</VFDir>
+    <SID>2100</SID>
+    <IsMP>0</IsMP>
+  </Game>
+  <Game Name="The Ship">
+    <IsGCF>1</IsGCF>
+    <DirName>the ship</DirName>
+    <SmallName>ship</SmallName>
+    <VFDir>ship</VFDir>
+    <SID>2400</SID>
+    <IsMP>0</IsMP>
+  </Game>
+  <Game Name="The Ship Singleplayer">
+    <IsGCF>1</IsGCF>
+    <DirName>the ship single player</DirName>
+    <SmallName>ship</SmallName>
+    <VFDir>ship</VFDir>
+    <SID>2420</SID>
+    <IsMP>0</IsMP>
+  </Game>
+  <Game Name="SiN Episodes: Emergence">
+    <IsGCF>1</IsGCF>
+    <DirName>sin episodes emergence</DirName>
+    <SmallName>SE1</SmallName>
+    <VFDir>SE1</VFDir>
+    <SID>1300</SID>
+    <IsMP>0</IsMP>
+  </Game>
+  <Game Name="Vampire: The Masquerade - Bloodlines">
+    <IsGCF>0</IsGCF>
+    <DirName>vampire the masquerade - bloodlines</DirName>
+    <SmallName>vampire</SmallName>
+    <VFDir>vampire</VFDir>
+    <SID>2600</SID>
+    <IsMP>0</IsMP>
+  </Game>
+  <Game Name="Zeno Clash">
+    <IsGCF>0</IsGCF>
+    <DirName>zenoclash</DirName>
+    <SmallName>zenozoik</SmallName>
+    <VFDir>zenozoik</VFDir>
+    <SID>22200</SID>
+    <IsMP>0</IsMP>
+  </Game>
+  <Game Name="Dear Esther">
+    <IsGCF>0</IsGCF>
+    <DirName>dear esther</DirName>
+    <SmallName>dearesther</SmallName>
+    <VFDir>dearesther</VFDir>
+    <SID>203810</SID>
+    <IsMP>0</IsMP>
+  </Game>
+  <Game Name="Eternal Silence">
+    <IsGCF>1</IsGCF>
+    <DirName>eternal-silence</DirName>
+    <SmallName>esmod</SmallName>
+    <VFDir>esmod</VFDir>
+    <SID>17550</SID>
     <IsMP>0</IsMP>
   </Game>
 </Games>

@@ -7,6 +7,9 @@
  * добавлена поддержка очистки кэшей и временных файлов, создаваемых при установке и обновлении игр с новой системой контента;
  * добавлена поддержка Linux;
  * исправлена ошибка, из-за которой не работали кнопки справки контролов установки разрешения экрана;
+ * добавлена полная поддержка следующих игр Valve: Half-Life 2: Lost Coast и Dota 2 + Beta;
+ * добавлена полная поддержка следующих игр третьих сторон: Postal III, E.Y.E.: Divine Cybermancy, "Dark Messiah Might and Magic, The Ship, SiN Episodes: Emergence, Vampire: The Masquerade - Bloodlines, Zeno Clash, Dear Esther;
+ * добавлена поддержка модификации Eternal Silence;
  * 
 
 Версия 8.0 Final r525 (16 февраля 2012):
