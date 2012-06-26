@@ -290,7 +290,7 @@ namespace srcrepair
         {
             if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AHE_HMessg"), HostsFilePath), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                Process.Start("explorer.exe", @"/select," + @"""" + HostsFilePath + @"""");
+                Process.Start(Properties.Settings.Default.ShBin, @"/select," + @"""" + HostsFilePath + @"""");
             }
         }
 
@@ -330,7 +330,7 @@ namespace srcrepair
         private void HEd_M_Notepad_Click(object sender, EventArgs e)
         {
             // Откроем файл Hosts в Блокноте...
-            Process.Start("notepad.exe", @"""" + HostsFilePath + @"""");
+            Process.Start(Properties.Settings.Default.EditorBin, @"""" + HostsFilePath + @"""");
         }
 
         private void HEd_M_RepBug_Click(object sender, EventArgs e)
