@@ -71,5 +71,11 @@
     <Setting Name="UpdateGameDBHash" Type="System.String" Scope="Application">
       <Value Profile="(Default)">http://srcrepair.googlecode.com/svn/trunk/tfiles/games.md5</Value>
     </Setting>
+    <Setting Name="EditorBin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">notepad.exe</Value>
+    </Setting>
+    <Setting Name="ShBin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">explorer.exe</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

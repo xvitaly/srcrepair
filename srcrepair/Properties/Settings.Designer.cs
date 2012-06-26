@@ -280,5 +280,29 @@ namespace srcrepair.Properties {
                 return ((string)(this["UpdateGameDBHash"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("notepad.exe")]
+        public string EditorBin {
+            get {
+                return ((string)(this["EditorBin"]));
+            }
+            set {
+                this["EditorBin"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("explorer.exe")]
+        public string ShBin {
+            get {
+                return ((string)(this["ShBin"]));
+            }
+            set {
+                this["ShBin"] = value;
+            }
+        }
     }
 }

@@ -117,302 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="GB_MainOpts.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="MO_EnableAppLogs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="MO_EnableAppLogs.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="MO_EnableAppLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 185</value>
-  </data>
-  <data name="MO_EnableAppLogs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>235, 17</value>
-  </data>
-  <data name="MO_EnableAppLogs.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="MO_EnableAppLogs.Text" xml:space="preserve">
-    <value>Enable logging application events and errors</value>
-  </data>
-  <data name="&gt;&gt;MO_EnableAppLogs.Name" xml:space="preserve">
-    <value>MO_EnableAppLogs</value>
-  </data>
-  <data name="&gt;&gt;MO_EnableAppLogs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MO_EnableAppLogs.Parent" xml:space="preserve">
-    <value>GB_MainOpts</value>
-  </data>
-  <data name="&gt;&gt;MO_EnableAppLogs.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="MO_PrefHelpSystem.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="MO_PrefHelpSystem.Items" xml:space="preserve">
-    <value>Official site</value>
-  </data>
-  <data name="MO_PrefHelpSystem.Items1" xml:space="preserve">
-    <value>Official Wiki</value>
-  </data>
-  <data name="MO_PrefHelpSystem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>131, 157</value>
-  </data>
-  <data name="MO_PrefHelpSystem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 21</value>
-  </data>
-  <data name="MO_PrefHelpSystem.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;MO_PrefHelpSystem.Name" xml:space="preserve">
-    <value>MO_PrefHelpSystem</value>
-  </data>
-  <data name="&gt;&gt;MO_PrefHelpSystem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MO_PrefHelpSystem.Parent" xml:space="preserve">
-    <value>GB_MainOpts</value>
-  </data>
-  <data name="&gt;&gt;MO_PrefHelpSystem.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="MO_L_HelpSystem.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="MO_L_HelpSystem.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="MO_L_HelpSystem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 160</value>
-  </data>
-  <data name="MO_L_HelpSystem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 13</value>
-  </data>
-  <data name="MO_L_HelpSystem.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="MO_L_HelpSystem.Text" xml:space="preserve">
-    <value>Select help source:</value>
-  </data>
-  <data name="&gt;&gt;MO_L_HelpSystem.Name" xml:space="preserve">
-    <value>MO_L_HelpSystem</value>
-  </data>
-  <data name="&gt;&gt;MO_L_HelpSystem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MO_L_HelpSystem.Parent" xml:space="preserve">
-    <value>GB_MainOpts</value>
-  </data>
-  <data name="&gt;&gt;MO_L_HelpSystem.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="MO_RemEmptyDirs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="MO_RemEmptyDirs.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="MO_RemEmptyDirs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 134</value>
-  </data>
-  <data name="MO_RemEmptyDirs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>236, 17</value>
-  </data>
-  <data name="MO_RemEmptyDirs.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="MO_RemEmptyDirs.Text" xml:space="preserve">
-    <value>Remove empty directories after safe cleanup</value>
-  </data>
-  <data name="&gt;&gt;MO_RemEmptyDirs.Name" xml:space="preserve">
-    <value>MO_RemEmptyDirs</value>
-  </data>
-  <data name="&gt;&gt;MO_RemEmptyDirs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MO_RemEmptyDirs.Parent" xml:space="preserve">
-    <value>GB_MainOpts</value>
-  </data>
-  <data name="&gt;&gt;MO_RemEmptyDirs.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <metadata name="MO_AllowUnsafeNCFOps.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="MO_AllowUnsafeNCFOps.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="MO_AllowUnsafeNCFOps.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 111</value>
-  </data>
-  <data name="MO_AllowUnsafeNCFOps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 17</value>
-  </data>
-  <data name="MO_AllowUnsafeNCFOps.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="MO_AllowUnsafeNCFOps.Text" xml:space="preserve">
-    <value>Enable unsafe operations for NCF games</value>
-  </data>
-  <data name="&gt;&gt;MO_AllowUnsafeNCFOps.Name" xml:space="preserve">
-    <value>MO_AllowUnsafeNCFOps</value>
-  </data>
-  <data name="&gt;&gt;MO_AllowUnsafeNCFOps.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MO_AllowUnsafeNCFOps.Parent" xml:space="preserve">
-    <value>GB_MainOpts</value>
-  </data>
-  <data name="&gt;&gt;MO_AllowUnsafeNCFOps.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <metadata name="MO_AutoUpdate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="MO_AutoUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 88</value>
-  </data>
-  <data name="MO_AutoUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 17</value>
-  </data>
-  <data name="MO_AutoUpdate.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="MO_AutoUpdate.Text" xml:space="preserve">
-    <value>Enable automatic updates</value>
-  </data>
-  <data name="&gt;&gt;MO_AutoUpdate.Name" xml:space="preserve">
-    <value>MO_AutoUpdate</value>
-  </data>
-  <data name="&gt;&gt;MO_AutoUpdate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MO_AutoUpdate.Parent" xml:space="preserve">
-    <value>GB_MainOpts</value>
-  </data>
-  <data name="&gt;&gt;MO_AutoUpdate.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <metadata name="MO_SortGameList.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="MO_SortGameList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 65</value>
-  </data>
-  <data name="MO_SortGameList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 17</value>
-  </data>
-  <data name="MO_SortGameList.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="MO_SortGameList.Text" xml:space="preserve">
-    <value>Sort list of games by name</value>
-  </data>
-  <data name="&gt;&gt;MO_SortGameList.Name" xml:space="preserve">
-    <value>MO_SortGameList</value>
-  </data>
-  <data name="&gt;&gt;MO_SortGameList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MO_SortGameList.Parent" xml:space="preserve">
-    <value>GB_MainOpts</value>
-  </data>
-  <data name="&gt;&gt;MO_SortGameList.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <metadata name="MO_HideNotInst.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="MO_HideNotInst.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="MO_HideNotInst.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 42</value>
-  </data>
-  <data name="MO_HideNotInst.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 17</value>
-  </data>
-  <data name="MO_HideNotInst.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="MO_HideNotInst.Text" xml:space="preserve">
-    <value>Hide not installed games</value>
-  </data>
-  <data name="&gt;&gt;MO_HideNotInst.Name" xml:space="preserve">
-    <value>MO_HideNotInst</value>
-  </data>
-  <data name="&gt;&gt;MO_HideNotInst.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MO_HideNotInst.Parent" xml:space="preserve">
-    <value>GB_MainOpts</value>
-  </data>
-  <data name="&gt;&gt;MO_HideNotInst.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <metadata name="MO_ConfirmExit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="MO_ConfirmExit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 19</value>
-  </data>
-  <data name="MO_ConfirmExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 17</value>
-  </data>
-  <data name="MO_ConfirmExit.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="MO_ConfirmExit.Text" xml:space="preserve">
-    <value>Confirm exit</value>
-  </data>
-  <data name="&gt;&gt;MO_ConfirmExit.Name" xml:space="preserve">
-    <value>MO_ConfirmExit</value>
-  </data>
-  <data name="&gt;&gt;MO_ConfirmExit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MO_ConfirmExit.Parent" xml:space="preserve">
-    <value>GB_MainOpts</value>
-  </data>
-  <data name="&gt;&gt;MO_ConfirmExit.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="GB_MainOpts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="GB_MainOpts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 215</value>
-  </data>
-  <data name="GB_MainOpts.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;GB_MainOpts.Name" xml:space="preserve">
-    <value>GB_MainOpts</value>
-  </data>
-  <data name="&gt;&gt;GB_MainOpts.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GB_MainOpts.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;GB_MainOpts.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <metadata name="MO_Okay.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="MO_Okay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>59, 242</value>
+    <value>55, 205</value>
   </data>
   <data name="MO_Okay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 23</value>
+    <value>99, 23</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="MO_Okay.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
@@ -429,16 +144,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MO_Okay.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="MO_Cancel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="MO_Cancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>181, 242</value>
+    <value>185, 205</value>
   </data>
   <data name="MO_Cancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 23</value>
+    <value>99, 23</value>
   </data>
   <data name="MO_Cancel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -456,6 +171,487 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MO_Cancel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="MO_TC.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="MO_TP1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="MO_PrefHelpSystem.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="MO_PrefHelpSystem.Items" xml:space="preserve">
+    <value>Official site</value>
+  </data>
+  <data name="MO_PrefHelpSystem.Items1" xml:space="preserve">
+    <value>Official Wiki</value>
+  </data>
+  <data name="MO_PrefHelpSystem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>137, 111</value>
+  </data>
+  <data name="MO_PrefHelpSystem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 21</value>
+  </data>
+  <data name="MO_PrefHelpSystem.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;MO_PrefHelpSystem.Name" xml:space="preserve">
+    <value>MO_PrefHelpSystem</value>
+  </data>
+  <data name="&gt;&gt;MO_PrefHelpSystem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MO_PrefHelpSystem.Parent" xml:space="preserve">
+    <value>MO_TP1</value>
+  </data>
+  <data name="&gt;&gt;MO_PrefHelpSystem.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="MO_L_HelpSystem.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="MO_L_HelpSystem.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MO_L_HelpSystem.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="MO_L_HelpSystem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 114</value>
+  </data>
+  <data name="MO_L_HelpSystem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 13</value>
+  </data>
+  <data name="MO_L_HelpSystem.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="MO_L_HelpSystem.Text" xml:space="preserve">
+    <value>Select help source:</value>
+  </data>
+  <data name="&gt;&gt;MO_L_HelpSystem.Name" xml:space="preserve">
+    <value>MO_L_HelpSystem</value>
+  </data>
+  <data name="&gt;&gt;MO_L_HelpSystem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MO_L_HelpSystem.Parent" xml:space="preserve">
+    <value>MO_TP1</value>
+  </data>
+  <data name="&gt;&gt;MO_L_HelpSystem.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="MO_AutoUpdate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="MO_AutoUpdate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="MO_AutoUpdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 85</value>
+  </data>
+  <data name="MO_AutoUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 17</value>
+  </data>
+  <data name="MO_AutoUpdate.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="MO_AutoUpdate.Text" xml:space="preserve">
+    <value>Enable automatic updates</value>
+  </data>
+  <data name="&gt;&gt;MO_AutoUpdate.Name" xml:space="preserve">
+    <value>MO_AutoUpdate</value>
+  </data>
+  <data name="&gt;&gt;MO_AutoUpdate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MO_AutoUpdate.Parent" xml:space="preserve">
+    <value>MO_TP1</value>
+  </data>
+  <data name="&gt;&gt;MO_AutoUpdate.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="MO_SortGameList.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="MO_SortGameList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="MO_SortGameList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 62</value>
+  </data>
+  <data name="MO_SortGameList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 17</value>
+  </data>
+  <data name="MO_SortGameList.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="MO_SortGameList.Text" xml:space="preserve">
+    <value>Sort list of games by name</value>
+  </data>
+  <data name="&gt;&gt;MO_SortGameList.Name" xml:space="preserve">
+    <value>MO_SortGameList</value>
+  </data>
+  <data name="&gt;&gt;MO_SortGameList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MO_SortGameList.Parent" xml:space="preserve">
+    <value>MO_TP1</value>
+  </data>
+  <data name="&gt;&gt;MO_SortGameList.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="MO_HideNotInst.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="MO_HideNotInst.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="MO_HideNotInst.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="MO_HideNotInst.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 39</value>
+  </data>
+  <data name="MO_HideNotInst.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 17</value>
+  </data>
+  <data name="MO_HideNotInst.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="MO_HideNotInst.Text" xml:space="preserve">
+    <value>Hide not installed games</value>
+  </data>
+  <data name="&gt;&gt;MO_HideNotInst.Name" xml:space="preserve">
+    <value>MO_HideNotInst</value>
+  </data>
+  <data name="&gt;&gt;MO_HideNotInst.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MO_HideNotInst.Parent" xml:space="preserve">
+    <value>MO_TP1</value>
+  </data>
+  <data name="&gt;&gt;MO_HideNotInst.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="MO_ConfirmExit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="MO_ConfirmExit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="MO_ConfirmExit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 16</value>
+  </data>
+  <data name="MO_ConfirmExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 17</value>
+  </data>
+  <data name="MO_ConfirmExit.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="MO_ConfirmExit.Text" xml:space="preserve">
+    <value>Confirm exit</value>
+  </data>
+  <data name="&gt;&gt;MO_ConfirmExit.Name" xml:space="preserve">
+    <value>MO_ConfirmExit</value>
+  </data>
+  <data name="&gt;&gt;MO_ConfirmExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MO_ConfirmExit.Parent" xml:space="preserve">
+    <value>MO_TP1</value>
+  </data>
+  <data name="&gt;&gt;MO_ConfirmExit.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="MO_TP1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="MO_TP1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="MO_TP1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 156</value>
+  </data>
+  <data name="MO_TP1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="MO_TP1.Text" xml:space="preserve">
+    <value>Common settings</value>
+  </data>
+  <data name="&gt;&gt;MO_TP1.Name" xml:space="preserve">
+    <value>MO_TP1</value>
+  </data>
+  <data name="&gt;&gt;MO_TP1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MO_TP1.Parent" xml:space="preserve">
+    <value>MO_TC</value>
+  </data>
+  <data name="&gt;&gt;MO_TP1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="MO_TP2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="MO_RemEmptyDirs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="MO_RemEmptyDirs.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MO_RemEmptyDirs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="MO_RemEmptyDirs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 62</value>
+  </data>
+  <data name="MO_RemEmptyDirs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 17</value>
+  </data>
+  <data name="MO_RemEmptyDirs.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="MO_RemEmptyDirs.Text" xml:space="preserve">
+    <value>Remove empty directories after safe cleanup</value>
+  </data>
+  <data name="&gt;&gt;MO_RemEmptyDirs.Name" xml:space="preserve">
+    <value>MO_RemEmptyDirs</value>
+  </data>
+  <data name="&gt;&gt;MO_RemEmptyDirs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MO_RemEmptyDirs.Parent" xml:space="preserve">
+    <value>MO_TP2</value>
+  </data>
+  <data name="&gt;&gt;MO_RemEmptyDirs.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="MO_ShBin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="MO_ShBin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>127, 116</value>
+  </data>
+  <data name="MO_ShBin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 20</value>
+  </data>
+  <data name="MO_ShBin.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;MO_ShBin.Name" xml:space="preserve">
+    <value>MO_ShBin</value>
+  </data>
+  <data name="&gt;&gt;MO_ShBin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MO_ShBin.Parent" xml:space="preserve">
+    <value>MO_TP2</value>
+  </data>
+  <data name="&gt;&gt;MO_ShBin.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="L_MO_ShBin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_MO_ShBin.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_MO_ShBin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 116</value>
+  </data>
+  <data name="L_MO_ShBin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 13</value>
+  </data>
+  <data name="L_MO_ShBin.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="L_MO_ShBin.Text" xml:space="preserve">
+    <value>Shell binary:</value>
+  </data>
+  <data name="&gt;&gt;L_MO_ShBin.Name" xml:space="preserve">
+    <value>L_MO_ShBin</value>
+  </data>
+  <data name="&gt;&gt;L_MO_ShBin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_MO_ShBin.Parent" xml:space="preserve">
+    <value>MO_TP2</value>
+  </data>
+  <data name="&gt;&gt;L_MO_ShBin.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="MO_TextEdBin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="MO_TextEdBin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>127, 86</value>
+  </data>
+  <data name="MO_TextEdBin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 20</value>
+  </data>
+  <data name="MO_TextEdBin.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;MO_TextEdBin.Name" xml:space="preserve">
+    <value>MO_TextEdBin</value>
+  </data>
+  <data name="&gt;&gt;MO_TextEdBin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MO_TextEdBin.Parent" xml:space="preserve">
+    <value>MO_TP2</value>
+  </data>
+  <data name="&gt;&gt;MO_TextEdBin.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="L_MO_TextEdBin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="L_MO_TextEdBin.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="L_MO_TextEdBin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="L_MO_TextEdBin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 89</value>
+  </data>
+  <data name="L_MO_TextEdBin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 13</value>
+  </data>
+  <data name="L_MO_TextEdBin.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="L_MO_TextEdBin.Text" xml:space="preserve">
+    <value>Text editor binary:</value>
+  </data>
+  <data name="&gt;&gt;L_MO_TextEdBin.Name" xml:space="preserve">
+    <value>L_MO_TextEdBin</value>
+  </data>
+  <data name="&gt;&gt;L_MO_TextEdBin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_MO_TextEdBin.Parent" xml:space="preserve">
+    <value>MO_TP2</value>
+  </data>
+  <data name="&gt;&gt;L_MO_TextEdBin.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="MO_EnableAppLogs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="MO_EnableAppLogs.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MO_EnableAppLogs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="MO_EnableAppLogs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 39</value>
+  </data>
+  <data name="MO_EnableAppLogs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 17</value>
+  </data>
+  <data name="MO_EnableAppLogs.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="MO_EnableAppLogs.Text" xml:space="preserve">
+    <value>Enable logging application events and errors</value>
+  </data>
+  <data name="&gt;&gt;MO_EnableAppLogs.Name" xml:space="preserve">
+    <value>MO_EnableAppLogs</value>
+  </data>
+  <data name="&gt;&gt;MO_EnableAppLogs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MO_EnableAppLogs.Parent" xml:space="preserve">
+    <value>MO_TP2</value>
+  </data>
+  <data name="&gt;&gt;MO_EnableAppLogs.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="MO_AllowUnsafeNCFOps.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="MO_AllowUnsafeNCFOps.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="MO_AllowUnsafeNCFOps.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="MO_AllowUnsafeNCFOps.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 16</value>
+  </data>
+  <data name="MO_AllowUnsafeNCFOps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 17</value>
+  </data>
+  <data name="MO_AllowUnsafeNCFOps.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="MO_AllowUnsafeNCFOps.Text" xml:space="preserve">
+    <value>Enable unsafe operations for NCF games</value>
+  </data>
+  <data name="&gt;&gt;MO_AllowUnsafeNCFOps.Name" xml:space="preserve">
+    <value>MO_AllowUnsafeNCFOps</value>
+  </data>
+  <data name="&gt;&gt;MO_AllowUnsafeNCFOps.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MO_AllowUnsafeNCFOps.Parent" xml:space="preserve">
+    <value>MO_TP2</value>
+  </data>
+  <data name="&gt;&gt;MO_AllowUnsafeNCFOps.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="MO_TP2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="MO_TP2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="MO_TP2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 156</value>
+  </data>
+  <data name="MO_TP2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="MO_TP2.Text" xml:space="preserve">
+    <value>Advanced settings</value>
+  </data>
+  <data name="&gt;&gt;MO_TP2.Name" xml:space="preserve">
+    <value>MO_TP2</value>
+  </data>
+  <data name="&gt;&gt;MO_TP2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MO_TP2.Parent" xml:space="preserve">
+    <value>MO_TC</value>
+  </data>
+  <data name="&gt;&gt;MO_TP2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="MO_TC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="MO_TC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 182</value>
+  </data>
+  <data name="MO_TC.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;MO_TC.Name" xml:space="preserve">
+    <value>MO_TC</value>
+  </data>
+  <data name="&gt;&gt;MO_TC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MO_TC.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MO_TC.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -468,7 +664,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>325, 282</value>
+    <value>342, 241</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -494,7 +690,6 @@
         AAAAAAAAAAAAAA==
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
   </data>
