@@ -320,4 +320,20 @@
     <SID>17550</SID>
     <IsMP>0</IsMP>
   </Game>
+  <Game Name="Vindictus">
+    <IsGCF>0</IsGCF>
+    <DirName>Vindictus</DirName>
+    <SmallName>en-US</SmallName>
+    <VFDir>en-US</VFDir>
+    <SID>212160</SID>
+    <IsMP>0</IsMP>
+  </Game>
+  <Game Name="Bloody Good Time">
+    <IsGCF>1</IsGCF>
+    <DirName>bloody good time</DirName>
+    <SmallName>pm</SmallName>
+    <VFDir>pm</VFDir>
+    <SID>2450</SID>
+    <IsMP>0</IsMP>
+  </Game>
 </Games>
