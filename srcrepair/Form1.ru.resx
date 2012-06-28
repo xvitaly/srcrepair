@@ -1301,6 +1301,6 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>SRC Repair для {0} (версия {1}, платформа {2})</value>
+    <value>{0} для {1} (версия {2}, платформа {3})</value>
   </data>
 </root>

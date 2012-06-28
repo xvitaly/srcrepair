@@ -5076,7 +5076,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>SRC Repair for {0} (version {1}, platform {2})</value>
+    <value>{0} for {1} (version {2}, platform {3})</value>
   </data>
   <data name="&gt;&gt;CE_New.Name" xml:space="preserve">
     <value>CE_New</value>

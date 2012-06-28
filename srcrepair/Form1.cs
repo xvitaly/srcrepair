@@ -1528,7 +1528,11 @@ namespace srcrepair
                     {
                         GV.SteamExecuttable = "Steam";
                         GV.PlatformFriendlyName = "MacOS";
-                        ValidateAndHandle();
+
+                        // Узнаем путь к Steam...
+                        string TmpPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Library", "Application Support", "Steam");
+                        if (File.Exists(Path.Combine(TmpPath, GV.SteamExecuttable))) { GV.FullSteamPath = TmpPath; } else { ValidateAndHandle(); }
+
                         ChangePrvControlState(false);
                         MNUReportBuilder.Enabled = false;
                     }
@@ -1537,7 +1541,10 @@ namespace srcrepair
                     {
                         GV.SteamExecuttable = "Steam";
                         GV.PlatformFriendlyName = "Linux";
-                        ValidateAndHandle();
+
+                        // Узнаем путь к Steam...
+                        string TmpPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), ".steam");
+                        if (File.Exists(Path.Combine(TmpPath, GV.SteamExecuttable))) { GV.FullSteamPath = TmpPath; } else { ValidateAndHandle(); }
                         
                         // Отключаем контролы, недоступные для данной платформы...
                         ChangePrvControlState(false);
@@ -1578,9 +1585,9 @@ namespace srcrepair
             // Вставляем информацию о версии в заголовок формы...
             //this.Text += " (version " + GV.AppVersionInfo + ")";
             #if DEBUG
-            this.Text = String.Format(this.Text, GV.PlatformFriendlyName, GV.AppVersionInfo + " (debug)", Assmbl.GetName().ProcessorArchitecture.ToString());
+            this.Text = String.Format(this.Text, GV.AppName, GV.PlatformFriendlyName, GV.AppVersionInfo + " (debug)", Assmbl.GetName().ProcessorArchitecture.ToString());
             #else
-            this.Text = String.Format(this.Text, GV.PlatformFriendlyName, GV.AppVersionInfo, Assmbl.GetName().ProcessorArchitecture.ToString());
+            this.Text = String.Format(this.Text, GV.AppName, GV.PlatformFriendlyName, GV.AppVersionInfo, Assmbl.GetName().ProcessorArchitecture.ToString());
             #endif
 
             // Найдём и завершим в памяти процесс Steam...
