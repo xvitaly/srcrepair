@@ -339,14 +339,15 @@ namespace srcrepair
         /// </summary>
         /// <param name="SteamPath">Путь к клиенту Steam</param>
         /// <param name="SteamLogin">Логин Steam</param>
-        private void DetectInstalledGames(string SteamPath, string SteamLogin)
+        /// <param name="SteamAppsDir">Имя каталога SteamApps</param>
+        private void DetectInstalledGames(string SteamPath, string SteamLogin, string SteamAppsDir)
         {
             // Очистим список игр...
             AppSelector.Items.Clear();
 
             // Опишем заготовки путей для GCF и NCF...
-            string SearchPathGCF = Path.Combine(SteamPath, "steamapps", SteamLogin);
-            string SearchPathNCF = Path.Combine(SteamPath, "steamapps", "common");
+            string SearchPathGCF = Path.Combine(SteamPath, SteamAppsDir, SteamLogin);
+            string SearchPathNCF = Path.Combine(SteamPath, SteamAppsDir, "common");
 
             // Начинаем парсить...
             XmlDocument XMLD = new XmlDocument(); // Создаём объект документа XML...
@@ -1526,21 +1527,26 @@ namespace srcrepair
             {
                 case 1: // MacOS...
                     {
+                        // Задаём платформо-зависимые переменные...
                         GV.SteamExecuttable = "Steam";
                         GV.PlatformFriendlyName = "MacOS";
+                        GV.SteamAppsFolderName = "SteamApps";
 
                         // Узнаем путь к Steam...
                         string TmpPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Library", "Application Support", "Steam");
                         if (File.Exists(Path.Combine(TmpPath, GV.SteamExecuttable))) { GV.FullSteamPath = TmpPath; } else { ValidateAndHandle(); }
 
+                        // Отключаем контролы, недоступные для данной платформы...
                         ChangePrvControlState(false);
                         MNUReportBuilder.Enabled = false;
                     }
                     break;
                 case 2: // Linux...
                     {
+                        // Задаём платформо-зависимые переменные...
                         GV.SteamExecuttable = "Steam";
                         GV.PlatformFriendlyName = "Linux";
+                        GV.SteamAppsFolderName = "steamapps";
 
                         // Узнаем путь к Steam...
                         string TmpPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), ".steam");
@@ -1553,8 +1559,10 @@ namespace srcrepair
                     break;
                 default: // Windows
                     {
+                        // Задаём платформо-зависимые переменные...
                         GV.SteamExecuttable = "Steam.exe";
                         GV.PlatformFriendlyName = "Windows";
+                        GV.SteamAppsFolderName = "steamapps";
 
                         // Проверяем, запущена ли программа с правами администратора...
                         if (!(CoreLib.IsCurrentUserAdmin()))
@@ -1575,6 +1583,11 @@ namespace srcrepair
                     }
                     break;
             }
+
+            // При работе отладочной версии запишем в лог путь к найденному Steam...
+            #if DEBUG
+            CoreLib.WriteStringToLog(String.Format("Steam found in: {0}.", GV.FullSteamPath));
+            #endif
 
             // Сохраним последний путь к Steam в файл конфигурации...
             Properties.Settings.Default.LastSteamPath = GV.FullSteamPath;
@@ -1603,7 +1616,7 @@ namespace srcrepair
             try
             {
                 // Создаём объект DirInfo...
-                DirectoryInfo DInfo = new DirectoryInfo(Path.Combine(GV.FullSteamPath, "steamapps"));
+                DirectoryInfo DInfo = new DirectoryInfo(Path.Combine(GV.FullSteamPath, GV.SteamAppsFolderName));
                 // Получаем список директорий из текущего...
                 DirectoryInfo[] DirList = DInfo.GetDirectories();
                 // Обходим созданный массив в поиске нужных нам логинов...
@@ -1642,7 +1655,7 @@ namespace srcrepair
                         CoreLib.WriteStringToLog("User cancelled login dialog.");
                         Environment.Exit(7);
                     };
-                } while (!(Directory.Exists(Path.Combine(GV.FullSteamPath, "steamapps", SBuf))));
+                } while (!(Directory.Exists(Path.Combine(GV.FullSteamPath, GV.SteamAppsFolderName, SBuf))));
                 
                 // Добавляем полученный логин в список...
                 LoginSel.Items.Add((string)SBuf);
@@ -1856,7 +1869,7 @@ namespace srcrepair
             LoginSel.Enabled = AppSelector.SelectedIndex != -1;
 
             // Генерируем полный путь до каталога управляемого приложения...
-            GV.GamePath = Path.Combine(GV.FullSteamPath, "steamapps", ptha, GV.FullAppName);
+            GV.GamePath = Path.Combine(GV.FullSteamPath, GV.SteamAppsFolderName, ptha, GV.FullAppName);
             GV.FullGamePath = Path.Combine(GV.GamePath, GV.SmallAppName);
 
             // Заполняем другие служебные переменные...
@@ -1973,7 +1986,7 @@ namespace srcrepair
             // Начинаем определять установленные игры...
             try
             {
-                DetectInstalledGames(GV.FullSteamPath, LoginSel.Text);
+                DetectInstalledGames(GV.FullSteamPath, LoginSel.Text, GV.SteamAppsFolderName);
             }
             catch (Exception Ex)
             {
@@ -3251,9 +3264,9 @@ namespace srcrepair
             {
                 try
                 {
-                    string ClDir = Path.Combine(GV.FullSteamPath, "steamapps", "downloading");
+                    string ClDir = Path.Combine(GV.FullSteamPath, GV.SteamAppsFolderName, "downloading");
                     if (Directory.Exists(ClDir)) { Directory.Delete(ClDir, true); }
-                    ClDir = Path.Combine(GV.FullSteamPath, "steamapps", "temp");
+                    ClDir = Path.Combine(GV.FullSteamPath, GV.SteamAppsFolderName, "temp");
                     if (Directory.Exists(ClDir)) { Directory.Delete(ClDir, true); }
                     MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

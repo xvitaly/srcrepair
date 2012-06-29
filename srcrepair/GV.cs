@@ -32,7 +32,12 @@ namespace srcrepair
          * Хранит имя бинарного файла клиента Steam в зависимости от платформы...
          */
         public static string SteamExecuttable;
-        
+
+        /*
+         * Хранит имя каталога SteamApps в зависимости от платформы...
+         */
+        public static string SteamAppsFolderName;
+
         /*
          * В этой переменной мы будем хранить полный путь к каталогу установленного
          * клиента Steam.
