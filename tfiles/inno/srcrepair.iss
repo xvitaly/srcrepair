@@ -23,7 +23,7 @@ AppVerName=SRC Repair
 AppPublisher=EasyCoding Team
 AppPublisherURL=http://www.easycoding.org/
 ; AppVersion отображается в Установка/Удаление программ в дополнительной информации.
-AppVersion=9.0.0.573
+AppVersion=9.0.0.574
 AppSupportURL=http://code.google.com/p/srcrepair/wiki/Support
 AppUpdatesURL=http://code.google.com/p/srcrepair/downloads/list
 DefaultDirName={pf}\SRC Repair
@@ -34,7 +34,7 @@ LicenseFile=GPL.txt
 ;InfoBeforeFile=readme.txt
 OutputDir=E:\VSBuilds
 OutputBaseFilename=srcrepair_90_final
-;OutputBaseFilename=srcrepair_beta_573
+;OutputBaseFilename=srcrepair_beta_574
 SetupIconFile=srcrepair.ico
 UninstallDisplayIcon={app}\srcrepair.exe
 Compression=lzma2
@@ -46,7 +46,7 @@ SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64
 
 ; Тут указываем данные, которые будут добавлены в свойства установщика
-VersionInfoVersion=9.0.0.573
+VersionInfoVersion=9.0.0.574
 VersionInfoDescription=SRC Repair Setup
 VersionInfoCopyright=(c) 2005-2012 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
