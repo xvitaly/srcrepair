@@ -295,6 +295,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Archive of.
+        /// </summary>
+        internal static string BU_BName_Bud {
+            get {
+                return ResourceManager.GetString("BU_BName_Bud", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Graph. options autobackup of.
         /// </summary>
         internal static string BU_BName_GameAuto {
@@ -340,11 +349,38 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Archive.
+        /// </summary>
+        internal static string BU_BType_Cont {
+            get {
+                return ResourceManager.GetString("BU_BType_Cont", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Registry.
         /// </summary>
         internal static string BU_BType_Reg {
             get {
                 return ResourceManager.GetString("BU_BType_Reg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Video.
+        /// </summary>
+        internal static string BU_BType_Video {
+            get {
+                return ResourceManager.GetString("BU_BType_Video", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This file can not be restored directly from SRC Repair. Open it with any archiver and restore files manually..
+        /// </summary>
+        internal static string BU_BudArchiveMsg {
+            get {
+                return ResourceManager.GetString("BU_BudArchiveMsg", resourceCulture);
             }
         }
         
@@ -462,6 +498,15 @@ namespace srcrepair {
         internal static string BU_TBSelCat {
             get {
                 return ResourceManager.GetString("BU_TBSelCat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown file type. Can&apos;t restore!.
+        /// </summary>
+        internal static string BU_UnknownType {
+            get {
+                return ResourceManager.GetString("BU_UnknownType", resourceCulture);
             }
         }
         
@@ -876,6 +921,15 @@ namespace srcrepair {
         internal static string ParamError {
             get {
                 return ResourceManager.GetString("ParamError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warning! An error occured during packing files. Archive was not created!.
+        /// </summary>
+        internal static string PS_ArchFailed {
+            get {
+                return ResourceManager.GetString("PS_ArchFailed", resourceCulture);
             }
         }
         

@@ -702,4 +702,28 @@
     <value>Для выполнения этого действия необходимы права локального администратора!</value>
     <comment>Сообщение, выдаваемое при попытке записи в Hosts при отсутствии прав локального администратора</comment>
   </data>
+  <data name="BU_BType_Cont" xml:space="preserve">
+    <value>Архив</value>
+    <comment>Тип бэкапа: архивный контейнер</comment>
+  </data>
+  <data name="BU_BudArchiveMsg" xml:space="preserve">
+    <value>Этот тип файла не может быть восстановлен из SRC Repair. Откройте его в любом архиваторе и выполните восстановление самостоятельно.</value>
+    <comment>Сообщение при попытке восстановить архивный контейнер</comment>
+  </data>
+  <data name="BU_UnknownType" xml:space="preserve">
+    <value>Отсутствуют правила для восстановления такого типа файлов!</value>
+    <comment>Сообщение при попытке восстановить неизвестный тип файла</comment>
+  </data>
+  <data name="BU_BName_Bud" xml:space="preserve">
+    <value>Архив от</value>
+    <comment>Имя для отображения в списке бэкапов (контейнер)</comment>
+  </data>
+  <data name="BU_BType_Video" xml:space="preserve">
+    <value>Видео</value>
+    <comment>Тип бэкапа: настройки видео</comment>
+  </data>
+  <data name="PS_ArchFailed" xml:space="preserve">
+    <value>Произошла ошибка при упаковке файлов в архив. Архив не был создан!</value>
+    <comment>Сообщение об исключении в функции создания архива</comment>
+  </data>
 </root>

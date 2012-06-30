@@ -1317,33 +1317,49 @@ namespace srcrepair
             {
                 // Обрабатываем найденное...
                 BufName = Path.GetFileNameWithoutExtension(DItem.Name);
-                if (DItem.Extension == ".reg")
+                switch (DItem.Extension)
                 {
-                    // Бэкап реестра...
-                    Buf = CoreLib.GetLocalizedString("BU_BType_Reg");
-                    // Заполним человеческое описание...
-                    if (BufName.IndexOf("Game_Options") != -1)
-                    {
-                        BufName = CoreLib.GetLocalizedString("BU_BName_GRGame") + " " + DItem.CreationTime;
-                    }
-                    if (BufName.IndexOf("Source_Options") != -1)
-                    {
-                        BufName = CoreLib.GetLocalizedString("BU_BName_SRCAll") + " " + DItem.CreationTime;
-                    }
-                    if (BufName.IndexOf("Steam_BackUp") != -1)
-                    {
-                        BufName = CoreLib.GetLocalizedString("BU_BName_SteamAll") + " " + DItem.CreationTime;
-                    }
-                    if (BufName.IndexOf("Game_AutoBackUp") != -1)
-                    {
-                        BufName = CoreLib.GetLocalizedString("BU_BName_GameAuto") + " " + DItem.CreationTime;
-                    }
-
-                }
-                else
-                {
-                    // Бэкап конфига...
-                    Buf = CoreLib.GetLocalizedString("BU_BType_Cfg");
+                    case ".reg":
+                        // Бэкап реестра...
+                        Buf = CoreLib.GetLocalizedString("BU_BType_Reg");
+                        // Заполним человеческое описание...
+                        if (BufName.IndexOf("Game_Options") != -1)
+                        {
+                            BufName = CoreLib.GetLocalizedString("BU_BName_GRGame") + " " + DItem.CreationTime;
+                        }
+                        if (BufName.IndexOf("Source_Options") != -1)
+                        {
+                            BufName = CoreLib.GetLocalizedString("BU_BName_SRCAll") + " " + DItem.CreationTime;
+                        }
+                        if (BufName.IndexOf("Steam_BackUp") != -1)
+                        {
+                            BufName = CoreLib.GetLocalizedString("BU_BName_SteamAll") + " " + DItem.CreationTime;
+                        }
+                        if (BufName.IndexOf("Game_AutoBackUp") != -1)
+                        {
+                            BufName = CoreLib.GetLocalizedString("BU_BName_GameAuto") + " " + DItem.CreationTime;
+                        }
+                        break;
+                    case ".bud":
+                        Buf = CoreLib.GetLocalizedString("BU_BType_Cont");
+                        if (BufName.IndexOf("Container") != -1)
+                        {
+                            BufName = CoreLib.GetLocalizedString("BU_BName_Bud") + " " + DItem.CreationTime;
+                        }
+                        break;
+                    default:
+                        switch (Path.GetExtension(Path.GetFileNameWithoutExtension(DItem.FullName)))
+                        {
+                            case ".cfg":
+                                Buf = CoreLib.GetLocalizedString("BU_BType_Cfg");
+                                break;
+                            case ".txt":
+                                Buf = CoreLib.GetLocalizedString("BU_BType_Video");
+                                break;
+                            default: Buf = CoreLib.GetLocalizedString("BU_BType_Cfg");
+                                break;
+                        }
+                        break;
                 }
                 // Добавляем в таблицу...
                 ListViewItem LvItem = new ListViewItem(BufName);
@@ -1491,6 +1507,33 @@ namespace srcrepair
             MNUUpdateCheck.Enabled = State;
             MNUWinMnuDisabler.Enabled = State;
             MNUUpGameDB.Enabled = State;
+        }
+
+        /// <summary>
+        /// Восстанавливает файл резервной копии согласно правилам в указанный каталог.
+        /// </summary>
+        /// <param name="FName">Имя файла резервной копии</param>
+        /// <param name="DestDirW">Каталог назначения</param>
+        private void RestoreBackUpFile(string FName, string DestDirW)
+        {
+            // Сохраняем оригинальное имя файла резервной копии для функции копирования...
+            string OrigName = FName;
+            // Отбрасываем двойное расширение...
+            FName = Path.GetFileNameWithoutExtension(FName);
+            try
+            {
+                // Копируем файл...
+                File.Copy(Path.Combine(GV.FullBackUpDirPath, OrigName), Path.Combine(DestDirW, FName), true);
+                // Если восстановили autoexec.cfg, отображаем значок на странице графического твикера...
+                if (FName == "autoexec.cfg") { GT_Warning.Visible = true; }
+                // Показываем сообщение об успешном восстановлении...
+                MessageBox.Show(CoreLib.GetLocalizedString("BU_RestSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception Ex)
+            {
+                // Произошло исключение...
+                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BU_RestFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+            }
         }
 
         #endregion
@@ -2608,53 +2651,41 @@ namespace srcrepair
                     if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("BU_QMsg"), Path.GetFileNameWithoutExtension(FName), BU_LVTable.SelectedItems[0].SubItems[3].Text), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
                         // Проверяем что восстанавливать: конфиг или реестр...
-                        if (Path.GetExtension(FName) != ".reg")
+                        switch (Path.GetExtension(FName))
                         {
-                            // Сохраняем оригинальное имя файла резервной копии для функции копирования...
-                            string OrigName = FName;
-                            // Отбрасываем двойное расширение...
-                            FName = Path.GetFileNameWithoutExtension(FName);
-                            string DestDirW;
-                            // Определяем в какой каталог помещать восстановленный файл...
-                            switch (Path.GetExtension(FName))
-                            {
-                                case ".cfg": DestDirW = GV.FullCfgPath;
-                                    break;
-                                case ".txt": DestDirW = Path.Combine(GV.GamePath, GV.ConfDir, "cfg");
-                                    break;
-                                default: DestDirW = GV.FullCfgPath;
-                                    break;
-                            }
-                            try
-                            {
-                                // Копируем файл...
-                                File.Copy(Path.Combine(GV.FullBackUpDirPath, OrigName), Path.Combine(DestDirW, FName), true);
-                                // Если восстановили autoexec.cfg, отображаем значок на странице графического твикера...
-                                if (FName == "autoexec.cfg") { GT_Warning.Visible = true; }
-                                // Показываем сообщение об успешном восстановлении...
-                                MessageBox.Show(CoreLib.GetLocalizedString("BU_RestSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                            catch (Exception Ex)
-                            {
-                                // Произошло исключение...
-                                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BU_RestFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                            }
-                        }
-                        else
-                        {
-                            // Восстанавливаем файл реестра...
-                            try
-                            {
-                                // Восстанавливаем...
-                                Process.Start("regedit.exe", @"/s """ + GV.FullBackUpDirPath + FName + @"""");
-                                // Показываем сообщение об успешном восстановлении...
-                                MessageBox.Show(CoreLib.GetLocalizedString("BU_RestSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                            catch (Exception Ex)
-                            {
-                                // Произошло исключение...
-                                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BU_RestFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                            }
+                            case ".reg":
+                                // Восстанавливаем файл реестра...
+                                try
+                                {
+                                    // Восстанавливаем...
+                                    Process.Start("regedit.exe", @"/s """ + Path.Combine(GV.FullBackUpDirPath, FName) + @"""");
+                                    // Показываем сообщение об успешном восстановлении...
+                                    MessageBox.Show(CoreLib.GetLocalizedString("BU_RestSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                                catch (Exception Ex)
+                                {
+                                    // Произошло исключение...
+                                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BU_RestFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                                }
+                                break;
+                            case ".bud":
+                                MessageBox.Show(CoreLib.GetLocalizedString("BU_BudArchiveMsg"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Process.Start(Properties.Settings.Default.ShBin, @"/select," + @"""" + Path.Combine(GV.FullBackUpDirPath, FName) + @"""");
+                                break;
+                            default:
+                                switch (Path.GetExtension(Path.GetFileNameWithoutExtension(FName)))
+                                {
+                                    case ".cfg":
+                                        RestoreBackUpFile(FName, GV.FullCfgPath);
+                                        break;
+                                    case ".txt":
+                                        RestoreBackUpFile(FName, Path.Combine(GV.GamePath, GV.ConfDir, "cfg"));
+                                        break;
+                                    default:
+                                        MessageBox.Show(CoreLib.GetLocalizedString("BU_UnknownType"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        break;
+                                }
+                                break;
                         }
                     }
                 }

@@ -37,6 +37,7 @@
             this.CM_Info = new System.Windows.Forms.Label();
             this.CM_Clean = new System.Windows.Forms.Button();
             this.CM_Cancel = new System.Windows.Forms.Button();
+            this.CM_CompressFiles = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // CM_WelcMsg
@@ -96,6 +97,12 @@
             this.CM_Cancel.UseVisualStyleBackColor = true;
             this.CM_Cancel.Click += new System.EventHandler(this.CM_Cancel_Click);
             // 
+            // CM_CompressFiles
+            // 
+            resources.ApplyResources(this.CM_CompressFiles, "CM_CompressFiles");
+            this.CM_CompressFiles.Name = "CM_CompressFiles";
+            this.CM_CompressFiles.UseVisualStyleBackColor = true;
+            // 
             // frmCleaner
             // 
             this.AcceptButton = this.CM_Clean;
@@ -103,6 +110,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.CM_Cancel;
             this.ControlBox = false;
+            this.Controls.Add(this.CM_CompressFiles);
             this.Controls.Add(this.CM_Cancel);
             this.Controls.Add(this.CM_Clean);
             this.Controls.Add(this.CM_Info);
@@ -129,5 +137,6 @@
         private System.Windows.Forms.ColumnHeader FName;
         private System.Windows.Forms.ColumnHeader FSize;
         private System.Windows.Forms.ColumnHeader FDate;
+        private System.Windows.Forms.CheckBox CM_CompressFiles;
     }
 }

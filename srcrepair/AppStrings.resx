@@ -555,4 +555,22 @@
   <data name="AHE_NoAdminRights" xml:space="preserve">
     <value>Local admin rights is required to perform requested action!</value>
   </data>
+  <data name="BU_BType_Cont" xml:space="preserve">
+    <value>Archive</value>
+  </data>
+  <data name="BU_BudArchiveMsg" xml:space="preserve">
+    <value>This file can not be restored directly from SRC Repair. Open it with any archiver and restore files manually.</value>
+  </data>
+  <data name="BU_UnknownType" xml:space="preserve">
+    <value>Unknown file type. Can't restore!</value>
+  </data>
+  <data name="BU_BName_Bud" xml:space="preserve">
+    <value>Archive of</value>
+  </data>
+  <data name="BU_BType_Video" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="PS_ArchFailed" xml:space="preserve">
+    <value>Warning! An error occured during packing files. Archive was not created!</value>
+  </data>
 </root>

@@ -26,6 +26,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
+using Ionic.Zip;
 
 namespace srcrepair
 {
@@ -142,6 +143,7 @@ namespace srcrepair
 
         private void CM_Clean_Click(object sender, EventArgs e)
         {
+            List<string> DeleteQueue = new List<string>();
             if (CM_FTable.Items.Count > 0)
             {
                 if (CM_FTable.CheckedItems.Count > 0)
@@ -150,18 +152,41 @@ namespace srcrepair
                     {
                         try
                         {
-                            // Чистим...
+                            // Добавляем в очередь для очистки...
                             foreach (ListViewItem LVI in CM_FTable.Items)
                             {
                                 if (LVI.Checked)
                                 {
-                                    if (File.Exists(LVI.ToolTipText))
-                                    {
-                                        File.Delete(LVI.ToolTipText);
-                                    }
+                                    DeleteQueue.Add(LVI.ToolTipText);
                                 }
                             }
                             
+                            // Добавляем в архив (если выбрано)...
+                            if (CM_CompressFiles.Checked)
+                            {
+                                try
+                                {
+                                    using (ZipFile ZBkUp = new ZipFile(Path.Combine(GV.FullBackUpDirPath, "Container_" + CoreLib.WriteDateToString(DateTime.Now, true) + ".bud"), Encoding.UTF8))
+                                    {
+                                        ZBkUp.AddFiles(DeleteQueue, true, "");
+                                        ZBkUp.Save();
+                                    }
+                                }
+                                catch (Exception Ex)
+                                {
+                                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_ArchFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                                }
+                            }
+
+                            // Удаляем файлы из очереди очистки...
+                            foreach (string Fl in DeleteQueue)
+                            {
+                                if (File.Exists(Fl))
+                                {
+                                    File.Delete(Fl);
+                                }
+                            }
+
                             // Удалим пустые каталоги (если разрешено)...
                             if (Properties.Settings.Default.RemoveEmptyDirs)
                             {
