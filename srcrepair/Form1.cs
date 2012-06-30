@@ -314,7 +314,7 @@ namespace srcrepair
             PS_RemSecndCache.Enabled = BStatus;
             //PS_RemScreenShots.Enabled = BStatus;
             //PS_RemDemos.Enabled = BStatus;
-            PS_RemGraphOpts.Enabled = BStatus;
+            //PS_RemGraphOpts.Enabled = BStatus;
             PS_RemOldBin.Enabled = BStatus;
             PS_RemTextures.Enabled = BStatus;
             PS_RemModels.Enabled = BStatus;
@@ -2465,29 +2465,58 @@ namespace srcrepair
             // Удаляем графические настройки...
             if (MessageBox.Show(((Button)sender).Text + "?", GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                // Создаём резервную копию...
-                if (Properties.Settings.Default.SafeCleanup)
+                if (GV.IsGCFApp)
+                {
+                    // Создаём резервную копию...
+                    if (Properties.Settings.Default.SafeCleanup)
+                    {
+                        try
+                        {
+                            if (GV.RunningPlatform == 0) { CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath); }
+                        }
+                        catch
+                        {
+                            // Подавляем сообщение об ошибке если оно возникнет...
+                        }
+                    }
+
+                    // Работаем...
+                    try
+                    {
+                        if (GV.RunningPlatform == 0)
+                        {
+                            // Удаляем ключ HKEY_CURRENT_USER\Software\Valve\Source\tf\Settings из реестра...
+                            Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("Software", "Valve", "Source", GV.SmallAppName, "Settings"), false);
+                            MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show(CoreLib.GetLocalizedString("AppFeatureUnavailable"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch (Exception Ex)
+                    {
+                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    }
+                }
+                else
                 {
                     try
                     {
-                        CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
+                        if (File.Exists(GV.VideoCfgFile))
+                        {
+                            if (Properties.Settings.Default.SafeCleanup)
+                            {
+                                CreateBackUpNow(Path.GetFileName(GV.VideoCfgFile), Path.GetDirectoryName(GV.VideoCfgFile), GV.FullBackUpDirPath);
+                            }
+                            File.Delete(GV.VideoCfgFile);
+                            MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
-                    catch
+                    catch (Exception Ex)
                     {
-                        // Подавляем сообщение об ошибке если оно возникнет...
+                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                     }
-                }
-
-                // Работаем...
-                try
-                {
-                    // Удаляем ключ HKEY_CURRENT_USER\Software\Valve\Source\tf\Settings из реестра...
-                    Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), false);
-                    MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception Ex)
-                {
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -2536,33 +2565,43 @@ namespace srcrepair
 
         private void PS_ResetSettings_Click(object sender, EventArgs e)
         {
-            // Удаляем все настройки...
-            if (MessageBox.Show(CoreLib.GetLocalizedString("PS_ResetSettingsMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (GV.RunningPlatform == 0)
             {
-                // Создаём резервную копию...
-                if (Properties.Settings.Default.SafeCleanup)
+                if (GV.IsGCFApp)
                 {
-                    try
+                    // Удаляем все настройки...
+                    if (MessageBox.Show(CoreLib.GetLocalizedString("PS_ResetSettingsMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
-                        CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
+                        // Создаём резервную копию...
+                        if (Properties.Settings.Default.SafeCleanup)
+                        {
+                            try
+                            {
+                                CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
+                            }
+                            catch
+                            {
+                                // Подавляем сообщение об ошибке если оно возникнет...
+                            }
+                        }
+
+                        // Работаем...
+                        try
+                        {
+                            if (Directory.Exists(GV.GamePath)) { Directory.Delete(GV.GamePath, true); } // Удаляем всю папку с файлами игры...
+                            Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("Software", "Valve", "Source", GV.SmallAppName, "Settings"), false); // Удаляем настройки видео...
+                            MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception Ex)
+                        {
+                            CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                        }
                     }
-                    catch
-                    {
-                        // Подавляем сообщение об ошибке если оно возникнет...
-                    }
                 }
-                
-                // Работаем...
-                try
-                {
-                    if (Directory.Exists(GV.GamePath)) { Directory.Delete(GV.GamePath, true); } // Удаляем всю папку с файлами игры...
-                    Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), false); // Удаляем настройки видео...
-                    MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception Ex)
-                {
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                }
+            }
+            else
+            {
+                MessageBox.Show(CoreLib.GetLocalizedString("AppFeatureUnavailable"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
