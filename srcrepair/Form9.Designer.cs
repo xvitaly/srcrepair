@@ -40,6 +40,8 @@
             this.MO_HideNotInst = new System.Windows.Forms.CheckBox();
             this.MO_ConfirmExit = new System.Windows.Forms.CheckBox();
             this.MO_TP2 = new System.Windows.Forms.TabPage();
+            this.MO_FindShBin = new System.Windows.Forms.Button();
+            this.MO_FindTextEd = new System.Windows.Forms.Button();
             this.MO_RemEmptyDirs = new System.Windows.Forms.CheckBox();
             this.MO_ShBin = new System.Windows.Forms.TextBox();
             this.L_MO_ShBin = new System.Windows.Forms.Label();
@@ -47,6 +49,7 @@
             this.L_MO_TextEdBin = new System.Windows.Forms.Label();
             this.MO_EnableAppLogs = new System.Windows.Forms.CheckBox();
             this.MO_AllowUnsafeNCFOps = new System.Windows.Forms.CheckBox();
+            this.MO_SearchBin = new System.Windows.Forms.OpenFileDialog();
             this.MO_TC.SuspendLayout();
             this.MO_TP1.SuspendLayout();
             this.MO_TP2.SuspendLayout();
@@ -128,6 +131,8 @@
             // 
             // MO_TP2
             // 
+            this.MO_TP2.Controls.Add(this.MO_FindShBin);
+            this.MO_TP2.Controls.Add(this.MO_FindTextEd);
             this.MO_TP2.Controls.Add(this.MO_RemEmptyDirs);
             this.MO_TP2.Controls.Add(this.MO_ShBin);
             this.MO_TP2.Controls.Add(this.L_MO_ShBin);
@@ -138,6 +143,22 @@
             resources.ApplyResources(this.MO_TP2, "MO_TP2");
             this.MO_TP2.Name = "MO_TP2";
             this.MO_TP2.UseVisualStyleBackColor = true;
+            // 
+            // MO_FindShBin
+            // 
+            this.MO_FindShBin.Image = global::srcrepair.Properties.Resources.Search;
+            resources.ApplyResources(this.MO_FindShBin, "MO_FindShBin");
+            this.MO_FindShBin.Name = "MO_FindShBin";
+            this.MO_FindShBin.UseVisualStyleBackColor = true;
+            this.MO_FindShBin.Click += new System.EventHandler(this.MO_FindShBin_Click);
+            // 
+            // MO_FindTextEd
+            // 
+            this.MO_FindTextEd.Image = global::srcrepair.Properties.Resources.Search;
+            resources.ApplyResources(this.MO_FindTextEd, "MO_FindTextEd");
+            this.MO_FindTextEd.Name = "MO_FindTextEd";
+            this.MO_FindTextEd.UseVisualStyleBackColor = true;
+            this.MO_FindTextEd.Click += new System.EventHandler(this.MO_FindTextEd_Click);
             // 
             // MO_RemEmptyDirs
             // 
@@ -176,6 +197,10 @@
             resources.ApplyResources(this.MO_AllowUnsafeNCFOps, "MO_AllowUnsafeNCFOps");
             this.MO_AllowUnsafeNCFOps.Name = "MO_AllowUnsafeNCFOps";
             this.MO_AllowUnsafeNCFOps.UseVisualStyleBackColor = true;
+            // 
+            // MO_SearchBin
+            // 
+            resources.ApplyResources(this.MO_SearchBin, "MO_SearchBin");
             // 
             // frmOptions
             // 
@@ -223,5 +248,8 @@
         private System.Windows.Forms.TextBox MO_TextEdBin;
         private System.Windows.Forms.Label L_MO_TextEdBin;
         private System.Windows.Forms.CheckBox MO_RemEmptyDirs;
+        private System.Windows.Forms.Button MO_FindShBin;
+        private System.Windows.Forms.Button MO_FindTextEd;
+        private System.Windows.Forms.OpenFileDialog MO_SearchBin;
     }
 }

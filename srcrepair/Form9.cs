@@ -56,6 +56,8 @@ namespace srcrepair
             {
                 MO_ShBin.Enabled = false;
                 MO_TextEdBin.Enabled = false;
+                MO_FindTextEd.Enabled = false;
+                MO_FindShBin.Enabled = false;
             }
         }
 
@@ -92,6 +94,22 @@ namespace srcrepair
         {
             // Закрываем форму без сохранения изменений...
             this.Close();
+        }
+
+        private void MO_FindTextEd_Click(object sender, EventArgs e)
+        {
+            if (MO_SearchBin.ShowDialog() == DialogResult.OK)
+            {
+                MO_TextEdBin.Text = MO_SearchBin.FileName;
+            }
+        }
+
+        private void MO_FindShBin_Click(object sender, EventArgs e)
+        {
+            if (MO_SearchBin.ShowDialog() == DialogResult.OK)
+            {
+                MO_ShBin.Text = MO_SearchBin.FileName;
+            }
         }
     }
 }

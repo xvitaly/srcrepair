@@ -396,6 +396,54 @@
   <metadata name="MO_TP2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="MO_FindShBin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="MO_FindShBin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 113</value>
+  </data>
+  <data name="MO_FindShBin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="MO_FindShBin.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;MO_FindShBin.Name" xml:space="preserve">
+    <value>MO_FindShBin</value>
+  </data>
+  <data name="&gt;&gt;MO_FindShBin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MO_FindShBin.Parent" xml:space="preserve">
+    <value>MO_TP2</value>
+  </data>
+  <data name="&gt;&gt;MO_FindShBin.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="MO_FindTextEd.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="MO_FindTextEd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 83</value>
+  </data>
+  <data name="MO_FindTextEd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="MO_FindTextEd.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;MO_FindTextEd.Name" xml:space="preserve">
+    <value>MO_FindTextEd</value>
+  </data>
+  <data name="&gt;&gt;MO_FindTextEd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MO_FindTextEd.Parent" xml:space="preserve">
+    <value>MO_TP2</value>
+  </data>
+  <data name="&gt;&gt;MO_FindTextEd.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="MO_RemEmptyDirs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -427,7 +475,7 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;MO_RemEmptyDirs.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <metadata name="MO_ShBin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -436,10 +484,10 @@
     <value>127, 116</value>
   </data>
   <data name="MO_ShBin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 20</value>
+    <value>133, 20</value>
   </data>
   <data name="MO_ShBin.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;MO_ShBin.Name" xml:space="preserve">
     <value>MO_ShBin</value>
@@ -451,7 +499,7 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;MO_ShBin.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <metadata name="L_MO_ShBin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -466,7 +514,7 @@
     <value>64, 13</value>
   </data>
   <data name="L_MO_ShBin.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="L_MO_ShBin.Text" xml:space="preserve">
     <value>Shell binary:</value>
@@ -481,7 +529,7 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;L_MO_ShBin.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <metadata name="MO_TextEdBin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -490,7 +538,7 @@
     <value>127, 86</value>
   </data>
   <data name="MO_TextEdBin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 20</value>
+    <value>133, 20</value>
   </data>
   <data name="MO_TextEdBin.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -505,7 +553,7 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;MO_TextEdBin.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <metadata name="L_MO_TextEdBin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -538,7 +586,7 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;L_MO_TextEdBin.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <metadata name="MO_EnableAppLogs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -571,7 +619,7 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;MO_EnableAppLogs.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <metadata name="MO_AllowUnsafeNCFOps.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -604,7 +652,7 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;MO_AllowUnsafeNCFOps.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="MO_TP2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -654,6 +702,15 @@
   <data name="&gt;&gt;MO_TC.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="MO_SearchBin.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="MO_SearchBin.Filter" xml:space="preserve">
+    <value>Windows binary (*.exe)|*.exe|All files (*.*)|*.*</value>
+  </data>
+  <data name="MO_SearchBin.Title" xml:space="preserve">
+    <value>Binary selection</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -695,6 +752,12 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>{0}'s options</value>
+  </data>
+  <data name="&gt;&gt;MO_SearchBin.Name" xml:space="preserve">
+    <value>MO_SearchBin</value>
+  </data>
+  <data name="&gt;&gt;MO_SearchBin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmOptions</value>
