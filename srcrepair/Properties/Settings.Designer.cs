@@ -304,5 +304,17 @@ namespace srcrepair.Properties {
                 this["ShBin"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("/select,")]
+        public string ShParam {
+            get {
+                return ((string)(this["ShParam"]));
+            }
+            set {
+                this["ShParam"] = value;
+            }
+        }
     }
 }

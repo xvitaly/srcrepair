@@ -77,5 +77,8 @@
     <Setting Name="ShBin" Type="System.String" Scope="User">
       <Value Profile="(Default)">explorer.exe</Value>
     </Setting>
+    <Setting Name="ShParam" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/select,</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

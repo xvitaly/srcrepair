@@ -290,7 +290,7 @@ namespace srcrepair
         {
             if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AHE_HMessg"), HostsFilePath), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                Process.Start(Properties.Settings.Default.ShBin, @"/select," + @"""" + HostsFilePath + @"""");
+                Process.Start(Properties.Settings.Default.ShBin, Properties.Settings.Default.ShParam + @" """ + HostsFilePath + @"""");
             }
         }
 
