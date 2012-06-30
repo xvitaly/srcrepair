@@ -23,7 +23,7 @@ AppVerName=SRC Repair
 AppPublisher=EasyCoding Team
 AppPublisherURL=http://www.easycoding.org/
 ; AppVersion отображается в Установка/Удаление программ в дополнительной информации.
-AppVersion=8.0.0.525
+AppVersion=9.0.0.573
 AppSupportURL=http://code.google.com/p/srcrepair/wiki/Support
 AppUpdatesURL=http://code.google.com/p/srcrepair/downloads/list
 DefaultDirName={pf}\SRC Repair
@@ -33,8 +33,8 @@ SourceDir=E:\VSBuilds
 LicenseFile=GPL.txt
 ;InfoBeforeFile=readme.txt
 OutputDir=E:\VSBuilds
-OutputBaseFilename=srcrepair_80_final
-;OutputBaseFilename=srcrepair_beta_525
+OutputBaseFilename=srcrepair_90_final
+;OutputBaseFilename=srcrepair_beta_573
 SetupIconFile=srcrepair.ico
 UninstallDisplayIcon={app}\srcrepair.exe
 Compression=lzma2
@@ -46,7 +46,7 @@ SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64
 
 ; Тут указываем данные, которые будут добавлены в свойства установщика
-VersionInfoVersion=8.0.0.525
+VersionInfoVersion=9.0.0.573
 VersionInfoDescription=SRC Repair Setup
 VersionInfoCopyright=(c) 2005-2012 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
@@ -60,7 +60,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 ;Name: "copylicence"; Description: "Скопировать лицензионное соглашение в папку SRC Repair"; GroupDescription: "Дополнительные возможности:"
 ;Name: "copyreadme"; Description: "Скопировать файл ReadMe в папку SRC Repair"; GroupDescription: "Дополнительные возможности:"
-Name: "inst7z"; Description: "{cm:InstLZMAPlugin}"; GroupDescription: "{cm:AdvFeatGroupDesc}"
+;Name: "inst7z"; Description: "{cm:InstLZMAPlugin}"; GroupDescription: "{cm:AdvFeatGroupDesc}"
 Name: "betashortuts"; Description: "{cm:InstCreateLocShcuts}"; GroupDescription: "{cm:AdvFeatGroupDesc}"
 ;Name: "isexpf"; Description: "{cm:InstExpFeatures}"; GroupDescription: "{cm:AdvFeatGroupDesc}"; Flags: unchecked
 Name: "insdebginf"; Description: "{cm:InstDebugInfo}"; GroupDescription: "{cm:AdvFeatGroupDesc}"; Flags: unchecked
@@ -77,6 +77,8 @@ Source: "changelog.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "games.xml"; DestDir: "{app}"; Flags: ignoreversion
 ; Копируем открытый ключ...
 Source: "pubkey.asc"; DestDir: "{app}"; Flags: ignoreversion
+; Копируем модуль поддержки сжатия (собран как AnyCPU)...
+Source: "Ionic.Zip.Reduced.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; Устанавливаем 32-битную версию...
 Source: "srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion; Check: not Is64BitInstallMode
 Source: "srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion; Check: not Is64BitInstallMode; Tasks: insdebginf
@@ -91,7 +93,6 @@ Source: "x64\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs cr
 Source: "srcrepair.exe.config"; DestDir: "{app}"; Flags: ignoreversion
 ; Устанавливаем остальные файлы...
 Source: "cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "7z\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Tasks: inst7z
 ;Source: "nfx\*"; DestDir: "{app}\nfx\"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 

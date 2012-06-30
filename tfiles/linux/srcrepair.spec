@@ -38,6 +38,8 @@ chmod +x %{buildroot}/usr/bin/srcrepair
 /usr/bin/srcrepair
 /usr/share/applications/srcrepair.desktop
 /usr/share/srcrepair/srcrepair.exe
+/usr/share/srcrepair/Ionic.Zip.Reduced.dll
+/usr/share/srcrepair/Ionic.Zip.Reduced.dll.sig
 /usr/share/srcrepair/srcrepair.exe.config
 /usr/share/srcrepair/srcrepair.exe.sig
 /usr/share/srcrepair/srcrepair.ico
@@ -50,6 +52,9 @@ chmod +x %{buildroot}/usr/bin/srcrepair
 /usr/share/srcrepair/cfgs/chrismaxfps.cfg
 /usr/share/srcrepair/cfgs/chrismaxfps_en.txt
 /usr/share/srcrepair/cfgs/chrismaxfps_ru.txt
+/usr/share/srcrepair/cfgs/chrishighframes.cfg
+/usr/share/srcrepair/cfgs/chrishighframes_en.txt
+/usr/share/srcrepair/cfgs/chrishighframes_ru.txt
 /usr/share/srcrepair/cfgs/config_default.cfg
 /usr/share/srcrepair/cfgs/dt_legal.cfg
 /usr/share/srcrepair/cfgs/dt_legal_en.txt

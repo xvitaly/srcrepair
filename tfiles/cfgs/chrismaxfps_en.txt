@@ -1,4 +1,4 @@
-﻿Nice FPS config that does a good job and gives you a decent picture. Recommended for use on low-end PCs.
+﻿Good FPS config that does a good job and gives you a decent picture. Recommended for use on old PCs.
 
 FPS increase: High
-Graphics degradation: Some
+Graphics degradation: High
