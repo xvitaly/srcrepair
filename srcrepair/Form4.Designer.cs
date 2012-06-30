@@ -42,6 +42,8 @@
             // Compress
             // 
             resources.ApplyResources(this.Compress, "Compress");
+            this.Compress.Checked = true;
+            this.Compress.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Compress.Name = "Compress";
             this.Compress.UseVisualStyleBackColor = true;
             // 

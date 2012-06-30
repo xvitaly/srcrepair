@@ -313,7 +313,7 @@
     <value>Close</value>
   </data>
   <data name="RPB_ComprGen" xml:space="preserve">
-    <value>Report with the name {0} has been successfully created! Now we will open the directory with generated report file in order that you can upload it to technical support service.</value>
+    <value>Compressed report with the name {0}.zip has been successfully created! Now we will open the directory with generated report file in order that you can upload it to technical support service.</value>
   </data>
   <data name="RPB_CptWrk" xml:space="preserve">
     <value>Working... Please wait.</value>
@@ -572,5 +572,8 @@
   </data>
   <data name="PS_ArchFailed" xml:space="preserve">
     <value>Warning! An error occured during packing files. Archive was not created!</value>
+  </data>
+  <data name="RPB_Generated" xml:space="preserve">
+    <value>Report with the name {0} has been successfully created! Now we will open the directory with generated report file in order that you can upload it to technical support service.</value>
   </data>
 </root>

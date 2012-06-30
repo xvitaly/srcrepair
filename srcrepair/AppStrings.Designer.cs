@@ -1105,7 +1105,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Report with the name {0} has been successfully created! Now we will open the directory with generated report file in order that you can upload it to technical support service..
+        ///   Looks up a localized string similar to Compressed report with the name {0}.zip has been successfully created! Now we will open the directory with generated report file in order that you can upload it to technical support service..
         /// </summary>
         internal static string RPB_ComprGen {
             get {
@@ -1119,6 +1119,15 @@ namespace srcrepair {
         internal static string RPB_CptWrk {
             get {
                 return ResourceManager.GetString("RPB_CptWrk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Report with the name {0} has been successfully created! Now we will open the directory with generated report file in order that you can upload it to technical support service..
+        /// </summary>
+        internal static string RPB_Generated {
+            get {
+                return ResourceManager.GetString("RPB_Generated", resourceCulture);
             }
         }
         

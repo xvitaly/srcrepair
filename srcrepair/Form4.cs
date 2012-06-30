@@ -26,6 +26,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
+using Ionic.Zip;
 
 namespace srcrepair
 {
@@ -41,14 +42,6 @@ namespace srcrepair
         private void frmRepBuilder_Load(object sender, EventArgs e)
         {
             // Событие создания формы...
-            if ((File.Exists(Path.Combine(GV.FullAppPath, "7z.exe"))) && (File.Exists(Path.Combine(GV.FullAppPath, "7z.dll"))))
-            {
-                Compress.Enabled = true;
-            }
-            else
-            {
-                Compress.Enabled = false;
-            }
         }
 
         private void GenerateNow_Click(object sender, EventArgs e)
@@ -81,9 +74,20 @@ namespace srcrepair
                         CoreLib.StartProcessAndWait(FilePath, Params);
                         if (Compress.Checked)
                         {
-                            CoreLib.StartProcessAndWait(GV.FullAppPath + Path.DirectorySeparatorChar + "7z.exe", "a " + @"""" + RepDir + FileName + ".7z" + @"""" + " " + @"""" + RepDir + RepName + @"""");
-                            File.Delete(RepDir + RepName); // удаляем несжатый отчёт
-                            MessageBox.Show(String.Format(CoreLib.GetLocalizedString("RPB_ComprGen"), FileName), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            try
+                            {
+                                using (ZipFile ZBkUp = new ZipFile(Path.Combine(RepDir, FileName + ".zip"), Encoding.UTF8))
+                                {
+                                    ZBkUp.AddFile(Path.Combine(RepDir, RepName));
+                                    ZBkUp.Save();
+                                }
+                                File.Delete(Path.Combine(RepDir, RepName)); // удаляем несжатый отчёт
+                                MessageBox.Show(String.Format(CoreLib.GetLocalizedString("RPB_ComprGen"), FileName), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            catch (Exception Ex)
+                            {
+                                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_ArchFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                            }
                         }
                         else
                         {

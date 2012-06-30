@@ -156,13 +156,13 @@
     <value>80, 60</value>
   </data>
   <data name="Compress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 17</value>
+    <value>202, 17</value>
   </data>
   <data name="Compress.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="Compress.Text" xml:space="preserve">
-    <value>Compress report to 7-Zip archive format</value>
+    <value>Compress report to Zip archive format</value>
   </data>
   <data name="&gt;&gt;Compress.Name" xml:space="preserve">
     <value>Compress</value>

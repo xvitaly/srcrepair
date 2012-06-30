@@ -128,10 +128,10 @@
     <value>79, 93</value>
   </data>
   <data name="Compress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 17</value>
+    <value>195, 17</value>
   </data>
   <data name="Compress.Text" xml:space="preserve">
-    <value>Сжать отчёт в архив формата 7-Zip</value>
+    <value>Сжать отчёт в архив формата Zip</value>
   </data>
   <data name="GenerateNow.Location" type="System.Drawing.Point, System.Drawing">
     <value>126, 116</value>
@@ -141,6 +141,30 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>356, 149</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
+        AADx8fEAERISAAAAAAABAQEAAAAAAAAAAAAAAAAEAAABFwAABDEAAw5MAQ8gcBEeLX8BAQMaAwMDAAAA
+        AAF4eHgA8PDwABISEw0FCxFPCxsscAofNJEUKj6vJDtQyDlOYeJPYHD2aXSA/n+Ch/47XoD/DRooagIA
+        AAkAAAAFeHh4AO7r6QArSmVvKG2n/1Jyj/yflZD/x7u0/9zKvf/s1MP/+NzJ///hzv/938X6VGx+/xAp
+        RHQCAAAAAAAABnl5egDz9vkAO3mwaSZtqf+8s6358Muy+//o1vz64dH989vM/unTxP7hzcD++9/M+4CL
+        kv8kWZGUEiU9AAAAAAN4eHgA9fj7ADR2sTpIfKv/5trS/7almv6tnpX/tKST/6WWif+ekYr/g3ly/+rR
+        wvyio6P/N3WxvkSCyQAgToIAiJalAfb4+gAtcK8WZYeo8Nq/rf+Zjoj+4NDB/5iNpv/HusP///vk/7Sn
+        of/Muq/9wrq0/0iDud1np+sIV5/rAK3R+AH1+PoALmyrAE97pcPz39L/w7mt/MrF1P8DAW//HBuK/8/D
+        3f/b0b3/u66p/tvOxP9KgbD0d7v/HWWr8gCz1vkC9Pf6AzJppgAtYZqX6+DZ/8a9rPtDQqb/AACT/wAA
+        jf8TFKP/p6DJ/8a7qP7q29H/UH+m/3K3+zxmrfUAs9b6A/P2+QQ0ZKAAFkyPbNfZ0/+upsz8AACx/ysu
+        wP+XldH/ExO3/wsNvf+Hhrr//fng/V2Cof9orPNdZaz1ALLV+QTz9fkDNF+ZAA1Bh0OksLn/bmzk/woS
+        2f6Tk+j////5/8/M6f8vMdP/AATK/5eT5Pt4kJz/To/Qf0yQ1wCmyekE8vX4ATJblAALPIIbcYek8srG
+        7v9YWr/+wb/J/8/LyP/V0sf/vLm9/0pNzf8RFeL7N0S8/zxzsZwcVqIAjaTTA/L1+AEvVpEAET+FBENh
+        kdL8+/j/3tzQ/cXDwf7CwcH/ubi6/7u6tv+uraj+Zmeu/ExM3v8zO73jAAOTQ3d2ygDx8vQAGB4oAgUZ
+        OQAvU4+l0M7O/62pqPu9uLX/ube0/66urv+4trb/t7Ot/6Kknv9ug6r/Qlqq/RISnIV2d8oM8fHxABIS
+        EgQAAAAAGjRdZjdaj/+DlK79qbfM/rnC0vr49fH+j52y/WR+p+IvV5HRGkmJ0UBzn28IGZgAdHDKAvHx
+        8QASExQAAAAAABIpTwoeSo9JFD1/RwkwbyR4gZGPtLKw/1xfY/wrOlNBH0eGABpChANJfLAAGTCtAnBs
+        xgHx8fEAEhITAAAAAAATLFMAIUmLABlChANGV3IAgXx1RIGChOtwbm2JVU1HBSxKeAAWQocBR3qsAhYr
+        qQBxbcYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA==
+</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Создание отчёта для Техподдержки</value>
