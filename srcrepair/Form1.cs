@@ -2752,7 +2752,14 @@ namespace srcrepair
                 {
                     if (GV.IsGCFApp)
                     {
-                        CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_Options", GV.FullBackUpDirPath);
+                        if (GV.RunningPlatform == 0)
+                        {
+                            CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_Options", GV.FullBackUpDirPath);
+                        }
+                        else
+                        {
+                            MessageBox.Show(CoreLib.GetLocalizedString("AppFeatureUnavailable"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                     else
                     {
@@ -2773,42 +2780,55 @@ namespace srcrepair
 
         private void BUT_L_AllSteam_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(CoreLib.GetLocalizedString("BU_RegCreate"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (GV.RunningPlatform == 0)
             {
-                // Создадим резервную копию всех настроек Steam...
-                try
+                if (MessageBox.Show(CoreLib.GetLocalizedString("BU_RegCreate"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    // Создаём...
-                    CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve"), "Steam_BackUp", GV.FullBackUpDirPath);
-                    // Выводим сообщение...
-                    MessageBox.Show(CoreLib.GetLocalizedString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // Обновим список бэкапов...
-                    BUT_Refresh.PerformClick();
-                }
-                catch (Exception Ex)
-                {
-                    // Произошло исключение, уведомим пользователя...
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BU_RegErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    // Создадим резервную копию всех настроек Steam...
+                    try
+                    {
+                        // Создаём...
+                        CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve"), "Steam_BackUp", GV.FullBackUpDirPath);
+                        // Выводим сообщение...
+                        MessageBox.Show(CoreLib.GetLocalizedString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // Обновим список бэкапов...
+                        BUT_Refresh.PerformClick();
+                    }
+                    catch (Exception Ex)
+                    {
+                        // Произошло исключение, уведомим пользователя...
+                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BU_RegErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    }
                 }
             }
-            
+            else
+            {
+                MessageBox.Show(CoreLib.GetLocalizedString("AppFeatureUnavailable"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void BUT_L_AllSRC_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(CoreLib.GetLocalizedString("BU_RegCreate"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (GV.RunningPlatform == 0)
             {
-                // Созданим резервную копию графических настроек всех Source-игр...
-                try
+                if (MessageBox.Show(CoreLib.GetLocalizedString("BU_RegCreate"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source"), "Source_Options", GV.FullBackUpDirPath);
-                    MessageBox.Show(CoreLib.GetLocalizedString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    BUT_Refresh.PerformClick();
+                    // Созданим резервную копию графических настроек всех Source-игр...
+                    try
+                    {
+                        CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source"), "Source_Options", GV.FullBackUpDirPath);
+                        MessageBox.Show(CoreLib.GetLocalizedString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        BUT_Refresh.PerformClick();
+                    }
+                    catch (Exception Ex)
+                    {
+                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BU_RegErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    }
                 }
-                catch (Exception Ex)
-                {
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BU_RegErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                }
+            }
+            else
+            {
+                MessageBox.Show(CoreLib.GetLocalizedString("AppFeatureUnavailable"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
