@@ -48,7 +48,6 @@ namespace srcrepair
         {
             if (GenerateNow.Text != CoreLib.GetLocalizedString("RPB_CloseCpt"))
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("RPB_GenWarn"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (MessageBox.Show(CoreLib.GetLocalizedString("RPB_GenQst"), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     // Отключим кнопку...
@@ -68,6 +67,7 @@ namespace srcrepair
                     string FileName = "Report_" + CoreLib.WriteDateToString(DateTime.Now, true);
                     string RepName = FileName + ".txt";
                     string Params = "/report " + '"' + RepDir + RepName + '"'; // Генерируем параметы для exe-файла...
+                    string HostsFile = CoreLib.GetHostsFileFullPath(GV.RunningPlatform);
                     try
                     {
                         // Запускаем последовательность...
@@ -78,6 +78,7 @@ namespace srcrepair
                             {
                                 ZBkUp.AddFile(Path.Combine(RepDir, RepName), "Report");
                                 if (Directory.Exists(GV.FullCfgPath)) { ZBkUp.AddDirectory(GV.FullCfgPath, "Configs"); }
+                                if (File.Exists(HostsFile)) { ZBkUp.AddFile(HostsFile, "Hosts"); }
                                 ZBkUp.Save();
                             }
                             File.Delete(Path.Combine(RepDir, RepName)); // удаляем несжатый отчёт
