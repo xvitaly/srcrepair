@@ -579,4 +579,7 @@
   <data name="PS_CleanInProgress" xml:space="preserve">
     <value>Cleaning up...</value>
   </data>
+  <data name="AppNoGamesSelected" xml:space="preserve">
+    <value>Warning! No games selected. Select game and try again later.</value>
+  </data>
 </root>

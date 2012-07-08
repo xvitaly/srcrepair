@@ -2616,9 +2616,16 @@ namespace srcrepair
         {
             if (GV.RunningPlatform == 0)
             {
-                // Запускаем форму создания отчёта для Техподдержки...
-                frmRepBuilder RBF = new frmRepBuilder();
-                RBF.ShowDialog();
+                if ((AppSelector.Items.Count > 0) && (AppSelector.SelectedIndex != -1))
+                {
+                    // Запускаем форму создания отчёта для Техподдержки...
+                    frmRepBuilder RBF = new frmRepBuilder();
+                    RBF.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show(CoreLib.GetLocalizedString("AppNoGamesSelected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {
