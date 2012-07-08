@@ -4109,6 +4109,9 @@
   <data name="MNUFPSWizard.Text" xml:space="preserve">
     <value>&amp;FPS-config Wizard...</value>
   </data>
+  <data name="MNUReportBuilder.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="MNUReportBuilder.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F12</value>
   </data>

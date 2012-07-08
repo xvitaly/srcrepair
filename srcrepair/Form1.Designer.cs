@@ -1592,9 +1592,9 @@
             // 
             // MNUReportBuilder
             // 
+            resources.ApplyResources(this.MNUReportBuilder, "MNUReportBuilder");
             this.MNUReportBuilder.Image = global::srcrepair.Properties.Resources.report;
             this.MNUReportBuilder.Name = "MNUReportBuilder";
-            resources.ApplyResources(this.MNUReportBuilder, "MNUReportBuilder");
             this.MNUReportBuilder.Click += new System.EventHandler(this.MNUReportBuilder_Click);
             // 
             // MNUInstaller

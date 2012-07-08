@@ -1581,7 +1581,6 @@ namespace srcrepair
 
                         // Отключаем контролы, недоступные для данной платформы...
                         ChangePrvControlState(false);
-                        MNUReportBuilder.Enabled = false;
                     }
                     break;
                 case 2: // Linux...
@@ -1597,7 +1596,6 @@ namespace srcrepair
                         
                         // Отключаем контролы, недоступные для данной платформы...
                         ChangePrvControlState(false);
-                        MNUReportBuilder.Enabled = false;
                     }
                     break;
                 default: // Windows
@@ -1922,6 +1920,9 @@ namespace srcrepair
             
             // Включаем основные элементы управления (контролы)...
             MainTabControl.Enabled = true;
+
+            // Управляем доступностью модуля создания отчётов для Техподдержки...
+            MNUReportBuilder.Enabled = ((GV.RunningPlatform == 0) && (AppSelector.Items.Count > 0) && (AppSelector.SelectedIndex != -1));
 
             if (GV.IsGCFApp)
             {
