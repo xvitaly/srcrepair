@@ -51,8 +51,8 @@ namespace srcrepair
                 if (MessageBox.Show(CoreLib.GetLocalizedString("RPB_GenQst"), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     // Отключим кнопку...
-                    GenerateNow.Enabled = false;
                     GenerateNow.Text = CoreLib.GetLocalizedString("RPB_CptWrk");
+                    GenerateNow.Enabled = false;
                     this.ControlBox = false;
                     // Сгенерируем путь для каталога с рапортами...
                     string RepDir = CoreLib.IncludeTrDelim(Path.Combine(GV.AppUserDir, "reports"));
