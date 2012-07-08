@@ -78,7 +78,7 @@ namespace srcrepair
                             {
                                 using (ZipFile ZBkUp = new ZipFile(Path.Combine(RepDir, FileName + ".zip"), Encoding.UTF8))
                                 {
-                                    ZBkUp.AddFile(Path.Combine(RepDir, RepName));
+                                    ZBkUp.AddFile(Path.Combine(RepDir, RepName), "Report");
                                     ZBkUp.Save();
                                 }
                                 File.Delete(Path.Combine(RepDir, RepName)); // удаляем несжатый отчёт
