@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRepBuilder));
             this.WelcomeLabel = new System.Windows.Forms.Label();
-            this.Compress = new System.Windows.Forms.CheckBox();
             this.GenerateNow = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -38,14 +37,6 @@
             // 
             resources.ApplyResources(this.WelcomeLabel, "WelcomeLabel");
             this.WelcomeLabel.Name = "WelcomeLabel";
-            // 
-            // Compress
-            // 
-            resources.ApplyResources(this.Compress, "Compress");
-            this.Compress.Checked = true;
-            this.Compress.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Compress.Name = "Compress";
-            this.Compress.UseVisualStyleBackColor = true;
             // 
             // GenerateNow
             // 
@@ -59,7 +50,6 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.GenerateNow);
-            this.Controls.Add(this.Compress);
             this.Controls.Add(this.WelcomeLabel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -69,14 +59,12 @@
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.frmRepBuilder_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Label WelcomeLabel;
-        private System.Windows.Forms.CheckBox Compress;
         private System.Windows.Forms.Button GenerateNow;
     }
 }

@@ -124,23 +124,14 @@
   <data name="WelcomeLabel.Text" xml:space="preserve">
     <value>Здесь Вы можете легко и быстро создать отчёт для раздела "Техподдержка" форума team-fortress.ru, либо официальной службы технической поддержки. Только предоставив отчёт, Вам смогут оказать качественную техническую поддержку. Процесс займёт много времени, поэтому наберитесь терпения!</value>
   </data>
-  <data name="Compress.Location" type="System.Drawing.Point, System.Drawing">
-    <value>79, 93</value>
-  </data>
-  <data name="Compress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 17</value>
-  </data>
-  <data name="Compress.Text" xml:space="preserve">
-    <value>Сжать отчёт в архив формата Zip</value>
-  </data>
   <data name="GenerateNow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>126, 116</value>
+    <value>126, 96</value>
   </data>
   <data name="GenerateNow.Text" xml:space="preserve">
     <value>Создать отчёт!</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>356, 149</value>
+    <value>356, 131</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

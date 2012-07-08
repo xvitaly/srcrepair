@@ -72,26 +72,19 @@ namespace srcrepair
                     {
                         // Запускаем последовательность...
                         CoreLib.StartProcessAndWait(FilePath, Params);
-                        if (Compress.Checked)
+                        try
                         {
-                            try
+                            using (ZipFile ZBkUp = new ZipFile(Path.Combine(RepDir, FileName + ".zip"), Encoding.UTF8))
                             {
-                                using (ZipFile ZBkUp = new ZipFile(Path.Combine(RepDir, FileName + ".zip"), Encoding.UTF8))
-                                {
-                                    ZBkUp.AddFile(Path.Combine(RepDir, RepName), "Report");
-                                    ZBkUp.Save();
-                                }
-                                File.Delete(Path.Combine(RepDir, RepName)); // удаляем несжатый отчёт
-                                MessageBox.Show(String.Format(CoreLib.GetLocalizedString("RPB_ComprGen"), FileName), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                ZBkUp.AddFile(Path.Combine(RepDir, RepName), "Report");
+                                ZBkUp.Save();
                             }
-                            catch (Exception Ex)
-                            {
-                                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_ArchFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                            }
+                            File.Delete(Path.Combine(RepDir, RepName)); // удаляем несжатый отчёт
+                            MessageBox.Show(String.Format(CoreLib.GetLocalizedString("RPB_ComprGen"), FileName), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        else
+                        catch (Exception Ex)
                         {
-                            MessageBox.Show(String.Format(CoreLib.GetLocalizedString("RPB_Generated"), RepName), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_ArchFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                         }
                         
                         // Открываем каталог с отчётами в Windows Explorer...
