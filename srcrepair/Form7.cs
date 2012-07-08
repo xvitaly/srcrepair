@@ -152,6 +152,11 @@ namespace srcrepair
                     {
                         try
                         {
+                            // Отключаем кнопку отмены, очистки и меняем её текст...
+                            CM_Clean.Text = CoreLib.GetLocalizedString("PS_CleanInProgress");
+                            CM_Clean.Enabled = false;
+                            CM_Cancel.Enabled = false;
+
                             // Добавляем в очередь для очистки...
                             foreach (ListViewItem LVI in CM_FTable.Items)
                             {

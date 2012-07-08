@@ -952,6 +952,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cleaning up....
+        /// </summary>
+        internal static string PS_CleanInProgress {
+            get {
+                return ResourceManager.GetString("PS_CleanInProgress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error occured while deleting files. Some files were not deleted!.
         /// </summary>
         internal static string PS_CleanupErr {

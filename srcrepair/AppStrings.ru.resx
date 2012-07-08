@@ -726,4 +726,8 @@
     <value>Произошла ошибка при упаковке файлов в архив. Архив не был создан!</value>
     <comment>Сообщение об исключении в функции создания архива</comment>
   </data>
+  <data name="PS_CleanInProgress" xml:space="preserve">
+    <value>Выполняется...</value>
+    <comment>Текст для кнопки во время выполнения процедуры очистки</comment>
+  </data>
 </root>
