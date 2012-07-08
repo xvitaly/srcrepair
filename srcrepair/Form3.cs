@@ -151,33 +151,8 @@ namespace srcrepair
             // Укажем версию в заголовке главной формы...
             this.Text = String.Format(this.Text, PluginVersion);
 
-            if (GV.RunningPlatform == 0)
-            {
-                try
-                {
-                    // Получим путь к файлу hosts (вдруг он переопределён каким-либо зловредом)...
-                    RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\Tcpip\Parameters", false);
-                    if (ResKey != null) { HostsFilePath = (string)ResKey.GetValue("DataBasePath"); }
-                    // Проверим получен ли путь из реестра. Если нет, вставим стандартный...
-                    if (String.IsNullOrWhiteSpace(HostsFilePath))
-                    {
-                        MessageBox.Show(CoreLib.GetLocalizedString("AHE_KRegErr"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        HostsFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc");
-                    }
-                }
-                catch
-                {
-                    // Произошло исключение, поэтому укажем вручную...
-                    HostsFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc");
-                }
-
-                // Сгенерируем полный путь к файлу hosts...
-                HostsFilePath = Path.Combine(HostsFilePath, "hosts");
-            }
-            else
-            {
-                HostsFilePath = Path.Combine("/etc", "hosts");
-            }
+            // Определим расположение файла Hosts...
+            HostsFilePath = CoreLib.GetHostsFileFullPath(GV.RunningPlatform);
 
             // Проверим существование файла...
             if (File.Exists(HostsFilePath))
