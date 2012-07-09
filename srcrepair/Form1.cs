@@ -2023,6 +2023,7 @@ namespace srcrepair
             AppSelector.Enabled = true;
             Properties.Settings.Default.LastLoginName = LoginSel.Text;
             SB_Status.Text = (AppSelector.SelectedIndex == -1) ? CoreLib.GetLocalizedString("StatusSApp") : CoreLib.GetLocalizedString("StatusLoginChanged");
+            MNUReportBuilder.Enabled = false;
 
             // Выводим логин на страницу "Устранение проблем"...
             PS_RSteamLogin.Text = LoginSel.Text;

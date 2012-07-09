@@ -55,7 +55,7 @@ namespace srcrepair
                     GenerateNow.Enabled = false;
                     this.ControlBox = false;
                     // Сгенерируем путь для каталога с рапортами...
-                    string RepDir = CoreLib.IncludeTrDelim(Path.Combine(GV.AppUserDir, "reports"));
+                    string RepDir = Path.Combine(GV.AppUserDir, "reports");
                     // Проверим чтобы каталог для рапортов существовал...
                     if (!Directory.Exists(RepDir))
                     {
@@ -63,25 +63,51 @@ namespace srcrepair
                         Directory.CreateDirectory(RepDir);
                     }
                     // Начинаем создавать отчёт...
-                    string FilePath = "msinfo32.exe"; // Указываем имя exe-файла для запуска
-                    string FileName = "Report_" + CoreLib.WriteDateToString(DateTime.Now, true);
+                    string TempDir = Path.Combine(Path.GetTempPath(), "repbuilder");
+                    string CrDt = CoreLib.WriteDateToString(DateTime.Now, true);
+                    if (!Directory.Exists(TempDir)) { Directory.CreateDirectory(TempDir); }
+                    string FileName = String.Format("Report_{0}", CrDt);
                     string RepName = FileName + ".txt";
-                    string Params = "/report " + '"' + RepDir + RepName + '"'; // Генерируем параметы для exe-файла...
                     string HostsFile = CoreLib.GetHostsFileFullPath(GV.RunningPlatform);
+                    string FNamePing = Path.Combine(TempDir, String.Format("ping_{0}.log", CrDt));
+                    string FNameTrace = Path.Combine(TempDir, String.Format("traceroute_{0}.log", CrDt));
+                    string FNameIpConfig = Path.Combine(TempDir, String.Format("ipconfig_{0}.log", CrDt));
+                    string FNameRouting = Path.Combine(TempDir, String.Format("routing_{0}.log", CrDt));
                     try
                     {
                         // Запускаем последовательность...
-                        CoreLib.StartProcessAndWait(FilePath, Params);
+                        try
+                        {
+                            CoreLib.StartProcessAndWait("msinfo32.exe", "/report " + '"' + CoreLib.IncludeTrDelim(TempDir) + RepName + '"');
+                            CoreLib.StartProcessAndWait("cmd.exe", "/C \"ping steampowered.com\" > " + FNamePing);
+                            CoreLib.StartProcessAndWait("cmd.exe", "/C \"tracert steampowered.com\" > " + FNameTrace);
+                            CoreLib.StartProcessAndWait("cmd.exe", "/C \"ipconfig /all\" > " + FNameIpConfig);
+                            CoreLib.StartProcessAndWait("cmd.exe", "/C \"route print\" > " + FNameRouting);
+                        }
+                        catch (Exception Ex)
+                        {
+                            CoreLib.WriteStringToLog(Ex.Message);
+                        }
                         try
                         {
                             using (ZipFile ZBkUp = new ZipFile(Path.Combine(RepDir, FileName + ".zip"), Encoding.UTF8))
                             {
-                                ZBkUp.AddFile(Path.Combine(RepDir, RepName), "Report");
+                                // Добавляем в архив созданный рапорт...
+                                if (File.Exists(Path.Combine(TempDir, RepName))) { ZBkUp.AddFile(Path.Combine(TempDir, RepName), "Report"); }
+                                // Добавляем в архив все конфиги выбранной игры...
                                 if (Directory.Exists(GV.FullCfgPath)) { ZBkUp.AddDirectory(GV.FullCfgPath, "Configs"); }
+                                // Добавляем содержимое файла Hosts...
                                 if (File.Exists(HostsFile)) { ZBkUp.AddFile(HostsFile, "Hosts"); }
+                                // Добавляем в архив отчёты утилит ping, трассировки и т.д.
+                                if (File.Exists(FNamePing)) { ZBkUp.AddFile(FNamePing, "System"); }
+                                if (File.Exists(FNameTrace)) { ZBkUp.AddFile(FNameTrace, "System"); }
+                                if (File.Exists(FNameIpConfig)) { ZBkUp.AddFile(FNameIpConfig, "System"); }
+                                if (File.Exists(FNameRouting)) { ZBkUp.AddFile(FNameRouting, "System"); }
+                                // Сохраняем архив...
                                 ZBkUp.Save();
                             }
-                            File.Delete(Path.Combine(RepDir, RepName)); // удаляем несжатый отчёт
+                            if (File.Exists(Path.Combine(TempDir, RepName))) { File.Delete(Path.Combine(TempDir, RepName)); } // удаляем несжатый отчёт
+                            if (Directory.Exists(TempDir)) { Directory.Delete(TempDir, true); }
                             MessageBox.Show(String.Format(CoreLib.GetLocalizedString("RPB_ComprGen"), FileName), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch (Exception Ex)
