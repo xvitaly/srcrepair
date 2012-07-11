@@ -3,10 +3,10 @@ Version: 9.0
 Release: 1
 Group: Applications/Utilities
 BuildArch: noarch
-Summary: SRC Repair is a free tool that can be used for tuning & restoring Steam and all Source engine games
+Summary: SRC Repair
 URL: http://www.easycoding.org/projects/srcrepair
 License: GPL
-Source: %{name}.tar.gz
+Source: http://srcrepair.googlecode.com/files/%{name}_%{version}_any_x86.tar.gz
 BuildRoot: %{_tmppath}/%{name}-root
 Vendor: EasyCoding Team
 Packager: V1TSK <vitaly@easycoding.org>
