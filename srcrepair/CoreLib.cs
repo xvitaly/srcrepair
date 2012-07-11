@@ -49,26 +49,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Аналог полезной дельфийской фукнции IncludeTrailingPathDelimiter,
-        /// которая возвращает строку, добавив на конец обратный слэш если его нет,
-        /// либо возвращает ту же строку, если обратный слэш уже присутствует.
-        /// </summary>
-        /// <param name="SourceStr">Исходная строка</param>
-        /// <returns>Строка с закрывающим слэшем</returns>
-        public static string IncludeTrDelim(string SourceStr)
-        {
-            // Проверяем наличие закрывающего слэша у строки, переданной как параметр...
-            if (SourceStr[SourceStr.Length - 1] != Path.DirectorySeparatorChar)
-            {
-                // Закрывающего слэша не найдено, поэтому добавим его...
-                SourceStr += Path.DirectorySeparatorChar.ToString();
-            }
-
-            // Возвращаем результат...
-            return SourceStr;
-        }
-
-        /// <summary>
         /// Получает из реестра и возвращает путь к установленному клиенту Steam.
         /// </summary>
         /// <returns>Путь к клиенту Steam</returns>
