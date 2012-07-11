@@ -139,7 +139,7 @@
     <value>Отмена</value>
   </data>
   <data name="CM_CompressFiles.Text" xml:space="preserve">
-    <value>Добавить выбранные файлы в Zip-архив. Может занять много времени.</value>
+    <value>Добавить удаляемые файлы в Zip-архив (может занять много времени).</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Модуль очистки SRC Repair - {0}</value>
