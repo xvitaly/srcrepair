@@ -685,7 +685,7 @@
     <value>Объединяет Bloom, программное сглаживание и цветокоррекцию в один постпроцессинговый алгоритм.</value>
   </data>
   <data name="mat_queue_mode" xml:space="preserve">
-    <value>Количество ядер процессора, задействованных для игры.</value>
+    <value>Разрешает (2) или запрещает (0-1) многопоточность. Рекомендуется устанавливать 2 на многоядерных процессорах для значительного увеличения производительности.</value>
   </data>
   <data name="mat_reducefillrate" xml:space="preserve">
     <value>Качество шейдерных эффектов (эффектов, реализуемых с помощью шейдеров).</value>
@@ -2747,5 +2747,131 @@
   </data>
   <data name="sv_lowedict_threshold" xml:space="preserve">
     <value>Управляет поведением игры при недостатке запаса операций в движке Source.</value>
+  </data>
+  <data name="cl_scalecrosshair" xml:space="preserve">
+    <value>Задаёт размер перекрестия прицела по шкале.</value>
+  </data>
+  <data name="c_maxpitch" xml:space="preserve">
+    <value>Задаёт максимальный угол камеры при использовании вида от третьего лица.</value>
+  </data>
+  <data name="c_minpitch" xml:space="preserve">
+    <value>Задаёт минимальный угол камеры при использовании вида от третьего лица.</value>
+  </data>
+  <data name="host_thread_mode" xml:space="preserve">
+    <value>Количество потоков, задействованных для рендеринга (должно устанавливаться равным числу ядер или число ядер + 1).</value>
+  </data>
+  <data name="mat_disable_d3d9ex" xml:space="preserve">
+    <value>Запрещает / разрешает использование расширений DirectX 9.0c.</value>
+  </data>
+  <data name="mat_powersavingsmode" xml:space="preserve">
+    <value>Включает / отключает режим энергосбережения при запуске игры на ноутбуках.</value>
+  </data>
+  <data name="net_graphmsecs" xml:space="preserve">
+    <value>Задаёт интервал обновления информации net_graph в миллисекундах.</value>
+  </data>
+  <data name="net_graphsolid" xml:space="preserve">
+    <value>Запрещает / разрешает прозрачность вывода net_graph.</value>
+  </data>
+  <data name="option_duck_method" xml:space="preserve">
+    <value>Задаёт режим приседания: постоянный или только во время нажатия клавиши.</value>
+  </data>
+  <data name="publish_file_last_dir" xml:space="preserve">
+    <value>Внутренняя переменная: хранит путь к каталогу, из которого проводилась публикация в последний раз.</value>
+  </data>
+  <data name="replay_dodiskcleanup" xml:space="preserve">
+    <value>Включает / отключает функцию очистки диска от старых реплеев (повторов) при запуске.</value>
+  </data>
+  <data name="replay_editor_camera_length" xml:space="preserve">
+    <value>Задаёт дальность отображения камеры во встроенном редакторе реплеев (повторов).</value>
+  </data>
+  <data name="replay_editor_fov_mousewheel_multiplier" xml:space="preserve">
+    <value>Задаёт множитель колеса мыши при работе с редактором реплеев (повторов).</value>
+  </data>
+  <data name="replay_movie_reveal_warning" xml:space="preserve">
+    <value>Включает / отключает выдачу предупреждений при сохранении ролика из реплея.</value>
+  </data>
+  <data name="replay_renderqueue_first_add" xml:space="preserve">
+    <value>Внутренняя переменная. Принимает значение 1 если вы ещё не создавали очередь для рендеринга реплеев в ролики. Во всех остальных случаях - 0.</value>
+  </data>
+  <data name="replay_rendersetting_exportraw" xml:space="preserve">
+    <value>Включает / отключает функцию экспорта без обработки (RAW).</value>
+  </data>
+  <data name="replay_rendersetting_renderglow" xml:space="preserve">
+    <value>Включает / отключает Glow-эффект во время рендеринга ролика из реплея.</value>
+  </data>
+  <data name="replay_replayeditor_rewindmsgcounter" xml:space="preserve">
+    <value>Включает / отключает сообщение, выдаваемое в редакторе реплеев при вызове функции быстрой перемотки.</value>
+  </data>
+  <data name="replay_voice_during_playback" xml:space="preserve">
+    <value>Разрешает / запрещает проигрывание голосового чата во время просмотра реплеев (повторов).</value>
+  </data>
+  <data name="r_eyegloss" xml:space="preserve">
+    <value>Включает / отключает блеск для глаз персонажей.</value>
+  </data>
+  <data name="r_eyemove" xml:space="preserve">
+    <value>Включает / отключает анимацию для глаз персонажей.</value>
+  </data>
+  <data name="r_eyeshift_x" xml:space="preserve">
+    <value>Задаёт максимальное перемещение глаза персонажа по оси X.</value>
+  </data>
+  <data name="r_eyeshift_y" xml:space="preserve">
+    <value>Задаёт максимальное перемещение глаза персонажа по оси Y.</value>
+  </data>
+  <data name="r_eyeshift_z" xml:space="preserve">
+    <value>Задаёт максимальное перемещение глаза персонажа по оси Z.</value>
+  </data>
+  <data name="r_eyesize" xml:space="preserve">
+    <value>Задаёт размер глаз для персонажей.</value>
+  </data>
+  <data name="sk_autoaim_mode" xml:space="preserve">
+    <value>Включает / отключает режим автоматического прицеливания.</value>
+  </data>
+  <data name="store_version" xml:space="preserve">
+    <value>Внутреннаяя переменная. Задаёт версию магазина MannCo.</value>
+  </data>
+  <data name="sv_noclipaccelerate" xml:space="preserve">
+    <value>Задаёт ускорение при нахождении в режиме свободного полёта.</value>
+  </data>
+  <data name="sv_rcon_maxpacketbans" xml:space="preserve">
+    <value>Задаёт длительность бана по IP за превышение максимально допустимого размера пакета при подключении по RCON.</value>
+  </data>
+  <data name="sv_rcon_maxpacketsize" xml:space="preserve">
+    <value>Задаёт максимальный размер пакета при подключении по RCON.</value>
+  </data>
+  <data name="tf_colorblindassist" xml:space="preserve">
+    <value>Включает / отключает функции, рассчитанные на людей, страдающих цветовой слепотой (дальтонизмом).</value>
+  </data>
+  <data name="tf_explanations_charinfopanel" xml:space="preserve">
+    <value>Включает / отключает панель описания на странице персонажа.</value>
+  </data>
+  <data name="tf_explanations_charinfo_armory_panel" xml:space="preserve">
+    <value>Включает / отключает панель описания на странице экипировки.</value>
+  </data>
+  <data name="tf_explanations_craftingpanel" xml:space="preserve">
+    <value>Включает / отключает панель описания на странице крафтинга.</value>
+  </data>
+  <data name="tf_explanations_discardpanel" xml:space="preserve">
+    <value>Включает / отключает панель описания на странице выпавшего предмета.</value>
+  </data>
+  <data name="tf_hud_no_crosshair_on_scope_zoom" xml:space="preserve">
+    <value>Отключает / включает перекрестие прицела во время прицеливания из снайперской винтовки.</value>
+  </data>
+  <data name="tf_last_store_pricesheet_version" xml:space="preserve">
+    <value>Внутренняя переменная: хранит версию файла с ценами магазина MannCo.</value>
+  </data>
+  <data name="tf_replay_pyrovision" xml:space="preserve">
+    <value>Включить / отключить Пировидение в реплеях (повторах).</value>
+  </data>
+  <data name="tf_spectate_pyrovision" xml:space="preserve">
+    <value>Включить / отключить Пировидение при нахождении в зрителях (спектрах).</value>
+  </data>
+  <data name="threadpool_affinity" xml:space="preserve">
+    <value>Количество потоков, задействованных для рендеринга (должно устанавливаться равным числу ядер или число ядер + 1).</value>
+  </data>
+  <data name="vgui_message_dialog_modal" xml:space="preserve">
+    <value>Включает / отключает модальные диалоги сообщений.</value>
+  </data>
+  <data name="windows_speaker_config" xml:space="preserve">
+    <value>Задаёт конфигурацию устройств вывода звука.</value>
   </data>
 </root>
