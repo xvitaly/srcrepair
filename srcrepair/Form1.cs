@@ -32,6 +32,7 @@ using System.Globalization; // для управления локализаци�
 using System.Resources; // для управления ресурсами...
 using System.Net; // для скачивания файлов...
 using System.Xml; // для разбора (парсинга) XML...
+using Ionic.Zip; // для работы с Zip архивами...
 
 namespace srcrepair
 {
@@ -2717,8 +2718,22 @@ namespace srcrepair
                                 }
                                 break;
                             case ".bud":
-                                MessageBox.Show(CoreLib.GetLocalizedString("BU_BudArchiveMsg"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, Path.Combine(GV.FullBackUpDirPath, FName)));
+                                using (ZipFile Zip = ZipFile.Read(Path.Combine(GV.FullBackUpDirPath, FName)))
+                                {
+                                    string RootDir = (GV.RunningPlatform == 0) ? Path.GetPathRoot(GV.FullSteamPath) : "/";
+                                    foreach (ZipEntry ZFile in Zip)
+                                    {
+                                        try
+                                        {
+                                            ZFile.Extract(RootDir, ExtractExistingFileAction.OverwriteSilently);
+                                        }
+                                        catch (Exception Ex)
+                                        {
+                                            CoreLib.WriteStringToLog(Ex.Message);
+                                        }
+                                    }
+                                }
+                                MessageBox.Show(CoreLib.GetLocalizedString("BU_RestSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 break;
                             default:
                                 switch (Path.GetExtension(Path.GetFileNameWithoutExtension(FName)))
