@@ -78,11 +78,11 @@ namespace srcrepair
                         // Запускаем последовательность...
                         try
                         {
-                            CoreLib.StartProcessAndWait("msinfo32.exe", "/report " + '"' + CoreLib.IncludeTrDelim(TempDir) + RepName + '"');
-                            CoreLib.StartProcessAndWait("cmd.exe", "/C \"ping steampowered.com\" > " + FNamePing);
-                            CoreLib.StartProcessAndWait("cmd.exe", "/C \"tracert steampowered.com\" > " + FNameTrace);
-                            CoreLib.StartProcessAndWait("cmd.exe", "/C \"ipconfig /all\" > " + FNameIpConfig);
-                            CoreLib.StartProcessAndWait("cmd.exe", "/C \"route print\" > " + FNameRouting);
+                            CoreLib.StartProcessAndWait("msinfo32.exe", String.Format("/report \"{0}\"", Path.Combine(TempDir, RepName)));
+                            CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C ping steampowered.com > \"{0}\"", FNamePing));
+                            CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C tracert steampowered.com > \"{0}\"", FNameTrace));
+                            CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C ipconfig /all > \"{0}\"", FNameIpConfig));
+                            CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C route print > \"{0}\"", FNameRouting));
                         }
                         catch (Exception Ex)
                         {
