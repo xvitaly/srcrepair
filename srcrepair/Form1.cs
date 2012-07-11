@@ -281,7 +281,7 @@ namespace srcrepair
         private void CreateRegBackUpNow(string RKey, string FileName, string DestDir)
         {
             // Генерируем строку с параметрами...
-            string Params = @"/ea """ + CoreLib.IncludeTrDelim(DestDir) + FileName + "_" + CoreLib.WriteDateToString(DateTime.Now, true) + @".reg""" + " " + RKey;
+            string Params = String.Format("/ea \"{0}\" {1}", Path.Combine(DestDir, String.Format("{0}_{1}.reg", FileName, CoreLib.WriteDateToString(DateTime.Now, true))), RKey);
             // Запускаем и ждём завершения...
             CoreLib.StartProcessAndWait("regedit.exe", Params);
         }
@@ -2706,7 +2706,7 @@ namespace srcrepair
                                 try
                                 {
                                     // Восстанавливаем...
-                                    Process.Start("regedit.exe", @"/s """ + Path.Combine(GV.FullBackUpDirPath, FName) + @"""");
+                                    Process.Start("regedit.exe", String.Format("/s \"{0}\"", Path.Combine(GV.FullBackUpDirPath, FName)));
                                     // Показываем сообщение об успешном восстановлении...
                                     MessageBox.Show(CoreLib.GetLocalizedString("BU_RestSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
@@ -2718,7 +2718,7 @@ namespace srcrepair
                                 break;
                             case ".bud":
                                 MessageBox.Show(CoreLib.GetLocalizedString("BU_BudArchiveMsg"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                Process.Start(Properties.Settings.Default.ShBin, Properties.Settings.Default.ShParam + @" """ + Path.Combine(GV.FullBackUpDirPath, FName) + @"""");
+                                Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, Path.Combine(GV.FullBackUpDirPath, FName)));
                                 break;
                             default:
                                 switch (Path.GetExtension(Path.GetFileNameWithoutExtension(FName)))
@@ -3133,7 +3133,7 @@ namespace srcrepair
                 if (BU_LVTable.SelectedItems.Count > 0)
                 {
                     // Откроем выбранный бэкап в Проводнике Windows...
-                    Process.Start(Properties.Settings.Default.ShBin, Properties.Settings.Default.ShParam + @" """ + Path.Combine(GV.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text) + @"""");
+                    Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, Path.Combine(GV.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text)));
                 }
                 else
                 {

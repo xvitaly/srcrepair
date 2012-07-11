@@ -39,7 +39,7 @@ namespace srcrepair
 
         #region IC
         private const string PluginName = "Micro Hosts Editor";
-        private const string PluginVersion = "0.4";
+        private const string PluginVersion = "0.4.1";
         #endregion
 
         #region IV
@@ -265,7 +265,7 @@ namespace srcrepair
         {
             if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AHE_HMessg"), HostsFilePath), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                Process.Start(Properties.Settings.Default.ShBin, Properties.Settings.Default.ShParam + @" """ + HostsFilePath + @"""");
+                Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, HostsFilePath));
             }
         }
 
@@ -305,7 +305,7 @@ namespace srcrepair
         private void HEd_M_Notepad_Click(object sender, EventArgs e)
         {
             // Откроем файл Hosts в Блокноте...
-            Process.Start(Properties.Settings.Default.EditorBin, @"""" + HostsFilePath + @"""");
+            Process.Start(Properties.Settings.Default.EditorBin, String.Format("\"{0}\"", HostsFilePath));
         }
 
         private void HEd_M_RepBug_Click(object sender, EventArgs e)
