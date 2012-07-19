@@ -1621,7 +1621,7 @@ namespace srcrepair
                         }
 
                         // Узнаем путь к установленному клиенту Steam...
-                        try { GV.FullSteamPath = CoreLib.GetSteamPath(); } catch { ValidateAndHandle(); }
+                        try { GV.FullSteamPath = CoreLib.GetSteamPath(); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); ValidateAndHandle(); }
                     }
                     break;
             }
@@ -1759,7 +1759,7 @@ namespace srcrepair
                     }
                 }
             }
-            catch { }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void PS_CleanBlobs_CheckedChanged(object sender, EventArgs e)
@@ -1992,9 +1992,11 @@ namespace srcrepair
                     FP_ConfigSel.Enabled = true;
                 }
             }
-            catch
+            catch (Exception Ex)
             {
                 // FPS-конфигов для выбранного приложения не найдено.
+                // Запишем в лог...
+                CoreLib.WriteStringToLog(Ex.Message);
                 // Выводим текст об этом...
                 FP_Description.Text = CoreLib.GetLocalizedString("FP_NoCfgGame");
                 FP_Description.ForeColor = Color.Red;
@@ -2015,7 +2017,7 @@ namespace srcrepair
             Properties.Settings.Default.LastGameName = AppSelector.Text;
 
             // Считаем список бэкапов...
-            try { ReadBackUpList2Table(GV.FullBackUpDirPath); } catch { Directory.CreateDirectory(GV.FullBackUpDirPath); }
+            try { ReadBackUpList2Table(GV.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); Directory.CreateDirectory(GV.FullBackUpDirPath); }
         }
 
         private void LoginSel_SelectedIndexChanged(object sender, EventArgs e)
@@ -2172,9 +2174,9 @@ namespace srcrepair
                         {
                             CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
                         }
-                        catch
+                        catch (Exception Ex)
                         {
-                            // Подавляем сообщение об ошибке если оно возникнет...
+                            CoreLib.WriteStringToLog(Ex.Message);
                         }
                     }
                     
@@ -2239,10 +2241,11 @@ namespace srcrepair
             // Получаем описание выбранного пользователем конфига...
             try
             {
-                FP_Description.Text = File.ReadAllText(Path.Combine(GV.FullAppPath, "cfgs", Path.GetFileNameWithoutExtension(FP_ConfigSel.Text) + "_" + CoreLib.GetLocalizedString("AppLangPrefix") + ".txt"));
+                FP_Description.Text = File.ReadAllText(Path.Combine(GV.FullAppPath, "cfgs", String.Format("{0}_{1}.txt", Path.GetFileNameWithoutExtension(FP_ConfigSel.Text), CoreLib.GetLocalizedString("AppLangPrefix"))));
             }
-            catch
+            catch (Exception Ex)
             {
+                CoreLib.WriteStringToLog(Ex.Message);
                 FP_Description.Text = CoreLib.GetLocalizedString("FP_NoDescr");
             }
             // Включаем кнопку открытия конфига в Блокноте...
@@ -2477,9 +2480,9 @@ namespace srcrepair
                         {
                             if (GV.RunningPlatform == 0) { CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath); }
                         }
-                        catch
+                        catch (Exception Ex)
                         {
-                            // Подавляем сообщение об ошибке если оно возникнет...
+                            CoreLib.WriteStringToLog(Ex.Message);
                         }
                     }
 
@@ -2582,9 +2585,9 @@ namespace srcrepair
                             {
                                 CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
                             }
-                            catch
+                            catch (Exception Ex)
                             {
-                                // Подавляем сообщение об ошибке если оно возникнет...
+                                CoreLib.WriteStringToLog(Ex.Message);
                             }
                         }
 
@@ -3015,9 +3018,9 @@ namespace srcrepair
                     CE_Editor.Rows.Remove(CE_Editor.CurrentRow);
                 }
             }
-            catch
+            catch (Exception Ex)
             {
-                // Подавляем возможные сообщения об ошибках...
+                CoreLib.WriteStringToLog(Ex.Message);
             }
         }
 
@@ -3049,8 +3052,9 @@ namespace srcrepair
                     CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value = Clipboard.GetText();
                 }
             }
-            catch
+            catch (Exception Ex)
             {
+                CoreLib.WriteStringToLog(Ex.Message);
             }
         }
 
