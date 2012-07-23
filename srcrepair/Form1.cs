@@ -1931,8 +1931,16 @@ namespace srcrepair
                 PS_ResetSettings.Enabled = true;
                 EnableCleanButtons(true);
 
-                // Начинаем заполнять таблицу...
-                ReadGCFGameSettings(GV.SmallAppName);
+                if (GV.RunningPlatform == 0)
+                {
+                    // Начинаем заполнять таблицу...
+                    ReadGCFGameSettings(GV.SmallAppName);
+                }
+                else
+                {
+                    // GCF-игра, запущенная в Linux или MacOS, поэтому читаем файл с настройками видео...
+                    if (File.Exists(GV.VideoCfgFile)) { ReadNCFGameSettings(GV.VideoCfgFile); } else { NullGraphOptions(); }
+                }
             }
             else
             {
@@ -1950,8 +1958,16 @@ namespace srcrepair
                 }
             }
 
-            // Переключаем графический твикер в режим GCF/NCF...
-            if (PS_ResetSettings.Enabled == GV.IsGCFApp) { SetGTOptsType(GV.IsGCFApp); }
+            if (GV.RunningPlatform == 0)
+            {
+                // Переключаем графический твикер в режим GCF/NCF...
+                if (PS_ResetSettings.Enabled == GV.IsGCFApp) { SetGTOptsType(GV.IsGCFApp); }
+            }
+            else
+            {
+                // В Linux/Mac всегда используем NCF-стиль для графического твикера...
+                SetGTOptsType(false);
+            }
 
             // Проверим, установлен ли FPS-конфиг...
             GT_Warning.Visible = File.Exists(Path.Combine(GV.FullCfgPath, "autoexec.cfg"));
@@ -2167,31 +2183,56 @@ namespace srcrepair
             {
                 if (GV.IsGCFApp)
                 {
-                    // Создаём резервную копию...
-                    if (Properties.Settings.Default.SafeCleanup)
+                    if (GV.RunningPlatform == 0)
                     {
+                        // Создаём резервную копию...
+                        if (Properties.Settings.Default.SafeCleanup)
+                        {
+                            try
+                            {
+                                CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
+                            }
+                            catch (Exception Ex)
+                            {
+                                CoreLib.WriteStringToLog(Ex.Message);
+                            }
+                        }
+
                         try
                         {
-                            CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
+                            // Проверим существование ключа реестра и в случае необходимости создадим...
+                            if (!(CoreLib.CheckIfHKCUSKeyExists(Path.Combine("Software", "Valve", "Source", GV.SmallAppName, "Settings")))) { Registry.CurrentUser.CreateSubKey(Path.Combine("Software", "Valve", "Source", GV.SmallAppName, "Settings")); }
+                            // Записываем выбранные настройки в реестр...
+                            WriteGCFGameSettings(GV.SmallAppName);
+                            // Выводим подтверждающее сообщение...
+                            MessageBox.Show(CoreLib.GetLocalizedString("GT_SaveSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch (Exception Ex)
                         {
-                            CoreLib.WriteStringToLog(Ex.Message);
+                            CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("GT_SaveFailure"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                         }
                     }
-                    
-                    try
+                    else
                     {
-                        // Проверим существование ключа реестра и в случае необходимости создадим...
-                        if (!(CoreLib.CheckIfHKCUSKeyExists(Path.Combine("Software", "Valve", "Source", GV.SmallAppName, "Settings")))) { Registry.CurrentUser.CreateSubKey(Path.Combine("Software", "Valve", "Source", GV.SmallAppName, "Settings")); }
-                        // Записываем выбранные настройки в реестр...
-                        WriteGCFGameSettings(GV.SmallAppName);
-                        // Выводим подтверждающее сообщение...
-                        MessageBox.Show(CoreLib.GetLocalizedString("GT_SaveSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    catch (Exception Ex)
-                    {
-                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("GT_SaveFailure"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                        // Создадим бэкап файла с графическими настройками...
+                        if (Properties.Settings.Default.SafeCleanup)
+                        {
+                            if (File.Exists(GV.VideoCfgFile))
+                            {
+                                CreateBackUpNow(Path.GetFileName(GV.VideoCfgFile), Path.GetDirectoryName(GV.VideoCfgFile), GV.FullBackUpDirPath);
+                            }
+                        }
+
+                        // В Linux и MacOS даже для GCF используем формат NCF...
+                        try
+                        {
+                            WriteNCFGameSettings(GV.VideoCfgFile);
+                            MessageBox.Show(CoreLib.GetLocalizedString("GT_SaveSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception Ex)
+                        {
+                            CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("GT_NCFFailure"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                        }
                     }
                 }
                 else
