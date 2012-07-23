@@ -2874,4 +2874,10 @@
   <data name="windows_speaker_config" xml:space="preserve">
     <value>Задаёт конфигурацию устройств вывода звука.</value>
   </data>
+  <data name="sv_namechange_cooldown_seconds" xml:space="preserve">
+    <value>Задаёт время в секундах, по истечении которого игрок может сменить ник (по умолчанию 20).</value>
+  </data>
+  <data name="sv_netspike_on_reliable_snapshot_overflow" xml:space="preserve">
+    <value>Включить / отключить функцию сбора информации с игроков, вылетающих с сервера из-за переполнения памяти.</value>
+  </data>
 </root>
