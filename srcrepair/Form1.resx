@@ -3083,7 +3083,7 @@
     <value>255, 13</value>
   </data>
   <data name="PS_PathDetector.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>2</value>
   </data>
   <data name="PS_PathDetector.Text" xml:space="preserve">
     <value>Non-ASCII symbols not detected</value>
@@ -3103,30 +3103,6 @@
   <data name="&gt;&gt;PS_PathDetector.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="PS_RSteamPath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="PS_RSteamPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 24</value>
-  </data>
-  <data name="PS_RSteamPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 13</value>
-  </data>
-  <data name="PS_RSteamPath.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamPath.Name" xml:space="preserve">
-    <value>PS_RSteamPath</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamPath.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamPath.Parent" xml:space="preserve">
-    <value>PS_GB_SInfo</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamPath.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <metadata name="PS_OSDrive.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3137,7 +3113,7 @@
     <value>257, 14</value>
   </data>
   <data name="PS_OSDrive.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>1</value>
   </data>
   <data name="PS_OSDrive.Text" xml:space="preserve">
     <value>File system on Steam drive: {0}</value>
@@ -3152,37 +3128,37 @@
     <value>PS_GB_SInfo</value>
   </data>
   <data name="&gt;&gt;PS_OSDrive.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
-  <metadata name="L_PS_RSteamPath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="PS_StPath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="L_PS_RSteamPath.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="PS_StPath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="L_PS_RSteamPath.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="PS_StPath.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 24</value>
   </data>
-  <data name="L_PS_RSteamPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 13</value>
+  <data name="PS_StPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 14</value>
   </data>
-  <data name="L_PS_RSteamPath.TabIndex" type="System.Int32, mscorlib">
+  <data name="PS_StPath.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="L_PS_RSteamPath.Text" xml:space="preserve">
-    <value>Steam path:</value>
+  <data name="PS_StPath.Text" xml:space="preserve">
+    <value>Steam path: {0}</value>
   </data>
-  <data name="&gt;&gt;L_PS_RSteamPath.Name" xml:space="preserve">
-    <value>L_PS_RSteamPath</value>
+  <data name="&gt;&gt;PS_StPath.Name" xml:space="preserve">
+    <value>PS_StPath</value>
   </data>
-  <data name="&gt;&gt;L_PS_RSteamPath.Type" xml:space="preserve">
+  <data name="&gt;&gt;PS_StPath.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;L_PS_RSteamPath.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PS_StPath.Parent" xml:space="preserve">
     <value>PS_GB_SInfo</value>
   </data>
-  <data name="&gt;&gt;L_PS_RSteamPath.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;PS_StPath.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="PS_GB_SInfo.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 147</value>

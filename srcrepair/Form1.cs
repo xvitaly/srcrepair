@@ -1724,7 +1724,7 @@ namespace srcrepair
             }
 
             // Укажем путь к Steam на странице "Устранение проблем"...
-            PS_RSteamPath.Text = GV.FullSteamPath;
+            PS_StPath.Text = String.Format(PS_StPath.Text, GV.FullSteamPath);
             
             // Проверим на наличие запрещённых символов в пути к установленному клиенту Steam...
             if (!(CoreLib.CheckNonASCII(GV.FullSteamPath)))

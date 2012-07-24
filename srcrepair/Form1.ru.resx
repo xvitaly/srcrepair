@@ -719,11 +719,8 @@
   <data name="PS_OSDrive.Text" xml:space="preserve">
     <value>Файловая система на диске: {0}</value>
   </data>
-  <data name="L_PS_RSteamPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 13</value>
-  </data>
-  <data name="L_PS_RSteamPath.Text" xml:space="preserve">
-    <value>Путь к Steam:</value>
+  <data name="PS_StPath.Text" xml:space="preserve">
+    <value>Путь к Steam: {0}</value>
   </data>
   <data name="PS_GB_SInfo.Text" xml:space="preserve">
     <value>Информация о текущей установке Steam</value>

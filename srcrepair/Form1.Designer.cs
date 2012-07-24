@@ -139,9 +139,8 @@
             this.PS_RemCustMaps = new System.Windows.Forms.Button();
             this.PS_GB_SInfo = new System.Windows.Forms.GroupBox();
             this.PS_PathDetector = new System.Windows.Forms.Label();
-            this.PS_RSteamPath = new System.Windows.Forms.Label();
             this.PS_OSDrive = new System.Windows.Forms.Label();
-            this.L_PS_RSteamPath = new System.Windows.Forms.Label();
+            this.PS_StPath = new System.Windows.Forms.Label();
             this.PS_GB_Solver = new System.Windows.Forms.GroupBox();
             this.PS_ExecuteNow = new System.Windows.Forms.Button();
             this.PS_SteamLang = new System.Windows.Forms.ComboBox();
@@ -1205,9 +1204,8 @@
             // PS_GB_SInfo
             // 
             this.PS_GB_SInfo.Controls.Add(this.PS_PathDetector);
-            this.PS_GB_SInfo.Controls.Add(this.PS_RSteamPath);
             this.PS_GB_SInfo.Controls.Add(this.PS_OSDrive);
-            this.PS_GB_SInfo.Controls.Add(this.L_PS_RSteamPath);
+            this.PS_GB_SInfo.Controls.Add(this.PS_StPath);
             resources.ApplyResources(this.PS_GB_SInfo, "PS_GB_SInfo");
             this.PS_GB_SInfo.Name = "PS_GB_SInfo";
             this.PS_GB_SInfo.TabStop = false;
@@ -1220,20 +1218,15 @@
             this.PS_PathDetector.Name = "PS_PathDetector";
             this.PS_PathDetector.Click += new System.EventHandler(this.PS_PathDetector_Click);
             // 
-            // PS_RSteamPath
-            // 
-            resources.ApplyResources(this.PS_RSteamPath, "PS_RSteamPath");
-            this.PS_RSteamPath.Name = "PS_RSteamPath";
-            // 
             // PS_OSDrive
             // 
             resources.ApplyResources(this.PS_OSDrive, "PS_OSDrive");
             this.PS_OSDrive.Name = "PS_OSDrive";
             // 
-            // L_PS_RSteamPath
+            // PS_StPath
             // 
-            resources.ApplyResources(this.L_PS_RSteamPath, "L_PS_RSteamPath");
-            this.L_PS_RSteamPath.Name = "L_PS_RSteamPath";
+            resources.ApplyResources(this.PS_StPath, "PS_StPath");
+            this.PS_StPath.Name = "PS_StPath";
             // 
             // PS_GB_Solver
             // 
@@ -1887,7 +1880,6 @@
             this.PS_GB_AdvRepr.ResumeLayout(false);
             this.PS_GB_Remover.ResumeLayout(false);
             this.PS_GB_SInfo.ResumeLayout(false);
-            this.PS_GB_SInfo.PerformLayout();
             this.PS_GB_Solver.ResumeLayout(false);
             this.PS_GB_Solver.PerformLayout();
             this.FPSCfgInstall.ResumeLayout(false);
@@ -1953,9 +1945,7 @@
         private System.Windows.Forms.CheckBox PS_CleanRegistry;
         private System.Windows.Forms.CheckBox PS_CleanBlobs;
         private System.Windows.Forms.Label PS_PathDetector;
-        private System.Windows.Forms.Label PS_RSteamPath;
         private System.Windows.Forms.Label PS_OSDrive;
-        private System.Windows.Forms.Label L_PS_RSteamPath;
         private System.Windows.Forms.Button PS_ResetSettings;
         private System.Windows.Forms.Button PS_RemDemos;
         private System.Windows.Forms.Button PS_RemScreenShots;
@@ -2102,6 +2092,7 @@
         private System.Windows.Forms.ComboBox GT_NCF_Quality;
         private System.Windows.Forms.ToolStripMenuItem MNUUpGameDB;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnBuildCache;
+        private System.Windows.Forms.Label PS_StPath;
     }
 }
 
