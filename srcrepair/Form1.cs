@@ -1738,6 +1738,17 @@ namespace srcrepair
 
             try
             {
+                // Распознаем файловую систему на диске со Steam...
+                PS_OSDrive.Text = String.Format(PS_OSDrive.Text, CoreLib.DetectDriveFileSystem(Path.GetPathRoot(GV.FullSteamPath)));
+            }
+            catch (Exception Ex)
+            {
+                PS_OSDrive.Text = String.Format(PS_OSDrive.Text, "Unknown");
+                CoreLib.WriteStringToLog(Ex.Message);
+            }
+
+            try
+            {
                 // Проверим наличие обновлений программы (если разрешено в настройках)...
                 if (Properties.Settings.Default.EnableAutoUpdate && (Properties.Settings.Default.LastUpdateTime != null))
                 {
@@ -2043,9 +2054,6 @@ namespace srcrepair
             Properties.Settings.Default.LastLoginName = LoginSel.Text;
             SB_Status.Text = (AppSelector.SelectedIndex == -1) ? CoreLib.GetLocalizedString("StatusSApp") : CoreLib.GetLocalizedString("StatusLoginChanged");
             MNUReportBuilder.Enabled = false;
-
-            // Выводим логин на страницу "Устранение проблем"...
-            PS_RSteamLogin.Text = LoginSel.Text;
 
             // Начинаем определять установленные игры...
             try

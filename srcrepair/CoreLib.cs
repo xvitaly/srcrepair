@@ -640,5 +640,25 @@ namespace srcrepair
             }
             return Result;
         }
+
+        /// <summary>
+        /// Определяет файловую систему на диске...
+        /// </summary>
+        /// <param name="CDrive">Диск, ФС которого нужно получить</param>
+        /// <returns>Название файловой системы или Unknown</returns>
+        public static string DetectDriveFileSystem(string CDrive)
+        {
+            string Result = "Unknown";
+            DriveInfo[] Drives = DriveInfo.GetDrives();
+            foreach (DriveInfo Dr in Drives)
+            {
+                if (Dr.Name == CDrive)
+                {
+                    Result = Dr.DriveFormat;
+                    break;
+                }
+            }
+            return Result;
+        }
     }
 }

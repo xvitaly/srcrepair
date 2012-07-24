@@ -138,12 +138,9 @@
             this.PS_RemDnlCache = new System.Windows.Forms.Button();
             this.PS_RemCustMaps = new System.Windows.Forms.Button();
             this.PS_GB_SInfo = new System.Windows.Forms.GroupBox();
-            this.PS_RPDtResult = new System.Windows.Forms.Label();
             this.PS_PathDetector = new System.Windows.Forms.Label();
-            this.PS_RSteamLogin = new System.Windows.Forms.Label();
             this.PS_RSteamPath = new System.Windows.Forms.Label();
-            this.L_PS_PathDetector = new System.Windows.Forms.Label();
-            this.L_PS_RSteamLogin = new System.Windows.Forms.Label();
+            this.PS_OSDrive = new System.Windows.Forms.Label();
             this.L_PS_RSteamPath = new System.Windows.Forms.Label();
             this.PS_GB_Solver = new System.Windows.Forms.GroupBox();
             this.PS_ExecuteNow = new System.Windows.Forms.Button();
@@ -1207,21 +1204,13 @@
             // 
             // PS_GB_SInfo
             // 
-            this.PS_GB_SInfo.Controls.Add(this.PS_RPDtResult);
             this.PS_GB_SInfo.Controls.Add(this.PS_PathDetector);
-            this.PS_GB_SInfo.Controls.Add(this.PS_RSteamLogin);
             this.PS_GB_SInfo.Controls.Add(this.PS_RSteamPath);
-            this.PS_GB_SInfo.Controls.Add(this.L_PS_PathDetector);
-            this.PS_GB_SInfo.Controls.Add(this.L_PS_RSteamLogin);
+            this.PS_GB_SInfo.Controls.Add(this.PS_OSDrive);
             this.PS_GB_SInfo.Controls.Add(this.L_PS_RSteamPath);
             resources.ApplyResources(this.PS_GB_SInfo, "PS_GB_SInfo");
             this.PS_GB_SInfo.Name = "PS_GB_SInfo";
             this.PS_GB_SInfo.TabStop = false;
-            // 
-            // PS_RPDtResult
-            // 
-            resources.ApplyResources(this.PS_RPDtResult, "PS_RPDtResult");
-            this.PS_RPDtResult.Name = "PS_RPDtResult";
             // 
             // PS_PathDetector
             // 
@@ -1231,25 +1220,15 @@
             this.PS_PathDetector.Name = "PS_PathDetector";
             this.PS_PathDetector.Click += new System.EventHandler(this.PS_PathDetector_Click);
             // 
-            // PS_RSteamLogin
-            // 
-            resources.ApplyResources(this.PS_RSteamLogin, "PS_RSteamLogin");
-            this.PS_RSteamLogin.Name = "PS_RSteamLogin";
-            // 
             // PS_RSteamPath
             // 
             resources.ApplyResources(this.PS_RSteamPath, "PS_RSteamPath");
             this.PS_RSteamPath.Name = "PS_RSteamPath";
             // 
-            // L_PS_PathDetector
+            // PS_OSDrive
             // 
-            resources.ApplyResources(this.L_PS_PathDetector, "L_PS_PathDetector");
-            this.L_PS_PathDetector.Name = "L_PS_PathDetector";
-            // 
-            // L_PS_RSteamLogin
-            // 
-            resources.ApplyResources(this.L_PS_RSteamLogin, "L_PS_RSteamLogin");
-            this.L_PS_RSteamLogin.Name = "L_PS_RSteamLogin";
+            resources.ApplyResources(this.PS_OSDrive, "PS_OSDrive");
+            this.PS_OSDrive.Name = "PS_OSDrive";
             // 
             // L_PS_RSteamPath
             // 
@@ -1974,10 +1953,8 @@
         private System.Windows.Forms.CheckBox PS_CleanRegistry;
         private System.Windows.Forms.CheckBox PS_CleanBlobs;
         private System.Windows.Forms.Label PS_PathDetector;
-        private System.Windows.Forms.Label PS_RSteamLogin;
         private System.Windows.Forms.Label PS_RSteamPath;
-        private System.Windows.Forms.Label L_PS_PathDetector;
-        private System.Windows.Forms.Label L_PS_RSteamLogin;
+        private System.Windows.Forms.Label PS_OSDrive;
         private System.Windows.Forms.Label L_PS_RSteamPath;
         private System.Windows.Forms.Button PS_ResetSettings;
         private System.Windows.Forms.Button PS_RemDemos;
@@ -2052,7 +2029,6 @@
         private System.Windows.Forms.Button PS_RemReplays;
         private System.Windows.Forms.Button PS_RemModels;
         private System.Windows.Forms.Button PS_RemTextures;
-        private System.Windows.Forms.Label PS_RPDtResult;
         private System.Windows.Forms.ToolStripButton CE_OpenCVList;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnSub;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnCache;

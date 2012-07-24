@@ -713,23 +713,11 @@
   <data name="PS_GB_Remover.Text" xml:space="preserve">
     <value>Безопасная очистка:</value>
   </data>
-  <data name="PS_RPDtResult.Text" xml:space="preserve">
-    <value>успешно завершено</value>
-  </data>
   <data name="PS_PathDetector.Text" xml:space="preserve">
     <value>Не обнаружено non-ASCII символов</value>
   </data>
-  <data name="L_PS_PathDetector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 13</value>
-  </data>
-  <data name="L_PS_PathDetector.Text" xml:space="preserve">
-    <value>Пров-ка пути:</value>
-  </data>
-  <data name="L_PS_RSteamLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 13</value>
-  </data>
-  <data name="L_PS_RSteamLogin.Text" xml:space="preserve">
-    <value>Логин Steam:</value>
+  <data name="PS_OSDrive.Text" xml:space="preserve">
+    <value>Файловая система на диске: {0}</value>
   </data>
   <data name="L_PS_RSteamPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 13</value>

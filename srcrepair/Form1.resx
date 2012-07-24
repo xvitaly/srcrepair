@@ -2612,7 +2612,7 @@
     <value>True</value>
   </metadata>
   <data name="PS_ResetSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 75</value>
+    <value>11, 82</value>
   </data>
   <data name="PS_ResetSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>258, 23</value>
@@ -2642,7 +2642,7 @@
     <value>NoControl</value>
   </data>
   <data name="PS_RemOldBin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 46</value>
+    <value>11, 53</value>
   </data>
   <data name="PS_RemOldBin.Size" type="System.Drawing.Size, System.Drawing">
     <value>258, 23</value>
@@ -2672,7 +2672,7 @@
     <value>NoControl</value>
   </data>
   <data name="PS_RemGraphOpts.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 17</value>
+    <value>11, 24</value>
   </data>
   <data name="PS_RemGraphOpts.Size" type="System.Drawing.Size, System.Drawing">
     <value>258, 23</value>
@@ -2696,10 +2696,10 @@
     <value>2</value>
   </data>
   <data name="PS_GB_AdvRepr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 267</value>
+    <value>6, 255</value>
   </data>
   <data name="PS_GB_AdvRepr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>284, 106</value>
+    <value>284, 118</value>
   </data>
   <data name="PS_GB_AdvRepr.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -3073,38 +3073,11 @@
   <metadata name="PS_GB_SInfo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="PS_RPDtResult.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="PS_RPDtResult.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 60</value>
-  </data>
-  <data name="PS_RPDtResult.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 13</value>
-  </data>
-  <data name="PS_RPDtResult.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="PS_RPDtResult.Text" xml:space="preserve">
-    <value>successfully completed</value>
-  </data>
-  <data name="&gt;&gt;PS_RPDtResult.Name" xml:space="preserve">
-    <value>PS_RPDtResult</value>
-  </data>
-  <data name="&gt;&gt;PS_RPDtResult.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RPDtResult.Parent" xml:space="preserve">
-    <value>PS_GB_SInfo</value>
-  </data>
-  <data name="&gt;&gt;PS_RPDtResult.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="PS_PathDetector.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="PS_PathDetector.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 86</value>
+    <value>14, 73</value>
   </data>
   <data name="PS_PathDetector.Size" type="System.Drawing.Size, System.Drawing">
     <value>255, 13</value>
@@ -3128,37 +3101,13 @@
     <value>PS_GB_SInfo</value>
   </data>
   <data name="&gt;&gt;PS_PathDetector.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="PS_RSteamLogin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="PS_RSteamLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 38</value>
-  </data>
-  <data name="PS_RSteamLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 13</value>
-  </data>
-  <data name="PS_RSteamLogin.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamLogin.Name" xml:space="preserve">
-    <value>PS_RSteamLogin</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamLogin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamLogin.Parent" xml:space="preserve">
-    <value>PS_GB_SInfo</value>
-  </data>
-  <data name="&gt;&gt;PS_RSteamLogin.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <metadata name="PS_RSteamPath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="PS_RSteamPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 16</value>
+    <value>90, 24</value>
   </data>
   <data name="PS_RSteamPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 13</value>
@@ -3176,67 +3125,34 @@
     <value>PS_GB_SInfo</value>
   </data>
   <data name="&gt;&gt;PS_RSteamPath.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
-  <metadata name="L_PS_PathDetector.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="PS_OSDrive.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="L_PS_PathDetector.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="PS_OSDrive.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 47</value>
   </data>
-  <data name="L_PS_PathDetector.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 60</value>
+  <data name="PS_OSDrive.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 14</value>
   </data>
-  <data name="L_PS_PathDetector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 13</value>
-  </data>
-  <data name="L_PS_PathDetector.TabIndex" type="System.Int32, mscorlib">
+  <data name="PS_OSDrive.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="L_PS_PathDetector.Text" xml:space="preserve">
-    <value>Path check:</value>
+  <data name="PS_OSDrive.Text" xml:space="preserve">
+    <value>File system on Steam drive: {0}</value>
   </data>
-  <data name="&gt;&gt;L_PS_PathDetector.Name" xml:space="preserve">
-    <value>L_PS_PathDetector</value>
+  <data name="&gt;&gt;PS_OSDrive.Name" xml:space="preserve">
+    <value>PS_OSDrive</value>
   </data>
-  <data name="&gt;&gt;L_PS_PathDetector.Type" xml:space="preserve">
+  <data name="&gt;&gt;PS_OSDrive.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;L_PS_PathDetector.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PS_OSDrive.Parent" xml:space="preserve">
     <value>PS_GB_SInfo</value>
   </data>
-  <data name="&gt;&gt;L_PS_PathDetector.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <metadata name="L_PS_RSteamLogin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="L_PS_RSteamLogin.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="L_PS_RSteamLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 38</value>
-  </data>
-  <data name="L_PS_RSteamLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 13</value>
-  </data>
-  <data name="L_PS_RSteamLogin.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;PS_OSDrive.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="L_PS_RSteamLogin.Text" xml:space="preserve">
-    <value>Steam login:</value>
-  </data>
-  <data name="&gt;&gt;L_PS_RSteamLogin.Name" xml:space="preserve">
-    <value>L_PS_RSteamLogin</value>
-  </data>
-  <data name="&gt;&gt;L_PS_RSteamLogin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;L_PS_RSteamLogin.Parent" xml:space="preserve">
-    <value>PS_GB_SInfo</value>
-  </data>
-  <data name="&gt;&gt;L_PS_RSteamLogin.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <metadata name="L_PS_RSteamPath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3245,7 +3161,7 @@
     <value>True</value>
   </data>
   <data name="L_PS_RSteamPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 16</value>
+    <value>12, 24</value>
   </data>
   <data name="L_PS_RSteamPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 13</value>
@@ -3266,13 +3182,13 @@
     <value>PS_GB_SInfo</value>
   </data>
   <data name="&gt;&gt;L_PS_RSteamPath.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>3</value>
   </data>
   <data name="PS_GB_SInfo.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 147</value>
   </data>
   <data name="PS_GB_SInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>284, 114</value>
+    <value>284, 102</value>
   </data>
   <data name="PS_GB_SInfo.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
