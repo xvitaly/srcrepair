@@ -1,5 +1,5 @@
 Name: srcrepair
-Version: 9.0
+Version: 10.0
 Release: 1
 Group: Applications/Utilities
 BuildArch: noarch
