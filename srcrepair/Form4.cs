@@ -76,18 +76,11 @@ namespace srcrepair
                     try
                     {
                         // Запускаем последовательность...
-                        try
-                        {
-                            CoreLib.StartProcessAndWait("msinfo32.exe", String.Format("/report \"{0}\"", Path.Combine(TempDir, RepName)));
-                            CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C ping steampowered.com > \"{0}\"", FNamePing));
-                            CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C tracert steampowered.com > \"{0}\"", FNameTrace));
-                            CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C ipconfig /all > \"{0}\"", FNameIpConfig));
-                            CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C route print > \"{0}\"", FNameRouting));
-                        }
-                        catch (Exception Ex)
-                        {
-                            CoreLib.WriteStringToLog(Ex.Message);
-                        }
+                        try { CoreLib.StartProcessAndWait("msinfo32.exe", String.Format("/report \"{0}\"", Path.Combine(TempDir, RepName))); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                        try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C ping steampowered.com > \"{0}\"", FNamePing)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                        try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C tracert steampowered.com > \"{0}\"", FNameTrace)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                        try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C ipconfig /all > \"{0}\"", FNameIpConfig)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                        try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C route print > \"{0}\"", FNameRouting)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                         try
                         {
                             using (ZipFile ZBkUp = new ZipFile(Path.Combine(RepDir, FileName + ".zip"), Encoding.UTF8))
@@ -106,17 +99,26 @@ namespace srcrepair
                                 // Сохраняем архив...
                                 ZBkUp.Save();
                             }
-                            if (File.Exists(Path.Combine(TempDir, RepName))) { File.Delete(Path.Combine(TempDir, RepName)); } // удаляем несжатый отчёт
-                            if (Directory.Exists(TempDir)) { Directory.Delete(TempDir, true); }
                             MessageBox.Show(String.Format(CoreLib.GetLocalizedString("RPB_ComprGen"), FileName), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch (Exception Ex)
                         {
                             CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_ArchFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                         }
-                        
-                        // Открываем каталог с отчётами в Windows Explorer...
-                        Process.Start(RepDir);
+
+                        // Выполняем очистку...
+                        try
+                        {
+                            if (File.Exists(Path.Combine(TempDir, RepName))) { File.Delete(Path.Combine(TempDir, RepName)); } // удаляем несжатый отчёт
+                            if (Directory.Exists(TempDir)) { Directory.Delete(TempDir, true); }
+                        }
+                        catch (Exception Ex)
+                        {
+                            CoreLib.WriteStringToLog(Ex.Message);
+                        }
+
+                        // Открываем каталог с отчётами в оболочке и выделяем созданный файл...
+                        Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, Path.Combine(RepDir, FileName + ".zip")));
                     }
                     catch (Exception Ex)
                     {
