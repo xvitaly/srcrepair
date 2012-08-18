@@ -2880,4 +2880,61 @@
   <data name="sv_netspike_on_reliable_snapshot_overflow" xml:space="preserve">
     <value>Включить / отключить функцию сбора информации с игроков, вылетающих с сервера из-за переполнения памяти.</value>
   </data>
+  <data name="tf_matchmaking_join_in_progress" xml:space="preserve">
+    <value>Позволяет включить / отключить поиск уже начатых игр.</value>
+  </data>
+  <data name="tf_matchmaking_retry_cooldown_seconds" xml:space="preserve">
+    <value>Задаёт время, в течение которого вы не сможете подключиться к тому же серверу во время быстрой игры.</value>
+  </data>
+  <data name="tf_mm_player_reservation_timeout_seconds" xml:space="preserve">
+    <value>Задаёт время, в течение которого будут действовать резервные слоты для участников лобби, подключающихся к серверу.</value>
+  </data>
+  <data name="tf_mm_servermode" xml:space="preserve">
+    <value>Включает / отключает режим лобби для сервера: 0 - сервер не участвует в лобби и быстрой игре; 1 - сервер участвует только в быстрой игре; 2 - сервер участвует и в лобби, и в быстрой игре.</value>
+  </data>
+  <data name="tf_mm_strict" xml:space="preserve">
+    <value>Задаёт параметры подключения к серверу при нахождении в режиме лобби: 0 - показывать в браузере серверов и разрешить вход из лобби; 1 - скрыть в браузере серверов и позволять вход только из лобби.</value>
+  </data>
+  <data name="tf_mvm_bot_allow_flag_carrier_to_fight" xml:space="preserve">
+    <value>Разрешает / запрещает боту с флагом (бомбой) в режиме MvM вести бой с игроками.</value>
+  </data>
+  <data name="tf_mvm_checkpoint" xml:space="preserve">
+    <value>Сохранить текущий чекпоинт.</value>
+  </data>
+  <data name="tf_mvm_checkpoint_clear" xml:space="preserve">
+    <value>Удалить сохранённый чекпоинт.</value>
+  </data>
+  <data name="tf_mvm_disconnect_on_victory" xml:space="preserve">
+    <value>Включить / отключить автоматический кик всех игроков с сервера в случае успешного прохождения карты.</value>
+  </data>
+  <data name="tf_mvm_force_victory" xml:space="preserve">
+    <value>Принудительно вызвать функцию победы на карте.</value>
+  </data>
+  <data name="tf_mvm_jump_to_wave" xml:space="preserve">
+    <value>Позволяет переключиться на указанную в качестве параметра волну.</value>
+  </data>
+  <data name="tf_mvm_miniboss_scale" xml:space="preserve">
+    <value>Задаёт параметры шкалы здоровья мини-боссов.</value>
+  </data>
+  <data name="tf_mvm_min_players_to_start" xml:space="preserve">
+    <value>Задаёт минимальное количество игроков для начала миссии в режиме MvM (по умолчанию 3).</value>
+  </data>
+  <data name="tf_mvm_missioncyclefile" xml:space="preserve">
+    <value>Задаёт *.res файл, который будет использоваться мини-боссами.</value>
+  </data>
+  <data name="tf_mvm_popfile" xml:space="preserve">
+    <value>Перезапустить MvM карту с другим pop-файлом.</value>
+  </data>
+  <data name="tf_mvm_skill" xml:space="preserve">
+    <value>Задаёт сложность волны роботов в режиме MvM: 1 - простейшая; 3 - нормальная; 5 - очень сложная.</value>
+  </data>
+  <data name="tf_mvm_tabs_discovered" xml:space="preserve">
+    <value>Внутренняя переменная: сохраняет значение сколько раз пользователь переключал вкладки в окне покупки режима MvM.</value>
+  </data>
+  <data name="tf_mvm_tank_health" xml:space="preserve">
+    <value>Задаёт здоровье танка в режиме MvM.</value>
+  </data>
+  <data name="tf_mvm_tank_kill" xml:space="preserve">
+    <value>Позволяет убить всех танков на данной волне в режиме MvM.</value>
+  </data>
 </root>
