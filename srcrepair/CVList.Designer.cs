@@ -1528,11 +1528,74 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allow NPCs on server..
+        /// </summary>
+        internal static string mp_allowNPCs {
+            get {
+                return ResourceManager.GetString("mp_allowNPCs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Toggles whether the server allows spectator mode or not..
+        /// </summary>
+        internal static string mp_allowspectators {
+            get {
+                return ResourceManager.GetString("mp_allowspectators", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cvar for automatic team balancing..
         /// </summary>
         internal static string mp_autoteambalance {
             get {
                 return ResourceManager.GetString("mp_autoteambalance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time after round win until round restarts..
+        /// </summary>
+        internal static string mp_bonusroundtime {
+            get {
+                return ResourceManager.GetString("mp_bonusroundtime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Amount of time players can chat after the game is over..
+        /// </summary>
+        internal static string mp_chattime {
+            get {
+                return ResourceManager.GetString("mp_chattime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text that team leader from each team must speak for the match to begin..
+        /// </summary>
+        internal static string mp_clan_ready_signal {
+            get {
+                return ResourceManager.GetString("mp_clan_ready_signal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If non-zero, game will restart once someone from each team gives the ready signal..
+        /// </summary>
+        internal static string mp_clan_readyrestart {
+            get {
+                return ResourceManager.GetString("mp_clan_readyrestart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prevents a userid from being auto-kicked..
+        /// </summary>
+        internal static string mp_disable_autokick {
+            get {
+                return ResourceManager.GetString("mp_disable_autokick", resourceCulture);
             }
         }
         
@@ -1546,6 +1609,105 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable timers to wait between rounds..
+        /// </summary>
+        internal static string mp_enableroundwaittime {
+            get {
+                return ResourceManager.GetString("mp_enableroundwaittime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fade a player&apos;s screen to black when he dies..
+        /// </summary>
+        internal static string mp_fadetoblack {
+            get {
+                return ResourceManager.GetString("mp_fadetoblack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Automatically assign players to teams when joining..
+        /// </summary>
+        internal static string mp_forceautoteam {
+            get {
+                return ResourceManager.GetString("mp_forceautoteam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restricts spectator modes for dead players..
+        /// </summary>
+        internal static string mp_forcecamera {
+            get {
+                return ResourceManager.GetString("mp_forcecamera", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Force all players to respawn..
+        /// </summary>
+        internal static string mp_forcerespawnplayers {
+            get {
+                return ResourceManager.GetString("mp_forcerespawnplayers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forces team to win..
+        /// </summary>
+        internal static string mp_forcewin {
+            get {
+                return ResourceManager.GetString("mp_forcewin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The number of kills at which the map ends..
+        /// </summary>
+        internal static string mp_fraglimit {
+            get {
+                return ResourceManager.GetString("mp_fraglimit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Allows team members to injure other members of their team..
+        /// </summary>
+        internal static string mp_friendlyfire {
+            get {
+                return ResourceManager.GetString("mp_friendlyfire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Allow only 1 of each player class type..
+        /// </summary>
+        internal static string mp_highlander {
+            get {
+                return ResourceManager.GetString("mp_highlander", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set to 1 to prevent holiday gifts from spawning when players are killed..
+        /// </summary>
+        internal static string mp_holiday_nogifts {
+            get {
+                return ResourceManager.GetString("mp_holiday_nogifts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restricts human players to a single team {any, blue, red, spectator}..
+        /// </summary>
+        internal static string mp_humans_must_join_team {
+            get {
+                return ResourceManager.GetString("mp_humans_must_join_team", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cvar for managing idle players..
         /// </summary>
         internal static string mp_idledealmethod {
@@ -1555,11 +1717,65 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Maximum time a player is allowed to be idle (in minutes)..
+        /// </summary>
+        internal static string mp_idlemaxtime {
+            get {
+                return ResourceManager.GetString("mp_idlemaxtime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Allow the match to end when mp_timelimit hits instead of waiting for the end of the current round..
+        /// </summary>
+        internal static string mp_match_end_at_timelimit {
+            get {
+                return ResourceManager.GetString("mp_match_end_at_timelimit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Max number of rounds to play before server changes maps..
+        /// </summary>
+        internal static string mp_maxrounds {
+            get {
+                return ResourceManager.GetString("mp_maxrounds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time between respawn waves..
+        /// </summary>
+        internal static string mp_respawnwavetime {
+            get {
+                return ResourceManager.GetString("mp_respawnwavetime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Restarts the round and resets the round time..
         /// </summary>
         internal static string mp_restartgame {
             get {
                 return ResourceManager.GetString("mp_restartgame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If non-zero, game will restart immediately..
+        /// </summary>
+        internal static string mp_restartgame_immediate {
+            get {
+                return ResourceManager.GetString("mp_restartgame_immediate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If non-zero, the current round will restart in the specified number of seconds..
+        /// </summary>
+        internal static string mp_restartround {
+            get {
+                return ResourceManager.GetString("mp_restartround", resourceCulture);
             }
         }
         
@@ -1591,6 +1807,60 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Show overhead player voice icons when players are speaking..
+        /// </summary>
+        internal static string mp_show_voice_icons {
+            get {
+                return ResourceManager.GetString("mp_show_voice_icons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show the min respawn times for the teams..
+        /// </summary>
+        internal static string mp_showrespawntimes {
+            get {
+                return ResourceManager.GetString("mp_showrespawntimes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable/Disable stalemate mode..
+        /// </summary>
+        internal static string mp_stalemate_enable {
+            get {
+                return ResourceManager.GetString("mp_stalemate_enable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restrict everyone to melee weapons only while in Sudden Death..
+        /// </summary>
+        internal static string mp_stalemate_meleeonly {
+            get {
+                return ResourceManager.GetString("mp_stalemate_meleeonly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Timelimit (in seconds) of the stalemate round..
+        /// </summary>
+        internal static string mp_stalemate_timelimit {
+            get {
+                return ResourceManager.GetString("mp_stalemate_timelimit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Switch teams and restart the game..
+        /// </summary>
+        internal static string mp_switchteams {
+            get {
+                return ResourceManager.GetString("mp_switchteams", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cvar for team force balance..
         /// </summary>
         internal static string mp_teams_unbalance_limit {
@@ -1600,11 +1870,56 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delay between scoring of owned capture points..
+        /// </summary>
+        internal static string mp_time_between_capscoring {
+            get {
+                return ResourceManager.GetString("mp_time_between_capscoring", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cvar for map timelimit..
         /// </summary>
         internal static string mp_timelimit {
             get {
                 return ResourceManager.GetString("mp_timelimit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable/Disable Tournament mode..
+        /// </summary>
+        internal static string mp_tournament {
+            get {
+                return ResourceManager.GetString("mp_tournament", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Allow mp_tournament_restart command to be issued by players other than admin..
+        /// </summary>
+        internal static string mp_tournament_allow_non_admin_restart {
+            get {
+                return ResourceManager.GetString("mp_tournament_allow_non_admin_restart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restart Tournament Mode on the current level..
+        /// </summary>
+        internal static string mp_tournament_restart {
+            get {
+                return ResourceManager.GetString("mp_tournament_restart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Specifies the item whitelist file to use..
+        /// </summary>
+        internal static string mp_tournament_whitelist {
+            get {
+                return ResourceManager.GetString("mp_tournament_whitelist", resourceCulture);
             }
         }
         
@@ -1627,11 +1942,56 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Set to 1 to end the WaitingForPlayers period..
+        /// </summary>
+        internal static string mp_waitingforplayers_cancel {
+            get {
+                return ResourceManager.GetString("mp_waitingforplayers_cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set to 1 to start or restart the WaitingForPlayers period..
+        /// </summary>
+        internal static string mp_waitingforplayers_restart {
+            get {
+                return ResourceManager.GetString("mp_waitingforplayers_restart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 1 - cancels &quot;waiting for players...&quot; time..
         /// </summary>
         internal static string mp_waitingforplayerscancel {
             get {
                 return ResourceManager.GetString("mp_waitingforplayerscancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Score difference between teams before server changes maps..
+        /// </summary>
+        internal static string mp_windifference {
+            get {
+                return ResourceManager.GetString("mp_windifference", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minimum score needed for mp_windifference to be applied..
+        /// </summary>
+        internal static string mp_windifference_min {
+            get {
+                return ResourceManager.GetString("mp_windifference_min", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Max score one team can reach before server changes maps..
+        /// </summary>
+        internal static string mp_winlimit {
+            get {
+                return ResourceManager.GetString("mp_winlimit", resourceCulture);
             }
         }
         

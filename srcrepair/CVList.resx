@@ -1695,4 +1695,124 @@
   <data name="cl_windspeed" xml:space="preserve">
     <value>Weather effects wind speed scalar.</value>
   </data>
+  <data name="mp_allowNPCs" xml:space="preserve">
+    <value>Allow NPCs on server.</value>
+  </data>
+  <data name="mp_allowspectators" xml:space="preserve">
+    <value>Toggles whether the server allows spectator mode or not.</value>
+  </data>
+  <data name="mp_bonusroundtime" xml:space="preserve">
+    <value>Time after round win until round restarts.</value>
+  </data>
+  <data name="mp_chattime" xml:space="preserve">
+    <value>Amount of time players can chat after the game is over.</value>
+  </data>
+  <data name="mp_clan_readyrestart" xml:space="preserve">
+    <value>If non-zero, game will restart once someone from each team gives the ready signal.</value>
+  </data>
+  <data name="mp_clan_ready_signal" xml:space="preserve">
+    <value>Text that team leader from each team must speak for the match to begin.</value>
+  </data>
+  <data name="mp_disable_autokick" xml:space="preserve">
+    <value>Prevents a userid from being auto-kicked.</value>
+  </data>
+  <data name="mp_enableroundwaittime" xml:space="preserve">
+    <value>Enable timers to wait between rounds.</value>
+  </data>
+  <data name="mp_fadetoblack" xml:space="preserve">
+    <value>Fade a player's screen to black when he dies.</value>
+  </data>
+  <data name="mp_forceautoteam" xml:space="preserve">
+    <value>Automatically assign players to teams when joining.</value>
+  </data>
+  <data name="mp_forcecamera" xml:space="preserve">
+    <value>Restricts spectator modes for dead players.</value>
+  </data>
+  <data name="mp_forcerespawnplayers" xml:space="preserve">
+    <value>Force all players to respawn.</value>
+  </data>
+  <data name="mp_forcewin" xml:space="preserve">
+    <value>Forces team to win.</value>
+  </data>
+  <data name="mp_fraglimit" xml:space="preserve">
+    <value>The number of kills at which the map ends.</value>
+  </data>
+  <data name="mp_friendlyfire" xml:space="preserve">
+    <value>Allows team members to injure other members of their team.</value>
+  </data>
+  <data name="mp_highlander" xml:space="preserve">
+    <value>Allow only 1 of each player class type.</value>
+  </data>
+  <data name="mp_holiday_nogifts" xml:space="preserve">
+    <value>Set to 1 to prevent holiday gifts from spawning when players are killed.</value>
+  </data>
+  <data name="mp_humans_must_join_team" xml:space="preserve">
+    <value>Restricts human players to a single team {any, blue, red, spectator}.</value>
+  </data>
+  <data name="mp_idlemaxtime" xml:space="preserve">
+    <value>Maximum time a player is allowed to be idle (in minutes).</value>
+  </data>
+  <data name="mp_match_end_at_timelimit" xml:space="preserve">
+    <value>Allow the match to end when mp_timelimit hits instead of waiting for the end of the current round.</value>
+  </data>
+  <data name="mp_maxrounds" xml:space="preserve">
+    <value>Max number of rounds to play before server changes maps.</value>
+  </data>
+  <data name="mp_respawnwavetime" xml:space="preserve">
+    <value>Time between respawn waves.</value>
+  </data>
+  <data name="mp_restartgame_immediate" xml:space="preserve">
+    <value>If non-zero, game will restart immediately.</value>
+  </data>
+  <data name="mp_restartround" xml:space="preserve">
+    <value>If non-zero, the current round will restart in the specified number of seconds.</value>
+  </data>
+  <data name="mp_showrespawntimes" xml:space="preserve">
+    <value>Show the min respawn times for the teams.</value>
+  </data>
+  <data name="mp_show_voice_icons" xml:space="preserve">
+    <value>Show overhead player voice icons when players are speaking.</value>
+  </data>
+  <data name="mp_stalemate_enable" xml:space="preserve">
+    <value>Enable/Disable stalemate mode.</value>
+  </data>
+  <data name="mp_stalemate_meleeonly" xml:space="preserve">
+    <value>Restrict everyone to melee weapons only while in Sudden Death.</value>
+  </data>
+  <data name="mp_stalemate_timelimit" xml:space="preserve">
+    <value>Timelimit (in seconds) of the stalemate round.</value>
+  </data>
+  <data name="mp_switchteams" xml:space="preserve">
+    <value>Switch teams and restart the game.</value>
+  </data>
+  <data name="mp_time_between_capscoring" xml:space="preserve">
+    <value>Delay between scoring of owned capture points.</value>
+  </data>
+  <data name="mp_tournament" xml:space="preserve">
+    <value>Enable/Disable Tournament mode.</value>
+  </data>
+  <data name="mp_tournament_allow_non_admin_restart" xml:space="preserve">
+    <value>Allow mp_tournament_restart command to be issued by players other than admin.</value>
+  </data>
+  <data name="mp_tournament_restart" xml:space="preserve">
+    <value>Restart Tournament Mode on the current level.</value>
+  </data>
+  <data name="mp_tournament_whitelist" xml:space="preserve">
+    <value>Specifies the item whitelist file to use.</value>
+  </data>
+  <data name="mp_waitingforplayers_cancel" xml:space="preserve">
+    <value>Set to 1 to end the WaitingForPlayers period.</value>
+  </data>
+  <data name="mp_waitingforplayers_restart" xml:space="preserve">
+    <value>Set to 1 to start or restart the WaitingForPlayers period.</value>
+  </data>
+  <data name="mp_windifference" xml:space="preserve">
+    <value>Score difference between teams before server changes maps.</value>
+  </data>
+  <data name="mp_windifference_min" xml:space="preserve">
+    <value>Minimum score needed for mp_windifference to be applied.</value>
+  </data>
+  <data name="mp_winlimit" xml:space="preserve">
+    <value>Max score one team can reach before server changes maps.</value>
+  </data>
 </root>
