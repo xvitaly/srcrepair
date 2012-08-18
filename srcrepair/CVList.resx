@@ -1326,4 +1326,373 @@
   <data name="tf_wipe_attributes" xml:space="preserve">
     <value>Clear all TF-specific attributes of selected area.</value>
   </data>
+  <data name="cl_allowdownload" xml:space="preserve">
+    <value>Client downloads customization files.</value>
+  </data>
+  <data name="cl_allowupload" xml:space="preserve">
+    <value>Client uploads customization files.</value>
+  </data>
+  <data name="cl_animationinfo" xml:space="preserve">
+    <value>Hud element to examine.</value>
+  </data>
+  <data name="cl_ask_blacklist_for_any_server" xml:space="preserve">
+    <value>If nonzero, auto-ask for local/LAN servers (for debugging).</value>
+  </data>
+  <data name="cl_ask_blacklist_max_session_duration" xml:space="preserve">
+    <value>If player stays on a server for less than this time (in seconds) prompt to add server to blacklist.</value>
+  </data>
+  <data name="cl_ask_favorite_for_any_server" xml:space="preserve">
+    <value>If nonzero, auto-ask for local/LAN servers (for debugging).</value>
+  </data>
+  <data name="cl_ask_favorite_min_session_duration" xml:space="preserve">
+    <value>If player stays on a server for longer than this time (in seconds) prompt to add server to favorites.</value>
+  </data>
+  <data name="cl_chatfilters" xml:space="preserve">
+    <value>Stores the chat filter settings.</value>
+  </data>
+  <data name="cl_class" xml:space="preserve">
+    <value>Default class when joining a game.</value>
+  </data>
+  <data name="cl_clearhinthistory" xml:space="preserve">
+    <value>Clear memory of client side hints displayed to the player.</value>
+  </data>
+  <data name="cl_clockdrift_max_ms" xml:space="preserve">
+    <value>Maximum number of milliseconds the clock is allowed to drift before the client snaps its clock to the server's.</value>
+  </data>
+  <data name="cl_clockdrift_max_ms_threadmode" xml:space="preserve">
+    <value>Maximum number of milliseconds the clock is allowed to drift before the client snaps its clock to the server's.</value>
+  </data>
+  <data name="cl_clock_correction" xml:space="preserve">
+    <value>Enable/disable clock correction on the client.</value>
+  </data>
+  <data name="cl_clock_correction_adjustment_max_amount" xml:space="preserve">
+    <value>Sets the maximum number of milliseconds per second it is allowed to correct the client clock.</value>
+  </data>
+  <data name="cl_clock_correction_adjustment_max_offset" xml:space="preserve">
+    <value>As the clock offset goes from cl_clock_correction_adjustment_min_offset to this value (in milliseconds).</value>
+  </data>
+  <data name="cl_clock_correction_adjustment_min_offset" xml:space="preserve">
+    <value>If the clock offset is less than this amount (in milliseconds), then no clock correction is applied.</value>
+  </data>
+  <data name="cl_clock_correction_force_server_tick" xml:space="preserve">
+    <value>Force clock correction to match the server tick + this offset (-999 disables it).</value>
+  </data>
+  <data name="cl_clock_showdebuginfo" xml:space="preserve">
+    <value>Show debugging info about the clock drift.</value>
+  </data>
+  <data name="cl_cmdrate" xml:space="preserve">
+    <value>Max number of command packets sent to server per second.</value>
+  </data>
+  <data name="cl_coach_find_coach" xml:space="preserve">
+    <value>Request a coach for the current game.</value>
+  </data>
+  <data name="cl_coach_toggle" xml:space="preserve">
+    <value>Toggle coach status.</value>
+  </data>
+  <data name="cl_customsounds" xml:space="preserve">
+    <value>Enable customized player sound playback.</value>
+  </data>
+  <data name="cl_debugrumble" xml:space="preserve">
+    <value>Turn on rumble debugging spew.</value>
+  </data>
+  <data name="cl_decline_first_notification" xml:space="preserve">
+    <value>Tries to decline/remove the first notification.</value>
+  </data>
+  <data name="cl_demoviewoverride" xml:space="preserve">
+    <value>Override view during demo playback.</value>
+  </data>
+  <data name="cl_detaildist" xml:space="preserve">
+    <value>Distance at which detail props are no longer visible.</value>
+  </data>
+  <data name="cl_detailfade" xml:space="preserve">
+    <value>Distance across which detail props fade in.</value>
+  </data>
+  <data name="cl_detail_multiplier" xml:space="preserve">
+    <value>Extra details to create.</value>
+  </data>
+  <data name="cl_disablehtmlmotd" xml:space="preserve">
+    <value>Disable HTML motds.</value>
+  </data>
+  <data name="cl_downloadfilter" xml:space="preserve">
+    <value>Determines which files can be downloaded from the server (all, none, nosounds).</value>
+  </data>
+  <data name="cl_drawmaterial" xml:space="preserve">
+    <value>Draw a particular material over the frame.</value>
+  </data>
+  <data name="cl_dump_particle_stats" xml:space="preserve">
+    <value>Dump particle profiling info to particle_profile.csv.</value>
+  </data>
+  <data name="cl_entityreport" xml:space="preserve">
+    <value>For debugging, draw entity states to console.</value>
+  </data>
+  <data name="cl_entityreport_sorted" xml:space="preserve">
+    <value>For debugging, draw entity states to console in sorted order. [0 = disabled, 1 = average, 2 = current, 3 = peak].</value>
+  </data>
+  <data name="cl_ent_absbox" xml:space="preserve">
+    <value>Displays the client's absbox for the entity under the crosshair.</value>
+  </data>
+  <data name="cl_ent_bbox" xml:space="preserve">
+    <value>Displays the client's bounding box for the entity under the crosshair.</value>
+  </data>
+  <data name="cl_ent_rbox" xml:space="preserve">
+    <value>Displays the client's render box for the entity under the crosshair.</value>
+  </data>
+  <data name="cl_extrapolate" xml:space="preserve">
+    <value>Enable/disable extrapolation if interpolation history runs out.</value>
+  </data>
+  <data name="cl_extrapolate_amount" xml:space="preserve">
+    <value>Set how many seconds the client will extrapolate entities for.</value>
+  </data>
+  <data name="cl_fastdetailsprites" xml:space="preserve">
+    <value>Whether to use new detail sprite system.</value>
+  </data>
+  <data name="cl_find_ent" xml:space="preserve">
+    <value>Find and list all client entities with classnames that contain the specified substring. Format: cl_find_ent &lt;substring&gt;.</value>
+  </data>
+  <data name="cl_find_ent_index" xml:space="preserve">
+    <value>Display data for clientside entity matching specified index. Format: cl_find_ent_index &lt;index&gt;.</value>
+  </data>
+  <data name="cl_flushentitypacket" xml:space="preserve">
+    <value>For debugging. Force the engine to flush an entity packet.</value>
+  </data>
+  <data name="cl_forcepreload" xml:space="preserve">
+    <value>Whether we should force preloading.</value>
+  </data>
+  <data name="cl_fullupdate" xml:space="preserve">
+    <value>Forces the server to send a full update packet.</value>
+  </data>
+  <data name="cl_gameserver_reset_identity" xml:space="preserve">
+    <value>Resets the identity token for a given game server.</value>
+  </data>
+  <data name="cl_hudhint_sound" xml:space="preserve">
+    <value>Disable hudhint sounds.</value>
+  </data>
+  <data name="cl_hud_minmode" xml:space="preserve">
+    <value>Set to 1 to turn on the advanced minimalist HUD mode.</value>
+  </data>
+  <data name="cl_ignorepackets" xml:space="preserve">
+    <value>Force client to ignore packets (for debugging).</value>
+  </data>
+  <data name="cl_interp_all" xml:space="preserve">
+    <value>Disable interpolation list optimizations.</value>
+  </data>
+  <data name="cl_interp_npcs" xml:space="preserve">
+    <value>Interpolate NPC positions starting this many seconds in past.</value>
+  </data>
+  <data name="cl_interp_ratio" xml:space="preserve">
+    <value>Sets the interpolation amount (final amount is cl_interp_ratio / cl_updaterate).</value>
+  </data>
+  <data name="cl_jiggle_bone_debug" xml:space="preserve">
+    <value>Display physics-based 'jiggle bone' debugging information.</value>
+  </data>
+  <data name="cl_jiggle_bone_debug_pitch_constraints" xml:space="preserve">
+    <value>Display physics-based 'jiggle bone' debugging information.</value>
+  </data>
+  <data name="cl_jiggle_bone_debug_yaw_constraints" xml:space="preserve">
+    <value>Display physics-based 'jiggle bone' debugging information.</value>
+  </data>
+  <data name="cl_jiggle_bone_framerate_cutoff" xml:space="preserve">
+    <value>Skip jiggle bone simulation if framerate drops below this value (frames/second).</value>
+  </data>
+  <data name="cl_lagcompensation" xml:space="preserve">
+    <value>Perform server side lag compensation of weapon firing events.</value>
+  </data>
+  <data name="cl_language" xml:space="preserve">
+    <value>Language (from HKCU\Software\Valve\Steam\Language).</value>
+  </data>
+  <data name="cl_localnetworkbackdoor" xml:space="preserve">
+    <value>Enable network optimizations for single player games.</value>
+  </data>
+  <data name="cl_logofile" xml:space="preserve">
+    <value>Spraypoint logo decal.</value>
+  </data>
+  <data name="cl_maxrenderable_dist" xml:space="preserve">
+    <value>Max distance from the camera at which things will be rendered.</value>
+  </data>
+  <data name="cl_mouselook" xml:space="preserve">
+    <value>Set to 1 to use mouse for look, 0 for keyboard look. Cannot be set while connected to a server.</value>
+  </data>
+  <data name="cl_notifications_max_num_visible" xml:space="preserve">
+    <value>How many notifications are visible in-game.</value>
+  </data>
+  <data name="cl_notifications_move_time" xml:space="preserve">
+    <value>How long it takes for a notification to move.</value>
+  </data>
+  <data name="cl_notifications_show_ingame" xml:space="preserve">
+    <value>Whether notifications should show up in-game.</value>
+  </data>
+  <data name="cl_obj_test_building_damage" xml:space="preserve">
+    <value>Debug building damage.</value>
+  </data>
+  <data name="cl_panelanimation" xml:space="preserve">
+    <value>Shows panel animation variables: &lt;panelname | blank for all panels&gt;.</value>
+  </data>
+  <data name="cl_particleeffect_aabb_buffer" xml:space="preserve">
+    <value>Add this amount to a particle effect's bbox in the leaf system so if it's growing slowly, it won't have to be reinserted as often.</value>
+  </data>
+  <data name="cl_pclass" xml:space="preserve">
+    <value>Dump entity by prediction classname.</value>
+  </data>
+  <data name="cl_pdump" xml:space="preserve">
+    <value>Dump info about this entity to screen.</value>
+  </data>
+  <data name="cl_phys_props_enable" xml:space="preserve">
+    <value>Disable clientside physics props (must be set before loading a level).</value>
+  </data>
+  <data name="cl_phys_props_max" xml:space="preserve">
+    <value>Maximum clientside physic props.</value>
+  </data>
+  <data name="cl_phys_props_respawndist" xml:space="preserve">
+    <value>Minimum distance from the player that a clientside prop must be before it's allowed to respawn.</value>
+  </data>
+  <data name="cl_phys_props_respawnrate" xml:space="preserve">
+    <value>Time, in seconds, between clientside prop respawns.</value>
+  </data>
+  <data name="cl_phys_timescale" xml:space="preserve">
+    <value>Sets the scale of time for client-side physics (ragdolls).</value>
+  </data>
+  <data name="cl_pitchspeed" xml:space="preserve">
+    <value>Client pitch speed.</value>
+  </data>
+  <data name="cl_playback_screenshots" xml:space="preserve">
+    <value>Allows the client to playback screenshot and jpeg commands in demos.</value>
+  </data>
+  <data name="cl_playerspraydisable" xml:space="preserve">
+    <value>Disable player sprays.</value>
+  </data>
+  <data name="cl_precacheinfo" xml:space="preserve">
+    <value>Show precache info (client).</value>
+  </data>
+  <data name="cl_predict" xml:space="preserve">
+    <value>Perform client side prediction.</value>
+  </data>
+  <data name="cl_predictionlist" xml:space="preserve">
+    <value>Show which entities are predicting.</value>
+  </data>
+  <data name="cl_predictweapons" xml:space="preserve">
+    <value>Perform client side prediction of weapon effects.</value>
+  </data>
+  <data name="cl_pred_optimize" xml:space="preserve">
+    <value>Optimize for not copying data if didn't receive a network update (1), and also for not repredicting if there were no errors (2).</value>
+  </data>
+  <data name="cl_pred_track" xml:space="preserve">
+    <value>Track changes to entity index entindex, for field fieldname.</value>
+  </data>
+  <data name="cl_ragdoll_physics_enable" xml:space="preserve">
+    <value>Enable/disable ragdoll physics.</value>
+  </data>
+  <data name="cl_removedecals" xml:space="preserve">
+    <value>Remove the decals from the entity under the crosshair.</value>
+  </data>
+  <data name="cl_resend" xml:space="preserve">
+    <value>Delay in seconds before the client will resend the 'connect' attempt.</value>
+  </data>
+  <data name="cl_rumblescale" xml:space="preserve">
+    <value>Scale sensitivity of rumble effects (0 to 1.0).</value>
+  </data>
+  <data name="cl_screenshotname" xml:space="preserve">
+    <value>Custom Screenshot name.</value>
+  </data>
+  <data name="cl_showbattery" xml:space="preserve">
+    <value>Draw current battery level at top of screen when on battery power.</value>
+  </data>
+  <data name="cl_ShowBoneSetupEnts" xml:space="preserve">
+    <value>Show which entities are having their bones setup each frame.</value>
+  </data>
+  <data name="cl_showdemooverlay" xml:space="preserve">
+    <value>How often to flash demo recording/playback overlay (0 - disable overlay, -1 - show always).</value>
+  </data>
+  <data name="cl_showents" xml:space="preserve">
+    <value>Dump entity list to console.</value>
+  </data>
+  <data name="cl_showerror" xml:space="preserve">
+    <value>Show prediction errors, 2 for above plus detailed field deltas.</value>
+  </data>
+  <data name="cl_showevents" xml:space="preserve">
+    <value>Print event firing info in the console.</value>
+  </data>
+  <data name="cl_showhelp" xml:space="preserve">
+    <value>Set to 0 to not show on-screen help.</value>
+  </data>
+  <data name="cl_showpausedimage" xml:space="preserve">
+    <value>Show the 'Paused' image when game is paused.</value>
+  </data>
+  <data name="cl_showpluginmessages" xml:space="preserve">
+    <value>Allow plugins to display messages to you.</value>
+  </data>
+  <data name="cl_showtextmsg" xml:space="preserve">
+    <value>Enable/disable text messages printing on the screen.</value>
+  </data>
+  <data name="cl_show_num_particle_systems" xml:space="preserve">
+    <value>Display the number of active particle systems.</value>
+  </data>
+  <data name="cl_smooth" xml:space="preserve">
+    <value>Smooth view/eye origin after prediction errors.</value>
+  </data>
+  <data name="cl_smoothtime" xml:space="preserve">
+    <value>Smooth client's view after prediction error over this many seconds.</value>
+  </data>
+  <data name="cl_soundemitter_flush" xml:space="preserve">
+    <value>Flushes the sounds.txt system (client only).</value>
+  </data>
+  <data name="cl_soundfile" xml:space="preserve">
+    <value>Jingle sound file.</value>
+  </data>
+  <data name="cl_soundscape_flush" xml:space="preserve">
+    <value>Flushes the client side soundscapes.</value>
+  </data>
+  <data name="cl_soundscape_printdebuginfo" xml:space="preserve">
+    <value>Print soundscapes.</value>
+  </data>
+  <data name="cl_spec_mode" xml:space="preserve">
+    <value>Spectator mode.</value>
+  </data>
+  <data name="cl_steamscreenshots" xml:space="preserve">
+    <value>Enable/disable saving screenshots to Steam.</value>
+  </data>
+  <data name="cl_team" xml:space="preserve">
+    <value>Default team when joining a game.</value>
+  </data>
+  <data name="cl_threaded_bone_setup" xml:space="preserve">
+    <value>Enable parallel processing of C_BaseAnimating::SetupBones().</value>
+  </data>
+  <data name="cl_timeout" xml:space="preserve">
+    <value>After this many seconds without receiving a packet from the server, the client will disconnect itself.</value>
+  </data>
+  <data name="cl_trade" xml:space="preserve">
+    <value>Trade with a person by player name.</value>
+  </data>
+  <data name="cl_trade_steamid" xml:space="preserve">
+    <value>Trade with a person by steam id.</value>
+  </data>
+  <data name="cl_trading_show_requests_from" xml:space="preserve">
+    <value>View trade requests from a certain group only.</value>
+  </data>
+  <data name="cl_training_class_unlock_all" xml:space="preserve">
+    <value>Unlock all training.</value>
+  </data>
+  <data name="cl_training_completed_with_classes" xml:space="preserve">
+    <value>Bitfield representing what classes have been used to complete training.</value>
+  </data>
+  <data name="cl_trigger_first_notification" xml:space="preserve">
+    <value>Tries to accept/trigger the first notification.</value>
+  </data>
+  <data name="cl_updaterate" xml:space="preserve">
+    <value>Number of packets per second of updates you are requesting from the server.</value>
+  </data>
+  <data name="cl_use_tournament_specgui" xml:space="preserve">
+    <value>When in tournament mode, use the advanced tournament spectator UI.</value>
+  </data>
+  <data name="cl_view" xml:space="preserve">
+    <value>Set the view entity index.</value>
+  </data>
+  <data name="cl_voice_filter" xml:space="preserve">
+    <value>Filter voice by name substring.</value>
+  </data>
+  <data name="cl_winddir" xml:space="preserve">
+    <value>Weather effects wind direction angle.</value>
+  </data>
+  <data name="cl_windspeed" xml:space="preserve">
+    <value>Weather effects wind speed scalar.</value>
+  </data>
 </root>

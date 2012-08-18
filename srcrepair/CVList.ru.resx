@@ -2973,4 +2973,19 @@
   <data name="tf_matchgroups" xml:space="preserve">
     <value>Позволяет задать маску для поиска подходящего сервера для лобби.</value>
   </data>
+  <data name="cl_resend" xml:space="preserve">
+    <value>Задаёт время в секундах до повторного подключения к серверу.</value>
+  </data>
+  <data name="cl_showbattery" xml:space="preserve">
+    <value>Включает / отключает отображение заряда батареи на экране во время игры на ноутбуке.</value>
+  </data>
+  <data name="cl_trade" xml:space="preserve">
+    <value>Запустить торговлю с игроком с заданным в параметре ником.</value>
+  </data>
+  <data name="cl_trade_steamid" xml:space="preserve">
+    <value>Запустить торговлю с игроком с заданным в параметре SteamID.</value>
+  </data>
+  <data name="cl_training_class_unlock_all" xml:space="preserve">
+    <value>Принудительно разблокирует все режимы тренировки.</value>
+  </data>
 </root>

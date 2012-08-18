@@ -79,11 +79,74 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Client downloads customization files..
+        /// </summary>
+        internal static string cl_allowdownload {
+            get {
+                return ResourceManager.GetString("cl_allowdownload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Client uploads customization files..
+        /// </summary>
+        internal static string cl_allowupload {
+            get {
+                return ResourceManager.GetString("cl_allowupload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hud element to examine..
+        /// </summary>
+        internal static string cl_animationinfo {
+            get {
+                return ResourceManager.GetString("cl_animationinfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If nonzero, auto-ask for local/LAN servers (for debugging)..
+        /// </summary>
+        internal static string cl_ask_blacklist_for_any_server {
+            get {
+                return ResourceManager.GetString("cl_ask_blacklist_for_any_server", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If player stays on a server for less than this time (in seconds) prompt to add server to blacklist..
+        /// </summary>
+        internal static string cl_ask_blacklist_max_session_duration {
+            get {
+                return ResourceManager.GetString("cl_ask_blacklist_max_session_duration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 0/1 - turns question whether to blacklist a server after leaving after a short amount of time off/on..
         /// </summary>
         internal static string cl_ask_blacklist_opt_out {
             get {
                 return ResourceManager.GetString("cl_ask_blacklist_opt_out", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If nonzero, auto-ask for local/LAN servers (for debugging)..
+        /// </summary>
+        internal static string cl_ask_favorite_for_any_server {
+            get {
+                return ResourceManager.GetString("cl_ask_favorite_for_any_server", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If player stays on a server for longer than this time (in seconds) prompt to add server to favorites..
+        /// </summary>
+        internal static string cl_ask_favorite_min_session_duration {
+            get {
+                return ResourceManager.GetString("cl_ask_favorite_min_session_duration", resourceCulture);
             }
         }
         
@@ -124,11 +187,218 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Stores the chat filter settings..
+        /// </summary>
+        internal static string cl_chatfilters {
+            get {
+                return ResourceManager.GetString("cl_chatfilters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default class when joining a game..
+        /// </summary>
+        internal static string cl_class {
+            get {
+                return ResourceManager.GetString("cl_class", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear memory of client side hints displayed to the player..
+        /// </summary>
+        internal static string cl_clearhinthistory {
+            get {
+                return ResourceManager.GetString("cl_clearhinthistory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable/disable clock correction on the client..
+        /// </summary>
+        internal static string cl_clock_correction {
+            get {
+                return ResourceManager.GetString("cl_clock_correction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sets the maximum number of milliseconds per second it is allowed to correct the client clock..
+        /// </summary>
+        internal static string cl_clock_correction_adjustment_max_amount {
+            get {
+                return ResourceManager.GetString("cl_clock_correction_adjustment_max_amount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to As the clock offset goes from cl_clock_correction_adjustment_min_offset to this value (in milliseconds)..
+        /// </summary>
+        internal static string cl_clock_correction_adjustment_max_offset {
+            get {
+                return ResourceManager.GetString("cl_clock_correction_adjustment_max_offset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If the clock offset is less than this amount (in milliseconds), then no clock correction is applied..
+        /// </summary>
+        internal static string cl_clock_correction_adjustment_min_offset {
+            get {
+                return ResourceManager.GetString("cl_clock_correction_adjustment_min_offset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Force clock correction to match the server tick + this offset (-999 disables it)..
+        /// </summary>
+        internal static string cl_clock_correction_force_server_tick {
+            get {
+                return ResourceManager.GetString("cl_clock_correction_force_server_tick", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show debugging info about the clock drift..
+        /// </summary>
+        internal static string cl_clock_showdebuginfo {
+            get {
+                return ResourceManager.GetString("cl_clock_showdebuginfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maximum number of milliseconds the clock is allowed to drift before the client snaps its clock to the server&apos;s..
+        /// </summary>
+        internal static string cl_clockdrift_max_ms {
+            get {
+                return ResourceManager.GetString("cl_clockdrift_max_ms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maximum number of milliseconds the clock is allowed to drift before the client snaps its clock to the server&apos;s..
+        /// </summary>
+        internal static string cl_clockdrift_max_ms_threadmode {
+            get {
+                return ResourceManager.GetString("cl_clockdrift_max_ms_threadmode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Max number of command packets sent to server per second..
+        /// </summary>
+        internal static string cl_cmdrate {
+            get {
+                return ResourceManager.GetString("cl_cmdrate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Request a coach for the current game..
+        /// </summary>
+        internal static string cl_coach_find_coach {
+            get {
+                return ResourceManager.GetString("cl_coach_find_coach", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Toggle coach status..
+        /// </summary>
+        internal static string cl_coach_toggle {
+            get {
+                return ResourceManager.GetString("cl_coach_toggle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sets crosshair picture. &quot;&quot; is standard-crosshairs..
         /// </summary>
         internal static string cl_crosshair_file {
             get {
                 return ResourceManager.GetString("cl_crosshair_file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable customized player sound playback..
+        /// </summary>
+        internal static string cl_customsounds {
+            get {
+                return ResourceManager.GetString("cl_customsounds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Turn on rumble debugging spew..
+        /// </summary>
+        internal static string cl_debugrumble {
+            get {
+                return ResourceManager.GetString("cl_debugrumble", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tries to decline/remove the first notification..
+        /// </summary>
+        internal static string cl_decline_first_notification {
+            get {
+                return ResourceManager.GetString("cl_decline_first_notification", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Override view during demo playback..
+        /// </summary>
+        internal static string cl_demoviewoverride {
+            get {
+                return ResourceManager.GetString("cl_demoviewoverride", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Extra details to create..
+        /// </summary>
+        internal static string cl_detail_multiplier {
+            get {
+                return ResourceManager.GetString("cl_detail_multiplier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Distance at which detail props are no longer visible..
+        /// </summary>
+        internal static string cl_detaildist {
+            get {
+                return ResourceManager.GetString("cl_detaildist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Distance across which detail props fade in..
+        /// </summary>
+        internal static string cl_detailfade {
+            get {
+                return ResourceManager.GetString("cl_detailfade", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Disable HTML motds..
+        /// </summary>
+        internal static string cl_disablehtmlmotd {
+            get {
+                return ResourceManager.GetString("cl_disablehtmlmotd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Determines which files can be downloaded from the server (all, none, nosounds)..
+        /// </summary>
+        internal static string cl_downloadfilter {
+            get {
+                return ResourceManager.GetString("cl_downloadfilter", resourceCulture);
             }
         }
         
@@ -142,11 +412,146 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Draw a particular material over the frame..
+        /// </summary>
+        internal static string cl_drawmaterial {
+            get {
+                return ResourceManager.GetString("cl_drawmaterial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dump particle profiling info to particle_profile.csv..
+        /// </summary>
+        internal static string cl_dump_particle_stats {
+            get {
+                return ResourceManager.GetString("cl_dump_particle_stats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Displays the client&apos;s absbox for the entity under the crosshair..
+        /// </summary>
+        internal static string cl_ent_absbox {
+            get {
+                return ResourceManager.GetString("cl_ent_absbox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Displays the client&apos;s bounding box for the entity under the crosshair..
+        /// </summary>
+        internal static string cl_ent_bbox {
+            get {
+                return ResourceManager.GetString("cl_ent_bbox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Displays the client&apos;s render box for the entity under the crosshair..
+        /// </summary>
+        internal static string cl_ent_rbox {
+            get {
+                return ResourceManager.GetString("cl_ent_rbox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to For debugging, draw entity states to console..
+        /// </summary>
+        internal static string cl_entityreport {
+            get {
+                return ResourceManager.GetString("cl_entityreport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to For debugging, draw entity states to console in sorted order. [0 = disabled, 1 = average, 2 = current, 3 = peak]..
+        /// </summary>
+        internal static string cl_entityreport_sorted {
+            get {
+                return ResourceManager.GetString("cl_entityreport_sorted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable/disable extrapolation if interpolation history runs out..
+        /// </summary>
+        internal static string cl_extrapolate {
+            get {
+                return ResourceManager.GetString("cl_extrapolate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set how many seconds the client will extrapolate entities for..
+        /// </summary>
+        internal static string cl_extrapolate_amount {
+            get {
+                return ResourceManager.GetString("cl_extrapolate_amount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whether to use new detail sprite system..
+        /// </summary>
+        internal static string cl_fastdetailsprites {
+            get {
+                return ResourceManager.GetString("cl_fastdetailsprites", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Find and list all client entities with classnames that contain the specified substring. Format: cl_find_ent &lt;substring&gt;..
+        /// </summary>
+        internal static string cl_find_ent {
+            get {
+                return ResourceManager.GetString("cl_find_ent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Display data for clientside entity matching specified index. Format: cl_find_ent_index &lt;index&gt;..
+        /// </summary>
+        internal static string cl_find_ent_index {
+            get {
+                return ResourceManager.GetString("cl_find_ent_index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 0/1 - sets viewmodels normal/inverted(left-handed) - does not work while connected to a server..
         /// </summary>
         internal static string cl_flipviewmodels {
             get {
                 return ResourceManager.GetString("cl_flipviewmodels", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to For debugging. Force the engine to flush an entity packet..
+        /// </summary>
+        internal static string cl_flushentitypacket {
+            get {
+                return ResourceManager.GetString("cl_flushentitypacket", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whether we should force preloading..
+        /// </summary>
+        internal static string cl_forcepreload {
+            get {
+                return ResourceManager.GetString("cl_forcepreload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Forces the server to send a full update packet..
+        /// </summary>
+        internal static string cl_fullupdate {
+            get {
+                return ResourceManager.GetString("cl_fullupdate", resourceCulture);
             }
         }
         
@@ -169,6 +574,42 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resets the identity token for a given game server..
+        /// </summary>
+        internal static string cl_gameserver_reset_identity {
+            get {
+                return ResourceManager.GetString("cl_gameserver_reset_identity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set to 1 to turn on the advanced minimalist HUD mode..
+        /// </summary>
+        internal static string cl_hud_minmode {
+            get {
+                return ResourceManager.GetString("cl_hud_minmode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Disable hudhint sounds..
+        /// </summary>
+        internal static string cl_hudhint_sound {
+            get {
+                return ResourceManager.GetString("cl_hudhint_sound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Force client to ignore packets (for debugging)..
+        /// </summary>
+        internal static string cl_ignorepackets {
+            get {
+                return ResourceManager.GetString("cl_ignorepackets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sets how far character models are interpolated (drawn away from their actual position) in the world, a good standard value for hitscan weapons is 0.034..
         /// </summary>
         internal static string cl_interp {
@@ -178,11 +619,326 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Disable interpolation list optimizations..
+        /// </summary>
+        internal static string cl_interp_all {
+            get {
+                return ResourceManager.GetString("cl_interp_all", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Interpolate NPC positions starting this many seconds in past..
+        /// </summary>
+        internal static string cl_interp_npcs {
+            get {
+                return ResourceManager.GetString("cl_interp_npcs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sets the interpolation amount (final amount is cl_interp_ratio / cl_updaterate)..
+        /// </summary>
+        internal static string cl_interp_ratio {
+            get {
+                return ResourceManager.GetString("cl_interp_ratio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Display physics-based &apos;jiggle bone&apos; debugging information..
+        /// </summary>
+        internal static string cl_jiggle_bone_debug {
+            get {
+                return ResourceManager.GetString("cl_jiggle_bone_debug", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Display physics-based &apos;jiggle bone&apos; debugging information..
+        /// </summary>
+        internal static string cl_jiggle_bone_debug_pitch_constraints {
+            get {
+                return ResourceManager.GetString("cl_jiggle_bone_debug_pitch_constraints", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Display physics-based &apos;jiggle bone&apos; debugging information..
+        /// </summary>
+        internal static string cl_jiggle_bone_debug_yaw_constraints {
+            get {
+                return ResourceManager.GetString("cl_jiggle_bone_debug_yaw_constraints", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Skip jiggle bone simulation if framerate drops below this value (frames/second)..
+        /// </summary>
+        internal static string cl_jiggle_bone_framerate_cutoff {
+            get {
+                return ResourceManager.GetString("cl_jiggle_bone_framerate_cutoff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Perform server side lag compensation of weapon firing events..
+        /// </summary>
+        internal static string cl_lagcompensation {
+            get {
+                return ResourceManager.GetString("cl_lagcompensation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language (from HKCU\Software\Valve\Steam\Language)..
+        /// </summary>
+        internal static string cl_language {
+            get {
+                return ResourceManager.GetString("cl_language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable network optimizations for single player games..
+        /// </summary>
+        internal static string cl_localnetworkbackdoor {
+            get {
+                return ResourceManager.GetString("cl_localnetworkbackdoor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spraypoint logo decal..
+        /// </summary>
+        internal static string cl_logofile {
+            get {
+                return ResourceManager.GetString("cl_logofile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Max distance from the camera at which things will be rendered..
+        /// </summary>
+        internal static string cl_maxrenderable_dist {
+            get {
+                return ResourceManager.GetString("cl_maxrenderable_dist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set to 1 to use mouse for look, 0 for keyboard look. Cannot be set while connected to a server..
+        /// </summary>
+        internal static string cl_mouselook {
+            get {
+                return ResourceManager.GetString("cl_mouselook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 0/1 - turns new, better looking impact effects off/on, most noticeable on glass..
         /// </summary>
         internal static string cl_new_impact_effects {
             get {
                 return ResourceManager.GetString("cl_new_impact_effects", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to How many notifications are visible in-game..
+        /// </summary>
+        internal static string cl_notifications_max_num_visible {
+            get {
+                return ResourceManager.GetString("cl_notifications_max_num_visible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to How long it takes for a notification to move..
+        /// </summary>
+        internal static string cl_notifications_move_time {
+            get {
+                return ResourceManager.GetString("cl_notifications_move_time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whether notifications should show up in-game..
+        /// </summary>
+        internal static string cl_notifications_show_ingame {
+            get {
+                return ResourceManager.GetString("cl_notifications_show_ingame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Debug building damage..
+        /// </summary>
+        internal static string cl_obj_test_building_damage {
+            get {
+                return ResourceManager.GetString("cl_obj_test_building_damage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shows panel animation variables: &lt;panelname | blank for all panels&gt;..
+        /// </summary>
+        internal static string cl_panelanimation {
+            get {
+                return ResourceManager.GetString("cl_panelanimation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add this amount to a particle effect&apos;s bbox in the leaf system so if it&apos;s growing slowly, it won&apos;t have to be reinserted as often..
+        /// </summary>
+        internal static string cl_particleeffect_aabb_buffer {
+            get {
+                return ResourceManager.GetString("cl_particleeffect_aabb_buffer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dump entity by prediction classname..
+        /// </summary>
+        internal static string cl_pclass {
+            get {
+                return ResourceManager.GetString("cl_pclass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dump info about this entity to screen..
+        /// </summary>
+        internal static string cl_pdump {
+            get {
+                return ResourceManager.GetString("cl_pdump", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Disable clientside physics props (must be set before loading a level)..
+        /// </summary>
+        internal static string cl_phys_props_enable {
+            get {
+                return ResourceManager.GetString("cl_phys_props_enable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maximum clientside physic props..
+        /// </summary>
+        internal static string cl_phys_props_max {
+            get {
+                return ResourceManager.GetString("cl_phys_props_max", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minimum distance from the player that a clientside prop must be before it&apos;s allowed to respawn..
+        /// </summary>
+        internal static string cl_phys_props_respawndist {
+            get {
+                return ResourceManager.GetString("cl_phys_props_respawndist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time, in seconds, between clientside prop respawns..
+        /// </summary>
+        internal static string cl_phys_props_respawnrate {
+            get {
+                return ResourceManager.GetString("cl_phys_props_respawnrate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sets the scale of time for client-side physics (ragdolls)..
+        /// </summary>
+        internal static string cl_phys_timescale {
+            get {
+                return ResourceManager.GetString("cl_phys_timescale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Client pitch speed..
+        /// </summary>
+        internal static string cl_pitchspeed {
+            get {
+                return ResourceManager.GetString("cl_pitchspeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Allows the client to playback screenshot and jpeg commands in demos..
+        /// </summary>
+        internal static string cl_playback_screenshots {
+            get {
+                return ResourceManager.GetString("cl_playback_screenshots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Disable player sprays..
+        /// </summary>
+        internal static string cl_playerspraydisable {
+            get {
+                return ResourceManager.GetString("cl_playerspraydisable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show precache info (client)..
+        /// </summary>
+        internal static string cl_precacheinfo {
+            get {
+                return ResourceManager.GetString("cl_precacheinfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Optimize for not copying data if didn&apos;t receive a network update (1), and also for not repredicting if there were no errors (2)..
+        /// </summary>
+        internal static string cl_pred_optimize {
+            get {
+                return ResourceManager.GetString("cl_pred_optimize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Track changes to entity index entindex, for field fieldname..
+        /// </summary>
+        internal static string cl_pred_track {
+            get {
+                return ResourceManager.GetString("cl_pred_track", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Perform client side prediction..
+        /// </summary>
+        internal static string cl_predict {
+            get {
+                return ResourceManager.GetString("cl_predict", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show which entities are predicting..
+        /// </summary>
+        internal static string cl_predictionlist {
+            get {
+                return ResourceManager.GetString("cl_predictionlist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Perform client side prediction of weapon effects..
+        /// </summary>
+        internal static string cl_predictweapons {
+            get {
+                return ResourceManager.GetString("cl_predictweapons", resourceCulture);
             }
         }
         
@@ -205,11 +961,119 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable/disable ragdoll physics..
+        /// </summary>
+        internal static string cl_ragdoll_physics_enable {
+            get {
+                return ResourceManager.GetString("cl_ragdoll_physics_enable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove the decals from the entity under the crosshair..
+        /// </summary>
+        internal static string cl_removedecals {
+            get {
+                return ResourceManager.GetString("cl_removedecals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delay in seconds before the client will resend the &apos;connect&apos; attempt..
+        /// </summary>
+        internal static string cl_resend {
+            get {
+                return ResourceManager.GetString("cl_resend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scale sensitivity of rumble effects (0 to 1.0)..
+        /// </summary>
+        internal static string cl_rumblescale {
+            get {
+                return ResourceManager.GetString("cl_rumblescale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Custom Screenshot name..
+        /// </summary>
+        internal static string cl_screenshotname {
+            get {
+                return ResourceManager.GetString("cl_screenshotname", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Display the number of active particle systems..
+        /// </summary>
+        internal static string cl_show_num_particle_systems {
+            get {
+                return ResourceManager.GetString("cl_show_num_particle_systems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 0/1 - turns color-coded items in backpack off/on..
         /// </summary>
         internal static string cl_showbackpackrarities {
             get {
                 return ResourceManager.GetString("cl_showbackpackrarities", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Draw current battery level at top of screen when on battery power..
+        /// </summary>
+        internal static string cl_showbattery {
+            get {
+                return ResourceManager.GetString("cl_showbattery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show which entities are having their bones setup each frame..
+        /// </summary>
+        internal static string cl_ShowBoneSetupEnts {
+            get {
+                return ResourceManager.GetString("cl_ShowBoneSetupEnts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to How often to flash demo recording/playback overlay (0 - disable overlay, -1 - show always)..
+        /// </summary>
+        internal static string cl_showdemooverlay {
+            get {
+                return ResourceManager.GetString("cl_showdemooverlay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dump entity list to console..
+        /// </summary>
+        internal static string cl_showents {
+            get {
+                return ResourceManager.GetString("cl_showents", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show prediction errors, 2 for above plus detailed field deltas..
+        /// </summary>
+        internal static string cl_showerror {
+            get {
+                return ResourceManager.GetString("cl_showerror", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Print event firing info in the console..
+        /// </summary>
+        internal static string cl_showevents {
+            get {
+                return ResourceManager.GetString("cl_showevents", resourceCulture);
             }
         }
         
@@ -223,6 +1087,33 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Set to 0 to not show on-screen help..
+        /// </summary>
+        internal static string cl_showhelp {
+            get {
+                return ResourceManager.GetString("cl_showhelp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show the &apos;Paused&apos; image when game is paused..
+        /// </summary>
+        internal static string cl_showpausedimage {
+            get {
+                return ResourceManager.GetString("cl_showpausedimage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Allow plugins to display messages to you..
+        /// </summary>
+        internal static string cl_showpluginmessages {
+            get {
+                return ResourceManager.GetString("cl_showpluginmessages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 0/1 - shows the map coordinates and movement speed of the player..
         /// </summary>
         internal static string cl_showpos {
@@ -232,11 +1123,227 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable/disable text messages printing on the screen..
+        /// </summary>
+        internal static string cl_showtextmsg {
+            get {
+                return ResourceManager.GetString("cl_showtextmsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Smooth view/eye origin after prediction errors..
+        /// </summary>
+        internal static string cl_smooth {
+            get {
+                return ResourceManager.GetString("cl_smooth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Smooth client&apos;s view after prediction error over this many seconds..
+        /// </summary>
+        internal static string cl_smoothtime {
+            get {
+                return ResourceManager.GetString("cl_smoothtime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flushes the sounds.txt system (client only)..
+        /// </summary>
+        internal static string cl_soundemitter_flush {
+            get {
+                return ResourceManager.GetString("cl_soundemitter_flush", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jingle sound file..
+        /// </summary>
+        internal static string cl_soundfile {
+            get {
+                return ResourceManager.GetString("cl_soundfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flushes the client side soundscapes..
+        /// </summary>
+        internal static string cl_soundscape_flush {
+            get {
+                return ResourceManager.GetString("cl_soundscape_flush", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Print soundscapes..
+        /// </summary>
+        internal static string cl_soundscape_printdebuginfo {
+            get {
+                return ResourceManager.GetString("cl_soundscape_printdebuginfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Shows non-standard items being carried by player you&apos;re spectating..
         /// </summary>
         internal static string cl_spec_carrieditems {
             get {
                 return ResourceManager.GetString("cl_spec_carrieditems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spectator mode..
+        /// </summary>
+        internal static string cl_spec_mode {
+            get {
+                return ResourceManager.GetString("cl_spec_mode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable/disable saving screenshots to Steam..
+        /// </summary>
+        internal static string cl_steamscreenshots {
+            get {
+                return ResourceManager.GetString("cl_steamscreenshots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Default team when joining a game..
+        /// </summary>
+        internal static string cl_team {
+            get {
+                return ResourceManager.GetString("cl_team", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable parallel processing of C_BaseAnimating::SetupBones()..
+        /// </summary>
+        internal static string cl_threaded_bone_setup {
+            get {
+                return ResourceManager.GetString("cl_threaded_bone_setup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to After this many seconds without receiving a packet from the server, the client will disconnect itself..
+        /// </summary>
+        internal static string cl_timeout {
+            get {
+                return ResourceManager.GetString("cl_timeout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trade with a person by player name..
+        /// </summary>
+        internal static string cl_trade {
+            get {
+                return ResourceManager.GetString("cl_trade", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trade with a person by steam id..
+        /// </summary>
+        internal static string cl_trade_steamid {
+            get {
+                return ResourceManager.GetString("cl_trade_steamid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View trade requests from a certain group only..
+        /// </summary>
+        internal static string cl_trading_show_requests_from {
+            get {
+                return ResourceManager.GetString("cl_trading_show_requests_from", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unlock all training..
+        /// </summary>
+        internal static string cl_training_class_unlock_all {
+            get {
+                return ResourceManager.GetString("cl_training_class_unlock_all", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bitfield representing what classes have been used to complete training..
+        /// </summary>
+        internal static string cl_training_completed_with_classes {
+            get {
+                return ResourceManager.GetString("cl_training_completed_with_classes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tries to accept/trigger the first notification..
+        /// </summary>
+        internal static string cl_trigger_first_notification {
+            get {
+                return ResourceManager.GetString("cl_trigger_first_notification", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number of packets per second of updates you are requesting from the server..
+        /// </summary>
+        internal static string cl_updaterate {
+            get {
+                return ResourceManager.GetString("cl_updaterate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When in tournament mode, use the advanced tournament spectator UI..
+        /// </summary>
+        internal static string cl_use_tournament_specgui {
+            get {
+                return ResourceManager.GetString("cl_use_tournament_specgui", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set the view entity index..
+        /// </summary>
+        internal static string cl_view {
+            get {
+                return ResourceManager.GetString("cl_view", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filter voice by name substring..
+        /// </summary>
+        internal static string cl_voice_filter {
+            get {
+                return ResourceManager.GetString("cl_voice_filter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weather effects wind direction angle..
+        /// </summary>
+        internal static string cl_winddir {
+            get {
+                return ResourceManager.GetString("cl_winddir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weather effects wind speed scalar..
+        /// </summary>
+        internal static string cl_windspeed {
+            get {
+                return ResourceManager.GetString("cl_windspeed", resourceCulture);
             }
         }
         
