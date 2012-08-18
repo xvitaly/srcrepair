@@ -435,4 +435,895 @@
   <data name="sv_max_connects_window" xml:space="preserve">
     <value>Window over which to average connections per second averages.</value>
   </data>
+  <data name="sv_allowdownload" xml:space="preserve">
+    <value>Allow clients to download files.</value>
+  </data>
+  <data name="sv_allowupload" xml:space="preserve">
+    <value>Allow clients to upload customizations files.</value>
+  </data>
+  <data name="sv_allow_color_correction" xml:space="preserve">
+    <value>Allow or disallow clients to use color correction on this server.</value>
+  </data>
+  <data name="sv_allow_voice_from_file" xml:space="preserve">
+    <value>Allow or disallow clients from using voice_inputfromfile on this server.</value>
+  </data>
+  <data name="sv_allow_wait_command" xml:space="preserve">
+    <value>Allow or disallow the wait command on clients connected to this server.</value>
+  </data>
+  <data name="sv_alltalk" xml:space="preserve">
+    <value>Players can hear all other players, no team restrictions.</value>
+  </data>
+  <data name="sv_alternateticks" xml:space="preserve">
+    <value>If set, server only simulates entities on even numbered ticks.</value>
+  </data>
+  <data name="sv_autosave" xml:space="preserve">
+    <value>Set to 1 to autosave game on level transition. Does not affect autosave triggers.</value>
+  </data>
+  <data name="sv_benchmark_autovprofrecord" xml:space="preserve">
+    <value>If running a benchmark and this is set, it will record a vprof file over the duration of the benchmark with filename benchmark.</value>
+  </data>
+  <data name="sv_benchmark_force_start" xml:space="preserve">
+    <value>Force start the benchmark. This is only for debugging. It's better to set sv_benchmark to 1 and restart the level.</value>
+  </data>
+  <data name="sv_benchmark_freeroam" xml:space="preserve">
+    <value>Allow the local player to move freely in the benchmark. Only used for debugging.</value>
+  </data>
+  <data name="sv_benchmark_numticks" xml:space="preserve">
+    <value>If &gt; 0, then it only runs the benchmark for this # of ticks.</value>
+  </data>
+  <data name="sv_bonus_challenge" xml:space="preserve">
+    <value>Set to values other than 0 to select a bonus map challenge type.</value>
+  </data>
+  <data name="sv_bonus_map_challenge_update" xml:space="preserve">
+    <value>Updates a bonus map challenge score.</value>
+  </data>
+  <data name="sv_bonus_map_complete" xml:space="preserve">
+    <value>Completes a bonus map.</value>
+  </data>
+  <data name="sv_bonus_map_unlock" xml:space="preserve">
+    <value>Locks a bonus map.</value>
+  </data>
+  <data name="sv_cacheencodedents" xml:space="preserve">
+    <value>If set to 1, does an optimization to prevent extra SendTable_Encode calls.</value>
+  </data>
+  <data name="sv_clearhinthistory" xml:space="preserve">
+    <value>Clear memory of server side hints displayed to the player.</value>
+  </data>
+  <data name="sv_client_cmdrate_difference" xml:space="preserve">
+    <value>cl_cmdrate is moved to within sv_client_cmdrate_difference units of cl_updaterate before it is clamped between sv_mincmdrate and sv_maxcmdrate.</value>
+  </data>
+  <data name="sv_client_max_interp_ratio" xml:space="preserve">
+    <value>This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected).</value>
+  </data>
+  <data name="sv_client_min_interp_ratio" xml:space="preserve">
+    <value>This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected).</value>
+  </data>
+  <data name="sv_client_predict" xml:space="preserve">
+    <value>This can be used to force the value of cl_predict for connected clients (only while they are connected).</value>
+  </data>
+  <data name="sv_clockcorrection_msecs" xml:space="preserve">
+    <value>The server tries to keep each player's m_nTickBase withing this many msecs of the server absolute tickcount.</value>
+  </data>
+  <data name="sv_consistency" xml:space="preserve">
+    <value>Whether the server enforces file consistency for critical files.</value>
+  </data>
+  <data name="sv_contact" xml:space="preserve">
+    <value>Contact email for server sysop.</value>
+  </data>
+  <data name="sv_debugmanualmode" xml:space="preserve">
+    <value>Make sure entities correctly report whether or not their network data has changed.</value>
+  </data>
+  <data name="sv_debugtempentities" xml:space="preserve">
+    <value>Show temp entity bandwidth usage.</value>
+  </data>
+  <data name="sv_debug_player_use" xml:space="preserve">
+    <value>Visualizes +use logic. Green cross=trace success, Red cross=trace too far, Green box=radius success.</value>
+  </data>
+  <data name="sv_deltaprint" xml:space="preserve">
+    <value>Print accumulated CalcDelta profiling data (only if sv_deltatime is on).</value>
+  </data>
+  <data name="sv_deltatime" xml:space="preserve">
+    <value>Enable profiling of CalcDelta calls.</value>
+  </data>
+  <data name="sv_disable_querycache" xml:space="preserve">
+    <value>Debug - disable trace query cache.</value>
+  </data>
+  <data name="sv_downloadurl" xml:space="preserve">
+    <value>Location from which clients can download missing files.</value>
+  </data>
+  <data name="sv_enableoldqueries" xml:space="preserve">
+    <value>Enable support for old style (HL1) server queries.</value>
+  </data>
+  <data name="sv_filterban" xml:space="preserve">
+    <value>Set packet filtering by IP mode.</value>
+  </data>
+  <data name="sv_forcepreload" xml:space="preserve">
+    <value>Force server side preloading.</value>
+  </data>
+  <data name="sv_gravity" xml:space="preserve">
+    <value>World gravity.</value>
+  </data>
+  <data name="sv_logbans" xml:space="preserve">
+    <value>Log server bans in the server logs.</value>
+  </data>
+  <data name="sv_logblocks" xml:space="preserve">
+    <value>If true when log when a query is blocked (can cause very large log files).</value>
+  </data>
+  <data name="sv_logecho" xml:space="preserve">
+    <value>Echo log information to the console.</value>
+  </data>
+  <data name="sv_logfile" xml:space="preserve">
+    <value>Log server information in the log file.</value>
+  </data>
+  <data name="sv_logflush" xml:space="preserve">
+    <value>Flush the log file to disk on each write (slow).</value>
+  </data>
+  <data name="sv_logsdir" xml:space="preserve">
+    <value>Folder in the game directory where server logs will be stored.</value>
+  </data>
+  <data name="sv_logsecret" xml:space="preserve">
+    <value>If set then include this secret when doing UDP logging (will use 0x53 as packet type, not usual 0x52).</value>
+  </data>
+  <data name="sv_log_onefile" xml:space="preserve">
+    <value>Log server information to only one file.</value>
+  </data>
+  <data name="sv_lowedict_action" xml:space="preserve">
+    <value>0 - no action, 1 - warn to log file, 2 - attempt to restart the game, if applicable, 3 - restart the map, 4 - go to the next map.</value>
+  </data>
+  <data name="sv_lowedict_threshold" xml:space="preserve">
+    <value>When only this many edicts are free, take the action specified by sv_lowedict_action.</value>
+  </data>
+  <data name="sv_master_share_game_socket" xml:space="preserve">
+    <value>Use the game's socket to communicate to the master server.</value>
+  </data>
+  <data name="sv_maxcmdrate" xml:space="preserve">
+    <value>(If sv_mincmdrate is &gt; 0), this sets the maximum value for cl_cmdrate.</value>
+  </data>
+  <data name="sv_maxrate" xml:space="preserve">
+    <value>Max bandwidth rate allowed on server, 0 == unlimited.</value>
+  </data>
+  <data name="sv_maxreplay" xml:space="preserve">
+    <value>Maximum replay time in seconds.</value>
+  </data>
+  <data name="sv_maxroutable" xml:space="preserve">
+    <value>Server upper bound on net_maxroutable that a client can use.</value>
+  </data>
+  <data name="sv_maxupdaterate" xml:space="preserve">
+    <value>Maximum updates per second that the server will allow.</value>
+  </data>
+  <data name="sv_max_queries_sec" xml:space="preserve">
+    <value>Maximum queries per second to respond to from a single IP address.</value>
+  </data>
+  <data name="sv_max_queries_sec_global" xml:space="preserve">
+    <value>Maximum queries per second to respond to from anywhere.</value>
+  </data>
+  <data name="sv_max_queries_window" xml:space="preserve">
+    <value>Window over which to average queries per second averages.</value>
+  </data>
+  <data name="sv_max_usercmd_future_ticks" xml:space="preserve">
+    <value>Prevents clients from running usercmds too far in the future. Prevents speed hacks.</value>
+  </data>
+  <data name="sv_memlimit" xml:space="preserve">
+    <value>If set, whenever the server is empty, if the total memory used by the server is greater than this # of megabytes.</value>
+  </data>
+  <data name="sv_mincmdrate" xml:space="preserve">
+    <value>This sets the minimum value for cl_cmdrate. 0 == unlimited.</value>
+  </data>
+  <data name="sv_minrate" xml:space="preserve">
+    <value>Min bandwidth rate allowed on server, 0 == unlimited.</value>
+  </data>
+  <data name="sv_minupdaterate" xml:space="preserve">
+    <value>Minimum updates per second that the server will allow.</value>
+  </data>
+  <data name="sv_namechange_cooldown_seconds" xml:space="preserve">
+    <value>When a client name change is received, wait N seconds allowing another name change.</value>
+  </data>
+  <data name="sv_netspike_on_reliable_snapshot_overflow" xml:space="preserve">
+    <value>If nonzero, the server will dump a netspike trace if a client is dropped due to reliable snapshot overflow.</value>
+  </data>
+  <data name="sv_noclipduringpause" xml:space="preserve">
+    <value>If cheats are enabled, then you can noclip with the game paused (for doing screenshots, etc.).</value>
+  </data>
+  <data name="sv_npc_talker_maxdist" xml:space="preserve">
+    <value>NPCs over this distance from the player won't attempt to speak.</value>
+  </data>
+  <data name="sv_password" xml:space="preserve">
+    <value>Server password for entry into multiplayer games.</value>
+  </data>
+  <data name="sv_pausable" xml:space="preserve">
+    <value>Is the server pausable.</value>
+  </data>
+  <data name="sv_playerperfhistorycount" xml:space="preserve">
+    <value>Number of samples to maintain in player perf history.</value>
+  </data>
+  <data name="sv_precacheinfo" xml:space="preserve">
+    <value>Show precache info.</value>
+  </data>
+  <data name="sv_pure_kick_clients" xml:space="preserve">
+    <value>If set to 1, the server will kick clients with mismatching files. Otherwise, it will issue a warning to the client.</value>
+  </data>
+  <data name="sv_pure_trace" xml:space="preserve">
+    <value>If set to 1, the server will print a message whenever a client is verifying a CRC for a file.</value>
+  </data>
+  <data name="sv_pvsskipanimation" xml:space="preserve">
+    <value>Skips SetupBones when npc's are outside the PVS.</value>
+  </data>
+  <data name="sv_querycache_stats" xml:space="preserve">
+    <value>Display status of the query cache (client only).</value>
+  </data>
+  <data name="sv_rcon_banpenalty" xml:space="preserve">
+    <value>Number of minutes to ban users who fail rcon authentication.</value>
+  </data>
+  <data name="sv_rcon_log" xml:space="preserve">
+    <value>Enable/disable rcon logging.</value>
+  </data>
+  <data name="sv_rcon_maxfailures" xml:space="preserve">
+    <value>Max number of times a user can fail rcon authentication before being banned.</value>
+  </data>
+  <data name="sv_rcon_maxpacketbans" xml:space="preserve">
+    <value>Ban IPs for sending RCON packets exceeding the value specified in sv_rcon_maxpacketsize.</value>
+  </data>
+  <data name="sv_rcon_maxpacketsize" xml:space="preserve">
+    <value>The maximum number of bytes to allow in a command packet.</value>
+  </data>
+  <data name="sv_rcon_minfailures" xml:space="preserve">
+    <value>Number of times a user can fail rcon authentication in sv_rcon_minfailuretime before being banned.</value>
+  </data>
+  <data name="sv_rcon_minfailuretime" xml:space="preserve">
+    <value>Number of seconds to track failed rcon authentications.</value>
+  </data>
+  <data name="sv_region" xml:space="preserve">
+    <value>The region of the world to report this server in.</value>
+  </data>
+  <data name="sv_restrict_aspect_ratio_fov" xml:space="preserve">
+    <value>This can be used to limit the effective FOV of users using wide-screen resolutions with aspect ratios wider than 1.85:1.</value>
+  </data>
+  <data name="sv_showladders" xml:space="preserve">
+    <value>Show bbox and dismount points for all ladders.</value>
+  </data>
+  <data name="sv_showlagcompensation" xml:space="preserve">
+    <value>Show lag compensated hitboxes whenever a player is lag compensated.</value>
+  </data>
+  <data name="sv_shutdown" xml:space="preserve">
+    <value>Sets the server to shutdown next time it's empty.</value>
+  </data>
+  <data name="sv_skyname" xml:space="preserve">
+    <value>Current name of the skybox texture.</value>
+  </data>
+  <data name="sv_soundemitter_trace" xml:space="preserve">
+    <value>Show all EmitSound calls including their symbolic name and the actual wave file they resolved to.</value>
+  </data>
+  <data name="sv_stats" xml:space="preserve">
+    <value>Collect CPU usage stats.</value>
+  </data>
+  <data name="sv_steamblockingcheck" xml:space="preserve">
+    <value>Check each new player for Steam blocking compatibility.</value>
+  </data>
+  <data name="sv_steamgroup" xml:space="preserve">
+    <value>The ID of the steam group that this server belongs to. You can find your group's ID on the admin profile page.</value>
+  </data>
+  <data name="sv_strict_notarget" xml:space="preserve">
+    <value>If set, notarget will cause entities to never think they are in the pvs.</value>
+  </data>
+  <data name="sv_tags" xml:space="preserve">
+    <value>Server tags. Used to provide extra information to clients when they're browsing for servers. Separate tags with a comma.</value>
+  </data>
+  <data name="sv_test_scripted_sequences" xml:space="preserve">
+    <value>Tests for scripted sequences that are embedded in the world.</value>
+  </data>
+  <data name="sv_thinktimecheck" xml:space="preserve">
+    <value>Check for thinktimes all on same timestamp.</value>
+  </data>
+  <data name="sv_timeout" xml:space="preserve">
+    <value>After this many seconds without a message from a client, the client is dropped.</value>
+  </data>
+  <data name="sv_turbophysics" xml:space="preserve">
+    <value>Turns on turbo physics.</value>
+  </data>
+  <data name="sv_unlockedchapters" xml:space="preserve">
+    <value>Highest unlocked game chapter.</value>
+  </data>
+  <data name="sv_visiblemaxplayers" xml:space="preserve">
+    <value>Overrides the max players reported to prospective clients.</value>
+  </data>
+  <data name="sv_voicecodec" xml:space="preserve">
+    <value>Specifies which voice codec DLL to use in a game. Set to the name of the DLL without the extension.</value>
+  </data>
+  <data name="sv_vote_allow_spectators" xml:space="preserve">
+    <value>Allow spectators to vote?</value>
+  </data>
+  <data name="sv_vote_failure_timer_mvm" xml:space="preserve">
+    <value>A vote that fails in MvM cannot be re-submitted for this long.</value>
+  </data>
+  <data name="sv_vote_issue_changelevel_allowed_mvm" xml:space="preserve">
+    <value>Can people hold votes to change levels in MvM?</value>
+  </data>
+  <data name="sv_vote_issue_kick_allowed_mvm" xml:space="preserve">
+    <value>Can people hold votes to kick players from the server in MvM?</value>
+  </data>
+  <data name="sv_vote_issue_mvm_challenge_allowed" xml:space="preserve">
+    <value>Can people hold votes to set the challenge level?</value>
+  </data>
+  <data name="sv_vote_ui_hide_disabled_issues" xml:space="preserve">
+    <value>Suppress listing of disabled issues in the vote setup screen.</value>
+  </data>
+  <data name="tf_allow_taunt_switch" xml:space="preserve">
+    <value>0 - players are not allowed to switch weapons while taunting, 1 - players can switch weapons at the start of a taunt.</value>
+  </data>
+  <data name="tf_always_deathanim" xml:space="preserve">
+    <value>Force death anims to always play.</value>
+  </data>
+  <data name="tf_always_loser" xml:space="preserve">
+    <value>Force loserstate to true.</value>
+  </data>
+  <data name="tf_arena_first_blood" xml:space="preserve">
+    <value>Rewards the first player to get a kill each round.</value>
+  </data>
+  <data name="tf_arena_override_cap_enable_time" xml:space="preserve">
+    <value>Overrides the time (in seconds) it takes for the capture point to become enable, -1 uses the level designer specified time.</value>
+  </data>
+  <data name="tf_arena_preround_time" xml:space="preserve">
+    <value>Length of the Pre-Round time.</value>
+  </data>
+  <data name="tf_arena_round_time" xml:space="preserve">
+    <value>Arena round time.</value>
+  </data>
+  <data name="tf_arena_use_queue" xml:space="preserve">
+    <value>Enables the spectator queue system for Arena.</value>
+  </data>
+  <data name="tf_backstab_detection_method" xml:space="preserve">
+    <value>Which detection method to use for backstabs (0 = old, 1 = new).</value>
+  </data>
+  <data name="tf_birthday" xml:space="preserve">
+    <value>Turn on birthday mode.</value>
+  </data>
+  <data name="tf_birthday_ball_chance" xml:space="preserve">
+    <value>Percent chance of a birthday beach ball spawning at each round start.</value>
+  </data>
+  <data name="tf_bot_add" xml:space="preserve">
+    <value>Add a bot.</value>
+  </data>
+  <data name="tf_bot_ammo_search_range" xml:space="preserve">
+    <value>How far bots will search to find ammo around them.</value>
+  </data>
+  <data name="tf_bot_arrow_elevation_rate" xml:space="preserve">
+    <value>When firing arrows at far away targets, this is the degree/range slope to raise our aim.</value>
+  </data>
+  <data name="tf_bot_auto_vacate" xml:space="preserve">
+    <value>If nonzero, bots will automatically leave to make room for human players.</value>
+  </data>
+  <data name="tf_bot_ballistic_elevation_rate" xml:space="preserve">
+    <value>When lobbing grenades at far away targets, this is the degree/range slope to raise our aim.</value>
+  </data>
+  <data name="tf_bot_capture_seek_and_destroy_max_duration" xml:space="preserve">
+    <value>If a capturing bot decides to go hunting, this is the max duration he will hunt for before reconsidering.</value>
+  </data>
+  <data name="tf_bot_capture_seek_and_destroy_min_duration" xml:space="preserve">
+    <value>If a capturing bot decides to go hunting, this is the min duration he will hunt for before reconsidering.</value>
+  </data>
+  <data name="tf_bot_choose_target_interval" xml:space="preserve">
+    <value>How often, in seconds, a TFBot can reselect his target.</value>
+  </data>
+  <data name="tf_bot_debug_stuck_log" xml:space="preserve">
+    <value>Given a server logfile, visually display bot stuck locations.</value>
+  </data>
+  <data name="tf_bot_defend_owned_point_percent" xml:space="preserve">
+    <value>Stay on the contested point we own until enemy cap percent falls below this.</value>
+  </data>
+  <data name="tf_bot_defense_must_defend_time" xml:space="preserve">
+    <value>If timer is less than this, bots will stay near point and guard.</value>
+  </data>
+  <data name="tf_bot_difficulty" xml:space="preserve">
+    <value>Defines the skill of bots joining the game. Values are: 0=easy, 1=normal, 2=hard, 3=expert.</value>
+  </data>
+  <data name="tf_bot_engineer_exit_near_sentry_range" xml:space="preserve">
+    <value>Maximum travel distance between a bot's Sentry gun and its Teleporter Exit.</value>
+  </data>
+  <data name="tf_bot_engineer_max_sentry_travel_distance_to_point" xml:space="preserve">
+    <value>Maximum travel distance between a bot's Sentry gun and the currently contested point.</value>
+  </data>
+  <data name="tf_bot_engineer_retaliate_range" xml:space="preserve">
+    <value>If attacker who destroyed sentry is closer than this, attack. Otherwise, retreat.</value>
+  </data>
+  <data name="tf_bot_fetch_lost_flag_time" xml:space="preserve">
+    <value>How long busy TFBots will ignore the dropped flag before they give up what they are doing and go after it.</value>
+  </data>
+  <data name="tf_bot_fire_weapon_allowed" xml:space="preserve">
+    <value>If zero, TFBots will not pull the trigger of their weapons (but will act like they did).</value>
+  </data>
+  <data name="tf_bot_flag_kill_on_touch" xml:space="preserve">
+    <value>If nonzero, any bot that picks up the flag dies. For testing.</value>
+  </data>
+  <data name="tf_bot_force_class" xml:space="preserve">
+    <value>If set to a class name, all TFBots will respawn as that class.</value>
+  </data>
+  <data name="tf_bot_force_jump" xml:space="preserve">
+    <value>Force bots to continuously jump.</value>
+  </data>
+  <data name="tf_bot_join_after_player" xml:space="preserve">
+    <value>If nonzero, bots wait until a player joins before entering the game.</value>
+  </data>
+  <data name="tf_bot_kick" xml:space="preserve">
+    <value>Remove a TFBot by name, or all bots ('all').</value>
+  </data>
+  <data name="tf_bot_kill" xml:space="preserve">
+    <value>Kill a TFBot by name, or all bots ('all').</value>
+  </data>
+  <data name="tf_bot_max_point_defend_range" xml:space="preserve">
+    <value>How far (in travel distance) from the point defending bots will take up positions.</value>
+  </data>
+  <data name="tf_bot_max_setup_gate_defend_range" xml:space="preserve">
+    <value>How far from the setup gate(s) defending bots can take up positions.</value>
+  </data>
+  <data name="tf_bot_max_teleport_entrance_travel" xml:space="preserve">
+    <value>Don't plant teleport entrances farther than this travel distance from our spawn room.</value>
+  </data>
+  <data name="tf_bot_max_teleport_exit_travel_to_point" xml:space="preserve">
+    <value>In an offensive engineer bot's tele exit is farther from the point than this, destroy it.</value>
+  </data>
+  <data name="tf_bot_melee_attack_abandon_range" xml:space="preserve">
+    <value>If threat is farther away than this, bot will switch back to its primary weapon and attack.</value>
+  </data>
+  <data name="tf_bot_melee_only" xml:space="preserve">
+    <value>If nonzero, TFBots will only use melee weapons.</value>
+  </data>
+  <data name="tf_bot_min_setup_gate_defend_range" xml:space="preserve">
+    <value>How close from the setup gate(s) defending bots can take up positions. Areas closer than this will be in cover to ambush.</value>
+  </data>
+  <data name="tf_bot_min_setup_gate_sniper_defend_range" xml:space="preserve">
+    <value>How far from the setup gate(s) a defending sniper will take up position.</value>
+  </data>
+  <data name="tf_bot_min_teleport_travel" xml:space="preserve">
+    <value>Minimum travel distance between teleporter entrance and exit before engineer bot will build one.</value>
+  </data>
+  <data name="tf_bot_near_point_travel_distance" xml:space="preserve">
+    <value>If within this travel distance to the current point, bot is 'near' it.</value>
+  </data>
+  <data name="tf_bot_offense_must_push_time" xml:space="preserve">
+    <value>If timer is less than this, bots will push hard to cap.</value>
+  </data>
+  <data name="tf_bot_offline_practice" xml:space="preserve">
+    <value>Tells the server that it is in offline practice mode.</value>
+  </data>
+  <data name="tf_bot_prefix_name_with_difficulty" xml:space="preserve">
+    <value>Append the skill level of the bot to the bot's name.</value>
+  </data>
+  <data name="tf_bot_pyro_always_reflect" xml:space="preserve">
+    <value>Pyro bots will always reflect projectiles fired at them. For tesing/debugging purposes.</value>
+  </data>
+  <data name="tf_bot_pyro_shove_away_range" xml:space="preserve">
+    <value>If a Pyro bot's target is closer than this, compression blast them away.</value>
+  </data>
+  <data name="tf_bot_quota" xml:space="preserve">
+    <value>Determines the total number of tf bots in the game.</value>
+  </data>
+  <data name="tf_bot_quota_mode" xml:space="preserve">
+    <value>Determines the type of quota. Allowed values: 'normal', 'fill', and 'match'.</value>
+  </data>
+  <data name="tf_bot_sniper_allow_opportunistic" xml:space="preserve">
+    <value>If set, Snipers will stop on their way to their preferred lurking spot to snipe at opportunistic targets.</value>
+  </data>
+  <data name="tf_bot_sniper_choose_target_interval" xml:space="preserve">
+    <value>How often, in seconds, a zoomed-in Sniper can reselect his target.</value>
+  </data>
+  <data name="tf_bot_sniper_flee_range" xml:space="preserve">
+    <value>If threat is closer than this, retreat.</value>
+  </data>
+  <data name="tf_bot_sniper_linger_time" xml:space="preserve">
+    <value>How long Sniper will wait around after losing his target before giving up.</value>
+  </data>
+  <data name="tf_bot_sniper_melee_range" xml:space="preserve">
+    <value>If threat is closer than this, attack with melee weapon.</value>
+  </data>
+  <data name="tf_bot_sniper_patience_duration" xml:space="preserve">
+    <value>How long a Sniper bot will wait without seeing an enemy before picking a new spot.</value>
+  </data>
+  <data name="tf_bot_sniper_personal_space_range" xml:space="preserve">
+    <value>Enemies beyond this range don't worry the Sniper.</value>
+  </data>
+  <data name="tf_bot_sniper_spot_max_count" xml:space="preserve">
+    <value>Stop searching for sniper spots when each side has found this many.</value>
+  </data>
+  <data name="tf_bot_sniper_spot_search_count" xml:space="preserve">
+    <value>Search this many times per behavior update frame.</value>
+  </data>
+  <data name="tf_bot_sniper_target_linger_duration" xml:space="preserve">
+    <value>How long a Sniper bot will keep toward at a target it just lost sight of.</value>
+  </data>
+  <data name="tf_bot_spy_knife_range" xml:space="preserve">
+    <value>If threat is closer than this, prefer our knife.</value>
+  </data>
+  <data name="tf_bot_stickybomb_density" xml:space="preserve">
+    <value>Number of stickies to place per square inch.</value>
+  </data>
+  <data name="tf_bot_sticky_charge_rate" xml:space="preserve">
+    <value>Seconds of charge per unit range beyond base.</value>
+  </data>
+  <data name="tf_bot_teleport_build_surface_normal_limit" xml:space="preserve">
+    <value>If the ground normal Z component is less that this value, Engineer bots won't place their entrance teleporter.</value>
+  </data>
+  <data name="tf_build_menu_controller_mode" xml:space="preserve">
+    <value>Use console controller build menus. 1 = ON, 0 = OFF.</value>
+  </data>
+  <data name="tf_clear_attribute" xml:space="preserve">
+    <value>Remove given attribute from all areas in the selected set.</value>
+  </data>
+  <data name="tf_clientsideeye_lookats" xml:space="preserve">
+    <value>When on, players will turn their pupils to look at nearby players.</value>
+  </data>
+  <data name="tf_colorblindassist" xml:space="preserve">
+    <value>Setting this to 1 turns on colorblind mode.</value>
+  </data>
+  <data name="tf_ctf_bonus_time" xml:space="preserve">
+    <value>Length of team crit time for CTF capture.</value>
+  </data>
+  <data name="tf_damage_multiplier_blue" xml:space="preserve">
+    <value>All incoming damage to a blue player is multiplied by this value.</value>
+  </data>
+  <data name="tf_damage_multiplier_red" xml:space="preserve">
+    <value>All incoming damage to a red player is multiplied by this value.</value>
+  </data>
+  <data name="tf_debug_flamethrower" xml:space="preserve">
+    <value>Visualize the flamethrower damage.</value>
+  </data>
+  <data name="tf_decoy_lifetime" xml:space="preserve">
+    <value>The lifetime of a decoy, in seconds.</value>
+  </data>
+  <data name="tf_disguise_menu_controller_mode" xml:space="preserve">
+    <value>Use console controller disguise menus. 1 = ON, 0 = OFF.</value>
+  </data>
+  <data name="tf_escort_score_rate" xml:space="preserve">
+    <value>Score for escorting the train, in points per second.</value>
+  </data>
+  <data name="tf_explanations_backpackpanel" xml:space="preserve">
+    <value>Whether the user has seen explanations for this panel.</value>
+  </data>
+  <data name="tf_explanations_charinfopanel" xml:space="preserve">
+    <value>Whether the user has seen explanations for this panel.</value>
+  </data>
+  <data name="tf_explanations_charinfo_armory_panel" xml:space="preserve">
+    <value>Whether the user has seen explanations for this panel.</value>
+  </data>
+  <data name="tf_explanations_craftingpanel" xml:space="preserve">
+    <value>Whether the user has seen explanations for this panel.</value>
+  </data>
+  <data name="tf_explanations_discardpanel" xml:space="preserve">
+    <value>Whether the user has seen explanations for this panel.</value>
+  </data>
+  <data name="tf_explanations_store" xml:space="preserve">
+    <value>Whether the user has seen explanations for this panel.</value>
+  </data>
+  <data name="tf_explanations_tradingpanel" xml:space="preserve">
+    <value>Whether the user has seen explanations for this panel.</value>
+  </data>
+  <data name="tf_flag_caps_per_round" xml:space="preserve">
+    <value>Number of flag captures per round on CTF maps. Set to 0 to disable.</value>
+  </data>
+  <data name="tf_flamethrower_boxsize" xml:space="preserve">
+    <value>Size of flame damage entities.</value>
+  </data>
+  <data name="tf_halloween_boss_spawn_interval" xml:space="preserve">
+    <value>Average interval between boss spawns, in seconds.</value>
+  </data>
+  <data name="tf_halloween_boss_spawn_interval_variation" xml:space="preserve">
+    <value>Variation of spawn interval +/-.</value>
+  </data>
+  <data name="tf_halloween_bot_speed_recovery_rate" xml:space="preserve">
+    <value>Movement units/second.</value>
+  </data>
+  <data name="tf_halloween_eyeball_boss_spawn_interval" xml:space="preserve">
+    <value>Average interval between boss spawns, in seconds.</value>
+  </data>
+  <data name="tf_halloween_eyeball_boss_spawn_interval_variation" xml:space="preserve">
+    <value>Variation of spawn interval +/-.</value>
+  </data>
+  <data name="tf_halloween_force_boss_spawn" xml:space="preserve">
+    <value>For testing.</value>
+  </data>
+  <data name="tf_highfive_debug" xml:space="preserve">
+    <value>Turns on some console spew for debugging high five issues.</value>
+  </data>
+  <data name="tf_highfive_hintcount" xml:space="preserve">
+    <value>Counts the number of times the high five hint has been displayed.</value>
+  </data>
+  <data name="tf_hud_notification_duration" xml:space="preserve">
+    <value>How long to display hud notification panels before fading them.</value>
+  </data>
+  <data name="tf_hud_num_building_alert_beeps" xml:space="preserve">
+    <value>Number of times to play warning sound when a new alert displays on building hud objects.</value>
+  </data>
+  <data name="tf_impactwatertime" xml:space="preserve">
+    <value>Draw impact debris effects.</value>
+  </data>
+  <data name="tf_impactwatertimeenable" xml:space="preserve">
+    <value>Draw impact debris effects.</value>
+  </data>
+  <data name="tf_invite_debug" xml:space="preserve">
+    <value>Prints local invite objects.</value>
+  </data>
+  <data name="tf_lobby_debug" xml:space="preserve">
+    <value>Prints local lobby objects.</value>
+  </data>
+  <data name="tf_mark" xml:space="preserve">
+    <value>Set attribute of selected area.</value>
+  </data>
+  <data name="tf_matchgroups" xml:space="preserve">
+    <value>Bit masks of match groups to search in for matchmaking.</value>
+  </data>
+  <data name="tf_matchmaking_goodenough_count_end" xml:space="preserve">
+    <value>Good enough count at end of search.</value>
+  </data>
+  <data name="tf_matchmaking_goodenough_score_end" xml:space="preserve">
+    <value>Good enough score at end of search.</value>
+  </data>
+  <data name="tf_matchmaking_goodenough_score_start" xml:space="preserve">
+    <value>Good enough score at start of search.</value>
+  </data>
+  <data name="tf_matchmaking_join_in_progress" xml:space="preserve">
+    <value>Saved preference for if the player wants to join games in progress.</value>
+  </data>
+  <data name="tf_matchmaking_noob_hours_played" xml:space="preserve">
+    <value>Number of hours played to determine 'noob' status for quickplay scoring purposes.</value>
+  </data>
+  <data name="tf_matchmaking_noob_map_score_boost" xml:space="preserve">
+    <value>Boost added for quick-plaay scoring purposes if you are a noob and the map is considered noob-friendly.</value>
+  </data>
+  <data name="tf_matchmaking_numbers_increase_maxplayers_penalty" xml:space="preserve">
+    <value>Max scoring penalty to servers that have increased the max number of players.</value>
+  </data>
+  <data name="tf_matchmaking_numbers_serverfull_headroom" xml:space="preserve">
+    <value>Scoring will consider the server 'full' when this many slots are available.</value>
+  </data>
+  <data name="tf_matchmaking_numbers_valve_bonus_hrs_a" xml:space="preserve">
+    <value>Valve server scoring bonus: hours played A.</value>
+  </data>
+  <data name="tf_matchmaking_numbers_valve_bonus_hrs_b" xml:space="preserve">
+    <value>Valve server scoring bonus: hours played B.</value>
+  </data>
+  <data name="tf_matchmaking_numbers_valve_bonus_pts_a" xml:space="preserve">
+    <value>Valve server scoring bonus: bonus points A.</value>
+  </data>
+  <data name="tf_matchmaking_numbers_valve_bonus_pts_b" xml:space="preserve">
+    <value>Valve server scoring bonus: bonus points B.</value>
+  </data>
+  <data name="tf_matchmaking_ping_a" xml:space="preserve">
+    <value>Quickplay scoring ping time data point A.</value>
+  </data>
+  <data name="tf_matchmaking_ping_a_score" xml:space="preserve">
+    <value>Quickplay scoring ping score data point A.</value>
+  </data>
+  <data name="tf_matchmaking_ping_b" xml:space="preserve">
+    <value>Quickplay scoring ping time data point B.</value>
+  </data>
+  <data name="tf_matchmaking_ping_b_score" xml:space="preserve">
+    <value>Quickplay scoring ping score data point B.</value>
+  </data>
+  <data name="tf_matchmaking_ping_c" xml:space="preserve">
+    <value>Quickplay scoring ping time data point C.</value>
+  </data>
+  <data name="tf_matchmaking_ping_c_score" xml:space="preserve">
+    <value>Quickplay scoring ping score data point C.</value>
+  </data>
+  <data name="tf_matchmaking_retry_cooldown_seconds" xml:space="preserve">
+    <value>Time to remember quickplay join attempt, and apply scoring penalty to rejoin the same server.</value>
+  </data>
+  <data name="tf_matchmaking_retry_max_penalty" xml:space="preserve">
+    <value>Max scoring penalty to rejoin a server previously matched. (Decays linearly over the cooldown period).</value>
+  </data>
+  <data name="tf_matchmaking_spew_level" xml:space="preserve">
+    <value>Set to 1 for basic console spew of quickplay-related decisions. 4 for maximum verbosity.</value>
+  </data>
+  <data name="tf_mm_player_reservation_timeout_seconds" xml:space="preserve">
+    <value>Max duration the server will wait for a player to join, after notification from the backend that we should expect him.</value>
+  </data>
+  <data name="tf_mm_servermode" xml:space="preserve">
+    <value>Activates / deactivates Lobby-based hosting mode.</value>
+  </data>
+  <data name="tf_mm_strict" xml:space="preserve">
+    <value>0 - Show in server browser, and allow ad-hoc joins. 1 - Hide from server browser and only allow joins from lobby.</value>
+  </data>
+  <data name="tf_mvm_checkpoint" xml:space="preserve">
+    <value>Save a checkpoint snapshot.</value>
+  </data>
+  <data name="tf_mvm_checkpoint_clear" xml:space="preserve">
+    <value>Clear the saved checkpoint.</value>
+  </data>
+  <data name="tf_mvm_disconnect_on_victory" xml:space="preserve">
+    <value>Enable to Disconnect Players after completing MvM.</value>
+  </data>
+  <data name="tf_mvm_force_victory" xml:space="preserve">
+    <value>Force immediate victory.</value>
+  </data>
+  <data name="tf_mvm_jump_to_wave" xml:space="preserve">
+    <value>Jumps directly to the given Mann Vs Machine wave number.</value>
+  </data>
+  <data name="tf_mvm_miniboss_scale" xml:space="preserve">
+    <value>Full body scale for minibosses.</value>
+  </data>
+  <data name="tf_mvm_min_players_to_start" xml:space="preserve">
+    <value>Minimum number of players connected to start a countdown timer.</value>
+  </data>
+  <data name="tf_mvm_missioncyclefile" xml:space="preserve">
+    <value>Name of the .res file used to cycle mvm misisons.</value>
+  </data>
+  <data name="tf_mvm_popfile" xml:space="preserve">
+    <value>Restart the current map with a different population file.</value>
+  </data>
+  <data name="tf_mvm_skill" xml:space="preserve">
+    <value>Sets the challenge level of the invading bot army: 1 = easiest, 3 = normal, 5 = hardest.</value>
+  </data>
+  <data name="tf_mvm_tabs_discovered" xml:space="preserve">
+    <value>Remember how many times players have clicked tabs.</value>
+  </data>
+  <data name="tf_nav_combat_build_rate" xml:space="preserve">
+    <value>Gunfire/second increase (combat caps at 1.0).</value>
+  </data>
+  <data name="tf_nav_combat_decay_rate" xml:space="preserve">
+    <value>Decay/second toward zero.</value>
+  </data>
+  <data name="tf_nav_in_combat_duration" xml:space="preserve">
+    <value>How long after gunfire occurs is this area still considered to be 'in combat'.</value>
+  </data>
+  <data name="tf_nav_show_incursion_distance" xml:space="preserve">
+    <value>Display travel distances from current spawn room (1=red, 2=blue).</value>
+  </data>
+  <data name="tf_nav_show_turf_ownership" xml:space="preserve">
+    <value>Color nav area by smallest incursion distance.</value>
+  </data>
+  <data name="tf_particles_disable_weather" xml:space="preserve">
+    <value>Disable particles related to weather effects.</value>
+  </data>
+  <data name="tf_party_debug" xml:space="preserve">
+    <value>Prints local party objects.</value>
+  </data>
+  <data name="tf_playergib" xml:space="preserve">
+    <value>Allow player gibbing: 0 = never; 1 = normal; 2 = always.</value>
+  </data>
+  <data name="tf_populator_active_buffer_range" xml:space="preserve">
+    <value>Populate the world this far ahead of lead raider, and this far behind last raider.</value>
+  </data>
+  <data name="tf_pressandhold_minduration" xml:space="preserve">
+    <value>The minimum amount of time to spend in the press-and-hold taunt's pose.</value>
+  </data>
+  <data name="tf_quickplay_beta_ask_percentage" xml:space="preserve">
+    <value>Percentage of people who will be prompted to participate in beta quickplay.</value>
+  </data>
+  <data name="tf_quickplay_beta_preference" xml:space="preserve">
+    <value>Preference to participate in beta quickplay: -1 = no preference, 0 = opt out, 1 = opt in.</value>
+  </data>
+  <data name="tf_remember_activeweapon" xml:space="preserve">
+    <value>Setting this to 1 will make the active weapon persist between lives.</value>
+  </data>
+  <data name="tf_remember_lastswitched" xml:space="preserve">
+    <value>Setting this to 1 will make the 'last weapon' persist between lives.</value>
+  </data>
+  <data name="tf_replay_pyrovision" xml:space="preserve">
+    <value>When on, replay's will be seen with pyro vision active.</value>
+  </data>
+  <data name="tf_respawn_on_loadoutchanges" xml:space="preserve">
+    <value>When set to 1, you will automatically respawn whenever you change loadouts inside a respawn zone.</value>
+  </data>
+  <data name="tf_select_ambush_areas" xml:space="preserve">
+    <value>Add good ambush spots to the selected set. For debugging.</value>
+  </data>
+  <data name="tf_select_with_attribute" xml:space="preserve">
+    <value>Selects areas with the given attribute.</value>
+  </data>
+  <data name="tf_server_identity_disable_quickplay" xml:space="preserve">
+    <value>Disable this server from being chosen by the quickplay matchmaking.</value>
+  </data>
+  <data name="tf_server_lobby_debug" xml:space="preserve">
+    <value>Prints server lobby object.</value>
+  </data>
+  <data name="tf_show_blocked_areas" xml:space="preserve">
+    <value>Highlight areas that are considered blocked for TF-specific reasons.</value>
+  </data>
+  <data name="tf_show_enemy_invasion_areas" xml:space="preserve">
+    <value>Highlight areas where the enemy team enters the visible environment of the local player.</value>
+  </data>
+  <data name="tf_show_incursion_flow_gradient" xml:space="preserve">
+    <value>1 = red, 2 = blue.</value>
+  </data>
+  <data name="tf_show_incursion_flow_range" xml:space="preserve">
+    <value>1 = red, 2 = blue.</value>
+  </data>
+  <data name="tf_show_incursion_range" xml:space="preserve">
+    <value>1 = red, 2 = blue.</value>
+  </data>
+  <data name="tf_show_incursion_range_max" xml:space="preserve">
+    <value>Highlight areas with incursion distances between min and max cvar values.</value>
+  </data>
+  <data name="tf_show_incursion_range_min" xml:space="preserve">
+    <value>Highlight areas with incursion distances between min and max cvar values.</value>
+  </data>
+  <data name="tf_show_mesh_decoration" xml:space="preserve">
+    <value>Highlight special areas.</value>
+  </data>
+  <data name="tf_show_mesh_decoration_manual" xml:space="preserve">
+    <value>Highlight special areas marked by hand.</value>
+  </data>
+  <data name="tf_simple_disguise_menu" xml:space="preserve">
+    <value>Use a more concise disguise selection menu.</value>
+  </data>
+  <data name="tf_spectate_pyrovision" xml:space="preserve">
+    <value>When on, spectator will see the world with pyro vision active.</value>
+  </data>
+  <data name="tf_spectator_target_location" xml:space="preserve">
+    <value>Determines the location of the spectator targetID panel.</value>
+  </data>
+  <data name="tf_stats_nogameplaycheck" xml:space="preserve">
+    <value>Disable normal check for valid gameplay, send stats regardless.</value>
+  </data>
+  <data name="tf_steam_workshop_query_timeout" xml:space="preserve">
+    <value>Time in seconds to allow communication with the Steam Workshop server.</value>
+  </data>
+  <data name="tf_teamtalk" xml:space="preserve">
+    <value>Teammates can always chat with each other while alive or dead.</value>
+  </data>
+  <data name="tf_testrr" xml:space="preserve">
+    <value>Force the player under your crosshair to speak a response rule concept.</value>
+  </data>
+  <data name="tf_testvcd" xml:space="preserve">
+    <value>Run a vcd on the player currently under your crosshair.</value>
+  </data>
+  <data name="tf_test_hat_bodygroup" xml:space="preserve">
+    <value>For testing bodygroups on hats.</value>
+  </data>
+  <data name="tf_tournament_classlimit_demoman" xml:space="preserve">
+    <value>Tournament mode per-team class limit for Demomenz.</value>
+  </data>
+  <data name="tf_tournament_classlimit_engineer" xml:space="preserve">
+    <value>Tournament mode per-team class limit for Engineers.</value>
+  </data>
+  <data name="tf_tournament_classlimit_heavy" xml:space="preserve">
+    <value>Tournament mode per-team class limit for Heavies.</value>
+  </data>
+  <data name="tf_tournament_classlimit_medic" xml:space="preserve">
+    <value>Tournament mode per-team class limit for Medics.</value>
+  </data>
+  <data name="tf_tournament_classlimit_pyro" xml:space="preserve">
+    <value>Tournament mode per-team class limit for Pyros.</value>
+  </data>
+  <data name="tf_tournament_classlimit_scout" xml:space="preserve">
+    <value>Tournament mode per-team class limit for Scouts.</value>
+  </data>
+  <data name="tf_tournament_classlimit_sniper" xml:space="preserve">
+    <value>Tournament mode per-team class limit for Snipers.</value>
+  </data>
+  <data name="tf_tournament_classlimit_soldier" xml:space="preserve">
+    <value>Tournament mode per-team class limit for Soldiers.</value>
+  </data>
+  <data name="tf_tournament_classlimit_spy" xml:space="preserve">
+    <value>Tournament mode per-team class limit for Spies.</value>
+  </data>
+  <data name="tf_tournament_hide_domination_icons" xml:space="preserve">
+    <value>Tournament mode server convar that forces clients to not display the domination icons above players dominating them.</value>
+  </data>
+  <data name="tf_training_client_message" xml:space="preserve">
+    <value>A simple way for the training client to communicate with the server.</value>
+  </data>
+  <data name="tf_training_has_prompted_for_forums" xml:space="preserve">
+    <value>Whether the user has been prompted to view the new user forums.</value>
+  </data>
+  <data name="tf_training_has_prompted_for_loadout" xml:space="preserve">
+    <value>Whether the user has been prompted to equip something in their loadout.</value>
+  </data>
+  <data name="tf_training_has_prompted_for_offline_practice" xml:space="preserve">
+    <value>Whether the user has been prompted to try offline practice.</value>
+  </data>
+  <data name="tf_training_has_prompted_for_options" xml:space="preserve">
+    <value>Whether the user has been prompted to view the TF2 advanced options.</value>
+  </data>
+  <data name="tf_training_has_prompted_for_training" xml:space="preserve">
+    <value>Whether the user has been prompted for training.</value>
+  </data>
+  <data name="tf_weapon_select_demo_start_delay" xml:space="preserve">
+    <value>Delay after spawning to start the weapon bucket demo.</value>
+  </data>
+  <data name="tf_weapon_select_demo_time" xml:space="preserve">
+    <value>Time to pulse each weapon bucket upon spawning as a new class. 0 to turn off.</value>
+  </data>
+  <data name="tf_wipe_attributes" xml:space="preserve">
+    <value>Clear all TF-specific attributes of selected area.</value>
+  </data>
 </root>

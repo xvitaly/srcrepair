@@ -1168,10 +1168,10 @@
     <value>Записывать в лог файл информацию о банах.</value>
   </data>
   <data name="sv_logecho" xml:space="preserve">
-    <value>Записывать в лог сервера содержимое текстового чата обеих команд, а также общего текстового чата.</value>
+    <value>Включить / отключить вывод содержимого лог-файла в консоль игрового сервера.</value>
   </data>
   <data name="sv_logfile" xml:space="preserve">
-    <value>Включает / отключает ведение серверных логов.</value>
+    <value>Включает / отключает запись в лог файл информации о сервере.</value>
   </data>
   <data name="sv_logflush" xml:space="preserve">
     <value>Перезаписывать лог файл сервера при каждой смене карты или перезапуске сервера.</value>
@@ -2936,5 +2936,41 @@
   </data>
   <data name="tf_mvm_tank_kill" xml:space="preserve">
     <value>Позволяет убить всех танков на данной волне в режиме MvM.</value>
+  </data>
+  <data name="sv_shutdown" xml:space="preserve">
+    <value>Включает режим автоматического отключения сервера при отсутствии игроков на нём.</value>
+  </data>
+  <data name="sv_vote_failure_timer_mvm" xml:space="preserve">
+    <value>Голосование, потерпевшее неудачу в режиме MvM не может быть запущено повторно ранее указанного временного интервала.</value>
+  </data>
+  <data name="sv_vote_issue_changelevel_allowed_mvm" xml:space="preserve">
+    <value>Разрешить/запретить голосования за смену карты в режиме MvM.</value>
+  </data>
+  <data name="sv_vote_issue_kick_allowed_mvm" xml:space="preserve">
+    <value>Разрешить/запретить голосования за кик игрока с сервера вне зависимости от его статуса (игрок или администратор) в режиме MvM.</value>
+  </data>
+  <data name="sv_vote_issue_mvm_challenge_allowed" xml:space="preserve">
+    <value>Разрешить / запретить игрокам запускать голосование за смену сложности в режиме MvM.</value>
+  </data>
+  <data name="sv_vote_ui_hide_disabled_issues" xml:space="preserve">
+    <value>Скрывать / отображать отключённые на сервере голосования.</value>
+  </data>
+  <data name="tf_backstab_detection_method" xml:space="preserve">
+    <value>Задаёт метод определения бэкстабов: 0 - старый; 1 - новый.</value>
+  </data>
+  <data name="tf_bot_prefix_name_with_difficulty" xml:space="preserve">
+    <value>Включить / отключить добавление к нику бота уровня его сложности.</value>
+  </data>
+  <data name="tf_bot_pyro_always_reflect" xml:space="preserve">
+    <value>Включить / отключить режим отражения снарядов для ботов Поджигателей.</value>
+  </data>
+  <data name="tf_invite_debug" xml:space="preserve">
+    <value>Включает режим отладки для приглашений в игру.</value>
+  </data>
+  <data name="tf_lobby_debug" xml:space="preserve">
+    <value>Включает режим отладки для лобби.</value>
+  </data>
+  <data name="tf_matchgroups" xml:space="preserve">
+    <value>Позволяет задать маску для поиска подходящего сервера для лобби.</value>
   </data>
 </root>
