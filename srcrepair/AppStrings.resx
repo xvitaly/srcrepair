@@ -582,4 +582,7 @@
   <data name="AppNoGamesSelected" xml:space="preserve">
     <value>Warning! No games selected. Select game and try again later.</value>
   </data>
+  <data name="SteamNoLoginsDetected" xml:space="preserve">
+    <value>An error occured! Unable to locate user folders inside SteamApps. Start at least one supported game from Steam and restart this program.</value>
+  </data>
 </root>

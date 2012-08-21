@@ -1294,6 +1294,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occured! Unable to locate user folders inside SteamApps. Start at least one supported game from Steam and restart this program..
+        /// </summary>
+        internal static string SteamNoLoginsDetected {
+            get {
+                return ResourceManager.GetString("SteamNoLoginsDetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Attention! On the way to Steam detected invalid characters: Russian, German, etc. letters, or Unicode characters. Steam and the games will not work correctly. Reinstall Steam folder, the path to which will contain only latin symbols..
         /// </summary>
         internal static string SteamNonASCIIDetected {

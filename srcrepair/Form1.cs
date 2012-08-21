@@ -115,55 +115,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Отображает InputBox. Источник данной функции: http://www.csharp-examples.net/inputbox/
-        /// </summary>
-        /// <param name="title">Заголовок InputBox'а</param>
-        /// <param name="promptText">Текст сообщения InputBox'а</param>
-        /// <param name="value">Стартовое значение и результат</param>
-        /// <returns>Значение типа DialogResult</returns>
-        private DialogResult InputBox(string title, string promptText, ref string value)
-        {
-            Form form = new Form();
-            Label label = new Label();
-            TextBox textBox = new TextBox();
-            Button buttonOk = new Button();
-            Button buttonCancel = new Button();
-
-            form.Text = title;
-            label.Text = promptText;
-            textBox.Text = value;
-
-            buttonOk.Text = "OK";
-            buttonCancel.Text = CoreLib.GetLocalizedString("InputBoxCancelBtnName");
-            buttonOk.DialogResult = DialogResult.OK;
-            buttonCancel.DialogResult = DialogResult.Cancel;
-
-            label.SetBounds(9, 20, 372, 13);
-            textBox.SetBounds(12, 36, 372, 20);
-            buttonOk.SetBounds(228, 72, 75, 23);
-            buttonCancel.SetBounds(309, 72, 75, 23);
-
-            label.AutoSize = true;
-            textBox.Anchor = textBox.Anchor | AnchorStyles.Right;
-            buttonOk.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-
-            form.ClientSize = new Size(396, 107);
-            form.Controls.AddRange(new Control[] { label, textBox, buttonOk, buttonCancel });
-            form.ClientSize = new Size(Math.Max(300, label.Right + 10), form.ClientSize.Height);
-            form.FormBorderStyle = FormBorderStyle.FixedDialog;
-            form.StartPosition = FormStartPosition.CenterScreen;
-            form.MinimizeBox = false;
-            form.MaximizeBox = false;
-            form.AcceptButton = buttonOk;
-            form.CancelButton = buttonCancel;
-
-            DialogResult dialogResult = form.ShowDialog();
-            value = textBox.Text;
-            return dialogResult;
-        }
-
-        /// <summary>
         /// Очищает блобы (файлы с расширением *.blob) из каталога Steam.
         /// </summary>
         /// <param name="SteamPath">Полный путь к каталогу Steam</param>
@@ -1681,26 +1632,14 @@ namespace srcrepair
             // Проверим, были ли логины добавлены в список...
             if (LoginSel.Items.Count == 0)
             {
-                // Логинов не было найдено, поэтому запросим у пользователя...
-                // Описываем буферную переменную...
-                string SBuf = "";
-                
-                // Запускаем цикл с постусловием...
-                do
-                {
-                    // Отображаем InputBox, а также анализируем ввод пользователя...
-                    if ((InputBox(CoreLib.GetLocalizedString("SteamLoginEnterTitle"), CoreLib.GetLocalizedString("SteamLoginEnterText"), ref SBuf) == DialogResult.Cancel) || (SBuf == ""))
-                    {
-                        // Пользователь нажал Cancel, либо ввёл пустую строку, поэтому
-                        // выводим сообщение и завершаем работу приложения...
-                        MessageBox.Show(CoreLib.GetLocalizedString("SteamLoginCancel"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        CoreLib.WriteStringToLog("User cancelled login dialog.");
-                        Environment.Exit(7);
-                    };
-                } while (!(Directory.Exists(Path.Combine(GV.FullSteamPath, GV.SteamAppsFolderName, SBuf))));
-                
-                // Добавляем полученный логин в список...
-                LoginSel.Items.Add((string)SBuf);
+                // Логинов не было найдено. Выведем сообщение...
+                MessageBox.Show(CoreLib.GetLocalizedString("SteamNoLoginsDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                // Запишем в лог...
+                CoreLib.WriteStringToLog("No logins detected in SteamApps directory.");
+
+                // Завершаем работу приложения...
+                Environment.Exit(3);
             }
 
             // Выводим сообщение в строку статуса...
