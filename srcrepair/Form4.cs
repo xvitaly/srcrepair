@@ -68,16 +68,11 @@ namespace srcrepair
             try
             {
                 // Запускаем последовательность...
-                try { CoreLib.StartProcessAndWait("msinfo32.exe", String.Format("/report \"{0}\"", Path.Combine(TempDir, RepName))); }
-                catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C ping steampowered.com > \"{0}\"", FNamePing)); }
-                catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C tracert steampowered.com > \"{0}\"", FNameTrace)); }
-                catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C ipconfig /all > \"{0}\"", FNameIpConfig)); }
-                catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C route print > \"{0}\"", FNameRouting)); }
-                catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { CoreLib.StartProcessAndWait("msinfo32.exe", String.Format("/report \"{0}\"", Path.Combine(TempDir, RepName))); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C ping steampowered.com > \"{0}\"", FNamePing)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C tracert steampowered.com > \"{0}\"", FNameTrace)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C ipconfig /all > \"{0}\"", FNameIpConfig)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C route print > \"{0}\"", FNameRouting)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                 try
                 {
                     using (ZipFile ZBkUp = new ZipFile(Path.Combine(RepDir, FileName + ".zip"), Encoding.UTF8))
@@ -150,7 +145,7 @@ namespace srcrepair
             }
             else
             {
-                Close();
+                this.Close();
             }
         }
     }
