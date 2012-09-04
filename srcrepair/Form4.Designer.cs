@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRepBuilder));
             this.WelcomeLabel = new System.Windows.Forms.Label();
             this.GenerateNow = new System.Windows.Forms.Button();
+            this.BwGen = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // WelcomeLabel
@@ -44,6 +45,11 @@
             this.GenerateNow.Name = "GenerateNow";
             this.GenerateNow.UseVisualStyleBackColor = true;
             this.GenerateNow.Click += new System.EventHandler(this.GenerateNow_Click);
+            // 
+            // BwGen
+            // 
+            this.BwGen.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BwGen_DoWork);
+            this.BwGen.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BwGen_RunWorkerCompleted);
             // 
             // frmRepBuilder
             // 
@@ -66,5 +72,6 @@
 
         private System.Windows.Forms.Label WelcomeLabel;
         private System.Windows.Forms.Button GenerateNow;
+        private System.ComponentModel.BackgroundWorker BwGen;
     }
 }
