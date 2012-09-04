@@ -39,6 +39,7 @@
             this.CM_Cancel = new System.Windows.Forms.Button();
             this.CM_CompressFiles = new System.Windows.Forms.CheckBox();
             this.ClnWrk = new System.ComponentModel.BackgroundWorker();
+            this.PrbMain = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // CM_WelcMsg
@@ -111,6 +112,11 @@
             this.ClnWrk.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.ClnWrk_ProgressChanged);
             this.ClnWrk.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.ClnWrk_RunWorkerCompleted);
             // 
+            // PrbMain
+            // 
+            resources.ApplyResources(this.PrbMain, "PrbMain");
+            this.PrbMain.Name = "PrbMain";
+            // 
             // frmCleaner
             // 
             this.AcceptButton = this.CM_Clean;
@@ -118,6 +124,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.CM_Cancel;
             this.ControlBox = false;
+            this.Controls.Add(this.PrbMain);
             this.Controls.Add(this.CM_CompressFiles);
             this.Controls.Add(this.CM_Cancel);
             this.Controls.Add(this.CM_Clean);
@@ -147,5 +154,6 @@
         private System.Windows.Forms.ColumnHeader FDate;
         private System.Windows.Forms.CheckBox CM_CompressFiles;
         private System.ComponentModel.BackgroundWorker ClnWrk;
+        private System.Windows.Forms.ProgressBar PrbMain;
     }
 }

@@ -163,12 +163,32 @@ namespace srcrepair
                     }
                 }
 
+                // Формируем счётчики...
+                int TotalFiles = DeleteQueue.Count;
+                int i = 0, j = 0;
+
                 // Удаляем файлы из очереди очистки...
                 foreach (string Fl in DeleteQueue)
                 {
-                    if (File.Exists(Fl))
+                    try
                     {
-                        File.Delete(Fl);
+                        j = (int)Math.Round(((double)i / (double)TotalFiles * (double)100.00), 0); i++;
+                        if ((j >= 0) && (j <= 100)) { ClnWrk.ReportProgress(j); }
+                    }
+                    catch (Exception Ex)
+                    {
+                        CoreLib.WriteStringToLog(Ex.Message);
+                    }
+                    try
+                    {
+                        if (File.Exists(Fl))
+                        {
+                            File.Delete(Fl);
+                        }
+                    }
+                    catch (Exception Ex)
+                    {
+                        CoreLib.WriteStringToLog(Ex.Message);
                     }
                 }
 
@@ -194,7 +214,7 @@ namespace srcrepair
 
         private void ClnWrk_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            //
+            PrbMain.Value = e.ProgressPercentage;
         }
 
         private void ClnWrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -221,6 +241,10 @@ namespace srcrepair
                         CM_Clean.Text = CoreLib.GetLocalizedString("PS_CleanInProgress");
                         CM_Clean.Enabled = false;
                         CM_Cancel.Enabled = false;
+                        
+                        // Переключаем видимость контролов...
+                        CM_CompressFiles.Visible = false;
+                        PrbMain.Visible = true;
 
                         // Добавляем в очередь для очистки...
                         foreach (ListViewItem LVI in CM_FTable.Items)
