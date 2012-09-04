@@ -38,6 +38,7 @@
             this.CM_Clean = new System.Windows.Forms.Button();
             this.CM_Cancel = new System.Windows.Forms.Button();
             this.CM_CompressFiles = new System.Windows.Forms.CheckBox();
+            this.ClnWrk = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // CM_WelcMsg
@@ -103,6 +104,13 @@
             this.CM_CompressFiles.Name = "CM_CompressFiles";
             this.CM_CompressFiles.UseVisualStyleBackColor = true;
             // 
+            // ClnWrk
+            // 
+            this.ClnWrk.WorkerReportsProgress = true;
+            this.ClnWrk.DoWork += new System.ComponentModel.DoWorkEventHandler(this.ClnWrk_DoWork);
+            this.ClnWrk.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.ClnWrk_ProgressChanged);
+            this.ClnWrk.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.ClnWrk_RunWorkerCompleted);
+            // 
             // frmCleaner
             // 
             this.AcceptButton = this.CM_Clean;
@@ -138,5 +146,6 @@
         private System.Windows.Forms.ColumnHeader FSize;
         private System.Windows.Forms.ColumnHeader FDate;
         private System.Windows.Forms.CheckBox CM_CompressFiles;
+        private System.ComponentModel.BackgroundWorker ClnWrk;
     }
 }

@@ -44,6 +44,7 @@ namespace srcrepair
         private string CleanMask; // ...маску...
         private string CleanInfo; // ...и информацию о том, что будем очищать.
         private long TotalSize = 0; // Задаём и обнуляем счётчик общего размера удаляемых файлов...
+        private List<string> DeleteQueue = new List<string>(); // Задаём массив для хранения имён удаляемых файлов...
 
         /// <summary>
         /// Ищет и добавляет файлы для удаления в таблицу модуля очистки.
@@ -141,80 +142,99 @@ namespace srcrepair
             }
         }
 
+        private void ClnWrk_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                // Добавляем в архив (если выбрано)...
+                if (CM_CompressFiles.Checked)
+                {
+                    try
+                    {
+                        using (ZipFile ZBkUp = new ZipFile(Path.Combine(GV.FullBackUpDirPath, "Container_" + CoreLib.WriteDateToString(DateTime.Now, true) + ".bud"), Encoding.UTF8))
+                        {
+                            ZBkUp.AddFiles(DeleteQueue, true, "");
+                            ZBkUp.Save();
+                        }
+                    }
+                    catch (Exception Ex)
+                    {
+                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_ArchFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    }
+                }
+
+                // Удаляем файлы из очереди очистки...
+                foreach (string Fl in DeleteQueue)
+                {
+                    if (File.Exists(Fl))
+                    {
+                        File.Delete(Fl);
+                    }
+                }
+
+                // Удалим пустые каталоги (если разрешено)...
+                if (Properties.Settings.Default.RemoveEmptyDirs)
+                {
+                    try
+                    {
+                        RemoveEmptyDirectories(CleanDir);
+                    }
+                    catch (Exception Ex)
+                    {
+                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanEmptyDirsError"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (Exception Ex)
+            {
+                // Произошло исключение...
+                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void ClnWrk_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            //
+        }
+
+        private void ClnWrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error == null)
+            {
+                // Выводим сообщение об успешном окончании очистки...
+                MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            // Закрываем форму...
+            this.Close();
+        }
+
         private void CM_Clean_Click(object sender, EventArgs e)
         {
-            List<string> DeleteQueue = new List<string>();
             if (CM_FTable.Items.Count > 0)
             {
                 if (CM_FTable.CheckedItems.Count > 0)
                 {
                     if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("PS_CleanupExecuteQ"), CleanInfo), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
-                        try
+                        // Отключаем кнопку отмены, очистки и меняем её текст...
+                        CM_Clean.Text = CoreLib.GetLocalizedString("PS_CleanInProgress");
+                        CM_Clean.Enabled = false;
+                        CM_Cancel.Enabled = false;
+
+                        // Добавляем в очередь для очистки...
+                        foreach (ListViewItem LVI in CM_FTable.Items)
                         {
-                            // Отключаем кнопку отмены, очистки и меняем её текст...
-                            CM_Clean.Text = CoreLib.GetLocalizedString("PS_CleanInProgress");
-                            CM_Clean.Enabled = false;
-                            CM_Cancel.Enabled = false;
-
-                            // Добавляем в очередь для очистки...
-                            foreach (ListViewItem LVI in CM_FTable.Items)
+                            if (LVI.Checked)
                             {
-                                if (LVI.Checked)
-                                {
-                                    DeleteQueue.Add(LVI.ToolTipText);
-                                }
+                                DeleteQueue.Add(LVI.ToolTipText);
                             }
-                            
-                            // Добавляем в архив (если выбрано)...
-                            if (CM_CompressFiles.Checked)
-                            {
-                                try
-                                {
-                                    using (ZipFile ZBkUp = new ZipFile(Path.Combine(GV.FullBackUpDirPath, "Container_" + CoreLib.WriteDateToString(DateTime.Now, true) + ".bud"), Encoding.UTF8))
-                                    {
-                                        ZBkUp.AddFiles(DeleteQueue, true, "");
-                                        ZBkUp.Save();
-                                    }
-                                }
-                                catch (Exception Ex)
-                                {
-                                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_ArchFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                                }
-                            }
-
-                            // Удаляем файлы из очереди очистки...
-                            foreach (string Fl in DeleteQueue)
-                            {
-                                if (File.Exists(Fl))
-                                {
-                                    File.Delete(Fl);
-                                }
-                            }
-
-                            // Удалим пустые каталоги (если разрешено)...
-                            if (Properties.Settings.Default.RemoveEmptyDirs)
-                            {
-                                try
-                                {
-                                    RemoveEmptyDirectories(CleanDir);
-                                }
-                                catch (Exception Ex)
-                                {
-                                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanEmptyDirsError"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                                }
-                            }
-
-                            // Выводим сообщение об успешном окончании очистки...
-                            MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            // Закрываем форму...
-                            this.Close();
                         }
-                        catch (Exception Ex)
+
+                        // Запускаем поток для выполнения очистки...
+                        if (!ClnWrk.IsBusy)
                         {
-                            // Произошло исключение...
-                            CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                            ClnWrk.RunWorkerAsync();
                         }
                     }
                 }
