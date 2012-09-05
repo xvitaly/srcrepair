@@ -254,9 +254,50 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="..\tfiles\pubkey.asc">
+    <Content Include="..\tfiles\cfgs\bonhighfps.cfg">
+      <Link>cfgs\bonhighfps.cfg</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\chrishighframes.cfg">
+      <Link>cfgs\chrishighframes.cfg</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\chrismaxfps.cfg">
+      <Link>cfgs\chrismaxfps.cfg</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\config_default.cfg">
+      <Link>cfgs\config_default.cfg</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\dt_legal.cfg">
+      <Link>cfgs\dt_legal.cfg</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\m0refps.cfg">
+      <Link>cfgs\m0refps.cfg</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\m0rehighfps.cfg">
+      <Link>cfgs\m0rehighfps.cfg</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\skullhighfps.cfg">
+      <Link>cfgs\skullhighfps.cfg</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\team-fortress-ru.cfg">
+      <Link>cfgs\team-fortress-ru.cfg</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\v1tsk%27s_generic.cfg">
+      <Link>cfgs\v1tsk%27s_generic.cfg</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\pubkey.asc">
       <Link>pubkey.asc</Link>
-    </None>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -321,8 +362,81 @@
     <None Include="Resources\red_circle.png" />
     <None Include="Resources\green_circle.png" />
     <None Include="Resources\source.png" />
+    <Content Include="..\tfiles\cfgs\bonhighfps_en.txt">
+      <Link>cfgs\bonhighfps_en.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\bonhighfps_ru.txt">
+      <Link>cfgs\bonhighfps_ru.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\chrishighframes_en.txt">
+      <Link>cfgs\chrishighframes_en.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\chrishighframes_ru.txt">
+      <Link>cfgs\chrishighframes_ru.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\chrismaxfps_en.txt">
+      <Link>cfgs\chrismaxfps_en.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\chrismaxfps_ru.txt">
+      <Link>cfgs\chrismaxfps_ru.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\dt_legal_en.txt">
+      <Link>cfgs\dt_legal_en.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\dt_legal_ru.txt">
+      <Link>cfgs\dt_legal_ru.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\m0refps_en.txt">
+      <Link>cfgs\m0refps_en.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\m0refps_ru.txt">
+      <Link>cfgs\m0refps_ru.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\m0rehighfps_en.txt">
+      <Link>cfgs\m0rehighfps_en.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\m0rehighfps_ru.txt">
+      <Link>cfgs\m0rehighfps_ru.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\skullhighfps_en.txt">
+      <Link>cfgs\skullhighfps_en.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\skullhighfps_ru.txt">
+      <Link>cfgs\skullhighfps_ru.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\team-fortress-ru_en.txt">
+      <Link>cfgs\team-fortress-ru_en.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\team-fortress-ru_ru.txt">
+      <Link>cfgs\team-fortress-ru_ru.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\v1tsk%27s_generic_en.txt">
+      <Link>cfgs\v1tsk%27s_generic_en.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\v1tsk%27s_generic_ru.txt">
+      <Link>cfgs\v1tsk%27s_generic_ru.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\tfiles\changelog.txt">
       <Link>changelog.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="..\tfiles\games.xml">
       <Link>games.xml</Link>
@@ -332,12 +446,15 @@
     <None Include="Resources\backup.png" />
     <Content Include="..\tfiles\GPL.txt">
       <Link>GPL.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="..\tfiles\readme.txt">
       <Link>readme.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="..\tfiles\readme_en.txt">
       <Link>readme_en.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="TF2Repair.ico" />
   </ItemGroup>
