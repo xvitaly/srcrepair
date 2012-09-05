@@ -2988,4 +2988,7 @@
   <data name="cl_training_class_unlock_all" xml:space="preserve">
     <value>Принудительно разблокирует все режимы тренировки.</value>
   </data>
+  <data name="replay_name" xml:space="preserve">
+    <value>Ник бота системы реплеев (повторов).</value>
+  </data>
 </root>
