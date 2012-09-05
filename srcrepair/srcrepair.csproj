@@ -254,6 +254,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="..\tfiles\pubkey.asc">
+      <Link>pubkey.asc</Link>
+    </None>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -318,12 +321,24 @@
     <None Include="Resources\red_circle.png" />
     <None Include="Resources\green_circle.png" />
     <None Include="Resources\source.png" />
+    <Content Include="..\tfiles\changelog.txt">
+      <Link>changelog.txt</Link>
+    </Content>
     <Content Include="..\tfiles\games.xml">
       <Link>games.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\clean.png" />
     <None Include="Resources\backup.png" />
+    <Content Include="..\tfiles\GPL.txt">
+      <Link>GPL.txt</Link>
+    </Content>
+    <Content Include="..\tfiles\readme.txt">
+      <Link>readme.txt</Link>
+    </Content>
+    <Content Include="..\tfiles\readme_en.txt">
+      <Link>readme_en.txt</Link>
+    </Content>
     <Content Include="TF2Repair.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
