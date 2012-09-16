@@ -72,7 +72,11 @@ namespace srcrepair
                         LvItem.ToolTipText = Path.Combine(CleanDir, DItem.Name); // Указываем полный путь во всплывающую подсказку...
                         LvItem.SubItems.Add(CoreLib.SclBytes(DItem.Length)); // Вычисляем размер...
                         LvItem.SubItems.Add(CoreLib.WriteDateToString(DItem.LastWriteTime, false)); // Указываем дату изменения...
-                        CM_FTable.Items.Add(LvItem); // Вставляем в таблицу...
+                        if (CM_FTable.InvokeRequired)
+                        {
+                            // Вставляем в таблицу...
+                            this.Invoke((MethodInvoker)delegate() { CM_FTable.Items.Add(LvItem); });
+                        }
                         TotalSize += DItem.Length; // Инкрементируем общий счётчик...
                     }
                     // Если задана маска любых файлов, пройдём по подкаталогам рекурсивно...
@@ -115,20 +119,7 @@ namespace srcrepair
             this.Text = String.Format(this.Text, CleanInfo);
             
             // Запускаем очистку согласно полученным параметрам...
-            DetectFilesForCleanup(CleanDir, CleanMask);
-            
-            // Проверим есть ли кандидаты для удаления (очистки)...
-            if (CM_FTable.Items.Count == 0)
-            {
-                // Выдадим сообщение если очищать нечего...
-                MessageBox.Show(CoreLib.GetLocalizedString("PS_LoadErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                // Отключим кнопку запуска очистки...
-                CM_Clean.Enabled = false;
-                // Закроем форму.
-                this.Close();
-            }
-            // Указываем сколько МБ освободится при удалении всех файлов...
-            CM_Info.Text = String.Format(CM_Info.Text, CoreLib.SclBytes(TotalSize));
+            if (!GttWrk.IsBusy) { GttWrk.RunWorkerAsync(); }
         }
 
         private void CM_FTable_KeyDown(object sender, KeyEventArgs e)
@@ -266,6 +257,32 @@ namespace srcrepair
             if (!(CM_FTable.SelectedItems[0].Checked)) { CM_FTable.SelectedItems[0].Checked = true; } else { CM_FTable.SelectedItems[0].Checked = false; }
             // Запускаем Проводник и выделяем в нём выбранный пользователем файл...
             Process.Start(Properties.Settings.Default.ShBin, Properties.Settings.Default.ShParam + @" """ + CM_FTable.SelectedItems[0].ToolTipText + @"""");
+        }
+        
+        private void GttWrk_DoWork(object sender, DoWorkEventArgs e)
+        {
+            DetectFilesForCleanup(CleanDir, CleanMask);
+        }
+
+        private void GttWrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            // Проверим есть ли кандидаты для удаления (очистки)...
+            if (CM_FTable.Items.Count == 0)
+            {
+                // Выдадим сообщение если очищать нечего...
+                MessageBox.Show(CoreLib.GetLocalizedString("PS_LoadErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // Отключим кнопку запуска очистки...
+                CM_Clean.Enabled = false;
+                // Закроем форму.
+                this.Close();
+            }
+            else
+            {
+                // Включаем кнопку очистки...
+                CM_Clean.Enabled = true;
+            }
+            // Указываем сколько МБ освободится при удалении всех файлов...
+            CM_Info.Text = String.Format(CM_Info.Text, CoreLib.SclBytes(TotalSize));
         }
     }
 }
