@@ -1257,7 +1257,7 @@ namespace srcrepair
         {
             // Считаем список резервных копий и заполним таблицу...
             // Очистим таблицу...
-            BU_LVTable.Items.Clear();
+            if (BU_LVTable.InvokeRequired) { this.Invoke((MethodInvoker)delegate() { BU_LVTable.Items.Clear(); }); } else { BU_LVTable.Items.Clear(); }
             // Открываем каталог...
             DirectoryInfo DInfo = new DirectoryInfo(BUpDir);
             // Считываем список файлов по заданной маске...
@@ -1319,7 +1319,7 @@ namespace srcrepair
                 LvItem.SubItems.Add(CoreLib.SclBytes(DItem.Length));
                 LvItem.SubItems.Add(CoreLib.WriteDateToString(DItem.CreationTime, false));
                 LvItem.SubItems.Add(DItem.Name);
-                BU_LVTable.Items.Add(LvItem);
+                if (BU_LVTable.InvokeRequired) { this.Invoke((MethodInvoker)delegate() { BU_LVTable.Items.Add(LvItem); }); } else { BU_LVTable.Items.Add(LvItem); }
             }
         }
 
@@ -1563,6 +1563,19 @@ namespace srcrepair
                 FP_Description.Text = CoreLib.GetLocalizedString("FP_SelectFromList");
                 FP_Description.ForeColor = Color.Black;
                 FP_ConfigSel.Enabled = true;
+            }
+        }
+
+        private void BW_BkUpRecv_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                ReadBackUpList2Table(GV.FullBackUpDirPath);
+            }
+            catch (Exception Ex)
+            {
+                CoreLib.WriteStringToLog(Ex.Message);
+                Directory.CreateDirectory(GV.FullBackUpDirPath);
             }
         }
 
@@ -2011,7 +2024,7 @@ namespace srcrepair
             Properties.Settings.Default.LastGameName = AppSelector.Text;
 
             // Считаем список бэкапов...
-            try { ReadBackUpList2Table(GV.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); Directory.CreateDirectory(GV.FullBackUpDirPath); }
+            if (!BW_BkUpRecv.IsBusy) { BW_BkUpRecv.RunWorkerAsync(); }
         }
 
         private void LoginSel_SelectedIndexChanged(object sender, EventArgs e)
