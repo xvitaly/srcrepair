@@ -224,6 +224,7 @@
             this.CE_SaveCfgDialog = new System.Windows.Forms.SaveFileDialog();
             this.FldrBrwse = new System.Windows.Forms.FolderBrowserDialog();
             this.BW_UpChk = new System.ComponentModel.BackgroundWorker();
+            this.BW_FPRecv = new System.ComponentModel.BackgroundWorker();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             this.GT_GCF_Group.SuspendLayout();
@@ -1844,6 +1845,11 @@
             // 
             this.BW_UpChk.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_UpChk_DoWork);
             // 
+            // BW_FPRecv
+            // 
+            this.BW_FPRecv.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_FPRecv_DoWork);
+            this.BW_FPRecv.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BW_FPRecv_RunWorkerCompleted);
+            // 
             // frmMainW
             // 
             resources.ApplyResources(this, "$this");
@@ -2099,6 +2105,7 @@
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnBuildCache;
         private System.Windows.Forms.Label PS_StPath;
         private System.ComponentModel.BackgroundWorker BW_UpChk;
+        private System.ComponentModel.BackgroundWorker BW_FPRecv;
     }
 }
 

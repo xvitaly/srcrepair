@@ -1490,6 +1490,84 @@ namespace srcrepair
 
         #endregion
 
+        #region Internal Workers
+        
+        private void BW_UpChk_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                // Вычисляем разницу между текущей датой и датой последнего обновления...
+                TimeSpan TS = DateTime.Now - Properties.Settings.Default.LastUpdateTime;
+                if (TS.Days >= 7) // Проверяем не прошла ли неделя с момента последней прверки...
+                {
+                    // Требуется проверка обновлений...
+                    if (CoreLib.AutoUpdateCheck(GV.AppVersionInfo, Properties.Settings.Default.UpdateChURI))
+                    {
+                        // Доступны обновления...
+                        MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AppUpdateAvailable"), GV.AppName), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        // Установим время последней проверки обновлений...
+                        Properties.Settings.Default.LastUpdateTime = DateTime.Now;
+                    }
+                }
+            }
+            catch (Exception Ex)
+            {
+                CoreLib.WriteStringToLog(Ex.Message);
+            }
+        }
+
+        private void BW_FPRecv_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                // Открываем каталог...
+                DirectoryInfo DInfo = new DirectoryInfo(Path.Combine(GV.FullAppPath, "cfgs"));
+                // Считываем список файлов по заданной маске...
+                FileInfo[] DirList = DInfo.GetFiles("*.cfg");
+                // Начинаем обход массива...
+                foreach (FileInfo DItem in DirList)
+                {
+                    // Обрабатываем найденное...
+                    if (DItem.Name != "config_default.cfg")
+                    {
+                        if (FP_ConfigSel.InvokeRequired)
+                        {
+                            this.Invoke((MethodInvoker)delegate() { FP_ConfigSel.Items.Add((string)DItem.Name); });
+                        }
+                    }
+                }
+            }
+            catch (Exception Ex)
+            {
+                // FPS-конфигов для выбранного приложения не найдено.
+                // Запишем в лог...
+                CoreLib.WriteStringToLog(Ex.Message);
+                // Выводим текст об этом...
+                FP_Description.Text = CoreLib.GetLocalizedString("FP_NoCfgGame");
+                FP_Description.ForeColor = Color.Red;
+                // ...и блокируем контролы, отвечающие за установку...
+                FP_Install.Enabled = false;
+                FP_ConfigSel.Enabled = false;
+                FP_OpenNotepad.Enabled = false;
+            }
+        }
+
+        private void BW_FPRecv_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            // Проверяем, нашлись ли конфиги...
+            if (FP_ConfigSel.Items.Count >= 1)
+            {
+                FP_Description.Text = CoreLib.GetLocalizedString("FP_SelectFromList");
+                FP_Description.ForeColor = Color.Black;
+                FP_ConfigSel.Enabled = true;
+            }
+        }
+
+        #endregion
+
         private void frmMainW_Load(object sender, EventArgs e)
         {
             // Событие инициализации формы...
@@ -1920,42 +1998,7 @@ namespace srcrepair
             if (!(String.IsNullOrEmpty(CFGFileName))) { CE_New.PerformClick(); }
 
             // Считаем имеющиеся FPS-конфиги...
-            try
-            {
-                // Открываем каталог...
-                DirectoryInfo DInfo = new DirectoryInfo(Path.Combine(GV.FullAppPath, "cfgs"));
-                // Считываем список файлов по заданной маске...
-                FileInfo[] DirList = DInfo.GetFiles("*.cfg");
-                // Начинаем обход массива...
-                foreach (FileInfo DItem in DirList)
-                {
-                    // Обрабатываем найденное...
-                    if (DItem.Name != "config_default.cfg")
-                    {
-                        FP_ConfigSel.Items.Add((string)DItem.Name);
-                    }
-                }
-                // Проверяем, нашлись ли конфиги...
-                if (FP_ConfigSel.Items.Count >= 1)
-                {
-                    FP_Description.Text = CoreLib.GetLocalizedString("FP_SelectFromList");
-                    FP_Description.ForeColor = Color.Black;
-                    FP_ConfigSel.Enabled = true;
-                }
-            }
-            catch (Exception Ex)
-            {
-                // FPS-конфигов для выбранного приложения не найдено.
-                // Запишем в лог...
-                CoreLib.WriteStringToLog(Ex.Message);
-                // Выводим текст об этом...
-                FP_Description.Text = CoreLib.GetLocalizedString("FP_NoCfgGame");
-                FP_Description.ForeColor = Color.Red;
-                // ...и блокируем контролы, отвечающие за установку...
-                FP_Install.Enabled = false;
-                FP_ConfigSel.Enabled = false;
-                FP_OpenNotepad.Enabled = false;
-            }
+            if (!BW_FPRecv.IsBusy) { BW_FPRecv.RunWorkerAsync(); }
 
             // Включаем заблокированные ранее контролы...
             MNUFPSWizard.Enabled = true;
@@ -3365,33 +3408,6 @@ namespace srcrepair
                 {
                     CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
-            }
-        }
-
-        private void BW_UpChk_DoWork(object sender, DoWorkEventArgs e)
-        {
-            try
-            {
-                // Вычисляем разницу между текущей датой и датой последнего обновления...
-                TimeSpan TS = DateTime.Now - Properties.Settings.Default.LastUpdateTime;
-                if (TS.Days >= 7) // Проверяем не прошла ли неделя с момента последней прверки...
-                {
-                    // Требуется проверка обновлений...
-                    if (CoreLib.AutoUpdateCheck(GV.AppVersionInfo, Properties.Settings.Default.UpdateChURI))
-                    {
-                        // Доступны обновления...
-                        MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AppUpdateAvailable"), GV.AppName), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        // Установим время последней проверки обновлений...
-                        Properties.Settings.Default.LastUpdateTime = DateTime.Now;
-                    }
-                }
-            }
-            catch (Exception Ex)
-            {
-                CoreLib.WriteStringToLog(Ex.Message);
             }
         }
     }
