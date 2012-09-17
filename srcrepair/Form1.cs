@@ -1691,22 +1691,7 @@ namespace srcrepair
                 // Проверим наличие обновлений программы (если разрешено в настройках)...
                 if (Properties.Settings.Default.EnableAutoUpdate && (Properties.Settings.Default.LastUpdateTime != null))
                 {
-                    // Вычисляем разницу между текущей датой и датой последнего обновления...
-                    TimeSpan TS = DateTime.Now - Properties.Settings.Default.LastUpdateTime;
-                    if (TS.Days >= 7) // Проверяем не прошла ли неделя с момента последней прверки...
-                    {
-                        // Требуется проверка обновлений...
-                        if (CoreLib.AutoUpdateCheck(GV.AppVersionInfo, Properties.Settings.Default.UpdateChURI))
-                        {
-                            // Доступны обновления...
-                            MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AppUpdateAvailable"), GV.AppName), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            // Установим время последней проверки обновлений...
-                            Properties.Settings.Default.LastUpdateTime = DateTime.Now;
-                        }
-                    }
+                    if (!BW_UpChk.IsBusy) { BW_UpChk.RunWorkerAsync(); }
                 }
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
@@ -3380,6 +3365,33 @@ namespace srcrepair
                 {
                     CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
+            }
+        }
+
+        private void BW_UpChk_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                // Вычисляем разницу между текущей датой и датой последнего обновления...
+                TimeSpan TS = DateTime.Now - Properties.Settings.Default.LastUpdateTime;
+                if (TS.Days >= 7) // Проверяем не прошла ли неделя с момента последней прверки...
+                {
+                    // Требуется проверка обновлений...
+                    if (CoreLib.AutoUpdateCheck(GV.AppVersionInfo, Properties.Settings.Default.UpdateChURI))
+                    {
+                        // Доступны обновления...
+                        MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AppUpdateAvailable"), GV.AppName), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        // Установим время последней проверки обновлений...
+                        Properties.Settings.Default.LastUpdateTime = DateTime.Now;
+                    }
+                }
+            }
+            catch (Exception Ex)
+            {
+                CoreLib.WriteStringToLog(Ex.Message);
             }
         }
     }
