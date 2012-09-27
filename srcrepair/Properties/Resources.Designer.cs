@@ -77,7 +77,7 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mozilla/5.0 ({0}; rv:{1}) SRC Repair {2}.
+        ///   Looks up a localized string similar to Mozilla/5.0 ({0}; rv:{1}) {2} {3}.
         /// </summary>
         internal static string AppDefUA {
             get {

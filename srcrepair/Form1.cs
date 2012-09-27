@@ -1688,7 +1688,7 @@ namespace srcrepair
             #endif
 
             // Генерируем User-Agent для SRC Repair...
-            GV.UserAgent = String.Format(Properties.Resources.AppDefUA, GV.PlatformFriendlyName, GV.AppVersionInfo, Assmbl.GetName().ProcessorArchitecture.ToString());
+            GV.UserAgent = String.Format(Properties.Resources.AppDefUA, GV.PlatformFriendlyName, GV.AppVersionInfo, GV.AppName, Assmbl.GetName().ProcessorArchitecture.ToString());
 
             // Найдём и завершим в памяти процесс Steam...
             CoreLib.ProcessTerminate("Steam", CoreLib.GetLocalizedString("ST_KillMessage"));
