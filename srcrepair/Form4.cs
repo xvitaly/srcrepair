@@ -151,5 +151,10 @@ namespace srcrepair
                 this.Close();
             }
         }
+
+        private void frmRepBuilder_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = BwGen.IsBusy;
+        }
     }
 }
