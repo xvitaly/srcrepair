@@ -58,17 +58,19 @@ namespace srcrepair
             string TempDir = Path.Combine(Path.GetTempPath(), "repbuilder");
             string CrDt = CoreLib.WriteDateToString(DateTime.Now, true);
             if (!Directory.Exists(TempDir)) { Directory.CreateDirectory(TempDir); }
-            string FileName = String.Format("Report_{0}", CrDt);
+            string FileName = String.Format("report_{0}", CrDt);
             string RepName = FileName + ".txt";
             string HostsFile = CoreLib.GetHostsFileFullPath(GV.RunningPlatform);
             string FNamePing = Path.Combine(TempDir, String.Format("ping_{0}.log", CrDt));
             string FNameTrace = Path.Combine(TempDir, String.Format("traceroute_{0}.log", CrDt));
             string FNameIpConfig = Path.Combine(TempDir, String.Format("ipconfig_{0}.log", CrDt));
             string FNameRouting = Path.Combine(TempDir, String.Format("routing_{0}.log", CrDt));
+            string FNameDxDiag = Path.Combine(TempDir, String.Format("dxdiag_{0}.log", CrDt));
             try
             {
                 // Запускаем последовательность...
                 try { CoreLib.StartProcessAndWait("msinfo32.exe", String.Format("/report \"{0}\"", Path.Combine(TempDir, RepName))); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { CoreLib.StartProcessAndWait("dxdiag.exe", String.Format("/t {0}", FNameDxDiag)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } /* DxDiag неадекватно реагирует на кавычки в пути. */
                 try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C ping steampowered.com > \"{0}\"", FNamePing)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                 try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C tracert steampowered.com > \"{0}\"", FNameTrace)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                 try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C ipconfig /all > \"{0}\"", FNameIpConfig)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
@@ -78,18 +80,19 @@ namespace srcrepair
                     using (ZipFile ZBkUp = new ZipFile(Path.Combine(RepDir, FileName + ".zip"), Encoding.UTF8))
                     {
                         // Добавляем в архив созданный рапорт...
-                        if (File.Exists(Path.Combine(TempDir, RepName))) { ZBkUp.AddFile(Path.Combine(TempDir, RepName), "Report"); }
+                        if (File.Exists(Path.Combine(TempDir, RepName))) { ZBkUp.AddFile(Path.Combine(TempDir, RepName), "report"); }
                         // Добавляем в архив все конфиги выбранной игры...
-                        if (Directory.Exists(GV.FullCfgPath)) { ZBkUp.AddDirectory(GV.FullCfgPath, "Configs"); }
+                        if (Directory.Exists(GV.FullCfgPath)) { ZBkUp.AddDirectory(GV.FullCfgPath, "configs"); }
                         // Добавляем в архив все краш-дампы...
-                        if (Directory.Exists(Path.Combine(GV.FullSteamPath, "dumps"))) { ZBkUp.AddDirectory(Path.Combine(GV.FullSteamPath, "dumps"), "Dumps"); }
+                        if (Directory.Exists(Path.Combine(GV.FullSteamPath, "dumps"))) { ZBkUp.AddDirectory(Path.Combine(GV.FullSteamPath, "dumps"), "dumps"); }
                         // Добавляем содержимое файла Hosts...
-                        if (File.Exists(HostsFile)) { ZBkUp.AddFile(HostsFile, "Hosts"); }
+                        if (File.Exists(HostsFile)) { ZBkUp.AddFile(HostsFile, "hosts"); }
                         // Добавляем в архив отчёты утилит ping, трассировки и т.д.
-                        if (File.Exists(FNamePing)) { ZBkUp.AddFile(FNamePing, "System"); }
-                        if (File.Exists(FNameTrace)) { ZBkUp.AddFile(FNameTrace, "System"); }
-                        if (File.Exists(FNameIpConfig)) { ZBkUp.AddFile(FNameIpConfig, "System"); }
-                        if (File.Exists(FNameRouting)) { ZBkUp.AddFile(FNameRouting, "System"); }
+                        if (File.Exists(FNamePing)) { ZBkUp.AddFile(FNamePing, "system"); }
+                        if (File.Exists(FNameTrace)) { ZBkUp.AddFile(FNameTrace, "system"); }
+                        if (File.Exists(FNameIpConfig)) { ZBkUp.AddFile(FNameIpConfig, "system"); }
+                        if (File.Exists(FNameRouting)) { ZBkUp.AddFile(FNameRouting, "system"); }
+                        if (File.Exists(FNameDxDiag)) { ZBkUp.AddFile(FNameDxDiag, "system"); }
                         // Сохраняем архив...
                         ZBkUp.Save();
                     }
