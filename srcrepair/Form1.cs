@@ -1687,6 +1687,9 @@ namespace srcrepair
             this.Text = String.Format(this.Text, GV.AppName, GV.PlatformFriendlyName, GV.AppVersionInfo, Assmbl.GetName().ProcessorArchitecture.ToString());
             #endif
 
+            // Генерируем User-Agent для SRC Repair...
+            GV.UserAgent = String.Format(Properties.Resources.AppDefUA, GV.PlatformFriendlyName, GV.AppVersionInfo, Assmbl.GetName().ProcessorArchitecture.ToString());
+
             // Найдём и завершим в памяти процесс Steam...
             CoreLib.ProcessTerminate("Steam", CoreLib.GetLocalizedString("ST_KillMessage"));
 
@@ -3107,6 +3110,7 @@ namespace srcrepair
                     // Получаем файл с номером версии и ссылкой на новую...
                     using (WebClient Downloader = new WebClient())
                     {
+                        Downloader.Headers.Add("User-Agent", GV.UserAgent);
                         DnlStr = Downloader.DownloadString(Properties.Settings.Default.UpdateChURI);
                     }
                     // Установим дату последней проверки обновлений...
@@ -3370,6 +3374,7 @@ namespace srcrepair
                 using (WebClient Downloader = new WebClient())
                 {
                     // Получим хеш...
+                    Downloader.Headers.Add("User-Agent", GV.UserAgent);
                     DBHash = Downloader.DownloadString(Properties.Settings.Default.UpdateGameDBHash);
                     CoreLib.WriteStringToLog(String.Format("Notice: Received server hash of the game database {0}.", DBHash));
                 }
@@ -3382,6 +3387,7 @@ namespace srcrepair
                     using (WebClient Downloader = new WebClient())
                     {
                         // Получаем свежую базу данных...
+                        Downloader.Headers.Add("User-Agent", GV.UserAgent);
                         CoreLib.WriteStringToLog("Updating the game database from server...");
                         Downloader.DownloadFile(new Uri(Properties.Settings.Default.UpdateGameDBFile), Properties.Settings.Default.GameListFile);
                         CoreLib.WriteStringToLog("The game database has been updated successfully.");

@@ -34,6 +34,11 @@ namespace srcrepair
         public static string SteamExecuttable;
 
         /*
+         * Хранит User-Agent, которым представляется удалённым службам...
+         */
+        public static string UserAgent;
+
+        /*
          * Хранит имя каталога SteamApps в зависимости от платформы...
          */
         public static string SteamAppsFolderName;

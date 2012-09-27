@@ -87,6 +87,7 @@ namespace srcrepair
                 DnlProgBar.Visible = true; // Отображаем диалог прогресса...
                 using (WebClient FileDownloader = new WebClient())
                 {
+                    FileDownloader.Headers.Add("User-Agent", GV.UserAgent);
                     FileDownloader.DownloadFileCompleted += new AsyncCompletedEventHandler(FileDownloader_Completed);
                     FileDownloader.DownloadProgressChanged += new DownloadProgressChangedEventHandler(FileDownloader_ProgressChanged);
                     // Скачиваем файл...
