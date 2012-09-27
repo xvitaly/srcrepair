@@ -248,7 +248,7 @@ namespace srcrepair
 
         private void CM_Cancel_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
 
         private void CM_FTable_DoubleClick(object sender, EventArgs e)
@@ -283,6 +283,11 @@ namespace srcrepair
             }
             // Указываем сколько МБ освободится при удалении всех файлов...
             CM_Info.Text = String.Format(CM_Info.Text, CoreLib.SclBytes(TotalSize));
+        }
+
+        private void frmCleaner_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = ((e.CloseReason == CloseReason.UserClosing) && (ClnWrk.IsBusy || GttWrk.IsBusy));
         }
     }
 }
