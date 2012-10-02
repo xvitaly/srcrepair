@@ -585,4 +585,7 @@
   <data name="SteamNoLoginsDetected" xml:space="preserve">
     <value>An error occured! Unable to locate user folders inside SteamApps. Start at least one supported game from Steam and restart this program.</value>
   </data>
+  <data name="PS_FrFInfo" xml:space="preserve">
+    <value>We can free up to {0} hard-disk space after cleanup.</value>
+  </data>
 </root>

@@ -1015,6 +1015,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to We can free up to {0} hard-disk space after cleanup..
+        /// </summary>
+        internal static string PS_FrFInfo {
+            get {
+                return ResourceManager.GetString("PS_FrFInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cleanup is not required..
         /// </summary>
         internal static string PS_LoadErr {

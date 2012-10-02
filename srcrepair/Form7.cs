@@ -282,7 +282,7 @@ namespace srcrepair
                 CM_Clean.Enabled = true;
             }
             // Указываем сколько МБ освободится при удалении всех файлов...
-            CM_Info.Text = String.Format(CM_Info.Text, CoreLib.SclBytes(TotalSize));
+            CM_Info.Text = String.Format(CoreLib.GetLocalizedString("PS_FrFInfo"), CoreLib.SclBytes(TotalSize));
         }
 
         private void frmCleaner_FormClosing(object sender, FormClosingEventArgs e)

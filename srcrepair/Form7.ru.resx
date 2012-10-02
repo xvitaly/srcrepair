@@ -130,7 +130,7 @@
     <value>Дата изменения</value>
   </data>
   <data name="CM_Info.Text" xml:space="preserve">
-    <value>В результате очистки может быть освобождено до {0}.</value>
+    <value>Поиск кандидатов на удаление...</value>
   </data>
   <data name="CM_Clean.Text" xml:space="preserve">
     <value>Выполнить очистку</value>
