@@ -663,7 +663,7 @@
     <value>Редактор конфигов</value>
   </data>
   <data name="PS_ResetSettings.Text" xml:space="preserve">
-    <value>Восстановить настройки игры по умолчанию</value>
+    <value>Выполнить глубокую очистку игры</value>
   </data>
   <data name="PS_RemOldBin.Text" xml:space="preserve">
     <value>Очистить старые бинарники и лаунчеры</value>

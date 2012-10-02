@@ -2621,7 +2621,7 @@
     <value>2</value>
   </data>
   <data name="PS_ResetSettings.Text" xml:space="preserve">
-    <value>Restore default game settings</value>
+    <value>Execute deep game cleanup</value>
   </data>
   <data name="&gt;&gt;PS_ResetSettings.Name" xml:space="preserve">
     <value>PS_ResetSettings</value>

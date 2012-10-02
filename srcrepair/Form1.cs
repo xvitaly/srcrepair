@@ -2607,34 +2607,7 @@ namespace srcrepair
             {
                 if (GV.IsGCFApp)
                 {
-                    // Удаляем все настройки...
-                    if (MessageBox.Show(CoreLib.GetLocalizedString("PS_ResetSettingsMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-                    {
-                        // Создаём резервную копию...
-                        if (Properties.Settings.Default.SafeCleanup)
-                        {
-                            try
-                            {
-                                CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
-                            }
-                            catch (Exception Ex)
-                            {
-                                CoreLib.WriteStringToLog(Ex.Message);
-                            }
-                        }
-
-                        // Работаем...
-                        try
-                        {
-                            if (Directory.Exists(GV.GamePath)) { Directory.Delete(GV.GamePath, true); } // Удаляем всю папку с файлами игры...
-                            Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("Software", "Valve", "Source", GV.SmallAppName, "Settings"), false); // Удаляем настройки видео...
-                            MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        catch (Exception Ex)
-                        {
-                            CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                        }
-                    }
+                    OpenCleanupWindow(GV.GamePath, "*.*", ((Button)sender).Text.ToLower());
                 }
             }
             else
