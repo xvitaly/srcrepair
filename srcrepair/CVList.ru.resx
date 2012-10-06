@@ -3153,4 +3153,34 @@
   <data name="mp_warmuptime" xml:space="preserve">
     <value>Задаёт длительность разминочного раунда в секундах.</value>
   </data>
+  <data name="bot_autodifficulty_threshold_high" xml:space="preserve">
+    <value>Задаёт режим автоматического изменения сложности ботов в сторону увеличения.</value>
+  </data>
+  <data name="bot_autodifficulty_threshold_low" xml:space="preserve">
+    <value>Задаёт режим автоматического изменения сложности ботов в сторону уменьшения.</value>
+  </data>
+  <data name="impulse" xml:space="preserve">
+    <value>Служебная команда, помеченная как чит. Используется для выполнения особых функций.</value>
+  </data>
+  <data name="mp_defuser_allocation" xml:space="preserve">
+    <value>Управляет выдачей комплектов для обезвреживания бомбы команде Спецназа.</value>
+  </data>
+  <data name="mp_match_can_clinch" xml:space="preserve">
+    <value>Включает / отключает автоматическое завершение матча если одна команда набрала очков больше, чем теоретически сможет набрать команда соперника.</value>
+  </data>
+  <data name="rem" xml:space="preserve">
+    <value>Задаёт комментарий в конфиге.</value>
+  </data>
+  <data name="spec_freeze_panel_extended_time" xml:space="preserve">
+    <value>Задаёт время скрытия панели на экране смерти.</value>
+  </data>
+  <data name="spec_freeze_time" xml:space="preserve">
+    <value>Задаёт время, в течение которого вы будете видеть убивившего вас противника.</value>
+  </data>
+  <data name="startdemos" xml:space="preserve">
+    <value>Позволяет запустить скриптованную сцену из указанного в параметре файла.</value>
+  </data>
+  <data name="thirdperson_platformer" xml:space="preserve">
+    <value>Включает / отключает консольный режим вида от третьего лица.</value>
+  </data>
 </root>
