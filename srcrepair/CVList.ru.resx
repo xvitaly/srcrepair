@@ -2991,4 +2991,10 @@
   <data name="replay_name" xml:space="preserve">
     <value>Ник бота системы реплеев (повторов).</value>
   </data>
+  <data name="tf_arena_override_team_size" xml:space="preserve">
+    <value>Задаёт максимальный размер команды в режиме Арена.</value>
+  </data>
+  <data name="tf_avoidteammates_pushaway" xml:space="preserve">
+    <value>Запретить / разрешить игрокам одной команды отталкивать друг друга.</value>
+  </data>
 </root>
