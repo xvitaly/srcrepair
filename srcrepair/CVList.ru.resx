@@ -2997,4 +2997,148 @@
   <data name="tf_avoidteammates_pushaway" xml:space="preserve">
     <value>Запретить / разрешить игрокам одной команды отталкивать друг друга.</value>
   </data>
+  <data name="ai_show_connect" xml:space="preserve">
+    <value>Включает / отключает сообщения о подключении ботов в CSGO.</value>
+  </data>
+  <data name="ai_show_hints" xml:space="preserve">
+    <value>Включает / отключает подсказки.</value>
+  </data>
+  <data name="bot_defer_to_human_goals" xml:space="preserve">
+    <value>Боты будут позволять человеку выполнить цель карты (закладка/обезвреживание бомбы, освобождение заложников и пр.).</value>
+  </data>
+  <data name="bot_defer_to_human_items" xml:space="preserve">
+    <value>Боты смогут отдавать предметы игрокам-людям.</value>
+  </data>
+  <data name="cash_player_bomb_defused" xml:space="preserve">
+    <value>Задаёт сумму, которую получит игрок, успешно обезвредивший бомбу.</value>
+  </data>
+  <data name="cash_player_bomb_planted" xml:space="preserve">
+    <value>Задаёт сумму, которую получит игрок, успешно установший бомбу.</value>
+  </data>
+  <data name="cash_player_damage_hostage" xml:space="preserve">
+    <value>Задаёт сумму, котая будет отнята у игрока, нанёсшего урон заложнику.</value>
+  </data>
+  <data name="cash_player_interact_with_hostage" xml:space="preserve">
+    <value>Задаёт сумму, которую получит игрок, начавший процедуру освобождения заложника.</value>
+  </data>
+  <data name="cash_player_killed_enemy_default" xml:space="preserve">
+    <value>Задаёт сумму, которую получит игрок за убийство игрока команды соперника.</value>
+  </data>
+  <data name="cash_player_killed_hostage" xml:space="preserve">
+    <value>Задаёт сумму, которая будет отнята у игрока, убившего заложника.</value>
+  </data>
+  <data name="cash_player_killed_teammate" xml:space="preserve">
+    <value>Задаёт сумму, которая будет отнята у игрока при убийстве товарища по команде.</value>
+  </data>
+  <data name="cash_player_rescued_hostage" xml:space="preserve">
+    <value>Задаёт сумму, которую получит игрок, освободивший заложника.</value>
+  </data>
+  <data name="cash_team_elimination_bomb_map" xml:space="preserve">
+    <value>Задаёт сумму, которую получат игроки выигравшей команды на карте с бомбой, уничтожив команду противника.</value>
+  </data>
+  <data name="cash_team_elimination_hostage_map" xml:space="preserve">
+    <value>Задаёт сумму, которую получат игроки выигравшей команды на карте с освобожением заложников, уничтожив команду противника.</value>
+  </data>
+  <data name="cash_team_hostage_interaction" xml:space="preserve">
+    <value>Задаёт сумму, которую получит команда, игрок которой начал процедуру освобождения заложника.</value>
+  </data>
+  <data name="cash_team_loser_bonus" xml:space="preserve">
+    <value>Задаёт размер бонуса проигравшей команде.</value>
+  </data>
+  <data name="cash_team_loser_bonus_consecutive_rounds" xml:space="preserve">
+    <value>Задаёт количество раундов, после поражения в которых команда получит бонус к сумме за раунд.</value>
+  </data>
+  <data name="cash_team_planted_bomb_but_defused" xml:space="preserve">
+    <value>Задаёт сумму, которую получат игроки команды Террористов, установившие бомбу, но не взорвавшие её.</value>
+  </data>
+  <data name="cash_team_rescued_hostage" xml:space="preserve">
+    <value>Задаёт сумму, которую получат игроки команды Спецназа, за каждого освобождённого заложника.</value>
+  </data>
+  <data name="cash_team_terrorist_win_bomb" xml:space="preserve">
+    <value>Задаёт сумму, которую получат игроки команды Террористов, успешно взорвавшие бомбу.</value>
+  </data>
+  <data name="cash_team_win_by_hostage_rescue" xml:space="preserve">
+    <value>Задаёт сумму, которую получат игроки команды Спецназа, успешно освободившие заложников.</value>
+  </data>
+  <data name="cash_team_win_by_time_running_out" xml:space="preserve">
+    <value>Задаёт сумму, которую получат игроки выигравшей команды в результате истечения игрового времени.</value>
+  </data>
+  <data name="cl_bobamt_lat" xml:space="preserve">
+    <value>Задаёт максимальное смещение оружия при беге.</value>
+  </data>
+  <data name="cl_bobamt_vert" xml:space="preserve">
+    <value>Задаёт максимальное смещение оружия по вертикали при беге.</value>
+  </data>
+  <data name="ff_damage_reduction_bullets" xml:space="preserve">
+    <value>Задаёт коэффициент снижения пулевого урона по игрокам из своей команды.</value>
+  </data>
+  <data name="ff_damage_reduction_grenade" xml:space="preserve">
+    <value>Задаёт коэффициент снижения урона гранаты по игрокам из своей команды.</value>
+  </data>
+  <data name="ff_damage_reduction_grenade_self" xml:space="preserve">
+    <value>Задаёт коэффициент снижения урона гранаты по игроку, бросившему её.</value>
+  </data>
+  <data name="mp_afterroundmoney" xml:space="preserve">
+    <value>Задаёт количество денег, которые будут выданы игрокам по окончании раунда.</value>
+  </data>
+  <data name="mp_deathcam_skippable" xml:space="preserve">
+    <value>Разрешить / запретить пропуск повтора убийства.</value>
+  </data>
+  <data name="mp_death_drop_defuser" xml:space="preserve">
+    <value>Разрешить / запретить выпадение комплекта для обезвреживания бомб, экипированного на игроке, после его смерти.</value>
+  </data>
+  <data name="mp_death_drop_grenade" xml:space="preserve">
+    <value>Разрешить / запретить выпадение гранат, экипированных на игроке, после его смерти.</value>
+  </data>
+  <data name="mp_death_drop_gun" xml:space="preserve">
+    <value>Разрешить / запретить выпадение оружия игрока после его смерти.</value>
+  </data>
+  <data name="mp_gungameimmunitytime" xml:space="preserve">
+    <value>Задаёт длительности неуязвимости в секундах в режиме Гонка вооружений.</value>
+  </data>
+  <data name="mp_maxmoney" xml:space="preserve">
+    <value>Задаёт максимальное количество денег, которые могут быть на счету у игрока.</value>
+  </data>
+  <data name="mp_molotovusedelay" xml:space="preserve">
+    <value>Задаёт задержку использования коктейля Молотова.</value>
+  </data>
+  <data name="mp_roundtime" xml:space="preserve">
+    <value>Задаёт длительность раунда в секундах.</value>
+  </data>
+  <data name="mp_solid_teammates" xml:space="preserve">
+    <value>Включить / отключить прохождение игроков одной команды сквозь друг друга.</value>
+  </data>
+  <data name="mp_weapons_allow_zeus" xml:space="preserve">
+    <value>Разрешить / запретить оружие Zeus x27 (оружие мгновенной смерти).</value>
+  </data>
+  <data name="spec_show_xray" xml:space="preserve">
+    <value>Включить / отключить отображение игроков через стены в режиме наблюдателя.</value>
+  </data>
+  <data name="sv_arms_race_vote_to_restart_disallowed_after" xml:space="preserve">
+    <value>Задаёт уровень, после достижения которого голосование за перезапуск карты в режиме Гонка вооружений будет запрещено.</value>
+  </data>
+  <data name="sv_deadtalk" xml:space="preserve">
+    <value>Разрешить / запретить разговоры мёртвых игроков.</value>
+  </data>
+  <data name="sv_gameinstructor_disable" xml:space="preserve">
+    <value>Запретить / разрешить внутриигрового инструктора (советы по игре).</value>
+  </data>
+  <data name="sv_ignoregrenaderadio" xml:space="preserve">
+    <value>Включить / отключить выдачу сообщений о брошенных игроками гранатах в командное радио.</value>
+  </data>
+  <data name="sv_show_bot_difficulty_in_name" xml:space="preserve">
+    <value>Включить / отключить вывод уровня сложности ботов в их именах.</value>
+  </data>
+  <data name="sv_staminajumpcost" xml:space="preserve">
+    <value>Затраты выносливости на совершение прыжка.</value>
+  </data>
+  <data name="sv_staminalandcost" xml:space="preserve">
+    <value>Затраты выносливости на приземление после прыжка.</value>
+  </data>
+  <data name="sv_staminarecoveryrate" xml:space="preserve">
+    <value>Задаёт коэффициент восстановления выносливости.</value>
+  </data>
+  <data name="weapon_recoil_scale" xml:space="preserve">
+    <value>Задаёт коэффициент разброса пуль во время стрельбы.</value>
+  </data>
 </root>
