@@ -3141,4 +3141,16 @@
   <data name="weapon_recoil_scale" xml:space="preserve">
     <value>Задаёт коэффициент разброса пуль во время стрельбы.</value>
   </data>
+  <data name="mp_free_armor" xml:space="preserve">
+    <value>Включает / отключает выдачу бесплатного комплекта брони обеим командам.</value>
+  </data>
+  <data name="mp_playercashawards" xml:space="preserve">
+    <value>Включает / отключает выдачу дополнительных денег за выполнение задач карты игроку.</value>
+  </data>
+  <data name="mp_teamcashawards" xml:space="preserve">
+    <value>Включает / отключает выдачу дополнительных денег за выполнение задач карты команде.</value>
+  </data>
+  <data name="mp_warmuptime" xml:space="preserve">
+    <value>Задаёт длительность разминочного раунда в секундах.</value>
+  </data>
 </root>
