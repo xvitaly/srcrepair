@@ -2465,7 +2465,7 @@ namespace srcrepair
         private void PS_RemDnlCache_Click(object sender, EventArgs e)
         {
             // Удаляем кэш загрузок...
-            OpenCleanupWindow(Path.Combine(GV.FullGamePath, "downloads"), "*.dat", ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(Path.Combine(GV.FullGamePath, "downloads"), "*.*", ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemOldSpray_Click(object sender, EventArgs e)
