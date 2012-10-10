@@ -336,4 +336,12 @@
     <SID>2450</SID>
     <IsMP>0</IsMP>
   </Game>
+  <Game Name="Revelations 2012">
+    <IsGCF>0</IsGCF>
+    <DirName>revelations 2012</DirName>
+    <SmallName>revelations</SmallName>
+    <VFDir>revelations</VFDir>
+    <SID>201070</SID>
+    <IsMP>0</IsMP>
+  </Game>
 </Games>
