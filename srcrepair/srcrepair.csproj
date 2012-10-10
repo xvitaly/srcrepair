@@ -258,6 +258,14 @@
       <Link>cfgs\bonhighfps.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\tfiles\cfgs\chrisdx9frames_en.txt">
+      <Link>cfgs\chrisdx9frames_en.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\chrisdx9frames_ru.txt">
+      <Link>cfgs\chrisdx9frames_ru.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\tfiles\cfgs\chrishighframes.cfg">
       <Link>cfgs\chrishighframes.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -296,6 +304,10 @@
     </Content>
     <Content Include="..\tfiles\pubkey.asc">
       <Link>pubkey.asc</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\chrisdx9frames.cfg">
+      <Link>cfgs\chrisdx9frames.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="app.config" />
