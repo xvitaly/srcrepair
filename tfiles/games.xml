@@ -216,6 +216,14 @@
     <SID>570</SID>
     <IsMP>0</IsMP>
   </Game>
+  <Game Name="Dota 2 Test">
+    <IsGCF>0</IsGCF>
+    <DirName>dota 2 test</DirName>
+    <SmallName>dota</SmallName>
+    <VFDir>dota</VFDir>
+    <SID>570</SID>
+    <IsMP>0</IsMP>
+  </Game>
   <Game Name="Counter-Strike Global Offensive">
     <IsGCF>0</IsGCF>
     <DirName>counter-strike global offensive</DirName>
