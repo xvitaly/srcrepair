@@ -3183,4 +3183,13 @@
   <data name="thirdperson_platformer" xml:space="preserve">
     <value>Включает / отключает консольный режим вида от третьего лица.</value>
   </data>
+  <data name="sv_vote_issue_kick_min_connect_time_mvm" xml:space="preserve">
+    <value>Задаёт время, до истечения которого невозможно запустить голосование за кик игрока, находящегося в зрителях в режиме MVM.</value>
+  </data>
+  <data name="sv_vote_issue_kick_spectators_mvm" xml:space="preserve">
+    <value>Разрешить / запретить игрокам голосовать за кик зрителей в режиме MVM.</value>
+  </data>
+  <data name="tf_dingalingaling_repeat_delay" xml:space="preserve">
+    <value>Задаёт задержку между проигрываниями звука попадания по противнику.</value>
+  </data>
 </root>
