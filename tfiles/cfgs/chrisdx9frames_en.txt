@@ -1,0 +1,4 @@
+Dx9frames is a chrishighframes cfg derivative designed to work without issue in DirectX 9 mode. Recommended for use on low-end PCs.
+
+FPS increase: High
+Graphics degradation: Some

@@ -1,5 +1,5 @@
 Name: srcrepair
-Version: 10.0
+Version: 11.0
 Release: 1
 Group: Applications/Utilities
 BuildArch: noarch
@@ -49,6 +49,9 @@ chmod +x %{buildroot}/usr/bin/srcrepair
 /usr/share/srcrepair/cfgs/bonhighfps.cfg
 /usr/share/srcrepair/cfgs/bonhighfps_en.txt
 /usr/share/srcrepair/cfgs/bonhighfps_ru.txt
+/usr/share/srcrepair/cfgs/chrisdx9frames.cfg
+/usr/share/srcrepair/cfgs/chrisdx9frames_en.txt
+/usr/share/srcrepair/cfgs/chrisdx9frames_ru.txt
 /usr/share/srcrepair/cfgs/chrismaxfps.cfg
 /usr/share/srcrepair/cfgs/chrismaxfps_en.txt
 /usr/share/srcrepair/cfgs/chrismaxfps_ru.txt
