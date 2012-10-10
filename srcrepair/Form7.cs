@@ -44,7 +44,6 @@ namespace srcrepair
         private string CleanMask; // ...маску...
         private string CleanInfo; // ...и информацию о том, что будем очищать.
         private long TotalSize = 0; // Задаём и обнуляем счётчик общего размера удаляемых файлов...
-        private List<string> DeleteQueue = new List<string>(); // Задаём массив для хранения имён удаляемых файлов...
 
         /// <summary>
         /// Ищет и добавляет файлы для удаления в таблицу модуля очистки.
@@ -137,6 +136,21 @@ namespace srcrepair
         {
             try
             {
+                // Задаём массив для хранения имён удаляемых файлов...
+                List<string> DeleteQueue = new List<string>();
+
+                // Добавляем в очередь для очистки...
+                this.Invoke((MethodInvoker)delegate()
+                {
+                    foreach (ListViewItem LVI in CM_FTable.Items)
+                    {
+                        if (LVI.Checked)
+                        {
+                            DeleteQueue.Add(LVI.ToolTipText);
+                        }
+                    }
+                });
+
                 // Добавляем в архив (если выбрано)...
                 if (CM_CompressFiles.Checked)
                 {
@@ -219,15 +233,6 @@ namespace srcrepair
                         CM_CompressFiles.Visible = false;
                         PrbMain.Visible = true;
 
-                        // Добавляем в очередь для очистки...
-                        foreach (ListViewItem LVI in CM_FTable.Items)
-                        {
-                            if (LVI.Checked)
-                            {
-                                DeleteQueue.Add(LVI.ToolTipText);
-                            }
-                        }
-
                         // Запускаем поток для выполнения очистки...
                         if (!ClnWrk.IsBusy)
                         {
@@ -266,6 +271,9 @@ namespace srcrepair
 
         private void GttWrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            // Указываем сколько МБ освободится при удалении всех файлов...
+            CM_Info.Text = String.Format(CoreLib.GetLocalizedString("PS_FrFInfo"), CoreLib.SclBytes(TotalSize));
+
             // Проверим есть ли кандидаты для удаления (очистки)...
             if (CM_FTable.Items.Count == 0)
             {
@@ -281,8 +289,6 @@ namespace srcrepair
                 // Включаем кнопку очистки...
                 CM_Clean.Enabled = true;
             }
-            // Указываем сколько МБ освободится при удалении всех файлов...
-            CM_Info.Text = String.Format(CoreLib.GetLocalizedString("PS_FrFInfo"), CoreLib.SclBytes(TotalSize));
         }
 
         private void frmCleaner_FormClosing(object sender, FormClosingEventArgs e)
