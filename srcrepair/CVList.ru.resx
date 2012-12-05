@@ -3192,4 +3192,16 @@
   <data name="tf_dingalingaling_repeat_delay" xml:space="preserve">
     <value>Задаёт задержку между проигрываниями звука попадания по противнику.</value>
   </data>
+  <data name="mat_viewportscale" xml:space="preserve">
+    <value>Задаёт ухудшение отрисовки мира. Допустимые значения из диапазона от 0.5 до 1.0 включительно. Для работы переменная mat_viewportupscale должна быть установлена в 1.</value>
+  </data>
+  <data name="mat_viewportupscale" xml:space="preserve">
+    <value>Включает / отключает обработку мира в уменьшенном разрешении. Значительно ухудшает качество картинки.</value>
+  </data>
+  <data name="mp_mapcycle_empty_timeout_seconds" xml:space="preserve">
+    <value>Задаёт таймер до автоматической смены карты на пустом сервере. 0 для отключения.</value>
+  </data>
+  <data name="sv_kick_players_with_cooldown" xml:space="preserve">
+    <value>0 - разрешить играть на сервере всем игрокам. 1 - кикать только игроков с серьёзными нарушениями. 2 - кикать также игроков, часто покидающих игровые серверы во время матча.</value>
+  </data>
 </root>

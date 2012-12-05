@@ -1815,4 +1815,7 @@
   <data name="mp_winlimit" xml:space="preserve">
     <value>Max score one team can reach before server changes maps.</value>
   </data>
+  <data name="sv_kick_players_with_cooldown" xml:space="preserve">
+    <value>0 - allow all players to play on game server. 1 - kick players with official assigned violation. 2 - kick players with any competitive cooldown.</value>
+  </data>
 </root>
