@@ -1629,12 +1629,12 @@ namespace srcrepair
                 case 2: // Linux...
                     {
                         // Задаём платформо-зависимые переменные...
-                        GV.SteamExecuttable = "Steam";
+                        GV.SteamExecuttable = "steam.sh";
                         GV.PlatformFriendlyName = "Linux";
-                        GV.SteamAppsFolderName = "steamapps";
+                        GV.SteamAppsFolderName = "SteamApps";
 
                         // Узнаем путь к Steam...
-                        string TmpPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), ".steam");
+                        string TmpPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), ".local", "share", "Steam");
                         if (File.Exists(Path.Combine(TmpPath, GV.SteamExecuttable))) { GV.FullSteamPath = TmpPath; } else { ValidateAndHandle(); }
                         
                         // Отключаем контролы, недоступные для данной платформы...
