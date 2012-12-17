@@ -33,6 +33,9 @@ using System.Security.Cryptography; // для расчёта хешей...
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Предоставляет методы для общих целей.
+    /// </summary>
     public sealed class CoreLib
     {
         /// <summary>
