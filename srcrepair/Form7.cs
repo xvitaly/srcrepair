@@ -170,7 +170,7 @@ namespace srcrepair
 
                 // Формируем счётчики...
                 int TotalFiles = DeleteQueue.Count;
-                int i = 0, j = 0;
+                int i = 1, j = 0;
 
                 // Удаляем файлы из очереди очистки...
                 foreach (string Fl in DeleteQueue)
