@@ -1753,7 +1753,8 @@ namespace srcrepair
             else
             {
                 // Логин не единственный, проверим предыдущий выбор...
-                LoginSel.Text = Properties.Settings.Default.LastLoginName;
+                int Al = LoginSel.Items.IndexOf(Properties.Settings.Default.LastLoginName);
+                LoginSel.SelectedIndex = Al != -1 ? Al : 0;
             }
 
             // Укажем путь к Steam на странице "Устранение проблем"...
@@ -2076,7 +2077,8 @@ namespace srcrepair
             else
             {
                 // Выберем последнюю использованную игру...
-                AppSelector.Text = Properties.Settings.Default.LastGameName;
+                int Ai = AppSelector.Items.IndexOf(Properties.Settings.Default.LastGameName);
+                AppSelector.SelectedIndex = Ai != -1 ? Ai : 0;
             }
         }
 
