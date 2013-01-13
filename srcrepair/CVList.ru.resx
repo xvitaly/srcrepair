@@ -3204,4 +3204,10 @@
   <data name="sv_kick_players_with_cooldown" xml:space="preserve">
     <value>0 - разрешить играть на сервере всем игрокам. 1 - кикать только игроков с серьёзными нарушениями. 2 - кикать также игроков, часто покидающих игровые серверы во время матча.</value>
   </data>
+  <data name="mp_warmup_end" xml:space="preserve">
+    <value>Принудительно остановить разминочный раунд.</value>
+  </data>
+  <data name="mp_warmup_start" xml:space="preserve">
+    <value>Запустить разминочный раунд.</value>
+  </data>
 </root>
