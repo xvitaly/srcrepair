@@ -32,66 +32,84 @@ namespace srcrepair
 {
     public partial class frmCleaner : Form
     {
-        public frmCleaner(string CD, string CM, string CI)
+        public frmCleaner(List<String> CD, string CI)
         {
             InitializeComponent();
-            CleanDir = CD;
-            CleanMask = CM;
+            CleanDirs = CD;
             CleanInfo = CI;
         }
 
-        private string CleanDir; // Здесь будем хранить каталог для очистки,...
-        private string CleanMask; // ...маску...
+        private List<String> CleanDirs; // Здесь будем хранить каталог для очистки,...
         private string CleanInfo; // ...и информацию о том, что будем очищать.
         private long TotalSize = 0; // Задаём и обнуляем счётчик общего размера удаляемых файлов...
 
         /// <summary>
         /// Ищет и добавляет файлы для удаления в таблицу модуля очистки.
         /// </summary>
-        /// <param name="CleanDir">Каталог для выполнения очистки</param>
-        /// <param name="CleanMask">Маска файлов для очистки</param>
-        private void DetectFilesForCleanup(string CleanDir, string CleanMask)
+        /// <param name="CleanDirs">Каталоги для выполнения очистки с маской имени</param>
+        private void DetectFilesForCleanup(List<String> CleanDirs)
         {
-            // Проверим чтобы каталог существовал...
-            if (Directory.Exists(CleanDir))
+            foreach (string DirMs in CleanDirs)
             {
-                // Запускаем...
-                try
+                // Извлечём имя каталога с полным путём и маску...
+                string CleanDir = Path.GetDirectoryName(DirMs);
+                string CleanMask = Path.GetFileName(DirMs);
+                
+                // Проверим чтобы каталог существовал...
+                if (Directory.Exists(CleanDir))
                 {
-                    // Открываем каталог...
-                    DirectoryInfo DInfo = new DirectoryInfo(CleanDir);
-                    // Считываем список файлов по заданной маске...
-                    FileInfo[] DirList = DInfo.GetFiles(CleanMask);
-                    // Начинаем обход массива...
-                    foreach (FileInfo DItem in DirList)
+                    // Запускаем...
+                    try
                     {
-                        // Обрабатываем найденное...
-                        ListViewItem LvItem = new ListViewItem(DItem.Name); // Добавляем...
-                        LvItem.Checked = true; // Помечаем флажком...
-                        LvItem.ToolTipText = Path.Combine(CleanDir, DItem.Name); // Указываем полный путь во всплывающую подсказку...
-                        LvItem.SubItems.Add(CoreLib.SclBytes(DItem.Length)); // Вычисляем размер...
-                        LvItem.SubItems.Add(CoreLib.WriteDateToString(DItem.LastWriteTime, false)); // Указываем дату изменения...
-                        if (CM_FTable.InvokeRequired)
+                        // Открываем каталог...
+                        DirectoryInfo DInfo = new DirectoryInfo(CleanDir);
+                        
+                        // Считываем список файлов по заданной маске...
+                        FileInfo[] DirList = DInfo.GetFiles(CleanMask);
+                        
+                        // Начинаем обход массива...
+                        foreach (FileInfo DItem in DirList)
                         {
-                            // Вставляем в таблицу...
-                            this.Invoke((MethodInvoker)delegate() { CM_FTable.Items.Add(LvItem); });
+                            // Обрабатываем найденное...
+                            ListViewItem LvItem = new ListViewItem(DItem.Name); // Добавляем...
+                            LvItem.Checked = true; // Помечаем флажком...
+                            LvItem.ToolTipText = Path.Combine(CleanDir, DItem.Name); // Указываем полный путь во всплывающую подсказку...
+                            LvItem.SubItems.Add(CoreLib.SclBytes(DItem.Length)); // Вычисляем размер...
+                            LvItem.SubItems.Add(CoreLib.WriteDateToString(DItem.LastWriteTime, false)); // Указываем дату изменения...
+                            
+                            if (CM_FTable.InvokeRequired)
+                            {
+                                // Вставляем в таблицу...
+                                this.Invoke((MethodInvoker)delegate() { CM_FTable.Items.Add(LvItem); });
+                            }
+                            
+                            TotalSize += DItem.Length; // Инкрементируем общий счётчик...
                         }
-                        TotalSize += DItem.Length; // Инкрементируем общий счётчик...
+                        
+                        // Если задана маска любых файлов, пройдём по подкаталогам рекурсивно...
+                        if (CleanMask == "*.*")
+                        {
+                            // Получим список подкаталогов в искомом и обойдём их все...
+                            List<String> SubDirs = new List<string>();
+                            
+                            // Обойдём вложенные каталоги...
+                            foreach (DirectoryInfo Dir in DInfo.GetDirectories())
+                            {
+                                SubDirs.Add(Path.Combine(Dir.FullName, "*.*"));
+                            }
+                            
+                            // Проверим наличие элементов для обхода...
+                            if (SubDirs.Count > 0)
+                            {
+                                // Вызовем функцию рекурсивно...
+                                DetectFilesForCleanup(SubDirs);
+                            }
+                        }
                     }
-                    // Если задана маска любых файлов, пройдём по подкаталогам рекурсивно...
-                    if (CleanMask == "*.*")
+                    catch
                     {
-                        // Получим список подкаталогов в искомом и обойдём их все...
-                        foreach (DirectoryInfo Dir in DInfo.GetDirectories())
-                        {
-                            // Вызовем функцию рекурсивно...
-                            DetectFilesForCleanup(Dir.FullName, CleanMask);
-                        }
+                        // Подавляем возможные сообщения...
                     }
-                }
-                catch
-                {
-                    // Подавляем возможные сообщения...
                 }
             }
         }
@@ -184,7 +202,10 @@ namespace srcrepair
                 {
                     try
                     {
-                        RemoveEmptyDirectories(CleanDir);
+                        foreach (string Dir in CleanDirs)
+                        {
+                            RemoveEmptyDirectories(Path.GetDirectoryName(Dir));
+                        }
                     }
                     catch (Exception Ex)
                     {
@@ -266,7 +287,7 @@ namespace srcrepair
         
         private void GttWrk_DoWork(object sender, DoWorkEventArgs e)
         {
-            DetectFilesForCleanup(CleanDir, CleanMask);
+            DetectFilesForCleanup(CleanDirs);
         }
 
         private void GttWrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

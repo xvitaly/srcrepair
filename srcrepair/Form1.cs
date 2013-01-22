@@ -279,9 +279,9 @@ namespace srcrepair
         /// <param name="Path">Путь к каталогу очистки</param>
         /// <param name="Mask">Маска файлов, подлежащих очистке</param>
         /// <param name="LText">Текст заголовка</param>
-        private void OpenCleanupWindow(string Path, string Mask, string LText)
+        private void OpenCleanupWindow(List<String> Paths, string LText)
         {
-            frmCleaner FCl = new frmCleaner(Path, Mask, LText);
+            frmCleaner FCl = new frmCleaner(Paths, LText);
             FCl.ShowDialog();
         }
 
@@ -2461,43 +2461,57 @@ namespace srcrepair
         private void PS_RemCustMaps_Click(object sender, EventArgs e)
         {
             // Удаляем кастомные (нестандартные) карты...
-            OpenCleanupWindow(Path.Combine(GV.FullGamePath, "maps"), "*.bsp", ((Button)sender).Text.ToLower());
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "maps", "*.bsp"));
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemDnlCache_Click(object sender, EventArgs e)
         {
             // Удаляем кэш загрузок...
-            OpenCleanupWindow(Path.Combine(GV.FullGamePath, "downloads"), "*.*", ((Button)sender).Text.ToLower());
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "downloads", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemOldSpray_Click(object sender, EventArgs e)
         {
             // Удаляем кэш спреев...
-            OpenCleanupWindow(Path.Combine(GV.FullGamePath, "materials", "temp"), "*.vtf", ((Button)sender).Text.ToLower());
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "materials", "temp", "*.vtf"));
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemGraphCache_Click(object sender, EventArgs e)
         {
             // Удаляем графический кэш...
-            OpenCleanupWindow(Path.Combine(GV.FullGamePath, "maps", "graphs"), "*.*", ((Button)sender).Text.ToLower());
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "maps", "graphs", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemSoundCache_Click(object sender, EventArgs e)
         {
             // Удаляем звуковой кэш...
-            OpenCleanupWindow(Path.Combine(GV.FullGamePath, "maps", "soundcache"), "*.*", ((Button)sender).Text.ToLower());
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "maps", "soundcache", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemScreenShots_Click(object sender, EventArgs e)
         {
             // Удаляем все скриншоты...
-            OpenCleanupWindow(Path.Combine(GV.FullGamePath, "screenshots"), "*.*", ((Button)sender).Text.ToLower());
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "screenshots", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemDemos_Click(object sender, EventArgs e)
         {
             // Удаляем все записанные демки...
-            OpenCleanupWindow(GV.FullGamePath, "*.dem", ((Button)sender).Text.ToLower());
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "*.dem"));
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemGraphOpts_Click(object sender, EventArgs e)
@@ -2609,7 +2623,9 @@ namespace srcrepair
             {
                 if (GV.IsGCFApp)
                 {
-                    OpenCleanupWindow(GV.GamePath, "*.*", ((Button)sender).Text.ToLower());
+                    List<String> CleanDirs = new List<string>();
+                    CleanDirs.Add(Path.Combine(GV.GamePath, "*.*"));
+                    OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
                 }
             }
             else
@@ -3225,25 +3241,33 @@ namespace srcrepair
         private void PS_RemModels_Click(object sender, EventArgs e)
         {
             // Удаляем все кастомные модели...
-            OpenCleanupWindow(Path.Combine(GV.FullGamePath, "models"), "*.*", ((Button)sender).Text.ToLower());
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "models", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemReplays_Click(object sender, EventArgs e)
         {
             // Удаляем все реплеи...
-            OpenCleanupWindow(Path.Combine(GV.FullGamePath, "replay"), "*.*", ((Button)sender).Text.ToLower());
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "replay", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemTextures_Click(object sender, EventArgs e)
         {
             // Удаляем все кастомные текстуры...
-            OpenCleanupWindow(Path.Combine(GV.FullGamePath, "materials"), "*.*", ((Button)sender).Text.ToLower());
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "materials", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemSecndCache_Click(object sender, EventArgs e)
         {
             // Удаляем содержимое вторичного кэша загрузок...
-            OpenCleanupWindow(Path.Combine(GV.FullGamePath, "cache"), "*.*", ((Button)sender).Text.ToLower());
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "cache", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
         private void SB_App_DoubleClick(object sender, EventArgs e)
@@ -3267,19 +3291,25 @@ namespace srcrepair
         private void MNUExtClnCache_Click(object sender, EventArgs e)
         {
             // Очистим HTML-кэш внутреннего браузера Steam...
-            OpenCleanupWindow(Path.Combine(GV.FullSteamPath, "config", "htmlcache"), "*.*", ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullSteamPath, "config", "htmlcache", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
 
         private void MNUExtClnOverlay_Click(object sender, EventArgs e)
         {
             // Очистим HTML-кэш браузера оверлея...
-            OpenCleanupWindow(Path.Combine(GV.FullSteamPath, "config", "overlayhtmlcache"), "*.*", ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullSteamPath, "config", "overlayhtmlcache", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
 
         private void MNUExtClnOverlayHTCache_Click(object sender, EventArgs e)
         {
             // Очистим HTTP-кэш...
-            OpenCleanupWindow(Path.Combine(GV.FullSteamPath, "appcache", "httpcache"), "*.*", ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullSteamPath, "appcache", "httpcache", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
 
         private void CE_ManualBackUpCfg_Click(object sender, EventArgs e)
@@ -3301,37 +3331,49 @@ namespace srcrepair
         private void MNUExtClnLogs_Click(object sender, EventArgs e)
         {
             // Очистим логи клиента Steam...
-            OpenCleanupWindow(Path.Combine(GV.FullSteamPath, "logs"), "*.*", ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullSteamPath, "logs", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
 
         private void MNUExtClnGIcons_Click(object sender, EventArgs e)
         {
             // Очистим кэшированные значки игр...
-            OpenCleanupWindow(Path.Combine(GV.FullSteamPath, "steam", "games"), "*.*", ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullSteamPath, "steam", "games", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
 
         private void MNUExtClnGameStats_Click(object sender, EventArgs e)
         {
             // Очистим кэшированную статистику игр...
-            OpenCleanupWindow(Path.Combine(GV.FullSteamPath, "appcache", "stats"), "*.*", ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullSteamPath, "appcache", "stats", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
 
         private void MNUExtClnErrDumps_Click(object sender, EventArgs e)
         {
             // Очистим краш-дампы...
-            OpenCleanupWindow(Path.Combine(GV.FullSteamPath, "dumps"), "*.*", ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullSteamPath, "dumps", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
 
         private void MNUExtClnCloudLocal_Click(object sender, EventArgs e)
         {
             // Очистим локальное зеркало Cloud...
-            OpenCleanupWindow(Path.Combine(GV.FullSteamPath, "userdata"), "*.*", ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullSteamPath, "userdata", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
 
         private void PS_RemSounds_Click(object sender, EventArgs e)
         {
             // Удаляем кастомные звуки...
-            OpenCleanupWindow(Path.Combine(GV.FullGamePath, "sound"), "*.*", ((Button)sender).Text.ToLower());
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "sound", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
         private void MNUUpGameDB_Click(object sender, EventArgs e)
