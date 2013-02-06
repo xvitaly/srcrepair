@@ -20,3 +20,4 @@ ShcReadmeFile=readme.txt
 InstExpFeatures=Включить экспериментальные функции
 RepAppErrText=Сообщить об ошибке в программе
 InstDebugInfo=Установить отладочную информацию
+ShcMnRepGen=Генератор отчётов

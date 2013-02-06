@@ -20,3 +20,4 @@ ShcReadmeFile=readme_en.txt
 InstExpFeatures=Enable experimental features
 RepAppErrText=Report bug
 InstDebugInfo=Install debug information
+ShcMnRepGen=Report generator
