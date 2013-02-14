@@ -1593,16 +1593,9 @@ namespace srcrepair
             GV.RunningPlatform = CoreLib.DetectRunningOS();
 
             // Укажем путь к пользовательским данным и создадим если не существует...
-            if (Properties.Settings.Default.IsPortable) // Проверим на Portable-версию...
-            {
-                // Portable-версия. Будем хранить файлы бэкапов и конфигов в каталоге приложения...
-                GV.AppUserDir = Path.Combine(GV.FullAppPath, "portable");
-            }
-            else
-            {
-                // Обычная версия. Будем использовать каталог %APPDATA% пользователя...
-                GV.AppUserDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), GV.AppName);
-            }
+            GV.AppUserDir = Properties.Settings.Default.IsPortable ? Path.Combine(GV.FullAppPath, "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), GV.AppName);
+            
+            // Проверим существование каталога пользовательских данных и при необходимости создадим...
             if (!(Directory.Exists(GV.AppUserDir)))
             {
                 Directory.CreateDirectory(GV.AppUserDir);
