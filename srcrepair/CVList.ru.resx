@@ -3210,4 +3210,10 @@
   <data name="mp_warmup_start" xml:space="preserve">
     <value>Запустить разминочный раунд.</value>
   </data>
+  <data name="mp_death_drop_c4" xml:space="preserve">
+    <value>Разрешает / запрещает сброс C4 при смерти её носителя.</value>
+  </data>
+  <data name="sv_workshop_allow_other_maps" xml:space="preserve">
+    <value>Разрешает / запрещает загрузку на выделенном сервере кастомных карт из Steam Workshop.</value>
+  </data>
 </root>
