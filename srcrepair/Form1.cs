@@ -1488,6 +1488,175 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Запускает обнаружение платформы запуска приложения и заполнения платформо-зависимых путей.
+        /// </summary>
+        /// <param name="PlatformID">Код платформы запуска</param>
+        private void DetectPlatform(int PlatformID)
+        {
+            switch (PlatformID)
+            {
+                case 1: // MacOS...
+                    {
+                        // Задаём платформо-зависимые переменные...
+                        GV.SteamExecuttable = "Steam";
+                        GV.PlatformFriendlyName = "MacOS";
+                        GV.SteamAppsFolderName = "SteamApps";
+
+                        // Узнаем путь к Steam...
+                        string TmpPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Library", "Application Support", "Steam");
+                        if (File.Exists(Path.Combine(TmpPath, GV.SteamExecuttable))) { GV.FullSteamPath = TmpPath; } else { ValidateAndHandle(); }
+
+                        // Отключаем контролы, недоступные для данной платформы...
+                        ChangePrvControlState(false);
+                    }
+                    break;
+                case 2: // Linux...
+                    {
+                        // Задаём платформо-зависимые переменные...
+                        GV.SteamExecuttable = "steam.sh";
+                        GV.PlatformFriendlyName = "Linux";
+                        GV.SteamAppsFolderName = "SteamApps";
+
+                        // Узнаем путь к Steam...
+                        string TmpPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), ".local", "share", "Steam");
+                        if (File.Exists(Path.Combine(TmpPath, GV.SteamExecuttable))) { GV.FullSteamPath = TmpPath; } else { ValidateAndHandle(); }
+
+                        // Отключаем контролы, недоступные для данной платформы...
+                        ChangePrvControlState(false);
+                    }
+                    break;
+                default: // Windows
+                    {
+                        // Задаём платформо-зависимые переменные...
+                        GV.SteamExecuttable = "Steam.exe";
+                        GV.PlatformFriendlyName = "Windows";
+                        GV.SteamAppsFolderName = "steamapps";
+
+                        // Проверяем, запущена ли программа с правами администратора...
+                        if (!(CoreLib.IsCurrentUserAdmin()))
+                        {
+                            // Программа запущена с правами пользователя, поэтому принимаем меры...
+                            // Выводим сообщение об этом...
+                            if (Properties.Settings.Default.AllowNonAdmDialog)
+                            {
+                                MessageBox.Show(CoreLib.GetLocalizedString("AppLaunchedNotAdmin"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                Properties.Settings.Default.AllowNonAdmDialog = false;
+                            }
+                            // Блокируем контролы, требующие для своей работы прав админа...
+                            ChangePrvControlState(false);
+                        }
+
+                        // Узнаем путь к установленному клиенту Steam...
+                        try { GV.FullSteamPath = CoreLib.GetSteamPath(); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); ValidateAndHandle(); }
+                    }
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Обнаруживает логины пользователей Steam в его каталоге установки.
+        /// </summary>
+        /// <param name="SteamPath">Каталог установки Steam</param>
+        /// <param name="StADirName">Внутренее платформозависимое имя каталога SteamApps</param>
+        private void DetectLogins(string SteamPath, string StADirName)
+        {
+            try
+            {
+                // Создаём объект DirInfo...
+                DirectoryInfo DInfo = new DirectoryInfo(Path.Combine(SteamPath, StADirName));
+                // Получаем список директорий из текущего...
+                DirectoryInfo[] DirList = DInfo.GetDirectories();
+                // Обходим созданный массив в поиске нужных нам логинов...
+                foreach (DirectoryInfo DItem in DirList)
+                {
+                    // Фильтруем известные каталоги...
+                    if (!(GV.InternalDirs.Contains(DItem.Name)))
+                    {
+                        // Добавляем найденный логин в список ComboBox...
+                        LoginSel.Items.Add((string)DItem.Name);
+                    }
+                }
+            }
+            catch (Exception Ex)
+            {
+                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppNoSTADetected"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                Environment.Exit(6);
+            }
+        }
+
+        /// <summary>
+        /// Выполняет определение и вывод названия файловой системы на диске установки клиента Steam.
+        /// </summary>
+        /// <param name="SteamPath">Каталог установки Steam</param>
+        private void DetectFS(string SteamPath)
+        {
+            try
+            {
+                PS_OSDrive.Text = String.Format(PS_OSDrive.Text, CoreLib.DetectDriveFileSystem(Path.GetPathRoot(SteamPath)));
+            }
+            catch (Exception Ex)
+            {
+                PS_OSDrive.Text = String.Format(PS_OSDrive.Text, "Unknown");
+                CoreLib.WriteStringToLog(Ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Проверяет количество найденных логинов Steam и выполняет нужные действия.
+        /// </summary>
+        /// <param name="LoginCount">Количество найденных логинов</param>
+        private void CheckLogins(int LoginCount)
+        {
+            switch (LoginCount)
+            {
+                case 0:
+                    {
+                        // Логинов не было найдено. Выведем сообщение...
+                        MessageBox.Show(CoreLib.GetLocalizedString("SteamNoLoginsDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        // Запишем в лог...
+                        CoreLib.WriteStringToLog("No logins detected in SteamApps directory.");
+                        // Завершаем работу приложения...
+                        Environment.Exit(3);
+                    }
+                    break;
+                case 1:
+                    {
+                        // Да, единственный. Выберем его...
+                        LoginSel.SelectedIndex = 0;
+                        if (AppSelector.SelectedIndex == -1)
+                        {
+                            // Заменим содержимое строки состояния на требование выбора игры...
+                            SB_Status.Text = CoreLib.GetLocalizedString("StatusSApp");
+                        }
+                    }
+                    break;
+                default:
+                    {
+                        // Логин не единственный, проверим предыдущий выбор...
+                        int Al = LoginSel.Items.IndexOf(Properties.Settings.Default.LastLoginName);
+                        LoginSel.SelectedIndex = Al != -1 ? Al : 0;
+                    }
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Запускает проверку на наличие запрещённых символов в пути установки клиента Steam.
+        /// </summary>
+        /// <param name="SteamPath">Каталог установки Steam</param>
+        private void CheckSymbols(string SteamPath)
+        {
+            if (!(CoreLib.CheckNonASCII(SteamPath)))
+            {
+                // Запрещённые символы найдены!
+                PS_PathDetector.Text = CoreLib.GetLocalizedString("SteamNonASCIITitle");
+                PS_PathDetector.ForeColor = Color.Red;
+                MessageBox.Show(CoreLib.GetLocalizedString("SteamNonASCIIDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CoreLib.WriteStringToLog(String.Format("NonASCII characters detected. Steam path: {0}.", GV.FullSteamPath));
+            }
+        }
+
         #endregion
 
         #region Internal Workers
@@ -1602,64 +1771,7 @@ namespace srcrepair
             }
 
             // Начинаем платформо-зависимые процедуры...
-            switch (GV.RunningPlatform)
-            {
-                case 1: // MacOS...
-                    {
-                        // Задаём платформо-зависимые переменные...
-                        GV.SteamExecuttable = "Steam";
-                        GV.PlatformFriendlyName = "MacOS";
-                        GV.SteamAppsFolderName = "SteamApps";
-
-                        // Узнаем путь к Steam...
-                        string TmpPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Library", "Application Support", "Steam");
-                        if (File.Exists(Path.Combine(TmpPath, GV.SteamExecuttable))) { GV.FullSteamPath = TmpPath; } else { ValidateAndHandle(); }
-
-                        // Отключаем контролы, недоступные для данной платформы...
-                        ChangePrvControlState(false);
-                    }
-                    break;
-                case 2: // Linux...
-                    {
-                        // Задаём платформо-зависимые переменные...
-                        GV.SteamExecuttable = "steam.sh";
-                        GV.PlatformFriendlyName = "Linux";
-                        GV.SteamAppsFolderName = "SteamApps";
-
-                        // Узнаем путь к Steam...
-                        string TmpPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), ".local", "share", "Steam");
-                        if (File.Exists(Path.Combine(TmpPath, GV.SteamExecuttable))) { GV.FullSteamPath = TmpPath; } else { ValidateAndHandle(); }
-                        
-                        // Отключаем контролы, недоступные для данной платформы...
-                        ChangePrvControlState(false);
-                    }
-                    break;
-                default: // Windows
-                    {
-                        // Задаём платформо-зависимые переменные...
-                        GV.SteamExecuttable = "Steam.exe";
-                        GV.PlatformFriendlyName = "Windows";
-                        GV.SteamAppsFolderName = "steamapps";
-
-                        // Проверяем, запущена ли программа с правами администратора...
-                        if (!(CoreLib.IsCurrentUserAdmin()))
-                        {
-                            // Программа запущена с правами пользователя, поэтому принимаем меры...
-                            // Выводим сообщение об этом...
-                            if (Properties.Settings.Default.AllowNonAdmDialog)
-                            {
-                                MessageBox.Show(CoreLib.GetLocalizedString("AppLaunchedNotAdmin"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                Properties.Settings.Default.AllowNonAdmDialog = false;
-                            }
-                            // Блокируем контролы, требующие для своей работы прав админа...
-                            ChangePrvControlState(false);
-                        }
-
-                        // Узнаем путь к установленному клиенту Steam...
-                        try { GV.FullSteamPath = CoreLib.GetSteamPath(); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); ValidateAndHandle(); }
-                    }
-                    break;
-            }
+            DetectPlatform(GV.RunningPlatform);
 
             // При работе отладочной версии запишем в лог путь к найденному Steam...
             #if DEBUG
@@ -1693,86 +1805,22 @@ namespace srcrepair
             CheckSafeClnStatus();
 
             // Определим логины пользователей Steam на данном ПК...
-            try
-            {
-                // Создаём объект DirInfo...
-                DirectoryInfo DInfo = new DirectoryInfo(Path.Combine(GV.FullSteamPath, GV.SteamAppsFolderName));
-                // Получаем список директорий из текущего...
-                DirectoryInfo[] DirList = DInfo.GetDirectories();
-                // Обходим созданный массив в поиске нужных нам логинов...
-                foreach (DirectoryInfo DItem in DirList)
-                {
-                    // Фильтруем известные каталоги...
-                    if (!(GV.InternalDirs.Contains(DItem.Name)))
-                    {
-                        // Добавляем найденный логин в список ComboBox...
-                        LoginSel.Items.Add((string)DItem.Name);
-                    }
-                }
-            }
-            catch (Exception Ex)
-            {
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppNoSTADetected"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
-                Environment.Exit(6);
-            }
+            DetectLogins(GV.FullSteamPath, GV.SteamAppsFolderName);
 
             // Проверим, были ли логины добавлены в список...
-            if (LoginSel.Items.Count == 0)
-            {
-                // Логинов не было найдено. Выведем сообщение...
-                MessageBox.Show(CoreLib.GetLocalizedString("SteamNoLoginsDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                // Запишем в лог...
-                CoreLib.WriteStringToLog("No logins detected in SteamApps directory.");
-
-                // Завершаем работу приложения...
-                Environment.Exit(3);
-            }
+            CheckLogins(LoginSel.Items.Count);
 
             // Выводим сообщение в строку статуса...
             SB_Status.Text = CoreLib.GetLocalizedString("StatusSLogin");
-
-            // Проверяем единственный ли логин Steam на этом ПК...
-            if (LoginSel.Items.Count == 1)
-            {
-                // Да, единственный. Выберем его...
-                LoginSel.SelectedIndex = 0;
-                if (AppSelector.SelectedIndex == -1)
-                {
-                    // Заменим содержимое строки состояния на требование выбора игры...
-                    SB_Status.Text = CoreLib.GetLocalizedString("StatusSApp");
-                }
-            }
-            else
-            {
-                // Логин не единственный, проверим предыдущий выбор...
-                int Al = LoginSel.Items.IndexOf(Properties.Settings.Default.LastLoginName);
-                LoginSel.SelectedIndex = Al != -1 ? Al : 0;
-            }
 
             // Укажем путь к Steam на странице "Устранение проблем"...
             PS_StPath.Text = String.Format(PS_StPath.Text, GV.FullSteamPath);
             
             // Проверим на наличие запрещённых символов в пути к установленному клиенту Steam...
-            if (!(CoreLib.CheckNonASCII(GV.FullSteamPath)))
-            {
-                // Запрещённые символы найдены!
-                PS_PathDetector.Text = CoreLib.GetLocalizedString("SteamNonASCIITitle");
-                PS_PathDetector.ForeColor = Color.Red;
-                MessageBox.Show(CoreLib.GetLocalizedString("SteamNonASCIIDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                CoreLib.WriteStringToLog(String.Format("NonASCII characters detected. Steam path: {0}.", GV.FullSteamPath));
-            }
+            CheckSymbols(GV.FullSteamPath);
 
-            try
-            {
-                // Распознаем файловую систему на диске со Steam...
-                PS_OSDrive.Text = String.Format(PS_OSDrive.Text, CoreLib.DetectDriveFileSystem(Path.GetPathRoot(GV.FullSteamPath)));
-            }
-            catch (Exception Ex)
-            {
-                PS_OSDrive.Text = String.Format(PS_OSDrive.Text, "Unknown");
-                CoreLib.WriteStringToLog(Ex.Message);
-            }
+            // Распознаем файловую систему на диске со Steam...
+            DetectFS(GV.FullSteamPath);
 
             try
             {
