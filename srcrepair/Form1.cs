@@ -1642,6 +1642,48 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Проверяет количество найденных установленных игр и выполняет нужные действия.
+        /// </summary>
+        /// <param name="LoginCount">Количество найденных игр</param>
+        private void CheckGames(int GamesCount)
+        {
+            switch (GamesCount)
+            {
+                case 0:
+                    {
+                        // Запишем в лог...
+                        CoreLib.WriteStringToLog(String.Format("No games detected. Steam located as: {0}. User login: {1}.", GV.FullSteamPath, LoginSel.Text));
+                        if (LoginSel.Items.Count > 1)
+                        {
+                            MessageBox.Show(CoreLib.GetLocalizedString("AppChangeLogin"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            // Нет, не нашлись, выведем сообщение...
+                            MessageBox.Show(CoreLib.GetLocalizedString("AppNoGamesDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            // Завершим работу приложения...
+                            Environment.Exit(11);
+                        }
+                    }
+                    break;
+                case 1:
+                    {
+                        // При наличии единственной игры в списке, выберем её автоматически...
+                        AppSelector.SelectedIndex = 0;
+                        SB_Status.Text = CoreLib.GetLocalizedString("StatusNormal");
+                    }
+                    break;
+                default:
+                    {
+                        // Выберем последнюю использованную игру...
+                        int Ai = AppSelector.Items.IndexOf(Properties.Settings.Default.LastGameName);
+                        AppSelector.SelectedIndex = Ai != -1 ? Ai : 0;
+                    }
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Запускает проверку на наличие запрещённых символов в пути установки клиента Steam.
         /// </summary>
         /// <param name="SteamPath">Каталог установки Steam</param>
@@ -2092,35 +2134,7 @@ namespace srcrepair
             }
 
             // Проверим нашлись ли игры...
-            if (AppSelector.Items.Count == 0)
-            {
-                // Запишем в лог...
-                CoreLib.WriteStringToLog(String.Format("No games detected. Steam located as: {0}. User login: {1}.", GV.FullSteamPath, LoginSel.Text));
-                if (LoginSel.Items.Count > 1)
-                {
-                    MessageBox.Show(CoreLib.GetLocalizedString("AppChangeLogin"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    // Нет, не нашлись, выведем сообщение...
-                    MessageBox.Show(CoreLib.GetLocalizedString("AppNoGamesDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    // Завершим работу приложения...
-                    Environment.Exit(11);
-                }
-            }
-
-            // При наличии единственной игры в списке, выберем её автоматически...
-            if (AppSelector.Items.Count == 1)
-            {
-                AppSelector.SelectedIndex = 0;
-                SB_Status.Text = CoreLib.GetLocalizedString("StatusNormal");
-            }
-            else
-            {
-                // Выберем последнюю использованную игру...
-                int Ai = AppSelector.Items.IndexOf(Properties.Settings.Default.LastGameName);
-                AppSelector.SelectedIndex = Ai != -1 ? Ai : 0;
-            }
+            CheckGames(AppSelector.Items.Count);
         }
 
         private void GT_Maximum_Graphics_Click(object sender, EventArgs e)
