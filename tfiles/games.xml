@@ -1,399 +1,311 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Games>
   <Game Name="Team Fortress 2">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>team fortress 2</DirName>
     <SmallName>tf</SmallName>
     <VFDir>tf</VFDir>
     <SID>440</SID>
-    <IsMP>1</IsMP>
   </Game>
   <Game Name="Team Fortress 2 Beta">
-    <Disabled>0</Disabled>
     <HasVF>0</HasVF>
     <DirName>team fortress 2 beta</DirName>
     <SmallName>tf_beta</SmallName>
     <VFDir>tf_beta</VFDir>
     <SID>520</SID>
-    <IsMP>1</IsMP>
   </Game>
   <Game Name="Counter-Strike: Source">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>counter-strike source</DirName>
     <SmallName>cstrike</SmallName>
     <VFDir>cstrike</VFDir>
     <SID>240</SID>
-    <IsMP>1</IsMP>
   </Game>
   <Game Name="Day of Defeat: Source">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>day of defeat source</DirName>
     <SmallName>dod</SmallName>
     <VFDir>dod</VFDir>
     <SID>300</SID>
-    <IsMP>1</IsMP>
   </Game>
   <Game Name="Half-Life 2: Deathmatch">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>half-life 2 deathmatch</DirName>
     <SmallName>hl2mp</SmallName>
     <VFDir>hl2mp</VFDir>
     <SID>320</SID>
-    <IsMP>1</IsMP>
   </Game>
   <Game Name="Half-Life 2">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>half-life 2</DirName>
     <SmallName>hl2</SmallName>
     <VFDir>hl2</VFDir>
     <SID>220</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Half-Life 2: Episode One">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>half-life 2 episode one</DirName>
     <SmallName>episodic</SmallName>
     <VFDir>episodic</VFDir>
     <SID>380</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Half-Life 2: Episode Two">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>half-life 2 episode two</DirName>
     <SmallName>ep2</SmallName>
     <VFDir>ep2</VFDir>
     <SID>420</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Half-Life 2: Lost Coast">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>half-life 2 lostcoast</DirName>
     <SmallName>lostcoast</SmallName>
     <VFDir>lostcoast</VFDir>
     <SID>340</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Portal">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>portal</DirName>
     <SmallName>portal</SmallName>
     <VFDir>portal</VFDir>
     <SID>400</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Garry's Mod">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>garrysmod</DirName>
     <SmallName>garrysmod</SmallName>
     <VFDir>garrysmod</VFDir>
     <SID>4000</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Age of Chivalry">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>age of chivalry</DirName>
     <SmallName>ageofchivalry</SmallName>
     <VFDir>ageofchivalry</VFDir>
     <SID>17510</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="D.I.P.R.I.P.: Warm Up">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>diprip warm up</DirName>
     <SmallName>diprip</SmallName>
     <VFDir>diprip</VFDir>
     <SID>17530</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Dystopia">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>dystopia</DirName>
     <SmallName>Dystopia</SmallName>
     <VFDir>Dystopia</VFDir>
     <SID>17580</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Insurgency">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>insurgency</DirName>
     <SmallName>insurgency</SmallName>
     <VFDir>insurgency</VFDir>
     <SID>17700</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Pirates, Vikings, and Knights II">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>pirates, vikings, and knights ii</DirName>
     <SmallName>pvkii</SmallName>
     <VFDir>pvkii</VFDir>
     <SID>17570</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Smashball">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>smashball</DirName>
     <SmallName>Smashball</SmallName>
     <VFDir>Smashball</VFDir>
     <SID>17730</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Synergy">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>synergy</DirName>
     <SmallName>synergy</SmallName>
     <VFDir>synergy</VFDir>
     <SID>17520</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Zombie Panic! Source">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>zombie panic! source</DirName>
     <SmallName>zps</SmallName>
     <VFDir>zps</VFDir>
     <SID>17500</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Half-Life: Source">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>half-life source</DirName>
     <SmallName>hl1</SmallName>
     <VFDir>hl1</VFDir>
     <SID>280</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Half-Life Deathmatch: Source">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>half-life deathmatch source</DirName>
     <SmallName>hl1mp</SmallName>
     <VFDir>hl1mp</VFDir>
     <SID>360</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Left 4 Dead">
-    <Disabled>0</Disabled>
     <HasVF>1</HasVF>
     <DirName>left 4 dead</DirName>
     <SmallName>left4dead</SmallName>
     <VFDir>left4dead</VFDir>
     <SID>500</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Left 4 Dead 2">
-    <Disabled>0</Disabled>
     <HasVF>1</HasVF>
     <DirName>left 4 dead 2</DirName>
     <SmallName>left4dead2</SmallName>
     <VFDir>left4dead2</VFDir>
     <SID>550</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Alien Swarm">
-    <Disabled>0</Disabled>
     <HasVF>1</HasVF>
     <DirName>alien swarm</DirName>
     <SmallName>swarm</SmallName>
     <VFDir>swarm</VFDir>
     <SID>630</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Portal 2">
-    <Disabled>0</Disabled>
     <HasVF>1</HasVF>
     <DirName>portal 2</DirName>
     <SmallName>portal2</SmallName>
     <VFDir>update</VFDir>
     <SID>620</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Dota 2">
-    <Disabled>0</Disabled>
     <HasVF>1</HasVF>
     <DirName>dota 2</DirName>
     <SmallName>dota</SmallName>
     <VFDir>dota</VFDir>
     <SID>570</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Dota 2 Beta">
-    <Disabled>0</Disabled>
     <HasVF>1</HasVF>
     <DirName>dota 2 beta</DirName>
     <SmallName>dota</SmallName>
     <VFDir>dota</VFDir>
     <SID>570</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Dota 2 Test">
-    <Disabled>0</Disabled>
     <HasVF>1</HasVF>
     <DirName>dota 2 test</DirName>
     <SmallName>dota</SmallName>
     <VFDir>dota</VFDir>
     <SID>570</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Counter-Strike Global Offensive">
-    <Disabled>0</Disabled>
     <HasVF>1</HasVF>
     <DirName>counter-strike global offensive</DirName>
     <SmallName>csgo</SmallName>
     <VFDir>csgo</VFDir>
     <SID>730</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Nuclear Dawn">
-    <Disabled>0</Disabled>
     <HasVF>1</HasVF>
     <DirName>nuclear dawn</DirName>
     <SmallName>nucleardawn</SmallName>
     <VFDir>nucleardawn</VFDir>
     <SID>17710</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Postal III">
-    <Disabled>0</Disabled>
     <HasVF>1</HasVF>
     <DirName>postal iii</DirName>
     <SmallName>p3</SmallName>
     <VFDir>p3</VFDir>
     <SID>10220</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="E.Y.E.: Divine Cybermancy">
-    <Disabled>0</Disabled>
     <HasVF>1</HasVF>
     <DirName>eye</DirName>
     <SmallName>EYE</SmallName>
     <VFDir>EYE</VFDir>
     <SID>91700</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Dark Messiah MM SP">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>dark messiah might and magic single player</DirName>
     <SmallName>mm</SmallName>
     <VFDir>mm</VFDir>
     <SID>2100</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Dark Messiah MM MP">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>dark messiah might and magic multiplayer</DirName>
     <SmallName>mm</SmallName>
     <VFDir>mm</VFDir>
     <SID>2100</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="The Ship">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>the ship</DirName>
     <SmallName>ship</SmallName>
     <VFDir>ship</VFDir>
     <SID>2400</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="The Ship Singleplayer">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>the ship single player</DirName>
     <SmallName>ship</SmallName>
     <VFDir>ship</VFDir>
     <SID>2420</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="SiN Episodes: Emergence">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>sin episodes emergence</DirName>
     <SmallName>SE1</SmallName>
     <VFDir>SE1</VFDir>
     <SID>1300</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Vampire: The Masquerade - Bloodlines">
-    <Disabled>0</Disabled>
     <HasVF>1</HasVF>
     <DirName>vampire the masquerade - bloodlines</DirName>
     <SmallName>vampire</SmallName>
     <VFDir>vampire</VFDir>
     <SID>2600</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Zeno Clash">
-    <Disabled>0</Disabled>
     <HasVF>1</HasVF>
     <DirName>zenoclash</DirName>
     <SmallName>zenozoik</SmallName>
     <VFDir>zenozoik</VFDir>
     <SID>22200</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Dear Esther">
-    <Disabled>0</Disabled>
     <HasVF>1</HasVF>
     <DirName>dear esther</DirName>
     <SmallName>dearesther</SmallName>
     <VFDir>dearesther</VFDir>
     <SID>203810</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Eternal Silence">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>eternal-silence</DirName>
     <SmallName>esmod</SmallName>
     <VFDir>esmod</VFDir>
     <SID>17550</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Vindictus">
-    <Disabled>0</Disabled>
     <HasVF>1</HasVF>
     <DirName>Vindictus</DirName>
     <SmallName>en-US</SmallName>
     <VFDir>en-US</VFDir>
     <SID>212160</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Bloody Good Time">
-    <Disabled>1</Disabled>
     <HasVF>0</HasVF>
     <DirName>bloody good time</DirName>
     <SmallName>pm</SmallName>
     <VFDir>pm</VFDir>
     <SID>2450</SID>
-    <IsMP>0</IsMP>
   </Game>
   <Game Name="Revelations 2012">
-    <Disabled>0</Disabled>
     <HasVF>1</HasVF>
     <DirName>revelations 2012</DirName>
     <SmallName>revelations</SmallName>
     <VFDir>revelations</VFDir>
     <SID>201070</SID>
-    <IsMP>0</IsMP>
   </Game>
 </Games>
