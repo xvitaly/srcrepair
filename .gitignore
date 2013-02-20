@@ -64,4 +64,4 @@ packages/
 *.testsettings 
 
 # Other
-/cfgs
+/srcrepair/cfgs
