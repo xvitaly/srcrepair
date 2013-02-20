@@ -62,3 +62,6 @@ packages/
 
 #Test files
 *.testsettings 
+
+# Other
+/cfgs
