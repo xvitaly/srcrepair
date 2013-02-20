@@ -1913,7 +1913,7 @@ namespace srcrepair
                         GV.GameInternalID = XMLD.GetElementsByTagName("SID")[i].InnerText;
                         GV.GameBLEnabled = XMLD.GetElementsByTagName("IsMP")[i].InnerText;
                         GV.ConfDir = XMLD.GetElementsByTagName("VFDir")[i].InnerText;
-                        GV.IsGCFApp = false;
+                        GV.IsUsingVideoFile = XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1";
                         break;
                     }
                 }
@@ -1939,29 +1939,13 @@ namespace srcrepair
             // Управляем доступностью модуля создания отчётов для Техподдержки...
             MNUReportBuilder.Enabled = ((GV.RunningPlatform == 0) && (AppSelector.Items.Count > 0) && (AppSelector.SelectedIndex != -1));
 
-            if (GV.IsGCFApp)
-            {
-                // Включим модули очистки...
-                PS_ResetSettings.Enabled = true;
-                EnableCleanButtons(true);
+            // Отключим модули очистки...
+            PS_ResetSettings.Enabled = false;
+            if (!(Properties.Settings.Default.AllowNCFUnsafeOps)) { EnableCleanButtons(false); }
 
-                if (GV.RunningPlatform == 0)
-                {
-                    // Начинаем заполнять таблицу...
-                    ReadGCFGameSettings(GV.SmallAppName);
-                }
-                else
-                {
-                    // GCF-игра, запущенная в Linux или MacOS, поэтому читаем файл с настройками видео...
-                    if (File.Exists(GV.VideoCfgFile)) { ReadNCFGameSettings(GV.VideoCfgFile); } else { NullGraphOptions(); }
-                }
-            }
-            else
+            // Считаем настройки графики...
+            if (GV.IsUsingVideoFile || (GV.RunningPlatform != 0))
             {
-                // Отключим модули очистки...
-                PS_ResetSettings.Enabled = false;
-                if (!(Properties.Settings.Default.AllowNCFUnsafeOps)) { EnableCleanButtons(false); }
-
                 if (File.Exists(GV.VideoCfgFile))
                 {
                     ReadNCFGameSettings(GV.VideoCfgFile);
@@ -1971,17 +1955,13 @@ namespace srcrepair
                     NullGraphOptions();
                 }
             }
-
-            if (GV.RunningPlatform == 0)
-            {
-                // Переключаем графический твикер в режим GCF/NCF...
-                if (PS_ResetSettings.Enabled == GV.IsGCFApp) { SetGTOptsType(GV.IsGCFApp); }
-            }
             else
             {
-                // В Linux/Mac всегда используем NCF-стиль для графического твикера...
-                SetGTOptsType(false);
+                ReadGCFGameSettings(GV.SmallAppName);
             }
+
+            // Переключаем графический твикер в режим GCF/NCF...
+            SetGTOptsType(GV.RunningPlatform == 0 && !GV.IsUsingVideoFile);
 
             // Проверим, установлен ли FPS-конфиг...
             GT_Warning.Visible = File.Exists(Path.Combine(GV.FullCfgPath, "autoexec.cfg"));
@@ -2021,7 +2001,7 @@ namespace srcrepair
             // Зададим вопрос, а нужно ли это юзеру?
             if (MessageBox.Show(CoreLib.GetLocalizedString("GT_MaxPerfMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (GV.IsGCFApp)
+                if (GV.IsUsingVideoFile)
                 {
                     // Пользователь согласился, продолжаем...
                     GT_ScreenType.SelectedIndex = 0; // полноэкранный режим
@@ -2060,7 +2040,7 @@ namespace srcrepair
             // Спросим пользователя.
             if (MessageBox.Show(CoreLib.GetLocalizedString("GT_MinPerfMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (GV.IsGCFApp)
+                if (GV.IsUsingVideoFile)
                 {
                     // Пользователь согласился, продолжаем...
                     GT_ScreenType.SelectedIndex = 0; // полноэкранный режим
@@ -2107,7 +2087,7 @@ namespace srcrepair
             // Запрашиваем подтверждение у пользователя...
             if (MessageBox.Show(CoreLib.GetLocalizedString("GT_SaveMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (GV.IsGCFApp)
+                if (GV.IsUsingVideoFile)
                 {
                     if (GV.RunningPlatform == 0)
                     {
@@ -2452,7 +2432,7 @@ namespace srcrepair
             // Удаляем графические настройки...
             if (MessageBox.Show(((Button)sender).Text + "?", GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                if (GV.IsGCFApp)
+                if (GV.IsUsingVideoFile)
                 {
                     // Создаём резервную копию...
                     if (Properties.Settings.Default.SafeCleanup)
@@ -2554,7 +2534,7 @@ namespace srcrepair
         {
             if (GV.RunningPlatform == 0)
             {
-                if (GV.IsGCFApp)
+                if (GV.IsUsingVideoFile)
                 {
                     List<String> CleanDirs = new List<string>();
                     CleanDirs.Add(Path.Combine(GV.GamePath, "*.*"));
@@ -2772,7 +2752,7 @@ namespace srcrepair
                 // Создадим резервную копию графических настроек игры...
                 try
                 {
-                    if (GV.IsGCFApp)
+                    if (GV.IsUsingVideoFile)
                     {
                         if (GV.RunningPlatform == 0)
                         {

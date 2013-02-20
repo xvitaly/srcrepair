@@ -101,10 +101,10 @@ namespace srcrepair
         public static string FullBackUpDirPath;
 
         /// <summary>
-        /// Эта переменная будет указывать на тип управляемого приложения:
-        /// стандартное GCF, либо нестандартное NCF, с которым много проблем.
+        /// Указывает использует ли игра файл video.txt для хранения
+        /// своих настроек.
         /// </summary>
-        public static bool IsGCFApp;
+        public static bool IsUsingVideoFile;
 
         /// <summary>
         /// Эта переменная хранит ID игры по базе данных Steam. Используется
