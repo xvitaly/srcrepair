@@ -1911,7 +1911,6 @@ namespace srcrepair
                         GV.FullAppName = XMLD.GetElementsByTagName("DirName")[i].InnerText;
                         GV.SmallAppName = XMLD.GetElementsByTagName("SmallName")[i].InnerText;
                         GV.GameInternalID = XMLD.GetElementsByTagName("SID")[i].InnerText;
-                        GV.GameBLEnabled = XMLD.GetElementsByTagName("IsMP")[i].InnerText;
                         GV.ConfDir = XMLD.GetElementsByTagName("VFDir")[i].InnerText;
                         GV.IsUsingVideoFile = XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1";
                         break;
@@ -3367,6 +3366,18 @@ namespace srcrepair
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "package", "*.*"));
             OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+        }
+
+        private void AppStartGame_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(String.Format("steam://rungameid/{0}", GV.GameInternalID));
+            }
+            catch (Exception Ex)
+            {
+                CoreLib.WriteStringToLog(Ex.Message);
+            }
         }
     }
 }

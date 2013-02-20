@@ -1096,10 +1096,10 @@
     <value>Статус:</value>
   </data>
   <data name="AppSelector.Location" type="System.Drawing.Point, System.Drawing">
-    <value>220, 37</value>
+    <value>200, 37</value>
   </data>
   <data name="AppSelector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 21</value>
+    <value>203, 21</value>
   </data>
   <data name="L_AppSelector.Size" type="System.Drawing.Size, System.Drawing">
     <value>139, 13</value>

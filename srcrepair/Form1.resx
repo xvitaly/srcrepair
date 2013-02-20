@@ -3924,7 +3924,7 @@
     <value>470, 405</value>
   </data>
   <data name="MainTabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;MainTabControl.Name" xml:space="preserve">
     <value>MainTabControl</value>
@@ -3936,7 +3936,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MainTabControl.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <metadata name="MainMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -4197,7 +4197,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MainMenu.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <metadata name="StatusBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>126, 17</value>
@@ -4242,7 +4242,7 @@
     <value>494, 22</value>
   </data>
   <data name="StatusBar.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;StatusBar.Name" xml:space="preserve">
     <value>StatusBar</value>
@@ -4254,13 +4254,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;StatusBar.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <metadata name="AppSelector.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="AppSelector.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 37</value>
+    <value>189, 37</value>
   </data>
   <data name="AppSelector.Size" type="System.Drawing.Size, System.Drawing">
     <value>214, 21</value>
@@ -4278,7 +4278,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;AppSelector.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="L_AppSelector.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -4287,7 +4287,7 @@
     <value>True</value>
   </data>
   <data name="L_AppSelector.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 40</value>
+    <value>55, 40</value>
   </data>
   <data name="L_AppSelector.Size" type="System.Drawing.Size, System.Drawing">
     <value>128, 13</value>
@@ -4308,7 +4308,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;L_AppSelector.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="CE_OpenCfgDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>333, 17</value>
@@ -4334,6 +4334,30 @@
   <metadata name="BW_BkUpRecv.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>331, 54</value>
   </metadata>
+  <metadata name="AppStartGame.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="AppStartGame.Location" type="System.Drawing.Point, System.Drawing">
+    <value>409, 35</value>
+  </data>
+  <data name="AppStartGame.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 24</value>
+  </data>
+  <data name="AppStartGame.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;AppStartGame.Name" xml:space="preserve">
+    <value>AppStartGame</value>
+  </data>
+  <data name="&gt;&gt;AppStartGame.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AppStartGame.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AppStartGame.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

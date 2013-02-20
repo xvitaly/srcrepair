@@ -113,12 +113,6 @@ namespace srcrepair
         public static string GameInternalID;
 
         /// <summary>
-        /// Служебная переменная. Используется для указания доступности
-        /// редактора чёрного списка серверов.
-        /// </summary>
-        public static string GameBLEnabled;
-
-        /// <summary>
         /// В этой переменной хранится путь к файлу с настройками видео,
         /// используется в NCF-играх.
         /// </summary>
