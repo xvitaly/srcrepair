@@ -3388,6 +3388,7 @@ namespace srcrepair
             // Очистим логи клиента Steam...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "logs", "*.*"));
+            CleanDirs.Add(Path.Combine(GV.FullSteamPath, "*.log"));
             OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
 
