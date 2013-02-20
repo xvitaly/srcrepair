@@ -292,14 +292,13 @@ namespace srcrepair
         /// <param name="SteamPath">Путь к клиенту Steam</param>
         /// <param name="SteamLogin">Логин Steam</param>
         /// <param name="SteamAppsDir">Имя каталога SteamApps</param>
-        private void DetectInstalledGames(string SteamPath, string SteamLogin, string SteamAppsDir)
+        private void DetectInstalledGames(string SteamPath, string SteamAppsDir)
         {
             // Очистим список игр...
             AppSelector.Items.Clear();
 
             // Опишем заготовки путей для GCF и NCF...
-            string SearchPathGCF = Path.Combine(SteamPath, SteamAppsDir, SteamLogin);
-            string SearchPathNCF = Path.Combine(SteamPath, SteamAppsDir, "common");
+            string SearchPath = Path.Combine(SteamPath, SteamAppsDir, "common");
 
             // Начинаем парсить...
             XmlDocument XMLD = new XmlDocument(); // Создаём объект документа XML...
@@ -309,16 +308,7 @@ namespace srcrepair
             for (int i = 0; i < XMLNList.Count; i++) // Обходим полученный список в цикле...
             {
                 XmlElement GameID = (XmlElement)XMLD.GetElementsByTagName("Game")[i]; // Получаем элемент...
-                if (XMLD.GetElementsByTagName("IsGCF")[i].InnerText == "1") // Проверяем GCF или NCF...
-                {
-                    // GCF-приложение...
-                    if (Directory.Exists(Path.Combine(SearchPathGCF, XMLD.GetElementsByTagName("DirName")[i].InnerText))) { AppSelector.Items.Add((string)GameID.GetAttribute("Name")); }
-                }
-                else
-                {
-                    // NCF-приложение...
-                    if (Directory.Exists(Path.Combine(SearchPathNCF, XMLD.GetElementsByTagName("DirName")[i].InnerText))) { AppSelector.Items.Add((string)GameID.GetAttribute("Name")); }
-                }
+                if (Directory.Exists(Path.Combine(SearchPath, XMLD.GetElementsByTagName("DirName")[i].InnerText))) { AppSelector.Items.Add((string)GameID.GetAttribute("Name")); }
             }
             XMLFS.Close(); // Закрываем файловый поток...
         }
@@ -1555,37 +1545,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Обнаруживает логины пользователей Steam в его каталоге установки.
-        /// </summary>
-        /// <param name="SteamPath">Каталог установки Steam</param>
-        /// <param name="StADirName">Внутренее платформозависимое имя каталога SteamApps</param>
-        private void DetectLogins(string SteamPath, string StADirName)
-        {
-            try
-            {
-                // Создаём объект DirInfo...
-                DirectoryInfo DInfo = new DirectoryInfo(Path.Combine(SteamPath, StADirName));
-                // Получаем список директорий из текущего...
-                DirectoryInfo[] DirList = DInfo.GetDirectories();
-                // Обходим созданный массив в поиске нужных нам логинов...
-                foreach (DirectoryInfo DItem in DirList)
-                {
-                    // Фильтруем известные каталоги...
-                    if (!(GV.InternalDirs.Contains(DItem.Name)))
-                    {
-                        // Добавляем найденный логин в список ComboBox...
-                        LoginSel.Items.Add((string)DItem.Name);
-                    }
-                }
-            }
-            catch (Exception Ex)
-            {
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppNoSTADetected"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
-                Environment.Exit(6);
-            }
-        }
-
-        /// <summary>
         /// Выполняет определение и вывод названия файловой системы на диске установки клиента Steam.
         /// </summary>
         /// <param name="SteamPath">Каталог установки Steam</param>
@@ -1603,45 +1562,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Проверяет количество найденных логинов Steam и выполняет нужные действия.
-        /// </summary>
-        /// <param name="LoginCount">Количество найденных логинов</param>
-        private void CheckLogins(int LoginCount)
-        {
-            switch (LoginCount)
-            {
-                case 0:
-                    {
-                        // Логинов не было найдено. Выведем сообщение...
-                        MessageBox.Show(CoreLib.GetLocalizedString("SteamNoLoginsDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        // Запишем в лог...
-                        CoreLib.WriteStringToLog("No logins detected in SteamApps directory.");
-                        // Завершаем работу приложения...
-                        Environment.Exit(3);
-                    }
-                    break;
-                case 1:
-                    {
-                        // Да, единственный. Выберем его...
-                        LoginSel.SelectedIndex = 0;
-                        if (AppSelector.SelectedIndex == -1)
-                        {
-                            // Заменим содержимое строки состояния на требование выбора игры...
-                            SB_Status.Text = CoreLib.GetLocalizedString("StatusSApp");
-                        }
-                    }
-                    break;
-                default:
-                    {
-                        // Логин не единственный, проверим предыдущий выбор...
-                        int Al = LoginSel.Items.IndexOf(Properties.Settings.Default.LastLoginName);
-                        LoginSel.SelectedIndex = Al != -1 ? Al : 0;
-                    }
-                    break;
-            }
-        }
-
-        /// <summary>
         /// Проверяет количество найденных установленных игр и выполняет нужные действия.
         /// </summary>
         /// <param name="LoginCount">Количество найденных игр</param>
@@ -1652,18 +1572,11 @@ namespace srcrepair
                 case 0:
                     {
                         // Запишем в лог...
-                        CoreLib.WriteStringToLog(String.Format("No games detected. Steam located as: {0}. User login: {1}.", GV.FullSteamPath, LoginSel.Text));
-                        if (LoginSel.Items.Count > 1)
-                        {
-                            MessageBox.Show(CoreLib.GetLocalizedString("AppChangeLogin"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                        else
-                        {
-                            // Нет, не нашлись, выведем сообщение...
-                            MessageBox.Show(CoreLib.GetLocalizedString("AppNoGamesDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            // Завершим работу приложения...
-                            Environment.Exit(11);
-                        }
+                        CoreLib.WriteStringToLog(String.Format("No games detected. Steam located as: {0}.", GV.FullSteamPath));
+                        // Нет, не нашлись, выведем сообщение...
+                        MessageBox.Show(CoreLib.GetLocalizedString("AppNoGamesDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        // Завершим работу приложения...
+                        Environment.Exit(11);
                     }
                     break;
                 case 1:
@@ -1846,12 +1759,6 @@ namespace srcrepair
             // Укажем статус Безопасной очистки...
             CheckSafeClnStatus();
 
-            // Определим логины пользователей Steam на данном ПК...
-            DetectLogins(GV.FullSteamPath, GV.SteamAppsFolderName);
-
-            // Проверим, были ли логины добавлены в список...
-            CheckLogins(LoginSel.Items.Count);
-
             // Выводим сообщение в строку статуса...
             SB_Status.Text = CoreLib.GetLocalizedString("StatusSLogin");
 
@@ -1863,6 +1770,20 @@ namespace srcrepair
 
             // Распознаем файловую систему на диске со Steam...
             DetectFS(GV.FullSteamPath);
+
+            // Начинаем определять установленные игры...
+            try
+            {
+                DetectInstalledGames(GV.FullSteamPath, GV.SteamAppsFolderName);
+            }
+            catch (Exception Ex)
+            {
+                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppXMLParseError"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                Environment.Exit(16);
+            }
+
+            // Проверим нашлись ли игры...
+            CheckGames(AppSelector.Items.Count);
 
             try
             {
@@ -1974,15 +1895,7 @@ namespace srcrepair
         }
 
         private void AppSelector_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Создаём буферную переменную для дальнейшего использования...
-            string ptha = "";
-
-            /* Значение локальной переменной ptha:
-             * LoginSel.Text - для GCF-приложний (логин Steam);
-             * common - для NCF-приложений.
-             */
-            
+        {            
             // Начинаем определять нужные нам значения переменных...
             try
             {
@@ -2000,16 +1913,7 @@ namespace srcrepair
                         GV.GameInternalID = XMLD.GetElementsByTagName("SID")[i].InnerText;
                         GV.GameBLEnabled = XMLD.GetElementsByTagName("IsMP")[i].InnerText;
                         GV.ConfDir = XMLD.GetElementsByTagName("VFDir")[i].InnerText;
-                        if (XMLD.GetElementsByTagName("IsGCF")[i].InnerText == "1")
-                        {
-                            GV.IsGCFApp = true;
-                            ptha = LoginSel.Text;
-                        }
-                        else
-                        {
-                            GV.IsGCFApp = false;
-                            ptha = "common";
-                        }
+                        GV.IsGCFApp = false;
                         break;
                     }
                 }
@@ -2020,11 +1924,8 @@ namespace srcrepair
                 CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppXMLParseError"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
             }
 
-            // Если выбор верный, включаем контрол выбора логина Steam...
-            LoginSel.Enabled = AppSelector.SelectedIndex != -1;
-
             // Генерируем полный путь до каталога управляемого приложения...
-            GV.GamePath = Path.Combine(GV.FullSteamPath, GV.SteamAppsFolderName, ptha, GV.FullAppName);
+            GV.GamePath = Path.Combine(GV.FullSteamPath, GV.SteamAppsFolderName, "common", GV.FullAppName);
             GV.FullGamePath = Path.Combine(GV.GamePath, GV.SmallAppName);
 
             // Заполняем другие служебные переменные...
@@ -2112,29 +2013,6 @@ namespace srcrepair
 
             // Считаем список бэкапов...
             if (!BW_BkUpRecv.IsBusy) { BW_BkUpRecv.RunWorkerAsync(); }
-        }
-
-        private void LoginSel_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Логин выбран, включаем контролы...
-            AppSelector.Enabled = true;
-            Properties.Settings.Default.LastLoginName = LoginSel.Text;
-            SB_Status.Text = (AppSelector.SelectedIndex == -1) ? CoreLib.GetLocalizedString("StatusSApp") : CoreLib.GetLocalizedString("StatusLoginChanged");
-            MNUReportBuilder.Enabled = false;
-
-            // Начинаем определять установленные игры...
-            try
-            {
-                DetectInstalledGames(GV.FullSteamPath, LoginSel.Text, GV.SteamAppsFolderName);
-            }
-            catch (Exception Ex)
-            {
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppXMLParseError"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
-                Environment.Exit(16);
-            }
-
-            // Проверим нашлись ли игры...
-            CheckGames(AppSelector.Items.Count);
         }
 
         private void GT_Maximum_Graphics_Click(object sender, EventArgs e)

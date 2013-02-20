@@ -897,12 +897,6 @@
         Ad8B9wH/AdABgAEFAe8B5QHgAQ8B/wHoAYABCQs=
 </value>
   </data>
-  <data name="LoginSel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 35</value>
-  </data>
-  <data name="LoginSel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 21</value>
-  </data>
   <data name="MNUShowEdHint.Size" type="System.Drawing.Size, System.Drawing">
     <value>316, 22</value>
   </data>
@@ -1095,12 +1089,6 @@
   <data name="HelpMNU.Text" xml:space="preserve">
     <value>&amp;Справка</value>
   </data>
-  <data name="L_LoginSel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 13</value>
-  </data>
-  <data name="L_LoginSel.Text" xml:space="preserve">
-    <value>Логин Steam:</value>
-  </data>
   <data name="SB_Info.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 17</value>
   </data>
@@ -1108,16 +1096,16 @@
     <value>Статус:</value>
   </data>
   <data name="AppSelector.Location" type="System.Drawing.Point, System.Drawing">
-    <value>315, 35</value>
+    <value>220, 37</value>
   </data>
   <data name="AppSelector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 21</value>
+    <value>188, 21</value>
   </data>
   <data name="L_AppSelector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 13</value>
+    <value>139, 13</value>
   </data>
   <data name="L_AppSelector.Text" xml:space="preserve">
-    <value>Игра:</value>
+    <value>Выберите игру из списка:</value>
   </data>
   <data name="CE_OpenCfgDialog.Filter" xml:space="preserve">
     <value>Файлы конфигов (*.cfg)|*.cfg</value>

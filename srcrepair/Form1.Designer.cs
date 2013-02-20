@@ -177,7 +177,6 @@
             this.BUT_L_AllSteam = new System.Windows.Forms.ToolStripMenuItem();
             this.BUT_L_AllSRC = new System.Windows.Forms.ToolStripMenuItem();
             this.TabIcons = new System.Windows.Forms.ImageList(this.components);
-            this.LoginSel = new System.Windows.Forms.ComboBox();
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.ToolsMNU = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUShowEdHint = new System.Windows.Forms.ToolStripMenuItem();
@@ -214,7 +213,6 @@
             this.MNULnkTFRU = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep4 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUAbout = new System.Windows.Forms.ToolStripMenuItem();
-            this.L_LoginSel = new System.Windows.Forms.Label();
             this.StatusBar = new System.Windows.Forms.StatusStrip();
             this.SB_Info = new System.Windows.Forms.ToolStripStatusLabel();
             this.SB_Status = new System.Windows.Forms.ToolStripStatusLabel();
@@ -1507,14 +1505,6 @@
             this.TabIcons.Images.SetKeyName(3, "Config.png");
             this.TabIcons.Images.SetKeyName(4, "BackUp.png");
             // 
-            // LoginSel
-            // 
-            this.LoginSel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.LoginSel.FormattingEnabled = true;
-            resources.ApplyResources(this.LoginSel, "LoginSel");
-            this.LoginSel.Name = "LoginSel";
-            this.LoginSel.SelectedIndexChanged += new System.EventHandler(this.LoginSel_SelectedIndexChanged);
-            // 
             // MainMenu
             // 
             this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1791,11 +1781,6 @@
             resources.ApplyResources(this.MNUAbout, "MNUAbout");
             this.MNUAbout.Click += new System.EventHandler(this.MNUAbout_Click);
             // 
-            // L_LoginSel
-            // 
-            resources.ApplyResources(this.L_LoginSel, "L_LoginSel");
-            this.L_LoginSel.Name = "L_LoginSel";
-            // 
             // StatusBar
             // 
             this.StatusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1826,8 +1811,8 @@
             // AppSelector
             // 
             this.AppSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.AppSelector, "AppSelector");
             this.AppSelector.FormattingEnabled = true;
+            resources.ApplyResources(this.AppSelector, "AppSelector");
             this.AppSelector.Name = "AppSelector";
             this.AppSelector.SelectedIndexChanged += new System.EventHandler(this.AppSelector_SelectedIndexChanged);
             // 
@@ -1871,8 +1856,6 @@
             this.Controls.Add(this.L_AppSelector);
             this.Controls.Add(this.AppSelector);
             this.Controls.Add(this.StatusBar);
-            this.Controls.Add(this.L_LoginSel);
-            this.Controls.Add(this.LoginSel);
             this.Controls.Add(this.MainTabControl);
             this.Controls.Add(this.MainMenu);
             this.DoubleBuffered = true;
@@ -1931,7 +1914,6 @@
         private System.Windows.Forms.TabPage ProblemSolver;
         private System.Windows.Forms.TabPage FPSCfgInstall;
         private System.Windows.Forms.TabPage RescueCentre;
-        private System.Windows.Forms.ComboBox LoginSel;
         private System.Windows.Forms.MenuStrip MainMenu;
         private System.Windows.Forms.ToolStripMenuItem ToolsMNU;
         private System.Windows.Forms.ToolStripMenuItem MNUShowEdHint;
@@ -1951,7 +1933,6 @@
         private System.Windows.Forms.ToolStripMenuItem MNULnkTFRU;
         private System.Windows.Forms.ToolStripSeparator MNUSep4;
         private System.Windows.Forms.ToolStripMenuItem MNUAbout;
-        private System.Windows.Forms.Label L_LoginSel;
         private System.Windows.Forms.StatusStrip StatusBar;
         private System.Windows.Forms.ToolStripStatusLabel SB_Info;
         private System.Windows.Forms.ToolStripStatusLabel SB_Status;
