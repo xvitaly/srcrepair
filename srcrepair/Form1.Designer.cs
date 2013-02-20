@@ -198,6 +198,7 @@
             this.MNUExtClnErrDumps = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnCloudLocal = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnBuildCache = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUExtClnUpdCch = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep2 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUExit = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpMNU = new System.Windows.Forms.ToolStripMenuItem();
@@ -1604,7 +1605,8 @@
             this.MNUExtClnGameStats,
             this.MNUExtClnErrDumps,
             this.MNUExtClnCloudLocal,
-            this.MNUExtClnBuildCache});
+            this.MNUExtClnBuildCache,
+            this.MNUExtClnUpdCch});
             this.MNUExtClnSub.Image = global::srcrepair.Properties.Resources.clean;
             this.MNUExtClnSub.Name = "MNUExtClnSub";
             resources.ApplyResources(this.MNUExtClnSub, "MNUExtClnSub");
@@ -1671,6 +1673,13 @@
             this.MNUExtClnBuildCache.Name = "MNUExtClnBuildCache";
             resources.ApplyResources(this.MNUExtClnBuildCache, "MNUExtClnBuildCache");
             this.MNUExtClnBuildCache.Click += new System.EventHandler(this.MNUExtClnBuildCache_Click);
+            // 
+            // MNUExtClnUpdCch
+            // 
+            this.MNUExtClnUpdCch.Image = global::srcrepair.Properties.Resources.clean;
+            this.MNUExtClnUpdCch.Name = "MNUExtClnUpdCch";
+            resources.ApplyResources(this.MNUExtClnUpdCch, "MNUExtClnUpdCch");
+            this.MNUExtClnUpdCch.Click += new System.EventHandler(this.MNUExtClnUpdCch_Click);
             // 
             // MNUSep2
             // 
@@ -2112,6 +2121,7 @@
         private System.ComponentModel.BackgroundWorker BW_UpChk;
         private System.ComponentModel.BackgroundWorker BW_FPRecv;
         private System.ComponentModel.BackgroundWorker BW_BkUpRecv;
+        private System.Windows.Forms.ToolStripMenuItem MNUExtClnUpdCch;
     }
 }
 

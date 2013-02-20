@@ -3501,5 +3501,13 @@ namespace srcrepair
                 }
             }
         }
+
+        private void MNUExtClnUpdCch_Click(object sender, EventArgs e)
+        {
+            // Очистим кэш обновлений Steam...
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullSteamPath, "package", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+        }
     }
 }
