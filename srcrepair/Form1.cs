@@ -3178,6 +3178,7 @@ namespace srcrepair
             // Удаляем содержимое вторичного кэша загрузок...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "cache", "*.*"));
+            CleanDirs.Add(Path.Combine(GV.GamePath, "config", "html", "*.*"));
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
