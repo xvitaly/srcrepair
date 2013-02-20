@@ -220,18 +220,6 @@ namespace srcrepair.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string LastLoginName {
-            get {
-                return ((string)(this["LastLoginName"]));
-            }
-            set {
-                this["LastLoginName"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool AllowNonAdmDialog {
             get {

@@ -53,9 +53,6 @@
     <Setting Name="LastGameName" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="LastLoginName" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
     <Setting Name="AllowNonAdmDialog" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>

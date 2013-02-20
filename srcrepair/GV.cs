@@ -16,12 +16,6 @@ namespace srcrepair
         public const string AppName = "SRC Repair";
 
         /// <summary>
-        /// Этот массив содержит имена службных каталогов Steam, которые не будет
-        /// отображаться в списке доступных для выбора логинов.
-        /// </summary>
-        public static string[] InternalDirs = { "common", "sourcemods", "media", "staging", "temp", "build", "downloading" };
-
-        /// <summary>
         /// Хранит код платформы запуска приложения...
         /// </summary>
         public static int RunningPlatform;
