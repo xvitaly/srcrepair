@@ -588,4 +588,7 @@
   <data name="PS_FrFInfo" xml:space="preserve">
     <value>We can free up to {0} hard-disk space after cleanup.</value>
   </data>
+  <data name="AppStartSteamFailed" xml:space="preserve">
+    <value>Unable to start Steam. Please reinstall and try again later.</value>
+  </data>
 </root>

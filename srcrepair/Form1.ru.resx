@@ -662,8 +662,8 @@
   <data name="ConfigEditor.Text" xml:space="preserve">
     <value>Редактор конфигов</value>
   </data>
-  <data name="PS_ResetSettings.Text" xml:space="preserve">
-    <value>Выполнить глубокую очистку игры</value>
+  <data name="PS_CheckCache.Text" xml:space="preserve">
+    <value>Проверить целостность игрового кэша</value>
   </data>
   <data name="PS_RemOldBin.Text" xml:space="preserve">
     <value>Очистить старые бинарники и лаунчеры</value>
@@ -714,7 +714,7 @@
     <value>Безопасная очистка:</value>
   </data>
   <data name="PS_PathDetector.Text" xml:space="preserve">
-    <value>Не обнаружено non-ASCII символов</value>
+    <value>Не обнаружено запрещённых символов</value>
   </data>
   <data name="PS_OSDrive.Text" xml:space="preserve">
     <value>Файловая система на диске: {0}</value>

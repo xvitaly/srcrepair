@@ -1941,7 +1941,6 @@ namespace srcrepair
             MNUReportBuilder.Enabled = ((GV.RunningPlatform == 0) && (AppSelector.Items.Count > 0) && (AppSelector.SelectedIndex != -1));
 
             // Отключим модули очистки...
-            PS_ResetSettings.Enabled = false;
             if (!(Properties.Settings.Default.AllowNCFUnsafeOps)) { EnableCleanButtons(false); }
 
             // Считаем настройки графики...
@@ -2533,18 +2532,16 @@ namespace srcrepair
 
         private void PS_ResetSettings_Click(object sender, EventArgs e)
         {
-            if (GV.RunningPlatform == 0)
+            if (MessageBox.Show(((Button)sender).Text + "?", GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                if (GV.IsUsingVideoFile)
+                try
                 {
-                    List<String> CleanDirs = new List<string>();
-                    CleanDirs.Add(Path.Combine(GV.GamePath, "*.*"));
-                    OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
+                    Process.Start(String.Format("steam://validate/{0}", GV.GameInternalID));
                 }
-            }
-            else
-            {
-                MessageBox.Show(CoreLib.GetLocalizedString("AppFeatureUnavailable"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                catch (Exception Ex)
+                {
+                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppStartSteamFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                }
             }
         }
 
@@ -3378,7 +3375,7 @@ namespace srcrepair
             }
             catch (Exception Ex)
             {
-                CoreLib.WriteStringToLog(Ex.Message);
+                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppStartSteamFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
             }
         }
     }

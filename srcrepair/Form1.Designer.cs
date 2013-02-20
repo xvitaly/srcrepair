@@ -121,7 +121,7 @@
             this.CE_CVal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProblemSolver = new System.Windows.Forms.TabPage();
             this.PS_GB_AdvRepr = new System.Windows.Forms.GroupBox();
-            this.PS_ResetSettings = new System.Windows.Forms.Button();
+            this.PS_CheckCache = new System.Windows.Forms.Button();
             this.PS_RemOldBin = new System.Windows.Forms.Button();
             this.PS_RemGraphOpts = new System.Windows.Forms.Button();
             this.PS_GB_Remover = new System.Windows.Forms.GroupBox();
@@ -1074,19 +1074,19 @@
             // 
             // PS_GB_AdvRepr
             // 
-            this.PS_GB_AdvRepr.Controls.Add(this.PS_ResetSettings);
+            this.PS_GB_AdvRepr.Controls.Add(this.PS_CheckCache);
             this.PS_GB_AdvRepr.Controls.Add(this.PS_RemOldBin);
             this.PS_GB_AdvRepr.Controls.Add(this.PS_RemGraphOpts);
             resources.ApplyResources(this.PS_GB_AdvRepr, "PS_GB_AdvRepr");
             this.PS_GB_AdvRepr.Name = "PS_GB_AdvRepr";
             this.PS_GB_AdvRepr.TabStop = false;
             // 
-            // PS_ResetSettings
+            // PS_CheckCache
             // 
-            resources.ApplyResources(this.PS_ResetSettings, "PS_ResetSettings");
-            this.PS_ResetSettings.Name = "PS_ResetSettings";
-            this.PS_ResetSettings.UseVisualStyleBackColor = true;
-            this.PS_ResetSettings.Click += new System.EventHandler(this.PS_ResetSettings_Click);
+            resources.ApplyResources(this.PS_CheckCache, "PS_CheckCache");
+            this.PS_CheckCache.Name = "PS_CheckCache";
+            this.PS_CheckCache.UseVisualStyleBackColor = true;
+            this.PS_CheckCache.Click += new System.EventHandler(this.PS_ResetSettings_Click);
             // 
             // PS_RemOldBin
             // 
@@ -1962,7 +1962,7 @@
         private System.Windows.Forms.CheckBox PS_CleanBlobs;
         private System.Windows.Forms.Label PS_PathDetector;
         private System.Windows.Forms.Label PS_OSDrive;
-        private System.Windows.Forms.Button PS_ResetSettings;
+        private System.Windows.Forms.Button PS_CheckCache;
         private System.Windows.Forms.Button PS_RemDemos;
         private System.Windows.Forms.Button PS_RemScreenShots;
         private System.Windows.Forms.Button PS_RemSecndCache;
