@@ -32,14 +32,18 @@ namespace srcrepair
 {
     public partial class frmCleaner : Form
     {
-        public frmCleaner(List<String> CD, string CI)
+        public frmCleaner(List<String> CD, string CI, bool RO, bool NA)
         {
             InitializeComponent();
             CleanDirs = CD;
             CleanInfo = CI;
+            IsReadOnly = RO;
+            NoAutoCheck = NA;
         }
 
         private List<String> CleanDirs; // Здесь будем хранить каталог для очистки,...
+        private bool IsReadOnly;
+        private bool NoAutoCheck;
         private string CleanInfo; // ...и информацию о том, что будем очищать.
         private long TotalSize = 0; // Задаём и обнуляем счётчик общего размера удаляемых файлов...
 
@@ -72,7 +76,7 @@ namespace srcrepair
                         {
                             // Обрабатываем найденное...
                             ListViewItem LvItem = new ListViewItem(DItem.Name); // Добавляем...
-                            LvItem.Checked = true; // Помечаем флажком...
+                            LvItem.Checked = !NoAutoCheck; // Помечаем флажком...
                             LvItem.ToolTipText = Path.Combine(CleanDir, DItem.Name); // Указываем полный путь во всплывающую подсказку...
                             LvItem.SubItems.Add(CoreLib.SclBytes(DItem.Length)); // Вычисляем размер...
                             LvItem.SubItems.Add(CoreLib.WriteDateToString(DItem.LastWriteTime, false)); // Указываем дату изменения...
@@ -137,6 +141,9 @@ namespace srcrepair
             
             // Запускаем очистку согласно полученным параметрам...
             if (!GttWrk.IsBusy) { GttWrk.RunWorkerAsync(); }
+
+            // Блокируем возможность изменять выбор...
+            CM_FTable.Enabled = !IsReadOnly;
         }
 
         private void CM_FTable_KeyDown(object sender, KeyEventArgs e)

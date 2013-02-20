@@ -279,9 +279,11 @@ namespace srcrepair
         /// <param name="Path">Путь к каталогу очистки</param>
         /// <param name="Mask">Маска файлов, подлежащих очистке</param>
         /// <param name="LText">Текст заголовка</param>
-        private void OpenCleanupWindow(List<String> Paths, string LText)
+        /// <param name="ReadOnly">Пользователю будет запрещено изменять выбор удаляемых файлов</param>
+        /// <param name="NoAuto">Включает / отключает автовыбор файлов флажками</param>
+        private void OpenCleanupWindow(List<String> Paths, string LText, bool ReadOnly = false, bool NoAuto = false)
         {
-            frmCleaner FCl = new frmCleaner(Paths, LText);
+            frmCleaner FCl = new frmCleaner(Paths, LText, ReadOnly, NoAuto);
             FCl.ShowDialog();
         }
 
@@ -2375,7 +2377,7 @@ namespace srcrepair
             // Удаляем кастомные (нестандартные) карты...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "maps", "*.bsp"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), false, true);
         }
 
         private void PS_RemDnlCache_Click(object sender, EventArgs e)
