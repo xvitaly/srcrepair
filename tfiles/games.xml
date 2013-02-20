@@ -10,8 +10,8 @@
   <Game Name="Team Fortress 2 Beta">
     <HasVF>0</HasVF>
     <DirName>team fortress 2 beta</DirName>
-    <SmallName>tf_beta</SmallName>
-    <VFDir>tf_beta</VFDir>
+    <SmallName>tf</SmallName>
+    <VFDir>tf</VFDir>
     <SID>520</SID>
   </Game>
   <Game Name="Counter-Strike: Source">
