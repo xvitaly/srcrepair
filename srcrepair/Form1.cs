@@ -2491,25 +2491,12 @@ namespace srcrepair
         private void PS_RemOldBin_Click(object sender, EventArgs e)
         {
             // Удаляем старые бинарники...
-            if (MessageBox.Show(((Button)sender).Text + "?", GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-            {
-                try
-                {
-                    string Buf = Path.Combine(GV.GamePath, "bin");
-                    if (Directory.Exists(Buf)) { Directory.Delete(Buf, true); } // Удаляем бинарники...
-                    Buf = Path.Combine(GV.GamePath, "platform");
-                    if (Directory.Exists(Buf)) { Directory.Delete(Buf, true); } // Удаляем настройки платформы...
-                    Buf = Path.Combine(GV.FullGamePath, "bin");
-                    if (Directory.Exists(Buf)) { Directory.Delete(Buf, true); } // Удаляем библиотеки игры...
-                    Buf = Path.Combine(GV.GamePath, "hl2.exe");
-                    if (File.Exists(Buf)) { File.Delete(Buf); } // Удаляем основной лаунчер...
-                    MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception Ex)
-                {
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                }
-            }
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.GamePath, "bin", "*.*"));
+            CleanDirs.Add(Path.Combine(GV.GamePath, "platform", "*.*"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "bin", "*.*"));
+            CleanDirs.Add(Path.Combine(GV.GamePath, "*.exe"));
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
         private void GT_ResHor_Btn_Click(object sender, EventArgs e)
