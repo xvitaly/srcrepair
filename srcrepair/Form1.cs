@@ -267,7 +267,7 @@ namespace srcrepair
             //PS_RemScreenShots.Enabled = BStatus;
             //PS_RemDemos.Enabled = BStatus;
             //PS_RemGraphOpts.Enabled = BStatus;
-            PS_RemOldBin.Enabled = BStatus;
+            //PS_RemOldBin.Enabled = BStatus;
             PS_RemTextures.Enabled = BStatus;
             PS_RemModels.Enabled = BStatus;
             PS_RemReplays.Enabled = BStatus;
