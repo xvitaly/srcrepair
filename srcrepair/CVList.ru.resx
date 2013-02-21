@@ -3216,4 +3216,7 @@
   <data name="sv_workshop_allow_other_maps" xml:space="preserve">
     <value>Разрешает / запрещает загрузку на выделенном сервере кастомных карт из Steam Workshop.</value>
   </data>
+  <data name="sv_rcon_whitelist_address" xml:space="preserve">
+    <value>Задаёт IP-адрес, который никогда не будет забанен в случае ввода неправильных RCON паролей.</value>
+  </data>
 </root>
