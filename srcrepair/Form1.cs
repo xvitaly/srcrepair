@@ -663,11 +663,8 @@ namespace srcrepair
         /// <param name="SAppName">Краткое имя игры</param>
         private void ReadGCFGameSettings(string SAppName)
         {
-            // Генерируем полный путь к ветке реестра нужного приложения...
-            string SubkeyR = Path.Combine("Software", "Valve", "Source", SAppName, "Settings");
-
             // Открываем ключ реестра для чтения...
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(SubkeyR, false);
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(Path.Combine("Software", "Valve", "Source", SAppName, "Settings"), false);
 
             // Проверяем открылся ли ключ...
             if (ResKey != null)
