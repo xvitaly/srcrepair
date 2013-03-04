@@ -591,4 +591,7 @@
   <data name="AppStartSteamFailed" xml:space="preserve">
     <value>Unable to start Steam. Please reinstall and try again later.</value>
   </data>
+  <data name="GT_RegOpenErr" xml:space="preserve">
+    <value>Can not open registry key. Please start game at least once and try again.</value>
+  </data>
 </root>

@@ -899,10 +899,14 @@ namespace srcrepair
                 {
                     GT_HDR.SelectedIndex = -1;
                 }
-            }
 
-            // Закрываем ключ реестра...
-            ResKey.Close();
+                // Закрываем ключ реестра...
+                ResKey.Close();
+            }
+            else
+            {
+                MessageBox.Show(CoreLib.GetLocalizedString("GT_RegOpenErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         /// <summary>

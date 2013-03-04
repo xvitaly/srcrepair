@@ -808,6 +808,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Can not open registry key. Please start game at least once and try again..
+        /// </summary>
+        internal static string GT_RegOpenErr {
+            get {
+                return ResourceManager.GetString("GT_RegOpenErr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Specify the {0} resolution of the monitor or window. You must specify an integer..
         /// </summary>
         internal static string GT_ResMsg {
