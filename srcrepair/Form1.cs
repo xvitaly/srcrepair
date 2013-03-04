@@ -2051,7 +2051,7 @@ namespace srcrepair
             // Запрашиваем подтверждение у пользователя...
             if (MessageBox.Show(CoreLib.GetLocalizedString("GT_SaveMsg"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (GV.IsUsingVideoFile)
+                if (!GV.IsUsingVideoFile)
                 {
                     if (GV.RunningPlatform == 0)
                     {
