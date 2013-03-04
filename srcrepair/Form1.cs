@@ -665,284 +665,247 @@ namespace srcrepair
         {
             // Генерируем полный путь к ветке реестра нужного приложения...
             string SubkeyR = Path.Combine("Software", "Valve", "Source", SAppName, "Settings");
-            
-            // Получаем значение разрешения по горизонтали
-            try
-            {
-                GT_ResHor.Value = CoreLib.GetSRCDWord("ScreenWidth", SubkeyR);
-            }
-            catch
-            {
-                GT_ResHor.Value = 800;
-            }
 
-            // Получаем значение разрешения по вертикали
-            try
-            {
-                GT_ResVert.Value = CoreLib.GetSRCDWord("ScreenHeight", SubkeyR);
-            }
-            catch
-            {
-                GT_ResVert.Value = 600;
-            }
+            // Открываем ключ реестра для чтения...
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(SubkeyR, false);
 
-            // Получаем режим окна (ScreenWindowed): 1-window, 0-fullscreen
-            try
+            // Проверяем открылся ли ключ...
+            if (ResKey != null)
             {
-                GT_ScreenType.SelectedIndex = CoreLib.GetSRCDWord("ScreenWindowed", SubkeyR);
-            }
-            catch
-            {
-                GT_ScreenType.SelectedIndex = -1;
-            }
+                // Получаем значение разрешения по горизонтали...
+                try { GT_ResHor.Value = Convert.ToInt32(ResKey.GetValue("ScreenWidth")); } catch { GT_ResHor.Value = 800; }
 
-            // Получаем детализацию моделей (r_rootlod): 0-high, 1-med, 2-low
-            try
-            {
-                switch (CoreLib.GetSRCDWord("r_rootlod", SubkeyR))
+                // Получаем значение разрешения по вертикали...
+                try { GT_ResVert.Value = Convert.ToInt32(ResKey.GetValue("ScreenHeight")); } catch { GT_ResVert.Value = 600; }
+
+                // Получаем режим окна (ScreenWindowed): 1-window, 0-fullscreen...
+                try { GT_ScreenType.SelectedIndex = Convert.ToInt32(ResKey.GetValue("ScreenWindowed")); } catch { GT_ScreenType.SelectedIndex = -1; }
+
+                // Получаем детализацию моделей (r_rootlod): 0-high, 1-med, 2-low...
+                try
                 {
-                    case 0: GT_ModelQuality.SelectedIndex = 2;
-                        break;
-                    case 1: GT_ModelQuality.SelectedIndex = 1;
-                        break;
-                    case 2: GT_ModelQuality.SelectedIndex = 0;
-                        break;
+                    switch (Convert.ToInt32(ResKey.GetValue("r_rootlod")))
+                    {
+                        case 0: GT_ModelQuality.SelectedIndex = 2;
+                            break;
+                        case 1: GT_ModelQuality.SelectedIndex = 1;
+                            break;
+                        case 2: GT_ModelQuality.SelectedIndex = 0;
+                            break;
+                    }
+                }
+                catch
+                {
+                    GT_ModelQuality.SelectedIndex = -1;
+                }
+
+                // Получаем детализацию текстур (mat_picmip): 0-high, 1-med, 2-low...
+                try
+                {
+                    switch (Convert.ToInt32(ResKey.GetValue("mat_picmip")))
+                    {
+                        case -1: GT_TextureQuality.SelectedIndex = 3;
+                            break;
+                        case 0: GT_TextureQuality.SelectedIndex = 2;
+                            break;
+                        case 1: GT_TextureQuality.SelectedIndex = 1;
+                            break;
+                        case 2: GT_TextureQuality.SelectedIndex = 0;
+                            break;
+                    }
+                }
+                catch
+                {
+                    GT_TextureQuality.SelectedIndex = -1;
+                }
+
+                // Получаем настройки шейдеров (mat_reducefillrate): 0-high, 1-low...
+                try
+                {
+                    switch (Convert.ToInt32(ResKey.GetValue("mat_reducefillrate")))
+                    {
+                        case 0: GT_ShaderQuality.SelectedIndex = 1;
+                            break;
+                        case 1: GT_ShaderQuality.SelectedIndex = 0;
+                            break;
+                    }
+                }
+                catch
+                {
+                    GT_ShaderQuality.SelectedIndex = -1;
+                }
+
+                // Начинаем работать над отражениями (здесь сложнее)...
+                try
+                {
+                    switch (Convert.ToInt32(ResKey.GetValue("r_waterforceexpensive")))
+                    {
+                        case 0: GT_WaterQuality.SelectedIndex = 0;
+                            break;
+                        case 1:
+                            switch (Convert.ToInt32(ResKey.GetValue("r_waterforcereflectentities")))
+                            {
+                                case 0: GT_WaterQuality.SelectedIndex = 1;
+                                    break;
+                                case 1: GT_WaterQuality.SelectedIndex = 2;
+                                    break;
+                            }
+                            break;
+                    }
+                }
+                catch
+                {
+                    GT_WaterQuality.SelectedIndex = -1;
+                }
+
+                // Получаем настройки теней (r_shadowrendertotexture): 0-low, 1-high...
+                try { GT_ShadowQuality.SelectedIndex = Convert.ToInt32(ResKey.GetValue("r_shadowrendertotexture")); } catch { GT_ShadowQuality.SelectedIndex = -1; }
+
+                // Получаем настройки коррекции цвета (mat_colorcorrection): 0-off, 1-on...
+                try { GT_ColorCorrectionT.SelectedIndex = Convert.ToInt32(ResKey.GetValue("mat_colorcorrection")); } catch { GT_ColorCorrectionT.SelectedIndex = -1; }
+
+                // Получаем настройки сглаживания (mat_antialias): 1-off, 2-2x, 4-4x, etc...
+                // 2x MSAA - 2:0; 4xMSAA - 4:0; 8xCSAA - 4:2; 16xCSAA - 4:4; 8xMSAA - 8:0; 16xQ CSAA - 8:2.
+                try
+                {
+                    switch (Convert.ToInt32(ResKey.GetValue("mat_antialias")))
+                    {
+                        case 0: GT_AntiAliasing.SelectedIndex = 0;
+                            break;
+                        case 1: GT_AntiAliasing.SelectedIndex = 0;
+                            break;
+                        case 2: GT_AntiAliasing.SelectedIndex = 1;
+                            break;
+                        case 4:
+                            switch (Convert.ToInt32(ResKey.GetValue("mat_aaquality")))
+                            {
+                                case 0: GT_AntiAliasing.SelectedIndex = 2;
+                                    break;
+                                case 2: GT_AntiAliasing.SelectedIndex = 3;
+                                    break;
+                                case 4: GT_AntiAliasing.SelectedIndex = 4;
+                                    break;
+                            }
+                            break;
+                        case 8:
+                            switch (Convert.ToInt32(ResKey.GetValue("mat_aaquality")))
+                            {
+                                case 0: GT_AntiAliasing.SelectedIndex = 5;
+                                    break;
+                                case 2: GT_AntiAliasing.SelectedIndex = 6;
+                                    break;
+                            }
+                            break;
+                    }
+                }
+                catch
+                {
+                    GT_AntiAliasing.SelectedIndex = -1;
+                }
+
+                // Получаем настройки анизотропии (mat_forceaniso): 1-off, etc...
+                try
+                {
+                    switch (Convert.ToInt32(ResKey.GetValue("mat_forceaniso")))
+                    {
+                        case 1:
+                            switch (Convert.ToInt32(ResKey.GetValue("mat_trilinear")))
+                            {
+                                case 0: GT_Filtering.SelectedIndex = 0;
+                                    break;
+                                case 1: GT_Filtering.SelectedIndex = 1;
+                                    break;
+                            }
+                            break;
+                        case 2: GT_Filtering.SelectedIndex = 2;
+                            break;
+                        case 4: GT_Filtering.SelectedIndex = 3;
+                            break;
+                        case 8: GT_Filtering.SelectedIndex = 4;
+                            break;
+                        case 16: GT_Filtering.SelectedIndex = 5;
+                            break;
+                    }
+                }
+                catch
+                {
+                    GT_Filtering.SelectedIndex = -1;
+                }
+
+                // Получаем настройки вертикальной синхронизации (mat_vsync): 0-off, 1-on...
+                try
+                {
+                    switch (Convert.ToInt32(ResKey.GetValue("mat_vsync")))
+                    {
+                        case 0: GT_VSync.SelectedIndex = 0;
+                            break;
+                        case 1: GT_VSync.SelectedIndex = 1;
+                            break;
+                    }
+                }
+                catch
+                {
+                    GT_VSync.SelectedIndex = -1;
+                }
+
+                // Получаем настройки размытия движения (MotionBlur): 0-off, 1-on...
+                try
+                {
+                    switch (Convert.ToInt32(ResKey.GetValue("MotionBlur")))
+                    {
+                        case 0: GT_MotionBlur.SelectedIndex = 0;
+                            break;
+                        case 1: GT_MotionBlur.SelectedIndex = 1;
+                            break;
+                    }
+                }
+                catch
+                {
+                    GT_MotionBlur.SelectedIndex = -1;
+                }
+
+                // Получаем настройки режима рендера (DXLevel_V1):
+                // 80-DirectX 8.0; 81-DirectX 8.1; 90-DirectX 9.0; 95-DirectX 9.0c...
+                try
+                {
+                    switch (Convert.ToInt32(ResKey.GetValue("DXLevel_V1")))
+                    {
+                        case 80: GT_DxMode.SelectedIndex = 0;
+                            break;
+                        case 81: GT_DxMode.SelectedIndex = 1;
+                            break;
+                        case 90: GT_DxMode.SelectedIndex = 2;
+                            break;
+                        case 95: GT_DxMode.SelectedIndex = 3;
+                            break;
+                    }
+                }
+                catch
+                {
+                    GT_DxMode.SelectedIndex = -1;
+                }
+
+                // Получаем настройки HDR (mat_hdr_level): 0-off, 1-bloom, 2-full...
+                try
+                {
+                    switch (Convert.ToInt32(ResKey.GetValue("mat_hdr_level")))
+                    {
+                        case 0: GT_HDR.SelectedIndex = 0;
+                            break;
+                        case 1: GT_HDR.SelectedIndex = 1;
+                            break;
+                        case 2: GT_HDR.SelectedIndex = 2;
+                            break;
+                    }
+                }
+                catch
+                {
+                    GT_HDR.SelectedIndex = -1;
                 }
             }
-            catch
-            {
-                GT_ModelQuality.SelectedIndex = -1;
-            }
 
-            // Получаем детализацию текстур (mat_picmip): 0-high, 1-med, 2-low
-            try
-            {
-                switch (CoreLib.GetSRCDWord("mat_picmip", SubkeyR))
-                {
-                    case -1: GT_TextureQuality.SelectedIndex = 3;
-                        break;
-                    case 0: GT_TextureQuality.SelectedIndex = 2;
-                        break;
-                    case 1: GT_TextureQuality.SelectedIndex = 1;
-                        break;
-                    case 2: GT_TextureQuality.SelectedIndex = 0;
-                        break;
-                }
-            }
-            catch
-            {
-                GT_TextureQuality.SelectedIndex = -1;
-            }
-
-            // Получаем настройки шейдеров (mat_reducefillrate): 0-high, 1-low
-            try
-            {
-                switch (CoreLib.GetSRCDWord("mat_reducefillrate", SubkeyR))
-                {
-                    case 0: GT_ShaderQuality.SelectedIndex = 1;
-                        break;
-                    case 1: GT_ShaderQuality.SelectedIndex = 0;
-                        break;
-                }
-            }
-            catch
-            {
-                GT_ShaderQuality.SelectedIndex = -1;
-            }
-
-            // Начинаем работать над отражениями (здесь сложнее)
-            try
-            {
-                switch (CoreLib.GetSRCDWord("r_waterforceexpensive", SubkeyR))
-                {
-                    case 0: GT_WaterQuality.SelectedIndex = 0;
-                        break;
-                    case 1:
-                        switch (CoreLib.GetSRCDWord("r_waterforcereflectentities", SubkeyR))
-                        {
-                            case 0: GT_WaterQuality.SelectedIndex = 1;
-                                break;
-                            case 1: GT_WaterQuality.SelectedIndex = 2;
-                                break;
-                        }
-                        break;
-                }
-            }
-            catch
-            {
-                GT_WaterQuality.SelectedIndex = -1;
-            }
-
-            // Получаем настройки теней (r_shadowrendertotexture): 0-low, 1-high
-            try
-            {
-                switch (CoreLib.GetSRCDWord("r_shadowrendertotexture", SubkeyR))
-                {
-                    case 0: GT_ShadowQuality.SelectedIndex = 0;
-                        break;
-                    case 1: GT_ShadowQuality.SelectedIndex = 1;
-                        break;
-                }
-            }
-            catch
-            {
-                GT_ShadowQuality.SelectedIndex = -1;
-            }
-
-            // Получаем настройки коррекции цвета (mat_colorcorrection): 0-off, 1-on
-            try
-            {
-                switch (CoreLib.GetSRCDWord("mat_colorcorrection", SubkeyR))
-                {
-                    case 0: GT_ColorCorrectionT.SelectedIndex = 0;
-                        break;
-                    case 1: GT_ColorCorrectionT.SelectedIndex = 1;
-                        break;
-                }
-            }
-            catch
-            {
-                GT_ColorCorrectionT.SelectedIndex = -1;
-            }
-
-            // Получаем настройки сглаживания (mat_antialias): 1-off, 2-2x, 4-4x, etc
-            // 2x MSAA - 2:0; 4xMSAA - 4:0; 8xCSAA - 4:2; 16xCSAA - 4:4; 8xMSAA - 8:0; 16xQ CSAA - 8:2;
-            try
-            {
-                switch (CoreLib.GetSRCDWord("mat_antialias", SubkeyR))
-                {
-                    case 0: GT_AntiAliasing.SelectedIndex = 0;
-                        break;
-                    case 1: GT_AntiAliasing.SelectedIndex = 0;
-                        break;
-                    case 2: GT_AntiAliasing.SelectedIndex = 1;
-                        break;
-                    case 4:
-                        switch (CoreLib.GetSRCDWord("mat_aaquality", SubkeyR))
-                        {
-                            case 0: GT_AntiAliasing.SelectedIndex = 2;
-                                break;
-                            case 2: GT_AntiAliasing.SelectedIndex = 3;
-                                break;
-                            case 4: GT_AntiAliasing.SelectedIndex = 4;
-                                break;
-                        }
-                        break;
-                    case 8:
-                        switch (CoreLib.GetSRCDWord("mat_aaquality", SubkeyR))
-                        {
-                            case 0: GT_AntiAliasing.SelectedIndex = 5;
-                                break;
-                            case 2: GT_AntiAliasing.SelectedIndex = 6;
-                                break;
-                        }
-                        break;
-                }
-            }
-            catch
-            {
-                GT_AntiAliasing.SelectedIndex = -1;
-            }
-
-            // Получаем настройки анизотропии (mat_forceaniso): 1-off, etc
-            try
-            {
-                switch (CoreLib.GetSRCDWord("mat_forceaniso", SubkeyR))
-                {
-                    case 1:
-                        switch (CoreLib.GetSRCDWord("mat_trilinear", SubkeyR))
-                        {
-                            case 0: GT_Filtering.SelectedIndex = 0;
-                                break;
-                            case 1: GT_Filtering.SelectedIndex = 1;
-                                break;
-                        }
-                        break;
-                    case 2: GT_Filtering.SelectedIndex = 2;
-                        break;
-                    case 4: GT_Filtering.SelectedIndex = 3;
-                        break;
-                    case 8: GT_Filtering.SelectedIndex = 4;
-                        break;
-                    case 16: GT_Filtering.SelectedIndex = 5;
-                        break;
-                }
-            }
-            catch
-            {
-                GT_Filtering.SelectedIndex = -1;
-            }
-
-            // Получаем настройки вертикальной синхронизации (mat_vsync): 0-off, 1-on
-            try
-            {
-                switch (CoreLib.GetSRCDWord("mat_vsync", SubkeyR))
-                {
-                    case 0: GT_VSync.SelectedIndex = 0;
-                        break;
-                    case 1: GT_VSync.SelectedIndex = 1;
-                        break;
-                }
-            }
-            catch
-            {
-                GT_VSync.SelectedIndex = -1;
-            }
-
-            // Получаем настройки размытия движения (MotionBlur): 0-off, 1-on
-            try
-            {
-                switch (CoreLib.GetSRCDWord("MotionBlur", SubkeyR))
-                {
-                    case 0: GT_MotionBlur.SelectedIndex = 0;
-                        break;
-                    case 1: GT_MotionBlur.SelectedIndex = 1;
-                        break;
-                }
-            }
-            catch
-            {
-                GT_MotionBlur.SelectedIndex = -1;
-            }
-
-            // Получаем настройки режима рендера (DXLevel_V1):
-            // 80-DirectX 8.0; 81-DirectX 8.1; 90-DirectX 9.0; 95-DirectX 9.0c
-            try
-            {
-                switch (CoreLib.GetSRCDWord("DXLevel_V1", SubkeyR))
-                {
-                    case 80: GT_DxMode.SelectedIndex = 0;
-                        break;
-                    case 81: GT_DxMode.SelectedIndex = 1;
-                        break;
-                    case 90: GT_DxMode.SelectedIndex = 2;
-                        break;
-                    case 95: GT_DxMode.SelectedIndex = 3;
-                        break;
-                }
-            }
-            catch
-            {
-                GT_DxMode.SelectedIndex = -1;
-            }
-
-            // Получаем настройки HDR (mat_hdr_level): 0-off,1-bloom,2-Full
-            try
-            {
-                switch (CoreLib.GetSRCDWord("mat_hdr_level", SubkeyR))
-                {
-                    case 0: GT_HDR.SelectedIndex = 0;
-                        break;
-                    case 1: GT_HDR.SelectedIndex = 1;
-                        break;
-                    case 2: GT_HDR.SelectedIndex = 2;
-                        break;
-                }
-            }
-            catch
-            {
-                GT_HDR.SelectedIndex = -1;
-            }
+            // Закрываем ключ реестра...
+            ResKey.Close();
         }
 
         /// <summary>
