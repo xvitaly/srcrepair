@@ -3219,4 +3219,25 @@
   <data name="sv_rcon_whitelist_address" xml:space="preserve">
     <value>Задаёт IP-адрес, который никогда не будет забанен в случае ввода неправильных RCON паролей.</value>
   </data>
+  <data name="mp_endmatch_votenextmap" xml:space="preserve">
+    <value>Включает / отключает голосование за следующую карту при завершении матча.</value>
+  </data>
+  <data name="mp_endmatch_votenextmap_keepcurrent" xml:space="preserve">
+    <value>Разрешает / запрещает отображение текущей карты в списке голосования за следующую.</value>
+  </data>
+  <data name="mp_overtime_enable" xml:space="preserve">
+    <value>Включает / отключает овертайм (дополнительное время).</value>
+  </data>
+  <data name="mp_overtime_halftime_pausetimer" xml:space="preserve">
+    <value>Включает / выключает паузу между периодами в овертайме.</value>
+  </data>
+  <data name="mp_overtime_maxrounds" xml:space="preserve">
+    <value>Задаёт максимальное количество раундов в овертайме.</value>
+  </data>
+  <data name="mp_overtime_startmoney" xml:space="preserve">
+    <value>Задаёт стартовую сумму денег в овертайме.</value>
+  </data>
+  <data name="sb_filter_incompatible_versions" xml:space="preserve">
+    <value>Включает / отключает фильтр, скрывающий серверы с несовместимыми версиями из списка.</value>
+  </data>
 </root>
