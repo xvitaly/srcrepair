@@ -150,9 +150,6 @@ namespace srcrepair
                 // НГ! Меняем логотип программы на специально заготовленный...
                 iconApp.Image = Properties.Resources.Xmas;
             }
-
-            // Укажем количество запусков программы...
-            labelLaunches.Text = String.Format(labelLaunches.Text, Properties.Settings.Default.StatsLaunches);
         }
     }
 }

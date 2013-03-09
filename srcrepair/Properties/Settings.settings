@@ -26,9 +26,6 @@
     <Setting Name="UpdateChURI" Type="System.String" Scope="Application">
       <Value Profile="(Default)">http://www.easycoding.org/files/srcrepair.txt</Value>
     </Setting>
-    <Setting Name="IsFirstRun" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
-    </Setting>
     <Setting Name="GameListFile" Type="System.String" Scope="Application">
       <Value Profile="(Default)">games.xml</Value>
     </Setting>
@@ -58,9 +55,6 @@
     </Setting>
     <Setting Name="IsPortable" Type="System.Boolean" Scope="Application">
       <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="StatsLaunches" Type="System.Int64" Scope="User">
-      <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="UpdateGameDBFile" Type="System.String" Scope="Application">
       <Value Profile="(Default)">http://srcrepair.googlecode.com/git/tfiles/games.xml</Value>

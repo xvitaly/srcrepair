@@ -49,17 +49,6 @@ namespace srcrepair
                 Properties.Settings.Default.Upgrade();
                 Properties.Settings.Default.CallUpgrade = false;
             }
-            
-            // Проверим на первый запуск...
-            if (Properties.Settings.Default.IsFirstRun)
-            {
-                // Это первый запуск программы от текущего профиля или из текущего каталога...
-                // Первый запуск состоялся, поэтому переведём значение переменной в false...
-                Properties.Settings.Default.IsFirstRun = false;
-            }
-
-            // Инкрементируем счётчик запусков программы...
-            Properties.Settings.Default.StatsLaunches++;
         }
 
         #region Internal Variables
