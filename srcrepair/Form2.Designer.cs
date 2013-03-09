@@ -33,10 +33,10 @@
             this.labelVersion = new System.Windows.Forms.Label();
             this.labelCompanyName = new System.Windows.Forms.Label();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
-            this.labelFlags = new System.Windows.Forms.Label();
+            this.labelLicense = new System.Windows.Forms.Label();
             this.labelCopyright = new System.Windows.Forms.Label();
             this.okButton = new System.Windows.Forms.Button();
-            this.labelLaunches = new System.Windows.Forms.Label();
+            this.labelContent = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.iconApp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,10 +68,10 @@
             this.textBoxDescription.ReadOnly = true;
             this.textBoxDescription.TabStop = false;
             // 
-            // labelFlags
+            // labelLicense
             // 
-            resources.ApplyResources(this.labelFlags, "labelFlags");
-            this.labelFlags.Name = "labelFlags";
+            resources.ApplyResources(this.labelLicense, "labelLicense");
+            this.labelLicense.Name = "labelLicense";
             // 
             // labelCopyright
             // 
@@ -86,10 +86,10 @@
             this.okButton.UseVisualStyleBackColor = true;
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
-            // labelLaunches
+            // labelContent
             // 
-            resources.ApplyResources(this.labelLaunches, "labelLaunches");
-            this.labelLaunches.Name = "labelLaunches";
+            resources.ApplyResources(this.labelContent, "labelContent");
+            this.labelContent.Name = "labelContent";
             // 
             // frmAbout
             // 
@@ -97,10 +97,10 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.okButton;
-            this.Controls.Add(this.labelLaunches);
+            this.Controls.Add(this.labelContent);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.labelCopyright);
-            this.Controls.Add(this.labelFlags);
+            this.Controls.Add(this.labelLicense);
             this.Controls.Add(this.textBoxDescription);
             this.Controls.Add(this.labelCompanyName);
             this.Controls.Add(this.labelVersion);
@@ -127,10 +127,10 @@
         private System.Windows.Forms.Label labelVersion;
         private System.Windows.Forms.Label labelCompanyName;
         private System.Windows.Forms.TextBox textBoxDescription;
-        private System.Windows.Forms.Label labelFlags;
+        private System.Windows.Forms.Label labelLicense;
         private System.Windows.Forms.Label labelCopyright;
         private System.Windows.Forms.Button okButton;
-        private System.Windows.Forms.Label labelLaunches;
+        private System.Windows.Forms.Label labelContent;
 
     }
 }
