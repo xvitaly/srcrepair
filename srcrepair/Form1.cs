@@ -321,7 +321,13 @@ namespace srcrepair
             try { ResKey.SetValue("ScreenHeight", (int)GT_ResVert.Value, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки режима запуска приложения (ScreenWindowed):
-            try { ResKey.SetValue("ScreenWindowed", (int)GT_ScreenType.SelectedIndex, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            switch (GT_ScreenType.SelectedIndex)
+            {
+                case 0: try { ResKey.SetValue("ScreenWindowed", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    break;
+                case 1: try { ResKey.SetValue("ScreenWindowed", (int)1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    break;
+            }
 
             // Запишем в реестр настройки детализации моделей (r_rootlod):
             switch (GT_ModelQuality.SelectedIndex)
@@ -374,10 +380,22 @@ namespace srcrepair
             }
 
             // Запишем в реестр настройки прорисовки теней (r_shadowrendertotexture):
-            try { ResKey.SetValue("r_shadowrendertotexture", (int)GT_ShadowQuality.SelectedIndex, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            switch (GT_ShadowQuality.SelectedIndex)
+            {
+                case 0: try { ResKey.SetValue("r_shadowrendertotexture", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    break;
+                case 1: try { ResKey.SetValue("r_shadowrendertotexture", (int)1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    break;
+            }
 
             // Запишем в реестр настройки коррекции цвета (mat_colorcorrection):
-            try { ResKey.SetValue("mat_colorcorrection", (int)GT_ColorCorrectionT.SelectedIndex, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            switch (GT_ColorCorrectionT.SelectedIndex)
+            {
+                case 0: try { ResKey.SetValue("mat_colorcorrection", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    break;
+                case 1: try { ResKey.SetValue("mat_colorcorrection", (int)1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    break;
+            }
 
             // Запишем в реестр настройки сглаживания (mat_antialias и mat_aaquality):
             switch (GT_AntiAliasing.SelectedIndex)
@@ -456,10 +474,22 @@ namespace srcrepair
             }
 
             // Запишем в реестр настройки вертикальной синхронизации (mat_vsync):
-            try { ResKey.SetValue("mat_vsync", (int)GT_VSync.SelectedIndex, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            switch (GT_VSync.SelectedIndex)
+            {
+                case 0: try { ResKey.SetValue("mat_vsync", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    break;
+                case 1: try { ResKey.SetValue("mat_vsync", (int)1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    break;
+            }
 
             // Запишем в реестр настройки размытия движения (MotionBlur):
-            try { ResKey.SetValue("MotionBlur", (int)GT_MotionBlur.SelectedIndex, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            switch (GT_MotionBlur.SelectedIndex)
+            {
+                case 0: try { ResKey.SetValue("MotionBlur", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    break;
+                case 1: try { ResKey.SetValue("MotionBlur", (int)1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    break;
+            }
 
             // Запишем в реестр настройки режима DirectX (DXLevel_V1):
             switch (GT_DxMode.SelectedIndex)
@@ -479,7 +509,15 @@ namespace srcrepair
             }
 
             // Запишем в реестр настройки HDR (mat_hdr_level):
-            try { ResKey.SetValue("mat_hdr_level", (int)GT_HDR.SelectedIndex, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            switch (GT_HDR.SelectedIndex)
+            {
+                case 0: try { ResKey.SetValue("mat_hdr_level", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    break;
+                case 1: try { ResKey.SetValue("mat_hdr_level", (int)1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    break;
+                case 2: try { ResKey.SetValue("mat_hdr_level", (int)2, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    break;
+            }
 
             // Закрываем открытый ранее ключ реестра...
             ResKey.Close();
