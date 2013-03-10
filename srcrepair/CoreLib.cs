@@ -144,66 +144,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Получает из реестра значение нужной нам переменной для
-        /// указанного игрового приложения.
-        /// </summary>
-        /// <param name="CVar">Название переменной</param>
-        /// <param name="CKey">Ключ реестра, который будем просматривать</param>
-        /// <returns>Значение переменной</returns>
-        public static int GetSRCDWord(string CVar, string CKey)
-        {
-            // Подключаем реестр и открываем ключ только для чтения...
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(CKey, false);
-
-            // Создаём переменную для хранения результатов...
-            int ResInt = -1;
-
-            // Проверяем чтобы ключ реестр существовал и был доступен...
-            if (ResKey != null)
-            {
-                // Получаем значение открытого ключа...
-                object ResObj = ResKey.GetValue(CVar);
-
-                // Проверяем существование значения...
-                if (ResObj != null)
-                {
-                    // Возвращаем результат...
-                    ResInt = Convert.ToInt32(ResObj);
-                }
-                else
-                {
-                    // Значение не существует, генерируем исключение...
-                    throw new System.NullReferenceException("Specified value does not exists!");
-                }
-            }
-
-            // Закрываем открытый ранее ключ реестра...
-            ResKey.Close();
-
-            // Возвращаем результат...
-            return ResInt;
-        }
-
-        /// <summary>
-        /// Записывает в реестр новое значение нужной нам переменной для
-        /// указанного игрового приложения.
-        /// </summary>
-        /// <param name="CVar">Название переменной</param>
-        /// <param name="CValue">Значение переменной</param>
-        /// <param name="CKey">Ключ реестра</param>
-        public static void WriteSRCDWord(string CVar, int CValue, string CKey)
-        {
-            // Подключаем реестр и открываем ключ для чтения и записи...
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(CKey, true);
-
-            // Записываем в реестр...
-            ResKey.SetValue(CVar, CValue, RegistryValueKind.DWord);
-
-            // Закрываем открытый ранее ключ реестра...
-            ResKey.Close();
-        }
-
-        /// <summary>
         /// Проверяет есть ли у пользователя, с правами которого запускается
         /// программа, привилегии локального администратора.
         /// </summary>
@@ -321,30 +261,6 @@ namespace srcrepair
                 // Обрабатываем найденное...
                 DItem.Delete(); // Удаляем файл...
             }
-        }
-
-        /// <summary>
-        /// Получает из реестра значение указанной переменной булевского типа.
-        /// При отсутствии ключа или значение - возвращается значение по умолчанию.
-        /// </summary>
-        /// <param name="CVar">Название переменной</param>
-        /// <param name="Subkey">Подключ в HKCU</param>
-        /// <param name="Default">Значение по умолчанию</param>
-        /// <returns>Значение запрошенной переменной</returns>
-        public static bool GetAppBool(string CVar, string Subkey, bool Default)
-        {
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(Path.Combine("Software", Subkey), false);
-            bool Result = Default;
-            if (ResKey != null)
-            {
-                object RetObj = ResKey.GetValue(CVar);
-                if (RetObj != null)
-                {
-                    Result = Convert.ToBoolean((int)RetObj);
-                }
-                ResKey.Close();
-            }
-            return Result;
         }
 
         /// <summary>

@@ -1242,21 +1242,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Считывает текущий статус Steam Cloud и указывает его в контрол.
-        /// </summary>
-        private void GetCloudStatus(string GID)
-        {
-            try
-            {
-                SB_App.Text = CoreLib.GetAppBool("Cloud", Path.Combine("Valve", "Steam", "Apps", GID), false) ? "Steam Cloud: " + CoreLib.GetLocalizedString("SteamCloudStatusOn") : "Steam Cloud: " + CoreLib.GetLocalizedString("SteamCloudStatusOff");
-            }
-            catch
-            {
-                SB_App.Text = "Steam Cloud: " + "UNKNOWN";
-            }
-        }
-
-        /// <summary>
         /// Переключает вид страницы графического твикера с GCF на NCF приложение
         /// и наоборот.
         /// </summary>
