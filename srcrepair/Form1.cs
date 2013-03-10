@@ -309,227 +309,180 @@ namespace srcrepair
         /// </summary>
         /// <param name="SAppName">Краткое имя игры</param>
         private void WriteGCFGameSettings(string SAppName)
-        {
-            // Сгенерируем полный путь...
-            string SubkeyR = Path.Combine("Software", "Valve", "Source", SAppName, "Settings");
-            
+        {            
+            // Открываеам ключ реестра для записи...
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(Path.Combine("Software", "Valve", "Source", SAppName, "Settings"), true);
+
             // Запишем в реестр настройки разрешения экрана...
             // По горизонтали (ScreenWidth):
-            CoreLib.WriteSRCDWord("ScreenWidth", (int)GT_ResHor.Value, SubkeyR);
+            try { ResKey.SetValue("ScreenWidth", (int)GT_ResHor.Value, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // По вертикали (ScreenHeight):
-            CoreLib.WriteSRCDWord("ScreenHeight", (int)GT_ResVert.Value, SubkeyR);
+            try { ResKey.SetValue("ScreenHeight", (int)GT_ResVert.Value, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки режима запуска приложения (ScreenWindowed):
-            switch (GT_ScreenType.SelectedIndex)
-            {
-                case 0: CoreLib.WriteSRCDWord("ScreenWindowed", 0, SubkeyR);
-                    break;
-                case 1: CoreLib.WriteSRCDWord("ScreenWindowed", 1, SubkeyR);
-                    break;
-            }
+            try { ResKey.SetValue("ScreenWindowed", (int)GT_ScreenType.SelectedIndex, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки детализации моделей (r_rootlod):
             switch (GT_ModelQuality.SelectedIndex)
             {
-                case 0: CoreLib.WriteSRCDWord("r_rootlod", 2, SubkeyR);
+                case 0: try { ResKey.SetValue("r_rootlod", (int)2, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 1: CoreLib.WriteSRCDWord("r_rootlod", 1, SubkeyR);
+                case 1: try { ResKey.SetValue("r_rootlod", (int)1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 2: CoreLib.WriteSRCDWord("r_rootlod", 0, SubkeyR);
+                case 2: try { ResKey.SetValue("r_rootlod", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
             }
 
             // Запишем в реестр настройки детализации текстур (mat_picmip):
             switch (GT_TextureQuality.SelectedIndex)
             {
-                case 0: CoreLib.WriteSRCDWord("mat_picmip", 2, SubkeyR);
+                case 0: try { ResKey.SetValue("mat_picmip", (int)2, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 1: CoreLib.WriteSRCDWord("mat_picmip", 1, SubkeyR);
+                case 1: try { ResKey.SetValue("mat_picmip", (int)1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 2: CoreLib.WriteSRCDWord("mat_picmip", 0, SubkeyR);
+                case 2: try { ResKey.SetValue("mat_picmip", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 3: CoreLib.WriteSRCDWord("mat_picmip", -1, SubkeyR);
+                case 3: try { ResKey.SetValue("mat_picmip", (int)-1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
             }
 
             // Запишем в реестр настройки качества шейдерных эффектов (mat_reducefillrate):
             switch (GT_ShaderQuality.SelectedIndex)
             {
-                case 0: CoreLib.WriteSRCDWord("mat_reducefillrate", 1, SubkeyR);
+                case 0: try { ResKey.SetValue("mat_reducefillrate", (int)1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 1: CoreLib.WriteSRCDWord("mat_reducefillrate", 0, SubkeyR);
+                case 1: try { ResKey.SetValue("mat_reducefillrate", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
             }
 
             // Запишем в реестр настройки отражений в воде (r_waterforceexpensive и r_waterforcereflectentities):
             switch (GT_WaterQuality.SelectedIndex)
             {
-                case 0:
-                    // Simple reflections
-                    CoreLib.WriteSRCDWord("r_waterforceexpensive", 0, SubkeyR);
-                    CoreLib.WriteSRCDWord("r_waterforcereflectentities", 0, SubkeyR);
+                case 0: // Simple reflections
+                    try { ResKey.SetValue("r_waterforceexpensive", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("r_waterforcereflectentities", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 1:
-                    // Reflect world
-                    CoreLib.WriteSRCDWord("r_waterforceexpensive", 1, SubkeyR);
-                    CoreLib.WriteSRCDWord("r_waterforcereflectentities", 0, SubkeyR);
+                case 1: // Reflect world
+                    try { ResKey.SetValue("r_waterforceexpensive", (int)1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("r_waterforcereflectentities", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 2:
-                    // Reflect all
-                    CoreLib.WriteSRCDWord("r_waterforceexpensive", 1, SubkeyR);
-                    CoreLib.WriteSRCDWord("r_waterforcereflectentities", 1, SubkeyR);
+                case 2: // Reflect all
+                    try { ResKey.SetValue("r_waterforceexpensive", (int)1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("r_waterforcereflectentities", (int)1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
             }
 
             // Запишем в реестр настройки прорисовки теней (r_shadowrendertotexture):
-            switch (GT_ShadowQuality.SelectedIndex)
-            {
-                case 0: CoreLib.WriteSRCDWord("r_shadowrendertotexture", 0, SubkeyR);
-                    break;
-                case 1: CoreLib.WriteSRCDWord("r_shadowrendertotexture", 1, SubkeyR);
-                    break;
-            }
+            try { ResKey.SetValue("r_shadowrendertotexture", (int)GT_ShadowQuality.SelectedIndex, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки коррекции цвета (mat_colorcorrection):
-            switch (GT_ColorCorrectionT.SelectedIndex)
-            {
-                case 0: CoreLib.WriteSRCDWord("mat_colorcorrection", 0, SubkeyR);
-                    break;
-                case 1: CoreLib.WriteSRCDWord("mat_colorcorrection", 1, SubkeyR);
-                    break;
-            }
+            try { ResKey.SetValue("mat_colorcorrection", (int)GT_ColorCorrectionT.SelectedIndex, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки сглаживания (mat_antialias и mat_aaquality):
             switch (GT_AntiAliasing.SelectedIndex)
             {
-                case 0:
-                    // Нет сглаживания
-                    CoreLib.WriteSRCDWord("mat_antialias", 1, SubkeyR);
-                    CoreLib.WriteSRCDWord("mat_aaquality", 0, SubkeyR);
-                    CoreLib.WriteSRCDWord("ScreenMSAA", 0, SubkeyR); // Дублируем значение mat_antialias
-                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 0, SubkeyR); // Дублируем значение mat_aaquality
+                case 0: // Нет сглаживания
+                    try { ResKey.SetValue("mat_antialias", (int)1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("mat_aaquality", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("ScreenMSAA", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("ScreenMSAAQuality", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 1:
-                    // 2x MSAA
-                    CoreLib.WriteSRCDWord("mat_antialias", 2, SubkeyR);
-                    CoreLib.WriteSRCDWord("mat_aaquality", 0, SubkeyR);
-                    CoreLib.WriteSRCDWord("ScreenMSAA", 2, SubkeyR);
-                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 0, SubkeyR);
+                case 1: // 2x MSAA
+                    try { ResKey.SetValue("mat_antialias", (int)2, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("mat_aaquality", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("ScreenMSAA", (int)2, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("ScreenMSAAQuality", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 2:
-                    // 4x MSAA
-                    CoreLib.WriteSRCDWord("mat_antialias", 4, SubkeyR);
-                    CoreLib.WriteSRCDWord("mat_aaquality", 0, SubkeyR);
-                    CoreLib.WriteSRCDWord("ScreenMSAA", 4, SubkeyR);
-                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 0, SubkeyR);
+                case 2: // 4x MSAA
+                    try { ResKey.SetValue("mat_antialias", (int)4, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("mat_aaquality", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("ScreenMSAA", (int)4, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("ScreenMSAAQuality", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 3:
-                    // 8x CSAA
-                    CoreLib.WriteSRCDWord("mat_antialias", 4, SubkeyR);
-                    CoreLib.WriteSRCDWord("mat_aaquality", 2, SubkeyR);
-                    CoreLib.WriteSRCDWord("ScreenMSAA", 4, SubkeyR);
-                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 2, SubkeyR);
+                case 3: // 8x CSAA
+                    try { ResKey.SetValue("mat_antialias", (int)4, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("mat_aaquality", (int)2, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("ScreenMSAA", (int)4, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("ScreenMSAAQuality", (int)2, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 4:
-                    // 16x CSAA
-                    CoreLib.WriteSRCDWord("mat_antialias", 4, SubkeyR);
-                    CoreLib.WriteSRCDWord("mat_aaquality", 4, SubkeyR);
-                    CoreLib.WriteSRCDWord("ScreenMSAA", 4, SubkeyR);
-                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 4, SubkeyR);
+                case 4: // 16x CSAA
+                    try { ResKey.SetValue("mat_antialias", (int)4, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("mat_aaquality", (int)4, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("ScreenMSAA", (int)4, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("ScreenMSAAQuality", (int)4, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 5:
-                    // 8x MSAA
-                    CoreLib.WriteSRCDWord("mat_antialias", 8, SubkeyR);
-                    CoreLib.WriteSRCDWord("mat_aaquality", 0, SubkeyR);
-                    CoreLib.WriteSRCDWord("ScreenMSAA", 8, SubkeyR);
-                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 0, SubkeyR);
+                case 5: // 8x MSAA
+                    try { ResKey.SetValue("mat_antialias", (int)8, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("mat_aaquality", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("ScreenMSAA", (int)8, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("ScreenMSAAQuality", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 6:
-                    // 16xQ CSAA
-                    CoreLib.WriteSRCDWord("mat_antialias", 8, SubkeyR);
-                    CoreLib.WriteSRCDWord("mat_aaquality", 2, SubkeyR);
-                    CoreLib.WriteSRCDWord("ScreenMSAA", 8, SubkeyR);
-                    CoreLib.WriteSRCDWord("ScreenMSAAQuality", 2, SubkeyR);
+                case 6: // 16xQ CSAA
+                    try { ResKey.SetValue("mat_antialias", (int)8, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("mat_aaquality", (int)2, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("ScreenMSAA", (int)8, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("ScreenMSAAQuality", (int)2, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
             }
 
             // Запишем в реестр настройки фильтрации (mat_forceaniso):
             switch (GT_Filtering.SelectedIndex)
             {
-                case 0:
-                    // Билинейная
-                    CoreLib.WriteSRCDWord("mat_forceaniso", 1, SubkeyR);
-                    CoreLib.WriteSRCDWord("mat_trilinear", 0, SubkeyR);
+                case 0: // Билинейная
+                    try { ResKey.SetValue("mat_forceaniso", (int)1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("mat_trilinear", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 1:
-                    // Трилинейная
-                    CoreLib.WriteSRCDWord("mat_forceaniso", 1, SubkeyR);
-                    CoreLib.WriteSRCDWord("mat_trilinear", 1, SubkeyR);
+                case 1: // Трилинейная
+                    try { ResKey.SetValue("mat_forceaniso", (int)1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("mat_trilinear", (int)1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 2:
-                    // Анизотропная 2x
-                    CoreLib.WriteSRCDWord("mat_forceaniso", 2, SubkeyR);
-                    CoreLib.WriteSRCDWord("mat_trilinear", 0, SubkeyR);
+                case 2: // Анизотропная 2x
+                    try { ResKey.SetValue("mat_forceaniso", (int)2, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("mat_trilinear", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 3:
-                    // Анизотропная 4x
-                    CoreLib.WriteSRCDWord("mat_forceaniso", 4, SubkeyR);
-                    CoreLib.WriteSRCDWord("mat_trilinear", 0, SubkeyR);
+                case 3: // Анизотропная 4x
+                    try { ResKey.SetValue("mat_forceaniso", (int)4, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("mat_trilinear", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 4:
-                    // Анизотропная 8x
-                    CoreLib.WriteSRCDWord("mat_forceaniso", 8, SubkeyR);
-                    CoreLib.WriteSRCDWord("mat_trilinear", 0, SubkeyR);
+                case 4: // Анизотропная 8x
+                    try { ResKey.SetValue("mat_forceaniso", (int)8, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("mat_trilinear", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 5:
-                    // Анизотропная 16x
-                    CoreLib.WriteSRCDWord("mat_forceaniso", 16, SubkeyR);
-                    CoreLib.WriteSRCDWord("mat_trilinear", 0, SubkeyR);
+                case 5: // Анизотропная 16x
+                    try { ResKey.SetValue("mat_forceaniso", (int)16, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ResKey.SetValue("mat_trilinear", (int)0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
             }
 
             // Запишем в реестр настройки вертикальной синхронизации (mat_vsync):
-            switch (GT_VSync.SelectedIndex)
-            {
-                case 0: CoreLib.WriteSRCDWord("mat_vsync", 0, SubkeyR);
-                    break;
-                case 1: CoreLib.WriteSRCDWord("mat_vsync", 1, SubkeyR);
-                    break;
-            }
+            try { ResKey.SetValue("mat_vsync", (int)GT_VSync.SelectedIndex, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки размытия движения (MotionBlur):
-            switch (GT_MotionBlur.SelectedIndex)
-            {
-                case 0: CoreLib.WriteSRCDWord("MotionBlur", 0, SubkeyR);
-                    break;
-                case 1: CoreLib.WriteSRCDWord("MotionBlur", 1, SubkeyR);
-                    break;
-            }
+            try { ResKey.SetValue("MotionBlur", (int)GT_MotionBlur.SelectedIndex, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки режима DirectX (DXLevel_V1):
             switch (GT_DxMode.SelectedIndex)
             {
-                case 0: CoreLib.WriteSRCDWord("DXLevel_V1", 80, SubkeyR); // DirectX 8.0
+                case 0: // DirectX 8.0
+                    try { ResKey.SetValue("DXLevel_V1", (int)80, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 1: CoreLib.WriteSRCDWord("DXLevel_V1", 81, SubkeyR); // DirectX 8.1
+                case 1: // DirectX 8.1
+                    try { ResKey.SetValue("DXLevel_V1", (int)81, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 2: CoreLib.WriteSRCDWord("DXLevel_V1", 90, SubkeyR); // DirectX 9.0
+                case 2: // DirectX 9.0
+                    try { ResKey.SetValue("DXLevel_V1", (int)90, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
-                case 3: CoreLib.WriteSRCDWord("DXLevel_V1", 95, SubkeyR); // DirectX 9.0c
+                case 3: // DirectX 9.0c
+                    try { ResKey.SetValue("DXLevel_V1", (int)95, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     break;
             }
 
             // Запишем в реестр настройки HDR (mat_hdr_level):
-            switch (GT_HDR.SelectedIndex)
-            {
-                case 0: CoreLib.WriteSRCDWord("mat_hdr_level", 0, SubkeyR);
-                    break;
-                case 1: CoreLib.WriteSRCDWord("mat_hdr_level", 1, SubkeyR);
-                    break;
-                case 2: CoreLib.WriteSRCDWord("mat_hdr_level", 2, SubkeyR);
-                    break;
-            }
+            try { ResKey.SetValue("mat_hdr_level", (int)GT_HDR.SelectedIndex, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+
+            // Закрываем открытый ранее ключ реестра...
+            ResKey.Close();
         }
 
         /// <summary>
