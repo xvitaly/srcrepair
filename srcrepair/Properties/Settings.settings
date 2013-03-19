@@ -24,7 +24,7 @@
       <Value Profile="(Default)">2012-05-01</Value>
     </Setting>
     <Setting Name="UpdateChURI" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://www.easycoding.org/files/srcrepair.txt</Value>
+      <Value Profile="(Default)">http://www.easycoding.org/files/srcrepair/updates/list.txt</Value>
     </Setting>
     <Setting Name="GameListFile" Type="System.String" Scope="Application">
       <Value Profile="(Default)">games.xml</Value>
@@ -57,10 +57,10 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="UpdateGameDBFile" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://srcrepair.googlecode.com/git/tfiles/games.xml</Value>
+      <Value Profile="(Default)">http://www.easycoding.org/files/srcrepair/updates/games.xml</Value>
     </Setting>
     <Setting Name="UpdateGameDBHash" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://srcrepair.googlecode.com/git/tfiles/games.md5</Value>
+      <Value Profile="(Default)">http://www.easycoding.org/files/srcrepair/updates/games.md5</Value>
     </Setting>
     <Setting Name="EditorBin" Type="System.String" Scope="User">
       <Value Profile="(Default)">notepad.exe</Value>
