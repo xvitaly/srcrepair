@@ -2,9 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="srcrepair.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="HideNotInstalled" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
-    </Setting>
     <Setting Name="ConfirmExit" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
@@ -70,6 +67,9 @@
     </Setting>
     <Setting Name="ShParam" Type="System.String" Scope="User">
       <Value Profile="(Default)">/select,</Value>
+    </Setting>
+    <Setting Name="UseOldSearchSystem" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -37,7 +37,7 @@
             this.MO_L_HelpSystem = new System.Windows.Forms.Label();
             this.MO_AutoUpdate = new System.Windows.Forms.CheckBox();
             this.MO_SortGameList = new System.Windows.Forms.CheckBox();
-            this.MO_HideNotInst = new System.Windows.Forms.CheckBox();
+            this.MO_UseOldSeachSystem = new System.Windows.Forms.CheckBox();
             this.MO_ConfirmExit = new System.Windows.Forms.CheckBox();
             this.MO_TP2 = new System.Windows.Forms.TabPage();
             this.MO_FindShBin = new System.Windows.Forms.Button();
@@ -84,7 +84,7 @@
             this.MO_TP1.Controls.Add(this.MO_L_HelpSystem);
             this.MO_TP1.Controls.Add(this.MO_AutoUpdate);
             this.MO_TP1.Controls.Add(this.MO_SortGameList);
-            this.MO_TP1.Controls.Add(this.MO_HideNotInst);
+            this.MO_TP1.Controls.Add(this.MO_UseOldSeachSystem);
             this.MO_TP1.Controls.Add(this.MO_ConfirmExit);
             resources.ApplyResources(this.MO_TP1, "MO_TP1");
             this.MO_TP1.Name = "MO_TP1";
@@ -117,11 +117,11 @@
             this.MO_SortGameList.Name = "MO_SortGameList";
             this.MO_SortGameList.UseVisualStyleBackColor = true;
             // 
-            // MO_HideNotInst
+            // MO_UseOldSeachSystem
             // 
-            resources.ApplyResources(this.MO_HideNotInst, "MO_HideNotInst");
-            this.MO_HideNotInst.Name = "MO_HideNotInst";
-            this.MO_HideNotInst.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.MO_UseOldSeachSystem, "MO_UseOldSeachSystem");
+            this.MO_UseOldSeachSystem.Name = "MO_UseOldSeachSystem";
+            this.MO_UseOldSeachSystem.UseVisualStyleBackColor = true;
             // 
             // MO_ConfirmExit
             // 
@@ -238,7 +238,7 @@
         private System.Windows.Forms.Label MO_L_HelpSystem;
         private System.Windows.Forms.CheckBox MO_AutoUpdate;
         private System.Windows.Forms.CheckBox MO_SortGameList;
-        private System.Windows.Forms.CheckBox MO_HideNotInst;
+        private System.Windows.Forms.CheckBox MO_UseOldSeachSystem;
         private System.Windows.Forms.CheckBox MO_ConfirmExit;
         private System.Windows.Forms.TabPage MO_TP2;
         private System.Windows.Forms.CheckBox MO_EnableAppLogs;

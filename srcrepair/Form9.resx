@@ -303,37 +303,34 @@
   <data name="&gt;&gt;MO_SortGameList.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="MO_HideNotInst.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="MO_UseOldSeachSystem.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="MO_HideNotInst.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="MO_HideNotInst.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MO_UseOldSeachSystem.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="MO_HideNotInst.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MO_UseOldSeachSystem.Location" type="System.Drawing.Point, System.Drawing">
     <value>19, 39</value>
   </data>
-  <data name="MO_HideNotInst.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MO_UseOldSeachSystem.Size" type="System.Drawing.Size, System.Drawing">
     <value>267, 17</value>
   </data>
-  <data name="MO_HideNotInst.TabIndex" type="System.Int32, mscorlib">
+  <data name="MO_UseOldSeachSystem.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="MO_HideNotInst.Text" xml:space="preserve">
-    <value>Hide not installed games</value>
+  <data name="MO_UseOldSeachSystem.Text" xml:space="preserve">
+    <value>Use old search system (only from steamapps dir)</value>
   </data>
-  <data name="&gt;&gt;MO_HideNotInst.Name" xml:space="preserve">
-    <value>MO_HideNotInst</value>
+  <data name="&gt;&gt;MO_UseOldSeachSystem.Name" xml:space="preserve">
+    <value>MO_UseOldSeachSystem</value>
   </data>
-  <data name="&gt;&gt;MO_HideNotInst.Type" xml:space="preserve">
+  <data name="&gt;&gt;MO_UseOldSeachSystem.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MO_HideNotInst.Parent" xml:space="preserve">
+  <data name="&gt;&gt;MO_UseOldSeachSystem.Parent" xml:space="preserve">
     <value>MO_TP1</value>
   </data>
-  <data name="&gt;&gt;MO_HideNotInst.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MO_UseOldSeachSystem.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <metadata name="MO_ConfirmExit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

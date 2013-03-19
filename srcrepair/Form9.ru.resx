@@ -142,8 +142,8 @@
   <data name="MO_SortGameList.Text" xml:space="preserve">
     <value>Сортировать список игр по алфавиту</value>
   </data>
-  <data name="MO_HideNotInst.Text" xml:space="preserve">
-    <value>Скрывать не установленные игры</value>
+  <data name="MO_UseOldSeachSystem.Text" xml:space="preserve">
+    <value>Использовать старый метод поиска игр</value>
   </data>
   <data name="MO_ConfirmExit.Text" xml:space="preserve">
     <value>Подтверждать выход из программы</value>

@@ -26,18 +26,6 @@ namespace srcrepair.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool HideNotInstalled {
-            get {
-                return ((bool)(this["HideNotInstalled"]));
-            }
-            set {
-                this["HideNotInstalled"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool ConfirmExit {
             get {
                 return ((bool)(this["ConfirmExit"]));
@@ -278,6 +266,18 @@ namespace srcrepair.Properties {
             }
             set {
                 this["ShParam"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UseOldSearchSystem {
+            get {
+                return ((bool)(this["UseOldSearchSystem"]));
+            }
+            set {
+                this["UseOldSearchSystem"] = value;
             }
         }
     }

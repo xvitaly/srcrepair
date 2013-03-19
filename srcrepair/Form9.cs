@@ -38,7 +38,7 @@ namespace srcrepair
         {
             // Считаем текущие настройки...
             MO_ConfirmExit.Checked = Properties.Settings.Default.ConfirmExit;
-            MO_HideNotInst.Checked = Properties.Settings.Default.HideNotInstalled;
+            MO_UseOldSeachSystem.Checked = Properties.Settings.Default.UseOldSearchSystem;
             MO_SortGameList.Checked = Properties.Settings.Default.SortGamesList;
             MO_AutoUpdate.Checked = Properties.Settings.Default.EnableAutoUpdate;
             MO_AllowUnsafeNCFOps.Checked = Properties.Settings.Default.AllowNCFUnsafeOps;
@@ -56,7 +56,7 @@ namespace srcrepair
         {
             // Сохраняем настройки для текущего сеанса...
             Properties.Settings.Default.ConfirmExit = MO_ConfirmExit.Checked;
-            Properties.Settings.Default.HideNotInstalled = MO_HideNotInst.Checked;
+            Properties.Settings.Default.UseOldSearchSystem = MO_UseOldSeachSystem.Checked;
             Properties.Settings.Default.SortGamesList = MO_SortGameList.Checked;
             Properties.Settings.Default.EnableAutoUpdate = MO_AutoUpdate.Checked;
             Properties.Settings.Default.AllowNCFUnsafeOps = MO_AllowUnsafeNCFOps.Checked;
