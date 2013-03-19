@@ -3074,7 +3074,7 @@ namespace srcrepair
             // Удаляем кастомные звуки...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "sound", "*.*"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), false, true);
         }
 
         private void MNUUpGameDB_Click(object sender, EventArgs e)
