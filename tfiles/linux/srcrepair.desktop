@@ -1,9 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Type=Application
-Categories=Utilities
-Exec=srcrepair
-Icon=/usr/share/srcrepair/srcrepair.ico
-Terminal=false
-Name=SRC Repair
-GenericName=
