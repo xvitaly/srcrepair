@@ -60,7 +60,7 @@ namespace srcrepair
             if (!Directory.Exists(TempDir)) { Directory.CreateDirectory(TempDir); }
             string FileName = String.Format("report_{0}", CrDt);
             string RepName = FileName + ".txt";
-            string HostsFile = CoreLib.GetHostsFileFullPath(GV.RunningPlatform);
+            string HostsFile = CoreLib.GetHostsFileFullPath();
             string FNamePing = Path.Combine(TempDir, String.Format("ping_{0}.log", CrDt));
             string FNameTrace = Path.Combine(TempDir, String.Format("traceroute_{0}.log", CrDt));
             string FNameIpConfig = Path.Combine(TempDir, String.Format("ipconfig_{0}.log", CrDt));

@@ -50,15 +50,6 @@ namespace srcrepair
 
             // Укажем название приложения в заголовке окна...
             this.Text = String.Format(this.Text, GV.AppName);
-
-            // Отключаем функцию задания командной оболочки и текстового редактора в Windows...
-            if (GV.RunningPlatform == 0)
-            {
-                MO_ShBin.Enabled = false;
-                MO_TextEdBin.Enabled = false;
-                MO_FindTextEd.Enabled = false;
-                MO_FindShBin.Enabled = false;
-            }
         }
 
         private void MO_Okay_Click(object sender, EventArgs e)
@@ -72,13 +63,8 @@ namespace srcrepair
             Properties.Settings.Default.RemoveEmptyDirs = MO_RemEmptyDirs.Checked;
             Properties.Settings.Default.PreferedHelpSystem = MO_PrefHelpSystem.SelectedIndex;
             Properties.Settings.Default.EnableDebugLog = MO_EnableAppLogs.Checked;
-            
-            // Сохраняем настройки редактора и оболочки при запуске не в Windows...
-            if (GV.RunningPlatform != 0)
-            {
-                Properties.Settings.Default.EditorBin = MO_TextEdBin.Text;
-                Properties.Settings.Default.ShBin = MO_ShBin.Text;
-            }
+            Properties.Settings.Default.EditorBin = MO_TextEdBin.Text;
+            Properties.Settings.Default.ShBin = MO_ShBin.Text;
 
             // Сохраняем настройки...
             Properties.Settings.Default.Save();

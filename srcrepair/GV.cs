@@ -16,29 +16,9 @@ namespace srcrepair
         public const string AppName = "SRC Repair";
 
         /// <summary>
-        /// Хранит код платформы запуска приложения...
-        /// </summary>
-        public static int RunningPlatform;
-
-        /// <summary>
-        /// Хранит имя платформы запуска приложения...
-        /// </summary>
-        public static string PlatformFriendlyName;
-
-        /// <summary>
-        /// Хранит имя бинарного файла клиента Steam в зависимости от платформы...
-        /// </summary>
-        public static string SteamExecuttable;
-
-        /// <summary>
         /// Хранит User-Agent, которым представляется удалённым службам...
         /// </summary>
         public static string UserAgent;
-
-        /// <summary>
-        /// Хранит имя каталога SteamApps в зависимости от платформы...
-        /// </summary>
-        public static string SteamAppsFolderName;
 
         /// <summary>
         /// В этой переменной мы будем хранить полный путь к каталогу установленного

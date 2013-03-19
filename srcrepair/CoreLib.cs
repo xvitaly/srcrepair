@@ -504,22 +504,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Определяет платформу, на которой запущено приложение.
-        /// </summary>
-        /// <returns>0 - Win, 1 - Mac, 2 - Linux.</returns>
-        public static int DetectRunningOS()
-        {
-            switch (Environment.OSVersion.Platform)
-            {
-                case PlatformID.Unix:
-                    if (Directory.Exists("/Applications") & Directory.Exists("/System") & Directory.Exists("/Users") & Directory.Exists("/Volumes")) { return 1; } else { return 2; }
-                case PlatformID.MacOSX:
-                    return 1;
-                default: return 0;
-            }
-        }
-
-        /// <summary>
         /// Добавляет переменную и значение в Редактор конфигов.
         /// </summary>
         /// <param name="Cv">Название переменной</param>
@@ -531,7 +515,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="PlatformID">Код платформы запуска</param>
         /// <returns>Полный путь к Hosts...</returns>
-        public static string GetHostsFileFullPath(int PlatformID)
+        public static string GetHostsFileFullPath(int PlatformID = 0)
         {
             string Result = "";
             if (PlatformID == 0)

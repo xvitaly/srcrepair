@@ -96,31 +96,28 @@ namespace srcrepair
         {
             using (StreamWriter CFile = new StreamWriter(Path))
             {
-                if (GV.RunningPlatform == 0)
-                {
-                    CFile.WriteLine("# Copyright (c) 1993-2009 Microsoft Corp.");
-                    CFile.WriteLine("#");
-                    CFile.WriteLine("# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.");
-                    CFile.WriteLine("#");
-                    CFile.WriteLine("# This file contains the mappings of IP addresses to host names. Each");
-                    CFile.WriteLine("# entry should be kept on an individual line. The IP address should");
-                    CFile.WriteLine("# be placed in the first column followed by the corresponding host name.");
-                    CFile.WriteLine("# The IP address and the host name should be separated by at least one");
-                    CFile.WriteLine("# space.");
-                    CFile.WriteLine("#");
-                    CFile.WriteLine("# Additionally, comments (such as these) may be inserted on individual");
-                    CFile.WriteLine("# lines or following the machine name denoted by a ‘#’ symbol.");
-                    CFile.WriteLine("#");
-                    CFile.WriteLine("# For example:");
-                    CFile.WriteLine("#");
-                    CFile.WriteLine("# 102.54.94.97 rhino.acme.com # source server");
-                    CFile.WriteLine("# 38.25.63.10 x.acme.com # x client host");
-                    CFile.WriteLine("");
-                    CFile.WriteLine("# localhost name resolution is handled within DNS itself.");
-                    CFile.WriteLine("# 127.0.0.1 localhost");
-                    CFile.WriteLine("# ::1 localhost");
-                    CFile.WriteLine("");
-                }
+                CFile.WriteLine("# Copyright (c) 1993-2009 Microsoft Corp.");
+                CFile.WriteLine("#");
+                CFile.WriteLine("# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.");
+                CFile.WriteLine("#");
+                CFile.WriteLine("# This file contains the mappings of IP addresses to host names. Each");
+                CFile.WriteLine("# entry should be kept on an individual line. The IP address should");
+                CFile.WriteLine("# be placed in the first column followed by the corresponding host name.");
+                CFile.WriteLine("# The IP address and the host name should be separated by at least one");
+                CFile.WriteLine("# space.");
+                CFile.WriteLine("#");
+                CFile.WriteLine("# Additionally, comments (such as these) may be inserted on individual");
+                CFile.WriteLine("# lines or following the machine name denoted by a ‘#’ symbol.");
+                CFile.WriteLine("#");
+                CFile.WriteLine("# For example:");
+                CFile.WriteLine("#");
+                CFile.WriteLine("# 102.54.94.97 rhino.acme.com # source server");
+                CFile.WriteLine("# 38.25.63.10 x.acme.com # x client host");
+                CFile.WriteLine("");
+                CFile.WriteLine("# localhost name resolution is handled within DNS itself.");
+                CFile.WriteLine("# 127.0.0.1 localhost");
+                CFile.WriteLine("# ::1 localhost");
+                CFile.WriteLine("");
                 for (int i = 0; i < HEd_Table.Rows.Count - 1; i++)
                 {
                     if ((HEd_Table.Rows[i].Cells[0].Value != null) && (HEd_Table.Rows[i].Cells[1].Value != null))
@@ -152,7 +149,7 @@ namespace srcrepair
             this.Text = String.Format(this.Text, PluginVersion);
 
             // Определим расположение файла Hosts...
-            HostsFilePath = CoreLib.GetHostsFileFullPath(GV.RunningPlatform);
+            HostsFilePath = CoreLib.GetHostsFileFullPath();
 
             // Проверим существование файла...
             if (File.Exists(HostsFilePath))

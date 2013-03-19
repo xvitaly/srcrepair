@@ -1317,9 +1317,9 @@ namespace srcrepair
             FldrBrwse.Description = CoreLib.GetLocalizedString("SteamPathEnterText"); // Указываем текст в диалоге поиска каталога...
             if (FldrBrwse.ShowDialog() == DialogResult.OK) // Отображаем стандартный диалог поиска каталога...
             {
-                if (!(File.Exists(Path.Combine(FldrBrwse.SelectedPath, GV.SteamExecuttable))))
+                if (!(File.Exists(Path.Combine(FldrBrwse.SelectedPath, Properties.Resources.SteamExecBin))))
                 {
-                    throw new FileNotFoundException("Invalid Steam directory entered by user", Path.Combine(FldrBrwse.SelectedPath, GV.SteamExecuttable));
+                    throw new FileNotFoundException("Invalid Steam directory entered by user", Path.Combine(FldrBrwse.SelectedPath, Properties.Resources.SteamExecBin));
                 }
                 else
                 {
@@ -1339,7 +1339,7 @@ namespace srcrepair
         /// <param name="OldPath">Проверяемый путь</param>
         private string CheckLastSteamPath(string OldPath)
         {
-            return (!(String.IsNullOrWhiteSpace(OldPath)) && File.Exists(Path.Combine(OldPath, GV.SteamExecuttable))) ? OldPath : GetPathByMEnter();
+            return (!(String.IsNullOrWhiteSpace(OldPath)) && File.Exists(Path.Combine(OldPath, Properties.Resources.SteamExecBin))) ? OldPath : GetPathByMEnter();
         }
 
         /// <summary>
@@ -1410,69 +1410,26 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Запускает обнаружение платформы запуска приложения и заполнения платформо-зависимых путей.
+        /// Выполняет действия для данной платформы.
         /// </summary>
-        /// <param name="PlatformID">Код платформы запуска</param>
-        private void DetectPlatform(int PlatformID)
+        private void DoPlatformRoutines()
         {
-            switch (PlatformID)
+            // Проверяем, запущена ли программа с правами администратора...
+            if (!(CoreLib.IsCurrentUserAdmin()))
             {
-                case 1: // MacOS...
-                    {
-                        // Задаём платформо-зависимые переменные...
-                        GV.SteamExecuttable = "Steam";
-                        GV.PlatformFriendlyName = "MacOS";
-                        GV.SteamAppsFolderName = "SteamApps";
-
-                        // Узнаем путь к Steam...
-                        string TmpPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Library", "Application Support", "Steam");
-                        if (File.Exists(Path.Combine(TmpPath, GV.SteamExecuttable))) { GV.FullSteamPath = TmpPath; } else { ValidateAndHandle(); }
-
-                        // Отключаем контролы, недоступные для данной платформы...
-                        ChangePrvControlState(false);
-                    }
-                    break;
-                case 2: // Linux...
-                    {
-                        // Задаём платформо-зависимые переменные...
-                        GV.SteamExecuttable = "steam.sh";
-                        GV.PlatformFriendlyName = "Linux";
-                        GV.SteamAppsFolderName = "SteamApps";
-
-                        // Узнаем путь к Steam...
-                        string TmpPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), ".local", "share", "Steam");
-                        if (File.Exists(Path.Combine(TmpPath, GV.SteamExecuttable))) { GV.FullSteamPath = TmpPath; } else { ValidateAndHandle(); }
-
-                        // Отключаем контролы, недоступные для данной платформы...
-                        ChangePrvControlState(false);
-                    }
-                    break;
-                default: // Windows
-                    {
-                        // Задаём платформо-зависимые переменные...
-                        GV.SteamExecuttable = "Steam.exe";
-                        GV.PlatformFriendlyName = "Windows";
-                        GV.SteamAppsFolderName = "steamapps";
-
-                        // Проверяем, запущена ли программа с правами администратора...
-                        if (!(CoreLib.IsCurrentUserAdmin()))
-                        {
-                            // Программа запущена с правами пользователя, поэтому принимаем меры...
-                            // Выводим сообщение об этом...
-                            if (Properties.Settings.Default.AllowNonAdmDialog)
-                            {
-                                MessageBox.Show(CoreLib.GetLocalizedString("AppLaunchedNotAdmin"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                Properties.Settings.Default.AllowNonAdmDialog = false;
-                            }
-                            // Блокируем контролы, требующие для своей работы прав админа...
-                            ChangePrvControlState(false);
-                        }
-
-                        // Узнаем путь к установленному клиенту Steam...
-                        try { GV.FullSteamPath = CoreLib.GetSteamPath(); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); ValidateAndHandle(); }
-                    }
-                    break;
+                // Программа запущена с правами пользователя, поэтому принимаем меры...
+                // Выводим сообщение об этом...
+                if (Properties.Settings.Default.AllowNonAdmDialog)
+                {
+                    MessageBox.Show(CoreLib.GetLocalizedString("AppLaunchedNotAdmin"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Properties.Settings.Default.AllowNonAdmDialog = false;
+                }
+                // Блокируем контролы, требующие для своей работы прав админа...
+                ChangePrvControlState(false);
             }
+
+            // Узнаем путь к установленному клиенту Steam...
+            try { GV.FullSteamPath = CoreLib.GetSteamPath(); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); ValidateAndHandle(); }
         }
 
         /// <summary>
@@ -1644,9 +1601,6 @@ namespace srcrepair
             Assembly Assmbl = Assembly.GetEntryAssembly();
             GV.FullAppPath = Path.GetDirectoryName(Assmbl.Location);
 
-            // Определим платформу и версию ОС, на которой запускается приложение...
-            GV.RunningPlatform = CoreLib.DetectRunningOS();
-
             // Укажем путь к пользовательским данным и создадим если не существует...
             GV.AppUserDir = Properties.Settings.Default.IsPortable ? Path.Combine(GV.FullAppPath, "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), GV.AppName);
             
@@ -1657,7 +1611,7 @@ namespace srcrepair
             }
 
             // Начинаем платформо-зависимые процедуры...
-            DetectPlatform(GV.RunningPlatform);
+            DoPlatformRoutines();
 
             // При работе отладочной версии запишем в лог путь к найденному Steam...
             #if DEBUG
@@ -1673,13 +1627,13 @@ namespace srcrepair
             // Вставляем информацию о версии в заголовок формы...
             //this.Text += " (version " + GV.AppVersionInfo + ")";
             #if DEBUG
-            this.Text = String.Format(this.Text, GV.AppName, GV.PlatformFriendlyName, GV.AppVersionInfo + " (debug)", Assmbl.GetName().ProcessorArchitecture.ToString());
+            this.Text = String.Format(this.Text, GV.AppName, Properties.Resources.PlatformFriendlyName, GV.AppVersionInfo + " (debug)", Assmbl.GetName().ProcessorArchitecture.ToString());
             #else
-            this.Text = String.Format(this.Text, GV.AppName, GV.PlatformFriendlyName, GV.AppVersionInfo, Assmbl.GetName().ProcessorArchitecture.ToString());
+            this.Text = String.Format(this.Text, GV.AppName, Properties.Resources.PlatformFriendlyName, GV.AppVersionInfo, Assmbl.GetName().ProcessorArchitecture.ToString());
             #endif
 
             // Генерируем User-Agent для SRC Repair...
-            GV.UserAgent = String.Format(Properties.Resources.AppDefUA, GV.PlatformFriendlyName, GV.AppVersionInfo, GV.AppName, Assmbl.GetName().ProcessorArchitecture.ToString());
+            GV.UserAgent = String.Format(Properties.Resources.AppDefUA, Properties.Resources.PlatformFriendlyName, GV.AppVersionInfo, GV.AppName, Assmbl.GetName().ProcessorArchitecture.ToString());
 
             // Найдём и завершим в памяти процесс Steam...
             CoreLib.ProcessTerminate("Steam", CoreLib.GetLocalizedString("ST_KillMessage"));
@@ -1705,7 +1659,7 @@ namespace srcrepair
             // Начинаем определять установленные игры...
             try
             {
-                DetectInstalledGames(GV.FullSteamPath, GV.SteamAppsFolderName);
+                DetectInstalledGames(GV.FullSteamPath, Properties.Resources.SteamAppsFolderName);
             }
             catch (Exception Ex)
             {
@@ -1776,31 +1730,24 @@ namespace srcrepair
                     // Проверяем нужно ли чистить реестр...
                     if (PS_CleanRegistry.Checked)
                     {
-                        if (GV.RunningPlatform == 0)
+                        try
                         {
-                            try
+                            // Проверяем выбрал ли пользователь язык из выпадающего списка...
+                            if (PS_SteamLang.SelectedIndex != -1)
                             {
-                                // Проверяем выбрал ли пользователь язык из выпадающего списка...
-                                if (PS_SteamLang.SelectedIndex != -1)
-                                {
-                                    // Всё в порядке, чистим реестр...
-                                    CleanRegistryNow(PS_SteamLang.SelectedIndex);
-                                }
-                                else
-                                {
-                                    // Пользователь не выбрал язык, поэтому будем использовать английский...
-                                    MessageBox.Show(CoreLib.GetLocalizedString("PS_NoLangSelected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                    CleanRegistryNow(0);
-                                }
+                                // Всё в порядке, чистим реестр...
+                                CleanRegistryNow(PS_SteamLang.SelectedIndex);
                             }
-                            catch (Exception Ex)
+                            else
                             {
-                                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanException"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                                // Пользователь не выбрал язык, поэтому будем использовать английский...
+                                MessageBox.Show(CoreLib.GetLocalizedString("PS_NoLangSelected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                CleanRegistryNow(0);
                             }
                         }
-                        else
+                        catch (Exception Ex)
                         {
-                            MessageBox.Show(CoreLib.GetLocalizedString("AppFeatureUnavailable"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanException"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                         }
                     }
 
@@ -1808,7 +1755,7 @@ namespace srcrepair
                     MessageBox.Show(CoreLib.GetLocalizedString("PS_SeqCompleted"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Запустим Steam...
-                    if (File.Exists(Path.Combine(GV.FullSteamPath, GV.SteamExecuttable))) { Process.Start(Path.Combine(GV.FullSteamPath, GV.SteamExecuttable)); }
+                    if (File.Exists(Path.Combine(GV.FullSteamPath, Properties.Resources.SteamExecBin))) { Process.Start(Path.Combine(GV.FullSteamPath, Properties.Resources.SteamExecBin)); }
                 }
             }
         }
@@ -1855,7 +1802,7 @@ namespace srcrepair
             }
 
             // Генерируем полный путь до каталога управляемого приложения...
-            GV.GamePath = Path.Combine(GV.FullSteamPath, GV.SteamAppsFolderName, "common", GV.FullAppName);
+            GV.GamePath = Path.Combine(GV.FullSteamPath, Properties.Resources.SteamAppsFolderName, "common", GV.FullAppName);
             GV.FullGamePath = Path.Combine(GV.GamePath, GV.SmallAppName);
 
             // Заполняем другие служебные переменные...
@@ -1867,13 +1814,13 @@ namespace srcrepair
             MainTabControl.Enabled = true;
 
             // Управляем доступностью модуля создания отчётов для Техподдержки...
-            MNUReportBuilder.Enabled = ((GV.RunningPlatform == 0) && (AppSelector.Items.Count > 0) && (AppSelector.SelectedIndex != -1));
+            MNUReportBuilder.Enabled = ((AppSelector.Items.Count > 0) && (AppSelector.SelectedIndex != -1));
 
             // Отключим модули очистки...
             if (!(Properties.Settings.Default.AllowNCFUnsafeOps)) { EnableCleanButtons(false); }
 
             // Считаем настройки графики...
-            if (GV.IsUsingVideoFile || (GV.RunningPlatform != 0))
+            if (GV.IsUsingVideoFile)
             {
                 if (File.Exists(GV.VideoCfgFile))
                 {
@@ -1890,7 +1837,7 @@ namespace srcrepair
             }
 
             // Переключаем графический твикер в режим GCF/NCF...
-            SetGTOptsType(GV.RunningPlatform == 0 && !GV.IsUsingVideoFile);
+            SetGTOptsType(!GV.IsUsingVideoFile);
 
             // Проверим, установлен ли FPS-конфиг...
             GT_Warning.Visible = File.Exists(Path.Combine(GV.FullCfgPath, "autoexec.cfg"));
@@ -2018,56 +1965,31 @@ namespace srcrepair
             {
                 if (!GV.IsUsingVideoFile)
                 {
-                    if (GV.RunningPlatform == 0)
+                    // Создаём резервную копию...
+                    if (Properties.Settings.Default.SafeCleanup)
                     {
-                        // Создаём резервную копию...
-                        if (Properties.Settings.Default.SafeCleanup)
-                        {
-                            try
-                            {
-                                CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
-                            }
-                            catch (Exception Ex)
-                            {
-                                CoreLib.WriteStringToLog(Ex.Message);
-                            }
-                        }
-
                         try
                         {
-                            // Проверим существование ключа реестра и в случае необходимости создадим...
-                            if (!(CoreLib.CheckIfHKCUSKeyExists(Path.Combine("Software", "Valve", "Source", GV.SmallAppName, "Settings")))) { Registry.CurrentUser.CreateSubKey(Path.Combine("Software", "Valve", "Source", GV.SmallAppName, "Settings")); }
-                            // Записываем выбранные настройки в реестр...
-                            WriteGCFGameSettings(GV.SmallAppName);
-                            // Выводим подтверждающее сообщение...
-                            MessageBox.Show(CoreLib.GetLocalizedString("GT_SaveSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
                         }
                         catch (Exception Ex)
                         {
-                            CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("GT_SaveFailure"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                            CoreLib.WriteStringToLog(Ex.Message);
                         }
                     }
-                    else
-                    {
-                        // Создадим бэкап файла с графическими настройками...
-                        if (Properties.Settings.Default.SafeCleanup)
-                        {
-                            if (File.Exists(GV.VideoCfgFile))
-                            {
-                                CreateBackUpNow(Path.GetFileName(GV.VideoCfgFile), Path.GetDirectoryName(GV.VideoCfgFile), GV.FullBackUpDirPath);
-                            }
-                        }
 
-                        // В Linux и MacOS даже для GCF используем формат NCF...
-                        try
-                        {
-                            WriteNCFGameSettings(GV.VideoCfgFile);
-                            MessageBox.Show(CoreLib.GetLocalizedString("GT_SaveSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        catch (Exception Ex)
-                        {
-                            CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("GT_NCFFailure"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                        }
+                    try
+                    {
+                        // Проверим существование ключа реестра и в случае необходимости создадим...
+                        if (!(CoreLib.CheckIfHKCUSKeyExists(Path.Combine("Software", "Valve", "Source", GV.SmallAppName, "Settings")))) { Registry.CurrentUser.CreateSubKey(Path.Combine("Software", "Valve", "Source", GV.SmallAppName, "Settings")); }
+                        // Записываем выбранные настройки в реестр...
+                        WriteGCFGameSettings(GV.SmallAppName);
+                        // Выводим подтверждающее сообщение...
+                        MessageBox.Show(CoreLib.GetLocalizedString("GT_SaveSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception Ex)
+                    {
+                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("GT_SaveFailure"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                     }
                 }
                 else
@@ -2368,7 +2290,7 @@ namespace srcrepair
                     {
                         try
                         {
-                            if (GV.RunningPlatform == 0) { CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath); }
+                            CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_AutoBackUp", GV.FullBackUpDirPath);
                         }
                         catch (Exception Ex)
                         {
@@ -2379,16 +2301,9 @@ namespace srcrepair
                     // Работаем...
                     try
                     {
-                        if (GV.RunningPlatform == 0)
-                        {
-                            // Удаляем ключ HKEY_CURRENT_USER\Software\Valve\Source\tf\Settings из реестра...
-                            Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("Software", "Valve", "Source", GV.SmallAppName, "Settings"), false);
-                            MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show(CoreLib.GetLocalizedString("AppFeatureUnavailable"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                        // Удаляем ключ HKEY_CURRENT_USER\Software\Valve\Source\tf\Settings из реестра...
+                        Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("Software", "Valve", "Source", GV.SmallAppName, "Settings"), false);
+                        MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception Ex)
                     {
@@ -2469,22 +2384,15 @@ namespace srcrepair
 
         private void MNUReportBuilder_Click(object sender, EventArgs e)
         {
-            if (GV.RunningPlatform == 0)
+            if ((AppSelector.Items.Count > 0) && (AppSelector.SelectedIndex != -1))
             {
-                if ((AppSelector.Items.Count > 0) && (AppSelector.SelectedIndex != -1))
-                {
-                    // Запускаем форму создания отчёта для Техподдержки...
-                    frmRepBuilder RBF = new frmRepBuilder();
-                    RBF.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show(CoreLib.GetLocalizedString("AppNoGamesSelected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                // Запускаем форму создания отчёта для Техподдержки...
+                frmRepBuilder RBF = new frmRepBuilder();
+                RBF.ShowDialog();
             }
             else
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("AppFeatureUnavailable"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(CoreLib.GetLocalizedString("AppNoGamesSelected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -2573,12 +2481,11 @@ namespace srcrepair
                             case ".bud":
                                 using (ZipFile Zip = ZipFile.Read(Path.Combine(GV.FullBackUpDirPath, FName)))
                                 {
-                                    string RootDir = (GV.RunningPlatform == 0) ? Path.GetPathRoot(GV.FullSteamPath) : "/";
                                     foreach (ZipEntry ZFile in Zip)
                                     {
                                         try
                                         {
-                                            ZFile.Extract(RootDir, ExtractExistingFileAction.OverwriteSilently);
+                                            ZFile.Extract(Path.GetPathRoot(GV.FullSteamPath), ExtractExistingFileAction.OverwriteSilently);
                                         }
                                         catch (Exception Ex)
                                         {
@@ -2668,14 +2575,7 @@ namespace srcrepair
                 {
                     if (GV.IsUsingVideoFile)
                     {
-                        if (GV.RunningPlatform == 0)
-                        {
-                            CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_Options", GV.FullBackUpDirPath);
-                        }
-                        else
-                        {
-                            MessageBox.Show(CoreLib.GetLocalizedString("AppFeatureUnavailable"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
+                        CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_Options", GV.FullBackUpDirPath);
                     }
                     else
                     {
@@ -2696,55 +2596,41 @@ namespace srcrepair
 
         private void BUT_L_AllSteam_Click(object sender, EventArgs e)
         {
-            if (GV.RunningPlatform == 0)
+            if (MessageBox.Show(CoreLib.GetLocalizedString("BU_RegCreate"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (MessageBox.Show(CoreLib.GetLocalizedString("BU_RegCreate"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                // Создадим резервную копию всех настроек Steam...
+                try
                 {
-                    // Создадим резервную копию всех настроек Steam...
-                    try
-                    {
-                        // Создаём...
-                        CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve"), "Steam_BackUp", GV.FullBackUpDirPath);
-                        // Выводим сообщение...
-                        MessageBox.Show(CoreLib.GetLocalizedString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        // Обновим список бэкапов...
-                        BUT_Refresh.PerformClick();
-                    }
-                    catch (Exception Ex)
-                    {
-                        // Произошло исключение, уведомим пользователя...
-                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BU_RegErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                    }
+                    // Создаём...
+                    CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve"), "Steam_BackUp", GV.FullBackUpDirPath);
+                    // Выводим сообщение...
+                    MessageBox.Show(CoreLib.GetLocalizedString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Обновим список бэкапов...
+                    BUT_Refresh.PerformClick();
                 }
-            }
-            else
-            {
-                MessageBox.Show(CoreLib.GetLocalizedString("AppFeatureUnavailable"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                catch (Exception Ex)
+                {
+                    // Произошло исключение, уведомим пользователя...
+                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BU_RegErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                }
             }
         }
 
         private void BUT_L_AllSRC_Click(object sender, EventArgs e)
         {
-            if (GV.RunningPlatform == 0)
+            if (MessageBox.Show(CoreLib.GetLocalizedString("BU_RegCreate"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (MessageBox.Show(CoreLib.GetLocalizedString("BU_RegCreate"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                // Созданим резервную копию графических настроек всех Source-игр...
+                try
                 {
-                    // Созданим резервную копию графических настроек всех Source-игр...
-                    try
-                    {
-                        CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source"), "Source_Options", GV.FullBackUpDirPath);
-                        MessageBox.Show(CoreLib.GetLocalizedString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        BUT_Refresh.PerformClick();
-                    }
-                    catch (Exception Ex)
-                    {
-                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BU_RegErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                    }
+                    CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source"), "Source_Options", GV.FullBackUpDirPath);
+                    MessageBox.Show(CoreLib.GetLocalizedString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    BUT_Refresh.PerformClick();
                 }
-            }
-            else
-            {
-                MessageBox.Show(CoreLib.GetLocalizedString("AppFeatureUnavailable"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                catch (Exception Ex)
+                {
+                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BU_RegErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                }
             }
         }
 
@@ -2915,52 +2801,45 @@ namespace srcrepair
 
         private void MNUUpdateCheck_Click(object sender, EventArgs e)
         {
-            if (GV.RunningPlatform == 0)
+            // Сохраним текущее содержимое статусной строки...
+            string StatusBarCurrText = SB_Status.Text;
+            // Выведем сообщение о проверке обновлений...
+            SB_Status.Text = CoreLib.GetLocalizedString("AppCheckingForUpdates");
+            // Начинаем проверку...
+            try
             {
-                // Сохраним текущее содержимое статусной строки...
-                string StatusBarCurrText = SB_Status.Text;
-                // Выведем сообщение о проверке обновлений...
-                SB_Status.Text = CoreLib.GetLocalizedString("AppCheckingForUpdates");
-                // Начинаем проверку...
-                try
+                string NewVersion, UpdateURI, DnlStr;
+                // Получаем файл с номером версии и ссылкой на новую...
+                using (WebClient Downloader = new WebClient())
                 {
-                    string NewVersion, UpdateURI, DnlStr;
-                    // Получаем файл с номером версии и ссылкой на новую...
-                    using (WebClient Downloader = new WebClient())
-                    {
-                        Downloader.Headers.Add("User-Agent", GV.UserAgent);
-                        DnlStr = Downloader.DownloadString(Properties.Settings.Default.UpdateChURI);
-                    }
-                    // Установим дату последней проверки обновлений...
-                    Properties.Settings.Default.LastUpdateTime = DateTime.Now;
-                    // Мы получили URL и версию...
-                    NewVersion = DnlStr.Substring(0, DnlStr.IndexOf("!")); // Получаем версию...
-                    UpdateURI = DnlStr.Remove(0, DnlStr.IndexOf("!") + 1); // Получаем URL...
-                    // Проверим, является ли версия на сервере новее, чем текущая...
-                    if (CoreLib.CompareVersions(GV.AppVersionInfo, NewVersion))
-                    {
-                        // Доступна новая версия, отобразим модуль обновления...
-                        frmUpdate UpdFrm = new frmUpdate(NewVersion, UpdateURI);
-                        UpdFrm.ShowDialog();
-                    }
-                    else
-                    {
-                        // Новых версий не обнаружено.
-                        MessageBox.Show(CoreLib.GetLocalizedString("UPD_LatestInstalled"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    Downloader.Headers.Add("User-Agent", GV.UserAgent);
+                    DnlStr = Downloader.DownloadString(Properties.Settings.Default.UpdateChURI);
                 }
-                catch (Exception Ex)
+                // Установим дату последней проверки обновлений...
+                Properties.Settings.Default.LastUpdateTime = DateTime.Now;
+                // Мы получили URL и версию...
+                NewVersion = DnlStr.Substring(0, DnlStr.IndexOf("!")); // Получаем версию...
+                UpdateURI = DnlStr.Remove(0, DnlStr.IndexOf("!") + 1); // Получаем URL...
+                // Проверим, является ли версия на сервере новее, чем текущая...
+                if (CoreLib.CompareVersions(GV.AppVersionInfo, NewVersion))
                 {
-                    // Произошло исключение...
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_ExceptionDetected"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    // Доступна новая версия, отобразим модуль обновления...
+                    frmUpdate UpdFrm = new frmUpdate(NewVersion, UpdateURI);
+                    UpdFrm.ShowDialog();
                 }
-                // Вернём предыдущее содержимое строки статуса...
-                SB_Status.Text = StatusBarCurrText;
+                else
+                {
+                    // Новых версий не обнаружено.
+                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_LatestInstalled"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            else
+            catch (Exception Ex)
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("AppFeatureUnavailable"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Произошло исключение...
+                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_ExceptionDetected"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
             }
+            // Вернём предыдущее содержимое строки статуса...
+            SB_Status.Text = StatusBarCurrText;
         }
 
         private void BUT_OpenNpad_Click(object sender, EventArgs e)
@@ -3024,16 +2903,9 @@ namespace srcrepair
 
         private void MNUWinMnuDisabler_Click(object sender, EventArgs e)
         {
-            if (GV.RunningPlatform == 0)
-            {
-                // Показываем модуля отключения клавиш...
-                frmKBHelper KBHlp = new frmKBHelper();
-                KBHlp.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show(CoreLib.GetLocalizedString("AppFeatureUnavailable"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            // Показываем модуля отключения клавиш...
+            frmKBHelper KBHlp = new frmKBHelper();
+            KBHlp.ShowDialog();
         }
 
         private void MNUDonate_Click(object sender, EventArgs e)
@@ -3263,9 +3135,9 @@ namespace srcrepair
             {
                 try
                 {
-                    string ClDir = Path.Combine(GV.FullSteamPath, GV.SteamAppsFolderName, "downloading");
+                    string ClDir = Path.Combine(GV.FullSteamPath, Properties.Resources.SteamAppsFolderName, "downloading");
                     if (Directory.Exists(ClDir)) { Directory.Delete(ClDir, true); }
-                    ClDir = Path.Combine(GV.FullSteamPath, GV.SteamAppsFolderName, "temp");
+                    ClDir = Path.Combine(GV.FullSteamPath, Properties.Resources.SteamAppsFolderName, "temp");
                     if (Directory.Exists(ClDir)) { Directory.Delete(ClDir, true); }
                     MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

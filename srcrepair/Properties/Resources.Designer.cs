@@ -220,6 +220,15 @@ namespace srcrepair.Properties {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to Windows.
+        /// </summary>
+        internal static string PlatformFriendlyName {
+            get {
+                return ResourceManager.GetString("PlatformFriendlyName", resourceCulture);
+            }
+        }
+        
         internal static System.Drawing.Bitmap red_circle {
             get {
                 object obj = ResourceManager.GetObject("red_circle", resourceCulture);
@@ -287,6 +296,24 @@ namespace srcrepair.Properties {
             get {
                 object obj = ResourceManager.GetObject("steam", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to steamapps.
+        /// </summary>
+        internal static string SteamAppsFolderName {
+            get {
+                return ResourceManager.GetString("SteamAppsFolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Steam.exe.
+        /// </summary>
+        internal static string SteamExecBin {
+            get {
+                return ResourceManager.GetString("SteamExecBin", resourceCulture);
             }
         }
         
