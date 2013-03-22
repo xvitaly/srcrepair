@@ -1447,6 +1447,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Notice: Hash of existing file {0}: {1}..
+        /// </summary>
+        internal static string UPD_ExtHashSum {
+            get {
+                return ResourceManager.GetString("UPD_ExtHashSum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update is not required because you have the latest version of the game database..
         /// </summary>
         internal static string UPD_GamL_Latest {
@@ -1470,6 +1479,33 @@ namespace srcrepair {
         internal static string UPD_LatestInstalled {
             get {
                 return ResourceManager.GetString("UPD_LatestInstalled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The game database has been updated successfully..
+        /// </summary>
+        internal static string UPD_ProcFinMsg {
+            get {
+                return ResourceManager.GetString("UPD_ProcFinMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updating the game database from server....
+        /// </summary>
+        internal static string UPD_ProcStartMsg {
+            get {
+                return ResourceManager.GetString("UPD_ProcStartMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notice: Received server hash of the game database {0}..
+        /// </summary>
+        internal static string UPD_RecvHashStr {
+            get {
+                return ResourceManager.GetString("UPD_RecvHashStr", resourceCulture);
             }
         }
         

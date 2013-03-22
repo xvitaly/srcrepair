@@ -3094,11 +3094,11 @@ namespace srcrepair
                     // Получим хеш...
                     Downloader.Headers.Add("User-Agent", GV.UserAgent);
                     DBHash = Downloader.DownloadString(Properties.Settings.Default.UpdateGameDBHash);
-                    CoreLib.WriteStringToLog(String.Format("Notice: Received server hash of the game database {0}.", DBHash));
+                    CoreLib.WriteStringToLog(String.Format(CoreLib.GetLocalizedString("UPD_RecvHashStr"), DBHash));
                 }
                 // Рассчитаем хеш текущего файла...
                 string CurrHash = CoreLib.CalculateFileMD5(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile));
-                CoreLib.WriteStringToLog(String.Format("Notice: Hash of existing file {0}: {1}.", Properties.Settings.Default.GameListFile, CurrHash));
+                CoreLib.WriteStringToLog(String.Format(CoreLib.GetLocalizedString("UPD_ExtHashSum"), Properties.Settings.Default.GameListFile, CurrHash));
                 if (CurrHash != DBHash)
                 {
                     // Хеши не совпадают, будем обновлять...
@@ -3106,9 +3106,9 @@ namespace srcrepair
                     {
                         // Получаем свежую базу данных...
                         Downloader.Headers.Add("User-Agent", GV.UserAgent);
-                        CoreLib.WriteStringToLog("Updating the game database from server...");
+                        CoreLib.WriteStringToLog(CoreLib.GetLocalizedString("UPD_ProcStartMsg"));
                         Downloader.DownloadFile(new Uri(Properties.Settings.Default.UpdateGameDBFile), Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile));
-                        CoreLib.WriteStringToLog("The game database has been updated successfully.");
+                        CoreLib.WriteStringToLog(CoreLib.GetLocalizedString("UPD_ProcFinMsg"));
                     }
                     // Выводим сообщение об успешном обновлении...
                     MessageBox.Show(CoreLib.GetLocalizedString("UPD_GamL_Updated"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
