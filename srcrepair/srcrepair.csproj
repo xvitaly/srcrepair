@@ -104,65 +104,65 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CVList.ru.resx</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FrmMainW.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmMainW.Designer.cs">
+      <DependentUpon>FrmMainW.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form10.cs">
+    <Compile Include="FrmKBHelper.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form10.Designer.cs">
-      <DependentUpon>Form10.cs</DependentUpon>
+    <Compile Include="FrmKBHelper.Designer.cs">
+      <DependentUpon>FrmKBHelper.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="FrmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="FrmMhed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="FrmMhed.Designer.cs">
+      <DependentUpon>FrmMhed.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4.cs">
+    <Compile Include="FrmRepBuilder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="FrmRepBuilder.Designer.cs">
+      <DependentUpon>FrmRepBuilder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form5.cs">
+    <Compile Include="FrmInstaller.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <Compile Include="FrmInstaller.Designer.cs">
+      <DependentUpon>FrmInstaller.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form6.cs">
+    <Compile Include="FrmFPGen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form6.Designer.cs">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <Compile Include="FrmFPGen.Designer.cs">
+      <DependentUpon>FrmFPGen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form7.cs">
+    <Compile Include="FrmCleaner.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form7.Designer.cs">
-      <DependentUpon>Form7.cs</DependentUpon>
+    <Compile Include="FrmCleaner.Designer.cs">
+      <DependentUpon>FrmCleaner.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form8.cs">
+    <Compile Include="FrmUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form8.Designer.cs">
-      <DependentUpon>Form8.cs</DependentUpon>
+    <Compile Include="FrmUpdate.Designer.cs">
+      <DependentUpon>FrmUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form9.cs">
+    <Compile Include="FrmOptions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form9.Designer.cs">
-      <DependentUpon>Form9.cs</DependentUpon>
+    <Compile Include="FrmOptions.Designer.cs">
+      <DependentUpon>FrmOptions.cs</DependentUpon>
     </Compile>
     <Compile Include="GV.cs" />
     <Compile Include="Program.cs" />
@@ -184,65 +184,65 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CVList.ru.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMainW.resx">
+      <DependentUpon>FrmMainW.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.ru.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMainW.ru.resx">
+      <DependentUpon>FrmMainW.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form10.resx">
-      <DependentUpon>Form10.cs</DependentUpon>
+    <EmbeddedResource Include="FrmKBHelper.resx">
+      <DependentUpon>FrmKBHelper.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form10.ru.resx">
-      <DependentUpon>Form10.cs</DependentUpon>
+    <EmbeddedResource Include="FrmKBHelper.ru.resx">
+      <DependentUpon>FrmKBHelper.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.ru.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAbout.ru.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMhed.resx">
+      <DependentUpon>FrmMhed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.ru.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMhed.ru.resx">
+      <DependentUpon>FrmMhed.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="FrmRepBuilder.resx">
+      <DependentUpon>FrmRepBuilder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.ru.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="FrmRepBuilder.ru.resx">
+      <DependentUpon>FrmRepBuilder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <EmbeddedResource Include="FrmInstaller.resx">
+      <DependentUpon>FrmInstaller.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5.ru.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <EmbeddedResource Include="FrmInstaller.ru.resx">
+      <DependentUpon>FrmInstaller.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6.resx">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <EmbeddedResource Include="FrmFPGen.resx">
+      <DependentUpon>FrmFPGen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6.ru.resx">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <EmbeddedResource Include="FrmFPGen.ru.resx">
+      <DependentUpon>FrmFPGen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form7.resx">
-      <DependentUpon>Form7.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCleaner.resx">
+      <DependentUpon>FrmCleaner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form7.ru.resx">
-      <DependentUpon>Form7.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCleaner.ru.resx">
+      <DependentUpon>FrmCleaner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form8.resx">
-      <DependentUpon>Form8.cs</DependentUpon>
+    <EmbeddedResource Include="FrmUpdate.resx">
+      <DependentUpon>FrmUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form8.ru.resx">
-      <DependentUpon>Form8.cs</DependentUpon>
+    <EmbeddedResource Include="FrmUpdate.ru.resx">
+      <DependentUpon>FrmUpdate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form9.resx">
-      <DependentUpon>Form9.cs</DependentUpon>
+    <EmbeddedResource Include="FrmOptions.resx">
+      <DependentUpon>FrmOptions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form9.ru.resx">
-      <DependentUpon>Form9.cs</DependentUpon>
+    <EmbeddedResource Include="FrmOptions.ru.resx">
+      <DependentUpon>FrmOptions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

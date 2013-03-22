@@ -1954,7 +1954,7 @@
     <value>Прекращает работу модуля записи.</value>
   </data>
   <data name="explode" xml:space="preserve">
-    <value>Выполняет суицид путём взрыва.</value>
+    <value>Отправляет игрока на респаун путём взрыва.</value>
   </data>
   <data name="find" xml:space="preserve">
     <value>Найти команду.</value>
@@ -1969,7 +1969,7 @@
     <value>Сделать скриншот в формате JPEG.</value>
   </data>
   <data name="kill" xml:space="preserve">
-    <value>Выполняет суицид.</value>
+    <value>Отправить игрока на респаун.</value>
   </data>
   <data name="map" xml:space="preserve">
     <value>Сменить карту и перезапустить сервер. Не используется, объявлена устаревшей.</value>
