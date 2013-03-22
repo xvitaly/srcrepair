@@ -3240,4 +3240,22 @@
   <data name="sb_filter_incompatible_versions" xml:space="preserve">
     <value>Включает / отключает фильтр, скрывающий серверы с несовместимыми версиями из списка.</value>
   </data>
+  <data name="mp_hostages_max" xml:space="preserve">
+    <value>Задаёт максимальное число заложников, которые появятся на карте.</value>
+  </data>
+  <data name="mp_hostages_rescuetime" xml:space="preserve">
+    <value>Задаёт время, которое прибавится к времени раунда после того, как Спецназ освободит первого заложника.</value>
+  </data>
+  <data name="mp_hostages_spawn_farthest" xml:space="preserve">
+    <value>Включает / отключает появление заложников на наиболее удалённых участках карты.</value>
+  </data>
+  <data name="mp_hostages_spawn_force_positions" xml:space="preserve">
+    <value>Задаёт места, на которых всегда будут появляться заложники. Разделителем является запятая.</value>
+  </data>
+  <data name="mp_hostages_spawn_same_every_round" xml:space="preserve">
+    <value>Включает / отключает появление заложников на одном и том же месте в новом раунде.</value>
+  </data>
+  <data name="mp_hostages_takedamage" xml:space="preserve">
+    <value>Включает / отключает возможность игроков наносить повреждения заложникам.</value>
+  </data>
 </root>

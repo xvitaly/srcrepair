@@ -1818,4 +1818,22 @@
   <data name="sv_kick_players_with_cooldown" xml:space="preserve">
     <value>0 - allow all players to play on game server. 1 - kick players with official assigned violation. 2 - kick players with any competitive cooldown.</value>
   </data>
+  <data name="mp_hostages_max" xml:space="preserve">
+    <value>Sets the maximum number of hostages to spawn.</value>
+  </data>
+  <data name="mp_hostages_rescuetime" xml:space="preserve">
+    <value>Setting 0 removes the time extension when CTs pick up the first hostage.</value>
+  </data>
+  <data name="mp_hostages_spawn_farthest" xml:space="preserve">
+    <value>Setting 1 forces hostage spawn points to choose be the farthest possible combinations.</value>
+  </data>
+  <data name="mp_hostages_spawn_force_positions" xml:space="preserve">
+    <value>Setting a comma separate list (ex: 0,2 ) forces specific hostage spawn point combinations.</value>
+  </data>
+  <data name="mp_hostages_spawn_same_every_round" xml:space="preserve">
+    <value>Setting 0 randomizes the hostage spawn points every round.</value>
+  </data>
+  <data name="mp_hostages_takedamage" xml:space="preserve">
+    <value>Setting 0 allows hostages to be hurt.</value>
+  </data>
 </root>

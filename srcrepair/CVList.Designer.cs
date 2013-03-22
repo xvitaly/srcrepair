@@ -1699,6 +1699,60 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sets the maximum number of hostages to spawn..
+        /// </summary>
+        internal static string mp_hostages_max {
+            get {
+                return ResourceManager.GetString("mp_hostages_max", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Setting 0 removes the time extension when CTs pick up the first hostage..
+        /// </summary>
+        internal static string mp_hostages_rescuetime {
+            get {
+                return ResourceManager.GetString("mp_hostages_rescuetime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Setting 1 forces hostage spawn points to choose be the farthest possible combinations..
+        /// </summary>
+        internal static string mp_hostages_spawn_farthest {
+            get {
+                return ResourceManager.GetString("mp_hostages_spawn_farthest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Setting a comma separate list (ex: 0,2 ) forces specific hostage spawn point combinations..
+        /// </summary>
+        internal static string mp_hostages_spawn_force_positions {
+            get {
+                return ResourceManager.GetString("mp_hostages_spawn_force_positions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Setting 0 randomizes the hostage spawn points every round..
+        /// </summary>
+        internal static string mp_hostages_spawn_same_every_round {
+            get {
+                return ResourceManager.GetString("mp_hostages_spawn_same_every_round", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Setting 0 allows hostages to be hurt..
+        /// </summary>
+        internal static string mp_hostages_takedamage {
+            get {
+                return ResourceManager.GetString("mp_hostages_takedamage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Restricts human players to a single team {any, blue, red, spectator}..
         /// </summary>
         internal static string mp_humans_must_join_team {
