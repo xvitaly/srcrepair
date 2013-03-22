@@ -3107,7 +3107,7 @@ namespace srcrepair
                         // Получаем свежую базу данных...
                         Downloader.Headers.Add("User-Agent", GV.UserAgent);
                         CoreLib.WriteStringToLog("Updating the game database from server...");
-                        Downloader.DownloadFile(new Uri(Properties.Settings.Default.UpdateGameDBFile), Properties.Settings.Default.GameListFile);
+                        Downloader.DownloadFile(new Uri(Properties.Settings.Default.UpdateGameDBFile), Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile));
                         CoreLib.WriteStringToLog("The game database has been updated successfully.");
                     }
                     // Выводим сообщение об успешном обновлении...
