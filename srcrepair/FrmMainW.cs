@@ -311,18 +311,7 @@ namespace srcrepair
                             {
                                 RdStr = CoreLib.CleanStrWx(RdStr, true);
                                 RdStr = RdStr.Remove(0, RdStr.IndexOf(" ") + 1);
-                                if (!(String.IsNullOrWhiteSpace(RdStr)))
-                                {
-                                    try
-                                    {
-                                        DirectoryInfo DInfo = new DirectoryInfo(RdStr);
-                                        Result.Add(DInfo.FullName);
-                                    }
-                                    catch (Exception Ex)
-                                    {
-                                        CoreLib.WriteStringToLog(Ex.Message);
-                                    }
-                                }
+                                if (!(String.IsNullOrWhiteSpace(RdStr))) { try { DirectoryInfo DInfo = new DirectoryInfo(RdStr); Result.Add(DInfo.FullName); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } }
                             }
                         }
                     }
