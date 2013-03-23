@@ -283,7 +283,7 @@ namespace srcrepair
         /// <param name="SteamPath">Путь к клиенту Steam</param>
         /// <param name="SteamLogin">Логин Steam</param>
         /// <param name="SteamAppsDir">Имя каталога SteamApps</param>
-        private void DetectInstalledGames(string SteamPath, string SteamAppsDir)
+        private void DetectInstalledGames(string SteamPath, string SteamAppsDir, bool UseOldMethod)
         {
             // Очистим список игр...
             AppSelector.Items.Clear();
@@ -1659,7 +1659,7 @@ namespace srcrepair
             // Начинаем определять установленные игры...
             try
             {
-                DetectInstalledGames(GV.FullSteamPath, Properties.Resources.SteamAppsFolderName);
+                DetectInstalledGames(GV.FullSteamPath, Properties.Resources.SteamAppsFolderName, Properties.Settings.Default.UseOldSearchSystem);
             }
             catch (Exception Ex)
             {
