@@ -277,6 +277,67 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Считывает из главного файла конфигурации Steam пути к установленным играм.
+        /// </summary>
+        /// <param name="SteamPath">Путь к клиенту Steam</param>
+        private List<String> GetInstalledDirsFromFile(string SteamPath)
+        {
+            // Создаём массив, в который будем помещать найденные пути...
+            List<String> Result = new List<String>();
+
+            // Начинаем чтение главного файла конфигурации...
+            try
+            {
+                // Открываем файл как поток...
+                using (StreamReader SteamConfig = new StreamReader(Path.Combine(SteamPath, "config", "config.vdf"), Encoding.Default))
+                {
+                    // Инициализируем буферную переменную...
+                    string RdStr;
+
+                    // Читаем поток построчно...
+                    while (SteamConfig.Peek() >= 0)
+                    {
+                        // Считываем строку...
+                        RdStr = SteamConfig.ReadLine();
+
+                        // Очищаем от лишнего...
+                        RdStr = RdStr.Trim();
+
+                        // Проверяем наличие данных в строке...
+                        if (!(String.IsNullOrWhiteSpace(RdStr)))
+                        {
+                            // Ищем в строке путь установки...
+                            if (RdStr.IndexOf("installdir") != -1)
+                            {
+                                RdStr = CoreLib.CleanStrWx(RdStr, true);
+                                RdStr = RdStr.Remove(0, RdStr.IndexOf(" ") + 1);
+                                if (!(String.IsNullOrWhiteSpace(RdStr)))
+                                {
+                                    try
+                                    {
+                                        DirectoryInfo DInfo = new DirectoryInfo(RdStr);
+                                        Result.Add(DInfo.FullName);
+                                    }
+                                    catch (Exception Ex)
+                                    {
+                                        CoreLib.WriteStringToLog(Ex.Message);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception Ex)
+            {
+                CoreLib.WriteStringToLog(Ex.Message);
+            }
+
+            // Возвращаем сформированный массив...
+            return Result;
+        }
+
+        /// <summary>
         /// Определяет установленные игры и заполняет комбо-бокс выбора
         /// доступных управляемых игр.
         /// </summary>
@@ -305,6 +366,11 @@ namespace srcrepair
                     if (Directory.Exists(Path.Combine(SearchPath, XMLD.GetElementsByTagName("DirName")[i].InnerText))) { AppSelector.Items.Add((string)GameID.GetAttribute("Name")); }
                 }
                 XMLFS.Close(); // Закрываем файловый поток...
+            }
+            else
+            {
+                // Используем новый метод...
+                GV.GameDirs = GetInstalledDirsFromFile(GV.FullSteamPath);
             }
         }
 

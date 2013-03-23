@@ -563,5 +563,36 @@ namespace srcrepair
             }
             return Result;
         }
+
+        /// <summary>
+        /// Чистит строку от табуляций и лишних пробелов.
+        /// </summary>
+        /// <param name="RecvStr">Исходная строка</param>
+        public static string CleanStrWx(string RecvStr, bool CleanQuotes = false)
+        {
+            // Почистим от табуляций...
+            while (RecvStr.IndexOf("\t") != -1)
+            {
+                RecvStr = RecvStr.Replace("\t", " ");
+            }
+
+            // Удалим все лишние пробелы...
+            while (RecvStr.IndexOf("  ") != -1)
+            {
+                RecvStr = RecvStr.Replace("  ", " ");
+            }
+
+            // Удалим кавычки если это разрешено...
+            if (CleanQuotes)
+            {
+                while (RecvStr.IndexOf('"') != -1)
+                {
+                    RecvStr = RecvStr.Replace(@"""", "");
+                }
+            }
+
+            // Возвращаем результат очистки...
+            return RecvStr;
+        }
     }
 }
