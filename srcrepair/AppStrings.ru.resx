@@ -754,4 +754,12 @@
     <value>Steam обнаружен в каталоге: {0}.</value>
     <comment>Запись в лог-файл о местонахождении клиента Steam</comment>
   </data>
+  <data name="AppNoGamesDLog" xml:space="preserve">
+    <value>Не найдено ни одной поддерживаемой игры. Steam расположен в каталоге: {0}.</value>
+    <comment>Сообщение в логе об отсутствии поддерживаемых игр</comment>
+  </data>
+  <data name="AppRestrSymbLog" xml:space="preserve">
+    <value>В пути обнаружены запрещённые символы. Steam расположен в каталоге: {0}.</value>
+    <comment>Сообщение в логе об обнаружении в пути к Steam запрещённых символов</comment>
+  </data>
 </root>

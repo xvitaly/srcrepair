@@ -597,4 +597,10 @@
   <data name="AppSteamLocLog" xml:space="preserve">
     <value>Steam found in: {0}.</value>
   </data>
+  <data name="AppNoGamesDLog" xml:space="preserve">
+    <value>No games detected. Steam located as: {0}.</value>
+  </data>
+  <data name="AppRestrSymbLog" xml:space="preserve">
+    <value>NonASCII characters detected. Steam path: {0}.</value>
+  </data>
 </root>

@@ -1460,7 +1460,7 @@ namespace srcrepair
                 case 0:
                     {
                         // Запишем в лог...
-                        CoreLib.WriteStringToLog(String.Format("No games detected. Steam located as: {0}.", GV.FullSteamPath));
+                        CoreLib.WriteStringToLog(String.Format(CoreLib.GetLocalizedString("AppNoGamesDLog"), GV.FullSteamPath));
                         // Нет, не нашлись, выведем сообщение...
                         MessageBox.Show(CoreLib.GetLocalizedString("AppNoGamesDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         // Завершим работу приложения...
@@ -1496,7 +1496,7 @@ namespace srcrepair
                 PS_PathDetector.Text = CoreLib.GetLocalizedString("SteamNonASCIITitle");
                 PS_PathDetector.ForeColor = Color.Red;
                 MessageBox.Show(CoreLib.GetLocalizedString("SteamNonASCIIDetected"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                CoreLib.WriteStringToLog(String.Format("NonASCII characters detected. Steam path: {0}.", GV.FullSteamPath));
+                CoreLib.WriteStringToLog(String.Format(CoreLib.GetLocalizedString("AppRestrSymbLog"), GV.FullSteamPath));
             }
         }
 
