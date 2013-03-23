@@ -232,6 +232,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No games detected. Steam located as: {0}..
+        /// </summary>
+        internal static string AppNoGamesDLog {
+            get {
+                return ResourceManager.GetString("AppNoGamesDLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Warning! No games selected. Select game and try again later..
         /// </summary>
         internal static string AppNoGamesSelected {
@@ -246,6 +255,15 @@ namespace srcrepair {
         internal static string AppNoSTADetected {
             get {
                 return ResourceManager.GetString("AppNoSTADetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NonASCII characters detected. Steam path: {0}..
+        /// </summary>
+        internal static string AppRestrSymbLog {
+            get {
+                return ResourceManager.GetString("AppRestrSymbLog", resourceCulture);
             }
         }
         
@@ -282,6 +300,15 @@ namespace srcrepair {
         internal static string AppStartSteamFailed {
             get {
                 return ResourceManager.GetString("AppStartSteamFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Steam found in: {0}..
+        /// </summary>
+        internal static string AppSteamLocLog {
+            get {
+                return ResourceManager.GetString("AppSteamLocLog", resourceCulture);
             }
         }
         
