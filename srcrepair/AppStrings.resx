@@ -594,4 +594,7 @@
   <data name="GT_RegOpenErr" xml:space="preserve">
     <value>Can not open registry key. Please start game at least once and try again.</value>
   </data>
+  <data name="AppSteamLocLog" xml:space="preserve">
+    <value>Steam found in: {0}.</value>
+  </data>
 </root>

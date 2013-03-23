@@ -1615,7 +1615,7 @@ namespace srcrepair
 
             // При работе отладочной версии запишем в лог путь к найденному Steam...
             #if DEBUG
-            CoreLib.WriteStringToLog(String.Format("Steam found in: {0}.", GV.FullSteamPath));
+            CoreLib.WriteStringToLog(String.Format(CoreLib.GetLocalizedString("AppSteamLocLog"), GV.FullSteamPath));
             #endif
 
             // Сохраним последний путь к Steam в файл конфигурации...

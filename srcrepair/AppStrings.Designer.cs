@@ -286,6 +286,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Steam found in: {0}..
+        /// </summary>
+        internal static string AppSteamLocLog {
+            get {
+                return ResourceManager.GetString("AppSteamLocLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Notice! Update for {0} is available. We recommend you upgrade as soon as possible via the menu Help - Check for updates, or manually..
         /// </summary>
         internal static string AppUpdateAvailable {
