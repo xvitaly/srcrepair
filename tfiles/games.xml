@@ -2,14 +2,14 @@
 <Games>
   <Game Name="Team Fortress 2">
     <HasVF>0</HasVF>
-    <DirName>Team Fortress 2</DirName>
+    <DirName>feam fortress 2</DirName>
     <SmallName>tf</SmallName>
     <VFDir>tf</VFDir>
     <SID>440</SID>
   </Game>
   <Game Name="Team Fortress 2 Beta">
     <HasVF>0</HasVF>
-    <DirName>Team Fortress 2 Beta</DirName>
+    <DirName>team fortress 2 beta</DirName>
     <SmallName>tf</SmallName>
     <VFDir>tf</VFDir>
     <SID>520</SID>
@@ -198,7 +198,7 @@
   </Game>
   <Game Name="Counter-Strike Global Offensive">
     <HasVF>1</HasVF>
-    <DirName>Counter-Strike Global Offensive</DirName>
+    <DirName>counter-strike global offensive</DirName>
     <SmallName>csgo</SmallName>
     <VFDir>csgo</VFDir>
     <SID>730</SID>
