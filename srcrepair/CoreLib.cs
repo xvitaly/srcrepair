@@ -205,21 +205,7 @@ namespace srcrepair
         public static bool CheckNonASCII(string Path)
         {
             // Проверяем строку на соответствие регулярному выражению...
-            //return Regex.IsMatch(Path, "");
-            bool Result = true; // переменная для промежуточного результата...
-            for (int i = 1; i < Path.Length; i++) // запускаем цикл...
-            {
-                // Проверяем, соответствует ли символ шаблону допустимых символов...
-                if (!(Regex.IsMatch(Path[i].ToString(), "[0-9a-zA-Z :()./\\\\]")))
-                {
-                    // Не соответствует, следовательно найден недопустимый.
-                    // Вернём False и прекратим цикл, т.к. дальнейшая проверка бессмысленна...
-                    Result = false;
-                    break;
-                }
-            }
-            // Возвращаем результат функции...
-            return Result;
+            return Regex.IsMatch(Path, @"^[0-9a-zA-Z :()./\\\\]*$");
         }
 
         /// <summary>
