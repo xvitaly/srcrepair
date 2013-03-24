@@ -349,7 +349,23 @@ namespace srcrepair
             for (int i = 0; i < XMLNList.Count; i++) // Обходим полученный список в цикле...
             {
                 XmlElement GameID = (XmlElement)XMLD.GetElementsByTagName("Game")[i]; // Получаем элемент...
-                try { if ((UseOldMethod || (GV.GameDirs.Any(s => s.IndexOf((string)GameID.GetAttribute("Name").ToLower()) != -1))) && (Directory.Exists(Path.Combine(SearchPath, XMLD.GetElementsByTagName("DirName")[i].InnerText)))) { AppSelector.Items.Add((string)GameID.GetAttribute("Name")); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try
+                {
+                    if (UseOldMethod) // Выбираем метод, которым будем пользоваться...
+                    {
+                        // Используем проверенный годами старый метод...
+                        if (Directory.Exists(Path.Combine(SearchPath, XMLD.GetElementsByTagName("DirName")[i].InnerText))) { AppSelector.Items.Add((string)GameID.GetAttribute("Name")); }
+                    }
+                    else
+                    {
+                        // Используем новый, поддерживающий новую систему установки игр в Steam...
+                        if (GV.GameDirs.Any(s => s.Contains((string)GameID.GetAttribute("Name").ToLower())))
+                        {
+                            AppSelector.Items.Add((string)GameID.GetAttribute("Name"));
+                        }
+                    }
+                }
+                catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
             }
             XMLFS.Close(); // Закрываем файловый поток...
         }
