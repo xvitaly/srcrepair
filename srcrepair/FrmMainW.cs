@@ -360,7 +360,7 @@ namespace srcrepair
                 {
                     if (AvailableGames.Exists(s => s.IndexOf(Path.GetFileName(StrX), StringComparison.OrdinalIgnoreCase) >= 0))
                     {
-                        AppSelector.Items.Add(Path.GetFileName(StrX));
+                        AppSelector.Items.Add(StrX);
                     }
                 }
             }
@@ -1837,7 +1837,7 @@ namespace srcrepair
                 XmlNodeList XMLNList = XMLD.GetElementsByTagName("Game");
                 for (int i = 0; i < XMLNList.Count; i++)
                 {
-                    if (XMLD.GetElementsByTagName("DirName")[i].InnerText.ToLower() == AppSelector.Text)
+                    if (XMLD.GetElementsByTagName("DirName")[i].InnerText.ToLower() == Path.GetFileName(AppSelector.Text))
                     {
                         GV.FullAppName = XMLD.GetElementsByTagName("DirName")[i].InnerText;
                         GV.SmallAppName = XMLD.GetElementsByTagName("SmallName")[i].InnerText;
@@ -1855,7 +1855,7 @@ namespace srcrepair
             }
 
             // Генерируем полный путь до каталога управляемого приложения...
-            GV.GamePath = Path.Combine(GV.FullSteamPath, Properties.Resources.SteamAppsFolderName, "common", GV.FullAppName);
+            GV.GamePath = AppSelector.Text;
             GV.FullGamePath = Path.Combine(GV.GamePath, GV.SmallAppName);
 
             // Заполняем другие служебные переменные...
