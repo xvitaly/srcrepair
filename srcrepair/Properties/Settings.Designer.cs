@@ -113,18 +113,6 @@ namespace srcrepair.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool AllowNCFUnsafeOps {
-            get {
-                return ((bool)(this["AllowNCFUnsafeOps"]));
-            }
-            set {
-                this["AllowNCFUnsafeOps"] = value;
-            }
-        }
-        
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("debug.log")]
@@ -266,18 +254,6 @@ namespace srcrepair.Properties {
             }
             set {
                 this["ShParam"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool UseOldSearchSystem {
-            get {
-                return ((bool)(this["UseOldSearchSystem"]));
-            }
-            set {
-                this["UseOldSearchSystem"] = value;
             }
         }
     }

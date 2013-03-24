@@ -241,29 +241,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Разрешает/блокирует кнопки, отвечающие за очистку (актуально
-        /// для NCF-приложений).
-        /// </summary>
-        /// <param name="BStatus">Новый статус</param>
-        private void EnableCleanButtons(bool BStatus)
-        {
-            PS_RemCustMaps.Enabled = BStatus;
-            //PS_RemDnlCache.Enabled = BStatus;
-            //PS_RemOldSpray.Enabled = BStatus;
-            PS_RemSounds.Enabled = BStatus;
-            PS_RemGraphCache.Enabled = BStatus;
-            PS_RemSoundCache.Enabled = BStatus;
-            PS_RemSecndCache.Enabled = BStatus;
-            //PS_RemScreenShots.Enabled = BStatus;
-            //PS_RemDemos.Enabled = BStatus;
-            //PS_RemGraphOpts.Enabled = BStatus;
-            //PS_RemOldBin.Enabled = BStatus;
-            PS_RemTextures.Enabled = BStatus;
-            PS_RemModels.Enabled = BStatus;
-            PS_RemReplays.Enabled = BStatus;
-        }
-
-        /// <summary>
         /// Отображает диалоговое окно менеджера быстрой очистки.
         /// </summary>
         /// <param name="Path">Путь к каталогу очистки</param>
@@ -1866,9 +1843,6 @@ namespace srcrepair
             
             // Включаем основные элементы управления (контролы)...
             MainTabControl.Enabled = true;
-
-            // Отключим модули очистки...
-            if (!(Properties.Settings.Default.AllowNCFUnsafeOps)) { EnableCleanButtons(false); }
 
             // Считаем настройки графики...
             if (GV.IsUsingVideoFile)

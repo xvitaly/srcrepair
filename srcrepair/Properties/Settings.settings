@@ -26,9 +26,6 @@
     <Setting Name="GameListFile" Type="System.String" Scope="Application">
       <Value Profile="(Default)">games.xml</Value>
     </Setting>
-    <Setting Name="AllowNCFUnsafeOps" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
-    </Setting>
     <Setting Name="DebugLogFileName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">debug.log</Value>
     </Setting>
@@ -67,9 +64,6 @@
     </Setting>
     <Setting Name="ShParam" Type="System.String" Scope="User">
       <Value Profile="(Default)">/select,</Value>
-    </Setting>
-    <Setting Name="UseOldSearchSystem" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>
