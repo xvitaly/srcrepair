@@ -37,7 +37,6 @@
             this.MO_L_HelpSystem = new System.Windows.Forms.Label();
             this.MO_AutoUpdate = new System.Windows.Forms.CheckBox();
             this.MO_SortGameList = new System.Windows.Forms.CheckBox();
-            this.MO_UseOldSeachSystem = new System.Windows.Forms.CheckBox();
             this.MO_ConfirmExit = new System.Windows.Forms.CheckBox();
             this.MO_TP2 = new System.Windows.Forms.TabPage();
             this.MO_FindShBin = new System.Windows.Forms.Button();
@@ -48,7 +47,6 @@
             this.MO_TextEdBin = new System.Windows.Forms.TextBox();
             this.L_MO_TextEdBin = new System.Windows.Forms.Label();
             this.MO_EnableAppLogs = new System.Windows.Forms.CheckBox();
-            this.MO_AllowUnsafeNCFOps = new System.Windows.Forms.CheckBox();
             this.MO_SearchBin = new System.Windows.Forms.OpenFileDialog();
             this.MO_TC.SuspendLayout();
             this.MO_TP1.SuspendLayout();
@@ -84,7 +82,6 @@
             this.MO_TP1.Controls.Add(this.MO_L_HelpSystem);
             this.MO_TP1.Controls.Add(this.MO_AutoUpdate);
             this.MO_TP1.Controls.Add(this.MO_SortGameList);
-            this.MO_TP1.Controls.Add(this.MO_UseOldSeachSystem);
             this.MO_TP1.Controls.Add(this.MO_ConfirmExit);
             resources.ApplyResources(this.MO_TP1, "MO_TP1");
             this.MO_TP1.Name = "MO_TP1";
@@ -117,12 +114,6 @@
             this.MO_SortGameList.Name = "MO_SortGameList";
             this.MO_SortGameList.UseVisualStyleBackColor = true;
             // 
-            // MO_UseOldSeachSystem
-            // 
-            resources.ApplyResources(this.MO_UseOldSeachSystem, "MO_UseOldSeachSystem");
-            this.MO_UseOldSeachSystem.Name = "MO_UseOldSeachSystem";
-            this.MO_UseOldSeachSystem.UseVisualStyleBackColor = true;
-            // 
             // MO_ConfirmExit
             // 
             resources.ApplyResources(this.MO_ConfirmExit, "MO_ConfirmExit");
@@ -139,7 +130,6 @@
             this.MO_TP2.Controls.Add(this.MO_TextEdBin);
             this.MO_TP2.Controls.Add(this.L_MO_TextEdBin);
             this.MO_TP2.Controls.Add(this.MO_EnableAppLogs);
-            this.MO_TP2.Controls.Add(this.MO_AllowUnsafeNCFOps);
             resources.ApplyResources(this.MO_TP2, "MO_TP2");
             this.MO_TP2.Name = "MO_TP2";
             this.MO_TP2.UseVisualStyleBackColor = true;
@@ -192,12 +182,6 @@
             this.MO_EnableAppLogs.Name = "MO_EnableAppLogs";
             this.MO_EnableAppLogs.UseVisualStyleBackColor = true;
             // 
-            // MO_AllowUnsafeNCFOps
-            // 
-            resources.ApplyResources(this.MO_AllowUnsafeNCFOps, "MO_AllowUnsafeNCFOps");
-            this.MO_AllowUnsafeNCFOps.Name = "MO_AllowUnsafeNCFOps";
-            this.MO_AllowUnsafeNCFOps.UseVisualStyleBackColor = true;
-            // 
             // MO_SearchBin
             // 
             resources.ApplyResources(this.MO_SearchBin, "MO_SearchBin");
@@ -238,11 +222,9 @@
         private System.Windows.Forms.Label MO_L_HelpSystem;
         private System.Windows.Forms.CheckBox MO_AutoUpdate;
         private System.Windows.Forms.CheckBox MO_SortGameList;
-        private System.Windows.Forms.CheckBox MO_UseOldSeachSystem;
         private System.Windows.Forms.CheckBox MO_ConfirmExit;
         private System.Windows.Forms.TabPage MO_TP2;
         private System.Windows.Forms.CheckBox MO_EnableAppLogs;
-        private System.Windows.Forms.CheckBox MO_AllowUnsafeNCFOps;
         private System.Windows.Forms.TextBox MO_ShBin;
         private System.Windows.Forms.Label L_MO_ShBin;
         private System.Windows.Forms.TextBox MO_TextEdBin;
