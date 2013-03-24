@@ -433,11 +433,8 @@ namespace srcrepair
         /// <param name="LineA">Строка для извлечения</param>
         private static string ExtractCVFromLine(string LineA)
         {
-            while (LineA.IndexOf("\t") != -1) { LineA = LineA.Replace("\t", " "); }
-            while (LineA.IndexOf("  ") != -1) { LineA = LineA.Replace("  ", " "); }
-            LineA = LineA.Substring(LineA.LastIndexOf(" "));
-            while (LineA.IndexOf(@"""") != -1) { LineA = LineA.Replace(@"""", ""); }
-            return LineA.Trim();
+            LineA = CleanStrWx(LineA, true);
+            return LineA.Substring(LineA.LastIndexOf(" ")).Trim();
         }
 
         /// <summary>
