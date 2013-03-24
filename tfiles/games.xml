@@ -2,7 +2,7 @@
 <Games>
   <Game Name="Team Fortress 2">
     <HasVF>0</HasVF>
-    <DirName>feam fortress 2</DirName>
+    <DirName>team fortress 2</DirName>
     <SmallName>tf</SmallName>
     <VFDir>tf</VFDir>
     <SID>440</SID>
