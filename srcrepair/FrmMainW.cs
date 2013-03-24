@@ -1845,21 +1845,7 @@ namespace srcrepair
             MainTabControl.Enabled = true;
 
             // Считаем настройки графики...
-            if (GV.IsUsingVideoFile)
-            {
-                if (File.Exists(GV.VideoCfgFile))
-                {
-                    ReadNCFGameSettings(GV.VideoCfgFile);
-                }
-                else
-                {
-                    NullGraphOptions();
-                }
-            }
-            else
-            {
-                ReadGCFGameSettings(GV.SmallAppName);
-            }
+            if (GV.IsUsingVideoFile) { if (File.Exists(GV.VideoCfgFile)) { ReadNCFGameSettings(GV.VideoCfgFile); } else { NullGraphOptions(); } } else { ReadGCFGameSettings(GV.SmallAppName); }
 
             // Переключаем графический твикер в режим GCF/NCF...
             SetGTOptsType(!GV.IsUsingVideoFile);
