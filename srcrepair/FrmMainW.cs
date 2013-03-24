@@ -328,46 +328,43 @@ namespace srcrepair
         /// доступных управляемых игр.
         /// </summary>
         /// <param name="SteamPath">Путь к клиенту Steam</param>
-        /// <param name="SteamLogin">Логин Steam</param>
         /// <param name="SteamAppsDir">Имя каталога SteamApps</param>
-        private void DetectInstalledGames(string SteamPath, string SteamAppsDir, bool UseOldMethod)
+        private void DetectInstalledGames(string SteamPath, string SteamAppsDir)
         {
             // Очистим список игр...
             AppSelector.Items.Clear();
 
-            // Опишем заготовки путей для GCF и NCF...
-            string SearchPath = Path.Combine(SteamPath, SteamAppsDir, "common");
-
             // При использовании нового метода поиска установленных игр, считаем их из конфига Steam...
-            if (!UseOldMethod) { GV.GameDirs = GetInstalledDirsFromFile(GV.FullSteamPath); }
+            GV.GameDirs = GetInstalledDirsFromFile(GV.FullSteamPath);
+            
+            // Формируем список для поддерживаемых игр...
+            List<String> AvailableGames = new List<String>();
 
-            // Начинаем парсить...
-            XmlDocument XMLD = new XmlDocument(); // Создаём объект документа XML...
-            FileStream XMLFS = new FileStream(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile), FileMode.Open, FileAccess.Read); // Создаём поток с XML-файлом...
-            XMLD.Load(XMLFS); // Загружаем поток в объект XML документа...
-            XmlNodeList XMLNList = XMLD.GetElementsByTagName("Game"); // Получаем список игр с параметрами...
-            for (int i = 0; i < XMLNList.Count; i++) // Обходим полученный список в цикле...
+            try
             {
-                XmlElement GameID = (XmlElement)XMLD.GetElementsByTagName("Game")[i]; // Получаем элемент...
-                try
+                XmlDocument XMLD = new XmlDocument(); // Создаём объект документа XML...
+                FileStream XMLFS = new FileStream(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile), FileMode.Open, FileAccess.Read); // Создаём поток с XML-файлом...
+                XMLD.Load(XMLFS); // Загружаем поток в объект XML документа...
+                for (int i = 0; i < XMLD.GetElementsByTagName("Game").Count; i++) // Обходим полученный список в цикле...
                 {
-                    if (UseOldMethod) // Выбираем метод, которым будем пользоваться...
+                    AvailableGames.Add(XMLD.GetElementsByTagName("DirName")[i].InnerText);
+                }
+                XMLFS.Close(); // Закрываем файловый поток...
+            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+
+            try
+            {
+                // Обойдём полученный список каталогов в массиве...
+                foreach (string StrX in GV.GameDirs)
+                {
+                    if (AvailableGames.Exists(s => s.IndexOf(Path.GetFileName(StrX), StringComparison.OrdinalIgnoreCase) >= 0))
                     {
-                        // Используем проверенный годами старый метод...
-                        if (Directory.Exists(Path.Combine(SearchPath, XMLD.GetElementsByTagName("DirName")[i].InnerText))) { AppSelector.Items.Add((string)GameID.GetAttribute("Name")); }
-                    }
-                    else
-                    {
-                        // Используем новый, поддерживающий новую систему установки игр в Steam...
-                        if (GV.GameDirs.Any(s => s.Contains((string)GameID.GetAttribute("Name").ToLower())))
-                        {
-                            AppSelector.Items.Add((string)GameID.GetAttribute("Name"));
-                        }
+                        AppSelector.Items.Add(Path.GetFileName(StrX));
                     }
                 }
-                catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
             }
-            XMLFS.Close(); // Закрываем файловый поток...
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         /// <summary>
@@ -1716,7 +1713,7 @@ namespace srcrepair
             // Начинаем определять установленные игры...
             try
             {
-                DetectInstalledGames(GV.FullSteamPath, Properties.Resources.SteamAppsFolderName, Properties.Settings.Default.UseOldSearchSystem);
+                DetectInstalledGames(GV.FullSteamPath, Properties.Resources.SteamAppsFolderName);
             }
             catch (Exception Ex)
             {
@@ -1840,8 +1837,7 @@ namespace srcrepair
                 XmlNodeList XMLNList = XMLD.GetElementsByTagName("Game");
                 for (int i = 0; i < XMLNList.Count; i++)
                 {
-                    XmlElement GameID = (XmlElement)XMLD.GetElementsByTagName("Game")[i];
-                    if (GameID.GetAttribute("Name") == AppSelector.Text)
+                    if (XMLD.GetElementsByTagName("DirName")[i].InnerText.ToLower() == AppSelector.Text)
                     {
                         GV.FullAppName = XMLD.GetElementsByTagName("DirName")[i].InnerText;
                         GV.SmallAppName = XMLD.GetElementsByTagName("SmallName")[i].InnerText;
