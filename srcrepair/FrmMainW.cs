@@ -1867,9 +1867,6 @@ namespace srcrepair
             // Включаем основные элементы управления (контролы)...
             MainTabControl.Enabled = true;
 
-            // Управляем доступностью модуля создания отчётов для Техподдержки...
-            MNUReportBuilder.Enabled = ((AppSelector.Items.Count > 0) && (AppSelector.SelectedIndex != -1));
-
             // Отключим модули очистки...
             if (!(Properties.Settings.Default.AllowNCFUnsafeOps)) { EnableCleanButtons(false); }
 
