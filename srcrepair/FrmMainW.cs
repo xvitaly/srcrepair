@@ -3208,17 +3208,5 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "package", "*.*"));
             OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
-
-        private void AppStartGame_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process.Start(String.Format("steam://rungameid/{0}", GV.GameInternalID));
-            }
-            catch (Exception Ex)
-            {
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppStartSteamFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-            }
-        }
     }
 }

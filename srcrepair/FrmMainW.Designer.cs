@@ -224,7 +224,6 @@
             this.BW_UpChk = new System.ComponentModel.BackgroundWorker();
             this.BW_FPRecv = new System.ComponentModel.BackgroundWorker();
             this.BW_BkUpRecv = new System.ComponentModel.BackgroundWorker();
-            this.AppStartGame = new System.Windows.Forms.Button();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             this.GT_GCF_Group.SuspendLayout();
@@ -1844,19 +1843,10 @@
             // 
             this.BW_BkUpRecv.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_BkUpRecv_DoWork);
             // 
-            // AppStartGame
-            // 
-            this.AppStartGame.Image = global::srcrepair.Properties.Resources.arrow;
-            resources.ApplyResources(this.AppStartGame, "AppStartGame");
-            this.AppStartGame.Name = "AppStartGame";
-            this.AppStartGame.UseVisualStyleBackColor = true;
-            this.AppStartGame.Click += new System.EventHandler(this.AppStartGame_Click);
-            // 
             // frmMainW
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.AppStartGame);
             this.Controls.Add(this.AppSelector);
             this.Controls.Add(this.StatusBar);
             this.Controls.Add(this.MainTabControl);
@@ -2105,7 +2095,6 @@
         private System.ComponentModel.BackgroundWorker BW_FPRecv;
         private System.ComponentModel.BackgroundWorker BW_BkUpRecv;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnUpdCch;
-        private System.Windows.Forms.Button AppStartGame;
     }
 }
 
