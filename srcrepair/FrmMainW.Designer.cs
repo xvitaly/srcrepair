@@ -218,7 +218,6 @@
             this.SB_Status = new System.Windows.Forms.ToolStripStatusLabel();
             this.SB_App = new System.Windows.Forms.ToolStripStatusLabel();
             this.AppSelector = new System.Windows.Forms.ComboBox();
-            this.L_AppSelector = new System.Windows.Forms.Label();
             this.CE_OpenCfgDialog = new System.Windows.Forms.OpenFileDialog();
             this.CE_SaveCfgDialog = new System.Windows.Forms.SaveFileDialog();
             this.FldrBrwse = new System.Windows.Forms.FolderBrowserDialog();
@@ -1817,11 +1816,6 @@
             this.AppSelector.Name = "AppSelector";
             this.AppSelector.SelectedIndexChanged += new System.EventHandler(this.AppSelector_SelectedIndexChanged);
             // 
-            // L_AppSelector
-            // 
-            resources.ApplyResources(this.L_AppSelector, "L_AppSelector");
-            this.L_AppSelector.Name = "L_AppSelector";
-            // 
             // CE_OpenCfgDialog
             // 
             this.CE_OpenCfgDialog.DefaultExt = "cfg";
@@ -1863,7 +1857,6 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.AppStartGame);
-            this.Controls.Add(this.L_AppSelector);
             this.Controls.Add(this.AppSelector);
             this.Controls.Add(this.StatusBar);
             this.Controls.Add(this.MainTabControl);
@@ -1973,7 +1966,6 @@
         private System.Windows.Forms.Button PS_RemDnlCache;
         private System.Windows.Forms.Button PS_RemCustMaps;
         private System.Windows.Forms.ComboBox AppSelector;
-        private System.Windows.Forms.Label L_AppSelector;
         private System.Windows.Forms.DataGridView CE_Editor;
         private System.Windows.Forms.ToolStrip CE_Toolbar;
         private System.Windows.Forms.ToolStripButton CE_New;
