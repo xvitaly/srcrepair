@@ -2253,6 +2253,7 @@ namespace srcrepair
             // Удаляем кэш загрузок...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "downloads", "*.*"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.*"));
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
