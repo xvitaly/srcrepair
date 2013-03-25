@@ -1817,7 +1817,7 @@ namespace srcrepair
                     XmlNodeList XMLNList = XMLD.GetElementsByTagName("Game");
                     for (int i = 0; i < XMLNList.Count; i++)
                     {
-                        if (XMLD.GetElementsByTagName("DirName")[i].InnerText.ToLower() == Path.GetFileName(AppSelector.Text))
+                        if (XMLD.GetElementsByTagName("DirName")[i].InnerText.ToLower() == Path.GetFileName(AppSelector.Text).ToLower())
                         {
                             GV.FullAppName = XMLD.GetElementsByTagName("DirName")[i].InnerText;
                             GV.SmallAppName = XMLD.GetElementsByTagName("SmallName")[i].InnerText;
