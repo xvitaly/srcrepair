@@ -178,6 +178,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Warning! Failed to get data from game database. Please try again or select another game!.
+        /// </summary>
+        internal static string AppFailedToGetData {
+            get {
+                return ResourceManager.GetString("AppFailedToGetData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sorry, but the selected feature is not available for this platform!.
         /// </summary>
         internal static string AppFeatureUnavailable {

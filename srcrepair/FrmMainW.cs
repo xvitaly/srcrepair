@@ -1805,81 +1805,88 @@ namespace srcrepair
         }
 
         private void AppSelector_SelectedIndexChanged(object sender, EventArgs e)
-        {            
-            // Начинаем определять нужные нам значения переменных...
+        {
             try
             {
-                XmlDocument XMLD = new XmlDocument();
-                FileStream XMLFS = new FileStream(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile), FileMode.Open, FileAccess.Read);
-                XMLD.Load(XMLFS);
-                XmlNodeList XMLNList = XMLD.GetElementsByTagName("Game");
-                for (int i = 0; i < XMLNList.Count; i++)
+                // Начинаем определять нужные нам значения переменных...
+                try
                 {
-                    if (XMLD.GetElementsByTagName("DirName")[i].InnerText.ToLower() == Path.GetFileName(AppSelector.Text))
+                    XmlDocument XMLD = new XmlDocument();
+                    FileStream XMLFS = new FileStream(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile), FileMode.Open, FileAccess.Read);
+                    XMLD.Load(XMLFS);
+                    XmlNodeList XMLNList = XMLD.GetElementsByTagName("Game");
+                    for (int i = 0; i < XMLNList.Count; i++)
                     {
-                        GV.FullAppName = XMLD.GetElementsByTagName("DirName")[i].InnerText;
-                        GV.SmallAppName = XMLD.GetElementsByTagName("SmallName")[i].InnerText;
-                        GV.GameInternalID = XMLD.GetElementsByTagName("SID")[i].InnerText;
-                        GV.ConfDir = XMLD.GetElementsByTagName("VFDir")[i].InnerText;
-                        GV.IsUsingVideoFile = XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1";
-                        break;
+                        if (XMLD.GetElementsByTagName("DirName")[i].InnerText.ToLower() == Path.GetFileName(AppSelector.Text))
+                        {
+                            GV.FullAppName = XMLD.GetElementsByTagName("DirName")[i].InnerText;
+                            GV.SmallAppName = XMLD.GetElementsByTagName("SmallName")[i].InnerText;
+                            GV.GameInternalID = XMLD.GetElementsByTagName("SID")[i].InnerText;
+                            GV.ConfDir = XMLD.GetElementsByTagName("VFDir")[i].InnerText;
+                            GV.IsUsingVideoFile = XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1";
+                            break;
+                        }
                     }
+                    XMLFS.Close();
                 }
-                XMLFS.Close();
+                catch (Exception Ex)
+                {
+                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppXMLParseError"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                }
+
+                // Генерируем полный путь до каталога управляемого приложения...
+                GV.GamePath = AppSelector.Text;
+                GV.FullGamePath = Path.Combine(GV.GamePath, GV.SmallAppName);
+
+                // Заполняем другие служебные переменные...
+                GV.FullCfgPath = Path.Combine(GV.FullGamePath, "cfg");
+                GV.FullBackUpDirPath = Path.Combine(GV.AppUserDir, "backups", GV.SmallAppName);
+                GV.VideoCfgFile = Path.Combine(GV.GamePath, GV.ConfDir, "cfg", "video.txt");
+
+                // Включаем основные элементы управления (контролы)...
+                MainTabControl.Enabled = true;
+
+                // Считаем настройки графики...
+                if (GV.IsUsingVideoFile) { if (File.Exists(GV.VideoCfgFile)) { ReadNCFGameSettings(GV.VideoCfgFile); } else { NullGraphOptions(); } } else { ReadGCFGameSettings(GV.SmallAppName); }
+
+                // Переключаем графический твикер в режим GCF/NCF...
+                SetGTOptsType(!GV.IsUsingVideoFile);
+
+                // Проверим, установлен ли FPS-конфиг...
+                GT_Warning.Visible = File.Exists(Path.Combine(GV.FullCfgPath, "autoexec.cfg"));
+
+                // Очистим список FPS-конфигов...
+                FP_ConfigSel.Items.Clear();
+
+                // Отключим кнопку редактирования FPS-конфигов...
+                FP_OpenNotepad.Enabled = false;
+
+                // Отключим кнопку установки FPS-конфигов...
+                FP_Install.Enabled = false;
+
+                // Закроем открытые конфиги в редакторе...
+                if (!(String.IsNullOrEmpty(CFGFileName))) { CE_New.PerformClick(); }
+
+                // Считаем имеющиеся FPS-конфиги...
+                if (!BW_FPRecv.IsBusy) { BW_FPRecv.RunWorkerAsync(); }
+
+                // Включаем заблокированные ранее контролы...
+                MNUFPSWizard.Enabled = true;
+                MNUInstaller.Enabled = true;
+
+                // Выводим сообщение о завершении считывания в статус-бар...
+                SB_Status.Text = CoreLib.GetLocalizedString("StatusNormal");
+
+                // Сохраним ID последней выбранной игры...
+                Properties.Settings.Default.LastGameName = AppSelector.Text;
+
+                // Считаем список бэкапов...
+                if (!BW_BkUpRecv.IsBusy) { BW_BkUpRecv.RunWorkerAsync(); }
             }
             catch (Exception Ex)
             {
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppXMLParseError"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppFailedToGetData"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
             }
-
-            // Генерируем полный путь до каталога управляемого приложения...
-            GV.GamePath = AppSelector.Text;
-            GV.FullGamePath = Path.Combine(GV.GamePath, GV.SmallAppName);
-
-            // Заполняем другие служебные переменные...
-            GV.FullCfgPath = Path.Combine(GV.FullGamePath, "cfg");
-            GV.FullBackUpDirPath = Path.Combine(GV.AppUserDir, "backups", GV.SmallAppName);
-            GV.VideoCfgFile = Path.Combine(GV.GamePath, GV.ConfDir, "cfg", "video.txt");
-            
-            // Включаем основные элементы управления (контролы)...
-            MainTabControl.Enabled = true;
-
-            // Считаем настройки графики...
-            if (GV.IsUsingVideoFile) { if (File.Exists(GV.VideoCfgFile)) { ReadNCFGameSettings(GV.VideoCfgFile); } else { NullGraphOptions(); } } else { ReadGCFGameSettings(GV.SmallAppName); }
-
-            // Переключаем графический твикер в режим GCF/NCF...
-            SetGTOptsType(!GV.IsUsingVideoFile);
-
-            // Проверим, установлен ли FPS-конфиг...
-            GT_Warning.Visible = File.Exists(Path.Combine(GV.FullCfgPath, "autoexec.cfg"));
-            
-            // Очистим список FPS-конфигов...
-            FP_ConfigSel.Items.Clear();
-
-            // Отключим кнопку редактирования FPS-конфигов...
-            FP_OpenNotepad.Enabled = false;
-
-            // Отключим кнопку установки FPS-конфигов...
-            FP_Install.Enabled = false;
-
-            // Закроем открытые конфиги в редакторе...
-            if (!(String.IsNullOrEmpty(CFGFileName))) { CE_New.PerformClick(); }
-
-            // Считаем имеющиеся FPS-конфиги...
-            if (!BW_FPRecv.IsBusy) { BW_FPRecv.RunWorkerAsync(); }
-
-            // Включаем заблокированные ранее контролы...
-            MNUFPSWizard.Enabled = true;
-            MNUInstaller.Enabled = true;
-            
-            // Выводим сообщение о завершении считывания в статус-бар...
-            SB_Status.Text = CoreLib.GetLocalizedString("StatusNormal");
-
-            // Сохраним ID последней выбранной игры...
-            Properties.Settings.Default.LastGameName = AppSelector.Text;
-
-            // Считаем список бэкапов...
-            if (!BW_BkUpRecv.IsBusy) { BW_BkUpRecv.RunWorkerAsync(); }
         }
 
         private void GT_Maximum_Graphics_Click(object sender, EventArgs e)
