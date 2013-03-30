@@ -1,0 +1,4 @@
+This config will set all graphic settings to maximum. This will require a powerful PC.
+
+FPS increase: None
+Graphics degradation: None

@@ -274,6 +274,14 @@
       <Link>cfgs\chrismaxfps.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\tfiles\cfgs\chrismaxquality_en.txt">
+      <Link>cfgs\chrismaxquality_en.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\chrismaxquality_ru.txt">
+      <Link>cfgs\chrismaxquality_ru.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\tfiles\cfgs\config_default.cfg">
       <Link>cfgs\config_default.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -310,6 +318,10 @@
       <Link>cfgs\chrisdx9frames.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="..\tfiles\cfgs\chrismaxquality.cfg">
+      <Link>cfgs\chrismaxquality.cfg</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
