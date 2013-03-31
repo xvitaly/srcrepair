@@ -2592,7 +2592,7 @@ namespace srcrepair
                 // Создадим резервную копию графических настроек игры...
                 try
                 {
-                    if (GV.IsUsingVideoFile)
+                    if (!GV.IsUsingVideoFile)
                     {
                         CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", GV.SmallAppName, "Settings"), "Game_Options", GV.FullBackUpDirPath);
                     }
