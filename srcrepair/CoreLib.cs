@@ -189,12 +189,9 @@ namespace srcrepair
         /// <returns>Строка в выбранном формате</returns>
         public static string WriteDateToString(DateTime XDate, bool MicroDate)
         {
-            return MicroDate ? SimpleIntStrWNull(XDate.Day) + SimpleIntStrWNull(XDate.Month) +
-                SimpleIntStrWNull(XDate.Year) + SimpleIntStrWNull(XDate.Hour) +
-                SimpleIntStrWNull(XDate.Minute) + SimpleIntStrWNull(XDate.Second) :
-                SimpleIntStrWNull(XDate.Day) + "." + SimpleIntStrWNull(XDate.Month) + "." +
-                SimpleIntStrWNull(XDate.Year) + " " + SimpleIntStrWNull(XDate.Hour) + ":" +
-                SimpleIntStrWNull(XDate.Minute) + ":" + SimpleIntStrWNull(XDate.Second);
+            return String.Format(MicroDate ? "{0}{1}{2}{3}{4}{5}" : "{0}.{1}.{2} {3}:{4}:{5}", SimpleIntStrWNull(XDate.Day),
+                SimpleIntStrWNull(XDate.Month), SimpleIntStrWNull(XDate.Year), SimpleIntStrWNull(XDate.Hour),
+                SimpleIntStrWNull(XDate.Minute), SimpleIntStrWNull(XDate.Second));
         }
 
         /// <summary>
