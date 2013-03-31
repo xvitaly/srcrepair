@@ -103,10 +103,5 @@ namespace srcrepair
         /// играх.
         /// </summary>
         public static string ConfDir;
-
-        /// <summary>
-        /// Содержит массив с полными путями установленных в Steam игр.
-        /// </summary>
-        public static List<String> GameDirs;
     }
 }

@@ -313,7 +313,7 @@ namespace srcrepair
             AppSelector.Items.Clear();
 
             // При использовании нового метода поиска установленных игр, считаем их из конфига Steam...
-            GV.GameDirs = GetInstalledDirsFromFile(GV.FullSteamPath);
+            List<String> GameDirs = GetInstalledDirsFromFile(GV.FullSteamPath);
             
             // Формируем список для поддерживаемых игр...
             List<String> AvailableGames = new List<String>();
@@ -334,7 +334,7 @@ namespace srcrepair
             try
             {
                 // Обойдём полученный список каталогов в массиве...
-                foreach (string StrX in GV.GameDirs)
+                foreach (string StrX in GameDirs)
                 {
                     if (AvailableGames.Exists(s => Regex.IsMatch(s, String.Format("{0}$", Path.GetFileName(StrX)), RegexOptions.IgnoreCase)))
                     {
