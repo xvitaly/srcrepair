@@ -12,7 +12,7 @@ About
 
 Downloads
 =========
-Download application: http://www.easycoding.org/files/srcrepair_latest.exe
+Download application (this link always contains latest version): http://www.easycoding.org/files/srcrepair_latest.exe
 
 Full archive: http://code.google.com/p/srcrepair/downloads/list.
 
