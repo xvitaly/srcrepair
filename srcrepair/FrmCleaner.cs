@@ -106,9 +106,10 @@ namespace srcrepair
                             DetectFilesForCleanup(SubDirs);
                         }
                     }
-                    catch
+                    catch (Exception Ex)
                     {
-                        // Подавляем возможные сообщения...
+                        // Подавляем возможные сообщения и пишем в лог...
+                        CoreLib.WriteStringToLog(Ex.Message);
                     }
                 }
             }
