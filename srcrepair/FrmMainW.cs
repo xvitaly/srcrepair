@@ -2259,14 +2259,6 @@ namespace srcrepair
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
-        private void PS_RemOldSpray_Click(object sender, EventArgs e)
-        {
-            // Удаляем кэш спреев...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(GV.FullGamePath, "materials", "temp", "*.vtf"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
-        }
-
         private void PS_RemGraphCache_Click(object sender, EventArgs e)
         {
             // Удаляем графический кэш...
@@ -2992,8 +2984,9 @@ namespace srcrepair
         {
             // Удаляем содержимое вторичного кэша загрузок...
             List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(GV.FullGamePath, "cache", "*.*"));
-            CleanDirs.Add(Path.Combine(GV.GamePath, "config", "html", "*.*"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "cache", "*.*")); // Кэш...
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "materials", "temp", "*.vtf")); // Кэш спреев...
+            CleanDirs.Add(Path.Combine(GV.GamePath, "config", "html", "*.*")); // Кэш MOTD...
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
@@ -3181,6 +3174,14 @@ namespace srcrepair
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "package", "*.*"));
             OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+        }
+
+        private void PS_RemCustDir_Click(object sender, EventArgs e)
+        {
+            // Удаляем пользовательного каталога...
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
     }
 }

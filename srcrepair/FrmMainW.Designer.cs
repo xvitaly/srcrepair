@@ -134,7 +134,7 @@
             this.PS_RemSoundCache = new System.Windows.Forms.Button();
             this.PS_RemGraphCache = new System.Windows.Forms.Button();
             this.PS_RemSounds = new System.Windows.Forms.Button();
-            this.PS_RemOldSpray = new System.Windows.Forms.Button();
+            this.PS_RemCustDir = new System.Windows.Forms.Button();
             this.PS_RemDnlCache = new System.Windows.Forms.Button();
             this.PS_RemCustMaps = new System.Windows.Forms.Button();
             this.PS_GB_SInfo = new System.Windows.Forms.GroupBox();
@@ -1111,7 +1111,7 @@
             this.PS_GB_Remover.Controls.Add(this.PS_RemSoundCache);
             this.PS_GB_Remover.Controls.Add(this.PS_RemGraphCache);
             this.PS_GB_Remover.Controls.Add(this.PS_RemSounds);
-            this.PS_GB_Remover.Controls.Add(this.PS_RemOldSpray);
+            this.PS_GB_Remover.Controls.Add(this.PS_RemCustDir);
             this.PS_GB_Remover.Controls.Add(this.PS_RemDnlCache);
             this.PS_GB_Remover.Controls.Add(this.PS_RemCustMaps);
             resources.ApplyResources(this.PS_GB_Remover, "PS_GB_Remover");
@@ -1181,12 +1181,12 @@
             this.PS_RemSounds.UseVisualStyleBackColor = true;
             this.PS_RemSounds.Click += new System.EventHandler(this.PS_RemSounds_Click);
             // 
-            // PS_RemOldSpray
+            // PS_RemCustDir
             // 
-            resources.ApplyResources(this.PS_RemOldSpray, "PS_RemOldSpray");
-            this.PS_RemOldSpray.Name = "PS_RemOldSpray";
-            this.PS_RemOldSpray.UseVisualStyleBackColor = true;
-            this.PS_RemOldSpray.Click += new System.EventHandler(this.PS_RemOldSpray_Click);
+            resources.ApplyResources(this.PS_RemCustDir, "PS_RemCustDir");
+            this.PS_RemCustDir.Name = "PS_RemCustDir";
+            this.PS_RemCustDir.UseVisualStyleBackColor = true;
+            this.PS_RemCustDir.Click += new System.EventHandler(this.PS_RemCustDir_Click);
             // 
             // PS_RemDnlCache
             // 
@@ -1952,7 +1952,7 @@
         private System.Windows.Forms.Button PS_RemSoundCache;
         private System.Windows.Forms.Button PS_RemGraphCache;
         private System.Windows.Forms.Button PS_RemSounds;
-        private System.Windows.Forms.Button PS_RemOldSpray;
+        private System.Windows.Forms.Button PS_RemCustDir;
         private System.Windows.Forms.Button PS_RemDnlCache;
         private System.Windows.Forms.Button PS_RemCustMaps;
         private System.Windows.Forms.ComboBox AppSelector;
