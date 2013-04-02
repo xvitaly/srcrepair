@@ -90,24 +90,20 @@ namespace srcrepair
                             TotalSize += DItem.Length; // Инкрементируем общий счётчик...
                         }
                         
-                        // Если задана маска любых файлов, пройдём по подкаталогам рекурсивно...
-                        if (CleanMask == "*.*")
+                        // Пройдём по подкаталогам рекурсивно. Получаем список вложенных...
+                        List<String> SubDirs = new List<string>();
+
+                        // Обойдём вложенные каталоги...
+                        foreach (DirectoryInfo Dir in DInfo.GetDirectories())
                         {
-                            // Получим список подкаталогов в искомом и обойдём их все...
-                            List<String> SubDirs = new List<string>();
-                            
-                            // Обойдём вложенные каталоги...
-                            foreach (DirectoryInfo Dir in DInfo.GetDirectories())
-                            {
-                                SubDirs.Add(Path.Combine(Dir.FullName, "*.*"));
-                            }
-                            
-                            // Проверим наличие элементов для обхода...
-                            if (SubDirs.Count > 0)
-                            {
-                                // Вызовем функцию рекурсивно...
-                                DetectFilesForCleanup(SubDirs);
-                            }
+                            SubDirs.Add(Path.Combine(Dir.FullName, CleanMask));
+                        }
+
+                        // Проверим наличие элементов для обхода...
+                        if (SubDirs.Count > 0)
+                        {
+                            // Вызовем функцию рекурсивно...
+                            DetectFilesForCleanup(SubDirs);
                         }
                     }
                     catch
