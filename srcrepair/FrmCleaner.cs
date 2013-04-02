@@ -89,21 +89,28 @@ namespace srcrepair
                             
                             TotalSize += DItem.Length; // Инкрементируем общий счётчик...
                         }
-                        
-                        // Пройдём по подкаталогам рекурсивно. Получаем список вложенных...
-                        List<String> SubDirs = new List<string>();
 
-                        // Обойдём вложенные каталоги...
-                        foreach (DirectoryInfo Dir in DInfo.GetDirectories())
+                        try
                         {
-                            SubDirs.Add(Path.Combine(Dir.FullName, CleanMask));
+                            // Пройдём по подкаталогам рекурсивно. Получаем список вложенных...
+                            List<String> SubDirs = new List<string>();
+
+                            // Обойдём вложенные каталоги...
+                            foreach (DirectoryInfo Dir in DInfo.GetDirectories())
+                            {
+                                SubDirs.Add(Path.Combine(Dir.FullName, CleanMask));
+                            }
+
+                            // Проверим наличие элементов для обхода...
+                            if (SubDirs.Count > 0)
+                            {
+                                // Вызовем функцию рекурсивно...
+                                DetectFilesForCleanup(SubDirs);
+                            }
                         }
-
-                        // Проверим наличие элементов для обхода...
-                        if (SubDirs.Count > 0)
+                        catch (Exception Ex)
                         {
-                            // Вызовем функцию рекурсивно...
-                            DetectFilesForCleanup(SubDirs);
+                            CoreLib.WriteStringToLog(Ex.Message);
                         }
                     }
                     catch (Exception Ex)
