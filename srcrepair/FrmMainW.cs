@@ -2963,6 +2963,8 @@ namespace srcrepair
             // Удаляем все кастомные модели...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "models", "*.*"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.mdl"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "*.mdl"));
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
