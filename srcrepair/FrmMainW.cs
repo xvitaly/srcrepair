@@ -2957,6 +2957,8 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "models", "*.*"));
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.mdl"));
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "*.mdl"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.phy"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "*.phy"));
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
