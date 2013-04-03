@@ -1676,9 +1676,6 @@ namespace srcrepair
             // Укажем статус Безопасной очистки...
             CheckSafeClnStatus();
 
-            // Выводим сообщение в строку статуса...
-            SB_Status.Text = CoreLib.GetLocalizedString("StatusSLogin");
-
             // Укажем путь к Steam на странице "Устранение проблем"...
             PS_StPath.Text = String.Format(PS_StPath.Text, GV.FullSteamPath);
             
