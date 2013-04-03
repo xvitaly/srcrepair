@@ -3184,7 +3184,7 @@ namespace srcrepair
 
         private void PS_DeepCleanup_Click(object sender, EventArgs e)
         {
-            //
+            // Проведём глубокую очистку...
             List<String> CleanDirs = new List<string>();
             // Удалим старые бинарники и лаунчеры...
             CleanDirs.Add(Path.Combine(GV.GamePath, "bin", "*.*"));

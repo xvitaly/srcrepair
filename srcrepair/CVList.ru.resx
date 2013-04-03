@@ -3258,4 +3258,7 @@
   <data name="mp_hostages_takedamage" xml:space="preserve">
     <value>Включает / отключает возможность игроков наносить повреждения заложникам.</value>
   </data>
+  <data name="sixense_bind" xml:space="preserve">
+    <value>Назначает игровое действие клавише манипулятора Sixense.</value>
+  </data>
 </root>
