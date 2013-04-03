@@ -25,6 +25,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using Ionic.Zip;
 
 namespace srcrepair
 {
@@ -43,8 +44,30 @@ namespace srcrepair
             File.Copy(FileName, Path.Combine(GV.FullGamePath, SubDir, Path.GetFileName(FileName)), true);
         }
 
-        private void UnpackArchiveNow(string ArcName)
+        private void UnpackZipArchiveNow(string ArcName)
         {
+            try
+            {
+                string DestDir = Path.Combine(GV.FullGamePath, "custom", CoreLib.WriteDateToString(DateTime.Now, true));
+                using (ZipFile Zip = ZipFile.Read(ArcName))
+                {
+                    foreach (ZipEntry ZFile in Zip)
+                    {
+                        try
+                        {
+                            ZFile.Extract(DestDir, ExtractExistingFileAction.OverwriteSilently);
+                        }
+                        catch (Exception Ex)
+                        {
+                            CoreLib.WriteStringToLog(Ex.Message);
+                        }
+                    }
+                }
+            }
+            catch (Exception Ex)
+            {
+                CoreLib.WriteStringToLog(Ex.Message);
+            }
         }
 
         private void CompileFromVTF(string FileName)
@@ -129,7 +152,7 @@ namespace srcrepair
                             break;
                         case ".vtf": InstallSprayNow(InstallPath.Text); // Будем устанавливай спрей...
                             break;
-                        case ".zip": UnpackArchiveNow(InstallPath.Text); // Будем устанавливать содержимое архива...
+                        case ".zip": UnpackZipArchiveNow(InstallPath.Text); // Будем устанавливать содержимое архива...
                             break;
                     }
 
