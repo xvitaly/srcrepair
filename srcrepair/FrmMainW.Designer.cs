@@ -126,7 +126,7 @@
             this.PS_RemGraphOpts = new System.Windows.Forms.Button();
             this.PS_GB_Remover = new System.Windows.Forms.GroupBox();
             this.PS_RemReplays = new System.Windows.Forms.Button();
-            this.PS_RemModels = new System.Windows.Forms.Button();
+            this.PS_DeepCleanup = new System.Windows.Forms.Button();
             this.PS_RemTextures = new System.Windows.Forms.Button();
             this.PS_RemDemos = new System.Windows.Forms.Button();
             this.PS_RemScreenShots = new System.Windows.Forms.Button();
@@ -1103,7 +1103,7 @@
             // PS_GB_Remover
             // 
             this.PS_GB_Remover.Controls.Add(this.PS_RemReplays);
-            this.PS_GB_Remover.Controls.Add(this.PS_RemModels);
+            this.PS_GB_Remover.Controls.Add(this.PS_DeepCleanup);
             this.PS_GB_Remover.Controls.Add(this.PS_RemTextures);
             this.PS_GB_Remover.Controls.Add(this.PS_RemDemos);
             this.PS_GB_Remover.Controls.Add(this.PS_RemScreenShots);
@@ -1125,12 +1125,12 @@
             this.PS_RemReplays.UseVisualStyleBackColor = true;
             this.PS_RemReplays.Click += new System.EventHandler(this.PS_RemReplays_Click);
             // 
-            // PS_RemModels
+            // PS_DeepCleanup
             // 
-            resources.ApplyResources(this.PS_RemModels, "PS_RemModels");
-            this.PS_RemModels.Name = "PS_RemModels";
-            this.PS_RemModels.UseVisualStyleBackColor = true;
-            this.PS_RemModels.Click += new System.EventHandler(this.PS_RemModels_Click);
+            resources.ApplyResources(this.PS_DeepCleanup, "PS_DeepCleanup");
+            this.PS_DeepCleanup.Name = "PS_DeepCleanup";
+            this.PS_DeepCleanup.UseVisualStyleBackColor = true;
+            this.PS_DeepCleanup.Click += new System.EventHandler(this.PS_DeepCleanup_Click);
             // 
             // PS_RemTextures
             // 
@@ -2015,7 +2015,7 @@
         private System.Windows.Forms.ToolStripMenuItem MNUDonate;
         private System.Windows.Forms.ToolStripButton CE_OpenInNotepad;
         private System.Windows.Forms.Button PS_RemReplays;
-        private System.Windows.Forms.Button PS_RemModels;
+        private System.Windows.Forms.Button PS_DeepCleanup;
         private System.Windows.Forms.Button PS_RemTextures;
         private System.Windows.Forms.ToolStripButton CE_OpenCVList;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnSub;

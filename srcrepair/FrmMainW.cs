@@ -2950,18 +2950,6 @@ namespace srcrepair
             }
         }
 
-        private void PS_RemModels_Click(object sender, EventArgs e)
-        {
-            // Удаляем все кастомные модели...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(GV.FullGamePath, "models", "*.*"));
-            CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.mdl"));
-            CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "*.mdl"));
-            CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.phy"));
-            CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "*.phy"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
-        }
-
         private void PS_RemReplays_Click(object sender, EventArgs e)
         {
             // Удаляем все реплеи...
@@ -2974,11 +2962,19 @@ namespace srcrepair
         {
             // Удаляем все кастомные текстуры...
             List<String> CleanDirs = new List<string>();
+            // Чистим базы игр со старой системой. Удалить после полного перехода на новую...
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "materials", "*.*"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "models", "*.*"));
+            // Чистим загруженные с серверов модели и текстуры...
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.vt*"));
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.vmt"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.mdl"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.phy"));
+            // Чистим установленные пользователем модели и текстуры...
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "*.vt*"));
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "*.vmt"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "*.mdl"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "*.phy"));
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
@@ -3183,6 +3179,35 @@ namespace srcrepair
             // Удаляем пользовательного каталога...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
+        }
+
+        private void PS_DeepCleanup_Click(object sender, EventArgs e)
+        {
+            //
+            List<String> CleanDirs = new List<string>();
+            // Удалим старые бинарники и лаунчеры...
+            CleanDirs.Add(Path.Combine(GV.GamePath, "bin", "*.*"));
+            CleanDirs.Add(Path.Combine(GV.GamePath, "platform", "*.*"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "bin", "*.*"));
+            CleanDirs.Add(Path.Combine(GV.GamePath, "*.exe"));
+            // Удалим кэш загрузок...
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "downloads", "*.*"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.*"));
+            // Удалим кастомные файлы...
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "*.*"));
+            // Удалим графический кэш...
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "maps", "graphs", "*.*"));
+            // Удалим кэш звуков...
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "maps", "soundcache", "*.*"));
+            // Удалим другие кэши...
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "cache", "*.*"));
+            // Удалим кэш спреев...
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "materials", "temp", "*.vtf"));
+            // Удалим кэш MOTD...
+            CleanDirs.Add(Path.Combine(GV.GamePath, "config", "html", "*.*"));
+            // Удалим пользовательские конфиги...
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "cfg", "*.*"));
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
     }

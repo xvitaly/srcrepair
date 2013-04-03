@@ -2040,8 +2040,8 @@
   <data name="GT_Warning.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK9wAA
-        CvcBEOiS5wAABepJREFUWEftlWtsk1UYx9u+l7Yr3brB6ICxjd3AjEWIEjBKlBgvqBuOeIniJxM/sGiI
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK9gAA
+        CvYBwq9wAwAABepJREFUWEftlWtsk1UYx9u+l7Yr3brB6ICxjd3AjEWIEjBKlBgvqBuOeIniJxM/sGiI
         4jfDJzTRJSI4NmRdGRu7dd1967bu4pQ5NyK4KS4CQrgZNVMDjF26vu37+D9vK7LtbPAJP+hJfjl9n57z
         /P/nOe85rw5N+JfhBu8l3OC9hBu8I+vX2IQeZ3ra+b7kHeVFKYsirRJ33F3ADS6IzSoLZypT16tfG2/Q
         CYF8Z6z9riMpZt7Yu4AbXJCPcxPlQK91iAZF0hgw0PSlpXuyn17MHX8HuMF5yVhlFcZaE3aqg0ZSB0C/
@@ -2745,31 +2745,31 @@
   <data name="&gt;&gt;PS_RemReplays.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="PS_RemModels.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="PS_DeepCleanup.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="PS_RemModels.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="PS_DeepCleanup.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 307</value>
   </data>
-  <data name="PS_RemModels.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PS_DeepCleanup.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 23</value>
   </data>
-  <data name="PS_RemModels.TabIndex" type="System.Int32, mscorlib">
+  <data name="PS_DeepCleanup.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="PS_RemModels.Text" xml:space="preserve">
-    <value>Custom models</value>
+  <data name="PS_DeepCleanup.Text" xml:space="preserve">
+    <value>Deep cleanup</value>
   </data>
-  <data name="&gt;&gt;PS_RemModels.Name" xml:space="preserve">
-    <value>PS_RemModels</value>
+  <data name="&gt;&gt;PS_DeepCleanup.Name" xml:space="preserve">
+    <value>PS_DeepCleanup</value>
   </data>
-  <data name="&gt;&gt;PS_RemModels.Type" xml:space="preserve">
+  <data name="&gt;&gt;PS_DeepCleanup.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;PS_RemModels.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PS_DeepCleanup.Parent" xml:space="preserve">
     <value>PS_GB_Remover</value>
   </data>
-  <data name="&gt;&gt;PS_RemModels.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;PS_DeepCleanup.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="PS_RemTextures.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -2785,7 +2785,7 @@
     <value>9</value>
   </data>
   <data name="PS_RemTextures.Text" xml:space="preserve">
-    <value>Custom textures</value>
+    <value>Models and textures</value>
   </data>
   <data name="&gt;&gt;PS_RemTextures.Name" xml:space="preserve">
     <value>PS_RemTextures</value>
@@ -3851,7 +3851,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADs
-        DQAAAk1TRnQBSQFMAgEBBQEAASABAAEgAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBQEAATwBAAE8AQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA

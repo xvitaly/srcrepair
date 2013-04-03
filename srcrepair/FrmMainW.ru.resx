@@ -475,8 +475,8 @@
   <data name="GT_Warning.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK+gAA
-        CvoBGdj/dAAABepJREFUWEftlWtsk1UYx9u+l7Yr3brB6ICxjd3AjEWIEjBKlBgvqBuOeIniJxM/sGiI
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAAK+QAA
+        CvkBtGHeGQAABepJREFUWEftlWtsk1UYx9u+l7Yr3brB6ICxjd3AjEWIEjBKlBgvqBuOeIniJxM/sGiI
         4jfDJzTRJSI4NmRdGRu7dd1967bu4pQ5NyK4KS4CQrgZNVMDjF26vu37+D9vK7LtbPAJP+hJfjl9n57z
         /P/nOe85rw5N+JfhBu8l3OC9hBu8I+vX2IQeZ3ra+b7kHeVFKYsirRJ33F3ADS6IzSoLZypT16tfG2/Q
         CYF8Z6z9riMpZt7Yu4AbXJCPcxPlQK91iAZF0hgw0PSlpXuyn17MHX8HuMF5yVhlFcZaE3aqg0ZSB0C/
@@ -673,11 +673,11 @@
   <data name="PS_RemReplays.Text" xml:space="preserve">
     <value>Реплеи (повторы)</value>
   </data>
-  <data name="PS_RemModels.Text" xml:space="preserve">
-    <value>Кастомные модели</value>
+  <data name="PS_DeepCleanup.Text" xml:space="preserve">
+    <value>Глубокая очистка</value>
   </data>
   <data name="PS_RemTextures.Text" xml:space="preserve">
-    <value>Кастомные текстуры</value>
+    <value>Модели и текстуры</value>
   </data>
   <data name="PS_RemDemos.Text" xml:space="preserve">
     <value>Записанные демки</value>
@@ -831,7 +831,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADs
-        DQAAAk1TRnQBSQFMAgEBBQEAAQwBAAEMAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBQEAARQBAAEUAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
