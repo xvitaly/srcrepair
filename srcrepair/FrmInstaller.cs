@@ -44,18 +44,17 @@ namespace srcrepair
             File.Copy(FileName, Path.Combine(GV.FullGamePath, SubDir, Path.GetFileName(FileName)), true);
         }
 
-        private void UnpackZipArchiveNow(string ArcName)
+        private void UnpackZipArchiveNow(string ArcName, bool UseArcName = true)
         {
             try
             {
-                string DestDir = Path.Combine(GV.FullGamePath, "custom", CoreLib.WriteDateToString(DateTime.Now, true));
                 using (ZipFile Zip = ZipFile.Read(ArcName))
                 {
                     foreach (ZipEntry ZFile in Zip)
                     {
                         try
                         {
-                            ZFile.Extract(DestDir, ExtractExistingFileAction.OverwriteSilently);
+                            ZFile.Extract(Path.Combine(GV.FullGamePath, "custom", UseArcName ? Path.GetFileNameWithoutExtension(ArcName) : CoreLib.WriteDateToString(DateTime.Now, true)), ExtractExistingFileAction.OverwriteSilently);
                         }
                         catch (Exception Ex)
                         {
