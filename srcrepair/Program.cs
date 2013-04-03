@@ -23,7 +23,7 @@ namespace srcrepair
                     Application.SetCompatibleTextRenderingDefault(false);
                     string[] CMDLineA = Environment.GetCommandLineArgs();
                     if (CMDLineA.Length > 2) { if (CMDLineA[1] == "/lang") { try { Thread.CurrentThread.CurrentUICulture = new CultureInfo(CMDLineA[2]); } catch { MessageBox.Show(Properties.Resources.AppUnsupportedLanguage, GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } } }
-                    if (CMDLineA.Contains<String>("/repgen")) { Application.Run(new frmRepBuilder()); } else { Application.Run(new frmMainW()); }
+                    Application.Run(new frmMainW());
                 }
                 else
                 {
