@@ -48,7 +48,7 @@ ArchitecturesInstallIn64BitMode=x64
 ; Тут указываем данные, которые будут добавлены в свойства установщика
 VersionInfoVersion=12.0.0.762
 VersionInfoDescription=SRC Repair Setup
-VersionInfoCopyright=(c) 2005-2012 EasyCoding Team. All rights reserved.
+VersionInfoCopyright=(c) 2005-2013 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
 
 [Languages]
