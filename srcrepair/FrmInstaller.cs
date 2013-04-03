@@ -38,12 +38,22 @@ namespace srcrepair
 
         private const string PluginName = "Quick Installer";
 
+        /// <summary>
+        /// Устанавливает файл в указанный каталог.
+        /// </summary>
+        /// <param name="FileName">Имя устанавливаемого файла с полным путём</param>
+        /// <param name="SubDir">Подкаталог, в который файл будет установлен</param>
         private void InstallFileNow(string FileName, string SubDir)
         {
             // Устанавливаем файл...
             File.Copy(FileName, Path.Combine(GV.FullGamePath, SubDir, Path.GetFileName(FileName)), true);
         }
 
+        /// <summary>
+        /// Распаковывает архив в каталог кастомных файлов.
+        /// </summary>
+        /// <param name="ArcName">Имя архива с полным путём до него</param>
+        /// <param name="UseArcName">Включает или отключает создание подкаталога с именем архива</param>
         private void UnpackZipArchiveNow(string ArcName, bool UseArcName = true)
         {
             try
@@ -69,10 +79,14 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Компилирует VMT файл из VTF.
+        /// </summary>
+        /// <param name="FileName">Имя VMT файла с полным путём до него</param>
         private void CompileFromVTF(string FileName)
         {
             // Начинаем...
-            using (System.IO.StreamWriter CFile = new System.IO.StreamWriter(FileName))
+            using (StreamWriter CFile = new StreamWriter(FileName))
             {
                 CFile.WriteLine(@"""UnlitGeneric""");
                 CFile.WriteLine("{");
@@ -86,6 +100,10 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Устанавливает спрей в игру.
+        /// </summary>
+        /// <param name="FileName">Имя файла спрея с полным путём для установки</param>
         private void InstallSprayNow(string FileName)
         {
             // Заполняем необходимые переменные...
