@@ -2973,9 +2973,9 @@ namespace srcrepair
             // Удаляем все кастомные текстуры...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "materials", "*.*"));
-            CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.vtf"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.vt*"));
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.vmt"));
-            CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "*.vtf"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "*.vt*"));
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "*.vmt"));
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
