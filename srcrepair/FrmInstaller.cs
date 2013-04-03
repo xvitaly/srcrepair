@@ -43,6 +43,10 @@ namespace srcrepair
             File.Copy(FileName, Path.Combine(GV.FullGamePath, SubDir, Path.GetFileName(FileName)), true);
         }
 
+        private void UnpackArchiveNow(string ArcName)
+        {
+        }
+
         private void CompileFromVTF(string FileName)
         {
             // Начинаем...
@@ -124,6 +128,8 @@ namespace srcrepair
                         case ".bsp": InstallFileNow(InstallPath.Text, "maps" + Path.DirectorySeparatorChar); // Будем устанавливать карту...
                             break;
                         case ".vtf": InstallSprayNow(InstallPath.Text); // Будем устанавливай спрей...
+                            break;
+                        case ".zip": UnpackArchiveNow(InstallPath.Text); // Будем устанавливать содержимое архива...
                             break;
                     }
 
