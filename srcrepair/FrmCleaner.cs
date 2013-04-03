@@ -128,12 +128,15 @@ namespace srcrepair
         /// <param name="StartDir">Каталог для выполнения очистки</param>
         private void RemoveEmptyDirectories(string StartDir)
         {
-            foreach (var Dir in Directory.GetDirectories(StartDir))
+            if (Directory.Exists(StartDir))
             {
-                RemoveEmptyDirectories(Dir);
-                if ((Directory.GetFiles(Dir).Length == 0) && (Directory.GetDirectories(Dir).Length == 0))
+                foreach (var Dir in Directory.GetDirectories(StartDir))
                 {
-                    Directory.Delete(Dir, false);
+                    RemoveEmptyDirectories(Dir);
+                    if ((Directory.GetFiles(Dir).Length == 0) && (Directory.GetDirectories(Dir).Length == 0))
+                    {
+                        Directory.Delete(Dir, false);
+                    }
                 }
             }
         }
