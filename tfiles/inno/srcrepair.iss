@@ -1,17 +1,17 @@
-; Скрипт программы (мастера) установки SRC Repair.
+п»ї; РЎРєСЂРёРїС‚ РїСЂРѕРіСЂР°РјРјС‹ (РјР°СЃС‚РµСЂР°) СѓСЃС‚Р°РЅРѕРІРєРё SRC Repair.
 ; 
 ; Copyright 2011 EasyCoding Team (ECTeam).
 ; Copyright 2005 - 2011 EasyCoding Team.
 ; 
-; Лицензия: GPL v3 (см. файл GPL.txt).
+; Р›РёС†РµРЅР·РёСЏ: GPL v3 (СЃРј. С„Р°Р№Р» GPL.txt).
 ;  
-; Запрещается использовать этот файл при использовании любой
-; лицензии, отличной от GNU GPL версии 3 и с ней совместимой.
+; Р—Р°РїСЂРµС‰Р°РµС‚СЃСЏ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЌС‚РѕС‚ С„Р°Р№Р» РїСЂРё РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё Р»СЋР±РѕР№
+; Р»РёС†РµРЅР·РёРё, РѕС‚Р»РёС‡РЅРѕР№ РѕС‚ GNU GPL РІРµСЂСЃРёРё 3 Рё СЃ РЅРµР№ СЃРѕРІРјРµСЃС‚РёРјРѕР№.
 ; 
-; Официальный блог EasyCoding Team: http://www.easycoding.org/
-; Официальная страница проекта: http://www.easycoding.org/projects/srcrepair
+; РћС„РёС†РёР°Р»СЊРЅС‹Р№ Р±Р»РѕРі EasyCoding Team: http://www.easycoding.org/
+; РћС„РёС†РёР°Р»СЊРЅР°СЏ СЃС‚СЂР°РЅРёС†Р° РїСЂРѕРµРєС‚Р°: http://www.easycoding.org/projects/srcrepair
 ; 
-; Более подробная инфорация о программе в readme.txt, о лицензии - в GPL.txt.
+; Р‘РѕР»РµРµ РїРѕРґСЂРѕР±РЅР°СЏ РёРЅС„РѕСЂР°С†РёСЏ Рѕ РїСЂРѕРіСЂР°РјРјРµ РІ readme.txt, Рѕ Р»РёС†РµРЅР·РёРё - РІ GPL.txt.
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -22,8 +22,8 @@ AppName=SRC Repair
 AppVerName=SRC Repair
 AppPublisher=EasyCoding Team
 AppPublisherURL=http://www.easycoding.org/
-; AppVersion отображается в Установка/Удаление программ в дополнительной информации.
-AppVersion=11.0.0.657
+; AppVersion РѕС‚РѕР±СЂР°Р¶Р°РµС‚СЃСЏ РІ РЈСЃС‚Р°РЅРѕРІРєР°/РЈРґР°Р»РµРЅРёРµ РїСЂРѕРіСЂР°РјРј РІ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё.
+AppVersion=12.0.0.762
 AppSupportURL=http://code.google.com/p/srcrepair/wiki/Support
 AppUpdatesURL=http://code.google.com/p/srcrepair/downloads/list
 DefaultDirName={pf}\SRC Repair
@@ -33,8 +33,8 @@ SourceDir=E:\VSBuilds
 LicenseFile=GPL.txt
 ;InfoBeforeFile=readme.txt
 OutputDir=E:\VSBuilds
-OutputBaseFilename=srcrepair_110_final
-;OutputBaseFilename=srcrepair_beta_657
+OutputBaseFilename=srcrepair_120_final
+;OutputBaseFilename=srcrepair_beta_762
 SetupIconFile=srcrepair.ico
 UninstallDisplayIcon={app}\srcrepair.exe
 Compression=lzma2
@@ -45,8 +45,8 @@ SolidCompression=yes
 ; On all other architectures it will install in "32-bit mode".
 ArchitecturesInstallIn64BitMode=x64
 
-; Тут указываем данные, которые будут добавлены в свойства установщика
-VersionInfoVersion=11.0.0.657
+; РўСѓС‚ СѓРєР°Р·С‹РІР°РµРј РґР°РЅРЅС‹Рµ, РєРѕС‚РѕСЂС‹Рµ Р±СѓРґСѓС‚ РґРѕР±Р°РІР»РµРЅС‹ РІ СЃРІРѕР№СЃС‚РІР° СѓСЃС‚Р°РЅРѕРІС‰РёРєР°
+VersionInfoVersion=12.0.0.762
 VersionInfoDescription=SRC Repair Setup
 VersionInfoCopyright=(c) 2005-2012 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
@@ -58,65 +58,65 @@ Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl,ru-RU.isl"; InfoB
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
-;Name: "copylicence"; Description: "Скопировать лицензионное соглашение в папку SRC Repair"; GroupDescription: "Дополнительные возможности:"
-;Name: "copyreadme"; Description: "Скопировать файл ReadMe в папку SRC Repair"; GroupDescription: "Дополнительные возможности:"
+;Name: "copylicence"; Description: "РЎРєРѕРїРёСЂРѕРІР°С‚СЊ Р»РёС†РµРЅР·РёРѕРЅРЅРѕРµ СЃРѕРіР»Р°С€РµРЅРёРµ РІ РїР°РїРєСѓ SRC Repair"; GroupDescription: "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё:"
+;Name: "copyreadme"; Description: "РЎРєРѕРїРёСЂРѕРІР°С‚СЊ С„Р°Р№Р» ReadMe РІ РїР°РїРєСѓ SRC Repair"; GroupDescription: "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё:"
 ;Name: "inst7z"; Description: "{cm:InstLZMAPlugin}"; GroupDescription: "{cm:AdvFeatGroupDesc}"
 Name: "betashortuts"; Description: "{cm:InstCreateLocShcuts}"; GroupDescription: "{cm:AdvFeatGroupDesc}"
 ;Name: "isexpf"; Description: "{cm:InstExpFeatures}"; GroupDescription: "{cm:AdvFeatGroupDesc}"; Flags: unchecked
 Name: "insdebginf"; Description: "{cm:InstDebugInfo}"; GroupDescription: "{cm:AdvFeatGroupDesc}"; Flags: unchecked
 
 [Files]
-; Копируем библиотеку, используемую для скачивания файлов...
+; РљРѕРїРёСЂСѓРµРј Р±РёР±Р»РёРѕС‚РµРєСѓ, РёСЃРїРѕР»СЊР·СѓРµРјСѓСЋ РґР»СЏ СЃРєР°С‡РёРІР°РЅРёСЏ С„Р°Р№Р»РѕРІ...
 Source: "dll\isxdl.dll"; DestDir: {tmp}; Flags: dontcopy
-; Устанавливаем readme, файл лицензии и список изменений...
+; РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј readme, С„Р°Р№Р» Р»РёС†РµРЅР·РёРё Рё СЃРїРёСЃРѕРє РёР·РјРµРЅРµРЅРёР№...
 Source: "GPL.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "readme.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "readme_en.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "changelog.txt"; DestDir: "{app}"; Flags: ignoreversion
-; Копируем файл со списком поддерживаемых игр и их параметрами...
+; РљРѕРїРёСЂСѓРµРј С„Р°Р№Р» СЃРѕ СЃРїРёСЃРєРѕРј РїРѕРґРґРµСЂР¶РёРІР°РµРјС‹С… РёРіСЂ Рё РёС… РїР°СЂР°РјРµС‚СЂР°РјРё...
 Source: "games.xml"; DestDir: "{app}"; Flags: ignoreversion
-; Копируем открытый ключ...
+; РљРѕРїРёСЂСѓРµРј РѕС‚РєСЂС‹С‚С‹Р№ РєР»СЋС‡...
 Source: "pubkey.asc"; DestDir: "{app}"; Flags: ignoreversion
-; Копируем модуль поддержки сжатия (собран как AnyCPU)...
+; РљРѕРїРёСЂСѓРµРј РјРѕРґСѓР»СЊ РїРѕРґРґРµСЂР¶РєРё СЃР¶Р°С‚РёСЏ (СЃРѕР±СЂР°РЅ РєР°Рє AnyCPU)...
 Source: "Ionic.Zip.Reduced.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "Ionic.Zip.Reduced.dll.sig"; DestDir: "{app}"; Flags: ignoreversion
-; Устанавливаем 32-битную версию...
+; РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј 32-Р±РёС‚РЅСѓСЋ РІРµСЂСЃРёСЋ...
 Source: "srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion; Check: not Is64BitInstallMode
 Source: "srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion; Check: not Is64BitInstallMode; Tasks: insdebginf
 Source: "srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Check: not Is64BitInstallMode
 Source: "ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: not Is64BitInstallMode
-; Устанавливаем 64-битную версию...
+; РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј 64-Р±РёС‚РЅСѓСЋ РІРµСЂСЃРёСЋ...
 Source: "x64\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion; Check: Is64BitInstallMode
 Source: "x64\srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion; Check: Is64BitInstallMode; Tasks: insdebginf
 Source: "x64\srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Check: Is64BitInstallMode
 Source: "x64\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: Is64BitInstallMode
-; Копируем файл стандартных настроек программы...
+; РљРѕРїРёСЂСѓРµРј С„Р°Р№Р» СЃС‚Р°РЅРґР°СЂС‚РЅС‹С… РЅР°СЃС‚СЂРѕРµРє РїСЂРѕРіСЂР°РјРјС‹...
 Source: "srcrepair.exe.config"; DestDir: "{app}"; Flags: ignoreversion
-; Устанавливаем остальные файлы...
+; РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј РѕСЃС‚Р°Р»СЊРЅС‹Рµ С„Р°Р№Р»С‹...
 Source: "cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
 ;Source: "nfx\*"; DestDir: "{app}\nfx\"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
-; Создаём ярлык для приложения...
+; РЎРѕР·РґР°С‘Рј СЏСЂР»С‹Рє РґР»СЏ РїСЂРёР»РѕР¶РµРЅРёСЏ...
 Name: "{group}\SRC Repair"; Filename: "{app}\srcrepair.exe"
-; Создаём ярлыки для файлов с лицензионным соглашением и ReadMe...
+; РЎРѕР·РґР°С‘Рј СЏСЂР»С‹РєРё РґР»СЏ С„Р°Р№Р»РѕРІ СЃ Р»РёС†РµРЅР·РёРѕРЅРЅС‹Рј СЃРѕРіР»Р°С€РµРЅРёРµРј Рё ReadMe...
 Name: "{group}\{cm:ShcLocTexts}\{cm:ShcLicenseAgrr}"; Filename: "{app}\GPL.txt"
 Name: "{group}\{cm:ShcLocTexts}\{cm:ShcReadme}"; Filename: "{app}\{cm:ShcReadmeFile}"
 Name: "{group}\{cm:ShcLocTexts}\{cm:ShcChlog}"; Filename: "{app}\changelog.txt"
-; Создаём ярлыки для запуска локализованных версий (только если пользователь выбрал этот пункт)...
+; РЎРѕР·РґР°С‘Рј СЏСЂР»С‹РєРё РґР»СЏ Р·Р°РїСѓСЃРєР° Р»РѕРєР°Р»РёР·РѕРІР°РЅРЅС‹С… РІРµСЂСЃРёР№ (С‚РѕР»СЊРєРѕ РµСЃР»Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РІС‹Р±СЂР°Р» СЌС‚РѕС‚ РїСѓРЅРєС‚)...
 Name: "{group}\{cm:ShcLocFldr}\SRC Repair ({cm:ShcMLnRU})"; Filename: "{app}\srcrepair.exe"; Parameters: "/lang ru"; Tasks: betashortuts
 Name: "{group}\{cm:ShcLocFldr}\SRC Repair ({cm:ShcMLnEN})"; Filename: "{app}\srcrepair.exe"; Parameters: "/lang en"; Tasks: betashortuts
-; Создаём стандартные ярлыки для справки и удаления...
+; РЎРѕР·РґР°С‘Рј СЃС‚Р°РЅРґР°СЂС‚РЅС‹Рµ СЏСЂР»С‹РєРё РґР»СЏ СЃРїСЂР°РІРєРё Рё СѓРґР°Р»РµРЅРёСЏ...
 Name: "{group}\{cm:ShcLocTexts}\{cm:ProgramOnTheWeb,SRC Repair}"; Filename: "http://www.easycoding.org/projects/srcrepair"
 Name: "{group}\{cm:UninstallProgram,SRC Repair}"; Filename: "{uninstallexe}"
-; Создаём ярлык для багтрекера...
+; РЎРѕР·РґР°С‘Рј СЏСЂР»С‹Рє РґР»СЏ Р±Р°РіС‚СЂРµРєРµСЂР°...
 Name: "{group}\{cm:RepAppErrText}"; Filename: "http://code.google.com/p/srcrepair/issues/entry"
-; Создаём ярлык на рабочем столе (если выбрано)...
+; РЎРѕР·РґР°С‘Рј СЏСЂР»С‹Рє РЅР° СЂР°Р±РѕС‡РµРј СЃС‚РѕР»Рµ (РµСЃР»Рё РІС‹Р±СЂР°РЅРѕ)...
 Name: "{commondesktop}\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: desktopicon
-; Создаём ярлык на панели быстрого запуска (если выбрано)...
+; РЎРѕР·РґР°С‘Рј СЏСЂР»С‹Рє РЅР° РїР°РЅРµР»Рё Р±С‹СЃС‚СЂРѕРіРѕ Р·Р°РїСѓСЃРєР° (РµСЃР»Рё РІС‹Р±СЂР°РЅРѕ)...
 Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: quicklaunchicon
-; Создаём ярлык для установщика среды Microsoft .NET Framework 4...
+; РЎРѕР·РґР°С‘Рј СЏСЂР»С‹Рє РґР»СЏ СѓСЃС‚Р°РЅРѕРІС‰РёРєР° СЃСЂРµРґС‹ Microsoft .NET Framework 4...
 Name: "{group}\{cm:ShcNETFx}"; Filename: "{cm:ShcNFxUrl}"
 
 [Run]
@@ -211,21 +211,21 @@ function UpdateReadyMemo(Space, NewLine, MemoUserInfoInfo, MemoDirInfo, MemoType
 var
   s: string;
 begin
-  // Добавляем зависимости...
+  // Р”РѕР±Р°РІР»СЏРµРј Р·Р°РІРёСЃРёРјРѕСЃС‚Рё...
   if (memoDependenciesNeeded <> '') then
     s := s + ExpandConstant('{cm:DnlDepText}') + NewLine + memoDependenciesNeeded + NewLine;
-  // Добавляем путь установки...
+  // Р”РѕР±Р°РІР»СЏРµРј РїСѓС‚СЊ СѓСЃС‚Р°РЅРѕРІРєРё...
   s := s + MemoDirInfo + NewLine + NewLine;
-  // Добавляем информацию...
+  // Р”РѕР±Р°РІР»СЏРµРј РёРЅС„РѕСЂРјР°С†РёСЋ...
   if  (MemoTypeInfo <> '') then
     s := s + MemoTypeInfo + NewLine;
-  // Добавляем инфо о компонентах...
+  // Р”РѕР±Р°РІР»СЏРµРј РёРЅС„Рѕ Рѕ РєРѕРјРїРѕРЅРµРЅС‚Р°С…...
   if (MemoComponentsInfo <> '') then
     s := s + MemoComponentsInfo + NewLine;
-  // Добавляем инфо о группе в меню Пуск...
+  // Р”РѕР±Р°РІР»СЏРµРј РёРЅС„Рѕ Рѕ РіСЂСѓРїРїРµ РІ РјРµРЅСЋ РџСѓСЃРє...
   if (MemoGroupInfo <> '') then
     s := s + MemoGroupInfo + NewLine + NewLine;
-  // Добавляем инфо о задачах...
+  // Р”РѕР±Р°РІР»СЏРµРј РёРЅС„Рѕ Рѕ Р·Р°РґР°С‡Р°С…...
   if (MemoTasksInfo <> '') then
     s := s + MemoTasksInfo + NewLine;
   Result := s

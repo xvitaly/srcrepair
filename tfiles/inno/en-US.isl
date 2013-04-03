@@ -1,4 +1,4 @@
-[CustomMessages]
+﻿[CustomMessages]
 InstLZMAPlugin=Install LZMA compression plugin
 AdvFeatGroupDesc=Advanced features:
 InstCreateLocShcuts=Create shortcuts for localized versions
