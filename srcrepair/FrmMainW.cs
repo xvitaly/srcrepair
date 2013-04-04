@@ -570,6 +570,8 @@ namespace srcrepair
         /// <param name="VFileName">Имя файла опций</param>
         private void WriteNCFGameSettings(string VFileName)
         {
+            // Проверим существует ли файл...
+            if (!(File.Exists(VFileName))) { CoreLib.CreateFile(VFileName); }
             // Начинаем сохранять содержимое редактора в файл...
             using (StreamWriter CFile = new StreamWriter(VFileName))
             {
