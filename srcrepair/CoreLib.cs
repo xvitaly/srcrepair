@@ -326,12 +326,16 @@ namespace srcrepair
         /// <param name="FileName">Имя создаваемого файла</param>
         public static void CreateFile(string FileName)
         {
-            // Создаём...
-            using (FileStream fs = File.Create(FileName))
+            try
             {
-                // Закрываем...
-                fs.Close();
+                // Создаём...
+                using (FileStream fs = File.Create(FileName))
+                {
+                    // Закрываем...
+                    fs.Close();
+                }
             }
+            catch { /* Do nothing */ }
         }
 
         /// <summary>
