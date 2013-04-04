@@ -3093,6 +3093,8 @@ namespace srcrepair
             // Удаляем кастомные звуки...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "sound", "*.*"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.mp3"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.wav"));
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), false, true);
         }
 
