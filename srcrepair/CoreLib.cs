@@ -321,6 +321,20 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Создаёт новый файл по указанному адресу.
+        /// </summary>
+        /// <param name="FileName">Имя создаваемого файла</param>
+        public static void CreateFile(string FileName)
+        {
+            // Создаём...
+            using (FileStream fs = File.Create(FileName))
+            {
+                // Закрываем...
+                fs.Close();
+            }
+        }
+
+        /// <summary>
         /// Функция, записывающая в лог-файл строку. Например, сообщение об ошибке.
         /// </summary>
         /// <param name="TextMessage">Сообщение для записи в лог</param>
@@ -336,11 +350,7 @@ namespace srcrepair
                     // Если файл не существует, создадим его и сразу закроем...
                     if (!File.Exists(DebugFileName))
                     {
-                        using (FileStream fs = File.Create(DebugFileName)) // Создаём...
-                        {
-                            // Закрываем...
-                            fs.Close();
-                        }
+                        CreateFile(DebugFileName);
                     }
                     // Начинаем записывать в лог-файл...
                     using (StreamWriter DFile = new StreamWriter(DebugFileName, true))
