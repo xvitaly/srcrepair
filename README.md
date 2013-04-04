@@ -18,6 +18,8 @@ Download application (this link always contains latest version): http://www.easy
 
 Full archive: http://code.google.com/p/srcrepair/downloads/list.
 
+Official bug tracker: http://code.google.com/p/srcrepair/issues/list
+
 Supported games
 =========
 Supported Valve games:
