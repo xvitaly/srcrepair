@@ -10,7 +10,7 @@ sprays into the game with one click.
 
 **Supported platforms**: x86, x64 (auto select).
 
-**Dependencies on Windows**: Microsoft .NET Framework 4 Client Profile.
+**Dependencies on Windows**: Microsoft .NET Framework 4 Client Profile (web installer included).
 
 Downloads
 =========
