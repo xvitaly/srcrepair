@@ -3261,4 +3261,10 @@
   <data name="zoom_sensitivity_ratio" xml:space="preserve">
     <value>Задаёт множитель чувствительности мыши при активном прицеле снайперских винтовок.</value>
   </data>
+  <data name="cl_first_person_uses_world_model" xml:space="preserve">
+    <value>Разрешает / запрещает отображение модели игрока при использовании вида от первого лица.</value>
+  </data>
+  <data name="sv_motd_unload_on_dismissal" xml:space="preserve">
+    <value>Включает / отключает автоматическую выгрузку ресурсов MOTD после закрытия окна игроком.</value>
+  </data>
 </root>

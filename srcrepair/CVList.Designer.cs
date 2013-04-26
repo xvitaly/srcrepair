@@ -520,6 +520,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allow this mode to be used outside of VR mode..
+        /// </summary>
+        internal static string cl_first_person_uses_world_model {
+            get {
+                return ResourceManager.GetString("cl_first_person_uses_world_model", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 0/1 - sets viewmodels normal/inverted(left-handed) - does not work while connected to a server..
         /// </summary>
         internal static string cl_flipviewmodels {
@@ -2766,6 +2775,15 @@ namespace srcrepair {
         internal static string sv_minupdaterate {
             get {
                 return ResourceManager.GetString("sv_minupdaterate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Allow server ops to control the default behavior of their MOTD..
+        /// </summary>
+        internal static string sv_motd_unload_on_dismissal {
+            get {
+                return ResourceManager.GetString("sv_motd_unload_on_dismissal", resourceCulture);
             }
         }
         

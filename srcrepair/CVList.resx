@@ -1836,4 +1836,10 @@
   <data name="mp_hostages_takedamage" xml:space="preserve">
     <value>Setting 0 allows hostages to be hurt.</value>
   </data>
+  <data name="cl_first_person_uses_world_model" xml:space="preserve">
+    <value>Allow this mode to be used outside of VR mode.</value>
+  </data>
+  <data name="sv_motd_unload_on_dismissal" xml:space="preserve">
+    <value>Allow server ops to control the default behavior of their MOTD.</value>
+  </data>
 </root>
