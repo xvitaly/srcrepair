@@ -315,7 +315,11 @@ namespace srcrepair
         public static bool AutoUpdateCheck(string CurrentVersion, string ChURI)
         {
             string NewVersion, DnlStr;
-            using (WebClient Downloader = new WebClient()) { DnlStr = Downloader.DownloadString(ChURI); }
+            using (WebClient Downloader = new WebClient())
+            {
+                Downloader.Headers.Add("User-Agent", GV.UserAgent);
+                DnlStr = Downloader.DownloadString(ChURI);
+            }
             NewVersion = DnlStr.Substring(0, DnlStr.IndexOf("!"));
             if (CompareVersions(CurrentVersion, NewVersion)) { return true; } else { return false; }
         }
