@@ -2245,10 +2245,9 @@ namespace srcrepair
         {
             // Удаляем кастомные (нестандартные) карты...
             List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(GV.FullGamePath, "maps", "*.bsp"));
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "*.bsp"));
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.bsp"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), false, true);
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
         private void PS_RemDnlCache_Click(object sender, EventArgs e)
