@@ -618,4 +618,7 @@
   <data name="AppFailedToGetData" xml:space="preserve">
     <value>Warning! Failed to get data from game database. Please try again or select another game!</value>
   </data>
+  <data name="AppGameChkErrNtExs" xml:space="preserve">
+    <value>Game work directory "{0}" does not exists!</value>
+  </data>
 </root>

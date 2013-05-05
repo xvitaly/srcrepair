@@ -338,7 +338,7 @@ namespace srcrepair
                 {
                     if (AvailableGames.Exists(s => Regex.IsMatch(s, String.Format("{0}$", Path.GetFileName(StrX)), RegexOptions.IgnoreCase)))
                     {
-                        if (Directory.Exists(StrX)) { AppSelector.Items.Add(StrX); }
+                        if (Directory.Exists(StrX)) { AppSelector.Items.Add(StrX); } else { CoreLib.WriteStringToLog(String.Format(CoreLib.GetLocalizedString("AppGameChkErrNtExs"), StrX)); }
                     }
                 }
             }
