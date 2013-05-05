@@ -2289,6 +2289,7 @@ namespace srcrepair
             // Удаляем все записанные демки...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "*.dem"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "*.dem"));
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
