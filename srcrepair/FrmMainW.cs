@@ -282,7 +282,7 @@ namespace srcrepair
                         if (!(String.IsNullOrWhiteSpace(RdStr)))
                         {
                             // Ищем в строке путь установки...
-                            if (RdStr.IndexOf("installdir") != -1)
+                            if (RdStr.IndexOf("installdir", StringComparison.CurrentCultureIgnoreCase) != -1)
                             {
                                 RdStr = CoreLib.CleanStrWx(RdStr, true);
                                 RdStr = RdStr.Remove(0, RdStr.IndexOf(" ") + 1);
