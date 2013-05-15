@@ -58,7 +58,7 @@ namespace srcrepair
         public static string GetSteamPath()
         {
             // Подключаем реестр и открываем ключ только для чтения...
-            RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"Software\Valve\Steam", false);
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false);
 
             // Создаём строку для хранения результатов...
             string ResString = "";
@@ -67,7 +67,7 @@ namespace srcrepair
             if (ResKey != null)
             {
                 // Получаем значение открытого ключа...
-                object ResObj = ResKey.GetValue("InstallPath");
+                object ResObj = ResKey.GetValue("SteamPath");
 
                 // Проверяем чтобы значение существовало...
                 if (ResObj != null)
