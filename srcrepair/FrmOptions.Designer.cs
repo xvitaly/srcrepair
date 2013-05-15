@@ -33,12 +33,15 @@
             this.MO_Cancel = new System.Windows.Forms.Button();
             this.MO_TC = new System.Windows.Forms.TabControl();
             this.MO_TP1 = new System.Windows.Forms.TabPage();
+            this.MO_CustDirInstArc = new System.Windows.Forms.CheckBox();
             this.MO_PrefHelpSystem = new System.Windows.Forms.ComboBox();
             this.MO_L_HelpSystem = new System.Windows.Forms.Label();
             this.MO_AutoUpdate = new System.Windows.Forms.CheckBox();
             this.MO_SortGameList = new System.Windows.Forms.CheckBox();
             this.MO_ConfirmExit = new System.Windows.Forms.CheckBox();
             this.MO_TP2 = new System.Windows.Forms.TabPage();
+            this.MO_CustDirName = new System.Windows.Forms.TextBox();
+            this.L_MO_CustDirName = new System.Windows.Forms.Label();
             this.MO_FindShBin = new System.Windows.Forms.Button();
             this.MO_FindTextEd = new System.Windows.Forms.Button();
             this.MO_RemEmptyDirs = new System.Windows.Forms.CheckBox();
@@ -78,6 +81,7 @@
             // 
             // MO_TP1
             // 
+            this.MO_TP1.Controls.Add(this.MO_CustDirInstArc);
             this.MO_TP1.Controls.Add(this.MO_PrefHelpSystem);
             this.MO_TP1.Controls.Add(this.MO_L_HelpSystem);
             this.MO_TP1.Controls.Add(this.MO_AutoUpdate);
@@ -86,6 +90,12 @@
             resources.ApplyResources(this.MO_TP1, "MO_TP1");
             this.MO_TP1.Name = "MO_TP1";
             this.MO_TP1.UseVisualStyleBackColor = true;
+            // 
+            // MO_CustDirInstArc
+            // 
+            resources.ApplyResources(this.MO_CustDirInstArc, "MO_CustDirInstArc");
+            this.MO_CustDirInstArc.Name = "MO_CustDirInstArc";
+            this.MO_CustDirInstArc.UseVisualStyleBackColor = true;
             // 
             // MO_PrefHelpSystem
             // 
@@ -122,6 +132,8 @@
             // 
             // MO_TP2
             // 
+            this.MO_TP2.Controls.Add(this.MO_CustDirName);
+            this.MO_TP2.Controls.Add(this.L_MO_CustDirName);
             this.MO_TP2.Controls.Add(this.MO_FindShBin);
             this.MO_TP2.Controls.Add(this.MO_FindTextEd);
             this.MO_TP2.Controls.Add(this.MO_RemEmptyDirs);
@@ -133,6 +145,16 @@
             resources.ApplyResources(this.MO_TP2, "MO_TP2");
             this.MO_TP2.Name = "MO_TP2";
             this.MO_TP2.UseVisualStyleBackColor = true;
+            // 
+            // MO_CustDirName
+            // 
+            resources.ApplyResources(this.MO_CustDirName, "MO_CustDirName");
+            this.MO_CustDirName.Name = "MO_CustDirName";
+            // 
+            // L_MO_CustDirName
+            // 
+            resources.ApplyResources(this.L_MO_CustDirName, "L_MO_CustDirName");
+            this.L_MO_CustDirName.Name = "L_MO_CustDirName";
             // 
             // MO_FindShBin
             // 
@@ -233,5 +255,8 @@
         private System.Windows.Forms.Button MO_FindShBin;
         private System.Windows.Forms.Button MO_FindTextEd;
         private System.Windows.Forms.OpenFileDialog MO_SearchBin;
+        private System.Windows.Forms.CheckBox MO_CustDirInstArc;
+        private System.Windows.Forms.TextBox MO_CustDirName;
+        private System.Windows.Forms.Label L_MO_CustDirName;
     }
 }

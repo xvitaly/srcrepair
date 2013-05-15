@@ -256,5 +256,29 @@ namespace srcrepair.Properties {
                 this["ShParam"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool InstallToUserCustDir {
+            get {
+                return ((bool)(this["InstallToUserCustDir"]));
+            }
+            set {
+                this["InstallToUserCustDir"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("srcrepair")]
+        public string UserCustDirName {
+            get {
+                return ((string)(this["UserCustDirName"]));
+            }
+            set {
+                this["UserCustDirName"] = value;
+            }
+        }
     }
 }

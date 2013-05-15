@@ -24,6 +24,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace srcrepair
 {
@@ -45,6 +46,8 @@ namespace srcrepair
             MO_EnableAppLogs.Checked = Properties.Settings.Default.EnableDebugLog;
             MO_ShBin.Text = Properties.Settings.Default.ShBin;
             MO_TextEdBin.Text = Properties.Settings.Default.EditorBin;
+            MO_CustDirInstArc.Checked = Properties.Settings.Default.InstallToUserCustDir;
+            MO_CustDirName.Text = Properties.Settings.Default.UserCustDirName;
 
             // Укажем название приложения в заголовке окна...
             this.Text = String.Format(this.Text, GV.AppName);
@@ -61,6 +64,8 @@ namespace srcrepair
             Properties.Settings.Default.EnableDebugLog = MO_EnableAppLogs.Checked;
             Properties.Settings.Default.EditorBin = MO_TextEdBin.Text;
             Properties.Settings.Default.ShBin = MO_ShBin.Text;
+            Properties.Settings.Default.InstallToUserCustDir = MO_CustDirInstArc.Checked;
+            if (Regex.IsMatch(MO_CustDirName.Text, @"^[0-9a-zA-Z]*$")) { Properties.Settings.Default.UserCustDirName = MO_CustDirName.Text; }
 
             // Сохраняем настройки...
             Properties.Settings.Default.Save();

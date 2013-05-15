@@ -120,6 +120,9 @@
   <data name="MO_Cancel.Text" xml:space="preserve">
     <value>Отмена</value>
   </data>
+  <data name="MO_CustDirInstArc.Text" xml:space="preserve">
+    <value>Устанавливать в заданный каст. каталог</value>
+  </data>
   <data name="MO_PrefHelpSystem.Items" xml:space="preserve">
     <value>Официальный сайт</value>
   </data>
@@ -147,6 +150,12 @@
   </data>
   <data name="MO_TP1.Text" xml:space="preserve">
     <value>Общие настройки</value>
+  </data>
+  <data name="L_MO_CustDirName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="L_MO_CustDirName.Text" xml:space="preserve">
+    <value>Имя каст. кат.:</value>
   </data>
   <data name="MO_RemEmptyDirs.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 17</value>
