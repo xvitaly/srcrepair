@@ -437,7 +437,7 @@ namespace srcrepair
                     ImpStr = ImpStr.Trim();
                     if (!(String.IsNullOrEmpty(ImpStr)))
                     {
-                        if (ImpStr.IndexOf(Rx) != -1)
+                        if (ImpStr.IndexOf(Rx, StringComparison.CurrentCultureIgnoreCase) != -1)
                         {
                             Result = ImpStr;
                             break;
