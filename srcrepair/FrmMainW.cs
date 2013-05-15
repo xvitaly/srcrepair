@@ -1245,26 +1245,26 @@ namespace srcrepair
                         // Бэкап реестра...
                         Buf = CoreLib.GetLocalizedString("BU_BType_Reg");
                         // Заполним человеческое описание...
-                        if (BufName.IndexOf("Game_Options") != -1)
+                        if (BufName.IndexOf("Game_Options", StringComparison.CurrentCultureIgnoreCase) != -1)
                         {
                             BufName = CoreLib.GetLocalizedString("BU_BName_GRGame") + " " + DItem.CreationTime;
                         }
-                        if (BufName.IndexOf("Source_Options") != -1)
+                        if (BufName.IndexOf("Source_Options", StringComparison.CurrentCultureIgnoreCase) != -1)
                         {
                             BufName = CoreLib.GetLocalizedString("BU_BName_SRCAll") + " " + DItem.CreationTime;
                         }
-                        if (BufName.IndexOf("Steam_BackUp") != -1)
+                        if (BufName.IndexOf("Steam_BackUp", StringComparison.CurrentCultureIgnoreCase) != -1)
                         {
                             BufName = CoreLib.GetLocalizedString("BU_BName_SteamAll") + " " + DItem.CreationTime;
                         }
-                        if (BufName.IndexOf("Game_AutoBackUp") != -1)
+                        if (BufName.IndexOf("Game_AutoBackUp", StringComparison.CurrentCultureIgnoreCase) != -1)
                         {
                             BufName = CoreLib.GetLocalizedString("BU_BName_GameAuto") + " " + DItem.CreationTime;
                         }
                         break;
                     case ".bud":
                         Buf = CoreLib.GetLocalizedString("BU_BType_Cont");
-                        if (BufName.IndexOf("Container") != -1)
+                        if (BufName.IndexOf("Container", StringComparison.CurrentCultureIgnoreCase) != -1)
                         {
                             BufName = CoreLib.GetLocalizedString("BU_BName_Bud") + " " + DItem.CreationTime;
                         }
