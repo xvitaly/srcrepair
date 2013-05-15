@@ -134,7 +134,7 @@
     <value>Установить</value>
   </data>
   <data name="openDialog.Filter" xml:space="preserve">
-    <value>Файлы спреев (*.vtf)|*.vtf|Игровые пакеты (*.zip)|*.zip|Файлы демок (*.dem)|*.dem|Файлы конфигов (*.cfg)|*.cfg|Файлы карт (*.bsp)|*.bsp</value>
+    <value>Файлы спреев (*.vtf)|*.vtf|Игровые пакеты (*.zip)|*.zip|Файлы демок (*.dem)|*.dem|Файлы конфигов (*.cfg)|*.cfg|Игровые пакеты Valve (*.vpk)|*.vpk|Файлы карт (*.bsp)|*.bsp</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
