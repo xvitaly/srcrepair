@@ -46,7 +46,7 @@ namespace srcrepair
         private void InstallFileNow(string FileName, string SubDir)
         {
             // Генерируем путь к каталогу, в который будем устанавливать...
-            string DestDir = Path.Combine(GV.FullGamePath, "custom", "srcrepair", SubDir);
+            string DestDir = Path.Combine(GV.FullGamePath, "custom", Properties.Settings.Default.UserCustDirName, SubDir);
 
             // Проверяем существование каталога установки и если его нет, создаём...
             if (!(Directory.Exists(DestDir))) { Directory.CreateDirectory(DestDir); }
@@ -59,8 +59,7 @@ namespace srcrepair
         /// Распаковывает архив в каталог кастомных файлов.
         /// </summary>
         /// <param name="ArcName">Имя архива с полным путём до него</param>
-        /// <param name="UseArcName">Включает или отключает создание подкаталога с именем архива</param>
-        private void UnpackZipArchiveNow(string ArcName, bool UseArcName = true)
+        private void UnpackZipArchiveNow(string ArcName)
         {
             try
             {
@@ -70,7 +69,7 @@ namespace srcrepair
                     {
                         try
                         {
-                            ZFile.Extract(Path.Combine(GV.FullGamePath, "custom", UseArcName ? Path.GetFileNameWithoutExtension(ArcName) : CoreLib.WriteDateToString(DateTime.Now, true)), ExtractExistingFileAction.OverwriteSilently);
+                            ZFile.Extract(Path.Combine(GV.FullGamePath, "custom", Properties.Settings.Default.InstallToUserCustDir ? Properties.Settings.Default.UserCustDirName : Path.GetFileNameWithoutExtension(ArcName)));
                         }
                         catch (Exception Ex)
                         {
