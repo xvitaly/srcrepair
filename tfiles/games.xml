@@ -308,4 +308,11 @@
     <VFDir>revelations</VFDir>
     <SID>201070</SID>
   </Game>
+  <Game Name="MINERVA: Metastasis">
+    <HasVF>0</HasVF>
+    <DirName>Minerva</DirName>
+    <SmallName>minerva</SmallName>
+    <VFDir>minerva</VFDir>
+    <SID>235780</SID>
+  </Game>
 </Games>
