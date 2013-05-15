@@ -2254,16 +2254,7 @@ namespace srcrepair
         {
             // Удаляем кэш загрузок...
             List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(GV.FullGamePath, "downloads", "*.*"));
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.*"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
-        }
-
-        private void PS_RemGraphCache_Click(object sender, EventArgs e)
-        {
-            // Удаляем графический кэш...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(GV.FullGamePath, "maps", "graphs", "*.*"));
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
@@ -2271,6 +2262,7 @@ namespace srcrepair
         {
             // Удаляем звуковой кэш...
             List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "maps", "graphs", "*.*"));
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "maps", "soundcache", "*.*"));
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "sound", "*.*"));
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
@@ -2985,7 +2977,6 @@ namespace srcrepair
             // Удаляем содержимое вторичного кэша загрузок...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "cache", "*.*")); // Кэш...
-            CleanDirs.Add(Path.Combine(GV.FullGamePath, "materials", "temp", "*.vtf")); // Кэш спреев...
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "user_custom", "*.*")); // Кэш спреев игр с н.с.к...
             CleanDirs.Add(Path.Combine(GV.GamePath, "config", "html", "*.*")); // Кэш MOTD...
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
@@ -3097,7 +3088,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "sound", "*.*"));
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.mp3"));
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.wav"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), false, true);
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
         private void MNUUpGameDB_Click(object sender, EventArgs e)
@@ -3206,6 +3197,15 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(GV.GamePath, "config", "html", "*.*"));
             // Удалим пользовательские конфиги...
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "cfg", "*.*"));
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
+        }
+
+        private void PS_RemConfigs_Click(object sender, EventArgs e)
+        {
+            // Удаляем пользовательного каталога...
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "cfg", "*.*"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "*.cfg"));
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
     }

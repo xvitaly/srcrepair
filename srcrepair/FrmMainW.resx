@@ -2893,7 +2893,7 @@
     <value>5</value>
   </data>
   <data name="PS_RemSoundCache.Text" xml:space="preserve">
-    <value>Sound cache</value>
+    <value>Graph and sound cache</value>
   </data>
   <data name="&gt;&gt;PS_RemSoundCache.Name" xml:space="preserve">
     <value>PS_RemSoundCache</value>
@@ -2907,31 +2907,31 @@
   <data name="&gt;&gt;PS_RemSoundCache.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="PS_RemGraphCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="PS_RemConfigs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="PS_RemGraphCache.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="PS_RemConfigs.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 133</value>
   </data>
-  <data name="PS_RemGraphCache.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PS_RemConfigs.Size" type="System.Drawing.Size, System.Drawing">
     <value>148, 23</value>
   </data>
-  <data name="PS_RemGraphCache.TabIndex" type="System.Int32, mscorlib">
+  <data name="PS_RemConfigs.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="PS_RemGraphCache.Text" xml:space="preserve">
-    <value>Graphic cache</value>
+  <data name="PS_RemConfigs.Text" xml:space="preserve">
+    <value>User configs</value>
   </data>
-  <data name="&gt;&gt;PS_RemGraphCache.Name" xml:space="preserve">
-    <value>PS_RemGraphCache</value>
+  <data name="&gt;&gt;PS_RemConfigs.Name" xml:space="preserve">
+    <value>PS_RemConfigs</value>
   </data>
-  <data name="&gt;&gt;PS_RemGraphCache.Type" xml:space="preserve">
+  <data name="&gt;&gt;PS_RemConfigs.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;PS_RemGraphCache.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PS_RemConfigs.Parent" xml:space="preserve">
     <value>PS_GB_Remover</value>
   </data>
-  <data name="&gt;&gt;PS_RemGraphCache.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;PS_RemConfigs.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <metadata name="PS_RemSounds.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -3082,7 +3082,7 @@
     <value>2</value>
   </data>
   <data name="PS_PathDetector.Text" xml:space="preserve">
-    <value>Restricted symbols not detected</value>
+    <value>Restricted symbols not detected.</value>
   </data>
   <data name="PS_PathDetector.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -3851,7 +3851,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADs
-        DQAAAk1TRnQBSQFMAgEBBQEAATwBAAE8AQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DQAAAk1TRnQBSQFMAgEBBQEAAVgBAAFYAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
