@@ -150,6 +150,7 @@
             // 
             resources.ApplyResources(this.MO_CustDirName, "MO_CustDirName");
             this.MO_CustDirName.Name = "MO_CustDirName";
+            this.MO_CustDirName.TextChanged += new System.EventHandler(this.MO_CustDirName_TextChanged);
             // 
             // L_MO_CustDirName
             // 

@@ -98,5 +98,10 @@ namespace srcrepair
                 MO_ShBin.Text = MO_SearchBin.FileName;
             }
         }
+
+        private void MO_CustDirName_TextChanged(object sender, EventArgs e)
+        {
+            ((TextBox)sender).BackColor = Regex.IsMatch(((TextBox)sender).Text, @"^[0-9a-zA-Z]*$") ? SystemColors.Window : Color.FromArgb(255, 155, 95);
+        }
     }
 }
