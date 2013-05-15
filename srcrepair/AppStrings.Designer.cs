@@ -241,7 +241,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attention! On the selected Steam login we can&apos;t detect any installed supported games. Please run your desired game from Steam at least once. After that, they will appear in the list and you will be able to manage them by this program..
+        ///   Looks up a localized string similar to Attention! SRC Repair can&apos;t detect any installed supported games. Please run your desired game from Steam at least once. After that, they will appear in the list and you will be able to manage them by this program..
         /// </summary>
         internal static string AppNoGamesDetected {
             get {
