@@ -73,7 +73,7 @@ namespace srcrepair
                 if (ResObj != null)
                 {
                     // Существует, возвращаем...
-                    ResString = Convert.ToString(ResObj);
+                    ResString = Path.GetFullPath(Convert.ToString(ResObj));
                 }
                 else
                 {
@@ -559,7 +559,7 @@ namespace srcrepair
             DriveInfo[] Drives = DriveInfo.GetDrives();
             foreach (DriveInfo Dr in Drives)
             {
-                if (Dr.Name == CDrive)
+                if (String.Compare(Dr.Name, CDrive, true) == 0)
                 {
                     Result = Dr.DriveFormat;
                     break;
