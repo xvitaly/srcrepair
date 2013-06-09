@@ -2436,8 +2436,15 @@ namespace srcrepair
 
         private void MNUReportBug_Click(object sender, EventArgs e)
         {
-            // Открываем в браузере страницу сообщения об ошибке в багтрекере гуглкода...
-            Process.Start("http://code.google.com/p/srcrepair/issues/entry");
+            // Открываем в браузере страницу сообщения об ошибке в багтрекере...
+            try
+            {
+                Process.Start("http://bugs.easycoding.org/bug_report_page.php");
+            }
+            catch (Exception Ex)
+            {
+                CoreLib.WriteStringToLog(Ex.Message);
+            }
         }
 
         private void BUT_Refresh_Click(object sender, EventArgs e)
