@@ -14,11 +14,11 @@ sprays into the game with one click.
 
 Downloads
 =========
-Download application (this link always contains latest version): http://www.easycoding.org/files/srcrepair_latest.exe
+Download application (this link always contains latest version): http://sourceforge.net/projects/srcrepair/files/latest/download
 
-Full archive: http://code.google.com/p/srcrepair/downloads/list.
+Full archive: http://sourceforge.net/projects/srcrepair/files/.
 
-Official bug tracker: http://code.google.com/p/srcrepair/issues/list
+Official bug tracker: http://bugs.easycoding.org/
 
 Supported games
 =========
@@ -65,4 +65,5 @@ Supported mods and third-party Source engine games:
  * Eternal Silence;
  * Vindictus;
  * Bloody Good Time;
- * Revelations 2012.
+ * Revelations 2012;
+ * MINERVA: Metastasis.
