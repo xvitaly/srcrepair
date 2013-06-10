@@ -303,7 +303,7 @@ namespace srcrepair
         {
             Version CVer = new Version(CurrVer);
             Version NVer = new Version(NewVer);
-            if (NVer > CVer) { return true; } else { return false; }
+            return NVer > CVer;
         }
 
         /// <summary>
