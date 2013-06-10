@@ -498,10 +498,13 @@ namespace srcrepair
         /// <param name="FileName">Имя файла</param>
         public static string CalculateFileMD5(string FileName)
         {
-            FileStream FileP = new FileStream(FileName, FileMode.Open);
-            MD5 MD5Crypt = new MD5CryptoServiceProvider();
-            byte[] RValue = MD5Crypt.ComputeHash(FileP);
-            FileP.Close();
+            byte[] RValue;
+            using (FileStream FileP = new FileStream(FileName, FileMode.Open))
+            {
+                MD5 MD5Crypt = new MD5CryptoServiceProvider();
+                RValue = MD5Crypt.ComputeHash(FileP);
+                FileP.Close();
+            }
             StringBuilder StrRes = new StringBuilder();
             for (int i = 0; i < RValue.Length; i++) { StrRes.Append(RValue[i].ToString("x2")); }
             return StrRes.ToString();

@@ -1410,8 +1410,6 @@ namespace srcrepair
         {
             PS_CleanRegistry.Enabled = State;
             PS_SteamLang.Enabled = State;
-            //MNUHEd.Enabled = State;
-            MNUUpdateCheck.Enabled = State;
             MNUWinMnuDisabler.Enabled = State;
             MNUUpGameDB.Enabled = State;
         }
