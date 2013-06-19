@@ -321,7 +321,7 @@ namespace srcrepair
                 DnlStr = Downloader.DownloadString(ChURI);
             }
             NewVersion = DnlStr.Substring(0, DnlStr.IndexOf("!"));
-            if (CompareVersions(CurrentVersion, NewVersion)) { return true; } else { return false; }
+            return CompareVersions(CurrentVersion, NewVersion);
         }
 
         /// <summary>
