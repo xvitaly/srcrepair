@@ -76,7 +76,7 @@ namespace srcrepair
         private void FileDownloader_ProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
             // Отрисовываем статус в прогресс-баре...
-            DnlProgBar.Value = e.ProgressPercentage;
+            try { DnlProgBar.Value = e.ProgressPercentage; } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void DnlInstall_Click(object sender, EventArgs e)
