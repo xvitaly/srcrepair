@@ -43,6 +43,8 @@ namespace srcrepair
 
         private string UpdateURI;
 
+        private string UpdateFileName;
+
         private void frmUpdate_Load(object sender, EventArgs e)
         {
             // Заполняем...
@@ -55,12 +57,12 @@ namespace srcrepair
         private void FileDownloader_Completed(object sender, AsyncCompletedEventArgs e)
         {
             // Проверим чтобы полученный файл существовал...
-            if (File.Exists(Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI))))
+            if (File.Exists(this.UpdateFileName))
             {
                 // Существует, покажем сообщение...
                 MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Запустим...
-                try { Process.Start(Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI))); } catch(Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_UpdateFailure"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
+                try { Process.Start(this.UpdateFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_UpdateFailure"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
                 // Завершим работу программы...
                 Environment.Exit(9);
             }
@@ -79,19 +81,26 @@ namespace srcrepair
             try { DnlProgBar.Value = e.ProgressPercentage; } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
+        private string GenerateUpdateFileName(string Url)
+        {
+            return Path.HasExtension(Url) ? Url : Path.ChangeExtension(Url, "exe");
+        }
+
         private void DnlInstall_Click(object sender, EventArgs e)
         {
             try
             {
                 DnlInstall.Visible = false; // Прячем кнопку...
                 DnlProgBar.Visible = true; // Отображаем диалог прогресса...
+                this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI)));
+
                 using (WebClient FileDownloader = new WebClient())
                 {
-                    FileDownloader.Headers.Add("User-Agent", GV.UserAgent);
+                    FileDownloader.Headers.Add("User-Agent", "wget");
                     FileDownloader.DownloadFileCompleted += new AsyncCompletedEventHandler(FileDownloader_Completed);
                     FileDownloader.DownloadProgressChanged += new DownloadProgressChangedEventHandler(FileDownloader_ProgressChanged);
                     // Скачиваем файл...
-                    FileDownloader.DownloadFileAsync(new Uri(UpdateURI), Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI)));
+                    FileDownloader.DownloadFileAsync(new Uri(UpdateURI), this.UpdateFileName);
                 }
             }
             catch (Exception Ex)
