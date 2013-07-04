@@ -2437,7 +2437,7 @@ namespace srcrepair
             // Открываем в браузере страницу сообщения об ошибке в багтрекере...
             try
             {
-                Process.Start("http://bugs.easycoding.org/bug_report_page.php");
+                Process.Start(Properties.Resources.AppBtURL);
             }
             catch (Exception Ex)
             {

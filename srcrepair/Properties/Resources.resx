@@ -244,4 +244,7 @@
   <data name="AppDnlUA" xml:space="preserve">
     <value>wget</value>
   </data>
+  <data name="AppBtURL" xml:space="preserve">
+    <value>http://bugs.easycoding.org/bug_report_page.php?project_id=5</value>
+  </data>
 </root>

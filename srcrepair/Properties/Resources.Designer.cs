@@ -77,6 +77,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to http://bugs.easycoding.org/bug_report_page.php?project_id=5.
+        /// </summary>
+        internal static string AppBtURL {
+            get {
+                return ResourceManager.GetString("AppBtURL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mozilla/5.0 ({0} NT {1}.{2}; {3}; rv:{4}) {5} ({6}).
         /// </summary>
         internal static string AppDefUA {
