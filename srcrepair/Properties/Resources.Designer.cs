@@ -86,6 +86,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to wget.
+        /// </summary>
+        internal static string AppDnlUA {
+            get {
+                return ResourceManager.GetString("AppDnlUA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The specified locale is not supported at this time, so will use the default language..
         /// </summary>
         internal static string AppUnsupportedLanguage {

@@ -241,4 +241,7 @@
   <data name="SteamExecBin" xml:space="preserve">
     <value>Steam.exe</value>
   </data>
+  <data name="AppDnlUA" xml:space="preserve">
+    <value>wget</value>
+  </data>
 </root>

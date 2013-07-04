@@ -96,7 +96,7 @@ namespace srcrepair
 
                 using (WebClient FileDownloader = new WebClient())
                 {
-                    FileDownloader.Headers.Add("User-Agent", "wget");
+                    FileDownloader.Headers.Add("User-Agent", Properties.Resources.AppDnlUA);
                     FileDownloader.DownloadFileCompleted += new AsyncCompletedEventHandler(FileDownloader_Completed);
                     FileDownloader.DownloadProgressChanged += new DownloadProgressChangedEventHandler(FileDownloader_ProgressChanged);
                     // Скачиваем файл...
