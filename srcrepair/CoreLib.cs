@@ -30,6 +30,7 @@ using System.Resources; // для управления ресурсами...
 using System.Threading; // для управления потоками...
 using System.Net; // для скачивания файлов...
 using System.Security.Cryptography; // для расчёта хешей...
+using System.Reflection; // для работы со сборками...
 
 namespace srcrepair
 {
@@ -600,6 +601,43 @@ namespace srcrepair
 
             // Возвращаем результат очистки...
             return RecvStr;
+        }
+
+        /// <summary>
+        /// Получает содержимое текстового файла из внутреннего ресурса приложения.
+        /// </summary>
+        /// <param name="FileName">Внутреннее имя ресурсного файла</param>
+        public static string GetTemplateFromResource(string FileName)
+        {
+            string Result = "";
+            using (Stream Strm = Assembly.GetExecutingAssembly().GetManifestResourceStream(FileName))
+            {
+                using (StreamReader Reader = new StreamReader(Strm))
+                {
+                    Result = Reader.ReadToEnd();
+                }
+            }
+            return Result;
+        }
+
+        /// <summary>
+        /// Получает содержимое текстового файла в массив построчно.
+        /// </summary>
+        /// <param name="FileName">Внутреннее имя ресурсного файла</param>
+        public static List<String> ReadRowsFromResource(string FileName)
+        {
+            List<String> Template = new List<String>();
+            using (Stream Strm = Assembly.GetExecutingAssembly().GetManifestResourceStream(FileName))
+            {
+                using (StreamReader Reader = new StreamReader(Strm))
+                {
+                    while (Reader.Peek() >= 0)
+                    {
+                        Template.Add(Reader.ReadLine());
+                    }
+                }
+            }
+            return Template;
         }
     }
 }
