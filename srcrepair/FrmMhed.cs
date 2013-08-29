@@ -134,23 +134,7 @@ namespace srcrepair
 
         private void HEd_T_Save_Click(object sender, EventArgs e)
         {
-            // Сохраняем файл если есть соответствующие права...
-            if (CoreLib.IsCurrentUserAdmin())
-            {
-                try
-                {
-                    WriteTableToHosts(HostsFilePath);
-                    MessageBox.Show(CoreLib.GetLocalizedString("AHE_Saved"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception Ex)
-                {
-                    CoreLib.HandleExceptionEx(String.Format(CoreLib.GetLocalizedString("AHE_SaveException"), HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                MessageBox.Show(String.Format(CoreLib.GetLocalizedString(""), HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            if (CoreLib.IsCurrentUserAdmin()) { try { WriteTableToHosts(HostsFilePath); MessageBox.Show(CoreLib.GetLocalizedString("AHE_Saved"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch (Exception Ex) { CoreLib.HandleExceptionEx(String.Format(CoreLib.GetLocalizedString("AHE_SaveException"), HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); } } else { MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AHE_NoAdminRights"), HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void HEd_M_Quit_Click(object sender, EventArgs e)
@@ -160,7 +144,6 @@ namespace srcrepair
 
         private void HEd_M_RestDef_Click(object sender, EventArgs e)
         {
-            // Restore default
             if (MessageBox.Show(CoreLib.GetLocalizedString("AHE_RestDef"), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 HEd_Table.Rows.Clear();
@@ -171,7 +154,7 @@ namespace srcrepair
 
         private void HEd_M_OnlHelp_Click(object sender, EventArgs e)
         {
-            Process.Start(String.Format("http://code.google.com/p/srcrepair/wiki/HostsEditorPlugin_{0}", CoreLib.GetLocalizedString("AppLangPrefix")));
+            Process.Start(String.Format(Properties.Resources.AHE_HelpURL, CoreLib.GetLocalizedString("AppLangPrefix")));
         }
 
         private void HEd_M_About_Click(object sender, EventArgs e)
@@ -181,17 +164,7 @@ namespace srcrepair
 
         private void HEd_T_RemRw_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (HEd_Table.Rows.Count > 0)
-                {
-                    HEd_Table.Rows.Remove(HEd_Table.CurrentRow);
-                }
-            }
-            catch
-            {
-                // Подавляем возможные сообщения об ошибках...
-            }
+            try { if (HEd_Table.Rows.Count > 0) { HEd_Table.Rows.Remove(HEd_Table.CurrentRow); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void HEd_St_Wrn_MouseEnter(object sender, EventArgs e)
@@ -216,9 +189,7 @@ namespace srcrepair
         {
             if (HEd_Table.Rows[HEd_Table.CurrentRow.Index].Cells[HEd_Table.CurrentCell.ColumnIndex].Value != null)
             {
-                // Копируем в буфер...
                 Clipboard.SetText(HEd_Table.Rows[HEd_Table.CurrentRow.Index].Cells[HEd_Table.CurrentCell.ColumnIndex].Value.ToString());
-                // Удаляем из ячейки...
                 HEd_Table.Rows[HEd_Table.CurrentRow.Index].Cells[HEd_Table.CurrentCell.ColumnIndex].Value = null;
             }
         }
@@ -233,16 +204,7 @@ namespace srcrepair
 
         private void HEd_T_Paste_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (Clipboard.ContainsText())
-                {
-                    HEd_Table.Rows[HEd_Table.CurrentRow.Index].Cells[HEd_Table.CurrentCell.ColumnIndex].Value = Clipboard.GetText();
-                }
-            }
-            catch
-            {
-            }
+            try { if (Clipboard.ContainsText()) { HEd_Table.Rows[HEd_Table.CurrentRow.Index].Cells[HEd_Table.CurrentCell.ColumnIndex].Value = Clipboard.GetText(); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void HEd_M_Notepad_Click(object sender, EventArgs e)
@@ -253,7 +215,7 @@ namespace srcrepair
 
         private void HEd_M_RepBug_Click(object sender, EventArgs e)
         {
-            Process.Start("http://code.google.com/p/mhed/issues/entry");
+            Process.Start(Properties.Resources.AHE_BtURL);
         }
         #endregion
     }
