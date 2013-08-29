@@ -103,16 +103,7 @@ namespace srcrepair
         private void frmHEd_Load(object sender, EventArgs e)
         {
             // Проверим наличие прав администратора. Если они отсутствуют - отключим функции сохранения...
-            if (!(CoreLib.IsCurrentUserAdmin()))
-            {
-                HEd_M_Save.Enabled = false;
-                HEd_T_Save.Enabled = false;
-                HEd_M_RestDef.Enabled = false;
-                HEd_Table.ReadOnly = true;
-                HEd_T_Cut.Enabled = false;
-                HEd_T_Paste.Enabled = false;
-                HEd_T_RemRw.Enabled = false;
-            }
+            if (!(CoreLib.IsCurrentUserAdmin())) { HEd_M_Save.Enabled = false; HEd_T_Save.Enabled = false; HEd_M_RestDef.Enabled = false; HEd_Table.ReadOnly = true; HEd_T_Cut.Enabled = false; HEd_T_Paste.Enabled = false; HEd_T_RemRw.Enabled = false; }
 
             // Укажем версию в заголовке главной формы...
             this.Text = String.Format(this.Text, PluginVersion);
@@ -127,14 +118,7 @@ namespace srcrepair
                 HEd_St_Wrn.Text = HostsFilePath;
 
                 // Считаем содержимое...
-                try
-                {
-                    ReadHostsToTable(HostsFilePath);
-                }
-                catch (Exception Ex)
-                {
-                    CoreLib.HandleExceptionEx(String.Format(CoreLib.GetLocalizedString("AHE_ExceptionDetected"), HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                }
+                try { ReadHostsToTable(HostsFilePath); } catch (Exception Ex) { CoreLib.HandleExceptionEx(String.Format(CoreLib.GetLocalizedString("AHE_ExceptionDetected"), HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
             }
             else
             {
@@ -145,14 +129,7 @@ namespace srcrepair
 
         private void HEd_T_Refresh_Click(object sender, EventArgs e)
         {
-            try
-            {
-                ReadHostsToTable(HostsFilePath);
-            }
-            catch (Exception Ex)
-            {
-                CoreLib.HandleExceptionEx(String.Format(CoreLib.GetLocalizedString("AHE_ExceptionDetected"), HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-            }
+            try { ReadHostsToTable(HostsFilePath); } catch (Exception Ex) { CoreLib.HandleExceptionEx(String.Format(CoreLib.GetLocalizedString("AHE_ExceptionDetected"), HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
         }
 
         private void HEd_T_Save_Click(object sender, EventArgs e)
