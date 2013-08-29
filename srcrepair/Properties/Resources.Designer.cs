@@ -219,6 +219,26 @@ namespace srcrepair.Properties {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to # Copyright (c) 1993-2009 Microsoft Corp.
+        ///#
+        ///# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+        ///#
+        ///# This file contains the mappings of IP addresses to host names. Each
+        ///# entry should be kept on an individual line. The IP address should
+        ///# be placed in the first column followed by the corresponding host name.
+        ///# The IP address and the host name should be separated by at least one
+        ///# space.
+        ///#
+        ///# Additionally, comments (such as these) may be inserted on individual
+        ///# lines or following th [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HtTemplate {
+            get {
+                return ResourceManager.GetString("HtTemplate", resourceCulture);
+            }
+        }
+        
         internal static System.Drawing.Bitmap Info {
             get {
                 object obj = ResourceManager.GetObject("Info", resourceCulture);
