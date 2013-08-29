@@ -2748,7 +2748,7 @@ namespace srcrepair
 
         private void MNULnkTFRU_Click(object sender, EventArgs e)
         {
-            Process.Start("http://www.team-fortress.ru/");
+            Process.Start("http://www.team-fortress.su/");
         }
 
         private void MNUHEd_Click(object sender, EventArgs e)
