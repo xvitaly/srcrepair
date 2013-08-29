@@ -607,6 +607,7 @@ namespace srcrepair
         /// Получает содержимое текстового файла из внутреннего ресурса приложения.
         /// </summary>
         /// <param name="FileName">Внутреннее имя ресурсного файла</param>
+        /// <returns>Содержимое текстового файла</returns>
         public static string GetTemplateFromResource(string FileName)
         {
             string Result = "";
@@ -624,6 +625,7 @@ namespace srcrepair
         /// Получает содержимое текстового файла в массив построчно.
         /// </summary>
         /// <param name="FileName">Внутреннее имя ресурсного файла</param>
+        /// <returns>Массив с построчным содержимым текстового файла</returns>
         public static List<String> ReadRowsFromResource(string FileName)
         {
             List<String> Template = new List<String>();
