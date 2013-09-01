@@ -265,6 +265,9 @@
   <data name="MO_CustomDirRegex" xml:space="preserve">
     <value>^[0-9a-zA-Z]*$</value>
   </data>
+  <data name="AppURLDonate" xml:space="preserve">
+    <value>http://code.google.com/p/srcrepair/wiki/Donate</value>
+  </data>
   <data name="AppURLHelpSite" xml:space="preserve">
     <value>http://www.easycoding.org/projects/srcrepair/help</value>
   </data>

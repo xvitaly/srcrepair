@@ -2908,7 +2908,7 @@ namespace srcrepair
 
         private void MNUDonate_Click(object sender, EventArgs e)
         {
-            Process.Start("http://code.google.com/p/srcrepair/wiki/Donate");
+            try { Process.Start(Properties.Resources.AppURLDonate); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void CE_OpenInNotepad_Click(object sender, EventArgs e)
