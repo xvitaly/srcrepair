@@ -48,6 +48,8 @@ namespace srcrepair
             MO_TextEdBin.Text = Properties.Settings.Default.EditorBin;
             MO_CustDirInstArc.Checked = Properties.Settings.Default.InstallToUserCustDir;
             MO_CustDirName.Text = Properties.Settings.Default.UserCustDirName;
+            MO_ZipCompress.Checked = Properties.Settings.Default.PackBeforeCleanup;
+            MO_UnSafeOps.Checked = Properties.Settings.Default.AllowUnSafeCleanup;
 
             // Укажем название приложения в заголовке окна...
             this.Text = String.Format(this.Text, GV.AppName);
@@ -65,6 +67,8 @@ namespace srcrepair
             Properties.Settings.Default.EditorBin = MO_TextEdBin.Text;
             Properties.Settings.Default.ShBin = MO_ShBin.Text;
             Properties.Settings.Default.InstallToUserCustDir = MO_CustDirInstArc.Checked;
+            Properties.Settings.Default.PackBeforeCleanup = MO_ZipCompress.Checked;
+            Properties.Settings.Default.AllowUnSafeCleanup = MO_UnSafeOps.Checked;
             if (Regex.IsMatch(MO_CustDirName.Text, Properties.Resources.MO_CustomDirRegex)) { Properties.Settings.Default.UserCustDirName = MO_CustDirName.Text; }
 
             // Сохраняем настройки...
