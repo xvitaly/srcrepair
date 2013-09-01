@@ -68,6 +68,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} for {1} by {2}. Version: {3}..
+        /// </summary>
+        internal static string AHE_About {
+            get {
+                return ResourceManager.GetString("AHE_About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://bugs.easycoding.org/bug_report_page.php?project_id=8.
         /// </summary>
         internal static string AHE_BtURL {
