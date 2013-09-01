@@ -209,7 +209,6 @@ namespace srcrepair
 
         private void HEd_M_Notepad_Click(object sender, EventArgs e)
         {
-            // Откроем файл Hosts в Блокноте...
             Process.Start(Properties.Settings.Default.EditorBin, String.Format("\"{0}\"", HostsFilePath));
         }
 
