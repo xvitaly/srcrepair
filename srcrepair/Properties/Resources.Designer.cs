@@ -148,6 +148,69 @@ namespace srcrepair.Properties {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to http://www.easycoding.org/projects/srcrepair/help.
+        /// </summary>
+        internal static string AppURLHelpSite {
+            get {
+                return ResourceManager.GetString("AppURLHelpSite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://code.google.com/p/srcrepair/wiki/UserManual_{0}.
+        /// </summary>
+        internal static string AppURLHelpWiki {
+            get {
+                return ResourceManager.GetString("AppURLHelpWiki", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://www.easycoding.org/.
+        /// </summary>
+        internal static string AppURLOffSite {
+            get {
+                return ResourceManager.GetString("AppURLOffSite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://www.easycoding.org/projects/srcrepair#respond.
+        /// </summary>
+        internal static string AppURLReply {
+            get {
+                return ResourceManager.GetString("AppURLReply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://www.team-fortress.su/.
+        /// </summary>
+        internal static string AppURLSpnTFSU {
+            get {
+                return ResourceManager.GetString("AppURLSpnTFSU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to steam://url/GroupSteamIDPage/103582791431662552.
+        /// </summary>
+        internal static string AppURLSteamGrID {
+            get {
+                return ResourceManager.GetString("AppURLSteamGrID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://steamcommunity.com/groups/srcrepair.
+        /// </summary>
+        internal static string AppURLSteamGroup {
+            get {
+                return ResourceManager.GetString("AppURLSteamGroup", resourceCulture);
+            }
+        }
+        
         internal static System.Drawing.Bitmap arrow {
             get {
                 object obj = ResourceManager.GetObject("arrow", resourceCulture);

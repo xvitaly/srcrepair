@@ -2698,58 +2698,42 @@ namespace srcrepair
 
         private void MNUHelp_Click(object sender, EventArgs e)
         {
-            // Проверим наличие локальной справки в формате CHM...
-            string HelpFilePath = String.Format(GV.FullAppPath + "srcrepair_{0}.chm", CoreLib.GetLocalizedString("AppLangPrefix"));
-            if (File.Exists(HelpFilePath))
-            {
-                Process.Start(HelpFilePath);
-            }
-            else
+            try
             {
                 // Выбираем какую онлайновую справочную систему использовать.
                 // Используем Switch, т.к. их может быть больше двух.
                 switch (Properties.Settings.Default.PreferedHelpSystem)
                 {
-                    case 0: Process.Start("http://www.easycoding.org/projects/srcrepair/help");
+                    case 0: Process.Start(Properties.Resources.AppURLHelpSite);
                         break;
-                    case 1: Process.Start(String.Format("http://code.google.com/p/srcrepair/wiki/UserManual_{0}", CoreLib.GetLocalizedString("AppLangPrefix")));
+                    case 1: Process.Start(String.Format(Properties.Resources.AppURLHelpWiki, CoreLib.GetLocalizedString("AppLangPrefix")));
                         break;
                 }
+            }
+            catch (Exception Ex)
+            {
+                CoreLib.WriteStringToLog(Ex.Message);
             }
         }
 
         private void MNUOpinion_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Process.Start("mailto:srcrepair@easycoding.org?subject=SRC Repair Opinion");
-            }
-            catch
-            {
-                Process.Start("http://www.easycoding.org/projects/srcrepair#respond");
-            }
+            try { Process.Start(Properties.Resources.AppURLReply); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void MNUSteamGroup_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Process.Start("steam://url/GroupSteamIDPage/103582791431662552");
-            }
-            catch
-            {
-                Process.Start("http://steamcommunity.com/groups/srcrepair");
-            }
+            try { Process.Start(Properties.Resources.AppURLSteamGrID); } catch { Process.Start(Properties.Resources.AppURLSteamGroup); }
         }
 
         private void MNULnkEasyCoding_Click(object sender, EventArgs e)
         {
-            Process.Start("http://www.easycoding.org/");
+            try { Process.Start(Properties.Resources.AppURLOffSite); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void MNULnkTFRU_Click(object sender, EventArgs e)
         {
-            Process.Start("http://www.team-fortress.su/");
+            try { Process.Start(Properties.Resources.AppURLSpnTFSU); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void MNUHEd_Click(object sender, EventArgs e)

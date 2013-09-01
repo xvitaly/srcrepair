@@ -265,4 +265,25 @@
   <data name="MO_CustomDirRegex" xml:space="preserve">
     <value>^[0-9a-zA-Z]*$</value>
   </data>
+  <data name="AppURLHelpSite" xml:space="preserve">
+    <value>http://www.easycoding.org/projects/srcrepair/help</value>
+  </data>
+  <data name="AppURLHelpWiki" xml:space="preserve">
+    <value>http://code.google.com/p/srcrepair/wiki/UserManual_{0}</value>
+  </data>
+  <data name="AppURLOffSite" xml:space="preserve">
+    <value>http://www.easycoding.org/</value>
+  </data>
+  <data name="AppURLReply" xml:space="preserve">
+    <value>http://www.easycoding.org/projects/srcrepair#respond</value>
+  </data>
+  <data name="AppURLSpnTFSU" xml:space="preserve">
+    <value>http://www.team-fortress.su/</value>
+  </data>
+  <data name="AppURLSteamGrID" xml:space="preserve">
+    <value>steam://url/GroupSteamIDPage/103582791431662552</value>
+  </data>
+  <data name="AppURLSteamGroup" xml:space="preserve">
+    <value>http://steamcommunity.com/groups/srcrepair</value>
+  </data>
 </root>
