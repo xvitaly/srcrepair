@@ -2964,8 +2964,11 @@ namespace srcrepair
             // Удаляем все кастомные текстуры...
             List<String> CleanDirs = new List<string>();
             // Чистим базы игр со старой системой. Удалить после полного перехода на новую...
-            CleanDirs.Add(Path.Combine(GV.FullGamePath, "materials", "*.*"));
-            CleanDirs.Add(Path.Combine(GV.FullGamePath, "models", "*.*"));
+            if (Properties.Settings.Default.AllowUnSafeCleanup)
+            {
+                CleanDirs.Add(Path.Combine(GV.FullGamePath, "materials", "*.*"));
+                CleanDirs.Add(Path.Combine(GV.FullGamePath, "models", "*.*"));
+            }
             // Чистим загруженные с серверов модели и текстуры...
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.vt*"));
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.vmt"));
