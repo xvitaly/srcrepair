@@ -71,5 +71,11 @@
     <Setting Name="UserCustDirName" Type="System.String" Scope="User">
       <Value Profile="(Default)">srcrepair</Value>
     </Setting>
+    <Setting Name="AllowUnSafeCleanup" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="PackBeforeCleanup" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -259,4 +259,7 @@
   <data name="AHE_HelpURL" xml:space="preserve">
     <value>http://code.google.com/p/srcrepair/wiki/HostsEditorPlugin_{0}</value>
   </data>
+  <data name="MO_CustomDirRegex" xml:space="preserve">
+    <value>^[0-9a-zA-Z]*$</value>
+  </data>
 </root>

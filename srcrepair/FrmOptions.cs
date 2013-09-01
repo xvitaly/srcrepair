@@ -65,7 +65,7 @@ namespace srcrepair
             Properties.Settings.Default.EditorBin = MO_TextEdBin.Text;
             Properties.Settings.Default.ShBin = MO_ShBin.Text;
             Properties.Settings.Default.InstallToUserCustDir = MO_CustDirInstArc.Checked;
-            if (Regex.IsMatch(MO_CustDirName.Text, @"^[0-9a-zA-Z]*$")) { Properties.Settings.Default.UserCustDirName = MO_CustDirName.Text; }
+            if (Regex.IsMatch(MO_CustDirName.Text, Properties.Resources.MO_CustomDirRegex)) { Properties.Settings.Default.UserCustDirName = MO_CustDirName.Text; }
 
             // Сохраняем настройки...
             Properties.Settings.Default.Save();
@@ -101,7 +101,7 @@ namespace srcrepair
 
         private void MO_CustDirName_TextChanged(object sender, EventArgs e)
         {
-            ((TextBox)sender).BackColor = Regex.IsMatch(((TextBox)sender).Text, @"^[0-9a-zA-Z]*$") ? SystemColors.Window : Color.FromArgb(255, 155, 95);
+            ((TextBox)sender).BackColor = Regex.IsMatch(((TextBox)sender).Text, Properties.Resources.MO_CustomDirRegex) ? SystemColors.Window : Color.FromArgb(255, 155, 95);
         }
     }
 }

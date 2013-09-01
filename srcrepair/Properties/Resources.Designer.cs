@@ -278,6 +278,15 @@ namespace srcrepair.Properties {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to ^[0-9a-zA-Z]*$.
+        /// </summary>
+        internal static string MO_CustomDirRegex {
+            get {
+                return ResourceManager.GetString("MO_CustomDirRegex", resourceCulture);
+            }
+        }
+        
         internal static System.Drawing.Bitmap Options {
             get {
                 object obj = ResourceManager.GetObject("Options", resourceCulture);
