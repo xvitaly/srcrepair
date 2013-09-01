@@ -2245,6 +2245,7 @@ namespace srcrepair
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "*.bsp"));
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.bsp"));
+            if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(GV.FullGamePath, "maps", "*.bsp")); }
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
