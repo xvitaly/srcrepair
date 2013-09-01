@@ -184,7 +184,7 @@ namespace srcrepair
                 });
 
                 // Добавляем в архив (если выбрано)...
-                if (CM_CompressFiles.Checked)
+                if (Properties.Settings.Default.PackBeforeCleanup)
                 {
                     try
                     {
@@ -262,10 +262,11 @@ namespace srcrepair
                         // Отключаем кнопку отмены, очистки и меняем её текст...
                         CM_Clean.Text = CoreLib.GetLocalizedString("PS_CleanInProgress");
                         CM_Clean.Enabled = false;
-                        CM_Cancel.Enabled = false;
+                        CM_Clean.Visible = false;
                         
                         // Переключаем видимость контролов...
-                        CM_CompressFiles.Visible = false;
+                        CM_Cancel.Enabled = false;
+                        CM_Cancel.Visible = false;
                         PrbMain.Visible = true;
 
                         // Запускаем поток для выполнения очистки...
