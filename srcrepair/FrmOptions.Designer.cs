@@ -33,6 +33,7 @@
             this.MO_Cancel = new System.Windows.Forms.Button();
             this.MO_TC = new System.Windows.Forms.TabControl();
             this.MO_TP1 = new System.Windows.Forms.TabPage();
+            this.MO_ZipCompress = new System.Windows.Forms.CheckBox();
             this.MO_CustDirInstArc = new System.Windows.Forms.CheckBox();
             this.MO_PrefHelpSystem = new System.Windows.Forms.ComboBox();
             this.MO_L_HelpSystem = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@
             this.MO_SortGameList = new System.Windows.Forms.CheckBox();
             this.MO_ConfirmExit = new System.Windows.Forms.CheckBox();
             this.MO_TP2 = new System.Windows.Forms.TabPage();
+            this.MO_UnSafeOps = new System.Windows.Forms.CheckBox();
             this.MO_CustDirName = new System.Windows.Forms.TextBox();
             this.L_MO_CustDirName = new System.Windows.Forms.Label();
             this.MO_FindShBin = new System.Windows.Forms.Button();
@@ -81,6 +83,7 @@
             // 
             // MO_TP1
             // 
+            this.MO_TP1.Controls.Add(this.MO_ZipCompress);
             this.MO_TP1.Controls.Add(this.MO_CustDirInstArc);
             this.MO_TP1.Controls.Add(this.MO_PrefHelpSystem);
             this.MO_TP1.Controls.Add(this.MO_L_HelpSystem);
@@ -90,6 +93,12 @@
             resources.ApplyResources(this.MO_TP1, "MO_TP1");
             this.MO_TP1.Name = "MO_TP1";
             this.MO_TP1.UseVisualStyleBackColor = true;
+            // 
+            // MO_ZipCompress
+            // 
+            resources.ApplyResources(this.MO_ZipCompress, "MO_ZipCompress");
+            this.MO_ZipCompress.Name = "MO_ZipCompress";
+            this.MO_ZipCompress.UseVisualStyleBackColor = true;
             // 
             // MO_CustDirInstArc
             // 
@@ -132,6 +141,7 @@
             // 
             // MO_TP2
             // 
+            this.MO_TP2.Controls.Add(this.MO_UnSafeOps);
             this.MO_TP2.Controls.Add(this.MO_CustDirName);
             this.MO_TP2.Controls.Add(this.L_MO_CustDirName);
             this.MO_TP2.Controls.Add(this.MO_FindShBin);
@@ -145,6 +155,12 @@
             resources.ApplyResources(this.MO_TP2, "MO_TP2");
             this.MO_TP2.Name = "MO_TP2";
             this.MO_TP2.UseVisualStyleBackColor = true;
+            // 
+            // MO_UnSafeOps
+            // 
+            resources.ApplyResources(this.MO_UnSafeOps, "MO_UnSafeOps");
+            this.MO_UnSafeOps.Name = "MO_UnSafeOps";
+            this.MO_UnSafeOps.UseVisualStyleBackColor = true;
             // 
             // MO_CustDirName
             // 
@@ -259,5 +275,7 @@
         private System.Windows.Forms.CheckBox MO_CustDirInstArc;
         private System.Windows.Forms.TextBox MO_CustDirName;
         private System.Windows.Forms.Label L_MO_CustDirName;
+        private System.Windows.Forms.CheckBox MO_ZipCompress;
+        private System.Windows.Forms.CheckBox MO_UnSafeOps;
     }
 }

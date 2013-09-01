@@ -120,6 +120,9 @@
   <data name="MO_Cancel.Text" xml:space="preserve">
     <value>Отмена</value>
   </data>
+  <data name="MO_ZipCompress.Text" xml:space="preserve">
+    <value>Создавать бэкап перед запуском очистки</value>
+  </data>
   <data name="MO_CustDirInstArc.Text" xml:space="preserve">
     <value>Устанавливать в заданный каст. каталог</value>
   </data>
@@ -150,6 +153,9 @@
   </data>
   <data name="MO_TP1.Text" xml:space="preserve">
     <value>Общие настройки</value>
+  </data>
+  <data name="MO_UnSafeOps.Text" xml:space="preserve">
+    <value>Разрешать небезопасные методы очистки</value>
   </data>
   <data name="L_MO_CustDirName.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 13</value>
