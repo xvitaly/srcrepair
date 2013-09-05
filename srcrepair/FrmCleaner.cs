@@ -162,6 +162,22 @@ namespace srcrepair
                     LVI.Checked = true;
                 }
             }
+
+            if (e.Control && e.KeyCode == Keys.D)
+            {
+                foreach (ListViewItem LVI in CM_FTable.Items)
+                {
+                    LVI.Checked = false;
+                }
+            }
+
+            if (e.Control && e.KeyCode == Keys.R)
+            {
+                foreach (ListViewItem LVI in CM_FTable.Items)
+                {
+                    LVI.Checked = !LVI.Checked;
+                }
+            }
         }
 
         private void ClnWrk_DoWork(object sender, DoWorkEventArgs e)
