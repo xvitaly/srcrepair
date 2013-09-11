@@ -19,7 +19,7 @@ namespace srcrepair
         private void frmBugReporter_Load(object sender, EventArgs e)
         {
             // Выберем категорию "Ошибка" по умолчанию...
-            BR_Category.SelectedIndex = 0;
+            try { BR_Category.SelectedIndex = 0; } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void BR_Send_Click(object sender, EventArgs e)
