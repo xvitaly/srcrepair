@@ -2435,15 +2435,9 @@ namespace srcrepair
 
         private void MNUReportBug_Click(object sender, EventArgs e)
         {
-            // Открываем в браузере страницу сообщения об ошибке в багтрекере...
-            try
-            {
-                Process.Start(Properties.Resources.AppBtURL);
-            }
-            catch (Exception Ex)
-            {
-                CoreLib.WriteStringToLog(Ex.Message);
-            }
+            // Отобразим форму сообщения об ошибках...
+            frmBugReporter BgRepFrm = new frmBugReporter();
+            BgRepFrm.ShowDialog();
         }
 
         private void BUT_Refresh_Click(object sender, EventArgs e)
