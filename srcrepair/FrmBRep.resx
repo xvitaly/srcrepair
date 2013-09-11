@@ -386,6 +386,30 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>348, 289</value>
   </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAEBAQIAAAADMDAmAG9vgCxUVKuYFBSDyhQUg8pUVKuYb2+ALDAwJgAAAAADAQEBAgAA
+        AAAAAAAAAAAAAAYGBgUCAgQIOzszAHBwpGs0NLv3JyiW/yIivv4hIb7+KCiW/zU1u/dwcKRrPDwzAAMD
+        BAkFBQUEAAAAAAAAAAAEBAYWIiIaZGZmlWVbW+D/Wlva/TAxnvwVFrP9FRaz/TAxnvxaWtn9W1vh/2Rk
+        k2ofHxdmAwMFDwAAAAAAAAADAgIAAC8vPH9XV7T/amqy/Ts8wP0REsH/AQOz/wEDtP8REsH/OzzA/Wpq
+        svxXV7P/NDRAdgEBAAAAAAEDAgIEDSUlHQB7e65pkJDZ/0JCffsrLbn/DhC8/wACuf8AArn/DhC8/yst
+        uf9BQn37kJDa/3x8sGYlJR0CAQEDCwMDAw0iIiF2ZmaluJub2P9qa9j8PkDL/xITdf8EBbX/BAW1/xIT
+        df8+QMv/amvY/Jub2P9jY6K+Hx8edQICAgYAAAAACgoNW2lpqPiOjsL/cXLU/lJU1/8tL8P/Cg3E/woN
+        xf8tL8L/UlTX/3Fy1P6OjsL/amqp+wgIC1EAAAAADw8OEBERFg54eLrOsrLw/4SG4P1mZ9//REbe/xIV
+        zf8SFc3/REbd/2Zn3/+EhuD9sbLw/3l5vM0TExgODg4MDg0NDB4YGBqCX1+gxr6/+v+Fhsv9Pj9+/1hZ
+        4P8aHNH/GhzS/1hZ4P8+P37/hYbL/b6/+v9fX6DMGBgaggsLChUAAAEACAgDO0lJh9a8vPH/kJHM/Xx+
+        z/9wcuj/JSjZ/yUo2f9wcuj/fH7P/5CRzP28vPH/SUmH1gYGATIAAAEAAQECAwAAAAAKCjZAl5fk/56f
+        2v6Qkvn/a27k/yEk0P8hJND/a27k/5CS+f+en9r+l5fk/woKNkAAAAAAAQECAwAAAAABAQEDAAAAAB0d
+        ZXQoKWX/Cwss/hwcOv8qKkX/KSpF/xsbOf8JCir+KCll/x0dZXQAAAAAAQEBAwAAAAAAAAAAAAAAAQAA
+        AQAAAAALAQEA1Q8PB/8iIhv9MDAq/y4uKP8eHhf9CQkC/wAAANMBAQAKAAABAAAAAAEAAAAAAAAAAAEB
+        AQIAAAAAGBgZVCMjJMNMTE7/Q0NF+z4+P/47Oz3+Ozs8+0ZGSP8kJCXCGBgZVAAAAAABAQECAAAAAAAA
+        AAAAAAAAAAAAAAEBAQADAwMOPz8/m1tbW/9VVVX+U1NT/lZWVv9FRUWaBgYGDgAAAAEAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAiIiJhTExM401NTeUiIiJkAQEBAAAAAAIAAAABAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA==
+</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
