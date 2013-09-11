@@ -90,6 +90,7 @@
             // 
             // BR_Cancel
             // 
+            this.BR_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this.BR_Cancel, "BR_Cancel");
             this.BR_Cancel.Name = "BR_Cancel";
             this.BR_Cancel.UseVisualStyleBackColor = true;
@@ -97,8 +98,10 @@
             // 
             // frmBugReporter
             // 
+            this.AcceptButton = this.BR_Send;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BR_Cancel;
             this.Controls.Add(this.BR_Cancel);
             this.Controls.Add(this.BR_Send);
             this.Controls.Add(this.BR_Message);
