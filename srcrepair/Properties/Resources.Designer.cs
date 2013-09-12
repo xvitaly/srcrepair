@@ -113,7 +113,7 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://bugs.easycoding.org/bug_report_page.php?project_id=5.
+        ///   Looks up a localized string similar to http://bugs.easycoding.org/apprep/.
         /// </summary>
         internal static string AppBtURL {
             get {
