@@ -24,7 +24,10 @@ namespace srcrepair
 
         private void BR_Send_Click(object sender, EventArgs e)
         {
-            //
+            if (!BR_WrkMf.IsBusy)
+            {
+                BR_WrkMf.RunWorkerAsync();
+            }
         }
 
         private void BR_Cancel_Click(object sender, EventArgs e)
