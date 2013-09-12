@@ -38,6 +38,7 @@
             this.BR_Message = new System.Windows.Forms.TextBox();
             this.BR_Send = new System.Windows.Forms.Button();
             this.BR_Cancel = new System.Windows.Forms.Button();
+            this.BR_WrkMf = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // BR_WlcMsg
@@ -96,6 +97,11 @@
             this.BR_Cancel.UseVisualStyleBackColor = true;
             this.BR_Cancel.Click += new System.EventHandler(this.BR_Cancel_Click);
             // 
+            // BR_WrkMf
+            // 
+            this.BR_WrkMf.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BR_WrkMf_DoWork);
+            this.BR_WrkMf.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BR_WrkMf_RunWorkerCompleted);
+            // 
             // frmBugReporter
             // 
             this.AcceptButton = this.BR_Send;
@@ -116,6 +122,7 @@
             this.MinimizeBox = false;
             this.Name = "frmBugReporter";
             this.ShowInTaskbar = false;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmBugReporter_FormClosing);
             this.Load += new System.EventHandler(this.frmBugReporter_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -133,5 +140,6 @@
         private System.Windows.Forms.TextBox BR_Message;
         private System.Windows.Forms.Button BR_Send;
         private System.Windows.Forms.Button BR_Cancel;
+        private System.ComponentModel.BackgroundWorker BR_WrkMf;
     }
 }

@@ -31,5 +31,20 @@ namespace srcrepair
         {
             this.Close();
         }
+
+        private void BR_WrkMf_DoWork(object sender, DoWorkEventArgs e)
+        {
+            //
+        }
+
+        private void BR_WrkMf_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            //
+        }
+
+        private void frmBugReporter_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = ((e.CloseReason == CloseReason.UserClosing) && BR_WrkMf.IsBusy);
+        }
     }
 }
