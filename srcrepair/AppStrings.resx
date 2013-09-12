@@ -627,4 +627,10 @@
   <data name="BR_MsgFieldsEmpty" xml:space="preserve">
     <value>Empty fields detected. Fill them and try again!</value>
   </data>
+  <data name="BR_SendButtonAlt" xml:space="preserve">
+    <value>Sending...</value>
+  </data>
+  <data name="BR_SendError" xml:space="preserve">
+    <value>Warning! An error occured. Please try again later!</value>
+  </data>
 </root>

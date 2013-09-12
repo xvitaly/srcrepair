@@ -794,4 +794,12 @@
     <value>Не заполнены необходимые поля. Заполните и повторите попытку!</value>
     <comment>Сообщение при попытке отправки отчёта с незаполненными обязательными полями</comment>
   </data>
+  <data name="BR_SendButtonAlt" xml:space="preserve">
+    <value>Отправка...</value>
+    <comment>Альтернативный текст кнопки в форме отправки отчётов об ошибках</comment>
+  </data>
+  <data name="BR_SendError" xml:space="preserve">
+    <value>Во время отправки сообщения произошла ошибка. Попробуйте ещё раз позднее!</value>
+    <comment>Сообщение об ошибке при отправке багрепорта</comment>
+  </data>
 </root>
