@@ -262,6 +262,11 @@ namespace srcrepair
                 // Выводим сообщение об успешном окончании очистки...
                 MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                // В случае исключений пишем в отладочный лог...
+                CoreLib.WriteStringToLog(e.Error.Message);
+            }
 
             // Закрываем форму...
             this.Close();
