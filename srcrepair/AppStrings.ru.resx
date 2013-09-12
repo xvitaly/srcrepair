@@ -786,4 +786,8 @@
     <value>Рабочий каталог "{0}" игры не существует!</value>
     <comment>Сообщение, которое записывается в лог при отсутствии каталога</comment>
   </data>
+  <data name="BR_SendCompleted" xml:space="preserve">
+    <value>Сообщение об ошибке было успешно отправлено!</value>
+    <comment>Сообщение об успешной отправке баг-репорта</comment>
+  </data>
 </root>

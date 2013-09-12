@@ -621,4 +621,7 @@
   <data name="AppGameChkErrNtExs" xml:space="preserve">
     <value>Game work directory "{0}" does not exists!</value>
   </data>
+  <data name="BR_SendCompleted" xml:space="preserve">
+    <value>Bug report has been successfully sended!</value>
+  </data>
 </root>

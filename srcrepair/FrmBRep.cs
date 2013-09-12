@@ -24,10 +24,8 @@ namespace srcrepair
 
         private void BR_Send_Click(object sender, EventArgs e)
         {
-            if (!BR_WrkMf.IsBusy)
-            {
-                BR_WrkMf.RunWorkerAsync();
-            }
+            // Запускаем обработчик асинхронно...
+            if (!BR_WrkMf.IsBusy) { BR_WrkMf.RunWorkerAsync(); }
         }
 
         private void BR_Cancel_Click(object sender, EventArgs e)
@@ -42,7 +40,11 @@ namespace srcrepair
 
         private void BR_WrkMf_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            //
+            // Выводим сообщение...
+            if (e.Error == null) { MessageBox.Show(CoreLib.GetLocalizedString("BR_SendCompleted"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { CoreLib.WriteStringToLog(e.Error.Message); }
+
+            // Закрываем форму...
+            this.Close();
         }
 
         private void frmBugReporter_FormClosing(object sender, FormClosingEventArgs e)
