@@ -84,7 +84,8 @@ namespace srcrepair
 
         private void BR_Cancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            // Закрываем форму если обработчик не используется...
+            if (!BR_WrkMf.IsBusy) { this.Close(); }
         }
 
         private void BR_WrkMf_DoWork(object sender, DoWorkEventArgs e)
