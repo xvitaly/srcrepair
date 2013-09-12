@@ -24,8 +24,17 @@ namespace srcrepair
 
         private void BR_Send_Click(object sender, EventArgs e)
         {
-            // Запускаем обработчик асинхронно...
-            if (!BR_WrkMf.IsBusy) { BR_WrkMf.RunWorkerAsync(); }
+            // Проверим заполнены ли обязательные поля...
+            if (!(String.IsNullOrWhiteSpace(BR_Title.Text)) && !(String.IsNullOrWhiteSpace(BR_Message.Text)))
+            {
+                // Запускаем обработчик асинхронно...
+                if (!BR_WrkMf.IsBusy) { BR_WrkMf.RunWorkerAsync(); }
+            }
+            else
+            {
+                // Выводим сообщение об ошибке...
+                MessageBox.Show(CoreLib.GetLocalizedString("BR_MsgFieldsEmpty"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void BR_Cancel_Click(object sender, EventArgs e)

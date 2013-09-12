@@ -358,6 +358,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Empty fields detected. Fill them and try again!.
+        /// </summary>
+        internal static string BR_MsgFieldsEmpty {
+            get {
+                return ResourceManager.GetString("BR_MsgFieldsEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bug report has been successfully sended!.
         /// </summary>
         internal static string BR_SendCompleted {

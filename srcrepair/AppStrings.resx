@@ -624,4 +624,7 @@
   <data name="BR_SendCompleted" xml:space="preserve">
     <value>Bug report has been successfully sended!</value>
   </data>
+  <data name="BR_MsgFieldsEmpty" xml:space="preserve">
+    <value>Empty fields detected. Fill them and try again!</value>
+  </data>
 </root>
