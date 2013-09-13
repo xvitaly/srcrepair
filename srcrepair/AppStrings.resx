@@ -633,4 +633,7 @@
   <data name="BR_SendError" xml:space="preserve">
     <value>Warning! An error occured. Please try again later!</value>
   </data>
+  <data name="BR_CaptErr" xml:space="preserve">
+    <value>Incorrect CAPTCHA code entered. Try again!</value>
+  </data>
 </root>

@@ -80,16 +80,25 @@ namespace srcrepair
             // Проверим заполнены ли обязательные поля...
             if (!(String.IsNullOrWhiteSpace(BR_Title.Text)) && !(String.IsNullOrWhiteSpace(BR_Message.Text)))
             {
-                // Изменяем текст кнопки и отключаем её...
-                BR_Send.Text = CoreLib.GetLocalizedString("BR_SendButtonAlt");
-                
-                // Отключаем часть контролов...
-                BR_Title.ReadOnly = true;
-                BR_Message.ReadOnly = true;
-                BR_Send.Enabled = false;
+                // Проверим капчу...
+                if (BR_CaptCheck.Text == this.CaptchaKey)
+                {
+                    // Изменяем текст кнопки и отключаем её...
+                    BR_Send.Text = CoreLib.GetLocalizedString("BR_SendButtonAlt");
 
-                // Запускаем обработчик асинхронно...
-                if (!BR_WrkMf.IsBusy) { BR_WrkMf.RunWorkerAsync(); }
+                    // Отключаем часть контролов...
+                    BR_Title.ReadOnly = true;
+                    BR_Message.ReadOnly = true;
+                    BR_Send.Enabled = false;
+
+                    // Запускаем обработчик асинхронно...
+                    if (!BR_WrkMf.IsBusy) { BR_WrkMf.RunWorkerAsync(); }
+                }
+                else
+                {
+                    // Выводим сообщение об ошибке при заполнении капчи...
+                    MessageBox.Show(CoreLib.GetLocalizedString("BR_CaptErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {

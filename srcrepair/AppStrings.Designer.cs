@@ -358,6 +358,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Incorrect CAPTCHA code entered. Try again!.
+        /// </summary>
+        internal static string BR_CaptErr {
+            get {
+                return ResourceManager.GetString("BR_CaptErr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Empty fields detected. Fill them and try again!.
         /// </summary>
         internal static string BR_MsgFieldsEmpty {
