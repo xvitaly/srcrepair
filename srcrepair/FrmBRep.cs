@@ -16,10 +16,23 @@ namespace srcrepair
     public partial class frmBugReporter : Form
     {
         private string BResult;
+        private string CaptchaKey;
 
         public frmBugReporter()
         {
             InitializeComponent();
+        }
+
+        private string GenerateCaptchaKey(int StrLng)
+        {
+            string Result = "";
+            Random Rnd = new Random();
+            string SymbolsAvailable = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            for (int i = StrLng; i > 0; i--)
+            {
+                Result += SymbolsAvailable[Rnd.Next(1, SymbolsAvailable.Length)];
+            }
+            return Result;
         }
 
         private string GetAppSmVersion()
@@ -55,6 +68,9 @@ namespace srcrepair
 
         private void frmBugReporter_Load(object sender, EventArgs e)
         {
+            // Генерируем капчу...
+            this.CaptchaKey = GenerateCaptchaKey(BR_CaptCheck.MaxLength);
+
             // Выберем категорию "Ошибка" по умолчанию...
             try { BR_Category.SelectedIndex = 0; } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
