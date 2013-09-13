@@ -39,6 +39,10 @@
             this.BR_Send = new System.Windows.Forms.Button();
             this.BR_Cancel = new System.Windows.Forms.Button();
             this.BR_WrkMf = new System.ComponentModel.BackgroundWorker();
+            this.BR_CaptImg = new System.Windows.Forms.PictureBox();
+            this.BR_L_CaptCheck = new System.Windows.Forms.Label();
+            this.BR_CaptCheck = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.BR_CaptImg)).BeginInit();
             this.SuspendLayout();
             // 
             // BR_WlcMsg
@@ -102,12 +106,31 @@
             this.BR_WrkMf.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BR_WrkMf_DoWork);
             this.BR_WrkMf.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BR_WrkMf_RunWorkerCompleted);
             // 
+            // BR_CaptImg
+            // 
+            resources.ApplyResources(this.BR_CaptImg, "BR_CaptImg");
+            this.BR_CaptImg.Name = "BR_CaptImg";
+            this.BR_CaptImg.TabStop = false;
+            // 
+            // BR_L_CaptCheck
+            // 
+            resources.ApplyResources(this.BR_L_CaptCheck, "BR_L_CaptCheck");
+            this.BR_L_CaptCheck.Name = "BR_L_CaptCheck";
+            // 
+            // BR_CaptCheck
+            // 
+            resources.ApplyResources(this.BR_CaptCheck, "BR_CaptCheck");
+            this.BR_CaptCheck.Name = "BR_CaptCheck";
+            // 
             // frmBugReporter
             // 
             this.AcceptButton = this.BR_Send;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BR_Cancel;
+            this.Controls.Add(this.BR_CaptCheck);
+            this.Controls.Add(this.BR_L_CaptCheck);
+            this.Controls.Add(this.BR_CaptImg);
             this.Controls.Add(this.BR_Cancel);
             this.Controls.Add(this.BR_Send);
             this.Controls.Add(this.BR_Message);
@@ -124,6 +147,7 @@
             this.ShowInTaskbar = false;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmBugReporter_FormClosing);
             this.Load += new System.EventHandler(this.frmBugReporter_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.BR_CaptImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,5 +165,8 @@
         private System.Windows.Forms.Button BR_Send;
         private System.Windows.Forms.Button BR_Cancel;
         private System.ComponentModel.BackgroundWorker BR_WrkMf;
+        private System.Windows.Forms.PictureBox BR_CaptImg;
+        private System.Windows.Forms.Label BR_L_CaptCheck;
+        private System.Windows.Forms.TextBox BR_CaptCheck;
     }
 }
