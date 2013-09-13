@@ -119,6 +119,7 @@
             // 
             // BR_CaptCheck
             // 
+            this.BR_CaptCheck.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             resources.ApplyResources(this.BR_CaptCheck, "BR_CaptCheck");
             this.BR_CaptCheck.Name = "BR_CaptCheck";
             // 
