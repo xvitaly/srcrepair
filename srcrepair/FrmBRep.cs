@@ -87,11 +87,15 @@ namespace srcrepair
 
         private void GenerateCaptcha()
         {
-            // Генерируем код капчи...
-            this.CaptchaKey = GenerateCaptchaKey(BR_CaptCheck.MaxLength);
+            // Соберём новую капчу...
+            if (!BR_CaptGen.IsBusy)
+            {
+                // Генерируем код капчи...
+                this.CaptchaKey = GenerateCaptchaKey(BR_CaptCheck.MaxLength);
 
-            // Запустим генерацию самой капчи в отдельном потоке...
-            if (!BR_CaptGen.IsBusy) { BR_CaptGen.RunWorkerAsync(); }
+                // Запустим генерацию самой капчи в отдельном потоке...
+                BR_CaptGen.RunWorkerAsync();
+            }
         }
 
         private void frmBugReporter_Load(object sender, EventArgs e)
