@@ -201,5 +201,10 @@ namespace srcrepair
         {
             e.Cancel = ((e.CloseReason == CloseReason.UserClosing) && BR_WrkMf.IsBusy);
         }
+
+        private void BR_CaptGen_DoWork(object sender, DoWorkEventArgs e)
+        {
+            //
+        }
     }
 }

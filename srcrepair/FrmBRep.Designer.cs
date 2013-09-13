@@ -42,6 +42,7 @@
             this.BR_CaptImg = new System.Windows.Forms.PictureBox();
             this.BR_L_CaptCheck = new System.Windows.Forms.Label();
             this.BR_CaptCheck = new System.Windows.Forms.TextBox();
+            this.BR_CaptGen = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.BR_CaptImg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,6 +124,10 @@
             resources.ApplyResources(this.BR_CaptCheck, "BR_CaptCheck");
             this.BR_CaptCheck.Name = "BR_CaptCheck";
             // 
+            // BR_CaptGen
+            // 
+            this.BR_CaptGen.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BR_CaptGen_DoWork);
+            // 
             // frmBugReporter
             // 
             this.AcceptButton = this.BR_Send;
@@ -169,5 +174,6 @@
         private System.Windows.Forms.PictureBox BR_CaptImg;
         private System.Windows.Forms.Label BR_L_CaptCheck;
         private System.Windows.Forms.TextBox BR_CaptCheck;
+        private System.ComponentModel.BackgroundWorker BR_CaptGen;
     }
 }
