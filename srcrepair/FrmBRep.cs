@@ -85,13 +85,19 @@ namespace srcrepair
             return String.Format("title={0}&category={1}&version={2}&platform={3}&os={4}&os_version={5}&contents={6}", Title, GenerateCategory(Category), GetAppSmVersion(), OS, OS, GenerateOSVersion(), Contents);
         }
 
-        private void frmBugReporter_Load(object sender, EventArgs e)
+        private void GenerateCaptcha()
         {
             // Генерируем код капчи...
             this.CaptchaKey = GenerateCaptchaKey(BR_CaptCheck.MaxLength);
 
             // Запустим генерацию самой капчи в отдельном потоке...
             if (!BR_CaptGen.IsBusy) { BR_CaptGen.RunWorkerAsync(); }
+        }
+
+        private void frmBugReporter_Load(object sender, EventArgs e)
+        {
+            // Вызовем функцию построения капчи...
+            this.GenerateCaptcha();
 
             // Выберем категорию "Ошибка" по умолчанию...
             try { BR_Category.SelectedIndex = 0; } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
@@ -264,6 +270,12 @@ namespace srcrepair
                 });
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+        }
+
+        private void BR_CaptImg_Click(object sender, EventArgs e)
+        {
+            // Обновим капчу...
+            this.GenerateCaptcha();
         }
     }
 }

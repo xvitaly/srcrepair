@@ -109,9 +109,11 @@
             // 
             // BR_CaptImg
             // 
+            this.BR_CaptImg.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.BR_CaptImg, "BR_CaptImg");
             this.BR_CaptImg.Name = "BR_CaptImg";
             this.BR_CaptImg.TabStop = false;
+            this.BR_CaptImg.Click += new System.EventHandler(this.BR_CaptImg_Click);
             // 
             // BR_L_CaptCheck
             // 
