@@ -60,6 +60,11 @@ namespace srcrepair
             return String.Format("{0}.{1}", AppV.Major, AppV.Minor);
         }
 
+        private string GetPlatformName()
+        {
+            return Assembly.GetEntryAssembly().GetName().ProcessorArchitecture.ToString();
+        }
+
         private string GenerateOSVersion()
         {
             return String.Format("{0}.{1}", Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor);
@@ -82,7 +87,7 @@ namespace srcrepair
         
         private string GeneratePOSTRequest(string Title, int Category, string OS, string Contents)
         {
-            return String.Format("title={0}&category={1}&version={2}&platform={3}&os={4}&os_version={5}&contents={6}", Title, GenerateCategory(Category), GetAppSmVersion(), OS, OS, GenerateOSVersion(), Contents);
+            return String.Format("title={0}&category={1}&version={2}&platform={3}&os={4}&os_version={5}&contents={6}", Title, GenerateCategory(Category), GetAppSmVersion(), GetPlatformName(), OS, GenerateOSVersion(), Contents);
         }
 
         private void GenerateCaptcha()
