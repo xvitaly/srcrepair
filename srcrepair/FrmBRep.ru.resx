@@ -131,13 +131,13 @@
     <value>Выберите категорию:</value>
   </data>
   <data name="BR_Category.Items" xml:space="preserve">
-    <value>Ошибка</value>
+    <value>Сообщение об ошибке</value>
   </data>
   <data name="BR_Category.Items1" xml:space="preserve">
-    <value>Запрос новой функции</value>
+    <value>Предложение новой функции</value>
   </data>
   <data name="BR_Category.Items2" xml:space="preserve">
-    <value>Задание</value>
+    <value>Задание для разработчиков</value>
   </data>
   <data name="BR_L_Message.Text" xml:space="preserve">
     <value>Максимально подробно опишите возникшую проблему:</value>
