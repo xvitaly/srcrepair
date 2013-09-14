@@ -126,6 +126,7 @@ namespace srcrepair
                     // Отключаем часть контролов...
                     BR_Title.ReadOnly = true;
                     BR_Message.ReadOnly = true;
+                    BR_CaptCheck.ReadOnly = true;
                     BR_Send.Enabled = false;
 
                     // Запускаем обработчик асинхронно...
