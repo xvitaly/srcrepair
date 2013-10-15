@@ -90,6 +90,49 @@ namespace srcrepair
             return String.Format("title={0}&category={1}&version={2}&platform={3}&os={4}&os_version={5}&contents={6}", Title, GenerateCategory(Category), GetAppSmVersion(), GetPlatformName(), OS, GenerateOSVersion(), Contents);
         }
 
+        private Bitmap GenerateCaptchaImage(string CaptchaKey, int Width = 0, int Height = 0)
+        {
+            // Создаём объект изображения...
+            Bitmap CI = new Bitmap(Width, Height);
+
+            // Подключаем генератор псевдослучайных чисел...
+            Random Rnd = new Random();
+
+            // Создаём объект и задаём его основные свойства...
+            Graphics Graph = Graphics.FromImage(CI);
+            Graph.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            Graph.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+
+            // Начинаем рисовать...
+            RectangleF CaptRecField = new RectangleF(0, 0, Width, Height);
+            Graph.FillRectangle(new HatchBrush(HatchStyle.SmallConfetti, Color.LightGray, Color.White), CaptRecField);
+
+            // Задаём параметры текста будущей капчи...
+            StringFormat CptFormat = new StringFormat();
+            CptFormat.Alignment = StringAlignment.Center;
+            CptFormat.LineAlignment = StringAlignment.Center;
+
+            // Выводим строку...
+            GraphicsPath CaptGraphPath = new GraphicsPath();
+            CaptGraphPath.AddString(CaptchaKey, FontFamily.GenericSansSerif, 1, 22, CaptRecField, CptFormat);
+
+            // Заполняем мусором...
+            PointF[] CaptPoints = { new PointF((float)Rnd.Next(Width) / 4, (float)Rnd.Next(Height) / 4), new PointF(Width - (float)Rnd.Next(Width) / 4, (float)Rnd.Next(Height) / 4), new PointF((float)Rnd.Next(Width) / 4, Height - (float)Rnd.Next(Height) / 4), new PointF(Width - (float)Rnd.Next(Width) / 4, Height - (float)Rnd.Next(Height) / 4) };
+            CaptGraphPath.Warp(CaptPoints, CaptRecField, new Matrix(), WarpMode.Perspective, 0);
+            Graph.FillPath(new HatchBrush(HatchStyle.LargeConfetti, Color.LightGray, Color.DarkGray), CaptGraphPath);
+            int CaptMaxDim = Math.Max(Width, Height);
+            for (int i = 0; i <= (int)Width * Height / 30; i++) { Graph.FillEllipse(new HatchBrush(HatchStyle.LargeConfetti, Color.LightGray, Color.DarkGray), Rnd.Next(Width), Rnd.Next(Height), (int)Rnd.Next(CaptMaxDim) / 50, (int)Rnd.Next(CaptMaxDim) / 50); }
+            for (int i = 1; i <= 5; i++) { Graph.DrawLine(Pens.DarkGray, Rnd.Next(Width), Rnd.Next(Height), Rnd.Next(Width), Rnd.Next(Height)); }
+            for (int i = 1; i <= 5; i++) { Graph.DrawLine(Pens.LightGray, Rnd.Next(Width), Rnd.Next(Height), Rnd.Next(Width), Rnd.Next(Height)); }
+
+            // Уничтожаем ненужные более объекты...
+            CaptGraphPath.Dispose();
+            Graph.Dispose();
+
+            // Возвращаем сгенерированное изображение...
+            return CI;
+        }
+
         private void GenerateCaptcha()
         {
             // Соберём новую капчу...
@@ -226,57 +269,10 @@ namespace srcrepair
         {
             try
             {
-                // Определяем и заполняем переменные...
-                int Width = 0, Height = 0;
-
-                // Получаем данные из основного потока...
-                this.Invoke((MethodInvoker)delegate()
-                {
-                    Width = BR_CaptImg.Width;
-                    Height = BR_CaptImg.Height;
-                });
-
-                // Создаём объект изображения...
-                Bitmap CI = new Bitmap(Width, Height);
-
-                // Подключаем генератор псевдослучайных чисел...
-                Random Rnd = new Random();
-
-                // Создаём объект и задаём его основные свойства...
-                Graphics Graph = Graphics.FromImage(CI);
-                Graph.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-                Graph.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
-
-                // Начинаем рисовать...
-                RectangleF CaptRecField = new RectangleF(0, 0, Width, Height);
-                Graph.FillRectangle(new HatchBrush(HatchStyle.SmallConfetti, Color.LightGray, Color.White), CaptRecField);
-
-                // Задаём параметры текста будущей капчи...
-                StringFormat CptFormat = new StringFormat();
-                CptFormat.Alignment = StringAlignment.Center;
-                CptFormat.LineAlignment = StringAlignment.Center;
-
-                // Выводим строку...
-                GraphicsPath CaptGraphPath = new GraphicsPath();
-                CaptGraphPath.AddString(this.CaptchaKey, FontFamily.GenericSansSerif, 1, 22, CaptRecField, CptFormat);
-                
-                // Заполняем мусором...
-                PointF[] CaptPoints = { new PointF((float)Rnd.Next(Width) / 4, (float)Rnd.Next(Height) / 4), new PointF(Width - (float)Rnd.Next(Width) / 4, (float)Rnd.Next(Height) / 4), new PointF((float)Rnd.Next(Width) / 4, Height - (float)Rnd.Next(Height) / 4), new PointF(Width - (float)Rnd.Next(Width) / 4, Height - (float)Rnd.Next(Height) / 4) };
-                CaptGraphPath.Warp(CaptPoints, CaptRecField, new Matrix(), WarpMode.Perspective, 0);
-                Graph.FillPath(new HatchBrush(HatchStyle.LargeConfetti, Color.LightGray, Color.DarkGray), CaptGraphPath);
-                int CaptMaxDim = Math.Max(Width, Height);
-                for (int i = 0; i <= (int)Width * Height / 30; i++) { Graph.FillEllipse(new HatchBrush(HatchStyle.LargeConfetti, Color.LightGray, Color.DarkGray), Rnd.Next(Width), Rnd.Next(Height), (int)Rnd.Next(CaptMaxDim) / 50, (int)Rnd.Next(CaptMaxDim) / 50); }
-                for (int i = 1; i <= 5; i++) { Graph.DrawLine(Pens.DarkGray, Rnd.Next(Width), Rnd.Next(Height), Rnd.Next(Width), Rnd.Next(Height)); }
-                for (int i = 1; i <= 5; i++) { Graph.DrawLine(Pens.LightGray, Rnd.Next(Width), Rnd.Next(Height), Rnd.Next(Width), Rnd.Next(Height)); }
-
-                // Уничтожаем ненужные более объекты...
-                CaptGraphPath.Dispose();
-                Graph.Dispose();
-
                 // Выводим результат...
                 this.Invoke((MethodInvoker)delegate()
                 {
-                    BR_CaptImg.Image = CI;
+                    BR_CaptImg.Image = GenerateCaptchaImage(this.CaptchaKey, BR_CaptImg.Width, BR_CaptImg.Height);
                 });
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
