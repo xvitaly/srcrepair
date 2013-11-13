@@ -26,7 +26,7 @@ AppPublisherURL=http://www.easycoding.org/
 AppVersion=15.0.0.1198
 AppSupportURL=http://code.google.com/p/srcrepair/wiki/Support
 AppUpdatesURL=http://code.google.com/p/srcrepair/downloads/list
-DefaultDirName={pf}\SRC Repair
+DefaultDirName={code:GetDefRoot}\SRC Repair
 DefaultGroupName=SRC Repair
 AllowNoIcons=yes
 SourceDir=E:\VSBuilds
@@ -39,6 +39,7 @@ SetupIconFile=srcrepair.ico
 UninstallDisplayIcon={app}\srcrepair.exe
 Compression=lzma2
 SolidCompression=yes
+PrivilegesRequired=lowest
 ; "ArchitecturesInstallIn64BitMode=x64" requests that the install be
 ; done in "64-bit mode" on x64, meaning it should use the native
 ; 64-bit Program Files directory and the 64-bit view of the registry.
@@ -229,4 +230,17 @@ begin
   if (MemoTasksInfo <> '') then
     s := s + MemoTasksInfo + NewLine;
   Result := s
+end;
+
+function IsRegularUser(): Boolean;
+begin
+  Result := not (IsAdminLoggedOn or IsPowerUserLoggedOn)
+end;
+
+function GetDefRoot(Param: String): String;
+begin
+  if IsRegularUser then
+    Result := ExpandConstant('{localappdata}')
+  else
+    Result := ExpandConstant('{pf}')
 end;
