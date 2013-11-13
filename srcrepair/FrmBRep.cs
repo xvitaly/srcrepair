@@ -282,6 +282,9 @@ namespace srcrepair
         {
             // Обновим капчу...
             this.GenerateCaptcha();
+
+            // Очистим поле ввода...
+            BR_CaptCheck.Text = "";
         }
     }
 }
