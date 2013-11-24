@@ -2840,8 +2840,11 @@ namespace srcrepair
             {
                 if (BU_LVTable.SelectedItems.Count > 0)
                 {
-                    // Откроем выбранный бэкап в Блокноте Windows...
-                    Process.Start(Properties.Settings.Default.EditorBin, Path.Combine(GV.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text));
+                    if (Regex.IsMatch(Path.GetExtension(BU_LVTable.SelectedItems[0].SubItems[4].Text), @"\.(txt|cfg|[0-9]|reg)"))
+                    {
+                        // Откроем выбранный бэкап в Блокноте Windows...
+                        Process.Start(Properties.Settings.Default.EditorBin, Path.Combine(GV.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text));
+                    }
                 }
                 else
                 {
