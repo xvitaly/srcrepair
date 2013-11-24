@@ -77,15 +77,6 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://bugs.easycoding.org/bug_report_page.php?project_id=8.
-        /// </summary>
-        internal static string AHE_BtURL {
-            get {
-                return ResourceManager.GetString("AHE_BtURL", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to http://code.google.com/p/srcrepair/wiki/HostsEditorPlugin_{0}.
         /// </summary>
         internal static string AHE_HelpURL {

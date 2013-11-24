@@ -253,9 +253,6 @@
   <data name="HtTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HtTemplate.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="AHE_BtURL" xml:space="preserve">
-    <value>http://bugs.easycoding.org/bug_report_page.php?project_id=8</value>
-  </data>
   <data name="AHE_HelpURL" xml:space="preserve">
     <value>http://code.google.com/p/srcrepair/wiki/HostsEditorPlugin_{0}</value>
   </data>
