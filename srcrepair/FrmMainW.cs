@@ -2845,6 +2845,10 @@ namespace srcrepair
                         // Откроем выбранный бэкап в Блокноте Windows...
                         Process.Start(Properties.Settings.Default.EditorBin, Path.Combine(GV.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text));
                     }
+                    else
+                    {
+                        MessageBox.Show(CoreLib.GetLocalizedString("BU_BinaryFile"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
                 else
                 {

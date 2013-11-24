@@ -636,4 +636,7 @@
   <data name="BR_CaptErr" xml:space="preserve">
     <value>Incorrect CAPTCHA code entered. Try again!</value>
   </data>
+  <data name="BU_BinaryFile" xml:space="preserve">
+    <value>The selected file is a binary. Unable open it in text editor!</value>
+  </data>
 </root>

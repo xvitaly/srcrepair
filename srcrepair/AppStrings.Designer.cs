@@ -403,6 +403,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The selected file is a binary. Unable open it in text editor!.
+        /// </summary>
+        internal static string BU_BinaryFile {
+            get {
+                return ResourceManager.GetString("BU_BinaryFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Archive of.
         /// </summary>
         internal static string BU_BName_Bud {
