@@ -214,7 +214,8 @@ namespace srcrepair
 
         private void HEd_M_RepBug_Click(object sender, EventArgs e)
         {
-            Process.Start(Properties.Resources.AHE_BtURL);
+            frmBugReporter BgRepFrm = new frmBugReporter();
+            BgRepFrm.ShowDialog();
         }
         #endregion
     }
