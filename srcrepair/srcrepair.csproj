@@ -314,10 +314,6 @@
       <Link>cfgs\skullhighfps.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\tfiles\cfgs\team-fortress-ru.cfg">
-      <Link>cfgs\team-fortress-ru.cfg</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\tfiles\cfgs\v1tsk%27s_generic.cfg">
       <Link>cfgs\v1tsk%27s_generic.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -452,14 +448,6 @@
     </Content>
     <Content Include="..\tfiles\cfgs\skullhighfps_ru.txt">
       <Link>cfgs\skullhighfps_ru.txt</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\tfiles\cfgs\team-fortress-ru_en.txt">
-      <Link>cfgs\team-fortress-ru_en.txt</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\tfiles\cfgs\team-fortress-ru_ru.txt">
-      <Link>cfgs\team-fortress-ru_ru.txt</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="..\tfiles\cfgs\v1tsk%27s_generic_en.txt">
