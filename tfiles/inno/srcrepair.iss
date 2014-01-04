@@ -23,18 +23,18 @@ AppVerName=SRC Repair
 AppPublisher=EasyCoding Team
 AppPublisherURL=http://www.easycoding.org/
 ; AppVersion отображается в Установка/Удаление программ в дополнительной информации.
-AppVersion=15.0.0.1198
+AppVersion=16.0.0.1207
 AppSupportURL=http://code.google.com/p/srcrepair/wiki/Support
 AppUpdatesURL=http://code.google.com/p/srcrepair/downloads/list
 DefaultDirName={code:GetDefRoot}\SRC Repair
 DefaultGroupName=SRC Repair
 AllowNoIcons=yes
-SourceDir=E:\VSBuilds
+SourceDir=C:\VSBuilds
 LicenseFile=GPL.txt
 ;InfoBeforeFile=readme.txt
-OutputDir=E:\VSBuilds
-OutputBaseFilename=srcrepair_150_final
-;OutputBaseFilename=srcrepair_beta_1198
+OutputDir=C:\VSBuilds
+OutputBaseFilename=srcrepair_160_final
+;OutputBaseFilename=srcrepair_beta_1207
 SetupIconFile=srcrepair.ico
 UninstallDisplayIcon={app}\srcrepair.exe
 Compression=lzma2
@@ -47,7 +47,7 @@ PrivilegesRequired=none
 ArchitecturesInstallIn64BitMode=x64
 
 ; Тут указываем данные, которые будут добавлены в свойства установщика
-VersionInfoVersion=15.0.0.1198
+VersionInfoVersion=16.0.0.1207
 VersionInfoDescription=SRC Repair Setup
 VersionInfoCopyright=(c) 2005-2013 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
