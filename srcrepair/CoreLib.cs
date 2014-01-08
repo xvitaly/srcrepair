@@ -414,7 +414,7 @@ namespace srcrepair
             // Открываем проверяемый ключ реестра... При ошибке вернёт null.
             RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(Subkey, false);
             // Получаем результат проверки...
-            bool Result = (ResKey == null) ? false : true;
+            bool Result = ResKey != null;
             // Если ключ был успешно открыт, закрываем.
             if (Result) { ResKey.Close(); }
             // Возвращаем результат функции...
