@@ -198,6 +198,7 @@
             this.MNUExtClnCloudLocal = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnBuildCache = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnUpdCch = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUExtClnGuard = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep2 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUExit = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpMNU = new System.Windows.Forms.ToolStripMenuItem();
@@ -1595,7 +1596,8 @@
             this.MNUExtClnErrDumps,
             this.MNUExtClnCloudLocal,
             this.MNUExtClnBuildCache,
-            this.MNUExtClnUpdCch});
+            this.MNUExtClnUpdCch,
+            this.MNUExtClnGuard});
             this.MNUExtClnSub.Image = global::srcrepair.Properties.Resources.clean;
             this.MNUExtClnSub.Name = "MNUExtClnSub";
             resources.ApplyResources(this.MNUExtClnSub, "MNUExtClnSub");
@@ -1669,6 +1671,13 @@
             this.MNUExtClnUpdCch.Name = "MNUExtClnUpdCch";
             resources.ApplyResources(this.MNUExtClnUpdCch, "MNUExtClnUpdCch");
             this.MNUExtClnUpdCch.Click += new System.EventHandler(this.MNUExtClnUpdCch_Click);
+            // 
+            // MNUExtClnGuard
+            // 
+            this.MNUExtClnGuard.Image = global::srcrepair.Properties.Resources.clean;
+            this.MNUExtClnGuard.Name = "MNUExtClnGuard";
+            resources.ApplyResources(this.MNUExtClnGuard, "MNUExtClnGuard");
+            this.MNUExtClnGuard.Click += new System.EventHandler(this.MNUExtClnGuard_Click);
             // 
             // MNUSep2
             // 
@@ -2095,6 +2104,7 @@
         private System.ComponentModel.BackgroundWorker BW_FPRecv;
         private System.ComponentModel.BackgroundWorker BW_BkUpRecv;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnUpdCch;
+        private System.Windows.Forms.ToolStripMenuItem MNUExtClnGuard;
     }
 }
 

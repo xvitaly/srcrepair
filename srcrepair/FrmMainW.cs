@@ -3203,5 +3203,13 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "*.cfg"));
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
+
+        private void MNUExtClnGuard_Click(object sender, EventArgs e)
+        {
+            // Удаляем кэш Steam Guard...
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullSteamPath, "ssfn*"));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+        }
     }
 }
