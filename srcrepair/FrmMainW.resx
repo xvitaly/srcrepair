@@ -4076,6 +4076,12 @@
   <data name="MNUExtClnGuard.Text" xml:space="preserve">
     <value>Steam Guar&amp;d cache</value>
   </data>
+  <data name="MNUExtClnOldBin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 22</value>
+  </data>
+  <data name="MNUExtClnOldBin.Text" xml:space="preserve">
+    <value>Steam old b&amp;inaries</value>
+  </data>
   <data name="MNUExtClnSub.Size" type="System.Drawing.Size, System.Drawing">
     <value>274, 22</value>
   </data>
@@ -5238,6 +5244,12 @@
     <value>MNUExtClnGuard</value>
   </data>
   <data name="&gt;&gt;MNUExtClnGuard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnOldBin.Name" xml:space="preserve">
+    <value>MNUExtClnOldBin</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnOldBin.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUSep2.Name" xml:space="preserve">

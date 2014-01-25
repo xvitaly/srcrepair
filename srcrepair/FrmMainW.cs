@@ -3211,5 +3211,14 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "ssfn*"));
             OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
+
+        private void MNUExtClnOldBin_Click(object sender, EventArgs e)
+        {
+            // Удаляем старые бинарные файлы клиента Steam...
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullSteamPath, "*.old"));
+            CleanDirs.Add(Path.Combine(GV.FullSteamPath, "bin", "*.old"));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+        }
     }
 }

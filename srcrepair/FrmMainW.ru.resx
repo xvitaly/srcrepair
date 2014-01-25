@@ -1008,6 +1008,12 @@
   <data name="MNUExtClnGuard.Text" xml:space="preserve">
     <value>Кэш &amp;системы Steam Guard</value>
   </data>
+  <data name="MNUExtClnOldBin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 22</value>
+  </data>
+  <data name="MNUExtClnOldBin.Text" xml:space="preserve">
+    <value>С&amp;тарые файлы клиента Steam</value>
+  </data>
   <data name="MNUExtClnSub.Size" type="System.Drawing.Size, System.Drawing">
     <value>316, 22</value>
   </data>
