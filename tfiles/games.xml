@@ -315,4 +315,11 @@
     <VFDir>minerva</VFDir>
     <SID>235780</SID>
   </Game>
+  <Game Name="Insurgency">
+    <HasVF>1</HasVF>
+    <DirName>insurgency2</DirName>
+    <SmallName>insurgency</SmallName>
+    <VFDir>insurgency</VFDir>
+    <SID>222880</SID>
+  </Game>
 </Games>
