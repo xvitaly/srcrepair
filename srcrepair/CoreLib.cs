@@ -31,6 +31,7 @@ using System.Threading; // для управления потоками...
 using System.Net; // для скачивания файлов...
 using System.Security.Cryptography; // для расчёта хешей...
 using System.Reflection; // для работы со сборками...
+using System.Security.AccessControl; // для определения прав доступа...
 
 namespace srcrepair
 {
@@ -640,6 +641,31 @@ namespace srcrepair
                 }
             }
             return Template;
+        }
+
+        /// <summary>
+        /// Проверяет наличие прав на запись в указанном в качестве параметра каталоге.
+        /// </summary>
+        /// <param name="DirName">Путь к проверяемому каталогу</param>
+        /// <returns>Булево наличия прав на запись</returns>
+        public static bool IsDirectoryWritable(string DirName)
+        {
+            bool Result = false;
+            try
+            {
+                DirectoryInfo DirInfo = new DirectoryInfo(DirName);
+                DirectorySecurity DirSec = DirInfo.GetAccessControl();
+                AuthorizationRuleCollection AuthRules = DirSec.GetAccessRules(true, true, typeof(NTAccount));
+                foreach (AuthorizationRule AuthRule in AuthRules)
+                {
+                    if (AuthRule.IdentityReference.Value.Equals(WindowsIdentity.GetCurrent().Name.ToString(), StringComparison.CurrentCultureIgnoreCase))
+                    {
+                        Result = (((FileSystemAccessRule)AuthRule).FileSystemRights & FileSystemRights.WriteData) > 0;
+                    }
+                }
+            }
+            catch { Result = false; }
+            return Result;
         }
     }
 }
