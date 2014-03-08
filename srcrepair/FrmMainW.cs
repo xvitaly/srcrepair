@@ -255,41 +255,16 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Получает список каталогов из точки монтирования.
-        /// </summary>
-        /// <param name="StartDir">Каталог монтирования</param>
-        private List<String> GetInstalledDirsFromFile(string StartDir)
-        {
-            // Создаём массив, в который будем помещать найденные пути...
-            List<String> Result = new List<String>();
-
-            // Начинаем обход каталога и получение поддиректорий...
-            try
-            {
-                DirectoryInfo SDir = new DirectoryInfo(Path.Combine(StartDir, Properties.Resources.SteamAppsFolderName, "common"));
-                DirectoryInfo[] SDirInfo = SDir.GetDirectories();
-                foreach (DirectoryInfo Di in SDirInfo)
-                {
-                    Result.Add(Di.FullName);
-                }
-            }
-            catch (Exception Ex)
-            {
-                CoreLib.WriteStringToLog(Ex.Message);
-            }
-
-            // Возвращаем сформированный массив...
-            return Result;
-        }
-
-        /// <summary>
         /// Считывает из главного файла конфигурации Steam пути к дополнительным точкам монтирования.
         /// </summary>
         /// <param name="SteamPath">Путь к клиенту Steam</param>
-        private List<String> GetOtherMountPoints(string SteamPath)
+        private List<String> GetSteamMountPoints(string SteamPath)
         {
             // Создаём массив, в который будем помещать найденные пути...
             List<String> Result = new List<String>();
+
+            // Добавляем каталог установки Steam...
+            Result.Add(SteamPath);
 
             // Начинаем чтение главного файла конфигурации...
             try
@@ -323,6 +298,37 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 CoreLib.WriteStringToLog(Ex.Message);
+            }
+
+            // Возвращаем сформированный массив...
+            return Result;
+        }
+
+        /// <summary>
+        /// Получает список каталогов из точки монтирования.
+        /// </summary>
+        /// <param name="StartDir">Каталог монтирования</param>
+        private List<String> GetInstalledDirsFromFile(string SteamPath)
+        {
+            // Создаём массив, в который будем помещать найденные пути...
+            List<String> Result = new List<String>();
+
+            // Считываем все возможные расположения локальных библиотек игр...
+            List<String> MntPnts = GetSteamMountPoints(SteamPath);
+
+            // Начинаем обход каталога и получение поддиректорий...
+            foreach (string MntPnt in MntPnts)
+            {
+                try
+                {
+                    DirectoryInfo SDir = new DirectoryInfo(Path.Combine(MntPnt, Properties.Resources.SteamAppsFolderName, "common"));
+                    DirectoryInfo[] SDirInfo = SDir.GetDirectories();
+                    foreach (DirectoryInfo Di in SDirInfo) { Result.Add(Di.FullName); }
+                }
+                catch (Exception Ex)
+                {
+                    CoreLib.WriteStringToLog(Ex.Message);
+                }
             }
 
             // Возвращаем сформированный массив...
