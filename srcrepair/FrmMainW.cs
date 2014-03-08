@@ -1445,7 +1445,6 @@ namespace srcrepair
             PS_CleanRegistry.Enabled = State;
             PS_SteamLang.Enabled = State;
             MNUWinMnuDisabler.Enabled = State;
-            MNUUpGameDB.Enabled = State;
         }
 
         /// <summary>
@@ -1492,8 +1491,12 @@ namespace srcrepair
                     MessageBox.Show(CoreLib.GetLocalizedString("AppLaunchedNotAdmin"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Properties.Settings.Default.AllowNonAdmDialog = false;
                 }
+                
                 // Блокируем контролы, требующие для своей работы прав админа...
                 ChangePrvControlState(false);
+                
+                // Проверяем наличие прав на запись в каталог...
+                MNUUpGameDB.Enabled = CoreLib.IsDirectoryWritable(GV.FullAppPath);
             }
 
             // Узнаем путь к установленному клиенту Steam...
