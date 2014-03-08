@@ -155,7 +155,7 @@
     <value>Общие настройки</value>
   </data>
   <data name="MO_UnSafeOps.Text" xml:space="preserve">
-    <value>Разрешать небезопасные методы очистки</value>
+    <value>Разрешить небезопасные методы очистки</value>
   </data>
   <data name="L_MO_CustDirName.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 13</value>
