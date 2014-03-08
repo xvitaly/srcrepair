@@ -255,10 +255,38 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Считывает из главного файла конфигурации Steam пути к установленным играм.
+        /// Получает список каталогов из точки монтирования.
+        /// </summary>
+        /// <param name="StartDir">Каталог монтирования</param>
+        private List<String> GetInstalledDirsFromFile(string StartDir)
+        {
+            // Создаём массив, в который будем помещать найденные пути...
+            List<String> Result = new List<String>();
+
+            // Начинаем обход каталога и получение поддиректорий...
+            try
+            {
+                DirectoryInfo SDir = new DirectoryInfo(Path.Combine(StartDir, Properties.Resources.SteamAppsFolderName, "common"));
+                DirectoryInfo[] SDirInfo = SDir.GetDirectories();
+                foreach (DirectoryInfo Di in SDirInfo)
+                {
+                    Result.Add(Di.FullName);
+                }
+            }
+            catch (Exception Ex)
+            {
+                CoreLib.WriteStringToLog(Ex.Message);
+            }
+
+            // Возвращаем сформированный массив...
+            return Result;
+        }
+
+        /// <summary>
+        /// Считывает из главного файла конфигурации Steam пути к дополнительным точкам монтирования.
         /// </summary>
         /// <param name="SteamPath">Путь к клиенту Steam</param>
-        private List<String> GetInstalledDirsFromFile(string SteamPath)
+        private List<String> GetOtherMountPoints(string SteamPath)
         {
             // Создаём массив, в который будем помещать найденные пути...
             List<String> Result = new List<String>();
@@ -282,11 +310,11 @@ namespace srcrepair
                         if (!(String.IsNullOrWhiteSpace(RdStr)))
                         {
                             // Ищем в строке путь установки...
-                            if (RdStr.IndexOf("installdir", StringComparison.CurrentCultureIgnoreCase) != -1)
+                            if (RdStr.IndexOf("BaseInstallFolder", StringComparison.CurrentCultureIgnoreCase) != -1)
                             {
                                 RdStr = CoreLib.CleanStrWx(RdStr, true);
                                 RdStr = RdStr.Remove(0, RdStr.IndexOf(" ") + 1);
-                                if (!(String.IsNullOrWhiteSpace(RdStr))) { try { DirectoryInfo DInfo = new DirectoryInfo(RdStr); Result.Add(DInfo.FullName); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } }
+                                if (!(String.IsNullOrWhiteSpace(RdStr))) { Result.Add(RdStr); }
                             }
                         }
                     }

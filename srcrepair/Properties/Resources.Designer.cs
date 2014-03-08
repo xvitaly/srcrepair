@@ -446,7 +446,7 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to steamapps.
+        ///   Looks up a localized string similar to SteamApps.
         /// </summary>
         internal static string SteamAppsFolderName {
             get {

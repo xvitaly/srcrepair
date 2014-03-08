@@ -236,7 +236,7 @@
     <value>Windows</value>
   </data>
   <data name="SteamAppsFolderName" xml:space="preserve">
-    <value>steamapps</value>
+    <value>SteamApps</value>
   </data>
   <data name="SteamExecBin" xml:space="preserve">
     <value>Steam.exe</value>
