@@ -577,7 +577,9 @@ namespace srcrepair
         /// Чистит строку от табуляций и лишних пробелов.
         /// </summary>
         /// <param name="RecvStr">Исходная строка</param>
-        public static string CleanStrWx(string RecvStr, bool CleanQuotes = false)
+        /// <param name="CleanQuotes">Задаёт параметры очистки кавычек</param>
+        /// <param name="CleanSlashes">Задаёт параметры очистки двойных слэшей</param>
+        public static string CleanStrWx(string RecvStr, bool CleanQuotes = false, bool CleanSlashes = false)
         {
             // Почистим от табуляций...
             while (RecvStr.IndexOf("\t") != -1)
@@ -597,6 +599,15 @@ namespace srcrepair
                 while (RecvStr.IndexOf('"') != -1)
                 {
                     RecvStr = RecvStr.Replace(@"""", "");
+                }
+            }
+
+            // Удаляем двойные слэши если разрешено...
+            if (CleanSlashes)
+            {
+                while (RecvStr.IndexOf(@"\\") != -1)
+                {
+                    RecvStr = RecvStr.Replace(@"\\", @"\");
                 }
             }
 

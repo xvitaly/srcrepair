@@ -312,7 +312,7 @@ namespace srcrepair
                             // Ищем в строке путь установки...
                             if (RdStr.IndexOf("BaseInstallFolder", StringComparison.CurrentCultureIgnoreCase) != -1)
                             {
-                                RdStr = CoreLib.CleanStrWx(RdStr, true);
+                                RdStr = CoreLib.CleanStrWx(RdStr, true, true);
                                 RdStr = RdStr.Remove(0, RdStr.IndexOf(" ") + 1);
                                 if (!(String.IsNullOrWhiteSpace(RdStr))) { Result.Add(RdStr); }
                             }
