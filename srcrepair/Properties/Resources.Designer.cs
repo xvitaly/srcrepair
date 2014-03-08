@@ -104,7 +104,7 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://bugs.easycoding.org/apprep/?action=new.
+        ///   Looks up a localized string similar to https://www.easycoding.org/apprep/?action=new.
         /// </summary>
         internal static string AppBtURL {
             get {

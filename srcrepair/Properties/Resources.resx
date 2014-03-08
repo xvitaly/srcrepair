@@ -245,7 +245,7 @@
     <value>wget</value>
   </data>
   <data name="AppBtURL" xml:space="preserve">
-    <value>http://bugs.easycoding.org/apprep/?action=new</value>
+    <value>https://www.easycoding.org/apprep/?action=new</value>
   </data>
   <data name="AHE_TemplateFile" xml:space="preserve">
     <value>srcrepair.Resources.HtTemplate.txt</value>
