@@ -3267,4 +3267,115 @@
   <data name="sv_motd_unload_on_dismissal" xml:space="preserve">
     <value>Включает / отключает автоматическую выгрузку ресурсов MOTD после закрытия окна игроком.</value>
   </data>
+  <data name="cash_player_get_killed" xml:space="preserve">
+    <value>Задаёт сумму, которую получит игрок в случае его убийства другим игроком.</value>
+  </data>
+  <data name="cash_player_respawn_amount" xml:space="preserve">
+    <value>Задаёт сумму, которую получит игрок при возрождении (если оно разрешено).</value>
+  </data>
+  <data name="mp_buy_allow_grenades" xml:space="preserve">
+    <value>Разрешить / запретить игрокам покупать гранаты через меню покупок.</value>
+  </data>
+  <data name="mp_buy_anywhere" xml:space="preserve">
+    <value>Разрешить / запретить осуществлять покупки в любом месте карты, а не только в зоне покупок.</value>
+  </data>
+  <data name="mp_buy_during_immunity" xml:space="preserve">
+    <value>Разрешить / запретить осуществлять покупки во время неуязвимости.</value>
+  </data>
+  <data name="mp_ct_default_grenades" xml:space="preserve">
+    <value>Указывает какие гранаты будут выданы игрокам команды Спецназа при возрождении. В случае если требуется выдать несколько, разделяйте их названия пробелом.</value>
+  </data>
+  <data name="mp_ct_default_melee" xml:space="preserve">
+    <value>Задаёт оружие ближнего боя по умолчанию, которое будет выдано игрокам команды Спецназа при возрождении. Внимание! Нож выдаётся всегда, даже если значение переменной пустое.</value>
+  </data>
+  <data name="mp_ct_default_primary" xml:space="preserve">
+    <value>Задаёт основное оружие, которое будет выдано игрокам команды Спецназа при возрождении.</value>
+  </data>
+  <data name="mp_ct_default_secondary" xml:space="preserve">
+    <value>Задаёт вторичное оружие (пистолеты), которое будет выдано игрокам команды Спецназа при возрождении.</value>
+  </data>
+  <data name="mp_damage_scale_ct_body" xml:space="preserve">
+    <value>Задаёт множитель урона при попадании в тело игрока команды Спецназа.</value>
+  </data>
+  <data name="mp_damage_scale_ct_head" xml:space="preserve">
+    <value>Задаёт множитель урона при попадании в голову игрока команды Спецназа.</value>
+  </data>
+  <data name="mp_damage_scale_t_body" xml:space="preserve">
+    <value>Задаёт множитель урона при попадании в тело игрока команды Террористов.</value>
+  </data>
+  <data name="mp_damage_scale_t_head" xml:space="preserve">
+    <value>Задаёт множитель урона при попадании в голову игрока команды Террористов.</value>
+  </data>
+  <data name="mp_default_team_winner_no_objective" xml:space="preserve">
+    <value>Позволяет переопределить определение победителя в случае если команды не выполнили задачу карты: -1 - по умолчанию, 0 - ничья, 2 - Террористы, 3 - Спецназ.</value>
+  </data>
+  <data name="mp_display_kill_assists" xml:space="preserve">
+    <value>Включить / отключить отображение информации о помощи в убийствах.</value>
+  </data>
+  <data name="mp_force_pick_time" xml:space="preserve">
+    <value>Задаёт время, в течение которого игрок может выбрать команду. По истечении сервер выберет игроку команду автоматически.</value>
+  </data>
+  <data name="mp_give_player_c4" xml:space="preserve">
+    <value>Включает / отключает автоматическую выдачу C4 произвольному игроку команды Террористов.</value>
+  </data>
+  <data name="mp_halftime" xml:space="preserve">
+    <value>Запрещает / разрешает смену команд по истечении половины раундов.</value>
+  </data>
+  <data name="mp_halftime_pausetimer" xml:space="preserve">
+    <value>При установке значения 1 перерыв будет длиться бесконечно.</value>
+  </data>
+  <data name="mp_radar_showall" xml:space="preserve">
+    <value>Задаёт параметры отображения игроков на радарах игроков: 0 - по умолчанию, 1 - обе команды, 2 - только Террористы, 3 - только Спецназ.</value>
+  </data>
+  <data name="mp_randomspawn" xml:space="preserve">
+    <value>Включает / отключает режим случайного возрождения для: 0 - по умолчанию, 1 - обе команды, 2 - только Террористы, 3 - только Спецназ.</value>
+  </data>
+  <data name="mp_respawnwavetime_ct" xml:space="preserve">
+    <value>Задаёт время между волнами возрождения для команды Спецназа.</value>
+  </data>
+  <data name="mp_respawnwavetime_t" xml:space="preserve">
+    <value>Задаёт время между волнами возрождения для команды Террористов.</value>
+  </data>
+  <data name="mp_respawn_immunitytime" xml:space="preserve">
+    <value>Задаёт время, в течение которого игрок после возрождения будет неуязвим.</value>
+  </data>
+  <data name="mp_respawn_on_death_ct" xml:space="preserve">
+    <value>Включить / отключить возрождение для убитых игроков команды Спецназа.</value>
+  </data>
+  <data name="mp_respawn_on_death_t" xml:space="preserve">
+    <value>Включить / отключить возрождение для убитых игроков команды Террористов.</value>
+  </data>
+  <data name="mp_roundtime_defuse" xml:space="preserve">
+    <value>Задаёт длительность (в секундах) раунда в режиме обезвреживания бомбы.</value>
+  </data>
+  <data name="mp_roundtime_hostage" xml:space="preserve">
+    <value>Задаёт длительность (в секундах) раунда в режиме спасения заложников.</value>
+  </data>
+  <data name="mp_teammates_are_enemies" xml:space="preserve">
+    <value>Включить режим, при котором товарищи по команде будут считаться врагами: за их убийство будут начисляться очки; они будут подсвечены красным.</value>
+  </data>
+  <data name="mp_t_default_grenades" xml:space="preserve">
+    <value>Указывает какие гранаты будут выданы игрокам команды Террористов при возрождении. В случае если требуется выдать несколько, разделяйте их названия пробелом.</value>
+  </data>
+  <data name="mp_t_default_melee" xml:space="preserve">
+    <value>Задаёт оружие ближнего боя по умолчанию, которое будет выдано игрокам команды Террористов при возрождении. Внимание! Нож выдаётся всегда, даже если значение переменной пустое.</value>
+  </data>
+  <data name="mp_t_default_primary" xml:space="preserve">
+    <value>Задаёт основное оружие, которое будет выдано игрокам команды Террористов при возрождении.</value>
+  </data>
+  <data name="mp_t_default_secondary" xml:space="preserve">
+    <value>Задаёт вторичное оружие (пистолеты), которое будет выдано игрокам команды Террористов при возрождении.</value>
+  </data>
+  <data name="mp_use_respawn_waves" xml:space="preserve">
+    <value>Включить / отключить режим возрождения волнами (как в Team Fortress 2).</value>
+  </data>
+  <data name="mp_warmup_pausetimer" xml:space="preserve">
+    <value>При установке значения 1 подготовка будет длиться бесконечно.</value>
+  </data>
+  <data name="mp_weapons_allow_map_placed" xml:space="preserve">
+    <value>Включает / отключает сохранение выброшенного оружия на карте между раундами.</value>
+  </data>
+  <data name="mp_weapons_glow_on_ground" xml:space="preserve">
+    <value>Включает / отключает эффект свечения выброшенного оружия на карте (видно через стены).</value>
+  </data>
 </root>
