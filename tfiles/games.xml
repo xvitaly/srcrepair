@@ -322,4 +322,11 @@
     <VFDir>insurgency</VFDir>
     <SID>222880</SID>
   </Game>
+  <Game Name="No More Room in Hell">
+    <HasVF>1</HasVF>
+    <DirName>nmrih</DirName>
+    <SmallName>nmrih</SmallName>
+    <VFDir>nmrih</VFDir>
+    <SID>224260</SID>
+  </Game>
 </Games>
