@@ -149,7 +149,7 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://www.easycoding.org/projects/srcrepair/help.
+        ///   Looks up a localized string similar to https://www.easycoding.org/projects/srcrepair/help.
         /// </summary>
         internal static string AppURLHelpSite {
             get {
@@ -167,7 +167,7 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://www.easycoding.org/.
+        ///   Looks up a localized string similar to https://www.easycoding.org/.
         /// </summary>
         internal static string AppURLOffSite {
             get {
@@ -176,7 +176,7 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://www.easycoding.org/projects/srcrepair#respond.
+        ///   Looks up a localized string similar to https://www.easycoding.org/projects/srcrepair#respond.
         /// </summary>
         internal static string AppURLReply {
             get {

@@ -97,7 +97,7 @@ namespace srcrepair.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://www.easycoding.org/files/srcrepair/updates/list.txt")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://www.easycoding.org/files/srcrepair/updates/list.txt")]
         public string UpdateChURI {
             get {
                 return ((string)(this["UpdateChURI"]));
@@ -205,7 +205,7 @@ namespace srcrepair.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://www.easycoding.org/files/srcrepair/updates/games.xml")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://www.easycoding.org/files/srcrepair/updates/games.xml")]
         public string UpdateGameDBFile {
             get {
                 return ((string)(this["UpdateGameDBFile"]));
@@ -214,7 +214,7 @@ namespace srcrepair.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://www.easycoding.org/files/srcrepair/updates/games.md5")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://www.easycoding.org/files/srcrepair/updates/games.md5")]
         public string UpdateGameDBHash {
             get {
                 return ((string)(this["UpdateGameDBHash"]));
