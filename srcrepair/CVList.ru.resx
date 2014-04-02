@@ -3378,4 +3378,19 @@
   <data name="mp_weapons_glow_on_ground" xml:space="preserve">
     <value>Включает / отключает эффект свечения выброшенного оружия на карте (видно через стены).</value>
   </data>
+  <data name="host_info_show" xml:space="preserve">
+    <value>Задаёт режим ответа сервера клиентам. 0 - нет ответа, 1 или 2 - стандартный ответ.</value>
+  </data>
+  <data name="host_name_store" xml:space="preserve">
+    <value>Включает / отключает отправку клиентам названия игрового сервера.</value>
+  </data>
+  <data name="host_players_show" xml:space="preserve">
+    <value>1 - не выводит информации об игроках. 2 - выводить стандартную информацию (никнеймы игроков и их счёт).</value>
+  </data>
+  <data name="sv_max_queries_sec" xml:space="preserve">
+    <value>Задаёт максимальное число запросов к серверу в секунду с одного IP адреса.</value>
+  </data>
+  <data name="sv_max_queries_sec_global" xml:space="preserve">
+    <value>Задаёт максимальное число запросов к серверу в секунду глобально (для всех).</value>
+  </data>
 </root>
