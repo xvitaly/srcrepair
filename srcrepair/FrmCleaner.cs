@@ -32,18 +32,20 @@ namespace srcrepair
 {
     public partial class frmCleaner : Form
     {
-        public frmCleaner(List<String> CD, string CI, bool RO, bool NA)
+        public frmCleaner(List<String> CD, string CI, bool RO, bool NA, bool RS)
         {
             InitializeComponent();
             CleanDirs = CD;
             CleanInfo = CI;
             IsReadOnly = RO;
             NoAutoCheck = NA;
+            IsRecursive = RS;
         }
 
         private List<String> CleanDirs; // Здесь будем хранить каталог для очистки,...
         private bool IsReadOnly;
         private bool NoAutoCheck;
+        private bool IsRecursive;
         private string CleanInfo; // ...и информацию о том, что будем очищать.
         private long TotalSize = 0; // Задаём и обнуляем счётчик общего размера удаляемых файлов...
 
@@ -51,7 +53,8 @@ namespace srcrepair
         /// Ищет и добавляет файлы для удаления в таблицу модуля очистки.
         /// </summary>
         /// <param name="CleanDirs">Каталоги для выполнения очистки с маской имени</param>
-        private void DetectFilesForCleanup(List<String> CleanDirs)
+        /// <param name="Recursive">Включает / отключает рекурсивный поиск</param>
+        private void DetectFilesForCleanup(List<String> CleanDirs, bool Recursive)
         {
             foreach (string DirMs in CleanDirs)
             {
@@ -90,27 +93,30 @@ namespace srcrepair
                             TotalSize += DItem.Length; // Инкрементируем общий счётчик...
                         }
 
-                        try
+                        if (Recursive)
                         {
-                            // Пройдём по подкаталогам рекурсивно. Получаем список вложенных...
-                            List<String> SubDirs = new List<string>();
-
-                            // Обойдём вложенные каталоги...
-                            foreach (DirectoryInfo Dir in DInfo.GetDirectories())
+                            try
                             {
-                                SubDirs.Add(Path.Combine(Dir.FullName, CleanMask));
-                            }
+                                // Пройдём по подкаталогам рекурсивно. Получаем список вложенных...
+                                List<String> SubDirs = new List<string>();
 
-                            // Проверим наличие элементов для обхода...
-                            if (SubDirs.Count > 0)
-                            {
-                                // Вызовем функцию рекурсивно...
-                                DetectFilesForCleanup(SubDirs);
+                                // Обойдём вложенные каталоги...
+                                foreach (DirectoryInfo Dir in DInfo.GetDirectories())
+                                {
+                                    SubDirs.Add(Path.Combine(Dir.FullName, CleanMask));
+                                }
+
+                                // Проверим наличие элементов для обхода...
+                                if (SubDirs.Count > 0)
+                                {
+                                    // Вызовем функцию рекурсивно...
+                                    DetectFilesForCleanup(SubDirs, true);
+                                }
                             }
-                        }
-                        catch (Exception Ex)
-                        {
-                            CoreLib.WriteStringToLog(Ex.Message);
+                            catch (Exception Ex)
+                            {
+                                CoreLib.WriteStringToLog(Ex.Message);
+                            }
                         }
                     }
                     catch (Exception Ex)
@@ -323,7 +329,7 @@ namespace srcrepair
         
         private void GttWrk_DoWork(object sender, DoWorkEventArgs e)
         {
-            DetectFilesForCleanup(CleanDirs);
+            DetectFilesForCleanup(CleanDirs, IsRecursive);
         }
 
         private void GttWrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

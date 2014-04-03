@@ -248,9 +248,10 @@ namespace srcrepair
         /// <param name="LText">Текст заголовка</param>
         /// <param name="ReadOnly">Пользователю будет запрещено изменять выбор удаляемых файлов</param>
         /// <param name="NoAuto">Включает / отключает автовыбор файлов флажками</param>
-        private void OpenCleanupWindow(List<String> Paths, string LText, bool ReadOnly = false, bool NoAuto = false)
+        /// <param name="Recursive">Включает / отключает рекурсивный обход</param>
+        private void OpenCleanupWindow(List<String> Paths, string LText, bool ReadOnly = false, bool NoAuto = false, bool Recursive = true)
         {
-            frmCleaner FCl = new frmCleaner(Paths, LText, ReadOnly, NoAuto);
+            frmCleaner FCl = new frmCleaner(Paths, LText, ReadOnly, NoAuto, Recursive);
             FCl.ShowDialog();
         }
 
