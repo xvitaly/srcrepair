@@ -2311,7 +2311,7 @@ namespace srcrepair
             // Удаляем все скриншоты...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "screenshots", "*.*"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), false, false, false);
         }
 
         private void PS_RemDemos_Click(object sender, EventArgs e)
