@@ -678,5 +678,25 @@ namespace srcrepair
             catch { Result = false; }
             return Result;
         }
+
+        /// <summary>
+        /// Конвертирует дату и время из формата DateTime .NET в Unix-формат.
+        /// </summary>
+        /// <param name="DTime">Дата и время в формате DateTime</param>
+        /// <returns>Дата и время в формате UnixTime</returns>
+        public static double DateTime2Unix(DateTime DTime)
+        {
+            return (DTime - new DateTime(1970, 1, 1, 0, 0, 0).ToLocalTime()).TotalSeconds;
+        }
+
+        /// <summary>
+        /// Конвертирует дату и время из Unix-формата в DateTime.
+        /// </summary>
+        /// <param name="UnixTime">Дата и время в Unix-формате</param>
+        /// <returns>Дата и время в формате DateTime</returns>
+        public static DateTime Unix2DateTime(double UnixTime)
+        {
+            return (new DateTime(1970, 1, 1, 0, 0, 0, 0)).AddSeconds(UnixTime);
+        }
     }
 }
