@@ -659,8 +659,7 @@ namespace srcrepair
         /// <returns>Дата и время в формате UnixTime</returns>
         public static string DateTime2Unix(DateTime DTime)
         {
-            return (DTime - new DateTime(1970, 1, 1, 0, 0, 0).ToLocalTime()).TotalSeconds.ToString();
-            //return Math.Round((DTime - new DateTime(1970, 1, 1, 0, 0, 0).ToLocalTime()).TotalSeconds, 0).ToString();
+            return Math.Round((DTime - new DateTime(1970, 1, 1, 0, 0, 0).ToLocalTime()).TotalSeconds, 0).ToString();
         }
 
         /// <summary>
