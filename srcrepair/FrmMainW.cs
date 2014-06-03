@@ -94,7 +94,7 @@ namespace srcrepair
                 try
                 {
                     // Копируем оригинальный файл в файл бэкапа...
-                    File.Copy(Path.Combine(ConfigDir, ConfName), Path.Combine(BackUpDir, ConfName + "." + CoreLib.WriteDateToString(DateTime.Now, true)), true);
+                    File.Copy(Path.Combine(ConfigDir, ConfName), Path.Combine(BackUpDir, ConfName + "." + CoreLib.DateTime2Unix(DateTime.Now)), true);
                 }
                 catch (Exception Ex)
                 {
@@ -223,7 +223,7 @@ namespace srcrepair
         private void CreateRegBackUpNow(string RKey, string FileName, string DestDir)
         {
             // Генерируем строку с параметрами...
-            string Params = String.Format("/ea \"{0}\" {1}", Path.Combine(DestDir, String.Format("{0}_{1}.reg", FileName, CoreLib.WriteDateToString(DateTime.Now, true))), RKey);
+            string Params = String.Format("/ea \"{0}\" {1}", Path.Combine(DestDir, String.Format("{0}_{1}.reg", FileName, CoreLib.DateTime2Unix(DateTime.Now))), RKey);
             // Запускаем и ждём завершения...
             CoreLib.StartProcessAndWait("regedit.exe", Params);
         }
@@ -1322,7 +1322,7 @@ namespace srcrepair
                 ListViewItem LvItem = new ListViewItem(BufName);
                 LvItem.SubItems.Add(Buf);
                 LvItem.SubItems.Add(CoreLib.SclBytes(DItem.Length));
-                LvItem.SubItems.Add(CoreLib.WriteDateToString(DItem.CreationTime, false));
+                LvItem.SubItems.Add(DItem.CreationTime.ToString());
                 LvItem.SubItems.Add(DItem.Name);
                 if (BU_LVTable.InvokeRequired) { this.Invoke((MethodInvoker)delegate() { BU_LVTable.Items.Add(LvItem); }); } else { BU_LVTable.Items.Add(LvItem); }
             }

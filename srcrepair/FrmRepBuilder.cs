@@ -56,7 +56,7 @@ namespace srcrepair
             }
             // Начинаем создавать отчёт...
             string TempDir = Path.Combine(Path.GetTempPath(), "repbuilder");
-            string CrDt = CoreLib.WriteDateToString(DateTime.Now, true);
+            string CrDt = CoreLib.DateTime2Unix(DateTime.Now);
             if (!Directory.Exists(TempDir)) { Directory.CreateDirectory(TempDir); }
             string FileName = String.Format("report_{0}", CrDt);
             string RepName = FileName + ".txt";

@@ -82,7 +82,7 @@ namespace srcrepair
                             LvItem.Checked = !NoAutoCheck; // Помечаем флажком...
                             LvItem.ToolTipText = Path.Combine(CleanDir, DItem.Name); // Указываем полный путь во всплывающую подсказку...
                             LvItem.SubItems.Add(CoreLib.SclBytes(DItem.Length)); // Вычисляем размер...
-                            LvItem.SubItems.Add(CoreLib.WriteDateToString(DItem.LastWriteTime, false)); // Указываем дату изменения...
+                            LvItem.SubItems.Add(DItem.LastWriteTime.ToString()); // Указываем дату изменения...
                             
                             if (CM_FTable.InvokeRequired)
                             {
@@ -210,7 +210,7 @@ namespace srcrepair
                 {
                     try
                     {
-                        using (ZipFile ZBkUp = new ZipFile(Path.Combine(GV.FullBackUpDirPath, "Container_" + CoreLib.WriteDateToString(DateTime.Now, true) + ".bud"), Encoding.UTF8))
+                        using (ZipFile ZBkUp = new ZipFile(Path.Combine(GV.FullBackUpDirPath, "Container_" + CoreLib.DateTime2Unix(DateTime.Now) + ".bud"), Encoding.UTF8))
                         {
                             ZBkUp.AddFiles(DeleteQueue, true, "");
                             ZBkUp.Save();

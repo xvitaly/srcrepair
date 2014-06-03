@@ -345,7 +345,7 @@ namespace srcrepair
                     using (StreamWriter DFile = new StreamWriter(DebugFileName, true))
                     {
                         // Делаем запись...
-                        DFile.WriteLine(String.Format("{0}: {1}", WriteDateToString(DateTime.Now, false), TextMessage));
+                        DFile.WriteLine(String.Format("{0}: {1}", DateTime.Now.ToString(), TextMessage));
                         // Закрываем файл...
                         DFile.Close();
                     }
@@ -660,6 +660,7 @@ namespace srcrepair
         public static string DateTime2Unix(DateTime DTime)
         {
             return (DTime - new DateTime(1970, 1, 1, 0, 0, 0).ToLocalTime()).TotalSeconds.ToString();
+            //return Math.Round((DTime - new DateTime(1970, 1, 1, 0, 0, 0).ToLocalTime()).TotalSeconds, 0).ToString();
         }
 
         /// <summary>
