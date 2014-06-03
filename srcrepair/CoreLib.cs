@@ -170,33 +170,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Преобразует число в строку с добавлением незначащих нулей перед
-        /// числами с 0 до 9 включительно. Используется для служебных целей.
-        /// </summary>
-        /// <param name="Numb">Число</param>
-        /// <returns>Число с незначащим нулём в виде строки</returns>
-        private static string SimpleIntStrWNull(int Numb)
-        {
-            string Result;
-            if ((Numb >= 0) && (Numb <= 9)) { Result = "0" + Numb.ToString(); } else { Result = Numb.ToString(); }
-            return Result;
-        }
-
-        /// <summary>
-        /// Генерирует ДДММГГЧЧММСС из указанного времени в строку.
-        /// Применяется для служебных целей.
-        /// </summary>
-        /// <param name="XDate">Дата и время для преобразования</param>
-        /// <param name="MicroDate">Микро или по ГОСТ</param>
-        /// <returns>Строка в выбранном формате</returns>
-        public static string WriteDateToString(DateTime XDate, bool MicroDate)
-        {
-            return String.Format(MicroDate ? "{0}{1}{2}{3}{4}{5}" : "{0}.{1}.{2} {3}:{4}:{5}", SimpleIntStrWNull(XDate.Day),
-                SimpleIntStrWNull(XDate.Month), SimpleIntStrWNull(XDate.Year), SimpleIntStrWNull(XDate.Hour),
-                SimpleIntStrWNull(XDate.Minute), SimpleIntStrWNull(XDate.Second));
-        }
-
-        /// <summary>
         /// Проверяет наличие не-ASCII-символов в строке.
         /// </summary>
         /// <param name="Path">Путь для проверки</param>
