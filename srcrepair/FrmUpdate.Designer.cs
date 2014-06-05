@@ -29,17 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdate));
-            this.LCurrVersion = new System.Windows.Forms.Label();
+            this.LVersion = new System.Windows.Forms.Label();
             this.LWelcome = new System.Windows.Forms.Label();
             this.DnlInstall = new System.Windows.Forms.Button();
-            this.LAvailVersion = new System.Windows.Forms.Label();
             this.DnlProgBar = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
-            // LCurrVersion
+            // LVersion
             // 
-            resources.ApplyResources(this.LCurrVersion, "LCurrVersion");
-            this.LCurrVersion.Name = "LCurrVersion";
+            resources.ApplyResources(this.LVersion, "LVersion");
+            this.LVersion.Name = "LVersion";
             // 
             // LWelcome
             // 
@@ -53,12 +52,6 @@
             this.DnlInstall.UseVisualStyleBackColor = true;
             this.DnlInstall.Click += new System.EventHandler(this.DnlInstall_Click);
             // 
-            // LAvailVersion
-            // 
-            this.LAvailVersion.ForeColor = System.Drawing.Color.Green;
-            resources.ApplyResources(this.LAvailVersion, "LAvailVersion");
-            this.LAvailVersion.Name = "LAvailVersion";
-            // 
             // DnlProgBar
             // 
             resources.ApplyResources(this.DnlProgBar, "DnlProgBar");
@@ -69,10 +62,9 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.DnlProgBar);
-            this.Controls.Add(this.LAvailVersion);
             this.Controls.Add(this.DnlInstall);
             this.Controls.Add(this.LWelcome);
-            this.Controls.Add(this.LCurrVersion);
+            this.Controls.Add(this.LVersion);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -86,10 +78,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label LCurrVersion;
+        private System.Windows.Forms.Label LVersion;
         private System.Windows.Forms.Label LWelcome;
         private System.Windows.Forms.Button DnlInstall;
-        private System.Windows.Forms.Label LAvailVersion;
         private System.Windows.Forms.ProgressBar DnlProgBar;
     }
 }

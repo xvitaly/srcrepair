@@ -50,8 +50,7 @@ namespace srcrepair
             // Заполняем...
             this.Text = String.Format(this.Text, GV.AppName);
             LWelcome.Text = String.Format(LWelcome.Text, GV.AppName);
-            LCurrVersion.Text = String.Format(LCurrVersion.Text, GV.AppVersionInfo);
-            LAvailVersion.Text = String.Format(LAvailVersion.Text, AppAvailVersion);
+            LVersion.Text = String.Format(LVersion.Text, AppAvailVersion);
         }
 
         private void FileDownloader_Completed(object sender, AsyncCompletedEventArgs e)
