@@ -6,7 +6,7 @@ sprays into the game with one click.
 
 **License**: GNU GPL version 3.
 
-**Supported OS**: Windows XP SP3, Vista SP1+, 7, 8 (all editions except Starter).
+**Supported OS**: Windows XP SP3, Vista SP1+, 7, 8, 8.1 (all editions except Starter).
 
 **Supported platforms**: x86, x64 (auto select).
 
@@ -14,7 +14,7 @@ sprays into the game with one click.
 
 Downloads
 =========
-Download application (this link always contains latest version): http://sourceforge.net/projects/srcrepair/files/latest/download
+Download application (this link always contains latest version): https://www.easycoding.org/files/srcrepair_latest.exe
 
 Full archive: http://sourceforge.net/projects/srcrepair/files/.
 
@@ -49,7 +49,7 @@ Supported mods and third-party Source engine games:
  * Age of Chivalry;
  * D.I.P.R.I.P.: Warm Up;
  * Dystopia;
- * Insurgency;
+ * Insurgency: Modern Infantry Combat;
  * Pirates, Vikings, & Knights II;
  * Smashball;
  * Synergy;
@@ -66,4 +66,6 @@ Supported mods and third-party Source engine games:
  * Vindictus;
  * Bloody Good Time;
  * Revelations 2012;
- * MINERVA: Metastasis.
+ * MINERVA: Metastasis;
+ * Insurgency;
+ * No More Room in Hell.
