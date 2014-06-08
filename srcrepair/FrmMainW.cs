@@ -3247,7 +3247,7 @@ namespace srcrepair
             // Удаляем кэш Steam Guard...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "ssfn*"));
-            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), false, false, false);
         }
 
         private void MNUExtClnOldBin_Click(object sender, EventArgs e)
