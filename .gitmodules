@@ -1,0 +1,3 @@
+[submodule "dnzip"]
+	path = dnzip
+	url = git@github.com:xvitaly/dnzip.git
