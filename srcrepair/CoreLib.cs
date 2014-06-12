@@ -671,5 +671,14 @@ namespace srcrepair
         {
             return (new DateTime(1970, 1, 1, 0, 0, 0, 0)).AddSeconds(UnixTime);
         }
+
+        /// <summary>
+        /// Определяет архитектуру операционной системы.
+        /// </summary>
+        /// <returns>Артитектура ОС</returns>
+        public static string GetSystemArch()
+        {
+            return Environment.Is64BitOperatingSystem ? "x86_64" : "x86";
+        }
     }
 }

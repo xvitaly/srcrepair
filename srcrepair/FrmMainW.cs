@@ -1698,9 +1698,9 @@ namespace srcrepair
 
             // Вставляем информацию о версии в заголовок формы...
             #if DEBUG
-            this.Text = String.Format(this.Text, GV.AppName, Properties.Resources.PlatformFriendlyName, GV.AppVersionInfo + " (debug)", Assmbl.GetName().ProcessorArchitecture.ToString());
+            this.Text = String.Format(this.Text, GV.AppName, Properties.Resources.PlatformFriendlyName, GV.AppVersionInfo + " (debug)", CoreLib.GetSystemArch());
             #else
-            this.Text = String.Format(this.Text, GV.AppName, Properties.Resources.PlatformFriendlyName, GV.AppVersionInfo, Assmbl.GetName().ProcessorArchitecture.ToString());
+            this.Text = String.Format(this.Text, GV.AppName, Properties.Resources.PlatformFriendlyName, GV.AppVersionInfo, CoreLib.GetSystemArch());
             #endif
 
             // Генерируем User-Agent для SRC Repair...
