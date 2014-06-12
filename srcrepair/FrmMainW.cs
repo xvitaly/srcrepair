@@ -1697,7 +1697,6 @@ namespace srcrepair
             GV.AppVersionInfo = Assmbl.GetName().Version.ToString();
 
             // Вставляем информацию о версии в заголовок формы...
-            //this.Text += " (version " + GV.AppVersionInfo + ")";
             #if DEBUG
             this.Text = String.Format(this.Text, GV.AppName, Properties.Resources.PlatformFriendlyName, GV.AppVersionInfo + " (debug)", Assmbl.GetName().ProcessorArchitecture.ToString());
             #else
