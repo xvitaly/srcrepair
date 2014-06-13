@@ -14,24 +14,20 @@
 ; Более подробная инфорация о программе в readme.txt, о лицензии - в GPL.txt.
 
 [Setup]
-; NOTE: The value of AppId uniquely identifies this application.
-; Do not use the same AppId value in installers for other applications.
-; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
+; Задаём основные параметры...
 AppId={{77A71DAB-56AA-4F33-BDE8-F00798468B9D}
 AppName=SRC Repair
 AppVerName=SRC Repair
 AppPublisher=EasyCoding Team
 AppPublisherURL=http://www.easycoding.org/
-; AppVersion отображается в Установка/Удаление программ в дополнительной информации.
 AppVersion=18.0.0.1476
 AppSupportURL=http://code.google.com/p/srcrepair/wiki/Support
-AppUpdatesURL=http://code.google.com/p/srcrepair/downloads/list
+AppUpdatesURL=http://code.google.com/p/srcrepair/wiki/Downloads
 DefaultDirName={code:GetDefRoot}\SRC Repair
 DefaultGroupName=SRC Repair
 AllowNoIcons=yes
 SourceDir=C:\VSBuilds
 LicenseFile=GPL.txt
-;InfoBeforeFile=readme.txt
 OutputDir=C:\VSBuilds
 OutputBaseFilename=srcrepair_180_final
 SetupIconFile=srcrepair.ico
@@ -39,13 +35,9 @@ UninstallDisplayIcon={app}\srcrepair.exe
 Compression=lzma2
 SolidCompression=yes
 PrivilegesRequired=none
-; "ArchitecturesInstallIn64BitMode=x64" requests that the install be
-; done in "64-bit mode" on x64, meaning it should use the native
-; 64-bit Program Files directory and the 64-bit view of the registry.
-; On all other architectures it will install in "32-bit mode".
 ArchitecturesInstallIn64BitMode=x64
 
-; Тут указываем данные, которые будут добавлены в свойства установщика
+; Здесь указываем данные, которые будут добавлены в свойства установщика...
 VersionInfoVersion=18.0.0.1476
 VersionInfoDescription=SRC Repair Setup
 VersionInfoCopyright=(c) 2005-2014 EasyCoding Team. All rights reserved.
@@ -58,69 +50,71 @@ Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl,ru-RU.isl"; InfoB
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
-;Name: "copylicence"; Description: "Скопировать лицензионное соглашение в папку SRC Repair"; GroupDescription: "Дополнительные возможности:"
-;Name: "copyreadme"; Description: "Скопировать файл ReadMe в папку SRC Repair"; GroupDescription: "Дополнительные возможности:"
-;Name: "inst7z"; Description: "{cm:InstLZMAPlugin}"; GroupDescription: "{cm:AdvFeatGroupDesc}"
 Name: "betashortuts"; Description: "{cm:InstCreateLocShcuts}"; GroupDescription: "{cm:AdvFeatGroupDesc}"
-;Name: "isexpf"; Description: "{cm:InstExpFeatures}"; GroupDescription: "{cm:AdvFeatGroupDesc}"; Flags: unchecked
 Name: "insdebginf"; Description: "{cm:InstDebugInfo}"; GroupDescription: "{cm:AdvFeatGroupDesc}"; Flags: unchecked
 
 [Files]
 ; Копируем библиотеку, используемую для скачивания файлов...
 Source: "dll\isxdl.dll"; DestDir: {tmp}; Flags: dontcopy
+
 ; Устанавливаем readme, файл лицензии и список изменений...
 Source: "GPL.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "readme.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "readme_en.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "changelog.txt"; DestDir: "{app}"; Flags: ignoreversion
+
 ; Копируем файл со списком поддерживаемых игр и их параметрами...
 Source: "games.xml"; DestDir: "{app}"; Flags: ignoreversion
+
 ; Копируем открытый ключ...
 Source: "pubkey.asc"; DestDir: "{app}"; Flags: ignoreversion
+
 ; Копируем модуль поддержки сжатия (собран как AnyCPU)...
 Source: "Ionic.Zip.Reduced.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "Ionic.Zip.Reduced.dll.sig"; DestDir: "{app}"; Flags: ignoreversion
-; Устанавливаем 32-битную версию...
-Source: "srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion; Check: not Is64BitInstallMode
-Source: "srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion; Check: not Is64BitInstallMode; Tasks: insdebginf
-Source: "srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Check: not Is64BitInstallMode
-Source: "ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: not Is64BitInstallMode
-; Устанавливаем 64-битную версию...
-Source: "x64\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion; Check: Is64BitInstallMode
-Source: "x64\srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion; Check: Is64BitInstallMode; Tasks: insdebginf
-Source: "x64\srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Check: Is64BitInstallMode
-Source: "x64\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs; Check: Is64BitInstallMode
+
+; Устанавливаем бинарники приложения...
+Source: "srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion; Tasks: insdebginf
+Source: "srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion
+Source: "ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs
+
 ; Копируем файл стандартных настроек программы...
 Source: "srcrepair.exe.config"; DestDir: "{app}"; Flags: ignoreversion
+
 ; Устанавливаем остальные файлы...
 Source: "cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
-;Source: "nfx\*"; DestDir: "{app}\nfx\"; Flags: ignoreversion recursesubdirs createallsubdirs
-; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
 ; Создаём ярлык для приложения...
 Name: "{group}\SRC Repair"; Filename: "{app}\srcrepair.exe"
+
 ; Создаём ярлыки для файлов с лицензионным соглашением и ReadMe...
 Name: "{group}\{cm:ShcLocTexts}\{cm:ShcLicenseAgrr}"; Filename: "{app}\GPL.txt"
 Name: "{group}\{cm:ShcLocTexts}\{cm:ShcReadme}"; Filename: "{app}\{cm:ShcReadmeFile}"
 Name: "{group}\{cm:ShcLocTexts}\{cm:ShcChlog}"; Filename: "{app}\changelog.txt"
+
 ; Создаём ярлыки для запуска локализованных версий (только если пользователь выбрал этот пункт)...
 Name: "{group}\{cm:ShcLocFldr}\SRC Repair ({cm:ShcMLnRU})"; Filename: "{app}\srcrepair.exe"; Parameters: "/lang ru"; Tasks: betashortuts
 Name: "{group}\{cm:ShcLocFldr}\SRC Repair ({cm:ShcMLnEN})"; Filename: "{app}\srcrepair.exe"; Parameters: "/lang en"; Tasks: betashortuts
+
 ; Создаём стандартные ярлыки для справки и удаления...
 Name: "{group}\{cm:ShcLocTexts}\{cm:ProgramOnTheWeb,SRC Repair}"; Filename: "http://www.easycoding.org/projects/srcrepair"
 Name: "{group}\{cm:UninstallProgram,SRC Repair}"; Filename: "{uninstallexe}"
+
 ; Создаём ярлык для багтрекера...
 Name: "{group}\{cm:RepAppErrText}"; Filename: "http://code.google.com/p/srcrepair/wiki/BugTracker"
+
 ; Создаём ярлык на рабочем столе (если выбрано)...
 Name: "{commondesktop}\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: desktopicon
+
 ; Создаём ярлык на панели быстрого запуска (если выбрано)...
 Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: quicklaunchicon
+
 ; Создаём ярлык для установщика среды Microsoft .NET Framework 4...
 Name: "{group}\{cm:ShcNETFx}"; Filename: "{cm:ShcNFxUrl}"
 
 [Run]
-;Filename: "{app}\nfx\dotNetFx40_Full_setup.exe"; Description: "{cm:ShcNETFx}"; Flags: nowait postinstall skipifsilent unchecked
 Filename: "{app}\srcrepair.exe"; Description: "{cm:LaunchProgram,SRC Repair}"; Flags: nowait postinstall skipifsilent
 
 [Code]
