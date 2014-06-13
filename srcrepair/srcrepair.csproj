@@ -53,9 +53,6 @@
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Ionic.Zip.Reduced">
-      <HintPath>.\Ionic.Zip.Reduced.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -468,6 +465,12 @@
     <None Include="Resources\arrow.png" />
     <EmbeddedResource Include="Resources\HtTemplate.txt" />
     <Content Include="TF2Repair.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dnzip\dnzip.csproj">
+      <Project>{E0160ED9-C3F0-40B0-A5C0-2D653287AE3F}</Project>
+      <Name>dnzip</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
