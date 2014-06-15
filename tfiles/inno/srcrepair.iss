@@ -26,9 +26,7 @@ AppUpdatesURL=http://code.google.com/p/srcrepair/wiki/Downloads
 DefaultDirName={code:GetDefRoot}\SRC Repair
 DefaultGroupName=SRC Repair
 AllowNoIcons=yes
-SourceDir=C:\VSBuilds
 LicenseFile=GPL.txt
-OutputDir=C:\VSBuilds
 OutputBaseFilename=srcrepair_180_final
 SetupIconFile=srcrepair.ico
 UninstallDisplayIcon={app}\srcrepair.exe
@@ -55,7 +53,7 @@ Name: "insdebginf"; Description: "{cm:InstDebugInfo}"; GroupDescription: "{cm:Ad
 
 [Files]
 ; Копируем библиотеку, используемую для скачивания файлов...
-Source: "dll\isxdl.dll"; DestDir: {tmp}; Flags: dontcopy
+Source: "isxdl.dll"; DestDir: {tmp}; Flags: dontcopy
 
 ; Устанавливаем readme, файл лицензии и список изменений...
 Source: "GPL.txt"; DestDir: "{app}"; Flags: ignoreversion
