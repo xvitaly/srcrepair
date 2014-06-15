@@ -480,7 +480,9 @@
     </Content>
     <None Include="Resources\arrow.png" />
     <EmbeddedResource Include="Resources\HtTemplate.txt" />
-    <Content Include="srcrepair.ico" />
+    <Content Include="srcrepair.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\dnzip\dnzip.csproj">
