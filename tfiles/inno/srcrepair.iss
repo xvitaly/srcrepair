@@ -69,6 +69,7 @@ Source: "pubkey.asc"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Копируем модуль поддержки сжатия (собран как AnyCPU)...
 Source: "Ionic.Zip.Reduced.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "Ionic.Zip.Reduced.dll.pdb"; DestDir: "{app}"; Flags: ignoreversion; Tasks: insdebginf
 Source: "Ionic.Zip.Reduced.dll.sig"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Устанавливаем бинарники приложения...
