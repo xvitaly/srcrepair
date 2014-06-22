@@ -329,4 +329,11 @@
     <VFDir>nmrih</VFDir>
     <SID>224260</SID>
   </Game>
+  <Game Name="Contagion">
+    <HasVF>1</HasVF>
+    <DirName>Contagion</DirName>
+    <SmallName>contagion</SmallName>
+    <VFDir>contagion</VFDir>
+    <SID>238430</SID>
+  </Game>
 </Games>
