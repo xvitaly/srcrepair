@@ -678,7 +678,7 @@ namespace srcrepair
         /// <returns>Артитектура ОС</returns>
         public static string GetSystemArch()
         {
-            return Environment.Is64BitOperatingSystem ? "x86_64" : "x86";
+            return Environment.Is64BitOperatingSystem ? "Amd64" : "x86";
         }
     }
 }
