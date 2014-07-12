@@ -108,10 +108,17 @@ namespace srcrepair
         {
             try
             {
-                DnlInstall.Visible = false; // Прячем кнопку...
-                DnlProgBar.Visible = true; // Отображаем диалог прогресса...
-                this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI)));
-                DownloadUpdate(this.UpdateURI, this.UpdateFileName);
+                if (!WrkChkDb.IsBusy && !WrkChkApp.IsBusy && (this.AppAvailable || this.DbAvailable))
+                {
+                    DnlInstall.Visible = false; // Прячем кнопку...
+                    DnlProgBar.Visible = true; // Отображаем диалог прогресса...
+                    this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI)));
+                    DownloadUpdate(this.UpdateURI, this.UpdateFileName);
+                }
+                else
+                {
+                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_LatestInstalled"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception Ex)
             {
@@ -156,13 +163,21 @@ namespace srcrepair
             if (CoreLib.CompareVersions(GV.AppVersionInfo, NewVersion))
             {
                 // Доступна новая версия...
-                this.Invoke((MethodInvoker)delegate() { UpdAppImg.Image = Properties.Resources.upd_av; });
+                this.Invoke((MethodInvoker)delegate()
+                {
+                    UpdAppImg.Image = Properties.Resources.upd_av;
+                    UpdAppStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_AppUpdateAvail"), this.NewVersion);
+                });
                 this.AppAvailable = true;
             }
             else
             {
                 // Новых версий не обнаружено...
-                this.Invoke((MethodInvoker)delegate() { UpdAppImg.Image = Properties.Resources.upd_nx; });
+                this.Invoke((MethodInvoker)delegate()
+                {
+                    UpdAppImg.Image = Properties.Resources.upd_nx;
+                    UpdAppStatus.Text = CoreLib.GetLocalizedString("UPD_AppNoUpdates");
+                });
                 this.AppAvailable = false;
             }
         }
