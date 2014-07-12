@@ -65,12 +65,22 @@ namespace srcrepair
             // Проверим чтобы полученный файл существовал...
             if (File.Exists(this.UpdateFileName))
             {
-                // Существует, покажем сообщение...
-                MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // Запустим...
-                try { Process.Start(this.UpdateFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_UpdateFailure"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
-                // Завершим работу программы...
-                Environment.Exit(9);
+                // Если выполнялось обновление программы, выполним его запуск...
+                if (this.AppAvailable)
+                {
+                    // Существует, покажем сообщение...
+                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Запустим...
+                    try { Process.Start(this.UpdateFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_UpdateFailure"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
+
+                    // Завершим работу программы...
+                    Environment.Exit(9);
+                }
+                else
+                {
+                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_GamL_Updated"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {
@@ -114,8 +124,20 @@ namespace srcrepair
                     {
                         DnlInstall.Visible = false; // Прячем кнопку...
                         DnlProgBar.Visible = true; // Отображаем диалог прогресса...
-                        this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI)));
-                        DownloadUpdate(this.UpdateURI, this.UpdateFileName);
+                        
+                        if (this.AppAvailable)
+                        {
+                            this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI)));
+                            DownloadUpdate(this.UpdateURI, this.UpdateFileName);
+                        }
+
+                        if (this.DbAvailable)
+                        {
+                            this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile));
+                            DownloadUpdate(Properties.Settings.Default.UpdateGameDBFile, this.UpdateFileName);
+                        }
+
+                        this.Close();
                     }
                     else
                     {
@@ -232,7 +254,7 @@ namespace srcrepair
                     this.Invoke((MethodInvoker)delegate()
                     {
                         UpdDBImg.Image = Properties.Resources.upd_av;
-                        UpdDBStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_DbUpdateAvail"), this.NewVersion);
+                        UpdDBStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_DbUpdateAvail"), this.NewHash);
                     });
                     this.DbAvailable = true;
                 }

@@ -823,7 +823,7 @@
     <comment>Выводится в случае если модуль не смог найти новых версий базы игр</comment>
   </data>
   <data name="UPD_DbUpdateAvail" xml:space="preserve">
-    <value>Доступно обновление базы игр. Хеш новой версии: {0}.</value>
+    <value>Доступно обновление базы игр. Хеш: {0}.</value>
     <comment>Выводится в случае обнаружений новой версии базы игр</comment>
   </data>
   <data name="DB_WrkInProgress" xml:space="preserve">
