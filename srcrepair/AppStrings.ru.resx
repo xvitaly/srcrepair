@@ -810,4 +810,16 @@
     <value>Выбранный файл является бинарным, поэтому его невозможно открыть в текстовом редакторе!</value>
     <comment>Сообщение при попытке открыть бинарный файл на странице Резервные копии</comment>
   </data>
+  <data name="UPD_AppNoUpdates" xml:space="preserve">
+    <value>Нет новых обновлений программы. Установлена новейшая версия.</value>
+  </data>
+  <data name="UPD_AppUpdateAvail" xml:space="preserve">
+    <value>Доступно обновление программы. Новая версия: {0}.</value>
+  </data>
+  <data name="UPD_DbNoUpdates" xml:space="preserve">
+    <value>Нет новых обновлений базы игр. SRC Repair использует свежайшую версию.</value>
+  </data>
+  <data name="UPD_DbUpdateAvail" xml:space="preserve">
+    <value>Доступно обновление базы игр. Новая версия: {0}.</value>
+  </data>
 </root>

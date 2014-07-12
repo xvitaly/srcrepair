@@ -2830,45 +2830,8 @@ namespace srcrepair
 
         private void MNUUpdateCheck_Click(object sender, EventArgs e)
         {
-            // Сохраним текущее содержимое статусной строки...
-            string StatusBarCurrText = SB_Status.Text;
-            // Выведем сообщение о проверке обновлений...
-            SB_Status.Text = CoreLib.GetLocalizedString("AppCheckingForUpdates");
-            // Начинаем проверку...
-            try
-            {
-                string NewVersion, UpdateURI, DnlStr;
-                // Получаем файл с номером версии и ссылкой на новую...
-                using (WebClient Downloader = new WebClient())
-                {
-                    Downloader.Headers.Add("User-Agent", GV.UserAgent);
-                    DnlStr = Downloader.DownloadString(Properties.Settings.Default.UpdateChURI);
-                }
-                // Установим дату последней проверки обновлений...
-                Properties.Settings.Default.LastUpdateTime = DateTime.Now;
-                // Мы получили URL и версию...
-                NewVersion = DnlStr.Substring(0, DnlStr.IndexOf("!")); // Получаем версию...
-                UpdateURI = DnlStr.Remove(0, DnlStr.IndexOf("!") + 1); // Получаем URL...
-                // Проверим, является ли версия на сервере новее, чем текущая...
-                if (CoreLib.CompareVersions(GV.AppVersionInfo, NewVersion))
-                {
-                    // Доступна новая версия, отобразим модуль обновления...
-                    frmUpdate UpdFrm = new frmUpdate(NewVersion, UpdateURI);
-                    UpdFrm.ShowDialog();
-                }
-                else
-                {
-                    // Новых версий не обнаружено.
-                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_LatestInstalled"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception Ex)
-            {
-                // Произошло исключение...
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_ExceptionDetected"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-            }
-            // Вернём предыдущее содержимое строки статуса...
-            SB_Status.Text = StatusBarCurrText;
+            frmUpdate UpdFrm = new frmUpdate();
+            UpdFrm.ShowDialog();
         }
 
         private void BUT_OpenNpad_Click(object sender, EventArgs e)

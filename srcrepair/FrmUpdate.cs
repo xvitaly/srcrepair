@@ -32,23 +32,24 @@ namespace srcrepair
 {
     public partial class frmUpdate : Form
     {
-        public frmUpdate(string AvVersion, string URI)
+        public frmUpdate()
         {
             InitializeComponent();
-            AppAvailVersion = AvVersion;
-            UpdateURI = URI;
         }
 
-        private string AppAvailVersion;
-
+        private string NewVersion;
         private string UpdateURI;
-
         private string UpdateFileName;
+        private bool AppAvailable;
+        private bool DbAvailable;
 
         private void frmUpdate_Load(object sender, EventArgs e)
         {
             // Заполняем...
             this.Text = String.Format(this.Text, GV.AppName);
+
+            // Запускаем функции проверки обновлений...
+            if (!WrkChkApp.IsBusy) { WrkChkApp.RunWorkerAsync(); }
         }
 
         private void FileDownloader_Completed(object sender, AsyncCompletedEventArgs e)
@@ -112,12 +113,50 @@ namespace srcrepair
 
         private void WrkChkApp_DoWork(object sender, DoWorkEventArgs e)
         {
-            //
+            try
+            {
+                // Установим значок проверки обновлений...
+                this.Invoke((MethodInvoker)delegate() { UpdAppImg.Image = Properties.Resources.upd_chk; });
+                
+                // Опишем буферные переменные...
+                string DnlStr;
+
+                // Получаем файл с номером версии и ссылкой на новую...
+                using (WebClient Downloader = new WebClient())
+                {
+                    Downloader.Headers.Add("User-Agent", GV.UserAgent);
+                    DnlStr = Downloader.DownloadString(Properties.Settings.Default.UpdateChURI);
+                }
+
+                // Установим дату последней проверки обновлений...
+                Properties.Settings.Default.LastUpdateTime = DateTime.Now;
+
+                // Мы получили URL и версию...
+                NewVersion = DnlStr.Substring(0, DnlStr.IndexOf("!")); // Получаем версию...
+                UpdateURI = DnlStr.Remove(0, DnlStr.IndexOf("!") + 1); // Получаем URL...
+            }
+            catch (Exception Ex)
+            {
+                // Произошло исключение...
+                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_ExceptionDetected"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+            }
         }
 
         private void WrkChkApp_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            //
+            // Проверим, является ли версия на сервере новее, чем текущая...
+            if (CoreLib.CompareVersions(GV.AppVersionInfo, NewVersion))
+            {
+                // Доступна новая версия...
+                this.Invoke((MethodInvoker)delegate() { UpdAppImg.Image = Properties.Resources.upd_av; });
+                this.AppAvailable = true;
+            }
+            else
+            {
+                // Новых версий не обнаружено...
+                this.Invoke((MethodInvoker)delegate() { UpdAppImg.Image = Properties.Resources.upd_nx; });
+                this.AppAvailable = false;
+            }
         }
 
         private void WrkChkDb_DoWork(object sender, DoWorkEventArgs e)

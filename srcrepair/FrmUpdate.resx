@@ -234,8 +234,7 @@
     <value>0</value>
   </data>
   <data name="UpdAppStatus.Text" xml:space="preserve">
-    <value>Application: {0}.
-Version: {1}.</value>
+    <value>Checking for main application updates. Please wait...</value>
   </data>
   <data name="UpdAppStatus.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -265,8 +264,7 @@ Version: {1}.</value>
     <value>1</value>
   </data>
   <data name="UpdDBStatus.Text" xml:space="preserve">
-    <value>Database: {0}.
-Version: {1}.</value>
+    <value>Checking for game database updates. Please wait...</value>
   </data>
   <data name="UpdDBStatus.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>

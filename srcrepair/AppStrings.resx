@@ -639,4 +639,16 @@
   <data name="BU_BinaryFile" xml:space="preserve">
     <value>The selected file is a binary. Unable open it in text editor!</value>
   </data>
+  <data name="UPD_AppNoUpdates" xml:space="preserve">
+    <value>No new updates detected. Your application is up to date.</value>
+  </data>
+  <data name="UPD_AppUpdateAvail" xml:space="preserve">
+    <value>Application update available. New version: {0}.</value>
+  </data>
+  <data name="UPD_DbNoUpdates" xml:space="preserve">
+    <value>No new updates detected. SRC Repair is using latest version of game database.</value>
+  </data>
+  <data name="UPD_DbUpdateAvail" xml:space="preserve">
+    <value>Database update available. New version: {0}.</value>
+  </data>
 </root>
