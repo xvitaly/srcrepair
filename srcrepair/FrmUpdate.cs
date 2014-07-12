@@ -109,5 +109,25 @@ namespace srcrepair
                 CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_DownloadException"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
             }
         }
+
+        private void WrkChkApp_DoWork(object sender, DoWorkEventArgs e)
+        {
+            //
+        }
+
+        private void WrkChkApp_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            //
+        }
+
+        private void WrkChkDb_DoWork(object sender, DoWorkEventArgs e)
+        {
+            //
+        }
+
+        private void WrkChkDb_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            //
+        }
     }
 }

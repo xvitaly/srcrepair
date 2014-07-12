@@ -35,6 +35,8 @@
             this.UpdDBImg = new System.Windows.Forms.PictureBox();
             this.UpdAppStatus = new System.Windows.Forms.Label();
             this.UpdDBStatus = new System.Windows.Forms.Label();
+            this.WrkChkApp = new System.ComponentModel.BackgroundWorker();
+            this.WrkChkDb = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.UpdAppImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpdDBImg)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +77,16 @@
             resources.ApplyResources(this.UpdDBStatus, "UpdDBStatus");
             this.UpdDBStatus.Name = "UpdDBStatus";
             // 
+            // WrkChkApp
+            // 
+            this.WrkChkApp.DoWork += new System.ComponentModel.DoWorkEventHandler(this.WrkChkApp_DoWork);
+            this.WrkChkApp.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.WrkChkApp_RunWorkerCompleted);
+            // 
+            // WrkChkDb
+            // 
+            this.WrkChkDb.DoWork += new System.ComponentModel.DoWorkEventHandler(this.WrkChkDb_DoWork);
+            this.WrkChkDb.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.WrkChkDb_RunWorkerCompleted);
+            // 
             // frmUpdate
             // 
             resources.ApplyResources(this, "$this");
@@ -106,5 +118,7 @@
         private System.Windows.Forms.PictureBox UpdDBImg;
         private System.Windows.Forms.Label UpdAppStatus;
         private System.Windows.Forms.Label UpdDBStatus;
+        private System.ComponentModel.BackgroundWorker WrkChkApp;
+        private System.ComponentModel.BackgroundWorker WrkChkDb;
     }
 }
