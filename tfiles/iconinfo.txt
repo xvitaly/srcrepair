@@ -83,3 +83,11 @@ red_circle.png - Chris Ringeisen - CCNC - http://www.iconspedia.com/icon/red-cir
 --------------------------------------------------------------------------------------------------------
 arrow.png - Icon Leak - CCNC - http://www.iconspedia.com/icon/arrow-right-icon-26296.html
 --------------------------------------------------------------------------------------------------------
+upd_av.png - Everaldo Coelho - LPGL - http://www.iconspedia.com/icon/update-recommended-4016.html
+--------------------------------------------------------------------------------------------------------
+upd_chk.png - FatCow - CC3 - http://www.iconspedia.com/icon/update-icon-22163.html
+--------------------------------------------------------------------------------------------------------
+upd_err.png - Designkindle - CCAA - http://www.iconspedia.com/icon/cross-icon-40924.html
+--------------------------------------------------------------------------------------------------------
+upd_nx.png - PixelMixer - CCAA - http://www.iconspedia.com/icon/tick-11638.html
+--------------------------------------------------------------------------------------------------------
