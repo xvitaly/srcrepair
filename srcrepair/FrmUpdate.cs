@@ -85,6 +85,18 @@ namespace srcrepair
             return Path.HasExtension(Url) ? Url : Path.ChangeExtension(Url, "exe");
         }
 
+        private void DownloadUpdate(string UpdateURI, string FileName)
+        {
+            using (WebClient FileDownloader = new WebClient())
+            {
+                // Скачиваем файл...
+                FileDownloader.Headers.Add("User-Agent", Properties.Resources.AppDnlUA);
+                FileDownloader.DownloadFileCompleted += new AsyncCompletedEventHandler(FileDownloader_Completed);
+                FileDownloader.DownloadProgressChanged += new DownloadProgressChangedEventHandler(FileDownloader_ProgressChanged);
+                FileDownloader.DownloadFileAsync(new Uri(UpdateURI), FileName);
+            }
+        }
+
         private void DnlInstall_Click(object sender, EventArgs e)
         {
             try
@@ -92,15 +104,7 @@ namespace srcrepair
                 DnlInstall.Visible = false; // Прячем кнопку...
                 DnlProgBar.Visible = true; // Отображаем диалог прогресса...
                 this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI)));
-
-                using (WebClient FileDownloader = new WebClient())
-                {
-                    FileDownloader.Headers.Add("User-Agent", Properties.Resources.AppDnlUA);
-                    FileDownloader.DownloadFileCompleted += new AsyncCompletedEventHandler(FileDownloader_Completed);
-                    FileDownloader.DownloadProgressChanged += new DownloadProgressChangedEventHandler(FileDownloader_ProgressChanged);
-                    // Скачиваем файл...
-                    FileDownloader.DownloadFileAsync(new Uri(UpdateURI), this.UpdateFileName);
-                }
+                DownloadUpdate(this.UpdateURI, this.UpdateFileName);
             }
             catch (Exception Ex)
             {
