@@ -166,26 +166,33 @@ namespace srcrepair
 
         private void WrkChkApp_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            // Проверим, является ли версия на сервере новее, чем текущая...
-            if (CoreLib.CompareVersions(GV.AppVersionInfo, NewVersion))
+            try
             {
-                // Доступна новая версия...
-                this.Invoke((MethodInvoker)delegate()
+                // Проверим, является ли версия на сервере новее, чем текущая...
+                if (CoreLib.CompareVersions(GV.AppVersionInfo, NewVersion))
                 {
-                    UpdAppImg.Image = Properties.Resources.upd_av;
-                    UpdAppStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_AppUpdateAvail"), this.NewVersion);
-                });
-                this.AppAvailable = true;
+                    // Доступна новая версия...
+                    this.Invoke((MethodInvoker)delegate()
+                    {
+                        UpdAppImg.Image = Properties.Resources.upd_av;
+                        UpdAppStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_AppUpdateAvail"), this.NewVersion);
+                    });
+                    this.AppAvailable = true;
+                }
+                else
+                {
+                    // Новых версий не обнаружено...
+                    this.Invoke((MethodInvoker)delegate()
+                    {
+                        UpdAppImg.Image = Properties.Resources.upd_nx;
+                        UpdAppStatus.Text = CoreLib.GetLocalizedString("UPD_AppNoUpdates");
+                    });
+                    this.AppAvailable = false;
+                }
             }
-            else
+            catch (Exception Ex)
             {
-                // Новых версий не обнаружено...
-                this.Invoke((MethodInvoker)delegate()
-                {
-                    UpdAppImg.Image = Properties.Resources.upd_nx;
-                    UpdAppStatus.Text = CoreLib.GetLocalizedString("UPD_AppNoUpdates");
-                });
-                this.AppAvailable = false;
+                CoreLib.WriteStringToLog(Ex.Message);
             }
         }
 
@@ -216,26 +223,33 @@ namespace srcrepair
 
         private void WrkChkDb_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            // Проверим хеши...
-            if (this.DBHash != this.NewHash)
+            try
             {
-                // Хеши не совпадают, будем обновлять...
-                this.Invoke((MethodInvoker)delegate()
+                // Проверим хеши...
+                if (this.DBHash != this.NewHash)
                 {
-                    UpdDBImg.Image = Properties.Resources.upd_av;
-                    UpdDBStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_DbUpdateAvail"), this.NewVersion);
-                });
-                this.DbAvailable = true;
+                    // Хеши не совпадают, будем обновлять...
+                    this.Invoke((MethodInvoker)delegate()
+                    {
+                        UpdDBImg.Image = Properties.Resources.upd_av;
+                        UpdDBStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_DbUpdateAvail"), this.NewVersion);
+                    });
+                    this.DbAvailable = true;
+                }
+                else
+                {
+                    // Хеши совпали, обновление не требуется...
+                    this.Invoke((MethodInvoker)delegate()
+                    {
+                        UpdDBImg.Image = Properties.Resources.upd_nx;
+                        UpdDBStatus.Text = CoreLib.GetLocalizedString("UPD_DbNoUpdates");
+                    });
+                    this.DbAvailable = false;
+                }
             }
-            else
+            catch (Exception Ex)
             {
-                // Хеши совпали, обновление не требуется...
-                this.Invoke((MethodInvoker)delegate()
-                {
-                    UpdDBImg.Image = Properties.Resources.upd_nx;
-                    UpdDBStatus.Text = CoreLib.GetLocalizedString("UPD_DbNoUpdates");
-                });
-                this.DbAvailable = false;
+                CoreLib.WriteStringToLog(Ex.Message);
             }
         }
 
