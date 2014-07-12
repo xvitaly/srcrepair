@@ -812,17 +812,22 @@
   </data>
   <data name="UPD_AppNoUpdates" xml:space="preserve">
     <value>Нет новых обновлений программы. Установлена новейшая версия.</value>
+    <comment>Выводится в случае если модуль не смог найти новых версий приложения</comment>
   </data>
   <data name="UPD_AppUpdateAvail" xml:space="preserve">
     <value>Доступно обновление программы. Новая версия: {0}.</value>
+    <comment>Выводится в случае обнаружений новой версии приложения</comment>
   </data>
   <data name="UPD_DbNoUpdates" xml:space="preserve">
     <value>Нет новых обновлений базы игр. Используется свежайшая версия.</value>
+    <comment>Выводится в случае если модуль не смог найти новых версий базы игр</comment>
   </data>
   <data name="UPD_DbUpdateAvail" xml:space="preserve">
     <value>Доступно обновление базы игр. Хеш новой версии: {0}.</value>
+    <comment>Выводится в случае обнаружений новой версии базы игр</comment>
   </data>
   <data name="DB_WrkInProgress" xml:space="preserve">
     <value>Пожалуйста, дождитесь завершения проверки обновлений!</value>
+    <comment>Выводится при попытке запуска установки обновлений до завершения их поиска</comment>
   </data>
 </root>
