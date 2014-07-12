@@ -1495,9 +1495,6 @@ namespace srcrepair
                 
                 // Блокируем контролы, требующие для своей работы прав админа...
                 ChangePrvControlState(false);
-                
-                // Проверяем наличие прав на запись в каталог...
-                MNUUpGameDB.Enabled = CoreLib.IsDirectoryWritable(GV.FullAppPath);
             }
 
             // Узнаем путь к установленному клиенту Steam...
@@ -3084,57 +3081,6 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.mp3"));
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "*.wav"));
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
-        }
-
-        private void MNUUpGameDB_Click(object sender, EventArgs e)
-        {
-            // Обновим базу поддерживаемых программой игр...
-            // Сохраним текущее содержимое статусной строки...
-            string StatusBarCurrText = SB_Status.Text;
-            // Выведем сообщение о проверке обновлений...
-            SB_Status.Text = CoreLib.GetLocalizedString("AppCheckingForUpdates");
-            // Начинаем проверку...
-            try
-            {
-                // Получаем файл с номером версии и ссылкой на новую...
-                string DBHash;
-                using (WebClient Downloader = new WebClient())
-                {
-                    // Получим хеш...
-                    Downloader.Headers.Add("User-Agent", GV.UserAgent);
-                    DBHash = Downloader.DownloadString(Properties.Settings.Default.UpdateGameDBHash);
-                    CoreLib.WriteStringToLog(String.Format(CoreLib.GetLocalizedString("UPD_RecvHashStr"), DBHash));
-                }
-                // Рассчитаем хеш текущего файла...
-                string CurrHash = CoreLib.CalculateFileMD5(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile));
-                CoreLib.WriteStringToLog(String.Format(CoreLib.GetLocalizedString("UPD_ExtHashSum"), Properties.Settings.Default.GameListFile, CurrHash));
-                if (CurrHash != DBHash)
-                {
-                    // Хеши не совпадают, будем обновлять...
-                    using (WebClient Downloader = new WebClient())
-                    {
-                        // Получаем свежую базу данных...
-                        Downloader.Headers.Add("User-Agent", GV.UserAgent);
-                        CoreLib.WriteStringToLog(CoreLib.GetLocalizedString("UPD_ProcStartMsg"));
-                        Downloader.DownloadFile(new Uri(Properties.Settings.Default.UpdateGameDBFile), Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile));
-                        CoreLib.WriteStringToLog(CoreLib.GetLocalizedString("UPD_ProcFinMsg"));
-                    }
-                    // Выводим сообщение об успешном обновлении...
-                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_GamL_Updated"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    // Хеши совпали, обновление не требуется...
-                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_GamL_Latest"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception Ex)
-            {
-                // Произошло исключение...
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_ExceptionDetected"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-            }
-            // Вернём предыдущее содержимое строки статуса...
-            SB_Status.Text = StatusBarCurrText;
         }
 
         private void MNUExtClnBuildCache_Click(object sender, EventArgs e)

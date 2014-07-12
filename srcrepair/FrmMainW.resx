@@ -4133,12 +4133,6 @@
   <data name="MNUUpdateCheck.Text" xml:space="preserve">
     <value>Chec&amp;k for Updates...</value>
   </data>
-  <data name="MNUUpGameDB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 22</value>
-  </data>
-  <data name="MNUUpGameDB.Text" xml:space="preserve">
-    <value>Update &amp;game database</value>
-  </data>
   <data name="MNUSteamGroup.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 22</value>
   </data>
@@ -5292,12 +5286,6 @@
     <value>MNUUpdateCheck</value>
   </data>
   <data name="&gt;&gt;MNUUpdateCheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MNUUpGameDB.Name" xml:space="preserve">
-    <value>MNUUpGameDB</value>
-  </data>
-  <data name="&gt;&gt;MNUUpGameDB.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUSteamGroup.Name" xml:space="preserve">
