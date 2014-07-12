@@ -40,6 +40,8 @@ namespace srcrepair
         private string NewVersion;
         private string UpdateURI;
         private string UpdateFileName;
+        private string DBHash;
+        private string NewHash;
         private bool AppAvailable;
         private bool DbAvailable;
 
@@ -50,6 +52,12 @@ namespace srcrepair
 
             // Запускаем функции проверки обновлений...
             if (!WrkChkApp.IsBusy) { WrkChkApp.RunWorkerAsync(); }
+
+            // Проверяем наличие прав на запись в каталог и если они есть запускаем проверку...
+            if (CoreLib.IsDirectoryWritable(GV.FullAppPath))
+            {
+                if (!WrkChkDb.IsBusy) { WrkChkDb.RunWorkerAsync(); }
+            }
         }
 
         private void FileDownloader_Completed(object sender, AsyncCompletedEventArgs e)
@@ -138,7 +146,7 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 // Произошло исключение...
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_ExceptionDetected"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                CoreLib.WriteStringToLog(Ex.Message);
             }
         }
 
@@ -161,12 +169,44 @@ namespace srcrepair
 
         private void WrkChkDb_DoWork(object sender, DoWorkEventArgs e)
         {
-            //
+            try
+            {
+                // Установим значок проверки обновлений...
+                this.Invoke((MethodInvoker)delegate() { UpdDBImg.Image = Properties.Resources.upd_chk; });
+
+                // Получаем файл с номером версии и ссылкой на новую...
+                using (WebClient Downloader = new WebClient())
+                {
+                    // Получим хеш...
+                    Downloader.Headers.Add("User-Agent", GV.UserAgent);
+                    this.NewHash = Downloader.DownloadString(Properties.Settings.Default.UpdateGameDBHash);
+                }
+
+                // Рассчитаем хеш текущего файла...
+                this.DBHash = CoreLib.CalculateFileMD5(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile));
+            }
+            catch (Exception Ex)
+            {
+                // Произошло исключение...
+                CoreLib.WriteStringToLog(Ex.Message);
+            }
         }
 
         private void WrkChkDb_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            //
+            // Проверим хеши...
+            if (this.DBHash != this.NewHash)
+            {
+                // Хеши не совпадают, будем обновлять...
+                this.Invoke((MethodInvoker)delegate() { UpdDBImg.Image = Properties.Resources.upd_av; });
+                this.DbAvailable = true;
+            }
+            else
+            {
+                // Хеши совпали, обновление не требуется...
+                this.Invoke((MethodInvoker)delegate() { UpdDBImg.Image = Properties.Resources.upd_nx; });
+                this.DbAvailable = false;
+            }
         }
     }
 }

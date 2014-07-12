@@ -498,6 +498,13 @@ namespace srcrepair.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap upd_err {
+            get {
+                object obj = ResourceManager.GetObject("upd_err", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap upd_nx {
             get {
                 object obj = ResourceManager.GetObject("upd_nx", resourceCulture);

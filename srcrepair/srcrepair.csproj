@@ -483,6 +483,7 @@
     <None Include="Resources\upd_av.png" />
     <None Include="Resources\upd_nx.png" />
     <None Include="Resources\upd_chk.png" />
+    <None Include="Resources\upd_err.png" />
     <Content Include="srcrepair.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
