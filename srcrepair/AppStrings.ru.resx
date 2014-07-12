@@ -817,9 +817,12 @@
     <value>Доступно обновление программы. Новая версия: {0}.</value>
   </data>
   <data name="UPD_DbNoUpdates" xml:space="preserve">
-    <value>Нет новых обновлений базы игр. SRC Repair использует свежайшую версию.</value>
+    <value>Нет новых обновлений базы игр. Используется свежайшая версия.</value>
   </data>
   <data name="UPD_DbUpdateAvail" xml:space="preserve">
-    <value>Доступно обновление базы игр. Новая версия: {0}.</value>
+    <value>Доступно обновление базы игр. Хеш новой версии: {0}.</value>
+  </data>
+  <data name="DB_WrkInProgress" xml:space="preserve">
+    <value>Пожалуйста, дождитесь завершения проверки обновлений!</value>
   </data>
 </root>

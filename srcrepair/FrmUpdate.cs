@@ -108,16 +108,23 @@ namespace srcrepair
         {
             try
             {
-                if (!WrkChkDb.IsBusy && !WrkChkApp.IsBusy && (this.AppAvailable || this.DbAvailable))
+                if (!WrkChkDb.IsBusy && !WrkChkApp.IsBusy)
                 {
-                    DnlInstall.Visible = false; // Прячем кнопку...
-                    DnlProgBar.Visible = true; // Отображаем диалог прогресса...
-                    this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI)));
-                    DownloadUpdate(this.UpdateURI, this.UpdateFileName);
+                    if (this.AppAvailable || this.DbAvailable)
+                    {
+                        DnlInstall.Visible = false; // Прячем кнопку...
+                        DnlProgBar.Visible = true; // Отображаем диалог прогресса...
+                        this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI)));
+                        DownloadUpdate(this.UpdateURI, this.UpdateFileName);
+                    }
+                    else
+                    {
+                        MessageBox.Show(CoreLib.GetLocalizedString("UPD_LatestInstalled"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_LatestInstalled"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(CoreLib.GetLocalizedString("DB_WrkInProgress"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception Ex)
@@ -213,15 +220,28 @@ namespace srcrepair
             if (this.DBHash != this.NewHash)
             {
                 // Хеши не совпадают, будем обновлять...
-                this.Invoke((MethodInvoker)delegate() { UpdDBImg.Image = Properties.Resources.upd_av; });
+                this.Invoke((MethodInvoker)delegate()
+                {
+                    UpdDBImg.Image = Properties.Resources.upd_av;
+                    UpdDBStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_DbUpdateAvail"), this.NewVersion);
+                });
                 this.DbAvailable = true;
             }
             else
             {
                 // Хеши совпали, обновление не требуется...
-                this.Invoke((MethodInvoker)delegate() { UpdDBImg.Image = Properties.Resources.upd_nx; });
+                this.Invoke((MethodInvoker)delegate()
+                {
+                    UpdDBImg.Image = Properties.Resources.upd_nx;
+                    UpdDBStatus.Text = CoreLib.GetLocalizedString("UPD_DbNoUpdates");
+                });
                 this.DbAvailable = false;
             }
+        }
+
+        private void frmUpdate_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && WrkChkApp.IsBusy && WrkChkDb.IsBusy;
         }
     }
 }

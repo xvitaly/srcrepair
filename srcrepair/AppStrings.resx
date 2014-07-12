@@ -651,4 +651,7 @@
   <data name="UPD_DbUpdateAvail" xml:space="preserve">
     <value>Database update available. New version: {0}.</value>
   </data>
+  <data name="DB_WrkInProgress" xml:space="preserve">
+    <value>Checking for updates. Please wait!</value>
+  </data>
 </root>

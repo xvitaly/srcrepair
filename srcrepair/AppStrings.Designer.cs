@@ -718,6 +718,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Checking for updates. Please wait!.
+        /// </summary>
+        internal static string DB_WrkInProgress {
+            get {
+                return ResourceManager.GetString("DB_WrkInProgress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A critical error: can not install the selected config!.
         /// </summary>
         internal static string FP_InstallFailed {

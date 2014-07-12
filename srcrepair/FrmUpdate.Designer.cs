@@ -103,6 +103,7 @@
             this.MinimizeBox = false;
             this.Name = "frmUpdate";
             this.ShowInTaskbar = false;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmUpdate_FormClosing);
             this.Load += new System.EventHandler(this.frmUpdate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UpdAppImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpdDBImg)).EndInit();
