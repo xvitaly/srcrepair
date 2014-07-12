@@ -127,14 +127,26 @@
   <data name="Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="red_circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\red_circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PlatformFriendlyName" xml:space="preserve">
+    <value>Windows</value>
+  </data>
+  <data name="SteamExecBin" xml:space="preserve">
+    <value>Steam.exe</value>
+  </data>
+  <data name="steam" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\steam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AppURLHelpSite" xml:space="preserve">
+    <value>https://www.easycoding.org/projects/srcrepair/help</value>
   </data>
   <data name="Restore" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Restore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TextEditor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TextEditor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,14 +160,29 @@
   <data name="green_circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\green_circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="steam" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\steam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Shopcart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shopcart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="clean" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clean.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AppDefUA" xml:space="preserve">
+    <value>Mozilla/5.0 ({0} NT {1}.{2}; {3}; rv:{4}) {5} ({6})</value>
+  </data>
+  <data name="SaveAs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SaveAs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AppURLHelpWiki" xml:space="preserve">
+    <value>http://code.google.com/p/srcrepair/wiki/UserManual_{0}</value>
+  </data>
+  <data name="AHE_About" xml:space="preserve">
+    <value>{0} for {1} by {2}. Version: {3}.</value>
   </data>
   <data name="Help" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AHE_HelpURL" xml:space="preserve">
+    <value>http://code.google.com/p/srcrepair/wiki/HostsEditorPlugin_{0}</value>
+  </data>
+  <data name="hosts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hosts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="report" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,8 +190,20 @@
   <data name="Xmas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Xmas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AppDefUA" xml:space="preserve">
-    <value>Mozilla/5.0 ({0} NT {1}.{2}; {3}; rv:{4}) {5} ({6})</value>
+  <data name="AppURLSteamGroup" xml:space="preserve">
+    <value>http://steamcommunity.com/groups/srcrepair</value>
+  </data>
+  <data name="AHE_TemplateFile" xml:space="preserve">
+    <value>srcrepair.Resources.HtTemplate.txt</value>
+  </data>
+  <data name="MO_CustomDirRegex" xml:space="preserve">
+    <value>^[0-9a-zA-Z]*$</value>
+  </data>
+  <data name="AppURLOffSite" xml:space="preserve">
+    <value>https://www.easycoding.org/</value>
+  </data>
+  <data name="SteamAppsFolderName" xml:space="preserve">
+    <value>SteamApps</value>
   </data>
   <data name="Options" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Options.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,20 +211,26 @@
   <data name="Globe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Globe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="clean" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clean.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Keyboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Keyboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AppURLSteamGrID" xml:space="preserve">
+    <value>steam://url/GroupSteamIDPage/103582791431662552</value>
+  </data>
   <data name="source" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\source.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="installer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\installer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="red_circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\red_circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SaveAs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SaveAs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HtTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HtTemplate.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,29 +241,44 @@
   <data name="AppUnsupportedLanguage" xml:space="preserve">
     <value>The specified locale is not supported at this time, so will use the default language.</value>
   </data>
-  <data name="Info" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AppURLDonate" xml:space="preserve">
+    <value>http://code.google.com/p/srcrepair/wiki/Donate</value>
   </data>
   <data name="Donate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Donate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="installer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\installer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AppURLSpnTFSU" xml:space="preserve">
+    <value>http://www.team-fortress.su/</value>
+  </data>
+  <data name="upd_av" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\upd_av.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AppURLReply" xml:space="preserve">
+    <value>https://www.easycoding.org/projects/srcrepair#respond</value>
   </data>
   <data name="hint" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Shopcart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Shopcart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AppBtURL" xml:space="preserve">
+    <value>https://www.easycoding.org/apprep/?action=new</value>
+  </data>
+  <data name="Info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AppDnlUA" xml:space="preserve">
+    <value>wget</value>
+  </data>
+  <data name="Add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tf2world" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tf2world.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hosts" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hosts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tfru" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tf-ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,61 +286,7 @@
   <data name="bug" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bug.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PlatformFriendlyName" xml:space="preserve">
-    <value>Windows</value>
-  </data>
-  <data name="SteamAppsFolderName" xml:space="preserve">
-    <value>SteamApps</value>
-  </data>
-  <data name="SteamExecBin" xml:space="preserve">
-    <value>Steam.exe</value>
-  </data>
-  <data name="AppDnlUA" xml:space="preserve">
-    <value>wget</value>
-  </data>
-  <data name="AppBtURL" xml:space="preserve">
-    <value>https://www.easycoding.org/apprep/?action=new</value>
-  </data>
-  <data name="AHE_TemplateFile" xml:space="preserve">
-    <value>srcrepair.Resources.HtTemplate.txt</value>
-  </data>
-  <data name="HtTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HtTemplate.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="AHE_HelpURL" xml:space="preserve">
-    <value>http://code.google.com/p/srcrepair/wiki/HostsEditorPlugin_{0}</value>
-  </data>
-  <data name="AHE_About" xml:space="preserve">
-    <value>{0} for {1} by {2}. Version: {3}.</value>
-  </data>
-  <data name="MO_CustomDirRegex" xml:space="preserve">
-    <value>^[0-9a-zA-Z]*$</value>
-  </data>
-  <data name="AppURLDonate" xml:space="preserve">
-    <value>http://code.google.com/p/srcrepair/wiki/Donate</value>
-  </data>
-  <data name="AppURLHelpSite" xml:space="preserve">
-    <value>https://www.easycoding.org/projects/srcrepair/help</value>
-  </data>
-  <data name="AppURLHelpWiki" xml:space="preserve">
-    <value>http://code.google.com/p/srcrepair/wiki/UserManual_{0}</value>
-  </data>
-  <data name="AppURLOffSite" xml:space="preserve">
-    <value>https://www.easycoding.org/</value>
-  </data>
-  <data name="AppURLReply" xml:space="preserve">
-    <value>https://www.easycoding.org/projects/srcrepair#respond</value>
-  </data>
-  <data name="AppURLSpnTFSU" xml:space="preserve">
-    <value>http://www.team-fortress.su/</value>
-  </data>
-  <data name="AppURLSteamGrID" xml:space="preserve">
-    <value>steam://url/GroupSteamIDPage/103582791431662552</value>
-  </data>
-  <data name="AppURLSteamGroup" xml:space="preserve">
-    <value>http://steamcommunity.com/groups/srcrepair</value>
+  <data name="upd_nx" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\upd_nx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

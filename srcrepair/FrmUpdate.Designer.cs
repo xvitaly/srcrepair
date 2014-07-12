@@ -29,21 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdate));
-            this.LVersion = new System.Windows.Forms.Label();
-            this.LWelcome = new System.Windows.Forms.Label();
             this.DnlInstall = new System.Windows.Forms.Button();
             this.DnlProgBar = new System.Windows.Forms.ProgressBar();
+            this.UpdAppImg = new System.Windows.Forms.PictureBox();
+            this.UpdDBImg = new System.Windows.Forms.PictureBox();
+            this.UpdAppStatus = new System.Windows.Forms.Label();
+            this.UpdDBStatus = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.UpdAppImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpdDBImg)).BeginInit();
             this.SuspendLayout();
-            // 
-            // LVersion
-            // 
-            resources.ApplyResources(this.LVersion, "LVersion");
-            this.LVersion.Name = "LVersion";
-            // 
-            // LWelcome
-            // 
-            resources.ApplyResources(this.LWelcome, "LWelcome");
-            this.LWelcome.Name = "LWelcome";
             // 
             // DnlInstall
             // 
@@ -57,14 +51,40 @@
             resources.ApplyResources(this.DnlProgBar, "DnlProgBar");
             this.DnlProgBar.Name = "DnlProgBar";
             // 
+            // UpdAppImg
+            // 
+            this.UpdAppImg.Image = global::srcrepair.Properties.Resources.upd_av;
+            resources.ApplyResources(this.UpdAppImg, "UpdAppImg");
+            this.UpdAppImg.Name = "UpdAppImg";
+            this.UpdAppImg.TabStop = false;
+            // 
+            // UpdDBImg
+            // 
+            this.UpdDBImg.Image = global::srcrepair.Properties.Resources.upd_nx;
+            resources.ApplyResources(this.UpdDBImg, "UpdDBImg");
+            this.UpdDBImg.Name = "UpdDBImg";
+            this.UpdDBImg.TabStop = false;
+            // 
+            // UpdAppStatus
+            // 
+            resources.ApplyResources(this.UpdAppStatus, "UpdAppStatus");
+            this.UpdAppStatus.Name = "UpdAppStatus";
+            // 
+            // UpdDBStatus
+            // 
+            resources.ApplyResources(this.UpdDBStatus, "UpdDBStatus");
+            this.UpdDBStatus.Name = "UpdDBStatus";
+            // 
             // frmUpdate
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.UpdDBStatus);
+            this.Controls.Add(this.UpdAppStatus);
+            this.Controls.Add(this.UpdDBImg);
+            this.Controls.Add(this.UpdAppImg);
             this.Controls.Add(this.DnlProgBar);
             this.Controls.Add(this.DnlInstall);
-            this.Controls.Add(this.LWelcome);
-            this.Controls.Add(this.LVersion);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -72,15 +92,19 @@
             this.Name = "frmUpdate";
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.frmUpdate_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.UpdAppImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpdDBImg)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label LVersion;
-        private System.Windows.Forms.Label LWelcome;
         private System.Windows.Forms.Button DnlInstall;
         private System.Windows.Forms.ProgressBar DnlProgBar;
+        private System.Windows.Forms.PictureBox UpdAppImg;
+        private System.Windows.Forms.PictureBox UpdDBImg;
+        private System.Windows.Forms.Label UpdAppStatus;
+        private System.Windows.Forms.Label UpdDBStatus;
     }
 }

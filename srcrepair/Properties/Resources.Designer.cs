@@ -484,6 +484,20 @@ namespace srcrepair.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap upd_av {
+            get {
+                object obj = ResourceManager.GetObject("upd_av", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap upd_nx {
+            get {
+                object obj = ResourceManager.GetObject("upd_nx", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Wizard {
             get {
                 object obj = ResourceManager.GetObject("Wizard", resourceCulture);

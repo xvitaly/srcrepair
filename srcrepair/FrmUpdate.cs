@@ -49,8 +49,6 @@ namespace srcrepair
         {
             // Заполняем...
             this.Text = String.Format(this.Text, GV.AppName);
-            LWelcome.Text = String.Format(LWelcome.Text, GV.AppName);
-            LVersion.Text = String.Format(LVersion.Text, AppAvailVersion);
         }
 
         private void FileDownloader_Completed(object sender, AsyncCompletedEventArgs e)
