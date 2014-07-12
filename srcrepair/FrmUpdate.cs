@@ -50,14 +50,11 @@ namespace srcrepair
             // Заполняем...
             this.Text = String.Format(this.Text, GV.AppName);
 
-            // Запускаем функции проверки обновлений...
+            // Запускаем функции проверки обновлений программы...
             if (!WrkChkApp.IsBusy) { WrkChkApp.RunWorkerAsync(); }
 
-            // Проверяем наличие прав на запись в каталог и если они есть запускаем проверку...
-            if (CoreLib.IsDirectoryWritable(GV.FullAppPath))
-            {
-                if (!WrkChkDb.IsBusy) { WrkChkDb.RunWorkerAsync(); }
-            }
+            // Запускаем функции проверки обновлений базы данных игр...
+            if (!WrkChkDb.IsBusy) { WrkChkDb.RunWorkerAsync(); }
         }
 
         private void FileDownloader_Completed(object sender, AsyncCompletedEventArgs e)
@@ -122,22 +119,7 @@ namespace srcrepair
                 {
                     if (this.AppAvailable || this.DbAvailable)
                     {
-                        DnlInstall.Visible = false; // Прячем кнопку...
-                        DnlProgBar.Visible = true; // Отображаем диалог прогресса...
-                        
-                        if (this.AppAvailable)
-                        {
-                            this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI)));
-                            DownloadUpdate(this.UpdateURI, this.UpdateFileName);
-                        }
-
-                        if (this.DbAvailable)
-                        {
-                            this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile));
-                            DownloadUpdate(Properties.Settings.Default.UpdateGameDBFile, this.UpdateFileName);
-                        }
-
-                        this.Close();
+                        try { DnlInstall.Visible = false; DnlProgBar.Visible = true; if (this.AppAvailable) { this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI))); DownloadUpdate(this.UpdateURI, this.UpdateFileName); } if (this.DbAvailable && CoreLib.IsDirectoryWritable(GV.FullAppPath)) { this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile)); DownloadUpdate(Properties.Settings.Default.UpdateGameDBFile, this.UpdateFileName); } } finally { this.Close(); }
                     }
                     else
                     {
