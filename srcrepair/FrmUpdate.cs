@@ -76,13 +76,18 @@ namespace srcrepair
                 }
                 else
                 {
+                    // Выведем сообщение об успехе...
                     MessageBox.Show(CoreLib.GetLocalizedString("UPD_GamL_Updated"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                    // Закроем форму...
+                    this.Close();
                 }
             }
             else
             {
                 // Файл не существует: ошибка обновления...
                 MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateFailure"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
                 // Закроем форму...
                 this.Close();
             }
@@ -119,7 +124,7 @@ namespace srcrepair
                 {
                     if (this.AppAvailable || this.DbAvailable)
                     {
-                        try { DnlInstall.Visible = false; DnlProgBar.Visible = true; if (this.AppAvailable) { this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI))); DownloadUpdate(this.UpdateURI, this.UpdateFileName); } if (this.DbAvailable && CoreLib.IsDirectoryWritable(GV.FullAppPath)) { this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile)); DownloadUpdate(Properties.Settings.Default.UpdateGameDBFile, this.UpdateFileName); } } finally { this.Close(); }
+                        DnlInstall.Visible = false; DnlProgBar.Visible = true; if (this.AppAvailable) { this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI))); DownloadUpdate(this.UpdateURI, this.UpdateFileName); } if (this.DbAvailable && CoreLib.IsDirectoryWritable(GV.FullAppPath)) { this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile)); DownloadUpdate(Properties.Settings.Default.UpdateGameDBFile, this.UpdateFileName); }
                     }
                     else
                     {
