@@ -654,4 +654,7 @@
   <data name="DB_WrkInProgress" xml:space="preserve">
     <value>Checking for updates. Please wait!</value>
   </data>
+  <data name="PS_SteamRunning" xml:space="preserve">
+    <value>Steam client is running! To execute this cleanup please close it.</value>
+  </data>
 </root>

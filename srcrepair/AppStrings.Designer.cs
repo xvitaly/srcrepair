@@ -1213,6 +1213,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Steam client is running! To execute this cleanup please close it..
+        /// </summary>
+        internal static string PS_SteamRunning {
+            get {
+                return ResourceManager.GetString("PS_SteamRunning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to There was an error during file installation. Please try again later!.
         /// </summary>
         internal static string QI_Excpt {

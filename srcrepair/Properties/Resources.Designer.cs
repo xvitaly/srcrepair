@@ -463,6 +463,15 @@ namespace srcrepair.Properties {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to Steam.
+        /// </summary>
+        internal static string SteamProcName {
+            get {
+                return ResourceManager.GetString("SteamProcName", resourceCulture);
+            }
+        }
+        
         internal static System.Drawing.Bitmap TextEditor {
             get {
                 object obj = ResourceManager.GetObject("TextEditor", resourceCulture);
