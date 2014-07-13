@@ -256,6 +256,28 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Отображает диалоговое окно менеджера быстрой очистки кэшей Steam.
+        /// </summary>
+        /// <param name="Path">Путь к каталогу очистки</param>
+        /// <param name="Mask">Маска файлов, подлежащих очистке</param>
+        /// <param name="LText">Текст заголовка</param>
+        /// <param name="ReadOnly">Пользователю будет запрещено изменять выбор удаляемых файлов</param>
+        /// <param name="NoAuto">Включает / отключает автовыбор файлов флажками</param>
+        /// <param name="Recursive">Включает / отключает рекурсивный обход</param>
+        private void SteamCleanupWindow(List<String> Paths, string LText, bool ReadOnly = false, bool NoAuto = false, bool Recursive = true)
+        {
+            if (!CoreLib.IsProcessRunning(Properties.Resources.SteamProcName))
+            {
+                frmCleaner FCl = new frmCleaner(Paths, LText, ReadOnly, NoAuto, Recursive);
+                FCl.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show(CoreLib.GetLocalizedString("PS_SteamRunning"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
         /// Считывает из главного файла конфигурации Steam пути к дополнительным точкам монтирования.
         /// </summary>
         /// <param name="SteamPath">Путь к клиенту Steam</param>
@@ -2997,7 +3019,7 @@ namespace srcrepair
             // Очистим HTML-кэш внутреннего браузера Steam...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "config", "htmlcache", "*.*"));
-            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
 
         private void MNUExtClnOverlay_Click(object sender, EventArgs e)
@@ -3005,7 +3027,7 @@ namespace srcrepair
             // Очистим HTML-кэш браузера оверлея...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "config", "overlayhtmlcache", "*.*"));
-            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
 
         private void MNUExtClnOverlayHTCache_Click(object sender, EventArgs e)
@@ -3013,7 +3035,7 @@ namespace srcrepair
             // Очистим HTTP-кэш...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "appcache", "httpcache", "*.*"));
-            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
 
         private void CE_ManualBackUpCfg_Click(object sender, EventArgs e)
@@ -3038,7 +3060,7 @@ namespace srcrepair
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "logs", "*.*"));
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "*.log"));
-            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
 
         private void MNUExtClnGIcons_Click(object sender, EventArgs e)
@@ -3046,7 +3068,7 @@ namespace srcrepair
             // Очистим кэшированные значки игр...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "steam", "games", "*.*"));
-            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
 
         private void MNUExtClnGameStats_Click(object sender, EventArgs e)
@@ -3054,7 +3076,7 @@ namespace srcrepair
             // Очистим кэшированную статистику игр...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "appcache", "stats", "*.*"));
-            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
 
         private void MNUExtClnErrDumps_Click(object sender, EventArgs e)
@@ -3062,7 +3084,7 @@ namespace srcrepair
             // Очистим краш-дампы...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "dumps", "*.*"));
-            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
 
         private void MNUExtClnCloudLocal_Click(object sender, EventArgs e)
@@ -3070,7 +3092,7 @@ namespace srcrepair
             // Очистим локальное зеркало Cloud...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "userdata", "*.*"));
-            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
 
         private void PS_RemSounds_Click(object sender, EventArgs e)
@@ -3086,20 +3108,27 @@ namespace srcrepair
         private void MNUExtClnBuildCache_Click(object sender, EventArgs e)
         {
             // Очистим кэш сборки обновлений игр с новой системой контента...
-            if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("PS_CleanupFull"), ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", "")), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (!CoreLib.IsProcessRunning(Properties.Resources.SteamProcName))
             {
-                try
+                if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("PS_CleanupFull"), ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", "")), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
-                    string ClDir = Path.Combine(GV.FullSteamPath, Properties.Resources.SteamAppsFolderName, "downloading");
-                    if (Directory.Exists(ClDir)) { Directory.Delete(ClDir, true); }
-                    ClDir = Path.Combine(GV.FullSteamPath, Properties.Resources.SteamAppsFolderName, "temp");
-                    if (Directory.Exists(ClDir)) { Directory.Delete(ClDir, true); }
-                    MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    try
+                    {
+                        string ClDir = Path.Combine(GV.FullSteamPath, Properties.Resources.SteamAppsFolderName, "downloading");
+                        if (Directory.Exists(ClDir)) { Directory.Delete(ClDir, true); }
+                        ClDir = Path.Combine(GV.FullSteamPath, Properties.Resources.SteamAppsFolderName, "temp");
+                        if (Directory.Exists(ClDir)) { Directory.Delete(ClDir, true); }
+                        MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception Ex)
+                    {
+                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    }
                 }
-                catch (Exception Ex)
-                {
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                }
+            }
+            else
+            {
+                MessageBox.Show(CoreLib.GetLocalizedString("PS_SteamRunning"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -3108,7 +3137,7 @@ namespace srcrepair
             // Очистим кэш обновлений Steam...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "package", "*.*"));
-            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
 
         private void PS_RemCustDir_Click(object sender, EventArgs e)
@@ -3155,7 +3184,7 @@ namespace srcrepair
             // Удаляем кэш Steam Guard...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "ssfn*"));
-            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), false, false, false);
+            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), false, false, false);
         }
 
         private void MNUExtClnOldBin_Click(object sender, EventArgs e)
@@ -3164,7 +3193,7 @@ namespace srcrepair
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "*.old"));
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "bin", "*.old"));
-            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
     }
 }
