@@ -266,15 +266,19 @@ namespace srcrepair
         /// <param name="Recursive">Включает / отключает рекурсивный обход</param>
         private void SteamCleanupWindow(List<String> Paths, string LText, bool ReadOnly = false, bool NoAuto = false, bool Recursive = true)
         {
-            if (!CoreLib.IsProcessRunning(Properties.Resources.SteamProcName))
+            try
             {
-                frmCleaner FCl = new frmCleaner(Paths, LText, ReadOnly, NoAuto, Recursive);
-                FCl.ShowDialog();
+                if (!CoreLib.IsProcessRunning(Properties.Resources.SteamProcName))
+                {
+                    frmCleaner FCl = new frmCleaner(Paths, LText, ReadOnly, NoAuto, Recursive);
+                    FCl.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show(CoreLib.GetLocalizedString("PS_SteamRunning"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            else
-            {
-                MessageBox.Show(CoreLib.GetLocalizedString("PS_SteamRunning"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         /// <summary>
