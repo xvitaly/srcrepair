@@ -116,6 +116,17 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Проверяет запущен ли процесс, имя образа которого передано в качестве параметра.
+        /// </summary>
+        /// <param name="ProcessName">Имя образа процесса</param>
+        /// <returns>Возвращает булево true если такой процесс запущен, иначе - false.</returns>
+        public static bool IsProcessRunning(string ProcessName)
+        {
+            Process[] LocalByName = Process.GetProcessesByName(ProcessName);
+            return LocalByName.Length > 0;
+        }
+
+        /// <summary>
         /// Запрашивает подтверждение и снимает процесс.
         /// </summary>
         /// <param name="ProcessName">Имя образа процесса</param>
@@ -130,19 +141,6 @@ namespace srcrepair
                     ResName.Kill();
                 }
             }
-        }
-
-        /// <summary>
-        /// Возвращает PID процесса если он был найден в памяти.
-        /// </summary>
-        /// <param name="ProcessName">Имя образа процесса</param>
-        /// <returns>PID процесса, либо 0 если процесс не был найден</returns>
-        public static int FindProcess(string ProcessName)
-        {
-            int ProcID = 0;
-            Process[] LocalByName = Process.GetProcessesByName(ProcessName);
-            foreach (Process ResName in LocalByName) { ProcID = ResName.Id; }
-            return ProcID;
         }
 
         /// <summary>
