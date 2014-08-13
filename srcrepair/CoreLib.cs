@@ -32,6 +32,7 @@ using System.Net; // для скачивания файлов...
 using System.Security.Cryptography; // для расчёта хешей...
 using System.Reflection; // для работы со сборками...
 using System.Security.AccessControl; // для определения прав доступа...
+using System.Management; // для работы с WMI...
 
 namespace srcrepair
 {
@@ -677,6 +678,37 @@ namespace srcrepair
         public static string GetSystemArch()
         {
             return Environment.Is64BitOperatingSystem ? "Amd64" : "x86";
+        }
+
+        /// <summary>
+        /// Определяет все доступные в системе разрешения экрана посредством запроса к WMI.
+        /// </summary>
+        /// <returns>Возвращает список доступных разрешений</returns>
+        public static List<String> GetDesktopResolutions()
+        {
+            // Инициализируем переменные...
+            List<String> Result = new List<String>();
+            ManagementScope MMCScope = new ManagementScope();
+
+            try
+            {
+                // Выполняем запрос к WMI...
+                ObjectQuery MMCQuery = new ObjectQuery("SELECT * FROM CIM_VideoControllerResolution");
+
+                // Обрабатываем результаты...
+                using (ManagementObjectSearcher MMCSearcher = new ManagementObjectSearcher(MMCScope, MMCQuery))
+                {
+                    ManagementObjectCollection MMCQueryResults = MMCSearcher.Get();
+                    foreach (var MMCRes in MMCQueryResults)
+                    {
+                        Result.Add(String.Format("{0}x{1}", MMCRes["HorizontalResolution"], MMCRes["VerticalResolution"]));
+                    }
+                }
+            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+
+            // Отдаём результат...
+            return Result.Distinct().ToList();
         }
     }
 }
