@@ -161,27 +161,30 @@ namespace srcrepair
 
         private void CM_FTable_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Control && e.KeyCode == Keys.A)
+            if (!GttWrk.IsBusy)
             {
-                foreach (ListViewItem LVI in CM_FTable.Items)
+                if (e.Control && e.KeyCode == Keys.A)
                 {
-                    LVI.Checked = true;
+                    foreach (ListViewItem LVI in CM_FTable.Items)
+                    {
+                        LVI.Checked = true;
+                    }
                 }
-            }
 
-            if (e.Control && e.KeyCode == Keys.D)
-            {
-                foreach (ListViewItem LVI in CM_FTable.Items)
+                if (e.Control && e.KeyCode == Keys.D)
                 {
-                    LVI.Checked = false;
+                    foreach (ListViewItem LVI in CM_FTable.Items)
+                    {
+                        LVI.Checked = false;
+                    }
                 }
-            }
 
-            if (e.Control && e.KeyCode == Keys.R)
-            {
-                foreach (ListViewItem LVI in CM_FTable.Items)
+                if (e.Control && e.KeyCode == Keys.R)
                 {
-                    LVI.Checked = !LVI.Checked;
+                    foreach (ListViewItem LVI in CM_FTable.Items)
+                    {
+                        LVI.Checked = !LVI.Checked;
+                    }
                 }
             }
         }
