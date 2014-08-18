@@ -61,9 +61,7 @@
             this.GT_ModelQuality = new System.Windows.Forms.ComboBox();
             this.L_GT_ScreenType = new System.Windows.Forms.Label();
             this.L_GT_ResVert = new System.Windows.Forms.Label();
-            this.GT_ResVert_Btn = new System.Windows.Forms.Button();
             this.GT_ScreenType = new System.Windows.Forms.ComboBox();
-            this.GT_ResHor_Btn = new System.Windows.Forms.Button();
             this.L_GT_ResHor = new System.Windows.Forms.Label();
             this.GT_NCF_Group = new System.Windows.Forms.Panel();
             this.GT_NCF_Quality = new System.Windows.Forms.ComboBox();
@@ -309,9 +307,7 @@
             this.GT_GCF_Group.Controls.Add(this.GT_ModelQuality);
             this.GT_GCF_Group.Controls.Add(this.L_GT_ScreenType);
             this.GT_GCF_Group.Controls.Add(this.L_GT_ResVert);
-            this.GT_GCF_Group.Controls.Add(this.GT_ResVert_Btn);
             this.GT_GCF_Group.Controls.Add(this.GT_ScreenType);
-            this.GT_GCF_Group.Controls.Add(this.GT_ResHor_Btn);
             this.GT_GCF_Group.Controls.Add(this.L_GT_ResHor);
             resources.ApplyResources(this.GT_GCF_Group, "GT_GCF_Group");
             this.GT_GCF_Group.Name = "GT_GCF_Group";
@@ -562,15 +558,6 @@
             resources.ApplyResources(this.L_GT_ResVert, "L_GT_ResVert");
             this.L_GT_ResVert.Name = "L_GT_ResVert";
             // 
-            // GT_ResVert_Btn
-            // 
-            this.GT_ResVert_Btn.Cursor = System.Windows.Forms.Cursors.Help;
-            resources.ApplyResources(this.GT_ResVert_Btn, "GT_ResVert_Btn");
-            this.GT_ResVert_Btn.Name = "GT_ResVert_Btn";
-            this.GT_ResVert_Btn.TabStop = false;
-            this.GT_ResVert_Btn.UseVisualStyleBackColor = true;
-            this.GT_ResVert_Btn.Click += new System.EventHandler(this.GT_ResVert_Btn_Click);
-            // 
             // GT_ScreenType
             // 
             this.GT_ScreenType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -580,15 +567,6 @@
             resources.GetString("GT_ScreenType.Items1")});
             resources.ApplyResources(this.GT_ScreenType, "GT_ScreenType");
             this.GT_ScreenType.Name = "GT_ScreenType";
-            // 
-            // GT_ResHor_Btn
-            // 
-            this.GT_ResHor_Btn.Cursor = System.Windows.Forms.Cursors.Help;
-            resources.ApplyResources(this.GT_ResHor_Btn, "GT_ResHor_Btn");
-            this.GT_ResHor_Btn.Name = "GT_ResHor_Btn";
-            this.GT_ResHor_Btn.TabStop = false;
-            this.GT_ResHor_Btn.UseVisualStyleBackColor = true;
-            this.GT_ResHor_Btn.Click += new System.EventHandler(this.GT_ResHor_Btn_Click);
             // 
             // L_GT_ResHor
             // 
@@ -2066,9 +2044,7 @@
         private System.Windows.Forms.ComboBox GT_ModelQuality;
         private System.Windows.Forms.Label L_GT_ScreenType;
         private System.Windows.Forms.Label L_GT_ResVert;
-        private System.Windows.Forms.Button GT_ResVert_Btn;
         private System.Windows.Forms.ComboBox GT_ScreenType;
-        private System.Windows.Forms.Button GT_ResHor_Btn;
         private System.Windows.Forms.Label L_GT_ResHor;
         private System.Windows.Forms.Panel GT_NCF_Group;
         private System.Windows.Forms.ComboBox GT_NCF_Ratio;

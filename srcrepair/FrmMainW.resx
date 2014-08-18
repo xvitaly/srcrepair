@@ -145,7 +145,7 @@
     <value>108, 13</value>
   </data>
   <data name="L_GT_HDR.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
+    <value>28</value>
   </data>
   <data name="L_GT_HDR.Text" xml:space="preserve">
     <value>High Dynamic Range</value>
@@ -178,7 +178,7 @@
     <value>71, 13</value>
   </data>
   <data name="L_GT_DxMode.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
+    <value>26</value>
   </data>
   <data name="L_GT_DxMode.Text" xml:space="preserve">
     <value>DirectX mode</value>
@@ -211,7 +211,7 @@
     <value>60, 13</value>
   </data>
   <data name="L_GT_MotionBlur.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
+    <value>24</value>
   </data>
   <data name="L_GT_MotionBlur.Text" xml:space="preserve">
     <value>Motion Blur</value>
@@ -247,7 +247,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_HDR.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
+    <value>29</value>
   </data>
   <data name="&gt;&gt;GT_HDR.Name" xml:space="preserve">
     <value>GT_HDR</value>
@@ -283,7 +283,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_DxMode.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
+    <value>27</value>
   </data>
   <data name="&gt;&gt;GT_DxMode.Name" xml:space="preserve">
     <value>GT_DxMode</value>
@@ -304,10 +304,10 @@
     <value>162, 29</value>
   </data>
   <data name="GT_ResVert.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 20</value>
+    <value>134, 20</value>
   </data>
   <data name="GT_ResVert.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;GT_ResVert.Name" xml:space="preserve">
     <value>GT_ResVert</value>
@@ -328,7 +328,7 @@
     <value>18, 29</value>
   </data>
   <data name="GT_ResHor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 20</value>
+    <value>134, 20</value>
   </data>
   <data name="GT_ResHor.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -361,7 +361,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_MotionBlur.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
+    <value>25</value>
   </data>
   <data name="&gt;&gt;GT_MotionBlur.Name" xml:space="preserve">
     <value>GT_MotionBlur</value>
@@ -391,7 +391,7 @@
     <value>106, 13</value>
   </data>
   <data name="L_GT_VSync.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
+    <value>22</value>
   </data>
   <data name="L_GT_VSync.Text" xml:space="preserve">
     <value>Wait for vertical sync</value>
@@ -424,7 +424,7 @@
     <value>72, 13</value>
   </data>
   <data name="L_GT_Filtering.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
+    <value>20</value>
   </data>
   <data name="L_GT_Filtering.Text" xml:space="preserve">
     <value>Filtering mode</value>
@@ -457,7 +457,7 @@
     <value>89, 13</value>
   </data>
   <data name="L_GT_AntiAliasing.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
+    <value>18</value>
   </data>
   <data name="L_GT_AntiAliasing.Text" xml:space="preserve">
     <value>Antialiasing mode</value>
@@ -490,7 +490,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_VSync.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
+    <value>23</value>
   </data>
   <data name="&gt;&gt;GT_VSync.Name" xml:space="preserve">
     <value>GT_VSync</value>
@@ -532,7 +532,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_Filtering.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
+    <value>21</value>
   </data>
   <data name="&gt;&gt;GT_Filtering.Name" xml:space="preserve">
     <value>GT_Filtering</value>
@@ -577,7 +577,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_AntiAliasing.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
+    <value>19</value>
   </data>
   <data name="&gt;&gt;GT_AntiAliasing.Name" xml:space="preserve">
     <value>GT_AntiAliasing</value>
@@ -607,7 +607,7 @@
     <value>81, 13</value>
   </data>
   <data name="L_GT_ColorCorrectionT.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+    <value>16</value>
   </data>
   <data name="L_GT_ColorCorrectionT.Text" xml:space="preserve">
     <value>Color correction</value>
@@ -640,7 +640,7 @@
     <value>74, 13</value>
   </data>
   <data name="L_GT_ShadowQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+    <value>14</value>
   </data>
   <data name="L_GT_ShadowQuality.Text" xml:space="preserve">
     <value>Shadow detail</value>
@@ -673,7 +673,7 @@
     <value>64, 13</value>
   </data>
   <data name="L_GT_WaterQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>12</value>
   </data>
   <data name="L_GT_WaterQuality.Text" xml:space="preserve">
     <value>Water detail</value>
@@ -706,7 +706,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_ColorCorrectionT.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+    <value>17</value>
   </data>
   <data name="&gt;&gt;GT_ColorCorrectionT.Name" xml:space="preserve">
     <value>GT_ColorCorrectionT</value>
@@ -736,7 +736,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_ShadowQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>15</value>
   </data>
   <data name="&gt;&gt;GT_ShadowQuality.Name" xml:space="preserve">
     <value>GT_ShadowQuality</value>
@@ -769,7 +769,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_WaterQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>13</value>
   </data>
   <data name="&gt;&gt;GT_WaterQuality.Name" xml:space="preserve">
     <value>GT_WaterQuality</value>
@@ -799,7 +799,7 @@
     <value>69, 13</value>
   </data>
   <data name="L_GT_ShaderQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="L_GT_ShaderQuality.Text" xml:space="preserve">
     <value>Shader detail</value>
@@ -832,7 +832,7 @@
     <value>71, 13</value>
   </data>
   <data name="L_GT_TextureQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="L_GT_TextureQuality.Text" xml:space="preserve">
     <value>Texture detail</value>
@@ -865,7 +865,7 @@
     <value>64, 13</value>
   </data>
   <data name="L_GT_ModelQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="L_GT_ModelQuality.Text" xml:space="preserve">
     <value>Model detail</value>
@@ -898,7 +898,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_ShaderQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>11</value>
   </data>
   <data name="&gt;&gt;GT_ShaderQuality.Name" xml:space="preserve">
     <value>GT_ShaderQuality</value>
@@ -934,7 +934,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_TextureQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;GT_TextureQuality.Name" xml:space="preserve">
     <value>GT_TextureQuality</value>
@@ -967,7 +967,7 @@
     <value>134, 21</value>
   </data>
   <data name="GT_ModelQuality.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;GT_ModelQuality.Name" xml:space="preserve">
     <value>GT_ModelQuality</value>
@@ -997,7 +997,7 @@
     <value>70, 13</value>
   </data>
   <data name="L_GT_ScreenType.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="L_GT_ScreenType.Text" xml:space="preserve">
     <value>Display mode</value>
@@ -1030,7 +1030,7 @@
     <value>90, 13</value>
   </data>
   <data name="L_GT_ResVert.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="L_GT_ResVert.Text" xml:space="preserve">
     <value>Vertical resolution</value>
@@ -1046,36 +1046,6 @@
   </data>
   <data name="&gt;&gt;L_GT_ResVert.ZOrder" xml:space="preserve">
     <value>27</value>
-  </data>
-  <metadata name="GT_ResVert_Btn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_ResVert_Btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="GT_ResVert_Btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 27</value>
-  </data>
-  <data name="GT_ResVert_Btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 22</value>
-  </data>
-  <data name="GT_ResVert_Btn.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="GT_ResVert_Btn.Text" xml:space="preserve">
-    <value>?</value>
-  </data>
-  <data name="&gt;&gt;GT_ResVert_Btn.Name" xml:space="preserve">
-    <value>GT_ResVert_Btn</value>
-  </data>
-  <data name="&gt;&gt;GT_ResVert_Btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_ResVert_Btn.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
-  </data>
-  <data name="&gt;&gt;GT_ResVert_Btn.ZOrder" xml:space="preserve">
-    <value>28</value>
   </data>
   <metadata name="GT_ScreenType.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1093,7 +1063,7 @@
     <value>131, 21</value>
   </data>
   <data name="GT_ScreenType.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;GT_ScreenType.Name" xml:space="preserve">
     <value>GT_ScreenType</value>
@@ -1105,37 +1075,7 @@
     <value>GT_GCF_Group</value>
   </data>
   <data name="&gt;&gt;GT_ScreenType.ZOrder" xml:space="preserve">
-    <value>29</value>
-  </data>
-  <metadata name="GT_ResHor_Btn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_ResHor_Btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="GT_ResHor_Btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>130, 27</value>
-  </data>
-  <data name="GT_ResHor_Btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 22</value>
-  </data>
-  <data name="GT_ResHor_Btn.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="GT_ResHor_Btn.Text" xml:space="preserve">
-    <value>?</value>
-  </data>
-  <data name="&gt;&gt;GT_ResHor_Btn.Name" xml:space="preserve">
-    <value>GT_ResHor_Btn</value>
-  </data>
-  <data name="&gt;&gt;GT_ResHor_Btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_ResHor_Btn.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
-  </data>
-  <data name="&gt;&gt;GT_ResHor_Btn.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>28</value>
   </data>
   <metadata name="L_GT_ResHor.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1168,7 +1108,7 @@
     <value>GT_GCF_Group</value>
   </data>
   <data name="&gt;&gt;L_GT_ResHor.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>29</value>
   </data>
   <data name="GT_GCF_Group.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -1957,7 +1897,7 @@
     <value>True</value>
   </metadata>
   <data name="GT_NCF_HorRes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 30</value>
+    <value>18, 29</value>
   </data>
   <data name="GT_NCF_HorRes.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 20</value>

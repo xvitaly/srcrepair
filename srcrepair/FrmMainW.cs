@@ -2410,18 +2410,6 @@ namespace srcrepair
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
-        private void GT_ResHor_Btn_Click(object sender, EventArgs e)
-        {
-            // Выводим краткую справку о вводе разрешения по горизонтали...
-            MessageBox.Show(String.Format(CoreLib.GetLocalizedString("GT_ResMsg"), CoreLib.GetLocalizedString("GT_ResMsgHor")), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void GT_ResVert_Btn_Click(object sender, EventArgs e)
-        {
-            // Выводим краткую справку о вводе разрешения по вертикали...
-            MessageBox.Show(String.Format(CoreLib.GetLocalizedString("GT_ResMsg"), CoreLib.GetLocalizedString("GT_ResMsgVert")), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
         private void GT_LaunchOptions_Btn_Click(object sender, EventArgs e)
         {
             // Выводим краткую справку о строке параметров запуска...
