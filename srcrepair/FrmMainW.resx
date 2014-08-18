@@ -1057,10 +1057,10 @@
     <value>Windowed</value>
   </data>
   <data name="GT_ScreenType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>309, 29</value>
+    <value>306, 29</value>
   </data>
   <data name="GT_ScreenType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 21</value>
+    <value>134, 21</value>
   </data>
   <data name="GT_ScreenType.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
