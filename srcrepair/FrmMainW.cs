@@ -2171,41 +2171,10 @@ namespace srcrepair
         private void FP_Uninstall_Click(object sender, EventArgs e)
         {
             // Начинаем удаление установленного конфига...
-            // Генерируем имя файла с полным путём до него...
-            string CfgFile = Path.Combine(GV.FullCfgPath, "autoexec.cfg");
-            // Проверяем, существует ли файл...
-            if (File.Exists(CfgFile))
-            {
-                // Файл существует. Запросим подтверждение на удаление...
-                if (MessageBox.Show(CoreLib.GetLocalizedString("FP_RemoveQuestion"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-                {
-                    // Создадим бэкап если включена безопасная очистка...
-                    if (Properties.Settings.Default.SafeCleanup)
-                    {
-                        // Создаём резервную копию...
-                        CreateBackUpNow("autoexec.cfg", GV.FullCfgPath, GV.FullBackUpDirPath);
-                    }
-
-                    try
-                    {
-                        // Удалим файл...
-                        File.Delete(CfgFile);
-                        // Выводим сообщение об успешном удалении...
-                        MessageBox.Show(CoreLib.GetLocalizedString("FP_RemoveSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        // Скрываем значок предупреждения на странице графических настроек...
-                        GT_Warning.Visible = false;
-                    }
-                    catch (Exception Ex)
-                    {
-                        // Произошло исключение при попытке удаления. Уведомим пользователя об этом...
-                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("FP_RemoveFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show(CoreLib.GetLocalizedString("FP_RemoveNotExists"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "cfg", "autoexec.cfg"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "autoexec.cfg"));
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), true, false, true);
         }
 
         private void GT_Warning_Click(object sender, EventArgs e)
