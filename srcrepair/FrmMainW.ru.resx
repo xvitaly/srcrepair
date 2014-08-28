@@ -513,17 +513,14 @@
   <data name="GT_Maximum_Graphics.Text" xml:space="preserve">
     <value>Максимальное качество</value>
   </data>
-  <data name="L_GT_LaunchOptions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 13</value>
+  <data name="GT_ResAvailable_Btn.Text" xml:space="preserve">
+    <value>Определить</value>
   </data>
-  <data name="L_GT_LaunchOptions.Text" xml:space="preserve">
-    <value>Параметры запуска игры:</value>
+  <data name="L_GT_ResAvailable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 13</value>
   </data>
-  <data name="GT_LaunchOptions.Location" type="System.Drawing.Point, System.Drawing">
-    <value>161, 264</value>
-  </data>
-  <data name="GT_LaunchOptions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>251, 20</value>
+  <data name="L_GT_ResAvailable.Text" xml:space="preserve">
+    <value>Разрешения экрана:</value>
   </data>
   <data name="GraphicTweaker.Text" xml:space="preserve">
     <value>Графические настройки</value>
@@ -1058,12 +1055,6 @@
   </data>
   <data name="MNUUpdateCheck.Text" xml:space="preserve">
     <value>Пров&amp;ерить наличие обновлений...</value>
-  </data>
-  <data name="MNUUpGameDB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 22</value>
-  </data>
-  <data name="MNUUpGameDB.Text" xml:space="preserve">
-    <value>О&amp;бновить базу поддерживаемых игр</value>
   </data>
   <data name="MNUSteamGroup.Size" type="System.Drawing.Size, System.Drawing">
     <value>293, 22</value>

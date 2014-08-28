@@ -359,6 +359,13 @@ namespace srcrepair.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Monitor {
+            get {
+                object obj = ResourceManager.GetObject("Monitor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Options {
             get {
                 object obj = ResourceManager.GetObject("Options", resourceCulture);

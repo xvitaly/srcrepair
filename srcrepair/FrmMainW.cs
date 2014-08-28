@@ -2379,12 +2379,6 @@ namespace srcrepair
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
-        private void GT_LaunchOptions_Btn_Click(object sender, EventArgs e)
-        {
-            // Выводим краткую справку о строке параметров запуска...
-            MessageBox.Show(CoreLib.GetLocalizedString("NotImplementedYet"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
         private void PS_ResetSettings_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(((Button)sender).Text + "?", GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
@@ -3155,6 +3149,19 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "*.old"));
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "bin", "*.old"));
             SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+        }
+
+        private void GT_ResAvailable_Btn_Click(object sender, EventArgs e)
+        {
+            // Получим список доступных разрешений...
+            List<String> Resolutions = CoreLib.GetDesktopResolutions();
+            foreach (string CRes in Resolutions)
+            {
+                GT_ResAvailable.Items.Add(CRes);
+            }
+
+            // Если нашли, включим контрол выбора...
+            GT_ResAvailable.Enabled = GT_ResAvailable.Items.Count > 0;
         }
     }
 }

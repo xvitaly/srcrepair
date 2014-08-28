@@ -123,13 +123,41 @@
   <metadata name="GraphicTweaker.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="GT_ResAvailable.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GT_ResAvailable.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="GT_ResAvailable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 263</value>
+  </data>
+  <data name="GT_ResAvailable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 21</value>
+  </data>
+  <data name="GT_ResAvailable.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;GT_ResAvailable.Name" xml:space="preserve">
+    <value>GT_ResAvailable</value>
+  </data>
+  <data name="&gt;&gt;GT_ResAvailable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_ResAvailable.Parent" xml:space="preserve">
+    <value>GraphicTweaker</value>
+  </data>
+  <data name="&gt;&gt;GT_ResAvailable.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="GT_GCF_Group.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="L_GT_HDR.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="L_GT_HDR.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -137,7 +165,6 @@
   <data name="L_GT_HDR.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="L_GT_HDR.Location" type="System.Drawing.Point, System.Drawing">
     <value>303, 208</value>
   </data>
@@ -1129,7 +1156,7 @@
     <value>GraphicTweaker</value>
   </data>
   <data name="&gt;&gt;GT_GCF_Group.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="GT_NCF_Group.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1972,7 +1999,7 @@
     <value>GraphicTweaker</value>
   </data>
   <data name="&gt;&gt;GT_NCF_Group.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="GT_Warning.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2031,7 +2058,7 @@
     <value>GraphicTweaker</value>
   </data>
   <data name="&gt;&gt;GT_Warning.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <metadata name="GT_SaveApply.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2058,7 +2085,7 @@
     <value>GraphicTweaker</value>
   </data>
   <data name="&gt;&gt;GT_SaveApply.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <metadata name="GT_Maximum_Performance.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2085,7 +2112,7 @@
     <value>GraphicTweaker</value>
   </data>
   <data name="&gt;&gt;GT_Maximum_Performance.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <metadata name="GT_Maximum_Graphics.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2112,90 +2139,69 @@
     <value>GraphicTweaker</value>
   </data>
   <data name="&gt;&gt;GT_Maximum_Graphics.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <metadata name="GT_LaunchOptions_Btn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="GT_LaunchOptions_Btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>418, 262</value>
-  </data>
-  <data name="GT_LaunchOptions_Btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 22</value>
-  </data>
-  <data name="GT_LaunchOptions_Btn.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="GT_LaunchOptions_Btn.Text" xml:space="preserve">
-    <value>?</value>
-  </data>
-  <data name="&gt;&gt;GT_LaunchOptions_Btn.Name" xml:space="preserve">
-    <value>GT_LaunchOptions_Btn</value>
-  </data>
-  <data name="&gt;&gt;GT_LaunchOptions_Btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GT_LaunchOptions_Btn.Parent" xml:space="preserve">
-    <value>GraphicTweaker</value>
-  </data>
-  <data name="&gt;&gt;GT_LaunchOptions_Btn.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="L_GT_LaunchOptions.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="GT_ResAvailable_Btn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="L_GT_LaunchOptions.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="GT_ResAvailable_Btn.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
-  <data name="L_GT_LaunchOptions.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 267</value>
+  <data name="GT_ResAvailable_Btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>345, 261</value>
   </data>
-  <data name="L_GT_LaunchOptions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 13</value>
+  <data name="GT_ResAvailable_Btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 24</value>
   </data>
-  <data name="L_GT_LaunchOptions.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="GT_ResAvailable_Btn.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="L_GT_LaunchOptions.Text" xml:space="preserve">
-    <value>Launch options:</value>
+  <data name="GT_ResAvailable_Btn.Text" xml:space="preserve">
+    <value>Auto detect</value>
   </data>
-  <data name="&gt;&gt;L_GT_LaunchOptions.Name" xml:space="preserve">
-    <value>L_GT_LaunchOptions</value>
+  <data name="GT_ResAvailable_Btn.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
-  <data name="&gt;&gt;L_GT_LaunchOptions.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;GT_ResAvailable_Btn.Name" xml:space="preserve">
+    <value>GT_ResAvailable_Btn</value>
   </data>
-  <data name="&gt;&gt;L_GT_LaunchOptions.Parent" xml:space="preserve">
+  <data name="&gt;&gt;GT_ResAvailable_Btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GT_ResAvailable_Btn.Parent" xml:space="preserve">
     <value>GraphicTweaker</value>
   </data>
-  <data name="&gt;&gt;L_GT_LaunchOptions.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;GT_ResAvailable_Btn.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="GT_LaunchOptions.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="L_GT_ResAvailable.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="GT_LaunchOptions.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="L_GT_ResAvailable.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="GT_LaunchOptions.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 264</value>
+  <data name="L_GT_ResAvailable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 267</value>
   </data>
-  <data name="GT_LaunchOptions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 20</value>
+  <data name="L_GT_ResAvailable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 13</value>
   </data>
-  <data name="GT_LaunchOptions.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="L_GT_ResAvailable.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;GT_LaunchOptions.Name" xml:space="preserve">
-    <value>GT_LaunchOptions</value>
+  <data name="L_GT_ResAvailable.Text" xml:space="preserve">
+    <value>Resolutions available:</value>
   </data>
-  <data name="&gt;&gt;GT_LaunchOptions.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;L_GT_ResAvailable.Name" xml:space="preserve">
+    <value>L_GT_ResAvailable</value>
   </data>
-  <data name="&gt;&gt;GT_LaunchOptions.Parent" xml:space="preserve">
+  <data name="&gt;&gt;L_GT_ResAvailable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;L_GT_ResAvailable.Parent" xml:space="preserve">
     <value>GraphicTweaker</value>
   </data>
-  <data name="&gt;&gt;GT_LaunchOptions.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;L_GT_ResAvailable.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="GraphicTweaker.ImageIndex" type="System.Int32, mscorlib">
