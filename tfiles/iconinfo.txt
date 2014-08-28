@@ -91,3 +91,5 @@ upd_err.png - Designkindle - CCAA - http://www.iconspedia.com/icon/cross-icon-40
 --------------------------------------------------------------------------------------------------------
 upd_nx.png - PixelMixer - CCAA - http://www.iconspedia.com/icon/tick-11638.html
 --------------------------------------------------------------------------------------------------------
+Monitor.png - Double-J Desig - CCAA - http://www.iconspedia.com/icon/monitor-icon-37548.html
+--------------------------------------------------------------------------------------------------------
