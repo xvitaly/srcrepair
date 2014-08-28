@@ -283,6 +283,7 @@
             resources.ApplyResources(this.GT_ResAvailable, "GT_ResAvailable");
             this.GT_ResAvailable.FormattingEnabled = true;
             this.GT_ResAvailable.Name = "GT_ResAvailable";
+            this.GT_ResAvailable.SelectedIndexChanged += new System.EventHandler(this.GT_ResAvailable_SelectedIndexChanged);
             // 
             // GT_GCF_Group
             // 
