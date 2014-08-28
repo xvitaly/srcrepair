@@ -878,7 +878,6 @@
             this.GT_ResAvailable_Btn.Image = global::srcrepair.Properties.Resources.Monitor;
             resources.ApplyResources(this.GT_ResAvailable_Btn, "GT_ResAvailable_Btn");
             this.GT_ResAvailable_Btn.Name = "GT_ResAvailable_Btn";
-            this.GT_ResAvailable_Btn.TabStop = false;
             this.GT_ResAvailable_Btn.UseVisualStyleBackColor = true;
             this.GT_ResAvailable_Btn.Click += new System.EventHandler(this.GT_ResAvailable_Btn_Click);
             // 
