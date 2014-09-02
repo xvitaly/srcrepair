@@ -105,6 +105,12 @@ namespace srcrepair
         public static bool IsUsingVideoFile;
 
         /// <summary>
+        /// Определяет использует ли игра специальный каталог для хранения
+        /// пользовательских настроек и скриптов.
+        /// </summary>
+        public static bool IsUsingUserDir;
+
+        /// <summary>
         /// Эта переменная хранит ID игры по базе данных Steam. Используется
         /// для служебных целей.
         /// </summary>

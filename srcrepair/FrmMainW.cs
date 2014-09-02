@@ -1883,6 +1883,7 @@ namespace srcrepair
                             GV.GameInternalID = XMLD.GetElementsByTagName("SID")[i].InnerText;
                             GV.ConfDir = XMLD.GetElementsByTagName("VFDir")[i].InnerText;
                             GV.IsUsingVideoFile = XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1";
+                            GV.IsUsingUserDir = XMLD.GetElementsByTagName("UserDir")[i].InnerText == "1";
                             break;
                         }
                     }
