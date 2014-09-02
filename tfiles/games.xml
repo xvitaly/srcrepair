@@ -5,6 +5,7 @@
     <DirName>team fortress 2</DirName>
     <SmallName>tf</SmallName>
     <VFDir>tf</VFDir>
+    <UserDir>1</UserDir>
     <SID>440</SID>
   </Game>
   <Game Name="Team Fortress 2 Beta">
@@ -12,6 +13,7 @@
     <DirName>team fortress 2 beta</DirName>
     <SmallName>tf</SmallName>
     <VFDir>tf</VFDir>
+    <UserDir>1</UserDir>
     <SID>520</SID>
   </Game>
   <Game Name="Counter-Strike: Source">
@@ -19,6 +21,7 @@
     <DirName>counter-strike source</DirName>
     <SmallName>cstrike</SmallName>
     <VFDir>cstrike</VFDir>
+    <UserDir>1</UserDir>
     <SID>240</SID>
   </Game>
   <Game Name="Day of Defeat: Source">
@@ -26,6 +29,7 @@
     <DirName>day of defeat source</DirName>
     <SmallName>dod</SmallName>
     <VFDir>dod</VFDir>
+    <UserDir>1</UserDir>
     <SID>300</SID>
   </Game>
   <Game Name="Half-Life 2: Deathmatch">
@@ -33,6 +37,7 @@
     <DirName>half-life 2 deathmatch</DirName>
     <SmallName>hl2mp</SmallName>
     <VFDir>hl2mp</VFDir>
+    <UserDir>0</UserDir>
     <SID>320</SID>
   </Game>
   <Game Name="Half-Life 2">
@@ -40,6 +45,7 @@
     <DirName>half-life 2</DirName>
     <SmallName>hl2</SmallName>
     <VFDir>hl2</VFDir>
+    <UserDir>0</UserDir>
     <SID>220</SID>
   </Game>
   <Game Name="Half-Life 2: Episode One">
@@ -47,6 +53,7 @@
     <DirName>half-life 2 episode one</DirName>
     <SmallName>episodic</SmallName>
     <VFDir>episodic</VFDir>
+    <UserDir>0</UserDir>
     <SID>380</SID>
   </Game>
   <Game Name="Half-Life 2: Episode Two">
@@ -54,6 +61,7 @@
     <DirName>half-life 2 episode two</DirName>
     <SmallName>ep2</SmallName>
     <VFDir>ep2</VFDir>
+    <UserDir>0</UserDir>
     <SID>420</SID>
   </Game>
   <Game Name="Half-Life 2: Lost Coast">
@@ -61,6 +69,7 @@
     <DirName>half-life 2 lostcoast</DirName>
     <SmallName>lostcoast</SmallName>
     <VFDir>lostcoast</VFDir>
+    <UserDir>0</UserDir>
     <SID>340</SID>
   </Game>
   <Game Name="Portal">
@@ -68,6 +77,7 @@
     <DirName>portal</DirName>
     <SmallName>portal</SmallName>
     <VFDir>portal</VFDir>
+    <UserDir>0</UserDir>
     <SID>400</SID>
   </Game>
   <Game Name="Garry's Mod">
@@ -75,6 +85,7 @@
     <DirName>garrysmod</DirName>
     <SmallName>garrysmod</SmallName>
     <VFDir>garrysmod</VFDir>
+    <UserDir>0</UserDir>
     <SID>4000</SID>
   </Game>
   <Game Name="Age of Chivalry">
@@ -82,6 +93,7 @@
     <DirName>age of chivalry</DirName>
     <SmallName>ageofchivalry</SmallName>
     <VFDir>ageofchivalry</VFDir>
+    <UserDir>0</UserDir>
     <SID>17510</SID>
   </Game>
   <Game Name="D.I.P.R.I.P.: Warm Up">
@@ -89,6 +101,7 @@
     <DirName>diprip warm up</DirName>
     <SmallName>diprip</SmallName>
     <VFDir>diprip</VFDir>
+    <UserDir>0</UserDir>
     <SID>17530</SID>
   </Game>
   <Game Name="Dystopia">
@@ -96,6 +109,7 @@
     <DirName>dystopia</DirName>
     <SmallName>Dystopia</SmallName>
     <VFDir>Dystopia</VFDir>
+    <UserDir>0</UserDir>
     <SID>17580</SID>
   </Game>
   <Game Name="Insurgency: Modern Infantry Combat">
@@ -103,6 +117,7 @@
     <DirName>insurgency</DirName>
     <SmallName>insurgency</SmallName>
     <VFDir>insurgency</VFDir>
+    <UserDir>0</UserDir>
     <SID>17700</SID>
   </Game>
   <Game Name="Pirates, Vikings, and Knights II">
@@ -110,6 +125,7 @@
     <DirName>pirates, vikings, and knights ii</DirName>
     <SmallName>pvkii</SmallName>
     <VFDir>pvkii</VFDir>
+    <UserDir>0</UserDir>
     <SID>17570</SID>
   </Game>
   <Game Name="Smashball">
@@ -117,6 +133,7 @@
     <DirName>smashball</DirName>
     <SmallName>Smashball</SmallName>
     <VFDir>Smashball</VFDir>
+    <UserDir>0</UserDir>
     <SID>17730</SID>
   </Game>
   <Game Name="Synergy">
@@ -124,6 +141,7 @@
     <DirName>synergy</DirName>
     <SmallName>synergy</SmallName>
     <VFDir>synergy</VFDir>
+    <UserDir>0</UserDir>
     <SID>17520</SID>
   </Game>
   <Game Name="Zombie Panic! Source">
@@ -131,6 +149,7 @@
     <DirName>zombie panic! source</DirName>
     <SmallName>zps</SmallName>
     <VFDir>zps</VFDir>
+    <UserDir>0</UserDir>
     <SID>17500</SID>
   </Game>
   <Game Name="Half-Life: Source">
@@ -138,6 +157,7 @@
     <DirName>half-life source</DirName>
     <SmallName>hl1</SmallName>
     <VFDir>hl1</VFDir>
+    <UserDir>0</UserDir>
     <SID>280</SID>
   </Game>
   <Game Name="Half-Life Deathmatch: Source">
@@ -145,6 +165,7 @@
     <DirName>half-life deathmatch source</DirName>
     <SmallName>hl1mp</SmallName>
     <VFDir>hl1mp</VFDir>
+    <UserDir>0</UserDir>
     <SID>360</SID>
   </Game>
   <Game Name="Left 4 Dead">
@@ -152,6 +173,7 @@
     <DirName>left 4 dead</DirName>
     <SmallName>left4dead</SmallName>
     <VFDir>left4dead</VFDir>
+    <UserDir>0</UserDir>
     <SID>500</SID>
   </Game>
   <Game Name="Left 4 Dead 2">
@@ -159,6 +181,7 @@
     <DirName>left 4 dead 2</DirName>
     <SmallName>left4dead2</SmallName>
     <VFDir>left4dead2</VFDir>
+    <UserDir>0</UserDir>
     <SID>550</SID>
   </Game>
   <Game Name="Alien Swarm">
@@ -166,6 +189,7 @@
     <DirName>alien swarm</DirName>
     <SmallName>swarm</SmallName>
     <VFDir>swarm</VFDir>
+    <UserDir>0</UserDir>
     <SID>630</SID>
   </Game>
   <Game Name="Portal 2">
@@ -173,6 +197,7 @@
     <DirName>portal 2</DirName>
     <SmallName>portal2</SmallName>
     <VFDir>update</VFDir>
+    <UserDir>0</UserDir>
     <SID>620</SID>
   </Game>
   <Game Name="Dota 2">
@@ -180,6 +205,7 @@
     <DirName>dota 2</DirName>
     <SmallName>dota</SmallName>
     <VFDir>dota</VFDir>
+    <UserDir>0</UserDir>
     <SID>570</SID>
   </Game>
   <Game Name="Dota 2 Beta">
@@ -187,6 +213,7 @@
     <DirName>dota 2 beta</DirName>
     <SmallName>dota</SmallName>
     <VFDir>dota</VFDir>
+    <UserDir>0</UserDir>
     <SID>570</SID>
   </Game>
   <Game Name="Dota 2 Test">
@@ -194,6 +221,7 @@
     <DirName>dota 2 test</DirName>
     <SmallName>dota</SmallName>
     <VFDir>dota</VFDir>
+    <UserDir>0</UserDir>
     <SID>570</SID>
   </Game>
   <Game Name="Counter-Strike Global Offensive">
@@ -201,6 +229,7 @@
     <DirName>counter-strike global offensive</DirName>
     <SmallName>csgo</SmallName>
     <VFDir>csgo</VFDir>
+    <UserDir>0</UserDir>
     <SID>730</SID>
   </Game>
   <Game Name="Nuclear Dawn">
@@ -208,6 +237,7 @@
     <DirName>nuclear dawn</DirName>
     <SmallName>nucleardawn</SmallName>
     <VFDir>nucleardawn</VFDir>
+    <UserDir>0</UserDir>
     <SID>17710</SID>
   </Game>
   <Game Name="Postal III">
@@ -215,6 +245,7 @@
     <DirName>postal iii</DirName>
     <SmallName>p3</SmallName>
     <VFDir>p3</VFDir>
+    <UserDir>0</UserDir>
     <SID>10220</SID>
   </Game>
   <Game Name="E.Y.E.: Divine Cybermancy">
@@ -222,6 +253,7 @@
     <DirName>eye</DirName>
     <SmallName>EYE</SmallName>
     <VFDir>EYE</VFDir>
+    <UserDir>0</UserDir>
     <SID>91700</SID>
   </Game>
   <Game Name="Dark Messiah MM SP">
@@ -229,6 +261,7 @@
     <DirName>dark messiah might and magic single player</DirName>
     <SmallName>mm</SmallName>
     <VFDir>mm</VFDir>
+    <UserDir>0</UserDir>
     <SID>2100</SID>
   </Game>
   <Game Name="Dark Messiah MM MP">
@@ -236,6 +269,7 @@
     <DirName>dark messiah might and magic multiplayer</DirName>
     <SmallName>mm</SmallName>
     <VFDir>mm</VFDir>
+    <UserDir>0</UserDir>
     <SID>2100</SID>
   </Game>
   <Game Name="The Ship">
@@ -243,6 +277,7 @@
     <DirName>the ship</DirName>
     <SmallName>ship</SmallName>
     <VFDir>ship</VFDir>
+    <UserDir>0</UserDir>
     <SID>2400</SID>
   </Game>
   <Game Name="The Ship Singleplayer">
@@ -250,6 +285,7 @@
     <DirName>the ship single player</DirName>
     <SmallName>ship</SmallName>
     <VFDir>ship</VFDir>
+    <UserDir>0</UserDir>
     <SID>2420</SID>
   </Game>
   <Game Name="SiN Episodes: Emergence">
@@ -257,6 +293,7 @@
     <DirName>sin episodes emergence</DirName>
     <SmallName>SE1</SmallName>
     <VFDir>SE1</VFDir>
+    <UserDir>0</UserDir>
     <SID>1300</SID>
   </Game>
   <Game Name="Vampire: The Masquerade - Bloodlines">
@@ -264,6 +301,7 @@
     <DirName>vampire the masquerade - bloodlines</DirName>
     <SmallName>vampire</SmallName>
     <VFDir>vampire</VFDir>
+    <UserDir>0</UserDir>
     <SID>2600</SID>
   </Game>
   <Game Name="Zeno Clash">
@@ -271,6 +309,7 @@
     <DirName>zenoclash</DirName>
     <SmallName>zenozoik</SmallName>
     <VFDir>zenozoik</VFDir>
+    <UserDir>0</UserDir>
     <SID>22200</SID>
   </Game>
   <Game Name="Dear Esther">
@@ -278,6 +317,7 @@
     <DirName>dear esther</DirName>
     <SmallName>dearesther</SmallName>
     <VFDir>dearesther</VFDir>
+    <UserDir>0</UserDir>
     <SID>203810</SID>
   </Game>
   <Game Name="Eternal Silence">
@@ -285,6 +325,7 @@
     <DirName>eternal-silence</DirName>
     <SmallName>esmod</SmallName>
     <VFDir>esmod</VFDir>
+    <UserDir>0</UserDir>
     <SID>17550</SID>
   </Game>
   <Game Name="Vindictus">
@@ -292,6 +333,7 @@
     <DirName>Vindictus</DirName>
     <SmallName>en-US</SmallName>
     <VFDir>en-US</VFDir>
+    <UserDir>0</UserDir>
     <SID>212160</SID>
   </Game>
   <Game Name="Bloody Good Time">
@@ -299,6 +341,7 @@
     <DirName>bloody good time</DirName>
     <SmallName>pm</SmallName>
     <VFDir>pm</VFDir>
+    <UserDir>0</UserDir>
     <SID>2450</SID>
   </Game>
   <Game Name="Revelations 2012">
@@ -306,6 +349,7 @@
     <DirName>revelations 2012</DirName>
     <SmallName>revelations</SmallName>
     <VFDir>revelations</VFDir>
+    <UserDir>0</UserDir>
     <SID>201070</SID>
   </Game>
   <Game Name="MINERVA: Metastasis">
@@ -313,6 +357,7 @@
     <DirName>Minerva</DirName>
     <SmallName>minerva</SmallName>
     <VFDir>minerva</VFDir>
+    <UserDir>0</UserDir>
     <SID>235780</SID>
   </Game>
   <Game Name="Insurgency">
@@ -320,6 +365,7 @@
     <DirName>insurgency2</DirName>
     <SmallName>insurgency</SmallName>
     <VFDir>insurgency</VFDir>
+    <UserDir>0</UserDir>
     <SID>222880</SID>
   </Game>
   <Game Name="No More Room in Hell">
@@ -327,6 +373,7 @@
     <DirName>nmrih</DirName>
     <SmallName>nmrih</SmallName>
     <VFDir>nmrih</VFDir>
+    <UserDir>0</UserDir>
     <SID>224260</SID>
   </Game>
   <Game Name="Contagion">
@@ -334,6 +381,7 @@
     <DirName>Contagion</DirName>
     <SmallName>contagion</SmallName>
     <VFDir>contagion</VFDir>
+    <UserDir>0</UserDir>
     <SID>238430</SID>
   </Game>
 </Games>
