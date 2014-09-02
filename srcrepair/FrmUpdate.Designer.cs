@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdate));
-            this.DnlInstall = new System.Windows.Forms.Button();
             this.DnlProgBar = new System.Windows.Forms.ProgressBar();
             this.UpdAppImg = new System.Windows.Forms.PictureBox();
             this.UpdDBImg = new System.Windows.Forms.PictureBox();
@@ -40,13 +39,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.UpdAppImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpdDBImg)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DnlInstall
-            // 
-            resources.ApplyResources(this.DnlInstall, "DnlInstall");
-            this.DnlInstall.Name = "DnlInstall";
-            this.DnlInstall.UseVisualStyleBackColor = true;
-            this.DnlInstall.Click += new System.EventHandler(this.DnlInstall_Click);
             // 
             // DnlProgBar
             // 
@@ -59,6 +51,7 @@
             resources.ApplyResources(this.UpdAppImg, "UpdAppImg");
             this.UpdAppImg.Name = "UpdAppImg";
             this.UpdAppImg.TabStop = false;
+            this.UpdAppImg.Click += new System.EventHandler(this.UpdAppStatus_Click);
             // 
             // UpdDBImg
             // 
@@ -66,16 +59,19 @@
             resources.ApplyResources(this.UpdDBImg, "UpdDBImg");
             this.UpdDBImg.Name = "UpdDBImg";
             this.UpdDBImg.TabStop = false;
+            this.UpdDBImg.Click += new System.EventHandler(this.UpdDBStatus_Click);
             // 
             // UpdAppStatus
             // 
             resources.ApplyResources(this.UpdAppStatus, "UpdAppStatus");
             this.UpdAppStatus.Name = "UpdAppStatus";
+            this.UpdAppStatus.Click += new System.EventHandler(this.UpdAppStatus_Click);
             // 
             // UpdDBStatus
             // 
             resources.ApplyResources(this.UpdDBStatus, "UpdDBStatus");
             this.UpdDBStatus.Name = "UpdDBStatus";
+            this.UpdDBStatus.Click += new System.EventHandler(this.UpdDBStatus_Click);
             // 
             // WrkChkApp
             // 
@@ -96,7 +92,6 @@
             this.Controls.Add(this.UpdDBImg);
             this.Controls.Add(this.UpdAppImg);
             this.Controls.Add(this.DnlProgBar);
-            this.Controls.Add(this.DnlInstall);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -113,7 +108,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button DnlInstall;
         private System.Windows.Forms.ProgressBar DnlProgBar;
         private System.Windows.Forms.PictureBox UpdAppImg;
         private System.Windows.Forms.PictureBox UpdDBImg;

@@ -59,6 +59,9 @@ namespace srcrepair
 
         private void FileDownloader_Completed(object sender, AsyncCompletedEventArgs e)
         {
+            // Скроем прогресс-бар...
+            DnlProgBar.Visible = false;
+
             // Проверим чтобы полученный файл существовал...
             if (File.Exists(this.UpdateFileName))
             {
@@ -106,6 +109,9 @@ namespace srcrepair
 
         private void DownloadUpdate(string UpdateURI, string FileName)
         {
+            // Покажем прогресс выполнения...
+            DnlProgBar.Visible = true;
+
             using (WebClient FileDownloader = new WebClient())
             {
                 // Скачиваем файл...
@@ -113,32 +119,6 @@ namespace srcrepair
                 FileDownloader.DownloadFileCompleted += new AsyncCompletedEventHandler(FileDownloader_Completed);
                 FileDownloader.DownloadProgressChanged += new DownloadProgressChangedEventHandler(FileDownloader_ProgressChanged);
                 FileDownloader.DownloadFileAsync(new Uri(UpdateURI), FileName);
-            }
-        }
-
-        private void DnlInstall_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (!WrkChkDb.IsBusy && !WrkChkApp.IsBusy)
-                {
-                    if (this.AppAvailable || this.DbAvailable)
-                    {
-                        DnlInstall.Visible = false; DnlProgBar.Visible = true; if (this.AppAvailable) { this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI))); DownloadUpdate(this.UpdateURI, this.UpdateFileName); } if (this.DbAvailable && CoreLib.IsDirectoryWritable(GV.FullAppPath)) { this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile)); DownloadUpdate(Properties.Settings.Default.UpdateGameDBFile, this.UpdateFileName); }
-                    }
-                    else
-                    {
-                        MessageBox.Show(CoreLib.GetLocalizedString("UPD_LatestInstalled"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show(CoreLib.GetLocalizedString("DB_WrkInProgress"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            catch (Exception Ex)
-            {
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_DownloadException"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
             }
         }
 
@@ -184,6 +164,8 @@ namespace srcrepair
                     this.Invoke((MethodInvoker)delegate()
                     {
                         UpdAppImg.Image = Properties.Resources.upd_av;
+                        UpdAppImg.Cursor = Cursors.Hand;
+                        UpdAppStatus.Cursor = Cursors.Hand;
                         UpdAppStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_AppUpdateAvail"), this.NewVersion);
                     });
                     this.AppAvailable = true;
@@ -241,6 +223,8 @@ namespace srcrepair
                     this.Invoke((MethodInvoker)delegate()
                     {
                         UpdDBImg.Image = Properties.Resources.upd_av;
+                        UpdDBImg.Cursor = Cursors.Hand;
+                        UpdDBStatus.Cursor = Cursors.Hand;
                         UpdDBStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_DbUpdateAvail"), this.NewHash);
                     });
                     this.DbAvailable = true;
@@ -265,6 +249,38 @@ namespace srcrepair
         private void frmUpdate_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = (e.CloseReason == CloseReason.UserClosing) && WrkChkApp.IsBusy && WrkChkDb.IsBusy;
+        }
+
+        private void UpdDBStatus_Click(object sender, EventArgs e)
+        {
+            if (!WrkChkDb.IsBusy)
+            {
+                if (this.DbAvailable && CoreLib.IsDirectoryWritable(GV.FullAppPath))
+                {
+                    this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile));
+                    DownloadUpdate(Properties.Settings.Default.UpdateGameDBFile, this.UpdateFileName);
+                }
+                else
+                {
+                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_LatestInstalled"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void UpdAppStatus_Click(object sender, EventArgs e)
+        {
+            if (!WrkChkApp.IsBusy)
+            {
+                if (this.AppAvailable)
+                {
+                    this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI)));
+                    DownloadUpdate(this.UpdateURI, this.UpdateFileName);
+                }
+                else
+                {
+                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_LatestInstalled"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }

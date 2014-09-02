@@ -117,44 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="DnlInstall.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="DnlInstall.Location" type="System.Drawing.Point, System.Drawing">
-    <value>58, 99</value>
-  </data>
-  <data name="DnlInstall.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 23</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="DnlInstall.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="DnlInstall.Text" xml:space="preserve">
-    <value>Install update</value>
-  </data>
-  <data name="&gt;&gt;DnlInstall.Name" xml:space="preserve">
-    <value>DnlInstall</value>
-  </data>
-  <data name="&gt;&gt;DnlInstall.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DnlInstall.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;DnlInstall.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <metadata name="DnlProgBar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="DnlProgBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 99</value>
+    <value>15, 93</value>
   </data>
   <data name="DnlProgBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 23</value>
+    <value>241, 17</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="DnlProgBar.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -297,7 +270,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>273, 138</value>
+    <value>273, 123</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
