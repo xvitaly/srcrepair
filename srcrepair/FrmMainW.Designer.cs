@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainW));
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
@@ -174,7 +173,7 @@
             this.BUT_L_GameSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.BUT_L_AllSteam = new System.Windows.Forms.ToolStripMenuItem();
             this.BUT_L_AllSRC = new System.Windows.Forms.ToolStripMenuItem();
-            this.TabIcons = new System.Windows.Forms.ImageList(this.components);
+            this.TabIcons = new System.Windows.Forms.ImageList();
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.ToolsMNU = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUShowEdHint = new System.Windows.Forms.ToolStripMenuItem();

@@ -520,7 +520,7 @@
     <value>112, 13</value>
   </data>
   <data name="L_GT_ResAvailable.Text" xml:space="preserve">
-    <value>Разрешения экрана:</value>
+    <value>Разрешение экрана:</value>
   </data>
   <data name="GraphicTweaker.Text" xml:space="preserve">
     <value>Графические настройки</value>
