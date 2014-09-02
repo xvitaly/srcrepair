@@ -186,6 +186,19 @@ namespace srcrepair
                         LVI.Checked = !LVI.Checked;
                     }
                 }
+
+                if (e.Control && e.KeyCode == Keys.C)
+                {
+                    string SelectedFiles = "";
+                    foreach (ListViewItem LVI in CM_FTable.Items)
+                    {
+                        if (LVI.Checked)
+                        {
+                            SelectedFiles += String.Format("{0}{1}", LVI.ToolTipText, Environment.NewLine);
+                        }
+                    }
+                    Clipboard.SetText(SelectedFiles);
+                }
             }
         }
 
