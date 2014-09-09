@@ -1011,6 +1011,12 @@
   <data name="MNUExtClnMusDb.Text" xml:space="preserve">
     <value>Ба&amp;за данных Steam Music</value>
   </data>
+  <data name="MNUExtClnSkins.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 22</value>
+  </data>
+  <data name="MNUExtClnSkins.Text" xml:space="preserve">
+    <value>Установленные скины</value>
+  </data>
   <data name="MNUExtClnSub.Size" type="System.Drawing.Size, System.Drawing">
     <value>316, 22</value>
   </data>

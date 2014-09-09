@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainW));
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
@@ -173,7 +174,7 @@
             this.BUT_L_GameSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.BUT_L_AllSteam = new System.Windows.Forms.ToolStripMenuItem();
             this.BUT_L_AllSRC = new System.Windows.Forms.ToolStripMenuItem();
-            this.TabIcons = new System.Windows.Forms.ImageList();
+            this.TabIcons = new System.Windows.Forms.ImageList(this.components);
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.ToolsMNU = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUShowEdHint = new System.Windows.Forms.ToolStripMenuItem();
@@ -197,6 +198,7 @@
             this.MNUExtClnGuard = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnOldBin = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnMusDb = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUExtClnSkins = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep2 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUExit = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpMNU = new System.Windows.Forms.ToolStripMenuItem();
@@ -1577,7 +1579,8 @@
             this.MNUExtClnUpdCch,
             this.MNUExtClnGuard,
             this.MNUExtClnOldBin,
-            this.MNUExtClnMusDb});
+            this.MNUExtClnMusDb,
+            this.MNUExtClnSkins});
             this.MNUExtClnSub.Image = global::srcrepair.Properties.Resources.clean;
             this.MNUExtClnSub.Name = "MNUExtClnSub";
             resources.ApplyResources(this.MNUExtClnSub, "MNUExtClnSub");
@@ -1665,6 +1668,13 @@
             this.MNUExtClnMusDb.Name = "MNUExtClnMusDb";
             resources.ApplyResources(this.MNUExtClnMusDb, "MNUExtClnMusDb");
             this.MNUExtClnMusDb.Click += new System.EventHandler(this.MNUExtClnMusDb_Click);
+            // 
+            // MNUExtClnSkins
+            // 
+            this.MNUExtClnSkins.Image = global::srcrepair.Properties.Resources.clean;
+            this.MNUExtClnSkins.Name = "MNUExtClnSkins";
+            resources.ApplyResources(this.MNUExtClnSkins, "MNUExtClnSkins");
+            this.MNUExtClnSkins.Click += new System.EventHandler(this.MNUExtClnSkins_Click);
             // 
             // MNUSep2
             // 
@@ -2082,6 +2092,7 @@
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnOldBin;
         private System.Windows.Forms.ComboBox GT_ResAvailable;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnMusDb;
+        private System.Windows.Forms.ToolStripMenuItem MNUExtClnSkins;
     }
 }
 

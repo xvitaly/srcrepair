@@ -4028,6 +4028,12 @@
   <data name="MNUExtClnMusDb.Text" xml:space="preserve">
     <value>Steam &amp;music database</value>
   </data>
+  <data name="MNUExtClnSkins.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 22</value>
+  </data>
+  <data name="MNUExtClnSkins.Text" xml:space="preserve">
+    <value>I&amp;nstalled custom skins</value>
+  </data>
   <data name="MNUExtClnSub.Size" type="System.Drawing.Size, System.Drawing">
     <value>274, 22</value>
   </data>
@@ -5190,6 +5196,12 @@
     <value>MNUExtClnMusDb</value>
   </data>
   <data name="&gt;&gt;MNUExtClnMusDb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnSkins.Name" xml:space="preserve">
+    <value>MNUExtClnSkins</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnSkins.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUSep2.Name" xml:space="preserve">

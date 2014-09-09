@@ -3178,5 +3178,13 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "music", "_database", "*.*"));
             SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
+
+        private void MNUExtClnSkins_Click(object sender, EventArgs e)
+        {
+            // Очистим установленные скины Steam...
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullSteamPath, "skins", "*.*"));
+            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+        }
     }
 }
