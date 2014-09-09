@@ -3170,5 +3170,13 @@ namespace srcrepair
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
+
+        private void MNUExtClnMusDb_Click(object sender, EventArgs e)
+        {
+            // Очистим базу данных функции Steam Music...
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.FullSteamPath, "music", "_database", "*.*"));
+            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+        }
     }
 }

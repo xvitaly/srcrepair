@@ -945,12 +945,6 @@
   <data name="MNUExtClnCache.Text" xml:space="preserve">
     <value>HTML-&amp;кэш клиента</value>
   </data>
-  <data name="MNUExtClnOverlay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 22</value>
-  </data>
-  <data name="MNUExtClnOverlay.Text" xml:space="preserve">
-    <value>HTML-к&amp;эш оверлея</value>
-  </data>
   <data name="MNUExtClnOverlayHTCache.Size" type="System.Drawing.Size, System.Drawing">
     <value>245, 22</value>
   </data>
@@ -1010,6 +1004,12 @@
   </data>
   <data name="MNUExtClnOldBin.Text" xml:space="preserve">
     <value>С&amp;тарые файлы клиента Steam</value>
+  </data>
+  <data name="MNUExtClnMusDb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 22</value>
+  </data>
+  <data name="MNUExtClnMusDb.Text" xml:space="preserve">
+    <value>Ба&amp;за данных Steam Music</value>
   </data>
   <data name="MNUExtClnSub.Size" type="System.Drawing.Size, System.Drawing">
     <value>316, 22</value>
