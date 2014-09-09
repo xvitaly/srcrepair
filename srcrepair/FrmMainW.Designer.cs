@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainW));
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
@@ -173,7 +174,7 @@
             this.BUT_L_GameSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.BUT_L_AllSteam = new System.Windows.Forms.ToolStripMenuItem();
             this.BUT_L_AllSRC = new System.Windows.Forms.ToolStripMenuItem();
-            this.TabIcons = new System.Windows.Forms.ImageList();
+            this.TabIcons = new System.Windows.Forms.ImageList(this.components);
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.ToolsMNU = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUShowEdHint = new System.Windows.Forms.ToolStripMenuItem();
@@ -186,7 +187,6 @@
             this.MNUWinMnuDisabler = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnSub = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnCache = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNUExtClnOverlay = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnOverlayHTCache = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnLogs = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnGIcons = new System.Windows.Forms.ToolStripMenuItem();
@@ -1567,7 +1567,6 @@
             // 
             this.MNUExtClnSub.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MNUExtClnCache,
-            this.MNUExtClnOverlay,
             this.MNUExtClnOverlayHTCache,
             this.MNUExtClnLogs,
             this.MNUExtClnGIcons,
@@ -1588,13 +1587,6 @@
             this.MNUExtClnCache.Name = "MNUExtClnCache";
             resources.ApplyResources(this.MNUExtClnCache, "MNUExtClnCache");
             this.MNUExtClnCache.Click += new System.EventHandler(this.MNUExtClnCache_Click);
-            // 
-            // MNUExtClnOverlay
-            // 
-            this.MNUExtClnOverlay.Image = global::srcrepair.Properties.Resources.clean;
-            this.MNUExtClnOverlay.Name = "MNUExtClnOverlay";
-            resources.ApplyResources(this.MNUExtClnOverlay, "MNUExtClnOverlay");
-            this.MNUExtClnOverlay.Click += new System.EventHandler(this.MNUExtClnOverlay_Click);
             // 
             // MNUExtClnOverlayHTCache
             // 
@@ -2007,7 +1999,6 @@
         private System.Windows.Forms.ToolStripButton CE_OpenCVList;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnSub;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnCache;
-        private System.Windows.Forms.ToolStripMenuItem MNUExtClnOverlay;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnOverlayHTCache;
         private System.Windows.Forms.ToolStripButton CE_ManualBackUpCfg;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnLogs;

@@ -2975,13 +2975,6 @@ namespace srcrepair
             // Очистим HTML-кэш внутреннего браузера Steam...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "config", "htmlcache", "*.*"));
-            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
-        }
-
-        private void MNUExtClnOverlay_Click(object sender, EventArgs e)
-        {
-            // Очистим HTML-кэш браузера оверлея...
-            List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "config", "overlayhtmlcache", "*.*"));
             SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }

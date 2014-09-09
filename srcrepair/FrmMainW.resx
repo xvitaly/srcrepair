@@ -3962,12 +3962,6 @@
   <data name="MNUExtClnCache.Text" xml:space="preserve">
     <value>&amp;Steam HTML cache</value>
   </data>
-  <data name="MNUExtClnOverlay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 22</value>
-  </data>
-  <data name="MNUExtClnOverlay.Text" xml:space="preserve">
-    <value>&amp;Overlay HTML cache</value>
-  </data>
   <data name="MNUExtClnOverlayHTCache.Size" type="System.Drawing.Size, System.Drawing">
     <value>187, 22</value>
   </data>
@@ -5124,12 +5118,6 @@
     <value>MNUExtClnCache</value>
   </data>
   <data name="&gt;&gt;MNUExtClnCache.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MNUExtClnOverlay.Name" xml:space="preserve">
-    <value>MNUExtClnOverlay</value>
-  </data>
-  <data name="&gt;&gt;MNUExtClnOverlay.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUExtClnOverlayHTCache.Name" xml:space="preserve">
