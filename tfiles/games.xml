@@ -384,4 +384,12 @@
     <UserDir>0</UserDir>
     <SID>238430</SID>
   </Game>
+  <Game Name="NeoTokyo">
+    <HasVF>0</HasVF>
+    <DirName>NEOTOKYO</DirName>
+    <SmallName>NeotokyoSource</SmallName>
+    <VFDir>NeotokyoSource</VFDir>
+    <UserDir>0</UserDir>
+    <SID>244630</SID>
+  </Game>
 </Games>
