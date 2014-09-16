@@ -249,9 +249,10 @@ namespace srcrepair
         /// <param name="ReadOnly">Пользователю будет запрещено изменять выбор удаляемых файлов</param>
         /// <param name="NoAuto">Включает / отключает автовыбор файлов флажками</param>
         /// <param name="Recursive">Включает / отключает рекурсивный обход</param>
-        private void OpenCleanupWindow(List<String> Paths, string LText, bool ReadOnly = false, bool NoAuto = false, bool Recursive = true)
+        /// <param name="ForceBackUp">Включает / отключает принудительное создание резервных копий</param>
+        private void OpenCleanupWindow(List<String> Paths, string LText, bool ReadOnly = false, bool NoAuto = false, bool Recursive = true, bool ForceBackUp = false)
         {
-            frmCleaner FCl = new frmCleaner(Paths, LText, ReadOnly, NoAuto, Recursive);
+            frmCleaner FCl = new frmCleaner(Paths, LText, ReadOnly, NoAuto, Recursive, ForceBackUp);
             FCl.ShowDialog();
         }
 
@@ -264,13 +265,14 @@ namespace srcrepair
         /// <param name="ReadOnly">Пользователю будет запрещено изменять выбор удаляемых файлов</param>
         /// <param name="NoAuto">Включает / отключает автовыбор файлов флажками</param>
         /// <param name="Recursive">Включает / отключает рекурсивный обход</param>
-        private void SteamCleanupWindow(List<String> Paths, string LText, bool ReadOnly = false, bool NoAuto = false, bool Recursive = true)
+        /// <param name="ForceBackUp">Включает / отключает принудительное создание резервных копий</param>
+        private void SteamCleanupWindow(List<String> Paths, string LText, bool ReadOnly = false, bool NoAuto = false, bool Recursive = true, bool ForceBackUp = false)
         {
             try
             {
                 if (!CoreLib.IsProcessRunning(Properties.Resources.SteamProcName))
                 {
-                    frmCleaner FCl = new frmCleaner(Paths, LText, ReadOnly, NoAuto, Recursive);
+                    frmCleaner FCl = new frmCleaner(Paths, LText, ReadOnly, NoAuto, Recursive, ForceBackUp);
                     FCl.ShowDialog();
                 }
                 else
@@ -1595,6 +1597,18 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Генерирует массив, содержащий пути к FPS-конфигам.
+        /// </summary>
+        /// <param name="GamePath">Каталог управляемого приложения</param>
+        private List<String> ListFPSConfigs(string GamePath)
+        {
+            List<String> Result = new List<String>();
+            Result.Add(Path.Combine(GamePath, "cfg", "autoexec.cfg"));
+            Result.Add(Path.Combine(GamePath, "custom", "autoexec.cfg"));
+            return Result;
+        }
+
         #endregion
 
         #region Internal Workers
@@ -2172,10 +2186,7 @@ namespace srcrepair
         private void FP_Uninstall_Click(object sender, EventArgs e)
         {
             // Начинаем удаление установленного конфига...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(GV.FullGamePath, "cfg", "autoexec.cfg"));
-            CleanDirs.Add(Path.Combine(GV.FullGamePath, "custom", "autoexec.cfg"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), true, false, true);
+            SteamCleanupWindow(ListFPSConfigs(GV.FullGamePath), ((Button)sender).Text.ToLower().Replace("&", ""), true, false, true, true);
         }
 
         private void GT_Warning_Click(object sender, EventArgs e)

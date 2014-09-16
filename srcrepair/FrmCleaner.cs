@@ -32,7 +32,7 @@ namespace srcrepair
 {
     public partial class frmCleaner : Form
     {
-        public frmCleaner(List<String> CD, string CI, bool RO, bool NA, bool RS)
+        public frmCleaner(List<String> CD, string CI, bool RO, bool NA, bool RS, bool FB)
         {
             InitializeComponent();
             CleanDirs = CD;
@@ -40,12 +40,14 @@ namespace srcrepair
             IsReadOnly = RO;
             NoAutoCheck = NA;
             IsRecursive = RS;
+            ForceBackUp = FB;
         }
 
         private List<String> CleanDirs; // Здесь будем хранить каталог для очистки,...
         private bool IsReadOnly;
         private bool NoAutoCheck;
         private bool IsRecursive;
+        private bool ForceBackUp;
         private string CleanInfo; // ...и информацию о том, что будем очищать.
         private long TotalSize = 0; // Задаём и обнуляем счётчик общего размера удаляемых файлов...
 
@@ -222,7 +224,7 @@ namespace srcrepair
                 });
 
                 // Добавляем в архив (если выбрано)...
-                if (Properties.Settings.Default.PackBeforeCleanup)
+                if (Properties.Settings.Default.PackBeforeCleanup || this.ForceBackUp)
                 {
                     try
                     {
