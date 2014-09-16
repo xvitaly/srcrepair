@@ -2186,7 +2186,7 @@ namespace srcrepair
         private void FP_Uninstall_Click(object sender, EventArgs e)
         {
             // Начинаем удаление установленного конфига...
-            SteamCleanupWindow(ListFPSConfigs(GV.FullGamePath), ((Button)sender).Text.ToLower().Replace("&", ""), true, false, true, true);
+            SteamCleanupWindow(ListFPSConfigs(GV.FullGamePath), ((Button)sender).Text.ToLower().Replace("&", ""), true, false, true, Properties.Settings.Default.SafeCleanup);
         }
 
         private void GT_Warning_Click(object sender, EventArgs e)
