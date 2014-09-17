@@ -33,6 +33,7 @@ using System.Security.Cryptography; // для расчёта хешей...
 using System.Reflection; // для работы со сборками...
 using System.Security.AccessControl; // для определения прав доступа...
 using System.Management; // для работы с WMI...
+using Ionic.Zip; // для работы с архивами...
 
 namespace srcrepair
 {
@@ -709,6 +710,41 @@ namespace srcrepair
 
             // Отдаём результат...
             return Result.Distinct().ToList();
+        }
+
+        /// <summary>
+        /// Генерирует уникальное имя для файла резервной копии.
+        /// </summary>
+        /// <param name="BackUpDir">Каталог хранения резервных копий</param>
+        /// <returns>Имя файла резервной копии</returns>
+        public static string GenerateBackUpFileName(string BackUpDir)
+        {
+            return Path.Combine(BackUpDir, "Container_" + DateTime2Unix(DateTime.Now) + ".bud");
+        }
+
+        /// <summary>
+        /// Упаковывает файлы, имена которых переданых в массиве, в Zip-архив с
+        /// произвольным именем.
+        /// </summary>
+        /// <param name="Files">Массив с именами файлов, которые будут добавлены в архив</param>
+        /// <param name="ArchiveName">Имя для создаваемого архивного файла</param>
+        /// <returns>В случае успеха возвращает истину, иначе - ложь</returns>
+        public static bool CompressFiles(List<String> Files, string ArchiveName)
+        {
+            try
+            {
+                using (ZipFile ZBkUp = new ZipFile(ArchiveName, Encoding.UTF8))
+                {
+                    ZBkUp.AddFiles(Files, true, "");
+                    ZBkUp.Save();
+                }
+            }
+            catch (Exception Ex)
+            {
+                try { if (File.Exists(ArchiveName)) { File.Delete(ArchiveName); } } catch (Exception E1) { CoreLib.WriteStringToLog(E1.Message); }
+                CoreLib.WriteStringToLog(Ex.Message);
+            }
+            return File.Exists(ArchiveName);
         }
     }
 }

@@ -26,7 +26,6 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
-using Ionic.Zip;
 
 namespace srcrepair
 {
@@ -226,17 +225,9 @@ namespace srcrepair
                 // Добавляем в архив (если выбрано)...
                 if (Properties.Settings.Default.PackBeforeCleanup || this.ForceBackUp)
                 {
-                    try
+                    if (!CoreLib.CompressFiles(DeleteQueue, CoreLib.GenerateBackUpFileName(GV.FullBackUpDirPath)))
                     {
-                        using (ZipFile ZBkUp = new ZipFile(Path.Combine(GV.FullBackUpDirPath, "Container_" + CoreLib.DateTime2Unix(DateTime.Now) + ".bud"), Encoding.UTF8))
-                        {
-                            ZBkUp.AddFiles(DeleteQueue, true, "");
-                            ZBkUp.Save();
-                        }
-                    }
-                    catch (Exception Ex)
-                    {
-                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_ArchFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                        MessageBox.Show(CoreLib.GetLocalizedString("PS_ArchFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 
