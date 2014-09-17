@@ -751,8 +751,9 @@ namespace srcrepair
         /// Ищет файлы по указанным маскам в указанных каталогах
         /// </summary>
         /// <param name="CleanDirs">Каталоги для выполнения очистки с маской имени</param>
+        /// <param name="IsRecursive">Включает / отключает рекурсивный поиск</param>
         /// <returns>Возвращает массив с именами файлов и полными путями</returns>
-        public static List<String> ExpandFileList(List<String> CleanDirs)
+        public static List<String> ExpandFileList(List<String> CleanDirs, bool IsRecursive)
         {
             List<String> Result = new List<String>();
             foreach (string DirMs in CleanDirs)
@@ -766,14 +767,17 @@ namespace srcrepair
                         DirectoryInfo DInfo = new DirectoryInfo(CleanDir);
                         FileInfo[] DirList = DInfo.GetFiles(CleanMask);
                         foreach (FileInfo DItem in DirList) { Result.Add(DItem.FullName); }
-                        
-                        try
+
+                        if (IsRecursive)
                         {
-                            List<String> SubDirs = new List<string>();
-                            foreach (DirectoryInfo Dir in DInfo.GetDirectories()) { SubDirs.Add(Path.Combine(Dir.FullName, CleanMask)); }
-                            if (SubDirs.Count > 0) { Result.AddRange(ExpandFileList(SubDirs)); }
+                            try
+                            {
+                                List<String> SubDirs = new List<string>();
+                                foreach (DirectoryInfo Dir in DInfo.GetDirectories()) { SubDirs.Add(Path.Combine(Dir.FullName, CleanMask)); }
+                                if (SubDirs.Count > 0) { Result.AddRange(ExpandFileList(SubDirs, true)); }
+                            }
+                            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                         }
-                        catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     }
                     catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                 }
