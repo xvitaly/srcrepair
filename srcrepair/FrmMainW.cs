@@ -1601,6 +1601,7 @@ namespace srcrepair
         /// Генерирует массив, содержащий пути к FPS-конфигам.
         /// </summary>
         /// <param name="GamePath">Каталог управляемого приложения</param>
+        /// <returns>Возвращает массив с сгенерированными путями до FPS-конфигов</returns>
         private List<String> ListFPSConfigs(string GamePath)
         {
             List<String> Result = new List<String>();
