@@ -1648,6 +1648,22 @@ namespace srcrepair
             return Result;
         }
 
+        /// <summary>
+        /// Удаляет все файлы из переданного в качестве параметра массива
+        /// </summary>
+        /// <param name="Files">Массив с именами файлов для удаления</param>
+        private void RemoveFiles(List<String> Files)
+        {
+            try
+            {
+                foreach (string F in Files)
+                {
+                    if (File.Exists(F)) { File.Delete(F); }
+                }
+            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+        }
+
         #endregion
 
         #region Internal Workers
@@ -2224,8 +2240,41 @@ namespace srcrepair
 
         private void FP_Uninstall_Click(object sender, EventArgs e)
         {
-            // Начинаем удаление установленного конфига...
-            SteamCleanupWindow(ListFPSConfigs(GV.FullGamePath), ((Button)sender).Text.ToLower().Replace("&", ""), true, false, true, Properties.Settings.Default.SafeCleanup);
+            if (MessageBox.Show(CoreLib.GetLocalizedString("FP_RemoveQuestion"), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    // Получим список установленных FPS-конфигов...
+                    List<String> Configs = ExpandFileList(ListFPSConfigs(GV.FullGamePath), true);
+
+                    // Проверим есть ли кандидаты на удаление...
+                    if (Configs.Count > 0)
+                    {
+                        // Сделаем резервную копию (если включена безопасная очистка)...
+                        if (Properties.Settings.Default.SafeCleanup)
+                        {
+                            if (!CoreLib.CompressFiles(Configs, CoreLib.GenerateBackUpFileName(GV.FullBackUpDirPath)))
+                            {
+                                MessageBox.Show(CoreLib.GetLocalizedString("PS_ArchFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+
+                        // Удаляем конфиги...
+                        RemoveFiles(Configs);
+
+                        // Выводим сообщение об успехе...
+                        MessageBox.Show(CoreLib.GetLocalizedString("FP_RemoveSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(CoreLib.GetLocalizedString("FP_RemoveNotExists"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("FP_RemoveFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void GT_Warning_Click(object sender, EventArgs e)
