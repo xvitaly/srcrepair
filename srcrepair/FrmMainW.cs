@@ -74,33 +74,40 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Создаёт резервную копию конфига, имя которого передано в параметре.
+        /// Возвращает массив для передачи в особые функции
         /// </summary>
-        /// <param name="ConfName">Имя конфига без пути</param>
-        /// <param name="ConfigDir">Путь к каталогу с конфигом</param>
-        /// <param name="BackUpDir">Путь к каталогу с резервными копиями</param>
-        private void CreateBackUpNow(string ConfName, string ConfigDir, string BackUpDir)
+        /// <param name="Str">Строка для создания</param>
+        /// <returns>Возвращает массив</returns>
+        private List<String> SingleToArray(string Str)
         {
-            // Сначала проверим, существует ли запрошенный файл...
-            if (File.Exists(Path.Combine(ConfigDir, ConfName)))
-            {
-                // Проверяем чтобы каталог для бэкапов существовал...
-                if (!(Directory.Exists(BackUpDir)))
-                {
-                    // Каталоги не существуют. Создадим общий каталог для резервных копий...
-                    Directory.CreateDirectory(BackUpDir);
-                }
+            List<String> Result = new List<String>();
+            Result.Add(Str);
+            return Result;
+        }
 
-                try
-                {
-                    // Копируем оригинальный файл в файл бэкапа...
-                    File.Copy(Path.Combine(ConfigDir, ConfName), Path.Combine(BackUpDir, ConfName + "." + CoreLib.DateTime2Unix(DateTime.Now)), true);
-                }
-                catch (Exception Ex)
-                {
-                    // Произошло исключение. Уведомим пользователя об этом...
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BackUpCreationFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                }
+        /// <summary>
+        /// Создаёт резервную копию конфигов, имена которых переданы в параметре.
+        /// </summary>
+        /// <param name="Configs">Конфиги для бэкапа</param>
+        /// <param name="BackUpDir">Путь к каталогу с резервными копиями</param>
+        private void CreateConfigBackUp(List<String> Configs, string BackUpDir)
+        {
+            // Проверяем чтобы каталог для бэкапов существовал...
+            if (!(Directory.Exists(BackUpDir)))
+            {
+                // Каталоги не существуют. Создадим общий каталог для резервных копий...
+                Directory.CreateDirectory(BackUpDir);
+            }
+
+            try
+            {
+                // Копируем оригинальный файл в файл бэкапа...
+                CoreLib.CompressFiles(Configs, CoreLib.GenerateBackUpFileName(BackUpDir));
+            }
+            catch (Exception Ex)
+            {
+                // Произошло исключение. Уведомим пользователя об этом...
+                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BackUpCreationFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
             }
         }
 
@@ -2153,7 +2160,7 @@ namespace srcrepair
                         {
                             if (File.Exists(GV.VideoCfgFile))
                             {
-                                CreateBackUpNow(Path.GetFileName(GV.VideoCfgFile), Path.GetDirectoryName(GV.VideoCfgFile), GV.FullBackUpDirPath);
+                                CreateConfigBackUp(SingleToArray(GV.VideoCfgFile), GV.FullBackUpDirPath);
                             }
                         }
                         
@@ -2210,7 +2217,6 @@ namespace srcrepair
                     if (Properties.Settings.Default.SafeCleanup)
                     {
                         // Создаём резервную копию...
-                        CreateBackUpNow("autoexec.cfg", GV.FullCfgPath, GV.FullBackUpDirPath);
                     }
 
                     try
@@ -2318,7 +2324,7 @@ namespace srcrepair
                     if (File.Exists(Path.Combine(GV.FullCfgPath, CFGFileName)))
                     {
                         // Создаём резервную копию...
-                        CreateBackUpNow(CFGFileName, GV.FullCfgPath, GV.FullBackUpDirPath);
+                        CreateConfigBackUp(SingleToArray(Path.Combine(GV.FullCfgPath, CFGFileName)), GV.FullBackUpDirPath);
                     }
                 }
 
@@ -2454,7 +2460,7 @@ namespace srcrepair
                         {
                             if (Properties.Settings.Default.SafeCleanup)
                             {
-                                CreateBackUpNow(Path.GetFileName(GV.VideoCfgFile), Path.GetDirectoryName(GV.VideoCfgFile), GV.FullBackUpDirPath);
+                                CreateConfigBackUp(SingleToArray(GV.VideoCfgFile), GV.FullBackUpDirPath);
                             }
                             File.Delete(GV.VideoCfgFile);
                             MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -2700,7 +2706,7 @@ namespace srcrepair
                     {
                         if (File.Exists(GV.VideoCfgFile))
                         {
-                            CreateBackUpNow(Path.GetFileName(GV.VideoCfgFile), Path.GetDirectoryName(GV.VideoCfgFile), GV.FullBackUpDirPath);
+                            CreateConfigBackUp(SingleToArray(GV.VideoCfgFile), GV.FullBackUpDirPath);
                         }
                     }
                     MessageBox.Show(CoreLib.GetLocalizedString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -3092,7 +3098,7 @@ namespace srcrepair
             {
                 if (File.Exists(Path.Combine(GV.FullCfgPath, CFGFileName)))
                 {
-                    CreateBackUpNow(CFGFileName, GV.FullCfgPath, GV.FullBackUpDirPath);
+                    CreateConfigBackUp(SingleToArray(Path.Combine(GV.FullCfgPath, CFGFileName)), GV.FullBackUpDirPath);
                     MessageBox.Show(String.Format(CoreLib.GetLocalizedString("CE_BackUpCreated"), CFGFileName), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
