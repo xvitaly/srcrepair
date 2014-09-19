@@ -1579,12 +1579,13 @@ namespace srcrepair
         /// Генерирует массив, содержащий пути к FPS-конфигам.
         /// </summary>
         /// <param name="GamePath">Каталог управляемого приложения</param>
+        /// <param name="UserDir">Указывает использует ли управляемое приложение пользовательский каталог</param>
         /// <returns>Возвращает массив с сгенерированными путями до FPS-конфигов</returns>
-        private List<String> ListFPSConfigs(string GamePath)
+        private List<String> ListFPSConfigs(string GamePath, bool UserDir)
         {
             List<String> Result = new List<String>();
             Result.Add(Path.Combine(GamePath, "cfg", "autoexec.cfg"));
-            Result.Add(Path.Combine(GamePath, "custom", "autoexec.cfg"));
+            if (UserDir) { Result.Add(Path.Combine(GamePath, "custom", "autoexec.cfg")); }
             return Result;
         }
 
@@ -2222,7 +2223,7 @@ namespace srcrepair
                 try
                 {
                     // Получим список установленных FPS-конфигов...
-                    List<String> Configs = ExpandFileList(ListFPSConfigs(GV.FullGamePath), true);
+                    List<String> Configs = ExpandFileList(ListFPSConfigs(GV.FullGamePath, GV.IsUsingUserDir), true);
 
                     // Проверим есть ли кандидаты на удаление...
                     if (Configs.Count > 0)
