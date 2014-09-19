@@ -1484,35 +1484,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Восстанавливает файл резервной копии согласно правилам в указанный каталог.
-        /// </summary>
-        /// <param name="FName">Имя файла резервной копии</param>
-        /// <param name="DestDirW">Каталог назначения</param>
-        private void RestoreBackUpFile(string FName, string DestDirW)
-        {
-            // Сохраняем оригинальное имя файла резервной копии для функции копирования...
-            string OrigName = FName;
-            // Отбрасываем двойное расширение...
-            FName = Path.GetFileNameWithoutExtension(FName);
-            // Проверим существование каталога назначения...
-            if (!(Directory.Exists(DestDirW))) { Directory.CreateDirectory(DestDirW); }
-            try
-            {
-                // Копируем файл...
-                File.Copy(Path.Combine(GV.FullBackUpDirPath, OrigName), Path.Combine(DestDirW, FName), true);
-                // Если восстановили autoexec.cfg, отображаем значок на странице графического твикера...
-                if (FName == "autoexec.cfg") { GT_Warning.Visible = true; }
-                // Показываем сообщение об успешном восстановлении...
-                MessageBox.Show(CoreLib.GetLocalizedString("BU_RestSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception Ex)
-            {
-                // Произошло исключение...
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BU_RestFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-            }
-        }
-
-        /// <summary>
         /// Выполняет действия для данной платформы.
         /// </summary>
         private void DoPlatformRoutines()
@@ -2621,18 +2592,7 @@ namespace srcrepair
                                 MessageBox.Show(CoreLib.GetLocalizedString("BU_RestSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 break;
                             default:
-                                switch (Path.GetExtension(Path.GetFileNameWithoutExtension(FName)))
-                                {
-                                    case ".cfg":
-                                        RestoreBackUpFile(FName, GV.FullCfgPath);
-                                        break;
-                                    case ".txt":
-                                        RestoreBackUpFile(FName, Path.Combine(GV.GamePath, GV.ConfDir, "cfg"));
-                                        break;
-                                    default:
-                                        MessageBox.Show(CoreLib.GetLocalizedString("BU_UnknownType"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                        break;
-                                }
+                                MessageBox.Show(CoreLib.GetLocalizedString("BU_UnknownType"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 break;
                         }
                     }
