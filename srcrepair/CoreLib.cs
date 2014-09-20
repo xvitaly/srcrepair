@@ -716,10 +716,11 @@ namespace srcrepair
         /// Генерирует уникальное имя для файла резервной копии.
         /// </summary>
         /// <param name="BackUpDir">Каталог хранения резервных копий</param>
+        /// <param name="Prefix">Префикс имени файла резервной копии</param>
         /// <returns>Имя файла резервной копии</returns>
-        public static string GenerateBackUpFileName(string BackUpDir)
+        public static string GenerateBackUpFileName(string BackUpDir, string Prefix = "Container")
         {
-            return Path.Combine(BackUpDir, "Container_" + DateTime2Unix(DateTime.Now) + ".bud");
+            return Path.Combine(BackUpDir, String.Format("{0}_{1}.bud", Prefix, DateTime2Unix(DateTime.Now)));
         }
 
         /// <summary>
