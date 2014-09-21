@@ -243,6 +243,15 @@ namespace srcrepair.Properties {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to {0} {1}.
+        /// </summary>
+        internal static string BU_TablePrefix {
+            get {
+                return ResourceManager.GetString("BU_TablePrefix", resourceCulture);
+            }
+        }
+        
         internal static System.Drawing.Bitmap bug {
             get {
                 object obj = ResourceManager.GetObject("bug", resourceCulture);

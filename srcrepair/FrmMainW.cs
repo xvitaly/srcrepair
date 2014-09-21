@@ -1317,40 +1317,30 @@ namespace srcrepair
                         // Заполним человеческое описание...
                         if (BufName.IndexOf("Game_Options", StringComparison.CurrentCultureIgnoreCase) != -1)
                         {
-                            BufName = CoreLib.GetLocalizedString("BU_BName_GRGame") + " " + DItem.CreationTime;
+                            BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_GRGame"), DItem.CreationTime);
                         }
                         if (BufName.IndexOf("Source_Options", StringComparison.CurrentCultureIgnoreCase) != -1)
                         {
-                            BufName = CoreLib.GetLocalizedString("BU_BName_SRCAll") + " " + DItem.CreationTime;
+                            BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_SRCAll"), DItem.CreationTime);
                         }
                         if (BufName.IndexOf("Steam_BackUp", StringComparison.CurrentCultureIgnoreCase) != -1)
                         {
-                            BufName = CoreLib.GetLocalizedString("BU_BName_SteamAll") + " " + DItem.CreationTime;
+                            BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_SteamAll"), DItem.CreationTime);
                         }
                         if (BufName.IndexOf("Game_AutoBackUp", StringComparison.CurrentCultureIgnoreCase) != -1)
                         {
-                            BufName = CoreLib.GetLocalizedString("BU_BName_GameAuto") + " " + DItem.CreationTime;
+                            BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_GameAuto"), DItem.CreationTime);
                         }
                         break;
                     case ".bud":
                         Buf = CoreLib.GetLocalizedString("BU_BType_Cont");
                         if (BufName.IndexOf("Container", StringComparison.CurrentCultureIgnoreCase) != -1)
                         {
-                            BufName = CoreLib.GetLocalizedString("BU_BName_Bud") + " " + DItem.CreationTime;
+                            BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_Bud"), DItem.CreationTime);
                         }
                         break;
                     default:
-                        switch (Path.GetExtension(Path.GetFileNameWithoutExtension(DItem.FullName)))
-                        {
-                            case ".cfg":
-                                Buf = CoreLib.GetLocalizedString("BU_BType_Cfg");
-                                break;
-                            case ".txt":
-                                Buf = CoreLib.GetLocalizedString("BU_BType_Video");
-                                break;
-                            default: Buf = CoreLib.GetLocalizedString("BU_BType_Cfg");
-                                break;
-                        }
+                        Buf = CoreLib.GetLocalizedString("BU_BType_Cfg");
                         break;
                 }
                 // Добавляем в таблицу...
