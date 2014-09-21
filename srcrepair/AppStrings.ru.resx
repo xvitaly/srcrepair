@@ -509,6 +509,7 @@
   </data>
   <data name="BU_BName_GameAuto" xml:space="preserve">
     <value>Автокопия настроек игры от</value>
+    <comment>Имя для отображения в списке бэкапов (автокопия)</comment>
   </data>
   <data name="BU_BName_GRGame" xml:space="preserve">
     <value>Граф. настройки от</value>
@@ -833,5 +834,13 @@
   <data name="PS_SteamRunning" xml:space="preserve">
     <value>Обнаружен запущенный клиент Steam! Чтобы выполнить эту очистку завершите его работу.</value>
     <comment>Сообщение при обнаружении клиента Steam при попытке запуска очистки его кэшей или журналов</comment>
+  </data>
+  <data name="BU_BType_Unkn" xml:space="preserve">
+    <value>Неизвестный</value>
+    <comment>Тип архива: неизвестный</comment>
+  </data>
+  <data name="BU_BName_Config" xml:space="preserve">
+    <value>Конфиг игры от</value>
+    <comment>Имя для отображения в списке бэкапов реестра (конфиг игры)</comment>
   </data>
 </root>

@@ -657,4 +657,10 @@
   <data name="PS_SteamRunning" xml:space="preserve">
     <value>Steam client is running! To execute this cleanup please close it.</value>
   </data>
+  <data name="BU_BType_Unkn" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="BU_BName_Config" xml:space="preserve">
+    <value>Game config of</value>
+  </data>
 </root>

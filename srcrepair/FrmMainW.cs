@@ -1334,13 +1334,28 @@ namespace srcrepair
                         break;
                     case ".bud":
                         Buf = CoreLib.GetLocalizedString("BU_BType_Cont");
-                        if (BufName.IndexOf("Container", StringComparison.CurrentCultureIgnoreCase) != -1)
+                        if (BufName.IndexOf(Properties.Resources.BU_PrefixDef, StringComparison.CurrentCultureIgnoreCase) != -1)
                         {
                             BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_Bud"), DItem.CreationTime);
                         }
+                        if (BufName.IndexOf(Properties.Resources.BU_PrefixCfg, StringComparison.CurrentCultureIgnoreCase) != -1)
+                        {
+                            Buf = CoreLib.GetLocalizedString("BU_BType_Cfg");
+                            BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_Config"), DItem.CreationTime);
+                        }
+                        if (BufName.IndexOf(Properties.Resources.BU_PrefixVideo, StringComparison.CurrentCultureIgnoreCase) != -1)
+                        {
+                            Buf = CoreLib.GetLocalizedString("BU_BType_Video");
+                            BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_GRGame"), DItem.CreationTime);
+                        }
+                        if (BufName.IndexOf(Properties.Resources.BU_PrefixVidAuto, StringComparison.CurrentCultureIgnoreCase) != -1)
+                        {
+                            Buf = CoreLib.GetLocalizedString("BU_BType_Video");
+                            BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_GameAuto"), DItem.CreationTime);
+                        }
                         break;
                     default:
-                        Buf = CoreLib.GetLocalizedString("BU_BType_Cfg");
+                        Buf = CoreLib.GetLocalizedString("BU_BType_Unkn");
                         break;
                 }
                 // Добавляем в таблицу...

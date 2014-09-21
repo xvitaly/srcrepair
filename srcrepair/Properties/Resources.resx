@@ -307,6 +307,12 @@
   <data name="BU_PrefixVideo" xml:space="preserve">
     <value>VideoCfg</value>
   </data>
+  <data name="BU_PrefixDef" xml:space="preserve">
+    <value>Container</value>
+  </data>
+  <data name="BU_PrefixVidAuto" xml:space="preserve">
+    <value>VideoAutoCfg</value>
+  </data>
   <data name="BU_TablePrefix" xml:space="preserve">
     <value>{0} {1}</value>
   </data>

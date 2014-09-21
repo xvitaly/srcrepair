@@ -421,6 +421,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Game config of.
+        /// </summary>
+        internal static string BU_BName_Config {
+            get {
+                return ResourceManager.GetString("BU_BName_Config", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Graph. options autobackup of.
         /// </summary>
         internal static string BU_BName_GameAuto {
@@ -480,6 +489,15 @@ namespace srcrepair {
         internal static string BU_BType_Reg {
             get {
                 return ResourceManager.GetString("BU_BType_Reg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown.
+        /// </summary>
+        internal static string BU_BType_Unkn {
+            get {
+                return ResourceManager.GetString("BU_BType_Unkn", resourceCulture);
             }
         }
         

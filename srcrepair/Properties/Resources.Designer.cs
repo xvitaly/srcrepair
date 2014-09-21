@@ -235,6 +235,24 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Container.
+        /// </summary>
+        internal static string BU_PrefixDef {
+            get {
+                return ResourceManager.GetString("BU_PrefixDef", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VideoAutoCfg.
+        /// </summary>
+        internal static string BU_PrefixVidAuto {
+            get {
+                return ResourceManager.GetString("BU_PrefixVidAuto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to VideoCfg.
         /// </summary>
         internal static string BU_PrefixVideo {
