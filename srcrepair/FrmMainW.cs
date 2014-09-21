@@ -2231,7 +2231,7 @@ namespace srcrepair
                         // Сделаем резервную копию (если включена безопасная очистка)...
                         if (Properties.Settings.Default.SafeCleanup)
                         {
-                            if (!CoreLib.CompressFiles(Configs, CoreLib.GenerateBackUpFileName(GV.FullBackUpDirPath)))
+                            if (!CoreLib.CompressFiles(Configs, CoreLib.GenerateBackUpFileName(GV.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg)))
                             {
                                 MessageBox.Show(CoreLib.GetLocalizedString("PS_ArchFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }

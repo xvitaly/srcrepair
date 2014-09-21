@@ -225,6 +225,24 @@ namespace srcrepair.Properties {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to Config.
+        /// </summary>
+        internal static string BU_PrefixCfg {
+            get {
+                return ResourceManager.GetString("BU_PrefixCfg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VideoCfg.
+        /// </summary>
+        internal static string BU_PrefixVideo {
+            get {
+                return ResourceManager.GetString("BU_PrefixVideo", resourceCulture);
+            }
+        }
+        
         internal static System.Drawing.Bitmap bug {
             get {
                 object obj = ResourceManager.GetObject("bug", resourceCulture);
