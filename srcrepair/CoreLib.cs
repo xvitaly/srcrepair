@@ -700,7 +700,7 @@ namespace srcrepair
                 using (ManagementObjectSearcher MMCSearcher = new ManagementObjectSearcher(MMCScope, MMCQuery))
                 {
                     ManagementObjectCollection MMCQueryResults = MMCSearcher.Get();
-                    foreach (var MMCRes in MMCQueryResults)
+                    foreach (ManagementBaseObject MMCRes in MMCQueryResults)
                     {
                         Result.Add(String.Format("{0}x{1}", MMCRes["HorizontalResolution"], MMCRes["VerticalResolution"]));
                     }
