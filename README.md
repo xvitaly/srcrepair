@@ -68,4 +68,6 @@ Supported mods and third-party Source engine games:
  * Revelations 2012;
  * MINERVA: Metastasis;
  * Insurgency;
- * No More Room in Hell.
+ * No More Room in Hell;
+ * Contagion;
+ * NeoTokyo.
