@@ -1290,6 +1290,67 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Генерирует удобочитаемое название для файла резервной копии.
+        /// </summary>
+        /// <param name="FileName">Указатель на файл резервной копии</param>
+        /// <returns>Возвращает пару "тип архива" и "удобочитаемое название"</returns>
+        private Tuple<string, string> GenUserFriendlyBackupDesc(FileInfo FileName)
+        {
+            string BufName = Path.GetFileNameWithoutExtension(FileName.Name);
+            string Buf = "";
+
+            switch (FileName.Extension)
+            {
+                case ".reg":
+                    Buf = CoreLib.GetLocalizedString("BU_BType_Reg");
+                    if (BufName.IndexOf("Game_Options", StringComparison.CurrentCultureIgnoreCase) != -1)
+                    {
+                        BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_GRGame"), FileName.CreationTime);
+                    }
+                    if (BufName.IndexOf("Source_Options", StringComparison.CurrentCultureIgnoreCase) != -1)
+                    {
+                        BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_SRCAll"), FileName.CreationTime);
+                    }
+                    if (BufName.IndexOf("Steam_BackUp", StringComparison.CurrentCultureIgnoreCase) != -1)
+                    {
+                        BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_SteamAll"), FileName.CreationTime);
+                    }
+                    if (BufName.IndexOf("Game_AutoBackUp", StringComparison.CurrentCultureIgnoreCase) != -1)
+                    {
+                        BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_GameAuto"), FileName.CreationTime);
+                    }
+                    break;
+                case ".bud":
+                    Buf = CoreLib.GetLocalizedString("BU_BType_Cont");
+                    if (BufName.IndexOf(Properties.Resources.BU_PrefixDef, StringComparison.CurrentCultureIgnoreCase) != -1)
+                    {
+                        BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_Bud"), FileName.CreationTime);
+                    }
+                    if (BufName.IndexOf(Properties.Resources.BU_PrefixCfg, StringComparison.CurrentCultureIgnoreCase) != -1)
+                    {
+                        Buf = CoreLib.GetLocalizedString("BU_BType_Cfg");
+                        BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_Config"), FileName.CreationTime);
+                    }
+                    if (BufName.IndexOf(Properties.Resources.BU_PrefixVideo, StringComparison.CurrentCultureIgnoreCase) != -1)
+                    {
+                        Buf = CoreLib.GetLocalizedString("BU_BType_Video");
+                        BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_GRGame"), FileName.CreationTime);
+                    }
+                    if (BufName.IndexOf(Properties.Resources.BU_PrefixVidAuto, StringComparison.CurrentCultureIgnoreCase) != -1)
+                    {
+                        Buf = CoreLib.GetLocalizedString("BU_BType_Video");
+                        BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_GameAuto"), FileName.CreationTime);
+                    }
+                    break;
+                default:
+                    Buf = CoreLib.GetLocalizedString("BU_BType_Unkn");
+                    break;
+            }
+
+            return Tuple.Create(Buf, BufName);
+        }
+
+        /// <summary>
         /// Считывает файлы резервных копий из указанного каталога и помещает в таблицу.
         /// </summary>
         /// <param name="BUpDir">Путь к каталогу с резервными копиями</param>
@@ -1302,65 +1363,15 @@ namespace srcrepair
             DirectoryInfo DInfo = new DirectoryInfo(BUpDir);
             // Считываем список файлов по заданной маске...
             FileInfo[] DirList = DInfo.GetFiles("*.*");
-            // Инициализируем буферные переменные...
-            string Buf, BufName;
             // Начинаем обход массива...
             foreach (FileInfo DItem in DirList)
             {
                 // Обрабатываем найденное...
-                BufName = Path.GetFileNameWithoutExtension(DItem.Name);
-                switch (DItem.Extension)
-                {
-                    case ".reg":
-                        // Бэкап реестра...
-                        Buf = CoreLib.GetLocalizedString("BU_BType_Reg");
-                        // Заполним человеческое описание...
-                        if (BufName.IndexOf("Game_Options", StringComparison.CurrentCultureIgnoreCase) != -1)
-                        {
-                            BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_GRGame"), DItem.CreationTime);
-                        }
-                        if (BufName.IndexOf("Source_Options", StringComparison.CurrentCultureIgnoreCase) != -1)
-                        {
-                            BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_SRCAll"), DItem.CreationTime);
-                        }
-                        if (BufName.IndexOf("Steam_BackUp", StringComparison.CurrentCultureIgnoreCase) != -1)
-                        {
-                            BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_SteamAll"), DItem.CreationTime);
-                        }
-                        if (BufName.IndexOf("Game_AutoBackUp", StringComparison.CurrentCultureIgnoreCase) != -1)
-                        {
-                            BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_GameAuto"), DItem.CreationTime);
-                        }
-                        break;
-                    case ".bud":
-                        Buf = CoreLib.GetLocalizedString("BU_BType_Cont");
-                        if (BufName.IndexOf(Properties.Resources.BU_PrefixDef, StringComparison.CurrentCultureIgnoreCase) != -1)
-                        {
-                            BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_Bud"), DItem.CreationTime);
-                        }
-                        if (BufName.IndexOf(Properties.Resources.BU_PrefixCfg, StringComparison.CurrentCultureIgnoreCase) != -1)
-                        {
-                            Buf = CoreLib.GetLocalizedString("BU_BType_Cfg");
-                            BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_Config"), DItem.CreationTime);
-                        }
-                        if (BufName.IndexOf(Properties.Resources.BU_PrefixVideo, StringComparison.CurrentCultureIgnoreCase) != -1)
-                        {
-                            Buf = CoreLib.GetLocalizedString("BU_BType_Video");
-                            BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_GRGame"), DItem.CreationTime);
-                        }
-                        if (BufName.IndexOf(Properties.Resources.BU_PrefixVidAuto, StringComparison.CurrentCultureIgnoreCase) != -1)
-                        {
-                            Buf = CoreLib.GetLocalizedString("BU_BType_Video");
-                            BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_GameAuto"), DItem.CreationTime);
-                        }
-                        break;
-                    default:
-                        Buf = CoreLib.GetLocalizedString("BU_BType_Unkn");
-                        break;
-                }
+                var Rs = GenUserFriendlyBackupDesc(DItem);
+
                 // Добавляем в таблицу...
-                ListViewItem LvItem = new ListViewItem(BufName);
-                LvItem.SubItems.Add(Buf);
+                ListViewItem LvItem = new ListViewItem(Rs.Item2);
+                LvItem.SubItems.Add(Rs.Item1);
                 LvItem.SubItems.Add(CoreLib.SclBytes(DItem.Length));
                 LvItem.SubItems.Add(DItem.CreationTime.ToString());
                 LvItem.SubItems.Add(DItem.Name);
