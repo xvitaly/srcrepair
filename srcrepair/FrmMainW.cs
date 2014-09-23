@@ -1356,13 +1356,15 @@ namespace srcrepair
         /// <param name="BUpDir">Путь к каталогу с резервными копиями</param>
         private void ReadBackUpList2Table(string BUpDir)
         {
-            // Считаем список резервных копий и заполним таблицу...
             // Очистим таблицу...
-            if (BU_LVTable.InvokeRequired) { this.Invoke((MethodInvoker)delegate() { BU_LVTable.Items.Clear(); }); } else { BU_LVTable.Items.Clear(); }
+            this.Invoke((MethodInvoker)delegate() { BU_LVTable.Items.Clear(); });
+            
             // Открываем каталог...
             DirectoryInfo DInfo = new DirectoryInfo(BUpDir);
+            
             // Считываем список файлов по заданной маске...
             FileInfo[] DirList = DInfo.GetFiles("*.*");
+            
             // Начинаем обход массива...
             foreach (FileInfo DItem in DirList)
             {
@@ -1375,7 +1377,7 @@ namespace srcrepair
                 LvItem.SubItems.Add(CoreLib.SclBytes(DItem.Length));
                 LvItem.SubItems.Add(DItem.CreationTime.ToString());
                 LvItem.SubItems.Add(DItem.Name);
-                if (BU_LVTable.InvokeRequired) { this.Invoke((MethodInvoker)delegate() { BU_LVTable.Items.Add(LvItem); }); } else { BU_LVTable.Items.Add(LvItem); }
+                this.Invoke((MethodInvoker)delegate() { BU_LVTable.Items.Add(LvItem); });
             }
         }
 
