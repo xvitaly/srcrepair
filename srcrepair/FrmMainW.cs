@@ -1706,10 +1706,7 @@ namespace srcrepair
                     // Обрабатываем найденное...
                     if (DItem.Name != "config_default.cfg")
                     {
-                        if (FP_ConfigSel.InvokeRequired)
-                        {
-                            this.Invoke((MethodInvoker)delegate() { FP_ConfigSel.Items.Add((string)DItem.Name); });
-                        }
+                        this.Invoke((MethodInvoker)delegate() { FP_ConfigSel.Items.Add((string)DItem.Name); });
                     }
                 }
             }
