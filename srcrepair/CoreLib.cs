@@ -718,7 +718,7 @@ namespace srcrepair
         /// <param name="BackUpDir">Каталог хранения резервных копий</param>
         /// <param name="Prefix">Префикс имени файла резервной копии</param>
         /// <returns>Имя файла резервной копии</returns>
-        public static string GenerateBackUpFileName(string BackUpDir, string Prefix = "Container")
+        public static string GenerateBackUpFileName(string BackUpDir, string Prefix)
         {
             return Path.Combine(BackUpDir, String.Format("{0}_{1}.bud", Prefix, DateTime2Unix(DateTime.Now)));
         }
