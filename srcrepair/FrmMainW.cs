@@ -90,7 +90,8 @@ namespace srcrepair
         /// </summary>
         /// <param name="Configs">Конфиги для бэкапа</param>
         /// <param name="BackUpDir">Путь к каталогу с резервными копиями</param>
-        private void CreateConfigBackUp(List<String> Configs, string BackUpDir)
+        /// <param name="Prefix">Префикс имени файла резервной копии</param>
+        private void CreateConfigBackUp(List<String> Configs, string BackUpDir, string Prefix)
         {
             // Проверяем чтобы каталог для бэкапов существовал...
             if (!(Directory.Exists(BackUpDir)))
@@ -102,7 +103,7 @@ namespace srcrepair
             try
             {
                 // Копируем оригинальный файл в файл бэкапа...
-                CoreLib.CompressFiles(Configs, CoreLib.GenerateBackUpFileName(BackUpDir));
+                CoreLib.CompressFiles(Configs, CoreLib.GenerateBackUpFileName(BackUpDir, Prefix));
             }
             catch (Exception Ex)
             {
