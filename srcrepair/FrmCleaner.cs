@@ -225,7 +225,7 @@ namespace srcrepair
                 // Добавляем в архив (если выбрано)...
                 if (Properties.Settings.Default.PackBeforeCleanup || this.ForceBackUp)
                 {
-                    if (!CoreLib.CompressFiles(DeleteQueue, CoreLib.GenerateBackUpFileName(GV.FullBackUpDirPath)))
+                    if (!CoreLib.CompressFiles(DeleteQueue, CoreLib.GenerateBackUpFileName(GV.FullBackUpDirPath, Properties.Resources.BU_PrefixDef)))
                     {
                         MessageBox.Show(CoreLib.GetLocalizedString("PS_ArchFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
