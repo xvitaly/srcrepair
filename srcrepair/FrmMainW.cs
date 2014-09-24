@@ -2148,7 +2148,7 @@ namespace srcrepair
                         {
                             if (File.Exists(GV.VideoCfgFile))
                             {
-                                CreateConfigBackUp(SingleToArray(GV.VideoCfgFile), GV.FullBackUpDirPath);
+                                CreateConfigBackUp(SingleToArray(GV.VideoCfgFile), GV.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
                             }
                         }
                         
@@ -2312,7 +2312,7 @@ namespace srcrepair
                     if (File.Exists(Path.Combine(GV.FullCfgPath, CFGFileName)))
                     {
                         // Создаём резервную копию...
-                        CreateConfigBackUp(SingleToArray(Path.Combine(GV.FullCfgPath, CFGFileName)), GV.FullBackUpDirPath);
+                        CreateConfigBackUp(SingleToArray(Path.Combine(GV.FullCfgPath, CFGFileName)), GV.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
                     }
                 }
 
@@ -2448,7 +2448,7 @@ namespace srcrepair
                         {
                             if (Properties.Settings.Default.SafeCleanup)
                             {
-                                CreateConfigBackUp(SingleToArray(GV.VideoCfgFile), GV.FullBackUpDirPath);
+                                CreateConfigBackUp(SingleToArray(GV.VideoCfgFile), GV.FullBackUpDirPath, Properties.Resources.BU_PrefixVideo);
                             }
                             File.Delete(GV.VideoCfgFile);
                             MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -2683,7 +2683,7 @@ namespace srcrepair
                     {
                         if (File.Exists(GV.VideoCfgFile))
                         {
-                            CreateConfigBackUp(SingleToArray(GV.VideoCfgFile), GV.FullBackUpDirPath);
+                            CreateConfigBackUp(SingleToArray(GV.VideoCfgFile), GV.FullBackUpDirPath, Properties.Resources.BU_PrefixVideo);
                         }
                     }
                     MessageBox.Show(CoreLib.GetLocalizedString("BU_RegDone"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -3075,7 +3075,7 @@ namespace srcrepair
             {
                 if (File.Exists(Path.Combine(GV.FullCfgPath, CFGFileName)))
                 {
-                    CreateConfigBackUp(SingleToArray(Path.Combine(GV.FullCfgPath, CFGFileName)), GV.FullBackUpDirPath);
+                    CreateConfigBackUp(SingleToArray(Path.Combine(GV.FullCfgPath, CFGFileName)), GV.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
                     MessageBox.Show(String.Format(CoreLib.GetLocalizedString("CE_BackUpCreated"), CFGFileName), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
