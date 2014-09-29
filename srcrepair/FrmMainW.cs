@@ -66,9 +66,16 @@ namespace srcrepair
         /// </summary>
         /// <param name="ConfName">Имя конфига</param>
         /// <param name="AppPath">Путь к программе SRC Repair</param>
-        /// <param name="DestPath">Каталог назначения</param>
-        private void InstallConfigNow(string ConfName, string AppPath, string DestPath)
+        /// <param name="GameDir">Путь к каталогу игры</param>
+        /// <param name="CustmDir">Флаг использования игрой н. с. к.</param>
+        private void InstallConfigNow(string ConfName, string AppPath, string GameDir, bool CustmDir)
         {
+            // Генерируем путь к каталогу установки конфига...
+            string DestPath = Path.Combine(GameDir, CustmDir ? Path.Combine("custom", Properties.Settings.Default.UserCustDirName) : "", "cfg");
+            
+            // Проверяем существование каталога и если его не существует - создаём...
+            if (!Directory.Exists(DestPath)) { Directory.CreateDirectory(DestPath); }
+
             // Устанавливаем...
             File.Copy(Path.Combine(AppPath, "cfgs", ConfName), Path.Combine(DestPath, "autoexec.cfg"), true);
         }
@@ -2205,19 +2212,13 @@ namespace srcrepair
                     if (Properties.Settings.Default.SafeCleanup)
                     {
                         // Создаём резервную копию...
-                        if (!CoreLib.CompressFiles(ListFPSConfigs(GV.FullAppPath, GV.IsUsingUserDir), CoreLib.GenerateBackUpFileName(GV.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg)))
-                        {
-                            MessageBox.Show(CoreLib.GetLocalizedString("PS_ArchFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        CoreLib.CompressFiles(ListFPSConfigs(GV.FullAppPath, GV.IsUsingUserDir), CoreLib.GenerateBackUpFileName(GV.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg));
                     }
 
                     try
                     {
-                        // Создадим каталог если он не существует...
-                        if (!Directory.Exists(GV.FullCfgPath)) { Directory.CreateDirectory(GV.FullCfgPath); }
-                        
                         // Устанавливаем...
-                        InstallConfigNow(FP_ConfigSel.Text, GV.FullAppPath, GV.FullCfgPath);
+                        InstallConfigNow(FP_ConfigSel.Text, GV.FullAppPath, GV.FullGamePath, GV.IsUsingUserDir);
                         
                         // Выводим сообщение об успешной установке...
                         MessageBox.Show(CoreLib.GetLocalizedString("FP_InstallSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
