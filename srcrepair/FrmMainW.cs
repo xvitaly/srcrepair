@@ -2205,16 +2205,23 @@ namespace srcrepair
                     if (Properties.Settings.Default.SafeCleanup)
                     {
                         // Создаём резервную копию...
+                        if (!CoreLib.CompressFiles(ListFPSConfigs(GV.FullAppPath, GV.IsUsingUserDir), CoreLib.GenerateBackUpFileName(GV.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg)))
+                        {
+                            MessageBox.Show(CoreLib.GetLocalizedString("PS_ArchFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
 
                     try
                     {
                         // Создадим каталог если он не существует...
                         if (!Directory.Exists(GV.FullCfgPath)) { Directory.CreateDirectory(GV.FullCfgPath); }
+                        
                         // Устанавливаем...
                         InstallConfigNow(FP_ConfigSel.Text, GV.FullAppPath, GV.FullCfgPath);
+                        
                         // Выводим сообщение об успешной установке...
                         MessageBox.Show(CoreLib.GetLocalizedString("FP_InstallSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
                         // Отобразим значок предупреждения на странице графических настроек...
                         GT_Warning.Visible = true;
                     }
