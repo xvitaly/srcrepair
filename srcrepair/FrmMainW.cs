@@ -1669,6 +1669,18 @@ namespace srcrepair
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
+        /// <summary>
+        /// Управляет выводом значка активного FPS-конфига и кнопки их удаления.
+        /// </summary>
+        /// <param name="GameDir">Полный путь к каталогу игры</param>
+        /// <param name="UserDir">Флаг использования кастомного каталога</param>
+        private void HandleConfigs(string GameDir, bool UserDir)
+        {
+            GV.FPSConfigs = ExpandFileList(ListFPSConfigs(GameDir, UserDir), true);
+            GT_Warning.Visible = GV.FPSConfigs.Count > 0;
+            FP_Uninstall.Enabled = GT_Warning.Visible;
+        }
+
         #endregion
 
         #region Internal Workers
@@ -1984,9 +1996,7 @@ namespace srcrepair
                 SetGTOptsType(!GV.IsUsingVideoFile);
 
                 // Проверим, установлен ли FPS-конфиг...
-                GV.FPSConfigs = ExpandFileList(ListFPSConfigs(GV.FullGamePath, GV.IsUsingUserDir), true);
-                GT_Warning.Visible = GV.FPSConfigs.Count > 0;
-                FP_Uninstall.Enabled = GT_Warning.Visible;
+                HandleConfigs(GV.FullGamePath, GV.IsUsingUserDir);
 
                 // Очистим список FPS-конфигов...
                 FP_ConfigSel.Items.Clear();
@@ -2214,7 +2224,7 @@ namespace srcrepair
                     if (Properties.Settings.Default.SafeCleanup)
                     {
                         // Создаём резервную копию...
-                        CoreLib.CompressFiles(ListFPSConfigs(GV.FullAppPath, GV.IsUsingUserDir), CoreLib.GenerateBackUpFileName(GV.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg));
+                        CoreLib.CompressFiles(GV.FPSConfigs, CoreLib.GenerateBackUpFileName(GV.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg));
                     }
 
                     try
@@ -2225,7 +2235,7 @@ namespace srcrepair
                         // Выводим сообщение об успешной установке...
                         MessageBox.Show(CoreLib.GetLocalizedString("FP_InstallSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         
-                        // Отобразим значок предупреждения на странице графических настроек...
+                        // Отобразим значок предупреждения на странице графических настроек и включим кнопку удаления...
                         GT_Warning.Visible = true;
                     }
                     catch (Exception Ex)
