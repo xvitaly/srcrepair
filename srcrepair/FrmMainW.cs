@@ -1678,7 +1678,7 @@ namespace srcrepair
         {
             GV.FPSConfigs = ExpandFileList(ListFPSConfigs(GameDir, UserDir), true);
             GT_Warning.Visible = GV.FPSConfigs.Count > 0;
-            FP_Uninstall.Enabled = GT_Warning.Visible;
+            FP_Uninstall.Enabled = GV.FPSConfigs.Count > 0;
         }
 
         #endregion
@@ -2235,8 +2235,8 @@ namespace srcrepair
                         // Выводим сообщение об успешной установке...
                         MessageBox.Show(CoreLib.GetLocalizedString("FP_InstallSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         
-                        // Отобразим значок предупреждения на странице графических настроек и включим кнопку удаления...
-                        GT_Warning.Visible = true;
+                        // Перечитаем конфиги...
+                        HandleConfigs(GV.FullGamePath, GV.IsUsingUserDir);
                     }
                     catch (Exception Ex)
                     {
@@ -2258,23 +2258,23 @@ namespace srcrepair
             {
                 try
                 {
-                    // Получим список установленных FPS-конфигов...
-                    List<String> Configs = ExpandFileList(ListFPSConfigs(GV.FullGamePath, GV.IsUsingUserDir), true);
-
                     // Проверим есть ли кандидаты на удаление...
-                    if (Configs.Count > 0)
+                    if (GV.FPSConfigs.Count > 0)
                     {
                         // Сделаем резервную копию (если включена безопасная очистка)...
                         if (Properties.Settings.Default.SafeCleanup)
                         {
-                            if (!CoreLib.CompressFiles(Configs, CoreLib.GenerateBackUpFileName(GV.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg)))
+                            if (!CoreLib.CompressFiles(GV.FPSConfigs, CoreLib.GenerateBackUpFileName(GV.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg)))
                             {
                                 MessageBox.Show(CoreLib.GetLocalizedString("PS_ArchFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
 
                         // Удаляем конфиги...
-                        RemoveFiles(Configs);
+                        RemoveFiles(GV.FPSConfigs);
+
+                        // Перечитаем список конфигов...
+                        HandleConfigs(GV.FullGamePath, GV.IsUsingUserDir);
 
                         // Выводим сообщение об успехе...
                         MessageBox.Show(CoreLib.GetLocalizedString("FP_RemoveSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
