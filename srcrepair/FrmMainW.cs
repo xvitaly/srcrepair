@@ -1986,6 +1986,7 @@ namespace srcrepair
                 // Проверим, установлен ли FPS-конфиг...
                 GV.FPSConfigs = ExpandFileList(ListFPSConfigs(GV.FullGamePath, GV.IsUsingUserDir), true);
                 GT_Warning.Visible = GV.FPSConfigs.Count > 0;
+                FP_Uninstall.Enabled = GT_Warning.Visible;
 
                 // Очистим список FPS-конфигов...
                 FP_ConfigSel.Items.Clear();
