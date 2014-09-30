@@ -127,5 +127,10 @@ namespace srcrepair
         /// играх.
         /// </summary>
         public static string ConfDir;
+
+        /// <summary>
+        /// Содержит пути к установленным FPS-конфигам управляемой игры.
+        /// </summary>
+        public static List<String> FPSConfigs;
     }
 }

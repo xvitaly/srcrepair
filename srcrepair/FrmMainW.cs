@@ -1984,7 +1984,8 @@ namespace srcrepair
                 SetGTOptsType(!GV.IsUsingVideoFile);
 
                 // Проверим, установлен ли FPS-конфиг...
-                GT_Warning.Visible = File.Exists(Path.Combine(GV.FullCfgPath, "autoexec.cfg"));
+                GV.FPSConfigs = ExpandFileList(ListFPSConfigs(GV.FullGamePath, GV.IsUsingUserDir), true);
+                GT_Warning.Visible = GV.FPSConfigs.Count > 0;
 
                 // Очистим список FPS-конфигов...
                 FP_ConfigSel.Items.Clear();
