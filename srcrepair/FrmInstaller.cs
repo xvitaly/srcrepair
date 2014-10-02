@@ -46,7 +46,7 @@ namespace srcrepair
         private void InstallFileNow(string FileName, string SubDir)
         {
             // Генерируем путь к каталогу, в который будем устанавливать...
-            string DestDir = Path.Combine(GV.FullGamePath, "custom", Properties.Settings.Default.UserCustDirName, SubDir);
+            string DestDir = Path.Combine(GV.FullGamePath, GV.IsUsingUserDir ? Path.Combine("custom", Properties.Settings.Default.UserCustDirName) : "", SubDir);
 
             // Проверяем существование каталога установки и если его нет, создаём...
             if (!(Directory.Exists(DestDir))) { Directory.CreateDirectory(DestDir); }
