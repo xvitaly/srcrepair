@@ -486,6 +486,7 @@
     <None Include="Resources\upd_chk.png" />
     <None Include="Resources\upd_err.png" />
     <None Include="Resources\Monitor.png" />
+    <EmbeddedResource Include="Resources\VtTemplate.txt" />
     <Content Include="srcrepair.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -573,6 +573,23 @@ namespace srcrepair.Properties {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;UnlitGeneric&quot;
+        ///{
+        ///	&quot;$basetexture&quot;	&quot;{0}&quot;
+        ///	&quot;$translucent&quot; &quot;1&quot;
+        ///	&quot;$ignorez&quot; &quot;1&quot;
+        ///	&quot;$vertexcolor&quot; &quot;1&quot;
+        ///	&quot;$vertexalpha&quot; &quot;1&quot;
+        ///}
+        ///.
+        /// </summary>
+        internal static string VtTemplate {
+            get {
+                return ResourceManager.GetString("VtTemplate", resourceCulture);
+            }
+        }
+        
         internal static System.Drawing.Bitmap Wizard {
             get {
                 object obj = ResourceManager.GetObject("Wizard", resourceCulture);
