@@ -93,14 +93,7 @@ namespace srcrepair
             // Начинаем...
             using (StreamWriter CFile = new StreamWriter(FileName))
             {
-                CFile.WriteLine(@"""UnlitGeneric""");
-                CFile.WriteLine("{");
-                CFile.WriteLine("\t" + @"""$basetexture""	""vgui\logos\" + Path.GetFileNameWithoutExtension(FileName) + @"""");
-                CFile.WriteLine("\t" + @"""$translucent"" ""1""");
-                CFile.WriteLine("\t" + @"""$ignorez"" ""1""");
-                CFile.WriteLine("\t" + @"""$vertexcolor"" ""1""");
-                CFile.WriteLine("\t" + @"""$vertexalpha"" ""1""");
-                CFile.WriteLine("}");
+                try { CFile.WriteLine(CoreLib.GetTemplateFromResource(Properties.Resources.PI_TemplateFile).Replace("{D}", Path.Combine("vgui", "logos", Path.GetFileNameWithoutExtension(FileName)))); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                 CFile.Close();
             }
         }

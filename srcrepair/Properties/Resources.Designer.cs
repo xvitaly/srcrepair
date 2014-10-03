@@ -419,6 +419,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to srcrepair.Resources.VtTemplate.txt.
+        /// </summary>
+        internal static string PI_TemplateFile {
+            get {
+                return ResourceManager.GetString("PI_TemplateFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Windows.
         /// </summary>
         internal static string PlatformFriendlyName {
