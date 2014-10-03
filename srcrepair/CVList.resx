@@ -2091,4 +2091,10 @@
   <data name="sv_ignoregrenaderadio" xml:space="preserve">
     <value>Turn off Fire in the hole messages.</value>
   </data>
+  <data name="cl_mute_all_comms" xml:space="preserve">
+    <value>When you mute a player, the mute settings now apply to text chat as well as voice chat.</value>
+  </data>
+  <data name="sv_vote_issue_autobalance_allowed" xml:space="preserve">
+    <value>Enable / disable auto team balance vote.</value>
+  </data>
 </root>

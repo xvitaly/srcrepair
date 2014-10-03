@@ -3393,4 +3393,10 @@
   <data name="sv_max_queries_sec_global" xml:space="preserve">
     <value>Задаёт максимальное число запросов к серверу в секунду глобально (для всех).</value>
   </data>
+  <data name="cl_mute_all_comms" xml:space="preserve">
+    <value>Включает / отключает отображение чата для заглушенных пользователем игроков.</value>
+  </data>
+  <data name="sv_vote_issue_autobalance_allowed" xml:space="preserve">
+    <value>Включает / отключает возможность запуска на сервере голосования за отключение / включение автоматической балансировки команд.</value>
+  </data>
 </root>
