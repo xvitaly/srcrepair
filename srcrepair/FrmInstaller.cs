@@ -140,6 +140,9 @@ namespace srcrepair
                 }
             }
 
+            // Проверим существование каталога назначения...
+            if (!Directory.Exists(FPath)) { Directory.CreateDirectory(FPath); }
+
             // Копируем VTF-файл...
             File.Copy(FileName, Path.Combine(FPath, Path.GetFileName(FFPath)), true);
 
