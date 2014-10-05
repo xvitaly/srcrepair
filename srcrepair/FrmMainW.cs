@@ -2626,6 +2626,7 @@ namespace srcrepair
                                         }
                                     }
                                 }
+                                HandleConfigs(GV.FullGamePath, GV.IsUsingUserDir);
                                 MessageBox.Show(CoreLib.GetLocalizedString("BU_RestSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 break;
                             default:
