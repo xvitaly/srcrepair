@@ -3251,6 +3251,11 @@ namespace srcrepair
         {
             // Получим список доступных разрешений...
             List<String> Resolutions = CoreLib.GetDesktopResolutions();
+
+            // Очистим список...
+            GT_ResAvailable.Items.Clear();
+
+            // Пройдём массив в цикле...
             foreach (string CRes in Resolutions)
             {
                 GT_ResAvailable.Items.Add(CRes);
