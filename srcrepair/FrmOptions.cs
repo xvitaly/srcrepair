@@ -46,7 +46,6 @@ namespace srcrepair
             MO_EnableAppLogs.Checked = Properties.Settings.Default.EnableDebugLog;
             MO_ShBin.Text = Properties.Settings.Default.ShBin;
             MO_TextEdBin.Text = Properties.Settings.Default.EditorBin;
-            MO_CustDirInstArc.Checked = Properties.Settings.Default.InstallToUserCustDir;
             MO_CustDirName.Text = Properties.Settings.Default.UserCustDirName;
             MO_ZipCompress.Checked = Properties.Settings.Default.PackBeforeCleanup;
             MO_UnSafeOps.Checked = Properties.Settings.Default.AllowUnSafeCleanup;
@@ -66,7 +65,6 @@ namespace srcrepair
             Properties.Settings.Default.EnableDebugLog = MO_EnableAppLogs.Checked;
             Properties.Settings.Default.EditorBin = MO_TextEdBin.Text;
             Properties.Settings.Default.ShBin = MO_ShBin.Text;
-            Properties.Settings.Default.InstallToUserCustDir = MO_CustDirInstArc.Checked;
             Properties.Settings.Default.PackBeforeCleanup = MO_ZipCompress.Checked;
             Properties.Settings.Default.AllowUnSafeCleanup = MO_UnSafeOps.Checked;
             if (Regex.IsMatch(MO_CustDirName.Text, Properties.Resources.MO_CustomDirRegex)) { Properties.Settings.Default.UserCustDirName = MO_CustDirName.Text; }

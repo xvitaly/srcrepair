@@ -69,7 +69,7 @@ namespace srcrepair
                     {
                         try
                         {
-                            ZFile.Extract(Path.Combine(GV.FullGamePath, "custom", Properties.Settings.Default.InstallToUserCustDir ? Properties.Settings.Default.UserCustDirName : Path.GetFileNameWithoutExtension(ArcName)));
+                            ZFile.Extract(Path.Combine(GV.FullGamePath, GV.IsUsingUserDir ? Path.Combine("custom", Properties.Settings.Default.UserCustDirName) : ""));
                         }
                         catch (Exception Ex)
                         {
