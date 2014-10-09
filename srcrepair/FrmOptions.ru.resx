@@ -123,8 +123,8 @@
   <data name="MO_ZipCompress.Text" xml:space="preserve">
     <value>Создавать бэкап перед запуском очистки</value>
   </data>
-  <data name="MO_CustDirInstArc.Text" xml:space="preserve">
-    <value>Устанавливать в заданный каст. каталог</value>
+  <data name="MO_AutoRestAfterUpdateDb.Text" xml:space="preserve">
+    <value>Перезагружать базу игр после обновлений</value>
   </data>
   <data name="MO_PrefHelpSystem.Items" xml:space="preserve">
     <value>Официальный сайт</value>

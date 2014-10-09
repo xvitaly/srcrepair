@@ -34,7 +34,7 @@
             this.MO_TC = new System.Windows.Forms.TabControl();
             this.MO_TP1 = new System.Windows.Forms.TabPage();
             this.MO_ZipCompress = new System.Windows.Forms.CheckBox();
-            this.MO_CustDirInstArc = new System.Windows.Forms.CheckBox();
+            this.MO_AutoRestAfterUpdateDb = new System.Windows.Forms.CheckBox();
             this.MO_PrefHelpSystem = new System.Windows.Forms.ComboBox();
             this.MO_L_HelpSystem = new System.Windows.Forms.Label();
             this.MO_AutoUpdate = new System.Windows.Forms.CheckBox();
@@ -84,7 +84,7 @@
             // MO_TP1
             // 
             this.MO_TP1.Controls.Add(this.MO_ZipCompress);
-            this.MO_TP1.Controls.Add(this.MO_CustDirInstArc);
+            this.MO_TP1.Controls.Add(this.MO_AutoRestAfterUpdateDb);
             this.MO_TP1.Controls.Add(this.MO_PrefHelpSystem);
             this.MO_TP1.Controls.Add(this.MO_L_HelpSystem);
             this.MO_TP1.Controls.Add(this.MO_AutoUpdate);
@@ -100,11 +100,11 @@
             this.MO_ZipCompress.Name = "MO_ZipCompress";
             this.MO_ZipCompress.UseVisualStyleBackColor = true;
             // 
-            // MO_CustDirInstArc
+            // MO_AutoRestAfterUpdateDb
             // 
-            resources.ApplyResources(this.MO_CustDirInstArc, "MO_CustDirInstArc");
-            this.MO_CustDirInstArc.Name = "MO_CustDirInstArc";
-            this.MO_CustDirInstArc.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.MO_AutoRestAfterUpdateDb, "MO_AutoRestAfterUpdateDb");
+            this.MO_AutoRestAfterUpdateDb.Name = "MO_AutoRestAfterUpdateDb";
+            this.MO_AutoRestAfterUpdateDb.UseVisualStyleBackColor = true;
             // 
             // MO_PrefHelpSystem
             // 
@@ -272,7 +272,7 @@
         private System.Windows.Forms.Button MO_FindShBin;
         private System.Windows.Forms.Button MO_FindTextEd;
         private System.Windows.Forms.OpenFileDialog MO_SearchBin;
-        private System.Windows.Forms.CheckBox MO_CustDirInstArc;
+        private System.Windows.Forms.CheckBox MO_AutoRestAfterUpdateDb;
         private System.Windows.Forms.TextBox MO_CustDirName;
         private System.Windows.Forms.Label L_MO_CustDirName;
         private System.Windows.Forms.CheckBox MO_ZipCompress;

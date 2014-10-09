@@ -292,5 +292,17 @@ namespace srcrepair.Properties {
                 this["PackBeforeCleanup"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool AutoReloadGameDb {
+            get {
+                return ((bool)(this["AutoReloadGameDb"]));
+            }
+            set {
+                this["AutoReloadGameDb"] = value;
+            }
+        }
     }
 }

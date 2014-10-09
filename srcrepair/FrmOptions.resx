@@ -206,31 +206,31 @@
   <data name="&gt;&gt;MO_ZipCompress.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="MO_CustDirInstArc.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="MO_AutoRestAfterUpdateDb.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="MO_CustDirInstArc.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MO_AutoRestAfterUpdateDb.Location" type="System.Drawing.Point, System.Drawing">
     <value>19, 85</value>
   </data>
-  <data name="MO_CustDirInstArc.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MO_AutoRestAfterUpdateDb.Size" type="System.Drawing.Size, System.Drawing">
     <value>267, 17</value>
   </data>
-  <data name="MO_CustDirInstArc.TabIndex" type="System.Int32, mscorlib">
+  <data name="MO_AutoRestAfterUpdateDb.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="MO_CustDirInstArc.Text" xml:space="preserve">
-    <value>Use custom directory name instead of archive's</value>
+  <data name="MO_AutoRestAfterUpdateDb.Text" xml:space="preserve">
+    <value>Auto-reload game database after updates</value>
   </data>
-  <data name="&gt;&gt;MO_CustDirInstArc.Name" xml:space="preserve">
-    <value>MO_CustDirInstArc</value>
+  <data name="&gt;&gt;MO_AutoRestAfterUpdateDb.Name" xml:space="preserve">
+    <value>MO_AutoRestAfterUpdateDb</value>
   </data>
-  <data name="&gt;&gt;MO_CustDirInstArc.Type" xml:space="preserve">
+  <data name="&gt;&gt;MO_AutoRestAfterUpdateDb.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MO_CustDirInstArc.Parent" xml:space="preserve">
+  <data name="&gt;&gt;MO_AutoRestAfterUpdateDb.Parent" xml:space="preserve">
     <value>MO_TP1</value>
   </data>
-  <data name="&gt;&gt;MO_CustDirInstArc.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MO_AutoRestAfterUpdateDb.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="MO_PrefHelpSystem.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
