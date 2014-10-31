@@ -3399,4 +3399,28 @@
   <data name="sv_vote_issue_autobalance_allowed" xml:space="preserve">
     <value>Включает / отключает возможность запуска на сервере голосования за отключение / включение автоматической балансировки команд.</value>
   </data>
+  <data name="sv_vote_issue_classlimits_allowed" xml:space="preserve">
+    <value>Разрешить / запретить игрокам голосовать за включение или отключение класс-лимита.</value>
+  </data>
+  <data name="sv_vote_issue_classlimits_allowed_mvm" xml:space="preserve">
+    <value>Разрешить / запретить игрокам голосовать за включение или отключение класс-лимита для режима MvM.</value>
+  </data>
+  <data name="tf_classlimit" xml:space="preserve">
+    <value>Задаёт максимальное число игроков одного класса. Не работает в режиме чемпионата.</value>
+  </data>
+  <data name="tf_hud_target_id_alpha" xml:space="preserve">
+    <value>Разрешает / запрещает прозрачность рамки TargetID.</value>
+  </data>
+  <data name="tf_hud_target_id_disable_floating_health" xml:space="preserve">
+    <value>Отключает / включает плавающую панель здоровья над игроком. При отключении будет использоваться классический вид. Используйте в случае проблем с HUD, не поддерживающими TargetID.</value>
+  </data>
+  <data name="tf_player_spell_drop_on_death_rate" xml:space="preserve">
+    <value>Включает / отключает выпадение одного хэллоуинского заклинания после смерти игрока.</value>
+  </data>
+  <data name="tf_spells_enabled" xml:space="preserve">
+    <value>Разрешает / запрещает использование хэллоуинских заклинаний на обычных картах.</value>
+  </data>
+  <data name="tf_weapon_criticals_melee" xml:space="preserve">
+    <value>Включает / отключает случайные криты у оружия ближнего боя.</value>
+  </data>
 </root>
