@@ -702,7 +702,7 @@ namespace srcrepair
                     ManagementObjectCollection MMCQueryResults = MMCSearcher.Get();
                     foreach (ManagementBaseObject MMCRes in MMCQueryResults)
                     {
-                        Result.Add(String.Format("{0}x{1}", MMCRes["HorizontalResolution"], MMCRes["VerticalResolution"]));
+                        Result.Add(String.Format("{0}x{1}@{2}Hz", MMCRes["HorizontalResolution"], MMCRes["VerticalResolution"], MMCRes["RefreshRate"]));
                     }
                 }
             }
