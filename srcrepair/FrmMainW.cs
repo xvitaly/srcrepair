@@ -3272,7 +3272,7 @@ namespace srcrepair
             {
                 if (((ComboBox)sender).Items.Count > 0)
                 {
-                    string[] CR = ((ComboBox)sender).Text.Split('x');
+                    string[] CR = ((ComboBox)sender).Text.Substring(0, ((ComboBox)sender).Text.IndexOf('@')).Split('x');
                     if (CR.Length >= 2) { if (!GV.IsUsingVideoFile) { GT_ResHor.Value = Convert.ToInt32(CR[0]); GT_ResVert.Value = Convert.ToInt32(CR[1]); } else { GT_NCF_HorRes.Value = Convert.ToInt32(CR[0]); GT_NCF_VertRes.Value = Convert.ToInt32(CR[1]); } }
                 }
             }
