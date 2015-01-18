@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<HUDs>
+  <HUD Name="7HUD">
+    <Game>tf</Game>
+    <URI>https://github.com/Sevin7/7HUD/archive/master.zip</URI>
+    <Preview>http://huds.tf/img/main/7hud.png</Preview>
+    <Site>https://github.com/Sevin7/7HUD</Site>
+    <ArchiveDir>7HUD-master</ArchiveDir>
+    <InstallDir>7HUD</InstallDir>
+  </HUD>
+  <HUD Name="HerganHUD">
+    <Game>tf</Game>
+    <URI>https://github.com/Hergan5/herganhud/archive/master.zip</URI>
+    <Preview>http://huds.tf/img/main/herganhud.png</Preview>
+    <Site>https://github.com/Hergan5/herganhud</Site>
+    <ArchiveDir>herganhud-master</ArchiveDir>
+    <InstallDir>herganhud</InstallDir>
+  </HUD>
+  <HUD Name="Pikles Hud">
+    <Game>tf</Game>
+    <URI>https://github.com/piklestf2/pikles-hud/archive/master.zip</URI>
+    <Preview>http://huds.tf/img/main/pikleshud.png</Preview>
+    <Site>https://github.com/piklestf2/pikles-hud</Site>
+    <ArchiveDir>pikles-hud-master</ArchiveDir>
+    <InstallDir>pikles-hud</InstallDir>
+  </HUD>
+</HUDs>

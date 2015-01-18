@@ -305,6 +305,10 @@
       <Link>cfgs\v1tsk%27s_generic.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\tfiles\huds.xml">
+      <Link>huds.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\tfiles\inno\srcrepair.iss">
       <Link>srcrepair.iss</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
