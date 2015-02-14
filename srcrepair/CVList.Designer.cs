@@ -1564,6 +1564,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Connect to server..
+        /// </summary>
+        internal static string connect {
+            get {
+                return ResourceManager.GetString("connect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to View complete cvar list..
         /// </summary>
         internal static string cvarlist {
@@ -2797,6 +2806,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable / disable the drawing of first person bullet tracer particles..
+        /// </summary>
+        internal static string r_drawtracers_firstperson {
+            get {
+                return ResourceManager.GetString("r_drawtracers_firstperson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Turns viewmodels on and off..
         /// </summary>
         internal static string r_drawviewmodel {
@@ -2838,6 +2856,15 @@ namespace srcrepair {
         internal static string record {
             get {
                 return ResourceManager.GetString("record", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can be used to send clients to a different server. Does not function for clients that came from matchmaking or certain server browser tabs..
+        /// </summary>
+        internal static string redirect {
+            get {
+                return ResourceManager.GetString("redirect", resourceCulture);
             }
         }
         
@@ -3720,6 +3747,15 @@ namespace srcrepair {
         internal static string sv_rcon_minfailuretime {
             get {
                 return ResourceManager.GetString("sv_rcon_minfailuretime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rcon clients failing to auth from the specified IP address will never get banned..
+        /// </summary>
+        internal static string sv_rcon_whitelist_address {
+            get {
+                return ResourceManager.GetString("sv_rcon_whitelist_address", resourceCulture);
             }
         }
         

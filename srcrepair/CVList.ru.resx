@@ -3423,4 +3423,13 @@
   <data name="tf_weapon_criticals_melee" xml:space="preserve">
     <value>Включает / отключает случайные криты у оружия ближнего боя.</value>
   </data>
+  <data name="connect" xml:space="preserve">
+    <value>Подключиться к указанному в качестве параметра серверу.</value>
+  </data>
+  <data name="redirect" xml:space="preserve">
+    <value>Функция. Используется для перенаправления игрока на другой сервер.</value>
+  </data>
+  <data name="r_drawtracers_firstperson" xml:space="preserve">
+    <value>Включает / отключает отрисовку трассирующих пуль во время стрельбы.</value>
+  </data>
 </root>

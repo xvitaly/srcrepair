@@ -2097,4 +2097,16 @@
   <data name="sv_vote_issue_autobalance_allowed" xml:space="preserve">
     <value>Enable / disable auto team balance vote.</value>
   </data>
+  <data name="connect" xml:space="preserve">
+    <value>Connect to server.</value>
+  </data>
+  <data name="redirect" xml:space="preserve">
+    <value>Can be used to send clients to a different server. Does not function for clients that came from matchmaking or certain server browser tabs.</value>
+  </data>
+  <data name="r_drawtracers_firstperson" xml:space="preserve">
+    <value>Enable / disable the drawing of first person bullet tracer particles.</value>
+  </data>
+  <data name="sv_rcon_whitelist_address" xml:space="preserve">
+    <value>Rcon clients failing to auth from the specified IP address will never get banned.</value>
+  </data>
 </root>
