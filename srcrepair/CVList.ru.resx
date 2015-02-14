@@ -3426,10 +3426,22 @@
   <data name="connect" xml:space="preserve">
     <value>Подключиться к указанному в качестве параметра серверу.</value>
   </data>
+  <data name="ff_damage_bullet_penetration" xml:space="preserve">
+    <value>Задаёт множитель урона при атаке товарищей команде.</value>
+  </data>
+  <data name="mp_teamlogo_1" xml:space="preserve">
+    <value>Позволяет указать файл изображения для команды №1 в соревновательном режиме CS:GO.</value>
+  </data>
+  <data name="mp_teamlogo_2" xml:space="preserve">
+    <value>Позволяет указать файл изображения для команды №2 в соревновательном режиме CS:GO.</value>
+  </data>
   <data name="redirect" xml:space="preserve">
     <value>Функция. Используется для перенаправления игрока на другой сервер.</value>
   </data>
   <data name="r_drawtracers_firstperson" xml:space="preserve">
     <value>Включает / отключает отрисовку трассирующих пуль во время стрельбы.</value>
+  </data>
+  <data name="sv_reliableavatardata" xml:space="preserve">
+    <value>Включает / отключает новый механизм гарантированной доставки и сохранения аватаров игроков на сервере GOTV (SourceTV). Также сохраняет их в файле STV-демки.</value>
   </data>
 </root>

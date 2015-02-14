@@ -2100,6 +2100,15 @@
   <data name="connect" xml:space="preserve">
     <value>Connect to server.</value>
   </data>
+  <data name="ff_damage_bullet_penetration" xml:space="preserve">
+    <value>Control how much penetration power and damage is scaled when hitting a friendly when FF is off.</value>
+  </data>
+  <data name="mp_teamlogo_1" xml:space="preserve">
+    <value>Set team logo for Team 1.</value>
+  </data>
+  <data name="mp_teamlogo_2" xml:space="preserve">
+    <value>Set team logo for Team 2.</value>
+  </data>
   <data name="redirect" xml:space="preserve">
     <value>Can be used to send clients to a different server. Does not function for clients that came from matchmaking or certain server browser tabs.</value>
   </data>
@@ -2108,5 +2117,8 @@
   </data>
   <data name="sv_rcon_whitelist_address" xml:space="preserve">
     <value>Rcon clients failing to auth from the specified IP address will never get banned.</value>
+  </data>
+  <data name="sv_reliableavatardata" xml:space="preserve">
+    <value>When enabled player avatars are reliably exchanged between all players and casters on the game server, reliably delivered to GOTV spectators, and recorded in demo files</value>
   </data>
 </root>

@@ -1627,6 +1627,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Control how much penetration power and damage is scaled when hitting a friendly when FF is off..
+        /// </summary>
+        internal static string ff_damage_bullet_penetration {
+            get {
+                return ResourceManager.GetString("ff_damage_bullet_penetration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to How much to reduce damage done to teammates when shot.  Range is from 0 - 1 (with 1 being damage equal to what is done to an enemy)..
         /// </summary>
         internal static string ff_damage_reduction_bullets {
@@ -2586,6 +2595,24 @@ namespace srcrepair {
         internal static string mp_teamcashawards {
             get {
                 return ResourceManager.GetString("mp_teamcashawards", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set team logo for Team 1..
+        /// </summary>
+        internal static string mp_teamlogo_1 {
+            get {
+                return ResourceManager.GetString("mp_teamlogo_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set team logo for Team 2..
+        /// </summary>
+        internal static string mp_teamlogo_2 {
+            get {
+                return ResourceManager.GetString("mp_teamlogo_2", resourceCulture);
             }
         }
         
@@ -3765,6 +3792,15 @@ namespace srcrepair {
         internal static string sv_region {
             get {
                 return ResourceManager.GetString("sv_region", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to When enabled player avatars are reliably exchanged between all players and casters on the game server, reliably delivered to GOTV spectators, and recorded in demo files.
+        /// </summary>
+        internal static string sv_reliableavatardata {
+            get {
+                return ResourceManager.GetString("sv_reliableavatardata", resourceCulture);
             }
         }
         
