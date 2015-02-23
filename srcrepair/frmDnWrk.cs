@@ -11,9 +11,14 @@ namespace srcrepair
 {
     public partial class frmDnWrk : Form
     {
-        public frmDnWrk()
+        private string RemoteURI;
+        private string LocalFile;
+
+        public frmDnWrk(string R, string L)
         {
             InitializeComponent();
+            RemoteURI = R;
+            LocalFile = L;
         }
 
         private void frmDnWrk_Load(object sender, EventArgs e)
