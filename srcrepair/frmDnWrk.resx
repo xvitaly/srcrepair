@@ -176,6 +176,9 @@
   <data name="&gt;&gt;DN_PrgBr.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="DN_Wrk.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -218,6 +221,12 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Download tool</value>
+  </data>
+  <data name="&gt;&gt;DN_Wrk.Name" xml:space="preserve">
+    <value>DN_Wrk</value>
+  </data>
+  <data name="&gt;&gt;DN_Wrk.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmDnWrk</value>

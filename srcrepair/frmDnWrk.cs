@@ -25,5 +25,20 @@ namespace srcrepair
         {
             //
         }
+
+        private void DN_Wrk_DoWork(object sender, DoWorkEventArgs e)
+        {
+            //
+        }
+
+        private void DN_Wrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            //
+        }
+
+        private void frmDnWrk_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //
+        }
     }
 }
