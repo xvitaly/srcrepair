@@ -23,7 +23,12 @@ namespace srcrepair
 
         private void frmDnWrk_Load(object sender, EventArgs e)
         {
-            //
+            if (!DN_Wrk.IsBusy) { DN_Wrk.RunWorkerAsync(); }
+        }
+
+        private void frmDnWrk_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && DN_Wrk.IsBusy;
         }
 
         private void DN_Wrk_DoWork(object sender, DoWorkEventArgs e)
@@ -35,10 +40,6 @@ namespace srcrepair
         {
             //
         }
-
-        private void frmDnWrk_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            //
-        }
+        
     }
 }
