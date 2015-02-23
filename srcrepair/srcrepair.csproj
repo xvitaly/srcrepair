@@ -188,6 +188,9 @@
     <EmbeddedResource Include="frmDnWrk.resx">
       <DependentUpon>frmDnWrk.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDnWrk.ru.resx">
+      <DependentUpon>frmDnWrk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMainW.resx">
       <DependentUpon>FrmMainW.cs</DependentUpon>
     </EmbeddedResource>
