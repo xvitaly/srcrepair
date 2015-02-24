@@ -26,11 +26,13 @@ namespace srcrepair
 
         private void frmDnWrk_Load(object sender, EventArgs e)
         {
+            // Начинаем процесс загрузки в отдельном потоке...
             if (!DN_Wrk.IsBusy) { DN_Wrk.RunWorkerAsync(); }
         }
 
         private void frmDnWrk_FormClosing(object sender, FormClosingEventArgs e)
         {
+            // Исключаем возможность закрытия формы во время загрузки...
             e.Cancel = (e.CloseReason == CloseReason.UserClosing) && DN_Wrk.IsBusy;
         }
 
