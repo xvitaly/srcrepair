@@ -8,6 +8,7 @@ namespace srcrepair
 {
     public partial class frmDnWrk : Form
     {
+        private bool IsRunning = true;
         private string RemoteURI;
         private string LocalFile;
 
@@ -33,6 +34,7 @@ namespace srcrepair
         private void DownloaderCompleted(object sender, AsyncCompletedEventArgs e)
         {
             // Загрузка завершена. Закроем форму...
+            this.IsRunning = false;
             this.Close();
         }
 
@@ -53,6 +55,11 @@ namespace srcrepair
                 }
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+        }
+
+        private void frmDnWrk_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = this.IsRunning;
         }
     }
 }

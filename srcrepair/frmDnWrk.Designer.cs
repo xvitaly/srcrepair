@@ -47,6 +47,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ControlBox = false;
             this.Controls.Add(this.DN_PrgBr);
             this.Controls.Add(this.DN_WlcMsg);
             this.DoubleBuffered = true;
@@ -55,6 +56,7 @@
             this.MinimizeBox = false;
             this.Name = "frmDnWrk";
             this.ShowInTaskbar = false;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDnWrk_FormClosing);
             this.Load += new System.EventHandler(this.frmDnWrk_Load);
             this.ResumeLayout(false);
 
