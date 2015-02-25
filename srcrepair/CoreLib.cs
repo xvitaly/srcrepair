@@ -747,5 +747,16 @@ namespace srcrepair
             }
             return File.Exists(ArchiveName);
         }
+
+        /// <summary>
+        /// Начинает загрузку с указанного URL с подробным отображением процесса.
+        /// </summary>
+        /// <param name="URI">URL для загрузки</param>
+        /// <param name="FileName">Путь для сохранения</param>
+        public static void DownloadFileEx(string URI, string FileName)
+        {
+            frmDnWrk DnW = new frmDnWrk(URI, FileName);
+            DnW.ShowDialog();
+        }
     }
 }
