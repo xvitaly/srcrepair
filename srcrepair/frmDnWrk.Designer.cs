@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDnWrk));
             this.DN_WlcMsg = new System.Windows.Forms.Label();
             this.DN_PrgBr = new System.Windows.Forms.ProgressBar();
-            this.DN_Wrk = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // DN_WlcMsg
@@ -43,11 +42,6 @@
             // 
             resources.ApplyResources(this.DN_PrgBr, "DN_PrgBr");
             this.DN_PrgBr.Name = "DN_PrgBr";
-            // 
-            // DN_Wrk
-            // 
-            this.DN_Wrk.DoWork += new System.ComponentModel.DoWorkEventHandler(this.DN_Wrk_DoWork);
-            this.DN_Wrk.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.DN_Wrk_RunWorkerCompleted);
             // 
             // frmDnWrk
             // 
@@ -61,7 +55,6 @@
             this.MinimizeBox = false;
             this.Name = "frmDnWrk";
             this.ShowInTaskbar = false;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDnWrk_FormClosing);
             this.Load += new System.EventHandler(this.frmDnWrk_Load);
             this.ResumeLayout(false);
 
@@ -71,6 +64,5 @@
 
         private System.Windows.Forms.Label DN_WlcMsg;
         private System.Windows.Forms.ProgressBar DN_PrgBr;
-        private System.ComponentModel.BackgroundWorker DN_Wrk;
     }
 }

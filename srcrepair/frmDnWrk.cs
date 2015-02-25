@@ -18,47 +18,41 @@ namespace srcrepair
             LocalFile = L;
         }
 
+        private void frmDnWrk_Load(object sender, EventArgs e)
+        {
+            // Начинаем процесс загрузки в отдельном потоке...
+            this.DownloaderStart(RemoteURI, LocalFile);
+        }
+
         private void DownloaderProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
             // Отрисовываем статус в прогресс-баре...
             try { DN_PrgBr.Value = e.ProgressPercentage; } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
-        private void frmDnWrk_Load(object sender, EventArgs e)
+        private void DownloaderCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            // Начинаем процесс загрузки в отдельном потоке...
-            if (!DN_Wrk.IsBusy) { DN_Wrk.RunWorkerAsync(); }
+            // Загрузка завершена. Закроем форму...
+            this.Close();
         }
 
-        private void frmDnWrk_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            // Исключаем возможность закрытия формы во время загрузки...
-            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && DN_Wrk.IsBusy;
-        }
-
-        private void DN_Wrk_DoWork(object sender, DoWorkEventArgs e)
+        private void DownloaderStart(string URI, string FileName)
         {
             try
             {
                 // Проверим существование файла и удалим...
-                if (File.Exists(LocalFile)) { File.Delete(LocalFile); }
+                if (File.Exists(FileName)) { File.Delete(FileName); }
 
                 // Начинаем асинхронную загрузку файла...
                 using (WebClient FileDownloader = new WebClient())
                 {
                     FileDownloader.Headers.Add("User-Agent", Properties.Resources.AppDnlUA);
+                    FileDownloader.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloaderCompleted);
                     FileDownloader.DownloadProgressChanged += new DownloadProgressChangedEventHandler(DownloaderProgressChanged);
-                    FileDownloader.DownloadFileAsync(new Uri(RemoteURI), LocalFile);
+                    FileDownloader.DownloadFileAsync(new Uri(URI), FileName);
                 }
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
-
-        private void DN_Wrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            // Загрузка завершена. Закроем форму...
-            this.Close();
-        }
-        
     }
 }
