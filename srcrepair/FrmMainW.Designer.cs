@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainW));
+            this.TabIcons = new System.Windows.Forms.ImageList(this.components);
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
             this.GT_ResAvailable = new System.Windows.Forms.ComboBox();
@@ -154,6 +155,7 @@
             this.FP_ConfigSel = new System.Windows.Forms.ComboBox();
             this.L_FP_ConfigSel = new System.Windows.Forms.Label();
             this.FP_TopLabel = new System.Windows.Forms.Label();
+            this.HUDInstall = new System.Windows.Forms.TabPage();
             this.RescueCentre = new System.Windows.Forms.TabPage();
             this.BU_LVTable = new System.Windows.Forms.ListView();
             this.BU_LV_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -174,7 +176,6 @@
             this.BUT_L_GameSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.BUT_L_AllSteam = new System.Windows.Forms.ToolStripMenuItem();
             this.BUT_L_AllSRC = new System.Windows.Forms.ToolStripMenuItem();
-            this.TabIcons = new System.Windows.Forms.ImageList(this.components);
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.ToolsMNU = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUShowEdHint = new System.Windows.Forms.ToolStripMenuItem();
@@ -250,12 +251,24 @@
             this.StatusBar.SuspendLayout();
             this.SuspendLayout();
             // 
+            // TabIcons
+            // 
+            this.TabIcons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("TabIcons.ImageStream")));
+            this.TabIcons.TransparentColor = System.Drawing.Color.Transparent;
+            this.TabIcons.Images.SetKeyName(0, "Graphics.png");
+            this.TabIcons.Images.SetKeyName(1, "TextEditor.png");
+            this.TabIcons.Images.SetKeyName(2, "Screwdriver.png");
+            this.TabIcons.Images.SetKeyName(3, "Config.png");
+            this.TabIcons.Images.SetKeyName(4, "BackUp.png");
+            this.TabIcons.Images.SetKeyName(5, "Interface.png");
+            // 
             // MainTabControl
             // 
             this.MainTabControl.Controls.Add(this.GraphicTweaker);
             this.MainTabControl.Controls.Add(this.ConfigEditor);
             this.MainTabControl.Controls.Add(this.ProblemSolver);
             this.MainTabControl.Controls.Add(this.FPSCfgInstall);
+            this.MainTabControl.Controls.Add(this.HUDInstall);
             this.MainTabControl.Controls.Add(this.RescueCentre);
             resources.ApplyResources(this.MainTabControl, "MainTabControl");
             this.MainTabControl.ImageList = this.TabIcons;
@@ -1324,6 +1337,12 @@
             resources.ApplyResources(this.FP_TopLabel, "FP_TopLabel");
             this.FP_TopLabel.Name = "FP_TopLabel";
             // 
+            // HUDInstall
+            // 
+            resources.ApplyResources(this.HUDInstall, "HUDInstall");
+            this.HUDInstall.Name = "HUDInstall";
+            this.HUDInstall.UseVisualStyleBackColor = true;
+            // 
             // RescueCentre
             // 
             this.RescueCentre.Controls.Add(this.BU_LVTable);
@@ -1475,16 +1494,6 @@
             this.BUT_L_AllSRC.Name = "BUT_L_AllSRC";
             resources.ApplyResources(this.BUT_L_AllSRC, "BUT_L_AllSRC");
             this.BUT_L_AllSRC.Click += new System.EventHandler(this.BUT_L_AllSRC_Click);
-            // 
-            // TabIcons
-            // 
-            this.TabIcons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("TabIcons.ImageStream")));
-            this.TabIcons.TransparentColor = System.Drawing.Color.Transparent;
-            this.TabIcons.Images.SetKeyName(0, "Graphics.png");
-            this.TabIcons.Images.SetKeyName(1, "TextEditor.png");
-            this.TabIcons.Images.SetKeyName(2, "Screwdriver.png");
-            this.TabIcons.Images.SetKeyName(3, "Config.png");
-            this.TabIcons.Images.SetKeyName(4, "BackUp.png");
             // 
             // MainMenu
             // 
@@ -1999,7 +2008,6 @@
         private System.Windows.Forms.ToolStripMenuItem MNUUpdateCheck;
         private System.Windows.Forms.ToolStripButton BUT_OpenNpad;
         private System.Windows.Forms.ToolStripMenuItem MNUAppOptions;
-        private System.Windows.Forms.ImageList TabIcons;
         private System.Windows.Forms.ListView BU_LVTable;
         private System.Windows.Forms.ColumnHeader BU_LV_Name;
         private System.Windows.Forms.ColumnHeader BU_LV_Type;
@@ -2093,6 +2101,8 @@
         private System.Windows.Forms.ComboBox GT_ResAvailable;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnMusDb;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnSkins;
+        private System.Windows.Forms.TabPage HUDInstall;
+        private System.Windows.Forms.ImageList TabIcons;
     }
 }
 
