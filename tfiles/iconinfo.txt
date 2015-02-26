@@ -93,3 +93,5 @@ upd_nx.png - PixelMixer - CCAA - http://www.iconspedia.com/icon/tick-11638.html
 --------------------------------------------------------------------------------------------------------
 Monitor.png - Double-J Desig - CCAA - http://www.iconspedia.com/icon/monitor-icon-37548.html
 --------------------------------------------------------------------------------------------------------
+Interface.png - FatCow - CCAA - http://www.iconspedia.com/icon/interface-preferences-icon-21275.html
+--------------------------------------------------------------------------------------------------------
