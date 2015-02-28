@@ -156,6 +156,13 @@
             this.L_FP_ConfigSel = new System.Windows.Forms.Label();
             this.FP_TopLabel = new System.Windows.Forms.Label();
             this.HUDInstall = new System.Windows.Forms.TabPage();
+            this.HD_Uninstall = new System.Windows.Forms.Button();
+            this.HD_Install = new System.Windows.Forms.Button();
+            this.HD_GB_Desc = new System.Windows.Forms.GroupBox();
+            this.HD_GB_Pbx = new System.Windows.Forms.PictureBox();
+            this.HD_HSel = new System.Windows.Forms.ComboBox();
+            this.L_HD_HSel = new System.Windows.Forms.Label();
+            this.HD_WelcMsg = new System.Windows.Forms.Label();
             this.RescueCentre = new System.Windows.Forms.TabPage();
             this.BU_LVTable = new System.Windows.Forms.ListView();
             this.BU_LV_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -245,6 +252,9 @@
             this.PS_GB_Solver.SuspendLayout();
             this.FPSCfgInstall.SuspendLayout();
             this.FP_GB_Desc.SuspendLayout();
+            this.HUDInstall.SuspendLayout();
+            this.HD_GB_Desc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HD_GB_Pbx)).BeginInit();
             this.RescueCentre.SuspendLayout();
             this.BU_BToolbar.SuspendLayout();
             this.MainMenu.SuspendLayout();
@@ -1339,9 +1349,57 @@
             // 
             // HUDInstall
             // 
+            this.HUDInstall.Controls.Add(this.HD_Uninstall);
+            this.HUDInstall.Controls.Add(this.HD_Install);
+            this.HUDInstall.Controls.Add(this.HD_GB_Desc);
+            this.HUDInstall.Controls.Add(this.HD_HSel);
+            this.HUDInstall.Controls.Add(this.L_HD_HSel);
+            this.HUDInstall.Controls.Add(this.HD_WelcMsg);
             resources.ApplyResources(this.HUDInstall, "HUDInstall");
             this.HUDInstall.Name = "HUDInstall";
             this.HUDInstall.UseVisualStyleBackColor = true;
+            // 
+            // HD_Uninstall
+            // 
+            resources.ApplyResources(this.HD_Uninstall, "HD_Uninstall");
+            this.HD_Uninstall.Name = "HD_Uninstall";
+            this.HD_Uninstall.UseVisualStyleBackColor = true;
+            // 
+            // HD_Install
+            // 
+            resources.ApplyResources(this.HD_Install, "HD_Install");
+            this.HD_Install.Name = "HD_Install";
+            this.HD_Install.UseVisualStyleBackColor = true;
+            // 
+            // HD_GB_Desc
+            // 
+            this.HD_GB_Desc.Controls.Add(this.HD_GB_Pbx);
+            resources.ApplyResources(this.HD_GB_Desc, "HD_GB_Desc");
+            this.HD_GB_Desc.Name = "HD_GB_Desc";
+            this.HD_GB_Desc.TabStop = false;
+            // 
+            // HD_GB_Pbx
+            // 
+            resources.ApplyResources(this.HD_GB_Pbx, "HD_GB_Pbx");
+            this.HD_GB_Pbx.Name = "HD_GB_Pbx";
+            this.HD_GB_Pbx.TabStop = false;
+            // 
+            // HD_HSel
+            // 
+            this.HD_HSel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.HD_HSel.FormattingEnabled = true;
+            resources.ApplyResources(this.HD_HSel, "HD_HSel");
+            this.HD_HSel.Name = "HD_HSel";
+            // 
+            // L_HD_HSel
+            // 
+            resources.ApplyResources(this.L_HD_HSel, "L_HD_HSel");
+            this.L_HD_HSel.Name = "L_HD_HSel";
+            // 
+            // HD_WelcMsg
+            // 
+            resources.ApplyResources(this.HD_WelcMsg, "HD_WelcMsg");
+            this.HD_WelcMsg.Name = "HD_WelcMsg";
             // 
             // RescueCentre
             // 
@@ -1893,6 +1951,9 @@
             this.FPSCfgInstall.ResumeLayout(false);
             this.FPSCfgInstall.PerformLayout();
             this.FP_GB_Desc.ResumeLayout(false);
+            this.HUDInstall.ResumeLayout(false);
+            this.HD_GB_Desc.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.HD_GB_Pbx)).EndInit();
             this.RescueCentre.ResumeLayout(false);
             this.RescueCentre.PerformLayout();
             this.BU_BToolbar.ResumeLayout(false);
@@ -2103,6 +2164,13 @@
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnSkins;
         private System.Windows.Forms.TabPage HUDInstall;
         private System.Windows.Forms.ImageList TabIcons;
+        private System.Windows.Forms.Button HD_Uninstall;
+        private System.Windows.Forms.Button HD_Install;
+        private System.Windows.Forms.GroupBox HD_GB_Desc;
+        private System.Windows.Forms.PictureBox HD_GB_Pbx;
+        private System.Windows.Forms.ComboBox HD_HSel;
+        private System.Windows.Forms.Label L_HD_HSel;
+        private System.Windows.Forms.Label HD_WelcMsg;
     }
 }
 
