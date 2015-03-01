@@ -2023,6 +2023,9 @@ namespace srcrepair
                 // Сохраним ID последней выбранной игры...
                 Properties.Settings.Default.LastGameName = AppSelector.Text;
 
+                // Считаем список доступных HUD для данной игры...
+                if (!BW_HUDList.IsBusy) { BW_HUDList.RunWorkerAsync(); }
+                
                 // Считаем список бэкапов...
                 if (!BW_BkUpRecv.IsBusy) { BW_BkUpRecv.RunWorkerAsync(); }
             }
@@ -3307,6 +3310,11 @@ namespace srcrepair
         }
 
         private void HD_Uninstall_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void BW_HUDList_DoWork(object sender, DoWorkEventArgs e)
         {
             //
         }

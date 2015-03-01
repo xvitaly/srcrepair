@@ -232,6 +232,7 @@
             this.BW_UpChk = new System.ComponentModel.BackgroundWorker();
             this.BW_FPRecv = new System.ComponentModel.BackgroundWorker();
             this.BW_BkUpRecv = new System.ComponentModel.BackgroundWorker();
+            this.BW_HUDList = new System.ComponentModel.BackgroundWorker();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             this.GT_GCF_Group.SuspendLayout();
@@ -1911,6 +1912,10 @@
             // 
             this.BW_BkUpRecv.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_BkUpRecv_DoWork);
             // 
+            // BW_HUDList
+            // 
+            this.BW_HUDList.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_HUDList_DoWork);
+            // 
             // frmMainW
             // 
             resources.ApplyResources(this, "$this");
@@ -2174,6 +2179,7 @@
         private System.Windows.Forms.ComboBox HD_HSel;
         private System.Windows.Forms.Label L_HD_HSel;
         private System.Windows.Forms.Label HD_WelcMsg;
+        private System.ComponentModel.BackgroundWorker BW_HUDList;
     }
 }
 
