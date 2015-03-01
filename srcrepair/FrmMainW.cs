@@ -2408,6 +2408,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "maps", "graphs", "*.*"));
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "maps", "soundcache", "*.*"));
             CleanDirs.Add(Path.Combine(GV.FullGamePath, "download", "sound", "*.*"));
+            CleanDirs.Add(Path.Combine(GV.FullGamePath, "*.cache"));
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
