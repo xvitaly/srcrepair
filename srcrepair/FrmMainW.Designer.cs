@@ -1364,12 +1364,14 @@
             resources.ApplyResources(this.HD_Uninstall, "HD_Uninstall");
             this.HD_Uninstall.Name = "HD_Uninstall";
             this.HD_Uninstall.UseVisualStyleBackColor = true;
+            this.HD_Uninstall.Click += new System.EventHandler(this.HD_Uninstall_Click);
             // 
             // HD_Install
             // 
             resources.ApplyResources(this.HD_Install, "HD_Install");
             this.HD_Install.Name = "HD_Install";
             this.HD_Install.UseVisualStyleBackColor = true;
+            this.HD_Install.Click += new System.EventHandler(this.HD_Install_Click);
             // 
             // HD_GB_Desc
             // 
@@ -1390,6 +1392,7 @@
             this.HD_HSel.FormattingEnabled = true;
             resources.ApplyResources(this.HD_HSel, "HD_HSel");
             this.HD_HSel.Name = "HD_HSel";
+            this.HD_HSel.SelectedIndexChanged += new System.EventHandler(this.HD_HSel_SelectedIndexChanged);
             // 
             // L_HD_HSel
             // 

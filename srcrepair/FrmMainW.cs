@@ -3294,5 +3294,20 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(GV.FullSteamPath, "skins", "*.*"));
             SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
+
+        private void HD_HSel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void HD_Install_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void HD_Uninstall_Click(object sender, EventArgs e)
+        {
+            //
+        }
     }
 }
