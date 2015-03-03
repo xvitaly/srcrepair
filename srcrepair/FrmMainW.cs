@@ -1781,7 +1781,7 @@ namespace srcrepair
                 {
                     if (String.Compare(XMLD.GetElementsByTagName("Game")[i].InnerText, GV.SmallAppName, true) == 0)
                     {
-                        HD_HSel.Items.Add(XMLD.GetElementsByTagName("Name")[i].InnerText);
+                        this.Invoke((MethodInvoker)delegate() { HD_HSel.Items.Add(XMLD.GetElementsByTagName("Name")[i].InnerText); });
                     }
                 }
                 XMLFS.Close();
