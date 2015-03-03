@@ -1769,6 +1769,26 @@ namespace srcrepair
             }
         }
 
+        private void BW_HUDList_DoWork(object sender, DoWorkEventArgs e)
+        {
+            // Получаем полный список доступных HUD для данной игры...
+            try
+            {
+                XmlDocument XMLD = new XmlDocument();
+                FileStream XMLFS = new FileStream(Path.Combine(GV.FullAppPath, Properties.Settings.Default.HUDDbFile), FileMode.Open, FileAccess.Read);
+                XMLD.Load(XMLFS);
+                for (int i = 0; i < XMLD.GetElementsByTagName("HUD").Count; i++)
+                {
+                    if (String.Compare(XMLD.GetElementsByTagName("Game")[i].InnerText, GV.SmallAppName, true) == 0)
+                    {
+                        HD_HSel.Items.Add(XMLD.GetElementsByTagName("Name")[i].InnerText);
+                    }
+                }
+                XMLFS.Close();
+            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+        }
+
         #endregion
 
         private void frmMainW_Load(object sender, EventArgs e)
@@ -3312,26 +3332,6 @@ namespace srcrepair
         private void HD_Uninstall_Click(object sender, EventArgs e)
         {
             //
-        }
-
-        private void BW_HUDList_DoWork(object sender, DoWorkEventArgs e)
-        {
-            // Получаем полный список доступных HUD для данной игры...
-            try
-            {
-                XmlDocument XMLD = new XmlDocument();
-                FileStream XMLFS = new FileStream(Path.Combine(GV.FullAppPath, Properties.Settings.Default.HUDDbFile), FileMode.Open, FileAccess.Read);
-                XMLD.Load(XMLFS);
-                for (int i = 0; i < XMLD.GetElementsByTagName("HUD").Count; i++)
-                {
-                    if (String.Compare(XMLD.GetElementsByTagName("Game")[i].InnerText, GV.SmallAppName, true) == 0)
-                    {
-                        HD_HSel.Items.Add(XMLD.GetElementsByTagName("Name")[i].InnerText);
-                    }
-                }
-                XMLFS.Close();
-            }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
     }
 }
