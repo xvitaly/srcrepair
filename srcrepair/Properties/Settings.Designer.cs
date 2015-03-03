@@ -304,5 +304,14 @@ namespace srcrepair.Properties {
                 this["AutoReloadGameDb"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("huds.xml")]
+        public string HUDDbFile {
+            get {
+                return ((string)(this["HUDDbFile"]));
+            }
+        }
     }
 }
