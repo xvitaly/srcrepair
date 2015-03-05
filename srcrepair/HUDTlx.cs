@@ -15,7 +15,23 @@ namespace srcrepair
         
         public HUDTlx(string HUDName)
         {
-            //
+            XmlDocument XMLD = new XmlDocument();
+            FileStream XMLFS = new FileStream(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile), FileMode.Open, FileAccess.Read);
+            XMLD.Load(XMLFS);
+            for (int i = 0; i < XMLD.GetElementsByTagName("HUD").Count; i++)
+            {
+                if (String.Compare(XMLD.GetElementsByTagName("Name")[i].InnerText, HUDName, true) == 0)
+                {
+                    this.Name = XMLD.GetElementsByTagName("Name")[i].InnerText;
+                    this.URI = XMLD.GetElementsByTagName("URI")[i].InnerText;
+                    this.Preview = XMLD.GetElementsByTagName("Preview")[i].InnerText;
+                    this.Site = XMLD.GetElementsByTagName("Site")[i].InnerText;
+                    this.ArchiveDir = XMLD.GetElementsByTagName("ArchiveDir")[i].InnerText;
+                    this.InstallDir = XMLD.GetElementsByTagName("InstallDir")[i].InnerText;
+                    break;
+                }
+            }
+            XMLFS.Close();
         }
     }
 }
