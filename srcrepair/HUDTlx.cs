@@ -16,7 +16,7 @@ namespace srcrepair
         public HUDTlx(string HUDName)
         {
             XmlDocument XMLD = new XmlDocument();
-            FileStream XMLFS = new FileStream(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile), FileMode.Open, FileAccess.Read);
+            FileStream XMLFS = new FileStream(Path.Combine(GV.FullAppPath, Properties.Settings.Default.HUDDbFile), FileMode.Open, FileAccess.Read);
             XMLD.Load(XMLFS);
             for (int i = 0; i < XMLD.GetElementsByTagName("HUD").Count; i++)
             {
