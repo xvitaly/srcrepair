@@ -3322,7 +3322,16 @@ namespace srcrepair
 
         private void HD_HSel_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //
+            // Получим информацию о выбранном HUD...
+            try { this.SelHUD = new HUDTlx(HD_HSel.Text); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                
+            // Проверяем результат...
+            bool Success = !String.IsNullOrEmpty(this.SelHUD.Name);
+
+            // Переключаем статус элементов управления...
+            HD_Install.Enabled = Success;
+            HD_Homepage.Enabled = Success;
+            HD_Uninstall.Enabled = Success;
         }
 
         private void HD_Install_Click(object sender, EventArgs e)
