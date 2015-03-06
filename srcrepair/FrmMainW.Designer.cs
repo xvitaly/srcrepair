@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainW));
-            this.TabIcons = new System.Windows.Forms.ImageList();
+            this.TabIcons = new System.Windows.Forms.ImageList(this.components);
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
             this.GT_ResAvailable = new System.Windows.Forms.ComboBox();
@@ -1363,10 +1364,11 @@
             // 
             // HD_Homepage
             // 
-            this.HD_Homepage.Image = global::srcrepair.Properties.Resources.Home;
             resources.ApplyResources(this.HD_Homepage, "HD_Homepage");
+            this.HD_Homepage.Image = global::srcrepair.Properties.Resources.Home;
             this.HD_Homepage.Name = "HD_Homepage";
             this.HD_Homepage.UseVisualStyleBackColor = true;
+            this.HD_Homepage.Click += new System.EventHandler(this.HD_Homepage_Click);
             // 
             // HD_Uninstall
             // 
