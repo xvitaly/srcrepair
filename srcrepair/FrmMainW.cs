@@ -2019,14 +2019,20 @@ namespace srcrepair
                 // Проверим, установлен ли FPS-конфиг...
                 HandleConfigs(GV.FullGamePath, GV.IsUsingUserDir);
 
-                // Очистим список FPS-конфигов...
+                // Очистим список FPS-конфигов и HUD-ов...
                 FP_ConfigSel.Items.Clear();
+                HD_HSel.Items.Clear();
 
                 // Отключим кнопку редактирования FPS-конфигов...
                 FP_OpenNotepad.Enabled = false;
 
                 // Отключим кнопку установки FPS-конфигов...
                 FP_Install.Enabled = false;
+
+                // Отключим контролы в менеджере HUD...
+                HD_Install.Enabled = false;
+                HD_Homepage.Enabled = false;
+                HD_Uninstall.Enabled = false;
 
                 // Закроем открытые конфиги в редакторе...
                 if (!(String.IsNullOrEmpty(CFGFileName))) { CE_New.PerformClick(); }
@@ -3331,7 +3337,9 @@ namespace srcrepair
             // Переключаем статус элементов управления...
             HD_Install.Enabled = Success;
             HD_Homepage.Enabled = Success;
-            HD_Uninstall.Enabled = Success;
+
+            // Проверяем установлен ли выбранный HUD...
+            HD_Uninstall.Enabled = Directory.Exists(Path.Combine(GV.FullGamePath, GV.IsUsingUserDir ? "custom" : "", this.SelHUD.InstallDir));
         }
 
         private void HD_Install_Click(object sender, EventArgs e)
