@@ -56,6 +56,7 @@ namespace srcrepair
 
         /* В этой переменной будем хранить имя открытого конфига для служебных целей. */
         private string CFGFileName;
+        private HUDTlx SelHUD;
 
         #endregion
 
