@@ -3672,6 +3672,30 @@
   <metadata name="HUDInstall.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="HD_Homepage.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="HD_Homepage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>380, 83</value>
+  </data>
+  <data name="HD_Homepage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="HD_Homepage.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;HD_Homepage.Name" xml:space="preserve">
+    <value>HD_Homepage</value>
+  </data>
+  <data name="&gt;&gt;HD_Homepage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HD_Homepage.Parent" xml:space="preserve">
+    <value>HUDInstall</value>
+  </data>
+  <data name="&gt;&gt;HD_Homepage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="HD_Uninstall.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3682,7 +3706,7 @@
     <value>197, 23</value>
   </data>
   <data name="HD_Uninstall.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="HD_Uninstall.Text" xml:space="preserve">
     <value>Uninstall selected HUD</value>
@@ -3697,7 +3721,7 @@
     <value>HUDInstall</value>
   </data>
   <data name="&gt;&gt;HD_Uninstall.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="HD_Install.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3709,7 +3733,7 @@
     <value>197, 23</value>
   </data>
   <data name="HD_Install.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="HD_Install.Text" xml:space="preserve">
     <value>Install selected HUD</value>
@@ -3724,7 +3748,7 @@
     <value>HUDInstall</value>
   </data>
   <data name="&gt;&gt;HD_Install.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="HD_GB_Desc.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3760,7 +3784,7 @@
     <value>414, 199</value>
   </data>
   <data name="HD_GB_Desc.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="HD_GB_Desc.Text" xml:space="preserve">
     <value>Screenshot of selected HUD</value>
@@ -3775,13 +3799,13 @@
     <value>HUDInstall</value>
   </data>
   <data name="&gt;&gt;HD_GB_Desc.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <metadata name="HD_HSel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="HD_HSel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 85</value>
+    <value>192, 85</value>
   </data>
   <data name="HD_HSel.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 21</value>
@@ -3799,13 +3823,13 @@
     <value>HUDInstall</value>
   </data>
   <data name="&gt;&gt;HD_HSel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <metadata name="L_HD_HSel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="L_HD_HSel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 88</value>
+    <value>59, 88</value>
   </data>
   <data name="L_HD_HSel.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 18</value>
@@ -3826,7 +3850,7 @@
     <value>HUDInstall</value>
   </data>
   <data name="&gt;&gt;L_HD_HSel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <metadata name="HD_WelcMsg.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3853,7 +3877,7 @@
     <value>HUDInstall</value>
   </data>
   <data name="&gt;&gt;HD_WelcMsg.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="HUDInstall.ImageIndex" type="System.Int32, mscorlib">
     <value>4</value>

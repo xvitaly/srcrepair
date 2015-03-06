@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainW));
-            this.TabIcons = new System.Windows.Forms.ImageList(this.components);
+            this.TabIcons = new System.Windows.Forms.ImageList();
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
             this.GT_ResAvailable = new System.Windows.Forms.ComboBox();
@@ -156,6 +155,7 @@
             this.L_FP_ConfigSel = new System.Windows.Forms.Label();
             this.FP_TopLabel = new System.Windows.Forms.Label();
             this.HUDInstall = new System.Windows.Forms.TabPage();
+            this.HD_Homepage = new System.Windows.Forms.Button();
             this.HD_Uninstall = new System.Windows.Forms.Button();
             this.HD_Install = new System.Windows.Forms.Button();
             this.HD_GB_Desc = new System.Windows.Forms.GroupBox();
@@ -1350,6 +1350,7 @@
             // 
             // HUDInstall
             // 
+            this.HUDInstall.Controls.Add(this.HD_Homepage);
             this.HUDInstall.Controls.Add(this.HD_Uninstall);
             this.HUDInstall.Controls.Add(this.HD_Install);
             this.HUDInstall.Controls.Add(this.HD_GB_Desc);
@@ -1359,6 +1360,13 @@
             resources.ApplyResources(this.HUDInstall, "HUDInstall");
             this.HUDInstall.Name = "HUDInstall";
             this.HUDInstall.UseVisualStyleBackColor = true;
+            // 
+            // HD_Homepage
+            // 
+            this.HD_Homepage.Image = global::srcrepair.Properties.Resources.Home;
+            resources.ApplyResources(this.HD_Homepage, "HD_Homepage");
+            this.HD_Homepage.Name = "HD_Homepage";
+            this.HD_Homepage.UseVisualStyleBackColor = true;
             // 
             // HD_Uninstall
             // 
@@ -2180,6 +2188,7 @@
         private System.Windows.Forms.Label L_HD_HSel;
         private System.Windows.Forms.Label HD_WelcMsg;
         private System.ComponentModel.BackgroundWorker BW_HUDList;
+        private System.Windows.Forms.Button HD_Homepage;
     }
 }
 
