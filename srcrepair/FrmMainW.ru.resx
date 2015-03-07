@@ -850,6 +850,21 @@
   <data name="FPSCfgInstall.Text" xml:space="preserve">
     <value>FPS-конфиги</value>
   </data>
+  <data name="HD_Uninstall.Text" xml:space="preserve">
+    <value>Удалить выбранный HUD</value>
+  </data>
+  <data name="HD_Install.Text" xml:space="preserve">
+    <value>Установить выбранный HUD</value>
+  </data>
+  <data name="HD_GB_Desc.Text" xml:space="preserve">
+    <value>Скриншот выбранного HUD</value>
+  </data>
+  <data name="L_HD_HSel.Text" xml:space="preserve">
+    <value>Выберите HUD:</value>
+  </data>
+  <data name="HD_WelcMsg.Text" xml:space="preserve">
+    <value>Здесь вы можете установить один из протестированных нами HUD в игру. Не устанавливайте более одного HUD, т.к. это может привести к непредсказуемым последствиям. Выберите HUD из списка чтобы увидеть его скриншот.</value>
+  </data>
   <data name="HUDInstall.Text" xml:space="preserve">
     <value>Менеджер HUD</value>
   </data>
