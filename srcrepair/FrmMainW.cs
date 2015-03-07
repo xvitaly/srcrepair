@@ -1790,6 +1790,29 @@ namespace srcrepair
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
+        private void BW_HUDScreen_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                // Создадим файл со скриншотом...
+                string ScreenFile = Path.Combine(GV.AppHUDDir, Path.GetFileName(this.SelHUD.Preview));
+
+                // Загрузим файл если не существует...
+                if (!File.Exists(ScreenFile))
+                {
+                    using (WebClient Downloader = new WebClient())
+                    {
+                        Downloader.Headers.Add("User-Agent", GV.UserAgent);
+                        Downloader.DownloadFile(this.SelHUD.Preview, ScreenFile);
+                    }
+                }
+
+                // Установим...
+                this.Invoke((MethodInvoker)delegate() { HD_GB_Pbx.Image = Image.FromFile(ScreenFile); });
+            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+        }
+
         #endregion
 
         private void frmMainW_Load(object sender, EventArgs e)
@@ -3363,29 +3386,6 @@ namespace srcrepair
         {
             // Откроем домашнюю страницу выбранного HUD...
             try { if (String.IsNullOrEmpty(this.SelHUD.Site)) { Process.Start(this.SelHUD.Site); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-        }
-
-        private void BW_HUDScreen_DoWork(object sender, DoWorkEventArgs e)
-        {
-            try
-            {
-                // Создадим файл со скриншотом...
-                string ScreenFile = Path.Combine(GV.AppHUDDir, Path.GetFileName(this.SelHUD.Preview));
-
-                // Загрузим файл если не существует...
-                if (!File.Exists(ScreenFile))
-                {
-                    using (WebClient Downloader = new WebClient())
-                    {
-                        Downloader.Headers.Add("User-Agent", GV.UserAgent);
-                        Downloader.DownloadFile(this.SelHUD.Preview, ScreenFile);
-                    }
-                }
-
-                // Установим...
-                this.Invoke((MethodInvoker)delegate() { HD_GB_Pbx.Image = Image.FromFile(ScreenFile); });
-            }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
     }
 }
