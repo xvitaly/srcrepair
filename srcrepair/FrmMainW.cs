@@ -3357,5 +3357,10 @@ namespace srcrepair
             // Откроем домашнюю страницу выбранного HUD...
             try { if (String.IsNullOrEmpty(this.SelHUD.Site)) { Process.Start(this.SelHUD.Site); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
+
+        private void BW_HUDScreen_DoWork(object sender, DoWorkEventArgs e)
+        {
+            //
+        }
     }
 }

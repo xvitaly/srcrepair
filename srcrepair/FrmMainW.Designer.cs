@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainW));
-            this.TabIcons = new System.Windows.Forms.ImageList();
+            this.TabIcons = new System.Windows.Forms.ImageList(this.components);
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
             this.GT_ResAvailable = new System.Windows.Forms.ComboBox();
@@ -233,6 +234,7 @@
             this.BW_FPRecv = new System.ComponentModel.BackgroundWorker();
             this.BW_BkUpRecv = new System.ComponentModel.BackgroundWorker();
             this.BW_HUDList = new System.ComponentModel.BackgroundWorker();
+            this.BW_HUDScreen = new System.ComponentModel.BackgroundWorker();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             this.GT_GCF_Group.SuspendLayout();
@@ -1925,6 +1927,10 @@
             // 
             this.BW_HUDList.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_HUDList_DoWork);
             // 
+            // BW_HUDScreen
+            // 
+            this.BW_HUDScreen.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_HUDScreen_DoWork);
+            // 
             // frmMainW
             // 
             resources.ApplyResources(this, "$this");
@@ -2190,6 +2196,7 @@
         private System.Windows.Forms.Label HD_WelcMsg;
         private System.ComponentModel.BackgroundWorker BW_HUDList;
         private System.Windows.Forms.Button HD_Homepage;
+        private System.ComponentModel.BackgroundWorker BW_HUDScreen;
     }
 }
 
