@@ -3679,7 +3679,7 @@
     <value>False</value>
   </data>
   <data name="HD_Homepage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>380, 59</value>
+    <value>380, 60</value>
   </data>
   <data name="HD_Homepage.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -3769,7 +3769,7 @@
     <value>6, 22</value>
   </data>
   <data name="HD_GB_Pbx.Size" type="System.Drawing.Size, System.Drawing">
-    <value>402, 209</value>
+    <value>402, 206</value>
   </data>
   <data name="HD_GB_Pbx.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -3790,10 +3790,10 @@
     <value>0</value>
   </data>
   <data name="HD_GB_Desc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 87</value>
+    <value>23, 90</value>
   </data>
   <data name="HD_GB_Desc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>414, 237</value>
+    <value>414, 234</value>
   </data>
   <data name="HD_GB_Desc.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -3817,7 +3817,7 @@
     <value>True</value>
   </metadata>
   <data name="HD_HSel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>192, 61</value>
+    <value>192, 62</value>
   </data>
   <data name="HD_HSel.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 21</value>
@@ -3841,7 +3841,7 @@
     <value>True</value>
   </metadata>
   <data name="L_HD_HSel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>59, 64</value>
+    <value>59, 65</value>
   </data>
   <data name="L_HD_HSel.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 18</value>
