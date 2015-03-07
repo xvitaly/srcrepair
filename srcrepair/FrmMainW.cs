@@ -2006,6 +2006,7 @@ namespace srcrepair
                 GV.FullCfgPath = Path.Combine(GV.FullGamePath, "cfg");
                 GV.FullBackUpDirPath = Path.Combine(GV.AppUserDir, "backups", GV.SmallAppName);
                 GV.VideoCfgFile = Path.Combine(GV.GamePath, GV.ConfDir, "cfg", "video.txt");
+                GV.AppHUDDir = Path.Combine(GV.AppUserDir, Properties.Settings.Default.HUDLocalDir, GV.SmallAppName);
 
                 // Включаем основные элементы управления (контролы)...
                 MainTabControl.Enabled = true;
@@ -2055,6 +2056,9 @@ namespace srcrepair
                 
                 // Считаем список бэкапов...
                 if (!BW_BkUpRecv.IsBusy) { BW_BkUpRecv.RunWorkerAsync(); }
+
+                // Создадим каталоги...
+                if (!Directory.Exists(GV.AppHUDDir)) { Directory.CreateDirectory(GV.AppHUDDir); }
             }
             catch (Exception Ex)
             {
@@ -3340,6 +3344,9 @@ namespace srcrepair
 
             // Проверяем установлен ли выбранный HUD...
             HD_Uninstall.Enabled = Directory.Exists(Path.Combine(GV.FullGamePath, GV.IsUsingUserDir ? "custom" : "", this.SelHUD.InstallDir));
+
+            // Загрузим скриншот выбранного HUD...
+            if (Success && !BW_HUDScreen.IsBusy) { BW_HUDScreen.RunWorkerAsync(); }
         }
 
         private void HD_Install_Click(object sender, EventArgs e)
@@ -3360,7 +3367,25 @@ namespace srcrepair
 
         private void BW_HUDScreen_DoWork(object sender, DoWorkEventArgs e)
         {
-            //
+            try
+            {
+                // Создадим файл со скриншотом...
+                string ScreenFile = Path.Combine(GV.AppHUDDir, Path.GetFileName(this.SelHUD.Preview));
+
+                // Загрузим файл если не существует...
+                if (!File.Exists(ScreenFile))
+                {
+                    using (WebClient Downloader = new WebClient())
+                    {
+                        Downloader.Headers.Add("User-Agent", GV.UserAgent);
+                        Downloader.DownloadFile(this.SelHUD.Preview, ScreenFile);
+                    }
+                }
+
+                // Установим...
+                this.Invoke((MethodInvoker)delegate() { HD_GB_Pbx.Image = Image.FromFile(ScreenFile); });
+            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
     }
 }

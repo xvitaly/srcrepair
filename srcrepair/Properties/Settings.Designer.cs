@@ -313,5 +313,17 @@ namespace srcrepair.Properties {
                 return ((string)(this["HUDDbFile"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("HUDs")]
+        public string HUDLocalDir {
+            get {
+                return ((string)(this["HUDLocalDir"]));
+            }
+            set {
+                this["HUDLocalDir"] = value;
+            }
+        }
     }
 }

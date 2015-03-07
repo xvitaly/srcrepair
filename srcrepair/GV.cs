@@ -57,6 +57,12 @@ namespace srcrepair
         public static string AppUserDir;
 
         /// <summary>
+        /// В этой переменной будем хранить путь до каталога локального хранения
+        /// загруженных файлов HUD и их мета-информации.
+        /// </summary>
+        public static string AppHUDDir;
+
+        /// <summary>
         /// В этой переменной будем хранить полный путь к каталогу игры, которой
         /// мы будем управлять данной утилитой.
         /// </summary>
