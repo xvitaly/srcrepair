@@ -2057,6 +2057,7 @@ namespace srcrepair
                 HD_Install.Enabled = false;
                 HD_Homepage.Enabled = false;
                 HD_Uninstall.Enabled = false;
+                HD_GB_Pbx.Image = null;
 
                 // Закроем открытые конфиги в редакторе...
                 if (!(String.IsNullOrEmpty(CFGFileName))) { CE_New.PerformClick(); }
