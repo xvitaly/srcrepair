@@ -63,6 +63,11 @@ namespace srcrepair
         public static string AppHUDDir;
 
         /// <summary>
+        /// В этой переменной будем хранить путь установки кастомных файлов.
+        /// </summary>
+        public static string CustomInstallDir;
+
+        /// <summary>
         /// В этой переменной будем хранить полный путь к каталогу игры, которой
         /// мы будем управлять данной утилитой.
         /// </summary>

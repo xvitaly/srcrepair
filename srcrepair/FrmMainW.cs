@@ -2030,6 +2030,7 @@ namespace srcrepair
                 GV.FullBackUpDirPath = Path.Combine(GV.AppUserDir, "backups", GV.SmallAppName);
                 GV.VideoCfgFile = Path.Combine(GV.GamePath, GV.ConfDir, "cfg", "video.txt");
                 GV.AppHUDDir = Path.Combine(GV.AppUserDir, Properties.Settings.Default.HUDLocalDir, GV.SmallAppName);
+                GV.CustomInstallDir = Path.Combine(GV.FullGamePath, GV.IsUsingUserDir ? "custom" : "");
 
                 // Включаем основные элементы управления (контролы)...
                 MainTabControl.Enabled = true;
@@ -3367,7 +3368,7 @@ namespace srcrepair
             HD_Homepage.Enabled = Success;
 
             // Проверяем установлен ли выбранный HUD...
-            HD_Uninstall.Enabled = Directory.Exists(Path.Combine(GV.FullGamePath, GV.IsUsingUserDir ? "custom" : "", this.SelHUD.InstallDir));
+            HD_Uninstall.Enabled = Directory.Exists(Path.Combine(GV.CustomInstallDir, this.SelHUD.InstallDir));
 
             // Загрузим скриншот выбранного HUD...
             if (Success && !BW_HUDScreen.IsBusy) { BW_HUDScreen.RunWorkerAsync(); }
