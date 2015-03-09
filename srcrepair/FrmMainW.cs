@@ -3381,7 +3381,10 @@ namespace srcrepair
 
         private void HD_Uninstall_Click(object sender, EventArgs e)
         {
-            //
+            // Воспользуемся модулем очистки для удаления выбранного HUD...
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(GV.CustomInstallDir, this.SelHUD.InstallDir, "*.*"));
+            SteamCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower().Replace("&", ""));
         }
 
         private void HD_Homepage_Click(object sender, EventArgs e)
