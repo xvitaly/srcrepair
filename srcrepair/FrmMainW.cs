@@ -1816,7 +1816,7 @@ namespace srcrepair
         private void BW_HudInstall_DoWork(object sender, DoWorkEventArgs e)
         {
             // Распаковываем загруженный архив с файлами HUD...
-            CoreLib.ExtractFiles(Path.Combine(GV.AppHUDDir, Path.GetFileName(this.SelHUD.URI)), GV.CustomInstallDir);
+            CoreLib.ExtractFiles(this.SelHUD.LocalFile, GV.CustomInstallDir);
         }
 
         private void BW_HudInstall_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -3380,7 +3380,7 @@ namespace srcrepair
             HD_Homepage.Enabled = Success;
 
             // Проверяем установлен ли выбранный HUD...
-            HD_Uninstall.Enabled = Directory.Exists(Path.Combine(GV.CustomInstallDir, this.SelHUD.InstallDir));
+            HD_Uninstall.Enabled = Directory.Exists(Path.Combine(GV.CustomInstallDir, this.SelHUD.IntDir));
 
             // Загрузим скриншот выбранного HUD...
             if (Success && !BW_HUDScreen.IsBusy) { BW_HUDScreen.RunWorkerAsync(); }
@@ -3388,8 +3388,10 @@ namespace srcrepair
 
         private void HD_Install_Click(object sender, EventArgs e)
         {
-            //
-            string LocalFile = Path.Combine(GV.AppHUDDir, Path.GetFileName(this.SelHUD.URI));
+            if (!File.Exists(this.SelHUD.LocalFile))
+            {
+                CoreLib.DownloadFileEx(this.SelHUD.URI, this.SelHUD.LocalFile);
+            }
 
             // Запускаем распаковку в отдельном потоке...
             if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(); }
@@ -3399,7 +3401,7 @@ namespace srcrepair
         {
             // Воспользуемся модулем очистки для удаления выбранного HUD...
             List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(GV.CustomInstallDir, this.SelHUD.InstallDir, "*.*"));
+            CleanDirs.Add(Path.Combine(GV.CustomInstallDir, this.SelHUD.IntDir, "*.*"));
             SteamCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower().Replace("&", ""));
         }
 

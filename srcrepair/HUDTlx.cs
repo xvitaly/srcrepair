@@ -10,8 +10,8 @@ namespace srcrepair
         public string URI;
         public string Preview;
         public string Site;
-        public string ArchiveDir;
-        public string InstallDir;
+        public string IntDir;
+        public string LocalFile;
         
         public HUDTlx(string HUDName)
         {
@@ -26,8 +26,8 @@ namespace srcrepair
                     this.URI = XMLD.GetElementsByTagName("URI")[i].InnerText;
                     this.Preview = XMLD.GetElementsByTagName("Preview")[i].InnerText;
                     this.Site = XMLD.GetElementsByTagName("Site")[i].InnerText;
-                    this.ArchiveDir = XMLD.GetElementsByTagName("ArchiveDir")[i].InnerText;
-                    this.InstallDir = XMLD.GetElementsByTagName("InstallDir")[i].InnerText;
+                    this.IntDir = XMLD.GetElementsByTagName("IntDir")[i].InnerText;
+                    this.LocalFile = Path.Combine(GV.AppHUDDir, Path.ChangeExtension(Path.GetFileName(this.Name), ".zip"));
                     break;
                 }
             }
