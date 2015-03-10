@@ -1813,6 +1813,18 @@ namespace srcrepair
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
+        private void BW_HudInstall_DoWork(object sender, DoWorkEventArgs e)
+        {
+            // Распаковываем загруженный архив с файлами HUD...
+            CoreLib.ExtractFiles(Path.Combine(GV.AppHUDDir, Path.GetFileName(this.SelHUD.URI)), GV.CustomInstallDir);
+        }
+
+        private void BW_HudInstall_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            // Выводим сообщение...
+            if (e.Error == null) { MessageBox.Show(CoreLib.GetLocalizedString("HD_InstallSuccessfull"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("HD_InstallError"), GV.AppName, e.Error.Message, e.Error.Source, MessageBoxIcon.Error); }
+        }
+
         #endregion
 
         private void frmMainW_Load(object sender, EventArgs e)
@@ -3377,6 +3389,10 @@ namespace srcrepair
         private void HD_Install_Click(object sender, EventArgs e)
         {
             //
+            string LocalFile = Path.Combine(GV.AppHUDDir, Path.GetFileName(this.SelHUD.URI));
+
+            // Запускаем распаковку в отдельном потоке...
+            if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(); }
         }
 
         private void HD_Uninstall_Click(object sender, EventArgs e)
@@ -3391,31 +3407,6 @@ namespace srcrepair
         {
             // Откроем домашнюю страницу выбранного HUD...
             try { if (String.IsNullOrEmpty(this.SelHUD.Site)) { Process.Start(this.SelHUD.Site); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-        }
-
-        private void BW_HudInstall_DoWork(object sender, DoWorkEventArgs e)
-        {
-            // Проверяем существует ли файл...
-            string LocalFile = Path.Combine(GV.AppHUDDir, Path.GetFileName(this.SelHUD.URI));
-            if (File.Exists(LocalFile))
-            {
-                using (ZipFile Zip = ZipFile.Read(LocalFile))
-                {
-                    foreach (ZipEntry ZFile in Zip)
-                    {
-                        try { ZFile.Extract(GV.CustomInstallDir, ExtractExistingFileAction.OverwriteSilently); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    }
-                }
-            }
-        }
-
-        private void BW_HudInstall_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            // Выводим сообщение...
-            if (e.Error != null)
-            {
-                MessageBox.Show(CoreLib.GetLocalizedString("HD_InstallSuccessfull"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
         }
     }
 }
