@@ -235,6 +235,7 @@
             this.BW_BkUpRecv = new System.ComponentModel.BackgroundWorker();
             this.BW_HUDList = new System.ComponentModel.BackgroundWorker();
             this.BW_HUDScreen = new System.ComponentModel.BackgroundWorker();
+            this.BW_HudInstall = new System.ComponentModel.BackgroundWorker();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             this.GT_GCF_Group.SuspendLayout();
@@ -1931,6 +1932,10 @@
             // 
             this.BW_HUDScreen.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_HUDScreen_DoWork);
             // 
+            // BW_HudInstall
+            // 
+            this.BW_HudInstall.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_HudInstall_DoWork);
+            // 
             // frmMainW
             // 
             resources.ApplyResources(this, "$this");
@@ -2197,6 +2202,7 @@
         private System.ComponentModel.BackgroundWorker BW_HUDList;
         private System.Windows.Forms.Button HD_Homepage;
         private System.ComponentModel.BackgroundWorker BW_HUDScreen;
+        private System.ComponentModel.BackgroundWorker BW_HudInstall;
     }
 }
 

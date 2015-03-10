@@ -3392,5 +3392,20 @@ namespace srcrepair
             // Откроем домашнюю страницу выбранного HUD...
             try { if (String.IsNullOrEmpty(this.SelHUD.Site)) { Process.Start(this.SelHUD.Site); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
+
+        private void BW_HudInstall_DoWork(object sender, DoWorkEventArgs e)
+        {
+            string LocalFile = Path.Combine(GV.AppHUDDir, Path.GetFileName(this.SelHUD.URI));
+            if (File.Exists(LocalFile))
+            {
+                using (ZipFile Zip = ZipFile.Read(LocalFile))
+                {
+                    foreach (ZipEntry ZFile in Zip)
+                    {
+                        try { ZFile.Extract(GV.CustomInstallDir, ExtractExistingFileAction.OverwriteSilently); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    }
+                }
+            }
+        }
     }
 }
