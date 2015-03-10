@@ -847,4 +847,8 @@
     <value>Установка HUD была успешно выполнена!</value>
     <comment>Сообщение при успешной установке HUD</comment>
   </data>
+  <data name="HD_InstallError" xml:space="preserve">
+    <value>При установке HUD произошла ошибка. Повторите попытку позднее.</value>
+    <comment>Сообщение при ошибке во время установки HUD.</comment>
+  </data>
 </root>

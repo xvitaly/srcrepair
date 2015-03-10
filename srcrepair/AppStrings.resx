@@ -666,4 +666,7 @@
   <data name="HD_InstallSuccessfull" xml:space="preserve">
     <value>HUD installation successfull!</value>
   </data>
+  <data name="HD_InstallError" xml:space="preserve">
+    <value>Error occured during installation. Please try again later.</value>
+  </data>
 </root>

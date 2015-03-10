@@ -997,6 +997,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error occured during installation. Please try again later..
+        /// </summary>
+        internal static string HD_InstallError {
+            get {
+                return ResourceManager.GetString("HD_InstallError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to HUD installation successfull!.
         /// </summary>
         internal static string HD_InstallSuccessfull {
