@@ -997,6 +997,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to HUD installation successfull!.
+        /// </summary>
+        internal static string HD_InstallSuccessfull {
+            get {
+                return ResourceManager.GetString("HD_InstallSuccessfull", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         internal static string InputBoxCancelBtnName {

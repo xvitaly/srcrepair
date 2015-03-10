@@ -663,4 +663,7 @@
   <data name="BU_BName_Config" xml:space="preserve">
     <value>Game config of</value>
   </data>
+  <data name="HD_InstallSuccessfull" xml:space="preserve">
+    <value>HUD installation successfull!</value>
+  </data>
 </root>

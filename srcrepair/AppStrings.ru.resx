@@ -843,4 +843,8 @@
     <value>Конфиг игры от</value>
     <comment>Имя для отображения в списке бэкапов реестра (конфиг игры)</comment>
   </data>
+  <data name="HD_InstallSuccessfull" xml:space="preserve">
+    <value>Установка HUD была успешно выполнена!</value>
+    <comment>Сообщение при успешной установке HUD</comment>
+  </data>
 </root>

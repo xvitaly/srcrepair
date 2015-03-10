@@ -3395,6 +3395,7 @@ namespace srcrepair
 
         private void BW_HudInstall_DoWork(object sender, DoWorkEventArgs e)
         {
+            // Проверяем существует ли файл...
             string LocalFile = Path.Combine(GV.AppHUDDir, Path.GetFileName(this.SelHUD.URI));
             if (File.Exists(LocalFile))
             {
@@ -3406,6 +3407,11 @@ namespace srcrepair
                     }
                 }
             }
+        }
+
+        private void BW_HudInstall_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            //
         }
     }
 }

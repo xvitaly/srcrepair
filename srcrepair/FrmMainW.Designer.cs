@@ -1935,6 +1935,7 @@
             // BW_HudInstall
             // 
             this.BW_HudInstall.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_HudInstall_DoWork);
+            this.BW_HudInstall.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BW_HudInstall_RunWorkerCompleted);
             // 
             // frmMainW
             // 
