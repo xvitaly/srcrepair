@@ -3388,10 +3388,8 @@ namespace srcrepair
 
         private void HD_Install_Click(object sender, EventArgs e)
         {
-            if (!File.Exists(this.SelHUD.LocalFile))
-            {
-                CoreLib.DownloadFileEx(this.SelHUD.URI, this.SelHUD.LocalFile);
-            }
+            // Начинаем загрузку если файл не существует...
+            if (!File.Exists(this.SelHUD.LocalFile)) { CoreLib.DownloadFileEx(this.SelHUD.URI, this.SelHUD.LocalFile); }
 
             // Запускаем распаковку в отдельном потоке...
             if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(); }
