@@ -749,6 +749,29 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Распаковывает архив в указанный каталог при помощи библиотеки DotNetZip.
+        /// </summary>
+        /// <param name="ArchiveName">Архив для распаковки</param>
+        /// <param name="DestDir">Имя для создаваемого архивного файла</param>
+        public static void ExtractFiles(string ArchiveName, string DestDir)
+        {
+            if (File.Exists(ArchiveName))
+            {
+                using (ZipFile Zip = ZipFile.Read(ArchiveName))
+                {
+                    foreach (ZipEntry ZFile in Zip)
+                    {
+                        try { ZFile.Extract(DestDir, ExtractExistingFileAction.OverwriteSilently); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    }
+                }
+            }
+            else
+            {
+                throw new FileNotFoundException("Archive not found.", ArchiveName);
+            }
+        }
+
+        /// <summary>
         /// Начинает загрузку с указанного URL с подробным отображением процесса.
         /// </summary>
         /// <param name="URI">URL для загрузки</param>
