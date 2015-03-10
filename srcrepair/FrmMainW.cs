@@ -3411,7 +3411,11 @@ namespace srcrepair
 
         private void BW_HudInstall_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            //
+            // Выводим сообщение...
+            if (e.Error != null)
+            {
+                MessageBox.Show(CoreLib.GetLocalizedString("HD_InstallSuccessfull"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
