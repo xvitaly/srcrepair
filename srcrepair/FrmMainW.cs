@@ -1994,11 +1994,8 @@ namespace srcrepair
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                if (Properties.Settings.Default.ConfirmExit)
-                {
-                    // Запрашиваем подтверждение у пользователя на закрытие формы...
-                    e.Cancel = !(MessageBox.Show(String.Format(CoreLib.GetLocalizedString("FrmCloseQuery"), GV.AppName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes);
-                }
+                // Запрашиваем подтверждение у пользователя на закрытие формы...
+                e.Cancel = Properties.Settings.Default.ConfirmExit && !(MessageBox.Show(String.Format(CoreLib.GetLocalizedString("FrmCloseQuery"), GV.AppName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes);
             }
         }
 
