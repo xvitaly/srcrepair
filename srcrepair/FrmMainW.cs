@@ -1682,6 +1682,16 @@ namespace srcrepair
             FP_Uninstall.Enabled = GV.FPSConfigs.Count > 0;
         }
 
+        /// <summary>
+        /// Проверяет установлен ли указанный HUD.
+        /// </summary>
+        /// <param name="HUDDir">Каталог установки проверяемого HUD</param>
+        /// <returns>Возвращает истину если HUD с указанным именем установлен</returns>
+        private bool CheckInstalledHUD(string HUDDir)
+        {
+            return Directory.Exists(Path.Combine(GV.CustomInstallDir, HUDDir));
+        }
+
         #endregion
 
         #region Internal Workers
@@ -1837,6 +1847,9 @@ namespace srcrepair
         {
             // Выводим сообщение...
             if (e.Error == null) { MessageBox.Show(CoreLib.GetLocalizedString("HD_InstallSuccessfull"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("HD_InstallError"), GV.AppName, e.Error.Message, e.Error.Source, MessageBoxIcon.Error); }
+
+            // Включаем кнопку удаления если HUD установлен...
+            HD_Uninstall.Enabled = CheckInstalledHUD(this.SelHUD.IntDir);
         }
 
         #endregion
@@ -3391,7 +3404,7 @@ namespace srcrepair
             HD_Homepage.Enabled = Success;
 
             // Проверяем установлен ли выбранный HUD...
-            HD_Uninstall.Enabled = Directory.Exists(Path.Combine(GV.CustomInstallDir, this.SelHUD.IntDir));
+            HD_Uninstall.Enabled = CheckInstalledHUD(this.SelHUD.IntDir);
 
             // Загрузим скриншот выбранного HUD...
             if (Success && !BW_HUDScreen.IsBusy) { BW_HUDScreen.RunWorkerAsync(); }
