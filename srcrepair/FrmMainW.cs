@@ -1820,8 +1820,8 @@ namespace srcrepair
 
             try
             {
-                // Изменяем текст на "Идёт установка"...
-                this.Invoke((MethodInvoker)delegate() { HD_Install.Text = CoreLib.GetLocalizedString("HD_InstallBtnProgress"); });
+                // Изменяем текст на "Идёт установка" и отключаем её...
+                this.Invoke((MethodInvoker)delegate() { HD_Install.Text = CoreLib.GetLocalizedString("HD_InstallBtnProgress"); HD_Install.Enabled = false; });
 
                 // Распаковываем загруженный архив с файлами HUD...
                 CoreLib.ExtractFiles(this.SelHUD.LocalFile, GV.CustomInstallDir);
@@ -1829,7 +1829,7 @@ namespace srcrepair
             finally
             {
                 // Возвращаем сохранённый...
-                this.Invoke((MethodInvoker)delegate() { HD_Install.Text = CaptText; });
+                this.Invoke((MethodInvoker)delegate() { HD_Install.Text = CaptText; HD_Install.Enabled = true; });
             }
         }
 
