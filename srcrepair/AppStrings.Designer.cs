@@ -997,6 +997,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Installing HUD... Wait..
+        /// </summary>
+        internal static string HD_InstallBtnProgress {
+            get {
+                return ResourceManager.GetString("HD_InstallBtnProgress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error occured during installation. Please try again later..
         /// </summary>
         internal static string HD_InstallError {

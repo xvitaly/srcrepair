@@ -851,4 +851,8 @@
     <value>При установке HUD произошла ошибка. Повторите попытку позднее.</value>
     <comment>Сообщение при ошибке во время установки HUD.</comment>
   </data>
+  <data name="HD_InstallBtnProgress" xml:space="preserve">
+    <value>Идёт установка... Ждите.</value>
+    <comment>Текст кнопки во время распаковки HUD.</comment>
+  </data>
 </root>

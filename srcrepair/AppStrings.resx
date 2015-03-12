@@ -669,4 +669,7 @@
   <data name="HD_InstallError" xml:space="preserve">
     <value>Error occured during installation. Please try again later.</value>
   </data>
+  <data name="HD_InstallBtnProgress" xml:space="preserve">
+    <value>Installing HUD... Wait.</value>
+  </data>
 </root>

@@ -1815,8 +1815,22 @@ namespace srcrepair
 
         private void BW_HudInstall_DoWork(object sender, DoWorkEventArgs e)
         {
-            // Распаковываем загруженный архив с файлами HUD...
-            CoreLib.ExtractFiles(this.SelHUD.LocalFile, GV.CustomInstallDir);
+            // Сохраняем предыдующий текст кнопки...
+            string CaptText = HD_Install.Text;
+
+            try
+            {
+                // Изменяем текст на "Идёт установка"...
+                this.Invoke((MethodInvoker)delegate() { HD_Install.Text = CoreLib.GetLocalizedString("HD_InstallBtnProgress"); });
+
+                // Распаковываем загруженный архив с файлами HUD...
+                CoreLib.ExtractFiles(this.SelHUD.LocalFile, GV.CustomInstallDir);
+            }
+            finally
+            {
+                // Возвращаем сохранённый...
+                this.Invoke((MethodInvoker)delegate() { HD_Install.Text = CaptText; });
+            }
         }
 
         private void BW_HudInstall_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
