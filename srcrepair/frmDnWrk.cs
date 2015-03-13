@@ -33,7 +33,21 @@ namespace srcrepair
 
         private void DownloaderCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            // Загрузка завершена. Закроем форму...
+            // Загрузка завершена. Проверим скачалось ли что-то. Если нет, удалим пустой файл...
+            try
+            {
+                if (File.Exists(this.LocalFile))
+                {
+                    FileInfo Fi = new FileInfo(this.LocalFile);
+                    if (Fi.Length == 0)
+                    {
+                        File.Delete(this.LocalFile);
+                    }
+                }
+            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+
+            // Закроем форму...
             this.IsRunning = false;
             this.Close();
         }
