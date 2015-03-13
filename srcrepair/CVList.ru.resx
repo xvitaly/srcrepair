@@ -3444,4 +3444,13 @@
   <data name="sv_reliableavatardata" xml:space="preserve">
     <value>Включает / отключает новый механизм гарантированной доставки и сохранения аватаров игроков на сервере GOTV (SourceTV). Также сохраняет их в файле STV-демки.</value>
   </data>
+  <data name="tf_grapplinghook_jump_up_speed" xml:space="preserve">
+    <value>Задаёт ускорение свободного полёта после отпускания крюка.</value>
+  </data>
+  <data name="tf_grapplinghook_max_distance" xml:space="preserve">
+    <value>Задаёт максимальную дистанцию, на которой крюк может быть использован.</value>
+  </data>
+  <data name="tf_grapplinghook_prevent_fall_damage" xml:space="preserve">
+    <value>Включает / отключает урон от падения при падении с крюка.</value>
+  </data>
 </root>

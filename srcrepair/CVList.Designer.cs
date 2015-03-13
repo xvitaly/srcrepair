@@ -4984,6 +4984,33 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sets hook-jump velocity..
+        /// </summary>
+        internal static string tf_grapplinghook_jump_up_speed {
+            get {
+                return ResourceManager.GetString("tf_grapplinghook_jump_up_speed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sets hook&apos;s max firing distance..
+        /// </summary>
+        internal static string tf_grapplinghook_max_distance {
+            get {
+                return ResourceManager.GetString("tf_grapplinghook_max_distance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable / disable fall damage for the grappling hook..
+        /// </summary>
+        internal static string tf_grapplinghook_prevent_fall_damage {
+            get {
+                return ResourceManager.GetString("tf_grapplinghook_prevent_fall_damage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Average interval between boss spawns, in seconds..
         /// </summary>
         internal static string tf_halloween_boss_spawn_interval {

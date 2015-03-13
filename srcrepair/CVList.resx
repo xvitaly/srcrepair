@@ -2121,4 +2121,13 @@
   <data name="sv_reliableavatardata" xml:space="preserve">
     <value>When enabled player avatars are reliably exchanged between all players and casters on the game server, reliably delivered to GOTV spectators, and recorded in demo files</value>
   </data>
+  <data name="tf_grapplinghook_jump_up_speed" xml:space="preserve">
+    <value>Sets hook-jump velocity.</value>
+  </data>
+  <data name="tf_grapplinghook_max_distance" xml:space="preserve">
+    <value>Sets hook's max firing distance.</value>
+  </data>
+  <data name="tf_grapplinghook_prevent_fall_damage" xml:space="preserve">
+    <value>Enable / disable fall damage for the grappling hook.</value>
+  </data>
 </root>
