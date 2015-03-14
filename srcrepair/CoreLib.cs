@@ -1,8 +1,8 @@
 ﻿/*
  * Модуль с общими функциями SRC Repair.
  * 
- * Copyright 2011 EasyCoding Team (ECTeam).
- * Copyright 2005 - 2014 EasyCoding Team.
+ * Copyright 2011 - 2015 EasyCoding Team (ECTeam).
+ * Copyright 2005 - 2015 EasyCoding Team.
  * 
  * Лицензия: GPL v3 (см. файл GPL.txt).
  * Лицензия контента: Creative Commons 3.0 BY.
