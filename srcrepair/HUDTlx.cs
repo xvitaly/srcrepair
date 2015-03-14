@@ -6,13 +6,40 @@ namespace srcrepair
 {
     public sealed class HUDTlx
     {
+        /// <summary>
+        /// Содержит имя HUD.
+        /// </summary>
         public string Name;
+
+        /// <summary>
+        /// Содержит URI для загрузки.
+        /// </summary>
         public string URI;
+
+        /// <summary>
+        /// Содержит URI скриншота.
+        /// </summary>
         public string Preview;
+
+        /// <summary>
+        /// Содержит ссылку на официальный сайт HUD.
+        /// </summary>
         public string Site;
+
+        /// <summary>
+        /// Содержит имя каталога установки.
+        /// </summary>
         public string IntDir;
+
+        /// <summary>
+        /// Содержит локальный путь к загруженному файлу.
+        /// </summary>
         public string LocalFile;
-        
+
+        /// <summary>
+        /// Конструктор класса. Получает информацию о выбранном HUD.
+        /// </summary>
+        /// <param name="HUDName">Имя HUD, информацию о котором нужно получить</param>
         public HUDTlx(string HUDName)
         {
             XmlDocument XMLD = new XmlDocument();
