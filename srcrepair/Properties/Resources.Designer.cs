@@ -158,15 +158,6 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://code.google.com/p/srcrepair/wiki/UserManual_{0}.
-        /// </summary>
-        internal static string AppURLHelpWiki {
-            get {
-                return ResourceManager.GetString("AppURLHelpWiki", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to https://www.easycoding.org/.
         /// </summary>
         internal static string AppURLOffSite {
@@ -585,7 +576,7 @@ namespace srcrepair.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &quot;UnlitGeneric&quot;
         ///{
-        ///	&quot;$basetexture&quot;	&quot;{0}&quot;
+        ///	&quot;$basetexture&quot;	&quot;{D}&quot;
         ///	&quot;$translucent&quot; &quot;1&quot;
         ///	&quot;$ignorez&quot; &quot;1&quot;
         ///	&quot;$vertexcolor&quot; &quot;1&quot;
