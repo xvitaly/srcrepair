@@ -77,7 +77,7 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://code.google.com/p/srcrepair/wiki/HostsEditorPlugin_{0}.
+        ///   Looks up a localized string similar to https://www.easycoding.org/projects/mhed.
         /// </summary>
         internal static string AHE_HelpURL {
             get {
