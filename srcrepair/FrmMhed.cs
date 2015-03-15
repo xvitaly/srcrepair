@@ -39,7 +39,7 @@ namespace srcrepair
 
         #region IC
         private const string PluginName = "Micro Hosts Editor";
-        private const string PluginVersion = "0.5";
+        private const string PluginVersion = "0.5.1";
         #endregion
 
         #region IV
@@ -154,7 +154,7 @@ namespace srcrepair
 
         private void HEd_M_OnlHelp_Click(object sender, EventArgs e)
         {
-            Process.Start(String.Format(Properties.Resources.AHE_HelpURL, CoreLib.GetLocalizedString("AppLangPrefix")));
+            try { Process.Start(Properties.Resources.AHE_HelpURL); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void HEd_M_About_Click(object sender, EventArgs e)
@@ -181,7 +181,7 @@ namespace srcrepair
         {
             if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AHE_HMessg"), HostsFilePath), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, HostsFilePath));
+                try { Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, HostsFilePath)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
             }
         }
 
@@ -209,7 +209,7 @@ namespace srcrepair
 
         private void HEd_M_Notepad_Click(object sender, EventArgs e)
         {
-            Process.Start(Properties.Settings.Default.EditorBin, String.Format("\"{0}\"", HostsFilePath));
+            try { Process.Start(Properties.Settings.Default.EditorBin, String.Format("\"{0}\"", HostsFilePath)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void HEd_M_RepBug_Click(object sender, EventArgs e)
