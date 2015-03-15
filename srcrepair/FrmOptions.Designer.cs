@@ -33,10 +33,9 @@
             this.MO_Cancel = new System.Windows.Forms.Button();
             this.MO_TC = new System.Windows.Forms.TabControl();
             this.MO_TP1 = new System.Windows.Forms.TabPage();
+            this.MO_RemEmptyDirs = new System.Windows.Forms.CheckBox();
             this.MO_ZipCompress = new System.Windows.Forms.CheckBox();
             this.MO_AutoRestAfterUpdateDb = new System.Windows.Forms.CheckBox();
-            this.MO_PrefHelpSystem = new System.Windows.Forms.ComboBox();
-            this.MO_L_HelpSystem = new System.Windows.Forms.Label();
             this.MO_AutoUpdate = new System.Windows.Forms.CheckBox();
             this.MO_SortGameList = new System.Windows.Forms.CheckBox();
             this.MO_ConfirmExit = new System.Windows.Forms.CheckBox();
@@ -46,7 +45,6 @@
             this.L_MO_CustDirName = new System.Windows.Forms.Label();
             this.MO_FindShBin = new System.Windows.Forms.Button();
             this.MO_FindTextEd = new System.Windows.Forms.Button();
-            this.MO_RemEmptyDirs = new System.Windows.Forms.CheckBox();
             this.MO_ShBin = new System.Windows.Forms.TextBox();
             this.L_MO_ShBin = new System.Windows.Forms.Label();
             this.MO_TextEdBin = new System.Windows.Forms.TextBox();
@@ -83,16 +81,21 @@
             // 
             // MO_TP1
             // 
+            this.MO_TP1.Controls.Add(this.MO_RemEmptyDirs);
             this.MO_TP1.Controls.Add(this.MO_ZipCompress);
             this.MO_TP1.Controls.Add(this.MO_AutoRestAfterUpdateDb);
-            this.MO_TP1.Controls.Add(this.MO_PrefHelpSystem);
-            this.MO_TP1.Controls.Add(this.MO_L_HelpSystem);
             this.MO_TP1.Controls.Add(this.MO_AutoUpdate);
             this.MO_TP1.Controls.Add(this.MO_SortGameList);
             this.MO_TP1.Controls.Add(this.MO_ConfirmExit);
             resources.ApplyResources(this.MO_TP1, "MO_TP1");
             this.MO_TP1.Name = "MO_TP1";
             this.MO_TP1.UseVisualStyleBackColor = true;
+            // 
+            // MO_RemEmptyDirs
+            // 
+            resources.ApplyResources(this.MO_RemEmptyDirs, "MO_RemEmptyDirs");
+            this.MO_RemEmptyDirs.Name = "MO_RemEmptyDirs";
+            this.MO_RemEmptyDirs.UseVisualStyleBackColor = true;
             // 
             // MO_ZipCompress
             // 
@@ -105,21 +108,6 @@
             resources.ApplyResources(this.MO_AutoRestAfterUpdateDb, "MO_AutoRestAfterUpdateDb");
             this.MO_AutoRestAfterUpdateDb.Name = "MO_AutoRestAfterUpdateDb";
             this.MO_AutoRestAfterUpdateDb.UseVisualStyleBackColor = true;
-            // 
-            // MO_PrefHelpSystem
-            // 
-            this.MO_PrefHelpSystem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.MO_PrefHelpSystem.FormattingEnabled = true;
-            this.MO_PrefHelpSystem.Items.AddRange(new object[] {
-            resources.GetString("MO_PrefHelpSystem.Items"),
-            resources.GetString("MO_PrefHelpSystem.Items1")});
-            resources.ApplyResources(this.MO_PrefHelpSystem, "MO_PrefHelpSystem");
-            this.MO_PrefHelpSystem.Name = "MO_PrefHelpSystem";
-            // 
-            // MO_L_HelpSystem
-            // 
-            resources.ApplyResources(this.MO_L_HelpSystem, "MO_L_HelpSystem");
-            this.MO_L_HelpSystem.Name = "MO_L_HelpSystem";
             // 
             // MO_AutoUpdate
             // 
@@ -146,7 +134,6 @@
             this.MO_TP2.Controls.Add(this.L_MO_CustDirName);
             this.MO_TP2.Controls.Add(this.MO_FindShBin);
             this.MO_TP2.Controls.Add(this.MO_FindTextEd);
-            this.MO_TP2.Controls.Add(this.MO_RemEmptyDirs);
             this.MO_TP2.Controls.Add(this.MO_ShBin);
             this.MO_TP2.Controls.Add(this.L_MO_ShBin);
             this.MO_TP2.Controls.Add(this.MO_TextEdBin);
@@ -188,12 +175,6 @@
             this.MO_FindTextEd.Name = "MO_FindTextEd";
             this.MO_FindTextEd.UseVisualStyleBackColor = true;
             this.MO_FindTextEd.Click += new System.EventHandler(this.MO_FindTextEd_Click);
-            // 
-            // MO_RemEmptyDirs
-            // 
-            resources.ApplyResources(this.MO_RemEmptyDirs, "MO_RemEmptyDirs");
-            this.MO_RemEmptyDirs.Name = "MO_RemEmptyDirs";
-            this.MO_RemEmptyDirs.UseVisualStyleBackColor = true;
             // 
             // MO_ShBin
             // 
@@ -244,7 +225,6 @@
             this.Load += new System.EventHandler(this.frmOptions_Load);
             this.MO_TC.ResumeLayout(false);
             this.MO_TP1.ResumeLayout(false);
-            this.MO_TP1.PerformLayout();
             this.MO_TP2.ResumeLayout(false);
             this.MO_TP2.PerformLayout();
             this.ResumeLayout(false);
@@ -257,8 +237,6 @@
         private System.Windows.Forms.Button MO_Cancel;
         private System.Windows.Forms.TabControl MO_TC;
         private System.Windows.Forms.TabPage MO_TP1;
-        private System.Windows.Forms.ComboBox MO_PrefHelpSystem;
-        private System.Windows.Forms.Label MO_L_HelpSystem;
         private System.Windows.Forms.CheckBox MO_AutoUpdate;
         private System.Windows.Forms.CheckBox MO_SortGameList;
         private System.Windows.Forms.CheckBox MO_ConfirmExit;
@@ -268,7 +246,6 @@
         private System.Windows.Forms.Label L_MO_ShBin;
         private System.Windows.Forms.TextBox MO_TextEdBin;
         private System.Windows.Forms.Label L_MO_TextEdBin;
-        private System.Windows.Forms.CheckBox MO_RemEmptyDirs;
         private System.Windows.Forms.Button MO_FindShBin;
         private System.Windows.Forms.Button MO_FindTextEd;
         private System.Windows.Forms.OpenFileDialog MO_SearchBin;
@@ -277,5 +254,6 @@
         private System.Windows.Forms.Label L_MO_CustDirName;
         private System.Windows.Forms.CheckBox MO_ZipCompress;
         private System.Windows.Forms.CheckBox MO_UnSafeOps;
+        private System.Windows.Forms.CheckBox MO_RemEmptyDirs;
     }
 }
