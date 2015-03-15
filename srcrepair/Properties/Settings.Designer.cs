@@ -136,18 +136,6 @@ namespace srcrepair.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int PreferedHelpSystem {
-            get {
-                return ((int)(this["PreferedHelpSystem"]));
-            }
-            set {
-                this["PreferedHelpSystem"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool EnableDebugLog {
             get {

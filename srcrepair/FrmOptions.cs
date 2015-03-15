@@ -42,7 +42,6 @@ namespace srcrepair
             MO_SortGameList.Checked = Properties.Settings.Default.SortGamesList;
             MO_AutoUpdate.Checked = Properties.Settings.Default.EnableAutoUpdate;
             MO_RemEmptyDirs.Checked = Properties.Settings.Default.RemoveEmptyDirs;
-            MO_PrefHelpSystem.SelectedIndex = Properties.Settings.Default.PreferedHelpSystem;
             MO_EnableAppLogs.Checked = Properties.Settings.Default.EnableDebugLog;
             MO_ShBin.Text = Properties.Settings.Default.ShBin;
             MO_AutoRestAfterUpdateDb.Checked = Properties.Settings.Default.AutoReloadGameDb;
@@ -62,7 +61,6 @@ namespace srcrepair
             Properties.Settings.Default.SortGamesList = MO_SortGameList.Checked;
             Properties.Settings.Default.EnableAutoUpdate = MO_AutoUpdate.Checked;
             Properties.Settings.Default.RemoveEmptyDirs = MO_RemEmptyDirs.Checked;
-            Properties.Settings.Default.PreferedHelpSystem = MO_PrefHelpSystem.SelectedIndex;
             Properties.Settings.Default.EnableDebugLog = MO_EnableAppLogs.Checked;
             Properties.Settings.Default.EditorBin = MO_TextEdBin.Text;
             Properties.Settings.Default.ShBin = MO_ShBin.Text;

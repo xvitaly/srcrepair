@@ -2903,22 +2903,7 @@ namespace srcrepair
 
         private void MNUHelp_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Выбираем какую онлайновую справочную систему использовать.
-                // Используем Switch, т.к. их может быть больше двух.
-                switch (Properties.Settings.Default.PreferedHelpSystem)
-                {
-                    case 0: Process.Start(Properties.Resources.AppURLHelpSite);
-                        break;
-                    case 1: Process.Start(String.Format(Properties.Resources.AppURLHelpWiki, CoreLib.GetLocalizedString("AppLangPrefix")));
-                        break;
-                }
-            }
-            catch (Exception Ex)
-            {
-                CoreLib.WriteStringToLog(Ex.Message);
-            }
+            try { Process.Start(Properties.Resources.AppURLHelpSite); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void MNUOpinion_Click(object sender, EventArgs e)
