@@ -286,13 +286,14 @@ namespace srcrepair
         /// </summary>
         /// <param name="CurrentVersion">Текущая версия</param>
         /// <param name="ChURI">URL проверки обновлений</param>
+        /// <param name="UserAgent">Заголовок HTTP UserAgent</param>
         /// <returns>Возвращает true при обнаружении обновлений</returns>
-        public static bool AutoUpdateCheck(string CurrentVersion, string ChURI)
+        public static bool AutoUpdateCheck(string CurrentVersion, string ChURI, string UserAgent)
         {
             string NewVersion, DnlStr;
             using (WebClient Downloader = new WebClient())
             {
-                Downloader.Headers.Add("User-Agent", GV.UserAgent);
+                Downloader.Headers.Add("User-Agent", UserAgent);
                 DnlStr = Downloader.DownloadString(ChURI);
             }
             NewVersion = DnlStr.Substring(0, DnlStr.IndexOf("!"));
@@ -324,10 +325,17 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Возвращает путь к пользовательскому каталогу SRC Repair.
+        /// </summary>
+        public static string GetApplicationPath()
+        {
+            return Properties.Settings.Default.IsPortable ? Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Properties.Resources.AppName);
+        }
+
+        /// <summary>
         /// Функция, записывающая в лог-файл строку. Например, сообщение об ошибке.
         /// </summary>
         /// <param name="TextMessage">Сообщение для записи в лог</param>
-        /// <param name="LogFile">Имя файла с логом</param>
         public static void WriteStringToLog(string TextMessage)
         {
             if (Properties.Settings.Default.EnableDebugLog) // Пишем в лог если включено...
@@ -335,7 +343,7 @@ namespace srcrepair
                 try // Начинаем работу...
                 {
                     // Сгенерируем путь к файлу с логом...
-                    string DebugFileName = Path.Combine(GV.AppUserDir, Properties.Settings.Default.DebugLogFileName);
+                    string DebugFileName = Path.Combine(GetApplicationPath(), Properties.Settings.Default.DebugLogFileName);
                     // Если файл не существует, создадим его и сразу закроем...
                     if (!File.Exists(DebugFileName))
                     {

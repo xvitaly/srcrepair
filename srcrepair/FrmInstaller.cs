@@ -31,12 +31,16 @@ namespace srcrepair
 {
     public partial class frmInstaller : Form
     {
-        public frmInstaller()
+        public frmInstaller(string F, bool I)
         {
             InitializeComponent();
+            this.FullGamePath = F;
+            this.IsUsingUserDir = I;
         }
 
         private const string PluginName = "Quick Installer";
+        private string FullGamePath;
+        private bool IsUsingUserDir;
 
         /// <summary>
         /// Устанавливает файл в указанный каталог.
@@ -46,7 +50,7 @@ namespace srcrepair
         private void InstallFileNow(string FileName, string SubDir)
         {
             // Генерируем путь к каталогу, в который будем устанавливать...
-            string DestDir = Path.Combine(GV.FullGamePath, GV.IsUsingUserDir ? Path.Combine("custom", Properties.Settings.Default.UserCustDirName) : "", SubDir);
+            string DestDir = Path.Combine(this.FullGamePath, this.IsUsingUserDir ? Path.Combine("custom", Properties.Settings.Default.UserCustDirName) : "", SubDir);
 
             // Проверяем существование каталога установки и если его нет, создаём...
             if (!(Directory.Exists(DestDir))) { Directory.CreateDirectory(DestDir); }
@@ -69,7 +73,7 @@ namespace srcrepair
                     {
                         try
                         {
-                            ZFile.Extract(Path.Combine(GV.FullGamePath, GV.IsUsingUserDir ? Path.Combine("custom", Properties.Settings.Default.UserCustDirName) : ""));
+                            ZFile.Extract(Path.Combine(this.FullGamePath, this.IsUsingUserDir ? Path.Combine("custom", Properties.Settings.Default.UserCustDirName) : ""));
                         }
                         catch (Exception Ex)
                         {
@@ -106,7 +110,7 @@ namespace srcrepair
         {
             // Заполняем необходимые переменные...
             string CDir = Path.GetDirectoryName(FileName); // Получаем каталог с файлами для копирования...
-            string FPath = Path.Combine(GV.FullGamePath, "materials", "vgui", "logos"); // Получаем путь к каталогу назначения...
+            string FPath = Path.Combine(this.FullGamePath, "materials", "vgui", "logos"); // Получаем путь к каталогу назначения...
             string FFPath = Path.Combine(FPath, Path.GetFileName(FileName)); // Получаем полный путь к файлу...
             string VMTFileDest = Path.Combine(FPath, Path.GetFileNameWithoutExtension(Path.GetFileName(FileName)) + ".vmt"); // Генерируем путь назначения с именем файла...
             string VMTFile = Path.Combine(CDir, Path.GetFileName(VMTFileDest)); // Получаем путь до VMT-файла, лежащего в папке с VTF...

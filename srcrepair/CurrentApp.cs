@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Reflection;
 using System.IO;
+using System.Globalization;
 
 namespace srcrepair
 {
@@ -55,6 +56,12 @@ namespace srcrepair
             {
                 Directory.CreateDirectory(this.AppUserDir);
             }
+
+            // Получаем информацию о версии нашего приложения...
+            this.AppVersionInfo = Assmbl.GetName().Version.ToString();
+
+            // Генерируем User-Agent для SRC Repair...
+            this.UserAgent = String.Format(Properties.Resources.AppDefUA, Properties.Resources.PlatformFriendlyName, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, this.AppVersionInfo, Properties.Resources.AppName, CoreLib.GetSystemArch());
         }
     }
 }

@@ -214,8 +214,8 @@ namespace srcrepair
 
         private void HEd_M_RepBug_Click(object sender, EventArgs e)
         {
-            frmBugReporter BgRepFrm = new frmBugReporter();
-            BgRepFrm.ShowDialog();
+            //frmBugReporter BgRepFrm = new frmBugReporter();
+            //BgRepFrm.ShowDialog();
         }
         #endregion
     }

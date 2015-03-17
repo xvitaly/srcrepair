@@ -36,10 +36,12 @@ namespace srcrepair
     {
         private string BResult;
         private string CaptchaKey;
+        private string UserAgent;
 
-        public frmBugReporter()
+        public frmBugReporter(string UA)
         {
             InitializeComponent();
+            this.UserAgent = UA;
         }
 
         private string GenerateCaptchaKey(int StrLng)
@@ -202,7 +204,7 @@ namespace srcrepair
                 HttpWebRequest WrQ = (HttpWebRequest)WebRequest.Create(Properties.Resources.AppBtURL);
 
                 // Задаём User-Agent, метод запроса и таймаут ожидания ответа...
-                WrQ.UserAgent = GV.UserAgent;
+                WrQ.UserAgent = this.UserAgent;
                 WrQ.Method = "POST";
                 WrQ.Timeout = 250000;
 

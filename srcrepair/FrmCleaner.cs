@@ -31,7 +31,7 @@ namespace srcrepair
 {
     public partial class frmCleaner : Form
     {
-        public frmCleaner(List<String> CD, string CI, bool RO, bool NA, bool RS, bool FB)
+        public frmCleaner(List<String> CD, string BD, string CI, bool RO, bool NA, bool RS, bool FB)
         {
             InitializeComponent();
             CleanDirs = CD;
@@ -40,6 +40,7 @@ namespace srcrepair
             NoAutoCheck = NA;
             IsRecursive = RS;
             ForceBackUp = FB;
+            FullBackUpDirPath = BD;
         }
 
         private List<String> CleanDirs; // Здесь будем хранить каталог для очистки,...
@@ -47,6 +48,7 @@ namespace srcrepair
         private bool NoAutoCheck;
         private bool IsRecursive;
         private bool ForceBackUp;
+        private string FullBackUpDirPath;
         private string CleanInfo; // ...и информацию о том, что будем очищать.
         private long TotalSize = 0; // Задаём и обнуляем счётчик общего размера удаляемых файлов...
 
@@ -225,7 +227,7 @@ namespace srcrepair
                 // Добавляем в архив (если выбрано)...
                 if (Properties.Settings.Default.PackBeforeCleanup || this.ForceBackUp)
                 {
-                    if (!CoreLib.CompressFiles(DeleteQueue, CoreLib.GenerateBackUpFileName(GV.FullBackUpDirPath, Properties.Resources.BU_PrefixDef)))
+                    if (!CoreLib.CompressFiles(DeleteQueue, CoreLib.GenerateBackUpFileName(this.FullBackUpDirPath, Properties.Resources.BU_PrefixDef)))
                     {
                         MessageBox.Show(CoreLib.GetLocalizedString("PS_ArchFailed"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }

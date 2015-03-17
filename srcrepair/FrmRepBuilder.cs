@@ -32,12 +32,18 @@ namespace srcrepair
 {
     public partial class frmRepBuilder : Form
     {
-        public frmRepBuilder()
+        public frmRepBuilder(string A, string FS, string FC)
         {
             InitializeComponent();
+            this.AppUserDir = A;
+            this.FullSteamPath = FS;
+            this.FullCfgPath = FC;
         }
 
         private const string PluginName = "Report Builder";
+        private string AppUserDir;
+        private string FullSteamPath;
+        private string FullCfgPath;
 
         private void frmRepBuilder_Load(object sender, EventArgs e)
         {
@@ -47,7 +53,7 @@ namespace srcrepair
         private void BwGen_DoWork(object sender, DoWorkEventArgs e)
         {
             // Сгенерируем путь для каталога с рапортами...
-            string RepDir = Path.Combine(GV.AppUserDir, "reports");
+            string RepDir = Path.Combine(this.AppUserDir, "reports");
             // Проверим чтобы каталог для рапортов существовал...
             if (!Directory.Exists(RepDir))
             {
@@ -82,10 +88,10 @@ namespace srcrepair
                         // Добавляем в архив созданный рапорт...
                         if (File.Exists(Path.Combine(TempDir, RepName))) { ZBkUp.AddFile(Path.Combine(TempDir, RepName), "report"); }
                         // Добавляем в архив все конфиги выбранной игры...
-                        if (Directory.Exists(GV.FullCfgPath)) { ZBkUp.AddDirectory(GV.FullCfgPath, "configs"); }
+                        if (Directory.Exists(this.FullCfgPath)) { ZBkUp.AddDirectory(this.FullCfgPath, "configs"); }
                         // Добавляем в архив все краш-дампы и логи Steam...
-                        if (Directory.Exists(Path.Combine(GV.FullSteamPath, "dumps"))) { ZBkUp.AddDirectory(Path.Combine(GV.FullSteamPath, "dumps"), "dumps"); }
-                        if (Directory.Exists(Path.Combine(GV.FullSteamPath, "logs"))) { ZBkUp.AddDirectory(Path.Combine(GV.FullSteamPath, "logs"), "logs"); }
+                        if (Directory.Exists(Path.Combine(this.FullSteamPath, "dumps"))) { ZBkUp.AddDirectory(Path.Combine(this.FullSteamPath, "dumps"), "dumps"); }
+                        if (Directory.Exists(Path.Combine(this.FullSteamPath, "logs"))) { ZBkUp.AddDirectory(Path.Combine(this.FullSteamPath, "logs"), "logs"); }
                         // Добавляем содержимое файла Hosts...
                         if (File.Exists(HostsFile)) { ZBkUp.AddFile(HostsFile, "hosts"); }
                         // Добавляем в архив отчёты утилит ping, трассировки и т.д.

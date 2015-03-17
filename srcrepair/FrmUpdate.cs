@@ -32,9 +32,13 @@ namespace srcrepair
 {
     public partial class frmUpdate : Form
     {
-        public frmUpdate()
+        public frmUpdate(string UA, string A, string V, string U)
         {
             InitializeComponent();
+            this.UserAgent = UA;
+            this.FullAppPath = A;
+            this.AppVersionInfo = V;
+            this.AppUserDir = U;
         }
 
         private string NewVersion;
@@ -42,6 +46,10 @@ namespace srcrepair
         private string UpdateFileName;
         private string DBHash;
         private string NewHash;
+        private string FullAppPath;
+        private string UserAgent;
+        private string AppVersionInfo;
+        private string AppUserDir;
         private bool AppAvailable;
         private bool DbAvailable;
 
@@ -135,7 +143,7 @@ namespace srcrepair
                 // Получаем файл с номером версии и ссылкой на новую...
                 using (WebClient Downloader = new WebClient())
                 {
-                    Downloader.Headers.Add("User-Agent", GV.UserAgent);
+                    Downloader.Headers.Add("User-Agent", this.UserAgent);
                     DnlStr = Downloader.DownloadString(Properties.Settings.Default.UpdateChURI);
                 }
 
@@ -158,7 +166,7 @@ namespace srcrepair
             try
             {
                 // Проверим, является ли версия на сервере новее, чем текущая...
-                if (CoreLib.CompareVersions(GV.AppVersionInfo, NewVersion))
+                if (CoreLib.CompareVersions(this.AppVersionInfo, NewVersion))
                 {
                     // Доступна новая версия...
                     this.Invoke((MethodInvoker)delegate()
@@ -198,12 +206,12 @@ namespace srcrepair
                 using (WebClient Downloader = new WebClient())
                 {
                     // Получим хеш...
-                    Downloader.Headers.Add("User-Agent", GV.UserAgent);
+                    Downloader.Headers.Add("User-Agent", this.UserAgent);
                     this.NewHash = Downloader.DownloadString(Properties.Settings.Default.UpdateGameDBHash);
                 }
 
                 // Рассчитаем хеш текущего файла...
-                this.DBHash = CoreLib.CalculateFileMD5(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile));
+                this.DBHash = CoreLib.CalculateFileMD5(Path.Combine(this.FullAppPath, Properties.Settings.Default.GameListFile));
             }
             catch (Exception Ex)
             {
@@ -255,9 +263,9 @@ namespace srcrepair
         {
             if (!WrkChkDb.IsBusy)
             {
-                if (this.DbAvailable && CoreLib.IsDirectoryWritable(GV.FullAppPath))
+                if (this.DbAvailable && CoreLib.IsDirectoryWritable(this.FullAppPath))
                 {
-                    this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile));
+                    this.UpdateFileName = GenerateUpdateFileName(Path.Combine(this.FullAppPath, Properties.Settings.Default.GameListFile));
                     DownloadUpdate(Properties.Settings.Default.UpdateGameDBFile, this.UpdateFileName);
                 }
                 else
@@ -273,7 +281,7 @@ namespace srcrepair
             {
                 if (this.AppAvailable)
                 {
-                    this.UpdateFileName = GenerateUpdateFileName(Path.Combine(GV.AppUserDir, Path.GetFileName(UpdateURI)));
+                    this.UpdateFileName = GenerateUpdateFileName(Path.Combine(this.AppUserDir, Path.GetFileName(UpdateURI)));
                     DownloadUpdate(this.UpdateURI, this.UpdateFileName);
                 }
                 else
