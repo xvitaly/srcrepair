@@ -77,6 +77,7 @@
       <DependentUpon>AppStrings.ru.resx</DependentUpon>
     </Compile>
     <Compile Include="CoreLib.cs" />
+    <Compile Include="CurrentApp.cs" />
     <Compile Include="CVList.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

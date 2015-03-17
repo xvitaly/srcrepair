@@ -2030,32 +2030,7 @@ namespace srcrepair
         {
             try
             {
-                // Начинаем определять нужные нам значения переменных...
-                try
-                {
-                    XmlDocument XMLD = new XmlDocument();
-                    FileStream XMLFS = new FileStream(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile), FileMode.Open, FileAccess.Read);
-                    XMLD.Load(XMLFS);
-                    XmlNodeList XMLNList = XMLD.GetElementsByTagName("Game");
-                    for (int i = 0; i < XMLNList.Count; i++)
-                    {
-                        if (String.Compare(XMLD.GetElementsByTagName("DirName")[i].InnerText, Path.GetFileName(AppSelector.Text), true) == 0)
-                        {
-                            GV.FullAppName = XMLD.GetElementsByTagName("DirName")[i].InnerText;
-                            GV.SmallAppName = XMLD.GetElementsByTagName("SmallName")[i].InnerText;
-                            GV.GameInternalID = XMLD.GetElementsByTagName("SID")[i].InnerText;
-                            GV.ConfDir = XMLD.GetElementsByTagName("VFDir")[i].InnerText;
-                            GV.IsUsingVideoFile = XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1";
-                            GV.IsUsingUserDir = XMLD.GetElementsByTagName("UserDir")[i].InnerText == "1";
-                            break;
-                        }
-                    }
-                    XMLFS.Close();
-                }
-                catch (Exception Ex)
-                {
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppXMLParseError"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
-                }
+                
 
                 // Генерируем полный путь до каталога управляемого приложения...
                 GV.GamePath = AppSelector.Text;

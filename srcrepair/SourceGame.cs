@@ -20,40 +20,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml;
+using System.IO;
 
 namespace srcrepair
 {
     public sealed class SourceGame
     {
-        /// <summary>
-        /// Хранит User-Agent, которым представляется удалённым службам...
-        /// </summary>
-        public string UserAgent;
-
-        /// <summary>
-        /// В этой переменной мы будем хранить полный путь к каталогу установленного
-        /// клиента Steam.
-        /// </summary>
-        public string FullSteamPath;
-
-        /// <summary>
-        /// В этой переменной будем хранить полный путь к каталогу с утилитой
-        /// SRCRepair для служебных целей.
-        /// </summary>
-        public string FullAppPath;
-
-        /// <summary>
-        /// В этой переменной будем хранить путь до каталога пользователя
-        /// программы. Используется для служебных целей.
-        /// </summary>
-        public string AppUserDir;
-
-        /// <summary>
-        /// В этой переменной будем хранить путь до каталога локального хранения
-        /// загруженных файлов HUD и их мета-информации.
-        /// </summary>
-        public string AppHUDDir;
-
         /// <summary>
         /// В этой переменной будем хранить путь установки кастомных файлов.
         /// </summary>
@@ -82,12 +55,6 @@ namespace srcrepair
         /// для служебных целей (SteamAlias).
         /// </summary>
         public string SmallAppName;
-
-        /// <summary>
-        /// В этой переменной мы будем хранить полную информацию о версии
-        /// приложения для служебных целей.
-        /// </summary>
-        public string AppVersionInfo;
 
         /// <summary>
         /// В этой переменной мы будем хранить полный путь до каталога с
@@ -142,6 +109,32 @@ namespace srcrepair
         /// <param name="GameName">Название выбранного приложения</param>
         public SourceGame(string AppName)
         {
+            // Начинаем определять нужные нам значения переменных...
+            try
+            {
+                XmlDocument XMLD = new XmlDocument();
+                FileStream XMLFS = new FileStream(Path.Combine(GV.FullAppPath, Properties.Settings.Default.GameListFile), FileMode.Open, FileAccess.Read);
+                XMLD.Load(XMLFS);
+                XmlNodeList XMLNList = XMLD.GetElementsByTagName("Game");
+                for (int i = 0; i < XMLNList.Count; i++)
+                {
+                    if (String.Compare(XMLD.GetElementsByTagName("DirName")[i].InnerText, Path.GetFileName(AppSelector.Text), true) == 0)
+                    {
+                        GV.FullAppName = XMLD.GetElementsByTagName("DirName")[i].InnerText;
+                        GV.SmallAppName = XMLD.GetElementsByTagName("SmallName")[i].InnerText;
+                        GV.GameInternalID = XMLD.GetElementsByTagName("SID")[i].InnerText;
+                        GV.ConfDir = XMLD.GetElementsByTagName("VFDir")[i].InnerText;
+                        GV.IsUsingVideoFile = XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1";
+                        GV.IsUsingUserDir = XMLD.GetElementsByTagName("UserDir")[i].InnerText == "1";
+                        break;
+                    }
+                }
+                XMLFS.Close();
+            }
+            catch (Exception Ex)
+            {
+                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppXMLParseError"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+            }
         }
     }
 }
