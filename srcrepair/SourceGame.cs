@@ -23,7 +23,7 @@ using System.Text;
 
 namespace srcrepair
 {
-    class SourceGame
+    public sealed class SourceGame
     {
         /// <summary>
         /// Хранит User-Agent, которым представляется удалённым службам...
