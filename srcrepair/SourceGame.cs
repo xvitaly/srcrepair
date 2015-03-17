@@ -135,5 +135,12 @@ namespace srcrepair
         /// Содержит пути к установленным FPS-конфигам управляемой игры.
         /// </summary>
         public List<String> FPSConfigs;
+
+        /// <summary>
+        /// Конструктор класса. Получает информацию о выбранном приложении.
+        /// </summary>
+        public SourceGame()
+        {
+        }
     }
 }
