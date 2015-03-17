@@ -54,10 +54,10 @@ namespace srcrepair
 
         #region Internal Variables
 
-        /* В этой переменной будем хранить имя открытого конфига для служебных целей. */
         private string CFGFileName;
-        private HUDTlx SelHUD;
+        private CurrentApp App;
         private SourceGame SelGame;
+        private HUDTlx SelHUD;
 
         #endregion
 
