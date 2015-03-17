@@ -114,7 +114,8 @@ namespace srcrepair
         /// Конструктор класса. Получает информацию о выбранном приложении.
         /// </summary>
         /// <param name="GameName">Название выбранного приложения</param>
-        public SourceGame(string AppName, string AppPath, string RepDir)
+        /// <param name="AppPath">Путь к каталогу SRC Repair</param>
+        public SourceGame(string AppName, string AppPath)
         {
             // Начинаем определять нужные нам значения переменных...
             XmlDocument XMLD = new XmlDocument();
@@ -142,9 +143,9 @@ namespace srcrepair
 
             // Заполняем другие служебные переменные...
             this.FullCfgPath = Path.Combine(this.FullGamePath, "cfg");
-            this.FullBackUpDirPath = Path.Combine(RepDir, "backups", this.SmallAppName);
+            this.FullBackUpDirPath = Path.Combine(AppPath, "backups", this.SmallAppName);
             this.VideoCfgFile = Path.Combine(this.GamePath, this.ConfDir, "cfg", "video.txt");
-            this.AppHUDDir = Path.Combine(RepDir, Properties.Settings.Default.HUDLocalDir, this.SmallAppName);
+            this.AppHUDDir = Path.Combine(AppPath, Properties.Settings.Default.HUDLocalDir, this.SmallAppName);
             this.CustomInstallDir = Path.Combine(this.FullGamePath, this.IsUsingUserDir ? "custom" : "");
         }
     }

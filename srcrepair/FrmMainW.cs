@@ -57,6 +57,7 @@ namespace srcrepair
         /* В этой переменной будем хранить имя открытого конфига для служебных целей. */
         private string CFGFileName;
         private HUDTlx SelHUD;
+        private SourceGame SelGame;
 
         #endregion
 
@@ -2031,7 +2032,7 @@ namespace srcrepair
             try
             {
                 
-
+                //
                 
 
                 // Включаем основные элементы управления (контролы)...
