@@ -131,6 +131,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SRC Repair.
+        /// </summary>
+        internal static string AppName {
+            get {
+                return ResourceManager.GetString("AppName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The specified locale is not supported at this time, so will use the default language..
         /// </summary>
         internal static string AppUnsupportedLanguage {

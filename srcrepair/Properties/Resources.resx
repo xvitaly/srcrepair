@@ -319,4 +319,7 @@
   <data name="PI_TemplateFile" xml:space="preserve">
     <value>srcrepair.Resources.VtTemplate.txt</value>
   </data>
+  <data name="AppName" xml:space="preserve">
+    <value>SRC Repair</value>
+  </data>
 </root>

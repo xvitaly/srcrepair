@@ -2032,16 +2032,7 @@ namespace srcrepair
             {
                 
 
-                // Генерируем полный путь до каталога управляемого приложения...
-                GV.GamePath = AppSelector.Text;
-                GV.FullGamePath = Path.Combine(GV.GamePath, GV.SmallAppName);
-
-                // Заполняем другие служебные переменные...
-                GV.FullCfgPath = Path.Combine(GV.FullGamePath, "cfg");
-                GV.FullBackUpDirPath = Path.Combine(GV.AppUserDir, "backups", GV.SmallAppName);
-                GV.VideoCfgFile = Path.Combine(GV.GamePath, GV.ConfDir, "cfg", "video.txt");
-                GV.AppHUDDir = Path.Combine(GV.AppUserDir, Properties.Settings.Default.HUDLocalDir, GV.SmallAppName);
-                GV.CustomInstallDir = Path.Combine(GV.FullGamePath, GV.IsUsingUserDir ? "custom" : "");
+                
 
                 // Включаем основные элементы управления (контролы)...
                 MainTabControl.Enabled = true;
