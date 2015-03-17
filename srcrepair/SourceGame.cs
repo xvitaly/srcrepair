@@ -139,7 +139,8 @@ namespace srcrepair
         /// <summary>
         /// Конструктор класса. Получает информацию о выбранном приложении.
         /// </summary>
-        public SourceGame()
+        /// <param name="GameName">Название выбранного приложения</param>
+        public SourceGame(string AppName)
         {
         }
     }
