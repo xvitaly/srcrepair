@@ -101,7 +101,7 @@ namespace srcrepair
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_ArchFailed"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_ArchFailed"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
 
                 // Выполняем очистку...

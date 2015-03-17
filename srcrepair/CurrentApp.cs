@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Reflection;
+using System.IO;
 
 namespace srcrepair
 {
@@ -41,6 +43,18 @@ namespace srcrepair
         /// </summary>
         public CurrentApp()
         {
+            // Получаем путь к каталогу приложения...
+            Assembly Assmbl = Assembly.GetEntryAssembly();
+            this.FullAppPath = Path.GetDirectoryName(Assmbl.Location);
+
+            // Укажем путь к пользовательским данным и создадим если не существует...
+            this.AppUserDir = Properties.Settings.Default.IsPortable ? Path.Combine(this.FullAppPath, "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Properties.Resources.AppName);
+
+            // Проверим существование каталога пользовательских данных и при необходимости создадим...
+            if (!(Directory.Exists(this.AppUserDir)))
+            {
+                Directory.CreateDirectory(this.AppUserDir);
+            }
         }
     }
 }

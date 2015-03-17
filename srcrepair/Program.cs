@@ -33,7 +33,7 @@ namespace srcrepair
         [STAThread]
         static void Main()
         {
-            using (Mutex Mtx = new Mutex(false, GV.AppName))
+            using (Mutex Mtx = new Mutex(false, Properties.Resources.AppName))
             {
                 if (Mtx.WaitOne(0, false))
                 {
@@ -50,7 +50,7 @@ namespace srcrepair
                             }
                             catch
                             {
-                                MessageBox.Show(Properties.Resources.AppUnsupportedLanguage, GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show(Properties.Resources.AppUnsupportedLanguage, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
                         }
                     }
@@ -58,7 +58,7 @@ namespace srcrepair
                 }
                 else
                 {
-                    MessageBox.Show(Properties.Resources.AppAlrLaunched, GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(Properties.Resources.AppAlrLaunched, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Environment.Exit(16);
                 }
             }

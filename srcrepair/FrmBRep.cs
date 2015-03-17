@@ -173,13 +173,13 @@ namespace srcrepair
                 else
                 {
                     // Выводим сообщение об ошибке при заполнении капчи...
-                    MessageBox.Show(CoreLib.GetLocalizedString("BR_CaptErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(CoreLib.GetLocalizedString("BR_CaptErr"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
                 // Выводим сообщение об ошибке...
-                MessageBox.Show(CoreLib.GetLocalizedString("BR_MsgFieldsEmpty"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(CoreLib.GetLocalizedString("BR_MsgFieldsEmpty"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -249,7 +249,7 @@ namespace srcrepair
         private void BR_WrkMf_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             // Выводим сообщение...
-            if (e.Error == null) { if (String.Compare(this.BResult, "OK") != 0) { MessageBox.Show(CoreLib.GetLocalizedString("BR_SendCompleted"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(CoreLib.GetLocalizedString("BR_SendError"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); } } else { CoreLib.WriteStringToLog(e.Error.Message); }
+            if (e.Error == null) { if (String.Compare(this.BResult, "OK") != 0) { MessageBox.Show(CoreLib.GetLocalizedString("BR_SendCompleted"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(CoreLib.GetLocalizedString("BR_SendError"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); } } else { CoreLib.WriteStringToLog(e.Error.Message); }
 
             // Закрываем форму...
             this.Close();

@@ -48,7 +48,7 @@ namespace srcrepair
         private void frmUpdate_Load(object sender, EventArgs e)
         {
             // Заполняем...
-            this.Text = String.Format(this.Text, GV.AppName);
+            this.Text = String.Format(this.Text, Properties.Resources.AppName);
 
             // Запускаем функции проверки обновлений программы...
             if (!WrkChkApp.IsBusy) { WrkChkApp.RunWorkerAsync(); }
@@ -69,10 +69,10 @@ namespace srcrepair
                 if (this.AppAvailable)
                 {
                     // Существует, покажем сообщение...
-                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateSuccessful"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateSuccessful"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Запустим...
-                    try { Process.Start(this.UpdateFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_UpdateFailure"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
+                    try { Process.Start(this.UpdateFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
 
                     // Завершим работу программы...
                     Environment.Exit(9);
@@ -80,7 +80,7 @@ namespace srcrepair
                 else
                 {
                     // Выведем сообщение об успехе...
-                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_GamL_Updated"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_GamL_Updated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     
                     // Закроем форму...
                     this.Close();
@@ -89,7 +89,7 @@ namespace srcrepair
             else
             {
                 // Файл не существует: ошибка обновления...
-                MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateFailure"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 
                 // Закроем форму...
                 this.Close();
@@ -262,7 +262,7 @@ namespace srcrepair
                 }
                 else
                 {
-                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_LatestInstalled"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_LatestInstalled"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -278,7 +278,7 @@ namespace srcrepair
                 }
                 else
                 {
-                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_LatestInstalled"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_LatestInstalled"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }

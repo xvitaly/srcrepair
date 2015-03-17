@@ -227,7 +227,7 @@ namespace srcrepair
                 {
                     if (!CoreLib.CompressFiles(DeleteQueue, CoreLib.GenerateBackUpFileName(GV.FullBackUpDirPath, Properties.Resources.BU_PrefixDef)))
                     {
-                        MessageBox.Show(CoreLib.GetLocalizedString("PS_ArchFailed"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(CoreLib.GetLocalizedString("PS_ArchFailed"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 
@@ -254,14 +254,14 @@ namespace srcrepair
                     }
                     catch (Exception Ex)
                     {
-                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanEmptyDirsError"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanEmptyDirsError"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                     }
                 }
             }
             catch (Exception Ex)
             {
                 // Произошло исключение...
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), GV.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
             }
         }
 
@@ -275,7 +275,7 @@ namespace srcrepair
             if (e.Error == null)
             {
                 // Выводим сообщение об успешном окончании очистки...
-                MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -293,7 +293,7 @@ namespace srcrepair
             {
                 if (CM_FTable.CheckedItems.Count > 0)
                 {
-                    if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("PS_CleanupExecuteQ"), CleanInfo), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                    if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("PS_CleanupExecuteQ"), CleanInfo), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
                         // Отключаем кнопку отмены, очистки и меняем её текст...
                         CM_Clean.Text = CoreLib.GetLocalizedString("PS_CleanInProgress");
@@ -314,12 +314,12 @@ namespace srcrepair
                 }
                 else
                 {
-                    MessageBox.Show(CoreLib.GetLocalizedString("PS_SelectItemsMsg"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(CoreLib.GetLocalizedString("PS_SelectItemsMsg"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("PS_LoadErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(CoreLib.GetLocalizedString("PS_LoadErr"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -350,7 +350,7 @@ namespace srcrepair
             if (CM_FTable.Items.Count == 0)
             {
                 // Выдадим сообщение если очищать нечего...
-                MessageBox.Show(CoreLib.GetLocalizedString("PS_LoadErr"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(CoreLib.GetLocalizedString("PS_LoadErr"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 // Отключим кнопку запуска очистки...
                 CM_Clean.Enabled = false;
                 // Закроем форму.

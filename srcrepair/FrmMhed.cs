@@ -159,7 +159,7 @@ namespace srcrepair
 
         private void HEd_M_About_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(String.Format(Properties.Resources.AHE_About, PluginName, GV.AppName, "V1TSK", PluginVersion), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(String.Format(Properties.Resources.AHE_About, PluginName, Properties.Resources.AppName, "V1TSK", PluginVersion), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void HEd_T_RemRw_Click(object sender, EventArgs e)

@@ -51,7 +51,7 @@ namespace srcrepair
             MO_UnSafeOps.Checked = Properties.Settings.Default.AllowUnSafeCleanup;
 
             // Укажем название приложения в заголовке окна...
-            this.Text = String.Format(this.Text, GV.AppName);
+            this.Text = String.Format(this.Text, Properties.Resources.AppName);
         }
 
         private void MO_Okay_Click(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace srcrepair
             Properties.Settings.Default.Save();
 
             // Показываем сообщение...
-            MessageBox.Show(CoreLib.GetLocalizedString("Opts_Saved"), GV.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(CoreLib.GetLocalizedString("Opts_Saved"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             
             // Закрываем форму...
             this.Close();

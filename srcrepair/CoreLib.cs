@@ -138,7 +138,7 @@ namespace srcrepair
             Process[] LocalByName = Process.GetProcessesByName(ProcessName);
             foreach (Process ResName in LocalByName)
             {
-                if (MessageBox.Show(String.Format(ConfMsg, ResName.ProcessName), GV.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show(String.Format(ConfMsg, ResName.ProcessName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     ResName.Kill();
                 }
@@ -372,7 +372,7 @@ namespace srcrepair
             MessageBox.Show(ResultString, WTitle, MessageBoxButtons.OK, MsgIcon);
             #else
             // Для обычного режима покажем обычное сообщение...
-            MessageBox.Show(FrindlyMsg, GV.AppName, MessageBoxButtons.OK, MsgIcon);
+            MessageBox.Show(FrindlyMsg, Properties.Resources.AppName, MessageBoxButtons.OK, MsgIcon);
             #endif
             // Запишем в файл...
             WriteStringToLog(ResultString);
