@@ -211,12 +211,6 @@ namespace srcrepair
         {
             try { Process.Start(Properties.Settings.Default.EditorBin, String.Format("\"{0}\"", HostsFilePath)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
-
-        private void HEd_M_RepBug_Click(object sender, EventArgs e)
-        {
-            //frmBugReporter BgRepFrm = new frmBugReporter();
-            //BgRepFrm.ShowDialog();
-        }
         #endregion
     }
 }

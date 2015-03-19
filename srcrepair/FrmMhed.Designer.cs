@@ -53,7 +53,6 @@
             this.HEd_M_Notepad = new System.Windows.Forms.ToolStripMenuItem();
             this.HEd_M_Hlp = new System.Windows.Forms.ToolStripMenuItem();
             this.HEd_M_OnlHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.HEd_M_RepBug = new System.Windows.Forms.ToolStripMenuItem();
             this.HEd_M_About = new System.Windows.Forms.ToolStripMenuItem();
             this.HEd_MStatus = new System.Windows.Forms.StatusStrip();
             this.HEd_St_Wrn = new System.Windows.Forms.ToolStripStatusLabel();
@@ -233,7 +232,6 @@
             // 
             this.HEd_M_Hlp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.HEd_M_OnlHelp,
-            this.HEd_M_RepBug,
             this.HEd_M_About});
             this.HEd_M_Hlp.Name = "HEd_M_Hlp";
             resources.ApplyResources(this.HEd_M_Hlp, "HEd_M_Hlp");
@@ -244,13 +242,6 @@
             this.HEd_M_OnlHelp.Name = "HEd_M_OnlHelp";
             resources.ApplyResources(this.HEd_M_OnlHelp, "HEd_M_OnlHelp");
             this.HEd_M_OnlHelp.Click += new System.EventHandler(this.HEd_M_OnlHelp_Click);
-            // 
-            // HEd_M_RepBug
-            // 
-            this.HEd_M_RepBug.Image = global::srcrepair.Properties.Resources.bug;
-            this.HEd_M_RepBug.Name = "HEd_M_RepBug";
-            resources.ApplyResources(this.HEd_M_RepBug, "HEd_M_RepBug");
-            this.HEd_M_RepBug.Click += new System.EventHandler(this.HEd_M_RepBug_Click);
             // 
             // HEd_M_About
             // 
@@ -329,7 +320,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton HEd_T_About;
-        private System.Windows.Forms.ToolStripMenuItem HEd_M_RepBug;
         private System.Windows.Forms.DataGridViewTextBoxColumn HDV_IPAddr;
         private System.Windows.Forms.DataGridViewTextBoxColumn HDV_Domain;
     }

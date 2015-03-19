@@ -391,12 +391,6 @@
   <data name="HEd_M_OnlHelp.Text" xml:space="preserve">
     <value>&amp;Online help</value>
   </data>
-  <data name="HEd_M_RepBug.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
-  </data>
-  <data name="HEd_M_RepBug.Text" xml:space="preserve">
-    <value>Re&amp;port bug...</value>
-  </data>
   <data name="HEd_M_About.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 22</value>
   </data>
@@ -629,12 +623,6 @@
     <value>HEd_M_OnlHelp</value>
   </data>
   <data name="&gt;&gt;HEd_M_OnlHelp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HEd_M_RepBug.Name" xml:space="preserve">
-    <value>HEd_M_RepBug</value>
-  </data>
-  <data name="&gt;&gt;HEd_M_RepBug.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HEd_M_About.Name" xml:space="preserve">

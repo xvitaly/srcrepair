@@ -249,19 +249,13 @@
     <value>&amp;Дополнительно</value>
   </data>
   <data name="HEd_M_OnlHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>205, 22</value>
+    <value>187, 22</value>
   </data>
   <data name="HEd_M_OnlHelp.Text" xml:space="preserve">
     <value>О&amp;нлайн-справка</value>
   </data>
-  <data name="HEd_M_RepBug.Size" type="System.Drawing.Size, System.Drawing">
-    <value>205, 22</value>
-  </data>
-  <data name="HEd_M_RepBug.Text" xml:space="preserve">
-    <value>Сооб&amp;щить об ошибке...</value>
-  </data>
   <data name="HEd_M_About.Size" type="System.Drawing.Size, System.Drawing">
-    <value>205, 22</value>
+    <value>187, 22</value>
   </data>
   <data name="HEd_M_About.Text" xml:space="preserve">
     <value>О &amp;плагине...</value>
