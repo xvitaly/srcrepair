@@ -3,24 +3,24 @@
   <HUD>
     <Name>7HUD</Name>
     <Game>tf</Game>
-    <URI>https://github.com/Sevin7/7HUD/archive/master.zip</URI>
-    <Preview>http://huds.tf/img/main/7hud.png</Preview>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/7HUD.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/7HUD.png</Preview>
     <Site>https://github.com/Sevin7/7HUD</Site>
     <IntDir>7HUD-master</IntDir>
   </HUD>
   <HUD>
     <Name>HerganHUD</Name>
     <Game>tf</Game>
-    <URI>https://github.com/Hergan5/herganhud/archive/master.zip</URI>
-    <Preview>http://huds.tf/img/main/herganhud.png</Preview>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/herganhud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/herganhud.png</Preview>
     <Site>https://github.com/Hergan5/herganhud</Site>
     <IntDir>herganhud-master</IntDir>
   </HUD>
   <HUD>
     <Name>Pikles Hud</Name>
     <Game>tf</Game>
-    <URI>https://github.com/piklestf2/pikles-hud/archive/master.zip</URI>
-    <Preview>http://huds.tf/img/main/pikleshud.png</Preview>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/pikles-hud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/pikles-hud.png</Preview>
     <Site>https://github.com/piklestf2/pikles-hud</Site>
     <IntDir>pikles-hud-master</IntDir>
   </HUD>
