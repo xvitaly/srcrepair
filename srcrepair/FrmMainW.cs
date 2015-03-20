@@ -1680,16 +1680,6 @@ namespace srcrepair
             FP_Uninstall.Enabled = SelGame.FPSConfigs.Count > 0;
         }
 
-        /// <summary>
-        /// Проверяет установлен ли указанный HUD.
-        /// </summary>
-        /// <param name="HUDDir">Каталог установки проверяемого HUD</param>
-        /// <returns>Возвращает истину если HUD с указанным именем установлен</returns>
-        private bool CheckInstalledHUD(string HUDDir)
-        {
-            return Directory.Exists(Path.Combine(SelGame.CustomInstallDir, HUDDir));
-        }
-
         #endregion
 
         #region Internal Workers
@@ -1847,7 +1837,7 @@ namespace srcrepair
             if (e.Error == null) { MessageBox.Show(CoreLib.GetLocalizedString("HD_InstallSuccessfull"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("HD_InstallError"), Properties.Resources.AppName, e.Error.Message, e.Error.Source, MessageBoxIcon.Error); }
 
             // Включаем кнопку удаления если HUD установлен...
-            HD_Uninstall.Enabled = CheckInstalledHUD(this.SelHUD.IntDir);
+            HD_Uninstall.Enabled = this.SelHUD.CheckInstalledHUD(this.SelGame.CustomInstallDir, this.SelHUD.IntDir);
         }
 
         #endregion
@@ -3338,7 +3328,7 @@ namespace srcrepair
             HD_Homepage.Enabled = Success;
 
             // Проверяем установлен ли выбранный HUD...
-            HD_Uninstall.Enabled = CheckInstalledHUD(this.SelHUD.IntDir);
+            HD_Uninstall.Enabled = this.SelHUD.CheckInstalledHUD(this.SelGame.CustomInstallDir, this.SelHUD.IntDir);
 
             // Загрузим скриншот выбранного HUD...
             if (Success && !BW_HUDScreen.IsBusy) { BW_HUDScreen.RunWorkerAsync(); }
