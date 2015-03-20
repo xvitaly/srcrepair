@@ -3108,6 +3108,7 @@ namespace srcrepair
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(App.FullSteamPath, "config", "htmlcache", "*.*"));
             CleanDirs.Add(Path.Combine(App.FullSteamPath, "config", "overlayhtmlcache", "*.*"));
+            CleanDirs.Add(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Steam", "htmlcache", "*.*"));
             SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
 
