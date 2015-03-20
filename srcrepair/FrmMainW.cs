@@ -3349,6 +3349,9 @@ namespace srcrepair
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(SelGame.CustomInstallDir, this.SelHUD.IntDir, "*.*"));
             SteamCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower().Replace("&", ""));
+
+            // Проверяем установлен ли выбранный HUD...
+            ((Button)sender).Enabled = this.SelHUD.CheckInstalledHUD(this.SelGame.CustomInstallDir, this.SelHUD.IntDir);
         }
 
         private void HD_Homepage_Click(object sender, EventArgs e)
