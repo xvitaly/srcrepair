@@ -1790,11 +1790,11 @@ namespace srcrepair
 
         private void BW_HUDScreen_DoWork(object sender, DoWorkEventArgs e)
         {
+            // Создадим файл со скриншотом...
+            string ScreenFile = Path.Combine(SelGame.AppHUDDir, Path.GetFileName(this.SelHUD.Preview));
+
             try
             {
-                // Создадим файл со скриншотом...
-                string ScreenFile = Path.Combine(SelGame.AppHUDDir, Path.GetFileName(this.SelHUD.Preview));
-
                 // Загрузим файл если не существует...
                 if (!File.Exists(ScreenFile))
                 {
@@ -1808,7 +1808,7 @@ namespace srcrepair
                 // Установим...
                 this.Invoke((MethodInvoker)delegate() { HD_GB_Pbx.Image = Image.FromFile(ScreenFile); });
             }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); if (File.Exists(ScreenFile)) { File.Delete(ScreenFile); } }
         }
 
         private void BW_HudInstall_DoWork(object sender, DoWorkEventArgs e)
