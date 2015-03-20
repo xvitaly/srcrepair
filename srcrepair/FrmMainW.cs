@@ -1790,7 +1790,7 @@ namespace srcrepair
 
         private void BW_HUDScreen_DoWork(object sender, DoWorkEventArgs e)
         {
-            // Создадим файл со скриншотом...
+            // Сгенерируем путь к файлу со скриншотом...
             string ScreenFile = Path.Combine(SelGame.AppHUDDir, Path.GetFileName(this.SelHUD.Preview));
 
             try
