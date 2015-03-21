@@ -2004,7 +2004,7 @@ namespace srcrepair
             try
             {
                 // Получаем нужные значения...
-                SelGame = new SourceGame(AppSelector.Text, App.FullAppPath);
+                SelGame = new SourceGame(AppSelector.Text, App.FullAppPath, App.AppUserDir);
 
                 // Включаем основные элементы управления (контролы)...
                 MainTabControl.Enabled = true;
