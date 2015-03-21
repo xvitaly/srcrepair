@@ -38,18 +38,6 @@ namespace srcrepair.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool SortGamesList {
-            get {
-                return ((bool)(this["SortGamesList"]));
-            }
-            set {
-                this["SortGamesList"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool CallUpgrade {
             get {
                 return ((bool)(this["CallUpgrade"]));

@@ -5,9 +5,6 @@
     <Setting Name="ConfirmExit" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="SortGamesList" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
-    </Setting>
     <Setting Name="CallUpgrade" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>

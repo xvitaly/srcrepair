@@ -1871,9 +1871,6 @@ namespace srcrepair
             // Найдём и завершим в памяти процесс Steam...
             CoreLib.ProcessTerminate("Steam", CoreLib.GetLocalizedString("ST_KillMessage"));
 
-            // Применим некоторые настройки...
-            AppSelector.Sorted = Properties.Settings.Default.SortGamesList;
-
             // Укажем статус Безопасной очистки...
             CheckSafeClnStatus();
 
