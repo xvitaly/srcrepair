@@ -67,9 +67,9 @@ namespace srcrepair
             string HUDPath = Path.Combine(CustomInstallDir, HUDDir);
             if (Directory.Exists(HUDPath))
             {
-                using (IEnumerator<string> en = Directory.EnumerateFileSystemEntries(HUDPath).GetEnumerator())
+                using (IEnumerator<String> StrEn = Directory.EnumerateFileSystemEntries(HUDPath).GetEnumerator())
                 {
-                    Result = en.MoveNext();
+                    Result = StrEn.MoveNext();
                 }
             }
             return Result;
