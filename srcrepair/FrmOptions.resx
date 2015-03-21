@@ -294,34 +294,34 @@
   <data name="&gt;&gt;MO_AutoUpdate.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="MO_SortGameList.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="MO_SaveHUDPackages.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="MO_SortGameList.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MO_SaveHUDPackages.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="MO_SortGameList.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MO_SaveHUDPackages.Location" type="System.Drawing.Point, System.Drawing">
     <value>19, 39</value>
   </data>
-  <data name="MO_SortGameList.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MO_SaveHUDPackages.Size" type="System.Drawing.Size, System.Drawing">
     <value>267, 17</value>
   </data>
-  <data name="MO_SortGameList.TabIndex" type="System.Int32, mscorlib">
+  <data name="MO_SaveHUDPackages.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="MO_SortGameList.Text" xml:space="preserve">
-    <value>Sort list of games by name</value>
+  <data name="MO_SaveHUDPackages.Text" xml:space="preserve">
+    <value>Save HUD packages after installation</value>
   </data>
-  <data name="&gt;&gt;MO_SortGameList.Name" xml:space="preserve">
-    <value>MO_SortGameList</value>
+  <data name="&gt;&gt;MO_SaveHUDPackages.Name" xml:space="preserve">
+    <value>MO_SaveHUDPackages</value>
   </data>
-  <data name="&gt;&gt;MO_SortGameList.Type" xml:space="preserve">
+  <data name="&gt;&gt;MO_SaveHUDPackages.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MO_SortGameList.Parent" xml:space="preserve">
+  <data name="&gt;&gt;MO_SaveHUDPackages.Parent" xml:space="preserve">
     <value>MO_TP1</value>
   </data>
-  <data name="&gt;&gt;MO_SortGameList.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MO_SaveHUDPackages.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <metadata name="MO_ConfirmExit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

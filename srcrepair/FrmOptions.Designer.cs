@@ -37,7 +37,7 @@
             this.MO_ZipCompress = new System.Windows.Forms.CheckBox();
             this.MO_AutoRestAfterUpdateDb = new System.Windows.Forms.CheckBox();
             this.MO_AutoUpdate = new System.Windows.Forms.CheckBox();
-            this.MO_SortGameList = new System.Windows.Forms.CheckBox();
+            this.MO_SaveHUDPackages = new System.Windows.Forms.CheckBox();
             this.MO_ConfirmExit = new System.Windows.Forms.CheckBox();
             this.MO_TP2 = new System.Windows.Forms.TabPage();
             this.MO_UnSafeOps = new System.Windows.Forms.CheckBox();
@@ -85,7 +85,7 @@
             this.MO_TP1.Controls.Add(this.MO_ZipCompress);
             this.MO_TP1.Controls.Add(this.MO_AutoRestAfterUpdateDb);
             this.MO_TP1.Controls.Add(this.MO_AutoUpdate);
-            this.MO_TP1.Controls.Add(this.MO_SortGameList);
+            this.MO_TP1.Controls.Add(this.MO_SaveHUDPackages);
             this.MO_TP1.Controls.Add(this.MO_ConfirmExit);
             resources.ApplyResources(this.MO_TP1, "MO_TP1");
             this.MO_TP1.Name = "MO_TP1";
@@ -115,11 +115,11 @@
             this.MO_AutoUpdate.Name = "MO_AutoUpdate";
             this.MO_AutoUpdate.UseVisualStyleBackColor = true;
             // 
-            // MO_SortGameList
+            // MO_SaveHUDPackages
             // 
-            resources.ApplyResources(this.MO_SortGameList, "MO_SortGameList");
-            this.MO_SortGameList.Name = "MO_SortGameList";
-            this.MO_SortGameList.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.MO_SaveHUDPackages, "MO_SaveHUDPackages");
+            this.MO_SaveHUDPackages.Name = "MO_SaveHUDPackages";
+            this.MO_SaveHUDPackages.UseVisualStyleBackColor = true;
             // 
             // MO_ConfirmExit
             // 
@@ -238,7 +238,7 @@
         private System.Windows.Forms.TabControl MO_TC;
         private System.Windows.Forms.TabPage MO_TP1;
         private System.Windows.Forms.CheckBox MO_AutoUpdate;
-        private System.Windows.Forms.CheckBox MO_SortGameList;
+        private System.Windows.Forms.CheckBox MO_SaveHUDPackages;
         private System.Windows.Forms.CheckBox MO_ConfirmExit;
         private System.Windows.Forms.TabPage MO_TP2;
         private System.Windows.Forms.CheckBox MO_EnableAppLogs;

@@ -120,24 +120,18 @@
   <data name="MO_Cancel.Text" xml:space="preserve">
     <value>Отмена</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="MO_RemEmptyDirs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 17</value>
+  </data>
+  <data name="MO_RemEmptyDirs.Text" xml:space="preserve">
+    <value>Удалять пустые каталоги после очистки</value>
+  </data>
   <data name="MO_ZipCompress.Text" xml:space="preserve">
     <value>Создавать бэкап перед запуском очистки</value>
   </data>
   <data name="MO_AutoRestAfterUpdateDb.Text" xml:space="preserve">
     <value>Перезагружать базу игр после обновлений</value>
-  </data>
-  <data name="MO_PrefHelpSystem.Items" xml:space="preserve">
-    <value>Официальный сайт</value>
-  </data>
-  <data name="MO_PrefHelpSystem.Items1" xml:space="preserve">
-    <value>Официальная Wiki</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="MO_L_HelpSystem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 13</value>
-  </data>
-  <data name="MO_L_HelpSystem.Text" xml:space="preserve">
-    <value>Источник справки:</value>
   </data>
   <data name="MO_AutoUpdate.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 17</value>
@@ -145,8 +139,8 @@
   <data name="MO_AutoUpdate.Text" xml:space="preserve">
     <value>Включить автоматическое обновление</value>
   </data>
-  <data name="MO_SortGameList.Text" xml:space="preserve">
-    <value>Сортировать список игр по алфавиту</value>
+  <data name="MO_SaveHUDPackages.Text" xml:space="preserve">
+    <value>Сохранять архивы HUD после установки</value>
   </data>
   <data name="MO_ConfirmExit.Text" xml:space="preserve">
     <value>Подтверждать выход из программы</value>
@@ -162,12 +156,6 @@
   </data>
   <data name="L_MO_CustDirName.Text" xml:space="preserve">
     <value>Имя каст. кат.:</value>
-  </data>
-  <data name="MO_RemEmptyDirs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 17</value>
-  </data>
-  <data name="MO_RemEmptyDirs.Text" xml:space="preserve">
-    <value>Удалять пустые каталоги после очистки</value>
   </data>
   <data name="L_MO_ShBin.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 13</value>
