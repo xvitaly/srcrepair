@@ -19,6 +19,7 @@
 using System;
 using System.Xml;
 using System.IO;
+using System.Collections.Generic;
 
 namespace srcrepair
 {
@@ -62,7 +63,16 @@ namespace srcrepair
         /// <returns>Возвращает истину если HUD с указанным именем установлен</returns>
         public bool CheckInstalledHUD(string CustomInstallDir, string HUDDir)
         {
-            return Directory.Exists(Path.Combine(CustomInstallDir, HUDDir));
+            bool Result = false;
+            string HUDPath = Path.Combine(CustomInstallDir, HUDDir);
+            if (Directory.Exists(HUDPath))
+            {
+                using (IEnumerator<string> en = Directory.EnumerateFileSystemEntries(HUDPath).GetEnumerator())
+                {
+                    Result = en.MoveNext();
+                }
+            }
+            return Result;
         }
 
         /// <summary>
