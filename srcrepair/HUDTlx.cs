@@ -63,15 +63,21 @@ namespace srcrepair
         /// <returns>Возвращает истину если HUD с указанным именем установлен</returns>
         public bool CheckInstalledHUD(string CustomInstallDir, string HUDDir)
         {
+            // Описываем локальные переменные...
             bool Result = false;
             string HUDPath = Path.Combine(CustomInstallDir, HUDDir);
+            
+            // Проверим существование каталога...
             if (Directory.Exists(HUDPath))
             {
+                // Проверим наличие файлов или каталогов внутри...
                 using (IEnumerator<String> StrEn = Directory.EnumerateFileSystemEntries(HUDPath).GetEnumerator())
                 {
                     Result = StrEn.MoveNext();
                 }
             }
+
+            // Возвращаем результат...
             return Result;
         }
 
