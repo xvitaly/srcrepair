@@ -1823,6 +1823,9 @@ namespace srcrepair
 
                 // Распаковываем загруженный архив с файлами HUD...
                 CoreLib.ExtractFiles(this.SelHUD.LocalFile, SelGame.CustomInstallDir);
+
+                // Сохраняем или удаляем загруженный архив в зависимости от настроек приложения...
+                if (!Properties.Settings.Default.HUDSaveArchives) { if (File.Exists(this.SelHUD.LocalFile)) { File.Delete(this.SelHUD.LocalFile); } }
             }
             finally
             {
