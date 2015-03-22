@@ -32,3 +32,4 @@ fetch_hud http://huds.tf/img/main/voidhud.png https://github.com/TheStaticVoid/V
 fetch_hud http://huds.tf/img/main/ahud.png https://github.com/n0kk/ahud/archive/master.zip ahud
 fetch_hud http://huds.tf/img/main/cbhud.png https://github.com/ColdBalls/CBHUD/archive/master.zip cbhud
 fetch_hud http://huds.tf/img/main/calmlikeabomb.png https://github.com/Slayer89/slayhud/archive/master.zip calmlikeabomb
+fetch_hud http://huds.tf/img/main/ejphud.png https://github.com/basbanaan/EJP-HUD/archive/master.zip ejphud

@@ -153,4 +153,13 @@
     <Site>http://huds.tf/calmlikeabomb/</Site>
     <IntDir>slayhud-master</IntDir>
   </HUD>
+  <HUD>
+    <Name>EJP-HUD</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/ejphud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/ejphud.png</Preview>
+    <RepoPath>https://github.com/basbanaan/EJP-HUD</RepoPath>
+    <Site>http://huds.tf/ejphud/</Site>
+    <IntDir>EJP-HUD-master</IntDir>
+  </HUD>
 </HUDs>
