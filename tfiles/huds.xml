@@ -77,8 +77,17 @@
     <Game>tf</Game>
     <URI>https://www.easycoding.org/files/srcrepair/huds/tf2hudplus.zip</URI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/tf2hudplus.png</Preview>
-    <RepoPath>https://github.com/SnowshoeIceboot/TF2HudPlus/</RepoPath>
+    <RepoPath>https://github.com/SnowshoeIceboot/TF2HudPlus</RepoPath>
     <Site>http://huds.tf/tf2hudplus/</Site>
     <IntDir>TF2HudPlus-master</IntDir>
+  </HUD>
+  <HUD>
+    <Name>rpvhud</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/rpvhud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/rpvhud.png</Preview>
+    <RepoPath>https://github.com/harvardbb/rpvhud</RepoPath>
+    <Site>http://huds.tf/rpvhud/</Site>
+    <IntDir>rpvhud-master/rpvhud</IntDir>
   </HUD>
 </HUDs>
