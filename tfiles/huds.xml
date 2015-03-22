@@ -5,7 +5,8 @@
     <Game>tf</Game>
     <URI>https://www.easycoding.org/files/srcrepair/huds/7HUD.zip</URI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/7HUD.png</Preview>
-    <Site>https://github.com/Sevin7/7HUD</Site>
+	<RepoPath>https://github.com/Sevin7/7HUD</RepoPath>
+    <Site>http://huds.tf/7hud/</Site>
     <IntDir>7HUD-master</IntDir>
   </HUD>
   <HUD>
@@ -13,7 +14,8 @@
     <Game>tf</Game>
     <URI>https://www.easycoding.org/files/srcrepair/huds/herganhud.zip</URI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/herganhud.png</Preview>
-    <Site>https://github.com/Hergan5/herganhud</Site>
+	<RepoPath>https://github.com/Hergan5/herganhud</RepoPath>
+    <Site>http://huds.tf/herganhud/</Site>
     <IntDir>herganhud-master</IntDir>
   </HUD>
   <HUD>
@@ -21,7 +23,8 @@
     <Game>tf</Game>
     <URI>https://www.easycoding.org/files/srcrepair/huds/pikles-hud.zip</URI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/pikles-hud.png</Preview>
-    <Site>https://github.com/piklestf2/pikles-hud</Site>
+	<RepoPath>https://github.com/piklestf2/pikles-hud</RepoPath>
+    <Site>http://huds.tf/pikleshud/</Site>
     <IntDir>pikles-hud-master</IntDir>
   </HUD>
 </HUDs>
