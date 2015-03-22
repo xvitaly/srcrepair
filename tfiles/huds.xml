@@ -225,4 +225,13 @@
     <Site>http://huds.tf/noto/</Site>
     <IntDir>noto-master</IntDir>
   </HUD>
+  <HUD>
+    <Name>RietHUD</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/riethud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/riethud.png</Preview>
+    <RepoPath>https://github.com/TheRiet/rietHUD</RepoPath>
+    <Site>http://huds.tf/riethud/</Site>
+    <IntDir>rietHUD-master</IntDir>
+  </HUD>
 </HUDs>
