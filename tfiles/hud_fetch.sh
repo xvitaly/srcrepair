@@ -44,3 +44,4 @@ fetch_hud http://huds.tf/img/main/riethud.png https://github.com/TheRiet/rietHUD
 fetch_hud http://huds.tf/img/main/morghud.png https://github.com/ItsMorgus/MorgHUD/archive/master.zip morghud
 fetch_hud http://huds.tf/img/main/minthud.png https://github.com/Rawrsor/DrooHUD/archive/master.zip minthud
 fetch_hud http://huds.tf/img/main/kbnhud.png https://github.com/Jotunn/KBNHud/archive/master.zip kbnhud
+fetch_hud http://huds.tf/img/main/medhud.png https://github.com/Intellectualbadass/medHUD/archive/master.zip medhud

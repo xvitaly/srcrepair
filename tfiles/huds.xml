@@ -261,4 +261,13 @@
     <Site>http://huds.tf/kbnhud/</Site>
     <IntDir>KBNHud-master/KBNHud</IntDir>
   </HUD>
+  <HUD>
+    <Name>medHUD</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/medhud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/medhud.png</Preview>
+    <RepoPath>https://github.com/Intellectualbadass/medHUD</RepoPath>
+    <Site>http://huds.tf/medhud/</Site>
+    <IntDir>medHUD-master</IntDir>
+  </HUD>
 </HUDs>
