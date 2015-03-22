@@ -27,4 +27,22 @@
     <Site>http://huds.tf/pikleshud/</Site>
     <IntDir>pikles-hud-master</IntDir>
   </HUD>
+  <HUD>
+    <Name>broeselhud_blue</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/broeselhud_blue.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/broeselhud_blue.png</Preview>
+	<RepoPath>https://github.com/fblue/broeselhud_blue</RepoPath>
+    <Site>http://huds.tf/broeselhudblue/</Site>
+    <IntDir>broeselhud_blue-master</IntDir>
+  </HUD>
+  <HUD>
+    <Name>zhud</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/zhud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/zhud.png</Preview>
+	<RepoPath>https://github.com/z4-/zhud</RepoPath>
+    <Site>http://huds.tf/zhud/</Site>
+    <IntDir>zhud-master</IntDir>
+  </HUD>
 </HUDs>
