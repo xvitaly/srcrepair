@@ -38,3 +38,4 @@ fetch_hud http://huds.tf/img/main/harvardhud.png https://github.com/harvardbb/ha
 fetch_hud http://huds.tf/img/main/bwhud.png https://github.com/bw-/bw-HUD/archive/master.zip bwhud
 fetch_hud http://huds.tf/img/main/budhud.png https://github.com/WhiskerBiscuit/budhud/archive/master.zip budhud
 fetch_hud http://huds.tf/img/main/idhud.png https://github.com/Eniere/idhud/archive/master.zip idhud
+fetch_hud http://huds.tf/img/main/jedihud.png https://gitgud.net/JediThug/jedihud/repository/archive.zip jedihud

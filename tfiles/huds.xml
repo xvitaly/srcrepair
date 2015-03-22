@@ -207,4 +207,13 @@
     <Site>http://huds.tf/idhud/</Site>
     <IntDir>idhud-master</IntDir>
   </HUD>
+  <HUD>
+    <Name>JediHUD</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/jedihud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/jedihud.png</Preview>
+    <RepoPath>https://gitgud.net/JediThug/jedihud</RepoPath>
+    <Site>http://huds.tf/jedihud/</Site>
+    <IntDir>jedihud.git</IntDir>
+  </HUD>
 </HUDs>
