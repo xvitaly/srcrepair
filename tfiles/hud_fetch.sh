@@ -39,3 +39,4 @@ fetch_hud http://huds.tf/img/main/bwhud.png https://github.com/bw-/bw-HUD/archiv
 fetch_hud http://huds.tf/img/main/budhud.png https://github.com/WhiskerBiscuit/budhud/archive/master.zip budhud
 fetch_hud http://huds.tf/img/main/idhud.png https://github.com/Eniere/idhud/archive/master.zip idhud
 fetch_hud http://huds.tf/img/main/jedihud.png https://gitgud.net/JediThug/jedihud/repository/archive.zip jedihud
+fetch_hud http://huds.tf/img/main/noto.png https://github.com/omnibombulator/noto/archive/master.zip noto

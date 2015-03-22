@@ -216,4 +216,13 @@
     <Site>http://huds.tf/jedihud/</Site>
     <IntDir>jedihud.git</IntDir>
   </HUD>
+  <HUD>
+    <Name>noto</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/noto.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/noto.png</Preview>
+    <RepoPath>https://github.com/omnibombulator/noto</RepoPath>
+    <Site>http://huds.tf/noto/</Site>
+    <IntDir>noto-master</IntDir>
+  </HUD>
 </HUDs>
