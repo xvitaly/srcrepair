@@ -1404,6 +1404,7 @@
             this.HD_HSel.FormattingEnabled = true;
             resources.ApplyResources(this.HD_HSel, "HD_HSel");
             this.HD_HSel.Name = "HD_HSel";
+            this.HD_HSel.Sorted = true;
             this.HD_HSel.SelectedIndexChanged += new System.EventHandler(this.HD_HSel_SelectedIndexChanged);
             // 
             // L_HD_HSel
