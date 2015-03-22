@@ -30,3 +30,4 @@ fetch_hud http://huds.tf/img/main/warhud.png https://github.com/wareya/warHUD-TF
 fetch_hud http://huds.tf/img/main/doodlehud.png https://github.com/DougieDoodles/doodlehud/archive/master.zip doodlehud
 fetch_hud http://huds.tf/img/main/voidhud.png https://github.com/TheStaticVoid/VoidHUD2.0/archive/master.zip voidhud
 fetch_hud http://huds.tf/img/main/ahud.png https://github.com/n0kk/ahud/archive/master.zip ahud
+fetch_hud http://huds.tf/img/main/cbhud.png https://github.com/ColdBalls/CBHUD/archive/master.zip cbhud

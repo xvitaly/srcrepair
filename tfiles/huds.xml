@@ -135,4 +135,13 @@
     <Site>http://huds.tf/ahud/</Site>
     <IntDir>ahud-master</IntDir>
   </HUD>
+  <HUD>
+    <Name>CBHUD</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/cbhud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/cbhud.png</Preview>
+    <RepoPath>https://github.com/ColdBalls/CBHUD</RepoPath>
+    <Site>http://huds.tf/cbhud/</Site>
+    <IntDir>CBHUD-master</IntDir>
+  </HUD>
 </HUDs>
