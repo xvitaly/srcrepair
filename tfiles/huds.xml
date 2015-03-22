@@ -108,4 +108,13 @@
     <Site>http://huds.tf/warhud/</Site>
     <IntDir>warhud-tf-master</IntDir>
   </HUD>
+  <HUD>
+    <Name>DoodleHUD</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/doodlehud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/doodlehud.png</Preview>
+    <RepoPath>https://github.com/DougieDoodles/doodlehud</RepoPath>
+    <Site>http://huds.tf/doodlehud/</Site>
+    <IntDir>doodlehud-master</IntDir>
+  </HUD>
 </HUDs>
