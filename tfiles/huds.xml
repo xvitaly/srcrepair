@@ -189,4 +189,13 @@
     <Site>http://huds.tf/bwhud/</Site>
     <IntDir>bw-HUD-master</IntDir>
   </HUD>
+  <HUD>
+    <Name>budhud</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/budhud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.png</Preview>
+    <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
+    <Site>http://huds.tf/budhud/</Site>
+    <IntDir>budhud-master</IntDir>
+  </HUD>
 </HUDs>

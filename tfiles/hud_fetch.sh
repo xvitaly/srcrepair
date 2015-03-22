@@ -36,3 +36,4 @@ fetch_hud http://huds.tf/img/main/ejphud.png https://github.com/basbanaan/EJP-HU
 fetch_hud http://huds.tf/img/main/flathud.png https://github.com/flatlinee/flatHUD-/archive/master.zip flathud
 fetch_hud http://huds.tf/img/main/harvardhud.png https://github.com/harvardbb/harvardhud/archive/master.zip harvardhud
 fetch_hud http://huds.tf/img/main/bwhud.png https://github.com/bw-/bw-HUD/archive/master.zip bwhud
+fetch_hud http://huds.tf/img/main/budhud.png https://github.com/WhiskerBiscuit/budhud/archive/master.zip budhud
