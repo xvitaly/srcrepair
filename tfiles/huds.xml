@@ -198,4 +198,13 @@
     <Site>http://huds.tf/budhud/</Site>
     <IntDir>budhud-master</IntDir>
   </HUD>
+  <HUD>
+    <Name>Improved Default HUD</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/idhud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/idhud.png</Preview>
+    <RepoPath>https://github.com/Eniere/idhud</RepoPath>
+    <Site>http://huds.tf/idhud/</Site>
+    <IntDir>idhud-master</IntDir>
+  </HUD>
 </HUDs>
