@@ -180,4 +180,13 @@
     <Site>http://huds.tf/harvardhud/</Site>
     <IntDir>harvardhud-master</IntDir>
   </HUD>
+  <HUD>
+    <Name>bwHUD</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/bwhud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/bwhud.png</Preview>
+    <RepoPath>https://github.com/bw-/bw-HUD</RepoPath>
+    <Site>http://huds.tf/bwhud/</Site>
+    <IntDir>bw-HUD-master</IntDir>
+  </HUD>
 </HUDs>

@@ -35,3 +35,4 @@ fetch_hud http://huds.tf/img/main/calmlikeabomb.png https://github.com/Slayer89/
 fetch_hud http://huds.tf/img/main/ejphud.png https://github.com/basbanaan/EJP-HUD/archive/master.zip ejphud
 fetch_hud http://huds.tf/img/main/flathud.png https://github.com/flatlinee/flatHUD-/archive/master.zip flathud
 fetch_hud http://huds.tf/img/main/harvardhud.png https://github.com/harvardbb/harvardhud/archive/master.zip harvardhud
+fetch_hud http://huds.tf/img/main/bwhud.png https://github.com/bw-/bw-HUD/archive/master.zip bwhud
