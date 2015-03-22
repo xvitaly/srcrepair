@@ -46,3 +46,4 @@ fetch_hud http://huds.tf/img/main/minthud.png https://github.com/Rawrsor/DrooHUD
 fetch_hud http://huds.tf/img/main/kbnhud.png https://github.com/Jotunn/KBNHud/archive/master.zip kbnhud
 fetch_hud http://huds.tf/img/main/medhud.png https://github.com/Intellectualbadass/medHUD/archive/master.zip medhud
 fetch_hud http://huds.tf/img/main/prismhud.png https://github.com/JarateKing/PrismHUD/archive/master.zip prismhud
+fetch_hud http://huds.tf/img/main/rayshud.png https://github.com/raysfire/rayshud/archive/master.zip rayshud

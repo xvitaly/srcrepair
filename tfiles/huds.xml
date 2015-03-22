@@ -279,4 +279,13 @@
     <Site>http://huds.tf/prismhud/</Site>
     <IntDir>PrismHUD-master/_prism_hud</IntDir>
   </HUD>
+  <HUD>
+    <Name>rayshud</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/rayshud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/rayshud.png</Preview>
+    <RepoPath>https://github.com/raysfire/rayshud</RepoPath>
+    <Site>http://huds.tf/rayshud/</Site>
+    <IntDir>rayshud-master</IntDir>
+  </HUD>
 </HUDs>
