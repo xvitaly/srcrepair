@@ -171,4 +171,13 @@
     <Site>http://huds.tf/flathud/</Site>
     <IntDir>flatHUD--master</IntDir>
   </HUD>
+  <HUD>
+    <Name>HARVARDHUD</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/harvardhud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/harvardhud.png</Preview>
+    <RepoPath>https://github.com/harvardbb/harvardhud</RepoPath>
+    <Site>http://huds.tf/harvardhud/</Site>
+    <IntDir>harvardhud-master</IntDir>
+  </HUD>
 </HUDs>
