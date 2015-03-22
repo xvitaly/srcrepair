@@ -20,3 +20,4 @@ fetch_hud http://huds.tf/img/main/herganhud.png https://github.com/Hergan5/herga
 fetch_hud http://huds.tf/img/main/pikleshud.png https://github.com/piklestf2/pikles-hud/archive/master.zip pikles-hud
 fetch_hud http://huds.tf/img/main/broeselhudblue.png https://github.com/fblue/broeselhud_blue/archive/master.zip broeselhud_blue
 fetch_hud http://huds.tf/img/main/zhud.png https://github.com/z4-/zhud/archive/master.zip zhud
+fetch_hud http://huds.tf/img/main/basthud.png https://github.com/basbanaan/bastHUD/archive/master.zip basthud

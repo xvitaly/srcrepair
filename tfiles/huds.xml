@@ -45,4 +45,13 @@
     <Site>http://huds.tf/zhud/</Site>
     <IntDir>zhud-master</IntDir>
   </HUD>
+  <HUD>
+    <Name>bastHUD</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/basthud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/basthud.png</Preview>
+	<RepoPath>https://github.com/basbanaan/bastHUD</RepoPath>
+    <Site>http://huds.tf/basthud/</Site>
+    <IntDir>bastHUD-master</IntDir>
+  </HUD>
 </HUDs>
