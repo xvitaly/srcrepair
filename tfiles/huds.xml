@@ -99,4 +99,13 @@
     <Site>http://huds.tf/toonhud/</Site>
     <IntDir>toonhud</IntDir>
   </HUD>
+  <HUD>
+    <Name>warHUD</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/warhud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/warhud.png</Preview>
+    <RepoPath>https://github.com/wareya/warhud-tf</RepoPath>
+    <Site>http://huds.tf/warhud/</Site>
+    <IntDir>warhud-tf-master</IntDir>
+  </HUD>
 </HUDs>

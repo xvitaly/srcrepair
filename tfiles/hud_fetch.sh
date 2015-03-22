@@ -26,3 +26,4 @@ fetch_hud http://huds.tf/img/main/sirhud.png https://github.com/sirgrey/SirHUD/a
 fetch_hud http://huds.tf/img/main/tf2hudplus.png https://github.com/SnowshoeIceboot/TF2HudPlus/archive/master.zip tf2hudplus
 fetch_hud http://huds.tf/img/main/rpvhud.png https://github.com/harvardbb/rpvhud/archive/master.zip rpvhud
 fetch_hud http://huds.tf/img/main/toonhud.png https://www.dropbox.com/s/1x742x8fjay2idn/ToonHUD.zip toonhud
+fetch_hud http://huds.tf/img/main/warhud.png https://github.com/wareya/warHUD-TF/archive/master.zip warhud
