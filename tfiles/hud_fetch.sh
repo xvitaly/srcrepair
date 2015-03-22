@@ -28,3 +28,4 @@ fetch_hud http://huds.tf/img/main/rpvhud.png https://github.com/harvardbb/rpvhud
 fetch_hud http://huds.tf/img/main/toonhud.png https://www.dropbox.com/s/1x742x8fjay2idn/ToonHUD.zip toonhud
 fetch_hud http://huds.tf/img/main/warhud.png https://github.com/wareya/warHUD-TF/archive/master.zip warhud
 fetch_hud http://huds.tf/img/main/doodlehud.png https://github.com/DougieDoodles/doodlehud/archive/master.zip doodlehud
+fetch_hud http://huds.tf/img/main/voidhud.png https://github.com/TheStaticVoid/VoidHUD2.0/archive/master.zip voidhud
