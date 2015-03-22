@@ -63,4 +63,13 @@
     <Site>http://huds.tf/takyahud/</Site>
     <IntDir>takyahud-classic-master</IntDir>
   </HUD>
+  <HUD>
+    <Name>Sir.HUD</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/sirhud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/sirhud.png</Preview>
+    <RepoPath>https://github.com/sirgrey/SirHUD</RepoPath>
+    <Site>http://huds.tf/sirhud/</Site>
+    <IntDir>SirHUD-master</IntDir>
+  </HUD>
 </HUDs>

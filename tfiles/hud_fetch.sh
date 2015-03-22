@@ -22,3 +22,4 @@ fetch_hud http://huds.tf/img/main/broeselhudblue.png https://github.com/fblue/br
 fetch_hud http://huds.tf/img/main/zhud.png https://github.com/z4-/zhud/archive/master.zip zhud
 fetch_hud http://huds.tf/img/main/basthud.png https://github.com/basbanaan/bastHUD/archive/master.zip basthud
 fetch_hud http://huds.tf/img/main/takyahud.png https://github.com/takram/takyahud-classic/archive/master.zip takyahud
+fetch_hud http://huds.tf/img/main/sirhud.png https://github.com/sirgrey/SirHUD/archive/master.zip sirhud
