@@ -5,7 +5,7 @@
     <Game>tf</Game>
     <URI>https://www.easycoding.org/files/srcrepair/huds/7HUD.zip</URI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/7HUD.png</Preview>
-	<RepoPath>https://github.com/Sevin7/7HUD</RepoPath>
+    <RepoPath>https://github.com/Sevin7/7HUD</RepoPath>
     <Site>http://huds.tf/7hud/</Site>
     <IntDir>7HUD-master</IntDir>
   </HUD>
@@ -14,7 +14,7 @@
     <Game>tf</Game>
     <URI>https://www.easycoding.org/files/srcrepair/huds/herganhud.zip</URI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/herganhud.png</Preview>
-	<RepoPath>https://github.com/Hergan5/herganhud</RepoPath>
+    <RepoPath>https://github.com/Hergan5/herganhud</RepoPath>
     <Site>http://huds.tf/herganhud/</Site>
     <IntDir>herganhud-master</IntDir>
   </HUD>
@@ -23,7 +23,7 @@
     <Game>tf</Game>
     <URI>https://www.easycoding.org/files/srcrepair/huds/pikles-hud.zip</URI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/pikles-hud.png</Preview>
-	<RepoPath>https://github.com/piklestf2/pikles-hud</RepoPath>
+    <RepoPath>https://github.com/piklestf2/pikles-hud</RepoPath>
     <Site>http://huds.tf/pikleshud/</Site>
     <IntDir>pikles-hud-master</IntDir>
   </HUD>
@@ -32,7 +32,7 @@
     <Game>tf</Game>
     <URI>https://www.easycoding.org/files/srcrepair/huds/broeselhud_blue.zip</URI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/broeselhud_blue.png</Preview>
-	<RepoPath>https://github.com/fblue/broeselhud_blue</RepoPath>
+    <RepoPath>https://github.com/fblue/broeselhud_blue</RepoPath>
     <Site>http://huds.tf/broeselhudblue/</Site>
     <IntDir>broeselhud_blue-master</IntDir>
   </HUD>
@@ -41,7 +41,7 @@
     <Game>tf</Game>
     <URI>https://www.easycoding.org/files/srcrepair/huds/zhud.zip</URI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/zhud.png</Preview>
-	<RepoPath>https://github.com/z4-/zhud</RepoPath>
+    <RepoPath>https://github.com/z4-/zhud</RepoPath>
     <Site>http://huds.tf/zhud/</Site>
     <IntDir>zhud-master</IntDir>
   </HUD>
@@ -50,7 +50,7 @@
     <Game>tf</Game>
     <URI>https://www.easycoding.org/files/srcrepair/huds/basthud.zip</URI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/basthud.png</Preview>
-	<RepoPath>https://github.com/basbanaan/bastHUD</RepoPath>
+    <RepoPath>https://github.com/basbanaan/bastHUD</RepoPath>
     <Site>http://huds.tf/basthud/</Site>
     <IntDir>bastHUD-master</IntDir>
   </HUD>
