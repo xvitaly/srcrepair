@@ -270,4 +270,13 @@
     <Site>http://huds.tf/medhud/</Site>
     <IntDir>medHUD-master</IntDir>
   </HUD>
+  <HUD>
+    <Name>PrismHUD</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/prismhud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/prismhud.png</Preview>
+    <RepoPath>https://github.com/JarateKing/PrismHUD</RepoPath>
+    <Site>http://huds.tf/prismhud/</Site>
+    <IntDir>PrismHUD-master/_prism_hud</IntDir>
+  </HUD>
 </HUDs>

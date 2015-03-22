@@ -45,3 +45,4 @@ fetch_hud http://huds.tf/img/main/morghud.png https://github.com/ItsMorgus/MorgH
 fetch_hud http://huds.tf/img/main/minthud.png https://github.com/Rawrsor/DrooHUD/archive/master.zip minthud
 fetch_hud http://huds.tf/img/main/kbnhud.png https://github.com/Jotunn/KBNHud/archive/master.zip kbnhud
 fetch_hud http://huds.tf/img/main/medhud.png https://github.com/Intellectualbadass/medHUD/archive/master.zip medhud
+fetch_hud http://huds.tf/img/main/prismhud.png https://github.com/JarateKing/PrismHUD/archive/master.zip prismhud
