@@ -144,4 +144,13 @@
     <Site>http://huds.tf/cbhud/</Site>
     <IntDir>CBHUD-master</IntDir>
   </HUD>
+  <HUD>
+    <Name>Calm Like A Bomb</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/calmlikeabomb.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/calmlikeabomb.png</Preview>
+    <RepoPath>https://github.com/Slayer89/slayhud</RepoPath>
+    <Site>http://huds.tf/calmlikeabomb/</Site>
+    <IntDir>slayhud-master</IntDir>
+  </HUD>
 </HUDs>
