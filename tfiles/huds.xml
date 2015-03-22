@@ -126,4 +126,13 @@
     <Site>http://huds.tf/voidhud/</Site>
     <IntDir>voidhud2.0-master</IntDir>
   </HUD>
+  <HUD>
+    <Name>ahud</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/ahud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/ahud.png</Preview>
+    <RepoPath>https://github.com/n0kk/ahud</RepoPath>
+    <Site>http://huds.tf/ahud/</Site>
+    <IntDir>ahud-master</IntDir>
+  </HUD>
 </HUDs>
