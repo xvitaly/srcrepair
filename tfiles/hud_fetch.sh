@@ -43,3 +43,4 @@ fetch_hud http://huds.tf/img/main/noto.png https://github.com/omnibombulator/not
 fetch_hud http://huds.tf/img/main/riethud.png https://github.com/TheRiet/rietHUD/archive/master.zip riethud
 fetch_hud http://huds.tf/img/main/morghud.png https://github.com/ItsMorgus/MorgHUD/archive/master.zip morghud
 fetch_hud http://huds.tf/img/main/minthud.png https://github.com/Rawrsor/DrooHUD/archive/master.zip minthud
+fetch_hud http://huds.tf/img/main/kbnhud.png https://github.com/Jotunn/KBNHud/archive/master.zip kbnhud

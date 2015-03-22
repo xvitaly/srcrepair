@@ -252,4 +252,13 @@
     <Site>http://huds.tf/minthud/</Site>
     <IntDir>DrooHUD-master/MintHUD</IntDir>
   </HUD>
+  <HUD>
+    <Name>KBNHud</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/kbnhud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/kbnhud.png</Preview>
+    <RepoPath>https://github.com/Jotunn/KBNHud</RepoPath>
+    <Site>http://huds.tf/kbnhud/</Site>
+    <IntDir>KBNHud-master/KBNHud</IntDir>
+  </HUD>
 </HUDs>
