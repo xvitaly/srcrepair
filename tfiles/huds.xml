@@ -243,4 +243,13 @@
     <Site>http://huds.tf/morghud/</Site>
     <IntDir>MorgHUD-master/MorgHUD</IntDir>
   </HUD>
+  <HUD>
+    <Name>MintHUD</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/minthud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/minthud.png</Preview>
+    <RepoPath>https://github.com/Rawrsor/DrooHUD</RepoPath>
+    <Site>http://huds.tf/minthud/</Site>
+    <IntDir>DrooHUD-master/MintHUD</IntDir>
+  </HUD>
 </HUDs>
