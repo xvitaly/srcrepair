@@ -41,3 +41,4 @@ fetch_hud http://huds.tf/img/main/idhud.png https://github.com/Eniere/idhud/arch
 fetch_hud http://huds.tf/img/main/jedihud.png https://gitgud.net/JediThug/jedihud/repository/archive.zip jedihud
 fetch_hud http://huds.tf/img/main/noto.png https://github.com/omnibombulator/noto/archive/master.zip noto
 fetch_hud http://huds.tf/img/main/riethud.png https://github.com/TheRiet/rietHUD/archive/master.zip riethud
+fetch_hud http://huds.tf/img/main/morghud.png https://github.com/ItsMorgus/MorgHUD/archive/master.zip morghud

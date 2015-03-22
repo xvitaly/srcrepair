@@ -234,4 +234,13 @@
     <Site>http://huds.tf/riethud/</Site>
     <IntDir>rietHUD-master</IntDir>
   </HUD>
+  <HUD>
+    <Name>MorgHUD</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/morghud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/morghud.png</Preview>
+    <RepoPath>https://github.com/ItsMorgus/MorgHUD</RepoPath>
+    <Site>http://huds.tf/morghud/</Site>
+    <IntDir>MorgHUD-master/MorgHUD</IntDir>
+  </HUD>
 </HUDs>
