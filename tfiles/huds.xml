@@ -72,4 +72,13 @@
     <Site>http://huds.tf/sirhud/</Site>
     <IntDir>SirHUD-master</IntDir>
   </HUD>
+  <HUD>
+    <Name>TF2HudPlus</Name>
+    <Game>tf</Game>
+    <URI>https://www.easycoding.org/files/srcrepair/huds/tf2hudplus.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/tf2hudplus.png</Preview>
+    <RepoPath>https://github.com/SnowshoeIceboot/TF2HudPlus/</RepoPath>
+    <Site>http://huds.tf/tf2hudplus/</Site>
+    <IntDir>TF2HudPlus-master</IntDir>
+  </HUD>
 </HUDs>

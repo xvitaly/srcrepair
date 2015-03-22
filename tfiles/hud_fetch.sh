@@ -23,3 +23,4 @@ fetch_hud http://huds.tf/img/main/zhud.png https://github.com/z4-/zhud/archive/m
 fetch_hud http://huds.tf/img/main/basthud.png https://github.com/basbanaan/bastHUD/archive/master.zip basthud
 fetch_hud http://huds.tf/img/main/takyahud.png https://github.com/takram/takyahud-classic/archive/master.zip takyahud
 fetch_hud http://huds.tf/img/main/sirhud.png https://github.com/sirgrey/SirHUD/archive/master.zip sirhud
+fetch_hud http://huds.tf/img/main/tf2hudplus.png https://github.com/SnowshoeIceboot/TF2HudPlus/archive/master.zip tf2hudplus
