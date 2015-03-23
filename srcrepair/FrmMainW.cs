@@ -3353,7 +3353,15 @@ namespace srcrepair
             SteamCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower().Replace("&", ""));
 
             // Проверяем установлен ли выбранный HUD...
-            ((Button)sender).Enabled = this.SelHUD.CheckInstalledHUD(this.SelGame.CustomInstallDir, this.SelHUD.IntDir);
+            bool IsInstalled = this.SelHUD.CheckInstalledHUD(this.SelGame.CustomInstallDir, this.SelHUD.IntDir);
+            string HUDPath = Path.Combine(this.SelGame.CustomInstallDir, this.SelHUD.IntDir);
+
+            // При успешном удалении HUD сносим и его каталог...
+            if (!IsInstalled) { if (Directory.Exists(HUDPath)) { Directory.Delete(HUDPath); } }
+            
+            // Включаем / отключаем кнопку...
+            ((Button)sender).Enabled = IsInstalled;
+            
         }
 
         private void HD_Homepage_Click(object sender, EventArgs e)
