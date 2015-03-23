@@ -3347,14 +3347,16 @@ namespace srcrepair
 
         private void HD_Uninstall_Click(object sender, EventArgs e)
         {
+            // Сгенерируем полный путь к установленному HUD...
+            string HUDPath = Path.Combine(this.SelGame.CustomInstallDir, this.SelHUD.IntDir);
+            
             // Воспользуемся модулем очистки для удаления выбранного HUD...
             List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(SelGame.CustomInstallDir, this.SelHUD.IntDir, "*.*"));
+            CleanDirs.Add(Path.Combine(HUDPath, "*.*"));
             SteamCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower().Replace("&", ""));
 
             // Проверяем установлен ли выбранный HUD...
             bool IsInstalled = this.SelHUD.CheckInstalledHUD(this.SelGame.CustomInstallDir, this.SelHUD.IntDir);
-            string HUDPath = Path.Combine(this.SelGame.CustomInstallDir, this.SelHUD.IntDir);
 
             // При успешном удалении HUD сносим и его каталог...
             if (!IsInstalled) { if (Directory.Exists(HUDPath)) { Directory.Delete(HUDPath); } }
