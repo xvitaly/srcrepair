@@ -31,27 +31,26 @@ namespace srcrepair
 {
     public partial class frmInstaller : Form
     {
-        public frmInstaller(string F, bool I)
+        public frmInstaller(string F, bool I, string U)
         {
             InitializeComponent();
             this.FullGamePath = F;
             this.IsUsingUserDir = I;
+            this.CustomInstallDir = U;
         }
 
         private const string PluginName = "Quick Installer";
         private string FullGamePath;
         private bool IsUsingUserDir;
+        private string CustomInstallDir;
 
         /// <summary>
         /// Устанавливает файл в указанный каталог.
         /// </summary>
         /// <param name="FileName">Имя устанавливаемого файла с полным путём</param>
-        /// <param name="SubDir">Подкаталог, в который файл будет установлен</param>
-        private void InstallFileNow(string FileName, string SubDir)
+        /// <param name="DestDir">Каталог, в который файл будет установлен</param>
+        private void InstallFileNow(string FileName, string DestDir)
         {
-            // Генерируем путь к каталогу, в который будем устанавливать...
-            string DestDir = Path.Combine(this.FullGamePath, this.IsUsingUserDir ? Path.Combine("custom", Properties.Settings.Default.UserCustDirName) : "", SubDir);
-
             // Проверяем существование каталога установки и если его нет, создаём...
             if (!(Directory.Exists(DestDir))) { Directory.CreateDirectory(DestDir); }
 
@@ -63,7 +62,8 @@ namespace srcrepair
         /// Распаковывает архив в каталог кастомных файлов.
         /// </summary>
         /// <param name="ArcName">Имя архива с полным путём до него</param>
-        private void UnpackZipArchiveNow(string ArcName)
+        /// <param name="CustomDir">Путь к каталогу с нестандартными файлами</param>
+        private void UnpackZipArchiveNow(string ArcName, string CustomDir)
         {
             try
             {
@@ -73,7 +73,7 @@ namespace srcrepair
                     {
                         try
                         {
-                            ZFile.Extract(Path.Combine(this.FullGamePath, this.IsUsingUserDir ? Path.Combine("custom", Properties.Settings.Default.UserCustDirName) : ""));
+                            ZFile.Extract(Path.Combine(CustomDir, Properties.Settings.Default.UserCustDirName));
                         }
                         catch (Exception Ex)
                         {
@@ -166,17 +166,17 @@ namespace srcrepair
                     // У нас два алгоритма, поэтому придётся делать проверки...
                     switch (Path.GetExtension(InstallPath.Text))
                     {
-                        case ".dem": InstallFileNow(InstallPath.Text, ""); // Будем устанавливать демку...
+                        case ".dem": InstallFileNow(InstallPath.Text, this.FullGamePath); // Будем устанавливать демку...
                             break;
-                        case ".vpk": InstallFileNow(InstallPath.Text, ""); // Будем устанавливать пакет...
+                        case ".vpk": InstallFileNow(InstallPath.Text, this.CustomInstallDir); // Будем устанавливать пакет...
                             break;
-                        case ".cfg": InstallFileNow(InstallPath.Text, "cfg"); // Будем устанавливать конфиг...
+                        case ".cfg": InstallFileNow(InstallPath.Text, Path.Combine(this.CustomInstallDir, Properties.Settings.Default.UserCustDirName, "cfg")); // Будем устанавливать конфиг...
                             break;
-                        case ".bsp": InstallFileNow(InstallPath.Text, "maps"); // Будем устанавливать карту...
+                        case ".bsp": InstallFileNow(InstallPath.Text, Path.Combine(this.CustomInstallDir, Properties.Settings.Default.UserCustDirName, "maps")); // Будем устанавливать карту...
                             break;
                         case ".vtf": InstallSprayNow(InstallPath.Text); // Будем устанавливай спрей...
                             break;
-                        case ".zip": UnpackZipArchiveNow(InstallPath.Text); // Будем устанавливать содержимое архива...
+                        case ".zip": UnpackZipArchiveNow(InstallPath.Text, this.CustomInstallDir); // Будем устанавливать содержимое архива...
                             break;
                     }
 
