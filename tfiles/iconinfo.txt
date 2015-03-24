@@ -95,3 +95,5 @@ Monitor.png - Double-J Desig - CCAA - http://www.iconspedia.com/icon/monitor-ico
 --------------------------------------------------------------------------------------------------------
 Interface.png - FatCow - CCAA - http://www.iconspedia.com/icon/interface-preferences-icon-21275.html
 --------------------------------------------------------------------------------------------------------
+LoadingFile.png - Iconsolid - CCAA - http://www.iconspedia.com/icon/cloud-loading-icon-49831.html
+--------------------------------------------------------------------------------------------------------
