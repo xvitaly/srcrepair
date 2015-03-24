@@ -3326,6 +3326,7 @@ namespace srcrepair
             bool Success = !String.IsNullOrEmpty(this.SelHUD.Name);
 
             // Переключаем статус элементов управления...
+            HD_GB_Pbx.Image = Properties.Resources.LoadingFile;
             HD_Install.Enabled = Success;
             HD_Homepage.Enabled = Success;
 
