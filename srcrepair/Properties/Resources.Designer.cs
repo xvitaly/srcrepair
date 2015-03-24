@@ -395,6 +395,13 @@ namespace srcrepair.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap LoadingFile {
+            get {
+                object obj = ResourceManager.GetObject("LoadingFile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized string similar to ^[0-9a-zA-Z]*$.
         /// </summary>
