@@ -1840,7 +1840,7 @@ namespace srcrepair
             if (e.Error == null) { MessageBox.Show(CoreLib.GetLocalizedString("HD_InstallSuccessfull"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("HD_InstallError"), Properties.Resources.AppName, e.Error.Message, e.Error.Source, MessageBoxIcon.Error); }
 
             // Включаем кнопку удаления если HUD установлен...
-            HD_Uninstall.Enabled = this.SelHUD.CheckInstalledHUD(this.SelGame.CustomInstallDir, this.SelHUD.IntDir);
+            HD_Uninstall.Enabled = this.SelHUD.CheckInstalledHUD(this.SelGame.CustomInstallDir, this.SelHUD.ArchiveDir);
         }
 
         #endregion
@@ -3331,7 +3331,7 @@ namespace srcrepair
             HD_Homepage.Enabled = Success;
 
             // Проверяем установлен ли выбранный HUD...
-            HD_Uninstall.Enabled = this.SelHUD.CheckInstalledHUD(this.SelGame.CustomInstallDir, this.SelHUD.IntDir);
+            HD_Uninstall.Enabled = this.SelHUD.CheckInstalledHUD(this.SelGame.CustomInstallDir, this.SelHUD.ArchiveDir);
 
             // Загрузим скриншот выбранного HUD...
             if (Success && !BW_HUDScreen.IsBusy) { BW_HUDScreen.RunWorkerAsync(); }
@@ -3349,7 +3349,7 @@ namespace srcrepair
         private void HD_Uninstall_Click(object sender, EventArgs e)
         {
             // Сгенерируем полный путь к установленному HUD...
-            string HUDPath = Path.Combine(this.SelGame.CustomInstallDir, this.SelHUD.IntDir);
+            string HUDPath = Path.Combine(this.SelGame.CustomInstallDir, this.SelHUD.ArchiveDir);
             
             // Воспользуемся модулем очистки для удаления выбранного HUD...
             List<String> CleanDirs = new List<string>();
@@ -3357,7 +3357,7 @@ namespace srcrepair
             SteamCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower().Replace("&", ""));
 
             // Проверяем установлен ли выбранный HUD...
-            bool IsInstalled = this.SelHUD.CheckInstalledHUD(this.SelGame.CustomInstallDir, this.SelHUD.IntDir);
+            bool IsInstalled = this.SelHUD.CheckInstalledHUD(this.SelGame.CustomInstallDir, this.SelHUD.ArchiveDir);
 
             // При успешном удалении HUD сносим и его каталог...
             if (!IsInstalled) { if (Directory.Exists(HUDPath)) { Directory.Delete(HUDPath); } }

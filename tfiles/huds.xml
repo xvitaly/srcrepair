@@ -7,7 +7,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/7HUD.png</Preview>
     <RepoPath>https://github.com/Sevin7/7HUD</RepoPath>
     <Site>http://huds.tf/7hud/</Site>
-    <IntDir>7HUD-master</IntDir>
+    <ArchiveDir>7HUD-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>HerganHUD</Name>
@@ -16,7 +16,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/herganhud.png</Preview>
     <RepoPath>https://github.com/Hergan5/herganhud</RepoPath>
     <Site>http://huds.tf/herganhud/</Site>
-    <IntDir>herganhud-master</IntDir>
+    <ArchiveDir>herganhud-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>Pikles Hud</Name>
@@ -25,7 +25,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/pikles-hud.png</Preview>
     <RepoPath>https://github.com/piklestf2/pikles-hud</RepoPath>
     <Site>http://huds.tf/pikleshud/</Site>
-    <IntDir>pikles-hud-master</IntDir>
+    <ArchiveDir>pikles-hud-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>broeselhud_blue</Name>
@@ -34,7 +34,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/broeselhud_blue.png</Preview>
     <RepoPath>https://github.com/fblue/broeselhud_blue</RepoPath>
     <Site>http://huds.tf/broeselhudblue/</Site>
-    <IntDir>broeselhud_blue-master</IntDir>
+    <ArchiveDir>broeselhud_blue-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>zhud</Name>
@@ -43,7 +43,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/zhud.png</Preview>
     <RepoPath>https://github.com/z4-/zhud</RepoPath>
     <Site>http://huds.tf/zhud/</Site>
-    <IntDir>zhud-master</IntDir>
+    <ArchiveDir>zhud-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>bastHUD</Name>
@@ -52,7 +52,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/basthud.png</Preview>
     <RepoPath>https://github.com/basbanaan/bastHUD</RepoPath>
     <Site>http://huds.tf/basthud/</Site>
-    <IntDir>bastHUD-master</IntDir>
+    <ArchiveDir>bastHUD-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>takyahud-classic</Name>
@@ -61,7 +61,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/takyahud.png</Preview>
     <RepoPath>https://github.com/takram/takyahud-classic</RepoPath>
     <Site>http://huds.tf/takyahud/</Site>
-    <IntDir>takyahud-classic-master</IntDir>
+    <ArchiveDir>takyahud-classic-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>Sir.HUD</Name>
@@ -70,7 +70,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/sirhud.png</Preview>
     <RepoPath>https://github.com/sirgrey/SirHUD</RepoPath>
     <Site>http://huds.tf/sirhud/</Site>
-    <IntDir>SirHUD-master</IntDir>
+    <ArchiveDir>SirHUD-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>TF2HudPlus</Name>
@@ -79,7 +79,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/tf2hudplus.png</Preview>
     <RepoPath>https://github.com/SnowshoeIceboot/TF2HudPlus</RepoPath>
     <Site>http://huds.tf/tf2hudplus/</Site>
-    <IntDir>TF2HudPlus-master</IntDir>
+    <ArchiveDir>TF2HudPlus-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>rpvhud</Name>
@@ -88,7 +88,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/rpvhud.png</Preview>
     <RepoPath>https://github.com/harvardbb/rpvhud</RepoPath>
     <Site>http://huds.tf/rpvhud/</Site>
-    <IntDir>rpvhud-master/rpvhud</IntDir>
+    <ArchiveDir>rpvhud-master/rpvhud</ArchiveDir>
   </HUD>
   <HUD>
     <Name>ToonHUD</Name>
@@ -97,7 +97,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/toonhud.png</Preview>
     <RepoPath></RepoPath>
     <Site>http://huds.tf/toonhud/</Site>
-    <IntDir>toonhud</IntDir>
+    <ArchiveDir>toonhud</ArchiveDir>
   </HUD>
   <HUD>
     <Name>warHUD</Name>
@@ -106,7 +106,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/warhud.png</Preview>
     <RepoPath>https://github.com/wareya/warhud-tf</RepoPath>
     <Site>http://huds.tf/warhud/</Site>
-    <IntDir>warhud-tf-master</IntDir>
+    <ArchiveDir>warhud-tf-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>DoodleHUD</Name>
@@ -115,7 +115,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/doodlehud.png</Preview>
     <RepoPath>https://github.com/DougieDoodles/doodlehud</RepoPath>
     <Site>http://huds.tf/doodlehud/</Site>
-    <IntDir>doodlehud-master</IntDir>
+    <ArchiveDir>doodlehud-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>voidHUD2.0</Name>
@@ -124,7 +124,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/voidhud.png</Preview>
     <RepoPath>https://github.com/TheStaticVoid/voidhud2.0</RepoPath>
     <Site>http://huds.tf/voidhud/</Site>
-    <IntDir>voidhud2.0-master</IntDir>
+    <ArchiveDir>voidhud2.0-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>ahud</Name>
@@ -133,7 +133,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/ahud.png</Preview>
     <RepoPath>https://github.com/n0kk/ahud</RepoPath>
     <Site>http://huds.tf/ahud/</Site>
-    <IntDir>ahud-master</IntDir>
+    <ArchiveDir>ahud-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>CBHUD</Name>
@@ -142,7 +142,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/cbhud.png</Preview>
     <RepoPath>https://github.com/ColdBalls/CBHUD</RepoPath>
     <Site>http://huds.tf/cbhud/</Site>
-    <IntDir>CBHUD-master</IntDir>
+    <ArchiveDir>CBHUD-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>Calm Like A Bomb</Name>
@@ -151,7 +151,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/calmlikeabomb.png</Preview>
     <RepoPath>https://github.com/Slayer89/slayhud</RepoPath>
     <Site>http://huds.tf/calmlikeabomb/</Site>
-    <IntDir>slayhud-master</IntDir>
+    <ArchiveDir>slayhud-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>EJP-HUD</Name>
@@ -160,7 +160,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/ejphud.png</Preview>
     <RepoPath>https://github.com/basbanaan/EJP-HUD</RepoPath>
     <Site>http://huds.tf/ejphud/</Site>
-    <IntDir>EJP-HUD-master</IntDir>
+    <ArchiveDir>EJP-HUD-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>flatHUD</Name>
@@ -169,7 +169,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/flathud.png</Preview>
     <RepoPath>https://github.com/flatlinee/flatHUD-</RepoPath>
     <Site>http://huds.tf/flathud/</Site>
-    <IntDir>flatHUD--master</IntDir>
+    <ArchiveDir>flatHUD--master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>HARVARDHUD</Name>
@@ -178,7 +178,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/harvardhud.png</Preview>
     <RepoPath>https://github.com/harvardbb/harvardhud</RepoPath>
     <Site>http://huds.tf/harvardhud/</Site>
-    <IntDir>harvardhud-master</IntDir>
+    <ArchiveDir>harvardhud-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>bwHUD</Name>
@@ -187,7 +187,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/bwhud.png</Preview>
     <RepoPath>https://github.com/bw-/bw-HUD</RepoPath>
     <Site>http://huds.tf/bwhud/</Site>
-    <IntDir>bw-HUD-master</IntDir>
+    <ArchiveDir>bw-HUD-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>budhud</Name>
@@ -196,7 +196,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.png</Preview>
     <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
     <Site>http://huds.tf/budhud/</Site>
-    <IntDir>budhud-master</IntDir>
+    <ArchiveDir>budhud-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>Improved Default HUD</Name>
@@ -205,7 +205,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/idhud.png</Preview>
     <RepoPath>https://github.com/Eniere/idhud</RepoPath>
     <Site>http://huds.tf/idhud/</Site>
-    <IntDir>idhud-master</IntDir>
+    <ArchiveDir>idhud-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>JediHUD</Name>
@@ -214,7 +214,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/jedihud.png</Preview>
     <RepoPath>https://gitgud.net/JediThug/jedihud</RepoPath>
     <Site>http://huds.tf/jedihud/</Site>
-    <IntDir>jedihud.git</IntDir>
+    <ArchiveDir>jedihud.git</ArchiveDir>
   </HUD>
   <HUD>
     <Name>noto</Name>
@@ -223,7 +223,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/noto.png</Preview>
     <RepoPath>https://github.com/omnibombulator/noto</RepoPath>
     <Site>http://huds.tf/noto/</Site>
-    <IntDir>noto-master</IntDir>
+    <ArchiveDir>noto-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>RietHUD</Name>
@@ -232,7 +232,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/riethud.png</Preview>
     <RepoPath>https://github.com/TheRiet/rietHUD</RepoPath>
     <Site>http://huds.tf/riethud/</Site>
-    <IntDir>rietHUD-master</IntDir>
+    <ArchiveDir>rietHUD-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>MorgHUD</Name>
@@ -241,7 +241,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/morghud.png</Preview>
     <RepoPath>https://github.com/ItsMorgus/MorgHUD</RepoPath>
     <Site>http://huds.tf/morghud/</Site>
-    <IntDir>MorgHUD-master/MorgHUD</IntDir>
+    <ArchiveDir>MorgHUD-master/MorgHUD</ArchiveDir>
   </HUD>
   <HUD>
     <Name>MintHUD</Name>
@@ -250,7 +250,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/minthud.png</Preview>
     <RepoPath>https://github.com/Rawrsor/DrooHUD</RepoPath>
     <Site>http://huds.tf/minthud/</Site>
-    <IntDir>DrooHUD-master/MintHUD</IntDir>
+    <ArchiveDir>DrooHUD-master/MintHUD</ArchiveDir>
   </HUD>
   <HUD>
     <Name>KBNHud</Name>
@@ -259,7 +259,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/kbnhud.png</Preview>
     <RepoPath>https://github.com/Jotunn/KBNHud</RepoPath>
     <Site>http://huds.tf/kbnhud/</Site>
-    <IntDir>KBNHud-master/KBNHud</IntDir>
+    <ArchiveDir>KBNHud-master/KBNHud</ArchiveDir>
   </HUD>
   <HUD>
     <Name>medHUD</Name>
@@ -268,7 +268,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/medhud.png</Preview>
     <RepoPath>https://github.com/Intellectualbadass/medHUD</RepoPath>
     <Site>http://huds.tf/medhud/</Site>
-    <IntDir>medHUD-master</IntDir>
+    <ArchiveDir>medHUD-master</ArchiveDir>
   </HUD>
   <HUD>
     <Name>PrismHUD</Name>
@@ -277,7 +277,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/prismhud.png</Preview>
     <RepoPath>https://github.com/JarateKing/PrismHUD</RepoPath>
     <Site>http://huds.tf/prismhud/</Site>
-    <IntDir>PrismHUD-master/_prism_hud</IntDir>
+    <ArchiveDir>PrismHUD-master/_prism_hud</ArchiveDir>
   </HUD>
   <HUD>
     <Name>rayshud</Name>
@@ -286,6 +286,6 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/rayshud.png</Preview>
     <RepoPath>https://github.com/raysfire/rayshud</RepoPath>
     <Site>http://huds.tf/rayshud/</Site>
-    <IntDir>rayshud-master</IntDir>
+    <ArchiveDir>rayshud-master</ArchiveDir>
   </HUD>
 </HUDs>

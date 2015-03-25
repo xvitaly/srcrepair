@@ -48,12 +48,22 @@ namespace srcrepair
         /// <summary>
         /// Содержит имя каталога установки.
         /// </summary>
-        public string IntDir;
+        public string ArchiveDir;
 
         /// <summary>
         /// Содержит локальный путь к загруженному файлу.
         /// </summary>
         public string LocalFile;
+
+        /// <summary>
+        /// Форматирует путь в соответствии с типом ОС.
+        /// </summary>
+        /// <param name="IntDir">Исходное значение</param>
+        /// <returns>Отформатированное значение</returns>
+        public string FormatIntDir(string IntDir)
+        {
+            return IntDir.Replace('/', Path.DirectorySeparatorChar);
+        }
 
         /// <summary>
         /// Проверяет установлен ли указанный HUD.
@@ -100,7 +110,7 @@ namespace srcrepair
                     this.URI = XMLD.GetElementsByTagName("URI")[i].InnerText;
                     this.Preview = XMLD.GetElementsByTagName("Preview")[i].InnerText;
                     this.Site = XMLD.GetElementsByTagName("Site")[i].InnerText;
-                    this.IntDir = XMLD.GetElementsByTagName("IntDir")[i].InnerText;
+                    this.ArchiveDir = this.FormatIntDir(XMLD.GetElementsByTagName("ArchiveDir")[i].InnerText);
                     this.LocalFile = Path.Combine(AppHUDDir, Path.ChangeExtension(Path.GetFileName(this.Name), ".zip"));
                     break;
                 }
