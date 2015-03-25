@@ -8,6 +8,7 @@
     <RepoPath>https://github.com/Sevin7/7HUD</RepoPath>
     <Site>http://huds.tf/7hud/</Site>
     <ArchiveDir>7HUD-master</ArchiveDir>
+    <InstallDir>7hud</InstallDir>
   </HUD>
   <HUD>
     <Name>HerganHUD</Name>
@@ -17,6 +18,7 @@
     <RepoPath>https://github.com/Hergan5/herganhud</RepoPath>
     <Site>http://huds.tf/herganhud/</Site>
     <ArchiveDir>herganhud-master</ArchiveDir>
+    <InstallDir>herganhud</InstallDir>
   </HUD>
   <HUD>
     <Name>Pikles Hud</Name>
@@ -26,6 +28,7 @@
     <RepoPath>https://github.com/piklestf2/pikles-hud</RepoPath>
     <Site>http://huds.tf/pikleshud/</Site>
     <ArchiveDir>pikles-hud-master</ArchiveDir>
+    <InstallDir>pikleshud</InstallDir>
   </HUD>
   <HUD>
     <Name>broeselhud_blue</Name>
@@ -35,6 +38,7 @@
     <RepoPath>https://github.com/fblue/broeselhud_blue</RepoPath>
     <Site>http://huds.tf/broeselhudblue/</Site>
     <ArchiveDir>broeselhud_blue-master</ArchiveDir>
+    <InstallDir>broeselhudblue</InstallDir>
   </HUD>
   <HUD>
     <Name>zhud</Name>
@@ -44,6 +48,7 @@
     <RepoPath>https://github.com/z4-/zhud</RepoPath>
     <Site>http://huds.tf/zhud/</Site>
     <ArchiveDir>zhud-master</ArchiveDir>
+    <InstallDir>zhud</InstallDir>
   </HUD>
   <HUD>
     <Name>bastHUD</Name>
@@ -53,6 +58,7 @@
     <RepoPath>https://github.com/basbanaan/bastHUD</RepoPath>
     <Site>http://huds.tf/basthud/</Site>
     <ArchiveDir>bastHUD-master</ArchiveDir>
+    <InstallDir>basthud</InstallDir>
   </HUD>
   <HUD>
     <Name>takyahud-classic</Name>
@@ -62,6 +68,7 @@
     <RepoPath>https://github.com/takram/takyahud-classic</RepoPath>
     <Site>http://huds.tf/takyahud/</Site>
     <ArchiveDir>takyahud-classic-master</ArchiveDir>
+    <InstallDir>takyahud</InstallDir>
   </HUD>
   <HUD>
     <Name>Sir.HUD</Name>
@@ -71,6 +78,7 @@
     <RepoPath>https://github.com/sirgrey/SirHUD</RepoPath>
     <Site>http://huds.tf/sirhud/</Site>
     <ArchiveDir>SirHUD-master</ArchiveDir>
+    <InstallDir>sirhud</InstallDir>
   </HUD>
   <HUD>
     <Name>TF2HudPlus</Name>
@@ -80,6 +88,7 @@
     <RepoPath>https://github.com/SnowshoeIceboot/TF2HudPlus</RepoPath>
     <Site>http://huds.tf/tf2hudplus/</Site>
     <ArchiveDir>TF2HudPlus-master</ArchiveDir>
+    <InstallDir>tf2hudplus</InstallDir>
   </HUD>
   <HUD>
     <Name>rpvhud</Name>
@@ -89,6 +98,7 @@
     <RepoPath>https://github.com/harvardbb/rpvhud</RepoPath>
     <Site>http://huds.tf/rpvhud/</Site>
     <ArchiveDir>rpvhud-master/rpvhud</ArchiveDir>
+    <InstallDir>rpvhud</InstallDir>
   </HUD>
   <HUD>
     <Name>ToonHUD</Name>
@@ -98,6 +108,7 @@
     <RepoPath></RepoPath>
     <Site>http://huds.tf/toonhud/</Site>
     <ArchiveDir>toonhud</ArchiveDir>
+    <InstallDir>toonhud</InstallDir>
   </HUD>
   <HUD>
     <Name>warHUD</Name>
@@ -107,6 +118,7 @@
     <RepoPath>https://github.com/wareya/warhud-tf</RepoPath>
     <Site>http://huds.tf/warhud/</Site>
     <ArchiveDir>warhud-tf-master</ArchiveDir>
+    <InstallDir>warhud</InstallDir>
   </HUD>
   <HUD>
     <Name>DoodleHUD</Name>
@@ -116,6 +128,7 @@
     <RepoPath>https://github.com/DougieDoodles/doodlehud</RepoPath>
     <Site>http://huds.tf/doodlehud/</Site>
     <ArchiveDir>doodlehud-master</ArchiveDir>
+    <InstallDir>doodlehud</InstallDir>
   </HUD>
   <HUD>
     <Name>voidHUD2.0</Name>
@@ -125,6 +138,7 @@
     <RepoPath>https://github.com/TheStaticVoid/voidhud2.0</RepoPath>
     <Site>http://huds.tf/voidhud/</Site>
     <ArchiveDir>voidhud2.0-master</ArchiveDir>
+    <InstallDir>voidhud</InstallDir>
   </HUD>
   <HUD>
     <Name>ahud</Name>
@@ -134,6 +148,7 @@
     <RepoPath>https://github.com/n0kk/ahud</RepoPath>
     <Site>http://huds.tf/ahud/</Site>
     <ArchiveDir>ahud-master</ArchiveDir>
+    <InstallDir>ahud</InstallDir>
   </HUD>
   <HUD>
     <Name>CBHUD</Name>
@@ -143,6 +158,7 @@
     <RepoPath>https://github.com/ColdBalls/CBHUD</RepoPath>
     <Site>http://huds.tf/cbhud/</Site>
     <ArchiveDir>CBHUD-master</ArchiveDir>
+    <InstallDir>cbhud</InstallDir>
   </HUD>
   <HUD>
     <Name>Calm Like A Bomb</Name>
@@ -152,6 +168,7 @@
     <RepoPath>https://github.com/Slayer89/slayhud</RepoPath>
     <Site>http://huds.tf/calmlikeabomb/</Site>
     <ArchiveDir>slayhud-master</ArchiveDir>
+    <InstallDir>calmlikeabomb</InstallDir>
   </HUD>
   <HUD>
     <Name>EJP-HUD</Name>
@@ -161,6 +178,7 @@
     <RepoPath>https://github.com/basbanaan/EJP-HUD</RepoPath>
     <Site>http://huds.tf/ejphud/</Site>
     <ArchiveDir>EJP-HUD-master</ArchiveDir>
+    <InstallDir>ejphud</InstallDir>
   </HUD>
   <HUD>
     <Name>flatHUD</Name>
@@ -170,6 +188,7 @@
     <RepoPath>https://github.com/flatlinee/flatHUD-</RepoPath>
     <Site>http://huds.tf/flathud/</Site>
     <ArchiveDir>flatHUD--master</ArchiveDir>
+    <InstallDir>flathud</InstallDir>
   </HUD>
   <HUD>
     <Name>HARVARDHUD</Name>
@@ -179,6 +198,7 @@
     <RepoPath>https://github.com/harvardbb/harvardhud</RepoPath>
     <Site>http://huds.tf/harvardhud/</Site>
     <ArchiveDir>harvardhud-master</ArchiveDir>
+    <InstallDir>harvardhud</InstallDir>
   </HUD>
   <HUD>
     <Name>bwHUD</Name>
@@ -188,6 +208,7 @@
     <RepoPath>https://github.com/bw-/bw-HUD</RepoPath>
     <Site>http://huds.tf/bwhud/</Site>
     <ArchiveDir>bw-HUD-master</ArchiveDir>
+    <InstallDir>bwhud</InstallDir>
   </HUD>
   <HUD>
     <Name>budhud</Name>
@@ -197,6 +218,7 @@
     <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
     <Site>http://huds.tf/budhud/</Site>
     <ArchiveDir>budhud-master</ArchiveDir>
+    <InstallDir>budhud</InstallDir>
   </HUD>
   <HUD>
     <Name>Improved Default HUD</Name>
@@ -206,6 +228,7 @@
     <RepoPath>https://github.com/Eniere/idhud</RepoPath>
     <Site>http://huds.tf/idhud/</Site>
     <ArchiveDir>idhud-master</ArchiveDir>
+    <InstallDir>idhud</InstallDir>
   </HUD>
   <HUD>
     <Name>JediHUD</Name>
@@ -215,6 +238,7 @@
     <RepoPath>https://gitgud.net/JediThug/jedihud</RepoPath>
     <Site>http://huds.tf/jedihud/</Site>
     <ArchiveDir>jedihud.git</ArchiveDir>
+    <InstallDir>jedihud</InstallDir>
   </HUD>
   <HUD>
     <Name>noto</Name>
@@ -224,6 +248,7 @@
     <RepoPath>https://github.com/omnibombulator/noto</RepoPath>
     <Site>http://huds.tf/noto/</Site>
     <ArchiveDir>noto-master</ArchiveDir>
+    <InstallDir>notohud</InstallDir>
   </HUD>
   <HUD>
     <Name>RietHUD</Name>
@@ -233,6 +258,7 @@
     <RepoPath>https://github.com/TheRiet/rietHUD</RepoPath>
     <Site>http://huds.tf/riethud/</Site>
     <ArchiveDir>rietHUD-master</ArchiveDir>
+    <InstallDir>riethud</InstallDir>
   </HUD>
   <HUD>
     <Name>MorgHUD</Name>
@@ -242,6 +268,7 @@
     <RepoPath>https://github.com/ItsMorgus/MorgHUD</RepoPath>
     <Site>http://huds.tf/morghud/</Site>
     <ArchiveDir>MorgHUD-master/MorgHUD</ArchiveDir>
+    <InstallDir>morghud</InstallDir>
   </HUD>
   <HUD>
     <Name>MintHUD</Name>
@@ -251,6 +278,7 @@
     <RepoPath>https://github.com/Rawrsor/DrooHUD</RepoPath>
     <Site>http://huds.tf/minthud/</Site>
     <ArchiveDir>DrooHUD-master/MintHUD</ArchiveDir>
+    <InstallDir>minthud</InstallDir>
   </HUD>
   <HUD>
     <Name>KBNHud</Name>
@@ -260,6 +288,7 @@
     <RepoPath>https://github.com/Jotunn/KBNHud</RepoPath>
     <Site>http://huds.tf/kbnhud/</Site>
     <ArchiveDir>KBNHud-master/KBNHud</ArchiveDir>
+    <InstallDir>kbnhud</InstallDir>
   </HUD>
   <HUD>
     <Name>medHUD</Name>
@@ -269,6 +298,7 @@
     <RepoPath>https://github.com/Intellectualbadass/medHUD</RepoPath>
     <Site>http://huds.tf/medhud/</Site>
     <ArchiveDir>medHUD-master</ArchiveDir>
+    <InstallDir>medhud</InstallDir>
   </HUD>
   <HUD>
     <Name>PrismHUD</Name>
@@ -278,6 +308,7 @@
     <RepoPath>https://github.com/JarateKing/PrismHUD</RepoPath>
     <Site>http://huds.tf/prismhud/</Site>
     <ArchiveDir>PrismHUD-master/_prism_hud</ArchiveDir>
+    <InstallDir>prismhud</InstallDir>
   </HUD>
   <HUD>
     <Name>rayshud</Name>
@@ -287,5 +318,6 @@
     <RepoPath>https://github.com/raysfire/rayshud</RepoPath>
     <Site>http://huds.tf/rayshud/</Site>
     <ArchiveDir>rayshud-master</ArchiveDir>
+    <InstallDir>rayshud</InstallDir>
   </HUD>
 </HUDs>
