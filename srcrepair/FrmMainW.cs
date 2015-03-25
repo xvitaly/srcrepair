@@ -1815,6 +1815,7 @@ namespace srcrepair
         {
             // Сохраняем предыдующий текст кнопки...
             string CaptText = HD_Install.Text;
+            string InstallTmp = Path.Combine(SelGame.CustomInstallDir, "hudtemp");
 
             try
             {
@@ -1822,10 +1823,14 @@ namespace srcrepair
                 this.Invoke((MethodInvoker)delegate() { HD_Install.Text = CoreLib.GetLocalizedString("HD_InstallBtnProgress"); HD_Install.Enabled = false; });
 
                 // Распаковываем загруженный архив с файлами HUD...
-                CoreLib.ExtractFiles(this.SelHUD.LocalFile, SelGame.CustomInstallDir);
+                CoreLib.ExtractFiles(SelHUD.LocalFile, InstallTmp, SelHUD.ArchiveDir);
+
+                // Устанавливаем и очищаем временный каталог...
+                Directory.Move(Path.Combine(InstallTmp, SelHUD.FormatIntDir(SelHUD.ArchiveDir)), Path.Combine(SelGame.CustomInstallDir, SelHUD.InstallDir));
+                if (Directory.Exists(InstallTmp)) { Directory.Delete(InstallTmp, true); }
 
                 // Сохраняем или удаляем загруженный архив в зависимости от настроек приложения...
-                if (!Properties.Settings.Default.HUDSaveArchives) { if (File.Exists(this.SelHUD.LocalFile)) { File.Delete(this.SelHUD.LocalFile); } }
+                if (!Properties.Settings.Default.HUDSaveArchives) { if (File.Exists(SelHUD.LocalFile)) { File.Delete(SelHUD.LocalFile); } }
             }
             finally
             {
@@ -1840,7 +1845,7 @@ namespace srcrepair
             if (e.Error == null) { MessageBox.Show(CoreLib.GetLocalizedString("HD_InstallSuccessfull"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("HD_InstallError"), Properties.Resources.AppName, e.Error.Message, e.Error.Source, MessageBoxIcon.Error); }
 
             // Включаем кнопку удаления если HUD установлен...
-            HD_Uninstall.Enabled = this.SelHUD.CheckInstalledHUD(this.SelGame.CustomInstallDir, this.SelHUD.ArchiveDir);
+            HD_Uninstall.Enabled = SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir);
         }
 
         #endregion
@@ -3320,7 +3325,7 @@ namespace srcrepair
         private void HD_HSel_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Получим информацию о выбранном HUD...
-            try { this.SelHUD = new HUDTlx(HD_HSel.Text, App.FullAppPath, SelGame.AppHUDDir); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { SelHUD = new HUDTlx(HD_HSel.Text, App.FullAppPath, SelGame.AppHUDDir); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                 
             // Проверяем результат...
             bool Success = !String.IsNullOrEmpty(this.SelHUD.Name);
@@ -3331,7 +3336,7 @@ namespace srcrepair
             HD_Homepage.Enabled = Success;
 
             // Проверяем установлен ли выбранный HUD...
-            HD_Uninstall.Enabled = this.SelHUD.CheckInstalledHUD(this.SelGame.CustomInstallDir, this.SelHUD.ArchiveDir);
+            HD_Uninstall.Enabled = SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir);
 
             // Загрузим скриншот выбранного HUD...
             if (Success && !BW_HUDScreen.IsBusy) { BW_HUDScreen.RunWorkerAsync(); }
@@ -3340,7 +3345,7 @@ namespace srcrepair
         private void HD_Install_Click(object sender, EventArgs e)
         {
             // Начинаем загрузку если файл не существует...
-            if (!File.Exists(this.SelHUD.LocalFile)) { CoreLib.DownloadFileEx(this.SelHUD.URI, this.SelHUD.LocalFile); }
+            if (!File.Exists(SelHUD.LocalFile)) { CoreLib.DownloadFileEx(SelHUD.URI, SelHUD.LocalFile); }
 
             // Запускаем распаковку в отдельном потоке...
             if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(); }
@@ -3349,7 +3354,7 @@ namespace srcrepair
         private void HD_Uninstall_Click(object sender, EventArgs e)
         {
             // Сгенерируем полный путь к установленному HUD...
-            string HUDPath = Path.Combine(this.SelGame.CustomInstallDir, this.SelHUD.ArchiveDir);
+            string HUDPath = Path.Combine(SelGame.CustomInstallDir, SelHUD.InstallDir);
             
             // Воспользуемся модулем очистки для удаления выбранного HUD...
             List<String> CleanDirs = new List<string>();
@@ -3357,7 +3362,7 @@ namespace srcrepair
             SteamCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower().Replace("&", ""));
 
             // Проверяем установлен ли выбранный HUD...
-            bool IsInstalled = this.SelHUD.CheckInstalledHUD(this.SelGame.CustomInstallDir, this.SelHUD.ArchiveDir);
+            bool IsInstalled = SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir);
 
             // При успешном удалении HUD сносим и его каталог...
             if (!IsInstalled) { if (Directory.Exists(HUDPath)) { Directory.Delete(HUDPath); } }
@@ -3370,7 +3375,7 @@ namespace srcrepair
         private void HD_Homepage_Click(object sender, EventArgs e)
         {
             // Откроем домашнюю страницу выбранного HUD...
-            try { if (!String.IsNullOrEmpty(this.SelHUD.Site)) { Process.Start(this.SelHUD.Site); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { if (!String.IsNullOrEmpty(SelHUD.Site)) { Process.Start(SelHUD.Site); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
     }
 }

@@ -115,7 +115,7 @@ namespace srcrepair
                     this.URI = XMLD.GetElementsByTagName("URI")[i].InnerText;
                     this.Preview = XMLD.GetElementsByTagName("Preview")[i].InnerText;
                     this.Site = XMLD.GetElementsByTagName("Site")[i].InnerText;
-                    this.ArchiveDir = this.FormatIntDir(XMLD.GetElementsByTagName("ArchiveDir")[i].InnerText);
+                    this.ArchiveDir = XMLD.GetElementsByTagName("ArchiveDir")[i].InnerText;
                     this.InstallDir = XMLD.GetElementsByTagName("InstallDir")[i].InnerText;
                     this.LocalFile = Path.Combine(AppHUDDir, Path.ChangeExtension(Path.GetFileName(this.Name), ".zip"));
                     break;
