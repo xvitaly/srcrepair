@@ -46,9 +46,14 @@ namespace srcrepair
         public string Site;
 
         /// <summary>
-        /// Содержит имя каталога установки.
+        /// Содержит имя каталога внутри архива.
         /// </summary>
         public string ArchiveDir;
+
+        /// <summary>
+        /// Содержит имя каталога для установки.
+        /// </summary>
+        public string InstallDir;
 
         /// <summary>
         /// Содержит локальный путь к загруженному файлу.
@@ -111,6 +116,7 @@ namespace srcrepair
                     this.Preview = XMLD.GetElementsByTagName("Preview")[i].InnerText;
                     this.Site = XMLD.GetElementsByTagName("Site")[i].InnerText;
                     this.ArchiveDir = this.FormatIntDir(XMLD.GetElementsByTagName("ArchiveDir")[i].InnerText);
+                    this.InstallDir = XMLD.GetElementsByTagName("InstallDir")[i].InnerText;
                     this.LocalFile = Path.Combine(AppHUDDir, Path.ChangeExtension(Path.GetFileName(this.Name), ".zip"));
                     break;
                 }
