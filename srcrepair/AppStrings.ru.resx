@@ -855,4 +855,8 @@
     <value>Идёт установка... Ждите.</value>
     <comment>Текст кнопки во время распаковки HUD.</comment>
   </data>
+  <data name="HD_AlreadyInstalled" xml:space="preserve">
+    <value>Выбранный HUD уже установлен. Если хотите переустановить, сначала удалите его!</value>
+    <comment>Сообщение при запуске установки уже установленного HUD</comment>
+  </data>
 </root>

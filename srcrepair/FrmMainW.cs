@@ -3344,11 +3344,19 @@ namespace srcrepair
 
         private void HD_Install_Click(object sender, EventArgs e)
         {
-            // Начинаем загрузку если файл не существует...
-            if (!File.Exists(SelHUD.LocalFile)) { CoreLib.DownloadFileEx(SelHUD.URI, SelHUD.LocalFile); }
+            // Проверим установлен ли выбранный HUD...
+            if (!SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir))
+            {
+                // Начинаем загрузку если файл не существует...
+                if (!File.Exists(SelHUD.LocalFile)) { CoreLib.DownloadFileEx(SelHUD.URI, SelHUD.LocalFile); }
 
-            // Запускаем распаковку в отдельном потоке...
-            if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(); }
+                // Запускаем распаковку в отдельном потоке...
+                if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(); }
+            }
+            else
+            {
+                MessageBox.Show(CoreLib.GetLocalizedString("HD_AlreadyInstalled"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void HD_Uninstall_Click(object sender, EventArgs e)
