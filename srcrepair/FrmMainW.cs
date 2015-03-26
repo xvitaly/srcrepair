@@ -1826,8 +1826,8 @@ namespace srcrepair
                 CoreLib.ExtractFiles(SelHUD.LocalFile, InstallTmp, SelHUD.ArchiveDir);
 
                 // Устанавливаем и очищаем временный каталог...
-                Directory.Move(Path.Combine(InstallTmp, SelHUD.FormatIntDir(SelHUD.ArchiveDir)), Path.Combine(SelGame.CustomInstallDir, SelHUD.InstallDir));
-                if (Directory.Exists(InstallTmp)) { Directory.Delete(InstallTmp, true); }
+                try { Directory.Move(Path.Combine(InstallTmp, SelHUD.FormatIntDir(SelHUD.ArchiveDir)), Path.Combine(SelGame.CustomInstallDir, SelHUD.InstallDir)); }
+                finally { if (Directory.Exists(InstallTmp)) { Directory.Delete(InstallTmp, true); } }
 
                 // Сохраняем или удаляем загруженный архив в зависимости от настроек приложения...
                 if (!Properties.Settings.Default.HUDSaveArchives) { if (File.Exists(SelHUD.LocalFile)) { File.Delete(SelHUD.LocalFile); } }
