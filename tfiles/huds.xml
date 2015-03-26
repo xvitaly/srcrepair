@@ -57,7 +57,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/basthud.png</Preview>
     <RepoPath>https://github.com/basbanaan/bastHUD</RepoPath>
     <Site>http://huds.tf/basthud/</Site>
-    <ArchiveDir>bastHUD-master</ArchiveDir>
+    <ArchiveDir>bastHUD-master/bastHUD-master/bastHUD</ArchiveDir>
     <InstallDir>basthud</InstallDir>
   </HUD>
   <HUD>
@@ -67,7 +67,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/takyahud.png</Preview>
     <RepoPath>https://github.com/takram/takyahud-classic</RepoPath>
     <Site>http://huds.tf/takyahud/</Site>
-    <ArchiveDir>takyahud-classic-master</ArchiveDir>
+    <ArchiveDir>takyahud-classic-master/FLV (BLU)</ArchiveDir>
     <InstallDir>takyahud</InstallDir>
   </HUD>
   <HUD>
@@ -115,9 +115,9 @@
     <Game>tf</Game>
     <URI>https://www.easycoding.org/files/srcrepair/huds/warhud.zip</URI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/warhud.png</Preview>
-    <RepoPath>https://github.com/wareya/warhud-tf</RepoPath>
+    <RepoPath>https://github.com/wareya/warHUD-TF/</RepoPath>
     <Site>http://huds.tf/warhud/</Site>
-    <ArchiveDir>warhud-tf-master</ArchiveDir>
+    <ArchiveDir>warHUD-TF-master/warhud</ArchiveDir>
     <InstallDir>warhud</InstallDir>
   </HUD>
   <HUD>
@@ -167,7 +167,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/calmlikeabomb.png</Preview>
     <RepoPath>https://github.com/Slayer89/slayhud</RepoPath>
     <Site>http://huds.tf/calmlikeabomb/</Site>
-    <ArchiveDir>slayhud-master</ArchiveDir>
+    <ArchiveDir>slayhud-master/Calm Like A Bomb</ArchiveDir>
     <InstallDir>calmlikeabomb</InstallDir>
   </HUD>
   <HUD>
@@ -177,7 +177,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/ejphud.png</Preview>
     <RepoPath>https://github.com/basbanaan/EJP-HUD</RepoPath>
     <Site>http://huds.tf/ejphud/</Site>
-    <ArchiveDir>EJP-HUD-master</ArchiveDir>
+    <ArchiveDir>EJP-HUD-master/EJP-HUD master/Centered EJP-HUD</ArchiveDir>
     <InstallDir>ejphud</InstallDir>
   </HUD>
   <HUD>
@@ -187,7 +187,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/flathud.png</Preview>
     <RepoPath>https://github.com/flatlinee/flatHUD-</RepoPath>
     <Site>http://huds.tf/flathud/</Site>
-    <ArchiveDir>flatHUD--master</ArchiveDir>
+    <ArchiveDir>flatHUD--master/flathudRED</ArchiveDir>
     <InstallDir>flathud</InstallDir>
   </HUD>
   <HUD>
@@ -197,7 +197,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/harvardhud.png</Preview>
     <RepoPath>https://github.com/harvardbb/harvardhud</RepoPath>
     <Site>http://huds.tf/harvardhud/</Site>
-    <ArchiveDir>harvardhud-master</ArchiveDir>
+    <ArchiveDir>harvardhud-master/harvardhud</ArchiveDir>
     <InstallDir>harvardhud</InstallDir>
   </HUD>
   <HUD>
@@ -217,7 +217,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.png</Preview>
     <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
     <Site>http://huds.tf/budhud/</Site>
-    <ArchiveDir>budhud-master</ArchiveDir>
+    <ArchiveDir>budhud-master/budhud</ArchiveDir>
     <InstallDir>budhud</InstallDir>
   </HUD>
   <HUD>
@@ -247,7 +247,7 @@
     <Preview>https://www.easycoding.org/files/srcrepair/huds/noto.png</Preview>
     <RepoPath>https://github.com/omnibombulator/noto</RepoPath>
     <Site>http://huds.tf/noto/</Site>
-    <ArchiveDir>noto-master</ArchiveDir>
+    <ArchiveDir>noto-master/noto</ArchiveDir>
     <InstallDir>notohud</InstallDir>
   </HUD>
   <HUD>
