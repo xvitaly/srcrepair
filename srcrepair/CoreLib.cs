@@ -787,7 +787,6 @@ namespace srcrepair
         /// <param name="ExtractDir">Каталог, который следует распаковать</param>
         public static void ExtractFiles(string ArchiveName, string DestDir, string ExtractDir)
         {
-            string abc = Path.Combine(DestDir, ExtractDir);
             if (File.Exists(ArchiveName))
             {
                 using (ZipFile Zip = ZipFile.Read(ArchiveName))
@@ -795,8 +794,7 @@ namespace srcrepair
                     IEnumerable<ZipEntry> DirSel = (from e in Zip.Entries where (e.FileName).StartsWith(ExtractDir) select e);
                     foreach (ZipEntry ZFile in DirSel)
                     {
-                        try { ZFile.Extract(DestDir, ExtractExistingFileAction.OverwriteSilently); }
-                        catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                        try { ZFile.Extract(DestDir, ExtractExistingFileAction.OverwriteSilently); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     }
                 }
             }
