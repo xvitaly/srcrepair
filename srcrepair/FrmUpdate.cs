@@ -35,10 +35,10 @@ namespace srcrepair
         public frmUpdate(string UA, string A, string V, string U)
         {
             InitializeComponent();
-            this.UserAgent = UA;
-            this.FullAppPath = A;
-            this.AppVersionInfo = V;
-            this.AppUserDir = U;
+            UserAgent = UA;
+            FullAppPath = A;
+            AppVersionInfo = V;
+            AppUserDir = U;
         }
 
         private string NewVersion;
@@ -56,7 +56,7 @@ namespace srcrepair
         private void frmUpdate_Load(object sender, EventArgs e)
         {
             // Заполняем...
-            this.Text = String.Format(this.Text, Properties.Resources.AppName);
+            Text = String.Format(Text, Properties.Resources.AppName);
 
             // Запускаем функции проверки обновлений программы...
             if (!WrkChkApp.IsBusy) { WrkChkApp.RunWorkerAsync(); }
@@ -71,16 +71,16 @@ namespace srcrepair
             DnlProgBar.Visible = false;
 
             // Проверим чтобы полученный файл существовал...
-            if (File.Exists(this.UpdateFileName))
+            if (File.Exists(UpdateFileName))
             {
                 // Если выполнялось обновление программы, выполним его запуск...
-                if (this.AppAvailable)
+                if (AppAvailable)
                 {
                     // Существует, покажем сообщение...
                     MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateSuccessful"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Запустим...
-                    try { Process.Start(this.UpdateFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
+                    try { Process.Start(UpdateFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
 
                     // Завершим работу программы...
                     Environment.Exit(9);
@@ -91,7 +91,7 @@ namespace srcrepair
                     MessageBox.Show(CoreLib.GetLocalizedString("UPD_GamL_Updated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     
                     // Закроем форму...
-                    this.Close();
+                    Close();
                 }
             }
             else
@@ -100,7 +100,7 @@ namespace srcrepair
                 MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 
                 // Закроем форму...
-                this.Close();
+                Close();
             }
         }
 
@@ -135,7 +135,7 @@ namespace srcrepair
             try
             {
                 // Установим значок проверки обновлений...
-                this.Invoke((MethodInvoker)delegate() { UpdAppImg.Image = Properties.Resources.upd_chk; });
+                Invoke((MethodInvoker)delegate() { UpdAppImg.Image = Properties.Resources.upd_chk; });
                 
                 // Опишем буферные переменные...
                 string DnlStr;
@@ -143,7 +143,7 @@ namespace srcrepair
                 // Получаем файл с номером версии и ссылкой на новую...
                 using (WebClient Downloader = new WebClient())
                 {
-                    Downloader.Headers.Add("User-Agent", this.UserAgent);
+                    Downloader.Headers.Add("User-Agent", UserAgent);
                     DnlStr = Downloader.DownloadString(Properties.Settings.Default.UpdateChURI);
                 }
 
@@ -166,27 +166,27 @@ namespace srcrepair
             try
             {
                 // Проверим, является ли версия на сервере новее, чем текущая...
-                if (CoreLib.CompareVersions(this.AppVersionInfo, NewVersion))
+                if (CoreLib.CompareVersions(AppVersionInfo, NewVersion))
                 {
                     // Доступна новая версия...
-                    this.Invoke((MethodInvoker)delegate()
+                    Invoke((MethodInvoker)delegate()
                     {
                         UpdAppImg.Image = Properties.Resources.upd_av;
                         UpdAppImg.Cursor = Cursors.Hand;
                         UpdAppStatus.Cursor = Cursors.Hand;
-                        UpdAppStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_AppUpdateAvail"), this.NewVersion);
+                        UpdAppStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_AppUpdateAvail"), NewVersion);
                     });
-                    this.AppAvailable = true;
+                    AppAvailable = true;
                 }
                 else
                 {
                     // Новых версий не обнаружено...
-                    this.Invoke((MethodInvoker)delegate()
+                    Invoke((MethodInvoker)delegate()
                     {
                         UpdAppImg.Image = Properties.Resources.upd_nx;
                         UpdAppStatus.Text = CoreLib.GetLocalizedString("UPD_AppNoUpdates");
                     });
-                    this.AppAvailable = false;
+                    AppAvailable = false;
                 }
             }
             catch (Exception Ex)
@@ -200,18 +200,18 @@ namespace srcrepair
             try
             {
                 // Установим значок проверки обновлений...
-                this.Invoke((MethodInvoker)delegate() { UpdDBImg.Image = Properties.Resources.upd_chk; });
+                Invoke((MethodInvoker)delegate() { UpdDBImg.Image = Properties.Resources.upd_chk; });
 
                 // Получаем файл с номером версии и ссылкой на новую...
                 using (WebClient Downloader = new WebClient())
                 {
                     // Получим хеш...
-                    Downloader.Headers.Add("User-Agent", this.UserAgent);
-                    this.NewHash = Downloader.DownloadString(Properties.Settings.Default.UpdateGameDBHash);
+                    Downloader.Headers.Add("User-Agent", UserAgent);
+                    NewHash = Downloader.DownloadString(Properties.Settings.Default.UpdateGameDBHash);
                 }
 
                 // Рассчитаем хеш текущего файла...
-                this.DBHash = CoreLib.CalculateFileMD5(Path.Combine(this.FullAppPath, Properties.Settings.Default.GameListFile));
+                DBHash = CoreLib.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Settings.Default.GameListFile));
             }
             catch (Exception Ex)
             {
@@ -225,27 +225,27 @@ namespace srcrepair
             try
             {
                 // Проверим хеши...
-                if (this.DBHash != this.NewHash)
+                if (DBHash != NewHash)
                 {
                     // Хеши не совпадают, будем обновлять...
-                    this.Invoke((MethodInvoker)delegate()
+                    Invoke((MethodInvoker)delegate()
                     {
                         UpdDBImg.Image = Properties.Resources.upd_av;
                         UpdDBImg.Cursor = Cursors.Hand;
                         UpdDBStatus.Cursor = Cursors.Hand;
-                        UpdDBStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_DbUpdateAvail"), this.NewHash);
+                        UpdDBStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_DbUpdateAvail"), NewHash);
                     });
-                    this.DbAvailable = true;
+                    DbAvailable = true;
                 }
                 else
                 {
                     // Хеши совпали, обновление не требуется...
-                    this.Invoke((MethodInvoker)delegate()
+                    Invoke((MethodInvoker)delegate()
                     {
                         UpdDBImg.Image = Properties.Resources.upd_nx;
                         UpdDBStatus.Text = CoreLib.GetLocalizedString("UPD_DbNoUpdates");
                     });
-                    this.DbAvailable = false;
+                    DbAvailable = false;
                 }
             }
             catch (Exception Ex)
@@ -263,10 +263,10 @@ namespace srcrepair
         {
             if (!WrkChkDb.IsBusy)
             {
-                if (this.DbAvailable && CoreLib.IsDirectoryWritable(this.FullAppPath))
+                if (DbAvailable && CoreLib.IsDirectoryWritable(FullAppPath))
                 {
-                    this.UpdateFileName = GenerateUpdateFileName(Path.Combine(this.FullAppPath, Properties.Settings.Default.GameListFile));
-                    DownloadUpdate(Properties.Settings.Default.UpdateGameDBFile, this.UpdateFileName);
+                    UpdateFileName = GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Settings.Default.GameListFile));
+                    DownloadUpdate(Properties.Settings.Default.UpdateGameDBFile, UpdateFileName);
                 }
                 else
                 {
@@ -279,10 +279,10 @@ namespace srcrepair
         {
             if (!WrkChkApp.IsBusy)
             {
-                if (this.AppAvailable)
+                if (AppAvailable)
                 {
-                    this.UpdateFileName = GenerateUpdateFileName(Path.Combine(this.AppUserDir, Path.GetFileName(UpdateURI)));
-                    DownloadUpdate(this.UpdateURI, this.UpdateFileName);
+                    UpdateFileName = GenerateUpdateFileName(Path.Combine(AppUserDir, Path.GetFileName(UpdateURI)));
+                    DownloadUpdate(UpdateURI, UpdateFileName);
                 }
                 else
                 {

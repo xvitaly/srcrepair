@@ -40,7 +40,7 @@ namespace srcrepair
         private void frmDnWrk_Load(object sender, EventArgs e)
         {
             // Начинаем процесс загрузки в отдельном потоке...
-            this.DownloaderStart(RemoteURI, LocalFile);
+            DownloaderStart(RemoteURI, LocalFile);
         }
 
         private void DownloaderProgressChanged(object sender, DownloadProgressChangedEventArgs e)
@@ -54,20 +54,20 @@ namespace srcrepair
             // Загрузка завершена. Проверим скачалось ли что-то. Если нет, удалим пустой файл...
             try
             {
-                if (File.Exists(this.LocalFile))
+                if (File.Exists(LocalFile))
                 {
-                    FileInfo Fi = new FileInfo(this.LocalFile);
+                    FileInfo Fi = new FileInfo(LocalFile);
                     if (Fi.Length == 0)
                     {
-                        File.Delete(this.LocalFile);
+                        File.Delete(LocalFile);
                     }
                 }
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Закроем форму...
-            this.IsRunning = false;
-            this.Close();
+            IsRunning = false;
+            Close();
         }
 
         private void DownloaderStart(string URI, string FileName)
@@ -91,7 +91,7 @@ namespace srcrepair
 
         private void frmDnWrk_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = this.IsRunning;
+            e.Cancel = IsRunning;
         }
     }
 }

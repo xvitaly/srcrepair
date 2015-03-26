@@ -61,22 +61,22 @@ namespace srcrepair
         {
             // Получаем путь к каталогу приложения...
             Assembly Assmbl = Assembly.GetEntryAssembly();
-            this.FullAppPath = Path.GetDirectoryName(Assmbl.Location);
+            FullAppPath = Path.GetDirectoryName(Assmbl.Location);
 
             // Укажем путь к пользовательским данным и создадим если не существует...
-            this.AppUserDir = Properties.Settings.Default.IsPortable ? Path.Combine(this.FullAppPath, "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Properties.Resources.AppName);
+            AppUserDir = Properties.Settings.Default.IsPortable ? Path.Combine(FullAppPath, "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Properties.Resources.AppName);
 
             // Проверим существование каталога пользовательских данных и при необходимости создадим...
-            if (!(Directory.Exists(this.AppUserDir)))
+            if (!(Directory.Exists(AppUserDir)))
             {
-                Directory.CreateDirectory(this.AppUserDir);
+                Directory.CreateDirectory(AppUserDir);
             }
 
             // Получаем информацию о версии нашего приложения...
-            this.AppVersionInfo = Assmbl.GetName().Version.ToString();
+            AppVersionInfo = Assmbl.GetName().Version.ToString();
 
             // Генерируем User-Agent для SRC Repair...
-            this.UserAgent = String.Format(Properties.Resources.AppDefUA, Properties.Resources.PlatformFriendlyName, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, this.AppVersionInfo, Properties.Resources.AppName, CoreLib.GetSystemArch());
+            UserAgent = String.Format(Properties.Resources.AppDefUA, Properties.Resources.PlatformFriendlyName, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersionInfo, Properties.Resources.AppName, CoreLib.GetSystemArch());
         }
     }
 }

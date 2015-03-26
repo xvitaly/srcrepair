@@ -111,13 +111,13 @@ namespace srcrepair
             {
                 if (String.Compare(XMLD.GetElementsByTagName("Name")[i].InnerText, HUDName, true) == 0)
                 {
-                    this.Name = XMLD.GetElementsByTagName("Name")[i].InnerText;
-                    this.URI = XMLD.GetElementsByTagName("URI")[i].InnerText;
-                    this.Preview = XMLD.GetElementsByTagName("Preview")[i].InnerText;
-                    this.Site = XMLD.GetElementsByTagName("Site")[i].InnerText;
-                    this.ArchiveDir = XMLD.GetElementsByTagName("ArchiveDir")[i].InnerText;
-                    this.InstallDir = XMLD.GetElementsByTagName("InstallDir")[i].InnerText;
-                    this.LocalFile = Path.Combine(AppHUDDir, Path.ChangeExtension(Path.GetFileName(this.Name), ".zip"));
+                    Name = XMLD.GetElementsByTagName("Name")[i].InnerText;
+                    URI = XMLD.GetElementsByTagName("URI")[i].InnerText;
+                    Preview = XMLD.GetElementsByTagName("Preview")[i].InnerText;
+                    Site = XMLD.GetElementsByTagName("Site")[i].InnerText;
+                    ArchiveDir = XMLD.GetElementsByTagName("ArchiveDir")[i].InnerText;
+                    InstallDir = XMLD.GetElementsByTagName("InstallDir")[i].InnerText;
+                    LocalFile = Path.Combine(AppHUDDir, Path.ChangeExtension(Path.GetFileName(Name), ".zip"));
                     break;
                 }
             }

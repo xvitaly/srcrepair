@@ -1367,7 +1367,7 @@ namespace srcrepair
         private void ReadBackUpList2Table(string BUpDir)
         {
             // Очистим таблицу...
-            this.Invoke((MethodInvoker)delegate() { BU_LVTable.Items.Clear(); });
+            Invoke((MethodInvoker)delegate() { BU_LVTable.Items.Clear(); });
             
             // Открываем каталог...
             DirectoryInfo DInfo = new DirectoryInfo(BUpDir);
@@ -1387,7 +1387,7 @@ namespace srcrepair
                 LvItem.SubItems.Add(CoreLib.SclBytes(DItem.Length));
                 LvItem.SubItems.Add(DItem.CreationTime.ToString());
                 LvItem.SubItems.Add(DItem.Name);
-                this.Invoke((MethodInvoker)delegate() { BU_LVTable.Items.Add(LvItem); });
+                Invoke((MethodInvoker)delegate() { BU_LVTable.Items.Add(LvItem); });
             }
         }
 
@@ -1725,7 +1725,7 @@ namespace srcrepair
                     // Обрабатываем найденное...
                     if (DItem.Name != "config_default.cfg")
                     {
-                        this.Invoke((MethodInvoker)delegate() { FP_ConfigSel.Items.Add((string)DItem.Name); });
+                        Invoke((MethodInvoker)delegate() { FP_ConfigSel.Items.Add((string)DItem.Name); });
                     }
                 }
             }
@@ -1780,7 +1780,7 @@ namespace srcrepair
                 {
                     if (String.Compare(XMLD.GetElementsByTagName("Game")[i].InnerText, SelGame.SmallAppName, true) == 0)
                     {
-                        this.Invoke((MethodInvoker)delegate() { HD_HSel.Items.Add(XMLD.GetElementsByTagName("Name")[i].InnerText); });
+                        Invoke((MethodInvoker)delegate() { HD_HSel.Items.Add(XMLD.GetElementsByTagName("Name")[i].InnerText); });
                     }
                 }
                 XMLFS.Close();
@@ -1791,7 +1791,7 @@ namespace srcrepair
         private void BW_HUDScreen_DoWork(object sender, DoWorkEventArgs e)
         {
             // Сгенерируем путь к файлу со скриншотом...
-            string ScreenFile = Path.Combine(SelGame.AppHUDDir, Path.GetFileName(this.SelHUD.Preview));
+            string ScreenFile = Path.Combine(SelGame.AppHUDDir, Path.GetFileName(SelHUD.Preview));
 
             try
             {
@@ -1801,12 +1801,12 @@ namespace srcrepair
                     using (WebClient Downloader = new WebClient())
                     {
                         Downloader.Headers.Add("User-Agent", App.UserAgent);
-                        Downloader.DownloadFile(this.SelHUD.Preview, ScreenFile);
+                        Downloader.DownloadFile(SelHUD.Preview, ScreenFile);
                     }
                 }
 
                 // Установим...
-                this.Invoke((MethodInvoker)delegate() { HD_GB_Pbx.Image = Image.FromFile(ScreenFile); });
+                Invoke((MethodInvoker)delegate() { HD_GB_Pbx.Image = Image.FromFile(ScreenFile); });
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); if (File.Exists(ScreenFile)) { File.Delete(ScreenFile); } }
         }
@@ -1820,7 +1820,7 @@ namespace srcrepair
             try
             {
                 // Изменяем текст на "Идёт установка" и отключаем её...
-                this.Invoke((MethodInvoker)delegate() { HD_Install.Text = CoreLib.GetLocalizedString("HD_InstallBtnProgress"); HD_Install.Enabled = false; });
+                Invoke((MethodInvoker)delegate() { HD_Install.Text = CoreLib.GetLocalizedString("HD_InstallBtnProgress"); HD_Install.Enabled = false; });
 
                 // Распаковываем загруженный архив с файлами HUD...
                 CoreLib.ExtractFiles(SelHUD.LocalFile, InstallTmp, SelHUD.ArchiveDir);
@@ -1835,7 +1835,7 @@ namespace srcrepair
             finally
             {
                 // Возвращаем сохранённый...
-                this.Invoke((MethodInvoker)delegate() { HD_Install.Text = CaptText; HD_Install.Enabled = true; });
+                Invoke((MethodInvoker)delegate() { HD_Install.Text = CaptText; HD_Install.Enabled = true; });
             }
         }
 
@@ -1871,9 +1871,9 @@ namespace srcrepair
 
             // Вставляем информацию о версии в заголовок формы...
             #if DEBUG
-            this.Text = String.Format(this.Text, Properties.Resources.AppName, Properties.Resources.PlatformFriendlyName, App.AppVersionInfo + " (debug)", CoreLib.GetSystemArch());
+            Text = String.Format(Text, Properties.Resources.AppName, Properties.Resources.PlatformFriendlyName, App.AppVersionInfo + " (debug)", CoreLib.GetSystemArch());
             #else
-            this.Text = String.Format(this.Text, Properties.Resources.AppName, Properties.Resources.PlatformFriendlyName, App.AppVersionInfo, CoreLib.GetSystemArch());
+            Text = String.Format(Text, Properties.Resources.AppName, Properties.Resources.PlatformFriendlyName, App.AppVersionInfo, CoreLib.GetSystemArch());
             #endif
 
             // Найдём и завершим в памяти процесс Steam...
@@ -3328,7 +3328,7 @@ namespace srcrepair
             try { SelHUD = new HUDTlx(HD_HSel.Text, App.FullAppPath, SelGame.AppHUDDir); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                 
             // Проверяем результат...
-            bool Success = !String.IsNullOrEmpty(this.SelHUD.Name);
+            bool Success = !String.IsNullOrEmpty(SelHUD.Name);
 
             // Переключаем статус элементов управления...
             HD_GB_Pbx.Image = Properties.Resources.LoadingFile;

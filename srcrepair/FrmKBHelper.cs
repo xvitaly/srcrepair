@@ -59,7 +59,7 @@ namespace srcrepair
                 {
                     WriteKBS(new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 91, 224, 0, 0, 0, 0 });
                     MessageBox.Show(CoreLib.GetLocalizedString("KB_ExSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    Close();
                 }
                 catch (Exception Ex)
                 {
@@ -78,7 +78,7 @@ namespace srcrepair
                 {
                     WriteKBS(new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 91, 224, 0, 0, 92, 224, 0, 0, 0, 0 });
                     MessageBox.Show(CoreLib.GetLocalizedString("KB_ExSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    Close();
                 }
                 catch (Exception Ex)
                 {
@@ -97,7 +97,7 @@ namespace srcrepair
                 {
                     WriteKBS(new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 91, 224, 0, 0, 93, 224, 0, 0, 0, 0 });
                     MessageBox.Show(CoreLib.GetLocalizedString("KB_ExSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    Close();
                 }
                 catch (Exception Ex)
                 {
@@ -116,7 +116,7 @@ namespace srcrepair
                 {
                     WriteKBS(new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 92, 224, 0, 0, 93, 224, 0, 0, 0, 0 });
                     MessageBox.Show(CoreLib.GetLocalizedString("KB_ExSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    Close();
                 }
                 catch (Exception Ex)
                 {
@@ -134,7 +134,7 @@ namespace srcrepair
                 {
                     DeleteKBS("Scancode Map");
                     MessageBox.Show(CoreLib.GetLocalizedString("KB_ExSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    Close();
                 }
                 catch (Exception Ex)
                 {

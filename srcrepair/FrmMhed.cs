@@ -106,7 +106,7 @@ namespace srcrepair
             if (!(CoreLib.IsCurrentUserAdmin())) { HEd_M_Save.Enabled = false; HEd_T_Save.Enabled = false; HEd_M_RestDef.Enabled = false; HEd_Table.ReadOnly = true; HEd_T_Cut.Enabled = false; HEd_T_Paste.Enabled = false; HEd_T_RemRw.Enabled = false; }
 
             // Укажем версию в заголовке главной формы...
-            this.Text = String.Format(this.Text, PluginVersion);
+            Text = String.Format(Text, PluginVersion);
 
             // Определим расположение файла Hosts...
             HostsFilePath = CoreLib.GetHostsFileFullPath();
@@ -123,7 +123,7 @@ namespace srcrepair
             else
             {
                 MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AHE_NoFileDetected"), HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                this.Close();
+                Close();
             }
         }
 
@@ -139,7 +139,7 @@ namespace srcrepair
 
         private void HEd_M_Quit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void HEd_M_RestDef_Click(object sender, EventArgs e)

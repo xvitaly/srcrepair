@@ -41,7 +41,7 @@ namespace srcrepair
         public frmBugReporter(string UA)
         {
             InitializeComponent();
-            this.UserAgent = UA;
+            UserAgent = UA;
         }
 
         private string GenerateCaptchaKey(int StrLng)
@@ -136,7 +136,7 @@ namespace srcrepair
             if (!BR_CaptGen.IsBusy)
             {
                 // Генерируем код капчи...
-                this.CaptchaKey = GenerateCaptchaKey(BR_CaptCheck.MaxLength);
+                CaptchaKey = GenerateCaptchaKey(BR_CaptCheck.MaxLength);
 
                 // Запустим генерацию самой капчи в отдельном потоке...
                 BR_CaptGen.RunWorkerAsync();
@@ -146,7 +146,7 @@ namespace srcrepair
         private void frmBugReporter_Load(object sender, EventArgs e)
         {
             // Вызовем функцию построения капчи...
-            this.GenerateCaptcha();
+            GenerateCaptcha();
 
             // Выберем категорию "Ошибка" по умолчанию...
             try { BR_Category.SelectedIndex = 0; } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
@@ -158,7 +158,7 @@ namespace srcrepair
             if (!(String.IsNullOrWhiteSpace(BR_Title.Text)) && !(String.IsNullOrWhiteSpace(BR_Message.Text)))
             {
                 // Проверим капчу...
-                if (BR_CaptCheck.Text == this.CaptchaKey)
+                if (BR_CaptCheck.Text == CaptchaKey)
                 {
                     // Изменяем текст кнопки и отключаем её...
                     BR_Send.Text = CoreLib.GetLocalizedString("BR_SendButtonAlt");
@@ -188,7 +188,7 @@ namespace srcrepair
         private void BR_Cancel_Click(object sender, EventArgs e)
         {
             // Закрываем форму если обработчик не используется...
-            if (!BR_WrkMf.IsBusy) { this.Close(); }
+            if (!BR_WrkMf.IsBusy) { Close(); }
         }
 
         private void BR_WrkMf_DoWork(object sender, DoWorkEventArgs e)
@@ -204,12 +204,12 @@ namespace srcrepair
                 HttpWebRequest WrQ = (HttpWebRequest)WebRequest.Create(Properties.Resources.AppBtURL);
 
                 // Задаём User-Agent, метод запроса и таймаут ожидания ответа...
-                WrQ.UserAgent = this.UserAgent;
+                WrQ.UserAgent = UserAgent;
                 WrQ.Method = "POST";
                 WrQ.Timeout = 250000;
 
                 // Заполняем значениями, получаемыми из основного инстанса...
-                this.Invoke((MethodInvoker)delegate()
+                Invoke((MethodInvoker)delegate()
                 {
                     BTitle = BR_Title.Text;
                     BText = BR_Message.Text;
@@ -251,10 +251,10 @@ namespace srcrepair
         private void BR_WrkMf_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             // Выводим сообщение...
-            if (e.Error == null) { if (String.Compare(this.BResult, "OK") != 0) { MessageBox.Show(CoreLib.GetLocalizedString("BR_SendCompleted"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(CoreLib.GetLocalizedString("BR_SendError"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); } } else { CoreLib.WriteStringToLog(e.Error.Message); }
+            if (e.Error == null) { if (String.Compare(BResult, "OK") != 0) { MessageBox.Show(CoreLib.GetLocalizedString("BR_SendCompleted"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(CoreLib.GetLocalizedString("BR_SendError"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); } } else { CoreLib.WriteStringToLog(e.Error.Message); }
 
             // Закрываем форму...
-            this.Close();
+            Close();
         }
 
         private void frmBugReporter_FormClosing(object sender, FormClosingEventArgs e)
@@ -267,9 +267,9 @@ namespace srcrepair
             try
             {
                 // Выводим результат...
-                this.Invoke((MethodInvoker)delegate()
+                Invoke((MethodInvoker)delegate()
                 {
-                    BR_CaptImg.Image = GenerateCaptchaImage(this.CaptchaKey, BR_CaptImg.Width, BR_CaptImg.Height);
+                    BR_CaptImg.Image = GenerateCaptchaImage(CaptchaKey, BR_CaptImg.Width, BR_CaptImg.Height);
                 });
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
@@ -278,7 +278,7 @@ namespace srcrepair
         private void BR_CaptImg_Click(object sender, EventArgs e)
         {
             // Обновим капчу...
-            this.GenerateCaptcha();
+            GenerateCaptcha();
 
             // Очистим поле ввода...
             BR_CaptCheck.Text = "";

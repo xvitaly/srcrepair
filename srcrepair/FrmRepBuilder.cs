@@ -35,9 +35,9 @@ namespace srcrepair
         public frmRepBuilder(string A, string FS, string FC)
         {
             InitializeComponent();
-            this.AppUserDir = A;
-            this.FullSteamPath = FS;
-            this.FullCfgPath = FC;
+            AppUserDir = A;
+            FullSteamPath = FS;
+            FullCfgPath = FC;
         }
 
         private const string PluginName = "Report Builder";
@@ -53,7 +53,7 @@ namespace srcrepair
         private void BwGen_DoWork(object sender, DoWorkEventArgs e)
         {
             // Сгенерируем путь для каталога с рапортами...
-            string RepDir = Path.Combine(this.AppUserDir, "reports");
+            string RepDir = Path.Combine(AppUserDir, "reports");
             // Проверим чтобы каталог для рапортов существовал...
             if (!Directory.Exists(RepDir))
             {
@@ -88,10 +88,10 @@ namespace srcrepair
                         // Добавляем в архив созданный рапорт...
                         if (File.Exists(Path.Combine(TempDir, RepName))) { ZBkUp.AddFile(Path.Combine(TempDir, RepName), "report"); }
                         // Добавляем в архив все конфиги выбранной игры...
-                        if (Directory.Exists(this.FullCfgPath)) { ZBkUp.AddDirectory(this.FullCfgPath, "configs"); }
+                        if (Directory.Exists(FullCfgPath)) { ZBkUp.AddDirectory(FullCfgPath, "configs"); }
                         // Добавляем в архив все краш-дампы и логи Steam...
-                        if (Directory.Exists(Path.Combine(this.FullSteamPath, "dumps"))) { ZBkUp.AddDirectory(Path.Combine(this.FullSteamPath, "dumps"), "dumps"); }
-                        if (Directory.Exists(Path.Combine(this.FullSteamPath, "logs"))) { ZBkUp.AddDirectory(Path.Combine(this.FullSteamPath, "logs"), "logs"); }
+                        if (Directory.Exists(Path.Combine(FullSteamPath, "dumps"))) { ZBkUp.AddDirectory(Path.Combine(FullSteamPath, "dumps"), "dumps"); }
+                        if (Directory.Exists(Path.Combine(FullSteamPath, "logs"))) { ZBkUp.AddDirectory(Path.Combine(FullSteamPath, "logs"), "logs"); }
                         // Добавляем содержимое файла Hosts...
                         if (File.Exists(HostsFile)) { ZBkUp.AddFile(HostsFile, "hosts"); }
                         // Добавляем в архив отчёты утилит ping, трассировки и т.д.
@@ -136,7 +136,7 @@ namespace srcrepair
             // Снова активируем кнопку...
             GenerateNow.Text = CoreLib.GetLocalizedString("RPB_CloseCpt");
             GenerateNow.Enabled = true;
-            this.ControlBox = true;
+            ControlBox = true;
         }
 
         private void GenerateNow_Click(object sender, EventArgs e)
@@ -148,14 +148,14 @@ namespace srcrepair
                     // Отключим кнопку...
                     GenerateNow.Text = CoreLib.GetLocalizedString("RPB_CptWrk");
                     GenerateNow.Enabled = false;
-                    this.ControlBox = false;
+                    ControlBox = false;
                     // Запускаем асинхронный обработчик...
                     if (!BwGen.IsBusy) { BwGen.RunWorkerAsync(); } else { CoreLib.WriteStringToLog("RepGen Worker is busy. Can't start build sequence."); }
                 }
             }
             else
             {
-                this.Close();
+                Close();
             }
         }
 

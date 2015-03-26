@@ -90,7 +90,7 @@ namespace srcrepair
                             if (CM_FTable.InvokeRequired)
                             {
                                 // Вставляем в таблицу...
-                                this.Invoke((MethodInvoker)delegate() { CM_FTable.Items.Add(LvItem); });
+                                Invoke((MethodInvoker)delegate() { CM_FTable.Items.Add(LvItem); });
                             }
                             
                             TotalSize += DItem.Length; // Инкрементируем общий счётчик...
@@ -153,7 +153,7 @@ namespace srcrepair
         private void frmCleaner_Load(object sender, EventArgs e)
         {
             // Изменяем заголовок окна...
-            this.Text = String.Format(this.Text, CleanInfo);
+            Text = String.Format(Text, CleanInfo);
             
             // Запускаем очистку согласно полученным параметрам...
             if (!GttWrk.IsBusy) { GttWrk.RunWorkerAsync(); }
@@ -213,7 +213,7 @@ namespace srcrepair
                 List<string> DeleteQueue = new List<string>();
 
                 // Добавляем в очередь для очистки...
-                this.Invoke((MethodInvoker)delegate()
+                Invoke((MethodInvoker)delegate()
                 {
                     foreach (ListViewItem LVI in CM_FTable.Items)
                     {
@@ -225,9 +225,9 @@ namespace srcrepair
                 });
 
                 // Добавляем в архив (если выбрано)...
-                if (Properties.Settings.Default.PackBeforeCleanup || this.ForceBackUp)
+                if (Properties.Settings.Default.PackBeforeCleanup || ForceBackUp)
                 {
-                    if (!CoreLib.CompressFiles(DeleteQueue, CoreLib.GenerateBackUpFileName(this.FullBackUpDirPath, Properties.Resources.BU_PrefixDef)))
+                    if (!CoreLib.CompressFiles(DeleteQueue, CoreLib.GenerateBackUpFileName(FullBackUpDirPath, Properties.Resources.BU_PrefixDef)))
                     {
                         MessageBox.Show(CoreLib.GetLocalizedString("PS_ArchFailed"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -286,7 +286,7 @@ namespace srcrepair
             }
 
             // Закрываем форму...
-            this.Close();
+            Close();
         }
 
         private void CM_Clean_Click(object sender, EventArgs e)
@@ -327,7 +327,7 @@ namespace srcrepair
 
         private void CM_Cancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void CM_FTable_DoubleClick(object sender, EventArgs e)
@@ -356,7 +356,7 @@ namespace srcrepair
                 // Отключим кнопку запуска очистки...
                 CM_Clean.Enabled = false;
                 // Закроем форму.
-                this.Close();
+                Close();
             }
             else
             {

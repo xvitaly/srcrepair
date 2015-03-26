@@ -124,27 +124,27 @@ namespace srcrepair
             {
                 if (String.Compare(XMLD.GetElementsByTagName("DirName")[i].InnerText, Path.GetFileName(AppName), true) == 0)
                 {
-                    this.FullAppName = XMLD.GetElementsByTagName("DirName")[i].InnerText;
-                    this.SmallAppName = XMLD.GetElementsByTagName("SmallName")[i].InnerText;
-                    this.GameInternalID = XMLD.GetElementsByTagName("SID")[i].InnerText;
-                    this.ConfDir = XMLD.GetElementsByTagName("VFDir")[i].InnerText;
-                    this.IsUsingVideoFile = XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1";
-                    this.IsUsingUserDir = XMLD.GetElementsByTagName("UserDir")[i].InnerText == "1";
+                    FullAppName = XMLD.GetElementsByTagName("DirName")[i].InnerText;
+                    SmallAppName = XMLD.GetElementsByTagName("SmallName")[i].InnerText;
+                    GameInternalID = XMLD.GetElementsByTagName("SID")[i].InnerText;
+                    ConfDir = XMLD.GetElementsByTagName("VFDir")[i].InnerText;
+                    IsUsingVideoFile = XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1";
+                    IsUsingUserDir = XMLD.GetElementsByTagName("UserDir")[i].InnerText == "1";
                     break;
                 }
             }
             XMLFS.Close();
 
             // Генерируем полный путь до каталога управляемого приложения...
-            this.GamePath = AppName;
-            this.FullGamePath = Path.Combine(this.GamePath, this.SmallAppName);
+            GamePath = AppName;
+            FullGamePath = Path.Combine(GamePath, SmallAppName);
 
             // Заполняем другие служебные переменные...
-            this.FullCfgPath = Path.Combine(this.FullGamePath, "cfg");
-            this.FullBackUpDirPath = Path.Combine(UserDir, "backups", this.SmallAppName);
-            this.VideoCfgFile = Path.Combine(this.GamePath, this.ConfDir, "cfg", "video.txt");
-            this.AppHUDDir = Path.Combine(UserDir, Properties.Settings.Default.HUDLocalDir, this.SmallAppName);
-            this.CustomInstallDir = Path.Combine(this.FullGamePath, this.IsUsingUserDir ? "custom" : "");
+            FullCfgPath = Path.Combine(FullGamePath, "cfg");
+            FullBackUpDirPath = Path.Combine(UserDir, "backups", SmallAppName);
+            VideoCfgFile = Path.Combine(GamePath, ConfDir, "cfg", "video.txt");
+            AppHUDDir = Path.Combine(UserDir, Properties.Settings.Default.HUDLocalDir, SmallAppName);
+            CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : "");
         }
     }
 }
