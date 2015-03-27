@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdate));
-            this.DnlProgBar = new System.Windows.Forms.ProgressBar();
             this.UpdAppImg = new System.Windows.Forms.PictureBox();
             this.UpdDBImg = new System.Windows.Forms.PictureBox();
             this.UpdAppStatus = new System.Windows.Forms.Label();
@@ -39,11 +38,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.UpdAppImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpdDBImg)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DnlProgBar
-            // 
-            resources.ApplyResources(this.DnlProgBar, "DnlProgBar");
-            this.DnlProgBar.Name = "DnlProgBar";
             // 
             // UpdAppImg
             // 
@@ -91,7 +85,6 @@
             this.Controls.Add(this.UpdAppStatus);
             this.Controls.Add(this.UpdDBImg);
             this.Controls.Add(this.UpdAppImg);
-            this.Controls.Add(this.DnlProgBar);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -108,7 +101,6 @@
 
         #endregion
 
-        private System.Windows.Forms.ProgressBar DnlProgBar;
         private System.Windows.Forms.PictureBox UpdAppImg;
         private System.Windows.Forms.PictureBox UpdDBImg;
         private System.Windows.Forms.Label UpdAppStatus;
