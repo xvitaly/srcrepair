@@ -191,7 +191,7 @@ namespace srcrepair
 
         private void frmUpdate_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && WrkChkApp.IsBusy && WrkChkDb.IsBusy;
+            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && (WrkChkApp.IsBusy || WrkChkDb.IsBusy);
         }
 
         private void UpdDBStatus_Click(object sender, EventArgs e)
