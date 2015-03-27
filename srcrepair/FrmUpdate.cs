@@ -17,12 +17,7 @@
  * о лицензии - в GPL.txt.
 */
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Net;
 using System.Diagnostics;
@@ -65,69 +60,9 @@ namespace srcrepair
             if (!WrkChkDb.IsBusy) { WrkChkDb.RunWorkerAsync(); }
         }
 
-        private void FileDownloader_Completed(object sender, AsyncCompletedEventArgs e)
-        {
-            // Скроем прогресс-бар...
-            DnlProgBar.Visible = false;
-
-            // Проверим чтобы полученный файл существовал...
-            if (File.Exists(UpdateFileName))
-            {
-                // Если выполнялось обновление программы, выполним его запуск...
-                if (AppAvailable)
-                {
-                    // Существует, покажем сообщение...
-                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateSuccessful"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Запустим...
-                    try { Process.Start(UpdateFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
-
-                    // Завершим работу программы...
-                    Environment.Exit(9);
-                }
-                else
-                {
-                    // Выведем сообщение об успехе...
-                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_GamL_Updated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
-                    // Закроем форму...
-                    Close();
-                }
-            }
-            else
-            {
-                // Файл не существует: ошибка обновления...
-                MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                
-                // Закроем форму...
-                Close();
-            }
-        }
-
-        private void FileDownloader_ProgressChanged(object sender, DownloadProgressChangedEventArgs e)
-        {
-            // Отрисовываем статус в прогресс-баре...
-            try { DnlProgBar.Value = e.ProgressPercentage; } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-        }
-
         private string GenerateUpdateFileName(string Url)
         {
             return Path.HasExtension(Url) ? Url : Path.ChangeExtension(Url, "exe");
-        }
-
-        private void DownloadUpdate(string UpdateURI, string FileName)
-        {
-            // Покажем прогресс выполнения...
-            DnlProgBar.Visible = true;
-
-            using (WebClient FileDownloader = new WebClient())
-            {
-                // Скачиваем файл...
-                FileDownloader.Headers.Add("User-Agent", Properties.Resources.AppDnlUA);
-                FileDownloader.DownloadFileCompleted += new AsyncCompletedEventHandler(FileDownloader_Completed);
-                FileDownloader.DownloadProgressChanged += new DownloadProgressChangedEventHandler(FileDownloader_ProgressChanged);
-                FileDownloader.DownloadFileAsync(new Uri(UpdateURI), FileName);
-            }
         }
 
         private void WrkChkApp_DoWork(object sender, DoWorkEventArgs e)
@@ -266,7 +201,9 @@ namespace srcrepair
                 if (DbAvailable && CoreLib.IsDirectoryWritable(FullAppPath))
                 {
                     UpdateFileName = GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Settings.Default.GameListFile));
-                    DownloadUpdate(Properties.Settings.Default.UpdateGameDBFile, UpdateFileName);
+                    CoreLib.DownloadFileEx(Properties.Settings.Default.UpdateGameDBFile, UpdateFileName);
+                    if (File.Exists(UpdateFileName)) { MessageBox.Show(CoreLib.GetLocalizedString("UPD_GamL_Updated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                    Close();
                 }
                 else
                 {
@@ -282,7 +219,18 @@ namespace srcrepair
                 if (AppAvailable)
                 {
                     UpdateFileName = GenerateUpdateFileName(Path.Combine(AppUserDir, Path.GetFileName(UpdateURI)));
-                    DownloadUpdate(UpdateURI, UpdateFileName);
+                    CoreLib.DownloadFileEx(UpdateURI, UpdateFileName);
+                    if (File.Exists(UpdateFileName))
+                    {
+                        MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateSuccessful"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        try { Process.Start(UpdateFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
+                        Environment.Exit(9);
+                    }
+                    else
+                    {
+                        MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        Close();
+                    }
                 }
                 else
                 {
