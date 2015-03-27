@@ -4216,82 +4216,88 @@
     <value>S&amp;ystem buttons disabler...</value>
   </data>
   <data name="MNUExtClnCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
+    <value>226, 22</value>
   </data>
   <data name="MNUExtClnCache.Text" xml:space="preserve">
     <value>&amp;Steam HTML cache</value>
   </data>
   <data name="MNUExtClnOverlayHTCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
+    <value>226, 22</value>
   </data>
   <data name="MNUExtClnOverlayHTCache.Text" xml:space="preserve">
     <value>&amp;HTTP cache</value>
   </data>
   <data name="MNUExtClnLogs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
+    <value>226, 22</value>
   </data>
   <data name="MNUExtClnLogs.Text" xml:space="preserve">
     <value>S&amp;team logs</value>
   </data>
   <data name="MNUExtClnGIcons.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
+    <value>226, 22</value>
   </data>
   <data name="MNUExtClnGIcons.Text" xml:space="preserve">
     <value>&amp;Game icons</value>
   </data>
   <data name="MNUExtClnGameStats.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
+    <value>226, 22</value>
   </data>
   <data name="MNUExtClnGameStats.Text" xml:space="preserve">
     <value>&amp;Local game stats</value>
   </data>
   <data name="MNUExtClnErrDumps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
+    <value>226, 22</value>
   </data>
   <data name="MNUExtClnErrDumps.Text" xml:space="preserve">
     <value>Steam &amp;error dumps</value>
   </data>
   <data name="MNUExtClnCloudLocal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
+    <value>226, 22</value>
   </data>
   <data name="MNUExtClnCloudLocal.Text" xml:space="preserve">
     <value>Clo&amp;ud local storage</value>
   </data>
   <data name="MNUExtClnBuildCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
+    <value>226, 22</value>
   </data>
   <data name="MNUExtClnBuildCache.Text" xml:space="preserve">
     <value>Steam &amp;build cache</value>
   </data>
   <data name="MNUExtClnUpdCch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
+    <value>226, 22</value>
   </data>
   <data name="MNUExtClnUpdCch.Text" xml:space="preserve">
     <value>Steam &amp;updater cache</value>
   </data>
   <data name="MNUExtClnGuard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
+    <value>226, 22</value>
   </data>
   <data name="MNUExtClnGuard.Text" xml:space="preserve">
     <value>Steam Guar&amp;d cache</value>
   </data>
   <data name="MNUExtClnOldBin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
+    <value>226, 22</value>
   </data>
   <data name="MNUExtClnOldBin.Text" xml:space="preserve">
     <value>Steam old b&amp;inaries</value>
   </data>
   <data name="MNUExtClnMusDb.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
+    <value>226, 22</value>
   </data>
   <data name="MNUExtClnMusDb.Text" xml:space="preserve">
     <value>Steam &amp;music database</value>
   </data>
   <data name="MNUExtClnSkins.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 22</value>
+    <value>226, 22</value>
   </data>
   <data name="MNUExtClnSkins.Text" xml:space="preserve">
     <value>I&amp;nstalled custom skins</value>
+  </data>
+  <data name="MNUExtClnAppCache.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 22</value>
+  </data>
+  <data name="MNUExtClnAppCache.Text" xml:space="preserve">
+    <value>SRC Repair's download cache</value>
   </data>
   <data name="MNUExtClnSub.Size" type="System.Drawing.Size, System.Drawing">
     <value>274, 22</value>
@@ -5470,6 +5476,12 @@
     <value>MNUExtClnSkins</value>
   </data>
   <data name="&gt;&gt;MNUExtClnSkins.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnAppCache.Name" xml:space="preserve">
+    <value>MNUExtClnAppCache</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnAppCache.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUSep2.Name" xml:space="preserve">

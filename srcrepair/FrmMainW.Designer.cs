@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainW));
-            this.TabIcons = new System.Windows.Forms.ImageList();
+            this.TabIcons = new System.Windows.Forms.ImageList(this.components);
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
             this.GT_ResAvailable = new System.Windows.Forms.ComboBox();
@@ -207,6 +208,7 @@
             this.MNUExtClnOldBin = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnMusDb = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnSkins = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUExtClnAppCache = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep2 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUExit = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpMNU = new System.Windows.Forms.ToolStripMenuItem();
@@ -1663,7 +1665,8 @@
             this.MNUExtClnGuard,
             this.MNUExtClnOldBin,
             this.MNUExtClnMusDb,
-            this.MNUExtClnSkins});
+            this.MNUExtClnSkins,
+            this.MNUExtClnAppCache});
             this.MNUExtClnSub.Image = global::srcrepair.Properties.Resources.clean;
             this.MNUExtClnSub.Name = "MNUExtClnSub";
             resources.ApplyResources(this.MNUExtClnSub, "MNUExtClnSub");
@@ -1758,6 +1761,13 @@
             this.MNUExtClnSkins.Name = "MNUExtClnSkins";
             resources.ApplyResources(this.MNUExtClnSkins, "MNUExtClnSkins");
             this.MNUExtClnSkins.Click += new System.EventHandler(this.MNUExtClnSkins_Click);
+            // 
+            // MNUExtClnAppCache
+            // 
+            this.MNUExtClnAppCache.Image = global::srcrepair.Properties.Resources.clean;
+            this.MNUExtClnAppCache.Name = "MNUExtClnAppCache";
+            resources.ApplyResources(this.MNUExtClnAppCache, "MNUExtClnAppCache");
+            this.MNUExtClnAppCache.Click += new System.EventHandler(this.MNUExtClnAppCache_Click);
             // 
             // MNUSep2
             // 
@@ -2205,6 +2215,7 @@
         private System.Windows.Forms.Button HD_Homepage;
         private System.ComponentModel.BackgroundWorker BW_HUDScreen;
         private System.ComponentModel.BackgroundWorker BW_HudInstall;
+        private System.Windows.Forms.ToolStripMenuItem MNUExtClnAppCache;
     }
 }
 

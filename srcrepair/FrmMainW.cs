@@ -3385,5 +3385,13 @@ namespace srcrepair
             // Откроем домашнюю страницу выбранного HUD...
             try { if (!String.IsNullOrEmpty(SelHUD.Site)) { Process.Start(SelHUD.Site); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
+
+        private void MNUExtClnAppCache_Click(object sender, EventArgs e)
+        {
+            // Очистим загруженные приложением файлы...
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(App.AppUserDir, Properties.Settings.Default.HUDLocalDir, "*.*"));
+            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+        }
     }
 }
