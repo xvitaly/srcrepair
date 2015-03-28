@@ -87,7 +87,7 @@
             resources.ApplyResources(this.UpdHUDDbImg, "UpdHUDDbImg");
             this.UpdHUDDbImg.Name = "UpdHUDDbImg";
             this.UpdHUDDbImg.TabStop = false;
-            this.UpdHUDDbImg.Click += new System.EventHandler(this.UpdDBStatus_Click);
+            this.UpdHUDDbImg.Click += new System.EventHandler(this.UpdHUDStatus_Click);
             // 
             // UpdHUDStatus
             // 

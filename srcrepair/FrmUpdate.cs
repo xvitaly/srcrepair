@@ -233,7 +233,7 @@ namespace srcrepair
                         UpdHUDDbImg.Image = Properties.Resources.upd_av;
                         UpdHUDDbImg.Cursor = Cursors.Hand;
                         UpdHUDStatus.Cursor = Cursors.Hand;
-                        UpdHUDStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_HUDUpdateAvail"), DBHashNew);
+                        UpdHUDStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_HUDUpdateAvail"), HUDHashNew);
                     });
                     HudAvailable = true;
                 }
