@@ -35,8 +35,12 @@
             this.UpdDBStatus = new System.Windows.Forms.Label();
             this.WrkChkApp = new System.ComponentModel.BackgroundWorker();
             this.WrkChkDb = new System.ComponentModel.BackgroundWorker();
+            this.UpdHUDDb = new System.Windows.Forms.PictureBox();
+            this.UpdHUDStatus = new System.Windows.Forms.Label();
+            this.WrkChkHUD = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.UpdAppImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpdDBImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpdHUDDb)).BeginInit();
             this.SuspendLayout();
             // 
             // UpdAppImg
@@ -77,11 +81,32 @@
             this.WrkChkDb.DoWork += new System.ComponentModel.DoWorkEventHandler(this.WrkChkDb_DoWork);
             this.WrkChkDb.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.WrkChkDb_RunWorkerCompleted);
             // 
+            // UpdHUDDb
+            // 
+            this.UpdHUDDb.Image = global::srcrepair.Properties.Resources.upd_nx;
+            resources.ApplyResources(this.UpdHUDDb, "UpdHUDDb");
+            this.UpdHUDDb.Name = "UpdHUDDb";
+            this.UpdHUDDb.TabStop = false;
+            this.UpdHUDDb.Click += new System.EventHandler(this.UpdDBStatus_Click);
+            // 
+            // UpdHUDStatus
+            // 
+            resources.ApplyResources(this.UpdHUDStatus, "UpdHUDStatus");
+            this.UpdHUDStatus.Name = "UpdHUDStatus";
+            this.UpdHUDStatus.Click += new System.EventHandler(this.UpdDBStatus_Click);
+            // 
+            // WrkChkHUD
+            // 
+            this.WrkChkHUD.DoWork += new System.ComponentModel.DoWorkEventHandler(this.WrkChkHUD_DoWork);
+            this.WrkChkHUD.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.WrkChkHUD_RunWorkerCompleted);
+            // 
             // frmUpdate
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.UpdHUDStatus);
             this.Controls.Add(this.UpdDBStatus);
+            this.Controls.Add(this.UpdHUDDb);
             this.Controls.Add(this.UpdAppStatus);
             this.Controls.Add(this.UpdDBImg);
             this.Controls.Add(this.UpdAppImg);
@@ -95,6 +120,7 @@
             this.Load += new System.EventHandler(this.frmUpdate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UpdAppImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpdDBImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpdHUDDb)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -107,5 +133,8 @@
         private System.Windows.Forms.Label UpdDBStatus;
         private System.ComponentModel.BackgroundWorker WrkChkApp;
         private System.ComponentModel.BackgroundWorker WrkChkDb;
+        private System.Windows.Forms.PictureBox UpdHUDDb;
+        private System.Windows.Forms.Label UpdHUDStatus;
+        private System.ComponentModel.BackgroundWorker WrkChkHUD;
     }
 }

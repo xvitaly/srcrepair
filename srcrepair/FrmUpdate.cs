@@ -189,9 +189,19 @@ namespace srcrepair
             }
         }
 
+        private void WrkChkHUD_DoWork(object sender, DoWorkEventArgs e)
+        {
+            //
+        }
+
+        private void WrkChkHUD_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            //
+        }
+
         private void frmUpdate_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && (WrkChkApp.IsBusy || WrkChkDb.IsBusy);
+            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && (WrkChkApp.IsBusy || WrkChkDb.IsBusy || WrkChkHUD.IsBusy);
         }
 
         private void UpdDBStatus_Click(object sender, EventArgs e)
