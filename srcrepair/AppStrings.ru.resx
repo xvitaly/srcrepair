@@ -676,11 +676,11 @@
     <comment>Сообщение при попытке сохранить графические опции с пустыми полями</comment>
   </data>
   <data name="UPD_GamL_Latest" xml:space="preserve">
-    <value>Обновление не требуется, т.к. у Вас последняя версия базы данных.</value>
+    <value>Обновление не требуется, т.к. у Вас последняя версия базы данных игр.</value>
     <comment>Сообщение при отсутствии обновлений игровой базы данных</comment>
   </data>
   <data name="UPD_GamL_Updated" xml:space="preserve">
-    <value>База данных игр была успешно обновлена. Для её применения перезапустите программу или выберите другой логин.</value>
+    <value>База данных игр была успешно обновлена. Для её применения перезапустите программу.</value>
     <comment>Сообщение при успешном обновлении базы игр</comment>
   </data>
   <data name="AHE_KRegErr" xml:space="preserve">
@@ -858,5 +858,21 @@
   <data name="HD_AlreadyInstalled" xml:space="preserve">
     <value>Выбранный HUD уже установлен. Если хотите переустановить, сначала удалите его!</value>
     <comment>Сообщение при запуске установки уже установленного HUD</comment>
+  </data>
+  <data name="UPD_HUDDb_Latest" xml:space="preserve">
+    <value>Обновление не требуется, т.к. у Вас последняя версия базы данных HUD.</value>
+    <comment>Сообщение при отсутствии обновлений игровой базы HUD</comment>
+  </data>
+  <data name="UPD_HUDDb_Updated" xml:space="preserve">
+    <value>База данных HUD была успешно обновлена. Для применения изменений просто выберите любую игру из списка, либо перезапустите программу.</value>
+    <comment>Сообщение при успешном обновлении базы HUD</comment>
+  </data>
+  <data name="UPD_HUDNoUpdates" xml:space="preserve">
+    <value>Нет новых обновлений базы HUD. Используется свежайшая версия.</value>
+    <comment>Выводится в случае если модуль не смог найти новых версий базы HUD</comment>
+  </data>
+  <data name="UPD_HUDUpdateAvail" xml:space="preserve">
+    <value>Доступно обновление базы HUD. Хеш: {0}.</value>
+    <comment>Выводится в случае обнаружений новой версии базы HUD</comment>
   </data>
 </root>

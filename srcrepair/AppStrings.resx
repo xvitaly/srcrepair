@@ -538,7 +538,7 @@
     <value>Update is not required because you have the latest version of the game database.</value>
   </data>
   <data name="UPD_GamL_Updated" xml:space="preserve">
-    <value>The game database has been updated successfully. Restart this program or choose a different Steam login.</value>
+    <value>The game database has been updated successfully. Restart this program.</value>
   </data>
   <data name="AHE_KRegErr" xml:space="preserve">
     <value>Unable to get path to the Hosts file from registry. Will try standard path.</value>
@@ -674,5 +674,17 @@
   </data>
   <data name="HD_AlreadyInstalled" xml:space="preserve">
     <value>Selected HUD already installed. If you want to reinstall, remove it first!</value>
+  </data>
+  <data name="UPD_HUDDb_Latest" xml:space="preserve">
+    <value>Update is not required because you have the latest version of the HUD database.</value>
+  </data>
+  <data name="UPD_HUDDb_Updated" xml:space="preserve">
+    <value>The HUD database has been updated successfully. Restart this program.</value>
+  </data>
+  <data name="UPD_HUDNoUpdates" xml:space="preserve">
+    <value>No new updates detected. SRC Repair is using latest version of HUD database.</value>
+  </data>
+  <data name="UPD_HUDUpdateAvail" xml:space="preserve">
+    <value>HUD database update available. New version: {0}.</value>
   </data>
 </root>

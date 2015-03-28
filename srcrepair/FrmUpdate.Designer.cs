@@ -35,12 +35,12 @@
             this.UpdDBStatus = new System.Windows.Forms.Label();
             this.WrkChkApp = new System.ComponentModel.BackgroundWorker();
             this.WrkChkDb = new System.ComponentModel.BackgroundWorker();
-            this.UpdHUDDb = new System.Windows.Forms.PictureBox();
+            this.UpdHUDDbImg = new System.Windows.Forms.PictureBox();
             this.UpdHUDStatus = new System.Windows.Forms.Label();
             this.WrkChkHUD = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.UpdAppImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpdDBImg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UpdHUDDb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpdHUDDbImg)).BeginInit();
             this.SuspendLayout();
             // 
             // UpdAppImg
@@ -81,19 +81,19 @@
             this.WrkChkDb.DoWork += new System.ComponentModel.DoWorkEventHandler(this.WrkChkDb_DoWork);
             this.WrkChkDb.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.WrkChkDb_RunWorkerCompleted);
             // 
-            // UpdHUDDb
+            // UpdHUDDbImg
             // 
-            this.UpdHUDDb.Image = global::srcrepair.Properties.Resources.upd_nx;
-            resources.ApplyResources(this.UpdHUDDb, "UpdHUDDb");
-            this.UpdHUDDb.Name = "UpdHUDDb";
-            this.UpdHUDDb.TabStop = false;
-            this.UpdHUDDb.Click += new System.EventHandler(this.UpdDBStatus_Click);
+            this.UpdHUDDbImg.Image = global::srcrepair.Properties.Resources.upd_chk;
+            resources.ApplyResources(this.UpdHUDDbImg, "UpdHUDDbImg");
+            this.UpdHUDDbImg.Name = "UpdHUDDbImg";
+            this.UpdHUDDbImg.TabStop = false;
+            this.UpdHUDDbImg.Click += new System.EventHandler(this.UpdDBStatus_Click);
             // 
             // UpdHUDStatus
             // 
             resources.ApplyResources(this.UpdHUDStatus, "UpdHUDStatus");
             this.UpdHUDStatus.Name = "UpdHUDStatus";
-            this.UpdHUDStatus.Click += new System.EventHandler(this.UpdDBStatus_Click);
+            this.UpdHUDStatus.Click += new System.EventHandler(this.UpdHUDStatus_Click);
             // 
             // WrkChkHUD
             // 
@@ -106,7 +106,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.UpdHUDStatus);
             this.Controls.Add(this.UpdDBStatus);
-            this.Controls.Add(this.UpdHUDDb);
+            this.Controls.Add(this.UpdHUDDbImg);
             this.Controls.Add(this.UpdAppStatus);
             this.Controls.Add(this.UpdDBImg);
             this.Controls.Add(this.UpdAppImg);
@@ -120,7 +120,7 @@
             this.Load += new System.EventHandler(this.frmUpdate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UpdAppImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpdDBImg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UpdHUDDb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UpdHUDDbImg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -133,7 +133,7 @@
         private System.Windows.Forms.Label UpdDBStatus;
         private System.ComponentModel.BackgroundWorker WrkChkApp;
         private System.ComponentModel.BackgroundWorker WrkChkDb;
-        private System.Windows.Forms.PictureBox UpdHUDDb;
+        private System.Windows.Forms.PictureBox UpdHUDDbImg;
         private System.Windows.Forms.Label UpdHUDStatus;
         private System.ComponentModel.BackgroundWorker WrkChkHUD;
     }

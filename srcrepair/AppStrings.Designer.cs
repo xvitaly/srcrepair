@@ -1672,11 +1672,47 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The game database has been updated successfully. Restart this program or choose a different Steam login..
+        ///   Looks up a localized string similar to The game database has been updated successfully. Restart this program..
         /// </summary>
         internal static string UPD_GamL_Updated {
             get {
                 return ResourceManager.GetString("UPD_GamL_Updated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update is not required because you have the latest version of the HUD database..
+        /// </summary>
+        internal static string UPD_HUDDb_Latest {
+            get {
+                return ResourceManager.GetString("UPD_HUDDb_Latest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The HUD database has been updated successfully. Restart this program..
+        /// </summary>
+        internal static string UPD_HUDDb_Updated {
+            get {
+                return ResourceManager.GetString("UPD_HUDDb_Updated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No new updates detected. SRC Repair is using latest version of HUD database..
+        /// </summary>
+        internal static string UPD_HUDNoUpdates {
+            get {
+                return ResourceManager.GetString("UPD_HUDNoUpdates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HUD database update available. New version: {0}..
+        /// </summary>
+        internal static string UPD_HUDUpdateAvail {
+            get {
+                return ResourceManager.GetString("UPD_HUDUpdateAvail", resourceCulture);
             }
         }
         

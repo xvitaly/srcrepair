@@ -80,5 +80,11 @@
     <Setting Name="HUDSaveArchives" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="UpdateHUDDBFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://www.easycoding.org/files/srcrepair/updates/huds.xml</Value>
+    </Setting>
+    <Setting Name="UpdateHUDDBFileHash" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://www.easycoding.org/files/srcrepair/updates/huds.md5</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -313,5 +313,23 @@ namespace srcrepair.Properties {
                 this["HUDSaveArchives"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://www.easycoding.org/files/srcrepair/updates/huds.xml")]
+        public string UpdateHUDDBFile {
+            get {
+                return ((string)(this["UpdateHUDDBFile"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://www.easycoding.org/files/srcrepair/updates/huds.md5")]
+        public string UpdateHUDDBFileHash {
+            get {
+                return ((string)(this["UpdateHUDDBFileHash"]));
+            }
+        }
     }
 }

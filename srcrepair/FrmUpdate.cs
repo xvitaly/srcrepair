@@ -40,13 +40,16 @@ namespace srcrepair
         private string UpdateURI;
         private string UpdateFileName;
         private string DBHash;
-        private string NewHash;
+        private string DBHashNew;
+        private string HUDHash;
+        private string HUDHashNew;
         private string FullAppPath;
         private string UserAgent;
         private string AppVersionInfo;
         private string AppUserDir;
         private bool AppAvailable;
         private bool DbAvailable;
+        private bool HudAvailable;
 
         private void frmUpdate_Load(object sender, EventArgs e)
         {
@@ -58,6 +61,9 @@ namespace srcrepair
 
             // Запускаем функции проверки обновлений базы данных игр...
             if (!WrkChkDb.IsBusy) { WrkChkDb.RunWorkerAsync(); }
+            
+            // Запускаем функции проверки обновлений базы данных HUD...
+            if (!WrkChkHUD.IsBusy) { WrkChkHUD.RunWorkerAsync(); }
         }
 
         private string GenerateUpdateFileName(string Url)
@@ -142,7 +148,7 @@ namespace srcrepair
                 {
                     // Получим хеш...
                     Downloader.Headers.Add("User-Agent", UserAgent);
-                    NewHash = Downloader.DownloadString(Properties.Settings.Default.UpdateGameDBHash);
+                    DBHashNew = Downloader.DownloadString(Properties.Settings.Default.UpdateGameDBHash);
                 }
 
                 // Рассчитаем хеш текущего файла...
@@ -160,7 +166,7 @@ namespace srcrepair
             try
             {
                 // Проверим хеши...
-                if (DBHash != NewHash)
+                if (DBHash != DBHashNew)
                 {
                     // Хеши не совпадают, будем обновлять...
                     Invoke((MethodInvoker)delegate()
@@ -168,7 +174,7 @@ namespace srcrepair
                         UpdDBImg.Image = Properties.Resources.upd_av;
                         UpdDBImg.Cursor = Cursors.Hand;
                         UpdDBStatus.Cursor = Cursors.Hand;
-                        UpdDBStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_DbUpdateAvail"), NewHash);
+                        UpdDBStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_DbUpdateAvail"), DBHashNew);
                     });
                     DbAvailable = true;
                 }
@@ -191,12 +197,61 @@ namespace srcrepair
 
         private void WrkChkHUD_DoWork(object sender, DoWorkEventArgs e)
         {
-            //
+            try
+            {
+                // Установим значок проверки обновлений...
+                Invoke((MethodInvoker)delegate() { UpdHUDDbImg.Image = Properties.Resources.upd_chk; });
+
+                // Получаем файл с номером версии и ссылкой на новую...
+                using (WebClient Downloader = new WebClient())
+                {
+                    // Получим хеш...
+                    Downloader.Headers.Add("User-Agent", UserAgent);
+                    HUDHashNew = Downloader.DownloadString(Properties.Settings.Default.UpdateHUDDBFileHash);
+                }
+
+                // Рассчитаем хеш текущего файла...
+                HUDHash = CoreLib.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Settings.Default.HUDDbFile));
+            }
+            catch (Exception Ex)
+            {
+                // Произошло исключение...
+                CoreLib.WriteStringToLog(Ex.Message);
+            }
         }
 
         private void WrkChkHUD_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            //
+            try
+            {
+                // Проверим хеши...
+                if (HUDHash != HUDHashNew)
+                {
+                    // Хеши не совпадают, будем обновлять...
+                    Invoke((MethodInvoker)delegate()
+                    {
+                        UpdHUDDbImg.Image = Properties.Resources.upd_av;
+                        UpdHUDDbImg.Cursor = Cursors.Hand;
+                        UpdHUDStatus.Cursor = Cursors.Hand;
+                        UpdHUDStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_HUDUpdateAvail"), DBHashNew);
+                    });
+                    HudAvailable = true;
+                }
+                else
+                {
+                    // Хеши совпали, обновление не требуется...
+                    Invoke((MethodInvoker)delegate()
+                    {
+                        UpdHUDDbImg.Image = Properties.Resources.upd_nx;
+                        UpdHUDStatus.Text = CoreLib.GetLocalizedString("UPD_HUDNoUpdates");
+                    });
+                    HudAvailable = false;
+                }
+            }
+            catch (Exception Ex)
+            {
+                CoreLib.WriteStringToLog(Ex.Message);
+            }
         }
 
         private void frmUpdate_FormClosing(object sender, FormClosingEventArgs e)
@@ -217,7 +272,7 @@ namespace srcrepair
                 }
                 else
                 {
-                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_LatestInstalled"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_GamL_Latest"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -245,6 +300,24 @@ namespace srcrepair
                 else
                 {
                     MessageBox.Show(CoreLib.GetLocalizedString("UPD_LatestInstalled"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void UpdHUDStatus_Click(object sender, EventArgs e)
+        {
+            if (!WrkChkHUD.IsBusy)
+            {
+                if (HudAvailable && CoreLib.IsDirectoryWritable(FullAppPath))
+                {
+                    UpdateFileName = GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Settings.Default.HUDDbFile));
+                    CoreLib.DownloadFileEx(Properties.Settings.Default.UpdateHUDDBFile, UpdateFileName);
+                    if (File.Exists(UpdateFileName)) { MessageBox.Show(CoreLib.GetLocalizedString("UPD_HUDDb_Updated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_HUDDb_Latest"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
