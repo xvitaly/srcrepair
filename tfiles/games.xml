@@ -392,4 +392,28 @@
     <UserDir>0</UserDir>
     <SID>244630</SID>
   </Game>
+  <Game Name="Half-Life 2: Update">
+    <HasVF>0</HasVF>
+    <DirName>Half-Life 2 Update</DirName>
+    <SmallName>hl2</SmallName>
+    <VFDir>hl2</VFDir>
+    <UserDir>0</UserDir>
+    <SID>290930</SID>
+  </Game>
+  <Game Name="Lambda Wars">
+    <HasVF>1</HasVF>
+    <DirName>Lambda Wars</DirName>
+    <SmallName>lambdawars</SmallName>
+    <VFDir>lambdawars</VFDir>
+    <UserDir>0</UserDir>
+    <SID>270370</SID>
+  </Game>
+  <Game Name="Rexaura">
+    <HasVF>0</HasVF>
+    <DirName>Rexaura</DirName>
+    <SmallName>rexaura</SmallName>
+    <VFDir>rexaura</VFDir>
+    <UserDir>0</UserDir>
+    <SID>317790</SID>
+  </Game>
 </Games>
