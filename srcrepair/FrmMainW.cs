@@ -2474,7 +2474,7 @@ namespace srcrepair
             // Удаляем графические настройки...
             if (MessageBox.Show(((Button)sender).Text + "?", Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                if (SelGame.IsUsingVideoFile)
+                if (!SelGame.IsUsingVideoFile)
                 {
                     // Создаём резервную копию...
                     if (Properties.Settings.Default.SafeCleanup)
