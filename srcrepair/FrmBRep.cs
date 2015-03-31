@@ -251,7 +251,7 @@ namespace srcrepair
         private void BR_WrkMf_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             // Выводим сообщение...
-            if (e.Error == null) { if (String.Compare(BResult, "OK") != 0) { MessageBox.Show(CoreLib.GetLocalizedString("BR_SendCompleted"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(CoreLib.GetLocalizedString("BR_SendError"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); } } else { CoreLib.WriteStringToLog(e.Error.Message); }
+            if (e.Error == null) { if (String.Compare(BResult, "OK") != 0) { MessageBox.Show(CoreLib.GetLocalizedString("BR_SendCompleted"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); CoreLib.OpenWebPage(Properties.Resources.AppBtView); } else { MessageBox.Show(CoreLib.GetLocalizedString("BR_SendError"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); } } else { CoreLib.WriteStringToLog(e.Error.Message); }
 
             // Закрываем форму...
             Close();
