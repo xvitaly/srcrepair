@@ -113,6 +113,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to https://bugs.easycoding.org/view_all_bug_page.php?project_id=5.
+        /// </summary>
+        internal static string AppBtView {
+            get {
+                return ResourceManager.GetString("AppBtView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mozilla/5.0 ({0} NT {1}.{2}; {3}; rv:{4}) {5} ({6}).
         /// </summary>
         internal static string AppDefUA {
