@@ -814,5 +814,14 @@ namespace srcrepair
             frmDnWrk DnW = new frmDnWrk(URI, FileName);
             DnW.ShowDialog();
         }
+
+        /// <summary>
+        /// Открывает указанный URL в системном браузере по умолчанию.
+        /// </summary>
+        /// <param name="URI">URL для загрузки в браузере</param>
+        public static void OpenWebPage(string URI)
+        {
+            try { Process.Start(URI); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+        }
     }
 }
