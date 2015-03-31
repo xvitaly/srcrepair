@@ -2848,27 +2848,27 @@ namespace srcrepair
 
         private void MNUHelp_Click(object sender, EventArgs e)
         {
-            try { Process.Start(Properties.Resources.AppURLHelpSite); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            CoreLib.OpenWebPage(Properties.Resources.AppURLHelpSite);
         }
 
         private void MNUOpinion_Click(object sender, EventArgs e)
         {
-            try { Process.Start(Properties.Resources.AppURLReply); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            CoreLib.OpenWebPage(Properties.Resources.AppURLReply);
         }
 
         private void MNUSteamGroup_Click(object sender, EventArgs e)
         {
-            try { Process.Start(Properties.Resources.AppURLSteamGrID); } catch { Process.Start(Properties.Resources.AppURLSteamGroup); }
+            try { Process.Start(Properties.Resources.AppURLSteamGrID); } catch { CoreLib.OpenWebPage(Properties.Resources.AppURLSteamGroup); }
         }
 
         private void MNULnkEasyCoding_Click(object sender, EventArgs e)
         {
-            try { Process.Start(Properties.Resources.AppURLOffSite); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            CoreLib.OpenWebPage(Properties.Resources.AppURLOffSite);
         }
 
         private void MNULnkTFRU_Click(object sender, EventArgs e)
         {
-            try { Process.Start(Properties.Resources.AppURLSpnTFSU); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            CoreLib.OpenWebPage(Properties.Resources.AppURLSpnTFSU);
         }
 
         private void MNUHEd_Click(object sender, EventArgs e)
@@ -3013,7 +3013,7 @@ namespace srcrepair
 
         private void MNUDonate_Click(object sender, EventArgs e)
         {
-            try { Process.Start(Properties.Resources.AppURLDonate); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            CoreLib.OpenWebPage(Properties.Resources.AppURLDonate);
         }
 
         private void CE_OpenInNotepad_Click(object sender, EventArgs e)
@@ -3096,7 +3096,7 @@ namespace srcrepair
 
         private void CE_OpenCVList_Click(object sender, EventArgs e)
         {
-            Process.Start(CoreLib.GetLocalizedString("AppCVListURL"));
+            CoreLib.OpenWebPage(CoreLib.GetLocalizedString("AppCVListURL"));
         }
 
         private void MNUExtClnCache_Click(object sender, EventArgs e)
@@ -3383,7 +3383,7 @@ namespace srcrepair
         private void HD_Homepage_Click(object sender, EventArgs e)
         {
             // Откроем домашнюю страницу выбранного HUD...
-            try { if (!String.IsNullOrEmpty(SelHUD.Site)) { Process.Start(SelHUD.Site); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            if (!String.IsNullOrEmpty(SelHUD.Site)) { CoreLib.OpenWebPage(SelHUD.Site); }
         }
 
         private void MNUExtClnAppCache_Click(object sender, EventArgs e)

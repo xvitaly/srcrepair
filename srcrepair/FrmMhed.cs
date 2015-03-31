@@ -154,7 +154,7 @@ namespace srcrepair
 
         private void HEd_M_OnlHelp_Click(object sender, EventArgs e)
         {
-            try { Process.Start(Properties.Resources.AHE_HelpURL); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            CoreLib.OpenWebPage(Properties.Resources.AHE_HelpURL);
         }
 
         private void HEd_M_About_Click(object sender, EventArgs e)
