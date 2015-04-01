@@ -21,8 +21,8 @@ AppVerName=SRC Repair
 AppPublisher=EasyCoding Team
 AppPublisherURL=http://www.easycoding.org/
 AppVersion=20.0.0.2196
-AppSupportURL=http://code.google.com/p/srcrepair/wiki/Support
-AppUpdatesURL=http://code.google.com/p/srcrepair/wiki/Downloads
+AppSupportURL=https://www.easycoding.org/projects/srcrepair
+AppUpdatesURL=https://www.easycoding.org/projects/srcrepair
 DefaultDirName={code:GetDefRoot}\SRC Repair
 DefaultGroupName=SRC Repair
 AllowNoIcons=yes
@@ -102,7 +102,7 @@ Name: "{group}\{cm:ShcLocTexts}\{cm:ProgramOnTheWeb,SRC Repair}"; Filename: "htt
 Name: "{group}\{cm:UninstallProgram,SRC Repair}"; Filename: "{uninstallexe}"
 
 ; Создаём ярлык для багтрекера...
-Name: "{group}\{cm:RepAppErrText}"; Filename: "http://code.google.com/p/srcrepair/wiki/BugTracker"
+Name: "{group}\{cm:RepAppErrText}"; Filename: "https://www.easycoding.org/projects/srcrepair/bugreport"
 
 ; Создаём ярлык на рабочем столе (если выбрано)...
 Name: "{commondesktop}\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: desktopicon
