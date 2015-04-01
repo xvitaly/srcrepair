@@ -714,7 +714,7 @@ namespace srcrepair
                     }
                 }
             }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            catch (Exception Ex) { WriteStringToLog(Ex.Message); }
 
             // Отдаём результат...
             return Result.Distinct().ToList();
@@ -750,8 +750,8 @@ namespace srcrepair
             }
             catch (Exception Ex)
             {
-                try { if (File.Exists(ArchiveName)) { File.Delete(ArchiveName); } } catch (Exception E1) { CoreLib.WriteStringToLog(E1.Message); }
-                CoreLib.WriteStringToLog(Ex.Message);
+                try { if (File.Exists(ArchiveName)) { File.Delete(ArchiveName); } } catch (Exception E1) { WriteStringToLog(E1.Message); }
+                WriteStringToLog(Ex.Message);
             }
             return File.Exists(ArchiveName);
         }
@@ -769,7 +769,7 @@ namespace srcrepair
                 {
                     foreach (ZipEntry ZFile in Zip)
                     {
-                        try { ZFile.Extract(DestDir, ExtractExistingFileAction.OverwriteSilently); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                        try { ZFile.Extract(DestDir, ExtractExistingFileAction.OverwriteSilently); } catch (Exception Ex) { WriteStringToLog(Ex.Message); }
                     }
                 }
             }
@@ -794,7 +794,7 @@ namespace srcrepair
                     IEnumerable<ZipEntry> DirSel = (from e in Zip.Entries where (e.FileName).StartsWith(ExtractDir) select e);
                     foreach (ZipEntry ZFile in DirSel)
                     {
-                        try { ZFile.Extract(DestDir, ExtractExistingFileAction.OverwriteSilently); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                        try { ZFile.Extract(DestDir, ExtractExistingFileAction.OverwriteSilently); } catch (Exception Ex) { WriteStringToLog(Ex.Message); }
                     }
                 }
             }
@@ -821,7 +821,7 @@ namespace srcrepair
         /// <param name="URI">URL для загрузки в браузере</param>
         public static void OpenWebPage(string URI)
         {
-            try { Process.Start(URI); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { Process.Start(URI); } catch (Exception Ex) { WriteStringToLog(Ex.Message); }
         }
     }
 }
