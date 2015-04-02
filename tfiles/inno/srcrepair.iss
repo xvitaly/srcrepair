@@ -64,6 +64,9 @@ Source: "changelog.txt"; DestDir: "{app}"; Flags: ignoreversion
 ; Копируем файл со списком поддерживаемых игр и их параметрами...
 Source: "games.xml"; DestDir: "{app}"; Flags: ignoreversion
 
+; Копируем файл со базой данных HUD...
+Source: "huds.xml"; DestDir: "{app}"; Flags: ignoreversion
+
 ; Копируем открытый ключ...
 Source: "pubkey.asc"; DestDir: "{app}"; Flags: ignoreversion
 
