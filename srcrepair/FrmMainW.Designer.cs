@@ -219,7 +219,6 @@
             this.MNUSteamGroup = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep3 = new System.Windows.Forms.ToolStripSeparator();
             this.MNULnkEasyCoding = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNUDonate = new System.Windows.Forms.ToolStripMenuItem();
             this.MNULnkTFRU = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep4 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUAbout = new System.Windows.Forms.ToolStripMenuItem();
@@ -1791,7 +1790,6 @@
             this.MNUSteamGroup,
             this.MNUSep3,
             this.MNULnkEasyCoding,
-            this.MNUDonate,
             this.MNULnkTFRU,
             this.MNUSep4,
             this.MNUAbout});
@@ -1844,13 +1842,6 @@
             this.MNULnkEasyCoding.Name = "MNULnkEasyCoding";
             resources.ApplyResources(this.MNULnkEasyCoding, "MNULnkEasyCoding");
             this.MNULnkEasyCoding.Click += new System.EventHandler(this.MNULnkEasyCoding_Click);
-            // 
-            // MNUDonate
-            // 
-            this.MNUDonate.Image = global::srcrepair.Properties.Resources.Donate;
-            this.MNUDonate.Name = "MNUDonate";
-            resources.ApplyResources(this.MNUDonate, "MNUDonate");
-            this.MNUDonate.Click += new System.EventHandler(this.MNUDonate_Click);
             // 
             // MNULnkTFRU
             // 
@@ -2118,7 +2109,6 @@
         private System.Windows.Forms.ToolStripButton BUT_ExploreBUp;
         private System.Windows.Forms.ToolStripSeparator BUT_Sep2;
         private System.Windows.Forms.ToolStripMenuItem MNUWinMnuDisabler;
-        private System.Windows.Forms.ToolStripMenuItem MNUDonate;
         private System.Windows.Forms.ToolStripButton CE_OpenInNotepad;
         private System.Windows.Forms.Button PS_RemReplays;
         private System.Windows.Forms.Button PS_DeepCleanup;

@@ -1105,12 +1105,6 @@
   <data name="MNULnkEasyCoding.Size" type="System.Drawing.Size, System.Drawing">
     <value>293, 22</value>
   </data>
-  <data name="MNUDonate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 22</value>
-  </data>
-  <data name="MNUDonate.Text" xml:space="preserve">
-    <value>По&amp;жертвовать на развитие программы</value>
-  </data>
   <data name="MNULnkTFRU.Size" type="System.Drawing.Size, System.Drawing">
     <value>293, 22</value>
   </data>

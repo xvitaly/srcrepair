@@ -3011,11 +3011,6 @@ namespace srcrepair
             KBHlp.ShowDialog();
         }
 
-        private void MNUDonate_Click(object sender, EventArgs e)
-        {
-            CoreLib.OpenWebPage(Properties.Resources.AppURLDonate);
-        }
-
         private void CE_OpenInNotepad_Click(object sender, EventArgs e)
         {
             if (!(String.IsNullOrEmpty(CFGFileName)))
