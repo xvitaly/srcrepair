@@ -85,7 +85,7 @@ namespace srcrepair
                 using (WebClient Downloader = new WebClient())
                 {
                     Downloader.Headers.Add("User-Agent", UserAgent);
-                    DnlStr = Downloader.DownloadString(Properties.Settings.Default.UpdateChURI);
+                    DnlStr = Downloader.DownloadString(Properties.Resources.UpdateChURI);
                 }
 
                 // Установим дату последней проверки обновлений...
@@ -148,7 +148,7 @@ namespace srcrepair
                 {
                     // Получим хеш...
                     Downloader.Headers.Add("User-Agent", UserAgent);
-                    DBHashNew = Downloader.DownloadString(Properties.Settings.Default.UpdateGameDBHash);
+                    DBHashNew = Downloader.DownloadString(Properties.Resources.UpdateGameDBHash);
                 }
 
                 // Рассчитаем хеш текущего файла...
@@ -207,7 +207,7 @@ namespace srcrepair
                 {
                     // Получим хеш...
                     Downloader.Headers.Add("User-Agent", UserAgent);
-                    HUDHashNew = Downloader.DownloadString(Properties.Settings.Default.UpdateHUDDBFileHash);
+                    HUDHashNew = Downloader.DownloadString(Properties.Resources.UpdateHUDDBFileHash);
                 }
 
                 // Рассчитаем хеш текущего файла...
@@ -266,7 +266,7 @@ namespace srcrepair
                 if (DbAvailable && CoreLib.IsDirectoryWritable(FullAppPath))
                 {
                     UpdateFileName = GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Settings.Default.GameListFile));
-                    CoreLib.DownloadFileEx(Properties.Settings.Default.UpdateGameDBFile, UpdateFileName);
+                    CoreLib.DownloadFileEx(Properties.Resources.UpdateGameDBFile, UpdateFileName);
                     if (File.Exists(UpdateFileName)) { MessageBox.Show(CoreLib.GetLocalizedString("UPD_GamL_Updated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
                     Close();
                 }
@@ -311,7 +311,7 @@ namespace srcrepair
                 if (HudAvailable && CoreLib.IsDirectoryWritable(FullAppPath))
                 {
                     UpdateFileName = GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Settings.Default.HUDDbFile));
-                    CoreLib.DownloadFileEx(Properties.Settings.Default.UpdateHUDDBFile, UpdateFileName);
+                    CoreLib.DownloadFileEx(Properties.Resources.UpdateHUDDBFile, UpdateFileName);
                     if (File.Exists(UpdateFileName)) { MessageBox.Show(CoreLib.GetLocalizedString("UPD_HUDDb_Updated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
                     Close();
                 }
