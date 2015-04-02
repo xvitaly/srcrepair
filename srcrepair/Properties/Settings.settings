@@ -17,9 +17,6 @@
     <Setting Name="LastUpdateTime" Type="System.DateTime" Scope="User">
       <Value Profile="(Default)">2012-05-01</Value>
     </Setting>
-    <Setting Name="UpdateChURI" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">https://www.easycoding.org/files/srcrepair/updates/list.txt</Value>
-    </Setting>
     <Setting Name="GameListFile" Type="System.String" Scope="Application">
       <Value Profile="(Default)">games.xml</Value>
     </Setting>
@@ -43,12 +40,6 @@
     </Setting>
     <Setting Name="IsPortable" Type="System.Boolean" Scope="Application">
       <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="UpdateGameDBFile" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">https://www.easycoding.org/files/srcrepair/updates/games.xml</Value>
-    </Setting>
-    <Setting Name="UpdateGameDBHash" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">https://www.easycoding.org/files/srcrepair/updates/games.md5</Value>
     </Setting>
     <Setting Name="EditorBin" Type="System.String" Scope="User">
       <Value Profile="(Default)">notepad.exe</Value>
@@ -79,12 +70,6 @@
     </Setting>
     <Setting Name="HUDSaveArchives" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="UpdateHUDDBFile" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">https://www.easycoding.org/files/srcrepair/updates/huds.xml</Value>
-    </Setting>
-    <Setting Name="UpdateHUDDBFileHash" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">https://www.easycoding.org/files/srcrepair/updates/huds.md5</Value>
     </Setting>
   </Settings>
 </SettingsFile>

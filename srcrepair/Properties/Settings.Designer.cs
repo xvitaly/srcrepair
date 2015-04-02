@@ -85,15 +85,6 @@ namespace srcrepair.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://www.easycoding.org/files/srcrepair/updates/list.txt")]
-        public string UpdateChURI {
-            get {
-                return ((string)(this["UpdateChURI"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("games.xml")]
         public string GameListFile {
             get {
@@ -176,24 +167,6 @@ namespace srcrepair.Properties {
         public bool IsPortable {
             get {
                 return ((bool)(this["IsPortable"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://www.easycoding.org/files/srcrepair/updates/games.xml")]
-        public string UpdateGameDBFile {
-            get {
-                return ((string)(this["UpdateGameDBFile"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://www.easycoding.org/files/srcrepair/updates/games.md5")]
-        public string UpdateGameDBHash {
-            get {
-                return ((string)(this["UpdateGameDBHash"]));
             }
         }
         
@@ -311,24 +284,6 @@ namespace srcrepair.Properties {
             }
             set {
                 this["HUDSaveArchives"] = value;
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://www.easycoding.org/files/srcrepair/updates/huds.xml")]
-        public string UpdateHUDDBFile {
-            get {
-                return ((string)(this["UpdateHUDDBFile"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://www.easycoding.org/files/srcrepair/updates/huds.md5")]
-        public string UpdateHUDDBFileHash {
-            get {
-                return ((string)(this["UpdateHUDDBFileHash"]));
             }
         }
     }

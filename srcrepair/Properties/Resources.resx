@@ -328,4 +328,19 @@
   <data name="AppBtView" xml:space="preserve">
     <value>https://bugs.easycoding.org/view_all_bug_page.php?project_id=5</value>
   </data>
+  <data name="UpdateChURI" xml:space="preserve">
+    <value>https://www.easycoding.org/files/srcrepair/updates/list.txt</value>
+  </data>
+  <data name="UpdateGameDBFile" xml:space="preserve">
+    <value>https://www.easycoding.org/files/srcrepair/updates/games.xml</value>
+  </data>
+  <data name="UpdateGameDBHash" xml:space="preserve">
+    <value>https://www.easycoding.org/files/srcrepair/updates/games.md5</value>
+  </data>
+  <data name="UpdateHUDDBFile" xml:space="preserve">
+    <value>https://www.easycoding.org/files/srcrepair/updates/huds.xml</value>
+  </data>
+  <data name="UpdateHUDDBFileHash" xml:space="preserve">
+    <value>https://www.easycoding.org/files/srcrepair/updates/huds.md5</value>
+  </data>
 </root>
