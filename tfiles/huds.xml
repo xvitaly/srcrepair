@@ -320,4 +320,14 @@
     <ArchiveDir>rayshud-master</ArchiveDir>
     <InstallDir>rayshud</InstallDir>
   </HUD>
+  <HUD>
+    <Name>E.V.E. HUD</Name>
+    <Game>tf</Game>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/evehud.zip</URI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/evehud.png</Preview>
+    <RepoPath></RepoPath>
+    <Site>http://tf2.gamebanana.com/guis/25711</Site>
+    <ArchiveDir>eve hud</ArchiveDir>
+    <InstallDir>evehud</InstallDir>
+  </HUD>
 </HUDs>
