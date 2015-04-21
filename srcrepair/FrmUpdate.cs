@@ -113,8 +113,6 @@ namespace srcrepair
                     Invoke((MethodInvoker)delegate()
                     {
                         UpdAppImg.Image = Properties.Resources.upd_av;
-                        UpdAppImg.Cursor = Cursors.Hand;
-                        UpdAppStatus.Cursor = Cursors.Hand;
                         UpdAppStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_AppUpdateAvail"), NewVersion);
                     });
                     AppAvailable = true;
@@ -172,8 +170,6 @@ namespace srcrepair
                     Invoke((MethodInvoker)delegate()
                     {
                         UpdDBImg.Image = Properties.Resources.upd_av;
-                        UpdDBImg.Cursor = Cursors.Hand;
-                        UpdDBStatus.Cursor = Cursors.Hand;
                         UpdDBStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_DbUpdateAvail"), DBHashNew);
                     });
                     DbAvailable = true;
@@ -231,8 +227,6 @@ namespace srcrepair
                     Invoke((MethodInvoker)delegate()
                     {
                         UpdHUDDbImg.Image = Properties.Resources.upd_av;
-                        UpdHUDDbImg.Cursor = Cursors.Hand;
-                        UpdHUDStatus.Cursor = Cursors.Hand;
                         UpdHUDStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_HUDUpdateAvail"), HUDHashNew);
                     });
                     HudAvailable = true;
