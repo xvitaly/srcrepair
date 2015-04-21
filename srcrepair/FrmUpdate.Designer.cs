@@ -45,6 +45,7 @@
             // 
             // UpdAppImg
             // 
+            this.UpdAppImg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UpdAppImg.Image = global::srcrepair.Properties.Resources.upd_av;
             resources.ApplyResources(this.UpdAppImg, "UpdAppImg");
             this.UpdAppImg.Name = "UpdAppImg";
@@ -53,6 +54,7 @@
             // 
             // UpdDBImg
             // 
+            this.UpdDBImg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UpdDBImg.Image = global::srcrepair.Properties.Resources.upd_nx;
             resources.ApplyResources(this.UpdDBImg, "UpdDBImg");
             this.UpdDBImg.Name = "UpdDBImg";
@@ -61,12 +63,14 @@
             // 
             // UpdAppStatus
             // 
+            this.UpdAppStatus.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.UpdAppStatus, "UpdAppStatus");
             this.UpdAppStatus.Name = "UpdAppStatus";
             this.UpdAppStatus.Click += new System.EventHandler(this.UpdAppStatus_Click);
             // 
             // UpdDBStatus
             // 
+            this.UpdDBStatus.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.UpdDBStatus, "UpdDBStatus");
             this.UpdDBStatus.Name = "UpdDBStatus";
             this.UpdDBStatus.Click += new System.EventHandler(this.UpdDBStatus_Click);
@@ -83,6 +87,7 @@
             // 
             // UpdHUDDbImg
             // 
+            this.UpdHUDDbImg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UpdHUDDbImg.Image = global::srcrepair.Properties.Resources.upd_chk;
             resources.ApplyResources(this.UpdHUDDbImg, "UpdHUDDbImg");
             this.UpdHUDDbImg.Name = "UpdHUDDbImg";
@@ -91,6 +96,7 @@
             // 
             // UpdHUDStatus
             // 
+            this.UpdHUDStatus.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.UpdHUDStatus, "UpdHUDStatus");
             this.UpdHUDStatus.Name = "UpdHUDStatus";
             this.UpdHUDStatus.Click += new System.EventHandler(this.UpdHUDStatus_Click);
