@@ -8,7 +8,7 @@ sprays into the game with one click.
 
 **Supported OS**: Windows XP SP3, Vista SP1+, 7, 8, 8.1, 10 (all editions except Starter).
 
-**Supported platforms**: x86, x64 (auto select).
+**Supported platforms**: x86, x64.
 
 **Dependencies on Windows**: Microsoft .NET Framework 4 Client Profile (web installer included).
 
@@ -70,4 +70,7 @@ Supported mods and third-party Source engine games:
  * Insurgency;
  * No More Room in Hell;
  * Contagion;
- * NeoTokyo.
+ * NeoTokyo;
+ * Half-Life: Update;
+ * Lambda Wars;
+ * Rexaura.
