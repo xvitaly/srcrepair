@@ -68,8 +68,8 @@ namespace srcrepair
             if (!Directory.Exists(TempDir)) { Directory.CreateDirectory(TempDir); }
             
             // Генерируем именя файлов с полными путями...
-            string FileName = String.Format("report_{0}", CrDt);
-            string RepName = FileName + ".txt";
+            string RepName = String.Format("report_{0}.{1}", CrDt, "txt");
+            string ArchName = Path.Combine(RepDir, Path.ChangeExtension(RepName, ".zip"));
             string HostsFile = CoreLib.GetHostsFileFullPath();
             string FNamePing = Path.Combine(TempDir, String.Format("ping_{0}.log", CrDt));
             string FNameTrace = Path.Combine(TempDir, String.Format("traceroute_{0}.log", CrDt));
@@ -91,7 +91,7 @@ namespace srcrepair
                 try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C route print > \"{0}\"", FNameRouting)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                 try
                 {
-                    using (ZipFile ZBkUp = new ZipFile(Path.Combine(RepDir, FileName + ".zip"), Encoding.UTF8))
+                    using (ZipFile ZBkUp = new ZipFile(ArchName, Encoding.UTF8))
                     {
                         // Добавляем в архив созданный рапорт...
                         if (File.Exists(Path.Combine(TempDir, RepName))) { ZBkUp.AddFile(Path.Combine(TempDir, RepName), "report"); }
@@ -117,7 +117,7 @@ namespace srcrepair
                         // Сохраняем архив...
                         ZBkUp.Save();
                     }
-                    MessageBox.Show(String.Format(CoreLib.GetLocalizedString("RPB_ComprGen"), FileName), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(String.Format(CoreLib.GetLocalizedString("RPB_ComprGen"), Path.GetFileName(ArchName)), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception Ex)
                 {
@@ -136,7 +136,7 @@ namespace srcrepair
                 }
 
                 // Открываем каталог с отчётами в оболочке и выделяем созданный файл...
-                Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, Path.Combine(RepDir, FileName + ".zip")));
+                Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, ArchName));
             }
             catch (Exception Ex)
             {
