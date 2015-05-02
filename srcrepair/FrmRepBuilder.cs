@@ -54,16 +54,20 @@ namespace srcrepair
         {
             // Сгенерируем путь для каталога с рапортами...
             string RepDir = Path.Combine(AppUserDir, "reports");
+
             // Проверим чтобы каталог для рапортов существовал...
             if (!Directory.Exists(RepDir))
             {
                 // Не существует, поэтому создадим...
                 Directory.CreateDirectory(RepDir);
             }
-            // Начинаем создавать отчёт...
+            
+            // Генерируем пути к каталогам для вреенных файлов и создаём их...
             string TempDir = Path.Combine(Path.GetTempPath(), "repbuilder");
             string CrDt = CoreLib.DateTime2Unix(DateTime.Now);
             if (!Directory.Exists(TempDir)) { Directory.CreateDirectory(TempDir); }
+            
+            // Генерируем именя файлов с полными путями...
             string FileName = String.Format("report_{0}", CrDt);
             string RepName = FileName + ".txt";
             string HostsFile = CoreLib.GetHostsFileFullPath();
@@ -73,6 +77,8 @@ namespace srcrepair
             string FNameRouting = Path.Combine(TempDir, String.Format("routing_{0}.log", CrDt));
             string FNameNetStat = Path.Combine(TempDir, String.Format("netstat_{0}.log", CrDt));
             string FNameDxDiag = Path.Combine(TempDir, String.Format("dxdiag_{0}.log", CrDt));
+            
+            // Начинаем сборку отчёта...
             try
             {
                 // Запускаем последовательность...
@@ -89,13 +95,17 @@ namespace srcrepair
                     {
                         // Добавляем в архив созданный рапорт...
                         if (File.Exists(Path.Combine(TempDir, RepName))) { ZBkUp.AddFile(Path.Combine(TempDir, RepName), "report"); }
+                        
                         // Добавляем в архив все конфиги выбранной игры...
                         if (Directory.Exists(FullCfgPath)) { ZBkUp.AddDirectory(FullCfgPath, "configs"); }
+                        
                         // Добавляем в архив все краш-дампы и логи Steam...
                         if (Directory.Exists(Path.Combine(FullSteamPath, "dumps"))) { ZBkUp.AddDirectory(Path.Combine(FullSteamPath, "dumps"), "dumps"); }
                         if (Directory.Exists(Path.Combine(FullSteamPath, "logs"))) { ZBkUp.AddDirectory(Path.Combine(FullSteamPath, "logs"), "logs"); }
+                        
                         // Добавляем содержимое файла Hosts...
                         if (File.Exists(HostsFile)) { ZBkUp.AddFile(HostsFile, "hosts"); }
+                        
                         // Добавляем в архив отчёты утилит ping, трассировки и т.д.
                         if (File.Exists(FNamePing)) { ZBkUp.AddFile(FNamePing, "system"); }
                         if (File.Exists(FNameTrace)) { ZBkUp.AddFile(FNameTrace, "system"); }
@@ -103,6 +113,7 @@ namespace srcrepair
                         if (File.Exists(FNameRouting)) { ZBkUp.AddFile(FNameRouting, "system"); }
                         if (File.Exists(FNameNetStat)) { ZBkUp.AddFile(FNameNetStat, "system"); }
                         if (File.Exists(FNameDxDiag)) { ZBkUp.AddFile(FNameDxDiag, "system"); }
+                        
                         // Сохраняем архив...
                         ZBkUp.Save();
                     }
