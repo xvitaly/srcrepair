@@ -4303,7 +4303,7 @@
     <value>274, 22</value>
   </data>
   <data name="MNUExtClnSub.Text" xml:space="preserve">
-    <value>Exten&amp;ded Steam cleanup</value>
+    <value>Exten&amp;ded cleanup</value>
   </data>
   <data name="MNUSep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>271, 6</value>

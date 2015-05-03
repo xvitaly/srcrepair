@@ -1052,7 +1052,7 @@
     <value>316, 22</value>
   </data>
   <data name="MNUExtClnSub.Text" xml:space="preserve">
-    <value>Модуль о&amp;чистки кэшей Steam</value>
+    <value>Модуль расширенной о&amp;чистки</value>
   </data>
   <data name="MNUSep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>313, 6</value>
