@@ -4297,7 +4297,13 @@
     <value>226, 22</value>
   </data>
   <data name="MNUExtClnAppCache.Text" xml:space="preserve">
-    <value>SRC Repair's download cache</value>
+    <value>SRC Repair's d&amp;ownload cache</value>
+  </data>
+  <data name="MNUExtClnTmpDir.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 22</value>
+  </data>
+  <data name="MNUExtClnTmpDir.Text" xml:space="preserve">
+    <value>S&amp;ystem temporary directory</value>
   </data>
   <data name="MNUExtClnSub.Size" type="System.Drawing.Size, System.Drawing">
     <value>274, 22</value>
@@ -5476,6 +5482,12 @@
     <value>MNUExtClnAppCache</value>
   </data>
   <data name="&gt;&gt;MNUExtClnAppCache.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnTmpDir.Name" xml:space="preserve">
+    <value>MNUExtClnTmpDir</value>
+  </data>
+  <data name="&gt;&gt;MNUExtClnTmpDir.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUSep2.Name" xml:space="preserve">

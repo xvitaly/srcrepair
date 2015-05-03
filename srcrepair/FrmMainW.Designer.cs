@@ -209,6 +209,7 @@
             this.MNUExtClnMusDb = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnSkins = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnAppCache = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUExtClnTmpDir = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep2 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUExit = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpMNU = new System.Windows.Forms.ToolStripMenuItem();
@@ -1665,7 +1666,8 @@
             this.MNUExtClnOldBin,
             this.MNUExtClnMusDb,
             this.MNUExtClnSkins,
-            this.MNUExtClnAppCache});
+            this.MNUExtClnAppCache,
+            this.MNUExtClnTmpDir});
             this.MNUExtClnSub.Image = global::srcrepair.Properties.Resources.clean;
             this.MNUExtClnSub.Name = "MNUExtClnSub";
             resources.ApplyResources(this.MNUExtClnSub, "MNUExtClnSub");
@@ -1767,6 +1769,13 @@
             this.MNUExtClnAppCache.Name = "MNUExtClnAppCache";
             resources.ApplyResources(this.MNUExtClnAppCache, "MNUExtClnAppCache");
             this.MNUExtClnAppCache.Click += new System.EventHandler(this.MNUExtClnAppCache_Click);
+            // 
+            // MNUExtClnTmpDir
+            // 
+            this.MNUExtClnTmpDir.Image = global::srcrepair.Properties.Resources.clean;
+            this.MNUExtClnTmpDir.Name = "MNUExtClnTmpDir";
+            resources.ApplyResources(this.MNUExtClnTmpDir, "MNUExtClnTmpDir");
+            this.MNUExtClnTmpDir.Click += new System.EventHandler(this.MNUExtClnTmpDir_Click);
             // 
             // MNUSep2
             // 
@@ -2206,6 +2215,7 @@
         private System.ComponentModel.BackgroundWorker BW_HUDScreen;
         private System.ComponentModel.BackgroundWorker BW_HudInstall;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnAppCache;
+        private System.Windows.Forms.ToolStripMenuItem MNUExtClnTmpDir;
     }
 }
 
