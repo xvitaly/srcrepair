@@ -3391,7 +3391,10 @@ namespace srcrepair
 
         private void MNUExtClnTmpDir_Click(object sender, EventArgs e)
         {
-            //
+            // Очистим каталоги с временными файлами системы...
+            List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(Path.GetTempPath(), "*.*"));
+            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
     }
 }
