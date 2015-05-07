@@ -416,4 +416,12 @@
     <UserDir>0</UserDir>
     <SID>317790</SID>
   </Game>
+  <Game Name="Black Mesa">
+    <HasVF>0</HasVF>
+    <DirName>Black Mesa</DirName>
+    <SmallName>bms</SmallName>
+    <VFDir>bms</VFDir>
+    <UserDir>0</UserDir>
+    <SID>362890</SID>
+  </Game>
 </Games>
