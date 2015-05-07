@@ -73,4 +73,5 @@ Supported mods and third-party Source engine games:
  * NeoTokyo;
  * Half-Life: Update;
  * Lambda Wars;
- * Rexaura.
+ * Rexaura;
+ * Black Mesa.
