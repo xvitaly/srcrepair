@@ -3453,4 +3453,7 @@
   <data name="tf_grapplinghook_prevent_fall_damage" xml:space="preserve">
     <value>Включает / отключает урон от падения при падении с крюка.</value>
   </data>
+  <data name="mat_phong" xml:space="preserve">
+    <value>Включает / отключает блеск моделек.</value>
+  </data>
 </root>
