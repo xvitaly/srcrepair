@@ -823,5 +823,16 @@ namespace srcrepair
         {
             try { Process.Start(URI); } catch (Exception Ex) { WriteStringToLog(Ex.Message); }
         }
+
+        /// <summary>
+        /// Осуществляет распаковку выбранного архива в указанный каталог.
+        /// </summary>
+        /// <param name="ArchName">Имя архивного файла с указанием полного пути</param>
+        /// <param name="DestDir">Каталог назначения</param>
+        public static void UnpackArchiveEx(string ArchName, string DestDir)
+        {
+            FrmArchWrk ArW = new FrmArchWrk(ArchName, DestDir);
+            ArW.ShowDialog();
+        }
     }
 }
