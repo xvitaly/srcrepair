@@ -11,9 +11,15 @@ namespace srcrepair
 {
     public partial class FrmArchWrk : Form
     {
-        public FrmArchWrk()
+        private bool IsRunning = true;
+        private string ArchName;
+        private string DestDir;
+        
+        public FrmArchWrk(string A, string D)
         {
             InitializeComponent();
+            ArchName = A;
+            DestDir = D;
         }
 
         private void FrmArchWrk_Load(object sender, EventArgs e)
