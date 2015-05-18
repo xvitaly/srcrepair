@@ -59,5 +59,10 @@ namespace srcrepair
         {
             //
         }
+
+        private void FrmArchWrk_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = IsRunning;
+        }
     }
 }

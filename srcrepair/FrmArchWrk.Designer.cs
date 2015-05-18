@@ -64,6 +64,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmArchWrk";
             this.ShowInTaskbar = false;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmArchWrk_FormClosing);
             this.Load += new System.EventHandler(this.FrmArchWrk_Load);
             this.ResumeLayout(false);
 
