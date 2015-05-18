@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmArchWrk));
             this.AR_WlcMsg = new System.Windows.Forms.Label();
             this.AR_PrgBr = new System.Windows.Forms.ProgressBar();
+            this.AR_Wrk = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // AR_WlcMsg
@@ -42,6 +43,13 @@
             // 
             resources.ApplyResources(this.AR_PrgBr, "AR_PrgBr");
             this.AR_PrgBr.Name = "AR_PrgBr";
+            // 
+            // AR_Wrk
+            // 
+            this.AR_Wrk.WorkerReportsProgress = true;
+            this.AR_Wrk.DoWork += new System.ComponentModel.DoWorkEventHandler(this.AR_Wrk_DoWork);
+            this.AR_Wrk.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.AR_Wrk_ProgressChanged);
+            this.AR_Wrk.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.AR_Wrk_RunWorkerCompleted);
             // 
             // FrmArchWrk
             // 
@@ -65,5 +73,6 @@
 
         private System.Windows.Forms.Label AR_WlcMsg;
         private System.Windows.Forms.ProgressBar AR_PrgBr;
+        private System.ComponentModel.BackgroundWorker AR_Wrk;
     }
 }

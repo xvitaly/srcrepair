@@ -44,5 +44,20 @@ namespace srcrepair
         {
             //
         }
+
+        private void AR_Wrk_DoWork(object sender, DoWorkEventArgs e)
+        {
+            //
+        }
+
+        private void AR_Wrk_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            //
+        }
+
+        private void AR_Wrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            //
+        }
     }
 }
