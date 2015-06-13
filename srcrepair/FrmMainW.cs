@@ -3362,7 +3362,7 @@ namespace srcrepair
             // Воспользуемся модулем очистки для удаления выбранного HUD...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(HUDPath, "*.*"));
-            SteamCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower().Replace("&", ""));
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower().Replace("&", ""));
 
             // Проверяем установлен ли выбранный HUD...
             bool IsInstalled = SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir);
