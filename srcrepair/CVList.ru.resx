@@ -3456,4 +3456,13 @@
   <data name="mat_phong" xml:space="preserve">
     <value>Включает / отключает блеск моделек.</value>
   </data>
+  <data name="sv_allow_point_servercommand" xml:space="preserve">
+    <value>Разрешает / запрещает картам выполнять на сервере специальные функции (например вызов ботов на картах для тренировок). Допустимые значения: official - разрешено только на картах Valve; disallow - запрещено для всех карт; always - разрешено.</value>
+  </data>
+  <data name="tf_workshop_map_sync" xml:space="preserve">
+    <value>Позволяет немедленно оформить подписку на указанную карту в Maps Workshop, а также загрузить её.</value>
+  </data>
+  <data name="tf_workshop_refresh" xml:space="preserve">
+    <value>Принудительно обновляет список подписок в Maps Workshop, а также в фоне загружает обновления для них.</value>
+  </data>
 </root>
