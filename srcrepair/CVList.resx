@@ -2130,4 +2130,13 @@
   <data name="tf_grapplinghook_prevent_fall_damage" xml:space="preserve">
     <value>Enable / disable fall damage for the grappling hook.</value>
   </data>
+  <data name="sv_allow_point_servercommand" xml:space="preserve">
+    <value>Enable / disable point_servercommand entities. Defaults to "official" Valve maps only. Can also be set to "disallow" and "always".</value>
+  </data>
+  <data name="tf_workshop_map_sync" xml:space="preserve">
+    <value>Immediately install a map from the workshop by ID.</value>
+  </data>
+  <data name="tf_workshop_refresh" xml:space="preserve">
+    <value>Recheck tracked workshop maps and refresh subscriptions.</value>
+  </data>
 </root>

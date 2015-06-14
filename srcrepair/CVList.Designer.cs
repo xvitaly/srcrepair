@@ -2968,6 +2968,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable / disable point_servercommand entities. Defaults to &quot;official&quot; Valve maps only. Can also be set to &quot;disallow&quot; and &quot;always&quot;..
+        /// </summary>
+        internal static string sv_allow_point_servercommand {
+            get {
+                return ResourceManager.GetString("sv_allow_point_servercommand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Allow or disallow clients from using voice_inputfromfile on this server..
         /// </summary>
         internal static string sv_allow_voice_from_file {
@@ -6060,6 +6069,24 @@ namespace srcrepair {
         internal static string tf_wipe_attributes {
             get {
                 return ResourceManager.GetString("tf_wipe_attributes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Immediately install a map from the workshop by ID..
+        /// </summary>
+        internal static string tf_workshop_map_sync {
+            get {
+                return ResourceManager.GetString("tf_workshop_map_sync", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recheck tracked workshop maps and refresh subscriptions..
+        /// </summary>
+        internal static string tf_workshop_refresh {
+            get {
+                return ResourceManager.GetString("tf_workshop_refresh", resourceCulture);
             }
         }
         
