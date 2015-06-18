@@ -1823,7 +1823,7 @@ namespace srcrepair
                 Invoke((MethodInvoker)delegate() { HD_Install.Text = CoreLib.GetLocalizedString("HD_InstallBtnProgress"); HD_Install.Enabled = false; });
 
                 // Распаковываем загруженный архив с файлами HUD...
-                CoreLib.ExtractFiles(SelHUD.LocalFile, InstallTmp, SelHUD.ArchiveDir);
+                CoreLib.ExtractFiles(SelHUD.LocalFile, InstallTmp);
 
                 // Устанавливаем и очищаем временный каталог...
                 try { Directory.Move(Path.Combine(InstallTmp, SelHUD.FormatIntDir(SelHUD.ArchiveDir)), Path.Combine(SelGame.CustomInstallDir, SelHUD.InstallDir)); }

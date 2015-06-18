@@ -24,6 +24,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
+using Ionic.Zip;
 
 namespace srcrepair
 {
@@ -48,7 +50,26 @@ namespace srcrepair
 
         private void AR_Wrk_DoWork(object sender, DoWorkEventArgs e)
         {
-            //
+            // Начинаем процесс распаковки с выводом индикатора прогресса...
+            if (File.Exists(ArchName))
+            {
+                using (ZipFile Zip = ZipFile.Read(ArchName))
+                {
+                    // Формируем счётчики...
+                    int TotalFiles = Zip.Count;
+                    int i = 1, j = 0;
+                    
+                    // Начинаем распаковку архива...
+                    foreach (ZipEntry ZFile in Zip)
+                    {
+                        try { ZFile.Extract(DestDir, ExtractExistingFileAction.OverwriteSilently); j = (int)Math.Round(((double)i / (double)TotalFiles * (double)100.00), 0); i++; if ((j >= 0) && (j <= 100)) { AR_Wrk.ReportProgress(j); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    }
+                }
+            }
+            else
+            {
+                throw new FileNotFoundException("Archive not found.", ArchName);
+            }
         }
 
         private void AR_Wrk_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -60,6 +81,12 @@ namespace srcrepair
         private void AR_Wrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             // Работа завершена. Закроем форму...
+            IsRunning = false;
+            if (e.Error != null)
+            {
+                CoreLib.WriteStringToLog(e.Error.Message);
+                MessageBox.Show("AAA");
+            }
             this.Close();
         }
 

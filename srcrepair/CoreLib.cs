@@ -757,54 +757,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Распаковывает архив в указанный каталог при помощи библиотеки DotNetZip.
-        /// </summary>
-        /// <param name="ArchiveName">Архив для распаковки</param>
-        /// <param name="DestDir">Имя для создаваемого архивного файла</param>
-        public static void ExtractFiles(string ArchiveName, string DestDir)
-        {
-            if (File.Exists(ArchiveName))
-            {
-                using (ZipFile Zip = ZipFile.Read(ArchiveName))
-                {
-                    foreach (ZipEntry ZFile in Zip)
-                    {
-                        try { ZFile.Extract(DestDir, ExtractExistingFileAction.OverwriteSilently); } catch (Exception Ex) { WriteStringToLog(Ex.Message); }
-                    }
-                }
-            }
-            else
-            {
-                throw new FileNotFoundException("Archive not found.", ArchiveName);
-            }
-        }
-
-        /// <summary>
-        /// Распаковывает указанные каталоги из архива при помощи библиотеки DotNetZip.
-        /// </summary>
-        /// <param name="ArchiveName">Архив для распаковки</param>
-        /// <param name="DestDir">Имя для создаваемого архивного файла</param>
-        /// <param name="ExtractDir">Каталог, который следует распаковать</param>
-        public static void ExtractFiles(string ArchiveName, string DestDir, string ExtractDir)
-        {
-            if (File.Exists(ArchiveName))
-            {
-                using (ZipFile Zip = ZipFile.Read(ArchiveName))
-                {
-                    IEnumerable<ZipEntry> DirSel = (from e in Zip.Entries where (e.FileName).StartsWith(ExtractDir) select e);
-                    foreach (ZipEntry ZFile in DirSel)
-                    {
-                        try { ZFile.Extract(DestDir, ExtractExistingFileAction.OverwriteSilently); } catch (Exception Ex) { WriteStringToLog(Ex.Message); }
-                    }
-                }
-            }
-            else
-            {
-                throw new FileNotFoundException("Archive not found.", ArchiveName);
-            }
-        }
-
-        /// <summary>
         /// Начинает загрузку с указанного URL с подробным отображением процесса.
         /// </summary>
         /// <param name="URI">URL для загрузки</param>
@@ -825,11 +777,12 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Осуществляет распаковку выбранного архива в указанный каталог.
+        /// Распаковывает архив в указанный каталог при помощи библиотеки DotNetZip
+        /// с выводом прогресса в отдельном окне.
         /// </summary>
         /// <param name="ArchName">Имя архивного файла с указанием полного пути</param>
         /// <param name="DestDir">Каталог назначения</param>
-        public static void UnpackArchiveEx(string ArchName, string DestDir)
+        public static void ExtractFiles(string ArchName, string DestDir)
         {
             FrmArchWrk ArW = new FrmArchWrk(ArchName, DestDir);
             ArW.ShowDialog();
