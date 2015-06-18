@@ -42,7 +42,8 @@ namespace srcrepair
 
         private void FrmArchWrk_Load(object sender, EventArgs e)
         {
-            //
+            // Начинаем процесс распаковки асинхронно...
+            if (!AR_Wrk.IsBusy) { AR_Wrk.RunWorkerAsync(); }
         }
 
         private void AR_Wrk_DoWork(object sender, DoWorkEventArgs e)
