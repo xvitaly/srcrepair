@@ -57,7 +57,8 @@ namespace srcrepair
 
         private void AR_Wrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            //
+            // Работа завершена. Закроем форму...
+            this.Close();
         }
 
         private void FrmArchWrk_FormClosing(object sender, FormClosingEventArgs e)
