@@ -53,7 +53,8 @@ namespace srcrepair
 
         private void AR_Wrk_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            //
+            // Отображаем прогресс распаковки архива в баре...
+            AR_PrgBr.Value = e.ProgressPercentage;
         }
 
         private void AR_Wrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
