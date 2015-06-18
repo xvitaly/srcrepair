@@ -65,6 +65,7 @@ namespace srcrepair
 
         private void FrmArchWrk_FormClosing(object sender, FormClosingEventArgs e)
         {
+            // Блокируем возможность закрытия формы при работающем процессе...
             e.Cancel = IsRunning;
         }
     }
