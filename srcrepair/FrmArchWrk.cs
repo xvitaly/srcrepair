@@ -77,11 +77,7 @@ namespace srcrepair
         {
             // Работа завершена. Закроем форму...
             IsRunning = false;
-            if (e.Error != null)
-            {
-                CoreLib.WriteStringToLog(e.Error.Message);
-                MessageBox.Show("AAA");
-            }
+            if (e.Error != null) { CoreLib.WriteStringToLog(e.Error.Message); MessageBox.Show(CoreLib.GetLocalizedString("AR_UnpackException"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             this.Close();
         }
 

@@ -135,7 +135,7 @@
     <value>0</value>
   </data>
   <data name="AR_WlcMsg.Text" xml:space="preserve">
-    <value>Restoring your backup. Please wait...</value>
+    <value>Unpacking your archive... Please wait.</value>
   </data>
   <data name="&gt;&gt;AR_WlcMsg.Name" xml:space="preserve">
     <value>AR_WlcMsg</value>
@@ -193,7 +193,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Backup restore tool</value>
+    <value>Archive unpack tool</value>
   </data>
   <data name="&gt;&gt;AR_Wrk.Name" xml:space="preserve">
     <value>AR_Wrk</value>
