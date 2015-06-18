@@ -687,4 +687,7 @@
   <data name="UPD_HUDUpdateAvail" xml:space="preserve">
     <value>HUD database update available. New version: {0}.</value>
   </data>
+  <data name="AR_UnpackException" xml:space="preserve">
+    <value>An error occured during unpacking selected archive. Additional information can be found in debug log.</value>
+  </data>
 </root>

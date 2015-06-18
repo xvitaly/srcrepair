@@ -349,6 +349,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occured during unpacking selected archive. Additional information can be found in debug log..
+        /// </summary>
+        internal static string AR_UnpackException {
+            get {
+                return ResourceManager.GetString("AR_UnpackException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occurred while creating the backup. Backup has been created!.
         /// </summary>
         internal static string BackUpCreationFailed {
