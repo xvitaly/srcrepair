@@ -3217,6 +3217,7 @@ namespace srcrepair
             // Удаляем пользовательного каталога...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.*"));
+            CleanDirs.Add(Path.Combine(SelGame.AppWorkshopDir, "*.*"));
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
 
