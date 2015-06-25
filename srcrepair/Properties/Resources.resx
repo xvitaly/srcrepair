@@ -340,4 +340,7 @@
   <data name="UpdateHUDDBFileHash" xml:space="preserve">
     <value>https://www.easycoding.org/files/srcrepair/updates/huds.md5</value>
   </data>
+  <data name="WorkshopFolderName" xml:space="preserve">
+    <value>workshop</value>
+  </data>
 </root>

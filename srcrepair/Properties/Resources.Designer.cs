@@ -658,6 +658,15 @@ namespace srcrepair.Properties {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to workshop.
+        /// </summary>
+        internal static string WorkshopFolderName {
+            get {
+                return ResourceManager.GetString("WorkshopFolderName", resourceCulture);
+            }
+        }
+        
         internal static System.Drawing.Bitmap Xmas {
             get {
                 object obj = ResourceManager.GetObject("Xmas", resourceCulture);
