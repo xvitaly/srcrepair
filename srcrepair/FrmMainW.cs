@@ -2006,7 +2006,7 @@ namespace srcrepair
             try
             {
                 // Получаем нужные значения...
-                SelGame = new SourceGame(AppSelector.Text, App.FullAppPath, App.AppUserDir);
+                SelGame = new SourceGame(AppSelector.Text, App.FullAppPath, App.AppUserDir, App.FullSteamPath);
 
                 // Включаем основные элементы управления (контролы)...
                 MainTabControl.Enabled = true;
@@ -2423,6 +2423,7 @@ namespace srcrepair
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.bsp"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.bsp"));
+            CleanDirs.Add(Path.Combine(SelGame.AppWorkshopDir, "*.bsp"));
             if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "maps", "*.bsp")); }
             OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
         }
