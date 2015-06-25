@@ -108,12 +108,18 @@ namespace srcrepair
         public List<String> FPSConfigs;
 
         /// <summary>
+        /// Содержит путь к каталогу с загруженными данными из Steam Workshop.
+        /// </summary>
+        public string AppWorkshopDir;
+
+        /// <summary>
         /// Конструктор класса. Получает информацию о выбранном приложении.
         /// </summary>
         /// <param name="GameName">Название выбранного приложения</param>
         /// <param name="AppPath">Путь к каталогу SRC Repair</param>
         /// <param name="UserDir">Путь к пользовательскому каталогу SRC Repair</param>
-        public SourceGame(string AppName, string AppPath, string UserDir)
+        /// <param name="SteamDir">Путь к установленному клиенту Steam</param>
+        public SourceGame(string AppName, string AppPath, string UserDir, string SteamDir)
         {
             // Начинаем определять нужные нам значения переменных...
             XmlDocument XMLD = new XmlDocument();
@@ -145,6 +151,7 @@ namespace srcrepair
             VideoCfgFile = Path.Combine(GamePath, ConfDir, "cfg", "video.txt");
             AppHUDDir = Path.Combine(UserDir, Properties.Settings.Default.HUDLocalDir, SmallAppName);
             CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : "");
+            AppWorkshopDir = Path.Combine(SteamDir, Properties.Resources.SteamAppsFolderName, Properties.Resources.WorkshopFolderName, "content", GameInternalID);
         }
     }
 }
