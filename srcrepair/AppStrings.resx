@@ -690,4 +690,7 @@
   <data name="AR_UnpackException" xml:space="preserve">
     <value>An error occured during unpacking selected archive. Additional information can be found in debug log.</value>
   </data>
+  <data name="PS_ProgressArchive" xml:space="preserve">
+    <value>Creating backup...</value>
+  </data>
 </root>
