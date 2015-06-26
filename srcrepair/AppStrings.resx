@@ -693,4 +693,7 @@
   <data name="PS_ProgressArchive" xml:space="preserve">
     <value>Creating backup...</value>
   </data>
+  <data name="PS_ProgressCleanup" xml:space="preserve">
+    <value>Cleanup in progress...</value>
+  </data>
 </root>

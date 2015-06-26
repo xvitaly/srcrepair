@@ -1258,6 +1258,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cleanup in progress....
+        /// </summary>
+        internal static string PS_ProgressCleanup {
+            get {
+                return ResourceManager.GetString("PS_ProgressCleanup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Are you sure you want to restore factory game settings? This will remove all non-standard and old files and settings stored in Windows registry..
         /// </summary>
         internal static string PS_ResetSettingsMsg {
