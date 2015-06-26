@@ -696,4 +696,7 @@
   <data name="PS_ProgressCleanup" xml:space="preserve">
     <value>Cleanup in progress...</value>
   </data>
+  <data name="PS_ProgressFinished" xml:space="preserve">
+    <value>Done.</value>
+  </data>
 </root>
