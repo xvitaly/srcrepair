@@ -215,6 +215,7 @@ namespace srcrepair
                 // Добавляем в очередь для очистки...
                 Invoke((MethodInvoker)delegate()
                 {
+                    CM_Info.Text = CoreLib.GetLocalizedString("PS_ProcessPrepare");
                     foreach (ListViewItem LVI in CM_FTable.Items)
                     {
                         if (LVI.Checked)
