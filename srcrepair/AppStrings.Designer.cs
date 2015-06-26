@@ -1240,6 +1240,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Starting cleanup....
+        /// </summary>
+        internal static string PS_ProcessPrepare {
+            get {
+                return ResourceManager.GetString("PS_ProcessPrepare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Steam has been successfully terminated..
         /// </summary>
         internal static string PS_ProcessTerminated {
