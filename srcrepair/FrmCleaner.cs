@@ -227,11 +227,15 @@ namespace srcrepair
                 // Добавляем в архив (если выбрано)...
                 if (Properties.Settings.Default.PackBeforeCleanup || ForceBackUp)
                 {
+                    Invoke((MethodInvoker)delegate() { CM_Info.Text = CoreLib.GetLocalizedString("PS_ProgressArchive"); });
                     if (!CoreLib.CompressFiles(DeleteQueue, CoreLib.GenerateBackUpFileName(FullBackUpDirPath, Properties.Resources.BU_PrefixDef)))
                     {
                         MessageBox.Show(CoreLib.GetLocalizedString("PS_ArchFailed"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+
+                // Меняем текст в строке статуса...
+                Invoke((MethodInvoker)delegate() { CM_Info.Text = CoreLib.GetLocalizedString("PS_ProgressCleanup"); });
 
                 // Формируем счётчики...
                 int TotalFiles = DeleteQueue.Count;
@@ -277,6 +281,7 @@ namespace srcrepair
             if (e.Error == null)
             {
                 // Выводим сообщение об успешном окончании очистки...
+                CM_Info.Text = CoreLib.GetLocalizedString("PS_ProgressFinished");
                 MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
