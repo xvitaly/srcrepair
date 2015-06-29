@@ -4336,7 +4336,7 @@
     <value>244, 22</value>
   </data>
   <data name="MNUHelp.Text" xml:space="preserve">
-    <value>&amp;Online help and official Wiki</value>
+    <value>&amp;Online help (official)</value>
   </data>
   <data name="MNUUpdateCheck.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 22</value>
