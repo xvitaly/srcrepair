@@ -424,4 +424,12 @@
     <UserDir>0</UserDir>
     <SID>362890</SID>
   </Game>
+  <Game Name="Portal Stories: Mel">
+    <HasVF>1</HasVF>
+    <DirName>Portal Stories Mel</DirName>
+    <SmallName>portal_stories</SmallName>
+    <VFDir>portal_stories</VFDir>
+    <UserDir>0</UserDir>
+    <SID>317400</SID>
+  </Game>
 </Games>
