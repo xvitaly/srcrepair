@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainW));
-            this.TabIcons = new System.Windows.Forms.ImageList(this.components);
+            this.TabIcons = new System.Windows.Forms.ImageList();
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
             this.GT_ResAvailable = new System.Windows.Forms.ComboBox();
@@ -214,10 +213,11 @@
             this.MNUExit = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpMNU = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNUOpinion = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNUReportBug = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUUpdateCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUSep5 = new System.Windows.Forms.ToolStripSeparator();
+            this.MNUReportBug = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUShowLog = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUOpinion = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSteamGroup = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep3 = new System.Windows.Forms.ToolStripSeparator();
             this.MNULnkEasyCoding = new System.Windows.Forms.ToolStripMenuItem();
@@ -1794,10 +1794,11 @@
             // 
             this.HelpMNU.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MNUHelp,
-            this.MNUOpinion,
-            this.MNUReportBug,
             this.MNUUpdateCheck,
+            this.MNUSep5,
+            this.MNUReportBug,
             this.MNUShowLog,
+            this.MNUOpinion,
             this.MNUSteamGroup,
             this.MNUSep3,
             this.MNULnkEasyCoding,
@@ -1814,12 +1815,17 @@
             resources.ApplyResources(this.MNUHelp, "MNUHelp");
             this.MNUHelp.Click += new System.EventHandler(this.MNUHelp_Click);
             // 
-            // MNUOpinion
+            // MNUUpdateCheck
             // 
-            this.MNUOpinion.Image = global::srcrepair.Properties.Resources.Home;
-            this.MNUOpinion.Name = "MNUOpinion";
-            resources.ApplyResources(this.MNUOpinion, "MNUOpinion");
-            this.MNUOpinion.Click += new System.EventHandler(this.MNUOpinion_Click);
+            this.MNUUpdateCheck.Image = global::srcrepair.Properties.Resources.Globe;
+            this.MNUUpdateCheck.Name = "MNUUpdateCheck";
+            resources.ApplyResources(this.MNUUpdateCheck, "MNUUpdateCheck");
+            this.MNUUpdateCheck.Click += new System.EventHandler(this.MNUUpdateCheck_Click);
+            // 
+            // MNUSep5
+            // 
+            this.MNUSep5.Name = "MNUSep5";
+            resources.ApplyResources(this.MNUSep5, "MNUSep5");
             // 
             // MNUReportBug
             // 
@@ -1828,19 +1834,19 @@
             resources.ApplyResources(this.MNUReportBug, "MNUReportBug");
             this.MNUReportBug.Click += new System.EventHandler(this.MNUReportBug_Click);
             // 
-            // MNUUpdateCheck
-            // 
-            this.MNUUpdateCheck.Image = global::srcrepair.Properties.Resources.Globe;
-            this.MNUUpdateCheck.Name = "MNUUpdateCheck";
-            resources.ApplyResources(this.MNUUpdateCheck, "MNUUpdateCheck");
-            this.MNUUpdateCheck.Click += new System.EventHandler(this.MNUUpdateCheck_Click);
-            // 
             // MNUShowLog
             // 
             this.MNUShowLog.Image = global::srcrepair.Properties.Resources.TextEditor;
             this.MNUShowLog.Name = "MNUShowLog";
             resources.ApplyResources(this.MNUShowLog, "MNUShowLog");
             this.MNUShowLog.Click += new System.EventHandler(this.MNUShowLog_Click);
+            // 
+            // MNUOpinion
+            // 
+            this.MNUOpinion.Image = global::srcrepair.Properties.Resources.Home;
+            this.MNUOpinion.Name = "MNUOpinion";
+            resources.ApplyResources(this.MNUOpinion, "MNUOpinion");
+            this.MNUOpinion.Click += new System.EventHandler(this.MNUOpinion_Click);
             // 
             // MNUSteamGroup
             // 
@@ -2226,6 +2232,7 @@
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnAppCache;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnTmpDir;
         private System.Windows.Forms.ToolStripMenuItem MNUShowLog;
+        private System.Windows.Forms.ToolStripSeparator MNUSep5;
     }
 }
 

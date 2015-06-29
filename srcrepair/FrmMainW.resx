@@ -4338,11 +4338,14 @@
   <data name="MNUHelp.Text" xml:space="preserve">
     <value>&amp;Online help and official Wiki</value>
   </data>
-  <data name="MNUOpinion.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MNUUpdateCheck.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 22</value>
   </data>
-  <data name="MNUOpinion.Text" xml:space="preserve">
-    <value>Exp&amp;ress an opinion</value>
+  <data name="MNUUpdateCheck.Text" xml:space="preserve">
+    <value>Chec&amp;k for Updates...</value>
+  </data>
+  <data name="MNUSep5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>241, 6</value>
   </data>
   <data name="MNUReportBug.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 22</value>
@@ -4350,17 +4353,17 @@
   <data name="MNUReportBug.Text" xml:space="preserve">
     <value>Report a &amp;bug</value>
   </data>
-  <data name="MNUUpdateCheck.Size" type="System.Drawing.Size, System.Drawing">
-    <value>244, 22</value>
-  </data>
-  <data name="MNUUpdateCheck.Text" xml:space="preserve">
-    <value>Chec&amp;k for Updates...</value>
-  </data>
   <data name="MNUShowLog.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 22</value>
   </data>
   <data name="MNUShowLog.Text" xml:space="preserve">
     <value>&amp;Show debug log</value>
+  </data>
+  <data name="MNUOpinion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 22</value>
+  </data>
+  <data name="MNUOpinion.Text" xml:space="preserve">
+    <value>Exp&amp;ress an opinion</value>
   </data>
   <data name="MNUSteamGroup.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 22</value>
@@ -5520,11 +5523,17 @@
   <data name="&gt;&gt;MNUHelp.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MNUOpinion.Name" xml:space="preserve">
-    <value>MNUOpinion</value>
+  <data name="&gt;&gt;MNUUpdateCheck.Name" xml:space="preserve">
+    <value>MNUUpdateCheck</value>
   </data>
-  <data name="&gt;&gt;MNUOpinion.Type" xml:space="preserve">
+  <data name="&gt;&gt;MNUUpdateCheck.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUSep5.Name" xml:space="preserve">
+    <value>MNUSep5</value>
+  </data>
+  <data name="&gt;&gt;MNUSep5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUReportBug.Name" xml:space="preserve">
     <value>MNUReportBug</value>
@@ -5532,16 +5541,16 @@
   <data name="&gt;&gt;MNUReportBug.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MNUUpdateCheck.Name" xml:space="preserve">
-    <value>MNUUpdateCheck</value>
-  </data>
-  <data name="&gt;&gt;MNUUpdateCheck.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;MNUShowLog.Name" xml:space="preserve">
     <value>MNUShowLog</value>
   </data>
   <data name="&gt;&gt;MNUShowLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUOpinion.Name" xml:space="preserve">
+    <value>MNUOpinion</value>
+  </data>
+  <data name="&gt;&gt;MNUOpinion.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUSteamGroup.Name" xml:space="preserve">
