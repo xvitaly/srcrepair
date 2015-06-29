@@ -702,4 +702,7 @@
   <data name="PS_ProcessPrepare" xml:space="preserve">
     <value>Starting cleanup...</value>
   </data>
+  <data name="AppNoDebugFile" xml:space="preserve">
+    <value>Debug log file not found!</value>
+  </data>
 </root>

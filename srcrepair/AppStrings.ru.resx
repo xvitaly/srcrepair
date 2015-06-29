@@ -895,4 +895,8 @@
     <value>Очистка завершена.</value>
     <comment>Сообщение, выводимое в строке статуса модуля очистки после завершения процесса</comment>
   </data>
+  <data name="AppNoDebugFile" xml:space="preserve">
+    <value>Файл отладочного журнала не найден!</value>
+    <comment>Сообщение при невозможности найти отладочный журнал</comment>
+  </data>
 </root>

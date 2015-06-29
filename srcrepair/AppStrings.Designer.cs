@@ -241,6 +241,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Debug log file not found!.
+        /// </summary>
+        internal static string AppNoDebugFile {
+            get {
+                return ResourceManager.GetString("AppNoDebugFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Attention! SRC Repair can&apos;t detect any installed supported games. Please run your desired game from Steam at least once. After that, they will appear in the list and you will be able to manage them by this program..
         /// </summary>
         internal static string AppNoGamesDetected {
