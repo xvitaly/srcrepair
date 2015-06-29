@@ -3399,5 +3399,10 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(Path.GetTempPath(), "*.*"));
             OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
         }
+
+        private void MNUShowLog_Click(object sender, EventArgs e)
+        {
+            //
+        }
     }
 }
