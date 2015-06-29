@@ -3402,7 +3402,16 @@ namespace srcrepair
 
         private void MNUShowLog_Click(object sender, EventArgs e)
         {
-            //
+            // Выведем на экран содержимое отладочного журнала...
+            if (Properties.Settings.Default.EnableDebugLog)
+            {
+                string DFile = Path.Combine(CoreLib.GetApplicationPath(), Properties.Settings.Default.DebugLogFileName);
+                if (File.Exists(DFile)) { try { Process.Start(DFile); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } } else { MessageBox.Show(CoreLib.GetLocalizedString("AppNoDebugFile"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            }
+            else
+            {
+                MessageBox.Show(CoreLib.GetLocalizedString("AppDebugDisabled"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
