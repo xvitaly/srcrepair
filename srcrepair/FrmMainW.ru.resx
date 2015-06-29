@@ -1099,6 +1099,12 @@
   <data name="MNUUpdateCheck.Text" xml:space="preserve">
     <value>Пров&amp;ерить наличие обновлений...</value>
   </data>
+  <data name="MNUShowLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>293, 22</value>
+  </data>
+  <data name="MNUShowLog.Text" xml:space="preserve">
+    <value>&amp;Показать отладочный журнал</value>
+  </data>
   <data name="MNUSteamGroup.Size" type="System.Drawing.Size, System.Drawing">
     <value>293, 22</value>
   </data>

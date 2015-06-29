@@ -4356,6 +4356,12 @@
   <data name="MNUUpdateCheck.Text" xml:space="preserve">
     <value>Chec&amp;k for Updates...</value>
   </data>
+  <data name="MNUShowLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 22</value>
+  </data>
+  <data name="MNUShowLog.Text" xml:space="preserve">
+    <value>&amp;Show debug log</value>
+  </data>
   <data name="MNUSteamGroup.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 22</value>
   </data>
@@ -5530,6 +5536,12 @@
     <value>MNUUpdateCheck</value>
   </data>
   <data name="&gt;&gt;MNUUpdateCheck.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUShowLog.Name" xml:space="preserve">
+    <value>MNUShowLog</value>
+  </data>
+  <data name="&gt;&gt;MNUShowLog.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUSteamGroup.Name" xml:space="preserve">

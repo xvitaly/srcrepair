@@ -217,6 +217,7 @@
             this.MNUOpinion = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUReportBug = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUUpdateCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUShowLog = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSteamGroup = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep3 = new System.Windows.Forms.ToolStripSeparator();
             this.MNULnkEasyCoding = new System.Windows.Forms.ToolStripMenuItem();
@@ -1796,6 +1797,7 @@
             this.MNUOpinion,
             this.MNUReportBug,
             this.MNUUpdateCheck,
+            this.MNUShowLog,
             this.MNUSteamGroup,
             this.MNUSep3,
             this.MNULnkEasyCoding,
@@ -1832,6 +1834,13 @@
             this.MNUUpdateCheck.Name = "MNUUpdateCheck";
             resources.ApplyResources(this.MNUUpdateCheck, "MNUUpdateCheck");
             this.MNUUpdateCheck.Click += new System.EventHandler(this.MNUUpdateCheck_Click);
+            // 
+            // MNUShowLog
+            // 
+            this.MNUShowLog.Image = global::srcrepair.Properties.Resources.TextEditor;
+            this.MNUShowLog.Name = "MNUShowLog";
+            resources.ApplyResources(this.MNUShowLog, "MNUShowLog");
+            this.MNUShowLog.Click += new System.EventHandler(this.MNUShowLog_Click);
             // 
             // MNUSteamGroup
             // 
@@ -2216,6 +2225,7 @@
         private System.ComponentModel.BackgroundWorker BW_HudInstall;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnAppCache;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnTmpDir;
+        private System.Windows.Forms.ToolStripMenuItem MNUShowLog;
     }
 }
 
