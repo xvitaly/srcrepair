@@ -12,13 +12,13 @@ function fetch_hud
     if [ ! -d "$3" ]; then
         mkdir -p $3
     fi
-    
+
     # Проверяем существование архива и если он не существует, загружаем...
     if [ ! -f "$3/$3.zip" ]; then
         # Загружаем новую версию архива из апстрима...
         wget $2 -O $3/$3.zip > /dev/null 2> /dev/null
     fi
-    
+
     # Генерируем окончательное имя архива...
     nf=$(sha256sum $3/$3.zip | awk '{print $1}')
     mv $3/$3.zip $3/$3_${nf:0:8}.zip
@@ -56,3 +56,4 @@ fetch_hud http://huds.tf/img/main/kbnhud.png https://github.com/Jotunn/KBNHud/ar
 fetch_hud http://huds.tf/img/main/medhud.png https://github.com/Intellectualbadass/medHUD/archive/master.zip medhud
 fetch_hud http://huds.tf/img/main/prismhud.png https://github.com/JarateKing/PrismHUD/archive/master.zip prismhud
 fetch_hud http://huds.tf/img/main/rayshud.png https://github.com/raysfire/rayshud/archive/master.zip rayshud
+fetch_hud http://huds.tf/img/main/evehud.png http://host4me.biz/fps/fps/db/guis/367/eve_hud_v355.zip evehud
