@@ -8,11 +8,20 @@ function fetch_hud
         wget $1 -O $3.png > /dev/null 2> /dev/null  
     fi
     
-    # Проверяем существование архива и если он не существует, загружаем...
-    if [ ! -f "$3.zip" ]; then
-        # Загружаем новую версию архива из апстрима...
-        wget $2 -O $3.zip > /dev/null 2> /dev/null
+    # Проверим существование каталога для HUD и если он не существует, создаём...
+    if [ ! -d "$3" ]; then
+        mkdir -p $3
     fi
+    
+    # Проверяем существование архива и если он не существует, загружаем...
+    if [ ! -f "$3/$3.zip" ]; then
+        # Загружаем новую версию архива из апстрима...
+        wget $2 -O $3/$3.zip > /dev/null 2> /dev/null
+    fi
+    
+    # Генерируем окончательное имя архива...
+    nf=$(sha256sum $3/$3.zip | awk '{print $1}')
+    mv $3/$3.zip $3/$3_${nf:0:8}.zip
 }
 
 fetch_hud http://huds.tf/img/main/7hud.png https://github.com/Sevin7/7HUD/archive/master.zip 7HUD
