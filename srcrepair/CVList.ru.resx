@@ -3465,4 +3465,31 @@
   <data name="tf_workshop_refresh" xml:space="preserve">
     <value>Принудительно обновляет список подписок в Maps Workshop, а также в фоне загружает обновления для них.</value>
   </data>
+  <data name="mp_tournament_readymode" xml:space="preserve">
+    <value>Разрешить / запретить каждому игроку самостоятельно задавать статус готовности в режиме чемпионата.</value>
+  </data>
+  <data name="mp_tournament_readymode_countdown" xml:space="preserve">
+    <value>Включает или отключает отображение счётчика до начала раунда при готовности команд.</value>
+  </data>
+  <data name="mp_tournament_readymode_min" xml:space="preserve">
+    <value>Задаёт минимальное количество игроков на сервере для появления возможности переключить статус готовности.</value>
+  </data>
+  <data name="mp_tournament_readymode_team_size" xml:space="preserve">
+    <value>Задаёт минимальное количество готовых игроков, по достижении которого начнётся раунд.</value>
+  </data>
+  <data name="tf_dropped_weapon_lifetime" xml:space="preserve">
+    <value>Время в секундах, в течение которого будут доступны для подбора брошенные оружия в TF2. 0 - полное отключение.</value>
+  </data>
+  <data name="tf_mvm_respec_enabled" xml:space="preserve">
+    <value>Разрешает / запрещает перераспределение очков навыков в режиме MvM.</value>
+  </data>
+  <data name="tf_mvm_respec_limit" xml:space="preserve">
+    <value>Задаёт лимит времени на перераспределение очков навыков в режиме MvM.</value>
+  </data>
+  <data name="tf_player_movement_restart_freeze" xml:space="preserve">
+    <value>Задаёт длительность "заморозки" игроков в начале раунда.</value>
+  </data>
+  <data name="tf_spec_xray" xml:space="preserve">
+    <value>Разрешает / запрещает зрителям и мёртвым игрокам видеть других игроков и постройки через стены.</value>
+  </data>
 </root>
