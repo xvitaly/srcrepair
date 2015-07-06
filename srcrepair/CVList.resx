@@ -2139,4 +2139,34 @@
   <data name="tf_workshop_refresh" xml:space="preserve">
     <value>Recheck tracked workshop maps and refresh subscriptions.</value>
   </data>
+  <data name="mp_tournament_readymode" xml:space="preserve">
+    <value>Allows tournament mode to use a per-player ready system.</value>
+  </data>
+  <data name="mp_tournament_readymode_countdown" xml:space="preserve">
+    <value>The number of seconds before a match begins when both teams are ready.</value>
+  </data>
+  <data name="mp_tournament_readymode_min" xml:space="preserve">
+    <value>Minimum number of players required on the server before players can toggle ready status.</value>
+  </data>
+  <data name="mp_tournament_readymode_team_size" xml:space="preserve">
+    <value>Minimum number of players required to be ready per-team before the game can begin.</value>
+  </data>
+  <data name="tf_dropped_weapon_lifetime" xml:space="preserve">
+    <value>Store dropped weapons for N seconds. 0 - disabled.</value>
+  </data>
+  <data name="tf_mvm_respec_enabled" xml:space="preserve">
+    <value>Allow / disallow skill respec in MvM mode.</value>
+  </data>
+  <data name="tf_mvm_respec_limit" xml:space="preserve">
+    <value>Sets MvM skill respec time limit.</value>
+  </data>
+  <data name="tf_player_movement_restart_freeze" xml:space="preserve">
+    <value>Controls the freeze period at the beginning of round.</value>
+  </data>
+  <data name="tf_spec_xray" xml:space="preserve">
+    <value>Added teammate player glow outlines, names, and health bars for spectators.</value>
+  </data>
+  <data name="tv_delaymapchange_protect" xml:space="preserve">
+    <value>Prevent manual map changes if SourceTV has not caught up with a major event like the end of a round.</value>
+  </data>
 </root>

@@ -2671,6 +2671,42 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allows tournament mode to use a per-player ready system..
+        /// </summary>
+        internal static string mp_tournament_readymode {
+            get {
+                return ResourceManager.GetString("mp_tournament_readymode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The number of seconds before a match begins when both teams are ready..
+        /// </summary>
+        internal static string mp_tournament_readymode_countdown {
+            get {
+                return ResourceManager.GetString("mp_tournament_readymode_countdown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minimum number of players required on the server before players can toggle ready status..
+        /// </summary>
+        internal static string mp_tournament_readymode_min {
+            get {
+                return ResourceManager.GetString("mp_tournament_readymode_min", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minimum number of players required to be ready per-team before the game can begin..
+        /// </summary>
+        internal static string mp_tournament_readymode_team_size {
+            get {
+                return ResourceManager.GetString("mp_tournament_readymode_team_size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Restart Tournament Mode on the current level..
         /// </summary>
         internal static string mp_tournament_restart {
@@ -4894,6 +4930,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Store dropped weapons for N seconds. 0 - disabled..
+        /// </summary>
+        internal static string tf_dropped_weapon_lifetime {
+            get {
+                return ResourceManager.GetString("tf_dropped_weapon_lifetime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Score for escorting the train, in points per second..
         /// </summary>
         internal static string tf_escort_score_rate {
@@ -5497,6 +5542,24 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allow / disallow skill respec in MvM mode..
+        /// </summary>
+        internal static string tf_mvm_respec_enabled {
+            get {
+                return ResourceManager.GetString("tf_mvm_respec_enabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sets MvM skill respec time limit..
+        /// </summary>
+        internal static string tf_mvm_respec_limit {
+            get {
+                return ResourceManager.GetString("tf_mvm_respec_limit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sets the challenge level of the invading bot army: 1 = easiest, 3 = normal, 5 = hardest..
         /// </summary>
         internal static string tf_mvm_skill {
@@ -5583,6 +5646,15 @@ namespace srcrepair {
         internal static string tf_party_debug {
             get {
                 return ResourceManager.GetString("tf_party_debug", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Controls the freeze period at the beginning of round..
+        /// </summary>
+        internal static string tf_player_movement_restart_freeze {
+            get {
+                return ResourceManager.GetString("tf_player_movement_restart_freeze", resourceCulture);
             }
         }
         
@@ -5808,6 +5880,15 @@ namespace srcrepair {
         internal static string tf_simple_disguise_menu {
             get {
                 return ResourceManager.GetString("tf_simple_disguise_menu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Added teammate player glow outlines, names, and health bars for spectators..
+        /// </summary>
+        internal static string tf_spec_xray {
+            get {
+                return ResourceManager.GetString("tf_spec_xray", resourceCulture);
             }
         }
         
@@ -6087,6 +6168,15 @@ namespace srcrepair {
         internal static string tf_workshop_refresh {
             get {
                 return ResourceManager.GetString("tf_workshop_refresh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prevent manual map changes if SourceTV has not caught up with a major event like the end of a round..
+        /// </summary>
+        internal static string tv_delaymapchange_protect {
+            get {
+                return ResourceManager.GetString("tv_delaymapchange_protect", resourceCulture);
             }
         }
         
