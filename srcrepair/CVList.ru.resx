@@ -3492,4 +3492,7 @@
   <data name="tf_spec_xray" xml:space="preserve">
     <value>Разрешает / запрещает зрителям и мёртвым игрокам видеть других игроков и постройки через стены.</value>
   </data>
+  <data name="tf_hud_target_id_show_avatars" xml:space="preserve">
+    <value>Задаёт параметры отображения аватаров на панели Target ID HUD: выключены, включены для всех или включены только для друзей.</value>
+  </data>
 </root>
