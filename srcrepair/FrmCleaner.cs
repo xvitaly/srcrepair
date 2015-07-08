@@ -246,7 +246,7 @@ namespace srcrepair
                 foreach (string Fl in DeleteQueue)
                 {
                     try { j = (int)Math.Round(((double)i / (double)TotalFiles * (double)100.00), 0); i++; if ((j >= 0) && (j <= 100)) { ClnWrk.ReportProgress(j); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { if (File.Exists(Fl)) { File.Delete(Fl); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { if (File.Exists(Fl)) { File.SetAttributes(Fl, FileAttributes.Normal); File.Delete(Fl); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                 }
 
                 // Удалим пустые каталоги (если разрешено)...
