@@ -1444,7 +1444,7 @@
     <value>Время, в течение которого после ухода прицела информация будет оставаться на экране.</value>
   </data>
   <data name="mp_respawnwavetime" xml:space="preserve">
-    <value>Задаёт время до респауна (возрождения) игрока.</value>
+    <value>Задаёт время между волнами возрождения.</value>
   </data>
   <data name="mp_restartgame" xml:space="preserve">
     <value>Время в секундах, через которое карта будет перезапущена.</value>
