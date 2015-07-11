@@ -1060,6 +1060,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Selected HUD is not fully compatible with the latest version of the game. We recommend you to upgrade the HUD database..
+        /// </summary>
+        internal static string HD_NotTested {
+            get {
+                return ResourceManager.GetString("HD_NotTested", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         internal static string InputBoxCancelBtnName {

@@ -708,4 +708,7 @@
   <data name="AppNoDebugFile" xml:space="preserve">
     <value>Debug log file not found!</value>
   </data>
+  <data name="HD_NotTested" xml:space="preserve">
+    <value>Selected HUD is not fully compatible with the latest version of the game. We recommend you to upgrade the HUD database.</value>
+  </data>
 </root>
