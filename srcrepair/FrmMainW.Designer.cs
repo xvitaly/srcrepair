@@ -1405,6 +1405,7 @@
             resources.ApplyResources(this.HD_Warning, "HD_Warning");
             this.HD_Warning.Name = "HD_Warning";
             this.HD_Warning.TabStop = false;
+            this.HD_Warning.Click += new System.EventHandler(this.HD_Warning_Click);
             // 
             // HD_GB_Pbx
             // 

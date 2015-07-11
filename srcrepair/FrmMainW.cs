@@ -3415,5 +3415,11 @@ namespace srcrepair
                 MessageBox.Show(CoreLib.GetLocalizedString("AppDebugDisabled"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void HD_Warning_Click(object sender, EventArgs e)
+        {
+            // Выведем предупреждающие сообщения...
+            MessageBox.Show(CoreLib.GetLocalizedString("HD_NotTested"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
     }
 }
