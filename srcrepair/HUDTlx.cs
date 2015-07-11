@@ -118,7 +118,7 @@ namespace srcrepair
                 {
                     Name = XMLD.GetElementsByTagName("Name")[i].InnerText;
                     URI = XMLD.GetElementsByTagName("URI")[i].InnerText;
-                    IsUpdated = XMLD.GetElementsByTagName("URI")[i].InnerText == "1";
+                    IsUpdated = XMLD.GetElementsByTagName("IsUpdated")[i].InnerText == "1";
                     Preview = XMLD.GetElementsByTagName("Preview")[i].InnerText;
                     Site = XMLD.GetElementsByTagName("Site")[i].InnerText;
                     ArchiveDir = XMLD.GetElementsByTagName("ArchiveDir")[i].InnerText;
