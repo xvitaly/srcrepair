@@ -2034,6 +2034,7 @@ namespace srcrepair
                 HD_Install.Enabled = false;
                 HD_Homepage.Enabled = false;
                 HD_Uninstall.Enabled = false;
+                HD_Warning.Visible = false;
                 HD_GB_Pbx.Image = null;
 
                 // Закроем открытые конфиги в редакторе...
@@ -3329,6 +3330,7 @@ namespace srcrepair
             HD_GB_Pbx.Image = Properties.Resources.LoadingFile;
             HD_Install.Enabled = Success;
             HD_Homepage.Enabled = Success;
+            HD_Warning.Visible = Success && !SelHUD.IsUpdated;
 
             // Проверяем установлен ли выбранный HUD...
             HD_Uninstall.Enabled = SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir);

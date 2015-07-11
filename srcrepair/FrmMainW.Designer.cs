@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainW));
-            this.TabIcons = new System.Windows.Forms.ImageList();
+            this.TabIcons = new System.Windows.Forms.ImageList(this.components);
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
             this.GT_ResAvailable = new System.Windows.Forms.ComboBox();
@@ -159,6 +160,7 @@
             this.HD_Uninstall = new System.Windows.Forms.Button();
             this.HD_Install = new System.Windows.Forms.Button();
             this.HD_GB_Desc = new System.Windows.Forms.GroupBox();
+            this.HD_Warning = new System.Windows.Forms.PictureBox();
             this.HD_GB_Pbx = new System.Windows.Forms.PictureBox();
             this.HD_HSel = new System.Windows.Forms.ComboBox();
             this.L_HD_HSel = new System.Windows.Forms.Label();
@@ -260,6 +262,7 @@
             this.FP_GB_Desc.SuspendLayout();
             this.HUDInstall.SuspendLayout();
             this.HD_GB_Desc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HD_Warning)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HD_GB_Pbx)).BeginInit();
             this.RescueCentre.SuspendLayout();
             this.BU_BToolbar.SuspendLayout();
@@ -1390,10 +1393,18 @@
             // 
             // HD_GB_Desc
             // 
+            this.HD_GB_Desc.Controls.Add(this.HD_Warning);
             this.HD_GB_Desc.Controls.Add(this.HD_GB_Pbx);
             resources.ApplyResources(this.HD_GB_Desc, "HD_GB_Desc");
             this.HD_GB_Desc.Name = "HD_GB_Desc";
             this.HD_GB_Desc.TabStop = false;
+            // 
+            // HD_Warning
+            // 
+            this.HD_Warning.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.HD_Warning, "HD_Warning");
+            this.HD_Warning.Name = "HD_Warning";
+            this.HD_Warning.TabStop = false;
             // 
             // HD_GB_Pbx
             // 
@@ -2008,6 +2019,7 @@
             this.FP_GB_Desc.ResumeLayout(false);
             this.HUDInstall.ResumeLayout(false);
             this.HD_GB_Desc.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.HD_Warning)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HD_GB_Pbx)).EndInit();
             this.RescueCentre.ResumeLayout(false);
             this.RescueCentre.PerformLayout();
@@ -2233,6 +2245,7 @@
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnTmpDir;
         private System.Windows.Forms.ToolStripMenuItem MNUShowLog;
         private System.Windows.Forms.ToolStripSeparator MNUSep5;
+        private System.Windows.Forms.PictureBox HD_Warning;
     }
 }
 
