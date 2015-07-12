@@ -47,7 +47,7 @@ fetch_hud http://huds.tf/img/main/harvardhud.png https://github.com/harvardbb/ha
 fetch_hud http://huds.tf/img/main/bwhud.png https://github.com/bw-/bw-HUD/archive/master.zip bwhud
 fetch_hud http://huds.tf/img/main/budhud.png https://github.com/WhiskerBiscuit/budhud/archive/master.zip budhud
 fetch_hud http://huds.tf/img/main/idhud.png https://github.com/Eniere/idhud/archive/master.zip idhud
-fetch_hud http://huds.tf/img/main/jedihud.png https://gitgud.net/JediThug/jedihud/repository/archive.zip jedihud
+fetch_hud http://huds.tf/img/main/jedihud.png https://gitgud.io/JediThug/JediHUD/repository/archive.zip?ref=release jedihud
 fetch_hud http://huds.tf/img/main/noto.png https://github.com/omnibombulator/noto/archive/master.zip noto
 fetch_hud http://huds.tf/img/main/riethud.png https://github.com/TheRiet/rietHUD/archive/master.zip riethud
 fetch_hud http://huds.tf/img/main/morghud.png https://github.com/ItsMorgus/MorgHUD/archive/master.zip morghud
@@ -56,4 +56,4 @@ fetch_hud http://huds.tf/img/main/kbnhud.png https://github.com/Jotunn/KBNHud/ar
 fetch_hud http://huds.tf/img/main/medhud.png https://github.com/Intellectualbadass/medHUD/archive/master.zip medhud
 fetch_hud http://huds.tf/img/main/prismhud.png https://github.com/JarateKing/PrismHUD/archive/master.zip prismhud
 fetch_hud http://huds.tf/img/main/rayshud.png https://github.com/raysfire/rayshud/archive/master.zip rayshud
-fetch_hud http://huds.tf/img/main/evehud.png http://files.gamebanana.com/guis/eve_hud_v360.zip evehud
+fetch_hud http://huds.tf/img/main/evehud.png http://files.gamebanana.com/guis/eve_hud_v362.zip evehud
