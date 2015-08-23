@@ -307,6 +307,14 @@
       <Link>cfgs\chrismaxquality_ru.txt</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\tfiles\cfgs\comangliamaxfps_en.txt">
+      <Link>cfgs\comangliamaxfps_en.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\comangliamaxfps_ru.txt">
+      <Link>cfgs\comangliamaxfps_ru.txt</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\tfiles\cfgs\config_default.cfg">
       <Link>cfgs\config_default.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -357,6 +365,10 @@
     </Content>
     <Content Include="..\tfiles\inno\ru-RU.isl">
       <Link>ru-RU.isl</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\tfiles\cfgs\comangliamaxfps.cfg">
+      <Link>cfgs\comangliamaxfps.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="..\tfiles\gpg-sign.sh">
