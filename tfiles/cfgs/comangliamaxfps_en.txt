@@ -1,0 +1,4 @@
+﻿Comanglia' Potato / Toaster config inspired by chris, designed to get you a large performance boost. Strongly recommended for old or low-end PCs and graphics cards. This config gives the greatest FPS increase.
+
+FPS increase: High
+Graphics degradation: 16-bit style
