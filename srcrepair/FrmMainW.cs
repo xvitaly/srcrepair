@@ -3342,20 +3342,27 @@ namespace srcrepair
         private void HD_Install_Click(object sender, EventArgs e)
         {
             // Проверим установлен ли выбранный HUD...
-            if (!SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir))
+            if (SelHUD.IsUpdated)
             {
-                // Начинаем загрузку если файл не существует...
-                if (!File.Exists(SelHUD.LocalFile)) { CoreLib.DownloadFileEx(SelHUD.URI, SelHUD.LocalFile); }
+                if (!SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir))
+                {
+                    // Начинаем загрузку если файл не существует...
+                    if (!File.Exists(SelHUD.LocalFile)) { CoreLib.DownloadFileEx(SelHUD.URI, SelHUD.LocalFile); }
 
-                // Распаковываем загруженный архив с файлами HUD...
-                CoreLib.ExtractFiles(SelHUD.LocalFile, Path.Combine(SelGame.CustomInstallDir, "hudtemp"));
+                    // Распаковываем загруженный архив с файлами HUD...
+                    CoreLib.ExtractFiles(SelHUD.LocalFile, Path.Combine(SelGame.CustomInstallDir, "hudtemp"));
 
-                // Запускаем установку пакета в отдельном потоке...
-                if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(); }
+                    // Запускаем установку пакета в отдельном потоке...
+                    if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(); }
+                }
+                else
+                {
+                    MessageBox.Show(CoreLib.GetLocalizedString("HD_AlreadyInstalled"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
             else
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("HD_AlreadyInstalled"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(CoreLib.GetLocalizedString("HD_Outdated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
