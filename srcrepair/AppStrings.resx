@@ -711,4 +711,7 @@
   <data name="HD_NotTested" xml:space="preserve">
     <value>Selected HUD is not fully compatible with the latest version of the game. We recommend you to upgrade the HUD database.</value>
   </data>
+  <data name="HD_Outdated" xml:space="preserve">
+    <value>Installation of outdated HUDs not allowed. Please update database or select another HUD.</value>
+  </data>
 </root>

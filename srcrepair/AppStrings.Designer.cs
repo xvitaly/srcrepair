@@ -1069,6 +1069,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Installation of outdated HUDs not allowed. Please update database or select another HUD..
+        /// </summary>
+        internal static string HD_Outdated {
+            get {
+                return ResourceManager.GetString("HD_Outdated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         internal static string InputBoxCancelBtnName {
