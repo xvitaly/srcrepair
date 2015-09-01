@@ -2412,7 +2412,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.bsp"));
             CleanDirs.Add(Path.Combine(SelGame.AppWorkshopDir, "*.bsp"));
             if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "maps", "*.bsp")); }
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.GameBinaryFile);
         }
 
         private void PS_RemDnlCache_Click(object sender, EventArgs e)
@@ -2421,7 +2421,7 @@ namespace srcrepair
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "downloads", "*.*"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.GameBinaryFile);
         }
 
         private void PS_RemSoundCache_Click(object sender, EventArgs e)
@@ -2432,7 +2432,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "maps", "soundcache", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "sound", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "*.cache"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.GameBinaryFile);
         }
 
         private void PS_RemScreenShots_Click(object sender, EventArgs e)
@@ -2440,7 +2440,7 @@ namespace srcrepair
             // Удаляем все скриншоты...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "screenshots", "*.*"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), false, false, false);
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.GameBinaryFile, false, false, false);
         }
 
         private void PS_RemDemos_Click(object sender, EventArgs e)
@@ -2451,7 +2451,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "*.mp4"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "*.tga"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "*.wav"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), false, false, false, false);
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.GameBinaryFile, false, false, false, false);
         }
 
         private void PS_RemGraphOpts_Click(object sender, EventArgs e)
@@ -2516,7 +2516,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "platform", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "bin", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "*.exe"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.GameBinaryFile);
         }
 
         private void PS_ResetSettings_Click(object sender, EventArgs e)
@@ -3025,7 +3025,7 @@ namespace srcrepair
             // Удаляем все реплеи...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "replay", "*.*"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.GameBinaryFile);
         }
 
         private void PS_RemTextures_Click(object sender, EventArgs e)
@@ -3048,7 +3048,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.vmt"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.mdl"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.phy"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.GameBinaryFile);
         }
 
         private void PS_RemSecndCache_Click(object sender, EventArgs e)
@@ -3058,7 +3058,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cache", "*.*")); // Кэш...
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "user_custom", "*.*")); // Кэш спреев игр с н.с.к...
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "config", "html", "*.*")); // Кэш MOTD...
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.GameBinaryFile);
         }
 
         private void SB_App_DoubleClick(object sender, EventArgs e)
@@ -3086,7 +3086,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(App.FullSteamPath, "config", "htmlcache", "*.*"));
             CleanDirs.Add(Path.Combine(App.FullSteamPath, "config", "overlayhtmlcache", "*.*"));
             CleanDirs.Add(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Steam", "htmlcache", "*.*"));
-            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.SteamProcName);
         }
 
         private void MNUExtClnOverlayHTCache_Click(object sender, EventArgs e)
@@ -3094,7 +3094,7 @@ namespace srcrepair
             // Очистим HTTP-кэш...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(App.FullSteamPath, "appcache", "httpcache", "*.*"));
-            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.SteamProcName);
         }
 
         private void CE_ManualBackUpCfg_Click(object sender, EventArgs e)
@@ -3119,7 +3119,7 @@ namespace srcrepair
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(App.FullSteamPath, "logs", "*.*"));
             CleanDirs.Add(Path.Combine(App.FullSteamPath, "*.log"));
-            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.SteamProcName);
         }
 
         private void MNUExtClnGIcons_Click(object sender, EventArgs e)
@@ -3127,7 +3127,7 @@ namespace srcrepair
             // Очистим кэшированные значки игр...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(App.FullSteamPath, "steam", "games", "*.*"));
-            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.SteamProcName);
         }
 
         private void MNUExtClnGameStats_Click(object sender, EventArgs e)
@@ -3135,7 +3135,7 @@ namespace srcrepair
             // Очистим кэшированную статистику игр...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(App.FullSteamPath, "appcache", "stats", "*.*"));
-            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.SteamProcName);
         }
 
         private void MNUExtClnErrDumps_Click(object sender, EventArgs e)
@@ -3143,7 +3143,7 @@ namespace srcrepair
             // Очистим краш-дампы...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(App.FullSteamPath, "dumps", "*.*"));
-            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.SteamProcName);
         }
 
         private void MNUExtClnCloudLocal_Click(object sender, EventArgs e)
@@ -3151,7 +3151,7 @@ namespace srcrepair
             // Очистим локальное зеркало Cloud...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(App.FullSteamPath, "userdata", "*.*"));
-            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.SteamProcName);
         }
 
         private void PS_RemSounds_Click(object sender, EventArgs e)
@@ -3161,7 +3161,7 @@ namespace srcrepair
             if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "sound", "*.*")); }
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.mp3"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.wav"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.GameBinaryFile);
         }
 
         private void MNUExtClnBuildCache_Click(object sender, EventArgs e)
@@ -3196,7 +3196,7 @@ namespace srcrepair
             // Очистим кэш обновлений Steam...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(App.FullSteamPath, "package", "*.*"));
-            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.SteamProcName);
         }
 
         private void PS_RemCustDir_Click(object sender, EventArgs e)
@@ -3205,7 +3205,7 @@ namespace srcrepair
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.AppWorkshopDir, "*.*"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.GameBinaryFile);
         }
 
         private void PS_DeepCleanup_Click(object sender, EventArgs e)
@@ -3228,7 +3228,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "config", "html", "*.*"));
             // Удалим пользовательские конфиги...
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cfg", "*.*"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.GameBinaryFile);
         }
 
         private void PS_RemConfigs_Click(object sender, EventArgs e)
@@ -3237,7 +3237,7 @@ namespace srcrepair
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cfg", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.cfg"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower());
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.GameBinaryFile);
         }
 
         private void MNUExtClnGuard_Click(object sender, EventArgs e)
@@ -3245,7 +3245,7 @@ namespace srcrepair
             // Удаляем кэш Steam Guard...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(App.FullSteamPath, "ssfn*"));
-            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), false, false, false);
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.SteamProcName, false, false, false);
         }
 
         private void MNUExtClnOldBin_Click(object sender, EventArgs e)
@@ -3254,7 +3254,7 @@ namespace srcrepair
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(App.FullSteamPath, "*.old"));
             CleanDirs.Add(Path.Combine(App.FullSteamPath, "bin", "*.old"));
-            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.SteamProcName);
         }
 
         private void GT_ResAvailable_Btn_Click(object sender, EventArgs e)
@@ -3293,7 +3293,7 @@ namespace srcrepair
             // Очистим базу данных функции Steam Music...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(App.FullSteamPath, "music", "_database", "*.*"));
-            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.SteamProcName);
         }
 
         private void MNUExtClnSkins_Click(object sender, EventArgs e)
@@ -3301,7 +3301,7 @@ namespace srcrepair
             // Очистим установленные скины Steam...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(App.FullSteamPath, "skins", "*.*"));
-            SteamCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.SteamProcName);
         }
 
         private void HD_HSel_SelectedIndexChanged(object sender, EventArgs e)
@@ -3360,7 +3360,7 @@ namespace srcrepair
             // Воспользуемся модулем очистки для удаления выбранного HUD...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(HUDPath, "*.*"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower().Replace("&", ""));
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.GameBinaryFile);
 
             // Проверяем установлен ли выбранный HUD...
             bool IsInstalled = SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir);
@@ -3384,7 +3384,7 @@ namespace srcrepair
             // Очистим загруженные приложением файлы...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(App.AppUserDir, Properties.Settings.Default.HUDLocalDir, "*.*"));
-            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.GameBinaryFile);
         }
 
         private void MNUExtClnTmpDir_Click(object sender, EventArgs e)
@@ -3392,7 +3392,7 @@ namespace srcrepair
             // Очистим каталоги с временными файлами системы...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(Path.GetTempPath(), "*.*"));
-            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""));
+            OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.GameBinaryFile);
         }
 
         private void MNUShowLog_Click(object sender, EventArgs e)
