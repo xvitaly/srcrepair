@@ -263,12 +263,13 @@ namespace srcrepair
         /// <param name="Path">Путь к каталогу очистки</param>
         /// <param name="Mask">Маска файлов, подлежащих очистке</param>
         /// <param name="LText">Текст заголовка</param>
-        /// <param name="CheckBin">Текст заголовка</param>
+        /// <param name="CheckBin">Имя бинарника, работа которого будет проверяться перед запуском очистки</param>
+        /// <param name="ResultMsg">Текст сообщения, которое будет выдаваться по завершении очистки</param>
         /// <param name="ReadOnly">Пользователю будет запрещено изменять выбор удаляемых файлов</param>
         /// <param name="NoAuto">Включает / отключает автовыбор файлов флажками</param>
         /// <param name="Recursive">Включает / отключает рекурсивный обход</param>
         /// <param name="ForceBackUp">Включает / отключает принудительное создание резервных копий</param>
-        private void OpenCleanupWindow(List<String> Paths, string LText, string CheckBin, bool ReadOnly = false, bool NoAuto = false, bool Recursive = true, bool ForceBackUp = false)
+        private void OpenCleanupWindow(List<String> Paths, string LText, string CheckBin, string ResultMsg, bool ReadOnly = false, bool NoAuto = false, bool Recursive = true, bool ForceBackUp = false)
         {
             try
             {
