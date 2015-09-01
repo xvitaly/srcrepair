@@ -267,27 +267,11 @@ namespace srcrepair
         /// <param name="NoAuto">Включает / отключает автовыбор файлов флажками</param>
         /// <param name="Recursive">Включает / отключает рекурсивный обход</param>
         /// <param name="ForceBackUp">Включает / отключает принудительное создание резервных копий</param>
-        private void OpenCleanupWindow(List<String> Paths, string LText, bool ReadOnly = false, bool NoAuto = false, bool Recursive = true, bool ForceBackUp = false)
-        {
-            frmCleaner FCl = new frmCleaner(Paths, SelGame.FullBackUpDirPath, LText, ReadOnly, NoAuto, Recursive, ForceBackUp);
-            FCl.ShowDialog();
-        }
-
-        /// <summary>
-        /// Отображает диалоговое окно менеджера быстрой очистки кэшей Steam.
-        /// </summary>
-        /// <param name="Path">Путь к каталогу очистки</param>
-        /// <param name="Mask">Маска файлов, подлежащих очистке</param>
-        /// <param name="LText">Текст заголовка</param>
-        /// <param name="ReadOnly">Пользователю будет запрещено изменять выбор удаляемых файлов</param>
-        /// <param name="NoAuto">Включает / отключает автовыбор файлов флажками</param>
-        /// <param name="Recursive">Включает / отключает рекурсивный обход</param>
-        /// <param name="ForceBackUp">Включает / отключает принудительное создание резервных копий</param>
-        private void SteamCleanupWindow(List<String> Paths, string LText, bool ReadOnly = false, bool NoAuto = false, bool Recursive = true, bool ForceBackUp = false)
+        private void OpenCleanupWindow(List<String> Paths, string LText, string CheckBin, bool ReadOnly = false, bool NoAuto = false, bool Recursive = true, bool ForceBackUp = false)
         {
             try
             {
-                if (!CoreLib.IsProcessRunning(Properties.Resources.SteamProcName))
+                if (!CoreLib.IsProcessRunning(CheckBin))
                 {
                     frmCleaner FCl = new frmCleaner(Paths, SelGame.FullBackUpDirPath, LText, ReadOnly, NoAuto, Recursive, ForceBackUp);
                     FCl.ShowDialog();
