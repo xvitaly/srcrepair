@@ -273,15 +273,7 @@ namespace srcrepair
         {
             try
             {
-                if (!CoreLib.IsProcessRunning(CheckBin))
-                {
-                    frmCleaner FCl = new frmCleaner(Paths, SelGame.FullBackUpDirPath, LText, ResultMsg, ReadOnly, NoAuto, Recursive, ForceBackUp);
-                    FCl.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show(CoreLib.GetLocalizedString("PS_SteamRunning"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                if (!CoreLib.IsProcessRunning(CheckBin)) { frmCleaner FCl = new frmCleaner(Paths, SelGame.FullBackUpDirPath, LText, ResultMsg, ReadOnly, NoAuto, Recursive, ForceBackUp); FCl.ShowDialog(); } else { MessageBox.Show(CoreLib.GetLocalizedString("PS_SteamRunning"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
