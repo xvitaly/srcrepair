@@ -55,6 +55,11 @@ namespace srcrepair
         public string SmallAppName;
 
         /// <summary>
+        /// В этой переменной мы будем хранить имя главного процесса игры.
+        /// </summary>
+        public string GameBinaryFile;
+
+        /// <summary>
         /// В этой переменной мы будем хранить полный путь до каталога с
         /// файлами конфигурации управляемого приложения.
         /// </summary>
@@ -132,6 +137,7 @@ namespace srcrepair
                 {
                     FullAppName = XMLD.GetElementsByTagName("DirName")[i].InnerText;
                     SmallAppName = XMLD.GetElementsByTagName("SmallName")[i].InnerText;
+                    GameBinaryFile = XMLD.GetElementsByTagName("BinFileW")[i].InnerText;
                     GameInternalID = XMLD.GetElementsByTagName("SID")[i].InnerText;
                     ConfDir = XMLD.GetElementsByTagName("VFDir")[i].InnerText;
                     IsUsingVideoFile = XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1";
