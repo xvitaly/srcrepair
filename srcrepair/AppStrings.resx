@@ -714,4 +714,7 @@
   <data name="HD_Outdated" xml:space="preserve">
     <value>Installation of outdated HUDs not allowed. Please update database or select another HUD.</value>
   </data>
+  <data name="PS_AppRunning" xml:space="preserve">
+    <value>{0} application is running! To execute this cleanup please close it.</value>
+  </data>
 </root>

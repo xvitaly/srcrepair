@@ -1159,6 +1159,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} application is running! To execute this cleanup please close it..
+        /// </summary>
+        internal static string PS_AppRunning {
+            get {
+                return ResourceManager.GetString("PS_AppRunning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Warning! An error occured during packing files. Archive was not created!.
         /// </summary>
         internal static string PS_ArchFailed {
