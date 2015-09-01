@@ -31,7 +31,7 @@ namespace srcrepair
 {
     public partial class frmCleaner : Form
     {
-        public frmCleaner(List<String> CD, string BD, string CI, bool RO, bool NA, bool RS, bool FB, bool SM)
+        public frmCleaner(List<String> CD, string BD, string CI, string SM, bool RO, bool NA, bool RS, bool FB)
         {
             InitializeComponent();
             CleanDirs = CD;
@@ -285,7 +285,7 @@ namespace srcrepair
             {
                 // Выводим сообщение об успешном окончании очистки...
                 CM_Info.Text = CoreLib.GetLocalizedString("PS_ProgressFinished");
-                MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(SuccessMessage, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
