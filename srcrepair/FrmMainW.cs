@@ -269,13 +269,13 @@ namespace srcrepair
         /// <param name="NoAuto">Включает / отключает автовыбор файлов флажками</param>
         /// <param name="Recursive">Включает / отключает рекурсивный обход</param>
         /// <param name="ForceBackUp">Включает / отключает принудительное создание резервных копий</param>
-        private void OpenCleanupWindow(List<String> Paths, string LText, string CheckBin, string ResultMsg, bool ReadOnly = false, bool NoAuto = false, bool Recursive = true, bool ForceBackUp = false)
+        private void OpenCleanupWindow(List<String> Paths, string LText, string ResultMsg, string CheckBin, bool ReadOnly = false, bool NoAuto = false, bool Recursive = true, bool ForceBackUp = false)
         {
             try
             {
                 if (!CoreLib.IsProcessRunning(CheckBin))
                 {
-                    frmCleaner FCl = new frmCleaner(Paths, SelGame.FullBackUpDirPath, LText, ReadOnly, NoAuto, Recursive, ForceBackUp);
+                    frmCleaner FCl = new frmCleaner(Paths, SelGame.FullBackUpDirPath, LText, ResultMsg, ReadOnly, NoAuto, Recursive, ForceBackUp);
                     FCl.ShowDialog();
                 }
                 else
