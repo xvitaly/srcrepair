@@ -7,6 +7,7 @@
     <VFDir>tf</VFDir>
     <UserDir>1</UserDir>
     <SID>440</SID>
+    <BinFileW>hl2.exe</BinFileW>
   </Game>
   <Game Name="Team Fortress 2 Beta">
     <HasVF>0</HasVF>
