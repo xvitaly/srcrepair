@@ -717,4 +717,7 @@
   <data name="PS_AppRunning" xml:space="preserve">
     <value>{0} application is running! To execute this cleanup please close it.</value>
   </data>
+  <data name="PS_CacheChkReq" xml:space="preserve">
+    <value>Cleanup successfully completed! You should run game cache integrity check now.</value>
+  </data>
 </root>

@@ -1177,6 +1177,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cleanup successfully completed! You should run game cache integrity check now..
+        /// </summary>
+        internal static string PS_CacheChkReq {
+            get {
+                return ResourceManager.GetString("PS_CacheChkReq", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occurred during the clean up empty directories! Maybe you do not have appropriate access rights..
         /// </summary>
         internal static string PS_CleanEmptyDirsError {
