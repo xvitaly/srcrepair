@@ -2508,7 +2508,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "platform", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "bin", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "*.exe"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.GameBinaryFile);
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CacheChkReq"), SelGame.GameBinaryFile);
         }
 
         private void PS_ResetSettings_Click(object sender, EventArgs e)
@@ -3220,7 +3220,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "config", "html", "*.*"));
             // Удалим пользовательские конфиги...
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cfg", "*.*"));
-            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.GameBinaryFile);
+            OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CacheChkReq"), SelGame.GameBinaryFile);
         }
 
         private void PS_RemConfigs_Click(object sender, EventArgs e)
