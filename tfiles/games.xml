@@ -8,6 +8,8 @@
     <UserDir>1</UserDir>
     <SID>440</SID>
     <BinFileW>hl2.exe</BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Team Fortress 2 Beta">
     <HasVF>0</HasVF>
@@ -16,6 +18,9 @@
     <VFDir>tf</VFDir>
     <UserDir>1</UserDir>
     <SID>520</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Counter-Strike: Source">
     <HasVF>0</HasVF>
@@ -24,6 +29,9 @@
     <VFDir>cstrike</VFDir>
     <UserDir>1</UserDir>
     <SID>240</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Day of Defeat: Source">
     <HasVF>0</HasVF>
@@ -32,6 +40,9 @@
     <VFDir>dod</VFDir>
     <UserDir>1</UserDir>
     <SID>300</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Half-Life 2: Deathmatch">
     <HasVF>0</HasVF>
@@ -40,6 +51,9 @@
     <VFDir>hl2mp</VFDir>
     <UserDir>0</UserDir>
     <SID>320</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Half-Life 2">
     <HasVF>0</HasVF>
@@ -48,6 +62,9 @@
     <VFDir>hl2</VFDir>
     <UserDir>0</UserDir>
     <SID>220</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Half-Life 2: Episode One">
     <HasVF>0</HasVF>
@@ -56,6 +73,9 @@
     <VFDir>episodic</VFDir>
     <UserDir>0</UserDir>
     <SID>380</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Half-Life 2: Episode Two">
     <HasVF>0</HasVF>
@@ -64,6 +84,9 @@
     <VFDir>ep2</VFDir>
     <UserDir>0</UserDir>
     <SID>420</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Half-Life 2: Lost Coast">
     <HasVF>0</HasVF>
@@ -72,6 +95,9 @@
     <VFDir>lostcoast</VFDir>
     <UserDir>0</UserDir>
     <SID>340</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Portal">
     <HasVF>0</HasVF>
@@ -80,6 +106,9 @@
     <VFDir>portal</VFDir>
     <UserDir>0</UserDir>
     <SID>400</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Garry's Mod">
     <HasVF>0</HasVF>
@@ -88,6 +117,9 @@
     <VFDir>garrysmod</VFDir>
     <UserDir>0</UserDir>
     <SID>4000</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Age of Chivalry">
     <HasVF>0</HasVF>
@@ -96,6 +128,9 @@
     <VFDir>ageofchivalry</VFDir>
     <UserDir>0</UserDir>
     <SID>17510</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="D.I.P.R.I.P.: Warm Up">
     <HasVF>0</HasVF>
@@ -104,6 +139,9 @@
     <VFDir>diprip</VFDir>
     <UserDir>0</UserDir>
     <SID>17530</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Dystopia">
     <HasVF>0</HasVF>
@@ -112,6 +150,9 @@
     <VFDir>Dystopia</VFDir>
     <UserDir>0</UserDir>
     <SID>17580</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Insurgency: Modern Infantry Combat">
     <HasVF>0</HasVF>
@@ -120,6 +161,9 @@
     <VFDir>insurgency</VFDir>
     <UserDir>0</UserDir>
     <SID>17700</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Pirates, Vikings, and Knights II">
     <HasVF>0</HasVF>
@@ -128,6 +172,9 @@
     <VFDir>pvkii</VFDir>
     <UserDir>0</UserDir>
     <SID>17570</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Smashball">
     <HasVF>0</HasVF>
@@ -136,6 +183,9 @@
     <VFDir>Smashball</VFDir>
     <UserDir>0</UserDir>
     <SID>17730</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Synergy">
     <HasVF>0</HasVF>
@@ -144,6 +194,9 @@
     <VFDir>synergy</VFDir>
     <UserDir>0</UserDir>
     <SID>17520</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Zombie Panic! Source">
     <HasVF>0</HasVF>
@@ -152,6 +205,9 @@
     <VFDir>zps</VFDir>
     <UserDir>0</UserDir>
     <SID>17500</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Half-Life: Source">
     <HasVF>0</HasVF>
@@ -160,6 +216,9 @@
     <VFDir>hl1</VFDir>
     <UserDir>0</UserDir>
     <SID>280</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Half-Life Deathmatch: Source">
     <HasVF>0</HasVF>
@@ -168,6 +227,9 @@
     <VFDir>hl1mp</VFDir>
     <UserDir>0</UserDir>
     <SID>360</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Left 4 Dead">
     <HasVF>1</HasVF>
@@ -176,6 +238,9 @@
     <VFDir>left4dead</VFDir>
     <UserDir>0</UserDir>
     <SID>500</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Left 4 Dead 2">
     <HasVF>1</HasVF>
@@ -184,6 +249,9 @@
     <VFDir>left4dead2</VFDir>
     <UserDir>0</UserDir>
     <SID>550</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Alien Swarm">
     <HasVF>1</HasVF>
@@ -192,6 +260,9 @@
     <VFDir>swarm</VFDir>
     <UserDir>0</UserDir>
     <SID>630</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Portal 2">
     <HasVF>1</HasVF>
@@ -200,6 +271,9 @@
     <VFDir>update</VFDir>
     <UserDir>0</UserDir>
     <SID>620</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Dota 2">
     <HasVF>1</HasVF>
@@ -208,6 +282,9 @@
     <VFDir>dota</VFDir>
     <UserDir>0</UserDir>
     <SID>570</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Dota 2 Beta">
     <HasVF>1</HasVF>
@@ -216,6 +293,9 @@
     <VFDir>dota</VFDir>
     <UserDir>0</UserDir>
     <SID>570</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Dota 2 Test">
     <HasVF>1</HasVF>
@@ -224,6 +304,9 @@
     <VFDir>dota</VFDir>
     <UserDir>0</UserDir>
     <SID>570</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Counter-Strike Global Offensive">
     <HasVF>1</HasVF>
@@ -232,6 +315,9 @@
     <VFDir>csgo</VFDir>
     <UserDir>0</UserDir>
     <SID>730</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Nuclear Dawn">
     <HasVF>1</HasVF>
@@ -240,6 +326,9 @@
     <VFDir>nucleardawn</VFDir>
     <UserDir>0</UserDir>
     <SID>17710</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Postal III">
     <HasVF>1</HasVF>
@@ -248,6 +337,9 @@
     <VFDir>p3</VFDir>
     <UserDir>0</UserDir>
     <SID>10220</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="E.Y.E.: Divine Cybermancy">
     <HasVF>1</HasVF>
@@ -256,6 +348,9 @@
     <VFDir>EYE</VFDir>
     <UserDir>0</UserDir>
     <SID>91700</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Dark Messiah MM SP">
     <HasVF>0</HasVF>
@@ -264,6 +359,9 @@
     <VFDir>mm</VFDir>
     <UserDir>0</UserDir>
     <SID>2100</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Dark Messiah MM MP">
     <HasVF>0</HasVF>
@@ -272,6 +370,9 @@
     <VFDir>mm</VFDir>
     <UserDir>0</UserDir>
     <SID>2100</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="The Ship">
     <HasVF>0</HasVF>
@@ -280,6 +381,9 @@
     <VFDir>ship</VFDir>
     <UserDir>0</UserDir>
     <SID>2400</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="The Ship Singleplayer">
     <HasVF>0</HasVF>
@@ -288,6 +392,9 @@
     <VFDir>ship</VFDir>
     <UserDir>0</UserDir>
     <SID>2420</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="SiN Episodes: Emergence">
     <HasVF>0</HasVF>
@@ -296,6 +403,9 @@
     <VFDir>SE1</VFDir>
     <UserDir>0</UserDir>
     <SID>1300</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Vampire: The Masquerade - Bloodlines">
     <HasVF>1</HasVF>
@@ -304,6 +414,9 @@
     <VFDir>vampire</VFDir>
     <UserDir>0</UserDir>
     <SID>2600</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Zeno Clash">
     <HasVF>1</HasVF>
@@ -312,6 +425,9 @@
     <VFDir>zenozoik</VFDir>
     <UserDir>0</UserDir>
     <SID>22200</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Dear Esther">
     <HasVF>1</HasVF>
@@ -320,6 +436,9 @@
     <VFDir>dearesther</VFDir>
     <UserDir>0</UserDir>
     <SID>203810</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Eternal Silence">
     <HasVF>0</HasVF>
@@ -328,6 +447,9 @@
     <VFDir>esmod</VFDir>
     <UserDir>0</UserDir>
     <SID>17550</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Vindictus">
     <HasVF>1</HasVF>
@@ -336,6 +458,9 @@
     <VFDir>en-US</VFDir>
     <UserDir>0</UserDir>
     <SID>212160</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Bloody Good Time">
     <HasVF>0</HasVF>
@@ -344,6 +469,9 @@
     <VFDir>pm</VFDir>
     <UserDir>0</UserDir>
     <SID>2450</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Revelations 2012">
     <HasVF>1</HasVF>
@@ -352,6 +480,9 @@
     <VFDir>revelations</VFDir>
     <UserDir>0</UserDir>
     <SID>201070</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="MINERVA: Metastasis">
     <HasVF>0</HasVF>
@@ -360,6 +491,9 @@
     <VFDir>minerva</VFDir>
     <UserDir>0</UserDir>
     <SID>235780</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Insurgency">
     <HasVF>1</HasVF>
@@ -368,6 +502,9 @@
     <VFDir>insurgency</VFDir>
     <UserDir>0</UserDir>
     <SID>222880</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="No More Room in Hell">
     <HasVF>0</HasVF>
@@ -376,6 +513,9 @@
     <VFDir>nmrih</VFDir>
     <UserDir>0</UserDir>
     <SID>224260</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Contagion">
     <HasVF>1</HasVF>
@@ -384,6 +524,9 @@
     <VFDir>contagion</VFDir>
     <UserDir>0</UserDir>
     <SID>238430</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="NeoTokyo">
     <HasVF>0</HasVF>
@@ -392,6 +535,9 @@
     <VFDir>NeotokyoSource</VFDir>
     <UserDir>0</UserDir>
     <SID>244630</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Half-Life 2: Update">
     <HasVF>0</HasVF>
@@ -400,6 +546,9 @@
     <VFDir>hl2</VFDir>
     <UserDir>0</UserDir>
     <SID>290930</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Lambda Wars">
     <HasVF>1</HasVF>
@@ -408,6 +557,9 @@
     <VFDir>lambdawars</VFDir>
     <UserDir>0</UserDir>
     <SID>270370</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Rexaura">
     <HasVF>0</HasVF>
@@ -416,6 +568,9 @@
     <VFDir>rexaura</VFDir>
     <UserDir>0</UserDir>
     <SID>317790</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Black Mesa">
     <HasVF>0</HasVF>
@@ -424,6 +579,9 @@
     <VFDir>bms</VFDir>
     <UserDir>0</UserDir>
     <SID>362890</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
   <Game Name="Portal Stories: Mel">
     <HasVF>1</HasVF>
@@ -432,5 +590,8 @@
     <VFDir>portal_stories</VFDir>
     <UserDir>0</UserDir>
     <SID>317400</SID>
+    <BinFileW></BinFileW>
+    <BinFileL></BinFileL>
+    <BinFileM></BinFileM>
   </Game>
 </Games>
