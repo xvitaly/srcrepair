@@ -11,17 +11,6 @@
     <BinFileL>hl2.sh</BinFileL>
     <BinFileM>hl2_osx</BinFileM>
   </Game>
-  <Game Name="Team Fortress 2 Beta">
-    <HasVF>0</HasVF>
-    <DirName>team fortress 2 beta</DirName>
-    <SmallName>tf</SmallName>
-    <VFDir>tf</VFDir>
-    <UserDir>1</UserDir>
-    <SID>520</SID>
-    <BinFileW></BinFileW>
-    <BinFileL></BinFileL>
-    <BinFileM></BinFileM>
-  </Game>
   <Game Name="Counter-Strike: Source">
     <HasVF>0</HasVF>
     <DirName>counter-strike source</DirName>
