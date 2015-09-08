@@ -18,9 +18,9 @@
     <VFDir>cstrike</VFDir>
     <UserDir>1</UserDir>
     <SID>240</SID>
-    <BinFileW></BinFileW>
-    <BinFileL></BinFileL>
-    <BinFileM></BinFileM>
+    <BinFileW>hl2.exe</BinFileW>
+    <BinFileL>hl2.sh</BinFileL>
+    <BinFileM>hl2_osx</BinFileM>
   </Game>
   <Game Name="Day of Defeat: Source">
     <HasVF>0</HasVF>
