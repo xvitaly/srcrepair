@@ -137,7 +137,7 @@ namespace srcrepair
                 {
                     FullAppName = XMLD.GetElementsByTagName("DirName")[i].InnerText;
                     SmallAppName = XMLD.GetElementsByTagName("SmallName")[i].InnerText;
-                    GameBinaryFile = XMLD.GetElementsByTagName("BinFileW")[i].InnerText;
+                    GameBinaryFile = XMLD.GetElementsByTagName("Executable")[i].InnerText;
                     GameInternalID = XMLD.GetElementsByTagName("SID")[i].InnerText;
                     ConfDir = XMLD.GetElementsByTagName("VFDir")[i].InnerText;
                     IsUsingVideoFile = XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1";
