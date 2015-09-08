@@ -8,8 +8,8 @@
     <UserDir>1</UserDir>
     <SID>440</SID>
     <BinFileW>hl2.exe</BinFileW>
-    <BinFileL></BinFileL>
-    <BinFileM></BinFileM>
+    <BinFileL>hl2.sh</BinFileL>
+    <BinFileM>hl2_osx</BinFileM>
   </Game>
   <Game Name="Team Fortress 2 Beta">
     <HasVF>0</HasVF>
