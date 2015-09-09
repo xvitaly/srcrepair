@@ -3679,13 +3679,13 @@
     <value>False</value>
   </data>
   <data name="HD_OpenDir.Location" type="System.Drawing.Point, System.Drawing">
-    <value>243, 339</value>
+    <value>391, 60</value>
   </data>
   <data name="HD_OpenDir.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 23</value>
+    <value>24, 24</value>
   </data>
   <data name="HD_OpenDir.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;HD_OpenDir.Name" xml:space="preserve">
     <value>HD_OpenDir</value>
@@ -3706,7 +3706,7 @@
     <value>False</value>
   </data>
   <data name="HD_Homepage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>380, 60</value>
+    <value>364, 60</value>
   </data>
   <data name="HD_Homepage.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -3733,10 +3733,10 @@
     <value>False</value>
   </data>
   <data name="HD_Uninstall.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 339</value>
+    <value>243, 339</value>
   </data>
   <data name="HD_Uninstall.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 23</value>
+    <value>194, 23</value>
   </data>
   <data name="HD_Uninstall.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -3769,7 +3769,7 @@
     <value>197, 23</value>
   </data>
   <data name="HD_Install.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="HD_Install.Text" xml:space="preserve">
     <value>Install selected HUD</value>
@@ -3885,7 +3885,7 @@
     <value>414, 234</value>
   </data>
   <data name="HD_GB_Desc.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="HD_GB_Desc.Text" xml:space="preserve">
     <value>Screenshot of selected HUD</value>
@@ -3906,7 +3906,7 @@
     <value>True</value>
   </metadata>
   <data name="HD_HSel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>192, 62</value>
+    <value>176, 62</value>
   </data>
   <data name="HD_HSel.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 21</value>
@@ -3930,7 +3930,7 @@
     <value>True</value>
   </metadata>
   <data name="L_HD_HSel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>59, 65</value>
+    <value>43, 65</value>
   </data>
   <data name="L_HD_HSel.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 18</value>
