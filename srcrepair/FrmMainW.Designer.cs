@@ -156,6 +156,7 @@
             this.L_FP_ConfigSel = new System.Windows.Forms.Label();
             this.FP_TopLabel = new System.Windows.Forms.Label();
             this.HUDInstall = new System.Windows.Forms.TabPage();
+            this.HD_OpenDir = new System.Windows.Forms.Button();
             this.HD_Homepage = new System.Windows.Forms.Button();
             this.HD_Uninstall = new System.Windows.Forms.Button();
             this.HD_Install = new System.Windows.Forms.Button();
@@ -1358,6 +1359,7 @@
             // 
             // HUDInstall
             // 
+            this.HUDInstall.Controls.Add(this.HD_OpenDir);
             this.HUDInstall.Controls.Add(this.HD_Homepage);
             this.HUDInstall.Controls.Add(this.HD_Uninstall);
             this.HUDInstall.Controls.Add(this.HD_Install);
@@ -1368,6 +1370,14 @@
             resources.ApplyResources(this.HUDInstall, "HUDInstall");
             this.HUDInstall.Name = "HUDInstall";
             this.HUDInstall.UseVisualStyleBackColor = true;
+            // 
+            // HD_OpenDir
+            // 
+            resources.ApplyResources(this.HD_OpenDir, "HD_OpenDir");
+            this.HD_OpenDir.Image = global::srcrepair.Properties.Resources.Search;
+            this.HD_OpenDir.Name = "HD_OpenDir";
+            this.HD_OpenDir.UseVisualStyleBackColor = true;
+            this.HD_OpenDir.Click += new System.EventHandler(this.HD_OpenDir_Click);
             // 
             // HD_Homepage
             // 
@@ -2247,6 +2257,7 @@
         private System.Windows.Forms.ToolStripMenuItem MNUShowLog;
         private System.Windows.Forms.ToolStripSeparator MNUSep5;
         private System.Windows.Forms.PictureBox HD_Warning;
+        private System.Windows.Forms.Button HD_OpenDir;
     }
 }
 

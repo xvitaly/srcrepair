@@ -1820,7 +1820,9 @@ namespace srcrepair
             if (e.Error == null) { MessageBox.Show(CoreLib.GetLocalizedString("HD_InstallSuccessfull"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("HD_InstallError"), Properties.Resources.AppName, e.Error.Message, e.Error.Source, MessageBoxIcon.Error); }
 
             // Включаем кнопку удаления если HUD установлен...
-            HD_Uninstall.Enabled = SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir);
+            bool IsInstalled = SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir);
+            HD_Uninstall.Enabled = IsInstalled;
+            HD_OpenDir.Enabled = IsInstalled;
         }
 
         #endregion
@@ -2012,6 +2014,7 @@ namespace srcrepair
                 HD_Install.Enabled = false;
                 HD_Homepage.Enabled = false;
                 HD_Uninstall.Enabled = false;
+                HD_OpenDir.Enabled = false;
                 HD_Warning.Visible = false;
                 HD_GB_Pbx.Image = null;
 
@@ -3311,7 +3314,9 @@ namespace srcrepair
             HD_Warning.Visible = Success && !SelHUD.IsUpdated;
 
             // Проверяем установлен ли выбранный HUD...
-            HD_Uninstall.Enabled = SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir);
+            bool IsInstalled = SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir);
+            HD_Uninstall.Enabled = IsInstalled;
+            HD_OpenDir.Enabled = IsInstalled;
 
             // Загрузим скриншот выбранного HUD...
             if (Success && !BW_HUDScreen.IsBusy) { BW_HUDScreen.RunWorkerAsync(); }
@@ -3405,6 +3410,11 @@ namespace srcrepair
         {
             // Выведем предупреждающие сообщения...
             MessageBox.Show(CoreLib.GetLocalizedString("HD_NotTested"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void HD_OpenDir_Click(object sender, EventArgs e)
+        {
+            //
         }
     }
 }
