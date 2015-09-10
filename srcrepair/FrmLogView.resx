@@ -121,11 +121,17 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="LV_Status.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 17</value>
+  </data>
+  <data name="LV_Status.Text" xml:space="preserve">
+    <value>Done.</value>
+  </data>
   <data name="LV_StatusBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 422</value>
   </data>
   <data name="LV_StatusBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>652, 22</value>
+    <value>650, 22</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="LV_StatusBar.TabIndex" type="System.Int32, mscorlib">
@@ -149,11 +155,29 @@
   <metadata name="LV_Menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>127, 17</value>
   </metadata>
+  <data name="LV_MenuFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 20</value>
+  </data>
+  <data name="LV_MenuFile.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="LV_MenuEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
+  </data>
+  <data name="LV_MenuEdit.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="LV_MenuHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="LV_MenuHelp.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
   <data name="LV_Menu.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="LV_Menu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>652, 24</value>
+    <value>650, 24</value>
   </data>
   <data name="LV_Menu.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -172,24 +196,6 @@
   </data>
   <data name="&gt;&gt;LV_Menu.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="LV_MenuFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 20</value>
-  </data>
-  <data name="LV_MenuFile.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
-  <data name="LV_MenuEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
-  </data>
-  <data name="LV_MenuEdit.Text" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="LV_MenuHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
-  </data>
-  <data name="LV_MenuHelp.Text" xml:space="preserve">
-    <value>Help</value>
   </data>
   <data name="LV_MenuFileOpen.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
@@ -233,14 +239,8 @@
   <data name="LV_MenuHelpAbout.Text" xml:space="preserve">
     <value>About</value>
   </data>
-  <data name="LV_Status.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 17</value>
-  </data>
-  <data name="LV_Status.Text" xml:space="preserve">
-    <value>Done.</value>
-  </data>
   <data name="LV_LogArea.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 25</value>
+    <value>-1, 25</value>
   </data>
   <data name="LV_LogArea.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -277,7 +277,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>652, 444</value>
+    <value>650, 444</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
