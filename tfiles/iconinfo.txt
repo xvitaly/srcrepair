@@ -97,3 +97,5 @@ Interface.png - FatCow - CCAA - http://www.iconspedia.com/icon/interface-prefere
 --------------------------------------------------------------------------------------------------------
 LoadingFile.png - Iconsolid - CCAA - http://www.iconspedia.com/icon/cloud-loading-icon-49831.html
 --------------------------------------------------------------------------------------------------------
+Notebook.png - LazyCrazy - Free - http://www.iconspedia.com/icon/elegant--notebook-160--.html
+--------------------------------------------------------------------------------------------------------
