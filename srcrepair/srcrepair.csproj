@@ -106,6 +106,12 @@
     <Compile Include="frmDnWrk.Designer.cs">
       <DependentUpon>frmDnWrk.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmLogView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogView.Designer.cs">
+      <DependentUpon>FrmLogView.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMainW.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDnWrk.ru.resx">
       <DependentUpon>frmDnWrk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogView.resx">
+      <DependentUpon>FrmLogView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMainW.resx">
       <DependentUpon>FrmMainW.cs</DependentUpon>
