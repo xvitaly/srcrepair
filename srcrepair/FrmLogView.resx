@@ -121,12 +121,6 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="LV_Status.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 17</value>
-  </data>
-  <data name="LV_Status.Text" xml:space="preserve">
-    <value>Done.</value>
-  </data>
   <data name="LV_StatusBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 422</value>
   </data>
@@ -155,24 +149,6 @@
   <metadata name="LV_Menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>127, 17</value>
   </metadata>
-  <data name="LV_MenuFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 20</value>
-  </data>
-  <data name="LV_MenuFile.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
-  <data name="LV_MenuEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
-  </data>
-  <data name="LV_MenuEdit.Text" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="LV_MenuHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
-  </data>
-  <data name="LV_MenuHelp.Text" xml:space="preserve">
-    <value>Help</value>
-  </data>
   <data name="LV_Menu.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -196,6 +172,24 @@
   </data>
   <data name="&gt;&gt;LV_Menu.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="LV_MenuFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 20</value>
+  </data>
+  <data name="LV_MenuFile.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="LV_MenuEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
+  </data>
+  <data name="LV_MenuEdit.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="LV_MenuHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="LV_MenuHelp.Text" xml:space="preserve">
+    <value>Help</value>
   </data>
   <data name="LV_MenuFileOpen.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
@@ -239,6 +233,12 @@
   <data name="LV_MenuHelpAbout.Text" xml:space="preserve">
     <value>About</value>
   </data>
+  <data name="LV_Status.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 17</value>
+  </data>
+  <data name="LV_Status.Text" xml:space="preserve">
+    <value>Done.</value>
+  </data>
   <data name="LV_LogArea.Location" type="System.Drawing.Point, System.Drawing">
     <value>-1, 25</value>
   </data>
@@ -278,6 +278,25 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>650, 444</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAGABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAAAAAAEgAAABIAAAAAAAAAAAA
+        AAAAAAAAAAAAAAABAQEBAQEAAAAAAAAAAAAcHSgeJDIICREAAAAAAAAAAAAAAAAAAAAAAAABAQEAAAAA
+        AAAAAAAEBAQfHx9QUFCVo6upv89qiKIJBg8AAAAAAAAAAAAAAAAAAAAAAAACAgITExM6OjqAgIDBwMDR
+        09Kntr6ar7pld30oJS8BAAIAAAAAAAAAAAAHBwclJSVeXl6ysrLg4ODKysp8e3s9P0BsgIeMqLh8oLlc
+        YWQJBQ4AAAAAAAAAAABERkevsbPS0dGqqqpeXl4sLCwXFxcbGxswLSxjX11yc3ZtdXcrKTIBAAMAAAAA
+        AABUV1mRkpNVVFQ2NjYnJygrKysjIyMeHh4yMzNkZWVoZmVcXl9lam0KBhAAAAAAAABlZWVkZGNTU1ND
+        QUE0MTEtLSwhICAbGxssLCxcXFxlZWVHR0d+hIQ0MTkBAAMAAABoaGhqa2tSUVFFSksxPUExMjUfICAS
+        EREhISFUVFRhYWFDQ0NvcXF1eXkLCBIAAAAlJSVsbW1SUFBJUE9JZXBvfYl3hItOU1c8OzxLSktEREM8
+        PDxNTE1pamgmISgBAAMAAABISEhZWVlCQUA2NDQ/QkVJTlFDRkhJR0lYVldQT1BPTk9JSEg+R0lRXGgW
+        FSEAAAAQEBBbW1tNTU07OzswLy4cGhoSEhEgICFKSkpKSko9PD1QTU5ofoxxlK4lL0ABAQEAAAAtLS1Y
+        WFhCQ0M6OjsqKiseHh8nJydOTk5HR0cxMTFLTExHREJpdH0hKCwAAAAAAAAAAABKSkpRUVFCQkIvLy8j
+        IyMrKytRUVFISEgwMDBISElDQT6Opa8hJSkAAAABAQEAAAAWFhZeXl5QUFA5OTkqKioxMTFVVVVNTU0y
+        MzM8OjlHUFQqNkUAAAEAAAAAAAABAQEAAAA5OTlgYGBEREQ0NDQ3NzdWVlY+Pj4aGhsMDAsBAQEAAAAA
+        AAAAAAAAAAAAAAAAAAAHBwdUVFRQUFAuLi4dHR0REREBAQEAAAAAAAAAAAAAAAEAAADnHwAAuA8AAMAH
+        AAAABwAAAAMAAAADAAAAAQAAAAEAAAAAAACAAAAAgAAAAEAAAADgAAAAoAAAANADAADwHQAA
+</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
