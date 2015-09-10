@@ -543,6 +543,7 @@
     <None Include="Resources\Monitor.png" />
     <EmbeddedResource Include="Resources\VtTemplate.txt" />
     <None Include="Resources\LoadingFile.png" />
+    <None Include="Resources\Notebook.png" />
     <Content Include="srcrepair.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

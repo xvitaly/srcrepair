@@ -1858,7 +1858,7 @@
             // 
             // MNUShowLog
             // 
-            this.MNUShowLog.Image = global::srcrepair.Properties.Resources.TextEditor;
+            this.MNUShowLog.Image = global::srcrepair.Properties.Resources.Notebook;
             this.MNUShowLog.Name = "MNUShowLog";
             resources.ApplyResources(this.MNUShowLog, "MNUShowLog");
             this.MNUShowLog.Click += new System.EventHandler(this.MNUShowLog_Click);
