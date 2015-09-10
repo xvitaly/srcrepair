@@ -42,6 +42,7 @@
             this.LV_MenuEditPaste = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_MenuHelpAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_Status = new System.Windows.Forms.ToolStripStatusLabel();
+            this.LV_LogArea = new System.Windows.Forms.TextBox();
             this.LV_StatusBar.SuspendLayout();
             this.LV_Menu.SuspendLayout();
             this.SuspendLayout();
@@ -127,10 +128,16 @@
             this.LV_Status.Name = "LV_Status";
             resources.ApplyResources(this.LV_Status, "LV_Status");
             // 
+            // LV_LogArea
+            // 
+            resources.ApplyResources(this.LV_LogArea, "LV_LogArea");
+            this.LV_LogArea.Name = "LV_LogArea";
+            // 
             // frmLogView
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.LV_LogArea);
             this.Controls.Add(this.LV_StatusBar);
             this.Controls.Add(this.LV_Menu);
             this.DoubleBuffered = true;
@@ -161,5 +168,6 @@
         private System.Windows.Forms.ToolStripMenuItem LV_MenuEditPaste;
         private System.Windows.Forms.ToolStripMenuItem LV_MenuHelp;
         private System.Windows.Forms.ToolStripMenuItem LV_MenuHelpAbout;
+        private System.Windows.Forms.TextBox LV_LogArea;
     }
 }
