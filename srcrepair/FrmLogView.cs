@@ -11,9 +11,11 @@ namespace srcrepair
 {
     public partial class frmLogView : Form
     {
-        public frmLogView()
+        private string LogFileName;
+        public frmLogView(string LogFile)
         {
             InitializeComponent();
+            LogFileName = LogFile;
         }
 
         private void frmLogView_Load(object sender, EventArgs e)
