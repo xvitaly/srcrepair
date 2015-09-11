@@ -22,7 +22,7 @@ namespace srcrepair
         private void frmLogView_Load(object sender, EventArgs e)
         {
             // Считаем содержимое выбранного файла...
-            LV_LogArea.Lines = File.ReadAllLines(LogFileName);
+            try { LV_LogArea.Lines = File.ReadAllLines(LogFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("LV_LoadFailed"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
         }
     }
 }
