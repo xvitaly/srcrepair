@@ -3398,7 +3398,7 @@ namespace srcrepair
             if (Properties.Settings.Default.EnableDebugLog)
             {
                 string DFile = Path.Combine(CoreLib.GetApplicationPath(), Properties.Settings.Default.DebugLogFileName);
-                if (File.Exists(DFile)) { try { Process.Start(Properties.Settings.Default.EditorBin, DFile); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } } else { MessageBox.Show(CoreLib.GetLocalizedString("AppNoDebugFile"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                if (File.Exists(DFile)) { frmLogView Lv = new frmLogView(DFile); Lv.ShowDialog(); } else { MessageBox.Show(CoreLib.GetLocalizedString("AppNoDebugFile"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             }
             else
             {
