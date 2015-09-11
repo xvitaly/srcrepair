@@ -1123,6 +1123,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to load error log. Try again later..
+        /// </summary>
+        internal static string LV_LoadFailed {
+            get {
+                return ResourceManager.GetString("LV_LoadFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sorry, but this feature is not yet implemented!.
         /// </summary>
         internal static string NotImplementedYet {
