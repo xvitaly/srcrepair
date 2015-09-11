@@ -135,7 +135,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="LV_StatusBar.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="LV_StatusBar.Text" xml:space="preserve">
     <value>statusStrip1</value>
@@ -155,6 +155,48 @@
   <metadata name="LV_Menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>127, 17</value>
   </metadata>
+  <data name="LV_MenuFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 20</value>
+  </data>
+  <data name="LV_MenuFile.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="LV_MenuEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
+  </data>
+  <data name="LV_MenuEdit.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="LV_MenuHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="LV_MenuHelp.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="LV_Menu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="LV_Menu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>650, 24</value>
+  </data>
+  <data name="LV_Menu.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="LV_Menu.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;LV_Menu.Name" xml:space="preserve">
+    <value>LV_Menu</value>
+  </data>
+  <data name="&gt;&gt;LV_Menu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LV_Menu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;LV_Menu.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="LV_MenuFileOpen.Size" type="System.Drawing.Size, System.Drawing">
     <value>118, 22</value>
   </data>
@@ -172,12 +214,6 @@
   </data>
   <data name="LV_MenuFileExit.Text" xml:space="preserve">
     <value>Exit</value>
-  </data>
-  <data name="LV_MenuFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 20</value>
-  </data>
-  <data name="LV_MenuFile.Text" xml:space="preserve">
-    <value>File</value>
   </data>
   <data name="LV_MenuEditCut.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 22</value>
@@ -197,47 +233,11 @@
   <data name="LV_MenuEditPaste.Text" xml:space="preserve">
     <value>Paste</value>
   </data>
-  <data name="LV_MenuEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
-  </data>
-  <data name="LV_MenuEdit.Text" xml:space="preserve">
-    <value>Edit</value>
-  </data>
   <data name="LV_MenuHelpAbout.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 22</value>
   </data>
   <data name="LV_MenuHelpAbout.Text" xml:space="preserve">
     <value>About</value>
-  </data>
-  <data name="LV_MenuHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
-  </data>
-  <data name="LV_MenuHelp.Text" xml:space="preserve">
-    <value>Help</value>
-  </data>
-  <data name="LV_Menu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="LV_Menu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 24</value>
-  </data>
-  <data name="LV_Menu.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="LV_Menu.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;LV_Menu.Name" xml:space="preserve">
-    <value>LV_Menu</value>
-  </data>
-  <data name="&gt;&gt;LV_Menu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LV_Menu.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;LV_Menu.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="LV_LogArea.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -256,7 +256,7 @@
     <value>652, 399</value>
   </data>
   <data name="LV_LogArea.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="LV_LogArea.WordWrap" type="System.Boolean, mscorlib">
     <value>False</value>
