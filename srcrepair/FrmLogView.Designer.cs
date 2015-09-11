@@ -30,18 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogView));
             this.LV_StatusBar = new System.Windows.Forms.StatusStrip();
+            this.LV_Status = new System.Windows.Forms.ToolStripStatusLabel();
             this.LV_Menu = new System.Windows.Forms.MenuStrip();
             this.LV_MenuFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.LV_MenuEdit = new System.Windows.Forms.ToolStripMenuItem();
-            this.LV_MenuHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_MenuFileOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_MenuFileReload = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_MenuFileExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.LV_MenuEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_MenuEditCut = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_MenuEditCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_MenuEditPaste = new System.Windows.Forms.ToolStripMenuItem();
+            this.LV_MenuHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_MenuHelpAbout = new System.Windows.Forms.ToolStripMenuItem();
-            this.LV_Status = new System.Windows.Forms.ToolStripStatusLabel();
             this.LV_LogArea = new System.Windows.Forms.TextBox();
             this.LV_StatusBar.SuspendLayout();
             this.LV_Menu.SuspendLayout();
@@ -53,6 +53,11 @@
             this.LV_Status});
             resources.ApplyResources(this.LV_StatusBar, "LV_StatusBar");
             this.LV_StatusBar.Name = "LV_StatusBar";
+            // 
+            // LV_Status
+            // 
+            this.LV_Status.Name = "LV_Status";
+            resources.ApplyResources(this.LV_Status, "LV_Status");
             // 
             // LV_Menu
             // 
@@ -72,22 +77,6 @@
             this.LV_MenuFile.Name = "LV_MenuFile";
             resources.ApplyResources(this.LV_MenuFile, "LV_MenuFile");
             // 
-            // LV_MenuEdit
-            // 
-            this.LV_MenuEdit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.LV_MenuEditCut,
-            this.LV_MenuEditCopy,
-            this.LV_MenuEditPaste});
-            this.LV_MenuEdit.Name = "LV_MenuEdit";
-            resources.ApplyResources(this.LV_MenuEdit, "LV_MenuEdit");
-            // 
-            // LV_MenuHelp
-            // 
-            this.LV_MenuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.LV_MenuHelpAbout});
-            this.LV_MenuHelp.Name = "LV_MenuHelp";
-            resources.ApplyResources(this.LV_MenuHelp, "LV_MenuHelp");
-            // 
             // LV_MenuFileOpen
             // 
             this.LV_MenuFileOpen.Name = "LV_MenuFileOpen";
@@ -102,6 +91,15 @@
             // 
             this.LV_MenuFileExit.Name = "LV_MenuFileExit";
             resources.ApplyResources(this.LV_MenuFileExit, "LV_MenuFileExit");
+            // 
+            // LV_MenuEdit
+            // 
+            this.LV_MenuEdit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.LV_MenuEditCut,
+            this.LV_MenuEditCopy,
+            this.LV_MenuEditPaste});
+            this.LV_MenuEdit.Name = "LV_MenuEdit";
+            resources.ApplyResources(this.LV_MenuEdit, "LV_MenuEdit");
             // 
             // LV_MenuEditCut
             // 
@@ -118,15 +116,17 @@
             this.LV_MenuEditPaste.Name = "LV_MenuEditPaste";
             resources.ApplyResources(this.LV_MenuEditPaste, "LV_MenuEditPaste");
             // 
+            // LV_MenuHelp
+            // 
+            this.LV_MenuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.LV_MenuHelpAbout});
+            this.LV_MenuHelp.Name = "LV_MenuHelp";
+            resources.ApplyResources(this.LV_MenuHelp, "LV_MenuHelp");
+            // 
             // LV_MenuHelpAbout
             // 
             this.LV_MenuHelpAbout.Name = "LV_MenuHelpAbout";
             resources.ApplyResources(this.LV_MenuHelpAbout, "LV_MenuHelpAbout");
-            // 
-            // LV_Status
-            // 
-            this.LV_Status.Name = "LV_Status";
-            resources.ApplyResources(this.LV_Status, "LV_Status");
             // 
             // LV_LogArea
             // 
@@ -142,6 +142,7 @@
             this.Controls.Add(this.LV_Menu);
             this.DoubleBuffered = true;
             this.MainMenuStrip = this.LV_Menu;
+            this.MaximizeBox = false;
             this.Name = "frmLogView";
             this.Load += new System.EventHandler(this.frmLogView_Load);
             this.LV_StatusBar.ResumeLayout(false);
