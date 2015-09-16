@@ -31,10 +31,21 @@ namespace srcrepair
             LogFileName = LogFile;
         }
 
+        private void LoadTextFile(string FileName)
+        {
+            LV_LogArea.Clear();
+            LV_LogArea.AppendText(File.ReadAllText(FileName));
+        }
+
+        private void LoadLog(string FileName)
+        {
+            try { LoadTextFile(FileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("LV_LoadFailed"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+        }
+
         private void frmLogView_Load(object sender, EventArgs e)
         {
             // Считаем содержимое выбранного файла...
-            try { LV_LogArea.AppendText(File.ReadAllText(LogFileName)); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("LV_LoadFailed"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+            LoadLog(LogFileName);
         }
 
         private void LV_MenuFileOpen_Click(object sender, EventArgs e)
