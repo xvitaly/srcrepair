@@ -214,6 +214,9 @@
     <EmbeddedResource Include="FrmLogView.resx">
       <DependentUpon>FrmLogView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogView.ru.resx">
+      <DependentUpon>FrmLogView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMainW.resx">
       <DependentUpon>FrmMainW.cs</DependentUpon>
     </EmbeddedResource>

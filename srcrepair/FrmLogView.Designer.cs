@@ -34,11 +34,11 @@
             this.LV_Menu = new System.Windows.Forms.MenuStrip();
             this.LV_MenuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_MenuFileReload = new System.Windows.Forms.ToolStripMenuItem();
+            this.LV_Sep1 = new System.Windows.Forms.ToolStripSeparator();
             this.LV_MenuFileExit = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_MenuHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_MenuHelpAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_LogArea = new System.Windows.Forms.TextBox();
-            this.LV_Sep1 = new System.Windows.Forms.ToolStripSeparator();
             this.LV_StatusBar.SuspendLayout();
             this.LV_Menu.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +78,11 @@
             resources.ApplyResources(this.LV_MenuFileReload, "LV_MenuFileReload");
             this.LV_MenuFileReload.Click += new System.EventHandler(this.LV_MenuFileReload_Click);
             // 
+            // LV_Sep1
+            // 
+            this.LV_Sep1.Name = "LV_Sep1";
+            resources.ApplyResources(this.LV_Sep1, "LV_Sep1");
+            // 
             // LV_MenuFileExit
             // 
             this.LV_MenuFileExit.Name = "LV_MenuFileExit";
@@ -101,11 +106,6 @@
             // 
             resources.ApplyResources(this.LV_LogArea, "LV_LogArea");
             this.LV_LogArea.Name = "LV_LogArea";
-            // 
-            // LV_Sep1
-            // 
-            this.LV_Sep1.Name = "LV_Sep1";
-            resources.ApplyResources(this.LV_Sep1, "LV_Sep1");
             // 
             // frmLogView
             // 
