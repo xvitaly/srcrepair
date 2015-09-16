@@ -55,7 +55,8 @@ namespace srcrepair
 
         private void LV_MenuFileReload_Click(object sender, EventArgs e)
         {
-            //
+            // Перечитаем содержимое журнала...
+            LoadLog(LogFileName);
         }
 
         private void LV_MenuFileExit_Click(object sender, EventArgs e)
