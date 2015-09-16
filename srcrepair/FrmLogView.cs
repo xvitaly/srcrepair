@@ -59,7 +59,12 @@ namespace srcrepair
 
         private void LV_MenuEditCopy_Click(object sender, EventArgs e)
         {
-            //
+            try
+            {
+                string SelText = LV_LogArea.SelectedText;
+                if (String.IsNullOrWhiteSpace(SelText)) { Clipboard.SetText(SelText); }
+            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void LV_MenuEditPaste_Click(object sender, EventArgs e)
