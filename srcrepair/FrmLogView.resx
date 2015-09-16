@@ -161,18 +161,6 @@
   <data name="LV_MenuFile.Text" xml:space="preserve">
     <value>File</value>
   </data>
-  <data name="LV_MenuEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
-  </data>
-  <data name="LV_MenuEdit.Text" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="LV_MenuHelpAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="LV_MenuHelpAbout.Text" xml:space="preserve">
-    <value>About</value>
-  </data>
   <data name="LV_MenuHelp.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 20</value>
   </data>
@@ -221,23 +209,11 @@
   <data name="LV_MenuFileExit.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
-  <data name="LV_MenuEditCut.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="LV_MenuHelpAbout.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
   </data>
-  <data name="LV_MenuEditCut.Text" xml:space="preserve">
-    <value>Cut</value>
-  </data>
-  <data name="LV_MenuEditCopy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="LV_MenuEditCopy.Text" xml:space="preserve">
-    <value>Copy</value>
-  </data>
-  <data name="LV_MenuEditPaste.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="LV_MenuEditPaste.Text" xml:space="preserve">
-    <value>Paste</value>
+  <data name="LV_MenuHelpAbout.Text" xml:space="preserve">
+    <value>About</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="LV_LogArea.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -338,30 +314,6 @@
     <value>LV_MenuFileExit</value>
   </data>
   <data name="&gt;&gt;LV_MenuFileExit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LV_MenuEdit.Name" xml:space="preserve">
-    <value>LV_MenuEdit</value>
-  </data>
-  <data name="&gt;&gt;LV_MenuEdit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LV_MenuEditCut.Name" xml:space="preserve">
-    <value>LV_MenuEditCut</value>
-  </data>
-  <data name="&gt;&gt;LV_MenuEditCut.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LV_MenuEditCopy.Name" xml:space="preserve">
-    <value>LV_MenuEditCopy</value>
-  </data>
-  <data name="&gt;&gt;LV_MenuEditCopy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LV_MenuEditPaste.Name" xml:space="preserve">
-    <value>LV_MenuEditPaste</value>
-  </data>
-  <data name="&gt;&gt;LV_MenuEditPaste.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;LV_MenuHelp.Name" xml:space="preserve">

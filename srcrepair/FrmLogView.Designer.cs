@@ -36,10 +36,6 @@
             this.LV_MenuFileOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_MenuFileReload = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_MenuFileExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.LV_MenuEdit = new System.Windows.Forms.ToolStripMenuItem();
-            this.LV_MenuEditCut = new System.Windows.Forms.ToolStripMenuItem();
-            this.LV_MenuEditCopy = new System.Windows.Forms.ToolStripMenuItem();
-            this.LV_MenuEditPaste = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_MenuHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_MenuHelpAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_LogArea = new System.Windows.Forms.TextBox();
@@ -64,7 +60,6 @@
             // 
             this.LV_Menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.LV_MenuFile,
-            this.LV_MenuEdit,
             this.LV_MenuHelp});
             resources.ApplyResources(this.LV_Menu, "LV_Menu");
             this.LV_Menu.Name = "LV_Menu";
@@ -96,33 +91,6 @@
             this.LV_MenuFileExit.Name = "LV_MenuFileExit";
             resources.ApplyResources(this.LV_MenuFileExit, "LV_MenuFileExit");
             this.LV_MenuFileExit.Click += new System.EventHandler(this.LV_MenuFileExit_Click);
-            // 
-            // LV_MenuEdit
-            // 
-            this.LV_MenuEdit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.LV_MenuEditCut,
-            this.LV_MenuEditCopy,
-            this.LV_MenuEditPaste});
-            this.LV_MenuEdit.Name = "LV_MenuEdit";
-            resources.ApplyResources(this.LV_MenuEdit, "LV_MenuEdit");
-            // 
-            // LV_MenuEditCut
-            // 
-            this.LV_MenuEditCut.Name = "LV_MenuEditCut";
-            resources.ApplyResources(this.LV_MenuEditCut, "LV_MenuEditCut");
-            this.LV_MenuEditCut.Click += new System.EventHandler(this.LV_MenuEditCut_Click);
-            // 
-            // LV_MenuEditCopy
-            // 
-            this.LV_MenuEditCopy.Name = "LV_MenuEditCopy";
-            resources.ApplyResources(this.LV_MenuEditCopy, "LV_MenuEditCopy");
-            this.LV_MenuEditCopy.Click += new System.EventHandler(this.LV_MenuEditCopy_Click);
-            // 
-            // LV_MenuEditPaste
-            // 
-            this.LV_MenuEditPaste.Name = "LV_MenuEditPaste";
-            resources.ApplyResources(this.LV_MenuEditPaste, "LV_MenuEditPaste");
-            this.LV_MenuEditPaste.Click += new System.EventHandler(this.LV_MenuEditPaste_Click);
             // 
             // LV_MenuHelp
             // 
@@ -177,10 +145,6 @@
         private System.Windows.Forms.ToolStripMenuItem LV_MenuFileOpen;
         private System.Windows.Forms.ToolStripMenuItem LV_MenuFileReload;
         private System.Windows.Forms.ToolStripMenuItem LV_MenuFileExit;
-        private System.Windows.Forms.ToolStripMenuItem LV_MenuEdit;
-        private System.Windows.Forms.ToolStripMenuItem LV_MenuEditCut;
-        private System.Windows.Forms.ToolStripMenuItem LV_MenuEditCopy;
-        private System.Windows.Forms.ToolStripMenuItem LV_MenuEditPaste;
         private System.Windows.Forms.ToolStripMenuItem LV_MenuHelp;
         private System.Windows.Forms.ToolStripMenuItem LV_MenuHelpAbout;
         private System.Windows.Forms.TextBox LV_LogArea;
