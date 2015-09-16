@@ -61,7 +61,8 @@ namespace srcrepair
 
         private void LV_MenuFileExit_Click(object sender, EventArgs e)
         {
-            //
+            // Закроем модуль...
+            Close();
         }
 
         private void LV_MenuEditCut_Click(object sender, EventArgs e)
