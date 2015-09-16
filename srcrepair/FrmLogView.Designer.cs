@@ -83,16 +83,19 @@
             // 
             this.LV_MenuFileOpen.Name = "LV_MenuFileOpen";
             resources.ApplyResources(this.LV_MenuFileOpen, "LV_MenuFileOpen");
+            this.LV_MenuFileOpen.Click += new System.EventHandler(this.LV_MenuFileOpen_Click);
             // 
             // LV_MenuFileReload
             // 
             this.LV_MenuFileReload.Name = "LV_MenuFileReload";
             resources.ApplyResources(this.LV_MenuFileReload, "LV_MenuFileReload");
+            this.LV_MenuFileReload.Click += new System.EventHandler(this.LV_MenuFileReload_Click);
             // 
             // LV_MenuFileExit
             // 
             this.LV_MenuFileExit.Name = "LV_MenuFileExit";
             resources.ApplyResources(this.LV_MenuFileExit, "LV_MenuFileExit");
+            this.LV_MenuFileExit.Click += new System.EventHandler(this.LV_MenuFileExit_Click);
             // 
             // LV_MenuEdit
             // 
@@ -107,16 +110,19 @@
             // 
             this.LV_MenuEditCut.Name = "LV_MenuEditCut";
             resources.ApplyResources(this.LV_MenuEditCut, "LV_MenuEditCut");
+            this.LV_MenuEditCut.Click += new System.EventHandler(this.LV_MenuEditCut_Click);
             // 
             // LV_MenuEditCopy
             // 
             this.LV_MenuEditCopy.Name = "LV_MenuEditCopy";
             resources.ApplyResources(this.LV_MenuEditCopy, "LV_MenuEditCopy");
+            this.LV_MenuEditCopy.Click += new System.EventHandler(this.LV_MenuEditCopy_Click);
             // 
             // LV_MenuEditPaste
             // 
             this.LV_MenuEditPaste.Name = "LV_MenuEditPaste";
             resources.ApplyResources(this.LV_MenuEditPaste, "LV_MenuEditPaste");
+            this.LV_MenuEditPaste.Click += new System.EventHandler(this.LV_MenuEditPaste_Click);
             // 
             // LV_MenuHelp
             // 
@@ -129,6 +135,7 @@
             // 
             this.LV_MenuHelpAbout.Name = "LV_MenuHelpAbout";
             resources.ApplyResources(this.LV_MenuHelpAbout, "LV_MenuHelpAbout");
+            this.LV_MenuHelpAbout.Click += new System.EventHandler(this.LV_MenuHelpAbout_Click);
             // 
             // LV_LogArea
             // 

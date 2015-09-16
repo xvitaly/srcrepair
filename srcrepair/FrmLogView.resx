@@ -121,12 +121,6 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="LV_Status.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 17</value>
-  </data>
-  <data name="LV_Status.Text" xml:space="preserve">
-    <value>Done.</value>
-  </data>
   <data name="LV_StatusBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 422</value>
   </data>
@@ -152,53 +146,20 @@
   <data name="&gt;&gt;LV_StatusBar.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="LV_Status.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 17</value>
+  </data>
+  <data name="LV_Status.Text" xml:space="preserve">
+    <value>Done.</value>
+  </data>
   <metadata name="LV_Menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>127, 17</value>
   </metadata>
-  <data name="LV_MenuFileOpen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="LV_MenuFileOpen.Text" xml:space="preserve">
-    <value>Open</value>
-  </data>
-  <data name="LV_MenuFileReload.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="LV_MenuFileReload.Text" xml:space="preserve">
-    <value>Reload</value>
-  </data>
-  <data name="LV_Sep1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 6</value>
-  </data>
-  <data name="LV_MenuFileExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="LV_MenuFileExit.Text" xml:space="preserve">
-    <value>Exit</value>
-  </data>
   <data name="LV_MenuFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 20</value>
   </data>
   <data name="LV_MenuFile.Text" xml:space="preserve">
     <value>File</value>
-  </data>
-  <data name="LV_MenuEditCut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="LV_MenuEditCut.Text" xml:space="preserve">
-    <value>Cut</value>
-  </data>
-  <data name="LV_MenuEditCopy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="LV_MenuEditCopy.Text" xml:space="preserve">
-    <value>Copy</value>
-  </data>
-  <data name="LV_MenuEditPaste.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="LV_MenuEditPaste.Text" xml:space="preserve">
-    <value>Paste</value>
   </data>
   <data name="LV_MenuEdit.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 20</value>
@@ -242,6 +203,42 @@
   <data name="&gt;&gt;LV_Menu.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="LV_MenuFileOpen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="LV_MenuFileOpen.Text" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="LV_MenuFileReload.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="LV_MenuFileReload.Text" xml:space="preserve">
+    <value>Reload</value>
+  </data>
+  <data name="LV_MenuFileExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="LV_MenuFileExit.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="LV_MenuEditCut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="LV_MenuEditCut.Text" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="LV_MenuEditCopy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="LV_MenuEditCopy.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="LV_MenuEditPaste.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="LV_MenuEditPaste.Text" xml:space="preserve">
+    <value>Paste</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="LV_LogArea.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -275,6 +272,9 @@
   </data>
   <data name="&gt;&gt;LV_LogArea.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="LV_Sep1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 6</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

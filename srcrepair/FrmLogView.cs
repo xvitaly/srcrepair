@@ -36,5 +36,40 @@ namespace srcrepair
             // Считаем содержимое выбранного файла...
             try { LV_LogArea.AppendText(File.ReadAllText(LogFileName)); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("LV_LoadFailed"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
         }
+
+        private void LV_MenuFileOpen_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void LV_MenuFileReload_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void LV_MenuFileExit_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void LV_MenuEditCut_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void LV_MenuEditCopy_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void LV_MenuEditPaste_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void LV_MenuHelpAbout_Click(object sender, EventArgs e)
+        {
+            //
+        }
     }
 }
