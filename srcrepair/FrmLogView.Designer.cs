@@ -33,7 +33,6 @@
             this.LV_Status = new System.Windows.Forms.ToolStripStatusLabel();
             this.LV_Menu = new System.Windows.Forms.MenuStrip();
             this.LV_MenuFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.LV_MenuFileOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_MenuFileReload = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_MenuFileExit = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_MenuHelp = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,18 +66,11 @@
             // LV_MenuFile
             // 
             this.LV_MenuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.LV_MenuFileOpen,
             this.LV_MenuFileReload,
             this.LV_Sep1,
             this.LV_MenuFileExit});
             this.LV_MenuFile.Name = "LV_MenuFile";
             resources.ApplyResources(this.LV_MenuFile, "LV_MenuFile");
-            // 
-            // LV_MenuFileOpen
-            // 
-            this.LV_MenuFileOpen.Name = "LV_MenuFileOpen";
-            resources.ApplyResources(this.LV_MenuFileOpen, "LV_MenuFileOpen");
-            this.LV_MenuFileOpen.Click += new System.EventHandler(this.LV_MenuFileOpen_Click);
             // 
             // LV_MenuFileReload
             // 
@@ -142,7 +134,6 @@
         private System.Windows.Forms.ToolStripStatusLabel LV_Status;
         private System.Windows.Forms.MenuStrip LV_Menu;
         private System.Windows.Forms.ToolStripMenuItem LV_MenuFile;
-        private System.Windows.Forms.ToolStripMenuItem LV_MenuFileOpen;
         private System.Windows.Forms.ToolStripMenuItem LV_MenuFileReload;
         private System.Windows.Forms.ToolStripMenuItem LV_MenuFileExit;
         private System.Windows.Forms.ToolStripMenuItem LV_MenuHelp;

@@ -155,6 +155,21 @@
   <metadata name="LV_Menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>127, 17</value>
   </metadata>
+  <data name="LV_MenuFileReload.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="LV_MenuFileReload.Text" xml:space="preserve">
+    <value>Reload</value>
+  </data>
+  <data name="LV_Sep1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 6</value>
+  </data>
+  <data name="LV_MenuFileExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
+  </data>
+  <data name="LV_MenuFileExit.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
   <data name="LV_MenuFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 20</value>
   </data>
@@ -190,24 +205,6 @@
   </data>
   <data name="&gt;&gt;LV_Menu.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="LV_MenuFileOpen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="LV_MenuFileOpen.Text" xml:space="preserve">
-    <value>Open</value>
-  </data>
-  <data name="LV_MenuFileReload.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="LV_MenuFileReload.Text" xml:space="preserve">
-    <value>Reload</value>
-  </data>
-  <data name="LV_MenuFileExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="LV_MenuFileExit.Text" xml:space="preserve">
-    <value>Exit</value>
   </data>
   <data name="LV_MenuHelpAbout.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
@@ -248,9 +245,6 @@
   </data>
   <data name="&gt;&gt;LV_LogArea.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="LV_Sep1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 6</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -296,12 +290,6 @@
     <value>LV_MenuFile</value>
   </data>
   <data name="&gt;&gt;LV_MenuFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LV_MenuFileOpen.Name" xml:space="preserve">
-    <value>LV_MenuFileOpen</value>
-  </data>
-  <data name="&gt;&gt;LV_MenuFileOpen.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;LV_MenuFileReload.Name" xml:space="preserve">

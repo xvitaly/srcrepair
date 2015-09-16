@@ -48,11 +48,6 @@ namespace srcrepair
             LoadLog(LogFileName);
         }
 
-        private void LV_MenuFileOpen_Click(object sender, EventArgs e)
-        {
-            //
-        }
-
         private void LV_MenuFileReload_Click(object sender, EventArgs e)
         {
             // Перечитаем содержимое журнала...
