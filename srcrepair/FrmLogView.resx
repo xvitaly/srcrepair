@@ -169,7 +169,7 @@
     <value>157, 22</value>
   </data>
   <data name="LV_MenuFileReload.Text" xml:space="preserve">
-    <value>Reload</value>
+    <value>&amp;Reload</value>
   </data>
   <data name="LV_Sep1.Size" type="System.Drawing.Size, System.Drawing">
     <value>154, 6</value>
@@ -181,13 +181,13 @@
     <value>157, 22</value>
   </data>
   <data name="LV_MenuFileExit.Text" xml:space="preserve">
-    <value>Exit</value>
+    <value>E&amp;xit</value>
   </data>
   <data name="LV_MenuFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 20</value>
   </data>
   <data name="LV_MenuFile.Text" xml:space="preserve">
-    <value>File</value>
+    <value>&amp;File</value>
   </data>
   <data name="LV_MenuHelpAbout.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Shift+F1</value>
@@ -196,13 +196,13 @@
     <value>163, 22</value>
   </data>
   <data name="LV_MenuHelpAbout.Text" xml:space="preserve">
-    <value>About</value>
+    <value>&amp;About</value>
   </data>
   <data name="LV_MenuHelp.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 20</value>
   </data>
   <data name="LV_MenuHelp.Text" xml:space="preserve">
-    <value>Help</value>
+    <value>&amp;Help</value>
   </data>
   <data name="LV_Menu.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
