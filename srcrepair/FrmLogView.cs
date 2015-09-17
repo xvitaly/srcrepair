@@ -62,7 +62,8 @@ namespace srcrepair
 
         private void LV_MenuHelpAbout_Click(object sender, EventArgs e)
         {
-            //
+            // Выводим сообщение с краткой информацией о плагине...
+            MessageBox.Show(Properties.Resources.LV_About, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
