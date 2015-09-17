@@ -403,6 +403,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Log Viewer plugin for SRC Repair by EasyCoding Team..
+        /// </summary>
+        internal static string LV_About {
+            get {
+                return ResourceManager.GetString("LV_About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ^[0-9a-zA-Z]*$.
         /// </summary>
         internal static string MO_CustomDirRegex {
