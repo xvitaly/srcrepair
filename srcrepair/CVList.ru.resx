@@ -3504,4 +3504,16 @@
   <data name="sv_show_voip_indicator_for_enemies" xml:space="preserve">
     <value>Включает / отключает отображение индикатора активности голосового чата над игроками команды противника (CS:GO).</value>
   </data>
+  <data name="sv_vote_issue_extendlevel_allowed" xml:space="preserve">
+    <value>Разрешает / запрещает игрокам запускать голосование за продление текущей карты.</value>
+  </data>
+  <data name="sv_vote_issue_extendlevel_quorum" xml:space="preserve">
+    <value>Задаёт необходимое соотношение голосов за продление текущей карты.</value>
+  </data>
+  <data name="tf_passtime_throwspeed_velocity" xml:space="preserve">
+    <value>Включает / отключает режим, при котором Jack в режиме PASS Time наследует часть скорости бросающего.</value>
+  </data>
+  <data name="tf_passtime_unstable" xml:space="preserve">
+    <value>Включает / отключает нестабильные тестовые возможности режима PASS Time.</value>
+  </data>
 </root>
