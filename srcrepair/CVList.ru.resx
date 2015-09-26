@@ -3495,4 +3495,13 @@
   <data name="tf_hud_target_id_show_avatars" xml:space="preserve">
     <value>Задаёт параметры отображения аватаров на панели Target ID HUD: выключены, включены для всех или включены только для друзей.</value>
   </data>
+  <data name="mp_weapons_allow_typecount" xml:space="preserve">
+    <value>Задаёт сколько предметов может купить один игрок за раунд (CS:GO).</value>
+  </data>
+  <data name="sv_showbullethits" xml:space="preserve">
+    <value>Включает / отключает визуализацию попаданий по противнику на локальном слушающем сервере (CS:GO).</value>
+  </data>
+  <data name="sv_show_voip_indicator_for_enemies" xml:space="preserve">
+    <value>Включает / отключает отображение индикатора активности голосового чата над игроками команды противника (CS:GO).</value>
+  </data>
 </root>
