@@ -158,8 +158,8 @@ namespace srcrepair
         /// <param name="LangCode">ID языка Steam</param>
         private void CleanRegistryNow(int LangCode)
         {
-            // Удаляем ключ HKEY_LOCAL_MACHINE\Software\Valve рекурсивно...
-            Registry.LocalMachine.DeleteSubKeyTree(Path.Combine("Software", "Valve"), false);
+            // Удаляем ключ HKEY_LOCAL_MACHINE\Software\Valve рекурсивно (если есть права администратора)...
+            if (CoreLib.IsCurrentUserAdmin()) { Registry.LocalMachine.DeleteSubKeyTree(Path.Combine("Software", "Valve"), false); }
 
             // Удаляем ключ HKEY_CURRENT_USER\Software\Valve рекурсивно...
             Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("Software", "Valve"), false);
@@ -1484,8 +1484,6 @@ namespace srcrepair
         /// <param name="State">Устанавливаемый статус</param>
         private void ChangePrvControlState(bool State)
         {
-            PS_CleanRegistry.Enabled = State;
-            PS_SteamLang.Enabled = State;
             MNUWinMnuDisabler.Enabled = State;
         }
 
