@@ -47,7 +47,7 @@ fetch_hud http://huds.tf/img/main/harvardhud.png https://github.com/harvardbb/ha
 fetch_hud http://huds.tf/img/main/bwhud.png https://github.com/bw-/bw-HUD/archive/master.zip bwhud
 fetch_hud http://huds.tf/img/main/budhud.png https://github.com/WhiskerBiscuit/budhud/archive/master.zip budhud
 fetch_hud http://huds.tf/img/main/idhud.png https://github.com/Eniere/idhud/archive/master.zip idhud
-fetch_hud http://huds.tf/img/main/jedihud.png https://gitgud.io/JediThug/JediHUD/repository/archive.zip?ref=release jedihud
+fetch_hud http://huds.tf/img/main/jedihud.png https://gitgud.io/JediThug/JediHUD/repository/archive.zip jedihud
 fetch_hud http://huds.tf/img/main/noto.png https://github.com/omnibombulator/noto/archive/master.zip noto
 fetch_hud http://huds.tf/img/main/riethud.png https://github.com/TheRiet/rietHUD/archive/master.zip riethud
 fetch_hud http://huds.tf/img/main/morghud.png https://github.com/ItsMorgus/MorgHUD/archive/master.zip morghud
