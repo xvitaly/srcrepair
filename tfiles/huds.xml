@@ -5,7 +5,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/7HUD/7HUD_a2ae3927.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/Sevin7/7HUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/7HUD.png</Preview>
     <RepoPath>https://github.com/Sevin7/7HUD</RepoPath>
     <Site>http://huds.tf/7hud/</Site>
@@ -17,7 +17,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/herganhud/herganhud_732d123d.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/Hergan5/herganhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/herganhud.png</Preview>
     <RepoPath>https://github.com/Hergan5/herganhud</RepoPath>
     <Site>http://huds.tf/herganhud/</Site>
@@ -29,7 +29,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/pikles-hud/pikles-hud_b9ac6446.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/piklestf2/pikles-hud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/pikles-hud.png</Preview>
     <RepoPath>https://github.com/piklestf2/pikles-hud</RepoPath>
     <Site>http://huds.tf/pikleshud/</Site>
@@ -41,7 +41,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/broeselhud_blue/broeselhud_blue_afb6575c.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/fblue/broeselhud_blue/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/broeselhud_blue.png</Preview>
     <RepoPath>https://github.com/fblue/broeselhud_blue</RepoPath>
     <Site>http://huds.tf/broeselhudblue/</Site>
@@ -53,7 +53,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/zhud/zhud_0ba35941.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/z4-/zhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/zhud.png</Preview>
     <RepoPath>https://github.com/z4-/zhud</RepoPath>
     <Site>http://huds.tf/zhud/</Site>
@@ -65,7 +65,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/basthud/basthud_a5ceb6cb.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/basbanaan/bastHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/basthud.png</Preview>
     <RepoPath>https://github.com/basbanaan/bastHUD</RepoPath>
     <Site>http://huds.tf/basthud/</Site>
@@ -77,7 +77,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/takyahud/takyahud_358bc275.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/takram/takyahud-classic/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/takyahud.png</Preview>
     <RepoPath>https://github.com/takram/takyahud-classic</RepoPath>
     <Site>http://huds.tf/takyahud/</Site>
@@ -89,7 +89,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/sirhud/sirhud_2e534a4c.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/sirgrey/SirHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/sirhud.png</Preview>
     <RepoPath>https://github.com/sirgrey/SirHUD</RepoPath>
     <Site>http://huds.tf/sirhud/</Site>
@@ -101,7 +101,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/tf2hudplus/tf2hudplus_5018bf70.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/SnowshoeIceboot/TF2HudPlus/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/tf2hudplus.png</Preview>
     <RepoPath>https://github.com/SnowshoeIceboot/TF2HudPlus</RepoPath>
     <Site>http://huds.tf/tf2hudplus/</Site>
@@ -113,7 +113,7 @@
     <Game>tf</Game>
     <IsUpdated>0</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/rpvhud/rpvhud_14a6c8e1.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/harvardbb/rpvhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/rpvhud.png</Preview>
     <RepoPath>https://github.com/harvardbb/rpvhud</RepoPath>
     <Site>http://huds.tf/rpvhud/</Site>
@@ -125,7 +125,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/toonhud/toonhud_e64d8d83.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://www.dropbox.com/s/1x742x8fjay2idn/ToonHUD.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/toonhud.png</Preview>
     <RepoPath></RepoPath>
     <Site>http://huds.tf/toonhud/</Site>
@@ -137,7 +137,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/warhud/warhud_dba0d8e5.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/wareya/warHUD-TF/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/warhud.png</Preview>
     <RepoPath>https://github.com/wareya/warHUD-TF/</RepoPath>
     <Site>http://huds.tf/warhud/</Site>
@@ -149,7 +149,7 @@
     <Game>tf</Game>
     <IsUpdated>0</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/doodlehud/doodlehud_7c64945e.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/DougieDoodles/doodlehud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/doodlehud.png</Preview>
     <RepoPath>https://github.com/DougieDoodles/doodlehud</RepoPath>
     <Site>http://huds.tf/doodlehud/</Site>
@@ -161,7 +161,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/voidhud/voidhud_71ed854b.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/TheStaticVoid/VoidHUD2.0/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/voidhud.png</Preview>
     <RepoPath>https://github.com/TheStaticVoid/voidhud2.0</RepoPath>
     <Site>http://huds.tf/voidhud/</Site>
@@ -173,7 +173,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/ahud/ahud_529ff227.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/n0kk/ahud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/ahud.png</Preview>
     <RepoPath>https://github.com/n0kk/ahud</RepoPath>
     <Site>http://huds.tf/ahud/</Site>
@@ -185,7 +185,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/cbhud/cbhud_fa08a260.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/ColdBalls/CBHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/cbhud.png</Preview>
     <RepoPath>https://github.com/ColdBalls/CBHUD</RepoPath>
     <Site>http://huds.tf/cbhud/</Site>
@@ -197,7 +197,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/calmlikeabomb/calmlikeabomb_9268aae0.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/Slayer89/slayhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/calmlikeabomb.png</Preview>
     <RepoPath>https://github.com/Slayer89/slayhud</RepoPath>
     <Site>http://huds.tf/calmlikeabomb/</Site>
@@ -209,7 +209,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/ejphud/ejphud_fc0cf7ed.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/basbanaan/EJP-HUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/ejphud.png</Preview>
     <RepoPath>https://github.com/basbanaan/EJP-HUD</RepoPath>
     <Site>http://huds.tf/ejphud/</Site>
@@ -221,7 +221,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/flathud/flathud_99b08897.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/flatlinee/flatHUD-/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/flathud.png</Preview>
     <RepoPath>https://github.com/flatlinee/flatHUD-</RepoPath>
     <Site>http://huds.tf/flathud/</Site>
@@ -233,7 +233,7 @@
     <Game>tf</Game>
     <IsUpdated>0</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/harvardhud/harvardhud_25374548.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/harvardbb/harvardhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/harvardhud.png</Preview>
     <RepoPath>https://github.com/harvardbb/harvardhud</RepoPath>
     <Site>http://huds.tf/harvardhud/</Site>
@@ -245,7 +245,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/bwhud/bwhud_beef2161.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/bw-/bw-HUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/bwhud.png</Preview>
     <RepoPath>https://github.com/bw-/bw-HUD</RepoPath>
     <Site>http://huds.tf/bwhud/</Site>
@@ -257,7 +257,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/budhud/budhud_2425e7aa.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/WhiskerBiscuit/budhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.png</Preview>
     <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
     <Site>http://huds.tf/budhud/</Site>
@@ -269,7 +269,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/idhud/idhud_87adc744.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/Eniere/idhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/idhud.png</Preview>
     <RepoPath>https://github.com/Eniere/idhud</RepoPath>
     <Site>http://huds.tf/idhud/</Site>
@@ -281,7 +281,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/jedihud/jedihud_3a82d377.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://gitgud.io/JediThug/JediHUD/repository/archive.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/jedihud.png</Preview>
     <RepoPath>https://gitgud.net/JediThug/jedihud</RepoPath>
     <Site>http://huds.tf/jedihud/</Site>
@@ -293,7 +293,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/noto/noto_080359eb.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/omnibombulator/noto/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/noto.png</Preview>
     <RepoPath>https://github.com/omnibombulator/noto</RepoPath>
     <Site>http://huds.tf/noto/</Site>
@@ -305,7 +305,7 @@
     <Game>tf</Game>
     <IsUpdated>0</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/riethud/riethud_419a05b5.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/TheRiet/rietHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/riethud.png</Preview>
     <RepoPath>https://github.com/TheRiet/rietHUD</RepoPath>
     <Site>http://huds.tf/riethud/</Site>
@@ -317,7 +317,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/morghud/morghud_ce0b9eac.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/ItsMorgus/MorgHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/morghud.png</Preview>
     <RepoPath>https://github.com/ItsMorgus/MorgHUD</RepoPath>
     <Site>http://huds.tf/morghud/</Site>
@@ -329,7 +329,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/minthud/minthud_25e1a606.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/Rawrsor/DrooHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/minthud.png</Preview>
     <RepoPath>https://github.com/Rawrsor/DrooHUD</RepoPath>
     <Site>http://huds.tf/minthud/</Site>
@@ -341,7 +341,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/kbnhud/kbnhud_9ea962d8.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/Jotunn/KBNHud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/kbnhud.png</Preview>
     <RepoPath>https://github.com/Jotunn/KBNHud</RepoPath>
     <Site>http://huds.tf/kbnhud/</Site>
@@ -353,7 +353,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/medhud/medhud_918580eb.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/Intellectualbadass/medHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/medhud.png</Preview>
     <RepoPath>https://github.com/Intellectualbadass/medHUD</RepoPath>
     <Site>http://huds.tf/medhud/</Site>
@@ -365,7 +365,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/prismhud/prismhud_98a77681.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/JarateKing/PrismHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/prismhud.png</Preview>
     <RepoPath>https://github.com/JarateKing/PrismHUD</RepoPath>
     <Site>http://huds.tf/prismhud/</Site>
@@ -377,7 +377,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/rayshud/rayshud_c014e700.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>https://github.com/raysfire/rayshud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/rayshud.png</Preview>
     <RepoPath>https://github.com/raysfire/rayshud</RepoPath>
     <Site>http://huds.tf/rayshud/</Site>
@@ -389,7 +389,7 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/evehud/evehud_4011c274.zip</URI>
-    <UpURI></UpURI>
+    <UpURI>http://files.gamebanana.com/guis/eve_hud_v366.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/evehud.png</Preview>
     <RepoPath></RepoPath>
     <Site>http://tf2.gamebanana.com/guis/25711</Site>
