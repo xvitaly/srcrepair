@@ -36,6 +36,11 @@ namespace srcrepair
         public string URI;
 
         /// <summary>
+        /// Содержит URI апстрима.
+        /// </summary>
+        public string UpURI;
+
+        /// <summary>
         /// Принимает истинное значение если HUD поддерживает последнюю версию игры.
         /// </summary>
         public bool IsUpdated;
@@ -118,6 +123,7 @@ namespace srcrepair
                 {
                     Name = XMLD.GetElementsByTagName("Name")[i].InnerText;
                     URI = XMLD.GetElementsByTagName("URI")[i].InnerText;
+                    UpURI = XMLD.GetElementsByTagName("UpURI")[i].InnerText;
                     IsUpdated = XMLD.GetElementsByTagName("IsUpdated")[i].InnerText == "1";
                     Preview = XMLD.GetElementsByTagName("Preview")[i].InnerText;
                     Site = XMLD.GetElementsByTagName("Site")[i].InnerText;
