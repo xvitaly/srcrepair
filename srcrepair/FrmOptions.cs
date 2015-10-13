@@ -49,6 +49,7 @@ namespace srcrepair
             MO_CustDirName.Text = Properties.Settings.Default.UserCustDirName;
             MO_ZipCompress.Checked = Properties.Settings.Default.PackBeforeCleanup;
             MO_UnSafeOps.Checked = Properties.Settings.Default.AllowUnSafeCleanup;
+            MO_UseUpstream.Checked = Properties.Settings.Default.HUDUseUpstream;
 
             // Укажем название приложения в заголовке окна...
             Text = String.Format(Text, Properties.Resources.AppName);
@@ -67,6 +68,7 @@ namespace srcrepair
             Properties.Settings.Default.AutoReloadGameDb = MO_AutoRestAfterUpdateDb.Checked;
             Properties.Settings.Default.PackBeforeCleanup = MO_ZipCompress.Checked;
             Properties.Settings.Default.AllowUnSafeCleanup = MO_UnSafeOps.Checked;
+            Properties.Settings.Default.HUDUseUpstream = MO_UseUpstream.Checked;
             if (Regex.IsMatch(MO_CustDirName.Text, Properties.Resources.MO_CustomDirRegex)) { Properties.Settings.Default.UserCustDirName = MO_CustDirName.Text; }
 
             // Сохраняем настройки...
