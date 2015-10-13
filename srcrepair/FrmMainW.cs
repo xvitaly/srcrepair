@@ -3328,7 +3328,7 @@ namespace srcrepair
                 if (!SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir))
                 {
                     // Начинаем загрузку если файл не существует...
-                    if (!File.Exists(SelHUD.LocalFile)) { CoreLib.DownloadFileEx(SelHUD.URI, SelHUD.LocalFile); }
+                    if (!File.Exists(SelHUD.LocalFile)) { CoreLib.DownloadFileEx(Properties.Settings.Default.HUDUseUpstream ? SelHUD.UpURI : SelHUD.URI, SelHUD.LocalFile); }
 
                     // Распаковываем загруженный архив с файлами HUD...
                     CoreLib.ExtractFiles(SelHUD.LocalFile, Path.Combine(SelGame.CustomInstallDir, "hudtemp"));
