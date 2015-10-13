@@ -286,5 +286,17 @@ namespace srcrepair.Properties {
                 this["HUDSaveArchives"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool HUDUseUpstream {
+            get {
+                return ((bool)(this["HUDUseUpstream"]));
+            }
+            set {
+                this["HUDUseUpstream"] = value;
+            }
+        }
     }
 }
