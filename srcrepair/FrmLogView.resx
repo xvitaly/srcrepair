@@ -131,10 +131,10 @@
     <value>Done.</value>
   </data>
   <data name="LV_StatusBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 422</value>
+    <value>0, 457</value>
   </data>
   <data name="LV_StatusBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 22</value>
+    <value>742, 22</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="LV_StatusBar.TabIndex" type="System.Int32, mscorlib">
@@ -208,7 +208,7 @@
     <value>0, 0</value>
   </data>
   <data name="LV_Menu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>650, 24</value>
+    <value>742, 24</value>
   </data>
   <data name="LV_Menu.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -244,7 +244,7 @@
     <value>Both</value>
   </data>
   <data name="LV_LogArea.Size" type="System.Drawing.Size, System.Drawing">
-    <value>652, 399</value>
+    <value>744, 434</value>
   </data>
   <data name="LV_LogArea.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -274,7 +274,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>650, 444</value>
+    <value>742, 479</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
