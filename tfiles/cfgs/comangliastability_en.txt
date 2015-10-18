@@ -1,0 +1,4 @@
+Nice FPS config that does a good job and gives you a decent picture. Optimized for max stability. Recommended for use on middle-end PCs.
+
+FPS increase: High
+Graphics degradation: Moderate
