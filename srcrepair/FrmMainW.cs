@@ -1488,19 +1488,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Проверяет наличие прав администратора у приложения.
-        /// </summary>
-        private void CheckAdminRights()
-        {
-            // Проверяем, запущена ли программа с правами администратора...
-            if (!(CoreLib.IsCurrentUserAdmin()))
-            {
-                // Блокируем контролы, требующие для своей работы прав админа...
-                ChangePrvControlState(false);
-            }
-        }
-
-        /// <summary>
         /// Выполняет определение и вывод названия файловой системы на диске установки клиента Steam.
         /// </summary>
         /// <param name="SteamPath">Каталог установки Steam</param>
@@ -1826,7 +1813,7 @@ namespace srcrepair
             try { App.FullSteamPath = CoreLib.GetSteamPath(); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); ValidateAndHandle(); }
 
             // Начинаем платформо-зависимые процедуры...
-            CheckAdminRights();
+            ChangePrvControlState(CoreLib.IsCurrentUserAdmin());
 
             // При работе отладочной версии запишем в лог путь к найденному Steam...
             #if DEBUG
