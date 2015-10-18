@@ -117,10 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AppLaunchedNotAdmin" xml:space="preserve">
-    <value>Внимание! Программа запущена не от учётной записи с правами администратора, поэтому некоторые функции будут отключены. Чтобы получить к ним доступ, перезапустите её с правами администратора!</value>
-    <comment>Сообщение, выдаваемое при запуске программы от ограниченной учётной записи</comment>
-  </data>
   <data name="BackUpCreationFailed" xml:space="preserve">
     <value>Произошла ошибка при создании резервной копии. Резервная копия не была создана!</value>
     <comment>Сообщение, выдаваемое при ошибке создания резервной копии</comment>

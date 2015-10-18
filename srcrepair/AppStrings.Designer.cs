@@ -232,15 +232,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attention! The program is not started from an account with administrator privileges, so some features are disabled. To access them, then restart it as root!.
-        /// </summary>
-        internal static string AppLaunchedNotAdmin {
-            get {
-                return ResourceManager.GetString("AppLaunchedNotAdmin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to File with graphical settings was not found. Please run the game at least once..
         /// </summary>
         internal static string AppNCFCFGNotExists {

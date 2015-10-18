@@ -1495,14 +1495,6 @@ namespace srcrepair
             // Проверяем, запущена ли программа с правами администратора...
             if (!(CoreLib.IsCurrentUserAdmin()))
             {
-                // Программа запущена с правами пользователя, поэтому принимаем меры...
-                // Выводим сообщение об этом...
-                if (Properties.Settings.Default.AllowNonAdmDialog)
-                {
-                    MessageBox.Show(CoreLib.GetLocalizedString("AppLaunchedNotAdmin"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Properties.Settings.Default.AllowNonAdmDialog = false;
-                }
-                
                 // Блокируем контролы, требующие для своей работы прав админа...
                 ChangePrvControlState(false);
             }

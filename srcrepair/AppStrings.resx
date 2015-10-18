@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AppLaunchedNotAdmin" xml:space="preserve">
-    <value>Attention! The program is not started from an account with administrator privileges, so some features are disabled. To access them, then restart it as root!</value>
-  </data>
   <data name="BackUpCreationFailed" xml:space="preserve">
     <value>An error occurred while creating the backup. Backup has been created!</value>
   </data>
