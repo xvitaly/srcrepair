@@ -1024,6 +1024,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to HUD database outdated. Please update database from menu Help..
+        /// </summary>
+        internal static string HD_DbOutdated {
+            get {
+                return ResourceManager.GetString("HD_DbOutdated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Installing HUD... Wait..
         /// </summary>
         internal static string HD_InstallBtnProgress {

@@ -720,4 +720,7 @@
   <data name="LV_LoadFailed" xml:space="preserve">
     <value>Failed to load error log. Try again later.</value>
   </data>
+  <data name="HD_DbOutdated" xml:space="preserve">
+    <value>HUD database outdated. Please update database from menu Help.</value>
+  </data>
 </root>
