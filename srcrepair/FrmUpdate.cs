@@ -220,6 +220,9 @@ namespace srcrepair
         {
             try
             {
+                // Установим дату последней проверки обновлений базы HUD...
+                Properties.Settings.Default.LastHUDTime = DateTime.Now;
+                
                 // Проверим хеши...
                 if (HUDHash != HUDHashNew)
                 {
