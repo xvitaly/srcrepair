@@ -88,9 +88,6 @@ namespace srcrepair
                     DnlStr = Downloader.DownloadString(Properties.Resources.UpdateChURI);
                 }
 
-                // Установим дату последней проверки обновлений...
-                Properties.Settings.Default.LastUpdateTime = DateTime.Now;
-
                 // Мы получили URL и версию...
                 NewVersion = DnlStr.Substring(0, DnlStr.IndexOf("!")); // Получаем версию...
                 UpdateURI = DnlStr.Remove(0, DnlStr.IndexOf("!") + 1); // Получаем URL...
@@ -106,6 +103,9 @@ namespace srcrepair
         {
             try
             {
+                // Установим дату последней проверки обновлений...
+                Properties.Settings.Default.LastUpdateTime = DateTime.Now;
+                
                 // Проверим, является ли версия на сервере новее, чем текущая...
                 if (CoreLib.CompareVersions(AppVersionInfo, NewVersion))
                 {
@@ -197,7 +197,7 @@ namespace srcrepair
             {
                 // Установим значок проверки обновлений...
                 Invoke((MethodInvoker)delegate() { UpdHUDDbImg.Image = Properties.Resources.upd_chk; });
-
+                
                 // Получаем файл с номером версии и ссылкой на новую...
                 using (WebClient Downloader = new WebClient())
                 {
