@@ -3301,37 +3301,29 @@ namespace srcrepair
 
         private void HD_Install_Click(object sender, EventArgs e)
         {
-            // Проверим дату последней проверки обновлений базы HUD...
-            if ((DateTime.Now - Properties.Settings.Default.LastHUDTime).Days <= 7)
+            // Проверим поддерживает ли выбранный HUD последнюю версию игры...
+            if (SelHUD.IsUpdated)
             {
-                // Проверим поддерживает ли выбранный HUD последнюю версию игры...
-                if (SelHUD.IsUpdated)
+                // Проверим установлен ли выбранный HUD...
+                if (!SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir))
                 {
-                    // Проверим установлен ли выбранный HUD...
-                    if (!SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir))
-                    {
-                        // Начинаем загрузку если файл не существует...
-                        if (!File.Exists(SelHUD.LocalFile)) { CoreLib.DownloadFileEx(Properties.Settings.Default.HUDUseUpstream ? SelHUD.UpURI : SelHUD.URI, SelHUD.LocalFile); }
+                    // Начинаем загрузку если файл не существует...
+                    if (!File.Exists(SelHUD.LocalFile)) { CoreLib.DownloadFileEx(Properties.Settings.Default.HUDUseUpstream ? SelHUD.UpURI : SelHUD.URI, SelHUD.LocalFile); }
 
-                        // Распаковываем загруженный архив с файлами HUD...
-                        CoreLib.ExtractFiles(SelHUD.LocalFile, Path.Combine(SelGame.CustomInstallDir, "hudtemp"));
+                    // Распаковываем загруженный архив с файлами HUD...
+                    CoreLib.ExtractFiles(SelHUD.LocalFile, Path.Combine(SelGame.CustomInstallDir, "hudtemp"));
 
-                        // Запускаем установку пакета в отдельном потоке...
-                        if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(); }
-                    }
-                    else
-                    {
-                        MessageBox.Show(CoreLib.GetLocalizedString("HD_AlreadyInstalled"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
+                    // Запускаем установку пакета в отдельном потоке...
+                    if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(); }
                 }
                 else
                 {
-                    MessageBox.Show(CoreLib.GetLocalizedString("HD_Outdated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(CoreLib.GetLocalizedString("HD_AlreadyInstalled"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("HD_DbOutdated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(CoreLib.GetLocalizedString("HD_Outdated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
