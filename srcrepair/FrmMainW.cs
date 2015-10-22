@@ -997,10 +997,13 @@ namespace srcrepair
         /// <param name="VFileName">Путь к файлу с настройками</param>
         private void ReadNCFGameSettings(string VFileName)
         {
+            // Получаем содержимое файла...
+            List<String> VideoFile = new List<String>(File.ReadAllLines(VFileName));
+            
             // Получаем значение разрешения по горизонтали...
             try
             {
-                GT_NCF_HorRes.Value = CoreLib.GetNCFDWord("setting.defaultres", VFileName);
+                GT_NCF_HorRes.Value = CoreLib.GetNCFDWord("setting.defaultres", VideoFile);
             }
             catch
             {
@@ -1009,7 +1012,7 @@ namespace srcrepair
             // Получаем значение разрешения по вертикали...
             try
             {
-                GT_NCF_VertRes.Value = CoreLib.GetNCFDWord("setting.defaultresheight", VFileName);
+                GT_NCF_VertRes.Value = CoreLib.GetNCFDWord("setting.defaultresheight", VideoFile);
             }
             catch
             {
@@ -1018,7 +1021,7 @@ namespace srcrepair
             // Получаем настройки соотношения сторон...
             try
             {
-                GT_NCF_Ratio.SelectedIndex = CoreLib.GetNCFDWord("setting.aspectratiomode", VFileName);
+                GT_NCF_Ratio.SelectedIndex = CoreLib.GetNCFDWord("setting.aspectratiomode", VideoFile);
             }
             catch
             {
@@ -1027,7 +1030,7 @@ namespace srcrepair
             // Получаем настройки яркости...
             try
             {
-                GT_NCF_Brightness.Value = Convert.ToInt32(CoreLib.GetNCFDble("setting.mat_monitorgamma", VFileName) * 10);
+                GT_NCF_Brightness.Value = Convert.ToInt32(CoreLib.GetNCFDble("setting.mat_monitorgamma", VideoFile) * 10);
             }
             catch
             {
@@ -1036,10 +1039,10 @@ namespace srcrepair
             // Получаем настройки режима...
             try
             {
-                switch (CoreLib.GetNCFDWord("setting.fullscreen", VFileName))
+                switch (CoreLib.GetNCFDWord("setting.fullscreen", VideoFile))
                 {
                     case 0:
-                        switch (CoreLib.GetNCFDWord("setting.nowindowborder", VFileName))
+                        switch (CoreLib.GetNCFDWord("setting.nowindowborder", VideoFile))
                         {
                             case 0: GT_NCF_DispMode.SelectedIndex = 1;
                                 break;
@@ -1058,7 +1061,7 @@ namespace srcrepair
             // Получаем настройки сглаживания текстур...
             try
             {
-                switch (CoreLib.GetNCFDWord("setting.mat_antialias", VFileName))
+                switch (CoreLib.GetNCFDWord("setting.mat_antialias", VideoFile))
                 {
                     case 0: GT_NCF_AntiAlias.SelectedIndex = 0;
                         break;
@@ -1067,7 +1070,7 @@ namespace srcrepair
                     case 2: GT_NCF_AntiAlias.SelectedIndex = 1;
                         break;
                     case 4:
-                        switch (CoreLib.GetNCFDWord("setting.mat_aaquality", VFileName))
+                        switch (CoreLib.GetNCFDWord("setting.mat_aaquality", VideoFile))
                         {
                             case 0: GT_NCF_AntiAlias.SelectedIndex = 2;
                                 break;
@@ -1078,7 +1081,7 @@ namespace srcrepair
                         }
                         break;
                     case 8:
-                        switch (CoreLib.GetNCFDWord("setting.mat_aaquality", VFileName))
+                        switch (CoreLib.GetNCFDWord("setting.mat_aaquality", VideoFile))
                         {
                             case 0: GT_NCF_AntiAlias.SelectedIndex = 5;
                                 break;
@@ -1095,7 +1098,7 @@ namespace srcrepair
             // Получаем настройки фильтрации текстур...
             try
             {
-                switch (CoreLib.GetNCFDWord("setting.mat_forceaniso", VFileName))
+                switch (CoreLib.GetNCFDWord("setting.mat_forceaniso", VideoFile))
                 {
                     case 0: GT_NCF_Filtering.SelectedIndex = 0;
                         break;
@@ -1118,12 +1121,12 @@ namespace srcrepair
             // Получаем настройки вертикальной синхронизации...
             try
             {
-                switch (CoreLib.GetNCFDWord("setting.mat_vsync", VFileName))
+                switch (CoreLib.GetNCFDWord("setting.mat_vsync", VideoFile))
                 {
                     case 0: GT_NCF_VSync.SelectedIndex = 0;
                         break;
                     case 1:
-                        switch (CoreLib.GetNCFDWord("setting.mat_triplebuffered", VFileName))
+                        switch (CoreLib.GetNCFDWord("setting.mat_triplebuffered", VideoFile))
                         {
                             case 0: GT_NCF_VSync.SelectedIndex = 1;
                                 break;
@@ -1140,7 +1143,7 @@ namespace srcrepair
             // Получаем настройки многоядерного рендеринга...
             try
             {
-                switch (CoreLib.GetNCFDWord("setting.mat_queue_mode", VFileName))
+                switch (CoreLib.GetNCFDWord("setting.mat_queue_mode", VideoFile))
                 {
                     case -1: GT_NCF_Multicore.SelectedIndex = 1;
                         break;
@@ -1159,7 +1162,7 @@ namespace srcrepair
             // Получаем настройки качества шейдерных эффектов...
             try
             {
-                GT_NCF_ShaderE.SelectedIndex = CoreLib.GetNCFDWord("setting.gpu_level", VFileName);
+                GT_NCF_ShaderE.SelectedIndex = CoreLib.GetNCFDWord("setting.gpu_level", VideoFile);
             }
             catch
             {
@@ -1168,7 +1171,7 @@ namespace srcrepair
             // Получаем настройки эффектов...
             try
             {
-                GT_NCF_EffectD.SelectedIndex = CoreLib.GetNCFDWord("setting.cpu_level", VFileName);
+                GT_NCF_EffectD.SelectedIndex = CoreLib.GetNCFDWord("setting.cpu_level", VideoFile);
             }
             catch
             {
@@ -1177,7 +1180,7 @@ namespace srcrepair
             // Получаем настройки пула памяти...
             try
             {
-                GT_NCF_MemPool.SelectedIndex = CoreLib.GetNCFDWord("setting.mem_level", VFileName);
+                GT_NCF_MemPool.SelectedIndex = CoreLib.GetNCFDWord("setting.mem_level", VideoFile);
             }
             catch
             {
@@ -1186,7 +1189,7 @@ namespace srcrepair
             // Получаем настройки качества моделей и текстур...
             try
             {
-                GT_NCF_Quality.SelectedIndex = CoreLib.GetNCFDWord("setting.gpu_mem_level", VFileName);
+                GT_NCF_Quality.SelectedIndex = CoreLib.GetNCFDWord("setting.gpu_mem_level", VideoFile);
             }
             catch
             {

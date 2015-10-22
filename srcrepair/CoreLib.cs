@@ -404,34 +404,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Возвращает первую строку, в которой встречается параметр.
-        /// </summary>
-        /// <param name="Rx">Подстрока для поиска</param>
-        /// <param name="FileName">Имя файла</param>
-        private static string FindLineContText(string Rx, string FileName)
-        {
-            string ImpStr;
-            string Result = null;
-            using (StreamReader TxtFl = new StreamReader(FileName, Encoding.Default))
-            {
-                while (TxtFl.Peek() >= 0)
-                {
-                    ImpStr = TxtFl.ReadLine();
-                    ImpStr = ImpStr.Trim();
-                    if (!(String.IsNullOrEmpty(ImpStr)))
-                    {
-                        if (ImpStr.IndexOf(Rx, StringComparison.CurrentCultureIgnoreCase) != -1)
-                        {
-                            Result = ImpStr;
-                            break;
-                        }
-                    }
-                }
-            }
-            return Result;
-        }
-
-        /// <summary>
         /// Извлекает значение переменной из строки.
         /// </summary>
         /// <param name="LineA">Строка для извлечения</param>
@@ -446,16 +418,10 @@ namespace srcrepair
         /// </summary>
         /// <param name="CVar">Переменная</param>
         /// <param name="CFileName">Имя файла конфига</param>
-        public static int GetNCFDWord(string CVar, string CFileName)
+        public static int GetNCFDWord(string CVar, List<String> VFile)
         {
-            string Result = "";
-            try
-            {
-                string CVLine = FindLineContText(CVar, CFileName);
-                if (!(String.IsNullOrEmpty(CVLine))) { Result = ExtractCVFromLine(CVLine); }
-            }
-            catch (Exception Ex) { WriteStringToLog(Ex.Message); }
-            return Convert.ToInt32(Result);
+            string Result = VFile.FirstOrDefault(s => s.Contains(CVar));
+            return Convert.ToInt32(ExtractCVFromLine(Result));
         }
 
         /// <summary>
@@ -463,16 +429,10 @@ namespace srcrepair
         /// </summary>
         /// <param name="CVar">Переменная</param>
         /// <param name="CFileName">Имя файла конфига</param>
-        public static double GetNCFDble(string CVar, string CFileName)
-        {
-            string Result = "";
-            try
-            {
-                string CVLine = FindLineContText(CVar, CFileName);
-                if (!(String.IsNullOrEmpty(CVLine))) { Result = ExtractCVFromLine(CVLine); Result = Result.Replace(".", ","); }
-            }
-            catch (Exception Ex) { WriteStringToLog(Ex.Message); }
-            return Double.Parse(Result);
+        public static double GetNCFDble(string CVar, List<String> VFile)
+        {   
+            string Result = VFile.FirstOrDefault(s => s.Contains(CVar)).Replace(".", ",");
+            return Double.Parse(ExtractCVFromLine(Result));
         }
 
         /// <summary>
