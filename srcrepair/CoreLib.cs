@@ -417,7 +417,7 @@ namespace srcrepair
         /// Возвращает значение переменной, переданной в параметре, хранящейся в файле.
         /// </summary>
         /// <param name="CVar">Переменная</param>
-        /// <param name="CFileName">Имя файла конфига</param>
+        /// <param name="VFile">Массив с содержимым конфига</param>
         public static int GetNCFDWord(string CVar, List<String> VFile)
         {
             string Result = VFile.FirstOrDefault(s => s.Contains(CVar));
@@ -428,7 +428,7 @@ namespace srcrepair
         /// Возвращает значение переменной типа double, переданной в параметре, хранящейся в файле.
         /// </summary>
         /// <param name="CVar">Переменная</param>
-        /// <param name="CFileName">Имя файла конфига</param>
+        /// <param name="VFile">Массив с содержимым конфига</param>
         public static double GetNCFDble(string CVar, List<String> VFile)
         {   
             string Result = VFile.FirstOrDefault(s => s.Contains(CVar)).Replace(".", ",");
