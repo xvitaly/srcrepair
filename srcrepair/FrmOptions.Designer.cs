@@ -41,7 +41,7 @@
             this.MO_SaveHUDPackages = new System.Windows.Forms.CheckBox();
             this.MO_ConfirmExit = new System.Windows.Forms.CheckBox();
             this.MO_TP2 = new System.Windows.Forms.TabPage();
-            this.MO_AllowBeta = new System.Windows.Forms.CheckBox();
+            this.MO_OpenBtRpt = new System.Windows.Forms.CheckBox();
             this.MO_UnSafeOps = new System.Windows.Forms.CheckBox();
             this.MO_CustDirName = new System.Windows.Forms.TextBox();
             this.L_MO_CustDirName = new System.Windows.Forms.Label();
@@ -138,7 +138,7 @@
             // 
             // MO_TP2
             // 
-            this.MO_TP2.Controls.Add(this.MO_AllowBeta);
+            this.MO_TP2.Controls.Add(this.MO_OpenBtRpt);
             this.MO_TP2.Controls.Add(this.MO_UnSafeOps);
             this.MO_TP2.Controls.Add(this.MO_CustDirName);
             this.MO_TP2.Controls.Add(this.L_MO_CustDirName);
@@ -153,11 +153,11 @@
             this.MO_TP2.Name = "MO_TP2";
             this.MO_TP2.UseVisualStyleBackColor = true;
             // 
-            // MO_AllowBeta
+            // MO_OpenBtRpt
             // 
-            resources.ApplyResources(this.MO_AllowBeta, "MO_AllowBeta");
-            this.MO_AllowBeta.Name = "MO_AllowBeta";
-            this.MO_AllowBeta.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.MO_OpenBtRpt, "MO_OpenBtRpt");
+            this.MO_OpenBtRpt.Name = "MO_OpenBtRpt";
+            this.MO_OpenBtRpt.UseVisualStyleBackColor = true;
             // 
             // MO_UnSafeOps
             // 
@@ -272,6 +272,6 @@
         private System.Windows.Forms.CheckBox MO_UnSafeOps;
         private System.Windows.Forms.CheckBox MO_RemEmptyDirs;
         private System.Windows.Forms.CheckBox MO_UseUpstream;
-        private System.Windows.Forms.CheckBox MO_AllowBeta;
+        private System.Windows.Forms.CheckBox MO_OpenBtRpt;
     }
 }
