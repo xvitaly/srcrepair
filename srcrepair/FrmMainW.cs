@@ -1001,41 +1001,17 @@ namespace srcrepair
             List<String> VideoFile = new List<String>(File.ReadAllLines(VFileName));
             
             // Получаем значение разрешения по горизонтали...
-            try
-            {
-                GT_NCF_HorRes.Value = CoreLib.GetNCFDWord("setting.defaultres", VideoFile);
-            }
-            catch
-            {
-                GT_NCF_HorRes.Value = 800;
-            }
+            try { GT_NCF_HorRes.Value = CoreLib.GetNCFDWord("setting.defaultres", VideoFile); } catch { GT_NCF_HorRes.Value = 800; }
+            
             // Получаем значение разрешения по вертикали...
-            try
-            {
-                GT_NCF_VertRes.Value = CoreLib.GetNCFDWord("setting.defaultresheight", VideoFile);
-            }
-            catch
-            {
-                GT_NCF_VertRes.Value = 600;
-            }
+            try { GT_NCF_VertRes.Value = CoreLib.GetNCFDWord("setting.defaultresheight", VideoFile); } catch { GT_NCF_VertRes.Value = 600; }
+            
             // Получаем настройки соотношения сторон...
-            try
-            {
-                GT_NCF_Ratio.SelectedIndex = CoreLib.GetNCFDWord("setting.aspectratiomode", VideoFile);
-            }
-            catch
-            {
-                GT_NCF_Ratio.SelectedIndex = -1;
-            }
+            try { GT_NCF_Ratio.SelectedIndex = CoreLib.GetNCFDWord("setting.aspectratiomode", VideoFile); } catch { GT_NCF_Ratio.SelectedIndex = -1; }
+            
             // Получаем настройки яркости...
-            try
-            {
-                GT_NCF_Brightness.Value = Convert.ToInt32(CoreLib.GetNCFDble("setting.mat_monitorgamma", VideoFile) * 10);
-            }
-            catch
-            {
-                GT_NCF_Brightness.Value = 18;
-            }
+            try { GT_NCF_Brightness.Value = Convert.ToInt32(CoreLib.GetNCFDble("setting.mat_monitorgamma", VideoFile) * 10); } catch { GT_NCF_Brightness.Value = 18; }
+            
             // Получаем настройки режима...
             try
             {
@@ -1058,6 +1034,7 @@ namespace srcrepair
             {
                 GT_NCF_DispMode.SelectedIndex = -1;
             }
+            
             // Получаем настройки сглаживания текстур...
             try
             {
@@ -1095,6 +1072,7 @@ namespace srcrepair
             {
                 GT_NCF_AntiAlias.SelectedIndex = -1;
             }
+            
             // Получаем настройки фильтрации текстур...
             try
             {
@@ -1118,6 +1096,7 @@ namespace srcrepair
             {
                 GT_NCF_Filtering.SelectedIndex = -1;
             }
+            
             // Получаем настройки вертикальной синхронизации...
             try
             {
@@ -1140,6 +1119,7 @@ namespace srcrepair
             {
                 GT_NCF_VSync.SelectedIndex = -1;
             }
+            
             // Получаем настройки многоядерного рендеринга...
             try
             {
@@ -1159,42 +1139,18 @@ namespace srcrepair
             {
                 GT_NCF_Multicore.SelectedIndex = -1;
             }
+            
             // Получаем настройки качества шейдерных эффектов...
-            try
-            {
-                GT_NCF_ShaderE.SelectedIndex = CoreLib.GetNCFDWord("setting.gpu_level", VideoFile);
-            }
-            catch
-            {
-                GT_NCF_ShaderE.SelectedIndex = -1;
-            }
+            try { GT_NCF_ShaderE.SelectedIndex = CoreLib.GetNCFDWord("setting.gpu_level", VideoFile); } catch { GT_NCF_ShaderE.SelectedIndex = -1; }
+            
             // Получаем настройки эффектов...
-            try
-            {
-                GT_NCF_EffectD.SelectedIndex = CoreLib.GetNCFDWord("setting.cpu_level", VideoFile);
-            }
-            catch
-            {
-                GT_NCF_EffectD.SelectedIndex = -1;
-            }
+            try { GT_NCF_EffectD.SelectedIndex = CoreLib.GetNCFDWord("setting.cpu_level", VideoFile); } catch { GT_NCF_EffectD.SelectedIndex = -1; }
+            
             // Получаем настройки пула памяти...
-            try
-            {
-                GT_NCF_MemPool.SelectedIndex = CoreLib.GetNCFDWord("setting.mem_level", VideoFile);
-            }
-            catch
-            {
-                GT_NCF_MemPool.SelectedIndex = -1;
-            }
+            try { GT_NCF_MemPool.SelectedIndex = CoreLib.GetNCFDWord("setting.mem_level", VideoFile); } catch { GT_NCF_MemPool.SelectedIndex = -1; }
+            
             // Получаем настройки качества моделей и текстур...
-            try
-            {
-                GT_NCF_Quality.SelectedIndex = CoreLib.GetNCFDWord("setting.gpu_mem_level", VideoFile);
-            }
-            catch
-            {
-                GT_NCF_Quality.SelectedIndex = -1;
-            }
+            try { GT_NCF_Quality.SelectedIndex = CoreLib.GetNCFDWord("setting.gpu_mem_level", VideoFile); } catch { GT_NCF_Quality.SelectedIndex = -1; }
         }
 
         /// <summary>
