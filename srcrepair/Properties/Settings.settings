@@ -74,5 +74,8 @@
     <Setting Name="LastHUDTime" Type="System.DateTime" Scope="User">
       <Value Profile="(Default)">2015-09-01</Value>
     </Setting>
+    <Setting Name="OpenBtRep" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
