@@ -3522,4 +3522,7 @@
   <data name="hud_combattext_batching_window" xml:space="preserve">
     <value>Время в секундах, за которое урон, нанесённый противникам, суммируется.</value>
   </data>
+  <data name="tf_passtime_ball_model" xml:space="preserve">
+    <value>Задаёт модель мяча на картах режима PASS Time.</value>
+  </data>
 </root>
