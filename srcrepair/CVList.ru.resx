@@ -3516,4 +3516,10 @@
   <data name="tf_passtime_unstable" xml:space="preserve">
     <value>Включает / отключает нестабильные тестовые возможности режима PASS Time.</value>
   </data>
+  <data name="hud_combattext_batching" xml:space="preserve">
+    <value>Включает / отключает суммирование урона, нанесённого противникам.</value>
+  </data>
+  <data name="hud_combattext_batching_window" xml:space="preserve">
+    <value>Время в секундах, за которое урон, нанесённый противникам, суммируется.</value>
+  </data>
 </root>
