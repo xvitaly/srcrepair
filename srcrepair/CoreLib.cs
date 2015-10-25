@@ -404,38 +404,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Извлекает значение переменной из строки.
-        /// </summary>
-        /// <param name="LineA">Строка для извлечения</param>
-        private static string ExtractCVFromLine(string LineA)
-        {
-            LineA = CleanStrWx(LineA, true);
-            return LineA.Substring(LineA.LastIndexOf(" ")).Trim();
-        }
-
-        /// <summary>
-        /// Возвращает значение переменной, переданной в параметре, хранящейся в файле.
-        /// </summary>
-        /// <param name="CVar">Переменная</param>
-        /// <param name="VFile">Массив с содержимым конфига</param>
-        public static int GetNCFDWord(string CVar, List<String> VFile)
-        {
-            string Result = VFile.FirstOrDefault(s => s.Contains(CVar));
-            return Convert.ToInt32(ExtractCVFromLine(Result));
-        }
-
-        /// <summary>
-        /// Возвращает значение переменной типа double, переданной в параметре, хранящейся в файле.
-        /// </summary>
-        /// <param name="CVar">Переменная</param>
-        /// <param name="VFile">Массив с содержимым конфига</param>
-        public static double GetNCFDble(string CVar, List<String> VFile)
-        {   
-            string Result = VFile.FirstOrDefault(s => s.Contains(CVar)).Replace(".", ",");
-            return Double.Parse(ExtractCVFromLine(Result));
-        }
-
-        /// <summary>
         /// Вычисляет MD5 хеш файла.
         /// </summary>
         /// <param name="FileName">Имя файла</param>

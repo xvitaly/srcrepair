@@ -404,6 +404,38 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Извлекает значение переменной из строки.
+        /// </summary>
+        /// <param name="LineA">Строка для извлечения</param>
+        private string ExtractCVFromLine(string LineA)
+        {
+            LineA = CoreLib.CleanStrWx(LineA, true);
+            return LineA.Substring(LineA.LastIndexOf(" ")).Trim();
+        }
+
+        /// <summary>
+        /// Возвращает значение переменной, переданной в параметре, хранящейся в файле.
+        /// </summary>
+        /// <param name="CVar">Переменная</param>
+        /// <param name="VFile">Массив с содержимым конфига</param>
+        private int GetNCFDWord(string CVar, List<String> VFile)
+        {
+            string Result = VFile.FirstOrDefault(s => s.Contains(CVar));
+            return Convert.ToInt32(ExtractCVFromLine(Result));
+        }
+
+        /// <summary>
+        /// Возвращает значение переменной типа double, переданной в параметре, хранящейся в файле.
+        /// </summary>
+        /// <param name="CVar">Переменная</param>
+        /// <param name="VFile">Массив с содержимым конфига</param>
+        private double GetNCFDble(string CVar, List<String> VFile)
+        {
+            string Result = VFile.FirstOrDefault(s => s.Contains(CVar)).Replace(".", ",");
+            return Double.Parse(ExtractCVFromLine(Result));
+        }
+
+        /// <summary>
         /// Записывает настройки GCF-игры в реестр Windows.
         /// </summary>
         /// <param name="SAppName">Краткое имя игры</param>
@@ -1001,24 +1033,24 @@ namespace srcrepair
             List<String> VideoFile = new List<String>(File.ReadAllLines(VFileName));
             
             // Получаем значение разрешения по горизонтали...
-            try { GT_NCF_HorRes.Value = CoreLib.GetNCFDWord("setting.defaultres", VideoFile); } catch { GT_NCF_HorRes.Value = 800; }
+            try { GT_NCF_HorRes.Value = GetNCFDWord("setting.defaultres", VideoFile); } catch { GT_NCF_HorRes.Value = 800; }
             
             // Получаем значение разрешения по вертикали...
-            try { GT_NCF_VertRes.Value = CoreLib.GetNCFDWord("setting.defaultresheight", VideoFile); } catch { GT_NCF_VertRes.Value = 600; }
+            try { GT_NCF_VertRes.Value = GetNCFDWord("setting.defaultresheight", VideoFile); } catch { GT_NCF_VertRes.Value = 600; }
             
             // Получаем настройки соотношения сторон...
-            try { GT_NCF_Ratio.SelectedIndex = CoreLib.GetNCFDWord("setting.aspectratiomode", VideoFile); } catch { GT_NCF_Ratio.SelectedIndex = -1; }
+            try { GT_NCF_Ratio.SelectedIndex = GetNCFDWord("setting.aspectratiomode", VideoFile); } catch { GT_NCF_Ratio.SelectedIndex = -1; }
             
             // Получаем настройки яркости...
-            try { GT_NCF_Brightness.Value = Convert.ToInt32(CoreLib.GetNCFDble("setting.mat_monitorgamma", VideoFile) * 10); } catch { GT_NCF_Brightness.Value = 18; }
+            try { GT_NCF_Brightness.Value = Convert.ToInt32(GetNCFDble("setting.mat_monitorgamma", VideoFile) * 10); } catch { GT_NCF_Brightness.Value = 18; }
             
             // Получаем настройки режима...
             try
             {
-                switch (CoreLib.GetNCFDWord("setting.fullscreen", VideoFile))
+                switch (GetNCFDWord("setting.fullscreen", VideoFile))
                 {
                     case 0:
-                        switch (CoreLib.GetNCFDWord("setting.nowindowborder", VideoFile))
+                        switch (GetNCFDWord("setting.nowindowborder", VideoFile))
                         {
                             case 0: GT_NCF_DispMode.SelectedIndex = 1;
                                 break;
@@ -1038,7 +1070,7 @@ namespace srcrepair
             // Получаем настройки сглаживания текстур...
             try
             {
-                switch (CoreLib.GetNCFDWord("setting.mat_antialias", VideoFile))
+                switch (GetNCFDWord("setting.mat_antialias", VideoFile))
                 {
                     case 0: GT_NCF_AntiAlias.SelectedIndex = 0;
                         break;
@@ -1047,7 +1079,7 @@ namespace srcrepair
                     case 2: GT_NCF_AntiAlias.SelectedIndex = 1;
                         break;
                     case 4:
-                        switch (CoreLib.GetNCFDWord("setting.mat_aaquality", VideoFile))
+                        switch (GetNCFDWord("setting.mat_aaquality", VideoFile))
                         {
                             case 0: GT_NCF_AntiAlias.SelectedIndex = 2;
                                 break;
@@ -1058,7 +1090,7 @@ namespace srcrepair
                         }
                         break;
                     case 8:
-                        switch (CoreLib.GetNCFDWord("setting.mat_aaquality", VideoFile))
+                        switch (GetNCFDWord("setting.mat_aaquality", VideoFile))
                         {
                             case 0: GT_NCF_AntiAlias.SelectedIndex = 5;
                                 break;
@@ -1076,7 +1108,7 @@ namespace srcrepair
             // Получаем настройки фильтрации текстур...
             try
             {
-                switch (CoreLib.GetNCFDWord("setting.mat_forceaniso", VideoFile))
+                switch (GetNCFDWord("setting.mat_forceaniso", VideoFile))
                 {
                     case 0: GT_NCF_Filtering.SelectedIndex = 0;
                         break;
@@ -1100,12 +1132,12 @@ namespace srcrepair
             // Получаем настройки вертикальной синхронизации...
             try
             {
-                switch (CoreLib.GetNCFDWord("setting.mat_vsync", VideoFile))
+                switch (GetNCFDWord("setting.mat_vsync", VideoFile))
                 {
                     case 0: GT_NCF_VSync.SelectedIndex = 0;
                         break;
                     case 1:
-                        switch (CoreLib.GetNCFDWord("setting.mat_triplebuffered", VideoFile))
+                        switch (GetNCFDWord("setting.mat_triplebuffered", VideoFile))
                         {
                             case 0: GT_NCF_VSync.SelectedIndex = 1;
                                 break;
@@ -1123,7 +1155,7 @@ namespace srcrepair
             // Получаем настройки многоядерного рендеринга...
             try
             {
-                switch (CoreLib.GetNCFDWord("setting.mat_queue_mode", VideoFile))
+                switch (GetNCFDWord("setting.mat_queue_mode", VideoFile))
                 {
                     case -1: GT_NCF_Multicore.SelectedIndex = 1;
                         break;
@@ -1141,16 +1173,16 @@ namespace srcrepair
             }
             
             // Получаем настройки качества шейдерных эффектов...
-            try { GT_NCF_ShaderE.SelectedIndex = CoreLib.GetNCFDWord("setting.gpu_level", VideoFile); } catch { GT_NCF_ShaderE.SelectedIndex = -1; }
+            try { GT_NCF_ShaderE.SelectedIndex = GetNCFDWord("setting.gpu_level", VideoFile); } catch { GT_NCF_ShaderE.SelectedIndex = -1; }
             
             // Получаем настройки эффектов...
-            try { GT_NCF_EffectD.SelectedIndex = CoreLib.GetNCFDWord("setting.cpu_level", VideoFile); } catch { GT_NCF_EffectD.SelectedIndex = -1; }
+            try { GT_NCF_EffectD.SelectedIndex = GetNCFDWord("setting.cpu_level", VideoFile); } catch { GT_NCF_EffectD.SelectedIndex = -1; }
             
             // Получаем настройки пула памяти...
-            try { GT_NCF_MemPool.SelectedIndex = CoreLib.GetNCFDWord("setting.mem_level", VideoFile); } catch { GT_NCF_MemPool.SelectedIndex = -1; }
+            try { GT_NCF_MemPool.SelectedIndex = GetNCFDWord("setting.mem_level", VideoFile); } catch { GT_NCF_MemPool.SelectedIndex = -1; }
             
             // Получаем настройки качества моделей и текстур...
-            try { GT_NCF_Quality.SelectedIndex = CoreLib.GetNCFDWord("setting.gpu_mem_level", VideoFile); } catch { GT_NCF_Quality.SelectedIndex = -1; }
+            try { GT_NCF_Quality.SelectedIndex = GetNCFDWord("setting.gpu_mem_level", VideoFile); } catch { GT_NCF_Quality.SelectedIndex = -1; }
         }
 
         /// <summary>
