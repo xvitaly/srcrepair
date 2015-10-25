@@ -1186,6 +1186,25 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Проверяет наличие обновлений для программы. Используется в модуле автообновления.
+        /// </summary>
+        /// <param name="CurrentVersion">Текущая версия</param>
+        /// <param name="ChURI">URL проверки обновлений</param>
+        /// <param name="UserAgent">Заголовок HTTP UserAgent</param>
+        /// <returns>Возвращает true при обнаружении обновлений</returns>
+        private bool AutoUpdateCheck(string CurrentVersion, string ChURI, string UserAgent)
+        {
+            string NewVersion, DnlStr;
+            using (WebClient Downloader = new WebClient())
+            {
+                Downloader.Headers.Add("User-Agent", UserAgent);
+                DnlStr = Downloader.DownloadString(ChURI);
+            }
+            NewVersion = DnlStr.Substring(0, DnlStr.IndexOf("!"));
+            return CoreLib.CompareVersions(CurrentVersion, NewVersion);
+        }
+
+        /// <summary>
         /// Открывает конфиг, имя которого передано в качестве параметра
         /// и заполняет им Редактор конфигов с одноимённой страницы.
         /// </summary>
@@ -1639,7 +1658,7 @@ namespace srcrepair
                 if (TS.Days >= 7) // Проверяем не прошла ли неделя с момента последней прверки...
                 {
                     // Требуется проверка обновлений...
-                    if (CoreLib.AutoUpdateCheck(App.AppVersionInfo, Properties.Resources.UpdateChURI, App.UserAgent))
+                    if (AutoUpdateCheck(App.AppVersionInfo, Properties.Resources.UpdateChURI, App.UserAgent))
                     {
                         // Доступны обновления...
                         MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AppUpdateAvailable"), Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);

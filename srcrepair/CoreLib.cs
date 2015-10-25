@@ -282,25 +282,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Проверяет наличие обновлений для программы. Используется в модуле автообновления.
-        /// </summary>
-        /// <param name="CurrentVersion">Текущая версия</param>
-        /// <param name="ChURI">URL проверки обновлений</param>
-        /// <param name="UserAgent">Заголовок HTTP UserAgent</param>
-        /// <returns>Возвращает true при обнаружении обновлений</returns>
-        public static bool AutoUpdateCheck(string CurrentVersion, string ChURI, string UserAgent)
-        {
-            string NewVersion, DnlStr;
-            using (WebClient Downloader = new WebClient())
-            {
-                Downloader.Headers.Add("User-Agent", UserAgent);
-                DnlStr = Downloader.DownloadString(ChURI);
-            }
-            NewVersion = DnlStr.Substring(0, DnlStr.IndexOf("!"));
-            return CompareVersions(CurrentVersion, NewVersion);
-        }
-
-        /// <summary>
         /// Создаёт новый файл по указанному адресу.
         /// </summary>
         /// <param name="FileName">Имя создаваемого файла</param>
