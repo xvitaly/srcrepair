@@ -72,7 +72,7 @@ namespace srcrepair
             string Result = "";
             switch (Index)
             {
-                case 1: Result = "Feature request";
+                case 1: Result = "Request";
                     break;
                 case 2: Result = "Task";
                     break;
