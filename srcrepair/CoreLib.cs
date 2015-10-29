@@ -494,7 +494,7 @@ namespace srcrepair
             }
 
             // Возвращаем результат очистки...
-            return RecvStr;
+            return RecvStr.Trim();
         }
 
         /// <summary>
