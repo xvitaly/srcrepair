@@ -1510,7 +1510,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Opened file in Config Editor:.
+        ///   Looks up a localized string similar to Opened file in Config Editor: {0}..
         /// </summary>
         internal static string StatusOpenedFile {
             get {

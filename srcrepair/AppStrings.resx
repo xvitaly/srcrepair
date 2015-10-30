@@ -229,7 +229,7 @@
     <value>All systems are working normally.</value>
   </data>
   <data name="StatusOpenedFile" xml:space="preserve">
-    <value>Opened file in Config Editor:</value>
+    <value>Opened file in Config Editor: {0}.</value>
   </data>
   <data name="StatusSApp" xml:space="preserve">
     <value>Please select game from the list!</value>

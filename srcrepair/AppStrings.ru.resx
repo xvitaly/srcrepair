@@ -266,7 +266,7 @@
     <comment>Сообщение об успешном завершении инициализации</comment>
   </data>
   <data name="StatusOpenedFile" xml:space="preserve">
-    <value>В редакторе открыт файл:</value>
+    <value>В редакторе открыт файл: {0}.</value>
     <comment>Сообщение строки статуса об открытом файле...</comment>
   </data>
   <data name="StatusSApp" xml:space="preserve">

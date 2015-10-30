@@ -1269,7 +1269,7 @@ namespace srcrepair
                     }
 
                     // Изменяем содержимое строки статуса...
-                    SB_Status.Text = CoreLib.GetLocalizedString("StatusOpenedFile") + " " + CFGFileName;
+                    SB_Status.Text = String.Format(CoreLib.GetLocalizedString("StatusOpenedFile"), CFGFileName);
                 }
                 catch (Exception Ex)
                 {
@@ -2302,7 +2302,7 @@ namespace srcrepair
             // Создаём новый файл...
             CE_Editor.Rows.Clear();
             CFGFileName = "";
-            SB_Status.Text = CoreLib.GetLocalizedString("StatusOpenedFile") + " " + CoreLib.GetLocalizedString("UnnamedFileName");
+            SB_Status.Text = String.Format(CoreLib.GetLocalizedString("StatusOpenedFile"), CoreLib.GetLocalizedString("UnnamedFileName"));
         }
 
         private void CE_Open_Click(object sender, EventArgs e)
@@ -2368,7 +2368,7 @@ namespace srcrepair
                     WriteTableToFileNow(CE_SaveCfgDialog.FileName, Properties.Resources.AppName);
                     CFGFileName = Path.GetFileName(CE_SaveCfgDialog.FileName);
                     CE_OpenCfgDialog.FileName = CE_SaveCfgDialog.FileName;
-                    SB_Status.Text = CoreLib.GetLocalizedString("StatusOpenedFile") + " " + CFGFileName;
+                    SB_Status.Text = String.Format(CoreLib.GetLocalizedString("StatusOpenedFile"), CFGFileName);
                 }
             }
         }
@@ -2769,7 +2769,7 @@ namespace srcrepair
                 // Включаем заблокированный контрол...
                 MNUShowEdHint.Enabled = true;
                 // Проверяем открыт ли файл в Редакторе конфигов...
-                SB_Status.Text = String.IsNullOrEmpty(CFGFileName) ? CoreLib.GetLocalizedString("StatusOpenedFile") + " " + CoreLib.GetLocalizedString("UnnamedFileName") : SB_Status.Text = CoreLib.GetLocalizedString("StatusOpenedFile") + " " + CFGFileName;
+                SB_Status.Text = String.Format(CoreLib.GetLocalizedString("StatusOpenedFile"), String.IsNullOrEmpty(CFGFileName) ? CoreLib.GetLocalizedString("UnnamedFileName") : CFGFileName);
             }
             else
             {
