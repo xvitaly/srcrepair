@@ -228,7 +228,6 @@
             this.MNUSep4 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusBar = new System.Windows.Forms.StatusStrip();
-            this.SB_Info = new System.Windows.Forms.ToolStripStatusLabel();
             this.SB_Status = new System.Windows.Forms.ToolStripStatusLabel();
             this.SB_App = new System.Windows.Forms.ToolStripStatusLabel();
             this.AppSelector = new System.Windows.Forms.ComboBox();
@@ -1911,16 +1910,10 @@
             // StatusBar
             // 
             this.StatusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.SB_Info,
             this.SB_Status,
             this.SB_App});
             resources.ApplyResources(this.StatusBar, "StatusBar");
             this.StatusBar.Name = "StatusBar";
-            // 
-            // SB_Info
-            // 
-            this.SB_Info.Name = "SB_Info";
-            resources.ApplyResources(this.SB_Info, "SB_Info");
             // 
             // SB_Status
             // 
@@ -2073,7 +2066,6 @@
         private System.Windows.Forms.ToolStripSeparator MNUSep4;
         private System.Windows.Forms.ToolStripMenuItem MNUAbout;
         private System.Windows.Forms.StatusStrip StatusBar;
-        private System.Windows.Forms.ToolStripStatusLabel SB_Info;
         private System.Windows.Forms.ToolStripStatusLabel SB_Status;
         private System.Windows.Forms.Button GT_Maximum_Performance;
         private System.Windows.Forms.Button GT_Maximum_Graphics;

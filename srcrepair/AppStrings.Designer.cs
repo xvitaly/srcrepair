@@ -1033,6 +1033,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Last HUD database update: {0}..
+        /// </summary>
+        internal static string HD_DynBarText {
+            get {
+                return ResourceManager.GetString("HD_DynBarText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Installing HUD... Wait..
         /// </summary>
         internal static string HD_InstallBtnProgress {

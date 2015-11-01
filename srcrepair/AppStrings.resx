@@ -723,4 +723,7 @@
   <data name="HD_DbOutdated" xml:space="preserve">
     <value>HUD database outdated. Please update database from menu Help.</value>
   </data>
+  <data name="HD_DynBarText" xml:space="preserve">
+    <value>Last HUD database update: {0}.</value>
+  </data>
 </root>

@@ -2763,21 +2763,26 @@ namespace srcrepair
 
         private void MainTabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Проверяем открыта ли страница "Редактор конфигов"...
-            if (MainTabControl.SelectedIndex == 1)
+            switch (MainTabControl.SelectedIndex)
             {
-                // Включаем заблокированный контрол...
-                MNUShowEdHint.Enabled = true;
-                // Проверяем открыт ли файл в Редакторе конфигов...
-                SB_Status.Text = String.Format(CoreLib.GetLocalizedString("StatusOpenedFile"), String.IsNullOrEmpty(CFGFileName) ? CoreLib.GetLocalizedString("UnnamedFileName") : CFGFileName);
-            }
-            else
-            {
-                // Открыта другая страница...
-                // Блокируем контрол подсказки...
-                MNUShowEdHint.Enabled = false;
-                // ...и выводим стандартное сообщение в статус-бар...
-                SB_Status.Text = CoreLib.GetLocalizedString("StatusNormal");
+                case 1: // Открыта страница "Редактор конфигов"...
+                    {
+                        MNUShowEdHint.Enabled = true;
+                        SB_Status.Text = String.Format(CoreLib.GetLocalizedString("StatusOpenedFile"), String.IsNullOrEmpty(CFGFileName) ? CoreLib.GetLocalizedString("UnnamedFileName") : CFGFileName);
+                    }
+                    break;
+                case 4:
+                    {
+                        MNUShowEdHint.Enabled = true;
+                        SB_Status.Text = String.Format(CoreLib.GetLocalizedString("HD_DynBarText"), Properties.Settings.Default.LastHUDTime, "");
+                    }
+                    break;
+                default: // Открыта другая страница...
+                    {
+                        MNUShowEdHint.Enabled = false;
+                        SB_Status.Text = CoreLib.GetLocalizedString("StatusNormal");
+                    }
+                    break;
             }
         }
 

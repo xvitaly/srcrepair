@@ -922,4 +922,8 @@
     <value>Проверка обновлений базы HUD не проводилась уже больше недели. Выполните её прямо сейчас из меню Справка.</value>
     <comment>Сообщение при устаревшей базе HUD</comment>
   </data>
+  <data name="HD_DynBarText" xml:space="preserve">
+    <value>Посл. обновление базы HUD: {0}.</value>
+    <comment>Шаблон для строки статуса в модуле Менеджер HUD</comment>
+  </data>
 </root>
