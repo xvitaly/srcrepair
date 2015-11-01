@@ -71,6 +71,18 @@ namespace srcrepair
             return Path.HasExtension(Url) ? Url : Path.ChangeExtension(Url, "exe");
         }
 
+        private void UpdateTimeSetApp()
+        {
+            // Установим дату последней проверки обновлений...
+            Properties.Settings.Default.LastUpdateTime = DateTime.Now;
+        }
+
+        private void UpdateTimeSetHUD()
+        {
+            // Установим дату последней проверки обновлений базы HUD...
+            Properties.Settings.Default.LastHUDTime = DateTime.Now;
+        }
+
         private void WrkChkApp_DoWork(object sender, DoWorkEventArgs e)
         {
             try
@@ -103,9 +115,6 @@ namespace srcrepair
         {
             try
             {
-                // Установим дату последней проверки обновлений...
-                Properties.Settings.Default.LastUpdateTime = DateTime.Now;
-                
                 // Проверим, является ли версия на сервере новее, чем текущая...
                 if (CoreLib.CompareVersions(AppVersionInfo, NewVersion))
                 {
@@ -125,7 +134,7 @@ namespace srcrepair
                         UpdAppImg.Image = Properties.Resources.upd_nx;
                         UpdAppStatus.Text = CoreLib.GetLocalizedString("UPD_AppNoUpdates");
                     });
-                    AppAvailable = false;
+                    AppAvailable = false; UpdateTimeSetApp();
                 }
             }
             catch (Exception Ex)
@@ -220,9 +229,6 @@ namespace srcrepair
         {
             try
             {
-                // Установим дату последней проверки обновлений базы HUD...
-                Properties.Settings.Default.LastHUDTime = DateTime.Now;
-                
                 // Проверим хеши...
                 if (HUDHash != HUDHashNew)
                 {
@@ -242,7 +248,7 @@ namespace srcrepair
                         UpdHUDDbImg.Image = Properties.Resources.upd_nx;
                         UpdHUDStatus.Text = CoreLib.GetLocalizedString("UPD_HUDNoUpdates");
                     });
-                    HudAvailable = false;
+                    HudAvailable = false; UpdateTimeSetHUD();
                 }
             }
             catch (Exception Ex)
@@ -284,6 +290,7 @@ namespace srcrepair
                     CoreLib.DownloadFileEx(UpdateURI, UpdateFileName);
                     if (File.Exists(UpdateFileName))
                     {
+                        UpdateTimeSetApp();
                         MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateSuccessful"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         try { Process.Start(UpdateFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
                         Environment.Exit(9);
@@ -309,7 +316,7 @@ namespace srcrepair
                 {
                     UpdateFileName = GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Settings.Default.HUDDbFile));
                     CoreLib.DownloadFileEx(Properties.Resources.UpdateHUDDBFile, UpdateFileName);
-                    if (File.Exists(UpdateFileName)) { MessageBox.Show(CoreLib.GetLocalizedString("UPD_HUDDb_Updated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                    if (File.Exists(UpdateFileName)) { MessageBox.Show(CoreLib.GetLocalizedString("UPD_HUDDb_Updated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); UpdateTimeSetHUD(); } else { MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
                     Close();
                 }
                 else
