@@ -1033,7 +1033,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Last HUD database update: {0}..
+        ///   Looks up a localized string similar to HUD database {0}. Last update: {1}..
         /// </summary>
         internal static string HD_DynBarText {
             get {
@@ -1083,6 +1083,24 @@ namespace srcrepair {
         internal static string HD_Outdated {
             get {
                 return ResourceManager.GetString("HD_Outdated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to outdated.
+        /// </summary>
+        internal static string HD_StatusOutdated {
+            get {
+                return ResourceManager.GetString("HD_StatusOutdated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to actual.
+        /// </summary>
+        internal static string HD_StatusUpdated {
+            get {
+                return ResourceManager.GetString("HD_StatusUpdated", resourceCulture);
             }
         }
         

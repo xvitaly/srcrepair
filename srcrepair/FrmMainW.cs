@@ -2768,18 +2768,22 @@ namespace srcrepair
                 case 1: // Открыта страница "Редактор конфигов"...
                     {
                         MNUShowEdHint.Enabled = true;
+                        SB_Status.ForeColor = Color.Black;
                         SB_Status.Text = String.Format(CoreLib.GetLocalizedString("StatusOpenedFile"), String.IsNullOrEmpty(CFGFileName) ? CoreLib.GetLocalizedString("UnnamedFileName") : CFGFileName);
                     }
                     break;
                 case 4:
                     {
-                        MNUShowEdHint.Enabled = true;
-                        SB_Status.Text = String.Format(CoreLib.GetLocalizedString("HD_DynBarText"), Properties.Settings.Default.LastHUDTime, "");
+                        bool HUDDbStatus = (DateTime.Now - Properties.Settings.Default.LastHUDTime).Days >= 7;
+                        MNUShowEdHint.Enabled = false;
+                        SB_Status.ForeColor = HUDDbStatus ? Color.Red : Color.Black;
+                        SB_Status.Text = String.Format(CoreLib.GetLocalizedString("HD_DynBarText"), CoreLib.GetLocalizedString(HUDDbStatus ? "HD_StatusOutdated" : "HD_StatusUpdated"), Properties.Settings.Default.LastHUDTime);
                     }
                     break;
                 default: // Открыта другая страница...
                     {
                         MNUShowEdHint.Enabled = false;
+                        SB_Status.ForeColor = Color.Black;
                         SB_Status.Text = CoreLib.GetLocalizedString("StatusNormal");
                     }
                     break;

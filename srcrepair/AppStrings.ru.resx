@@ -923,7 +923,15 @@
     <comment>Сообщение при устаревшей базе HUD</comment>
   </data>
   <data name="HD_DynBarText" xml:space="preserve">
-    <value>Последнее обновление базы HUD: {0}.</value>
+    <value>База HUD {0}. Посл. обновление: {1}.</value>
     <comment>Шаблон для строки статуса в модуле Менеджер HUD</comment>
+  </data>
+  <data name="HD_StatusOutdated" xml:space="preserve">
+    <value>устарела</value>
+    <comment>Фрагмент статусной строки для устаревшей базы.</comment>
+  </data>
+  <data name="HD_StatusUpdated" xml:space="preserve">
+    <value>актуальна</value>
+    <comment>Фрагмент статусной строки для актуальной базы.</comment>
   </data>
 </root>
