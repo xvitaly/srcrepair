@@ -3299,7 +3299,7 @@ namespace srcrepair
             HD_GB_Pbx.Image = Properties.Resources.LoadingFile;
             HD_Install.Enabled = Success;
             HD_Homepage.Enabled = Success;
-            HD_Warning.Visible = Success && (!SelHUD.IsUpdated || (DateTime.Now - Properties.Settings.Default.LastHUDTime).Days >= 7);
+            HD_Warning.Visible = Success && !SelHUD.IsUpdated;
 
             // Проверяем установлен ли выбранный HUD...
             bool IsInstalled = SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir);
@@ -3398,7 +3398,6 @@ namespace srcrepair
         private void HD_Warning_Click(object sender, EventArgs e)
         {
             // Выведем предупреждающие сообщения...
-            if ((DateTime.Now - Properties.Settings.Default.LastHUDTime).Days >= 7) { MessageBox.Show(CoreLib.GetLocalizedString("HD_DbOutdated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             if (!SelHUD.IsUpdated) { MessageBox.Show(CoreLib.GetLocalizedString("HD_NotTested"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
 
