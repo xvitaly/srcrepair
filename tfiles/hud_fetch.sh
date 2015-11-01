@@ -2,6 +2,9 @@
 
 function fetch_hud
 {
+    # Выводим текст, оповещающий пользователя о начале загрузки...
+    echo -n "Downloading $3..."
+
     # Проверяем существование файла со скриншотом и если он не существует, загружаем...
     if [ ! -f "$3.png" ]; then
         # Загружаем скриншот с удалённого сервера...
@@ -22,6 +25,9 @@ function fetch_hud
     # Генерируем окончательное имя архива...
     nf=$(sha256sum $3/$3.zip | awk '{print $1}')
     mv $3/$3.zip $3/$3_${nf:0:8}.zip
+    
+    # Выводим текст, оповещающий пользователя о завершении загрузки...
+    echo " Done."
 }
 
 fetch_hud http://huds.tf/img/main/7hud.png https://github.com/Sevin7/7HUD/archive/master.zip 7HUD
