@@ -66,6 +66,12 @@
             this.GT_ScreenType = new System.Windows.Forms.ComboBox();
             this.L_GT_ResHor = new System.Windows.Forms.Label();
             this.GT_NCF_Group = new System.Windows.Forms.Panel();
+            this.GT_NCF_MBlur = new System.Windows.Forms.ComboBox();
+            this.L_GT_NCF_MBlur = new System.Windows.Forms.Label();
+            this.GT_NCF_Shadows = new System.Windows.Forms.ComboBox();
+            this.L_GT_NCF_Shadows = new System.Windows.Forms.Label();
+            this.GT_NCF_Brightness = new System.Windows.Forms.ComboBox();
+            this.L_GT_NCF_Brightness = new System.Windows.Forms.Label();
             this.GT_NCF_Quality = new System.Windows.Forms.ComboBox();
             this.L_GT_NCF_Quality = new System.Windows.Forms.Label();
             this.GT_NCF_MemPool = new System.Windows.Forms.ComboBox();
@@ -87,8 +93,6 @@
             this.L_GT_NCF_VertRes = new System.Windows.Forms.Label();
             this.GT_NCF_Ratio = new System.Windows.Forms.ComboBox();
             this.L_GT_NCF_Ratio = new System.Windows.Forms.Label();
-            this.L_GT_NCF_Brightness = new System.Windows.Forms.Label();
-            this.GT_NCF_Brightness = new System.Windows.Forms.TrackBar();
             this.GT_NCF_VertRes = new System.Windows.Forms.NumericUpDown();
             this.GT_NCF_HorRes = new System.Windows.Forms.NumericUpDown();
             this.L_GT_NCF_HorRes = new System.Windows.Forms.Label();
@@ -246,7 +250,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResVert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResHor)).BeginInit();
             this.GT_NCF_Group.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GT_NCF_Brightness)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_NCF_VertRes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_NCF_HorRes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_Warning)).BeginInit();
@@ -616,6 +619,12 @@
             // 
             // GT_NCF_Group
             // 
+            this.GT_NCF_Group.Controls.Add(this.GT_NCF_MBlur);
+            this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_MBlur);
+            this.GT_NCF_Group.Controls.Add(this.GT_NCF_Shadows);
+            this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_Shadows);
+            this.GT_NCF_Group.Controls.Add(this.GT_NCF_Brightness);
+            this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_Brightness);
             this.GT_NCF_Group.Controls.Add(this.GT_NCF_Quality);
             this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_Quality);
             this.GT_NCF_Group.Controls.Add(this.GT_NCF_MemPool);
@@ -637,13 +646,65 @@
             this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_VertRes);
             this.GT_NCF_Group.Controls.Add(this.GT_NCF_Ratio);
             this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_Ratio);
-            this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_Brightness);
-            this.GT_NCF_Group.Controls.Add(this.GT_NCF_Brightness);
             this.GT_NCF_Group.Controls.Add(this.GT_NCF_VertRes);
             this.GT_NCF_Group.Controls.Add(this.GT_NCF_HorRes);
             this.GT_NCF_Group.Controls.Add(this.L_GT_NCF_HorRes);
             resources.ApplyResources(this.GT_NCF_Group, "GT_NCF_Group");
             this.GT_NCF_Group.Name = "GT_NCF_Group";
+            // 
+            // GT_NCF_MBlur
+            // 
+            this.GT_NCF_MBlur.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GT_NCF_MBlur.FormattingEnabled = true;
+            this.GT_NCF_MBlur.Items.AddRange(new object[] {
+            resources.GetString("GT_NCF_MBlur.Items"),
+            resources.GetString("GT_NCF_MBlur.Items1")});
+            resources.ApplyResources(this.GT_NCF_MBlur, "GT_NCF_MBlur");
+            this.GT_NCF_MBlur.Name = "GT_NCF_MBlur";
+            // 
+            // L_GT_NCF_MBlur
+            // 
+            resources.ApplyResources(this.L_GT_NCF_MBlur, "L_GT_NCF_MBlur");
+            this.L_GT_NCF_MBlur.Name = "L_GT_NCF_MBlur";
+            // 
+            // GT_NCF_Shadows
+            // 
+            this.GT_NCF_Shadows.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GT_NCF_Shadows.FormattingEnabled = true;
+            this.GT_NCF_Shadows.Items.AddRange(new object[] {
+            resources.GetString("GT_NCF_Shadows.Items"),
+            resources.GetString("GT_NCF_Shadows.Items1"),
+            resources.GetString("GT_NCF_Shadows.Items2"),
+            resources.GetString("GT_NCF_Shadows.Items3")});
+            resources.ApplyResources(this.GT_NCF_Shadows, "GT_NCF_Shadows");
+            this.GT_NCF_Shadows.Name = "GT_NCF_Shadows";
+            // 
+            // L_GT_NCF_Shadows
+            // 
+            resources.ApplyResources(this.L_GT_NCF_Shadows, "L_GT_NCF_Shadows");
+            this.L_GT_NCF_Shadows.Name = "L_GT_NCF_Shadows";
+            // 
+            // GT_NCF_Brightness
+            // 
+            this.GT_NCF_Brightness.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GT_NCF_Brightness.FormattingEnabled = true;
+            this.GT_NCF_Brightness.Items.AddRange(new object[] {
+            resources.GetString("GT_NCF_Brightness.Items"),
+            resources.GetString("GT_NCF_Brightness.Items1"),
+            resources.GetString("GT_NCF_Brightness.Items2"),
+            resources.GetString("GT_NCF_Brightness.Items3"),
+            resources.GetString("GT_NCF_Brightness.Items4"),
+            resources.GetString("GT_NCF_Brightness.Items5"),
+            resources.GetString("GT_NCF_Brightness.Items6"),
+            resources.GetString("GT_NCF_Brightness.Items7"),
+            resources.GetString("GT_NCF_Brightness.Items8")});
+            resources.ApplyResources(this.GT_NCF_Brightness, "GT_NCF_Brightness");
+            this.GT_NCF_Brightness.Name = "GT_NCF_Brightness";
+            // 
+            // L_GT_NCF_Brightness
+            // 
+            resources.ApplyResources(this.L_GT_NCF_Brightness, "L_GT_NCF_Brightness");
+            this.L_GT_NCF_Brightness.Name = "L_GT_NCF_Brightness";
             // 
             // GT_NCF_Quality
             // 
@@ -816,21 +877,6 @@
             // 
             resources.ApplyResources(this.L_GT_NCF_Ratio, "L_GT_NCF_Ratio");
             this.L_GT_NCF_Ratio.Name = "L_GT_NCF_Ratio";
-            // 
-            // L_GT_NCF_Brightness
-            // 
-            resources.ApplyResources(this.L_GT_NCF_Brightness, "L_GT_NCF_Brightness");
-            this.L_GT_NCF_Brightness.Name = "L_GT_NCF_Brightness";
-            // 
-            // GT_NCF_Brightness
-            // 
-            this.GT_NCF_Brightness.BackColor = System.Drawing.SystemColors.Window;
-            resources.ApplyResources(this.GT_NCF_Brightness, "GT_NCF_Brightness");
-            this.GT_NCF_Brightness.Maximum = 26;
-            this.GT_NCF_Brightness.Minimum = 18;
-            this.GT_NCF_Brightness.Name = "GT_NCF_Brightness";
-            this.GT_NCF_Brightness.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.GT_NCF_Brightness.Value = 18;
             // 
             // GT_NCF_VertRes
             // 
@@ -2003,7 +2049,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResHor)).EndInit();
             this.GT_NCF_Group.ResumeLayout(false);
             this.GT_NCF_Group.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GT_NCF_Brightness)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_NCF_VertRes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_NCF_HorRes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_Warning)).EndInit();
@@ -2196,8 +2241,6 @@
         private System.Windows.Forms.Panel GT_NCF_Group;
         private System.Windows.Forms.ComboBox GT_NCF_Ratio;
         private System.Windows.Forms.Label L_GT_NCF_Ratio;
-        private System.Windows.Forms.Label L_GT_NCF_Brightness;
-        private System.Windows.Forms.TrackBar GT_NCF_Brightness;
         private System.Windows.Forms.NumericUpDown GT_NCF_VertRes;
         private System.Windows.Forms.NumericUpDown GT_NCF_HorRes;
         private System.Windows.Forms.Label L_GT_NCF_HorRes;
@@ -2250,6 +2293,12 @@
         private System.Windows.Forms.ToolStripSeparator MNUSep5;
         private System.Windows.Forms.PictureBox HD_Warning;
         private System.Windows.Forms.Button HD_OpenDir;
+        private System.Windows.Forms.ComboBox GT_NCF_MBlur;
+        private System.Windows.Forms.Label L_GT_NCF_MBlur;
+        private System.Windows.Forms.ComboBox GT_NCF_Shadows;
+        private System.Windows.Forms.Label L_GT_NCF_Shadows;
+        private System.Windows.Forms.ComboBox GT_NCF_Brightness;
+        private System.Windows.Forms.Label L_GT_NCF_Brightness;
     }
 }
 

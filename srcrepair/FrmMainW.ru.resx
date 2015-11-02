@@ -191,6 +191,57 @@
         AeUB4AEPAf8B6AGAAQkL
 </value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="GT_Warning.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        RU5ErkJggg==
+</value>
+  </data>
+  <data name="GT_SaveApply.Text" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="GT_Maximum_Performance.Text" xml:space="preserve">
+    <value>Максимальная производительность</value>
+  </data>
+  <data name="GT_Maximum_Graphics.Text" xml:space="preserve">
+    <value>Максимальное качество</value>
+  </data>
+  <data name="GT_ResAvailable_Btn.Text" xml:space="preserve">
+    <value>Определить</value>
+  </data>
+  <data name="L_GT_ResAvailable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 13</value>
+  </data>
+  <data name="L_GT_ResAvailable.Text" xml:space="preserve">
+    <value>Разрешение экрана:</value>
+  </data>
   <data name="GraphicTweaker.Text" xml:space="preserve">
     <value>Графические настройки</value>
   </data>
@@ -203,28 +254,12 @@
   <data name="FPSCfgInstall.Text" xml:space="preserve">
     <value>FPS-конфиги</value>
   </data>
-  <data name="HD_Uninstall.Text" xml:space="preserve">
-    <value>Удалить выбранный HUD</value>
-  </data>
-  <data name="HD_Install.Text" xml:space="preserve">
-    <value>Установить выбранный HUD</value>
-  </data>
-  <data name="HD_GB_Desc.Text" xml:space="preserve">
-    <value>Скриншот выбранного HUD</value>
-  </data>
-  <data name="L_HD_HSel.Text" xml:space="preserve">
-    <value>Выберите HUD:</value>
-  </data>
-  <data name="HD_WelcMsg.Text" xml:space="preserve">
-    <value>Здесь вы можете установить один из протестированных нами HUD в игру. Не устанавливайте более одного HUD, т.к. это может привести к непредсказуемым последствиям. Выберите HUD из списка чтобы увидеть его скриншот.</value>
-  </data>
   <data name="HUDInstall.Text" xml:space="preserve">
     <value>Менеджер HUD</value>
   </data>
   <data name="RescueCentre.Text" xml:space="preserve">
     <value>Резервные копии</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="L_GT_HDR.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 13</value>
   </data>
@@ -408,6 +443,42 @@
   <data name="L_GT_ResHor.Text" xml:space="preserve">
     <value>Разрешение по горизонт.</value>
   </data>
+  <data name="GT_NCF_MBlur.Items" xml:space="preserve">
+    <value>Выключено</value>
+  </data>
+  <data name="GT_NCF_MBlur.Items1" xml:space="preserve">
+    <value>Включено</value>
+  </data>
+  <data name="L_GT_NCF_MBlur.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 13</value>
+  </data>
+  <data name="L_GT_NCF_MBlur.Text" xml:space="preserve">
+    <value>Размытие движения:</value>
+  </data>
+  <data name="GT_NCF_Shadows.Items" xml:space="preserve">
+    <value>Очень низкое</value>
+  </data>
+  <data name="GT_NCF_Shadows.Items1" xml:space="preserve">
+    <value>Низкое</value>
+  </data>
+  <data name="GT_NCF_Shadows.Items2" xml:space="preserve">
+    <value>Среднее</value>
+  </data>
+  <data name="GT_NCF_Shadows.Items3" xml:space="preserve">
+    <value>Высокое</value>
+  </data>
+  <data name="L_GT_NCF_Shadows.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 13</value>
+  </data>
+  <data name="L_GT_NCF_Shadows.Text" xml:space="preserve">
+    <value>Качество теней:</value>
+  </data>
+  <data name="L_GT_NCF_Brightness.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 13</value>
+  </data>
+  <data name="L_GT_NCF_Brightness.Text" xml:space="preserve">
+    <value>Яркость:</value>
+  </data>
   <data name="GT_NCF_Quality.Items" xml:space="preserve">
     <value>Низкое</value>
   </data>
@@ -567,67 +638,11 @@
   <data name="L_GT_NCF_Ratio.Text" xml:space="preserve">
     <value>Формат экрана:</value>
   </data>
-  <data name="L_GT_NCF_Brightness.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 13</value>
-  </data>
-  <data name="L_GT_NCF_Brightness.Text" xml:space="preserve">
-    <value>Яркость:</value>
-  </data>
   <data name="L_GT_NCF_HorRes.Size" type="System.Drawing.Size, System.Drawing">
     <value>140, 13</value>
   </data>
   <data name="L_GT_NCF_HorRes.Text" xml:space="preserve">
     <value>Разрешение по горизонт.:</value>
-  </data>
-  <data name="GT_Warning.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        RU5ErkJggg==
-</value>
-  </data>
-  <data name="GT_SaveApply.Text" xml:space="preserve">
-    <value>Сохранить</value>
-  </data>
-  <data name="GT_Maximum_Performance.Text" xml:space="preserve">
-    <value>Максимальная производительность</value>
-  </data>
-  <data name="GT_Maximum_Graphics.Text" xml:space="preserve">
-    <value>Максимальное качество</value>
-  </data>
-  <data name="GT_ResAvailable_Btn.Text" xml:space="preserve">
-    <value>Определить</value>
-  </data>
-  <data name="L_GT_ResAvailable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 13</value>
-  </data>
-  <data name="L_GT_ResAvailable.Text" xml:space="preserve">
-    <value>Разрешение экрана:</value>
   </data>
   <data name="CE_New.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -871,6 +886,15 @@
   <data name="FP_TopLabel.Text" xml:space="preserve">
     <value>На этой странице Вы можете установить один из доступных и протестированных нами FPS-конфигов в игру. Конфиг представляет собой файл autoexec.cfg, который способен значительно увеличить производительность игры с потерей качества выдаваемой картинки. Установленный конфиг Вы можете редактировать в Редакторе. Внимание! Если Вы используете конфиг, то редактор графических настроек не сможет редактировать их (настройки, полученные из конфига, имеют более высокий приоритет).</value>
   </data>
+  <data name="HD_Uninstall.Text" xml:space="preserve">
+    <value>Удалить выбранный HUD</value>
+  </data>
+  <data name="HD_Install.Text" xml:space="preserve">
+    <value>Установить выбранный HUD</value>
+  </data>
+  <data name="HD_GB_Desc.Text" xml:space="preserve">
+    <value>Скриншот выбранного HUD</value>
+  </data>
   <data name="HD_Warning.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -902,6 +926,12 @@
         bQ8sFbelLRHtyTGCPSlayISeh56zxYjPJEWLT0iCNh1xIif3nlkXxf8d/vsO/AN4VkrMtkzfPQAAAABJ
         RU5ErkJggg==
 </value>
+  </data>
+  <data name="L_HD_HSel.Text" xml:space="preserve">
+    <value>Выберите HUD:</value>
+  </data>
+  <data name="HD_WelcMsg.Text" xml:space="preserve">
+    <value>Здесь вы можете установить один из протестированных нами HUD в игру. Не устанавливайте более одного HUD, т.к. это может привести к непредсказуемым последствиям. Выберите HUD из списка чтобы увидеть его скриншот.</value>
   </data>
   <data name="BU_LV_Name.Text" xml:space="preserve">
     <value>Имя</value>
