@@ -1413,6 +1413,8 @@ namespace srcrepair
             GT_NCF_HorRes.Value = 640;
             GT_NCF_VertRes.Value = 480;
             GT_NCF_Brightness.SelectedIndex = -1;
+            GT_NCF_Shadows.SelectedIndex = -1;
+            GT_NCF_MBlur.SelectedIndex = -1;
             GT_NCF_Ratio.SelectedIndex = -1;
             GT_NCF_DispMode.SelectedIndex = -1;
             GT_NCF_AntiAlias.SelectedIndex = -1;
