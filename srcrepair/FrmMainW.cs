@@ -665,7 +665,7 @@ namespace srcrepair
             // Начинаем сохранять содержимое редактора в файл...
             using (StreamWriter CFile = new StreamWriter(VFileName))
             {
-                string Templt = "\t" + @"""" + "{0}" + @"""" + "\t\t" + @"""" + "{1}" + @"""";
+                string Templt = "\t\"{0}\"\t\t\"{1}\"";
                 // Вставляем стандартный заголовок...
                 CFile.WriteLine(@"""" + "VideoConfig" + @"""");
                 CFile.WriteLine("{");
@@ -2795,22 +2795,7 @@ namespace srcrepair
             try
             {
                 string Buf = CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[0].Value.ToString();
-                if (!(String.IsNullOrEmpty(Buf)))
-                {
-                    Buf = GetCVDescription(Buf);
-                    if (!(String.IsNullOrEmpty(Buf)))
-                    {
-                        MessageBox.Show(Buf, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show(CoreLib.GetLocalizedString("CE_ClNoDescr"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show(CoreLib.GetLocalizedString("CE_ClSelErr"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                if (!(String.IsNullOrEmpty(Buf))) { Buf = GetCVDescription(Buf); if (!(String.IsNullOrEmpty(Buf))) { MessageBox.Show(Buf, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(CoreLib.GetLocalizedString("CE_ClNoDescr"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } } else { MessageBox.Show(CoreLib.GetLocalizedString("CE_ClSelErr"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             }
             catch
             {
@@ -2912,19 +2897,12 @@ namespace srcrepair
 
         private void BUT_OpenNpad_Click(object sender, EventArgs e)
         {
+            // Откроем выбранный бэкап в Блокноте Windows...
             if (BU_LVTable.Items.Count > 0)
             {
                 if (BU_LVTable.SelectedItems.Count > 0)
                 {
-                    if (Regex.IsMatch(Path.GetExtension(BU_LVTable.SelectedItems[0].SubItems[4].Text), @"\.(txt|cfg|[0-9]|reg)"))
-                    {
-                        // Откроем выбранный бэкап в Блокноте Windows...
-                        Process.Start(Properties.Settings.Default.EditorBin, Path.Combine(SelGame.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text));
-                    }
-                    else
-                    {
-                        MessageBox.Show(CoreLib.GetLocalizedString("BU_BinaryFile"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                    if (Regex.IsMatch(Path.GetExtension(BU_LVTable.SelectedItems[0].SubItems[4].Text), @"\.(txt|cfg|[0-9]|reg)")) { Process.Start(Properties.Settings.Default.EditorBin, Path.Combine(SelGame.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text)); } else { MessageBox.Show(CoreLib.GetLocalizedString("BU_BinaryFile"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
                 }
                 else
                 {
