@@ -731,7 +731,7 @@ namespace srcrepair
                 // Настройки зернистости...
                 CFile.WriteLine(String.Format(Templt, "setting.mat_grain_scale_override", "1"));
                 // Настройки гаммы...
-                CFile.WriteLine(String.Format(Templt, "setting.mat_monitorgamma", (((float)GT_NCF_Brightness.Value / 10).ToString() + "00000")).Replace(",", "."));
+                //CFile.WriteLine(String.Format(Templt, "setting.mat_monitorgamma", (((float)GT_NCF_Brightness.Value / 10).ToString() + "00000")).Replace(",", "."));
                 // Настройки качества моделей и текстур...
                 CFile.WriteLine(String.Format(Templt, "setting.gpu_mem_level", GT_NCF_Quality.SelectedIndex.ToString()));
                 // Настройки пула памяти...
@@ -1042,8 +1042,14 @@ namespace srcrepair
             try { GT_NCF_Ratio.SelectedIndex = GetNCFDWord("setting.aspectratiomode", VideoFile); } catch { GT_NCF_Ratio.SelectedIndex = -1; }
             
             // Получаем настройки яркости...
-            try { GT_NCF_Brightness.Value = Convert.ToInt32(GetNCFDble("setting.mat_monitorgamma", VideoFile) * 10); } catch { GT_NCF_Brightness.Value = 18; }
-            
+            try { GT_NCF_Brightness.Text = (GetNCFDble("setting.mat_monitorgamma", VideoFile) * 10).ToString(); } catch { GT_NCF_Brightness.Text = "22"; }
+
+            // Получаем настройки качества теней...
+            try { GT_NCF_Shadows.SelectedIndex = GetNCFDWord("setting.csm_quality_level", VideoFile); } catch { GT_NCF_Shadows.SelectedIndex = -1; }
+
+            // Получаем настройки размытия движения...
+            try { GT_NCF_MBlur.SelectedIndex = GetNCFDWord("setting.mat_motion_blur_enabled", VideoFile); } catch { GT_NCF_MBlur.SelectedIndex = -1; }
+
             // Получаем настройки режима...
             try
             {
@@ -1382,7 +1388,7 @@ namespace srcrepair
         {
             GT_NCF_HorRes.Value = 640;
             GT_NCF_VertRes.Value = 480;
-            GT_NCF_Brightness.Value = 18;
+            GT_NCF_Brightness.SelectedIndex = -1;
             GT_NCF_Ratio.SelectedIndex = -1;
             GT_NCF_DispMode.SelectedIndex = -1;
             GT_NCF_AntiAlias.SelectedIndex = -1;
