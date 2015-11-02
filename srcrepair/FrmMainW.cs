@@ -2070,7 +2070,7 @@ namespace srcrepair
             // Зададим вопрос, а нужно ли это юзеру?
             if (MessageBox.Show(CoreLib.GetLocalizedString("GT_MaxPerfMsg"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (SelGame.IsUsingVideoFile)
+                if (!SelGame.IsUsingVideoFile)
                 {
                     // Пользователь согласился, продолжаем...
                     GT_ScreenType.SelectedIndex = 0; // полноэкранный режим
@@ -2092,6 +2092,8 @@ namespace srcrepair
                     GT_NCF_DispMode.SelectedIndex = 0;
                     GT_NCF_AntiAlias.SelectedIndex = 2;
                     GT_NCF_Filtering.SelectedIndex = 3;
+                    GT_NCF_Shadows.SelectedIndex = 3;
+                    GT_NCF_MBlur.SelectedIndex = 1;
                     GT_NCF_VSync.SelectedIndex = 0;
                     GT_NCF_Multicore.SelectedIndex = 1;
                     GT_NCF_ShaderE.SelectedIndex = 3;
@@ -2109,7 +2111,7 @@ namespace srcrepair
             // Спросим пользователя.
             if (MessageBox.Show(CoreLib.GetLocalizedString("GT_MinPerfMsg"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (SelGame.IsUsingVideoFile)
+                if (!SelGame.IsUsingVideoFile)
                 {
                     // Пользователь согласился, продолжаем...
                     GT_ScreenType.SelectedIndex = 0; // полноэкранный режим
@@ -2139,6 +2141,8 @@ namespace srcrepair
                     GT_NCF_DispMode.SelectedIndex = 0;
                     GT_NCF_AntiAlias.SelectedIndex = 0;
                     GT_NCF_Filtering.SelectedIndex = 1;
+                    GT_NCF_Shadows.SelectedIndex = 0;
+                    GT_NCF_MBlur.SelectedIndex = 0;
                     GT_NCF_VSync.SelectedIndex = 0;
                     GT_NCF_Multicore.SelectedIndex = 1;
                     GT_NCF_ShaderE.SelectedIndex = 0;
