@@ -175,7 +175,7 @@
     <value>157, 22</value>
   </data>
   <data name="LV_MunuFileClearLog.Text" xml:space="preserve">
-    <value>Clear log</value>
+    <value>Cl&amp;ear log</value>
   </data>
   <data name="LV_Sep1.Size" type="System.Drawing.Size, System.Drawing">
     <value>154, 6</value>

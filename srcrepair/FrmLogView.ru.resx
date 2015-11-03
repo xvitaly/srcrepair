@@ -130,6 +130,12 @@
   <data name="LV_MenuFileReload.Text" xml:space="preserve">
     <value>&amp;Перечитать</value>
   </data>
+  <data name="LV_MunuFileClearLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 22</value>
+  </data>
+  <data name="LV_MunuFileClearLog.Text" xml:space="preserve">
+    <value>Оч&amp;истить журнал</value>
+  </data>
   <data name="LV_Sep1.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 6</value>
   </data>
