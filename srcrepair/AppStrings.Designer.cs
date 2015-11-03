@@ -1150,6 +1150,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Could not purge log file! Please try again later..
+        /// </summary>
+        internal static string LV_ClearEx {
+            get {
+                return ResourceManager.GetString("LV_ClearEx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to load error log. Try again later..
         /// </summary>
         internal static string LV_LoadFailed {
