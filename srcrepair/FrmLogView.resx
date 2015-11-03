@@ -171,6 +171,12 @@
   <data name="LV_MenuFileReload.Text" xml:space="preserve">
     <value>&amp;Reload</value>
   </data>
+  <data name="LV_MunuFileClearLog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="LV_MunuFileClearLog.Text" xml:space="preserve">
+    <value>Clear log</value>
+  </data>
   <data name="LV_Sep1.Size" type="System.Drawing.Size, System.Drawing">
     <value>154, 6</value>
   </data>
@@ -317,6 +323,12 @@
     <value>LV_MenuFileReload</value>
   </data>
   <data name="&gt;&gt;LV_MenuFileReload.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LV_MunuFileClearLog.Name" xml:space="preserve">
+    <value>LV_MunuFileClearLog</value>
+  </data>
+  <data name="&gt;&gt;LV_MunuFileClearLog.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;LV_Sep1.Name" xml:space="preserve">

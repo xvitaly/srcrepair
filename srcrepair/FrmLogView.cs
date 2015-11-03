@@ -65,5 +65,14 @@ namespace srcrepair
             // Выводим сообщение с краткой информацией о плагине...
             MessageBox.Show(Properties.Resources.LV_About, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void LV_MunuFileClearLog_Click(object sender, EventArgs e)
+        {
+            // Очистим форму...
+            LV_LogArea.Clear();
+
+            // Очистим файл журнала...
+            try { if (File.Exists(LogFileName)) { File.Delete(LogFileName); CoreLib.CreateFile(LogFileName); } } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("LV_ClearEx"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+        }
     }
 }

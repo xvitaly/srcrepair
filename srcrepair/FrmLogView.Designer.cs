@@ -34,6 +34,7 @@
             this.LV_Menu = new System.Windows.Forms.MenuStrip();
             this.LV_MenuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_MenuFileReload = new System.Windows.Forms.ToolStripMenuItem();
+            this.LV_MunuFileClearLog = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_Sep1 = new System.Windows.Forms.ToolStripSeparator();
             this.LV_MenuFileExit = new System.Windows.Forms.ToolStripMenuItem();
             this.LV_MenuHelp = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,6 +68,7 @@
             // 
             this.LV_MenuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.LV_MenuFileReload,
+            this.LV_MunuFileClearLog,
             this.LV_Sep1,
             this.LV_MenuFileExit});
             this.LV_MenuFile.Name = "LV_MenuFile";
@@ -78,6 +80,13 @@
             this.LV_MenuFileReload.Name = "LV_MenuFileReload";
             resources.ApplyResources(this.LV_MenuFileReload, "LV_MenuFileReload");
             this.LV_MenuFileReload.Click += new System.EventHandler(this.LV_MenuFileReload_Click);
+            // 
+            // LV_MunuFileClearLog
+            // 
+            this.LV_MunuFileClearLog.Image = global::srcrepair.Properties.Resources.clean;
+            this.LV_MunuFileClearLog.Name = "LV_MunuFileClearLog";
+            resources.ApplyResources(this.LV_MunuFileClearLog, "LV_MunuFileClearLog");
+            this.LV_MunuFileClearLog.Click += new System.EventHandler(this.LV_MunuFileClearLog_Click);
             // 
             // LV_Sep1
             // 
@@ -143,5 +152,6 @@
         private System.Windows.Forms.ToolStripMenuItem LV_MenuHelpAbout;
         private System.Windows.Forms.TextBox LV_LogArea;
         private System.Windows.Forms.ToolStripSeparator LV_Sep1;
+        private System.Windows.Forms.ToolStripMenuItem LV_MunuFileClearLog;
     }
 }
