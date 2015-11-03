@@ -1673,6 +1673,16 @@ namespace srcrepair
             FP_Uninstall.Enabled = SelGame.FPSConfigs.Count > 0;
         }
 
+        /// <summary>
+        /// Управляет видимостью специальных кнопок модуля Менеджер HUD.
+        /// </summary>
+        /// <param name="State">Статус выбранного HUD</param>
+        private void SetHUDButtons(bool State)
+        {
+            HD_Uninstall.Enabled = State;
+            HD_OpenDir.Enabled = State;
+        }
+
         #endregion
 
         #region Internal Workers
@@ -3322,9 +3332,7 @@ namespace srcrepair
             HD_Warning.Visible = Success && !SelHUD.IsUpdated;
 
             // Проверяем установлен ли выбранный HUD...
-            bool IsInstalled = SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir);
-            HD_Uninstall.Enabled = IsInstalled;
-            HD_OpenDir.Enabled = IsInstalled;
+            SetHUDButtons(SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir));
 
             // Загрузим скриншот выбранного HUD...
             if (Success && !BW_HUDScreen.IsBusy) { BW_HUDScreen.RunWorkerAsync(); }
@@ -3374,9 +3382,8 @@ namespace srcrepair
             // При успешном удалении HUD сносим и его каталог...
             if (!IsInstalled) { if (Directory.Exists(HUDPath)) { Directory.Delete(HUDPath); } }
             
-            // Включаем / отключаем кнопку...
-            ((Button)sender).Enabled = IsInstalled;
-            
+            // Включаем / отключаем кнопки...
+            SetHUDButtons(IsInstalled);
         }
 
         private void HD_Homepage_Click(object sender, EventArgs e)
