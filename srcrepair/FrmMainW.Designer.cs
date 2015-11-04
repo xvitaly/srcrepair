@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainW));
-            this.TabIcons = new System.Windows.Forms.ImageList(this.components);
+            this.TabIcons = new System.Windows.Forms.ImageList();
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
             this.GT_ResAvailable = new System.Windows.Forms.ComboBox();
@@ -141,7 +140,8 @@
             this.PS_RemDnlCache = new System.Windows.Forms.Button();
             this.PS_RemCustMaps = new System.Windows.Forms.Button();
             this.PS_GB_SInfo = new System.Windows.Forms.GroupBox();
-            this.PS_PathDetector = new System.Windows.Forms.Label();
+            this.PS_PathGame = new System.Windows.Forms.Label();
+            this.PS_PathSteam = new System.Windows.Forms.Label();
             this.PS_OSDrive = new System.Windows.Forms.Label();
             this.PS_StPath = new System.Windows.Forms.Label();
             this.PS_GB_Solver = new System.Windows.Forms.GroupBox();
@@ -1264,20 +1264,31 @@
             // 
             // PS_GB_SInfo
             // 
-            this.PS_GB_SInfo.Controls.Add(this.PS_PathDetector);
+            this.PS_GB_SInfo.Controls.Add(this.PS_PathGame);
+            this.PS_GB_SInfo.Controls.Add(this.PS_PathSteam);
             this.PS_GB_SInfo.Controls.Add(this.PS_OSDrive);
             this.PS_GB_SInfo.Controls.Add(this.PS_StPath);
             resources.ApplyResources(this.PS_GB_SInfo, "PS_GB_SInfo");
             this.PS_GB_SInfo.Name = "PS_GB_SInfo";
             this.PS_GB_SInfo.TabStop = false;
             // 
-            // PS_PathDetector
+            // PS_PathGame
             // 
-            this.PS_PathDetector.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PS_PathDetector.ForeColor = System.Drawing.Color.Green;
-            resources.ApplyResources(this.PS_PathDetector, "PS_PathDetector");
-            this.PS_PathDetector.Name = "PS_PathDetector";
-            this.PS_PathDetector.Click += new System.EventHandler(this.PS_PathDetector_Click);
+            this.PS_PathGame.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PS_PathGame.ForeColor = System.Drawing.Color.Green;
+            this.PS_PathGame.Image = global::srcrepair.Properties.Resources.upd_nx;
+            resources.ApplyResources(this.PS_PathGame, "PS_PathGame");
+            this.PS_PathGame.Name = "PS_PathGame";
+            this.PS_PathGame.Click += new System.EventHandler(this.PS_PathGame_Click);
+            // 
+            // PS_PathSteam
+            // 
+            this.PS_PathSteam.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PS_PathSteam.ForeColor = System.Drawing.Color.Green;
+            this.PS_PathSteam.Image = global::srcrepair.Properties.Resources.upd_nx;
+            resources.ApplyResources(this.PS_PathSteam, "PS_PathSteam");
+            this.PS_PathSteam.Name = "PS_PathSteam";
+            this.PS_PathSteam.Click += new System.EventHandler(this.PS_PathDetector_Click);
             // 
             // PS_OSDrive
             // 
@@ -2125,7 +2136,7 @@
         private System.Windows.Forms.Label L_PS_SteamLang;
         private System.Windows.Forms.CheckBox PS_CleanRegistry;
         private System.Windows.Forms.CheckBox PS_CleanBlobs;
-        private System.Windows.Forms.Label PS_PathDetector;
+        private System.Windows.Forms.Label PS_PathSteam;
         private System.Windows.Forms.Label PS_OSDrive;
         private System.Windows.Forms.Button PS_CheckCache;
         private System.Windows.Forms.Button PS_RemDemos;
@@ -2299,6 +2310,7 @@
         private System.Windows.Forms.Label L_GT_NCF_Shadows;
         private System.Windows.Forms.ComboBox GT_NCF_Brightness;
         private System.Windows.Forms.Label L_GT_NCF_Brightness;
+        private System.Windows.Forms.Label PS_PathGame;
     }
 }
 

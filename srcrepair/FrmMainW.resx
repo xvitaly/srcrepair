@@ -3252,35 +3252,71 @@
   <metadata name="PS_GB_SInfo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="PS_PathDetector.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="PS_PathGame.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="PS_PathDetector.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 73</value>
+  <data name="PS_PathGame.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
-  <data name="PS_PathDetector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>255, 13</value>
+  <data name="PS_PathGame.Location" type="System.Drawing.Point, System.Drawing">
+    <value>147, 66</value>
   </data>
-  <data name="PS_PathDetector.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="PS_PathGame.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 26</value>
   </data>
-  <data name="PS_PathDetector.Text" xml:space="preserve">
-    <value>Restricted symbols not detected.</value>
+  <data name="PS_PathGame.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="PS_PathDetector.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="PS_PathGame.Text" xml:space="preserve">
+    <value>Game OK</value>
+  </data>
+  <data name="PS_PathGame.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="&gt;&gt;PS_PathDetector.Name" xml:space="preserve">
-    <value>PS_PathDetector</value>
+  <data name="&gt;&gt;PS_PathGame.Name" xml:space="preserve">
+    <value>PS_PathGame</value>
   </data>
-  <data name="&gt;&gt;PS_PathDetector.Type" xml:space="preserve">
+  <data name="&gt;&gt;PS_PathGame.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;PS_PathDetector.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PS_PathGame.Parent" xml:space="preserve">
     <value>PS_GB_SInfo</value>
   </data>
-  <data name="&gt;&gt;PS_PathDetector.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;PS_PathGame.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <metadata name="PS_PathSteam.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="PS_PathSteam.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="PS_PathSteam.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 66</value>
+  </data>
+  <data name="PS_PathSteam.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 26</value>
+  </data>
+  <data name="PS_PathSteam.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="PS_PathSteam.Text" xml:space="preserve">
+    <value>Steam OK</value>
+  </data>
+  <data name="PS_PathSteam.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;PS_PathSteam.Name" xml:space="preserve">
+    <value>PS_PathSteam</value>
+  </data>
+  <data name="&gt;&gt;PS_PathSteam.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PS_PathSteam.Parent" xml:space="preserve">
+    <value>PS_GB_SInfo</value>
+  </data>
+  <data name="&gt;&gt;PS_PathSteam.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="PS_OSDrive.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3307,7 +3343,7 @@
     <value>PS_GB_SInfo</value>
   </data>
   <data name="&gt;&gt;PS_OSDrive.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="PS_StPath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3337,7 +3373,7 @@
     <value>PS_GB_SInfo</value>
   </data>
   <data name="&gt;&gt;PS_StPath.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="PS_GB_SInfo.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 147</value>
@@ -3349,7 +3385,7 @@
     <value>1</value>
   </data>
   <data name="PS_GB_SInfo.Text" xml:space="preserve">
-    <value>Steam general infomation</value>
+    <value>General infomation</value>
   </data>
   <data name="&gt;&gt;PS_GB_SInfo.Name" xml:space="preserve">
     <value>PS_GB_SInfo</value>
