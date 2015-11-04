@@ -289,7 +289,7 @@ namespace srcrepair.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2015-09-01")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2015-11-03")]
         public global::System.DateTime LastHUDTime {
             get {
                 return ((global::System.DateTime)(this["LastHUDTime"]));
