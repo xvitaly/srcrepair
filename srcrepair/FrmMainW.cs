@@ -1299,7 +1299,7 @@ namespace srcrepair
                     }
 
                     // Изменяем содержимое строки статуса...
-                    SB_Status.Text = String.Format(CoreLib.GetLocalizedString("StatusOpenedFile"), CFGFileName);
+                    UpdateStatusBar(MainTabControl.SelectedIndex);
                 }
                 catch (Exception Ex)
                 {
@@ -1564,7 +1564,7 @@ namespace srcrepair
                     {
                         // При наличии единственной игры в списке, выберем её автоматически...
                         AppSelector.SelectedIndex = 0;
-                        SB_Status.Text = CoreLib.GetLocalizedString("StatusNormal");
+                        UpdateStatusBar(MainTabControl.SelectedIndex);
                     }
                     break;
                 default:
@@ -2396,9 +2396,9 @@ namespace srcrepair
         private void CE_New_Click(object sender, EventArgs e)
         {
             // Создаём новый файл...
-            CE_Editor.Rows.Clear();
             CFGFileName = "";
-            SB_Status.Text = String.Format(CoreLib.GetLocalizedString("StatusOpenedFile"), CoreLib.GetLocalizedString("UnnamedFileName"));
+            CE_Editor.Rows.Clear();
+            UpdateStatusBar(MainTabControl.SelectedIndex);
         }
 
         private void CE_Open_Click(object sender, EventArgs e)
@@ -2464,7 +2464,7 @@ namespace srcrepair
                     WriteTableToFileNow(CE_SaveCfgDialog.FileName, Properties.Resources.AppName);
                     CFGFileName = Path.GetFileName(CE_SaveCfgDialog.FileName);
                     CE_OpenCfgDialog.FileName = CE_SaveCfgDialog.FileName;
-                    SB_Status.Text = String.Format(CoreLib.GetLocalizedString("StatusOpenedFile"), CFGFileName);
+                    UpdateStatusBar(MainTabControl.SelectedIndex);
                 }
             }
         }
