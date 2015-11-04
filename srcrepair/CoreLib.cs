@@ -177,7 +177,7 @@ namespace srcrepair
         public static bool CheckNonASCII(string Path)
         {
             // Проверяем строку на соответствие регулярному выражению...
-            return Regex.IsMatch(Path, @"^[0-9a-zA-Z :()./\\\\]*$");
+            return Regex.IsMatch(Path, @"^[0-9a-zA-Z :()-./\\\\]*$");
         }
 
         /// <summary>
