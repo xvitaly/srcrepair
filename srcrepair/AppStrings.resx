@@ -250,13 +250,7 @@
     <value>Attention! Source Repair was unable to get a list of active logins Steam, so you have to enter it manually.</value>
   </data>
   <data name="SteamNonASCIIDetected" xml:space="preserve">
-    <value>Attention! On the way to Steam detected invalid characters: Russian, German, etc. letters, or Unicode characters. Steam and the games will not work correctly. Reinstall Steam folder, the path to which will contain only latin symbols.</value>
-  </data>
-  <data name="SteamNonASCIISmall" xml:space="preserve">
-    <value>Attention! On the way to Steam detected invalid characters. Steam and the games will not work correctly. Reinstall Steam to folder, the path to which will contain only latin symbols.</value>
-  </data>
-  <data name="SteamNonASCIITitle" xml:space="preserve">
-    <value>Disallowed characters detected!</value>
+    <value>Warning! Invalid characters detected in Steam path. Steam and the games will not work correctly. Reinstall Steam to folder, the path to which will contain only latin symbols.</value>
   </data>
   <data name="SteamNotDetected" xml:space="preserve">
     <value>Registry keys related to Steam is not found. You do not need their cleaning. Click OK to exit the program!</value>
@@ -478,7 +472,7 @@
     <value>0</value>
   </data>
   <data name="SteamNonASCIINotDetected" xml:space="preserve">
-    <value>Steam installed correctly: Steam login and directory path does not contain illegal characters: letters of national alphabets (Russian, German, French, etc.) and Unicode characters.</value>
+    <value>Steam installed correctly: Steam directory path does not contain illegal characters.</value>
   </data>
   <data name="PS_CleanEmptyDirsError" xml:space="preserve">
     <value>An error occurred during the clean up empty directories! Maybe you do not have appropriate access rights.</value>
@@ -607,7 +601,7 @@
     <value>No games detected. Steam located as: {0}.</value>
   </data>
   <data name="AppRestrSymbLog" xml:space="preserve">
-    <value>NonASCII characters detected. Steam path: {0}.</value>
+    <value>NonASCII characters detected. Path: {0}.</value>
   </data>
   <data name="AppSteamLocLog" xml:space="preserve">
     <value>Steam found in: {0}.</value>
@@ -734,5 +728,11 @@
   </data>
   <data name="LV_ClearEx" xml:space="preserve">
     <value>Could not purge log file! Please try again later.</value>
+  </data>
+  <data name="GameNonASCIIDetected" xml:space="preserve">
+    <value>Warning! Restricted symbols detected in selected games' path. Steam and the games will not work correctly.</value>
+  </data>
+  <data name="GameNonASCIINotDetected" xml:space="preserve">
+    <value>Game installed correctly: directory path does not contain illegal characters.</value>
   </data>
 </root>

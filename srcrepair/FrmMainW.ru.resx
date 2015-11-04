@@ -814,6 +814,12 @@
   <data name="PS_GB_Remover.Text" xml:space="preserve">
     <value>Безопасная очистка:</value>
   </data>
+  <data name="PS_PathGame.Text" xml:space="preserve">
+    <value>Путь к игре</value>
+  </data>
+  <data name="PS_PathSteam.Text" xml:space="preserve">
+    <value>Путь к Steam</value>
+  </data>
   <data name="PS_OSDrive.Text" xml:space="preserve">
     <value>Файловая система на диске: {0}</value>
   </data>

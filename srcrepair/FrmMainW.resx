@@ -3259,19 +3259,19 @@
     <value>MiddleLeft</value>
   </data>
   <data name="PS_PathGame.Location" type="System.Drawing.Point, System.Drawing">
-    <value>147, 66</value>
+    <value>152, 66</value>
   </data>
   <data name="PS_PathGame.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 26</value>
+    <value>102, 28</value>
   </data>
   <data name="PS_PathGame.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="PS_PathGame.Text" xml:space="preserve">
-    <value>Game OK</value>
+    <value>Game path</value>
   </data>
   <data name="PS_PathGame.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;PS_PathGame.Name" xml:space="preserve">
     <value>PS_PathGame</value>
@@ -3292,19 +3292,19 @@
     <value>MiddleLeft</value>
   </data>
   <data name="PS_PathSteam.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 66</value>
+    <value>31, 66</value>
   </data>
   <data name="PS_PathSteam.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 26</value>
+    <value>102, 28</value>
   </data>
   <data name="PS_PathSteam.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="PS_PathSteam.Text" xml:space="preserve">
-    <value>Steam OK</value>
+    <value>Steam path</value>
   </data>
   <data name="PS_PathSteam.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;PS_PathSteam.Name" xml:space="preserve">
     <value>PS_PathSteam</value>

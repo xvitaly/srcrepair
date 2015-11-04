@@ -1581,15 +1581,27 @@ namespace srcrepair
         /// Запускает проверку на наличие запрещённых символов в пути установки клиента Steam.
         /// </summary>
         /// <param name="SteamPath">Каталог установки Steam</param>
-        private void CheckSymbols(string SteamPath)
+        private void CheckSymbolsSteam(string SteamPath)
         {
             if (!(CoreLib.CheckNonASCII(SteamPath)))
             {
-                // Запрещённые символы найдены!
-                PS_PathDetector.Text = CoreLib.GetLocalizedString("SteamNonASCIITitle");
-                PS_PathDetector.ForeColor = Color.Red;
-                MessageBox.Show(CoreLib.GetLocalizedString("SteamNonASCIIDetected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                CoreLib.WriteStringToLog(String.Format(CoreLib.GetLocalizedString("AppRestrSymbLog"), App.FullSteamPath));
+                PS_PathSteam.ForeColor = Color.Red;
+                PS_PathSteam.Image = Properties.Resources.upd_err;
+                CoreLib.WriteStringToLog(String.Format(CoreLib.GetLocalizedString("AppRestrSymbLog"), SteamPath));
+            }
+        }
+
+        /// <summary>
+        /// Запускает проверку на наличие запрещённых символов в пути установки игры.
+        /// </summary>
+        /// <param name="GamePath">Каталог установки игры</param>
+        private void CheckSymbolsGame(string GamePath)
+        {
+            if (!(CoreLib.CheckNonASCII(GamePath)))
+            {
+                PS_PathGame.ForeColor = Color.Red;
+                PS_PathGame.Image = Properties.Resources.upd_err;
+                CoreLib.WriteStringToLog(String.Format(CoreLib.GetLocalizedString("AppRestrSymbLog"), GamePath));
             }
         }
 
@@ -1888,7 +1900,7 @@ namespace srcrepair
             PS_StPath.Text = String.Format(PS_StPath.Text, App.FullSteamPath);
             
             // Проверим на наличие запрещённых символов в пути к установленному клиенту Steam...
-            CheckSymbols(App.FullSteamPath);
+            CheckSymbolsSteam(App.FullSteamPath);
 
             // Распознаем файловую систему на диске со Steam...
             DetectFS(App.FullSteamPath);
@@ -2015,6 +2027,9 @@ namespace srcrepair
 
                 // Включаем основные элементы управления (контролы)...
                 MainTabControl.Enabled = true;
+
+                // Проверим наличие запрещённых символов в пути...
+                CheckSymbolsGame(SelGame.FullGamePath);
 
                 // Считаем настройки графики...
                 if (SelGame.IsUsingVideoFile) { if (File.Exists(SelGame.VideoCfgFile)) { ReadNCFGameSettings(SelGame.VideoCfgFile); } else { NullGraphOptions(); } } else { ReadGCFGameSettings(SelGame.SmallAppName); }
@@ -3023,14 +3038,12 @@ namespace srcrepair
 
         private void PS_PathDetector_Click(object sender, EventArgs e)
         {
-            if (((Label)sender).ForeColor == Color.Red)
-            {
-                MessageBox.Show(CoreLib.GetLocalizedString("SteamNonASCIISmall"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                MessageBox.Show(CoreLib.GetLocalizedString("SteamNonASCIINotDetected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            if (((Label)sender).ForeColor == Color.Red) { MessageBox.Show(CoreLib.GetLocalizedString("SteamNonASCIIDetected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } else { MessageBox.Show(CoreLib.GetLocalizedString("SteamNonASCIINotDetected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); }
+        }
+
+        private void PS_PathGame_Click(object sender, EventArgs e)
+        {
+            if (((Label)sender).ForeColor == Color.Red) { MessageBox.Show(CoreLib.GetLocalizedString("GameNonASCIIDetected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } else { MessageBox.Show(CoreLib.GetLocalizedString("GameNonASCIINotDetected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); }
         }
 
         private void PS_RemReplays_Click(object sender, EventArgs e)

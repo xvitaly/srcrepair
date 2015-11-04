@@ -294,16 +294,8 @@
     <comment>Сообщение, выдаваемое при невозможности получить список логинов Steam</comment>
   </data>
   <data name="SteamNonASCIIDetected" xml:space="preserve">
-    <value>Внимание! В пути к Steam обнаружены недопустимые символы: русские, немецкие и т.д. буквы, либо символы Юникода. Steam и игры будут работать с ошибками. Переустановите Steam в папку, путь до которой будет содержать только латинские буквы.</value>
-    <comment>Сообщение, выдаваемое при обнаружении в пути к Steam запрещённых символов</comment>
-  </data>
-  <data name="SteamNonASCIISmall" xml:space="preserve">
     <value>Внимание! В пути к Steam обнаружены недопустимые символы. Steam и игры будут работать с ошибками. Переустановите Steam в папку, путь до которой будет содержать только латинские буквы.</value>
     <comment>Сообщение для детектора</comment>
-  </data>
-  <data name="SteamNonASCIITitle" xml:space="preserve">
-    <value>Обнаружены запрещённые символы!</value>
-    <comment>Текст для детектора</comment>
   </data>
   <data name="SteamNotDetected" xml:space="preserve">
     <value>Ключи реестра, относящиеся к Steam не обнаружены. Вам не нужна их чистка. Нажмите OK для выхода из программы!</value>
@@ -600,7 +592,7 @@
     <comment>Номер языка клиента Steam по умолчанию из раскрывающегося списка на странице устранения проблем и очистки</comment>
   </data>
   <data name="SteamNonASCIINotDetected" xml:space="preserve">
-    <value>Steam установлен верно: логин и путь к каталогу (папке) Steam не содержат запрещённых символов: букв национальных алфавитов (русских, немецких, французских и т.д.) и символов Юникода.</value>
+    <value>Steam установлен верно: путь к каталогу Steam не содержит запрещённых символов.</value>
     <comment>Сообщение, выдаваемое при нажатии на детектор Non-ASCII символов</comment>
   </data>
   <data name="PS_CleanEmptyDirsError" xml:space="preserve">
@@ -768,7 +760,7 @@
     <comment>Сообщение в логе об отсутствии поддерживаемых игр</comment>
   </data>
   <data name="AppRestrSymbLog" xml:space="preserve">
-    <value>В пути обнаружены запрещённые символы. Steam расположен в каталоге: {0}.</value>
+    <value>В пути обнаружены запрещённые символы: {0}.</value>
     <comment>Сообщение в логе об обнаружении в пути к Steam запрещённых символов</comment>
   </data>
   <data name="AppSteamLocLog" xml:space="preserve">
@@ -937,5 +929,13 @@
   <data name="LV_ClearEx" xml:space="preserve">
     <value>Произошла ошибка при попытке очистки журнала ошибок программы! Повторите попытку позже.</value>
     <comment>Сообщение при возникновении исключения во время очистки журнала ошибок программы</comment>
+  </data>
+  <data name="GameNonASCIIDetected" xml:space="preserve">
+    <value>Внимание! В пути к выбранной игре обнаружены недопустимые символы. Steam и игра будут работать с ошибками. Переустановите игру в папку, путь до которой будет содержать только латинские буквы.</value>
+    <comment>Сообщение детектора при обнаружении запрещённых символов в пути к игре</comment>
+  </data>
+  <data name="GameNonASCIINotDetected" xml:space="preserve">
+    <value>Игра установлена верно: путь к каталогу игры не содержит запрещённых символов.</value>
+    <comment>Сообщение детектора при отсутствии запрещённых символов в пути к игре</comment>
   </data>
 </root>
