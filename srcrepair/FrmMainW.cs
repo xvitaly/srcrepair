@@ -1695,6 +1695,39 @@ namespace srcrepair
             HD_OpenDir.Enabled = State;
         }
 
+        /// <summary>
+        /// Обновляет содержимое строки состояния в зависимости от контекста.
+        /// </summary>
+        /// <param name="Index">ID текущей вкладки</param>
+        private void UpdateStatusBar(int Index)
+        {
+            switch (Index)
+            {
+                case 1: // Открыта страница "Редактор конфигов"...
+                    {
+                        MNUShowEdHint.Enabled = true;
+                        SB_Status.ForeColor = Color.Black;
+                        SB_Status.Text = String.Format(CoreLib.GetLocalizedString("StatusOpenedFile"), String.IsNullOrEmpty(CFGFileName) ? CoreLib.GetLocalizedString("UnnamedFileName") : CFGFileName);
+                    }
+                    break;
+                case 4:
+                    {
+                        bool HUDDbStatus = (DateTime.Now - Properties.Settings.Default.LastHUDTime).Days >= 7;
+                        MNUShowEdHint.Enabled = false;
+                        SB_Status.ForeColor = HUDDbStatus ? Color.Red : Color.Black;
+                        SB_Status.Text = String.Format(CoreLib.GetLocalizedString("HD_DynBarText"), CoreLib.GetLocalizedString(HUDDbStatus ? "HD_StatusOutdated" : "HD_StatusUpdated"), Properties.Settings.Default.LastHUDTime);
+                    }
+                    break;
+                default: // Открыта другая страница...
+                    {
+                        MNUShowEdHint.Enabled = false;
+                        SB_Status.ForeColor = Color.Black;
+                        SB_Status.Text = CoreLib.GetLocalizedString("StatusNormal");
+                    }
+                    break;
+            }
+        }
+
         #endregion
 
         #region Internal Workers
@@ -2068,8 +2101,8 @@ namespace srcrepair
                 MNUFPSWizard.Enabled = true;
                 MNUInstaller.Enabled = true;
 
-                // Выводим сообщение о завершении считывания в статус-бар...
-                SB_Status.Text = CoreLib.GetLocalizedString("StatusNormal");
+                // Обновляем статус...
+                UpdateStatusBar(MainTabControl.SelectedIndex);
 
                 // Сохраним ID последней выбранной игры...
                 Properties.Settings.Default.LastGameName = AppSelector.Text;
@@ -2826,31 +2859,7 @@ namespace srcrepair
 
         private void MainTabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (MainTabControl.SelectedIndex)
-            {
-                case 1: // Открыта страница "Редактор конфигов"...
-                    {
-                        MNUShowEdHint.Enabled = true;
-                        SB_Status.ForeColor = Color.Black;
-                        SB_Status.Text = String.Format(CoreLib.GetLocalizedString("StatusOpenedFile"), String.IsNullOrEmpty(CFGFileName) ? CoreLib.GetLocalizedString("UnnamedFileName") : CFGFileName);
-                    }
-                    break;
-                case 4:
-                    {
-                        bool HUDDbStatus = (DateTime.Now - Properties.Settings.Default.LastHUDTime).Days >= 7;
-                        MNUShowEdHint.Enabled = false;
-                        SB_Status.ForeColor = HUDDbStatus ? Color.Red : Color.Black;
-                        SB_Status.Text = String.Format(CoreLib.GetLocalizedString("HD_DynBarText"), CoreLib.GetLocalizedString(HUDDbStatus ? "HD_StatusOutdated" : "HD_StatusUpdated"), Properties.Settings.Default.LastHUDTime);
-                    }
-                    break;
-                default: // Открыта другая страница...
-                    {
-                        MNUShowEdHint.Enabled = false;
-                        SB_Status.ForeColor = Color.Black;
-                        SB_Status.Text = CoreLib.GetLocalizedString("StatusNormal");
-                    }
-                    break;
-            }
+            UpdateStatusBar(((TabControl)sender).SelectedIndex);
         }
 
         private void CE_ShowHint_Click(object sender, EventArgs e)
