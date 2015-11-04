@@ -20,14 +20,14 @@ AppName=SRC Repair
 AppVerName=SRC Repair
 AppPublisher=EasyCoding Team
 AppPublisherURL=http://www.easycoding.org/
-AppVersion=21.0.0.2370
+AppVersion=22.0.0.2758
 AppSupportURL=https://www.easycoding.org/projects/srcrepair
 AppUpdatesURL=https://www.easycoding.org/projects/srcrepair
 DefaultDirName={code:GetDefRoot}\SRC Repair
 DefaultGroupName=SRC Repair
 AllowNoIcons=yes
 LicenseFile=GPL.txt
-OutputBaseFilename=srcrepair_210_final
+OutputBaseFilename=srcrepair_220_final
 SetupIconFile=srcrepair.ico
 UninstallDisplayIcon={app}\srcrepair.exe
 Compression=lzma2
@@ -36,7 +36,7 @@ PrivilegesRequired=none
 ArchitecturesInstallIn64BitMode=x64
 
 ; Здесь указываем данные, которые будут добавлены в свойства установщика...
-VersionInfoVersion=21.0.0.2370
+VersionInfoVersion=22.0.0.2758
 VersionInfoDescription=SRC Repair Setup
 VersionInfoCopyright=(c) 2005-2015 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
