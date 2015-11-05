@@ -82,3 +82,11 @@ fetch_hud http://huds.tf/img/main/medhud.png https://github.com/Intellectualbada
 fetch_hud http://huds.tf/img/main/prismhud.png https://github.com/JarateKing/PrismHUD/archive/master.zip prismhud
 fetch_hud http://huds.tf/img/main/rayshud.png https://github.com/raysfire/rayshud/archive/master.zip rayshud
 fetch_hud http://huds.tf/img/main/evehud.png http://files.gamebanana.com/guis/eve_hud_v368_2.zip evehud
+fetch_hud http://huds.tf/biscottihud/img/main.png https://github.com/MedicodiBiscotti/biscottiHUD/archive/master.zip biscottihud
+fetch_hud http://huds.tf/flamehud/img/main.png https://github.com/mattr0d/flamehud/archive/master.zip flamehud
+fetch_hud http://huds.tf/frankenhud/img/main.png https://github.com/TheKins/frankenhud/archive/master.zip frankenhud
+fetch_hud http://huds.tf/isaachud/img/main.png https://github.com/Xeletron/Isaac-Hud/archive/master.zip isaachud
+fetch_hud http://huds.tf/jayhud/img/main.png https://github.com/kermit-tf/JayHUD/archive/master.zip jayhud
+fetch_hud http://huds.tf/mannterface/img/main.png https://github.com/mannterface/Mannterface/archive/master.zip mannterface
+fetch_hud http://huds.tf/yayahud/img/main.png https://github.com/Yttrium-tYcLief/yayahud/archive/master.zip yayahud
+fetch_hud http://huds.tf/smesihud/img/main.png https://github.com/Smesi/SmesiHud/archive/master.zip smesihud

@@ -362,7 +362,7 @@
   </HUD>
   <HUD>
     <Name>PrismHUD</Name>
-    <Game>tf</Game<name />
+    <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/prismhud/prismhud_98a77681.zip</URI>
     <UpURI>https://github.com/JarateKing/PrismHUD/archive/master.zip</UpURI>
@@ -395,5 +395,101 @@
     <Site>http://tf2.gamebanana.com/guis/25711</Site>
     <ArchiveDir>eve hud</ArchiveDir>
     <InstallDir>evehud</InstallDir>
+  </HUD>
+  <HUD>
+    <Name>biscottiHUD</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/biscottihud/biscottihud_d6060979.zip</URI>
+    <UpURI>https://github.com/MedicodiBiscotti/biscottiHUD/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/biscottihud.png</Preview>
+    <RepoPath>https://github.com/MedicodiBiscotti/biscottiHUD</RepoPath>
+    <Site>http://huds.tf/biscottihud/</Site>
+    <ArchiveDir>biscottiHUD-master/biscottiHUD</ArchiveDir>
+    <InstallDir>biscottihud</InstallDir>
+  </HUD>
+  <HUD>
+    <Name>Flamehud</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/flamehud/flamehud_95eead51.zip</URI>
+    <UpURI>https://github.com/mattr0d/flamehud/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/flamehud.png</Preview>
+    <RepoPath>https://github.com/mattr0d/flamehud</RepoPath>
+    <Site>http://huds.tf/flamehud/</Site>
+    <ArchiveDir>flamehud-master</ArchiveDir>
+    <InstallDir>flamehud</InstallDir>
+  </HUD>
+  <HUD>
+    <Name>FrankenHUD</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/frankenhud/frankenhud_6c818a1c.zip</URI>
+    <UpURI>https://github.com/TheKins/frankenhud/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/frankenhud.png</Preview>
+    <RepoPath>https://github.com/TheKins/frankenhud</RepoPath>
+    <Site>http://huds.tf/frankenhud/</Site>
+    <ArchiveDir>frankenhud-master/hud_src</ArchiveDir>
+    <InstallDir>frankenhud</InstallDir>
+  </HUD>
+  <HUD>
+    <Name>Isaac Hud</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/isaachud/isaachud_1b76c747.zip</URI>
+    <UpURI>https://github.com/Xeletron/Isaac-Hud/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/isaachud.png</Preview>
+    <RepoPath>https://github.com/Xeletron/Isaac-Hud</RepoPath>
+    <Site>http://huds.tf/isaachud/</Site>
+    <ArchiveDir>Isaac-Hud-master/IsaacHUD</ArchiveDir>
+    <InstallDir>isaachud</InstallDir>
+  </HUD>
+  <HUD>
+    <Name>JayHUD</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/jayhud/jayhud_e7eaa94c.zip</URI>
+    <UpURI>https://github.com/kermit-tf/JayHUD/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/jayhud.png</Preview>
+    <RepoPath>https://github.com/kermit-tf/JayHUD</RepoPath>
+    <Site>http://huds.tf/jayhud/</Site>
+    <ArchiveDir>JayHUD-master/JayHUD_Normal</ArchiveDir>
+    <InstallDir>jayhud</InstallDir>
+  </HUD>
+  <HUD>
+    <Name>The Mannterface</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/mannterface/mannterface_96d737a6.zip</URI>
+    <UpURI>https://github.com/mannterface/Mannterface/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/mannterface.png</Preview>
+    <RepoPath>https://github.com/mannterface/Mannterface</RepoPath>
+    <Site>http://huds.tf/mannterface/</Site>
+    <ArchiveDir>Mannterface-master</ArchiveDir>
+    <InstallDir>mannterface</InstallDir>
+  </HUD>
+  <HUD>
+    <Name>yayahud</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/yayahud/yayahud_8a82a5f7.zip</URI>
+    <UpURI>https://github.com/Yttrium-tYcLief/yayahud/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/yayahud.png</Preview>
+    <RepoPath>https://github.com/yttrium-tyclief/yayahud</RepoPath>
+    <Site>http://huds.tf/yayahud/</Site>
+    <ArchiveDir>yayahud-master/yayahud</ArchiveDir>
+    <InstallDir>yayahud</InstallDir>
+  </HUD>
+  <HUD>
+    <Name>SmesiHud</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/smesihud/smesihud_69751e2b.zip</URI>
+    <UpURI>https://github.com/Smesi/SmesiHud/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/smesihud.png</Preview>
+    <RepoPath>https://github.com/Smesi/SmesiHud</RepoPath>
+    <Site>http://huds.tf/smesihud/</Site>
+    <ArchiveDir>SmesiHud-master</ArchiveDir>
+    <InstallDir>smesihud</InstallDir>
   </HUD>
 </HUDs>
