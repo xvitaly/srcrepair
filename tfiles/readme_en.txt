@@ -9,6 +9,7 @@ Before using it is strongly recommended to manually make backup of Steam folder 
 Thanks to:
  * Ctrl+C – daily testing, configs' descriptions;
  * Grin J - testing, bug reports, feature requests;
+ * KT - coding, testing, bug reports, feature requests, PR;
  * Naym - testing, bug reports;
  * CAMCOH - testing, bug reports;
  * Bon - Beta & RC testing, his own FPS-config, list of TF2 console variables in Russian;
