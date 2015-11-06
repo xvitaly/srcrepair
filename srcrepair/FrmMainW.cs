@@ -1728,6 +1728,21 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Проверяет верность заполнения графических настроек
+        /// </summary>
+        /// <param name="GameType">Тип игры: GCF или NCF</param>
+        private bool ValidateGameSettings(bool GameType)
+        {
+            return ((GT_NCF_Quality.SelectedIndex != -1) && (GT_NCF_MemPool.SelectedIndex != -1)
+                    && (GT_NCF_EffectD.SelectedIndex != -1) && (GT_NCF_ShaderE.SelectedIndex != -1)
+                    && (GT_NCF_Multicore.SelectedIndex != -1) && (GT_NCF_VSync.SelectedIndex != -1)
+                    && (GT_NCF_Filtering.SelectedIndex != -1) && (GT_NCF_AntiAlias.SelectedIndex != -1)
+                    && (GT_NCF_DispMode.SelectedIndex != -1) && (GT_NCF_Ratio.SelectedIndex != -1)
+                    && (GT_NCF_Brightness.SelectedIndex != -1) && (GT_NCF_Shadows.SelectedIndex != -1)
+                    && (GT_NCF_MBlur.SelectedIndex != -1));
+        }
+
         #endregion
 
         #region Internal Workers
@@ -2250,13 +2265,7 @@ namespace srcrepair
                 else
                 {
                     // Это NCF-приложение, поэтому будем записывать настройки в файл...
-                    if ((GT_NCF_Quality.SelectedIndex != -1) && (GT_NCF_MemPool.SelectedIndex != -1)
-                        && (GT_NCF_EffectD.SelectedIndex != -1) && (GT_NCF_ShaderE.SelectedIndex != -1)
-                        && (GT_NCF_Multicore.SelectedIndex != -1) && (GT_NCF_VSync.SelectedIndex != -1)
-                        && (GT_NCF_Filtering.SelectedIndex != -1) && (GT_NCF_AntiAlias.SelectedIndex != -1)
-                        && (GT_NCF_DispMode.SelectedIndex != -1) && (GT_NCF_Ratio.SelectedIndex != -1)
-                        && (GT_NCF_Brightness.SelectedIndex != -1) && (GT_NCF_Shadows.SelectedIndex != -1)
-                        && (GT_NCF_MBlur.SelectedIndex != -1))
+                    if (ValidateGameSettings(SelGame.IsUsingVideoFile))
                     {
                         // Создадим бэкап файла с графическими настройками...
                         if (Properties.Settings.Default.SafeCleanup)
