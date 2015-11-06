@@ -2230,43 +2230,35 @@ namespace srcrepair
         private void GT_SaveApply_Click(object sender, EventArgs e)
         {
             // Сохраняем изменения в графических настройках...
-            // Запрашиваем подтверждение у пользователя...
-            if (MessageBox.Show(CoreLib.GetLocalizedString("GT_SaveMsg"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (ValidateGameSettings(SelGame.IsUsingVideoFile))
             {
-                if (!SelGame.IsUsingVideoFile)
+                // Запрашиваем подтверждение у пользователя...
+                if (MessageBox.Show(CoreLib.GetLocalizedString("GT_SaveMsg"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    // Создаём резервную копию...
-                    if (Properties.Settings.Default.SafeCleanup)
+                    if (!SelGame.IsUsingVideoFile)
                     {
+                        // Создаём резервную копию...
+                        if (Properties.Settings.Default.SafeCleanup)
+                        {
+                            try { CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), "Game_AutoBackUp", SelGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                        }
+
                         try
                         {
-                            CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), "Game_AutoBackUp", SelGame.FullBackUpDirPath);
+                            // Проверим существование ключа реестра и в случае необходимости создадим...
+                            if (!(CoreLib.CheckIfHKCUSKeyExists(Path.Combine("Software", "Valve", "Source", SelGame.SmallAppName, "Settings")))) { Registry.CurrentUser.CreateSubKey(Path.Combine("Software", "Valve", "Source", SelGame.SmallAppName, "Settings")); }
+                            
+                            // Записываем выбранные настройки в реестр...
+                            WriteGCFGameSettings(SelGame.SmallAppName);
+                            
+                            // Выводим подтверждающее сообщение...
+                            MessageBox.Show(CoreLib.GetLocalizedString("GT_SaveSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        catch (Exception Ex)
-                        {
-                            CoreLib.WriteStringToLog(Ex.Message);
-                        }
+                        catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("GT_SaveFailure"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
                     }
-
-                    try
+                    else
                     {
-                        // Проверим существование ключа реестра и в случае необходимости создадим...
-                        if (!(CoreLib.CheckIfHKCUSKeyExists(Path.Combine("Software", "Valve", "Source", SelGame.SmallAppName, "Settings")))) { Registry.CurrentUser.CreateSubKey(Path.Combine("Software", "Valve", "Source", SelGame.SmallAppName, "Settings")); }
-                        // Записываем выбранные настройки в реестр...
-                        WriteGCFGameSettings(SelGame.SmallAppName);
-                        // Выводим подтверждающее сообщение...
-                        MessageBox.Show(CoreLib.GetLocalizedString("GT_SaveSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    catch (Exception Ex)
-                    {
-                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("GT_SaveFailure"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                    }
-                }
-                else
-                {
-                    // Это NCF-приложение, поэтому будем записывать настройки в файл...
-                    if (ValidateGameSettings(SelGame.IsUsingVideoFile))
-                    {
+                        // Это NCF-приложение, поэтому будем записывать настройки в файл...
                         // Создадим бэкап файла с графическими настройками...
                         if (Properties.Settings.Default.SafeCleanup)
                         {
@@ -2275,7 +2267,7 @@ namespace srcrepair
                                 CreateConfigBackUp(SingleToArray(SelGame.VideoCfgFile), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
                             }
                         }
-                        
+
                         // Записываем...
                         try
                         {
@@ -2287,16 +2279,16 @@ namespace srcrepair
                             CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("GT_NCFFailure"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                         }
                     }
-                    else
-                    {
-                        MessageBox.Show(CoreLib.GetLocalizedString("GT_NCFNReady"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+
+                    // Запишем в реестр пользовательскую строку запуска TF2...
+                    // TODO: реализовать возможность записывать параметры строки запуска...
+
+                    // Закончили запись основных настроек, указанных пользователем или выбранных по умолчанию...
                 }
-
-                // Запишем в реестр пользовательскую строку запуска TF2...
-                // TODO: реализовать возможность записывать параметры строки запуска...
-
-                // Закончили запись основных настроек, указанных пользователем или выбранных по умолчанию...
+            }
+            else
+            {
+                MessageBox.Show(CoreLib.GetLocalizedString("GT_NCFNReady"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
