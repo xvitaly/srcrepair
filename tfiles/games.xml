@@ -477,4 +477,13 @@
     <SID>317400</SID>
     <Executable>portal2.exe</Executable>
   </Game>
+  <Game Name="FIREFIGHT RELOADED">
+    <HasVF>0</HasVF>
+    <DirName>FIREFIGHT RELOADED</DirName>
+    <SmallName>firefightreloaded</SmallName>
+    <VFDir>firefightreloaded</VFDir>
+    <UserDir>0</UserDir>
+    <SID>397680</SID>
+    <Executable>fr.exe</Executable>
+  </Game>
 </Games>
