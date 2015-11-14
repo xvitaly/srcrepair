@@ -39,7 +39,7 @@ namespace srcrepair
 
         #region IC
         private const string PluginName = "Micro Hosts Editor";
-        private const string PluginVersion = "0.5.1";
+        private const string PluginVersion = "0.6";
         #endregion
 
         #region IV
