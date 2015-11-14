@@ -1260,7 +1260,7 @@ namespace srcrepair
                 try
                 {
                     // Считываем содержимое конфига в массив...
-                    List<String> Config = new List<String>(File.ReadAllLines(ConfFileName));
+                    List<String> Config = new List<String>(File.ReadAllLines(ConfFileName, Encoding.Default));
                     
                     // Обходим полученный массив в цикле...
                     foreach (string StrRow in Config)
