@@ -74,11 +74,14 @@ namespace srcrepair
                             // Проверяем, не комментарий ли...
                             if (ImpStr[0] != '#')
                             {
+                                // Определим позицию пробела в строке...
+                                int SpPos = ImpStr.IndexOf(" ");
+
                                 // Строка почищена, продолжаем...
-                                if (ImpStr.IndexOf(" ") != -1)
+                                if (SpPos != -1)
                                 {
                                     // Записываем в таблицу...
-                                    HEd_Table.Rows.Add(ImpStr.Substring(0, ImpStr.IndexOf(" ")), ImpStr.Remove(0, ImpStr.IndexOf(" ") + 1));
+                                    HEd_Table.Rows.Add(ImpStr.Substring(0, SpPos), ImpStr.Remove(0, SpPos + 1));
                                 }
                             }
                         }
