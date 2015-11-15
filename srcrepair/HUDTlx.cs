@@ -134,7 +134,6 @@ namespace srcrepair
                         break;
                     }
                 }
-                XMLFS.Close();
             }
         }
     }
