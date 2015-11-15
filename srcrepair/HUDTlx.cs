@@ -114,26 +114,28 @@ namespace srcrepair
         /// <param name="AppHUDDir">Путь к локальному каталогу с HUD</param>
         public HUDTlx(string HUDName, string AppPath, string AppHUDDir)
         {
-            XmlDocument XMLD = new XmlDocument();
-            FileStream XMLFS = new FileStream(Path.Combine(AppPath, Properties.Settings.Default.HUDDbFile), FileMode.Open, FileAccess.Read);
-            XMLD.Load(XMLFS);
-            for (int i = 0; i < XMLD.GetElementsByTagName("HUD").Count; i++)
+            using (FileStream XMLFS = new FileStream(Path.Combine(AppPath, Properties.Settings.Default.HUDDbFile), FileMode.Open, FileAccess.Read))
             {
-                if (String.Compare(XMLD.GetElementsByTagName("Name")[i].InnerText, HUDName, true) == 0)
+                XmlDocument XMLD = new XmlDocument();
+                XMLD.Load(XMLFS);
+                for (int i = 0; i < XMLD.GetElementsByTagName("HUD").Count; i++)
                 {
-                    Name = XMLD.GetElementsByTagName("Name")[i].InnerText;
-                    URI = XMLD.GetElementsByTagName("URI")[i].InnerText;
-                    UpURI = XMLD.GetElementsByTagName("UpURI")[i].InnerText;
-                    IsUpdated = XMLD.GetElementsByTagName("IsUpdated")[i].InnerText == "1";
-                    Preview = XMLD.GetElementsByTagName("Preview")[i].InnerText;
-                    Site = XMLD.GetElementsByTagName("Site")[i].InnerText;
-                    ArchiveDir = XMLD.GetElementsByTagName("ArchiveDir")[i].InnerText;
-                    InstallDir = XMLD.GetElementsByTagName("InstallDir")[i].InnerText;
-                    LocalFile = Path.Combine(AppHUDDir, Path.ChangeExtension(Path.GetFileName(Name), ".zip"));
-                    break;
+                    if (String.Compare(XMLD.GetElementsByTagName("Name")[i].InnerText, HUDName, true) == 0)
+                    {
+                        Name = XMLD.GetElementsByTagName("Name")[i].InnerText;
+                        URI = XMLD.GetElementsByTagName("URI")[i].InnerText;
+                        UpURI = XMLD.GetElementsByTagName("UpURI")[i].InnerText;
+                        IsUpdated = XMLD.GetElementsByTagName("IsUpdated")[i].InnerText == "1";
+                        Preview = XMLD.GetElementsByTagName("Preview")[i].InnerText;
+                        Site = XMLD.GetElementsByTagName("Site")[i].InnerText;
+                        ArchiveDir = XMLD.GetElementsByTagName("ArchiveDir")[i].InnerText;
+                        InstallDir = XMLD.GetElementsByTagName("InstallDir")[i].InnerText;
+                        LocalFile = Path.Combine(AppHUDDir, Path.ChangeExtension(Path.GetFileName(Name), ".zip"));
+                        break;
+                    }
                 }
+                XMLFS.Close();
             }
-            XMLFS.Close();
         }
     }
 }
