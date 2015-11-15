@@ -127,25 +127,27 @@ namespace srcrepair
         public SourceGame(string AppName, string AppPath, string UserDir, string SteamDir)
         {
             // Начинаем определять нужные нам значения переменных...
-            XmlDocument XMLD = new XmlDocument();
-            FileStream XMLFS = new FileStream(Path.Combine(AppPath, Properties.Settings.Default.GameListFile), FileMode.Open, FileAccess.Read);
-            XMLD.Load(XMLFS);
-            XmlNodeList XMLNList = XMLD.GetElementsByTagName("Game");
-            for (int i = 0; i < XMLNList.Count; i++)
+            using (FileStream XMLFS = new FileStream(Path.Combine(AppPath, Properties.Settings.Default.GameListFile), FileMode.Open, FileAccess.Read))
             {
-                if (String.Compare(XMLD.GetElementsByTagName("DirName")[i].InnerText, Path.GetFileName(AppName), true) == 0)
+                XmlDocument XMLD = new XmlDocument();
+                XMLD.Load(XMLFS);
+                XmlNodeList XMLNList = XMLD.GetElementsByTagName("Game");
+                for (int i = 0; i < XMLNList.Count; i++)
                 {
-                    FullAppName = XMLD.GetElementsByTagName("DirName")[i].InnerText;
-                    SmallAppName = XMLD.GetElementsByTagName("SmallName")[i].InnerText;
-                    GameBinaryFile = XMLD.GetElementsByTagName("Executable")[i].InnerText;
-                    GameInternalID = XMLD.GetElementsByTagName("SID")[i].InnerText;
-                    ConfDir = XMLD.GetElementsByTagName("VFDir")[i].InnerText;
-                    IsUsingVideoFile = XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1";
-                    IsUsingUserDir = XMLD.GetElementsByTagName("UserDir")[i].InnerText == "1";
-                    break;
+                    if (String.Compare(XMLD.GetElementsByTagName("DirName")[i].InnerText, Path.GetFileName(AppName), true) == 0)
+                    {
+                        FullAppName = XMLD.GetElementsByTagName("DirName")[i].InnerText;
+                        SmallAppName = XMLD.GetElementsByTagName("SmallName")[i].InnerText;
+                        GameBinaryFile = XMLD.GetElementsByTagName("Executable")[i].InnerText;
+                        GameInternalID = XMLD.GetElementsByTagName("SID")[i].InnerText;
+                        ConfDir = XMLD.GetElementsByTagName("VFDir")[i].InnerText;
+                        IsUsingVideoFile = XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1";
+                        IsUsingUserDir = XMLD.GetElementsByTagName("UserDir")[i].InnerText == "1";
+                        break;
+                    }
                 }
+                XMLFS.Close();
             }
-            XMLFS.Close();
 
             // Генерируем полный путь до каталога управляемого приложения...
             GamePath = AppName;
