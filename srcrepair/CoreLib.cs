@@ -296,11 +296,7 @@ namespace srcrepair
                 if (!(Directory.Exists(Dir))) { Directory.CreateDirectory(Dir); }
 
                 // Создаём файл...
-                using (FileStream fs = File.Create(FileName))
-                {
-                    // Закрываем...
-                    fs.Close();
-                }
+                using (FileStream fs = File.Create(FileName)) { }
             }
             catch { /* Do nothing */ }
         }
