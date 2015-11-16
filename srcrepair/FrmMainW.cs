@@ -1842,17 +1842,18 @@ namespace srcrepair
             // Получаем полный список доступных HUD для данной игры...
             try
             {
-                XmlDocument XMLD = new XmlDocument();
-                FileStream XMLFS = new FileStream(Path.Combine(App.FullAppPath, Properties.Settings.Default.HUDDbFile), FileMode.Open, FileAccess.Read);
-                XMLD.Load(XMLFS);
-                for (int i = 0; i < XMLD.GetElementsByTagName("HUD").Count; i++)
+                using (FileStream XMLFS = new FileStream(Path.Combine(App.FullAppPath, Properties.Settings.Default.HUDDbFile), FileMode.Open, FileAccess.Read))
                 {
-                    if (String.Compare(XMLD.GetElementsByTagName("Game")[i].InnerText, SelGame.SmallAppName, true) == 0)
+                    XmlDocument XMLD = new XmlDocument();
+                    XMLD.Load(XMLFS);
+                    for (int i = 0; i < XMLD.GetElementsByTagName("HUD").Count; i++)
                     {
-                        Invoke((MethodInvoker)delegate() { HD_HSel.Items.Add(XMLD.GetElementsByTagName("Name")[i].InnerText); });
+                        if (String.Compare(XMLD.GetElementsByTagName("Game")[i].InnerText, SelGame.SmallAppName, true) == 0)
+                        {
+                            Invoke((MethodInvoker)delegate() { HD_HSel.Items.Add(XMLD.GetElementsByTagName("Name")[i].InnerText); });
+                        }
                     }
                 }
-                XMLFS.Close();
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
