@@ -684,8 +684,10 @@ namespace srcrepair
         /// <param name="DestDir">Каталог назначения</param>
         public static void ExtractFiles(string ArchName, string DestDir)
         {
-            FrmArchWrk ArW = new FrmArchWrk(ArchName, DestDir);
-            ArW.ShowDialog();
+            using (FrmArchWrk ArW = new FrmArchWrk(ArchName, DestDir))
+            {
+                ArW.ShowDialog();
+            }
         }
 
         /// <summary>
