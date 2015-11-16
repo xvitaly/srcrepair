@@ -393,9 +393,10 @@ namespace srcrepair
             byte[] RValue;
             using (FileStream FileP = new FileStream(FileName, FileMode.Open))
             {
-                MD5 MD5Crypt = new MD5CryptoServiceProvider();
-                RValue = MD5Crypt.ComputeHash(FileP);
-                FileP.Close();
+                using (MD5 MD5Crypt = new MD5CryptoServiceProvider())
+                {
+                    RValue = MD5Crypt.ComputeHash(FileP);
+                }
             }
             StringBuilder StrRes = new StringBuilder();
             for (int i = 0; i < RValue.Length; i++) { StrRes.Append(RValue[i].ToString("x2")); }
