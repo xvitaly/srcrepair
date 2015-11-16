@@ -215,7 +215,6 @@ namespace srcrepair
                     CFile.Write(" "); // вставляем пробел
                     CFile.WriteLine(CE_Editor.Rows[i].Cells[1].Value); // вставляем содержимое второго столбца (значение переменной)
                 }
-                CFile.Close(); // закрываем файл
             }
         }
 
@@ -794,9 +793,6 @@ namespace srcrepair
                 
                 // Завершающая скобка...
                 CFile.WriteLine("}");
-                
-                // Закрываем файл...
-                CFile.Close();
             }
         }
 

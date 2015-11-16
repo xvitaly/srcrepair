@@ -105,7 +105,6 @@ namespace srcrepair
                         CFile.WriteLine(HEd_Table.Rows[i].Cells[1].Value.ToString());
                     }
                 }
-                CFile.Close();
             }
         }
         
