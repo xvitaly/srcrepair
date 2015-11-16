@@ -273,7 +273,7 @@ namespace srcrepair
         {
             try
             {
-                if (!CoreLib.IsProcessRunning(Path.GetFileNameWithoutExtension(CheckBin))) { frmCleaner FCl = new frmCleaner(Paths, SelGame.FullBackUpDirPath, LText, ResultMsg, ReadOnly, NoAuto, Recursive, ForceBackUp); FCl.ShowDialog(); } else { MessageBox.Show(String.Format(CoreLib.GetLocalizedString("PS_AppRunning"), CheckBin), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                if (!CoreLib.IsProcessRunning(Path.GetFileNameWithoutExtension(CheckBin))) { using (frmCleaner FCl = new frmCleaner(Paths, SelGame.FullBackUpDirPath, LText, ResultMsg, ReadOnly, NoAuto, Recursive, ForceBackUp)) { FCl.ShowDialog(); } } else { MessageBox.Show(String.Format(CoreLib.GetLocalizedString("PS_AppRunning"), CheckBin), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
@@ -2631,8 +2631,10 @@ namespace srcrepair
             if ((AppSelector.Items.Count > 0) && (AppSelector.SelectedIndex != -1))
             {
                 // Запускаем форму создания отчёта для Техподдержки...
-                frmRepBuilder RBF = new frmRepBuilder(App.AppUserDir, App.FullSteamPath, SelGame.FullCfgPath);
-                RBF.ShowDialog();
+                using (frmRepBuilder RBF = new frmRepBuilder(App.AppUserDir, App.FullSteamPath, SelGame.FullCfgPath))
+                {
+                    RBF.ShowDialog();
+                }
             }
             else
             {
@@ -2643,8 +2645,10 @@ namespace srcrepair
         private void MNUInstaller_Click(object sender, EventArgs e)
         {
             // Запускаем форму установщика спреев, демок и конфигов...
-            frmInstaller InstF = new frmInstaller(SelGame.FullGamePath, SelGame.IsUsingUserDir, SelGame.CustomInstallDir);
-            InstF.ShowDialog();
+            using (frmInstaller InstF = new frmInstaller(SelGame.FullGamePath, SelGame.IsUsingUserDir, SelGame.CustomInstallDir))
+            {
+                InstF.ShowDialog();
+            }
         }
 
         private void MNUExit_Click(object sender, EventArgs e)
@@ -2657,24 +2661,33 @@ namespace srcrepair
         {
             // Очистим Редактор конфигов...
             CE_New.PerformClick();
+            
             // Запускаем форму мастера FPS-конфигов...
-            frmFPGen FPFrm = new frmFPGen(new CoreLib.CFGEdDelegate(AddRowToTable));
-            FPFrm.ShowDialog();
+            using (frmFPGen FPFrm = new frmFPGen(new CoreLib.CFGEdDelegate(AddRowToTable)))
+            {
+                FPFrm.ShowDialog();
+            }
+
+            // Переключаемся на вкладку Редактор конфигов...
             MainTabControl.SelectedIndex = 1;
         }
 
         private void MNUAbout_Click(object sender, EventArgs e)
         {
             // Отобразим форму "О программе"...
-            frmAbout AboutFrm = new frmAbout();
-            AboutFrm.ShowDialog();
+            using (frmAbout AboutFrm = new frmAbout())
+            {
+                AboutFrm.ShowDialog();
+            }
         }
 
         private void MNUReportBug_Click(object sender, EventArgs e)
         {
             // Отобразим форму сообщения об ошибках...
-            frmBugReporter BgRepFrm = new frmBugReporter(App.UserAgent);
-            BgRepFrm.ShowDialog();
+            using (frmBugReporter BgRepFrm = new frmBugReporter(App.UserAgent))
+            {
+                BgRepFrm.ShowDialog();
+            }
         }
 
         private void BUT_Refresh_Click(object sender, EventArgs e)
@@ -2915,8 +2928,10 @@ namespace srcrepair
         private void MNUHEd_Click(object sender, EventArgs e)
         {
             // Отобразим форму редактора файла hosts...
-            frmHEd HEdFrm = new frmHEd();
-            HEdFrm.ShowDialog();
+            using (frmHEd HEdFrm = new frmHEd())
+            {
+                HEdFrm.ShowDialog();
+            }
         }
 
         private void CE_RmRow_Click(object sender, EventArgs e)
@@ -2975,8 +2990,10 @@ namespace srcrepair
 
         private void MNUUpdateCheck_Click(object sender, EventArgs e)
         {
-            frmUpdate UpdFrm = new frmUpdate(App.UserAgent, App.FullAppPath, App.AppVersionInfo, App.AppUserDir);
-            UpdFrm.ShowDialog();
+            using (frmUpdate UpdFrm = new frmUpdate(App.UserAgent, App.FullAppPath, App.AppVersionInfo, App.AppUserDir))
+            {
+                UpdFrm.ShowDialog();
+            }
         }
 
         private void BUT_OpenNpad_Click(object sender, EventArgs e)
@@ -3002,8 +3019,10 @@ namespace srcrepair
         private void MNUAppOptions_Click(object sender, EventArgs e)
         {
             // Показываем форму настроек...
-            frmOptions OptsFrm = new frmOptions();
-            OptsFrm.ShowDialog();
+            using (frmOptions OptsFrm = new frmOptions())
+            {
+                OptsFrm.ShowDialog();
+            }
         }
 
         private void BU_LVTable_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
@@ -3041,8 +3060,10 @@ namespace srcrepair
         private void MNUWinMnuDisabler_Click(object sender, EventArgs e)
         {
             // Показываем модуля отключения клавиш...
-            frmKBHelper KBHlp = new frmKBHelper();
-            KBHlp.ShowDialog();
+            using (frmKBHelper KBHlp = new frmKBHelper())
+            {
+                KBHlp.ShowDialog();
+            }
         }
 
         private void CE_OpenInNotepad_Click(object sender, EventArgs e)
@@ -3448,7 +3469,7 @@ namespace srcrepair
             if (Properties.Settings.Default.EnableDebugLog)
             {
                 string DFile = Path.Combine(CoreLib.GetApplicationPath(), Properties.Settings.Default.DebugLogFileName);
-                if (File.Exists(DFile)) { frmLogView Lv = new frmLogView(DFile); Lv.ShowDialog(); } else { MessageBox.Show(CoreLib.GetLocalizedString("AppNoDebugFile"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                if (File.Exists(DFile)) { using (frmLogView Lv = new frmLogView(DFile)) { Lv.ShowDialog(); } } else { MessageBox.Show(CoreLib.GetLocalizedString("AppNoDebugFile"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             }
             else
             {
