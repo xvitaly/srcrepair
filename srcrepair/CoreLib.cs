@@ -321,18 +321,18 @@ namespace srcrepair
                 {
                     // Сгенерируем путь к файлу с логом...
                     string DebugFileName = Path.Combine(GetApplicationPath(), Properties.Settings.Default.DebugLogFileName);
+                    
                     // Если файл не существует, создадим его и сразу закроем...
                     if (!File.Exists(DebugFileName))
                     {
                         CreateFile(DebugFileName);
                     }
+                    
                     // Начинаем записывать в лог-файл...
                     using (StreamWriter DFile = new StreamWriter(DebugFileName, true))
                     {
                         // Делаем запись...
                         DFile.WriteLine(String.Format("{0}: {1}", DateTime.Now.ToString(), TextMessage));
-                        // Закрываем файл...
-                        DFile.Close();
                     }
                 }
                 catch { /* Подавляем исключения... */ }
