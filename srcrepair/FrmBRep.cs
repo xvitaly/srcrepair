@@ -92,39 +92,43 @@ namespace srcrepair
             // Создаём объект изображения...
             Bitmap CI = new Bitmap(Width, Height);
 
-            // Подключаем генератор псевдослучайных чисел...
-            Random Rnd = new Random();
-
             // Создаём объект и задаём его основные свойства...
-            Graphics Graph = Graphics.FromImage(CI);
-            Graph.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            Graph.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+            using (Graphics Graph = Graphics.FromImage(CI))
+            {
+                // Подключаем генератор псевдослучайных чисел...
+                Random Rnd = new Random();
 
-            // Начинаем рисовать...
-            RectangleF CaptRecField = new RectangleF(0, 0, Width, Height);
-            Graph.FillRectangle(new HatchBrush(HatchStyle.SmallConfetti, Color.LightGray, Color.White), CaptRecField);
+                // Задаём базовые настройки для текста...
+                Graph.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+                Graph.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
 
-            // Задаём параметры текста будущей капчи...
-            StringFormat CptFormat = new StringFormat();
-            CptFormat.Alignment = StringAlignment.Center;
-            CptFormat.LineAlignment = StringAlignment.Center;
+                // Начинаем рисовать...
+                RectangleF CaptRecField = new RectangleF(0, 0, Width, Height);
+                using (HatchBrush Hb = new HatchBrush(HatchStyle.SmallConfetti, Color.LightGray, Color.White)) { Graph.FillRectangle(Hb, CaptRecField); }
 
-            // Выводим строку...
-            GraphicsPath CaptGraphPath = new GraphicsPath();
-            CaptGraphPath.AddString(CaptchaKey, FontFamily.GenericSansSerif, 1, 22, CaptRecField, CptFormat);
+                // Создаём объект с примитивами...
+                using (GraphicsPath CaptGraphPath = new GraphicsPath())
+                {
+                    // Начинаем определение и вывод самой капчи...
+                    using (StringFormat CptFormat = new StringFormat())
+                    {
+                        // Задаём параметры текста будущей капчи...
+                        CptFormat.Alignment = StringAlignment.Center;
+                        CptFormat.LineAlignment = StringAlignment.Center;
 
-            // Заполняем мусором...
-            PointF[] CaptPoints = { new PointF((float)Rnd.Next(Width) / 4, (float)Rnd.Next(Height) / 4), new PointF(Width - (float)Rnd.Next(Width) / 4, (float)Rnd.Next(Height) / 4), new PointF((float)Rnd.Next(Width) / 4, Height - (float)Rnd.Next(Height) / 4), new PointF(Width - (float)Rnd.Next(Width) / 4, Height - (float)Rnd.Next(Height) / 4) };
-            CaptGraphPath.Warp(CaptPoints, CaptRecField, new Matrix(), WarpMode.Perspective, 0);
-            Graph.FillPath(new HatchBrush(HatchStyle.LargeConfetti, Color.LightGray, Color.DarkGray), CaptGraphPath);
-            int CaptMaxDim = Math.Max(Width, Height);
-            for (int i = 0; i <= (int)Width * Height / 30; i++) { Graph.FillEllipse(new HatchBrush(HatchStyle.LargeConfetti, Color.LightGray, Color.DarkGray), Rnd.Next(Width), Rnd.Next(Height), (int)Rnd.Next(CaptMaxDim) / 50, (int)Rnd.Next(CaptMaxDim) / 50); }
-            for (int i = 1; i <= 5; i++) { Graph.DrawLine(Pens.DarkGray, Rnd.Next(Width), Rnd.Next(Height), Rnd.Next(Width), Rnd.Next(Height)); }
-            for (int i = 1; i <= 5; i++) { Graph.DrawLine(Pens.LightGray, Rnd.Next(Width), Rnd.Next(Height), Rnd.Next(Width), Rnd.Next(Height)); }
+                        // Выводим строку...
+                        CaptGraphPath.AddString(CaptchaKey, FontFamily.GenericSansSerif, 1, 22, CaptRecField, CptFormat);
+                    }
 
-            // Уничтожаем ненужные более объекты...
-            CaptGraphPath.Dispose();
-            Graph.Dispose();
+                    // Заполняем мусором...
+                    PointF[] CaptPoints = { new PointF((float)Rnd.Next(Width) / 4, (float)Rnd.Next(Height) / 4), new PointF(Width - (float)Rnd.Next(Width) / 4, (float)Rnd.Next(Height) / 4), new PointF((float)Rnd.Next(Width) / 4, Height - (float)Rnd.Next(Height) / 4), new PointF(Width - (float)Rnd.Next(Width) / 4, Height - (float)Rnd.Next(Height) / 4) };
+                    using (Matrix Mx = new Matrix()) { CaptGraphPath.Warp(CaptPoints, CaptRecField, Mx, WarpMode.Perspective, 0); }
+                    using (HatchBrush Hb = new HatchBrush(HatchStyle.LargeConfetti, Color.LightGray, Color.DarkGray)) { Graph.FillPath(Hb, CaptGraphPath); }
+                    using (HatchBrush Hb = new HatchBrush(HatchStyle.LargeConfetti, Color.LightGray, Color.DarkGray)) { int CaptMaxDim = Math.Max(Width, Height); for (int i = 0; i <= (int)Width * Height / 30; i++) { Graph.FillEllipse(Hb, Rnd.Next(Width), Rnd.Next(Height), (int)Rnd.Next(CaptMaxDim) / 50, (int)Rnd.Next(CaptMaxDim) / 50); } }
+                    for (int i = 1; i <= 5; i++) { Graph.DrawLine(Pens.DarkGray, Rnd.Next(Width), Rnd.Next(Height), Rnd.Next(Width), Rnd.Next(Height)); }
+                    for (int i = 1; i <= 5; i++) { Graph.DrawLine(Pens.LightGray, Rnd.Next(Width), Rnd.Next(Height), Rnd.Next(Width), Rnd.Next(Height)); }
+                }
+            }
 
             // Возвращаем сгенерированное изображение...
             return CI;
@@ -269,7 +273,7 @@ namespace srcrepair
                 // Выводим результат...
                 Invoke((MethodInvoker)delegate()
                 {
-                    BR_CaptImg.Image = GenerateCaptchaImage(CaptchaKey, BR_CaptImg.Width, BR_CaptImg.Height);
+                    BR_CaptImg.Image = GenerateCaptchaImage(CaptchaKey, 154, 50);
                 });
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
