@@ -270,7 +270,7 @@ namespace srcrepair
                 // Выводим результат...
                 Invoke((MethodInvoker)delegate()
                 {
-                    BR_CaptImg.Image = GenerateCaptchaImage(CaptchaKey, 154, 50);
+                    BR_CaptImg.Image = GenerateCaptchaImage(CaptchaKey, BR_CaptImg.Width, BR_CaptImg.Height);
                 });
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
