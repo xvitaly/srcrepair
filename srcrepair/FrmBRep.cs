@@ -231,18 +231,15 @@ namespace srcrepair
                 using (Stream HTTPStreamRq = WrQ.GetRequestStream())
                 {
                     HTTPStreamRq.Write(ByteReqC, 0, ByteReqC.Length);
-                    HTTPStreamRq.Close();
                 }
 
                 // Получаем ответ от сервера...
-                HttpWebResponse HTTPWResp = (HttpWebResponse)WrQ.GetResponse();
-
-                // Разбираем ответ сервера...
-                if (HTTPWResp.StatusCode == HttpStatusCode.OK)
+                using (HttpWebResponse HTTPWResp = (HttpWebResponse)WrQ.GetResponse())
                 {
-                    using (Stream RespStream = HTTPWResp.GetResponseStream())
+                    // Разбираем ответ сервера...
+                    if (HTTPWResp.StatusCode == HttpStatusCode.OK)
                     {
-                        using (StreamReader StrRead = new StreamReader(RespStream))
+                        using (StreamReader StrRead = new StreamReader(HTTPWResp.GetResponseStream()))
                         {
                             BResult = StrRead.ReadToEnd();
                         }
