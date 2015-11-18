@@ -502,12 +502,9 @@ namespace srcrepair
         public static string GetTemplateFromResource(string FileName)
         {
             string Result = "";
-            using (Stream Strm = Assembly.GetExecutingAssembly().GetManifestResourceStream(FileName))
+            using (StreamReader Reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream(FileName)))
             {
-                using (StreamReader Reader = new StreamReader(Strm))
-                {
-                    Result = Reader.ReadToEnd();
-                }
+                Result = Reader.ReadToEnd();
             }
             return Result;
         }
