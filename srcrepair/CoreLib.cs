@@ -522,14 +522,11 @@ namespace srcrepair
         public static List<String> ReadRowsFromResource(string FileName)
         {
             List<String> Template = new List<String>();
-            using (Stream Strm = Assembly.GetExecutingAssembly().GetManifestResourceStream(FileName))
+            using (StreamReader Reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream(FileName)))
             {
-                using (StreamReader Reader = new StreamReader(Strm))
+                while (Reader.Peek() >= 0)
                 {
-                    while (Reader.Peek() >= 0)
-                    {
-                        Template.Add(Reader.ReadLine());
-                    }
+                    Template.Add(Reader.ReadLine());
                 }
             }
             return Template;
