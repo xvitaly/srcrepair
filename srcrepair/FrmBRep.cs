@@ -282,7 +282,7 @@ namespace srcrepair
             GenerateCaptcha();
 
             // Очистим поле ввода...
-            BR_CaptCheck.Text = "";
+            BR_CaptCheck.Clear();
         }
     }
 }
