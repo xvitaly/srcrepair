@@ -26,6 +26,7 @@ using System.Diagnostics; // для управления процессами...
 using Microsoft.Win32; // для работы с реестром...
 using System.Text.RegularExpressions;  // для работы с регулярными выражениями...
 using System.Security.Principal; // для определения прав админа...
+using System.Security.Permissions; // для работы с EnvironmentPermissionAttribute...
 using System.Resources; // для управления ресурсами...
 using System.Threading; // для управления потоками...
 using System.Net; // для скачивания файлов...
@@ -98,6 +99,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="ProcessName">Имя образа процесса</param>
         /// <returns>PID снятого процесса, либо 0 если процесс не был найден</returns>
+        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
         public static int ProcessTerminate(string ProcessName)
         {
             // Обнуляем PID...
@@ -122,6 +124,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="ProcessName">Имя образа процесса</param>
         /// <returns>Возвращает булево true если такой процесс запущен, иначе - false.</returns>
+        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
         public static bool IsProcessRunning(string ProcessName)
         {
             Process[] LocalByName = Process.GetProcessesByName(ProcessName);
@@ -133,6 +136,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="ProcessName">Имя образа процесса</param>
         /// <param name="ConfMsg">Текст сообщения</param>
+        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
         public static void ProcessTerminate(string ProcessName, string ConfMsg)
         {
             Process[] LocalByName = Process.GetProcessesByName(ProcessName);
@@ -185,6 +189,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="SAppName">Путь к приложению или его имя</param>
         /// <param name="SParameters">Параметры запуска</param>
+        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
         public static void StartProcessAndWait(string SAppName, string SParameters)
         {
             // Создаём объект с нужными параметрами...
@@ -668,6 +673,7 @@ namespace srcrepair
         /// Открывает указанный URL в системном браузере по умолчанию.
         /// </summary>
         /// <param name="URI">URL для загрузки в браузере</param>
+        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
         public static void OpenWebPage(string URI)
         {
             try { Process.Start(URI); } catch (Exception Ex) { WriteStringToLog(Ex.Message); }
