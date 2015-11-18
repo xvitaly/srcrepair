@@ -689,15 +689,5 @@ namespace srcrepair
                 ArW.ShowDialog();
             }
         }
-
-        /// <summary>
-        /// Динамически создаёт форму по указанному %namespace%.%classname%.
-        /// </summary>
-        /// <param name="ClassName">Имя класса формы</param>
-        public static void ShowBasicFormDialog(string ClassName)
-        {
-            Form ActiveForm = (Form)Assembly.GetExecutingAssembly().CreateInstance(ClassName);
-            ActiveForm.ShowDialog();
-        }
     }
 }
