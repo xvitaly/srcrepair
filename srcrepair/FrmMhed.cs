@@ -93,7 +93,7 @@ namespace srcrepair
 
         private void WriteTableToHosts(string Path)
         {
-            using (StreamWriter CFile = new StreamWriter(Path))
+            using (StreamWriter CFile = new StreamWriter(Path, false, Encoding.Default))
             {
                 try { CFile.WriteLine(CoreLib.GetTemplateFromResource(Properties.Resources.AHE_TemplateFile)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                 for (int i = 0; i < HEd_Table.Rows.Count - 1; i++)
