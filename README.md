@@ -74,4 +74,6 @@ Supported mods and third-party Source engine games:
  * Half-Life: Update;
  * Lambda Wars;
  * Rexaura;
- * Black Mesa.
+ * Black Mesa;
+ * Portal Stories: Mel;
+ * FIREFIGHT RELOADED.
