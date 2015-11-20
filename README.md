@@ -24,7 +24,6 @@ Supported games
 =========
 Supported Valve games:
  * Team Fortress 2;
- * Team Fortress 2 Beta;
  * Counter-Strike: Source;
  * Day of Defeat: Source;
  * Half-Life 2;
@@ -41,7 +40,6 @@ Supported Valve games:
  * Alien Swarm;
  * Dota 2;
  * Dota 2 Beta;
- * Dota 2 Test;
  * Counter-Strike Global Offensive.
 
 Supported mods and third-party Source engine games:
