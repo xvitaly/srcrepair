@@ -16,7 +16,7 @@ Downloads
 =========
 Download application (this link always contains latest version): https://www.easycoding.org/files/srcrepair_latest.exe
 
-Full archive: http://sourceforge.net/projects/srcrepair/files/.
+Full archive: https://www.easycoding.org/download
 
 Official bug tracker: http://bugs.easycoding.org/
 
