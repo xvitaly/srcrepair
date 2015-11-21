@@ -260,13 +260,13 @@ namespace srcrepair
         public static string SclBytes(long InpNumber)
         {
             // Проверяем на размер в байтах...
-            if ((InpNumber >= 0) && (InpNumber <= 1023)) { return InpNumber.ToString() + " B"; }
+            if ((InpNumber >= 0) && (InpNumber <= 1023)) { return String.Format("{0} {1}", InpNumber, "B"); }
             // ...килобайтах...
-            if ((InpNumber >= 1024) && (InpNumber <= 1048575)) { return (Math.Round((float)InpNumber / 1024, 2)).ToString() + " KB"; }
+            else if ((InpNumber >= 1024) && (InpNumber <= 1048575)) { return String.Format("{0} {1}", Math.Round((float)InpNumber / 1024, 2), "KB"); }
             // ...мегабайтах...
-            if ((InpNumber >= 1048576) && (InpNumber <= 1073741823)) { return (Math.Round((float)InpNumber / 1024 / 1024, 2)).ToString() + " MB"; }
+            else if ((InpNumber >= 1048576) && (InpNumber <= 1073741823)) { return String.Format("{0} {1}", Math.Round((float)InpNumber / 1024 / 1024, 2), "MB"); }
             // ...гигабайтах.
-            if ((InpNumber >= 1073741823) && (InpNumber <= 1099511627775)) { return (Math.Round((float)InpNumber / 1024 / 1024 / 1024, 2)).ToString() + " GB"; }
+            else if ((InpNumber >= 1073741823) && (InpNumber <= 1099511627775)) { return String.Format("{0} {1}", Math.Round((float)InpNumber / 1024 / 1024 / 1024, 2), "GB"); }
             // Если размер всё-таки больше, выведем просто строку...
             return InpNumber.ToString();
         }
