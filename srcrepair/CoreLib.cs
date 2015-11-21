@@ -689,5 +689,15 @@ namespace srcrepair
                 ArW.ShowDialog();
             }
         }
+
+        /// <summary>
+        /// Возвращает размер файла в байтах.
+        /// </summary>
+        /// <param name="FileName">Имя файла с полным путём</param>
+        public static long GetFileSize(string FileName)
+        {
+            FileInfo FI = new FileInfo(FileName);
+            return FI.Length;
+        }
     }
 }
