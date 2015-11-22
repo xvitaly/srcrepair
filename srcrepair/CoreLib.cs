@@ -264,15 +264,16 @@ namespace srcrepair
             const long KB = B * B;
             const long MB = B * B * B;
             const long GB = B * B * B * B;
+            const string Template = "{0} {1}";
 
             // Проверяем на размер в байтах...
-            if ((InpNumber >= 0) && (InpNumber <= B - 1)) { return String.Format("{0} {1}", InpNumber, "B"); }
+            if ((InpNumber >= 0) && (InpNumber <= B - 1)) { return String.Format(Template, InpNumber, "B"); }
             // ...килобайтах...
-            else if ((InpNumber >= B) && (InpNumber <= KB - 1)) { return String.Format("{0} {1}", Math.Round((float)InpNumber / B, 2), "KB"); }
+            else if ((InpNumber >= B) && (InpNumber <= KB - 1)) { return String.Format(Template, Math.Round((float)InpNumber / B, 2), "KB"); }
             // ...мегабайтах...
-            else if ((InpNumber >= KB) && (InpNumber <= MB - 1)) { return String.Format("{0} {1}", Math.Round((float)InpNumber / KB, 2), "MB"); }
+            else if ((InpNumber >= KB) && (InpNumber <= MB - 1)) { return String.Format(Template, Math.Round((float)InpNumber / KB, 2), "MB"); }
             // ...гигабайтах.
-            else if ((InpNumber >= MB) && (InpNumber <= GB - 1)) { return String.Format("{0} {1}", Math.Round((float)InpNumber / MB, 2), "GB"); }
+            else if ((InpNumber >= MB) && (InpNumber <= GB - 1)) { return String.Format(Template, Math.Round((float)InpNumber / MB, 2), "GB"); }
             
             // Если размер всё-таки больше, выведем просто строку...
             return InpNumber.ToString();
