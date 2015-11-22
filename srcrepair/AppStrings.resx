@@ -735,4 +735,16 @@
   <data name="GameNonASCIINotDetected" xml:space="preserve">
     <value>Game installed correctly: directory path does not contain illegal characters.</value>
   </data>
+  <data name="AppSizeBytes" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="AppSizeGigabytes" xml:space="preserve">
+    <value>GB</value>
+  </data>
+  <data name="AppSizeKilobytes" xml:space="preserve">
+    <value>KB</value>
+  </data>
+  <data name="AppSizeMegabytes" xml:space="preserve">
+    <value>MB</value>
+  </data>
 </root>

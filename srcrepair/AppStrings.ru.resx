@@ -938,4 +938,20 @@
     <value>Игра установлена верно: путь к каталогу игры не содержит запрещённых символов.</value>
     <comment>Сообщение детектора при отсутствии запрещённых символов в пути к игре</comment>
   </data>
+  <data name="AppSizeBytes" xml:space="preserve">
+    <value>Б</value>
+    <comment>Размер в байтах</comment>
+  </data>
+  <data name="AppSizeGigabytes" xml:space="preserve">
+    <value>ГБ</value>
+    <comment>Размер в гигабайтах</comment>
+  </data>
+  <data name="AppSizeKilobytes" xml:space="preserve">
+    <value>КБ</value>
+    <comment>Размер в килобайтах</comment>
+  </data>
+  <data name="AppSizeMegabytes" xml:space="preserve">
+    <value>МБ</value>
+    <comment>Размер в мегабайтах</comment>
+  </data>
 </root>

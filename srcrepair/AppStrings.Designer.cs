@@ -322,6 +322,42 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to B.
+        /// </summary>
+        internal static string AppSizeBytes {
+            get {
+                return ResourceManager.GetString("AppSizeBytes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GB.
+        /// </summary>
+        internal static string AppSizeGigabytes {
+            get {
+                return ResourceManager.GetString("AppSizeGigabytes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to KB.
+        /// </summary>
+        internal static string AppSizeKilobytes {
+            get {
+                return ResourceManager.GetString("AppSizeKilobytes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MB.
+        /// </summary>
+        internal static string AppSizeMegabytes {
+            get {
+                return ResourceManager.GetString("AppSizeMegabytes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unable to start Steam. Please reinstall and try again later..
         /// </summary>
         internal static string AppStartSteamFailed {
