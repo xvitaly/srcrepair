@@ -267,13 +267,13 @@ namespace srcrepair
             const string Template = "{0} {1}";
 
             // Проверяем на размер в байтах...
-            if ((InpNumber >= 0) && (InpNumber <= B - 1)) { return String.Format(Template, InpNumber, GetLocalizedString("AppSizeBytes")); }
+            if ((InpNumber >= 0) && (InpNumber < B)) { return String.Format(Template, InpNumber, GetLocalizedString("AppSizeBytes")); }
             // ...килобайтах...
-            else if ((InpNumber >= B) && (InpNumber <= KB - 1)) { return String.Format(Template, Math.Round((float)InpNumber / B, 2), GetLocalizedString("AppSizeKilobytes")); }
+            else if ((InpNumber >= B) && (InpNumber < KB)) { return String.Format(Template, Math.Round((float)InpNumber / B, 2), GetLocalizedString("AppSizeKilobytes")); }
             // ...мегабайтах...
-            else if ((InpNumber >= KB) && (InpNumber <= MB - 1)) { return String.Format(Template, Math.Round((float)InpNumber / KB, 2), GetLocalizedString("AppSizeMegabytes")); }
+            else if ((InpNumber >= KB) && (InpNumber < MB)) { return String.Format(Template, Math.Round((float)InpNumber / KB, 2), GetLocalizedString("AppSizeMegabytes")); }
             // ...гигабайтах.
-            else if ((InpNumber >= MB) && (InpNumber <= GB - 1)) { return String.Format(Template, Math.Round((float)InpNumber / MB, 2), GetLocalizedString("AppSizeGigabytes")); }
+            else if ((InpNumber >= MB) && (InpNumber < GB)) { return String.Format(Template, Math.Round((float)InpNumber / MB, 2), GetLocalizedString("AppSizeGigabytes")); }
             
             // Если размер всё-таки больше, выведем просто строку...
             return InpNumber.ToString();
