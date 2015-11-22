@@ -259,14 +259,21 @@ namespace srcrepair
         /// <returns>Форматированная строка</returns>
         public static string SclBytes(long InpNumber)
         {
+            // Задаём константы...
+            const long B = 1024;
+            const long KB = B * B;
+            const long MB = B * B * B;
+            const long GB = B * B * B * B;
+
             // Проверяем на размер в байтах...
-            if ((InpNumber >= 0) && (InpNumber <= 1023)) { return String.Format("{0} {1}", InpNumber, "B"); }
+            if ((InpNumber >= 0) && (InpNumber <= B - 1)) { return String.Format("{0} {1}", InpNumber, "B"); }
             // ...килобайтах...
-            else if ((InpNumber >= 1024) && (InpNumber <= 1048575)) { return String.Format("{0} {1}", Math.Round((float)InpNumber / 1024, 2), "KB"); }
+            else if ((InpNumber >= B) && (InpNumber <= KB - 1)) { return String.Format("{0} {1}", Math.Round((float)InpNumber / B, 2), "KB"); }
             // ...мегабайтах...
-            else if ((InpNumber >= 1048576) && (InpNumber <= 1073741823)) { return String.Format("{0} {1}", Math.Round((float)InpNumber / 1024 / 1024, 2), "MB"); }
+            else if ((InpNumber >= KB) && (InpNumber <= MB - 1)) { return String.Format("{0} {1}", Math.Round((float)InpNumber / KB, 2), "MB"); }
             // ...гигабайтах.
-            else if ((InpNumber >= 1073741823) && (InpNumber <= 1099511627775)) { return String.Format("{0} {1}", Math.Round((float)InpNumber / 1024 / 1024 / 1024, 2), "GB"); }
+            else if ((InpNumber >= MB) && (InpNumber <= GB - 1)) { return String.Format("{0} {1}", Math.Round((float)InpNumber / MB, 2), "GB"); }
+            
             // Если размер всё-таки больше, выведем просто строку...
             return InpNumber.ToString();
         }
