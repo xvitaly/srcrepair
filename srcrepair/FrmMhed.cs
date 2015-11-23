@@ -54,16 +54,12 @@ namespace srcrepair
 
             if (File.Exists(FilePath))
             {
-                try
+                using (StreamReader OpenedHosts = new StreamReader(FilePath, Encoding.Default))
                 {
-                    // Считываем содержимое файла в массив...
-                    List<String> Hosts = new List<String>(File.ReadAllLines(FilePath, Encoding.Default));
-                    
-                    // Обходим массив в цикле...
-                    foreach (string HLine in Hosts)
+                    while (OpenedHosts.Peek() >= 0)
                     {
                         // Почистим строку от лишних символов...
-                        string ImpStr = CoreLib.CleanStrWx(HLine);
+                        string ImpStr = CoreLib.CleanStrWx(OpenedHosts.ReadLine());
 
                         // Проверяем, не пустая ли строка...
                         if (!(String.IsNullOrEmpty(ImpStr)))
@@ -83,10 +79,6 @@ namespace srcrepair
                             }
                         }
                     }
-                }
-                catch (Exception Ex)
-                {
-                    CoreLib.WriteStringToLog(Ex.Message);
                 }
             }
         }
