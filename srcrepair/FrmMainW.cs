@@ -1262,40 +1262,38 @@ namespace srcrepair
                 // Загружаем содержимое конфига из файла...
                 try
                 {
-                    // Считываем содержимое конфига в массив...
-                    List<String> Config = new List<String>(File.ReadAllLines(ConfFileName, Encoding.Default));
-                    
-                    // Обходим полученный массив в цикле...
-                    foreach (string StrRow in Config)
+                    // Открываем поток с нужным нам файлом...
+                    using (StreamReader ConfigFile = new StreamReader(ConfFileName, Encoding.Default))
                     {
-                        // Начинаем работу...
-                        ImpStr = StrRow;
-                        
-                        // Почистим строку от лишних пробелов и табуляций...
-                        ImpStr = CoreLib.CleanStrWx(ImpStr);
-
-                        // Проверяем, не пустая ли строка...
-                        if (!(String.IsNullOrEmpty(ImpStr))) 
+                        // Читаем файл в потоковом режиме от начала и до конца...
+                        while (ConfigFile.Peek() >= 0)
                         {
-                            // Проверяем, не комментарий ли...
-                            if (ImpStr[0] != '/')
-                            {
-                                // Строка почищена, продолжаем...
-                                if (ImpStr.IndexOf(" ") != -1)
-                                {
-                                    // Выделяем переменную...
-                                    CVarName = ImpStr.Substring(0, ImpStr.IndexOf(" "));
-                                    ImpStr = ImpStr.Remove(0, ImpStr.IndexOf(" ") + 1);
+                            // Почистим строку от лишних пробелов и табуляций...
+                            ImpStr = CoreLib.CleanStrWx(ConfigFile.ReadLine());
 
-                                    // Выделяем значение...
-                                    CVarContent = ImpStr.IndexOf("//") >= 1 ? ImpStr.Substring(0, ImpStr.IndexOf("//") - 1) : ImpStr;
-                                    
-                                    // Вставляем в таблицу...
-                                    CE_Editor.Rows.Add(CVarName, CVarContent);
-                                }
-                                else
+                            // Проверяем, не пустая ли строка...
+                            if (!(String.IsNullOrEmpty(ImpStr)))
+                            {
+                                // Проверяем, не комментарий ли...
+                                if (ImpStr[0] != '/')
                                 {
-                                    CE_Editor.Rows.Add(ImpStr, "");
+                                    // Строка почищена, продолжаем...
+                                    if (ImpStr.IndexOf(" ") != -1)
+                                    {
+                                        // Выделяем переменную...
+                                        CVarName = ImpStr.Substring(0, ImpStr.IndexOf(" "));
+                                        ImpStr = ImpStr.Remove(0, ImpStr.IndexOf(" ") + 1);
+
+                                        // Выделяем значение...
+                                        CVarContent = ImpStr.IndexOf("//") >= 1 ? ImpStr.Substring(0, ImpStr.IndexOf("//") - 1) : ImpStr;
+
+                                        // Вставляем в таблицу...
+                                        CE_Editor.Rows.Add(CVarName, CVarContent);
+                                    }
+                                    else
+                                    {
+                                        CE_Editor.Rows.Add(ImpStr, "");
+                                    }
                                 }
                             }
                         }
