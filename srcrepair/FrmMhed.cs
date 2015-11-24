@@ -96,9 +96,7 @@ namespace srcrepair
                         IPAddress IPAddr;
                         if (IPAddress.TryParse(HEd_Table.Rows[i].Cells[0].Value.ToString(), out IPAddr))
                         {
-                            CFile.Write(IPAddr.ToString());
-                            CFile.Write(" ");
-                            CFile.WriteLine(HEd_Table.Rows[i].Cells[1].Value.ToString());
+                            CFile.WriteLine("{0} {1}", IPAddr, HEd_Table.Rows[i].Cells[1].Value);
                         }
                     }
                 }
