@@ -27,6 +27,7 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using System.IO;
 using System.Diagnostics;
+using System.Net;
 
 namespace srcrepair
 {
@@ -92,9 +93,13 @@ namespace srcrepair
                 {
                     if ((HEd_Table.Rows[i].Cells[0].Value != null) && (HEd_Table.Rows[i].Cells[1].Value != null))
                     {
-                        CFile.Write(HEd_Table.Rows[i].Cells[0].Value.ToString());
-                        CFile.Write(" ");
-                        CFile.WriteLine(HEd_Table.Rows[i].Cells[1].Value.ToString());
+                        IPAddress IPAddr;
+                        if (IPAddress.TryParse(HEd_Table.Rows[i].Cells[0].Value.ToString(), out IPAddr))
+                        {
+                            CFile.Write(IPAddr.ToString());
+                            CFile.Write(" ");
+                            CFile.WriteLine(HEd_Table.Rows[i].Cells[1].Value.ToString());
+                        }
                     }
                 }
             }
