@@ -28,6 +28,7 @@ using Microsoft.Win32;
 using System.IO;
 using System.Diagnostics;
 using System.Net;
+using System.Reflection;
 
 namespace srcrepair
 {
@@ -102,6 +103,12 @@ namespace srcrepair
                 }
             }
         }
+
+        private string GetAppCompany()
+        {
+            object[] Attribs = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
+            return Attribs.Length != 0 ? ((AssemblyCompanyAttribute)Attribs[0]).Company : null;
+        }
         
         private void frmHEd_Load(object sender, EventArgs e)
         {
@@ -162,7 +169,7 @@ namespace srcrepair
 
         private void HEd_M_About_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(String.Format(Properties.Resources.AHE_About, PluginName, Properties.Resources.AppName, "V1TSK", PluginVersion), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(String.Format(Properties.Resources.AHE_About, PluginName, Properties.Resources.AppName, GetAppCompany(), PluginVersion), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void HEd_T_RemRw_Click(object sender, EventArgs e)
