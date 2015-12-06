@@ -44,9 +44,13 @@
             this.EC_BuildCache = new System.Windows.Forms.CheckBox();
             this.EC_Skins = new System.Windows.Forms.CheckBox();
             this.EC_Execute = new System.Windows.Forms.Button();
+            this.EC_GB_Trsh = new System.Windows.Forms.GroupBox();
+            this.EC_Guard = new System.Windows.Forms.CheckBox();
+            this.EC_Updater = new System.Windows.Forms.CheckBox();
             this.EC_GB_Basic.SuspendLayout();
             this.EC_GB_Garb.SuspendLayout();
             this.EC_GB_ExCn.SuspendLayout();
+            this.EC_GB_Trsh.SuspendLayout();
             this.SuspendLayout();
             // 
             // EC_GB_Basic
@@ -151,10 +155,31 @@
             this.EC_Execute.UseVisualStyleBackColor = true;
             this.EC_Execute.Click += new System.EventHandler(this.EC_Execute_Click);
             // 
+            // EC_GB_Trsh
+            // 
+            this.EC_GB_Trsh.Controls.Add(this.EC_Guard);
+            this.EC_GB_Trsh.Controls.Add(this.EC_Updater);
+            resources.ApplyResources(this.EC_GB_Trsh, "EC_GB_Trsh");
+            this.EC_GB_Trsh.Name = "EC_GB_Trsh";
+            this.EC_GB_Trsh.TabStop = false;
+            // 
+            // EC_Guard
+            // 
+            resources.ApplyResources(this.EC_Guard, "EC_Guard");
+            this.EC_Guard.Name = "EC_Guard";
+            this.EC_Guard.UseVisualStyleBackColor = true;
+            // 
+            // EC_Updater
+            // 
+            resources.ApplyResources(this.EC_Updater, "EC_Updater");
+            this.EC_Updater.Name = "EC_Updater";
+            this.EC_Updater.UseVisualStyleBackColor = true;
+            // 
             // FrmStmClean
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.EC_GB_Trsh);
             this.Controls.Add(this.EC_Execute);
             this.Controls.Add(this.EC_GB_ExCn);
             this.Controls.Add(this.EC_GB_Garb);
@@ -171,6 +196,8 @@
             this.EC_GB_Garb.PerformLayout();
             this.EC_GB_ExCn.ResumeLayout(false);
             this.EC_GB_ExCn.PerformLayout();
+            this.EC_GB_Trsh.ResumeLayout(false);
+            this.EC_GB_Trsh.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -192,5 +219,8 @@
         private System.Windows.Forms.CheckBox EC_BuildCache;
         private System.Windows.Forms.CheckBox EC_Skins;
         private System.Windows.Forms.Button EC_Execute;
+        private System.Windows.Forms.GroupBox EC_GB_Trsh;
+        private System.Windows.Forms.CheckBox EC_Guard;
+        private System.Windows.Forms.CheckBox EC_Updater;
     }
 }
