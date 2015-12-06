@@ -110,10 +110,8 @@ namespace srcrepair
                 CleanDirs.Add(Path.Combine(SteamPath, "ssfn*"));
             }
 
-            if (CleanDirs.Count > 0)
-            {
-                CoreLib.OpenCleanupWindow(CleanDirs, Text, CoreLib.GetLocalizedString("PS_CleanupSuccess"), BackUpDir, Properties.Resources.SteamProcName);
-            }
+            // Запустим очистку...
+            if (CleanDirs.Count > 0) { CoreLib.OpenCleanupWindow(CleanDirs, Text, CoreLib.GetLocalizedString("PS_CleanupSuccess"), BackUpDir, Properties.Resources.SteamProcName); } else { MessageBox.Show(CoreLib.GetLocalizedString("AC_NoItemsSelected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
     }
 }
