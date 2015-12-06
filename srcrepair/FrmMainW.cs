@@ -3120,24 +3120,6 @@ namespace srcrepair
             CoreLib.OpenWebPage(CoreLib.GetLocalizedString("AppCVListURL"));
         }
 
-        private void MNUExtClnCache_Click(object sender, EventArgs e)
-        {
-            // Очистим HTML-кэш внутреннего браузера Steam...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(App.FullSteamPath, "config", "htmlcache", "*.*"));
-            CleanDirs.Add(Path.Combine(App.FullSteamPath, "config", "overlayhtmlcache", "*.*"));
-            CleanDirs.Add(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Steam", "htmlcache", "*.*"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, Properties.Resources.SteamProcName);
-        }
-
-        private void MNUExtClnOverlayHTCache_Click(object sender, EventArgs e)
-        {
-            // Очистим HTTP-кэш...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(App.FullSteamPath, "appcache", "httpcache", "*.*"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, Properties.Resources.SteamProcName);
-        }
-
         private void CE_ManualBackUpCfg_Click(object sender, EventArgs e)
         {
             if (!(String.IsNullOrEmpty(CFGFileName)))
@@ -3154,47 +3136,6 @@ namespace srcrepair
             }
         }
 
-        private void MNUExtClnLogs_Click(object sender, EventArgs e)
-        {
-            // Очистим логи клиента Steam...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(App.FullSteamPath, "logs", "*.*"));
-            CleanDirs.Add(Path.Combine(App.FullSteamPath, "*.log"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, Properties.Resources.SteamProcName);
-        }
-
-        private void MNUExtClnGIcons_Click(object sender, EventArgs e)
-        {
-            // Очистим кэшированные значки игр...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(App.FullSteamPath, "steam", "games", "*.*"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, Properties.Resources.SteamProcName);
-        }
-
-        private void MNUExtClnGameStats_Click(object sender, EventArgs e)
-        {
-            // Очистим кэшированную статистику игр...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(App.FullSteamPath, "appcache", "stats", "*.*"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, Properties.Resources.SteamProcName);
-        }
-
-        private void MNUExtClnErrDumps_Click(object sender, EventArgs e)
-        {
-            // Очистим краш-дампы...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(App.FullSteamPath, "dumps", "*.*"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, Properties.Resources.SteamProcName);
-        }
-
-        private void MNUExtClnCloudLocal_Click(object sender, EventArgs e)
-        {
-            // Очистим локальное зеркало Cloud...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(App.FullSteamPath, "userdata", "*.*"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, Properties.Resources.SteamProcName);
-        }
-
         private void PS_RemSounds_Click(object sender, EventArgs e)
         {
             // Удаляем кастомные звуки...
@@ -3203,41 +3144,6 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.mp3"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.wav"));
             CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
-        }
-
-        private void MNUExtClnBuildCache_Click(object sender, EventArgs e)
-        {
-            // Очистим кэш сборки обновлений игр с новой системой контента...
-            if (!CoreLib.IsProcessRunning(Properties.Resources.SteamProcName))
-            {
-                if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("PS_CleanupFull"), ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", "")), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-                {
-                    try
-                    {
-                        string ClDir = Path.Combine(App.FullSteamPath, Properties.Resources.SteamAppsFolderName, "downloading");
-                        if (Directory.Exists(ClDir)) { Directory.Delete(ClDir, true); }
-                        ClDir = Path.Combine(App.FullSteamPath, Properties.Resources.SteamAppsFolderName, "temp");
-                        if (Directory.Exists(ClDir)) { Directory.Delete(ClDir, true); }
-                        MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    catch (Exception Ex)
-                    {
-                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show(CoreLib.GetLocalizedString("PS_SteamRunning"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void MNUExtClnUpdCch_Click(object sender, EventArgs e)
-        {
-            // Очистим кэш обновлений Steam...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(App.FullSteamPath, "package", "*.*"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, Properties.Resources.SteamProcName);
         }
 
         private void PS_RemCustDir_Click(object sender, EventArgs e)
@@ -3281,23 +3187,6 @@ namespace srcrepair
             CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
-        private void MNUExtClnGuard_Click(object sender, EventArgs e)
-        {
-            // Удаляем кэш Steam Guard...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(App.FullSteamPath, "ssfn*"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, Properties.Resources.SteamProcName, false, false, false);
-        }
-
-        private void MNUExtClnOldBin_Click(object sender, EventArgs e)
-        {
-            // Удаляем старые бинарные файлы клиента Steam...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(App.FullSteamPath, "*.old"));
-            CleanDirs.Add(Path.Combine(App.FullSteamPath, "bin", "*.old"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, Properties.Resources.SteamProcName);
-        }
-
         private void GT_ResAvailable_Btn_Click(object sender, EventArgs e)
         {
             // Получим список доступных разрешений...
@@ -3327,22 +3216,6 @@ namespace srcrepair
                 }
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-        }
-
-        private void MNUExtClnMusDb_Click(object sender, EventArgs e)
-        {
-            // Очистим базу данных функции Steam Music...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(App.FullSteamPath, "music", "_database", "*.*"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, Properties.Resources.SteamProcName);
-        }
-
-        private void MNUExtClnSkins_Click(object sender, EventArgs e)
-        {
-            // Очистим установленные скины Steam...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(App.FullSteamPath, "skins", "*.*"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, Properties.Resources.SteamProcName);
         }
 
         private void HD_HSel_SelectedIndexChanged(object sender, EventArgs e)
@@ -3460,6 +3333,13 @@ namespace srcrepair
         {
             // Покажем файлы установленного HUD в Проводнике...
             try { Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, Path.Combine(SelGame.CustomInstallDir, SelHUD.InstallDir))); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+        }
+
+        private void MNUExtClnSteam_Click(object sender, EventArgs e)
+        {
+            // Запустим модуль очистки кэшей Steam...
+            FrmStmClean StmCln = new FrmStmClean(App.FullSteamPath, SelGame.FullBackUpDirPath);
+            StmCln.ShowDialog();
         }
     }
 }

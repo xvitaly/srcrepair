@@ -1029,92 +1029,23 @@
   <data name="MNUWinMnuDisabler.Text" xml:space="preserve">
     <value>&amp;Модуль отключения системных клавиш...</value>
   </data>
-  <data name="MNUExtClnCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 22</value>
+  <data name="MNUExtClnSteam.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 22</value>
   </data>
-  <data name="MNUExtClnCache.Text" xml:space="preserve">
-    <value>HTML-&amp;кэш клиента</value>
+  <data name="MNUExtClnSteam.Text" xml:space="preserve">
+    <value>Модуль &amp;очистки кэшей Steam...</value>
   </data>
-  <data name="MNUExtClnOverlayHTCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 22</value>
-  </data>
-  <data name="MNUExtClnOverlayHTCache.Text" xml:space="preserve">
-    <value>HTTP-кэ&amp;ш</value>
-  </data>
-  <data name="MNUExtClnLogs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 22</value>
-  </data>
-  <data name="MNUExtClnLogs.Text" xml:space="preserve">
-    <value>&amp;Журналы работы Steam</value>
-  </data>
-  <data name="MNUExtClnGIcons.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 22</value>
-  </data>
-  <data name="MNUExtClnGIcons.Text" xml:space="preserve">
-    <value>Кэш&amp;ированные значки игр</value>
-  </data>
-  <data name="MNUExtClnGameStats.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 22</value>
-  </data>
-  <data name="MNUExtClnGameStats.Text" xml:space="preserve">
-    <value>&amp;Локальная игровая статистика</value>
-  </data>
-  <data name="MNUExtClnErrDumps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 22</value>
-  </data>
-  <data name="MNUExtClnErrDumps.Text" xml:space="preserve">
-    <value>К&amp;раш-дампы</value>
-  </data>
-  <data name="MNUExtClnCloudLocal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 22</value>
-  </data>
-  <data name="MNUExtClnCloudLocal.Text" xml:space="preserve">
-    <value>Локаль&amp;ная копия Cloud</value>
-  </data>
-  <data name="MNUExtClnBuildCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 22</value>
-  </data>
-  <data name="MNUExtClnBuildCache.Text" xml:space="preserve">
-    <value>Кэш о&amp;бновлений игр с н.с.к.</value>
-  </data>
-  <data name="MNUExtClnUpdCch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 22</value>
-  </data>
-  <data name="MNUExtClnUpdCch.Text" xml:space="preserve">
-    <value>Кэш &amp;модуля обновлений Steam</value>
-  </data>
-  <data name="MNUExtClnGuard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 22</value>
-  </data>
-  <data name="MNUExtClnGuard.Text" xml:space="preserve">
-    <value>Кэш &amp;системы Steam Guard</value>
-  </data>
-  <data name="MNUExtClnOldBin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 22</value>
-  </data>
-  <data name="MNUExtClnOldBin.Text" xml:space="preserve">
-    <value>С&amp;тарые файлы клиента Steam</value>
-  </data>
-  <data name="MNUExtClnMusDb.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 22</value>
-  </data>
-  <data name="MNUExtClnMusDb.Text" xml:space="preserve">
-    <value>Ба&amp;за данных Steam Music</value>
-  </data>
-  <data name="MNUExtClnSkins.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 22</value>
-  </data>
-  <data name="MNUExtClnSkins.Text" xml:space="preserve">
-    <value>&amp;Установленные скины</value>
+  <data name="MNUSep6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 6</value>
   </data>
   <data name="MNUExtClnAppCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 22</value>
+    <value>247, 22</value>
   </data>
   <data name="MNUExtClnAppCache.Text" xml:space="preserve">
     <value>Кэш з&amp;агрузок SRC Repair</value>
   </data>
   <data name="MNUExtClnTmpDir.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 22</value>
+    <value>247, 22</value>
   </data>
   <data name="MNUExtClnTmpDir.Text" xml:space="preserve">
     <value>&amp;Временные файлы системы</value>
