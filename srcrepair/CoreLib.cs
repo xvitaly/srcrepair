@@ -707,5 +707,27 @@ namespace srcrepair
             FileInfo FI = new FileInfo(FileName);
             return FI.Length;
         }
+
+        /// <summary>
+        /// Отображает диалоговое окно менеджера быстрой очистки.
+        /// </summary>
+        /// <param name="Path">Путь к каталогу очистки</param>
+        /// <param name="Mask">Маска файлов, подлежащих очистке</param>
+        /// <param name="LText">Текст заголовка</param>
+        /// <param name="CheckBin">Имя бинарника, работа которого будет проверяться перед запуском очистки</param>
+        /// <param name="ResultMsg">Текст сообщения, которое будет выдаваться по завершении очистки</param>
+        /// <param name="BackUpDir">Каталог для сохранения резервных копий</param>
+        /// <param name="ReadOnly">Пользователю будет запрещено изменять выбор удаляемых файлов</param>
+        /// <param name="NoAuto">Включает / отключает автовыбор файлов флажками</param>
+        /// <param name="Recursive">Включает / отключает рекурсивный обход</param>
+        /// <param name="ForceBackUp">Включает / отключает принудительное создание резервных копий</param>
+        public static void OpenCleanupWindow(List<String> Paths, string LText, string ResultMsg, string BackUpDir, string CheckBin, bool ReadOnly = false, bool NoAuto = false, bool Recursive = true, bool ForceBackUp = false)
+        {
+            try
+            {
+                if (!CoreLib.IsProcessRunning(Path.GetFileNameWithoutExtension(CheckBin))) { using (frmCleaner FCl = new frmCleaner(Paths, BackUpDir, LText, ResultMsg, ReadOnly, NoAuto, Recursive, ForceBackUp)) { FCl.ShowDialog(); } } else { MessageBox.Show(String.Format(CoreLib.GetLocalizedString("PS_AppRunning"), CheckBin), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+        }
     }
 }
