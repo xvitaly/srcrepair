@@ -15,5 +15,10 @@ namespace srcrepair
         {
             InitializeComponent();
         }
+
+        private void EC_Execute_Click(object sender, EventArgs e)
+        {
+            //
+        }
     }
 }

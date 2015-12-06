@@ -117,17 +117,546 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;EC_HTTPCache.Name" xml:space="preserve">
+    <value>EC_HTTPCache</value>
+  </data>
+  <data name="&gt;&gt;EC_HTTPCache.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_HTTPCache.Parent" xml:space="preserve">
+    <value>EC_GB_Basic</value>
+  </data>
+  <data name="&gt;&gt;EC_HTTPCache.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;EC_HTMLCache.Name" xml:space="preserve">
+    <value>EC_HTMLCache</value>
+  </data>
+  <data name="&gt;&gt;EC_HTMLCache.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_HTMLCache.Parent" xml:space="preserve">
+    <value>EC_GB_Basic</value>
+  </data>
+  <data name="&gt;&gt;EC_HTMLCache.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="EC_GB_Basic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="EC_GB_Basic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 75</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="EC_GB_Basic.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="EC_GB_Basic.Text" xml:space="preserve">
+    <value>Basic caches</value>
+  </data>
+  <data name="&gt;&gt;EC_GB_Basic.Name" xml:space="preserve">
+    <value>EC_GB_Basic</value>
+  </data>
+  <data name="&gt;&gt;EC_GB_Basic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_GB_Basic.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;EC_GB_Basic.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="EC_HTMLCache.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="EC_HTMLCache.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 22</value>
+  </data>
+  <data name="EC_HTMLCache.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 17</value>
+  </data>
+  <data name="EC_HTMLCache.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="EC_HTMLCache.Text" xml:space="preserve">
+    <value>Steam client and overlay HTML cache</value>
+  </data>
+  <data name="&gt;&gt;EC_HTMLCache.Name" xml:space="preserve">
+    <value>EC_HTMLCache</value>
+  </data>
+  <data name="&gt;&gt;EC_HTMLCache.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_HTMLCache.Parent" xml:space="preserve">
+    <value>EC_GB_Basic</value>
+  </data>
+  <data name="&gt;&gt;EC_HTMLCache.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="EC_HTTPCache.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="EC_HTTPCache.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 45</value>
+  </data>
+  <data name="EC_HTTPCache.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 17</value>
+  </data>
+  <data name="EC_HTTPCache.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="EC_HTTPCache.Text" xml:space="preserve">
+    <value>Steam client HTTP download cache</value>
+  </data>
+  <data name="&gt;&gt;EC_HTTPCache.Name" xml:space="preserve">
+    <value>EC_HTTPCache</value>
+  </data>
+  <data name="&gt;&gt;EC_HTTPCache.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_HTTPCache.Parent" xml:space="preserve">
+    <value>EC_GB_Basic</value>
+  </data>
+  <data name="&gt;&gt;EC_HTTPCache.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;EC_BuildCache.Name" xml:space="preserve">
+    <value>EC_BuildCache</value>
+  </data>
+  <data name="&gt;&gt;EC_BuildCache.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_BuildCache.Parent" xml:space="preserve">
+    <value>EC_GB_Garb</value>
+  </data>
+  <data name="&gt;&gt;EC_BuildCache.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;EC_ErrDmps.Name" xml:space="preserve">
+    <value>EC_ErrDmps</value>
+  </data>
+  <data name="&gt;&gt;EC_ErrDmps.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_ErrDmps.Parent" xml:space="preserve">
+    <value>EC_GB_Garb</value>
+  </data>
+  <data name="&gt;&gt;EC_ErrDmps.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;EC_OldBins.Name" xml:space="preserve">
+    <value>EC_OldBins</value>
+  </data>
+  <data name="&gt;&gt;EC_OldBins.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_OldBins.Parent" xml:space="preserve">
+    <value>EC_GB_Garb</value>
+  </data>
+  <data name="&gt;&gt;EC_OldBins.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;EC_Logs.Name" xml:space="preserve">
+    <value>EC_Logs</value>
+  </data>
+  <data name="&gt;&gt;EC_Logs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_Logs.Parent" xml:space="preserve">
+    <value>EC_GB_Garb</value>
+  </data>
+  <data name="&gt;&gt;EC_Logs.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="EC_GB_Garb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 93</value>
+  </data>
+  <data name="EC_GB_Garb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 113</value>
+  </data>
+  <data name="EC_GB_Garb.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="EC_GB_Garb.Text" xml:space="preserve">
+    <value>Basic garbage</value>
+  </data>
+  <data name="&gt;&gt;EC_GB_Garb.Name" xml:space="preserve">
+    <value>EC_GB_Garb</value>
+  </data>
+  <data name="&gt;&gt;EC_GB_Garb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_GB_Garb.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;EC_GB_Garb.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="EC_Logs.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="EC_Logs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 19</value>
+  </data>
+  <data name="EC_Logs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 17</value>
+  </data>
+  <data name="EC_Logs.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="EC_Logs.Text" xml:space="preserve">
+    <value>Steam client logs</value>
+  </data>
+  <data name="&gt;&gt;EC_Logs.Name" xml:space="preserve">
+    <value>EC_Logs</value>
+  </data>
+  <data name="&gt;&gt;EC_Logs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_Logs.Parent" xml:space="preserve">
+    <value>EC_GB_Garb</value>
+  </data>
+  <data name="&gt;&gt;EC_Logs.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="EC_OldBins.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="EC_OldBins.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 42</value>
+  </data>
+  <data name="EC_OldBins.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 17</value>
+  </data>
+  <data name="EC_OldBins.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="EC_OldBins.Text" xml:space="preserve">
+    <value>Steam old binaries</value>
+  </data>
+  <data name="&gt;&gt;EC_OldBins.Name" xml:space="preserve">
+    <value>EC_OldBins</value>
+  </data>
+  <data name="&gt;&gt;EC_OldBins.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_OldBins.Parent" xml:space="preserve">
+    <value>EC_GB_Garb</value>
+  </data>
+  <data name="&gt;&gt;EC_OldBins.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="EC_ErrDmps.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="EC_ErrDmps.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 65</value>
+  </data>
+  <data name="EC_ErrDmps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 17</value>
+  </data>
+  <data name="EC_ErrDmps.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="EC_ErrDmps.Text" xml:space="preserve">
+    <value>Steam error dumps</value>
+  </data>
+  <data name="&gt;&gt;EC_ErrDmps.Name" xml:space="preserve">
+    <value>EC_ErrDmps</value>
+  </data>
+  <data name="&gt;&gt;EC_ErrDmps.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_ErrDmps.Parent" xml:space="preserve">
+    <value>EC_GB_Garb</value>
+  </data>
+  <data name="&gt;&gt;EC_ErrDmps.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;EC_Skins.Name" xml:space="preserve">
+    <value>EC_Skins</value>
+  </data>
+  <data name="&gt;&gt;EC_Skins.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_Skins.Parent" xml:space="preserve">
+    <value>EC_GB_ExCn</value>
+  </data>
+  <data name="&gt;&gt;EC_Skins.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;EC_Music.Name" xml:space="preserve">
+    <value>EC_Music</value>
+  </data>
+  <data name="&gt;&gt;EC_Music.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_Music.Parent" xml:space="preserve">
+    <value>EC_GB_ExCn</value>
+  </data>
+  <data name="&gt;&gt;EC_Music.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;EC_Stats.Name" xml:space="preserve">
+    <value>EC_Stats</value>
+  </data>
+  <data name="&gt;&gt;EC_Stats.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_Stats.Parent" xml:space="preserve">
+    <value>EC_GB_ExCn</value>
+  </data>
+  <data name="&gt;&gt;EC_Stats.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;EC_Cloud.Name" xml:space="preserve">
+    <value>EC_Cloud</value>
+  </data>
+  <data name="&gt;&gt;EC_Cloud.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_Cloud.Parent" xml:space="preserve">
+    <value>EC_GB_ExCn</value>
+  </data>
+  <data name="&gt;&gt;EC_Cloud.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;EC_GameIcons.Name" xml:space="preserve">
+    <value>EC_GameIcons</value>
+  </data>
+  <data name="&gt;&gt;EC_GameIcons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_GameIcons.Parent" xml:space="preserve">
+    <value>EC_GB_ExCn</value>
+  </data>
+  <data name="&gt;&gt;EC_GameIcons.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="EC_GB_ExCn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 212</value>
+  </data>
+  <data name="EC_GB_ExCn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 138</value>
+  </data>
+  <data name="EC_GB_ExCn.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="EC_GB_ExCn.Text" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;EC_GB_ExCn.Name" xml:space="preserve">
+    <value>EC_GB_ExCn</value>
+  </data>
+  <data name="&gt;&gt;EC_GB_ExCn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_GB_ExCn.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;EC_GB_ExCn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="EC_GameIcons.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="EC_GameIcons.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="EC_GameIcons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 19</value>
+  </data>
+  <data name="EC_GameIcons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 17</value>
+  </data>
+  <data name="EC_GameIcons.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="EC_GameIcons.Text" xml:space="preserve">
+    <value>Steam cached game icons</value>
+  </data>
+  <data name="&gt;&gt;EC_GameIcons.Name" xml:space="preserve">
+    <value>EC_GameIcons</value>
+  </data>
+  <data name="&gt;&gt;EC_GameIcons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_GameIcons.Parent" xml:space="preserve">
+    <value>EC_GB_ExCn</value>
+  </data>
+  <data name="&gt;&gt;EC_GameIcons.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="EC_Cloud.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="EC_Cloud.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 42</value>
+  </data>
+  <data name="EC_Cloud.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 17</value>
+  </data>
+  <data name="EC_Cloud.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="EC_Cloud.Text" xml:space="preserve">
+    <value>Steam Cloud local storage</value>
+  </data>
+  <data name="&gt;&gt;EC_Cloud.Name" xml:space="preserve">
+    <value>EC_Cloud</value>
+  </data>
+  <data name="&gt;&gt;EC_Cloud.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_Cloud.Parent" xml:space="preserve">
+    <value>EC_GB_ExCn</value>
+  </data>
+  <data name="&gt;&gt;EC_Cloud.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="EC_Stats.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="EC_Stats.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 65</value>
+  </data>
+  <data name="EC_Stats.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 17</value>
+  </data>
+  <data name="EC_Stats.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="EC_Stats.Text" xml:space="preserve">
+    <value>Steam local game stats</value>
+  </data>
+  <data name="&gt;&gt;EC_Stats.Name" xml:space="preserve">
+    <value>EC_Stats</value>
+  </data>
+  <data name="&gt;&gt;EC_Stats.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_Stats.Parent" xml:space="preserve">
+    <value>EC_GB_ExCn</value>
+  </data>
+  <data name="&gt;&gt;EC_Stats.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="EC_Music.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="EC_Music.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 88</value>
+  </data>
+  <data name="EC_Music.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 17</value>
+  </data>
+  <data name="EC_Music.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="EC_Music.Text" xml:space="preserve">
+    <value>Steam music database</value>
+  </data>
+  <data name="&gt;&gt;EC_Music.Name" xml:space="preserve">
+    <value>EC_Music</value>
+  </data>
+  <data name="&gt;&gt;EC_Music.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_Music.Parent" xml:space="preserve">
+    <value>EC_GB_ExCn</value>
+  </data>
+  <data name="&gt;&gt;EC_Music.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="EC_BuildCache.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="EC_BuildCache.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 88</value>
+  </data>
+  <data name="EC_BuildCache.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 17</value>
+  </data>
+  <data name="EC_BuildCache.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="EC_BuildCache.Text" xml:space="preserve">
+    <value>Steam build cache</value>
+  </data>
+  <data name="&gt;&gt;EC_BuildCache.Name" xml:space="preserve">
+    <value>EC_BuildCache</value>
+  </data>
+  <data name="&gt;&gt;EC_BuildCache.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_BuildCache.Parent" xml:space="preserve">
+    <value>EC_GB_Garb</value>
+  </data>
+  <data name="&gt;&gt;EC_BuildCache.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="EC_Skins.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="EC_Skins.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 111</value>
+  </data>
+  <data name="EC_Skins.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 17</value>
+  </data>
+  <data name="EC_Skins.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="EC_Skins.Text" xml:space="preserve">
+    <value>Steam custom skins</value>
+  </data>
+  <data name="&gt;&gt;EC_Skins.Name" xml:space="preserve">
+    <value>EC_Skins</value>
+  </data>
+  <data name="&gt;&gt;EC_Skins.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_Skins.Parent" xml:space="preserve">
+    <value>EC_GB_ExCn</value>
+  </data>
+  <data name="&gt;&gt;EC_Skins.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="EC_Execute.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 360</value>
+  </data>
+  <data name="EC_Execute.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 23</value>
+  </data>
+  <data name="EC_Execute.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="EC_Execute.Text" xml:space="preserve">
+    <value>Start cleanup...</value>
+  </data>
+  <data name="&gt;&gt;EC_Execute.Name" xml:space="preserve">
+    <value>EC_Execute</value>
+  </data>
+  <data name="&gt;&gt;EC_Execute.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_Execute.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;EC_Execute.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>419, 329</value>
+    <value>261, 394</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
   </data>
