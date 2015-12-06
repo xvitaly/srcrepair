@@ -747,4 +747,7 @@
   <data name="AppSizeMegabytes" xml:space="preserve">
     <value>MB</value>
   </data>
+  <data name="AC_NoItemsSelected" xml:space="preserve">
+    <value>No items selected. Please select and then try again!</value>
+  </data>
 </root>

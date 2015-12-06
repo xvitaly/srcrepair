@@ -954,4 +954,8 @@
     <value>МБ</value>
     <comment>Размер в мегабайтах</comment>
   </data>
+  <data name="AC_NoItemsSelected" xml:space="preserve">
+    <value>Вы не выбрали ни один элемент! Очистка невозможна.</value>
+    <comment>Сообщение при попытке запуска очистки при не выбранных элементах</comment>
+  </data>
 </root>

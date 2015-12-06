@@ -61,6 +61,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No items selected. Please select and then try again!.
+        /// </summary>
+        internal static string AC_NoItemsSelected {
+            get {
+                return ResourceManager.GetString("AC_NoItemsSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Warning! Parse error detected. Probably file {0} is opened not completely or with errors..
         /// </summary>
         internal static string AHE_ExceptionDetected {
