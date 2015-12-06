@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="EC_GB_Basic.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="EC_HTTPCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="EC_HTTPCache.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -146,6 +152,9 @@
   <data name="&gt;&gt;EC_HTTPCache.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="EC_HTMLCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="EC_HTMLCache.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -177,7 +186,7 @@
     <value>12, 12</value>
   </data>
   <data name="EC_GB_Basic.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 75</value>
+    <value>237, 70</value>
   </data>
   <data name="EC_GB_Basic.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -197,6 +206,12 @@
   <data name="&gt;&gt;EC_GB_Basic.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="EC_GB_Garb.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="EC_BuildCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="EC_BuildCache.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -224,6 +239,9 @@
   <data name="&gt;&gt;EC_BuildCache.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="EC_ErrDmps.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="EC_ErrDmps.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -251,6 +269,9 @@
   <data name="&gt;&gt;EC_ErrDmps.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="EC_OldBins.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="EC_OldBins.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -278,6 +299,9 @@
   <data name="&gt;&gt;EC_OldBins.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="EC_Logs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="EC_Logs.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -306,7 +330,7 @@
     <value>3</value>
   </data>
   <data name="EC_GB_Garb.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 93</value>
+    <value>12, 88</value>
   </data>
   <data name="EC_GB_Garb.Size" type="System.Drawing.Size, System.Drawing">
     <value>237, 113</value>
@@ -329,6 +353,12 @@
   <data name="&gt;&gt;EC_GB_Garb.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="EC_GB_ExCn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="EC_Skins.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="EC_Skins.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -356,6 +386,9 @@
   <data name="&gt;&gt;EC_Skins.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="EC_Music.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="EC_Music.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -383,6 +416,9 @@
   <data name="&gt;&gt;EC_Music.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="EC_Stats.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="EC_Stats.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -410,6 +446,9 @@
   <data name="&gt;&gt;EC_Stats.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="EC_Cloud.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="EC_Cloud.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -437,6 +476,9 @@
   <data name="&gt;&gt;EC_Cloud.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="EC_GameIcons.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="EC_GameIcons.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -469,7 +511,7 @@
     <value>4</value>
   </data>
   <data name="EC_GB_ExCn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 212</value>
+    <value>12, 207</value>
   </data>
   <data name="EC_GB_ExCn.Size" type="System.Drawing.Size, System.Drawing">
     <value>237, 137</value>
@@ -492,8 +534,11 @@
   <data name="&gt;&gt;EC_GB_ExCn.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="EC_Execute.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="EC_Execute.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 430</value>
+    <value>40, 425</value>
   </data>
   <data name="EC_Execute.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 23</value>
@@ -516,6 +561,12 @@
   <data name="&gt;&gt;EC_Execute.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="EC_GB_Trsh.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="EC_Guard.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="EC_Guard.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -546,6 +597,9 @@
   <data name="&gt;&gt;EC_Guard.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="EC_Updater.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="EC_Updater.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -577,7 +631,7 @@
     <value>1</value>
   </data>
   <data name="EC_GB_Trsh.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 355</value>
+    <value>12, 350</value>
   </data>
   <data name="EC_GB_Trsh.Size" type="System.Drawing.Size, System.Drawing">
     <value>237, 67</value>
@@ -603,11 +657,38 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>261, 463</value>
+    <value>261, 457</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
+        AAAAAQAAAQEBAQMDAwA3NzcCcHFxFZKLiCmhnp1BpqCfUaWkpFuqoJ1Wm5qdUpmXlzyLg38eYWFgDCEg
+        HwAAAAAAAAAAABAQEACmpaYZx8fIUq6opoB1obfBWn2V3WOOo+JKdJDwW4yh5lCpzvRqiZ7QdKa/xqGq
+        tYLAwsRAfX1+DgAAAABjcmNJxdXHW7Wuq2NqlanAd9r5/16szvyE2vP/YL/i/2/f/v9Z0vX/SsXt/0zD
+        6vpBn8f6kbfRmb25tw8EBQQAgZeBpZayl5mjsZ89Wbnc033b+P+r6vv8ouT4/pPk+/6E2/X+bNX0/lfP
+        8/5Y1ff9UM70/kWVvMYTJDEvNj82QJ23nZSVrpWckamQlVGw0dxHwe3/Wsru/nTM7f990vD/dtDv/2zN
+        7v5dye7/Srri9BArO0YAAAABAgMEBiEnIS6GnIaPlK+WXo+fhWZjsMTiTcLv/0G24v5MvOf/Tr3n/1C9
+        5v9Rveb7Usf1/ytzlKgAAAAAAgMDAwAAAAAAAAAAJy0nMKC7oY6TposiXoOCi0W56P9ItOD9Srrl/0S6
+        5P8/tOD/P7Xf/EvD6/8whJ21AAAAAAECAgMAAAAAAAAAABcbFx57kHuKnLieWE9YRgAga5CqRMTy/06t
+        2vt+tuj/iafq/2uF5v5VcuX/OmDU8QMHGBwAAAAAAAABAgEBAQEAAAAAFBgUF5q0m4iQposqGy8tHi2F
+        ze2krfT/6d37/ay48f+Gnur/V3ff+zxd7f8RIl1tAAAAAAEBAwQAAAAAAAAAAAMDAwRrfWtxor2kYEJP
+        OgABBkBVfYD6/3y34fxatt7+bMLj/3LF4fxkyOr/MIOqwAAAAAAAAQECAAAAAAAAAAAAAAAABAUFBRQX
+        FA4GCAgFAAAAABgyZntev+//cb3h+3W94PuHx+f+oNLs/1+x2vUDERkbAAAAAAAAAAAAAAAAAAAAAAEB
+        AQEAAAAAAAAAAAECAwMAAAAAK1hvfHbG7v+P0fL+fbze+2+95P9YrtjyBBAWGAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAQEBAQAAAAAAAAAAAQEDAwAAAAAbNEFGWIuluFuu3PY4pdH/LYKivwEAAAAAAQECAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAgIDAQEBAQAAAAAnP01MH1ZuthFbe88BBQgHAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECAwMCAgIDAQEBAQAAAAAkZH29K3OSwgAC
+        BAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDBAUAAAAABxEVGyBd
+        d5cDIS4yAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA==
+</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>

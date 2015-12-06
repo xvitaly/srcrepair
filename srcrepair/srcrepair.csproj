@@ -274,6 +274,9 @@
     <EmbeddedResource Include="FrmStmClean.resx">
       <DependentUpon>FrmStmClean.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmStmClean.ru.resx">
+      <DependentUpon>FrmStmClean.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmUpdate.resx">
       <DependentUpon>FrmUpdate.cs</DependentUpon>
     </EmbeddedResource>
