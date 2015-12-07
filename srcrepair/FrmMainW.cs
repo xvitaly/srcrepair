@@ -1230,10 +1230,10 @@ namespace srcrepair
             if (File.Exists(ConfFileName))
             {
                 // Получаем имя открытого в Редакторе файла без пути...
-                CFGFileName = Path.GetFileName(ConfFileName);
+                CFGFileName = ConfFileName;
                 
                 // Проверяем, не открыл ли пользователь файл config.cfg и, если да, то сообщаем об этом...
-                if (CFGFileName == "config.cfg") { MessageBox.Show(CoreLib.GetLocalizedString("CE_RestConfigOpenWarn"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                if (Path.GetFileName(CFGFileName) == "config.cfg") { MessageBox.Show(CoreLib.GetLocalizedString("CE_RestConfigOpenWarn"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
 
                 // Очищаем область редактирования...
                 CE_Editor.Rows.Clear();
@@ -1687,7 +1687,7 @@ namespace srcrepair
                     {
                         MNUShowEdHint.Enabled = true;
                         SB_Status.ForeColor = Color.Black;
-                        SB_Status.Text = String.Format(CoreLib.GetLocalizedString("StatusOpenedFile"), String.IsNullOrEmpty(CFGFileName) ? CoreLib.GetLocalizedString("UnnamedFileName") : CFGFileName);
+                        SB_Status.Text = String.Format(CoreLib.GetLocalizedString("StatusOpenedFile"), String.IsNullOrEmpty(CFGFileName) ? CoreLib.GetLocalizedString("UnnamedFileName") : Path.GetFileName(CFGFileName));
                     }
                     break;
                 case 4:
@@ -2410,17 +2410,16 @@ namespace srcrepair
                 // управляемоего приложения. Остальные - нет.
                 if (Properties.Settings.Default.SafeCleanup)
                 {
-                    if (File.Exists(Path.Combine(SelGame.FullCfgPath, CFGFileName)))
+                    if (File.Exists(CFGFileName))
                     {
                         // Создаём резервную копию...
-                        CreateConfigBackUp(SingleToArray(Path.Combine(SelGame.FullCfgPath, CFGFileName)), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
+                        CreateConfigBackUp(SingleToArray(CFGFileName), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
                     }
                 }
 
                 // Начинаем сохранение...
                 try
                 {
-                    //WriteTableToFileNow(CFGFileName);
                     WriteTableToFileNow(CE_OpenCfgDialog.FileName, Properties.Resources.AppName);
                 }
                 catch (Exception Ex)
@@ -2447,7 +2446,7 @@ namespace srcrepair
                 if (CE_SaveCfgDialog.ShowDialog() == DialogResult.OK) // Отображаем стандартный диалог сохранения файла...
                 {
                     WriteTableToFileNow(CE_SaveCfgDialog.FileName, Properties.Resources.AppName);
-                    CFGFileName = Path.GetFileName(CE_SaveCfgDialog.FileName);
+                    CFGFileName = CE_SaveCfgDialog.FileName;
                     CE_OpenCfgDialog.FileName = CE_SaveCfgDialog.FileName;
                     UpdateStatusBar(MainTabControl.SelectedIndex);
                 }
@@ -2958,7 +2957,11 @@ namespace srcrepair
 
         private void FP_OpenNotepad_Click(object sender, EventArgs e)
         {
-            Process.Start(Properties.Settings.Default.EditorBin, Path.Combine(App.FullAppPath, "cfgs", FP_ConfigSel.Text));
+            // Загрузим выбранный конфиг в Редактор конфигов...
+            ReadConfigFromFile(Path.Combine(App.FullAppPath, "cfgs", FP_ConfigSel.Text));
+            
+            // Переключимся на него...
+            MainTabControl.SelectedIndex = 1;
         }
 
         private void MNUUpdateCheck_Click(object sender, EventArgs e)
@@ -3043,7 +3046,7 @@ namespace srcrepair
         {
             if (!(String.IsNullOrEmpty(CFGFileName)))
             {
-                Process.Start(Properties.Settings.Default.EditorBin, CE_OpenCfgDialog.FileName);
+                Process.Start(Properties.Settings.Default.EditorBin, CFGFileName);
             }
             else
             {
@@ -3124,10 +3127,10 @@ namespace srcrepair
         {
             if (!(String.IsNullOrEmpty(CFGFileName)))
             {
-                if (File.Exists(Path.Combine(SelGame.FullCfgPath, CFGFileName)))
+                if (File.Exists(CFGFileName))
                 {
-                    CreateConfigBackUp(SingleToArray(Path.Combine(SelGame.FullCfgPath, CFGFileName)), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
-                    MessageBox.Show(String.Format(CoreLib.GetLocalizedString("CE_BackUpCreated"), CFGFileName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CreateConfigBackUp(SingleToArray(CFGFileName), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
+                    MessageBox.Show(String.Format(CoreLib.GetLocalizedString("CE_BackUpCreated"), Path.GetFileName(CFGFileName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
