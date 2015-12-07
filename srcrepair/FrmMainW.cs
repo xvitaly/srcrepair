@@ -2403,51 +2403,32 @@ namespace srcrepair
 
         private void CE_Save_Click(object sender, EventArgs e)
         {
-            CE_SaveCfgDialog.InitialDirectory = SelGame.FullCfgPath; // Указываем путь по умолчанию к конфигам управляемого приложения...
-            if (!(String.IsNullOrEmpty(CFGFileName))) // Проверяем, открыт ли какой-либо файл...
+            // Указываем путь по умолчанию к конфигам управляемого приложения...
+            CE_SaveCfgDialog.InitialDirectory = SelGame.FullCfgPath;
+
+            // Проверяем, открыт ли какой-либо файл...
+            if (!(String.IsNullOrEmpty(CFGFileName)))
             {
-                // Будем бэкапировать только файлы, находящиеся в каталоге /cfg/
-                // управляемоего приложения. Остальные - нет.
+                // Будем бэкапить все файлы, сохраняемые в Редакторе...
                 if (Properties.Settings.Default.SafeCleanup)
                 {
-                    if (File.Exists(CFGFileName))
-                    {
-                        // Создаём резервную копию...
-                        CreateConfigBackUp(SingleToArray(CFGFileName), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
-                    }
+                    // Создаём резервную копию...
+                    if (File.Exists(CFGFileName)) { CreateConfigBackUp(SingleToArray(CFGFileName), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg); }
                 }
 
-                // Начинаем сохранение...
-                try
-                {
-                    WriteTableToFileNow(CE_OpenCfgDialog.FileName, Properties.Resources.AppName);
-                }
-                catch (Exception Ex)
-                {
-                    // Произошла ошибка при сохранении файла...
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("CE_CfgSVVEx"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                }
+                // Начинаем сохранение в тот же файл...
+                try { WriteTableToFileNow(CFGFileName, Properties.Resources.AppName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("CE_CfgSVVEx"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
             }
             else
             {
                 // Зададим стандартное имя (см. issue 21)...
-                if (!(File.Exists(Path.Combine(SelGame.FullCfgPath, "autoexec.cfg"))))
-                {
-                    // Файл autoexec.cfg не существует, поэтому предложим это имя...
-                    CE_SaveCfgDialog.FileName = "autoexec.cfg";
-                }
-                else
-                {
-                    // Файл существует, поэтому предложим стандартное имя безымянного конфига...
-                    CE_SaveCfgDialog.FileName = CoreLib.GetLocalizedString("UnnamedFileName");
-                }
+                CE_SaveCfgDialog.FileName = File.Exists(Path.Combine(SelGame.FullCfgPath, "autoexec.cfg")) ? CoreLib.GetLocalizedString("UnnamedFileName") : "autoexec.cfg";
 
-                // Файл не был открыт. Нужно сохранить и дать имя...
-                if (CE_SaveCfgDialog.ShowDialog() == DialogResult.OK) // Отображаем стандартный диалог сохранения файла...
+                // Файл не был открыт. Отображаем стандартный диалог сохранения файла...
+                if (CE_SaveCfgDialog.ShowDialog() == DialogResult.OK)
                 {
                     WriteTableToFileNow(CE_SaveCfgDialog.FileName, Properties.Resources.AppName);
                     CFGFileName = CE_SaveCfgDialog.FileName;
-                    CE_OpenCfgDialog.FileName = CE_SaveCfgDialog.FileName;
                     UpdateStatusBar(MainTabControl.SelectedIndex);
                 }
             }
