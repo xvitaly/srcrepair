@@ -201,6 +201,7 @@
             this.MNUInstaller = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUHEd = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUWinMnuDisabler = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUMuteMan = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnSub = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnSteam = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep6 = new System.Windows.Forms.ToolStripSeparator();
@@ -1659,6 +1660,7 @@
             this.MNUInstaller,
             this.MNUHEd,
             this.MNUWinMnuDisabler,
+            this.MNUMuteMan,
             this.MNUExtClnSub,
             this.MNUSep2,
             this.MNUExit});
@@ -1718,6 +1720,13 @@
             this.MNUWinMnuDisabler.Name = "MNUWinMnuDisabler";
             resources.ApplyResources(this.MNUWinMnuDisabler, "MNUWinMnuDisabler");
             this.MNUWinMnuDisabler.Click += new System.EventHandler(this.MNUWinMnuDisabler_Click);
+            // 
+            // MNUMuteMan
+            // 
+            this.MNUMuteMan.Image = global::srcrepair.Properties.Resources.Mute;
+            this.MNUMuteMan.Name = "MNUMuteMan";
+            resources.ApplyResources(this.MNUMuteMan, "MNUMuteMan");
+            this.MNUMuteMan.Click += new System.EventHandler(this.MNUMuteMan_Click);
             // 
             // MNUExtClnSub
             // 
@@ -2200,6 +2209,7 @@
         private System.Windows.Forms.Label L_GT_NCF_Brightness;
         private System.Windows.Forms.Label PS_PathGame;
         private System.Windows.Forms.ToolStripSeparator MNUSep6;
+        private System.Windows.Forms.ToolStripMenuItem MNUMuteMan;
     }
 }
 

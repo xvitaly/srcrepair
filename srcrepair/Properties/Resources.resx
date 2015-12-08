@@ -121,8 +121,8 @@
   <data name="report" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UpdateHUDDBFileHash" xml:space="preserve">
-    <value>https://www.easycoding.org/files/srcrepair/updates/huds.md5</value>
+  <data name="MO_CustomDirRegex" xml:space="preserve">
+    <value>^[0-9a-zA-Z]*$</value>
   </data>
   <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,6 +148,9 @@
   <data name="steam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\steam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Notebook" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Notebook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Wizard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Wizard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,8 +160,8 @@
   <data name="BU_PrefixCfg" xml:space="preserve">
     <value>Config</value>
   </data>
-  <data name="BU_PrefixVidAuto" xml:space="preserve">
-    <value>VideoAutoCfg</value>
+  <data name="UpdateHUDDBFileHash" xml:space="preserve">
+    <value>https://www.easycoding.org/files/srcrepair/updates/huds.md5</value>
   </data>
   <data name="AppURLOffSite" xml:space="preserve">
     <value>https://www.easycoding.org/</value>
@@ -169,6 +172,9 @@
   <data name="bug" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bug.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Restore" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Restore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="VtTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\VtTemplate.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
@@ -177,9 +183,6 @@
   </data>
   <data name="upd_err" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\upd_err.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="WorkshopFolderName" xml:space="preserve">
-    <value>workshop</value>
   </data>
   <data name="Xmas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Xmas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,17 +193,17 @@
   <data name="upd_chk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\upd_chk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UpdateGameDBHash" xml:space="preserve">
-    <value>https://www.easycoding.org/files/srcrepair/updates/games.md5</value>
+  <data name="WorkshopFolderName" xml:space="preserve">
+    <value>workshop</value>
   </data>
   <data name="UpdateGameDBFile" xml:space="preserve">
     <value>https://www.easycoding.org/files/srcrepair/updates/games.xml</value>
   </data>
-  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="AppDnlUA" xml:space="preserve">
     <value>wget</value>
+  </data>
+  <data name="SteamAppsFolderName" xml:space="preserve">
+    <value>SteamApps</value>
   </data>
   <data name="UpdateHUDDBFile" xml:space="preserve">
     <value>https://www.easycoding.org/files/srcrepair/updates/huds.xml</value>
@@ -214,8 +217,8 @@
   <data name="Options" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Options.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Restore" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Restore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="UpdateGameDBHash" xml:space="preserve">
+    <value>https://www.easycoding.org/files/srcrepair/updates/games.md5</value>
   </data>
   <data name="upd_av" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\upd_av.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,8 +250,8 @@
   <data name="UpdateChURI" xml:space="preserve">
     <value>https://www.easycoding.org/files/srcrepair/updates/list.txt</value>
   </data>
-  <data name="SteamProcName" xml:space="preserve">
-    <value>Steam</value>
+  <data name="AHE_About" xml:space="preserve">
+    <value>{0} for {1} by {2}. Version: {3}.</value>
   </data>
   <data name="AHE_HelpURL" xml:space="preserve">
     <value>https://www.easycoding.org/projects/mhed</value>
@@ -277,20 +280,14 @@
   <data name="AppURLReply" xml:space="preserve">
     <value>https://www.easycoding.org/projects/srcrepair#respond</value>
   </data>
-  <data name="BU_PrefixDef" xml:space="preserve">
-    <value>Container</value>
-  </data>
-  <data name="AHE_About" xml:space="preserve">
-    <value>{0} for {1} by {2}. Version: {3}.</value>
+  <data name="SteamProcName" xml:space="preserve">
+    <value>Steam</value>
   </data>
   <data name="AppName" xml:space="preserve">
     <value>SRC Repair</value>
   </data>
   <data name="EasyCoding" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EasyCoding.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Shopcart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Shopcart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LoadingFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoadingFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -301,6 +298,9 @@
   <data name="tf2world" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tf2world.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BU_PrefixVidAuto" xml:space="preserve">
+    <value>VideoAutoCfg</value>
+  </data>
   <data name="PI_TemplateFile" xml:space="preserve">
     <value>srcrepair.Resources.VtTemplate.txt</value>
   </data>
@@ -309,6 +309,12 @@
   </data>
   <data name="Exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BU_PrefixDef" xml:space="preserve">
+    <value>Container</value>
+  </data>
+  <data name="LV_About" xml:space="preserve">
+    <value>Log Viewer plugin for SRC Repair by EasyCoding Team.</value>
   </data>
   <data name="HtTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HtTemplate.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
@@ -328,8 +334,8 @@
   <data name="AHE_TemplateFile" xml:space="preserve">
     <value>srcrepair.Resources.HtTemplate.txt</value>
   </data>
-  <data name="SteamAppsFolderName" xml:space="preserve">
-    <value>SteamApps</value>
+  <data name="Shopcart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shopcart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PlatformFriendlyName" xml:space="preserve">
     <value>Windows</value>
@@ -337,16 +343,13 @@
   <data name="SteamExecBin" xml:space="preserve">
     <value>Steam.exe</value>
   </data>
-  <data name="MO_CustomDirRegex" xml:space="preserve">
-    <value>^[0-9a-zA-Z]*$</value>
+  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BU_PrefixVideo" xml:space="preserve">
     <value>VideoCfg</value>
   </data>
-  <data name="Notebook" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Notebook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LV_About" xml:space="preserve">
-    <value>Log Viewer plugin for SRC Repair by EasyCoding Team.</value>
+  <data name="Mute" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mute.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

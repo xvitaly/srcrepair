@@ -1029,6 +1029,12 @@
   <data name="MNUWinMnuDisabler.Text" xml:space="preserve">
     <value>&amp;Модуль отключения системных клавиш...</value>
   </data>
+  <data name="MNUMuteMan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 22</value>
+  </data>
+  <data name="MNUMuteMan.Text" xml:space="preserve">
+    <value>Управлен&amp;ие отключёнными игроками</value>
+  </data>
   <data name="MNUExtClnSteam.Size" type="System.Drawing.Size, System.Drawing">
     <value>247, 22</value>
   </data>

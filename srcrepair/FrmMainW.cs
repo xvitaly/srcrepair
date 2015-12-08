@@ -3325,5 +3325,12 @@ namespace srcrepair
             FrmStmClean StmCln = new FrmStmClean(App.FullSteamPath, SelGame.FullBackUpDirPath);
             StmCln.ShowDialog();
         }
+
+        private void MNUMuteMan_Click(object sender, EventArgs e)
+        {
+            // Запустим менеджер управления отключёнными игроками...
+            FrmMute FMm = new FrmMute();
+            FMm.ShowDialog();
+        }
     }
 }

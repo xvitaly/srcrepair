@@ -427,6 +427,13 @@ namespace srcrepair.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Mute {
+            get {
+                object obj = ResourceManager.GetObject("Mute", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Notebook {
             get {
                 object obj = ResourceManager.GetObject("Notebook", resourceCulture);

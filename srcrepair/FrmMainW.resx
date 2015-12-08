@@ -4499,6 +4499,12 @@
   <data name="MNUWinMnuDisabler.Text" xml:space="preserve">
     <value>S&amp;ystem buttons disabler...</value>
   </data>
+  <data name="MNUMuteMan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>274, 22</value>
+  </data>
+  <data name="MNUMuteMan.Text" xml:space="preserve">
+    <value>In-game mute manager</value>
+  </data>
   <data name="MNUExtClnSteam.Size" type="System.Drawing.Size, System.Drawing">
     <value>226, 22</value>
   </data>
@@ -5610,6 +5616,12 @@
     <value>MNUWinMnuDisabler</value>
   </data>
   <data name="&gt;&gt;MNUWinMnuDisabler.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUMuteMan.Name" xml:space="preserve">
+    <value>MNUMuteMan</value>
+  </data>
+  <data name="&gt;&gt;MNUMuteMan.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUExtClnSub.Name" xml:space="preserve">
