@@ -118,6 +118,11 @@ namespace srcrepair
         public string AppWorkshopDir;
 
         /// <summary>
+        /// Содержит путь к файлу со списком заглушенных пользователей.
+        /// </summary>
+        public string BanlistFileName;
+
+        /// <summary>
         /// Конструктор класса. Получает информацию о выбранном приложении.
         /// </summary>
         /// <param name="GameName">Название выбранного приложения</param>
@@ -155,6 +160,7 @@ namespace srcrepair
             // Заполняем другие служебные переменные...
             FullCfgPath = Path.Combine(FullGamePath, "cfg");
             FullBackUpDirPath = Path.Combine(UserDir, "backups", SmallAppName);
+            BanlistFileName = Path.Combine(FullGamePath, "voice_ban.dt");
             VideoCfgFile = Path.Combine(GamePath, ConfDir, "cfg", "video.txt");
             AppHUDDir = Path.Combine(UserDir, Properties.Settings.Default.HUDLocalDir, SmallAppName);
             CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : "");
