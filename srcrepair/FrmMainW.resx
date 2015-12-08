@@ -4503,7 +4503,7 @@
     <value>274, 22</value>
   </data>
   <data name="MNUMuteMan.Text" xml:space="preserve">
-    <value>In-game mute manager</value>
+    <value>&amp;In-game mute manager</value>
   </data>
   <data name="MNUExtClnSteam.Size" type="System.Drawing.Size, System.Drawing">
     <value>226, 22</value>
