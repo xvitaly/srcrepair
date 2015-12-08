@@ -11,9 +11,11 @@ namespace srcrepair
 {
     public partial class FrmMute : Form
     {
-        public FrmMute()
+        private string Banlist;
+        public FrmMute(string BL)
         {
             InitializeComponent();
+            Banlist = BL;
         }
 
         private void FrmMute_Load(object sender, EventArgs e)

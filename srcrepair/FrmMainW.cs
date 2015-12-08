@@ -3329,7 +3329,7 @@ namespace srcrepair
         private void MNUMuteMan_Click(object sender, EventArgs e)
         {
             // Запустим менеджер управления отключёнными игроками...
-            FrmMute FMm = new FrmMute();
+            FrmMute FMm = new FrmMute(SelGame.BanlistFileName);
             FMm.ShowDialog();
         }
     }
