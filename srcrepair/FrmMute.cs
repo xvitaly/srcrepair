@@ -15,5 +15,10 @@ namespace srcrepair
         {
             InitializeComponent();
         }
+
+        private void FrmMute_Load(object sender, EventArgs e)
+        {
+            //
+        }
     }
 }
