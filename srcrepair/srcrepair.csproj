@@ -136,6 +136,12 @@
     <Compile Include="FrmMhed.Designer.cs">
       <DependentUpon>FrmMhed.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMute.Designer.cs">
+      <DependentUpon>FrmMute.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRepBuilder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMhed.ru.resx">
       <DependentUpon>FrmMhed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMute.resx">
+      <DependentUpon>FrmMute.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRepBuilder.resx">
       <DependentUpon>FrmRepBuilder.cs</DependentUpon>
