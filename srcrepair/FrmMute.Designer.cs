@@ -76,18 +76,21 @@
             // 
             // MM_FReload
             // 
+            this.MM_FReload.Image = global::srcrepair.Properties.Resources.Refresh;
             this.MM_FReload.Name = "MM_FReload";
             resources.ApplyResources(this.MM_FReload, "MM_FReload");
             this.MM_FReload.Click += new System.EventHandler(this.UpdateTable);
             // 
             // MM_FSave
             // 
+            this.MM_FSave.Image = global::srcrepair.Properties.Resources.Save;
             this.MM_FSave.Name = "MM_FSave";
             resources.ApplyResources(this.MM_FSave, "MM_FSave");
             this.MM_FSave.Click += new System.EventHandler(this.WriteTable);
             // 
             // MM_Exit
             // 
+            this.MM_Exit.Image = global::srcrepair.Properties.Resources.Exit;
             this.MM_Exit.Name = "MM_Exit";
             resources.ApplyResources(this.MM_Exit, "MM_Exit");
             this.MM_Exit.Click += new System.EventHandler(this.MM_Exit_Click);
@@ -101,6 +104,7 @@
             // 
             // MM_HAbout
             // 
+            this.MM_HAbout.Image = global::srcrepair.Properties.Resources.Info;
             this.MM_HAbout.Name = "MM_HAbout";
             resources.ApplyResources(this.MM_HAbout, "MM_HAbout");
             this.MM_HAbout.Click += new System.EventHandler(this.AboutDlg);
