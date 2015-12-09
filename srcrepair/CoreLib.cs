@@ -479,6 +479,12 @@ namespace srcrepair
                 RecvStr = RecvStr.Replace("\t", " ");
             }
 
+            // Заменим все NULL символы на пробелы...
+            while (RecvStr.IndexOf("\0") != -1)
+            {
+                RecvStr = RecvStr.Replace("\0", " ");
+            }
+
             // Удалим все лишние пробелы...
             while (RecvStr.IndexOf("  ") != -1)
             {
