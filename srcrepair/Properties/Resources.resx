@@ -352,4 +352,7 @@
   <data name="Mute" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mute.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MM_SteamIDRegex" xml:space="preserve">
+    <value>^(STEAM_[0-9]:[0-9]:[0-9]+|\[U:[0-9]:[0-9]+\])$</value>
+  </data>
 </root>

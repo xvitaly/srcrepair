@@ -412,6 +412,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ^(STEAM_[0-9]:[0-9]:[0-9]+|\[U:[0-9]:[0-9]+\])$.
+        /// </summary>
+        internal static string MM_SteamIDRegex {
+            get {
+                return ResourceManager.GetString("MM_SteamIDRegex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ^[0-9a-zA-Z]*$.
         /// </summary>
         internal static string MO_CustomDirRegex {
