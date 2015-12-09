@@ -266,9 +266,9 @@
         private System.Windows.Forms.ToolStripButton MM_Copy;
         private System.Windows.Forms.ToolStripButton MM_Paste;
         private System.Windows.Forms.ToolStripSeparator MM_Sep2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SteamID;
         private System.Windows.Forms.ToolStripButton MM_About;
         private System.Windows.Forms.ToolStripButton MM_Delete;
         private System.Windows.Forms.ToolStripSeparator MM_Sep3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SteamID;
     }
 }

@@ -160,6 +160,9 @@
   <data name="MM_Status.Text" xml:space="preserve">
     <value>Готово.</value>
   </data>
+  <data name="SteamID.HeaderText" xml:space="preserve">
+    <value>SteamID пользователя</value>
+  </data>
   <data name="MM_Refresh.Text" xml:space="preserve">
     <value>&amp;Обновить</value>
   </data>
