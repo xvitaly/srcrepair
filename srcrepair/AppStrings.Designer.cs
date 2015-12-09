@@ -1231,6 +1231,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error detected while parsing game banlist file. Try again later..
+        /// </summary>
+        internal static string MM_ExceptionDetected {
+            get {
+                return ResourceManager.GetString("MM_ExceptionDetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sorry, but this feature is not yet implemented!.
         /// </summary>
         internal static string NotImplementedYet {

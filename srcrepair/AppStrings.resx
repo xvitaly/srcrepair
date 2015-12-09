@@ -750,4 +750,7 @@
   <data name="AC_NoItemsSelected" xml:space="preserve">
     <value>No items selected. Please select and then try again!</value>
   </data>
+  <data name="MM_ExceptionDetected" xml:space="preserve">
+    <value>An error detected while parsing game banlist file. Try again later.</value>
+  </data>
 </root>
