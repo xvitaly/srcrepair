@@ -48,9 +48,9 @@
             this.MM_Copy = new System.Windows.Forms.ToolStripButton();
             this.MM_Paste = new System.Windows.Forms.ToolStripButton();
             this.MM_Sep2 = new System.Windows.Forms.ToolStripSeparator();
-            this.MM_About = new System.Windows.Forms.ToolStripButton();
             this.MM_Delete = new System.Windows.Forms.ToolStripButton();
             this.MM_Sep3 = new System.Windows.Forms.ToolStripSeparator();
+            this.MM_About = new System.Windows.Forms.ToolStripButton();
             this.MM_Menu.SuspendLayout();
             this.MM_StatusBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MM_Table)).BeginInit();
@@ -198,13 +198,6 @@
             this.MM_Sep2.Name = "MM_Sep2";
             resources.ApplyResources(this.MM_Sep2, "MM_Sep2");
             // 
-            // MM_About
-            // 
-            this.MM_About.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            resources.ApplyResources(this.MM_About, "MM_About");
-            this.MM_About.Name = "MM_About";
-            this.MM_About.Click += new System.EventHandler(this.AboutDlg);
-            // 
             // MM_Delete
             // 
             this.MM_Delete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -217,6 +210,13 @@
             // 
             this.MM_Sep3.Name = "MM_Sep3";
             resources.ApplyResources(this.MM_Sep3, "MM_Sep3");
+            // 
+            // MM_About
+            // 
+            this.MM_About.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.MM_About, "MM_About");
+            this.MM_About.Name = "MM_About";
+            this.MM_About.Click += new System.EventHandler(this.AboutDlg);
             // 
             // FrmMute
             // 

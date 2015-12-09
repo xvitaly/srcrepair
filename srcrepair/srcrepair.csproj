@@ -256,6 +256,9 @@
     <EmbeddedResource Include="FrmMute.resx">
       <DependentUpon>FrmMute.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMute.ru.resx">
+      <DependentUpon>FrmMute.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRepBuilder.resx">
       <DependentUpon>FrmRepBuilder.cs</DependentUpon>
     </EmbeddedResource>
