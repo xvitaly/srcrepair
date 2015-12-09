@@ -101,7 +101,7 @@
             // 
             this.MM_HAbout.Name = "MM_HAbout";
             resources.ApplyResources(this.MM_HAbout, "MM_HAbout");
-            this.MM_HAbout.Click += new System.EventHandler(this.MM_HAbout_Click);
+            this.MM_HAbout.Click += new System.EventHandler(this.AboutDlg);
             // 
             // MM_StatusBar
             // 
@@ -194,7 +194,7 @@
             this.MM_About.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.MM_About, "MM_About");
             this.MM_About.Name = "MM_About";
-            this.MM_About.Click += new System.EventHandler(this.MM_About_Click);
+            this.MM_About.Click += new System.EventHandler(this.AboutDlg);
             // 
             // FrmMute
             // 
@@ -244,7 +244,7 @@
         private System.Windows.Forms.ToolStripButton MM_Copy;
         private System.Windows.Forms.ToolStripButton MM_Paste;
         private System.Windows.Forms.ToolStripSeparator MM_Sep2;
-        private System.Windows.Forms.ToolStripButton MM_About;
         private System.Windows.Forms.DataGridViewTextBoxColumn SteamID;
+        private System.Windows.Forms.ToolStripButton MM_About;
     }
 }

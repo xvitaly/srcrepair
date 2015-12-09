@@ -92,6 +92,11 @@ namespace srcrepair
             try { WriteTableToFile(Banlist); MessageBox.Show(CoreLib.GetLocalizedString("MM_SavedOK"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("MM_SaveException"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
         }
 
+        private void AboutDlg(object sender, EventArgs e)
+        {
+            MessageBox.Show(String.Format("{0} by {1}.", Text, CoreLib.GetAppCompany()), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         private void FrmMute_Load(object sender, EventArgs e)
         {
             UpdateTable(sender, e);
@@ -99,33 +104,37 @@ namespace srcrepair
 
         private void MM_Exit_Click(object sender, EventArgs e)
         {
-            //
             Close();
-        }
-
-        private void MM_HAbout_Click(object sender, EventArgs e)
-        {
-            //
         }
 
         private void MM_Cut_Click(object sender, EventArgs e)
         {
-            //
+            try
+            {
+                if (MM_Table.Rows[MM_Table.CurrentRow.Index].Cells[MM_Table.CurrentCell.ColumnIndex].Value != null)
+                {
+                    Clipboard.SetText(MM_Table.Rows[MM_Table.CurrentRow.Index].Cells[MM_Table.CurrentCell.ColumnIndex].Value.ToString());
+                    MM_Table.Rows[MM_Table.CurrentRow.Index].Cells[MM_Table.CurrentCell.ColumnIndex].Value = null;
+                }
+            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void MM_Copy_Click(object sender, EventArgs e)
         {
-            //
+            try
+            {
+                if (MM_Table.Rows[MM_Table.CurrentRow.Index].Cells[MM_Table.CurrentCell.ColumnIndex].Value != null)
+                {
+                    Clipboard.SetText(MM_Table.Rows[MM_Table.CurrentRow.Index].Cells[MM_Table.CurrentCell.ColumnIndex].Value.ToString());
+                }
+            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void MM_Paste_Click(object sender, EventArgs e)
         {
-            //
-        }
-
-        private void MM_About_Click(object sender, EventArgs e)
-        {
-            //
+            try { if (Clipboard.ContainsText()) { MM_Table.Rows[MM_Table.CurrentRow.Index].Cells[MM_Table.CurrentCell.ColumnIndex].Value = Clipboard.GetText(); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
     }
 }
