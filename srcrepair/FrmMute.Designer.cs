@@ -155,6 +155,7 @@
             // MM_Refresh
             // 
             this.MM_Refresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MM_Refresh.Image = global::srcrepair.Properties.Resources.Refresh;
             resources.ApplyResources(this.MM_Refresh, "MM_Refresh");
             this.MM_Refresh.Name = "MM_Refresh";
             this.MM_Refresh.Click += new System.EventHandler(this.UpdateTable);

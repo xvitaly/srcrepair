@@ -120,56 +120,7 @@
   <metadata name="MM_Menu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="MM_FReload.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+R</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="MM_FReload.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
-  </data>
-  <data name="MM_FReload.Text" xml:space="preserve">
-    <value>Reload</value>
-  </data>
-  <data name="MM_FSave.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+S</value>
-  </data>
-  <data name="MM_FSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
-  </data>
-  <data name="MM_FSave.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="MM_Exit.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Q</value>
-  </data>
-  <data name="MM_Exit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
-  </data>
-  <data name="MM_Exit.Text" xml:space="preserve">
-    <value>Exit</value>
-  </data>
-  <data name="MM_File.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 20</value>
-  </data>
-  <data name="MM_File.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
-  <data name="MM_HAbout.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Shift+F1</value>
-  </data>
-  <data name="MM_HAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 22</value>
-  </data>
-  <data name="MM_HAbout.Text" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="MM_Help.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
-  </data>
-  <data name="MM_Help.Text" xml:space="preserve">
-    <value>Help</value>
-  </data>
   <data name="MM_Menu.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -195,15 +146,58 @@
   <data name="&gt;&gt;MM_Menu.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="MM_File.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 20</value>
+  </data>
+  <data name="MM_File.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MM_FReload.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+R</value>
+  </data>
+  <data name="MM_FReload.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="MM_FReload.Text" xml:space="preserve">
+    <value>Reload</value>
+  </data>
+  <data name="MM_FSave.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+S</value>
+  </data>
+  <data name="MM_FSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="MM_FSave.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="MM_Exit.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+Q</value>
+  </data>
+  <data name="MM_Exit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 22</value>
+  </data>
+  <data name="MM_Exit.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="MM_Help.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 20</value>
+  </data>
+  <data name="MM_Help.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="MM_HAbout.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Shift+F1</value>
+  </data>
+  <data name="MM_HAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 22</value>
+  </data>
+  <data name="MM_HAbout.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
   <metadata name="MM_StatusBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>126, 17</value>
   </metadata>
-  <data name="MM_Status.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 17</value>
-  </data>
-  <data name="MM_Status.Text" xml:space="preserve">
-    <value>Ready</value>
-  </data>
   <data name="MM_StatusBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 264</value>
   </data>
@@ -228,15 +222,15 @@
   <data name="&gt;&gt;MM_StatusBar.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="MM_Status.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 17</value>
+  </data>
+  <data name="MM_Status.Text" xml:space="preserve">
+    <value>Ready</value>
+  </data>
   <metadata name="SteamID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="SteamID.HeaderText" xml:space="preserve">
-    <value>SteamID</value>
-  </data>
-  <data name="SteamID.Width" type="System.Int32, mscorlib">
-    <value>310</value>
-  </data>
   <data name="MM_Table.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 49</value>
   </data>
@@ -258,20 +252,18 @@
   <data name="&gt;&gt;MM_Table.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="SteamID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="SteamID.HeaderText" xml:space="preserve">
+    <value>SteamID</value>
+  </data>
+  <data name="SteamID.Width" type="System.Int32, mscorlib">
+    <value>310</value>
+  </data>
   <metadata name="MM_Toolbar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>236, 17</value>
   </metadata>
-  <data name="MM_Refresh.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAQ9JREFUOE+t09lq
-        wkAUBmBfyr5DfY32jaReSOmFCyKCgkKLFrVUBZeKiEbshqRuaNw1xiXmLxMJBJ0Zc+GBw9zMfDPnHMZm
-        u1ZE35s4zXCqjmC8Al+sgHLjD9y7yGFWPIbecOO45yORtMAEHnxxJHL1IyKI9JeEXqtMwOl50Q8bSS0l
-        8PzBBPbqAQQxICrgjeapgKZpkJUdBmNZB+y3d/QSnsIZKrDdqZjMFYj9OR9wB1NngHrQsJC36EkrfIkT
-        PuDyJ84AZbOHNF2j1Z2h9i3xAVKfOUjjZssN2oMFmq0xSkLfOmBu3E97iurnENlKxzpgbpzwO0Kh1kOy
-        KFoDjHmzVuYYjRmTDZfyWh9Yd/4B2Mz2w1z7EGUAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="MM_Refresh.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
