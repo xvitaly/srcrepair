@@ -52,10 +52,55 @@ namespace srcrepair
             }
         }
 
+        private void UpdateTable(object sender, EventArgs e)
+        {
+            try { ReadFileToTable(Banlist); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("MM_ExceptionDetected"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+        }
+
         private void FrmMute_Load(object sender, EventArgs e)
         {
+            UpdateTable(sender, e);
+        }
+
+        private void MM_FSave_Click(object sender, EventArgs e)
+        {
             //
-            ReadFileToTable(Banlist);
+        }
+
+        private void MM_Exit_Click(object sender, EventArgs e)
+        {
+            //
+            Close();
+        }
+
+        private void MM_HAbout_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void MM_Save_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void MM_Cut_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void MM_Copy_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void MM_Paste_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void MM_About_Click(object sender, EventArgs e)
+        {
+            //
         }
     }
 }

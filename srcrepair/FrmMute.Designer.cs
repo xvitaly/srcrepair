@@ -30,15 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMute));
             this.MM_Menu = new System.Windows.Forms.MenuStrip();
-            this.MM_StatusBar = new System.Windows.Forms.StatusStrip();
             this.MM_File = new System.Windows.Forms.ToolStripMenuItem();
             this.MM_FReload = new System.Windows.Forms.ToolStripMenuItem();
             this.MM_FSave = new System.Windows.Forms.ToolStripMenuItem();
             this.MM_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.MM_Help = new System.Windows.Forms.ToolStripMenuItem();
             this.MM_HAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.MM_StatusBar = new System.Windows.Forms.StatusStrip();
             this.MM_Status = new System.Windows.Forms.ToolStripStatusLabel();
             this.MM_Table = new System.Windows.Forms.DataGridView();
+            this.SteamID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MM_Toolbar = new System.Windows.Forms.ToolStrip();
             this.MM_Refresh = new System.Windows.Forms.ToolStripButton();
             this.MM_Save = new System.Windows.Forms.ToolStripButton();
@@ -48,7 +49,6 @@
             this.MM_Paste = new System.Windows.Forms.ToolStripButton();
             this.MM_Sep2 = new System.Windows.Forms.ToolStripSeparator();
             this.MM_About = new System.Windows.Forms.ToolStripButton();
-            this.SteamID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MM_Menu.SuspendLayout();
             this.MM_StatusBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MM_Table)).BeginInit();
@@ -63,13 +63,6 @@
             resources.ApplyResources(this.MM_Menu, "MM_Menu");
             this.MM_Menu.Name = "MM_Menu";
             // 
-            // MM_StatusBar
-            // 
-            this.MM_StatusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MM_Status});
-            resources.ApplyResources(this.MM_StatusBar, "MM_StatusBar");
-            this.MM_StatusBar.Name = "MM_StatusBar";
-            // 
             // MM_File
             // 
             this.MM_File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -83,16 +76,19 @@
             // 
             this.MM_FReload.Name = "MM_FReload";
             resources.ApplyResources(this.MM_FReload, "MM_FReload");
+            this.MM_FReload.Click += new System.EventHandler(this.UpdateTable);
             // 
             // MM_FSave
             // 
             this.MM_FSave.Name = "MM_FSave";
             resources.ApplyResources(this.MM_FSave, "MM_FSave");
+            this.MM_FSave.Click += new System.EventHandler(this.MM_FSave_Click);
             // 
             // MM_Exit
             // 
             this.MM_Exit.Name = "MM_Exit";
             resources.ApplyResources(this.MM_Exit, "MM_Exit");
+            this.MM_Exit.Click += new System.EventHandler(this.MM_Exit_Click);
             // 
             // MM_Help
             // 
@@ -105,6 +101,14 @@
             // 
             this.MM_HAbout.Name = "MM_HAbout";
             resources.ApplyResources(this.MM_HAbout, "MM_HAbout");
+            this.MM_HAbout.Click += new System.EventHandler(this.MM_HAbout_Click);
+            // 
+            // MM_StatusBar
+            // 
+            this.MM_StatusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MM_Status});
+            resources.ApplyResources(this.MM_StatusBar, "MM_StatusBar");
+            this.MM_StatusBar.Name = "MM_StatusBar";
             // 
             // MM_Status
             // 
@@ -120,6 +124,11 @@
             this.SteamID});
             resources.ApplyResources(this.MM_Table, "MM_Table");
             this.MM_Table.Name = "MM_Table";
+            // 
+            // SteamID
+            // 
+            resources.ApplyResources(this.SteamID, "SteamID");
+            this.SteamID.Name = "SteamID";
             // 
             // MM_Toolbar
             // 
@@ -140,12 +149,14 @@
             this.MM_Refresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.MM_Refresh, "MM_Refresh");
             this.MM_Refresh.Name = "MM_Refresh";
+            this.MM_Refresh.Click += new System.EventHandler(this.UpdateTable);
             // 
             // MM_Save
             // 
             this.MM_Save.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.MM_Save, "MM_Save");
             this.MM_Save.Name = "MM_Save";
+            this.MM_Save.Click += new System.EventHandler(this.MM_Save_Click);
             // 
             // MM_Sep1
             // 
@@ -157,18 +168,21 @@
             this.MM_Cut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.MM_Cut, "MM_Cut");
             this.MM_Cut.Name = "MM_Cut";
+            this.MM_Cut.Click += new System.EventHandler(this.MM_Cut_Click);
             // 
             // MM_Copy
             // 
             this.MM_Copy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.MM_Copy, "MM_Copy");
             this.MM_Copy.Name = "MM_Copy";
+            this.MM_Copy.Click += new System.EventHandler(this.MM_Copy_Click);
             // 
             // MM_Paste
             // 
             this.MM_Paste.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.MM_Paste, "MM_Paste");
             this.MM_Paste.Name = "MM_Paste";
+            this.MM_Paste.Click += new System.EventHandler(this.MM_Paste_Click);
             // 
             // MM_Sep2
             // 
@@ -180,11 +194,7 @@
             this.MM_About.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.MM_About, "MM_About");
             this.MM_About.Name = "MM_About";
-            // 
-            // SteamID
-            // 
-            resources.ApplyResources(this.SteamID, "SteamID");
-            this.SteamID.Name = "SteamID";
+            this.MM_About.Click += new System.EventHandler(this.MM_About_Click);
             // 
             // FrmMute
             // 
