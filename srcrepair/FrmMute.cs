@@ -84,12 +84,12 @@ namespace srcrepair
 
         private void UpdateTable(object sender, EventArgs e)
         {
-            try { ReadFileToTable(Banlist); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("MM_ExceptionDetected"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+            try { MM_Table.Rows.Clear(); ReadFileToTable(Banlist); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("MM_ExceptionDetected"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
         }
 
         private void WriteTable(object sender, EventArgs e)
         {
-            WriteTableToFile(Banlist);
+            try { WriteTableToFile(Banlist); MessageBox.Show(CoreLib.GetLocalizedString("MM_SavedOK"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("MM_SaveException"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
         }
 
         private void FrmMute_Load(object sender, EventArgs e)
