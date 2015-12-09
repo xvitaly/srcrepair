@@ -136,5 +136,10 @@ namespace srcrepair
         {
             try { if (Clipboard.ContainsText()) { MM_Table.Rows[MM_Table.CurrentRow.Index].Cells[MM_Table.CurrentCell.ColumnIndex].Value = Clipboard.GetText(); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
+
+        private void MM_Delete_Click(object sender, EventArgs e)
+        {
+            try { if (MM_Table.Rows.Count > 0) { MM_Table.Rows.Remove(MM_Table.CurrentRow); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+        }
     }
 }

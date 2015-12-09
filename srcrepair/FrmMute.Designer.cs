@@ -49,6 +49,8 @@
             this.MM_Paste = new System.Windows.Forms.ToolStripButton();
             this.MM_Sep2 = new System.Windows.Forms.ToolStripSeparator();
             this.MM_About = new System.Windows.Forms.ToolStripButton();
+            this.MM_Delete = new System.Windows.Forms.ToolStripButton();
+            this.MM_Sep3 = new System.Windows.Forms.ToolStripSeparator();
             this.MM_Menu.SuspendLayout();
             this.MM_StatusBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MM_Table)).BeginInit();
@@ -140,6 +142,8 @@
             this.MM_Copy,
             this.MM_Paste,
             this.MM_Sep2,
+            this.MM_Delete,
+            this.MM_Sep3,
             this.MM_About});
             resources.ApplyResources(this.MM_Toolbar, "MM_Toolbar");
             this.MM_Toolbar.Name = "MM_Toolbar";
@@ -196,6 +200,19 @@
             this.MM_About.Name = "MM_About";
             this.MM_About.Click += new System.EventHandler(this.AboutDlg);
             // 
+            // MM_Delete
+            // 
+            this.MM_Delete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MM_Delete.Image = global::srcrepair.Properties.Resources.Delete;
+            resources.ApplyResources(this.MM_Delete, "MM_Delete");
+            this.MM_Delete.Name = "MM_Delete";
+            this.MM_Delete.Click += new System.EventHandler(this.MM_Delete_Click);
+            // 
+            // MM_Sep3
+            // 
+            this.MM_Sep3.Name = "MM_Sep3";
+            resources.ApplyResources(this.MM_Sep3, "MM_Sep3");
+            // 
             // FrmMute
             // 
             resources.ApplyResources(this, "$this");
@@ -246,5 +263,7 @@
         private System.Windows.Forms.ToolStripSeparator MM_Sep2;
         private System.Windows.Forms.DataGridViewTextBoxColumn SteamID;
         private System.Windows.Forms.ToolStripButton MM_About;
+        private System.Windows.Forms.ToolStripButton MM_Delete;
+        private System.Windows.Forms.ToolStripSeparator MM_Sep3;
     }
 }
