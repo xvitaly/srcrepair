@@ -1240,6 +1240,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Successfully updated!.
+        /// </summary>
+        internal static string MM_SavedOK {
+            get {
+                return ResourceManager.GetString("MM_SavedOK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error detected while saving database to file. File may be damaged..
         /// </summary>
         internal static string MM_SaveException {

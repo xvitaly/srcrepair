@@ -756,4 +756,7 @@
   <data name="MM_SaveException" xml:space="preserve">
     <value>An error detected while saving database to file. File may be damaged.</value>
   </data>
+  <data name="MM_SavedOK" xml:space="preserve">
+    <value>Successfully updated!</value>
+  </data>
 </root>
