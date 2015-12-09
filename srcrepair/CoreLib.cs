@@ -735,5 +735,14 @@ namespace srcrepair
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
+
+        /// <summary>
+        /// Выводит название компании-разработчика сборки.
+        /// </summary>
+        public static string GetAppCompany()
+        {
+            object[] Attribs = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
+            return Attribs.Length != 0 ? ((AssemblyCompanyAttribute)Attribs[0]).Company : String.Empty;
+        }
     }
 }
