@@ -52,19 +52,49 @@ namespace srcrepair
             }
         }
 
+        private void WriteTableToFile(string FileName)
+        {
+            using (StreamWriter CFile = new StreamWriter(FileName, false, Encoding.Default))
+            {
+                // Записываем заголовок...
+                CFile.Write("\x01\x00\x00\x00");
+                
+                // Обходим таблицу в цикле...
+                for (int i = 0; i < MM_Table.Rows.Count - 1; i++)
+                {
+                    // Работаем только с заполненными полями...
+                    if (MM_Table.Rows[i].Cells[0].Value != null)
+                    {
+                        // Получаем строку...
+                        string Str = MM_Table.Rows[i].Cells[0].Value.ToString();
+                        
+                        // Проверяем на соответствие регулярному выражению...
+                        if (Regex.IsMatch(Str, Properties.Resources.MM_SteamIDRegex))
+                        {
+                            // Строим строку. Для выравнивания используем NULL символы...
+                            StringBuilder SB = new StringBuilder();
+                            SB.Append(Str);
+                            SB.Append('\0', 32 - Str.Length);
+                            CFile.Write(SB);
+                        }
+                    }
+                }
+            }
+        }
+
         private void UpdateTable(object sender, EventArgs e)
         {
             try { ReadFileToTable(Banlist); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("MM_ExceptionDetected"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
         }
 
+        private void WriteTable(object sender, EventArgs e)
+        {
+            WriteTableToFile(Banlist);
+        }
+
         private void FrmMute_Load(object sender, EventArgs e)
         {
             UpdateTable(sender, e);
-        }
-
-        private void MM_FSave_Click(object sender, EventArgs e)
-        {
-            //
         }
 
         private void MM_Exit_Click(object sender, EventArgs e)
@@ -74,11 +104,6 @@ namespace srcrepair
         }
 
         private void MM_HAbout_Click(object sender, EventArgs e)
-        {
-            //
-        }
-
-        private void MM_Save_Click(object sender, EventArgs e)
         {
             //
         }

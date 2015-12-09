@@ -82,7 +82,7 @@
             // 
             this.MM_FSave.Name = "MM_FSave";
             resources.ApplyResources(this.MM_FSave, "MM_FSave");
-            this.MM_FSave.Click += new System.EventHandler(this.MM_FSave_Click);
+            this.MM_FSave.Click += new System.EventHandler(this.WriteTable);
             // 
             // MM_Exit
             // 
@@ -156,7 +156,7 @@
             this.MM_Save.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             resources.ApplyResources(this.MM_Save, "MM_Save");
             this.MM_Save.Name = "MM_Save";
-            this.MM_Save.Click += new System.EventHandler(this.MM_Save_Click);
+            this.MM_Save.Click += new System.EventHandler(this.WriteTable);
             // 
             // MM_Sep1
             // 
