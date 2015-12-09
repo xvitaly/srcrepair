@@ -1240,6 +1240,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error detected while saving database to file. File may be damaged..
+        /// </summary>
+        internal static string MM_SaveException {
+            get {
+                return ResourceManager.GetString("MM_SaveException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sorry, but this feature is not yet implemented!.
         /// </summary>
         internal static string NotImplementedYet {

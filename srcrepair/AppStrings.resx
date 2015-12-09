@@ -753,4 +753,7 @@
   <data name="MM_ExceptionDetected" xml:space="preserve">
     <value>An error detected while parsing game banlist file. Try again later.</value>
   </data>
+  <data name="MM_SaveException" xml:space="preserve">
+    <value>An error detected while saving database to file. File may be damaged.</value>
+  </data>
 </root>
