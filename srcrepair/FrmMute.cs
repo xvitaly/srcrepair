@@ -164,7 +164,17 @@ namespace srcrepair
 
         private void MM_Delete_Click(object sender, EventArgs e)
         {
-            try { if (MM_Table.Rows.Count > 0) { MM_Table.Rows.Remove(MM_Table.CurrentRow); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try
+            {
+                if (MM_Table.Rows.Count > 0)
+                {
+                    foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
+                    {
+                        if (Cell.Selected) { MM_Table.Rows.RemoveAt(Cell.RowIndex); }
+                    }
+                } 
+            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
         #endregion
     }
