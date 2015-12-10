@@ -1298,7 +1298,7 @@ namespace srcrepair
                     }
                     else if (BufName.IndexOf(Properties.Resources.BU_PrefixVChat, StringComparison.CurrentCultureIgnoreCase) != -1)
                     {
-                        Buf = CoreLib.GetLocalizedString("BU_PrefixVChat");
+                        Buf = CoreLib.GetLocalizedString("BU_BType_DB");
                         BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_VChat"), FileName.CreationTime);
                     }
                     else if (BufName.IndexOf(Properties.Resources.BU_PrefixVideo, StringComparison.CurrentCultureIgnoreCase) != -1)

@@ -556,6 +556,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Database.
+        /// </summary>
+        internal static string BU_BType_DB {
+            get {
+                return ResourceManager.GetString("BU_BType_DB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Registry.
         /// </summary>
         internal static string BU_BType_Reg {

@@ -762,4 +762,7 @@
   <data name="BU_BName_VChat" xml:space="preserve">
     <value>Muted players</value>
   </data>
+  <data name="BU_BType_DB" xml:space="preserve">
+    <value>Database</value>
+  </data>
 </root>

@@ -974,4 +974,8 @@
     <value>База откл. игроков</value>
     <comment>Имя для отображения в списке бэкапов реестра (база отключённых игроков)</comment>
   </data>
+  <data name="BU_BType_DB" xml:space="preserve">
+    <value>База данных</value>
+    <comment>Тип бэкапа: база данных</comment>
+  </data>
 </root>
