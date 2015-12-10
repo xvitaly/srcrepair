@@ -744,5 +744,32 @@ namespace srcrepair
             object[] Attribs = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
             return Attribs.Length != 0 ? ((AssemblyCompanyAttribute)Attribs[0]).Company : String.Empty;
         }
+
+        /// <summary>
+        /// Создаёт резервную копию конфигов, имена которых переданы в параметре.
+        /// </summary>
+        /// <param name="Configs">Конфиги для бэкапа</param>
+        /// <param name="BackUpDir">Путь к каталогу с резервными копиями</param>
+        /// <param name="Prefix">Префикс имени файла резервной копии</param>
+        public static void CreateConfigBackUp(List<String> Configs, string BackUpDir, string Prefix)
+        {
+            // Проверяем чтобы каталог для бэкапов существовал...
+            if (!(Directory.Exists(BackUpDir))) { Directory.CreateDirectory(BackUpDir); }
+
+            // Копируем оригинальный файл в файл бэкапа...
+            try { CompressFiles(Configs, GenerateBackUpFileName(BackUpDir, Prefix)); } catch (Exception Ex) { WriteStringToLog(Ex.Message); }
+        }
+
+        /// <summary>
+        /// Возвращает массив для передачи в особые функции
+        /// </summary>
+        /// <param name="Str">Строка для создания</param>
+        /// <returns>Возвращает массив</returns>
+        public static List<String> SingleToArray(string Str)
+        {
+            List<String> Result = new List<String>();
+            Result.Add(Str);
+            return Result;
+        }
     }
 }

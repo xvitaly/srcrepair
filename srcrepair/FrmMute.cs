@@ -28,10 +28,12 @@ namespace srcrepair
     public partial class FrmMute : Form
     {
         private string Banlist;
-        public FrmMute(string BL)
+        private string BackUpDir;
+        public FrmMute(string BL, string BD)
         {
             InitializeComponent();
             Banlist = BL;
+            BackUpDir = BD;
         }
 
         private void ReadFileToTable(string FileName)
@@ -103,7 +105,12 @@ namespace srcrepair
 
         private void WriteTable(object sender, EventArgs e)
         {
-            try { WriteTableToFile(Banlist); MessageBox.Show(CoreLib.GetLocalizedString("MM_SavedOK"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("MM_SaveException"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+            try
+            {
+                if (Properties.Settings.Default.SafeCleanup) { if (File.Exists(Banlist)) { CoreLib.CreateConfigBackUp(CoreLib.SingleToArray(Banlist), BackUpDir, Properties.Resources.BU_PrefixVChat); } }
+                WriteTableToFile(Banlist); MessageBox.Show(CoreLib.GetLocalizedString("MM_SavedOK"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("MM_SaveException"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
         }
 
         private void AboutDlg(object sender, EventArgs e)

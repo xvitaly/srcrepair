@@ -244,6 +244,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to VoiceBan.
+        /// </summary>
+        internal static string BU_PrefixVChat {
+            get {
+                return ResourceManager.GetString("BU_PrefixVChat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to VideoAutoCfg.
         /// </summary>
         internal static string BU_PrefixVidAuto {

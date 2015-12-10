@@ -83,45 +83,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Возвращает массив для передачи в особые функции
-        /// </summary>
-        /// <param name="Str">Строка для создания</param>
-        /// <returns>Возвращает массив</returns>
-        private List<String> SingleToArray(string Str)
-        {
-            List<String> Result = new List<String>();
-            Result.Add(Str);
-            return Result;
-        }
-
-        /// <summary>
-        /// Создаёт резервную копию конфигов, имена которых переданы в параметре.
-        /// </summary>
-        /// <param name="Configs">Конфиги для бэкапа</param>
-        /// <param name="BackUpDir">Путь к каталогу с резервными копиями</param>
-        /// <param name="Prefix">Префикс имени файла резервной копии</param>
-        private void CreateConfigBackUp(List<String> Configs, string BackUpDir, string Prefix)
-        {
-            // Проверяем чтобы каталог для бэкапов существовал...
-            if (!(Directory.Exists(BackUpDir)))
-            {
-                // Каталоги не существуют. Создадим общий каталог для резервных копий...
-                Directory.CreateDirectory(BackUpDir);
-            }
-
-            try
-            {
-                // Копируем оригинальный файл в файл бэкапа...
-                CoreLib.CompressFiles(Configs, CoreLib.GenerateBackUpFileName(BackUpDir, Prefix));
-            }
-            catch (Exception Ex)
-            {
-                // Произошло исключение. Уведомим пользователя об этом...
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BackUpCreationFailed"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-            }
-        }
-
-        /// <summary>
         /// Очищает блобы (файлы с расширением *.blob) из каталога Steam.
         /// </summary>
         /// <param name="SteamPath">Полный путь к каталогу Steam</param>
@@ -2253,7 +2214,7 @@ namespace srcrepair
                         {
                             if (File.Exists(SelGame.VideoCfgFile))
                             {
-                                CreateConfigBackUp(SingleToArray(SelGame.VideoCfgFile), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
+                                CoreLib.CreateConfigBackUp(CoreLib.SingleToArray(SelGame.VideoCfgFile), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
                             }
                         }
 
@@ -2413,7 +2374,7 @@ namespace srcrepair
                 if (Properties.Settings.Default.SafeCleanup)
                 {
                     // Создаём резервную копию...
-                    if (File.Exists(CFGFileName)) { CreateConfigBackUp(SingleToArray(CFGFileName), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg); }
+                    if (File.Exists(CFGFileName)) { CoreLib.CreateConfigBackUp(CoreLib.SingleToArray(CFGFileName), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg); }
                 }
 
                 // Начинаем сохранение в тот же файл...
@@ -2533,7 +2494,7 @@ namespace srcrepair
                         {
                             if (Properties.Settings.Default.SafeCleanup)
                             {
-                                CreateConfigBackUp(SingleToArray(SelGame.VideoCfgFile), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVideo);
+                                CoreLib.CreateConfigBackUp(CoreLib.SingleToArray(SelGame.VideoCfgFile), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVideo);
                             }
                             File.Delete(SelGame.VideoCfgFile);
                             MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -2782,7 +2743,7 @@ namespace srcrepair
                     {
                         if (File.Exists(SelGame.VideoCfgFile))
                         {
-                            CreateConfigBackUp(SingleToArray(SelGame.VideoCfgFile), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVideo);
+                            CoreLib.CreateConfigBackUp(CoreLib.SingleToArray(SelGame.VideoCfgFile), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVideo);
                         }
                     }
                     MessageBox.Show(CoreLib.GetLocalizedString("BU_RegDone"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -3110,7 +3071,7 @@ namespace srcrepair
             {
                 if (File.Exists(CFGFileName))
                 {
-                    CreateConfigBackUp(SingleToArray(CFGFileName), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
+                    CoreLib.CreateConfigBackUp(CoreLib.SingleToArray(CFGFileName), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
                     MessageBox.Show(String.Format(CoreLib.GetLocalizedString("CE_BackUpCreated"), Path.GetFileName(CFGFileName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -3329,7 +3290,7 @@ namespace srcrepair
         private void MNUMuteMan_Click(object sender, EventArgs e)
         {
             // Запустим менеджер управления отключёнными игроками...
-            FrmMute FMm = new FrmMute(SelGame.BanlistFileName);
+            FrmMute FMm = new FrmMute(SelGame.BanlistFileName, SelGame.FullBackUpDirPath);
             FMm.ShowDialog();
         }
     }

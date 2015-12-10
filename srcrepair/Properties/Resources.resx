@@ -355,4 +355,7 @@
   <data name="MM_SteamIDRegex" xml:space="preserve">
     <value>^(STEAM_[0-9]:[0-9]:[0-9]+|\[U:[0-9]:[0-9]+\])$</value>
   </data>
+  <data name="BU_PrefixVChat" xml:space="preserve">
+    <value>VoiceBan</value>
+  </data>
 </root>
