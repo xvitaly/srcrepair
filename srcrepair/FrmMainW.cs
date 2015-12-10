@@ -1272,15 +1272,15 @@ namespace srcrepair
                     {
                         BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_GRGame"), FileName.CreationTime);
                     }
-                    if (BufName.IndexOf("Source_Options", StringComparison.CurrentCultureIgnoreCase) != -1)
+                    else if (BufName.IndexOf("Source_Options", StringComparison.CurrentCultureIgnoreCase) != -1)
                     {
                         BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_SRCAll"), FileName.CreationTime);
                     }
-                    if (BufName.IndexOf("Steam_BackUp", StringComparison.CurrentCultureIgnoreCase) != -1)
+                    else if (BufName.IndexOf("Steam_BackUp", StringComparison.CurrentCultureIgnoreCase) != -1)
                     {
                         BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_SteamAll"), FileName.CreationTime);
                     }
-                    if (BufName.IndexOf("Game_AutoBackUp", StringComparison.CurrentCultureIgnoreCase) != -1)
+                    else if (BufName.IndexOf("Game_AutoBackUp", StringComparison.CurrentCultureIgnoreCase) != -1)
                     {
                         BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_GameAuto"), FileName.CreationTime);
                     }
@@ -1291,17 +1291,22 @@ namespace srcrepair
                     {
                         BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_Bud"), FileName.CreationTime);
                     }
-                    if (BufName.IndexOf(Properties.Resources.BU_PrefixCfg, StringComparison.CurrentCultureIgnoreCase) != -1)
+                    else if (BufName.IndexOf(Properties.Resources.BU_PrefixCfg, StringComparison.CurrentCultureIgnoreCase) != -1)
                     {
                         Buf = CoreLib.GetLocalizedString("BU_BType_Cfg");
                         BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_Config"), FileName.CreationTime);
                     }
-                    if (BufName.IndexOf(Properties.Resources.BU_PrefixVideo, StringComparison.CurrentCultureIgnoreCase) != -1)
+                    else if (BufName.IndexOf(Properties.Resources.BU_PrefixVChat, StringComparison.CurrentCultureIgnoreCase) != -1)
+                    {
+                        Buf = CoreLib.GetLocalizedString("BU_PrefixVChat");
+                        BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_VChat"), FileName.CreationTime);
+                    }
+                    else if (BufName.IndexOf(Properties.Resources.BU_PrefixVideo, StringComparison.CurrentCultureIgnoreCase) != -1)
                     {
                         Buf = CoreLib.GetLocalizedString("BU_BType_Video");
                         BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_GRGame"), FileName.CreationTime);
                     }
-                    if (BufName.IndexOf(Properties.Resources.BU_PrefixVidAuto, StringComparison.CurrentCultureIgnoreCase) != -1)
+                    else if (BufName.IndexOf(Properties.Resources.BU_PrefixVidAuto, StringComparison.CurrentCultureIgnoreCase) != -1)
                     {
                         Buf = CoreLib.GetLocalizedString("BU_BType_Video");
                         BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_GameAuto"), FileName.CreationTime);

@@ -759,4 +759,7 @@
   <data name="MM_SavedOK" xml:space="preserve">
     <value>Successfully updated!</value>
   </data>
+  <data name="BU_BName_VChat" xml:space="preserve">
+    <value>Muted players</value>
+  </data>
 </root>

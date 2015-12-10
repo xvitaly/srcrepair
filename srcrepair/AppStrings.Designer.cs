@@ -529,6 +529,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Muted players.
+        /// </summary>
+        internal static string BU_BName_VChat {
+            get {
+                return ResourceManager.GetString("BU_BName_VChat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Config.
         /// </summary>
         internal static string BU_BType_Cfg {

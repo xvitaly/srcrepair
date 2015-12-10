@@ -970,4 +970,8 @@
     <value>Файл успешно сохранён!</value>
     <comment>Сообщение при успешном сохранении списка отключённых игроков в файл</comment>
   </data>
+  <data name="BU_BName_VChat" xml:space="preserve">
+    <value>База откл. игроков</value>
+    <comment>Имя для отображения в списке бэкапов реестра (база отключённых игроков)</comment>
+  </data>
 </root>
