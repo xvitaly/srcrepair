@@ -27,8 +27,6 @@ namespace srcrepair
 {
     public partial class FrmMute : Form
     {
-        private string Banlist;
-        private string BackUpDir;
         public FrmMute(string BL, string BD)
         {
             InitializeComponent();
@@ -36,6 +34,12 @@ namespace srcrepair
             BackUpDir = BD;
         }
 
+        #region IV
+        private string Banlist;
+        private string BackUpDir;
+        #endregion
+
+        #region IM
         private void ReadFileToTable(string FileName)
         {
             // Проверим существование файла...
@@ -162,5 +166,6 @@ namespace srcrepair
         {
             try { if (MM_Table.Rows.Count > 0) { MM_Table.Rows.Remove(MM_Table.CurrentRow); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
+        #endregion
     }
 }
