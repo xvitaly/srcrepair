@@ -1249,6 +1249,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} by {1}..
+        /// </summary>
+        internal static string MM_AboutDlg {
+            get {
+                return ResourceManager.GetString("MM_AboutDlg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error detected while parsing game banlist file. Try again later..
         /// </summary>
         internal static string MM_ExceptionDetected {

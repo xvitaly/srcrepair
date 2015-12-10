@@ -978,4 +978,8 @@
     <value>База данных</value>
     <comment>Тип бэкапа: база данных</comment>
   </data>
+  <data name="MM_AboutDlg" xml:space="preserve">
+    <value>{0} от {1}.</value>
+    <comment>Шаблон сообщения "о программе" модуля управления отключёнными игроками</comment>
+  </data>
 </root>
