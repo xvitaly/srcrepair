@@ -293,6 +293,20 @@ namespace srcrepair.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Copy {
+            get {
+                object obj = ResourceManager.GetObject("Copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Cut {
+            get {
+                object obj = ResourceManager.GetObject("Cut", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Delete {
             get {
                 object obj = ResourceManager.GetObject("Delete", resourceCulture);
@@ -462,6 +476,13 @@ namespace srcrepair.Properties {
         internal static System.Drawing.Bitmap Options {
             get {
                 object obj = ResourceManager.GetObject("Options", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Paste {
+            get {
+                object obj = ResourceManager.GetObject("Paste", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

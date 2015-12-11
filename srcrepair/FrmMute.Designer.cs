@@ -42,6 +42,10 @@
             this.MM_Table = new System.Windows.Forms.DataGridView();
             this.SteamID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MM_Context = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.MM_CCut = new System.Windows.Forms.ToolStripMenuItem();
+            this.MM_CCopy = new System.Windows.Forms.ToolStripMenuItem();
+            this.MM_CPaste = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.MM_CRemove = new System.Windows.Forms.ToolStripMenuItem();
             this.MM_Toolbar = new System.Windows.Forms.ToolStrip();
             this.MM_Refresh = new System.Windows.Forms.ToolStripButton();
@@ -144,9 +148,39 @@
             // MM_Context
             // 
             this.MM_Context.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MM_CCut,
+            this.MM_CCopy,
+            this.MM_CPaste,
+            this.toolStripMenuItem1,
             this.MM_CRemove});
             this.MM_Context.Name = "MM_Context";
             resources.ApplyResources(this.MM_Context, "MM_Context");
+            // 
+            // MM_CCut
+            // 
+            this.MM_CCut.Image = global::srcrepair.Properties.Resources.Cut;
+            this.MM_CCut.Name = "MM_CCut";
+            resources.ApplyResources(this.MM_CCut, "MM_CCut");
+            this.MM_CCut.Click += new System.EventHandler(this.MM_Cut_Click);
+            // 
+            // MM_CCopy
+            // 
+            this.MM_CCopy.Image = global::srcrepair.Properties.Resources.Copy;
+            this.MM_CCopy.Name = "MM_CCopy";
+            resources.ApplyResources(this.MM_CCopy, "MM_CCopy");
+            this.MM_CCopy.Click += new System.EventHandler(this.MM_Copy_Click);
+            // 
+            // MM_CPaste
+            // 
+            this.MM_CPaste.Image = global::srcrepair.Properties.Resources.Paste;
+            this.MM_CPaste.Name = "MM_CPaste";
+            resources.ApplyResources(this.MM_CPaste, "MM_CPaste");
+            this.MM_CPaste.Click += new System.EventHandler(this.MM_Paste_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
             // 
             // MM_CRemove
             // 
@@ -194,6 +228,7 @@
             // MM_Cut
             // 
             this.MM_Cut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MM_Cut.Image = global::srcrepair.Properties.Resources.Cut;
             resources.ApplyResources(this.MM_Cut, "MM_Cut");
             this.MM_Cut.Name = "MM_Cut";
             this.MM_Cut.Click += new System.EventHandler(this.MM_Cut_Click);
@@ -201,6 +236,7 @@
             // MM_Copy
             // 
             this.MM_Copy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MM_Copy.Image = global::srcrepair.Properties.Resources.Copy;
             resources.ApplyResources(this.MM_Copy, "MM_Copy");
             this.MM_Copy.Name = "MM_Copy";
             this.MM_Copy.Click += new System.EventHandler(this.MM_Copy_Click);
@@ -208,6 +244,7 @@
             // MM_Paste
             // 
             this.MM_Paste.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MM_Paste.Image = global::srcrepair.Properties.Resources.Paste;
             resources.ApplyResources(this.MM_Paste, "MM_Paste");
             this.MM_Paste.Name = "MM_Paste";
             this.MM_Paste.Click += new System.EventHandler(this.MM_Paste_Click);
@@ -292,5 +329,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SteamID;
         private System.Windows.Forms.ContextMenuStrip MM_Context;
         private System.Windows.Forms.ToolStripMenuItem MM_CRemove;
+        private System.Windows.Forms.ToolStripMenuItem MM_CCut;
+        private System.Windows.Forms.ToolStripMenuItem MM_CCopy;
+        private System.Windows.Forms.ToolStripMenuItem MM_CPaste;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
     }
 }
