@@ -249,20 +249,38 @@
   <metadata name="MM_Context.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>349, 17</value>
   </metadata>
+  <data name="MM_CCut.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+X</value>
+  </data>
+  <data name="MM_CCut.ShowShortcutKeys" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="MM_CCut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 22</value>
+    <value>149, 22</value>
   </data>
   <data name="MM_CCut.Text" xml:space="preserve">
     <value>Cut selected</value>
   </data>
+  <data name="MM_CCopy.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+C</value>
+  </data>
+  <data name="MM_CCopy.ShowShortcutKeys" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="MM_CCopy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 22</value>
+    <value>149, 22</value>
   </data>
   <data name="MM_CCopy.Text" xml:space="preserve">
     <value>Copy selected</value>
   </data>
+  <data name="MM_CPaste.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Ctrl+V</value>
+  </data>
+  <data name="MM_CPaste.ShowShortcutKeys" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="MM_CPaste.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 22</value>
+    <value>149, 22</value>
   </data>
   <data name="MM_CPaste.Text" xml:space="preserve">
     <value>Paste</value>
@@ -283,7 +301,7 @@
     <value>Remove selected</value>
   </data>
   <data name="MM_Context.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 98</value>
+    <value>150, 98</value>
   </data>
   <data name="&gt;&gt;MM_Context.Name" xml:space="preserve">
     <value>MM_Context</value>
