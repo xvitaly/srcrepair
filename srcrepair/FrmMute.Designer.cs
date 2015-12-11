@@ -216,6 +216,7 @@
             // MM_Save
             // 
             this.MM_Save.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MM_Save.Image = global::srcrepair.Properties.Resources.Save;
             resources.ApplyResources(this.MM_Save, "MM_Save");
             this.MM_Save.Name = "MM_Save";
             this.MM_Save.Click += new System.EventHandler(this.WriteTable);
@@ -270,6 +271,7 @@
             // MM_About
             // 
             this.MM_About.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MM_About.Image = global::srcrepair.Properties.Resources.Info;
             resources.ApplyResources(this.MM_About, "MM_About");
             this.MM_About.Name = "MM_About";
             this.MM_About.Click += new System.EventHandler(this.AboutDlg);
