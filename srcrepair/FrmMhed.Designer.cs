@@ -124,6 +124,7 @@
             // HEd_T_Cut
             // 
             this.HEd_T_Cut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.HEd_T_Cut.Image = global::srcrepair.Properties.Resources.Cut;
             resources.ApplyResources(this.HEd_T_Cut, "HEd_T_Cut");
             this.HEd_T_Cut.Name = "HEd_T_Cut";
             this.HEd_T_Cut.Click += new System.EventHandler(this.HEd_T_Cut_Click);
@@ -131,6 +132,7 @@
             // HEd_T_Copy
             // 
             this.HEd_T_Copy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.HEd_T_Copy.Image = global::srcrepair.Properties.Resources.Copy;
             resources.ApplyResources(this.HEd_T_Copy, "HEd_T_Copy");
             this.HEd_T_Copy.Name = "HEd_T_Copy";
             this.HEd_T_Copy.Click += new System.EventHandler(this.HEd_T_Copy_Click);
@@ -138,6 +140,7 @@
             // HEd_T_Paste
             // 
             this.HEd_T_Paste.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.HEd_T_Paste.Image = global::srcrepair.Properties.Resources.Paste;
             resources.ApplyResources(this.HEd_T_Paste, "HEd_T_Paste");
             this.HEd_T_Paste.Name = "HEd_T_Paste";
             this.HEd_T_Paste.Click += new System.EventHandler(this.HEd_T_Paste_Click);
@@ -163,6 +166,7 @@
             // HEd_T_About
             // 
             this.HEd_T_About.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.HEd_T_About.Image = global::srcrepair.Properties.Resources.Info;
             resources.ApplyResources(this.HEd_T_About, "HEd_T_About");
             this.HEd_T_About.Name = "HEd_T_About";
             this.HEd_T_About.Click += new System.EventHandler(this.HEd_M_About_Click);
