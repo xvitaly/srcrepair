@@ -3288,15 +3288,19 @@ namespace srcrepair
         private void MNUExtClnSteam_Click(object sender, EventArgs e)
         {
             // Запустим модуль очистки кэшей Steam...
-            FrmStmClean StmCln = new FrmStmClean(App.FullSteamPath, SelGame.FullBackUpDirPath);
-            StmCln.ShowDialog();
+            using (FrmStmClean StmCln = new FrmStmClean(App.FullSteamPath, SelGame.FullBackUpDirPath))
+            {
+                StmCln.ShowDialog();
+            }
         }
 
         private void MNUMuteMan_Click(object sender, EventArgs e)
         {
             // Запустим менеджер управления отключёнными игроками...
-            FrmMute FMm = new FrmMute(SelGame.BanlistFileName, SelGame.FullBackUpDirPath);
-            FMm.ShowDialog();
+            using (FrmMute FMm = new FrmMute(SelGame.BanlistFileName, SelGame.FullBackUpDirPath))
+            {
+                FMm.ShowDialog();
+            }
         }
     }
 }
