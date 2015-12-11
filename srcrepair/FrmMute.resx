@@ -196,7 +196,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MM_Menu.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <metadata name="MM_StatusBar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>126, 17</value>
@@ -232,7 +232,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MM_StatusBar.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <metadata name="MM_Table.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -245,6 +245,30 @@
   </data>
   <data name="SteamID.Width" type="System.Int32, mscorlib">
     <value>310</value>
+  </data>
+  <metadata name="MM_Context.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>349, 17</value>
+  </metadata>
+  <data name="MM_CRemove.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>Del</value>
+  </data>
+  <data name="MM_CRemove.ShowShortcutKeys" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="MM_CRemove.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 22</value>
+  </data>
+  <data name="MM_CRemove.Text" xml:space="preserve">
+    <value>Remove selected</value>
+  </data>
+  <data name="MM_Context.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 26</value>
+  </data>
+  <data name="&gt;&gt;MM_Context.Name" xml:space="preserve">
+    <value>MM_Context</value>
+  </data>
+  <data name="&gt;&gt;MM_Context.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="MM_Table.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 49</value>
@@ -265,7 +289,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MM_Table.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="MM_Toolbar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>236, 17</value>
@@ -444,7 +468,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MM_Toolbar.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -535,6 +559,12 @@
   </data>
   <data name="&gt;&gt;SteamID.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MM_CRemove.Name" xml:space="preserve">
+    <value>MM_CRemove</value>
+  </data>
+  <data name="&gt;&gt;MM_CRemove.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MM_Refresh.Name" xml:space="preserve">
     <value>MM_Refresh</value>

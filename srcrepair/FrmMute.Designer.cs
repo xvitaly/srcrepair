@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMute));
             this.MM_Menu = new System.Windows.Forms.MenuStrip();
             this.MM_File = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,6 +41,8 @@
             this.MM_Status = new System.Windows.Forms.ToolStripStatusLabel();
             this.MM_Table = new System.Windows.Forms.DataGridView();
             this.SteamID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MM_Context = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.MM_CRemove = new System.Windows.Forms.ToolStripMenuItem();
             this.MM_Toolbar = new System.Windows.Forms.ToolStrip();
             this.MM_Refresh = new System.Windows.Forms.ToolStripButton();
             this.MM_Save = new System.Windows.Forms.ToolStripButton();
@@ -54,6 +57,7 @@
             this.MM_Menu.SuspendLayout();
             this.MM_StatusBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MM_Table)).BeginInit();
+            this.MM_Context.SuspendLayout();
             this.MM_Toolbar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,6 +132,7 @@
             this.MM_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MM_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SteamID});
+            this.MM_Table.ContextMenuStrip = this.MM_Context;
             resources.ApplyResources(this.MM_Table, "MM_Table");
             this.MM_Table.Name = "MM_Table";
             // 
@@ -135,6 +140,20 @@
             // 
             resources.ApplyResources(this.SteamID, "SteamID");
             this.SteamID.Name = "SteamID";
+            // 
+            // MM_Context
+            // 
+            this.MM_Context.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MM_CRemove});
+            this.MM_Context.Name = "MM_Context";
+            resources.ApplyResources(this.MM_Context, "MM_Context");
+            // 
+            // MM_CRemove
+            // 
+            this.MM_CRemove.Image = global::srcrepair.Properties.Resources.Delete;
+            this.MM_CRemove.Name = "MM_CRemove";
+            resources.ApplyResources(this.MM_CRemove, "MM_CRemove");
+            this.MM_CRemove.Click += new System.EventHandler(this.MM_Delete_Click);
             // 
             // MM_Toolbar
             // 
@@ -239,6 +258,7 @@
             this.MM_StatusBar.ResumeLayout(false);
             this.MM_StatusBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MM_Table)).EndInit();
+            this.MM_Context.ResumeLayout(false);
             this.MM_Toolbar.ResumeLayout(false);
             this.MM_Toolbar.PerformLayout();
             this.ResumeLayout(false);
@@ -270,5 +290,7 @@
         private System.Windows.Forms.ToolStripButton MM_Delete;
         private System.Windows.Forms.ToolStripSeparator MM_Sep3;
         private System.Windows.Forms.DataGridViewTextBoxColumn SteamID;
+        private System.Windows.Forms.ContextMenuStrip MM_Context;
+        private System.Windows.Forms.ToolStripMenuItem MM_CRemove;
     }
 }
