@@ -171,13 +171,10 @@ namespace srcrepair
         {
             try
             {
-                if (MM_Table.Rows.Count > 0)
+                foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
                 {
-                    foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
-                    {
-                        if (Cell.Selected) { MM_Table.Rows.RemoveAt(Cell.RowIndex); }
-                    }
-                } 
+                    if (Cell.Selected) { MM_Table.Rows.RemoveAt(Cell.RowIndex); }
+                }
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
