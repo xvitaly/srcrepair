@@ -154,10 +154,12 @@ namespace srcrepair
         {
             try
             {
-                if (MM_Table.Rows[MM_Table.CurrentRow.Index].Cells[MM_Table.CurrentCell.ColumnIndex].Value != null)
+                StringBuilder SB = new StringBuilder();
+                foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
                 {
-                    Clipboard.SetText(MM_Table.Rows[MM_Table.CurrentRow.Index].Cells[MM_Table.CurrentCell.ColumnIndex].Value.ToString());
+                    if (Cell.Selected) { SB.AppendFormat("{0} ", Cell.Value); }
                 }
+                Clipboard.SetText(SB.ToString());
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
