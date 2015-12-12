@@ -55,17 +55,13 @@ namespace srcrepair
                         string ImpStr = CoreLib.CleanStrWx(OpenedHosts.ReadLine());
 
                         // Представим строку как массив...
-                        List<String> Res = new List<String>(ImpStr.Split(' '));
+                        List<String> Res = ParseRow(ImpStr);
                         
                         // Обойдём полученный массив в цикле...
                         foreach (string Str in Res)
                         {
-                            // Проверим валидность значения при помощи регулярного выражения...
-                            if (Regex.IsMatch(Str, Properties.Resources.MM_SteamIDRegexFn))
-                            {
-                                // Добавляем в форму...
-                                MM_Table.Rows.Add(Str);
-                            }
+                            // Добавляем в форму...
+                            MM_Table.Rows.Add(Str);
                         }
                     }
                 }
@@ -89,7 +85,7 @@ namespace srcrepair
                         string Str = MM_Table.Rows[i].Cells[0].Value.ToString();
                         
                         // Проверяем на соответствие регулярному выражению...
-                        if (Regex.IsMatch(Str, Properties.Resources.MM_SteamIDRegexFn))
+                        if (Regex.IsMatch(Str, String.Format("^{0}$", Properties.Resources.MM_SteamIDRegex)))
                         {
                             // Строим строку. Для выравнивания используем NULL символы...
                             StringBuilder SB = new StringBuilder();
@@ -105,7 +101,7 @@ namespace srcrepair
         private List<String> ParseRow(string Row)
         {
             List<String> Result = new List<String>();
-            MatchCollection Matches = Regex.Matches(Row, Properties.Resources.MM_SteamIDRegexUn);
+            MatchCollection Matches = Regex.Matches(Row, Properties.Resources.MM_SteamIDRegex);
             foreach (Match Mh in Matches) { Result.Add(Mh.Value); }
             return Result;
         }
