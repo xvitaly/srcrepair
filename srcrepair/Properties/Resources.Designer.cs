@@ -437,9 +437,18 @@ namespace srcrepair.Properties {
         /// <summary>
         ///   Looks up a localized string similar to ^(STEAM_[0-9]:[0-9]:[0-9]+|\[U:[0-9]:[0-9]+\])$.
         /// </summary>
-        internal static string MM_SteamIDRegex {
+        internal static string MM_SteamIDRegexFn {
             get {
-                return ResourceManager.GetString("MM_SteamIDRegex", resourceCulture);
+                return ResourceManager.GetString("MM_SteamIDRegexFn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (STEAM_[0-9]:[0-9]:[0-9]+|\[U:[0-9]:[0-9]+\]).
+        /// </summary>
+        internal static string MM_SteamIDRegexUn {
+            get {
+                return ResourceManager.GetString("MM_SteamIDRegexUn", resourceCulture);
             }
         }
         

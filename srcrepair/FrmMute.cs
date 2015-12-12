@@ -61,7 +61,7 @@ namespace srcrepair
                         foreach (string Str in Res)
                         {
                             // Проверим валидность значения при помощи регулярного выражения...
-                            if (Regex.IsMatch(Str, Properties.Resources.MM_SteamIDRegex))
+                            if (Regex.IsMatch(Str, Properties.Resources.MM_SteamIDRegexFn))
                             {
                                 // Добавляем в форму...
                                 MM_Table.Rows.Add(Str);
@@ -89,7 +89,7 @@ namespace srcrepair
                         string Str = MM_Table.Rows[i].Cells[0].Value.ToString();
                         
                         // Проверяем на соответствие регулярному выражению...
-                        if (Regex.IsMatch(Str, Properties.Resources.MM_SteamIDRegex))
+                        if (Regex.IsMatch(Str, Properties.Resources.MM_SteamIDRegexFn))
                         {
                             // Строим строку. Для выравнивания используем NULL символы...
                             StringBuilder SB = new StringBuilder();
@@ -100,6 +100,14 @@ namespace srcrepair
                     }
                 }
             }
+        }
+
+        private List<String> ParseRow(string Row)
+        {
+            List<String> Result = new List<String>();
+            MatchCollection Matches = Regex.Matches(Row, Properties.Resources.MM_SteamIDRegexUn);
+            foreach (Match Mh in Matches) { Result.Add(Mh.Value); }
+            return Result;
         }
 
         private void UpdateTable(object sender, EventArgs e)
@@ -166,7 +174,16 @@ namespace srcrepair
 
         private void MM_Paste_Click(object sender, EventArgs e)
         {
-            try { if (Clipboard.ContainsText()) { MM_Table.Rows[MM_Table.CurrentRow.Index].Cells[MM_Table.CurrentCell.ColumnIndex].Value = Clipboard.GetText(); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try
+            {
+                if (Clipboard.ContainsText())
+                {
+                    List<String> Rows = ParseRow(Clipboard.GetText());
+                    foreach (string Row in Rows) { MM_Table.Rows.Add(Row); }
+                }
+            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            
         }
 
         private void MM_Delete_Click(object sender, EventArgs e)
