@@ -197,6 +197,7 @@
             this.MM_CConvert.Image = global::srcrepair.Properties.Resources.Convert;
             this.MM_CConvert.Name = "MM_CConvert";
             resources.ApplyResources(this.MM_CConvert, "MM_CConvert");
+            this.MM_CConvert.Click += new System.EventHandler(this.MM_Convert_Click);
             // 
             // MM_Toolbar
             // 
