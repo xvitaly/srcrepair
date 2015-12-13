@@ -118,18 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="MM_File.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 20</value>
-  </data>
-  <data name="MM_File.Text" xml:space="preserve">
-    <value>&amp;Файл</value>
-  </data>
-  <data name="MM_Help.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 20</value>
-  </data>
-  <data name="MM_Help.Text" xml:space="preserve">
-    <value>&amp;Справка</value>
-  </data>
   <data name="MM_FReload.Size" type="System.Drawing.Size, System.Drawing">
     <value>178, 22</value>
   </data>
@@ -148,11 +136,23 @@
   <data name="MM_Exit.Text" xml:space="preserve">
     <value>За&amp;крыть</value>
   </data>
+  <data name="MM_File.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="MM_File.Text" xml:space="preserve">
+    <value>&amp;Файл</value>
+  </data>
   <data name="MM_HAbout.Size" type="System.Drawing.Size, System.Drawing">
     <value>198, 22</value>
   </data>
   <data name="MM_HAbout.Text" xml:space="preserve">
     <value>&amp;О программе</value>
+  </data>
+  <data name="MM_Help.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 20</value>
+  </data>
+  <data name="MM_Help.Text" xml:space="preserve">
+    <value>&amp;Справка</value>
   </data>
   <data name="MM_Status.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 17</value>
@@ -163,35 +163,41 @@
   <data name="SteamID.HeaderText" xml:space="preserve">
     <value>SteamID пользователя</value>
   </data>
-  <data name="MM_Context.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 98</value>
-  </data>
   <data name="MM_CCut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 22</value>
+    <value>163, 22</value>
   </data>
   <data name="MM_CCut.Text" xml:space="preserve">
     <value>&amp;Вырезать</value>
   </data>
   <data name="MM_CCopy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 22</value>
+    <value>163, 22</value>
   </data>
   <data name="MM_CCopy.Text" xml:space="preserve">
     <value>&amp;Копировать</value>
   </data>
   <data name="MM_CPaste.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 22</value>
+    <value>163, 22</value>
   </data>
   <data name="MM_CPaste.Text" xml:space="preserve">
     <value>Встав&amp;ить</value>
   </data>
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 6</value>
+  <data name="MM_Sep4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 6</value>
   </data>
   <data name="MM_CRemove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 22</value>
+    <value>163, 22</value>
   </data>
   <data name="MM_CRemove.Text" xml:space="preserve">
     <value>&amp;Удалить</value>
+  </data>
+  <data name="MM_CConvert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 22</value>
+  </data>
+  <data name="MM_CConvert.Text" xml:space="preserve">
+    <value>&amp;Преобразовать</value>
+  </data>
+  <data name="MM_Context.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 120</value>
   </data>
   <data name="MM_Refresh.Text" xml:space="preserve">
     <value>&amp;Обновить</value>
@@ -210,6 +216,9 @@
   </data>
   <data name="MM_Delete.Text" xml:space="preserve">
     <value>&amp;Удалить</value>
+  </data>
+  <data name="MM_Convert.Text" xml:space="preserve">
+    <value>&amp;Преобразовать SteamID</value>
   </data>
   <data name="MM_About.Text" xml:space="preserve">
     <value>О &amp;программе</value>

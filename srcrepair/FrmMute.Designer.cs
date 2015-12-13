@@ -45,8 +45,9 @@
             this.MM_CCut = new System.Windows.Forms.ToolStripMenuItem();
             this.MM_CCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.MM_CPaste = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.MM_Sep4 = new System.Windows.Forms.ToolStripSeparator();
             this.MM_CRemove = new System.Windows.Forms.ToolStripMenuItem();
+            this.MM_CConvert = new System.Windows.Forms.ToolStripMenuItem();
             this.MM_Toolbar = new System.Windows.Forms.ToolStrip();
             this.MM_Refresh = new System.Windows.Forms.ToolStripButton();
             this.MM_Save = new System.Windows.Forms.ToolStripButton();
@@ -56,6 +57,7 @@
             this.MM_Paste = new System.Windows.Forms.ToolStripButton();
             this.MM_Sep2 = new System.Windows.Forms.ToolStripSeparator();
             this.MM_Delete = new System.Windows.Forms.ToolStripButton();
+            this.MM_Convert = new System.Windows.Forms.ToolStripButton();
             this.MM_Sep3 = new System.Windows.Forms.ToolStripSeparator();
             this.MM_About = new System.Windows.Forms.ToolStripButton();
             this.MM_Menu.SuspendLayout();
@@ -151,8 +153,9 @@
             this.MM_CCut,
             this.MM_CCopy,
             this.MM_CPaste,
-            this.toolStripMenuItem1,
-            this.MM_CRemove});
+            this.MM_Sep4,
+            this.MM_CRemove,
+            this.MM_CConvert});
             this.MM_Context.Name = "MM_Context";
             resources.ApplyResources(this.MM_Context, "MM_Context");
             // 
@@ -177,10 +180,10 @@
             resources.ApplyResources(this.MM_CPaste, "MM_CPaste");
             this.MM_CPaste.Click += new System.EventHandler(this.MM_Paste_Click);
             // 
-            // toolStripMenuItem1
+            // MM_Sep4
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            this.MM_Sep4.Name = "MM_Sep4";
+            resources.ApplyResources(this.MM_Sep4, "MM_Sep4");
             // 
             // MM_CRemove
             // 
@@ -188,6 +191,12 @@
             this.MM_CRemove.Name = "MM_CRemove";
             resources.ApplyResources(this.MM_CRemove, "MM_CRemove");
             this.MM_CRemove.Click += new System.EventHandler(this.MM_Delete_Click);
+            // 
+            // MM_CConvert
+            // 
+            this.MM_CConvert.Image = global::srcrepair.Properties.Resources.Convert;
+            this.MM_CConvert.Name = "MM_CConvert";
+            resources.ApplyResources(this.MM_CConvert, "MM_CConvert");
             // 
             // MM_Toolbar
             // 
@@ -200,6 +209,7 @@
             this.MM_Paste,
             this.MM_Sep2,
             this.MM_Delete,
+            this.MM_Convert,
             this.MM_Sep3,
             this.MM_About});
             resources.ApplyResources(this.MM_Toolbar, "MM_Toolbar");
@@ -262,6 +272,14 @@
             resources.ApplyResources(this.MM_Delete, "MM_Delete");
             this.MM_Delete.Name = "MM_Delete";
             this.MM_Delete.Click += new System.EventHandler(this.MM_Delete_Click);
+            // 
+            // MM_Convert
+            // 
+            this.MM_Convert.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MM_Convert.Image = global::srcrepair.Properties.Resources.Convert;
+            resources.ApplyResources(this.MM_Convert, "MM_Convert");
+            this.MM_Convert.Name = "MM_Convert";
+            this.MM_Convert.Click += new System.EventHandler(this.MM_Convert_Click);
             // 
             // MM_Sep3
             // 
@@ -334,6 +352,8 @@
         private System.Windows.Forms.ToolStripMenuItem MM_CCut;
         private System.Windows.Forms.ToolStripMenuItem MM_CCopy;
         private System.Windows.Forms.ToolStripMenuItem MM_CPaste;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator MM_Sep4;
+        private System.Windows.Forms.ToolStripButton MM_Convert;
+        private System.Windows.Forms.ToolStripMenuItem MM_CConvert;
     }
 }
