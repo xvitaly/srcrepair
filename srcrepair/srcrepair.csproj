@@ -599,6 +599,7 @@
     <None Include="Resources\Copy.png" />
     <None Include="Resources\Cut.png" />
     <None Include="Resources\Paste.png" />
+    <None Include="Resources\Convert.png" />
     <Content Include="srcrepair.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

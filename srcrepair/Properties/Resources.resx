@@ -121,9 +121,6 @@
   <data name="report" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Mute" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Mute.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="MO_CustomDirRegex" xml:space="preserve">
     <value>^[0-9a-zA-Z]*$</value>
   </data>
@@ -145,11 +142,17 @@
   <data name="Donate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Donate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="green_circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green_circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="steam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\steam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MM_SteamIDRegex" xml:space="preserve">
+    <value>(STEAM_[0-9]:[0-9]:[0-9]+|\[U:[0-9]:[0-9]+\])</value>
   </data>
   <data name="Notebook" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Notebook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,8 +169,11 @@
   <data name="UpdateHUDDBFileHash" xml:space="preserve">
     <value>https://www.easycoding.org/files/srcrepair/updates/huds.md5</value>
   </data>
-  <data name="green_circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\green_circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AppURLOffSite" xml:space="preserve">
+    <value>https://www.easycoding.org/</value>
+  </data>
+  <data name="UpdateGameDBHash" xml:space="preserve">
+    <value>https://www.easycoding.org/files/srcrepair/updates/games.md5</value>
   </data>
   <data name="bug" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bug.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,11 +190,14 @@
   <data name="upd_err" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\upd_err.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Xmas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Xmas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="UpdateHUDDBFile" xml:space="preserve">
+    <value>https://www.easycoding.org/files/srcrepair/updates/huds.xml</value>
   </data>
   <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Paste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Paste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="upd_chk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\upd_chk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,14 +208,14 @@
   <data name="UpdateGameDBFile" xml:space="preserve">
     <value>https://www.easycoding.org/files/srcrepair/updates/games.xml</value>
   </data>
-  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="AppDnlUA" xml:space="preserve">
     <value>wget</value>
   </data>
-  <data name="UpdateHUDDBFile" xml:space="preserve">
-    <value>https://www.easycoding.org/files/srcrepair/updates/huds.xml</value>
+  <data name="Cut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SteamAppsFolderName" xml:space="preserve">
+    <value>SteamApps</value>
   </data>
   <data name="AppURLSteamGrID" xml:space="preserve">
     <value>steam://url/GroupSteamIDPage/103582791431662552</value>
@@ -217,8 +226,8 @@
   <data name="Options" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Options.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UpdateGameDBHash" xml:space="preserve">
-    <value>https://www.easycoding.org/files/srcrepair/updates/games.md5</value>
+  <data name="Xmas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Xmas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="upd_av" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\upd_av.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,6 +271,9 @@
   <data name="source" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\source.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -292,11 +304,8 @@
   <data name="EasyCoding" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EasyCoding.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Shopcart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Shopcart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LoadingFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LoadingFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Mute" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mute.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="upd_nx" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\upd_nx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -328,6 +337,9 @@
   <data name="clean" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clean.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LoadingFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoadingFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Info" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -340,8 +352,8 @@
   <data name="AHE_TemplateFile" xml:space="preserve">
     <value>srcrepair.Resources.HtTemplate.txt</value>
   </data>
-  <data name="SteamAppsFolderName" xml:space="preserve">
-    <value>SteamApps</value>
+  <data name="Shopcart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shopcart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PlatformFriendlyName" xml:space="preserve">
     <value>Windows</value>
@@ -349,22 +361,13 @@
   <data name="SteamExecBin" xml:space="preserve">
     <value>Steam.exe</value>
   </data>
-  <data name="AppURLOffSite" xml:space="preserve">
-    <value>https://www.easycoding.org/</value>
+  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BU_PrefixVideo" xml:space="preserve">
     <value>VideoCfg</value>
   </data>
-  <data name="Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cut" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Paste" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Paste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MM_SteamIDRegex" xml:space="preserve">
-    <value>(STEAM_[0-9]:[0-9]:[0-9]+|\[U:[0-9]:[0-9]+\])</value>
+  <data name="Convert" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Convert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
