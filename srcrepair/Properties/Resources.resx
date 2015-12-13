@@ -370,4 +370,7 @@
   <data name="Convert" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Convert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MM_SteamID32Regex" xml:space="preserve">
+    <value>^STEAM_0:[01]:[0-9]{1,9}$</value>
+  </data>
 </root>

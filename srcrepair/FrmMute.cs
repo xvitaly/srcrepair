@@ -196,7 +196,18 @@ namespace srcrepair
 
         private void MM_Convert_Click(object sender, EventArgs e)
         {
-            //
+            try
+            {
+                foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
+                {
+                    string CellText = Cell.Value.ToString();
+                    if (Cell.Selected && Regex.IsMatch(CellText, Properties.Resources.MM_SteamID32Regex))
+                    {
+                        Cell.Value = CoreLib.ConvertSteamID(CellText);
+                    }
+                }
+            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
         #endregion
     }
