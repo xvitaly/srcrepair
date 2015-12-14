@@ -203,7 +203,7 @@ namespace srcrepair
                     string CellText = Cell.Value.ToString();
                     if (Cell.Selected && Regex.IsMatch(CellText, Properties.Resources.MM_SteamID32Regex))
                     {
-                        Cell.Value = CoreLib.ConvertSteamID(CellText);
+                        Cell.Value = SteamConv.ConvSid32Sidv3(CellText);
                     }
                 }
             }
