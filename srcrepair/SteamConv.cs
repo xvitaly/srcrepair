@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace srcrepair
 {
@@ -41,6 +42,16 @@ namespace srcrepair
         public static long ConvSid32Sid64(string Sid32)
         {
             return GetUserID(Sid32) + Multi;
+        }
+
+        /// <summary>
+        /// Преобразовывает новый формат SteamIDv3 в универсальный SteamID64.
+        /// </summary>
+        /// <param name="Sidv3">SteamIDv3</param>
+        /// <returns>SteamID64</returns>
+        public static long ConvSidv3Sid64(string Sidv3)
+        {
+            return Int64.Parse(Regex.Match(Sidv3, @"\d{2,12}").Value) + Multi;
         }
     }
 }
