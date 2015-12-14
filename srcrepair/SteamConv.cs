@@ -17,9 +17,6 @@
  * о лицензии - в GPL.txt.
 */
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace srcrepair
