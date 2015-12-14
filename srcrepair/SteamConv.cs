@@ -7,10 +7,12 @@ namespace srcrepair
 {
     public sealed class SteamConv
     {
-        public static int GetUserID(string Sid32)
+        public const long Multi = 76561197960265728;
+        
+        public static long GetUserID(string Sid32)
         {
             string[] SidArr = Sid32.Split(':');
-            return Convert.ToInt32(SidArr[2]) * 2 + Convert.ToInt32(SidArr[1]);
+            return Convert.ToInt64(SidArr[2]) * 2 + Convert.ToInt64(SidArr[1]);
         }
         
         /// <summary>
@@ -21,6 +23,11 @@ namespace srcrepair
         public static string ConvSid32Sidv3(string Sid32)
         {
             return String.Format("[U:1:{0}]", GetUserID(Sid32));
+        }
+
+        public static long ConvSid32Sid64(string Sid32)
+        {
+            return GetUserID(Sid32) + Multi;
         }
     }
 }
