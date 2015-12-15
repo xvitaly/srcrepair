@@ -442,6 +442,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to http://steamcommunity.com/profiles/{0}/.
+        /// </summary>
+        internal static string MM_CommunityURL {
+            get {
+                return ResourceManager.GetString("MM_CommunityURL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ^STEAM_0:[01]:[0-9]{1,9}$.
         /// </summary>
         internal static string MM_SteamID32Regex {

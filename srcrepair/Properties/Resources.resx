@@ -373,4 +373,7 @@
   <data name="MM_SteamID32Regex" xml:space="preserve">
     <value>^STEAM_0:[01]:[0-9]{1,9}$</value>
   </data>
+  <data name="MM_CommunityURL" xml:space="preserve">
+    <value>http://steamcommunity.com/profiles/{0}/</value>
+  </data>
 </root>
