@@ -81,7 +81,7 @@ fetch_hud http://huds.tf/img/main/kbnhud.png https://github.com/Jotunn/KBNHud/ar
 fetch_hud http://huds.tf/img/main/medhud.png https://github.com/Intellectualbadass/medHUD/archive/master.zip medhud
 fetch_hud http://huds.tf/img/main/prismhud.png https://github.com/JarateKing/PrismHUD/archive/master.zip prismhud
 fetch_hud http://huds.tf/img/main/rayshud.png https://github.com/raysfire/rayshud/archive/master.zip rayshud
-fetch_hud http://huds.tf/img/main/evehud.png http://files.gamebanana.com/guis/eve_hud_v368_2.zip evehud
+fetch_hud http://huds.tf/img/main/evehud.png http://files.gamebanana.com/guis/eve_hud_v369.zip evehud
 fetch_hud http://huds.tf/biscottihud/img/main.png https://github.com/MedicodiBiscotti/biscottiHUD/archive/master.zip biscottihud
 fetch_hud http://huds.tf/flamehud/img/main.png https://github.com/mattr0d/flamehud/archive/master.zip flamehud
 fetch_hud http://huds.tf/frankenhud/img/main.png https://github.com/TheKins/frankenhud/archive/master.zip frankenhud
