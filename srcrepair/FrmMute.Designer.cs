@@ -48,6 +48,7 @@
             this.MM_Sep4 = new System.Windows.Forms.ToolStripSeparator();
             this.MM_CRemove = new System.Windows.Forms.ToolStripMenuItem();
             this.MM_CConvert = new System.Windows.Forms.ToolStripMenuItem();
+            this.showSteamProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MM_Toolbar = new System.Windows.Forms.ToolStrip();
             this.MM_Refresh = new System.Windows.Forms.ToolStripButton();
             this.MM_Save = new System.Windows.Forms.ToolStripButton();
@@ -58,6 +59,7 @@
             this.MM_Sep2 = new System.Windows.Forms.ToolStripSeparator();
             this.MM_Delete = new System.Windows.Forms.ToolStripButton();
             this.MM_Convert = new System.Windows.Forms.ToolStripButton();
+            this.MM_Steam = new System.Windows.Forms.ToolStripButton();
             this.MM_Sep3 = new System.Windows.Forms.ToolStripSeparator();
             this.MM_About = new System.Windows.Forms.ToolStripButton();
             this.MM_Menu.SuspendLayout();
@@ -155,7 +157,8 @@
             this.MM_CPaste,
             this.MM_Sep4,
             this.MM_CRemove,
-            this.MM_CConvert});
+            this.MM_CConvert,
+            this.showSteamProfileToolStripMenuItem});
             this.MM_Context.Name = "MM_Context";
             resources.ApplyResources(this.MM_Context, "MM_Context");
             // 
@@ -199,6 +202,13 @@
             resources.ApplyResources(this.MM_CConvert, "MM_CConvert");
             this.MM_CConvert.Click += new System.EventHandler(this.MM_Convert_Click);
             // 
+            // showSteamProfileToolStripMenuItem
+            // 
+            this.showSteamProfileToolStripMenuItem.Image = global::srcrepair.Properties.Resources.steam;
+            this.showSteamProfileToolStripMenuItem.Name = "showSteamProfileToolStripMenuItem";
+            resources.ApplyResources(this.showSteamProfileToolStripMenuItem, "showSteamProfileToolStripMenuItem");
+            this.showSteamProfileToolStripMenuItem.Click += new System.EventHandler(this.MM_Steam_Click);
+            // 
             // MM_Toolbar
             // 
             this.MM_Toolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -211,6 +221,7 @@
             this.MM_Sep2,
             this.MM_Delete,
             this.MM_Convert,
+            this.MM_Steam,
             this.MM_Sep3,
             this.MM_About});
             resources.ApplyResources(this.MM_Toolbar, "MM_Toolbar");
@@ -281,6 +292,14 @@
             resources.ApplyResources(this.MM_Convert, "MM_Convert");
             this.MM_Convert.Name = "MM_Convert";
             this.MM_Convert.Click += new System.EventHandler(this.MM_Convert_Click);
+            // 
+            // MM_Steam
+            // 
+            this.MM_Steam.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.MM_Steam.Image = global::srcrepair.Properties.Resources.steam;
+            resources.ApplyResources(this.MM_Steam, "MM_Steam");
+            this.MM_Steam.Name = "MM_Steam";
+            this.MM_Steam.Click += new System.EventHandler(this.MM_Steam_Click);
             // 
             // MM_Sep3
             // 
@@ -356,5 +375,7 @@
         private System.Windows.Forms.ToolStripSeparator MM_Sep4;
         private System.Windows.Forms.ToolStripButton MM_Convert;
         private System.Windows.Forms.ToolStripMenuItem MM_CConvert;
+        private System.Windows.Forms.ToolStripButton MM_Steam;
+        private System.Windows.Forms.ToolStripMenuItem showSteamProfileToolStripMenuItem;
     }
 }

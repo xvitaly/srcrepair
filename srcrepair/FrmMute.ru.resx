@@ -164,40 +164,46 @@
     <value>SteamID пользователя</value>
   </data>
   <data name="MM_CCut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="MM_CCut.Text" xml:space="preserve">
     <value>&amp;Вырезать</value>
   </data>
   <data name="MM_CCopy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="MM_CCopy.Text" xml:space="preserve">
     <value>&amp;Копировать</value>
   </data>
   <data name="MM_CPaste.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="MM_CPaste.Text" xml:space="preserve">
     <value>Встав&amp;ить</value>
   </data>
   <data name="MM_Sep4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 6</value>
+    <value>177, 6</value>
   </data>
   <data name="MM_CRemove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="MM_CRemove.Text" xml:space="preserve">
     <value>&amp;Удалить</value>
   </data>
   <data name="MM_CConvert.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="MM_CConvert.Text" xml:space="preserve">
     <value>&amp;Преобразовать</value>
   </data>
+  <data name="showSteamProfileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="showSteamProfileToolStripMenuItem.Text" xml:space="preserve">
+    <value>Пока&amp;зать профиль</value>
+  </data>
   <data name="MM_Context.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 120</value>
+    <value>181, 142</value>
   </data>
   <data name="MM_Refresh.Text" xml:space="preserve">
     <value>&amp;Обновить</value>
@@ -219,6 +225,9 @@
   </data>
   <data name="MM_Convert.Text" xml:space="preserve">
     <value>&amp;Преобразовать SteamID</value>
+  </data>
+  <data name="MM_Steam.Text" xml:space="preserve">
+    <value>Пока&amp;зать профиль Steam</value>
   </data>
   <data name="MM_About.Text" xml:space="preserve">
     <value>О &amp;программе</value>

@@ -209,6 +209,11 @@ namespace srcrepair
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
+
+        private void MM_Steam_Click(object sender, EventArgs e)
+        {
+            //
+        }
         #endregion
     }
 }

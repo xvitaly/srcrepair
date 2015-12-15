@@ -306,8 +306,14 @@
   <data name="MM_CConvert.Text" xml:space="preserve">
     <value>Co&amp;nvert SteamIDs</value>
   </data>
+  <data name="showSteamProfileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 22</value>
+  </data>
+  <data name="showSteamProfileToolStripMenuItem.Text" xml:space="preserve">
+    <value>Sh&amp;ow Steam profile</value>
+  </data>
   <data name="MM_Context.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 120</value>
+    <value>178, 142</value>
   </data>
   <data name="&gt;&gt;MM_Context.Name" xml:space="preserve">
     <value>MM_Context</value>
@@ -410,6 +416,15 @@
   </data>
   <data name="MM_Convert.Text" xml:space="preserve">
     <value>Con&amp;vert SteamIDs</value>
+  </data>
+  <data name="MM_Steam.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="MM_Steam.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="MM_Steam.Text" xml:space="preserve">
+    <value>&amp;Open Steam profile</value>
   </data>
   <data name="MM_Sep3.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
@@ -573,6 +588,12 @@
   <data name="&gt;&gt;MM_CConvert.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;showSteamProfileToolStripMenuItem.Name" xml:space="preserve">
+    <value>showSteamProfileToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;showSteamProfileToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;MM_Refresh.Name" xml:space="preserve">
     <value>MM_Refresh</value>
   </data>
@@ -625,6 +646,12 @@
     <value>MM_Convert</value>
   </data>
   <data name="&gt;&gt;MM_Convert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MM_Steam.Name" xml:space="preserve">
+    <value>MM_Steam</value>
+  </data>
+  <data name="&gt;&gt;MM_Steam.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MM_Sep3.Name" xml:space="preserve">
