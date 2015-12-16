@@ -4499,6 +4499,9 @@
   <data name="MNUWinMnuDisabler.Text" xml:space="preserve">
     <value>S&amp;ystem buttons disabler...</value>
   </data>
+  <data name="MNUMuteMan.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
+    <value>F3</value>
+  </data>
   <data name="MNUMuteMan.Size" type="System.Drawing.Size, System.Drawing">
     <value>274, 22</value>
   </data>
