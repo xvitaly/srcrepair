@@ -5677,6 +5677,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allow / disallow players to use blast damage to move during the pre-round freeze period..
+        /// </summary>
+        internal static string tf_preround_push_from_damage_enable {
+            get {
+                return ResourceManager.GetString("tf_preround_push_from_damage_enable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The minimum amount of time to spend in the press-and-hold taunt&apos;s pose..
         /// </summary>
         internal static string tf_pressandhold_minduration {

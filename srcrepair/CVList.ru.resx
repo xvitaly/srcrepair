@@ -3525,4 +3525,7 @@
   <data name="tf_passtime_ball_model" xml:space="preserve">
     <value>Задаёт модель мяча на картах режима PASS Time.</value>
   </data>
+  <data name="tf_preround_push_from_damage_enable" xml:space="preserve">
+    <value>Разрешает / запрещает игрокам отталкиваться при помощи взрывов во время предстартовой заморозки.</value>
+  </data>
 </root>

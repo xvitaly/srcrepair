@@ -2169,4 +2169,7 @@
   <data name="tv_delaymapchange_protect" xml:space="preserve">
     <value>Prevent manual map changes if SourceTV has not caught up with a major event like the end of a round.</value>
   </data>
+  <data name="tf_preround_push_from_damage_enable" xml:space="preserve">
+    <value>Allow / disallow players to use blast damage to move during the pre-round freeze period.</value>
+  </data>
 </root>
