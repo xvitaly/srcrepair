@@ -3195,21 +3195,19 @@ namespace srcrepair
             if (SelHUD.IsUpdated)
             {
                 // Проверим установлен ли выбранный HUD...
-                if (!SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir))
+                if (SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir))
                 {
-                    // Начинаем загрузку если файл не существует...
-                    if (!File.Exists(SelHUD.LocalFile)) { CoreLib.DownloadFileEx(Properties.Settings.Default.HUDUseUpstream ? SelHUD.UpURI : SelHUD.URI, SelHUD.LocalFile); }
-
-                    // Распаковываем загруженный архив с файлами HUD...
-                    CoreLib.ExtractFiles(SelHUD.LocalFile, Path.Combine(SelGame.CustomInstallDir, "hudtemp"));
-
-                    // Запускаем установку пакета в отдельном потоке...
-                    if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(); }
+                    // HUD установлен. Выводим форму с модулем удаления всего каталога...
                 }
-                else
-                {
-                    MessageBox.Show(CoreLib.GetLocalizedString("HD_AlreadyInstalled"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
+
+                // Начинаем загрузку если файл не существует...
+                if (!File.Exists(SelHUD.LocalFile)) { CoreLib.DownloadFileEx(Properties.Settings.Default.HUDUseUpstream ? SelHUD.UpURI : SelHUD.URI, SelHUD.LocalFile); }
+
+                // Распаковываем загруженный архив с файлами HUD...
+                CoreLib.ExtractFiles(SelHUD.LocalFile, Path.Combine(SelGame.CustomInstallDir, "hudtemp"));
+
+                // Запускаем установку пакета в отдельном потоке...
+                if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(); }
             }
             else
             {
