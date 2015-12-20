@@ -1638,6 +1638,7 @@ namespace srcrepair
         /// <param name="State">Статус выбранного HUD</param>
         private void SetHUDButtons(bool State)
         {
+            HD_Install.Text = CoreLib.GetLocalizedString(State ? "HD_BtnUpdateText" : "HD_BtnInstallText");
             HD_Uninstall.Enabled = State;
             HD_OpenDir.Enabled = State;
         }
@@ -1859,9 +1860,7 @@ namespace srcrepair
             if (e.Error == null) { MessageBox.Show(CoreLib.GetLocalizedString("HD_InstallSuccessfull"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("HD_InstallError"), Properties.Resources.AppName, e.Error.Message, e.Error.Source, MessageBoxIcon.Error); }
 
             // Включаем кнопку удаления если HUD установлен...
-            bool IsInstalled = SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir);
-            HD_Uninstall.Enabled = IsInstalled;
-            HD_OpenDir.Enabled = IsInstalled;
+            SetHUDButtons(SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir));
         }
 
         #endregion
