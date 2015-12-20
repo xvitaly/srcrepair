@@ -986,4 +986,8 @@
     <value>Обновить выбранный HUD</value>
     <comment>Текст кнопки Установить при уже установленном HUD</comment>
   </data>
+  <data name="HD_BtnInstallText" xml:space="preserve">
+    <value>Установить выбранный HUD</value>
+    <comment>Текст кнопки Установить выбранный HUD</comment>
+  </data>
 </root>

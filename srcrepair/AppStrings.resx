@@ -771,4 +771,7 @@
   <data name="HD_BtnUpdateText" xml:space="preserve">
     <value>Update selected HUD</value>
   </data>
+  <data name="HD_BtnInstallText" xml:space="preserve">
+    <value>Install selected HUD</value>
+  </data>
 </root>

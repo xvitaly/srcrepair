@@ -1105,6 +1105,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Install selected HUD.
+        /// </summary>
+        internal static string HD_BtnInstallText {
+            get {
+                return ResourceManager.GetString("HD_BtnInstallText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update selected HUD.
         /// </summary>
         internal static string HD_BtnUpdateText {
