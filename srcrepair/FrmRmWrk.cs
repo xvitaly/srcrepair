@@ -33,7 +33,8 @@ namespace srcrepair
 
         private void RW_Wrk_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            //
+            // Отображаем прогресс удаления файлов...
+            RW_PrgBr.Value = e.ProgressPercentage;
         }
 
         private void RW_Wrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
