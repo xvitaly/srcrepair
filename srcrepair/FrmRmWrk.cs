@@ -22,7 +22,8 @@ namespace srcrepair
 
         private void FrmRmWrk_Load(object sender, EventArgs e)
         {
-            //
+            // Запускаем удаление асинхронно...
+            if (!RW_Wrk.IsBusy) { RW_Wrk.RunWorkerAsync(); }
         }
 
         private void RW_Wrk_DoWork(object sender, DoWorkEventArgs e)
