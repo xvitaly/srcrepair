@@ -45,7 +45,7 @@ namespace srcrepair
             {
                 if (Directory.Exists(DirMs))
                 {
-                    try { DirectoryInfo DInfo = new DirectoryInfo(DirMs); FileInfo[] DirList = DInfo.GetFiles("*.*"); foreach (FileInfo DItem in DirList) { Result.Add(DItem.FullName); } try { List<String> SubDirs = new List<string>(); foreach (DirectoryInfo Dir in DInfo.GetDirectories()) { SubDirs.Add(Path.Combine(Dir.FullName)); } if (SubDirs.Count > 0) { Result.AddRange(DetectFilesForCleanup(SubDirs)); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    DirectoryInfo DInfo = new DirectoryInfo(DirMs);  FileInfo[] DirList = DInfo.GetFiles("*.*");  foreach (FileInfo DItem in DirList) { Result.Add(DItem.FullName); } List<String> SubDirs = new List<string>(); foreach (DirectoryInfo Dir in DInfo.GetDirectories()) { SubDirs.Add(Path.Combine(Dir.FullName)); } if (SubDirs.Count > 0) { Result.AddRange(DetectFilesForCleanup(SubDirs)); }
                 }
             }
 
