@@ -1654,6 +1654,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occured during files removal. Some files were not deleted..
+        /// </summary>
+        internal static string RW_RmException {
+            get {
+                return ResourceManager.GetString("RW_RmException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to To work correctly, this programm needs {0} to be shut down. Proceed?.
         /// </summary>
         internal static string ST_KillMessage {

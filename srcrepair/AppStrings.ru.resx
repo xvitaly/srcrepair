@@ -990,4 +990,8 @@
     <value>Установить выбранный HUD</value>
     <comment>Текст кнопки Установить выбранный HUD</comment>
   </data>
+  <data name="RW_RmException" xml:space="preserve">
+    <value>Произошла ошибка во время удаления файлов. Не все файлы были удалены.</value>
+    <comment>Сообщение при исключении во время удаления файлов из модуля</comment>
+  </data>
 </root>
