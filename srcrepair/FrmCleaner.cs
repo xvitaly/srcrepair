@@ -133,25 +133,6 @@ namespace srcrepair
             }
         }
 
-        /// <summary>
-        /// Ищет и удаляет пустые каталоги, оставшиеся после удаления файлов из них.
-        /// </summary>
-        /// <param name="StartDir">Каталог для выполнения очистки</param>
-        private void RemoveEmptyDirectories(string StartDir)
-        {
-            if (Directory.Exists(StartDir))
-            {
-                foreach (var Dir in Directory.GetDirectories(StartDir))
-                {
-                    RemoveEmptyDirectories(Dir);
-                    if ((Directory.GetFiles(Dir).Length == 0) && (Directory.GetDirectories(Dir).Length == 0))
-                    {
-                        Directory.Delete(Dir, false);
-                    }
-                }
-            }
-        }
-
         private void frmCleaner_Load(object sender, EventArgs e)
         {
             // Изменяем заголовок окна...
@@ -258,7 +239,7 @@ namespace srcrepair
                     {
                         foreach (string Dir in CleanDirs)
                         {
-                            RemoveEmptyDirectories(Path.GetDirectoryName(Dir));
+                            CoreLib.RemoveEmptyDirectories(Path.GetDirectoryName(Dir));
                         }
                     }
                     catch (Exception Ex)

@@ -715,6 +715,25 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Ищет и удаляет пустые каталоги, оставшиеся после удаления файлов из них.
+        /// </summary>
+        /// <param name="StartDir">Каталог для выполнения очистки</param>
+        public static void RemoveEmptyDirectories(string StartDir)
+        {
+            if (Directory.Exists(StartDir))
+            {
+                foreach (var Dir in Directory.GetDirectories(StartDir))
+                {
+                    RemoveEmptyDirectories(Dir);
+                    if ((Directory.GetFiles(Dir).Length == 0) && (Directory.GetDirectories(Dir).Length == 0))
+                    {
+                        Directory.Delete(Dir, false);
+                    }
+                }
+            }
+        }
+
+        /// <summary>
         /// Отображает диалоговое окно менеджера быстрой очистки.
         /// </summary>
         /// <param name="Path">Путь к каталогу очистки</param>
@@ -734,6 +753,18 @@ namespace srcrepair
                 if (!CoreLib.IsProcessRunning(Path.GetFileNameWithoutExtension(CheckBin))) { using (frmCleaner FCl = new frmCleaner(Paths, BackUpDir, LText, ResultMsg, ReadOnly, NoAuto, Recursive, ForceBackUp)) { FCl.ShowDialog(); } } else { MessageBox.Show(String.Format(CoreLib.GetLocalizedString("PS_AppRunning"), CheckBin), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+        }
+
+        /// <summary>
+        /// Удаляет указанные каталоги с выводом прогресса.
+        /// </summary>
+        /// <param name="Path">Пути к каталогам для очистки</param>
+        public static void RemoveDirectoryEx(List<String> Paths)
+        {
+            using (FrmRmWrk Rm = new FrmRmWrk(Paths))
+            {
+                Rm.ShowDialog();
+            }
         }
 
         /// <summary>
