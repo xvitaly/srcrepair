@@ -39,7 +39,10 @@ namespace srcrepair
 
         private void RW_Wrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            //
+            // Удаление завершено. Закроем форму...
+            IsRunning = false;
+            if (e.Error != null) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("RW_RmException"), Properties.Resources.AppName, e.Error.Message, e.Error.Source, MessageBoxIcon.Warning); }
+            Close();
         }
 
         private void FrmRmWrk_FormClosing(object sender, FormClosingEventArgs e)
