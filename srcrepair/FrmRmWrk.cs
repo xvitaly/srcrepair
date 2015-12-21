@@ -23,8 +23,10 @@ namespace srcrepair
 
         private List<String> DetectFilesForCleanup(List<String> CleanDirs)
         {
+            // Создаём массив, в котором будем хранить имена файлов...
             List<String> Result = new List<String>();
 
+            // Заполняем наш массив...
             foreach (string DirMs in CleanDirs)
             {
                 if (Directory.Exists(DirMs))
@@ -33,6 +35,7 @@ namespace srcrepair
                 }
             }
 
+            // Выводим результат...
             return Result;
         }
 
