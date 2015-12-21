@@ -46,6 +46,7 @@
             // 
             // RW_Wrk
             // 
+            this.RW_Wrk.WorkerReportsProgress = true;
             this.RW_Wrk.DoWork += new System.ComponentModel.DoWorkEventHandler(this.RW_Wrk_DoWork);
             this.RW_Wrk.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.RW_Wrk_ProgressChanged);
             this.RW_Wrk.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.RW_Wrk_RunWorkerCompleted);
@@ -63,6 +64,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmRmWrk";
             this.ShowInTaskbar = false;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmRmWrk_FormClosing);
             this.Load += new System.EventHandler(this.FrmRmWrk_Load);
             this.ResumeLayout(false);
 
