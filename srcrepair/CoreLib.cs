@@ -553,22 +553,22 @@ namespace srcrepair
         /// <returns>Булево наличия прав на запись</returns>
         public static bool IsDirectoryWritable(string DirName)
         {
-            bool Result = false;
             try
             {
-                DirectoryInfo DirInfo = new DirectoryInfo(DirName);
-                DirectorySecurity DirSec = DirInfo.GetAccessControl();
-                AuthorizationRuleCollection AuthRules = DirSec.GetAccessRules(true, true, typeof(NTAccount));
-                foreach (AuthorizationRule AuthRule in AuthRules)
+                AuthorizationRuleCollection AuthRules = Directory.GetAccessControl(DirName).GetAccessRules(true, true, typeof(SecurityIdentifier));
+                foreach (FileSystemAccessRule SelRule in AuthRules)
                 {
-                    if (AuthRule.IdentityReference.Value.Equals(WindowsIdentity.GetCurrent().Name.ToString(), StringComparison.CurrentCultureIgnoreCase))
+                    if (WindowsIdentity.GetCurrent().Groups.Contains(SelRule.IdentityReference))
                     {
-                        Result = (((FileSystemAccessRule)AuthRule).FileSystemRights & FileSystemRights.WriteData) > 0;
+                        if ((FileSystemRights.CreateFiles & SelRule.FileSystemRights) == FileSystemRights.CreateFiles)
+                        {
+                            if (SelRule.AccessControlType == AccessControlType.Allow) { return true; }
+                        }
                     }
                 }
             }
-            catch (Exception Ex) { WriteStringToLog(Ex.Message); Result = false; }
-            return Result;
+            catch (Exception Ex) { WriteStringToLog(Ex.Message); }
+            return false;
         }
 
         /// <summary>
