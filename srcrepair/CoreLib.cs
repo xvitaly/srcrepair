@@ -567,7 +567,7 @@ namespace srcrepair
                     }
                 }
             }
-            catch { Result = false; }
+            catch (Exception Ex) { WriteStringToLog(Ex.Message); Result = false; }
             return Result;
         }
 
