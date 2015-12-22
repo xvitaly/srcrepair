@@ -1996,6 +1996,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Can not write into application directory. Start updater with admin rights!.
+        /// </summary>
+        internal static string UPD_NoWritePermissions {
+            get {
+                return ResourceManager.GetString("UPD_NoWritePermissions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The game database has been updated successfully..
         /// </summary>
         internal static string UPD_ProcFinMsg {

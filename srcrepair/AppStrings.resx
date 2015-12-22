@@ -777,4 +777,7 @@
   <data name="RW_RmException" xml:space="preserve">
     <value>An error occured during files removal. Some files were not deleted.</value>
   </data>
+  <data name="UPD_NoWritePermissions" xml:space="preserve">
+    <value>Can not write into application directory. Start updater with admin rights!</value>
+  </data>
 </root>
