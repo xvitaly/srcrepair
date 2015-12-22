@@ -266,12 +266,19 @@ namespace srcrepair
         {
             if (!WrkChkDb.IsBusy)
             {
-                if (DbAvailable && CoreLib.IsDirectoryWritable(FullAppPath))
+                if (DbAvailable)
                 {
-                    UpdateFileName = GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Settings.Default.GameListFile));
-                    CoreLib.DownloadFileEx(Properties.Resources.UpdateGameDBFile, UpdateFileName);
-                    if (File.Exists(UpdateFileName)) { MessageBox.Show(CoreLib.GetLocalizedString("UPD_GamL_Updated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
-                    Close();
+                    if (CoreLib.IsDirectoryWritable(FullAppPath))
+                    {
+                        UpdateFileName = GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Settings.Default.GameListFile));
+                        CoreLib.DownloadFileEx(Properties.Resources.UpdateGameDBFile, UpdateFileName);
+                        if (File.Exists(UpdateFileName)) { MessageBox.Show(CoreLib.GetLocalizedString("UPD_GamL_Updated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(CoreLib.GetLocalizedString("UPD_NoWritePermissions"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
@@ -312,12 +319,19 @@ namespace srcrepair
         {
             if (!WrkChkHUD.IsBusy)
             {
-                if (HudAvailable && CoreLib.IsDirectoryWritable(FullAppPath))
+                if (HudAvailable)
                 {
-                    UpdateFileName = GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Settings.Default.HUDDbFile));
-                    CoreLib.DownloadFileEx(Properties.Resources.UpdateHUDDBFile, UpdateFileName);
-                    if (File.Exists(UpdateFileName)) { MessageBox.Show(CoreLib.GetLocalizedString("UPD_HUDDb_Updated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); UpdateTimeSetHUD(); } else { MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
-                    Close();
+                    if (CoreLib.IsDirectoryWritable(FullAppPath))
+                    {
+                        UpdateFileName = GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Settings.Default.HUDDbFile));
+                        CoreLib.DownloadFileEx(Properties.Resources.UpdateHUDDBFile, UpdateFileName);
+                        if (File.Exists(UpdateFileName)) { MessageBox.Show(CoreLib.GetLocalizedString("UPD_HUDDb_Updated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); UpdateTimeSetHUD(); } else { MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(CoreLib.GetLocalizedString("UPD_NoWritePermissions"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
