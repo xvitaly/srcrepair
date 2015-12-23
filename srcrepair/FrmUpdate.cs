@@ -179,7 +179,7 @@ namespace srcrepair
                     Invoke((MethodInvoker)delegate()
                     {
                         UpdDBImg.Image = Properties.Resources.upd_av;
-                        UpdDBStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_DbUpdateAvail"), DBHashNew);
+                        UpdDBStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_DbUpdateAvail"), DBHashNew.Substring(0, 7));
                     });
                     DbAvailable = true;
                 }
@@ -236,7 +236,7 @@ namespace srcrepair
                     Invoke((MethodInvoker)delegate()
                     {
                         UpdHUDDbImg.Image = Properties.Resources.upd_av;
-                        UpdHUDStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_HUDUpdateAvail"), HUDHashNew);
+                        UpdHUDStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_HUDUpdateAvail"), HUDHashNew.Substring(0, 7));
                     });
                     HudAvailable = true;
                 }
