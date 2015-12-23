@@ -1897,7 +1897,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Database update available. New version: {0}..
+        ///   Looks up a localized string similar to Game database update available. Hash of new version: {0}..
         /// </summary>
         internal static string UPD_DbUpdateAvail {
             get {
@@ -1978,7 +1978,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to HUD database update available. New version: {0}..
+        ///   Looks up a localized string similar to HUD database update available. Hash of new version: {0}..
         /// </summary>
         internal static string UPD_HUDUpdateAvail {
             get {
