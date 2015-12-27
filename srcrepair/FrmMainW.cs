@@ -56,6 +56,7 @@ namespace srcrepair
 
         private string CFGFileName;
         private CurrentApp App;
+        private List<SourceGame> SourceGames = new List<SourceGame>();
         private SourceGame SelGame;
         private HUDTlx SelHUD;
 
@@ -74,7 +75,7 @@ namespace srcrepair
         {
             // Генерируем путь к каталогу установки конфига...
             string DestPath = Path.Combine(GameDir, CustmDir ? Path.Combine("custom", Properties.Settings.Default.UserCustDirName) : "", "cfg");
-            
+
             // Проверяем существование каталога и если его не существует - создаём...
             if (!Directory.Exists(DestPath)) { Directory.CreateDirectory(DestPath); }
 
@@ -282,16 +283,7 @@ namespace srcrepair
             // Начинаем обход каталога и получение поддиректорий...
             foreach (string MntPnt in MntPnts)
             {
-                try
-                {
-                    DirectoryInfo SDir = new DirectoryInfo(Path.Combine(MntPnt, Properties.Resources.SteamAppsFolderName, "common"));
-                    DirectoryInfo[] SDirInfo = SDir.GetDirectories();
-                    foreach (DirectoryInfo Di in SDirInfo) { Result.Add(Di.FullName); }
-                }
-                catch (Exception Ex)
-                {
-                    CoreLib.WriteStringToLog(Ex.Message);
-                }
+                Result.Add(Path.Combine(MntPnt, Properties.Resources.SteamAppsFolderName, "common"));
             }
 
             // Возвращаем сформированный массив...
@@ -330,19 +322,16 @@ namespace srcrepair
                     for (int i = 0; i < XMLD.GetElementsByTagName("Game").Count; i++)
                     {
                         AvailableGames.Add(XMLD.GetElementsByTagName("DirName")[i].InnerText);
-                    }
-                }
-            }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-
-            try
-            {
-                // Обойдём полученный список каталогов в массиве...
-                foreach (string StrX in GameDirs)
-                {
-                    if (AvailableGames.Exists(s => Regex.IsMatch(s, String.Format("{0}$", Path.GetFileName(StrX)), RegexOptions.IgnoreCase)))
-                    {
-                        if (Directory.Exists(StrX)) { AppSelector.Items.Add(StrX); } else { CoreLib.WriteStringToLog(String.Format(CoreLib.GetLocalizedString("AppGameChkErrNtExs"), StrX)); }
+                        try
+                        {
+                            SourceGame SG = new SourceGame(XMLD.GetElementsByTagName("DirName")[i].InnerText, XMLD.GetElementsByTagName("SmallName")[i].InnerText, XMLD.GetElementsByTagName("Executable")[i].InnerText, XMLD.GetElementsByTagName("SID")[i].InnerText, XMLD.GetElementsByTagName("VFDir")[i].InnerText, XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1", XMLD.GetElementsByTagName("UserDir")[i].InnerText == "1", App.FullAppPath, App.AppUserDir, App.FullSteamPath, GameDirs);
+                            if (SG.IsInstalled)
+                            {
+                                SourceGames.Add(SG);
+                                AppSelector.Items.Add(XMLD.GetElementsByTagName("DirName")[i].InnerText);
+                            }
+                        }
+                        catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     }
                 }
             }
@@ -2024,7 +2013,7 @@ namespace srcrepair
             try
             {
                 // Получаем нужные значения...
-                SelGame = new SourceGame(AppSelector.Text, App.FullAppPath, App.AppUserDir, App.FullSteamPath);
+                SelGame = SourceGames.Find(Item => Item.FullAppName == AppSelector.Text);
 
                 // Включаем основные элементы управления (контролы)...
                 MainTabControl.Enabled = true;

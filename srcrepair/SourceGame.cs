@@ -122,6 +122,23 @@ namespace srcrepair
         /// </summary>
         public string BanlistFileName;
 
+        public bool IsInstalled;
+
+        private string GetGameDirectory(string AppName, List<String> GameDirs)
+        {
+            string Result = "", GamePath = "";
+            foreach (string Dir in GameDirs)
+            {
+                GamePath = Path.Combine(Dir, AppName);
+                if (Directory.Exists(GamePath))
+                {
+                    Result = GamePath;
+                    break;
+                }
+            }
+            return Result;
+        }
+
         /// <summary>
         /// Конструктор класса. Получает информацию о выбранном приложении.
         /// </summary>
@@ -129,40 +146,28 @@ namespace srcrepair
         /// <param name="AppPath">Путь к каталогу SRC Repair</param>
         /// <param name="UserDir">Путь к пользовательскому каталогу SRC Repair</param>
         /// <param name="SteamDir">Путь к установленному клиенту Steam</param>
-        public SourceGame(string AppName, string AppPath, string UserDir, string SteamDir)
+        public SourceGame(string DirName, string SmallName, string Executable, string SID, string VFDir, bool HasVF, bool UserDir, string AppPath, string AUserDir, string SteamDir, List<String> GameDirs)
         {
             // Начинаем определять нужные нам значения переменных...
-            using (FileStream XMLFS = new FileStream(Path.Combine(AppPath, Properties.Settings.Default.GameListFile), FileMode.Open, FileAccess.Read))
-            {
-                XmlDocument XMLD = new XmlDocument();
-                XMLD.Load(XMLFS);
-                XmlNodeList XMLNList = XMLD.GetElementsByTagName("Game");
-                for (int i = 0; i < XMLNList.Count; i++)
-                {
-                    if (String.Compare(XMLD.GetElementsByTagName("DirName")[i].InnerText, Path.GetFileName(AppName), true) == 0)
-                    {
-                        FullAppName = XMLD.GetElementsByTagName("DirName")[i].InnerText;
-                        SmallAppName = XMLD.GetElementsByTagName("SmallName")[i].InnerText;
-                        GameBinaryFile = XMLD.GetElementsByTagName("Executable")[i].InnerText;
-                        GameInternalID = XMLD.GetElementsByTagName("SID")[i].InnerText;
-                        ConfDir = XMLD.GetElementsByTagName("VFDir")[i].InnerText;
-                        IsUsingVideoFile = XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1";
-                        IsUsingUserDir = XMLD.GetElementsByTagName("UserDir")[i].InnerText == "1";
-                        break;
-                    }
-                }
-            }
+            FullAppName = DirName;
+            SmallAppName = SmallName;
+            GameBinaryFile = Executable;
+            GameInternalID = SID;
+            ConfDir = VFDir;
+            IsUsingVideoFile = HasVF;
+            IsUsingUserDir = UserDir;
 
             // Генерируем полный путь до каталога управляемого приложения...
-            GamePath = AppName;
+            GamePath = GetGameDirectory(DirName, GameDirs);
+            IsInstalled = !String.IsNullOrWhiteSpace(GamePath);
             FullGamePath = Path.Combine(GamePath, SmallAppName);
 
             // Заполняем другие служебные переменные...
             FullCfgPath = Path.Combine(FullGamePath, "cfg");
-            FullBackUpDirPath = Path.Combine(UserDir, "backups", SmallAppName);
+            FullBackUpDirPath = Path.Combine(AUserDir, "backups", SmallAppName);
             BanlistFileName = Path.Combine(FullGamePath, "voice_ban.dt");
             VideoCfgFile = Path.Combine(GamePath, ConfDir, "cfg", "video.txt");
-            AppHUDDir = Path.Combine(UserDir, Properties.Settings.Default.HUDLocalDir, SmallAppName);
+            AppHUDDir = Path.Combine(AUserDir, Properties.Settings.Default.HUDLocalDir, SmallAppName);
             CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : "");
             AppWorkshopDir = Path.Combine(SteamDir, Properties.Resources.SteamAppsFolderName, Properties.Resources.WorkshopFolderName, "content", GameInternalID);
         }
