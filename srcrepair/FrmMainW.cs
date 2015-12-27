@@ -56,7 +56,7 @@ namespace srcrepair
 
         private string CFGFileName;
         private CurrentApp App;
-        private List<SourceGame> SourceGames = new List<SourceGame>();
+        private List<SourceGame> SourceGames;
         private SourceGame SelGame;
         private HUDTlx SelHUD;
 
@@ -1859,6 +1859,7 @@ namespace srcrepair
         {
             // Событие инициализации формы...
             App = new CurrentApp();
+            SourceGames = new List<SourceGame>();
 
             // Узнаем путь к установленному клиенту Steam...
             try { App.FullSteamPath = CoreLib.GetSteamPath(); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); ValidateAndHandle(); }
