@@ -122,8 +122,17 @@ namespace srcrepair
         /// </summary>
         public string BanlistFileName;
 
+        /// <summary>
+        /// Указывает установлено ли данное приложение.
+        /// </summary>
         public bool IsInstalled;
 
+        /// <summary>
+        /// Генерирует путь к каталогу установки игры.
+        /// </summary>
+        /// <param name="AppName">Имя каталога приложения</param>
+        /// <param name="GameDirs">Возможные каталоги установки</param>
+        /// <returns>Возвращает путь к каталогу игры или пустую строку</returns>
         private string GetGameDirectory(string AppName, List<String> GameDirs)
         {
             string Result = "", GamePath = "";
@@ -140,7 +149,7 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Конструктор класса. Получает информацию о выбранном приложении.
+        /// Конструктор класса. Заполняет информацию о выбранном приложении.
         /// </summary>
         /// <param name="GameName">Название выбранного приложения</param>
         /// <param name="AppPath">Путь к каталогу SRC Repair</param>
