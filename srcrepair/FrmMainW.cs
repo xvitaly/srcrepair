@@ -319,7 +319,8 @@ namespace srcrepair
                     XMLD.Load(XMLFS);
                     
                     // Обходим полученный список в цикле...
-                    for (int i = 0; i < XMLD.GetElementsByTagName("Game").Count; i++)
+                    XmlNodeList XMLNode = XMLD.GetElementsByTagName("Game");
+                    for (int i = 0; i < XMLNode.Count; i++)
                     {
                         AvailableGames.Add(XMLD.GetElementsByTagName("DirName")[i].InnerText);
                         try
@@ -328,7 +329,7 @@ namespace srcrepair
                             if (SG.IsInstalled)
                             {
                                 SourceGames.Add(SG);
-                                AppSelector.Items.Add(XMLD.GetElementsByTagName("DirName")[i].InnerText);
+                                AppSelector.Items.Add(XMLNode[i].Attributes["Name"].Value);
                             }
                         }
                         catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
@@ -2013,7 +2014,7 @@ namespace srcrepair
             try
             {
                 // Получаем нужные значения...
-                SelGame = SourceGames.Find(Item => Item.FullAppName == AppSelector.Text);
+                SelGame = SourceGames.Find(Item => String.Equals(Item.FullAppName, AppSelector.Text, StringComparison.CurrentCultureIgnoreCase));
 
                 // Включаем основные элементы управления (контролы)...
                 MainTabControl.Enabled = true;
