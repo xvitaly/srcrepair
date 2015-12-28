@@ -1638,7 +1638,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="LastHUDUpdate">Дата последней проверки обновлений базы HUD</param>
         /// <returns>Булево актуальности базы HUD</returns>
-        private bool CheckHUDActBase(DateTime LastHUDUpdate)
+        private bool CheckHUDDatabase(DateTime LastHUDUpdate)
         {
             return (DateTime.Now - LastHUDUpdate).Days >= 7;
         }
@@ -1660,7 +1660,7 @@ namespace srcrepair
                     break;
                 case 4:
                     {
-                        bool HUDDbStatus = CheckHUDActBase(Properties.Settings.Default.LastHUDTime);
+                        bool HUDDbStatus = CheckHUDDatabase(Properties.Settings.Default.LastHUDTime);
                         MNUShowEdHint.Enabled = false;
                         SB_Status.ForeColor = HUDDbStatus ? Color.Red : Color.Black;
                         SB_Status.Text = String.Format(CoreLib.GetLocalizedString("HD_DynBarText"), CoreLib.GetLocalizedString(HUDDbStatus ? "HD_StatusOutdated" : "HD_StatusUpdated"), Properties.Settings.Default.LastHUDTime);
@@ -3192,7 +3192,7 @@ namespace srcrepair
 
         private void HD_Install_Click(object sender, EventArgs e)
         {
-            if (!CheckHUDActBase(Properties.Settings.Default.LastHUDTime))
+            if (!CheckHUDDatabase(Properties.Settings.Default.LastHUDTime))
             {
                 // Проверим поддерживает ли выбранный HUD последнюю версию игры...
                 if (SelHUD.IsUpdated)
