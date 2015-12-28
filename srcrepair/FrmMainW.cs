@@ -1634,6 +1634,16 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Проверяет актуальность базы HUD.
+        /// </summary>
+        /// <param name="LastHUDUpdate">Дата последней проверки обновлений базы HUD</param>
+        /// <returns>Булево актуальности базы HUD</returns>
+        private bool CheckHUDActBase(DateTime LastHUDUpdate)
+        {
+            return (DateTime.Now - LastHUDUpdate).Days >= 7;
+        }
+
+        /// <summary>
         /// Обновляет содержимое строки состояния в зависимости от контекста.
         /// </summary>
         /// <param name="Index">ID текущей вкладки</param>
@@ -1650,7 +1660,7 @@ namespace srcrepair
                     break;
                 case 4:
                     {
-                        bool HUDDbStatus = (DateTime.Now - Properties.Settings.Default.LastHUDTime).Days >= 7;
+                        bool HUDDbStatus = CheckHUDActBase(Properties.Settings.Default.LastHUDTime);
                         MNUShowEdHint.Enabled = false;
                         SB_Status.ForeColor = HUDDbStatus ? Color.Red : Color.Black;
                         SB_Status.Text = String.Format(CoreLib.GetLocalizedString("HD_DynBarText"), CoreLib.GetLocalizedString(HUDDbStatus ? "HD_StatusOutdated" : "HD_StatusUpdated"), Properties.Settings.Default.LastHUDTime);
