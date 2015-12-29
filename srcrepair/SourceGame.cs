@@ -173,7 +173,7 @@ namespace srcrepair
             IsUsingUserDir = UserDir;
 
             // Генерируем полный путь до каталога управляемого приложения...
-            GamePath = GetGameDirectory(DirName, SmallAppName, GameDirs);
+            GamePath = GetGameDirectory(DirName, SmallName, GameDirs);
             IsInstalled = !String.IsNullOrWhiteSpace(GamePath);
             FullGamePath = Path.Combine(GamePath, SmallAppName);
 
