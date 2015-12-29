@@ -1870,7 +1870,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No new updates detected. Your application is up to date..
+        ///   Looks up a localized string similar to No new updates available. Your application is up to date..
         /// </summary>
         internal static string UPD_AppNoUpdates {
             get {
