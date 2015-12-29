@@ -151,7 +151,13 @@ namespace srcrepair
         /// <summary>
         /// Конструктор класса. Заполняет информацию о выбранном приложении.
         /// </summary>
-        /// <param name="GameName">Название выбранного приложения</param>
+        /// <param name="DirName">Каталог приложения (из БД)</param>
+        /// <param name="SmallName">Внутренний каталог приложения (из БД)</param>
+        /// <param name="Executable">Имя главного бинарника (из БД)</param>
+        /// <param name="SID">Внутренний ID приложения в Steam (из БД)</param>
+        /// <param name="VFDir">Каталог хранения графических настроек (из БД)</param>
+        /// <param name="HasVF">Задаёт формат приложения: GCF/NCF (из БД)</param>
+        /// <param name="UserDir">Указывает использует ли приложение кастомный каталог (из БД)</param>
         /// <param name="AppPath">Путь к каталогу SRC Repair</param>
         /// <param name="UserDir">Путь к пользовательскому каталогу SRC Repair</param>
         /// <param name="SteamDir">Путь к установленному клиенту Steam</param>
