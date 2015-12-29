@@ -133,13 +133,13 @@ namespace srcrepair
         /// <param name="AppName">Имя каталога приложения</param>
         /// <param name="GameDirs">Возможные каталоги установки</param>
         /// <returns>Возвращает путь к каталогу игры или пустую строку</returns>
-        private string GetGameDirectory(string AppName, List<String> GameDirs)
+        private string GetGameDirectory(string AppName, string SmallAppName, List<String> GameDirs)
         {
             string Result = "", GamePath = "";
             foreach (string Dir in GameDirs)
             {
                 GamePath = Path.Combine(Dir, AppName);
-                if (Directory.Exists(GamePath))
+                if (Directory.Exists(Path.Combine(GamePath, SmallAppName)))
                 {
                     Result = GamePath;
                     break;
@@ -167,7 +167,7 @@ namespace srcrepair
             IsUsingUserDir = UserDir;
 
             // Генерируем полный путь до каталога управляемого приложения...
-            GamePath = GetGameDirectory(DirName, GameDirs);
+            GamePath = GetGameDirectory(DirName, SmallAppName, GameDirs);
             IsInstalled = !String.IsNullOrWhiteSpace(GamePath);
             FullGamePath = Path.Combine(GamePath, SmallAppName);
 
