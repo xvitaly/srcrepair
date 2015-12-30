@@ -2255,8 +2255,12 @@ namespace srcrepair
                     // Проверим, не нужно ли создавать резервную копию...
                     if (Properties.Settings.Default.SafeCleanup)
                     {
-                        // Создаём резервную копию...
-                        CoreLib.CompressFiles(SelGame.FPSConfigs, CoreLib.GenerateBackUpFileName(SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg));
+                        // Проверяем есть ли установленные конфиги...
+                        if (SelGame.FPSConfigs.Count > 0)
+                        {
+                            // Создаём резервную копию...
+                            CoreLib.CompressFiles(SelGame.FPSConfigs, CoreLib.GenerateBackUpFileName(SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg));
+                        }
                     }
 
                     try
