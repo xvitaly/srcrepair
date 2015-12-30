@@ -179,14 +179,17 @@ namespace srcrepair
             IsInstalled = !String.IsNullOrWhiteSpace(GamePath);
 
             // Заполняем другие служебные переменные...
-            FullGamePath = Path.Combine(GamePath, SmallAppName);
-            FullCfgPath = Path.Combine(FullGamePath, "cfg");
-            FullBackUpDirPath = Path.Combine(AUserDir, "backups", SmallAppName);
-            BanlistFileName = Path.Combine(FullGamePath, "voice_ban.dt");
-            VideoCfgFile = Path.Combine(GamePath, ConfDir, "cfg", "video.txt");
-            AppHUDDir = Path.Combine(AUserDir, Properties.Settings.Default.HUDLocalDir, SmallAppName);
-            CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : "");
-            AppWorkshopDir = Path.Combine(SteamDir, Properties.Resources.SteamAppsFolderName, Properties.Resources.WorkshopFolderName, "content", GameInternalID);
+            if (IsInstalled)
+            {
+                FullGamePath = Path.Combine(GamePath, SmallAppName);
+                FullCfgPath = Path.Combine(FullGamePath, "cfg");
+                FullBackUpDirPath = Path.Combine(AUserDir, "backups", SmallAppName);
+                BanlistFileName = Path.Combine(FullGamePath, "voice_ban.dt");
+                VideoCfgFile = Path.Combine(GamePath, ConfDir, "cfg", "video.txt");
+                AppHUDDir = Path.Combine(AUserDir, Properties.Settings.Default.HUDLocalDir, SmallAppName);
+                CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : "");
+                AppWorkshopDir = Path.Combine(SteamDir, Properties.Resources.SteamAppsFolderName, Properties.Resources.WorkshopFolderName, "content", GameInternalID);
+            }
         }
     }
 }
