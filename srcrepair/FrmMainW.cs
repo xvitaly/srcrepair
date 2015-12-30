@@ -2303,40 +2303,25 @@ namespace srcrepair
 
         private void FP_Uninstall_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(CoreLib.GetLocalizedString("FP_RemoveQuestion"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            try
             {
-                try
+                // Проверим есть ли кандидаты на удаление...
+                if (SelGame.FPSConfigs.Count > 0)
                 {
-                    // Проверим есть ли кандидаты на удаление...
-                    if (SelGame.FPSConfigs.Count > 0)
-                    {
-                        // Сделаем резервную копию (если включена безопасная очистка)...
-                        if (Properties.Settings.Default.SafeCleanup)
-                        {
-                            if (!CoreLib.CompressFiles(SelGame.FPSConfigs, CoreLib.GenerateBackUpFileName(SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg)))
-                            {
-                                MessageBox.Show(CoreLib.GetLocalizedString("PS_ArchFailed"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                        }
+                    // Удаляем конфиги...
+                    CoreLib.OpenCleanupWindow(SelGame.FPSConfigs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("FP_RemoveSuccessful"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile, false, false, false, Properties.Settings.Default.SafeCleanup);
 
-                        // Удаляем конфиги...
-                        RemoveFiles(SelGame.FPSConfigs);
-
-                        // Перечитаем список конфигов...
-                        HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
-
-                        // Выводим сообщение об успехе...
-                        MessageBox.Show(CoreLib.GetLocalizedString("FP_RemoveSuccessful"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show(CoreLib.GetLocalizedString("FP_RemoveNotExists"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                    // Перечитаем список конфигов...
+                    HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
                 }
-                catch (Exception Ex)
+                else
                 {
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("FP_RemoveFailed"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                    MessageBox.Show(CoreLib.GetLocalizedString("FP_RemoveNotExists"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+            }
+            catch (Exception Ex)
+            {
+                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("FP_RemoveFailed"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
             }
         }
 
