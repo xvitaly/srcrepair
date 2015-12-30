@@ -162,9 +162,6 @@
   <data name="FP_RemoveNotExists" xml:space="preserve">
     <value>Needless to delete: FPS-config for the current game is not installed!</value>
   </data>
-  <data name="FP_RemoveQuestion" xml:space="preserve">
-    <value>Are you sure you want to delete installed config?</value>
-  </data>
   <data name="FP_RemoveSuccessful" xml:space="preserve">
     <value>Installed FPS-config has been successfully deleted!</value>
   </data>

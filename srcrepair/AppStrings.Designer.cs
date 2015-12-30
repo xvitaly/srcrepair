@@ -898,15 +898,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Are you sure you want to delete installed config?.
-        /// </summary>
-        internal static string FP_RemoveQuestion {
-            get {
-                return ResourceManager.GetString("FP_RemoveQuestion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Installed FPS-config has been successfully deleted!.
         /// </summary>
         internal static string FP_RemoveSuccessful {

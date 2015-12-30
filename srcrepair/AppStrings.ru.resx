@@ -177,10 +177,6 @@
     <value>Нечего удалять: для текущей игры FPS-конфиги не установлены!</value>
     <comment>Сообщение, выдаваемое при отсутствии установленного FPS-конфига в управляемом приложении</comment>
   </data>
-  <data name="FP_RemoveQuestion" xml:space="preserve">
-    <value>Вы уверены что хотите удалить конфиг?</value>
-    <comment>Сообщение, выдаваемое при попытке удалить установленный конфиг</comment>
-  </data>
   <data name="FP_RemoveSuccessful" xml:space="preserve">
     <value>Установленный FPS-конфиг был успешно удалён!</value>
     <comment>Сообщение, выдаваемое при успешном удалении FPS-конфига</comment>
