@@ -172,12 +172,14 @@ namespace srcrepair
             IsUsingVideoFile = HasVF;
             IsUsingUserDir = UserDir;
 
-            // Генерируем полный путь до каталога управляемого приложения...
+            // Получаем полный путь до каталога управляемого приложения...
             GamePath = GetGameDirectory(DirName, SmallName, GameDirs);
+            
+            // Проверяем установлено ли приложение...
             IsInstalled = !String.IsNullOrWhiteSpace(GamePath);
-            FullGamePath = Path.Combine(GamePath, SmallAppName);
 
             // Заполняем другие служебные переменные...
+            FullGamePath = Path.Combine(GamePath, SmallAppName);
             FullCfgPath = Path.Combine(FullGamePath, "cfg");
             FullBackUpDirPath = Path.Combine(AUserDir, "backups", SmallAppName);
             BanlistFileName = Path.Combine(FullGamePath, "voice_ban.dt");
