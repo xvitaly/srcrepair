@@ -1598,6 +1598,7 @@ namespace srcrepair
         /// Удаляет все файлы из переданного в качестве параметра массива
         /// </summary>
         /// <param name="Files">Массив с именами файлов для удаления</param>
+        [Obsolete("RemoveFiles is deprecated, please use CoreLib.OpenCleanupWindow() instead.")]
         private void RemoveFiles(List<String> Files)
         {
             try
