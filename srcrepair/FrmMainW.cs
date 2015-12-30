@@ -1595,23 +1595,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Удаляет все файлы из переданного в качестве параметра массива
-        /// </summary>
-        /// <param name="Files">Массив с именами файлов для удаления</param>
-        [Obsolete("RemoveFiles is deprecated, please use CoreLib.OpenCleanupWindow() instead.")]
-        private void RemoveFiles(List<String> Files)
-        {
-            try
-            {
-                foreach (string F in Files)
-                {
-                    if (File.Exists(F)) { File.Delete(F); }
-                }
-            }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-        }
-
-        /// <summary>
         /// Управляет выводом значка активного FPS-конфига и кнопки их удаления.
         /// </summary>
         /// <param name="GameDir">Полный путь к каталогу игры</param>
