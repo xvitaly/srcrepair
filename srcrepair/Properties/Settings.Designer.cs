@@ -298,5 +298,17 @@ namespace srcrepair.Properties {
                 this["OpenBtRep"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool HighlightOldBackUps {
+            get {
+                return ((bool)(this["HighlightOldBackUps"]));
+            }
+            set {
+                this["HighlightOldBackUps"] = value;
+            }
+        }
     }
 }
