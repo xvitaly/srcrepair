@@ -44,7 +44,6 @@ namespace srcrepair
             MO_RemEmptyDirs.Checked = Properties.Settings.Default.RemoveEmptyDirs;
             MO_EnableAppLogs.Checked = Properties.Settings.Default.EnableDebugLog;
             MO_ShBin.Text = Properties.Settings.Default.ShBin;
-            MO_AutoRestAfterUpdateDb.Checked = Properties.Settings.Default.AutoReloadGameDb;
             MO_TextEdBin.Text = Properties.Settings.Default.EditorBin;
             MO_CustDirName.Text = Properties.Settings.Default.UserCustDirName;
             MO_ZipCompress.Checked = Properties.Settings.Default.PackBeforeCleanup;
@@ -66,7 +65,6 @@ namespace srcrepair
             Properties.Settings.Default.EnableDebugLog = MO_EnableAppLogs.Checked;
             Properties.Settings.Default.EditorBin = MO_TextEdBin.Text;
             Properties.Settings.Default.ShBin = MO_ShBin.Text;
-            Properties.Settings.Default.AutoReloadGameDb = MO_AutoRestAfterUpdateDb.Checked;
             Properties.Settings.Default.PackBeforeCleanup = MO_ZipCompress.Checked;
             Properties.Settings.Default.AllowUnSafeCleanup = MO_UnSafeOps.Checked;
             Properties.Settings.Default.HUDUseUpstream = MO_UseUpstream.Checked;
