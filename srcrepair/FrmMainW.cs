@@ -1333,7 +1333,7 @@ namespace srcrepair
 
                 // Добавляем в таблицу...
                 ListViewItem LvItem = new ListViewItem(Rs.Item2);
-                if (DateTime.UtcNow - DItem.CreationTimeUtc > TimeSpan.FromDays(30)) { LvItem.BackColor = Color.LightYellow; }
+                if (Properties.Settings.Default.HighlightOldBackUps) { if (DateTime.UtcNow - DItem.CreationTimeUtc > TimeSpan.FromDays(30)) { LvItem.BackColor = Color.LightYellow; } }
                 LvItem.SubItems.Add(Rs.Item1);
                 LvItem.SubItems.Add(CoreLib.SclBytes(DItem.Length));
                 LvItem.SubItems.Add(DItem.CreationTime.ToString());
