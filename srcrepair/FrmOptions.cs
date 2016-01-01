@@ -42,6 +42,7 @@ namespace srcrepair
             MO_SaveHUDPackages.Checked = Properties.Settings.Default.HUDSaveArchives;
             MO_AutoUpdate.Checked = Properties.Settings.Default.EnableAutoUpdate;
             MO_RemEmptyDirs.Checked = Properties.Settings.Default.RemoveEmptyDirs;
+            MO_HighlightOldBackUps.Checked = Properties.Settings.Default.HighlightOldBackUps;
             MO_EnableAppLogs.Checked = Properties.Settings.Default.EnableDebugLog;
             MO_ShBin.Text = Properties.Settings.Default.ShBin;
             MO_TextEdBin.Text = Properties.Settings.Default.EditorBin;
@@ -62,6 +63,7 @@ namespace srcrepair
             Properties.Settings.Default.HUDSaveArchives = MO_SaveHUDPackages.Checked;
             Properties.Settings.Default.EnableAutoUpdate = MO_AutoUpdate.Checked;
             Properties.Settings.Default.RemoveEmptyDirs = MO_RemEmptyDirs.Checked;
+            Properties.Settings.Default.HighlightOldBackUps = MO_HighlightOldBackUps.Checked;
             Properties.Settings.Default.EnableDebugLog = MO_EnableAppLogs.Checked;
             Properties.Settings.Default.EditorBin = MO_TextEdBin.Text;
             Properties.Settings.Default.ShBin = MO_ShBin.Text;
