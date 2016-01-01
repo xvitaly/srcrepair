@@ -36,7 +36,7 @@
             this.MO_UseUpstream = new System.Windows.Forms.CheckBox();
             this.MO_RemEmptyDirs = new System.Windows.Forms.CheckBox();
             this.MO_ZipCompress = new System.Windows.Forms.CheckBox();
-            this.MO_AutoRestAfterUpdateDb = new System.Windows.Forms.CheckBox();
+            this.MO_HighlightOldBackUps = new System.Windows.Forms.CheckBox();
             this.MO_AutoUpdate = new System.Windows.Forms.CheckBox();
             this.MO_SaveHUDPackages = new System.Windows.Forms.CheckBox();
             this.MO_ConfirmExit = new System.Windows.Forms.CheckBox();
@@ -86,7 +86,7 @@
             this.MO_TP1.Controls.Add(this.MO_UseUpstream);
             this.MO_TP1.Controls.Add(this.MO_RemEmptyDirs);
             this.MO_TP1.Controls.Add(this.MO_ZipCompress);
-            this.MO_TP1.Controls.Add(this.MO_AutoRestAfterUpdateDb);
+            this.MO_TP1.Controls.Add(this.MO_HighlightOldBackUps);
             this.MO_TP1.Controls.Add(this.MO_AutoUpdate);
             this.MO_TP1.Controls.Add(this.MO_SaveHUDPackages);
             this.MO_TP1.Controls.Add(this.MO_ConfirmExit);
@@ -112,11 +112,11 @@
             this.MO_ZipCompress.Name = "MO_ZipCompress";
             this.MO_ZipCompress.UseVisualStyleBackColor = true;
             // 
-            // MO_AutoRestAfterUpdateDb
+            // MO_HighlightOldBackUps
             // 
-            resources.ApplyResources(this.MO_AutoRestAfterUpdateDb, "MO_AutoRestAfterUpdateDb");
-            this.MO_AutoRestAfterUpdateDb.Name = "MO_AutoRestAfterUpdateDb";
-            this.MO_AutoRestAfterUpdateDb.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.MO_HighlightOldBackUps, "MO_HighlightOldBackUps");
+            this.MO_HighlightOldBackUps.Name = "MO_HighlightOldBackUps";
+            this.MO_HighlightOldBackUps.UseVisualStyleBackColor = true;
             // 
             // MO_AutoUpdate
             // 
@@ -265,7 +265,7 @@
         private System.Windows.Forms.Button MO_FindShBin;
         private System.Windows.Forms.Button MO_FindTextEd;
         private System.Windows.Forms.OpenFileDialog MO_SearchBin;
-        private System.Windows.Forms.CheckBox MO_AutoRestAfterUpdateDb;
+        private System.Windows.Forms.CheckBox MO_HighlightOldBackUps;
         private System.Windows.Forms.TextBox MO_CustDirName;
         private System.Windows.Forms.Label L_MO_CustDirName;
         private System.Windows.Forms.CheckBox MO_ZipCompress;

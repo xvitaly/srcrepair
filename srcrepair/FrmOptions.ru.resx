@@ -120,9 +120,6 @@
   <data name="MO_Cancel.Text" xml:space="preserve">
     <value>Отмена</value>
   </data>
-  <data name="MO_TP1.Text" xml:space="preserve">
-    <value>Общие настройки</value>
-  </data>
   <data name="MO_UseUpstream.Text" xml:space="preserve">
     <value>Разрешить установку новейших версий HUD</value>
   </data>
@@ -136,8 +133,8 @@
   <data name="MO_ZipCompress.Text" xml:space="preserve">
     <value>Создавать бэкап перед запуском очистки</value>
   </data>
-  <data name="MO_AutoRestAfterUpdateDb.Text" xml:space="preserve">
-    <value>Перезагружать базу игр после обновлений</value>
+  <data name="MO_HighlightOldBackUps.Text" xml:space="preserve">
+    <value>Выделять цветом старые резервные копии</value>
   </data>
   <data name="MO_AutoUpdate.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 17</value>
@@ -151,8 +148,8 @@
   <data name="MO_ConfirmExit.Text" xml:space="preserve">
     <value>Подтверждать выход из программы</value>
   </data>
-  <data name="MO_TP2.Text" xml:space="preserve">
-    <value>Расширенные настройки</value>
+  <data name="MO_TP1.Text" xml:space="preserve">
+    <value>Общие настройки</value>
   </data>
   <data name="MO_OpenBtRpt.Text" xml:space="preserve">
     <value>Открыть баг-трекер после отправки сообщения</value>
@@ -183,6 +180,9 @@
   </data>
   <data name="MO_EnableAppLogs.Text" xml:space="preserve">
     <value>Включить ведение журнала ошибок программы</value>
+  </data>
+  <data name="MO_TP2.Text" xml:space="preserve">
+    <value>Расширенные настройки</value>
   </data>
   <data name="MO_SearchBin.Filter" xml:space="preserve">
     <value>Приложение Windows (*.exe)|*.exe|Все файлы (*.*)|*.*</value>
