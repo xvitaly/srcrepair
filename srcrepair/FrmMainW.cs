@@ -1365,6 +1365,37 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Переключает состояние некоторых элементов управления на форме.
+        /// </summary>
+        private void HandleControlsOnSelGame()
+        {
+            // Включаем основные элементы управления (контролы)...
+            MainTabControl.Enabled = true;
+            
+            // Очистим список FPS-конфигов и HUD-ов...
+            FP_ConfigSel.Items.Clear();
+            HD_HSel.Items.Clear();
+
+            // Отключим кнопку редактирования FPS-конфигов...
+            FP_OpenNotepad.Enabled = false;
+
+            // Отключим кнопку установки FPS-конфигов...
+            FP_Install.Enabled = false;
+
+            // Отключим контролы в менеджере HUD...
+            HD_Install.Enabled = false;
+            HD_Homepage.Enabled = false;
+            HD_Uninstall.Enabled = false;
+            HD_OpenDir.Enabled = false;
+            HD_Warning.Visible = false;
+            HD_GB_Pbx.Image = null;
+
+            // Включаем заблокированные ранее контролы...
+            MNUFPSWizard.Enabled = true;
+            MNUInstaller.Enabled = true;
+        }
+
+        /// <summary>
         /// Переключает вид страницы графического твикера с GCF на NCF приложение
         /// и наоборот.
         /// </summary>
@@ -2024,9 +2055,9 @@ namespace srcrepair
                 // Получаем нужные значения...
                 SelGame = SourceGames.Find(Item => String.Equals(Item.FullAppName, AppSelector.Text, StringComparison.CurrentCultureIgnoreCase));
 
-                // Включаем основные элементы управления (контролы)...
-                MainTabControl.Enabled = true;
-
+                // Переключаем состояние некоторых контролов...
+                HandleControlsOnSelGame();
+                
                 // Проверим наличие запрещённых символов в пути...
                 CheckSymbolsGame(SelGame.FullGamePath);
 
@@ -2039,33 +2070,11 @@ namespace srcrepair
                 // Проверим, установлен ли FPS-конфиг...
                 HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
 
-                // Очистим список FPS-конфигов и HUD-ов...
-                FP_ConfigSel.Items.Clear();
-                HD_HSel.Items.Clear();
-
-                // Отключим кнопку редактирования FPS-конфигов...
-                FP_OpenNotepad.Enabled = false;
-
-                // Отключим кнопку установки FPS-конфигов...
-                FP_Install.Enabled = false;
-
-                // Отключим контролы в менеджере HUD...
-                HD_Install.Enabled = false;
-                HD_Homepage.Enabled = false;
-                HD_Uninstall.Enabled = false;
-                HD_OpenDir.Enabled = false;
-                HD_Warning.Visible = false;
-                HD_GB_Pbx.Image = null;
-
                 // Закроем открытые конфиги в редакторе...
                 if (!(String.IsNullOrEmpty(CFGFileName))) { CE_New.PerformClick(); }
 
                 // Считаем имеющиеся FPS-конфиги...
                 if (!BW_FPRecv.IsBusy) { BW_FPRecv.RunWorkerAsync(); }
-
-                // Включаем заблокированные ранее контролы...
-                MNUFPSWizard.Enabled = true;
-                MNUInstaller.Enabled = true;
 
                 // Обновляем статус...
                 UpdateStatusBar(MainTabControl.SelectedIndex);
