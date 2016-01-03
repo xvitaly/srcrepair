@@ -1718,8 +1718,10 @@ namespace srcrepair
             {
                 // Открываем каталог...
                 DirectoryInfo DInfo = new DirectoryInfo(Path.Combine(App.FullAppPath, "cfgs"));
+                
                 // Считываем список файлов по заданной маске...
                 FileInfo[] DirList = DInfo.GetFiles("*.cfg");
+                
                 // Начинаем обход массива...
                 foreach (FileInfo DItem in DirList)
                 {
@@ -1732,12 +1734,13 @@ namespace srcrepair
             }
             catch (Exception Ex)
             {
-                // FPS-конфигов для выбранного приложения не найдено.
-                // Запишем в лог...
+                // FPS-конфигов не найдено. Запишем в лог...
                 CoreLib.WriteStringToLog(Ex.Message);
+                
                 // Выводим текст об этом...
                 FP_Description.Text = CoreLib.GetLocalizedString("FP_NoCfgGame");
                 FP_Description.ForeColor = Color.Red;
+                
                 // ...и блокируем контролы, отвечающие за установку...
                 FP_Install.Enabled = false;
                 FP_ConfigSel.Enabled = false;
