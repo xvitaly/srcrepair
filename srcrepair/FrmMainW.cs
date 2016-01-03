@@ -2251,18 +2251,21 @@ namespace srcrepair
 
         private void FP_ConfigSel_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Получаем описание выбранного пользователем конфига...
             try
             {
+                // Получаем описание выбранного пользователем FPS-конфига...
                 FP_Description.Text = File.ReadAllText(Path.Combine(App.FullAppPath, "cfgs", String.Format("{0}_{1}.txt", Path.GetFileNameWithoutExtension(FP_ConfigSel.Text), CoreLib.GetLocalizedString("AppLangPrefix"))));
             }
             catch (Exception Ex)
             {
+                // Не получилось загрузить описание выбранного конфига. Выведем стандартное сообщение...
                 CoreLib.WriteStringToLog(Ex.Message);
                 FP_Description.Text = CoreLib.GetLocalizedString("FP_NoDescr");
             }
+            
             // Включаем кнопку открытия конфига в Блокноте...
             FP_OpenNotepad.Enabled = true;
+            
             // Включаем кнопку установки конфига...
             FP_Install.Enabled = true;
         }
