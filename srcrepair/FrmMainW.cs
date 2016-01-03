@@ -1778,15 +1778,19 @@ namespace srcrepair
 
         private void BW_HUDList_DoWork(object sender, DoWorkEventArgs e)
         {
-            // Получаем полный список доступных HUD для данной игры...
             try
             {
+                // Получаем полный список доступных HUD для данной игры. Открываем поток...
                 using (FileStream XMLFS = new FileStream(Path.Combine(App.FullAppPath, Properties.Settings.Default.HUDDbFile), FileMode.Open, FileAccess.Read))
                 {
+                    // Загружаем XML из потока...
                     XmlDocument XMLD = new XmlDocument();
                     XMLD.Load(XMLFS);
+                    
+                    // Разбираем XML файл и обходим его в цикле...
                     for (int i = 0; i < XMLD.GetElementsByTagName("HUD").Count; i++)
                     {
+                        // Выводим только HUD для выбранной в главном окне игры...
                         if (String.Compare(XMLD.GetElementsByTagName("Game")[i].InnerText, SelGame.SmallAppName, true) == 0)
                         {
                             Invoke((MethodInvoker)delegate() { HD_HSel.Items.Add(XMLD.GetElementsByTagName("Name")[i].InnerText); });
