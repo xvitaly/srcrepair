@@ -269,7 +269,7 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Получает список каталогов из точки монтирования.
+        /// Формирует полные пути к библиотекам с установленными играми.
         /// </summary>
         /// <param name="SteamPath">Путь установки Steam</param>
         private List<String> FormatInstallDirs(string SteamPath)
