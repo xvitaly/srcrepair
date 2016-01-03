@@ -272,7 +272,7 @@ namespace srcrepair
         /// Получает список каталогов из точки монтирования.
         /// </summary>
         /// <param name="SteamPath">Путь установки Steam</param>
-        private List<String> GetInstalledDirsFromFile(string SteamPath)
+        private List<String> FormatInstallDirs(string SteamPath)
         {
             // Создаём массив, в который будем помещать найденные пути...
             List<String> Result = new List<String>();
@@ -302,7 +302,7 @@ namespace srcrepair
             AppSelector.Items.Clear();
 
             // При использовании нового метода поиска установленных игр, считаем их из конфига Steam...
-            List<String> GameDirs = GetInstalledDirsFromFile(App.FullSteamPath);
+            List<String> GameDirs = FormatInstallDirs(App.FullSteamPath);
             
             // Формируем список для поддерживаемых игр...
             List<String> AvailableGames = new List<String>();
