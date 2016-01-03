@@ -1763,12 +1763,16 @@ namespace srcrepair
         {
             try
             {
+                // Считываем и выводим в таблицу файлы резервных копий...
                 ReadBackUpList2Table(SelGame.FullBackUpDirPath);
             }
             catch (Exception Ex)
             {
+                // Произошла ошибка. Запишем в журнал отладки...
                 CoreLib.WriteStringToLog(Ex.Message);
-                Directory.CreateDirectory(SelGame.FullBackUpDirPath);
+
+                // Создадим каталог для хранения резервных копий если его ещё нет...
+                if (!Directory.Exists(SelGame.FullBackUpDirPath)) { Directory.CreateDirectory(SelGame.FullBackUpDirPath); }
             }
         }
 
