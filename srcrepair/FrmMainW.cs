@@ -1929,6 +1929,7 @@ namespace srcrepair
 
         private void PS_CleanBlobs_CheckedChanged(object sender, EventArgs e)
         {
+            // Управляем доступностью кнопки запуска очистки...
             PS_ExecuteNow.Enabled = PS_CleanBlobs.Checked || PS_CleanRegistry.Checked;
         }
 
@@ -1940,6 +1941,7 @@ namespace srcrepair
             // Выбираем язык по умолчанию согласно языку приложения...
             PS_SteamLang.SelectedIndex = Convert.ToInt32(CoreLib.GetLocalizedString("AppDefaultSteamLangID"));
 
+            // Управляем доступностью кнопки запуска очистки...
             PS_ExecuteNow.Enabled = PS_CleanRegistry.Checked || PS_CleanBlobs.Checked;
         }
 
