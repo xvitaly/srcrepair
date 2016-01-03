@@ -271,7 +271,7 @@ namespace srcrepair
         /// <summary>
         /// Получает список каталогов из точки монтирования.
         /// </summary>
-        /// <param name="SteamPath">Каталог монтирования</param>
+        /// <param name="SteamPath">Путь установки Steam</param>
         private List<String> GetInstalledDirsFromFile(string SteamPath)
         {
             // Создаём массив, в который будем помещать найденные пути...
