@@ -2081,7 +2081,7 @@ namespace srcrepair
                 HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
 
                 // Закроем открытые конфиги в редакторе...
-                if (!(String.IsNullOrEmpty(CFGFileName))) { CE_New.PerformClick(); }
+                if (!(String.IsNullOrEmpty(CFGFileName))) { CloseEditorConfigs(); }
 
                 // Считаем имеющиеся FPS-конфиги...
                 if (!BW_FPRecv.IsBusy) { BW_FPRecv.RunWorkerAsync(); }
