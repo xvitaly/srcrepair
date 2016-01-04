@@ -135,17 +135,15 @@ namespace srcrepair
         /// <returns>Возвращает путь к каталогу игры или пустую строку</returns>
         private string GetGameDirectory(string AppName, string SmallAppName, List<String> GameDirs)
         {
-            string Result = "", GamePath = "";
             foreach (string Dir in GameDirs)
             {
-                GamePath = Path.Combine(Dir, AppName);
+                string GamePath = Path.Combine(Dir, AppName);
                 if (Directory.Exists(Path.Combine(GamePath, SmallAppName)))
                 {
-                    Result = GamePath;
-                    break;
+                    return GamePath;
                 }
             }
-            return Result;
+            return null;
         }
 
         /// <summary>
