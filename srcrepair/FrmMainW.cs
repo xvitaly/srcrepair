@@ -1721,6 +1721,26 @@ namespace srcrepair
             CE_Editor.Rows.Clear();
         }
 
+        /// <summary>
+        /// Получает список резеервных копий и заносит их в таблицу...
+        /// </summary>
+        private void UpdateBackUpList(string BackUpDir)
+        {
+            try
+            {
+                // Считываем и выводим в таблицу файлы резервных копий...
+                ReadBackUpList2Table(BackUpDir);
+            }
+            catch (Exception Ex)
+            {
+                // Произошло исключение. Запишем в журнал...
+                CoreLib.WriteStringToLog(Ex.Message);
+
+                // Создадим каталог для хранения резервных копий если его ещё нет...
+                if (!Directory.Exists(BackUpDir)) { Directory.CreateDirectory(BackUpDir); }
+            }
+        }
+
         #endregion
 
         #region Internal Workers
@@ -1801,19 +1821,8 @@ namespace srcrepair
 
         private void BW_BkUpRecv_DoWork(object sender, DoWorkEventArgs e)
         {
-            try
-            {
-                // Считываем и выводим в таблицу файлы резервных копий...
-                ReadBackUpList2Table(SelGame.FullBackUpDirPath);
-            }
-            catch (Exception Ex)
-            {
-                // Произошла ошибка. Запишем в журнал отладки...
-                CoreLib.WriteStringToLog(Ex.Message);
-
-                // Создадим каталог для хранения резервных копий если его ещё нет...
-                if (!Directory.Exists(SelGame.FullBackUpDirPath)) { Directory.CreateDirectory(SelGame.FullBackUpDirPath); }
-            }
+            // Получаем список резеверных копий...
+            UpdateBackUpList(SelGame.FullBackUpDirPath);
         }
 
         private void BW_HUDList_DoWork(object sender, DoWorkEventArgs e)
@@ -2613,18 +2622,9 @@ namespace srcrepair
         }
 
         private void BUT_Refresh_Click(object sender, EventArgs e)
-        {            
-            try
-            {
-                ReadBackUpList2Table(SelGame.FullBackUpDirPath);
-            }
-            catch (Exception Ex)
-            {
-                // Произошло исключение...
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BU_ListLdFailed"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                // Создадим каталог для резервных копий...
-                Directory.CreateDirectory(SelGame.FullBackUpDirPath);
-            }
+        {
+            // Обновим список резервных копий...
+            UpdateBackUpList(SelGame.FullBackUpDirPath);
         }
 
         private void BUT_RestoreB_Click(object sender, EventArgs e)
