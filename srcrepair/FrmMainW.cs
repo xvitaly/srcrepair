@@ -1712,6 +1712,16 @@ namespace srcrepair
                 && (GT_NCF_Shadows.SelectedIndex != -1) && (GT_NCF_MBlur.SelectedIndex != -1));
         }
 
+        /// <summary>
+        /// Закрывает все открытые в Редакторе конфигов файлы и очищает таблицу...
+        /// </summary>
+        private void CloseEditorConfigs()
+        {
+            CFGFileName = "";
+            CE_Editor.Rows.Clear();
+            UpdateStatusBar(MainTabControl.SelectedIndex);
+        }
+
         #endregion
 
         #region Internal Workers
@@ -2345,10 +2355,8 @@ namespace srcrepair
 
         private void CE_New_Click(object sender, EventArgs e)
         {
-            // Создаём новый файл...
-            CFGFileName = "";
-            CE_Editor.Rows.Clear();
-            UpdateStatusBar(MainTabControl.SelectedIndex);
+            // Закрываем все открытые конфиги в Редакторе конфигов и создаём новый пустой файл...
+            CloseEditorConfigs();
         }
 
         private void CE_Open_Click(object sender, EventArgs e)
