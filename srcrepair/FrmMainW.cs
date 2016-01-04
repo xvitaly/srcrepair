@@ -2582,7 +2582,7 @@ namespace srcrepair
         private void MNUFPSWizard_Click(object sender, EventArgs e)
         {
             // Очистим Редактор конфигов...
-            CE_New.PerformClick();
+            CloseEditorConfigs();
             
             // Запускаем форму мастера FPS-конфигов...
             using (frmFPGen FPFrm = new frmFPGen(new CoreLib.CFGEdDelegate(AddRowToTable)))
