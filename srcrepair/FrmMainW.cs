@@ -2745,20 +2745,28 @@ namespace srcrepair
                 {
                     if (!SelGame.IsUsingVideoFile)
                     {
+                        // Создаём конфиг ветки реестра...
                         CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), "Game_Options", SelGame.FullBackUpDirPath);
                     }
                     else
                     {
+                        // Проверяем существование файла с графическими настройками игры...
                         if (File.Exists(SelGame.VideoCfgFile))
                         {
+                            // Создаём резервную копию файла с графическими настройками игры...
                             CoreLib.CreateConfigBackUp(CoreLib.SingleToArray(SelGame.VideoCfgFile), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVideo);
                         }
                     }
+                    
+                    // Выводим сообщение об успехе...
                     MessageBox.Show(CoreLib.GetLocalizedString("BU_RegDone"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    BUT_Refresh.PerformClick();
+                    
+                    // Обновляем список резервных копий...
+                    UpdateBackUpList(SelGame.FullBackUpDirPath);
                 }
                 catch (Exception Ex)
                 {
+                    // Выводим сообщение об ошибке и пишем в журнал отладки...
                     CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BU_RegErr"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
@@ -2766,17 +2774,19 @@ namespace srcrepair
 
         private void BUT_L_AllSteam_Click(object sender, EventArgs e)
         {
+            // Создадим резервную копию всех настроек Steam...
             if (MessageBox.Show(CoreLib.GetLocalizedString("BU_RegCreate"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                // Создадим резервную копию всех настроек Steam...
                 try
                 {
                     // Создаём...
                     CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve"), "Steam_BackUp", SelGame.FullBackUpDirPath);
+                    
                     // Выводим сообщение...
                     MessageBox.Show(CoreLib.GetLocalizedString("BU_RegDone"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
                     // Обновим список бэкапов...
-                    BUT_Refresh.PerformClick();
+                    UpdateBackUpList(SelGame.FullBackUpDirPath);
                 }
                 catch (Exception Ex)
                 {
@@ -2788,14 +2798,14 @@ namespace srcrepair
 
         private void BUT_L_AllSRC_Click(object sender, EventArgs e)
         {
+            // Созданим резервную копию графических настроек всех Source-игр...
             if (MessageBox.Show(CoreLib.GetLocalizedString("BU_RegCreate"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                // Созданим резервную копию графических настроек всех Source-игр...
                 try
                 {
                     CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source"), "Source_Options", SelGame.FullBackUpDirPath);
                     MessageBox.Show(CoreLib.GetLocalizedString("BU_RegDone"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    BUT_Refresh.PerformClick();
+                    UpdateBackUpList(SelGame.FullBackUpDirPath);
                 }
                 catch (Exception Ex)
                 {
