@@ -1719,7 +1719,6 @@ namespace srcrepair
         {
             CFGFileName = "";
             CE_Editor.Rows.Clear();
-            UpdateStatusBar(MainTabControl.SelectedIndex);
         }
 
         #endregion
@@ -2357,6 +2356,9 @@ namespace srcrepair
         {
             // Закрываем все открытые конфиги в Редакторе конфигов и создаём новый пустой файл...
             CloseEditorConfigs();
+
+            // Обновляем содержимое строки статуса...
+            UpdateStatusBar(MainTabControl.SelectedIndex);
         }
 
         private void CE_Open_Click(object sender, EventArgs e)
