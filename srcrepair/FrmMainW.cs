@@ -2548,12 +2548,6 @@ namespace srcrepair
             }
         }
 
-        private void MNUShowEdHint_Click(object sender, EventArgs e)
-        {
-            // Покажем подсказку...
-            CE_ShowHint.PerformClick();
-        }
-
         private void MNUReportBuilder_Click(object sender, EventArgs e)
         {
             if ((AppSelector.Items.Count > 0) && (AppSelector.SelectedIndex != -1))

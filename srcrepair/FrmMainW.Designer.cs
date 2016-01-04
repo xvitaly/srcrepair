@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainW));
-            this.TabIcons = new System.Windows.Forms.ImageList(this.components);
+            this.TabIcons = new System.Windows.Forms.ImageList();
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
             this.GT_ResAvailable = new System.Windows.Forms.ComboBox();
@@ -1672,7 +1671,7 @@
             resources.ApplyResources(this.MNUShowEdHint, "MNUShowEdHint");
             this.MNUShowEdHint.Image = global::srcrepair.Properties.Resources.hint;
             this.MNUShowEdHint.Name = "MNUShowEdHint";
-            this.MNUShowEdHint.Click += new System.EventHandler(this.MNUShowEdHint_Click);
+            this.MNUShowEdHint.Click += new System.EventHandler(this.CE_ShowHint_Click);
             // 
             // MNUAppOptions
             // 
