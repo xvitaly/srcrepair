@@ -823,5 +823,25 @@ namespace srcrepair
             // Возвращаем результат...
             return Result;
         }
+
+        /// <summary>
+        /// Ищет самый свежий файл в переданном списке.
+        /// </summary>
+        /// <param name="FileList">Список файлов с полными путями для обхода</param>
+        /// <returns>Полный путь к самому свежему файлу</returns>
+        public static string FindNewerestFile(List<String> FileList)
+        {
+            // Создаём список типа FileInfo...
+            List<FileInfo> FF = new List<FileInfo>();
+
+            // Заполняем наш список...
+            foreach (string Config in FileList)
+            {
+                FF.Add(new FileInfo(Config));
+            }
+
+            // При помощи Linq ищем самый свежий...
+            return FF.OrderByDescending(x => x.LastWriteTimeUtc).FirstOrDefault().FullName;
+        }
     }
 }
