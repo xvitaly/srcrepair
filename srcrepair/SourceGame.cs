@@ -147,6 +147,24 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Ищет все доступные файлы с графическими настройками в локальном хранилище.
+        /// </summary>
+        /// <param name="SteamIDs">Steam User IDs</param>
+        /// <param name="AppID">ID выбранного приложения</param>
+        /// <param name="SteamPath">Каталог установки Steam</param>
+        /// <returns>Возвращает список найденных файлов с графическими настройками</returns>
+        private List<String> GetVideoConfigs(List<String> SteamIDs, string AppID, string SteamPath)
+        {
+            List<String> Result = new List<String>();
+            foreach (string ID in SteamIDs)
+            {
+                string FullDir = Path.Combine(SteamPath, "userdata", ID, AppID, "local", "cfg", "video.txt");
+                if (File.Exists(FullDir)) { Result.Add(FullDir); }
+            }
+            return Result;
+        }
+
+        /// <summary>
         /// Конструктор класса. Заполняет информацию о выбранном приложении.
         /// </summary>
         /// <param name="DirName">Каталог приложения (из БД)</param>
