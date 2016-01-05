@@ -247,7 +247,7 @@
     <HasVF>1</HasVF>
     <DirName>counter-strike global offensive</DirName>
     <SmallName>csgo</SmallName>
-    <VFDir>csgo</VFDir>
+    <VFDir>cloud</VFDir>
     <UserDir>0</UserDir>
     <SID>730</SID>
     <Executable>csgo.exe</Executable>
