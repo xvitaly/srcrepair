@@ -95,6 +95,8 @@ namespace srcrepair
         /// </summary>
         public string VideoCfgFile;
 
+        public List<String> VideoCfgFiles;
+
         /// <summary>
         /// Содержит имя каталога с конфигами. Используется в последних
         /// играх.
@@ -201,7 +203,8 @@ namespace srcrepair
                 FullCfgPath = Path.Combine(FullGamePath, "cfg");
                 FullBackUpDirPath = Path.Combine(AUserDir, "backups", SmallAppName);
                 BanlistFileName = Path.Combine(FullGamePath, "voice_ban.dt");
-                VideoCfgFile = ConfDir != "cloud" ? Path.Combine(GamePath, ConfDir, "cfg", "video.txt") : CoreLib.FindNewerestFile(GetVideoConfigs(CoreLib.GetUserIDs(SteamDir), SID, SteamDir));
+                VideoCfgFiles = GetVideoConfigs(CoreLib.GetUserIDs(SteamDir), SID, SteamDir);
+                VideoCfgFile = VideoCfgFiles.Count >= 1 ? CoreLib.FindNewerestFile(VideoCfgFiles) : Path.Combine(GamePath, ConfDir, "cfg", "video.txt");
                 AppHUDDir = Path.Combine(AUserDir, Properties.Settings.Default.HUDLocalDir, SmallAppName);
                 CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : "");
                 AppWorkshopDir = Path.Combine(SteamDir, Properties.Resources.SteamAppsFolderName, Properties.Resources.WorkshopFolderName, "content", GameInternalID);
