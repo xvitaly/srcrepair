@@ -95,6 +95,10 @@ namespace srcrepair
         /// </summary>
         public string VideoCfgFile;
 
+        /// <summary>
+        /// В этом списке хранятся пути ко всем найденным файлами
+        /// с графическими настройками.
+        /// </summary>
         public List<String> VideoCfgFiles;
 
         /// <summary>
