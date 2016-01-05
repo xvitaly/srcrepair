@@ -201,7 +201,7 @@ namespace srcrepair
                 FullCfgPath = Path.Combine(FullGamePath, "cfg");
                 FullBackUpDirPath = Path.Combine(AUserDir, "backups", SmallAppName);
                 BanlistFileName = Path.Combine(FullGamePath, "voice_ban.dt");
-                VideoCfgFile = Path.Combine(GamePath, ConfDir, "cfg", "video.txt");
+                VideoCfgFile = ConfDir != "cloud" ? Path.Combine(GamePath, ConfDir, "cfg", "video.txt") : CoreLib.FindNewerestFile(GetVideoConfigs(CoreLib.GetUserIDs(SteamDir), SID, SteamDir));
                 AppHUDDir = Path.Combine(AUserDir, Properties.Settings.Default.HUDLocalDir, SmallAppName);
                 CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : "");
                 AppWorkshopDir = Path.Combine(SteamDir, Properties.Resources.SteamAppsFolderName, Properties.Resources.WorkshopFolderName, "content", GameInternalID);
