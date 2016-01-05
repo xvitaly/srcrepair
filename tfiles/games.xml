@@ -486,4 +486,13 @@
     <SID>397680</SID>
     <Executable>fr.exe</Executable>
   </Game>
+  <Game Name="Aperture Tag">
+    <HasVF>1</HasVF>
+    <DirName>Aperture Tag</DirName>
+    <SmallName>aperturetag</SmallName>
+    <VFDir>aperturetag</VFDir>
+    <UserDir>0</UserDir>
+    <SID>280740</SID>
+    <Executable>portal2.exe</Executable>
+  </Game>
 </Games>
