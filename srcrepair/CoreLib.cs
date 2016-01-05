@@ -802,5 +802,26 @@ namespace srcrepair
             Result.Add(Str);
             return Result;
         }
+
+        /// <summary>
+        /// Возвращает список используемых на данном компьютере SteamID.
+        /// </summary>
+        /// <param name="SteamPath">Каталог установки Steam</param>
+        /// <returns>Список Steam user ID</returns>
+        public static List<String> GetUserIDs(string SteamPath)
+        {
+            // Создаём новый список...
+            List<String> Result = new List<String>();
+
+            // Получаем список каталогов...
+            DirectoryInfo DInfo = new DirectoryInfo(Path.Combine(SteamPath, "userdata"));
+            foreach (DirectoryInfo SubDir in DInfo.GetDirectories())
+            {
+                Result.Add(SubDir.FullName);
+            }
+
+            // Возвращаем результат...
+            return Result;
+        }
     }
 }
