@@ -2080,7 +2080,7 @@ namespace srcrepair
                 CheckSymbolsGame(SelGame.FullGamePath);
 
                 // Считаем настройки графики...
-                if (SelGame.IsUsingVideoFile) { if (File.Exists(SelGame.VideoCfgFile)) { ReadNCFGameSettings(SelGame.VideoCfgFile); } else { NullGraphOptions(); } } else { ReadGCFGameSettings(SelGame.SmallAppName); }
+                if (SelGame.IsUsingVideoFile) { SelGame.UpdateVideoFilesList(SelGame.GameInternalID, App.FullSteamPath, SelGame.FullCfgPath); string VideoFile = SelGame.GetActualVideoFile(); if (File.Exists(VideoFile)) { ReadNCFGameSettings(VideoFile); } else { NullGraphOptions(); } } else { ReadGCFGameSettings(SelGame.SmallAppName); }
 
                 // Переключаем графический твикер в режим GCF/NCF...
                 SetGTOptsType(!SelGame.IsUsingVideoFile);
@@ -2238,24 +2238,23 @@ namespace srcrepair
                     }
                     else
                     {
-                        // Это NCF-приложение, поэтому будем записывать настройки в файл...
                         // Создадим бэкап файла с графическими настройками...
                         if (Properties.Settings.Default.SafeCleanup)
                         {
-                            if (File.Exists(SelGame.VideoCfgFile))
-                            {
-                                CoreLib.CreateConfigBackUp(CoreLib.SingleToArray(SelGame.VideoCfgFile), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
-                            }
+                            CoreLib.CreateConfigBackUp(SelGame.VideoCfgFiles, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
                         }
 
-                        // Записываем...
                         try
                         {
-                            WriteNCFGameSettings(SelGame.VideoCfgFile);
+                            // Записываем...
+                            WriteNCFGameSettings(SelGame.GetActualVideoFile());
+                            
+                            // Выводим сообщение...
                             MessageBox.Show(CoreLib.GetLocalizedString("GT_SaveSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch (Exception Ex)
                         {
+                            // Произошла ошибка...
                             CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("GT_NCFFailure"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                         }
                     }
@@ -2511,22 +2510,14 @@ namespace srcrepair
                 }
                 else
                 {
-                    try
+                    // Создадим бэкап файла с графическими настройками...
+                    if (Properties.Settings.Default.SafeCleanup)
                     {
-                        if (File.Exists(SelGame.VideoCfgFile))
-                        {
-                            if (Properties.Settings.Default.SafeCleanup)
-                            {
-                                CoreLib.CreateConfigBackUp(CoreLib.SingleToArray(SelGame.VideoCfgFile), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVideo);
-                            }
-                            File.Delete(SelGame.VideoCfgFile);
-                            MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                        CoreLib.CreateConfigBackUp(SelGame.VideoCfgFiles, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
                     }
-                    catch (Exception Ex)
-                    {
-                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                    }
+
+                    // Выводим диалог очистки...
+                    CoreLib.OpenCleanupWindow(SelGame.VideoCfgFiles, ((Button)sender).Text, CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile, false, false, false, false);
                 }
             }
         }
@@ -2751,11 +2742,7 @@ namespace srcrepair
                     else
                     {
                         // Проверяем существование файла с графическими настройками игры...
-                        if (File.Exists(SelGame.VideoCfgFile))
-                        {
-                            // Создаём резервную копию файла с графическими настройками игры...
-                            CoreLib.CreateConfigBackUp(CoreLib.SingleToArray(SelGame.VideoCfgFile), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVideo);
-                        }
+                        CoreLib.CreateConfigBackUp(SelGame.VideoCfgFiles, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVideo);
                     }
                     
                     // Выводим сообщение об успехе...
