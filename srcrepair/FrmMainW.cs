@@ -2516,8 +2516,11 @@ namespace srcrepair
                         CoreLib.CreateConfigBackUp(SelGame.VideoCfgFiles, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
                     }
 
-                    // Выводим диалог очистки...
-                    CoreLib.OpenCleanupWindow(SelGame.VideoCfgFiles, ((Button)sender).Text, CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile, false, false, false, false);
+                    // Удаляем файлы...
+                    CoreLib.RemoveFiles(SelGame.VideoCfgFiles);
+
+                    // Выводим сообщение...
+                    MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
