@@ -89,12 +89,6 @@ namespace srcrepair
         public string GameInternalID;
 
         /// <summary>
-        /// В этой переменной хранится путь к файлу с настройками видео,
-        /// используется в NCF-играх.
-        /// </summary>
-        public string VideoCfgFile;
-
-        /// <summary>
         /// В этом списке хранятся пути ко всем найденным файлами
         /// с графическими настройками.
         /// </summary>
@@ -169,6 +163,17 @@ namespace srcrepair
             return Result;
         }
 
+        public void UpdateVideoFilesList(string AppID, string SteamPath, string CfgPath)
+        {
+            VideoCfgFiles = GetVideoConfigs(CoreLib.GetUserIDs(SteamPath), AppID, SteamPath);
+            if (VideoCfgFiles.Count < 1) { VideoCfgFiles.Add(Path.Combine(CfgPath, "cfg", "video.txt")); }
+        }
+
+        public string GetActualVideoFile()
+        {
+            return CoreLib.FindNewerestFile(VideoCfgFiles);
+        }
+
         /// <summary>
         /// Конструктор класса. Заполняет информацию о выбранном приложении.
         /// </summary>
@@ -206,8 +211,6 @@ namespace srcrepair
                 FullCfgPath = Path.Combine(FullGamePath, "cfg");
                 FullBackUpDirPath = Path.Combine(AUserDir, "backups", SmallAppName);
                 BanlistFileName = Path.Combine(FullGamePath, "voice_ban.dt");
-                VideoCfgFiles = GetVideoConfigs(CoreLib.GetUserIDs(SteamDir), SID, SteamDir);
-                VideoCfgFile = VideoCfgFiles.Count >= 1 ? CoreLib.FindNewerestFile(VideoCfgFiles) : Path.Combine(GamePath, ConfDir, "cfg", "video.txt");
                 AppHUDDir = Path.Combine(AUserDir, Properties.Settings.Default.HUDLocalDir, SmallAppName);
                 CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : "");
                 AppWorkshopDir = Path.Combine(SteamDir, Properties.Resources.SteamAppsFolderName, Properties.Resources.WorkshopFolderName, "content", GameInternalID);
