@@ -794,6 +794,22 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Удаляет все файлы из переданного в качестве параметра массива
+        /// </summary>
+        /// <param name="Files">Массив с именами файлов для удаления</param>
+        public static void RemoveFiles(List<String> Files)
+        {
+            try
+            {
+                foreach (string F in Files)
+                {
+                    if (File.Exists(F)) { File.Delete(F); }
+                }
+            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+        }
+
+        /// <summary>
         /// Создаёт резервную копию конфигов, имена которых переданы в параметре.
         /// </summary>
         /// <param name="Configs">Конфиги для бэкапа</param>
