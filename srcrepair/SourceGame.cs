@@ -163,12 +163,21 @@ namespace srcrepair
             return Result;
         }
 
+        /// <summary>
+        /// Обновляет список файлов с графическими настройками выбранной игры.
+        /// </summary>
+        /// <param name="AppID">ID выбранного приложения</param>
+        /// <param name="SteamPath">Каталог установки Steam</param>
+        /// <param name="CfgPath">Каталог настроек игры</param>
         public void UpdateVideoFilesList(string AppID, string SteamPath, string CfgPath)
         {
             VideoCfgFiles = GetVideoConfigs(CoreLib.GetUserIDs(SteamPath), AppID, SteamPath);
             if (VideoCfgFiles.Count < 1) { VideoCfgFiles.Add(Path.Combine(CfgPath, "cfg", "video.txt")); }
         }
 
+        /// <summary>
+        /// Возвращает актуальный файл графических настроек игры.
+        /// </summary>
         public string GetActualVideoFile()
         {
             return CoreLib.FindNewerestFile(VideoCfgFiles);
