@@ -777,6 +777,23 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Проверяет существует ли хотя бы один из файлов, указанный в списке.
+        /// </summary>
+        /// <param name="Configs">Список файлов с полными путями</param>
+        /// <returns>Возвращает true если хотя бы один файл существует</returns>
+        public static bool CheckFilesInList(List<String> Configs)
+        {
+            foreach (string Config in Configs)
+            {
+                if (!File.Exists(Config))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        /// <summary>
         /// Создаёт резервную копию конфигов, имена которых переданы в параметре.
         /// </summary>
         /// <param name="Configs">Конфиги для бэкапа</param>
@@ -788,7 +805,7 @@ namespace srcrepair
             if (!(Directory.Exists(BackUpDir))) { Directory.CreateDirectory(BackUpDir); }
 
             // Копируем оригинальный файл в файл бэкапа...
-            try { CompressFiles(Configs, GenerateBackUpFileName(BackUpDir, Prefix)); } catch (Exception Ex) { WriteStringToLog(Ex.Message); }
+            try { if (CheckFilesInList(Configs)) { CompressFiles(Configs, GenerateBackUpFileName(BackUpDir, Prefix)); } } catch (Exception Ex) { WriteStringToLog(Ex.Message); }
         }
 
         /// <summary>
