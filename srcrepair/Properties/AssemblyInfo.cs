@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("EasyCoding Team")]
 [assembly: AssemblyProduct("SRC Repair")]
-[assembly: AssemblyCopyright("(c) 2005-2015 EasyCoding Team. All rights reserved.")]
+[assembly: AssemblyCopyright("(c) 2005-2016 EasyCoding Team. All rights reserved.")]
 [assembly: AssemblyTrademark("EasyCoding, EasyCoding Software Group and EasyCoding Team are trademarks of EasyCoding Team.")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("22.0.0.2867")]
-[assembly: AssemblyFileVersion("22.0.0.2867")]
+[assembly: AssemblyVersion("22.0.0.2874")]
+[assembly: AssemblyFileVersion("22.0.0.2874")]

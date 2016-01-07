@@ -1,7 +1,7 @@
 ﻿; Скрипт программы (мастера) установки SRC Repair.
 ; 
-; Copyright 2011 - 2015 EasyCoding Team (ECTeam).
-; Copyright 2005 - 2015 EasyCoding Team.
+; Copyright 2011 - 2016 EasyCoding Team (ECTeam).
+; Copyright 2005 - 2016 EasyCoding Team.
 ; 
 ; Лицензия: GPL v3 (см. файл GPL.txt).
 ;  
@@ -38,7 +38,7 @@ ArchitecturesInstallIn64BitMode=x64
 ; Здесь указываем данные, которые будут добавлены в свойства установщика...
 VersionInfoVersion=22.0.0.2758
 VersionInfoDescription=SRC Repair Setup
-VersionInfoCopyright=(c) 2005-2015 EasyCoding Team. All rights reserved.
+VersionInfoCopyright=(c) 2005-2016 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
 
 [Languages]
