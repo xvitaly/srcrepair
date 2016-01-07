@@ -172,7 +172,7 @@ namespace srcrepair
         public void UpdateVideoFilesList(string AppID, string SteamPath, string CfgPath)
         {
             VideoCfgFiles = GetVideoConfigs(CoreLib.GetUserIDs(SteamPath), AppID, SteamPath);
-            if (VideoCfgFiles.Count < 1) { VideoCfgFiles.Add(Path.Combine(CfgPath, "cfg", "video.txt")); }
+            VideoCfgFiles.Add(Path.Combine(CfgPath, "cfg", "video.txt"));
         }
 
         /// <summary>
