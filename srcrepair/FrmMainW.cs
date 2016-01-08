@@ -3228,20 +3228,24 @@ namespace srcrepair
 
         private void HD_Uninstall_Click(object sender, EventArgs e)
         {
-            // Сгенерируем полный путь к установленному HUD...
-            string HUDPath = Path.Combine(SelGame.CustomInstallDir, SelHUD.InstallDir);
-            
-            // Воспользуемся модулем быстрой очистки для удаления выбранного HUD...
-            CoreLib.RemoveDirectoryEx(CoreLib.SingleToArray(HUDPath));
+            // Спросим пользователя о необходимости удаления HUD...
+            if (MessageBox.Show(String.Format("{0}?", ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                // Сгенерируем полный путь к установленному HUD...
+                string HUDPath = Path.Combine(SelGame.CustomInstallDir, SelHUD.InstallDir);
 
-            // Проверяем установлен ли выбранный HUD...
-            bool IsInstalled = SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir);
+                // Воспользуемся модулем быстрой очистки для удаления выбранного HUD...
+                CoreLib.RemoveDirectoryEx(CoreLib.SingleToArray(HUDPath));
 
-            // При успешном удалении HUD выводим сообщение и сносим и его каталог...
-            if (!IsInstalled) { MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); if (Directory.Exists(HUDPath)) { Directory.Delete(HUDPath); } }
-            
-            // Включаем / отключаем кнопки...
-            SetHUDButtons(IsInstalled);
+                // Проверяем установлен ли выбранный HUD...
+                bool IsInstalled = SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir);
+
+                // При успешном удалении HUD выводим сообщение и сносим и его каталог...
+                if (!IsInstalled) { MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); if (Directory.Exists(HUDPath)) { Directory.Delete(HUDPath); } }
+
+                // Включаем / отключаем кнопки...
+                SetHUDButtons(IsInstalled);
+            }
         }
 
         private void HD_Homepage_Click(object sender, EventArgs e)
