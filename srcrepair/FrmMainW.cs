@@ -2640,6 +2640,7 @@ namespace srcrepair
                                 {
                                     // Восстанавливаем...
                                     Process.Start("regedit.exe", String.Format("/s \"{0}\"", Path.Combine(SelGame.FullBackUpDirPath, FName)));
+                                    
                                     // Показываем сообщение об успешном восстановлении...
                                     MessageBox.Show(CoreLib.GetLocalizedString("BU_RestSuccessful"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
@@ -2654,14 +2655,7 @@ namespace srcrepair
                                 {
                                     foreach (ZipEntry ZFile in Zip)
                                     {
-                                        try
-                                        {
-                                            ZFile.Extract(Path.GetPathRoot(App.FullSteamPath), ExtractExistingFileAction.OverwriteSilently);
-                                        }
-                                        catch (Exception Ex)
-                                        {
-                                            CoreLib.WriteStringToLog(Ex.Message);
-                                        }
+                                        try { ZFile.Extract(Path.GetPathRoot(App.FullSteamPath), ExtractExistingFileAction.OverwriteSilently); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                                     }
                                 }
                                 HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
@@ -2882,6 +2876,7 @@ namespace srcrepair
             {
                 // Копируем в буфер...
                 Clipboard.SetText(CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value.ToString());
+                
                 // Удаляем из ячейки...
                 CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value = null;
             }
@@ -3023,17 +3018,20 @@ namespace srcrepair
         {
             // Удаляем все кастомные текстуры...
             List<String> CleanDirs = new List<string>();
+            
             // Чистим базы игр со старой системой. Удалить после полного перехода на новую...
             if (Properties.Settings.Default.AllowUnSafeCleanup)
             {
                 CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "materials", "*.*"));
                 CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "models", "*.*"));
             }
+            
             // Чистим загруженные с серверов модели и текстуры...
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.vt*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.vmt"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.mdl"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.phy"));
+            
             // Чистим установленные пользователем модели и текстуры...
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.vt*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.vmt"));
@@ -3056,11 +3054,13 @@ namespace srcrepair
         {
             // Переключим статус безопасной очистки...
             Properties.Settings.Default.SafeCleanup = !Properties.Settings.Default.SafeCleanup;
+            
             // Сообщим пользователю если он отключил безопасную очистку...
             if (!Properties.Settings.Default.SafeCleanup)
             {
                 MessageBox.Show(CoreLib.GetLocalizedString("AppSafeClnDisabled"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            
             // Обновим статусную строку...
             CheckSafeClnStatus();
         }
