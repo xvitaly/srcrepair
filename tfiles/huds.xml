@@ -4,7 +4,7 @@
     <Name>7HUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/7HUD/7HUD_cae087c6.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/7HUD/7HUD_fb308e6d.zip</URI>
     <UpURI>https://github.com/Sevin7/7HUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/7HUD.png</Preview>
     <RepoPath>https://github.com/Sevin7/7HUD</RepoPath>
@@ -207,8 +207,8 @@
   <HUD>
     <Name>EJP-HUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/ejphud/ejphud_4744d0ea.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/ejphud/ejphud_3919b5a8.zip</URI>
     <UpURI>https://github.com/basbanaan/EJP-HUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/ejphud.png</Preview>
     <RepoPath>https://github.com/basbanaan/EJP-HUD</RepoPath>
@@ -220,7 +220,7 @@
     <Name>flatHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/flathud/flathud_f7a11550.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/flathud/flathud_af2255ed.zip</URI>
     <UpURI>https://github.com/flatlinee/flatHUD-/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/flathud.png</Preview>
     <RepoPath>https://github.com/flatlinee/flatHUD-</RepoPath>
@@ -256,7 +256,7 @@
     <Name>budhud</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/budhud/budhud_f02447f2.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/budhud/budhud_beb319fa.zip</URI>
     <UpURI>https://github.com/WhiskerBiscuit/budhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.png</Preview>
     <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
@@ -400,7 +400,7 @@
     <Name>biscottiHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/biscottihud/biscottihud_15c81b3a.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/biscottihud/biscottihud_ed9e75e9.zip</URI>
     <UpURI>https://github.com/MedicodiBiscotti/biscottiHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/biscottihud.png</Preview>
     <RepoPath>https://github.com/MedicodiBiscotti/biscottiHUD</RepoPath>
@@ -412,7 +412,7 @@
     <Name>Flamehud</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/flamehud/flamehud_6edc1826.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/flamehud/flamehud_4f2922e0.zip</URI>
     <UpURI>https://github.com/mattr0d/flamehud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/flamehud.png</Preview>
     <RepoPath>https://github.com/mattr0d/flamehud</RepoPath>
@@ -460,7 +460,7 @@
     <Name>The Mannterface</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/mannterface/mannterface_344fca34.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/mannterface/mannterface_3c893b2e.zip</URI>
     <UpURI>https://github.com/mannterface/Mannterface/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/mannterface.png</Preview>
     <RepoPath>https://github.com/mannterface/Mannterface</RepoPath>
