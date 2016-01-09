@@ -2690,6 +2690,7 @@ namespace srcrepair
                 {
                     // Удалим выбранный бэкап...
                     string FName = BU_LVTable.SelectedItems[0].SubItems[4].Text;
+                    
                     // Запросим подтверждение...
                     if (MessageBox.Show(CoreLib.GetLocalizedString("BU_DelMsg"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
@@ -2697,8 +2698,10 @@ namespace srcrepair
                         {
                             // Удаляем файл...
                             File.Delete(Path.Combine(SelGame.FullBackUpDirPath, FName));
+                            
                             // Удаляем строку...
                             BU_LVTable.Items.Remove(BU_LVTable.SelectedItems[0]);
+                            
                             // Показываем сообщение об успешном удалении...
                             MessageBox.Show(CoreLib.GetLocalizedString("BU_DelSuccessful"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
@@ -3113,20 +3116,26 @@ namespace srcrepair
         {
             // Проведём глубокую очистку...
             List<String> CleanDirs = new List<string>();
+            
             // Удалим старые бинарники и лаунчеры...
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "bin", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "platform", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "bin", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "*.exe"));
+            
             // Удалим кэш загрузок...
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.*"));
+            
             // Удалим кастомные файлы...
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.AppWorkshopDir, "*.*"));
+            
             // Удалим другие кэши...
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cache", "*.*"));
+            
             // Удалим кэш MOTD...
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "config", "html", "*.*"));
+            
             // Удалим пользовательские конфиги...
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cfg", "*.*"));
             CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CacheChkReq"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
