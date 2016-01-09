@@ -3007,7 +3007,7 @@ namespace srcrepair
         {
             if (!(String.IsNullOrEmpty(CFGFileName)))
             {
-                Process.Start(Properties.Settings.Default.EditorBin, CFGFileName);
+                CoreLib.OpenTextEditor(CFGFileName);
             }
             else
             {
