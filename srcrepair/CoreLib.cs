@@ -690,6 +690,16 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Открывает указанный URL в выбранном в настройках текстовом редакторе.
+        /// </summary>
+        /// <param name="FileName">Файл для загрузки</param>
+        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
+        public static void OpenTextEditor(string FileName)
+        {
+            try { Process.Start(Properties.Settings.Default.EditorBin, FileName); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+        }
+
+        /// <summary>
         /// Распаковывает архив в указанный каталог при помощи библиотеки DotNetZip
         /// с выводом прогресса в отдельном окне.
         /// </summary>
