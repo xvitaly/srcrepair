@@ -2921,7 +2921,7 @@ namespace srcrepair
             else
             {
                 // Загрузим файл в Блокноте...
-                try { Process.Start(Properties.Settings.Default.EditorBin, ConfigFile); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                CoreLib.OpenTextEditor(ConfigFile);
             }
         }
 
