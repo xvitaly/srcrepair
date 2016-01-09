@@ -54,6 +54,12 @@ namespace srcrepair
                 CleanDirs.Add(Path.Combine(SteamPath, "appcache", "httpcache", "*.*"));
             }
 
+            if (EC_DepotCache.Checked)
+            {
+                // Очистим Depot-кэш...
+                CleanDirs.Add(Path.Combine(SteamPath, "depotcache", "*.*"));
+            }
+
             if (EC_Logs.Checked)
             {
                 // Очистим логи клиента Steam...
@@ -72,6 +78,8 @@ namespace srcrepair
             {
                 // Очистим краш-дампы...
                 CleanDirs.Add(Path.Combine(SteamPath, "dumps", "*.*"));
+                CleanDirs.Add(Path.Combine(SteamPath, "*.dmp"));
+                CleanDirs.Add(Path.Combine(SteamPath, "*.mdmp"));
             }
 
             if (EC_BuildCache.Checked)
