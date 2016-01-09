@@ -120,14 +120,44 @@
   <metadata name="EC_GB_Basic.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="EC_HTTPCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="EC_DepotCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="EC_HTTPCache.AutoSize" type="System.Boolean, mscorlib">
+  <data name="EC_DepotCache.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="EC_DepotCache.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 68</value>
+  </data>
+  <data name="EC_DepotCache.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 17</value>
+  </data>
+  <data name="EC_DepotCache.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="EC_DepotCache.Text" xml:space="preserve">
+    <value>Steam client depot cache</value>
+  </data>
+  <data name="&gt;&gt;EC_DepotCache.Name" xml:space="preserve">
+    <value>EC_DepotCache</value>
+  </data>
+  <data name="&gt;&gt;EC_DepotCache.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EC_DepotCache.Parent" xml:space="preserve">
+    <value>EC_GB_Basic</value>
+  </data>
+  <data name="&gt;&gt;EC_DepotCache.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="EC_HTTPCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="EC_HTTPCache.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="EC_HTTPCache.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 45</value>
   </data>
@@ -150,7 +180,7 @@
     <value>EC_GB_Basic</value>
   </data>
   <data name="&gt;&gt;EC_HTTPCache.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="EC_HTMLCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -180,13 +210,13 @@
     <value>EC_GB_Basic</value>
   </data>
   <data name="&gt;&gt;EC_HTMLCache.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="EC_GB_Basic.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
   </data>
   <data name="EC_GB_Basic.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 70</value>
+    <value>237, 95</value>
   </data>
   <data name="EC_GB_Basic.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -330,7 +360,7 @@
     <value>3</value>
   </data>
   <data name="EC_GB_Garb.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 88</value>
+    <value>12, 113</value>
   </data>
   <data name="EC_GB_Garb.Size" type="System.Drawing.Size, System.Drawing">
     <value>237, 113</value>
@@ -511,7 +541,7 @@
     <value>4</value>
   </data>
   <data name="EC_GB_ExCn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 207</value>
+    <value>12, 232</value>
   </data>
   <data name="EC_GB_ExCn.Size" type="System.Drawing.Size, System.Drawing">
     <value>237, 137</value>
@@ -538,7 +568,7 @@
     <value>True</value>
   </metadata>
   <data name="EC_Execute.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 425</value>
+    <value>40, 450</value>
   </data>
   <data name="EC_Execute.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 23</value>
@@ -631,7 +661,7 @@
     <value>1</value>
   </data>
   <data name="EC_GB_Trsh.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 350</value>
+    <value>12, 375</value>
   </data>
   <data name="EC_GB_Trsh.Size" type="System.Drawing.Size, System.Drawing">
     <value>237, 67</value>
@@ -664,7 +694,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>261, 457</value>
+    <value>261, 482</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

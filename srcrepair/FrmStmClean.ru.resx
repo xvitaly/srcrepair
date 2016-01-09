@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="EC_DepotCache.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 17</value>
+  </data>
+  <data name="EC_DepotCache.Text" xml:space="preserve">
+    <value>Depot кэш клиента Steam</value>
+  </data>
   <data name="EC_HTTPCache.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 17</value>
   </data>
@@ -210,6 +216,30 @@
   </data>
   <data name="EC_GB_Trsh.Text" xml:space="preserve">
     <value>Специальные виды очистки</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
+        AAAAAQAAAQEBAQMDAwA3NzcCcHFxFZKLiCmhnp1BpqCfUaWkpFuqoJ1Wm5qdUpmXlzyLg38eYWFgDCEg
+        HwAAAAAAAAAAABAQEACmpaYZx8fIUq6opoB1obfBWn2V3WOOo+JKdJDwW4yh5lCpzvRqiZ7QdKa/xqGq
+        tYLAwsRAfX1+DgAAAABjcmNJxdXHW7Wuq2NqlanAd9r5/16szvyE2vP/YL/i/2/f/v9Z0vX/SsXt/0zD
+        6vpBn8f6kbfRmb25tw8EBQQAgZeBpZayl5mjsZ89Wbnc033b+P+r6vv8ouT4/pPk+/6E2/X+bNX0/lfP
+        8/5Y1ff9UM70/kWVvMYTJDEvNj82QJ23nZSVrpWckamQlVGw0dxHwe3/Wsru/nTM7f990vD/dtDv/2zN
+        7v5dye7/Srri9BArO0YAAAABAgMEBiEnIS6GnIaPlK+WXo+fhWZjsMTiTcLv/0G24v5MvOf/Tr3n/1C9
+        5v9Rveb7Usf1/ytzlKgAAAAAAgMDAwAAAAAAAAAAJy0nMKC7oY6TposiXoOCi0W56P9ItOD9Srrl/0S6
+        5P8/tOD/P7Xf/EvD6/8whJ21AAAAAAECAgMAAAAAAAAAABcbFx57kHuKnLieWE9YRgAga5CqRMTy/06t
+        2vt+tuj/iafq/2uF5v5VcuX/OmDU8QMHGBwAAAAAAAABAgEBAQEAAAAAFBgUF5q0m4iQposqGy8tHi2F
+        ze2krfT/6d37/ay48f+Gnur/V3ff+zxd7f8RIl1tAAAAAAEBAwQAAAAAAAAAAAMDAwRrfWtxor2kYEJP
+        OgABBkBVfYD6/3y34fxatt7+bMLj/3LF4fxkyOr/MIOqwAAAAAAAAQECAAAAAAAAAAAAAAAABAUFBRQX
+        FA4GCAgFAAAAABgyZntev+//cb3h+3W94PuHx+f+oNLs/1+x2vUDERkbAAAAAAAAAAAAAAAAAAAAAAEB
+        AQEAAAAAAAAAAAECAwMAAAAAK1hvfHbG7v+P0fL+fbze+2+95P9YrtjyBBAWGAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAQEBAQAAAAAAAAAAAQEDAwAAAAAbNEFGWIuluFuu3PY4pdH/LYKivwEAAAAAAQECAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAgIDAQEBAQAAAAAnP01MH1ZuthFbe88BBQgHAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECAwMCAgIDAQEBAQAAAAAkZH29K3OSwgAC
+        BAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIDBAUAAAAABxEVGyBd
+        d5cDIS4yAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA==
+</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Модуль очистки Steam</value>
