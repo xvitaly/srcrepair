@@ -2906,11 +2906,23 @@ namespace srcrepair
 
         private void FP_OpenNotepad_Click(object sender, EventArgs e)
         {
-            // Загрузим выбранный конфиг в Редактор конфигов...
-            ReadConfigFromFile(Path.Combine(App.FullAppPath, "cfgs", FP_ConfigSel.Text));
+            // Сгенерируем путь к файлу...
+            string ConfigFile = Path.Combine(App.FullAppPath, "cfgs", FP_ConfigSel.Text);
             
-            // Переключимся на него...
-            MainTabControl.SelectedIndex = 1;
+            // Проверим зажал ли пользователь Shift перед тем, как кликнуть по кнопке...
+            if (Control.ModifierKeys == Keys.Shift)
+            {
+                // Загрузим выбранный конфиг в Редактор конфигов...
+                ReadConfigFromFile(ConfigFile);
+
+                // Переключимся на него...
+                MainTabControl.SelectedIndex = 1;
+            }
+            else
+            {
+                // Загрузим файл в Блокноте...
+                try { Process.Start(Properties.Settings.Default.EditorBin, ConfigFile); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            }
         }
 
         private void MNUUpdateCheck_Click(object sender, EventArgs e)
