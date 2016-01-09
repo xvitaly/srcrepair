@@ -2,3 +2,5 @@
 
 FPS increase: Maximum
 Graphics degradation: 16-bit style
+
+Warning: outdated. Do not use on latest Team Fortress 2 versions!

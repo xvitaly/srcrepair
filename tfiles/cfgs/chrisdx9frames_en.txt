@@ -2,3 +2,5 @@ Dx9frames is a chrishighframes cfg derivative designed to work without issue in 
 
 FPS increase: High
 Graphics degradation: Some
+
+Warning: outdated. Do not use on latest Team Fortress 2 versions!

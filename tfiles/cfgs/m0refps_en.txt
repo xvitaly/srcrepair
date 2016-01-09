@@ -2,3 +2,5 @@
 
 FPS increase: Medium
 Graphics degradation: Some
+
+Warning: outdated. Do not use on latest Team Fortress 2 versions!

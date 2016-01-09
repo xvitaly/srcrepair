@@ -2,3 +2,5 @@ This config will set all graphic settings to maximum. This will require a powerf
 
 FPS increase: None
 Graphics degradation: None
+
+Warning: outdated. Do not use on latest Team Fortress 2 versions!
