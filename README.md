@@ -74,4 +74,5 @@ Supported mods and third-party Source engine games:
  * Rexaura;
  * Black Mesa;
  * Portal Stories: Mel;
- * FIREFIGHT RELOADED.
+ * FIREFIGHT RELOADED;
+ * Aperture Tag: The Paint Gun Testing Initiative.
