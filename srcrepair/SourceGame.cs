@@ -189,6 +189,7 @@ namespace srcrepair
         /// <summary>
         /// Конструктор класса. Заполняет информацию о выбранном приложении.
         /// </summary>
+        /// <param name="AppName">Название приложения (из БД)</param>
         /// <param name="DirName">Каталог приложения (из БД)</param>
         /// <param name="SmallName">Внутренний каталог приложения (из БД)</param>
         /// <param name="Executable">Имя главного бинарника (из БД)</param>
@@ -199,10 +200,10 @@ namespace srcrepair
         /// <param name="AppPath">Путь к каталогу SRC Repair</param>
         /// <param name="UserDir">Путь к пользовательскому каталогу SRC Repair</param>
         /// <param name="SteamDir">Путь к установленному клиенту Steam</param>
-        public SourceGame(string DirName, string SmallName, string Executable, string SID, string VFDir, bool HasVF, bool UserDir, string AppPath, string AUserDir, string SteamDir, List<String> GameDirs)
+        public SourceGame(string AppName, string DirName, string SmallName, string Executable, string SID, string VFDir, bool HasVF, bool UserDir, string AppPath, string AUserDir, string SteamDir, List<String> GameDirs)
         {
             // Начинаем определять нужные нам значения переменных...
-            FullAppName = DirName;
+            FullAppName = AppName;
             SmallAppName = SmallName;
             GameBinaryFile = Executable;
             GameInternalID = SID;
