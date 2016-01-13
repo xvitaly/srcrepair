@@ -2975,7 +2975,7 @@ namespace srcrepair
                 if (BU_LVTable.SelectedItems.Count > 0)
                 {
                     // Откроем выбранный бэкап в Проводнике Windows...
-                    Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, Path.Combine(SelGame.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text)));
+                    CoreLib.OpenExplorer(Path.Combine(SelGame.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text));
                 }
                 else
                 {
