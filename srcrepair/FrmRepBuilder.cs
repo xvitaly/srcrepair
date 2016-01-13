@@ -132,7 +132,7 @@ namespace srcrepair
                 }
 
                 // Открываем каталог с отчётами в оболочке и выделяем созданный файл...
-                Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, ArchName));
+                CoreLib.OpenExplorer(ArchName);
             }
             catch (Exception Ex)
             {
