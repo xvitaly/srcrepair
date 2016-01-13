@@ -319,8 +319,9 @@ namespace srcrepair
         {
             // Исправим известный баг VS с обработчиком двойного клика, снимающим флажок у файла.
             CM_FTable.SelectedItems[0].Checked = !CM_FTable.SelectedItems[0].Checked;
+            
             // Запускаем Проводник и выделяем в нём выбранный пользователем файл...
-            Process.Start(Properties.Settings.Default.ShBin, Properties.Settings.Default.ShParam + @" """ + CM_FTable.SelectedItems[0].ToolTipText + @"""");
+            CoreLib.OpenExplorer(CM_FTable.SelectedItems[0].ToolTipText);
         }
         
         private void GttWrk_DoWork(object sender, DoWorkEventArgs e)
