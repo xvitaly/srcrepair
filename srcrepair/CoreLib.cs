@@ -700,6 +700,17 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Показывает выбранный файл в Проводнике Windows или другой выбранной
+        /// пользователем оболочке.
+        /// </summary>
+        /// <param name="FileName">Файл для отображения</param>
+        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
+        public static void OpenExplorer(string FileName)
+        {
+            try { Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, FileName)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+        }
+
+        /// <summary>
         /// Распаковывает архив в указанный каталог при помощи библиотеки DotNetZip
         /// с выводом прогресса в отдельном окне.
         /// </summary>
