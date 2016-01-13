@@ -3319,7 +3319,7 @@ namespace srcrepair
         private void HD_OpenDir_Click(object sender, EventArgs e)
         {
             // Покажем файлы установленного HUD в Проводнике...
-            try { Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, Path.Combine(SelGame.CustomInstallDir, SelHUD.InstallDir))); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            CoreLib.OpenExplorer(Path.Combine(SelGame.CustomInstallDir, SelHUD.InstallDir));
         }
 
         private void MNUExtClnSteam_Click(object sender, EventArgs e)
