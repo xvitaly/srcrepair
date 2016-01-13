@@ -179,7 +179,7 @@ namespace srcrepair
         {
             if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AHE_HMessg"), HostsFilePath), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                try { Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, HostsFilePath)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                CoreLib.OpenExplorer(HostsFilePath);
             }
         }
 
