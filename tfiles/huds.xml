@@ -504,4 +504,16 @@
     <ArchiveDir>rainhud-master</ArchiveDir>
     <InstallDir>rainhud</InstallDir>
   </HUD>
+  <HUD>
+    <Name>SolarHUD</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/solarhud/solarhud_8bdcb7d0.zip</URI>
+    <UpURI>https://github.com/Stochast1c/solarhud/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/solarhud.png</Preview>
+    <RepoPath>https://github.com/Stochast1c/solarhud</RepoPath>
+    <Site>http://huds.tf/solarhud/</Site>
+    <ArchiveDir>solarhud-master</ArchiveDir>
+    <InstallDir>solarhud</InstallDir>
+  </HUD>
 </HUDs>
