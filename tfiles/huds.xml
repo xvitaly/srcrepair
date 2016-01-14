@@ -492,4 +492,16 @@
     <ArchiveDir>SmesiHud-master</ArchiveDir>
     <InstallDir>smesihud</InstallDir>
   </HUD>
+  <HUD>
+    <Name>rainhud</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/rainhud/rainhud_0194b1d7.zip</URI>
+    <UpURI>https://github.com/rainoflight/rainhud/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/rainhud.png</Preview>
+    <RepoPath>https://github.com/rainoflight/rainhud</RepoPath>
+    <Site>http://huds.tf/rainhud/</Site>
+    <ArchiveDir>rainhud-master</ArchiveDir>
+    <InstallDir>rainhud</InstallDir>
+  </HUD>
 </HUDs>

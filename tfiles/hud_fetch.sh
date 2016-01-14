@@ -90,3 +90,4 @@ fetch_hud http://huds.tf/jayhud/img/main.png https://github.com/kermit-tf/JayHUD
 fetch_hud http://huds.tf/mannterface/img/main.png https://github.com/mannterface/Mannterface/archive/master.zip mannterface
 fetch_hud http://huds.tf/yayahud/img/main.png https://github.com/Yttrium-tYcLief/yayahud/archive/master.zip yayahud
 fetch_hud http://huds.tf/smesihud/img/main.png https://github.com/Smesi/SmesiHud/archive/master.zip smesihud
+fetch_hud http://huds.tf/rainhud/img/main.png https://github.com/rainoflight/rainhud/archive/master.zip rainhud
