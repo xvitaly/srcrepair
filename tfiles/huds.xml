@@ -516,4 +516,16 @@
     <ArchiveDir>solarhud-master</ArchiveDir>
     <InstallDir>solarhud</InstallDir>
   </HUD>
+  <HUD>
+    <Name>ysHUD</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/yshud/yshud_bf6a9670.zip</URI>
+    <UpURI>https://github.com/Yo5hi/ysHUD/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/yshud.png</Preview>
+    <RepoPath>https://github.com/Yo5hi/ysHUD</RepoPath>
+    <Site>http://huds.tf/yshud/</Site>
+    <ArchiveDir>ysHUD-master</ArchiveDir>
+    <InstallDir>yshud</InstallDir>
+  </HUD>
 </HUDs>
