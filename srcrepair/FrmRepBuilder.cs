@@ -37,6 +37,7 @@ namespace srcrepair
         }
 
         private const string PluginName = "Report Builder";
+        private bool IsCompleted = true;
         private string AppUserDir;
         private string FullSteamPath;
         private string FullCfgPath;
