@@ -37,7 +37,7 @@ namespace srcrepair
         }
 
         private const string PluginName = "Report Builder";
-        private bool IsCompleted = true;
+        private bool IsCompleted = false;
         private string AppUserDir;
         private string FullSteamPath;
         private string FullCfgPath;
@@ -147,12 +147,13 @@ namespace srcrepair
             // Снова активируем кнопку...
             GenerateNow.Text = CoreLib.GetLocalizedString("RPB_CloseCpt");
             GenerateNow.Enabled = true;
+            IsCompleted = true;
             ControlBox = true;
         }
 
         private void GenerateNow_Click(object sender, EventArgs e)
         {
-            if (GenerateNow.Text != CoreLib.GetLocalizedString("RPB_CloseCpt"))
+            if (!IsCompleted)
             {
                 if (MessageBox.Show(CoreLib.GetLocalizedString("RPB_GenQst"), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
