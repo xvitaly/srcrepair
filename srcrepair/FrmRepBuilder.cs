@@ -157,6 +157,7 @@ namespace srcrepair
 
         private void GenerateNow_Click(object sender, EventArgs e)
         {
+            // Проверим необходим ли нам запуск очистки или закрытие формы...
             if (!IsCompleted)
             {
                 // Отключим контролы...
