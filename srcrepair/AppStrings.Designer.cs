@@ -1627,24 +1627,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Generate report now?.
-        /// </summary>
-        internal static string RPB_GenQst {
-            get {
-                return ResourceManager.GetString("RPB_GenQst", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The process will take a lot of time. Please be patient!.
-        /// </summary>
-        internal static string RPB_GenWarn {
-            get {
-                return ResourceManager.GetString("RPB_GenWarn", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to An error occured during files removal. Some files were not deleted..
         /// </summary>
         internal static string RW_RmException {

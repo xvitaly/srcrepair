@@ -309,12 +309,6 @@
   <data name="RPB_GenException" xml:space="preserve">
     <value>An error has occurred. Unable to execute tool Microsoft System Information. Perhaps it is not installed on this operating system. Creating a report is impossible.</value>
   </data>
-  <data name="RPB_GenQst" xml:space="preserve">
-    <value>Generate report now?</value>
-  </data>
-  <data name="RPB_GenWarn" xml:space="preserve">
-    <value>The process will take a lot of time. Please be patient!</value>
-  </data>
   <data name="FPW_Success" xml:space="preserve">
     <value>Your own FPS-config was successfully generated and loaded to Config Editor. You can now edit it manually. Please save it as autoexec.cfg to apply in game.</value>
   </data>
