@@ -144,11 +144,15 @@ namespace srcrepair
 
         private void BwGen_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            // Снова активируем кнопку...
+            // Меняем текст на кнопке...
             GenerateNow.Text = CoreLib.GetLocalizedString("RPB_CloseCpt");
+            
+            // Снова активируем ранее отключённые контролы...
             GenerateNow.Enabled = true;
-            IsCompleted = true;
             ControlBox = true;
+
+            // Переключаем свойство...
+            IsCompleted = true;
         }
 
         private void GenerateNow_Click(object sender, EventArgs e)
@@ -161,12 +165,14 @@ namespace srcrepair
                     GenerateNow.Text = CoreLib.GetLocalizedString("RPB_CptWrk");
                     GenerateNow.Enabled = false;
                     ControlBox = false;
+                    
                     // Запускаем асинхронный обработчик...
                     if (!BwGen.IsBusy) { BwGen.RunWorkerAsync(); } else { CoreLib.WriteStringToLog("RepGen Worker is busy. Can't start build sequence."); }
                 }
             }
             else
             {
+                // Закрываем форму...
                 Close();
             }
         }
