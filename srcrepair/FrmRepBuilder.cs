@@ -159,16 +159,13 @@ namespace srcrepair
         {
             if (!IsCompleted)
             {
-                if (MessageBox.Show(CoreLib.GetLocalizedString("RPB_GenQst"), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    // Отключим кнопку...
-                    GenerateNow.Text = CoreLib.GetLocalizedString("RPB_CptWrk");
-                    GenerateNow.Enabled = false;
-                    ControlBox = false;
-                    
-                    // Запускаем асинхронный обработчик...
-                    if (!BwGen.IsBusy) { BwGen.RunWorkerAsync(); } else { CoreLib.WriteStringToLog("RepGen Worker is busy. Can't start build sequence."); }
-                }
+                // Отключим контролы...
+                GenerateNow.Text = CoreLib.GetLocalizedString("RPB_CptWrk");
+                GenerateNow.Enabled = false;
+                ControlBox = false;
+
+                // Запускаем асинхронный обработчик...
+                if (!BwGen.IsBusy) { BwGen.RunWorkerAsync(); } else { CoreLib.WriteStringToLog("RepGen Worker is busy. Can't start build sequence."); }
             }
             else
             {
