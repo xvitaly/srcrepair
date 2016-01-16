@@ -552,22 +552,8 @@ namespace srcrepair
         /// <returns>Булево наличия прав на запись</returns>
         public static bool IsDirectoryWritable(string DirName)
         {
-            try
-            {
-                AuthorizationRuleCollection AuthRules = Directory.GetAccessControl(DirName).GetAccessRules(true, true, typeof(SecurityIdentifier));
-                foreach (FileSystemAccessRule SelRule in AuthRules)
-                {
-                    if (WindowsIdentity.GetCurrent().Groups.Contains(SelRule.IdentityReference))
-                    {
-                        if ((FileSystemRights.CreateFiles & SelRule.FileSystemRights) == FileSystemRights.CreateFiles)
-                        {
-                            if (SelRule.AccessControlType == AccessControlType.Allow) { return true; }
-                        }
-                    }
-                }
-            }
-            catch (Exception Ex) { WriteStringToLog(Ex.Message); }
-            return false;
+            try { using (FileStream fs = File.Create(Path.Combine(DirName, Path.GetRandomFileName()), 1, FileOptions.DeleteOnClose)) { /* Nothing here. */ } } catch { return false; }
+            return true;
         }
 
         /// <summary>
