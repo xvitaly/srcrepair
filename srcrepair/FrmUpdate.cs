@@ -145,52 +145,63 @@ namespace srcrepair
 
         private void WrkChkDb_DoWork(object sender, DoWorkEventArgs e)
         {
-            try
-            {
-                // Установим значок проверки обновлений...
-                Invoke((MethodInvoker)delegate() { UpdDBImg.Image = Properties.Resources.upd_chk; });
+            // Установим значок проверки обновлений...
+            Invoke((MethodInvoker)delegate() { UpdDBImg.Image = Properties.Resources.upd_chk; });
 
-                // Получаем файл с номером версии и ссылкой на новую...
-                using (WebClient Downloader = new WebClient())
-                {
-                    // Получим хеш...
-                    Downloader.Headers.Add("User-Agent", UserAgent);
-                    DBHashNew = Downloader.DownloadString(Properties.Resources.UpdateGameDBHash);
-                }
-
-                // Рассчитаем хеш текущего файла...
-                DBHash = CoreLib.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Settings.Default.GameListFile));
-            }
-            catch (Exception Ex)
+            // Получаем файл с номером версии и ссылкой на новую...
+            using (WebClient Downloader = new WebClient())
             {
-                // Произошло исключение...
-                CoreLib.WriteStringToLog(Ex.Message);
+                // Получим хеш...
+                Downloader.Headers.Add("User-Agent", UserAgent);
+                DBHashNew = Downloader.DownloadString(Properties.Resources.UpdateGameDBHash);
             }
+
+            // Рассчитаем хеш текущего файла...
+            DBHash = CoreLib.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Settings.Default.GameListFile));
         }
 
         private void WrkChkDb_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             try
             {
-                // Проверим хеши...
-                if (DBHash != DBHashNew)
+                // Проверим на наличие ошибок...
+                if (e.Error == null)
                 {
-                    // Хеши не совпадают, будем обновлять...
-                    Invoke((MethodInvoker)delegate()
+                    // Проверим хеши...
+                    if (DBHash != DBHashNew)
                     {
-                        UpdDBImg.Image = Properties.Resources.upd_av;
-                        UpdDBStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_DbUpdateAvail"), DBHashNew.Substring(0, 7));
-                    });
-                    DbAvailable = true;
+                        // Хеши не совпадают, будем обновлять...
+                        Invoke((MethodInvoker)delegate()
+                        {
+                            UpdDBImg.Image = Properties.Resources.upd_av;
+                            UpdDBStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_DbUpdateAvail"), DBHashNew.Substring(0, 7));
+                        });
+                        DbAvailable = true;
+                    }
+                    else
+                    {
+                        // Хеши совпали, обновление не требуется...
+                        Invoke((MethodInvoker)delegate()
+                        {
+                            UpdDBImg.Image = Properties.Resources.upd_nx;
+                            UpdDBStatus.Text = CoreLib.GetLocalizedString("UPD_DbNoUpdates");
+                        });
+                        DbAvailable = false;
+                    }
                 }
                 else
                 {
-                    // Хеши совпали, обновление не требуется...
+                    // Произошла ошибка...
                     Invoke((MethodInvoker)delegate()
                     {
-                        UpdDBImg.Image = Properties.Resources.upd_nx;
-                        UpdDBStatus.Text = CoreLib.GetLocalizedString("UPD_DbNoUpdates");
+                        UpdDBImg.Image = Properties.Resources.upd_err;
+                        UpdDBStatus.Text = CoreLib.GetLocalizedString("UPD_DbCheckFailure");
                     });
+
+                    // Запишем в журнал...
+                    CoreLib.WriteStringToLog(e.Error.Message);
+
+                    // Переключим свойство доступности обновления...
                     DbAvailable = false;
                 }
             }
