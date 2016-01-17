@@ -1861,6 +1861,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Game database update check failed. Please try again later..
+        /// </summary>
+        internal static string UPD_DbCheckFailure {
+            get {
+                return ResourceManager.GetString("UPD_DbCheckFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No new updates detected. SRC Repair is using latest version of game database..
         /// </summary>
         internal static string UPD_DbNoUpdates {
@@ -1902,15 +1911,6 @@ namespace srcrepair {
         internal static string UPD_ExtHashSum {
             get {
                 return ResourceManager.GetString("UPD_ExtHashSum", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Game database update check failed. Please try again later..
-        /// </summary>
-        internal static string UPD_GamL_ChkFailure {
-            get {
-                return ResourceManager.GetString("UPD_GamL_ChkFailure", resourceCulture);
             }
         }
         
