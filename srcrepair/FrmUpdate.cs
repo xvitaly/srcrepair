@@ -202,53 +202,64 @@ namespace srcrepair
 
         private void WrkChkHUD_DoWork(object sender, DoWorkEventArgs e)
         {
-            try
-            {
-                // Установим значок проверки обновлений...
-                Invoke((MethodInvoker)delegate() { UpdHUDDbImg.Image = Properties.Resources.upd_chk; });
-                
-                // Получаем файл с номером версии и ссылкой на новую...
-                using (WebClient Downloader = new WebClient())
-                {
-                    // Получим хеш...
-                    Downloader.Headers.Add("User-Agent", UserAgent);
-                    HUDHashNew = Downloader.DownloadString(Properties.Resources.UpdateHUDDBFileHash);
-                }
+            // Установим значок проверки обновлений...
+            Invoke((MethodInvoker)delegate() { UpdHUDDbImg.Image = Properties.Resources.upd_chk; });
 
-                // Рассчитаем хеш текущего файла...
-                HUDHash = CoreLib.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Settings.Default.HUDDbFile));
-            }
-            catch (Exception Ex)
+            // Получаем файл с номером версии и ссылкой на новую...
+            using (WebClient Downloader = new WebClient())
             {
-                // Произошло исключение...
-                CoreLib.WriteStringToLog(Ex.Message);
+                // Получим хеш...
+                Downloader.Headers.Add("User-Agent", UserAgent);
+                HUDHashNew = Downloader.DownloadString(Properties.Resources.UpdateHUDDBFileHash);
             }
+
+            // Рассчитаем хеш текущего файла...
+            HUDHash = CoreLib.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Settings.Default.HUDDbFile));
         }
 
         private void WrkChkHUD_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             try
             {
-                // Проверим хеши...
-                if (HUDHash != HUDHashNew)
+                // Проверим на наличие ошибок...
+                if (e.Error == null)
                 {
-                    // Хеши не совпадают, будем обновлять...
-                    Invoke((MethodInvoker)delegate()
+                    // Проверим хеши...
+                    if (HUDHash != HUDHashNew)
                     {
-                        UpdHUDDbImg.Image = Properties.Resources.upd_av;
-                        UpdHUDStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_HUDUpdateAvail"), HUDHashNew.Substring(0, 7));
-                    });
-                    HudAvailable = true;
+                        // Хеши не совпадают, будем обновлять...
+                        Invoke((MethodInvoker)delegate()
+                        {
+                            UpdHUDDbImg.Image = Properties.Resources.upd_av;
+                            UpdHUDStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_HUDUpdateAvail"), HUDHashNew.Substring(0, 7));
+                        });
+                        HudAvailable = true;
+                    }
+                    else
+                    {
+                        // Хеши совпали, обновление не требуется...
+                        Invoke((MethodInvoker)delegate()
+                        {
+                            UpdHUDDbImg.Image = Properties.Resources.upd_nx;
+                            UpdHUDStatus.Text = CoreLib.GetLocalizedString("UPD_HUDNoUpdates");
+                        });
+                        HudAvailable = false; UpdateTimeSetHUD();
+                    }
                 }
                 else
                 {
-                    // Хеши совпали, обновление не требуется...
+                    // Произошла ошибка...
                     Invoke((MethodInvoker)delegate()
                     {
-                        UpdHUDDbImg.Image = Properties.Resources.upd_nx;
-                        UpdHUDStatus.Text = CoreLib.GetLocalizedString("UPD_HUDNoUpdates");
+                        UpdHUDDbImg.Image = Properties.Resources.upd_err;
+                        UpdHUDStatus.Text = CoreLib.GetLocalizedString("UPD_HUDCheckFailure");
                     });
-                    HudAvailable = false; UpdateTimeSetHUD();
+
+                    // Запишем в журнал...
+                    CoreLib.WriteStringToLog(e.Error.Message);
+
+                    // Переключим свойство доступности обновления...
+                    HudAvailable = false;
                 }
             }
             catch (Exception Ex)
