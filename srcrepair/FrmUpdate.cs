@@ -85,56 +85,66 @@ namespace srcrepair
 
         private void WrkChkApp_DoWork(object sender, DoWorkEventArgs e)
         {
-            try
-            {
-                // Установим значок проверки обновлений...
-                Invoke((MethodInvoker)delegate() { UpdAppImg.Image = Properties.Resources.upd_chk; });
-                
-                // Опишем буферные переменные...
-                string DnlStr;
+            // Установим значок проверки обновлений...
+            Invoke((MethodInvoker)delegate() { UpdAppImg.Image = Properties.Resources.upd_chk; });
 
-                // Получаем файл с номером версии и ссылкой на новую...
-                using (WebClient Downloader = new WebClient())
-                {
-                    Downloader.Headers.Add("User-Agent", UserAgent);
-                    DnlStr = Downloader.DownloadString(Properties.Resources.UpdateChURI);
-                }
+            // Опишем буферные переменные...
+            string DnlStr;
 
-                // Мы получили URL и версию...
-                NewVersion = DnlStr.Substring(0, DnlStr.IndexOf("!")); // Получаем версию...
-                UpdateURI = DnlStr.Remove(0, DnlStr.IndexOf("!") + 1); // Получаем URL...
-            }
-            catch (Exception Ex)
+            // Получаем файл с номером версии и ссылкой на новую...
+            using (WebClient Downloader = new WebClient())
             {
-                // Произошло исключение...
-                CoreLib.WriteStringToLog(Ex.Message);
+                Downloader.Headers.Add("User-Agent", UserAgent);
+                DnlStr = Downloader.DownloadString(Properties.Resources.UpdateChURI);
             }
+
+            // Мы получили URL и версию...
+            NewVersion = DnlStr.Substring(0, DnlStr.IndexOf("!")); // Получаем версию...
+            UpdateURI = DnlStr.Remove(0, DnlStr.IndexOf("!") + 1); // Получаем URL...
         }
 
         private void WrkChkApp_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             try
             {
-                // Проверим, является ли версия на сервере новее, чем текущая...
-                if (CoreLib.CompareVersions(AppVersionInfo, NewVersion))
+                if (e.Error == null)
                 {
-                    // Доступна новая версия...
-                    Invoke((MethodInvoker)delegate()
+                    // Проверим, является ли версия на сервере новее, чем текущая...
+                    if (CoreLib.CompareVersions(AppVersionInfo, NewVersion))
                     {
-                        UpdAppImg.Image = Properties.Resources.upd_av;
-                        UpdAppStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_AppUpdateAvail"), NewVersion);
-                    });
-                    AppAvailable = true;
+                        // Доступна новая версия...
+                        Invoke((MethodInvoker)delegate()
+                        {
+                            UpdAppImg.Image = Properties.Resources.upd_av;
+                            UpdAppStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_AppUpdateAvail"), NewVersion);
+                        });
+                        AppAvailable = true;
+                    }
+                    else
+                    {
+                        // Новых версий не обнаружено...
+                        Invoke((MethodInvoker)delegate()
+                        {
+                            UpdAppImg.Image = Properties.Resources.upd_nx;
+                            UpdAppStatus.Text = CoreLib.GetLocalizedString("UPD_AppNoUpdates");
+                        });
+                        AppAvailable = false; UpdateTimeSetApp();
+                    }
                 }
                 else
                 {
-                    // Новых версий не обнаружено...
+                    // Произошла ошибка...
                     Invoke((MethodInvoker)delegate()
                     {
-                        UpdAppImg.Image = Properties.Resources.upd_nx;
-                        UpdAppStatus.Text = CoreLib.GetLocalizedString("UPD_AppNoUpdates");
+                        UpdAppImg.Image = Properties.Resources.upd_err;
+                        UpdAppStatus.Text = CoreLib.GetLocalizedString("UPD_AppCheckFailure");
                     });
-                    AppAvailable = false; UpdateTimeSetApp();
+
+                    // Запишем в журнал...
+                    CoreLib.WriteStringToLog(e.Error.Message);
+
+                    // Переключим свойство доступности обновления...
+                    AppAvailable = false;
                 }
             }
             catch (Exception Ex)
