@@ -1924,6 +1924,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to HUD database update check failed. Please try again later..
+        /// </summary>
+        internal static string UPD_HUDCheckFailure {
+            get {
+                return ResourceManager.GetString("UPD_HUDCheckFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update is not required because you have the latest version of the HUD database..
         /// </summary>
         internal static string UPD_HUDDb_Latest {
