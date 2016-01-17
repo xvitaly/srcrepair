@@ -1906,6 +1906,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Game database update check failed. Please try again later..
+        /// </summary>
+        internal static string UPD_GamL_ChkFailure {
+            get {
+                return ResourceManager.GetString("UPD_GamL_ChkFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update is not required because you have the latest version of the game database..
         /// </summary>
         internal static string UPD_GamL_Latest {
