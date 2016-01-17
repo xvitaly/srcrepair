@@ -771,6 +771,9 @@
   <data name="UPD_NoWritePermissions" xml:space="preserve">
     <value>Can not write into application directory. Start updater with admin rights!</value>
   </data>
+  <data name="UPD_AppCheckFailure" xml:space="preserve">
+    <value>Update check failed. Please try again later.</value>
+  </data>
   <data name="UPD_DbCheckFailure" xml:space="preserve">
     <value>Game database update check failed. Please try again later.</value>
   </data>

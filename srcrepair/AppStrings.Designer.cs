@@ -1843,6 +1843,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Update check failed. Please try again later..
+        /// </summary>
+        internal static string UPD_AppCheckFailure {
+            get {
+                return ResourceManager.GetString("UPD_AppCheckFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No new updates available. Your application is up to date..
         /// </summary>
         internal static string UPD_AppNoUpdates {
