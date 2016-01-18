@@ -92,8 +92,10 @@ namespace srcrepair
                     try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C ipconfig /all > \"{0}\"", FNameIpConfig)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C netstat -a > \"{0}\"", FNameNetStat)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C route print > \"{0}\"", FNameRouting)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    
                     try
                     {
+                        // Создаём Zip-архив...
                         using (ZipFile ZBkUp = new ZipFile(ArchName, Encoding.UTF8))
                         {
                             // Добавляем в архив созданный рапорт...
@@ -120,7 +122,12 @@ namespace srcrepair
                             // Сохраняем архив...
                             ZBkUp.Save();
                         }
+
+                        // Выводим сообщение об успешном создании отчёта...
                         MessageBox.Show(String.Format(CoreLib.GetLocalizedString("RPB_ComprGen"), Path.GetFileName(ArchName)), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Открываем каталог с отчётами в оболочке и выделяем созданный файл...
+                        CoreLib.OpenExplorer(ArchName);
                     }
                     catch (Exception Ex)
                     {
@@ -131,16 +138,16 @@ namespace srcrepair
                 // Выполняем очистку...
                 try
                 {
-                    if (File.Exists(FNameRep)) { File.Delete(FNameRep); } // удаляем несжатый отчёт
+                    // Удаляем не сжатый отчёт...
+                    if (File.Exists(FNameRep)) { File.Delete(FNameRep); }
+                    
+                    // Удаляем временный каталог...
                     if (Directory.Exists(TempDir)) { Directory.Delete(TempDir, true); }
                 }
                 catch (Exception Ex)
                 {
                     CoreLib.WriteStringToLog(Ex.Message);
                 }
-
-                // Открываем каталог с отчётами в оболочке и выделяем созданный файл...
-                CoreLib.OpenExplorer(ArchName);
             }
             catch (Exception Ex)
             {
