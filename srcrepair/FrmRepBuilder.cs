@@ -191,6 +191,7 @@ namespace srcrepair
 
         private void frmRepBuilder_FormClosing(object sender, FormClosingEventArgs e)
         {
+            // Блокируем возможность закрытия формы во время работы модуля...
             e.Cancel = BwGen.IsBusy;
         }
     }
