@@ -127,7 +127,7 @@ namespace srcrepair
                         MessageBox.Show(String.Format(CoreLib.GetLocalizedString("RPB_ComprGen"), Path.GetFileName(ArchName)), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         // Открываем каталог с отчётами в оболочке и выделяем созданный файл...
-                        CoreLib.OpenExplorer(ArchName);
+                        if (File.Exists(ArchName)) { CoreLib.OpenExplorer(ArchName); }
                     }
                     catch (Exception Ex)
                     {
