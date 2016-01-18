@@ -68,6 +68,7 @@ namespace srcrepair
             string RepName = String.Format("report_{0}.{1}", CrDt, "txt");
             string ArchName = Path.Combine(RepDir, Path.ChangeExtension(RepName, ".zip"));
             string HostsFile = CoreLib.GetHostsFileFullPath();
+            string FNameRep = Path.Combine(TempDir, RepName);
             string FNamePing = Path.Combine(TempDir, String.Format("ping_{0}.log", CrDt));
             string FNameTrace = Path.Combine(TempDir, String.Format("traceroute_{0}.log", CrDt));
             string FNameIpConfig = Path.Combine(TempDir, String.Format("ipconfig_{0}.log", CrDt));
@@ -79,7 +80,7 @@ namespace srcrepair
             try
             {
                 // Запускаем последовательность...
-                try { CoreLib.StartProcessAndWait("msinfo32.exe", String.Format("/report \"{0}\"", Path.Combine(TempDir, RepName))); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { CoreLib.StartProcessAndWait("msinfo32.exe", String.Format("/report \"{0}\"", FNameRep)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                 try { CoreLib.StartProcessAndWait("dxdiag.exe", String.Format("/t {0}", FNameDxDiag)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } /* DxDiag неадекватно реагирует на кавычки в пути. */
                 try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C ping steampowered.com > \"{0}\"", FNamePing)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                 try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C tracert steampowered.com > \"{0}\"", FNameTrace)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
@@ -91,7 +92,7 @@ namespace srcrepair
                     using (ZipFile ZBkUp = new ZipFile(ArchName, Encoding.UTF8))
                     {
                         // Добавляем в архив созданный рапорт...
-                        if (File.Exists(Path.Combine(TempDir, RepName))) { ZBkUp.AddFile(Path.Combine(TempDir, RepName), "report"); }
+                        if (File.Exists(FNameRep)) { ZBkUp.AddFile(FNameRep, "report"); }
                         
                         // Добавляем в архив все конфиги выбранной игры...
                         if (Directory.Exists(FullCfgPath)) { ZBkUp.AddDirectory(FullCfgPath, "configs"); }
@@ -124,7 +125,7 @@ namespace srcrepair
                 // Выполняем очистку...
                 try
                 {
-                    if (File.Exists(Path.Combine(TempDir, RepName))) { File.Delete(Path.Combine(TempDir, RepName)); } // удаляем несжатый отчёт
+                    if (File.Exists(FNameRep)) { File.Delete(FNameRep); } // удаляем несжатый отчёт
                     if (Directory.Exists(TempDir)) { Directory.Delete(TempDir, true); }
                 }
                 catch (Exception Ex)
