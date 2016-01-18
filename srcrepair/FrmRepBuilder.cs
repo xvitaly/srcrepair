@@ -79,47 +79,53 @@ namespace srcrepair
             // Начинаем сборку отчёта...
             try
             {
-                // Запускаем последовательность...
+                // Генерируем основной отчёт...
                 try { CoreLib.StartProcessAndWait("msinfo32.exe", String.Format("/report \"{0}\"", FNameRep)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                try { CoreLib.StartProcessAndWait("dxdiag.exe", String.Format("/t {0}", FNameDxDiag)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } /* DxDiag неадекватно реагирует на кавычки в пути. */
-                try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C ping steampowered.com > \"{0}\"", FNamePing)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C tracert steampowered.com > \"{0}\"", FNameTrace)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C ipconfig /all > \"{0}\"", FNameIpConfig)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C netstat -a > \"{0}\"", FNameNetStat)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C route print > \"{0}\"", FNameRouting)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                try
+                
+                // Если пользователь вдруг отменил его создание, больше ничего не делаем...
+                if (File.Exists(FNameRep))
                 {
-                    using (ZipFile ZBkUp = new ZipFile(ArchName, Encoding.UTF8))
+                    // Запускаем последовательность...
+                    try { CoreLib.StartProcessAndWait("dxdiag.exe", String.Format("/t {0}", FNameDxDiag)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } /* DxDiag неадекватно реагирует на кавычки в пути. */
+                    try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C ping steampowered.com > \"{0}\"", FNamePing)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C tracert steampowered.com > \"{0}\"", FNameTrace)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C ipconfig /all > \"{0}\"", FNameIpConfig)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C netstat -a > \"{0}\"", FNameNetStat)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { CoreLib.StartProcessAndWait("cmd.exe", String.Format("/C route print > \"{0}\"", FNameRouting)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try
                     {
-                        // Добавляем в архив созданный рапорт...
-                        if (File.Exists(FNameRep)) { ZBkUp.AddFile(FNameRep, "report"); }
-                        
-                        // Добавляем в архив все конфиги выбранной игры...
-                        if (Directory.Exists(FullCfgPath)) { ZBkUp.AddDirectory(FullCfgPath, "configs"); }
-                        
-                        // Добавляем в архив все краш-дампы и логи Steam...
-                        if (Directory.Exists(Path.Combine(FullSteamPath, "dumps"))) { ZBkUp.AddDirectory(Path.Combine(FullSteamPath, "dumps"), "dumps"); }
-                        if (Directory.Exists(Path.Combine(FullSteamPath, "logs"))) { ZBkUp.AddDirectory(Path.Combine(FullSteamPath, "logs"), "logs"); }
-                        
-                        // Добавляем содержимое файла Hosts...
-                        if (File.Exists(HostsFile)) { ZBkUp.AddFile(HostsFile, "hosts"); }
-                        
-                        // Добавляем в архив отчёты утилит ping, трассировки и т.д.
-                        if (File.Exists(FNamePing)) { ZBkUp.AddFile(FNamePing, "system"); }
-                        if (File.Exists(FNameTrace)) { ZBkUp.AddFile(FNameTrace, "system"); }
-                        if (File.Exists(FNameIpConfig)) { ZBkUp.AddFile(FNameIpConfig, "system"); }
-                        if (File.Exists(FNameRouting)) { ZBkUp.AddFile(FNameRouting, "system"); }
-                        if (File.Exists(FNameNetStat)) { ZBkUp.AddFile(FNameNetStat, "system"); }
-                        if (File.Exists(FNameDxDiag)) { ZBkUp.AddFile(FNameDxDiag, "system"); }
-                        
-                        // Сохраняем архив...
-                        ZBkUp.Save();
+                        using (ZipFile ZBkUp = new ZipFile(ArchName, Encoding.UTF8))
+                        {
+                            // Добавляем в архив созданный рапорт...
+                            if (File.Exists(FNameRep)) { ZBkUp.AddFile(FNameRep, "report"); }
+
+                            // Добавляем в архив все конфиги выбранной игры...
+                            if (Directory.Exists(FullCfgPath)) { ZBkUp.AddDirectory(FullCfgPath, "configs"); }
+
+                            // Добавляем в архив все краш-дампы и логи Steam...
+                            if (Directory.Exists(Path.Combine(FullSteamPath, "dumps"))) { ZBkUp.AddDirectory(Path.Combine(FullSteamPath, "dumps"), "dumps"); }
+                            if (Directory.Exists(Path.Combine(FullSteamPath, "logs"))) { ZBkUp.AddDirectory(Path.Combine(FullSteamPath, "logs"), "logs"); }
+
+                            // Добавляем содержимое файла Hosts...
+                            if (File.Exists(HostsFile)) { ZBkUp.AddFile(HostsFile, "hosts"); }
+
+                            // Добавляем в архив отчёты утилит ping, трассировки и т.д.
+                            if (File.Exists(FNamePing)) { ZBkUp.AddFile(FNamePing, "system"); }
+                            if (File.Exists(FNameTrace)) { ZBkUp.AddFile(FNameTrace, "system"); }
+                            if (File.Exists(FNameIpConfig)) { ZBkUp.AddFile(FNameIpConfig, "system"); }
+                            if (File.Exists(FNameRouting)) { ZBkUp.AddFile(FNameRouting, "system"); }
+                            if (File.Exists(FNameNetStat)) { ZBkUp.AddFile(FNameNetStat, "system"); }
+                            if (File.Exists(FNameDxDiag)) { ZBkUp.AddFile(FNameDxDiag, "system"); }
+
+                            // Сохраняем архив...
+                            ZBkUp.Save();
+                        }
+                        MessageBox.Show(String.Format(CoreLib.GetLocalizedString("RPB_ComprGen"), Path.GetFileName(ArchName)), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    MessageBox.Show(String.Format(CoreLib.GetLocalizedString("RPB_ComprGen"), Path.GetFileName(ArchName)), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception Ex)
-                {
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_ArchFailed"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    catch (Exception Ex)
+                    {
+                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_ArchFailed"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    }
                 }
 
                 // Выполняем очистку...
