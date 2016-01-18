@@ -60,7 +60,7 @@ namespace srcrepair
             }
             
             // Генерируем пути к каталогам для вреенных файлов и создаём их...
-            string TempDir = Path.Combine(Path.GetTempPath(), "repbuilder");
+            string TempDir = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
             string CrDt = CoreLib.DateTime2Unix(DateTime.Now);
             if (!Directory.Exists(TempDir)) { Directory.CreateDirectory(TempDir); }
             
