@@ -258,7 +258,7 @@
     <value>17, 17</value>
   </metadata>
   <data name="openDialog.Filter" xml:space="preserve">
-    <value>Spray files (*.vtf)|*.vtf|Game packages (*.zip)|*.zip|Demos (*.dem)|*.dem|Config files (*.cfg)|*.cfg|Valve package files (*.vpk)|*.vpk|Maps (*.bsp)|*.bsp</value>
+    <value>Spray files (*.vtf)|*.vtf|Game packages (*.zip)|*.zip|Demos (*.dem)|*.dem|Config files (*.cfg)|*.cfg|Valve package files (*.vpk)|*.vpk|Maps (*.bsp)|*.bsp|Hitsound file (hitsound.wav)|hitsound.wav</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
