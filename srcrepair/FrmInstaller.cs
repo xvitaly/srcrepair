@@ -53,36 +53,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Распаковывает архив в каталог кастомных файлов.
-        /// </summary>
-        /// <param name="ArcName">Имя архива с полным путём до него</param>
-        /// <param name="CustomDir">Путь к каталогу с нестандартными файлами</param>
-        private void UnpackZipArchiveNow(string ArcName, string CustomDir)
-        {
-            try
-            {
-                using (ZipFile Zip = ZipFile.Read(ArcName))
-                {
-                    foreach (ZipEntry ZFile in Zip)
-                    {
-                        try
-                        {
-                            ZFile.Extract(Path.Combine(CustomDir, Properties.Settings.Default.UserCustDirName));
-                        }
-                        catch (Exception Ex)
-                        {
-                            CoreLib.WriteStringToLog(Ex.Message);
-                        }
-                    }
-                }
-            }
-            catch (Exception Ex)
-            {
-                CoreLib.WriteStringToLog(Ex.Message);
-            }
-        }
-
-        /// <summary>
         /// Компилирует VMT файл из VTF.
         /// </summary>
         /// <param name="FileName">Имя VMT файла с полным путём до него</param>
@@ -171,7 +141,7 @@ namespace srcrepair
                             break;
                         case ".vtf": InstallSprayNow(InstallPath.Text); // Будем устанавливай спрей...
                             break;
-                        case ".zip": UnpackZipArchiveNow(InstallPath.Text, CustomInstallDir); // Будем устанавливать содержимое архива...
+                        case ".zip": CoreLib.ExtractFiles(InstallPath.Text, CustomInstallDir); // Будем устанавливать содержимое архива...
                             break;
                     }
 
