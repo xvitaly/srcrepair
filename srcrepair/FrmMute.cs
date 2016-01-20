@@ -205,6 +205,13 @@ namespace srcrepair
                     {
                         Cell.Value = SteamConv.ConvSid32Sidv3(CellText);
                     }
+                    else
+                    {
+                        if (MM_Table.SelectedCells.Count == 1)
+                        {
+                            MessageBox.Show(CoreLib.GetLocalizedString("MM_ConvRest"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
                 }
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
