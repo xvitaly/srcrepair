@@ -780,4 +780,7 @@
   <data name="UPD_HUDCheckFailure" xml:space="preserve">
     <value>HUD database update check failed. Please try again later.</value>
   </data>
+  <data name="MM_ConvRest" xml:space="preserve">
+    <value>Conversion from SteamIDv3 to legacy SteamID32 is not allowed!</value>
+  </data>
 </root>

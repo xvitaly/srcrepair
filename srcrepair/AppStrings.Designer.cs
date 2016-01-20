@@ -1267,6 +1267,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Conversion from SteamIDv3 to legacy SteamID32 is not allowed!.
+        /// </summary>
+        internal static string MM_ConvRest {
+            get {
+                return ResourceManager.GetString("MM_ConvRest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error detected while parsing game banlist file. Try again later..
         /// </summary>
         internal static string MM_ExceptionDetected {
