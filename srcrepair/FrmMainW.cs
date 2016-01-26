@@ -1741,6 +1741,9 @@ namespace srcrepair
         /// <summary>
         /// Ищет установленные игры и выполняет ряд необходимых проверок.
         /// </summary>
+        /// <param name="SteamDir">Путь к каталогу установки Steam</param>
+        /// <param name="SteamApps">Название каталога SteamApps в зависимости от платформы</param>
+        /// <param name="ErrMsg">Текст сообщения об ошибке</param>
         private void FindGames(string SteamDir, string SteamApps, string ErrMsg)
         {
             // Начинаем определять установленные игры...
