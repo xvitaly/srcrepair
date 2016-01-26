@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainW));
-            this.TabIcons = new System.Windows.Forms.ImageList();
+            this.TabIcons = new System.Windows.Forms.ImageList(this.components);
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
             this.GT_ResAvailable = new System.Windows.Forms.ComboBox();
@@ -1950,6 +1951,7 @@
             resources.ApplyResources(this.AppRefresh, "AppRefresh");
             this.AppRefresh.Name = "AppRefresh";
             this.AppRefresh.UseVisualStyleBackColor = true;
+            this.AppRefresh.Click += new System.EventHandler(this.AppRefresh_Click);
             // 
             // frmMainW
             // 

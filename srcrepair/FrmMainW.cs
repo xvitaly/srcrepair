@@ -2112,6 +2112,11 @@ namespace srcrepair
             }
         }
 
+        private void AppRefresh_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
         private void GT_Maximum_Graphics_Click(object sender, EventArgs e)
         {
             // Нажатие этой кнопки устанавливает графические настройки на рекомендуемый максимум...
