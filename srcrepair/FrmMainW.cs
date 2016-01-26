@@ -1738,6 +1738,18 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Ищет установленные игры и выполняет ряд необходимых проверок.
+        /// </summary>
+        private void FindGames(string SteamDir, string SteamApps, string ErrMsg)
+        {
+            // Начинаем определять установленные игры...
+            try { DetectInstalledGames(SteamDir, SteamApps); } catch (Exception Ex) { CoreLib.HandleExceptionEx(ErrMsg, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); Environment.Exit(16); }
+
+            // Проверим нашлись ли игры...
+            CheckGames(AppSelector.Items.Count);
+        }
+
         #endregion
 
         #region Internal Workers
@@ -1948,19 +1960,8 @@ namespace srcrepair
             // Распознаем файловую систему на диске со Steam...
             DetectFS(App.FullSteamPath);
 
-            // Начинаем определять установленные игры...
-            try
-            {
-                DetectInstalledGames(App.FullSteamPath, Properties.Resources.SteamAppsFolderName);
-            }
-            catch (Exception Ex)
-            {
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppXMLParseError"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
-                Environment.Exit(16);
-            }
-
-            // Проверим нашлись ли игры...
-            CheckGames(AppSelector.Items.Count);
+            // Запустим поиск установленных игр и проверим нашлось ли что-то...
+            FindGames(App.FullSteamPath, Properties.Resources.SteamAppsFolderName, CoreLib.GetLocalizedString("AppXMLParseError"));
 
             try
             {
