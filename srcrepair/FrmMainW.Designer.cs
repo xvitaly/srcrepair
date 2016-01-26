@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainW));
-            this.TabIcons = new System.Windows.Forms.ImageList();
+            this.TabIcons = new System.Windows.Forms.ImageList(this.components);
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
             this.GT_ResAvailable = new System.Windows.Forms.ComboBox();
@@ -234,6 +235,7 @@
             this.BW_HUDList = new System.ComponentModel.BackgroundWorker();
             this.BW_HUDScreen = new System.ComponentModel.BackgroundWorker();
             this.BW_HudInstall = new System.ComponentModel.BackgroundWorker();
+            this.AppRefresh = new System.Windows.Forms.Button();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             this.GT_GCF_Group.SuspendLayout();
@@ -1943,10 +1945,18 @@
             this.BW_HudInstall.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_HudInstall_DoWork);
             this.BW_HudInstall.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BW_HudInstall_RunWorkerCompleted);
             // 
+            // AppRefresh
+            // 
+            this.AppRefresh.Image = global::srcrepair.Properties.Resources.Refresh;
+            resources.ApplyResources(this.AppRefresh, "AppRefresh");
+            this.AppRefresh.Name = "AppRefresh";
+            this.AppRefresh.UseVisualStyleBackColor = true;
+            // 
             // frmMainW
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.AppRefresh);
             this.Controls.Add(this.AppSelector);
             this.Controls.Add(this.StatusBar);
             this.Controls.Add(this.MainTabControl);
@@ -2209,6 +2219,7 @@
         private System.Windows.Forms.Label PS_PathGame;
         private System.Windows.Forms.ToolStripSeparator MNUSep6;
         private System.Windows.Forms.ToolStripMenuItem MNUMuteMan;
+        private System.Windows.Forms.Button AppRefresh;
     }
 }
 
