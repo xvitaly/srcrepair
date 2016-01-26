@@ -4413,7 +4413,7 @@
     <value>470, 405</value>
   </data>
   <data name="MainTabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;MainTabControl.Name" xml:space="preserve">
     <value>MainTabControl</value>
@@ -4689,7 +4689,7 @@
     <value>494, 22</value>
   </data>
   <data name="StatusBar.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;StatusBar.Name" xml:space="preserve">
     <value>StatusBar</value>
@@ -4770,7 +4770,7 @@
     <value>22, 22</value>
   </data>
   <data name="AppRefresh.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;AppRefresh.Name" xml:space="preserve">
     <value>AppRefresh</value>
