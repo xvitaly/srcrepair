@@ -2118,7 +2118,8 @@ namespace srcrepair
 
         private void AppRefresh_Click(object sender, EventArgs e)
         {
-            //
+            // Попробуем обновить список игр...
+            FindGames(App.FullSteamPath, Properties.Resources.SteamAppsFolderName, CoreLib.GetLocalizedString("AppXMLParseError"));
         }
 
         private void GT_Maximum_Graphics_Click(object sender, EventArgs e)
