@@ -2937,10 +2937,14 @@ namespace srcrepair
 
         private void MNUUpdateCheck_Click(object sender, EventArgs e)
         {
+            // Откроем форму модуля проверки обновлений...
             using (frmUpdate UpdFrm = new frmUpdate(App.UserAgent, App.FullAppPath, App.AppVersionInfo, App.AppUserDir))
             {
                 UpdFrm.ShowDialog();
             }
+            
+            // Перечитаем базу игр...
+            FindGames(App.FullSteamPath, Properties.Resources.SteamAppsFolderName, CoreLib.GetLocalizedString("AppXMLParseError"));
         }
 
         private void BUT_OpenNpad_Click(object sender, EventArgs e)
