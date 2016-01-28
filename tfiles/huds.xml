@@ -532,7 +532,7 @@
     <Name>BoredHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/boredhud/.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/boredhud/boredhud_7c890bf1.zip</URI>
     <UpURI>https://github.com/TheStaticVoid/boredHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/boredhud.png</Preview>
     <RepoPath>https://github.com/TheStaticVoid/boredHUD</RepoPath>
@@ -544,7 +544,7 @@
     <Name>G-Mang HUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/gmanghud/.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/gmanghud/gmanghud_1c0c107f.zip</URI>
     <UpURI>https://github.com/hoXyy/GMang_HUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/gmanghud.png</Preview>
     <RepoPath>https://github.com/hoXyy/GMang_HUD</RepoPath>
@@ -556,7 +556,7 @@
     <Name>RevHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/revhud/.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/revhud/revhud_a9e8b19b.zip</URI>
     <UpURI>http://files.gamebanana.com/guis/revhud-jan17.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/revhud.png</Preview>
     <RepoPath></RepoPath>
