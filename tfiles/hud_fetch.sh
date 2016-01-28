@@ -95,3 +95,4 @@ fetch_hud http://huds.tf/solarhud/img/main.png https://github.com/Stochast1c/sol
 fetch_hud http://huds.tf/yshud/img/main.png https://github.com/Yo5hi/ysHUD/archive/master.zip yshud
 fetch_hud http://huds.tf/boredhud/img/main.png https://github.com/TheStaticVoid/boredHUD/archive/master.zip boredhud
 fetch_hud http://huds.tf/gmanghud/img/main.png https://github.com/hoXyy/GMang_HUD/archive/master.zip gmanghud
+fetch_hud http://huds.tf/revhud/img/main.png http://files.gamebanana.com/guis/revhud-jan17.zip revhud

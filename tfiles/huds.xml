@@ -552,4 +552,16 @@
     <ArchiveDir>GMang_HUD-master</ArchiveDir>
     <InstallDir>gmanghud</InstallDir>
   </HUD>
+  <HUD>
+    <Name>RevHUD</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/revhud/.zip</URI>
+    <UpURI>http://files.gamebanana.com/guis/revhud-jan17.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/revhud.png</Preview>
+    <RepoPath></RepoPath>
+    <Site>http://huds.tf/revhud/</Site>
+    <ArchiveDir>RevHud</ArchiveDir>
+    <InstallDir>revhud</InstallDir>
+  </HUD>
 </HUDs>
