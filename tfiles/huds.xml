@@ -540,4 +540,16 @@
     <ArchiveDir>boredHUD-master</ArchiveDir>
     <InstallDir>boredhud</InstallDir>
   </HUD>
+  <HUD>
+    <Name>G-Mang HUD</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/gmanghud/.zip</URI>
+    <UpURI>https://github.com/hoXyy/GMang_HUD/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/gmanghud.png</Preview>
+    <RepoPath>https://github.com/hoXyy/GMang_HUD</RepoPath>
+    <Site>http://huds.tf/gmanghud/</Site>
+    <ArchiveDir>GMang_HUD-master</ArchiveDir>
+    <InstallDir>gmanghud</InstallDir>
+  </HUD>
 </HUDs>
