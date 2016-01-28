@@ -528,4 +528,16 @@
     <ArchiveDir>ysHUD-master</ArchiveDir>
     <InstallDir>yshud</InstallDir>
   </HUD>
+  <HUD>
+    <Name>BoredHUD</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/boredhud/.zip</URI>
+    <UpURI>https://github.com/TheStaticVoid/boredHUD/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/boredhud.png</Preview>
+    <RepoPath>https://github.com/TheStaticVoid/boredHUD</RepoPath>
+    <Site>http://huds.tf/boredhud/</Site>
+    <ArchiveDir>boredHUD-master</ArchiveDir>
+    <InstallDir>boredhud</InstallDir>
+  </HUD>
 </HUDs>

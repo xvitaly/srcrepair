@@ -93,3 +93,4 @@ fetch_hud http://huds.tf/smesihud/img/main.png https://github.com/Smesi/SmesiHud
 fetch_hud http://huds.tf/rainhud/img/main.png https://github.com/rainoflight/rainhud/archive/master.zip rainhud
 fetch_hud http://huds.tf/solarhud/img/main.png https://github.com/Stochast1c/solarhud/archive/master.zip solarhud
 fetch_hud http://huds.tf/yshud/img/main.png https://github.com/Yo5hi/ysHUD/archive/master.zip yshud
+fetch_hud http://huds.tf/boredhud/img/main.png https://github.com/TheStaticVoid/boredHUD/archive/master.zip boredhud
