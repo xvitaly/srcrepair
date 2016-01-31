@@ -2665,8 +2665,13 @@ namespace srcrepair
                                 }
                                 break;
                             case ".bud":
+                                // Распаковываем архив с выводом прогресса...
                                 CoreLib.ExtractFiles(Path.Combine(SelGame.FullBackUpDirPath, FName), Path.GetPathRoot(App.FullSteamPath));
+                                
+                                // Обновляем список FPS-конфигов...
                                 HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
+                                
+                                // Выводим сообщение об успехе...
                                 MessageBox.Show(CoreLib.GetLocalizedString("BU_RestSuccessful"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 break;
                             default:
