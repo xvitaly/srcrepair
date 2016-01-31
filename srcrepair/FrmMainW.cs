@@ -2665,13 +2665,7 @@ namespace srcrepair
                                 }
                                 break;
                             case ".bud":
-                                using (ZipFile Zip = ZipFile.Read(Path.Combine(SelGame.FullBackUpDirPath, FName)))
-                                {
-                                    foreach (ZipEntry ZFile in Zip)
-                                    {
-                                        try { ZFile.Extract(Path.GetPathRoot(App.FullSteamPath), ExtractExistingFileAction.OverwriteSilently); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                                    }
-                                }
+                                CoreLib.ExtractFiles(Path.Combine(SelGame.FullBackUpDirPath, FName), Path.GetPathRoot(App.FullSteamPath));
                                 HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
                                 MessageBox.Show(CoreLib.GetLocalizedString("BU_RestSuccessful"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 break;
