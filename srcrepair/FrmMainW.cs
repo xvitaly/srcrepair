@@ -2675,6 +2675,7 @@ namespace srcrepair
                                 MessageBox.Show(CoreLib.GetLocalizedString("BU_RestSuccessful"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 break;
                             default:
+                                // Выводим сообщение о неизвестном формате резервной копии...
                                 MessageBox.Show(CoreLib.GetLocalizedString("BU_UnknownType"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 break;
                         }
