@@ -159,8 +159,7 @@ namespace srcrepair
         /// параметре. Используется в Save и SaveAs Редактора конфигов.
         /// </summary>
         /// <param name="Path">Полный путь к файлу конфига</param>
-        /// <param name="XAppName">Название программы</param>
-        private void WriteTableToFileNow(string Path, string XAppName)
+        private void WriteTableToFileNow(string Path)
         {
             // Начинаем сохранять содержимое редактора в файл...
             using (StreamWriter CFile = new StreamWriter(Path))
@@ -2409,7 +2408,7 @@ namespace srcrepair
                 }
 
                 // Начинаем сохранение в тот же файл...
-                try { WriteTableToFileNow(CFGFileName, Properties.Resources.AppName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("CE_CfgSVVEx"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+                try { WriteTableToFileNow(CFGFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("CE_CfgSVVEx"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
             }
             else
             {
@@ -2419,7 +2418,7 @@ namespace srcrepair
                 // Файл не был открыт. Отображаем стандартный диалог сохранения файла...
                 if (CE_SaveCfgDialog.ShowDialog() == DialogResult.OK)
                 {
-                    WriteTableToFileNow(CE_SaveCfgDialog.FileName, Properties.Resources.AppName);
+                    WriteTableToFileNow(CE_SaveCfgDialog.FileName);
                     CFGFileName = CE_SaveCfgDialog.FileName;
                     UpdateStatusBar(MainTabControl.SelectedIndex);
                 }
@@ -2431,7 +2430,7 @@ namespace srcrepair
             CE_SaveCfgDialog.InitialDirectory = SelGame.FullCfgPath;
             if (CE_SaveCfgDialog.ShowDialog() == DialogResult.OK)
             {
-                WriteTableToFileNow(CE_SaveCfgDialog.FileName, Properties.Resources.AppName);
+                WriteTableToFileNow(CE_SaveCfgDialog.FileName);
             }
         }
 
