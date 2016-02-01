@@ -2495,14 +2495,7 @@ namespace srcrepair
                     // Создаём резервную копию...
                     if (Properties.Settings.Default.SafeCleanup)
                     {
-                        try
-                        {
-                            CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), "Game_AutoBackUp", SelGame.FullBackUpDirPath);
-                        }
-                        catch (Exception Ex)
-                        {
-                            CoreLib.WriteStringToLog(Ex.Message);
-                        }
+                        try { CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), "Game_AutoBackUp", SelGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     }
 
                     // Работаем...
@@ -2549,14 +2542,7 @@ namespace srcrepair
         {
             if (MessageBox.Show(((Button)sender).Text + "?", Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                try
-                {
-                    Process.Start(String.Format("steam://validate/{0}", SelGame.GameInternalID));
-                }
-                catch (Exception Ex)
-                {
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppStartSteamFailed"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                }
+                try { Process.Start(String.Format("steam://validate/{0}", SelGame.GameInternalID)); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppStartSteamFailed"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
             }
         }
 
