@@ -2427,6 +2427,7 @@ namespace srcrepair
 
         private void CE_SaveAs_Click(object sender, EventArgs e)
         {
+            // Сохраняем файл с другим, выбранным пользователем, именем...
             CE_SaveCfgDialog.InitialDirectory = SelGame.FullCfgPath;
             if (CE_SaveCfgDialog.ShowDialog() == DialogResult.OK)
             {
