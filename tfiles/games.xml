@@ -6,7 +6,7 @@
     <SmallName>tf</SmallName>
     <VFDir>tf</VFDir>
     <UserDir>1</UserDir>
-	<HUDsAvail>1</HUDsAvail>
+    <HUDsAvail>1</HUDsAvail>
     <SID>440</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -16,7 +16,7 @@
     <SmallName>cstrike</SmallName>
     <VFDir>cstrike</VFDir>
     <UserDir>1</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>240</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -26,7 +26,7 @@
     <SmallName>dod</SmallName>
     <VFDir>dod</VFDir>
     <UserDir>1</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>300</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -36,7 +36,7 @@
     <SmallName>hl2mp</SmallName>
     <VFDir>hl2mp</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>320</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -46,7 +46,7 @@
     <SmallName>hl2</SmallName>
     <VFDir>hl2</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>220</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -56,7 +56,7 @@
     <SmallName>episodic</SmallName>
     <VFDir>episodic</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>380</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -66,7 +66,7 @@
     <SmallName>ep2</SmallName>
     <VFDir>ep2</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>420</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -76,7 +76,7 @@
     <SmallName>lostcoast</SmallName>
     <VFDir>lostcoast</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>340</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -86,7 +86,7 @@
     <SmallName>portal</SmallName>
     <VFDir>portal</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>400</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -96,7 +96,7 @@
     <SmallName>garrysmod</SmallName>
     <VFDir>garrysmod</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>4000</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -106,7 +106,7 @@
     <SmallName>ageofchivalry</SmallName>
     <VFDir>ageofchivalry</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>17510</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -116,7 +116,7 @@
     <SmallName>diprip</SmallName>
     <VFDir>diprip</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>17530</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -126,7 +126,7 @@
     <SmallName>Dystopia</SmallName>
     <VFDir>Dystopia</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>17580</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -136,7 +136,7 @@
     <SmallName>insurgency</SmallName>
     <VFDir>insurgency</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>17700</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -146,7 +146,7 @@
     <SmallName>pvkii</SmallName>
     <VFDir>pvkii</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>17570</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -156,7 +156,7 @@
     <SmallName>Smashball</SmallName>
     <VFDir>Smashball</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>17730</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -166,7 +166,7 @@
     <SmallName>synergy</SmallName>
     <VFDir>synergy</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>17520</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -176,7 +176,7 @@
     <SmallName>zps</SmallName>
     <VFDir>zps</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>17500</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -186,7 +186,7 @@
     <SmallName>hl1</SmallName>
     <VFDir>hl1</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>280</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -196,7 +196,7 @@
     <SmallName>hl1mp</SmallName>
     <VFDir>hl1mp</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>360</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -206,7 +206,7 @@
     <SmallName>left4dead</SmallName>
     <VFDir>left4dead</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>500</SID>
     <Executable>left4dead.exe</Executable>
   </Game>
@@ -216,7 +216,7 @@
     <SmallName>left4dead2</SmallName>
     <VFDir>left4dead2</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>550</SID>
     <Executable>left4dead2.exe</Executable>
   </Game>
@@ -226,7 +226,7 @@
     <SmallName>swarm</SmallName>
     <VFDir>swarm</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>630</SID>
     <Executable>swarm.exe</Executable>
   </Game>
@@ -236,7 +236,7 @@
     <SmallName>portal2</SmallName>
     <VFDir>update</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>620</SID>
     <Executable>portal2.exe</Executable>
   </Game>
@@ -246,7 +246,7 @@
     <SmallName>dota</SmallName>
     <VFDir>dota</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>570</SID>
     <Executable>dota.exe</Executable>
   </Game>
@@ -256,7 +256,7 @@
     <SmallName>dota</SmallName>
     <VFDir>dota</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>570</SID>
     <Executable>dota2.exe</Executable>
   </Game>
@@ -266,7 +266,7 @@
     <SmallName>dota</SmallName>
     <VFDir>dota</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>570</SID>
     <Executable>dota2.exe</Executable>
   </Game>
@@ -276,7 +276,7 @@
     <SmallName>csgo</SmallName>
     <VFDir>csgo</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>730</SID>
     <Executable>csgo.exe</Executable>
   </Game>
@@ -286,7 +286,7 @@
     <SmallName>nucleardawn</SmallName>
     <VFDir>nucleardawn</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>17710</SID>
     <Executable>nucleardawn.exe</Executable>
   </Game>
@@ -296,7 +296,7 @@
     <SmallName>p3</SmallName>
     <VFDir>p3</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>10220</SID>
     <Executable>p3.exe</Executable>
   </Game>
@@ -306,7 +306,7 @@
     <SmallName>EYE</SmallName>
     <VFDir>EYE</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>91700</SID>
     <Executable>EYE.exe</Executable>
   </Game>
@@ -316,7 +316,7 @@
     <SmallName>mm</SmallName>
     <VFDir>mm</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>2100</SID>
     <Executable>mm.exe</Executable>
   </Game>
@@ -326,7 +326,7 @@
     <SmallName>mm</SmallName>
     <VFDir>mm</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>2100</SID>
     <Executable>mm.exe</Executable>
   </Game>
@@ -336,7 +336,7 @@
     <SmallName>ship</SmallName>
     <VFDir>ship</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>2400</SID>
     <Executable>ship.exe</Executable>
   </Game>
@@ -346,7 +346,7 @@
     <SmallName>ship</SmallName>
     <VFDir>ship</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>2420</SID>
     <Executable>ship.exe</Executable>
   </Game>
@@ -356,7 +356,7 @@
     <SmallName>SE1</SmallName>
     <VFDir>SE1</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>1300</SID>
     <Executable>SinEpisodes.exe</Executable>
   </Game>
@@ -366,7 +366,7 @@
     <SmallName>vampire</SmallName>
     <VFDir>vampire</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>2600</SID>
     <Executable>vampire.exe</Executable>
   </Game>
@@ -376,7 +376,7 @@
     <SmallName>zenozoik</SmallName>
     <VFDir>zenozoik</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>22200</SID>
     <Executable>zenoclash.exe</Executable>
   </Game>
@@ -386,7 +386,7 @@
     <SmallName>dearesther</SmallName>
     <VFDir>dearesther</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>203810</SID>
     <Executable>dearesther.exe</Executable>
   </Game>
@@ -396,7 +396,7 @@
     <SmallName>esmod</SmallName>
     <VFDir>esmod</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>17550</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -406,7 +406,7 @@
     <SmallName>en-US</SmallName>
     <VFDir>en-US</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>212160</SID>
     <Executable>nxsteam.exe</Executable>
   </Game>
@@ -416,7 +416,7 @@
     <SmallName>pm</SmallName>
     <VFDir>pm</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>2450</SID>
     <Executable>bgt.exe</Executable>
   </Game>
@@ -426,7 +426,7 @@
     <SmallName>revelations</SmallName>
     <VFDir>revelations</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>201070</SID>
     <Executable>revelations.exe</Executable>
   </Game>
@@ -436,7 +436,7 @@
     <SmallName>minerva</SmallName>
     <VFDir>minerva</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>235780</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -446,7 +446,7 @@
     <SmallName>insurgency</SmallName>
     <VFDir>insurgency</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>222880</SID>
     <Executable>insurgency.exe</Executable>
   </Game>
@@ -456,7 +456,7 @@
     <SmallName>nmrih</SmallName>
     <VFDir>nmrih</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>224260</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -466,7 +466,7 @@
     <SmallName>contagion</SmallName>
     <VFDir>contagion</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>238430</SID>
     <Executable>contagion.exe</Executable>
   </Game>
@@ -476,7 +476,7 @@
     <SmallName>NeotokyoSource</SmallName>
     <VFDir>NeotokyoSource</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>244630</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -486,7 +486,7 @@
     <SmallName>hl2</SmallName>
     <VFDir>hl2</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>290930</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -496,7 +496,7 @@
     <SmallName>lambdawars</SmallName>
     <VFDir>lambdawars</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>270370</SID>
     <Executable>lambdawars.exe</Executable>
   </Game>
@@ -506,7 +506,7 @@
     <SmallName>rexaura</SmallName>
     <VFDir>rexaura</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>317790</SID>
     <Executable>hl2.exe</Executable>
   </Game>
@@ -516,7 +516,7 @@
     <SmallName>bms</SmallName>
     <VFDir>bms</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>362890</SID>
     <Executable>bms.exe</Executable>
   </Game>
@@ -526,7 +526,7 @@
     <SmallName>portal_stories</SmallName>
     <VFDir>portal_stories</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>317400</SID>
     <Executable>portal2.exe</Executable>
   </Game>
@@ -536,7 +536,7 @@
     <SmallName>firefightreloaded</SmallName>
     <VFDir>firefightreloaded</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>397680</SID>
     <Executable>fr.exe</Executable>
   </Game>
@@ -546,7 +546,7 @@
     <SmallName>aperturetag</SmallName>
     <VFDir>aperturetag</VFDir>
     <UserDir>0</UserDir>
-	<HUDsAvail>0</HUDsAvail>
+    <HUDsAvail>0</HUDsAvail>
     <SID>280740</SID>
     <Executable>portal2.exe</Executable>
   </Game>
