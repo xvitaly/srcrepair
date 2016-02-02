@@ -83,6 +83,12 @@ namespace srcrepair
         public bool IsUsingUserDir;
 
         /// <summary>
+        /// Указывает поддерживает ли конкретная игра кастомные HUD и имеется
+        /// ли их поддержка в SRC Repair.
+        /// </summary>
+        public bool IsHUDsAvailable;
+
+        /// <summary>
         /// Эта переменная хранит ID игры по базе данных Steam. Используется
         /// для служебных целей.
         /// </summary>
