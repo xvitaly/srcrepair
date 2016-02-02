@@ -2099,7 +2099,7 @@ namespace srcrepair
                 Properties.Settings.Default.LastGameName = AppSelector.Text;
 
                 // Считаем список доступных HUD для данной игры...
-                if (!BW_HUDList.IsBusy) { BW_HUDList.RunWorkerAsync(); }
+                if (SelGame.IsHUDsAvailable) { if (!BW_HUDList.IsBusy) { BW_HUDList.RunWorkerAsync(); } }
                 
                 // Считаем список бэкапов...
                 if (!BW_BkUpRecv.IsBusy) { BW_BkUpRecv.RunWorkerAsync(); }
