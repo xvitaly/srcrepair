@@ -216,6 +216,7 @@ namespace srcrepair
             ConfDir = VFDir;
             IsUsingVideoFile = HasVF;
             IsUsingUserDir = UserDir;
+            IsHUDsAvailable = HUDAv;
 
             // Получаем полный путь до каталога управляемого приложения...
             GamePath = GetGameDirectory(DirName, SmallName, GameDirs);
