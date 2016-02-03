@@ -3528,4 +3528,7 @@
   <data name="tf_preround_push_from_damage_enable" xml:space="preserve">
     <value>Разрешает / запрещает игрокам отталкиваться при помощи взрывов во время предстартовой заморозки.</value>
   </data>
+  <data name="tf_scoreboard_ping_as_text" xml:space="preserve">
+    <value>Включает / отключает отображение пинга в текстовом виде.</value>
+  </data>
 </root>
