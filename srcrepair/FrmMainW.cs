@@ -1750,6 +1750,16 @@ namespace srcrepair
             CheckGames(AppSelector.Items.Count);
         }
 
+        /// <summary>
+        /// Переключает вид страницы модуля Менеджер HUD.
+        /// </summary>
+        /// <param name="Mode">Булево режима</param>
+        private void HandleHUDMode(bool Mode)
+        {
+            HUD_Panel.Visible = Mode;
+            HUD_NotAvailable.Visible = !Mode;
+        }
+
         #endregion
 
         #region Internal Workers
@@ -2097,6 +2107,9 @@ namespace srcrepair
 
                 // Сохраним ID последней выбранной игры...
                 Properties.Settings.Default.LastGameName = AppSelector.Text;
+
+                // Переключаем вид страницы менеджера HUD...
+                HandleHUDMode(SelGame.IsHUDsAvailable);
 
                 // Считаем список доступных HUD для данной игры...
                 if (SelGame.IsHUDsAvailable) { if (!BW_HUDList.IsBusy) { BW_HUDList.RunWorkerAsync(); } }
