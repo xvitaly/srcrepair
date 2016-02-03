@@ -161,6 +161,7 @@
             this.L_FP_ConfigSel = new System.Windows.Forms.Label();
             this.FP_TopLabel = new System.Windows.Forms.Label();
             this.HUDInstall = new System.Windows.Forms.TabPage();
+            this.HUD_Panel = new System.Windows.Forms.Panel();
             this.HD_OpenDir = new System.Windows.Forms.Button();
             this.HD_Homepage = new System.Windows.Forms.Button();
             this.HD_Uninstall = new System.Windows.Forms.Button();
@@ -171,6 +172,9 @@
             this.HD_HSel = new System.Windows.Forms.ComboBox();
             this.L_HD_HSel = new System.Windows.Forms.Label();
             this.HD_WelcMsg = new System.Windows.Forms.Label();
+            this.HUD_NotAvailable = new System.Windows.Forms.Panel();
+            this.HUD_NAText = new System.Windows.Forms.Label();
+            this.HUD_NAImg = new System.Windows.Forms.PictureBox();
             this.RescueCentre = new System.Windows.Forms.TabPage();
             this.BU_LVTable = new System.Windows.Forms.ListView();
             this.BU_LV_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -256,9 +260,12 @@
             this.FPSCfgInstall.SuspendLayout();
             this.FP_GB_Desc.SuspendLayout();
             this.HUDInstall.SuspendLayout();
+            this.HUD_Panel.SuspendLayout();
             this.HD_GB_Desc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HD_Warning)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HD_GB_Pbx)).BeginInit();
+            this.HUD_NotAvailable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HUD_NAImg)).BeginInit();
             this.RescueCentre.SuspendLayout();
             this.BU_BToolbar.SuspendLayout();
             this.MainMenu.SuspendLayout();
@@ -1407,17 +1414,24 @@
             // 
             // HUDInstall
             // 
-            this.HUDInstall.Controls.Add(this.HD_OpenDir);
-            this.HUDInstall.Controls.Add(this.HD_Homepage);
-            this.HUDInstall.Controls.Add(this.HD_Uninstall);
-            this.HUDInstall.Controls.Add(this.HD_Install);
-            this.HUDInstall.Controls.Add(this.HD_GB_Desc);
-            this.HUDInstall.Controls.Add(this.HD_HSel);
-            this.HUDInstall.Controls.Add(this.L_HD_HSel);
+            this.HUDInstall.Controls.Add(this.HUD_Panel);
             this.HUDInstall.Controls.Add(this.HD_WelcMsg);
+            this.HUDInstall.Controls.Add(this.HUD_NotAvailable);
             resources.ApplyResources(this.HUDInstall, "HUDInstall");
             this.HUDInstall.Name = "HUDInstall";
             this.HUDInstall.UseVisualStyleBackColor = true;
+            // 
+            // HUD_Panel
+            // 
+            this.HUD_Panel.Controls.Add(this.HD_OpenDir);
+            this.HUD_Panel.Controls.Add(this.HD_Homepage);
+            this.HUD_Panel.Controls.Add(this.HD_Uninstall);
+            this.HUD_Panel.Controls.Add(this.HD_Install);
+            this.HUD_Panel.Controls.Add(this.HD_GB_Desc);
+            this.HUD_Panel.Controls.Add(this.HD_HSel);
+            this.HUD_Panel.Controls.Add(this.L_HD_HSel);
+            resources.ApplyResources(this.HUD_Panel, "HUD_Panel");
+            this.HUD_Panel.Name = "HUD_Panel";
             // 
             // HD_OpenDir
             // 
@@ -1489,6 +1503,25 @@
             // 
             resources.ApplyResources(this.HD_WelcMsg, "HD_WelcMsg");
             this.HD_WelcMsg.Name = "HD_WelcMsg";
+            // 
+            // HUD_NotAvailable
+            // 
+            this.HUD_NotAvailable.Controls.Add(this.HUD_NAText);
+            this.HUD_NotAvailable.Controls.Add(this.HUD_NAImg);
+            resources.ApplyResources(this.HUD_NotAvailable, "HUD_NotAvailable");
+            this.HUD_NotAvailable.Name = "HUD_NotAvailable";
+            // 
+            // HUD_NAText
+            // 
+            resources.ApplyResources(this.HUD_NAText, "HUD_NAText");
+            this.HUD_NAText.Name = "HUD_NAText";
+            // 
+            // HUD_NAImg
+            // 
+            this.HUD_NAImg.Image = global::srcrepair.Properties.Resources.Warning_Large;
+            resources.ApplyResources(this.HUD_NAImg, "HUD_NAImg");
+            this.HUD_NAImg.Name = "HUD_NAImg";
+            this.HUD_NAImg.TabStop = false;
             // 
             // RescueCentre
             // 
@@ -1997,9 +2030,12 @@
             this.FPSCfgInstall.PerformLayout();
             this.FP_GB_Desc.ResumeLayout(false);
             this.HUDInstall.ResumeLayout(false);
+            this.HUD_Panel.ResumeLayout(false);
             this.HD_GB_Desc.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HD_Warning)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HD_GB_Pbx)).EndInit();
+            this.HUD_NotAvailable.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.HUD_NAImg)).EndInit();
             this.RescueCentre.ResumeLayout(false);
             this.RescueCentre.PerformLayout();
             this.BU_BToolbar.ResumeLayout(false);
@@ -2194,23 +2230,14 @@
         private System.Windows.Forms.ComboBox GT_ResAvailable;
         private System.Windows.Forms.TabPage HUDInstall;
         private System.Windows.Forms.ImageList TabIcons;
-        private System.Windows.Forms.Button HD_Uninstall;
-        private System.Windows.Forms.Button HD_Install;
-        private System.Windows.Forms.GroupBox HD_GB_Desc;
-        private System.Windows.Forms.PictureBox HD_GB_Pbx;
-        private System.Windows.Forms.ComboBox HD_HSel;
-        private System.Windows.Forms.Label L_HD_HSel;
         private System.Windows.Forms.Label HD_WelcMsg;
         private System.ComponentModel.BackgroundWorker BW_HUDList;
-        private System.Windows.Forms.Button HD_Homepage;
         private System.ComponentModel.BackgroundWorker BW_HUDScreen;
         private System.ComponentModel.BackgroundWorker BW_HudInstall;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnAppCache;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnTmpDir;
         private System.Windows.Forms.ToolStripMenuItem MNUShowLog;
         private System.Windows.Forms.ToolStripSeparator MNUSep5;
-        private System.Windows.Forms.PictureBox HD_Warning;
-        private System.Windows.Forms.Button HD_OpenDir;
         private System.Windows.Forms.ComboBox GT_NCF_MBlur;
         private System.Windows.Forms.Label L_GT_NCF_MBlur;
         private System.Windows.Forms.ComboBox GT_NCF_Shadows;
@@ -2221,6 +2248,19 @@
         private System.Windows.Forms.ToolStripSeparator MNUSep6;
         private System.Windows.Forms.ToolStripMenuItem MNUMuteMan;
         private System.Windows.Forms.Button AppRefresh;
+        private System.Windows.Forms.Panel HUD_Panel;
+        private System.Windows.Forms.Button HD_OpenDir;
+        private System.Windows.Forms.Button HD_Homepage;
+        private System.Windows.Forms.Button HD_Uninstall;
+        private System.Windows.Forms.Button HD_Install;
+        private System.Windows.Forms.GroupBox HD_GB_Desc;
+        private System.Windows.Forms.PictureBox HD_Warning;
+        private System.Windows.Forms.PictureBox HD_GB_Pbx;
+        private System.Windows.Forms.ComboBox HD_HSel;
+        private System.Windows.Forms.Label L_HD_HSel;
+        private System.Windows.Forms.Panel HUD_NotAvailable;
+        private System.Windows.Forms.Label HUD_NAText;
+        private System.Windows.Forms.PictureBox HUD_NAImg;
     }
 }
 

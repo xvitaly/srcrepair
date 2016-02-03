@@ -3864,20 +3864,26 @@
   <metadata name="HUDInstall.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="HUD_Panel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="HD_OpenDir.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="HD_OpenDir.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="HD_OpenDir.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="HD_OpenDir.Location" type="System.Drawing.Point, System.Drawing">
-    <value>391, 60</value>
+    <value>379, 4</value>
   </data>
   <data name="HD_OpenDir.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
   </data>
   <data name="HD_OpenDir.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;HD_OpenDir.Name" xml:space="preserve">
     <value>HD_OpenDir</value>
@@ -3886,7 +3892,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HD_OpenDir.Parent" xml:space="preserve">
-    <value>HUDInstall</value>
+    <value>HUD_Panel</value>
   </data>
   <data name="&gt;&gt;HD_OpenDir.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -3897,14 +3903,17 @@
   <data name="HD_Homepage.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="HD_Homepage.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="HD_Homepage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>364, 60</value>
+    <value>352, 4</value>
   </data>
   <data name="HD_Homepage.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
   </data>
   <data name="HD_Homepage.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;HD_Homepage.Name" xml:space="preserve">
     <value>HD_Homepage</value>
@@ -3913,7 +3922,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HD_Homepage.Parent" xml:space="preserve">
-    <value>HUDInstall</value>
+    <value>HUD_Panel</value>
   </data>
   <data name="&gt;&gt;HD_Homepage.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -3924,14 +3933,17 @@
   <data name="HD_Uninstall.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="HD_Uninstall.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="HD_Uninstall.Location" type="System.Drawing.Point, System.Drawing">
-    <value>243, 339</value>
+    <value>231, 283</value>
   </data>
   <data name="HD_Uninstall.Size" type="System.Drawing.Size, System.Drawing">
     <value>194, 23</value>
   </data>
   <data name="HD_Uninstall.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="HD_Uninstall.Text" xml:space="preserve">
     <value>Uninstall selected HUD</value>
@@ -3943,7 +3955,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HD_Uninstall.Parent" xml:space="preserve">
-    <value>HUDInstall</value>
+    <value>HUD_Panel</value>
   </data>
   <data name="&gt;&gt;HD_Uninstall.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -3954,14 +3966,17 @@
   <data name="HD_Install.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="HD_Install.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="HD_Install.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 339</value>
+    <value>11, 283</value>
   </data>
   <data name="HD_Install.Size" type="System.Drawing.Size, System.Drawing">
     <value>197, 23</value>
   </data>
   <data name="HD_Install.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="HD_Install.Text" xml:space="preserve">
     <value>Install selected HUD</value>
@@ -3973,7 +3988,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HD_Install.Parent" xml:space="preserve">
-    <value>HUDInstall</value>
+    <value>HUD_Panel</value>
   </data>
   <data name="&gt;&gt;HD_Install.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -4074,13 +4089,13 @@
     <value>1</value>
   </data>
   <data name="HD_GB_Desc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 90</value>
+    <value>11, 34</value>
   </data>
   <data name="HD_GB_Desc.Size" type="System.Drawing.Size, System.Drawing">
     <value>414, 234</value>
   </data>
   <data name="HD_GB_Desc.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="HD_GB_Desc.Text" xml:space="preserve">
     <value>Screenshot of selected HUD</value>
@@ -4092,7 +4107,7 @@
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HD_GB_Desc.Parent" xml:space="preserve">
-    <value>HUDInstall</value>
+    <value>HUD_Panel</value>
   </data>
   <data name="&gt;&gt;HD_GB_Desc.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -4101,13 +4116,13 @@
     <value>True</value>
   </metadata>
   <data name="HD_HSel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 62</value>
+    <value>164, 6</value>
   </data>
   <data name="HD_HSel.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 21</value>
   </data>
   <data name="HD_HSel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;HD_HSel.Name" xml:space="preserve">
     <value>HD_HSel</value>
@@ -4116,7 +4131,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HD_HSel.Parent" xml:space="preserve">
-    <value>HUDInstall</value>
+    <value>HUD_Panel</value>
   </data>
   <data name="&gt;&gt;HD_HSel.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -4124,14 +4139,17 @@
   <metadata name="L_HD_HSel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="L_HD_HSel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="L_HD_HSel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>43, 65</value>
+    <value>31, 9</value>
   </data>
   <data name="L_HD_HSel.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 18</value>
   </data>
   <data name="L_HD_HSel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="L_HD_HSel.Text" xml:space="preserve">
     <value>Select HUD from list:</value>
@@ -4143,10 +4161,31 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_HD_HSel.Parent" xml:space="preserve">
-    <value>HUDInstall</value>
+    <value>HUD_Panel</value>
   </data>
   <data name="&gt;&gt;L_HD_HSel.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="HUD_Panel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 57</value>
+  </data>
+  <data name="HUD_Panel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>441, 315</value>
+  </data>
+  <data name="HUD_Panel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;HUD_Panel.Name" xml:space="preserve">
+    <value>HUD_Panel</value>
+  </data>
+  <data name="&gt;&gt;HUD_Panel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HUD_Panel.Parent" xml:space="preserve">
+    <value>HUDInstall</value>
+  </data>
+  <data name="&gt;&gt;HUD_Panel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="HD_WelcMsg.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -4173,7 +4212,94 @@
     <value>HUDInstall</value>
   </data>
   <data name="&gt;&gt;HD_WelcMsg.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>1</value>
+  </data>
+  <metadata name="HUD_NotAvailable.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="HUD_NAText.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="HUD_NAText.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="HUD_NAText.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 130</value>
+  </data>
+  <data name="HUD_NAText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 42</value>
+  </data>
+  <data name="HUD_NAText.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="HUD_NAText.Text" xml:space="preserve">
+    <value>No HUDs available for selected game!</value>
+  </data>
+  <data name="HUD_NAText.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;HUD_NAText.Name" xml:space="preserve">
+    <value>HUD_NAText</value>
+  </data>
+  <data name="&gt;&gt;HUD_NAText.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HUD_NAText.Parent" xml:space="preserve">
+    <value>HUD_NotAvailable</value>
+  </data>
+  <data name="&gt;&gt;HUD_NAText.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="HUD_NAImg.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="HUD_NAImg.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="HUD_NAImg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 3</value>
+  </data>
+  <data name="HUD_NAImg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 124</value>
+  </data>
+  <data name="HUD_NAImg.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;HUD_NAImg.Name" xml:space="preserve">
+    <value>HUD_NAImg</value>
+  </data>
+  <data name="&gt;&gt;HUD_NAImg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HUD_NAImg.Parent" xml:space="preserve">
+    <value>HUD_NotAvailable</value>
+  </data>
+  <data name="&gt;&gt;HUD_NAImg.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="HUD_NotAvailable.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 97</value>
+  </data>
+  <data name="HUD_NotAvailable.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 178</value>
+  </data>
+  <data name="HUD_NotAvailable.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="HUD_NotAvailable.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;HUD_NotAvailable.Name" xml:space="preserve">
+    <value>HUD_NotAvailable</value>
+  </data>
+  <data name="&gt;&gt;HUD_NotAvailable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HUD_NotAvailable.Parent" xml:space="preserve">
+    <value>HUDInstall</value>
+  </data>
+  <data name="&gt;&gt;HUD_NotAvailable.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="HUDInstall.ImageIndex" type="System.Int32, mscorlib">
     <value>4</value>

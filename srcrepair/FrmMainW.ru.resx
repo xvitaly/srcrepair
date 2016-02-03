@@ -883,6 +883,9 @@
   <data name="FPSCfgInstall.Text" xml:space="preserve">
     <value>FPS-конфиги</value>
   </data>
+  <data name="HUD_NAText.Text" xml:space="preserve">
+    <value>Нет доступных HUD для данной игры!</value>
+  </data>
   <data name="HD_Uninstall.Text" xml:space="preserve">
     <value>Удалить выбранный HUD</value>
   </data>

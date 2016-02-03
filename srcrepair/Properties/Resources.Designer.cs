@@ -738,6 +738,13 @@ namespace srcrepair.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Warning_Large {
+            get {
+                object obj = ResourceManager.GetObject("Warning_Large", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap Wizard {
             get {
                 object obj = ResourceManager.GetObject("Wizard", resourceCulture);
