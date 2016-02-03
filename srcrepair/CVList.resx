@@ -2172,4 +2172,7 @@
   <data name="tf_preround_push_from_damage_enable" xml:space="preserve">
     <value>Allow / disallow players to use blast damage to move during the pre-round freeze period.</value>
   </data>
+  <data name="tf_scoreboard_ping_as_text" xml:space="preserve">
+    <value>Show ping as text on scoreboard.</value>
+  </data>
 </root>

@@ -5749,6 +5749,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Show ping as text on scoreboard..
+        /// </summary>
+        internal static string tf_scoreboard_ping_as_text {
+            get {
+                return ResourceManager.GetString("tf_scoreboard_ping_as_text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add good ambush spots to the selected set. For debugging..
         /// </summary>
         internal static string tf_select_ambush_areas {
