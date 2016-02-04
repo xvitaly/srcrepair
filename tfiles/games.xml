@@ -253,8 +253,8 @@
   <Game Name="Dota 2 Beta">
     <HasVF>1</HasVF>
     <DirName>dota 2 beta</DirName>
-    <SmallName>dota</SmallName>
-    <VFDir>dota</VFDir>
+    <SmallName>game\dota</SmallName>
+    <VFDir>game\dota</VFDir>
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>570</SID>
