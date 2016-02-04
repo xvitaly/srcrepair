@@ -174,7 +174,8 @@ namespace srcrepair
         /// </summary>
         /// <param name="AppID">ID выбранного приложения</param>
         /// <param name="SteamPath">Каталог установки Steam</param>
-        /// <param name="CfgPath">Каталог настроек игры</param>
+        /// <param name="GamePath">Каталог установки игры</param>
+        /// <param name="VideoCfg">Каталог хранения настроек графики</param>
         public void UpdateVideoFilesList(string AppID, string SteamPath, string GamePath, string VideoCfg)
         {
             // Ищем файлы с графическими настройками из локального хранилища...
