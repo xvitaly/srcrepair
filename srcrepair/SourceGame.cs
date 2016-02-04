@@ -101,8 +101,8 @@ namespace srcrepair
         public List<String> VideoCfgFiles;
 
         /// <summary>
-        /// Содержит имя каталога с конфигами. Используется в последних
-        /// играх.
+        /// Содержит имя каталога с графическими настройками NCF игр. Используется
+        /// в последних играх.
         /// </summary>
         public string ConfDir;
 
