@@ -175,13 +175,13 @@ namespace srcrepair
         /// <param name="AppID">ID выбранного приложения</param>
         /// <param name="SteamPath">Каталог установки Steam</param>
         /// <param name="CfgPath">Каталог настроек игры</param>
-        public void UpdateVideoFilesList(string AppID, string SteamPath, string CfgPath)
+        public void UpdateVideoFilesList(string AppID, string SteamPath, string GamePath, string VideoCfg)
         {
             // Ищем файлы с графическими настройками из локального хранилища...
             VideoCfgFiles = GetVideoConfigs(CoreLib.GetUserIDs(SteamPath), AppID, SteamPath);
             
             // Добавляем в базу Legacy конфиг...
-            VideoCfgFiles.Add(Path.Combine(CfgPath, "cfg", "video.txt"));
+            VideoCfgFiles.Add(Path.Combine(GamePath, VideoCfg, "cfg", "video.txt"));
         }
 
         /// <summary>
