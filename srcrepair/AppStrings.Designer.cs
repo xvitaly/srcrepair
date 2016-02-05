@@ -394,7 +394,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannot find video database of {0}. File {1} does not exists..
+        ///   Looks up a localized string similar to Cannot find video database of &quot;{0}&quot; in file &quot;{1}&quot;..
         /// </summary>
         internal static string AppVideoDbNotFound {
             get {
