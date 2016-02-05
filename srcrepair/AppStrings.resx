@@ -783,4 +783,7 @@
   <data name="MM_ConvRest" xml:space="preserve">
     <value>Conversion from SteamIDv3 to legacy SteamID32 is not allowed!</value>
   </data>
+  <data name="AppVideoDbNotFound" xml:space="preserve">
+    <value>Cannot find video database of {0}. File {1} does not exists.</value>
+  </data>
 </root>
