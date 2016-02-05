@@ -39,7 +39,7 @@ namespace srcrepair
     /// <summary>
     /// Предоставляет методы для общих целей.
     /// </summary>
-    public sealed class CoreLib
+    public static class CoreLib
     {
         /// <summary>
         /// Эта функция позволяет получить локализованную строку по её ID
