@@ -130,24 +130,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Запрашивает подтверждение и снимает процесс.
-        /// </summary>
-        /// <param name="ProcessName">Имя образа процесса</param>
-        /// <param name="ConfMsg">Текст сообщения</param>
-        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
-        public static void ProcessTerminate(string ProcessName, string ConfMsg)
-        {
-            Process[] LocalByName = Process.GetProcessesByName(ProcessName);
-            foreach (Process ResName in LocalByName)
-            {
-                if (MessageBox.Show(String.Format(ConfMsg, ResName.ProcessName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    ResName.Kill();
-                }
-            }
-        }
-
-        /// <summary>
         /// Проверяет есть ли у пользователя, с правами которого запускается
         /// программа, привилегии локального администратора.
         /// </summary>
