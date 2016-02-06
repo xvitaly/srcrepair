@@ -221,10 +221,6 @@
     <value>Отмена</value>
     <comment>Текст кнопки Cancel в InputBox'ах</comment>
   </data>
-  <data name="ST_KillMessage" xml:space="preserve">
-    <value>Внимание! В памяти обнаружен активный процесс {0}! Настоятельно рекомендуется завершить его работу во избежании серьёзных ошибок. Завершить работу этого процесса сейчас?</value>
-    <comment>Сообщение, используемое функцией ProcessTerminate.</comment>
-  </data>
   <data name="NotImplementedYet" xml:space="preserve">
     <value>Извините, но данная функция ещё не реализована!</value>
     <comment>Сообщение, выдаваемое при запуске ещё не реализованной функции</comment>

@@ -1654,15 +1654,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to To work correctly, this programm needs {0} to be shut down. Proceed?.
-        /// </summary>
-        internal static string ST_KillMessage {
-            get {
-                return ResourceManager.GetString("ST_KillMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Steam login was successfully changed. Let&apos;s continue to work with the new one....
         /// </summary>
         internal static string StatusLoginChanged {

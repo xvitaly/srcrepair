@@ -195,9 +195,6 @@
   <data name="InputBoxCancelBtnName" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="ST_KillMessage" xml:space="preserve">
-    <value>To work correctly, this programm needs {0} to be shut down. Proceed?</value>
-  </data>
   <data name="NotImplementedYet" xml:space="preserve">
     <value>Sorry, but this feature is not yet implemented!</value>
   </data>
