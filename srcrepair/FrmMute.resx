@@ -129,7 +129,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="MM_FReload.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
+    <value>151, 22</value>
   </data>
   <data name="MM_FReload.Text" xml:space="preserve">
     <value>&amp;Reload</value>
@@ -138,7 +138,7 @@
     <value>Ctrl+S</value>
   </data>
   <data name="MM_FSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
+    <value>151, 22</value>
   </data>
   <data name="MM_FSave.Text" xml:space="preserve">
     <value>&amp;Save</value>
@@ -147,13 +147,13 @@
     <value>Ctrl+Q</value>
   </data>
   <data name="MM_Exit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
+    <value>151, 22</value>
   </data>
   <data name="MM_Exit.Text" xml:space="preserve">
     <value>&amp;Exit</value>
   </data>
   <data name="MM_File.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 20</value>
+    <value>37, 20</value>
   </data>
   <data name="MM_File.Text" xml:space="preserve">
     <value>&amp;File</value>
@@ -162,13 +162,13 @@
     <value>Shift+F1</value>
   </data>
   <data name="MM_HAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 22</value>
+    <value>158, 22</value>
   </data>
   <data name="MM_HAbout.Text" xml:space="preserve">
     <value>&amp;About</value>
   </data>
   <data name="MM_Help.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
+    <value>44, 20</value>
   </data>
   <data name="MM_Help.Text" xml:space="preserve">
     <value>&amp;Help</value>
@@ -256,7 +256,7 @@
     <value>False</value>
   </data>
   <data name="MM_CCut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
+    <value>176, 22</value>
   </data>
   <data name="MM_CCut.Text" xml:space="preserve">
     <value>C&amp;ut selected</value>
@@ -268,7 +268,7 @@
     <value>False</value>
   </data>
   <data name="MM_CCopy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
+    <value>176, 22</value>
   </data>
   <data name="MM_CCopy.Text" xml:space="preserve">
     <value>&amp;Copy selected</value>
@@ -280,40 +280,40 @@
     <value>False</value>
   </data>
   <data name="MM_CPaste.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
+    <value>176, 22</value>
   </data>
   <data name="MM_CPaste.Text" xml:space="preserve">
     <value>P&amp;aste</value>
   </data>
   <data name="MM_Sep4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 6</value>
+    <value>173, 6</value>
   </data>
   <data name="MM_CRemove.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Del</value>
+    <value>Alt+Del</value>
   </data>
   <data name="MM_CRemove.ShowShortcutKeys" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="MM_CRemove.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
+    <value>176, 22</value>
   </data>
   <data name="MM_CRemove.Text" xml:space="preserve">
     <value>&amp;Remove selected</value>
   </data>
   <data name="MM_CConvert.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
+    <value>176, 22</value>
   </data>
   <data name="MM_CConvert.Text" xml:space="preserve">
     <value>Co&amp;nvert SteamIDs</value>
   </data>
   <data name="showSteamProfileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 22</value>
+    <value>176, 22</value>
   </data>
   <data name="showSteamProfileToolStripMenuItem.Text" xml:space="preserve">
     <value>Sh&amp;ow Steam profile</value>
   </data>
   <data name="MM_Context.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 142</value>
+    <value>177, 142</value>
   </data>
   <data name="&gt;&gt;MM_Context.Name" xml:space="preserve">
     <value>MM_Context</value>
