@@ -1955,9 +1955,6 @@ namespace srcrepair
             Text = String.Format(Text, Properties.Resources.AppName, Properties.Resources.PlatformFriendlyName, App.AppVersionInfo, CoreLib.GetSystemArch());
             #endif
 
-            // Найдём и завершим в памяти процесс Steam...
-            CoreLib.ProcessTerminate("Steam", CoreLib.GetLocalizedString("ST_KillMessage"));
-
             // Укажем статус Безопасной очистки...
             CheckSafeClnStatus();
 
