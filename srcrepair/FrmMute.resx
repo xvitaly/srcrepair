@@ -288,9 +288,6 @@
   <data name="MM_Sep4.Size" type="System.Drawing.Size, System.Drawing">
     <value>173, 6</value>
   </data>
-  <data name="MM_CRemove.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Alt+Del</value>
-  </data>
   <data name="MM_CRemove.ShowShortcutKeys" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
