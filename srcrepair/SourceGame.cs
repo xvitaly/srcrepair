@@ -230,7 +230,7 @@ namespace srcrepair
             {
                 FullGamePath = Path.Combine(GamePath, SmallAppName);
                 FullCfgPath = Path.Combine(FullGamePath, "cfg");
-                FullBackUpDirPath = Path.Combine(AUserDir, "backups", SmallAppName);
+                FullBackUpDirPath = Path.Combine(AUserDir, "backups", Path.GetFileName(SmallAppName));
                 BanlistFileName = Path.Combine(FullGamePath, "voice_ban.dt");
                 AppHUDDir = Path.Combine(AUserDir, Properties.Settings.Default.HUDLocalDir, SmallAppName);
                 CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : "");
