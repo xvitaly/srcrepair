@@ -1973,7 +1973,7 @@ namespace srcrepair
             try
             {
                 // Проверим наличие обновлений программы (если разрешено в настройках)...
-                if (Properties.Settings.Default.EnableAutoUpdate && (Properties.Settings.Default.LastUpdateTime != null))
+                if (Properties.Settings.Default.EnableAutoUpdate)
                 {
                     if (!BW_UpChk.IsBusy) { BW_UpChk.RunWorkerAsync(); }
                 }
