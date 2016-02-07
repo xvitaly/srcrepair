@@ -2145,7 +2145,7 @@ namespace srcrepair
                     GT_WaterQuality.SelectedIndex = 1; // отражать мир в воде
                     GT_ShadowQuality.SelectedIndex = 1; // высокое качество теней
                     GT_ColorCorrectionT.SelectedIndex = 1; // корренкция цвета включена
-                    GT_AntiAliasing.SelectedIndex = 0; // сглаживание выключено
+                    GT_AntiAliasing.SelectedIndex = 3; // сглаживание CSAA 8x
                     GT_Filtering.SelectedIndex = 5; // анизотропная фильтрация 16x
                     GT_VSync.SelectedIndex = 0; // вертикальная синхронизация выключена
                     GT_MotionBlur.SelectedIndex = 0; // размытие движения выключено
