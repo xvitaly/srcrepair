@@ -2146,7 +2146,7 @@ namespace srcrepair
                     GT_ShadowQuality.SelectedIndex = 1; // высокое качество теней
                     GT_ColorCorrectionT.SelectedIndex = 1; // корренкция цвета включена
                     GT_AntiAliasing.SelectedIndex = 0; // сглаживание выключено
-                    GT_Filtering.SelectedIndex = 3; // анизотропная фильтрация 4x
+                    GT_Filtering.SelectedIndex = 5; // анизотропная фильтрация 16x
                     GT_VSync.SelectedIndex = 0; // вертикальная синхронизация выключена
                     GT_MotionBlur.SelectedIndex = 0; // размытие движения выключено
                     GT_DxMode.SelectedIndex = 3; // режим DirecX 9.0c
