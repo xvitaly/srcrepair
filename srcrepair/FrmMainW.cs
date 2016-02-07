@@ -2157,8 +2157,8 @@ namespace srcrepair
                     GT_NCF_DispMode.SelectedIndex = 0;
                     GT_NCF_Ratio.SelectedIndex = 1;
                     GT_NCF_Brightness.Text = "22";
-                    GT_NCF_AntiAlias.SelectedIndex = 2;
-                    GT_NCF_Filtering.SelectedIndex = 3;
+                    GT_NCF_AntiAlias.SelectedIndex = 5;
+                    GT_NCF_Filtering.SelectedIndex = 5;
                     GT_NCF_Shadows.SelectedIndex = 3;
                     GT_NCF_MBlur.SelectedIndex = 1;
                     GT_NCF_VSync.SelectedIndex = 0;
