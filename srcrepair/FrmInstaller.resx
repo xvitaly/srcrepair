@@ -301,7 +301,7 @@
     <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Spray, demo, map and config installer</value>
+    <value>Quick add-on installer</value>
   </data>
   <data name="&gt;&gt;openDialog.Name" xml:space="preserve">
     <value>openDialog</value>
