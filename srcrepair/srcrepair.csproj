@@ -615,6 +615,9 @@
     <None Include="Resources\Convert.png" />
     <None Include="Resources\Warning_Large.png" />
     <None Include="Resources\Warning.png" />
+    <None Include="Resources\New.png" />
+    <None Include="Resources\Open.png" />
+    <None Include="Resources\Mhint.png" />
     <Content Include="srcrepair.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

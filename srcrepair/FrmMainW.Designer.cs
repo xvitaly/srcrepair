@@ -997,6 +997,7 @@
             // CE_New
             // 
             this.CE_New.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_New.Image = global::srcrepair.Properties.Resources.New;
             resources.ApplyResources(this.CE_New, "CE_New");
             this.CE_New.Name = "CE_New";
             this.CE_New.Click += new System.EventHandler(this.CE_New_Click);
@@ -1004,6 +1005,7 @@
             // CE_Open
             // 
             this.CE_Open.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_Open.Image = global::srcrepair.Properties.Resources.Open;
             resources.ApplyResources(this.CE_Open, "CE_Open");
             this.CE_Open.Name = "CE_Open";
             this.CE_Open.Click += new System.EventHandler(this.CE_Open_Click);
@@ -1032,6 +1034,7 @@
             // CE_Cut
             // 
             this.CE_Cut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_Cut.Image = global::srcrepair.Properties.Resources.Cut;
             resources.ApplyResources(this.CE_Cut, "CE_Cut");
             this.CE_Cut.Name = "CE_Cut";
             this.CE_Cut.Click += new System.EventHandler(this.CE_Cut_Click);
@@ -1039,6 +1042,7 @@
             // CE_Copy
             // 
             this.CE_Copy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_Copy.Image = global::srcrepair.Properties.Resources.Copy;
             resources.ApplyResources(this.CE_Copy, "CE_Copy");
             this.CE_Copy.Name = "CE_Copy";
             this.CE_Copy.Click += new System.EventHandler(this.CE_Copy_Click);
@@ -1046,6 +1050,7 @@
             // CE_Paste
             // 
             this.CE_Paste.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_Paste.Image = global::srcrepair.Properties.Resources.Paste;
             resources.ApplyResources(this.CE_Paste, "CE_Paste");
             this.CE_Paste.Name = "CE_Paste";
             this.CE_Paste.Click += new System.EventHandler(this.CE_Paste_Click);
@@ -1087,6 +1092,7 @@
             // CE_ShowHint
             // 
             this.CE_ShowHint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_ShowHint.Image = global::srcrepair.Properties.Resources.Mhint;
             resources.ApplyResources(this.CE_ShowHint, "CE_ShowHint");
             this.CE_ShowHint.Name = "CE_ShowHint";
             this.CE_ShowHint.Click += new System.EventHandler(this.CE_ShowHint_Click);
