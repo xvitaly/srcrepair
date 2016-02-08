@@ -925,6 +925,7 @@
             // GT_Warning
             // 
             this.GT_Warning.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GT_Warning.Image = global::srcrepair.Properties.Resources.Warning;
             resources.ApplyResources(this.GT_Warning, "GT_Warning");
             this.GT_Warning.Name = "GT_Warning";
             this.GT_Warning.TabStop = false;
@@ -1474,6 +1475,7 @@
             // HD_Warning
             // 
             this.HD_Warning.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.HD_Warning.Image = global::srcrepair.Properties.Resources.Warning;
             resources.ApplyResources(this.HD_Warning, "HD_Warning");
             this.HD_Warning.Name = "HD_Warning";
             this.HD_Warning.TabStop = false;
