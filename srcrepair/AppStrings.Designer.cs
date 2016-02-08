@@ -1663,7 +1663,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to All systems are working normally..
+        ///   Looks up a localized string similar to All systems operational..
         /// </summary>
         internal static string StatusNormal {
             get {

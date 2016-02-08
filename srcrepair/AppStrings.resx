@@ -220,7 +220,7 @@
     <value>Steam login was successfully changed. Let's continue to work with the new one...</value>
   </data>
   <data name="StatusNormal" xml:space="preserve">
-    <value>All systems are working normally.</value>
+    <value>All systems operational.</value>
   </data>
   <data name="StatusOpenedFile" xml:space="preserve">
     <value>Opened file in Config Editor: {0}.</value>
