@@ -151,6 +151,12 @@
   <data name="BR_L_CaptCheck.Text" xml:space="preserve">
     <value>Введите текст с картинки:</value>
   </data>
+  <data name="BR_L_Email.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 13</value>
+  </data>
+  <data name="BR_L_Email.Text" xml:space="preserve">
+    <value>Ваша эл. почта:</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
