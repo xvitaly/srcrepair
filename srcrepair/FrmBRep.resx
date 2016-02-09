@@ -150,7 +150,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BR_WlcMsg.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <metadata name="BR_L_Title.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -177,7 +177,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BR_L_Title.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <metadata name="BR_Title.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -201,7 +201,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BR_Title.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <metadata name="BR_L_Category.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -231,7 +231,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BR_L_Category.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <metadata name="BR_Category.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -264,13 +264,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BR_Category.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <metadata name="BR_L_Message.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="BR_L_Message.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 114</value>
+    <value>14, 138</value>
   </data>
   <data name="BR_L_Message.Size" type="System.Drawing.Size, System.Drawing">
     <value>315, 15</value>
@@ -291,13 +291,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BR_L_Message.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <metadata name="BR_Message.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="BR_Message.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 132</value>
+    <value>17, 156</value>
   </data>
   <data name="BR_Message.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -318,13 +318,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BR_Message.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <metadata name="BR_Send.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="BR_Send.Location" type="System.Drawing.Point, System.Drawing">
-    <value>44, 300</value>
+    <value>44, 324</value>
   </data>
   <data name="BR_Send.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 23</value>
@@ -345,13 +345,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BR_Send.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <metadata name="BR_Cancel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="BR_Cancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 300</value>
+    <value>186, 324</value>
   </data>
   <data name="BR_Cancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 23</value>
@@ -372,7 +372,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BR_Cancel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <metadata name="BR_WrkMf.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -381,7 +381,7 @@
     <value>True</value>
   </metadata>
   <data name="BR_CaptImg.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 240</value>
+    <value>17, 264</value>
   </data>
   <data name="BR_CaptImg.Size" type="System.Drawing.Size, System.Drawing">
     <value>154, 50</value>
@@ -399,13 +399,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BR_CaptImg.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <metadata name="BR_L_CaptCheck.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="BR_L_CaptCheck.Location" type="System.Drawing.Point, System.Drawing">
-    <value>177, 240</value>
+    <value>177, 264</value>
   </data>
   <data name="BR_L_CaptCheck.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 18</value>
@@ -426,7 +426,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BR_L_CaptCheck.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <metadata name="BR_CaptCheck.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -435,7 +435,7 @@
     <value>Microsoft Sans Serif, 14.25pt</value>
   </data>
   <data name="BR_CaptCheck.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 261</value>
+    <value>180, 285</value>
   </data>
   <data name="BR_CaptCheck.MaxLength" type="System.Int32, mscorlib">
     <value>8</value>
@@ -456,11 +456,65 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BR_CaptCheck.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <metadata name="BR_CaptGen.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>125, 17</value>
   </metadata>
+  <metadata name="BR_L_Email.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="BR_L_Email.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="BR_L_Email.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 110</value>
+  </data>
+  <data name="BR_L_Email.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 13</value>
+  </data>
+  <data name="BR_L_Email.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="BR_L_Email.Text" xml:space="preserve">
+    <value>Your email address:</value>
+  </data>
+  <data name="&gt;&gt;BR_L_Email.Name" xml:space="preserve">
+    <value>BR_L_Email</value>
+  </data>
+  <data name="&gt;&gt;BR_L_Email.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BR_L_Email.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BR_L_Email.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="BR_Email.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="BR_Email.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 107</value>
+  </data>
+  <data name="BR_Email.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 20</value>
+  </data>
+  <data name="BR_Email.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;BR_Email.Name" xml:space="preserve">
+    <value>BR_Email</value>
+  </data>
+  <data name="&gt;&gt;BR_Email.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BR_Email.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BR_Email.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -471,7 +525,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>348, 333</value>
+    <value>348, 360</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

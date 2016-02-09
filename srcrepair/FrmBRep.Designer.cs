@@ -43,6 +43,8 @@
             this.BR_L_CaptCheck = new System.Windows.Forms.Label();
             this.BR_CaptCheck = new System.Windows.Forms.TextBox();
             this.BR_CaptGen = new System.ComponentModel.BackgroundWorker();
+            this.BR_L_Email = new System.Windows.Forms.Label();
+            this.BR_Email = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.BR_CaptImg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,12 +132,24 @@
             // 
             this.BR_CaptGen.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BR_CaptGen_DoWork);
             // 
+            // BR_L_Email
+            // 
+            resources.ApplyResources(this.BR_L_Email, "BR_L_Email");
+            this.BR_L_Email.Name = "BR_L_Email";
+            // 
+            // BR_Email
+            // 
+            resources.ApplyResources(this.BR_Email, "BR_Email");
+            this.BR_Email.Name = "BR_Email";
+            // 
             // frmBugReporter
             // 
             this.AcceptButton = this.BR_Send;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BR_Cancel;
+            this.Controls.Add(this.BR_Email);
+            this.Controls.Add(this.BR_L_Email);
             this.Controls.Add(this.BR_CaptCheck);
             this.Controls.Add(this.BR_L_CaptCheck);
             this.Controls.Add(this.BR_CaptImg);
@@ -177,5 +191,7 @@
         private System.Windows.Forms.Label BR_L_CaptCheck;
         private System.Windows.Forms.TextBox BR_CaptCheck;
         private System.ComponentModel.BackgroundWorker BR_CaptGen;
+        private System.Windows.Forms.Label BR_L_Email;
+        private System.Windows.Forms.TextBox BR_Email;
     }
 }
