@@ -276,7 +276,7 @@
     <value>315, 15</value>
   </data>
   <data name="BR_L_Message.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="BR_L_Message.Text" xml:space="preserve">
     <value>Describe the problem in details (as more as you can):</value>
@@ -306,7 +306,7 @@
     <value>312, 102</value>
   </data>
   <data name="BR_Message.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;BR_Message.Name" xml:space="preserve">
     <value>BR_Message</value>
@@ -330,7 +330,7 @@
     <value>114, 23</value>
   </data>
   <data name="BR_Send.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="BR_Send.Text" xml:space="preserve">
     <value>Send report</value>
@@ -357,7 +357,7 @@
     <value>114, 23</value>
   </data>
   <data name="BR_Cancel.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="BR_Cancel.Text" xml:space="preserve">
     <value>Cancel</value>
@@ -411,7 +411,7 @@
     <value>152, 18</value>
   </data>
   <data name="BR_L_CaptCheck.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="BR_L_CaptCheck.Text" xml:space="preserve">
     <value>Input text from CAPTCHA:</value>
@@ -444,7 +444,7 @@
     <value>149, 29</value>
   </data>
   <data name="BR_CaptCheck.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;BR_CaptCheck.Name" xml:space="preserve">
     <value>BR_CaptCheck</value>
@@ -474,7 +474,7 @@
     <value>99, 13</value>
   </data>
   <data name="BR_L_Email.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>5</value>
   </data>
   <data name="BR_L_Email.Text" xml:space="preserve">
     <value>Your email address:</value>
@@ -501,7 +501,7 @@
     <value>210, 20</value>
   </data>
   <data name="BR_Email.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;BR_Email.Name" xml:space="preserve">
     <value>BR_Email</value>
