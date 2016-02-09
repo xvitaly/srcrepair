@@ -80,7 +80,7 @@ namespace srcrepair
         
         private string GeneratePOSTRequest(string Title, string Email, int Category, string OS, string Contents)
         {
-            return String.Format("title={0}&email={1}&category={2}&version={3}&platform={4}&os={5}&os_version={6}&contents={7}", Title, Email, GenerateCategory(Category), GetAppSmVersion(), CoreLib.GetSystemArch(), OS, GenerateOSVersion(), Contents);
+            return String.Format("title={0}&email={1}&category={2}&version={3}&platform={4}&os={5}&os_version={6}&contents={7}", Title, CoreLib.ValidateEmailAddress(Email) ? Email : String.Empty, GenerateCategory(Category), GetAppSmVersion(), CoreLib.GetSystemArch(), OS, GenerateOSVersion(), Contents);
         }
 
         private Bitmap GenerateCaptchaImage(string CaptchaKey, int Width = 0, int Height = 0)
