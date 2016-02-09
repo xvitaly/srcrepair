@@ -303,6 +303,16 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Проверяет правильность записи адреса электронной почты посредством
+        /// регулярного выражения.
+        /// </summary>
+        /// <param name="Email">Строка с адресом электронной почты для проверки</param>
+        public static bool ValidateEmailAddress(string Email)
+        {
+            return Regex.IsMatch(Email, Properties.Resources.EmailRegex, RegexOptions.IgnoreCase);
+        }
+
+        /// <summary>
         /// Функция, записывающая в лог-файл строку. Например, сообщение об ошибке.
         /// </summary>
         /// <param name="TextMessage">Сообщение для записи в лог</param>
