@@ -280,5 +280,10 @@ namespace srcrepair
             // Очистим поле ввода...
             BR_CaptCheck.Clear();
         }
+
+        private void BR_Email_TextChanged(object sender, EventArgs e)
+        {
+            ((TextBox)sender).BackColor = CoreLib.ValidateEmailAddress(((TextBox)sender).Text) ? SystemColors.Window : Color.FromArgb(255, 155, 95);
+        }
     }
 }

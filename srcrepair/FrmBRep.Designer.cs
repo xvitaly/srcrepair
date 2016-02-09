@@ -141,6 +141,7 @@
             // 
             resources.ApplyResources(this.BR_Email, "BR_Email");
             this.BR_Email.Name = "BR_Email";
+            this.BR_Email.TextChanged += new System.EventHandler(this.BR_Email_TextChanged);
             // 
             // frmBugReporter
             // 
