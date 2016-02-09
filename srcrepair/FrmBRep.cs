@@ -78,9 +78,9 @@ namespace srcrepair
             return Result;
         }
         
-        private string GeneratePOSTRequest(string Title, int Category, string OS, string Contents)
+        private string GeneratePOSTRequest(string Title, string Email, int Category, string OS, string Contents)
         {
-            return String.Format("title={0}&category={1}&version={2}&platform={3}&os={4}&os_version={5}&contents={6}", Title, GenerateCategory(Category), GetAppSmVersion(), CoreLib.GetSystemArch(), OS, GenerateOSVersion(), Contents);
+            return String.Format("title={0}&email={1}&category={2}&version={3}&platform={4}&os={5}&os_version={6}&contents={7}", Title, Email, GenerateCategory(Category), GetAppSmVersion(), CoreLib.GetSystemArch(), OS, GenerateOSVersion(), Contents);
         }
 
         private Bitmap GenerateCaptchaImage(string CaptchaKey, int Width = 0, int Height = 0)
@@ -197,7 +197,7 @@ namespace srcrepair
             {
                 // Описываем всевозможные буферные переменные...
                 byte[] ByteReqC;
-                string BTitle = "", BText = "";
+                string BTitle = "", BEmail = "", BText = "";
                 int BType = 0;
 
                 // Формируем Web-запрос...
@@ -212,12 +212,13 @@ namespace srcrepair
                 Invoke((MethodInvoker)delegate()
                 {
                     BTitle = BR_Title.Text;
+                    BEmail = BR_Email.Text;
                     BText = BR_Message.Text;
                     BType = BR_Category.SelectedIndex;
                 });
 
                 // Кодируем POST-запрос в UTF8...
-                ByteReqC = Encoding.UTF8.GetBytes(GeneratePOSTRequest(BTitle, BType, Properties.Resources.PlatformFriendlyName, BText));
+                ByteReqC = Encoding.UTF8.GetBytes(GeneratePOSTRequest(BTitle, BEmail, BType, Properties.Resources.PlatformFriendlyName, BText));
 
                 // Указываем тип отправляемых данных [форма] и длину запроса...
                 WrQ.ContentType = "application/x-www-form-urlencoded";
