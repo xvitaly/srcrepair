@@ -70,7 +70,7 @@ namespace srcrepair
         private void InstallConfigNow(string ConfName, string AppPath, string GameDir, bool CustmDir)
         {
             // Генерируем путь к каталогу установки конфига...
-            string DestPath = Path.Combine(GameDir, CustmDir ? Path.Combine("custom", Properties.Settings.Default.UserCustDirName) : "", "cfg");
+            string DestPath = Path.Combine(GameDir, CustmDir ? Path.Combine("custom", Properties.Settings.Default.UserCustDirName) : String.Empty, "cfg");
 
             // Проверяем существование каталога и если его не существует - создаём...
             if (!Directory.Exists(DestPath)) { Directory.CreateDirectory(DestPath); }
@@ -1216,7 +1216,7 @@ namespace srcrepair
                                     }
                                     else
                                     {
-                                        CE_Editor.Rows.Add(ImpStr, "");
+                                        CE_Editor.Rows.Add(ImpStr, String.Empty);
                                     }
                                 }
                             }
@@ -1246,7 +1246,7 @@ namespace srcrepair
         private Tuple<string, string> GenUserFriendlyBackupDesc(FileInfo FileName)
         {
             string BufName = Path.GetFileNameWithoutExtension(FileName.Name);
-            string Buf = "";
+            string Buf = String.Empty;
 
             switch (FileName.Extension)
             {
@@ -1711,7 +1711,7 @@ namespace srcrepair
         /// </summary>
         private void CloseEditorConfigs()
         {
-            CFGFileName = "";
+            CFGFileName = String.Empty;
             CE_Editor.Rows.Clear();
         }
 
@@ -3293,7 +3293,7 @@ namespace srcrepair
             // Очистим загруженные приложением файлы...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(App.AppUserDir, Properties.Settings.Default.HUDLocalDir, "*.*"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            CoreLib.OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void MNUExtClnTmpDir_Click(object sender, EventArgs e)
@@ -3301,7 +3301,7 @@ namespace srcrepair
             // Очистим каталоги с временными файлами системы...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(Path.GetTempPath(), "*.*"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", ""), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            CoreLib.OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void MNUShowLog_Click(object sender, EventArgs e)

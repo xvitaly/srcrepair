@@ -233,7 +233,7 @@ namespace srcrepair
                 FullBackUpDirPath = Path.Combine(AUserDir, "backups", Path.GetFileName(SmallAppName));
                 BanlistFileName = Path.Combine(FullGamePath, "voice_ban.dt");
                 AppHUDDir = Path.Combine(AUserDir, Properties.Settings.Default.HUDLocalDir, SmallAppName);
-                CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : "");
+                CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : String.Empty);
                 AppWorkshopDir = Path.Combine(SteamDir, Properties.Resources.SteamAppsFolderName, Properties.Resources.WorkshopFolderName, "content", GameInternalID);
             }
         }

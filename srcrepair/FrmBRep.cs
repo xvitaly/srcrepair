@@ -42,7 +42,7 @@ namespace srcrepair
 
         private string GenerateCaptchaKey(int StrLng)
         {
-            string Result = "";
+            string Result = String.Empty;
             Random Rnd = new Random();
             string SymbolsAvailable = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             for (int i = StrLng; i > 0; i--)
@@ -65,7 +65,7 @@ namespace srcrepair
 
         private string GenerateCategory(int Index)
         {
-            string Result = "";
+            string Result = String.Empty;
             switch (Index)
             {
                 case 1: Result = "Request";
@@ -197,7 +197,7 @@ namespace srcrepair
             {
                 // Описываем всевозможные буферные переменные...
                 byte[] ByteReqC;
-                string BTitle = "", BEmail = "", BText = "";
+                string BTitle = String.Empty, BEmail = String.Empty, BText = String.Empty;
                 int BType = 0;
 
                 // Формируем Web-запрос...

@@ -171,7 +171,7 @@ namespace srcrepair
 
                 if (e.Control && e.KeyCode == Keys.C)
                 {
-                    string SelectedFiles = "";
+                    string SelectedFiles = String.Empty;
                     foreach (ListViewItem LVI in CM_FTable.Items)
                     {
                         if (LVI.Checked)

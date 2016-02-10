@@ -39,7 +39,7 @@ namespace srcrepair
         #endregion
 
         #region IV
-        private string HostsFilePath = "";
+        private string HostsFilePath = String.Empty;
         #endregion
 
         #region IM

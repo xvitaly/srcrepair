@@ -64,7 +64,7 @@ namespace srcrepair
             RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false);
 
             // Создаём строку для хранения результатов...
-            string ResString = "";
+            string ResString = String.Empty;
 
             // Проверяем чтобы ключ реестр существовал и был доступен...
             if (ResKey != null)
@@ -415,7 +415,7 @@ namespace srcrepair
         /// <returns>Полный путь к Hosts...</returns>
         public static string GetHostsFileFullPath()
         {
-            string Result = "";
+            string Result = String.Empty;
             try
             {
                 // Получим путь к файлу hosts (вдруг он переопределён каким-либо зловредом)...
@@ -486,7 +486,7 @@ namespace srcrepair
             {
                 while (RecvStr.IndexOf('"') != -1)
                 {
-                    RecvStr = RecvStr.Replace(@"""", "");
+                    RecvStr = RecvStr.Replace(@"""", String.Empty);
                 }
             }
 
@@ -510,7 +510,7 @@ namespace srcrepair
         /// <returns>Содержимое текстового файла</returns>
         public static string GetTemplateFromResource(string FileName)
         {
-            string Result = "";
+            string Result = String.Empty;
             using (StreamReader Reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream(FileName)))
             {
                 Result = Reader.ReadToEnd();
@@ -631,7 +631,7 @@ namespace srcrepair
             {
                 using (ZipFile ZBkUp = new ZipFile(ArchiveName, Encoding.UTF8))
                 {
-                    ZBkUp.AddFiles(Files, true, "");
+                    ZBkUp.AddFiles(Files, true, String.Empty);
                     ZBkUp.Save();
                 }
             }
