@@ -1940,11 +1940,6 @@ namespace srcrepair
             // Начинаем платформо-зависимые процедуры...
             ChangePrvControlState(CoreLib.IsCurrentUserAdmin());
 
-            // При работе отладочной версии запишем в лог путь к найденному Steam...
-            #if DEBUG
-            CoreLib.WriteStringToLog(String.Format(CoreLib.GetLocalizedString("AppSteamLocLog"), App.FullSteamPath));
-            #endif
-
             // Сохраним последний путь к Steam в файл конфигурации...
             Properties.Settings.Default.LastSteamPath = App.FullSteamPath;
 
