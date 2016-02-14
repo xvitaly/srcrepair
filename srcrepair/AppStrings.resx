@@ -591,9 +591,6 @@
   <data name="AppRestrSymbLog" xml:space="preserve">
     <value>NonASCII characters detected. Path: {0}.</value>
   </data>
-  <data name="AppSteamLocLog" xml:space="preserve">
-    <value>Steam found in: {0}.</value>
-  </data>
   <data name="AppFailedToGetData" xml:space="preserve">
     <value>Warning! Failed to get data from game database. Please try again or select another game!</value>
   </data>
