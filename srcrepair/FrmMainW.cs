@@ -1943,11 +1943,7 @@ namespace srcrepair
             Properties.Settings.Default.LastSteamPath = App.FullSteamPath;
 
             // Вставляем информацию о версии в заголовок формы...
-            #if DEBUG
-            Text = String.Format(Text, Properties.Resources.AppName, Properties.Resources.PlatformFriendlyName, App.AppVersionInfo + " (debug)", CoreLib.GetSystemArch());
-            #else
             Text = String.Format(Text, Properties.Resources.AppName, Properties.Resources.PlatformFriendlyName, App.AppVersionInfo, CoreLib.GetSystemArch());
-            #endif
 
             // Укажем статус Безопасной очистки...
             CheckSafeClnStatus();
