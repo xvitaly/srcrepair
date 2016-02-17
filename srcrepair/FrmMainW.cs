@@ -1385,7 +1385,6 @@ namespace srcrepair
             HD_GB_Pbx.Image = null;
 
             // Включаем заблокированные ранее контролы...
-            MNUFPSWizard.Enabled = true;
             MNUInstaller.Enabled = true;
         }
 
@@ -2580,21 +2579,6 @@ namespace srcrepair
         {
             // Завершаем работу программы...
             Environment.Exit(0);
-        }
-
-        private void MNUFPSWizard_Click(object sender, EventArgs e)
-        {
-            // Очистим Редактор конфигов...
-            CloseEditorConfigs();
-            
-            // Запускаем форму мастера FPS-конфигов...
-            using (frmFPGen FPFrm = new frmFPGen(new CoreLib.CFGEdDelegate(AddRowToTable)))
-            {
-                FPFrm.ShowDialog();
-            }
-
-            // Переключаемся на вкладку Редактор конфигов...
-            MainTabControl.SelectedIndex = 1;
         }
 
         private void MNUAbout_Click(object sender, EventArgs e)

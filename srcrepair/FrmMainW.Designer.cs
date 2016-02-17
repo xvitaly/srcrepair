@@ -200,7 +200,6 @@
             this.MNUShowEdHint = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUAppOptions = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep1 = new System.Windows.Forms.ToolStripSeparator();
-            this.MNUFPSWizard = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUReportBuilder = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUInstaller = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUHEd = new System.Windows.Forms.ToolStripMenuItem();
@@ -1697,7 +1696,6 @@
             this.MNUShowEdHint,
             this.MNUAppOptions,
             this.MNUSep1,
-            this.MNUFPSWizard,
             this.MNUReportBuilder,
             this.MNUInstaller,
             this.MNUHEd,
@@ -1727,13 +1725,6 @@
             // 
             this.MNUSep1.Name = "MNUSep1";
             resources.ApplyResources(this.MNUSep1, "MNUSep1");
-            // 
-            // MNUFPSWizard
-            // 
-            resources.ApplyResources(this.MNUFPSWizard, "MNUFPSWizard");
-            this.MNUFPSWizard.Image = global::srcrepair.Properties.Resources.Wizard;
-            this.MNUFPSWizard.Name = "MNUFPSWizard";
-            this.MNUFPSWizard.Click += new System.EventHandler(this.MNUFPSWizard_Click);
             // 
             // MNUReportBuilder
             // 
@@ -2069,7 +2060,6 @@
         private System.Windows.Forms.ToolStripMenuItem ToolsMNU;
         private System.Windows.Forms.ToolStripMenuItem MNUShowEdHint;
         private System.Windows.Forms.ToolStripSeparator MNUSep1;
-        private System.Windows.Forms.ToolStripMenuItem MNUFPSWizard;
         private System.Windows.Forms.ToolStripMenuItem MNUReportBuilder;
         private System.Windows.Forms.ToolStripMenuItem MNUInstaller;
         private System.Windows.Forms.ToolStripSeparator MNUSep2;
