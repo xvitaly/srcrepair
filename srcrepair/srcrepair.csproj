@@ -156,12 +156,6 @@
     <Compile Include="FrmInstaller.Designer.cs">
       <DependentUpon>FrmInstaller.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmFPGen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmFPGen.Designer.cs">
-      <DependentUpon>FrmFPGen.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmCleaner.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,12 +273,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInstaller.ru.resx">
       <DependentUpon>FrmInstaller.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmFPGen.resx">
-      <DependentUpon>FrmFPGen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmFPGen.ru.resx">
-      <DependentUpon>FrmFPGen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCleaner.resx">
       <DependentUpon>FrmCleaner.cs</DependentUpon>
