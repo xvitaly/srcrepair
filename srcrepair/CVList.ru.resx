@@ -3531,4 +3531,10 @@
   <data name="tf_scoreboard_ping_as_text" xml:space="preserve">
     <value>Включает / отключает отображение пинга в текстовом виде.</value>
   </data>
+  <data name="weapon_auto_cleanup_time" xml:space="preserve">
+    <value>Время в секундах, по истечении которого брошенное оружие будет удалено с карты (если рядом нет игроков).</value>
+  </data>
+  <data name="weapon_max_before_cleanup" xml:space="preserve">
+    <value>Задаёт максимальное количество брошенных предметов на карте. При исчерпании лимита, более старые начнут удаляться с карты.</value>
+  </data>
 </root>
