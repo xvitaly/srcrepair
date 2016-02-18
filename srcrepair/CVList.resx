@@ -2175,4 +2175,10 @@
   <data name="tf_scoreboard_ping_as_text" xml:space="preserve">
     <value>Show ping as text on scoreboard.</value>
   </data>
+  <data name="weapon_auto_cleanup_time" xml:space="preserve">
+    <value>If set to non-zero, weapons will delete themselves after the specified time (in seconds) if no players are near.</value>
+  </data>
+  <data name="weapon_max_before_cleanup" xml:space="preserve">
+    <value>If set to non-zero, will remove the oldest dropped weapon to maintain the specified number of dropped weapons in the world.</value>
+  </data>
 </root>
