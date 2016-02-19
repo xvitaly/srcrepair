@@ -2217,9 +2217,9 @@ namespace srcrepair
                     if (!SelGame.IsUsingVideoFile)
                     {
                         // Это GCF-приложение, будем писать настройки в реестр...
-                        // Создаём резервную копию...
                         if (Properties.Settings.Default.SafeCleanup)
                         {
+                            // Создаём резервную копию...
                             try { CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), "Game_AutoBackUp", SelGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                         }
 
