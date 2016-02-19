@@ -2943,6 +2943,7 @@ namespace srcrepair
 
         private void BU_LVTable_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
         {
+            // Запрещаем изменение размеров столбцов таблицы...
             e.NewWidth = BU_LVTable.Columns[e.ColumnIndex].Width;
             e.Cancel = true;
         }
