@@ -2778,6 +2778,7 @@ namespace srcrepair
 
         private void MainTabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Пользователь переключил вкладку. Обновляем содержимое строки статуса...
             UpdateStatusBar(((TabControl)sender).SelectedIndex);
         }
 
