@@ -2182,15 +2182,7 @@ namespace srcrepair
                     GT_Filtering.SelectedIndex = 1; // трилинейная фильтрация текстур
                     GT_VSync.SelectedIndex = 0; // вертикальная синхронизация выключена
                     GT_MotionBlur.SelectedIndex = 0; // размытие движения выключено
-                    // Спросим у пользователя о режиме DirectX...
-                    if (MessageBox.Show(CoreLib.GetLocalizedString("GT_DxLevelMsg"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        GT_DxMode.SelectedIndex = 0; // режим DirecX 8.0
-                    }
-                    else
-                    {
-                        GT_DxMode.SelectedIndex = 3; // режим DirecX 9.0c
-                    }
+                    GT_DxMode.SelectedIndex = MessageBox.Show(CoreLib.GetLocalizedString("GT_DxLevelMsg"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes ? 0 : 3; // Спросим у пользователя о режиме DirectX...
                     GT_HDR.SelectedIndex = 0; // эффекты HDR выключены
                 }
                 else
