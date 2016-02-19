@@ -2698,6 +2698,7 @@ namespace srcrepair
 
         private void BUT_CrBkupReg_ButtonClick(object sender, EventArgs e)
         {
+            // Отображаем выпадающее меню...
             BUT_CrBkupReg.ShowDropDown();
         }
 
