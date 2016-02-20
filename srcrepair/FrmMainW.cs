@@ -3130,6 +3130,9 @@ namespace srcrepair
             
             // Удалим пользовательские конфиги...
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cfg", "*.cfg"));
+
+            // Удаляем графические настройки NCF-игры...
+            if (SelGame.IsUsingVideoFile) { CleanDirs.AddRange(SelGame.VideoCfgFiles); }
             CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CacheChkReq"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
