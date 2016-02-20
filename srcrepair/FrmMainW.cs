@@ -3223,11 +3223,13 @@ namespace srcrepair
                 }
                 else
                 {
+                    // Выбран устаревший HUD. Выведем сообщение об этом...
                     MessageBox.Show(CoreLib.GetLocalizedString("HD_Outdated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
+                // База HUD устарела. Требуется обновление. Выведем сообщение...
                 MessageBox.Show(CoreLib.GetLocalizedString("HD_DbOutdated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
