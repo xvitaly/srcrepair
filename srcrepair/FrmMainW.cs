@@ -3129,7 +3129,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "config", "html", "*.*"));
             
             // Удалим пользовательские конфиги...
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cfg", "*.*"));
+            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cfg", "*.cfg"));
             CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CacheChkReq"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
