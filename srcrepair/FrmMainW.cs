@@ -3133,6 +3133,8 @@ namespace srcrepair
 
             // Удаляем графические настройки NCF-игры...
             if (SelGame.IsUsingVideoFile) { CleanDirs.AddRange(SelGame.VideoCfgFiles); }
+
+            // Запускаем процесс очистки...
             CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CacheChkReq"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
