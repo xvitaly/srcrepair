@@ -787,6 +787,7 @@ namespace srcrepair
         /// Удаляет все файлы из переданного в качестве параметра массива
         /// </summary>
         /// <param name="Files">Массив с именами файлов для удаления</param>
+        [Obsolete("Outdated. Need to be replaced by RemoveDirectoryEx.")]
         public static void RemoveFiles(List<String> Files)
         {
             try
