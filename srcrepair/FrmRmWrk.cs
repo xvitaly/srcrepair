@@ -41,17 +41,38 @@ namespace srcrepair
             List<String> Result = new List<String>();
 
             // Заполняем наш массив...
-            foreach (string DirMs in CleanDirs)
+            foreach (string CleanCnd in CleanDirs)
             {
-                if (Directory.Exists(DirMs))
+                // Проверяем существование каталога...
+                if (Directory.Exists(CleanCnd))
                 {
-                    DirectoryInfo DInfo = new DirectoryInfo(DirMs);  FileInfo[] DirList = DInfo.GetFiles("*.*");  foreach (FileInfo DItem in DirList) { Result.Add(DItem.FullName); } List<String> SubDirs = new List<string>(); foreach (DirectoryInfo Dir in DInfo.GetDirectories()) { SubDirs.Add(Path.Combine(Dir.FullName)); } if (SubDirs.Count > 0) { Result.AddRange(DetectFilesForCleanup(SubDirs)); }
+                    // Получаем содержимое каталога и добавляем их в очередь для удаления...
+                    DirectoryInfo DInfo = new DirectoryInfo(CleanCnd);
+                    FileInfo[] DirList = DInfo.GetFiles("*.*");
+                    foreach (FileInfo DItem in DirList)
+                    {
+                        Result.Add(DItem.FullName);
+                    }
+
+                    // Получаем список вложенных каталогов...
+                    List<String> SubDirs = new List<string>();
+                    foreach (DirectoryInfo Dir in DInfo.GetDirectories())
+                    {
+                        SubDirs.Add(Path.Combine(Dir.FullName));
+                    }
+
+                    // Обходим полученные подкаталоги рекурсивно...
+                    if (SubDirs.Count > 0)
+                    {
+                        Result.AddRange(DetectFilesForCleanup(SubDirs));
+                    }
                 }
                 else
                 {
-                    if (File.Exists(DirMs))
+                    // Если это не каталог, значит может быть обычным файлом. Проверим...
+                    if (File.Exists(CleanCnd))
                     {
-                        Result.Add(DirMs);
+                        Result.Add(CleanCnd);
                     }
                 }
             }
