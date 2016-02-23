@@ -2513,7 +2513,7 @@ namespace srcrepair
                     }
 
                     // Удаляем файлы...
-                    CoreLib.RemoveDirectoryEx(SelGame.VideoCfgFiles);
+                    CoreLib.RemoveFileDirectoryEx(SelGame.VideoCfgFiles);
 
                     // Выводим сообщение...
                     MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -3213,7 +3213,7 @@ namespace srcrepair
                         if (SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir))
                         {
                             // Удаляем уже установленные файлы HUD...
-                            CoreLib.RemoveDirectoryEx(CoreLib.SingleToArray(Path.Combine(SelGame.CustomInstallDir, SelHUD.InstallDir)));
+                            CoreLib.RemoveFileDirectoryEx(CoreLib.SingleToArray(Path.Combine(SelGame.CustomInstallDir, SelHUD.InstallDir)));
                         }
 
                         // Начинаем загрузку если файл не существует...
@@ -3248,7 +3248,7 @@ namespace srcrepair
                 string HUDPath = Path.Combine(SelGame.CustomInstallDir, SelHUD.InstallDir);
 
                 // Воспользуемся модулем быстрой очистки для удаления выбранного HUD...
-                CoreLib.RemoveDirectoryEx(CoreLib.SingleToArray(HUDPath));
+                CoreLib.RemoveFileDirectoryEx(CoreLib.SingleToArray(HUDPath));
 
                 // Проверяем установлен ли выбранный HUD...
                 bool IsInstalled = SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir);
