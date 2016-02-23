@@ -2513,7 +2513,7 @@ namespace srcrepair
                     }
 
                     // Удаляем файлы...
-                    CoreLib.RemoveFiles(SelGame.VideoCfgFiles);
+                    CoreLib.RemoveDirectoryEx(SelGame.VideoCfgFiles);
 
                     // Выводим сообщение...
                     MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
