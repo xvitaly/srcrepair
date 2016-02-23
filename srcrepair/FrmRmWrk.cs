@@ -47,6 +47,13 @@ namespace srcrepair
                 {
                     DirectoryInfo DInfo = new DirectoryInfo(DirMs);  FileInfo[] DirList = DInfo.GetFiles("*.*");  foreach (FileInfo DItem in DirList) { Result.Add(DItem.FullName); } List<String> SubDirs = new List<string>(); foreach (DirectoryInfo Dir in DInfo.GetDirectories()) { SubDirs.Add(Path.Combine(Dir.FullName)); } if (SubDirs.Count > 0) { Result.AddRange(DetectFilesForCleanup(SubDirs)); }
                 }
+                else
+                {
+                    if (File.Exists(DirMs))
+                    {
+                        Result.Add(DirMs);
+                    }
+                }
             }
 
             // Выводим результат...
