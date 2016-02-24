@@ -42,19 +42,6 @@ namespace srcrepair
     public static class CoreLib
     {
         /// <summary>
-        /// Эта функция позволяет получить локализованную строку по её ID
-        /// согласно текущим региональным настройкам Windows. Рекомендуется
-        /// применять везде, чтобы не нарушать ООП.
-        /// </summary>
-        /// <param name="MsgId">ID сообщения в ресурсе</param>
-        /// <returns>Локализованная строка</returns>
-        public static string GetLocalizedString(string MsgId)
-        {
-            ResourceManager RMLocal = new ResourceManager("srcrepair.AppStrings", typeof(frmMainW).Assembly);
-            return RMLocal.GetString(MsgId);
-        }
-
-        /// <summary>
         /// Получает из реестра и возвращает путь к установленному клиенту Steam.
         /// </summary>
         /// <returns>Путь к клиенту Steam</returns>
