@@ -234,13 +234,13 @@ namespace srcrepair
             const string Template = "{0} {1}";
 
             // Проверяем на размер в байтах...
-            if ((InpNumber >= 0) && (InpNumber < B)) { return String.Format(Template, InpNumber, GetLocalizedString("AppSizeBytes")); }
+            if ((InpNumber >= 0) && (InpNumber < B)) { return String.Format(Template, InpNumber, AppStrings.AppSizeBytes); }
             // ...килобайтах...
-            else if ((InpNumber >= B) && (InpNumber < KB)) { return String.Format(Template, Math.Round((float)InpNumber / B, 2), GetLocalizedString("AppSizeKilobytes")); }
+            else if ((InpNumber >= B) && (InpNumber < KB)) { return String.Format(Template, Math.Round((float)InpNumber / B, 2), AppStrings.AppSizeKilobytes); }
             // ...мегабайтах...
-            else if ((InpNumber >= KB) && (InpNumber < MB)) { return String.Format(Template, Math.Round((float)InpNumber / KB, 2), GetLocalizedString("AppSizeMegabytes")); }
+            else if ((InpNumber >= KB) && (InpNumber < MB)) { return String.Format(Template, Math.Round((float)InpNumber / KB, 2), AppStrings.AppSizeMegabytes); }
             // ...гигабайтах.
-            else if ((InpNumber >= MB) && (InpNumber < GB)) { return String.Format(Template, Math.Round((float)InpNumber / MB, 2), GetLocalizedString("AppSizeGigabytes")); }
+            else if ((InpNumber >= MB) && (InpNumber < GB)) { return String.Format(Template, Math.Round((float)InpNumber / MB, 2), AppStrings.AppSizeGigabytes); }
             
             // Если размер всё-таки больше, выведем просто строку...
             return InpNumber.ToString();
@@ -727,7 +727,7 @@ namespace srcrepair
         {
             try
             {
-                if (!CoreLib.IsProcessRunning(Path.GetFileNameWithoutExtension(CheckBin))) { using (frmCleaner FCl = new frmCleaner(Paths, BackUpDir, LText, ResultMsg, ReadOnly, NoAuto, Recursive, ForceBackUp)) { FCl.ShowDialog(); } } else { MessageBox.Show(String.Format(CoreLib.GetLocalizedString("PS_AppRunning"), CheckBin), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                if (!CoreLib.IsProcessRunning(Path.GetFileNameWithoutExtension(CheckBin))) { using (frmCleaner FCl = new frmCleaner(Paths, BackUpDir, LText, ResultMsg, ReadOnly, NoAuto, Recursive, ForceBackUp)) { FCl.ShowDialog(); } } else { MessageBox.Show(String.Format(AppStrings.PS_AppRunning, CheckBin), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
