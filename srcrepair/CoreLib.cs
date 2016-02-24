@@ -775,12 +775,12 @@ namespace srcrepair
         {
             foreach (string Config in Configs)
             {
-                if (!File.Exists(Config))
+                if (File.Exists(Config))
                 {
-                    return false;
+                    return true;
                 }
             }
-            return true;
+            return false;
         }
 
         /// <summary>
