@@ -116,23 +116,23 @@ namespace srcrepair
                 HEd_St_Wrn.Text = HostsFilePath;
 
                 // Считаем содержимое...
-                try { ReadHostsToTable(HostsFilePath); } catch (Exception Ex) { CoreLib.HandleExceptionEx(String.Format(CoreLib.GetLocalizedString("AHE_ExceptionDetected"), HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+                try { ReadHostsToTable(HostsFilePath); } catch (Exception Ex) { CoreLib.HandleExceptionEx(String.Format(AppStrings.AHE_ExceptionDetected, HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
             }
             else
             {
-                MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AHE_NoFileDetected"), HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(String.Format(AppStrings.AHE_NoFileDetected, HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Close();
             }
         }
 
         private void HEd_T_Refresh_Click(object sender, EventArgs e)
         {
-            try { ReadHostsToTable(HostsFilePath); } catch (Exception Ex) { CoreLib.HandleExceptionEx(String.Format(CoreLib.GetLocalizedString("AHE_ExceptionDetected"), HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+            try { ReadHostsToTable(HostsFilePath); } catch (Exception Ex) { CoreLib.HandleExceptionEx(String.Format(AppStrings.AHE_ExceptionDetected, HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
         }
 
         private void HEd_T_Save_Click(object sender, EventArgs e)
         {
-            if (CoreLib.IsCurrentUserAdmin()) { try { WriteTableToHosts(HostsFilePath); MessageBox.Show(CoreLib.GetLocalizedString("AHE_Saved"), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch (Exception Ex) { CoreLib.HandleExceptionEx(String.Format(CoreLib.GetLocalizedString("AHE_SaveException"), HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); } } else { MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AHE_NoAdminRights"), HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            if (CoreLib.IsCurrentUserAdmin()) { try { WriteTableToHosts(HostsFilePath); MessageBox.Show(AppStrings.AHE_Saved, PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch (Exception Ex) { CoreLib.HandleExceptionEx(String.Format(AppStrings.AHE_SaveException, HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); } } else { MessageBox.Show(String.Format(AppStrings.AHE_NoAdminRights, HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void HEd_M_Quit_Click(object sender, EventArgs e)
@@ -142,7 +142,7 @@ namespace srcrepair
 
         private void HEd_M_RestDef_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(CoreLib.GetLocalizedString("AHE_RestDef"), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(AppStrings.AHE_RestDef, PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 HEd_Table.Rows.Clear();
                 HEd_Table.Rows.Add("127.0.0.1", "localhost");
@@ -177,7 +177,7 @@ namespace srcrepair
 
         private void HEd_St_Wrn_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AHE_HMessg"), HostsFilePath), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(AppStrings.AHE_HMessg, HostsFilePath), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 CoreLib.OpenExplorer(HostsFilePath);
             }

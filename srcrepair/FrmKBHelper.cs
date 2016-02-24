@@ -47,17 +47,17 @@ namespace srcrepair
         {
             // Отключаем левую клавишу WIN...
             // 00 00 00 00 00 00 00 00 02 00 00 00 00 00 5B E0 00 00 00 00
-            if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("KB_ExQuestion"), ((Button)sender).Text.ToLower()), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(AppStrings.KB_ExQuestion, ((Button)sender).Text.ToLower()), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
                     WriteKBS(new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 91, 224, 0, 0, 0, 0 });
-                    MessageBox.Show(CoreLib.GetLocalizedString("KB_ExSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.KB_ExSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("KB_ExException"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(AppStrings.KB_ExException, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -66,17 +66,17 @@ namespace srcrepair
         {
             // Отключаем обе клавиши WIN...
             // 00 00 00 00 00 00 00 00 03 00 00 00 00 00 5B E0 00 00 5C E0 00 00 00 00
-            if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("KB_ExQuestion"), ((Button)sender).Text.ToLower()), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(AppStrings.KB_ExQuestion, ((Button)sender).Text.ToLower()), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
                     WriteKBS(new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 91, 224, 0, 0, 92, 224, 0, 0, 0, 0 });
-                    MessageBox.Show(CoreLib.GetLocalizedString("KB_ExSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.KB_ExSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("KB_ExException"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(AppStrings.KB_ExException, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -85,17 +85,17 @@ namespace srcrepair
         {
             // Отключаем правую клавишу WIN и MENU...
             // 00 00 00 00 00 00 00 00 03 00 00 00 00 00 5C E0 00 00 5D E0 00 00 00 00
-            if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("KB_ExQuestion"), ((Button)sender).Text.ToLower()), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(AppStrings.KB_ExQuestion, ((Button)sender).Text.ToLower()), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
                     WriteKBS(new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 91, 224, 0, 0, 93, 224, 0, 0, 0, 0 });
-                    MessageBox.Show(CoreLib.GetLocalizedString("KB_ExSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.KB_ExSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("KB_ExException"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(AppStrings.KB_ExException, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -104,17 +104,17 @@ namespace srcrepair
         {
             // Отключаем обе WIN и MENU...
             // 00 00 00 00 00 00 00 00 04 00 00 00 00 00 5B E0 00 00 5C E0 00 00 5D E0 00 00 00 00
-            if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("KB_ExQuestion"), ((Button)sender).Text.ToLower()), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(AppStrings.KB_ExQuestion, ((Button)sender).Text.ToLower()), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
                     WriteKBS(new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 92, 224, 0, 0, 93, 224, 0, 0, 0, 0 });
-                    MessageBox.Show(CoreLib.GetLocalizedString("KB_ExSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.KB_ExSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("KB_ExException"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(AppStrings.KB_ExException, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -122,17 +122,17 @@ namespace srcrepair
         private void Dis_Restore_Click(object sender, EventArgs e)
         {
             // Восстанавливаем настройки по умолчанию...
-            if (MessageBox.Show(CoreLib.GetLocalizedString("KB_ExRestore"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(AppStrings.KB_ExRestore, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
                     DeleteKBS("Scancode Map");
-                    MessageBox.Show(CoreLib.GetLocalizedString("KB_ExSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.KB_ExSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("KB_ExException"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(AppStrings.KB_ExException, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }

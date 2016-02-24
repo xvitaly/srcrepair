@@ -124,14 +124,14 @@ namespace srcrepair
                         }
 
                         // Выводим сообщение об успешном создании отчёта...
-                        MessageBox.Show(String.Format(CoreLib.GetLocalizedString("RPB_ComprGen"), Path.GetFileName(ArchName)), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(String.Format(AppStrings.RPB_ComprGen, Path.GetFileName(ArchName)), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         // Открываем каталог с отчётами в оболочке и выделяем созданный файл...
                         if (File.Exists(ArchName)) { CoreLib.OpenExplorer(ArchName); }
                     }
                     catch (Exception Ex)
                     {
-                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_ArchFailed"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                        CoreLib.HandleExceptionEx(AppStrings.PS_ArchFailed, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                     }
                 }
 
@@ -152,14 +152,14 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 // Произошло исключение...
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("RPB_GenException"), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                CoreLib.HandleExceptionEx(AppStrings.RPB_GenException, PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
             }
         }
 
         private void BwGen_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             // Меняем текст на кнопке...
-            GenerateNow.Text = CoreLib.GetLocalizedString("RPB_CloseCpt");
+            GenerateNow.Text = AppStrings.RPB_CloseCpt;
             
             // Снова активируем ранее отключённые контролы...
             GenerateNow.Enabled = true;
@@ -175,7 +175,7 @@ namespace srcrepair
             if (!IsCompleted)
             {
                 // Отключим контролы...
-                GenerateNow.Text = CoreLib.GetLocalizedString("RPB_CptWrk");
+                GenerateNow.Text = AppStrings.RPB_CptWrk;
                 GenerateNow.Enabled = false;
                 ControlBox = false;
 

@@ -116,7 +116,7 @@ namespace srcrepair
                         Invoke((MethodInvoker)delegate()
                         {
                             UpdAppImg.Image = Properties.Resources.upd_av;
-                            UpdAppStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_AppUpdateAvail"), NewVersion);
+                            UpdAppStatus.Text = String.Format(AppStrings.UPD_AppUpdateAvail, NewVersion);
                         });
                         AppAvailable = true;
                     }
@@ -126,7 +126,7 @@ namespace srcrepair
                         Invoke((MethodInvoker)delegate()
                         {
                             UpdAppImg.Image = Properties.Resources.upd_nx;
-                            UpdAppStatus.Text = CoreLib.GetLocalizedString("UPD_AppNoUpdates");
+                            UpdAppStatus.Text = AppStrings.UPD_AppNoUpdates;
                         });
                         AppAvailable = false; UpdateTimeSetApp();
                     }
@@ -137,7 +137,7 @@ namespace srcrepair
                     Invoke((MethodInvoker)delegate()
                     {
                         UpdAppImg.Image = Properties.Resources.upd_err;
-                        UpdAppStatus.Text = CoreLib.GetLocalizedString("UPD_AppCheckFailure");
+                        UpdAppStatus.Text = AppStrings.UPD_AppCheckFailure;
                     });
 
                     // Запишем в журнал...
@@ -184,7 +184,7 @@ namespace srcrepair
                         Invoke((MethodInvoker)delegate()
                         {
                             UpdDBImg.Image = Properties.Resources.upd_av;
-                            UpdDBStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_DbUpdateAvail"), DBHashNew.Substring(0, 7));
+                            UpdDBStatus.Text = String.Format(AppStrings.UPD_DbUpdateAvail, DBHashNew.Substring(0, 7));
                         });
                         DbAvailable = true;
                     }
@@ -194,7 +194,7 @@ namespace srcrepair
                         Invoke((MethodInvoker)delegate()
                         {
                             UpdDBImg.Image = Properties.Resources.upd_nx;
-                            UpdDBStatus.Text = CoreLib.GetLocalizedString("UPD_DbNoUpdates");
+                            UpdDBStatus.Text = AppStrings.UPD_DbNoUpdates;
                         });
                         DbAvailable = false;
                     }
@@ -205,7 +205,7 @@ namespace srcrepair
                     Invoke((MethodInvoker)delegate()
                     {
                         UpdDBImg.Image = Properties.Resources.upd_err;
-                        UpdDBStatus.Text = CoreLib.GetLocalizedString("UPD_DbCheckFailure");
+                        UpdDBStatus.Text = AppStrings.UPD_DbCheckFailure;
                     });
 
                     // Запишем в журнал...
@@ -252,7 +252,7 @@ namespace srcrepair
                         Invoke((MethodInvoker)delegate()
                         {
                             UpdHUDDbImg.Image = Properties.Resources.upd_av;
-                            UpdHUDStatus.Text = String.Format(CoreLib.GetLocalizedString("UPD_HUDUpdateAvail"), HUDHashNew.Substring(0, 7));
+                            UpdHUDStatus.Text = String.Format(AppStrings.UPD_HUDUpdateAvail, HUDHashNew.Substring(0, 7));
                         });
                         HudAvailable = true;
                     }
@@ -262,7 +262,7 @@ namespace srcrepair
                         Invoke((MethodInvoker)delegate()
                         {
                             UpdHUDDbImg.Image = Properties.Resources.upd_nx;
-                            UpdHUDStatus.Text = CoreLib.GetLocalizedString("UPD_HUDNoUpdates");
+                            UpdHUDStatus.Text = AppStrings.UPD_HUDNoUpdates;
                         });
                         HudAvailable = false; UpdateTimeSetHUD();
                     }
@@ -273,7 +273,7 @@ namespace srcrepair
                     Invoke((MethodInvoker)delegate()
                     {
                         UpdHUDDbImg.Image = Properties.Resources.upd_err;
-                        UpdHUDStatus.Text = CoreLib.GetLocalizedString("UPD_HUDCheckFailure");
+                        UpdHUDStatus.Text = AppStrings.UPD_HUDCheckFailure;
                     });
 
                     // Запишем в журнал...
@@ -304,17 +304,17 @@ namespace srcrepair
                     {
                         UpdateFileName = GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Settings.Default.GameListFile));
                         CoreLib.DownloadFileEx(Properties.Resources.UpdateGameDBFile, UpdateFileName);
-                        if (File.Exists(UpdateFileName)) { MessageBox.Show(CoreLib.GetLocalizedString("UPD_GamL_Updated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                        if (File.Exists(UpdateFileName)) { MessageBox.Show(AppStrings.UPD_GamL_Updated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
                         Close();
                     }
                     else
                     {
-                        MessageBox.Show(CoreLib.GetLocalizedString("UPD_NoWritePermissions"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(AppStrings.UPD_NoWritePermissions, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_GamL_Latest"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.UPD_GamL_Latest, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -330,19 +330,19 @@ namespace srcrepair
                     if (File.Exists(UpdateFileName))
                     {
                         UpdateTimeSetApp();
-                        MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateSuccessful"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        try { Process.Start(UpdateFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
+                        MessageBox.Show(AppStrings.UPD_UpdateSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        try { Process.Start(UpdateFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
                         Environment.Exit(9);
                     }
                     else
                     {
-                        MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         Close();
                     }
                 }
                 else
                 {
-                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_LatestInstalled"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.UPD_LatestInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -357,17 +357,17 @@ namespace srcrepair
                     {
                         UpdateFileName = GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Settings.Default.HUDDbFile));
                         CoreLib.DownloadFileEx(Properties.Resources.UpdateHUDDBFile, UpdateFileName);
-                        if (File.Exists(UpdateFileName)) { MessageBox.Show(CoreLib.GetLocalizedString("UPD_HUDDb_Updated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); UpdateTimeSetHUD(); } else { MessageBox.Show(CoreLib.GetLocalizedString("UPD_UpdateFailure"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                        if (File.Exists(UpdateFileName)) { MessageBox.Show(AppStrings.UPD_HUDDb_Updated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); UpdateTimeSetHUD(); } else { MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
                         Close();
                     }
                     else
                     {
-                        MessageBox.Show(CoreLib.GetLocalizedString("UPD_NoWritePermissions"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(AppStrings.UPD_NoWritePermissions, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show(CoreLib.GetLocalizedString("UPD_HUDDb_Latest"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.UPD_HUDDb_Latest, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }

@@ -161,7 +161,7 @@ namespace srcrepair
                 if (BR_CaptCheck.Text == CaptchaKey)
                 {
                     // Изменяем текст кнопки и отключаем её...
-                    BR_Send.Text = CoreLib.GetLocalizedString("BR_SendButtonAlt");
+                    BR_Send.Text = AppStrings.BR_SendButtonAlt;
 
                     // Отключаем часть контролов...
                     BR_Title.ReadOnly = true;
@@ -175,13 +175,13 @@ namespace srcrepair
                 else
                 {
                     // Выводим сообщение об ошибке при заполнении капчи...
-                    MessageBox.Show(CoreLib.GetLocalizedString("BR_CaptErr"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.BR_CaptErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
                 // Выводим сообщение об ошибке...
-                MessageBox.Show(CoreLib.GetLocalizedString("BR_MsgFieldsEmpty"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.BR_MsgFieldsEmpty, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -249,7 +249,7 @@ namespace srcrepair
         private void BR_WrkMf_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             // Выводим сообщение...
-            if (e.Error == null) { if (String.Compare(BResult, "OK") != 0) { MessageBox.Show(CoreLib.GetLocalizedString("BR_SendCompleted"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); if (Properties.Settings.Default.OpenBtRep) { CoreLib.OpenWebPage(Properties.Resources.AppBtView); } } else { MessageBox.Show(CoreLib.GetLocalizedString("BR_SendError"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); } } else { CoreLib.WriteStringToLog(e.Error.Message); }
+            if (e.Error == null) { if (String.Compare(BResult, "OK") != 0) { MessageBox.Show(AppStrings.BR_SendCompleted, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); if (Properties.Settings.Default.OpenBtRep) { CoreLib.OpenWebPage(Properties.Resources.AppBtView); } } else { MessageBox.Show(AppStrings.BR_SendError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); } } else { CoreLib.WriteStringToLog(e.Error.Message); }
 
             // Закрываем форму...
             Close();

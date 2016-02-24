@@ -72,7 +72,7 @@ namespace srcrepair
             Properties.Settings.Default.Save();
 
             // Показываем сообщение...
-            MessageBox.Show(CoreLib.GetLocalizedString("Opts_Saved"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(AppStrings.Opts_Saved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             
             // Закрываем форму...
             Close();

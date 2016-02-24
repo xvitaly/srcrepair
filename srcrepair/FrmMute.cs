@@ -108,7 +108,7 @@ namespace srcrepair
 
         private void UpdateTable(object sender, EventArgs e)
         {
-            try { MM_Table.Rows.Clear(); ReadFileToTable(Banlist); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("MM_ExceptionDetected"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+            try { MM_Table.Rows.Clear(); ReadFileToTable(Banlist); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.MM_ExceptionDetected, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
         }
 
         private void WriteTable(object sender, EventArgs e)
@@ -116,14 +116,14 @@ namespace srcrepair
             try
             {
                 if (Properties.Settings.Default.SafeCleanup) { if (File.Exists(Banlist)) { CoreLib.CreateConfigBackUp(CoreLib.SingleToArray(Banlist), BackUpDir, Properties.Resources.BU_PrefixVChat); } }
-                WriteTableToFile(Banlist); MessageBox.Show(CoreLib.GetLocalizedString("MM_SavedOK"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                WriteTableToFile(Banlist); MessageBox.Show(AppStrings.MM_SavedOK, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("MM_SaveException"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+            catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.MM_SaveException, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
         }
 
         private void AboutDlg(object sender, EventArgs e)
         {
-            MessageBox.Show(String.Format(CoreLib.GetLocalizedString("MM_AboutDlg"), Text, CoreLib.GetAppCompany()), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(String.Format(AppStrings.MM_AboutDlg, Text, CoreLib.GetAppCompany()), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void FrmMute_Load(object sender, EventArgs e)
@@ -209,7 +209,7 @@ namespace srcrepair
                     {
                         if (MM_Table.SelectedCells.Count == 1)
                         {
-                            MessageBox.Show(CoreLib.GetLocalizedString("MM_ConvRest"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show(AppStrings.MM_ConvRest, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                 }

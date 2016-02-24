@@ -39,7 +39,7 @@ namespace srcrepair
 
         private void LoadLog(string FileName)
         {
-            try { LoadTextFile(FileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("LV_LoadFailed"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+            try { LoadTextFile(FileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.LV_LoadFailed, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
         }
 
         private void frmLogView_Load(object sender, EventArgs e)
@@ -72,7 +72,7 @@ namespace srcrepair
             LV_LogArea.Clear();
 
             // Очистим файл журнала...
-            try { if (File.Exists(LogFileName)) { File.Delete(LogFileName); CoreLib.CreateFile(LogFileName); } } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("LV_ClearEx"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+            try { if (File.Exists(LogFileName)) { File.Delete(LogFileName); CoreLib.CreateFile(LogFileName); } } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.LV_ClearEx, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
         }
     }
 }
