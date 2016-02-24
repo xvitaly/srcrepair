@@ -969,7 +969,7 @@ namespace srcrepair
             }
             else
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("GT_RegOpenErr"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.GT_RegOpenErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -1178,7 +1178,7 @@ namespace srcrepair
                 CFGFileName = ConfFileName;
                 
                 // Проверяем, не открыл ли пользователь файл config.cfg и, если да, то сообщаем об этом...
-                if (Path.GetFileName(CFGFileName) == "config.cfg") { MessageBox.Show(CoreLib.GetLocalizedString("CE_RestConfigOpenWarn"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                if (Path.GetFileName(CFGFileName) == "config.cfg") { MessageBox.Show(AppStrings.CE_RestConfigOpenWarn, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
 
                 // Очищаем область редактирования...
                 CE_Editor.Rows.Clear();
@@ -1229,12 +1229,12 @@ namespace srcrepair
                 catch (Exception Ex)
                 {
                     // Произошло исключение...
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("CE_ExceptionDetected"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(AppStrings.CE_ExceptionDetected, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("CE_OpenFailed"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.CE_OpenFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -1251,53 +1251,53 @@ namespace srcrepair
             switch (FileName.Extension)
             {
                 case ".reg":
-                    Buf = CoreLib.GetLocalizedString("BU_BType_Reg");
+                    Buf = AppStrings.BU_BType_Reg;
                     if (BufName.IndexOf("Game_Options", StringComparison.CurrentCultureIgnoreCase) != -1)
                     {
-                        BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_GRGame"), FileName.CreationTime);
+                        BufName = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_GRGame, FileName.CreationTime);
                     }
                     else if (BufName.IndexOf("Source_Options", StringComparison.CurrentCultureIgnoreCase) != -1)
                     {
-                        BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_SRCAll"), FileName.CreationTime);
+                        BufName = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_SRCAll, FileName.CreationTime);
                     }
                     else if (BufName.IndexOf("Steam_BackUp", StringComparison.CurrentCultureIgnoreCase) != -1)
                     {
-                        BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_SteamAll"), FileName.CreationTime);
+                        BufName = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_SteamAll, FileName.CreationTime);
                     }
                     else if (BufName.IndexOf("Game_AutoBackUp", StringComparison.CurrentCultureIgnoreCase) != -1)
                     {
-                        BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_GameAuto"), FileName.CreationTime);
+                        BufName = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_GameAuto, FileName.CreationTime);
                     }
                     break;
                 case ".bud":
-                    Buf = CoreLib.GetLocalizedString("BU_BType_Cont");
+                    Buf = AppStrings.BU_BType_Cont;
                     if (BufName.IndexOf(Properties.Resources.BU_PrefixDef, StringComparison.CurrentCultureIgnoreCase) != -1)
                     {
-                        BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_Bud"), FileName.CreationTime);
+                        BufName = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_Bud, FileName.CreationTime);
                     }
                     else if (BufName.IndexOf(Properties.Resources.BU_PrefixCfg, StringComparison.CurrentCultureIgnoreCase) != -1)
                     {
-                        Buf = CoreLib.GetLocalizedString("BU_BType_Cfg");
-                        BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_Config"), FileName.CreationTime);
+                        Buf = AppStrings.BU_BType_Cfg;
+                        BufName = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_Config, FileName.CreationTime);
                     }
                     else if (BufName.IndexOf(Properties.Resources.BU_PrefixVChat, StringComparison.CurrentCultureIgnoreCase) != -1)
                     {
-                        Buf = CoreLib.GetLocalizedString("BU_BType_DB");
-                        BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_VChat"), FileName.CreationTime);
+                        Buf = AppStrings.BU_BType_DB;
+                        BufName = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_VChat, FileName.CreationTime);
                     }
                     else if (BufName.IndexOf(Properties.Resources.BU_PrefixVideo, StringComparison.CurrentCultureIgnoreCase) != -1)
                     {
-                        Buf = CoreLib.GetLocalizedString("BU_BType_Video");
-                        BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_GRGame"), FileName.CreationTime);
+                        Buf = AppStrings.BU_BType_Video;
+                        BufName = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_GRGame, FileName.CreationTime);
                     }
                     else if (BufName.IndexOf(Properties.Resources.BU_PrefixVidAuto, StringComparison.CurrentCultureIgnoreCase) != -1)
                     {
-                        Buf = CoreLib.GetLocalizedString("BU_BType_Video");
-                        BufName = String.Format(Properties.Resources.BU_TablePrefix, CoreLib.GetLocalizedString("BU_BName_GameAuto"), FileName.CreationTime);
+                        Buf = AppStrings.BU_BType_Video;
+                        BufName = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_GameAuto, FileName.CreationTime);
                     }
                     break;
                 default:
-                    Buf = CoreLib.GetLocalizedString("BU_BType_Unkn");
+                    Buf = AppStrings.BU_BType_Unkn;
                     break;
             }
 
@@ -1407,12 +1407,12 @@ namespace srcrepair
         {
             if (Properties.Settings.Default.SafeCleanup)
             {
-                SB_App.Text = CoreLib.GetLocalizedString("AppSafeClnStTextOn");
+                SB_App.Text = AppStrings.AppSafeClnStTextOn;
                 SB_App.Image = Properties.Resources.green_circle;
             }
             else
             {
-                SB_App.Text = CoreLib.GetLocalizedString("AppSafeClnStTextOff");
+                SB_App.Text = AppStrings.AppSafeClnStTextOff;
                 SB_App.Image = Properties.Resources.red_circle;
             }
         }
@@ -1423,7 +1423,7 @@ namespace srcrepair
         private string GetPathByMEnter()
         {
             string Result = null;
-            FldrBrwse.Description = CoreLib.GetLocalizedString("SteamPathEnterText"); // Указываем текст в диалоге поиска каталога...
+            FldrBrwse.Description = AppStrings.SteamPathEnterText; // Указываем текст в диалоге поиска каталога...
             if (FldrBrwse.ShowDialog() == DialogResult.OK) // Отображаем стандартный диалог поиска каталога...
             {
                 if (!(File.Exists(Path.Combine(FldrBrwse.SelectedPath, Properties.Resources.SteamExecBin))))
@@ -1462,17 +1462,17 @@ namespace srcrepair
             }
             catch (FileNotFoundException Ex)
             {
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("SteamPathEnterErr"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                CoreLib.HandleExceptionEx(AppStrings.SteamPathEnterErr, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
                 Environment.Exit(7);
             }
             catch (OperationCanceledException Ex)
             {
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("SteamPathCancel"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                CoreLib.HandleExceptionEx(AppStrings.SteamPathCancel, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
                 Environment.Exit(19);
             }
             catch (Exception Ex)
             {
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppGenericError"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                CoreLib.HandleExceptionEx(AppStrings.AppGenericError, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
                 Environment.Exit(24);
             }
         }
@@ -1514,9 +1514,9 @@ namespace srcrepair
                 case 0:
                     {
                         // Запишем в лог...
-                        CoreLib.WriteStringToLog(String.Format(CoreLib.GetLocalizedString("AppNoGamesDLog"), App.FullSteamPath));
+                        CoreLib.WriteStringToLog(String.Format(AppStrings.AppNoGamesDLog, App.FullSteamPath));
                         // Нет, не нашлись, выведем сообщение...
-                        MessageBox.Show(CoreLib.GetLocalizedString("AppNoGamesDetected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(AppStrings.AppNoGamesDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         // Завершим работу приложения...
                         Environment.Exit(11);
                     }
@@ -1548,7 +1548,7 @@ namespace srcrepair
             {
                 PS_PathSteam.ForeColor = Color.Red;
                 PS_PathSteam.Image = Properties.Resources.upd_err;
-                CoreLib.WriteStringToLog(String.Format(CoreLib.GetLocalizedString("AppRestrSymbLog"), SteamPath));
+                CoreLib.WriteStringToLog(String.Format(AppStrings.AppRestrSymbLog, SteamPath));
             }
         }
 
@@ -1562,7 +1562,7 @@ namespace srcrepair
             {
                 PS_PathGame.ForeColor = Color.Red;
                 PS_PathGame.Image = Properties.Resources.upd_err;
-                CoreLib.WriteStringToLog(String.Format(CoreLib.GetLocalizedString("AppRestrSymbLog"), GamePath));
+                CoreLib.WriteStringToLog(String.Format(AppStrings.AppRestrSymbLog, GamePath));
             }
         }
 
@@ -1636,7 +1636,7 @@ namespace srcrepair
         /// <param name="State">Статус выбранного HUD</param>
         private void SetHUDButtons(bool State)
         {
-            HD_Install.Text = CoreLib.GetLocalizedString(State ? "HD_BtnUpdateText" : "HD_BtnInstallText");
+            HD_Install.Text = State ? AppStrings.HD_BtnUpdateText : AppStrings.HD_BtnInstallText;
             HD_Uninstall.Enabled = State;
             HD_OpenDir.Enabled = State;
         }
@@ -1663,7 +1663,7 @@ namespace srcrepair
                     {
                         MNUShowEdHint.Enabled = true;
                         SB_Status.ForeColor = Color.Black;
-                        SB_Status.Text = String.Format(CoreLib.GetLocalizedString("StatusOpenedFile"), String.IsNullOrEmpty(CFGFileName) ? CoreLib.GetLocalizedString("UnnamedFileName") : Path.GetFileName(CFGFileName));
+                        SB_Status.Text = String.Format(AppStrings.StatusOpenedFile, String.IsNullOrEmpty(CFGFileName) ? AppStrings.UnnamedFileName : Path.GetFileName(CFGFileName));
                     }
                     break;
                 case 4:
@@ -1671,14 +1671,14 @@ namespace srcrepair
                         bool HUDDbStatus = CheckHUDDatabase(Properties.Settings.Default.LastHUDTime);
                         MNUShowEdHint.Enabled = false;
                         SB_Status.ForeColor = HUDDbStatus ? Color.Red : Color.Black;
-                        SB_Status.Text = String.Format(CoreLib.GetLocalizedString("HD_DynBarText"), CoreLib.GetLocalizedString(HUDDbStatus ? "HD_StatusOutdated" : "HD_StatusUpdated"), Properties.Settings.Default.LastHUDTime);
+                        SB_Status.Text = String.Format(AppStrings.HD_DynBarText, HUDDbStatus ? AppStrings.HD_StatusOutdated : AppStrings.HD_StatusUpdated, Properties.Settings.Default.LastHUDTime);
                     }
                     break;
                 default: // Открыта другая страница...
                     {
                         MNUShowEdHint.Enabled = false;
                         SB_Status.ForeColor = Color.Black;
-                        SB_Status.Text = CoreLib.GetLocalizedString("StatusNormal");
+                        SB_Status.Text = AppStrings.StatusNormal;
                     }
                     break;
             }
@@ -1775,7 +1775,7 @@ namespace srcrepair
                     if (AutoUpdateCheck(App.AppVersionInfo, Properties.Resources.UpdateChURI, App.UserAgent))
                     {
                         // Доступны обновления...
-                        MessageBox.Show(String.Format(CoreLib.GetLocalizedString("AppUpdateAvailable"), Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(String.Format(AppStrings.AppUpdateAvailable, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -1816,7 +1816,7 @@ namespace srcrepair
                 CoreLib.WriteStringToLog(Ex.Message);
                 
                 // Выводим текст об этом...
-                FP_Description.Text = CoreLib.GetLocalizedString("FP_NoCfgGame");
+                FP_Description.Text = AppStrings.FP_NoCfgGame;
                 FP_Description.ForeColor = Color.Red;
                 
                 // ...и блокируем контролы, отвечающие за установку...
@@ -1831,7 +1831,7 @@ namespace srcrepair
             // Проверяем, нашлись ли конфиги...
             if (FP_ConfigSel.Items.Count >= 1)
             {
-                FP_Description.Text = CoreLib.GetLocalizedString("FP_SelectFromList");
+                FP_Description.Text = AppStrings.FP_SelectFromList;
                 FP_Description.ForeColor = Color.Black;
                 FP_ConfigSel.Enabled = true;
             }
@@ -1900,7 +1900,7 @@ namespace srcrepair
             try
             {
                 // Изменяем текст на "Идёт установка" и отключаем её...
-                Invoke((MethodInvoker)delegate() { HD_Install.Text = CoreLib.GetLocalizedString("HD_InstallBtnProgress"); HD_Install.Enabled = false; });
+                Invoke((MethodInvoker)delegate() { HD_Install.Text = AppStrings.HD_InstallBtnProgress; HD_Install.Enabled = false; });
 
                 // Устанавливаем и очищаем временный каталог...
                 try { Directory.Move(Path.Combine(InstallTmp, SelHUD.FormatIntDir(SelHUD.ArchiveDir)), Path.Combine(SelGame.CustomInstallDir, SelHUD.InstallDir)); }
@@ -1919,7 +1919,7 @@ namespace srcrepair
         private void BW_HudInstall_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             // Выводим сообщение...
-            if (e.Error == null) { MessageBox.Show(CoreLib.GetLocalizedString("HD_InstallSuccessfull"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("HD_InstallError"), Properties.Resources.AppName, e.Error.Message, e.Error.Source, MessageBoxIcon.Error); }
+            if (e.Error == null) { MessageBox.Show(AppStrings.HD_InstallSuccessfull, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { CoreLib.HandleExceptionEx(AppStrings.HD_InstallError, Properties.Resources.AppName, e.Error.Message, e.Error.Source, MessageBoxIcon.Error); }
 
             // Включаем кнопку удаления если HUD установлен...
             SetHUDButtons(SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir));
@@ -1958,7 +1958,7 @@ namespace srcrepair
             DetectFS(App.FullSteamPath);
 
             // Запустим поиск установленных игр и проверим нашлось ли что-то...
-            FindGames(App.FullSteamPath, Properties.Resources.SteamAppsFolderName, CoreLib.GetLocalizedString("AppXMLParseError"));
+            FindGames(App.FullSteamPath, Properties.Resources.SteamAppsFolderName, AppStrings.AppXMLParseError);
 
             try
             {
@@ -1983,7 +1983,7 @@ namespace srcrepair
             PS_SteamLang.Enabled = PS_CleanRegistry.Checked;
 
             // Выбираем язык по умолчанию согласно языку приложения...
-            PS_SteamLang.SelectedIndex = Convert.ToInt32(CoreLib.GetLocalizedString("AppDefaultSteamLangID"));
+            PS_SteamLang.SelectedIndex = Convert.ToInt32(AppStrings.AppDefaultSteamLangID);
 
             // Управляем доступностью кнопки запуска очистки...
             PS_ExecuteNow.Enabled = PS_CleanRegistry.Checked || PS_CleanBlobs.Checked;
@@ -1994,7 +1994,7 @@ namespace srcrepair
             // Начинаем очистку...
 
             // Запрашиваем подтверждение у пользователя...
-            if (MessageBox.Show(CoreLib.GetLocalizedString("PS_ExecuteMSG"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(AppStrings.PS_ExecuteMSG, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 // Подтверждение получено...
                 if ((PS_CleanBlobs.Checked) || (PS_CleanRegistry.Checked))
@@ -2002,7 +2002,7 @@ namespace srcrepair
                     // Найдём и завершим работу клиента Steam...
                     if (CoreLib.ProcessTerminate("Steam") != 0)
                     {
-                        MessageBox.Show(CoreLib.GetLocalizedString("PS_ProcessDetected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(AppStrings.PS_ProcessDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
                     // Проверяем нужно ли чистить блобы...
@@ -2015,7 +2015,7 @@ namespace srcrepair
                         }
                         catch (Exception Ex)
                         {
-                            CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanException"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                            CoreLib.HandleExceptionEx(AppStrings.PS_CleanException, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                         }
                     }
 
@@ -2033,18 +2033,18 @@ namespace srcrepair
                             else
                             {
                                 // Пользователь не выбрал язык, поэтому будем использовать английский...
-                                MessageBox.Show(CoreLib.GetLocalizedString("PS_NoLangSelected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show(AppStrings.PS_NoLangSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 CleanRegistryNow(0);
                             }
                         }
                         catch (Exception Ex)
                         {
-                            CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanException"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                            CoreLib.HandleExceptionEx(AppStrings.PS_CleanException, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                         }
                     }
 
                     // Выполнение закончено, выведем сообщение о завершении...
-                    MessageBox.Show(CoreLib.GetLocalizedString("PS_SeqCompleted"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.PS_SeqCompleted, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Запустим Steam...
                     if (File.Exists(Path.Combine(App.FullSteamPath, Properties.Resources.SteamExecBin))) { Process.Start(Path.Combine(App.FullSteamPath, Properties.Resources.SteamExecBin)); }
@@ -2057,7 +2057,7 @@ namespace srcrepair
             if (e.CloseReason == CloseReason.UserClosing)
             {
                 // Запрашиваем подтверждение у пользователя на закрытие формы...
-                e.Cancel = ((Properties.Settings.Default.ConfirmExit && !(MessageBox.Show(String.Format(CoreLib.GetLocalizedString("FrmCloseQuery"), Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)) || (BW_BkUpRecv.IsBusy || BW_FPRecv.IsBusy || BW_HudInstall.IsBusy || BW_HUDList.IsBusy || BW_HUDScreen.IsBusy || BW_UpChk.IsBusy));
+                e.Cancel = ((Properties.Settings.Default.ConfirmExit && !(MessageBox.Show(String.Format(AppStrings.FrmCloseQuery, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)) || (BW_BkUpRecv.IsBusy || BW_FPRecv.IsBusy || BW_HudInstall.IsBusy || BW_HUDList.IsBusy || BW_HUDScreen.IsBusy || BW_UpChk.IsBusy));
             }
         }
 
@@ -2075,7 +2075,7 @@ namespace srcrepair
                 CheckSymbolsGame(SelGame.FullGamePath);
 
                 // Считаем настройки графики...
-                if (SelGame.IsUsingVideoFile) { SelGame.UpdateVideoFilesList(SelGame.GameInternalID, App.FullSteamPath, SelGame.GamePath, SelGame.ConfDir); string VideoFile = SelGame.GetActualVideoFile(); if (File.Exists(VideoFile)) { ReadNCFGameSettings(VideoFile); } else { CoreLib.WriteStringToLog(String.Format(CoreLib.GetLocalizedString("AppVideoDbNotFound"), SelGame.FullAppName, VideoFile)); NullGraphOptions(); } } else { ReadGCFGameSettings(SelGame.SmallAppName); }
+                if (SelGame.IsUsingVideoFile) { SelGame.UpdateVideoFilesList(SelGame.GameInternalID, App.FullSteamPath, SelGame.GamePath, SelGame.ConfDir); string VideoFile = SelGame.GetActualVideoFile(); if (File.Exists(VideoFile)) { ReadNCFGameSettings(VideoFile); } else { CoreLib.WriteStringToLog(String.Format(AppStrings.AppVideoDbNotFound, SelGame.FullAppName, VideoFile)); NullGraphOptions(); } } else { ReadGCFGameSettings(SelGame.SmallAppName); }
 
                 // Переключаем графический твикер в режим GCF/NCF...
                 SetGTOptsType(!SelGame.IsUsingVideoFile);
@@ -2109,21 +2109,21 @@ namespace srcrepair
             }
             catch (Exception Ex)
             {
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppFailedToGetData"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                CoreLib.HandleExceptionEx(AppStrings.AppFailedToGetData, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
             }
         }
 
         private void AppRefresh_Click(object sender, EventArgs e)
         {
             // Попробуем обновить список игр...
-            FindGames(App.FullSteamPath, Properties.Resources.SteamAppsFolderName, CoreLib.GetLocalizedString("AppXMLParseError"));
+            FindGames(App.FullSteamPath, Properties.Resources.SteamAppsFolderName, AppStrings.AppXMLParseError);
         }
 
         private void GT_Maximum_Graphics_Click(object sender, EventArgs e)
         {
             // Нажатие этой кнопки устанавливает графические настройки на рекомендуемый максимум...
             // Зададим вопрос, а нужно ли это юзеру?
-            if (MessageBox.Show(CoreLib.GetLocalizedString("GT_MaxPerfMsg"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(AppStrings.GT_MaxPerfMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (!SelGame.IsUsingVideoFile)
                 {
@@ -2158,7 +2158,7 @@ namespace srcrepair
                     GT_NCF_MemPool.SelectedIndex = 2;
                     GT_NCF_Quality.SelectedIndex = 2;
                 }
-                MessageBox.Show(CoreLib.GetLocalizedString("GT_PerfSet"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(AppStrings.GT_PerfSet, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -2166,7 +2166,7 @@ namespace srcrepair
         {
             // Нажатие этой кнопки устанавливает графические настройки на рекомендуемый минимум...
             // Спросим пользователя.
-            if (MessageBox.Show(CoreLib.GetLocalizedString("GT_MinPerfMsg"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(AppStrings.GT_MinPerfMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (!SelGame.IsUsingVideoFile)
                 {
@@ -2182,7 +2182,7 @@ namespace srcrepair
                     GT_Filtering.SelectedIndex = 1; // трилинейная фильтрация текстур
                     GT_VSync.SelectedIndex = 0; // вертикальная синхронизация выключена
                     GT_MotionBlur.SelectedIndex = 0; // размытие движения выключено
-                    GT_DxMode.SelectedIndex = MessageBox.Show(CoreLib.GetLocalizedString("GT_DxLevelMsg"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes ? 0 : 3; // Спросим у пользователя о режиме DirectX...
+                    GT_DxMode.SelectedIndex = MessageBox.Show(GT_DxLevelMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes ? 0 : 3; // Спросим у пользователя о режиме DirectX...
                     GT_HDR.SelectedIndex = 0; // эффекты HDR выключены
                 }
                 else
@@ -2201,7 +2201,7 @@ namespace srcrepair
                     GT_NCF_MemPool.SelectedIndex = 0;
                     GT_NCF_Quality.SelectedIndex = 0;
                 }
-                MessageBox.Show(CoreLib.GetLocalizedString("GT_PerfSet"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(AppStrings.GT_PerfSet, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -2211,7 +2211,7 @@ namespace srcrepair
             if (ValidateGameSettings(SelGame.IsUsingVideoFile))
             {
                 // Запрашиваем подтверждение у пользователя...
-                if (MessageBox.Show(CoreLib.GetLocalizedString("GT_SaveMsg"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show(AppStrings.GT_SaveMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     // Определим тип игры...
                     if (!SelGame.IsUsingVideoFile)
@@ -2232,9 +2232,9 @@ namespace srcrepair
                             WriteGCFGameSettings(SelGame.SmallAppName);
                             
                             // Выводим подтверждающее сообщение...
-                            MessageBox.Show(CoreLib.GetLocalizedString("GT_SaveSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show(AppStrings.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("GT_SaveFailure"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+                        catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.GT_SaveFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
                     }
                     else
                     {
@@ -2250,19 +2250,19 @@ namespace srcrepair
                             WriteNCFGameSettings(SelGame.GetActualVideoFile());
                             
                             // Выводим сообщение...
-                            MessageBox.Show(CoreLib.GetLocalizedString("GT_SaveSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show(AppStrings.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch (Exception Ex)
                         {
                             // Произошла ошибка...
-                            CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("GT_NCFFailure"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                            CoreLib.HandleExceptionEx(AppStrings.GT_NCFFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                         }
                     }
                 }
             }
             else
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("GT_NCFNReady"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.GT_NCFNReady, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -2271,13 +2271,13 @@ namespace srcrepair
             try
             {
                 // Получаем описание выбранного пользователем FPS-конфига...
-                FP_Description.Text = File.ReadAllText(Path.Combine(App.FullAppPath, "cfgs", String.Format("{0}_{1}.txt", Path.GetFileNameWithoutExtension(FP_ConfigSel.Text), CoreLib.GetLocalizedString("AppLangPrefix"))));
+                FP_Description.Text = File.ReadAllText(Path.Combine(App.FullAppPath, "cfgs", String.Format("{0}_{1}.txt", Path.GetFileNameWithoutExtension(FP_ConfigSel.Text), AppStrings.AppLangPrefix)));
             }
             catch (Exception Ex)
             {
                 // Не получилось загрузить описание выбранного конфига. Выведем стандартное сообщение...
                 CoreLib.WriteStringToLog(Ex.Message);
-                FP_Description.Text = CoreLib.GetLocalizedString("FP_NoDescr");
+                FP_Description.Text = AppStrings.FP_NoDescr;
             }
             
             // Включаем кнопку открытия конфига в Блокноте...
@@ -2292,7 +2292,7 @@ namespace srcrepair
             // Начинаем устанавливать FPS-конфиг в управляемое приложение...
             if (FP_ConfigSel.SelectedIndex != -1)
             {
-                if (MessageBox.Show(CoreLib.GetLocalizedString("FP_InstallQuestion"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show(AppStrings.FP_InstallQuestion, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     // Проверим, не нужно ли создавать резервную копию...
                     if (Properties.Settings.Default.SafeCleanup)
@@ -2311,7 +2311,7 @@ namespace srcrepair
                         InstallConfigNow(FP_ConfigSel.Text, App.FullAppPath, SelGame.FullGamePath, SelGame.IsUsingUserDir);
                         
                         // Выводим сообщение об успешной установке...
-                        MessageBox.Show(CoreLib.GetLocalizedString("FP_InstallSuccessful"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(AppStrings.FP_InstallSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         
                         // Перечитаем конфиги...
                         HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
@@ -2319,14 +2319,14 @@ namespace srcrepair
                     catch (Exception Ex)
                     {
                         // Установка не удалась. Выводим сообщение об этом...
-                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("FP_InstallFailed"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                        CoreLib.HandleExceptionEx(AppStrings.FP_InstallFailed, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                     }
                 }
             }
             else
             {
                 // Пользователь не выбрал конфиг. Сообщим об этом...
-                MessageBox.Show(CoreLib.GetLocalizedString("FP_NothingSelected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.FP_NothingSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -2338,26 +2338,26 @@ namespace srcrepair
                 if (SelGame.FPSConfigs.Count > 0)
                 {
                     // Удаляем конфиги...
-                    CoreLib.OpenCleanupWindow(SelGame.FPSConfigs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("FP_RemoveSuccessful"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile, false, false, false, Properties.Settings.Default.SafeCleanup);
+                    CoreLib.OpenCleanupWindow(SelGame.FPSConfigs, ((Button)sender).Text.ToLower(), AppStrings.FP_RemoveSuccessful, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile, false, false, false, Properties.Settings.Default.SafeCleanup);
 
                     // Перечитаем список конфигов...
                     HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
                 }
                 else
                 {
-                    MessageBox.Show(CoreLib.GetLocalizedString("FP_RemoveNotExists"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.FP_RemoveNotExists, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception Ex)
             {
-                CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("FP_RemoveFailed"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                CoreLib.HandleExceptionEx(AppStrings.FP_RemoveFailed, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
             }
         }
 
         private void GT_Warning_Click(object sender, EventArgs e)
         {
             // Выдадим сообщение о наличии FPS-конфига...
-            MessageBox.Show(CoreLib.GetLocalizedString("GT_FPSCfgDetected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show(AppStrings.GT_FPSCfgDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void CE_New_Click(object sender, EventArgs e)
@@ -2400,12 +2400,12 @@ namespace srcrepair
                 }
 
                 // Начинаем сохранение в тот же файл...
-                try { WriteTableToFileNow(CFGFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("CE_CfgSVVEx"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+                try { WriteTableToFileNow(CFGFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.CE_CfgSVVEx, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
             }
             else
             {
                 // Зададим стандартное имя (см. issue 21)...
-                CE_SaveCfgDialog.FileName = File.Exists(Path.Combine(SelGame.FullCfgPath, "autoexec.cfg")) ? CoreLib.GetLocalizedString("UnnamedFileName") : "autoexec.cfg";
+                CE_SaveCfgDialog.FileName = File.Exists(Path.Combine(SelGame.FullCfgPath, "autoexec.cfg")) ? AppStrings.UnnamedFileName : "autoexec.cfg";
 
                 // Файл не был открыт. Отображаем стандартный диалог сохранения файла...
                 if (CE_SaveCfgDialog.ShowDialog() == DialogResult.OK)
@@ -2437,7 +2437,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.bsp"));
             CleanDirs.Add(Path.Combine(SelGame.AppWorkshopDir, "*.bsp"));
             if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "maps", "*.bsp")); }
-            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_RemDnlCache_Click(object sender, EventArgs e)
@@ -2446,7 +2446,7 @@ namespace srcrepair
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "downloads", "*.*"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_RemSoundCache_Click(object sender, EventArgs e)
@@ -2457,7 +2457,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "maps", "soundcache", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "sound", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "*.cache"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_RemScreenShots_Click(object sender, EventArgs e)
@@ -2465,7 +2465,7 @@ namespace srcrepair
             // Удаляем все скриншоты...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "screenshots", "*.*"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile, false, false, false);
+            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile, false, false, false);
         }
 
         private void PS_RemDemos_Click(object sender, EventArgs e)
@@ -2476,7 +2476,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "*.mp4"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "*.tga"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "*.wav"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile, false, false, false, false);
+            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile, false, false, false, false);
         }
 
         private void PS_RemGraphOpts_Click(object sender, EventArgs e)
@@ -2497,11 +2497,11 @@ namespace srcrepair
                     {
                         // Удаляем ключ HKEY_CURRENT_USER\Software\Valve\Source\tf\Settings из реестра...
                         Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), false);
-                        MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(AppStrings.PS_CleanupSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception Ex)
                     {
-                        CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("PS_CleanupErr"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                        CoreLib.HandleExceptionEx(AppStrings.PS_CleanupErr, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                     }
                 }
                 else
@@ -2516,7 +2516,7 @@ namespace srcrepair
                     CoreLib.RemoveFileDirectoryEx(SelGame.VideoCfgFiles);
 
                     // Выводим сообщение...
-                    MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.PS_CleanupSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -2529,14 +2529,14 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "platform", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "bin", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "*.exe"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CacheChkReq"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CacheChkReq, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_ResetSettings_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(((Button)sender).Text + "?", Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                try { Process.Start(String.Format("steam://validate/{0}", SelGame.GameInternalID)); } catch (Exception Ex) { CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("AppStartSteamFailed"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+                try { Process.Start(String.Format("steam://validate/{0}", SelGame.GameInternalID)); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.AppStartSteamFailed, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
             }
         }
 
@@ -2552,7 +2552,7 @@ namespace srcrepair
             }
             else
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("AppNoGamesSelected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.AppNoGamesSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -2606,7 +2606,7 @@ namespace srcrepair
                     string FName = BU_LVTable.SelectedItems[0].SubItems[4].Text;
 
                     // Запрашиваем подтверждение...
-                    if (MessageBox.Show(String.Format(CoreLib.GetLocalizedString("BU_QMsg"), Path.GetFileNameWithoutExtension(FName), BU_LVTable.SelectedItems[0].SubItems[3].Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                    if (MessageBox.Show(String.Format(AppStrings.BU_QMsg, Path.GetFileNameWithoutExtension(FName), BU_LVTable.SelectedItems[0].SubItems[3].Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
                         // Проверяем что восстанавливать: конфиг или реестр...
                         switch (Path.GetExtension(FName))
@@ -2619,12 +2619,12 @@ namespace srcrepair
                                     Process.Start("regedit.exe", String.Format("/s \"{0}\"", Path.Combine(SelGame.FullBackUpDirPath, FName)));
                                     
                                     // Показываем сообщение об успешном восстановлении...
-                                    MessageBox.Show(CoreLib.GetLocalizedString("BU_RestSuccessful"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show(AppStrings.BU_RestSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 }
                                 catch (Exception Ex)
                                 {
                                     // Произошло исключение...
-                                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BU_RestFailed"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                                    CoreLib.HandleExceptionEx(AppStrings.BU_RestFailed, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                                 }
                                 break;
                             case ".bud":
@@ -2635,23 +2635,23 @@ namespace srcrepair
                                 HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
                                 
                                 // Выводим сообщение об успехе...
-                                MessageBox.Show(CoreLib.GetLocalizedString("BU_RestSuccessful"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show(AppStrings.BU_RestSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 break;
                             default:
                                 // Выводим сообщение о неизвестном формате резервной копии...
-                                MessageBox.Show(CoreLib.GetLocalizedString("BU_UnknownType"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show(AppStrings.BU_UnknownType, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 break;
                         }
                     }
                 }
                 else
                 {
-                    MessageBox.Show(CoreLib.GetLocalizedString("BU_NoSelected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.BU_NoSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("BU_NoFiles"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.BU_NoFiles, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -2665,7 +2665,7 @@ namespace srcrepair
                     string FName = BU_LVTable.SelectedItems[0].SubItems[4].Text;
                     
                     // Запросим подтверждение...
-                    if (MessageBox.Show(CoreLib.GetLocalizedString("BU_DelMsg"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                    if (MessageBox.Show(AppStrings.BU_DelMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
                         try
                         {
@@ -2676,23 +2676,23 @@ namespace srcrepair
                             BU_LVTable.Items.Remove(BU_LVTable.SelectedItems[0]);
                             
                             // Показываем сообщение об успешном удалении...
-                            MessageBox.Show(CoreLib.GetLocalizedString("BU_DelSuccessful"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show(AppStrings.BU_DelSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch (Exception Ex)
                         {
                             // Произошло исключение при попытке удаления файла резервной копии...
-                            CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BU_DelFailed"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                            CoreLib.HandleExceptionEx(AppStrings.BU_DelFailed, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                         }
                     }
                 }
                 else
                 {
-                    MessageBox.Show(CoreLib.GetLocalizedString("BU_NoSelected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.BU_NoSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("BU_NoFiles"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.BU_NoFiles, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -2704,7 +2704,7 @@ namespace srcrepair
 
         private void BUT_L_GameSettings_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(CoreLib.GetLocalizedString("BU_RegCreate"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(AppStrings.BU_RegCreate, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 // Создадим резервную копию графических настроек игры...
                 try
@@ -2721,7 +2721,7 @@ namespace srcrepair
                     }
                     
                     // Выводим сообщение об успехе...
-                    MessageBox.Show(CoreLib.GetLocalizedString("BU_RegDone"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.BU_RegDone, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     
                     // Обновляем список резервных копий...
                     UpdateBackUpList(SelGame.FullBackUpDirPath);
@@ -2729,7 +2729,7 @@ namespace srcrepair
                 catch (Exception Ex)
                 {
                     // Выводим сообщение об ошибке и пишем в журнал отладки...
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BU_RegErr"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(AppStrings.BU_RegErr, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -2737,7 +2737,7 @@ namespace srcrepair
         private void BUT_L_AllSteam_Click(object sender, EventArgs e)
         {
             // Создадим резервную копию всех настроек Steam...
-            if (MessageBox.Show(CoreLib.GetLocalizedString("BU_RegCreate"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(AppStrings.BU_RegCreate, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
@@ -2745,7 +2745,7 @@ namespace srcrepair
                     CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve"), "Steam_BackUp", SelGame.FullBackUpDirPath);
                     
                     // Выводим сообщение...
-                    MessageBox.Show(CoreLib.GetLocalizedString("BU_RegDone"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.BU_RegDone, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     
                     // Обновим список бэкапов...
                     UpdateBackUpList(SelGame.FullBackUpDirPath);
@@ -2753,7 +2753,7 @@ namespace srcrepair
                 catch (Exception Ex)
                 {
                     // Произошло исключение, уведомим пользователя...
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BU_RegErr"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(AppStrings.BU_RegErr, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -2761,17 +2761,17 @@ namespace srcrepair
         private void BUT_L_AllSRC_Click(object sender, EventArgs e)
         {
             // Созданим резервную копию графических настроек всех Source-игр...
-            if (MessageBox.Show(CoreLib.GetLocalizedString("BU_RegCreate"), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(AppStrings.BU_RegCreate, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
                     CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source"), "Source_Options", SelGame.FullBackUpDirPath);
-                    MessageBox.Show(CoreLib.GetLocalizedString("BU_RegDone"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.BU_RegDone, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     UpdateBackUpList(SelGame.FullBackUpDirPath);
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.HandleExceptionEx(CoreLib.GetLocalizedString("BU_RegErr"), Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    CoreLib.HandleExceptionEx(AppStrings.BU_RegErr, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -2787,11 +2787,11 @@ namespace srcrepair
             try
             {
                 string Buf = CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[0].Value.ToString();
-                if (!(String.IsNullOrEmpty(Buf))) { Buf = GetCVDescription(Buf); if (!(String.IsNullOrEmpty(Buf))) { MessageBox.Show(Buf, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(CoreLib.GetLocalizedString("CE_ClNoDescr"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } } else { MessageBox.Show(CoreLib.GetLocalizedString("CE_ClSelErr"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                if (!(String.IsNullOrEmpty(Buf))) { Buf = GetCVDescription(Buf); if (!(String.IsNullOrEmpty(Buf))) { MessageBox.Show(Buf, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(AppStrings.CE_ClNoDescr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } } else { MessageBox.Show(AppStrings.CE_ClSelErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             }
             catch
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("CE_ClSelErr"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.CE_ClSelErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -2909,7 +2909,7 @@ namespace srcrepair
             }
             
             // Перечитаем базу игр...
-            FindGames(App.FullSteamPath, Properties.Resources.SteamAppsFolderName, CoreLib.GetLocalizedString("AppXMLParseError"));
+            FindGames(App.FullSteamPath, Properties.Resources.SteamAppsFolderName, AppStrings.AppXMLParseError);
         }
 
         private void BUT_OpenNpad_Click(object sender, EventArgs e)
@@ -2919,16 +2919,16 @@ namespace srcrepair
             {
                 if (BU_LVTable.SelectedItems.Count > 0)
                 {
-                    if (Regex.IsMatch(Path.GetExtension(BU_LVTable.SelectedItems[0].SubItems[4].Text), @"\.(txt|cfg|[0-9]|reg)")) { CoreLib.OpenTextEditor(Path.Combine(SelGame.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text)); } else { MessageBox.Show(CoreLib.GetLocalizedString("BU_BinaryFile"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                    if (Regex.IsMatch(Path.GetExtension(BU_LVTable.SelectedItems[0].SubItems[4].Text), @"\.(txt|cfg|[0-9]|reg)")) { CoreLib.OpenTextEditor(Path.Combine(SelGame.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text)); } else { MessageBox.Show(AppStrings.BU_BinaryFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
                 }
                 else
                 {
-                    MessageBox.Show(CoreLib.GetLocalizedString("BU_NoSelected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.BU_NoSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("BU_NoFiles"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.BU_NoFiles, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -2959,12 +2959,12 @@ namespace srcrepair
                 }
                 else
                 {
-                    MessageBox.Show(CoreLib.GetLocalizedString("BU_NoSelected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.BU_NoSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("BU_NoFiles"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.BU_NoFiles, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -2991,18 +2991,18 @@ namespace srcrepair
             }
             else
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("CE_NoFileOpened"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.CE_NoFileOpened, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void PS_PathDetector_Click(object sender, EventArgs e)
         {
-            if (((Label)sender).ForeColor == Color.Red) { MessageBox.Show(CoreLib.GetLocalizedString("SteamNonASCIIDetected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } else { MessageBox.Show(CoreLib.GetLocalizedString("SteamNonASCIINotDetected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            if (((Label)sender).ForeColor == Color.Red) { MessageBox.Show(AppStrings.SteamNonASCIIDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } else { MessageBox.Show(AppStrings.SteamNonASCIINotDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); }
         }
 
         private void PS_PathGame_Click(object sender, EventArgs e)
         {
-            if (((Label)sender).ForeColor == Color.Red) { MessageBox.Show(CoreLib.GetLocalizedString("GameNonASCIIDetected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } else { MessageBox.Show(CoreLib.GetLocalizedString("GameNonASCIINotDetected"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            if (((Label)sender).ForeColor == Color.Red) { MessageBox.Show(AppStrings.GameNonASCIIDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } else { MessageBox.Show(AppStrings.GameNonASCIINotDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); }
         }
 
         private void PS_RemReplays_Click(object sender, EventArgs e)
@@ -3010,7 +3010,7 @@ namespace srcrepair
             // Удаляем все реплеи...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "replay", "*.*"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_RemTextures_Click(object sender, EventArgs e)
@@ -3036,7 +3036,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.vmt"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.mdl"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.phy"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_RemSecndCache_Click(object sender, EventArgs e)
@@ -3046,7 +3046,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cache", "*.*")); // Кэш...
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "user_custom", "*.*")); // Кэш спреев игр с н.с.к...
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "config", "html", "*.*")); // Кэш MOTD...
-            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void SB_App_DoubleClick(object sender, EventArgs e)
@@ -3057,7 +3057,7 @@ namespace srcrepair
             // Сообщим пользователю если он отключил безопасную очистку...
             if (!Properties.Settings.Default.SafeCleanup)
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("AppSafeClnDisabled"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(AppStrings.AppSafeClnDisabled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
             // Обновим статусную строку...
@@ -3066,7 +3066,7 @@ namespace srcrepair
 
         private void CE_OpenCVList_Click(object sender, EventArgs e)
         {
-            CoreLib.OpenWebPage(CoreLib.GetLocalizedString("AppCVListURL"));
+            CoreLib.OpenWebPage(AppStrings.AppCVListURL);
         }
 
         private void CE_ManualBackUpCfg_Click(object sender, EventArgs e)
@@ -3076,12 +3076,12 @@ namespace srcrepair
                 if (File.Exists(CFGFileName))
                 {
                     CoreLib.CreateConfigBackUp(CoreLib.SingleToArray(CFGFileName), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
-                    MessageBox.Show(String.Format(CoreLib.GetLocalizedString("CE_BackUpCreated"), Path.GetFileName(CFGFileName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(String.Format(AppStrings.CE_BackUpCreated, Path.GetFileName(CFGFileName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("CE_NoFileOpened"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.CE_NoFileOpened, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -3092,7 +3092,7 @@ namespace srcrepair
             if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "sound", "*.*")); }
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.mp3"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.wav"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_RemCustDir_Click(object sender, EventArgs e)
@@ -3101,7 +3101,7 @@ namespace srcrepair
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.AppWorkshopDir, "*.*"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_DeepCleanup_Click(object sender, EventArgs e)
@@ -3135,7 +3135,7 @@ namespace srcrepair
             if (SelGame.IsUsingVideoFile) { CleanDirs.AddRange(SelGame.VideoCfgFiles); }
 
             // Запускаем процесс очистки...
-            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CacheChkReq"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CacheChkReq, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_RemConfigs_Click(object sender, EventArgs e)
@@ -3144,7 +3144,7 @@ namespace srcrepair
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cfg", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.cfg"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void GT_ResAvailable_Btn_Click(object sender, EventArgs e)
@@ -3229,13 +3229,13 @@ namespace srcrepair
                 else
                 {
                     // Выбран устаревший HUD. Выведем сообщение об этом...
-                    MessageBox.Show(CoreLib.GetLocalizedString("HD_Outdated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.HD_Outdated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
                 // База HUD устарела. Требуется обновление. Выведем сообщение...
-                MessageBox.Show(CoreLib.GetLocalizedString("HD_DbOutdated"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.HD_DbOutdated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -3254,7 +3254,7 @@ namespace srcrepair
                 bool IsInstalled = SelHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelHUD.InstallDir);
 
                 // При успешном удалении HUD выводим сообщение и сносим и его каталог...
-                if (!IsInstalled) { MessageBox.Show(CoreLib.GetLocalizedString("PS_CleanupSuccess"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); if (Directory.Exists(HUDPath)) { Directory.Delete(HUDPath); } }
+                if (!IsInstalled) { MessageBox.Show(AppStrings.PS_CleanupSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); if (Directory.Exists(HUDPath)) { Directory.Delete(HUDPath); } }
 
                 // Включаем / отключаем кнопки...
                 SetHUDButtons(IsInstalled);
@@ -3272,7 +3272,7 @@ namespace srcrepair
             // Очистим загруженные приложением файлы...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(App.AppUserDir, Properties.Settings.Default.HUDLocalDir, "*.*"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            CoreLib.OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void MNUExtClnTmpDir_Click(object sender, EventArgs e)
@@ -3280,7 +3280,7 @@ namespace srcrepair
             // Очистим каталоги с временными файлами системы...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(Path.GetTempPath(), "*.*"));
-            CoreLib.OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), CoreLib.GetLocalizedString("PS_CleanupSuccess"), SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            CoreLib.OpenCleanupWindow(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void MNUShowLog_Click(object sender, EventArgs e)
@@ -3289,18 +3289,18 @@ namespace srcrepair
             if (Properties.Settings.Default.EnableDebugLog)
             {
                 string DFile = Path.Combine(CoreLib.GetApplicationPath(), Properties.Settings.Default.DebugLogFileName);
-                if (File.Exists(DFile)) { using (frmLogView Lv = new frmLogView(DFile)) { Lv.ShowDialog(); } } else { MessageBox.Show(CoreLib.GetLocalizedString("AppNoDebugFile"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                if (File.Exists(DFile)) { using (frmLogView Lv = new frmLogView(DFile)) { Lv.ShowDialog(); } } else { MessageBox.Show(AppStrings.AppNoDebugFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             }
             else
             {
-                MessageBox.Show(CoreLib.GetLocalizedString("AppDebugDisabled"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.AppDebugDisabled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void HD_Warning_Click(object sender, EventArgs e)
         {
             // Выведем предупреждающие сообщения...
-            if (!SelHUD.IsUpdated) { MessageBox.Show(CoreLib.GetLocalizedString("HD_NotTested"), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            if (!SelHUD.IsUpdated) { MessageBox.Show(AppStrings.HD_NotTested, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
 
         private void HD_OpenDir_Click(object sender, EventArgs e)
