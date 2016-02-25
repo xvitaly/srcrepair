@@ -126,7 +126,7 @@
             this.PS_GB_AdvRepr = new System.Windows.Forms.GroupBox();
             this.PS_CheckCache = new System.Windows.Forms.Button();
             this.PS_RemOldBin = new System.Windows.Forms.Button();
-            this.PS_RemGraphOpts = new System.Windows.Forms.Button();
+            this.PS_RemGameOpts = new System.Windows.Forms.Button();
             this.PS_GB_Remover = new System.Windows.Forms.GroupBox();
             this.PS_RemReplays = new System.Windows.Forms.Button();
             this.PS_DeepCleanup = new System.Windows.Forms.Button();
@@ -1139,7 +1139,7 @@
             // 
             this.PS_GB_AdvRepr.Controls.Add(this.PS_CheckCache);
             this.PS_GB_AdvRepr.Controls.Add(this.PS_RemOldBin);
-            this.PS_GB_AdvRepr.Controls.Add(this.PS_RemGraphOpts);
+            this.PS_GB_AdvRepr.Controls.Add(this.PS_RemGameOpts);
             resources.ApplyResources(this.PS_GB_AdvRepr, "PS_GB_AdvRepr");
             this.PS_GB_AdvRepr.Name = "PS_GB_AdvRepr";
             this.PS_GB_AdvRepr.TabStop = false;
@@ -1158,12 +1158,12 @@
             this.PS_RemOldBin.UseVisualStyleBackColor = true;
             this.PS_RemOldBin.Click += new System.EventHandler(this.PS_RemOldBin_Click);
             // 
-            // PS_RemGraphOpts
+            // PS_RemGameOpts
             // 
-            resources.ApplyResources(this.PS_RemGraphOpts, "PS_RemGraphOpts");
-            this.PS_RemGraphOpts.Name = "PS_RemGraphOpts";
-            this.PS_RemGraphOpts.UseVisualStyleBackColor = true;
-            this.PS_RemGraphOpts.Click += new System.EventHandler(this.PS_RemGraphOpts_Click);
+            resources.ApplyResources(this.PS_RemGameOpts, "PS_RemGameOpts");
+            this.PS_RemGameOpts.Name = "PS_RemGameOpts";
+            this.PS_RemGameOpts.UseVisualStyleBackColor = true;
+            this.PS_RemGameOpts.Click += new System.EventHandler(this.PS_RemGraphOpts_Click);
             // 
             // PS_GB_Remover
             // 
@@ -2143,7 +2143,7 @@
         private System.Windows.Forms.ToolStripButton CE_RmRow;
         private System.Windows.Forms.GroupBox PS_GB_AdvRepr;
         private System.Windows.Forms.Button PS_RemOldBin;
-        private System.Windows.Forms.Button PS_RemGraphOpts;
+        private System.Windows.Forms.Button PS_RemGameOpts;
         private System.Windows.Forms.Button FP_OpenNotepad;
         private System.Windows.Forms.ToolStripMenuItem MNUUpdateCheck;
         private System.Windows.Forms.ToolStripButton BUT_OpenNpad;
