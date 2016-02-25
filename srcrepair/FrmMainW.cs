@@ -2481,42 +2481,48 @@ namespace srcrepair
 
         private void PS_RemGraphOpts_Click(object sender, EventArgs e)
         {
-            // Удаляем графические настройки...
+            // Создаём список файлов для удаления...
+            List<String> CleanDirs = new List<string>();
+
+            // Запрашиваем у пользователя подтверждение удаления...
             if (MessageBox.Show(((Button)sender).Text + "?", Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                if (!SelGame.IsUsingVideoFile)
+                try
                 {
-                    // Создаём резервную копию...
-                    if (Properties.Settings.Default.SafeCleanup)
+                    // Удаляем графические настройки...
+                    if (!SelGame.IsUsingVideoFile)
                     {
-                        try { CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), "Game_AutoBackUp", SelGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    }
+                        // Создаём резервную копию куста реестра...
+                        if (Properties.Settings.Default.SafeCleanup) { try { CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), "Game_AutoBackUp", SelGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } }
 
-                    // Работаем...
-                    try
-                    {
                         // Удаляем ключ HKEY_CURRENT_USER\Software\Valve\Source\tf\Settings из реестра...
                         Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), false);
                         MessageBox.Show(AppStrings.PS_CleanupSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    catch (Exception Ex)
+                    else
                     {
-                        CoreLib.HandleExceptionEx(AppStrings.PS_CleanupErr, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                    }
-                }
-                else
-                {
-                    // Создадим бэкап файла с графическими настройками...
-                    if (Properties.Settings.Default.SafeCleanup)
-                    {
-                        CoreLib.CreateConfigBackUp(SelGame.VideoCfgFiles, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
+                        // Создадим бэкап файла с графическими настройками...
+                        if (Properties.Settings.Default.SafeCleanup) { CoreLib.CreateConfigBackUp(SelGame.VideoCfgFiles, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto); }
+
+                        // Помечаем его на удаление...
+                        CleanDirs.AddRange(SelGame.VideoCfgFiles);
                     }
 
-                    // Удаляем файлы...
-                    CoreLib.RemoveFileDirectoryEx(SelGame.VideoCfgFiles);
+                    // Создаём резервную копию...
+                    if (Properties.Settings.Default.SafeCleanup) { CoreLib.CreateConfigBackUp(SelGame.CloudConfigs, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg); }
+
+                    // Помечаем конфиги игры на удаление...
+                    CleanDirs.AddRange(SelGame.CloudConfigs);
+
+                    // Удаляем всю очередь...
+                    CoreLib.RemoveFileDirectoryEx(CleanDirs);
 
                     // Выводим сообщение...
                     MessageBox.Show(AppStrings.PS_CleanupSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception Ex)
+                {
+                    CoreLib.HandleExceptionEx(AppStrings.PS_CleanupErr, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                 }
             }
         }
