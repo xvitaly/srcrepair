@@ -3150,6 +3150,7 @@ namespace srcrepair
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cfg", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.cfg"));
+            CleanDirs.AddRange(SelGame.CloudConfigs);
             CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
