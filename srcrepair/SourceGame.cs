@@ -59,6 +59,11 @@ namespace srcrepair
         public string GameBinaryFile;
 
         /// <summary>
+        /// В этой переменной мы будем пути к каталогам с облачными конфигами.
+        /// </summary>
+        public List<String> CloudConfigs;
+        
+        /// <summary>
         /// В этой переменной мы будем хранить полный путь до каталога с
         /// файлами конфигурации управляемого приложения.
         /// </summary>
@@ -150,6 +155,29 @@ namespace srcrepair
             }
             return null;
         }
+        
+        /// <summary>
+        /// Ищет все доступные конфиги, хранящиеся в Cloud или его локальной копии.
+        /// </summary>
+        /// <param name="SteamIDs">Steam User IDs</param>
+        /// <param name="AppID">ID выбранного приложения</param>
+        /// <param name="SteamPath">Каталог установки Steam</param>
+        /// <returns>Возвращает список найденных файлов с графическими настройками</returns>
+        private List<String> GetCloudConfigs(List<String> SteamIDs, string AppID, string SteamPath)
+        {
+            List<String> Result = new List<String>();
+            foreach (string ID in SteamIDs)
+            {
+                // Сгенерируем путь к локальному конфигу...
+                string FullDir = Path.Combine(SteamPath, "userdata", ID, AppID, "local", "cfg", "config.cfg");
+                if (File.Exists(FullDir)) { Result.Add(FullDir); }
+
+                // Сгенерируем путь к конфигу из Steam Cloud...
+                FullDir = Path.Combine(SteamPath, "userdata", ID, AppID, "remote", "cfg", "config.cfg");
+                if (File.Exists(FullDir)) { Result.Add(FullDir); }
+            }
+            return Result;
+        }
 
         /// <summary>
         /// Ищет все доступные файлы с графическими настройками в локальном хранилище.
@@ -235,6 +263,7 @@ namespace srcrepair
                 AppHUDDir = Path.Combine(AUserDir, Properties.Settings.Default.HUDLocalDir, SmallAppName);
                 CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : String.Empty);
                 AppWorkshopDir = Path.Combine(SteamDir, Properties.Resources.SteamAppsFolderName, Properties.Resources.WorkshopFolderName, "content", GameInternalID);
+                CloudConfigs = GetCloudConfigs(CoreLib.GetUserIDs(SteamDir), SID, SteamDir);
             }
         }
     }
