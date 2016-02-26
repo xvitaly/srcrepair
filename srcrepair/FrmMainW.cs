@@ -2511,6 +2511,7 @@ namespace srcrepair
                     if (Properties.Settings.Default.SafeCleanup) { CoreLib.CreateConfigBackUp(SelGame.CloudConfigs, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg); }
 
                     // Помечаем конфиги игры на удаление...
+                    CleanDirs.Add(Path.Combine(SelGame.FullCfgPath, "config.cfg"));
                     CleanDirs.AddRange(SelGame.CloudConfigs);
 
                     // Удаляем всю очередь...
