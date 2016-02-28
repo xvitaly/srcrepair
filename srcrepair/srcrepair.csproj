@@ -370,10 +370,6 @@
       <Link>cfgs\comangliastability_ru.txt</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\tfiles\cfgs\config_default.cfg">
-      <Link>cfgs\config_default.cfg</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\tfiles\cfgs\dt_legal.cfg">
       <Link>cfgs\dt_legal.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
