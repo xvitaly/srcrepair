@@ -744,6 +744,18 @@ namespace srcrepair
             }
         }
 
+        public static List<String> FindFiles(string SearchPath, string SrcMask)
+        {
+            List<String> Result = new List<String>();
+            if (Directory.Exists(SearchPath))
+            {
+                DirectoryInfo DInfo = new DirectoryInfo(SearchPath);
+                FileInfo[] DirList = DInfo.GetFiles(SrcMask);
+                foreach (FileInfo DItem in DirList) { Result.Add(DItem.FullName); }
+            }
+            return Result;
+        }
+
         /// <summary>
         /// Выводит название компании-разработчика сборки.
         /// </summary>
