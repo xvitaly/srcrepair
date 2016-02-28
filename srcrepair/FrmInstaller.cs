@@ -125,6 +125,9 @@ namespace srcrepair
             {
                 try
                 {
+                    // Сгенерируем путь...
+                    string InstallDir = IsUsingUserDir ? Path.Combine(CustomInstallDir, Properties.Settings.Default.UserCustDirName) : FullGamePath;
+
                     // У нас множество алгоритмов, поэтому придётся делать проверки...
                     switch (Path.GetExtension(InstallPath.Text))
                     {
@@ -135,19 +138,19 @@ namespace srcrepair
                         case ".vpk": InstallFileNow(InstallPath.Text, CustomInstallDir);
                             break;
                         // Будем устанавливать конфиг...
-                        case ".cfg": InstallFileNow(InstallPath.Text, Path.Combine(CustomInstallDir, Properties.Settings.Default.UserCustDirName, "cfg"));
+                        case ".cfg": InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "cfg"));
                             break;
                         // Будем устанавливать карту...
-                        case ".bsp": InstallFileNow(InstallPath.Text, Path.Combine(CustomInstallDir, Properties.Settings.Default.UserCustDirName, "maps"));
+                        case ".bsp": InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "maps"));
                             break;
                         // Будем устанавливать хитсаунд...
-                        case ".wav": InstallFileNow(InstallPath.Text, Path.Combine(CustomInstallDir, Properties.Settings.Default.UserCustDirName, "sound", "ui"));
+                        case ".wav": InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "sound", "ui"));
                             break;
                         // Будем устанавливай спрей...
                         case ".vtf": InstallSprayNow(InstallPath.Text);
                             break;
                         // Будем устанавливать содержимое архива...
-                        case ".zip": CoreLib.ExtractFiles(InstallPath.Text, Path.Combine(CustomInstallDir, Properties.Settings.Default.UserCustDirName));
+                        case ".zip": CoreLib.ExtractFiles(InstallPath.Text, CustomInstallDir);
                             break;
                     }
 
