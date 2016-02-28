@@ -169,12 +169,10 @@ namespace srcrepair
             foreach (string ID in SteamIDs)
             {
                 // Сгенерируем путь к локальному конфигу...
-                string FullDir = Path.Combine(SteamPath, "userdata", ID, AppID, "local", "cfg", "config.cfg");
-                if (File.Exists(FullDir)) { Result.Add(FullDir); }
+                Result.AddRange(CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", ID, AppID, "local", "cfg"), "*.cfg"));
 
                 // Сгенерируем путь к конфигу из Steam Cloud...
-                FullDir = Path.Combine(SteamPath, "userdata", ID, AppID, "remote", "cfg", "config.cfg");
-                if (File.Exists(FullDir)) { Result.Add(FullDir); }
+                Result.AddRange(CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", ID, AppID, "remote", "cfg"), "*.cfg"));
             }
             return Result;
         }
