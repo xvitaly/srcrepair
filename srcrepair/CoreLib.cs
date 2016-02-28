@@ -744,6 +744,12 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Ищет файлы по заданной маске в указанном каталоге.
+        /// </summary>
+        /// <param name="SearchPath">Каталог, в котором будем искать файлы</param>
+        /// <param name="SrcMask">Маска файлов</param>
+        /// <returns>Возвращает список файлов, удовлетворяющих указанной маске.</returns>
         public static List<String> FindFiles(string SearchPath, string SrcMask)
         {
             List<String> Result = new List<String>();
