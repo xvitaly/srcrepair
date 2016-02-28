@@ -1794,20 +1794,13 @@ namespace srcrepair
         {
             try
             {
-                // Открываем каталог...
-                DirectoryInfo DInfo = new DirectoryInfo(Path.Combine(App.FullAppPath, "cfgs"));
-                
-                // Считываем список файлов по заданной маске...
-                FileInfo[] DirList = DInfo.GetFiles("*.cfg");
-                
-                // Начинаем обход массива...
-                foreach (FileInfo DItem in DirList)
+                // Получаем список установленных конфигов...
+                List<String> ConfAvail = CoreLib.FindFiles(Path.Combine(App.FullAppPath, "cfgs"), "*.cfg");
+
+                // Заполняем форму...
+                foreach (string Conf in ConfAvail)
                 {
-                    // Обрабатываем найденное...
-                    if (DItem.Name != "config_default.cfg")
-                    {
-                        Invoke((MethodInvoker)delegate() { FP_ConfigSel.Items.Add((string)DItem.Name); });
-                    }
+                    Invoke((MethodInvoker)delegate () { FP_ConfigSel.Items.Add(Path.GetFileName(Conf)); });
                 }
             }
             catch (Exception Ex)
