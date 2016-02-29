@@ -398,10 +398,6 @@
       <Link>srcrepair.iss</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\tfiles\pubkey.asc">
-      <Link>pubkey.asc</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\tfiles\cfgs\chrisdx9frames.cfg">
       <Link>cfgs\chrisdx9frames.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
