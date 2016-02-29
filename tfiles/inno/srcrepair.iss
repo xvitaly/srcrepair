@@ -67,9 +67,6 @@ Source: "games.xml"; DestDir: "{app}"; Flags: ignoreversion
 ; Копируем файл со базой данных HUD...
 Source: "huds.xml"; DestDir: "{app}"; Flags: ignoreversion
 
-; Копируем открытый ключ...
-Source: "pubkey.asc"; DestDir: "{app}"; Flags: ignoreversion
-
 ; Копируем модуль поддержки сжатия (собран как AnyCPU)...
 Source: "Ionic.Zip.Reduced.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "Ionic.Zip.Reduced.pdb"; DestDir: "{app}"; Flags: ignoreversion; Tasks: insdebginf
