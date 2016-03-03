@@ -755,26 +755,6 @@
     <value>Рабочий каталог "{0}" игры не существует!</value>
     <comment>Сообщение, которое записывается в лог при отсутствии каталога</comment>
   </data>
-  <data name="BR_SendCompleted" xml:space="preserve">
-    <value>Сообщение об ошибке было успешно отправлено!</value>
-    <comment>Сообщение об успешной отправке баг-репорта</comment>
-  </data>
-  <data name="BR_MsgFieldsEmpty" xml:space="preserve">
-    <value>Не заполнены необходимые поля. Заполните и повторите попытку!</value>
-    <comment>Сообщение при попытке отправки отчёта с незаполненными обязательными полями</comment>
-  </data>
-  <data name="BR_SendButtonAlt" xml:space="preserve">
-    <value>Отправка...</value>
-    <comment>Альтернативный текст кнопки в форме отправки отчётов об ошибках</comment>
-  </data>
-  <data name="BR_SendError" xml:space="preserve">
-    <value>Во время отправки сообщения произошла ошибка. Попробуйте ещё раз позднее!</value>
-    <comment>Сообщение об ошибке при отправке багрепорта</comment>
-  </data>
-  <data name="BR_CaptErr" xml:space="preserve">
-    <value>Неправильно введён текст с картинки. Повторите попытку!</value>
-    <comment>Сообщение при неправильном коде капчи</comment>
-  </data>
   <data name="BU_BinaryFile" xml:space="preserve">
     <value>Выбранный файл является бинарным, поэтому его невозможно открыть в текстовом редакторе!</value>
     <comment>Сообщение при попытке открыть бинарный файл на странице Резервные копии</comment>

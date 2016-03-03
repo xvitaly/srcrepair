@@ -421,51 +421,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Incorrect CAPTCHA code entered. Try again!.
-        /// </summary>
-        internal static string BR_CaptErr {
-            get {
-                return ResourceManager.GetString("BR_CaptErr", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Empty fields detected. Fill them and try again!.
-        /// </summary>
-        internal static string BR_MsgFieldsEmpty {
-            get {
-                return ResourceManager.GetString("BR_MsgFieldsEmpty", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Sending....
-        /// </summary>
-        internal static string BR_SendButtonAlt {
-            get {
-                return ResourceManager.GetString("BR_SendButtonAlt", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Bug report has been successfully sended!.
-        /// </summary>
-        internal static string BR_SendCompleted {
-            get {
-                return ResourceManager.GetString("BR_SendCompleted", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Warning! An error occured. Please try again later!.
-        /// </summary>
-        internal static string BR_SendError {
-            get {
-                return ResourceManager.GetString("BR_SendError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to The selected file is a binary. Unable open it in text editor!.
         /// </summary>
         internal static string BU_BinaryFile {

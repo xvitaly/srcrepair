@@ -597,21 +597,6 @@
   <data name="AppGameChkErrNtExs" xml:space="preserve">
     <value>Game work directory "{0}" does not exists!</value>
   </data>
-  <data name="BR_SendCompleted" xml:space="preserve">
-    <value>Bug report has been successfully sended!</value>
-  </data>
-  <data name="BR_MsgFieldsEmpty" xml:space="preserve">
-    <value>Empty fields detected. Fill them and try again!</value>
-  </data>
-  <data name="BR_SendButtonAlt" xml:space="preserve">
-    <value>Sending...</value>
-  </data>
-  <data name="BR_SendError" xml:space="preserve">
-    <value>Warning! An error occured. Please try again later!</value>
-  </data>
-  <data name="BR_CaptErr" xml:space="preserve">
-    <value>Incorrect CAPTCHA code entered. Try again!</value>
-  </data>
   <data name="BU_BinaryFile" xml:space="preserve">
     <value>The selected file is a binary. Unable open it in text editor!</value>
   </data>
