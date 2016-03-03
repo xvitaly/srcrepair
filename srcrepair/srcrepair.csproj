@@ -96,12 +96,6 @@
     <Compile Include="FrmArchWrk.Designer.cs">
       <DependentUpon>FrmArchWrk.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmBRep.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmBRep.Designer.cs">
-      <DependentUpon>FrmBRep.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmDnWrk.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,12 +207,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmArchWrk.ru.resx">
       <DependentUpon>FrmArchWrk.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmBRep.resx">
-      <DependentUpon>FrmBRep.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmBRep.ru.resx">
-      <DependentUpon>FrmBRep.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDnWrk.resx">
       <DependentUpon>frmDnWrk.cs</DependentUpon>
