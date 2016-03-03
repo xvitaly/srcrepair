@@ -388,4 +388,7 @@
   <data name="EmailRegex" xml:space="preserve">
     <value>\A(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z</value>
   </data>
+  <data name="AppBtURL" xml:space="preserve">
+    <value>https://github.com/xvitaly/srcrepair/issues</value>
+  </data>
 </root>

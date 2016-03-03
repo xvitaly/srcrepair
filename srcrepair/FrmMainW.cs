@@ -2582,6 +2582,7 @@ namespace srcrepair
         private void MNUReportBug_Click(object sender, EventArgs e)
         {
             // Перейдём в баг-трекер...
+            CoreLib.OpenWebPage(Properties.Resources.AppBtURL);
         }
 
         private void BUT_Refresh_Click(object sender, EventArgs e)

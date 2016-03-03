@@ -107,6 +107,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to https://github.com/xvitaly/srcrepair/issues.
+        /// </summary>
+        internal static string AppBtURL {
+            get {
+                return ResourceManager.GetString("AppBtURL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mozilla/5.0 ({0} NT {1}.{2}; {3}; rv:{4}) {5} ({6}).
         /// </summary>
         internal static string AppDefUA {
