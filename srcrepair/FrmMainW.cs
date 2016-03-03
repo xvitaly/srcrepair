@@ -2581,11 +2581,7 @@ namespace srcrepair
 
         private void MNUReportBug_Click(object sender, EventArgs e)
         {
-            // Отобразим форму сообщения об ошибках...
-            using (frmBugReporter BgRepFrm = new frmBugReporter(App.UserAgent))
-            {
-                BgRepFrm.ShowDialog();
-            }
+            // Перейдём в баг-трекер...
         }
 
         private void BUT_Refresh_Click(object sender, EventArgs e)
