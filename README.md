@@ -18,7 +18,7 @@ Download application (this link always contains latest version): https://www.eas
 
 Full archive: https://www.easycoding.org/download
 
-Official bug tracker: https://bugs.easycoding.org/
+Official bug tracker: https://github.com/xvitaly/srcrepair/issues
 
 Supported games
 =========
