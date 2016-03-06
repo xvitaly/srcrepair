@@ -70,7 +70,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! Parse error detected. Probably file {0} is opened not completely or with errors..
+        ///   Looks up a localized string similar to Warning! Parse error detected. Probably the file {0} is opened with some errors..
         /// </summary>
         internal static string AHE_ExceptionDetected {
             get {
@@ -79,7 +79,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hosts file: {0}. Show it in Windows Explorer?.
+        ///   Looks up a localized string similar to Hosts file location: {0}. Show it in Windows Explorer?.
         /// </summary>
         internal static string AHE_HMessg {
             get {
@@ -106,7 +106,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Hosts file on the resulting path {0} could not be found..
+        ///   Looks up a localized string similar to The Hosts file {0} could not be found..
         /// </summary>
         internal static string AHE_NoFileDetected {
             get {
@@ -124,7 +124,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File hosts was successfully saved!.
+        ///   Looks up a localized string similar to Hosts file was successfully saved!.
         /// </summary>
         internal static string AHE_Saved {
             get {
@@ -133,7 +133,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attention! An error occurred while writing to file {0}. Maybe you have not enough rights for this or someone is blocking write attempts..
+        ///   Looks up a localized string similar to Warning! An error occurred while trying to write into {0}. Maybe you have not enough rights for this or someone (for example antivirus software) is blocking our write attempts..
         /// </summary>
         internal static string AHE_SaveException {
             get {
@@ -151,16 +151,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attention! On the selected Steam login we can&apos;t detect any installed supported games. Please select another login from list..
-        /// </summary>
-        internal static string AppChangeLogin {
-            get {
-                return ResourceManager.GetString("AppChangeLogin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Checking for Updates... Please wait..
+        ///   Looks up a localized string similar to Checking for updates... Please wait..
         /// </summary>
         internal static string AppCheckingForUpdates {
             get {
@@ -304,7 +295,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attention! You have disabled SafeClean module, so backups will not be created until its re-activation..
+        ///   Looks up a localized string similar to Attention! You have disabled SafeClean module, so backups will not be created until it will be re-activated..
         /// </summary>
         internal static string AppSafeClnDisabled {
             get {
@@ -385,7 +376,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannot find video database of &quot;{0}&quot; in file &quot;{1}&quot;..
+        ///   Looks up a localized string similar to Cannot find video database file of &quot;{0}&quot; in file &quot;{1}&quot;..
         /// </summary>
         internal static string AppVideoDbNotFound {
             get {
@@ -412,7 +403,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while creating the backup. Backup has been created!.
+        ///   Looks up a localized string similar to An error occurred while creating the backup. No backups has been created!.
         /// </summary>
         internal static string BackUpCreationFailed {
             get {
@@ -547,16 +538,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This file can not be restored directly from SRC Repair. Open it with any archiver and restore files manually..
-        /// </summary>
-        internal static string BU_BudArchiveMsg {
-            get {
-                return ResourceManager.GetString("BU_BudArchiveMsg", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to There was an error occured. File was not removed!.
+        ///   Looks up a localized string similar to An error occured. File was not removed!.
         /// </summary>
         internal static string BU_DelFailed {
             get {
@@ -583,7 +565,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to There was an error occured. Can&apos;t get list of backups. Create at least one backup and try again later..
+        ///   Looks up a localized string similar to An error occured. Can&apos;t get list of backups. Create at least one backup and try again later..
         /// </summary>
         internal static string BU_ListLdFailed {
             get {
@@ -601,7 +583,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Action is impossible: no files selected!.
+        ///   Looks up a localized string similar to No files selected! Please select at least one and try again..
         /// </summary>
         internal static string BU_NoSelected {
             get {
@@ -637,7 +619,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to There was an error occured. Backup file was not created!.
+        ///   Looks up a localized string similar to An error occured. Backup file was not created!.
         /// </summary>
         internal static string BU_RegErr {
             get {
@@ -646,7 +628,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to There was an error occured. BackUp was not restored!.
+        ///   Looks up a localized string similar to An error occured. BackUp was not restored!.
         /// </summary>
         internal static string BU_RestFailed {
             get {
@@ -673,7 +655,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unknown file type. Can&apos;t restore!.
+        ///   Looks up a localized string similar to Unknown file type. Can&apos;t restore it!.
         /// </summary>
         internal static string BU_UnknownType {
             get {
@@ -700,7 +682,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attention! When saving a file error occurred. File was not saved!.
+        ///   Looks up a localized string similar to Warning! An error occurred. File was not saved!.
         /// </summary>
         internal static string CE_CfgSVVEx {
             get {
@@ -736,7 +718,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! Parse error detected. Probably the config is opened not completely or with errors..
+        ///   Looks up a localized string similar to Warning! Parse error detected. The config was opened with errors..
         /// </summary>
         internal static string CE_ExceptionDetected {
             get {
@@ -745,7 +727,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open file to use this feature..
+        ///   Looks up a localized string similar to Open file to use this feature!.
         /// </summary>
         internal static string CE_NoFileOpened {
             get {
@@ -754,7 +736,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Can not read the contents of the config, as file not found!.
+        ///   Looks up a localized string similar to Could not read the contents of config file!.
         /// </summary>
         internal static string CE_OpenFailed {
             get {
@@ -763,7 +745,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attention! It is not recommended to edit this file, because this may lead to unpredictable consequences. Edit it at your own risk..
+        ///   Looks up a localized string similar to Warning! It is not recommended to edit this file, because this may lead to unpredictable consequences. Edit it at your own risk..
         /// </summary>
         internal static string CE_RestConfigOpenWarn {
             get {
@@ -781,7 +763,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A critical error: can not install the selected config!.
+        ///   Looks up a localized string similar to A critical error: could not install the selected config!.
         /// </summary>
         internal static string FP_InstallFailed {
             get {
@@ -790,7 +772,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attention! Setting FPS-config reduce all graphics settings to the absolute minimum that will lead to significant deterioration of the quality of game graphics and game performance increase. Are you sure you want to set the FPS-config?.
+        ///   Looks up a localized string similar to Warning! Setting FPS-config will reduce all graphics settings to the absolute minimum that will lead to significant deterioration of the quality of game graphics and game performance increase. Are you sure you want to set the FPS-config?.
         /// </summary>
         internal static string FP_InstallQuestion {
             get {
@@ -799,7 +781,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Config has been successfully installed!.
+        ///   Looks up a localized string similar to FPS config has been successfully installed!.
         /// </summary>
         internal static string FP_InstallSuccessful {
             get {
@@ -808,7 +790,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attention! For the selected game we do not have FPS-config, so this page will be disabled!.
+        ///   Looks up a localized string similar to Warning! We have no FPS-configs for selected game, so this page will be disabled!.
         /// </summary>
         internal static string FP_NoCfgGame {
             get {
@@ -817,7 +799,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unfortunately, the description of the chosen config is not available. We apologize for any inconvenience..
+        ///   Looks up a localized string similar to Unfortunately, the description of the chosen config is not available. We apologize for any inconveniences..
         /// </summary>
         internal static string FP_NoDescr {
             get {
@@ -826,7 +808,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Вы не выбрали FPS-конфиг из списка. Выберите конфиг и повторите попытку!.
+        ///   Looks up a localized string similar to Please select at least one FPS config from list!.
         /// </summary>
         internal static string FP_NothingSelected {
             get {
@@ -835,7 +817,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while removing the installed config!.
+        ///   Looks up a localized string similar to An error occurred during removal of the installed config!.
         /// </summary>
         internal static string FP_RemoveFailed {
             get {
@@ -844,7 +826,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Needless to delete: FPS-config for the current game is not installed!.
+        ///   Looks up a localized string similar to Nothing to remove: FPS-config for the selected game is not installed!.
         /// </summary>
         internal static string FP_RemoveNotExists {
             get {
@@ -853,7 +835,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Installed FPS-config has been successfully deleted!.
+        ///   Looks up a localized string similar to Installed FPS-config has been successfully removed!.
         /// </summary>
         internal static string FP_RemoveSuccessful {
             get {
@@ -867,15 +849,6 @@ namespace srcrepair {
         internal static string FP_SelectFromList {
             get {
                 return ResourceManager.GetString("FP_SelectFromList", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Your own FPS-config was successfully generated and loaded to Config Editor. You can now edit it manually. Please save it as autoexec.cfg to apply in game..
-        /// </summary>
-        internal static string FPW_Success {
-            get {
-                return ResourceManager.GetString("FPW_Success", resourceCulture);
             }
         }
         
@@ -907,7 +880,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Found an unhandled exception. Please inform the developers email: vitaly@easycoding.org..
+        ///   Looks up a localized string similar to Found an unhandled exception. Please inform the developers email: srcrepair@easycoding.org..
         /// </summary>
         internal static string GeneralErrorDetected {
             get {
@@ -925,7 +898,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attention! An installed FPS-config detected, so the settings from this page except the DirectX mode will be ignored by the game until you remove this config..
+        ///   Looks up a localized string similar to Warning! An installed FPS-config detected, so the settings from this page except the DirectX mode will be ignored by the game until you remove this config..
         /// </summary>
         internal static string GT_FPSCfgDetected {
             get {
@@ -952,7 +925,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while saving the game graphics settings into a file!.
+        ///   Looks up a localized string similar to An error occurred during saving the game graphics settings into a file!.
         /// </summary>
         internal static string GT_NCFFailure {
             get {
@@ -979,7 +952,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Can not open registry key. Please start game at least once and try again..
+        ///   Looks up a localized string similar to Could not open registry key. Please start game at least once and try again..
         /// </summary>
         internal static string GT_RegOpenErr {
             get {
@@ -1123,7 +1096,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Installation of outdated HUDs not allowed. Please update database or select another HUD..
+        ///   Looks up a localized string similar to Installation of outdated HUDs is not allowed. Please update database or select another HUD..
         /// </summary>
         internal static string HD_Outdated {
             get {
@@ -1168,7 +1141,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Are you sure you want to {0}?.
+        ///   Looks up a localized string similar to Do you really want to {0}?.
         /// </summary>
         internal static string KB_ExQuestion {
             get {
@@ -1186,7 +1159,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The required action successfully completed!.
+        ///   Looks up a localized string similar to The required action has been successfully completed!.
         /// </summary>
         internal static string KB_ExSuccess {
             get {
@@ -1249,7 +1222,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error detected while saving database to file. File may be damaged..
+        ///   Looks up a localized string similar to An error occured while saving database into file. It may be damaged..
         /// </summary>
         internal static string MM_SaveException {
             get {
@@ -1267,7 +1240,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attention! An error occurred while saving!.
+        ///   Looks up a localized string similar to Warning! An error occurred during saving your settings!.
         /// </summary>
         internal static string Opts_Error {
             get {
@@ -1276,7 +1249,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Application settings were saved successfully. Attention! Some of them will be activated only after restarting the program..
+        ///   Looks up a localized string similar to The application settings has been saved successfully. Some of them will be activated only after restarting the application..
         /// </summary>
         internal static string Opts_Saved {
             get {
@@ -1321,7 +1294,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred during the clean up empty directories! Maybe you do not have appropriate access rights..
+        ///   Looks up a localized string similar to An error occurred during cleaning up of empty directories! Maybe you do not have appropriate access rights..
         /// </summary>
         internal static string PS_CleanEmptyDirsError {
             get {
@@ -1375,7 +1348,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cleanup was successfully completed!.
+        ///   Looks up a localized string similar to Cleanup has been successfully completed!.
         /// </summary>
         internal static string PS_CleanupSuccess {
             get {
@@ -1384,7 +1357,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Perform the cleanup?.
+        ///   Looks up a localized string similar to Perform this cleanup?.
         /// </summary>
         internal static string PS_ExecuteMSG {
             get {
@@ -1411,7 +1384,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You chose the wrong language Steam from the dropdown list, so we will use English!.
+        ///   Looks up a localized string similar to You have chosen the wrong language Steam from the dropdown list, so we will use English!.
         /// </summary>
         internal static string PS_NoLangSelected {
             get {
@@ -1420,7 +1393,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You do not choose! Please select at least one of the options of cleaning and run the cleanup again!.
+        ///   Looks up a localized string similar to Please select at least one of the cleaning options and then run this cleanup again!.
         /// </summary>
         internal static string PS_NothingSelected {
             get {
@@ -1443,15 +1416,6 @@ namespace srcrepair {
         internal static string PS_ProcessPrepare {
             get {
                 return ResourceManager.GetString("PS_ProcessPrepare", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Steam has been successfully terminated..
-        /// </summary>
-        internal static string PS_ProcessTerminated {
-            get {
-                return ResourceManager.GetString("PS_ProcessTerminated", resourceCulture);
             }
         }
         
@@ -1483,15 +1447,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Are you sure you want to restore factory game settings? This will remove all non-standard and old files and settings stored in Windows registry..
-        /// </summary>
-        internal static string PS_ResetSettingsMsg {
-            get {
-                return ResourceManager.GetString("PS_ResetSettingsMsg", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Files for cleanup is not selected! Please select files and try again later..
         /// </summary>
         internal static string PS_SelectItemsMsg {
@@ -1501,20 +1456,11 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cleanup completed successfully. Steam will run in recovery mode right now!.
+        ///   Looks up a localized string similar to The cleanup had been successfully completed. Steam will run in recovery mode right now!.
         /// </summary>
         internal static string PS_SeqCompleted {
             get {
                 return ResourceManager.GetString("PS_SeqCompleted", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Steam client is running! To execute this cleanup please close it..
-        /// </summary>
-        internal static string PS_SteamRunning {
-            get {
-                return ResourceManager.GetString("PS_SteamRunning", resourceCulture);
             }
         }
         
@@ -1537,7 +1483,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Installation completed successfully!.
+        ///   Looks up a localized string similar to Installation has been completed successfully!.
         /// </summary>
         internal static string QI_InstSuccessfull {
             get {
@@ -1564,7 +1510,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Compressed report with the name {0} has been successfully created! Now we will open the directory with generated report file in order that you can upload it to technical support service..
+        ///   Looks up a localized string similar to Compressed report {0} has been successfully created! Now we will open the directory with generated report file, so you can upload it to technical support service..
         /// </summary>
         internal static string RPB_ComprGen {
             get {
@@ -1582,16 +1528,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Report with the name {0} has been successfully created! Now we will open the directory with generated report file in order that you can upload it to technical support service..
-        /// </summary>
-        internal static string RPB_Generated {
-            get {
-                return ResourceManager.GetString("RPB_Generated", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error has occurred. Unable to execute tool Microsoft System Information. Perhaps it is not installed on this operating system. Creating a report is impossible..
+        ///   Looks up a localized string similar to An error occurred. Unable to execute Microsoft System Information tool. Perhaps it is not installed on this operating system. Creating a report is impossible..
         /// </summary>
         internal static string RPB_GenException {
             get {
@@ -1609,15 +1546,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Steam login was successfully changed. Let&apos;s continue to work with the new one....
-        /// </summary>
-        internal static string StatusLoginChanged {
-            get {
-                return ResourceManager.GetString("StatusLoginChanged", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to All systems operational..
         /// </summary>
         internal static string StatusNormal {
@@ -1627,7 +1555,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Opened file in Config Editor: {0}..
+        ///   Looks up a localized string similar to CE loaded file: {0}..
         /// </summary>
         internal static string StatusOpenedFile {
             get {
@@ -1636,97 +1564,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please select game from the list!.
-        /// </summary>
-        internal static string StatusSApp {
-            get {
-                return ResourceManager.GetString("StatusSApp", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please select your Steam login from the list!.
-        /// </summary>
-        internal static string StatusSLogin {
-            get {
-                return ResourceManager.GetString("StatusSLogin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Steam Cloud settings was successfully changed!.
-        /// </summary>
-        internal static string SteamCloudChanged {
-            get {
-                return ResourceManager.GetString("SteamCloudChanged", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to disabled.
-        /// </summary>
-        internal static string SteamCloudStatusOff {
-            get {
-                return ResourceManager.GetString("SteamCloudStatusOff", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to enabled.
-        /// </summary>
-        internal static string SteamCloudStatusOn {
-            get {
-                return ResourceManager.GetString("SteamCloudStatusOn", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to You refused to enter your login Steam, so the work program is impossible. Restart this program later and enter the correct login!.
-        /// </summary>
-        internal static string SteamLoginCancel {
-            get {
-                return ResourceManager.GetString("SteamLoginCancel", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please enter your Steam login:.
-        /// </summary>
-        internal static string SteamLoginEnterText {
-            get {
-                return ResourceManager.GetString("SteamLoginEnterText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Enter Steam login.
-        /// </summary>
-        internal static string SteamLoginEnterTitle {
-            get {
-                return ResourceManager.GetString("SteamLoginEnterTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Attention! Source Repair was unable to get a list of active logins Steam, so you have to enter it manually..
-        /// </summary>
-        internal static string SteamLoginsNotDetected {
-            get {
-                return ResourceManager.GetString("SteamLoginsNotDetected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error occured! Unable to locate user folders inside SteamApps. Start at least one supported game from Steam and restart this program..
-        /// </summary>
-        internal static string SteamNoLoginsDetected {
-            get {
-                return ResourceManager.GetString("SteamNoLoginsDetected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Warning! Invalid characters detected in Steam path. Steam and the games will not work correctly. Reinstall Steam to folder, the path to which will contain only latin symbols..
+        ///   Looks up a localized string similar to Warning! Invalid characters detected in Steam path. Steam and some games will work incorrectly. Reinstall Steam to folder, the path to which will contain only latin characters and numbers..
         /// </summary>
         internal static string SteamNonASCIIDetected {
             get {
@@ -1735,7 +1573,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Steam installed correctly: Steam directory path does not contain illegal characters..
+        ///   Looks up a localized string similar to Steam installation status: Steam directory path does not contain restricted characters..
         /// </summary>
         internal static string SteamNonASCIINotDetected {
             get {
@@ -1744,7 +1582,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Registry keys related to Steam is not found. You do not need their cleaning. Click OK to exit the program!.
+        ///   Looks up a localized string similar to Registry keys related to Steam was&apos;t found. You do not need their cleaning. Click OK to exit the program!.
         /// </summary>
         internal static string SteamNotDetected {
             get {
@@ -1789,7 +1627,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! Critical error occured: can not get the path to the Steam from the registry, so you&apos;ll have to manually specify the correct path!.
+        ///   Looks up a localized string similar to Warning! Critical error occured: could not get the path to the Steam from the registry, so you&apos;ll have to manually specify the correct path!.
         /// </summary>
         internal static string SteamPathNotDetected {
             get {

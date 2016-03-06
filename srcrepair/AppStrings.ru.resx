@@ -186,7 +186,7 @@
     <comment>Сообщение, выдаваемое при закрытии основной формы.</comment>
   </data>
   <data name="GeneralErrorDetected" xml:space="preserve">
-    <value>Обнаружено исключение, которое мы не смогли обработать. Пожалуйста, сообщите разработчикам на email: vitaly@easycoding.org.</value>
+    <value>Обнаружено исключение, которое мы не смогли обработать. Пожалуйста, сообщите разработчикам на email: srcrepair@easycoding.org.</value>
     <comment>Сообщение, выдаваемое при различных исключениях...</comment>
   </data>
   <data name="GT_DxLevelMsg" xml:space="preserve">
@@ -241,17 +241,9 @@
     <value>Вы ничего не выбрали! Выберите хотя бы одну из опций очистки и повторите запуск!</value>
     <comment>Сообщение, выдаваемое при отсутствии отмеченных чекбоксов</comment>
   </data>
-  <data name="PS_ProcessTerminated" xml:space="preserve">
-    <value>Внимание! В памяти был обнаружен запущенный процесс Steam. Steam был успешно завершён.</value>
-    <comment>Сообщение, выдаваемое при обнаружении в памяти активного процесса Steam.exe</comment>
-  </data>
   <data name="PS_SeqCompleted" xml:space="preserve">
     <value>Очистка успешно выполнена. Steam будет запущен в режиме восстановления прямо сейчас!</value>
     <comment>Сообщение об успешном завершении очистки</comment>
-  </data>
-  <data name="StatusLoginChanged" xml:space="preserve">
-    <value>Логин Steam был успешно сменён. Продолжаем работу с новым...</value>
-    <comment>Сообщение о смене логина</comment>
   </data>
   <data name="StatusNormal" xml:space="preserve">
     <value>Все системы работают в штатном режиме.</value>
@@ -260,30 +252,6 @@
   <data name="StatusOpenedFile" xml:space="preserve">
     <value>В редакторе открыт файл: {0}.</value>
     <comment>Сообщение строки статуса об открытом файле...</comment>
-  </data>
-  <data name="StatusSApp" xml:space="preserve">
-    <value>Пожалуйста, выберите игру из списка!</value>
-    <comment>Сообщение о необходимости выбора управляемого приложения</comment>
-  </data>
-  <data name="StatusSLogin" xml:space="preserve">
-    <value>Пожалуйста, выберите Ваш логин Steam из списка!</value>
-    <comment>Сообщение о необходимости выбора логина</comment>
-  </data>
-  <data name="SteamLoginCancel" xml:space="preserve">
-    <value>Вы отказались вводить свой логин Steam, поэтому работа программы невозможна. Повторите запуск позднее и введите правильный логин!</value>
-    <comment>Сообщение, выдаваемое при отказе пользователя ввести свой логин Steam</comment>
-  </data>
-  <data name="SteamLoginEnterText" xml:space="preserve">
-    <value>Введите Ваш логин Steam:</value>
-    <comment>Текст InputBox'а ввода логина</comment>
-  </data>
-  <data name="SteamLoginEnterTitle" xml:space="preserve">
-    <value>Ввод логина</value>
-    <comment>Заголовок InputBox'а ввода логина</comment>
-  </data>
-  <data name="SteamLoginsNotDetected" xml:space="preserve">
-    <value>Внимание! Source Repair не смог получить список активных логинов Steam, поэтому Вам придётся ввести его вручную.</value>
-    <comment>Сообщение, выдаваемое при невозможности получить список логинов Steam</comment>
   </data>
   <data name="SteamNonASCIIDetected" xml:space="preserve">
     <value>Внимание! В пути к Steam обнаружены недопустимые символы. Steam и игры будут работать с ошибками. Переустановите Steam в папку, путь до которой будет содержать только латинские буквы.</value>
@@ -347,10 +315,6 @@
     <value>вертикали</value>
     <comment>Подстановка для сообщения</comment>
   </data>
-  <data name="PS_ResetSettingsMsg" xml:space="preserve">
-    <value>Вы уверены, что хотите сбросить все настройки игры? Будут удалены все нестандартные и старые файлы, а также настройки, хранящиеся в реестре.</value>
-    <comment>Сообщение, выдаваемое при попытке сбросить все настройки</comment>
-  </data>
   <data name="RPB_CloseCpt" xml:space="preserve">
     <value>Закрыть</value>
     <comment>Текст на кнопке</comment>
@@ -363,17 +327,9 @@
     <value>Ждите. Работаю...</value>
     <comment>Текст на кнопке во время создания отчёта</comment>
   </data>
-  <data name="RPB_Generated" xml:space="preserve">
-    <value>Отчёт с именем {0} был успешно создан! Сейчас будет открыт каталог с отчётом для того, чтобы Вы смогли загрузить его на форум.</value>
-    <comment>Сообщение об успешном создании отчёта</comment>
-  </data>
   <data name="RPB_GenException" xml:space="preserve">
     <value>Произошла ошибка. Невозможно выполнить утилиту Microsoft System Information. Возможно, она не установлена в данной ОС. Создание отчёта невозможно.</value>
     <comment>Сообщение об ошибке при создании отчёта</comment>
-  </data>
-  <data name="FPW_Success" xml:space="preserve">
-    <value>FPS-конфиг был успешено сгенерирован и отправлен в Редактор конфигов для дальнейшего изменения или сохранения. Чтобы сохранить результат, нажмите в редакторе кнопку Сохранить изменения.</value>
-    <comment>Сообщение, выдаемое при завершении генерирования конфига плагином</comment>
   </data>
   <data name="QI_Excpt" xml:space="preserve">
     <value>Произошла ошибка во время установки выбранного файла!</value>
@@ -587,18 +543,6 @@
     <value>Идёт проверка обновлений... Пожалуйста, подождите!</value>
     <comment>Сообщение о запущенной проверке обновлений для строки статуса</comment>
   </data>
-  <data name="SteamCloudChanged" xml:space="preserve">
-    <value>Настройки Steam Cloud были успешно переключены!</value>
-    <comment>Сообщение при переключении настроек Steam Cloud</comment>
-  </data>
-  <data name="SteamCloudStatusOff" xml:space="preserve">
-    <value>выключен</value>
-    <comment>Текст в строке состояния (Cloud выключён)</comment>
-  </data>
-  <data name="SteamCloudStatusOn" xml:space="preserve">
-    <value>включён</value>
-    <comment>Текст в строке состояния (Cloud включён)</comment>
-  </data>
   <data name="PS_CleanException" xml:space="preserve">
     <value>Произошла ошибка во время процедуры очистки. Возможно, у Вас отсутствуют необходимые права для этого действия.</value>
     <comment>Сообщение, выдаваемое при возникновении исключения во время запуска процедур очистки блобов и реестра</comment>
@@ -678,10 +622,6 @@
   <data name="BU_BType_Cont" xml:space="preserve">
     <value>Архив</value>
     <comment>Тип бэкапа: архивный контейнер</comment>
-  </data>
-  <data name="BU_BudArchiveMsg" xml:space="preserve">
-    <value>Этот тип файла не может быть восстановлен из SRC Repair. Откройте его в любом архиваторе и выполните восстановление самостоятельно.</value>
-    <comment>Сообщение при попытке восстановить архивный контейнер</comment>
   </data>
   <data name="BU_UnknownType" xml:space="preserve">
     <value>Отсутствуют правила для восстановления такого типа файлов!</value>
@@ -778,10 +718,6 @@
   <data name="DB_WrkInProgress" xml:space="preserve">
     <value>Пожалуйста, дождитесь завершения проверки обновлений!</value>
     <comment>Выводится при попытке запуска установки обновлений до завершения их поиска</comment>
-  </data>
-  <data name="PS_SteamRunning" xml:space="preserve">
-    <value>Обнаружен запущенный клиент Steam! Чтобы выполнить эту очистку завершите его работу.</value>
-    <comment>Сообщение при обнаружении клиента Steam при попытке запуска очистки его кэшей или журналов</comment>
   </data>
   <data name="BU_BType_Unkn" xml:space="preserve">
     <value>Неизвестный</value>
