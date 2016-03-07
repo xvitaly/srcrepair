@@ -25,14 +25,30 @@ namespace srcrepair
 {
     public sealed class HUDManager
     {
+        /// <summary>
+        /// Хранит информацию о всех доступных HUD.
+        /// </summary>
         private List<HUDTlx> HUDsAvailable;
+        
+        /// <summary>
+        /// Хранит информацию о выбранном HUD. Для заполнения используется метод Select().
+        /// </summary>
         public HUDTlx SelectedHUD;
 
+        /// <summary>
+        /// Выбирает определённый HUD.
+        /// </summary>
+        /// <param name="HUDName">Имя HUD, информацию о котором надо получить</param>
         public void Select(string HUDName)
         {
             SelectedHUD = HUDsAvailable.Find(Item => String.Equals(Item.Name, HUDName, StringComparison.CurrentCultureIgnoreCase));
         }
 
+        /// <summary>
+        /// Получает имена найденных HUD для указанной игры.
+        /// </summary>
+        /// <param name="GameName">ID игры</param>
+        /// <returns>Возвращает имена найденных HUD</returns>
         public List<String> GetHUDNames(string GameName)
         {
             // Инициализируем список...
@@ -48,6 +64,11 @@ namespace srcrepair
             return Result;
         }
 
+        /// <summary>
+        /// Конструктор класса. Читает базу данных в формате XML и заполняет нашу структуру.
+        /// </summary>
+        /// <param name="HUDDbFile">Путь к БД HUD</param>
+        /// <param name="AppHUDDir">Путь к локальному каталогу с HUD</param>
         public HUDManager(string HUDDbFile, string AppHUDDir)
         {
             // Инициализируем наш список...
