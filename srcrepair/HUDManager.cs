@@ -12,6 +12,26 @@ namespace srcrepair
         private List<HUDTlx> HUDsAvailable;
         public HUDTlx SelectedHUD;
 
+        public void Select(string HUDName)
+        {
+            SelectedHUD = HUDsAvailable.Find(Item => String.Equals(Item.Name, HUDName, StringComparison.CurrentCultureIgnoreCase));
+        }
+
+        public List<String> GetHUDNames(string GameName)
+        {
+            // Инициализируем список...
+            List<String> Result = new List<String>();
+
+            // Выполняем запрос...
+            foreach (HUDTlx HUD in HUDsAvailable.FindAll(Item => String.Equals(Item.Game, GameName, StringComparison.CurrentCultureIgnoreCase)))
+            {
+                Result.Add(HUD.Name);
+            }
+
+            // Возвращаем результат...
+            return Result;
+        }
+
         public HUDManager(string HUDDbFile, string AppHUDDir)
         {
             // Инициализируем наш список...
