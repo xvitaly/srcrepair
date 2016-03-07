@@ -31,6 +31,11 @@ namespace srcrepair
         public string Name;
 
         /// <summary>
+        /// Короткое название игры.
+        /// </summary>
+        public string Game;
+
+        /// <summary>
         /// Содержит URI для загрузки.
         /// </summary>
         public string URI;
@@ -109,32 +114,29 @@ namespace srcrepair
         /// <summary>
         /// Конструктор класса. Получает информацию о выбранном HUD.
         /// </summary>
-        /// <param name="HUDName">Имя HUD, информацию о котором нужно получить</param>
-        /// <param name="AppPath">Путь к каталогу установки SRC Repair</param>
         /// <param name="AppHUDDir">Путь к локальному каталогу с HUD</param>
-        public HUDTlx(string HUDName, string AppPath, string AppHUDDir)
+        /// <param name="HDName">Значение Name из БД</param>
+        /// <param name="HDGame">Значение Game из БД</param>
+        /// <param name="HDURI">Значение URI из БД</param>
+        /// <param name="HDUpURI">Значение UpURI из БД</param>
+        /// <param name="HDIsUp">Значение IsUpdated из БД</param>
+        /// <param name="HDPreview">Значение Preview из БД</param>
+        /// <param name="HDSite">Значение Site из БД</param>
+        /// <param name="HDAd">Значение ArchiveDir из БД</param>
+        /// <param name="HDId">Значение InstallDir из БД</param>
+        /// <param name="HDLocal">Локальный путь к файлу с HUD</param>
+        public HUDTlx(string AppHUDDir, string HDName, string HDGame, string HDURI, string HDUpURI, bool HDIsUp, string HDPreview, string HDSite, string HDAd, string HDId, string HDLocal)
         {
-            using (FileStream XMLFS = new FileStream(Path.Combine(AppPath, Properties.Settings.Default.HUDDbFile), FileMode.Open, FileAccess.Read))
-            {
-                XmlDocument XMLD = new XmlDocument();
-                XMLD.Load(XMLFS);
-                for (int i = 0; i < XMLD.GetElementsByTagName("HUD").Count; i++)
-                {
-                    if (String.Compare(XMLD.GetElementsByTagName("Name")[i].InnerText, HUDName, true) == 0)
-                    {
-                        Name = XMLD.GetElementsByTagName("Name")[i].InnerText;
-                        URI = XMLD.GetElementsByTagName("URI")[i].InnerText;
-                        UpURI = XMLD.GetElementsByTagName("UpURI")[i].InnerText;
-                        IsUpdated = XMLD.GetElementsByTagName("IsUpdated")[i].InnerText == "1";
-                        Preview = XMLD.GetElementsByTagName("Preview")[i].InnerText;
-                        Site = XMLD.GetElementsByTagName("Site")[i].InnerText;
-                        ArchiveDir = XMLD.GetElementsByTagName("ArchiveDir")[i].InnerText;
-                        InstallDir = XMLD.GetElementsByTagName("InstallDir")[i].InnerText;
-                        LocalFile = Path.Combine(AppHUDDir, Path.ChangeExtension(Path.GetFileName(Name), ".zip"));
-                        break;
-                    }
-                }
-            }
+            Name = HDName;
+            Game = HDGame;
+            URI = HDURI;
+            UpURI = HDUpURI;
+            IsUpdated = HDIsUp;
+            Preview = HDPreview;
+            Site = HDSite;
+            ArchiveDir = HDAd;
+            InstallDir = HDId;
+            LocalFile = HDLocal;
         }
     }
 }
