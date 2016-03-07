@@ -1844,7 +1844,7 @@ namespace srcrepair
                 HUDMan = new HUDManager(Path.Combine(App.FullAppPath, Properties.Settings.Default.HUDDbFile), SelGame.AppHUDDir);
 
                 // Вносим HUD текущей игры в форму...
-                Invoke((MethodInvoker)delegate () { HD_HSel.DataSource = HUDMan.GetHUDNames(SelGame.SmallAppName); });
+                Invoke((MethodInvoker)delegate () { HD_HSel.Items.AddRange(HUDMan.GetHUDNames(SelGame.SmallAppName).ToArray<object>()); });
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
