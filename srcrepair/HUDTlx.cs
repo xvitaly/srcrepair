@@ -1,5 +1,5 @@
 ﻿/*
- * Класс системы управления HUD'ами.
+ * Класс выбранного HUD.
  * 
  * Copyright 2011 - 2016 EasyCoding Team (ECTeam).
  * Copyright 2005 - 2016 EasyCoding Team.
@@ -17,7 +17,6 @@
  * о лицензии - в GPL.txt.
 */
 using System;
-using System.Xml;
 using System.IO;
 using System.Collections.Generic;
 
