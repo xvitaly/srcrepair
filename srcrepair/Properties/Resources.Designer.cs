@@ -107,7 +107,7 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://github.com/xvitaly/srcrepair/issues.
+        ///   Looks up a localized string similar to https://github.com/xvitaly/srcrepair/issues/new.
         /// </summary>
         internal static string AppBtURL {
             get {
