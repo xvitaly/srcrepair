@@ -550,4 +550,14 @@
     <SID>280740</SID>
     <Executable>portal2.exe</Executable>
   </Game>
+  <Game Name="Prospekt">
+    <HasVF>0</HasVF>
+    <DirName>Prospekt</DirName>
+    <SmallName>prospekt</SmallName>
+    <VFDir>prospekt</VFDir>
+    <UserDir>0</UserDir>
+    <HUDsAvail>0</HUDsAvail>
+    <SID>399120</SID>
+    <Executable>hl2.exe</Executable>
+  </Game>
 </Games>
