@@ -2181,4 +2181,10 @@
   <data name="weapon_max_before_cleanup" xml:space="preserve">
     <value>If set to non-zero, will remove the oldest dropped weapon to maintain the specified number of dropped weapons in the world.</value>
   </data>
+  <data name="tf_scoreboard_mouse_mode" xml:space="preserve">
+    <value>Разрешает / запрещает использовать мышь в таблице результатов (данная функция должна поддерживаться используемым HUD).</value>
+  </data>
+  <data name="tf_taunt_first_person" xml:space="preserve">
+    <value>0/1 - taunts are in first person for full-body awareness mode (for use with Oculus Rift).</value>
+  </data>
 </root>

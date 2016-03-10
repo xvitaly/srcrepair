@@ -5749,6 +5749,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Разрешает / запрещает использовать мышь в таблице результатов (данная функция должна поддерживаться используемым HUD)..
+        /// </summary>
+        internal static string tf_scoreboard_mouse_mode {
+            get {
+                return ResourceManager.GetString("tf_scoreboard_mouse_mode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Show ping as text on scoreboard..
         /// </summary>
         internal static string tf_scoreboard_ping_as_text {
@@ -5943,6 +5952,15 @@ namespace srcrepair {
         internal static string tf_steam_workshop_query_timeout {
             get {
                 return ResourceManager.GetString("tf_steam_workshop_query_timeout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0/1 - taunts are in first person for full-body awareness mode (for use with Oculus Rift)..
+        /// </summary>
+        internal static string tf_taunt_first_person {
+            get {
+                return ResourceManager.GetString("tf_taunt_first_person", resourceCulture);
             }
         }
         
