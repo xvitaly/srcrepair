@@ -59,7 +59,7 @@ fetch_hud http://huds.tf/takyahud/img/main.png https://github.com/takram/takyahu
 fetch_hud http://huds.tf/sirhud/img/main.png https://github.com/sirgrey/SirHUD/archive/master.zip sirhud
 fetch_hud http://huds.tf/tf2hudplus/img/main.png https://github.com/SnowshoeIceboot/TF2HudPlus/archive/master.zip tf2hudplus
 fetch_hud http://huds.tf/rpvhud/img/main.png https://github.com/harvardbb/rpvhud/archive/master.zip rpvhud
-fetch_hud http://huds.tf/toonhud/img/main.png https://www.dropbox.com/s/1x742x8fjay2idn/ToonHUD.zip toonhud
+fetch_hud http://huds.tf/toonhud/img/main.png http://www.mediafire.com/download/9659lom0ql01ye4/toonhud_7-1.zip toonhud
 fetch_hud http://huds.tf/warhud/img/main.png https://github.com/wareya/warHUD-TF/archive/master.zip warhud
 fetch_hud http://huds.tf/doodlehud/img/main.png https://github.com/DougieDoodles/doodlehud/archive/master.zip doodlehud
 fetch_hud http://huds.tf/voidhud/img/main.png https://github.com/TheStaticVoid/VoidHUD2.0/archive/master.zip voidhud
