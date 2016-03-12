@@ -50,25 +50,17 @@ function fetch_hud
 }
 
 fetch_hud http://huds.tf/7hud/img/main.png https://github.com/Sevin7/7HUD/archive/master.zip 7HUD
-fetch_hud http://huds.tf/herganhud/img/main.png https://github.com/Hergan5/herganhud/archive/master.zip herganhud
 fetch_hud http://huds.tf/pikleshud/img/main.png https://github.com/piklestf2/pikles-hud/archive/master.zip pikles-hud
 fetch_hud http://huds.tf/broeselhudblue/img/main.png https://github.com/fblue/broeselhud_blue/archive/master.zip broeselhud_blue
-fetch_hud http://huds.tf/zhud/img/main.png https://github.com/z4-/zhud/archive/master.zip zhud
 fetch_hud http://huds.tf/basthud/img/main.png https://github.com/basbanaan/bastHUD/archive/master.zip basthud
-fetch_hud http://huds.tf/takyahud/img/main.png https://github.com/takram/takyahud-classic/archive/master.zip takyahud
 fetch_hud http://huds.tf/sirhud/img/main.png https://github.com/sirgrey/SirHUD/archive/master.zip sirhud
 fetch_hud http://huds.tf/tf2hudplus/img/main.png https://github.com/SnowshoeIceboot/TF2HudPlus/archive/master.zip tf2hudplus
-fetch_hud http://huds.tf/rpvhud/img/main.png https://github.com/harvardbb/rpvhud/archive/master.zip rpvhud
 fetch_hud http://huds.tf/toonhud/img/main.png http://www.mediafire.com/download/9659lom0ql01ye4/toonhud_7-1.zip toonhud
-fetch_hud http://huds.tf/warhud/img/main.png https://github.com/wareya/warHUD-TF/archive/master.zip warhud
-fetch_hud http://huds.tf/doodlehud/img/main.png https://github.com/DougieDoodles/doodlehud/archive/master.zip doodlehud
 fetch_hud http://huds.tf/voidhud/img/main.png https://github.com/TheStaticVoid/VoidHUD2.0/archive/master.zip voidhud
 fetch_hud http://huds.tf/ahud/img/main.png https://github.com/n0kk/ahud/archive/master.zip ahud
-fetch_hud http://huds.tf/cbhud/img/main.png https://github.com/ColdBalls/CBHUD/archive/master.zip cbhud
 fetch_hud http://huds.tf/calmlikeabomb/img/main.png https://github.com/Slayer89/slayhud/archive/master.zip calmlikeabomb
 fetch_hud http://huds.tf/ejphud/img/main.png https://github.com/basbanaan/EJP-HUD/archive/master.zip ejphud
 fetch_hud http://huds.tf/flathud/img/main.png https://github.com/flatlinee/flatHUD-/archive/master.zip flathud
-fetch_hud http://huds.tf/harvardhud/img/main.png https://github.com/harvardbb/harvardhud/archive/master.zip harvardhud
 fetch_hud http://huds.tf/bwhud/img/main.png https://github.com/bw-/bw-HUD/archive/master.zip bwhud
 fetch_hud http://huds.tf/budhud/img/main.png https://github.com/WhiskerBiscuit/budhud/archive/master.zip budhud
 fetch_hud http://huds.tf/idhud/img/main.png https://github.com/Eniere/idhud/archive/master.zip idhud

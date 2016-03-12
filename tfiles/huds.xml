@@ -13,18 +13,6 @@
     <InstallDir>7hud</InstallDir>
   </HUD>
   <HUD>
-    <Name>HerganHUD</Name>
-    <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/herganhud/herganhud_732d123d.zip</URI>
-    <UpURI>https://github.com/Hergan5/herganhud/archive/master.zip</UpURI>
-    <Preview>https://www.easycoding.org/files/srcrepair/huds/herganhud.png</Preview>
-    <RepoPath>https://github.com/Hergan5/herganhud</RepoPath>
-    <Site>http://huds.tf/herganhud/</Site>
-    <ArchiveDir>herganhud-master</ArchiveDir>
-    <InstallDir>herganhud</InstallDir>
-  </HUD>
-  <HUD>
     <Name>Pikles Hud</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
@@ -49,18 +37,6 @@
     <InstallDir>broeselhudblue</InstallDir>
   </HUD>
   <HUD>
-    <Name>zhud</Name>
-    <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/zhud/zhud_0ba35941.zip</URI>
-    <UpURI>https://github.com/z4-/zhud/archive/master.zip</UpURI>
-    <Preview>https://www.easycoding.org/files/srcrepair/huds/zhud.png</Preview>
-    <RepoPath>https://github.com/z4-/zhud</RepoPath>
-    <Site>http://huds.tf/zhud/</Site>
-    <ArchiveDir>zhud-master</ArchiveDir>
-    <InstallDir>zhud</InstallDir>
-  </HUD>
-  <HUD>
     <Name>bastHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
@@ -71,18 +47,6 @@
     <Site>http://huds.tf/basthud/</Site>
     <ArchiveDir>bastHUD-master/bastHUD-master/bastHUD</ArchiveDir>
     <InstallDir>basthud</InstallDir>
-  </HUD>
-  <HUD>
-    <Name>takyahud-classic</Name>
-    <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/takyahud/takyahud_358bc275.zip</URI>
-    <UpURI>https://github.com/takram/takyahud-classic/archive/master.zip</UpURI>
-    <Preview>https://www.easycoding.org/files/srcrepair/huds/takyahud.png</Preview>
-    <RepoPath>https://github.com/takram/takyahud-classic</RepoPath>
-    <Site>http://huds.tf/takyahud/</Site>
-    <ArchiveDir>takyahud-classic-master/FLV (BLU)</ArchiveDir>
-    <InstallDir>takyahud</InstallDir>
   </HUD>
   <HUD>
     <Name>Sir.HUD</Name>
@@ -109,18 +73,6 @@
     <InstallDir>tf2hudplus</InstallDir>
   </HUD>
   <HUD>
-    <Name>rpvhud</Name>
-    <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/rpvhud/rpvhud_14a6c8e1.zip</URI>
-    <UpURI>https://github.com/harvardbb/rpvhud/archive/master.zip</UpURI>
-    <Preview>https://www.easycoding.org/files/srcrepair/huds/rpvhud.png</Preview>
-    <RepoPath>https://github.com/harvardbb/rpvhud</RepoPath>
-    <Site>http://huds.tf/rpvhud/</Site>
-    <ArchiveDir>rpvhud-master/rpvhud</ArchiveDir>
-    <InstallDir>rpvhud</InstallDir>
-  </HUD>
-  <HUD>
     <Name>ToonHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
@@ -131,30 +83,6 @@
     <Site>http://toonhud.com/</Site>
     <ArchiveDir>toonhud</ArchiveDir>
     <InstallDir>toonhud</InstallDir>
-  </HUD>
-  <HUD>
-    <Name>warHUD</Name>
-    <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/warhud/warhud_dba0d8e5.zip</URI>
-    <UpURI>https://github.com/wareya/warHUD-TF/archive/master.zip</UpURI>
-    <Preview>https://www.easycoding.org/files/srcrepair/huds/warhud.png</Preview>
-    <RepoPath>https://github.com/wareya/warHUD-TF/</RepoPath>
-    <Site>http://huds.tf/warhud/</Site>
-    <ArchiveDir>warHUD-TF-master/warhud</ArchiveDir>
-    <InstallDir>warhud</InstallDir>
-  </HUD>
-  <HUD>
-    <Name>DoodleHUD</Name>
-    <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/doodlehud/doodlehud_7c64945e.zip</URI>
-    <UpURI>https://github.com/DougieDoodles/doodlehud/archive/master.zip</UpURI>
-    <Preview>https://www.easycoding.org/files/srcrepair/huds/doodlehud.png</Preview>
-    <RepoPath>https://github.com/DougieDoodles/doodlehud</RepoPath>
-    <Site>http://huds.tf/doodlehud/</Site>
-    <ArchiveDir>doodlehud-master</ArchiveDir>
-    <InstallDir>doodlehud</InstallDir>
   </HUD>
   <HUD>
     <Name>voidHUD2.0</Name>
@@ -179,18 +107,6 @@
     <Site>http://huds.tf/ahud/</Site>
     <ArchiveDir>ahud-master</ArchiveDir>
     <InstallDir>ahud</InstallDir>
-  </HUD>
-  <HUD>
-    <Name>CBHUD</Name>
-    <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/cbhud/cbhud_fa08a260.zip</URI>
-    <UpURI>https://github.com/ColdBalls/CBHUD/archive/master.zip</UpURI>
-    <Preview>https://www.easycoding.org/files/srcrepair/huds/cbhud.png</Preview>
-    <RepoPath>https://github.com/ColdBalls/CBHUD</RepoPath>
-    <Site>http://huds.tf/cbhud/</Site>
-    <ArchiveDir>CBHUD-master</ArchiveDir>
-    <InstallDir>cbhud</InstallDir>
   </HUD>
   <HUD>
     <Name>Calm Like A Bomb</Name>
@@ -227,18 +143,6 @@
     <Site>http://huds.tf/flathud/</Site>
     <ArchiveDir>flatHUD--master/flathudRED</ArchiveDir>
     <InstallDir>flathud</InstallDir>
-  </HUD>
-  <HUD>
-    <Name>HARVARDHUD</Name>
-    <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/harvardhud/harvardhud_25374548.zip</URI>
-    <UpURI>https://github.com/harvardbb/harvardhud/archive/master.zip</UpURI>
-    <Preview>https://www.easycoding.org/files/srcrepair/huds/harvardhud.png</Preview>
-    <RepoPath>https://github.com/harvardbb/harvardhud</RepoPath>
-    <Site>http://huds.tf/harvardhud/</Site>
-    <ArchiveDir>harvardhud-master/harvardhud</ArchiveDir>
-    <InstallDir>harvardhud</InstallDir>
   </HUD>
   <HUD>
     <Name>bwHUD</Name>
