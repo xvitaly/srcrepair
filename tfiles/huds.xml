@@ -205,18 +205,6 @@
     <InstallDir>notohud</InstallDir>
   </HUD>
   <HUD>
-    <Name>RietHUD</Name>
-    <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/riethud/riethud_419a05b5.zip</URI>
-    <UpURI>https://github.com/TheRiet/rietHUD/archive/master.zip</UpURI>
-    <Preview>https://www.easycoding.org/files/srcrepair/huds/riethud.png</Preview>
-    <RepoPath>https://github.com/TheRiet/rietHUD</RepoPath>
-    <Site>http://huds.tf/riethud/</Site>
-    <ArchiveDir>rietHUD-master</ArchiveDir>
-    <InstallDir>riethud</InstallDir>
-  </HUD>
-  <HUD>
     <Name>MorgHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
@@ -227,18 +215,6 @@
     <Site>http://huds.tf/morghud/</Site>
     <ArchiveDir>MorgHUD-master/MorgHUD</ArchiveDir>
     <InstallDir>morghud</InstallDir>
-  </HUD>
-  <HUD>
-    <Name>MintHUD</Name>
-    <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/minthud/minthud_25e1a606.zip</URI>
-    <UpURI>https://github.com/Rawrsor/DrooHUD/archive/master.zip</UpURI>
-    <Preview>https://www.easycoding.org/files/srcrepair/huds/minthud.png</Preview>
-    <RepoPath>https://github.com/Rawrsor/DrooHUD</RepoPath>
-    <Site>http://huds.tf/minthud/</Site>
-    <ArchiveDir>DrooHUD-master/MintHUD</ArchiveDir>
-    <InstallDir>minthud</InstallDir>
   </HUD>
   <HUD>
     <Name>KBNHud</Name>
@@ -263,18 +239,6 @@
     <Site>http://huds.tf/medhud/</Site>
     <ArchiveDir>medHUD-master</ArchiveDir>
     <InstallDir>medhud</InstallDir>
-  </HUD>
-  <HUD>
-    <Name>PrismHUD</Name>
-    <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/prismhud/prismhud_98a77681.zip</URI>
-    <UpURI>https://github.com/JarateKing/PrismHUD/archive/master.zip</UpURI>
-    <Preview>https://www.easycoding.org/files/srcrepair/huds/prismhud.png</Preview>
-    <RepoPath>https://github.com/JarateKing/PrismHUD</RepoPath>
-    <Site>http://huds.tf/prismhud/</Site>
-    <ArchiveDir>PrismHUD-master/_prism_hud</ArchiveDir>
-    <InstallDir>prismhud</InstallDir>
   </HUD>
   <HUD>
     <Name>rayshud</Name>
