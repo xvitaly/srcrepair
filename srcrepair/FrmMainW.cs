@@ -3109,9 +3109,6 @@ namespace srcrepair
             // Удалим другие кэши...
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cache", "*.*"));
             
-            // Удалим кэш MOTD...
-            CleanDirs.Add(Path.Combine(SelGame.GamePath, "config", "html", "*.*"));
-            
             // Удалим пользовательские конфиги...
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cfg", "*.cfg"));
             CleanDirs.AddRange(SelGame.CloudConfigs);
