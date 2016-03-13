@@ -171,8 +171,9 @@ namespace srcrepair
                 // Сгенерируем путь к локальному конфигу...
                 Result.AddRange(CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", ID, AppID, "local", "cfg"), "*.cfg"));
 
-                // Сгенерируем путь к конфигу из Steam Cloud...
+                // Сгенерируем путь к конфигам из Steam Cloud...
                 Result.AddRange(CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", ID, AppID, "remote", "cfg"), "*.cfg"));
+                Result.AddRange(CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", ID, AppID, "remote"), "*.*cfg"));
             }
             return Result;
         }
