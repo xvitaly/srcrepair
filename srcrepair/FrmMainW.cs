@@ -2513,7 +2513,7 @@ namespace srcrepair
             // Удаляем старые бинарники...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(SelGame.GamePath, Path.GetDirectoryName(SelGame.SmallAppName), "bin", "*.*"));
-            CleanDirs.Add(Path.Combine(SelGame.GamePath, "platform", "*.*"));
+            if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(SelGame.GamePath, "platform", "*.*")); }
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "bin", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "*.exe"));
             CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CacheChkReq, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
@@ -3095,7 +3095,7 @@ namespace srcrepair
 
             // Удалим старые бинарники и лаунчеры...
             CleanDirs.Add(Path.Combine(SelGame.GamePath, Path.GetDirectoryName(SelGame.SmallAppName), "bin", "*.*"));
-            CleanDirs.Add(Path.Combine(SelGame.GamePath, "platform", "*.*"));
+            if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(SelGame.GamePath, "platform", "*.*")); }
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "bin", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "*.exe"));
             
