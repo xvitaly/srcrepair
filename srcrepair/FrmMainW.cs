@@ -3114,6 +3114,7 @@ namespace srcrepair
             
             // Удалим пользовательские конфиги...
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cfg", "*.cfg"));
+            CleanDirs.AddRange(SelGame.CloudConfigs);
 
             // Удаляем графические настройки NCF-игры...
             if (SelGame.IsUsingVideoFile) { CleanDirs.AddRange(SelGame.VideoCfgFiles); }
