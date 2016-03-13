@@ -3092,9 +3092,9 @@ namespace srcrepair
         {
             // Проведём глубокую очистку...
             List<String> CleanDirs = new List<string>();
-            
+
             // Удалим старые бинарники и лаунчеры...
-            CleanDirs.Add(Path.Combine(SelGame.GamePath, "bin", "*.*"));
+            CleanDirs.Add(Path.Combine(SelGame.GamePath, Path.GetDirectoryName(SelGame.SmallAppName), "bin", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "platform", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "bin", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "*.exe"));
