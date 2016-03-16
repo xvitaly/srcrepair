@@ -168,12 +168,8 @@ namespace srcrepair
             List<String> Result = new List<String>();
             foreach (string ID in SteamIDs)
             {
-                // Сгенерируем путь к локальному конфигу...
-                Result.AddRange(CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", ID, AppID, "local", "cfg"), "*.cfg"));
-
-                // Сгенерируем путь к конфигам из Steam Cloud...
-                Result.AddRange(CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", ID, AppID, "remote", "cfg"), "*.cfg"));
-                Result.AddRange(CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", ID, AppID, "remote"), "*.*cfg"));
+                // Сгенерируем путь к конфигам в локальной копии Cloud...
+                Result.AddRange(CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", ID, AppID), "*.*cfg"));
             }
             return Result;
         }
