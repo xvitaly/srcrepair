@@ -757,6 +757,7 @@ namespace srcrepair
                 DirectoryInfo DInfo = new DirectoryInfo(SearchPath);
                 FileInfo[] DirList = DInfo.GetFiles(SrcMask);
                 foreach (FileInfo DItem in DirList) { Result.Add(DItem.FullName); }
+                foreach (DirectoryInfo Dir in DInfo.GetDirectories()) { Result.AddRange(FindFiles(Dir.FullName, SrcMask)); }
             }
             return Result;
         }
