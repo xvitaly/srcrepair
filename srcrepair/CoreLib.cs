@@ -748,8 +748,9 @@ namespace srcrepair
         /// </summary>
         /// <param name="SearchPath">Каталог, в котором будем искать файлы</param>
         /// <param name="SrcMask">Маска файлов</param>
+        /// <param name="IsRecursive">Включает / отключает рекурсивный поиск</param>
         /// <returns>Возвращает список файлов, удовлетворяющих указанной маске.</returns>
-        public static List<String> FindFiles(string SearchPath, string SrcMask)
+        public static List<String> FindFiles(string SearchPath, string SrcMask, bool IsRecursive = true)
         {
             List<String> Result = new List<String>();
             if (Directory.Exists(SearchPath))
@@ -757,7 +758,7 @@ namespace srcrepair
                 DirectoryInfo DInfo = new DirectoryInfo(SearchPath);
                 FileInfo[] DirList = DInfo.GetFiles(SrcMask);
                 foreach (FileInfo DItem in DirList) { Result.Add(DItem.FullName); }
-                foreach (DirectoryInfo Dir in DInfo.GetDirectories()) { Result.AddRange(FindFiles(Dir.FullName, SrcMask)); }
+                if (IsRecursive) { foreach (DirectoryInfo Dir in DInfo.GetDirectories()) { Result.AddRange(FindFiles(Dir.FullName, SrcMask)); } }
             }
             return Result;
         }
