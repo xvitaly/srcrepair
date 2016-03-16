@@ -186,7 +186,7 @@ namespace srcrepair
             List<String> Result = new List<String>();
             foreach (string ID in SteamIDs)
             {
-                Result.AddRange(CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", ID, AppID, "local", "cfg"), "video.txt"));
+                Result.AddRange(CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", ID, AppID), "video.txt"));
             }
             return Result;
         }
