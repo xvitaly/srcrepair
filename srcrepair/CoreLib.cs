@@ -827,10 +827,14 @@ namespace srcrepair
             List<String> Result = new List<String>();
 
             // Получаем список каталогов...
-            DirectoryInfo DInfo = new DirectoryInfo(Path.Combine(SteamPath, "userdata"));
-            foreach (DirectoryInfo SubDir in DInfo.GetDirectories())
+            string DDir = Path.Combine(SteamPath, "userdata");
+            if (Directory.Exists(DDir))
             {
-                Result.Add(SubDir.FullName);
+                DirectoryInfo DInfo = new DirectoryInfo(DDir);
+                foreach (DirectoryInfo SubDir in DInfo.GetDirectories())
+                {
+                    Result.Add(SubDir.FullName);
+                }
             }
 
             // Возвращаем результат...
