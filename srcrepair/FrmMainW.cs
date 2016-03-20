@@ -1111,6 +1111,35 @@ namespace srcrepair
             }
         }
 
+        private void NCF1LoadRenderOpts(ref List<String> VideoFile)
+        {
+            switch (GetNCFDWord("setting.mat_queue_mode", ref VideoFile))
+            {
+                case -1:
+                    GT_NCF_Multicore.SelectedIndex = 1;
+                    break;
+                case 0:
+                    GT_NCF_Multicore.SelectedIndex = 0;
+                    break;
+                case 1:
+                    GT_NCF_Multicore.SelectedIndex = 1;
+                    break;
+                case 2:
+                    GT_NCF_Multicore.SelectedIndex = 1;
+                    break;
+            }
+        }
+
+        private void NCF1LoadShaderEffects(ref List<String> VideoFile)
+        {
+            GT_NCF_ShaderE.SelectedIndex = GetNCFDWord("setting.gpu_level", ref VideoFile);
+        }
+
+        private void NCF1LoadBasicEffects(ref List<String> VideoFile)
+        {
+            GT_NCF_EffectD.SelectedIndex = GetNCFDWord("setting.cpu_level", ref VideoFile);
+        }
+
         /// <summary>
         /// Получает настройки NCF-игры из файла и заполняет ими таблицу
         /// графического твикера программы.
@@ -1160,30 +1189,13 @@ namespace srcrepair
             try { NCF1LoadVSync(ref VideoFile); } catch { try { NCF1LoadVSync(ref DefaultsFile); } catch { GT_NCF_VSync.SelectedIndex = -1; } }
             
             // Получаем настройки многоядерного рендеринга...
-            try
-            {
-                switch (GetNCFDWord("setting.mat_queue_mode", VideoFile))
-                {
-                    case -1: GT_NCF_Multicore.SelectedIndex = 1;
-                        break;
-                    case 0: GT_NCF_Multicore.SelectedIndex = 0;
-                        break;
-                    case 1: GT_NCF_Multicore.SelectedIndex = 1;
-                        break;
-                    case 2: GT_NCF_Multicore.SelectedIndex = 1;
-                        break;
-                }
-            }
-            catch
-            {
-                GT_NCF_Multicore.SelectedIndex = -1;
-            }
+            try { NCF1LoadRenderOpts(ref VideoFile); } catch { try { NCF1LoadRenderOpts(ref DefaultsFile); } catch { GT_NCF_Multicore.SelectedIndex = -1; } }
             
             // Получаем настройки качества шейдерных эффектов...
-            try { GT_NCF_ShaderE.SelectedIndex = GetNCFDWord("setting.gpu_level", VideoFile); } catch { GT_NCF_ShaderE.SelectedIndex = -1; }
+            try { NCF1LoadShaderEffects(ref VideoFile); } catch { try { NCF1LoadShaderEffects(ref DefaultsFile); } catch { GT_NCF_ShaderE.SelectedIndex = -1; } }
             
             // Получаем настройки эффектов...
-            try { GT_NCF_EffectD.SelectedIndex = GetNCFDWord("setting.cpu_level", VideoFile); } catch { GT_NCF_EffectD.SelectedIndex = -1; }
+            try { NCF1LoadBasicEffects(ref VideoFile); } catch { try { NCF1LoadBasicEffects(ref DefaultsFile); } catch { GT_NCF_EffectD.SelectedIndex = -1; } }
             
             // Получаем настройки пула памяти...
             try { GT_NCF_MemPool.SelectedIndex = GetNCFDWord("setting.mem_level", VideoFile); } catch { GT_NCF_MemPool.SelectedIndex = -1; }
