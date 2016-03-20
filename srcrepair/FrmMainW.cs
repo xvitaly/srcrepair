@@ -988,9 +988,19 @@ namespace srcrepair
             GT_NCF_Ratio.SelectedIndex = GetNCFDWord("setting.aspectratiomode", ref VideoFile);
         }
 
+        private void NCF1LoadBrightness(ref List<String> VideoFile)
+        {
+            GT_NCF_Brightness.Text = (GetNCFDble("setting.mat_monitorgamma", ref VideoFile) * 10).ToString();
+        }
+
         private void NCF1LoadShadowQuality(ref List<String> VideoFile)
         {
             GT_NCF_Shadows.SelectedIndex = GetNCFDWord("setting.csm_quality_level", ref VideoFile);
+        }
+
+        private void NCF1LoadBlur(ref List<String> VideoFile)
+        {
+            GT_NCF_MBlur.SelectedIndex = GetNCFDWord("setting.mat_motion_blur_enabled", ref VideoFile);
         }
 
         /// <summary>
@@ -1021,13 +1031,13 @@ namespace srcrepair
             try { NCF1LoadScreenRatio(ref VideoFile); } catch { try { NCF1LoadScreenRatio(ref DefaultsFile); } catch { GT_NCF_Ratio.SelectedIndex = -1; } }
             
             // Получаем настройки яркости...
-            try { GT_NCF_Brightness.Text = (GetNCFDble("setting.mat_monitorgamma", VideoFile) * 10).ToString(); } catch { GT_NCF_Brightness.Text = "22"; }
+            try { NCF1LoadBrightness(ref VideoFile); } catch { try { NCF1LoadBrightness(ref DefaultsFile); } catch { GT_NCF_Brightness.Text = "22"; } }
 
             // Получаем настройки качества теней...
             try { NCF1LoadShadowQuality(ref VideoFile); } catch { try { NCF1LoadShadowQuality(ref DefaultsFile); } catch { GT_NCF_Shadows.SelectedIndex = -1; } }
 
             // Получаем настройки размытия движения...
-            try { GT_NCF_MBlur.SelectedIndex = GetNCFDWord("setting.mat_motion_blur_enabled", VideoFile); } catch { GT_NCF_MBlur.SelectedIndex = -1; }
+            try { NCF1LoadBlur(ref VideoFile); } catch { try { NCF1LoadBlur(ref DefaultsFile); } catch { GT_NCF_MBlur.SelectedIndex = -1; } }
 
             // Получаем настройки режима...
             try
