@@ -348,7 +348,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="CVar">Переменная</param>
         /// <param name="VFile">Массив с содержимым конфига</param>
-        private int GetNCFDWord(string CVar, List<String> VFile)
+        private int GetNCFDWord(string CVar, ref List<String> VFile)
         {
             string Result = VFile.FirstOrDefault(s => s.Contains(CVar));
             return Convert.ToInt32(ExtractCVFromLine(Result));
@@ -359,7 +359,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="CVar">Переменная</param>
         /// <param name="VFile">Массив с содержимым конфига</param>
-        private double GetNCFDble(string CVar, List<String> VFile)
+        private double GetNCFDble(string CVar, ref List<String> VFile)
         {
             string Result = VFile.FirstOrDefault(s => s.Contains(CVar)).Replace(".", ",");
             return Double.Parse(ExtractCVFromLine(Result));
@@ -975,12 +975,22 @@ namespace srcrepair
 
         private void NCF1LoadScreenResHor(ref List<String> VideoFile)
         {
-            GT_NCF_HorRes.Value = GetNCFDWord("setting.defaultres", VideoFile);
+            GT_NCF_HorRes.Value = GetNCFDWord("setting.defaultres", ref VideoFile);
+        }
+
+        private void NCF1LoadScreenResVert(ref List<String> VideoFile)
+        {
+            GT_NCF_VertRes.Value = GetNCFDWord("setting.defaultresheight", ref VideoFile);
+        }
+
+        private void NCF1LoadScreenRatio(ref List<String> VideoFile)
+        {
+            GT_NCF_Ratio.SelectedIndex = GetNCFDWord("setting.aspectratiomode", ref VideoFile);
         }
 
         private void NCF1LoadShadowQuality(ref List<String> VideoFile)
         {
-            GT_NCF_Shadows.SelectedIndex = GetNCFDWord("setting.csm_quality_level", VideoFile);
+            GT_NCF_Shadows.SelectedIndex = GetNCFDWord("setting.csm_quality_level", ref VideoFile);
         }
 
         /// <summary>
@@ -1005,10 +1015,10 @@ namespace srcrepair
             try { NCF1LoadScreenResHor(ref VideoFile); } catch { try { NCF1LoadScreenResHor(ref DefaultsFile); } catch { GT_NCF_HorRes.Value = 800; } }
             
             // Получаем значение разрешения по вертикали...
-            try { GT_NCF_VertRes.Value = GetNCFDWord("setting.defaultresheight", VideoFile); } catch { GT_NCF_VertRes.Value = 600; }
+            try { NCF1LoadScreenResVert(ref VideoFile); } catch { try { NCF1LoadScreenResVert(ref DefaultsFile); } catch { GT_NCF_VertRes.Value = 600; } }
             
             // Получаем настройки соотношения сторон...
-            try { GT_NCF_Ratio.SelectedIndex = GetNCFDWord("setting.aspectratiomode", VideoFile); } catch { GT_NCF_Ratio.SelectedIndex = -1; }
+            try { NCF1LoadScreenRatio(ref VideoFile); } catch { try { NCF1LoadScreenRatio(ref DefaultsFile); } catch { GT_NCF_Ratio.SelectedIndex = -1; } }
             
             // Получаем настройки яркости...
             try { GT_NCF_Brightness.Text = (GetNCFDble("setting.mat_monitorgamma", VideoFile) * 10).ToString(); } catch { GT_NCF_Brightness.Text = "22"; }
