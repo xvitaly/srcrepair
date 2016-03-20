@@ -1140,6 +1140,16 @@ namespace srcrepair
             GT_NCF_EffectD.SelectedIndex = GetNCFDWord("setting.cpu_level", ref VideoFile);
         }
 
+        private void NCF1LoadMemPool(ref List<String> VideoFile)
+        {
+            GT_NCF_MemPool.SelectedIndex = GetNCFDWord("setting.mem_level", ref VideoFile);
+        }
+
+        private void NCF1LoadModelQuality(ref List<String> VideoFile)
+        {
+            GT_NCF_Quality.SelectedIndex = GetNCFDWord("setting.gpu_mem_level", ref VideoFile);
+        }
+
         /// <summary>
         /// Получает настройки NCF-игры из файла и заполняет ими таблицу
         /// графического твикера программы.
@@ -1158,7 +1168,6 @@ namespace srcrepair
             if (File.Exists(DFileName)) { DefaultsFile.AddRange(File.ReadAllLines(DFileName)); }
 
             // Получаем значение разрешения по горизонтали...
-            //try { } catch { }
             try { NCF1LoadScreenResHor(ref VideoFile); } catch { try { NCF1LoadScreenResHor(ref DefaultsFile); } catch { GT_NCF_HorRes.Value = 800; } }
             
             // Получаем значение разрешения по вертикали...
@@ -1198,10 +1207,10 @@ namespace srcrepair
             try { NCF1LoadBasicEffects(ref VideoFile); } catch { try { NCF1LoadBasicEffects(ref DefaultsFile); } catch { GT_NCF_EffectD.SelectedIndex = -1; } }
             
             // Получаем настройки пула памяти...
-            try { GT_NCF_MemPool.SelectedIndex = GetNCFDWord("setting.mem_level", VideoFile); } catch { GT_NCF_MemPool.SelectedIndex = -1; }
+            try { NCF1LoadMemPool(ref VideoFile); } catch { try { NCF1LoadMemPool(ref DefaultsFile); } catch { GT_NCF_MemPool.SelectedIndex = -1; } }
             
             // Получаем настройки качества моделей и текстур...
-            try { GT_NCF_Quality.SelectedIndex = GetNCFDWord("setting.gpu_mem_level", VideoFile); } catch { GT_NCF_Quality.SelectedIndex = -1; }
+            try { NCF1LoadModelQuality(ref VideoFile); } catch { try { NCF1LoadModelQuality(ref DefaultsFile); } catch { GT_NCF_Quality.SelectedIndex = -1; } }
         }
 
         /// <summary>
