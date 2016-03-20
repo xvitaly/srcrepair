@@ -1142,7 +1142,9 @@ namespace srcrepair
 
         private void NCF1LoadMemPool(ref List<String> VideoFile)
         {
-            GT_NCF_MemPool.SelectedIndex = GetNCFDWord("setting.mem_level", ref VideoFile);
+            int OptIndex = GetNCFDWord("setting.mem_level", ref VideoFile);
+            if (OptIndex < 0) { throw new ArgumentException(); }
+            GT_NCF_MemPool.SelectedIndex = OptIndex;
         }
 
         private void NCF1LoadModelQuality(ref List<String> VideoFile)
