@@ -980,6 +980,9 @@ namespace srcrepair
         /// <param name="VFileName">Путь к файлу с настройками</param>
         private void ReadNCFGameSettings(string VFileName)
         {
+            // Генерируем путь к файлу со стандартными настройками...
+            string DFileName = Path.Combine(Path.GetDirectoryName(VFileName), "videodefaults.txt");
+
             // Получаем содержимое файла...
             List<String> VideoFile = new List<String>(File.ReadAllLines(VFileName));
             
