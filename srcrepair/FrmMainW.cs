@@ -1065,6 +1065,52 @@ namespace srcrepair
             }
         }
 
+        private void NCF1LoadFiltration(ref List<String> VideoFile)
+        {
+            switch (GetNCFDWord("setting.mat_forceaniso", ref VideoFile))
+            {
+                case 0:
+                    GT_NCF_Filtering.SelectedIndex = 0;
+                    break;
+                case 1:
+                    GT_NCF_Filtering.SelectedIndex = 1;
+                    break;
+                case 2:
+                    GT_NCF_Filtering.SelectedIndex = 2;
+                    break;
+                case 4:
+                    GT_NCF_Filtering.SelectedIndex = 3;
+                    break;
+                case 8:
+                    GT_NCF_Filtering.SelectedIndex = 4;
+                    break;
+                case 16:
+                    GT_NCF_Filtering.SelectedIndex = 5;
+                    break;
+            }
+        }
+
+        private void NCF1LoadVSync(ref List<String> VideoFile)
+        {
+            switch (GetNCFDWord("setting.mat_vsync", ref VideoFile))
+            {
+                case 0:
+                    GT_NCF_VSync.SelectedIndex = 0;
+                    break;
+                case 1:
+                    switch (GetNCFDWord("setting.mat_triplebuffered", ref VideoFile))
+                    {
+                        case 0:
+                            GT_NCF_VSync.SelectedIndex = 1;
+                            break;
+                        case 1:
+                            GT_NCF_VSync.SelectedIndex = 2;
+                            break;
+                    }
+                    break;
+            }
+        }
+
         /// <summary>
         /// Получает настройки NCF-игры из файла и заполняет ими таблицу
         /// графического твикера программы.
@@ -1108,51 +1154,10 @@ namespace srcrepair
             try { NCF1LoadAntiAlias(ref VideoFile); } catch { try { NCF1LoadAntiAlias(ref DefaultsFile); } catch { GT_NCF_AntiAlias.SelectedIndex = -1; } }
             
             // Получаем настройки фильтрации текстур...
-            try
-            {
-                switch (GetNCFDWord("setting.mat_forceaniso", VideoFile))
-                {
-                    case 0: GT_NCF_Filtering.SelectedIndex = 0;
-                        break;
-                    case 1: GT_NCF_Filtering.SelectedIndex = 1;
-                        break;
-                    case 2: GT_NCF_Filtering.SelectedIndex = 2;
-                        break;
-                    case 4: GT_NCF_Filtering.SelectedIndex = 3;
-                        break;
-                    case 8: GT_NCF_Filtering.SelectedIndex = 4;
-                        break;
-                    case 16: GT_NCF_Filtering.SelectedIndex = 5;
-                        break;
-                }
-            }
-            catch
-            {
-                GT_NCF_Filtering.SelectedIndex = -1;
-            }
+            try { NCF1LoadFiltration(ref VideoFile); } catch { try { NCF1LoadFiltration(ref DefaultsFile); } catch { GT_NCF_Filtering.SelectedIndex = -1; } }
             
             // Получаем настройки вертикальной синхронизации...
-            try
-            {
-                switch (GetNCFDWord("setting.mat_vsync", VideoFile))
-                {
-                    case 0: GT_NCF_VSync.SelectedIndex = 0;
-                        break;
-                    case 1:
-                        switch (GetNCFDWord("setting.mat_triplebuffered", VideoFile))
-                        {
-                            case 0: GT_NCF_VSync.SelectedIndex = 1;
-                                break;
-                            case 1: GT_NCF_VSync.SelectedIndex = 2;
-                                break;
-                        }
-                        break;
-                }
-            }
-            catch
-            {
-                GT_NCF_VSync.SelectedIndex = -1;
-            }
+            try { NCF1LoadVSync(ref VideoFile); } catch { try { NCF1LoadVSync(ref DefaultsFile); } catch { GT_NCF_VSync.SelectedIndex = -1; } }
             
             // Получаем настройки многоядерного рендеринга...
             try
