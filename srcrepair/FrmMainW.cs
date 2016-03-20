@@ -1003,6 +1003,68 @@ namespace srcrepair
             GT_NCF_MBlur.SelectedIndex = GetNCFDWord("setting.mat_motion_blur_enabled", ref VideoFile);
         }
 
+        private void NCF1LoadScreenMode(ref List<String> VideoFile)
+        {
+            switch (GetNCFDWord("setting.fullscreen", ref VideoFile))
+            {
+                case 0:
+                    switch (GetNCFDWord("setting.nowindowborder", ref VideoFile))
+                    {
+                        case 0:
+                            GT_NCF_DispMode.SelectedIndex = 1;
+                            break;
+                        case 1:
+                            GT_NCF_DispMode.SelectedIndex = 2;
+                            break;
+                    }
+                    break;
+                case 1:
+                    GT_NCF_DispMode.SelectedIndex = 0;
+                    break;
+            }
+        }
+
+        private void NCF1LoadAntiAlias(ref List<String> VideoFile)
+        {
+            switch (GetNCFDWord("setting.mat_antialias", ref VideoFile))
+            {
+                case 0:
+                    GT_NCF_AntiAlias.SelectedIndex = 0;
+                    break;
+                case 1:
+                    GT_NCF_AntiAlias.SelectedIndex = 0;
+                    break;
+                case 2:
+                    GT_NCF_AntiAlias.SelectedIndex = 1;
+                    break;
+                case 4:
+                    switch (GetNCFDWord("setting.mat_aaquality", ref VideoFile))
+                    {
+                        case 0:
+                            GT_NCF_AntiAlias.SelectedIndex = 2;
+                            break;
+                        case 2:
+                            GT_NCF_AntiAlias.SelectedIndex = 3;
+                            break;
+                        case 4:
+                            GT_NCF_AntiAlias.SelectedIndex = 4;
+                            break;
+                    }
+                    break;
+                case 8:
+                    switch (GetNCFDWord("setting.mat_aaquality", ref VideoFile))
+                    {
+                        case 0:
+                            GT_NCF_AntiAlias.SelectedIndex = 5;
+                            break;
+                        case 2:
+                            GT_NCF_AntiAlias.SelectedIndex = 6;
+                            break;
+                    }
+                    break;
+            }
+        }
+
         /// <summary>
         /// Получает настройки NCF-игры из файла и заполняет ими таблицу
         /// графического твикера программы.
@@ -1040,65 +1102,10 @@ namespace srcrepair
             try { NCF1LoadBlur(ref VideoFile); } catch { try { NCF1LoadBlur(ref DefaultsFile); } catch { GT_NCF_MBlur.SelectedIndex = -1; } }
 
             // Получаем настройки режима...
-            try
-            {
-                switch (GetNCFDWord("setting.fullscreen", VideoFile))
-                {
-                    case 0:
-                        switch (GetNCFDWord("setting.nowindowborder", VideoFile))
-                        {
-                            case 0: GT_NCF_DispMode.SelectedIndex = 1;
-                                break;
-                            case 1: GT_NCF_DispMode.SelectedIndex = 2;
-                                break;
-                        }
-                        break;
-                    case 1: GT_NCF_DispMode.SelectedIndex = 0;
-                        break;
-                }
-            }
-            catch
-            {
-                GT_NCF_DispMode.SelectedIndex = -1;
-            }
+            try { NCF1LoadScreenMode(ref VideoFile); } catch { try { NCF1LoadScreenMode(ref DefaultsFile); } catch { GT_NCF_DispMode.SelectedIndex = -1; } }
             
             // Получаем настройки сглаживания текстур...
-            try
-            {
-                switch (GetNCFDWord("setting.mat_antialias", VideoFile))
-                {
-                    case 0: GT_NCF_AntiAlias.SelectedIndex = 0;
-                        break;
-                    case 1: GT_NCF_AntiAlias.SelectedIndex = 0;
-                        break;
-                    case 2: GT_NCF_AntiAlias.SelectedIndex = 1;
-                        break;
-                    case 4:
-                        switch (GetNCFDWord("setting.mat_aaquality", VideoFile))
-                        {
-                            case 0: GT_NCF_AntiAlias.SelectedIndex = 2;
-                                break;
-                            case 2: GT_NCF_AntiAlias.SelectedIndex = 3;
-                                break;
-                            case 4: GT_NCF_AntiAlias.SelectedIndex = 4;
-                                break;
-                        }
-                        break;
-                    case 8:
-                        switch (GetNCFDWord("setting.mat_aaquality", VideoFile))
-                        {
-                            case 0: GT_NCF_AntiAlias.SelectedIndex = 5;
-                                break;
-                            case 2: GT_NCF_AntiAlias.SelectedIndex = 6;
-                                break;
-                        }
-                        break;
-                }
-            }
-            catch
-            {
-                GT_NCF_AntiAlias.SelectedIndex = -1;
-            }
+            try { NCF1LoadAntiAlias(ref VideoFile); } catch { try { NCF1LoadAntiAlias(ref DefaultsFile); } catch { GT_NCF_AntiAlias.SelectedIndex = -1; } }
             
             // Получаем настройки фильтрации текстур...
             try
