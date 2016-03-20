@@ -973,13 +973,23 @@ namespace srcrepair
             }
         }
 
+        private void NCF1LoadScreenResHor(ref List<String> VideoFile)
+        {
+            GT_NCF_HorRes.Value = GetNCFDWord("setting.defaultres", VideoFile);
+        }
+
+        private void NCF1LoadShadowQuality(ref List<String> VideoFile)
+        {
+            GT_NCF_Shadows.SelectedIndex = GetNCFDWord("setting.csm_quality_level", VideoFile);
+        }
+
         /// <summary>
         /// Получает настройки NCF-игры из файла и заполняет ими таблицу
         /// графического твикера программы.
         /// </summary>
         /// <param name="VFileName">Путь к файлу с настройками</param>
         private void ReadNCFGameSettings(string VFileName)
-        {
+        {   
             // Генерируем путь к файлу со стандартными настройками...
             string DFileName = Path.Combine(Path.GetDirectoryName(VFileName), "videodefaults.txt");
 
@@ -989,9 +999,10 @@ namespace srcrepair
             // Получаем содержимое файла стандартных настроек (если он существует)...
             List<String> DefaultsFile = new List<String>();
             if (File.Exists(DFileName)) { DefaultsFile.AddRange(File.ReadAllLines(DFileName)); }
-            
+
             // Получаем значение разрешения по горизонтали...
-            try { GT_NCF_HorRes.Value = GetNCFDWord("setting.defaultres", VideoFile); } catch { GT_NCF_HorRes.Value = 800; }
+            //try { } catch { }
+            try { NCF1LoadScreenResHor(ref VideoFile); } catch { try { NCF1LoadScreenResHor(ref DefaultsFile); } catch { GT_NCF_HorRes.Value = 800; } }
             
             // Получаем значение разрешения по вертикали...
             try { GT_NCF_VertRes.Value = GetNCFDWord("setting.defaultresheight", VideoFile); } catch { GT_NCF_VertRes.Value = 600; }
@@ -1003,7 +1014,7 @@ namespace srcrepair
             try { GT_NCF_Brightness.Text = (GetNCFDble("setting.mat_monitorgamma", VideoFile) * 10).ToString(); } catch { GT_NCF_Brightness.Text = "22"; }
 
             // Получаем настройки качества теней...
-            try { GT_NCF_Shadows.SelectedIndex = GetNCFDWord("setting.csm_quality_level", VideoFile); } catch { GT_NCF_Shadows.SelectedIndex = -1; }
+            try { NCF1LoadShadowQuality(ref VideoFile); } catch { try { NCF1LoadShadowQuality(ref DefaultsFile); } catch { GT_NCF_Shadows.SelectedIndex = -1; } }
 
             // Получаем настройки размытия движения...
             try { GT_NCF_MBlur.SelectedIndex = GetNCFDWord("setting.mat_motion_blur_enabled", VideoFile); } catch { GT_NCF_MBlur.SelectedIndex = -1; }
