@@ -2914,7 +2914,15 @@ namespace srcrepair
 
         private void MNUHelp_Click(object sender, EventArgs e)
         {
-            CoreLib.OpenWebPage(Properties.Resources.AppURLHelpSite);
+            // Сгенерируем путь к файлу справочной системы...
+            string LocalHelp = String.Format(App.FullAppPath, String.Format("srcrepair_{0}.chm", AppStrings.AppLangPrefix));
+
+            // Проверим существование файла...
+            if (File.Exists(LocalHelp))
+            {
+                // Запустим файл справочной системы на исполнение...
+                try { Process.Start(LocalHelp); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            }
         }
 
         private void MNUOpinion_Click(object sender, EventArgs e)
