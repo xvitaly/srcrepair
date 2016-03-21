@@ -973,36 +973,64 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Получает настройки разрешения экрана по горизонтали NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="VideoFile">Содержание файла с настройками графики</param>
         private void NCF1LoadScreenResHor(ref List<String> VideoFile)
         {
             GT_NCF_HorRes.Value = GetNCFDWord("setting.defaultres", ref VideoFile);
         }
 
+        /// <summary>
+        /// Получает настройки разрешения экрана по вертикали NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="VideoFile">Содержание файла с настройками графики</param>
         private void NCF1LoadScreenResVert(ref List<String> VideoFile)
         {
             GT_NCF_VertRes.Value = GetNCFDWord("setting.defaultresheight", ref VideoFile);
         }
 
+        /// <summary>
+        /// Получает настройки соотношения сторон NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="VideoFile">Содержание файла с настройками графики</param>
         private void NCF1LoadScreenRatio(ref List<String> VideoFile)
         {
             GT_NCF_Ratio.SelectedIndex = GetNCFDWord("setting.aspectratiomode", ref VideoFile);
         }
 
+        /// <summary>
+        /// Получает настройки контрастности и цветовой гаммы NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="VideoFile">Содержание файла с настройками графики</param>
         private void NCF1LoadBrightness(ref List<String> VideoFile)
         {
             GT_NCF_Brightness.Text = (GetNCFDble("setting.mat_monitorgamma", ref VideoFile) * 10).ToString();
         }
 
+        /// <summary>
+        /// Получает настройки качества теней NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="VideoFile">Содержание файла с настройками графики</param>
         private void NCF1LoadShadowQuality(ref List<String> VideoFile)
         {
             GT_NCF_Shadows.SelectedIndex = GetNCFDWord("setting.csm_quality_level", ref VideoFile);
         }
 
+        /// <summary>
+        /// Получает настройки размытия движений NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="VideoFile">Содержание файла с настройками графики</param>
         private void NCF1LoadBlur(ref List<String> VideoFile)
         {
             GT_NCF_MBlur.SelectedIndex = GetNCFDWord("setting.mat_motion_blur_enabled", ref VideoFile);
         }
 
+        /// <summary>
+        /// Получает настройки графического режима NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="VideoFile">Содержание файла с настройками графики</param>
         private void NCF1LoadScreenMode(ref List<String> VideoFile)
         {
             switch (GetNCFDWord("setting.fullscreen", ref VideoFile))
@@ -1024,6 +1052,10 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Получает настройки полноэкранного сглаживания NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="VideoFile">Содержание файла с настройками графики</param>
         private void NCF1LoadAntiAlias(ref List<String> VideoFile)
         {
             switch (GetNCFDWord("setting.mat_antialias", ref VideoFile))
@@ -1065,6 +1097,10 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Получает настройки качества фильтрации NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="VideoFile">Содержание файла с настройками графики</param>
         private void NCF1LoadFiltration(ref List<String> VideoFile)
         {
             switch (GetNCFDWord("setting.mat_forceaniso", ref VideoFile))
@@ -1090,6 +1126,10 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Получает настройки вертикальной синхронизации NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="VideoFile">Содержание файла с настройками графики</param>
         private void NCF1LoadVSync(ref List<String> VideoFile)
         {
             switch (GetNCFDWord("setting.mat_vsync", ref VideoFile))
@@ -1111,6 +1151,10 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Получает настройки многоядерного рендеринга NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="VideoFile">Содержание файла с настройками графики</param>
         private void NCF1LoadRenderOpts(ref List<String> VideoFile)
         {
             switch (GetNCFDWord("setting.mat_queue_mode", ref VideoFile))
@@ -1130,16 +1174,28 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Получает настройки качества шейдерных эффектов NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="VideoFile">Содержание файла с настройками графики</param>
         private void NCF1LoadShaderEffects(ref List<String> VideoFile)
         {
             GT_NCF_ShaderE.SelectedIndex = GetNCFDWord("setting.gpu_level", ref VideoFile);
         }
 
+        /// <summary>
+        /// Получает настройки качества обычных эффектов NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="VideoFile">Содержание файла с настройками графики</param>
         private void NCF1LoadBasicEffects(ref List<String> VideoFile)
         {
             GT_NCF_EffectD.SelectedIndex = GetNCFDWord("setting.cpu_level", ref VideoFile);
         }
 
+        /// <summary>
+        /// Получает настройки выделенного игре пула памяти NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="VideoFile">Содержание файла с настройками графики</param>
         private void NCF1LoadMemPool(ref List<String> VideoFile)
         {
             int OptIndex = GetNCFDWord("setting.mem_level", ref VideoFile);
@@ -1147,6 +1203,10 @@ namespace srcrepair
             GT_NCF_MemPool.SelectedIndex = OptIndex;
         }
 
+        /// <summary>
+        /// Получает настройки качества детализации моделей и текстур NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="VideoFile">Содержание файла с настройками графики</param>
         private void NCF1LoadModelQuality(ref List<String> VideoFile)
         {
             GT_NCF_Quality.SelectedIndex = GetNCFDWord("setting.gpu_mem_level", ref VideoFile);
