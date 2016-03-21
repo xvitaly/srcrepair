@@ -2921,7 +2921,12 @@ namespace srcrepair
             if (File.Exists(LocalHelp))
             {
                 // Запустим файл справочной системы на исполнение...
-                try { Process.Start(LocalHelp); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { Process.Start(LocalHelp); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.AppHelpFileFailedToStart, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
+            }
+            else
+            {
+                // Файл не найден, поэтому выведем сообщение...
+                MessageBox.Show(AppStrings.AppHelpFileNotFound, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
