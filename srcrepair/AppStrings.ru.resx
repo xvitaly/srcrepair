@@ -918,4 +918,12 @@
     <value>Процесс Steam, обнаруженный в памяти был успешно завершён!</value>
     <comment>Сообщение при завершении работающего процесса Steam</comment>
   </data>
+  <data name="AppHelpFileFailedToStart" xml:space="preserve">
+    <value>Произошла ошибка при запуске системы просмотра справочной системы. Компонент Microsoft HTML Help в вашей системе установлен неверно.</value>
+    <comment>Сообщение при ошибке запуска справочной системы в формате CHM</comment>
+  </data>
+  <data name="AppHelpFileNotFound" xml:space="preserve">
+    <value>Файл оффлайновой справочной системы не найден!</value>
+    <comment>Сообщение при невозможности обнаружить файл оффлайновой справки</comment>
+  </data>
 </root>

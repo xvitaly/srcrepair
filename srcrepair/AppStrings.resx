@@ -714,4 +714,10 @@
   <data name="PS_ProcessDetected" xml:space="preserve">
     <value>Steam process has been successfully terminated!</value>
   </data>
+  <data name="AppHelpFileFailedToStart" xml:space="preserve">
+    <value>Failed to start Microsoft HTML Help Viewer. Check *.chm file associations!</value>
+  </data>
+  <data name="AppHelpFileNotFound" xml:space="preserve">
+    <value>Can't find HTML help file. Offline help system will be unavailable.</value>
+  </data>
 </root>
