@@ -55,7 +55,7 @@ fetch_hud http://huds.tf/broeselhudblue/img/main.png https://github.com/fblue/br
 fetch_hud http://huds.tf/basthud/img/main.png https://github.com/basbanaan/bastHUD/archive/master.zip basthud
 fetch_hud http://huds.tf/sirhud/img/main.png https://github.com/sirgrey/SirHUD/archive/master.zip sirhud
 fetch_hud http://huds.tf/tf2hudplus/img/main.png https://github.com/SnowshoeIceboot/TF2HudPlus/archive/master.zip tf2hudplus
-fetch_hud http://huds.tf/toonhud/img/main.png https://dl.dropboxusercontent.com/s/o7paxiws2sp8iy0/toonhud_7-2.zip toonhud
+fetch_hud http://huds.tf/toonhud/img/main.png https://dl.dropboxusercontent.com/s/l08g5ij7ti04n79/toonhud_7-3.zip toonhud
 fetch_hud http://huds.tf/voidhud/img/main.png https://github.com/TheStaticVoid/VoidHUD2.0/archive/master.zip voidhud
 fetch_hud http://huds.tf/ahud/img/main.png https://github.com/n0kk/ahud/archive/master.zip ahud
 fetch_hud http://huds.tf/calmlikeabomb/img/main.png https://github.com/Slayer89/slayhud/archive/master.zip calmlikeabomb
