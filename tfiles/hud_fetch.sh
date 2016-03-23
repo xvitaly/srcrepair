@@ -70,7 +70,7 @@ fetch_hud http://huds.tf/morghud/img/main.png https://github.com/ItsMorgus/MorgH
 fetch_hud http://huds.tf/kbnhud/img/main.png https://github.com/Jotunn/KBNHud/archive/master.zip kbnhud
 fetch_hud http://huds.tf/medhud/img/main.png https://github.com/Intellectualbadass/medHUD/archive/master.zip medhud
 fetch_hud http://huds.tf/rayshud/img/main.png https://github.com/raysfire/rayshud/archive/master.zip rayshud
-fetch_hud http://huds.tf/evehud/img/main.png http://files.gamebanana.com/guis/eve_hud_v375.zip evehud
+fetch_hud http://huds.tf/evehud/img/main.png http://files.gamebanana.com/guis/eve_hud_v376.zip evehud
 fetch_hud http://huds.tf/biscottihud/img/main.png https://github.com/MedicodiBiscotti/biscottiHUD/archive/master.zip biscottihud
 fetch_hud http://huds.tf/flamehud/img/main.png https://github.com/mattr0d/flamehud/archive/master.zip flamehud
 fetch_hud http://huds.tf/frankenhud/img/main.png https://github.com/TheKins/frankenhud/archive/master.zip frankenhud
