@@ -2921,7 +2921,7 @@ namespace srcrepair
             if (File.Exists(LocalHelp))
             {
                 // Запустим файл справочной системы на исполнение...
-                try { Help.ShowHelp(this, LocalHelp, HelpNavigator.Topic, "Changelog.html"); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.AppHelpFileFailedToStart, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
+                try { Help.ShowHelp(this, LocalHelp, HelpNavigator.KeywordIndex, String.Format("Page_{0}", MainTabControl.SelectedIndex)); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.AppHelpFileFailedToStart, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
             }
             else
             {
