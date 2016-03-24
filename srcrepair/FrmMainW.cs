@@ -2915,7 +2915,7 @@ namespace srcrepair
         private void MNUHelp_Click(object sender, EventArgs e)
         {
             // Сгенерируем путь к файлу справочной системы...
-            string LocalHelp = String.Format(App.FullAppPath, String.Format("srcrepair_{0}.chm", AppStrings.AppLangPrefix));
+            string LocalHelp = Path.Combine(App.FullAppPath, String.Format("srcrepair_{0}.chm", AppStrings.AppLangPrefix));
 
             // Проверим существование файла...
             if (File.Exists(LocalHelp))
