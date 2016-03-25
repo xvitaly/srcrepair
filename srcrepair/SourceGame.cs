@@ -122,6 +122,9 @@ namespace srcrepair
         /// </summary>
         public List<String> FPSConfigs;
 
+        /// <summary>
+        /// Содержит список доступных HUD для управляемой игры.
+        /// </summary>
         public HUDManager HUDMan;
 
         /// <summary>
