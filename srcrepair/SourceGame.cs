@@ -122,6 +122,8 @@ namespace srcrepair
         /// </summary>
         public List<String> FPSConfigs;
 
+        public HUDManager HUDMan;
+
         /// <summary>
         /// Содержит путь к каталогу с загруженными данными из Steam Workshop.
         /// </summary>
