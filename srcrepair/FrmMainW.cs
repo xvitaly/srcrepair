@@ -2952,7 +2952,7 @@ namespace srcrepair
         private void MNUHelp_Click(object sender, EventArgs e)
         {
             // Отобразим справочную систему в зависимости от контекста...
-            
+            CoreLib.OpenWebPage(GetHelpWebPage(MainTabControl.SelectedIndex));
         }
 
         private void MNUOpinion_Click(object sender, EventArgs e)
