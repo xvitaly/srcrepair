@@ -2914,19 +2914,7 @@ namespace srcrepair
         private void MNUHelp_Click(object sender, EventArgs e)
         {
             // Сгенерируем путь к файлу справочной системы...
-            string LocalHelp = Path.Combine(App.FullAppPath, String.Format("srcrepair_{0}.chm", AppStrings.AppLangPrefix));
-
-            // Проверим существование файла...
-            if (File.Exists(LocalHelp))
-            {
-                // Запустим файл справочной системы на исполнение...
-                try { Help.ShowHelp(this, LocalHelp, HelpNavigator.KeywordIndex, String.Format("Page_{0}", MainTabControl.SelectedIndex)); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.AppHelpFileFailedToStart, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
-            }
-            else
-            {
-                // Файл не найден, поэтому выведем сообщение...
-                MessageBox.Show(AppStrings.AppHelpFileNotFound, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            
         }
 
         private void MNUOpinion_Click(object sender, EventArgs e)
