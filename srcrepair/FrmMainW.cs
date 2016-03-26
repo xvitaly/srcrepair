@@ -1891,10 +1891,48 @@ namespace srcrepair
             HUD_NotAvailable.Visible = !Mode;
         }
 
+        /// <summary>
+        /// Генерирует ссылку онлайновой справочной системы на основе информации
+        /// о текущей вкладке.
+        /// </summary>
+        /// <param name="TabIndex">Индекс текущей вкладки</param>
+        /// <returns>Возвращает URL, пригодный для загрузки в веб-браузере</returns>
+        private string GetHelpWebPage(int TabIndex)
+        {
+            // Создаём буферную переменную...
+            string Result = "";
+
+            // Генерируем ID для справочной системы сайта...
+            switch (TabIndex)
+            {
+                case 0: /* графический твикер. */
+                    Result = "gtweaker";
+                    break;
+                case 1: /* Редактор конфигов. */
+                    Result = "cfgeditor";
+                    break;
+                case 2: /* Устранение проблем и очистка. */
+                    Result = "cleanup";
+                    break;
+                case 3: /* FPS-конфиги. */
+                    Result = "fpscfgs";
+                    break;
+                case 4: /* Менеджер HUD. */
+                    Result = "hudman";
+                    break;
+                case 5: /* Резервные копии. */
+                    Result = "backups";
+                    break;
+            }
+
+            // Возвращаем финальный URL...
+            return String.Format(Properties.Resources.AppURLHelpSystem, Result);
+        }
+
         #endregion
 
         #region Internal Workers
-        
+
         private void BW_UpChk_DoWork(object sender, DoWorkEventArgs e)
         {
             try
