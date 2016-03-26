@@ -388,4 +388,7 @@
   <data name="AppBtURL" xml:space="preserve">
     <value>https://github.com/xvitaly/srcrepair/issues/new</value>
   </data>
+  <data name="AppURLHelpSystem" xml:space="preserve">
+    <value>https://www.easycoding.org/projects/srcrepair/help/{0}</value>
+  </data>
 </root>
