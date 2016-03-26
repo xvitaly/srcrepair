@@ -223,24 +223,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to start Microsoft HTML Help Viewer. Check *.chm file associations!.
-        /// </summary>
-        internal static string AppHelpFileFailedToStart {
-            get {
-                return ResourceManager.GetString("AppHelpFileFailedToStart", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Can&apos;t find HTML help file. Offline help system will be unavailable..
-        /// </summary>
-        internal static string AppHelpFileNotFound {
-            get {
-                return ResourceManager.GetString("AppHelpFileNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to en.
         /// </summary>
         internal static string AppLangPrefix {
