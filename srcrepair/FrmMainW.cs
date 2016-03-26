@@ -2913,7 +2913,7 @@ namespace srcrepair
 
         private void MNUHelp_Click(object sender, EventArgs e)
         {
-            // Сгенерируем путь к файлу справочной системы...
+            // Отобразим справочную систему в зависимости от контекста...
             
         }
 
