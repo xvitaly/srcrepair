@@ -67,7 +67,7 @@ namespace srcrepair
                 else
                 {
                     // Значение не существует, поэтому сгенерируем исключение для обработки в основном коде...
-                    throw new System.NullReferenceException("Exception: No InstallPath value detected! Please run Steam.");
+                    throw new NullReferenceException("Exception: No InstallPath value detected! Please run Steam.");
                 }
             }
 
