@@ -174,25 +174,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Удаляет файлы в заданной папке по указанной маске.
-        /// </summary>
-        /// <param name="DirPath">Каталог для работы</param>
-        /// <param name="CleanupMask">Маска файлов для удаления</param>
-        public static void CleanDirectoryNow(string DirPath, string CleanupMask)
-        {
-            // Открываем каталог...
-            DirectoryInfo DInfo = new DirectoryInfo(DirPath);
-            // Считываем список файлов по заданной маске...
-            FileInfo[] DirList = DInfo.GetFiles(CleanupMask);
-            // Начинаем обход массива...
-            foreach (FileInfo DItem in DirList)
-            {
-                // Обрабатываем найденное...
-                DItem.Delete(); // Удаляем файл...
-            }
-        }
-
-        /// <summary>
         /// Проверяет существование указанного ключа в HKCU и при
         /// отсутствии создаёт автоматически.
         /// </summary>
@@ -201,19 +182,6 @@ namespace srcrepair
         {
             RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(KeyName, false);
             if (ResKey == null) { Registry.CurrentUser.CreateSubKey(KeyName); } else { ResKey.Close(); }
-        }
-
-        /// <summary>
-        /// Записывает в реестр параметр-булево настроек программы.
-        /// </summary>
-        /// <param name="CVar">Название переменной</param>
-        /// <param name="Subkey">Подключ в HKCU</param>
-        /// <param name="CValue">Значение переменной</param>
-        public static void WriteAppBool(string CVar, string Subkey, bool CValue)
-        {
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(Path.Combine("Software", Subkey), true);
-            ResKey.SetValue(CVar, Convert.ToInt32(CValue), RegistryValueKind.DWord);
-            ResKey.Close();
         }
 
         /// <summary>
