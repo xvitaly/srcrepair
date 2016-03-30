@@ -102,7 +102,7 @@ Name: "{group}\{cm:ShcLocTexts}\{cm:ProgramOnTheWeb,SRC Repair}"; Filename: "htt
 Name: "{group}\{cm:UninstallProgram,SRC Repair}"; Filename: "{uninstallexe}"
 
 ; Создаём ярлык для багтрекера...
-Name: "{group}\{cm:RepAppErrText}"; Filename: "https://www.easycoding.org/projects/srcrepair/bugreport"
+Name: "{group}\{cm:RepAppErrText}"; Filename: "https://github.com/xvitaly/srcrepair/issues"
 
 ; Создаём ярлык на рабочем столе (если выбрано)...
 Name: "{commondesktop}\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: desktopicon
