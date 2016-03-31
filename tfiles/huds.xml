@@ -15,7 +15,7 @@
   <HUD>
     <Name>Pikles Hud</Name>
     <Game>tf</Game>
-    <IsUpdated>1</IsUpdated>
+    <IsUpdated>0</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/pikles-hud/pikles-hud_5e462e1f.zip</URI>
     <UpURI>https://github.com/piklestf2/pikles-hud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/pikles-hud.png</Preview>
@@ -39,7 +39,7 @@
   <HUD>
     <Name>bastHUD</Name>
     <Game>tf</Game>
-    <IsUpdated>1</IsUpdated>
+    <IsUpdated>0</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/basthud/basthud_a46e21ae.zip</URI>
     <UpURI>https://github.com/basbanaan/bastHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/basthud.png</Preview>
@@ -51,7 +51,7 @@
   <HUD>
     <Name>Sir.HUD</Name>
     <Game>tf</Game>
-    <IsUpdated>1</IsUpdated>
+    <IsUpdated>0</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/sirhud/sirhud_1d2b2274.zip</URI>
     <UpURI>https://github.com/sirgrey/SirHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/sirhud.png</Preview>
@@ -207,7 +207,7 @@
   <HUD>
     <Name>MorgHUD</Name>
     <Game>tf</Game>
-    <IsUpdated>1</IsUpdated>
+    <IsUpdated>0</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/morghud/morghud_e69b7ed7.zip</URI>
     <UpURI>https://github.com/ItsMorgus/MorgHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/morghud.png</Preview>
@@ -231,7 +231,7 @@
   <HUD>
     <Name>medHUD</Name>
     <Game>tf</Game>
-    <IsUpdated>1</IsUpdated>
+    <IsUpdated>0</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/medhud/medhud_715719da.zip</URI>
     <UpURI>https://github.com/Intellectualbadass/medHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/medhud.png</Preview>
@@ -315,7 +315,7 @@
   <HUD>
     <Name>JayHUD</Name>
     <Game>tf</Game>
-    <IsUpdated>1</IsUpdated>
+    <IsUpdated>0</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/jayhud/jayhud_d8ade2d9.zip</URI>
     <UpURI>https://github.com/kermit-tf/JayHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/jayhud.png</Preview>
@@ -351,7 +351,7 @@
   <HUD>
     <Name>SmesiHud</Name>
     <Game>tf</Game>
-    <IsUpdated>1</IsUpdated>
+    <IsUpdated>0</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/smesihud/smesihud_65233391.zip</URI>
     <UpURI>https://github.com/Smesi/SmesiHud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/smesihud.png</Preview>
@@ -387,7 +387,7 @@
   <HUD>
     <Name>ysHUD</Name>
     <Game>tf</Game>
-    <IsUpdated>1</IsUpdated>
+    <IsUpdated>0</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/yshud/yshud_bf6a9670.zip</URI>
     <UpURI>https://github.com/Yo5hi/ysHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/yshud.png</Preview>
@@ -411,7 +411,7 @@
   <HUD>
     <Name>G-Mang HUD</Name>
     <Game>tf</Game>
-    <IsUpdated>1</IsUpdated>
+    <IsUpdated>0</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/gmanghud/gmanghud_1c0c107f.zip</URI>
     <UpURI>https://github.com/hoXyy/GMang_HUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/gmanghud.png</Preview>
@@ -423,7 +423,7 @@
   <HUD>
     <Name>RevHUD</Name>
     <Game>tf</Game>
-    <IsUpdated>1</IsUpdated>
+    <IsUpdated>0</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/revhud/revhud_a9e8b19b.zip</URI>
     <UpURI>http://files.gamebanana.com/guis/revhud-jan17.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/revhud.png</Preview>
