@@ -2631,7 +2631,7 @@ namespace srcrepair
             CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile, false, false, false, false);
         }
 
-        private void PS_RemGraphOpts_Click(object sender, EventArgs e)
+        private void PS_RemGameOpts_Click(object sender, EventArgs e)
         {
             // Создаём список файлов для удаления...
             List<String> CleanDirs = new List<string>();
@@ -2690,7 +2690,7 @@ namespace srcrepair
             CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CacheChkReq, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
-        private void PS_ResetSettings_Click(object sender, EventArgs e)
+        private void PS_CheckCache_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(String.Format(AppStrings.AppQuestionTemplate, ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {

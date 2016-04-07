@@ -1149,7 +1149,7 @@
             resources.ApplyResources(this.PS_CheckCache, "PS_CheckCache");
             this.PS_CheckCache.Name = "PS_CheckCache";
             this.PS_CheckCache.UseVisualStyleBackColor = true;
-            this.PS_CheckCache.Click += new System.EventHandler(this.PS_ResetSettings_Click);
+            this.PS_CheckCache.Click += new System.EventHandler(this.PS_CheckCache_Click);
             // 
             // PS_RemOldBin
             // 
@@ -1163,7 +1163,7 @@
             resources.ApplyResources(this.PS_RemGameOpts, "PS_RemGameOpts");
             this.PS_RemGameOpts.Name = "PS_RemGameOpts";
             this.PS_RemGameOpts.UseVisualStyleBackColor = true;
-            this.PS_RemGameOpts.Click += new System.EventHandler(this.PS_RemGraphOpts_Click);
+            this.PS_RemGameOpts.Click += new System.EventHandler(this.PS_RemGameOpts_Click);
             // 
             // PS_GB_Remover
             // 
