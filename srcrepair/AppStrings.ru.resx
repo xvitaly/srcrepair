@@ -918,4 +918,8 @@
     <value>Процесс Steam, обнаруженный в памяти был успешно завершён!</value>
     <comment>Сообщение при завершении работающего процесса Steam</comment>
   </data>
+  <data name="AppQuestionTemplate" xml:space="preserve">
+    <value>{0}?</value>
+    <comment>Шаблон для вопроса (используется для служебных целей)</comment>
+  </data>
 </root>

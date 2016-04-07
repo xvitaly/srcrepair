@@ -286,6 +286,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0}?.
+        /// </summary>
+        internal static string AppQuestionTemplate {
+            get {
+                return ResourceManager.GetString("AppQuestionTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to NonASCII characters detected. Path: {0}..
         /// </summary>
         internal static string AppRestrSymbLog {
