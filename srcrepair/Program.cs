@@ -31,19 +31,31 @@ namespace srcrepair
         [STAThread]
         static void Main()
         {
+            // Создаём новый мьютекс на время работы программы...
             using (Mutex Mtx = new Mutex(false, Properties.Resources.AppName))
             {
+                // Пробуем занять и заблокировать, тем самым проверяя запущена ли ещё одна копия программы или нет...
                 if (Mtx.WaitOne(0, false))
                 {
+                    // Включаем визуальные стили...
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);
+
+                    // Получаем переданные параметры командной строки...
                     string[] CMDLineA = Environment.GetCommandLineArgs();
+
+                    // Обрабатываем полученные параметры командной строки...
                     if (CMDLineA.Length > 2) { if (CMDLineA[1] == "/lang") { try { Thread.CurrentThread.CurrentUICulture = new CultureInfo(CMDLineA[2]); } catch { MessageBox.Show(Properties.Resources.AppUnsupportedLanguage, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } } }
+
+                    // Запускаем главную форму...
                     Application.Run(new frmMainW());
                 }
                 else
                 {
+                    // Программа уже запущена. Выводим сообщение об этом...
                     MessageBox.Show(Properties.Resources.AppAlrLaunched, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Завершаем работу приложения с кодом 16...
                     Environment.Exit(16);
                 }
             }
