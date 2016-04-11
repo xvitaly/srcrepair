@@ -163,8 +163,10 @@ namespace srcrepair
             ST.FileName = SAppName;
             ST.Arguments = SParameters;
             ST.WindowStyle = ProcessWindowStyle.Hidden;
+            
             // Запускаем процесс...
             Process NewProcess = Process.Start(ST);
+            
             // Ждём завершения процесса...
             while (!(NewProcess.HasExited))
             {
