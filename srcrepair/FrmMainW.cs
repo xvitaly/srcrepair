@@ -60,36 +60,6 @@ namespace srcrepair
         #region Internal Functions
 
         /// <summary>
-        /// Очищает блобы (файлы с расширением *.blob) из каталога Steam.
-        /// </summary>
-        /// <param name="SteamPath">Полный путь к каталогу Steam</param>
-        private void CleanBlobsNow(string SteamPath)
-        {
-            // Инициализируем буферную переменную, в которой будем хранить имя файла...
-            string FileName;
-
-            // Генерируем имя первого кандидата на удаление с полным путём до него...
-            FileName = Path.Combine(SteamPath, "AppUpdateStats.blob");
-
-            // Проверяем существует ли данный файл...
-            if (File.Exists(FileName))
-            {
-                // Удаляем...
-                File.Delete(FileName);
-            }
-
-            // Аналогично генерируем имя второго кандидата...
-            FileName = Path.Combine(SteamPath, "ClientRegistry.blob");
-
-            // Проверяем, существует ли файл...
-            if (File.Exists(FileName))
-            {
-                // Удаляем...
-                File.Delete(FileName);
-            }
-        }
-
-        /// <summary>
         /// Удаляет значения реестра, отвечающие за настройки клиента Steam,
         /// а также записывает значение языка.
         /// </summary>
@@ -2143,7 +2113,7 @@ namespace srcrepair
                         try
                         {
                             // Чистим блобы...
-                            CleanBlobsNow(App.FullSteamPath);
+                            CoreLib.CleanBlobsNow(App.FullSteamPath);
                         }
                         catch (Exception Ex)
                         {
