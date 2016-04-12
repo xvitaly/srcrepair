@@ -60,25 +60,6 @@ namespace srcrepair
         #region Internal Functions
 
         /// <summary>
-        /// Устанавливает требуемый FPS-конфиг.
-        /// </summary>
-        /// <param name="ConfName">Имя конфига</param>
-        /// <param name="AppPath">Путь к программе SRC Repair</param>
-        /// <param name="GameDir">Путь к каталогу игры</param>
-        /// <param name="CustmDir">Флаг использования игрой н. с. к.</param>
-        private void InstallConfigNow(string ConfName, string AppPath, string GameDir, bool CustmDir)
-        {
-            // Генерируем путь к каталогу установки конфига...
-            string DestPath = Path.Combine(GameDir, CustmDir ? Path.Combine("custom", Properties.Settings.Default.UserCustDirName) : String.Empty, "cfg");
-
-            // Проверяем существование каталога и если его не существует - создаём...
-            if (!Directory.Exists(DestPath)) { Directory.CreateDirectory(DestPath); }
-
-            // Устанавливаем...
-            File.Copy(Path.Combine(AppPath, "cfgs", ConfName), Path.Combine(DestPath, "autoexec.cfg"), true);
-        }
-
-        /// <summary>
         /// Очищает блобы (файлы с расширением *.blob) из каталога Steam.
         /// </summary>
         /// <param name="SteamPath">Полный путь к каталогу Steam</param>
@@ -2459,7 +2440,7 @@ namespace srcrepair
                     try
                     {
                         // Устанавливаем...
-                        InstallConfigNow(FP_ConfigSel.Text, App.FullAppPath, SelGame.FullGamePath, SelGame.IsUsingUserDir);
+                        CoreLib.InstallConfigNow(FP_ConfigSel.Text, App.FullAppPath, SelGame.FullGamePath, SelGame.IsUsingUserDir);
                         
                         // Выводим сообщение об успешной установке...
                         MessageBox.Show(AppStrings.FP_InstallSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
