@@ -869,5 +869,50 @@ namespace srcrepair
                 File.Delete(FileName);
             }
         }
+
+        /// <summary>
+        /// Удаляет значения реестра, отвечающие за настройки клиента Steam,
+        /// а также записывает значение языка.
+        /// </summary>
+        /// <param name="LangCode">ID языка Steam</param>
+        public static void CleanRegistryNow(int LangCode)
+        {
+            // Удаляем ключ HKEY_LOCAL_MACHINE\Software\Valve рекурсивно (если есть права администратора)...
+            if (CoreLib.IsCurrentUserAdmin()) { Registry.LocalMachine.DeleteSubKeyTree(Path.Combine("Software", "Valve"), false); }
+
+            // Удаляем ключ HKEY_CURRENT_USER\Software\Valve рекурсивно...
+            Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("Software", "Valve"), false);
+
+            // Начинаем вставлять значение языка клиента Steam...
+            // Инициализируем буферную переменную для хранения названия языка...
+            string XLang;
+
+            // Генерируем...
+            switch (LangCode)
+            {
+                case 0:
+                    XLang = "english";
+                    break;
+                case 1:
+                    XLang = "russian";
+                    break;
+                default:
+                    XLang = "english";
+                    break;
+            }
+
+            // Подключаем реестр и создаём ключ HKEY_CURRENT_USER\Software\Valve\Steam...
+            RegistryKey RegLangKey = Registry.CurrentUser.CreateSubKey(Path.Combine("Software", "Valve", "Steam"));
+
+            // Если не было ошибок, записываем значение...
+            if (RegLangKey != null)
+            {
+                // Записываем значение в реестр...
+                RegLangKey.SetValue("language", XLang);
+            }
+
+            // Закрываем ключ...
+            RegLangKey.Close();
+        }
     }
 }

@@ -60,51 +60,6 @@ namespace srcrepair
         #region Internal Functions
 
         /// <summary>
-        /// Удаляет значения реестра, отвечающие за настройки клиента Steam,
-        /// а также записывает значение языка.
-        /// </summary>
-        /// <param name="LangCode">ID языка Steam</param>
-        private void CleanRegistryNow(int LangCode)
-        {
-            // Удаляем ключ HKEY_LOCAL_MACHINE\Software\Valve рекурсивно (если есть права администратора)...
-            if (CoreLib.IsCurrentUserAdmin()) { Registry.LocalMachine.DeleteSubKeyTree(Path.Combine("Software", "Valve"), false); }
-
-            // Удаляем ключ HKEY_CURRENT_USER\Software\Valve рекурсивно...
-            Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("Software", "Valve"), false);
-
-            // Начинаем вставлять значение языка клиента Steam...
-            // Инициализируем буферную переменную для хранения названия языка...
-            string XLang;
-
-            // Генерируем...
-            switch (LangCode)
-            {
-                case 0:
-                    XLang = "english";
-                    break;
-                case 1:
-                    XLang = "russian";
-                    break;
-                default:
-                    XLang = "english";
-                    break;
-            }
-
-            // Подключаем реестр и создаём ключ HKEY_CURRENT_USER\Software\Valve\Steam...
-            RegistryKey RegLangKey = Registry.CurrentUser.CreateSubKey(Path.Combine("Software", "Valve", "Steam"));
-
-            // Если не было ошибок, записываем значение...
-            if (RegLangKey != null)
-            {
-                // Записываем значение в реестр...
-                RegLangKey.SetValue("language", XLang);
-            }
-
-            // Закрываем ключ...
-            RegLangKey.Close();
-        }
-
-        /// <summary>
         /// Сохраняет содержимое таблицы в файл конфигурации, указанный в
         /// параметре. Используется в Save и SaveAs Редактора конфигов.
         /// </summary>
@@ -2130,13 +2085,13 @@ namespace srcrepair
                             if (PS_SteamLang.SelectedIndex != -1)
                             {
                                 // Всё в порядке, чистим реестр...
-                                CleanRegistryNow(PS_SteamLang.SelectedIndex);
+                                CoreLib.CleanRegistryNow(PS_SteamLang.SelectedIndex);
                             }
                             else
                             {
                                 // Пользователь не выбрал язык, поэтому будем использовать английский...
                                 MessageBox.Show(AppStrings.PS_NoLangSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                CleanRegistryNow(0);
+                                CoreLib.CleanRegistryNow(0);
                             }
                         }
                         catch (Exception Ex)
