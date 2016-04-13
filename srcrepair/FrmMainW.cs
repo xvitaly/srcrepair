@@ -103,28 +103,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Формирует полные пути к библиотекам с установленными играми.
-        /// </summary>
-        /// <param name="SteamPath">Путь установки Steam</param>
-        private List<String> FormatInstallDirs(string SteamPath)
-        {
-            // Создаём массив, в который будем помещать найденные пути...
-            List<String> Result = new List<String>();
-
-            // Считываем все возможные расположения локальных библиотек игр...
-            List<String> MntPnts = GetSteamMountPoints(SteamPath);
-
-            // Начинаем обход каталога и получение поддиректорий...
-            foreach (string MntPnt in MntPnts)
-            {
-                Result.Add(Path.Combine(MntPnt, Properties.Resources.SteamAppsFolderName, "common"));
-            }
-
-            // Возвращаем сформированный массив...
-            return Result;
-        }
-
-        /// <summary>
         /// Определяет установленные игры и заполняет комбо-бокс выбора
         /// доступных управляемых игр.
         /// </summary>
@@ -136,7 +114,7 @@ namespace srcrepair
             AppSelector.Items.Clear();
 
             // При использовании нового метода поиска установленных игр, считаем их из конфига Steam...
-            List<String> GameDirs = FormatInstallDirs(App.FullSteamPath);
+            List<String> GameDirs = CoreLib.FormatInstallDirs(App.FullSteamPath);
             
             // Формируем список для поддерживаемых игр...
             List<String> AvailableGames = new List<String>();
