@@ -927,7 +927,7 @@ namespace srcrepair
             // Генерируем строку с параметрами...
             string Params = String.Format("/ea \"{0}\" {1}", Path.Combine(DestDir, String.Format("{0}_{1}.reg", FileName, CoreLib.DateTime2Unix(DateTime.Now))), RKey);
             // Запускаем и ждём завершения...
-            CoreLib.StartProcessAndWait("regedit.exe", Params);
+            StartProcessAndWait("regedit.exe", Params);
         }
     }
 }
