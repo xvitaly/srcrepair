@@ -929,5 +929,55 @@ namespace srcrepair
             // Запускаем и ждём завершения...
             StartProcessAndWait("regedit.exe", Params);
         }
+
+        /// <summary>
+        /// Считывает из главного файла конфигурации Steam пути к дополнительным точкам монтирования.
+        /// </summary>
+        /// <param name="SteamPath">Путь к клиенту Steam</param>
+        public static List<String> GetSteamMountPoints(string SteamPath)
+        {
+            // Создаём массив, в который будем помещать найденные пути...
+            List<String> Result = new List<String>();
+
+            // Добавляем каталог установки Steam...
+            Result.Add(SteamPath);
+
+            // Начинаем чтение главного файла конфигурации...
+            try
+            {
+                // Открываем файл как поток...
+                using (StreamReader SteamConfig = new StreamReader(Path.Combine(SteamPath, "config", "config.vdf"), Encoding.Default))
+                {
+                    // Инициализируем буферную переменную...
+                    string RdStr;
+
+                    // Читаем поток построчно...
+                    while (SteamConfig.Peek() >= 0)
+                    {
+                        // Считываем строку и сразу очищаем от лишнего...
+                        RdStr = SteamConfig.ReadLine().Trim();
+
+                        // Проверяем наличие данных в строке...
+                        if (!(String.IsNullOrWhiteSpace(RdStr)))
+                        {
+                            // Ищем в строке путь установки...
+                            if (RdStr.IndexOf("BaseInstallFolder", StringComparison.CurrentCultureIgnoreCase) != -1)
+                            {
+                                RdStr = CoreLib.CleanStrWx(RdStr, true, true);
+                                RdStr = RdStr.Remove(0, RdStr.IndexOf(" ") + 1);
+                                if (!(String.IsNullOrWhiteSpace(RdStr))) { Result.Add(RdStr); }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception Ex)
+            {
+                CoreLib.WriteStringToLog(Ex.Message);
+            }
+
+            // Возвращаем сформированный массив...
+            return Result;
+        }
     }
 }
