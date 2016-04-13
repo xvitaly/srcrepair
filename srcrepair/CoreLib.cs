@@ -914,5 +914,20 @@ namespace srcrepair
             // Закрываем ключ...
             RegLangKey.Close();
         }
+
+        /// <summary>
+        /// Используется для создания резервной копии выбранной ветки
+        /// реестра в переданный в параметре файл.
+        /// </summary>
+        /// <param name="RKey">Ветка реестра для резервирования</param>
+        /// <param name="FileName">Имя файла резервной копии</param>
+        /// <param name="DestDir">Каталог с резервными копиями</param>
+        public static void CreateRegBackUpNow(string RKey, string FileName, string DestDir)
+        {
+            // Генерируем строку с параметрами...
+            string Params = String.Format("/ea \"{0}\" {1}", Path.Combine(DestDir, String.Format("{0}_{1}.reg", FileName, CoreLib.DateTime2Unix(DateTime.Now))), RKey);
+            // Запускаем и ждём завершения...
+            CoreLib.StartProcessAndWait("regedit.exe", Params);
+        }
     }
 }

@@ -91,21 +91,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Используется для создания резервной копии выбранной ветки
-        /// реестра в переданный в параметре файл.
-        /// </summary>
-        /// <param name="RKey">Ветка реестра для резервирования</param>
-        /// <param name="FileName">Имя файла резервной копии</param>
-        /// <param name="DestDir">Каталог с резервными копиями</param>
-        private void CreateRegBackUpNow(string RKey, string FileName, string DestDir)
-        {
-            // Генерируем строку с параметрами...
-            string Params = String.Format("/ea \"{0}\" {1}", Path.Combine(DestDir, String.Format("{0}_{1}.reg", FileName, CoreLib.DateTime2Unix(DateTime.Now))), RKey);
-            // Запускаем и ждём завершения...
-            CoreLib.StartProcessAndWait("regedit.exe", Params);
-        }
-
-        /// <summary>
         /// Возвращает описание переданной в качестве параметра переменной, получая
         /// эту информацию из ресурса CVList с учётом локализации.
         /// </summary>
@@ -2277,7 +2262,7 @@ namespace srcrepair
                         if (Properties.Settings.Default.SafeCleanup)
                         {
                             // Создаём резервную копию...
-                            try { CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), "Game_AutoBackUp", SelGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                            try { CoreLib.CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), "Game_AutoBackUp", SelGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                         }
 
                         try
@@ -2551,7 +2536,7 @@ namespace srcrepair
                     if (!SelGame.IsUsingVideoFile)
                     {
                         // Создаём резервную копию куста реестра...
-                        if (Properties.Settings.Default.SafeCleanup) { try { CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), "Game_AutoBackUp", SelGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } }
+                        if (Properties.Settings.Default.SafeCleanup) { try { CoreLib.CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), "Game_AutoBackUp", SelGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } }
 
                         // Удаляем ключ HKEY_CURRENT_USER\Software\Valve\Source\tf\Settings из реестра...
                         Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), false);
@@ -2773,7 +2758,7 @@ namespace srcrepair
                     if (!SelGame.IsUsingVideoFile)
                     {
                         // Создаём конфиг ветки реестра...
-                        CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), "Game_Options", SelGame.FullBackUpDirPath);
+                        CoreLib.CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), "Game_Options", SelGame.FullBackUpDirPath);
                     }
                     else
                     {
@@ -2803,7 +2788,7 @@ namespace srcrepair
                 try
                 {
                     // Создаём...
-                    CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve"), "Steam_BackUp", SelGame.FullBackUpDirPath);
+                    CoreLib.CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve"), "Steam_BackUp", SelGame.FullBackUpDirPath);
                     
                     // Выводим сообщение...
                     MessageBox.Show(AppStrings.BU_RegDone, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -2826,7 +2811,7 @@ namespace srcrepair
             {
                 try
                 {
-                    CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source"), "Source_Options", SelGame.FullBackUpDirPath);
+                    CoreLib.CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source"), "Source_Options", SelGame.FullBackUpDirPath);
                     MessageBox.Show(AppStrings.BU_RegDone, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     UpdateBackUpList(SelGame.FullBackUpDirPath);
                 }
