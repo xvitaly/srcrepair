@@ -25,6 +25,8 @@ namespace srcrepair
 {
     public class VideoSettings
     {
+        protected int ScreenWidth;
+        protected int ScreenHeight;
     }
 
     public class NCFVideo : VideoSettings
