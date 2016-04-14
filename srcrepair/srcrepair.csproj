@@ -187,6 +187,7 @@
     <Compile Include="Settings.cs" />
     <Compile Include="SourceGame.cs" />
     <Compile Include="SteamConv.cs" />
+    <Compile Include="VideoSettings.cs" />
     <EmbeddedResource Include="AppStrings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppStrings.Designer.cs</LastGenOutput>
