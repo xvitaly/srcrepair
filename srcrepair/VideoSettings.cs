@@ -8,4 +8,12 @@ namespace srcrepair
     public class VideoSettings
     {
     }
+
+    public class NCFVideo : VideoSettings
+    {
+    }
+
+    public class GCFVideo: VideoSettings
+    {
+    }
 }
