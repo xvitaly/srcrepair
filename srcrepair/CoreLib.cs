@@ -159,7 +159,7 @@ namespace srcrepair
         public static void StartProcessAndWait(string SAppName, string SParameters)
         {
             // Создаём объект с нужными параметрами...
-            ProcessStartInfo ST = new System.Diagnostics.ProcessStartInfo();
+            ProcessStartInfo ST = new ProcessStartInfo();
             ST.FileName = SAppName;
             ST.Arguments = SParameters;
             ST.WindowStyle = ProcessWindowStyle.Hidden;
