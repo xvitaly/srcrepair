@@ -13,6 +13,7 @@ Thanks to:
  * Naym - testing, bug reports;
  * CAMCOH - testing, bug reports;
  * Ruha - testing, bug reports;
+ * AndrewRi - testing, bug reports;
  * Bon - Beta & RC testing, his own FPS-config, list of TF2 console variables in Russian;
  * Evg – bug reports, feature requests;
  * SkuLL - TF2 FPS-config.
