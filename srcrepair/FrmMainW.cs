@@ -1515,6 +1515,11 @@ namespace srcrepair
                 PS_PathGame.Image = Properties.Resources.upd_err;
                 CoreLib.WriteStringToLog(String.Format(AppStrings.AppRestrSymbLog, GamePath));
             }
+            else
+            {
+                PS_PathGame.ForeColor = Color.Green;
+                PS_PathGame.Image = Properties.Resources.upd_nx;
+            }
         }
 
         /// <summary>
