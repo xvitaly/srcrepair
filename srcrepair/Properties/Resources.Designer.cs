@@ -490,15 +490,6 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Log Viewer plugin for SRC Repair by EasyCoding Team..
-        /// </summary>
-        internal static string LV_About {
-            get {
-                return ResourceManager.GetString("LV_About", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Mhint {
