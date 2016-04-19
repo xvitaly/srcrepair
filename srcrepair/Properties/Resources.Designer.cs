@@ -615,6 +615,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ^[0-9a-zA-Z :()-_./\\\\]*$.
+        /// </summary>
+        internal static string PathValidateRegex {
+            get {
+                return ResourceManager.GetString("PathValidateRegex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to srcrepair.Resources.VtTemplate.txt.
         /// </summary>
         internal static string PI_TemplateFile {
