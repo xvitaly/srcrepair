@@ -681,7 +681,7 @@
   <data name="BU_BType_DB" xml:space="preserve">
     <value>Database</value>
   </data>
-  <data name="MM_AboutDlg" xml:space="preserve">
+  <data name="AppPluginAboutDlg" xml:space="preserve">
     <value>{0} by {1}.</value>
   </data>
   <data name="HD_BtnUpdateText" xml:space="preserve">

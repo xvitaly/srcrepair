@@ -874,9 +874,9 @@
     <value>База данных</value>
     <comment>Тип бэкапа: база данных</comment>
   </data>
-  <data name="MM_AboutDlg" xml:space="preserve">
+  <data name="AppPluginAboutDlg" xml:space="preserve">
     <value>{0} от {1}.</value>
-    <comment>Шаблон сообщения "о программе" модуля управления отключёнными игроками</comment>
+    <comment>Шаблон сообщения "о программе" для плагинов.</comment>
   </data>
   <data name="HD_BtnUpdateText" xml:space="preserve">
     <value>Обновить выбранный HUD</value>
