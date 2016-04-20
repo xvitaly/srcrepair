@@ -16,7 +16,7 @@ Downloads
 =========
 Download application (this link always contains latest version): https://www.easycoding.org/files/srcrepair_latest.exe
 
-Full archive: https://www.easycoding.org/download
+Full download archive: https://www.easycoding.org/download
 
 Official bug tracker: https://github.com/xvitaly/srcrepair/issues
 
