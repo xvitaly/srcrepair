@@ -37,5 +37,21 @@ namespace srcrepair
 
     public class GCFVideo: VideoSettings
     {
+        private int DisplayMode;
+        private int ModelDetail;
+        private int TextureDetail;
+        private int ShaderDetail;
+        private int WaterDetail;
+        private int WaterReflections;
+        private int ShadowDetail;
+        private int ColorCorrection;
+        private int AntiAliasing;
+        private int AnitiAliasQuality;
+        private int FilteringMode;
+        private int FilteringTrilinear;
+        private int VSync;
+        private int MotionBlur;
+        private int DirectXMode;
+        private int HDRMode;
     }
 }
