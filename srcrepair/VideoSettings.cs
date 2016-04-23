@@ -27,8 +27,8 @@ namespace srcrepair
 {
     public class VideoSettings
     {
-        protected int ScreenWidth;
-        protected int ScreenHeight;
+        protected int ScreenWidth = 800;
+        protected int ScreenHeight = 600;
 
         public int GetScreenWidth()
         {
