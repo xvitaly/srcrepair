@@ -182,6 +182,71 @@ namespace srcrepair
             return res;
         }
 
+        public int GetAntiAliasing()
+        {
+            int res = -1;
+
+            switch (AntiAliasing)
+            {
+                case 0: res = 0;
+                    break;
+                case 1: res = 0;
+                    break;
+                case 2: res = 1;
+                    break;
+                case 4:
+                    switch (AntiAliasQuality)
+                    {
+                        case 0: res = 2;
+                            break;
+                        case 2: res = 3;
+                            break;
+                        case 4: res = 4;
+                            break;
+                    }
+                    break;
+                case 8:
+                    switch (AntiAliasQuality)
+                    {
+                        case 0: res = 5;
+                            break;
+                        case 2: res = 6;
+                            break;
+                    }
+                    break;
+            }
+
+            return res;
+        }
+
+        public int GetFilteringMode()
+        {
+            int res = -1;
+
+            switch (FilteringMode)
+            {
+                case 1:
+                    switch (FilteringTrilinear)
+                    {
+                        case 0: res = 0;
+                            break;
+                        case 1: res = 1;
+                            break;
+                    }
+                    break;
+                case 2: res = 2;
+                    break;
+                case 4: res = 3;
+                    break;
+                case 8: res = 4;
+                    break;
+                case 16: res = 5;
+                    break;
+            }
+
+            return res;
+        }
+
         public GCFVideo(string SAppName)
         {
             // Открываем ключ реестра для чтения...
