@@ -247,6 +247,72 @@ namespace srcrepair
             return res;
         }
 
+        public int GetVSync()
+        {
+            int res = -1;
+
+            switch (VSync)
+            {
+                case 0: res = 0;
+                    break;
+                case 1: res = 1;
+                    break;
+            }
+
+            return res;
+        }
+
+        public int GetMotionBlur()
+        {
+            int res = -1;
+
+            switch (MotionBlur)
+            {
+                case 0: res = 0;
+                    break;
+                case 1: res = 1;
+                    break;
+            }
+
+            return res;
+        }
+
+        public int GetDirectXMode()
+        {
+            int res = -1;
+
+            switch (DirectXMode)
+            {
+                case 80: res = 0;
+                    break;
+                case 81: res = 1;
+                    break;
+                case 90: res = 2;
+                    break;
+                case 95: res = 3;
+                    break;
+            }
+
+            return res;
+        }
+
+        public int GetHDRType()
+        {
+            int res = -1;
+
+            switch (HDRMode)
+            {
+                case 0: res = 0;
+                    break;
+                case 1: res = 1;
+                    break;
+                case 2: res = 2;
+                    break;
+            }
+
+            return res;
+        }
+
         public GCFVideo(string SAppName)
         {
             // Открываем ключ реестра для чтения...
