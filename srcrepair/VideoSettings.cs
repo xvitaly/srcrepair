@@ -64,6 +64,57 @@ namespace srcrepair
         private int DirectXMode;
         private int HDRMode;
 
+        public int GetDisplayMode()
+        {
+            int res = -1;
+
+            switch(DisplayMode)
+            {
+                case 0: res = 0;
+                    break;
+                case 1: res = 1;
+                    break;
+            }
+
+            return res;
+        }
+
+        public int GetModelQuality()
+        {
+            int res = -1;
+
+            switch (ModelDetail)
+            {
+                case 0: res = 2;
+                    break;
+                case 1: res = 1;
+                    break;
+                case 2: res = 0;
+                    break;
+            }
+
+            return res;
+        }
+
+        public int GetTextureQuality()
+        {
+            int res = -1;
+
+            switch (TextureDetail)
+            {
+                case -1: res = 3;
+                    break;
+                case 0: res = 2;
+                    break;
+                case 1: res = 1;
+                    break;
+                case 2: res = 0;
+                    break;
+            }
+
+            return res;
+        }
+
         public GCFVideo(string SAppName)
         {
             // Открываем ключ реестра для чтения...
