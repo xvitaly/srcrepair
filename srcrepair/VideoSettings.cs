@@ -29,6 +29,16 @@ namespace srcrepair
     {
         protected int ScreenWidth;
         protected int ScreenHeight;
+
+        public int GetScreenWidth()
+        {
+            return ScreenWidth;
+        }
+
+        public int GetScreenHeight()
+        {
+            return ScreenHeight;
+        }
     }
 
     public class NCFVideo : VideoSettings
