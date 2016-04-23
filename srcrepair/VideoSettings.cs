@@ -25,6 +25,8 @@ namespace srcrepair
 {
     public class VideoSettings
     {
+        protected bool GameType;
+
         protected int ScreenWidth;
         protected int ScreenHeight;
     }
