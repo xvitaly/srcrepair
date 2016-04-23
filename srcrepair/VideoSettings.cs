@@ -152,6 +152,36 @@ namespace srcrepair
             return res;
         }
 
+        public int GetShadowQuality()
+        {
+            int res = -1;
+
+            switch (ShadowDetail)
+            {
+                case 0: res = 0;
+                    break;
+                case 1: res = 1;
+                    break;
+            }
+
+            return res;
+        }
+
+        public int GetColorCorrection()
+        {
+            int res = -1;
+
+            switch (ColorCorrection)
+            {
+                case 0: res = 0;
+                    break;
+                case 1: res = 1;
+                    break;
+            }
+
+            return res;
+        }
+
         public GCFVideo(string SAppName)
         {
             // Открываем ключ реестра для чтения...
