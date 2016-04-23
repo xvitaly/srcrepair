@@ -65,54 +65,54 @@ namespace srcrepair
             if (ResKey != null)
             {
                 // Получаем значение разрешения по горизонтали...
-                ScreenWidth = Convert.ToInt32(ResKey.GetValue("ScreenWidth"));
+                try { ScreenWidth = Convert.ToInt32(ResKey.GetValue("ScreenWidth")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем значение разрешения по вертикали...
-                ScreenHeight = Convert.ToInt32(ResKey.GetValue("ScreenHeight"));
+                try { ScreenHeight = Convert.ToInt32(ResKey.GetValue("ScreenHeight")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем режим окна (ScreenWindowed): 1-window, 0-fullscreen...
-                DisplayMode = Convert.ToInt32(ResKey.GetValue("ScreenWindowed"));
+                try { DisplayMode = Convert.ToInt32(ResKey.GetValue("ScreenWindowed")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем детализацию моделей (r_rootlod): 0-high, 1-med, 2-low...
-                ModelDetail = Convert.ToInt32(ResKey.GetValue("r_rootlod"));
+                try { ModelDetail = Convert.ToInt32(ResKey.GetValue("r_rootlod")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем детализацию текстур (mat_picmip): 0-high, 1-med, 2-low...
-                TextureDetail = Convert.ToInt32(ResKey.GetValue("mat_picmip"));
+                try { TextureDetail = Convert.ToInt32(ResKey.GetValue("mat_picmip")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки шейдеров (mat_reducefillrate): 0-high, 1-low...
-                ShaderDetail = Convert.ToInt32(ResKey.GetValue("mat_reducefillrate"));
+                try { ShaderDetail = Convert.ToInt32(ResKey.GetValue("mat_reducefillrate")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Начинаем работать над отражениями (здесь сложнее)...
-                WaterDetail = Convert.ToInt32(ResKey.GetValue("r_waterforceexpensive"));
-                WaterReflections = Convert.ToInt32(ResKey.GetValue("r_waterforcereflectentities"));
+                try { WaterDetail = Convert.ToInt32(ResKey.GetValue("r_waterforceexpensive")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { WaterReflections = Convert.ToInt32(ResKey.GetValue("r_waterforcereflectentities")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки теней (r_shadowrendertotexture): 0-low, 1-high...
-                ShadowDetail = Convert.ToInt32(ResKey.GetValue("r_shadowrendertotexture"));
+                try { ShadowDetail = Convert.ToInt32(ResKey.GetValue("r_shadowrendertotexture")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки коррекции цвета (mat_colorcorrection): 0-off, 1-on...
-                ColorCorrection = Convert.ToInt32(ResKey.GetValue("mat_colorcorrection"));
+                try { ColorCorrection = Convert.ToInt32(ResKey.GetValue("mat_colorcorrection")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки сглаживания (mat_antialias): 1-off, 2-2x, 4-4x, etc...
                 // 2x MSAA - 2:0; 4xMSAA - 4:0; 8xCSAA - 4:2; 16xCSAA - 4:4; 8xMSAA - 8:0; 16xQ CSAA - 8:2.
-                AntiAliasing = Convert.ToInt32(ResKey.GetValue("mat_antialias"));
-                AntiAliasQuality = Convert.ToInt32(ResKey.GetValue("mat_aaquality"));
+                try { AntiAliasing = Convert.ToInt32(ResKey.GetValue("mat_antialias")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }                
+                try { AntiAliasQuality = Convert.ToInt32(ResKey.GetValue("mat_aaquality")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки анизотропии (mat_forceaniso): 1-off, etc...
-                FilteringMode = Convert.ToInt32(ResKey.GetValue("mat_forceaniso"));
-                FilteringTrilinear = Convert.ToInt32(ResKey.GetValue("mat_trilinear"));
+                try { FilteringMode = Convert.ToInt32(ResKey.GetValue("mat_forceaniso")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { FilteringTrilinear = Convert.ToInt32(ResKey.GetValue("mat_trilinear")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки вертикальной синхронизации (mat_vsync): 0-off, 1-on...
-                VSync = Convert.ToInt32(ResKey.GetValue("mat_vsync"));
+                try { VSync = Convert.ToInt32(ResKey.GetValue("mat_vsync")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки размытия движения (MotionBlur): 0-off, 1-on...
-                MotionBlur = Convert.ToInt32(ResKey.GetValue("MotionBlur"));
+                try { MotionBlur = Convert.ToInt32(ResKey.GetValue("MotionBlur")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки режима рендера (DXLevel_V1):
                 // 80-DirectX 8.0; 81-DirectX 8.1; 90-DirectX 9.0; 95-DirectX 9.0c...
-                DirectXMode = Convert.ToInt32(ResKey.GetValue("DXLevel_V1"));
+                try { DirectXMode = Convert.ToInt32(ResKey.GetValue("DXLevel_V1")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки HDR (mat_hdr_level): 0-off, 1-bloom, 2-full...
-                HDRMode = Convert.ToInt32(ResKey.GetValue("mat_hdr_level"));
+                try { HDRMode = Convert.ToInt32(ResKey.GetValue("mat_hdr_level")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Закрываем ключ реестра...
                 ResKey.Close();
