@@ -68,7 +68,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch(DisplayMode)
+            switch (DisplayMode)
             {
                 case 0: res = 0;
                     break;
@@ -109,6 +109,43 @@ namespace srcrepair
                 case 1: res = 1;
                     break;
                 case 2: res = 0;
+                    break;
+            }
+
+            return res;
+        }
+
+        public int GetShaderQuality()
+        {
+            int res = -1;
+
+            switch (ShaderDetail)
+            {
+                case 0: res = 1;
+                    break;
+                case 1: res = 0;
+                    break;
+            }
+
+            return res;
+        }
+
+        public int GetReflectionsQuality()
+        {
+            int res = -1;
+
+            switch (WaterDetail)
+            {
+                case 0: res = 0;
+                    break;
+                case 1:
+                    switch (WaterReflections)
+                    {
+                        case 0: res = 1;
+                            break;
+                        case 1: res = 2;
+                            break;
+                    }
                     break;
             }
 
