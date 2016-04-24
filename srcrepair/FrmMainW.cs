@@ -550,9 +550,24 @@ namespace srcrepair
                 // Получаем графические настройки...
                 GCFVideo Video = new GCFVideo(SAppName);
 
-                // Заполняем графический твикер...
+                // Заполняем общие настройки...
                 GT_ResHor.Value = Video.GetScreenWidth();
                 GT_ResVert.Value = Video.GetScreenHeight();
+
+                // Заполняем остальные настройки...
+                GT_ScreenType.SelectedIndex = Video.GetDisplayMode();
+                GT_ModelQuality.SelectedIndex = Video.GetModelQuality();
+                GT_TextureQuality.SelectedIndex = Video.GetTextureQuality();
+                GT_ShaderQuality.SelectedIndex = Video.GetShaderQuality();
+                GT_WaterQuality.SelectedIndex = Video.GetReflectionsQuality();
+                GT_ShadowQuality.SelectedIndex = Video.GetShadowQuality();
+                GT_ColorCorrectionT.SelectedIndex = Video.GetColorCorrection();
+                GT_AntiAliasing.SelectedIndex = Video.GetAntiAliasing();
+                GT_Filtering.SelectedIndex = Video.GetFilteringMode();
+                GT_VSync.SelectedIndex = Video.GetVSync();
+                GT_MotionBlur.SelectedIndex = Video.GetMotionBlur();
+                GT_DxMode.SelectedIndex = Video.GetDirectXMode();
+                GT_HDR.SelectedIndex = Video.GetHDRType();
             }
             catch (Exception Ex)
             {
