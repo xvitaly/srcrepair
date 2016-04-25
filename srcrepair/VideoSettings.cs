@@ -60,21 +60,84 @@ namespace srcrepair
 
     public class GCFVideo: VideoSettings
     {
+        /// <summary>
+        /// Хранит значеение режима окна: ScreenWidth.
+        /// </summary>
         private int DisplayMode;
+
+        /// <summary>
+        /// Хранит значение детализации моделей: r_rootlod.
+        /// </summary>
         private int ModelDetail;
+
+        /// <summary>
+        /// Хранит значение детализации текстур: mat_picmip.
+        /// </summary>
         private int TextureDetail;
+
+        /// <summary>
+        /// Хранит значение качества шейдерных эффектов: mat_reducefillrate.
+        /// </summary>
         private int ShaderDetail;
+
+        /// <summary>
+        /// Хранит значение качества отражений в воде: r_waterforceexpensive.
+        /// </summary>
         private int WaterDetail;
+
+        /// <summary>
+        /// Хранит значение качества отражений в воде: r_waterforcereflectentities.
+        /// </summary>
         private int WaterReflections;
+
+        /// <summary>
+        /// Хранит значение качества теней: r_shadowrendertotexture.
+        /// </summary>
         private int ShadowDetail;
+
+        /// <summary>
+        /// Хранит значение настроек коррекции цвета: mat_colorcorrection.
+        /// </summary>
         private int ColorCorrection;
+
+        /// <summary>
+        /// Хранит значение настроек полноэкранного сглаживания: mat_antialias.
+        /// </summary>
         private int AntiAliasing;
+
+        /// <summary>
+        /// Хранит значение глубины полноэкранного сглаживания: mat_aaquality.
+        /// </summary>
         private int AntiAliasQuality;
+
+        /// <summary>
+        /// Хранит значение настроек анизотропной фильтрации текстур: mat_forceaniso.
+        /// </summary>
         private int FilteringMode;
+
+        /// <summary>
+        /// Хранит значение настроек трилинейной фильтрации текстур: mat_forceaniso.
+        /// </summary>
         private int FilteringTrilinear;
+
+        /// <summary>
+        /// Хранит значение настроек вертикальной синхронизации: mat_vsync.
+        /// </summary>
         private int VSync;
+
+        /// <summary>
+        /// Хранит значение настроек размытия движения: MotionBlur.
+        /// </summary>
         private int MotionBlur;
+
+        /// <summary>
+        /// Хранит значение настроек режима DirectX: DXLevel_V1.
+        /// </summary>
         private int DirectXMode;
+
+        /// <summary>
+        /// Хранит значение настроек HDR: mat_hdr_level.
+        /// </summary>
         private int HDRMode;
 
         public int GetDisplayMode()
