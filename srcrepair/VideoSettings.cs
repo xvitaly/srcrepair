@@ -143,6 +143,9 @@ namespace srcrepair
         /// </summary>
         private int HDRMode;
 
+        /// <summary>
+        /// Возвращает значение режима отображения.
+        /// </summary>
         public int GetDisplayMode()
         {
             int res = -1;
@@ -158,6 +161,9 @@ namespace srcrepair
             return res;
         }
 
+        /// <summary>
+        /// Возвращает значение качества моделей.
+        /// </summary>
         public int GetModelQuality()
         {
             int res = -1;
@@ -175,6 +181,9 @@ namespace srcrepair
             return res;
         }
 
+        /// <summary>
+        /// Возвращает значение качества текстур.
+        /// </summary>
         public int GetTextureQuality()
         {
             int res = -1;
@@ -194,6 +203,9 @@ namespace srcrepair
             return res;
         }
 
+        /// <summary>
+        /// Возвращает значение качества шейдерных эффектов.
+        /// </summary>
         public int GetShaderQuality()
         {
             int res = -1;
@@ -209,6 +221,9 @@ namespace srcrepair
             return res;
         }
 
+        /// <summary>
+        /// Возвращает значение качества отражений в воде.
+        /// </summary>
         public int GetReflectionsQuality()
         {
             int res = -1;
@@ -231,6 +246,9 @@ namespace srcrepair
             return res;
         }
 
+        /// <summary>
+        /// Возвращает значение качества теней.
+        /// </summary>
         public int GetShadowQuality()
         {
             int res = -1;
@@ -246,6 +264,9 @@ namespace srcrepair
             return res;
         }
 
+        /// <summary>
+        /// Возвращает значение качества коррекции цвета.
+        /// </summary>
         public int GetColorCorrection()
         {
             int res = -1;
@@ -261,6 +282,9 @@ namespace srcrepair
             return res;
         }
 
+        /// <summary>
+        /// Возвращает значение настроек полноэкранного сглаживания.
+        /// </summary>
         public int GetAntiAliasing()
         {
             int res = -1;
@@ -298,6 +322,9 @@ namespace srcrepair
             return res;
         }
 
+        /// <summary>
+        /// Возвращает значение настроек фильтрации текстур.
+        /// </summary>
         public int GetFilteringMode()
         {
             int res = -1;
@@ -326,6 +353,9 @@ namespace srcrepair
             return res;
         }
 
+        /// <summary>
+        /// Возвращает значение настроек вертикальной синхронизации.
+        /// </summary>
         public int GetVSync()
         {
             int res = -1;
@@ -341,6 +371,9 @@ namespace srcrepair
             return res;
         }
 
+        /// <summary>
+        /// Возвращает значение настроек размытия движения.
+        /// </summary>
         public int GetMotionBlur()
         {
             int res = -1;
@@ -356,6 +389,9 @@ namespace srcrepair
             return res;
         }
 
+        /// <summary>
+        /// Возвращает значение настроек режима DirectX.
+        /// </summary>
         public int GetDirectXMode()
         {
             int res = -1;
@@ -375,6 +411,9 @@ namespace srcrepair
             return res;
         }
 
+        /// <summary>
+        /// Возвращает значение настроек HDR.
+        /// </summary>
         public int GetHDRType()
         {
             int res = -1;
@@ -392,6 +431,9 @@ namespace srcrepair
             return res;
         }
 
+        /// <summary>
+        /// Базовый конструктор класса.
+        /// </summary>
         public GCFVideo(string SAppName)
         {
             // Открываем ключ реестра для чтения...
