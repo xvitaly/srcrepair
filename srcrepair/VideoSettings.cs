@@ -22,16 +22,32 @@ using Microsoft.Win32;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Общий класс VideoSettings. Напрямую не используется.
+    /// </summary>
     public class VideoSettings
     {
+        /// <summary>
+        /// Хранит разрешение по горизонтали.
+        /// </summary>
         protected int ScreenWidth = 800;
+
+        /// <summary>
+        /// Хранит разрешение по вертикали.
+        /// </summary>
         protected int ScreenHeight = 600;
 
+        /// <summary>
+        /// Возвращает разрешение по горизонтали.
+        /// </summary>
         public int GetScreenWidth()
         {
             return ScreenWidth;
         }
 
+        /// <summary>
+        /// Возвращает разрешение по вертикали.
+        /// </summary>
         public int GetScreenHeight()
         {
             return ScreenHeight;
