@@ -434,6 +434,7 @@ namespace srcrepair
         /// <summary>
         /// Базовый конструктор класса.
         /// </summary>
+        /// <param name="SAppName">Короткое название игры (из БД)</param>
         public GCFVideo(string SAppName)
         {
             // Открываем ключ реестра для чтения...
