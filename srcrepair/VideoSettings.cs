@@ -58,6 +58,9 @@ namespace srcrepair
     {
     }
 
+    /// <summary>
+    /// Управляет графическими настройками GCF приложений.
+    /// </summary>
     public class GCFVideo: VideoSettings
     {
         /// <summary>
