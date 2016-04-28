@@ -144,6 +144,11 @@ namespace srcrepair
         private int HDRMode;
 
         /// <summary>
+        /// Хранит путь к ветке реестра с графическими настройками игры.
+        /// </summary>
+        private string RegKey;
+
+        /// <summary>
         /// Возвращает значение режима отображения.
         /// </summary>
         public int GetDisplayMode()
