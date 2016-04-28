@@ -442,8 +442,11 @@ namespace srcrepair
         /// <param name="SAppName">Короткое название игры (из БД)</param>
         public GCFVideo(string SAppName)
         {
+            // Сгенерируем путь к ключу реестра...
+            RegKey = Path.Combine("Software", "Valve", "Source", SAppName, "Settings");
+
             // Открываем ключ реестра для чтения...
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(Path.Combine("Software", "Valve", "Source", SAppName, "Settings"), false);
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(RegKey, false);
 
             // Проверяем открылся ли ключ...
             if (ResKey != null)
