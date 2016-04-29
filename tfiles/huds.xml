@@ -380,12 +380,12 @@
   <HUD>
     <Name>SmesiHud</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/smesihud/smesihud_65233391.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/smesihud/smesihud_8354bda4.zip</URI>
     <UpURI>https://github.com/Smesi/SmesiHud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/smesihud.png</Preview>
     <RepoPath>https://github.com/Smesi/SmesiHud</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>1461885100</LastUpdate>
     <Site>http://huds.tf/smesihud/</Site>
     <ArchiveDir>SmesiHud-master</ArchiveDir>
     <InstallDir>smesihud</InstallDir>
