@@ -18,8 +18,6 @@ Download application (this link always contains latest version): https://www.eas
 
 Full download archive: https://www.easycoding.org/download
 
-Official bug tracker: https://github.com/xvitaly/srcrepair/issues
-
 Supported games
 =========
 Supported Valve games:
