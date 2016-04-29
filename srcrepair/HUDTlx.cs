@@ -55,6 +55,11 @@ namespace srcrepair
         public string Preview;
 
         /// <summary>
+        /// Содержит время последнего обновления базы в формате unixtime.
+        /// </summary>
+        public string LastUpdate;
+
+        /// <summary>
         /// Содержит ссылку на официальный сайт HUD.
         /// </summary>
         public string Site;
