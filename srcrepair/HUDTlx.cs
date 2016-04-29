@@ -129,7 +129,7 @@ namespace srcrepair
         /// <param name="HDAd">Значение ArchiveDir из БД</param>
         /// <param name="HDId">Значение InstallDir из БД</param>
         /// <param name="HDLocal">Локальный путь к файлу с HUD</param>
-        public HUDTlx(string AppHUDDir, string HDName, string HDGame, string HDURI, string HDUpURI, bool HDIsUp, string HDPreview, string HDSite, string HDAd, string HDId, string HDLocal)
+        public HUDTlx(string AppHUDDir, string HDName, string HDGame, string HDURI, string HDUpURI, bool HDIsUp, string HDPreview, string HDUpTime, string HDSite, string HDAd, string HDId, string HDLocal)
         {
             Name = HDName;
             Game = HDGame;
@@ -137,6 +137,7 @@ namespace srcrepair
             UpURI = HDUpURI;
             IsUpdated = HDIsUp;
             Preview = HDPreview;
+            LastUpdate = HDUpTime;
             Site = HDSite;
             ArchiveDir = HDAd;
             InstallDir = HDId;
