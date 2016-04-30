@@ -45,12 +45,22 @@ namespace srcrepair
             return ScreenWidth;
         }
 
+        public void SetScreenWidth(int Value)
+        {
+            ScreenWidth = Value;
+        }
+
         /// <summary>
         /// Возвращает разрешение по вертикали.
         /// </summary>
         public int GetScreenHeight()
         {
             return ScreenHeight;
+        }
+
+        public void SetScreenHeight(int Value)
+        {
+            ScreenHeight = Value;
         }
     }
 
