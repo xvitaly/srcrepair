@@ -48,6 +48,7 @@ namespace srcrepair
         /// <summary>
         /// Задаёт разрешение по горизонтали.
         /// </summary>
+        /// <param name="Value">Текущее значение</param>
         public void SetScreenWidth(int Value)
         {
             ScreenWidth = Value;
@@ -64,6 +65,7 @@ namespace srcrepair
         /// <summary>
         /// Задаёт разрешение по вертикали.
         /// </summary>
+        /// <param name="Value">Текущее значение</param>
         public void SetScreenHeight(int Value)
         {
             ScreenHeight = Value;
