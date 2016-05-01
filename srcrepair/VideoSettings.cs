@@ -137,7 +137,7 @@ namespace srcrepair
         private int FilteringMode;
 
         /// <summary>
-        /// Хранит значение настроек трилинейной фильтрации текстур: mat_forceaniso.
+        /// Хранит значение настроек трилинейной фильтрации текстур: mat_trilinear.
         /// </summary>
         private int FilteringTrilinear;
 
