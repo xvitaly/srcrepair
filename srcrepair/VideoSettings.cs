@@ -655,6 +655,25 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Задаёт значение настроек режима DirectX.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetDirectXMode(int Value)
+        {
+            switch (Value)
+            {
+                case 0: DirectXMode = 80;
+                    break;
+                case 1: DirectXMode = 81;
+                    break;
+                case 2: DirectXMode = 90;
+                    break;
+                case 3: DirectXMode = 95;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Возвращает значение настроек HDR.
         /// </summary>
         public int GetHDRType()
