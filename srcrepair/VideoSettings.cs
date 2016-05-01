@@ -374,6 +374,21 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Задаёт значение качества теней.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetShadowQuality(int Value)
+        {
+            switch (Value)
+            {
+                case 0: ShadowDetail = 0;
+                    break;
+                case 1: ShadowDetail = 1;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Возвращает значение качества коррекции цвета.
         /// </summary>
         public int GetColorCorrection()
