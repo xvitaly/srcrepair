@@ -585,6 +585,21 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Задаёт значение настроек вертикальной синхронизации.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetVSync(int Value)
+        {
+            switch (Value)
+            {
+                case 0: VSync = 0;
+                    break;
+                case 1: VSync = 1;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Возвращает значение настроек размытия движения.
         /// </summary>
         public int GetMotionBlur()
