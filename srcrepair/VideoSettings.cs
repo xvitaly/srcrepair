@@ -219,6 +219,22 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Задаёт значение качества моделей.
+        /// </summary>
+        public void SetModelQuality(int Value)
+        {
+            switch (Value)
+            {
+                case 0: ModelDetail = 2;
+                    break;
+                case 1: ModelDetail = 1;
+                    break;
+                case 2: ModelDetail = 0;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Возвращает значение качества текстур.
         /// </summary>
         public int GetTextureQuality()
