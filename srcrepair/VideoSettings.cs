@@ -694,6 +694,22 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Задаёт значение настроек HDR.
+        /// </summary>
+        public void SetHDRType(int Value)
+        {
+            switch (Value)
+            {
+                case 0: HDRMode = 0;
+                    break;
+                case 1: HDRMode = 1;
+                    break;
+                case 2: HDRMode = 2;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Базовый конструктор класса.
         /// </summary>
         /// <param name="SAppName">Короткое название игры (из БД)</param>
