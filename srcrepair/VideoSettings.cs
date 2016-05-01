@@ -469,25 +469,32 @@ namespace srcrepair
         {
             switch (Value)
             {
-                case 0: AntiAliasing = 1;
+                case 0: // Нет сглаживания
+                    AntiAliasing = 1;
                     AntiAliasQuality = 0;
                     break;
-                case 1: AntiAliasing = 2;
+                case 1: // 2x MSAA
+                    AntiAliasing = 2;
                     AntiAliasQuality = 0;
                     break;
-                case 2: AntiAliasing = 4;
+                case 2: // 4x MSAA
+                    AntiAliasing = 4;
                     AntiAliasQuality = 0;
                     break;
-                case 3: AntiAliasing = 4;
+                case 3: // 8x CSAA
+                    AntiAliasing = 4;
                     AntiAliasQuality = 2;
                     break;
-                case 4: AntiAliasing = 4;
+                case 4: // 16x CSAA
+                    AntiAliasing = 4;
                     AntiAliasQuality = 4;
                     break;
-                case 5: AntiAliasing = 8;
+                case 5: // 8x MSAA
+                    AntiAliasing = 8;
                     AntiAliasQuality = 0;
                     break;
-                case 6: AntiAliasing = 8;
+                case 6: // 16xQ CSAA
+                    AntiAliasing = 8;
                     AntiAliasQuality = 2;
                     break;
             }
