@@ -185,6 +185,20 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Задаёт значение режима отображения.
+        /// </summary>
+        public void SetDisplayMode(int Value)
+        {
+            switch (Value)
+            {
+                case 0: DisplayMode = 0;
+                    break;
+                case 1: DisplayMode = 1;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Возвращает значение качества моделей.
         /// </summary>
         public int GetModelQuality()
