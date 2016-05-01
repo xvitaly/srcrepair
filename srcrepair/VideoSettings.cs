@@ -296,6 +296,21 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Задаёт значение качества шейдерных эффектов.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetShaderQuality(int Value)
+        {
+            switch (Value)
+            {
+                case 0: ShaderDetail = 1;
+                    break;
+                case 1: ShaderDetail = 0;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Возвращает значение качества отражений в воде.
         /// </summary>
         public int GetReflectionsQuality()
