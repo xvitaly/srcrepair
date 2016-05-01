@@ -618,6 +618,21 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Задаёт значение настроек размытия движения.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetMotionBlur(int Value)
+        {
+            switch (Value)
+            {
+                case 0: MotionBlur = 0;
+                    break;
+                case 1: MotionBlur = 1;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Возвращает значение настроек режима DirectX.
         /// </summary>
         public int GetDirectXMode()
