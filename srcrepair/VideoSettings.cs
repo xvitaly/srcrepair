@@ -336,6 +336,26 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Задаёт значение качества отражений в воде.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetReflectionsQuality(int Value)
+        {
+            switch (Value)
+            {
+                case 0: WaterDetail = 0;
+                    WaterReflections = 0;
+                    break;
+                case 1: WaterDetail = 1;
+                    WaterReflections = 0;
+                    break;
+                case 2: WaterDetail = 1;
+                    WaterReflections = 1;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Возвращает значение качества теней.
         /// </summary>
         public int GetShadowQuality()
