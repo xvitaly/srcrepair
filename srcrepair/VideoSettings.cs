@@ -257,6 +257,24 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Задаёт значение качества текстур.
+        /// </summary>
+        public void SetTextureQuality(int Value)
+        {
+            switch (Value)
+            {
+                case 0: TextureDetail = 2;
+                    break;
+                case 1: TextureDetail = 1;
+                    break;
+                case 2: TextureDetail = 0;
+                    break;
+                case 3: TextureDetail = -1;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Возвращает значение качества шейдерных эффектов.
         /// </summary>
         public int GetShaderQuality()
