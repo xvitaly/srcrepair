@@ -525,6 +525,41 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Задаёт значение настроек фильтрации текстур.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetFilteringMode(int Value)
+        {
+            switch (Value)
+            {
+                case 0: // Билинейная
+                    FilteringMode = 1;
+                    FilteringTrilinear = 0;
+                    break;
+                case 1: // Трилинейная
+                    FilteringMode = 1;
+                    FilteringTrilinear = 1;
+                    break;
+                case 2: // Анизотропная 2x
+                    FilteringMode = 2;
+                    FilteringTrilinear = 0;
+                    break;
+                case 3: // Анизотропная 4x
+                    FilteringMode = 4;
+                    FilteringTrilinear = 0;
+                    break;
+                case 4: // Анизотропная 8x
+                    FilteringMode = 8;
+                    FilteringTrilinear = 0;
+                    break;
+                case 5: // Анизотропная 16x
+                    FilteringMode = 16;
+                    FilteringTrilinear = 0;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Возвращает значение настроек вертикальной синхронизации.
         /// </summary>
         public int GetVSync()
