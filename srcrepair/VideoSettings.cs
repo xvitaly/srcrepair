@@ -187,6 +187,7 @@ namespace srcrepair
         /// <summary>
         /// Задаёт значение режима отображения.
         /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
         public void SetDisplayMode(int Value)
         {
             switch (Value)
@@ -221,6 +222,7 @@ namespace srcrepair
         /// <summary>
         /// Задаёт значение качества моделей.
         /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
         public void SetModelQuality(int Value)
         {
             switch (Value)
@@ -259,6 +261,7 @@ namespace srcrepair
         /// <summary>
         /// Задаёт значение качества текстур.
         /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
         public void SetTextureQuality(int Value)
         {
             switch (Value)
