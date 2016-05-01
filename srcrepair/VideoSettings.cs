@@ -462,6 +462,38 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Задаёт значение настроек полноэкранного сглаживания.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetAntiAliasing(int Value)
+        {
+            switch (Value)
+            {
+                case 0: AntiAliasing = 1;
+                    AntiAliasQuality = 0;
+                    break;
+                case 1: AntiAliasing = 2;
+                    AntiAliasQuality = 0;
+                    break;
+                case 2: AntiAliasing = 4;
+                    AntiAliasQuality = 0;
+                    break;
+                case 3: AntiAliasing = 4;
+                    AntiAliasQuality = 2;
+                    break;
+                case 4: AntiAliasing = 4;
+                    AntiAliasQuality = 4;
+                    break;
+                case 5: AntiAliasing = 8;
+                    AntiAliasQuality = 0;
+                    break;
+                case 6: AntiAliasing = 8;
+                    AntiAliasQuality = 2;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Возвращает значение настроек фильтрации текстур.
         /// </summary>
         public int GetFilteringMode()
