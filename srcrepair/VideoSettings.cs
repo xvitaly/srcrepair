@@ -407,6 +407,21 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Задаёт значение качества коррекции цвета.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetColorCorrection(int Value)
+        {
+            switch (Value)
+            {
+                case 0: ColorCorrection = 0;
+                    break;
+                case 1: ColorCorrection = 1;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Возвращает значение настроек полноэкранного сглаживания.
         /// </summary>
         public int GetAntiAliasing()
