@@ -16,12 +16,12 @@
   <HUD>
     <Name>Pikles Hud</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/pikles-hud/pikles-hud_f2684d40.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/pikles-hud/pikles-hud_c68612c3.zip</URI>
     <UpURI>https://github.com/piklestf2/pikles-hud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/pikles-hud.png</Preview>
     <RepoPath>https://github.com/piklestf2/pikles-hud</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>1462068003</LastUpdate>
     <Site>http://huds.tf/pikleshud/</Site>
     <ArchiveDir>pikles-hud-master</ArchiveDir>
     <InstallDir>pikleshud</InstallDir>
@@ -30,11 +30,11 @@
     <Name>broeselhud_blue</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/broeselhud_blue/broeselhud_blue_7bc46f32.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/broeselhud_blue/broeselhud_blue_6cdadc6c.zip</URI>
     <UpURI>https://github.com/fblue/broeselhud_blue/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/broeselhud_blue.png</Preview>
     <RepoPath>https://github.com/fblue/broeselhud_blue</RepoPath>
-    <LastUpdate>1461666394</LastUpdate>
+    <LastUpdate>1462465751</LastUpdate>
     <Site>http://huds.tf/broeselhudblue/</Site>
     <ArchiveDir>broeselhud_blue-master</ArchiveDir>
     <InstallDir>broeselhudblue</InstallDir>
@@ -173,11 +173,11 @@
     <Name>budhud</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/budhud/budhud_6172bef1.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/budhud/budhud_be75380b.zip</URI>
     <UpURI>https://github.com/WhiskerBiscuit/budhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.png</Preview>
     <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
-    <LastUpdate>1461719910</LastUpdate>
+    <LastUpdate>1462157059</LastUpdate>
     <Site>http://huds.tf/budhud/</Site>
     <ArchiveDir>budhud-master/budhud</ArchiveDir>
     <InstallDir>budhud</InstallDir>
@@ -263,12 +263,12 @@
   <HUD>
     <Name>rayshud</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/rayshud/rayshud_980f9cc4.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/rayshud/rayshud_e0260c09.zip</URI>
     <UpURI>https://github.com/raysfire/rayshud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/rayshud.png</Preview>
     <RepoPath>https://github.com/raysfire/rayshud</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>1461957957</LastUpdate>
     <Site>http://huds.tf/rayshud/</Site>
     <ArchiveDir>rayshud-master</ArchiveDir>
     <InstallDir>rayshud</InstallDir>
@@ -276,12 +276,12 @@
   <HUD>
     <Name>E.V.E. HUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/evehud/evehud_9a3c296d.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/evehud/evehud_906a7671.zip</URI>
     <UpURI>http://files.gamebanana.com/guis/eve_hud_v378.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/evehud.png</Preview>
     <RepoPath></RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>1462180225</LastUpdate>
     <Site>http://tf2.gamebanana.com/guis/25711</Site>
     <ArchiveDir>eve hud</ArchiveDir>
     <InstallDir>evehud</InstallDir>
@@ -341,12 +341,12 @@
   <HUD>
     <Name>JayHUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/jayhud/jayhud_d8ade2d9.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/jayhud/jayhud_c4eebe74.zip</URI>
     <UpURI>https://github.com/kermit-tf/JayHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/jayhud.png</Preview>
     <RepoPath>https://github.com/kermit-tf/JayHUD</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>1462013438</LastUpdate>
     <Site>http://huds.tf/jayhud/</Site>
     <ArchiveDir>JayHUD-master/JayHUD_Normal</ArchiveDir>
     <InstallDir>jayhud</InstallDir>
@@ -406,12 +406,12 @@
   <HUD>
     <Name>SolarHUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/solarhud/solarhud_ee355467.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/solarhud/solarhud_2b15c61a.zip</URI>
     <UpURI>https://github.com/Stochast1c/solarhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/solarhud.png</Preview>
     <RepoPath>https://github.com/Stochast1c/solarhud</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>1461948743</LastUpdate>
     <Site>http://huds.tf/solarhud/</Site>
     <ArchiveDir>solarhud-master</ArchiveDir>
     <InstallDir>solarhud</InstallDir>
