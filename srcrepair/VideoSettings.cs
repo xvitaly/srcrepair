@@ -791,7 +791,7 @@ namespace srcrepair
             RegKey = Path.Combine("Software", "Valve", "Source", SAppName, "Settings");
 
             // Считываем настройки из реестра...
-            ReadSettings();
+            if (ReadNow) { ReadSettings(); }
         }
     }
 }
