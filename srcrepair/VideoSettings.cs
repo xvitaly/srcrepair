@@ -784,7 +784,8 @@ namespace srcrepair
         /// Базовый конструктор класса.
         /// </summary>
         /// <param name="SAppName">Короткое название игры (из БД)</param>
-        public GCFVideo(string SAppName)
+        /// <param name="ReadNow">Включает автоматическое считывание настроек из реестра</param>
+        public GCFVideo(string SAppName, bool ReadNow = true)
         {
             // Сгенерируем путь к ключу реестра...
             RegKey = Path.Combine("Software", "Valve", "Source", SAppName, "Settings");
