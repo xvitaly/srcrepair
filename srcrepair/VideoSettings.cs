@@ -712,7 +712,7 @@ namespace srcrepair
         /// <summary>
         /// Считывает графические настройки игры из реестра.
         /// </summary>
-        public void ReadSettings()
+        private void ReadSettings()
         {
             // Открываем ключ реестра для чтения...
             RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(RegKey, false);
@@ -788,6 +788,9 @@ namespace srcrepair
         {
             // Сгенерируем путь к ключу реестра...
             RegKey = Path.Combine("Software", "Valve", "Source", SAppName, "Settings");
+
+            // Считываем настройки из реестра...
+            ReadSettings();
         }
     }
 }
