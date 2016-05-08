@@ -709,15 +709,8 @@ namespace srcrepair
             }
         }
 
-        /// <summary>
-        /// Базовый конструктор класса.
-        /// </summary>
-        /// <param name="SAppName">Короткое название игры (из БД)</param>
-        public GCFVideo(string SAppName)
+        public void ReadSettings()
         {
-            // Сгенерируем путь к ключу реестра...
-            RegKey = Path.Combine("Software", "Valve", "Source", SAppName, "Settings");
-
             // Открываем ключ реестра для чтения...
             RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(RegKey, false);
 
@@ -754,7 +747,7 @@ namespace srcrepair
 
                 // Получаем настройки сглаживания (mat_antialias): 1-off, 2-2x, 4-4x, etc...
                 // 2x MSAA - 2:0; 4xMSAA - 4:0; 8xCSAA - 4:2; 16xCSAA - 4:4; 8xMSAA - 8:0; 16xQ CSAA - 8:2.
-                try { AntiAliasing = Convert.ToInt32(ResKey.GetValue("mat_antialias")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }                
+                try { AntiAliasing = Convert.ToInt32(ResKey.GetValue("mat_antialias")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                 try { AntiAliasQuality = Convert.ToInt32(ResKey.GetValue("mat_aaquality")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки анизотропии (mat_forceaniso): 1-off, etc...
@@ -782,6 +775,16 @@ namespace srcrepair
                 // Произошла ошибка при открытии ключа реестра. Выбросим исключение...
                 throw new Exception(AppStrings.GT_RegOpenErr);
             }
+        }
+
+        /// <summary>
+        /// Базовый конструктор класса.
+        /// </summary>
+        /// <param name="SAppName">Короткое название игры (из БД)</param>
+        public GCFVideo(string SAppName)
+        {
+            // Сгенерируем путь к ключу реестра...
+            RegKey = Path.Combine("Software", "Valve", "Source", SAppName, "Settings");
         }
     }
 }
