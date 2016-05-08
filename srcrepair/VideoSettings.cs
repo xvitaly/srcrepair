@@ -709,6 +709,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Считывает графические настройки игры из реестра.
+        /// </summary>
         public void ReadSettings()
         {
             // Открываем ключ реестра для чтения...
