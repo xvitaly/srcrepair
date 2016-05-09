@@ -781,6 +781,14 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Сохраняет графические настройки игры в реестр.
+        /// </summary>
+        public void WriteSettings()
+        {
+            //
+        }
+
+        /// <summary>
         /// Базовый конструктор класса.
         /// </summary>
         /// <param name="SAppName">Короткое название игры (из БД)</param>
