@@ -785,7 +785,58 @@ namespace srcrepair
         /// </summary>
         public void WriteSettings()
         {
-            //
+            // Открываеам ключ реестра для записи...
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(RegKey, true);
+
+            // Запишем в реестр настройки разрешения экрана...
+            try { ResKey.SetValue("ScreenWidth", ScreenWidth, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("ScreenHeight", ScreenHeight, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+
+            // Запишем в реестр настройки режима запуска приложения (ScreenWindowed)...
+            try { ResKey.SetValue("ScreenWindowed", DisplayMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+
+            // Запишем в реестр настройки детализации моделей...
+            try { ResKey.SetValue("r_rootlod", ModelDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+
+            // Запишем в реестр настройки детализации текстур...
+            try { ResKey.SetValue("mat_picmip", TextureDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+
+            // Запишем в реестр настройки качества шейдерных эффектов...
+            try { ResKey.SetValue("mat_reducefillrate", ShaderDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+
+            // Запишем в реестр настройки отражений в воде...
+            try { ResKey.SetValue("r_waterforceexpensive", WaterDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("r_waterforcereflectentities", WaterReflections, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+
+            // Запишем в реестр настройки прорисовки теней...
+            try { ResKey.SetValue("r_shadowrendertotexture", ShadowDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+
+            // Запишем в реестр настройки коррекции цвета...
+            try { ResKey.SetValue("mat_colorcorrection", ColorCorrection, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+
+            // Запишем в реестр настройки сглаживания...
+            try { ResKey.SetValue("mat_antialias", AntiAliasing, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("mat_aaquality", AntiAliasQuality, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("ScreenMSAA", AntiAliasing, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("ScreenMSAAQuality", AntiAliasQuality, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+
+            // Запишем в реестр настройки фильтрации...
+            try { ResKey.SetValue("mat_forceaniso", FilteringMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+
+            // Запишем в реестр настройки вертикальной синхронизации...
+            try { ResKey.SetValue("mat_vsync", VSync, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+
+            // Запишем в реестр настройки размытия движения...
+            try { ResKey.SetValue("MotionBlur", MotionBlur, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+
+            // Запишем в реестр настройки режима DirectX...
+            try { ResKey.SetValue("DXLevel_V1", DirectXMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+
+            // Запишем в реестр настройки HDR...
+            try { ResKey.SetValue("mat_hdr_level", HDRMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+
+            // Закрываем открытый ранее ключ реестра...
+            ResKey.Close();
         }
 
         /// <summary>
