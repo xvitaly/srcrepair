@@ -208,6 +208,9 @@ namespace srcrepair
             Video.SetMotionBlur(GT_MotionBlur.SelectedIndex);
             Video.SetDirectXMode(GT_DxMode.SelectedIndex);
             Video.SetHDRType(GT_HDR.SelectedIndex);
+
+            // Записываем настройки в реестр...
+            Video.WriteSettings();
         }
 
         /// <summary>
