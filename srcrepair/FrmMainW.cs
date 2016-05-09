@@ -188,218 +188,26 @@ namespace srcrepair
         /// </summary>
         /// <param name="SAppName">Краткое имя игры</param>
         private void WriteGCFGameSettings(string SAppName)
-        {            
-            // Открываеам ключ реестра для записи...
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(Path.Combine("Software", "Valve", "Source", SAppName, "Settings"), true);
+        {
+            // Создаём новый объект...
+            GCFVideo Video = new GCFVideo(SelGame.SmallAppName, false);
 
-            // Запишем в реестр настройки разрешения экрана...
-            // По горизонтали (ScreenWidth):
-            try { ResKey.SetValue("ScreenWidth", (int)GT_ResHor.Value, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-
-            // По вертикали (ScreenHeight):
-            try { ResKey.SetValue("ScreenHeight", (int)GT_ResVert.Value, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-
-            // Запишем в реестр настройки режима запуска приложения (ScreenWindowed):
-            switch (GT_ScreenType.SelectedIndex)
-            {
-                case 0: try { ResKey.SetValue("ScreenWindowed", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 1: try { ResKey.SetValue("ScreenWindowed", 1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-            }
-
-            // Запишем в реестр настройки детализации моделей (r_rootlod):
-            switch (GT_ModelQuality.SelectedIndex)
-            {
-                case 0: try { ResKey.SetValue("r_rootlod", 2, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 1: try { ResKey.SetValue("r_rootlod", 1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 2: try { ResKey.SetValue("r_rootlod", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-            }
-
-            // Запишем в реестр настройки детализации текстур (mat_picmip):
-            switch (GT_TextureQuality.SelectedIndex)
-            {
-                case 0: try { ResKey.SetValue("mat_picmip", 2, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 1: try { ResKey.SetValue("mat_picmip", 1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 2: try { ResKey.SetValue("mat_picmip", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 3: try { ResKey.SetValue("mat_picmip", -1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-            }
-
-            // Запишем в реестр настройки качества шейдерных эффектов (mat_reducefillrate):
-            switch (GT_ShaderQuality.SelectedIndex)
-            {
-                case 0: try { ResKey.SetValue("mat_reducefillrate", 1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 1: try { ResKey.SetValue("mat_reducefillrate", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-            }
-
-            // Запишем в реестр настройки отражений в воде (r_waterforceexpensive и r_waterforcereflectentities):
-            switch (GT_WaterQuality.SelectedIndex)
-            {
-                case 0: // Simple reflections
-                    try { ResKey.SetValue("r_waterforceexpensive", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("r_waterforcereflectentities", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 1: // Reflect world
-                    try { ResKey.SetValue("r_waterforceexpensive", 1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("r_waterforcereflectentities", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 2: // Reflect all
-                    try { ResKey.SetValue("r_waterforceexpensive", 1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("r_waterforcereflectentities", 1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-            }
-
-            // Запишем в реестр настройки прорисовки теней (r_shadowrendertotexture):
-            switch (GT_ShadowQuality.SelectedIndex)
-            {
-                case 0: try { ResKey.SetValue("r_shadowrendertotexture", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 1: try { ResKey.SetValue("r_shadowrendertotexture", 1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-            }
-
-            // Запишем в реестр настройки коррекции цвета (mat_colorcorrection):
-            switch (GT_ColorCorrectionT.SelectedIndex)
-            {
-                case 0: try { ResKey.SetValue("mat_colorcorrection", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 1: try { ResKey.SetValue("mat_colorcorrection", 1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-            }
-
-            // Запишем в реестр настройки сглаживания (mat_antialias и mat_aaquality):
-            switch (GT_AntiAliasing.SelectedIndex)
-            {
-                case 0: // Нет сглаживания
-                    try { ResKey.SetValue("mat_antialias", 1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("mat_aaquality", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("ScreenMSAA", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("ScreenMSAAQuality", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 1: // 2x MSAA
-                    try { ResKey.SetValue("mat_antialias", 2, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("mat_aaquality", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("ScreenMSAA", 2, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("ScreenMSAAQuality", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 2: // 4x MSAA
-                    try { ResKey.SetValue("mat_antialias", 4, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("mat_aaquality", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("ScreenMSAA", 4, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("ScreenMSAAQuality", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 3: // 8x CSAA
-                    try { ResKey.SetValue("mat_antialias", 4, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("mat_aaquality", 2, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("ScreenMSAA", 4, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("ScreenMSAAQuality", 2, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 4: // 16x CSAA
-                    try { ResKey.SetValue("mat_antialias", 4, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("mat_aaquality", 4, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("ScreenMSAA", 4, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("ScreenMSAAQuality", 4, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 5: // 8x MSAA
-                    try { ResKey.SetValue("mat_antialias", 8, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("mat_aaquality", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("ScreenMSAA", 8, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("ScreenMSAAQuality", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 6: // 16xQ CSAA
-                    try { ResKey.SetValue("mat_antialias", 8, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("mat_aaquality", 2, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("ScreenMSAA", 8, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("ScreenMSAAQuality", 2, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-            }
-
-            // Запишем в реестр настройки фильтрации (mat_forceaniso):
-            switch (GT_Filtering.SelectedIndex)
-            {
-                case 0: // Билинейная
-                    try { ResKey.SetValue("mat_forceaniso", 1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("mat_trilinear", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 1: // Трилинейная
-                    try { ResKey.SetValue("mat_forceaniso", 1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("mat_trilinear", 1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 2: // Анизотропная 2x
-                    try { ResKey.SetValue("mat_forceaniso", 2, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("mat_trilinear", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 3: // Анизотропная 4x
-                    try { ResKey.SetValue("mat_forceaniso", 4, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("mat_trilinear", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 4: // Анизотропная 8x
-                    try { ResKey.SetValue("mat_forceaniso", 8, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("mat_trilinear", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 5: // Анизотропная 16x
-                    try { ResKey.SetValue("mat_forceaniso", 16, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ResKey.SetValue("mat_trilinear", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-            }
-
-            // Запишем в реестр настройки вертикальной синхронизации (mat_vsync):
-            switch (GT_VSync.SelectedIndex)
-            {
-                case 0: try { ResKey.SetValue("mat_vsync", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 1: try { ResKey.SetValue("mat_vsync", 1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-            }
-
-            // Запишем в реестр настройки размытия движения (MotionBlur):
-            switch (GT_MotionBlur.SelectedIndex)
-            {
-                case 0: try { ResKey.SetValue("MotionBlur", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 1: try { ResKey.SetValue("MotionBlur", 1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-            }
-
-            // Запишем в реестр настройки режима DirectX (DXLevel_V1):
-            switch (GT_DxMode.SelectedIndex)
-            {
-                case 0: // DirectX 8.0
-                    try { ResKey.SetValue("DXLevel_V1", 80, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 1: // DirectX 8.1
-                    try { ResKey.SetValue("DXLevel_V1", 81, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 2: // DirectX 9.0
-                    try { ResKey.SetValue("DXLevel_V1", 90, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 3: // DirectX 9.0c
-                    try { ResKey.SetValue("DXLevel_V1", 95, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-            }
-
-            // Запишем в реестр настройки HDR (mat_hdr_level):
-            switch (GT_HDR.SelectedIndex)
-            {
-                case 0: try { ResKey.SetValue("mat_hdr_level", 0, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 1: try { ResKey.SetValue("mat_hdr_level", 1, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-                case 2: try { ResKey.SetValue("mat_hdr_level", 2, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    break;
-            }
-
-            // Закрываем открытый ранее ключ реестра...
-            ResKey.Close();
+            // Записываем пользовательские настройки...
+            Video.SetScreenWidth((int)GT_ResHor.Value);
+            Video.SetScreenHeight((int)GT_ResVert.Value);
+            Video.SetDisplayMode(GT_ScreenType.SelectedIndex);
+            Video.SetModelQuality(GT_ModelQuality.SelectedIndex);
+            Video.SetTextureQuality(GT_TextureQuality.SelectedIndex);
+            Video.SetShaderQuality(GT_ShaderQuality.SelectedIndex);
+            Video.SetReflectionsQuality(GT_WaterQuality.SelectedIndex);
+            Video.SetShadowQuality(GT_ShadowQuality.SelectedIndex);
+            Video.SetColorCorrection(GT_ColorCorrectionT.SelectedIndex);
+            Video.SetAntiAliasing(GT_AntiAliasing.SelectedIndex);
+            Video.SetFilteringMode(GT_Filtering.SelectedIndex);
+            Video.SetVSync(GT_VSync.SelectedIndex);
+            Video.SetMotionBlur(GT_MotionBlur.SelectedIndex);
+            Video.SetDirectXMode(GT_DxMode.SelectedIndex);
+            Video.SetHDRType(GT_HDR.SelectedIndex);
         }
 
         /// <summary>
