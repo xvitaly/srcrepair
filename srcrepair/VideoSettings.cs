@@ -69,8 +69,4 @@ namespace srcrepair
             ScreenHeight = Value;
         }
     }
-
-    public class NCFVideo : VideoSettings
-    {
-    }
 }
