@@ -20,6 +20,9 @@ using System;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Управляет графическими настройками NCF приложений.
+    /// </summary>
     public class NCFVideo : VideoSettings
     {
     }
