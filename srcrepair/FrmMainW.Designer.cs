@@ -168,6 +168,7 @@
             this.HD_Install = new System.Windows.Forms.Button();
             this.HD_GB_Desc = new System.Windows.Forms.GroupBox();
             this.HD_Warning = new System.Windows.Forms.PictureBox();
+            this.HD_LastUpdate = new System.Windows.Forms.Label();
             this.HD_GB_Pbx = new System.Windows.Forms.PictureBox();
             this.HD_HSel = new System.Windows.Forms.ComboBox();
             this.L_HD_HSel = new System.Windows.Forms.Label();
@@ -1472,6 +1473,7 @@
             // HD_GB_Desc
             // 
             this.HD_GB_Desc.Controls.Add(this.HD_Warning);
+            this.HD_GB_Desc.Controls.Add(this.HD_LastUpdate);
             this.HD_GB_Desc.Controls.Add(this.HD_GB_Pbx);
             resources.ApplyResources(this.HD_GB_Desc, "HD_GB_Desc");
             this.HD_GB_Desc.Name = "HD_GB_Desc";
@@ -1485,6 +1487,11 @@
             this.HD_Warning.Name = "HD_Warning";
             this.HD_Warning.TabStop = false;
             this.HD_Warning.Click += new System.EventHandler(this.HD_Warning_Click);
+            // 
+            // HD_LastUpdate
+            // 
+            resources.ApplyResources(this.HD_LastUpdate, "HD_LastUpdate");
+            this.HD_LastUpdate.Name = "HD_LastUpdate";
             // 
             // HD_GB_Pbx
             // 
@@ -2259,6 +2266,7 @@
         private System.Windows.Forms.Panel HUD_NotAvailable;
         private System.Windows.Forms.Label HUD_NAText;
         private System.Windows.Forms.PictureBox HUD_NAImg;
+        private System.Windows.Forms.Label HD_LastUpdate;
     }
 }
 

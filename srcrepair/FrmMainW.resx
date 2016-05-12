@@ -125,7 +125,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACC
-        DwAAAk1TRnQBSQFMAgEBBgEAAeABAAHgAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DwAAAk1TRnQBSQFMAgEBBgEAAfgBAAH4AQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -3905,6 +3905,36 @@
   <data name="&gt;&gt;HD_Warning.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="HD_LastUpdate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="HD_LastUpdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 213</value>
+  </data>
+  <data name="HD_LastUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>402, 18</value>
+  </data>
+  <data name="HD_LastUpdate.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="HD_LastUpdate.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="HD_LastUpdate.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;HD_LastUpdate.Name" xml:space="preserve">
+    <value>HD_LastUpdate</value>
+  </data>
+  <data name="&gt;&gt;HD_LastUpdate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HD_LastUpdate.Parent" xml:space="preserve">
+    <value>HD_GB_Desc</value>
+  </data>
+  <data name="&gt;&gt;HD_LastUpdate.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="HD_GB_Pbx.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3915,7 +3945,7 @@
     <value>6, 22</value>
   </data>
   <data name="HD_GB_Pbx.Size" type="System.Drawing.Size, System.Drawing">
-    <value>402, 206</value>
+    <value>402, 188</value>
   </data>
   <data name="HD_GB_Pbx.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -3933,7 +3963,7 @@
     <value>HD_GB_Desc</value>
   </data>
   <data name="&gt;&gt;HD_GB_Pbx.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="HD_GB_Desc.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 33</value>
