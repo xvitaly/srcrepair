@@ -2769,7 +2769,7 @@ namespace srcrepair
 
             // Выводим информацию о последнем обновлении HUD...
             HD_LastUpdate.Visible = Success;
-            if (Success) { HD_LastUpdate.Text = String.Format(AppStrings.HD_LastUpdateInfo, CoreLib.Unix2DateTime(SelGame.HUDMan.SelectedHUD.LastUpdate)); }
+            if (Success) { HD_LastUpdate.Text = String.Format(AppStrings.HD_LastUpdateInfo, CoreLib.Unix2DateTime(SelGame.HUDMan.SelectedHUD.LastUpdate).ToLocalTime()); }
 
             // Проверяем установлен ли выбранный HUD...
             SetHUDButtons(SelGame.HUDMan.SelectedHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir));
