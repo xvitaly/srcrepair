@@ -47,7 +47,7 @@
     <UpURI>https://github.com/basbanaan/bastHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/basthud.png</Preview>
     <RepoPath>https://github.com/basbanaan/bastHUD</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>0</LastUpdate>
     <Site>http://huds.tf/basthud/</Site>
     <ArchiveDir>bastHUD-master/bastHUD-master/bastHUD</ArchiveDir>
     <InstallDir>basthud</InstallDir>
@@ -60,7 +60,7 @@
     <UpURI>https://github.com/sirgrey/SirHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/sirhud.png</Preview>
     <RepoPath>https://github.com/sirgrey/SirHUD</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>0</LastUpdate>
     <Site>http://huds.tf/sirhud/</Site>
     <ArchiveDir>SirHUD-master</ArchiveDir>
     <InstallDir>sirhud</InstallDir>
@@ -125,7 +125,7 @@
     <UpURI>https://github.com/Slayer89/slayhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/calmlikeabomb.png</Preview>
     <RepoPath>https://github.com/Slayer89/slayhud</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>0</LastUpdate>
     <Site>http://huds.tf/calmlikeabomb/</Site>
     <ArchiveDir>slayhud-master/Calm Like A Bomb</ArchiveDir>
     <InstallDir>calmlikeabomb</InstallDir>
@@ -138,7 +138,7 @@
     <UpURI>https://github.com/basbanaan/EJP-HUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/ejphud.png</Preview>
     <RepoPath>https://github.com/basbanaan/EJP-HUD</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>0</LastUpdate>
     <Site>http://huds.tf/ejphud/</Site>
     <ArchiveDir>EJP-HUD-master/EJP-HUD master/Centered EJP-HUD</ArchiveDir>
     <InstallDir>ejphud</InstallDir>
@@ -164,7 +164,7 @@
     <UpURI>https://github.com/bw-/bw-HUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/bwhud.png</Preview>
     <RepoPath>https://github.com/bw-/bw-HUD</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>0</LastUpdate>
     <Site>http://huds.tf/bwhud/</Site>
     <ArchiveDir>bw-HUD-master</ArchiveDir>
     <InstallDir>bwhud</InstallDir>
@@ -190,7 +190,7 @@
     <UpURI>https://github.com/Eniere/idhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/idhud.png</Preview>
     <RepoPath>https://github.com/Eniere/idhud</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>0</LastUpdate>
     <Site>http://huds.tf/idhud/</Site>
     <ArchiveDir>idhud-master</ArchiveDir>
     <InstallDir>idhud</InstallDir>
@@ -203,7 +203,7 @@
     <UpURI>https://gitgud.io/JediThug/JediHUD/repository/archive.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/jedihud.png</Preview>
     <RepoPath>https://gitgud.net/JediThug/jedihud</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>0</LastUpdate>
     <Site>http://huds.tf/jedihud/</Site>
     <ArchiveDir>JediHUD.git</ArchiveDir>
     <InstallDir>jedihud</InstallDir>
@@ -229,7 +229,7 @@
     <UpURI>https://github.com/ItsMorgus/MorgHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/morghud.png</Preview>
     <RepoPath>https://github.com/ItsMorgus/MorgHUD</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>0</LastUpdate>
     <Site>http://huds.tf/morghud/</Site>
     <ArchiveDir>MorgHUD-master/MorgHUD</ArchiveDir>
     <InstallDir>morghud</InstallDir>
@@ -242,7 +242,7 @@
     <UpURI>https://github.com/Jotunn/KBNHud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/kbnhud.png</Preview>
     <RepoPath>https://github.com/Jotunn/KBNHud</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>0</LastUpdate>
     <Site>http://huds.tf/kbnhud/</Site>
     <ArchiveDir>KBNHud-master/KBNHud</ArchiveDir>
     <InstallDir>kbnhud</InstallDir>
@@ -255,7 +255,7 @@
     <UpURI>https://github.com/Intellectualbadass/medHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/medhud.png</Preview>
     <RepoPath>https://github.com/Intellectualbadass/medHUD</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>0</LastUpdate>
     <Site>http://huds.tf/medhud/</Site>
     <ArchiveDir>medHUD-master</ArchiveDir>
     <InstallDir>medhud</InstallDir>
@@ -320,7 +320,7 @@
     <UpURI>https://github.com/TheKins/frankenhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/frankenhud.png</Preview>
     <RepoPath>https://github.com/TheKins/frankenhud</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>0</LastUpdate>
     <Site>http://huds.tf/frankenhud/</Site>
     <ArchiveDir>frankenhud-master/hud_src</ArchiveDir>
     <InstallDir>frankenhud</InstallDir>
@@ -333,7 +333,7 @@
     <UpURI>https://github.com/Xeletron/Isaac-Hud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/isaachud.png</Preview>
     <RepoPath>https://github.com/Xeletron/Isaac-Hud</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>0</LastUpdate>
     <Site>http://huds.tf/isaachud/</Site>
     <ArchiveDir>Isaac-Hud-master/IsaacHUD</ArchiveDir>
     <InstallDir>isaachud</InstallDir>
@@ -372,7 +372,7 @@
     <UpURI>https://github.com/Yttrium-tYcLief/yayahud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/yayahud.png</Preview>
     <RepoPath>https://github.com/yttrium-tyclief/yayahud</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>0</LastUpdate>
     <Site>http://huds.tf/yayahud/</Site>
     <ArchiveDir>yayahud-master/yayahud</ArchiveDir>
     <InstallDir>yayahud</InstallDir>
@@ -398,7 +398,7 @@
     <UpURI>https://github.com/rainoflight/rainhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/rainhud.png</Preview>
     <RepoPath>https://github.com/rainoflight/rainhud</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>0</LastUpdate>
     <Site>http://huds.tf/rainhud/</Site>
     <ArchiveDir>rainhud-master</ArchiveDir>
     <InstallDir>rainhud</InstallDir>
@@ -424,7 +424,7 @@
     <UpURI>https://github.com/Yo5hi/ysHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/yshud.png</Preview>
     <RepoPath>https://github.com/Yo5hi/ysHUD</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>0</LastUpdate>
     <Site>http://huds.tf/yshud/</Site>
     <ArchiveDir>ysHUD-master</ArchiveDir>
     <InstallDir>yshud</InstallDir>
@@ -450,7 +450,7 @@
     <UpURI>https://github.com/hoXyy/GMang_HUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/gmanghud.png</Preview>
     <RepoPath>https://github.com/hoXyy/GMang_HUD</RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>0</LastUpdate>
     <Site>http://huds.tf/gmanghud/</Site>
     <ArchiveDir>GMang_HUD-master</ArchiveDir>
     <InstallDir>gmanghud</InstallDir>
@@ -463,7 +463,7 @@
     <UpURI>http://files.gamebanana.com/guis/revhud-jan17.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/revhud.png</Preview>
     <RepoPath></RepoPath>
-    <LastUpdate></LastUpdate>
+    <LastUpdate>0</LastUpdate>
     <Site>http://huds.tf/revhud/</Site>
     <ArchiveDir>RevHud</ArchiveDir>
     <InstallDir>revhud</InstallDir>
