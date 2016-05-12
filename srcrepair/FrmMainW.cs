@@ -2767,6 +2767,10 @@ namespace srcrepair
             HD_Homepage.Enabled = Success;
             HD_Warning.Visible = Success && !SelGame.HUDMan.SelectedHUD.IsUpdated;
 
+            // Выводим информацию о последнем обновлении HUD...
+            HD_LastUpdate.Visible = Success;
+            HD_LastUpdate.Text = String.Format(AppStrings.HD_LastUpdateInfo, CoreLib.Unix2DateTime(SelGame.HUDMan.SelectedHUD.LastUpdate));
+
             // Проверяем установлен ли выбранный HUD...
             SetHUDButtons(SelGame.HUDMan.SelectedHUD.CheckInstalledHUD(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir));
 
