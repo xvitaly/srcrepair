@@ -501,7 +501,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="UnixTime">Дата и время в Unix-формате</param>
         /// <returns>Дата и время в формате DateTime</returns>
-        public static DateTime Unix2DateTime(double UnixTime)
+        public static DateTime Unix2DateTime(long UnixTime)
         {
             return (new DateTime(1970, 1, 1, 0, 0, 0, 0)).AddSeconds(UnixTime);
         }
