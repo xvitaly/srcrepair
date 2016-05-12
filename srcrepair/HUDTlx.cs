@@ -57,7 +57,7 @@ namespace srcrepair
         /// <summary>
         /// Содержит время последнего обновления базы в формате unixtime.
         /// </summary>
-        public string LastUpdate;
+        public long LastUpdate;
 
         /// <summary>
         /// Содержит ссылку на официальный сайт HUD.
@@ -137,7 +137,7 @@ namespace srcrepair
             UpURI = HDUpURI;
             IsUpdated = HDIsUp;
             Preview = HDPreview;
-            LastUpdate = HDUpTime;
+            LastUpdate = Convert.ToInt64(HDUpTime);
             Site = HDSite;
             ArchiveDir = HDAd;
             InstallDir = HDId;
