@@ -922,4 +922,8 @@
     <value>{0}?</value>
     <comment>Шаблон для вопроса (используется для служебных целей)</comment>
   </data>
+  <data name="HD_LastUpdateInfo" xml:space="preserve">
+    <value>Последнее обновление: {0}.</value>
+    <comment>Шаблон для вывода информации о последнем обновлении HUD.</comment>
+  </data>
 </root>

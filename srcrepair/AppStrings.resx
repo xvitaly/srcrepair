@@ -717,4 +717,7 @@
   <data name="AppQuestionTemplate" xml:space="preserve">
     <value>{0}?</value>
   </data>
+  <data name="HD_LastUpdateInfo" xml:space="preserve">
+    <value>Selected HUD last update: {0}.</value>
+  </data>
 </root>
