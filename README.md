@@ -14,9 +14,9 @@ sprays into the game with one click.
 
 Downloads [![SourceForge](https://img.shields.io/sourceforge/dt/srcrepair.svg?maxAge=2592000)](https://sourceforge.net/projects/srcrepair/files/)
 =========
-Download application (this link always contains latest version): https://www.easycoding.org/files/srcrepair_latest.exe
+Download application (always contains latest version):
 
-Full download archive: https://www.easycoding.org/download
+[![Download SRC Repair](https://www.easycoding.org/wp-content/uploads/sf_dn.png)](https://www.easycoding.org/files/srcrepair_latest.exe)
 
 Supported games
 =========
