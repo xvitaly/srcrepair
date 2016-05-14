@@ -152,6 +152,9 @@ namespace srcrepair
                         // Будем устанавливать содержимое архива...
                         case ".zip": CoreLib.ExtractFiles(InstallPath.Text, CustomInstallDir);
                             break;
+                        // Будем устанавливать бинарный модуль (плагин)...
+                        case ".dll": InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "addons"));
+                            break;
                     }
 
                     // Выведем сообщение...
