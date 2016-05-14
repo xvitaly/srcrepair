@@ -159,6 +159,9 @@ namespace srcrepair
 
                     // Выведем сообщение...
                     MessageBox.Show(AppStrings.QI_InstSuccessfull, PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Закрываем окно...
+                    Close();
                 }
                 catch (Exception Ex)
                 {
