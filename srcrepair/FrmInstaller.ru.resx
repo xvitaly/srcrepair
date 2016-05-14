@@ -134,7 +134,7 @@
     <value>Установить</value>
   </data>
   <data name="openDialog.Filter" xml:space="preserve">
-    <value>Файлы спреев (*.vtf)|*.vtf|Игровые пакеты (*.zip)|*.zip|Файлы демок (*.dem)|*.dem|Файлы конфигов (*.cfg)|*.cfg|Игровые пакеты Valve (*.vpk)|*.vpk|Файлы карт (*.bsp)|*.bsp|Звуки попадания|hitsound.wav|Звуки убийства|killsound.wav|Бинарный модуль (*.dll)|*.dll</value>
+    <value>Файлы спреев|*.vtf|Игровые пакеты|*.zip|Файлы демок|*.dem|Файлы конфигов|*.cfg|Игровые пакеты Valve|*.vpk|Файлы карт|*.bsp|Звуки попадания|hitsound.wav|Звуки убийства|killsound.wav|Бинарные модули|*.dll</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
