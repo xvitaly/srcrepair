@@ -25,5 +25,18 @@ namespace srcrepair
     /// </summary>
     public class NCFVideo : VideoSettings
     {
+        private int ScreenRatio;
+        private int Brightness;
+        private int ShadowQuality;
+        private int MotionBlur;
+        private int DisplayMode;
+        private int AntiAliasing;
+        private int Filtering;
+        private int VSync;
+        private int MCRendering;
+        private int ShaderEffects;
+        private int EffectDetails;
+        private int MemoryPoolType;
+        private int TextureModelQuality;
     }
 }
