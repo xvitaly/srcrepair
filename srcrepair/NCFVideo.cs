@@ -26,6 +26,7 @@ namespace srcrepair
     public class NCFVideo : VideoSettings
     {
         private string VideoFile;
+        private string DefaultsFile;
         private int ScreenRatio;
         private int Brightness;
         private int ShadowQuality;
