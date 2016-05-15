@@ -36,82 +36,82 @@ namespace srcrepair
         private string DefaultsFile;
 
         /// <summary>
-        /// Хранит настройки соотношения сторон NCF-игры на движке Source 1 (setting.aspectratiomode).
+        /// Хранит настройки соотношения сторон NCF-игры на движке Source 1: setting.aspectratiomode.
         /// </summary>
         private int ScreenRatio;
 
         /// <summary>
-        /// Хранит настройки контрастности и цветовой гаммы NCF-игры на движке Source 1 (setting.mat_monitorgamma).
+        /// Хранит настройки контрастности и цветовой гаммы NCF-игры на движке Source 1: setting.mat_monitorgamma.
         /// </summary>
         private int Brightness;
 
         /// <summary>
-        /// Хранит настройки качества теней NCF-игры на движке Source 1 (setting.csm_quality_level).
+        /// Хранит настройки качества теней NCF-игры на движке Source 1: setting.csm_quality_level.
         /// </summary>
         private int ShadowQuality;
 
         /// <summary>
-        /// Хранит настройки размытия движений NCF-игры на движке Source 1 (setting.mat_motion_blur_enabled).
+        /// Хранит настройки размытия движений NCF-игры на движке Source 1: setting.mat_motion_blur_enabled.
         /// </summary>
         private int MotionBlur;
 
         /// <summary>
-        /// Хранит настройки графического режима NCF-игры на движке Source 1 (setting.fullscreen).
+        /// Хранит настройки графического режима NCF-игры на движке Source 1: setting.fullscreen.
         /// </summary>
         private int DisplayMode;
 
         /// <summary>
-        /// Хранит настройки графического режима NCF-игры на движке Source 1 (setting.nowindowborder).
+        /// Хранит настройки графического режима NCF-игры на движке Source 1: setting.nowindowborder.
         /// </summary>
         private int DisplayBorderless;
 
         /// <summary>
-        /// Хранит настройки полноэкранного сглаживания NCF-игры на движке Source 1 (setting.mat_antialias).
+        /// Хранит настройки полноэкранного сглаживания NCF-игры на движке Source 1: setting.mat_antialias.
         /// </summary>
         private int AntiAliasing;
 
         /// <summary>
-        /// Хранит значение глубины полноэкранного сглаживания NCF-игры на движке Source 1 (setting.mat_aaquality).
+        /// Хранит значение глубины полноэкранного сглаживания NCF-игры на движке Source 1: setting.mat_aaquality.
         /// </summary>
         private int AntiAliasQuality;
 
         /// <summary>
-        /// Хранит настройки качества фильтрации текстур NCF-игры на движке Source 1 (setting.mat_forceaniso).
+        /// Хранит настройки качества фильтрации текстур NCF-игры на движке Source 1: setting.mat_forceaniso.
         /// </summary>
         private int FilteringMode;
 
         /// <summary>
-        /// Хранит настройки вертикальной синхронизации NCF-игры на движке Source 1 (setting.mat_vsync).
+        /// Хранит настройки вертикальной синхронизации NCF-игры на движке Source 1: setting.mat_vsync.
         /// </summary>
         private int VSync;
 
         /// <summary>
-        /// Хранит настройки качества вертикальной синхронизации NCF-игры на движке Source 1 (setting.mat_triplebuffered).
+        /// Хранит настройки качества вертикальной синхронизации NCF-игры на движке Source 1: setting.mat_triplebuffered.
         /// </summary>
         private int VSyncMode;
 
         /// <summary>
-        /// Хранит настройки многоядерного рендеринга NCF-игры на движке Source 1 (setting.mat_queue_mode).
+        /// Хранит настройки многоядерного рендеринга NCF-игры на движке Source 1: setting.mat_queue_mode.
         /// </summary>
         private int MCRendering;
 
         /// <summary>
-        /// Хранит настройки качества шейдерных эффектов NCF-игры на движке Source 1 (setting.gpu_level).
+        /// Хранит настройки качества шейдерных эффектов NCF-игры на движке Source 1: setting.gpu_level.
         /// </summary>
         private int ShaderEffects;
 
         /// <summary>
-        /// Хранит настройки качества обычных эффектов NCF-игры на движке Source 1 (setting.cpu_level).
+        /// Хранит настройки качества обычных эффектов NCF-игры на движке Source 1: setting.cpu_level.
         /// </summary>
         private int EffectDetails;
 
         /// <summary>
-        /// Хранит настройки выделенного игре пула памяти NCF-игры на движке Source 1 (setting.mem_level).
+        /// Хранит настройки выделенного игре пула памяти NCF-игры на движке Source 1: setting.mem_level.
         /// </summary>
         private int MemoryPoolType;
 
         /// <summary>
-        /// Хранит настройки качества детализации моделей и текстур NCF-игры на движке Source 1 (setting.gpu_mem_level).
+        /// Хранит настройки качества детализации моделей и текстур NCF-игры на движке Source 1: setting.gpu_mem_level.
         /// </summary>
         private int TextureModelQuality;
     }
