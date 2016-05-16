@@ -114,5 +114,10 @@ namespace srcrepair
         /// Хранит настройки качества детализации моделей и текстур NCF-игры на движке Source 1: setting.gpu_mem_level.
         /// </summary>
         private int TextureModelQuality;
+
+        public NCFVideo(string VFile)
+        {
+            //
+        }
     }
 }
