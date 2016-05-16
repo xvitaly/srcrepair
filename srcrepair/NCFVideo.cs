@@ -115,6 +115,10 @@ namespace srcrepair
         /// </summary>
         private int TextureModelQuality;
 
+        /// <summary>
+        /// Базовый конструктор класса.
+        /// </summary>
+        /// <param name="VFile">Путь к файлу с настройками графики</param>
         public NCFVideo(string VFile)
         {
             //
