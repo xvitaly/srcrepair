@@ -17,6 +17,7 @@
  * о лицензии - в GPL.txt.
 */
 using System;
+using System.IO;
 
 namespace srcrepair
 {
@@ -121,7 +122,11 @@ namespace srcrepair
         /// <param name="VFile">Путь к файлу с настройками графики</param>
         public NCFVideo(string VFile)
         {
-            //
+            // Сохраним путь к файлу с графическими настройками...
+            VideoFile = VFile;
+
+            // Сгенерируем путь к файлу со стандартными настройками графики текущей системы...
+            DefaultsFile = Path.Combine(Path.GetDirectoryName(VFile), "videodefaults.txt");
         }
     }
 }
