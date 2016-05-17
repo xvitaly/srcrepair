@@ -37,6 +37,10 @@ namespace srcrepair
         /// </summary>
         private string DefaultsFileName;
 
+        private List<String> VideoFile;
+
+        private List<String> DefaultsFile;
+
         /// <summary>
         /// Хранит настройки соотношения сторон NCF-игры на движке Source 1: setting.aspectratiomode.
         /// </summary>
