@@ -37,8 +37,14 @@ namespace srcrepair
         /// </summary>
         private string DefaultsFileName;
 
+        /// <summary>
+        /// Хранит содержиме файла с графическими настройками игры.
+        /// </summary>
         private List<String> VideoFile;
 
+        /// <summary>
+        /// Хранит содержиме файла со стандартными настройками игры для текущего ПК.
+        /// </summary>
         private List<String> DefaultsFile;
 
         /// <summary>
