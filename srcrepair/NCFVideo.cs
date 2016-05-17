@@ -17,6 +17,7 @@
  * о лицензии - в GPL.txt.
 */
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace srcrepair
