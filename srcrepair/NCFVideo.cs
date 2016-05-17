@@ -29,12 +29,12 @@ namespace srcrepair
         /// <summary>
         /// Хранит путь к актуальному файлу с графическими настройками игры.
         /// </summary>
-        private string VideoFile;
+        private string VideoFileName;
 
         /// <summary>
         /// Хранит путь к файлу со стандартными настройками для текущего ПК.
         /// </summary>
-        private string DefaultsFile;
+        private string DefaultsFileName;
 
         /// <summary>
         /// Хранит настройки соотношения сторон NCF-игры на движке Source 1: setting.aspectratiomode.
@@ -123,10 +123,10 @@ namespace srcrepair
         public NCFVideo(string VFile)
         {
             // Сохраним путь к файлу с графическими настройками...
-            VideoFile = VFile;
+            VideoFileName = VFile;
 
             // Сгенерируем путь к файлу со стандартными настройками графики текущей системы...
-            DefaultsFile = Path.Combine(Path.GetDirectoryName(VFile), "videodefaults.txt");
+            DefaultsFileName = Path.Combine(Path.GetDirectoryName(VFile), "videodefaults.txt");
         }
     }
 }
