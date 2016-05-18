@@ -127,6 +127,11 @@ namespace srcrepair
         /// </summary>
         private int TextureModelQuality;
 
+        private void ReadSettings()
+        {
+            //
+        }
+
         /// <summary>
         /// Базовый конструктор класса.
         /// </summary>
