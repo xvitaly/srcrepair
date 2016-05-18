@@ -128,6 +128,43 @@ namespace srcrepair
         private int TextureModelQuality;
 
         /// <summary>
+        /// Возвращает настройки соотношения сторон NCF-игры на движке Source 1.
+        /// </summary>
+        public int GetScreenRatio()
+        {
+            int res = -1;
+
+            switch (ScreenRatio)
+            {
+                case 0: res = 0;
+                    break;
+                case 1: res = 1;
+                    break;
+                case 2: res = 2;
+                    break;
+            }
+
+            return res;
+        }
+
+        /// <summary>
+        /// Задаёт настройки соотношения сторон NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetScreenRatio(int Value)
+        {
+            switch (Value)
+            {
+                case 0: ScreenRatio = 0;
+                    break;
+                case 1: ScreenRatio = 1;
+                    break;
+                case 2: ScreenRatio = 2;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Считывает графические настройки игры из файла.
         /// </summary>
         private void ReadSettings()
