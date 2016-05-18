@@ -127,6 +127,9 @@ namespace srcrepair
         /// </summary>
         private int TextureModelQuality;
 
+        /// <summary>
+        /// Считывает графические настройки игры из файла.
+        /// </summary>
         private void ReadSettings()
         {
             //
