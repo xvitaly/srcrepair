@@ -173,6 +173,14 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Сохраняет графические настройки игры в файл.
+        /// </summary>
+        public void WriteSettings()
+        {
+            //
+        }
+
+        /// <summary>
         /// Базовый конструктор класса.
         /// </summary>
         /// <param name="VFile">Путь к файлу с настройками графики</param>
