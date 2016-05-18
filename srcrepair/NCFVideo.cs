@@ -193,12 +193,19 @@ namespace srcrepair
             // Сгенерируем путь к файлу со стандартными настройками графики текущей системы...
             DefaultsFileName = Path.Combine(Path.GetDirectoryName(VideoFileName), "videodefaults.txt");
 
-            // Получаем содержимое файла графических настроек...
-            VideoFile = new List<String>(File.ReadAllLines(VideoFileName));
+            // Считываем настройки из файла если зто разрешено...
+            if (ReadNow)
+            {
+                // Получаем содержимое файла графических настроек...
+                VideoFile = new List<String>(File.ReadAllLines(VideoFileName));
 
-            // Получаем содержимое файла стандартных настроек (если он существует)...
-            DefaultsFile = new List<String>();
-            if (File.Exists(DefaultsFileName)) { DefaultsFile.AddRange(File.ReadAllLines(DefaultsFileName)); }
+                // Получаем содержимое файла стандартных настроек (если он существует)...
+                DefaultsFile = new List<String>();
+                if (File.Exists(DefaultsFileName)) { DefaultsFile.AddRange(File.ReadAllLines(DefaultsFileName)); }
+
+                // Запускаем непосредственно процесс...
+                ReadSettings();
+            }
         }
     }
 }
