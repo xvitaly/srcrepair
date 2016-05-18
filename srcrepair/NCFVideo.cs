@@ -184,7 +184,8 @@ namespace srcrepair
         /// Базовый конструктор класса.
         /// </summary>
         /// <param name="VFile">Путь к файлу с настройками графики</param>
-        public NCFVideo(string VFile)
+        /// <param name="ReadNow">Включает автоматическое считывание настроек из файла</param>
+        public NCFVideo(string VFile, bool ReadNow = true)
         {
             // Сохраним путь к файлу с графическими настройками...
             VideoFileName = VFile;
