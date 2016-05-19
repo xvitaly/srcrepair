@@ -520,6 +520,47 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Возвращает настройки качества шейдерных эффектов NCF-игры на движке Source 1.
+        /// </summary>
+        public int GetShaderEffects()
+        {
+            int res = -1;
+
+            switch (ShaderEffects)
+            {
+                case 0: res = 0;
+                    break;
+                case 1: res = 1;
+                    break;
+                case 2: res = 2;
+                    break;
+                case 3: res = 3;
+                    break;
+            }
+
+            return res;
+        }
+
+        /// <summary>
+        /// Задаёт настройки качества шейдерных эффектов NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetShaderEffects(int Value)
+        {
+            switch (Value)
+            {
+                case 0: ShaderEffects = 0;
+                    break;
+                case 1: ShaderEffects = 1;
+                    break;
+                case 2: ShaderEffects = 2;
+                    break;
+                case 3: ShaderEffects = 3;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Считывает графические настройки игры из файла.
         /// </summary>
         private void ReadSettings()
