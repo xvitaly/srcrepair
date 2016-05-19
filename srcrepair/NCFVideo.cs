@@ -182,6 +182,47 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Возвращает настройки качества теней NCF-игры на движке Source 1.
+        /// </summary>
+        public int GetShadowQuality()
+        {
+            int res = -1;
+
+            switch (ShadowQuality)
+            {
+                case 0: res = 0;
+                    break;
+                case 1: res = 1;
+                    break;
+                case 2: res = 2;
+                    break;
+                case 3: res = 3;
+                    break;
+            }
+
+            return res;
+        }
+
+        /// <summary>
+        /// Задаёт настройки качества теней NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetShadowQuality(int Value)
+        {
+            switch (Value)
+            {
+                case 0: ShadowQuality = 0;
+                    break;
+                case 1: ShadowQuality = 1;
+                    break;
+                case 2: ShadowQuality = 2;
+                    break;
+                case 3: ShadowQuality = 3;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Считывает графические настройки игры из файла.
         /// </summary>
         private void ReadSettings()
