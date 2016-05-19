@@ -598,6 +598,43 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Возвращает настройки выделенного игре пула памяти NCF-игры на движке Source 1.
+        /// </summary>
+        public int GetMemoryPool()
+        {
+            int res = -1;
+
+            switch (MemoryPoolType)
+            {
+                case 0: res = 0;
+                    break;
+                case 1: res = 1;
+                    break;
+                case 2: res = 2;
+                    break;
+            }
+
+            return res;
+        }
+
+        /// <summary>
+        /// Задаёт настройки выделенного игре пула памяти NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetMemoryPool(int Value)
+        {
+            switch (Value)
+            {
+                case 0: MemoryPoolType = 0;
+                    break;
+                case 1: MemoryPoolType = 1;
+                    break;
+                case 2: MemoryPoolType = 2;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Считывает графические настройки игры из файла.
         /// </summary>
         private void ReadSettings()
