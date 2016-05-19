@@ -483,6 +483,43 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Возвращает настройки многоядерного рендеринга NCF-игры на движке Source 1.
+        /// </summary>
+        public int GetRenderingMode()
+        {
+            int res = -1;
+
+            switch (MCRendering)
+            {
+                case -1: res = 1;
+                    break;
+                case 0: res = 0;
+                    break;
+                case 1: res = 1;
+                    break;
+                case 2: res = 1;
+                    break;
+            }
+
+            return res;
+        }
+
+        /// <summary>
+        /// Задаёт настройки многоядерного рендеринга NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetRenderingMode(int Value)
+        {
+            switch (Value)
+            {
+                case 0: MCRendering = 0;
+                    break;
+                case 1: MCRendering = -1;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Считывает графические настройки игры из файла.
         /// </summary>
         private void ReadSettings()
