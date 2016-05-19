@@ -635,6 +635,43 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Возвращает настройки качества детализации моделей и текстур NCF-игры на движке Source 1.
+        /// </summary>
+        public int GetModelQuality()
+        {
+            int res = -1;
+
+            switch (TextureModelQuality)
+            {
+                case 0: res = 0;
+                    break;
+                case 1: res = 1;
+                    break;
+                case 2: res = 2;
+                    break;
+            }
+
+            return res;
+        }
+
+        /// <summary>
+        /// Задаёт настройки качества детализации моделей и текстур NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetModelQuality(int Value)
+        {
+            switch (Value)
+            {
+                case 0: TextureModelQuality = 0;
+                    break;
+                case 1: TextureModelQuality = 1;
+                    break;
+                case 2: TextureModelQuality = 2;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Считывает графические настройки игры из файла.
         /// </summary>
         private void ReadSettings()
