@@ -256,6 +256,57 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Возвращает настройки графического режима NCF-игры на движке Source 1.
+        /// </summary>
+        public int GetScreenMode()
+        {
+            int res = -1;
+
+            switch (DisplayMode)
+            {
+                case 0:
+                    switch (DisplayBorderless)
+                    {
+                        case 0:
+                            res = 1;
+                            break;
+                        case 1:
+                            res = 2;
+                            break;
+                    }
+                    break;
+                case 1:
+                    res = 0;
+                    break;
+            }
+
+            return res;
+        }
+
+        /// <summary>
+        /// Задаёт настройки графического режима NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetScreenMode(int Value)
+        {
+            switch (Value)
+            {
+                case 0:
+                    DisplayMode = 1;
+                    DisplayBorderless = 0;
+                    break;
+                case 1:
+                    DisplayMode = 0;
+                    DisplayBorderless = 0;
+                    break;
+                case 2:
+                    DisplayMode = 1;
+                    DisplayBorderless = 0;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Считывает графические настройки игры из файла.
         /// </summary>
         private void ReadSettings()
