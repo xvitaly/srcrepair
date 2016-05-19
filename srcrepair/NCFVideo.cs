@@ -307,6 +307,85 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Возвращает настройки полноэкранного сглаживания NCF-игры на движке Source 1.
+        /// </summary>
+        public int GetAntiAliasing()
+        {
+            int res = -1;
+
+            switch (AntiAliasing)
+            {
+                case 0: res = 0;
+                    break;
+                case 1: res = 0;
+                    break;
+                case 2: res = 1;
+                    break;
+                case 4:
+                    switch (AntiAliasQuality)
+                    {
+                        case 0: res = 2;
+                            break;
+                        case 2: res = 3;
+                            break;
+                        case 4: res = 4;
+                            break;
+                    }
+                    break;
+                case 8:
+                    switch (AntiAliasQuality)
+                    {
+                        case 0: res = 5;
+                            break;
+                        case 2: res = 6;
+                            break;
+                    }
+                    break;
+            }
+
+            return res;
+        }
+
+        /// <summary>
+        /// Задаёт настройки полноэкранного сглаживания NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetAntiAliasing(int Value)
+        {
+            switch (Value)
+            {
+                case 0:
+                    AntiAliasing = 1;
+                    AntiAliasQuality = 0;
+                    break;
+                case 1:
+                    AntiAliasing = 2;
+                    AntiAliasQuality = 0;
+                    break;
+                case 2:
+                    AntiAliasing = 4;
+                    AntiAliasQuality = 0;
+                    break;
+                case 3:
+                    AntiAliasing = 4;
+                    AntiAliasQuality = 2;
+                    break;
+                case 4:
+                    AntiAliasing = 4;
+                    AntiAliasQuality = 4;
+                    break;
+                case 5:
+                    AntiAliasing = 8;
+                    AntiAliasQuality = 0;
+                    break;
+                case 6:
+                    AntiAliasing = 8;
+                    AntiAliasQuality = 2;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Считывает графические настройки игры из файла.
         /// </summary>
         private void ReadSettings()
