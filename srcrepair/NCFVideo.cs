@@ -435,6 +435,54 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Возвращает настройки вертикальной синхронизации NCF-игры на движке Source 1.
+        /// </summary>
+        public int GetVSync()
+        {
+            int res = -1;
+
+            switch (VSync)
+            {
+                case 0: res = 0;
+                    break;
+                case 1:
+                    switch (VSyncMode)
+                    {
+                        case 0: res = 1;
+                            break;
+                        case 1: res = 2;
+                            break;
+                    }
+                    break;
+            }
+
+            return res;
+        }
+
+        /// <summary>
+        /// Задаёт настройки вертикальной синхронизации NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetVSync(int Value)
+        {
+            switch (Value)
+            {
+                case 0:
+                    VSync = 0;
+                    VSyncMode = 0;
+                    break;
+                case 1:
+                    VSync = 1;
+                    VSyncMode = 0;
+                    break;
+                case 2:
+                    VSync = 1;
+                    VSyncMode = 1;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Считывает графические настройки игры из файла.
         /// </summary>
         private void ReadSettings()
