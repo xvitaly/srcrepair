@@ -386,6 +386,55 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Возвращает настройки качества фильтрации текстур NCF-игры на движке Source 1.
+        /// </summary>
+        public int GetFilteringMode()
+        {
+            int res = -1;
+
+            switch (FilteringMode)
+            {
+                case 0: res = 0;
+                    break;
+                case 1: res = 1;
+                    break;
+                case 2: res = 2;
+                    break;
+                case 4: res = 3;
+                    break;
+                case 8: res = 4;
+                    break;
+                case 16: res = 5;
+                    break;
+            }
+
+            return res;
+        }
+
+        /// <summary>
+        /// Задаёт настройки качества фильтрации текстур NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetFilteringMode(int Value)
+        {
+            switch (Value)
+            {
+                case 0: FilteringMode = 0;
+                    break;
+                case 1: FilteringMode = 1;
+                    break;
+                case 2: FilteringMode = 2;
+                    break;
+                case 3: FilteringMode = 4;
+                    break;
+                case 4: FilteringMode = 8;
+                    break;
+                case 5: FilteringMode = 16;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Считывает графические настройки игры из файла.
         /// </summary>
         private void ReadSettings()
