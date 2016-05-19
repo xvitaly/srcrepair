@@ -165,6 +165,23 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Возвращает настройки контрастности и цветовой гаммы NCF-игры на движке Source 1.
+        /// </summary>
+        public int GetScreenGamma()
+        {
+            return Brightness;
+        }
+
+        /// <summary>
+        /// Задаёт настройки контрастности и цветовой гаммы NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetScreenGamma(int Value)
+        {
+            Brightness = Value;
+        }
+
+        /// <summary>
         /// Считывает графические настройки игры из файла.
         /// </summary>
         private void ReadSettings()
