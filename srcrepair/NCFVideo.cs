@@ -561,6 +561,43 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Возвращает настройки качества обычных эффектов NCF-игры на движке Source 1.
+        /// </summary>
+        public int GetEffects()
+        {
+            int res = -1;
+
+            switch (EffectDetails)
+            {
+                case 0: res = 0;
+                    break;
+                case 1: res = 1;
+                    break;
+                case 2: res = 2;
+                    break;
+            }
+
+            return res;
+        }
+
+        /// <summary>
+        /// Задаёт настройки качества обычных эффектов NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetEffects(int Value)
+        {
+            switch (Value)
+            {
+                case 0: EffectDetails = 0;
+                    break;
+                case 1: EffectDetails = 1;
+                    break;
+                case 2: EffectDetails = 2;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Считывает графические настройки игры из файла.
         /// </summary>
         private void ReadSettings()
