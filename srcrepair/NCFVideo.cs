@@ -223,6 +223,39 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Возвращает настройки размытия движений NCF-игры на движке Source 1.
+        /// </summary>
+        public int GetMotionBlur()
+        {
+            int res = -1;
+
+            switch (MotionBlur)
+            {
+                case 0: res = 0;
+                    break;
+                case 1: res = 1;
+                    break;
+            }
+
+            return res;
+        }
+
+        /// <summary>
+        /// Задаёт настройки размытия движений NCF-игры на движке Source 1.
+        /// </summary>
+        /// <param name="Value">Текущий индекс контрола</param>
+        public void SetMotionBlur(int Value)
+        {
+            switch (Value)
+            {
+                case 0: MotionBlur = 0;
+                    break;
+                case 1: MotionBlur = 1;
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Считывает графические настройки игры из файла.
         /// </summary>
         private void ReadSettings()
