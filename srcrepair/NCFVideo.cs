@@ -19,6 +19,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace srcrepair
 {
@@ -669,6 +670,38 @@ namespace srcrepair
                 case 2: TextureModelQuality = 2;
                     break;
             }
+        }
+
+        /// <summary>
+        /// Извлекает значение переменной из строки.
+        /// </summary>
+        /// <param name="LineA">Строка для извлечения</param>
+        private string ExtractCVFromLine(string LineA)
+        {
+            LineA = CoreLib.CleanStrWx(LineA, true);
+            return LineA.Substring(LineA.LastIndexOf(" ")).Trim();
+        }
+
+        /// <summary>
+        /// Возвращает значение переменной, переданной в параметре, хранящейся в файле.
+        /// </summary>
+        /// <param name="CVar">Переменная</param>
+        /// <param name="VFile">Массив с содержимым конфига</param>
+        private int GetNCFDWord(string CVar, ref List<String> VFile)
+        {
+            string Result = VFile.FirstOrDefault(s => s.Contains(CVar));
+            return Convert.ToInt32(ExtractCVFromLine(Result));
+        }
+
+        /// <summary>
+        /// Возвращает значение переменной типа double, переданной в параметре, хранящейся в файле.
+        /// </summary>
+        /// <param name="CVar">Переменная</param>
+        /// <param name="VFile">Массив с содержимым конфига</param>
+        private double GetNCFDble(string CVar, ref List<String> VFile)
+        {
+            string Result = VFile.FirstOrDefault(s => s.Contains(CVar)).Replace(".", ",");
+            return Double.Parse(ExtractCVFromLine(Result));
         }
 
         /// <summary>
