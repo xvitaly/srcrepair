@@ -361,8 +361,36 @@ namespace srcrepair
         /// </summary>
         /// <param name="VFileName">Путь к файлу с настройками</param>
         private void ReadNCFGameSettings(string VFileName)
-        {   
-            //
+        {
+            try
+            {
+                // Получаем графические настройки...
+                NCFVideo Video = new NCFVideo(VFileName, true);
+
+                // Заполняем общие настройки...
+                GT_NCF_HorRes.Value = Video.GetScreenWidth();
+                GT_NCF_VertRes.Value = Video.GetScreenHeight();
+
+                // Заполняем остальные настройки...
+                GT_NCF_Ratio.SelectedIndex = Video.GetScreenRatio();
+                GT_NCF_Brightness.Text = Video.GetScreenGamma().ToString();
+                GT_NCF_Shadows.SelectedIndex = Video.GetShadowQuality();
+                GT_NCF_MBlur.SelectedIndex = Video.GetMotionBlur();
+                GT_NCF_DispMode.SelectedIndex = Video.GetScreenMode();
+                GT_NCF_AntiAlias.SelectedIndex = Video.GetAntiAliasing();
+                GT_NCF_Filtering.SelectedIndex = Video.GetFilteringMode();
+                GT_NCF_VSync.SelectedIndex = Video.GetVSync();
+                GT_NCF_Multicore.SelectedIndex = Video.GetRenderingMode();
+                GT_NCF_ShaderE.SelectedIndex = Video.GetShaderEffects();
+                GT_NCF_EffectD.SelectedIndex = Video.GetEffects();
+                GT_NCF_MemPool.SelectedIndex = Video.GetMemoryPool();
+                GT_NCF_Quality.SelectedIndex = Video.GetModelQuality();
+            }
+            catch (Exception Ex)
+            {
+                // Выводим сообщение об ошибке...
+                CoreLib.HandleExceptionEx(AppStrings.GT_RegOpenErr, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+            }
         }
 
         /// <summary>
