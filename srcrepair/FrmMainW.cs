@@ -389,7 +389,7 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 // Выводим сообщение об ошибке...
-                CoreLib.HandleExceptionEx(AppStrings.GT_RegOpenErr, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                CoreLib.HandleExceptionEx(AppStrings.GT_NCFLoadFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
             }
         }
 
