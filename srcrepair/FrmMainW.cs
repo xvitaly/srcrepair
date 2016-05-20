@@ -362,60 +362,7 @@ namespace srcrepair
         /// <param name="VFileName">Путь к файлу с настройками</param>
         private void ReadNCFGameSettings(string VFileName)
         {   
-            // Генерируем путь к файлу со стандартными настройками...
-            string DFileName = Path.Combine(Path.GetDirectoryName(VFileName), "videodefaults.txt");
-
-            // Получаем содержимое файла графических настроек...
-            List<String> VideoFile = new List<String>(File.ReadAllLines(VFileName));
-
-            // Получаем содержимое файла стандартных настроек (если он существует)...
-            List<String> DefaultsFile = new List<String>();
-            if (File.Exists(DFileName)) { DefaultsFile.AddRange(File.ReadAllLines(DFileName)); }
-
-            // Получаем значение разрешения по горизонтали...
-            try { NCF1LoadScreenResHor(ref VideoFile); } catch { try { NCF1LoadScreenResHor(ref DefaultsFile); } catch { GT_NCF_HorRes.Value = 800; } }
-            
-            // Получаем значение разрешения по вертикали...
-            try { NCF1LoadScreenResVert(ref VideoFile); } catch { try { NCF1LoadScreenResVert(ref DefaultsFile); } catch { GT_NCF_VertRes.Value = 600; } }
-            
-            // Получаем настройки соотношения сторон...
-            try { NCF1LoadScreenRatio(ref VideoFile); } catch { try { NCF1LoadScreenRatio(ref DefaultsFile); } catch { GT_NCF_Ratio.SelectedIndex = -1; } }
-            
-            // Получаем настройки яркости...
-            try { NCF1LoadBrightness(ref VideoFile); } catch { try { NCF1LoadBrightness(ref DefaultsFile); } catch { GT_NCF_Brightness.Text = "22"; } }
-
-            // Получаем настройки качества теней...
-            try { NCF1LoadShadowQuality(ref VideoFile); } catch { try { NCF1LoadShadowQuality(ref DefaultsFile); } catch { GT_NCF_Shadows.SelectedIndex = -1; } }
-
-            // Получаем настройки размытия движения...
-            try { NCF1LoadBlur(ref VideoFile); } catch { try { NCF1LoadBlur(ref DefaultsFile); } catch { GT_NCF_MBlur.SelectedIndex = -1; } }
-
-            // Получаем настройки режима...
-            try { NCF1LoadScreenMode(ref VideoFile); } catch { try { NCF1LoadScreenMode(ref DefaultsFile); } catch { GT_NCF_DispMode.SelectedIndex = -1; } }
-            
-            // Получаем настройки сглаживания текстур...
-            try { NCF1LoadAntiAlias(ref VideoFile); } catch { try { NCF1LoadAntiAlias(ref DefaultsFile); } catch { GT_NCF_AntiAlias.SelectedIndex = -1; } }
-            
-            // Получаем настройки фильтрации текстур...
-            try { NCF1LoadFiltration(ref VideoFile); } catch { try { NCF1LoadFiltration(ref DefaultsFile); } catch { GT_NCF_Filtering.SelectedIndex = -1; } }
-            
-            // Получаем настройки вертикальной синхронизации...
-            try { NCF1LoadVSync(ref VideoFile); } catch { try { NCF1LoadVSync(ref DefaultsFile); } catch { GT_NCF_VSync.SelectedIndex = -1; } }
-            
-            // Получаем настройки многоядерного рендеринга...
-            try { NCF1LoadRenderOpts(ref VideoFile); } catch { try { NCF1LoadRenderOpts(ref DefaultsFile); } catch { GT_NCF_Multicore.SelectedIndex = -1; } }
-            
-            // Получаем настройки качества шейдерных эффектов...
-            try { NCF1LoadShaderEffects(ref VideoFile); } catch { try { NCF1LoadShaderEffects(ref DefaultsFile); } catch { GT_NCF_ShaderE.SelectedIndex = -1; } }
-            
-            // Получаем настройки эффектов...
-            try { NCF1LoadBasicEffects(ref VideoFile); } catch { try { NCF1LoadBasicEffects(ref DefaultsFile); } catch { GT_NCF_EffectD.SelectedIndex = -1; } }
-            
-            // Получаем настройки пула памяти...
-            try { NCF1LoadMemPool(ref VideoFile); } catch { try { NCF1LoadMemPool(ref DefaultsFile); } catch { GT_NCF_MemPool.SelectedIndex = -1; } }
-            
-            // Получаем настройки качества моделей и текстур...
-            try { NCF1LoadModelQuality(ref VideoFile); } catch { try { NCF1LoadModelQuality(ref DefaultsFile); } catch { GT_NCF_Quality.SelectedIndex = -1; } }
+            //
         }
 
         /// <summary>
