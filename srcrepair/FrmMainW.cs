@@ -373,7 +373,7 @@ namespace srcrepair
 
                 // Заполняем остальные настройки...
                 GT_NCF_Ratio.SelectedIndex = Video.GetScreenRatio();
-                GT_NCF_Brightness.Text = Video.GetScreenGamma().ToString();
+                GT_NCF_Brightness.Text = Video.GetScreenGamma();
                 GT_NCF_Shadows.SelectedIndex = Video.GetShadowQuality();
                 GT_NCF_MBlur.SelectedIndex = Video.GetMotionBlur();
                 GT_NCF_DispMode.SelectedIndex = Video.GetScreenMode();

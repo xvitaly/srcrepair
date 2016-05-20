@@ -18,6 +18,7 @@
 */
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 
@@ -168,18 +169,18 @@ namespace srcrepair
         /// <summary>
         /// Возвращает настройки контрастности и цветовой гаммы NCF-игры на движке Source 1.
         /// </summary>
-        public int GetScreenGamma()
+        public string GetScreenGamma()
         {
-            return Brightness;
+            return Brightness.ToString();
         }
 
         /// <summary>
         /// Задаёт настройки контрастности и цветовой гаммы NCF-игры на движке Source 1.
         /// </summary>
         /// <param name="Value">Текущий индекс контрола</param>
-        public void SetScreenGamma(int Value)
+        public void SetScreenGamma(string Value)
         {
-            Brightness = Value;
+            Brightness = Convert.ToInt32(Value);
         }
 
         /// <summary>
@@ -686,22 +687,21 @@ namespace srcrepair
         /// Возвращает значение переменной, переданной в параметре, хранящейся в файле.
         /// </summary>
         /// <param name="CVar">Переменная</param>
-        /// <param name="VFile">Массив с содержимым конфига</param>
-        private int GetNCFDWord(string CVar, ref List<String> VFile)
+        private int GetNCFDWord(string CVar)
         {
-            string Result = VFile.FirstOrDefault(s => s.Contains(CVar));
-            return Convert.ToInt32(ExtractCVFromLine(Result));
+            int res;
+            try { res = Convert.ToInt32(ExtractCVFromLine(VideoFile.FirstOrDefault(s => s.Contains(CVar)))); } catch { res = Convert.ToInt32(ExtractCVFromLine(DefaultsFile.FirstOrDefault(s => s.Contains(CVar)))); }
+            return res;
         }
 
         /// <summary>
         /// Возвращает значение переменной типа double, переданной в параметре, хранящейся в файле.
         /// </summary>
         /// <param name="CVar">Переменная</param>
-        /// <param name="VFile">Массив с содержимым конфига</param>
-        private double GetNCFDble(string CVar, ref List<String> VFile)
+        private decimal GetNCFDble(string CVar)
         {
-            string Result = VFile.FirstOrDefault(s => s.Contains(CVar)).Replace(".", ",");
-            return Double.Parse(ExtractCVFromLine(Result));
+            string Result = DefaultsFile.FirstOrDefault(s => s.Contains(CVar));
+            return Convert.ToDecimal(ExtractCVFromLine(Result), new CultureInfo("en-US"));
         }
 
         /// <summary>
@@ -710,6 +710,25 @@ namespace srcrepair
         private void ReadSettings()
         {
             //
+            ScreenHeight = GetNCFDWord("setting.defaultres");
+            ScreenWidth = GetNCFDWord("setting.defaultresheight");
+
+            ScreenRatio = GetNCFDWord("setting.aspectratiomode");
+            Brightness = Convert.ToInt32(GetNCFDble("setting.mat_monitorgamma") * 10);
+            ShadowQuality = GetNCFDWord("setting.csm_quality_level");
+            MotionBlur = GetNCFDWord("setting.mat_motion_blur_enabled");
+            DisplayMode = GetNCFDWord("setting.fullscreen");
+            DisplayBorderless = GetNCFDWord("setting.nowindowborder");
+            AntiAliasing = GetNCFDWord("setting.mat_antialias");
+            AntiAliasQuality = GetNCFDWord("setting.mat_aaquality");
+            FilteringMode = GetNCFDWord("setting.mat_forceaniso");
+            VSync = GetNCFDWord("setting.mat_vsync");
+            VSyncMode = GetNCFDWord("setting.mat_triplebuffered");
+            MCRendering = GetNCFDWord("setting.mat_queue_mode");
+            ShaderEffects = GetNCFDWord("setting.gpu_level");
+            EffectDetails = GetNCFDWord("setting.cpu_level");
+            MemoryPoolType = GetNCFDWord("setting.mem_level");
+            TextureModelQuality = GetNCFDWord("setting.gpu_mem_level");
         }
 
         /// <summary>
