@@ -608,6 +608,8 @@ namespace srcrepair
 
             switch (MemoryPoolType)
             {
+                case -1: res = 2;
+                    break;
                 case 0: res = 0;
                     break;
                 case 1: res = 1;
