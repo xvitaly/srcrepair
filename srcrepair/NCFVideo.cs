@@ -689,9 +689,7 @@ namespace srcrepair
         /// <param name="CVar">Переменная</param>
         private int GetNCFDWord(string CVar)
         {
-            int res;
-            try { res = Convert.ToInt32(ExtractCVFromLine(VideoFile.FirstOrDefault(s => s.Contains(CVar)))); } catch { res = Convert.ToInt32(ExtractCVFromLine(DefaultsFile.FirstOrDefault(s => s.Contains(CVar)))); }
-            return res;
+            int res; try { res = Convert.ToInt32(ExtractCVFromLine(VideoFile.FirstOrDefault(s => s.Contains(CVar)))); } catch { res = Convert.ToInt32(ExtractCVFromLine(DefaultsFile.FirstOrDefault(s => s.Contains(CVar)))); } return res;
         }
 
         /// <summary>
@@ -700,8 +698,7 @@ namespace srcrepair
         /// <param name="CVar">Переменная</param>
         private decimal GetNCFDble(string CVar)
         {
-            string Result = DefaultsFile.FirstOrDefault(s => s.Contains(CVar));
-            return Convert.ToDecimal(ExtractCVFromLine(Result), new CultureInfo("en-US"));
+            decimal res; try { res = Convert.ToDecimal(ExtractCVFromLine(VideoFile.FirstOrDefault(s => s.Contains(CVar))), new CultureInfo("en-US")); } catch { res = Convert.ToDecimal(ExtractCVFromLine(DefaultsFile.FirstOrDefault(s => s.Contains(CVar))), new CultureInfo("en-US")); } return res;
         }
 
         /// <summary>
