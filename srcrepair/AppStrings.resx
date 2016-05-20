@@ -720,4 +720,7 @@
   <data name="HD_LastUpdateInfo" xml:space="preserve">
     <value>Selected HUD last update: {0}.</value>
   </data>
+  <data name="GT_NCFLoadFailure" xml:space="preserve">
+    <value>Failed to load several graphical settings. Please report this bug.</value>
+  </data>
 </root>

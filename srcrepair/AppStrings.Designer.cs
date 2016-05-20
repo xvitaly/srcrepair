@@ -952,6 +952,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to load several graphical settings. Please report this bug..
+        /// </summary>
+        internal static string GT_NCFLoadFailure {
+            get {
+                return ResourceManager.GetString("GT_NCFLoadFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Warning! To save the graphical settings, you must fill in all the forms!.
         /// </summary>
         internal static string GT_NCFNReady {
