@@ -327,7 +327,7 @@ namespace srcrepair
             try
             {
                 // Получаем графические настройки...
-                GCFVideo Video = new GCFVideo(SAppName);
+                GCFVideo Video = new GCFVideo(SAppName, true);
 
                 // Заполняем общие настройки...
                 GT_ResHor.Value = Video.GetScreenWidth();
