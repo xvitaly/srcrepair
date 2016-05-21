@@ -700,7 +700,7 @@ namespace srcrepair
         /// <param name="CVar">Переменная</param>
         private decimal GetNCFDble(string CVar)
         {
-            decimal res; try { res = Convert.ToDecimal(ExtractCVFromLine(VideoFile.FirstOrDefault(s => s.Contains(CVar))), new CultureInfo("en-US")); } catch { res = Convert.ToDecimal(ExtractCVFromLine(DefaultsFile.FirstOrDefault(s => s.Contains(CVar))), new CultureInfo("en-US")); } return res;
+            decimal res; CultureInfo CI = new CultureInfo("en-US"); try { res = Convert.ToDecimal(ExtractCVFromLine(VideoFile.FirstOrDefault(s => s.Contains(CVar))), CI); } catch { res = Convert.ToDecimal(ExtractCVFromLine(DefaultsFile.FirstOrDefault(s => s.Contains(CVar))), CI); } return res;
         }
 
         /// <summary>
