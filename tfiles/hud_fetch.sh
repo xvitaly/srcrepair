@@ -49,7 +49,7 @@ fetch_hud https://github.com/fblue/broeselhud_blue/archive/master.zip broeselhud
 fetch_hud https://github.com/basbanaan/bastHUD/archive/master.zip basthud
 fetch_hud https://github.com/sirgrey/SirHUD/archive/master.zip sirhud
 fetch_hud https://github.com/SnowshoeIceboot/TF2HudPlus/archive/master.zip tf2hudplus
-fetch_hud http://download946.mediafire.com/q797fq45ofsg/ufeej2fl52ezhaj/toonhud_7-5.zip toonhud
+fetch_hud http://download1512.mediafire.com/f4cda89w87qg/7nns6pihs56s646/toonhud_7-6.zip toonhud
 fetch_hud https://github.com/TheStaticVoid/VoidHUD2.0/archive/master.zip voidhud
 fetch_hud https://github.com/n0kk/ahud/archive/master.zip ahud
 fetch_hud https://github.com/Slayer89/slayhud/archive/master.zip calmlikeabomb
