@@ -85,3 +85,4 @@ fetch_hud http://huds.tf/yshud/img/main.png https://github.com/Yo5hi/ysHUD/archi
 fetch_hud http://huds.tf/boredhud/img/main.png https://github.com/TheStaticVoid/boredHUD/archive/master.zip boredhud
 fetch_hud http://huds.tf/gmanghud/img/main.png https://github.com/hoXyy/GMang_HUD/archive/master.zip gmanghud
 fetch_hud http://huds.tf/revhud/img/main.png http://files.gamebanana.com/guis/revhud-jan17.zip revhud
+fetch_hud http://huds.tf/slimhud/img/main.png https://github.com/JackStanley/TF2slimHUD/archive/Main.zip slimhud
