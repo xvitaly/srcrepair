@@ -22,67 +22,61 @@
 function fetch_hud
 {
     # Выводим текст, оповещающий пользователя о начале загрузки...
-    echo -n "Downloading $3..."
-
-    # Проверяем существование файла со скриншотом и если он не существует, загружаем...
-    if [ ! -f "$3.png" ]; then
-        # Загружаем скриншот с удалённого сервера...
-        wget $1 -O $3.png > /dev/null 2> /dev/null  
-    fi
+    echo -n "Downloading $2..."
     
     # Проверим существование каталога для HUD и если он не существует, создаём...
-    if [ ! -d "$3" ]; then
-        mkdir -p $3
+    if [ ! -d "$2" ]; then
+        mkdir -p $2
     fi
 
     # Проверяем существование архива и если он не существует, загружаем...
-    if [ ! -f "$3/$3.zip" ]; then
+    if [ ! -f "$2/$2.zip" ]; then
         # Загружаем новую версию архива из апстрима...
-        wget $2 -O $3/$3.zip > /dev/null 2> /dev/null
+        wget $1 -O $2/$2.zip > /dev/null 2> /dev/null
     fi
 
     # Генерируем окончательное имя архива...
-    nf=$(sha256sum $3/$3.zip | awk '{print $1}')
-    mv $3/$3.zip $3/$3_${nf:0:8}.zip
+    nf=$(sha256sum $2/$2.zip | awk '{print $1}')
+    mv $2/$2.zip $2/$2_${nf:0:8}.zip
     
     # Выводим текст, оповещающий пользователя о завершении загрузки...
     echo " Done."
 }
 
-fetch_hud http://huds.tf/7hud/img/main.png https://github.com/Sevin7/7HUD/archive/master.zip 7HUD
-fetch_hud http://huds.tf/pikleshud/img/main.png https://github.com/piklestf2/pikles-hud/archive/master.zip pikles-hud
-fetch_hud http://huds.tf/broeselhudblue/img/main.png https://github.com/fblue/broeselhud_blue/archive/master.zip broeselhud_blue
-fetch_hud http://huds.tf/basthud/img/main.png https://github.com/basbanaan/bastHUD/archive/master.zip basthud
-fetch_hud http://huds.tf/sirhud/img/main.png https://github.com/sirgrey/SirHUD/archive/master.zip sirhud
-fetch_hud http://huds.tf/tf2hudplus/img/main.png https://github.com/SnowshoeIceboot/TF2HudPlus/archive/master.zip tf2hudplus
-fetch_hud http://huds.tf/toonhud/img/main.png http://download946.mediafire.com/q797fq45ofsg/ufeej2fl52ezhaj/toonhud_7-5.zip toonhud
-fetch_hud http://huds.tf/voidhud/img/main.png https://github.com/TheStaticVoid/VoidHUD2.0/archive/master.zip voidhud
-fetch_hud http://huds.tf/ahud/img/main.png https://github.com/n0kk/ahud/archive/master.zip ahud
-fetch_hud http://huds.tf/calmlikeabomb/img/main.png https://github.com/Slayer89/slayhud/archive/master.zip calmlikeabomb
-fetch_hud http://huds.tf/ejphud/img/main.png https://github.com/basbanaan/EJP-HUD/archive/master.zip ejphud
-fetch_hud http://huds.tf/flathud/img/main.png https://github.com/flatlinee/flatHUD-/archive/master.zip flathud
-fetch_hud http://huds.tf/bwhud/img/main.png https://github.com/bw-/bw-HUD/archive/master.zip bwhud
-fetch_hud http://huds.tf/budhud/img/main.png https://github.com/WhiskerBiscuit/budhud/archive/master.zip budhud
-fetch_hud http://huds.tf/idhud/img/main.png https://github.com/Eniere/idhud/archive/master.zip idhud
-fetch_hud http://huds.tf/jedihud/img/main.png https://gitgud.io/JediThug/JediHUD/repository/archive.zip jedihud
-fetch_hud http://huds.tf/noto/img/main.png https://github.com/omnibombulator/noto/archive/master.zip noto
-fetch_hud http://huds.tf/morghud/img/main.png https://github.com/ItsMorgus/MorgHUD/archive/master.zip morghud
-fetch_hud http://huds.tf/kbnhud/img/main.png https://github.com/Jotunn/KBNHud/archive/master.zip kbnhud
-fetch_hud http://huds.tf/medhud/img/main.png https://github.com/Intellectualbadass/medHUD/archive/master.zip medhud
-fetch_hud http://huds.tf/rayshud/img/main.png https://github.com/raysfire/rayshud/archive/master.zip rayshud
-fetch_hud http://huds.tf/evehud/img/main.png http://files.gamebanana.com/guis/eve_hud_v378.zip evehud
-fetch_hud http://huds.tf/biscottihud/img/main.png https://github.com/MedicodiBiscotti/biscottiHUD/archive/master.zip biscottihud
-fetch_hud http://huds.tf/flamehud/img/main.png https://github.com/mattr0d/flamehud/archive/master.zip flamehud
-fetch_hud http://huds.tf/frankenhud/img/main.png https://github.com/TheKins/frankenhud/archive/master.zip frankenhud
-fetch_hud http://huds.tf/isaachud/img/main.png https://github.com/Xeletron/Isaac-Hud/archive/master.zip isaachud
-fetch_hud http://huds.tf/jayhud/img/main.png https://github.com/kermit-tf/JayHUD/archive/master.zip jayhud
-fetch_hud http://huds.tf/mannterface/img/main.png https://github.com/mannterface/Mannterface/archive/master.zip mannterface
-fetch_hud http://huds.tf/yayahud/img/main.png https://github.com/Yttrium-tYcLief/yayahud/archive/master.zip yayahud
-fetch_hud http://huds.tf/smesihud/img/main.png https://github.com/Smesi/SmesiHud/archive/master.zip smesihud
-fetch_hud http://huds.tf/rainhud/img/main.png https://github.com/rainoflight/rainhud/archive/master.zip rainhud
-fetch_hud http://huds.tf/solarhud/img/main.png https://github.com/Stochast1c/solarhud/archive/master.zip solarhud
-fetch_hud http://huds.tf/yshud/img/main.png https://github.com/Yo5hi/ysHUD/archive/master.zip yshud
-fetch_hud http://huds.tf/boredhud/img/main.png https://github.com/TheStaticVoid/boredHUD/archive/master.zip boredhud
-fetch_hud http://huds.tf/gmanghud/img/main.png https://github.com/hoXyy/GMang_HUD/archive/master.zip gmanghud
-fetch_hud http://huds.tf/revhud/img/main.png http://files.gamebanana.com/guis/revhud-jan17.zip revhud
-fetch_hud http://huds.tf/slimhud/img/main.png https://github.com/JackStanley/TF2slimHUD/archive/Main.zip slimhud
+fetch_hud https://github.com/Sevin7/7HUD/archive/master.zip 7HUD
+fetch_hud https://github.com/piklestf2/pikles-hud/archive/master.zip pikles-hud
+fetch_hud https://github.com/fblue/broeselhud_blue/archive/master.zip broeselhud_blue
+fetch_hud https://github.com/basbanaan/bastHUD/archive/master.zip basthud
+fetch_hud https://github.com/sirgrey/SirHUD/archive/master.zip sirhud
+fetch_hud https://github.com/SnowshoeIceboot/TF2HudPlus/archive/master.zip tf2hudplus
+fetch_hud http://download946.mediafire.com/q797fq45ofsg/ufeej2fl52ezhaj/toonhud_7-5.zip toonhud
+fetch_hud https://github.com/TheStaticVoid/VoidHUD2.0/archive/master.zip voidhud
+fetch_hud https://github.com/n0kk/ahud/archive/master.zip ahud
+fetch_hud https://github.com/Slayer89/slayhud/archive/master.zip calmlikeabomb
+fetch_hud https://github.com/basbanaan/EJP-HUD/archive/master.zip ejphud
+fetch_hud https://github.com/flatlinee/flatHUD-/archive/master.zip flathud
+fetch_hud https://github.com/bw-/bw-HUD/archive/master.zip bwhud
+fetch_hud https://github.com/WhiskerBiscuit/budhud/archive/master.zip budhud
+fetch_hud https://github.com/Eniere/idhud/archive/master.zip idhud
+fetch_hud https://gitgud.io/JediThug/JediHUD/repository/archive.zip jedihud
+fetch_hud https://github.com/omnibombulator/noto/archive/master.zip noto
+fetch_hud https://github.com/ItsMorgus/MorgHUD/archive/master.zip morghud
+fetch_hud https://github.com/Jotunn/KBNHud/archive/master.zip kbnhud
+fetch_hud https://github.com/Intellectualbadass/medHUD/archive/master.zip medhud
+fetch_hud https://github.com/raysfire/rayshud/archive/master.zip rayshud
+fetch_hud http://files.gamebanana.com/guis/eve_hud_v378.zip evehud
+fetch_hud https://github.com/MedicodiBiscotti/biscottiHUD/archive/master.zip biscottihud
+fetch_hud https://github.com/mattr0d/flamehud/archive/master.zip flamehud
+fetch_hud https://github.com/TheKins/frankenhud/archive/master.zip frankenhud
+fetch_hud https://github.com/Xeletron/Isaac-Hud/archive/master.zip isaachud
+fetch_hud https://github.com/kermit-tf/JayHUD/archive/master.zip jayhud
+fetch_hud https://github.com/mannterface/Mannterface/archive/master.zip mannterface
+fetch_hud https://github.com/Yttrium-tYcLief/yayahud/archive/master.zip yayahud
+fetch_hud https://github.com/Smesi/SmesiHud/archive/master.zip smesihud
+fetch_hud https://github.com/rainoflight/rainhud/archive/master.zip rainhud
+fetch_hud https://github.com/Stochast1c/solarhud/archive/master.zip solarhud
+fetch_hud https://github.com/Yo5hi/ysHUD/archive/master.zip yshud
+fetch_hud https://github.com/TheStaticVoid/boredHUD/archive/master.zip boredhud
+fetch_hud https://github.com/hoXyy/GMang_HUD/archive/master.zip gmanghud
+fetch_hud http://files.gamebanana.com/guis/revhud-jan17.zip revhud
+fetch_hud https://github.com/JackStanley/TF2slimHUD/archive/Main.zip slimhud
