@@ -468,4 +468,17 @@
     <ArchiveDir>RevHud</ArchiveDir>
     <InstallDir>revhud</InstallDir>
   </HUD>
+  <HUD>
+    <Name>SlimHUD</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/slimhud/slimhud_.zip</URI>
+    <UpURI>https://github.com/JackStanley/TF2slimHUD/archive/Main.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/slimhud.png</Preview>
+    <RepoPath>https://github.com/JackStanley/TF2slimHUD</RepoPath>
+    <LastUpdate>1463762945</LastUpdate>
+    <Site>http://huds.tf/slimhud/</Site>
+    <ArchiveDir>TF2slimHUD-Main/slimHUD</ArchiveDir>
+    <InstallDir>slimhud</InstallDir>
+  </HUD>
 </HUDs>
