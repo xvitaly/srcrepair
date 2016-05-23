@@ -734,7 +734,46 @@ namespace srcrepair
         /// </summary>
         public void WriteSettings()
         {
-            //
+            // Проверим существует ли файл...
+            if (!(File.Exists(VideoFileName))) { CoreLib.CreateFile(VideoFileName); }
+
+            // Начинаем сохранять содержимое объекта в файл...
+            using (StreamWriter CFile = new StreamWriter(VideoFileName))
+            {
+                // Генерируем шаблон...
+                string Templt = "\t\"{0}\"\t\t\"{1}\"";
+
+                // Явно указываем локаль для записи вещественных чисел...
+                CultureInfo CI = new CultureInfo("en-US");
+
+                // Вставляем стандартный заголовок...
+                CFile.WriteLine("\"VideoConfig\"");
+                CFile.WriteLine("{");
+
+                // Вставляем настройки графики...
+                CFile.WriteLine(String.Format(Templt, "setting.cpu_level", EffectDetails));
+                CFile.WriteLine(String.Format(Templt, "setting.gpu_level", ShaderEffects));
+                CFile.WriteLine(String.Format(Templt, "setting.mat_antialias", AntiAliasing));
+                CFile.WriteLine(String.Format(Templt, "setting.mat_aaquality", AntiAliasQuality));
+                CFile.WriteLine(String.Format(Templt, "setting.mat_forceaniso", FilteringMode));
+                CFile.WriteLine(String.Format(Templt, "setting.mat_vsync", VSync));
+                CFile.WriteLine(String.Format(Templt, "setting.mat_triplebuffered", VSyncMode));
+                CFile.WriteLine(String.Format(Templt, "setting.mat_grain_scale_override", "1"));
+                CFile.WriteLine(String.Format(Templt, "setting.mat_monitorgamma", Convert.ToDecimal(Brightness) / 10, CI));
+                CFile.WriteLine(String.Format(Templt, "setting.csm_quality_level", ShadowQuality));
+                CFile.WriteLine(String.Format(Templt, "setting.mat_motion_blur_enabled", MotionBlur));
+                CFile.WriteLine(String.Format(Templt, "setting.gpu_mem_level", TextureModelQuality));
+                CFile.WriteLine(String.Format(Templt, "setting.mem_level", MemoryPoolType));
+                CFile.WriteLine(String.Format(Templt, "setting.mat_queue_mode", MCRendering));
+                CFile.WriteLine(String.Format(Templt, "setting.defaultres", ScreenWidth));
+                CFile.WriteLine(String.Format(Templt, "setting.defaultresheight", ScreenHeight));
+                CFile.WriteLine(String.Format(Templt, "setting.aspectratiomode", ScreenRatio));
+                CFile.WriteLine(String.Format(Templt, "setting.fullscreen", DisplayMode));
+                CFile.WriteLine(String.Format(Templt, "setting.nowindowborder", DisplayBorderless));
+
+                // Вставляем закрывающую скобку...
+                CFile.WriteLine("}");
+            }
         }
 
         /// <summary>
