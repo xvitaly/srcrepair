@@ -182,7 +182,7 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Сохраняет графические настройки игры в файл.
+        /// Сохраняет настройки NCF игры в файл.
         /// </summary>
         /// <param name="VFileName">Имя файла опций</param>
         private void WriteNCFGameSettings(string VFileName)
