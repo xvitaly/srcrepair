@@ -187,134 +187,28 @@ namespace srcrepair
         /// <param name="VFileName">Имя файла опций</param>
         private void WriteNCFGameSettings(string VFileName)
         {
-            // Проверим существует ли файл...
-            if (!(File.Exists(VFileName))) { CoreLib.CreateFile(VFileName); }
-            
-            // Начинаем сохранять содержимое редактора в файл...
-            using (StreamWriter CFile = new StreamWriter(VFileName))
-            {
-                // Генерируем шаблон...
-                string Templt = "\t\"{0}\"\t\t\"{1}\"";
-                
-                // Вставляем стандартный заголовок...
-                CFile.WriteLine(@"""" + "VideoConfig" + @"""");
-                CFile.WriteLine("{");
-                
-                // Вставляем параметры...
-                // Обычные эффекты...
-                CFile.WriteLine(String.Format(Templt, "setting.cpu_level", GT_NCF_EffectD.SelectedIndex.ToString()));
-                
-                // Шейдерные эффекты...
-                CFile.WriteLine(String.Format(Templt, "setting.gpu_level", GT_NCF_ShaderE.SelectedIndex.ToString()));
-                
-                // Настройки сглаживания...
-                switch (GT_NCF_AntiAlias.SelectedIndex)
-                {
-                    case 0: CFile.WriteLine(String.Format(Templt, "setting.mat_antialias", "1"));
-                        CFile.WriteLine(String.Format(Templt, "setting.mat_aaquality", "0"));
-                        break;
-                    case 1: CFile.WriteLine(String.Format(Templt, "setting.mat_antialias", "2"));
-                        CFile.WriteLine(String.Format(Templt, "setting.mat_aaquality", "0"));
-                        break;
-                    case 2: CFile.WriteLine(String.Format(Templt, "setting.mat_antialias", "4"));
-                        CFile.WriteLine(String.Format(Templt, "setting.mat_aaquality", "0"));
-                        break;
-                    case 3: CFile.WriteLine(String.Format(Templt, "setting.mat_antialias", "4"));
-                        CFile.WriteLine(String.Format(Templt, "setting.mat_aaquality", "2"));
-                        break;
-                    case 4: CFile.WriteLine(String.Format(Templt, "setting.mat_antialias", "4"));
-                        CFile.WriteLine(String.Format(Templt, "setting.mat_aaquality", "4"));
-                        break;
-                    case 5: CFile.WriteLine(String.Format(Templt, "setting.mat_antialias", "8"));
-                        CFile.WriteLine(String.Format(Templt, "setting.mat_aaquality", "0"));
-                        break;
-                    case 6: CFile.WriteLine(String.Format(Templt, "setting.mat_antialias", "8"));
-                        CFile.WriteLine(String.Format(Templt, "setting.mat_aaquality", "2"));
-                        break;
-                }
-                
-                // Фильтрация...
-                switch (GT_NCF_Filtering.SelectedIndex)
-                {
-                    case 0: CFile.WriteLine(String.Format(Templt, "setting.mat_forceaniso", "0"));
-                        break;
-                    case 1: CFile.WriteLine(String.Format(Templt, "setting.mat_forceaniso", "1"));
-                        break;
-                    case 2: CFile.WriteLine(String.Format(Templt, "setting.mat_forceaniso", "2"));
-                        break;
-                    case 3: CFile.WriteLine(String.Format(Templt, "setting.mat_forceaniso", "4"));
-                        break;
-                    case 4: CFile.WriteLine(String.Format(Templt, "setting.mat_forceaniso", "8"));
-                        break;
-                    case 5: CFile.WriteLine(String.Format(Templt, "setting.mat_forceaniso", "16"));
-                        break;
-                }
-                
-                // Вертикальная синхронизация...
-                switch (GT_NCF_VSync.SelectedIndex)
-                {
-                    case 0: CFile.WriteLine(String.Format(Templt, "setting.mat_vsync", "0"));
-                        CFile.WriteLine(String.Format(Templt, "setting.mat_triplebuffered", "0"));
-                        break;
-                    case 1: CFile.WriteLine(String.Format(Templt, "setting.mat_vsync", "1"));
-                        CFile.WriteLine(String.Format(Templt, "setting.mat_triplebuffered", "0"));
-                        break;
-                    case 2: CFile.WriteLine(String.Format(Templt, "setting.mat_vsync", "1"));
-                        CFile.WriteLine(String.Format(Templt, "setting.mat_triplebuffered", "1"));
-                        break;
-                }
-                
-                // Настройки зернистости...
-                CFile.WriteLine(String.Format(Templt, "setting.mat_grain_scale_override", "1"));
-                
-                // Настройки гаммы...
-                CFile.WriteLine(String.Format(Templt, "setting.mat_monitorgamma", (Convert.ToDouble(GT_NCF_Brightness.Text) / 10).ToString().Replace(",", ".")));
-                
-                // Настройки качества теней...
-                CFile.WriteLine(String.Format(Templt, "setting.csm_quality_level", GT_NCF_Shadows.SelectedIndex.ToString()));
-                
-                // Настройки размытия движения...
-                CFile.WriteLine(String.Format(Templt, "setting.mat_motion_blur_enabled", GT_NCF_MBlur.SelectedIndex.ToString()));
-                
-                // Настройки качества моделей и текстур...
-                CFile.WriteLine(String.Format(Templt, "setting.gpu_mem_level", GT_NCF_Quality.SelectedIndex.ToString()));
-                
-                // Настройки пула памяти...
-                CFile.WriteLine(String.Format(Templt, "setting.mem_level", GT_NCF_MemPool.SelectedIndex.ToString()));
-                
-                // Настройки многоядерного рендеринга...
-                switch (GT_NCF_Multicore.SelectedIndex)
-                {
-                    case 0: CFile.WriteLine(String.Format(Templt, "setting.mat_queue_mode", "0"));
-                        break;
-                    case 1: CFile.WriteLine(String.Format(Templt, "setting.mat_queue_mode", "-1"));
-                        break;
-                }
-                
-                // Настройки разрешения...
-                CFile.WriteLine(String.Format(Templt, "setting.defaultres", GT_NCF_HorRes.Value.ToString()));
-                CFile.WriteLine(String.Format(Templt, "setting.defaultresheight", GT_NCF_VertRes.Value.ToString()));
-                
-                // Настройки соотношения сторон...
-                CFile.WriteLine(String.Format(Templt, "setting.aspectratiomode", GT_NCF_Ratio.SelectedIndex.ToString()));
-                
-                // Настройки режима...
-                switch (GT_NCF_DispMode.SelectedIndex)
-                {
-                    case 0: CFile.WriteLine(String.Format(Templt, "setting.fullscreen", "1"));
-                        CFile.WriteLine(String.Format(Templt, "setting.nowindowborder", "0"));
-                        break;
-                    case 1: CFile.WriteLine(String.Format(Templt, "setting.fullscreen", "0"));
-                        CFile.WriteLine(String.Format(Templt, "setting.nowindowborder", "0"));
-                        break;
-                    case 2: CFile.WriteLine(String.Format(Templt, "setting.fullscreen", "1"));
-                        CFile.WriteLine(String.Format(Templt, "setting.nowindowborder", "1"));
-                        break;
-                }
-                
-                // Завершающая скобка...
-                CFile.WriteLine("}");
-            }
+            // Создаём новый объект...
+            NCFVideo Video = new NCFVideo(VFileName, false);
+
+            // Записываем пользовательские настройки...
+            Video.SetScreenWidth((int)GT_NCF_HorRes.Value);
+            Video.SetScreenHeight((int)GT_NCF_VertRes.Value);
+            Video.SetScreenRatio(GT_NCF_Ratio.SelectedIndex);
+            Video.SetScreenGamma(GT_NCF_Brightness.Text);
+            Video.SetShadowQuality(GT_NCF_Shadows.SelectedIndex);
+            Video.SetMotionBlur(GT_NCF_MBlur.SelectedIndex);
+            Video.SetScreenMode(GT_NCF_DispMode.SelectedIndex);
+            Video.SetAntiAliasing(GT_NCF_AntiAlias.SelectedIndex);
+            Video.SetFilteringMode(GT_NCF_Filtering.SelectedIndex);
+            Video.SetVSync(GT_NCF_VSync.SelectedIndex);
+            Video.SetRenderingMode(GT_NCF_Multicore.SelectedIndex);
+            Video.SetShaderEffects(GT_NCF_ShaderE.SelectedIndex);
+            Video.SetEffects(GT_NCF_EffectD.SelectedIndex);
+            Video.SetMemoryPool(GT_NCF_MemPool.SelectedIndex);
+            Video.SetModelQuality(GT_NCF_Quality.SelectedIndex);
+
+            // Записываем настройки в файл...
+            Video.WriteSettings();
         }
 
         /// <summary>
