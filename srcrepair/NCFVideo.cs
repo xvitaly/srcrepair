@@ -709,8 +709,8 @@ namespace srcrepair
         private void ReadSettings()
         {
             // Считываем настройки графики из файла...
-            ScreenHeight = GetNCFDWord("setting.defaultres");
-            ScreenWidth = GetNCFDWord("setting.defaultresheight");
+            ScreenWidth = GetNCFDWord("setting.defaultres");
+            ScreenHeight = GetNCFDWord("setting.defaultresheight");
             ScreenRatio = GetNCFDWord("setting.aspectratiomode");
             Brightness = Convert.ToInt32(GetNCFDble("setting.mat_monitorgamma") * 10);
             ShadowQuality = GetNCFDWord("setting.csm_quality_level");
