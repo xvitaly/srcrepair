@@ -759,7 +759,7 @@ namespace srcrepair
                 CFile.WriteLine(String.Format(Templt, "setting.mat_vsync", VSync));
                 CFile.WriteLine(String.Format(Templt, "setting.mat_triplebuffered", VSyncMode));
                 CFile.WriteLine(String.Format(Templt, "setting.mat_grain_scale_override", "1"));
-                CFile.WriteLine(String.Format(Templt, "setting.mat_monitorgamma", Convert.ToDecimal(Brightness / 10.0).ToString(CI)));
+                CFile.WriteLine(String.Format(Templt, "setting.mat_monitorgamma", (Brightness / 10.0).ToString(CI)));
                 CFile.WriteLine(String.Format(Templt, "setting.csm_quality_level", ShadowQuality));
                 CFile.WriteLine(String.Format(Templt, "setting.mat_motion_blur_enabled", MotionBlur));
                 CFile.WriteLine(String.Format(Templt, "setting.gpu_mem_level", TextureModelQuality));
