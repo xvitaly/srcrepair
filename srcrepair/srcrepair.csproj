@@ -382,6 +382,10 @@
       <Link>cfgs\v1tsk%27s_generic.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\tfiles\configs.xml">
+      <Link>configs.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\tfiles\huds.xml">
       <Link>huds.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
