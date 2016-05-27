@@ -4,7 +4,6 @@
     <Name>bonhighfps</Name>
     <FileName>bonhighfps.cfg</FileName>
     <SupportedGames>240</SupportedGames>
-    <LastUpdate></LastUpdate>
     <Description:ru>
     <![CDATA[One of the most effective FPS configs. Makes TF2 look like a 16-bit game. Strongly recommended for old or low-end PCs and graphics cards. This config gives the greatest FPS increase.
 
@@ -25,7 +24,6 @@ Warning: outdated. Do not use on latest Team Fortress 2 versions!
     <Name>chrisdx9frames</Name>
     <FileName>chrisdx9frames.cfg</FileName>
     <SupportedGames>240</SupportedGames>
-    <LastUpdate></LastUpdate>
     <Description:ru>
     <![CDATA[Dx9frames - это специальная модификация конфига chrishighframes для работы в режиме DirectX 9.0. Рекомендуется на не слишком старых ПК.
 
@@ -43,7 +41,6 @@ Graphics degradation: Some]]>
     <Name>chrishighframes</Name>
     <FileName>chrishighframes.cfg</FileName>
     <SupportedGames>240</SupportedGames>
-    <LastUpdate></LastUpdate>
     <Description:ru>
     <![CDATA[Неплохой FPS-конфиг, при значительном увеличении кадровой частоты, не сильно портящий изображение. Рекомендуется на не слишком старых ПК.
 
@@ -61,7 +58,6 @@ Graphics degradation: Some]]>
     <Name>chrismaxfps</Name>
     <FileName>chrismaxfps.cfg</FileName>
     <SupportedGames>240</SupportedGames>
-    <LastUpdate></LastUpdate>
     <Description:ru>
     <![CDATA[Good FPS config that does a good job and gives you a decent picture. Recommended for use on old PCs.
 
@@ -79,7 +75,6 @@ Graphics degradation: High]]>
     <Name>chrismaxquality</Name>
     <FileName>chrismaxquality.cfg</FileName>
     <SupportedGames>240</SupportedGames>
-    <LastUpdate></LastUpdate>
     <Description:ru>
     <![CDATA[FPS-конфиг "наоборот". Устанавливает все графические настройки игры на максимум, что позволит получить наилучшее качество графики. Устанавливайте только на мощном современном компьютере.
 
@@ -97,7 +92,6 @@ Graphics degradation: None]]>
     <Name>comangliacinema</Name>
     <FileName>comangliacinema.cfg</FileName>
     <SupportedGames>240;440</SupportedGames>
-    <LastUpdate></LastUpdate>
     <Description:ru>
     <![CDATA[FPS-конфиг "наоборот". Устанавливает все графические настройки игры на максимум, что позволит получить наилучшее качество графики. Данный конфиг создан специально для создателей видеороликов. Используйте только на мощном современном компьютере.
 
@@ -115,7 +109,6 @@ Graphics degradation: None]]>
     <Name>comangliamaxfps</Name>
     <FileName>comangliamaxfps.cfg</FileName>
     <SupportedGames>240;440</SupportedGames>
-    <LastUpdate></LastUpdate>
     <Description:ru>
     <![CDATA[Улучшенный вариант FPS-конфига от Chris. Обеспечивает значительный прирост кадровой частоты при сильном ухудшении качества картинки. Автор предупреждает о том, что данный конфиг нестабилен на системах с одноядерным процессором (вместо него следует использовать comangliastability.cfg).
 
@@ -133,7 +126,6 @@ Graphics degradation: 16-bit style]]>
     <Name>comangliastability</Name>
     <FileName>comangliastability.cfg</FileName>
     <SupportedGames>240;440</SupportedGames>
-    <LastUpdate></LastUpdate>
     <Description:ru>
     <![CDATA[Неплохой FPS-конфиг, при значительном увеличении кадровой частоты, не сильно портящий изображение. Улучшенная версия конфига от Криса. Оптимизирован для максимальной стабильности. Рекомендуется на не слишком старых ПК.
 
@@ -151,7 +143,6 @@ Graphics degradation: Moderate]]>
     <Name>dt_legal</Name>
     <FileName>dt_legal.cfg</FileName>
     <SupportedGames>240</SupportedGames>
-    <LastUpdate></LastUpdate>
     <Description:ru>
     <![CDATA[Хороший конфиг для слабых машин, обеспечивающий значительный прирост кадровой частоты. Полностью легален для использования в большинстве европейских киберспортивных лиг.
 
@@ -169,7 +160,6 @@ Graphics degradation: Medium]]>
     <Name>m0refps</Name>
     <FileName>m0refps.cfg</FileName>
     <SupportedGames>240</SupportedGames>
-    <LastUpdate></LastUpdate>
     <Description:ru>
     <![CDATA[Довольно известный в кругу киберспортсменов конфиг, который при достаточно сильном снижении качества графики даёт не слишком большой прирост в FPS. Рекомендуется использовать сей конфиг лишь на «средних» компьютерах.
 
@@ -187,7 +177,6 @@ Graphics degradation: Some]]>
     <Name>m0rehighfps</Name>
     <FileName>m0rehighfps.cfg</FileName>
     <SupportedGames>240</SupportedGames>
-    <LastUpdate></LastUpdate>
     <Description:ru>
     <![CDATA[Первый мощный и качественный FPS-конфиг, рассчитанный в основном на старые компьютеры. Очень сильно ухудшает качество графики TF2 (игра начинает напоминать CS 1.6), но позволяет играть даже на самых слабых компьютерах.
 
@@ -205,7 +194,6 @@ Graphics degradation: High]]>
     <Name>skullhighfps</Name>
     <FileName>skullhighfps.cfg</FileName>
     <SupportedGames>240</SupportedGames>
-    <LastUpdate></LastUpdate>
     <Description:ru>
     <![CDATA[Конфиг от Skull'a. По производительности почти идентичен конфигу bon'a, но графика в игре становится немного лучше, чем при использовании bonhighfps. Рекомендуется использовать на старых ПК, страдающих острой нехваткой кадровой частоты.
 
@@ -223,7 +211,6 @@ Graphics degradation: Some]]>
     <Name>v1tsk's_generic</Name>
     <FileName>v1tsk's_generic.cfg</FileName>
     <SupportedGames>240;440</SupportedGames>
-    <LastUpdate></LastUpdate>
     <Description:ru>
     <![CDATA[Базовый конфиг (ранее назывался team-fortress.ru), обеспечивающий небольшой плюс к FPS, но и не портящий изображение. Он снижает только те параметры, которые обеспечивают максимальный прирост графики. Рекомендуется к использованию любому игроку.
 
