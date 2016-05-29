@@ -23,6 +23,9 @@ using System.Collections.Generic;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс для работы с коллекцией HUD.
+    /// </summary>
     public sealed class HUDManager
     {
         /// <summary>

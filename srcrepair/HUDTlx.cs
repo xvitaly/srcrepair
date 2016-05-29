@@ -22,6 +22,9 @@ using System.Collections.Generic;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс для работы с определённым HUD.
+    /// </summary>
     public sealed class HUDTlx
     {
         /// <summary>
