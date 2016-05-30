@@ -57,7 +57,11 @@ namespace srcrepair
         /// <param name="CfGames">Список поддерживаемых конфигом игр</param>
         public CFGTlx(string CfName, string CfFileName, string CfDescr, string[] CfGames)
         {
-            //
+            // Заполняем свойства класса...
+            Name = CfName;
+            FileName = CfFileName;
+            Description = CfDescr;
+            SupportedGames = CfGames;
         }
     }
 }
