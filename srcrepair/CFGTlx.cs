@@ -12,7 +12,7 @@ namespace srcrepair
         public string Description { get; set; }
         public string[] SupportedGames { get; set; }
 
-        public CFGTlx()
+        public CFGTlx(string CfName, string CfFileName, string CfDescr, string[] CfGames)
         {
             //
         }
