@@ -3540,4 +3540,16 @@
   <data name="tf_taunt_first_person" xml:space="preserve">
     <value>Включает / отключает вид насмешек от первого лица (рекомендуется для использования с устройствами виртуальной реальности).</value>
   </data>
+  <data name="ds_mark" xml:space="preserve">
+    <value>Создать закладку в текущей демо-записи. Параметр [comment] является опциональным и может содержать пользовательский комментарий.</value>
+  </data>
+  <data name="ds_record" xml:space="preserve">
+    <value>Начать запись демки вручную посредством системы автоматизированной записи демок.</value>
+  </data>
+  <data name="ds_status" xml:space="preserve">
+    <value>Вывести текущий статус автомазированной системы записи демок.</value>
+  </data>
+  <data name="ds_stop" xml:space="preserve">
+    <value>Остановить запись демки и освободить ресурсы.</value>
+  </data>
 </root>
