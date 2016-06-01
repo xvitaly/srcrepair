@@ -2187,8 +2187,29 @@
   <data name="tf_taunt_first_person" xml:space="preserve">
     <value>0/1 - taunts are in first person for full-body awareness mode (for use with Oculus Rift).</value>
   </data>
+  <data name="ds_dir" xml:space="preserve">
+    <value>Demo support - will put all files into this folder under the gamedir. 24 characters max.</value>
+  </data>
+  <data name="ds_enable" xml:space="preserve">
+    <value>Demo support - enable automatic .dem file recording and features: 0 - manual; 1 - auto-record competitive matches; 2 - auto-record all matches.</value>
+  </data>
+  <data name="ds_kill_delay" xml:space="preserve">
+    <value>Demo support - maximum time between kills for tracking kill streaks.</value>
+  </data>
+  <data name="ds_log" xml:space="preserve">
+    <value>Demo support - log kill streak and bookmark events to an associated .txt file.</value>
+  </data>
   <data name="ds_mark" xml:space="preserve">
     <value>Bookmark the current demo tick count for future reference. The [comment] is an optional descriptor you may include.</value>
+  </data>
+  <data name="ds_min_streak" xml:space="preserve">
+    <value>Demo support - minimum kill streak count before being recorded.</value>
+  </data>
+  <data name="ds_notify" xml:space="preserve">
+    <value>Demo support - text output when recording start/stop/bookmark events : 0 - console; 1 - console and chat; 2 - console and HUD.</value>
+  </data>
+  <data name="ds_prefix" xml:space="preserve">
+    <value>Demo support - will prefix files with this string. 24 characters max.</value>
   </data>
   <data name="ds_record" xml:space="preserve">
     <value>Demo support - start recording a demo.</value>

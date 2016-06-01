@@ -1600,11 +1600,74 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Demo support - will put all files into this folder under the gamedir. 24 characters max..
+        /// </summary>
+        internal static string ds_dir {
+            get {
+                return ResourceManager.GetString("ds_dir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Demo support - enable automatic .dem file recording and features: 0 - manual; 1 - auto-record competitive matches; 2 - auto-record all matches..
+        /// </summary>
+        internal static string ds_enable {
+            get {
+                return ResourceManager.GetString("ds_enable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Demo support - maximum time between kills for tracking kill streaks..
+        /// </summary>
+        internal static string ds_kill_delay {
+            get {
+                return ResourceManager.GetString("ds_kill_delay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Demo support - log kill streak and bookmark events to an associated .txt file..
+        /// </summary>
+        internal static string ds_log {
+            get {
+                return ResourceManager.GetString("ds_log", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bookmark the current demo tick count for future reference. The [comment] is an optional descriptor you may include..
         /// </summary>
         internal static string ds_mark {
             get {
                 return ResourceManager.GetString("ds_mark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Demo support - minimum kill streak count before being recorded..
+        /// </summary>
+        internal static string ds_min_streak {
+            get {
+                return ResourceManager.GetString("ds_min_streak", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Demo support - text output when recording start/stop/bookmark events : 0 - console; 1 - console and chat; 2 - console and HUD..
+        /// </summary>
+        internal static string ds_notify {
+            get {
+                return ResourceManager.GetString("ds_notify", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Demo support - will prefix files with this string. 24 characters max..
+        /// </summary>
+        internal static string ds_prefix {
+            get {
+                return ResourceManager.GetString("ds_prefix", resourceCulture);
             }
         }
         
