@@ -1600,6 +1600,42 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bookmark the current demo tick count for future reference. The [comment] is an optional descriptor you may include..
+        /// </summary>
+        internal static string ds_mark {
+            get {
+                return ResourceManager.GetString("ds_mark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Demo support - start recording a demo..
+        /// </summary>
+        internal static string ds_record {
+            get {
+                return ResourceManager.GetString("ds_record", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Demo support - show the current recording status..
+        /// </summary>
+        internal static string ds_status {
+            get {
+                return ResourceManager.GetString("ds_status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Demo support - stop recording a demo.
+        /// </summary>
+        internal static string ds_stop {
+            get {
+                return ResourceManager.GetString("ds_stop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Stops source recorder..
         /// </summary>
         internal static string endmovie {
