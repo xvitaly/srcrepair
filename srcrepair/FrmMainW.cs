@@ -1642,6 +1642,7 @@ namespace srcrepair
         {
             // Удаляем все записанные демки...
             List<String> CleanDirs = new List<string>();
+            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "demos", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "*.dem"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "*.mp4"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "*.tga"));
