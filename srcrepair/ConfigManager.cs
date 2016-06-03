@@ -23,6 +23,9 @@ using System.Text;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс для работы с коллекцией FPS-конфигов.
+    /// </summary>
     class ConfigManager
     {
     }
