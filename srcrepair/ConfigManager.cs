@@ -28,5 +28,14 @@ namespace srcrepair
     /// </summary>
     class ConfigManager
     {
+        /// <summary>
+        /// Хранит информацию обо всех доступных конфигах.
+        /// </summary>
+        private List<CFGTlx> Configs;
+
+        /// <summary>
+        /// Управляет выбранным конфигом.
+        /// </summary>
+        public CFGTlx FPSConfig { get; set; }
     }
 }
