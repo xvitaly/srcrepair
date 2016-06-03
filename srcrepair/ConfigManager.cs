@@ -37,5 +37,13 @@ namespace srcrepair
         /// Управляет выбранным конфигом.
         /// </summary>
         public CFGTlx FPSConfig { get; set; }
+
+        /// <summary>
+        /// Конструктор класса. Читает базу данных в формате XML и заполняет нашу структуру.
+        /// </summary>
+        public ConfigManager()
+        {
+            //
+        }
     }
 }
