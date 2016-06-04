@@ -310,5 +310,14 @@ namespace srcrepair.Properties {
                 this["HighlightOldBackUps"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("configs.xml")]
+        public string CfgDbFile {
+            get {
+                return ((string)(this["CfgDbFile"]));
+            }
+        }
     }
 }
