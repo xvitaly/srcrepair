@@ -43,6 +43,8 @@ namespace srcrepair
         /// <summary>
         /// Конструктор класса. Читает базу данных в формате XML и заполняет нашу структуру.
         /// </summary>
+        /// <param name="CfgDbFile">Путь к БД конфигов</param>
+        /// <param name="LangPrefix">Языковой код</param>
         public ConfigManager(string CfgDbFile, string LangPrefix)
         {
             // Инициализируем список...
