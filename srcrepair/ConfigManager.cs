@@ -40,6 +40,11 @@ namespace srcrepair
         /// </summary>
         public CFGTlx FPSConfig { get; set; }
 
+        /// <summary>
+        /// Получает имена найденных конфигов для указанной игры.
+        /// </summary>
+        /// <param name="GameID">ID игры</param>
+        /// <returns>Возвращает имена найденных конфигов</returns>
         public List<String> GetCfgNames(string GameID)
         {
             // Инициализируем список...
