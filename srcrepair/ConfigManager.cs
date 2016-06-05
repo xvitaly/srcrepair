@@ -40,6 +40,21 @@ namespace srcrepair
         /// </summary>
         public CFGTlx FPSConfig { get; set; }
 
+        public List<String> GetCfgNames(string GameID)
+        {
+            // Инициализируем список...
+            List<String> Result = new List<String>();
+
+            // Выполняем запрос посредством LINQ...
+            foreach (CFGTlx Cfg in Configs.FindAll(Item => Item.SupportedGames.Exists(ID => ID.Equals(GameID))))
+            {
+                Result.Add(Cfg.Name);
+            }
+
+            // Возвращаем результат...
+            return Result;
+        }
+
         /// <summary>
         /// Конструктор класса. Читает базу данных в формате XML и заполняет нашу структуру.
         /// </summary>
