@@ -46,7 +46,7 @@ namespace srcrepair
         /// <summary>
         /// Задаёт / возвращает список поддерживаемых конфигом игр.
         /// </summary>
-        public string[] SupportedGames { get; set; }
+        public List<String> SupportedGames { get; set; }
 
         /// <summary>
         /// Конструктор класса. Прописывает информацию о выбранном конфиге.
@@ -61,7 +61,7 @@ namespace srcrepair
             Name = CfName;
             FileName = CfFileName;
             Description = CfDescr;
-            SupportedGames = CfGames;
+            SupportedGames = new List<String>(CfGames);
         }
     }
 }
