@@ -59,6 +59,17 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Получает имена всех доступных конфигов.
+        /// </summary>
+        /// <returns>Возвращает имена найденных конфигов</returns>
+        public List<String> GetAllCfg()
+        {
+            List<String> Result = new List<String>();
+            foreach (CFGTlx Cfg in Configs) { Result.Add(Cfg.Name); }
+            return Result;
+        }
+
+        /// <summary>
         /// Конструктор класса. Читает базу данных в формате XML и заполняет нашу структуру.
         /// </summary>
         /// <param name="CfgDbFile">Путь к БД конфигов</param>
