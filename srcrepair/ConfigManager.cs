@@ -61,7 +61,7 @@ namespace srcrepair
         /// <summary>
         /// Получает имена всех доступных конфигов.
         /// </summary>
-        /// <returns>Возвращает имена найденных конфигов</returns>
+        /// <returns>Возвращает имена всех конфигов</returns>
         public List<String> GetAllCfg()
         {
             List<String> Result = new List<String>();
