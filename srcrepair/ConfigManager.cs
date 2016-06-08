@@ -70,6 +70,15 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Выбирает определённый конфиг.
+        /// </summary>
+        /// <param name="HUDName">Имя конфига, информацию о котором надо получить</param>
+        public void Select(string CfgName)
+        {
+            FPSConfig = Configs.Find(Item => String.Equals(Item.Name, CfgName, StringComparison.CurrentCultureIgnoreCase));
+        }
+
+        /// <summary>
         /// Конструктор класса. Читает базу данных в формате XML и заполняет нашу структуру.
         /// </summary>
         /// <param name="CfgDbFile">Путь к БД конфигов</param>
