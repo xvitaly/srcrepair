@@ -43,7 +43,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="GameID">ID игры</param>
         /// <returns>Возвращает имена найденных конфигов</returns>
-        public List<String> GetCfgNames(string GameID)
+        public List<String> GetCfgById(string GameID)
         {
             // Инициализируем список...
             List<String> Result = new List<String>();
