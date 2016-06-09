@@ -5,6 +5,12 @@
     <FileName>bonhighfps.cfg</FileName>
     <SupportedGames>240</SupportedGames>
     <ru>
+    <![CDATA[Один из самых продвинутых FPS-конфигов. При его использовании изображение становится похожим на картинку на 16-битной консоли.
+
+Прирост производительности: Очень высокий
+Ухудшение качества графики: Максимальное]]>
+    </ru>
+    <en>
     <![CDATA[One of the most effective FPS configs. Makes TF2 look like a 16-bit game. Strongly recommended for old or low-end PCs and graphics cards. This config gives the greatest FPS increase.
 
 FPS increase: Maximum
@@ -12,12 +18,6 @@ Graphics degradation: 16-bit style
 
 Warning: outdated. Do not use on latest Team Fortress 2 versions!
 ]]>
-    </ru>
-    <en>
-    <![CDATA[Один из самых продвинутых FPS-конфигов. При его использовании изображение становится похожим на картинку на 16-битной консоли.
-
-Прирост производительности: Очень высокий
-Ухудшение качества графики: Максимальное]]>
     </en>
   </Config>
   <Config>
@@ -48,10 +48,10 @@ Graphics degradation: Some]]>
 Ухудшение качества графики: Значительное]]>
     </ru>
     <en>
-    <![CDATA[Nice FPS config that does a good job and gives you a decent picture. Recommended for use on low-end PCs.
+    <![CDATA[Хороший FPS-конфиг, при значительном увеличении кадровой частоты, незначительно портящий изображение. Рекомендуется к использованию на старых ПК.
 
-FPS increase: High
-Graphics degradation: Some]]>
+Прирост производительности: Высокий
+Ухудшение качества графики: Высокое]]>
     </en>
   </Config>
   <Config>
@@ -65,10 +65,10 @@ FPS increase: High
 Graphics degradation: High]]>
     </ru>
     <en>
-    <![CDATA[Хороший FPS-конфиг, при значительном увеличении кадровой частоты, незначительно портящий изображение. Рекомендуется к использованию на старых ПК.
+    <![CDATA[Nice FPS config that does a good job and gives you a decent picture. Recommended for use on low-end PCs.
 
-Прирост производительности: Высокий
-Ухудшение качества графики: Высокое]]>
+FPS increase: High
+Graphics degradation: Some]]>
     </en>
   </Config>
   <Config>
