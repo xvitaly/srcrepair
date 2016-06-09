@@ -982,8 +982,14 @@ namespace srcrepair
         {
             try
             {
-                // Получаем список установленных конфигов...
+                // Получаем список установленных конфигов из БД...
+                SelGame.CFGMan = new ConfigManager(Path.Combine(App.FullAppPath, Properties.Settings.Default.CfgDbFile), AppStrings.AppLangPrefix);
 
+                // Выведем установленные в форму...
+                foreach (string Str in SelGame.CFGMan.GetAllCfg())
+                {
+                    Invoke((MethodInvoker)delegate () { FP_ConfigSel.Items.Add(Str); });
+                }
             }
             catch (Exception Ex)
             {
