@@ -128,6 +128,11 @@ namespace srcrepair
         public HUDManager HUDMan;
 
         /// <summary>
+        /// Содержит список доступных HUD для управляемой игры.
+        /// </summary>
+        public ConfigManager CFGMan;
+
+        /// <summary>
         /// Содержит путь к каталогу с загруженными данными из Steam Workshop.
         /// </summary>
         public string AppWorkshopDir;
