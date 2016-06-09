@@ -1,4 +1,0 @@
-﻿Config for those who want a bit more FPS while maintaining good graphics. It disables only particularly graphically intense settings. Recommended for everyone.
-
-FPS increase: Low
-Graphics degradation: No

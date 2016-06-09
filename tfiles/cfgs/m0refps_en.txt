@@ -1,6 +1,0 @@
-﻿Well-known config with limited FPS increase while reducing graphics quality. Recommended for use on some budget PCs.
-
-FPS increase: Medium
-Graphics degradation: Some
-
-Warning: outdated. Do not use on latest Team Fortress 2 versions!

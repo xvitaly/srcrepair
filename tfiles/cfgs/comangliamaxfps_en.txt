@@ -1,4 +1,0 @@
-﻿Comanglia' frames config config inspired by chris, designed to get you a large performance boost. Very unstable on singe-core CPUs (use comangliastability.cfg instead).
-
-FPS increase: High
-Graphics degradation: 16-bit style

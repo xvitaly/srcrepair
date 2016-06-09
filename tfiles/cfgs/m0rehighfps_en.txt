@@ -1,6 +1,0 @@
-﻿First advanced quality FPS config which can be useful for older PCs. TF2 turns into TFC (sadly, with hats) but it gives you the chance to play even on some ancient PCs.
-
-FPS increase: High
-Graphics degradation: High
-
-Warning: outdated. Do not use on latest Team Fortress 2 versions!

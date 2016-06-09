@@ -1,6 +1,0 @@
-This config will set all graphic settings to maximum. This will require a powerful PC.
-
-FPS increase: None
-Graphics degradation: None
-
-Warning: outdated. Do not use on latest Team Fortress 2 versions!

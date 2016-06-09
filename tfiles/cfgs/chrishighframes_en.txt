@@ -1,6 +1,0 @@
-﻿Nice FPS config that does a good job and gives you a decent picture. Recommended for use on low-end PCs.
-
-FPS increase: High
-Graphics degradation: Some
-
-Warning: outdated. Do not use on latest Team Fortress 2 versions!

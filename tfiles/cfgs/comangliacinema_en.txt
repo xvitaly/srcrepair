@@ -1,4 +1,0 @@
-This config, designed for movie makers, will set all graphic settings to maximum. This will require a powerful PC.
-
-FPS increase: None
-Graphics degradation: None

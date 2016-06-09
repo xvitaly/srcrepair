@@ -1,6 +1,0 @@
-﻿Useful for low-end PCs. Gives a good FPS increase. Allowed by almost all European TF2 leagues.
-
-FPS increase: Pretty much
-Graphics degradation: Medium
-
-Warning: outdated. Do not use on latest Team Fortress 2 versions!
