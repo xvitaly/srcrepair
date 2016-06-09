@@ -26,7 +26,7 @@ namespace srcrepair
     /// <summary>
     /// Класс для работы с коллекцией FPS-конфигов.
     /// </summary>
-    class ConfigManager
+    public class ConfigManager
     {
         /// <summary>
         /// Хранит информацию обо всех доступных конфигах.
