@@ -59,10 +59,10 @@ Graphics degradation: Some]]>
     <FileName>chrismaxfps.cfg</FileName>
     <SupportedGames>240</SupportedGames>
     <ru>
-    <![CDATA[Good FPS config that does a good job and gives you a decent picture. Recommended for use on old PCs.
+    <![CDATA[Хороший FPS-конфиг, при значительном увеличении кадровой частоты, незначительно портящий изображение. Рекомендуется к использованию на старых ПК.
 
-FPS increase: High
-Graphics degradation: High]]>
+Прирост производительности: Высокий
+Ухудшение качества графики: Высокое]]>
     </ru>
     <en>
     <![CDATA[Nice FPS config that does a good job and gives you a decent picture. Recommended for use on low-end PCs.
