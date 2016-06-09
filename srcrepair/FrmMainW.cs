@@ -1439,8 +1439,17 @@ namespace srcrepair
         {
             try
             {
-                // Получаем описание выбранного пользователем FPS-конфига...
-                FP_Description.Text = File.ReadAllText(Path.Combine(App.FullAppPath, "cfgs", String.Format("{0}_{1}.txt", Path.GetFileNameWithoutExtension(FP_ConfigSel.Text), AppStrings.AppLangPrefix)));
+                // Загружаем данные выбранного конфига...
+                try { SelGame.CFGMan.Select(FP_ConfigSel.Text); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+
+                // Выводим описание...
+                FP_Description.Text = SelGame.CFGMan.FPSConfig.Description;
+
+                // Включаем кнопку открытия конфига в Блокноте...
+                FP_OpenNotepad.Enabled = true;
+
+                // Включаем кнопку установки конфига...
+                FP_Install.Enabled = true;
             }
             catch (Exception Ex)
             {
@@ -1448,12 +1457,6 @@ namespace srcrepair
                 CoreLib.WriteStringToLog(Ex.Message);
                 FP_Description.Text = AppStrings.FP_NoDescr;
             }
-            
-            // Включаем кнопку открытия конфига в Блокноте...
-            FP_OpenNotepad.Enabled = true;
-            
-            // Включаем кнопку установки конфига...
-            FP_Install.Enabled = true;
         }
 
         private void FP_Install_Click(object sender, EventArgs e)
