@@ -983,13 +983,7 @@ namespace srcrepair
             try
             {
                 // Получаем список установленных конфигов...
-                List<String> ConfAvail = CoreLib.FindFiles(Path.Combine(App.FullAppPath, "cfgs"), "*.cfg");
 
-                // Заполняем форму...
-                foreach (string Conf in ConfAvail)
-                {
-                    Invoke((MethodInvoker)delegate () { FP_ConfigSel.Items.Add(Path.GetFileName(Conf)); });
-                }
             }
             catch (Exception Ex)
             {
