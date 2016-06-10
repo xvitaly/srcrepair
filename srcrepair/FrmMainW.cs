@@ -1091,7 +1091,7 @@ namespace srcrepair
             if (e.Error == null) { MessageBox.Show(AppStrings.HD_InstallSuccessfull, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { CoreLib.HandleExceptionEx(AppStrings.HD_InstallError, Properties.Resources.AppName, e.Error.Message, e.Error.Source, MessageBoxIcon.Error); }
 
             // Включаем кнопку удаления если HUD установлен...
-            SetHUDButtons(HUDTlx.CheckInstalledHUD(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir));
+            SetHUDButtons(HUDManager.CheckInstalledHUD(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir));
         }
 
         #endregion
@@ -2374,7 +2374,7 @@ namespace srcrepair
             if (Success) { HD_LastUpdate.Text = String.Format(AppStrings.HD_LastUpdateInfo, CoreLib.Unix2DateTime(SelGame.HUDMan.SelectedHUD.LastUpdate).ToLocalTime()); }
 
             // Проверяем установлен ли выбранный HUD...
-            SetHUDButtons(HUDTlx.CheckInstalledHUD(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir));
+            SetHUDButtons(HUDManager.CheckInstalledHUD(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir));
 
             // Загрузим скриншот выбранного HUD...
             if (Success && !BW_HUDScreen.IsBusy) { BW_HUDScreen.RunWorkerAsync(); }
@@ -2391,7 +2391,7 @@ namespace srcrepair
                     if (MessageBox.Show(String.Format("{0}?", ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
                         // Проверим установлен ли выбранный HUD...
-                        if (HUDTlx.CheckInstalledHUD(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir))
+                        if (HUDManager.CheckInstalledHUD(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir))
                         {
                             // Удаляем уже установленные файлы HUD...
                             CoreLib.RemoveFileDirectoryEx(CoreLib.SingleToArray(Path.Combine(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir)));
@@ -2432,7 +2432,7 @@ namespace srcrepair
                 CoreLib.RemoveFileDirectoryEx(CoreLib.SingleToArray(HUDPath));
 
                 // Проверяем установлен ли выбранный HUD...
-                bool IsInstalled = HUDTlx.CheckInstalledHUD(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir);
+                bool IsInstalled = HUDManager.CheckInstalledHUD(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir);
 
                 // При успешном удалении HUD выводим сообщение и сносим и его каталог...
                 if (!IsInstalled) { MessageBox.Show(AppStrings.PS_CleanupSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); if (Directory.Exists(HUDPath)) { Directory.Delete(HUDPath); } }

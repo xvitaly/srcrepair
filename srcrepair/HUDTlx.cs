@@ -93,32 +93,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Проверяет установлен ли указанный HUD.
-        /// </summary>
-        /// <param name="CustomInstallDir">Каталог установки кастомных файлов</param>
-        /// <param name="HUDDir">Каталог установки проверяемого HUD</param>
-        /// <returns>Возвращает истину если HUD с указанным именем установлен</returns>
-        public static bool CheckInstalledHUD(string CustomInstallDir, string HUDDir)
-        {
-            // Описываем локальные переменные...
-            bool Result = false;
-            string HUDPath = Path.Combine(CustomInstallDir, HUDDir);
-            
-            // Проверим существование каталога...
-            if (Directory.Exists(HUDPath))
-            {
-                // Проверим наличие файлов или каталогов внутри...
-                using (IEnumerator<String> StrEn = Directory.EnumerateFileSystemEntries(HUDPath).GetEnumerator())
-                {
-                    Result = StrEn.MoveNext();
-                }
-            }
-
-            // Возвращаем результат...
-            return Result;
-        }
-
-        /// <summary>
         /// Конструктор класса. Получает информацию о выбранном HUD.
         /// </summary>
         /// <param name="AppHUDDir">Путь к локальному каталогу с HUD</param>
