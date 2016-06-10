@@ -94,6 +94,16 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Форматирует путь в соответствии с типом ОС.
+        /// </summary>
+        /// <param name="IntDir">Исходное значение</param>
+        /// <returns>Отформатированное значение</returns>
+        public static string FormatIntDir(string IntDir)
+        {
+            return IntDir.Replace('/', Path.DirectorySeparatorChar);
+        }
+
+        /// <summary>
         /// Конструктор класса. Читает базу данных в формате XML и заполняет нашу структуру.
         /// </summary>
         /// <param name="HUDDbFile">Путь к БД HUD</param>

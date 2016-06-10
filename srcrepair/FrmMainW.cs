@@ -1072,7 +1072,7 @@ namespace srcrepair
                 Invoke((MethodInvoker)delegate() { HD_Install.Text = AppStrings.HD_InstallBtnProgress; HD_Install.Enabled = false; });
 
                 // Устанавливаем и очищаем временный каталог...
-                try { Directory.Move(Path.Combine(InstallTmp, SelGame.HUDMan.SelectedHUD.FormatIntDir(SelGame.HUDMan.SelectedHUD.ArchiveDir)), Path.Combine(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir)); }
+                try { Directory.Move(Path.Combine(InstallTmp, HUDManager.FormatIntDir(SelGame.HUDMan.SelectedHUD.ArchiveDir)), Path.Combine(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir)); }
                 finally { if (Directory.Exists(InstallTmp)) { Directory.Delete(InstallTmp, true); } }
 
                 // Сохраняем или удаляем загруженный архив в зависимости от настроек приложения...

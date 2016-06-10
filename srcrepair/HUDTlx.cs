@@ -82,16 +82,6 @@ namespace srcrepair
         public string LocalFile { get; set; }
 
         /// <summary>
-        /// Форматирует путь в соответствии с типом ОС.
-        /// </summary>
-        /// <param name="IntDir">Исходное значение</param>
-        /// <returns>Отформатированное значение</returns>
-        public string FormatIntDir(string IntDir)
-        {
-            return IntDir.Replace('/', Path.DirectorySeparatorChar);
-        }
-
-        /// <summary>
         /// Конструктор класса. Получает информацию о выбранном HUD.
         /// </summary>
         /// <param name="AppHUDDir">Путь к локальному каталогу с HUD</param>
