@@ -98,7 +98,7 @@ namespace srcrepair
         /// <param name="CustomInstallDir">Каталог установки кастомных файлов</param>
         /// <param name="HUDDir">Каталог установки проверяемого HUD</param>
         /// <returns>Возвращает истину если HUD с указанным именем установлен</returns>
-        public bool CheckInstalledHUD(string CustomInstallDir, string HUDDir)
+        public static bool CheckInstalledHUD(string CustomInstallDir, string HUDDir)
         {
             // Описываем локальные переменные...
             bool Result = false;
