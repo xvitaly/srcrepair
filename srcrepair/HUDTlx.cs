@@ -30,57 +30,57 @@ namespace srcrepair
         /// <summary>
         /// Содержит имя HUD.
         /// </summary>
-        public string Name;
+        public string Name { get; set; }
 
         /// <summary>
         /// Короткое название игры.
         /// </summary>
-        public string Game;
+        public string Game { get; set; }
 
         /// <summary>
         /// Содержит URI для загрузки.
         /// </summary>
-        public string URI;
+        public string URI { get; set; }
 
         /// <summary>
         /// Содержит URI апстрима.
         /// </summary>
-        public string UpURI;
+        public string UpURI { get; set; }
 
         /// <summary>
         /// Принимает истинное значение если HUD поддерживает последнюю версию игры.
         /// </summary>
-        public bool IsUpdated;
+        public bool IsUpdated { get; set; }
 
         /// <summary>
         /// Содержит URI скриншота.
         /// </summary>
-        public string Preview;
+        public string Preview { get; set; }
 
         /// <summary>
         /// Содержит время последнего обновления базы в формате unixtime.
         /// </summary>
-        public long LastUpdate;
+        public long LastUpdate { get; set; }
 
         /// <summary>
         /// Содержит ссылку на официальный сайт HUD.
         /// </summary>
-        public string Site;
+        public string Site { get; set; }
 
         /// <summary>
         /// Содержит имя каталога внутри архива.
         /// </summary>
-        public string ArchiveDir;
+        public string ArchiveDir { get; set; }
 
         /// <summary>
         /// Содержит имя каталога для установки.
         /// </summary>
-        public string InstallDir;
+        public string InstallDir { get; set; }
 
         /// <summary>
         /// Содержит локальный путь к загруженному файлу.
         /// </summary>
-        public string LocalFile;
+        public string LocalFile { get; set; }
 
         /// <summary>
         /// Форматирует путь в соответствии с типом ОС.
