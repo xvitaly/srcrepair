@@ -27,125 +27,125 @@ namespace srcrepair
         /// <summary>
         /// В этой переменной будем хранить путь установки кастомных файлов.
         /// </summary>
-        public string CustomInstallDir;
+        public string CustomInstallDir { get; set; }
 
         /// <summary>
         /// В этой переменной будем хранить полный путь к каталогу игры, которой
         /// мы будем управлять данной утилитой.
         /// </summary>
-        public string FullGamePath;
+        public string FullGamePath { get; set; }
 
         /// <summary>
         /// В этой переменной будем хранить полный путь к каталогу игры без
         /// включения в путь GV.SmallAppName для служебных целей.
         /// </summary>
-        public string GamePath;
+        public string GamePath { get; set; }
 
         /// <summary>
         /// В этой переменной будем хранить полное имя управляемого приложения
         /// для служебных целей.
         /// </summary>
-        public string FullAppName;
+        public string FullAppName { get; set; }
 
         /// <summary>
         /// В этой переменной мы будем хранить краткое имя управляемого приложения
         /// для служебных целей (SteamAlias).
         /// </summary>
-        public string SmallAppName;
+        public string SmallAppName { get; set; }
 
         /// <summary>
         /// В этой переменной мы будем хранить имя главного процесса игры.
         /// </summary>
-        public string GameBinaryFile;
+        public string GameBinaryFile { get; set; }
 
         /// <summary>
         /// В этой переменной мы будем пути к каталогам с облачными конфигами.
         /// </summary>
-        public List<String> CloudConfigs;
-        
+        public List<String> CloudConfigs { get; set; }
+
         /// <summary>
         /// В этой переменной мы будем хранить полный путь до каталога с
         /// файлами конфигурации управляемого приложения.
         /// </summary>
-        public string FullCfgPath;
+        public string FullCfgPath { get; set; }
 
         /// <summary>
         /// В этой переменной мы будем хранить полный путь до каталога с
         /// резервными копиями управляемого приложения.
         /// </summary>
-        public string FullBackUpDirPath;
+        public string FullBackUpDirPath { get; set; }
 
         /// <summary>
         /// Указывает использует ли игра файл video.txt для хранения
         /// своих настроек.
         /// </summary>
-        public bool IsUsingVideoFile;
+        public bool IsUsingVideoFile { get; set; }
 
         /// <summary>
         /// Определяет использует ли игра специальный каталог для хранения
         /// пользовательских настроек и скриптов.
         /// </summary>
-        public bool IsUsingUserDir;
+        public bool IsUsingUserDir { get; set; }
 
         /// <summary>
         /// Указывает поддерживает ли конкретная игра кастомные HUD и имеется
         /// ли их поддержка в SRC Repair.
         /// </summary>
-        public bool IsHUDsAvailable;
+        public bool IsHUDsAvailable { get; set; }
 
         /// <summary>
         /// Эта переменная хранит ID игры по базе данных Steam. Используется
         /// для служебных целей.
         /// </summary>
-        public string GameInternalID;
+        public string GameInternalID { get; set; }
 
         /// <summary>
         /// В этом списке хранятся пути ко всем найденным файлами
         /// с графическими настройками.
         /// </summary>
-        public List<String> VideoCfgFiles;
+        public List<String> VideoCfgFiles { get; set; }
 
         /// <summary>
         /// Содержит имя каталога с графическими настройками NCF игр. Используется
         /// в последних играх.
         /// </summary>
-        public string ConfDir;
+        public string ConfDir { get; set; }
 
         /// <summary>
         /// В этой переменной будем хранить путь до каталога локального хранения
         /// загруженных файлов HUD и их мета-информации.
         /// </summary>
-        public string AppHUDDir;
+        public string AppHUDDir { get; set; }
 
         /// <summary>
         /// Содержит пути к установленным FPS-конфигам управляемой игры.
         /// </summary>
-        public List<String> FPSConfigs;
+        public List<String> FPSConfigs { get; set; }
 
         /// <summary>
         /// Содержит список доступных HUD для управляемой игры.
         /// </summary>
-        public HUDManager HUDMan;
+        public HUDManager HUDMan { get; set; }
 
         /// <summary>
         /// Содержит список доступных HUD для управляемой игры.
         /// </summary>
-        public ConfigManager CFGMan;
+        public ConfigManager CFGMan { get; set; }
 
         /// <summary>
         /// Содержит путь к каталогу с загруженными данными из Steam Workshop.
         /// </summary>
-        public string AppWorkshopDir;
+        public string AppWorkshopDir { get; set; }
 
         /// <summary>
         /// Содержит путь к файлу со списком заглушенных пользователей.
         /// </summary>
-        public string BanlistFileName;
+        public string BanlistFileName { get; set; }
 
         /// <summary>
         /// Указывает установлено ли данное приложение.
         /// </summary>
-        public bool IsInstalled;
+        public bool IsInstalled { get; set; }
 
         /// <summary>
         /// Генерирует путь к каталогу установки игры.
