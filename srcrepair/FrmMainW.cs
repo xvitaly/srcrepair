@@ -632,14 +632,14 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Выполняет определение и вывод названия файловой системы на диске установки клиента Steam.
+        /// Выполняет определение и вывод названия файловой системы на диске установки клиента игры.
         /// </summary>
-        /// <param name="SteamPath">Каталог установки Steam</param>
-        private void DetectFS(string SteamPath)
+        /// <param name="GamePath">Каталог установки клиента игры</param>
+        private void DetectFS(string GamePath)
         {
             try
             {
-                PS_OSDrive.Text = String.Format(PS_OSDrive.Text, CoreLib.DetectDriveFileSystem(Path.GetPathRoot(SteamPath)));
+                PS_OSDrive.Text = String.Format(PS_OSDrive.Text, CoreLib.DetectDriveFileSystem(Path.GetPathRoot(GamePath)));
             }
             catch (Exception Ex)
             {
@@ -1123,9 +1123,6 @@ namespace srcrepair
             // Проверим на наличие запрещённых символов в пути к установленному клиенту Steam...
             CheckSymbolsSteam(App.FullSteamPath);
 
-            // Распознаем файловую систему на диске со Steam...
-            DetectFS(App.FullSteamPath);
-
             // Запустим поиск установленных игр и проверим нашлось ли что-то...
             FindGames(App.FullSteamPath, Properties.Resources.SteamAppsFolderName, AppStrings.AppXMLParseError);
 
@@ -1242,6 +1239,9 @@ namespace srcrepair
                 
                 // Проверим наличие запрещённых символов в пути...
                 CheckSymbolsGame(SelGame.FullGamePath);
+
+                // Распознаем файловую систему на диске с игрой...
+                DetectFS(SelGame.FullGamePath);
 
                 // Считаем настройки графики...
                 if (SelGame.IsUsingVideoFile) { SelGame.UpdateVideoFilesList(SelGame.GameInternalID, App.FullSteamPath, SelGame.GamePath, SelGame.ConfDir); string VideoFile = SelGame.GetActualVideoFile(); if (File.Exists(VideoFile)) { ReadNCFGameSettings(VideoFile); } else { CoreLib.WriteStringToLog(String.Format(AppStrings.AppVideoDbNotFound, SelGame.FullAppName, VideoFile)); NullGraphOptions(); } } else { ReadGCFGameSettings(SelGame.SmallAppName); }
