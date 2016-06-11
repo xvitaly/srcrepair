@@ -21,7 +21,7 @@ using System.Text.RegularExpressions;
 
 namespace srcrepair
 {
-    public sealed class SteamConv
+    public static class SteamConv
     {
         /// <summary>
         /// Магическая константа, используемая для преобразований форматов.
