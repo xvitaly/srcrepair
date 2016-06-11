@@ -2060,7 +2060,7 @@ namespace srcrepair
         private void FP_OpenNotepad_Click(object sender, EventArgs e)
         {
             // Сгенерируем путь к файлу...
-            string ConfigFile = Path.Combine(App.FullAppPath, "cfgs", FP_ConfigSel.Text);
+            string ConfigFile = Path.Combine(App.FullAppPath, "cfgs", SelGame.CFGMan.FPSConfig.FileName);
             
             // Проверим зажал ли пользователь Shift перед тем, как кликнуть по кнопке...
             if (Control.ModifierKeys == Keys.Shift)
