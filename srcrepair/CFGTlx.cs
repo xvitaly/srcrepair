@@ -52,7 +52,8 @@ namespace srcrepair
         /// <param name="GameID">ID проверямой игры</param>
         public bool CheckCompactibility(string GameID)
         {
-            //
+            // Проверяем список...
+            return SupportedGames.Contains(GameID);
         }
 
         /// <summary>
