@@ -29,22 +29,22 @@ namespace srcrepair
         /// <summary>
         /// Задаёт / возвращает имя конфига.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
         /// <summary>
         /// Задаёт / возвращает имя файла конфига.
         /// </summary>
-        public string FileName { get; set; }
+        public string FileName { get; private set; }
 
         /// <summary>
         /// Задаёт / возвращает описание конфига.
         /// </summary>
-        public string Description { get; set; }
+        public string Description { get; private set; }
 
         /// <summary>
         /// Задаёт / возвращает список поддерживаемых конфигом игр.
         /// </summary>
-        public List<String> SupportedGames { get; set; }
+        public List<String> SupportedGames { get; private set; }
 
         /// <summary>
         /// Проверяет совместимость конфига с игрой.
