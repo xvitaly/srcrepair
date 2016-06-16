@@ -1447,6 +1447,9 @@ namespace srcrepair
                 // Выводим описание...
                 FP_Description.Text = SelGame.CFGMan.FPSConfig.Description;
 
+                // Проверим совместимость конфига с игрой...
+                FP_Comp.Visible = !SelGame.CFGMan.FPSConfig.CheckCompactibility(SelGame.GameInternalID);
+
                 // Включаем кнопку открытия конфига в Блокноте...
                 FP_OpenNotepad.Enabled = true;
 
