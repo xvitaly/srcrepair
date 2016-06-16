@@ -1400,6 +1400,7 @@
             // 
             // FP_Comp
             // 
+            this.FP_Comp.ForeColor = System.Drawing.Color.Red;
             resources.ApplyResources(this.FP_Comp, "FP_Comp");
             this.FP_Comp.Name = "FP_Comp";
             // 
