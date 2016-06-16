@@ -47,6 +47,15 @@ namespace srcrepair
         public List<String> SupportedGames { get; set; }
 
         /// <summary>
+        /// Проверяет совместимость конфига с игрой.
+        /// </summary>
+        /// <param name="GameID">ID проверямой игры</param>
+        public bool CheckCompactibility(string GameID)
+        {
+            //
+        }
+
+        /// <summary>
         /// Конструктор класса. Прописывает информацию о выбранном конфиге.
         /// </summary>
         /// <param name="CfName">Имя конфига</param>
