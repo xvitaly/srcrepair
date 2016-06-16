@@ -528,6 +528,7 @@ namespace srcrepair
             HD_OpenDir.Enabled = false;
             HD_Warning.Visible = false;
             HD_GB_Pbx.Image = null;
+            HD_LastUpdate.Visible = false;
 
             // Включаем заблокированные ранее контролы...
             MNUInstaller.Enabled = true;
