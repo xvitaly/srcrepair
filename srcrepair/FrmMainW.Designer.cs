@@ -156,6 +156,7 @@
             this.FP_Uninstall = new System.Windows.Forms.Button();
             this.FP_Install = new System.Windows.Forms.Button();
             this.FP_GB_Desc = new System.Windows.Forms.GroupBox();
+            this.FP_Comp = new System.Windows.Forms.Label();
             this.FP_Description = new System.Windows.Forms.Label();
             this.FP_ConfigSel = new System.Windows.Forms.ComboBox();
             this.L_FP_ConfigSel = new System.Windows.Forms.Label();
@@ -1391,10 +1392,16 @@
             // 
             // FP_GB_Desc
             // 
+            this.FP_GB_Desc.Controls.Add(this.FP_Comp);
             this.FP_GB_Desc.Controls.Add(this.FP_Description);
             resources.ApplyResources(this.FP_GB_Desc, "FP_GB_Desc");
             this.FP_GB_Desc.Name = "FP_GB_Desc";
             this.FP_GB_Desc.TabStop = false;
+            // 
+            // FP_Comp
+            // 
+            resources.ApplyResources(this.FP_Comp, "FP_Comp");
+            this.FP_Comp.Name = "FP_Comp";
             // 
             // FP_Description
             // 
@@ -2267,6 +2274,7 @@
         private System.Windows.Forms.Label HUD_NAText;
         private System.Windows.Forms.PictureBox HUD_NAImg;
         private System.Windows.Forms.Label HD_LastUpdate;
+        private System.Windows.Forms.Label FP_Comp;
     }
 }
 
