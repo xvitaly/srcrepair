@@ -98,7 +98,7 @@ namespace srcrepair
                 // Разбираем XML файл и обходим его в цикле...
                 for (int i = 0; i < XMLD.GetElementsByTagName("Config").Count; i++)
                 {
-                    try { Configs.Add(new CFGTlx(XMLD.GetElementsByTagName("Name")[i].InnerText, XMLD.GetElementsByTagName("FileName")[i].InnerText, XMLD.GetElementsByTagName(LangPrefix)[i].InnerText, XMLD.GetElementsByTagName("SupportedGames")[i].InnerText.Split(','))); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { Configs.Add(new CFGTlx(XMLD.GetElementsByTagName("Name")[i].InnerText, XMLD.GetElementsByTagName("FileName")[i].InnerText, XMLD.GetElementsByTagName(LangPrefix)[i].InnerText, XMLD.GetElementsByTagName("SupportedGames")[i].InnerText.Split(';'))); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                 }
             }
         }
