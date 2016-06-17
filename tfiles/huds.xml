@@ -4,11 +4,11 @@
     <Name>7HUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/7HUD/7HUD_f7cb269c.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/7HUD/7HUD_ebc16fbb.zip</URI>
     <UpURI>https://github.com/Sevin7/7HUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/7HUD.png</Preview>
     <RepoPath>https://github.com/Sevin7/7HUD</RepoPath>
-    <LastUpdate>1461611620</LastUpdate>
+    <LastUpdate>1465764702</LastUpdate>
     <Site>http://huds.tf/7hud/</Site>
     <ArchiveDir>7HUD-master</ArchiveDir>
     <InstallDir>7hud</InstallDir>
@@ -17,11 +17,11 @@
     <Name>Pikles Hud</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/pikles-hud/pikles-hud_c68612c3.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/pikles-hud/pikles-hud_589ad6a9.zip</URI>
     <UpURI>https://github.com/piklestf2/pikles-hud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/pikles-hud.png</Preview>
     <RepoPath>https://github.com/piklestf2/pikles-hud</RepoPath>
-    <LastUpdate>1462068003</LastUpdate>
+    <LastUpdate>1464497470</LastUpdate>
     <Site>http://huds.tf/pikleshud/</Site>
     <ArchiveDir>pikles-hud-master</ArchiveDir>
     <InstallDir>pikleshud</InstallDir>
@@ -69,11 +69,11 @@
     <Name>TF2HudPlus</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/tf2hudplus/tf2hudplus_d99e3697.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/tf2hudplus/tf2hudplus_7f64df6a.zip</URI>
     <UpURI>https://github.com/SnowshoeIceboot/TF2HudPlus/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/tf2hudplus.png</Preview>
     <RepoPath>https://github.com/SnowshoeIceboot/TF2HudPlus</RepoPath>
-    <LastUpdate>1463653297</LastUpdate>
+    <LastUpdate>1464961014</LastUpdate>
     <Site>http://huds.tf/tf2hudplus/</Site>
     <ArchiveDir>TF2HudPlus-master</ArchiveDir>
     <InstallDir>tf2hudplus</InstallDir>
@@ -82,11 +82,11 @@
     <Name>ToonHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/toonhud/toonhud_a0d073f3.zip</URI>
-    <UpURI>http://sourceforge.net/projects/srcrepair/files/huds/toonhud/toonhud_a0d073f3.zip</UpURI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/toonhud/toonhud_ccc883dc.zip</URI>
+    <UpURI>http://sourceforge.net/projects/srcrepair/files/huds/toonhud/toonhud_ccc883dc.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/toonhud.png</Preview>
     <RepoPath></RepoPath>
-    <LastUpdate>1462132800</LastUpdate>
+    <LastUpdate>1464516000</LastUpdate>
     <Site>http://toonhud.com/</Site>
     <ArchiveDir>toonhud</ArchiveDir>
     <InstallDir>toonhud</InstallDir>
@@ -173,11 +173,11 @@
     <Name>budhud</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/budhud/budhud_be75380b.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/budhud/budhud_17a857aa.zip</URI>
     <UpURI>https://github.com/WhiskerBiscuit/budhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.png</Preview>
     <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
-    <LastUpdate>1462157059</LastUpdate>
+    <LastUpdate>1466057360</LastUpdate>
     <Site>http://huds.tf/budhud/</Site>
     <ArchiveDir>budhud-master/budhud</ArchiveDir>
     <InstallDir>budhud</InstallDir>
@@ -185,12 +185,12 @@
   <HUD>
     <Name>Improved Default HUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/idhud/idhud_cee7ef14.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/idhud/idhud_f4be10b8.zip</URI>
     <UpURI>https://github.com/Eniere/idhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/idhud.png</Preview>
     <RepoPath>https://github.com/Eniere/idhud</RepoPath>
-    <LastUpdate>0</LastUpdate>
+    <LastUpdate>1464401319</LastUpdate>
     <Site>http://huds.tf/idhud/</Site>
     <ArchiveDir>idhud-master</ArchiveDir>
     <InstallDir>idhud</InstallDir>
@@ -238,11 +238,11 @@
     <Name>KBNHud</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/kbnhud/kbnhud_390bcfb5.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/kbnhud/kbnhud_ce788fd3.zip</URI>
     <UpURI>https://github.com/Jotunn/KBNHud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/kbnhud.png</Preview>
     <RepoPath>https://github.com/Jotunn/KBNHud</RepoPath>
-    <LastUpdate>1463071564</LastUpdate>
+    <LastUpdate>1465490879</LastUpdate>
     <Site>http://huds.tf/kbnhud/</Site>
     <ArchiveDir>KBNHud-master/KBNHud</ArchiveDir>
     <InstallDir>kbnhud</InstallDir>
@@ -251,11 +251,11 @@
     <Name>medHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/medhud/medhud_48cd9c64.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/medhud/medhud_e4a083d9.zip</URI>
     <UpURI>https://github.com/Intellectualbadass/medHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/medhud.png</Preview>
     <RepoPath>https://github.com/Intellectualbadass/medHUD</RepoPath>
-    <LastUpdate>1463502888</LastUpdate>
+    <LastUpdate>1464079825</LastUpdate>
     <Site>http://huds.tf/medhud/</Site>
     <ArchiveDir>medHUD-master</ArchiveDir>
     <InstallDir>medhud</InstallDir>
@@ -290,11 +290,11 @@
     <Name>biscottiHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/biscottihud/biscottihud_c3faa5e3.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/biscottihud/biscottihud_a4a32f3a.zip</URI>
     <UpURI>https://github.com/MedicodiBiscotti/biscottiHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/biscottihud.png</Preview>
     <RepoPath>https://github.com/MedicodiBiscotti/biscottiHUD</RepoPath>
-    <LastUpdate>1463504066</LastUpdate>
+    <LastUpdate>1464710493</LastUpdate>
     <Site>http://huds.tf/biscottihud/</Site>
     <ArchiveDir>biscottiHUD-master/biscottiHUD</ArchiveDir>
     <InstallDir>biscottihud</InstallDir>
@@ -342,11 +342,11 @@
     <Name>JayHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/jayhud/jayhud_8bc915b8.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/jayhud/jayhud_eeb79142.zip</URI>
     <UpURI>https://github.com/kermit-tf/JayHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/jayhud.png</Preview>
     <RepoPath>https://github.com/kermit-tf/JayHUD</RepoPath>
-    <LastUpdate>1463075180</LastUpdate>
+    <LastUpdate>1465150155</LastUpdate>
     <Site>http://huds.tf/jayhud/</Site>
     <ArchiveDir>JayHUD-master/JayHUD_Normal</ArchiveDir>
     <InstallDir>jayhud</InstallDir>
@@ -472,11 +472,11 @@
     <Name>SlimHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/slimhud/slimhud_5c6bc1a4.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/slimhud/slimhud_e9267eca.zip</URI>
     <UpURI>https://github.com/JackStanley/TF2slimHUD/archive/Main.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/slimhud.png</Preview>
     <RepoPath>https://github.com/JackStanley/TF2slimHUD</RepoPath>
-    <LastUpdate>1463762945</LastUpdate>
+    <LastUpdate>1464080513</LastUpdate>
     <Site>http://huds.tf/slimhud/</Site>
     <ArchiveDir>TF2slimHUD-Main/slimHUD</ArchiveDir>
     <InstallDir>slimhud</InstallDir>
