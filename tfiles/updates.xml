@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Updates>
+  <Update Type="Application">
+    <Version>24.0.1.3526</Version>
+    <URL>https://www.easycoding.org/files/srcrepair_latest.exe</URL>
+    <MD5>220504f27aac0cbb30928870cfdc7d2a</MD5>
+  </Update>
+  <Update Type="GameDB">
+    <Version>master</Version>
+    <URL>https://github.com/xvitaly/srcrepair/raw/master/tfiles/games.xml</URL>
+    <MD5>32555cdedcff490c87e62162262b08ff</MD5>
+  </Update>
+  <Update Type="HUDDB">
+    <Version>master</Version>
+    <URL>https://github.com/xvitaly/srcrepair/raw/master/tfiles/huds.xml</URL>
+    <MD5>c3babb27280d5e3d8020b61782e0342f</MD5>
+  </Update>
+  <Update Type="CfgDB">
+    <Version>master</Version>
+    <URL>https://github.com/xvitaly/srcrepair/raw/master/tfiles/configs.xml</URL>
+    <MD5>e86c486e0edf926d6ac512dec6b1cafc</MD5>
+  </Update>
+</Updates>
