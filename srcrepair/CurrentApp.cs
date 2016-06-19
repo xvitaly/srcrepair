@@ -28,7 +28,7 @@ namespace srcrepair
         /// <summary>
         /// Хранит User-Agent, которым представляется удалённым службам...
         /// </summary>
-        public string UserAgent { get; set; }
+        public string UserAgent { get; private set; }
 
         /// <summary>
         /// В этой переменной мы будем хранить полный путь к каталогу установленного
@@ -40,19 +40,19 @@ namespace srcrepair
         /// В этой переменной будем хранить полный путь к каталогу с утилитой
         /// SRCRepair для служебных целей.
         /// </summary>
-        public string FullAppPath { get; set; }
+        public string FullAppPath { get; private set; }
 
         /// <summary>
         /// В этой переменной будем хранить путь до каталога пользователя
         /// программы. Используется для служебных целей.
         /// </summary>
-        public string AppUserDir { get; set; }
+        public string AppUserDir { get; private set; }
 
         /// <summary>
         /// В этой переменной мы будем хранить полную информацию о версии
         /// приложения для служебных целей.
         /// </summary>
-        public string AppVersionInfo { get; set; }
+        public string AppVersionInfo { get; private set; }
 
         /// <summary>
         /// Конструктор класса. Получает информацию для рантайма.
