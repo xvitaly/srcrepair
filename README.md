@@ -74,4 +74,5 @@ Supported mods and third-party Source engine games:
  * Portal Stories: Mel;
  * FIREFIGHT RELOADED;
  * Aperture Tag: The Paint Gun Testing Initiative;
- * Prospekt.
+ * Prospekt;
+ * Transmissions: Element 120.
