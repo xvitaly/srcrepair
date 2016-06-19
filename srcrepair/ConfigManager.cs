@@ -36,7 +36,7 @@ namespace srcrepair
         /// <summary>
         /// Управляет выбранным конфигом.
         /// </summary>
-        public CFGTlx FPSConfig { get; set; }
+        public CFGTlx FPSConfig { get; private set; }
 
         /// <summary>
         /// Получает имена найденных конфигов для указанной игры.
