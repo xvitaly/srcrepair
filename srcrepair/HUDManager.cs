@@ -36,7 +36,7 @@ namespace srcrepair
         /// <summary>
         /// Хранит информацию о выбранном HUD. Для заполнения используется метод Select().
         /// </summary>
-        public HUDTlx SelectedHUD { get; set; }
+        public HUDTlx SelectedHUD { get; private set; }
 
         /// <summary>
         /// Выбирает определённый HUD.
