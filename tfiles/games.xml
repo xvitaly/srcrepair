@@ -560,4 +560,14 @@
     <SID>399120</SID>
     <Executable>hl2.exe</Executable>
   </Game>
+  <Game Name="Transmissions: Element 120">
+    <HasVF>0</HasVF>
+    <DirName>Transmissions Element 120</DirName>
+    <SmallName>te120</SmallName>
+    <VFDir>te120</VFDir>
+    <UserDir>0</UserDir>
+    <HUDsAvail>0</HUDsAvail>
+    <SID>365300</SID>
+    <Executable>hl2.exe</Executable>
+  </Game>
 </Games>
