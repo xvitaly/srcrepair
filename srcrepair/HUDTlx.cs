@@ -29,57 +29,57 @@ namespace srcrepair
         /// <summary>
         /// Содержит имя HUD.
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
         /// <summary>
         /// Короткое название игры.
         /// </summary>
-        public string Game { get; set; }
+        public string Game { get; private set; }
 
         /// <summary>
         /// Содержит URI для загрузки.
         /// </summary>
-        public string URI { get; set; }
+        public string URI { get; private set; }
 
         /// <summary>
         /// Содержит URI апстрима.
         /// </summary>
-        public string UpURI { get; set; }
+        public string UpURI { get; private set; }
 
         /// <summary>
         /// Принимает истинное значение если HUD поддерживает последнюю версию игры.
         /// </summary>
-        public bool IsUpdated { get; set; }
+        public bool IsUpdated { get; private set; }
 
         /// <summary>
         /// Содержит URI скриншота.
         /// </summary>
-        public string Preview { get; set; }
+        public string Preview { get; private set; }
 
         /// <summary>
         /// Содержит время последнего обновления базы в формате unixtime.
         /// </summary>
-        public long LastUpdate { get; set; }
+        public long LastUpdate { get; private set; }
 
         /// <summary>
         /// Содержит ссылку на официальный сайт HUD.
         /// </summary>
-        public string Site { get; set; }
+        public string Site { get; private set; }
 
         /// <summary>
         /// Содержит имя каталога внутри архива.
         /// </summary>
-        public string ArchiveDir { get; set; }
+        public string ArchiveDir { get; private set; }
 
         /// <summary>
         /// Содержит имя каталога для установки.
         /// </summary>
-        public string InstallDir { get; set; }
+        public string InstallDir { get; private set; }
 
         /// <summary>
         /// Содержит локальный путь к загруженному файлу.
         /// </summary>
-        public string LocalFile { get; set; }
+        public string LocalFile { get; private set; }
 
         /// <summary>
         /// Конструктор класса. Получает информацию о выбранном HUD.
