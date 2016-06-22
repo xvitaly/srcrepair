@@ -40,5 +40,10 @@ namespace srcrepair
 
         private string CfgUpdateURL;
         private string CfgUpdateHash;
+
+        public UpdateManager()
+        {
+            //
+        }
     }
 }
