@@ -23,6 +23,9 @@ using System.Text;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс для проверки обновлений.
+    /// </summary>
     public class UpdateManager
     {
     }
