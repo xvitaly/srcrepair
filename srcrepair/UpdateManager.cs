@@ -28,5 +28,17 @@ namespace srcrepair
     /// </summary>
     public class UpdateManager
     {
+        private string AppUpdateVersion;
+        private string AppUpdateURL;
+        private string AppUpdateHash;
+
+        private string GameUpdateURL;
+        private string GameUpdateHash;
+
+        private string HUDUpdateURL;
+        private string HUDUpdateHash;
+
+        private string CfgUpdateURL;
+        private string CfgUpdateHash;
     }
 }
