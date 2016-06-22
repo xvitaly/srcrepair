@@ -5,7 +5,7 @@ using System.Text;
 
 namespace srcrepair
 {
-    class UpdateManager
+    public class UpdateManager
     {
     }
 }
