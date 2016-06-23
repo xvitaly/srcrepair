@@ -18,6 +18,7 @@
 */
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -41,7 +42,14 @@ namespace srcrepair
         private string CfgUpdateURL;
         private string CfgUpdateHash;
 
-        public UpdateManager()
+        private string FullAppPath;
+
+        public bool CheckGameDBUpdate()
+        {
+            return CoreLib.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Settings.Default.GameListFile)) == GameUpdateHash;
+        }
+
+        public UpdateManager(string AppPath)
         {
             //
         }
