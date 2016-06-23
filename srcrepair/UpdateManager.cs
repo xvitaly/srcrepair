@@ -67,7 +67,8 @@ namespace srcrepair
 
         public UpdateManager(string AppPath)
         {
-            //
+            // Сохраняем путь...
+            FullAppPath = AppPath;
         }
     }
 }
