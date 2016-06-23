@@ -18,7 +18,9 @@
 */
 using System;
 using System.IO;
+using System.Net;
 using System.Reflection;
+using System.Xml;
 
 namespace srcrepair
 {
@@ -41,6 +43,52 @@ namespace srcrepair
         private string CfgUpdateHash;
 
         private string FullAppPath;
+        private string UpdateXML;
+
+        private void DownloadXML()
+        {
+            // Загружаем XML...
+            using (WebClient Downloader = new WebClient())
+            {
+                Downloader.Headers.Add("User-Agent", "UA");
+                UpdateXML = Downloader.DownloadString(@"https://www.easycoding.org/files/srcrepair/updates/updates.xml");
+            }
+        }
+
+        private void ParseXML()
+        {
+            // Загружаем XML...
+            XmlDocument XMLD = new XmlDocument();
+            XMLD.LoadXml(UpdateXML);
+
+            // Разбираем XML в цикле...
+            foreach (XmlNode Node in XMLD.SelectNodes("Updates"))
+            {
+                foreach (XmlNode Child in Node.ChildNodes)
+                {
+                    switch (Child.Name)
+                    {
+                        case "Application":
+                            AppUpdateVersion = new Version(Child.ChildNodes[0].InnerText);
+                            AppUpdateURL = Child.ChildNodes[1].InnerText;
+                            AppUpdateHash = Child.ChildNodes[2].InnerText;
+                            break;
+                        case "GameDB":
+                            GameUpdateURL = Child.ChildNodes[1].InnerText;
+                            GameUpdateHash = Child.ChildNodes[2].InnerText;
+                            break;
+                        case "HUDDB":
+                            HUDUpdateURL = Child.ChildNodes[1].InnerText;
+                            HUDUpdateHash = Child.ChildNodes[2].InnerText;
+                            break;
+                        case "CfgDB":
+                            CfgUpdateURL = Child.ChildNodes[1].InnerText;
+                            CfgUpdateHash = Child.ChildNodes[2].InnerText;
+                            break;
+                    }
+                }
+            }
+        }
 
         public bool CheckAppUpdate()
         {
@@ -66,6 +114,10 @@ namespace srcrepair
         {
             // Сохраняем путь...
             FullAppPath = AppPath;
+
+            // Загружаем и парсим XML...
+            DownloadXML();
+            ParseXML();
         }
     }
 }
