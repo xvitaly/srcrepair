@@ -20,6 +20,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 
 namespace srcrepair
@@ -29,7 +30,7 @@ namespace srcrepair
     /// </summary>
     public class UpdateManager
     {
-        private string AppUpdateVersion;
+        private Version AppUpdateVersion;
         private string AppUpdateURL;
         private string AppUpdateHash;
 
@@ -43,6 +44,11 @@ namespace srcrepair
         private string CfgUpdateHash;
 
         private string FullAppPath;
+
+        public bool CheckAppUpdate()
+        {
+            return AppUpdateVersion > Assembly.GetEntryAssembly().GetName().Version;
+        }
 
         public bool CheckGameDBUpdate()
         {
