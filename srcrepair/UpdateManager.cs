@@ -54,6 +54,11 @@ namespace srcrepair
             return CoreLib.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Settings.Default.HUDDbFile)) == HUDUpdateHash;
         }
 
+        public bool CheckCfgUpdate()
+        {
+            return CoreLib.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Settings.Default.CfgDbFile)) == CfgUpdateHash;
+        }
+
         public UpdateManager(string AppPath)
         {
             //
