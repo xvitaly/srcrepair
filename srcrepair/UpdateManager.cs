@@ -49,6 +49,11 @@ namespace srcrepair
             return CoreLib.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Settings.Default.GameListFile)) == GameUpdateHash;
         }
 
+        public bool CheckHUDUpdate()
+        {
+            return CoreLib.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Settings.Default.HUDDbFile)) == HUDUpdateHash;
+        }
+
         public UpdateManager(string AppPath)
         {
             //
