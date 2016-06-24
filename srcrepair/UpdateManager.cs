@@ -94,7 +94,7 @@ namespace srcrepair
             using (WebClient Downloader = new WebClient())
             {
                 Downloader.Headers.Add("User-Agent", "UA");
-                UpdateXML = Downloader.DownloadString(@"https://www.easycoding.org/files/srcrepair/updates/updates.xml");
+                UpdateXML = Downloader.DownloadString(Properties.Resources.UpdateDBURL);
             }
         }
 
