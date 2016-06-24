@@ -45,6 +45,10 @@ namespace srcrepair
         private string FullAppPath;
         private string UpdateXML;
 
+        /// <summary>
+        /// Загружает XML со списком обновлений с сервера обновлений.
+        /// Вызывается конструктором класса.
+        /// </summary>
         private void DownloadXML()
         {
             // Загружаем XML...
@@ -55,6 +59,10 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Парсит загруженный XML файл. Заполняет поля класса значениями.
+        /// Вызывается конструктором класса.
+        /// </summary>
         private void ParseXML()
         {
             // Загружаем XML...
