@@ -29,20 +29,59 @@ namespace srcrepair
     /// </summary>
     public class UpdateManager
     {
+        /// <summary>
+        /// Хранит последнюю доступную версию приложения.
+        /// </summary>
         private Version AppUpdateVersion;
+
+        /// <summary>
+        /// Хранит URL для загрузки последней доступной версии приложения.
+        /// </summary>
         private string AppUpdateURL;
+
+        /// <summary>
+        /// Хранит хеш-сумму установщика последней доступной версии приложения.
+        /// </summary>
         private string AppUpdateHash;
 
+        /// <summary>
+        /// Хранит URL для загрузки последней доступной версии базы игр.
+        /// </summary>
         private string GameUpdateURL;
+
+        /// <summary>
+        /// Хранит хеш-сумму последней доступной версии базы игр.
+        /// </summary>
         private string GameUpdateHash;
 
+        /// <summary>
+        /// Хранит URL для загрузки последней доступной версии базы HUD.
+        /// </summary>
         private string HUDUpdateURL;
+
+        /// <summary>
+        /// Хранит хеш-сумму последней доступной версии базы HUD.
+        /// </summary>
         private string HUDUpdateHash;
 
+        /// <summary>
+        /// Хранит URL для загрузки последней доступной версии базы конфигов.
+        /// </summary>
         private string CfgUpdateURL;
+
+        /// <summary>
+        /// Хранит хеш-сумму последней доступной версии базы конфигов.
+        /// </summary>
         private string CfgUpdateHash;
 
+        /// <summary>
+        /// Хранит путь к каталогу приложения для служебных целей.
+        /// </summary>
         private string FullAppPath;
+
+        /// <summary>
+        /// Хранит загруженный с сервера обновлений XML.
+        /// </summary>
         private string UpdateXML;
 
         /// <summary>
