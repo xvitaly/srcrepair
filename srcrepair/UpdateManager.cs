@@ -90,31 +90,55 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Проверяет наличие обновлений для приложения.
+        /// </summary>
+        /// <returns>Возвращает булево наличия обновлений</returns>
         public bool CheckAppUpdate()
         {
             return AppUpdateVersion > Assembly.GetEntryAssembly().GetName().Version;
         }
 
+        /// <summary>
+        /// Проверяет hash обновления приложения с переданным в качестве параметра.
+        /// </summary>
+        /// <param name="Hash">Хеш загруженного файла</param>
+        /// <returns>Возвращает булево соответствия хешей</returns>
         public bool CheckAppHash(string Hash)
         {
             return AppUpdateHash == Hash;
         }
 
+        /// <summary>
+        /// Проверяет наличие обновлений для базы игр.
+        /// </summary>
+        /// <returns>Возвращает булево наличия обновлений</returns>
         public bool CheckGameDBUpdate()
         {
             return CoreLib.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Settings.Default.GameListFile)) == GameUpdateHash;
         }
 
+        /// <summary>
+        /// Проверяет наличие обновлений для базы HUD.
+        /// </summary>
+        /// <returns>Возвращает булево наличия обновлений</returns>
         public bool CheckHUDUpdate()
         {
             return CoreLib.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Settings.Default.HUDDbFile)) == HUDUpdateHash;
         }
 
+        /// <summary>
+        /// Проверяет наличие обновлений для базы FPS-конфигов.
+        /// </summary>
+        /// <returns>Возвращает булево наличия обновлений</returns>
         public bool CheckCfgUpdate()
         {
             return CoreLib.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Settings.Default.CfgDbFile)) == CfgUpdateHash;
         }
 
+        /// <summary>
+        /// Конструктор класса. Получает информацию об обновлениях.
+        /// </summary>
         public UpdateManager(string AppPath)
         {
             // Сохраняем путь...
