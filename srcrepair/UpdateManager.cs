@@ -95,6 +95,11 @@ namespace srcrepair
             return AppUpdateVersion > Assembly.GetEntryAssembly().GetName().Version;
         }
 
+        public bool CheckAppHash(string Hash)
+        {
+            return AppUpdateHash == Hash;
+        }
+
         public bool CheckGameDBUpdate()
         {
             return CoreLib.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Settings.Default.GameListFile)) == GameUpdateHash;
