@@ -839,6 +839,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to https://www.easycoding.org/files/srcrepair/updates/updates.xml.
+        /// </summary>
+        internal static string UpdateDBURL {
+            get {
+                return ResourceManager.GetString("UpdateDBURL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to https://www.easycoding.org/files/srcrepair/updates/games.xml.
         /// </summary>
         internal static string UpdateGameDBFile {
