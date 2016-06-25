@@ -156,6 +156,15 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Возвращает URL для загрузки новой версии базы HUD.
+        /// </summary>
+        /// <returns>URL для загрузки новой версии базы HUD</returns>
+        public string GetHUDDBUpdateURL()
+        {
+            return HUDUpdateURL;
+        }
+
+        /// <summary>
         /// Проверяет наличие обновлений для приложения.
         /// </summary>
         /// <returns>Возвращает булево наличия обновлений</returns>
