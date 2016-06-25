@@ -25,7 +25,7 @@ using System.Xml;
 namespace srcrepair
 {
     /// <summary>
-    /// Класс для проверки обновлений.
+    /// Класс, используемый для проверки обновлений.
     /// </summary>
     public class UpdateManager
     {
