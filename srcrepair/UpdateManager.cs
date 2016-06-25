@@ -147,6 +147,15 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Возвращает URL для загрузки новой версии базы игр.
+        /// </summary>
+        /// <returns>URL для загрузки новой версии базы игр</returns>
+        public string GetGameDBUpdateURL()
+        {
+            return GameUpdateURL;
+        }
+
+        /// <summary>
         /// Проверяет наличие обновлений для приложения.
         /// </summary>
         /// <returns>Возвращает булево наличия обновлений</returns>
