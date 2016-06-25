@@ -165,6 +165,15 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Возвращает URL для загрузки новой версии базы конфигов.
+        /// </summary>
+        /// <returns>URL для загрузки новой версии базы конфигов</returns>
+        public string GetCfgDBUpdateURL()
+        {
+            return CfgUpdateURL;
+        }
+
+        /// <summary>
         /// Проверяет наличие обновлений для приложения.
         /// </summary>
         /// <returns>Возвращает булево наличия обновлений</returns>
