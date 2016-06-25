@@ -138,6 +138,15 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Возвращает URL для загрузки новой версии приложения.
+        /// </summary>
+        /// <returns>URL для загрузки новой версии приложения</returns>
+        public string GetAppUpdateURL()
+        {
+            return AppUpdateURL;
+        }
+
+        /// <summary>
         /// Проверяет наличие обновлений для приложения.
         /// </summary>
         /// <returns>Возвращает булево наличия обновлений</returns>
