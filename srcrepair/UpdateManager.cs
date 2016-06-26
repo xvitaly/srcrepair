@@ -222,7 +222,7 @@ namespace srcrepair
         /// <summary>
         /// Конструктор класса. Получает информацию об обновлениях.
         /// </summary>
-        public UpdateManager(string AppPath)
+        public UpdateManager(string AppPath, string UserAgent)
         {
             // Сохраняем путь...
             FullAppPath = AppPath;
