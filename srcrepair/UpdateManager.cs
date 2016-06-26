@@ -99,7 +99,7 @@ namespace srcrepair
             // Загружаем XML...
             using (WebClient Downloader = new WebClient())
             {
-                Downloader.Headers.Add("User-Agent", "UA");
+                Downloader.Headers.Add("User-Agent", UserAgent);
                 UpdateXML = Downloader.DownloadString(Properties.Resources.UpdateDBURL);
             }
         }
@@ -228,10 +228,11 @@ namespace srcrepair
         /// <summary>
         /// Конструктор класса. Получает информацию об обновлениях.
         /// </summary>
-        public UpdateManager(string AppPath, string UserAgent)
+        public UpdateManager(string AppPath, string UA)
         {
             // Сохраняем путь...
             FullAppPath = AppPath;
+            UserAgent = UA;
 
             // Загружаем и парсим XML...
             DownloadXML();
