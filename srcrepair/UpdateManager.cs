@@ -80,6 +80,12 @@ namespace srcrepair
         private string FullAppPath;
 
         /// <summary>
+        /// Хранит UserAgent, который будет использоваться в соответствующем
+        /// HTTP заголовке запроса.
+        /// </summary>
+        private string UserAgent;
+
+        /// <summary>
         /// Хранит загруженный с сервера обновлений XML.
         /// </summary>
         private string UpdateXML;
