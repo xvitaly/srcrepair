@@ -40,6 +40,22 @@ namespace srcrepair
         private string AppUserDir;
         private string FullAppPath;
 
+        /// <summary>
+        /// Устанавливает дату последней проверки обновлений приложения.
+        /// </summary>
+        private void UpdateTimeSetApp()
+        {
+            Properties.Settings.Default.LastUpdateTime = DateTime.Now;
+        }
+
+        /// <summary>
+        /// Устанавливает дату последней проверки обновлений базы HUD.
+        /// </summary>
+        private void UpdateTimeSetHUD()
+        {
+            Properties.Settings.Default.LastHUDTime = DateTime.Now;
+        }
+
         private void frmUpdate_Load(object sender, EventArgs e)
         {
             // Заполняем...
@@ -47,18 +63,6 @@ namespace srcrepair
 
             // Запускаем функцию проверки обновлений...
             if (!WrkChkApp.IsBusy) { WrkChkApp.RunWorkerAsync(); }
-        }
-
-        private void UpdateTimeSetApp()
-        {
-            // Установим дату последней проверки обновлений...
-            Properties.Settings.Default.LastUpdateTime = DateTime.Now;
-        }
-
-        private void UpdateTimeSetHUD()
-        {
-            // Установим дату последней проверки обновлений базы HUD...
-            Properties.Settings.Default.LastHUDTime = DateTime.Now;
         }
 
         private void WrkChkApp_DoWork(object sender, DoWorkEventArgs e)
