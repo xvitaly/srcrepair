@@ -2079,7 +2079,7 @@ namespace srcrepair
         private void MNUUpdateCheck_Click(object sender, EventArgs e)
         {
             // Откроем форму модуля проверки обновлений...
-            using (frmUpdate UpdFrm = new frmUpdate(App.UserAgent, App.FullAppPath, App.AppVersionInfo, App.AppUserDir))
+            using (frmUpdate UpdFrm = new frmUpdate(App.UserAgent, App.FullAppPath, App.AppUserDir))
             {
                 UpdFrm.ShowDialog();
             }

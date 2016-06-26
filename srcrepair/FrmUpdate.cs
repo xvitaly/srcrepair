@@ -27,18 +27,16 @@ namespace srcrepair
 {
     public partial class frmUpdate : Form
     {
-        public frmUpdate(string UA, string A, string V, string U)
+        public frmUpdate(string UA, string A, string U)
         {
             InitializeComponent();
             UserAgent = UA;
             FullAppPath = A;
-            AppVersionInfo = V;
             AppUserDir = U;
         }
 
         private UpdateManager UpMan;
         private string UserAgent;
-        private string AppVersionInfo;
         private string AppUserDir;
 
         private string FullAppPath;
