@@ -34,10 +34,8 @@
             this.UpdAppStatus = new System.Windows.Forms.Label();
             this.UpdDBStatus = new System.Windows.Forms.Label();
             this.WrkChkApp = new System.ComponentModel.BackgroundWorker();
-            this.WrkChkDb = new System.ComponentModel.BackgroundWorker();
             this.UpdHUDDbImg = new System.Windows.Forms.PictureBox();
             this.UpdHUDStatus = new System.Windows.Forms.Label();
-            this.WrkChkHUD = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.UpdAppImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpdDBImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpdHUDDbImg)).BeginInit();
@@ -80,11 +78,6 @@
             this.WrkChkApp.DoWork += new System.ComponentModel.DoWorkEventHandler(this.WrkChkApp_DoWork);
             this.WrkChkApp.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.WrkChkApp_RunWorkerCompleted);
             // 
-            // WrkChkDb
-            // 
-            this.WrkChkDb.DoWork += new System.ComponentModel.DoWorkEventHandler(this.WrkChkDb_DoWork);
-            this.WrkChkDb.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.WrkChkDb_RunWorkerCompleted);
-            // 
             // UpdHUDDbImg
             // 
             this.UpdHUDDbImg.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -100,11 +93,6 @@
             resources.ApplyResources(this.UpdHUDStatus, "UpdHUDStatus");
             this.UpdHUDStatus.Name = "UpdHUDStatus";
             this.UpdHUDStatus.Click += new System.EventHandler(this.UpdHUDStatus_Click);
-            // 
-            // WrkChkHUD
-            // 
-            this.WrkChkHUD.DoWork += new System.ComponentModel.DoWorkEventHandler(this.WrkChkHUD_DoWork);
-            this.WrkChkHUD.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.WrkChkHUD_RunWorkerCompleted);
             // 
             // frmUpdate
             // 
@@ -138,9 +126,7 @@
         private System.Windows.Forms.Label UpdAppStatus;
         private System.Windows.Forms.Label UpdDBStatus;
         private System.ComponentModel.BackgroundWorker WrkChkApp;
-        private System.ComponentModel.BackgroundWorker WrkChkDb;
         private System.Windows.Forms.PictureBox UpdHUDDbImg;
         private System.Windows.Forms.Label UpdHUDStatus;
-        private System.ComponentModel.BackgroundWorker WrkChkHUD;
     }
 }
