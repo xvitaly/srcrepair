@@ -32,47 +32,47 @@ namespace srcrepair
         /// <summary>
         /// Хранит последнюю доступную версию приложения.
         /// </summary>
-        private Version AppUpdateVersion;
+        public Version AppUpdateVersion { get; private set; }
 
         /// <summary>
         /// Хранит URL для загрузки последней доступной версии приложения.
         /// </summary>
-        private string AppUpdateURL;
+        public string AppUpdateURL { get; private set; }
 
         /// <summary>
         /// Хранит хеш-сумму установщика последней доступной версии приложения.
         /// </summary>
-        private string AppUpdateHash;
+        public string AppUpdateHash { get; private set; }
 
         /// <summary>
         /// Хранит URL для загрузки последней доступной версии базы игр.
         /// </summary>
-        private string GameUpdateURL;
+        public string GameUpdateURL { get; private set; }
 
         /// <summary>
         /// Хранит хеш-сумму последней доступной версии базы игр.
         /// </summary>
-        private string GameUpdateHash;
+        public string GameUpdateHash { get; private set; }
 
         /// <summary>
         /// Хранит URL для загрузки последней доступной версии базы HUD.
         /// </summary>
-        private string HUDUpdateURL;
+        public string HUDUpdateURL { get; private set; }
 
         /// <summary>
         /// Хранит хеш-сумму последней доступной версии базы HUD.
         /// </summary>
-        private string HUDUpdateHash;
+        public string HUDUpdateHash { get; private set; }
 
         /// <summary>
         /// Хранит URL для загрузки последней доступной версии базы конфигов.
         /// </summary>
-        private string CfgUpdateURL;
+        public string CfgUpdateURL { get; private set; }
 
         /// <summary>
         /// Хранит хеш-сумму последней доступной версии базы конфигов.
         /// </summary>
-        private string CfgUpdateHash;
+        public string CfgUpdateHash { get; private set; }
 
         /// <summary>
         /// Хранит путь к каталогу приложения для служебных целей.
@@ -141,42 +141,6 @@ namespace srcrepair
                     }
                 }
             }
-        }
-
-        /// <summary>
-        /// Возвращает URL для загрузки новой версии приложения.
-        /// </summary>
-        /// <returns>URL для загрузки новой версии приложения</returns>
-        public string GetAppUpdateURL()
-        {
-            return AppUpdateURL;
-        }
-
-        /// <summary>
-        /// Возвращает URL для загрузки новой версии базы игр.
-        /// </summary>
-        /// <returns>URL для загрузки новой версии базы игр</returns>
-        public string GetGameDBUpdateURL()
-        {
-            return GameUpdateURL;
-        }
-
-        /// <summary>
-        /// Возвращает URL для загрузки новой версии базы HUD.
-        /// </summary>
-        /// <returns>URL для загрузки новой версии базы HUD</returns>
-        public string GetHUDDBUpdateURL()
-        {
-            return HUDUpdateURL;
-        }
-
-        /// <summary>
-        /// Возвращает URL для загрузки новой версии базы конфигов.
-        /// </summary>
-        /// <returns>URL для загрузки новой версии базы конфигов</returns>
-        public string GetCfgDBUpdateURL()
-        {
-            return CfgUpdateURL;
         }
 
         /// <summary>
