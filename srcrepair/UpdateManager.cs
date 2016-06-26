@@ -228,6 +228,8 @@ namespace srcrepair
         /// <summary>
         /// Конструктор класса. Получает информацию об обновлениях.
         /// </summary>
+        /// <param name="AppPath">Путь к каталогу приложения</param>
+        /// <param name="UA">UserAgent приложения</param>
         public UpdateManager(string AppPath, string UA)
         {
             // Сохраняем путь...
