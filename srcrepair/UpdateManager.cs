@@ -190,6 +190,16 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Генерирует имя файла на диске для обновления.
+        /// </summary>
+        /// <param name="Url">URL загрузки</param>
+        /// <returns>Возвращает имя файла</returns>
+        public static string GenerateUpdateFileName(string Url)
+        {
+            return Path.HasExtension(Url) ? Url : Path.ChangeExtension(Url, "exe");
+        }
+
+        /// <summary>
         /// Конструктор класса. Получает информацию об обновлениях.
         /// </summary>
         /// <param name="AppPath">Путь к каталогу приложения</param>

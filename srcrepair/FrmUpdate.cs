@@ -38,7 +38,6 @@ namespace srcrepair
         private UpdateManager UpMan;
         private string UserAgent;
         private string AppUserDir;
-
         private string FullAppPath;
 
         private void frmUpdate_Load(object sender, EventArgs e)
@@ -48,11 +47,6 @@ namespace srcrepair
 
             // Запускаем функцию проверки обновлений...
             if (!WrkChkApp.IsBusy) { WrkChkApp.RunWorkerAsync(); }
-        }
-
-        private string GenerateUpdateFileName(string Url)
-        {
-            return Path.HasExtension(Url) ? Url : Path.ChangeExtension(Url, "exe");
         }
 
         private void UpdateTimeSetApp()
@@ -129,7 +123,7 @@ namespace srcrepair
             {
                 if (CoreLib.IsDirectoryWritable(FullAppPath))
                 {
-                    string UpdateFileName = GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Settings.Default.GameListFile));
+                    string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Settings.Default.GameListFile));
                     CoreLib.DownloadFileEx(UpMan.GameUpdateURL, UpdateFileName);
                     if (File.Exists(UpdateFileName)) { MessageBox.Show(AppStrings.UPD_GamL_Updated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
                     Close();
@@ -149,7 +143,7 @@ namespace srcrepair
         {
             if (UpMan.CheckAppUpdate())
             {
-                string UpdateFileName = GenerateUpdateFileName(Path.Combine(AppUserDir, Path.GetFileName(UpMan.AppUpdateURL)));
+                string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(AppUserDir, Path.GetFileName(UpMan.AppUpdateURL)));
                 CoreLib.DownloadFileEx(UpMan.AppUpdateURL, UpdateFileName);
                 if (File.Exists(UpdateFileName))
                 {
@@ -176,7 +170,7 @@ namespace srcrepair
             {
                 if (CoreLib.IsDirectoryWritable(FullAppPath))
                 {
-                    string UpdateFileName = GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Settings.Default.HUDDbFile));
+                    string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Settings.Default.HUDDbFile));
                     CoreLib.DownloadFileEx(UpMan.HUDUpdateURL, UpdateFileName);
                     if (File.Exists(UpdateFileName)) { MessageBox.Show(AppStrings.UPD_HUDDb_Updated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); UpdateTimeSetHUD(); } else { MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
                     Close();
