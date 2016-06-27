@@ -7,17 +7,17 @@
   </Application>
   <GameDB>
     <Version>master</Version>
-    <URL>https://github.com/xvitaly/srcrepair/raw/master/tfiles/games.xml</URL>
+    <URL>https://www.easycoding.org/files/srcrepair/updates/games.xml</URL>
     <Hash>32555cdedcff490c87e62162262b08ff</Hash>
   </GameDB>
   <HUDDB>
     <Version>master</Version>
-    <URL>https://github.com/xvitaly/srcrepair/raw/master/tfiles/huds.xml</URL>
+    <URL>https://www.easycoding.org/files/srcrepair/updates/huds.xml</URL>
     <Hash>c3babb27280d5e3d8020b61782e0342f</Hash>
   </HUDDB>
   <CfgDB>
     <Version>master</Version>
-    <URL>https://github.com/xvitaly/srcrepair/raw/master/tfiles/configs.xml</URL>
+    <URL>https://www.easycoding.org/files/srcrepair/updates/configs.xml</URL>
     <Hash>e86c486e0edf926d6ac512dec6b1cafc</Hash>
   </CfgDB>
 </Updates>
