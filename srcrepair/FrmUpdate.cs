@@ -121,28 +121,6 @@ namespace srcrepair
             e.Cancel = (e.CloseReason == CloseReason.UserClosing) && WrkChkApp.IsBusy;
         }
 
-        private void UpdDBStatus_Click(object sender, EventArgs e)
-        {
-            if (UpMan.CheckGameDBUpdate())
-            {
-                if (CoreLib.IsDirectoryWritable(FullAppPath))
-                {
-                    string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Settings.Default.GameListFile));
-                    CoreLib.DownloadFileEx(UpMan.GameUpdateURL, UpdateFileName);
-                    if (File.Exists(UpdateFileName)) { MessageBox.Show(AppStrings.UPD_GamL_Updated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
-                    Close();
-                }
-                else
-                {
-                    MessageBox.Show(AppStrings.UPD_NoWritePermissions, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show(AppStrings.UPD_GamL_Latest, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
         private void UpdAppStatus_Click(object sender, EventArgs e)
         {
             // Проверяем наличие обновлений программы...
@@ -166,14 +144,50 @@ namespace srcrepair
 
         private void UpdHUDStatus_Click(object sender, EventArgs e)
         {
+            // Проверяем наличие обновлений...
             if (UpMan.CheckHUDUpdate())
             {
+                // Проверяем наличие прав на запись в каталог...
                 if (CoreLib.IsDirectoryWritable(FullAppPath))
                 {
+                    // Генерируем пути к файлам...
                     string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Settings.Default.HUDDbFile));
-                    CoreLib.DownloadFileEx(UpMan.HUDUpdateURL, UpdateFileName);
-                    if (File.Exists(UpdateFileName)) { MessageBox.Show(AppStrings.UPD_HUDDb_Updated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); UpdateTimeSetHUD(); } else { MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
-                    Close();
+                    string UpdateTempFile = Path.GetTempFileName();
+
+                    // Загружаем файл с сервера...
+                    CoreLib.DownloadFileEx(UpMan.HUDUpdateURL, UpdateTempFile);
+
+                    try
+                    {
+                        // Проверяем контрольную сумму...
+                        if (CoreLib.CalculateFileMD5(UpdateTempFile) == UpMan.HUDUpdateHash)
+                        {
+                            // Копируем загруженный файл...
+                            File.Copy(UpdateTempFile, UpdateFileName, true);
+
+                            // Обновляем дату последней проверки обновлений...
+                            UpdateTimeSetHUD();
+
+                            // Выводим сообщение об успехе...
+                            MessageBox.Show(AppStrings.UPD_HUDDb_Updated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            // Закрываем форму...
+                            Close();
+                        }
+                        else
+                        {
+                            // Выводим сообщение о несовпадении хешей...
+                            MessageBox.Show(AppStrings.UPD_HashFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception Ex)
+                    {
+                        // Выводим сообщение об ошибке...
+                        CoreLib.HandleExceptionEx(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                    }
+                    
+                    // Удаляем загруженный файл если он существует...
+                    if (File.Exists(UpdateTempFile)) { File.Delete(UpdateTempFile); }
                 }
                 else
                 {
@@ -183,6 +197,46 @@ namespace srcrepair
             else
             {
                 MessageBox.Show(AppStrings.UPD_HUDDb_Latest, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void UpdDBStatus_Click(object sender, EventArgs e)
+        {
+            if (UpMan.CheckGameDBUpdate())
+            {
+                if (CoreLib.IsDirectoryWritable(FullAppPath))
+                {
+                    string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Settings.Default.GameListFile));
+                    string UpdateTempFile = Path.GetTempFileName();
+                    CoreLib.DownloadFileEx(UpMan.GameUpdateURL, UpdateTempFile);
+
+                    try
+                    {
+                        if (CoreLib.CalculateFileMD5(UpdateTempFile) == UpMan.GameUpdateHash)
+                        {
+                            File.Copy(UpdateTempFile, UpdateFileName, true);
+                            MessageBox.Show(AppStrings.UPD_GamL_Updated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show(AppStrings.UPD_HashFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    catch (Exception Ex)
+                    {
+                        CoreLib.HandleExceptionEx(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                    }
+
+                    if (File.Exists(UpdateTempFile)) { File.Delete(UpdateTempFile); }
+                }
+                else
+                {
+                    MessageBox.Show(AppStrings.UPD_NoWritePermissions, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show(AppStrings.UPD_GamL_Latest, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
