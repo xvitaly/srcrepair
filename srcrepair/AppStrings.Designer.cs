@@ -1771,6 +1771,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Downloaded file has incorrect hash. Maybe it was corrupted. Please try again later!.
+        /// </summary>
+        internal static string UPD_HashFailure {
+            get {
+                return ResourceManager.GetString("UPD_HashFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to HUD database update check failed. Please try again later..
         /// </summary>
         internal static string UPD_HUDCheckFailure {

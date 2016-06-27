@@ -723,4 +723,7 @@
   <data name="GT_NCFLoadFailure" xml:space="preserve">
     <value>Failed to load several graphical settings. Please report this bug.</value>
   </data>
+  <data name="UPD_HashFailure" xml:space="preserve">
+    <value>Downloaded file has incorrect hash. Maybe it was corrupted. Please try again later!</value>
+  </data>
 </root>
