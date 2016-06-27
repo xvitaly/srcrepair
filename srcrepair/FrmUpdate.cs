@@ -145,25 +145,21 @@ namespace srcrepair
 
         private void UpdAppStatus_Click(object sender, EventArgs e)
         {
+            // Проверяем наличие обновлений программы...
             if (UpMan.CheckAppUpdate())
             {
+                // Генерируем имя файла обновления...
                 string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(AppUserDir, Path.GetFileName(UpMan.AppUpdateURL)));
+
+                // Загружаем файл асинхронно...
                 CoreLib.DownloadFileEx(UpMan.AppUpdateURL, UpdateFileName);
-                if (File.Exists(UpdateFileName))
-                {
-                    UpdateTimeSetApp();
-                    MessageBox.Show(AppStrings.UPD_UpdateSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    try { Process.Start(UpdateFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
-                    Environment.Exit(9);
-                }
-                else
-                {
-                    MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Close();
-                }
+
+                // Выполняем проверки и устанавливаем обновление...
+                if (File.Exists(UpdateFileName)) { if (CoreLib.CalculateFileMD5(UpdateFileName) == UpMan.AppUpdateHash) { UpdateTimeSetApp(); MessageBox.Show(AppStrings.UPD_UpdateSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); try { Process.Start(UpdateFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); } Environment.Exit(9); } else { try { File.Delete(UpdateFileName); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } MessageBox.Show(AppStrings.UPD_HashFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); } } else { MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); Close(); }
             }
             else
             {
+                // Обновление не требуется, поэтому просто выводим сообщение об этом...
                 MessageBox.Show(AppStrings.UPD_LatestInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
