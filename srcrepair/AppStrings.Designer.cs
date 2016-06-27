@@ -1726,29 +1726,11 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while trying to download updates! Allow the program to get data from the Internet and try again later..
-        /// </summary>
-        internal static string UPD_DownloadException {
-            get {
-                return ResourceManager.GetString("UPD_DownloadException", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to An error occurred while checking for updates! Allow the program to get data from the Internet and try again later..
         /// </summary>
         internal static string UPD_ExceptionDetected {
             get {
                 return ResourceManager.GetString("UPD_ExceptionDetected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Notice: Hash of existing file {0}: {1}..
-        /// </summary>
-        internal static string UPD_ExtHashSum {
-            get {
-                return ResourceManager.GetString("UPD_ExtHashSum", resourceCulture);
             }
         }
         
@@ -1839,33 +1821,6 @@ namespace srcrepair {
         internal static string UPD_NoWritePermissions {
             get {
                 return ResourceManager.GetString("UPD_NoWritePermissions", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The game database has been updated successfully..
-        /// </summary>
-        internal static string UPD_ProcFinMsg {
-            get {
-                return ResourceManager.GetString("UPD_ProcFinMsg", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Updating the game database from server....
-        /// </summary>
-        internal static string UPD_ProcStartMsg {
-            get {
-                return ResourceManager.GetString("UPD_ProcStartMsg", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Notice: Received server hash of the game database {0}..
-        /// </summary>
-        internal static string UPD_RecvHashStr {
-            get {
-                return ResourceManager.GetString("UPD_RecvHashStr", resourceCulture);
             }
         }
         
