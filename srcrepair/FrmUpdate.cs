@@ -191,11 +191,13 @@ namespace srcrepair
                 }
                 else
                 {
+                    // Выводим сообщение об отсутствии прав на запись в каталог...
                     MessageBox.Show(AppStrings.UPD_NoWritePermissions, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
+                // Обновление не требуется. Выводим соответствующее сообщение...
                 MessageBox.Show(AppStrings.UPD_HUDDb_Latest, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
