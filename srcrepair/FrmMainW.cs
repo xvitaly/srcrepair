@@ -122,7 +122,7 @@ namespace srcrepair
             try
             {
                 // Создаём поток с XML-файлом...
-                using (FileStream XMLFS = new FileStream(Path.Combine(App.FullAppPath, Properties.Settings.Default.GameListFile), FileMode.Open, FileAccess.Read))
+                using (FileStream XMLFS = new FileStream(Path.Combine(App.FullAppPath, Properties.Resources.GameListFile), FileMode.Open, FileAccess.Read))
                 {
                     // Создаём объект документа XML...
                     XmlDocument XMLD = new XmlDocument();
@@ -978,7 +978,7 @@ namespace srcrepair
             try
             {
                 // Получаем список установленных конфигов из БД...
-                SelGame.CFGMan = new ConfigManager(Path.Combine(App.FullAppPath, Properties.Settings.Default.CfgDbFile), AppStrings.AppLangPrefix);
+                SelGame.CFGMan = new ConfigManager(Path.Combine(App.FullAppPath, Properties.Resources.CfgDbFile), AppStrings.AppLangPrefix);
 
                 // Выведем установленные в форму...
                 foreach (string Str in SelGame.CFGMan.GetAllCfg())
@@ -1024,7 +1024,7 @@ namespace srcrepair
             try
             {
                 // Получаем список доступных HUD...
-                SelGame.HUDMan = new HUDManager(Path.Combine(App.FullAppPath, Properties.Settings.Default.HUDDbFile), SelGame.AppHUDDir);
+                SelGame.HUDMan = new HUDManager(Path.Combine(App.FullAppPath, Properties.Resources.HUDDbFile), SelGame.AppHUDDir);
 
                 // Вносим HUD текущей игры в форму...
                 Invoke((MethodInvoker)delegate () { HD_HSel.Items.AddRange(SelGame.HUDMan.GetHUDNames(SelGame.SmallAppName).ToArray<object>()); });
