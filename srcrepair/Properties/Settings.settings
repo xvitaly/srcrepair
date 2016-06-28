@@ -17,9 +17,6 @@
     <Setting Name="LastUpdateTime" Type="System.DateTime" Scope="User">
       <Value Profile="(Default)">2012-05-01</Value>
     </Setting>
-    <Setting Name="GameListFile" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">games.xml</Value>
-    </Setting>
     <Setting Name="DebugLogFileName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">debug.log</Value>
     </Setting>
@@ -56,9 +53,6 @@
     <Setting Name="PackBeforeCleanup" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="HUDDbFile" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">huds.xml</Value>
-    </Setting>
     <Setting Name="HUDLocalDir" Type="System.String" Scope="User">
       <Value Profile="(Default)">HUDs</Value>
     </Setting>
@@ -76,9 +70,6 @@
     </Setting>
     <Setting Name="HighlightOldBackUps" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
-    </Setting>
-    <Setting Name="CfgDbFile" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">configs.xml</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -85,15 +85,6 @@ namespace srcrepair.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("games.xml")]
-        public string GameListFile {
-            get {
-                return ((string)(this["GameListFile"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("debug.log")]
         public string DebugLogFileName {
             get {
@@ -230,15 +221,6 @@ namespace srcrepair.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("huds.xml")]
-        public string HUDDbFile {
-            get {
-                return ((string)(this["HUDDbFile"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("HUDs")]
@@ -308,15 +290,6 @@ namespace srcrepair.Properties {
             }
             set {
                 this["HighlightOldBackUps"] = value;
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("configs.xml")]
-        public string CfgDbFile {
-            get {
-                return ((string)(this["CfgDbFile"]));
             }
         }
     }
