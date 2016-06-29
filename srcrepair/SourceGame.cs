@@ -195,7 +195,7 @@ namespace srcrepair
         /// <summary>
         /// Обновляет список файлов с графическими настройками выбранной игры.
         /// </summary>
-        public void UpdateVideoFilesList()
+        private void UpdateVideoFilesList()
         {
             // Ищем файлы с графическими настройками из локального хранилища...
             VideoCfgFiles = GetCloudConfigs("video.txt");
@@ -256,6 +256,7 @@ namespace srcrepair
                 AppHUDDir = Path.Combine(AUserDir, Properties.Settings.Default.HUDLocalDir, SmallAppName);
                 CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : String.Empty);
                 AppWorkshopDir = Path.Combine(SteamDir, Properties.Resources.SteamAppsFolderName, Properties.Resources.WorkshopFolderName, "content", GameInternalID);
+                if (IsUsingVideoFile) { UpdateVideoFilesList(); }
                 CloudConfigs = GetCloudConfigs();
             }
         }
