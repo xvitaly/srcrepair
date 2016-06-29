@@ -147,6 +147,8 @@ namespace srcrepair
         /// </summary>
         public bool IsInstalled { get; private set; }
 
+        private string SteamPath;
+
         /// <summary>
         /// Генерирует путь к каталогу установки игры.
         /// </summary>
@@ -188,17 +190,13 @@ namespace srcrepair
         /// <summary>
         /// Обновляет список файлов с графическими настройками выбранной игры.
         /// </summary>
-        /// <param name="AppID">ID выбранного приложения</param>
-        /// <param name="SteamPath">Каталог установки Steam</param>
-        /// <param name="GamePath">Каталог установки игры</param>
-        /// <param name="VideoCfg">Каталог хранения настроек графики</param>
-        public void UpdateVideoFilesList(string AppID, string SteamPath, string GamePath, string VideoCfg)
+        public void UpdateVideoFilesList()
         {
             // Ищем файлы с графическими настройками из локального хранилища...
-            VideoCfgFiles = GetCloudConfigs(CoreLib.GetUserIDs(SteamPath), AppID, SteamPath, "video.txt");
+            VideoCfgFiles = GetCloudConfigs(CoreLib.GetUserIDs(SteamPath), GameInternalID, SteamPath, "video.txt");
             
             // Добавляем в базу Legacy конфиг...
-            VideoCfgFiles.Add(Path.Combine(GamePath, VideoCfg, "cfg", "video.txt"));
+            VideoCfgFiles.Add(Path.Combine(GamePath, ConfDir, "cfg", "video.txt"));
         }
 
         /// <summary>
@@ -234,6 +232,7 @@ namespace srcrepair
             IsUsingVideoFile = HasVF;
             IsUsingUserDir = UserDir;
             IsHUDsAvailable = HUDAv;
+            SteamPath = SteamDir;
 
             // Получаем полный путь до каталога управляемого приложения...
             GamePath = GetGameDirectory(DirName, SmallName, GameDirs);

@@ -1239,7 +1239,7 @@ namespace srcrepair
                 DetectFS(SelGame.FullGamePath);
 
                 // Считаем настройки графики...
-                if (SelGame.IsUsingVideoFile) { SelGame.UpdateVideoFilesList(SelGame.GameInternalID, App.FullSteamPath, SelGame.GamePath, SelGame.ConfDir); string VideoFile = SelGame.GetActualVideoFile(); if (File.Exists(VideoFile)) { ReadNCFGameSettings(VideoFile); } else { CoreLib.WriteStringToLog(String.Format(AppStrings.AppVideoDbNotFound, SelGame.FullAppName, VideoFile)); NullGraphOptions(); } } else { ReadGCFGameSettings(SelGame.SmallAppName); }
+                if (SelGame.IsUsingVideoFile) { SelGame.UpdateVideoFilesList(); string VideoFile = SelGame.GetActualVideoFile(); if (File.Exists(VideoFile)) { ReadNCFGameSettings(VideoFile); } else { CoreLib.WriteStringToLog(String.Format(AppStrings.AppVideoDbNotFound, SelGame.FullAppName, VideoFile)); NullGraphOptions(); } } else { ReadGCFGameSettings(SelGame.SmallAppName); }
 
                 // Переключаем графический твикер в режим GCF/NCF...
                 SetGTOptsType(!SelGame.IsUsingVideoFile);
