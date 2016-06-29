@@ -148,6 +148,7 @@ namespace srcrepair
         public bool IsInstalled { get; private set; }
 
         private string SteamPath;
+        private List<String> SteamIDs;
 
         /// <summary>
         /// Генерирует путь к каталогу установки игры.
@@ -155,7 +156,7 @@ namespace srcrepair
         /// <param name="AppName">Имя каталога приложения</param>
         /// <param name="GameDirs">Возможные каталоги установки</param>
         /// <returns>Возвращает путь к каталогу игры или пустую строку</returns>
-        private string GetGameDirectory(string AppName, string SmallAppName, List<String> GameDirs)
+        private string GetGameDirectory(string AppName, List<String> GameDirs)
         {
             foreach (string Dir in GameDirs)
             {
@@ -171,18 +172,15 @@ namespace srcrepair
         /// <summary>
         /// Ищет все доступные конфиги, хранящиеся в Cloud или его локальной копии.
         /// </summary>
-        /// <param name="SteamIDs">Steam User IDs</param>
-        /// <param name="AppID">ID выбранного приложения</param>
-        /// <param name="SteamPath">Каталог установки Steam</param>
         /// <param name="Mask">Маска файлов для поиска</param>
         /// <returns>Возвращает список найденных файлов с графическими настройками</returns>
-        private List<String> GetCloudConfigs(List<String> SteamIDs, string AppID, string SteamPath, string Mask = "*.*cfg")
+        private List<String> GetCloudConfigs(string Mask = "*.*cfg")
         {
             List<String> Result = new List<String>();
             foreach (string ID in SteamIDs)
             {
                 // Сгенерируем путь к конфигам в локальной копии Cloud...
-                Result.AddRange(CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", ID, AppID), Mask));
+                Result.AddRange(CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", ID, GameInternalID), Mask));
             }
             return Result;
         }
@@ -193,7 +191,7 @@ namespace srcrepair
         public void UpdateVideoFilesList()
         {
             // Ищем файлы с графическими настройками из локального хранилища...
-            VideoCfgFiles = GetCloudConfigs(CoreLib.GetUserIDs(SteamPath), GameInternalID, SteamPath, "video.txt");
+            VideoCfgFiles = GetCloudConfigs("video.txt");
             
             // Добавляем в базу Legacy конфиг...
             VideoCfgFiles.Add(Path.Combine(GamePath, ConfDir, "cfg", "video.txt"));
@@ -233,9 +231,10 @@ namespace srcrepair
             IsUsingUserDir = UserDir;
             IsHUDsAvailable = HUDAv;
             SteamPath = SteamDir;
+            SteamIDs = CoreLib.GetUserIDs(SteamDir);
 
             // Получаем полный путь до каталога управляемого приложения...
-            GamePath = GetGameDirectory(DirName, SmallName, GameDirs);
+            GamePath = GetGameDirectory(DirName, GameDirs);
             
             // Проверяем установлено ли приложение...
             IsInstalled = !String.IsNullOrWhiteSpace(GamePath);
@@ -250,7 +249,7 @@ namespace srcrepair
                 AppHUDDir = Path.Combine(AUserDir, Properties.Settings.Default.HUDLocalDir, SmallAppName);
                 CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : String.Empty);
                 AppWorkshopDir = Path.Combine(SteamDir, Properties.Resources.SteamAppsFolderName, Properties.Resources.WorkshopFolderName, "content", GameInternalID);
-                CloudConfigs = GetCloudConfigs(CoreLib.GetUserIDs(SteamDir), SID, SteamDir);
+                CloudConfigs = GetCloudConfigs();
             }
         }
     }
