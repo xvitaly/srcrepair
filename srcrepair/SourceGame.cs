@@ -224,6 +224,7 @@ namespace srcrepair
         /// <param name="HasVF">Задаёт формат приложения: GCF/NCF (из БД)</param>
         /// <param name="UserDir">Указывает использует ли приложение кастомный каталог (из БД)</param>
         /// <param name="AppPath">Путь к каталогу SRC Repair</param>
+        /// <param name="AUserDir">Путь к каталогу с данными SRC Repair</param>
         /// <param name="UserDir">Путь к пользовательскому каталогу SRC Repair</param>
         /// <param name="SteamDir">Путь к установленному клиенту Steam</param>
         public SourceGame(string AppName, string DirName, string SmallName, string Executable, string SID, string VFDir, bool HasVF, bool UserDir, bool HUDAv, string AppPath, string AUserDir, string SteamDir, List<String> GameDirs)
@@ -238,7 +239,7 @@ namespace srcrepair
             IsUsingUserDir = UserDir;
             IsHUDsAvailable = HUDAv;
             SteamPath = SteamDir;
-            SteamIDs = CoreLib.GetUserIDs(SteamDir);
+            SteamIDs = CoreLib.GetUserIDs(SteamPath);
 
             // Получаем полный путь до каталога управляемого приложения...
             GamePath = GetGameDirectory(DirName, GameDirs);
