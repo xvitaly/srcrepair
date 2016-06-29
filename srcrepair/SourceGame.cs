@@ -186,23 +186,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Ищет все доступные файлы с графическими настройками в локальном хранилище.
-        /// </summary>
-        /// <param name="SteamIDs">Steam User IDs</param>
-        /// <param name="AppID">ID выбранного приложения</param>
-        /// <param name="SteamPath">Каталог установки Steam</param>
-        /// <returns>Возвращает список найденных файлов с графическими настройками</returns>
-        private List<String> GetVideoConfigs(List<String> SteamIDs, string AppID, string SteamPath)
-        {
-            List<String> Result = new List<String>();
-            foreach (string ID in SteamIDs)
-            {
-                Result.AddRange(CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", ID, AppID), "video.txt"));
-            }
-            return Result;
-        }
-
-        /// <summary>
         /// Обновляет список файлов с графическими настройками выбранной игры.
         /// </summary>
         /// <param name="AppID">ID выбранного приложения</param>
@@ -212,7 +195,7 @@ namespace srcrepair
         public void UpdateVideoFilesList(string AppID, string SteamPath, string GamePath, string VideoCfg)
         {
             // Ищем файлы с графическими настройками из локального хранилища...
-            VideoCfgFiles = GetVideoConfigs(CoreLib.GetUserIDs(SteamPath), AppID, SteamPath);
+            VideoCfgFiles = GetCloudConfigs(CoreLib.GetUserIDs(SteamPath), AppID, SteamPath, "video.txt");
             
             // Добавляем в базу Legacy конфиг...
             VideoCfgFiles.Add(Path.Combine(GamePath, VideoCfg, "cfg", "video.txt"));
