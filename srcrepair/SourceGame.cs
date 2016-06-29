@@ -147,7 +147,14 @@ namespace srcrepair
         /// </summary>
         public bool IsInstalled { get; private set; }
 
+        /// <summary>
+        /// Содержит путь к установленному клиенту Steam.
+        /// </summary>
         private string SteamPath;
+
+        /// <summary>
+        /// Содержит найденные userid профилей Steam.
+        /// </summary>
         private List<String> SteamIDs;
 
         /// <summary>
