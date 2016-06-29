@@ -165,21 +165,22 @@ namespace srcrepair
             }
             return null;
         }
-        
+
         /// <summary>
         /// Ищет все доступные конфиги, хранящиеся в Cloud или его локальной копии.
         /// </summary>
         /// <param name="SteamIDs">Steam User IDs</param>
         /// <param name="AppID">ID выбранного приложения</param>
         /// <param name="SteamPath">Каталог установки Steam</param>
+        /// <param name="Mask">Маска файлов для поиска</param>
         /// <returns>Возвращает список найденных файлов с графическими настройками</returns>
-        private List<String> GetCloudConfigs(List<String> SteamIDs, string AppID, string SteamPath)
+        private List<String> GetCloudConfigs(List<String> SteamIDs, string AppID, string SteamPath, string Mask = "*.*cfg")
         {
             List<String> Result = new List<String>();
             foreach (string ID in SteamIDs)
             {
                 // Сгенерируем путь к конфигам в локальной копии Cloud...
-                Result.AddRange(CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", ID, AppID), "*.*cfg"));
+                Result.AddRange(CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", ID, AppID), Mask));
             }
             return Result;
         }
