@@ -140,7 +140,7 @@ namespace srcrepair
         /// <summary>
         /// Содержит путь к файлу со списком заглушенных пользователей.
         /// </summary>
-        public string BanlistFileName { get; private set; }
+        public List<String> BanlistFiles { get; private set; }
 
         /// <summary>
         /// Указывает установлено ли данное приложение.
@@ -205,6 +205,15 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Обновляет список файлов с заблокированными пользователями выбранной игры.
+        /// </summary>
+        private void UpdateBanlistFilesList()
+        {
+            BanlistFiles = GetCloudConfigs("voice_ban.dt");
+            BanlistFiles.Add(Path.Combine(FullGamePath, "voice_ban.dt"));
+        }
+
+        /// <summary>
         /// Возвращает актуальный файл графических настроек игры.
         /// </summary>
         public string GetActualVideoFile()
@@ -253,11 +262,11 @@ namespace srcrepair
                 FullGamePath = Path.Combine(GamePath, SmallAppName);
                 FullCfgPath = Path.Combine(FullGamePath, "cfg");
                 FullBackUpDirPath = Path.Combine(AUserDir, "backups", Path.GetFileName(SmallAppName));
-                BanlistFileName = Path.Combine(FullGamePath, "voice_ban.dt");
                 AppHUDDir = Path.Combine(AUserDir, Properties.Settings.Default.HUDLocalDir, SmallAppName);
                 CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : String.Empty);
                 AppWorkshopDir = Path.Combine(SteamDir, Properties.Resources.SteamAppsFolderName, Properties.Resources.WorkshopFolderName, "content", GameInternalID);
                 if (IsUsingVideoFile) { UpdateVideoFilesList(); }
+                UpdateBanlistFilesList();
                 CloudConfigs = GetCloudConfigs();
             }
         }
