@@ -222,6 +222,14 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Возвращает актуальный файл с базой заблокированных игроков.
+        /// </summary>
+        public string GetActualBanlistFile()
+        {
+            return CoreLib.FindNewerestFile(BanlistFiles);
+        }
+
+        /// <summary>
         /// Конструктор класса. Заполняет информацию о выбранном приложении.
         /// </summary>
         /// <param name="AppName">Название приложения (из БД)</param>
