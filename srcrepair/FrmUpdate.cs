@@ -56,13 +56,18 @@ namespace srcrepair
             Properties.Settings.Default.LastHUDTime = DateTime.Now;
         }
 
+        private void CheckForUpdates()
+        {
+            if (!WrkChkApp.IsBusy) { WrkChkApp.RunWorkerAsync(); }
+        }
+
         private void frmUpdate_Load(object sender, EventArgs e)
         {
             // Заполняем...
             Text = String.Format(Text, Properties.Resources.AppName);
 
             // Запускаем функцию проверки обновлений...
-            if (!WrkChkApp.IsBusy) { WrkChkApp.RunWorkerAsync(); }
+            CheckForUpdates();
         }
 
         private void WrkChkApp_DoWork(object sender, DoWorkEventArgs e)
@@ -133,7 +138,7 @@ namespace srcrepair
                 CoreLib.DownloadFileEx(UpMan.AppUpdateURL, UpdateFileName);
 
                 // Выполняем проверки и устанавливаем обновление...
-                if (File.Exists(UpdateFileName)) { if (CoreLib.CalculateFileMD5(UpdateFileName) == UpMan.AppUpdateHash) { UpdateTimeSetApp(); MessageBox.Show(AppStrings.UPD_UpdateSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); try { Process.Start(UpdateFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); } Environment.Exit(9); } else { try { File.Delete(UpdateFileName); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } MessageBox.Show(AppStrings.UPD_HashFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); } } else { MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                if (File.Exists(UpdateFileName)) { if (CoreLib.CalculateFileMD5(UpdateFileName) == UpMan.AppUpdateHash) { UpdateTimeSetApp(); MessageBox.Show(AppStrings.UPD_UpdateSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); try { Process.Start(UpdateFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); } Environment.Exit(9); } else { try { File.Delete(UpdateFileName); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } MessageBox.Show(AppStrings.UPD_HashFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); } } else { MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); CheckForUpdates(); }
             }
             else
             {
@@ -185,6 +190,9 @@ namespace srcrepair
                     
                     // Удаляем загруженный файл если он существует...
                     if (File.Exists(UpdateTempFile)) { File.Delete(UpdateTempFile); }
+
+                    // Закрываем форму...
+                    CheckForUpdates();
                 }
                 else
                 {
@@ -205,7 +213,7 @@ namespace srcrepair
             {
                 if (CoreLib.IsDirectoryWritable(FullAppPath))
                 {
-                    string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Resources.GameListFile)); string UpdateTempFile = Path.GetTempFileName(); CoreLib.DownloadFileEx(UpMan.GameUpdateURL, UpdateTempFile); try { if (CoreLib.CalculateFileMD5(UpdateTempFile) == UpMan.GameUpdateHash) { File.Copy(UpdateTempFile, UpdateFileName, true); MessageBox.Show(AppStrings.UPD_GamL_Updated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(AppStrings.UPD_HashFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); } } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); } if (File.Exists(UpdateTempFile)) { File.Delete(UpdateTempFile); }
+                    string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Resources.GameListFile)); string UpdateTempFile = Path.GetTempFileName(); CoreLib.DownloadFileEx(UpMan.GameUpdateURL, UpdateTempFile); try { if (CoreLib.CalculateFileMD5(UpdateTempFile) == UpMan.GameUpdateHash) { File.Copy(UpdateTempFile, UpdateFileName, true); MessageBox.Show(AppStrings.UPD_GamL_Updated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(AppStrings.UPD_HashFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); } } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); } if (File.Exists(UpdateTempFile)) { File.Delete(UpdateTempFile); } CheckForUpdates();
                 }
                 else
                 {
