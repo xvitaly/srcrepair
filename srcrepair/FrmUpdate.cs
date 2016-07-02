@@ -56,6 +56,9 @@ namespace srcrepair
             Properties.Settings.Default.LastHUDTime = DateTime.Now;
         }
 
+        /// <summary>
+        /// Начинает процесс поиска обновлений в отдельном потоке.
+        /// </summary>
         private void CheckForUpdates()
         {
             if (!WrkChkApp.IsBusy) { WrkChkApp.RunWorkerAsync(); }
