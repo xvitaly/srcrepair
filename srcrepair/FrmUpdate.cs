@@ -88,7 +88,7 @@ namespace srcrepair
                         File.Copy(UpdateTempFile, UpdateFileName, true);
 
                         // Выводим сообщение об успехе...
-                        MessageBox.Show(AppStrings.UPD_HUDDb_Updated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(AppStrings.UPD_UpdateDBSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         // Возвращаем положительный результат...
                         Result = true;
@@ -212,6 +212,7 @@ namespace srcrepair
             // Проверяем наличие обновлений...
             if (UpMan.CheckHUDUpdate())
             {
+                // Запускаем процесс установки обновления...
                 if (InstallUpdate(Properties.Resources.HUDDbFile, UpMan.HUDUpdateURL, UpMan.HUDUpdateHash))
                 {
                     // Обновляем дату последней проверки обновлений...
@@ -221,7 +222,7 @@ namespace srcrepair
             else
             {
                 // Обновление не требуется. Выводим соответствующее сообщение...
-                MessageBox.Show(AppStrings.UPD_HUDDb_Latest, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(AppStrings.UPD_LatestDBInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -229,18 +230,11 @@ namespace srcrepair
         {
             if (UpMan.CheckGameDBUpdate())
             {
-                if (CoreLib.IsDirectoryWritable(FullAppPath))
-                {
-                    string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Resources.GameListFile)); string UpdateTempFile = Path.GetTempFileName(); CoreLib.DownloadFileEx(UpMan.GameUpdateURL, UpdateTempFile); try { if (CoreLib.CalculateFileMD5(UpdateTempFile) == UpMan.GameUpdateHash) { File.Copy(UpdateTempFile, UpdateFileName, true); MessageBox.Show(AppStrings.UPD_GamL_Updated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(AppStrings.UPD_HashFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); } } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); } if (File.Exists(UpdateTempFile)) { File.Delete(UpdateTempFile); } CheckForUpdates();
-                }
-                else
-                {
-                    MessageBox.Show(AppStrings.UPD_NoWritePermissions, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                InstallUpdate(Properties.Resources.GameListFile, UpMan.GameUpdateURL, UpMan.GameUpdateHash);
             }
             else
             {
-                MessageBox.Show(AppStrings.UPD_GamL_Latest, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(AppStrings.UPD_LatestDBInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
