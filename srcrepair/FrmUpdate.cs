@@ -64,6 +64,63 @@ namespace srcrepair
             if (!WrkChkApp.IsBusy) { WrkChkApp.RunWorkerAsync(); }
         }
 
+        private bool InstallUpdate(string ResFileName, string UpdateURL, string UpdateHash)
+        {
+            // Задаём значения переменных по умолчанию...
+            bool Result = false;
+
+            // Проверяем наличие прав на запись в каталог...
+            if (CoreLib.IsDirectoryWritable(FullAppPath))
+            {
+                // Генерируем пути к файлам...
+                string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(FullAppPath, ResFileName));
+                string UpdateTempFile = Path.GetTempFileName();
+
+                // Загружаем файл с сервера...
+                CoreLib.DownloadFileEx(UpdateURL, UpdateTempFile);
+
+                try
+                {
+                    // Проверяем контрольную сумму...
+                    if (CoreLib.CalculateFileMD5(UpdateTempFile) == UpdateHash)
+                    {
+                        // Копируем загруженный файл...
+                        File.Copy(UpdateTempFile, UpdateFileName, true);
+
+                        // Выводим сообщение об успехе...
+                        MessageBox.Show(AppStrings.UPD_HUDDb_Updated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Возвращаем положительный результат...
+                        Result = true;
+                    }
+                    else
+                    {
+                        // Выводим сообщение о несовпадении хешей...
+                        MessageBox.Show(AppStrings.UPD_HashFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    // Выводим сообщение об ошибке...
+                    CoreLib.HandleExceptionEx(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                }
+
+                // Удаляем загруженный файл если он существует...
+                if (File.Exists(UpdateTempFile)) { File.Delete(UpdateTempFile); }
+
+                // Повторяем поиск обновлений...
+                CheckForUpdates();
+            }
+            else
+            {
+                // Выводим сообщение об отсутствии прав на запись в каталог...
+                MessageBox.Show(AppStrings.UPD_NoWritePermissions, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            // Возвращаем результат...
+            return Result;
+        }
+
         private void frmUpdate_Load(object sender, EventArgs e)
         {
             // Заполняем...
@@ -155,52 +212,10 @@ namespace srcrepair
             // Проверяем наличие обновлений...
             if (UpMan.CheckHUDUpdate())
             {
-                // Проверяем наличие прав на запись в каталог...
-                if (CoreLib.IsDirectoryWritable(FullAppPath))
+                if (InstallUpdate(Properties.Resources.HUDDbFile, UpMan.HUDUpdateURL, UpMan.HUDUpdateHash))
                 {
-                    // Генерируем пути к файлам...
-                    string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(FullAppPath, Properties.Resources.HUDDbFile));
-                    string UpdateTempFile = Path.GetTempFileName();
-
-                    // Загружаем файл с сервера...
-                    CoreLib.DownloadFileEx(UpMan.HUDUpdateURL, UpdateTempFile);
-
-                    try
-                    {
-                        // Проверяем контрольную сумму...
-                        if (CoreLib.CalculateFileMD5(UpdateTempFile) == UpMan.HUDUpdateHash)
-                        {
-                            // Копируем загруженный файл...
-                            File.Copy(UpdateTempFile, UpdateFileName, true);
-
-                            // Обновляем дату последней проверки обновлений...
-                            UpdateTimeSetHUD();
-
-                            // Выводим сообщение об успехе...
-                            MessageBox.Show(AppStrings.UPD_HUDDb_Updated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            // Выводим сообщение о несовпадении хешей...
-                            MessageBox.Show(AppStrings.UPD_HashFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                    catch (Exception Ex)
-                    {
-                        // Выводим сообщение об ошибке...
-                        CoreLib.HandleExceptionEx(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
-                    }
-                    
-                    // Удаляем загруженный файл если он существует...
-                    if (File.Exists(UpdateTempFile)) { File.Delete(UpdateTempFile); }
-
-                    // Повторяем поиск обновлений...
-                    CheckForUpdates();
-                }
-                else
-                {
-                    // Выводим сообщение об отсутствии прав на запись в каталог...
-                    MessageBox.Show(AppStrings.UPD_NoWritePermissions, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Обновляем дату последней проверки обновлений...
+                    UpdateTimeSetHUD();
                 }
             }
             else
