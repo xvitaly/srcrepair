@@ -1735,24 +1735,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Update is not required because you have the latest version of the game database..
-        /// </summary>
-        internal static string UPD_GamL_Latest {
-            get {
-                return ResourceManager.GetString("UPD_GamL_Latest", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The game database has been updated successfully. Restart this program..
-        /// </summary>
-        internal static string UPD_GamL_Updated {
-            get {
-                return ResourceManager.GetString("UPD_GamL_Updated", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Downloaded file has incorrect hash. Maybe it was corrupted. Please try again later!.
         /// </summary>
         internal static string UPD_HashFailure {
@@ -1767,24 +1749,6 @@ namespace srcrepair {
         internal static string UPD_HUDCheckFailure {
             get {
                 return ResourceManager.GetString("UPD_HUDCheckFailure", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Update is not required because you have the latest version of the HUD database..
-        /// </summary>
-        internal static string UPD_HUDDb_Latest {
-            get {
-                return ResourceManager.GetString("UPD_HUDDb_Latest", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The HUD database has been updated successfully. Restart this program..
-        /// </summary>
-        internal static string UPD_HUDDb_Updated {
-            get {
-                return ResourceManager.GetString("UPD_HUDDb_Updated", resourceCulture);
             }
         }
         
@@ -1807,6 +1771,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Update is not required because you already have the latest version..
+        /// </summary>
+        internal static string UPD_LatestDBInstalled {
+            get {
+                return ResourceManager.GetString("UPD_LatestDBInstalled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update is not required because you have the latest version of the program..
         /// </summary>
         internal static string UPD_LatestInstalled {
@@ -1821,6 +1794,15 @@ namespace srcrepair {
         internal static string UPD_NoWritePermissions {
             get {
                 return ResourceManager.GetString("UPD_NoWritePermissions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The database has been updated successfully!.
+        /// </summary>
+        internal static string UPD_UpdateDBSuccessful {
+            get {
+                return ResourceManager.GetString("UPD_UpdateDBSuccessful", resourceCulture);
             }
         }
         

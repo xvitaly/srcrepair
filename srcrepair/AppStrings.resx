@@ -468,12 +468,6 @@
   <data name="GT_NCFNReady" xml:space="preserve">
     <value>Warning! To save the graphical settings, you must fill in all the forms!</value>
   </data>
-  <data name="UPD_GamL_Latest" xml:space="preserve">
-    <value>Update is not required because you have the latest version of the game database.</value>
-  </data>
-  <data name="UPD_GamL_Updated" xml:space="preserve">
-    <value>The game database has been updated successfully. Restart this program.</value>
-  </data>
   <data name="AHE_KRegErr" xml:space="preserve">
     <value>Unable to get path to the Hosts file from registry. Will try standard path.</value>
   </data>
@@ -566,12 +560,6 @@
   </data>
   <data name="HD_AlreadyInstalled" xml:space="preserve">
     <value>Selected HUD already installed. If you want to reinstall, remove it first!</value>
-  </data>
-  <data name="UPD_HUDDb_Latest" xml:space="preserve">
-    <value>Update is not required because you have the latest version of the HUD database.</value>
-  </data>
-  <data name="UPD_HUDDb_Updated" xml:space="preserve">
-    <value>The HUD database has been updated successfully. Restart this program.</value>
   </data>
   <data name="UPD_HUDNoUpdates" xml:space="preserve">
     <value>No new updates detected. SRC Repair is using latest version of HUD database.</value>
@@ -710,5 +698,11 @@
   </data>
   <data name="UPD_HashFailure" xml:space="preserve">
     <value>Downloaded file has incorrect hash. Maybe it was corrupted. Please try again later!</value>
+  </data>
+  <data name="UPD_LatestDBInstalled" xml:space="preserve">
+    <value>Update is not required because you already have the latest version.</value>
+  </data>
+  <data name="UPD_UpdateDBSuccessful" xml:space="preserve">
+    <value>The database has been updated successfully!</value>
   </data>
 </root>
