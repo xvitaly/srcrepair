@@ -87,6 +87,13 @@ namespace srcrepair
             if (!WrkChkApp.IsBusy) { WrkChkApp.RunWorkerAsync(); }
         }
 
+        /// <summary>
+        /// Устанавливает обновление базы данных.
+        /// </summary>
+        /// <param name="ResFileName">Имя файла для обновления</param>
+        /// <param name="UpdateURL">URL загрузки обновления</param>
+        /// <param name="UpdateHash">Контрольная сумма файла обновления</param>
+        /// <returns>Возвращает true при успешной установке обновления, иначе - false.</returns>
         private bool InstallUpdate(string ResFileName, string UpdateURL, string UpdateHash)
         {
             // Задаём значения переменных по умолчанию...
