@@ -24,8 +24,17 @@ using System.Windows.Forms;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Форма модуля обновления программы SRC Repair.
+    /// </summary>
     public partial class frmUpdate : Form
     {
+        /// <summary>
+        /// Конструктор класса frmUpdate.
+        /// </summary>
+        /// <param name="UA">Заголовок UserAgent</param>
+        /// <param name="A">Путь к каталогу программы</param>
+        /// <param name="U">Путь к пользовательскому каталогу</param>
         public frmUpdate(string UA, string A, string U)
         {
             InitializeComponent();
@@ -33,6 +42,7 @@ namespace srcrepair
             FullAppPath = A;
             AppUserDir = U;
         }
+
         /// <summary>
         /// Менеджер обновлений: управляет процессом поиска и установки обновлений.
         /// </summary>
