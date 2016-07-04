@@ -33,10 +33,24 @@ namespace srcrepair
             FullAppPath = A;
             AppUserDir = U;
         }
-
+        /// <summary>
+        /// Менеджер обновлений: управляет процессом поиска и установки обновлений.
+        /// </summary>
         private UpdateManager UpMan;
+
+        /// <summary>
+        /// Хранит полученный UserAgent для HTTP запросов.
+        /// </summary>
         private string UserAgent;
+
+        /// <summary>
+        /// Хранит путь к пользовательскому каталогу SRC Repair.
+        /// </summary>
         private string AppUserDir;
+
+        /// <summary>
+        /// Хранит путь установки SRC Repair.
+        /// </summary>
         private string FullAppPath;
 
         /// <summary>
