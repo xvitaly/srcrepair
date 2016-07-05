@@ -69,7 +69,6 @@ namespace srcrepair
             // Начинаем сохранять содержимое редактора в файл...
             using (StreamWriter CFile = new StreamWriter(Path))
             {
-                CFile.WriteLine(); // вставляем пустую строку
                 for (int i = 0; i < CE_Editor.Rows.Count; i++) // запускаем цикл
                 {
                     CFile.WriteLine("{0} {1}", CE_Editor.Rows[i].Cells[0].Value, CE_Editor.Rows[i].Cells[1].Value);
