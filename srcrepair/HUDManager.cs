@@ -104,6 +104,16 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Проверяет актуальность базы HUD.
+        /// </summary>
+        /// <param name="LastHUDUpdate">Дата последней проверки обновлений базы HUD</param>
+        /// <returns>Булево актуальности базы HUD</returns>
+        public static bool CheckHUDDatabase(DateTime LastHUDUpdate)
+        {
+            return (DateTime.Now - LastHUDUpdate).Days >= 7;
+        }
+
+        /// <summary>
         /// Конструктор класса. Читает базу данных в формате XML и заполняет нашу структуру.
         /// </summary>
         /// <param name="HUDDbFile">Путь к БД HUD</param>
