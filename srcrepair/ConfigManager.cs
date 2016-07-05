@@ -79,6 +79,20 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Генерирует массив, содержащий пути к FPS-конфигам.
+        /// </summary>
+        /// <param name="GamePath">Каталог управляемого приложения</param>
+        /// <param name="UserDir">Указывает использует ли управляемое приложение пользовательский каталог</param>
+        /// <returns>Возвращает массив с сгенерированными путями до FPS-конфигов</returns>
+        public static List<String> ListFPSConfigs(string GamePath, bool UserDir)
+        {
+            List<String> Result = new List<String>();
+            Result.Add(Path.Combine(GamePath, "cfg", "autoexec.cfg"));
+            if (UserDir) { Result.Add(Path.Combine(GamePath, "custom", "autoexec.cfg")); }
+            return Result;
+        }
+
+        /// <summary>
         /// Конструктор класса. Читает базу данных в формате XML и заполняет нашу структуру.
         /// </summary>
         /// <param name="CfgDbFile">Путь к БД конфигов</param>

@@ -698,65 +698,13 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Генерирует массив, содержащий пути к FPS-конфигам.
-        /// </summary>
-        /// <param name="GamePath">Каталог управляемого приложения</param>
-        /// <param name="UserDir">Указывает использует ли управляемое приложение пользовательский каталог</param>
-        /// <returns>Возвращает массив с сгенерированными путями до FPS-конфигов</returns>
-        private List<String> ListFPSConfigs(string GamePath, bool UserDir)
-        {
-            List<String> Result = new List<String>();
-            Result.Add(Path.Combine(GamePath, "cfg", "autoexec.cfg"));
-            if (UserDir) { Result.Add(Path.Combine(GamePath, "custom", "autoexec.cfg")); }
-            return Result;
-        }
-
-        /// <summary>
-        /// Ищет файлы по указанным маскам в указанных каталогах
-        /// </summary>
-        /// <param name="CleanDirs">Каталоги для выполнения очистки с маской имени</param>
-        /// <param name="IsRecursive">Включает / отключает рекурсивный поиск</param>
-        /// <returns>Возвращает массив с именами файлов и полными путями</returns>
-        private List<String> ExpandFileList(List<String> CleanDirs, bool IsRecursive)
-        {
-            List<String> Result = new List<String>();
-            foreach (string DirMs in CleanDirs)
-            {
-                string CleanDir = Path.GetDirectoryName(DirMs);
-                string CleanMask = Path.GetFileName(DirMs);
-                if (Directory.Exists(CleanDir))
-                {
-                    try
-                    {
-                        DirectoryInfo DInfo = new DirectoryInfo(CleanDir);
-                        FileInfo[] DirList = DInfo.GetFiles(CleanMask);
-                        foreach (FileInfo DItem in DirList) { Result.Add(DItem.FullName); }
-
-                        if (IsRecursive)
-                        {
-                            try
-                            {
-                                List<String> SubDirs = new List<string>();
-                                foreach (DirectoryInfo Dir in DInfo.GetDirectories()) { SubDirs.Add(Path.Combine(Dir.FullName, CleanMask)); }
-                                if (SubDirs.Count > 0) { Result.AddRange(ExpandFileList(SubDirs, true)); }
-                            }
-                            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                        }
-                    }
-                    catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                }
-            }
-            return Result;
-        }
-
-        /// <summary>
         /// Управляет выводом значка активного FPS-конфига и кнопки их удаления.
         /// </summary>
         /// <param name="GameDir">Полный путь к каталогу игры</param>
         /// <param name="UserDir">Флаг использования кастомного каталога</param>
         private void HandleConfigs(string GameDir, bool UserDir)
         {
-            SelGame.FPSConfigs = ExpandFileList(ListFPSConfigs(GameDir, UserDir), true);
+            SelGame.FPSConfigs = CoreLib.ExpandFileList(ConfigManager.ListFPSConfigs(GameDir, UserDir), true);
             GT_Warning.Visible = SelGame.FPSConfigs.Count > 0;
             FP_Uninstall.Enabled = SelGame.FPSConfigs.Count > 0;
         }
