@@ -72,9 +72,7 @@ namespace srcrepair
                 CFile.WriteLine(); // вставляем пустую строку
                 for (int i = 0; i < CE_Editor.Rows.Count; i++) // запускаем цикл
                 {
-                    CFile.Write(CE_Editor.Rows[i].Cells[0].Value); // вставляем содержимое первого столбца (название переменной)
-                    CFile.Write(" "); // вставляем пробел
-                    CFile.WriteLine(CE_Editor.Rows[i].Cells[1].Value); // вставляем содержимое второго столбца (значение переменной)
+                    CFile.WriteLine("{0} {1}", CE_Editor.Rows[i].Cells[0].Value, CE_Editor.Rows[i].Cells[1].Value);
                 }
             }
         }
