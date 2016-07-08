@@ -116,6 +116,32 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Запускает процесс с правами администратора посредством UAC.
+        /// </summary>
+        /// <param name="FileName">Путь к файлу для выполнения</param>
+        /// <returns>Возвращает PID запущенного процесса.</returns>
+        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
+        public static int StartWithUAC(string FileName)
+        {
+            // Создаём объекты...
+            Process p = new Process();
+            ProcessStartInfo ps = new ProcessStartInfo();
+
+            // Задаём свойства...
+            ps.FileName = FileName;
+            ps.Verb = "runas";
+            ps.WindowStyle = ProcessWindowStyle.Normal;
+            ps.UseShellExecute = true;
+            p.StartInfo = ps;
+
+            // Запускаем процесс...
+            p.Start();
+
+            // Возвращаем PID запущенного процесса...
+            return p.Id;
+        }
+
+        /// <summary>
         /// Проверяет есть ли у пользователя, с правами которого запускается
         /// программа, привилегии локального администратора.
         /// </summary>
