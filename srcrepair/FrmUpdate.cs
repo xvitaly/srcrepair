@@ -94,7 +94,7 @@ namespace srcrepair
         /// <param name="UpdateURL">URL загрузки обновления</param>
         /// <param name="UpdateHash">Контрольная сумма файла обновления</param>
         /// <returns>Возвращает true при успешной установке обновления, иначе - false.</returns>
-        private bool InstallUpdate(string ResFileName, string UpdateURL, string UpdateHash)
+        private bool InstallDatabaseUpdate(string ResFileName, string UpdateURL, string UpdateHash)
         {
             // Задаём значения переменных по умолчанию...
             bool Result = false;
@@ -243,7 +243,7 @@ namespace srcrepair
             if (UpMan.CheckHUDUpdate())
             {
                 // Запускаем процесс установки обновления...
-                if (InstallUpdate(Properties.Resources.HUDDbFile, UpMan.HUDUpdateURL, UpMan.HUDUpdateHash))
+                if (InstallDatabaseUpdate(Properties.Resources.HUDDbFile, UpMan.HUDUpdateURL, UpMan.HUDUpdateHash))
                 {
                     // Обновляем дату последней проверки обновлений...
                     UpdateTimeSetHUD();
@@ -260,7 +260,7 @@ namespace srcrepair
         {
             if (UpMan.CheckGameDBUpdate())
             {
-                InstallUpdate(Properties.Resources.GameListFile, UpMan.GameUpdateURL, UpMan.GameUpdateHash);
+                InstallDatabaseUpdate(Properties.Resources.GameListFile, UpMan.GameUpdateURL, UpMan.GameUpdateHash);
             }
             else
             {
