@@ -151,6 +151,12 @@ namespace srcrepair
             return Result;
         }
 
+        /// <summary>
+        /// Устанавливает обновление в виде отдельного исполняемого файла.
+        /// </summary>
+        /// <param name="UpdateURL">URL загрузки обновления</param>
+        /// <param name="UpdateHash">Контрольная сумма файла обновления</param>
+        /// <returns>Возвращает true при успешной установке обновления, иначе - false.</returns>
         private bool InstallBinaryUpdate(string UpdateURL, string UpdateHash)
         {
             // Задаём значения переменных по умолчанию...
