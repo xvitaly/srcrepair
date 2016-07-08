@@ -151,6 +151,54 @@ namespace srcrepair
             return Result;
         }
 
+        private bool InstallBinaryUpdate(string UpdateURL, string UpdateHash)
+        {
+            // Задаём значения переменных по умолчанию...
+            bool Result = false;
+
+            // Генерируем имя файла обновления...
+            string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(AppUserDir, Path.GetFileName(UpdateURL)));
+
+            // Загружаем файл асинхронно...
+            CoreLib.DownloadFileEx(UpMan.AppUpdateURL, UpdateFileName);
+
+            // Выполняем проверки и устанавливаем обновление...
+            if (File.Exists(UpdateFileName))
+            {
+                // Проверяем хеш загруженного файла с эталоном...
+                if (CoreLib.CalculateFileMD5(UpdateFileName) == UpdateHash)
+                {
+                    // Обновляем дату последней проверки обновлений...
+                    UpdateTimeSetApp();
+
+                    // Выводим сообщение об успешном окончании загрузки и готовности к установке обновления...
+                    MessageBox.Show(AppStrings.UPD_UpdateSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Запускаем установку standalone-обновления...
+                    try { Process.Start(UpdateFileName); Result = true; } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
+                }
+                else
+                {
+                    // Хеш-сумма не совпала, поэтому файл скорее всего повреждён. Удаляем...
+                    try { File.Delete(UpdateFileName); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+
+                    // Выводим сообщение о несовпадении контрольной суммы...
+                    MessageBox.Show(AppStrings.UPD_HashFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                // Не удалось загрузить файл обновления. Выводим сообщение об ошибке...
+                MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            // Повторно запускаем проверку обновлений...
+            CheckForUpdates();
+
+            // Возвращаем результат...
+            return Result;
+        }
+
         private void frmUpdate_Load(object sender, EventArgs e)
         {
             // Заполняем...
@@ -221,14 +269,12 @@ namespace srcrepair
             // Проверяем наличие обновлений программы...
             if (UpMan.CheckAppUpdate())
             {
-                // Генерируем имя файла обновления...
-                string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(AppUserDir, Path.GetFileName(UpMan.AppUpdateURL)));
-
-                // Загружаем файл асинхронно...
-                CoreLib.DownloadFileEx(UpMan.AppUpdateURL, UpdateFileName);
-
-                // Выполняем проверки и устанавливаем обновление...
-                if (File.Exists(UpdateFileName)) { if (CoreLib.CalculateFileMD5(UpdateFileName) == UpMan.AppUpdateHash) { UpdateTimeSetApp(); MessageBox.Show(AppStrings.UPD_UpdateSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); try { Process.Start(UpdateFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); } Environment.Exit(9); } else { try { File.Delete(UpdateFileName); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } MessageBox.Show(AppStrings.UPD_HashFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); } } else { MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); CheckForUpdates(); }
+                // Устанавливаем доступное обновление...
+                if (InstallBinaryUpdate(UpMan.AppUpdateURL, UpMan.AppUpdateHash))
+                {
+                    // Загрузка завершилась успешно. Завершаем работу приложения для установки...
+                    Environment.Exit(9);
+                }
             }
             else
             {
