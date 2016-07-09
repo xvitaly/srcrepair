@@ -77,6 +77,7 @@ fetch_hud https://github.com/Yo5hi/ysHUD/archive/master.zip yshud
 fetch_hud https://github.com/TheStaticVoid/boredHUD/archive/master.zip boredhud
 fetch_hud https://github.com/hoXyy/GMang_HUD/archive/master.zip gmanghud
 fetch_hud https://github.com/CriticalFlaw/FlawHUD/archive/master.zip flawhud
+fetch_hud https://github.com/kermit-tf/QTCHud/archive/master.zip qtchud
 
 # Other sources...
 fetch_hud https://gitgud.io/JediThug/JediHUD/repository/archive.zip jedihud

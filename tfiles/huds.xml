@@ -507,4 +507,17 @@
     <ArchiveDir>DoggyHudV2</ArchiveDir>
     <InstallDir>doggyhud</InstallDir>
   </HUD>
+  <HUD>
+    <Name>QTCHUD</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/qtchud/qtchud_c8607d34.zip</URI>
+    <UpURI>https://github.com/kermit-tf/QTCHud/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/qtchud.png</Preview>
+    <RepoPath>https://github.com/kermit-tf/QTCHud</RepoPath>
+    <LastUpdate>1468065414</LastUpdate>
+    <Site>http://huds.tf/forum/showthread.php?tid=243</Site>
+    <ArchiveDir>QTCHud-master</ArchiveDir>
+    <InstallDir>qtchud</InstallDir>
+  </HUD>
 </HUDs>
