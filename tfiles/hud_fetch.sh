@@ -80,6 +80,7 @@ fetch_hud https://github.com/CriticalFlaw/FlawHUD/archive/master.zip flawhud
 fetch_hud https://github.com/kermit-tf/QTCHud/archive/master.zip qtchud
 fetch_hud https://github.com/Hypnootize/m0rehud/archive/master.zip m0rehud
 fetch_hud https://github.com/nimtra/mkHUD/archive/master.zip mkhud
+fetch_hud https://github.com/Marblr/mHUD/archive/master.zip mhud
 
 # Other sources...
 fetch_hud https://gitgud.io/JediThug/JediHUD/repository/archive.zip jedihud
