@@ -43,6 +43,7 @@ function fetch_hud
     echo " Done."
 }
 
+# From GitHub...
 fetch_hud https://github.com/Sevin7/7HUD/archive/master.zip 7HUD
 fetch_hud https://github.com/piklestf2/pikles-hud/archive/master.zip pikles-hud
 fetch_hud https://github.com/fblue/broeselhud_blue/archive/master.zip broeselhud_blue
@@ -57,13 +58,11 @@ fetch_hud https://github.com/flatlinee/flatHUD-/archive/master.zip flathud
 fetch_hud https://github.com/bw-/bw-HUD/archive/master.zip bwhud
 fetch_hud https://github.com/WhiskerBiscuit/budhud/archive/master.zip budhud
 fetch_hud https://github.com/Eniere/idhud/archive/master.zip idhud
-fetch_hud https://gitgud.io/JediThug/JediHUD/repository/archive.zip jedihud
 fetch_hud https://github.com/omnibombulator/noto/archive/master.zip noto
 fetch_hud https://github.com/ItsMorgus/MorgHUD/archive/master.zip morghud
 fetch_hud https://github.com/Jotunn/KBNHud/archive/master.zip kbnhud
 fetch_hud https://github.com/Intellectualbadass/medHUD/archive/master.zip medhud
 fetch_hud https://github.com/raysfire/rayshud/archive/master.zip rayshud
-fetch_hud http://files.gamebanana.com/guis/eve_hud_v378.zip evehud
 fetch_hud https://github.com/MedicodiBiscotti/biscottiHUD/archive/master.zip biscottihud
 fetch_hud https://github.com/mattr0d/flamehud/archive/master.zip flamehud
 fetch_hud https://github.com/TheKins/frankenhud/archive/master.zip frankenhud
@@ -77,5 +76,11 @@ fetch_hud https://github.com/Stochast1c/solarhud/archive/master.zip solarhud
 fetch_hud https://github.com/Yo5hi/ysHUD/archive/master.zip yshud
 fetch_hud https://github.com/TheStaticVoid/boredHUD/archive/master.zip boredhud
 fetch_hud https://github.com/hoXyy/GMang_HUD/archive/master.zip gmanghud
+
+# Other sources...
+fetch_hud https://gitgud.io/JediThug/JediHUD/repository/archive.zip jedihud
+fetch_hud http://files.gamebanana.com/guis/eve_hud_v378.zip evehud
 fetch_hud http://files.gamebanana.com/guis/revhud-jan17.zip revhud
+
+# Need to be repacked...
 fetch_hud https://github.com/JackStanley/TF2slimHUD/archive/Main.zip slimhud
