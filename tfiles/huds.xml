@@ -481,4 +481,17 @@
     <ArchiveDir>TF2slimHUD-Main/slimHUD</ArchiveDir>
     <InstallDir>slimhud</InstallDir>
   </HUD>
+  <HUD>
+    <Name>FlawHUD</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/flawhud/flawhud_a7cb3cdf.zip</URI>
+    <UpURI>https://github.com/CriticalFlaw/FlawHUD/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/flawhud.png</Preview>
+    <RepoPath>https://github.com/CriticalFlaw/FlawHUD</RepoPath>
+    <LastUpdate>1468061310</LastUpdate>
+    <Site>http://huds.tf/flawhud/</Site>
+    <ArchiveDir>FlawHUD-master</ArchiveDir>
+    <InstallDir>flawhud</InstallDir>
+  </HUD>
 </HUDs>
