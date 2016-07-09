@@ -494,4 +494,17 @@
     <ArchiveDir>FlawHUD-master</ArchiveDir>
     <InstallDir>flawhud</InstallDir>
   </HUD>
+  <HUD>
+    <Name>DoggyHUD</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/doggyhud/doggyhud_73fde877.zip</URI>
+    <UpURI>http://huds.tf/forum/xthreads_attach.php/151_1468069037_c96274f0/2e863cebac5b6ff6c2c39aa2b42fdf99/DoggyHudV2.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/doggyhud.png</Preview>
+    <RepoPath></RepoPath>
+    <LastUpdate>1468065600</LastUpdate>
+    <Site>http://huds.tf/forum/showthread.php?tid=227</Site>
+    <ArchiveDir>DoggyHudV2</ArchiveDir>
+    <InstallDir>doggyhud</InstallDir>
+  </HUD>
 </HUDs>

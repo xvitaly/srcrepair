@@ -82,6 +82,7 @@ fetch_hud https://github.com/CriticalFlaw/FlawHUD/archive/master.zip flawhud
 fetch_hud https://gitgud.io/JediThug/JediHUD/repository/archive.zip jedihud
 fetch_hud http://files.gamebanana.com/guis/eve_hud_v378.zip evehud
 fetch_hud http://files.gamebanana.com/guis/revhud-jan17.zip revhud
+fetch_hud http://huds.tf/forum/xthreads_attach.php/151_1468069037_c96274f0/2e863cebac5b6ff6c2c39aa2b42fdf99/DoggyHudV2.zip doggyhud
 
 # Need to be repacked...
 fetch_hud https://github.com/JackStanley/TF2slimHUD/archive/Main.zip slimhud
