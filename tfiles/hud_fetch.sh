@@ -55,7 +55,7 @@ fetch_hud https://github.com/n0kk/ahud/archive/master.zip ahud
 fetch_hud https://github.com/Slayer89/slayhud/archive/master.zip calmlikeabomb
 fetch_hud https://github.com/basbanaan/EJP-HUD/archive/master.zip ejphud
 fetch_hud https://github.com/flatlinee/flatHUD-/archive/master.zip flathud
-fetch_hud https://github.com/bw-/bw-HUD/archive/master.zip bwhud
+fetch_hud https://github.com/bw-/bwhud/archive/master.zip bwhud
 fetch_hud https://github.com/WhiskerBiscuit/budhud/archive/master.zip budhud
 fetch_hud https://github.com/Eniere/idhud/archive/master.zip idhud
 fetch_hud https://github.com/omnibombulator/noto/archive/master.zip noto
