@@ -3,12 +3,12 @@
   <HUD>
     <Name>7HUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/7HUD/7HUD_ebc16fbb.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/7HUD/7HUD_8edcc88a.zip</URI>
     <UpURI>https://github.com/Sevin7/7HUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/7HUD.png</Preview>
     <RepoPath>https://github.com/Sevin7/7HUD</RepoPath>
-    <LastUpdate>1465764702</LastUpdate>
+    <LastUpdate>1468013807</LastUpdate>
     <Site>http://huds.tf/7hud/</Site>
     <ArchiveDir>7HUD-master</ArchiveDir>
     <InstallDir>7hud</InstallDir>
@@ -29,12 +29,12 @@
   <HUD>
     <Name>broeselhud_blue</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/broeselhud_blue/broeselhud_blue_6cdadc6c.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/broeselhud_blue/broeselhud_blue_5d792131.zip</URI>
     <UpURI>https://github.com/fblue/broeselhud_blue/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/broeselhud_blue.png</Preview>
     <RepoPath>https://github.com/fblue/broeselhud_blue</RepoPath>
-    <LastUpdate>1462465751</LastUpdate>
+    <LastUpdate>1468056974</LastUpdate>
     <Site>http://huds.tf/broeselhudblue/</Site>
     <ArchiveDir>broeselhud_blue-master</ArchiveDir>
     <InstallDir>broeselhudblue</InstallDir>
@@ -81,12 +81,12 @@
   <HUD>
     <Name>ToonHUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/toonhud/toonhud_ccc883dc.zip</URI>
-    <UpURI>http://sourceforge.net/projects/srcrepair/files/huds/toonhud/toonhud_ccc883dc.zip</UpURI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/toonhud/toonhud_a8fbb502.zip</URI>
+    <UpURI>http://sourceforge.net/projects/srcrepair/files/huds/toonhud/toonhud_a8fbb502.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/toonhud.png</Preview>
     <RepoPath></RepoPath>
-    <LastUpdate>1464516000</LastUpdate>
+    <LastUpdate>1468008000</LastUpdate>
     <Site>http://toonhud.com/</Site>
     <ArchiveDir>toonhud</ArchiveDir>
     <InstallDir>toonhud</InstallDir>
@@ -94,12 +94,12 @@
   <HUD>
     <Name>voidHUD2.0</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/voidhud/voidhud_c2835c24.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/voidhud/voidhud_b2a2103c.zip</URI>
     <UpURI>https://github.com/TheStaticVoid/VoidHUD2.0/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/voidhud.png</Preview>
     <RepoPath>https://github.com/TheStaticVoid/voidhud2.0</RepoPath>
-    <LastUpdate>1463667733</LastUpdate>
+    <LastUpdate>1468066527</LastUpdate>
     <Site>http://huds.tf/voidhud/</Site>
     <ArchiveDir>voidhud2.0-master</ArchiveDir>
     <InstallDir>voidhud</InstallDir>
@@ -107,12 +107,12 @@
   <HUD>
     <Name>ahud</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/ahud/ahud_6c9253f3.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/ahud/ahud_8d081fe0.zip</URI>
     <UpURI>https://github.com/n0kk/ahud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/ahud.png</Preview>
     <RepoPath>https://github.com/n0kk/ahud</RepoPath>
-    <LastUpdate>1461674100</LastUpdate>
+    <LastUpdate>1468010955</LastUpdate>
     <Site>http://huds.tf/ahud/</Site>
     <ArchiveDir>ahud-master</ArchiveDir>
     <InstallDir>ahud</InstallDir>
@@ -146,12 +146,12 @@
   <HUD>
     <Name>flatHUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/flathud/flathud_ddc87305.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/flathud/flathud_1c45aa1a.zip</URI>
     <UpURI>https://github.com/flatlinee/flatHUD-/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/flathud.png</Preview>
     <RepoPath>https://github.com/flatlinee/flatHUD-</RepoPath>
-    <LastUpdate>1463593202</LastUpdate>
+    <LastUpdate>1467992374</LastUpdate>
     <Site>http://huds.tf/flathud/</Site>
     <ArchiveDir>flatHUD--master/flathudRED</ArchiveDir>
     <InstallDir>flathud</InstallDir>
@@ -172,12 +172,12 @@
   <HUD>
     <Name>budhud</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/budhud/budhud_17a857aa.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/budhud/budhud_a799c1bf.zip</URI>
     <UpURI>https://github.com/WhiskerBiscuit/budhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.png</Preview>
     <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
-    <LastUpdate>1466057360</LastUpdate>
+    <LastUpdate>1467978631</LastUpdate>
     <Site>http://huds.tf/budhud/</Site>
     <ArchiveDir>budhud-master/budhud</ArchiveDir>
     <InstallDir>budhud</InstallDir>
@@ -185,12 +185,12 @@
   <HUD>
     <Name>Improved Default HUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/idhud/idhud_f4be10b8.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/idhud/idhud_af149d0a.zip</URI>
     <UpURI>https://github.com/Eniere/idhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/idhud.png</Preview>
     <RepoPath>https://github.com/Eniere/idhud</RepoPath>
-    <LastUpdate>1464401319</LastUpdate>
+    <LastUpdate>1468040846</LastUpdate>
     <Site>http://huds.tf/idhud/</Site>
     <ArchiveDir>idhud-master</ArchiveDir>
     <InstallDir>idhud</InstallDir>
@@ -211,12 +211,12 @@
   <HUD>
     <Name>noto</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/noto/noto_41893fc1.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/noto/noto_c230f4b8.zip</URI>
     <UpURI>https://github.com/omnibombulator/noto/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/noto.png</Preview>
     <RepoPath>https://github.com/omnibombulator/noto</RepoPath>
-    <LastUpdate>1461597662</LastUpdate>
+    <LastUpdate>1467986465</LastUpdate>
     <Site>http://huds.tf/noto/</Site>
     <ArchiveDir>noto-master/noto</ArchiveDir>
     <InstallDir>notohud</InstallDir>
@@ -237,12 +237,12 @@
   <HUD>
     <Name>KBNHud</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/kbnhud/kbnhud_ce788fd3.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/kbnhud/kbnhud_f25d6cf4.zip</URI>
     <UpURI>https://github.com/Jotunn/KBNHud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/kbnhud.png</Preview>
     <RepoPath>https://github.com/Jotunn/KBNHud</RepoPath>
-    <LastUpdate>1465490879</LastUpdate>
+    <LastUpdate>1468061054</LastUpdate>
     <Site>http://huds.tf/kbnhud/</Site>
     <ArchiveDir>KBNHud-master/KBNHud</ArchiveDir>
     <InstallDir>kbnhud</InstallDir>
@@ -289,12 +289,12 @@
   <HUD>
     <Name>biscottiHUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/biscottihud/biscottihud_a4a32f3a.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/biscottihud/biscottihud_f86be135.zip</URI>
     <UpURI>https://github.com/MedicodiBiscotti/biscottiHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/biscottihud.png</Preview>
     <RepoPath>https://github.com/MedicodiBiscotti/biscottiHUD</RepoPath>
-    <LastUpdate>1464710493</LastUpdate>
+    <LastUpdate>1467948402</LastUpdate>
     <Site>http://huds.tf/biscottihud/</Site>
     <ArchiveDir>biscottiHUD-master/biscottiHUD</ArchiveDir>
     <InstallDir>biscottihud</InstallDir>
@@ -315,12 +315,12 @@
   <HUD>
     <Name>FrankenHUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/frankenhud/frankenhud_cc292bb8.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/frankenhud/frankenhud_90e9b1b7.zip</URI>
     <UpURI>https://github.com/TheKins/frankenhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/frankenhud.png</Preview>
     <RepoPath>https://github.com/TheKins/frankenhud</RepoPath>
-    <LastUpdate>0</LastUpdate>
+    <LastUpdate>1467933176</LastUpdate>
     <Site>http://huds.tf/frankenhud/</Site>
     <ArchiveDir>frankenhud-master/hud_src</ArchiveDir>
     <InstallDir>frankenhud</InstallDir>
@@ -367,12 +367,12 @@
   <HUD>
     <Name>yayahud</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/yayahud/yayahud_02b880a3.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/yayahud/yayahud_66c56416.zip</URI>
     <UpURI>https://github.com/Yttrium-tYcLief/yayahud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/yayahud.png</Preview>
     <RepoPath>https://github.com/yttrium-tyclief/yayahud</RepoPath>
-    <LastUpdate>0</LastUpdate>
+    <LastUpdate>1468058612</LastUpdate>
     <Site>http://huds.tf/yayahud/</Site>
     <ArchiveDir>yayahud-master/yayahud</ArchiveDir>
     <InstallDir>yayahud</InstallDir>
@@ -406,12 +406,12 @@
   <HUD>
     <Name>SolarHUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/solarhud/solarhud_0c0be523.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/solarhud/solarhud_24bff8b4.zip</URI>
     <UpURI>https://github.com/Stochast1c/solarhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/solarhud.png</Preview>
     <RepoPath>https://github.com/Stochast1c/solarhud</RepoPath>
-    <LastUpdate>1462562167</LastUpdate>
+    <LastUpdate>1467945913</LastUpdate>
     <Site>http://huds.tf/solarhud/</Site>
     <ArchiveDir>solarhud-master</ArchiveDir>
     <InstallDir>solarhud</InstallDir>
@@ -432,12 +432,12 @@
   <HUD>
     <Name>BoredHUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/boredhud/boredhud_0e45b933.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/boredhud/boredhud_8d07a0f2.zip</URI>
     <UpURI>https://github.com/TheStaticVoid/boredHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/boredhud.png</Preview>
     <RepoPath>https://github.com/TheStaticVoid/boredHUD</RepoPath>
-    <LastUpdate>1461706972</LastUpdate>
+    <LastUpdate>1467942939</LastUpdate>
     <Site>http://huds.tf/boredhud/</Site>
     <ArchiveDir>boredHUD-master</ArchiveDir>
     <InstallDir>boredhud</InstallDir>
@@ -445,12 +445,12 @@
   <HUD>
     <Name>G-Mang HUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/gmanghud/gmanghud_1c0c107f.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/gmanghud/gmanghud_49aedfeb.zip</URI>
     <UpURI>https://github.com/hoXyy/GMang_HUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/gmanghud.png</Preview>
     <RepoPath>https://github.com/hoXyy/GMang_HUD</RepoPath>
-    <LastUpdate>0</LastUpdate>
+    <LastUpdate>1467980969</LastUpdate>
     <Site>http://huds.tf/gmanghud/</Site>
     <ArchiveDir>GMang_HUD-master</ArchiveDir>
     <InstallDir>gmanghud</InstallDir>
