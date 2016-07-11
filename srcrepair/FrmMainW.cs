@@ -93,8 +93,7 @@ namespace srcrepair
         /// доступных управляемых игр.
         /// </summary>
         /// <param name="SteamPath">Путь к клиенту Steam</param>
-        /// <param name="SteamAppsDir">Имя каталога SteamApps</param>
-        private void DetectInstalledGames(string SteamPath, string SteamAppsDir)
+        private void DetectInstalledGames(string SteamPath)
         {
             // Очистим список игр...
             AppSelector.Items.Clear();
@@ -807,12 +806,11 @@ namespace srcrepair
         /// Ищет установленные игры и выполняет ряд необходимых проверок.
         /// </summary>
         /// <param name="SteamDir">Путь к каталогу установки Steam</param>
-        /// <param name="SteamApps">Название каталога SteamApps в зависимости от платформы</param>
         /// <param name="ErrMsg">Текст сообщения об ошибке</param>
-        private void FindGames(string SteamDir, string SteamApps, string ErrMsg)
+        private void FindGames(string SteamDir, string ErrMsg)
         {
             // Начинаем определять установленные игры...
-            try { DetectInstalledGames(SteamDir, SteamApps); } catch (Exception Ex) { CoreLib.HandleExceptionEx(ErrMsg, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); Environment.Exit(16); }
+            try { DetectInstalledGames(SteamDir); } catch (Exception Ex) { CoreLib.HandleExceptionEx(ErrMsg, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); Environment.Exit(16); }
 
             // Проверим нашлись ли игры...
             CheckGames(AppSelector.Items.Count);
@@ -1043,7 +1041,7 @@ namespace srcrepair
             CheckSymbolsSteam(App.FullSteamPath);
 
             // Запустим поиск установленных игр и проверим нашлось ли что-то...
-            FindGames(App.FullSteamPath, Properties.Resources.SteamAppsFolderName, AppStrings.AppXMLParseError);
+            FindGames(App.FullSteamPath, AppStrings.AppXMLParseError);
 
             try
             {
@@ -1204,7 +1202,7 @@ namespace srcrepair
         private void AppRefresh_Click(object sender, EventArgs e)
         {
             // Попробуем обновить список игр...
-            FindGames(App.FullSteamPath, Properties.Resources.SteamAppsFolderName, AppStrings.AppXMLParseError);
+            FindGames(App.FullSteamPath, AppStrings.AppXMLParseError);
         }
 
         private void GT_Maximum_Graphics_Click(object sender, EventArgs e)
@@ -2009,7 +2007,7 @@ namespace srcrepair
             }
             
             // Перечитаем базу игр...
-            FindGames(App.FullSteamPath, Properties.Resources.SteamAppsFolderName, AppStrings.AppXMLParseError);
+            FindGames(App.FullSteamPath, AppStrings.AppXMLParseError);
         }
 
         private void BUT_OpenNpad_Click(object sender, EventArgs e)
