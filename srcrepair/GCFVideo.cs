@@ -888,6 +888,10 @@ namespace srcrepair
             return Result;
         }
 
+        /// <summary>
+        /// Создаёт в реестре указанный ключ.
+        /// </summary>
+        /// <param name="Subkey">Подключ реестра для создания</param>
         public static void CreateRegKey(string Subkey)
         {
             Registry.CurrentUser.CreateSubKey(Subkey);
