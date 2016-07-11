@@ -872,6 +872,7 @@ namespace srcrepair
         /// возвращает false.
         /// </summary>
         /// <param name="Subkey">Подключ реестра для проверки</param>
+        /// <returns>Возвращает булево существует ли указанный ключ реестра</returns>
         public static bool CheckRegKeyExists(string Subkey)
         {
             // Открываем проверяемый ключ реестра... При ошибке вернёт null.
