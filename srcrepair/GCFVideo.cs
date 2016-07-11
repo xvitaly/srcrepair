@@ -857,6 +857,59 @@ namespace srcrepair
             ResKey.Close();
         }
 
+        public static string GetGameRegKey(string SAppName)
+        {
+            return Path.Combine("Software", "Valve", "Source", SAppName, "Settings");
+        }
+
+        /// <summary>
+        /// Проверяет существование в реестре требуемого ключа. При отсутствии оного
+        /// возвращает false.
+        /// </summary>
+        /// <param name="Subkey">Подключ реестра для проверки</param>
+        public static bool CheckRegKeyExists(string Subkey)
+        {
+            // Открываем проверяемый ключ реестра... При ошибке вернёт null.
+            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(Subkey, false);
+            
+            // Получаем результат проверки...
+            bool Result = ResKey != null;
+            
+            // Если ключ был успешно открыт, закрываем.
+            if (Result) { ResKey.Close(); }
+            
+            // Возвращаем результат функции...
+            return Result;
+        }
+
+        public static void CreateRegKey(string Subkey)
+        {
+            Registry.CurrentUser.CreateSubKey(Subkey);
+        }
+
+        public static void RemoveRegKey(string Subkey)
+        {
+            Registry.CurrentUser.DeleteSubKeyTree(Subkey, false);
+        }
+
+        /// <summary>
+        /// Используется для создания резервной копии выбранной ветки
+        /// реестра в переданный в параметре файл.
+        /// </summary>
+        /// <param name="RegKey">Ключ реестра</param>
+        /// <param name="FileName">Имя файла резервной копии</param>
+        /// <param name="DestDir">Каталог с резервными копиями</param>
+        public static void CreateRegBackUpNow(string RegKey, string FileName, string DestDir)
+        {
+            // Запускаем и ждём завершения...
+            CoreLib.StartProcessAndWait("regedit.exe", String.Format("/ea \"{0}\" {1}", Path.Combine(DestDir, String.Format("{0}_{1}.reg", FileName, CoreLib.DateTime2Unix(DateTime.Now))), RegKey));
+        }
+
+        public static void BackUpVideoSettings(string RegKey, string FileName, string DestDir)
+        {
+            CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", RegKey), FileName, DestDir);
+        }
+
         /// <summary>
         /// Базовый конструктор класса.
         /// </summary>
@@ -865,7 +918,7 @@ namespace srcrepair
         public GCFVideo(string SAppName, bool ReadNow = true)
         {
             // Сгенерируем путь к ключу реестра...
-            RegKey = Path.Combine("Software", "Valve", "Source", SAppName, "Settings");
+            RegKey = GetGameRegKey(SAppName);
 
             // Считываем настройки из реестра...
             if (ReadNow) { ReadSettings(); }
