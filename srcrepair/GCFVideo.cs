@@ -857,6 +857,11 @@ namespace srcrepair
             ResKey.Close();
         }
 
+        /// <summary>
+        /// Возвращает ключ реестра c графическими настройками для выбранной игры.
+        /// </summary>
+        /// <param name="SAppName">Короткое название игры (из БД)</param>
+        /// <returns>Возвращает полный путь к ключу реестра</returns>
         public static string GetGameRegKey(string SAppName)
         {
             return Path.Combine("Software", "Valve", "Source", SAppName, "Settings");
