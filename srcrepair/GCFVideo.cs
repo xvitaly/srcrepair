@@ -897,6 +897,10 @@ namespace srcrepair
             Registry.CurrentUser.CreateSubKey(Subkey);
         }
 
+        /// <summary>
+        /// Удаляет из реестра указанный ключ.
+        /// </summary>
+        /// <param name="Subkey">Подключ реестра для удаления</param>
         public static void RemoveRegKey(string Subkey)
         {
             Registry.CurrentUser.DeleteSubKeyTree(Subkey, false);
