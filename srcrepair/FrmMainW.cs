@@ -25,7 +25,6 @@ using System.Text;
 using System.Windows.Forms; // для работы с формами...
 using System.IO; // для работы с файлами...
 using System.Diagnostics; // для управления процессами...
-using Microsoft.Win32; // для работы с реестром...
 using System.Resources; // для управления ресурсами...
 using System.Net; // для скачивания файлов...
 using System.Xml; // для разбора (парсинга) XML...
@@ -1302,17 +1301,20 @@ namespace srcrepair
                     // Определим тип игры...
                     if (!SelGame.IsUsingVideoFile)
                     {
+                        // Сгенерируем путь к ветке реестра...
+                        string GameRegKey = GCFVideo.GetGameRegKey(SelGame.SmallAppName);
+
                         // Это GCF-приложение, будем писать настройки в реестр...
                         if (Properties.Settings.Default.SafeCleanup)
                         {
                             // Создаём резервную копию...
-                            try { CoreLib.CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), "Game_AutoBackUp", SelGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                            try { GCFVideo.BackUpVideoSettings(GameRegKey, "Game_AutoBackUp", SelGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                         }
 
                         try
                         {
                             // Проверим существование ключа реестра и в случае необходимости создадим...
-                            if (!(CoreLib.CheckIfHKCUSKeyExists(Path.Combine("Software", "Valve", "Source", SelGame.SmallAppName, "Settings")))) { Registry.CurrentUser.CreateSubKey(Path.Combine("Software", "Valve", "Source", SelGame.SmallAppName, "Settings")); }
+                            if (!(GCFVideo.CheckRegKeyExists(GameRegKey))) { GCFVideo.CreateRegKey(GameRegKey); }
                             
                             // Записываем выбранные настройки в реестр...
                             WriteGCFGameSettings(SelGame.SmallAppName);
@@ -1586,11 +1588,14 @@ namespace srcrepair
                     // Удаляем графические настройки...
                     if (!SelGame.IsUsingVideoFile)
                     {
+                        // Получаем полный путь к ветке реестра игры...
+                        string GameRegKey = GCFVideo.GetGameRegKey(SelGame.SmallAppName);
+
                         // Создаём резервную копию куста реестра...
-                        if (Properties.Settings.Default.SafeCleanup) { try { CoreLib.CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), "Game_AutoBackUp", SelGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } }
+                        if (Properties.Settings.Default.SafeCleanup) { try { GCFVideo.BackUpVideoSettings(GameRegKey, "Game_AutoBackUp", SelGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } }
 
                         // Удаляем ключ HKEY_CURRENT_USER\Software\Valve\Source\tf\Settings из реестра...
-                        Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), false);
+                        GCFVideo.RemoveRegKey(GameRegKey);
                     }
                     else
                     {
@@ -1809,7 +1814,7 @@ namespace srcrepair
                     if (!SelGame.IsUsingVideoFile)
                     {
                         // Создаём конфиг ветки реестра...
-                        CoreLib.CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source", SelGame.SmallAppName, "Settings"), "Game_Options", SelGame.FullBackUpDirPath);
+                        GCFVideo.BackUpVideoSettings(GCFVideo.GetGameRegKey(SelGame.SmallAppName), "Game_Options", SelGame.FullBackUpDirPath);
                     }
                     else
                     {
@@ -1839,7 +1844,7 @@ namespace srcrepair
                 try
                 {
                     // Создаём...
-                    CoreLib.CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve"), "Steam_BackUp", SelGame.FullBackUpDirPath);
+                    GCFVideo.CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve"), "Steam_BackUp", SelGame.FullBackUpDirPath);
                     
                     // Выводим сообщение...
                     MessageBox.Show(AppStrings.BU_RegDone, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -1862,7 +1867,7 @@ namespace srcrepair
             {
                 try
                 {
-                    CoreLib.CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source"), "Source_Options", SelGame.FullBackUpDirPath);
+                    GCFVideo.CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source"), "Source_Options", SelGame.FullBackUpDirPath);
                     MessageBox.Show(AppStrings.BU_RegDone, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     UpdateBackUpList(SelGame.FullBackUpDirPath);
                 }
