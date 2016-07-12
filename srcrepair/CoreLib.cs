@@ -251,14 +251,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Возвращает путь к пользовательскому каталогу SRC Repair.
-        /// </summary>
-        public static string GetApplicationPath()
-        {
-            return Properties.Settings.Default.IsPortable ? Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Properties.Resources.AppName);
-        }
-
-        /// <summary>
         /// Функция, записывающая в лог-файл строку. Например, сообщение об ошибке.
         /// </summary>
         /// <param name="TextMessage">Сообщение для записи в лог</param>
@@ -269,7 +261,7 @@ namespace srcrepair
                 try // Начинаем работу...
                 {
                     // Сгенерируем путь к файлу с логом...
-                    string DebugFileName = Path.Combine(GetApplicationPath(), Properties.Settings.Default.DebugLogFileName);
+                    string DebugFileName = Path.Combine(CurrentApp.ApplicationPath, Properties.Settings.Default.DebugLogFileName);
                     
                     // Если файл не существует, создадим его и сразу закроем...
                     if (!File.Exists(DebugFileName))

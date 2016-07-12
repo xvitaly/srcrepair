@@ -55,6 +55,11 @@ namespace srcrepair
         public string AppVersionInfo { get; private set; }
 
         /// <summary>
+        /// Возвращает путь к пользовательскому каталогу SRC Repair.
+        /// </summary>
+        public static string ApplicationPath { get { return Properties.Settings.Default.IsPortable ? Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Properties.Resources.AppName); } }
+
+        /// <summary>
         /// Конструктор класса. Получает информацию для рантайма.
         /// </summary>
         public CurrentApp()

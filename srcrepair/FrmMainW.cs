@@ -2394,7 +2394,7 @@ namespace srcrepair
             // Выведем на экран содержимое отладочного журнала...
             if (Properties.Settings.Default.EnableDebugLog)
             {
-                string DFile = Path.Combine(CoreLib.GetApplicationPath(), Properties.Settings.Default.DebugLogFileName);
+                string DFile = Path.Combine(CurrentApp.ApplicationPath, Properties.Settings.Default.DebugLogFileName);
                 if (File.Exists(DFile)) { using (frmLogView Lv = new frmLogView(DFile)) { Lv.ShowDialog(); } } else { MessageBox.Show(AppStrings.AppNoDebugFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             }
             else
