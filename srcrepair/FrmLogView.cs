@@ -63,7 +63,7 @@ namespace srcrepair
         private void LV_MenuHelpAbout_Click(object sender, EventArgs e)
         {
             // Выводим сообщение с краткой информацией о плагине...
-            MessageBox.Show(String.Format(AppStrings.AppPluginAboutDlg, Text, CoreLib.GetAppCompany()), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(String.Format(AppStrings.AppPluginAboutDlg, Text, CurrentApp.AppCompany), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void LV_MunuFileClearLog_Click(object sender, EventArgs e)

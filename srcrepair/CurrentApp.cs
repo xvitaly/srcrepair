@@ -64,6 +64,12 @@ namespace srcrepair
         /// </summary>
         public static string ApplicationPath { get { return Properties.Settings.Default.IsPortable ? Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Properties.Resources.AppName); } }
 
+
+        /// <summary>
+        /// Возвращает название компании-разработчика сборки.
+        /// </summary>
+        public static string AppCompany { get { object[] Attribs = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false); return Attribs.Length != 0 ? ((AssemblyCompanyAttribute)Attribs[0]).Company : String.Empty; } }
+
         /// <summary>
         /// Конструктор класса. Получает информацию для рантайма.
         /// </summary>

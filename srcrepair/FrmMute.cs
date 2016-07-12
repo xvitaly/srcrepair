@@ -123,7 +123,7 @@ namespace srcrepair
 
         private void AboutDlg(object sender, EventArgs e)
         {
-            MessageBox.Show(String.Format(AppStrings.AppPluginAboutDlg, Text, CoreLib.GetAppCompany()), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(String.Format(AppStrings.AppPluginAboutDlg, Text, CurrentApp.AppCompany), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void FrmMute_Load(object sender, EventArgs e)

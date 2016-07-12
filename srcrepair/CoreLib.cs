@@ -717,15 +717,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Выводит название компании-разработчика сборки.
-        /// </summary>
-        public static string GetAppCompany()
-        {
-            object[] Attribs = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
-            return Attribs.Length != 0 ? ((AssemblyCompanyAttribute)Attribs[0]).Company : String.Empty;
-        }
-
-        /// <summary>
         /// Проверяет существует ли хотя бы один из файлов, указанный в списке.
         /// </summary>
         /// <param name="Configs">Список файлов с полными путями</param>
