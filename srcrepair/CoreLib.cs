@@ -231,21 +231,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Проверяет является ли версия, указанная в параметре
-        /// NewVer, новее, чем CurrVer. Используется модулем проверки обновлений
-        /// и модулем автоматического обновления.
-        /// </summary>
-        /// <param name="CurrVer">Текущая версия</param>
-        /// <param name="NewVer">Новая версия</param>
-        /// <returns>Возвращает true, если новее</returns>
-        public static bool CompareVersions(string CurrVer, string NewVer)
-        {
-            Version CVer = new Version(CurrVer);
-            Version NVer = new Version(NewVer);
-            return NVer > CVer;
-        }
-
-        /// <summary>
         /// Создаёт новый файл по указанному адресу.
         /// </summary>
         /// <param name="FileName">Имя создаваемого файла</param>
