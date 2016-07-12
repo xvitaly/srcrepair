@@ -202,17 +202,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Проверяет существование указанного ключа в HKCU и при
-        /// отсутствии создаёт автоматически.
-        /// </summary>
-        /// <param name="KeyName">Ключ реестра для проверки</param>
-        public static void CheckRegKeyAndCreateCU(string KeyName)
-        {
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(KeyName, false);
-            if (ResKey == null) { Registry.CurrentUser.CreateSubKey(KeyName); } else { ResKey.Close(); }
-        }
-
-        /// <summary>
         /// Форматирует размер файла для удобства пользователя.
         /// Файлы от 0 до 1 КБ - 1 записываются в байтах, от 1 КБ до
         /// 1 МБ - 1 - в килобайтах, от 1 МБ до 1 ГБ - 1 - в мегабайтах.
