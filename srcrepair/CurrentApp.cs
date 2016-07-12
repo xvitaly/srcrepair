@@ -55,6 +55,11 @@ namespace srcrepair
         public string AppVersionInfo { get; private set; }
 
         /// <summary>
+        /// Возвращает архитектуру операционной системы.
+        /// </summary>
+        private string SystemArch { get { return Environment.Is64BitOperatingSystem ? "Amd64" : "x86"; } }
+
+        /// <summary>
         /// Возвращает путь к пользовательскому каталогу SRC Repair.
         /// </summary>
         public static string ApplicationPath { get { return Properties.Settings.Default.IsPortable ? Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Properties.Resources.AppName); } }
@@ -81,7 +86,7 @@ namespace srcrepair
             AppVersionInfo = Assmbl.GetName().Version.ToString();
 
             // Генерируем User-Agent для SRC Repair...
-            UserAgent = String.Format(Properties.Resources.AppDefUA, Properties.Resources.PlatformFriendlyName, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersionInfo, Properties.Resources.AppName, CoreLib.GetSystemArch());
+            UserAgent = String.Format(Properties.Resources.AppDefUA, Properties.Resources.PlatformFriendlyName, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersionInfo, Properties.Resources.AppName, SystemArch);
         }
     }
 }

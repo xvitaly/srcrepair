@@ -482,15 +482,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Определяет архитектуру операционной системы.
-        /// </summary>
-        /// <returns>Артитектура ОС</returns>
-        public static string GetSystemArch()
-        {
-            return Environment.Is64BitOperatingSystem ? "Amd64" : "x86";
-        }
-
-        /// <summary>
         /// Определяет все доступные в системе разрешения экрана посредством запроса к WMI.
         /// </summary>
         /// <returns>Возвращает список доступных разрешений</returns>
