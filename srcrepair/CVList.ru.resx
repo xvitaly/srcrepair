@@ -3570,4 +3570,22 @@
   <data name="ds_stop" xml:space="preserve">
     <value>Остановить запись демки и освободить ресурсы.</value>
   </data>
+  <data name="tf_matchmaking_ping_a" xml:space="preserve">
+    <value>Позволяет указать допустимую задержку при выборе сервера посредством системы матчмейкинга TF2. Значение 1.</value>
+  </data>
+  <data name="tf_matchmaking_ping_a_score" xml:space="preserve">
+    <value>Позволяет указать допустимую задержку при выборе сервера посредством системы матчмейкинга TF2. Значение 1.</value>
+  </data>
+  <data name="tf_matchmaking_ping_b" xml:space="preserve">
+    <value>Позволяет указать допустимую задержку при выборе сервера посредством системы матчмейкинга TF2. Значение 2.</value>
+  </data>
+  <data name="tf_matchmaking_ping_b_score" xml:space="preserve">
+    <value>Позволяет указать допустимую задержку при выборе сервера посредством системы матчмейкинга TF2. Значение 2.</value>
+  </data>
+  <data name="tf_matchmaking_ping_c" xml:space="preserve">
+    <value>Позволяет указать допустимую задержку при выборе сервера посредством системы матчмейкинга TF2. Значение 3.</value>
+  </data>
+  <data name="tf_matchmaking_ping_c_score" xml:space="preserve">
+    <value>Позволяет указать допустимую задержку при выборе сервера посредством системы матчмейкинга TF2. Значение 3.</value>
+  </data>
 </root>
