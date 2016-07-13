@@ -3588,4 +3588,13 @@
   <data name="tf_matchmaking_ping_c_score" xml:space="preserve">
     <value>Позволяет указать допустимую задержку при выборе сервера посредством системы матчмейкинга TF2. Значение 3.</value>
   </data>
+  <data name="tf_passtime_scores_per_round" xml:space="preserve">
+    <value>Задаёт необходимое количество забитых голов до окончания раунда в режиме PASS Time.</value>
+  </data>
+  <data name="trigger_passtime_ball" xml:space="preserve">
+    <value>Временно скрывает не реализованные функции в режиме PASS Time.</value>
+  </data>
+  <data name="vgui_cache_res_files" xml:space="preserve">
+    <value>Включает / отключает кэширование VGUI ресурсных файлов игрой.</value>
+  </data>
 </root>

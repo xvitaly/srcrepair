@@ -5749,6 +5749,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Number of scores per round for PASS Time mode..
+        /// </summary>
+        internal static string tf_passtime_scores_per_round {
+            get {
+                return ResourceManager.GetString("tf_passtime_scores_per_round", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Controls the freeze period at the beginning of round..
         /// </summary>
         internal static string tf_player_movement_restart_freeze {
@@ -6330,6 +6339,15 @@ namespace srcrepair {
         internal static string use {
             get {
                 return ResourceManager.GetString("use", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable / disable VGUI caching..
+        /// </summary>
+        internal static string vgui_cache_res_files {
+            get {
+                return ResourceManager.GetString("vgui_cache_res_files", resourceCulture);
             }
         }
         

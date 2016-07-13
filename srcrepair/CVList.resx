@@ -2220,4 +2220,10 @@
   <data name="ds_stop" xml:space="preserve">
     <value>Demo support - stop recording a demo</value>
   </data>
+  <data name="tf_passtime_scores_per_round" xml:space="preserve">
+    <value>Number of scores per round for PASS Time mode.</value>
+  </data>
+  <data name="vgui_cache_res_files" xml:space="preserve">
+    <value>Enable / disable VGUI caching.</value>
+  </data>
 </root>
