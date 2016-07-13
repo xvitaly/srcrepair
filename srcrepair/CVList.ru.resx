@@ -3570,6 +3570,9 @@
   <data name="ds_stop" xml:space="preserve">
     <value>Остановить запись демки и освободить ресурсы.</value>
   </data>
+  <data name="tf_grapplinghook_enable" xml:space="preserve">
+    <value>Разрешает / запрещает использование крюка на картах режима Mannpower.</value>
+  </data>
   <data name="tf_matchmaking_ping_a" xml:space="preserve">
     <value>Позволяет указать допустимую задержку при выборе сервера посредством системы матчмейкинга TF2. Значение 1.</value>
   </data>
@@ -3590,6 +3593,9 @@
   </data>
   <data name="tf_passtime_scores_per_round" xml:space="preserve">
     <value>Задаёт необходимое количество забитых голов до окончания раунда в режиме PASS Time.</value>
+  </data>
+  <data name="tf_powerup_mode" xml:space="preserve">
+    <value>Включает / отключает усилители на картах режима Mannpower.</value>
   </data>
   <data name="trigger_passtime_ball" xml:space="preserve">
     <value>Временно скрывает не реализованные функции в режиме PASS Time.</value>

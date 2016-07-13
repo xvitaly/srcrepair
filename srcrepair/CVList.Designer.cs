@@ -5137,6 +5137,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable / disable the grappling hook on the server..
+        /// </summary>
+        internal static string tf_grapplinghook_enable {
+            get {
+                return ResourceManager.GetString("tf_grapplinghook_enable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sets hook-jump velocity..
         /// </summary>
         internal static string tf_grapplinghook_jump_up_speed {
@@ -5781,6 +5790,15 @@ namespace srcrepair {
         internal static string tf_populator_active_buffer_range {
             get {
                 return ResourceManager.GetString("tf_populator_active_buffer_range", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable / disable Mannpower mode on the server..
+        /// </summary>
+        internal static string tf_powerup_mode {
+            get {
+                return ResourceManager.GetString("tf_powerup_mode", resourceCulture);
             }
         }
         

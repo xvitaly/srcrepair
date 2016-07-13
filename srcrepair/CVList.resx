@@ -2226,4 +2226,10 @@
   <data name="vgui_cache_res_files" xml:space="preserve">
     <value>Enable / disable VGUI caching.</value>
   </data>
+  <data name="tf_grapplinghook_enable" xml:space="preserve">
+    <value>Enable / disable the grappling hook on the server.</value>
+  </data>
+  <data name="tf_powerup_mode" xml:space="preserve">
+    <value>Enable / disable Mannpower mode on the server.</value>
+  </data>
 </root>
