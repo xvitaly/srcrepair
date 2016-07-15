@@ -559,4 +559,17 @@
     <ArchiveDir>mHUD-master</ArchiveDir>
     <InstallDir>mhud</InstallDir>
   </HUD>
+  <HUD>
+    <Name>DoodleHUD</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/doodlehud/doodlehud_2fde17ca.zip</URI>
+    <UpURI>https://github.com/CookeiMonstr/doodlehud-update/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/doodlehud.png</Preview>
+    <RepoPath>https://github.com/CookeiMonstr/doodlehud-update</RepoPath>
+    <LastUpdate>1468392124</LastUpdate>
+    <Site>http://huds.tf/forum/showthread.php?tid=285</Site>
+    <ArchiveDir>doodlehud-update-master</ArchiveDir>
+    <InstallDir>doodlehud</InstallDir>
+  </HUD>
 </HUDs>
