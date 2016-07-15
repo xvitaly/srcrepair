@@ -83,6 +83,7 @@ fetch_hud https://github.com/nimtra/mkHUD/archive/master.zip mkhud
 fetch_hud https://github.com/Marblr/mHUD/archive/master.zip mhud
 fetch_hud https://github.com/CookeiMonstr/doodlehud-update/archive/master.zip doodlehud
 fetch_hud https://github.com/nimtra/overwatchhud/archive/master.zip overwatchhud
+fetch_hud https://github.com/flatlinee/omphudedit/archive/master.zip omphud
 
 # Other sources...
 fetch_hud https://gitgud.io/JediThug/JediHUD/repository/archive.zip jedihud
