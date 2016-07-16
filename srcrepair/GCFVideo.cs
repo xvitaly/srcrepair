@@ -919,6 +919,13 @@ namespace srcrepair
             CoreLib.StartProcessAndWait("regedit.exe", String.Format("/ea \"{0}\" {1}", Path.Combine(DestDir, String.Format("{0}_{1}.reg", FileName, CoreLib.DateTime2Unix(DateTime.Now))), RegKey));
         }
 
+        /// <summary>
+        /// Используется для создания резервной копии графических настроек
+        /// GCF игр в файл.
+        /// </summary>
+        /// <param name="RegKey">Ключ реестра</param>
+        /// <param name="FileName">Имя файла резервной копии</param>
+        /// <param name="DestDir">Каталог с резервными копиями</param>
         public static void BackUpVideoSettings(string RegKey, string FileName, string DestDir)
         {
             CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", RegKey), FileName, DestDir);
