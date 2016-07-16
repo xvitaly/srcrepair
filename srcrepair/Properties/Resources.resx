@@ -136,11 +136,11 @@
   <data name="AppAlrLaunched" xml:space="preserve">
     <value>The program is already running. Starting the second copy is not allowed.</value>
   </data>
-  <data name="MM_CommunityURL" xml:space="preserve">
-    <value>http://steamcommunity.com/profiles/{0}/</value>
-  </data>
   <data name="SaveAs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SaveAs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CfgDbFile" xml:space="preserve">
+    <value>configs.xml</value>
   </data>
   <data name="Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,6 +169,9 @@
   <data name="Wizard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Wizard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SteamAppsFolderName" xml:space="preserve">
+    <value>SteamApps</value>
+  </data>
   <data name="BU_PrefixCfg" xml:space="preserve">
     <value>Config</value>
   </data>
@@ -187,20 +190,23 @@
   <data name="upd_err" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\upd_err.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Open" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Xmas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Xmas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LoadingFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LoadingFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AppURLHelpSystem" xml:space="preserve">
+    <value>https://www.easycoding.org/projects/srcrepair/help/{0}</value>
   </data>
   <data name="upd_chk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\upd_chk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BU_PrefixVideo" xml:space="preserve">
+    <value>VideoCfg</value>
+  </data>
+  <data name="Mhint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mhint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AppDnlUA" xml:space="preserve">
     <value>wget</value>
@@ -220,11 +226,11 @@
   <data name="Options" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Options.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AppBtURL" xml:space="preserve">
+    <value>https://github.com/xvitaly/srcrepair/issues/new</value>
+  </data>
   <data name="upd_av" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\upd_av.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="installer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\installer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BU_TablePrefix" xml:space="preserve">
     <value>{0} {1}</value>
@@ -244,14 +250,20 @@
   <data name="AppUnsupportedLanguage" xml:space="preserve">
     <value>The specified locale is not supported at this time, so will use the default language.</value>
   </data>
+  <data name="TextEditor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TextEditor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="backup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Keyboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Keyboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PathValidateRegex" xml:space="preserve">
+    <value>^[0-9a-zA-Z :()-_./\\\\]*$</value>
+  </data>
+  <data name="Convert" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Convert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tf2world" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tf2world.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -277,8 +289,8 @@
   <data name="hint" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TextEditor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TextEditor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Open" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Monitor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Monitor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -304,6 +316,15 @@
   <data name="upd_nx" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\upd_nx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="HUDDbFile" xml:space="preserve">
+    <value>huds.xml</value>
+  </data>
+  <data name="AppURLOffSite" xml:space="preserve">
+    <value>https://www.easycoding.org/</value>
+  </data>
+  <data name="GameListFile" xml:space="preserve">
+    <value>games.xml</value>
+  </data>
   <data name="PI_TemplateFile" xml:space="preserve">
     <value>srcrepair.Resources.VtTemplate.txt</value>
   </data>
@@ -319,8 +340,8 @@
   <data name="WorkshopFolderName" xml:space="preserve">
     <value>workshop</value>
   </data>
-  <data name="Convert" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Convert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="UpdateDBURL" xml:space="preserve">
+    <value>https://www.easycoding.org/files/srcrepair/updates/updates.xml</value>
   </data>
   <data name="Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -337,11 +358,14 @@
   <data name="AppURLSteamGrID" xml:space="preserve">
     <value>steam://url/GroupSteamIDPage/103582791431662552</value>
   </data>
+  <data name="installer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\installer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="AHE_TemplateFile" xml:space="preserve">
     <value>srcrepair.Resources.HtTemplate.txt</value>
   </data>
-  <data name="SteamAppsFolderName" xml:space="preserve">
-    <value>SteamApps</value>
+  <data name="MM_CommunityURL" xml:space="preserve">
+    <value>http://steamcommunity.com/profiles/{0}/</value>
   </data>
   <data name="PlatformFriendlyName" xml:space="preserve">
     <value>Windows</value>
@@ -349,11 +373,11 @@
   <data name="MO_CustomDirRegex" xml:space="preserve">
     <value>^[0-9a-zA-Z]*$</value>
   </data>
-  <data name="AppURLOffSite" xml:space="preserve">
-    <value>https://www.easycoding.org/</value>
+  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BU_PrefixVideo" xml:space="preserve">
-    <value>VideoCfg</value>
+  <data name="LoadingFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LoadingFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AppURLSpnTFSU" xml:space="preserve">
     <value>http://www.team-fortress.su/</value>
@@ -361,28 +385,7 @@
   <data name="Exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Mhint" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Mhint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AppBtURL" xml:space="preserve">
-    <value>https://github.com/xvitaly/srcrepair/issues/new</value>
-  </data>
-  <data name="AppURLHelpSystem" xml:space="preserve">
-    <value>https://www.easycoding.org/projects/srcrepair/help/{0}</value>
-  </data>
-  <data name="PathValidateRegex" xml:space="preserve">
-    <value>^[0-9a-zA-Z :()-_./\\\\]*$</value>
-  </data>
-  <data name="UpdateDBURL" xml:space="preserve">
-    <value>https://www.easycoding.org/files/srcrepair/updates/updates.xml</value>
-  </data>
-  <data name="CfgDbFile" xml:space="preserve">
-    <value>configs.xml</value>
-  </data>
-  <data name="GameListFile" xml:space="preserve">
-    <value>games.xml</value>
-  </data>
-  <data name="HUDDbFile" xml:space="preserve">
-    <value>huds.xml</value>
+  <data name="telegram" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\telegram.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

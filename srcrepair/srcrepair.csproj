@@ -496,6 +496,7 @@
     <None Include="Resources\New.png" />
     <None Include="Resources\Open.png" />
     <None Include="Resources\Mhint.png" />
+    <None Include="Resources\telegram.png" />
     <Content Include="srcrepair.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

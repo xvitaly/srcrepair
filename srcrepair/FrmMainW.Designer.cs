@@ -221,11 +221,13 @@
             this.MNUReportBug = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUShowLog = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUOpinion = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNUSteamGroup = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep3 = new System.Windows.Forms.ToolStripSeparator();
+            this.MNUSupportChat = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUSteamGroup = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUSep4 = new System.Windows.Forms.ToolStripSeparator();
             this.MNULnkEasyCoding = new System.Windows.Forms.ToolStripMenuItem();
             this.MNULnkTFRU = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNUSep4 = new System.Windows.Forms.ToolStripSeparator();
+            this.MNUSep7 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusBar = new System.Windows.Forms.StatusStrip();
             this.SB_Status = new System.Windows.Forms.ToolStripStatusLabel();
@@ -1834,11 +1836,13 @@
             this.MNUReportBug,
             this.MNUShowLog,
             this.MNUOpinion,
-            this.MNUSteamGroup,
             this.MNUSep3,
+            this.MNUSupportChat,
+            this.MNUSteamGroup,
+            this.MNUSep4,
             this.MNULnkEasyCoding,
             this.MNULnkTFRU,
-            this.MNUSep4,
+            this.MNUSep7,
             this.MNUAbout});
             this.HelpMNU.Name = "HelpMNU";
             resources.ApplyResources(this.HelpMNU, "HelpMNU");
@@ -1883,6 +1887,18 @@
             resources.ApplyResources(this.MNUOpinion, "MNUOpinion");
             this.MNUOpinion.Click += new System.EventHandler(this.MNUOpinion_Click);
             // 
+            // MNUSep3
+            // 
+            this.MNUSep3.Name = "MNUSep3";
+            resources.ApplyResources(this.MNUSep3, "MNUSep3");
+            // 
+            // MNUSupportChat
+            // 
+            this.MNUSupportChat.Image = global::srcrepair.Properties.Resources.telegram;
+            this.MNUSupportChat.Name = "MNUSupportChat";
+            resources.ApplyResources(this.MNUSupportChat, "MNUSupportChat");
+            this.MNUSupportChat.Click += new System.EventHandler(this.MNUSupportChat_Click);
+            // 
             // MNUSteamGroup
             // 
             this.MNUSteamGroup.Image = global::srcrepair.Properties.Resources.steam;
@@ -1890,10 +1906,10 @@
             resources.ApplyResources(this.MNUSteamGroup, "MNUSteamGroup");
             this.MNUSteamGroup.Click += new System.EventHandler(this.MNUSteamGroup_Click);
             // 
-            // MNUSep3
+            // MNUSep4
             // 
-            this.MNUSep3.Name = "MNUSep3";
-            resources.ApplyResources(this.MNUSep3, "MNUSep3");
+            this.MNUSep4.Name = "MNUSep4";
+            resources.ApplyResources(this.MNUSep4, "MNUSep4");
             // 
             // MNULnkEasyCoding
             // 
@@ -1909,10 +1925,10 @@
             resources.ApplyResources(this.MNULnkTFRU, "MNULnkTFRU");
             this.MNULnkTFRU.Click += new System.EventHandler(this.MNULnkTFRU_Click);
             // 
-            // MNUSep4
+            // MNUSep7
             // 
-            this.MNUSep4.Name = "MNUSep4";
-            resources.ApplyResources(this.MNUSep4, "MNUSep4");
+            this.MNUSep7.Name = "MNUSep7";
+            resources.ApplyResources(this.MNUSep7, "MNUSep7");
             // 
             // MNUAbout
             // 
@@ -2276,6 +2292,8 @@
         private System.Windows.Forms.PictureBox HUD_NAImg;
         private System.Windows.Forms.Label HD_LastUpdate;
         private System.Windows.Forms.Label FP_Comp;
+        private System.Windows.Forms.ToolStripMenuItem MNUSupportChat;
+        private System.Windows.Forms.ToolStripSeparator MNUSep7;
     }
 }
 

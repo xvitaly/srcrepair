@@ -2432,5 +2432,10 @@ namespace srcrepair
                 FMm.ShowDialog();
             }
         }
+
+        private void MNUSupportChat_Click(object sender, EventArgs e)
+        {
+            //
+        }
     }
 }
