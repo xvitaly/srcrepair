@@ -143,6 +143,24 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to tg://resolve?domain=easycoding.
+        /// </summary>
+        internal static string AppTgChannel {
+            get {
+                return ResourceManager.GetString("AppTgChannel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://telegram.me/easycoding.
+        /// </summary>
+        internal static string AppTgChannelURL {
+            get {
+                return ResourceManager.GetString("AppTgChannelURL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The specified locale is not supported at this time, so will use the default language..
         /// </summary>
         internal static string AppUnsupportedLanguage {
