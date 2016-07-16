@@ -121,11 +121,11 @@
     <Name>noto</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/noto/noto_c230f4b8.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/noto/noto_57489500.zip</URI>
     <UpURI>https://github.com/omnibombulator/noto/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/noto.png</Preview>
     <RepoPath>https://github.com/omnibombulator/noto</RepoPath>
-    <LastUpdate>1467986465</LastUpdate>
+    <LastUpdate>1468647103</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=183</Site>
     <ArchiveDir>noto-master/noto</ArchiveDir>
     <InstallDir>notohud</InstallDir>
@@ -264,11 +264,11 @@
     <Name>G-Mang HUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/gmanghud/gmanghud_49aedfeb.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/gmanghud/gmanghud_9a0f58e2.zip</URI>
     <UpURI>https://github.com/hoXyy/GMang_HUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/gmanghud.png</Preview>
     <RepoPath>https://github.com/hoXyy/GMang_HUD</RepoPath>
-    <LastUpdate>1467980969</LastUpdate>
+    <LastUpdate>1468616952</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=273</Site>
     <ArchiveDir>GMang_HUD-master</ArchiveDir>
     <InstallDir>gmanghud</InstallDir>
@@ -277,11 +277,11 @@
     <Name>FlawHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/flawhud/flawhud_c110b25b.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/flawhud/flawhud_cf71263b.zip</URI>
     <UpURI>https://github.com/CriticalFlaw/FlawHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/flawhud.png</Preview>
     <RepoPath>https://github.com/CriticalFlaw/FlawHUD</RepoPath>
-    <LastUpdate>1468370647</LastUpdate>
+    <LastUpdate>1468632155</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=252</Site>
     <ArchiveDir>FlawHUD-master</ArchiveDir>
     <InstallDir>flawhud</InstallDir>
@@ -329,11 +329,11 @@
     <Name>mkHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/mkhud/mkhud_24d80488.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/mkhud/mkhud_e1377e52.zip</URI>
     <UpURI>https://github.com/nimtra/mkHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/mkhud.png</Preview>
     <RepoPath>https://github.com/nimtra/mkHUD</RepoPath>
-    <LastUpdate>1468533207</LastUpdate>
+    <LastUpdate>1468605405</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=231</Site>
     <ArchiveDir>mkHUD-master</ArchiveDir>
     <InstallDir>mkhud</InstallDir>
