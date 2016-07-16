@@ -2435,7 +2435,8 @@ namespace srcrepair
 
         private void MNUSupportChat_Click(object sender, EventArgs e)
         {
-            //
+            // Откроем канал поддержки в клиенте Telegram для десктопа, а если он не установлен - в браузере...
+            try { Process.Start(Properties.Resources.AppTgChannel); } catch { CoreLib.OpenWebPage(Properties.Resources.AppTgChannelURL); }
         }
     }
 }
