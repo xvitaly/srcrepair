@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Updates>
   <Application>
-    <Version>24.0.1.3526</Version>
+    <Version>25.0.0.4162</Version>
     <URL>https://www.easycoding.org/files/srcrepair_latest.exe</URL>
-    <Hash>220504f27aac0cbb30928870cfdc7d2a</Hash>
+    <Hash>ca33044dd4add179005b6f3d46d93f58</Hash>
   </Application>
   <GameDB>
     <Version>master</Version>
@@ -13,7 +13,7 @@
   <HUDDB>
     <Version>master</Version>
     <URL>https://www.easycoding.org/files/srcrepair/updates/huds.xml</URL>
-    <Hash>6cda9156c8cf08495057ce4088427958</Hash>
+    <Hash>ecb415ff2a4e4a9bd00ac97a222db44a</Hash>
   </HUDDB>
   <CfgDB>
     <Version>master</Version>
