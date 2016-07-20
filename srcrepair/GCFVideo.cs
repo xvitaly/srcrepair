@@ -113,617 +113,605 @@ namespace srcrepair
         private string RegKey;
 
         /// <summary>
-        /// Возвращает значение режима отображения.
+        /// Возвращает / задаёт значение режима отображения.
         /// </summary>
-        public int GetDisplayMode()
+        public int DisplayMode
         {
-            int res = -1;
-
-            switch (_DisplayMode)
+            get
             {
-                case 0:
-                    res = 0;
-                    break;
-                case 1:
-                    res = 1;
-                    break;
+                int res = -1;
+
+                switch (_DisplayMode)
+                {
+                    case 0:
+                        res = 0;
+                        break;
+                    case 1:
+                        res = 1;
+                        break;
+                }
+
+                return res;
             }
 
-            return res;
-        }
-
-        /// <summary>
-        /// Задаёт значение режима отображения.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetDisplayMode(int Value)
-        {
-            switch (Value)
+            set
             {
-                case 0:
-                    _DisplayMode = 0;
-                    break;
-                case 1:
-                    _DisplayMode = 1;
-                    break;
-            }
-        }
-
-        /// <summary>
-        /// Возвращает значение качества моделей.
-        /// </summary>
-        public int GetModelQuality()
-        {
-            int res = -1;
-
-            switch (_ModelDetail)
-            {
-                case 0:
-                    res = 2;
-                    break;
-                case 1:
-                    res = 1;
-                    break;
-                case 2:
-                    res = 0;
-                    break;
-            }
-
-            return res;
-        }
-
-        /// <summary>
-        /// Задаёт значение качества моделей.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetModelQuality(int Value)
-        {
-            switch (Value)
-            {
-                case 0:
-                    _ModelDetail = 2;
-                    break;
-                case 1:
-                    _ModelDetail = 1;
-                    break;
-                case 2:
-                    _ModelDetail = 0;
-                    break;
+                switch (value)
+                {
+                    case 0:
+                        _DisplayMode = 0;
+                        break;
+                    case 1:
+                        _DisplayMode = 1;
+                        break;
+                }
             }
         }
 
         /// <summary>
-        /// Возвращает значение качества текстур.
+        /// Возвращает / задаёт значение качества моделей.
         /// </summary>
-        public int GetTextureQuality()
+        public int ModelQuality
         {
-            int res = -1;
-
-            switch (_TextureDetail)
+            get
             {
-                case -1:
-                    res = 3;
-                    break;
-                case 0:
-                    res = 2;
-                    break;
-                case 1:
-                    res = 1;
-                    break;
-                case 2:
-                    res = 0;
-                    break;
+                int res = -1;
+
+                switch (_ModelDetail)
+                {
+                    case 0:
+                        res = 2;
+                        break;
+                    case 1:
+                        res = 1;
+                        break;
+                    case 2:
+                        res = 0;
+                        break;
+                }
+
+                return res;
             }
 
-            return res;
-        }
-
-        /// <summary>
-        /// Задаёт значение качества текстур.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetTextureQuality(int Value)
-        {
-            switch (Value)
+            set
             {
-                case 0:
-                    _TextureDetail = 2;
-                    break;
-                case 1:
-                    _TextureDetail = 1;
-                    break;
-                case 2:
-                    _TextureDetail = 0;
-                    break;
-                case 3:
-                    _TextureDetail = -1;
-                    break;
+                switch (value)
+                {
+                    case 0:
+                        _ModelDetail = 2;
+                        break;
+                    case 1:
+                        _ModelDetail = 1;
+                        break;
+                    case 2:
+                        _ModelDetail = 0;
+                        break;
+                }
             }
         }
 
         /// <summary>
-        /// Возвращает значение качества шейдерных эффектов.
+        /// Возвращает / задаёт значение качества текстур.
         /// </summary>
-        public int GetShaderQuality()
+        public int TextureQuality
         {
-            int res = -1;
-
-            switch (_ShaderDetail)
+            get
             {
-                case 0:
-                    res = 1;
-                    break;
-                case 1:
-                    res = 0;
-                    break;
+                int res = -1;
+
+                switch (_TextureDetail)
+                {
+                    case -1:
+                        res = 3;
+                        break;
+                    case 0:
+                        res = 2;
+                        break;
+                    case 1:
+                        res = 1;
+                        break;
+                    case 2:
+                        res = 0;
+                        break;
+                }
+
+                return res;
             }
 
-            return res;
-        }
-
-        /// <summary>
-        /// Задаёт значение качества шейдерных эффектов.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetShaderQuality(int Value)
-        {
-            switch (Value)
+            set
             {
-                case 0:
-                    _ShaderDetail = 1;
-                    break;
-                case 1:
-                    _ShaderDetail = 0;
-                    break;
-            }
-        }
-
-        /// <summary>
-        /// Возвращает значение качества отражений в воде.
-        /// </summary>
-        public int GetReflectionsQuality()
-        {
-            int res = -1;
-
-            switch (_WaterDetail)
-            {
-                case 0:
-                    res = 0;
-                    break;
-                case 1:
-                    switch (_WaterReflections)
-                    {
-                        case 0:
-                            res = 1;
-                            break;
-                        case 1:
-                            res = 2;
-                            break;
-                    }
-                    break;
-            }
-
-            return res;
-        }
-
-        /// <summary>
-        /// Задаёт значение качества отражений в воде.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetReflectionsQuality(int Value)
-        {
-            switch (Value)
-            {
-                case 0:
-                    _WaterDetail = 0;
-                    _WaterReflections = 0;
-                    break;
-                case 1:
-                    _WaterDetail = 1;
-                    _WaterReflections = 0;
-                    break;
-                case 2:
-                    _WaterDetail = 1;
-                    _WaterReflections = 1;
-                    break;
+                switch (value)
+                {
+                    case 0:
+                        _TextureDetail = 2;
+                        break;
+                    case 1:
+                        _TextureDetail = 1;
+                        break;
+                    case 2:
+                        _TextureDetail = 0;
+                        break;
+                    case 3:
+                        _TextureDetail = -1;
+                        break;
+                }
             }
         }
 
         /// <summary>
-        /// Возвращает значение качества теней.
+        /// Возвращает / задаёт значение качества шейдерных эффектов.
         /// </summary>
-        public int GetShadowQuality()
+        public int ShaderQuality
         {
-            int res = -1;
-
-            switch (_ShadowDetail)
+            get
             {
-                case 0:
-                    res = 0;
-                    break;
-                case 1:
-                    res = 1;
-                    break;
+                int res = -1;
+
+                switch (_ShaderDetail)
+                {
+                    case 0:
+                        res = 1;
+                        break;
+                    case 1:
+                        res = 0;
+                        break;
+                }
+
+                return res;
             }
 
-            return res;
-        }
-
-        /// <summary>
-        /// Задаёт значение качества теней.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetShadowQuality(int Value)
-        {
-            switch (Value)
+            set
             {
-                case 0:
-                    _ShadowDetail = 0;
-                    break;
-                case 1:
-                    _ShadowDetail = 1;
-                    break;
-            }
-        }
-
-        /// <summary>
-        /// Возвращает значение качества коррекции цвета.
-        /// </summary>
-        public int GetColorCorrection()
-        {
-            int res = -1;
-
-            switch (_ColorCorrection)
-            {
-                case 0:
-                    res = 0;
-                    break;
-                case 1:
-                    res = 1;
-                    break;
-            }
-
-            return res;
-        }
-
-        /// <summary>
-        /// Задаёт значение качества коррекции цвета.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetColorCorrection(int Value)
-        {
-            switch (Value)
-            {
-                case 0:
-                    _ColorCorrection = 0;
-                    break;
-                case 1:
-                    _ColorCorrection = 1;
-                    break;
+                switch (value)
+                {
+                    case 0:
+                        _ShaderDetail = 1;
+                        break;
+                    case 1:
+                        _ShaderDetail = 0;
+                        break;
+                }
             }
         }
 
         /// <summary>
-        /// Возвращает значение настроек полноэкранного сглаживания.
+        /// Возвращает / задаёт значение качества отражений в воде.
         /// </summary>
-        public int GetAntiAliasing()
+        public int ReflectionsQuality
         {
-            int res = -1;
-
-            switch (_AntiAliasing)
+            get
             {
-                case 0:
-                    res = 0;
-                    break;
-                case 1:
-                    res = 0;
-                    break;
-                case 2:
-                    res = 1;
-                    break;
-                case 4:
-                    switch (_AntiAliasQuality)
-                    {
-                        case 0:
-                            res = 2;
-                            break;
-                        case 2:
-                            res = 3;
-                            break;
-                        case 4:
-                            res = 4;
-                            break;
-                    }
-                    break;
-                case 8:
-                    switch (_AntiAliasQuality)
-                    {
-                        case 0:
-                            res = 5;
-                            break;
-                        case 2:
-                            res = 6;
-                            break;
-                    }
-                    break;
+                int res = -1;
+
+                switch (_WaterDetail)
+                {
+                    case 0:
+                        res = 0;
+                        break;
+                    case 1:
+                        switch (_WaterReflections)
+                        {
+                            case 0:
+                                res = 1;
+                                break;
+                            case 1:
+                                res = 2;
+                                break;
+                        }
+                        break;
+                }
+
+                return res;
             }
 
-            return res;
-        }
-
-        /// <summary>
-        /// Задаёт значение настроек полноэкранного сглаживания.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetAntiAliasing(int Value)
-        {
-            switch (Value)
+            set
             {
-                case 0: // Нет сглаживания
-                    _AntiAliasing = 1;
-                    _AntiAliasQuality = 0;
-                    break;
-                case 1: // 2x MSAA
-                    _AntiAliasing = 2;
-                    _AntiAliasQuality = 0;
-                    break;
-                case 2: // 4x MSAA
-                    _AntiAliasing = 4;
-                    _AntiAliasQuality = 0;
-                    break;
-                case 3: // 8x CSAA
-                    _AntiAliasing = 4;
-                    _AntiAliasQuality = 2;
-                    break;
-                case 4: // 16x CSAA
-                    _AntiAliasing = 4;
-                    _AntiAliasQuality = 4;
-                    break;
-                case 5: // 8x MSAA
-                    _AntiAliasing = 8;
-                    _AntiAliasQuality = 0;
-                    break;
-                case 6: // 16xQ CSAA
-                    _AntiAliasing = 8;
-                    _AntiAliasQuality = 2;
-                    break;
+                switch (value)
+                {
+                    case 0:
+                        _WaterDetail = 0;
+                        _WaterReflections = 0;
+                        break;
+                    case 1:
+                        _WaterDetail = 1;
+                        _WaterReflections = 0;
+                        break;
+                    case 2:
+                        _WaterDetail = 1;
+                        _WaterReflections = 1;
+                        break;
+                }
             }
         }
 
         /// <summary>
-        /// Возвращает значение настроек фильтрации текстур.
+        /// Возвращает / задаёт значение качества теней.
         /// </summary>
-        public int GetFilteringMode()
+        public int ShadowQuality
         {
-            int res = -1;
-
-            switch (_FilteringMode)
+            get
             {
-                case 1:
-                    switch (_FilteringTrilinear)
-                    {
-                        case 0:
-                            res = 0;
-                            break;
-                        case 1:
-                            res = 1;
-                            break;
-                    }
-                    break;
-                case 2:
-                    res = 2;
-                    break;
-                case 4:
-                    res = 3;
-                    break;
-                case 8:
-                    res = 4;
-                    break;
-                case 16:
-                    res = 5;
-                    break;
+                int res = -1;
+
+                switch (_ShadowDetail)
+                {
+                    case 0:
+                        res = 0;
+                        break;
+                    case 1:
+                        res = 1;
+                        break;
+                }
+
+                return res;
             }
 
-            return res;
-        }
-
-        /// <summary>
-        /// Задаёт значение настроек фильтрации текстур.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetFilteringMode(int Value)
-        {
-            switch (Value)
+            set
             {
-                case 0: // Билинейная
-                    _FilteringMode = 1;
-                    _FilteringTrilinear = 0;
-                    break;
-                case 1: // Трилинейная
-                    _FilteringMode = 1;
-                    _FilteringTrilinear = 1;
-                    break;
-                case 2: // Анизотропная 2x
-                    _FilteringMode = 2;
-                    _FilteringTrilinear = 0;
-                    break;
-                case 3: // Анизотропная 4x
-                    _FilteringMode = 4;
-                    _FilteringTrilinear = 0;
-                    break;
-                case 4: // Анизотропная 8x
-                    _FilteringMode = 8;
-                    _FilteringTrilinear = 0;
-                    break;
-                case 5: // Анизотропная 16x
-                    _FilteringMode = 16;
-                    _FilteringTrilinear = 0;
-                    break;
+                switch (value)
+                {
+                    case 0:
+                        _ShadowDetail = 0;
+                        break;
+                    case 1:
+                        _ShadowDetail = 1;
+                        break;
+                }
             }
         }
 
         /// <summary>
-        /// Возвращает значение настроек вертикальной синхронизации.
+        /// Возвращает / задаёт значение качества коррекции цвета.
         /// </summary>
-        public int GetVSync()
+        public int ColorCorrection
         {
-            int res = -1;
-
-            switch (_VSync)
+            get
             {
-                case 0:
-                    res = 0;
-                    break;
-                case 1:
-                    res = 1;
-                    break;
+                int res = -1;
+
+                switch (_ColorCorrection)
+                {
+                    case 0:
+                        res = 0;
+                        break;
+                    case 1:
+                        res = 1;
+                        break;
+                }
+
+                return res;
             }
 
-            return res;
-        }
-
-        /// <summary>
-        /// Задаёт значение настроек вертикальной синхронизации.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetVSync(int Value)
-        {
-            switch (Value)
+            set
             {
-                case 0:
-                    _VSync = 0;
-                    break;
-                case 1:
-                    _VSync = 1;
-                    break;
-            }
-        }
-
-        /// <summary>
-        /// Возвращает значение настроек размытия движения.
-        /// </summary>
-        public int GetMotionBlur()
-        {
-            int res = -1;
-
-            switch (_MotionBlur)
-            {
-                case 0:
-                    res = 0;
-                    break;
-                case 1:
-                    res = 1;
-                    break;
-            }
-
-            return res;
-        }
-
-        /// <summary>
-        /// Задаёт значение настроек размытия движения.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetMotionBlur(int Value)
-        {
-            switch (Value)
-            {
-                case 0:
-                    _MotionBlur = 0;
-                    break;
-                case 1:
-                    _MotionBlur = 1;
-                    break;
+                switch (value)
+                {
+                    case 0:
+                        _ColorCorrection = 0;
+                        break;
+                    case 1:
+                        _ColorCorrection = 1;
+                        break;
+                }
             }
         }
 
         /// <summary>
-        /// Возвращает значение настроек режима DirectX.
+        /// Возвращает / задаёт значение настроек полноэкранного сглаживания.
         /// </summary>
-        public int GetDirectXMode()
+        public int AntiAliasing
         {
-            int res = -1;
-
-            switch (_DirectXMode)
+            get
             {
-                case 80:
-                    res = 0;
-                    break;
-                case 81:
-                    res = 1;
-                    break;
-                case 90:
-                    res = 2;
-                    break;
-                case 95:
-                    res = 3;
-                    break;
+                int res = -1;
+
+                switch (_AntiAliasing)
+                {
+                    case 0:
+                        res = 0;
+                        break;
+                    case 1:
+                        res = 0;
+                        break;
+                    case 2:
+                        res = 1;
+                        break;
+                    case 4:
+                        switch (_AntiAliasQuality)
+                        {
+                            case 0:
+                                res = 2;
+                                break;
+                            case 2:
+                                res = 3;
+                                break;
+                            case 4:
+                                res = 4;
+                                break;
+                        }
+                        break;
+                    case 8:
+                        switch (_AntiAliasQuality)
+                        {
+                            case 0:
+                                res = 5;
+                                break;
+                            case 2:
+                                res = 6;
+                                break;
+                        }
+                        break;
+                }
+
+                return res;
             }
 
-            return res;
+            set
+            {
+                switch (value)
+                {
+                    case 0: // Нет сглаживания
+                        _AntiAliasing = 1;
+                        _AntiAliasQuality = 0;
+                        break;
+                    case 1: // 2x MSAA
+                        _AntiAliasing = 2;
+                        _AntiAliasQuality = 0;
+                        break;
+                    case 2: // 4x MSAA
+                        _AntiAliasing = 4;
+                        _AntiAliasQuality = 0;
+                        break;
+                    case 3: // 8x CSAA
+                        _AntiAliasing = 4;
+                        _AntiAliasQuality = 2;
+                        break;
+                    case 4: // 16x CSAA
+                        _AntiAliasing = 4;
+                        _AntiAliasQuality = 4;
+                        break;
+                    case 5: // 8x MSAA
+                        _AntiAliasing = 8;
+                        _AntiAliasQuality = 0;
+                        break;
+                    case 6: // 16xQ CSAA
+                        _AntiAliasing = 8;
+                        _AntiAliasQuality = 2;
+                        break;
+                }
+            }
         }
 
         /// <summary>
-        /// Задаёт значение настроек режима DirectX.
+        /// Возвращает / задаёт значение настроек фильтрации текстур.
         /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetDirectXMode(int Value)
+        public int FilteringMode
         {
-            switch (Value)
+            get
             {
-                case 0:
-                    _DirectXMode = 80;
-                    break;
-                case 1:
-                    _DirectXMode = 81;
-                    break;
-                case 2:
-                    _DirectXMode = 90;
-                    break;
-                case 3:
-                    _DirectXMode = 95;
-                    break;
+                int res = -1;
+
+                switch (_FilteringMode)
+                {
+                    case 1:
+                        switch (_FilteringTrilinear)
+                        {
+                            case 0:
+                                res = 0;
+                                break;
+                            case 1:
+                                res = 1;
+                                break;
+                        }
+                        break;
+                    case 2:
+                        res = 2;
+                        break;
+                    case 4:
+                        res = 3;
+                        break;
+                    case 8:
+                        res = 4;
+                        break;
+                    case 16:
+                        res = 5;
+                        break;
+                }
+
+                return res;
+            }
+
+            set
+            {
+                switch (value)
+                {
+                    case 0: // Билинейная
+                        _FilteringMode = 1;
+                        _FilteringTrilinear = 0;
+                        break;
+                    case 1: // Трилинейная
+                        _FilteringMode = 1;
+                        _FilteringTrilinear = 1;
+                        break;
+                    case 2: // Анизотропная 2x
+                        _FilteringMode = 2;
+                        _FilteringTrilinear = 0;
+                        break;
+                    case 3: // Анизотропная 4x
+                        _FilteringMode = 4;
+                        _FilteringTrilinear = 0;
+                        break;
+                    case 4: // Анизотропная 8x
+                        _FilteringMode = 8;
+                        _FilteringTrilinear = 0;
+                        break;
+                    case 5: // Анизотропная 16x
+                        _FilteringMode = 16;
+                        _FilteringTrilinear = 0;
+                        break;
+                }
             }
         }
 
         /// <summary>
-        /// Возвращает значение настроек HDR.
+        /// Возвращает / задаёт значение настроек вертикальной синхронизации.
         /// </summary>
-        public int GetHDRType()
+        public int VSync
         {
-            int res = -1;
-
-            switch (_HDRMode)
+            get
             {
-                case 0:
-                    res = 0;
-                    break;
-                case 1:
-                    res = 1;
-                    break;
-                case 2:
-                    res = 2;
-                    break;
+                int res = -1;
+
+                switch (_VSync)
+                {
+                    case 0:
+                        res = 0;
+                        break;
+                    case 1:
+                        res = 1;
+                        break;
+                }
+
+                return res;
             }
 
-            return res;
+            set
+            {
+                switch (value)
+                {
+                    case 0:
+                        _VSync = 0;
+                        break;
+                    case 1:
+                        _VSync = 1;
+                        break;
+                }
+            }
         }
 
         /// <summary>
-        /// Задаёт значение настроек HDR.
+        /// Возвращает / задаёт значение настроек размытия движения.
         /// </summary>
-        public void SetHDRType(int Value)
+        public int MotionBlur
         {
-            switch (Value)
+            get
             {
-                case 0:
-                    _HDRMode = 0;
-                    break;
-                case 1:
-                    _HDRMode = 1;
-                    break;
-                case 2:
-                    _HDRMode = 2;
-                    break;
+                int res = -1;
+
+                switch (_MotionBlur)
+                {
+                    case 0:
+                        res = 0;
+                        break;
+                    case 1:
+                        res = 1;
+                        break;
+                }
+
+                return res;
+            }
+
+            set
+            {
+                switch (value)
+                {
+                    case 0:
+                        _MotionBlur = 0;
+                        break;
+                    case 1:
+                        _MotionBlur = 1;
+                        break;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Возвращает / задаёт значение настроек режима DirectX.
+        /// </summary>
+        public int DirectXMode
+        {
+            get
+            {
+                int res = -1;
+
+                switch (_DirectXMode)
+                {
+                    case 80:
+                        res = 0;
+                        break;
+                    case 81:
+                        res = 1;
+                        break;
+                    case 90:
+                        res = 2;
+                        break;
+                    case 95:
+                        res = 3;
+                        break;
+                }
+
+                return res;
+            }
+
+            set
+            {
+                switch (value)
+                {
+                    case 0:
+                        _DirectXMode = 80;
+                        break;
+                    case 1:
+                        _DirectXMode = 81;
+                        break;
+                    case 2:
+                        _DirectXMode = 90;
+                        break;
+                    case 3:
+                        _DirectXMode = 95;
+                        break;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Возвращает / задаёт значение настроек HDR.
+        /// </summary>
+        public int HDRType
+        {
+            get
+            {
+                int res = -1;
+
+                switch (_HDRMode)
+                {
+                    case 0:
+                        res = 0;
+                        break;
+                    case 1:
+                        res = 1;
+                        break;
+                    case 2:
+                        res = 2;
+                        break;
+                }
+
+                return res;
+            }
+
+            set
+            {
+                switch (value)
+                {
+                    case 0:
+                        _HDRMode = 0;
+                        break;
+                    case 1:
+                        _HDRMode = 1;
+                        break;
+                    case 2:
+                        _HDRMode = 2;
+                        break;
+                }
             }
         }
 
