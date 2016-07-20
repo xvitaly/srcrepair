@@ -147,19 +147,19 @@ namespace srcrepair
             // Записываем пользовательские настройки...
             Video.SetScreenWidth((int)GT_ResHor.Value);
             Video.SetScreenHeight((int)GT_ResVert.Value);
-            Video.SetDisplayMode(GT_ScreenType.SelectedIndex);
-            Video.SetModelQuality(GT_ModelQuality.SelectedIndex);
-            Video.SetTextureQuality(GT_TextureQuality.SelectedIndex);
-            Video.SetShaderQuality(GT_ShaderQuality.SelectedIndex);
-            Video.SetReflectionsQuality(GT_WaterQuality.SelectedIndex);
-            Video.SetShadowQuality(GT_ShadowQuality.SelectedIndex);
-            Video.SetColorCorrection(GT_ColorCorrectionT.SelectedIndex);
-            Video.SetAntiAliasing(GT_AntiAliasing.SelectedIndex);
-            Video.SetFilteringMode(GT_Filtering.SelectedIndex);
-            Video.SetVSync(GT_VSync.SelectedIndex);
-            Video.SetMotionBlur(GT_MotionBlur.SelectedIndex);
-            Video.SetDirectXMode(GT_DxMode.SelectedIndex);
-            Video.SetHDRType(GT_HDR.SelectedIndex);
+            Video.DisplayMode = GT_ScreenType.SelectedIndex;
+            Video.ModelQuality = GT_ModelQuality.SelectedIndex;
+            Video.TextureQuality = GT_TextureQuality.SelectedIndex;
+            Video.ShaderQuality = GT_ShaderQuality.SelectedIndex;
+            Video.ReflectionsQuality = GT_WaterQuality.SelectedIndex;
+            Video.ShadowQuality = GT_ShadowQuality.SelectedIndex;
+            Video.ColorCorrection = GT_ColorCorrectionT.SelectedIndex;
+            Video.AntiAliasing = GT_AntiAliasing.SelectedIndex;
+            Video.FilteringMode = GT_Filtering.SelectedIndex;
+            Video.VSync = GT_VSync.SelectedIndex;
+            Video.MotionBlur = GT_MotionBlur.SelectedIndex;
+            Video.DirectXMode = GT_DxMode.SelectedIndex;
+            Video.HDRType = GT_HDR.SelectedIndex;
 
             // Записываем настройки в реестр...
             Video.WriteSettings();
@@ -212,19 +212,19 @@ namespace srcrepair
                 GT_ResVert.Value = Video.GetScreenHeight();
 
                 // Заполняем остальные настройки...
-                GT_ScreenType.SelectedIndex = Video.GetDisplayMode();
-                GT_ModelQuality.SelectedIndex = Video.GetModelQuality();
-                GT_TextureQuality.SelectedIndex = Video.GetTextureQuality();
-                GT_ShaderQuality.SelectedIndex = Video.GetShaderQuality();
-                GT_WaterQuality.SelectedIndex = Video.GetReflectionsQuality();
-                GT_ShadowQuality.SelectedIndex = Video.GetShadowQuality();
-                GT_ColorCorrectionT.SelectedIndex = Video.GetColorCorrection();
-                GT_AntiAliasing.SelectedIndex = Video.GetAntiAliasing();
-                GT_Filtering.SelectedIndex = Video.GetFilteringMode();
-                GT_VSync.SelectedIndex = Video.GetVSync();
-                GT_MotionBlur.SelectedIndex = Video.GetMotionBlur();
-                GT_DxMode.SelectedIndex = Video.GetDirectXMode();
-                GT_HDR.SelectedIndex = Video.GetHDRType();
+                GT_ScreenType.SelectedIndex = Video.DisplayMode;
+                GT_ModelQuality.SelectedIndex = Video.ModelQuality;
+                GT_TextureQuality.SelectedIndex = Video.TextureQuality;
+                GT_ShaderQuality.SelectedIndex = Video.ShaderQuality;
+                GT_WaterQuality.SelectedIndex = Video.ReflectionsQuality;
+                GT_ShadowQuality.SelectedIndex = Video.ShadowQuality;
+                GT_ColorCorrectionT.SelectedIndex = Video.ColorCorrection;
+                GT_AntiAliasing.SelectedIndex = Video.AntiAliasing;
+                GT_Filtering.SelectedIndex = Video.FilteringMode;
+                GT_VSync.SelectedIndex = Video.VSync;
+                GT_MotionBlur.SelectedIndex = Video.MotionBlur;
+                GT_DxMode.SelectedIndex = Video.DirectXMode;
+                GT_HDR.SelectedIndex = Video.HDRType;
             }
             catch (Exception Ex)
             {
