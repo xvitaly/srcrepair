@@ -30,82 +30,82 @@ namespace srcrepair
         /// <summary>
         /// Хранит значеение режима окна: ScreenWidth.
         /// </summary>
-        private int DisplayMode;
+        private int _DisplayMode;
 
         /// <summary>
         /// Хранит значение детализации моделей: r_rootlod.
         /// </summary>
-        private int ModelDetail;
+        private int _ModelDetail;
 
         /// <summary>
         /// Хранит значение детализации текстур: mat_picmip.
         /// </summary>
-        private int TextureDetail;
+        private int _TextureDetail;
 
         /// <summary>
         /// Хранит значение качества шейдерных эффектов: mat_reducefillrate.
         /// </summary>
-        private int ShaderDetail;
+        private int _ShaderDetail;
 
         /// <summary>
         /// Хранит значение качества отражений в воде: r_waterforceexpensive.
         /// </summary>
-        private int WaterDetail;
+        private int _WaterDetail;
 
         /// <summary>
         /// Хранит значение качества отражений в воде: r_waterforcereflectentities.
         /// </summary>
-        private int WaterReflections;
+        private int _WaterReflections;
 
         /// <summary>
         /// Хранит значение качества теней: r_shadowrendertotexture.
         /// </summary>
-        private int ShadowDetail;
+        private int _ShadowDetail;
 
         /// <summary>
         /// Хранит значение настроек коррекции цвета: mat_colorcorrection.
         /// </summary>
-        private int ColorCorrection;
+        private int _ColorCorrection;
 
         /// <summary>
         /// Хранит значение настроек полноэкранного сглаживания: mat_antialias.
         /// </summary>
-        private int AntiAliasing;
+        private int _AntiAliasing;
 
         /// <summary>
         /// Хранит значение глубины полноэкранного сглаживания: mat_aaquality.
         /// </summary>
-        private int AntiAliasQuality;
+        private int _AntiAliasQuality;
 
         /// <summary>
         /// Хранит значение настроек анизотропной фильтрации текстур: mat_forceaniso.
         /// </summary>
-        private int FilteringMode;
+        private int _FilteringMode;
 
         /// <summary>
         /// Хранит значение настроек трилинейной фильтрации текстур: mat_trilinear.
         /// </summary>
-        private int FilteringTrilinear;
+        private int _FilteringTrilinear;
 
         /// <summary>
         /// Хранит значение настроек вертикальной синхронизации: mat_vsync.
         /// </summary>
-        private int VSync;
+        private int _VSync;
 
         /// <summary>
         /// Хранит значение настроек размытия движения: MotionBlur.
         /// </summary>
-        private int MotionBlur;
+        private int _MotionBlur;
 
         /// <summary>
         /// Хранит значение настроек режима DirectX: DXLevel_V1.
         /// </summary>
-        private int DirectXMode;
+        private int _DirectXMode;
 
         /// <summary>
         /// Хранит значение настроек HDR: mat_hdr_level.
         /// </summary>
-        private int HDRMode;
+        private int _HDRMode;
 
         /// <summary>
         /// Хранит путь к ветке реестра с графическими настройками игры.
@@ -119,7 +119,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (DisplayMode)
+            switch (_DisplayMode)
             {
                 case 0:
                     res = 0;
@@ -141,10 +141,10 @@ namespace srcrepair
             switch (Value)
             {
                 case 0:
-                    DisplayMode = 0;
+                    _DisplayMode = 0;
                     break;
                 case 1:
-                    DisplayMode = 1;
+                    _DisplayMode = 1;
                     break;
             }
         }
@@ -156,7 +156,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (ModelDetail)
+            switch (_ModelDetail)
             {
                 case 0:
                     res = 2;
@@ -181,13 +181,13 @@ namespace srcrepair
             switch (Value)
             {
                 case 0:
-                    ModelDetail = 2;
+                    _ModelDetail = 2;
                     break;
                 case 1:
-                    ModelDetail = 1;
+                    _ModelDetail = 1;
                     break;
                 case 2:
-                    ModelDetail = 0;
+                    _ModelDetail = 0;
                     break;
             }
         }
@@ -199,7 +199,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (TextureDetail)
+            switch (_TextureDetail)
             {
                 case -1:
                     res = 3;
@@ -227,16 +227,16 @@ namespace srcrepair
             switch (Value)
             {
                 case 0:
-                    TextureDetail = 2;
+                    _TextureDetail = 2;
                     break;
                 case 1:
-                    TextureDetail = 1;
+                    _TextureDetail = 1;
                     break;
                 case 2:
-                    TextureDetail = 0;
+                    _TextureDetail = 0;
                     break;
                 case 3:
-                    TextureDetail = -1;
+                    _TextureDetail = -1;
                     break;
             }
         }
@@ -248,7 +248,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (ShaderDetail)
+            switch (_ShaderDetail)
             {
                 case 0:
                     res = 1;
@@ -270,10 +270,10 @@ namespace srcrepair
             switch (Value)
             {
                 case 0:
-                    ShaderDetail = 1;
+                    _ShaderDetail = 1;
                     break;
                 case 1:
-                    ShaderDetail = 0;
+                    _ShaderDetail = 0;
                     break;
             }
         }
@@ -285,13 +285,13 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (WaterDetail)
+            switch (_WaterDetail)
             {
                 case 0:
                     res = 0;
                     break;
                 case 1:
-                    switch (WaterReflections)
+                    switch (_WaterReflections)
                     {
                         case 0:
                             res = 1;
@@ -315,16 +315,16 @@ namespace srcrepair
             switch (Value)
             {
                 case 0:
-                    WaterDetail = 0;
-                    WaterReflections = 0;
+                    _WaterDetail = 0;
+                    _WaterReflections = 0;
                     break;
                 case 1:
-                    WaterDetail = 1;
-                    WaterReflections = 0;
+                    _WaterDetail = 1;
+                    _WaterReflections = 0;
                     break;
                 case 2:
-                    WaterDetail = 1;
-                    WaterReflections = 1;
+                    _WaterDetail = 1;
+                    _WaterReflections = 1;
                     break;
             }
         }
@@ -336,7 +336,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (ShadowDetail)
+            switch (_ShadowDetail)
             {
                 case 0:
                     res = 0;
@@ -358,10 +358,10 @@ namespace srcrepair
             switch (Value)
             {
                 case 0:
-                    ShadowDetail = 0;
+                    _ShadowDetail = 0;
                     break;
                 case 1:
-                    ShadowDetail = 1;
+                    _ShadowDetail = 1;
                     break;
             }
         }
@@ -373,7 +373,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (ColorCorrection)
+            switch (_ColorCorrection)
             {
                 case 0:
                     res = 0;
@@ -395,10 +395,10 @@ namespace srcrepair
             switch (Value)
             {
                 case 0:
-                    ColorCorrection = 0;
+                    _ColorCorrection = 0;
                     break;
                 case 1:
-                    ColorCorrection = 1;
+                    _ColorCorrection = 1;
                     break;
             }
         }
@@ -410,7 +410,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (AntiAliasing)
+            switch (_AntiAliasing)
             {
                 case 0:
                     res = 0;
@@ -422,7 +422,7 @@ namespace srcrepair
                     res = 1;
                     break;
                 case 4:
-                    switch (AntiAliasQuality)
+                    switch (_AntiAliasQuality)
                     {
                         case 0:
                             res = 2;
@@ -436,7 +436,7 @@ namespace srcrepair
                     }
                     break;
                 case 8:
-                    switch (AntiAliasQuality)
+                    switch (_AntiAliasQuality)
                     {
                         case 0:
                             res = 5;
@@ -460,32 +460,32 @@ namespace srcrepair
             switch (Value)
             {
                 case 0: // Нет сглаживания
-                    AntiAliasing = 1;
-                    AntiAliasQuality = 0;
+                    _AntiAliasing = 1;
+                    _AntiAliasQuality = 0;
                     break;
                 case 1: // 2x MSAA
-                    AntiAliasing = 2;
-                    AntiAliasQuality = 0;
+                    _AntiAliasing = 2;
+                    _AntiAliasQuality = 0;
                     break;
                 case 2: // 4x MSAA
-                    AntiAliasing = 4;
-                    AntiAliasQuality = 0;
+                    _AntiAliasing = 4;
+                    _AntiAliasQuality = 0;
                     break;
                 case 3: // 8x CSAA
-                    AntiAliasing = 4;
-                    AntiAliasQuality = 2;
+                    _AntiAliasing = 4;
+                    _AntiAliasQuality = 2;
                     break;
                 case 4: // 16x CSAA
-                    AntiAliasing = 4;
-                    AntiAliasQuality = 4;
+                    _AntiAliasing = 4;
+                    _AntiAliasQuality = 4;
                     break;
                 case 5: // 8x MSAA
-                    AntiAliasing = 8;
-                    AntiAliasQuality = 0;
+                    _AntiAliasing = 8;
+                    _AntiAliasQuality = 0;
                     break;
                 case 6: // 16xQ CSAA
-                    AntiAliasing = 8;
-                    AntiAliasQuality = 2;
+                    _AntiAliasing = 8;
+                    _AntiAliasQuality = 2;
                     break;
             }
         }
@@ -497,10 +497,10 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (FilteringMode)
+            switch (_FilteringMode)
             {
                 case 1:
-                    switch (FilteringTrilinear)
+                    switch (_FilteringTrilinear)
                     {
                         case 0:
                             res = 0;
@@ -536,28 +536,28 @@ namespace srcrepair
             switch (Value)
             {
                 case 0: // Билинейная
-                    FilteringMode = 1;
-                    FilteringTrilinear = 0;
+                    _FilteringMode = 1;
+                    _FilteringTrilinear = 0;
                     break;
                 case 1: // Трилинейная
-                    FilteringMode = 1;
-                    FilteringTrilinear = 1;
+                    _FilteringMode = 1;
+                    _FilteringTrilinear = 1;
                     break;
                 case 2: // Анизотропная 2x
-                    FilteringMode = 2;
-                    FilteringTrilinear = 0;
+                    _FilteringMode = 2;
+                    _FilteringTrilinear = 0;
                     break;
                 case 3: // Анизотропная 4x
-                    FilteringMode = 4;
-                    FilteringTrilinear = 0;
+                    _FilteringMode = 4;
+                    _FilteringTrilinear = 0;
                     break;
                 case 4: // Анизотропная 8x
-                    FilteringMode = 8;
-                    FilteringTrilinear = 0;
+                    _FilteringMode = 8;
+                    _FilteringTrilinear = 0;
                     break;
                 case 5: // Анизотропная 16x
-                    FilteringMode = 16;
-                    FilteringTrilinear = 0;
+                    _FilteringMode = 16;
+                    _FilteringTrilinear = 0;
                     break;
             }
         }
@@ -569,7 +569,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (VSync)
+            switch (_VSync)
             {
                 case 0:
                     res = 0;
@@ -591,10 +591,10 @@ namespace srcrepair
             switch (Value)
             {
                 case 0:
-                    VSync = 0;
+                    _VSync = 0;
                     break;
                 case 1:
-                    VSync = 1;
+                    _VSync = 1;
                     break;
             }
         }
@@ -606,7 +606,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (MotionBlur)
+            switch (_MotionBlur)
             {
                 case 0:
                     res = 0;
@@ -628,10 +628,10 @@ namespace srcrepair
             switch (Value)
             {
                 case 0:
-                    MotionBlur = 0;
+                    _MotionBlur = 0;
                     break;
                 case 1:
-                    MotionBlur = 1;
+                    _MotionBlur = 1;
                     break;
             }
         }
@@ -643,7 +643,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (DirectXMode)
+            switch (_DirectXMode)
             {
                 case 80:
                     res = 0;
@@ -671,16 +671,16 @@ namespace srcrepair
             switch (Value)
             {
                 case 0:
-                    DirectXMode = 80;
+                    _DirectXMode = 80;
                     break;
                 case 1:
-                    DirectXMode = 81;
+                    _DirectXMode = 81;
                     break;
                 case 2:
-                    DirectXMode = 90;
+                    _DirectXMode = 90;
                     break;
                 case 3:
-                    DirectXMode = 95;
+                    _DirectXMode = 95;
                     break;
             }
         }
@@ -692,7 +692,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (HDRMode)
+            switch (_HDRMode)
             {
                 case 0:
                     res = 0;
@@ -716,13 +716,13 @@ namespace srcrepair
             switch (Value)
             {
                 case 0:
-                    HDRMode = 0;
+                    _HDRMode = 0;
                     break;
                 case 1:
-                    HDRMode = 1;
+                    _HDRMode = 1;
                     break;
                 case 2:
-                    HDRMode = 2;
+                    _HDRMode = 2;
                     break;
             }
         }
@@ -745,48 +745,48 @@ namespace srcrepair
                 try { ScreenHeight = Convert.ToInt32(ResKey.GetValue("ScreenHeight")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем режим окна (ScreenWindowed): 1-window, 0-fullscreen...
-                try { DisplayMode = Convert.ToInt32(ResKey.GetValue("ScreenWindowed")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _DisplayMode = Convert.ToInt32(ResKey.GetValue("ScreenWindowed")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем детализацию моделей (r_rootlod): 0-high, 1-med, 2-low...
-                try { ModelDetail = Convert.ToInt32(ResKey.GetValue("r_rootlod")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _ModelDetail = Convert.ToInt32(ResKey.GetValue("r_rootlod")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем детализацию текстур (mat_picmip): 0-high, 1-med, 2-low...
-                try { TextureDetail = Convert.ToInt32(ResKey.GetValue("mat_picmip")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _TextureDetail = Convert.ToInt32(ResKey.GetValue("mat_picmip")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки шейдеров (mat_reducefillrate): 0-high, 1-low...
-                try { ShaderDetail = Convert.ToInt32(ResKey.GetValue("mat_reducefillrate")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _ShaderDetail = Convert.ToInt32(ResKey.GetValue("mat_reducefillrate")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Начинаем работать над отражениями (здесь сложнее)...
-                try { WaterDetail = Convert.ToInt32(ResKey.GetValue("r_waterforceexpensive")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                try { WaterReflections = Convert.ToInt32(ResKey.GetValue("r_waterforcereflectentities")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _WaterDetail = Convert.ToInt32(ResKey.GetValue("r_waterforceexpensive")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _WaterReflections = Convert.ToInt32(ResKey.GetValue("r_waterforcereflectentities")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки теней (r_shadowrendertotexture): 0-low, 1-high...
-                try { ShadowDetail = Convert.ToInt32(ResKey.GetValue("r_shadowrendertotexture")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _ShadowDetail = Convert.ToInt32(ResKey.GetValue("r_shadowrendertotexture")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки коррекции цвета (mat_colorcorrection): 0-off, 1-on...
-                try { ColorCorrection = Convert.ToInt32(ResKey.GetValue("mat_colorcorrection")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _ColorCorrection = Convert.ToInt32(ResKey.GetValue("mat_colorcorrection")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки сглаживания (mat_antialias): 1-off, 2-2x, 4-4x, etc...
                 // 2x MSAA - 2:0; 4xMSAA - 4:0; 8xCSAA - 4:2; 16xCSAA - 4:4; 8xMSAA - 8:0; 16xQ CSAA - 8:2.
-                try { AntiAliasing = Convert.ToInt32(ResKey.GetValue("mat_antialias")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                try { AntiAliasQuality = Convert.ToInt32(ResKey.GetValue("mat_aaquality")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _AntiAliasing = Convert.ToInt32(ResKey.GetValue("mat_antialias")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _AntiAliasQuality = Convert.ToInt32(ResKey.GetValue("mat_aaquality")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки анизотропии (mat_forceaniso): 1-off, etc...
-                try { FilteringMode = Convert.ToInt32(ResKey.GetValue("mat_forceaniso")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                try { FilteringTrilinear = Convert.ToInt32(ResKey.GetValue("mat_trilinear")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _FilteringMode = Convert.ToInt32(ResKey.GetValue("mat_forceaniso")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _FilteringTrilinear = Convert.ToInt32(ResKey.GetValue("mat_trilinear")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки вертикальной синхронизации (mat_vsync): 0-off, 1-on...
-                try { VSync = Convert.ToInt32(ResKey.GetValue("mat_vsync")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _VSync = Convert.ToInt32(ResKey.GetValue("mat_vsync")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки размытия движения (MotionBlur): 0-off, 1-on...
-                try { MotionBlur = Convert.ToInt32(ResKey.GetValue("MotionBlur")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _MotionBlur = Convert.ToInt32(ResKey.GetValue("MotionBlur")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки режима рендера (DXLevel_V1):
                 // 80-DirectX 8.0; 81-DirectX 8.1; 90-DirectX 9.0; 95-DirectX 9.0c...
-                try { DirectXMode = Convert.ToInt32(ResKey.GetValue("DXLevel_V1")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _DirectXMode = Convert.ToInt32(ResKey.GetValue("DXLevel_V1")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки HDR (mat_hdr_level): 0-off, 1-bloom, 2-full...
-                try { HDRMode = Convert.ToInt32(ResKey.GetValue("mat_hdr_level")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _HDRMode = Convert.ToInt32(ResKey.GetValue("mat_hdr_level")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Закрываем ключ реестра...
                 ResKey.Close();
@@ -811,47 +811,47 @@ namespace srcrepair
             try { ResKey.SetValue("ScreenHeight", ScreenHeight, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки режима запуска приложения (ScreenWindowed)...
-            try { ResKey.SetValue("ScreenWindowed", DisplayMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("ScreenWindowed", _DisplayMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки детализации моделей...
-            try { ResKey.SetValue("r_rootlod", ModelDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("r_rootlod", _ModelDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки детализации текстур...
-            try { ResKey.SetValue("mat_picmip", TextureDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("mat_picmip", _TextureDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки качества шейдерных эффектов...
-            try { ResKey.SetValue("mat_reducefillrate", ShaderDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("mat_reducefillrate", _ShaderDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки отражений в воде...
-            try { ResKey.SetValue("r_waterforceexpensive", WaterDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-            try { ResKey.SetValue("r_waterforcereflectentities", WaterReflections, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("r_waterforceexpensive", _WaterDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("r_waterforcereflectentities", _WaterReflections, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки прорисовки теней...
-            try { ResKey.SetValue("r_shadowrendertotexture", ShadowDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("r_shadowrendertotexture", _ShadowDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки коррекции цвета...
-            try { ResKey.SetValue("mat_colorcorrection", ColorCorrection, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("mat_colorcorrection", _ColorCorrection, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки сглаживания...
-            try { ResKey.SetValue("mat_antialias", AntiAliasing, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-            try { ResKey.SetValue("mat_aaquality", AntiAliasQuality, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-            try { ResKey.SetValue("ScreenMSAA", AntiAliasing, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-            try { ResKey.SetValue("ScreenMSAAQuality", AntiAliasQuality, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("mat_antialias", _AntiAliasing, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("mat_aaquality", _AntiAliasQuality, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("ScreenMSAA", _AntiAliasing, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("ScreenMSAAQuality", _AntiAliasQuality, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки фильтрации...
-            try { ResKey.SetValue("mat_forceaniso", FilteringMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("mat_forceaniso", _FilteringMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки вертикальной синхронизации...
-            try { ResKey.SetValue("mat_vsync", VSync, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("mat_vsync", _VSync, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки размытия движения...
-            try { ResKey.SetValue("MotionBlur", MotionBlur, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("MotionBlur", _MotionBlur, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки режима DirectX...
-            try { ResKey.SetValue("DXLevel_V1", DirectXMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("DXLevel_V1", _DirectXMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки HDR...
-            try { ResKey.SetValue("mat_hdr_level", HDRMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("mat_hdr_level", _HDRMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Закрываем открытый ранее ключ реестра...
             ResKey.Close();
