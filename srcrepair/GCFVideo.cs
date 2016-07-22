@@ -30,87 +30,87 @@ namespace srcrepair
         /// <summary>
         /// Хранит значеение режима окна: ScreenWidth.
         /// </summary>
-        private int _DisplayMode;
+        protected int _DisplayMode;
 
         /// <summary>
         /// Хранит значение детализации моделей: r_rootlod.
         /// </summary>
-        private int _ModelDetail;
+        protected int _ModelDetail;
 
         /// <summary>
         /// Хранит значение детализации текстур: mat_picmip.
         /// </summary>
-        private int _TextureDetail;
+        protected int _TextureDetail;
 
         /// <summary>
         /// Хранит значение качества шейдерных эффектов: mat_reducefillrate.
         /// </summary>
-        private int _ShaderDetail;
+        protected int _ShaderDetail;
 
         /// <summary>
         /// Хранит значение качества отражений в воде: r_waterforceexpensive.
         /// </summary>
-        private int _WaterDetail;
+        protected int _WaterDetail;
 
         /// <summary>
         /// Хранит значение качества отражений в воде: r_waterforcereflectentities.
         /// </summary>
-        private int _WaterReflections;
+        protected int _WaterReflections;
 
         /// <summary>
         /// Хранит значение качества теней: r_shadowrendertotexture.
         /// </summary>
-        private int _ShadowDetail;
+        protected int _ShadowDetail;
 
         /// <summary>
         /// Хранит значение настроек коррекции цвета: mat_colorcorrection.
         /// </summary>
-        private int _ColorCorrection;
+        protected int _ColorCorrection;
 
         /// <summary>
         /// Хранит значение настроек полноэкранного сглаживания: mat_antialias.
         /// </summary>
-        private int _AntiAliasing;
+        protected int _AntiAliasing;
 
         /// <summary>
         /// Хранит значение глубины полноэкранного сглаживания: mat_aaquality.
         /// </summary>
-        private int _AntiAliasQuality;
+        protected int _AntiAliasQuality;
 
         /// <summary>
         /// Хранит значение настроек анизотропной фильтрации текстур: mat_forceaniso.
         /// </summary>
-        private int _FilteringMode;
+        protected int _FilteringMode;
 
         /// <summary>
         /// Хранит значение настроек трилинейной фильтрации текстур: mat_trilinear.
         /// </summary>
-        private int _FilteringTrilinear;
+        protected int _FilteringTrilinear;
 
         /// <summary>
         /// Хранит значение настроек вертикальной синхронизации: mat_vsync.
         /// </summary>
-        private int _VSync;
+        protected int _VSync;
 
         /// <summary>
         /// Хранит значение настроек размытия движения: MotionBlur.
         /// </summary>
-        private int _MotionBlur;
+        protected int _MotionBlur;
 
         /// <summary>
         /// Хранит значение настроек режима DirectX: DXLevel_V1.
         /// </summary>
-        private int _DirectXMode;
+        protected int _DirectXMode;
 
         /// <summary>
         /// Хранит значение настроек HDR: mat_hdr_level.
         /// </summary>
-        private int _HDRMode;
+        protected int _HDRMode;
 
         /// <summary>
         /// Хранит путь к ветке реестра с графическими настройками игры.
         /// </summary>
-        private string RegKey;
+        protected string RegKey;
 
         /// <summary>
         /// Возвращает / задаёт значение режима отображения.
