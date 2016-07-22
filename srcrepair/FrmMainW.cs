@@ -177,19 +177,19 @@ namespace srcrepair
             // Записываем пользовательские настройки...
             Video.ScreenWidth = (int)GT_NCF_HorRes.Value;
             Video.ScreenHeight = (int)GT_NCF_VertRes.Value;
-            Video.SetScreenRatio(GT_NCF_Ratio.SelectedIndex);
-            Video.SetScreenGamma(GT_NCF_Brightness.Text);
-            Video.SetShadowQuality(GT_NCF_Shadows.SelectedIndex);
-            Video.SetMotionBlur(GT_NCF_MBlur.SelectedIndex);
-            Video.SetScreenMode(GT_NCF_DispMode.SelectedIndex);
-            Video.SetAntiAliasing(GT_NCF_AntiAlias.SelectedIndex);
-            Video.SetFilteringMode(GT_NCF_Filtering.SelectedIndex);
-            Video.SetVSync(GT_NCF_VSync.SelectedIndex);
-            Video.SetRenderingMode(GT_NCF_Multicore.SelectedIndex);
-            Video.SetShaderEffects(GT_NCF_ShaderE.SelectedIndex);
-            Video.SetEffects(GT_NCF_EffectD.SelectedIndex);
-            Video.SetMemoryPool(GT_NCF_MemPool.SelectedIndex);
-            Video.SetModelQuality(GT_NCF_Quality.SelectedIndex);
+            Video.ScreenRatio = GT_NCF_Ratio.SelectedIndex;
+            Video.ScreenGamma = GT_NCF_Brightness.Text;
+            Video.ShadowQuality = GT_NCF_Shadows.SelectedIndex;
+            Video.MotionBlur = GT_NCF_MBlur.SelectedIndex;
+            Video.ScreenMode = GT_NCF_DispMode.SelectedIndex;
+            Video.AntiAliasing = GT_NCF_AntiAlias.SelectedIndex;
+            Video.FilteringMode = GT_NCF_Filtering.SelectedIndex;
+            Video.VSync = GT_NCF_VSync.SelectedIndex;
+            Video.RenderingMode = GT_NCF_Multicore.SelectedIndex;
+            Video.ShaderEffects = GT_NCF_ShaderE.SelectedIndex;
+            Video.Effects = GT_NCF_EffectD.SelectedIndex;
+            Video.MemoryPool = GT_NCF_MemPool.SelectedIndex;
+            Video.ModelQuality = GT_NCF_Quality.SelectedIndex;
 
             // Записываем настройки в файл...
             Video.WriteSettings();
@@ -250,19 +250,19 @@ namespace srcrepair
                 GT_NCF_VertRes.Value = Video.ScreenHeight;
 
                 // Заполняем остальные настройки...
-                GT_NCF_Ratio.SelectedIndex = Video.GetScreenRatio();
-                GT_NCF_Brightness.Text = Video.GetScreenGamma();
-                GT_NCF_Shadows.SelectedIndex = Video.GetShadowQuality();
-                GT_NCF_MBlur.SelectedIndex = Video.GetMotionBlur();
-                GT_NCF_DispMode.SelectedIndex = Video.GetScreenMode();
-                GT_NCF_AntiAlias.SelectedIndex = Video.GetAntiAliasing();
-                GT_NCF_Filtering.SelectedIndex = Video.GetFilteringMode();
-                GT_NCF_VSync.SelectedIndex = Video.GetVSync();
-                GT_NCF_Multicore.SelectedIndex = Video.GetRenderingMode();
-                GT_NCF_ShaderE.SelectedIndex = Video.GetShaderEffects();
-                GT_NCF_EffectD.SelectedIndex = Video.GetEffects();
-                GT_NCF_MemPool.SelectedIndex = Video.GetMemoryPool();
-                GT_NCF_Quality.SelectedIndex = Video.GetModelQuality();
+                GT_NCF_Ratio.SelectedIndex = Video.ScreenRatio;
+                GT_NCF_Brightness.Text = Video.ScreenGamma;
+                GT_NCF_Shadows.SelectedIndex = Video.ShadowQuality;
+                GT_NCF_MBlur.SelectedIndex = Video.MotionBlur;
+                GT_NCF_DispMode.SelectedIndex = Video.ScreenMode;
+                GT_NCF_AntiAlias.SelectedIndex = Video.AntiAliasing;
+                GT_NCF_Filtering.SelectedIndex = Video.FilteringMode;
+                GT_NCF_VSync.SelectedIndex = Video.VSync;
+                GT_NCF_Multicore.SelectedIndex = Video.RenderingMode;
+                GT_NCF_ShaderE.SelectedIndex = Video.ShaderEffects;
+                GT_NCF_EffectD.SelectedIndex = Video.Effects;
+                GT_NCF_MemPool.SelectedIndex = Video.MemoryPool;
+                GT_NCF_Quality.SelectedIndex = Video.ModelQuality;
             }
             catch (Exception Ex)
             {
