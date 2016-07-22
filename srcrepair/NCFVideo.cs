@@ -130,548 +130,598 @@ namespace srcrepair
         private int _TextureModelQuality;
 
         /// <summary>
-        /// Возвращает настройки соотношения сторон NCF-игры на движке Source 1.
+        /// Возвращает / задаёт настройки соотношения сторон NCF-игры на движке Source 1.
         /// </summary>
-        public int GetScreenRatio()
+        public int ScreenRatio
         {
-            int res = -1;
-
-            switch (_ScreenRatio)
+            get
             {
-                case 0: res = 0;
-                    break;
-                case 1: res = 1;
-                    break;
-                case 2: res = 2;
-                    break;
+                int res = -1;
+
+                switch (_ScreenRatio)
+                {
+                    case 0:
+                        res = 0;
+                        break;
+                    case 1:
+                        res = 1;
+                        break;
+                    case 2:
+                        res = 2;
+                        break;
+                }
+
+                return res;
             }
 
-            return res;
-        }
-
-        /// <summary>
-        /// Задаёт настройки соотношения сторон NCF-игры на движке Source 1.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetScreenRatio(int Value)
-        {
-            switch (Value)
+            set
             {
-                case 0: _ScreenRatio = 0;
-                    break;
-                case 1: _ScreenRatio = 1;
-                    break;
-                case 2: _ScreenRatio = 2;
-                    break;
-            }
-        }
-
-        /// <summary>
-        /// Возвращает настройки контрастности и цветовой гаммы NCF-игры на движке Source 1.
-        /// </summary>
-        public string GetScreenGamma()
-        {
-            return _Brightness.ToString();
-        }
-
-        /// <summary>
-        /// Задаёт настройки контрастности и цветовой гаммы NCF-игры на движке Source 1.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetScreenGamma(string Value)
-        {
-            _Brightness = Convert.ToInt32(Value);
-        }
-
-        /// <summary>
-        /// Возвращает настройки качества теней NCF-игры на движке Source 1.
-        /// </summary>
-        public int GetShadowQuality()
-        {
-            int res = -1;
-
-            switch (_ShadowQuality)
-            {
-                case 0: res = 0;
-                    break;
-                case 1: res = 1;
-                    break;
-                case 2: res = 2;
-                    break;
-                case 3: res = 3;
-                    break;
-            }
-
-            return res;
-        }
-
-        /// <summary>
-        /// Задаёт настройки качества теней NCF-игры на движке Source 1.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetShadowQuality(int Value)
-        {
-            switch (Value)
-            {
-                case 0: _ShadowQuality = 0;
-                    break;
-                case 1: _ShadowQuality = 1;
-                    break;
-                case 2: _ShadowQuality = 2;
-                    break;
-                case 3: _ShadowQuality = 3;
-                    break;
+                switch (value)
+                {
+                    case 0:
+                        _ScreenRatio = 0;
+                        break;
+                    case 1:
+                        _ScreenRatio = 1;
+                        break;
+                    case 2:
+                        _ScreenRatio = 2;
+                        break;
+                }
             }
         }
 
         /// <summary>
-        /// Возвращает настройки размытия движений NCF-игры на движке Source 1.
+        /// Возвращает / задаёт настройки контрастности и цветовой гаммы NCF-игры на движке Source 1.
         /// </summary>
-        public int GetMotionBlur()
-        {
-            int res = -1;
-
-            switch (_MotionBlur)
-            {
-                case 0: res = 0;
-                    break;
-                case 1: res = 1;
-                    break;
-            }
-
-            return res;
-        }
+        public string ScreenGamma { get { return _Brightness.ToString(); } set { _Brightness = Convert.ToInt32(value); } }
 
         /// <summary>
-        /// Задаёт настройки размытия движений NCF-игры на движке Source 1.
+        /// Возвращает / задаёт настройки качества теней NCF-игры на движке Source 1.
         /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetMotionBlur(int Value)
+        public int ShadowQuality
         {
-            switch (Value)
+            get
             {
-                case 0: _MotionBlur = 0;
-                    break;
-                case 1: _MotionBlur = 1;
-                    break;
-            }
-        }
+                int res = -1;
 
-        /// <summary>
-        /// Возвращает настройки графического режима NCF-игры на движке Source 1.
-        /// </summary>
-        public int GetScreenMode()
-        {
-            int res = -1;
+                switch (_ShadowQuality)
+                {
+                    case 0:
+                        res = 0;
+                        break;
+                    case 1:
+                        res = 1;
+                        break;
+                    case 2:
+                        res = 2;
+                        break;
+                    case 3:
+                        res = 3;
+                        break;
+                }
 
-            switch (_DisplayMode)
-            {
-                case 0:
-                    switch (_DisplayBorderless)
-                    {
-                        case 0:
-                            res = 1;
-                            break;
-                        case 1:
-                            res = 2;
-                            break;
-                    }
-                    break;
-                case 1:
-                    res = 0;
-                    break;
+                return res;
             }
 
-            return res;
-        }
-
-        /// <summary>
-        /// Задаёт настройки графического режима NCF-игры на движке Source 1.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetScreenMode(int Value)
-        {
-            switch (Value)
+            set
             {
-                case 0:
-                    _DisplayMode = 1;
-                    _DisplayBorderless = 0;
-                    break;
-                case 1:
-                    _DisplayMode = 0;
-                    _DisplayBorderless = 0;
-                    break;
-                case 2:
-                    _DisplayMode = 1;
-                    _DisplayBorderless = 0;
-                    break;
+                switch (value)
+                {
+                    case 0:
+                        _ShadowQuality = 0;
+                        break;
+                    case 1:
+                        _ShadowQuality = 1;
+                        break;
+                    case 2:
+                        _ShadowQuality = 2;
+                        break;
+                    case 3:
+                        _ShadowQuality = 3;
+                        break;
+                }
             }
         }
 
         /// <summary>
-        /// Возвращает настройки полноэкранного сглаживания NCF-игры на движке Source 1.
+        /// Возвращает / задаёт настройки размытия движений NCF-игры на движке Source 1.
         /// </summary>
-        public int GetAntiAliasing()
+        public int MotionBlur
         {
-            int res = -1;
-
-            switch (_AntiAliasing)
+            get
             {
-                case 0: res = 0;
-                    break;
-                case 1: res = 0;
-                    break;
-                case 2: res = 1;
-                    break;
-                case 4:
-                    switch (_AntiAliasQuality)
-                    {
-                        case 0: res = 2;
-                            break;
-                        case 2: res = 3;
-                            break;
-                        case 4: res = 4;
-                            break;
-                    }
-                    break;
-                case 8:
-                    switch (_AntiAliasQuality)
-                    {
-                        case 0: res = 5;
-                            break;
-                        case 2: res = 6;
-                            break;
-                    }
-                    break;
+                int res = -1;
+
+                switch (_MotionBlur)
+                {
+                    case 0:
+                        res = 0;
+                        break;
+                    case 1:
+                        res = 1;
+                        break;
+                }
+
+                return res;
             }
 
-            return res;
-        }
-
-        /// <summary>
-        /// Задаёт настройки полноэкранного сглаживания NCF-игры на движке Source 1.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetAntiAliasing(int Value)
-        {
-            switch (Value)
+            set
             {
-                case 0:
-                    _AntiAliasing = 1;
-                    _AntiAliasQuality = 0;
-                    break;
-                case 1:
-                    _AntiAliasing = 2;
-                    _AntiAliasQuality = 0;
-                    break;
-                case 2:
-                    _AntiAliasing = 4;
-                    _AntiAliasQuality = 0;
-                    break;
-                case 3:
-                    _AntiAliasing = 4;
-                    _AntiAliasQuality = 2;
-                    break;
-                case 4:
-                    _AntiAliasing = 4;
-                    _AntiAliasQuality = 4;
-                    break;
-                case 5:
-                    _AntiAliasing = 8;
-                    _AntiAliasQuality = 0;
-                    break;
-                case 6:
-                    _AntiAliasing = 8;
-                    _AntiAliasQuality = 2;
-                    break;
+                switch (value)
+                {
+                    case 0:
+                        _MotionBlur = 0;
+                        break;
+                    case 1:
+                        _MotionBlur = 1;
+                        break;
+                }
             }
         }
 
         /// <summary>
-        /// Возвращает настройки качества фильтрации текстур NCF-игры на движке Source 1.
+        /// Возвращает / задаёт настройки графического режима NCF-игры на движке Source 1.
         /// </summary>
-        public int GetFilteringMode()
+        public int ScreenMode
         {
-            int res = -1;
-
-            switch (_FilteringMode)
+            get
             {
-                case 0: res = 0;
-                    break;
-                case 1: res = 1;
-                    break;
-                case 2: res = 2;
-                    break;
-                case 4: res = 3;
-                    break;
-                case 8: res = 4;
-                    break;
-                case 16: res = 5;
-                    break;
+                int res = -1;
+
+                switch (_DisplayMode)
+                {
+                    case 0:
+                        switch (_DisplayBorderless)
+                        {
+                            case 0:
+                                res = 1;
+                                break;
+                            case 1:
+                                res = 2;
+                                break;
+                        }
+                        break;
+                    case 1:
+                        res = 0;
+                        break;
+                }
+
+                return res;
             }
 
-            return res;
-        }
-
-        /// <summary>
-        /// Задаёт настройки качества фильтрации текстур NCF-игры на движке Source 1.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetFilteringMode(int Value)
-        {
-            switch (Value)
+            set
             {
-                case 0: _FilteringMode = 0;
-                    break;
-                case 1: _FilteringMode = 1;
-                    break;
-                case 2: _FilteringMode = 2;
-                    break;
-                case 3: _FilteringMode = 4;
-                    break;
-                case 4: _FilteringMode = 8;
-                    break;
-                case 5: _FilteringMode = 16;
-                    break;
-            }
-        }
-
-        /// <summary>
-        /// Возвращает настройки вертикальной синхронизации NCF-игры на движке Source 1.
-        /// </summary>
-        public int GetVSync()
-        {
-            int res = -1;
-
-            switch (_VSync)
-            {
-                case 0: res = 0;
-                    break;
-                case 1:
-                    switch (_VSyncMode)
-                    {
-                        case 0: res = 1;
-                            break;
-                        case 1: res = 2;
-                            break;
-                    }
-                    break;
-            }
-
-            return res;
-        }
-
-        /// <summary>
-        /// Задаёт настройки вертикальной синхронизации NCF-игры на движке Source 1.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetVSync(int Value)
-        {
-            switch (Value)
-            {
-                case 0:
-                    _VSync = 0;
-                    _VSyncMode = 0;
-                    break;
-                case 1:
-                    _VSync = 1;
-                    _VSyncMode = 0;
-                    break;
-                case 2:
-                    _VSync = 1;
-                    _VSyncMode = 1;
-                    break;
+                switch (value)
+                {
+                    case 0:
+                        _DisplayMode = 1;
+                        _DisplayBorderless = 0;
+                        break;
+                    case 1:
+                        _DisplayMode = 0;
+                        _DisplayBorderless = 0;
+                        break;
+                    case 2:
+                        _DisplayMode = 1;
+                        _DisplayBorderless = 0;
+                        break;
+                }
             }
         }
 
         /// <summary>
-        /// Возвращает настройки многоядерного рендеринга NCF-игры на движке Source 1.
+        /// Возвращает / задаёт настройки полноэкранного сглаживания NCF-игры на движке Source 1.
         /// </summary>
-        public int GetRenderingMode()
+        public int AntiAliasing
         {
-            int res = -1;
-
-            switch (_MCRendering)
+            get
             {
-                case -1: res = 1;
-                    break;
-                case 0: res = 0;
-                    break;
-                case 1: res = 1;
-                    break;
-                case 2: res = 1;
-                    break;
+                int res = -1;
+
+                switch (_AntiAliasing)
+                {
+                    case 0:
+                        res = 0;
+                        break;
+                    case 1:
+                        res = 0;
+                        break;
+                    case 2:
+                        res = 1;
+                        break;
+                    case 4:
+                        switch (_AntiAliasQuality)
+                        {
+                            case 0:
+                                res = 2;
+                                break;
+                            case 2:
+                                res = 3;
+                                break;
+                            case 4:
+                                res = 4;
+                                break;
+                        }
+                        break;
+                    case 8:
+                        switch (_AntiAliasQuality)
+                        {
+                            case 0:
+                                res = 5;
+                                break;
+                            case 2:
+                                res = 6;
+                                break;
+                        }
+                        break;
+                }
+
+                return res;
             }
 
-            return res;
-        }
-
-        /// <summary>
-        /// Задаёт настройки многоядерного рендеринга NCF-игры на движке Source 1.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetRenderingMode(int Value)
-        {
-            switch (Value)
+            set
             {
-                case 0: _MCRendering = 0;
-                    break;
-                case 1: _MCRendering = -1;
-                    break;
-            }
-        }
-
-        /// <summary>
-        /// Возвращает настройки качества шейдерных эффектов NCF-игры на движке Source 1.
-        /// </summary>
-        public int GetShaderEffects()
-        {
-            int res = -1;
-
-            switch (_ShaderEffects)
-            {
-                case 0: res = 0;
-                    break;
-                case 1: res = 1;
-                    break;
-                case 2: res = 2;
-                    break;
-                case 3: res = 3;
-                    break;
-            }
-
-            return res;
-        }
-
-        /// <summary>
-        /// Задаёт настройки качества шейдерных эффектов NCF-игры на движке Source 1.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetShaderEffects(int Value)
-        {
-            switch (Value)
-            {
-                case 0: _ShaderEffects = 0;
-                    break;
-                case 1: _ShaderEffects = 1;
-                    break;
-                case 2: _ShaderEffects = 2;
-                    break;
-                case 3: _ShaderEffects = 3;
-                    break;
-            }
-        }
-
-        /// <summary>
-        /// Возвращает настройки качества обычных эффектов NCF-игры на движке Source 1.
-        /// </summary>
-        public int GetEffects()
-        {
-            int res = -1;
-
-            switch (_EffectDetails)
-            {
-                case 0: res = 0;
-                    break;
-                case 1: res = 1;
-                    break;
-                case 2: res = 2;
-                    break;
-            }
-
-            return res;
-        }
-
-        /// <summary>
-        /// Задаёт настройки качества обычных эффектов NCF-игры на движке Source 1.
-        /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetEffects(int Value)
-        {
-            switch (Value)
-            {
-                case 0: _EffectDetails = 0;
-                    break;
-                case 1: _EffectDetails = 1;
-                    break;
-                case 2: _EffectDetails = 2;
-                    break;
+                switch (value)
+                {
+                    case 0:
+                        _AntiAliasing = 1;
+                        _AntiAliasQuality = 0;
+                        break;
+                    case 1:
+                        _AntiAliasing = 2;
+                        _AntiAliasQuality = 0;
+                        break;
+                    case 2:
+                        _AntiAliasing = 4;
+                        _AntiAliasQuality = 0;
+                        break;
+                    case 3:
+                        _AntiAliasing = 4;
+                        _AntiAliasQuality = 2;
+                        break;
+                    case 4:
+                        _AntiAliasing = 4;
+                        _AntiAliasQuality = 4;
+                        break;
+                    case 5:
+                        _AntiAliasing = 8;
+                        _AntiAliasQuality = 0;
+                        break;
+                    case 6:
+                        _AntiAliasing = 8;
+                        _AntiAliasQuality = 2;
+                        break;
+                }
             }
         }
 
         /// <summary>
-        /// Возвращает настройки выделенного игре пула памяти NCF-игры на движке Source 1.
+        /// Возвращает / задаёт настройки качества фильтрации текстур NCF-игры на движке Source 1.
         /// </summary>
-        public int GetMemoryPool()
+        public int FilteringMode
         {
-            int res = -1;
-
-            switch (_MemoryPoolType)
+            get
             {
-                case -1: res = 2;
-                    break;
-                case 0: res = 0;
-                    break;
-                case 1: res = 1;
-                    break;
-                case 2: res = 2;
-                    break;
+                int res = -1;
+
+                switch (_FilteringMode)
+                {
+                    case 0:
+                        res = 0;
+                        break;
+                    case 1:
+                        res = 1;
+                        break;
+                    case 2:
+                        res = 2;
+                        break;
+                    case 4:
+                        res = 3;
+                        break;
+                    case 8:
+                        res = 4;
+                        break;
+                    case 16:
+                        res = 5;
+                        break;
+                }
+
+                return res;
             }
 
-            return res;
+            set
+            {
+                switch (value)
+                {
+                    case 0:
+                        _FilteringMode = 0;
+                        break;
+                    case 1:
+                        _FilteringMode = 1;
+                        break;
+                    case 2:
+                        _FilteringMode = 2;
+                        break;
+                    case 3:
+                        _FilteringMode = 4;
+                        break;
+                    case 4:
+                        _FilteringMode = 8;
+                        break;
+                    case 5:
+                        _FilteringMode = 16;
+                        break;
+                }
+            }
         }
 
         /// <summary>
-        /// Задаёт настройки выделенного игре пула памяти NCF-игры на движке Source 1.
+        /// Возвращает / задаёт настройки вертикальной синхронизации NCF-игры на движке Source 1.
         /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetMemoryPool(int Value)
+        public int VSync
         {
-            switch (Value)
+            get
             {
-                case 0: _MemoryPoolType = 0;
-                    break;
-                case 1: _MemoryPoolType = 1;
-                    break;
-                case 2: _MemoryPoolType = 2;
-                    break;
+                int res = -1;
+
+                switch (_VSync)
+                {
+                    case 0:
+                        res = 0;
+                        break;
+                    case 1:
+                        switch (_VSyncMode)
+                        {
+                            case 0:
+                                res = 1;
+                                break;
+                            case 1:
+                                res = 2;
+                                break;
+                        }
+                        break;
+                }
+
+                return res;
+            }
+
+            set
+            {
+                switch (value)
+                {
+                    case 0:
+                        _VSync = 0;
+                        _VSyncMode = 0;
+                        break;
+                    case 1:
+                        _VSync = 1;
+                        _VSyncMode = 0;
+                        break;
+                    case 2:
+                        _VSync = 1;
+                        _VSyncMode = 1;
+                        break;
+                }
             }
         }
 
         /// <summary>
-        /// Возвращает настройки качества детализации моделей и текстур NCF-игры на движке Source 1.
+        /// Возвращает / задаёт настройки многоядерного рендеринга NCF-игры на движке Source 1.
         /// </summary>
-        public int GetModelQuality()
+        public int RenderingMode
         {
-            int res = -1;
-
-            switch (_TextureModelQuality)
+            get
             {
-                case 0: res = 0;
-                    break;
-                case 1: res = 1;
-                    break;
-                case 2: res = 2;
-                    break;
+                int res = -1;
+
+                switch (_MCRendering)
+                {
+                    case -1:
+                        res = 1;
+                        break;
+                    case 0:
+                        res = 0;
+                        break;
+                    case 1:
+                        res = 1;
+                        break;
+                    case 2:
+                        res = 1;
+                        break;
+                }
+
+                return res;
             }
 
-            return res;
+            set
+            {
+                switch (value)
+                {
+                    case 0:
+                        _MCRendering = 0;
+                        break;
+                    case 1:
+                        _MCRendering = -1;
+                        break;
+                }
+            }
         }
 
         /// <summary>
-        /// Задаёт настройки качества детализации моделей и текстур NCF-игры на движке Source 1.
+        /// Возвращает / задаёт настройки качества шейдерных эффектов NCF-игры на движке Source 1.
         /// </summary>
-        /// <param name="Value">Текущий индекс контрола</param>
-        public void SetModelQuality(int Value)
+        public int ShaderEffects
         {
-            switch (Value)
+            get
             {
-                case 0: _TextureModelQuality = 0;
-                    break;
-                case 1: _TextureModelQuality = 1;
-                    break;
-                case 2: _TextureModelQuality = 2;
-                    break;
+                int res = -1;
+
+                switch (_ShaderEffects)
+                {
+                    case 0:
+                        res = 0;
+                        break;
+                    case 1:
+                        res = 1;
+                        break;
+                    case 2:
+                        res = 2;
+                        break;
+                    case 3:
+                        res = 3;
+                        break;
+                }
+
+                return res;
+            }
+
+            set
+            {
+                switch (value)
+                {
+                    case 0:
+                        _ShaderEffects = 0;
+                        break;
+                    case 1:
+                        _ShaderEffects = 1;
+                        break;
+                    case 2:
+                        _ShaderEffects = 2;
+                        break;
+                    case 3:
+                        _ShaderEffects = 3;
+                        break;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Возвращает / задаёт настройки качества обычных эффектов NCF-игры на движке Source 1.
+        /// </summary>
+        public int Effects
+        {
+            get
+            {
+                int res = -1;
+
+                switch (_EffectDetails)
+                {
+                    case 0:
+                        res = 0;
+                        break;
+                    case 1:
+                        res = 1;
+                        break;
+                    case 2:
+                        res = 2;
+                        break;
+                }
+
+                return res;
+            }
+
+            set
+            {
+                switch (value)
+                {
+                    case 0:
+                        _EffectDetails = 0;
+                        break;
+                    case 1:
+                        _EffectDetails = 1;
+                        break;
+                    case 2:
+                        _EffectDetails = 2;
+                        break;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Возвращает / задаёт настройки выделенного игре пула памяти NCF-игры на движке Source 1.
+        /// </summary>
+        public int MemoryPool
+        {
+            get
+            {
+                int res = -1;
+
+                switch (_MemoryPoolType)
+                {
+                    case -1:
+                        res = 2;
+                        break;
+                    case 0:
+                        res = 0;
+                        break;
+                    case 1:
+                        res = 1;
+                        break;
+                    case 2:
+                        res = 2;
+                        break;
+                }
+
+                return res;
+            }
+
+            set
+            {
+                switch (value)
+                {
+                    case 0:
+                        _MemoryPoolType = 0;
+                        break;
+                    case 1:
+                        _MemoryPoolType = 1;
+                        break;
+                    case 2:
+                        _MemoryPoolType = 2;
+                        break;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Возвращает / задаёт настройки качества детализации моделей и текстур NCF-игры на движке Source 1.
+        /// </summary>
+        public int ModelQuality
+        {
+            get
+            {
+                int res = -1;
+
+                switch (_TextureModelQuality)
+                {
+                    case 0:
+                        res = 0;
+                        break;
+                    case 1:
+                        res = 1;
+                        break;
+                    case 2:
+                        res = 2;
+                        break;
+                }
+
+                return res;
+            }
+
+            set
+            {
+                switch (value)
+                {
+                    case 0:
+                        _TextureModelQuality = 0;
+                        break;
+                    case 1:
+                        _TextureModelQuality = 1;
+                        break;
+                    case 2:
+                        _TextureModelQuality = 2;
+                        break;
+                }
             }
         }
 
