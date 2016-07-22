@@ -28,19 +28,19 @@ namespace srcrepair
         /// <summary>
         /// Хранит разрешение по горизонтали.
         /// </summary>
-        protected int ScreenWidth = 800;
+        protected int _ScreenWidth = 800;
 
         /// <summary>
         /// Хранит разрешение по вертикали.
         /// </summary>
-        protected int ScreenHeight = 600;
+        protected int _ScreenHeight = 600;
 
         /// <summary>
         /// Возвращает разрешение по горизонтали.
         /// </summary>
         public int GetScreenWidth()
         {
-            return ScreenWidth;
+            return _ScreenWidth;
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace srcrepair
         /// <param name="Value">Текущее значение</param>
         public void SetScreenWidth(int Value)
         {
-            ScreenWidth = Value;
+            _ScreenWidth = Value;
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace srcrepair
         /// </summary>
         public int GetScreenHeight()
         {
-            return ScreenHeight;
+            return _ScreenHeight;
         }
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace srcrepair
         /// <param name="Value">Текущее значение</param>
         public void SetScreenHeight(int Value)
         {
-            ScreenHeight = Value;
+            _ScreenHeight = Value;
         }
     }
 }

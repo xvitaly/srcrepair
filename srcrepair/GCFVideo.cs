@@ -727,10 +727,10 @@ namespace srcrepair
             if (ResKey != null)
             {
                 // Получаем значение разрешения по горизонтали...
-                try { ScreenWidth = Convert.ToInt32(ResKey.GetValue("ScreenWidth")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _ScreenWidth = Convert.ToInt32(ResKey.GetValue("ScreenWidth")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем значение разрешения по вертикали...
-                try { ScreenHeight = Convert.ToInt32(ResKey.GetValue("ScreenHeight")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _ScreenHeight = Convert.ToInt32(ResKey.GetValue("ScreenHeight")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем режим окна (ScreenWindowed): 1-window, 0-fullscreen...
                 try { _DisplayMode = Convert.ToInt32(ResKey.GetValue("ScreenWindowed")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
@@ -795,8 +795,8 @@ namespace srcrepair
             RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(RegKey, true);
 
             // Запишем в реестр настройки разрешения экрана...
-            try { ResKey.SetValue("ScreenWidth", ScreenWidth, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-            try { ResKey.SetValue("ScreenHeight", ScreenHeight, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("ScreenWidth", _ScreenWidth, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue("ScreenHeight", _ScreenHeight, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки режима запуска приложения (ScreenWindowed)...
             try { ResKey.SetValue("ScreenWindowed", _DisplayMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }

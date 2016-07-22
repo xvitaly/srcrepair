@@ -709,8 +709,8 @@ namespace srcrepair
         private void ReadSettings()
         {
             // Считываем настройки графики из файла...
-            ScreenWidth = GetNCFDWord("setting.defaultres");
-            ScreenHeight = GetNCFDWord("setting.defaultresheight");
+            _ScreenWidth = GetNCFDWord("setting.defaultres");
+            _ScreenHeight = GetNCFDWord("setting.defaultresheight");
             ScreenRatio = GetNCFDWord("setting.aspectratiomode");
             Brightness = Convert.ToInt32(GetNCFDble("setting.mat_monitorgamma") * 10);
             ShadowQuality = GetNCFDWord("setting.csm_quality_level");
@@ -765,8 +765,8 @@ namespace srcrepair
                 CFile.WriteLine(String.Format(Templt, "setting.gpu_mem_level", TextureModelQuality));
                 CFile.WriteLine(String.Format(Templt, "setting.mem_level", MemoryPoolType));
                 CFile.WriteLine(String.Format(Templt, "setting.mat_queue_mode", MCRendering));
-                CFile.WriteLine(String.Format(Templt, "setting.defaultres", ScreenWidth));
-                CFile.WriteLine(String.Format(Templt, "setting.defaultresheight", ScreenHeight));
+                CFile.WriteLine(String.Format(Templt, "setting.defaultres", _ScreenWidth));
+                CFile.WriteLine(String.Format(Templt, "setting.defaultresheight", _ScreenHeight));
                 CFile.WriteLine(String.Format(Templt, "setting.aspectratiomode", ScreenRatio));
                 CFile.WriteLine(String.Format(Templt, "setting.fullscreen", DisplayMode));
                 CFile.WriteLine(String.Format(Templt, "setting.nowindowborder", DisplayBorderless));
