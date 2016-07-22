@@ -145,8 +145,8 @@ namespace srcrepair
             GCFVideo Video = new GCFVideo(SelGame.SmallAppName, false);
 
             // Записываем пользовательские настройки...
-            Video.SetScreenWidth((int)GT_ResHor.Value);
-            Video.SetScreenHeight((int)GT_ResVert.Value);
+            Video.ScreenWidth = (int)GT_ResHor.Value;
+            Video.ScreenHeight = (int)GT_ResVert.Value;
             Video.DisplayMode = GT_ScreenType.SelectedIndex;
             Video.ModelQuality = GT_ModelQuality.SelectedIndex;
             Video.TextureQuality = GT_TextureQuality.SelectedIndex;
@@ -175,8 +175,8 @@ namespace srcrepair
             NCFVideo Video = new NCFVideo(VFileName, false);
 
             // Записываем пользовательские настройки...
-            Video.SetScreenWidth((int)GT_NCF_HorRes.Value);
-            Video.SetScreenHeight((int)GT_NCF_VertRes.Value);
+            Video.ScreenWidth = (int)GT_NCF_HorRes.Value;
+            Video.ScreenHeight = (int)GT_NCF_VertRes.Value;
             Video.SetScreenRatio(GT_NCF_Ratio.SelectedIndex);
             Video.SetScreenGamma(GT_NCF_Brightness.Text);
             Video.SetShadowQuality(GT_NCF_Shadows.SelectedIndex);
@@ -208,8 +208,8 @@ namespace srcrepair
                 GCFVideo Video = new GCFVideo(SAppName, true);
 
                 // Заполняем общие настройки...
-                GT_ResHor.Value = Video.GetScreenWidth();
-                GT_ResVert.Value = Video.GetScreenHeight();
+                GT_ResHor.Value = Video.ScreenWidth;
+                GT_ResVert.Value = Video.ScreenHeight;
 
                 // Заполняем остальные настройки...
                 GT_ScreenType.SelectedIndex = Video.DisplayMode;
@@ -246,8 +246,8 @@ namespace srcrepair
                 NCFVideo Video = new NCFVideo(VFileName, true);
 
                 // Заполняем общие настройки...
-                GT_NCF_HorRes.Value = Video.GetScreenWidth();
-                GT_NCF_VertRes.Value = Video.GetScreenHeight();
+                GT_NCF_HorRes.Value = Video.ScreenWidth;
+                GT_NCF_VertRes.Value = Video.ScreenHeight;
 
                 // Заполняем остальные настройки...
                 GT_NCF_Ratio.SelectedIndex = Video.GetScreenRatio();
