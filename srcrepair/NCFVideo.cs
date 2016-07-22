@@ -52,82 +52,82 @@ namespace srcrepair
         /// <summary>
         /// Хранит настройки соотношения сторон NCF-игры на движке Source 1: setting.aspectratiomode.
         /// </summary>
-        private int ScreenRatio;
+        private int _ScreenRatio;
 
         /// <summary>
         /// Хранит настройки контрастности и цветовой гаммы NCF-игры на движке Source 1: setting.mat_monitorgamma.
         /// </summary>
-        private int Brightness;
+        private int _Brightness;
 
         /// <summary>
         /// Хранит настройки качества теней NCF-игры на движке Source 1: setting.csm_quality_level.
         /// </summary>
-        private int ShadowQuality;
+        private int _ShadowQuality;
 
         /// <summary>
         /// Хранит настройки размытия движений NCF-игры на движке Source 1: setting.mat_motion_blur_enabled.
         /// </summary>
-        private int MotionBlur;
+        private int _MotionBlur;
 
         /// <summary>
         /// Хранит настройки графического режима NCF-игры на движке Source 1: setting.fullscreen.
         /// </summary>
-        private int DisplayMode;
+        private int _DisplayMode;
 
         /// <summary>
         /// Хранит настройки графического режима NCF-игры на движке Source 1: setting.nowindowborder.
         /// </summary>
-        private int DisplayBorderless;
+        private int _DisplayBorderless;
 
         /// <summary>
         /// Хранит настройки полноэкранного сглаживания NCF-игры на движке Source 1: setting.mat_antialias.
         /// </summary>
-        private int AntiAliasing;
+        private int _AntiAliasing;
 
         /// <summary>
         /// Хранит значение глубины полноэкранного сглаживания NCF-игры на движке Source 1: setting.mat_aaquality.
         /// </summary>
-        private int AntiAliasQuality;
+        private int _AntiAliasQuality;
 
         /// <summary>
         /// Хранит настройки качества фильтрации текстур NCF-игры на движке Source 1: setting.mat_forceaniso.
         /// </summary>
-        private int FilteringMode;
+        private int _FilteringMode;
 
         /// <summary>
         /// Хранит настройки вертикальной синхронизации NCF-игры на движке Source 1: setting.mat_vsync.
         /// </summary>
-        private int VSync;
+        private int _VSync;
 
         /// <summary>
         /// Хранит настройки качества вертикальной синхронизации NCF-игры на движке Source 1: setting.mat_triplebuffered.
         /// </summary>
-        private int VSyncMode;
+        private int _VSyncMode;
 
         /// <summary>
         /// Хранит настройки многоядерного рендеринга NCF-игры на движке Source 1: setting.mat_queue_mode.
         /// </summary>
-        private int MCRendering;
+        private int _MCRendering;
 
         /// <summary>
         /// Хранит настройки качества шейдерных эффектов NCF-игры на движке Source 1: setting.gpu_level.
         /// </summary>
-        private int ShaderEffects;
+        private int _ShaderEffects;
 
         /// <summary>
         /// Хранит настройки качества обычных эффектов NCF-игры на движке Source 1: setting.cpu_level.
         /// </summary>
-        private int EffectDetails;
+        private int _EffectDetails;
 
         /// <summary>
         /// Хранит настройки выделенного игре пула памяти NCF-игры на движке Source 1: setting.mem_level.
         /// </summary>
-        private int MemoryPoolType;
+        private int _MemoryPoolType;
 
         /// <summary>
         /// Хранит настройки качества детализации моделей и текстур NCF-игры на движке Source 1: setting.gpu_mem_level.
         /// </summary>
-        private int TextureModelQuality;
+        private int _TextureModelQuality;
 
         /// <summary>
         /// Возвращает настройки соотношения сторон NCF-игры на движке Source 1.
@@ -136,7 +136,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (ScreenRatio)
+            switch (_ScreenRatio)
             {
                 case 0: res = 0;
                     break;
@@ -157,11 +157,11 @@ namespace srcrepair
         {
             switch (Value)
             {
-                case 0: ScreenRatio = 0;
+                case 0: _ScreenRatio = 0;
                     break;
-                case 1: ScreenRatio = 1;
+                case 1: _ScreenRatio = 1;
                     break;
-                case 2: ScreenRatio = 2;
+                case 2: _ScreenRatio = 2;
                     break;
             }
         }
@@ -171,7 +171,7 @@ namespace srcrepair
         /// </summary>
         public string GetScreenGamma()
         {
-            return Brightness.ToString();
+            return _Brightness.ToString();
         }
 
         /// <summary>
@@ -180,7 +180,7 @@ namespace srcrepair
         /// <param name="Value">Текущий индекс контрола</param>
         public void SetScreenGamma(string Value)
         {
-            Brightness = Convert.ToInt32(Value);
+            _Brightness = Convert.ToInt32(Value);
         }
 
         /// <summary>
@@ -190,7 +190,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (ShadowQuality)
+            switch (_ShadowQuality)
             {
                 case 0: res = 0;
                     break;
@@ -213,13 +213,13 @@ namespace srcrepair
         {
             switch (Value)
             {
-                case 0: ShadowQuality = 0;
+                case 0: _ShadowQuality = 0;
                     break;
-                case 1: ShadowQuality = 1;
+                case 1: _ShadowQuality = 1;
                     break;
-                case 2: ShadowQuality = 2;
+                case 2: _ShadowQuality = 2;
                     break;
-                case 3: ShadowQuality = 3;
+                case 3: _ShadowQuality = 3;
                     break;
             }
         }
@@ -231,7 +231,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (MotionBlur)
+            switch (_MotionBlur)
             {
                 case 0: res = 0;
                     break;
@@ -250,9 +250,9 @@ namespace srcrepair
         {
             switch (Value)
             {
-                case 0: MotionBlur = 0;
+                case 0: _MotionBlur = 0;
                     break;
-                case 1: MotionBlur = 1;
+                case 1: _MotionBlur = 1;
                     break;
             }
         }
@@ -264,10 +264,10 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (DisplayMode)
+            switch (_DisplayMode)
             {
                 case 0:
-                    switch (DisplayBorderless)
+                    switch (_DisplayBorderless)
                     {
                         case 0:
                             res = 1;
@@ -294,16 +294,16 @@ namespace srcrepair
             switch (Value)
             {
                 case 0:
-                    DisplayMode = 1;
-                    DisplayBorderless = 0;
+                    _DisplayMode = 1;
+                    _DisplayBorderless = 0;
                     break;
                 case 1:
-                    DisplayMode = 0;
-                    DisplayBorderless = 0;
+                    _DisplayMode = 0;
+                    _DisplayBorderless = 0;
                     break;
                 case 2:
-                    DisplayMode = 1;
-                    DisplayBorderless = 0;
+                    _DisplayMode = 1;
+                    _DisplayBorderless = 0;
                     break;
             }
         }
@@ -315,7 +315,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (AntiAliasing)
+            switch (_AntiAliasing)
             {
                 case 0: res = 0;
                     break;
@@ -324,7 +324,7 @@ namespace srcrepair
                 case 2: res = 1;
                     break;
                 case 4:
-                    switch (AntiAliasQuality)
+                    switch (_AntiAliasQuality)
                     {
                         case 0: res = 2;
                             break;
@@ -335,7 +335,7 @@ namespace srcrepair
                     }
                     break;
                 case 8:
-                    switch (AntiAliasQuality)
+                    switch (_AntiAliasQuality)
                     {
                         case 0: res = 5;
                             break;
@@ -357,32 +357,32 @@ namespace srcrepair
             switch (Value)
             {
                 case 0:
-                    AntiAliasing = 1;
-                    AntiAliasQuality = 0;
+                    _AntiAliasing = 1;
+                    _AntiAliasQuality = 0;
                     break;
                 case 1:
-                    AntiAliasing = 2;
-                    AntiAliasQuality = 0;
+                    _AntiAliasing = 2;
+                    _AntiAliasQuality = 0;
                     break;
                 case 2:
-                    AntiAliasing = 4;
-                    AntiAliasQuality = 0;
+                    _AntiAliasing = 4;
+                    _AntiAliasQuality = 0;
                     break;
                 case 3:
-                    AntiAliasing = 4;
-                    AntiAliasQuality = 2;
+                    _AntiAliasing = 4;
+                    _AntiAliasQuality = 2;
                     break;
                 case 4:
-                    AntiAliasing = 4;
-                    AntiAliasQuality = 4;
+                    _AntiAliasing = 4;
+                    _AntiAliasQuality = 4;
                     break;
                 case 5:
-                    AntiAliasing = 8;
-                    AntiAliasQuality = 0;
+                    _AntiAliasing = 8;
+                    _AntiAliasQuality = 0;
                     break;
                 case 6:
-                    AntiAliasing = 8;
-                    AntiAliasQuality = 2;
+                    _AntiAliasing = 8;
+                    _AntiAliasQuality = 2;
                     break;
             }
         }
@@ -394,7 +394,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (FilteringMode)
+            switch (_FilteringMode)
             {
                 case 0: res = 0;
                     break;
@@ -421,17 +421,17 @@ namespace srcrepair
         {
             switch (Value)
             {
-                case 0: FilteringMode = 0;
+                case 0: _FilteringMode = 0;
                     break;
-                case 1: FilteringMode = 1;
+                case 1: _FilteringMode = 1;
                     break;
-                case 2: FilteringMode = 2;
+                case 2: _FilteringMode = 2;
                     break;
-                case 3: FilteringMode = 4;
+                case 3: _FilteringMode = 4;
                     break;
-                case 4: FilteringMode = 8;
+                case 4: _FilteringMode = 8;
                     break;
-                case 5: FilteringMode = 16;
+                case 5: _FilteringMode = 16;
                     break;
             }
         }
@@ -443,12 +443,12 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (VSync)
+            switch (_VSync)
             {
                 case 0: res = 0;
                     break;
                 case 1:
-                    switch (VSyncMode)
+                    switch (_VSyncMode)
                     {
                         case 0: res = 1;
                             break;
@@ -470,16 +470,16 @@ namespace srcrepair
             switch (Value)
             {
                 case 0:
-                    VSync = 0;
-                    VSyncMode = 0;
+                    _VSync = 0;
+                    _VSyncMode = 0;
                     break;
                 case 1:
-                    VSync = 1;
-                    VSyncMode = 0;
+                    _VSync = 1;
+                    _VSyncMode = 0;
                     break;
                 case 2:
-                    VSync = 1;
-                    VSyncMode = 1;
+                    _VSync = 1;
+                    _VSyncMode = 1;
                     break;
             }
         }
@@ -491,7 +491,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (MCRendering)
+            switch (_MCRendering)
             {
                 case -1: res = 1;
                     break;
@@ -514,9 +514,9 @@ namespace srcrepair
         {
             switch (Value)
             {
-                case 0: MCRendering = 0;
+                case 0: _MCRendering = 0;
                     break;
-                case 1: MCRendering = -1;
+                case 1: _MCRendering = -1;
                     break;
             }
         }
@@ -528,7 +528,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (ShaderEffects)
+            switch (_ShaderEffects)
             {
                 case 0: res = 0;
                     break;
@@ -551,13 +551,13 @@ namespace srcrepair
         {
             switch (Value)
             {
-                case 0: ShaderEffects = 0;
+                case 0: _ShaderEffects = 0;
                     break;
-                case 1: ShaderEffects = 1;
+                case 1: _ShaderEffects = 1;
                     break;
-                case 2: ShaderEffects = 2;
+                case 2: _ShaderEffects = 2;
                     break;
-                case 3: ShaderEffects = 3;
+                case 3: _ShaderEffects = 3;
                     break;
             }
         }
@@ -569,7 +569,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (EffectDetails)
+            switch (_EffectDetails)
             {
                 case 0: res = 0;
                     break;
@@ -590,11 +590,11 @@ namespace srcrepair
         {
             switch (Value)
             {
-                case 0: EffectDetails = 0;
+                case 0: _EffectDetails = 0;
                     break;
-                case 1: EffectDetails = 1;
+                case 1: _EffectDetails = 1;
                     break;
-                case 2: EffectDetails = 2;
+                case 2: _EffectDetails = 2;
                     break;
             }
         }
@@ -606,7 +606,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (MemoryPoolType)
+            switch (_MemoryPoolType)
             {
                 case -1: res = 2;
                     break;
@@ -629,11 +629,11 @@ namespace srcrepair
         {
             switch (Value)
             {
-                case 0: MemoryPoolType = 0;
+                case 0: _MemoryPoolType = 0;
                     break;
-                case 1: MemoryPoolType = 1;
+                case 1: _MemoryPoolType = 1;
                     break;
-                case 2: MemoryPoolType = 2;
+                case 2: _MemoryPoolType = 2;
                     break;
             }
         }
@@ -645,7 +645,7 @@ namespace srcrepair
         {
             int res = -1;
 
-            switch (TextureModelQuality)
+            switch (_TextureModelQuality)
             {
                 case 0: res = 0;
                     break;
@@ -666,11 +666,11 @@ namespace srcrepair
         {
             switch (Value)
             {
-                case 0: TextureModelQuality = 0;
+                case 0: _TextureModelQuality = 0;
                     break;
-                case 1: TextureModelQuality = 1;
+                case 1: _TextureModelQuality = 1;
                     break;
-                case 2: TextureModelQuality = 2;
+                case 2: _TextureModelQuality = 2;
                     break;
             }
         }
@@ -711,22 +711,22 @@ namespace srcrepair
             // Считываем настройки графики из файла...
             _ScreenWidth = GetNCFDWord("setting.defaultres");
             _ScreenHeight = GetNCFDWord("setting.defaultresheight");
-            ScreenRatio = GetNCFDWord("setting.aspectratiomode");
-            Brightness = Convert.ToInt32(GetNCFDble("setting.mat_monitorgamma") * 10);
-            ShadowQuality = GetNCFDWord("setting.csm_quality_level");
-            MotionBlur = GetNCFDWord("setting.mat_motion_blur_enabled");
-            DisplayMode = GetNCFDWord("setting.fullscreen");
-            DisplayBorderless = GetNCFDWord("setting.nowindowborder");
-            AntiAliasing = GetNCFDWord("setting.mat_antialias");
-            AntiAliasQuality = GetNCFDWord("setting.mat_aaquality");
-            FilteringMode = GetNCFDWord("setting.mat_forceaniso");
-            VSync = GetNCFDWord("setting.mat_vsync");
-            VSyncMode = GetNCFDWord("setting.mat_triplebuffered");
-            MCRendering = GetNCFDWord("setting.mat_queue_mode");
-            ShaderEffects = GetNCFDWord("setting.gpu_level");
-            EffectDetails = GetNCFDWord("setting.cpu_level");
-            MemoryPoolType = GetNCFDWord("setting.mem_level");
-            TextureModelQuality = GetNCFDWord("setting.gpu_mem_level");
+            _ScreenRatio = GetNCFDWord("setting.aspectratiomode");
+            _Brightness = Convert.ToInt32(GetNCFDble("setting.mat_monitorgamma") * 10);
+            _ShadowQuality = GetNCFDWord("setting.csm_quality_level");
+            _MotionBlur = GetNCFDWord("setting.mat_motion_blur_enabled");
+            _DisplayMode = GetNCFDWord("setting.fullscreen");
+            _DisplayBorderless = GetNCFDWord("setting.nowindowborder");
+            _AntiAliasing = GetNCFDWord("setting.mat_antialias");
+            _AntiAliasQuality = GetNCFDWord("setting.mat_aaquality");
+            _FilteringMode = GetNCFDWord("setting.mat_forceaniso");
+            _VSync = GetNCFDWord("setting.mat_vsync");
+            _VSyncMode = GetNCFDWord("setting.mat_triplebuffered");
+            _MCRendering = GetNCFDWord("setting.mat_queue_mode");
+            _ShaderEffects = GetNCFDWord("setting.gpu_level");
+            _EffectDetails = GetNCFDWord("setting.cpu_level");
+            _MemoryPoolType = GetNCFDWord("setting.mem_level");
+            _TextureModelQuality = GetNCFDWord("setting.gpu_mem_level");
         }
 
         /// <summary>
@@ -751,25 +751,25 @@ namespace srcrepair
                 CFile.WriteLine("{");
 
                 // Вставляем настройки графики...
-                CFile.WriteLine(String.Format(Templt, "setting.cpu_level", EffectDetails));
-                CFile.WriteLine(String.Format(Templt, "setting.gpu_level", ShaderEffects));
-                CFile.WriteLine(String.Format(Templt, "setting.mat_antialias", AntiAliasing));
-                CFile.WriteLine(String.Format(Templt, "setting.mat_aaquality", AntiAliasQuality));
-                CFile.WriteLine(String.Format(Templt, "setting.mat_forceaniso", FilteringMode));
-                CFile.WriteLine(String.Format(Templt, "setting.mat_vsync", VSync));
-                CFile.WriteLine(String.Format(Templt, "setting.mat_triplebuffered", VSyncMode));
+                CFile.WriteLine(String.Format(Templt, "setting.cpu_level", _EffectDetails));
+                CFile.WriteLine(String.Format(Templt, "setting.gpu_level", _ShaderEffects));
+                CFile.WriteLine(String.Format(Templt, "setting.mat_antialias", _AntiAliasing));
+                CFile.WriteLine(String.Format(Templt, "setting.mat_aaquality", _AntiAliasQuality));
+                CFile.WriteLine(String.Format(Templt, "setting.mat_forceaniso", _FilteringMode));
+                CFile.WriteLine(String.Format(Templt, "setting.mat_vsync", _VSync));
+                CFile.WriteLine(String.Format(Templt, "setting.mat_triplebuffered", _VSyncMode));
                 CFile.WriteLine(String.Format(Templt, "setting.mat_grain_scale_override", "1"));
-                CFile.WriteLine(String.Format(Templt, "setting.mat_monitorgamma", (Brightness / 10.0).ToString(CI)));
-                CFile.WriteLine(String.Format(Templt, "setting.csm_quality_level", ShadowQuality));
-                CFile.WriteLine(String.Format(Templt, "setting.mat_motion_blur_enabled", MotionBlur));
-                CFile.WriteLine(String.Format(Templt, "setting.gpu_mem_level", TextureModelQuality));
-                CFile.WriteLine(String.Format(Templt, "setting.mem_level", MemoryPoolType));
-                CFile.WriteLine(String.Format(Templt, "setting.mat_queue_mode", MCRendering));
+                CFile.WriteLine(String.Format(Templt, "setting.mat_monitorgamma", (_Brightness / 10.0).ToString(CI)));
+                CFile.WriteLine(String.Format(Templt, "setting.csm_quality_level", _ShadowQuality));
+                CFile.WriteLine(String.Format(Templt, "setting.mat_motion_blur_enabled", _MotionBlur));
+                CFile.WriteLine(String.Format(Templt, "setting.gpu_mem_level", _TextureModelQuality));
+                CFile.WriteLine(String.Format(Templt, "setting.mem_level", _MemoryPoolType));
+                CFile.WriteLine(String.Format(Templt, "setting.mat_queue_mode", _MCRendering));
                 CFile.WriteLine(String.Format(Templt, "setting.defaultres", _ScreenWidth));
                 CFile.WriteLine(String.Format(Templt, "setting.defaultresheight", _ScreenHeight));
-                CFile.WriteLine(String.Format(Templt, "setting.aspectratiomode", ScreenRatio));
-                CFile.WriteLine(String.Format(Templt, "setting.fullscreen", DisplayMode));
-                CFile.WriteLine(String.Format(Templt, "setting.nowindowborder", DisplayBorderless));
+                CFile.WriteLine(String.Format(Templt, "setting.aspectratiomode", _ScreenRatio));
+                CFile.WriteLine(String.Format(Templt, "setting.fullscreen", _DisplayMode));
+                CFile.WriteLine(String.Format(Templt, "setting.nowindowborder", _DisplayBorderless));
 
                 // Вставляем закрывающую скобку...
                 CFile.WriteLine("}");
