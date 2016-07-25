@@ -187,15 +187,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sorry, but the selected feature is not available for this platform!.
-        /// </summary>
-        internal static string AppFeatureUnavailable {
-            get {
-                return ResourceManager.GetString("AppFeatureUnavailable", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Game work directory &quot;{0}&quot; does not exists!.
         /// </summary>
         internal static string AppGameChkErrNtExs {
