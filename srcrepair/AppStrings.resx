@@ -516,9 +516,6 @@
   <data name="AppFailedToGetData" xml:space="preserve">
     <value>Warning! Failed to get data from game database. Please try again or select another game!</value>
   </data>
-  <data name="AppGameChkErrNtExs" xml:space="preserve">
-    <value>Game work directory "{0}" does not exists!</value>
-  </data>
   <data name="BU_BinaryFile" xml:space="preserve">
     <value>The selected file is a binary. Unable open it in text editor!</value>
   </data>

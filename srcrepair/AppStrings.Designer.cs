@@ -187,15 +187,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Game work directory &quot;{0}&quot; does not exists!.
-        /// </summary>
-        internal static string AppGameChkErrNtExs {
-            get {
-                return ResourceManager.GetString("AppGameChkErrNtExs", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Fatal error occurred! The application will be terminated..
         /// </summary>
         internal static string AppGenericError {
