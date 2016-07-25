@@ -151,15 +151,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Checking for updates... Please wait..
-        /// </summary>
-        internal static string AppCheckingForUpdates {
-            get {
-                return ResourceManager.GetString("AppCheckingForUpdates", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to http://developer.valvesoftware.com/wiki/Console_Command_List.
         /// </summary>
         internal static string AppCVListURL {

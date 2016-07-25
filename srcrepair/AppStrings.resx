@@ -432,9 +432,6 @@
   <data name="PS_CleanEmptyDirsError" xml:space="preserve">
     <value>An error occurred during cleaning up of empty directories! Maybe you do not have appropriate access rights.</value>
   </data>
-  <data name="AppCheckingForUpdates" xml:space="preserve">
-    <value>Checking for updates... Please wait.</value>
-  </data>
   <data name="PS_CleanException" xml:space="preserve">
     <value>An error occurred during cleanup. Perhaps you have no rights necessary for this action.</value>
   </data>
