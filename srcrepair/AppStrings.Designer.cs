@@ -241,15 +241,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fatal error! Can&apos;t read directory SteamApps. Maybe it does not exists or you do not have necessary rights. Further program execution is impossible. Install and run at least one game from Steam and then use this program again..
-        /// </summary>
-        internal static string AppNoSTADetected {
-            get {
-                return ResourceManager.GetString("AppNoSTADetected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to {0} by {1}..
         /// </summary>
         internal static string AppPluginAboutDlg {
