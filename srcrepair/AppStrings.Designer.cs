@@ -205,15 +205,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to File with graphical settings was not found. Please run the game at least once..
-        /// </summary>
-        internal static string AppNCFCFGNotExists {
-            get {
-                return ResourceManager.GetString("AppNCFCFGNotExists", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Debug log file not found!.
         /// </summary>
         internal static string AppNoDebugFile {
