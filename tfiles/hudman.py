@@ -20,10 +20,33 @@
 # о лицензии - в GPL.txt.
 #
 
+
+def parsedb(dbname):
+
+    # Importing XML parser library...
+    from xml.dom import minidom
+
+    # Creating list for result...
+    result = []
+
+    # Opening HUD database...
+    huddb = minidom.parse(dbname)
+
+    # Parsing...
+    huds = huddb.getElementsByTagName('HUD')
+    for hud in huds:
+        result.append([hud.getElementsByTagName("Name")[0].firstChild.data,
+                         hud.getElementsByTagName("UpURI")[0].firstChild.data,
+                         hud.getElementsByTagName("RepoPath")[0].firstChild.data,
+                         hud.getElementsByTagName("LastUpdate")[0].firstChild.data])
+
+    # Returning result...
+    return result
+
 def main():
     try:
         # Main exec...
-
+        parsedb('huds.xml')
 
     except:
         # Exception detected...
