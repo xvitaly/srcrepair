@@ -33,7 +33,7 @@
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/toonhud/toonhud_ce166d92.zip</URI>
     <UpURI>http://sourceforge.net/projects/srcrepair/files/huds/toonhud/toonhud_ce166d92.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/toonhud.png</Preview>
-    <RepoPath></RepoPath>
+    <RepoPath>null</RepoPath>
     <LastUpdate>1468584000</LastUpdate>
     <Site>http://toonhud.com/</Site>
     <ArchiveDir>toonhud</ArchiveDir>
@@ -163,7 +163,7 @@
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/evehud/evehud_6350362e.zip</URI>
     <UpURI>http://files.gamebanana.com/guis/eve_hud_v401.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/evehud.png</Preview>
-    <RepoPath></RepoPath>
+    <RepoPath>null</RepoPath>
     <LastUpdate>1468411200</LastUpdate>
     <Site>http://tf2.gamebanana.com/guis/25711</Site>
     <ArchiveDir>eve hud</ArchiveDir>
@@ -293,7 +293,7 @@
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/doggyhud/doggyhud_73fde877.zip</URI>
     <UpURI>http://huds.tf/forum/xthreads_attach.php/151_1468069037_c96274f0/2e863cebac5b6ff6c2c39aa2b42fdf99/DoggyHudV2.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/doggyhud.png</Preview>
-    <RepoPath></RepoPath>
+    <RepoPath>null</RepoPath>
     <LastUpdate>1468065600</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=227</Site>
     <ArchiveDir>DoggyHudV2</ArchiveDir>
