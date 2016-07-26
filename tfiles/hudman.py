@@ -20,3 +20,15 @@
 # о лицензии - в GPL.txt.
 #
 
+def main():
+    try:
+        # Main exec...
+
+
+    except:
+        # Exception detected...
+        print('An error occurred. Try again later.')
+
+
+if __name__ == '__main__':
+    main()
