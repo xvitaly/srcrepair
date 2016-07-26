@@ -22,7 +22,6 @@
 
 
 def parsedb(dbname):
-
     # Importing XML parser library...
     from xml.dom import minidom
 
@@ -33,20 +32,20 @@ def parsedb(dbname):
     huddb = minidom.parse(dbname)
 
     # Parsing...
-    huds = huddb.getElementsByTagName('HUD')
-    for hud in huds:
+    for hud in huddb.getElementsByTagName('HUD'):
         result.append([hud.getElementsByTagName("Name")[0].firstChild.data,
-                         hud.getElementsByTagName("UpURI")[0].firstChild.data,
-                         hud.getElementsByTagName("RepoPath")[0].firstChild.data,
-                         hud.getElementsByTagName("LastUpdate")[0].firstChild.data])
+                       hud.getElementsByTagName("UpURI")[0].firstChild.data,
+                       hud.getElementsByTagName("RepoPath")[0].firstChild.data,
+                       hud.getElementsByTagName("LastUpdate")[0].firstChild.data])
 
     # Returning result...
     return result
 
+
 def main():
     try:
         # Main exec...
-        parsedb('huds.xml')
+        print (parsedb('huds.xml'))
 
     except:
         # Exception detected...
