@@ -45,7 +45,7 @@ def parsedb(dbname):
 def main():
     try:
         # Main exec...
-        print (parsedb('huds.xml'))
+        parsedb('huds.xml')
 
     except:
         # Exception detected...
