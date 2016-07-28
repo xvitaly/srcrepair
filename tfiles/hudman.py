@@ -19,8 +19,9 @@
 # Более подробная инфорация о программе в readme.txt,
 # о лицензии - в GPL.txt.
 #
-import urllib as ul
-import json as j
+import urllib
+import json
+import os
 
 
 def parsedb(dbname):
@@ -46,9 +47,15 @@ def parsedb(dbname):
 
 def getlatestcommit(repourl):
     url = repourl.replace('https://github.com/', 'https://api.github.com/repos/') + '/commits?per_page=1'
-    response = ul.urlopen(url).read()
-    data = j.loads(response.decode())
+    response = urllib.urlopen(url).read()
+    data = json.loads(response.decode())
     return data[0]['sha']
+
+
+def downloadfile(url, name, chash):
+    filepath = os.path.join(name, '%s_%s.zip' % (name, chash[:8]))
+    urllib.urlretrieve(url, filepath)
+    return filepath
 
 
 def main():
