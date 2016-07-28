@@ -19,6 +19,8 @@
 # Более подробная инфорация о программе в readme.txt,
 # о лицензии - в GPL.txt.
 #
+import urllib as ul
+import json as j
 
 
 def parsedb(dbname):
@@ -40,6 +42,13 @@ def parsedb(dbname):
 
     # Returning result...
     return result
+
+
+def getlatestcommit(repourl):
+    url = repourl.replace('https://github.com/', 'https://api.github.com/repos/') + '/commits?per_page=1'
+    response = ul.urlopen(url).read()
+    data = j.loads(response.decode())
+    return data[0]['sha']
 
 
 def main():
