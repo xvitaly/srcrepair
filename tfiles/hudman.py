@@ -46,7 +46,8 @@ def parsedb(dbname):
 
 
 def gmt2unix(gtime):
-    import datetime, time
+    from datetime import datetime
+    import time
     do = datetime.strptime(gtime, '%Y-%m-%dT%H:%M:%SZ')
     return int(time.mktime(do.timetuple()))
 
@@ -55,7 +56,7 @@ def getlatestcommit(repourl):
     url = repourl.replace('https://github.com/', 'https://api.github.com/repos/') + '/commits?per_page=1'
     response = urllib.urlopen(url).read()
     data = json.loads(response.decode())
-    return data[0]['sha']
+    return [data[0]['sha'], gmt2unix(data[0]['commit']['committer']['date'])]
 
 
 def downloadfile(url, name, chash):
