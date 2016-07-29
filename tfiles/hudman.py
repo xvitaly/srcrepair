@@ -19,15 +19,12 @@
 # Более подробная инфорация о программе в readme.txt,
 # о лицензии - в GPL.txt.
 #
-import urllib
-import json
-import os
+import urllib, json, os, time
+from xml.dom import minidom
+from datetime import datetime
 
 
 def parsedb(dbname):
-    # Importing XML parser library...
-    from xml.dom import minidom
-
     # Creating list for result...
     result = []
 
@@ -46,8 +43,6 @@ def parsedb(dbname):
 
 
 def gmt2unix(gtime):
-    from datetime import datetime
-    import time
     do = datetime.strptime(gtime, '%Y-%m-%dT%H:%M:%SZ')
     return int(time.mktime(do.timetuple()))
 
