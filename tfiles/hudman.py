@@ -63,7 +63,7 @@ def downloadfile(url, name, chash):
 def main():
     try:
         # Main exec...
-        parsedb('huds.xml')
+        huddb = parsedb('huds.xml')
 
     except:
         # Exception detected...
