@@ -25,20 +25,13 @@ from datetime import datetime
 
 
 def parsedb(dbname):
-    # Creating list for result...
     result = []
-
-    # Opening HUD database...
     huddb = minidom.parse(dbname)
-
-    # Parsing...
     for hud in huddb.getElementsByTagName('HUD'):
         result.append([hud.getElementsByTagName("InstallDir")[0].firstChild.data,
                        hud.getElementsByTagName("UpURI")[0].firstChild.data,
                        hud.getElementsByTagName("RepoPath")[0].firstChild.data,
                        int(hud.getElementsByTagName("LastUpdate")[0].firstChild.data)])
-
-    # Returning result...
     return result
 
 
@@ -88,14 +81,9 @@ def handlehud(name, url, repo, ltime):
 
 def main():
     try:
-        # Main exec...
-        huddb = parsedb('huds.xml')
-
-        for hud in huddb:
+        for hud in parsedb('huds.xml'):
             handlehud(hud[0], hud[1], hud[2], hud[3])
-
     except:
-        # Exception detected...
         print('An error occurred. Try again later.')
 
 
