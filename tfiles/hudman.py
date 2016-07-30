@@ -78,12 +78,12 @@ def handlehud(name, url, repo, ltime):
     if repo.find('https://github.com/') != -1:
         r = getghinfo(repo)
         if r[1] > ltime:
-            f = renamefile(downloadfile(url, name), r[0])
-            print('Available: %s, hash: %s, filename: %s.' % (name, r[0], f))
+            print('Available: %s, hash: %s, filename: %s.' % (name, r[0], renamefile(downloadfile(url, name), r[0])))
         else:
             print('%s is actual.' % name)
     else:
-        print('%s not from GH' % name)
+        f = downloadfile(url, name)
+        print('Downloaded: %s, filename: %s.' % (name, renamefile(f, calculatehash(f))))
 
 
 def main():
