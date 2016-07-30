@@ -54,21 +54,28 @@ def getghinfo(repourl):
     return [data[0]['sha'], gmt2unix(data[0]['commit']['committer']['date'])]
 
 
-def downloadfile(url, name, chash):
+def downloadfile(url, name):
     dir = os.path.join(os.getcwd(), name)
     if not os.path.exists(dir):
         os.makedirs(dir)
-    filepath = os.path.join(dir, '%s_%s.zip' % (name, chash[:8]))
+    filepath = os.path.join(dir, '%s.zip' % name)
     urllib.urlretrieve(url, filepath)
     return filepath
+
+
+def renamefile(fname, chash):
+    dir = os.path.dirname(fname)
+    result = os.path.join(dir, '%s_%s.zip' % (os.path.splitext(os.path.basename(fname))[0], chash[:8]))
+    os.rename(fname, result)
+    return result
 
 
 def handlehud(name, url, repo, ltime):
     if repo.find('https://github.com/') != -1:
         r = getghinfo(repo)
         if r[1] > ltime:
-            f = downloadfile(url, name, r[0])
-            print('Available: %s, hash: %s, filename: %s' % (name, r[0], f))
+            f = downloadfile(url, name)
+            print('Available: %s, hash: %s, filename: %s.' % (name, r[0], f))
         else:
             print('%s is actual.' % name)
     else:
