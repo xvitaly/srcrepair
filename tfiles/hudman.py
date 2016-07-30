@@ -47,7 +47,7 @@ def gmt2unix(gtime):
     return int(time.mktime(do.timetuple()))
 
 
-def getlatestcommit(repourl):
+def getghinfo(repourl):
     url = repourl.replace('https://github.com/', 'https://api.github.com/repos/') + '/commits?per_page=1'
     response = urllib.urlopen(url).read()
     data = json.loads(response.decode())
@@ -65,7 +65,7 @@ def downloadfile(url, name, chash):
 
 def handlehud(name, url, repo, ltime):
     if repo.find('https://github.com/') != -1:
-        r = getlatestcommit(repo)
+        r = getghinfo(repo)
         if r[1] > ltime:
             f = downloadfile(url, name, r[0])
             print('Available: %s, hash: %s, filename: %s' % (name, r[0], f))
