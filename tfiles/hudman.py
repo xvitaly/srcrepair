@@ -19,7 +19,7 @@
 # Более подробная инфорация о программе в readme.txt,
 # о лицензии - в GPL.txt.
 #
-import urllib, json, os, time
+import urllib, json, os, time, hashlib
 from xml.dom import minidom
 from datetime import datetime
 
@@ -68,6 +68,10 @@ def renamefile(fname, chash):
     result = os.path.join(dir, '%s_%s.zip' % (os.path.splitext(os.path.basename(fname))[0], chash[:8]))
     os.rename(fname, result)
     return result
+
+
+def calculatehash(fname):
+    return hashlib.sha256(open(fname, 'rb').read()).hexdigest()
 
 
 def handlehud(name, url, repo, ltime):
