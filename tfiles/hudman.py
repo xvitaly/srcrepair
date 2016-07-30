@@ -36,7 +36,7 @@ def parsedb(dbname):
         result.append([hud.getElementsByTagName("Name")[0].firstChild.data,
                        hud.getElementsByTagName("UpURI")[0].firstChild.data,
                        hud.getElementsByTagName("RepoPath")[0].firstChild.data,
-                       hud.getElementsByTagName("LastUpdate")[0].firstChild.data])
+                       int(hud.getElementsByTagName("LastUpdate")[0].firstChild.data)])
 
     # Returning result...
     return result
@@ -55,15 +55,33 @@ def getlatestcommit(repourl):
 
 
 def downloadfile(url, name, chash):
-    filepath = os.path.join(name, '%s_%s.zip' % (name, chash[:8]))
+    dir = os.path.join(os.getcwd(), name)
+    if not os.path.exists(dir):
+        os.makedirs(dir)
+    filepath = os.path.join(dir, '%s_%s.zip' % (name, chash[:8]))
     urllib.urlretrieve(url, filepath)
     return filepath
+
+
+def handlehud(name, url, repo, ltime):
+    if repo.find('https://github.com/') != -1:
+        r = getlatestcommit(repo)
+        if r[1] > ltime:
+            f = downloadfile(url, name, r[0])
+            print('Available: %s, hash: %s, filename: %s' % (name, r[0], f))
+        else:
+            print('%s is actual.' % name)
+    else:
+        print('%s not from GH' % name)
 
 
 def main():
     try:
         # Main exec...
         huddb = parsedb('huds.xml')
+
+        for hud in huddb:
+            handlehud(hud[0], hud[1], hud[2], hud[3])
 
     except:
         # Exception detected...
