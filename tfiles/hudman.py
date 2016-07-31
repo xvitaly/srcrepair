@@ -64,7 +64,7 @@ def renamefile(fname, chash):
 
 
 def calculatehash(fname):
-    return hashlib.sha256(open(fname, 'rb').read()).hexdigest()
+    return hashlib.sha1(open(fname, 'rb').read()).hexdigest()
 
 
 def handlehud(name, url, repo, ltime):
