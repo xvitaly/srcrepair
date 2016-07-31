@@ -71,7 +71,7 @@ def handlehud(name, url, repo, ltime):
     if repo.find('https://github.com/') != -1:
         r = getghinfo(repo)
         if r[1] > ltime:
-            print('%s updated. Hash: %s, filename: %s.' % (name, r[0], os.path.basename(renamefile(downloadfile(url, name), r[0]))))
+            print('%s updated. Hash: %s, time: %s, filename: %s.' % (name, r[0], r[1], os.path.basename(renamefile(downloadfile(url, name), r[0]))))
         else:
             print('%s update not required.' % name)
     else:
