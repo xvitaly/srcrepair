@@ -20,9 +20,13 @@
 # о лицензии - в GPL.txt.
 #
 
-import urllib, json, os, time, hashlib
-from xml.dom import minidom
 from datetime import datetime
+from hashlib import sha1
+from json import loads
+from os import path, getcwd, makedirs, rename
+from time import mktime
+from urllib import urlretrieve, urlopen
+from xml.dom import minidom
 
 
 def parsedb(dbname):
@@ -38,46 +42,46 @@ def parsedb(dbname):
 
 def gmt2unix(gtime):
     do = datetime.strptime(gtime, '%Y-%m-%dT%H:%M:%SZ')
-    return int(time.mktime(do.timetuple()))
+    return int(mktime(do.timetuple()))
 
 
 def getghinfo(repourl):
     url = repourl.replace('https://github.com/', 'https://api.github.com/repos/') + '/commits?per_page=1'
-    response = urllib.urlopen(url).read()
-    data = json.loads(response.decode())
+    response = urlopen(url).read()
+    data = loads(response.decode())
     return [data[0]['sha'], gmt2unix(data[0]['commit']['committer']['date'])]
 
 
 def downloadfile(url, name):
-    dir = os.path.join(os.getcwd(), name)
-    if not os.path.exists(dir):
-        os.makedirs(dir)
-    filepath = os.path.join(dir, '%s.zip' % name)
-    urllib.urlretrieve(url, filepath)
+    dir = path.join(getcwd(), name)
+    if not path.exists(dir):
+        makedirs(dir)
+    filepath = path.join(dir, '%s.zip' % name)
+    urlretrieve(url, filepath)
     return filepath
 
 
 def renamefile(fname, chash):
-    dir = os.path.dirname(fname)
-    result = os.path.join(dir, '%s_%s.zip' % (os.path.splitext(os.path.basename(fname))[0], chash[:8]))
-    os.rename(fname, result)
+    dir = path.dirname(fname)
+    result = path.join(dir, '%s_%s.zip' % (path.splitext(path.basename(fname))[0], chash[:8]))
+    rename(fname, result)
     return result
 
 
 def calculatehash(fname):
-    return hashlib.sha1(open(fname, 'rb').read()).hexdigest()
+    return sha1(open(fname, 'rb').read()).hexdigest()
 
 
 def handlehud(name, url, repo, ltime):
     if repo.find('https://github.com/') != -1:
         r = getghinfo(repo)
         if r[1] > ltime:
-            print('%s updated. Hash: %s, time: %s, filename: %s.' % (name, r[0], r[1], os.path.basename(renamefile(downloadfile(url, name), r[0]))))
+            print('%s updated. Hash: %s, time: %s, filename: %s.' % (name, r[0], r[1], path.basename(renamefile(downloadfile(url, name), r[0]))))
         else:
             print('%s update not required.' % name)
     else:
         f = downloadfile(url, name)
-        print('%s downloaded. Filename: %s.' % (name, os.path.basename(renamefile(f, calculatehash(f)))))
+        print('%s downloaded. Filename: %s.' % (name, path.basename(renamefile(f, calculatehash(f)))))
 
 
 def main():
