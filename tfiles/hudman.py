@@ -53,7 +53,7 @@ def getghinfo(repourl):
 
 
 def downloadfile(url, name):
-    dir = path.join(getcwd(), name)
+    dir = path.join(getcwd(), 'huds', name)
     if not path.exists(dir):
         makedirs(dir)
     filepath = path.join(dir, '%s.zip' % name)
