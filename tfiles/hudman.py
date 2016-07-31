@@ -19,6 +19,7 @@
 # Более подробная инфорация о программе в readme.txt,
 # о лицензии - в GPL.txt.
 #
+
 import urllib, json, os, time, hashlib
 from xml.dom import minidom
 from datetime import datetime
