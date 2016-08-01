@@ -1941,10 +1941,7 @@ namespace srcrepair
                     CE_Editor.Rows.Remove(CE_Editor.CurrentRow);
                 }
             }
-            catch (Exception Ex)
-            {
-                CoreLib.WriteStringToLog(Ex.Message);
-            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void CE_Copy_Click(object sender, EventArgs e)
@@ -1984,10 +1981,7 @@ namespace srcrepair
                     CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value = Clipboard.GetText();
                 }
             }
-            catch (Exception Ex)
-            {
-                CoreLib.WriteStringToLog(Ex.Message);
-            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void FP_OpenNotepad_Click(object sender, EventArgs e)
