@@ -1949,22 +1949,30 @@ namespace srcrepair
 
         private void CE_Copy_Click(object sender, EventArgs e)
         {
-            if (CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value != null)
+            try
             {
-                Clipboard.SetText(CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value.ToString());
+                if (CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value != null)
+                {
+                    Clipboard.SetText(CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value.ToString());
+                }
             }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void CE_Cut_Click(object sender, EventArgs e)
         {
-            if (CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value != null)
+            try
             {
-                // Копируем в буфер...
-                Clipboard.SetText(CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value.ToString());
-                
-                // Удаляем из ячейки...
-                CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value = null;
+                if (CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value != null)
+                {
+                    // Копируем в буфер...
+                    Clipboard.SetText(CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value.ToString());
+
+                    // Удаляем из ячейки...
+                    CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value = null;
+                }
             }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void CE_Paste_Click(object sender, EventArgs e)
