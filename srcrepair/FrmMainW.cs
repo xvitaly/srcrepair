@@ -1948,9 +1948,9 @@ namespace srcrepair
         {
             try
             {
-                if (CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value != null)
+                foreach (DataGridViewCell DV in CE_Editor.SelectedCells)
                 {
-                    Clipboard.SetText(CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value.ToString());
+                    if (DV.Value != null) { Clipboard.SetText(DV.Value.ToString()); }
                 }
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
