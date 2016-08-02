@@ -1959,10 +1959,9 @@ namespace srcrepair
         {
             try
             {
-                foreach (DataGridViewCell DV in CE_Editor.SelectedCells)
-                {
-                    if (DV.Value != null) { Clipboard.SetText(DV.Value.ToString()); DV.Value = null; }
-                }
+                StringBuilder SB = new StringBuilder();
+                foreach (DataGridViewCell DV in CE_Editor.SelectedCells) { if (DV.Value != null) { SB.AppendFormat("{0} ", DV.Value); DV.Value = null; } }
+                Clipboard.SetText(SB.ToString().Trim());
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
