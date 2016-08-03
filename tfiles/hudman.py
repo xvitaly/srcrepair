@@ -73,7 +73,7 @@ def calculatehash(fname):
     return sha1(open(fname, 'rb').read()).hexdigest()
 
 
-def handlehud(name, url, repo, ltime):
+def handlehud(name, url, repo, ltime, lfname):
     if repo.find('https://github.com/') != -1:
         r = getghinfo(repo)
         if r[1] > ltime:
@@ -88,7 +88,7 @@ def handlehud(name, url, repo, ltime):
 def main():
     try:
         for hud in parsedb('huds.xml'):
-            handlehud(hud[0], hud[1], hud[2], hud[3])
+            handlehud(hud[0], hud[1], hud[2], hud[3], hud[4])
     except:
         print('An error occurred. Try again later.')
 
