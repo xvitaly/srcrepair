@@ -24,10 +24,10 @@ from datetime import datetime
 from hashlib import sha1
 from json import loads
 from os import path, getcwd, makedirs, rename
+from shutil import rmtree
 from time import mktime
 from urllib import urlretrieve, urlopen
 from xml.dom import minidom
-import shutil
 
 
 def parsedb(dbname):
@@ -91,7 +91,7 @@ def handlehud(name, url, repo, ltime, lfname):
         if shortfile == lfname:
             print('%s downloaded. Filename: %s.' % (name, shortfile))
         else:
-            shutil.rmtree(path.dirname(fullfile))
+            rmtree(path.dirname(fullfile))
             print('%s is up to date.' % name)
 
 
