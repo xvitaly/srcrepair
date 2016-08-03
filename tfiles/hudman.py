@@ -27,6 +27,7 @@ from os import path, getcwd, makedirs, rename
 from time import mktime
 from urllib import urlretrieve, urlopen
 from xml.dom import minidom
+import shutil
 
 
 def parsedb(dbname):
@@ -48,8 +49,11 @@ def gmt2unix(gtime):
 
 def getghinfo(repourl):
     url = repourl.replace('https://github.com/', 'https://api.github.com/repos/') + '/commits?per_page=1'
-    response = urlopen(url).read()
-    data = loads(response.decode())
+    response = urlopen(url)
+    respcode = response.getcode()
+    if respcode != 200:
+        raise Exception('GitHub API %d error code.' % respcode)
+    data = loads(response.read().decode())
     return [data[0]['sha'], gmt2unix(data[0]['commit']['committer']['date'])]
 
 
@@ -81,16 +85,22 @@ def handlehud(name, url, repo, ltime, lfname):
         else:
             print('%s is up to date.' % name)
     else:
-        f = downloadfile(url, name)
-        print('%s downloaded. Filename: %s.' % (name, path.basename(renamefile(f, calculatehash(f)))))
+        filednl = downloadfile(url, name)
+        fullfile = renamefile(filednl, calculatehash(filednl))
+        shortfile = path.basename(fullfile)
+        if shortfile == lfname:
+            print('%s downloaded. Filename: %s.' % (name, shortfile))
+        else:
+            shutil.rmtree(path.dirname(fullfile))
+            print('%s is up to date.' % name)
 
 
 def main():
     try:
         for hud in parsedb('huds.xml'):
             handlehud(hud[0], hud[1], hud[2], hud[3], hud[4])
-    except:
-        print('An error occurred. Try again later.')
+    except Exception as ex:
+        print('An error occurred: %s' % ex.message)
 
 
 if __name__ == '__main__':
