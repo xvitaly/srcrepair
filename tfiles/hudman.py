@@ -36,7 +36,8 @@ def parsedb(dbname):
         result.append([hud.getElementsByTagName("InstallDir")[0].firstChild.data,
                        hud.getElementsByTagName("UpURI")[0].firstChild.data,
                        hud.getElementsByTagName("RepoPath")[0].firstChild.data,
-                       int(hud.getElementsByTagName("LastUpdate")[0].firstChild.data)])
+                       int(hud.getElementsByTagName("LastUpdate")[0].firstChild.data),
+                       path.basename(hud.getElementsByTagName("URI")[0].firstChild.data)])
     return result
 
 
