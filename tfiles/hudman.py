@@ -58,17 +58,17 @@ def getghinfo(repourl):
 
 
 def downloadfile(url, name):
-    dir = path.join(getcwd(), 'huds', name)
-    if not path.exists(dir):
-        makedirs(dir)
-    filepath = path.join(dir, '%s.zip' % name)
+    fdir = path.join(getcwd(), 'huds', name)
+    if not path.exists(fdir):
+        makedirs(fdir)
+    filepath = path.join(fdir, '%s.zip' % name)
     urlretrieve(url, filepath)
     return filepath
 
 
 def renamefile(fname, chash):
-    dir = path.dirname(fname)
-    result = path.join(dir, '%s_%s.zip' % (path.splitext(path.basename(fname))[0], chash[:8]))
+    fdir = path.dirname(fname)
+    result = path.join(fdir, '%s_%s.zip' % (path.splitext(path.basename(fname))[0], chash[:8]))
     rename(fname, result)
     return result
 
@@ -81,7 +81,8 @@ def handlehud(name, url, repo, ltime, lfname):
     if repo.find('https://github.com/') != -1:
         r = getghinfo(repo)
         if r[1] > ltime:
-            print('%s has been updated. Hash: %s, time: %s, filename: %s.' % (name, r[0], r[1], path.basename(renamefile(downloadfile(url, name), r[0]))))
+            print('%s has been updated. Hash: %s, time: %s, filename: %s.' % (
+                name, r[0], r[1], path.basename(renamefile(downloadfile(url, name), r[0]))))
         else:
             print('%s is up to date.' % name)
     else:
