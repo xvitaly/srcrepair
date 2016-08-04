@@ -88,7 +88,7 @@ def handlehud(name, url, repo, ltime, lfname):
         filednl = downloadfile(url, name)
         fullfile = renamefile(filednl, calculatehash(filednl))
         shortfile = path.basename(fullfile)
-        if shortfile == lfname:
+        if shortfile != lfname:
             print('%s downloaded. Filename: %s.' % (name, shortfile))
         else:
             rmtree(path.dirname(fullfile))
