@@ -601,15 +601,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please select item from drop-down list!.
-        /// </summary>
-        internal static string BU_TBSelCat {
-            get {
-                return ResourceManager.GetString("BU_TBSelCat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Unknown file type. Can&apos;t restore it!.
         /// </summary>
         internal static string BU_UnknownType {
