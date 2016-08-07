@@ -272,51 +272,72 @@ namespace srcrepair
 
         private void UpdAppStatus_Click(object sender, EventArgs e)
         {
-            // Проверяем наличие обновлений программы...
-            if (UpMan.CheckAppUpdate())
+            if (!WrkChkApp.IsBusy)
             {
-                // Устанавливаем доступное обновление...
-                if (InstallBinaryUpdate(UpMan.AppUpdateURL, UpMan.AppUpdateHash))
+                // Проверяем наличие обновлений программы...
+                if (UpMan.CheckAppUpdate())
                 {
-                    // Загрузка завершилась успешно. Завершаем работу приложения для установки...
-                    Environment.Exit(9);
+                    // Устанавливаем доступное обновление...
+                    if (InstallBinaryUpdate(UpMan.AppUpdateURL, UpMan.AppUpdateHash))
+                    {
+                        // Загрузка завершилась успешно. Завершаем работу приложения для установки...
+                        Environment.Exit(9);
+                    }
+                }
+                else
+                {
+                    // Обновление не требуется, поэтому просто выводим сообщение об этом...
+                    MessageBox.Show(AppStrings.UPD_LatestInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                // Обновление не требуется, поэтому просто выводим сообщение об этом...
-                MessageBox.Show(AppStrings.UPD_LatestInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(AppStrings.DB_WrkInProgress, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void UpdHUDStatus_Click(object sender, EventArgs e)
         {
-            // Проверяем наличие обновлений...
-            if (UpMan.CheckHUDUpdate())
+            if (!WrkChkApp.IsBusy)
             {
-                // Запускаем процесс установки обновления...
-                if (InstallDatabaseUpdate(Properties.Resources.HUDDbFile, UpMan.HUDUpdateURL, UpMan.HUDUpdateHash))
+                // Проверяем наличие обновлений...
+                if (UpMan.CheckHUDUpdate())
                 {
-                    // Обновляем дату последней проверки обновлений...
-                    UpdateTimeSetHUD();
+                    // Запускаем процесс установки обновления...
+                    if (InstallDatabaseUpdate(Properties.Resources.HUDDbFile, UpMan.HUDUpdateURL, UpMan.HUDUpdateHash))
+                    {
+                        // Обновляем дату последней проверки обновлений...
+                        UpdateTimeSetHUD();
+                    }
+                }
+                else
+                {
+                    // Обновление не требуется. Выводим соответствующее сообщение...
+                    MessageBox.Show(AppStrings.UPD_LatestDBInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                // Обновление не требуется. Выводим соответствующее сообщение...
-                MessageBox.Show(AppStrings.UPD_LatestDBInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(AppStrings.DB_WrkInProgress, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void UpdDBStatus_Click(object sender, EventArgs e)
         {
-            if (UpMan.CheckGameDBUpdate())
+            if (!WrkChkApp.IsBusy)
             {
-                InstallDatabaseUpdate(Properties.Resources.GameListFile, UpMan.GameUpdateURL, UpMan.GameUpdateHash);
+                if (UpMan.CheckGameDBUpdate())
+                {
+                    InstallDatabaseUpdate(Properties.Resources.GameListFile, UpMan.GameUpdateURL, UpMan.GameUpdateHash);
+                }
+                else
+                {
+                    MessageBox.Show(AppStrings.UPD_LatestDBInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {
-                MessageBox.Show(AppStrings.UPD_LatestDBInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(AppStrings.DB_WrkInProgress, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
