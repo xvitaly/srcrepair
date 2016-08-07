@@ -646,15 +646,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Create a backup file.
-        /// </summary>
-        internal static string CE_CreateBackUp {
-            get {
-                return ResourceManager.GetString("CE_CreateBackUp", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Warning! Parse error detected. The config was opened with errors..
         /// </summary>
         internal static string CE_ExceptionDetected {

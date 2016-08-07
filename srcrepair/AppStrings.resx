@@ -120,9 +120,6 @@
   <data name="CE_CfgSVVEx" xml:space="preserve">
     <value>Warning! An error occurred. File was not saved!</value>
   </data>
-  <data name="CE_CreateBackUp" xml:space="preserve">
-    <value>Create a backup file</value>
-  </data>
   <data name="CE_ExceptionDetected" xml:space="preserve">
     <value>Warning! Parse error detected. The config was opened with errors.</value>
   </data>
