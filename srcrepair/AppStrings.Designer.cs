@@ -619,15 +619,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Save the configuration file?.
-        /// </summary>
-        internal static string CE_CfgSV {
-            get {
-                return ResourceManager.GetString("CE_CfgSV", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Warning! An error occurred. File was not saved!.
         /// </summary>
         internal static string CE_CfgSVVEx {
