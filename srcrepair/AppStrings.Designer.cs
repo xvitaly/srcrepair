@@ -376,15 +376,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while creating the backup. No backups has been created!.
-        /// </summary>
-        internal static string BackUpCreationFailed {
-            get {
-                return ResourceManager.GetString("BackUpCreationFailed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to The selected file is a binary. Unable open it in text editor!.
         /// </summary>
         internal static string BU_BinaryFile {

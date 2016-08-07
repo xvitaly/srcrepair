@@ -117,10 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="BackUpCreationFailed" xml:space="preserve">
-    <value>Произошла ошибка при создании резервной копии. Резервная копия не была создана!</value>
-    <comment>Сообщение, выдаваемое при ошибке создания резервной копии</comment>
-  </data>
   <data name="CE_CfgSV" xml:space="preserve">
     <value>Сохранить файл конфигурации?</value>
     <comment>Сообщение, выдаваемое при сохранении файла</comment>
