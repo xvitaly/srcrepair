@@ -321,9 +321,6 @@
   <data name="BU_RegErr" xml:space="preserve">
     <value>An error occured. Backup file was not created!</value>
   </data>
-  <data name="BU_ListLdFailed" xml:space="preserve">
-    <value>An error occured. Can't get list of backups. Create at least one backup and try again later.</value>
-  </data>
   <data name="CE_ClNoDescr" xml:space="preserve">
     <value>Unfortunately we have no description for this variable. You can help by sending it to us.</value>
   </data>
