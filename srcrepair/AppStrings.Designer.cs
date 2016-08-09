@@ -925,15 +925,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Selected HUD already installed. If you want to reinstall, remove it first!.
-        /// </summary>
-        internal static string HD_AlreadyInstalled {
-            get {
-                return ResourceManager.GetString("HD_AlreadyInstalled", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Install selected HUD.
         /// </summary>
         internal static string HD_BtnInstallText {

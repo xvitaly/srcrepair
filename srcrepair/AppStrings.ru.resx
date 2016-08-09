@@ -655,10 +655,6 @@
     <value>Идёт установка... Ждите.</value>
     <comment>Текст кнопки во время распаковки HUD.</comment>
   </data>
-  <data name="HD_AlreadyInstalled" xml:space="preserve">
-    <value>Выбранный HUD уже установлен. Если хотите переустановить, сначала удалите его!</value>
-    <comment>Сообщение при запуске установки уже установленного HUD</comment>
-  </data>
   <data name="UPD_HUDNoUpdates" xml:space="preserve">
     <value>Нет новых обновлений базы HUD. Используется свежайшая версия.</value>
     <comment>Выводится в случае если модуль не смог найти новых версий базы HUD</comment>

@@ -519,9 +519,6 @@
   <data name="HD_InstallBtnProgress" xml:space="preserve">
     <value>Installing HUD... Wait.</value>
   </data>
-  <data name="HD_AlreadyInstalled" xml:space="preserve">
-    <value>Selected HUD already installed. If you want to reinstall, remove it first!</value>
-  </data>
   <data name="UPD_HUDNoUpdates" xml:space="preserve">
     <value>No new updates detected. SRC Repair is using latest version of HUD database.</value>
   </data>
