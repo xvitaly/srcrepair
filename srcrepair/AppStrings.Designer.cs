@@ -898,15 +898,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Specify the {0} resolution of the monitor or window. You must specify an integer..
-        /// </summary>
-        internal static string GT_ResMsg {
-            get {
-                return ResourceManager.GetString("GT_ResMsg", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to horisontal.
         /// </summary>
         internal static string GT_ResMsgHor {

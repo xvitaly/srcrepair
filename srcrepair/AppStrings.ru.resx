@@ -291,10 +291,6 @@
     <value>ru</value>
     <comment>Префикс/постфикс файлов текущего языка</comment>
   </data>
-  <data name="GT_ResMsg" xml:space="preserve">
-    <value>Укажите разрешение монитора или окна по {0}. Необходимо указать целое число.</value>
-    <comment>Сообщение с подсказкой при вводе разрешения</comment>
-  </data>
   <data name="GT_ResMsgHor" xml:space="preserve">
     <value>горизонтали</value>
     <comment>Подстановка для сообщения</comment>

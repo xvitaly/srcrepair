@@ -249,9 +249,6 @@
   <data name="AppLangPrefix" xml:space="preserve">
     <value>en</value>
   </data>
-  <data name="GT_ResMsg" xml:space="preserve">
-    <value>Specify the {0} resolution of the monitor or window. You must specify an integer.</value>
-  </data>
   <data name="GT_ResMsgHor" xml:space="preserve">
     <value>horisontal</value>
   </data>
