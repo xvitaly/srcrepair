@@ -249,12 +249,6 @@
   <data name="AppLangPrefix" xml:space="preserve">
     <value>en</value>
   </data>
-  <data name="GT_ResMsgHor" xml:space="preserve">
-    <value>horisontal</value>
-  </data>
-  <data name="GT_ResMsgVert" xml:space="preserve">
-    <value>vertical</value>
-  </data>
   <data name="RPB_CloseCpt" xml:space="preserve">
     <value>Close</value>
   </data>

@@ -291,14 +291,6 @@
     <value>ru</value>
     <comment>Префикс/постфикс файлов текущего языка</comment>
   </data>
-  <data name="GT_ResMsgHor" xml:space="preserve">
-    <value>горизонтали</value>
-    <comment>Подстановка для сообщения</comment>
-  </data>
-  <data name="GT_ResMsgVert" xml:space="preserve">
-    <value>вертикали</value>
-    <comment>Подстановка для сообщения</comment>
-  </data>
   <data name="RPB_CloseCpt" xml:space="preserve">
     <value>Закрыть</value>
     <comment>Текст на кнопке</comment>

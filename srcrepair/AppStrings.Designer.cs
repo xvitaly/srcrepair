@@ -898,24 +898,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to horisontal.
-        /// </summary>
-        internal static string GT_ResMsgHor {
-            get {
-                return ResourceManager.GetString("GT_ResMsgHor", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to vertical.
-        /// </summary>
-        internal static string GT_ResMsgVert {
-            get {
-                return ResourceManager.GetString("GT_ResMsgVert", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to An error occurred while saving graphical settings!.
         /// </summary>
         internal static string GT_SaveFailure {
