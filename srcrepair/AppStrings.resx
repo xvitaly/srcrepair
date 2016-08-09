@@ -186,9 +186,6 @@
   <data name="InputBoxCancelBtnName" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="ParamError" xml:space="preserve">
-    <value>Discovered the command line parameter, but not found its value, so ignore this option!</value>
-  </data>
   <data name="PS_ExecuteMSG" xml:space="preserve">
     <value>Perform this cleanup?</value>
   </data>

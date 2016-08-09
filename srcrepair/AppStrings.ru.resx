@@ -209,10 +209,6 @@
     <value>Отмена</value>
     <comment>Текст кнопки Cancel в InputBox'ах</comment>
   </data>
-  <data name="ParamError" xml:space="preserve">
-    <value>Обнаружен параметр командной строки, но не обнаружено его значение, поэтому игнорируем данный параметр!</value>
-    <comment>Сообщение, выдаваемое при отсутствии значения параметра командной строки</comment>
-  </data>
   <data name="PS_ExecuteMSG" xml:space="preserve">
     <value>Выполнить очистку?</value>
     <comment>Вопрос, задаваемый пользователю о необходимости выполнения очистки</comment>

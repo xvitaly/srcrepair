@@ -1150,15 +1150,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Discovered the command line parameter, but not found its value, so ignore this option!.
-        /// </summary>
-        internal static string ParamError {
-            get {
-                return ResourceManager.GetString("ParamError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to {0} application is running! To execute this cleanup please close it..
         /// </summary>
         internal static string PS_AppRunning {
