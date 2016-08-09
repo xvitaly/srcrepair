@@ -209,10 +209,6 @@
     <value>Отмена</value>
     <comment>Текст кнопки Cancel в InputBox'ах</comment>
   </data>
-  <data name="NotImplementedYet" xml:space="preserve">
-    <value>Извините, но данная функция ещё не реализована!</value>
-    <comment>Сообщение, выдаваемое при запуске ещё не реализованной функции</comment>
-  </data>
   <data name="ParamError" xml:space="preserve">
     <value>Обнаружен параметр командной строки, но не обнаружено его значение, поэтому игнорируем данный параметр!</value>
     <comment>Сообщение, выдаваемое при отсутствии значения параметра командной строки</comment>

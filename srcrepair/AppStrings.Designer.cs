@@ -1132,15 +1132,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sorry, but this feature is not yet implemented!.
-        /// </summary>
-        internal static string NotImplementedYet {
-            get {
-                return ResourceManager.GetString("NotImplementedYet", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Warning! An error occurred during saving your settings!.
         /// </summary>
         internal static string Opts_Error {

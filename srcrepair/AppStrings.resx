@@ -186,9 +186,6 @@
   <data name="InputBoxCancelBtnName" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="NotImplementedYet" xml:space="preserve">
-    <value>Sorry, but this feature is not yet implemented!</value>
-  </data>
   <data name="ParamError" xml:space="preserve">
     <value>Discovered the command line parameter, but not found its value, so ignore this option!</value>
   </data>
