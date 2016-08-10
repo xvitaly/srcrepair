@@ -272,18 +272,6 @@ namespace srcrepair.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool OpenBtRep {
-            get {
-                return ((bool)(this["OpenBtRep"]));
-            }
-            set {
-                this["OpenBtRep"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool HighlightOldBackUps {
             get {
                 return ((bool)(this["HighlightOldBackUps"]));

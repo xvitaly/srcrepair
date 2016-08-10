@@ -45,7 +45,6 @@ namespace srcrepair
             MO_ZipCompress.Checked = Properties.Settings.Default.PackBeforeCleanup;
             MO_UnSafeOps.Checked = Properties.Settings.Default.AllowUnSafeCleanup;
             MO_UseUpstream.Checked = Properties.Settings.Default.HUDUseUpstream;
-            MO_OpenBtRpt.Checked = Properties.Settings.Default.OpenBtRep;
 
             // Укажем название приложения в заголовке окна...
             Text = String.Format(Text, Properties.Resources.AppName);
@@ -65,7 +64,6 @@ namespace srcrepair
             Properties.Settings.Default.PackBeforeCleanup = MO_ZipCompress.Checked;
             Properties.Settings.Default.AllowUnSafeCleanup = MO_UnSafeOps.Checked;
             Properties.Settings.Default.HUDUseUpstream = MO_UseUpstream.Checked;
-            Properties.Settings.Default.OpenBtRep = MO_OpenBtRpt.Checked;
             if (Regex.IsMatch(MO_CustDirName.Text, Properties.Resources.MO_CustomDirRegex)) { Properties.Settings.Default.UserCustDirName = MO_CustDirName.Text; }
 
             // Сохраняем настройки...
