@@ -17,9 +17,6 @@
     <Setting Name="LastUpdateTime" Type="System.DateTime" Scope="User">
       <Value Profile="(Default)">2012-05-01</Value>
     </Setting>
-    <Setting Name="DebugLogFileName" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">debug.log</Value>
-    </Setting>
     <Setting Name="RemoveEmptyDirs" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>

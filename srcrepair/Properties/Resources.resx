@@ -397,4 +397,7 @@
   <data name="HUDLocalDir" xml:space="preserve">
     <value>HUDs</value>
   </data>
+  <data name="DebugLogFileName" xml:space="preserve">
+    <value>debug.log</value>
+  </data>
 </root>
