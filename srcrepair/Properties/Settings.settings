@@ -56,9 +56,6 @@
     <Setting Name="HUDLocalDir" Type="System.String" Scope="User">
       <Value Profile="(Default)">HUDs</Value>
     </Setting>
-    <Setting Name="HUDSaveArchives" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
     <Setting Name="HUDUseUpstream" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>

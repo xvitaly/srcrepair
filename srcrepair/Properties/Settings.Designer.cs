@@ -236,18 +236,6 @@ namespace srcrepair.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool HUDSaveArchives {
-            get {
-                return ((bool)(this["HUDSaveArchives"]));
-            }
-            set {
-                this["HUDSaveArchives"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool HUDUseUpstream {
             get {
                 return ((bool)(this["HUDUseUpstream"]));
