@@ -394,4 +394,7 @@
   <data name="AppTgChannelURL" xml:space="preserve">
     <value>https://telegram.me/easycoding</value>
   </data>
+  <data name="HUDLocalDir" xml:space="preserve">
+    <value>HUDs</value>
+  </data>
 </root>
