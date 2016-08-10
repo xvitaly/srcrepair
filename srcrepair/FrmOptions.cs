@@ -34,7 +34,6 @@ namespace srcrepair
         {
             // Считаем текущие настройки...
             MO_ConfirmExit.Checked = Properties.Settings.Default.ConfirmExit;
-            MO_SaveHUDPackages.Checked = Properties.Settings.Default.HUDSaveArchives;
             MO_AutoUpdate.Checked = Properties.Settings.Default.EnableAutoUpdate;
             MO_RemEmptyDirs.Checked = Properties.Settings.Default.RemoveEmptyDirs;
             MO_HighlightOldBackUps.Checked = Properties.Settings.Default.HighlightOldBackUps;
@@ -54,7 +53,6 @@ namespace srcrepair
         {
             // Сохраняем настройки для текущего сеанса...
             Properties.Settings.Default.ConfirmExit = MO_ConfirmExit.Checked;
-            Properties.Settings.Default.HUDSaveArchives = MO_SaveHUDPackages.Checked;
             Properties.Settings.Default.EnableAutoUpdate = MO_AutoUpdate.Checked;
             Properties.Settings.Default.RemoveEmptyDirs = MO_RemEmptyDirs.Checked;
             Properties.Settings.Default.HighlightOldBackUps = MO_HighlightOldBackUps.Checked;
