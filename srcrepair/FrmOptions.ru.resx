@@ -142,17 +142,11 @@
   <data name="MO_AutoUpdate.Text" xml:space="preserve">
     <value>Включить автоматическое обновление</value>
   </data>
-  <data name="MO_SaveHUDPackages.Text" xml:space="preserve">
-    <value>Сохранять архивы HUD после установки</value>
-  </data>
   <data name="MO_ConfirmExit.Text" xml:space="preserve">
     <value>Подтверждать выход из программы</value>
   </data>
   <data name="MO_TP1.Text" xml:space="preserve">
     <value>Общие настройки</value>
-  </data>
-  <data name="MO_OpenBtRpt.Text" xml:space="preserve">
-    <value>Открыть баг-трекер после отправки сообщения</value>
   </data>
   <data name="MO_UnSafeOps.Text" xml:space="preserve">
     <value>Разрешить небезопасные методы очистки</value>
