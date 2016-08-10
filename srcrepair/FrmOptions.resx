@@ -411,33 +411,6 @@
   <metadata name="MO_TP2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="MO_OpenBtRpt.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="MO_OpenBtRpt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 62</value>
-  </data>
-  <data name="MO_OpenBtRpt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 17</value>
-  </data>
-  <data name="MO_OpenBtRpt.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="MO_OpenBtRpt.Text" xml:space="preserve">
-    <value>Open bug tracker after submitting report</value>
-  </data>
-  <data name="&gt;&gt;MO_OpenBtRpt.Name" xml:space="preserve">
-    <value>MO_OpenBtRpt</value>
-  </data>
-  <data name="&gt;&gt;MO_OpenBtRpt.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MO_OpenBtRpt.Parent" xml:space="preserve">
-    <value>MO_TP2</value>
-  </data>
-  <data name="&gt;&gt;MO_OpenBtRpt.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="MO_UnSafeOps.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -463,13 +436,13 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;MO_UnSafeOps.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <metadata name="MO_CustDirName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="MO_CustDirName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 145</value>
+    <value>127, 123</value>
   </data>
   <data name="MO_CustDirName.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 20</value>
@@ -487,7 +460,7 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;MO_CustDirName.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <metadata name="L_MO_CustDirName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -496,7 +469,7 @@
     <value>True</value>
   </data>
   <data name="L_MO_CustDirName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 148</value>
+    <value>16, 126</value>
   </data>
   <data name="L_MO_CustDirName.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 13</value>
@@ -517,13 +490,13 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;L_MO_CustDirName.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <metadata name="MO_FindShBin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="MO_FindShBin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>266, 112</value>
+    <value>266, 90</value>
   </data>
   <data name="MO_FindShBin.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -541,13 +514,13 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;MO_FindShBin.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <metadata name="MO_FindTextEd.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="MO_FindTextEd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>266, 82</value>
+    <value>266, 60</value>
   </data>
   <data name="MO_FindTextEd.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -565,13 +538,13 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;MO_FindTextEd.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <metadata name="MO_ShBin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="MO_ShBin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 115</value>
+    <value>127, 93</value>
   </data>
   <data name="MO_ShBin.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 20</value>
@@ -589,7 +562,7 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;MO_ShBin.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <metadata name="L_MO_ShBin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -598,7 +571,7 @@
     <value>True</value>
   </data>
   <data name="L_MO_ShBin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 118</value>
+    <value>16, 96</value>
   </data>
   <data name="L_MO_ShBin.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 13</value>
@@ -619,13 +592,13 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;L_MO_ShBin.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <metadata name="MO_TextEdBin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="MO_TextEdBin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 85</value>
+    <value>127, 63</value>
   </data>
   <data name="MO_TextEdBin.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 20</value>
@@ -643,7 +616,7 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;MO_TextEdBin.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <metadata name="L_MO_TextEdBin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -655,7 +628,7 @@
     <value>NoControl</value>
   </data>
   <data name="L_MO_TextEdBin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 88</value>
+    <value>16, 66</value>
   </data>
   <data name="L_MO_TextEdBin.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 13</value>
@@ -676,7 +649,7 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;L_MO_TextEdBin.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <metadata name="MO_EnableAppLogs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -706,7 +679,7 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;MO_EnableAppLogs.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="MO_TP2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
