@@ -339,8 +339,10 @@ namespace srcrepair
             {
                 // Выдадим сообщение если очищать нечего...
                 MessageBox.Show(AppStrings.PS_LoadErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
                 // Отключим кнопку запуска очистки...
                 CM_Clean.Enabled = false;
+                
                 // Закроем форму.
                 Close();
             }
