@@ -638,7 +638,7 @@ namespace srcrepair
         /// <summary>
         /// Отображает диалоговое окно менеджера быстрой очистки.
         /// </summary>
-        /// <param name="Path">Путь к каталогу очистки</param>
+        /// <param name="Paths">Каталоги для очистки</param>
         /// <param name="Mask">Маска файлов, подлежащих очистке</param>
         /// <param name="LText">Текст заголовка</param>
         /// <param name="CheckBin">Имя бинарника, работа которого будет проверяться перед запуском очистки</param>
