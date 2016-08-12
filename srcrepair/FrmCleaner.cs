@@ -24,8 +24,22 @@ using System.Windows.Forms;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс формы менеджера очистки.
+    /// </summary>
     public partial class frmCleaner : Form
     {
+        /// <summary>
+        /// Конструктор класса формы менеджера очистки.
+        /// </summary>
+        /// <param name="CD">Каталоги для очистки</param>
+        /// <param name="BD">Каталог для сохранения резервных копий</param>
+        /// <param name="CI">Текст заголовка</param>
+        /// <param name="SM">Текст сообщения, которое будет выдаваться по завершении очистки</param>
+        /// <param name="RO">Разрешает / запрещает изменять выбор удаляемых файлов</param>
+        /// <param name="NA">Включает / отключает автовыбор файлов флажками</param>
+        /// <param name="RS">Включает / отключает рекурсивную очистку</param>
+        /// <param name="FB">Включает / отключает принудительное создание резервных копий</param>
         public frmCleaner(List<String> CD, string BD, string CI, string SM, bool RO, bool NA, bool RS, bool FB)
         {
             InitializeComponent();
