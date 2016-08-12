@@ -53,15 +53,50 @@ namespace srcrepair
             FullBackUpDirPath = BD;
         }
 
-        private List<String> CleanDirs; // Здесь будем хранить каталог для очистки,...
+        /// <summary>
+        /// Хранит список каталогов для очистки.
+        /// </summary>
+        private List<String> CleanDirs;
+
+        /// <summary>
+        /// Разрешает / запрещает изменять выбор удаляемых файлов.
+        /// </summary>
         private bool IsReadOnly;
+
+        /// <summary>
+        /// Включает / отключает автовыбор файлов флажками.
+        /// </summary>
         private bool NoAutoCheck;
+
+        /// <summary>
+        /// Включает / отключает рекурсивную очистку.
+        /// </summary>
         private bool IsRecursive;
+
+        /// <summary>
+        /// Включает / отключает принудительное создание резервных копий.
+        /// </summary>
         private bool ForceBackUp;
+
+        /// <summary>
+        /// Хранит путь к каталогу для сохранения резервных копий.
+        /// </summary>
         private string FullBackUpDirPath;
+
+        /// <summary>
+        /// Содержит текст сообщения, которое будет выдаваться по завершении очистки.
+        /// </summary>
         private string SuccessMessage;
-        private string CleanInfo; // ...и информацию о том, что будем очищать.
-        private long TotalSize = 0; // Задаём и обнуляем счётчик общего размера удаляемых файлов...
+
+        /// <summary>
+        /// Содержит текст заголовка.
+        /// </summary>
+        private string CleanInfo;
+
+        /// <summary>
+        /// Счётчик общего размера удаляемых файлов (в байтах).
+        /// </summary>
+        private long TotalSize = 0;
 
         /// <summary>
         /// Ищет и добавляет файлы для удаления в таблицу модуля очистки.
