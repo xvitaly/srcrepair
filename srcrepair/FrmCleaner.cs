@@ -177,6 +177,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при возникновении события "загрузка формы".
+        /// </summary>
         private void frmCleaner_Load(object sender, EventArgs e)
         {
             // Изменяем заголовок окна...
@@ -189,6 +192,10 @@ namespace srcrepair
             CM_FTable.Enabled = !IsReadOnly;
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при возникновении события "нажатие клавиши"
+        /// внутри списка найденных элементов.
+        /// </summary>
         private void CM_FTable_KeyDown(object sender, KeyEventArgs e)
         {
             if (!GttWrk.IsBusy)
@@ -232,6 +239,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий асинхронно при запуске механизма очистки.
+        /// </summary>
         private void ClnWrk_DoWork(object sender, DoWorkEventArgs e)
         {
             try
@@ -299,11 +309,18 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Метод, информирующий основную форму о прогрессе очистки внутри, выполняющейся
+        /// в отдельном потоке.
+        /// </summary>
         private void ClnWrk_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             PrbMain.Value = e.ProgressPercentage;
         }
 
+        /// <summary>
+        /// Метод, срабатывающий по окончании работы механизма очистки в отдельном потоке.
+        /// </summary>
         private void ClnWrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             if (e.Error == null)
@@ -322,6 +339,9 @@ namespace srcrepair
             Close();
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку запуска очистки.
+        /// </summary>
         private void CM_Clean_Click(object sender, EventArgs e)
         {
             if (CM_FTable.Items.Count > 0)
@@ -358,11 +378,17 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку отмены очистки.
+        /// </summary>
         private void CM_Cancel_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при двойном клике по таблице кандидатов на удаление.
+        /// </summary>
         private void CM_FTable_DoubleClick(object sender, EventArgs e)
         {
             // Исправим известный баг VS с обработчиком двойного клика, снимающим флажок у файла.
@@ -371,12 +397,19 @@ namespace srcrepair
             // Запускаем Проводник и выделяем в нём выбранный пользователем файл...
             CoreLib.OpenExplorer(CM_FTable.SelectedItems[0].ToolTipText);
         }
-        
+
+        /// <summary>
+        /// Асинхронный метод, обнаруживающий и помечающий файлы для удаления.
+        /// </summary>
         private void GttWrk_DoWork(object sender, DoWorkEventArgs e)
         {
             DetectFilesForCleanup(CleanDirs, IsRecursive);
         }
 
+        /// <summary>
+        /// Метод, срабатывающий по окончании работы механизма поиска кандидатов
+        /// на удаление в отдельном потоке.
+        /// </summary>
         private void GttWrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             // Указываем сколько МБ освободится при удалении всех файлов...
@@ -401,6 +434,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при попытке закрытия формы.
+        /// </summary>
         private void frmCleaner_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = ((e.CloseReason == CloseReason.UserClosing) && (ClnWrk.IsBusy || GttWrk.IsBusy));
