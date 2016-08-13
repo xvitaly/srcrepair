@@ -55,6 +55,10 @@ namespace srcrepair
         #endregion
 
         #region IM
+        /// <summary>
+        /// Считывает содержимое БД и помещает в таблицу формы.
+        /// </summary>
+        /// <param name="FileName">Путь к файлу с БД отключённых игроков</param>
         private void ReadFileToTable(string FileName)
         {
             // Проверим существование файла...
