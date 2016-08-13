@@ -87,6 +87,10 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Сохраняет содержимое таблицы формы в файл с БД отключённых игроков.
+        /// </summary>
+        /// <param name="FileName">Путь к файлу с БД отключённых игроков</param>
         private void WriteTableToFile(string FileName)
         {
             using (StreamWriter CFile = new StreamWriter(FileName, false, Encoding.Default))
@@ -117,6 +121,11 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Ищет в строке валидные SteamID.
+        /// </summary>
+        /// <param name="Row">Строка для разбора</param>
+        /// <returns>Возвращает найденные валидные SteamID.</returns>
         private List<String> ParseRow(string Row)
         {
             List<String> Result = new List<String>();
@@ -125,11 +134,17 @@ namespace srcrepair
             return Result;
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку обновления таблицы.
+        /// </summary>
         private void UpdateTable(object sender, EventArgs e)
         {
             try { MM_Table.Rows.Clear(); ReadFileToTable(Banlist); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.MM_ExceptionDetected, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку сохранения.
+        /// </summary>
         private void WriteTable(object sender, EventArgs e)
         {
             try
@@ -140,21 +155,34 @@ namespace srcrepair
             catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.MM_SaveException, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку "О плагине".
+        /// </summary>
         private void AboutDlg(object sender, EventArgs e)
         {
             MessageBox.Show(String.Format(AppStrings.AppPluginAboutDlg, Text, CurrentApp.AppCompany), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        /// <summary>
+        /// Метод, срабатывающий по окончании загрузки формы.
+        /// </summary>
         private void FrmMute_Load(object sender, EventArgs e)
         {
             UpdateTable(sender, e);
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку выхода.
+        /// </summary>
         private void MM_Exit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку вырезания
+        /// строки в буфер обмена.
+        /// </summary>
         private void MM_Cut_Click(object sender, EventArgs e)
         {
             try
@@ -173,6 +201,10 @@ namespace srcrepair
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку копирования
+        /// строки в буфер обмена.
+        /// </summary>
         private void MM_Copy_Click(object sender, EventArgs e)
         {
             try
@@ -187,6 +219,10 @@ namespace srcrepair
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку вставки из
+        /// буфера обмена.
+        /// </summary>
         private void MM_Paste_Click(object sender, EventArgs e)
         {
             try
@@ -201,6 +237,9 @@ namespace srcrepair
             
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку удаления строки.
+        /// </summary>
         private void MM_Delete_Click(object sender, EventArgs e)
         {
             try
@@ -213,6 +252,10 @@ namespace srcrepair
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку преобразования
+        /// формата SteamID.
+        /// </summary>
         private void MM_Convert_Click(object sender, EventArgs e)
         {
             try
@@ -236,6 +279,10 @@ namespace srcrepair
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку перехода к Steam
+        /// профилю выбранного пользователя.
+        /// </summary>
         private void MM_Steam_Click(object sender, EventArgs e)
         {
             try
