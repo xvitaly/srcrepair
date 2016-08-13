@@ -43,7 +43,14 @@ namespace srcrepair
         }
 
         #region IV
+        /// <summary>
+        /// Хранит путь к файлу с БД отключённых игроков.
+        /// </summary>
         private string Banlist;
+
+        /// <summary>
+        /// Хранит путь к каталогу резервных копий.
+        /// </summary>
         private string BackUpDir;
         #endregion
 
