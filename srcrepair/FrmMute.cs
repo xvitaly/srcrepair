@@ -25,8 +25,16 @@ using System.IO;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс формы модуля управления отключёнными игроками.
+    /// </summary>
     public partial class FrmMute : Form
     {
+        /// <summary>
+        /// Конструктор класса формы модуля управления отключёнными игроками.
+        /// </summary>
+        /// <param name="BL">Путь к файлу с БД отключённых игроков</param>
+        /// <param name="BD">Путь к каталогу резервных копий</param>
         public FrmMute(string BL, string BD)
         {
             InitializeComponent();
