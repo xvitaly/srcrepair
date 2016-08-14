@@ -105,18 +105,6 @@ namespace srcrepair
             Close();
         }
 
-        private void btnContact_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                System.Diagnostics.Process.Start("mailto:srcrepair@easycoding.org?subject=Contact author of SRC Repair");
-            }
-            catch
-            {
-                System.Diagnostics.Process.Start("http://www.easycoding.org/about");
-            }
-        }
-
         /// <summary>
         /// Метод, срабатывающий создании формы.
         /// </summary>
