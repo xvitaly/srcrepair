@@ -33,14 +33,6 @@ namespace srcrepair
         public frmAbout()
         {
             InitializeComponent();
-            this.Text = String.Format("About {0}...", AssemblyTitle);
-            this.labelProductName.Text = AssemblyProduct + " OSE";
-            #if DEBUG
-            this.labelProductName.Text += " DEBUG";
-            #endif
-            this.labelVersion.Text = String.Format("Version: {0}", AssemblyVersion);
-            this.labelCopyright.Text = AssemblyCopyright;
-            this.labelCompanyName.Text = AssemblyCompany;
         }
 
         #region Assembly Attribute Accessors
@@ -142,6 +134,16 @@ namespace srcrepair
 
         private void frmAbout_Load(object sender, EventArgs e)
         {
+            // Заполняем информацию о версии, копирайте...
+            Text = String.Format("About {0}...", AssemblyTitle);
+            labelProductName.Text = AssemblyProduct + " OSE";
+            #if DEBUG
+            labelProductName.Text += " DEBUG";
+            #endif
+            labelVersion.Text = String.Format("Version: {0}", AssemblyVersion);
+            labelCopyright.Text = AssemblyCopyright;
+            labelCompanyName.Text = AssemblyCompany;
+
             // Проверяем систему на НГ (диапазон от 20.12.XXXX до 10.1.XXXX+1)...
             DateTime XDate = DateTime.Now; // Получаем текущую дату...
             if (((Convert.ToInt32(XDate.Month) == 12) && ((Convert.ToInt32(XDate.Day) >= 20)
