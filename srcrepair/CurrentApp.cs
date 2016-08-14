@@ -23,6 +23,9 @@ using System.Globalization;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс работы с рантаймом.
+    /// </summary>
     public sealed class CurrentApp
     {
         /// <summary>
