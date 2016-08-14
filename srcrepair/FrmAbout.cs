@@ -40,7 +40,7 @@ namespace srcrepair
         /// <summary>
         /// Возвращает версию приложения (из ресурса сборки).
         /// </summary>
-        public string AssemblyVersion
+        private string AssemblyVersion
         {
             get
             {
@@ -51,7 +51,7 @@ namespace srcrepair
         /// <summary>
         /// Возвращает название продукта (из ресурса сборки).
         /// </summary>
-        public string AssemblyProduct
+        private string AssemblyProduct
         {
             get
             {
@@ -67,7 +67,7 @@ namespace srcrepair
         /// <summary>
         /// Возвращает копирайты приложения (из ресурса сборки).
         /// </summary>
-        public string AssemblyCopyright
+        private string AssemblyCopyright
         {
             get
             {
@@ -83,7 +83,7 @@ namespace srcrepair
         /// <summary>
         /// Возвращает название компании-разработчика приложения (из ресурса сборки).
         /// </summary>
-        public string AssemblyCompany
+        private string AssemblyCompany
         {
             get
             {
