@@ -36,7 +36,7 @@ using Ionic.Zip; // для работы с архивами...
 namespace srcrepair
 {
     /// <summary>
-    /// Предоставляет методы для общих целей.
+    /// Класс, предоставляющий методы для общих целей.
     /// </summary>
     public static class CoreLib
     {
