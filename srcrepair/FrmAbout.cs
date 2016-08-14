@@ -22,8 +22,14 @@ using System.Windows.Forms;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс формы "О программе".
+    /// </summary>
     partial class frmAbout : Form
     {
+        /// <summary>
+        /// Конструктор класса формы "О программе".
+        /// </summary>
         public frmAbout()
         {
             InitializeComponent();
@@ -35,7 +41,6 @@ namespace srcrepair
             this.labelVersion.Text = String.Format("Version: {0}", AssemblyVersion);
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
-            //this.textBoxDescription.Text = AssemblyDescription;
         }
 
         #region Assembly Attribute Accessors
