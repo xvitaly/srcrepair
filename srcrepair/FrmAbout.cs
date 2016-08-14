@@ -38,26 +38,6 @@ namespace srcrepair
         #region Assembly Attribute Accessors
 
         /// <summary>
-        /// Возвращает название приложения (из ресурса сборки).
-        /// </summary>
-        public string AssemblyTitle
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyTitleAttribute), false);
-                if (attributes.Length > 0)
-                {
-                    AssemblyTitleAttribute titleAttribute = (AssemblyTitleAttribute)attributes[0];
-                    if (titleAttribute.Title != "")
-                    {
-                        return titleAttribute.Title;
-                    }
-                }
-                return System.IO.Path.GetFileNameWithoutExtension(Assembly.GetExecutingAssembly().CodeBase);
-            }
-        }
-
-        /// <summary>
         /// Возвращает версию приложения (из ресурса сборки).
         /// </summary>
         public string AssemblyVersion
@@ -65,22 +45,6 @@ namespace srcrepair
             get
             {
                 return Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            }
-        }
-
-        /// <summary>
-        /// Возвращает описание приложения (из ресурса сборки).
-        /// </summary>
-        public string AssemblyDescription
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyDescriptionAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyDescriptionAttribute)attributes[0]).Description;
             }
         }
 
@@ -153,8 +117,9 @@ namespace srcrepair
         private void frmAbout_Load(object sender, EventArgs e)
         {
             // Заполняем информацию о версии, копирайте...
-            Text = String.Format("About {0}...", AssemblyTitle);
-            labelProductName.Text = AssemblyProduct + " OSE";
+            string AppProduct = AssemblyProduct;
+            Text = String.Format("About {0}...", AppProduct);
+            labelProductName.Text = AppProduct + " OSE";
             #if DEBUG
             labelProductName.Text += " DEBUG";
             #endif
