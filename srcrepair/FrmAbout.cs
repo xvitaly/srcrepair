@@ -113,7 +113,7 @@ namespace srcrepair
             // Заполняем информацию о версии, копирайте...
             string AppProduct = AssemblyProduct;
             Text = String.Format("About {0}...", AppProduct);
-            labelProductName.Text = AppProduct + " OSE";
+            labelProductName.Text = AppProduct;
             #if DEBUG
             labelProductName.Text += " DEBUG";
             #endif
