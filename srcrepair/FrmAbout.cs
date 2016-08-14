@@ -97,6 +97,9 @@ namespace srcrepair
         }
         #endregion
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку "OK".
+        /// </summary>
         private void okButton_Click(object sender, EventArgs e)
         {
             Close();
@@ -114,6 +117,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий создании формы.
+        /// </summary>
         private void frmAbout_Load(object sender, EventArgs e)
         {
             // Заполняем информацию о версии, копирайте...
