@@ -37,6 +37,9 @@ namespace srcrepair
 
         #region Assembly Attribute Accessors
 
+        /// <summary>
+        /// Возвращает название приложения (из ресурса сборки).
+        /// </summary>
         public string AssemblyTitle
         {
             get
@@ -54,6 +57,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Возвращает версию приложения (из ресурса сборки).
+        /// </summary>
         public string AssemblyVersion
         {
             get
@@ -62,6 +68,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Возвращает описание приложения (из ресурса сборки).
+        /// </summary>
         public string AssemblyDescription
         {
             get
@@ -75,6 +84,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Возвращает название продукта (из ресурса сборки).
+        /// </summary>
         public string AssemblyProduct
         {
             get
@@ -88,6 +100,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Возвращает копирайты приложения (из ресурса сборки).
+        /// </summary>
         public string AssemblyCopyright
         {
             get
@@ -101,6 +116,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Возвращает название компании-разработчика приложения (из ресурса сборки).
+        /// </summary>
         public string AssemblyCompany
         {
             get
