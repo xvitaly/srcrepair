@@ -57,23 +57,22 @@ namespace srcrepair
         private string SystemArch { get { return Environment.Is64BitOperatingSystem ? "Amd64" : "x86"; } }
 
         /// <summary>
-        /// Возвращает путь к пользовательскому каталогу SRC Repair.
+        /// Возвращает путь к пользовательскому каталогу программы.
         /// </summary>
-        public static string AppPath { get { return Properties.Settings.Default.IsPortable ? Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Properties.Resources.AppName); } }
-
+        public static string AppUserPath { get { return Properties.Settings.Default.IsPortable ? Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Properties.Resources.AppName); } }
+        
         /// <summary>
         /// Возвращает название продукта (из ресурса сборки).
         /// </summary>
         public static string AppProduct { get { object[] Attribs = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false); return Attribs.Length != 0 ? ((AssemblyProductAttribute)Attribs[0]).Product : String.Empty; } }
 
         /// <summary>
-        /// В этой переменной мы будем хранить полную информацию о версии
-        /// приложения для служебных целей.
+        /// Возвращает версию приложения ((из ресурса сборки).
         /// </summary>
         public static string AppVersion { get { return Assembly.GetExecutingAssembly().GetName().Version.ToString(); } }
 
         /// <summary>
-        /// Возвращает название компании-разработчика сборки.
+        /// Возвращает название компании-разработчика (из ресурса сборки).
         /// </summary>
         public static string AppCompany { get { object[] Attribs = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false); return Attribs.Length != 0 ? ((AssemblyCompanyAttribute)Attribs[0]).Company : String.Empty; } }
 
@@ -88,11 +87,10 @@ namespace srcrepair
         public CurrentApp()
         {
             // Получаем путь к каталогу приложения...
-            Assembly Assmbl = Assembly.GetEntryAssembly();
-            FullAppPath = Path.GetDirectoryName(Assmbl.Location);
+            FullAppPath = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
 
             // Укажем путь к пользовательским данным и создадим если не существует...
-            AppUserDir = Properties.Settings.Default.IsPortable ? Path.Combine(FullAppPath, "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Properties.Resources.AppName);
+            AppUserDir = AppUserPath;
 
             // Проверим существование каталога пользовательских данных и при необходимости создадим...
             if (!(Directory.Exists(AppUserDir)))
