@@ -34,20 +34,19 @@ namespace srcrepair
         public string UserAgent { get; private set; }
 
         /// <summary>
-        /// В этой переменной мы будем хранить полный путь к каталогу установленного
-        /// клиента Steam.
+        /// Хранит полный путь к каталогу установленного клиента Steam.
         /// </summary>
         public string FullSteamPath { get; set; }
 
         /// <summary>
-        /// В этой переменной будем хранить полный путь к каталогу с утилитой
-        /// SRCRepair для служебных целей.
+        /// Хранит полный путь к каталогу с утилитой SRCRepair для служебных
+        /// целей.
         /// </summary>
         public string FullAppPath { get; private set; }
 
         /// <summary>
-        /// В этой переменной будем хранить путь до каталога пользователя
-        /// программы. Используется для служебных целей.
+        /// Хранить путь до каталога пользователя программы. Используется
+        /// для служебных целей.
         /// </summary>
         public string AppUserDir { get; private set; }
 
