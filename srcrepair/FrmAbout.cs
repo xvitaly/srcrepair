@@ -35,40 +35,6 @@ namespace srcrepair
             InitializeComponent();
         }
 
-        #region Assembly Attribute Accessors
-
-        /// <summary>
-        /// Возвращает версию приложения (из ресурса сборки).
-        /// </summary>
-        private string AssemblyVersion
-        {
-            get
-            {
-                return Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            }
-        }
-
-        
-
-        
-
-        /// <summary>
-        /// Возвращает название компании-разработчика приложения (из ресурса сборки).
-        /// </summary>
-        private string AssemblyCompany
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyCompanyAttribute)attributes[0]).Company;
-            }
-        }
-        #endregion
-
         /// <summary>
         /// Метод, срабатывающий при нажатии на кнопку "OK".
         /// </summary>
@@ -83,15 +49,15 @@ namespace srcrepair
         private void frmAbout_Load(object sender, EventArgs e)
         {
             // Заполняем информацию о версии, копирайте...
-            string AppProduct = AssemblyProduct;
+            string AppProduct = CurrentApp.AppProduct;
             Text = String.Format("About {0}...", AppProduct);
             labelProductName.Text = AppProduct;
             #if DEBUG
             labelProductName.Text += " DEBUG";
             #endif
-            labelVersion.Text = String.Format("Version: {0}", AssemblyVersion);
-            labelCopyright.Text = AssemblyCopyright;
-            labelCompanyName.Text = AssemblyCompany;
+            labelVersion.Text = String.Format("Version: {0}", CurrentApp.AppVersion);
+            labelCopyright.Text = CurrentApp.AppCopyright;
+            labelCompanyName.Text = CurrentApp.AppCompany;
 
             // Проверяем систему на НГ (диапазон от 20.12.XXXX до 10.1.XXXX+1)...
             DateTime XDate = DateTime.Now; // Получаем текущую дату...
