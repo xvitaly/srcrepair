@@ -78,6 +78,11 @@ namespace srcrepair
         public static string AppCompany { get { object[] Attribs = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false); return Attribs.Length != 0 ? ((AssemblyCompanyAttribute)Attribs[0]).Company : String.Empty; } }
 
         /// <summary>
+        /// Возвращает копирайты приложения (из ресурса сборки).
+        /// </summary>
+        public static string AppCopyright { get { object[] Attribs = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false); return Attribs.Length != 0 ? ((AssemblyCopyrightAttribute)Attribs[0]).Copyright : String.Empty; } }
+
+        /// <summary>
         /// Конструктор класса. Получает информацию для рантайма.
         /// </summary>
         public CurrentApp()
