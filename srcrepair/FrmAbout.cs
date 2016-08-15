@@ -48,21 +48,7 @@ namespace srcrepair
             }
         }
 
-        /// <summary>
-        /// Возвращает название продукта (из ресурса сборки).
-        /// </summary>
-        private string AssemblyProduct
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyProductAttribute)attributes[0]).Product;
-            }
-        }
+        
 
         /// <summary>
         /// Возвращает копирайты приложения (из ресурса сборки).
