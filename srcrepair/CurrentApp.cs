@@ -52,12 +52,6 @@ namespace srcrepair
         public string AppUserDir { get; private set; }
 
         /// <summary>
-        /// В этой переменной мы будем хранить полную информацию о версии
-        /// приложения для служебных целей.
-        /// </summary>
-        public string AppVersionInfo { get; private set; }
-
-        /// <summary>
         /// Возвращает архитектуру операционной системы.
         /// </summary>
         private string SystemArch { get { return Environment.Is64BitOperatingSystem ? "Amd64" : "x86"; } }
@@ -71,6 +65,12 @@ namespace srcrepair
         /// Возвращает название продукта (из ресурса сборки).
         /// </summary>
         public static string AppProduct { get { object[] Attribs = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false); return Attribs.Length != 0 ? ((AssemblyProductAttribute)Attribs[0]).Product : String.Empty; } }
+
+        /// <summary>
+        /// В этой переменной мы будем хранить полную информацию о версии
+        /// приложения для служебных целей.
+        /// </summary>
+        public static string AppVersion { get { return Assembly.GetExecutingAssembly().GetName().Version.ToString(); } }
 
         /// <summary>
         /// Возвращает название компании-разработчика сборки.
@@ -100,11 +100,8 @@ namespace srcrepair
                 Directory.CreateDirectory(AppUserDir);
             }
 
-            // Получаем информацию о версии нашего приложения...
-            AppVersionInfo = Assmbl.GetName().Version.ToString();
-
             // Генерируем User-Agent для SRC Repair...
-            UserAgent = String.Format(Properties.Resources.AppDefUA, Properties.Resources.PlatformFriendlyName, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersionInfo, Properties.Resources.AppName, SystemArch);
+            UserAgent = String.Format(Properties.Resources.AppDefUA, Properties.Resources.PlatformFriendlyName, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersion, Properties.Resources.AppName, SystemArch);
         }
     }
 }
