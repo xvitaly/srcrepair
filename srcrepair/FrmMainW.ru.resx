@@ -122,7 +122,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACC
-        DwAAAk1TRnQBSQFMAgEBBgEAAWgBAAFoAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DwAAAk1TRnQBSQFMAgEBBgEAAXgBAAF4AQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -925,67 +925,67 @@
     <value>&amp;Инструменты</value>
   </data>
   <data name="MNUHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 22</value>
+    <value>300, 22</value>
   </data>
   <data name="MNUHelp.Text" xml:space="preserve">
     <value>Справоч&amp;ная система SRC Repair</value>
   </data>
   <data name="MNUUpdateCheck.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 22</value>
+    <value>300, 22</value>
   </data>
   <data name="MNUUpdateCheck.Text" xml:space="preserve">
     <value>Пров&amp;ерить наличие обновлений...</value>
   </data>
   <data name="MNUSep5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>303, 6</value>
+    <value>297, 6</value>
   </data>
   <data name="MNUReportBug.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 22</value>
+    <value>300, 22</value>
   </data>
   <data name="MNUReportBug.Text" xml:space="preserve">
     <value>Сооб&amp;щить об ошибке в программе</value>
   </data>
   <data name="MNUShowLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 22</value>
+    <value>300, 22</value>
   </data>
   <data name="MNUShowLog.Text" xml:space="preserve">
     <value>&amp;Показать отладочный журнал</value>
   </data>
   <data name="MNUOpinion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 22</value>
+    <value>300, 22</value>
   </data>
   <data name="MNUOpinion.Text" xml:space="preserve">
     <value>В&amp;ысказать мнение о программе авторам</value>
   </data>
   <data name="MNUSep3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>303, 6</value>
+    <value>297, 6</value>
   </data>
   <data name="MNUSupportChat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 22</value>
+    <value>300, 22</value>
   </data>
   <data name="MNUSupportChat.Text" xml:space="preserve">
-    <value>Кана&amp;л поддержки в Telegram</value>
+    <value>Официальный кана&amp;л в Telegram</value>
   </data>
   <data name="MNUSteamGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 22</value>
+    <value>300, 22</value>
   </data>
   <data name="MNUSteamGroup.Text" xml:space="preserve">
-    <value>Офи&amp;циальная группа программы в Steam</value>
+    <value>Офи&amp;циальная группа в Steam</value>
   </data>
   <data name="MNUSep4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>303, 6</value>
+    <value>297, 6</value>
   </data>
   <data name="MNULnkEasyCoding.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 22</value>
+    <value>300, 22</value>
   </data>
   <data name="MNULnkTFRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 22</value>
+    <value>300, 22</value>
   </data>
   <data name="MNUSep7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>303, 6</value>
+    <value>297, 6</value>
   </data>
   <data name="MNUAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 22</value>
+    <value>300, 22</value>
   </data>
   <data name="MNUAbout.Text" xml:space="preserve">
     <value>&amp;О программе</value>
