@@ -546,23 +546,16 @@ namespace srcrepair
         /// </summary>
         private string GetPathByMEnter()
         {
-            string Result = null;
-            FldrBrwse.Description = AppStrings.SteamPathEnterText; // Указываем текст в диалоге поиска каталога...
-            if (FldrBrwse.ShowDialog() == DialogResult.OK) // Отображаем стандартный диалог поиска каталога...
-            {
-                if (!(File.Exists(Path.Combine(FldrBrwse.SelectedPath, Properties.Resources.SteamExecBin))))
-                {
-                    throw new FileNotFoundException("Invalid Steam directory entered by user", Path.Combine(FldrBrwse.SelectedPath, Properties.Resources.SteamExecBin));
-                }
-                else
-                {
-                    Result = FldrBrwse.SelectedPath;
-                }
-            }
-            else
-            {
-                throw new OperationCanceledException("User closed opendir window");
-            }
+            // Задаём начальное значение...
+            string Result = String.Empty;
+            
+            // Указываем текст в диалоге поиска каталога...
+            FldrBrwse.Description = AppStrings.SteamPathEnterText;
+
+            // Отображаем стандартный диалог поиска каталога...
+            if (FldrBrwse.ShowDialog() == DialogResult.OK) { if (!(File.Exists(Path.Combine(FldrBrwse.SelectedPath, Properties.Resources.SteamExecBin)))) { throw new FileNotFoundException("Invalid Steam directory entered by user", Path.Combine(FldrBrwse.SelectedPath, Properties.Resources.SteamExecBin)); } else { Result = FldrBrwse.SelectedPath; } } else { throw new OperationCanceledException("User closed opendir window"); }
+
+            // Возвращаем результат...
             return Result;
         }
 
