@@ -56,12 +56,18 @@ namespace srcrepair
             DestDir = D;
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при возникновении события "загрузка формы".
+        /// </summary>
         private void FrmArchWrk_Load(object sender, EventArgs e)
         {
             // Начинаем процесс распаковки асинхронно...
             if (!AR_Wrk.IsBusy) { AR_Wrk.RunWorkerAsync(); }
         }
 
+        /// <summary>
+        /// Метод, работающий в отдельном потоке при запуске механизма распаковки.
+        /// </summary>
         private void AR_Wrk_DoWork(object sender, DoWorkEventArgs e)
         {
             // Начинаем процесс распаковки с выводом индикатора прогресса...
@@ -86,12 +92,19 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Метод, информирующий основную форму о прогрессе распаковки файлов, который
+        /// выполняется в отдельном потоке.
+        /// </summary>
         private void AR_Wrk_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             // Отображаем прогресс распаковки архива в баре...
             AR_PrgBr.Value = e.ProgressPercentage;
         }
 
+        /// <summary>
+        /// Метод, срабатывающий по окончании работы механизма распаковки в отдельном потоке.
+        /// </summary>
         private void AR_Wrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             // Работа завершена. Закроем форму...
@@ -100,6 +113,9 @@ namespace srcrepair
             this.Close();
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при попытке закрытия формы.
+        /// </summary>
         private void FrmArchWrk_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Блокируем возможность закрытия формы при работающем процессе...
