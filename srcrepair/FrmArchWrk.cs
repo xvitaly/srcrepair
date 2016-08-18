@@ -29,8 +29,19 @@ namespace srcrepair
     /// </summary>
     public partial class FrmArchWrk : Form
     {
+        /// <summary>
+        /// Хранит статус выполнения процесса распаковки.
+        /// </summary>
         private bool IsRunning = true;
+
+        /// <summary>
+        /// Хранит имя архива, который мы распаковываем.
+        /// </summary>
         private string ArchName;
+
+        /// <summary>
+        /// Хранит каталог назначения.
+        /// </summary>
         private string DestDir;
 
         /// <summary>
