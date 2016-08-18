@@ -47,6 +47,8 @@ namespace srcrepair
         /// <summary>
         /// Конструктор класса формы модуля распаковки файлов из архивов.
         /// </summary>
+        /// <param name="A">Архив для распаковки</param>
+        /// <param name="D">Каталог назначения</param>
         public FrmArchWrk(string A, string D)
         {
             InitializeComponent();
