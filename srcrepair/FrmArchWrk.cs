@@ -24,12 +24,18 @@ using Ionic.Zip;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс формы модуля распаковки файлов из архивов.
+    /// </summary>
     public partial class FrmArchWrk : Form
     {
         private bool IsRunning = true;
         private string ArchName;
         private string DestDir;
-        
+
+        /// <summary>
+        /// Конструктор класса формы модуля распаковки файлов из архивов.
+        /// </summary>
         public FrmArchWrk(string A, string D)
         {
             InitializeComponent();
