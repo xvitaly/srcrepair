@@ -56,18 +56,28 @@ namespace srcrepair
             LocalFile = L;
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при возникновении события "загрузка формы".
+        /// </summary>
         private void frmDnWrk_Load(object sender, EventArgs e)
         {
             // Начинаем процесс загрузки в отдельном потоке...
             DownloaderStart(RemoteURI, LocalFile);
         }
 
+        /// <summary>
+        /// Метод, информирующий основную форму о прогрессе загрузки файлов, который
+        /// выполняется в отдельном потоке.
+        /// </summary>
         private void DownloaderProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
             // Отрисовываем статус в прогресс-баре...
             try { DN_PrgBr.Value = e.ProgressPercentage; } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий по окончании работы механизма загрузки в отдельном потоке.
+        /// </summary>
         private void DownloaderCompleted(object sender, AsyncCompletedEventArgs e)
         {
             // Загрузка завершена. Проверим скачалось ли что-то. Если нет, удалим пустой файл...
@@ -89,6 +99,9 @@ namespace srcrepair
             Close();
         }
 
+        /// <summary>
+        /// Метод, инициирущий процесс загрузки файла из Интернета.
+        /// </summary>
         private void DownloaderStart(string URI, string FileName)
         {
             try
@@ -108,6 +121,9 @@ namespace srcrepair
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при попытке закрытия формы.
+        /// </summary>
         private void frmDnWrk_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = IsRunning;
