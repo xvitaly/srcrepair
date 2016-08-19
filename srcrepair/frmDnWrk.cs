@@ -47,6 +47,8 @@ namespace srcrepair
         /// <summary>
         /// Конструктор класса формы модуля загрузки файлов из Интернета.
         /// </summary>
+        /// <param name="R">URL файла загрузки</param>
+        /// <param name="L">Путь сохранения файла</param>
         public frmDnWrk(string R, string L)
         {
             InitializeComponent();
