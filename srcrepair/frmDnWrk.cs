@@ -29,8 +29,19 @@ namespace srcrepair
     /// </summary>
     public partial class frmDnWrk : Form
     {
+        /// <summary>
+        /// Хранит статус выполнения процесса загрузки.
+        /// </summary>
         private bool IsRunning = true;
+
+        /// <summary>
+        /// Хранит URL файла, который нужно загрузить.
+        /// </summary>
         private string RemoteURI;
+
+        /// <summary>
+        /// Хранит путь к локальному файлу, куда нужно сохранить результат.
+        /// </summary>
         private string LocalFile;
 
         /// <summary>
