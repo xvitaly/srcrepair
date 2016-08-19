@@ -24,12 +24,18 @@ using System.IO;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс формы модуля загрузки файлов из Интернета.
+    /// </summary>
     public partial class frmDnWrk : Form
     {
         private bool IsRunning = true;
         private string RemoteURI;
         private string LocalFile;
 
+        /// <summary>
+        /// Конструктор класса формы модуля загрузки файлов из Интернета.
+        /// </summary>
         public frmDnWrk(string R, string L)
         {
             InitializeComponent();
