@@ -30,6 +30,9 @@ namespace srcrepair
         /// <summary>
         /// Конструктор класса формы модуля распаковки файлов из архивов.
         /// </summary>
+        /// <param name="F">Путь к каталогу игры</param>
+        /// <param name="I">Использует ли игра кастомный каталог</param>
+        /// <param name="U">Имя кастомного каталога</param>
         public frmInstaller(string F, bool I, string U)
         {
             InitializeComponent();
