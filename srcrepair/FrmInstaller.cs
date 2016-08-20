@@ -1,5 +1,5 @@
 ﻿/*
- * Модуль "Установщик спреев, демок и конфигов" программы SRC Repair.
+ * Модуль быстрой установки программы SRC Repair.
  * 
  * Copyright 2011 - 2016 EasyCoding Team (ECTeam).
  * Copyright 2005 - 2016 EasyCoding Team.
