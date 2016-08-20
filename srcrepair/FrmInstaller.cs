@@ -38,9 +38,24 @@ namespace srcrepair
             CustomInstallDir = U;
         }
 
+        /// <summary>
+        /// Хранит название плагина для служебных целей.
+        /// </summary>
         private const string PluginName = "Quick Installer";
+
+        /// <summary>
+        /// Хранит полный путь к каталогу игры.
+        /// </summary>
         private string FullGamePath;
+
+        /// <summary>
+        /// Использует ли игра особый кастомный каталог.
+        /// </summary>
         private bool IsUsingUserDir;
+
+        /// <summary>
+        /// Хранит путь к каталогу кастомных файлов.
+        /// </summary>
         private string CustomInstallDir;
 
         /// <summary>
