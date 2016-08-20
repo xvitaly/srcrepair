@@ -27,6 +27,9 @@ namespace srcrepair
     /// </summary>
     public partial class frmInstaller : Form
     {
+        /// <summary>
+        /// Конструктор класса формы модуля распаковки файлов из архивов.
+        /// </summary>
         public frmInstaller(string F, bool I, string U)
         {
             InitializeComponent();
