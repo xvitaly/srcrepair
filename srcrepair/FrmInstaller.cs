@@ -57,7 +57,7 @@ namespace srcrepair
         private bool IsUsingUserDir;
 
         /// <summary>
-        /// Хранит путь к каталогу кастомных файлов.
+        /// Хранит название директории внутри кастомного каталога.
         /// </summary>
         private string CustomInstallDir;
 
