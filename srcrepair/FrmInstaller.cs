@@ -132,7 +132,10 @@ namespace srcrepair
             // Копируем VMT-файл если задано...
             if (UseVMT) { File.Copy(VMTFile, VMTFileDest, true); }
         }
-        
+
+        /// <summary>
+        /// Метод, срабатывающий при нажатии кнопки открытия файла.
+        /// </summary>
         private void btnBrowse_Click(object sender, EventArgs e)
         {
             // Открываем диалоговое окно выбора файла и записываем путь в Edit...
@@ -142,6 +145,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии кнопки, запускающей установку.
+        /// </summary>
         private void btnInstall_Click(object sender, EventArgs e)
         {
             // А здесь собственно установка...
