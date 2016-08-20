@@ -22,6 +22,9 @@ using System.IO;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс формы модуля быстрой установки.
+    /// </summary>
     public partial class frmInstaller : Form
     {
         public frmInstaller(string F, bool I, string U)
