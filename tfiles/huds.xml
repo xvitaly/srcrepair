@@ -160,7 +160,7 @@
     <Name>E.V.E. HUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/evehud/evehud_6350362e.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/evehud/evehud_8c9ede50.zip</URI>
     <UpURI>http://files.gamebanana.com/guis/eve_hud_v401.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/evehud.png</Preview>
     <RepoPath>null</RepoPath>
@@ -290,7 +290,7 @@
     <Name>DoggyHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/doggyhud/doggyhud_73fde877.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/doggyhud/doggyhud_e773c42f.zip</URI>
     <UpURI>http://huds.tf/forum/xthreads_attach.php/151_1468069037_c96274f0/2e863cebac5b6ff6c2c39aa2b42fdf99/DoggyHudV2.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/doggyhud.png</Preview>
     <RepoPath>null</RepoPath>
