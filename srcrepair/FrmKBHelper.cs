@@ -77,6 +77,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии кнопки отключения обеих клавиш WIN.
+        /// </summary>
         private void Dis_BWIN_Click(object sender, EventArgs e)
         {
             // Отключаем обе клавиши WIN...
