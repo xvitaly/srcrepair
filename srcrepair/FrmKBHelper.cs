@@ -143,6 +143,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии кнопки отмены произведённых изменений.
+        /// </summary>
         private void Dis_Restore_Click(object sender, EventArgs e)
         {
             // Восстанавливаем настройки по умолчанию...
