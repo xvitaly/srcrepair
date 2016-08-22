@@ -55,6 +55,9 @@ namespace srcrepair
             ResKey.Close();
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии кнопки отключения левой клавиши WIN.
+        /// </summary>
         private void Dis_LWIN_Click(object sender, EventArgs e)
         {
             // Отключаем левую клавишу WIN...
