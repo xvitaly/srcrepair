@@ -99,6 +99,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии кнопки отключения правой клавиши WIN и CONTEXT.
+        /// </summary>
         private void Dis_RWinMnu_Click(object sender, EventArgs e)
         {
             // Отключаем правую клавишу WIN и MENU...
