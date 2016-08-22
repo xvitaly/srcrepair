@@ -35,6 +35,9 @@ namespace srcrepair
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Записывает массив байт в реестр.
+        /// </summary>
         private void WriteKBS(byte[] Value)
         {
             RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Control\Keyboard Layout", true);
@@ -42,6 +45,9 @@ namespace srcrepair
             ResKey.Close();
         }
 
+        /// <summary>
+        /// Удаляет указанное значение из реестра.
+        /// </summary>
         private void DeleteKBS(string Value)
         {
             RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Control\Keyboard Layout", true);
