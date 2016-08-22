@@ -22,6 +22,9 @@ using Microsoft.Win32;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс формы модуля отключения системных клавиш.
+    /// </summary>
     public partial class frmKBHelper : Form
     {
         public frmKBHelper()
