@@ -121,6 +121,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии кнопки отключения обеих клавиш WIN и CONTEXT.
+        /// </summary>
         private void Dis_BWinMnu_Click(object sender, EventArgs e)
         {
             // Отключаем обе WIN и MENU...
