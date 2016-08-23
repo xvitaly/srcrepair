@@ -42,12 +42,20 @@ namespace srcrepair
             LogFileName = LogFile;
         }
 
+        /// <summary>
+        /// Непосредственно загружает содержимое текстового файла в TextBox на форме.
+        /// </summary>
+        /// <param name="FileName">Путь к текстовому файлу</param>
         private void LoadTextFile(string FileName)
         {
             LV_LogArea.Clear();
             LV_LogArea.AppendText(File.ReadAllText(FileName));
         }
 
+        /// <summary>
+        /// Загружает содержимое журнала в TextBox на форме.
+        /// </summary>
+        /// <param name="FileName">Путь к файлу журнала</param>
         private void LoadLog(string FileName)
         {
             try { LoadTextFile(FileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.LV_LoadFailed, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
