@@ -27,6 +27,9 @@ namespace srcrepair
     /// </summary>
     public partial class frmLogView : Form
     {
+        /// <summary>
+        /// Хранит путь к файлу журнала.
+        /// </summary>
         private string LogFileName;
         public frmLogView(string LogFile)
         {
