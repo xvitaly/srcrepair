@@ -31,6 +31,11 @@ namespace srcrepair
         /// Хранит путь к файлу журнала.
         /// </summary>
         private string LogFileName;
+
+        /// <summary>
+        /// Конструктор класса формы модуля просмотра журналов.
+        /// </summary>
+        /// <param name="LogFile">Путь к файлу журнала</param>
         public frmLogView(string LogFile)
         {
             InitializeComponent();
