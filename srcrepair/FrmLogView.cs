@@ -22,6 +22,9 @@ using System.IO;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс формы модуля просмотра журналов.
+    /// </summary>
     public partial class frmLogView : Form
     {
         private string LogFileName;
