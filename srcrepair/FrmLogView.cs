@@ -61,30 +61,45 @@ namespace srcrepair
             try { LoadTextFile(FileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.LV_LoadFailed, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при возникновении события "загрузка формы".
+        /// </summary>
         private void frmLogView_Load(object sender, EventArgs e)
         {
             // Считаем содержимое выбранного файла...
             LoadLog(LogFileName);
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку "Перечитать файл".
+        /// </summary>
         private void LV_MenuFileReload_Click(object sender, EventArgs e)
         {
             // Перечитаем содержимое журнала...
             LoadLog(LogFileName);
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку выхода.
+        /// </summary>
         private void LV_MenuFileExit_Click(object sender, EventArgs e)
         {
             // Закроем модуль...
             Close();
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку "О модуле".
+        /// </summary>
         private void LV_MenuHelpAbout_Click(object sender, EventArgs e)
         {
             // Выводим сообщение с краткой информацией о плагине...
             MessageBox.Show(String.Format(AppStrings.AppPluginAboutDlg, Text, CurrentApp.AppCompany), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку "Очистить журнал".
+        /// </summary>
         private void LV_MunuFileClearLog_Click(object sender, EventArgs e)
         {
             // Очистим форму...
