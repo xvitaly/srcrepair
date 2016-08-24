@@ -26,6 +26,9 @@ using System.Net;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс формы модуля Micro Hosts Editor.
+    /// </summary>
     public partial class frmHEd : Form
     {
         public frmHEd()
