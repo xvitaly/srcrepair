@@ -121,7 +121,10 @@ namespace srcrepair
                 }
             }
         }
-        
+
+        /// <summary>
+        /// Метод, срабатывающий при возникновении события "загрузка формы".
+        /// </summary>
         private void frmHEd_Load(object sender, EventArgs e)
         {
             // Проверим наличие прав администратора. Если они отсутствуют - отключим функции сохранения...
@@ -149,21 +152,33 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку "Обновить".
+        /// </summary>
         private void HEd_T_Refresh_Click(object sender, EventArgs e)
         {
             try { ReadHostsToTable(HostsFilePath); } catch (Exception Ex) { CoreLib.HandleExceptionEx(String.Format(AppStrings.AHE_ExceptionDetected, HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку "Сохранить".
+        /// </summary>
         private void HEd_T_Save_Click(object sender, EventArgs e)
         {
             if (CoreLib.IsCurrentUserAdmin()) { try { WriteTableToHosts(HostsFilePath); MessageBox.Show(AppStrings.AHE_Saved, PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch (Exception Ex) { CoreLib.HandleExceptionEx(String.Format(AppStrings.AHE_SaveException, HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); } } else { MessageBox.Show(String.Format(AppStrings.AHE_NoAdminRights, HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку "Выход".
+        /// </summary>
         private void HEd_M_Quit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку "Восстановить стандартные значения".
+        /// </summary>
         private void HEd_M_RestDef_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(AppStrings.AHE_RestDef, PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
@@ -174,31 +189,50 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку "Показать справку".
+        /// </summary>
         private void HEd_M_OnlHelp_Click(object sender, EventArgs e)
         {
             CoreLib.OpenWebPage(Properties.Resources.AHE_HelpURL);
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку "О программе".
+        /// </summary>
         private void HEd_M_About_Click(object sender, EventArgs e)
         {
             MessageBox.Show(String.Format(Properties.Resources.AHE_About, PluginName, Properties.Resources.AppName, CurrentApp.AppCompany, PluginVersion), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку "Удалить строку".
+        /// </summary>
         private void HEd_T_RemRw_Click(object sender, EventArgs e)
         {
             try { if (HEd_Table.Rows.Count > 0) { HEd_Table.Rows.Remove(HEd_Table.CurrentRow); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при прохождении курсора мыши над строкой состояния.
+        /// </summary>
         private void HEd_St_Wrn_MouseEnter(object sender, EventArgs e)
         {
             HEd_St_Wrn.ForeColor = Color.Red;
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при уходе курсора мыши со строки состояния.
+        /// </summary>
         private void HEd_St_Wrn_MouseLeave(object sender, EventArgs e)
         {
             HEd_St_Wrn.ForeColor = Color.Black;
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии левой кнопкой мыши по тексту
+        /// строки состояния.
+        /// </summary>
         private void HEd_St_Wrn_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(String.Format(AppStrings.AHE_HMessg, HostsFilePath), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
@@ -207,6 +241,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку "Вырезать".
+        /// </summary>
         private void HEd_T_Cut_Click(object sender, EventArgs e)
         {
             try
@@ -220,6 +257,9 @@ namespace srcrepair
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку "Копировать".
+        /// </summary>
         private void HEd_T_Copy_Click(object sender, EventArgs e)
         {
             try
@@ -232,11 +272,17 @@ namespace srcrepair
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку "Вставить".
+        /// </summary>
         private void HEd_T_Paste_Click(object sender, EventArgs e)
         {
             try { if (Clipboard.ContainsText()) { HEd_Table.Rows[HEd_Table.CurrentRow.Index].Cells[HEd_Table.CurrentCell.ColumnIndex].Value = Clipboard.GetText(); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку "Открыть в Блокноте".
+        /// </summary>
         private void HEd_M_Notepad_Click(object sender, EventArgs e)
         {
             try { Process.Start(Properties.Settings.Default.EditorBin, String.Format("\"{0}\"", HostsFilePath)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
