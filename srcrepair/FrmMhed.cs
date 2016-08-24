@@ -40,7 +40,14 @@ namespace srcrepair
         }
 
         #region IC
+        /// <summary>
+        /// Хранит название модуля для служебных целей.
+        /// </summary>
         private const string PluginName = "Micro Hosts Editor";
+
+        /// <summary>
+        /// Хранит версию модуля для служебных целей.
+        /// </summary>
         private const string PluginVersion = "0.6";
         #endregion
 
