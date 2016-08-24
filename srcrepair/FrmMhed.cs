@@ -52,6 +52,9 @@ namespace srcrepair
         #endregion
 
         #region IV
+        /// <summary>
+        /// Хранит путь к файлу Hosts.
+        /// </summary>
         private string HostsFilePath = String.Empty;
         #endregion
 
