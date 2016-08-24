@@ -31,6 +31,9 @@ namespace srcrepair
     /// </summary>
     public partial class frmHEd : Form
     {
+        /// <summary>
+        /// Конструктор класса формы модуля Micro Hosts Editor.
+        /// </summary>
         public frmHEd()
         {
             InitializeComponent();
