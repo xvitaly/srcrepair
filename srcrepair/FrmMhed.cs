@@ -62,6 +62,7 @@ namespace srcrepair
         /// <summary>
         /// Загружаеи содержимое файла Hosts в редактор на форме.
         /// </summary>
+        /// <param name="FilePath">Путь к файлу Hosts</param>
         private void ReadHostsToTable(string FilePath)
         {
             // Очистим таблицу...
@@ -101,6 +102,7 @@ namespace srcrepair
         /// <summary>
         /// Сохраняет содержимое редактора на форме в файл Hosts.
         /// </summary>
+        /// <param name="Path">Путь к файлу Hosts</param>
         private void WriteTableToHosts(string Path)
         {
             using (StreamWriter CFile = new StreamWriter(Path, false, Encoding.Default))
