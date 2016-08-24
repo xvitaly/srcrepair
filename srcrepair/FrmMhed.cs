@@ -59,6 +59,9 @@ namespace srcrepair
         #endregion
 
         #region IM
+        /// <summary>
+        /// Загружаеи содержимое файла Hosts в редактор на форме.
+        /// </summary>
         private void ReadHostsToTable(string FilePath)
         {
             // Очистим таблицу...
@@ -95,6 +98,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Сохраняет содержимое редактора на форме в файл Hosts.
+        /// </summary>
         private void WriteTableToHosts(string Path)
         {
             using (StreamWriter CFile = new StreamWriter(Path, false, Encoding.Default))
