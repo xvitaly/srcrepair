@@ -36,6 +36,9 @@ namespace srcrepair
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при возникновении события "загрузка формы".
+        /// </summary>
         private void frmOptions_Load(object sender, EventArgs e)
         {
             // Считаем текущие настройки...
@@ -55,6 +58,9 @@ namespace srcrepair
             Text = String.Format(Text, Properties.Resources.AppName);
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку "OK".
+        /// </summary>
         private void MO_Okay_Click(object sender, EventArgs e)
         {
             // Сохраняем настройки для текущего сеанса...
@@ -80,12 +86,19 @@ namespace srcrepair
             Close();
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку "Отмена".
+        /// </summary>
         private void MO_Cancel_Click(object sender, EventArgs e)
         {
             // Закрываем форму без сохранения изменений...
             Close();
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку поиска приложения
+        /// для открытия текстовых файлов.
+        /// </summary>
         private void MO_FindTextEd_Click(object sender, EventArgs e)
         {
             if (MO_SearchBin.ShowDialog() == DialogResult.OK)
@@ -94,6 +107,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку поиска шелла.
+        /// </summary>
         private void MO_FindShBin_Click(object sender, EventArgs e)
         {
             if (MO_SearchBin.ShowDialog() == DialogResult.OK)
@@ -102,6 +118,10 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при начале ввода текста в поле кастомного
+        /// названия каталога.
+        /// </summary>
         private void MO_CustDirName_TextChanged(object sender, EventArgs e)
         {
             ((TextBox)sender).BackColor = Regex.IsMatch(((TextBox)sender).Text, Properties.Resources.MO_CustomDirRegex) ? SystemColors.Window : Color.FromArgb(255, 155, 95);
