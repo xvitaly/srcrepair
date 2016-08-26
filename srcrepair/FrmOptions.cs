@@ -23,6 +23,9 @@ using System.Text.RegularExpressions;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс формы модуля настроек программы.
+    /// </summary>
     public partial class frmOptions : Form
     {
         public frmOptions()
