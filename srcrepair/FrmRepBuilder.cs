@@ -25,6 +25,9 @@ using Ionic.Zip;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс формы модуля создания отчётов для техподдержки.
+    /// </summary>
     public partial class frmRepBuilder : Form
     {
         public frmRepBuilder(string A, string FS, string FC)
