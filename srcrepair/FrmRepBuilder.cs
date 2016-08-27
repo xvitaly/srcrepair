@@ -45,9 +45,25 @@ namespace srcrepair
         /// Хранит название модуля для внутренних целей.
         /// </summary>
         private const string PluginName = "Report Builder";
+
+        /// <summary>
+        /// Хранит статус выполнения процесса создания отчёта.
+        /// </summary>
         private bool IsCompleted = false;
+
+        /// <summary>
+        /// Хранит путь к пользовательскому каталогу приложения.
+        /// </summary>
         private string AppUserDir;
+
+        /// <summary>
+        /// Хранит путь к каталогу установки клиента Steam.
+        /// </summary>
         private string FullSteamPath;
+
+        /// <summary>
+        /// Хранит путь к каталогу с конфигами управляемой игры.
+        /// </summary>
         private string FullCfgPath;
 
         private void frmRepBuilder_Load(object sender, EventArgs e)
