@@ -66,11 +66,18 @@ namespace srcrepair
         /// </summary>
         private string FullCfgPath;
 
+        /// <summary>
+        /// Метод, срабатывающий при возникновении события "загрузка формы".
+        /// </summary>
         private void frmRepBuilder_Load(object sender, EventArgs e)
         {
             // Событие создания формы...
         }
 
+        /// <summary>
+        /// Метод, работающий в отдельном потоке при запуске механизма создания
+        /// отчёта.
+        /// </summary>
         private void BwGen_DoWork(object sender, DoWorkEventArgs e)
         {
             // Сгенерируем путь для каталога с рапортами...
@@ -180,6 +187,10 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий по окончании работы механизма создания отчёта
+        /// в отдельном потоке.
+        /// </summary>
         private void BwGen_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             // Меняем текст на кнопке...
@@ -193,6 +204,9 @@ namespace srcrepair
             IsCompleted = true;
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку "Создать/Закрыть".
+        /// </summary>
         private void GenerateNow_Click(object sender, EventArgs e)
         {
             // Проверим необходим ли нам запуск очистки или закрытие формы...
@@ -213,6 +227,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при попытке закрытия формы.
+        /// </summary>
         private void frmRepBuilder_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Блокируем возможность закрытия формы во время работы модуля...
