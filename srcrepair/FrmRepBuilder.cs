@@ -33,6 +33,9 @@ namespace srcrepair
         /// <summary>
         /// Конструктор класса формы модуля создания отчётов для техподдержки.
         /// </summary>
+        /// <param name="A">Путь к каталогу пользователя</param>
+        /// <param name="FS">Путь к каталогу установки Steam</param>
+        /// <param name="FC">Путь к каталогу к конфигами игры</param>
         public frmRepBuilder(string A, string FS, string FC)
         {
             InitializeComponent();
