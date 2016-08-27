@@ -30,6 +30,9 @@ namespace srcrepair
     /// </summary>
     public partial class frmRepBuilder : Form
     {
+        /// <summary>
+        /// Конструктор класса формы модуля создания отчётов для техподдержки.
+        /// </summary>
         public frmRepBuilder(string A, string FS, string FC)
         {
             InitializeComponent();
