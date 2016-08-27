@@ -41,6 +41,9 @@ namespace srcrepair
             FullCfgPath = FC;
         }
 
+        /// <summary>
+        /// Хранит название модуля для внутренних целей.
+        /// </summary>
         private const string PluginName = "Report Builder";
         private bool IsCompleted = false;
         private string AppUserDir;
