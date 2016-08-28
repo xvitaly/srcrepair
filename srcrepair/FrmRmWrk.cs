@@ -100,12 +100,18 @@ namespace srcrepair
             return Result;
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при возникновении события "загрузка формы".
+        /// </summary>
         private void FrmRmWrk_Load(object sender, EventArgs e)
         {
             // Запускаем удаление асинхронно...
             if (!RW_Wrk.IsBusy) { RW_Wrk.RunWorkerAsync(); }
         }
 
+        /// <summary>
+        /// Метод, работающий в отдельном потоке при запуске механизма поиска и удаления.
+        /// </summary>
         private void RW_Wrk_DoWork(object sender, DoWorkEventArgs e)
         {
             // Создаём список файлов для удаления...
@@ -127,12 +133,20 @@ namespace srcrepair
 
         }
 
+        /// <summary>
+        /// Метод, информирующий основную форму о прогрессе удаления файлов, который
+        /// выполняется в отдельном потоке.
+        /// </summary>
         private void RW_Wrk_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             // Отображаем прогресс удаления файлов...
             RW_PrgBr.Value = e.ProgressPercentage;
         }
 
+        /// <summary>
+        /// Метод, срабатывающий по окончании работы механизма удаления файлов
+        /// в отдельном потоке.
+        /// </summary>
         private void RW_Wrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             // Удаление завершено. Закроем форму...
@@ -141,6 +155,9 @@ namespace srcrepair
             Close();
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при попытке закрытия формы.
+        /// </summary>
         private void FrmRmWrk_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Блокируем возможность закрытия формы при работающем процессе...
