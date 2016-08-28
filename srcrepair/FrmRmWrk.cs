@@ -29,7 +29,14 @@ namespace srcrepair
     /// </summary>
     public partial class FrmRmWrk : Form
     {
+        /// <summary>
+        /// Хранит статус выполнения процесса очистки.
+        /// </summary>
         private bool IsRunning = true;
+
+        /// <summary>
+        /// Хранит список каталогов для очистки.
+        /// </summary>
         private List<String> RemDirs;
 
         /// <summary>
