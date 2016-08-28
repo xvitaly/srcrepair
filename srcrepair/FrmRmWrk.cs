@@ -24,6 +24,9 @@ using System.IO;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс формы модуля быстрой очистки.
+    /// </summary>
     public partial class FrmRmWrk : Form
     {
         private bool IsRunning = true;
