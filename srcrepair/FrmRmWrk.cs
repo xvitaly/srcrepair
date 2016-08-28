@@ -42,6 +42,7 @@ namespace srcrepair
         /// <summary>
         /// Конструктор класса формы модуля быстрой очистки.
         /// </summary>
+        /// <param name="SL">Список каталогов для очистки</param>
         public FrmRmWrk(List<String> SL)
         {
             InitializeComponent();
