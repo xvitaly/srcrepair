@@ -48,6 +48,11 @@ namespace srcrepair
             RemDirs = SL;
         }
 
+        /// <summary>
+        /// Генерирует список кандидатов на удаление.
+        /// </summary>
+        /// <param name="CleanDirs">Список каталогов для очистки</param>
+        /// <returns>Возвращает список файлов для удаления</returns>
         private List<String> DetectFilesForCleanup(List<String> CleanDirs)
         {
             // Создаём массив, в котором будем хранить имена файлов...
