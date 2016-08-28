@@ -32,6 +32,9 @@ namespace srcrepair
         private bool IsRunning = true;
         private List<String> RemDirs;
 
+        /// <summary>
+        /// Конструктор класса формы модуля быстрой очистки.
+        /// </summary>
         public FrmRmWrk(List<String> SL)
         {
             InitializeComponent();
