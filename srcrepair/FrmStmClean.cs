@@ -23,6 +23,9 @@ using System.IO;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс формы модуля очистки кэшей Steam.
+    /// </summary>
     public partial class FrmStmClean : Form
     {
         private string SteamPath;
