@@ -28,7 +28,14 @@ namespace srcrepair
     /// </summary>
     public partial class FrmStmClean : Form
     {
+        /// <summary>
+        /// Хранит путь к каталогу установки клиента Steam.
+        /// </summary>
         private string SteamPath;
+
+        /// <summary>
+        /// Хранит путь к каталогу хранения резервных копий.
+        /// </summary>
         private string BackUpDir;
 
         /// <summary>
