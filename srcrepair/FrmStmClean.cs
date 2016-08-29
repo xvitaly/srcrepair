@@ -31,6 +31,9 @@ namespace srcrepair
         private string SteamPath;
         private string BackUpDir;
 
+        /// <summary>
+        /// Конструктор класса формы модуля очистки кэшей Steam.
+        /// </summary>
         public FrmStmClean(string SP, string BD)
         {
             InitializeComponent();
