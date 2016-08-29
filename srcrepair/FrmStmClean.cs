@@ -50,6 +50,9 @@ namespace srcrepair
             BackUpDir = BD;
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку запуска очистки.
+        /// </summary>
         private void EC_Execute_Click(object sender, EventArgs e)
         {
             // Создаём список файлов и каталогов для очистки...
