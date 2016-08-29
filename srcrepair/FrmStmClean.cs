@@ -41,6 +41,8 @@ namespace srcrepair
         /// <summary>
         /// Конструктор класса формы модуля очистки кэшей Steam.
         /// </summary>
+        /// <param name="SP">Каталог установки Steam</param>
+        /// <param name="BD">Каталог хранения резервных копий</param>
         public FrmStmClean(string SP, string BD)
         {
             InitializeComponent();
