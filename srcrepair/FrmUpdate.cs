@@ -25,12 +25,12 @@ using System.Windows.Forms;
 namespace srcrepair
 {
     /// <summary>
-    /// Форма модуля обновления программы SRC Repair.
+    /// Класс формы модуля обновления программы SRC Repair.
     /// </summary>
     public partial class frmUpdate : Form
     {
         /// <summary>
-        /// Конструктор класса frmUpdate.
+        /// Конструктор класса формы модуля обновления программы SRC Repair.
         /// </summary>
         /// <param name="UA">Заголовок UserAgent</param>
         /// <param name="A">Путь к каталогу программы</param>
