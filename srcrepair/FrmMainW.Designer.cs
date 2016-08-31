@@ -1,6 +1,6 @@
 ﻿namespace srcrepair
 {
-    partial class frmMainW
+    partial class FrmMainW
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainW));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainW));
             this.TabIcons = new System.Windows.Forms.ImageList(this.components);
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
@@ -2016,7 +2016,7 @@
             this.AppRefresh.UseVisualStyleBackColor = true;
             this.AppRefresh.Click += new System.EventHandler(this.AppRefresh_Click);
             // 
-            // frmMainW
+            // FrmMainW
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -2029,7 +2029,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.MainMenu;
             this.MaximizeBox = false;
-            this.Name = "frmMainW";
+            this.Name = "FrmMainW";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMainW_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMainW_FormClosed);
             this.Load += new System.EventHandler(this.frmMainW_Load);

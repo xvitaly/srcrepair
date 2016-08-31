@@ -32,9 +32,9 @@ using System.Text.RegularExpressions; // для работы с регулярн
 
 namespace srcrepair
 {
-    public partial class frmMainW : Form
+    public partial class FrmMainW : Form
     {
-        public frmMainW()
+        public FrmMainW()
         {
             // Инициализация...
             InitializeComponent();
@@ -83,7 +83,7 @@ namespace srcrepair
         /// <returns>Описание переменной с учётом локализации</returns>
         private string GetCVDescription(string CVar)
         {
-            ResourceManager DM = new ResourceManager("srcrepair.CVList", typeof(frmMainW).Assembly);
+            ResourceManager DM = new ResourceManager("srcrepair.CVList", typeof(FrmMainW).Assembly);
             return DM.GetString(CVar);
         }
 

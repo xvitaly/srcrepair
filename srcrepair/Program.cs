@@ -48,7 +48,7 @@ namespace srcrepair
                     if (CMDLineA.Length > 2) { if (CMDLineA[1] == "/lang") { try { Thread.CurrentThread.CurrentUICulture = new CultureInfo(CMDLineA[2]); } catch { MessageBox.Show(Properties.Resources.AppUnsupportedLanguage, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } } }
 
                     // Запускаем главную форму...
-                    Application.Run(new frmMainW());
+                    Application.Run(new FrmMainW());
                 }
                 else
                 {
