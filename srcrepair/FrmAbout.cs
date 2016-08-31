@@ -24,12 +24,12 @@ namespace srcrepair
     /// <summary>
     /// Класс формы "О программе".
     /// </summary>
-    partial class frmAbout : Form
+    partial class FrmAbout : Form
     {
         /// <summary>
         /// Конструктор класса формы "О программе".
         /// </summary>
-        public frmAbout()
+        public FrmAbout()
         {
             InitializeComponent();
         }

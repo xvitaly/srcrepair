@@ -1672,7 +1672,7 @@ namespace srcrepair
         private void MNUAbout_Click(object sender, EventArgs e)
         {
             // Отобразим форму "О программе"...
-            using (frmAbout AboutFrm = new frmAbout())
+            using (FrmAbout AboutFrm = new FrmAbout())
             {
                 AboutFrm.ShowDialog();
             }
