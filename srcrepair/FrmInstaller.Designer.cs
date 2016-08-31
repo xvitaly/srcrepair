@@ -1,6 +1,6 @@
 ﻿namespace srcrepair
 {
-    partial class frmInstaller
+    partial class FrmInstaller
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInstaller));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInstaller));
             this.labelWelcome = new System.Windows.Forms.Label();
             this.labelPath = new System.Windows.Forms.Label();
             this.InstallPath = new System.Windows.Forms.TextBox();
@@ -72,7 +72,7 @@
             // 
             resources.ApplyResources(this.openDialog, "openDialog");
             // 
-            // frmInstaller
+            // FrmInstaller
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -85,7 +85,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmInstaller";
+            this.Name = "FrmInstaller";
             this.ShowInTaskbar = false;
             this.ResumeLayout(false);
             this.PerformLayout();

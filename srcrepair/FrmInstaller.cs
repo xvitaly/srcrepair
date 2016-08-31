@@ -25,7 +25,7 @@ namespace srcrepair
     /// <summary>
     /// Класс формы модуля быстрой установки.
     /// </summary>
-    public partial class frmInstaller : Form
+    public partial class FrmInstaller : Form
     {
         /// <summary>
         /// Конструктор класса формы модуля распаковки файлов из архивов.
@@ -33,7 +33,7 @@ namespace srcrepair
         /// <param name="F">Путь к каталогу игры</param>
         /// <param name="I">Использует ли игра кастомный каталог</param>
         /// <param name="U">Имя кастомного каталога</param>
-        public frmInstaller(string F, bool I, string U)
+        public FrmInstaller(string F, bool I, string U)
         {
             InitializeComponent();
             FullGamePath = F;
