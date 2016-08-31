@@ -274,7 +274,7 @@
     <value>F5</value>
   </data>
   <data name="HEd_M_Refresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="HEd_M_Refresh.Text" xml:space="preserve">
     <value>&amp;Refresh</value>
@@ -283,7 +283,7 @@
     <value>Ctrl+S</value>
   </data>
   <data name="HEd_M_Save.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="HEd_M_Save.Text" xml:space="preserve">
     <value>&amp;Save</value>
@@ -292,31 +292,31 @@
     <value>Ctrl+Q</value>
   </data>
   <data name="HEd_M_Quit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="HEd_M_Quit.Text" xml:space="preserve">
     <value>&amp;Quit</value>
   </data>
   <data name="HEd_M_File.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 20</value>
+    <value>37, 20</value>
   </data>
   <data name="HEd_M_File.Text" xml:space="preserve">
     <value>&amp;File</value>
   </data>
   <data name="HEd_M_RestDef.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 22</value>
+    <value>172, 22</value>
   </data>
   <data name="HEd_M_RestDef.Text" xml:space="preserve">
     <value>R&amp;estore default file</value>
   </data>
   <data name="HEd_M_Notepad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 22</value>
+    <value>172, 22</value>
   </data>
   <data name="HEd_M_Notepad.Text" xml:space="preserve">
     <value>Open in Notepad</value>
   </data>
   <data name="HEd_M_Adv.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 20</value>
+    <value>72, 20</value>
   </data>
   <data name="HEd_M_Adv.Text" xml:space="preserve">
     <value>&amp;Advanced</value>
@@ -325,19 +325,19 @@
     <value>F1</value>
   </data>
   <data name="HEd_M_OnlHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
+    <value>154, 22</value>
   </data>
   <data name="HEd_M_OnlHelp.Text" xml:space="preserve">
     <value>&amp;Online help</value>
   </data>
   <data name="HEd_M_About.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
+    <value>154, 22</value>
   </data>
   <data name="HEd_M_About.Text" xml:space="preserve">
     <value>Abo&amp;ut plugin...</value>
   </data>
   <data name="HEd_M_Hlp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
+    <value>44, 20</value>
   </data>
   <data name="HEd_M_Hlp.Text" xml:space="preserve">
     <value>&amp;Help</value>
@@ -370,7 +370,7 @@
     <value>True</value>
   </metadata>
   <data name="HEd_St_Wrn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 17</value>
+    <value>31, 17</value>
   </data>
   <data name="HEd_St_Wrn.Text" xml:space="preserve">
     <value>Path</value>
@@ -577,7 +577,7 @@
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>frmHEd</value>
+    <value>FrmHEd</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

@@ -1919,7 +1919,7 @@ namespace srcrepair
         private void MNUHEd_Click(object sender, EventArgs e)
         {
             // Отобразим форму редактора файла hosts...
-            using (frmHEd HEdFrm = new frmHEd())
+            using (FrmHEd HEdFrm = new FrmHEd())
             {
                 HEdFrm.ShowDialog();
             }

@@ -1,6 +1,6 @@
 ﻿namespace srcrepair
 {
-    partial class frmHEd
+    partial class FrmHEd
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHEd));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHEd));
             this.HEd_Table = new System.Windows.Forms.DataGridView();
             this.HDV_IPAddr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HDV_Domain = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -269,7 +269,7 @@
             this.HEd_St_Wrn.MouseEnter += new System.EventHandler(this.HEd_St_Wrn_MouseEnter);
             this.HEd_St_Wrn.MouseLeave += new System.EventHandler(this.HEd_St_Wrn_MouseLeave);
             // 
-            // frmHEd
+            // FrmHEd
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -282,7 +282,7 @@
             this.MainMenuStrip = this.HEd_MMenu;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmHEd";
+            this.Name = "FrmHEd";
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.frmHEd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HEd_Table)).EndInit();
