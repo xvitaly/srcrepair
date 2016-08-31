@@ -27,7 +27,7 @@ namespace srcrepair
     /// <summary>
     /// Класс формы модуля загрузки файлов из Интернета.
     /// </summary>
-    public partial class frmDnWrk : Form
+    public partial class FrmDnWrk : Form
     {
         /// <summary>
         /// Хранит статус выполнения процесса загрузки.
@@ -49,7 +49,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="R">URL файла загрузки</param>
         /// <param name="L">Путь сохранения файла</param>
-        public frmDnWrk(string R, string L)
+        public FrmDnWrk(string R, string L)
         {
             InitializeComponent();
             RemoteURI = R;

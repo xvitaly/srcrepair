@@ -555,7 +555,7 @@ namespace srcrepair
         /// <param name="FileName">Путь для сохранения</param>
         public static void DownloadFileEx(string URI, string FileName)
         {
-            using (frmDnWrk DnW = new frmDnWrk(URI, FileName))
+            using (FrmDnWrk DnW = new FrmDnWrk(URI, FileName))
             {
                 DnW.ShowDialog();
             }

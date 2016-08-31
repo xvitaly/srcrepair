@@ -1,6 +1,6 @@
 ﻿namespace srcrepair
 {
-    partial class frmDnWrk
+    partial class FrmDnWrk
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDnWrk));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDnWrk));
             this.DN_WlcMsg = new System.Windows.Forms.Label();
             this.DN_PrgBr = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
@@ -43,7 +43,7 @@
             resources.ApplyResources(this.DN_PrgBr, "DN_PrgBr");
             this.DN_PrgBr.Name = "DN_PrgBr";
             // 
-            // frmDnWrk
+            // FrmDnWrk
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -54,7 +54,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmDnWrk";
+            this.Name = "FrmDnWrk";
             this.ShowInTaskbar = false;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDnWrk_FormClosing);
             this.Load += new System.EventHandler(this.frmDnWrk_Load);
