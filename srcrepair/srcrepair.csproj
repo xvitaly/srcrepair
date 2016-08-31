@@ -98,11 +98,11 @@
     <Compile Include="FrmArchWrk.Designer.cs">
       <DependentUpon>FrmArchWrk.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDnWrk.cs">
+    <Compile Include="FrmDnWrk.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDnWrk.Designer.cs">
-      <DependentUpon>frmDnWrk.cs</DependentUpon>
+    <Compile Include="FrmDnWrk.Designer.cs">
+      <DependentUpon>FrmDnWrk.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogView.cs">
       <SubType>Form</SubType>
@@ -215,11 +215,11 @@
     <EmbeddedResource Include="FrmArchWrk.ru.resx">
       <DependentUpon>FrmArchWrk.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDnWrk.resx">
-      <DependentUpon>frmDnWrk.cs</DependentUpon>
+    <EmbeddedResource Include="FrmDnWrk.resx">
+      <DependentUpon>FrmDnWrk.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDnWrk.ru.resx">
-      <DependentUpon>frmDnWrk.cs</DependentUpon>
+    <EmbeddedResource Include="FrmDnWrk.ru.resx">
+      <DependentUpon>FrmDnWrk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogView.resx">
       <DependentUpon>FrmLogView.cs</DependentUpon>
