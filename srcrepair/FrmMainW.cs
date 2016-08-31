@@ -2384,7 +2384,7 @@ namespace srcrepair
             if (Properties.Settings.Default.EnableDebugLog)
             {
                 string DFile = Path.Combine(App.AppUserDir, Properties.Resources.DebugLogFileName);
-                if (File.Exists(DFile)) { using (frmLogView Lv = new frmLogView(DFile)) { Lv.ShowDialog(); } } else { MessageBox.Show(AppStrings.AppNoDebugFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                if (File.Exists(DFile)) { using (FrmLogView Lv = new FrmLogView(DFile)) { Lv.ShowDialog(); } } else { MessageBox.Show(AppStrings.AppNoDebugFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             }
             else
             {

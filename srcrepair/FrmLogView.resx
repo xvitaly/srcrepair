@@ -125,7 +125,7 @@
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="LV_Status.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 17</value>
+    <value>38, 17</value>
   </data>
   <data name="LV_Status.Text" xml:space="preserve">
     <value>Done.</value>
@@ -166,31 +166,31 @@
     <value>Ctrl+R</value>
   </data>
   <data name="LV_MenuFileReload.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
+    <value>151, 22</value>
   </data>
   <data name="LV_MenuFileReload.Text" xml:space="preserve">
     <value>&amp;Reload</value>
   </data>
   <data name="LV_MunuFileClearLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
+    <value>151, 22</value>
   </data>
   <data name="LV_MunuFileClearLog.Text" xml:space="preserve">
     <value>Cl&amp;ear log</value>
   </data>
   <data name="LV_Sep1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 6</value>
+    <value>148, 6</value>
   </data>
   <data name="LV_MenuFileExit.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Q</value>
   </data>
   <data name="LV_MenuFileExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
+    <value>151, 22</value>
   </data>
   <data name="LV_MenuFileExit.Text" xml:space="preserve">
     <value>E&amp;xit</value>
   </data>
   <data name="LV_MenuFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 20</value>
+    <value>37, 20</value>
   </data>
   <data name="LV_MenuFile.Text" xml:space="preserve">
     <value>&amp;File</value>
@@ -199,13 +199,13 @@
     <value>Shift+F1</value>
   </data>
   <data name="LV_MenuHelpAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 22</value>
+    <value>158, 22</value>
   </data>
   <data name="LV_MenuHelpAbout.Text" xml:space="preserve">
     <value>&amp;About</value>
   </data>
   <data name="LV_MenuHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 20</value>
+    <value>44, 20</value>
   </data>
   <data name="LV_MenuHelp.Text" xml:space="preserve">
     <value>&amp;Help</value>
@@ -356,7 +356,7 @@
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>frmLogView</value>
+    <value>FrmLogView</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

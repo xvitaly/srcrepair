@@ -1,6 +1,6 @@
 ﻿namespace srcrepair
 {
-    partial class frmLogView
+    partial class FrmLogView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogView));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogView));
             this.LV_StatusBar = new System.Windows.Forms.StatusStrip();
             this.LV_Status = new System.Windows.Forms.ToolStripStatusLabel();
             this.LV_Menu = new System.Windows.Forms.MenuStrip();
@@ -119,7 +119,7 @@
             resources.ApplyResources(this.LV_LogArea, "LV_LogArea");
             this.LV_LogArea.Name = "LV_LogArea";
             // 
-            // frmLogView
+            // FrmLogView
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -129,7 +129,7 @@
             this.DoubleBuffered = true;
             this.MainMenuStrip = this.LV_Menu;
             this.MaximizeBox = false;
-            this.Name = "frmLogView";
+            this.Name = "FrmLogView";
             this.Load += new System.EventHandler(this.frmLogView_Load);
             this.LV_StatusBar.ResumeLayout(false);
             this.LV_StatusBar.PerformLayout();

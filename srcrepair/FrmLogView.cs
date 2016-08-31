@@ -25,7 +25,7 @@ namespace srcrepair
     /// <summary>
     /// Класс формы модуля просмотра журналов.
     /// </summary>
-    public partial class frmLogView : Form
+    public partial class FrmLogView : Form
     {
         /// <summary>
         /// Хранит путь к файлу журнала.
@@ -36,7 +36,7 @@ namespace srcrepair
         /// Конструктор класса формы модуля просмотра журналов.
         /// </summary>
         /// <param name="LogFile">Путь к файлу журнала</param>
-        public frmLogView(string LogFile)
+        public FrmLogView(string LogFile)
         {
             InitializeComponent();
             LogFileName = LogFile;
