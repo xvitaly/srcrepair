@@ -1,6 +1,6 @@
 ﻿namespace srcrepair
 {
-    partial class frmRepBuilder
+    partial class FrmRepBuilder
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRepBuilder));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRepBuilder));
             this.WelcomeLabel = new System.Windows.Forms.Label();
             this.GenerateNow = new System.Windows.Forms.Button();
             this.BwGen = new System.ComponentModel.BackgroundWorker();
@@ -51,7 +51,7 @@
             this.BwGen.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BwGen_DoWork);
             this.BwGen.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BwGen_RunWorkerCompleted);
             // 
-            // frmRepBuilder
+            // FrmRepBuilder
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -61,7 +61,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmRepBuilder";
+            this.Name = "FrmRepBuilder";
             this.ShowInTaskbar = false;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmRepBuilder_FormClosing);
             this.Load += new System.EventHandler(this.frmRepBuilder_Load);

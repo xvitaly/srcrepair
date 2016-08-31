@@ -28,7 +28,7 @@ namespace srcrepair
     /// <summary>
     /// Класс формы модуля создания отчётов для техподдержки.
     /// </summary>
-    public partial class frmRepBuilder : Form
+    public partial class FrmRepBuilder : Form
     {
         /// <summary>
         /// Конструктор класса формы модуля создания отчётов для техподдержки.
@@ -36,7 +36,7 @@ namespace srcrepair
         /// <param name="A">Путь к каталогу пользователя</param>
         /// <param name="FS">Путь к каталогу установки Steam</param>
         /// <param name="FC">Путь к каталогу к конфигами игры</param>
-        public frmRepBuilder(string A, string FS, string FC)
+        public FrmRepBuilder(string A, string FS, string FC)
         {
             InitializeComponent();
             AppUserDir = A;
