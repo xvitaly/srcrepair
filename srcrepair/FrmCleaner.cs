@@ -27,7 +27,7 @@ namespace srcrepair
     /// <summary>
     /// Класс формы менеджера очистки.
     /// </summary>
-    public partial class frmCleaner : Form
+    public partial class FrmCleaner : Form
     {
         /// <summary>
         /// Конструктор класса формы менеджера очистки.
@@ -40,7 +40,7 @@ namespace srcrepair
         /// <param name="NA">Включает / отключает автовыбор файлов флажками</param>
         /// <param name="RS">Включает / отключает рекурсивную очистку</param>
         /// <param name="FB">Включает / отключает принудительное создание резервных копий</param>
-        public frmCleaner(List<String> CD, string BD, string CI, string SM, bool RO, bool NA, bool RS, bool FB)
+        public FrmCleaner(List<String> CD, string BD, string CI, string SM, bool RO, bool NA, bool RS, bool FB)
         {
             InitializeComponent();
             CleanDirs = CD;

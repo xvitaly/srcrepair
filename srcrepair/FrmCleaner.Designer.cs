@@ -1,6 +1,6 @@
 ﻿namespace srcrepair
 {
-    partial class frmCleaner
+    partial class FrmCleaner
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCleaner));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCleaner));
             this.CM_WelcMsg = new System.Windows.Forms.Label();
             this.CM_FTable = new System.Windows.Forms.ListView();
             this.FName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -116,7 +116,7 @@
             this.GttWrk.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GttWrk_DoWork);
             this.GttWrk.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GttWrk_RunWorkerCompleted);
             // 
-            // frmCleaner
+            // FrmCleaner
             // 
             this.AcceptButton = this.CM_Clean;
             resources.ApplyResources(this, "$this");
@@ -133,7 +133,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmCleaner";
+            this.Name = "FrmCleaner";
             this.ShowInTaskbar = false;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCleaner_FormClosing);
             this.Load += new System.EventHandler(this.frmCleaner_Load);
