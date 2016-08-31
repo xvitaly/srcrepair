@@ -1,6 +1,6 @@
 ﻿namespace srcrepair
 {
-    partial class frmUpdate
+    partial class FrmUpdate
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdate));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUpdate));
             this.UpdAppImg = new System.Windows.Forms.PictureBox();
             this.UpdDBImg = new System.Windows.Forms.PictureBox();
             this.UpdAppStatus = new System.Windows.Forms.Label();
@@ -94,7 +94,7 @@
             this.UpdHUDStatus.Name = "UpdHUDStatus";
             this.UpdHUDStatus.Click += new System.EventHandler(this.UpdHUDStatus_Click);
             // 
-            // frmUpdate
+            // FrmUpdate
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -108,7 +108,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmUpdate";
+            this.Name = "FrmUpdate";
             this.ShowInTaskbar = false;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmUpdate_FormClosing);
             this.Load += new System.EventHandler(this.frmUpdate_Load);

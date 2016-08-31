@@ -27,7 +27,7 @@ namespace srcrepair
     /// <summary>
     /// Класс формы модуля обновления программы SRC Repair.
     /// </summary>
-    public partial class frmUpdate : Form
+    public partial class FrmUpdate : Form
     {
         /// <summary>
         /// Конструктор класса формы модуля обновления программы SRC Repair.
@@ -35,7 +35,7 @@ namespace srcrepair
         /// <param name="UA">Заголовок UserAgent</param>
         /// <param name="A">Путь к каталогу программы</param>
         /// <param name="U">Путь к пользовательскому каталогу</param>
-        public frmUpdate(string UA, string A, string U)
+        public FrmUpdate(string UA, string A, string U)
         {
             InitializeComponent();
             UserAgent = UA;
