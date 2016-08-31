@@ -25,12 +25,12 @@ namespace srcrepair
     /// <summary>
     /// Класс формы модуля отключения системных клавиш.
     /// </summary>
-    public partial class frmKBHelper : Form
+    public partial class FrmKBHelper : Form
     {
         /// <summary>
         /// Конструктор класса формы модуля отключения системных клавиш.
         /// </summary>
-        public frmKBHelper()
+        public FrmKBHelper()
         {
             InitializeComponent();
         }

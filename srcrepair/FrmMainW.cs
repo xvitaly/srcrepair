@@ -2069,7 +2069,7 @@ namespace srcrepair
         private void MNUWinMnuDisabler_Click(object sender, EventArgs e)
         {
             // Показываем модуля отключения клавиш...
-            using (frmKBHelper KBHlp = new frmKBHelper())
+            using (FrmKBHelper KBHlp = new FrmKBHelper())
             {
                 KBHlp.ShowDialog();
             }

@@ -1,6 +1,6 @@
 ﻿namespace srcrepair
 {
-    partial class frmKBHelper
+    partial class FrmKBHelper
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKBHelper));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmKBHelper));
             this.GB_Mn = new System.Windows.Forms.GroupBox();
             this.Dis_Restore = new System.Windows.Forms.Button();
             this.Dis_BWinMnu = new System.Windows.Forms.Button();
@@ -84,7 +84,7 @@
             this.Dis_LWIN.UseVisualStyleBackColor = true;
             this.Dis_LWIN.Click += new System.EventHandler(this.Dis_LWIN_Click);
             // 
-            // frmKBHelper
+            // FrmKBHelper
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -93,7 +93,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmKBHelper";
+            this.Name = "FrmKBHelper";
             this.ShowInTaskbar = false;
             this.GB_Mn.ResumeLayout(false);
             this.ResumeLayout(false);
