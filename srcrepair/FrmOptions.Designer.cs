@@ -1,6 +1,6 @@
 ﻿namespace srcrepair
 {
-    partial class frmOptions
+    partial class FrmOptions
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOptions));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOptions));
             this.MO_Okay = new System.Windows.Forms.Button();
             this.MO_Cancel = new System.Windows.Forms.Button();
             this.MO_TC = new System.Windows.Forms.TabControl();
@@ -206,7 +206,7 @@
             // 
             resources.ApplyResources(this.MO_SearchBin, "MO_SearchBin");
             // 
-            // frmOptions
+            // FrmOptions
             // 
             this.AcceptButton = this.MO_Okay;
             resources.ApplyResources(this, "$this");
@@ -220,7 +220,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmOptions";
+            this.Name = "FrmOptions";
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.frmOptions_Load);
             this.MO_TC.ResumeLayout(false);

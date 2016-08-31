@@ -2027,7 +2027,7 @@ namespace srcrepair
         private void MNUAppOptions_Click(object sender, EventArgs e)
         {
             // Показываем форму настроек...
-            using (frmOptions OptsFrm = new frmOptions())
+            using (FrmOptions OptsFrm = new FrmOptions())
             {
                 OptsFrm.ShowDialog();
             }

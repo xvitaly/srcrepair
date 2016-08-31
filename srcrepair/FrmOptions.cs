@@ -26,12 +26,12 @@ namespace srcrepair
     /// <summary>
     /// Класс формы модуля настроек программы.
     /// </summary>
-    public partial class frmOptions : Form
+    public partial class FrmOptions : Form
     {
         /// <summary>
         /// Конструктор класса формы модуля настроек программы.
         /// </summary>
-        public frmOptions()
+        public FrmOptions()
         {
             InitializeComponent();
         }
