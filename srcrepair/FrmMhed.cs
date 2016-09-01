@@ -48,7 +48,7 @@ namespace srcrepair
         /// <summary>
         /// Хранит версию модуля для служебных целей.
         /// </summary>
-        private const string PluginVersion = "0.6";
+        private const string PluginVersion = "0.7";
         #endregion
 
         #region IV
