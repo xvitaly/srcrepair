@@ -123,6 +123,14 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Начинает процесс сохранения таблицы в файл.
+        /// </summary>
+        private void SaveToFile()
+        {
+            if (CoreLib.IsCurrentUserAdmin()) { try { WriteTableToHosts(HostsFilePath); MessageBox.Show(AppStrings.AHE_Saved, PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch (Exception Ex) { CoreLib.HandleExceptionEx(String.Format(AppStrings.AHE_SaveException, HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); } } else { MessageBox.Show(String.Format(AppStrings.AHE_NoAdminRights, HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
+
+        /// <summary>
         /// Метод, срабатывающий при возникновении события "загрузка формы".
         /// </summary>
         private void frmHEd_Load(object sender, EventArgs e)
@@ -165,7 +173,7 @@ namespace srcrepair
         /// </summary>
         private void HEd_T_Save_Click(object sender, EventArgs e)
         {
-            if (CoreLib.IsCurrentUserAdmin()) { try { WriteTableToHosts(HostsFilePath); MessageBox.Show(AppStrings.AHE_Saved, PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch (Exception Ex) { CoreLib.HandleExceptionEx(String.Format(AppStrings.AHE_SaveException, HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); } } else { MessageBox.Show(String.Format(AppStrings.AHE_NoAdminRights, HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            SaveToFile();
         }
 
         /// <summary>
@@ -185,7 +193,7 @@ namespace srcrepair
             {
                 HEd_Table.Rows.Clear();
                 HEd_Table.Rows.Add("127.0.0.1", "localhost");
-                HEd_T_Save.PerformClick();
+                SaveToFile();
             }
         }
 
