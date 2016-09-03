@@ -407,11 +407,11 @@
     <Name>medHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/medhud/medhud_715719da.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/medhud/medhud_7530e79f.zip</URI>
     <UpURI>https://github.com/Intellectualbadass/medHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/medhud.png</Preview>
     <RepoPath>https://github.com/Intellectualbadass/medHUD</RepoPath>
-    <LastUpdate>1468944689</LastUpdate>
+    <LastUpdate>1471008260</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=223</Site>
     <ArchiveDir>medHUD-master</ArchiveDir>
     <InstallDir>medhud</InstallDir>
