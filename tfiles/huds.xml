@@ -342,11 +342,11 @@
     <Name>mHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/mhud/mhud_c81aec97.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/mhud/mhud_41c12379.zip</URI>
     <UpURI>https://github.com/Marblr/mHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/mhud.png</Preview>
     <RepoPath>https://github.com/Marblr/mHUD</RepoPath>
-    <LastUpdate>1467963896</LastUpdate>
+    <LastUpdate>1472983083</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=250</Site>
     <ArchiveDir>mHUD-master</ArchiveDir>
     <InstallDir>mhud</InstallDir>
