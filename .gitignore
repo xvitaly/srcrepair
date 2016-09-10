@@ -62,7 +62,10 @@ packages/
 *.dbmdl
 
 # Test files
-*.testsettings 
+*.testsettings
+
+# Idea configs
+.idea
 
 # Other
 /srcrepair/cfgs
