@@ -329,11 +329,11 @@
     <Name>mkHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/mkhud/mkhud_4aa2f58d.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/mkhud/mkhud_7ab42fdd.zip</URI>
     <UpURI>https://github.com/nimtra/mkHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/mkhud.png</Preview>
     <RepoPath>https://github.com/nimtra/mkHUD</RepoPath>
-    <LastUpdate>1472659585</LastUpdate>
+    <LastUpdate>1474164418</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=231</Site>
     <ArchiveDir>mkHUD-master</ArchiveDir>
     <InstallDir>mkhud</InstallDir>
