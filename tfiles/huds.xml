@@ -394,11 +394,11 @@
     <Name>Wavesui HUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/wavesuihud/wavesuihud_700f1ec4.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/wavesuihud/wavesuihud_90310505.zip</URI>
     <UpURI>https://github.com/rsbear/wavesui/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/wavesuihud.png</Preview>
     <RepoPath>https://github.com/rsbear/wavesui</RepoPath>
-    <LastUpdate>1468944689</LastUpdate>
+    <LastUpdate>1474559099</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=278</Site>
     <ArchiveDir>wavesui-master/wavesui</ArchiveDir>
     <InstallDir>wavesuihud</InstallDir>
