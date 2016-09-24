@@ -71,9 +71,8 @@ Source: "huds.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "configs.xml"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Копируем модуль поддержки сжатия (собран как AnyCPU)...
-Source: "Ionic.Zip.Reduced.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "Ionic.Zip.Reduced.pdb"; DestDir: "{app}"; Flags: ignoreversion; Tasks: insdebginf
-Source: "Ionic.Zip.Reduced.dll.sig"; DestDir: "{app}"; Flags: ignoreversion
+Source: "DotNetZip.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "DotNetZip.dll.sig"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Устанавливаем бинарники приложения...
 Source: "srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion
