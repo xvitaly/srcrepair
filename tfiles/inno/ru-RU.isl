@@ -11,6 +11,7 @@ ShcChlog=История версий
 ShcLocFldr=Локализованные
 ShcLocTexts=Информация
 OptNetStatus=Идёт оптимизация MSIL приложения...
+OptNetUninstallStatus=Идёт удаление машинных сборок MSIL...
 OptNetTask=Выполнить оптимизацию по окончании установки
 ShcNFxUrl=http://www.microsoft.com/downloads/ru-ru/details.aspx?FamilyID=9cfb2d51-5ff4-4491-b0e5-b386f32c0992
 DnlDepText=Следующие зависимости будут автоматически скачаны и установлены:
