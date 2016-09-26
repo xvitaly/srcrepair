@@ -117,6 +117,10 @@ Name: "{group}\{cm:ShcNETFx}"; Filename: "{cm:ShcNFxUrl}"
 
 [Run]
 Filename: "{app}\srcrepair.exe"; Description: "{cm:LaunchProgram,SRC Repair}"; Flags: nowait postinstall skipifsilent
+Filename: {code:GetNetInstallPath}ngen.exe; Parameters: "install ""{app}\srcrepair.exe"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: not IsRegularUser
+
+[UninstallRun]
+Filename: {code:GetNetInstallPath}ngen.exe; Parameters: "uninstall ""{app}\srcrepair.exe"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: not IsRegularUser
 
 [Code]
 // **************************************************************************** //
@@ -238,7 +242,7 @@ begin
     Result := ExpandConstant('{pf}')
 end;
 
-function GetNetInstallPath(): String;
+function GetNetInstallPath(Param: String): String;
 var
   NetPath: String;
 begin
