@@ -5,5 +5,5 @@ function sign {
 }
 
 sign srcrepair.exe
-sign Ionic.Zip.Reduced.dll
+sign DotNetZip.dll
 sign ru/srcrepair.resources.dll
