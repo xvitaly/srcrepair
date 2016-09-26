@@ -10,6 +10,8 @@ ShcMLnEN=English
 ShcChlog=Full changelog
 ShcLocFldr=Localized
 ShcLocTexts=Information
+OptNetStatus=Optimizing MSIL binary...
+OptNetTask=Optimize MSIL binary for current system...
 ShcNFxUrl=http://www.microsoft.com/downloads/en/details.aspx?FamilyID=9cfb2d51-5ff4-4491-b0e5-b386f32c0992
 DnlDepText=Dependencies that will be automatically downloaded and installed:
 DnlNetLabelW=Downloading Microsoft .NET Framework 4.0
