@@ -138,7 +138,6 @@ function isxdl_DownloadFiles(hWnd: Integer): Integer; external 'isxdl_DownloadFi
 function isxdl_SetOption(Option, Value: PAnsiChar): Integer; external 'isxdl_SetOption@files:isxdl.dll stdcall';
 
 function InitializeSetup(): Boolean;
-
 begin
   Result := true;
   dotNetNeeded := false;
@@ -240,7 +239,8 @@ begin
 end;
 
 function GetNetInstallPath(): String;
-var NetPath: String;
+var
+  NetPath: String;
 begin
   RegQueryStringValue(HKLM, 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Client', 'InstallPath', NetPath);
   Result := NetPath;
