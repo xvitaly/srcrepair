@@ -229,11 +229,6 @@ begin
   Result := s
 end;
 
-function IsRegularUser(): Boolean;
-begin
-  Result := not (IsAdminLoggedOn or IsPowerUserLoggedOn)
-end;
-
 function GetDefRoot(Param: String): String;
 begin
   if IsRegularUser then
