@@ -231,7 +231,7 @@ end;
 
 function GetDefRoot(Param: String): String;
 begin
-  if IsRegularUser then
+  if not IsAdminLoggedOn then
     Result := ExpandConstant('{localappdata}')
   else
     Result := ExpandConstant('{pf}')
