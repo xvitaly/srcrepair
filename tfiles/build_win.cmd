@@ -7,7 +7,9 @@ echo Changing directory to built version...
 cd "..\srcrepair\bin\Release"
 
 echo Signing binaries...
-"%ProgramFiles%\Git\bin\bash.exe" -i gpg-sign.sh
+"%ProgramFiles(x86)%\GNU\GnuPG\gpg2.exe" --sign --detach-sign --default-key D45AB90A srcrepair.exe
+"%ProgramFiles(x86)%\GNU\GnuPG\gpg2.exe" --sign --detach-sign --default-key D45AB90A DotNetZip.dll
+"%ProgramFiles(x86)%\GNU\GnuPG\gpg2.exe" --sign --detach-sign --default-key D45AB90A ru/srcrepair.resources.dll
 
 echo Compiling Installer...
 "%ProgramFiles(x86)%\Inno Setup 5\ISCC.exe" srcrepair.iss
