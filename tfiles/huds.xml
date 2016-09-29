@@ -30,11 +30,11 @@
     <Name>ToonHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/toonhud/toonhud_b16767ed.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/toonhud/toonhud_8711afe8.zip</URI>
     <UpURI>http://toonhud.com/downloads/toonhud_8-3.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/toonhud.png</Preview>
     <RepoPath>null</RepoPath>
-    <LastUpdate>1471100400</LastUpdate>
+    <LastUpdate>1475143200</LastUpdate>
     <Site>http://toonhud.com/</Site>
     <ArchiveDir>toonhud</ArchiveDir>
     <InstallDir>toonhud</InstallDir>
