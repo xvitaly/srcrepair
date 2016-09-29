@@ -26,7 +26,7 @@ from json import loads
 from os import path, getcwd, makedirs, rename
 from shutil import rmtree
 from time import mktime
-from urllib import urlretrieve, urlopen
+from urllib import URLopener, urlopen, urlretrieve
 from xml.dom import minidom
 
 
@@ -98,6 +98,7 @@ def handlehud(name, url, repo, ltime, lfname):
 
 def main():
     try:
+        URLopener.version = 'wget'
         for hud in parsedb('huds.xml'):
             handlehud(hud[0], hud[1], hud[2], hud[3], hud[4])
     except Exception as ex:
