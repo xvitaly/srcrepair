@@ -389,10 +389,6 @@
       <Link>cfgs\comangliastability.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="..\tfiles\gpg-sign.sh">
-      <Link>gpg-sign.sh</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
