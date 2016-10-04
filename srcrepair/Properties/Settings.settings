@@ -54,7 +54,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="LastHUDTime" Type="System.DateTime" Scope="User">
-      <Value Profile="(Default)">2016-07-16</Value>
+      <Value Profile="(Default)">2016-10-04</Value>
     </Setting>
     <Setting Name="HighlightOldBackUps" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
