@@ -20,7 +20,7 @@ AppName=SRC Repair
 AppVerName=SRC Repair
 AppPublisher=EasyCoding Team
 AppPublisherURL=http://www.easycoding.org/
-AppVersion=26.0.0.4395
+AppVersion=26.0.0.4444
 AppSupportURL=https://www.easycoding.org/projects/srcrepair
 AppUpdatesURL=https://www.easycoding.org/projects/srcrepair
 DefaultDirName={code:GetDefRoot}\SRC Repair
@@ -36,7 +36,7 @@ PrivilegesRequired=lowest
 ArchitecturesInstallIn64BitMode=x64
 
 ; Здесь указываем данные, которые будут добавлены в свойства установщика...
-VersionInfoVersion=26.0.0.4395
+VersionInfoVersion=26.0.0.4444
 VersionInfoDescription=SRC Repair Setup
 VersionInfoCopyright=(c) 2005-2016 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
