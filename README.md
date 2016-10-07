@@ -6,7 +6,7 @@ sprays into the game with one click.
 
 **License**: GNU GPL version 3.
 
-**Supported OS**: Windows XP SP3, Vista SP1+, 7, 8, 8.1, 10 (all editions except Starter).
+**Supported OS**: Windows 7 SP1, 8, 8.1, 10 (all editions except Starter).
 
 **Supported platforms**: x86, x64.
 
