@@ -1,7 +1,7 @@
 @echo off
 
 echo Starting build process using MSBUILD...
-"%ProgramFiles(x86)%\MSBuild\14.0\bin\msbuild.exe" ..\srcrepair.sln /t:Build /p:Configuration=Release /p:TargetFramework=v4.0
+"%ProgramFiles(x86)%\MSBuild\14.0\bin\msbuild.exe" ..\srcrepair.sln /t:Build /p:Configuration=Release /p:TargetFramework=v4.6.1
 
 echo Changing directory to built version...
 cd "..\srcrepair\bin\Release"
