@@ -2238,19 +2238,6 @@ namespace srcrepair
             CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
-        private void GT_ResAvailable_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (((ComboBox)sender).Items.Count > 0)
-                {
-                    string[] CR = ((ComboBox)sender).Text.Substring(0, ((ComboBox)sender).Text.IndexOf('@')).Split('x');
-                    if (CR.Length >= 2) { if (!SelGame.IsUsingVideoFile) { GT_ResHor.Value = Convert.ToInt32(CR[0]); GT_ResVert.Value = Convert.ToInt32(CR[1]); } else { GT_NCF_HorRes.Value = Convert.ToInt32(CR[0]); GT_NCF_VertRes.Value = Convert.ToInt32(CR[1]); } }
-                }
-            }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-        }
-
         private void HD_HSel_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Получим информацию о выбранном HUD...
