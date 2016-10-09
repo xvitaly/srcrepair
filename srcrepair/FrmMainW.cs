@@ -2238,24 +2238,6 @@ namespace srcrepair
             CoreLib.OpenCleanupWindow(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
-        private void GT_ResAvailable_Btn_Click(object sender, EventArgs e)
-        {
-            // Получим список доступных разрешений...
-            List<String> Resolutions = CoreLib.GetDesktopResolutions();
-
-            // Очистим список...
-            GT_ResAvailable.Items.Clear();
-
-            // Пройдём массив в цикле...
-            foreach (string CRes in Resolutions)
-            {
-                GT_ResAvailable.Items.Add(CRes);
-            }
-
-            // Если нашли, включим контрол выбора...
-            GT_ResAvailable.Enabled = GT_ResAvailable.Items.Count > 0;
-        }
-
         private void GT_ResAvailable_SelectedIndexChanged(object sender, EventArgs e)
         {
             try

@@ -33,7 +33,8 @@
             this.TabIcons = new System.Windows.Forms.ImageList(this.components);
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
-            this.GT_ResAvailable = new System.Windows.Forms.ComboBox();
+            this.GT_LaunchOptions = new System.Windows.Forms.TextBox();
+            this.L_GT_LaunchOptions = new System.Windows.Forms.Label();
             this.GT_GCF_Group = new System.Windows.Forms.Panel();
             this.L_GT_HDR = new System.Windows.Forms.Label();
             this.L_GT_DxMode = new System.Windows.Forms.Label();
@@ -100,8 +101,6 @@
             this.GT_SaveApply = new System.Windows.Forms.Button();
             this.GT_Maximum_Performance = new System.Windows.Forms.Button();
             this.GT_Maximum_Graphics = new System.Windows.Forms.Button();
-            this.GT_ResAvailable_Btn = new System.Windows.Forms.Button();
-            this.L_GT_ResAvailable = new System.Windows.Forms.Label();
             this.ConfigEditor = new System.Windows.Forms.TabPage();
             this.CE_Toolbar = new System.Windows.Forms.ToolStrip();
             this.CE_New = new System.Windows.Forms.ToolStripButton();
@@ -302,26 +301,27 @@
             // 
             // GraphicTweaker
             // 
-            this.GraphicTweaker.Controls.Add(this.GT_ResAvailable);
+            this.GraphicTweaker.Controls.Add(this.GT_LaunchOptions);
+            this.GraphicTweaker.Controls.Add(this.L_GT_LaunchOptions);
             this.GraphicTweaker.Controls.Add(this.GT_GCF_Group);
             this.GraphicTweaker.Controls.Add(this.GT_NCF_Group);
             this.GraphicTweaker.Controls.Add(this.GT_Warning);
             this.GraphicTweaker.Controls.Add(this.GT_SaveApply);
             this.GraphicTweaker.Controls.Add(this.GT_Maximum_Performance);
             this.GraphicTweaker.Controls.Add(this.GT_Maximum_Graphics);
-            this.GraphicTweaker.Controls.Add(this.GT_ResAvailable_Btn);
-            this.GraphicTweaker.Controls.Add(this.L_GT_ResAvailable);
             resources.ApplyResources(this.GraphicTweaker, "GraphicTweaker");
             this.GraphicTweaker.Name = "GraphicTweaker";
             this.GraphicTweaker.UseVisualStyleBackColor = true;
             // 
-            // GT_ResAvailable
+            // GT_LaunchOptions
             // 
-            this.GT_ResAvailable.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.GT_ResAvailable, "GT_ResAvailable");
-            this.GT_ResAvailable.FormattingEnabled = true;
-            this.GT_ResAvailable.Name = "GT_ResAvailable";
-            this.GT_ResAvailable.SelectedIndexChanged += new System.EventHandler(this.GT_ResAvailable_SelectedIndexChanged);
+            resources.ApplyResources(this.GT_LaunchOptions, "GT_LaunchOptions");
+            this.GT_LaunchOptions.Name = "GT_LaunchOptions";
+            // 
+            // L_GT_LaunchOptions
+            // 
+            resources.ApplyResources(this.L_GT_LaunchOptions, "L_GT_LaunchOptions");
+            this.L_GT_LaunchOptions.Name = "L_GT_LaunchOptions";
             // 
             // GT_GCF_Group
             // 
@@ -954,19 +954,6 @@
             this.GT_Maximum_Graphics.Name = "GT_Maximum_Graphics";
             this.GT_Maximum_Graphics.UseVisualStyleBackColor = true;
             this.GT_Maximum_Graphics.Click += new System.EventHandler(this.GT_Maximum_Graphics_Click);
-            // 
-            // GT_ResAvailable_Btn
-            // 
-            this.GT_ResAvailable_Btn.Image = global::srcrepair.Properties.Resources.Monitor;
-            resources.ApplyResources(this.GT_ResAvailable_Btn, "GT_ResAvailable_Btn");
-            this.GT_ResAvailable_Btn.Name = "GT_ResAvailable_Btn";
-            this.GT_ResAvailable_Btn.UseVisualStyleBackColor = true;
-            this.GT_ResAvailable_Btn.Click += new System.EventHandler(this.GT_ResAvailable_Btn_Click);
-            // 
-            // L_GT_ResAvailable
-            // 
-            resources.ApplyResources(this.L_GT_ResAvailable, "L_GT_ResAvailable");
-            this.L_GT_ResAvailable.Name = "L_GT_ResAvailable";
             // 
             // ConfigEditor
             // 
@@ -2109,8 +2096,6 @@
         private System.Windows.Forms.ToolStripStatusLabel SB_Status;
         private System.Windows.Forms.Button GT_Maximum_Performance;
         private System.Windows.Forms.Button GT_Maximum_Graphics;
-        private System.Windows.Forms.Button GT_ResAvailable_Btn;
-        private System.Windows.Forms.Label L_GT_ResAvailable;
         private System.Windows.Forms.Button GT_SaveApply;
         private System.Windows.Forms.GroupBox PS_GB_Remover;
         private System.Windows.Forms.GroupBox PS_GB_SInfo;
@@ -2256,7 +2241,6 @@
         private System.ComponentModel.BackgroundWorker BW_UpChk;
         private System.ComponentModel.BackgroundWorker BW_FPRecv;
         private System.ComponentModel.BackgroundWorker BW_BkUpRecv;
-        private System.Windows.Forms.ComboBox GT_ResAvailable;
         private System.Windows.Forms.TabPage HUDInstall;
         private System.Windows.Forms.ImageList TabIcons;
         private System.Windows.Forms.Label HD_WelcMsg;
@@ -2294,6 +2278,8 @@
         private System.Windows.Forms.Label FP_Comp;
         private System.Windows.Forms.ToolStripMenuItem MNUSupportChat;
         private System.Windows.Forms.ToolStripSeparator MNUSep7;
+        private System.Windows.Forms.TextBox GT_LaunchOptions;
+        private System.Windows.Forms.Label L_GT_LaunchOptions;
     }
 }
 

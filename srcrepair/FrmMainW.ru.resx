@@ -122,7 +122,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACC
-        DwAAAk1TRnQBSQFMAgEBBgEAAYgBAAGIAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DwAAAk1TRnQBSQFMAgEBBgEAAZABAAGQAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -190,6 +190,9 @@
         AQAB/gFBAYABAQFAAQIBwAEHAf8BQAGAAQEBoAEBAcABAAH/AaABgAECAdABCQHfAfcB/wHQAYABBQHv
         AeUB4AEPAf8B6AGAAQkL
 </value>
+  </data>
+  <data name="L_GT_LaunchOptions.Text" xml:space="preserve">
+    <value>Параметры запуска:</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="L_GT_HDR.Size" type="System.Drawing.Size, System.Drawing">
@@ -584,15 +587,6 @@
   </data>
   <data name="GT_Maximum_Graphics.Text" xml:space="preserve">
     <value>Максимальное качество</value>
-  </data>
-  <data name="GT_ResAvailable_Btn.Text" xml:space="preserve">
-    <value>Определить</value>
-  </data>
-  <data name="L_GT_ResAvailable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>112, 13</value>
-  </data>
-  <data name="L_GT_ResAvailable.Text" xml:space="preserve">
-    <value>Разрешение экрана:</value>
   </data>
   <data name="GraphicTweaker.Text" xml:space="preserve">
     <value>Графические настройки</value>
