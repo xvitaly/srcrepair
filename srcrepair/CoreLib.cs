@@ -482,37 +482,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Определяет все доступные в системе разрешения экрана посредством запроса к WMI.
-        /// </summary>
-        /// <returns>Возвращает список доступных разрешений</returns>
-        public static List<String> GetDesktopResolutions()
-        {
-            // Инициализируем переменные...
-            List<String> Result = new List<String>();
-            ManagementScope MMCScope = new ManagementScope();
-
-            try
-            {
-                // Выполняем запрос к WMI...
-                ObjectQuery MMCQuery = new ObjectQuery("SELECT * FROM CIM_VideoControllerResolution");
-
-                // Обрабатываем результаты...
-                using (ManagementObjectSearcher MMCSearcher = new ManagementObjectSearcher(MMCScope, MMCQuery))
-                {
-                    ManagementObjectCollection MMCQueryResults = MMCSearcher.Get();
-                    foreach (ManagementBaseObject MMCRes in MMCQueryResults)
-                    {
-                        Result.Add(String.Format("{0}x{1}@{2}Hz", MMCRes["HorizontalResolution"], MMCRes["VerticalResolution"], MMCRes["RefreshRate"]));
-                    }
-                }
-            }
-            catch (Exception Ex) { WriteStringToLog(Ex.Message); }
-
-            // Отдаём результат...
-            return Result.Distinct().ToList();
-        }
-
-        /// <summary>
         /// Генерирует уникальное имя для файла резервной копии.
         /// </summary>
         /// <param name="BackUpDir">Каталог хранения резервных копий</param>
