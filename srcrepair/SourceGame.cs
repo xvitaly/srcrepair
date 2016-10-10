@@ -147,6 +147,9 @@ namespace srcrepair
         /// </summary>
         public bool IsInstalled { get; private set; }
 
+        /// <summary>
+        /// Хранит параметры запуска игры.
+        /// </summary>
         public string LaunchOptions { get; private set; }
 
         /// <summary>
