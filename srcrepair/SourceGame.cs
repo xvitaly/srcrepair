@@ -147,6 +147,8 @@ namespace srcrepair
         /// </summary>
         public bool IsInstalled { get; private set; }
 
+        public string LaunchOptions { get; private set; }
+
         /// <summary>
         /// Содержит путь к установленному клиенту Steam.
         /// </summary>
