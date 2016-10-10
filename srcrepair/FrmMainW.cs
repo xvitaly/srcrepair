@@ -1158,6 +1158,9 @@ namespace srcrepair
                 // Переключаем графический твикер в режим GCF/NCF...
                 SetGTOptsType(!SelGame.IsUsingVideoFile);
 
+                // Получим параметры запуска...
+                GT_LaunchOptions.Text = SelGame.LaunchOptions;
+
                 // Проверим, установлен ли FPS-конфиг...
                 HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
 
