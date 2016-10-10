@@ -317,6 +317,7 @@
             // 
             resources.ApplyResources(this.GT_LaunchOptions, "GT_LaunchOptions");
             this.GT_LaunchOptions.Name = "GT_LaunchOptions";
+            this.GT_LaunchOptions.ReadOnly = true;
             // 
             // L_GT_LaunchOptions
             // 
