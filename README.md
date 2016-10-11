@@ -76,3 +76,8 @@ Supported mods and third-party Source engine games:
  * Aperture Tag: The Paint Gun Testing Initiative;
  * Prospekt;
  * Transmissions: Element 120.
+
+3rd party libraries
+=========
+ * [DotNetZip](https://github.com/haf/DotNetZip.Semverd) (MPL license + zlib license);
+ * [Gameloop.Vdf](https://github.com/Shravan2x/Gameloop.Vdf) (MIT license).
