@@ -10,7 +10,7 @@ sprays into the game with one click.
 
 **Supported platforms**: x86, x64.
 
-**Dependencies on Windows**: Microsoft .NET Framework 4 Client Profile (web installer included).
+**Dependencies on Windows**: Microsoft .NET Framework 4.6.1 (web installer included).
 
 Downloads [![SourceForge](https://img.shields.io/sourceforge/dt/srcrepair.svg?maxAge=2592000)](https://sourceforge.net/projects/srcrepair/files/)
 =========
