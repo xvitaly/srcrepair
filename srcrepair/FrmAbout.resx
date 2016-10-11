@@ -450,6 +450,10 @@ Graphics by:
  - Valve Corporation;
  - VisualPharm.
 
+3rd party libraries (dynamic linked):
+ - DotNetZip (MPL license + zlib license);
+ - Gameloop.Vdf (MIT license).
+
 Translators:
  - Russian (native) - V1TSK (vitaly@easycoding.org);
  - English - Google Translate (;-)).</value>
