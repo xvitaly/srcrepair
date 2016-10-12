@@ -178,7 +178,7 @@ namespace srcrepair
                     return GamePath;
                 }
             }
-            return null;
+            return String.Empty;
         }
 
         /// <summary>
