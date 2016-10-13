@@ -759,7 +759,7 @@ namespace srcrepair
         /// Возвращает список используемых на данном компьютере SteamID64.
         /// </summary>
         /// <param name="SteamPath">Каталог установки Steam</param>
-        /// <returns>Список Steam user ID</returns>
+        /// <returns>Список SteamID64</returns>
         public static List<String> GetSteamIDs(string SteamPath)
         {
             // Создаём список...
