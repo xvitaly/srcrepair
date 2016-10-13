@@ -32,6 +32,7 @@ using System.Security.Cryptography; // для расчёта хешей...
 using System.Reflection; // для работы со сборками...
 using System.Management; // для работы с WMI...
 using Ionic.Zip; // для работы с архивами...
+using Gameloop.Vdf; // для работы с VDF...
 
 namespace srcrepair
 {
@@ -747,6 +748,30 @@ namespace srcrepair
                 foreach (DirectoryInfo SubDir in DInfo.GetDirectories())
                 {
                     Result.Add(SubDir.FullName);
+                }
+            }
+
+            // Возвращаем результат...
+            return Result;
+        }
+
+        /// <summary>
+        /// Возвращает список используемых на данном компьютере SteamID64.
+        /// </summary>
+        /// <param name="SteamPath">Каталог установки Steam</param>
+        /// <returns>Список Steam user ID</returns>
+        public static List<String> GetSteamIDs(string SteamPath)
+        {
+            // Создаём список...
+            List<String> Result = new List<String>();
+
+            // Обходим базу данных...
+            using (StreamReader SR = new StreamReader(Path.Combine(SteamPath, "config", "config.vdf")))
+            {
+                dynamic AX = VdfConvert.Deserialize(SR, VdfSerializerSettings.Default);
+                foreach (dynamic AZ in AX.Value["Software"]["Valve"]["Steam"]["Accounts"].Children())
+                {
+                    Result.Add(AZ.Value["SteamID"].ToString());
                 }
             }
 
