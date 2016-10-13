@@ -261,7 +261,6 @@ namespace srcrepair
             IsUsingUserDir = UserDir;
             IsHUDsAvailable = HUDAv;
             SteamPath = SteamDir;
-            SteamIDs = CoreLib.GetUserIDs(SteamPath);
 
             // Получаем полный путь до каталога управляемого приложения...
             GamePath = GetGameDirectory(DirName, GameDirs);
@@ -272,6 +271,7 @@ namespace srcrepair
             // Заполняем остальные свойства класса если приложение установлено...
             if (IsInstalled)
             {
+                SteamIDs = CoreLib.GetUserIDs(SteamPath);
                 FullGamePath = Path.Combine(GamePath, SmallAppName);
                 FullCfgPath = Path.Combine(FullGamePath, "cfg");
                 FullBackUpDirPath = Path.Combine(AUserDir, "backups", Path.GetFileName(SmallAppName));
