@@ -202,6 +202,7 @@
     <Compile Include="Settings.cs" />
     <Compile Include="SourceGame.cs" />
     <Compile Include="SteamConv.cs" />
+    <Compile Include="SteamManager.cs" />
     <Compile Include="UpdateManager.cs" />
     <Compile Include="VideoSettings.cs" />
     <EmbeddedResource Include="AppStrings.resx">
