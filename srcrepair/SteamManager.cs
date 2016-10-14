@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using Gameloop.Vdf;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace srcrepair
 {
