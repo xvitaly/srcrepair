@@ -21,7 +21,7 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Возвращает список используемых на данном компьютере SteamID.
+        /// Возвращает список используемых на данном компьютере SteamID. Устаревший способ.
         /// </summary>
         /// <param name="SteamPath">Каталог установки Steam</param>
         /// <returns>Список Steam user ID</returns>
