@@ -23,7 +23,7 @@ namespace srcrepair
     /// <summary>
     /// Общий класс VideoSettings. Напрямую не используется.
     /// </summary>
-    public class VideoSettings
+    public abstract class VideoSettings
     {
         /// <summary>
         /// Хранит разрешение по горизонтали.
