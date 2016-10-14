@@ -10,6 +10,11 @@ namespace srcrepair
 {
     public static class SteamManager
     {
+        public static string GetSteamConfig(string SteamPath)
+        {
+            return Path.Combine(SteamPath, "config", "config.vdf");
+        }
+
         /// <summary>
         /// Возвращает список используемых на данном компьютере SteamID.
         /// </summary>
