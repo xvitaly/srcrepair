@@ -10,6 +10,11 @@ namespace srcrepair
 {
     public static class SteamManager
     {
+        /// <summary>
+        /// Возвращает путь к главному VDF конфигу Steam.
+        /// </summary>
+        /// <param name="SteamPath">Каталог установки Steam</param>
+        /// <returns>Путь к VDF конфигу</returns>
         public static string GetSteamConfig(string SteamPath)
         {
             return Path.Combine(SteamPath, "config", "config.vdf");
