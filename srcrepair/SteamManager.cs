@@ -35,6 +35,11 @@ namespace srcrepair
             return Path.Combine(SteamPath, "config", "config.vdf");
         }
 
+        /// <summary>
+        /// Возвращает путь к локально хранящемуся VDF конфигу Steam.
+        /// </summary>
+        /// <param name="SteamPath">Каталог установки Steam</param>
+        /// <returns>Путь к локальному VDF конфигу</returns>
         public static List<String> GetSteamLocalConfig(string SteamPath)
         {
             List<String> Result = new List<String>();
