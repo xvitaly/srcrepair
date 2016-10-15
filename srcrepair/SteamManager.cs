@@ -19,6 +19,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using Gameloop.Vdf;
 
 namespace srcrepair
@@ -111,7 +112,7 @@ namespace srcrepair
             string Result = String.Empty;
 
             // Получаем параметры запуска...
-            using (StreamReader SR = new StreamReader(CoreLib.FindNewerestFile(GetSteamLocalConfig(SteamPath))))
+            using (StreamReader SR = new StreamReader(CoreLib.FindNewerestFile(GetSteamLocalConfig(SteamPath)), Encoding.UTF8))
             {
                 dynamic AX = VdfConvert.Deserialize(SR, VdfSerializerSettings.Default);
                 Result = AX.Value["Software"]["Valve"]["Steam"]["apps"][GameID]["LaunchOptions"].ToString();
