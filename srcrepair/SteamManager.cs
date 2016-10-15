@@ -83,5 +83,24 @@ namespace srcrepair
             // Возвращаем результат...
             return Result;
         }
+
+        public static string GetLaunchOptions(string SteamPath, string GameID)
+        {
+            // Инициализируем переменную с дефолтными значением...
+            string Result = String.Empty;
+
+            // Получаем параметры запуска...
+            using (StreamReader SR = new StreamReader(CoreLib.FindNewerestFile(GetSteamLocalConfig(SteamPath))))
+            {
+                dynamic AX = VdfConvert.Deserialize(SR, VdfSerializerSettings.Default);
+                foreach (dynamic AZ in AX.Value["Software"]["Valve"]["Steam"]["apps"][GameID].Children())
+                {
+                    Result = AZ.Value["LaunchOptions"].ToString();
+                }
+            }
+
+            // Возвращаем результат...
+            return Result;
+        }
     }
 }
