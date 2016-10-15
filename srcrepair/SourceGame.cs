@@ -281,6 +281,7 @@ namespace srcrepair
                 if (IsUsingVideoFile) { UpdateVideoFilesList(); }
                 UpdateBanlistFilesList();
                 CloudConfigs = GetCloudConfigs();
+                try { LaunchOptions = SteamManager.GetLaunchOptions(SteamPath, GameInternalID); } catch { }
             }
         }
     }
