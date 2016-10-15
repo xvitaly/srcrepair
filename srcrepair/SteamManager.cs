@@ -35,6 +35,16 @@ namespace srcrepair
             return Path.Combine(SteamPath, "config", "config.vdf");
         }
 
+        public static List<String> GetSteamLocalConfig(string SteamPath)
+        {
+            List<String> Result = new List<String>();
+            foreach (string ID in GetUserIDs(SteamPath))
+            {
+                Result.AddRange(CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", ID, "config"), "localconfig.vdf"));
+            }
+            return Result;
+        }
+
         /// <summary>
         /// Возвращает список используемых на данном компьютере SteamID. Устаревший способ.
         /// </summary>
