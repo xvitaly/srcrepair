@@ -103,10 +103,7 @@ namespace srcrepair
             using (StreamReader SR = new StreamReader(CoreLib.FindNewerestFile(GetSteamLocalConfig(SteamPath))))
             {
                 dynamic AX = VdfConvert.Deserialize(SR, VdfSerializerSettings.Default);
-                foreach (dynamic AZ in AX.Value["Software"]["Valve"]["Steam"]["apps"][GameID].Children())
-                {
-                    Result = AZ.Value["LaunchOptions"].ToString();
-                }
+                Result = AX.Value["Software"]["Valve"]["Steam"]["apps"][GameID]["LaunchOptions"].ToString();
             }
 
             // Возвращаем результат...
