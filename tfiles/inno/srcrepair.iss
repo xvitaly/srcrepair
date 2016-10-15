@@ -155,11 +155,11 @@ begin
          end
            else
              begin
-               memoDependenciesNeeded := memoDependenciesNeeded + '      Microsoft .NET Framework 4.0' #13;
-               dotnetRedistPath := ExpandConstant('{src}\dotNetFx40_Full_setup.exe');
+               memoDependenciesNeeded := memoDependenciesNeeded + '      Microsoft .NET Framework 4.6' #13;
+               dotnetRedistPath := ExpandConstant('{src}\NDP461-KB3102438-Web.exe');
                if (not FileExists(dotnetRedistPath)) then
                  begin
-                   dotnetRedistPath := ExpandConstant('{tmp}\dotNetFx40_Full_setup.exe');
+                   dotnetRedistPath := ExpandConstant('{tmp}\NDP461-KB3102438-Web.exe');
                    if (not FileExists(dotnetRedistPath)) then
                      begin
                        isxdl_AddFile(dotnetRedistURL, dotnetRedistPath);
