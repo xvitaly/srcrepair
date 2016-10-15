@@ -99,6 +99,12 @@ namespace srcrepair
             return Result;
         }
 
+        /// <summary>
+        /// Получает и возвращает параметры запуска указанного приложения.
+        /// </summary>
+        /// <param name="SteamPath">Каталог установки Steam</param>
+        /// <param name="GameID">ID приложения, параметры запуска которого нужно определить</param>
+        /// <returns>Параметры запуска приложения</returns>
         public static string GetLaunchOptions(string SteamPath, string GameID)
         {
             // Инициализируем переменную с дефолтными значением...
