@@ -160,11 +160,11 @@
     <Name>E.V.E. HUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/evehud/evehud_8c9ede50.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/evehud/evehud_bfcf7825.zip</URI>
     <UpURI>http://files.gamebanana.com/guis/eve_hud_v403.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/evehud.jpg</Preview>
     <RepoPath>null</RepoPath>
-    <LastUpdate>1468411200</LastUpdate>
+    <LastUpdate>1477152000</LastUpdate>
     <Site>http://tf2.gamebanana.com/guis/25711</Site>
     <ArchiveDir>eve hud</ArchiveDir>
     <InstallDir>evehud</InstallDir>
