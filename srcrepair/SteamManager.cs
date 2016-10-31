@@ -19,8 +19,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
-using Gameloop.Vdf;
 
 namespace srcrepair
 {
@@ -77,30 +75,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Возвращает список используемых на данном компьютере SteamID64.
-        /// </summary>
-        /// <param name="SteamPath">Каталог установки Steam</param>
-        /// <returns>Список SteamID64</returns>
-        public static List<String> GetSteamIDs(string SteamPath)
-        {
-            // Создаём список...
-            List<String> Result = new List<String>();
-
-            // Обходим базу данных...
-            using (StreamReader SR = new StreamReader(GetSteamConfig(SteamPath)))
-            {
-                dynamic AX = VdfConvert.Deserialize(SR, VdfSerializerSettings.Default);
-                foreach (dynamic AZ in AX.Value["Software"]["Valve"]["Steam"]["Accounts"].Children())
-                {
-                    Result.Add(AZ.Value["SteamID"].ToString());
-                }
-            }
-
-            // Возвращаем результат...
-            return Result;
-        }
-
-        /// <summary>
         /// Получает и возвращает параметры запуска указанного приложения.
         /// </summary>
         /// <param name="SteamPath">Каталог установки Steam</param>
@@ -108,18 +82,8 @@ namespace srcrepair
         /// <returns>Параметры запуска приложения</returns>
         public static string GetLaunchOptions(string SteamPath, string GameID)
         {
-            // Инициализируем переменную с дефолтными значением...
-            string Result = String.Empty;
-
-            // Получаем параметры запуска...
-            using (StreamReader SR = new StreamReader(CoreLib.FindNewerestFile(GetSteamLocalConfig(SteamPath)), Encoding.UTF8))
-            {
-                dynamic AX = VdfConvert.Deserialize(SR, VdfSerializerSettings.Default);
-                Result = AX.Value["Software"]["Valve"]["Steam"]["apps"][GameID]["LaunchOptions"].ToString();
-            }
-
             // Возвращаем результат...
-            return Result;
+            return String.Empty;
         }
     }
 }
