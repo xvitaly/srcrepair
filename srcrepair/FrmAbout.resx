@@ -451,8 +451,7 @@ Graphics by:
  - VisualPharm.
 
 3rd party libraries (dynamic linked):
- - DotNetZip (MPL license + zlib license);
- - Gameloop.Vdf (MIT license).
+ - DotNetZip (MPL license + zlib license).
 
 Translators:
  - Russian (native) - V1TSK (vitaly@easycoding.org);
