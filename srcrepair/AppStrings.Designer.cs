@@ -277,7 +277,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BackUps: OFF.
+        ///   Looks up a localized string similar to BackUp: OFF.
         /// </summary>
         internal static string AppSafeClnStTextOff {
             get {
@@ -286,7 +286,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BackUps: ON.
+        ///   Looks up a localized string similar to BackUp: ON.
         /// </summary>
         internal static string AppSafeClnStTextOn {
             get {

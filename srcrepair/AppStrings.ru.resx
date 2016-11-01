@@ -496,11 +496,11 @@
     <comment>Сообщение, выдаваемое при возникновении исключения во время запуска процедур очистки блобов и реестра</comment>
   </data>
   <data name="AppSafeClnStTextOff" xml:space="preserve">
-    <value>Рез. копии: ВЫКЛ</value>
+    <value>Копии: выкл</value>
     <comment>Текст для строки состояния (режим безопасной очистки выключен)</comment>
   </data>
   <data name="AppSafeClnStTextOn" xml:space="preserve">
-    <value>Рез. копии: ВКЛ</value>
+    <value>Копии: вкл</value>
     <comment>Текст для строки состояния (режим безопасной очистки включён)</comment>
   </data>
   <data name="AppSafeClnDisabled" xml:space="preserve">
@@ -704,7 +704,7 @@
     <comment>Сообщение при устаревшей базе HUD</comment>
   </data>
   <data name="HD_DynBarText" xml:space="preserve">
-    <value>База HUD {0}. Посл. обновление: {1}.</value>
+    <value>База HUD {0}. Обновлена: {1}.</value>
     <comment>Шаблон для строки статуса в модуле Менеджер HUD</comment>
   </data>
   <data name="HD_StatusOutdated" xml:space="preserve">

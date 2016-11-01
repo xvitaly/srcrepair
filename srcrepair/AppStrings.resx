@@ -403,10 +403,10 @@
     <value>An error occurred during cleanup. Perhaps you have no rights necessary for this action.</value>
   </data>
   <data name="AppSafeClnStTextOff" xml:space="preserve">
-    <value>BackUps: OFF</value>
+    <value>BackUp: OFF</value>
   </data>
   <data name="AppSafeClnStTextOn" xml:space="preserve">
-    <value>BackUps: ON</value>
+    <value>BackUp: ON</value>
   </data>
   <data name="AppSafeClnDisabled" xml:space="preserve">
     <value>Attention! You have disabled SafeClean module, so backups will not be created until it will be re-activated.</value>
