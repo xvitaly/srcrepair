@@ -230,6 +230,7 @@
             this.MNUAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusBar = new System.Windows.Forms.StatusStrip();
             this.SB_Status = new System.Windows.Forms.ToolStripStatusLabel();
+            this.SB_SteamID = new System.Windows.Forms.ToolStripStatusLabel();
             this.SB_App = new System.Windows.Forms.ToolStripStatusLabel();
             this.AppSelector = new System.Windows.Forms.ComboBox();
             this.CE_OpenCfgDialog = new System.Windows.Forms.OpenFileDialog();
@@ -1929,6 +1930,7 @@
             // 
             this.StatusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SB_Status,
+            this.SB_SteamID,
             this.SB_App});
             resources.ApplyResources(this.StatusBar, "StatusBar");
             this.StatusBar.Name = "StatusBar";
@@ -1937,6 +1939,12 @@
             // 
             resources.ApplyResources(this.SB_Status, "SB_Status");
             this.SB_Status.Name = "SB_Status";
+            // 
+            // SB_SteamID
+            // 
+            resources.ApplyResources(this.SB_SteamID, "SB_SteamID");
+            this.SB_SteamID.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.SB_SteamID.Name = "SB_SteamID";
             // 
             // SB_App
             // 
@@ -2281,6 +2289,7 @@
         private System.Windows.Forms.ToolStripSeparator MNUSep7;
         private System.Windows.Forms.TextBox GT_LaunchOptions;
         private System.Windows.Forms.Label L_GT_LaunchOptions;
+        private System.Windows.Forms.ToolStripStatusLabel SB_SteamID;
     }
 }
 
