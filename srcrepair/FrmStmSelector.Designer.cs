@@ -52,12 +52,14 @@
             resources.ApplyResources(this.ST_OK, "ST_OK");
             this.ST_OK.Name = "ST_OK";
             this.ST_OK.UseVisualStyleBackColor = true;
+            this.ST_OK.Click += new System.EventHandler(this.ST_OK_Click);
             // 
             // ST_Cancel
             // 
             resources.ApplyResources(this.ST_Cancel, "ST_Cancel");
             this.ST_Cancel.Name = "ST_Cancel";
             this.ST_Cancel.UseVisualStyleBackColor = true;
+            this.ST_Cancel.Click += new System.EventHandler(this.ST_Cancel_Click);
             // 
             // FrmStmSelector
             // 
@@ -69,6 +71,7 @@
             this.Controls.Add(this.SD_WMsg);
             this.Name = "FrmStmSelector";
             this.ShowInTaskbar = false;
+            this.Load += new System.EventHandler(this.FrmStmSelector_Load);
             this.ResumeLayout(false);
 
         }

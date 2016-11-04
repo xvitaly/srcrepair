@@ -16,5 +16,20 @@ namespace srcrepair
         {
             InitializeComponent();
         }
+
+        private void FrmStmSelector_Load(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void ST_OK_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void ST_Cancel_Click(object sender, EventArgs e)
+        {
+            //
+        }
     }
 }
