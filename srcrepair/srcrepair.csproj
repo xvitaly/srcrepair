@@ -177,6 +177,12 @@
     <Compile Include="FrmStmClean.Designer.cs">
       <DependentUpon>FrmStmClean.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmStmSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStmSelector.Designer.cs">
+      <DependentUpon>FrmStmSelector.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStmClean.ru.resx">
       <DependentUpon>FrmStmClean.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStmSelector.resx">
+      <DependentUpon>FrmStmSelector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUpdate.resx">
       <DependentUpon>FrmUpdate.cs</DependentUpon>
