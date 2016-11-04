@@ -36,6 +36,7 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "FrmStmSelector";
+            this.ShowInTaskbar = false;
             this.ResumeLayout(false);
 
         }
