@@ -304,6 +304,9 @@
     <EmbeddedResource Include="FrmStmSelector.resx">
       <DependentUpon>FrmStmSelector.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmStmSelector.ru.resx">
+      <DependentUpon>FrmStmSelector.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmUpdate.resx">
       <DependentUpon>FrmUpdate.cs</DependentUpon>
     </EmbeddedResource>
