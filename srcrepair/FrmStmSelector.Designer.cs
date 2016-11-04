@@ -63,12 +63,17 @@
             // 
             // FrmStmSelector
             // 
+            this.AcceptButton = this.ST_OK;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.ST_Cancel;
             this.Controls.Add(this.ST_Cancel);
             this.Controls.Add(this.ST_OK);
             this.Controls.Add(this.SD_SteamSel);
             this.Controls.Add(this.SD_WMsg);
+            this.DoubleBuffered = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmStmSelector";
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.FrmStmSelector_Load);
