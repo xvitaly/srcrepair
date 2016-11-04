@@ -103,3 +103,5 @@ Mute.png -  Ahmad Hania - CCNA - http://www.iconspedia.com/icon/mute-13212.html
 --------------------------------------------------------------------------------------------------------
 Convert.png - Nikolay Verin - CCND - http://www.iconspedia.com/icon/free-mp3-converter-icon-27169.html
 --------------------------------------------------------------------------------------------------------
+Steam.ico - Brsev - CCNC - http://www.iconspedia.com/icon/steam-1402-.html
+--------------------------------------------------------------------------------------------------------
