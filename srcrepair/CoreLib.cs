@@ -913,5 +913,23 @@ namespace srcrepair
             // Возвращаем сформированный массив...
             return Result;
         }
+
+        public static string OpenSteamIDSelector(List<String> SteamIDs)
+        {
+            // Создаём переменную для хранения результата...
+            string Result = String.Empty;
+
+            // Вызываем форму и получам результат выбора пользователя...
+            using (FrmStmSelector StmSel = new FrmStmSelector(SteamIDs))
+            {
+                if (StmSel.ShowDialog() == DialogResult.OK)
+                {
+                    Result = StmSel.SteamID;
+                }
+            }
+
+            // Возвращаем результат...
+            return Result;
+        }
     }
 }
