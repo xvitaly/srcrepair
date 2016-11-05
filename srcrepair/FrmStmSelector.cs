@@ -22,7 +22,7 @@ namespace srcrepair
 
         private void FrmStmSelector_Load(object sender, EventArgs e)
         {
-            //
+            SD_IDSel.DataSource = SteamIDs;
         }
 
         private void ST_OK_Click(object sender, EventArgs e)
