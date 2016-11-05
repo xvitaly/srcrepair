@@ -12,6 +12,8 @@ namespace srcrepair
 {
     public partial class FrmStmSelector : Form
     {
+        private List<String> SteamIDs;
+
         public FrmStmSelector()
         {
             InitializeComponent();
