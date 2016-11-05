@@ -28,11 +28,13 @@ namespace srcrepair
         private void ST_OK_Click(object sender, EventArgs e)
         {
             //
+            DialogResult = DialogResult.OK;
         }
 
         private void ST_Cancel_Click(object sender, EventArgs e)
         {
             //
+            DialogResult = DialogResult.Cancel;
         }
     }
 }
