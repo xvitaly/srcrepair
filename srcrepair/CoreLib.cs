@@ -921,6 +921,9 @@ namespace srcrepair
         /// <returns>Выбранный пользователем SteamID</returns>
         public static string OpenSteamIDSelector(List<String> SteamIDs)
         {
+            // Проверяем количество SteamID в списке...
+            if (SteamIDs.Count < 1) { throw new ArgumentOutOfRangeException("Not enough SteamIDs in list."); }
+
             // Создаём переменную для хранения результата...
             string Result = String.Empty;
 
