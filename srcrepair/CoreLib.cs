@@ -914,6 +914,11 @@ namespace srcrepair
             return Result;
         }
 
+        /// <summary>
+        /// Вызывает форму выбора SteamID из заданных значений.
+        /// </summary>
+        /// <param name="SteamIDs">Список доступных SteamID</param>
+        /// <returns>Выбранный пользователем SteamID</returns>
         public static string OpenSteamIDSelector(List<String> SteamIDs)
         {
             // Создаём переменную для хранения результата...
