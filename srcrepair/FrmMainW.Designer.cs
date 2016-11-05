@@ -1945,6 +1945,7 @@
             resources.ApplyResources(this.SB_SteamID, "SB_SteamID");
             this.SB_SteamID.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.SB_SteamID.Name = "SB_SteamID";
+            this.SB_SteamID.Click += new System.EventHandler(this.SB_SteamID_Click);
             // 
             // SB_App
             // 

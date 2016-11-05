@@ -2399,5 +2399,10 @@ namespace srcrepair
             // Откроем канал поддержки в клиенте Telegram для десктопа, а если он не установлен - в браузере...
             try { Process.Start(Properties.Resources.AppTgChannel); } catch { CoreLib.OpenWebPage(Properties.Resources.AppTgChannelURL); }
         }
+
+        private void SB_SteamID_Click(object sender, EventArgs e)
+        {
+            //
+        }
     }
 }
