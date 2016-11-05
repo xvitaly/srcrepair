@@ -12,6 +12,7 @@ namespace srcrepair
 {
     public partial class FrmStmSelector : Form
     {
+        public string SteamID { get; private set; }
         private List<String> SteamIDs;
 
         public FrmStmSelector(List<String> S)
