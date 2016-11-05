@@ -23,19 +23,29 @@ namespace srcrepair
 
         private void FrmStmSelector_Load(object sender, EventArgs e)
         {
+            // Указываем откуда следует брать список со SteamID...
             SD_IDSel.DataSource = SteamIDs;
         }
 
         private void ST_OK_Click(object sender, EventArgs e)
         {
-            //
+            // Возвращаем результат...
+            SteamID = SD_IDSel.Text;
+
+            // Возвращаем результат формы "успех"...
             DialogResult = DialogResult.OK;
+
+            // Закрываем форму...
+            Close();
         }
 
         private void ST_Cancel_Click(object sender, EventArgs e)
         {
-            //
+            // Возвращаем результат формы "отменено"...
             DialogResult = DialogResult.Cancel;
+
+            // Закрываем форму...
+            Close();
         }
     }
 }
