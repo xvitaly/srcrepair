@@ -14,9 +14,10 @@ namespace srcrepair
     {
         private List<String> SteamIDs;
 
-        public FrmStmSelector()
+        public FrmStmSelector(List<String> S)
         {
             InitializeComponent();
+            SteamIDs = S;
         }
 
         private void FrmStmSelector_Load(object sender, EventArgs e)
