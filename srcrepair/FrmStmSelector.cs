@@ -22,6 +22,9 @@ using System.Windows.Forms;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс формы модуля выбора SteamID.
+    /// </summary>
     public partial class FrmStmSelector : Form
     {
         /// <summary>
