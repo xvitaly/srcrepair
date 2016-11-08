@@ -16,7 +16,7 @@ installer.ico | Celldrifter | CC3 | http://www.iconspedia.com/icon/installer-181
 new.ico | VisualPharm | CC3 | http://www.iconspedia.com/icon/new--84-.html
 open.ico | VisualPharm | CC3 | http://www.iconspedia.com/icon/open--851.html
 report.ico | ArtistValley | CL | http://www.iconspedia.com/icon/task-report-hot-3-17.html
-Screwdriver.png | Babasse | http://www.iconspedia.com/icon/screwdriver-1468.html
+Screwdriver.png | Babasse | CCAA | http://www.iconspedia.com/icon/screwdriver-1468.html
 steam.ico | Valve Corporation | P | http://store.steampowered.com/
 tf2world.ico | Valve Corporation | P | http://www.teamfortress.com/
 tf-ru.ico | Valve Corporation | P | http://www.teamfortress.com/
