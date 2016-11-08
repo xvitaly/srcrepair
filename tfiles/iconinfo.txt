@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------------------------------
-—»Õ“¿ —»—: »Ãﬂ_‘¿…À¿ - »Ãﬂ_¿¬“Œ–¿ - À»÷≈Õ«»ﬂ - URL_Œ–»√»Õ¿À¿
+–°–ò–ù–¢–ê–ö–°–ò–°: –ò–ú–Ø_–§–ê–ô–õ–ê - –ò–ú–Ø_–ê–í–¢–û–†–ê - –õ–ò–¶–ï–ù–ó–ò–Ø - URL_–û–†–ò–ì–ò–ù–ê–õ–ê
 --------------------------------------------------------------------------------------------------------
 add.ico - VisualPharm - CC3 - http://www.iconspedia.com/icon/add--880.html
 --------------------------------------------------------------------------------------------------------
@@ -17,9 +17,9 @@ filesave.ico - Everaldo Coelho - LGPL - http://www.iconspedia.com/icon/save-file
 --------------------------------------------------------------------------------------------------------
 filesaveas.ico - Everaldo Coelho - LGPL - http://www.iconspedia.com/icon/file-save-as-4083.html
 --------------------------------------------------------------------------------------------------------
-Help.ico - Asher - ——3 - http://www.iconspedia.com/icon/help-8051.html
+Help.ico - Asher - –°–°3 - http://www.iconspedia.com/icon/help-8051.html
 --------------------------------------------------------------------------------------------------------
-hint.ico - Mazenl77 - ——3 - http://www.iconspedia.com/icon/help-1601.html
+hint.ico - Mazenl77 - –°–°3 - http://www.iconspedia.com/icon/help-1601.html
 --------------------------------------------------------------------------------------------------------
 Home.ico - IconsPedia - U - http://www.iconspedia.com/icon/home--205.html
 --------------------------------------------------------------------------------------------------------
@@ -59,9 +59,9 @@ HostEd.ico - GNOME icon artists - GPLv2 - http://www.iconspedia.com/icon/gnome-t
 --------------------------------------------------------------------------------------------------------
 TextEditor.png - GNOME icon artists - GPLv2 - http://www.iconspedia.com/icon/gnome-edit-undo-11006.html
 --------------------------------------------------------------------------------------------------------
-Globe.ico - PixelMixer - ——3 - http://www.iconspedia.com/icon/globe-11618.html
+Globe.ico - PixelMixer - –°–°3 - http://www.iconspedia.com/icon/globe-11618.html
 --------------------------------------------------------------------------------------------------------
-Options.ico - Ahmad Hania - ——3 - http://www.iconspedia.com/icon/options-1321-.html
+Options.ico - Ahmad Hania - –°–°3 - http://www.iconspedia.com/icon/options-1321-.html
 --------------------------------------------------------------------------------------------------------
 Config.png - Asher Abbasi - CC3 - http://www.iconspedia.com/icon/systemconfiguration-12064.html
 --------------------------------------------------------------------------------------------------------
