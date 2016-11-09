@@ -1014,9 +1014,6 @@ namespace srcrepair
             // Узнаем путь к установленному клиенту Steam...
             try { App.FullSteamPath = CoreLib.GetSteamPath(); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); ValidateAndHandle(); }
 
-            // Найдём SteamID пользователей...
-            App.SteamIDs = SteamManager.GetUserIDs(App.FullSteamPath);
-
             // Начинаем платформо-зависимые процедуры...
             ChangePrvControlState(CoreLib.IsCurrentUserAdmin());
 
@@ -2405,7 +2402,8 @@ namespace srcrepair
 
         private void SB_SteamID_Click(object sender, EventArgs e)
         {
-            //
+            // Открываем диалог выбора SteamID и прописываем пользовательский выбор...
+            try { string Result = CoreLib.OpenSteamIDSelector(SelGame.SteamIDs); if (!(String.IsNullOrWhiteSpace(Result))) { SB_SteamID.Text = Result; } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
     }
 }
