@@ -155,12 +155,12 @@ namespace srcrepair
         /// <summary>
         /// Содержит путь к установленному клиенту Steam.
         /// </summary>
-        private string SteamPath;
+        private string SteamPath { get; set; }
 
         /// <summary>
         /// Содержит найденные userid профилей Steam.
         /// </summary>
-        private List<String> SteamIDs;
+        public List<String> SteamIDs { get; private set; }
 
         /// <summary>
         /// Генерирует путь к каталогу установки игры.
