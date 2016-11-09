@@ -1014,6 +1014,9 @@ namespace srcrepair
             // Узнаем путь к установленному клиенту Steam...
             try { App.FullSteamPath = CoreLib.GetSteamPath(); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); ValidateAndHandle(); }
 
+            // Найдём SteamID пользователей...
+            App.SteamIDs = SteamManager.GetUserIDs(App.FullSteamPath);
+
             // Начинаем платформо-зависимые процедуры...
             ChangePrvControlState(CoreLib.IsCurrentUserAdmin());
 
