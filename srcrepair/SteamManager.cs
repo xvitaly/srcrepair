@@ -66,7 +66,7 @@ namespace srcrepair
                 DirectoryInfo DInfo = new DirectoryInfo(DDir);
                 foreach (DirectoryInfo SubDir in DInfo.GetDirectories())
                 {
-                    Result.Add(SubDir.FullName);
+                    Result.Add(SubDir.Name);
                 }
             }
 
