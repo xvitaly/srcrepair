@@ -17,9 +17,10 @@
  * о лицензии - в GPL.txt.
 */
 using System;
-using System.Reflection;
-using System.IO;
+using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
+using System.Reflection;
 
 namespace srcrepair
 {
@@ -37,6 +38,11 @@ namespace srcrepair
         /// Хранит полный путь к каталогу установленного клиента Steam.
         /// </summary>
         public string FullSteamPath { get; set; }
+
+        /// <summary>
+        /// Хранит обнаруженные на ПК пользовательские SteamID.
+        /// </summary>
+        public List<String> SteamIDs { get; set; }
 
         /// <summary>
         /// Хранит полный путь к каталогу с утилитой SRCRepair для служебных
