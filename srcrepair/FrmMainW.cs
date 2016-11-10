@@ -700,6 +700,13 @@ namespace srcrepair
             FP_Uninstall.Enabled = SelGame.FPSConfigs.Count > 0;
         }
 
+        private void HandleSteamIDs(string SID)
+        {
+            string Result = SelGame.GetCurrentSteamID(SID);
+            SB_SteamID.Text = Result;
+            Properties.Settings.Default.LastSteamID = Result;
+        }
+
         /// <summary>
         /// Управляет видимостью специальных кнопок модуля Менеджер HUD.
         /// </summary>
@@ -1160,6 +1167,9 @@ namespace srcrepair
 
                 // Получим параметры запуска...
                 GT_LaunchOptions.Text = SelGame.LaunchOptions;
+
+                // Получаем текущий SteamID...
+                HandleSteamIDs(Properties.Settings.Default.LastSteamID);
 
                 // Проверим, установлен ли FPS-конфиг...
                 HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
@@ -2403,7 +2413,7 @@ namespace srcrepair
         private void SB_SteamID_Click(object sender, EventArgs e)
         {
             // Открываем диалог выбора SteamID и прописываем пользовательский выбор...
-            try { string Result = CoreLib.OpenSteamIDSelector(SelGame.SteamIDs); if (!(String.IsNullOrWhiteSpace(Result))) { SB_SteamID.Text = Result; } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { string Result = CoreLib.OpenSteamIDSelector(SelGame.SteamIDs); if (!(String.IsNullOrWhiteSpace(Result))) { SB_SteamID.Text = Result; Properties.Settings.Default.LastSteamID = Result; } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
     }
 }
