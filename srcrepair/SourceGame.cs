@@ -242,6 +242,7 @@ namespace srcrepair
         /// <returns>Возвращает значение SteamID</returns>
         public string GetCurrentSteamID(string SID)
         {
+            if (SteamIDs.Count < 1) { throw new ArgumentOutOfRangeException("SteamID list is empty. Can not select one of them."); }
             return SteamIDs.IndexOf(SID) != -1 ? SID : SteamIDs[0];
         }
 
