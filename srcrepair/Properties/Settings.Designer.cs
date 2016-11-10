@@ -247,5 +247,17 @@ namespace srcrepair.Properties {
                 this["HighlightOldBackUps"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LastSteamID {
+            get {
+                return ((string)(this["LastSteamID"]));
+            }
+            set {
+                this["LastSteamID"] = value;
+            }
+        }
     }
 }
