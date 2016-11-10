@@ -234,6 +234,12 @@ namespace srcrepair
             return CoreLib.FindNewerestFile(BanlistFiles);
         }
 
+        /// <summary>
+        /// Проверяет доступен ли переданный в качестве параметра SteamID. Если нет,
+        /// то возвращает первый элемент списка из SteamID.
+        /// </summary>
+        /// <param name="SID">SteamID для проверки</param>
+        /// <returns>Возвращает значение SteamID</returns>
         public string GetCurrentSteamID(string SID)
         {
             return SteamIDs.IndexOf(SID) != -1 ? SID : SteamIDs[0];
