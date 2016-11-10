@@ -700,11 +700,23 @@ namespace srcrepair
             FP_Uninstall.Enabled = SelGame.FPSConfigs.Count > 0;
         }
 
+        /// <summary>
+        /// Управляет выводом текущего SteamID.
+        /// </summary>
+        /// <param name="SID">Сохранённый SteamID</param>
         private void HandleSteamIDs(string SID)
         {
-            string Result = SelGame.GetCurrentSteamID(SID);
-            SB_SteamID.Text = Result;
-            Properties.Settings.Default.LastSteamID = Result;
+            try
+            {
+                string Result = SelGame.GetCurrentSteamID(SID);
+                SB_SteamID.Text = Result;
+                Properties.Settings.Default.LastSteamID = Result;
+            }
+            catch (Exception Ex)
+            {
+                CoreLib.WriteStringToLog(Ex.Message);
+                SB_SteamID.Text = String.Empty;
+            }
         }
 
         /// <summary>
