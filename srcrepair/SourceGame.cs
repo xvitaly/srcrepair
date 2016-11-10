@@ -236,8 +236,7 @@ namespace srcrepair
 
         public string GetCurrentSteamID(string SID)
         {
-            int ID = SteamIDs.IndexOf(SID);
-            return ID != -1 ? SteamIDs[ID] : SID;
+            return SteamIDs.IndexOf(SID) != -1 ? SID : SteamIDs[0];
         }
 
         /// <summary>
