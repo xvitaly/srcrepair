@@ -234,6 +234,12 @@ namespace srcrepair
             return CoreLib.FindNewerestFile(BanlistFiles);
         }
 
+        public string GetCurrentSteamID(string SID)
+        {
+            int ID = SteamIDs.IndexOf(SID);
+            return ID != -1 ? SteamIDs[ID] : SID;
+        }
+
         /// <summary>
         /// Конструктор класса. Заполняет информацию о выбранном приложении.
         /// </summary>
