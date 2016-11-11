@@ -186,15 +186,9 @@ namespace srcrepair
         /// </summary>
         /// <param name="Mask">Маска файлов для поиска</param>
         /// <returns>Возвращает список найденных файлов с графическими настройками</returns>
-        private List<String> GetCloudConfigs(string Mask = "*.*cfg")
+        private List<String> GetCloudConfigs(string SteamID, string Mask = "*.*cfg")
         {
-            List<String> Result = new List<String>();
-            foreach (string ID in SteamIDs)
-            {
-                // Сгенерируем путь к конфигам в локальной копии Cloud...
-                Result.AddRange(CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", ID, GameInternalID), Mask));
-            }
-            return Result;
+            return CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", SteamID, GameInternalID), Mask);
         }
 
         /// <summary>
