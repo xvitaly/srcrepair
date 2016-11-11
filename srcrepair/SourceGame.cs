@@ -163,6 +163,11 @@ namespace srcrepair
         public List<String> SteamIDs { get; private set; }
 
         /// <summary>
+        /// Управляет текущим выбранным пользователем SteamID.
+        /// </summary>
+        private string SteamID { get; set; }
+
+        /// <summary>
         /// Генерирует путь к каталогу установки игры.
         /// </summary>
         /// <param name="AppName">Имя каталога приложения</param>
@@ -186,7 +191,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="Mask">Маска файлов для поиска</param>
         /// <returns>Возвращает список найденных файлов с графическими настройками</returns>
-        private List<String> GetCloudConfigs(string SteamID, string Mask = "*.*cfg")
+        private List<String> GetCloudConfigs(string Mask = "*.*cfg")
         {
             return CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", SteamID, GameInternalID), Mask);
         }
@@ -278,6 +283,7 @@ namespace srcrepair
             if (IsInstalled)
             {
                 SteamIDs = SteamManager.GetUserIDs(SteamPath);
+                SteamID = GetCurrentSteamID(Properties.Settings.Default.LastSteamID);
                 FullGamePath = Path.Combine(GamePath, SmallAppName);
                 FullCfgPath = Path.Combine(FullGamePath, "cfg");
                 FullBackUpDirPath = Path.Combine(AUserDir, "backups", Path.GetFileName(SmallAppName));
