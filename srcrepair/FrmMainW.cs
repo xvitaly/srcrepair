@@ -96,6 +96,7 @@ namespace srcrepair
         {
             // Очистим список игр...
             AppSelector.Items.Clear();
+            SourceGames.Clear();
 
             // При использовании нового метода поиска установленных игр, считаем их из конфига Steam...
             List<String> GameDirs = CoreLib.FormatInstallDirs(App.FullSteamPath);
