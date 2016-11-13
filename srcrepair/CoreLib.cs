@@ -40,44 +40,6 @@ namespace srcrepair
     public static class CoreLib
     {
         /// <summary>
-        /// Получает из реестра и возвращает путь к установленному клиенту Steam.
-        /// </summary>
-        /// <returns>Путь к клиенту Steam</returns>
-        public static string GetSteamPath()
-        {
-            // Подключаем реестр и открываем ключ только для чтения...
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false);
-
-            // Создаём строку для хранения результатов...
-            string ResString = String.Empty;
-
-            // Проверяем чтобы ключ реестр существовал и был доступен...
-            if (ResKey != null)
-            {
-                // Получаем значение открытого ключа...
-                object ResObj = ResKey.GetValue("SteamPath");
-
-                // Проверяем чтобы значение существовало...
-                if (ResObj != null)
-                {
-                    // Существует, возвращаем...
-                    ResString = Path.GetFullPath(Convert.ToString(ResObj));
-                }
-                else
-                {
-                    // Значение не существует, поэтому сгенерируем исключение для обработки в основном коде...
-                    throw new NullReferenceException("Exception: No InstallPath value detected! Please run Steam.");
-                }
-            }
-
-            // Закрываем открытый ранее ключ реестра...
-            ResKey.Close();
-
-            // Возвращаем результат...
-            return ResString;
-        }
-
-        /// <summary>
         /// Возвращает PID процесса если он был найден в памяти и завершает его.
         /// </summary>
         /// <param name="ProcessName">Имя образа процесса</param>

@@ -1032,7 +1032,7 @@ namespace srcrepair
             SourceGames = new List<SourceGame>();
 
             // Узнаем путь к установленному клиенту Steam...
-            try { App.FullSteamPath = CoreLib.GetSteamPath(); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); ValidateAndHandle(); }
+            try { App.FullSteamPath = SteamManager.GetSteamPath(); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); ValidateAndHandle(); }
 
             // Начинаем платформо-зависимые процедуры...
             ChangePrvControlState(CoreLib.IsCurrentUserAdmin());
