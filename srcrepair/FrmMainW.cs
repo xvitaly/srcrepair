@@ -99,7 +99,7 @@ namespace srcrepair
             SourceGames.Clear();
 
             // При использовании нового метода поиска установленных игр, считаем их из конфига Steam...
-            List<String> GameDirs = CoreLib.FormatInstallDirs(App.FullSteamPath);
+            List<String> GameDirs = SteamManager.FormatInstallDirs(App.FullSteamPath);
             
             // Формируем список для поддерживаемых игр...
             List<String> AvailableGames = new List<String>();
@@ -1106,7 +1106,7 @@ namespace srcrepair
                         try
                         {
                             // Чистим блобы...
-                            CoreLib.CleanBlobsNow(App.FullSteamPath);
+                            SteamManager.CleanBlobsNow(App.FullSteamPath);
                         }
                         catch (Exception Ex)
                         {
@@ -1123,13 +1123,13 @@ namespace srcrepair
                             if (PS_SteamLang.SelectedIndex != -1)
                             {
                                 // Всё в порядке, чистим реестр...
-                                CoreLib.CleanRegistryNow(PS_SteamLang.SelectedIndex);
+                                SteamManager.CleanRegistryNow(PS_SteamLang.SelectedIndex);
                             }
                             else
                             {
                                 // Пользователь не выбрал язык, поэтому будем использовать английский...
                                 MessageBox.Show(AppStrings.PS_NoLangSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                CoreLib.CleanRegistryNow(0);
+                                SteamManager.CleanRegistryNow(0);
                             }
                         }
                         catch (Exception Ex)
