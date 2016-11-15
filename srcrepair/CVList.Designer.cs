@@ -3436,6 +3436,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable / disable the air-velocity clamping to 110% of maximum running speed..
+        /// </summary>
+        internal static string sv_enablebunnyhopping {
+            get {
+                return ResourceManager.GetString("sv_enablebunnyhopping", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enable support for old style (HL1) server queries..
         /// </summary>
         internal static string sv_enableoldqueries {

@@ -2235,6 +2235,9 @@
   <data name="cl_crosshair_sniper_show_normal_inaccuracy" xml:space="preserve">
     <value>Includes standing inaccuracy and spread in your sniper crosshair blur.</value>
   </data>
+  <data name="sv_enablebunnyhopping" xml:space="preserve">
+    <value>Enable / disable the air-velocity clamping to 110% of maximum running speed.</value>
+  </data>
   <data name="sv_shutdown_cancel" xml:space="preserve">
     <value>Cancel a pending shutdown of dedicated server.</value>
   </data>
