@@ -3184,6 +3184,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Holding +jump causes players to automatically re-jump at the exact landing tick..
+        /// </summary>
+        internal static string sv_autobunnyhopping {
+            get {
+                return ResourceManager.GetString("sv_autobunnyhopping", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Set to 1 to autosave game on level transition. Does not affect autosave triggers..
         /// </summary>
         internal static string sv_autosave {

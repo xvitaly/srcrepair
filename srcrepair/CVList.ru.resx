@@ -3612,6 +3612,9 @@
   <data name="cl_crosshair_sniper_show_normal_inaccuracy" xml:space="preserve">
     <value>Управляет размытием движения во время прицеливания из снайперской винтовки.</value>
   </data>
+  <data name="sv_autobunnyhopping" xml:space="preserve">
+    <value>Включает / отключает режим автоматического повторного прыжка при удерживании +jump (по умолчанию - пробела).</value>
+  </data>
   <data name="sv_enablebunnyhopping" xml:space="preserve">
     <value>Разрешает / запрещает использовать распрыжку (bunny hop) на сервере.</value>
   </data>
