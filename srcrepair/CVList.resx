@@ -1258,7 +1258,7 @@
     <value>Time in seconds to allow communication with the Steam Workshop server.</value>
   </data>
   <data name="tf_teamtalk" xml:space="preserve">
-    <value>Teammates can always chat with each other while alive or dead.</value>
+    <value>Teammates can always chat with each other while alive or dead. Deprecated. Replaced by tf_gravetalk.</value>
   </data>
   <data name="tf_testrr" xml:space="preserve">
     <value>Force the player under your crosshair to speak a response rule concept.</value>

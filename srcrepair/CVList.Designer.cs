@@ -6109,7 +6109,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Teammates can always chat with each other while alive or dead..
+        ///   Looks up a localized string similar to Teammates can always chat with each other while alive or dead. Deprecated. Replaced by tf_gravetalk..
         /// </summary>
         internal static string tf_teamtalk {
             get {
