@@ -4138,6 +4138,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allow / disallow the server to prefer official pro player names when available and omit weapon tags for spectators..
+        /// </summary>
+        internal static string sv_spec_use_tournament_content_standards {
+            get {
+                return ResourceManager.GetString("sv_spec_use_tournament_content_standards", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Collect CPU usage stats..
         /// </summary>
         internal static string sv_stats {
