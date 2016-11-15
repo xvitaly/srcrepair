@@ -2280,4 +2280,7 @@
   <data name="sv_spec_post_death_additional_time" xml:space="preserve">
     <value>Allows adding a delay for spectators between the death of a spec target and the switch to a new target.</value>
   </data>
+  <data name="sv_talk_enemy_dead" xml:space="preserve">
+    <value>Enable / disable alltalk for dead players.</value>
+  </data>
 </root>

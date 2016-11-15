@@ -4156,6 +4156,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable / disable alltalk for dead players..
+        /// </summary>
+        internal static string sv_talk_enemy_dead {
+            get {
+                return ResourceManager.GetString("sv_talk_enemy_dead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tests for scripted sequences that are embedded in the world..
         /// </summary>
         internal static string sv_test_scripted_sequences {
