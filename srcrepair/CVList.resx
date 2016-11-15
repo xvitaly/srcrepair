@@ -2274,6 +2274,9 @@
   <data name="mp_spec_swapplayersides" xml:space="preserve">
     <value>Lets you swap the default player side position manually (CTs on right and T's on left).</value>
   </data>
+  <data name="spec_player_by_accountid" xml:space="preserve">
+    <value>Switches observer target to the player with SteamID64 passed as argument.</value>
+  </data>
   <data name="sv_clamp_unsafe_velocities" xml:space="preserve">
     <value>Added logic to prevent airstalling (where a player appears to float in midair by disrupting their network stream). Вisable to support surfing, etc.</value>
   </data>

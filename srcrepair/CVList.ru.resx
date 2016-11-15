@@ -3627,6 +3627,9 @@
   <data name="mp_spec_swapplayersides" xml:space="preserve">
     <value>Позволяет принудительно сменить стороны в меню наблюдателя (спецназ - справа, террористы - слева).</value>
   </data>
+  <data name="spec_player_by_accountid" xml:space="preserve">
+    <value>Позволяет наблюдателю быстро переключиться на игрока с указанным в качестве параметра SteamID64.</value>
+  </data>
   <data name="sv_autobunnyhopping" xml:space="preserve">
     <value>Включает / отключает режим автоматического повторного прыжка при удерживании +jump (по умолчанию - пробела).</value>
   </data>

@@ -3121,6 +3121,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Switches observer target to the player with SteamID64 passed as argument..
+        /// </summary>
+        internal static string spec_player_by_accountid {
+            get {
+                return ResourceManager.GetString("spec_player_by_accountid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Opens up the source recorder during demo play back and allows for high quality avi format recording..
         /// </summary>
         internal static string startmovie {
