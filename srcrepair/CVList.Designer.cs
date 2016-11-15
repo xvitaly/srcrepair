@@ -619,6 +619,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Show / hide radar and minimap on special HUD modes..
+        /// </summary>
+        internal static string cl_drawhud_force_radar {
+            get {
+                return ResourceManager.GetString("cl_drawhud_force_radar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Draw a particular material over the frame..
         /// </summary>
         internal static string cl_drawmaterial {

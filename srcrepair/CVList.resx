@@ -2235,6 +2235,9 @@
   <data name="cl_crosshair_sniper_show_normal_inaccuracy" xml:space="preserve">
     <value>Includes standing inaccuracy and spread in your sniper crosshair blur.</value>
   </data>
+  <data name="cl_drawhud_force_radar" xml:space="preserve">
+    <value>Show / hide radar and minimap on special HUD modes.</value>
+  </data>
   <data name="cl_draw_only_deathnotices" xml:space="preserve">
     <value>Draw only deathnotices.</value>
   </data>
