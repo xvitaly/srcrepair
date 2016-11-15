@@ -2232,6 +2232,9 @@
   <data name="tf_powerup_mode" xml:space="preserve">
     <value>Enable / disable Mannpower mode on the server.</value>
   </data>
+  <data name="cl_crosshair_sniper_show_normal_inaccuracy" xml:space="preserve">
+    <value>Includes standing inaccuracy and spread in your sniper crosshair blur.</value>
+  </data>
   <data name="sv_shutdown_cancel" xml:space="preserve">
     <value>Cancel a pending shutdown of dedicated server.</value>
   </data>

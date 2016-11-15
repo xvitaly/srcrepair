@@ -3609,6 +3609,9 @@
   <data name="tf_allow_server_hibernation" xml:space="preserve">
     <value>Разрешает / запрещает спящий режим выделенного сервера.</value>
   </data>
+  <data name="cl_crosshair_sniper_show_normal_inaccuracy" xml:space="preserve">
+    <value>Управляет размытием движения во время прицеливания из снайперской винтовки.</value>
+  </data>
   <data name="sv_timebetweenducks" xml:space="preserve">
     <value>Задаёт кулдаун в секундах до следующего приседания. Позволяет решить проблему со спамом приседаниями во время нахождения в воздухе.</value>
   </data>

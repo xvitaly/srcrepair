@@ -511,6 +511,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Includes standing inaccuracy and spread in your sniper crosshair blur..
+        /// </summary>
+        internal static string cl_crosshair_sniper_show_normal_inaccuracy {
+            get {
+                return ResourceManager.GetString("cl_crosshair_sniper_show_normal_inaccuracy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enable customized player sound playback..
         /// </summary>
         internal static string cl_customsounds {
