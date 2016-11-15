@@ -3121,6 +3121,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to When set, will lock the observer target to the specified SteamID64 player. The lock can be set regardless of whether or not the player is currently connected..
+        /// </summary>
+        internal static string spec_lock_to_accountid {
+            get {
+                return ResourceManager.GetString("spec_lock_to_accountid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Switches observer target to the player with SteamID64 passed as argument..
         /// </summary>
         internal static string spec_player_by_accountid {
