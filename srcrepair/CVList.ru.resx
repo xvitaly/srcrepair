@@ -3639,6 +3639,9 @@
   <data name="sv_jump_impulse" xml:space="preserve">
     <value>Контролирует начальную скорость прыжка.</value>
   </data>
+  <data name="sv_spec_post_death_additional_time" xml:space="preserve">
+    <value>Задаёт задержку, по истечении которой наблюдатель может переключиться на другого игрока после смерти текущего.</value>
+  </data>
   <data name="sv_timebetweenducks" xml:space="preserve">
     <value>Задаёт кулдаун в секундах до следующего приседания. Позволяет решить проблему со спамом приседаниями во время нахождения в воздухе.</value>
   </data>

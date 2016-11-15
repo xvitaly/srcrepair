@@ -4102,6 +4102,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allows adding a delay for spectators between the death of a spec target and the switch to a new target..
+        /// </summary>
+        internal static string sv_spec_post_death_additional_time {
+            get {
+                return ResourceManager.GetString("sv_spec_post_death_additional_time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Collect CPU usage stats..
         /// </summary>
         internal static string sv_stats {

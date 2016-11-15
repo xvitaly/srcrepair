@@ -2277,4 +2277,7 @@
   <data name="sv_clamp_unsafe_velocities" xml:space="preserve">
     <value>Added logic to prevent airstalling (where a player appears to float in midair by disrupting their network stream). Вisable to support surfing, etc.</value>
   </data>
+  <data name="sv_spec_post_death_additional_time" xml:space="preserve">
+    <value>Allows adding a delay for spectators between the death of a spec target and the switch to a new target.</value>
+  </data>
 </root>
