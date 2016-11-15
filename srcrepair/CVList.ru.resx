@@ -3663,6 +3663,9 @@
   <data name="sv_timebetweenducks" xml:space="preserve">
     <value>Задаёт кулдаун в секундах до следующего приседания. Позволяет решить проблему со спамом приседаниями во время нахождения в воздухе.</value>
   </data>
+  <data name="sv_vote_count_spectator_votes" xml:space="preserve">
+    <value>Позволяет / запрещает учитывать голоса наблюдателей при голосованиях.</value>
+  </data>
   <data name="tf_gravetalk" xml:space="preserve">
     <value>Включить / отключить возможность общаться мёртвым игрокам с живыми.</value>
   </data>

@@ -4309,6 +4309,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allow / disallow count spectators votes..
+        /// </summary>
+        internal static string sv_vote_count_spectator_votes {
+            get {
+                return ResourceManager.GetString("sv_vote_count_spectator_votes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A vote that fails cannot be voted on again during this period..
         /// </summary>
         internal static string sv_vote_failure_timer {

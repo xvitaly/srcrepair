@@ -2298,4 +2298,7 @@
   <data name="sv_talk_enemy_living" xml:space="preserve">
     <value>Enable / disable alltalk for living players.</value>
   </data>
+  <data name="sv_vote_count_spectator_votes" xml:space="preserve">
+    <value>Allow / disallow count spectators votes.</value>
+  </data>
 </root>
