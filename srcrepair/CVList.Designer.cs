@@ -3175,6 +3175,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable / disable Steam Controller haptics..
+        /// </summary>
+        internal static string steam_controller_haptics {
+            get {
+                return ResourceManager.GetString("steam_controller_haptics", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Stops the recording of a demo..
         /// </summary>
         internal static string stop {
