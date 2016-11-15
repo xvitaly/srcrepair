@@ -3609,6 +3609,9 @@
   <data name="tf_allow_server_hibernation" xml:space="preserve">
     <value>Разрешает / запрещает спящий режим выделенного сервера.</value>
   </data>
+  <data name="cl_avatar_convert_rgb" xml:space="preserve">
+    <value>Включает / отключает автоматическую конверсию картинок аватаров игроков в RGB.</value>
+  </data>
   <data name="cl_crosshair_sniper_show_normal_inaccuracy" xml:space="preserve">
     <value>Управляет размытием движения во время прицеливания из снайперской винтовки.</value>
   </data>

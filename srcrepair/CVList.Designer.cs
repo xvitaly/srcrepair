@@ -367,6 +367,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Convert players avatars to RGB format..
+        /// </summary>
+        internal static string cl_avatar_convert_rgb {
+            get {
+                return ResourceManager.GetString("cl_avatar_convert_rgb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 0/1 - burning gibs off/on..
         /// </summary>
         internal static string cl_burninggibs {
