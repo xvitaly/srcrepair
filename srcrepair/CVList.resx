@@ -2271,6 +2271,9 @@
   <data name="cl_weapon_debug_print_accuracy" xml:space="preserve">
     <value>Show accuracy debug information into game console.</value>
   </data>
+  <data name="mp_spec_swapplayersides" xml:space="preserve">
+    <value>Lets you swap the default player side position manually (CTs on right and T's on left).</value>
+  </data>
   <data name="sv_clamp_unsafe_velocities" xml:space="preserve">
     <value>Added logic to prevent airstalling (where a player appears to float in midair by disrupting their network stream). Вisable to support surfing, etc.</value>
   </data>

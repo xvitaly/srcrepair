@@ -2653,6 +2653,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Lets you swap the default player side position manually (CTs on right and T&apos;s on left)..
+        /// </summary>
+        internal static string mp_spec_swapplayersides {
+            get {
+                return ResourceManager.GetString("mp_spec_swapplayersides", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enable/Disable stalemate mode..
         /// </summary>
         internal static string mp_stalemate_enable {

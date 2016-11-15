@@ -3624,6 +3624,9 @@
   <data name="cl_weapon_debug_print_accuracy" xml:space="preserve">
     <value>Выводит отладочную информацию, связанную с точностью стрельбы игрока, в консоль.</value>
   </data>
+  <data name="mp_spec_swapplayersides" xml:space="preserve">
+    <value>Позволяет принудительно сменить стороны в меню наблюдателя (спецназ - справа, террористы - слева).</value>
+  </data>
   <data name="sv_autobunnyhopping" xml:space="preserve">
     <value>Включает / отключает режим автоматического повторного прыжка при удерживании +jump (по умолчанию - пробела).</value>
   </data>
