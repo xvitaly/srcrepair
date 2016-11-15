@@ -1573,6 +1573,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Show accuracy debug information into game console..
+        /// </summary>
+        internal static string cl_weapon_debug_print_accuracy {
+            get {
+                return ResourceManager.GetString("cl_weapon_debug_print_accuracy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Weather effects wind direction angle..
         /// </summary>
         internal static string cl_winddir {
