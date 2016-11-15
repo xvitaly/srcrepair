@@ -3615,6 +3615,9 @@
   <data name="cl_crosshair_sniper_show_normal_inaccuracy" xml:space="preserve">
     <value>Управляет размытием движения во время прицеливания из снайперской винтовки.</value>
   </data>
+  <data name="cl_crosshair_sniper_width" xml:space="preserve">
+    <value>Позволяет изменить размер перекрестия прицела снайперских винтовок для игроков с дисплеями с большим DPI, либо несколькими мониторами.</value>
+  </data>
   <data name="cl_drawhud_force_radar" xml:space="preserve">
     <value>Включает / отключает отображение радара и мини-карты в ограниченных режимах отображения HUD.</value>
   </data>

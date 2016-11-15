@@ -2268,6 +2268,9 @@
   <data name="weapon_air_spread_scale" xml:space="preserve">
     <value>Games that focus on air combat can set this to a lower value to improve weapon accuracy for players in the air.</value>
   </data>
+  <data name="cl_crosshair_sniper_width" xml:space="preserve">
+    <value>Allow increasing width of sniper crosshair lines on high dpi monitors or multimonitor setups.</value>
+  </data>
   <data name="cl_spec_use_tournament_content_standards" xml:space="preserve">
     <value>Allow / disallow the client to prefer official pro player names when available and omit weapon tags for spectators.</value>
   </data>

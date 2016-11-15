@@ -529,6 +529,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allow increasing width of sniper crosshair lines on high dpi monitors or multimonitor setups..
+        /// </summary>
+        internal static string cl_crosshair_sniper_width {
+            get {
+                return ResourceManager.GetString("cl_crosshair_sniper_width", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enable customized player sound playback..
         /// </summary>
         internal static string cl_customsounds {
