@@ -3517,6 +3517,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Controls initial upward speed of jumps..
+        /// </summary>
+        internal static string sv_jump_impulse {
+            get {
+                return ResourceManager.GetString("sv_jump_impulse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 0 - allow all players to play on game server. 1 - kick players with official assigned violation. 2 - kick players with any competitive cooldown..
         /// </summary>
         internal static string sv_kick_players_with_cooldown {

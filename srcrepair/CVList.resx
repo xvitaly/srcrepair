@@ -2247,6 +2247,9 @@
   <data name="sv_enablebunnyhopping" xml:space="preserve">
     <value>Enable / disable the air-velocity clamping to 110% of maximum running speed.</value>
   </data>
+  <data name="sv_jump_impulse" xml:space="preserve">
+    <value>Controls initial upward speed of jumps.</value>
+  </data>
   <data name="sv_shutdown_cancel" xml:space="preserve">
     <value>Cancel a pending shutdown of dedicated server.</value>
   </data>

@@ -3624,6 +3624,9 @@
   <data name="sv_enablebunnyhopping" xml:space="preserve">
     <value>Разрешает / запрещает использовать распрыжку (bunny hop) на сервере.</value>
   </data>
+  <data name="sv_jump_impulse" xml:space="preserve">
+    <value>Контролирует начальную скорость прыжка.</value>
+  </data>
   <data name="sv_timebetweenducks" xml:space="preserve">
     <value>Задаёт кулдаун в секундах до следующего приседания. Позволяет решить проблему со спамом приседаниями во время нахождения в воздухе.</value>
   </data>
