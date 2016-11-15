@@ -2232,6 +2232,9 @@
   <data name="tf_powerup_mode" xml:space="preserve">
     <value>Enable / disable Mannpower mode on the server.</value>
   </data>
+  <data name="sv_shutdown_cancel" xml:space="preserve">
+    <value>Cancel a pending shutdown of dedicated server.</value>
+  </data>
   <data name="tf_allow_server_hibernation" xml:space="preserve">
     <value>Enable / disable didicated server hibernation.</value>
   </data>

@@ -3985,6 +3985,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel a pending shutdown of dedicated server..
+        /// </summary>
+        internal static string sv_shutdown_cancel {
+            get {
+                return ResourceManager.GetString("sv_shutdown_cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Current name of the skybox texture..
         /// </summary>
         internal static string sv_skyname {
