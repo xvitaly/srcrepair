@@ -2235,6 +2235,9 @@
   <data name="cl_crosshair_sniper_show_normal_inaccuracy" xml:space="preserve">
     <value>Includes standing inaccuracy and spread in your sniper crosshair blur.</value>
   </data>
+  <data name="cl_draw_only_deathnotices" xml:space="preserve">
+    <value>Draw only deathnotices.</value>
+  </data>
   <data name="sv_autobunnyhopping" xml:space="preserve">
     <value>Holding +jump causes players to automatically re-jump at the exact landing tick.</value>
   </data>

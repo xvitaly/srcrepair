@@ -601,6 +601,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Draw only deathnotices..
+        /// </summary>
+        internal static string cl_draw_only_deathnotices {
+            get {
+                return ResourceManager.GetString("cl_draw_only_deathnotices", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hides/shows the HUD - sv_cheats 1 required..
         /// </summary>
         internal static string cl_drawhud {
