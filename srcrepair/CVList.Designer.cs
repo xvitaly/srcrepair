@@ -4075,6 +4075,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cooldown to the crouch button to reduce the visual noise from spamming crouch in the air..
+        /// </summary>
+        internal static string sv_timebetweenducks {
+            get {
+                return ResourceManager.GetString("sv_timebetweenducks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to After this many seconds without a message from a client, the client is dropped..
         /// </summary>
         internal static string sv_timeout {

@@ -2235,6 +2235,9 @@
   <data name="sv_shutdown_cancel" xml:space="preserve">
     <value>Cancel a pending shutdown of dedicated server.</value>
   </data>
+  <data name="sv_timebetweenducks" xml:space="preserve">
+    <value>Cooldown to the crouch button to reduce the visual noise from spamming crouch in the air.</value>
+  </data>
   <data name="tf_allow_server_hibernation" xml:space="preserve">
     <value>Enable / disable didicated server hibernation.</value>
   </data>
