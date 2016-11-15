@@ -3621,6 +3621,9 @@
   <data name="cl_draw_only_deathnotices" xml:space="preserve">
     <value>Включает / отключает особый режим HUD, при котором отображается только журнал убийств.</value>
   </data>
+  <data name="cl_spec_use_tournament_content_standards" xml:space="preserve">
+    <value>Включает / отключает на клиенте режим отображения настоящих имён игроков, а не никнеймов в режиме наблюдателя.</value>
+  </data>
   <data name="cl_weapon_debug_print_accuracy" xml:space="preserve">
     <value>Выводит отладочную информацию, связанную с точностью стрельбы игрока, в консоль.</value>
   </data>

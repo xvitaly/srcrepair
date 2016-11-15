@@ -1447,6 +1447,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allow / disallow the client to prefer official pro player names when available and omit weapon tags for spectators..
+        /// </summary>
+        internal static string cl_spec_use_tournament_content_standards {
+            get {
+                return ResourceManager.GetString("cl_spec_use_tournament_content_standards", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enable/disable saving screenshots to Steam..
         /// </summary>
         internal static string cl_steamscreenshots {
