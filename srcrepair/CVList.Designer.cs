@@ -4291,6 +4291,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable / disable didicated server hibernation..
+        /// </summary>
+        internal static string tf_allow_server_hibernation {
+            get {
+                return ResourceManager.GetString("tf_allow_server_hibernation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 0 - players are not allowed to switch weapons while taunting, 1 - players can switch weapons at the start of a taunt..
         /// </summary>
         internal static string tf_allow_taunt_switch {

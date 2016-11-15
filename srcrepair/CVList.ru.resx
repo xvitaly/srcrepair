@@ -3603,4 +3603,7 @@
   <data name="vgui_cache_res_files" xml:space="preserve">
     <value>Включает / отключает кэширование VGUI ресурсных файлов игрой.</value>
   </data>
+  <data name="tf_allow_server_hibernation" xml:space="preserve">
+    <value>Разрешает / запрещает спящий режим выделенного сервера.</value>
+  </data>
 </root>
