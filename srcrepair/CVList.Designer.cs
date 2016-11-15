@@ -3337,6 +3337,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Added logic to prevent airstalling (where a player appears to float in midair by disrupting their network stream). Вisable to support surfing, etc..
+        /// </summary>
+        internal static string sv_clamp_unsafe_velocities {
+            get {
+                return ResourceManager.GetString("sv_clamp_unsafe_velocities", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Clear memory of server side hints displayed to the player..
         /// </summary>
         internal static string sv_clearhinthistory {

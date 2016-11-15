@@ -3627,6 +3627,9 @@
   <data name="sv_autobunnyhopping" xml:space="preserve">
     <value>Включает / отключает режим автоматического повторного прыжка при удерживании +jump (по умолчанию - пробела).</value>
   </data>
+  <data name="sv_clamp_unsafe_velocities" xml:space="preserve">
+    <value>Позволяет разрешить / запретить скольжение игроков по ряду поверхностей.</value>
+  </data>
   <data name="sv_enablebunnyhopping" xml:space="preserve">
     <value>Разрешает / запрещает использовать распрыжку (bunny hop) на сервере.</value>
   </data>
