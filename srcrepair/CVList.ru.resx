@@ -3609,4 +3609,7 @@
   <data name="tf_allow_server_hibernation" xml:space="preserve">
     <value>Разрешает / запрещает спящий режим выделенного сервера.</value>
   </data>
+  <data name="tf_gravetalk" xml:space="preserve">
+    <value>Включить / отключить возможность общаться мёртвым игрокам с живыми.</value>
+  </data>
 </root>

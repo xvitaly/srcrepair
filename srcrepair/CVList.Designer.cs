@@ -5191,6 +5191,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Teammates can always chat with each other while alive or dead..
+        /// </summary>
+        internal static string tf_gravetalk {
+            get {
+                return ResourceManager.GetString("tf_gravetalk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Average interval between boss spawns, in seconds..
         /// </summary>
         internal static string tf_halloween_boss_spawn_interval {

@@ -2238,4 +2238,7 @@
   <data name="tf_allow_server_hibernation" xml:space="preserve">
     <value>Enable / disable didicated server hibernation.</value>
   </data>
+  <data name="tf_gravetalk" xml:space="preserve">
+    <value>Teammates can always chat with each other while alive or dead.</value>
+  </data>
 </root>
