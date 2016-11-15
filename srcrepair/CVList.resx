@@ -2247,4 +2247,7 @@
   <data name="tf_gravetalk" xml:space="preserve">
     <value>Teammates can always chat with each other while alive or dead.</value>
   </data>
+  <data name="weapon_air_spread_scale" xml:space="preserve">
+    <value>Games that focus on air combat can set this to a lower value to improve weapon accuracy for players in the air.</value>
+  </data>
 </root>

@@ -3618,4 +3618,7 @@
   <data name="tf_gravetalk" xml:space="preserve">
     <value>Включить / отключить возможность общаться мёртвым игрокам с живыми.</value>
   </data>
+  <data name="weapon_air_spread_scale" xml:space="preserve">
+    <value>Задаёт коэффициент разброса пуль при стрельбе во время нахождения в воздухе.</value>
+  </data>
 </root>

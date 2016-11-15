@@ -6424,6 +6424,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Games that focus on air combat can set this to a lower value to improve weapon accuracy for players in the air..
+        /// </summary>
+        internal static string weapon_air_spread_scale {
+            get {
+                return ResourceManager.GetString("weapon_air_spread_scale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to If set to non-zero, weapons will delete themselves after the specified time (in seconds) if no players are near..
         /// </summary>
         internal static string weapon_auto_cleanup_time {
