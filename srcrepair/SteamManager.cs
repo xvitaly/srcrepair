@@ -24,6 +24,9 @@ using Microsoft.Win32;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс для взаимодействия с клиентом Steam.
+    /// </summary>
     public static class SteamManager
     {
         /// <summary>
