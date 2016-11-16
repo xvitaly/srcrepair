@@ -150,7 +150,7 @@ namespace srcrepair
             }
 
             // Запустим очистку...
-            if (CleanDirs.Count > 0) { CoreLib.OpenCleanupWindow(CleanDirs, Text, AppStrings.PS_CleanupSuccess, BackUpDir, Properties.Resources.SteamProcName); } else { MessageBox.Show(AppStrings.AC_NoItemsSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            if (CleanDirs.Count > 0) { PluginManager.OpenCleanupWindow(CleanDirs, Text, AppStrings.PS_CleanupSuccess, BackUpDir, Properties.Resources.SteamProcName); } else { MessageBox.Show(AppStrings.AC_NoItemsSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
     }
 }
