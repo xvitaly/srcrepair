@@ -23,6 +23,9 @@ using System.Windows.Forms;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс для взаимодействия с отдельным формами и расширениями.
+    /// </summary>
     public static class PluginManager
     {
         /// <summary>
