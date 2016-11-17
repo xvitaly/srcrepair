@@ -80,6 +80,7 @@ namespace srcrepair
         /// программа, привилегии локального администратора.
         /// </summary>
         /// <returns>Булево true если есть</returns>
+        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
         public static bool IsCurrentUserAdmin()
         {
             bool Result; // Переменная для хранения результата...
