@@ -127,7 +127,7 @@ namespace srcrepair
         /// </summary>
         private void SaveToFile()
         {
-            if (CoreLib.IsCurrentUserAdmin()) { try { WriteTableToHosts(HostsFilePath); MessageBox.Show(AppStrings.AHE_Saved, PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch (Exception Ex) { CoreLib.HandleExceptionEx(String.Format(AppStrings.AHE_SaveException, HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); } } else { MessageBox.Show(String.Format(AppStrings.AHE_NoAdminRights, HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            if (ProcessManager.IsCurrentUserAdmin()) { try { WriteTableToHosts(HostsFilePath); MessageBox.Show(AppStrings.AHE_Saved, PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch (Exception Ex) { CoreLib.HandleExceptionEx(String.Format(AppStrings.AHE_SaveException, HostsFilePath), PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); } } else { MessageBox.Show(String.Format(AppStrings.AHE_NoAdminRights, HostsFilePath), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace srcrepair
         private void frmHEd_Load(object sender, EventArgs e)
         {
             // Проверим наличие прав администратора. Если они отсутствуют - отключим функции сохранения...
-            if (!(CoreLib.IsCurrentUserAdmin())) { HEd_M_Save.Enabled = false; HEd_T_Save.Enabled = false; HEd_M_RestDef.Enabled = false; HEd_Table.ReadOnly = true; HEd_T_Cut.Enabled = false; HEd_T_Paste.Enabled = false; HEd_T_RemRw.Enabled = false; }
+            if (!(ProcessManager.IsCurrentUserAdmin())) { HEd_M_Save.Enabled = false; HEd_T_Save.Enabled = false; HEd_M_RestDef.Enabled = false; HEd_Table.ReadOnly = true; HEd_T_Cut.Enabled = false; HEd_T_Paste.Enabled = false; HEd_T_RemRw.Enabled = false; }
 
             // Укажем версию в заголовке главной формы...
             Text = String.Format(Text, PluginVersion);
@@ -202,7 +202,7 @@ namespace srcrepair
         /// </summary>
         private void HEd_M_OnlHelp_Click(object sender, EventArgs e)
         {
-            CoreLib.OpenWebPage(Properties.Resources.AHE_HelpURL);
+            ProcessManager.OpenWebPage(Properties.Resources.AHE_HelpURL);
         }
 
         /// <summary>
@@ -245,7 +245,7 @@ namespace srcrepair
         {
             if (MessageBox.Show(String.Format(AppStrings.AHE_HMessg, HostsFilePath), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                CoreLib.OpenExplorer(HostsFilePath);
+                ProcessManager.OpenExplorer(HostsFilePath);
             }
         }
 

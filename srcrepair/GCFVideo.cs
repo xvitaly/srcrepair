@@ -904,7 +904,7 @@ namespace srcrepair
         public static void CreateRegBackUpNow(string RegKey, string FileName, string DestDir)
         {
             // Запускаем и ждём завершения...
-            CoreLib.StartProcessAndWait("regedit.exe", String.Format("/ea \"{0}\" {1}", Path.Combine(DestDir, String.Format("{0}_{1}.reg", FileName, CoreLib.DateTime2Unix(DateTime.Now))), RegKey));
+            ProcessManager.StartProcessAndWait("regedit.exe", String.Format("/ea \"{0}\" {1}", Path.Combine(DestDir, String.Format("{0}_{1}.reg", FileName, CoreLib.DateTime2Unix(DateTime.Now))), RegKey));
         }
 
         /// <summary>

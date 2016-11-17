@@ -167,7 +167,7 @@ namespace srcrepair
         public static void CleanRegistryNow(int LangCode)
         {
             // Удаляем ключ HKEY_LOCAL_MACHINE\Software\Valve рекурсивно (если есть права администратора)...
-            if (CoreLib.IsCurrentUserAdmin()) { Registry.LocalMachine.DeleteSubKeyTree(Path.Combine("Software", "Valve"), false); }
+            if (ProcessManager.IsCurrentUserAdmin()) { Registry.LocalMachine.DeleteSubKeyTree(Path.Combine("Software", "Valve"), false); }
 
             // Удаляем ключ HKEY_CURRENT_USER\Software\Valve рекурсивно...
             Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("Software", "Valve"), false);

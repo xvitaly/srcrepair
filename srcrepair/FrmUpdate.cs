@@ -181,7 +181,7 @@ namespace srcrepair
                     MessageBox.Show(AppStrings.UPD_UpdateSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Запускаем установку standalone-обновления...
-                    try { if (CoreLib.IsDirectoryWritable(FullAppPath)) { Process.Start(UpdateFileName); } else { CoreLib.StartWithUAC(UpdateFileName); } Result = true; } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
+                    try { if (CoreLib.IsDirectoryWritable(FullAppPath)) { Process.Start(UpdateFileName); } else { ProcessManager.StartWithUAC(UpdateFileName); } Result = true; } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
                 }
                 else
                 {

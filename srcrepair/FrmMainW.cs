@@ -1035,7 +1035,7 @@ namespace srcrepair
             try { App.FullSteamPath = SteamManager.GetSteamPath(); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); ValidateAndHandle(); }
 
             // Начинаем платформо-зависимые процедуры...
-            ChangePrvControlState(CoreLib.IsCurrentUserAdmin());
+            ChangePrvControlState(ProcessManager.IsCurrentUserAdmin());
 
             // Сохраним последний путь к Steam в файл конфигурации...
             Properties.Settings.Default.LastSteamPath = App.FullSteamPath;
@@ -1095,7 +1095,7 @@ namespace srcrepair
                 if ((PS_CleanBlobs.Checked) || (PS_CleanRegistry.Checked))
                 {
                     // Найдём и завершим работу клиента Steam...
-                    if (CoreLib.ProcessTerminate("Steam") != 0)
+                    if (ProcessManager.ProcessTerminate("Steam") != 0)
                     {
                         MessageBox.Show(AppStrings.PS_ProcessDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
@@ -1707,7 +1707,7 @@ namespace srcrepair
         private void MNUReportBug_Click(object sender, EventArgs e)
         {
             // Перейдём в баг-трекер...
-            CoreLib.OpenWebPage(Properties.Resources.AppBtURL);
+            ProcessManager.OpenWebPage(Properties.Resources.AppBtURL);
         }
 
         private void BUT_Refresh_Click(object sender, EventArgs e)
@@ -1919,27 +1919,27 @@ namespace srcrepair
         private void MNUHelp_Click(object sender, EventArgs e)
         {
             // Отобразим справочную систему в зависимости от контекста...
-            CoreLib.OpenWebPage(GetHelpWebPage(MainTabControl.SelectedIndex));
+            ProcessManager.OpenWebPage(GetHelpWebPage(MainTabControl.SelectedIndex));
         }
 
         private void MNUOpinion_Click(object sender, EventArgs e)
         {
-            CoreLib.OpenWebPage(Properties.Resources.AppURLReply);
+            ProcessManager.OpenWebPage(Properties.Resources.AppURLReply);
         }
 
         private void MNUSteamGroup_Click(object sender, EventArgs e)
         {
-            try { Process.Start(Properties.Resources.AppURLSteamGrID); } catch { CoreLib.OpenWebPage(Properties.Resources.AppURLSteamGroup); }
+            try { Process.Start(Properties.Resources.AppURLSteamGrID); } catch { ProcessManager.OpenWebPage(Properties.Resources.AppURLSteamGroup); }
         }
 
         private void MNULnkEasyCoding_Click(object sender, EventArgs e)
         {
-            CoreLib.OpenWebPage(Properties.Resources.AppURLOffSite);
+            ProcessManager.OpenWebPage(Properties.Resources.AppURLOffSite);
         }
 
         private void MNULnkTFRU_Click(object sender, EventArgs e)
         {
-            CoreLib.OpenWebPage(Properties.Resources.AppURLSpnTFSU);
+            ProcessManager.OpenWebPage(Properties.Resources.AppURLSpnTFSU);
         }
 
         private void MNUHEd_Click(object sender, EventArgs e)
@@ -2014,7 +2014,7 @@ namespace srcrepair
             else
             {
                 // Загрузим файл в Блокноте...
-                CoreLib.OpenTextEditor(ConfigFile);
+                ProcessManager.OpenTextEditor(ConfigFile);
             }
         }
 
@@ -2037,7 +2037,7 @@ namespace srcrepair
             {
                 if (BU_LVTable.SelectedItems.Count > 0)
                 {
-                    if (Regex.IsMatch(Path.GetExtension(BU_LVTable.SelectedItems[0].SubItems[4].Text), @"\.(txt|cfg|[0-9]|reg)")) { CoreLib.OpenTextEditor(Path.Combine(SelGame.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text)); } else { MessageBox.Show(AppStrings.BU_BinaryFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                    if (Regex.IsMatch(Path.GetExtension(BU_LVTable.SelectedItems[0].SubItems[4].Text), @"\.(txt|cfg|[0-9]|reg)")) { ProcessManager.OpenTextEditor(Path.Combine(SelGame.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text)); } else { MessageBox.Show(AppStrings.BU_BinaryFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
                 }
                 else
                 {
@@ -2073,7 +2073,7 @@ namespace srcrepair
                 if (BU_LVTable.SelectedItems.Count > 0)
                 {
                     // Откроем выбранный бэкап в Проводнике Windows...
-                    CoreLib.OpenExplorer(Path.Combine(SelGame.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text));
+                    ProcessManager.OpenExplorer(Path.Combine(SelGame.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text));
                 }
                 else
                 {
@@ -2105,7 +2105,7 @@ namespace srcrepair
         {
             if (!(String.IsNullOrEmpty(CFGFileName)))
             {
-                CoreLib.OpenTextEditor(CFGFileName);
+                ProcessManager.OpenTextEditor(CFGFileName);
             }
             else
             {
@@ -2184,7 +2184,7 @@ namespace srcrepair
 
         private void CE_OpenCVList_Click(object sender, EventArgs e)
         {
-            CoreLib.OpenWebPage(AppStrings.AppCVListURL);
+            ProcessManager.OpenWebPage(AppStrings.AppCVListURL);
         }
 
         private void CE_ManualBackUpCfg_Click(object sender, EventArgs e)
@@ -2354,7 +2354,7 @@ namespace srcrepair
         private void HD_Homepage_Click(object sender, EventArgs e)
         {
             // Откроем домашнюю страницу выбранного HUD...
-            if (!String.IsNullOrEmpty(SelGame.HUDMan.SelectedHUD.Site)) { CoreLib.OpenWebPage(SelGame.HUDMan.SelectedHUD.Site); }
+            if (!String.IsNullOrEmpty(SelGame.HUDMan.SelectedHUD.Site)) { ProcessManager.OpenWebPage(SelGame.HUDMan.SelectedHUD.Site); }
         }
 
         private void MNUExtClnAppCache_Click(object sender, EventArgs e)
@@ -2396,7 +2396,7 @@ namespace srcrepair
         private void HD_OpenDir_Click(object sender, EventArgs e)
         {
             // Покажем файлы установленного HUD в Проводнике...
-            CoreLib.OpenExplorer(Path.Combine(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir));
+            ProcessManager.OpenExplorer(Path.Combine(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir));
         }
 
         private void MNUExtClnSteam_Click(object sender, EventArgs e)
@@ -2420,7 +2420,7 @@ namespace srcrepair
         private void MNUSupportChat_Click(object sender, EventArgs e)
         {
             // Откроем канал поддержки в клиенте Telegram для десктопа, а если он не установлен - в браузере...
-            try { Process.Start(Properties.Resources.AppTgChannel); } catch { CoreLib.OpenWebPage(Properties.Resources.AppTgChannelURL); }
+            try { Process.Start(Properties.Resources.AppTgChannel); } catch { ProcessManager.OpenWebPage(Properties.Resources.AppTgChannelURL); }
         }
 
         private void SB_SteamID_Click(object sender, EventArgs e)
