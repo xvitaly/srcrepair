@@ -24,6 +24,9 @@ using System.Threading;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс для взаимодействия с внешними процессами.
+    /// </summary>
     public static class ProcessManager
     {
         /// <summary>
