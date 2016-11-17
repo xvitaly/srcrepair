@@ -124,5 +124,36 @@ namespace srcrepair
                 Thread.Sleep(1200);
             }
         }
+
+        /// <summary>
+        /// Открывает указанный URL в системном браузере по умолчанию.
+        /// </summary>
+        /// <param name="URI">URL для загрузки в браузере</param>
+        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
+        public static void OpenWebPage(string URI)
+        {
+            try { Process.Start(URI); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+        }
+
+        /// <summary>
+        /// Открывает указанный URL в выбранном в настройках текстовом редакторе.
+        /// </summary>
+        /// <param name="FileName">Файл для загрузки</param>
+        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
+        public static void OpenTextEditor(string FileName)
+        {
+            try { Process.Start(Properties.Settings.Default.EditorBin, FileName); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+        }
+
+        /// <summary>
+        /// Показывает выбранный файл в Проводнике Windows или другой выбранной
+        /// пользователем оболочке.
+        /// </summary>
+        /// <param name="FileName">Файл для отображения</param>
+        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
+        public static void OpenExplorer(string FileName)
+        {
+            try { Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, FileName)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+        }
     }
 }
