@@ -785,7 +785,7 @@ namespace srcrepair
         public void WriteSettings()
         {
             // Проверим существует ли файл...
-            if (!(File.Exists(VideoFileName))) { CoreLib.CreateFile(VideoFileName); }
+            if (!(File.Exists(VideoFileName))) { FileManager.CreateFile(VideoFileName); }
 
             // Начинаем сохранять содержимое объекта в файл...
             using (StreamWriter CFile = new StreamWriter(VideoFileName))

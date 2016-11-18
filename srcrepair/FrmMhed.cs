@@ -142,7 +142,7 @@ namespace srcrepair
             Text = String.Format(Text, PluginVersion);
 
             // Определим расположение файла Hosts...
-            HostsFilePath = CoreLib.GetHostsFileFullPath();
+            HostsFilePath = FileManager.GetHostsFileFullPath();
 
             // Проверим существование файла...
             if (File.Exists(HostsFilePath))

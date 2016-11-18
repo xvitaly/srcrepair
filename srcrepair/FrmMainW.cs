@@ -612,7 +612,7 @@ namespace srcrepair
         {
             try
             {
-                PS_OSDrive.Text = String.Format(PS_OSDrive.Text, CoreLib.DetectDriveFileSystem(Path.GetPathRoot(GamePath)));
+                PS_OSDrive.Text = String.Format(PS_OSDrive.Text, FileManager.DetectDriveFileSystem(Path.GetPathRoot(GamePath)));
             }
             catch (Exception Ex)
             {
@@ -662,7 +662,7 @@ namespace srcrepair
         /// <param name="SteamPath">Каталог установки Steam</param>
         private void CheckSymbolsSteam(string SteamPath)
         {
-            if (!(CoreLib.CheckNonASCII(SteamPath)))
+            if (!(FileManager.CheckNonASCII(SteamPath)))
             {
                 PS_PathSteam.ForeColor = Color.Red;
                 PS_PathSteam.Image = Properties.Resources.upd_err;
@@ -676,7 +676,7 @@ namespace srcrepair
         /// <param name="GamePath">Каталог установки игры</param>
         private void CheckSymbolsGame(string GamePath)
         {
-            if (!(CoreLib.CheckNonASCII(GamePath)))
+            if (!(FileManager.CheckNonASCII(GamePath)))
             {
                 PS_PathGame.ForeColor = Color.Red;
                 PS_PathGame.Image = Properties.Resources.upd_err;
@@ -696,7 +696,7 @@ namespace srcrepair
         /// <param name="UserDir">Флаг использования кастомного каталога</param>
         private void HandleConfigs(string GameDir, bool UserDir)
         {
-            SelGame.FPSConfigs = CoreLib.ExpandFileList(ConfigManager.ListFPSConfigs(GameDir, UserDir), true);
+            SelGame.FPSConfigs = FileManager.ExpandFileList(ConfigManager.ListFPSConfigs(GameDir, UserDir), true);
             GT_Warning.Visible = SelGame.FPSConfigs.Count > 0;
             FP_Uninstall.Enabled = SelGame.FPSConfigs.Count > 0;
         }
@@ -1348,7 +1348,7 @@ namespace srcrepair
                         // Создадим бэкап файла с графическими настройками...
                         if (Properties.Settings.Default.SafeCleanup)
                         {
-                            CoreLib.CreateConfigBackUp(SelGame.VideoCfgFiles, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
+                            FileManager.CreateConfigBackUp(SelGame.VideoCfgFiles, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
                         }
 
                         try
@@ -1414,7 +1414,7 @@ namespace srcrepair
                         if (SelGame.FPSConfigs.Count > 0)
                         {
                             // Создаём резервную копию...
-                            CoreLib.CompressFiles(SelGame.FPSConfigs, CoreLib.GenerateBackUpFileName(SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg));
+                            FileManager.CompressFiles(SelGame.FPSConfigs, FileManager.GenerateBackUpFileName(SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg));
                         }
                     }
 
@@ -1509,7 +1509,7 @@ namespace srcrepair
                 if (Properties.Settings.Default.SafeCleanup)
                 {
                     // Создаём резервную копию...
-                    if (File.Exists(CFGFileName)) { CoreLib.CreateConfigBackUp(CoreLib.SingleToArray(CFGFileName), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg); }
+                    if (File.Exists(CFGFileName)) { FileManager.CreateConfigBackUp(CoreLib.SingleToArray(CFGFileName), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg); }
                 }
 
                 // Начинаем сохранение в тот же файл...
@@ -1619,14 +1619,14 @@ namespace srcrepair
                     else
                     {
                         // Создадим бэкап файла с графическими настройками...
-                        if (Properties.Settings.Default.SafeCleanup) { CoreLib.CreateConfigBackUp(SelGame.VideoCfgFiles, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto); }
+                        if (Properties.Settings.Default.SafeCleanup) { FileManager.CreateConfigBackUp(SelGame.VideoCfgFiles, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto); }
 
                         // Помечаем его на удаление...
                         CleanDirs.AddRange(SelGame.VideoCfgFiles);
                     }
 
                     // Создаём резервную копию...
-                    if (Properties.Settings.Default.SafeCleanup) { CoreLib.CreateConfigBackUp(SelGame.CloudConfigs, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg); }
+                    if (Properties.Settings.Default.SafeCleanup) { FileManager.CreateConfigBackUp(SelGame.CloudConfigs, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg); }
 
                     // Помечаем конфиги игры на удаление...
                     CleanDirs.Add(Path.Combine(SelGame.FullCfgPath, "config.cfg"));
@@ -1838,7 +1838,7 @@ namespace srcrepair
                     else
                     {
                         // Проверяем существование файла с графическими настройками игры...
-                        CoreLib.CreateConfigBackUp(SelGame.VideoCfgFiles, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVideo);
+                        FileManager.CreateConfigBackUp(SelGame.VideoCfgFiles, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVideo);
                     }
                     
                     // Выводим сообщение об успехе...
@@ -2193,7 +2193,7 @@ namespace srcrepair
             {
                 if (File.Exists(CFGFileName))
                 {
-                    CoreLib.CreateConfigBackUp(CoreLib.SingleToArray(CFGFileName), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
+                    FileManager.CreateConfigBackUp(CoreLib.SingleToArray(CFGFileName), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
                     MessageBox.Show(String.Format(AppStrings.CE_BackUpCreated, Path.GetFileName(CFGFileName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -2280,7 +2280,7 @@ namespace srcrepair
 
             // Выводим информацию о последнем обновлении HUD...
             HD_LastUpdate.Visible = Success;
-            if (Success) { HD_LastUpdate.Text = String.Format(AppStrings.HD_LastUpdateInfo, CoreLib.Unix2DateTime(SelGame.HUDMan.SelectedHUD.LastUpdate).ToLocalTime()); }
+            if (Success) { HD_LastUpdate.Text = String.Format(AppStrings.HD_LastUpdateInfo, FileManager.Unix2DateTime(SelGame.HUDMan.SelectedHUD.LastUpdate).ToLocalTime()); }
 
             // Проверяем установлен ли выбранный HUD...
             SetHUDButtons(HUDManager.CheckInstalledHUD(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir));

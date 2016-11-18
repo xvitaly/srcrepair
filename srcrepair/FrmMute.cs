@@ -149,7 +149,7 @@ namespace srcrepair
         {
             try
             {
-                if (Properties.Settings.Default.SafeCleanup) { if (File.Exists(Banlist)) { CoreLib.CreateConfigBackUp(CoreLib.SingleToArray(Banlist), BackUpDir, Properties.Resources.BU_PrefixVChat); } }
+                if (Properties.Settings.Default.SafeCleanup) { if (File.Exists(Banlist)) { FileManager.CreateConfigBackUp(CoreLib.SingleToArray(Banlist), BackUpDir, Properties.Resources.BU_PrefixVChat); } }
                 WriteTableToFile(Banlist); MessageBox.Show(AppStrings.MM_SavedOK, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.MM_SaveException, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }

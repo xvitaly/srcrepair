@@ -129,7 +129,7 @@ namespace srcrepair
             }
 
             // Удаляем пустые каталоги...
-            foreach (string Dir in RemDirs) { CoreLib.RemoveEmptyDirectories(Path.GetDirectoryName(Dir)); }
+            foreach (string Dir in RemDirs) { FileManager.RemoveEmptyDirectories(Path.GetDirectoryName(Dir)); }
 
         }
 

@@ -193,7 +193,7 @@ namespace srcrepair
         /// <returns>Возвращает список найденных файлов с графическими настройками</returns>
         private List<String> GetCloudConfigs(string Mask = "*.*cfg")
         {
-            return CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", SteamID, GameInternalID), Mask);
+            return FileManager.FindFiles(Path.Combine(SteamPath, "userdata", SteamID, GameInternalID), Mask);
         }
 
         /// <summary>
@@ -222,7 +222,7 @@ namespace srcrepair
         /// </summary>
         public string GetActualVideoFile()
         {
-            return CoreLib.FindNewerestFile(VideoCfgFiles);
+            return FileManager.FindNewerestFile(VideoCfgFiles);
         }
 
         /// <summary>
@@ -230,7 +230,7 @@ namespace srcrepair
         /// </summary>
         public string GetActualBanlistFile()
         {
-            return CoreLib.FindNewerestFile(BanlistFiles);
+            return FileManager.FindNewerestFile(BanlistFiles);
         }
 
         /// <summary>

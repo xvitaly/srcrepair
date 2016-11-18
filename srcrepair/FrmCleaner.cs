@@ -266,7 +266,7 @@ namespace srcrepair
                 if (Properties.Settings.Default.PackBeforeCleanup || ForceBackUp)
                 {
                     Invoke((MethodInvoker)delegate() { CM_Info.Text = AppStrings.PS_ProgressArchive; });
-                    if (!CoreLib.CompressFiles(DeleteQueue, CoreLib.GenerateBackUpFileName(FullBackUpDirPath, Properties.Resources.BU_PrefixDef)))
+                    if (!FileManager.CompressFiles(DeleteQueue, FileManager.GenerateBackUpFileName(FullBackUpDirPath, Properties.Resources.BU_PrefixDef)))
                     {
                         MessageBox.Show(AppStrings.PS_ArchFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -293,7 +293,7 @@ namespace srcrepair
                     {
                         foreach (string Dir in CleanDirs)
                         {
-                            CoreLib.RemoveEmptyDirectories(Path.GetDirectoryName(Dir));
+                            FileManager.RemoveEmptyDirectories(Path.GetDirectoryName(Dir));
                         }
                     }
                     catch (Exception Ex)

@@ -95,13 +95,13 @@ namespace srcrepair
             
             // Генерируем пути к каталогам для вреенных файлов и создаём их...
             string TempDir = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
-            string CrDt = CoreLib.DateTime2Unix(DateTime.Now);
+            string CrDt = FileManager.DateTime2Unix(DateTime.Now);
             if (!Directory.Exists(TempDir)) { Directory.CreateDirectory(TempDir); }
             
             // Генерируем именя файлов с полными путями...
             string RepName = String.Format("report_{0}.{1}", CrDt, "txt");
             string ArchName = Path.Combine(RepDir, Path.ChangeExtension(RepName, ".zip"));
-            string HostsFile = CoreLib.GetHostsFileFullPath();
+            string HostsFile = FileManager.GetHostsFileFullPath();
             string FNameRep = Path.Combine(TempDir, RepName);
             string FNamePing = Path.Combine(TempDir, String.Format("ping_{0}.log", CrDt));
             string FNameTrace = Path.Combine(TempDir, String.Format("traceroute_{0}.log", CrDt));

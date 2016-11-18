@@ -80,7 +80,7 @@ namespace srcrepair
                     // Если файл не существует, создадим его и сразу закроем...
                     if (!File.Exists(DebugFileName))
                     {
-                        CreateFile(DebugFileName);
+                        FileManager.CreateFile(DebugFileName);
                     }
                     
                     // Начинаем записывать в лог-файл...

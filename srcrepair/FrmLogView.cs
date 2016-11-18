@@ -106,7 +106,7 @@ namespace srcrepair
             LV_LogArea.Clear();
 
             // Очистим файл журнала...
-            try { if (File.Exists(LogFileName)) { File.Delete(LogFileName); CoreLib.CreateFile(LogFileName); } } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.LV_ClearEx, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+            try { if (File.Exists(LogFileName)) { File.Delete(LogFileName); FileManager.CreateFile(LogFileName); } } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.LV_ClearEx, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
         }
     }
 }

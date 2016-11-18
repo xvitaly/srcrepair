@@ -100,7 +100,7 @@ namespace srcrepair
             bool Result = false;
 
             // Проверяем наличие прав на запись в каталог...
-            if (CoreLib.IsDirectoryWritable(FullAppPath))
+            if (FileManager.IsDirectoryWritable(FullAppPath))
             {
                 // Генерируем пути к файлам...
                 string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(FullAppPath, ResFileName));
@@ -112,7 +112,7 @@ namespace srcrepair
                 try
                 {
                     // Проверяем контрольную сумму...
-                    if (CoreLib.CalculateFileMD5(UpdateTempFile) == UpdateHash)
+                    if (FileManager.CalculateFileMD5(UpdateTempFile) == UpdateHash)
                     {
                         // Копируем загруженный файл...
                         File.Copy(UpdateTempFile, UpdateFileName, true);
@@ -172,7 +172,7 @@ namespace srcrepair
             if (File.Exists(UpdateFileName))
             {
                 // Проверяем хеш загруженного файла с эталоном...
-                if (CoreLib.CalculateFileMD5(UpdateFileName) == UpdateHash)
+                if (FileManager.CalculateFileMD5(UpdateFileName) == UpdateHash)
                 {
                     // Обновляем дату последней проверки обновлений...
                     UpdateTimeSetApp();
@@ -181,7 +181,7 @@ namespace srcrepair
                     MessageBox.Show(AppStrings.UPD_UpdateSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Запускаем установку standalone-обновления...
-                    try { if (CoreLib.IsDirectoryWritable(FullAppPath)) { Process.Start(UpdateFileName); } else { ProcessManager.StartWithUAC(UpdateFileName); } Result = true; } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
+                    try { if (FileManager.IsDirectoryWritable(FullAppPath)) { Process.Start(UpdateFileName); } else { ProcessManager.StartWithUAC(UpdateFileName); } Result = true; } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
                 }
                 else
                 {

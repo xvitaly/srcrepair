@@ -87,7 +87,7 @@ namespace srcrepair
             List<String> Result = new List<String>();
             foreach (string ID in GetUserIDs(SteamPath))
             {
-                Result.AddRange(CoreLib.FindFiles(Path.Combine(SteamPath, "userdata", ID, "config"), "localconfig.vdf"));
+                Result.AddRange(FileManager.FindFiles(Path.Combine(SteamPath, "userdata", ID, "config"), "localconfig.vdf"));
             }
             return Result;
         }

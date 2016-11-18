@@ -168,7 +168,7 @@ namespace srcrepair
         /// <returns>Возвращает булево наличия обновлений</returns>
         public bool CheckGameDBUpdate()
         {
-            return CoreLib.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Resources.GameListFile)) != GameUpdateHash;
+            return FileManager.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Resources.GameListFile)) != GameUpdateHash;
         }
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace srcrepair
         /// <returns>Возвращает булево наличия обновлений</returns>
         public bool CheckHUDUpdate()
         {
-            return CoreLib.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Resources.HUDDbFile)) != HUDUpdateHash;
+            return FileManager.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Resources.HUDDbFile)) != HUDUpdateHash;
         }
 
         /// <summary>
@@ -186,7 +186,7 @@ namespace srcrepair
         /// <returns>Возвращает булево наличия обновлений</returns>
         public bool CheckCfgUpdate()
         {
-            return CoreLib.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Resources.CfgDbFile)) != CfgUpdateHash;
+            return FileManager.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Resources.CfgDbFile)) != CfgUpdateHash;
         }
 
         /// <summary>
