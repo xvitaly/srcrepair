@@ -28,6 +28,9 @@ using Ionic.Zip;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс для работы с отдельными файлами и каталогами.
+    /// </summary>
     public static class FileManager
     {
         /// <summary>
