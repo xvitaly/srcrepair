@@ -99,6 +99,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CVList.ru.resx</DependentUpon>
     </Compile>
+    <Compile Include="FileManager.cs" />
     <Compile Include="FrmArchWrk.cs">
       <SubType>Form</SubType>
     </Compile>
