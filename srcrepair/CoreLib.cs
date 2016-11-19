@@ -100,14 +100,16 @@ namespace srcrepair
         /// <param name="MsgIcon">Тип иконки: предупреждение, ошибка и т.д.</param>
         public static void HandleExceptionEx(string FrindlyMsg, string WTitle, string DevMsg, string DevMethod, MessageBoxIcon MsgIcon)
         {
-            string ResultString = String.Format("{0} Raised by: {1}.", DevMsg, DevMethod);
+            // Сгенерируем строку с текстом сообщения...
+            string ResultString = String.Format(AppStrings.AppExceptionTemplate, DevMsg, DevMethod);
+
+            // Для режима отладки покажем сообщение, понятное разработчикам, в остальное время - обычное...
             #if DEBUG
-            // Для режима отладки покажем сообщение, понятное разработчикам...
             MessageBox.Show(ResultString, WTitle, MessageBoxButtons.OK, MsgIcon);
             #else
-            // Для обычного режима покажем обычное сообщение...
             MessageBox.Show(FrindlyMsg, Properties.Resources.AppName, MessageBoxButtons.OK, MsgIcon);
             #endif
+            
             // Запишем в файл...
             WriteStringToLog(ResultString);
         }
