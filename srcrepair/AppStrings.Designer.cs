@@ -178,6 +178,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception &quot;{0}&quot; raised by: &quot;{1}&quot;..
+        /// </summary>
+        internal static string AppExceptionTemplate {
+            get {
+                return ResourceManager.GetString("AppExceptionTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Warning! Failed to get data from game database. Please try again or select another game!.
         /// </summary>
         internal static string AppFailedToGetData {

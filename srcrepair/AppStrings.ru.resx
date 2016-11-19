@@ -835,4 +835,8 @@
     <value>Обновление базы данных было успешно установлено!</value>
     <comment>Сообщение при успешной установке базы данных</comment>
   </data>
+  <data name="AppExceptionTemplate" xml:space="preserve">
+    <value>Исключение "{0}" вызвано: "{1}".</value>
+    <comment>Шаблон исключения для вывода в режиме отладки и записи в журнал.</comment>
+  </data>
 </root>

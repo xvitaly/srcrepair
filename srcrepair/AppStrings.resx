@@ -657,4 +657,7 @@
   <data name="UPD_UpdateDBSuccessful" xml:space="preserve">
     <value>The database has been updated successfully!</value>
   </data>
+  <data name="AppExceptionTemplate" xml:space="preserve">
+    <value>Exception "{0}" raised by: "{1}".</value>
+  </data>
 </root>
