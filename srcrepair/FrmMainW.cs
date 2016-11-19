@@ -1421,7 +1421,7 @@ namespace srcrepair
                     try
                     {
                         // Устанавливаем...
-                        CoreLib.InstallConfigNow(SelGame.CFGMan.FPSConfig.FileName, App.FullAppPath, SelGame.FullGamePath, SelGame.IsUsingUserDir);
+                        ConfigManager.InstallConfigNow(SelGame.CFGMan.FPSConfig.FileName, App.FullAppPath, SelGame.FullGamePath, SelGame.IsUsingUserDir);
                         
                         // Выводим сообщение об успешной установке...
                         MessageBox.Show(AppStrings.FP_InstallSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);

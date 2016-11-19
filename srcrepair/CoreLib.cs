@@ -204,24 +204,5 @@ namespace srcrepair
             Result.Add(Str);
             return Result;
         }
-
-        /// <summary>
-        /// Устанавливает требуемый FPS-конфиг.
-        /// </summary>
-        /// <param name="ConfName">Имя конфига</param>
-        /// <param name="AppPath">Путь к программе SRC Repair</param>
-        /// <param name="GameDir">Путь к каталогу игры</param>
-        /// <param name="CustmDir">Флаг использования игрой н. с. к.</param>
-        public static void InstallConfigNow(string ConfName, string AppPath, string GameDir, bool CustmDir)
-        {
-            // Генерируем путь к каталогу установки конфига...
-            string DestPath = Path.Combine(GameDir, CustmDir ? Path.Combine("custom", Properties.Settings.Default.UserCustDirName) : String.Empty, "cfg");
-
-            // Проверяем существование каталога и если его не существует - создаём...
-            if (!Directory.Exists(DestPath)) { Directory.CreateDirectory(DestPath); }
-
-            // Устанавливаем...
-            File.Copy(Path.Combine(AppPath, "cfgs", ConfName), Path.Combine(DestPath, "autoexec.cfg"), true);
-        }
     }
 }
