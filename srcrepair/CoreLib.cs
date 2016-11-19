@@ -176,24 +176,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Получает содержимое текстового файла в массив построчно.
-        /// </summary>
-        /// <param name="FileName">Внутреннее имя ресурсного файла</param>
-        /// <returns>Массив с построчным содержимым текстового файла</returns>
-        public static List<String> ReadRowsFromResource(string FileName)
-        {
-            List<String> Template = new List<String>();
-            using (StreamReader Reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream(FileName)))
-            {
-                while (Reader.Peek() >= 0)
-                {
-                    Template.Add(Reader.ReadLine());
-                }
-            }
-            return Template;
-        }
-
-        /// <summary>
         /// Возвращает массив для передачи в особые функции
         /// </summary>
         /// <param name="Str">Строка для создания</param>
