@@ -1669,10 +1669,7 @@ namespace srcrepair
             if ((AppSelector.Items.Count > 0) && (AppSelector.SelectedIndex != -1))
             {
                 // Запускаем форму создания отчёта для Техподдержки...
-                using (FrmRepBuilder RBF = new FrmRepBuilder(App.AppUserDir, App.FullSteamPath, SelGame.FullCfgPath))
-                {
-                    RBF.ShowDialog();
-                }
+                PluginManager.FormShowRepBuilder(App.AppUserDir, App.FullSteamPath, SelGame.FullCfgPath);
             }
             else
             {

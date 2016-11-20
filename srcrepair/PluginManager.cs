@@ -114,5 +114,13 @@ namespace srcrepair
             // Возвращаем результат...
             return Result;
         }
+
+        public static void FormShowRepBuilder(string AppUserDir, string FullSteamPath, string FullCfgPath)
+        {
+            using (FrmRepBuilder RBF = new FrmRepBuilder(AppUserDir, FullSteamPath, FullCfgPath))
+            {
+                RBF.ShowDialog();
+            }
+        }
     }
 }
