@@ -1936,10 +1936,7 @@ namespace srcrepair
         private void MNUHEd_Click(object sender, EventArgs e)
         {
             // Отобразим форму редактора файла hosts...
-            using (FrmHEd HEdFrm = new FrmHEd())
-            {
-                HEdFrm.ShowDialog();
-            }
+            PluginManager.FormShowHostsEditor();
         }
 
         private void CE_RmRow_Click(object sender, EventArgs e)

@@ -153,5 +153,13 @@ namespace srcrepair
                 AboutFrm.ShowDialog();
             }
         }
+
+        public static void FormShowHostsEditor()
+        {
+            using (FrmHEd HEdFrm = new FrmHEd())
+            {
+                HEdFrm.ShowDialog();
+            }
+        }
     }
 }
