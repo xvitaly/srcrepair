@@ -2381,10 +2381,7 @@ namespace srcrepair
         private void MNUExtClnSteam_Click(object sender, EventArgs e)
         {
             // Запустим модуль очистки кэшей Steam...
-            using (FrmStmClean StmCln = new FrmStmClean(App.FullSteamPath, SelGame.FullBackUpDirPath))
-            {
-                StmCln.ShowDialog();
-            }
+            PluginManager.FormShowStmCleaner(App.FullSteamPath, SelGame.FullBackUpDirPath);
         }
 
         private void MNUMuteMan_Click(object sender, EventArgs e)

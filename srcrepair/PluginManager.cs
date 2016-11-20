@@ -212,5 +212,13 @@ namespace srcrepair
                 Lv.ShowDialog();
             }
         }
+
+        public static void FormShowStmCleaner(string FullSteamPath, string FullBackUpDirPath)
+        {
+            using (FrmStmClean StmCln = new FrmStmClean(FullSteamPath, FullBackUpDirPath))
+            {
+                StmCln.ShowDialog();
+            }
+        }
     }
 }
