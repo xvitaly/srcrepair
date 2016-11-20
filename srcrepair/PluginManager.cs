@@ -128,5 +128,13 @@ namespace srcrepair
                 RBF.ShowDialog();
             }
         }
+
+        public static void FormShowInstaller(string FullGamePath, bool IsUsingUserDir, string CustomInstallDir)
+        {
+            using (FrmInstaller InstF = new FrmInstaller(FullGamePath, IsUsingUserDir, CustomInstallDir))
+            {
+                InstF.ShowDialog();
+            }
+        }
     }
 }

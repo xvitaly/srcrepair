@@ -1680,10 +1680,7 @@ namespace srcrepair
         private void MNUInstaller_Click(object sender, EventArgs e)
         {
             // Запускаем форму установщика спреев, демок и конфигов...
-            using (FrmInstaller InstF = new FrmInstaller(SelGame.FullGamePath, SelGame.IsUsingUserDir, SelGame.CustomInstallDir))
-            {
-                InstF.ShowDialog();
-            }
+            PluginManager.FormShowInstaller(SelGame.FullGamePath, SelGame.IsUsingUserDir, SelGame.CustomInstallDir);
         }
 
         private void MNUExit_Click(object sender, EventArgs e)
