@@ -226,6 +226,11 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Вызывает форму модуля управления отключёнными игроками.
+        /// </summary>
+        /// <param name="Banlist">Путь к базе отключённых игроков</param>
+        /// <param name="FullBackUpDirPath">Путь к каталогу хранения резервных копий</param>
         public static void FormShowMuteManager(string Banlist, string FullBackUpDirPath)
         {
             using (FrmMute FMm = new FrmMute(Banlist, FullBackUpDirPath))
