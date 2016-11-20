@@ -189,5 +189,13 @@ namespace srcrepair
                 OptsFrm.ShowDialog();
             }
         }
+
+        public static void FormShowKBHelper()
+        {
+            using (FrmKBHelper KBHlp = new FrmKBHelper())
+            {
+                KBHlp.ShowDialog();
+            }
+        }
     }
 }
