@@ -179,6 +179,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Вызывает форму модуля настроек программы.
+        /// </summary>
         public static void FormShowOptions()
         {
             using (FrmOptions OptsFrm = new FrmOptions())
