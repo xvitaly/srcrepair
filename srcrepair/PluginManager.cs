@@ -115,6 +115,12 @@ namespace srcrepair
             return Result;
         }
 
+        /// <summary>
+        /// Вызывает форму модуля создания отчётов для Техподдержки.
+        /// </summary>
+        /// <param name="AppUserDir">Путь каталогу пользователя программы</param>
+        /// <param name="FullSteamPath">Путь к каталогу установки Steam</param>
+        /// <param name="FullCfgPath">Путь к каталогу с конфигами выбранной игры</param>
         public static void FormShowRepBuilder(string AppUserDir, string FullSteamPath, string FullCfgPath)
         {
             using (FrmRepBuilder RBF = new FrmRepBuilder(AppUserDir, FullSteamPath, FullCfgPath))
