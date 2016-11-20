@@ -118,7 +118,7 @@ namespace srcrepair
         /// <summary>
         /// Вызывает форму модуля создания отчётов для Техподдержки.
         /// </summary>
-        /// <param name="AppUserDir">Путь каталогу пользователя программы</param>
+        /// <param name="AppUserDir">Путь к каталогу пользователя программы</param>
         /// <param name="FullSteamPath">Путь к каталогу установки Steam</param>
         /// <param name="FullCfgPath">Путь к каталогу с конфигами выбранной игры</param>
         public static void FormShowRepBuilder(string AppUserDir, string FullSteamPath, string FullCfgPath)
@@ -129,6 +129,12 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Вызывает форму модуля установки кастомного контента в игру.
+        /// </summary>
+        /// <param name="FullGamePath">Путь к каталогу установки выбранной игры</param>
+        /// <param name="IsUsingUserDir">Использует ли игра отдельный кастомный каталог</param>
+        /// <param name="CustomInstallDir">Путь к каталогу кастомных файлов</param>
         public static void FormShowInstaller(string FullGamePath, bool IsUsingUserDir, string CustomInstallDir)
         {
             using (FrmInstaller InstF = new FrmInstaller(FullGamePath, IsUsingUserDir, CustomInstallDir))
