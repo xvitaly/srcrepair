@@ -201,6 +201,10 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Вызывает форму модуля просмотра отладочных журналов.
+        /// </summary>
+        /// <param name="LogFile">Путь к файлу журнала</param>
         public static void FormShowLogViewer(string LogFile)
         {
             using (FrmLogView Lv = new FrmLogView(LogFile))
