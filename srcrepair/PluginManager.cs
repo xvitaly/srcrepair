@@ -213,6 +213,11 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Вызывает форму модуля очистки кэшей клиента Steam.
+        /// </summary>
+        /// <param name="FullSteamPath">Путь к каталогу установки Steam</param>
+        /// <param name="FullBackUpDirPath">Путь к каталогу хранения резервных копий</param>
         public static void FormShowStmCleaner(string FullSteamPath, string FullBackUpDirPath)
         {
             using (FrmStmClean StmCln = new FrmStmClean(FullSteamPath, FullBackUpDirPath))
