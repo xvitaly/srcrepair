@@ -190,6 +190,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Вызывает форму модуля отключения системных клавиш.
+        /// </summary>
         public static void FormShowKBHelper()
         {
             using (FrmKBHelper KBHlp = new FrmKBHelper())
