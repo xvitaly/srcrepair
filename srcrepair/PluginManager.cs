@@ -200,5 +200,13 @@ namespace srcrepair
                 KBHlp.ShowDialog();
             }
         }
+
+        public static void FormShowLogViewer(string LogFile)
+        {
+            using (FrmLogView Lv = new FrmLogView(LogFile))
+            {
+                Lv.ShowDialog();
+            }
+        }
     }
 }
