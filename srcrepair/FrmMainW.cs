@@ -1750,7 +1750,7 @@ namespace srcrepair
                                 break;
                             case ".bud":
                                 // Распаковываем архив с выводом прогресса...
-                                PluginManager.ExtractFiles(Path.Combine(SelGame.FullBackUpDirPath, FName), Path.GetPathRoot(App.FullSteamPath));
+                                PluginManager.FormShowArchiveExtract(Path.Combine(SelGame.FullBackUpDirPath, FName), Path.GetPathRoot(App.FullSteamPath));
                                 
                                 // Обновляем список FPS-конфигов...
                                 HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
@@ -2307,10 +2307,10 @@ namespace srcrepair
                         }
 
                         // Начинаем загрузку если файл не существует...
-                        if (!File.Exists(SelGame.HUDMan.SelectedHUD.LocalFile)) { PluginManager.DownloadFileEx(Properties.Settings.Default.HUDUseUpstream ? SelGame.HUDMan.SelectedHUD.UpURI : SelGame.HUDMan.SelectedHUD.URI, SelGame.HUDMan.SelectedHUD.LocalFile); }
+                        if (!File.Exists(SelGame.HUDMan.SelectedHUD.LocalFile)) { PluginManager.FormShowDownloader(Properties.Settings.Default.HUDUseUpstream ? SelGame.HUDMan.SelectedHUD.UpURI : SelGame.HUDMan.SelectedHUD.URI, SelGame.HUDMan.SelectedHUD.LocalFile); }
 
                         // Распаковываем загруженный архив с файлами HUD...
-                        PluginManager.ExtractFiles(SelGame.HUDMan.SelectedHUD.LocalFile, Path.Combine(SelGame.CustomInstallDir, "hudtemp"));
+                        PluginManager.FormShowArchiveExtract(SelGame.HUDMan.SelectedHUD.LocalFile, Path.Combine(SelGame.CustomInstallDir, "hudtemp"));
 
                         // Запускаем установку пакета в отдельном потоке...
                         if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(); }

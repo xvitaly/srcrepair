@@ -107,7 +107,7 @@ namespace srcrepair
                 string UpdateTempFile = Path.GetTempFileName();
 
                 // Загружаем файл с сервера...
-                PluginManager.DownloadFileEx(UpdateURL, UpdateTempFile);
+                PluginManager.FormShowDownloader(UpdateURL, UpdateTempFile);
 
                 try
                 {
@@ -166,7 +166,7 @@ namespace srcrepair
             string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(AppUserDir, Path.GetFileName(UpdateURL)));
 
             // Загружаем файл асинхронно...
-            PluginManager.DownloadFileEx(UpMan.AppUpdateURL, UpdateFileName);
+            PluginManager.FormShowDownloader(UpMan.AppUpdateURL, UpdateFileName);
 
             // Выполняем проверки и устанавливаем обновление...
             if (File.Exists(UpdateFileName))

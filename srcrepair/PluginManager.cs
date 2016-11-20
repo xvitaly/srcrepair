@@ -33,7 +33,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="URI">URL для загрузки</param>
         /// <param name="FileName">Путь для сохранения</param>
-        public static void DownloadFileEx(string URI, string FileName)
+        public static void FormShowDownloader(string URI, string FileName)
         {
             using (FrmDnWrk DnW = new FrmDnWrk(URI, FileName))
             {
@@ -47,7 +47,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="ArchName">Имя архивного файла с указанием полного пути</param>
         /// <param name="DestDir">Каталог назначения</param>
-        public static void ExtractFiles(string ArchName, string DestDir)
+        public static void FormShowArchiveExtract(string ArchName, string DestDir)
         {
             using (FrmArchWrk ArW = new FrmArchWrk(ArchName, DestDir))
             {
