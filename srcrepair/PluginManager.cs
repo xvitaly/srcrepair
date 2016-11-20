@@ -81,7 +81,7 @@ namespace srcrepair
         /// Удаляет указанные файлы или каталоги с выводом прогресса.
         /// </summary>
         /// <param name="Path">Пути к каталогам или файлам для очистки</param>
-        public static void RemoveFileDirectoryEx(List<String> Paths)
+        public static void FormShowRemoveFiles(List<String> Paths)
         {
             using (FrmRmWrk Rm = new FrmRmWrk(Paths))
             {

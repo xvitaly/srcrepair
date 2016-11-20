@@ -1633,7 +1633,7 @@ namespace srcrepair
                     CleanDirs.AddRange(SelGame.CloudConfigs);
 
                     // Удаляем всю очередь...
-                    PluginManager.RemoveFileDirectoryEx(CleanDirs);
+                    PluginManager.FormShowRemoveFiles(CleanDirs);
 
                     // Выводим сообщение...
                     MessageBox.Show(AppStrings.PS_CleanupSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -2303,7 +2303,7 @@ namespace srcrepair
                         if (HUDManager.CheckInstalledHUD(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir))
                         {
                             // Удаляем уже установленные файлы HUD...
-                            PluginManager.RemoveFileDirectoryEx(CoreLib.SingleToArray(Path.Combine(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir)));
+                            PluginManager.FormShowRemoveFiles(CoreLib.SingleToArray(Path.Combine(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir)));
                         }
 
                         // Начинаем загрузку если файл не существует...
@@ -2338,7 +2338,7 @@ namespace srcrepair
                 string HUDPath = Path.Combine(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir);
 
                 // Воспользуемся модулем быстрой очистки для удаления выбранного HUD...
-                PluginManager.RemoveFileDirectoryEx(CoreLib.SingleToArray(HUDPath));
+                PluginManager.FormShowRemoveFiles(CoreLib.SingleToArray(HUDPath));
 
                 // Проверяем установлен ли выбранный HUD...
                 bool IsInstalled = HUDManager.CheckInstalledHUD(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir);
