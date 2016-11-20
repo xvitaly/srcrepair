@@ -68,7 +68,7 @@ namespace srcrepair
         /// <param name="NoAuto">Включает / отключает автовыбор файлов флажками</param>
         /// <param name="Recursive">Включает / отключает рекурсивный обход</param>
         /// <param name="ForceBackUp">Включает / отключает принудительное создание резервных копий</param>
-        public static void OpenCleanupWindow(List<String> Paths, string LText, string ResultMsg, string BackUpDir, string CheckBin, bool ReadOnly = false, bool NoAuto = false, bool Recursive = true, bool ForceBackUp = false)
+        public static void FormShowCleanup(List<String> Paths, string LText, string ResultMsg, string BackUpDir, string CheckBin, bool ReadOnly = false, bool NoAuto = false, bool Recursive = true, bool ForceBackUp = false)
         {
             try
             {
