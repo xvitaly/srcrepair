@@ -2009,10 +2009,7 @@ namespace srcrepair
         private void MNUUpdateCheck_Click(object sender, EventArgs e)
         {
             // Откроем форму модуля проверки обновлений...
-            using (FrmUpdate UpdFrm = new FrmUpdate(App.UserAgent, App.FullAppPath, App.AppUserDir))
-            {
-                UpdFrm.ShowDialog();
-            }
+            PluginManager.FormShowUpdater(App.UserAgent, App.FullAppPath, App.AppUserDir);
             
             // Перечитаем базу игр...
             FindGames(App.FullSteamPath, AppStrings.AppXMLParseError);

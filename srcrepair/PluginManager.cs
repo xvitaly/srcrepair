@@ -164,5 +164,13 @@ namespace srcrepair
                 HEdFrm.ShowDialog();
             }
         }
+
+        public static void FormShowUpdater(string UserAgent, string FullAppPath, string AppUserDir)
+        {
+            using (FrmUpdate UpdFrm = new FrmUpdate(UserAgent, FullAppPath, AppUserDir))
+            {
+                UpdFrm.ShowDialog();
+            }
+        }
     }
 }
