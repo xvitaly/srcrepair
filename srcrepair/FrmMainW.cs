@@ -1692,10 +1692,7 @@ namespace srcrepair
         private void MNUAbout_Click(object sender, EventArgs e)
         {
             // Отобразим форму "О программе"...
-            using (FrmAbout AboutFrm = new FrmAbout())
-            {
-                AboutFrm.ShowDialog();
-            }
+            PluginManager.FormShowAboutApp();
         }
 
         private void MNUReportBug_Click(object sender, EventArgs e)

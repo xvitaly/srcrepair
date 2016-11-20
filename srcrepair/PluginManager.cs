@@ -142,5 +142,13 @@ namespace srcrepair
                 InstF.ShowDialog();
             }
         }
+
+        public static void FormShowAboutApp()
+        {
+            using (FrmAbout AboutFrm = new FrmAbout())
+            {
+                AboutFrm.ShowDialog();
+            }
+        }
     }
 }
