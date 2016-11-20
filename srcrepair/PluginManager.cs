@@ -154,6 +154,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Вызывает форму модуля "Редактор Hosts".
+        /// </summary>
         public static void FormShowHostsEditor()
         {
             using (FrmHEd HEdFrm = new FrmHEd())
