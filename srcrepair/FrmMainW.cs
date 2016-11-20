@@ -2426,7 +2426,7 @@ namespace srcrepair
         private void SB_SteamID_Click(object sender, EventArgs e)
         {
             // Открываем диалог выбора SteamID и прописываем пользовательский выбор...
-            try { string Result = PluginManager.OpenSteamIDSelector(SelGame.SteamIDs); if (!(String.IsNullOrWhiteSpace(Result))) { SB_SteamID.Text = Result; Properties.Settings.Default.LastSteamID = Result; FindGames(App.FullSteamPath, AppStrings.AppXMLParseError); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { string Result = PluginManager.FormShowIDSelect(SelGame.SteamIDs); if (!(String.IsNullOrWhiteSpace(Result))) { SB_SteamID.Text = Result; Properties.Settings.Default.LastSteamID = Result; FindGames(App.FullSteamPath, AppStrings.AppXMLParseError); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
     }
 }

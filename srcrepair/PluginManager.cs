@@ -94,7 +94,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="SteamIDs">Список доступных SteamID</param>
         /// <returns>Выбранный пользователем SteamID</returns>
-        public static string OpenSteamIDSelector(List<String> SteamIDs)
+        public static string FormShowIDSelect(List<String> SteamIDs)
         {
             // Проверяем количество SteamID в списке...
             if (SteamIDs.Count < 1) { throw new ArgumentOutOfRangeException("Not enough SteamIDs in list."); }
