@@ -143,6 +143,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Вызывает форму "О программе".
+        /// </summary>
         public static void FormShowAboutApp()
         {
             using (FrmAbout AboutFrm = new FrmAbout())
