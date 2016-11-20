@@ -2038,10 +2038,7 @@ namespace srcrepair
         private void MNUAppOptions_Click(object sender, EventArgs e)
         {
             // Показываем форму настроек...
-            using (FrmOptions OptsFrm = new FrmOptions())
-            {
-                OptsFrm.ShowDialog();
-            }
+            PluginManager.FormShowOptions();
         }
 
         private void BU_LVTable_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)

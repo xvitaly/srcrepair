@@ -178,5 +178,13 @@ namespace srcrepair
                 UpdFrm.ShowDialog();
             }
         }
+
+        public static void FormShowOptions()
+        {
+            using (FrmOptions OptsFrm = new FrmOptions())
+            {
+                OptsFrm.ShowDialog();
+            }
+        }
     }
 }
