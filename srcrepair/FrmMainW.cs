@@ -2387,10 +2387,7 @@ namespace srcrepair
         private void MNUMuteMan_Click(object sender, EventArgs e)
         {
             // Запустим менеджер управления отключёнными игроками...
-            using (FrmMute FMm = new FrmMute(SelGame.GetActualBanlistFile(), SelGame.FullBackUpDirPath))
-            {
-                FMm.ShowDialog();
-            }
+            PluginManager.FormShowMuteManager(SelGame.GetActualBanlistFile(), SelGame.FullBackUpDirPath);
         }
 
         private void MNUSupportChat_Click(object sender, EventArgs e)

@@ -225,5 +225,13 @@ namespace srcrepair
                 StmCln.ShowDialog();
             }
         }
+
+        public static void FormShowMuteManager(string Banlist, string FullBackUpDirPath)
+        {
+            using (FrmMute FMm = new FrmMute(Banlist, FullBackUpDirPath))
+            {
+                FMm.ShowDialog();
+            }
+        }
     }
 }
