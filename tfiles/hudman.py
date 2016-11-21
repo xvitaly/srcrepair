@@ -100,7 +100,10 @@ def main():
     try:
         URLopener.version = 'wget'
         for hud in parsedb('huds.xml'):
-            handlehud(hud[0], hud[1], hud[2], hud[3], hud[4])
+            try:
+                handlehud(hud[0], hud[1], hud[2], hud[3], hud[4])
+            except Exception as ex:
+                print('Error while checking %s updates: %s' % (hud[0], ex.message))
     except Exception as ex:
         print('An error occurred: %s' % ex.message)
 
