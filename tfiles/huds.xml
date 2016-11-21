@@ -4,11 +4,11 @@
     <Name>7HUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/7HUD/7hud_b3c08be3.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/7HUD/7hud_675bae5e.zip</URI>
     <UpURI>https://github.com/Sevin7/7HUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/7hud.jpg</Preview>
     <RepoPath>https://github.com/Sevin7/7HUD</RepoPath>
-    <LastUpdate>1477076002</LastUpdate>
+    <LastUpdate>1479052308</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=261</Site>
     <ArchiveDir>7HUD-master</ArchiveDir>
     <InstallDir>7hud</InstallDir>
