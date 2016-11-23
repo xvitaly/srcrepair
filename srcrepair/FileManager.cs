@@ -305,6 +305,22 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Создаёт резервную копию конфигов, имена которых переданы в параметре.
+        /// </summary>
+        /// <param name="Config">Конфиг для бэкапа</param>
+        /// <param name="BackUpDir">Путь к каталогу с резервными копиями</param>
+        /// <param name="Prefix">Префикс имени файла резервной копии</param>
+        public static void CreateConfigBackUp(string Config, string BackUpDir, string Prefix)
+        {
+            // Создаём список...
+            List<String> Configs = new List<String>();
+            Configs.Add(Config);
+
+            // Выполняем...
+            CreateConfigBackUp(Configs, BackUpDir, Prefix);
+        }
+
+        /// <summary>
         /// Ищет самый свежий файл в переданном списке.
         /// </summary>
         /// <param name="FileList">Список файлов с полными путями для обхода</param>
