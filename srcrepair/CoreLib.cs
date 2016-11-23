@@ -176,17 +176,5 @@ namespace srcrepair
             }
             return Result;
         }
-
-        /// <summary>
-        /// Возвращает массив для передачи в особые функции
-        /// </summary>
-        /// <param name="Str">Строка для создания</param>
-        /// <returns>Возвращает массив</returns>
-        public static List<String> SingleToArray(string Str)
-        {
-            List<String> Result = new List<String>();
-            Result.Add(Str);
-            return Result;
-        }
     }
 }
