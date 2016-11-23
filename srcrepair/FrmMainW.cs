@@ -876,6 +876,19 @@ namespace srcrepair
             return String.Format(Properties.Resources.AppURLHelpSystem, Result);
         }
 
+
+        /// <summary>
+        /// Возвращает список строк для передачи в особые методы.
+        /// </summary>
+        /// <param name="Str">Строка для создания списка</param>
+        /// <returns>Возвращает список строк</returns>
+        private List<String> SingleToArray(string Str)
+        {
+            List<String> Result = new List<String>();
+            Result.Add(Str);
+            return Result;
+        }
+
         #endregion
 
         #region Internal Workers
@@ -1509,7 +1522,7 @@ namespace srcrepair
                 if (Properties.Settings.Default.SafeCleanup)
                 {
                     // Создаём резервную копию...
-                    if (File.Exists(CFGFileName)) { FileManager.CreateConfigBackUp(CoreLib.SingleToArray(CFGFileName), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg); }
+                    if (File.Exists(CFGFileName)) { FileManager.CreateConfigBackUp(SingleToArray(CFGFileName), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg); }
                 }
 
                 // Начинаем сохранение в тот же файл...
@@ -2172,7 +2185,7 @@ namespace srcrepair
             {
                 if (File.Exists(CFGFileName))
                 {
-                    FileManager.CreateConfigBackUp(CoreLib.SingleToArray(CFGFileName), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
+                    FileManager.CreateConfigBackUp(SingleToArray(CFGFileName), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
                     MessageBox.Show(String.Format(AppStrings.CE_BackUpCreated, Path.GetFileName(CFGFileName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -2282,7 +2295,7 @@ namespace srcrepair
                         if (HUDManager.CheckInstalledHUD(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir))
                         {
                             // Удаляем уже установленные файлы HUD...
-                            PluginManager.FormShowRemoveFiles(CoreLib.SingleToArray(Path.Combine(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir)));
+                            PluginManager.FormShowRemoveFiles(SingleToArray(Path.Combine(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir)));
                         }
 
                         // Начинаем загрузку если файл не существует...
@@ -2317,7 +2330,7 @@ namespace srcrepair
                 string HUDPath = Path.Combine(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir);
 
                 // Воспользуемся модулем быстрой очистки для удаления выбранного HUD...
-                PluginManager.FormShowRemoveFiles(CoreLib.SingleToArray(HUDPath));
+                PluginManager.FormShowRemoveFiles(SingleToArray(HUDPath));
 
                 // Проверяем установлен ли выбранный HUD...
                 bool IsInstalled = HUDManager.CheckInstalledHUD(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir);
