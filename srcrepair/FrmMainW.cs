@@ -1522,7 +1522,7 @@ namespace srcrepair
                 if (Properties.Settings.Default.SafeCleanup)
                 {
                     // Создаём резервную копию...
-                    if (File.Exists(CFGFileName)) { FileManager.CreateConfigBackUp(SingleToArray(CFGFileName), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg); }
+                    if (File.Exists(CFGFileName)) { FileManager.CreateConfigBackUp(CFGFileName, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg); }
                 }
 
                 // Начинаем сохранение в тот же файл...
@@ -2185,7 +2185,7 @@ namespace srcrepair
             {
                 if (File.Exists(CFGFileName))
                 {
-                    FileManager.CreateConfigBackUp(SingleToArray(CFGFileName), SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
+                    FileManager.CreateConfigBackUp(CFGFileName, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
                     MessageBox.Show(String.Format(AppStrings.CE_BackUpCreated, Path.GetFileName(CFGFileName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
