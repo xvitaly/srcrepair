@@ -149,6 +149,9 @@ namespace srcrepair
                     case 2:
                         res = 2;
                         break;
+                    default:
+                        res = 2;
+                        break;
                 }
 
                 return res;
