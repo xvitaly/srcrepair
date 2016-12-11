@@ -60,7 +60,7 @@
     <UpURI>https://github.com/n0kk/ahud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/ahud.jpg</Preview>
     <RepoPath>https://github.com/n0kk/ahud</RepoPath>
-    <LastUpdate>1477062252</LastUpdate>
+    <LastUpdate>1477080252</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=191</Site>
     <ArchiveDir>ahud-master</ArchiveDir>
     <InstallDir>ahud</InstallDir>
@@ -73,7 +73,7 @@
     <UpURI>https://github.com/flatlinee/flatHUD-/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/flathud.jpg</Preview>
     <RepoPath>https://github.com/flatlinee/flatHUD-</RepoPath>
-    <LastUpdate>1476642066</LastUpdate>
+    <LastUpdate>1476660066</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=198</Site>
     <ArchiveDir>flatHUD--master/flathudRED</ArchiveDir>
     <InstallDir>flathud</InstallDir>
@@ -86,7 +86,7 @@
     <UpURI>https://github.com/bw-/bwhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/bwhud.jpg</Preview>
     <RepoPath>https://github.com/bw-/bwhud</RepoPath>
-    <LastUpdate>1476618103</LastUpdate>
+    <LastUpdate>1476636103</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=224</Site>
     <ArchiveDir>bwhud-master</ArchiveDir>
     <InstallDir>bwhud</InstallDir>
@@ -99,7 +99,7 @@
     <UpURI>https://github.com/WhiskerBiscuit/budhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.jpg</Preview>
     <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
-    <LastUpdate>1481007032</LastUpdate>
+    <LastUpdate>1481025032</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=207</Site>
     <ArchiveDir>budhud-master/budhud</ArchiveDir>
     <InstallDir>budhud</InstallDir>
@@ -112,7 +112,7 @@
     <UpURI>https://github.com/Eniere/idhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/idhud.jpg</Preview>
     <RepoPath>https://github.com/Eniere/idhud</RepoPath>
-    <LastUpdate>1477134007</LastUpdate>
+    <LastUpdate>1477152007</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=276</Site>
     <ArchiveDir>idhud-master</ArchiveDir>
     <InstallDir>idhud</InstallDir>
@@ -121,11 +121,11 @@
     <Name>noto</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/noto/noto_57489500.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/noto/notohud_5cb0d660.zip</URI>
     <UpURI>https://github.com/omnibombulator/noto/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/noto.jpg</Preview>
     <RepoPath>https://github.com/omnibombulator/noto</RepoPath>
-    <LastUpdate>1468647103</LastUpdate>
+    <LastUpdate>1468665103</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=183</Site>
     <ArchiveDir>noto-master/noto</ArchiveDir>
     <InstallDir>notohud</InstallDir>
