@@ -25,7 +25,6 @@ from hashlib import sha1
 from json import loads
 from os import path, getcwd, makedirs, rename
 from shutil import rmtree
-from time import mktime
 from calendar import timegm
 from urllib import URLopener, urlopen, urlretrieve
 from xml.dom import minidom
