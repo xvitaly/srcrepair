@@ -26,6 +26,7 @@ from json import loads
 from os import path, getcwd, makedirs, rename
 from shutil import rmtree
 from time import mktime
+from calendar import timegm
 from urllib import URLopener, urlopen, urlretrieve
 from xml.dom import minidom
 
@@ -44,7 +45,7 @@ def parsedb(dbname):
 
 def gmt2unix(gtime):
     do = datetime.strptime(gtime, '%Y-%m-%dT%H:%M:%SZ')
-    return int(mktime(do.timetuple()))
+    return int(timegm(do.timetuple()))
 
 
 def getghinfo(repourl):
