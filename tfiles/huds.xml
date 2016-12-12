@@ -121,7 +121,7 @@
     <Name>noto</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/noto/notohud_5cb0d660.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/notohud/notohud_5cb0d660.zip</URI>
     <UpURI>https://github.com/omnibombulator/noto/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/noto.jpg</Preview>
     <RepoPath>https://github.com/omnibombulator/noto</RepoPath>
