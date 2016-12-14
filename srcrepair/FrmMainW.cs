@@ -1464,7 +1464,7 @@ namespace srcrepair
                 if (SelGame.FPSConfigs.Count > 0)
                 {
                     // Удаляем конфиги...
-                    PluginManager.FormShowCleanup(SelGame.FPSConfigs, ((Button)sender).Text.ToLower(), AppStrings.FP_RemoveSuccessful, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile, false, false, false, Properties.Settings.Default.SafeCleanup);
+                    FormManager.FormShowCleanup(SelGame.FPSConfigs, ((Button)sender).Text.ToLower(), AppStrings.FP_RemoveSuccessful, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile, false, false, false, Properties.Settings.Default.SafeCleanup);
 
                     // Перечитаем список конфигов...
                     HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
@@ -1563,7 +1563,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.bsp"));
             CleanDirs.Add(Path.Combine(SelGame.AppWorkshopDir, "*.bsp"));
             if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "maps", "*.bsp")); }
-            PluginManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_RemDnlCache_Click(object sender, EventArgs e)
@@ -1573,7 +1573,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "downloads", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "streams", "*.*"));
-            PluginManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_RemSoundCache_Click(object sender, EventArgs e)
@@ -1584,7 +1584,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "maps", "soundcache", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "sound", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "*.cache"));
-            PluginManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_RemScreenShots_Click(object sender, EventArgs e)
@@ -1592,7 +1592,7 @@ namespace srcrepair
             // Удаляем все скриншоты...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "screenshots", "*.*"));
-            PluginManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile, false, false, false);
+            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile, false, false, false);
         }
 
         private void PS_RemDemos_Click(object sender, EventArgs e)
@@ -1604,7 +1604,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "*.mp4"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "*.tga"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "*.wav"));
-            PluginManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile, false, false, false, false);
+            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile, false, false, false, false);
         }
 
         private void PS_RemGameOpts_Click(object sender, EventArgs e)
@@ -1646,7 +1646,7 @@ namespace srcrepair
                     CleanDirs.AddRange(SelGame.CloudConfigs);
 
                     // Удаляем всю очередь...
-                    PluginManager.FormShowRemoveFiles(CleanDirs);
+                    FormManager.FormShowRemoveFiles(CleanDirs);
 
                     // Выводим сообщение...
                     MessageBox.Show(AppStrings.PS_CleanupSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -1666,7 +1666,7 @@ namespace srcrepair
             if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(SelGame.GamePath, "platform", "*.*")); }
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "bin", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "*.exe"));
-            PluginManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CacheChkReq, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CacheChkReq, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_CheckCache_Click(object sender, EventArgs e)
@@ -1682,7 +1682,7 @@ namespace srcrepair
             if ((AppSelector.Items.Count > 0) && (AppSelector.SelectedIndex != -1))
             {
                 // Запускаем форму создания отчёта для Техподдержки...
-                PluginManager.FormShowRepBuilder(App.AppUserDir, App.FullSteamPath, SelGame.FullCfgPath);
+                FormManager.FormShowRepBuilder(App.AppUserDir, App.FullSteamPath, SelGame.FullCfgPath);
             }
             else
             {
@@ -1693,7 +1693,7 @@ namespace srcrepair
         private void MNUInstaller_Click(object sender, EventArgs e)
         {
             // Запускаем форму установщика спреев, демок и конфигов...
-            PluginManager.FormShowInstaller(SelGame.FullGamePath, SelGame.IsUsingUserDir, SelGame.CustomInstallDir);
+            FormManager.FormShowInstaller(SelGame.FullGamePath, SelGame.IsUsingUserDir, SelGame.CustomInstallDir);
         }
 
         private void MNUExit_Click(object sender, EventArgs e)
@@ -1705,7 +1705,7 @@ namespace srcrepair
         private void MNUAbout_Click(object sender, EventArgs e)
         {
             // Отобразим форму "О программе"...
-            PluginManager.FormShowAboutApp();
+            FormManager.FormShowAboutApp();
         }
 
         private void MNUReportBug_Click(object sender, EventArgs e)
@@ -1754,7 +1754,7 @@ namespace srcrepair
                                 break;
                             case ".bud":
                                 // Распаковываем архив с выводом прогресса...
-                                PluginManager.FormShowArchiveExtract(Path.Combine(SelGame.FullBackUpDirPath, FName), Path.GetPathRoot(App.FullSteamPath));
+                                FormManager.FormShowArchiveExtract(Path.Combine(SelGame.FullBackUpDirPath, FName), Path.GetPathRoot(App.FullSteamPath));
                                 
                                 // Обновляем список FPS-конфигов...
                                 HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
@@ -1949,7 +1949,7 @@ namespace srcrepair
         private void MNUHEd_Click(object sender, EventArgs e)
         {
             // Отобразим форму редактора файла hosts...
-            PluginManager.FormShowHostsEditor();
+            FormManager.FormShowHostsEditor();
         }
 
         private void CE_RmRow_Click(object sender, EventArgs e)
@@ -2022,7 +2022,7 @@ namespace srcrepair
         private void MNUUpdateCheck_Click(object sender, EventArgs e)
         {
             // Откроем форму модуля проверки обновлений...
-            PluginManager.FormShowUpdater(App.UserAgent, App.FullAppPath, App.AppUserDir);
+            FormManager.FormShowUpdater(App.UserAgent, App.FullAppPath, App.AppUserDir);
             
             // Перечитаем базу игр...
             FindGames(App.FullSteamPath, AppStrings.AppXMLParseError);
@@ -2051,7 +2051,7 @@ namespace srcrepair
         private void MNUAppOptions_Click(object sender, EventArgs e)
         {
             // Показываем форму настроек...
-            PluginManager.FormShowOptions();
+            FormManager.FormShowOptions();
         }
 
         private void BU_LVTable_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
@@ -2090,7 +2090,7 @@ namespace srcrepair
         private void MNUWinMnuDisabler_Click(object sender, EventArgs e)
         {
             // Показываем модуля отключения клавиш...
-            PluginManager.FormShowKBHelper();
+            FormManager.FormShowKBHelper();
         }
 
         private void CE_OpenInNotepad_Click(object sender, EventArgs e)
@@ -2120,7 +2120,7 @@ namespace srcrepair
             // Удаляем все реплеи...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "replay", "*.*"));
-            PluginManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_RemTextures_Click(object sender, EventArgs e)
@@ -2146,7 +2146,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.vmt"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.mdl"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.phy"));
-            PluginManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_RemSecndCache_Click(object sender, EventArgs e)
@@ -2156,7 +2156,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cache", "*.*")); // Кэш...
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "user_custom", "*.*")); // Кэш спреев игр с н.с.к...
             CleanDirs.Add(Path.Combine(SelGame.GamePath, "config", "html", "*.*")); // Кэш MOTD...
-            PluginManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void SB_App_DoubleClick(object sender, EventArgs e)
@@ -2202,7 +2202,7 @@ namespace srcrepair
             if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "sound", "*.*")); }
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.mp3"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.wav"));
-            PluginManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_RemCustDir_Click(object sender, EventArgs e)
@@ -2211,7 +2211,7 @@ namespace srcrepair
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.AppWorkshopDir, "*.*"));
-            PluginManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_DeepCleanup_Click(object sender, EventArgs e)
@@ -2243,7 +2243,7 @@ namespace srcrepair
             if (SelGame.IsUsingVideoFile) { CleanDirs.AddRange(SelGame.VideoCfgFiles); }
 
             // Запускаем процесс очистки...
-            PluginManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CacheChkReq, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CacheChkReq, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_RemConfigs_Click(object sender, EventArgs e)
@@ -2253,7 +2253,7 @@ namespace srcrepair
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cfg", "*.*"));
             CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.cfg"));
             CleanDirs.AddRange(SelGame.CloudConfigs);
-            PluginManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void HD_HSel_SelectedIndexChanged(object sender, EventArgs e)
@@ -2295,14 +2295,14 @@ namespace srcrepair
                         if (HUDManager.CheckInstalledHUD(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir))
                         {
                             // Удаляем уже установленные файлы HUD...
-                            PluginManager.FormShowRemoveFiles(SingleToArray(Path.Combine(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir)));
+                            FormManager.FormShowRemoveFiles(SingleToArray(Path.Combine(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir)));
                         }
 
                         // Начинаем загрузку если файл не существует...
-                        if (!File.Exists(SelGame.HUDMan.SelectedHUD.LocalFile)) { PluginManager.FormShowDownloader(Properties.Settings.Default.HUDUseUpstream ? SelGame.HUDMan.SelectedHUD.UpURI : SelGame.HUDMan.SelectedHUD.URI, SelGame.HUDMan.SelectedHUD.LocalFile); }
+                        if (!File.Exists(SelGame.HUDMan.SelectedHUD.LocalFile)) { FormManager.FormShowDownloader(Properties.Settings.Default.HUDUseUpstream ? SelGame.HUDMan.SelectedHUD.UpURI : SelGame.HUDMan.SelectedHUD.URI, SelGame.HUDMan.SelectedHUD.LocalFile); }
 
                         // Распаковываем загруженный архив с файлами HUD...
-                        PluginManager.FormShowArchiveExtract(SelGame.HUDMan.SelectedHUD.LocalFile, Path.Combine(SelGame.CustomInstallDir, "hudtemp"));
+                        FormManager.FormShowArchiveExtract(SelGame.HUDMan.SelectedHUD.LocalFile, Path.Combine(SelGame.CustomInstallDir, "hudtemp"));
 
                         // Запускаем установку пакета в отдельном потоке...
                         if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(); }
@@ -2330,7 +2330,7 @@ namespace srcrepair
                 string HUDPath = Path.Combine(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir);
 
                 // Воспользуемся модулем быстрой очистки для удаления выбранного HUD...
-                PluginManager.FormShowRemoveFiles(SingleToArray(HUDPath));
+                FormManager.FormShowRemoveFiles(SingleToArray(HUDPath));
 
                 // Проверяем установлен ли выбранный HUD...
                 bool IsInstalled = HUDManager.CheckInstalledHUD(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir);
@@ -2354,7 +2354,7 @@ namespace srcrepair
             // Очистим загруженные приложением файлы...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(App.AppUserDir, Properties.Resources.HUDLocalDir, "*.*"));
-            PluginManager.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            FormManager.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void MNUExtClnTmpDir_Click(object sender, EventArgs e)
@@ -2362,7 +2362,7 @@ namespace srcrepair
             // Очистим каталоги с временными файлами системы...
             List<String> CleanDirs = new List<string>();
             CleanDirs.Add(Path.Combine(Path.GetTempPath(), "*.*"));
-            PluginManager.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
+            FormManager.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void MNUShowLog_Click(object sender, EventArgs e)
@@ -2371,7 +2371,7 @@ namespace srcrepair
             if (Properties.Settings.Default.EnableDebugLog)
             {
                 string DFile = Path.Combine(App.AppUserDir, Properties.Resources.DebugLogFileName);
-                if (File.Exists(DFile)) { PluginManager.FormShowLogViewer(DFile); } else { MessageBox.Show(AppStrings.AppNoDebugFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                if (File.Exists(DFile)) { FormManager.FormShowLogViewer(DFile); } else { MessageBox.Show(AppStrings.AppNoDebugFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             }
             else
             {
@@ -2394,13 +2394,13 @@ namespace srcrepair
         private void MNUExtClnSteam_Click(object sender, EventArgs e)
         {
             // Запустим модуль очистки кэшей Steam...
-            PluginManager.FormShowStmCleaner(App.FullSteamPath, SelGame.FullBackUpDirPath);
+            FormManager.FormShowStmCleaner(App.FullSteamPath, SelGame.FullBackUpDirPath);
         }
 
         private void MNUMuteMan_Click(object sender, EventArgs e)
         {
             // Запустим менеджер управления отключёнными игроками...
-            PluginManager.FormShowMuteManager(SelGame.GetActualBanlistFile(), SelGame.FullBackUpDirPath);
+            FormManager.FormShowMuteManager(SelGame.GetActualBanlistFile(), SelGame.FullBackUpDirPath);
         }
 
         private void MNUSupportChat_Click(object sender, EventArgs e)
@@ -2412,7 +2412,7 @@ namespace srcrepair
         private void SB_SteamID_Click(object sender, EventArgs e)
         {
             // Открываем диалог выбора SteamID и прописываем пользовательский выбор...
-            try { string Result = PluginManager.FormShowIDSelect(SelGame.SteamIDs); if (!(String.IsNullOrWhiteSpace(Result))) { SB_SteamID.Text = Result; Properties.Settings.Default.LastSteamID = Result; FindGames(App.FullSteamPath, AppStrings.AppXMLParseError); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { string Result = FormManager.FormShowIDSelect(SelGame.SteamIDs); if (!(String.IsNullOrWhiteSpace(Result))) { SB_SteamID.Text = Result; Properties.Settings.Default.LastSteamID = Result; FindGames(App.FullSteamPath, AppStrings.AppXMLParseError); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
     }
 }

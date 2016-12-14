@@ -200,7 +200,7 @@
     <Compile Include="HUDManager.cs" />
     <Compile Include="HUDTlx.cs" />
     <Compile Include="NCFVideo.cs" />
-    <Compile Include="PluginManager.cs" />
+    <Compile Include="FormManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />

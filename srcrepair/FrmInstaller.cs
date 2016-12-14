@@ -180,7 +180,7 @@ namespace srcrepair
                         case ".vtf": InstallSprayNow(InstallPath.Text);
                             break;
                         // Будем устанавливать содержимое архива...
-                        case ".zip": PluginManager.FormShowArchiveExtract(InstallPath.Text, CustomInstallDir);
+                        case ".zip": FormManager.FormShowArchiveExtract(InstallPath.Text, CustomInstallDir);
                             break;
                         // Будем устанавливать бинарный модуль (плагин)...
                         case ".dll": InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "addons"));
