@@ -26,7 +26,7 @@ namespace srcrepair
     /// <summary>
     /// Класс для взаимодействия с отдельным формами и расширениями.
     /// </summary>
-    public static class PluginManager
+    public static class FormManager
     {
         /// <summary>
         /// Начинает загрузку с указанного URL с подробным отображением процесса.
