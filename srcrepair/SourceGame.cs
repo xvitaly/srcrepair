@@ -99,6 +99,9 @@ namespace srcrepair
         /// </summary>
         public string GameInternalID { get; private set; }
 
+        /// <summary>
+        /// Хранит тип механизма хранения настроек движка Source.
+        /// </summary>
         public string SourceType { get; private set; }
 
         /// <summary>
