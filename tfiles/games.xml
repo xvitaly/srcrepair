@@ -8,6 +8,7 @@
     <UserDir>1</UserDir>
     <HUDsAvail>1</HUDsAvail>
     <SID>440</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Counter-Strike: Source">
@@ -18,6 +19,7 @@
     <UserDir>1</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>240</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Day of Defeat: Source">
@@ -28,6 +30,7 @@
     <UserDir>1</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>300</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Half-Life 2: Deathmatch">
@@ -38,6 +41,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>320</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Half-Life 2">
@@ -48,6 +52,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>220</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Half-Life 2: Episode One">
@@ -58,6 +63,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>380</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Half-Life 2: Episode Two">
@@ -68,6 +74,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>420</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Half-Life 2: Lost Coast">
@@ -78,6 +85,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>340</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Portal">
@@ -88,6 +96,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>400</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Garry's Mod">
@@ -98,6 +107,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>4000</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Age of Chivalry">
@@ -108,6 +118,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>17510</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="D.I.P.R.I.P.: Warm Up">
@@ -118,6 +129,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>17530</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Dystopia">
@@ -128,6 +140,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>17580</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Insurgency: Modern Infantry Combat">
@@ -138,6 +151,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>17700</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Pirates, Vikings, and Knights II">
@@ -148,6 +162,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>17570</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Smashball">
@@ -158,6 +173,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>17730</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Synergy">
@@ -168,6 +184,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>17520</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Zombie Panic! Source">
@@ -178,6 +195,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>17500</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Half-Life: Source">
@@ -188,6 +206,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>280</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Half-Life Deathmatch: Source">
@@ -198,6 +217,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>360</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Left 4 Dead">
@@ -208,6 +228,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>500</SID>
+    <SVer>2</SVer>
     <Executable>left4dead.exe</Executable>
   </Game>
   <Game Name="Left 4 Dead 2">
@@ -218,6 +239,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>550</SID>
+    <SVer>2</SVer>
     <Executable>left4dead2.exe</Executable>
   </Game>
   <Game Name="Alien Swarm">
@@ -228,6 +250,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>630</SID>
+    <SVer>2</SVer>
     <Executable>swarm.exe</Executable>
   </Game>
   <Game Name="Portal 2">
@@ -238,6 +261,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>620</SID>
+    <SVer>2</SVer>
     <Executable>portal2.exe</Executable>
   </Game>
   <Game Name="Dota 2">
@@ -248,6 +272,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>570</SID>
+    <SVer>3</SVer>
     <Executable>dota.exe</Executable>
   </Game>
   <Game Name="Dota 2 Beta">
@@ -258,6 +283,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>570</SID>
+    <SVer>3</SVer>
     <Executable>dota2.exe</Executable>
   </Game>
   <Game Name="Dota 2 Test">
@@ -268,6 +294,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>570</SID>
+    <SVer>3</SVer>
     <Executable>dota2.exe</Executable>
   </Game>
   <Game Name="Counter-Strike Global Offensive">
@@ -278,6 +305,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>730</SID>
+    <SVer>2</SVer>
     <Executable>csgo.exe</Executable>
   </Game>
   <Game Name="Nuclear Dawn">
@@ -288,6 +316,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>17710</SID>
+    <SVer>2</SVer>
     <Executable>nucleardawn.exe</Executable>
   </Game>
   <Game Name="Postal III">
@@ -298,6 +327,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>10220</SID>
+    <SVer>2</SVer>
     <Executable>p3.exe</Executable>
   </Game>
   <Game Name="E.Y.E.: Divine Cybermancy">
@@ -308,6 +338,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>91700</SID>
+    <SVer>2</SVer>
     <Executable>EYE.exe</Executable>
   </Game>
   <Game Name="Dark Messiah MM SP">
@@ -318,6 +349,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>2100</SID>
+    <SVer>1</SVer>
     <Executable>mm.exe</Executable>
   </Game>
   <Game Name="Dark Messiah MM MP">
@@ -328,6 +360,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>2100</SID>
+    <SVer>1</SVer>
     <Executable>mm.exe</Executable>
   </Game>
   <Game Name="The Ship">
@@ -338,6 +371,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>2400</SID>
+    <SVer>1</SVer>
     <Executable>ship.exe</Executable>
   </Game>
   <Game Name="The Ship Singleplayer">
@@ -348,6 +382,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>2420</SID>
+    <SVer>1</SVer>
     <Executable>ship.exe</Executable>
   </Game>
   <Game Name="SiN Episodes: Emergence">
@@ -358,6 +393,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>1300</SID>
+    <SVer>1</SVer>
     <Executable>SinEpisodes.exe</Executable>
   </Game>
   <Game Name="Vampire: The Masquerade - Bloodlines">
@@ -368,6 +404,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>2600</SID>
+    <SVer>2</SVer>
     <Executable>vampire.exe</Executable>
   </Game>
   <Game Name="Zeno Clash">
@@ -378,6 +415,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>22200</SID>
+    <SVer>2</SVer>
     <Executable>zenoclash.exe</Executable>
   </Game>
   <Game Name="Dear Esther">
@@ -388,6 +426,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>203810</SID>
+    <SVer>2</SVer>
     <Executable>dearesther.exe</Executable>
   </Game>
   <Game Name="Eternal Silence">
@@ -398,6 +437,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>17550</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Vindictus">
@@ -408,6 +448,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>212160</SID>
+    <SVer>2</SVer>
     <Executable>nxsteam.exe</Executable>
   </Game>
   <Game Name="Bloody Good Time">
@@ -418,6 +459,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>2450</SID>
+    <SVer>1</SVer>
     <Executable>bgt.exe</Executable>
   </Game>
   <Game Name="Revelations 2012">
@@ -428,6 +470,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>201070</SID>
+    <SVer>2</SVer>
     <Executable>revelations.exe</Executable>
   </Game>
   <Game Name="MINERVA: Metastasis">
@@ -438,6 +481,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>235780</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Insurgency">
@@ -448,6 +492,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>222880</SID>
+    <SVer>2</SVer>
     <Executable>insurgency.exe</Executable>
   </Game>
   <Game Name="No More Room in Hell">
@@ -458,6 +503,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>224260</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Contagion">
@@ -468,6 +514,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>238430</SID>
+    <SVer>2</SVer>
     <Executable>contagion.exe</Executable>
   </Game>
   <Game Name="NeoTokyo">
@@ -478,6 +525,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>244630</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Half-Life 2: Update">
@@ -488,6 +536,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>290930</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Lambda Wars">
@@ -498,6 +547,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>270370</SID>
+    <SVer>2</SVer>
     <Executable>lambdawars.exe</Executable>
   </Game>
   <Game Name="Rexaura">
@@ -508,6 +558,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>317790</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Black Mesa">
@@ -518,6 +569,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>362890</SID>
+    <SVer>1</SVer>
     <Executable>bms.exe</Executable>
   </Game>
   <Game Name="Portal Stories: Mel">
@@ -528,6 +580,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>317400</SID>
+    <SVer>2</SVer>
     <Executable>portal2.exe</Executable>
   </Game>
   <Game Name="FIREFIGHT RELOADED">
@@ -538,6 +591,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>397680</SID>
+    <SVer>1</SVer>
     <Executable>fr.exe</Executable>
   </Game>
   <Game Name="Aperture Tag">
@@ -548,6 +602,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>280740</SID>
+    <SVer>2</SVer>
     <Executable>portal2.exe</Executable>
   </Game>
   <Game Name="Prospekt">
@@ -558,6 +613,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>399120</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
   <Game Name="Transmissions: Element 120">
@@ -568,6 +624,7 @@
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>365300</SID>
+    <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
 </Games>
