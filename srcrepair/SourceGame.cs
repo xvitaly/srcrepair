@@ -258,6 +258,7 @@ namespace srcrepair
         /// <param name="SmallName">Внутренний каталог приложения (из БД)</param>
         /// <param name="Executable">Имя главного бинарника (из БД)</param>
         /// <param name="SID">Внутренний ID приложения в Steam (из БД)</param>
+        /// <param name="SV">Механизм хранения настроек движка (из БД)</param>
         /// <param name="VFDir">Каталог хранения графических настроек (из БД)</param>
         /// <param name="HasVF">Задаёт формат приложения: GCF/NCF (из БД)</param>
         /// <param name="UserDir">Указывает использует ли приложение кастомный каталог (из БД)</param>
