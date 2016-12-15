@@ -99,6 +99,8 @@ namespace srcrepair
         /// </summary>
         public string GameInternalID { get; private set; }
 
+        public string SourceType { get; private set; }
+
         /// <summary>
         /// В этом списке хранятся пути ко всем найденным файлами
         /// с графическими настройками.
@@ -260,13 +262,14 @@ namespace srcrepair
         /// <param name="AUserDir">Путь к каталогу с данными SRC Repair</param>
         /// <param name="UserDir">Путь к пользовательскому каталогу SRC Repair</param>
         /// <param name="SteamDir">Путь к установленному клиенту Steam</param>
-        public SourceGame(string AppName, string DirName, string SmallName, string Executable, string SID, string VFDir, bool HasVF, bool UserDir, bool HUDAv, string AppPath, string AUserDir, string SteamDir, List<String> GameDirs)
+        public SourceGame(string AppName, string DirName, string SmallName, string Executable, string SID, string SV, string VFDir, bool HasVF, bool UserDir, bool HUDAv, string AppPath, string AUserDir, string SteamDir, List<String> GameDirs)
         {
             // Начинаем определять нужные нам значения переменных...
             FullAppName = AppName;
             SmallAppName = SmallName;
             GameBinaryFile = Executable;
             GameInternalID = SID;
+            SourceType = SV;
             ConfDir = VFDir;
             IsUsingVideoFile = HasVF;
             IsUsingUserDir = UserDir;
