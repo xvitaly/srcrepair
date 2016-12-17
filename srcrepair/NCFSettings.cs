@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Служебный класс работы с настройками графики NCF игр.
+    /// </summary>
     public class NCFSettings
     {
         /// <summary>
@@ -132,6 +135,7 @@ namespace srcrepair
         /// <summary>
         /// Базовый конструктор класса.
         /// </summary>
+        /// <param name="ID">Тип механизма хранения настроек движка Source</param>
         public NCFSettings(string ID)
         {
             // Временно заполним без указания ID...
