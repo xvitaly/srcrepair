@@ -768,24 +768,24 @@ namespace srcrepair
         private void ReadSettings()
         {
             // Считываем настройки графики из файла...
-            _ScreenWidth = GetNCFDWord("setting.defaultres");
-            _ScreenHeight = GetNCFDWord("setting.defaultresheight");
-            _ScreenRatio = GetNCFDWord("setting.aspectratiomode");
-            _Brightness = Convert.ToInt32(GetNCFDble("setting.mat_monitorgamma") * 10);
-            _ShadowQuality = GetNCFDWord("setting.csm_quality_level");
-            _MotionBlur = GetNCFDWord("setting.mat_motion_blur_enabled");
-            _DisplayMode = GetNCFDWord("setting.fullscreen");
-            _DisplayBorderless = GetNCFDWord("setting.nowindowborder");
-            _AntiAliasing = GetNCFDWord("setting.mat_antialias");
-            _AntiAliasQuality = GetNCFDWord("setting.mat_aaquality");
-            _FilteringMode = GetNCFDWord("setting.mat_forceaniso");
-            _VSync = GetNCFDWord("setting.mat_vsync");
-            _VSyncMode = GetNCFDWord("setting.mat_triplebuffered");
-            _MCRendering = GetNCFDWord("setting.mat_queue_mode");
-            _ShaderEffects = GetNCFDWord("setting.gpu_level");
-            _EffectDetails = GetNCFDWord("setting.cpu_level");
-            _MemoryPoolType = GetNCFDWord("setting.mem_level");
-            _TextureModelQuality = GetNCFDWord("setting.gpu_mem_level");
+            _ScreenWidth = GetNCFDWord(VSettings.ScreenWidth);
+            _ScreenHeight = GetNCFDWord(VSettings.ScreenHeight);
+            _ScreenRatio = GetNCFDWord(VSettings.ScreenRatio);
+            _Brightness = Convert.ToInt32(GetNCFDble(VSettings.Brightness) * 10);
+            _ShadowQuality = GetNCFDWord(VSettings.ShadowQuality);
+            _MotionBlur = GetNCFDWord(VSettings.MotionBlur);
+            _DisplayMode = GetNCFDWord(VSettings.DisplayMode);
+            _DisplayBorderless = GetNCFDWord(VSettings.DisplayBorderless);
+            _AntiAliasing = GetNCFDWord(VSettings.AntiAliasing);
+            _AntiAliasQuality = GetNCFDWord(VSettings.AntiAliasQuality);
+            _FilteringMode = GetNCFDWord(VSettings.FilteringMode);
+            _VSync = GetNCFDWord(VSettings.VSync);
+            _VSyncMode = GetNCFDWord(VSettings.VSyncMode);
+            _MCRendering = GetNCFDWord(VSettings.MCRendering);
+            _ShaderEffects = GetNCFDWord(VSettings.ShaderEffects);
+            _EffectDetails = GetNCFDWord(VSettings.EffectDetails);
+            _MemoryPoolType = GetNCFDWord(VSettings.MemoryPoolType);
+            _TextureModelQuality = GetNCFDWord(VSettings.TextureModelQuality);
         }
 
         /// <summary>
@@ -810,25 +810,25 @@ namespace srcrepair
                 CFile.WriteLine("{");
 
                 // Вставляем настройки графики...
-                CFile.WriteLine(String.Format(Templt, "setting.cpu_level", _EffectDetails));
-                CFile.WriteLine(String.Format(Templt, "setting.gpu_level", _ShaderEffects));
-                CFile.WriteLine(String.Format(Templt, "setting.mat_antialias", _AntiAliasing));
-                CFile.WriteLine(String.Format(Templt, "setting.mat_aaquality", _AntiAliasQuality));
-                CFile.WriteLine(String.Format(Templt, "setting.mat_forceaniso", _FilteringMode));
-                CFile.WriteLine(String.Format(Templt, "setting.mat_vsync", _VSync));
-                CFile.WriteLine(String.Format(Templt, "setting.mat_triplebuffered", _VSyncMode));
-                CFile.WriteLine(String.Format(Templt, "setting.mat_grain_scale_override", "1"));
-                CFile.WriteLine(String.Format(Templt, "setting.mat_monitorgamma", (_Brightness / 10.0).ToString(CI)));
-                CFile.WriteLine(String.Format(Templt, "setting.csm_quality_level", _ShadowQuality));
-                CFile.WriteLine(String.Format(Templt, "setting.mat_motion_blur_enabled", _MotionBlur));
-                CFile.WriteLine(String.Format(Templt, "setting.gpu_mem_level", _TextureModelQuality));
-                CFile.WriteLine(String.Format(Templt, "setting.mem_level", _MemoryPoolType));
-                CFile.WriteLine(String.Format(Templt, "setting.mat_queue_mode", _MCRendering));
-                CFile.WriteLine(String.Format(Templt, "setting.defaultres", _ScreenWidth));
-                CFile.WriteLine(String.Format(Templt, "setting.defaultresheight", _ScreenHeight));
-                CFile.WriteLine(String.Format(Templt, "setting.aspectratiomode", _ScreenRatio));
-                CFile.WriteLine(String.Format(Templt, "setting.fullscreen", _DisplayMode));
-                CFile.WriteLine(String.Format(Templt, "setting.nowindowborder", _DisplayBorderless));
+                CFile.WriteLine(String.Format(Templt, VSettings.EffectDetails, _EffectDetails));
+                CFile.WriteLine(String.Format(Templt, VSettings.ShaderEffects, _ShaderEffects));
+                CFile.WriteLine(String.Format(Templt, VSettings.AntiAliasing, _AntiAliasing));
+                CFile.WriteLine(String.Format(Templt, VSettings.AntiAliasQuality, _AntiAliasQuality));
+                CFile.WriteLine(String.Format(Templt, VSettings.FilteringMode, _FilteringMode));
+                CFile.WriteLine(String.Format(Templt, VSettings.VSync, _VSync));
+                CFile.WriteLine(String.Format(Templt, VSettings.VSyncMode, _VSyncMode));
+                CFile.WriteLine(String.Format(Templt, VSettings.GrainScaleOverride, "1"));
+                CFile.WriteLine(String.Format(Templt, VSettings.Brightness, (_Brightness / 10.0).ToString(CI)));
+                CFile.WriteLine(String.Format(Templt, VSettings.ShadowQuality, _ShadowQuality));
+                CFile.WriteLine(String.Format(Templt, VSettings.MotionBlur, _MotionBlur));
+                CFile.WriteLine(String.Format(Templt, VSettings.TextureModelQuality, _TextureModelQuality));
+                CFile.WriteLine(String.Format(Templt, VSettings.MemoryPoolType, _MemoryPoolType));
+                CFile.WriteLine(String.Format(Templt, VSettings.MCRendering, _MCRendering));
+                CFile.WriteLine(String.Format(Templt, VSettings.ScreenWidth, _ScreenWidth));
+                CFile.WriteLine(String.Format(Templt, VSettings.ScreenHeight, _ScreenHeight));
+                CFile.WriteLine(String.Format(Templt, VSettings.ScreenRatio, _ScreenRatio));
+                CFile.WriteLine(String.Format(Templt, VSettings.DisplayMode, _DisplayMode));
+                CFile.WriteLine(String.Format(Templt, VSettings.DisplayBorderless, _DisplayBorderless));
 
                 // Вставляем закрывающую скобку...
                 CFile.WriteLine("}");
