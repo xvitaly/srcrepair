@@ -27,6 +27,28 @@ namespace srcrepair
         public string MemoryPoolType { get; private set; }
         public string TextureModelQuality { get; private set; }
 
+        private void SetSettingsV2()
+        {
+            ScreenWidth = "setting.defaultres";
+            ScreenHeight = "setting.defaultresheight";
+            ScreenRatio = "setting.aspectratiomode";
+            Brightness = "setting.mat_monitorgamma";
+            ShadowQuality = "setting.csm_quality_level";
+            MotionBlur = "setting.mat_motion_blur_enabled";
+            DisplayMode = "setting.fullscreen";
+            DisplayBorderless = "setting.nowindowborder";
+            AntiAliasing = "setting.mat_antialias";
+            AntiAliasQuality = "setting.mat_aaquality";
+            FilteringMode = "setting.mat_forceaniso";
+            VSync = "setting.mat_vsync";
+            VSyncMode = "setting.mat_triplebuffered";
+            MCRendering = "setting.mat_queue_mode";
+            ShaderEffects = "setting.gpu_level";
+            EffectDetails = "setting.cpu_level";
+            MemoryPoolType = "setting.mem_level";
+            TextureModelQuality = "setting.gpu_mem_level";
+        }
+
         public NCFSettings(string ID)
         {
             //
