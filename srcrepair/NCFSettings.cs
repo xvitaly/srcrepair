@@ -8,26 +8,104 @@ namespace srcrepair
 {
     public class NCFSettings
     {
+        /// <summary>
+        /// Хранит имя настройки разрешения по горизонтали.
+        /// </summary>
         public string ScreenWidth { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки разрешения по вертикали.
+        /// </summary>
         public string ScreenHeight { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки соотношения сторон.
+        /// </summary>
         public string ScreenRatio { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки контрастности и цветовой гаммы.
+        /// </summary>
         public string Brightness { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки качества теней.
+        /// </summary>
         public string ShadowQuality { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки размытия движений.
+        /// </summary>
         public string MotionBlur { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки параметров графического режима.
+        /// </summary>
         public string DisplayMode { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки других параметров графического режима (без рамки).
+        /// </summary>
         public string DisplayBorderless { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки полноэкранного сглаживания.
+        /// </summary>
         public string AntiAliasing { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки глубины полноэкранного сглаживания.
+        /// </summary>
         public string AntiAliasQuality { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки качества фильтрации текстур.
+        /// </summary>
         public string FilteringMode { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки вертикальной синхронизации.
+        /// </summary>
         public string VSync { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки качества вертикальной синхронизации.
+        /// </summary>
         public string VSyncMode { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки многоядерного рендеринга.
+        /// </summary>
         public string MCRendering { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки качества шейдерных эффектов.
+        /// </summary>
         public string ShaderEffects { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки качества обычных эффектов.
+        /// </summary>
         public string EffectDetails { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки выделенного игре пула памяти.
+        /// </summary>
         public string MemoryPoolType { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки качества детализации моделей и текстур.
+        /// </summary>
         public string TextureModelQuality { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки зернистости.
+        /// </summary>
         public string GrainScaleOverride { get; private set; }
 
+        /// <summary>
+        /// Заполняет свойства класса настройками для базы версии 2 (Source 1; до CS:GO включительно).
+        /// </summary>
         private void SetSettingsV2()
         {
             ScreenWidth = "setting.defaultres";
@@ -51,6 +129,9 @@ namespace srcrepair
             GrainScaleOverride = "setting.mat_grain_scale_override";
         }
 
+        /// <summary>
+        /// Базовый конструктор класса.
+        /// </summary>
         public NCFSettings(string ID)
         {
             // Временно заполним без указания ID...
