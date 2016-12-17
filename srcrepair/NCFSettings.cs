@@ -26,6 +26,7 @@ namespace srcrepair
         public string EffectDetails { get; private set; }
         public string MemoryPoolType { get; private set; }
         public string TextureModelQuality { get; private set; }
+        public string GrainScaleOverride { get; private set; }
 
         private void SetSettingsV2()
         {
@@ -47,6 +48,7 @@ namespace srcrepair
             EffectDetails = "setting.cpu_level";
             MemoryPoolType = "setting.mem_level";
             TextureModelQuality = "setting.gpu_mem_level";
+            GrainScaleOverride = "setting.mat_grain_scale_override";
         }
 
         public NCFSettings(string ID)
