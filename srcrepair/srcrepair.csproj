@@ -199,6 +199,7 @@
     <Compile Include="GCFVideo.cs" />
     <Compile Include="HUDManager.cs" />
     <Compile Include="HUDTlx.cs" />
+    <Compile Include="NCFSettings.cs" />
     <Compile Include="NCFVideo.cs" />
     <Compile Include="FormManager.cs" />
     <Compile Include="Program.cs" />
