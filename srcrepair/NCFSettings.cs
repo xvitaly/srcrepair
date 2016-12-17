@@ -51,7 +51,8 @@ namespace srcrepair
 
         public NCFSettings(string ID)
         {
-            //
+            // Временно заполним без указания ID...
+            SetSettingsV2();
         }
     }
 }
