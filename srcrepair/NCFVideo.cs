@@ -39,6 +39,10 @@ namespace srcrepair
         /// </summary>
         protected string DefaultsFileName;
 
+        /// <summary>
+        /// Хранит и определяет названия переменных внутри базы настроек графики
+        /// в зависимости от версии движка Source Engine.
+        /// </summary>
         protected NCFSettings VSettings;
 
         /// <summary>
