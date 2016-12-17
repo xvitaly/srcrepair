@@ -170,10 +170,11 @@ namespace srcrepair
         /// Сохраняет настройки NCF игры в файл.
         /// </summary>
         /// <param name="VFileName">Имя файла опций</param>
-        private void WriteNCFGameSettings(string VFileName)
+        /// <param name="VSF">Тип механизма хранения настроек движка Source</param>
+        private void WriteNCFGameSettings(string VFileName, string VSF)
         {
             // Создаём новый объект без получения данных из файла...
-            NCFVideo Video = new NCFVideo(VFileName, false);
+            NCFVideo Video = new NCFVideo(VFileName, VSF, false);
 
             // Записываем пользовательские настройки...
             Video.ScreenWidth = (int)GT_NCF_HorRes.Value;
@@ -239,12 +240,13 @@ namespace srcrepair
         /// графического твикера программы.
         /// </summary>
         /// <param name="VFileName">Путь к файлу с настройками</param>
-        private void ReadNCFGameSettings(string VFileName)
+        /// <param name="VSF">Тип механизма хранения настроек движка Source</param>
+        private void ReadNCFGameSettings(string VFileName, string VSF)
         {
             try
             {
                 // Получаем графические настройки...
-                NCFVideo Video = new NCFVideo(VFileName, true);
+                NCFVideo Video = new NCFVideo(VFileName, VSF, true);
 
                 // Заполняем общие настройки...
                 GT_NCF_HorRes.Value = Video.ScreenWidth;
@@ -1186,7 +1188,7 @@ namespace srcrepair
                 DetectFS(SelGame.FullGamePath);
 
                 // Считаем настройки графики...
-                if (SelGame.IsUsingVideoFile) { string VideoFile = SelGame.GetActualVideoFile(); if (File.Exists(VideoFile)) { ReadNCFGameSettings(VideoFile); } else { CoreLib.WriteStringToLog(String.Format(AppStrings.AppVideoDbNotFound, SelGame.FullAppName, VideoFile)); NullGraphOptions(); } } else { ReadGCFGameSettings(SelGame.SmallAppName); }
+                if (SelGame.IsUsingVideoFile) { string VideoFile = SelGame.GetActualVideoFile(); if (File.Exists(VideoFile)) { ReadNCFGameSettings(VideoFile, SelGame.SourceType); } else { CoreLib.WriteStringToLog(String.Format(AppStrings.AppVideoDbNotFound, SelGame.FullAppName, VideoFile)); NullGraphOptions(); } } else { ReadGCFGameSettings(SelGame.SmallAppName); }
 
                 // Переключаем графический твикер в режим GCF/NCF...
                 SetGTOptsType(!SelGame.IsUsingVideoFile);
@@ -1367,7 +1369,7 @@ namespace srcrepair
                         try
                         {
                             // Записываем...
-                            WriteNCFGameSettings(SelGame.GetActualVideoFile());
+                            WriteNCFGameSettings(SelGame.GetActualVideoFile(), SelGame.SourceType);
                             
                             // Выводим сообщение...
                             MessageBox.Show(AppStrings.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
