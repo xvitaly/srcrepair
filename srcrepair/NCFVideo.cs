@@ -39,6 +39,8 @@ namespace srcrepair
         /// </summary>
         protected string DefaultsFileName;
 
+        protected NCFSettings VSettings;
+
         /// <summary>
         /// Хранит содержимое файла с графическими настройками игры.
         /// </summary>
@@ -833,9 +835,13 @@ namespace srcrepair
         /// Базовый конструктор класса.
         /// </summary>
         /// <param name="VFile">Путь к файлу с настройками графики</param>
+        /// <param name="SVID">Тип механизма хранения настроек движка Source</param>
         /// <param name="ReadNow">Включает автоматическое считывание настроек из файла</param>
-        public NCFVideo(string VFile, bool ReadNow = true)
+        public NCFVideo(string VFile, string SVID, bool ReadNow = true)
         {
+            // Подготовим базу с названиями переменных базы нужной версии...
+            VSettings = new NCFSettings(SVID);
+            
             // Сохраним путь к файлу с графическими настройками...
             VideoFileName = VFile;
 
