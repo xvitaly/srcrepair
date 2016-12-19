@@ -19,7 +19,9 @@ namespace srcrepair
         public string ShadowDetail { get; private set; }
         public string ColorCorrection { get; private set; }
         public string AntiAliasing { get; private set; }
+        public string AntiAliasingMSAA { get; private set; }
         public string AntiAliasQuality { get; private set; }
+        public string AntiAliasQualityMSAA { get; private set; }
         public string FilteringMode { get; private set; }
         public string FilteringTrilinear { get; private set; }
         public string VSync { get; private set; }
@@ -40,7 +42,9 @@ namespace srcrepair
             ShadowDetail = "r_shadowrendertotexture";
             ColorCorrection = "mat_colorcorrection";
             AntiAliasing = "mat_antialias";
+            AntiAliasingMSAA = "ScreenMSAA";
             AntiAliasQuality = "mat_aaquality";
+            AntiAliasQualityMSAA = "ScreenMSAAQuality";
             FilteringMode = "mat_forceaniso";
             FilteringTrilinear = "mat_trilinear";
             VSync = "mat_vsync";
