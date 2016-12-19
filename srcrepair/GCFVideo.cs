@@ -27,6 +27,10 @@ namespace srcrepair
     /// </summary>
     public class GCFVideo : VideoSettings
     {
+        /// <summary>
+        /// Хранит и определяет названия переменных настроек графики
+        /// в зависимости от версии движка Source Engine.
+        /// </summary>
         private GCFSettings VSettings;
 
         /// <summary>
