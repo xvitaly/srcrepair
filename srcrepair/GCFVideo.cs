@@ -27,6 +27,8 @@ namespace srcrepair
     /// </summary>
     public class GCFVideo : VideoSettings
     {
+        private GCFSettings VSettings;
+
         /// <summary>
         /// Хранит значеение режима окна: ScreenWidth.
         /// </summary>
@@ -727,54 +729,54 @@ namespace srcrepair
             if (ResKey != null)
             {
                 // Получаем значение разрешения по горизонтали...
-                try { _ScreenWidth = Convert.ToInt32(ResKey.GetValue("ScreenWidth")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _ScreenWidth = Convert.ToInt32(ResKey.GetValue(VSettings.ScreenWidth)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем значение разрешения по вертикали...
-                try { _ScreenHeight = Convert.ToInt32(ResKey.GetValue("ScreenHeight")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _ScreenHeight = Convert.ToInt32(ResKey.GetValue(VSettings.ScreenHeight)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем режим окна (ScreenWindowed): 1-window, 0-fullscreen...
-                try { _DisplayMode = Convert.ToInt32(ResKey.GetValue("ScreenWindowed")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _DisplayMode = Convert.ToInt32(ResKey.GetValue(VSettings.DisplayMode)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем детализацию моделей (r_rootlod): 0-high, 1-med, 2-low...
-                try { _ModelDetail = Convert.ToInt32(ResKey.GetValue("r_rootlod")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _ModelDetail = Convert.ToInt32(ResKey.GetValue(VSettings.ModelDetail)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем детализацию текстур (mat_picmip): 0-high, 1-med, 2-low...
-                try { _TextureDetail = Convert.ToInt32(ResKey.GetValue("mat_picmip")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _TextureDetail = Convert.ToInt32(ResKey.GetValue(VSettings.TextureDetail)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки шейдеров (mat_reducefillrate): 0-high, 1-low...
-                try { _ShaderDetail = Convert.ToInt32(ResKey.GetValue("mat_reducefillrate")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _ShaderDetail = Convert.ToInt32(ResKey.GetValue(VSettings.ShaderDetail)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Начинаем работать над отражениями (здесь сложнее)...
-                try { _WaterDetail = Convert.ToInt32(ResKey.GetValue("r_waterforceexpensive")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                try { _WaterReflections = Convert.ToInt32(ResKey.GetValue("r_waterforcereflectentities")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _WaterDetail = Convert.ToInt32(ResKey.GetValue(VSettings.WaterDetail)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _WaterReflections = Convert.ToInt32(ResKey.GetValue(VSettings.WaterReflections)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки теней (r_shadowrendertotexture): 0-low, 1-high...
-                try { _ShadowDetail = Convert.ToInt32(ResKey.GetValue("r_shadowrendertotexture")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _ShadowDetail = Convert.ToInt32(ResKey.GetValue(VSettings.ShadowDetail)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки коррекции цвета (mat_colorcorrection): 0-off, 1-on...
-                try { _ColorCorrection = Convert.ToInt32(ResKey.GetValue("mat_colorcorrection")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _ColorCorrection = Convert.ToInt32(ResKey.GetValue(VSettings.ColorCorrection)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки сглаживания (mat_antialias): 1-off, 2-2x, 4-4x, etc...
                 // 2x MSAA - 2:0; 4xMSAA - 4:0; 8xCSAA - 4:2; 16xCSAA - 4:4; 8xMSAA - 8:0; 16xQ CSAA - 8:2.
-                try { _AntiAliasing = Convert.ToInt32(ResKey.GetValue("mat_antialias")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                try { _AntiAliasQuality = Convert.ToInt32(ResKey.GetValue("mat_aaquality")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _AntiAliasing = Convert.ToInt32(ResKey.GetValue(VSettings.AntiAliasing)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _AntiAliasQuality = Convert.ToInt32(ResKey.GetValue(VSettings.AntiAliasQuality)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки анизотропии (mat_forceaniso): 1-off, etc...
-                try { _FilteringMode = Convert.ToInt32(ResKey.GetValue("mat_forceaniso")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                try { _FilteringTrilinear = Convert.ToInt32(ResKey.GetValue("mat_trilinear")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _FilteringMode = Convert.ToInt32(ResKey.GetValue(VSettings.FilteringMode)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _FilteringTrilinear = Convert.ToInt32(ResKey.GetValue(VSettings.FilteringTrilinear)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки вертикальной синхронизации (mat_vsync): 0-off, 1-on...
-                try { _VSync = Convert.ToInt32(ResKey.GetValue("mat_vsync")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _VSync = Convert.ToInt32(ResKey.GetValue(VSettings.VSync)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки размытия движения (MotionBlur): 0-off, 1-on...
-                try { _MotionBlur = Convert.ToInt32(ResKey.GetValue("MotionBlur")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _MotionBlur = Convert.ToInt32(ResKey.GetValue(VSettings.MotionBlur)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки режима рендера (DXLevel_V1):
                 // 80-DirectX 8.0; 81-DirectX 8.1; 90-DirectX 9.0; 95-DirectX 9.0c...
-                try { _DirectXMode = Convert.ToInt32(ResKey.GetValue("DXLevel_V1")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _DirectXMode = Convert.ToInt32(ResKey.GetValue(VSettings.DirectXMode)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Получаем настройки HDR (mat_hdr_level): 0-off, 1-bloom, 2-full...
-                try { _HDRMode = Convert.ToInt32(ResKey.GetValue("mat_hdr_level")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { _HDRMode = Convert.ToInt32(ResKey.GetValue(VSettings.HDRMode)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                 // Закрываем ключ реестра...
                 ResKey.Close();
@@ -795,51 +797,51 @@ namespace srcrepair
             RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(RegKey, true);
 
             // Запишем в реестр настройки разрешения экрана...
-            try { ResKey.SetValue("ScreenWidth", _ScreenWidth, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-            try { ResKey.SetValue("ScreenHeight", _ScreenHeight, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue(VSettings.ScreenWidth, _ScreenWidth, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue(VSettings.ScreenHeight, _ScreenHeight, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки режима запуска приложения (ScreenWindowed)...
-            try { ResKey.SetValue("ScreenWindowed", _DisplayMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue(VSettings.DisplayMode, _DisplayMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки детализации моделей...
-            try { ResKey.SetValue("r_rootlod", _ModelDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue(VSettings.ModelDetail, _ModelDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки детализации текстур...
-            try { ResKey.SetValue("mat_picmip", _TextureDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue(VSettings.TextureDetail, _TextureDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки качества шейдерных эффектов...
-            try { ResKey.SetValue("mat_reducefillrate", _ShaderDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue(VSettings.ShaderDetail, _ShaderDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки отражений в воде...
-            try { ResKey.SetValue("r_waterforceexpensive", _WaterDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-            try { ResKey.SetValue("r_waterforcereflectentities", _WaterReflections, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue(VSettings.WaterDetail, _WaterDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue(VSettings.WaterReflections, _WaterReflections, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки прорисовки теней...
-            try { ResKey.SetValue("r_shadowrendertotexture", _ShadowDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue(VSettings.ShadowDetail, _ShadowDetail, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки коррекции цвета...
-            try { ResKey.SetValue("mat_colorcorrection", _ColorCorrection, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue(VSettings.ColorCorrection, _ColorCorrection, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки сглаживания...
-            try { ResKey.SetValue("mat_antialias", _AntiAliasing, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-            try { ResKey.SetValue("mat_aaquality", _AntiAliasQuality, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-            try { ResKey.SetValue("ScreenMSAA", _AntiAliasing, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-            try { ResKey.SetValue("ScreenMSAAQuality", _AntiAliasQuality, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue(VSettings.AntiAliasing, _AntiAliasing, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue(VSettings.AntiAliasQuality, _AntiAliasQuality, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue(VSettings.AntiAliasingMSAA, _AntiAliasing, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue(VSettings.AntiAliasQualityMSAA, _AntiAliasQuality, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки фильтрации...
-            try { ResKey.SetValue("mat_forceaniso", _FilteringMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue(VSettings.FilteringMode, _FilteringMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки вертикальной синхронизации...
-            try { ResKey.SetValue("mat_vsync", _VSync, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue(VSettings.VSync, _VSync, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки размытия движения...
-            try { ResKey.SetValue("MotionBlur", _MotionBlur, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue(VSettings.MotionBlur, _MotionBlur, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки режима DirectX...
-            try { ResKey.SetValue("DXLevel_V1", _DirectXMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue(VSettings.DirectXMode, _DirectXMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Запишем в реестр настройки HDR...
-            try { ResKey.SetValue("mat_hdr_level", _HDRMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { ResKey.SetValue(VSettings.HDRMode, _HDRMode, RegistryValueKind.DWord); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
             // Закрываем открытый ранее ключ реестра...
             ResKey.Close();
