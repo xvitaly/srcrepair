@@ -933,6 +933,9 @@ namespace srcrepair
         /// <param name="ReadNow">Включает автоматическое считывание настроек из реестра</param>
         public GCFVideo(string SAppName, bool ReadNow = true)
         {
+            // Подготовим базу с названиями переменных...
+            VSettings = new GCFSettings();
+
             // Сгенерируем путь к ключу реестра...
             RegKey = GetGameRegKey(SAppName);
 
