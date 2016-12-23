@@ -212,11 +212,11 @@
     <Name>The Mannterface</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/mannterface/mannterface_f588d66b.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/mannterface/mannterface_fcffa40a.zip</URI>
     <UpURI>https://github.com/mannterface/Mannterface/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/mannterface.jpg</Preview>
     <RepoPath>https://github.com/mannterface/Mannterface</RepoPath>
-    <LastUpdate>1468968404</LastUpdate>
+    <LastUpdate>1482170928</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=219</Site>
     <ArchiveDir>Mannterface-master</ArchiveDir>
     <InstallDir>mannterface</InstallDir>
