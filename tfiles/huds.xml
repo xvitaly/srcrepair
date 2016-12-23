@@ -56,11 +56,11 @@
     <Name>ahud</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/ahud/ahud_5ad21656.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/ahud/ahud_fddcc8b0.zip</URI>
     <UpURI>https://github.com/n0kk/ahud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/ahud.jpg</Preview>
     <RepoPath>https://github.com/n0kk/ahud</RepoPath>
-    <LastUpdate>1477080252</LastUpdate>
+    <LastUpdate>1482375368</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=191</Site>
     <ArchiveDir>ahud-master</ArchiveDir>
     <InstallDir>ahud</InstallDir>
