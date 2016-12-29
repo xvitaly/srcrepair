@@ -381,11 +381,11 @@
     <Name>omphud-redux</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/omphud/omphud_631932d4.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/omphud/omphud_c5a983f5.zip</URI>
     <UpURI>https://github.com/flatlinee/omphudedit/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/omphud.jpg</Preview>
     <RepoPath>https://github.com/flatlinee/omphudedit</RepoPath>
-    <LastUpdate>1482372901</LastUpdate>
+    <LastUpdate>1482966113</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=233</Site>
     <ArchiveDir>omphudedit-master</ArchiveDir>
     <InstallDir>omphud</InstallDir>
