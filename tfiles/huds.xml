@@ -368,11 +368,11 @@
     <Name>Overwatch HUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/overwatchhud/overwatchhud_d2143409.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/overwatchhud/overwatchhud_66c5632a.zip</URI>
     <UpURI>https://github.com/nimtra/overwatchhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/overwatchhud.jpg</Preview>
     <RepoPath>https://github.com/nimtra/overwatchhud</RepoPath>
-    <LastUpdate>1482813924</LastUpdate>
+    <LastUpdate>1483055773</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=284</Site>
     <ArchiveDir>overwatchhud-master</ArchiveDir>
     <InstallDir>overwatchhud</InstallDir>
