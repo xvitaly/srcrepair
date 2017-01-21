@@ -53,7 +53,7 @@ def getghinfo(repourl):
     respcode = response.getcode()
     if respcode != 200:
         raise Exception('GitHub API returned %d error code.' % respcode)
-    data = loads(response.read().decode())
+    data = loads(response.read().decode('utf8'))
     return [data[0]['sha'], gmt2unix(data[0]['commit']['committer']['date'])]
 
 
