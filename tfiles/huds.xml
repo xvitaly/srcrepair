@@ -17,11 +17,11 @@
     <Name>broeselhud_blue</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/broeselhudblue/broeselhudblue_6c4e5e67.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/broeselhudblue/broeselhudblue_2a309bba.zip</URI>
     <UpURI>https://github.com/fblue/broeselhud_blue/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/broeselhud_blue.jpg</Preview>
     <RepoPath>https://github.com/fblue/broeselhud_blue</RepoPath>
-    <LastUpdate>1478887221</LastUpdate>
+    <LastUpdate>1486657270</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=217</Site>
     <ArchiveDir>broeselhud_blue-master</ArchiveDir>
     <InstallDir>broeselhudblue</InstallDir>
