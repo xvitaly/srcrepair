@@ -19,7 +19,7 @@ AppId={{77A71DAB-56AA-4F33-BDE8-F00798468B9D}
 AppName=SRC Repair
 AppVerName=SRC Repair
 AppPublisher=EasyCoding Team
-AppPublisherURL=http://www.easycoding.org/
+AppPublisherURL=https://www.easycoding.org/
 AppVersion=27.0.0.4531
 AppSupportURL=https://www.easycoding.org/projects/srcrepair
 AppUpdatesURL=https://www.easycoding.org/projects/srcrepair
@@ -100,7 +100,7 @@ Name: "{group}\{cm:ShcLocFldr}\SRC Repair ({cm:ShcMLnRU})"; Filename: "{app}\src
 Name: "{group}\{cm:ShcLocFldr}\SRC Repair ({cm:ShcMLnEN})"; Filename: "{app}\srcrepair.exe"; Parameters: "/lang en"; Tasks: betashortuts
 
 ; Создаём стандартные ярлыки для справки и удаления...
-Name: "{group}\{cm:ShcLocTexts}\{cm:ProgramOnTheWeb,SRC Repair}"; Filename: "http://www.easycoding.org/projects/srcrepair"
+Name: "{group}\{cm:ShcLocTexts}\{cm:ProgramOnTheWeb,SRC Repair}"; Filename: "https://www.easycoding.org/projects/srcrepair"
 Name: "{group}\{cm:UninstallProgram,SRC Repair}"; Filename: "{uninstallexe}"
 
 ; Создаём ярлык для багтрекера...
