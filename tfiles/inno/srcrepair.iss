@@ -52,9 +52,6 @@ Name: "betashortuts"; Description: "{cm:InstCreateLocShcuts}"; GroupDescription:
 Name: "insdebginf"; Description: "{cm:InstDebugInfo}"; GroupDescription: "{cm:AdvFeatGroupDesc}"
 
 [Files]
-; Копируем библиотеку, используемую для скачивания файлов...
-Source: "isxdl.dll"; DestDir: {tmp}; Flags: dontcopy
-
 ; Устанавливаем readme, файл лицензии и список изменений...
 Source: "GPL.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "readme.txt"; DestDir: "{app}"; Flags: ignoreversion
