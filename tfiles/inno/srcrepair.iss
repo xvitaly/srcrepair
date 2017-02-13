@@ -114,10 +114,10 @@ Name: "{group}\{cm:ShcNETFx}"; Filename: "{cm:ShcNFxUrl}"
 
 [Run]
 Filename: "{app}\srcrepair.exe"; Description: "{cm:LaunchProgram,SRC Repair}"; Flags: nowait postinstall skipifsilent
-Filename: {code:GetNetInstallPath}ngen.exe; Parameters: "install ""{app}\srcrepair.exe"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdminLoggedOn()
+Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\srcrepair.exe"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdminLoggedOn()
 
 [UninstallRun]
-Filename: {code:GetNetInstallPath}ngen.exe; Parameters: "uninstall ""{app}\srcrepair.exe"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdminLoggedOn()
+Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\srcrepair.exe"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdminLoggedOn()
 
 [Code]
 function GetDefRoot(Param: String): String;
@@ -126,12 +126,4 @@ begin
     Result := ExpandConstant('{localappdata}')
   else
     Result := ExpandConstant('{pf}')
-end;
-
-function GetNetInstallPath(Param: String): String;
-var
-  NetPath: String;
-begin
-  RegQueryStringValue(HKLM, 'SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Client', 'InstallPath', NetPath);
-  Result := NetPath;
 end;
