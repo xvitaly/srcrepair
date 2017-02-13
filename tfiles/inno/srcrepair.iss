@@ -104,7 +104,7 @@ Name: "{group}\{cm:UninstallProgram,SRC Repair}"; Filename: "{uninstallexe}"
 Name: "{group}\{cm:RepAppErrText}"; Filename: "https://github.com/xvitaly/srcrepair/issues"
 
 ; Создаём ярлык на рабочем столе (если выбрано)...
-Name: "{commondesktop}\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: desktopicon
+Name: "{userdesktop}\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: desktopicon
 
 ; Создаём ярлык на панели быстрого запуска (если выбрано)...
 Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: quicklaunchicon
