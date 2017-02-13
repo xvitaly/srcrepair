@@ -334,10 +334,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Content Include="..\tfiles\bin\dll\isxdl.dll">
-      <Link>isxdl.dll</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\tfiles\cfgs\bonhighfps.cfg">
       <Link>cfgs\bonhighfps.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
