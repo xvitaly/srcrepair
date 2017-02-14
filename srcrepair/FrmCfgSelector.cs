@@ -29,7 +29,14 @@ namespace srcrepair
 
         private void CS_OK_Click(object sender, EventArgs e)
         {
-            //
+            // Возвращаем результат...
+            Config = CS_CfgSel.Text;
+
+            // Возвращаем результат формы "успех"...
+            DialogResult = DialogResult.OK;
+
+            // Закрываем форму...
+            Close();
         }
 
         private void CS_Cancel_Click(object sender, EventArgs e)
