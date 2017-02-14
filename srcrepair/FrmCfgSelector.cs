@@ -41,7 +41,11 @@ namespace srcrepair
 
         private void CS_Cancel_Click(object sender, EventArgs e)
         {
-            //
+            // Возвращаем результат формы "отменено"...
+            DialogResult = DialogResult.Cancel;
+
+            // Закрываем форму...
+            Close();
         }
     }
 }
