@@ -116,6 +116,32 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Вызывает форму выбора конфига из заданных значений.
+        /// </summary>
+        /// <param name="Cfgs">Список доступных конфигов</param>
+        /// <returns>Выбранный пользователем конфиг</returns>
+        public static string FormShowCfgSelect(List<String> Cfgs)
+        {
+            // Проверяем количество конфигов в списке...
+            if (Cfgs.Count < 1) { throw new ArgumentOutOfRangeException("Not enough configs in list."); }
+
+            // Создаём переменную для хранения результата...
+            string Result = String.Empty;
+
+            // Вызываем форму и получам результат выбора пользователя...
+            using (FrmCfgSelector CfgSel = new FrmCfgSelector(Cfgs))
+            {
+                if (CfgSel.ShowDialog() == DialogResult.OK)
+                {
+                    Result = CfgSel.Config;
+                }
+            }
+
+            // Возвращаем результат...
+            return Result;
+        }
+
+        /// <summary>
         /// Вызывает форму модуля создания отчётов для Техподдержки.
         /// </summary>
         /// <param name="AppUserDir">Путь к каталогу пользователя программы</param>
