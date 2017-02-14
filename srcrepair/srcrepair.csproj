@@ -243,6 +243,9 @@
     <EmbeddedResource Include="FrmCfgSelector.resx">
       <DependentUpon>FrmCfgSelector.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCfgSelector.ru.resx">
+      <DependentUpon>FrmCfgSelector.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDnWrk.resx">
       <DependentUpon>FrmDnWrk.cs</DependentUpon>
     </EmbeddedResource>
