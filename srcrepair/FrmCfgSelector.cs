@@ -23,7 +23,8 @@ namespace srcrepair
 
         private void FrmCfgSelector_Load(object sender, EventArgs e)
         {
-            //
+            // Указываем откуда следует брать список с конфигами...
+            CS_CfgSel.DataSource = Configs;
         }
 
         private void CS_OK_Click(object sender, EventArgs e)
