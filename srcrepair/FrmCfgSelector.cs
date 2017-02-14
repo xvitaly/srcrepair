@@ -12,9 +12,13 @@ namespace srcrepair
 {
     public partial class FrmCfgSelector : Form
     {
-        public FrmCfgSelector()
+        public string Config { get; private set; }
+        private List<String> Configs { get; set; }
+
+        public FrmCfgSelector(List<String> C)
         {
             InitializeComponent();
+            Configs = C;
         }
 
         private void FrmCfgSelector_Load(object sender, EventArgs e)
