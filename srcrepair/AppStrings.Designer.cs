@@ -691,6 +691,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Not enough configs in list..
+        /// </summary>
+        internal static string CS_NEParamsFormException {
+            get {
+                return ResourceManager.GetString("CS_NEParamsFormException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Checking for updates. Please wait!.
         /// </summary>
         internal static string DB_WrkInProgress {
