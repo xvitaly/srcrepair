@@ -660,4 +660,7 @@
   <data name="AppExceptionTemplate" xml:space="preserve">
     <value>Exception "{0}" raised by: "{1}".</value>
   </data>
+  <data name="SD_NEParamsFormException" xml:space="preserve">
+    <value>Not enough SteamIDs in list.</value>
+  </data>
 </root>

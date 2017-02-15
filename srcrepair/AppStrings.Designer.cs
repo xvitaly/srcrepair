@@ -1438,6 +1438,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Not enough SteamIDs in list..
+        /// </summary>
+        internal static string SD_NEParamsFormException {
+            get {
+                return ResourceManager.GetString("SD_NEParamsFormException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All systems operational..
         /// </summary>
         internal static string StatusNormal {
