@@ -97,7 +97,7 @@ namespace srcrepair
         public static string FormShowIDSelect(List<String> SteamIDs)
         {
             // Проверяем количество SteamID в списке...
-            if (SteamIDs.Count < 1) { throw new ArgumentOutOfRangeException("Not enough SteamIDs in list."); }
+            if (SteamIDs.Count < 1) { throw new ArgumentOutOfRangeException(AppStrings.SD_NEParamsFormException); }
 
             // Создаём переменную для хранения результата...
             string Result = String.Empty;
