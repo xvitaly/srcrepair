@@ -77,6 +77,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmCfgSelector";
+            this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.FrmCfgSelector_Load);
             this.ResumeLayout(false);
 
