@@ -121,7 +121,7 @@
     <value>Отмена</value>
   </data>
   <data name="CS_WMsg.Text" xml:space="preserve">
-    <value>Выберите конфиг из списка:</value>
+    <value>Выберите конфиг из списка для редактирования:</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -149,6 +149,6 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Выбор конфига</value>
+    <value>Выбор конфига для редактирования</value>
   </data>
 </root>

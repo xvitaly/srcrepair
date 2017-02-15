@@ -126,10 +126,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="CS_Cancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 53</value>
+    <value>174, 54</value>
   </data>
   <data name="CS_Cancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 23</value>
+    <value>155, 23</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="CS_Cancel.TabIndex" type="System.Int32, mscorlib">
@@ -157,10 +157,10 @@
     <value>NoControl</value>
   </data>
   <data name="CS_OK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 53</value>
+    <value>11, 54</value>
   </data>
   <data name="CS_OK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 23</value>
+    <value>155, 23</value>
   </data>
   <data name="CS_OK.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -187,7 +187,7 @@
     <value>12, 26</value>
   </data>
   <data name="CS_CfgSel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 21</value>
+    <value>316, 21</value>
   </data>
   <data name="CS_CfgSel.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -214,13 +214,13 @@
     <value>12, 9</value>
   </data>
   <data name="CS_WMsg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 14</value>
+    <value>316, 14</value>
   </data>
   <data name="CS_WMsg.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="CS_WMsg.Text" xml:space="preserve">
-    <value>Select config from list:</value>
+    <value>Select config from list to edit:</value>
   </data>
   <data name="&gt;&gt;CS_WMsg.Name" xml:space="preserve">
     <value>CS_WMsg</value>
@@ -244,7 +244,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>239, 87</value>
+    <value>340, 89</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -274,7 +274,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Config selector</value>
+    <value>Select config file to edit</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmCfgSelector</value>
