@@ -844,15 +844,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! An installed FPS-config detected, so the settings from this page except the DirectX mode will be ignored by the game until you remove this config..
-        /// </summary>
-        internal static string GT_FPSCfgDetected {
-            get {
-                return ResourceManager.GetString("GT_FPSCfgDetected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Do you really want to set the graphics settings to the recommended maximum? This will require a powerful computer!.
         /// </summary>
         internal static string GT_MaxPerfMsg {

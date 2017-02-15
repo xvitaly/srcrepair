@@ -165,9 +165,6 @@
   <data name="GT_DxLevelMsg" xml:space="preserve">
     <value>Enable DirectX 8 mode rendering? This will significantly increase the performance of the game.</value>
   </data>
-  <data name="GT_FPSCfgDetected" xml:space="preserve">
-    <value>Warning! An installed FPS-config detected, so the settings from this page except the DirectX mode will be ignored by the game until you remove this config.</value>
-  </data>
   <data name="GT_MaxPerfMsg" xml:space="preserve">
     <value>Do you really want to set the graphics settings to the recommended maximum? This will require a powerful computer!</value>
   </data>
