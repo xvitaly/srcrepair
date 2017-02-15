@@ -123,7 +123,7 @@ namespace srcrepair
         public static string FormShowCfgSelect(List<String> Cfgs)
         {
             // Проверяем количество конфигов в списке...
-            if (Cfgs.Count < 1) { throw new ArgumentOutOfRangeException("Not enough configs in list."); }
+            if (Cfgs.Count < 1) { throw new ArgumentOutOfRangeException(AppStrings.CS_NEParamsFormException); }
 
             // Создаём переменную для хранения результата...
             string Result = String.Empty;
