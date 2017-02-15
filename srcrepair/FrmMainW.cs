@@ -1484,8 +1484,18 @@ namespace srcrepair
 
         private void GT_Warning_Click(object sender, EventArgs e)
         {
-            // Выдадим сообщение о наличии FPS-конфига...
-            MessageBox.Show(AppStrings.GT_FPSCfgDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            // Предложим пользователю выбрать FPS-конфиг...
+            string ConfigFile = FormManager.FormShowCfgSelect(SelGame.FPSConfigs);
+
+            // Проверим выбрал ли что-то пользователь в специальной форме...
+            if (!(String.IsNullOrWhiteSpace(ConfigFile)))
+            {
+                // Загрузим выбранный конфиг в Редактор конфигов...
+                ReadConfigFromFile(ConfigFile);
+
+                // Переключимся на него...
+                MainTabControl.SelectedIndex = 1;
+            }
         }
 
         private void CE_New_Click(object sender, EventArgs e)
