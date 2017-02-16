@@ -32,12 +32,12 @@ namespace srcrepair
         /// <summary>
         /// Хранит статус выполнения процесса очистки.
         /// </summary>
-        private bool IsRunning = true;
+        private bool IsRunning { get; set; } = true;
 
         /// <summary>
         /// Хранит список каталогов для очистки.
         /// </summary>
-        private List<String> RemDirs;
+        private List<String> RemDirs { get; set; }
 
         /// <summary>
         /// Конструктор класса формы модуля быстрой очистки.
