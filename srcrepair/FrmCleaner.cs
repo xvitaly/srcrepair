@@ -56,47 +56,47 @@ namespace srcrepair
         /// <summary>
         /// Хранит список каталогов для очистки.
         /// </summary>
-        private List<String> CleanDirs;
+        private List<String> CleanDirs { get; set; }
 
         /// <summary>
         /// Разрешает / запрещает изменять выбор удаляемых файлов.
         /// </summary>
-        private bool IsReadOnly;
+        private bool IsReadOnly { get; set; }
 
         /// <summary>
         /// Включает / отключает автовыбор файлов флажками.
         /// </summary>
-        private bool NoAutoCheck;
+        private bool NoAutoCheck { get; set; }
 
         /// <summary>
         /// Включает / отключает рекурсивную очистку.
         /// </summary>
-        private bool IsRecursive;
+        private bool IsRecursive { get; set; }
 
         /// <summary>
         /// Включает / отключает принудительное создание резервных копий.
         /// </summary>
-        private bool ForceBackUp;
+        private bool ForceBackUp { get; set; }
 
         /// <summary>
         /// Хранит путь к каталогу для сохранения резервных копий.
         /// </summary>
-        private string FullBackUpDirPath;
+        private string FullBackUpDirPath { get; set; }
 
         /// <summary>
         /// Содержит текст сообщения, которое будет выдаваться по завершении очистки.
         /// </summary>
-        private string SuccessMessage;
+        private string SuccessMessage { get; set; }
 
         /// <summary>
         /// Содержит текст заголовка.
         /// </summary>
-        private string CleanInfo;
+        private string CleanInfo { get; set; }
 
         /// <summary>
         /// Счётчик общего размера удаляемых файлов (в байтах).
         /// </summary>
-        private long TotalSize = 0;
+        private long TotalSize { get; set; } = 0;
 
         /// <summary>
         /// Ищет и добавляет файлы для удаления в таблицу модуля очистки.
