@@ -55,7 +55,7 @@ namespace srcrepair
         /// <summary>
         /// Хранит путь к файлу Hosts.
         /// </summary>
-        private string HostsFilePath = String.Empty;
+        private string HostsFilePath { get; set; }
         #endregion
 
         #region IM
