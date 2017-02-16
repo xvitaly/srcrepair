@@ -31,12 +31,12 @@ namespace srcrepair
         /// <summary>
         /// Хранит путь к каталогу установки клиента Steam.
         /// </summary>
-        private string SteamPath;
+        private string SteamPath { get; set; }
 
         /// <summary>
         /// Хранит путь к каталогу хранения резервных копий.
         /// </summary>
-        private string BackUpDir;
+        private string BackUpDir { get; set; }
 
         /// <summary>
         /// Конструктор класса формы модуля очистки кэшей Steam.
