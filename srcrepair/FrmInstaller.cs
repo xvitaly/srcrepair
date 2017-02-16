@@ -49,17 +49,17 @@ namespace srcrepair
         /// <summary>
         /// Хранит полный путь к каталогу игры.
         /// </summary>
-        private string FullGamePath;
+        private string FullGamePath { get; set; }
 
         /// <summary>
         /// Использует ли игра особый кастомный каталог.
         /// </summary>
-        private bool IsUsingUserDir;
+        private bool IsUsingUserDir { get; set; }
 
         /// <summary>
         /// Хранит название директории внутри кастомного каталога.
         /// </summary>
-        private string CustomInstallDir;
+        private string CustomInstallDir { get; set; }
 
         /// <summary>
         /// Устанавливает файл в указанный каталог.
