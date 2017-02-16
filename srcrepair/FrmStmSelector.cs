@@ -35,7 +35,7 @@ namespace srcrepair
         /// <summary>
         /// Хранит список полученных SteamID.
         /// </summary>
-        private List<String> SteamIDs;
+        private List<String> SteamIDs { get; set; }
 
         /// <summary>
         /// Конструктор класса формы модуля выбора SteamID.
