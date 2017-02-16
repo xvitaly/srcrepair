@@ -32,17 +32,17 @@ namespace srcrepair
         /// <summary>
         /// Хранит статус выполнения процесса распаковки.
         /// </summary>
-        private bool IsRunning = true;
+        private bool IsRunning { get; set; } = true;
 
         /// <summary>
         /// Хранит имя архива, который мы распаковываем.
         /// </summary>
-        private string ArchName;
+        private string ArchName { get; set; }
 
         /// <summary>
         /// Хранит каталог назначения.
         /// </summary>
-        private string DestDir;
+        private string DestDir { get; set; }
 
         /// <summary>
         /// Конструктор класса формы модуля распаковки файлов из архивов.
