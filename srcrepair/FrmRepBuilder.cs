@@ -52,22 +52,22 @@ namespace srcrepair
         /// <summary>
         /// Хранит статус выполнения процесса создания отчёта.
         /// </summary>
-        private bool IsCompleted = false;
+        private bool IsCompleted { get; set; } = false;
 
         /// <summary>
         /// Хранит путь к пользовательскому каталогу приложения.
         /// </summary>
-        private string AppUserDir;
+        private string AppUserDir { get; set; }
 
         /// <summary>
         /// Хранит путь к каталогу установки клиента Steam.
         /// </summary>
-        private string FullSteamPath;
+        private string FullSteamPath { get; set; }
 
         /// <summary>
         /// Хранит путь к каталогу с конфигами управляемой игры.
         /// </summary>
-        private string FullCfgPath;
+        private string FullCfgPath { get; set; }
 
         /// <summary>
         /// Метод, срабатывающий при возникновении события "загрузка формы".
