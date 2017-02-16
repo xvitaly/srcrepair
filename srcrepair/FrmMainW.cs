@@ -1484,17 +1484,24 @@ namespace srcrepair
 
         private void GT_Warning_Click(object sender, EventArgs e)
         {
-            // Предложим пользователю выбрать FPS-конфиг...
-            string ConfigFile = FormManager.FormShowCfgSelect(SelGame.FPSConfigs);
-
-            // Проверим выбрал ли что-то пользователь в специальной форме...
-            if (!(String.IsNullOrWhiteSpace(ConfigFile)))
+            try
             {
-                // Загрузим выбранный конфиг в Редактор конфигов...
-                ReadConfigFromFile(ConfigFile);
+                // Предложим пользователю выбрать FPS-конфиг...
+                string ConfigFile = FormManager.FormShowCfgSelect(SelGame.FPSConfigs);
 
-                // Переключимся на него...
-                MainTabControl.SelectedIndex = 1;
+                // Проверим выбрал ли что-то пользователь в специальной форме...
+                if (!(String.IsNullOrWhiteSpace(ConfigFile)))
+                {
+                    // Загрузим выбранный конфиг в Редактор конфигов...
+                    ReadConfigFromFile(ConfigFile);
+
+                    // Переключимся на него...
+                    MainTabControl.SelectedIndex = 1;
+                }
+            }
+            catch (Exception Ex)
+            {
+                CoreLib.HandleExceptionEx(AppStrings.CS_FailedToOpenCfg, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
             }
         }
 
