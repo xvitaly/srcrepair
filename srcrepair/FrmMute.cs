@@ -46,12 +46,12 @@ namespace srcrepair
         /// <summary>
         /// Хранит путь к файлу с БД отключённых игроков.
         /// </summary>
-        private string Banlist;
+        private string Banlist { get; set; }
 
         /// <summary>
         /// Хранит путь к каталогу резервных копий.
         /// </summary>
-        private string BackUpDir;
+        private string BackUpDir { get; set; }
         #endregion
 
         #region IM
