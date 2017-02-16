@@ -32,17 +32,17 @@ namespace srcrepair
         /// <summary>
         /// Хранит статус выполнения процесса загрузки.
         /// </summary>
-        private bool IsRunning = true;
+        private bool IsRunning { get; set; } = true;
 
         /// <summary>
         /// Хранит URL файла, который нужно загрузить.
         /// </summary>
-        private string RemoteURI;
+        private string RemoteURI { get; set; }
 
         /// <summary>
         /// Хранит путь к локальному файлу, куда нужно сохранить результат.
         /// </summary>
-        private string LocalFile;
+        private string LocalFile { get; set; }
 
         /// <summary>
         /// Конструктор класса формы модуля загрузки файлов из Интернета.
