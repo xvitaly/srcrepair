@@ -663,4 +663,7 @@
   <data name="SD_NEParamsFormException" xml:space="preserve">
     <value>Not enough SteamIDs in list.</value>
   </data>
+  <data name="CS_FailedToOpenCfg" xml:space="preserve">
+    <value>An error occured. Failed to open config selector! Try again later.</value>
+  </data>
 </root>

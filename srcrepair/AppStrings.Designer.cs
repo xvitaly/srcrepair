@@ -691,6 +691,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occured. Failed to open config selector! Try again later..
+        /// </summary>
+        internal static string CS_FailedToOpenCfg {
+            get {
+                return ResourceManager.GetString("CS_FailedToOpenCfg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Not enough configs in list..
         /// </summary>
         internal static string CS_NEParamsFormException {
