@@ -30,7 +30,7 @@ namespace srcrepair
         /// <summary>
         /// Хранит путь к файлу журнала.
         /// </summary>
-        private string LogFileName;
+        private string LogFileName { get; set; }
 
         /// <summary>
         /// Конструктор класса формы модуля просмотра журналов.
