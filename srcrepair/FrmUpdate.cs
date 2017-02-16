@@ -46,22 +46,22 @@ namespace srcrepair
         /// <summary>
         /// Менеджер обновлений: управляет процессом поиска и установки обновлений.
         /// </summary>
-        private UpdateManager UpMan;
+        private UpdateManager UpMan { get; set; }
 
         /// <summary>
         /// Хранит полученный UserAgent для HTTP запросов.
         /// </summary>
-        private string UserAgent;
+        private string UserAgent { get; set; }
 
         /// <summary>
         /// Хранит путь к пользовательскому каталогу SRC Repair.
         /// </summary>
-        private string AppUserDir;
+        private string AppUserDir { get; set; }
 
         /// <summary>
         /// Хранит путь установки SRC Repair.
         /// </summary>
-        private string FullAppPath;
+        private string FullAppPath { get; set; }
 
         /// <summary>
         /// Устанавливает дату последней проверки обновлений приложения.
