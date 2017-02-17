@@ -1701,7 +1701,7 @@ namespace srcrepair
             if ((AppSelector.Items.Count > 0) && (AppSelector.SelectedIndex != -1))
             {
                 // Запускаем форму создания отчёта для Техподдержки...
-                FormManager.FormShowRepBuilder(App.AppUserDir, App.FullSteamPath, SelGame.FullCfgPath);
+                FormManager.FormShowRepBuilder(App.AppUserDir, App.FullSteamPath, SelGame);
             }
             else
             {
