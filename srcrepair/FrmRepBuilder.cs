@@ -35,7 +35,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="A">Путь к каталогу пользователя</param>
         /// <param name="FS">Путь к каталогу установки Steam</param>
-        /// <param name="FS">Конфигурация выбранной в главном окне игры</param>
+        /// <param name="SG">Конфигурация выбранной в главном окне игры</param>
         public FrmRepBuilder(string A, string FS, SourceGame SG)
         {
             InitializeComponent();
