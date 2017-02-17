@@ -35,13 +35,13 @@ namespace srcrepair
         /// </summary>
         /// <param name="A">Путь к каталогу пользователя</param>
         /// <param name="FS">Путь к каталогу установки Steam</param>
-        /// <param name="FC">Путь к каталогу к конфигами игры</param>
-        public FrmRepBuilder(string A, string FS, string FC)
+        /// <param name="FS">Конфигурация выбранной в главном окне игры</param>
+        public FrmRepBuilder(string A, string FS, SourceGame SG)
         {
             InitializeComponent();
             AppUserDir = A;
             FullSteamPath = FS;
-            FullCfgPath = FC;
+            SelectedGame = SG;
         }
 
         /// <summary>
@@ -65,9 +65,9 @@ namespace srcrepair
         private string FullSteamPath { get; set; }
 
         /// <summary>
-        /// Хранит путь к каталогу с конфигами управляемой игры.
+        /// Хранит конфигурацию выбранной в главном окне игры.
         /// </summary>
-        private string FullCfgPath { get; set; }
+        private SourceGame SelectedGame { get; set; }
 
         /// <summary>
         /// Метод, срабатывающий при возникновении события "загрузка формы".
@@ -136,7 +136,7 @@ namespace srcrepair
                             if (File.Exists(FNameRep)) { ZBkUp.AddFile(FNameRep, "report"); }
 
                             // Добавляем в архив все конфиги выбранной игры...
-                            if (Directory.Exists(FullCfgPath)) { ZBkUp.AddDirectory(FullCfgPath, "configs"); }
+                            if (Directory.Exists(SelectedGame.FullCfgPath)) { ZBkUp.AddDirectory(SelectedGame.FullCfgPath, "configs"); }
 
                             // Добавляем в архив все краш-дампы и логи Steam...
                             if (Directory.Exists(Path.Combine(FullSteamPath, "dumps"))) { ZBkUp.AddDirectory(Path.Combine(FullSteamPath, "dumps"), "dumps"); }
