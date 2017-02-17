@@ -139,6 +139,7 @@ namespace srcrepair
 
                             // Добавляем в архив все конфиги выбранной игры...
                             if (Directory.Exists(SelectedGame.FullCfgPath)) { ZBkUp.AddDirectory(SelectedGame.FullCfgPath, "configs"); }
+                            if (SelectedGame.IsUsingVideoFile) { string GameVideo = SelectedGame.GetActualVideoFile(); if (File.Exists(GameVideo)) { ZBkUp.AddFile(GameVideo, "video"); } }
 
                             // Добавляем в архив все краш-дампы и логи Steam...
                             if (Directory.Exists(Path.Combine(FullSteamPath, "dumps"))) { ZBkUp.AddDirectory(Path.Combine(FullSteamPath, "dumps"), "dumps"); }
