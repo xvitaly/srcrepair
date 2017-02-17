@@ -147,9 +147,10 @@ namespace srcrepair
         /// <param name="AppUserDir">Путь к каталогу пользователя программы</param>
         /// <param name="FullSteamPath">Путь к каталогу установки Steam</param>
         /// <param name="FullCfgPath">Путь к каталогу с конфигами выбранной игры</param>
-        public static void FormShowRepBuilder(string AppUserDir, string FullSteamPath, string FullCfgPath)
+        /// <param name="SelectedGame">Конфигурация выбранной в главном окне игры</param>
+        public static void FormShowRepBuilder(string AppUserDir, string FullSteamPath, SourceGame SelectedGame)
         {
-            using (FrmRepBuilder RBF = new FrmRepBuilder(AppUserDir, FullSteamPath, FullCfgPath))
+            using (FrmRepBuilder RBF = new FrmRepBuilder(AppUserDir, FullSteamPath, SelectedGame))
             {
                 RBF.ShowDialog();
             }
