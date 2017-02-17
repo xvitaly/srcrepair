@@ -103,6 +103,7 @@ namespace srcrepair
             string ArchName = Path.Combine(RepDir, Path.ChangeExtension(RepName, ".zip"));
             string HostsFile = FileManager.GetHostsFileFullPath();
             string FNameRep = Path.Combine(TempDir, RepName);
+            string FNameFPSCfg = Path.Combine(TempDir, String.Format("fpscfg_{0}.zip", CrDt));
             string FNamePing = Path.Combine(TempDir, String.Format("ping_{0}.log", CrDt));
             string FNameTrace = Path.Combine(TempDir, String.Format("traceroute_{0}.log", CrDt));
             string FNameIpConfig = Path.Combine(TempDir, String.Format("ipconfig_{0}.log", CrDt));
@@ -121,12 +122,13 @@ namespace srcrepair
                 {
                     // Запускаем последовательность...
                     try { ProcessManager.StartProcessAndWait("dxdiag.exe", String.Format("/t {0}", FNameDxDiag)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } /* DxDiag неадекватно реагирует на кавычки в пути. */
+                    try { if (SelectedGame.FPSConfigs.Count > 0) { FileManager.CompressFiles(SelectedGame.FPSConfigs, FNameFPSCfg); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C ping steampowered.com > \"{0}\"", FNamePing)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C tracert steampowered.com > \"{0}\"", FNameTrace)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C ipconfig /all > \"{0}\"", FNameIpConfig)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C netstat -a > \"{0}\"", FNameNetStat)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C route print > \"{0}\"", FNameRouting)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    
+
                     try
                     {
                         // Создаём Zip-архив...
@@ -152,6 +154,7 @@ namespace srcrepair
                             if (File.Exists(FNameRouting)) { ZBkUp.AddFile(FNameRouting, "system"); }
                             if (File.Exists(FNameNetStat)) { ZBkUp.AddFile(FNameNetStat, "system"); }
                             if (File.Exists(FNameDxDiag)) { ZBkUp.AddFile(FNameDxDiag, "system"); }
+                            if (File.Exists(FNameFPSCfg)) { ZBkUp.AddFile(FNameFPSCfg, "fps"); }
 
                             // Сохраняем архив...
                             ZBkUp.Save();
