@@ -69,11 +69,11 @@
     <Name>flatHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/flathud/flathud_4460779a.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/flathud/flathud_91bf86eb.zip</URI>
     <UpURI>https://github.com/flatlinee/flatHUD-/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/flathud.jpg</Preview>
     <RepoPath>https://github.com/flatlinee/flatHUD-</RepoPath>
-    <LastUpdate>1482373744</LastUpdate>
+    <LastUpdate>1487405826</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=198</Site>
     <ArchiveDir>flatHUD--master/flathudRED</ArchiveDir>
     <InstallDir>flathud</InstallDir>
