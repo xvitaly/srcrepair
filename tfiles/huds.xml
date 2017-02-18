@@ -82,11 +82,11 @@
     <Name>bwHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/bwhud/bwhud_c538711d.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/bwhud/bwhud_a88c3c25.zip</URI>
     <UpURI>https://github.com/bw-/bwhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/bwhud.jpg</Preview>
     <RepoPath>https://github.com/bw-/bwhud</RepoPath>
-    <LastUpdate>1482354507</LastUpdate>
+    <LastUpdate>1487112474</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=224</Site>
     <ArchiveDir>bwhud-master</ArchiveDir>
     <InstallDir>bwhud</InstallDir>
