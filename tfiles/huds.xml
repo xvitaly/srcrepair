@@ -199,11 +199,11 @@
     <Name>Isaac Hud</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/isaachud/isaachud_6ec22118.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/isaachud/isaachud_ff41b0d7.zip</URI>
     <UpURI>https://github.com/Xeletron/Isaac-Hud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/isaachud.jpg</Preview>
     <RepoPath>https://github.com/Xeletron/Isaac-Hud</RepoPath>
-    <LastUpdate>1478100440</LastUpdate>
+    <LastUpdate>1487708345</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=211</Site>
     <ArchiveDir>Isaac-Hud-master/IsaacHUD</ArchiveDir>
     <InstallDir>isaachud</InstallDir>
