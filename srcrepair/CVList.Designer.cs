@@ -4300,7 +4300,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Specifies which voice codec DLL to use in a game. Set to the name of the DLL without the extension..
+        ///   Looks up a localized string similar to Specifies which voice codec to use in a game..
         /// </summary>
         internal static string sv_voicecodec {
             get {

@@ -727,7 +727,7 @@
     <value>Overrides the max players reported to prospective clients.</value>
   </data>
   <data name="sv_voicecodec" xml:space="preserve">
-    <value>Specifies which voice codec DLL to use in a game. Set to the name of the DLL without the extension.</value>
+    <value>Specifies which voice codec to use in a game.</value>
   </data>
   <data name="sv_vote_allow_spectators" xml:space="preserve">
     <value>Allow spectators to vote?</value>
