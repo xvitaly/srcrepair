@@ -4282,7 +4282,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Use new voice codec instead of old..
+        ///   Looks up a localized string similar to Use new voice codec instead of old. Deprecated. Replaced by sv_voicecodec..
         /// </summary>
         internal static string sv_use_steam_voice {
             get {

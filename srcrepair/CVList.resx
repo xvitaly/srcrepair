@@ -322,7 +322,7 @@
     <value>Cvar for managing custom content.</value>
   </data>
   <data name="sv_use_steam_voice" xml:space="preserve">
-    <value>Use new voice codec instead of old.</value>
+    <value>Use new voice codec instead of old. Deprecated. Replaced by sv_voicecodec.</value>
   </data>
   <data name="sv_vote_allow_specators" xml:space="preserve">
     <value>Allow spectators to vote?</value>
