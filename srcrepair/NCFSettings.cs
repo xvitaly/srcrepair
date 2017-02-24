@@ -177,8 +177,15 @@ namespace srcrepair
         /// <param name="ID">Тип механизма хранения настроек движка Source</param>
         public NCFSettings(string ID)
         {
-            // Временно заполним без указания ID...
-            SetSettingsV2();
+            switch (ID)
+            {
+                case "3": // Dota 2
+                    SetSettingsV3();
+                    break;
+                default: // Все остальные Source 1 игры
+                    SetSettingsV2();
+                    break;
+            }
         }
     }
 }
