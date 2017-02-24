@@ -146,6 +146,14 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Заполняет свойства класса настройками для базы версии 3 (Source 2; Dota 2).
+        /// </summary>
+        private void SetSettingsV3()
+        {
+            //
+        }
+
+        /// <summary>
         /// Базовый конструктор класса.
         /// </summary>
         /// <param name="ID">Тип механизма хранения настроек движка Source</param>
