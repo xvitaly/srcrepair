@@ -150,7 +150,25 @@ namespace srcrepair
         /// </summary>
         private void SetSettingsV3()
         {
-            //
+            ScreenWidth = "setting.defaultres";
+            ScreenHeight = "setting.defaultresheight";
+            ScreenRatio = "setting.aspectratiomode";
+            Brightness = "setting.r_fullscreen_gamma";
+            ShadowQuality = "setting.cl_globallight_shadow_mode";
+            //MotionBlur = "setting.mat_motion_blur_enabled";
+            //DisplayMode = "setting.fullscreen";
+            DisplayBorderless = "setting.nowindowborder";
+            //AntiAliasing = "setting.mat_antialias";
+            //AntiAliasQuality = "setting.mat_aaquality";
+            //FilteringMode = "setting.mat_forceaniso";
+            VSync = "setting.mat_vsync";
+            VSyncMode = "setting.mat_triplebuffered";
+            //MCRendering = "setting.mat_queue_mode";
+            ShaderEffects = "setting.shaderquality";
+            EffectDetails = "setting.cpu_level";
+            MemoryPoolType = "setting.mem_level";
+            TextureModelQuality = "setting.gpu_mem_level";
+            GrainScaleOverride = "setting.mat_viewportscale";
         }
 
         /// <summary>
