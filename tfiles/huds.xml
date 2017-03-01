@@ -416,4 +416,17 @@
     <ArchiveDir>medHUD-master</ArchiveDir>
     <InstallDir>medhud</InstallDir>
   </HUD>
+  <HUD>
+    <Name>10PlayerMvMScoreboard</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/10mvmscb/10mvmscb_deadbeef.zip</URI>
+    <UpURI>https://github.com/HeIIoween/10PlayerMvMScoreboard/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/10mvmscb.jpg</Preview>
+    <RepoPath>https://github.com/HeIIoween/10PlayerMvMScoreboard</RepoPath>
+    <LastUpdate>1371026260</LastUpdate>
+    <Site>https://github.com/HeIIoween/10PlayerMvMScoreboard</Site>
+    <ArchiveDir>10PlayerMvMScoreboard-master/fawos</ArchiveDir>
+    <InstallDir>10mvmscb</InstallDir>
+  </HUD>
 </HUDs>
