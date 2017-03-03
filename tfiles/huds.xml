@@ -481,4 +481,17 @@
     <ArchiveDir>RevHud-Updated-master</ArchiveDir>
     <InstallDir>revhud</InstallDir>
   </HUD>
+  <HUD>
+    <Name>RebelHUD</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/rebelhud/rebelhud_0000000.zip</URI>
+    <UpURI>https://github.com/TheRebelCreeper/RebelHud/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/rebelhud.jpg</Preview>
+    <RepoPath>https://github.com/TheRebelCreeper/RebelHud</RepoPath>
+    <LastUpdate>1368022802</LastUpdate>
+    <Site>http://huds.tf/forum/showthread.php?tid=240</Site>
+    <ArchiveDir>RebelHud-master/custom/RebelHud</ArchiveDir>
+    <InstallDir>rebelhud</InstallDir>
+  </HUD>
 </HUDs>
