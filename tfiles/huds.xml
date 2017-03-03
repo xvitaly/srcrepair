@@ -446,11 +446,11 @@
     <Name>smeshud</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/smeshud/smeshud_0000000.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/smeshud/smeshud_fb9b512e.zip</URI>
     <UpURI>https://github.com/smesi/smeshud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/smeshud.jpg</Preview>
     <RepoPath>https://github.com/smesi/smeshud</RepoPath>
-    <LastUpdate>1368022802</LastUpdate>
+    <LastUpdate>1475395812</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=338</Site>
     <ArchiveDir>smeshud-master/smeshud</ArchiveDir>
     <InstallDir>smeshud</InstallDir>
