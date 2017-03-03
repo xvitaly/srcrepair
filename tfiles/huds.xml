@@ -443,7 +443,7 @@
     <InstallDir>antshud</InstallDir>
   </HUD>
   <HUD>
-    <Name>smeshud</Name>
+    <Name>SmesHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/smeshud/smeshud_fb9b512e.zip</URI>
