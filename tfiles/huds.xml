@@ -469,14 +469,14 @@
     <InstallDir>slimhud</InstallDir>
   </HUD>
   <HUD>
-    <Name>RevHud</Name>
+    <Name>RevHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/revhud/revhud_0000000.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/revhud/revhud_47a8ceac.zip</URI>
     <UpURI>https://github.com/tunikun/RevHud-Updated/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/revhud.jpg</Preview>
     <RepoPath>https://github.com/tunikun/RevHud-Updated</RepoPath>
-    <LastUpdate>1368022802</LastUpdate>
+    <LastUpdate>1465694715</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=246</Site>
     <ArchiveDir>RevHud-Updated-master</ArchiveDir>
     <InstallDir>revhud</InstallDir>
