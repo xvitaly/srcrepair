@@ -465,7 +465,7 @@
     <RepoPath>https://github.com/JackStanley/TF2slimHUD</RepoPath>
     <LastUpdate>1466604333</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=220</Site>
-    <ArchiveDir>TF2slimHUD-master/slimHUD</ArchiveDir>
+    <ArchiveDir>TF2slimHUD-Main/slimHUD</ArchiveDir>
     <InstallDir>slimhud</InstallDir>
   </HUD>
   <HUD>
