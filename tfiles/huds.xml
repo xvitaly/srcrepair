@@ -429,4 +429,17 @@
     <ArchiveDir>10PlayerMvMScoreboard-master/fawos</ArchiveDir>
     <InstallDir>10mvmscb</InstallDir>
   </HUD>
+  <HUD>
+    <Name>AntsHUD</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/antshud/antshud_0000000.zip</URI>
+    <UpURI>https://github.com/AsianAntwan/AntsHUD/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/antshud.jpg</Preview>
+    <RepoPath>https://github.com/AsianAntwan/AntsHUD</RepoPath>
+    <LastUpdate>1368022802</LastUpdate>
+    <Site>http://huds.tf/forum/showthread.php?tid=270</Site>
+    <ArchiveDir>AntsHUD-master</ArchiveDir>
+    <InstallDir>antshud</InstallDir>
+  </HUD>
 </HUDs>
