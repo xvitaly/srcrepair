@@ -460,10 +460,10 @@
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
     <URI>http://sourceforge.net/projects/srcrepair/files/huds/slimhud/slimhud_b5b67129.zip</URI>
-    <UpURI>https://github.com/JackStanley/TF2slimHUD/archive/master.zip</UpURI>
+    <UpURI>https://github.com/JackStanley/TF2slimHUD/archive/Main.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/slimhud.jpg</Preview>
     <RepoPath>https://github.com/JackStanley/TF2slimHUD</RepoPath>
-    <LastUpdate>1466604333</LastUpdate>
+    <LastUpdate>1366604333</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=220</Site>
     <ArchiveDir>TF2slimHUD-master/slimHUD</ArchiveDir>
     <InstallDir>slimhud</InstallDir>
