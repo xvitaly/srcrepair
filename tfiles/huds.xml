@@ -95,11 +95,11 @@
     <Name>budhud</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/budhud/budhud_82cf7c56.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/budhud/budhud_d6a2f638.zip</URI>
     <UpURI>https://github.com/WhiskerBiscuit/budhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.jpg</Preview>
     <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
-    <LastUpdate>1487112064</LastUpdate>
+    <LastUpdate>1488924679</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=207</Site>
     <ArchiveDir>budhud-master/budhud</ArchiveDir>
     <InstallDir>budhud</InstallDir>
