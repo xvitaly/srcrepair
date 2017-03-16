@@ -3678,4 +3678,7 @@
   <data name="weapon_air_spread_scale" xml:space="preserve">
     <value>Задаёт коэффициент разброса пуль при стрельбе во время нахождения в воздухе.</value>
   </data>
+  <data name="cl_drawhud_force_deathnotices" xml:space="preserve">
+    <value>Управляет режимом отображения отчёта об убийствах (deathnotices) HUD: -1 - не показывать никогда; 0 - режим по умолчанию; 2 - показывать всегда даже если другие элементы HUD отключены.</value>
+  </data>
 </root>
