@@ -2313,4 +2313,7 @@
   <data name="cl_teamid_overhead_always" xml:space="preserve">
     <value>Allow / disable set Team ID to Always On.</value>
   </data>
+  <data name="sv_teamid_overhead_always_prohibit" xml:space="preserve">
+    <value>Allow / disable connected clients to use cl_teamid_overhead_always.</value>
+  </data>
 </root>

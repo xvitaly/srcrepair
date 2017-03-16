@@ -4246,6 +4246,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allow / disable connected clients to use cl_teamid_overhead_always..
+        /// </summary>
+        internal static string sv_teamid_overhead_always_prohibit {
+            get {
+                return ResourceManager.GetString("sv_teamid_overhead_always_prohibit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tests for scripted sequences that are embedded in the world..
         /// </summary>
         internal static string sv_test_scripted_sequences {
