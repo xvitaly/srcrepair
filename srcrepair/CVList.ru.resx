@@ -3681,6 +3681,9 @@
   <data name="cl_drawhud_force_deathnotices" xml:space="preserve">
     <value>Управляет режимом отображения отчёта об убийствах (deathnotices) HUD: -1 - не показывать никогда; 0 - режим по умолчанию; 2 - показывать всегда даже если другие элементы HUD отключены.</value>
   </data>
+  <data name="cl_show_team_equipment" xml:space="preserve">
+    <value>Функция. Используется в биндах. При активации отображает экипировку союзников на экране.</value>
+  </data>
   <data name="cl_teamid_overhead_always" xml:space="preserve">
     <value>Разрешает / запрещает всегда отображать Team ID на экране.</value>
   </data>
