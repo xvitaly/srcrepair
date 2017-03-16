@@ -4120,6 +4120,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allow / disable connected clients to use cl_show_team_equipment..
+        /// </summary>
+        internal static string sv_show_team_equipment_prohibit {
+            get {
+                return ResourceManager.GetString("sv_show_team_equipment_prohibit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Show bbox and dismount points for all ladders..
         /// </summary>
         internal static string sv_showladders {
