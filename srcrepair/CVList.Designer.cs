@@ -1492,6 +1492,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allow / disable set Team ID to Always On..
+        /// </summary>
+        internal static string cl_teamid_overhead_always {
+            get {
+                return ResourceManager.GetString("cl_teamid_overhead_always", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enable parallel processing of C_BaseAnimating::SetupBones()..
         /// </summary>
         internal static string cl_threaded_bone_setup {
