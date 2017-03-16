@@ -3687,6 +3687,9 @@
   <data name="cl_teamid_overhead_always" xml:space="preserve">
     <value>Разрешает / запрещает всегда отображать Team ID на экране.</value>
   </data>
+  <data name="sv_show_team_equipment_prohibit" xml:space="preserve">
+    <value>Разрешает / запрещает использование на клиентах cl_show_team_equipment.</value>
+  </data>
   <data name="sv_teamid_overhead_always_prohibit" xml:space="preserve">
     <value>Позволяет разрешить / запретить использование на клиентах cl_teamid_overhead_always.</value>
   </data>
