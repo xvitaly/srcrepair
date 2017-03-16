@@ -637,6 +637,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to -1 to force draw no deathnotices, 0 default, 1 to force draw deathnotices even if other HUD is disabled..
+        /// </summary>
+        internal static string cl_drawhud_force_deathnotices {
+            get {
+                return ResourceManager.GetString("cl_drawhud_force_deathnotices", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Show / hide radar and minimap on special HUD modes..
         /// </summary>
         internal static string cl_drawhud_force_radar {

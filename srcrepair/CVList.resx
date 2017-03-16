@@ -2307,4 +2307,7 @@
   <data name="sv_vote_count_spectator_votes" xml:space="preserve">
     <value>Allow / disallow count spectators votes.</value>
   </data>
+  <data name="cl_drawhud_force_deathnotices" xml:space="preserve">
+    <value>-1 to force draw no deathnotices, 0 default, 1 to force draw deathnotices even if other HUD is disabled.</value>
+  </data>
 </root>
