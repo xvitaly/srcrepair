@@ -1276,6 +1276,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bindable function. Will show teammates’ full Target ID, including equipment..
+        /// </summary>
+        internal static string cl_show_team_equipment {
+            get {
+                return ResourceManager.GetString("cl_show_team_equipment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 0/1 - turns color-coded items in backpack off/on..
         /// </summary>
         internal static string cl_showbackpackrarities {
