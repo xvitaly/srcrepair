@@ -48,8 +48,6 @@ Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl,ru-RU.isl"; InfoB
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
-Name: "betashortuts"; Description: "{cm:InstCreateLocShcuts}"; GroupDescription: "{cm:AdvFeatGroupDesc}"
-Name: "insdebginf"; Description: "{cm:InstDebugInfo}"; GroupDescription: "{cm:AdvFeatGroupDesc}"
 
 [Files]
 ; Копируем файл со списком изменений...
@@ -70,7 +68,7 @@ Source: "DotNetZip.dll.sig"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Устанавливаем бинарники приложения...
 Source: "srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion; Tasks: insdebginf
+Source: "srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion
 Source: "srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion
 Source: "ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs
 
@@ -83,10 +81,6 @@ Source: "cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs cr
 [Icons]
 ; Создаём ярлык для приложения...
 Name: "{group}\SRC Repair"; Filename: "{app}\srcrepair.exe"
-
-; Создаём ярлыки для запуска локализованных версий (только если пользователь выбрал этот пункт)...
-Name: "{group}\{cm:ShcLocFldr}\SRC Repair ({cm:ShcMLnRU})"; Filename: "{app}\srcrepair.exe"; Parameters: "/lang ru"; Tasks: betashortuts
-Name: "{group}\{cm:ShcLocFldr}\SRC Repair ({cm:ShcMLnEN})"; Filename: "{app}\srcrepair.exe"; Parameters: "/lang en"; Tasks: betashortuts
 
 ; Создаём стандартные ярлыки для справки и удаления...
 Name: "{group}\{cm:ShcLocTexts}\{cm:ProgramOnTheWeb,SRC Repair}"; Filename: "https://www.easycoding.org/projects/srcrepair"
