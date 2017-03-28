@@ -92,17 +92,11 @@ Name: "{group}\{cm:ShcLocFldr}\SRC Repair ({cm:ShcMLnEN})"; Filename: "{app}\src
 Name: "{group}\{cm:ShcLocTexts}\{cm:ProgramOnTheWeb,SRC Repair}"; Filename: "https://www.easycoding.org/projects/srcrepair"
 Name: "{group}\{cm:UninstallProgram,SRC Repair}"; Filename: "{uninstallexe}"
 
-; Создаём ярлык для багтрекера...
-Name: "{group}\{cm:RepAppErrText}"; Filename: "https://github.com/xvitaly/srcrepair/issues"
-
 ; Создаём ярлык на рабочем столе (если выбрано)...
 Name: "{userdesktop}\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: desktopicon
 
 ; Создаём ярлык на панели быстрого запуска (если выбрано)...
 Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: quicklaunchicon
-
-; Создаём ярлык для установщика среды Microsoft .NET Framework 4...
-Name: "{group}\{cm:ShcNETFx}"; Filename: "{cm:ShcNFxUrl}"
 
 [Run]
 Filename: "{app}\srcrepair.exe"; Description: "{cm:LaunchProgram,SRC Repair}"; Flags: nowait postinstall skipifsilent
