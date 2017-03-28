@@ -82,10 +82,6 @@ Source: "cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs cr
 ; Создаём ярлык для приложения...
 Name: "{group}\SRC Repair"; Filename: "{app}\srcrepair.exe"
 
-; Создаём стандартные ярлыки для справки и удаления...
-Name: "{group}\{cm:ShcLocTexts}\{cm:ProgramOnTheWeb,SRC Repair}"; Filename: "https://www.easycoding.org/projects/srcrepair"
-Name: "{group}\{cm:UninstallProgram,SRC Repair}"; Filename: "{uninstallexe}"
-
 ; Создаём ярлык на рабочем столе (если выбрано)...
 Name: "{userdesktop}\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: desktopicon
 
