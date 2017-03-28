@@ -1,8 +1,6 @@
 [CustomMessages]
 AdvFeatGroupDesc=Дополнительные возможности:
 InstCreateLocShcuts=Создать ярлыки запуска локализованных версий
-ShcLicenseAgrr=Лицензионное соглашение
-ShcReadme=Файл ПрочтиМеня
 ShcNETFx=Установить Microsoft .NET Framework 4.6
 ShcMLnRU=русская версия
 ShcMLnEN=английская версия
@@ -12,6 +10,5 @@ ShcLocTexts=Информация
 OptNetStatus=Идёт оптимизация MSIL приложения...
 OptNetUninstallStatus=Идёт удаление машинных сборок MSIL...
 ShcNFxUrl=https://www.microsoft.com/ru-RU/download/details.aspx?id=49981
-ShcReadmeFile=readme.txt
 RepAppErrText=Сообщить об ошибке в программе
 InstDebugInfo=Установить отладочную информацию
