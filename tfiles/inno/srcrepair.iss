@@ -52,10 +52,7 @@ Name: "betashortuts"; Description: "{cm:InstCreateLocShcuts}"; GroupDescription:
 Name: "insdebginf"; Description: "{cm:InstDebugInfo}"; GroupDescription: "{cm:AdvFeatGroupDesc}"
 
 [Files]
-; Устанавливаем readme, файл лицензии и список изменений...
-Source: "GPL.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "readme.txt"; DestDir: "{app}"; Flags: ignoreversion
-Source: "readme_en.txt"; DestDir: "{app}"; Flags: ignoreversion
+; Копируем файл со списком изменений...
 Source: "changelog.txt"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Копируем файл со списком поддерживаемых игр и их параметрами...
