@@ -82,6 +82,9 @@ Source: "cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs cr
 ; Создаём ярлык для приложения...
 Name: "{group}\SRC Repair"; Filename: "{app}\srcrepair.exe"
 
+; Создаём "ярлык Интернета", указывающий на официальный сайт программы...
+Name: "{group}\{cm:ProgramOnTheWeb,SRC Repair}"; Filename: "https://www.easycoding.org/projects/srcrepair"
+
 ; Создаём ярлык на рабочем столе (если выбрано)...
 Name: "{userdesktop}\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: desktopicon
 
