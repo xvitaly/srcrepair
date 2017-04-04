@@ -485,11 +485,11 @@
     <Name>RebelHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/rebelhud/rebelhud_dc6991ec.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/rebelhud/rebelhud_aec2ff71.zip</URI>
     <UpURI>https://github.com/TheRebelCreeper/RebelHud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/rebelhud.jpg</Preview>
     <RepoPath>https://github.com/TheRebelCreeper/RebelHud</RepoPath>
-    <LastUpdate>1489862171</LastUpdate>
+    <LastUpdate>1491026412</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=240</Site>
     <ArchiveDir>RebelHud-master/custom/RebelHud</ArchiveDir>
     <InstallDir>rebelhud</InstallDir>
