@@ -75,7 +75,8 @@ Supported mods and third-party Source engine games:
  * FIREFIGHT RELOADED;
  * Aperture Tag: The Paint Gun Testing Initiative;
  * Prospekt;
- * Transmissions: Element 120.
+ * Transmissions: Element 120;
+ * Half-Life 2: DownFall.
 
 3rd party libraries
 =========
