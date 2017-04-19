@@ -100,9 +100,6 @@ namespace srcrepair
 
             // При использовании нового метода поиска установленных игр, считаем их из конфига Steam...
             List<String> GameDirs = SteamManager.FormatInstallDirs(App.FullSteamPath);
-            
-            // Формируем список для поддерживаемых игр...
-            List<String> AvailableGames = new List<String>();
 
             try
             {
@@ -119,7 +116,6 @@ namespace srcrepair
                     XmlNodeList XMLNode = XMLD.GetElementsByTagName("Game");
                     for (int i = 0; i < XMLNode.Count; i++)
                     {
-                        AvailableGames.Add(XMLD.GetElementsByTagName("DirName")[i].InnerText);
                         try
                         {
                             SourceGame SG = new SourceGame(XMLNode[i].Attributes["Name"].Value, XMLD.GetElementsByTagName("DirName")[i].InnerText, XMLD.GetElementsByTagName("SmallName")[i].InnerText, XMLD.GetElementsByTagName("Executable")[i].InnerText, XMLD.GetElementsByTagName("SID")[i].InnerText, XMLD.GetElementsByTagName("SVer")[i].InnerText, XMLD.GetElementsByTagName("VFDir")[i].InnerText, XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1", XMLD.GetElementsByTagName("UserDir")[i].InnerText == "1", XMLD.GetElementsByTagName("HUDsAvail")[i].InnerText == "1", App.FullAppPath, App.AppUserDir, App.FullSteamPath, GameDirs);
