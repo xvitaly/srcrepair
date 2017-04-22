@@ -696,4 +696,16 @@
     <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
+  <Game Name="Alien Swarm: Reactive Drop">
+    <Enabled>1</Enabled>
+    <HasVF>1</HasVF>
+    <DirName>reactivedrop</DirName>
+    <SmallName>reactivedrop</SmallName>
+    <VFDir>reactivedrop</VFDir>
+    <UserDir>0</UserDir>
+    <HUDsAvail>0</HUDsAvail>
+    <SID>563560</SID>
+    <SVer>2</SVer>
+    <Executable>reactivedrop.exe</Executable>
+  </Game>
 </Games>
