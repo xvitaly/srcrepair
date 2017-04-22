@@ -76,7 +76,8 @@ Supported mods and third-party Source engine games:
  * Aperture Tag: The Paint Gun Testing Initiative;
  * Prospekt;
  * Transmissions: Element 120;
- * Half-Life 2: DownFall.
+ * Half-Life 2: DownFall;
+ * Alien Swarm: Reactive Drop.
 
 3rd party libraries
 =========
