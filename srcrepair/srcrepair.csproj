@@ -394,6 +394,10 @@
       <Link>cfgs\chrisdx9frames.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\COPYING">
+      <Link>COPYING</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="..\tfiles\cfgs\chrismaxquality.cfg">
       <Link>cfgs\chrismaxquality.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -494,10 +498,6 @@
     </Content>
     <None Include="Resources\clean.png" />
     <None Include="Resources\backup.png" />
-    <Content Include="..\tfiles\GPL.txt">
-      <Link>GPL.txt</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\tfiles\readme.txt">
       <Link>readme.txt</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
