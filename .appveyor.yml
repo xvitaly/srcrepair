@@ -4,8 +4,8 @@ pull_requests:
 configuration: Release
 platform: Any CPU
 clone_depth: 1
-environment:
-  EnableNuGetPackageRestore: true
+before_build:
+- cmd: nuget restore
 build:
   project: srcrepair.sln
   verbosity: normal
