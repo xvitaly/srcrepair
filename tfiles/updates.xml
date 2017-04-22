@@ -8,12 +8,12 @@
   <GameDB>
     <Version>master</Version>
     <URL>https://www.easycoding.org/files/srcrepair/updates/games.xml</URL>
-    <Hash>a88517330a8c0909097bce6d18422774</Hash>
+    <Hash>79a4c42d8affe5ac71e0fdd5f13bd333</Hash>
   </GameDB>
   <HUDDB>
     <Version>master</Version>
     <URL>https://www.easycoding.org/files/srcrepair/updates/huds.xml</URL>
-    <Hash>a8f8cad7bd15e8b1e329addf2fa0bc8f</Hash>
+    <Hash>a9c785bf4e4888cbad29c39934e0d393</Hash>
   </HUDDB>
   <CfgDB>
     <Version>master</Version>
