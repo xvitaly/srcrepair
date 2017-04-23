@@ -12,7 +12,7 @@ build:
   parallel: true
   verbosity: normal
 after_build:
-- cmd: 7z a snapshot_%APPVEYOR_REPO_COMMIT:~0,7%.7z %APPVEYOR_BUILD_FOLDER%\srcrepair\bin\$(configuration)
+- cmd: 7z a snapshot_%APPVEYOR_REPO_COMMIT:~0,7%.7z %APPVEYOR_BUILD_FOLDER%\srcrepair\bin\%CONFIGURATION%
 test: off
 artifacts:
 - path: snapshot_*.7z
