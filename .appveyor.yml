@@ -12,10 +12,7 @@ build:
   parallel: true
   verbosity: normal
 after_build:
-- cmd: >-
-    set MHASH=%APPVEYOR_REPO_COMMIT:~0,7%
-
-    7z a snapshot_%MHASH%.7z %APPVEYOR_BUILD_FOLDER%\srcrepair\bin\$(configuration)
+- cmd: 7z a snapshot_%APPVEYOR_REPO_COMMIT:~0,7%.7z %APPVEYOR_BUILD_FOLDER%\srcrepair\bin\$(configuration)
 test: off
 artifacts:
 - path: snapshot_*.7z
