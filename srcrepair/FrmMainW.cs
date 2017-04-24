@@ -1804,14 +1804,15 @@ namespace srcrepair
             {
                 if (BU_LVTable.SelectedItems.Count > 0)
                 {
-                    foreach (ListViewItem BU_Item in BU_LVTable.SelectedItems)
+                    // Запросим подтверждение...
+                    if (MessageBox.Show(AppStrings.BU_DelMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
-                        // Удалим выбранный бэкап...
-                        string FName = BU_Item.SubItems[4].Text;
-
-                        // Запросим подтверждение...
-                        if (MessageBox.Show(AppStrings.BU_DelMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                        // Обходим выбранные бэкапы в цикле...
+                        foreach (ListViewItem BU_Item in BU_LVTable.SelectedItems)
                         {
+                            // Сгенерируем имя файла...
+                            string FName = BU_Item.SubItems[4].Text;
+
                             try
                             {
                                 // Удаляем файл...
