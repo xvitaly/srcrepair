@@ -71,7 +71,6 @@
             this.HDV_IPAddr,
             this.HDV_Domain});
             resources.ApplyResources(this.HEd_Table, "HEd_Table");
-            this.HEd_Table.MultiSelect = false;
             this.HEd_Table.Name = "HEd_Table";
             // 
             // HDV_IPAddr
