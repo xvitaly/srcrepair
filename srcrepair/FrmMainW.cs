@@ -1819,10 +1819,7 @@ namespace srcrepair
                                 File.Delete(Path.Combine(SelGame.FullBackUpDirPath, FName));
 
                                 // Удаляем строку...
-                                BU_LVTable.Items.Remove(BU_LVTable.SelectedItems[0]);
-
-                                // Показываем сообщение об успешном удалении...
-                                MessageBox.Show(AppStrings.BU_DelSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                BU_LVTable.Items.Remove(BU_Item);
                             }
                             catch (Exception Ex)
                             {
@@ -1830,6 +1827,9 @@ namespace srcrepair
                                 CoreLib.HandleExceptionEx(AppStrings.BU_DelFailed, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
                             }
                         }
+
+                        // Показываем сообщение об успешном удалении...
+                        MessageBox.Show(AppStrings.BU_DelSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else
