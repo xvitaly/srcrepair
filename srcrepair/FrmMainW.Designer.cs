@@ -1558,7 +1558,6 @@
             this.BU_LVTable.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.BU_LVTable.HideSelection = false;
             resources.ApplyResources(this.BU_LVTable, "BU_LVTable");
-            this.BU_LVTable.MultiSelect = false;
             this.BU_LVTable.Name = "BU_LVTable";
             this.BU_LVTable.ShowGroups = false;
             this.BU_LVTable.UseCompatibleStateImageBehavior = false;
