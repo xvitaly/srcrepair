@@ -218,7 +218,13 @@ namespace srcrepair
         /// </summary>
         private void HEd_T_RemRw_Click(object sender, EventArgs e)
         {
-            try { if (HEd_Table.Rows.Count > 0) { HEd_Table.Rows.Remove(HEd_Table.CurrentRow); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try
+            {
+                foreach (DataGridViewCell Cell in HEd_Table.SelectedCells)
+                {
+                    if (Cell.Selected) { HEd_Table.Rows.RemoveAt(Cell.RowIndex); }
+                }
+            } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         /// <summary>
