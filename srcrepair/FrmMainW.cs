@@ -1745,45 +1745,43 @@ namespace srcrepair
             {
                 if (BU_LVTable.SelectedItems.Count > 0)
                 {
-                    // Получаем имя файла...
-                    string FName = BU_LVTable.SelectedItems[0].SubItems[4].Text;
-
                     // Запрашиваем подтверждение...
-                    if (MessageBox.Show(String.Format(AppStrings.BU_QMsg, Path.GetFileNameWithoutExtension(FName), BU_LVTable.SelectedItems[0].SubItems[3].Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                    if (MessageBox.Show(AppStrings.BU_QMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
-                        // Проверяем что восстанавливать: конфиг или реестр...
-                        switch (Path.GetExtension(FName))
+                        // Обходим выбранные бэкапы в цикле...
+                        foreach (ListViewItem BU_Item in BU_LVTable.SelectedItems)
                         {
-                            case ".reg":
-                                // Восстанавливаем файл реестра...
-                                try
-                                {
-                                    // Восстанавливаем...
-                                    Process.Start("regedit.exe", String.Format("/s \"{0}\"", Path.Combine(SelGame.FullBackUpDirPath, FName)));
-                                    
-                                    // Показываем сообщение об успешном восстановлении...
-                                    MessageBox.Show(AppStrings.BU_RestSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                }
-                                catch (Exception Ex)
-                                {
-                                    // Произошло исключение...
-                                    CoreLib.HandleExceptionEx(AppStrings.BU_RestFailed, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                                }
-                                break;
-                            case ".bud":
-                                // Распаковываем архив с выводом прогресса...
-                                FormManager.FormShowArchiveExtract(Path.Combine(SelGame.FullBackUpDirPath, FName), Path.GetPathRoot(App.FullSteamPath));
-                                
-                                // Обновляем список FPS-конфигов...
-                                HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
-                                
-                                // Выводим сообщение об успехе...
-                                MessageBox.Show(AppStrings.BU_RestSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                break;
-                            default:
-                                // Выводим сообщение о неизвестном формате резервной копии...
-                                MessageBox.Show(AppStrings.BU_UnknownType, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                break;
+                            // Проверяем что восстанавливать: конфиг или реестр...
+                            switch (Path.GetExtension(BU_Item.SubItems[4].Text))
+                            {
+                                case ".reg":
+                                    // Восстанавливаем файл реестра...
+                                    try
+                                    {
+                                        // Восстанавливаем...
+                                        Process.Start("regedit.exe", String.Format("/s \"{0}\"", Path.Combine(SelGame.FullBackUpDirPath, BU_Item.SubItems[4].Text)));
+                                    }
+                                    catch (Exception Ex)
+                                    {
+                                        // Произошло исключение...
+                                        CoreLib.HandleExceptionEx(AppStrings.BU_RestFailed, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                                    }
+                                    break;
+                                case ".bud":
+                                    // Распаковываем архив с выводом прогресса...
+                                    FormManager.FormShowArchiveExtract(Path.Combine(SelGame.FullBackUpDirPath, BU_Item.SubItems[4].Text), Path.GetPathRoot(App.FullSteamPath));
+
+                                    // Обновляем список FPS-конфигов...
+                                    HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
+                                    break;
+                                default:
+                                    // Выводим сообщение о неизвестном формате резервной копии...
+                                    MessageBox.Show(AppStrings.BU_UnknownType, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    break;
+                            }
+
+                            // Выводим сообщение об успехе...
+                            MessageBox.Show(AppStrings.BU_RestSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                 }
