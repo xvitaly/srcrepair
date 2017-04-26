@@ -2435,9 +2435,9 @@ namespace srcrepair
         private void BU_LVTable_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Блокируем некоторые кнопки на панели инструментов модуля управления резервными копиями если выбрано более одной...
-            bool IsMultiple = BU_LVTable.SelectedItems.Count > 1;
-            BUT_OpenNpad.Enabled = !IsMultiple;
-            BUT_ExploreBUp.Enabled = !IsMultiple;
+            bool IsSingle = BU_LVTable.SelectedItems.Count <= 1;
+            BUT_OpenNpad.Enabled = IsSingle;
+            BUT_ExploreBUp.Enabled = IsSingle;
         }
     }
 }
