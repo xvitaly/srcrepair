@@ -1563,6 +1563,7 @@
             this.BU_LVTable.UseCompatibleStateImageBehavior = false;
             this.BU_LVTable.View = System.Windows.Forms.View.Details;
             this.BU_LVTable.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.BU_LVTable_ColumnWidthChanging);
+            this.BU_LVTable.SelectedIndexChanged += new System.EventHandler(this.BU_LVTable_SelectedIndexChanged);
             // 
             // BU_LV_Name
             // 

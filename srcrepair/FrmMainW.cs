@@ -2431,5 +2431,13 @@ namespace srcrepair
             // Открываем диалог выбора SteamID и прописываем пользовательский выбор...
             try { string Result = FormManager.FormShowIDSelect(SelGame.SteamIDs); if (!(String.IsNullOrWhiteSpace(Result))) { SB_SteamID.Text = Result; Properties.Settings.Default.LastSteamID = Result; FindGames(App.FullSteamPath, AppStrings.AppXMLParseError); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
+
+        private void BU_LVTable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Блокируем некоторые кнопки на панели инструментов модуля управления резервными копиями если выбрано более одной...
+            bool IsMultiple = BU_LVTable.SelectedItems.Count > 1;
+            BUT_OpenNpad.Enabled = !IsMultiple;
+            BUT_ExploreBUp.Enabled = !IsMultiple;
+        }
     }
 }
