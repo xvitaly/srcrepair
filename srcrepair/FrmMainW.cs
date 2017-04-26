@@ -1810,13 +1810,10 @@ namespace srcrepair
                         // Обходим выбранные бэкапы в цикле...
                         foreach (ListViewItem BU_Item in BU_LVTable.SelectedItems)
                         {
-                            // Сгенерируем имя файла...
-                            string FName = BU_Item.SubItems[4].Text;
-
                             try
                             {
                                 // Удаляем файл...
-                                File.Delete(Path.Combine(SelGame.FullBackUpDirPath, FName));
+                                File.Delete(Path.Combine(SelGame.FullBackUpDirPath, BU_Item.SubItems[4].Text));
 
                                 // Удаляем строку...
                                 BU_LVTable.Items.Remove(BU_Item);
