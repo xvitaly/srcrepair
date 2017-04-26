@@ -277,7 +277,7 @@
     <value>No backup files detected. Please, refresh list and try again later!</value>
   </data>
   <data name="BU_QMsg" xml:space="preserve">
-    <value>Restore file {0} of {1}?</value>
+    <value>Restore selected backups?</value>
   </data>
   <data name="BU_RestFailed" xml:space="preserve">
     <value>An error occured. BackUp was not restored!</value>

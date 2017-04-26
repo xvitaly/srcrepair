@@ -556,7 +556,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Restore file {0} of {1}?.
+        ///   Looks up a localized string similar to Restore selected backups?.
         /// </summary>
         internal static string BU_QMsg {
             get {
