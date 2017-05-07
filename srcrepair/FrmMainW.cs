@@ -173,7 +173,7 @@ namespace srcrepair
         private void WriteNCFGameSettings(string VFileName, string VSF)
         {
             // Создаём новый объект без получения данных из файла...
-            NCFVideo Video = new NCFVideo(VFileName, VSF, false);
+            Type2Video Video = new Type2Video(VFileName, VSF, false);
 
             // Записываем пользовательские настройки...
             Video.ScreenWidth = (int)GT_NCF_HorRes.Value;
@@ -245,7 +245,7 @@ namespace srcrepair
             try
             {
                 // Получаем графические настройки...
-                NCFVideo Video = new NCFVideo(VFileName, VSF, true);
+                Type2Video Video = new Type2Video(VFileName, VSF, true);
 
                 // Заполняем общие настройки...
                 GT_NCF_HorRes.Value = Video.ScreenWidth;

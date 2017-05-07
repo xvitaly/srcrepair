@@ -27,7 +27,7 @@ namespace srcrepair
     /// <summary>
     /// Управляет графическими настройками NCF приложений.
     /// </summary>
-    public class NCFVideo : VideoSettings
+    public class Type2Video : VideoSettings
     {
         /// <summary>
         /// Хранит путь к актуальному файлу с графическими настройками игры.
@@ -43,7 +43,7 @@ namespace srcrepair
         /// Хранит и определяет названия переменных внутри базы настроек графики
         /// в зависимости от версии движка Source Engine.
         /// </summary>
-        protected NCFSettings VSettings;
+        protected Type2Settings VSettings;
 
         /// <summary>
         /// Хранит содержимое файла с графическими настройками игры.
@@ -841,10 +841,10 @@ namespace srcrepair
         /// <param name="VFile">Путь к файлу с настройками графики</param>
         /// <param name="SVID">Тип механизма хранения настроек движка Source</param>
         /// <param name="ReadNow">Включает автоматическое считывание настроек из файла</param>
-        public NCFVideo(string VFile, string SVID, bool ReadNow = true)
+        public Type2Video(string VFile, string SVID, bool ReadNow = true)
         {
             // Подготовим базу с названиями переменных базы нужной версии...
-            VSettings = new NCFSettings(SVID);
+            VSettings = new Type2Settings(SVID);
             
             // Сохраним путь к файлу с графическими настройками...
             VideoFileName = VFile;

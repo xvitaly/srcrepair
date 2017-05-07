@@ -206,8 +206,8 @@
     <Compile Include="Type1Video.cs" />
     <Compile Include="HUDManager.cs" />
     <Compile Include="HUDTlx.cs" />
-    <Compile Include="NCFSettings.cs" />
-    <Compile Include="NCFVideo.cs" />
+    <Compile Include="Type2Settings.cs" />
+    <Compile Include="Type2Video.cs" />
     <Compile Include="FormManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

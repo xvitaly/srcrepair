@@ -22,7 +22,7 @@ namespace srcrepair
     /// <summary>
     /// Служебный класс работы с настройками графики NCF игр.
     /// </summary>
-    public class NCFSettings
+    public class Type2Settings
     {
         /// <summary>
         /// Хранит имя настройки разрешения по горизонтали.
@@ -149,7 +149,7 @@ namespace srcrepair
         /// Базовый конструктор класса.
         /// </summary>
         /// <param name="ID">Тип механизма хранения настроек движка Source</param>
-        public NCFSettings(string ID)
+        public Type2Settings(string ID)
         {
             // Временно заполним без указания ID...
             SetSettingsV2();
