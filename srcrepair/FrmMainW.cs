@@ -521,8 +521,8 @@ namespace srcrepair
         /// <param name="GCFGame">Тип управляемого приложения</param>
         private void SetGTOptsType(bool GCFGame)
         {
-            GT_GSource1Type1.Visible = GCFGame;
-            GT_GSource1Type2.Visible = !GCFGame;
+            GT_GType1.Visible = GCFGame;
+            GT_GType2.Visible = !GCFGame;
         }
 
         /// <summary>

@@ -35,7 +35,7 @@
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
             this.GT_LaunchOptions = new System.Windows.Forms.TextBox();
             this.L_GT_LaunchOptions = new System.Windows.Forms.Label();
-            this.GT_GSource1Type1 = new System.Windows.Forms.Panel();
+            this.GT_GType1 = new System.Windows.Forms.Panel();
             this.L_GT_HDR = new System.Windows.Forms.Label();
             this.L_GT_DxMode = new System.Windows.Forms.Label();
             this.L_GT_MotionBlur = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@
             this.L_GT_ResVert = new System.Windows.Forms.Label();
             this.GT_ScreenType = new System.Windows.Forms.ComboBox();
             this.L_GT_ResHor = new System.Windows.Forms.Label();
-            this.GT_GSource1Type2 = new System.Windows.Forms.Panel();
+            this.GT_GType2 = new System.Windows.Forms.Panel();
             this.GT_NCF_MBlur = new System.Windows.Forms.ComboBox();
             this.L_GT_NCF_MBlur = new System.Windows.Forms.Label();
             this.GT_NCF_Shadows = new System.Windows.Forms.ComboBox();
@@ -245,10 +245,10 @@
             this.AppRefresh = new System.Windows.Forms.Button();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
-            this.GT_GSource1Type1.SuspendLayout();
+            this.GT_GType1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResVert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResHor)).BeginInit();
-            this.GT_GSource1Type2.SuspendLayout();
+            this.GT_GType2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_NCF_VertRes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_NCF_HorRes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_Warning)).BeginInit();
@@ -304,8 +304,8 @@
             // 
             this.GraphicTweaker.Controls.Add(this.GT_LaunchOptions);
             this.GraphicTweaker.Controls.Add(this.L_GT_LaunchOptions);
-            this.GraphicTweaker.Controls.Add(this.GT_GSource1Type1);
-            this.GraphicTweaker.Controls.Add(this.GT_GSource1Type2);
+            this.GraphicTweaker.Controls.Add(this.GT_GType1);
+            this.GraphicTweaker.Controls.Add(this.GT_GType2);
             this.GraphicTweaker.Controls.Add(this.GT_Warning);
             this.GraphicTweaker.Controls.Add(this.GT_SaveApply);
             this.GraphicTweaker.Controls.Add(this.GT_Maximum_Performance);
@@ -325,40 +325,40 @@
             resources.ApplyResources(this.L_GT_LaunchOptions, "L_GT_LaunchOptions");
             this.L_GT_LaunchOptions.Name = "L_GT_LaunchOptions";
             // 
-            // GT_GSource1Type1
+            // GT_GType1
             // 
-            this.GT_GSource1Type1.Controls.Add(this.L_GT_HDR);
-            this.GT_GSource1Type1.Controls.Add(this.L_GT_DxMode);
-            this.GT_GSource1Type1.Controls.Add(this.L_GT_MotionBlur);
-            this.GT_GSource1Type1.Controls.Add(this.GT_HDR);
-            this.GT_GSource1Type1.Controls.Add(this.GT_DxMode);
-            this.GT_GSource1Type1.Controls.Add(this.GT_ResVert);
-            this.GT_GSource1Type1.Controls.Add(this.GT_ResHor);
-            this.GT_GSource1Type1.Controls.Add(this.GT_MotionBlur);
-            this.GT_GSource1Type1.Controls.Add(this.L_GT_VSync);
-            this.GT_GSource1Type1.Controls.Add(this.L_GT_Filtering);
-            this.GT_GSource1Type1.Controls.Add(this.L_GT_AntiAliasing);
-            this.GT_GSource1Type1.Controls.Add(this.GT_VSync);
-            this.GT_GSource1Type1.Controls.Add(this.GT_Filtering);
-            this.GT_GSource1Type1.Controls.Add(this.GT_AntiAliasing);
-            this.GT_GSource1Type1.Controls.Add(this.L_GT_ColorCorrectionT);
-            this.GT_GSource1Type1.Controls.Add(this.L_GT_ShadowQuality);
-            this.GT_GSource1Type1.Controls.Add(this.L_GT_WaterQuality);
-            this.GT_GSource1Type1.Controls.Add(this.GT_ColorCorrectionT);
-            this.GT_GSource1Type1.Controls.Add(this.GT_ShadowQuality);
-            this.GT_GSource1Type1.Controls.Add(this.GT_WaterQuality);
-            this.GT_GSource1Type1.Controls.Add(this.L_GT_ShaderQuality);
-            this.GT_GSource1Type1.Controls.Add(this.L_GT_TextureQuality);
-            this.GT_GSource1Type1.Controls.Add(this.L_GT_ModelQuality);
-            this.GT_GSource1Type1.Controls.Add(this.GT_ShaderQuality);
-            this.GT_GSource1Type1.Controls.Add(this.GT_TextureQuality);
-            this.GT_GSource1Type1.Controls.Add(this.GT_ModelQuality);
-            this.GT_GSource1Type1.Controls.Add(this.L_GT_ScreenType);
-            this.GT_GSource1Type1.Controls.Add(this.L_GT_ResVert);
-            this.GT_GSource1Type1.Controls.Add(this.GT_ScreenType);
-            this.GT_GSource1Type1.Controls.Add(this.L_GT_ResHor);
-            resources.ApplyResources(this.GT_GSource1Type1, "GT_GSource1Type1");
-            this.GT_GSource1Type1.Name = "GT_GSource1Type1";
+            this.GT_GType1.Controls.Add(this.L_GT_HDR);
+            this.GT_GType1.Controls.Add(this.L_GT_DxMode);
+            this.GT_GType1.Controls.Add(this.L_GT_MotionBlur);
+            this.GT_GType1.Controls.Add(this.GT_HDR);
+            this.GT_GType1.Controls.Add(this.GT_DxMode);
+            this.GT_GType1.Controls.Add(this.GT_ResVert);
+            this.GT_GType1.Controls.Add(this.GT_ResHor);
+            this.GT_GType1.Controls.Add(this.GT_MotionBlur);
+            this.GT_GType1.Controls.Add(this.L_GT_VSync);
+            this.GT_GType1.Controls.Add(this.L_GT_Filtering);
+            this.GT_GType1.Controls.Add(this.L_GT_AntiAliasing);
+            this.GT_GType1.Controls.Add(this.GT_VSync);
+            this.GT_GType1.Controls.Add(this.GT_Filtering);
+            this.GT_GType1.Controls.Add(this.GT_AntiAliasing);
+            this.GT_GType1.Controls.Add(this.L_GT_ColorCorrectionT);
+            this.GT_GType1.Controls.Add(this.L_GT_ShadowQuality);
+            this.GT_GType1.Controls.Add(this.L_GT_WaterQuality);
+            this.GT_GType1.Controls.Add(this.GT_ColorCorrectionT);
+            this.GT_GType1.Controls.Add(this.GT_ShadowQuality);
+            this.GT_GType1.Controls.Add(this.GT_WaterQuality);
+            this.GT_GType1.Controls.Add(this.L_GT_ShaderQuality);
+            this.GT_GType1.Controls.Add(this.L_GT_TextureQuality);
+            this.GT_GType1.Controls.Add(this.L_GT_ModelQuality);
+            this.GT_GType1.Controls.Add(this.GT_ShaderQuality);
+            this.GT_GType1.Controls.Add(this.GT_TextureQuality);
+            this.GT_GType1.Controls.Add(this.GT_ModelQuality);
+            this.GT_GType1.Controls.Add(this.L_GT_ScreenType);
+            this.GT_GType1.Controls.Add(this.L_GT_ResVert);
+            this.GT_GType1.Controls.Add(this.GT_ScreenType);
+            this.GT_GType1.Controls.Add(this.L_GT_ResHor);
+            resources.ApplyResources(this.GT_GType1, "GT_GType1");
+            this.GT_GType1.Name = "GT_GType1";
             // 
             // L_GT_HDR
             // 
@@ -621,40 +621,40 @@
             resources.ApplyResources(this.L_GT_ResHor, "L_GT_ResHor");
             this.L_GT_ResHor.Name = "L_GT_ResHor";
             // 
-            // GT_GSource1Type2
+            // GT_GType2
             // 
-            this.GT_GSource1Type2.Controls.Add(this.GT_NCF_MBlur);
-            this.GT_GSource1Type2.Controls.Add(this.L_GT_NCF_MBlur);
-            this.GT_GSource1Type2.Controls.Add(this.GT_NCF_Shadows);
-            this.GT_GSource1Type2.Controls.Add(this.L_GT_NCF_Shadows);
-            this.GT_GSource1Type2.Controls.Add(this.GT_NCF_Brightness);
-            this.GT_GSource1Type2.Controls.Add(this.L_GT_NCF_Brightness);
-            this.GT_GSource1Type2.Controls.Add(this.GT_NCF_Quality);
-            this.GT_GSource1Type2.Controls.Add(this.L_GT_NCF_Quality);
-            this.GT_GSource1Type2.Controls.Add(this.GT_NCF_MemPool);
-            this.GT_GSource1Type2.Controls.Add(this.L_GT_NCF_MemPool);
-            this.GT_GSource1Type2.Controls.Add(this.GT_NCF_EffectD);
-            this.GT_GSource1Type2.Controls.Add(this.L_GT_NCF_EffectD);
-            this.GT_GSource1Type2.Controls.Add(this.GT_NCF_ShaderE);
-            this.GT_GSource1Type2.Controls.Add(this.L_GT_NCF_ShaderE);
-            this.GT_GSource1Type2.Controls.Add(this.GT_NCF_Multicore);
-            this.GT_GSource1Type2.Controls.Add(this.L_GT_NCF_Multicore);
-            this.GT_GSource1Type2.Controls.Add(this.GT_NCF_VSync);
-            this.GT_GSource1Type2.Controls.Add(this.L_GT_NCF_VSync);
-            this.GT_GSource1Type2.Controls.Add(this.GT_NCF_Filtering);
-            this.GT_GSource1Type2.Controls.Add(this.L_GT_NCF_Filtering);
-            this.GT_GSource1Type2.Controls.Add(this.GT_NCF_AntiAlias);
-            this.GT_GSource1Type2.Controls.Add(this.L_GT_NCF_AntiAlias);
-            this.GT_GSource1Type2.Controls.Add(this.GT_NCF_DispMode);
-            this.GT_GSource1Type2.Controls.Add(this.L_GT_NCF_DispMode);
-            this.GT_GSource1Type2.Controls.Add(this.L_GT_NCF_VertRes);
-            this.GT_GSource1Type2.Controls.Add(this.GT_NCF_Ratio);
-            this.GT_GSource1Type2.Controls.Add(this.L_GT_NCF_Ratio);
-            this.GT_GSource1Type2.Controls.Add(this.GT_NCF_VertRes);
-            this.GT_GSource1Type2.Controls.Add(this.GT_NCF_HorRes);
-            this.GT_GSource1Type2.Controls.Add(this.L_GT_NCF_HorRes);
-            resources.ApplyResources(this.GT_GSource1Type2, "GT_GSource1Type2");
-            this.GT_GSource1Type2.Name = "GT_GSource1Type2";
+            this.GT_GType2.Controls.Add(this.GT_NCF_MBlur);
+            this.GT_GType2.Controls.Add(this.L_GT_NCF_MBlur);
+            this.GT_GType2.Controls.Add(this.GT_NCF_Shadows);
+            this.GT_GType2.Controls.Add(this.L_GT_NCF_Shadows);
+            this.GT_GType2.Controls.Add(this.GT_NCF_Brightness);
+            this.GT_GType2.Controls.Add(this.L_GT_NCF_Brightness);
+            this.GT_GType2.Controls.Add(this.GT_NCF_Quality);
+            this.GT_GType2.Controls.Add(this.L_GT_NCF_Quality);
+            this.GT_GType2.Controls.Add(this.GT_NCF_MemPool);
+            this.GT_GType2.Controls.Add(this.L_GT_NCF_MemPool);
+            this.GT_GType2.Controls.Add(this.GT_NCF_EffectD);
+            this.GT_GType2.Controls.Add(this.L_GT_NCF_EffectD);
+            this.GT_GType2.Controls.Add(this.GT_NCF_ShaderE);
+            this.GT_GType2.Controls.Add(this.L_GT_NCF_ShaderE);
+            this.GT_GType2.Controls.Add(this.GT_NCF_Multicore);
+            this.GT_GType2.Controls.Add(this.L_GT_NCF_Multicore);
+            this.GT_GType2.Controls.Add(this.GT_NCF_VSync);
+            this.GT_GType2.Controls.Add(this.L_GT_NCF_VSync);
+            this.GT_GType2.Controls.Add(this.GT_NCF_Filtering);
+            this.GT_GType2.Controls.Add(this.L_GT_NCF_Filtering);
+            this.GT_GType2.Controls.Add(this.GT_NCF_AntiAlias);
+            this.GT_GType2.Controls.Add(this.L_GT_NCF_AntiAlias);
+            this.GT_GType2.Controls.Add(this.GT_NCF_DispMode);
+            this.GT_GType2.Controls.Add(this.L_GT_NCF_DispMode);
+            this.GT_GType2.Controls.Add(this.L_GT_NCF_VertRes);
+            this.GT_GType2.Controls.Add(this.GT_NCF_Ratio);
+            this.GT_GType2.Controls.Add(this.L_GT_NCF_Ratio);
+            this.GT_GType2.Controls.Add(this.GT_NCF_VertRes);
+            this.GT_GType2.Controls.Add(this.GT_NCF_HorRes);
+            this.GT_GType2.Controls.Add(this.L_GT_NCF_HorRes);
+            resources.ApplyResources(this.GT_GType2, "GT_GType2");
+            this.GT_GType2.Name = "GT_GType2";
             // 
             // GT_NCF_MBlur
             // 
@@ -2033,12 +2033,12 @@
             this.MainTabControl.ResumeLayout(false);
             this.GraphicTweaker.ResumeLayout(false);
             this.GraphicTweaker.PerformLayout();
-            this.GT_GSource1Type1.ResumeLayout(false);
-            this.GT_GSource1Type1.PerformLayout();
+            this.GT_GType1.ResumeLayout(false);
+            this.GT_GType1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResVert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_ResHor)).EndInit();
-            this.GT_GSource1Type2.ResumeLayout(false);
-            this.GT_GSource1Type2.PerformLayout();
+            this.GT_GType2.ResumeLayout(false);
+            this.GT_GType2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GT_NCF_VertRes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_NCF_HorRes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GT_Warning)).EndInit();
@@ -2191,7 +2191,7 @@
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnSub;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnSteam;
         private System.Windows.Forms.ToolStripButton CE_ManualBackUpCfg;
-        private System.Windows.Forms.Panel GT_GSource1Type1;
+        private System.Windows.Forms.Panel GT_GType1;
         private System.Windows.Forms.Label L_GT_HDR;
         private System.Windows.Forms.Label L_GT_DxMode;
         private System.Windows.Forms.Label L_GT_MotionBlur;
@@ -2222,7 +2222,7 @@
         private System.Windows.Forms.Label L_GT_ResVert;
         private System.Windows.Forms.ComboBox GT_ScreenType;
         private System.Windows.Forms.Label L_GT_ResHor;
-        private System.Windows.Forms.Panel GT_GSource1Type2;
+        private System.Windows.Forms.Panel GT_GType2;
         private System.Windows.Forms.ComboBox GT_NCF_Ratio;
         private System.Windows.Forms.Label L_GT_NCF_Ratio;
         private System.Windows.Forms.NumericUpDown GT_NCF_VertRes;
