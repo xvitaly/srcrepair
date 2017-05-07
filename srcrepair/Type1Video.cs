@@ -25,13 +25,13 @@ namespace srcrepair
     /// <summary>
     /// Управляет графическими настройками GCF приложений.
     /// </summary>
-    public class GCFVideo : VideoSettings
+    public class Type1Video : VideoSettings
     {
         /// <summary>
         /// Хранит и определяет названия переменных настроек графики
         /// в зависимости от версии движка Source Engine.
         /// </summary>
-        private GCFSettings VSettings;
+        private Type1Settings VSettings;
 
         /// <summary>
         /// Хранит значеение режима окна: ScreenWidth.
@@ -931,10 +931,10 @@ namespace srcrepair
         /// </summary>
         /// <param name="SAppName">Короткое название игры (из БД)</param>
         /// <param name="ReadNow">Включает автоматическое считывание настроек из реестра</param>
-        public GCFVideo(string SAppName, bool ReadNow = true)
+        public Type1Video(string SAppName, bool ReadNow = true)
         {
             // Подготовим базу с названиями переменных...
-            VSettings = new GCFSettings();
+            VSettings = new Type1Settings();
 
             // Сгенерируем путь к ключу реестра...
             RegKey = GetGameRegKey(SAppName);

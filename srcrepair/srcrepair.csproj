@@ -202,8 +202,8 @@
     <Compile Include="FrmOptions.Designer.cs">
       <DependentUpon>FrmOptions.cs</DependentUpon>
     </Compile>
-    <Compile Include="GCFSettings.cs" />
-    <Compile Include="GCFVideo.cs" />
+    <Compile Include="Type1Settings.cs" />
+    <Compile Include="Type1Video.cs" />
     <Compile Include="HUDManager.cs" />
     <Compile Include="HUDTlx.cs" />
     <Compile Include="NCFSettings.cs" />

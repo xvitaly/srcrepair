@@ -22,7 +22,7 @@ namespace srcrepair
     /// <summary>
     /// Служебный класс работы с настройками графики GCF игр.
     /// </summary>
-    public class GCFSettings
+    public class Type1Settings
     {
         /// <summary>
         /// Хранит имя настройки разрешения по горизонтали.
@@ -154,7 +154,7 @@ namespace srcrepair
         /// <summary>
         /// Базовый конструктор класса.
         /// </summary>
-        public GCFSettings()
+        public Type1Settings()
         {
             // Заполняем значения...
             SetSettingsV1();
