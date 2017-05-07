@@ -125,7 +125,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACC
-        DwAAAk1TRnQBSQFMAgEBBgEAAWABAgFgAQIBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DwAAAk1TRnQBSQFMAgEBBgEAAXABAgFwAQIBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -256,7 +256,7 @@
   <data name="&gt;&gt;L_GT_LaunchOptions.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="GT_GCF_Group.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="GT_GSource1Type1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="L_GT_HDR.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -288,7 +288,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_HDR.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;L_GT_HDR.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -321,7 +321,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_DxMode.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;L_GT_DxMode.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -354,7 +354,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_MotionBlur.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;L_GT_MotionBlur.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -387,7 +387,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_HDR.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;GT_HDR.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -423,7 +423,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_DxMode.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;GT_DxMode.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -447,7 +447,7 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_ResVert.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;GT_ResVert.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -471,7 +471,7 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_ResHor.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;GT_ResHor.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -501,7 +501,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_MotionBlur.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;GT_MotionBlur.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -534,7 +534,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_VSync.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;L_GT_VSync.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -567,7 +567,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_Filtering.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;L_GT_Filtering.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -600,7 +600,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_AntiAliasing.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;L_GT_AntiAliasing.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -630,7 +630,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_VSync.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;GT_VSync.ZOrder" xml:space="preserve">
     <value>11</value>
@@ -672,7 +672,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_Filtering.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;GT_Filtering.ZOrder" xml:space="preserve">
     <value>12</value>
@@ -717,7 +717,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_AntiAliasing.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;GT_AntiAliasing.ZOrder" xml:space="preserve">
     <value>13</value>
@@ -750,7 +750,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_ColorCorrectionT.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;L_GT_ColorCorrectionT.ZOrder" xml:space="preserve">
     <value>14</value>
@@ -783,7 +783,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_ShadowQuality.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;L_GT_ShadowQuality.ZOrder" xml:space="preserve">
     <value>15</value>
@@ -816,7 +816,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_WaterQuality.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;L_GT_WaterQuality.ZOrder" xml:space="preserve">
     <value>16</value>
@@ -846,7 +846,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_ColorCorrectionT.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;GT_ColorCorrectionT.ZOrder" xml:space="preserve">
     <value>17</value>
@@ -876,7 +876,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_ShadowQuality.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;GT_ShadowQuality.ZOrder" xml:space="preserve">
     <value>18</value>
@@ -909,7 +909,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_WaterQuality.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;GT_WaterQuality.ZOrder" xml:space="preserve">
     <value>19</value>
@@ -942,7 +942,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_ShaderQuality.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;L_GT_ShaderQuality.ZOrder" xml:space="preserve">
     <value>20</value>
@@ -975,7 +975,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_TextureQuality.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;L_GT_TextureQuality.ZOrder" xml:space="preserve">
     <value>21</value>
@@ -1008,7 +1008,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_ModelQuality.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;L_GT_ModelQuality.ZOrder" xml:space="preserve">
     <value>22</value>
@@ -1038,7 +1038,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_ShaderQuality.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;GT_ShaderQuality.ZOrder" xml:space="preserve">
     <value>23</value>
@@ -1074,7 +1074,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_TextureQuality.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;GT_TextureQuality.ZOrder" xml:space="preserve">
     <value>24</value>
@@ -1107,7 +1107,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_ModelQuality.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;GT_ModelQuality.ZOrder" xml:space="preserve">
     <value>25</value>
@@ -1140,7 +1140,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_ScreenType.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;L_GT_ScreenType.ZOrder" xml:space="preserve">
     <value>26</value>
@@ -1173,7 +1173,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_ResVert.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;L_GT_ResVert.ZOrder" xml:space="preserve">
     <value>27</value>
@@ -1203,7 +1203,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_ScreenType.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;GT_ScreenType.ZOrder" xml:space="preserve">
     <value>28</value>
@@ -1236,33 +1236,33 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_ResHor.Parent" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+    <value>GT_GSource1Type1</value>
   </data>
   <data name="&gt;&gt;L_GT_ResHor.ZOrder" xml:space="preserve">
     <value>29</value>
   </data>
-  <data name="GT_GCF_Group.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="GT_GSource1Type1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="GT_GCF_Group.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="GT_GSource1Type1.Size" type="System.Drawing.Size, System.Drawing">
     <value>462, 258</value>
   </data>
-  <data name="GT_GCF_Group.TabIndex" type="System.Int32, mscorlib">
+  <data name="GT_GSource1Type1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;GT_GCF_Group.Name" xml:space="preserve">
-    <value>GT_GCF_Group</value>
+  <data name="&gt;&gt;GT_GSource1Type1.Name" xml:space="preserve">
+    <value>GT_GSource1Type1</value>
   </data>
-  <data name="&gt;&gt;GT_GCF_Group.Type" xml:space="preserve">
+  <data name="&gt;&gt;GT_GSource1Type1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GT_GCF_Group.Parent" xml:space="preserve">
+  <data name="&gt;&gt;GT_GSource1Type1.Parent" xml:space="preserve">
     <value>GraphicTweaker</value>
   </data>
-  <data name="&gt;&gt;GT_GCF_Group.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;GT_GSource1Type1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="GT_NCF_Group.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="GT_GSource1Type2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="GT_NCF_MBlur.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -1290,7 +1290,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_NCF_MBlur.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;GT_NCF_MBlur.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -1320,7 +1320,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_MBlur.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_MBlur.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -1356,7 +1356,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_NCF_Shadows.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;GT_NCF_Shadows.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -1389,7 +1389,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_Shadows.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_Shadows.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -1440,7 +1440,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_NCF_Brightness.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;GT_NCF_Brightness.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -1470,7 +1470,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_Brightness.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_Brightness.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -1503,7 +1503,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_NCF_Quality.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;GT_NCF_Quality.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -1533,7 +1533,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_Quality.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_Quality.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -1566,7 +1566,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_NCF_MemPool.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;GT_NCF_MemPool.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -1596,7 +1596,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_MemPool.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_MemPool.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -1629,7 +1629,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_NCF_EffectD.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;GT_NCF_EffectD.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -1659,7 +1659,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_EffectD.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_EffectD.ZOrder" xml:space="preserve">
     <value>11</value>
@@ -1695,7 +1695,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_NCF_ShaderE.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;GT_NCF_ShaderE.ZOrder" xml:space="preserve">
     <value>12</value>
@@ -1725,7 +1725,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_ShaderE.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_ShaderE.ZOrder" xml:space="preserve">
     <value>13</value>
@@ -1755,7 +1755,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_NCF_Multicore.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;GT_NCF_Multicore.ZOrder" xml:space="preserve">
     <value>14</value>
@@ -1785,7 +1785,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_Multicore.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_Multicore.ZOrder" xml:space="preserve">
     <value>15</value>
@@ -1818,7 +1818,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_NCF_VSync.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;GT_NCF_VSync.ZOrder" xml:space="preserve">
     <value>16</value>
@@ -1848,7 +1848,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_VSync.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_VSync.ZOrder" xml:space="preserve">
     <value>17</value>
@@ -1890,7 +1890,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_NCF_Filtering.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;GT_NCF_Filtering.ZOrder" xml:space="preserve">
     <value>18</value>
@@ -1920,7 +1920,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_Filtering.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_Filtering.ZOrder" xml:space="preserve">
     <value>19</value>
@@ -1965,7 +1965,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_NCF_AntiAlias.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;GT_NCF_AntiAlias.ZOrder" xml:space="preserve">
     <value>20</value>
@@ -1995,7 +1995,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_AntiAlias.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_AntiAlias.ZOrder" xml:space="preserve">
     <value>21</value>
@@ -2028,7 +2028,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_NCF_DispMode.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;GT_NCF_DispMode.ZOrder" xml:space="preserve">
     <value>22</value>
@@ -2058,7 +2058,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_DispMode.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_DispMode.ZOrder" xml:space="preserve">
     <value>23</value>
@@ -2088,7 +2088,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_VertRes.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_VertRes.ZOrder" xml:space="preserve">
     <value>24</value>
@@ -2121,7 +2121,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_NCF_Ratio.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;GT_NCF_Ratio.ZOrder" xml:space="preserve">
     <value>25</value>
@@ -2151,7 +2151,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_Ratio.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_Ratio.ZOrder" xml:space="preserve">
     <value>26</value>
@@ -2175,7 +2175,7 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_NCF_VertRes.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;GT_NCF_VertRes.ZOrder" xml:space="preserve">
     <value>27</value>
@@ -2199,7 +2199,7 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;GT_NCF_HorRes.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;GT_NCF_HorRes.ZOrder" xml:space="preserve">
     <value>28</value>
@@ -2232,33 +2232,33 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_HorRes.Parent" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+    <value>GT_GSource1Type2</value>
   </data>
   <data name="&gt;&gt;L_GT_NCF_HorRes.ZOrder" xml:space="preserve">
     <value>29</value>
   </data>
-  <data name="GT_NCF_Group.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="GT_GSource1Type2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="GT_NCF_Group.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="GT_GSource1Type2.Size" type="System.Drawing.Size, System.Drawing">
     <value>462, 258</value>
   </data>
-  <data name="GT_NCF_Group.TabIndex" type="System.Int32, mscorlib">
+  <data name="GT_GSource1Type2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="GT_NCF_Group.Visible" type="System.Boolean, mscorlib">
+  <data name="GT_GSource1Type2.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;GT_NCF_Group.Name" xml:space="preserve">
-    <value>GT_NCF_Group</value>
+  <data name="&gt;&gt;GT_GSource1Type2.Name" xml:space="preserve">
+    <value>GT_GSource1Type2</value>
   </data>
-  <data name="&gt;&gt;GT_NCF_Group.Type" xml:space="preserve">
+  <data name="&gt;&gt;GT_GSource1Type2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GT_NCF_Group.Parent" xml:space="preserve">
+  <data name="&gt;&gt;GT_GSource1Type2.Parent" xml:space="preserve">
     <value>GraphicTweaker</value>
   </data>
-  <data name="&gt;&gt;GT_NCF_Group.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;GT_GSource1Type2.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <metadata name="GT_Warning.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
