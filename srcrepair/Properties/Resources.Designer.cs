@@ -152,7 +152,7 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://telegram.me/easycoding.
+        ///   Looks up a localized string similar to https://t.me/easycoding.
         /// </summary>
         internal static string AppTgChannelURL {
             get {

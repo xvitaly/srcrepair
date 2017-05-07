@@ -392,7 +392,7 @@
     <value>tg://resolve?domain=easycoding</value>
   </data>
   <data name="AppTgChannelURL" xml:space="preserve">
-    <value>https://telegram.me/easycoding</value>
+    <value>https://t.me/easycoding</value>
   </data>
   <data name="HUDLocalDir" xml:space="preserve">
     <value>HUDs</value>
