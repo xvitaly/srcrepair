@@ -2,6 +2,8 @@
 
 Before using, please, read official Wiki: https://www.easycoding.org/projects/srcrepair/help (in Russian).
 
+You must have Microsoft .NET Framework 4.6.1 (or newer) installed in order to run this application. You can download it from Microsoft's official site: https://www.microsoft.com/en-us/download/details.aspx?id=49981
+
 You can join official SRC Repair group at Steam Community: http://steamcommunity.com/groups/srcrepair. You will get info about fresh updates as soon as they released.
 
 Before using it is strongly recommended to manually make backup of Steam folder and Steam registry keys (with the help of tool on "Backups" tab).
