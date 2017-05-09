@@ -514,6 +514,9 @@ namespace srcrepair
             MNUInstaller.Enabled = true;
         }
 
+        /// <summary>
+        /// Загружает настройки видео для выбранной игры.
+        /// </summary>
         private void LoadGraphicSettings()
         {
             if (SelGame.IsUsingVideoFile) { string VideoFile = SelGame.GetActualVideoFile(); if (File.Exists(VideoFile)) { ReadNCFGameSettings(VideoFile, SelGame.SourceType); } else { CoreLib.WriteStringToLog(String.Format(AppStrings.AppVideoDbNotFound, SelGame.FullAppName, VideoFile)); NullGraphOptions(); } } else { ReadGCFGameSettings(SelGame.SmallAppName); }
