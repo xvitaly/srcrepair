@@ -238,7 +238,6 @@ namespace srcrepair
         /// Получает настройки NCF-игры из файла и заполняет ими таблицу
         /// графического твикера программы.
         /// </summary>
-        /// <param name="VFileName">Путь к файлу с настройками</param>
         /// <param name="VSF">Тип механизма хранения настроек движка Source</param>
         private void ReadNCFGameSettings(string VSF)
         {
