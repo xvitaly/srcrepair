@@ -201,7 +201,7 @@ namespace srcrepair
         /// данными страницу графического твикера.
         /// </summary>
         /// <param name="SAppName">Краткое имя игры</param>
-        private void ReadGCFGameSettings(string SAppName)
+        private void ReadType1VideoSettings(string SAppName)
         {
             try
             {
@@ -239,7 +239,7 @@ namespace srcrepair
         /// графического твикера программы.
         /// </summary>
         /// <param name="VSF">Тип механизма хранения настроек движка Source</param>
-        private void ReadNCFGameSettings(string VSF)
+        private void ReadType2VideoSettings(string VSF)
         {
             try
             {
@@ -537,10 +537,10 @@ namespace srcrepair
             switch (SelGame.SourceType)
             {
                 case "1": /* Source 1, Type 1 (ex. GCF). */
-                    ReadGCFGameSettings(SelGame.SmallAppName);
+                    ReadType1VideoSettings(SelGame.SmallAppName);
                     break;
                 case "2": /* Source 1, Type 2 (ex. NCF). */
-                    ReadNCFGameSettings(SelGame.SourceType);
+                    ReadType2VideoSettings(SelGame.SourceType);
                     break;
             }
 
