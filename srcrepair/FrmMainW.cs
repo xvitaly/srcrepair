@@ -514,6 +514,14 @@ namespace srcrepair
             MNUInstaller.Enabled = true;
         }
 
+        private void LoadGraphicSettings()
+        {
+            if (SelGame.IsUsingVideoFile) { string VideoFile = SelGame.GetActualVideoFile(); if (File.Exists(VideoFile)) { ReadNCFGameSettings(VideoFile, SelGame.SourceType); } else { CoreLib.WriteStringToLog(String.Format(AppStrings.AppVideoDbNotFound, SelGame.FullAppName, VideoFile)); NullGraphOptions(); } } else { ReadGCFGameSettings(SelGame.SmallAppName); }
+
+            // Переключаем графический твикер в режим GCF/NCF...
+            SetGTOptsType(!SelGame.IsUsingVideoFile);
+        }
+
         /// <summary>
         /// Переключает вид страницы графического твикера с GCF на NCF приложение
         /// и наоборот.
@@ -1187,10 +1195,7 @@ namespace srcrepair
                 DetectFS(SelGame.FullGamePath);
 
                 // Считаем настройки графики...
-                if (SelGame.IsUsingVideoFile) { string VideoFile = SelGame.GetActualVideoFile(); if (File.Exists(VideoFile)) { ReadNCFGameSettings(VideoFile, SelGame.SourceType); } else { CoreLib.WriteStringToLog(String.Format(AppStrings.AppVideoDbNotFound, SelGame.FullAppName, VideoFile)); NullGraphOptions(); } } else { ReadGCFGameSettings(SelGame.SmallAppName); }
-
-                // Переключаем графический твикер в режим GCF/NCF...
-                SetGTOptsType(!SelGame.IsUsingVideoFile);
+                LoadGraphicSettings();
 
                 // Получим параметры запуска...
                 GT_LaunchOptions.Text = SelGame.LaunchOptions;
