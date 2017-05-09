@@ -240,31 +240,43 @@ namespace srcrepair
         /// </summary>
         /// <param name="VFileName">Путь к файлу с настройками</param>
         /// <param name="VSF">Тип механизма хранения настроек движка Source</param>
-        private void ReadNCFGameSettings(string VFileName, string VSF)
+        private void ReadNCFGameSettings(string VSF)
         {
             try
             {
-                // Получаем графические настройки...
-                Type2Video Video = new Type2Video(VFileName, VSF, true);
+                // Получаем актуальный файл с настройками видео...
+                string VFileName = SelGame.GetActualVideoFile();
 
-                // Заполняем общие настройки...
-                GT_NCF_HorRes.Value = Video.ScreenWidth;
-                GT_NCF_VertRes.Value = Video.ScreenHeight;
+                // Загружаем содержимое если он существует...
+                if (File.Exists(VFileName))
+                {
+                    // Получаем графические настройки...
+                    Type2Video Video = new Type2Video(VFileName, VSF, true);
 
-                // Заполняем остальные настройки...
-                GT_NCF_Ratio.SelectedIndex = Video.ScreenRatio;
-                GT_NCF_Brightness.Text = Video.ScreenGamma;
-                GT_NCF_Shadows.SelectedIndex = Video.ShadowQuality;
-                GT_NCF_MBlur.SelectedIndex = Video.MotionBlur;
-                GT_NCF_DispMode.SelectedIndex = Video.ScreenMode;
-                GT_NCF_AntiAlias.SelectedIndex = Video.AntiAliasing;
-                GT_NCF_Filtering.SelectedIndex = Video.FilteringMode;
-                GT_NCF_VSync.SelectedIndex = Video.VSync;
-                GT_NCF_Multicore.SelectedIndex = Video.RenderingMode;
-                GT_NCF_ShaderE.SelectedIndex = Video.ShaderEffects;
-                GT_NCF_EffectD.SelectedIndex = Video.Effects;
-                GT_NCF_MemPool.SelectedIndex = Video.MemoryPool;
-                GT_NCF_Quality.SelectedIndex = Video.ModelQuality;
+                    // Заполняем общие настройки...
+                    GT_NCF_HorRes.Value = Video.ScreenWidth;
+                    GT_NCF_VertRes.Value = Video.ScreenHeight;
+
+                    // Заполняем остальные настройки...
+                    GT_NCF_Ratio.SelectedIndex = Video.ScreenRatio;
+                    GT_NCF_Brightness.Text = Video.ScreenGamma;
+                    GT_NCF_Shadows.SelectedIndex = Video.ShadowQuality;
+                    GT_NCF_MBlur.SelectedIndex = Video.MotionBlur;
+                    GT_NCF_DispMode.SelectedIndex = Video.ScreenMode;
+                    GT_NCF_AntiAlias.SelectedIndex = Video.AntiAliasing;
+                    GT_NCF_Filtering.SelectedIndex = Video.FilteringMode;
+                    GT_NCF_VSync.SelectedIndex = Video.VSync;
+                    GT_NCF_Multicore.SelectedIndex = Video.RenderingMode;
+                    GT_NCF_ShaderE.SelectedIndex = Video.ShaderEffects;
+                    GT_NCF_EffectD.SelectedIndex = Video.Effects;
+                    GT_NCF_MemPool.SelectedIndex = Video.MemoryPool;
+                    GT_NCF_Quality.SelectedIndex = Video.ModelQuality;
+                }
+                else
+                {
+                    // Записываем в журнал сообщение об ошибке...
+                    CoreLib.WriteStringToLog(String.Format(AppStrings.AppVideoDbNotFound, SelGame.FullAppName, VFileName));
+                }
             }
             catch (Exception Ex)
             {
@@ -519,7 +531,19 @@ namespace srcrepair
         /// </summary>
         private void LoadGraphicSettings()
         {
-            if (SelGame.IsUsingVideoFile) { string VideoFile = SelGame.GetActualVideoFile(); if (File.Exists(VideoFile)) { ReadNCFGameSettings(VideoFile, SelGame.SourceType); } else { CoreLib.WriteStringToLog(String.Format(AppStrings.AppVideoDbNotFound, SelGame.FullAppName, VideoFile)); NullGraphOptions(); } } else { ReadGCFGameSettings(SelGame.SmallAppName); }
+            // Обнуляем графические настройки...
+            NullGraphOptions();
+
+            // Загружаем настройки графики согласно указанного движка...
+            switch (SelGame.SourceType)
+            {
+                case "1": /* Source 1, Type 1 (ex. GCF). */
+                    ReadGCFGameSettings(SelGame.SmallAppName);
+                    break;
+                case "2": /* Source 1, Type 2 (ex. NCF). */
+                    ReadNCFGameSettings(SelGame.SourceType);
+                    break;
+            }
 
             // Переключаем графический твикер в режим GCF/NCF...
             SetGTOptsType(!SelGame.IsUsingVideoFile);
