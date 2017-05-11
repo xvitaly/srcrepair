@@ -200,13 +200,12 @@ namespace srcrepair
         /// Получает настройки первого типа игры из реестра и заполняет
         /// полученными данными страницу графического твикера.
         /// </summary>
-        /// <param name="SAppName">Краткое имя игры</param>
-        private void ReadType1VideoSettings(string SAppName)
+        private void ReadType1VideoSettings()
         {
             try
             {
                 // Получаем графические настройки...
-                Type1Video Video = new Type1Video(SAppName, true);
+                Type1Video Video = new Type1Video(SelGame.SmallAppName, true);
 
                 // Заполняем общие настройки...
                 GT_ResHor.Value = Video.ScreenWidth;
@@ -537,7 +536,7 @@ namespace srcrepair
             switch (SelGame.SourceType)
             {
                 case "1": /* Source 1, Type 1 (ex. GCF). */
-                    ReadType1VideoSettings(SelGame.SmallAppName);
+                    ReadType1VideoSettings();
                     break;
                 case "2": /* Source 1, Type 2 (ex. NCF). */
                     ReadType2VideoSettings(SelGame.SourceType);
