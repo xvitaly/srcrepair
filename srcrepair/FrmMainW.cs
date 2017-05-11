@@ -545,15 +545,15 @@ namespace srcrepair
             }
 
             // Переключаем графический твикер в режим GCF/NCF...
-            SetGTOptsType(!SelGame.IsUsingVideoFile);
+            SelectGraphicWidget(!SelGame.IsUsingVideoFile);
         }
 
         /// <summary>
-        /// Переключает вид страницы графического твикера с GCF на NCF приложение
-        /// и наоборот.
+        /// Переключает вид страницы графического твикера с в соответствие с выбранным
+        /// движком.
         /// </summary>
         /// <param name="GCFGame">Тип управляемого приложения</param>
-        private void SetGTOptsType(bool GCFGame)
+        private void SelectGraphicWidget(bool GCFGame)
         {
             GT_GType1.Visible = GCFGame;
             GT_GType2.Visible = !GCFGame;
