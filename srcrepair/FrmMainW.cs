@@ -545,7 +545,7 @@ namespace srcrepair
             }
 
             // Переключаем графический твикер в режим GCF/NCF...
-            SelectGraphicWidget(!SelGame.IsUsingVideoFile);
+            SelectGraphicWidget(SelGame.SourceType);
         }
 
         /// <summary>
@@ -553,10 +553,20 @@ namespace srcrepair
         /// движком.
         /// </summary>
         /// <param name="GCFGame">Тип управляемого приложения</param>
-        private void SelectGraphicWidget(bool GCFGame)
+        private void SelectGraphicWidget(string GT)
         {
-            GT_GType1.Visible = GCFGame;
-            GT_GType2.Visible = !GCFGame;
+            // Переключаем виджеты...
+            switch (GT)
+            {
+                case "1":
+                    GT_GType1.Visible = true;
+                    GT_GType2.Visible = false;
+                    break;
+                case "2":
+                    GT_GType1.Visible = false;
+                    GT_GType2.Visible = true;
+                    break;
+            }
         }
 
         /// <summary>
