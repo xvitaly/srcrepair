@@ -237,8 +237,7 @@ namespace srcrepair
         /// Получает настройки второго типа игры из файла и заполняет ими
         /// таблицу графического твикера программы.
         /// </summary>
-        /// <param name="VSF">Тип механизма хранения настроек движка Source</param>
-        private void ReadType2VideoSettings(string VSF)
+        private void ReadType2VideoSettings()
         {
             try
             {
@@ -249,7 +248,7 @@ namespace srcrepair
                 if (File.Exists(VFileName))
                 {
                     // Получаем графические настройки...
-                    Type2Video Video = new Type2Video(VFileName, VSF, true);
+                    Type2Video Video = new Type2Video(VFileName, SelGame.SourceType, true);
 
                     // Заполняем общие настройки...
                     GT_NCF_HorRes.Value = Video.ScreenWidth;
@@ -539,7 +538,7 @@ namespace srcrepair
                     ReadType1VideoSettings();
                     break;
                 case "2": /* Source 1, Type 2 (ex. NCF). */
-                    ReadType2VideoSettings(SelGame.SourceType);
+                    ReadType2VideoSettings();
                     break;
             }
 
