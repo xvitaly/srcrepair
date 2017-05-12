@@ -928,8 +928,7 @@ namespace srcrepair
         /// <returns>Возвращает список строк</returns>
         private List<String> SingleToArray(string Str)
         {
-            List<String> Result = new List<String>();
-            Result.Add(Str);
+            List<String> Result = new List<String> { Str };
             return Result;
         }
 
