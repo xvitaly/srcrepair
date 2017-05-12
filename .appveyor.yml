@@ -1,7 +1,7 @@
 version: 27.0.0.{build}
 pull_requests:
   do_not_increment_build_number: true
-image: Visual Studio 2015
+image: Visual Studio 2017
 configuration: Release
 platform: Any CPU
 clone_depth: 1
