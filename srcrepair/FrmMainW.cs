@@ -142,24 +142,25 @@ namespace srcrepair
         private void WriteGCFGameSettings(string SAppName)
         {
             // Создаём новый объект без получения данных из реестра...
-            Type1Video Video = new Type1Video(SelGame.SmallAppName, false);
-
-            // Записываем пользовательские настройки...
-            Video.ScreenWidth = (int)GT_ResHor.Value;
-            Video.ScreenHeight = (int)GT_ResVert.Value;
-            Video.DisplayMode = GT_ScreenType.SelectedIndex;
-            Video.ModelQuality = GT_ModelQuality.SelectedIndex;
-            Video.TextureQuality = GT_TextureQuality.SelectedIndex;
-            Video.ShaderQuality = GT_ShaderQuality.SelectedIndex;
-            Video.ReflectionsQuality = GT_WaterQuality.SelectedIndex;
-            Video.ShadowQuality = GT_ShadowQuality.SelectedIndex;
-            Video.ColorCorrection = GT_ColorCorrectionT.SelectedIndex;
-            Video.AntiAliasing = GT_AntiAliasing.SelectedIndex;
-            Video.FilteringMode = GT_Filtering.SelectedIndex;
-            Video.VSync = GT_VSync.SelectedIndex;
-            Video.MotionBlur = GT_MotionBlur.SelectedIndex;
-            Video.DirectXMode = GT_DxMode.SelectedIndex;
-            Video.HDRType = GT_HDR.SelectedIndex;
+            Type1Video Video = new Type1Video(SelGame.SmallAppName, false)
+            {
+                // Записываем пользовательские настройки...
+                ScreenWidth = (int)GT_ResHor.Value,
+                ScreenHeight = (int)GT_ResVert.Value,
+                DisplayMode = GT_ScreenType.SelectedIndex,
+                ModelQuality = GT_ModelQuality.SelectedIndex,
+                TextureQuality = GT_TextureQuality.SelectedIndex,
+                ShaderQuality = GT_ShaderQuality.SelectedIndex,
+                ReflectionsQuality = GT_WaterQuality.SelectedIndex,
+                ShadowQuality = GT_ShadowQuality.SelectedIndex,
+                ColorCorrection = GT_ColorCorrectionT.SelectedIndex,
+                AntiAliasing = GT_AntiAliasing.SelectedIndex,
+                FilteringMode = GT_Filtering.SelectedIndex,
+                VSync = GT_VSync.SelectedIndex,
+                MotionBlur = GT_MotionBlur.SelectedIndex,
+                DirectXMode = GT_DxMode.SelectedIndex,
+                HDRType = GT_HDR.SelectedIndex
+            };
 
             // Записываем настройки в реестр...
             Video.WriteSettings();
@@ -173,24 +174,25 @@ namespace srcrepair
         private void WriteNCFGameSettings(string VFileName, string VSF)
         {
             // Создаём новый объект без получения данных из файла...
-            Type2Video Video = new Type2Video(VFileName, VSF, false);
-
-            // Записываем пользовательские настройки...
-            Video.ScreenWidth = (int)GT_NCF_HorRes.Value;
-            Video.ScreenHeight = (int)GT_NCF_VertRes.Value;
-            Video.ScreenRatio = GT_NCF_Ratio.SelectedIndex;
-            Video.ScreenGamma = GT_NCF_Brightness.Text;
-            Video.ShadowQuality = GT_NCF_Shadows.SelectedIndex;
-            Video.MotionBlur = GT_NCF_MBlur.SelectedIndex;
-            Video.ScreenMode = GT_NCF_DispMode.SelectedIndex;
-            Video.AntiAliasing = GT_NCF_AntiAlias.SelectedIndex;
-            Video.FilteringMode = GT_NCF_Filtering.SelectedIndex;
-            Video.VSync = GT_NCF_VSync.SelectedIndex;
-            Video.RenderingMode = GT_NCF_Multicore.SelectedIndex;
-            Video.ShaderEffects = GT_NCF_ShaderE.SelectedIndex;
-            Video.Effects = GT_NCF_EffectD.SelectedIndex;
-            Video.MemoryPool = GT_NCF_MemPool.SelectedIndex;
-            Video.ModelQuality = GT_NCF_Quality.SelectedIndex;
+            Type2Video Video = new Type2Video(VFileName, VSF, false)
+            {
+                // Записываем пользовательские настройки...
+                ScreenWidth = (int)GT_NCF_HorRes.Value,
+                ScreenHeight = (int)GT_NCF_VertRes.Value,
+                ScreenRatio = GT_NCF_Ratio.SelectedIndex,
+                ScreenGamma = GT_NCF_Brightness.Text,
+                ShadowQuality = GT_NCF_Shadows.SelectedIndex,
+                MotionBlur = GT_NCF_MBlur.SelectedIndex,
+                ScreenMode = GT_NCF_DispMode.SelectedIndex,
+                AntiAliasing = GT_NCF_AntiAlias.SelectedIndex,
+                FilteringMode = GT_NCF_Filtering.SelectedIndex,
+                VSync = GT_NCF_VSync.SelectedIndex,
+                RenderingMode = GT_NCF_Multicore.SelectedIndex,
+                ShaderEffects = GT_NCF_ShaderE.SelectedIndex,
+                Effects = GT_NCF_EffectD.SelectedIndex,
+                MemoryPool = GT_NCF_MemPool.SelectedIndex,
+                ModelQuality = GT_NCF_Quality.SelectedIndex
+            };
 
             // Записываем настройки в файл...
             Video.WriteSettings();
