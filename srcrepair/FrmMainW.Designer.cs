@@ -2027,9 +2027,9 @@
             this.MainMenuStrip = this.MainMenu;
             this.MaximizeBox = false;
             this.Name = "FrmMainW";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMainW_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMainW_FormClosed);
-            this.Load += new System.EventHandler(this.frmMainW_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMainW_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMainW_FormClosed);
+            this.Load += new System.EventHandler(this.FrmMainW_Load);
             this.MainTabControl.ResumeLayout(false);
             this.GraphicTweaker.ResumeLayout(false);
             this.GraphicTweaker.PerformLayout();

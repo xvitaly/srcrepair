@@ -1081,7 +1081,7 @@ namespace srcrepair
 
         #endregion
 
-        private void frmMainW_Load(object sender, EventArgs e)
+        private void FrmMainW_Load(object sender, EventArgs e)
         {
             // Событие инициализации формы...
             App = new CurrentApp();
@@ -1203,7 +1203,7 @@ namespace srcrepair
             }
         }
 
-        private void frmMainW_FormClosing(object sender, FormClosingEventArgs e)
+        private void FrmMainW_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
@@ -2149,7 +2149,7 @@ namespace srcrepair
             }
         }
 
-        private void frmMainW_FormClosed(object sender, FormClosedEventArgs e)
+        private void FrmMainW_FormClosed(object sender, FormClosedEventArgs e)
         {
             // Форма была закрыта, сохраняем настройки приложения...
             Properties.Settings.Default.Save();
