@@ -1615,10 +1615,12 @@ namespace srcrepair
         private void PS_RemCustMaps_Click(object sender, EventArgs e)
         {
             // Удаляем кастомные (нестандартные) карты...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.bsp"));
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.bsp"));
-            CleanDirs.Add(Path.Combine(SelGame.AppWorkshopDir, "*.bsp"));
+            List<String> CleanDirs = new List<string>
+            {
+                Path.Combine(SelGame.FullGamePath, "custom", "*.bsp"),
+                Path.Combine(SelGame.FullGamePath, "download", "*.bsp"),
+                Path.Combine(SelGame.AppWorkshopDir, "*.bsp")
+            };
             if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "maps", "*.bsp")); }
             FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
@@ -1626,41 +1628,49 @@ namespace srcrepair
         private void PS_RemDnlCache_Click(object sender, EventArgs e)
         {
             // Удаляем кэш загрузок...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.*"));
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "downloads", "*.*"));
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "streams", "*.*"));
+            List<String> CleanDirs = new List<string>
+            {
+                Path.Combine(SelGame.FullGamePath, "download", "*.*"),
+                Path.Combine(SelGame.FullGamePath, "downloads", "*.*"),
+                Path.Combine(SelGame.FullGamePath, "streams", "*.*")
+            };
             FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_RemSoundCache_Click(object sender, EventArgs e)
         {
             // Удаляем звуковой кэш...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "maps", "graphs", "*.*"));
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "maps", "soundcache", "*.*"));
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "sound", "*.*"));
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "*.cache"));
+            List<String> CleanDirs = new List<string>
+            {
+                Path.Combine(SelGame.FullGamePath, "maps", "graphs", "*.*"),
+                Path.Combine(SelGame.FullGamePath, "maps", "soundcache", "*.*"),
+                Path.Combine(SelGame.FullGamePath, "download", "sound", "*.*"),
+                Path.Combine(SelGame.FullGamePath, "*.cache")
+            };
             FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_RemScreenShots_Click(object sender, EventArgs e)
         {
             // Удаляем все скриншоты...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "screenshots", "*.*"));
+            List<String> CleanDirs = new List<string>
+            {
+                Path.Combine(SelGame.FullGamePath, "screenshots", "*.*")
+            };
             FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile, false, false, false);
         }
 
         private void PS_RemDemos_Click(object sender, EventArgs e)
         {
             // Удаляем все записанные демки...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "demos", "*.*"));
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "*.dem"));
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "*.mp4"));
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "*.tga"));
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "*.wav"));
+            List<String> CleanDirs = new List<string>
+            {
+                Path.Combine(SelGame.FullGamePath, "demos", "*.*"),
+                Path.Combine(SelGame.FullGamePath, "*.dem"),
+                Path.Combine(SelGame.FullGamePath, "*.mp4"),
+                Path.Combine(SelGame.FullGamePath, "*.tga"),
+                Path.Combine(SelGame.FullGamePath, "*.wav")
+            };
             FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile, false, false, false, false);
         }
 
@@ -1718,11 +1728,13 @@ namespace srcrepair
         private void PS_RemOldBin_Click(object sender, EventArgs e)
         {
             // Удаляем старые бинарники...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(SelGame.GamePath, Path.GetDirectoryName(SelGame.SmallAppName), "bin", "*.*"));
+            List<String> CleanDirs = new List<string>
+            {
+                Path.Combine(SelGame.GamePath, Path.GetDirectoryName(SelGame.SmallAppName), "bin", "*.*"),
+                Path.Combine(SelGame.FullGamePath, "bin", "*.*"),
+                Path.Combine(SelGame.GamePath, "*.exe")
+            };
             if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(SelGame.GamePath, "platform", "*.*")); }
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "bin", "*.*"));
-            CleanDirs.Add(Path.Combine(SelGame.GamePath, "*.exe"));
             FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CacheChkReq, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
@@ -2174,44 +2186,49 @@ namespace srcrepair
         private void PS_RemReplays_Click(object sender, EventArgs e)
         {
             // Удаляем все реплеи...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "replay", "*.*"));
+            List<String> CleanDirs = new List<string>
+            {
+                Path.Combine(SelGame.FullGamePath, "replay", "*.*")
+            };
             FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_RemTextures_Click(object sender, EventArgs e)
         {
             // Удаляем все кастомные текстуры...
-            List<String> CleanDirs = new List<string>();
-            
+            List<String> CleanDirs = new List<string>
+            {
+                // Чистим загруженные с серверов модели и текстуры...
+                Path.Combine(SelGame.FullGamePath, "download", "*.vt*"),
+                Path.Combine(SelGame.FullGamePath, "download", "*.vmt"),
+                Path.Combine(SelGame.FullGamePath, "download", "*.mdl"),
+                Path.Combine(SelGame.FullGamePath, "download", "*.phy"),
+                
+                // Чистим установленные пользователем модели и текстуры...
+                Path.Combine(SelGame.FullGamePath, "custom", "*.vt*"),
+                Path.Combine(SelGame.FullGamePath, "custom", "*.vmt"),
+                Path.Combine(SelGame.FullGamePath, "custom", "*.mdl"),
+                Path.Combine(SelGame.FullGamePath, "custom", "*.phy")
+            };
+
             // Чистим базы игр со старой системой. Удалить после полного перехода на новую...
             if (Properties.Settings.Default.AllowUnSafeCleanup)
             {
                 CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "materials", "*.*"));
                 CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "models", "*.*"));
             }
-            
-            // Чистим загруженные с серверов модели и текстуры...
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.vt*"));
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.vmt"));
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.mdl"));
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.phy"));
-            
-            // Чистим установленные пользователем модели и текстуры...
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.vt*"));
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.vmt"));
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.mdl"));
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.phy"));
             FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_RemSecndCache_Click(object sender, EventArgs e)
         {
             // Удаляем содержимое вторичного кэша загрузок...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cache", "*.*")); // Кэш...
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "user_custom", "*.*")); // Кэш спреев игр с н.с.к...
-            CleanDirs.Add(Path.Combine(SelGame.GamePath, "config", "html", "*.*")); // Кэш MOTD...
+            List<String> CleanDirs = new List<string>
+            {
+                Path.Combine(SelGame.FullGamePath, "cache", "*.*"), // Кэш...
+                Path.Combine(SelGame.FullGamePath, "custom", "user_custom", "*.*"), // Кэш спреев игр с н.с.к...
+                Path.Combine(SelGame.GamePath, "config", "html", "*.*") // Кэш MOTD...
+            };
             FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
@@ -2254,47 +2271,56 @@ namespace srcrepair
         private void PS_RemSounds_Click(object sender, EventArgs e)
         {
             // Удаляем кастомные звуки...
-            List<String> CleanDirs = new List<string>();
+            List<String> CleanDirs = new List<string>
+            {
+                Path.Combine(SelGame.FullGamePath, "download", "*.mp3"),
+                Path.Combine(SelGame.FullGamePath, "download", "*.wav")
+            };
             if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "sound", "*.*")); }
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.mp3"));
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.wav"));
             FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_RemCustDir_Click(object sender, EventArgs e)
         {
             // Удаляем пользовательного каталога...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.*"));
-            CleanDirs.Add(Path.Combine(SelGame.AppWorkshopDir, "*.*"));
+            List<String> CleanDirs = new List<string>
+            {
+                Path.Combine(SelGame.FullGamePath, "custom", "*.*"),
+                Path.Combine(SelGame.AppWorkshopDir, "*.*")
+            };
             FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void PS_DeepCleanup_Click(object sender, EventArgs e)
         {
             // Проведём глубокую очистку...
-            List<String> CleanDirs = new List<string>();
+            List<String> CleanDirs = new List<string>
+            {
+                // Удалим старые бинарники и лаунчеры...
+                Path.Combine(SelGame.GamePath, Path.GetDirectoryName(SelGame.SmallAppName), "bin", "*.*"),
+                Path.Combine(SelGame.FullGamePath, "bin", "*.*"),
+                Path.Combine(SelGame.GamePath, "*.exe"),
 
-            // Удалим старые бинарники и лаунчеры...
-            CleanDirs.Add(Path.Combine(SelGame.GamePath, Path.GetDirectoryName(SelGame.SmallAppName), "bin", "*.*"));
-            if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(SelGame.GamePath, "platform", "*.*")); }
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "bin", "*.*"));
-            CleanDirs.Add(Path.Combine(SelGame.GamePath, "*.exe"));
-            
-            // Удалим кэш загрузок...
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "download", "*.*"));
-            
-            // Удалим кастомные файлы...
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.*"));
-            CleanDirs.Add(Path.Combine(SelGame.AppWorkshopDir, "*.*"));
-            
-            // Удалим другие кэши...
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cache", "*.*"));
-            
-            // Удалим пользовательские конфиги...
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cfg", "*.cfg"));
+                // Удалим кэш загрузок...
+                Path.Combine(SelGame.FullGamePath, "download", "*.*"),
+
+                // Удалим кастомные файлы...
+                Path.Combine(SelGame.FullGamePath, "custom", "*.*"),
+                Path.Combine(SelGame.AppWorkshopDir, "*.*"),
+
+                // Удалим другие кэши...
+                Path.Combine(SelGame.FullGamePath, "cache", "*.*"),
+
+                // Удалим пользовательские конфиги...
+                Path.Combine(SelGame.FullGamePath, "cfg", "*.cfg")
+            };
+
+            // Конфиги их хранилища Steam Cloud...
             CleanDirs.AddRange(SelGame.CloudConfigs);
 
+            // Данные платформы...
+            if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(SelGame.GamePath, "platform", "*.*")); }
+            
             // Удаляем графические настройки NCF-игры...
             if (SelGame.IsUsingVideoFile) { CleanDirs.AddRange(SelGame.VideoCfgFiles); }
 
@@ -2305,9 +2331,11 @@ namespace srcrepair
         private void PS_RemConfigs_Click(object sender, EventArgs e)
         {
             // Удаляем пользовательного каталога...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "cfg", "*.*"));
-            CleanDirs.Add(Path.Combine(SelGame.FullGamePath, "custom", "*.cfg"));
+            List<String> CleanDirs = new List<string>
+            {
+                Path.Combine(SelGame.FullGamePath, "cfg", "*.*"),
+                Path.Combine(SelGame.FullGamePath, "custom", "*.cfg")
+            };
             CleanDirs.AddRange(SelGame.CloudConfigs);
             FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
@@ -2408,16 +2436,20 @@ namespace srcrepair
         private void MNUExtClnAppCache_Click(object sender, EventArgs e)
         {
             // Очистим загруженные приложением файлы...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(App.AppUserDir, Properties.Resources.HUDLocalDir, "*.*"));
+            List<String> CleanDirs = new List<string>
+            {
+                Path.Combine(App.AppUserDir, Properties.Resources.HUDLocalDir, "*.*")
+            };
             FormManager.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
         private void MNUExtClnTmpDir_Click(object sender, EventArgs e)
         {
             // Очистим каталоги с временными файлами системы...
-            List<String> CleanDirs = new List<string>();
-            CleanDirs.Add(Path.Combine(Path.GetTempPath(), "*.*"));
+            List<String> CleanDirs = new List<string>
+            {
+                Path.Combine(Path.GetTempPath(), "*.*")
+            };
             FormManager.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), AppStrings.PS_CleanupSuccess, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile);
         }
 
