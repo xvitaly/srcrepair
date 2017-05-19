@@ -170,11 +170,8 @@ namespace srcrepair
         /// </summary>
         private void WriteType2VideoSettings()
         {
-            // Получаем актуальный файл с настройками видео...
-            string VFileName = SelGame.GetActualVideoFile();
-
             // Создаём новый объект без получения данных из файла...
-            Type2Video Video = new Type2Video(VFileName, SelGame.SourceType, false)
+            Type2Video Video = new Type2Video(SelGame.GetActualVideoFile(), SelGame.SourceType, false)
             {
                 // Записываем пользовательские настройки...
                 ScreenWidth = (int)GT_NCF_HorRes.Value,
@@ -1389,7 +1386,7 @@ namespace srcrepair
                             if (!(Type1Video.CheckRegKeyExists(GameRegKey))) { Type1Video.CreateRegKey(GameRegKey); }
                             
                             // Записываем выбранные настройки в реестр...
-                            WriteType1VideoSettings(SelGame.SmallAppName);
+                            WriteType1VideoSettings();
                             
                             // Выводим подтверждающее сообщение...
                             MessageBox.Show(AppStrings.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -1407,7 +1404,7 @@ namespace srcrepair
                         try
                         {
                             // Записываем...
-                            WriteType2VideoSettings(SelGame.GetActualVideoFile(), SelGame.SourceType);
+                            WriteType2VideoSettings();
                             
                             // Выводим сообщение...
                             MessageBox.Show(AppStrings.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
