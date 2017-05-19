@@ -139,7 +139,7 @@ namespace srcrepair
         /// Записывает настройки GCF-игры в реестр Windows.
         /// </summary>
         /// <param name="SAppName">Краткое имя игры</param>
-        private void WriteGCFGameSettings(string SAppName)
+        private void WriteType1VideoSettings(string SAppName)
         {
             // Создаём новый объект без получения данных из реестра...
             Type1Video Video = new Type1Video(SelGame.SmallAppName, false)
@@ -171,7 +171,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="VFileName">Имя файла опций</param>
         /// <param name="VSF">Тип механизма хранения настроек движка Source</param>
-        private void WriteNCFGameSettings(string VFileName, string VSF)
+        private void WriteType2VideoSettings(string VFileName, string VSF)
         {
             // Создаём новый объект без получения данных из файла...
             Type2Video Video = new Type2Video(VFileName, VSF, false)
@@ -1389,7 +1389,7 @@ namespace srcrepair
                             if (!(Type1Video.CheckRegKeyExists(GameRegKey))) { Type1Video.CreateRegKey(GameRegKey); }
                             
                             // Записываем выбранные настройки в реестр...
-                            WriteGCFGameSettings(SelGame.SmallAppName);
+                            WriteType1VideoSettings(SelGame.SmallAppName);
                             
                             // Выводим подтверждающее сообщение...
                             MessageBox.Show(AppStrings.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -1407,7 +1407,7 @@ namespace srcrepair
                         try
                         {
                             // Записываем...
-                            WriteNCFGameSettings(SelGame.GetActualVideoFile(), SelGame.SourceType);
+                            WriteType2VideoSettings(SelGame.GetActualVideoFile(), SelGame.SourceType);
                             
                             // Выводим сообщение...
                             MessageBox.Show(AppStrings.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
