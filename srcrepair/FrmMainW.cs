@@ -1363,6 +1363,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Обработчик нажатия кнопки сохранения графических настроек.
+        /// </summary>
         private void GT_SaveApply_Click(object sender, EventArgs e)
         {
             // Сохраняем изменения в графических настройках...
