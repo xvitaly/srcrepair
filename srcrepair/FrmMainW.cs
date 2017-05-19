@@ -1322,38 +1322,38 @@ namespace srcrepair
             // Спросим пользователя.
             if (MessageBox.Show(AppStrings.GT_MinPerfMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (!SelGame.IsUsingVideoFile)
+                switch (SelGame.SourceType)
                 {
-                    // Пользователь согласился, продолжаем...
-                    GT_ScreenType.SelectedIndex = 0; // полноэкранный режим
-                    GT_ModelQuality.SelectedIndex = 0; // низкая детализация моделей
-                    GT_TextureQuality.SelectedIndex = 0; // низкая детализация текстур
-                    GT_ShaderQuality.SelectedIndex = 0; // низкое качество шейдерных эффектов
-                    GT_WaterQuality.SelectedIndex = 0; // простые отражения в воде
-                    GT_ShadowQuality.SelectedIndex = 0; // низкое качество теней
-                    GT_ColorCorrectionT.SelectedIndex = 0; // корренкция цвета выключена
-                    GT_AntiAliasing.SelectedIndex = 0; // сглаживание выключено
-                    GT_Filtering.SelectedIndex = 1; // трилинейная фильтрация текстур
-                    GT_VSync.SelectedIndex = 0; // вертикальная синхронизация выключена
-                    GT_MotionBlur.SelectedIndex = 0; // размытие движения выключено
-                    GT_DxMode.SelectedIndex = MessageBox.Show(AppStrings.GT_DxLevelMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes ? 0 : 3; // Спросим у пользователя о режиме DirectX...
-                    GT_HDR.SelectedIndex = 0; // эффекты HDR выключены
-                }
-                else
-                {
-                    GT_NCF_DispMode.SelectedIndex = 0;
-                    GT_NCF_Ratio.SelectedIndex = 1;
-                    GT_NCF_Brightness.Text = "22";
-                    GT_NCF_AntiAlias.SelectedIndex = 0;
-                    GT_NCF_Filtering.SelectedIndex = 1;
-                    GT_NCF_Shadows.SelectedIndex = 0;
-                    GT_NCF_MBlur.SelectedIndex = 0;
-                    GT_NCF_VSync.SelectedIndex = 0;
-                    GT_NCF_Multicore.SelectedIndex = 1;
-                    GT_NCF_ShaderE.SelectedIndex = 0;
-                    GT_NCF_EffectD.SelectedIndex = 0;
-                    GT_NCF_MemPool.SelectedIndex = 0;
-                    GT_NCF_Quality.SelectedIndex = 0;
+                    case "1":
+                        GT_ScreenType.SelectedIndex = 0;
+                        GT_ModelQuality.SelectedIndex = 0;
+                        GT_TextureQuality.SelectedIndex = 0;
+                        GT_ShaderQuality.SelectedIndex = 0;
+                        GT_WaterQuality.SelectedIndex = 0;
+                        GT_ShadowQuality.SelectedIndex = 0;
+                        GT_ColorCorrectionT.SelectedIndex = 0;
+                        GT_AntiAliasing.SelectedIndex = 0;
+                        GT_Filtering.SelectedIndex = 1;
+                        GT_VSync.SelectedIndex = 0;
+                        GT_MotionBlur.SelectedIndex = 0;
+                        GT_DxMode.SelectedIndex = MessageBox.Show(AppStrings.GT_DxLevelMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes ? 0 : 3;
+                        GT_HDR.SelectedIndex = 0;
+                        break;
+                    case "2":
+                        GT_NCF_DispMode.SelectedIndex = 0;
+                        GT_NCF_Ratio.SelectedIndex = 1;
+                        GT_NCF_Brightness.Text = "22";
+                        GT_NCF_AntiAlias.SelectedIndex = 0;
+                        GT_NCF_Filtering.SelectedIndex = 1;
+                        GT_NCF_Shadows.SelectedIndex = 0;
+                        GT_NCF_MBlur.SelectedIndex = 0;
+                        GT_NCF_VSync.SelectedIndex = 0;
+                        GT_NCF_Multicore.SelectedIndex = 1;
+                        GT_NCF_ShaderE.SelectedIndex = 0;
+                        GT_NCF_EffectD.SelectedIndex = 0;
+                        GT_NCF_MemPool.SelectedIndex = 0;
+                        GT_NCF_Quality.SelectedIndex = 0;
+                        break;
                 }
                 MessageBox.Show(AppStrings.GT_PerfSet, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
