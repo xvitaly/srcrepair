@@ -546,6 +546,26 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Сохраняет настройки видео для выбранной игры.
+        /// </summary>
+        private void WriteGraphicSettings()
+        {
+            // Определим тип игры...
+            switch (SelGame.SourceType)
+            {
+                case "1":
+                    string GameRegKey = Type1Video.GetGameRegKey(SelGame.SmallAppName);
+                    if (Properties.Settings.Default.SafeCleanup) { try { Type1Video.BackUpVideoSettings(GameRegKey, "Game_AutoBackUp", SelGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } }
+                    try { if (!(Type1Video.CheckRegKeyExists(GameRegKey))) { Type1Video.CreateRegKey(GameRegKey); } WriteType1VideoSettings(); MessageBox.Show(AppStrings.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.GT_SaveFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+                    break;
+                case "2":
+                    if (Properties.Settings.Default.SafeCleanup) { FileManager.CreateConfigBackUp(SelGame.VideoCfgFiles, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto); }
+                    try { WriteType2VideoSettings(); MessageBox.Show(AppStrings.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.GT_NCFFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Переключает вид страницы графического твикера с в соответствие с выбранным
         /// движком.
         /// </summary>
@@ -1374,58 +1394,13 @@ namespace srcrepair
                 // Запрашиваем подтверждение у пользователя...
                 if (MessageBox.Show(AppStrings.GT_SaveMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    // Определим тип игры...
-                    if (!SelGame.IsUsingVideoFile)
-                    {
-                        // Сгенерируем путь к ветке реестра...
-                        string GameRegKey = Type1Video.GetGameRegKey(SelGame.SmallAppName);
-
-                        // Это GCF-приложение, будем писать настройки в реестр...
-                        if (Properties.Settings.Default.SafeCleanup)
-                        {
-                            // Создаём резервную копию...
-                            try { Type1Video.BackUpVideoSettings(GameRegKey, "Game_AutoBackUp", SelGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                        }
-
-                        try
-                        {
-                            // Проверим существование ключа реестра и в случае необходимости создадим...
-                            if (!(Type1Video.CheckRegKeyExists(GameRegKey))) { Type1Video.CreateRegKey(GameRegKey); }
-                            
-                            // Записываем выбранные настройки в реестр...
-                            WriteType1VideoSettings();
-                            
-                            // Выводим подтверждающее сообщение...
-                            MessageBox.Show(AppStrings.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.GT_SaveFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
-                    }
-                    else
-                    {
-                        // Создадим бэкап файла с графическими настройками...
-                        if (Properties.Settings.Default.SafeCleanup)
-                        {
-                            FileManager.CreateConfigBackUp(SelGame.VideoCfgFiles, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
-                        }
-
-                        try
-                        {
-                            // Записываем...
-                            WriteType2VideoSettings();
-                            
-                            // Выводим сообщение...
-                            MessageBox.Show(AppStrings.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        catch (Exception Ex)
-                        {
-                            // Произошла ошибка...
-                            CoreLib.HandleExceptionEx(AppStrings.GT_NCFFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
-                        }
-                    }
+                    // Сохраняем настройки графики...
+                    WriteGraphicSettings();
                 }
             }
             else
             {
+                // Пользователь заполнил не все поля. Сообщаем ему об этом...
                 MessageBox.Show(AppStrings.GT_NCFNReady, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
