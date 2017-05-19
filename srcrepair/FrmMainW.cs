@@ -1279,38 +1279,38 @@ namespace srcrepair
             // Зададим вопрос, а нужно ли это юзеру?
             if (MessageBox.Show(AppStrings.GT_MaxPerfMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (!SelGame.IsUsingVideoFile)
+                switch (SelGame.SourceType)
                 {
-                    // Пользователь согласился, продолжаем...
-                    GT_ScreenType.SelectedIndex = 0; // полноэкранный режим
-                    GT_ModelQuality.SelectedIndex = 2; // высокая детализация моделей
-                    GT_TextureQuality.SelectedIndex = 2; // высокая детализация текстур
-                    GT_ShaderQuality.SelectedIndex = 1; // высокое качество шейдерных эффектов
-                    GT_WaterQuality.SelectedIndex = 1; // отражать мир в воде
-                    GT_ShadowQuality.SelectedIndex = 1; // высокое качество теней
-                    GT_ColorCorrectionT.SelectedIndex = 1; // корренкция цвета включена
-                    GT_AntiAliasing.SelectedIndex = 5; // сглаживание MSAA 8x
-                    GT_Filtering.SelectedIndex = 5; // анизотропная фильтрация 16x
-                    GT_VSync.SelectedIndex = 0; // вертикальная синхронизация выключена
-                    GT_MotionBlur.SelectedIndex = 0; // размытие движения выключено
-                    GT_DxMode.SelectedIndex = 3; // режим DirecX 9.0c
-                    GT_HDR.SelectedIndex = 2; // HDR полные
-                }
-                else
-                {
-                    GT_NCF_DispMode.SelectedIndex = 0;
-                    GT_NCF_Ratio.SelectedIndex = 1;
-                    GT_NCF_Brightness.Text = "22";
-                    GT_NCF_AntiAlias.SelectedIndex = 5;
-                    GT_NCF_Filtering.SelectedIndex = 5;
-                    GT_NCF_Shadows.SelectedIndex = 3;
-                    GT_NCF_MBlur.SelectedIndex = 1;
-                    GT_NCF_VSync.SelectedIndex = 0;
-                    GT_NCF_Multicore.SelectedIndex = 1;
-                    GT_NCF_ShaderE.SelectedIndex = 3;
-                    GT_NCF_EffectD.SelectedIndex = 2;
-                    GT_NCF_MemPool.SelectedIndex = 2;
-                    GT_NCF_Quality.SelectedIndex = 2;
+                    case "1":
+                        GT_ScreenType.SelectedIndex = 0;
+                        GT_ModelQuality.SelectedIndex = 2;
+                        GT_TextureQuality.SelectedIndex = 2;
+                        GT_ShaderQuality.SelectedIndex = 1;
+                        GT_WaterQuality.SelectedIndex = 1;
+                        GT_ShadowQuality.SelectedIndex = 1;
+                        GT_ColorCorrectionT.SelectedIndex = 1;
+                        GT_AntiAliasing.SelectedIndex = 5;
+                        GT_Filtering.SelectedIndex = 5;
+                        GT_VSync.SelectedIndex = 0;
+                        GT_MotionBlur.SelectedIndex = 0;
+                        GT_DxMode.SelectedIndex = 3;
+                        GT_HDR.SelectedIndex = 2;
+                        break;
+                    case "2":
+                        GT_NCF_DispMode.SelectedIndex = 0;
+                        GT_NCF_Ratio.SelectedIndex = 1;
+                        GT_NCF_Brightness.Text = "22";
+                        GT_NCF_AntiAlias.SelectedIndex = 5;
+                        GT_NCF_Filtering.SelectedIndex = 5;
+                        GT_NCF_Shadows.SelectedIndex = 3;
+                        GT_NCF_MBlur.SelectedIndex = 1;
+                        GT_NCF_VSync.SelectedIndex = 0;
+                        GT_NCF_Multicore.SelectedIndex = 1;
+                        GT_NCF_ShaderE.SelectedIndex = 3;
+                        GT_NCF_EffectD.SelectedIndex = 2;
+                        GT_NCF_MemPool.SelectedIndex = 2;
+                        GT_NCF_Quality.SelectedIndex = 2;
+                        break;
                 }
                 MessageBox.Show(AppStrings.GT_PerfSet, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
