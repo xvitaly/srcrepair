@@ -138,8 +138,7 @@ namespace srcrepair
         /// <summary>
         /// Записывает настройки GCF-игры в реестр Windows.
         /// </summary>
-        /// <param name="SAppName">Краткое имя игры</param>
-        private void WriteType1VideoSettings(string SAppName)
+        private void WriteType1VideoSettings()
         {
             // Создаём новый объект без получения данных из реестра...
             Type1Video Video = new Type1Video(SelGame.SmallAppName, false)
@@ -169,12 +168,13 @@ namespace srcrepair
         /// <summary>
         /// Сохраняет настройки NCF игры в файл.
         /// </summary>
-        /// <param name="VFileName">Имя файла опций</param>
-        /// <param name="VSF">Тип механизма хранения настроек движка Source</param>
-        private void WriteType2VideoSettings(string VFileName, string VSF)
+        private void WriteType2VideoSettings()
         {
+            // Получаем актуальный файл с настройками видео...
+            string VFileName = SelGame.GetActualVideoFile();
+
             // Создаём новый объект без получения данных из файла...
-            Type2Video Video = new Type2Video(VFileName, VSF, false)
+            Type2Video Video = new Type2Video(VFileName, SelGame.SourceType, false)
             {
                 // Записываем пользовательские настройки...
                 ScreenWidth = (int)GT_NCF_HorRes.Value,
