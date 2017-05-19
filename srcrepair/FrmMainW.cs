@@ -1273,10 +1273,12 @@ namespace srcrepair
             FindGames(App.FullSteamPath, AppStrings.AppXMLParseError);
         }
 
+        /// <summary>
+        /// Обработчик нажатия кнопки "Максимальное качество".
+        /// Устанавливает графические настройки на рекомендуемый максимум.
+        /// </summary>
         private void GT_Maximum_Graphics_Click(object sender, EventArgs e)
         {
-            // Нажатие этой кнопки устанавливает графические настройки на рекомендуемый максимум...
-            // Зададим вопрос, а нужно ли это юзеру?
             if (MessageBox.Show(AppStrings.GT_MaxPerfMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 switch (SelGame.SourceType)
@@ -1316,10 +1318,12 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Обработчик нажатия кнопки "Максимальная производительность".
+        /// Устанавливает графические настройки на рекомендуемый минимум.
+        /// </summary>
         private void GT_Maximum_Performance_Click(object sender, EventArgs e)
         {
-            // Нажатие этой кнопки устанавливает графические настройки на рекомендуемый минимум...
-            // Спросим пользователя.
             if (MessageBox.Show(AppStrings.GT_MinPerfMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 switch (SelGame.SourceType)
