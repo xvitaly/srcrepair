@@ -2482,6 +2482,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Logs&apos; detail of dedicated CS:GO server..
+        /// </summary>
+        internal static string mp_logdetail {
+            get {
+                return ResourceManager.GetString("mp_logdetail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 0=No mercy rule, 1=team can clinch match win early if they win &gt; 1/2 total rounds..
         /// </summary>
         internal static string mp_match_can_clinch {

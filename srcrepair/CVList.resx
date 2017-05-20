@@ -2328,6 +2328,9 @@
   <data name="mp_items_prohibited" xml:space="preserve">
     <value>Comma-separated list of forbidden on CS:GO server items.</value>
   </data>
+  <data name="mp_logdetail" xml:space="preserve">
+    <value>Logs' detail of dedicated CS:GO server.</value>
+  </data>
   <data name="sv_allow_legacy_cmd_execution_from_client" xml:space="preserve">
     <value>Allow / disallow command execution received from connected clients.</value>
   </data>
