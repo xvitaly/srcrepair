@@ -1960,6 +1960,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Включает выгрузку серверных журналов на внешний сервис по протоколу HTTP POST..
+        /// </summary>
+        internal static string logaddress_add_http {
+            get {
+                return ResourceManager.GetString("logaddress_add_http", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Changes the map and restarts the server..
         /// </summary>
         internal static string map {
