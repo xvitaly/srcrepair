@@ -3693,6 +3693,9 @@
   <data name="sv_teamid_overhead_always_prohibit" xml:space="preserve">
     <value>Позволяет разрешить / запретить использование на клиентах cl_teamid_overhead_always.</value>
   </data>
+  <data name="logaddress_add_http" xml:space="preserve">
+    <value>Upload server logs to external server via HTTP POST method.</value>
+  </data>
   <data name="sv_allow_legacy_cmd_execution_from_client" xml:space="preserve">
     <value>Разрешает / запрещает исполнение на сервере команд, полученных от подключённых клиентов.</value>
   </data>
