@@ -82,7 +82,7 @@ namespace srcrepair
             {
                 // Очистим логи клиента Steam...
                 CleanDirs.Add(Path.Combine(SteamPath, "logs", "*.*"));
-                CleanDirs.Add(Path.Combine(SteamPath, "*.log"));
+                CleanDirs.Add(Path.Combine(SteamPath, "*.log*"));
             }
 
             if (EC_OldBins.Checked)
