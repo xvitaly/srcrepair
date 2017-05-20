@@ -2464,6 +2464,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Comma-separated list of forbidden on CS:GO server items..
+        /// </summary>
+        internal static string mp_items_prohibited {
+            get {
+                return ResourceManager.GetString("mp_items_prohibited", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Max # of players 1 team can have over another (0 disables check)..
         /// </summary>
         internal static string mp_limitteams {
