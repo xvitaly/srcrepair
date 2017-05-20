@@ -3229,6 +3229,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allow / disallow command execution received from connected clients..
+        /// </summary>
+        internal static string sv_allow_legacy_cmd_execution_from_client {
+            get {
+                return ResourceManager.GetString("sv_allow_legacy_cmd_execution_from_client", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enable / disable point_servercommand entities. Defaults to &quot;official&quot; Valve maps only. Can also be set to &quot;disallow&quot; and &quot;always&quot;..
         /// </summary>
         internal static string sv_allow_point_servercommand {
