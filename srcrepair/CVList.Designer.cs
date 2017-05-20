@@ -1960,7 +1960,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Включает выгрузку серверных журналов на внешний сервис по протоколу HTTP POST..
+        ///   Looks up a localized string similar to Upload server logs to external server via HTTP POST method..
         /// </summary>
         internal static string logaddress_add_http {
             get {
