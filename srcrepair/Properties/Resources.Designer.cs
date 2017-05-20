@@ -308,6 +308,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to srcrepair.CVList.
+        /// </summary>
+        internal static string CE_CVResDf {
+            get {
+                return ResourceManager.GetString("CE_CVResDf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to configs.xml.
         /// </summary>
         internal static string CfgDbFile {

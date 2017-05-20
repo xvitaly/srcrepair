@@ -89,7 +89,7 @@ namespace srcrepair
         /// <returns>Описание переменной с учётом локализации</returns>
         public static string GetConVarDescription(string CVar)
         {
-            ResourceManager DM = new ResourceManager("srcrepair.CVList", typeof(FrmMainW).Assembly);
+            ResourceManager DM = new ResourceManager(Properties.Resources.CE_CVResDf, typeof(FrmMainW).Assembly);
             return DM.GetString(CVar);
         }
 

@@ -400,4 +400,7 @@
   <data name="DebugLogFileName" xml:space="preserve">
     <value>debug.log</value>
   </data>
+  <data name="CE_CVResDf" xml:space="preserve">
+    <value>srcrepair.CVList</value>
+  </data>
 </root>
