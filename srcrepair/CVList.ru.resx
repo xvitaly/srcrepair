@@ -3699,6 +3699,9 @@
   <data name="mp_items_prohibited" xml:space="preserve">
     <value>Разделённый запятыми список предметов, покупка которых запрещена на сервере CS:GO.</value>
   </data>
+  <data name="mp_logdetail" xml:space="preserve">
+    <value>Задаёт уровень детализации журналов работы сервера CS:GO.</value>
+  </data>
   <data name="sv_allow_legacy_cmd_execution_from_client" xml:space="preserve">
     <value>Разрешает / запрещает исполнение на сервере команд, полученных от подключённых клиентов.</value>
   </data>
