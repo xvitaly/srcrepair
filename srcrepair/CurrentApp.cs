@@ -20,6 +20,7 @@ using System;
 using System.Globalization;
 using System.IO;
 using System.Reflection;
+using System.Resources;
 
 namespace srcrepair
 {
@@ -79,6 +80,18 @@ namespace srcrepair
         /// Возвращает копирайты приложения (из ресурса сборки).
         /// </summary>
         public static string AppCopyright { get { object[] Attribs = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false); return Attribs.Length != 0 ? ((AssemblyCopyrightAttribute)Attribs[0]).Copyright : String.Empty; } }
+
+        /// <summary>
+        /// Возвращает описание переданной в качестве параметра переменной, получая
+        /// эту информацию из ресурса CVList с учётом локализации.
+        /// </summary>
+        /// <param name="CVar">Название переменной</param>
+        /// <returns>Описание переменной с учётом локализации</returns>
+        public static string GetConVarDescription(string CVar)
+        {
+            ResourceManager DM = new ResourceManager("srcrepair.CVList", typeof(FrmMainW).Assembly);
+            return DM.GetString(CVar);
+        }
 
         /// <summary>
         /// Конструктор класса. Получает информацию для рантайма.
