@@ -424,14 +424,13 @@ namespace srcrepair
         /// <summary>
         /// Считывает файлы резервных копий из указанного каталога и помещает в таблицу.
         /// </summary>
-        /// <param name="BUpDir">Путь к каталогу с резервными копиями</param>
-        private void ReadBackUpList2Table(string BUpDir)
+        private void ReadBackUpList2Table()
         {
             // Очистим таблицу...
             Invoke((MethodInvoker)delegate() { BU_LVTable.Items.Clear(); });
             
             // Открываем каталог...
-            DirectoryInfo DInfo = new DirectoryInfo(BUpDir);
+            DirectoryInfo DInfo = new DirectoryInfo(SelGame.FullBackUpDirPath);
             
             // Считываем список файлов по заданной маске...
             FileInfo[] DirList = DInfo.GetFiles("*.*");
@@ -843,12 +842,12 @@ namespace srcrepair
         /// <summary>
         /// Получает список резеервных копий и заносит их в таблицу...
         /// </summary>
-        private void UpdateBackUpList(string BackUpDir)
+        private void UpdateBackUpList()
         {
             try
             {
                 // Считываем и выводим в таблицу файлы резервных копий...
-                ReadBackUpList2Table(BackUpDir);
+                ReadBackUpList2Table();
             }
             catch (Exception Ex)
             {
@@ -856,7 +855,7 @@ namespace srcrepair
                 CoreLib.WriteStringToLog(Ex.Message);
 
                 // Создадим каталог для хранения резервных копий если его ещё нет...
-                if (!Directory.Exists(BackUpDir)) { Directory.CreateDirectory(BackUpDir); }
+                if (!Directory.Exists(SelGame.FullBackUpDirPath)) { Directory.CreateDirectory(SelGame.FullBackUpDirPath); }
             }
         }
 
@@ -1008,7 +1007,7 @@ namespace srcrepair
         private void BW_BkUpRecv_DoWork(object sender, DoWorkEventArgs e)
         {
             // Получаем список резеверных копий...
-            UpdateBackUpList(SelGame.FullBackUpDirPath);
+            UpdateBackUpList();
         }
 
         private void BW_HUDList_DoWork(object sender, DoWorkEventArgs e)
@@ -1750,7 +1749,7 @@ namespace srcrepair
         private void BUT_Refresh_Click(object sender, EventArgs e)
         {
             // Обновим список резервных копий...
-            UpdateBackUpList(SelGame.FullBackUpDirPath);
+            UpdateBackUpList();
         }
 
         private void BUT_RestoreB_Click(object sender, EventArgs e)
@@ -1881,7 +1880,7 @@ namespace srcrepair
                     MessageBox.Show(AppStrings.BU_RegDone, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     
                     // Обновляем список резервных копий...
-                    UpdateBackUpList(SelGame.FullBackUpDirPath);
+                    UpdateBackUpList();
                 }
                 catch (Exception Ex)
                 {
@@ -1905,7 +1904,7 @@ namespace srcrepair
                     MessageBox.Show(AppStrings.BU_RegDone, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     
                     // Обновим список бэкапов...
-                    UpdateBackUpList(SelGame.FullBackUpDirPath);
+                    UpdateBackUpList();
                 }
                 catch (Exception Ex)
                 {
@@ -1924,7 +1923,7 @@ namespace srcrepair
                 {
                     Type1Video.CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source"), "Source_Options", SelGame.FullBackUpDirPath);
                     MessageBox.Show(AppStrings.BU_RegDone, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    UpdateBackUpList(SelGame.FullBackUpDirPath);
+                    UpdateBackUpList();
                 }
                 catch (Exception Ex)
                 {
