@@ -78,8 +78,7 @@ namespace srcrepair
         /// Определяет установленные игры и заполняет комбо-бокс выбора
         /// доступных управляемых игр.
         /// </summary>
-        /// <param name="SteamPath">Путь к клиенту Steam</param>
-        private void DetectInstalledGames(string SteamPath)
+        private void DetectInstalledGames()
         {
             // Очистим список игр...
             AppSelector.Items.Clear();
@@ -857,12 +856,10 @@ namespace srcrepair
         /// <summary>
         /// Ищет установленные игры и выполняет ряд необходимых проверок.
         /// </summary>
-        /// <param name="SteamDir">Путь к каталогу установки Steam</param>
-        /// <param name="ErrMsg">Текст сообщения об ошибке</param>
-        private void FindGames(string SteamDir, string ErrMsg)
+        private void FindGames()
         {
             // Начинаем определять установленные игры...
-            try { DetectInstalledGames(SteamDir); } catch (Exception Ex) { CoreLib.HandleExceptionEx(ErrMsg, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); Environment.Exit(16); }
+            try { DetectInstalledGames(); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.AppXMLParseError, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); Environment.Exit(16); }
 
             // Проверим нашлись ли игры...
             CheckGames(AppSelector.Items.Count);
@@ -1105,7 +1102,7 @@ namespace srcrepair
             CheckSymbolsSteam();
 
             // Запустим поиск установленных игр и проверим нашлось ли что-то...
-            FindGames(App.FullSteamPath, AppStrings.AppXMLParseError);
+            FindGames();
 
             try
             {
@@ -1269,7 +1266,7 @@ namespace srcrepair
         private void AppRefresh_Click(object sender, EventArgs e)
         {
             // Попробуем обновить список игр...
-            FindGames(App.FullSteamPath, AppStrings.AppXMLParseError);
+            FindGames();
         }
 
         /// <summary>
@@ -2051,7 +2048,7 @@ namespace srcrepair
             FormManager.FormShowUpdater(App.UserAgent, App.FullAppPath, App.AppUserDir);
             
             // Перечитаем базу игр...
-            FindGames(App.FullSteamPath, AppStrings.AppXMLParseError);
+            FindGames();
         }
 
         private void BUT_OpenNpad_Click(object sender, EventArgs e)
@@ -2458,7 +2455,7 @@ namespace srcrepair
         private void SB_SteamID_Click(object sender, EventArgs e)
         {
             // Открываем диалог выбора SteamID и прописываем пользовательский выбор...
-            try { string Result = FormManager.FormShowIDSelect(SelGame.SteamIDs); if (!(String.IsNullOrWhiteSpace(Result))) { SB_SteamID.Text = Result; Properties.Settings.Default.LastSteamID = Result; FindGames(App.FullSteamPath, AppStrings.AppXMLParseError); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { string Result = FormManager.FormShowIDSelect(SelGame.SteamIDs); if (!(String.IsNullOrWhiteSpace(Result))) { SB_SteamID.Text = Result; Properties.Settings.Default.LastSteamID = Result; FindGames(); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void BU_LVTable_SelectedIndexChanged(object sender, EventArgs e)
