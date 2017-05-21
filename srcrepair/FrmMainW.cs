@@ -340,7 +340,7 @@ namespace srcrepair
                     }
 
                     // Изменяем содержимое строки статуса...
-                    UpdateStatusBar(MainTabControl.SelectedIndex);
+                    UpdateStatusBar();
                 }
                 catch (Exception Ex)
                 {
@@ -686,7 +686,7 @@ namespace srcrepair
                     {
                         // При наличии единственной игры в списке, выберем её автоматически...
                         AppSelector.SelectedIndex = 0;
-                        UpdateStatusBar(MainTabControl.SelectedIndex);
+                        UpdateStatusBar();
                     }
                     break;
                 default:
@@ -773,10 +773,9 @@ namespace srcrepair
         /// <summary>
         /// Обновляет содержимое строки состояния в зависимости от контекста.
         /// </summary>
-        /// <param name="Index">ID текущей вкладки</param>
-        private void UpdateStatusBar(int Index)
+        private void UpdateStatusBar()
         {
-            switch (Index)
+            switch (MainTabControl.SelectedIndex)
             {
                 case 1: // Открыта страница "Редактор конфигов"...
                     {
@@ -1240,7 +1239,7 @@ namespace srcrepair
                 if (!BW_FPRecv.IsBusy) { BW_FPRecv.RunWorkerAsync(); }
 
                 // Обновляем статус...
-                UpdateStatusBar(MainTabControl.SelectedIndex);
+                UpdateStatusBar();
 
                 // Сохраним ID последней выбранной игры...
                 Properties.Settings.Default.LastGameName = AppSelector.Text;
@@ -1504,7 +1503,7 @@ namespace srcrepair
             CloseEditorConfigs();
 
             // Обновляем содержимое строки статуса...
-            UpdateStatusBar(MainTabControl.SelectedIndex);
+            UpdateStatusBar();
         }
 
         private void CE_Open_Click(object sender, EventArgs e)
@@ -1550,7 +1549,7 @@ namespace srcrepair
                 {
                     WriteTableToFileNow(CE_SaveCfgDialog.FileName);
                     CFGFileName = CE_SaveCfgDialog.FileName;
-                    UpdateStatusBar(MainTabControl.SelectedIndex);
+                    UpdateStatusBar();
                 }
             }
         }
@@ -1927,7 +1926,7 @@ namespace srcrepair
         private void MainTabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Пользователь переключил вкладку. Обновляем содержимое строки статуса...
-            UpdateStatusBar(((TabControl)sender).SelectedIndex);
+            UpdateStatusBar();
         }
 
         private void CE_ShowHint_Click(object sender, EventArgs e)
