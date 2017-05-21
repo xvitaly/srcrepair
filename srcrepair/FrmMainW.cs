@@ -734,11 +734,9 @@ namespace srcrepair
         /// <summary>
         /// Управляет выводом значка активного FPS-конфига и кнопки их удаления.
         /// </summary>
-        /// <param name="GameDir">Полный путь к каталогу игры</param>
-        /// <param name="UserDir">Флаг использования кастомного каталога</param>
-        private void HandleConfigs(string GameDir, bool UserDir)
+        private void HandleConfigs()
         {
-            SelGame.FPSConfigs = FileManager.ExpandFileList(ConfigManager.ListFPSConfigs(GameDir, UserDir), true);
+            SelGame.FPSConfigs = FileManager.ExpandFileList(ConfigManager.ListFPSConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir), true);
             GT_Warning.Visible = SelGame.FPSConfigs.Count > 0;
             FP_Uninstall.Enabled = SelGame.FPSConfigs.Count > 0;
         }
@@ -1236,7 +1234,7 @@ namespace srcrepair
                 HandleSteamIDs(Properties.Settings.Default.LastSteamID);
 
                 // Проверим, установлен ли FPS-конфиг...
-                HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
+                HandleConfigs();
 
                 // Закроем открытые конфиги в редакторе...
                 if (!(String.IsNullOrEmpty(CFGFileName))) { CloseEditorConfigs(); }
@@ -1440,7 +1438,7 @@ namespace srcrepair
                         MessageBox.Show(AppStrings.FP_InstallSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         
                         // Перечитаем конфиги...
-                        HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
+                        HandleConfigs();
                     }
                     catch (Exception Ex)
                     {
@@ -1467,7 +1465,7 @@ namespace srcrepair
                     FormManager.FormShowCleanup(SelGame.FPSConfigs, ((Button)sender).Text.ToLower(), AppStrings.FP_RemoveSuccessful, SelGame.FullBackUpDirPath, SelGame.GameBinaryFile, false, false, false, Properties.Settings.Default.SafeCleanup);
 
                     // Перечитаем список конфигов...
-                    HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
+                    HandleConfigs();
                 }
                 else
                 {
@@ -1783,7 +1781,7 @@ namespace srcrepair
                                     FormManager.FormShowArchiveExtract(Path.Combine(SelGame.FullBackUpDirPath, BU_Item.SubItems[4].Text), Path.GetPathRoot(App.FullSteamPath));
 
                                     // Обновляем список FPS-конфигов...
-                                    HandleConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir);
+                                    HandleConfigs();
                                     break;
                                 default:
                                     // Выводим сообщение о неизвестном формате резервной копии...
