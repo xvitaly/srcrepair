@@ -703,14 +703,13 @@ namespace srcrepair
         /// <summary>
         /// Запускает проверку на наличие запрещённых символов в пути установки клиента Steam.
         /// </summary>
-        /// <param name="SteamPath">Каталог установки Steam</param>
-        private void CheckSymbolsSteam(string SteamPath)
+        private void CheckSymbolsSteam()
         {
-            if (!(FileManager.CheckNonASCII(SteamPath)))
+            if (!(FileManager.CheckNonASCII(App.FullSteamPath)))
             {
                 PS_PathSteam.ForeColor = Color.Red;
                 PS_PathSteam.Image = Properties.Resources.upd_err;
-                CoreLib.WriteStringToLog(String.Format(AppStrings.AppRestrSymbLog, SteamPath));
+                CoreLib.WriteStringToLog(String.Format(AppStrings.AppRestrSymbLog, App.FullSteamPath));
             }
         }
 
@@ -1106,7 +1105,7 @@ namespace srcrepair
             PS_StPath.Text = String.Format(PS_StPath.Text, App.FullSteamPath);
             
             // Проверим на наличие запрещённых символов в пути к установленному клиенту Steam...
-            CheckSymbolsSteam(App.FullSteamPath);
+            CheckSymbolsSteam();
 
             // Запустим поиск установленных игр и проверим нашлось ли что-то...
             FindGames(App.FullSteamPath, AppStrings.AppXMLParseError);
