@@ -269,14 +269,12 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Проверяет наличие обновлений для программы. Используется в модуле автообновления.
+        /// Проверяет наличие обновлений для программы. Используется главной формой.
         /// </summary>
-        /// <param name="FullAppPath">Путь к каталогу установки программы</param>
-        /// <param name="UserAgent">Заголовок HTTP UserAgent</param>
         /// <returns>Возвращает true при обнаружении обновлений</returns>
-        private bool AutoUpdateCheck(string FullAppPath, string UserAgent)
+        private bool AutoUpdateCheck()
         {
-            UpdateManager UpMan = new UpdateManager(FullAppPath, UserAgent);
+            UpdateManager UpMan = new UpdateManager(App.FullAppPath, App.UserAgent);
             return UpMan.CheckAppUpdate();
         }
 
@@ -949,7 +947,7 @@ namespace srcrepair
                 if (TS.Days >= 7) // Проверяем не прошла ли неделя с момента последней прверки...
                 {
                     // Требуется проверка обновлений...
-                    if (AutoUpdateCheck(App.FullAppPath, App.UserAgent))
+                    if (AutoUpdateCheck())
                     {
                         // Доступны обновления...
                         MessageBox.Show(String.Format(AppStrings.AppUpdateAvailable, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
