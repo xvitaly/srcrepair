@@ -652,12 +652,11 @@ namespace srcrepair
         /// <summary>
         /// Выполняет определение и вывод названия файловой системы на диске установки клиента игры.
         /// </summary>
-        /// <param name="GamePath">Каталог установки клиента игры</param>
-        private void DetectFS(string GamePath)
+        private void DetectFS()
         {
             try
             {
-                PS_OSDrive.Text = String.Format(PS_OSDrive.Text, FileManager.DetectDriveFileSystem(Path.GetPathRoot(GamePath)));
+                PS_OSDrive.Text = String.Format(PS_OSDrive.Text, FileManager.DetectDriveFileSystem(Path.GetPathRoot(SelGame.FullGamePath)));
             }
             catch (Exception Ex)
             {
@@ -1227,7 +1226,7 @@ namespace srcrepair
                 CheckSymbolsGame(SelGame.FullGamePath);
 
                 // Распознаем файловую систему на диске с игрой...
-                DetectFS(SelGame.FullGamePath);
+                DetectFS();
 
                 // Считаем настройки графики...
                 LoadGraphicSettings();
