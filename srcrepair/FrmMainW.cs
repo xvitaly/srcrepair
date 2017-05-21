@@ -716,14 +716,13 @@ namespace srcrepair
         /// <summary>
         /// Запускает проверку на наличие запрещённых символов в пути установки игры.
         /// </summary>
-        /// <param name="GamePath">Каталог установки игры</param>
-        private void CheckSymbolsGame(string GamePath)
+        private void CheckSymbolsGame()
         {
-            if (!(FileManager.CheckNonASCII(GamePath)))
+            if (!(FileManager.CheckNonASCII(SelGame.FullGamePath)))
             {
                 PS_PathGame.ForeColor = Color.Red;
                 PS_PathGame.Image = Properties.Resources.upd_err;
-                CoreLib.WriteStringToLog(String.Format(AppStrings.AppRestrSymbLog, GamePath));
+                CoreLib.WriteStringToLog(String.Format(AppStrings.AppRestrSymbLog, SelGame.FullGamePath));
             }
             else
             {
@@ -1222,7 +1221,7 @@ namespace srcrepair
                 HandleControlsOnSelGame();
                 
                 // Проверим наличие запрещённых символов в пути...
-                CheckSymbolsGame(SelGame.FullGamePath);
+                CheckSymbolsGame();
 
                 // Распознаем файловую систему на диске с игрой...
                 DetectFS();
