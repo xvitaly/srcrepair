@@ -802,6 +802,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Проверяет правильность заполнения графических настроек для Type 1 игр.
+        /// </summary>
         private bool CheckType1Settings()
         {
             return (GT_ScreenType.SelectedIndex != -1) && (GT_ModelQuality.SelectedIndex != -1)
