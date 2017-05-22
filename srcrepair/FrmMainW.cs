@@ -816,6 +816,9 @@ namespace srcrepair
                 && (GT_HDR.SelectedIndex != -1);
         }
 
+        /// <summary>
+        /// Проверяет правильность заполнения графических настроек для Type 2 игр.
+        /// </summary>
         private bool CheckType2Settings()
         {
             return (GT_NCF_Quality.SelectedIndex != -1) && (GT_NCF_MemPool.SelectedIndex != -1)
