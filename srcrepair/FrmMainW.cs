@@ -827,8 +827,7 @@ namespace srcrepair
         /// <summary>
         /// Проверяет верность заполнения графических настроек
         /// </summary>
-        /// <param name="GameType">Тип игры: GCF или NCF</param>
-        private bool ValidateGameSettings(bool GameType)
+        private bool ValidateGameSettings()
         {
             bool Result = false;
             switch (SelGame.SourceType)
@@ -1384,7 +1383,7 @@ namespace srcrepair
         private void GT_SaveApply_Click(object sender, EventArgs e)
         {
             // Сохраняем изменения в графических настройках...
-            if (ValidateGameSettings(SelGame.IsUsingVideoFile))
+            if (ValidateGameSettings())
             {
                 // Запрашиваем подтверждение у пользователя...
                 if (MessageBox.Show(AppStrings.GT_SaveMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
