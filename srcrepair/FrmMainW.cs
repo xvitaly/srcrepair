@@ -802,25 +802,45 @@ namespace srcrepair
             }
         }
 
+        private bool CheckType1Settings()
+        {
+            return (GT_ScreenType.SelectedIndex != -1) && (GT_ModelQuality.SelectedIndex != -1)
+                && (GT_TextureQuality.SelectedIndex != -1) && (GT_ShaderQuality.SelectedIndex != -1)
+                && (GT_WaterQuality.SelectedIndex != -1) && (GT_ShadowQuality.SelectedIndex != -1)
+                && (GT_ColorCorrectionT.SelectedIndex != -1) && (GT_AntiAliasing.SelectedIndex != -1)
+                && (GT_Filtering.SelectedIndex != -1) && (GT_VSync.SelectedIndex != -1)
+                && (GT_MotionBlur.SelectedIndex != -1) && (GT_DxMode.SelectedIndex != -1)
+                && (GT_HDR.SelectedIndex != -1);
+        }
+
+        private bool CheckType2Settings()
+        {
+            return (GT_NCF_Quality.SelectedIndex != -1) && (GT_NCF_MemPool.SelectedIndex != -1)
+                && (GT_NCF_EffectD.SelectedIndex != -1) && (GT_NCF_ShaderE.SelectedIndex != -1)
+                && (GT_NCF_Multicore.SelectedIndex != -1) && (GT_NCF_VSync.SelectedIndex != -1)
+                && (GT_NCF_Filtering.SelectedIndex != -1) && (GT_NCF_AntiAlias.SelectedIndex != -1)
+                && (GT_NCF_DispMode.SelectedIndex != -1) && (GT_NCF_Ratio.SelectedIndex != -1)
+                && (GT_NCF_Brightness.SelectedIndex != -1) && (GT_NCF_Shadows.SelectedIndex != -1)
+                && (GT_NCF_MBlur.SelectedIndex != -1);
+        }
+
         /// <summary>
         /// Проверяет верность заполнения графических настроек
         /// </summary>
         /// <param name="GameType">Тип игры: GCF или NCF</param>
         private bool ValidateGameSettings(bool GameType)
         {
-            return !GameType ? ((GT_ScreenType.SelectedIndex != -1) && (GT_ModelQuality.SelectedIndex != -1)
-                && (GT_TextureQuality.SelectedIndex != -1) && (GT_ShaderQuality.SelectedIndex != -1)
-                && (GT_WaterQuality.SelectedIndex != -1) && (GT_ShadowQuality.SelectedIndex != -1)
-                && (GT_ColorCorrectionT.SelectedIndex != -1) && (GT_AntiAliasing.SelectedIndex != -1)
-                && (GT_Filtering.SelectedIndex != -1) && (GT_VSync.SelectedIndex != -1)
-                && (GT_MotionBlur.SelectedIndex != -1) && (GT_DxMode.SelectedIndex != -1)
-                && (GT_HDR.SelectedIndex != -1)) : ((GT_NCF_Quality.SelectedIndex != -1)
-                && (GT_NCF_MemPool.SelectedIndex != -1) && (GT_NCF_EffectD.SelectedIndex != -1)
-                && (GT_NCF_ShaderE.SelectedIndex != -1) && (GT_NCF_Multicore.SelectedIndex != -1)
-                && (GT_NCF_VSync.SelectedIndex != -1) && (GT_NCF_Filtering.SelectedIndex != -1)
-                && (GT_NCF_AntiAlias.SelectedIndex != -1) && (GT_NCF_DispMode.SelectedIndex != -1)
-                && (GT_NCF_Ratio.SelectedIndex != -1) && (GT_NCF_Brightness.SelectedIndex != -1)
-                && (GT_NCF_Shadows.SelectedIndex != -1) && (GT_NCF_MBlur.SelectedIndex != -1));
+            bool Result = false;
+            switch (SelGame.SourceType)
+            {
+                case "1":
+                    Result = CheckType1Settings();
+                    break;
+                case "2":
+                    Result = CheckType2Settings();
+                    break;
+            }
+            return Result;
         }
 
         /// <summary>
