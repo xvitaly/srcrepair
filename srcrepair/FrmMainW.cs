@@ -473,6 +473,9 @@ namespace srcrepair
             GT_HDR.SelectedIndex = -1;
         }
 
+        /// <summary>
+        /// Обнуляет контролы на странице графических настроек для Type 2 игры.
+        /// </summary>
         private void NullType2Settings()
         {
             GT_NCF_HorRes.Value = 640;
