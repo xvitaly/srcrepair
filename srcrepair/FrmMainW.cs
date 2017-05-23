@@ -498,7 +498,7 @@ namespace srcrepair
         /// <summary>
         /// Обнуляет контролы на странице графических настроек. Функция-заглушка.
         /// </summary>
-        private void NullGraphOptions()
+        private void NullGraphSettings()
         {
             switch (SelGame.SourceType)
             {
@@ -549,7 +549,7 @@ namespace srcrepair
         private void LoadGraphicSettings()
         {
             // Обнуляем графические настройки...
-            NullGraphOptions();
+            NullGraphSettings();
 
             // Загружаем настройки графики согласно указанного движка...
             switch (SelGame.SourceType)
