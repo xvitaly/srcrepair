@@ -451,6 +451,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Обнуляет контролы на странице графических настроек для Type 1 игры.
+        /// </summary>
         private void NullType1Settings()
         {
             GT_ResHor.Value = 640;
