@@ -451,10 +451,26 @@ namespace srcrepair
             }
         }
 
-        /// <summary>
-        /// Обнуляет контролы на странице графических настроек. Функция-заглушка.
-        /// </summary>
-        private void NullGraphOptions()
+        private void NullType1Settings()
+        {
+            GT_ResHor.Value = 640;
+            GT_ResVert.Value = 640;
+            GT_ScreenType.SelectedIndex = -1;
+            GT_ModelQuality.SelectedIndex = -1;
+            GT_TextureQuality.SelectedIndex = -1;
+            GT_ShaderQuality.SelectedIndex = -1;
+            GT_WaterQuality.SelectedIndex = -1;
+            GT_ShadowQuality.SelectedIndex = -1;
+            GT_ColorCorrectionT.SelectedIndex = -1;
+            GT_AntiAliasing.SelectedIndex = -1;
+            GT_Filtering.SelectedIndex = -1;
+            GT_VSync.SelectedIndex = -1;
+            GT_MotionBlur.SelectedIndex = -1;
+            GT_DxMode.SelectedIndex = -1;
+            GT_HDR.SelectedIndex = -1;
+        }
+
+        private void NullType2Settings()
         {
             GT_NCF_HorRes.Value = 640;
             GT_NCF_VertRes.Value = 480;
@@ -471,6 +487,22 @@ namespace srcrepair
             GT_NCF_EffectD.SelectedIndex = -1;
             GT_NCF_MemPool.SelectedIndex = -1;
             GT_NCF_Quality.SelectedIndex = -1;
+        }
+
+        /// <summary>
+        /// Обнуляет контролы на странице графических настроек. Функция-заглушка.
+        /// </summary>
+        private void NullGraphOptions()
+        {
+            switch (SelGame.SourceType)
+            {
+                case "1":
+                    NullType1Settings();
+                    break;
+                case "2":
+                    NullType2Settings();
+                    break;
+            }
         }
 
         /// <summary>
