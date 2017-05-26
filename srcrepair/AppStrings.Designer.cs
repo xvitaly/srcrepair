@@ -205,6 +205,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Incorrect Source version detected. This game is not fully supported. Please report this bug to developers!.
+        /// </summary>
+        internal static string AppIncorrectSrcVersion {
+            get {
+                return ResourceManager.GetString("AppIncorrectSrcVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to en.
         /// </summary>
         internal static string AppLangPrefix {

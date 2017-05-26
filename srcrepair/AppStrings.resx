@@ -666,4 +666,7 @@
   <data name="CS_FailedToOpenCfg" xml:space="preserve">
     <value>An error occured. Failed to open config selector! Try again later.</value>
   </data>
+  <data name="AppIncorrectSrcVersion" xml:space="preserve">
+    <value>Incorrect Source version detected. This game is not fully supported. Please report this bug to developers!</value>
+  </data>
 </root>
