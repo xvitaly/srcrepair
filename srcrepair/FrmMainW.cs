@@ -560,6 +560,8 @@ namespace srcrepair
                 case "2": /* Source 1, Type 2 (ex. NCF). */
                     ReadType2VideoSettings();
                     break;
+                default:
+                    throw new NotSupportedException();
             }
 
             // Переключаем графический твикер в режим GCF/NCF...
@@ -1284,7 +1286,7 @@ namespace srcrepair
                 DetectFS();
 
                 // Считаем настройки графики...
-                LoadGraphicSettings();
+                try { LoadGraphicSettings(); } catch (NotSupportedException) { MessageBox.Show(AppStrings.AppIncorrectSrcVersion, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
                 // Получим параметры запуска...
                 GT_LaunchOptions.Text = SelGame.LaunchOptions;
