@@ -69,6 +69,7 @@
             resources.ApplyResources(this.SD_Follow, "SD_Follow");
             this.SD_Follow.Name = "SD_Follow";
             this.SD_Follow.UseVisualStyleBackColor = true;
+            this.SD_Follow.Click += new System.EventHandler(this.SD_Follow_Click);
             // 
             // FrmStmSelector
             // 

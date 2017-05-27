@@ -82,5 +82,11 @@ namespace srcrepair
             // Закрываем форму...
             Close();
         }
+
+        private void SD_Follow_Click(object sender, EventArgs e)
+        {
+            // Открываем URL в браузере по умолчанию...
+            ProcessManager.OpenWebPage(String.Format(Properties.Resources.MM_CommunityURL, SteamConv.ConvSidv3Sid64(SD_IDSel.Text)));
+        }
     }
 }
