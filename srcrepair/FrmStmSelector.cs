@@ -83,6 +83,9 @@ namespace srcrepair
             Close();
         }
 
+        /// <summary>
+        /// Метод, срабатывающий при нажатии на кнопку "Показать профиль в браузере".
+        /// </summary>
         private void SD_Follow_Click(object sender, EventArgs e)
         {
             // Открываем URL в браузере по умолчанию...
