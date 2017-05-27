@@ -184,7 +184,7 @@
     <value>104, 23</value>
   </data>
   <data name="ST_OK.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="ST_OK.Text" xml:space="preserve">
     <value>OK</value>
@@ -211,7 +211,7 @@
     <value>104, 23</value>
   </data>
   <data name="ST_Cancel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="ST_Cancel.Text" xml:space="preserve">
     <value>Cancel</value>
@@ -238,7 +238,7 @@
     <value>23, 23</value>
   </data>
   <data name="SD_Follow.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;SD_Follow.Name" xml:space="preserve">
     <value>SD_Follow</value>
