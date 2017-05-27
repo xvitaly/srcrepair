@@ -33,6 +33,7 @@
             this.SD_IDSel = new System.Windows.Forms.ComboBox();
             this.ST_OK = new System.Windows.Forms.Button();
             this.ST_Cancel = new System.Windows.Forms.Button();
+            this.SD_Follow = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SD_WMsg
@@ -62,12 +63,20 @@
             this.ST_Cancel.UseVisualStyleBackColor = true;
             this.ST_Cancel.Click += new System.EventHandler(this.ST_Cancel_Click);
             // 
+            // SD_Follow
+            // 
+            this.SD_Follow.Image = global::srcrepair.Properties.Resources.arrow;
+            resources.ApplyResources(this.SD_Follow, "SD_Follow");
+            this.SD_Follow.Name = "SD_Follow";
+            this.SD_Follow.UseVisualStyleBackColor = true;
+            // 
             // FrmStmSelector
             // 
             this.AcceptButton = this.ST_OK;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.ST_Cancel;
+            this.Controls.Add(this.SD_Follow);
             this.Controls.Add(this.ST_Cancel);
             this.Controls.Add(this.ST_OK);
             this.Controls.Add(this.SD_IDSel);
@@ -88,5 +97,6 @@
         private System.Windows.Forms.ComboBox SD_IDSel;
         private System.Windows.Forms.Button ST_OK;
         private System.Windows.Forms.Button ST_Cancel;
+        private System.Windows.Forms.Button SD_Follow;
     }
 }
