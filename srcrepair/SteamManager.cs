@@ -211,10 +211,7 @@ namespace srcrepair
         public static List<String> GetSteamMountPoints(string SteamPath)
         {
             // Создаём массив, в который будем помещать найденные пути...
-            List<String> Result = new List<String>();
-
-            // Добавляем каталог установки Steam...
-            Result.Add(SteamPath);
+            List<String> Result = new List<String> { SteamPath };
 
             // Начинаем чтение главного файла конфигурации...
             try
