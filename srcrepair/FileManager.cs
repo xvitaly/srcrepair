@@ -313,8 +313,7 @@ namespace srcrepair
         public static void CreateConfigBackUp(string Config, string BackUpDir, string Prefix)
         {
             // Создаём список...
-            List<String> Configs = new List<String>();
-            Configs.Add(Config);
+            List<String> Configs = new List<String> { Config };
 
             // Выполняем...
             CreateConfigBackUp(Configs, BackUpDir, Prefix);
