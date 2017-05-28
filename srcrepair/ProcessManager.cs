@@ -76,13 +76,15 @@ namespace srcrepair
         {
             // Создаём объекты...
             Process p = new Process();
-            ProcessStartInfo ps = new ProcessStartInfo();
 
             // Задаём свойства...
-            ps.FileName = FileName;
-            ps.Verb = "runas";
-            ps.WindowStyle = ProcessWindowStyle.Normal;
-            ps.UseShellExecute = true;
+            ProcessStartInfo ps = new ProcessStartInfo()
+            {
+                FileName = FileName,
+                Verb = "runas",
+                WindowStyle = ProcessWindowStyle.Normal,
+                UseShellExecute = true
+            };
             p.StartInfo = ps;
 
             // Запускаем процесс...
@@ -126,10 +128,12 @@ namespace srcrepair
         public static void StartProcessAndWait(string SAppName, string SParameters)
         {
             // Создаём объект с нужными параметрами...
-            ProcessStartInfo ST = new ProcessStartInfo();
-            ST.FileName = SAppName;
-            ST.Arguments = SParameters;
-            ST.WindowStyle = ProcessWindowStyle.Hidden;
+            ProcessStartInfo ST = new ProcessStartInfo()
+            {
+                FileName = SAppName,
+                Arguments = SParameters,
+                WindowStyle = ProcessWindowStyle.Hidden
+            };
 
             // Запускаем процесс...
             Process NewProcess = Process.Start(ST);
