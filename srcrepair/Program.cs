@@ -41,12 +41,6 @@ namespace srcrepair
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);
 
-                    // Получаем переданные параметры командной строки...
-                    string[] CMDLineA = Environment.GetCommandLineArgs();
-
-                    // Обрабатываем полученные параметры командной строки...
-                    if (CMDLineA.Length > 2) { if (CMDLineA[1] == "/lang") { try { Thread.CurrentThread.CurrentUICulture = new CultureInfo(CMDLineA[2]); } catch { MessageBox.Show(Properties.Resources.AppUnsupportedLanguage, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } } }
-
                     // Запускаем главную форму...
                     Application.Run(new FrmMainW());
                 }
