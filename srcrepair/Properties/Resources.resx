@@ -247,9 +247,6 @@
   <data name="tfru" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tf-ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AppUnsupportedLanguage" xml:space="preserve">
-    <value>The specified locale is not supported at this time, so will use the default language.</value>
-  </data>
   <data name="TextEditor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TextEditor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
