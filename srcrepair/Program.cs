@@ -17,9 +17,8 @@
  * о лицензии - в GPL.txt.
 */
 using System;
-using System.Windows.Forms;
 using System.Threading;
-using System.Globalization;
+using System.Windows.Forms;
 
 namespace srcrepair
 {
