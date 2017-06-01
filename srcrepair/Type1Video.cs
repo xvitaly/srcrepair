@@ -1,5 +1,5 @@
 ﻿/*
- * Класс, предназначенный для работы с графическими настройками GCF игр.
+ * Класс, предназначенный для работы с графическими настройками Type 1 игр.
  * 
  * Copyright 2011 - 2017 EasyCoding Team (ECTeam).
  * Copyright 2005 - 2017 EasyCoding Team.
@@ -23,7 +23,7 @@ using Microsoft.Win32;
 namespace srcrepair
 {
     /// <summary>
-    /// Управляет графическими настройками GCF приложений.
+    /// Управляет графическими настройками Type 1 приложений.
     /// </summary>
     public class Type1Video : VideoSettings
     {
