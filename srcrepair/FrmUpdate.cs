@@ -205,7 +205,7 @@ namespace srcrepair
             return Result;
         }
 
-        private void frmUpdate_Load(object sender, EventArgs e)
+        private void FrmUpdate_Load(object sender, EventArgs e)
         {
             // Заполняем...
             Text = String.Format(Text, Properties.Resources.AppName);
@@ -265,7 +265,7 @@ namespace srcrepair
             }
         }
 
-        private void frmUpdate_FormClosing(object sender, FormClosingEventArgs e)
+        private void FrmUpdate_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = (e.CloseReason == CloseReason.UserClosing) && WrkChkApp.IsBusy;
         }
