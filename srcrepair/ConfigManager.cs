@@ -10,8 +10,8 @@
  * Запрещается использовать этот файл при использовании любой
  * лицензии, отличной от GNU GPL версии 3 и с ней совместимой.
  * 
- * Официальный блог EasyCoding Team: http://www.easycoding.org/
- * Официальная страница проекта: http://www.easycoding.org/projects/srcrepair
+ * Официальный блог EasyCoding Team: https://www.easycoding.org/
+ * Официальная страница проекта: https://www.easycoding.org/projects/srcrepair
  * 
  * Более подробная инфорация о программе в readme.txt,
  * о лицензии - в GPL.txt.
@@ -86,8 +86,7 @@ namespace srcrepair
         /// <returns>Возвращает массив с сгенерированными путями до FPS-конфигов</returns>
         public static List<String> ListFPSConfigs(string GamePath, bool UserDir)
         {
-            List<String> Result = new List<String>();
-            Result.Add(Path.Combine(GamePath, "cfg", "autoexec.cfg"));
+            List<String> Result = new List<String> { Path.Combine(GamePath, "cfg", "autoexec.cfg") };
             if (UserDir) { Result.Add(Path.Combine(GamePath, "custom", "autoexec.cfg")); }
             return Result;
         }
