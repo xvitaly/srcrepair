@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace srcrepair
 {
-    class Type3Video
+    public class Type3Video : VideoSettings
     {
     }
 }
