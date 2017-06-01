@@ -59,7 +59,7 @@ namespace srcrepair
         /// <summary>
         /// Метод, срабатывающий при возникновении события "загрузка формы".
         /// </summary>
-        private void frmDnWrk_Load(object sender, EventArgs e)
+        private void FrmDnWrk_Load(object sender, EventArgs e)
         {
             // Начинаем процесс загрузки в отдельном потоке...
             DownloaderStart(RemoteURI, LocalFile);
@@ -124,7 +124,7 @@ namespace srcrepair
         /// <summary>
         /// Метод, срабатывающий при попытке закрытия формы.
         /// </summary>
-        private void frmDnWrk_FormClosing(object sender, FormClosingEventArgs e)
+        private void FrmDnWrk_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = IsRunning;
         }

@@ -56,8 +56,8 @@
             this.MinimizeBox = false;
             this.Name = "FrmDnWrk";
             this.ShowInTaskbar = false;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDnWrk_FormClosing);
-            this.Load += new System.EventHandler(this.frmDnWrk_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDnWrk_FormClosing);
+            this.Load += new System.EventHandler(this.FrmDnWrk_Load);
             this.ResumeLayout(false);
 
         }
