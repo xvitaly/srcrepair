@@ -1,5 +1,5 @@
 ﻿/*
- * Служебный класс работы с настройками графики NCF игр.
+ * Служебный класс работы с настройками графики Type 2 игр.
  * 
  * Copyright 2011 - 2017 EasyCoding Team (ECTeam).
  * Copyright 2005 - 2017 EasyCoding Team.
@@ -20,7 +20,7 @@
 namespace srcrepair
 {
     /// <summary>
-    /// Служебный класс работы с настройками графики NCF игр.
+    /// Служебный класс работы с настройками графики Type 2 игр.
     /// </summary>
     public class Type2Settings
     {

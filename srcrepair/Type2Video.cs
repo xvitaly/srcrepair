@@ -1,5 +1,5 @@
 ﻿/*
- * Класс, предназначенный для работы с графическими настройками NCF игр.
+ * Класс, предназначенный для работы с графическими настройками Type 2 игр.
  * 
  * Copyright 2011 - 2017 EasyCoding Team (ECTeam).
  * Copyright 2005 - 2017 EasyCoding Team.
@@ -25,7 +25,7 @@ using System.Linq;
 namespace srcrepair
 {
     /// <summary>
-    /// Управляет графическими настройками NCF приложений.
+    /// Управляет графическими настройками Type 2 приложений.
     /// </summary>
     public class Type2Video : VideoSettings
     {
