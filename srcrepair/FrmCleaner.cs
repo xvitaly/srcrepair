@@ -126,12 +126,16 @@ namespace srcrepair
                         // Начинаем обход массива...
                         foreach (FileInfo DItem in DirList)
                         {
-                            // Обрабатываем найденное...
-                            ListViewItem LvItem = new ListViewItem(DItem.Name); // Добавляем...
-                            LvItem.Checked = !NoAutoCheck; // Помечаем флажком...
-                            LvItem.ToolTipText = Path.Combine(CleanDir, DItem.Name); // Указываем полный путь во всплывающую подсказку...
-                            LvItem.SubItems.Add(CoreLib.SclBytes(DItem.Length)); // Вычисляем размер...
-                            LvItem.SubItems.Add(DItem.LastWriteTime.ToString()); // Указываем дату изменения...
+                            // Обрабатываем найденное. Добавляем...
+                            ListViewItem LvItem = new ListViewItem(DItem.Name)
+                            {
+                                Checked = !NoAutoCheck, // Помечаем флажком...
+                                ToolTipText = Path.Combine(CleanDir, DItem.Name) // Указываем полный путь во всплывающую подсказку...
+                            };
+
+                            // Вычисляем и указываем размер и дату изменения...
+                            LvItem.SubItems.Add(CoreLib.SclBytes(DItem.Length));
+                            LvItem.SubItems.Add(DItem.LastWriteTime.ToString());
                             
                             if (CM_FTable.InvokeRequired)
                             {
@@ -180,7 +184,7 @@ namespace srcrepair
         /// <summary>
         /// Метод, срабатывающий при возникновении события "загрузка формы".
         /// </summary>
-        private void frmCleaner_Load(object sender, EventArgs e)
+        private void FrmCleaner_Load(object sender, EventArgs e)
         {
             // Изменяем заголовок окна...
             Text = String.Format(Text, CleanInfo);
@@ -437,7 +441,7 @@ namespace srcrepair
         /// <summary>
         /// Метод, срабатывающий при попытке закрытия формы.
         /// </summary>
-        private void frmCleaner_FormClosing(object sender, FormClosingEventArgs e)
+        private void FrmCleaner_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = ((e.CloseReason == CloseReason.UserClosing) && (ClnWrk.IsBusy || GttWrk.IsBusy));
         }

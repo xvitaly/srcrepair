@@ -135,8 +135,8 @@
             this.MinimizeBox = false;
             this.Name = "FrmCleaner";
             this.ShowInTaskbar = false;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCleaner_FormClosing);
-            this.Load += new System.EventHandler(this.frmCleaner_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCleaner_FormClosing);
+            this.Load += new System.EventHandler(this.FrmCleaner_Load);
             this.ResumeLayout(false);
 
         }
