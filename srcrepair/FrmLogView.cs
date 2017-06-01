@@ -64,7 +64,7 @@ namespace srcrepair
         /// <summary>
         /// Метод, срабатывающий при возникновении события "загрузка формы".
         /// </summary>
-        private void frmLogView_Load(object sender, EventArgs e)
+        private void FrmLogView_Load(object sender, EventArgs e)
         {
             // Считаем содержимое выбранного файла...
             LoadLog(LogFileName);
