@@ -39,7 +39,7 @@ namespace srcrepair
         /// <summary>
         /// Метод, срабатывающий при возникновении события "загрузка формы".
         /// </summary>
-        private void frmOptions_Load(object sender, EventArgs e)
+        private void FrmOptions_Load(object sender, EventArgs e)
         {
             // Считаем текущие настройки...
             MO_ConfirmExit.Checked = Properties.Settings.Default.ConfirmExit;

@@ -222,7 +222,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmOptions";
             this.ShowInTaskbar = false;
-            this.Load += new System.EventHandler(this.frmOptions_Load);
+            this.Load += new System.EventHandler(this.FrmOptions_Load);
             this.MO_TC.ResumeLayout(false);
             this.MO_TP1.ResumeLayout(false);
             this.MO_TP2.ResumeLayout(false);
