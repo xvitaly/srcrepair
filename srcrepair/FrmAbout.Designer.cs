@@ -84,7 +84,7 @@
             resources.ApplyResources(this.okButton, "okButton");
             this.okButton.Name = "okButton";
             this.okButton.UseVisualStyleBackColor = true;
-            this.okButton.Click += new System.EventHandler(this.okButton_Click);
+            this.okButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
             // labelContent
             // 
@@ -113,7 +113,7 @@
             this.Name = "FrmAbout";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Load += new System.EventHandler(this.frmAbout_Load);
+            this.Load += new System.EventHandler(this.FrmAbout_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconApp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
