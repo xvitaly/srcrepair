@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace srcrepair
 {
-    class Type3Settings
+    public class Type3Settings
     {
     }
 }
