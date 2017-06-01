@@ -59,14 +59,14 @@
             resources.ApplyResources(this.btnBrowse, "btnBrowse");
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.UseVisualStyleBackColor = true;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            this.btnBrowse.Click += new System.EventHandler(this.BtnBrowse_Click);
             // 
             // btnInstall
             // 
             resources.ApplyResources(this.btnInstall, "btnInstall");
             this.btnInstall.Name = "btnInstall";
             this.btnInstall.UseVisualStyleBackColor = true;
-            this.btnInstall.Click += new System.EventHandler(this.btnInstall_Click);
+            this.btnInstall.Click += new System.EventHandler(this.BtnInstall_Click);
             // 
             // openDialog
             // 
