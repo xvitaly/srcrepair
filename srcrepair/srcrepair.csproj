@@ -203,6 +203,8 @@
     <Compile Include="SteamConv.cs" />
     <Compile Include="SteamManager.cs" />
     <Compile Include="ProcessManager.cs" />
+    <Compile Include="Type3Settings.cs" />
+    <Compile Include="Type3Video.cs" />
     <Compile Include="UpdateManager.cs" />
     <Compile Include="VideoSettings.cs" />
     <EmbeddedResource Include="AppStrings.resx">
