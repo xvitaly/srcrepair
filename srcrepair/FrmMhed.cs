@@ -112,8 +112,7 @@ namespace srcrepair
                 {
                     if ((Row.Cells[0].Value != null) && (Row.Cells[1].Value != null))
                     {
-                        IPAddress IPAddr;
-                        if (IPAddress.TryParse(Row.Cells[0].Value.ToString(), out IPAddr))
+                        if (IPAddress.TryParse(Row.Cells[0].Value.ToString(), out IPAddress IPAddr))
                         {
                             CFile.WriteLine("{0} {1}", IPAddr, Row.Cells[1].Value);
                         }
@@ -133,7 +132,7 @@ namespace srcrepair
         /// <summary>
         /// Метод, срабатывающий при возникновении события "загрузка формы".
         /// </summary>
-        private void frmHEd_Load(object sender, EventArgs e)
+        private void FrmHEd_Load(object sender, EventArgs e)
         {
             // Проверим наличие прав администратора. Если они отсутствуют - отключим функции сохранения...
             if (!(ProcessManager.IsCurrentUserAdmin())) { HEd_M_Save.Enabled = false; HEd_T_Save.Enabled = false; HEd_M_RestDef.Enabled = false; HEd_Table.ReadOnly = true; HEd_T_Cut.Enabled = false; HEd_T_Paste.Enabled = false; HEd_T_RemRw.Enabled = false; }
