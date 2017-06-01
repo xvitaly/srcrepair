@@ -72,7 +72,7 @@ namespace srcrepair
         /// <summary>
         /// Метод, срабатывающий при возникновении события "загрузка формы".
         /// </summary>
-        private void frmRepBuilder_Load(object sender, EventArgs e)
+        private void FrmRepBuilder_Load(object sender, EventArgs e)
         {
             // Событие создания формы...
         }
@@ -237,7 +237,7 @@ namespace srcrepair
         /// <summary>
         /// Метод, срабатывающий при попытке закрытия формы.
         /// </summary>
-        private void frmRepBuilder_FormClosing(object sender, FormClosingEventArgs e)
+        private void FrmRepBuilder_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Блокируем возможность закрытия формы во время работы модуля...
             e.Cancel = BwGen.IsBusy;

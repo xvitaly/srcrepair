@@ -63,8 +63,8 @@
             this.MinimizeBox = false;
             this.Name = "FrmRepBuilder";
             this.ShowInTaskbar = false;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmRepBuilder_FormClosing);
-            this.Load += new System.EventHandler(this.frmRepBuilder_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmRepBuilder_FormClosing);
+            this.Load += new System.EventHandler(this.FrmRepBuilder_Load);
             this.ResumeLayout(false);
 
         }
