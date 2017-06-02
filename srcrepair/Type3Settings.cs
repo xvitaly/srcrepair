@@ -249,7 +249,8 @@ namespace srcrepair
         /// </summary>
         public Type3Settings()
         {
-            //
+            // Заполняем свойства класса...
+            SetSettingsV3();
         }
     }
 }
