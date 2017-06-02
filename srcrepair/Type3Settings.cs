@@ -197,6 +197,46 @@ namespace srcrepair
         public string UseAdvanced { get; private set; }
 
         /// <summary>
+        /// Хранит имя настройки рендеринга ambient cloth.
+        /// </summary>
+        public string AmbientCloth { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки качества детализации травы.
+        /// </summary>
+        public string GrassQuality { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки качества детализации эффекта "ветер".
+        /// </summary>
+        public string WindEffects { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки качества эффектов Parallax Mapping.
+        /// </summary>
+        public string ParallaxMapping { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки particle fallback.
+        /// </summary>
+        public string ParticleFallback { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки множителя particle fallback.
+        /// </summary>
+        public string ParticleFallbackMultiplier { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки сброса графических настроек.
+        /// </summary>
+        public string ResetToDefaults { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки соотношения сторон.
+        /// </summary>
+        public string ScreenRatio { get; private set; }
+
+        /// <summary>
         /// Базовый конструктор класса.
         /// </summary>
         public Type3Settings()
