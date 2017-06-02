@@ -77,13 +77,13 @@ namespace srcrepair
         /// <summary>
         /// Хранит имя настройки параметров полноэкранного режима.
         /// </summary>
-        public string DisplayMode { get; private set; }
+        public string FullScreenMode { get; private set; }
 
         /// <summary>
         /// Хранит имя настройки параметров полноэкранного режима в
         /// кооперативном режиме.
         /// </summary>
-        public string DisplayModeCoop { get; private set; }
+        public string FullScreenModeCoop { get; private set; }
 
         /// <summary>
         /// Хранит имя настройки других параметров графического режима (без рамки).
@@ -241,7 +241,48 @@ namespace srcrepair
         /// </summary>
         private void SetSettingsV3()
         {
-
+            VendorID = "VendorID";
+            DeviceID = "DeviceID";
+            EffectDetails = "setting.cpu_level";
+            MemoryPoolType = "setting.mem_level";
+            TextureModelQuality = "setting.gpu_mem_level";
+            ScreenWidth = "setting.defaultres";
+            ScreenHeight = "setting.defaultresheight";
+            ShaderEffects = "setting.gpu_level";
+            SchemaVersion = "setting.version";
+            KnownDevice = "setting.knowndevice";
+            FullScreenMode = "setting.fullscreen";
+            FullScreenModeCoop = "setting.coop_fullscreen";
+            DisplayBorderless = "setting.nowindowborder";
+            VSync = "setting.mat_vsync";
+            DisplayModeFocusLoss = "setting.fullscreen_min_on_focus_loss";
+            CheapWaterReflections = "setting.dota_cheap_water";
+            FogHeight = "setting.r_deferred_height_fog";
+            SimpleLight = "setting.r_deferred_simple_light";
+            SSAOLights = "setting.r_ssao";
+            GlobalShadowMode = "setting.cl_globallight_shadow_mode";
+            AntiAliasing = "setting.r_dota_fxaa";
+            AntiAliasQuality = "setting.r_deferred_additive_pass";
+            PortraitAnimation = "setting.dota_portrait_animate";
+            SpecularShading = "setting.r_deferred_specular";
+            SpecularBloomShading = "setting.r_deferred_specular_bloom";
+            AmbientCreatures = "setting.dota_ambient_creatures";
+            TextureStreaming = "setting.r_texture_stream_mip_bias";
+            NormalMaps = "setting.r_dota_normal_maps";
+            DashboardQuality = "setting.r_dashboard_render_quality";
+            ShaderQuality = "setting.shaderquality";
+            RecommendedHeight = "setting.recommendedheight";
+            ViewportScale = "setting.mat_viewportscale";
+            Brightness = "setting.r_fullscreen_gamma";
+            UseAdvanced = "setting.useadvanced";
+            AmbientCloth = "setting.dota_ambient_cloth";
+            GrassQuality = "setting.r_grass_quality";
+            WindEffects = "setting.r_dota_allow_wind_on_trees";
+            ParallaxMapping = "setting.r_dota_allow_parallax_mapping";
+            ParticleFallback = "setting.cl_particle_fallback_base";
+            ParticleFallbackMultiplier = "setting.cl_particle_fallback_multiplier";
+            ResetToDefaults = "setting.resettodefaults";
+            ScreenRatio = "setting.aspectratiomode";
         }
 
         /// <summary>
