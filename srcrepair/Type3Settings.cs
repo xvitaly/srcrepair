@@ -29,5 +29,12 @@ namespace srcrepair
     /// </summary>
     public class Type3Settings
     {
+        /// <summary>
+        /// Базовый конструктор класса.
+        /// </summary>
+        public Type3Settings()
+        {
+            //
+        }
     }
 }
