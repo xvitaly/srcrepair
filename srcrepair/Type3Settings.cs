@@ -237,6 +237,14 @@ namespace srcrepair
         public string ScreenRatio { get; private set; }
 
         /// <summary>
+        /// Заполняет свойства класса настройками для базы версии 3 (Source 2, DotA 2: Reborn).
+        /// </summary>
+        private void SetSettingsV3()
+        {
+
+        }
+
+        /// <summary>
         /// Базовый конструктор класса.
         /// </summary>
         public Type3Settings()
