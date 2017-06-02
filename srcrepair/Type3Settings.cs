@@ -75,6 +75,48 @@ namespace srcrepair
         public string KnownDevice { get; private set; }
 
         /// <summary>
+        /// Хранит имя настройки параметров полноэкранного режима.
+        /// </summary>
+        public string DisplayMode { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки параметров полноэкранного режима в
+        /// кооперативном режиме.
+        /// </summary>
+        public string DisplayModeCoop { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки других параметров графического режима (без рамки).
+        /// </summary>
+        public string DisplayBorderless { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки вертикальной синхронизации.
+        /// </summary>
+        public string VSync { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки параметров полноэкранного режима при потере фокуса.
+        /// </summary>
+        public string DisplayModeFocusLoss { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки параметров рендеринга водных поверхностей.
+        /// </summary>
+        public string CheapWaterReflections { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки высоты и качества эффектов тумана.
+        /// </summary>
+        public string FogHeight { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки, позволяющей использовать только простые
+        /// источники освещения.
+        /// </summary>
+        public string SimpleLight { get; private set; }
+
+        /// <summary>
         /// Базовый конструктор класса.
         /// </summary>
         public Type3Settings()
