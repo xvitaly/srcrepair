@@ -24,6 +24,9 @@ using System.Threading.Tasks;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Служебный класс работы с настройками графики Type 3 игр.
+    /// </summary>
     public class Type3Settings
     {
     }
