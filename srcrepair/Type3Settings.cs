@@ -25,6 +25,56 @@ namespace srcrepair
     public class Type3Settings
     {
         /// <summary>
+        /// Хранит имя настройки ID производителя видеокарты.
+        /// </summary>
+        public string VendorID { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки ID видеокарты.
+        /// </summary>
+        public string DeviceID { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки качества обычных эффектов.
+        /// </summary>
+        public string EffectDetails { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки выделенного игре пула памяти.
+        /// </summary>
+        public string MemoryPoolType { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки качества детализации моделей и текстур.
+        /// </summary>
+        public string TextureModelQuality { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки разрешения по горизонтали.
+        /// </summary>
+        public string ScreenWidth { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки разрешения по вертикали.
+        /// </summary>
+        public string ScreenHeight { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки качества шейдерных эффектов.
+        /// </summary>
+        public string ShaderEffects { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки версии конфига настроек графики.
+        /// </summary>
+        public string SchemaVersion { get; private set; }
+
+        /// <summary>
+        /// Хранит имя настройки известности устройства.
+        /// </summary>
+        public string KnownDevice { get; private set; }
+
+        /// <summary>
         /// Базовый конструктор класса.
         /// </summary>
         public Type3Settings()
