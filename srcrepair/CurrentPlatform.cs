@@ -21,7 +21,7 @@ using System.IO;
 
 namespace srcrepair
 {
-    public class CurrentPlatform
+    public sealed class CurrentPlatform
     {
         public enum OSType
         {
