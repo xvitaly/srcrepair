@@ -21,8 +21,14 @@ using System.IO;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс для определения запущенной платформы и работы с ней.
+    /// </summary>
     public sealed class CurrentPlatform
     {
+        /// <summary>
+        /// Содержит коды известных платформ.
+        /// </summary>
         public enum OSType
         {
             Windows = 0,
@@ -30,6 +36,9 @@ namespace srcrepair
             Linux = 2
         }
 
+        /// <summary>
+        /// Возвращает код текущей платформы, на которой запущено приложение.
+        /// </summary>
         public static OSType GetRunningOS()
         {
             switch (Environment.OSVersion.Platform)
