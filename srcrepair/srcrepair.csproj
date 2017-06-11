@@ -76,6 +76,7 @@
     <Compile Include="ConfigManager.cs" />
     <Compile Include="CoreLib.cs" />
     <Compile Include="CurrentApp.cs" />
+    <Compile Include="CurrentPlatform.cs" />
     <Compile Include="CVList.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
