@@ -50,5 +50,10 @@ namespace srcrepair
                 default: return OSType.Windows;
             }
         }
+
+        public static string GetOSFriendlyName(OSType OS)
+        {
+            return OS.ToString();
+        }
     }
 }
