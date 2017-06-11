@@ -39,6 +39,7 @@ namespace srcrepair
         /// <summary>
         /// Возвращает код текущей платформы, на которой запущено приложение.
         /// </summary>
+        /// <returns>Код текущей платформы.</returns>
         public static OSType GetRunningOS()
         {
             switch (Environment.OSVersion.Platform)
@@ -51,6 +52,10 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Возвращает название текущей платформы, на которой запущено приложение.
+        /// </summary>
+        /// <returns>Название текущей платформы.</returns>
         public static string GetOSFriendlyName(OSType OS)
         {
             return OS.ToString();
