@@ -9,18 +9,22 @@ namespace srcrepair
 {
     public class CurrentPlatform
     {
-        public static int RunningOS
+        public enum OSType
         {
-            get
+            Windows = 0,
+            MacOSX = 1,
+            Linux = 2
+        }
+
+        public static OSType GetRunningOS()
+        {
+            switch (Environment.OSVersion.Platform)
             {
-                switch (Environment.OSVersion.Platform)
-                {
-                    case PlatformID.Unix:
-                        return (Directory.Exists("/Applications") & Directory.Exists("/System") & Directory.Exists("/Users") & Directory.Exists("/Volumes")) ? 1 : 2;
-                    case PlatformID.MacOSX:
-                        return 1;
-                    default: return 0;
-                }
+                case PlatformID.Unix:
+                    return (Directory.Exists("/Applications") & Directory.Exists("/System") & Directory.Exists("/Users") & Directory.Exists("/Volumes")) ? OSType.MacOSX : OSType.Linux;
+                case PlatformID.MacOSX:
+                    return OSType.MacOSX;
+                default: return OSType.Windows;
             }
         }
     }
