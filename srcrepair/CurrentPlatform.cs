@@ -24,7 +24,7 @@ namespace srcrepair
     /// <summary>
     /// Класс для определения запущенной платформы и работы с ней.
     /// </summary>
-    public sealed class CurrentPlatform
+    public static class CurrentPlatform
     {
         /// <summary>
         /// Содержит коды известных платформ.
