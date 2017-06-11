@@ -44,7 +44,7 @@ namespace srcrepair
             switch (Environment.OSVersion.Platform)
             {
                 case PlatformID.Unix:
-                    return (Directory.Exists("/Applications") & Directory.Exists("/System") & Directory.Exists("/Users") & Directory.Exists("/Volumes")) ? OSType.MacOSX : OSType.Linux;
+                    return Directory.Exists("/Applications") ? OSType.MacOSX : OSType.Linux;
                 case PlatformID.MacOSX:
                     return OSType.MacOSX;
                 default: return OSType.Windows;
