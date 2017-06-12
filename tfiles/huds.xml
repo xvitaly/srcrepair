@@ -147,11 +147,11 @@
     <Name>rayshud</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>http://sourceforge.net/projects/srcrepair/files/huds/rayshud/rayshud_02007dee.zip</URI>
+    <URI>http://sourceforge.net/projects/srcrepair/files/huds/rayshud/rayshud_d407c2db.zip</URI>
     <UpURI>https://github.com/raysfire/rayshud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/rayshud.jpg</Preview>
     <RepoPath>https://github.com/raysfire/rayshud</RepoPath>
-    <LastUpdate>1489634248</LastUpdate>
+    <LastUpdate>1496865032</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=254</Site>
     <ArchiveDir>rayshud-master</ArchiveDir>
     <InstallDir>rayshud</InstallDir>
