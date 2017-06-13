@@ -36,6 +36,9 @@ namespace srcrepair
             Linux = 2
         }
 
+        /// <summary>
+        /// Хранит и возвращает код текущей платформы, на которой запущено приложение.
+        /// </summary>
         public OSType OS { get; private set; }
 
         /// <summary>
