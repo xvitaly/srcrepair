@@ -71,6 +71,7 @@ namespace srcrepair
         /// </summary>
         public CurrentPlatform()
         {
+            // Получаем ID платформы...
             OS = GetRunningOS();
         }
     }
