@@ -24,7 +24,7 @@ namespace srcrepair
     /// <summary>
     /// Класс для определения запущенной платформы и работы с ней.
     /// </summary>
-    public static class CurrentPlatform
+    public sealed class CurrentPlatform
     {
         /// <summary>
         /// Содержит коды известных платформ.
@@ -36,11 +36,13 @@ namespace srcrepair
             Linux = 2
         }
 
+        public OSType OS { get; private set; }
+
         /// <summary>
         /// Возвращает код текущей платформы, на которой запущено приложение.
         /// </summary>
         /// <returns>Код текущей платформы.</returns>
-        public static OSType GetRunningOS()
+        private OSType GetRunningOS()
         {
             switch (Environment.OSVersion.Platform)
             {
@@ -56,9 +58,14 @@ namespace srcrepair
         /// Возвращает название текущей платформы, на которой запущено приложение.
         /// </summary>
         /// <returns>Название текущей платформы.</returns>
-        public static string GetOSFriendlyName(OSType OS)
+        public string GetOSFriendlyName()
         {
             return OS.ToString();
+        }
+
+        public CurrentPlatform()
+        {
+            OS = GetRunningOS();
         }
     }
 }
