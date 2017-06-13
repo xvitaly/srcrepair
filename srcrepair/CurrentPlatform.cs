@@ -63,6 +63,9 @@ namespace srcrepair
             return OS.ToString();
         }
 
+        /// <summary>
+        /// Базовый конструктор класса CurrentPlatform.
+        /// </summary>
         public CurrentPlatform()
         {
             OS = GetRunningOS();
