@@ -42,6 +42,12 @@ namespace srcrepair
         public OSType OS { get; private set; }
 
         /// <summary>
+        /// Возвращает название текущей платформы, на которой запущено приложение.
+        /// </summary>
+        /// <returns>Название текущей платформы.</returns>
+        public string OSFriendlyName => OS.ToString();
+        
+        /// <summary>
         /// Возвращает код текущей платформы, на которой запущено приложение.
         /// </summary>
         /// <returns>Код текущей платформы.</returns>
@@ -55,15 +61,6 @@ namespace srcrepair
                     return OSType.MacOSX;
                 default: return OSType.Windows;
             }
-        }
-
-        /// <summary>
-        /// Возвращает название текущей платформы, на которой запущено приложение.
-        /// </summary>
-        /// <returns>Название текущей платформы.</returns>
-        public string GetOSFriendlyName()
-        {
-            return OS.ToString();
         }
 
         /// <summary>
