@@ -51,6 +51,8 @@ namespace srcrepair
         /// </summary>
         public string AppUserDir { get; private set; }
 
+        public CurrentPlatform Platform { get; private set; }
+
         /// <summary>
         /// Возвращает архитектуру операционной системы.
         /// </summary>
@@ -98,6 +100,9 @@ namespace srcrepair
         /// </summary>
         public CurrentApp()
         {
+            // Получим информацию о платформе, на которой запущено приложение...
+            Platform = new CurrentPlatform();
+
             // Получаем путь к каталогу приложения...
             FullAppPath = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
 
