@@ -1154,7 +1154,7 @@ namespace srcrepair
             Properties.Settings.Default.LastSteamPath = App.FullSteamPath;
 
             // Вставляем информацию о версии в заголовок формы...
-            Text = String.Format(Text, Properties.Resources.AppName, Properties.Resources.PlatformFriendlyName, CurrentApp.AppVersion);
+            Text = String.Format(Text, Properties.Resources.AppName, App.Platform.OSFriendlyName, CurrentApp.AppVersion);
 
             // Укажем статус Безопасной очистки...
             CheckSafeClnStatus();
