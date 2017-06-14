@@ -51,6 +51,9 @@ namespace srcrepair
         /// </summary>
         public string AppUserDir { get; private set; }
 
+        /// <summary>
+        /// Хранит и возвращает код текущей платформы, на которой запущено приложение.
+        /// </summary>
         public CurrentPlatform Platform { get; private set; }
 
         /// <summary>
