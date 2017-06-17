@@ -39,6 +39,11 @@ namespace srcrepair
         private string BackUpDir { get; set; }
 
         /// <summary>
+        /// Хранит платформо-зависимое название каталога SteamApps.
+        /// </summary>
+        private string SteamAppsDirName { get; set; }
+
+        /// <summary>
         /// Конструктор класса формы модуля очистки кэшей Steam.
         /// </summary>
         /// <param name="SP">Каталог установки Steam</param>
