@@ -61,7 +61,22 @@ namespace srcrepair
                 }
             }
         }
-        
+
+        public string SteamAppsFolderName
+        {
+            get
+            {
+                switch (OS)
+                {
+                    case OSType.Linux:
+                        return Properties.Resources.SteamAppsFolderNameLin;
+                    case OSType.MacOSX:
+                        return Properties.Resources.SteamAppsFolderNameMac;
+                    default: return Properties.Resources.SteamAppsFolderNameWin;
+                }
+            }
+        }
+
         /// <summary>
         /// Возвращает код текущей платформы, на которой запущено приложение.
         /// </summary>
