@@ -44,17 +44,24 @@ namespace srcrepair
         private string SteamAppsDirName { get; set; }
 
         /// <summary>
+        /// Хранит платформо-зависимое имя процесса Steam.
+        /// </summary>
+        private string SteamProcName { get; set; }
+
+        /// <summary>
         /// Конструктор класса формы модуля очистки кэшей Steam.
         /// </summary>
         /// <param name="SP">Каталог установки Steam</param>
         /// <param name="BD">Каталог хранения резервных копий</param>
         /// <param name="BD">Платформо-зависимое название каталога SteamApps</param>
-        public FrmStmClean(string SP, string BD, string SA)
+        /// <param name="BD">Платформо-зависимое имя процесса Steam</param>
+        public FrmStmClean(string SP, string BD, string SA, string PN)
         {
             InitializeComponent();
             SteamPath = SP;
             BackUpDir = BD;
             SteamAppsDirName = SA;
+            SteamProcName = PN;
         }
 
         /// <summary>
@@ -110,8 +117,8 @@ namespace srcrepair
             if (EC_BuildCache.Checked)
             {
                 // Очистим кэш сборки обновлений игр с новой системой контента...
-                CleanDirs.Add(Path.Combine(SteamPath, Properties.Resources.SteamAppsFolderName, "downloading"));
-                CleanDirs.Add(Path.Combine(SteamPath, Properties.Resources.SteamAppsFolderName, "temp"));
+                CleanDirs.Add(Path.Combine(SteamPath, SteamAppsDirName, "downloading"));
+                CleanDirs.Add(Path.Combine(SteamPath, SteamAppsDirName, "temp"));
             }
 
             if (EC_GameIcons.Checked)
@@ -157,7 +164,7 @@ namespace srcrepair
             }
 
             // Запустим очистку...
-            if (CleanDirs.Count > 0) { FormManager.FormShowCleanup(CleanDirs, Text, AppStrings.PS_CleanupSuccess, BackUpDir, Properties.Resources.SteamProcName); } else { MessageBox.Show(AppStrings.AC_NoItemsSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            if (CleanDirs.Count > 0) { FormManager.FormShowCleanup(CleanDirs, Text, AppStrings.PS_CleanupSuccess, BackUpDir, SteamProcName); } else { MessageBox.Show(AppStrings.AC_NoItemsSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
     }
 }
