@@ -388,11 +388,29 @@
   <data name="CE_CVResDf" xml:space="preserve">
     <value>srcrepair.CVList</value>
   </data>
+  <data name="SteamAppsFolderNameLin" xml:space="preserve">
+    <value>steamapps</value>
+  </data>
+  <data name="SteamAppsFolderNameMac" xml:space="preserve">
+    <value>steamapps</value>
+  </data>
   <data name="SteamAppsFolderNameWin" xml:space="preserve">
     <value>SteamApps</value>
   </data>
+  <data name="SteamExecBinLin" xml:space="preserve">
+    <value>steam</value>
+  </data>
+  <data name="SteamExecBinMac" xml:space="preserve">
+    <value>steam</value>
+  </data>
   <data name="SteamExecBinWin" xml:space="preserve">
     <value>Steam.exe</value>
+  </data>
+  <data name="SteamProcNameLin" xml:space="preserve">
+    <value>steam</value>
+  </data>
+  <data name="SteamProcNameMac" xml:space="preserve">
+    <value>steam</value>
   </data>
   <data name="SteamProcNameWin" xml:space="preserve">
     <value>Steam</value>
