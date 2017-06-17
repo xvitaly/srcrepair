@@ -638,7 +638,7 @@ namespace srcrepair
             FldrBrwse.Description = AppStrings.SteamPathEnterText;
 
             // Отображаем стандартный диалог поиска каталога...
-            if (FldrBrwse.ShowDialog() == DialogResult.OK) { if (!(File.Exists(Path.Combine(FldrBrwse.SelectedPath, Properties.Resources.SteamExecBin)))) { throw new FileNotFoundException("Invalid Steam directory entered by user", Path.Combine(FldrBrwse.SelectedPath, Properties.Resources.SteamExecBin)); } else { Result = FldrBrwse.SelectedPath; } } else { throw new OperationCanceledException("User closed opendir window"); }
+            if (FldrBrwse.ShowDialog() == DialogResult.OK) { if (!(File.Exists(Path.Combine(FldrBrwse.SelectedPath, App.Platform.SteamBinaryName)))) { throw new FileNotFoundException("Invalid Steam directory entered by user", Path.Combine(FldrBrwse.SelectedPath, App.Platform.SteamBinaryName)); } else { Result = FldrBrwse.SelectedPath; } } else { throw new OperationCanceledException("User closed opendir window"); }
 
             // Возвращаем результат...
             return Result;
@@ -650,7 +650,7 @@ namespace srcrepair
         /// <param name="OldPath">Проверяемый путь</param>
         private string CheckLastSteamPath(string OldPath)
         {
-            return (!(String.IsNullOrWhiteSpace(OldPath)) && File.Exists(Path.Combine(OldPath, Properties.Resources.SteamExecBin))) ? OldPath : GetPathByMEnter();
+            return (!(String.IsNullOrWhiteSpace(OldPath)) && File.Exists(Path.Combine(OldPath, App.Platform.SteamBinaryName))) ? OldPath : GetPathByMEnter();
         }
 
         /// <summary>
@@ -1255,7 +1255,7 @@ namespace srcrepair
                     MessageBox.Show(AppStrings.PS_SeqCompleted, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Запустим Steam...
-                    if (File.Exists(Path.Combine(App.FullSteamPath, Properties.Resources.SteamExecBin))) { Process.Start(Path.Combine(App.FullSteamPath, Properties.Resources.SteamExecBin)); }
+                    if (File.Exists(Path.Combine(App.FullSteamPath, App.Platform.SteamBinaryName))) { Process.Start(Path.Combine(App.FullSteamPath, App.Platform.SteamBinaryName)); }
                 }
             }
         }
