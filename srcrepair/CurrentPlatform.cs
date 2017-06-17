@@ -77,6 +77,21 @@ namespace srcrepair
             }
         }
 
+        public string SteamProcName
+        {
+            get
+            {
+                switch (OS)
+                {
+                    case OSType.Linux:
+                        return Properties.Resources.SteamProcNameLin;
+                    case OSType.MacOSX:
+                        return Properties.Resources.SteamProcNameMac;
+                    default: return Properties.Resources.SteamProcNameWin;
+                }
+            }
+        }
+
         /// <summary>
         /// Возвращает код текущей платформы, на которой запущено приложение.
         /// </summary>
