@@ -169,9 +169,6 @@
   <data name="Wizard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Wizard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SteamAppsFolderName" xml:space="preserve">
-    <value>SteamApps</value>
-  </data>
   <data name="BU_PrefixCfg" xml:space="preserve">
     <value>Config</value>
   </data>
@@ -298,9 +295,6 @@
   <data name="AppURLReply" xml:space="preserve">
     <value>https://www.easycoding.org/projects/srcrepair#respond</value>
   </data>
-  <data name="SteamProcName" xml:space="preserve">
-    <value>Steam</value>
-  </data>
   <data name="AppName" xml:space="preserve">
     <value>SRC Repair</value>
   </data>
@@ -327,9 +321,6 @@
   </data>
   <data name="VtTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\VtTemplate.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
-  <data name="SteamExecBin" xml:space="preserve">
-    <value>Steam.exe</value>
   </data>
   <data name="Warning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Warning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -396,5 +387,14 @@
   </data>
   <data name="CE_CVResDf" xml:space="preserve">
     <value>srcrepair.CVList</value>
+  </data>
+  <data name="SteamAppsFolderNameWin" xml:space="preserve">
+    <value>SteamApps</value>
+  </data>
+  <data name="SteamExecBinWin" xml:space="preserve">
+    <value>Steam.exe</value>
+  </data>
+  <data name="SteamProcNameWin" xml:space="preserve">
+    <value>Steam</value>
   </data>
 </root>

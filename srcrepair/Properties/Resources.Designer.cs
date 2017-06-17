@@ -789,27 +789,27 @@ namespace srcrepair.Properties {
         /// <summary>
         ///   Looks up a localized string similar to SteamApps.
         /// </summary>
-        internal static string SteamAppsFolderName {
+        internal static string SteamAppsFolderNameWin {
             get {
-                return ResourceManager.GetString("SteamAppsFolderName", resourceCulture);
+                return ResourceManager.GetString("SteamAppsFolderNameWin", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Steam.exe.
         /// </summary>
-        internal static string SteamExecBin {
+        internal static string SteamExecBinWin {
             get {
-                return ResourceManager.GetString("SteamExecBin", resourceCulture);
+                return ResourceManager.GetString("SteamExecBinWin", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Steam.
         /// </summary>
-        internal static string SteamProcName {
+        internal static string SteamProcNameWin {
             get {
-                return ResourceManager.GetString("SteamProcName", resourceCulture);
+                return ResourceManager.GetString("SteamProcNameWin", resourceCulture);
             }
         }
         
