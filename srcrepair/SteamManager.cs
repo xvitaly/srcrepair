@@ -255,7 +255,8 @@ namespace srcrepair
         /// Формирует полные пути к библиотекам с установленными играми.
         /// </summary>
         /// <param name="SteamPath">Путь установки Steam</param>
-        public static List<String> FormatInstallDirs(string SteamPath)
+        /// <param name="SteamAppsFolderName">Платформо-зависимое название каталога SteamApps</param>
+        public static List<String> FormatInstallDirs(string SteamPath, string SteamAppsFolderName)
         {
             // Создаём массив, в который будем помещать найденные пути...
             List<String> Result = new List<String>();
@@ -266,7 +267,7 @@ namespace srcrepair
             // Начинаем обход каталога и получение поддиректорий...
             foreach (string MntPnt in MntPnts)
             {
-                Result.Add(Path.Combine(MntPnt, Properties.Resources.SteamAppsFolderName, "common"));
+                Result.Add(Path.Combine(MntPnt, SteamAppsFolderName, "common"));
             }
 
             // Возвращаем сформированный массив...
