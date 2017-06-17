@@ -48,11 +48,13 @@ namespace srcrepair
         /// </summary>
         /// <param name="SP">Каталог установки Steam</param>
         /// <param name="BD">Каталог хранения резервных копий</param>
-        public FrmStmClean(string SP, string BD)
+        /// <param name="BD">Платформо-зависимое название каталога SteamApps</param>
+        public FrmStmClean(string SP, string BD, string SA)
         {
             InitializeComponent();
             SteamPath = SP;
             BackUpDir = BD;
+            SteamAppsDirName = SA;
         }
 
         /// <summary>
