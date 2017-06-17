@@ -2501,7 +2501,7 @@ namespace srcrepair
         private void MNUExtClnSteam_Click(object sender, EventArgs e)
         {
             // Запустим модуль очистки кэшей Steam...
-            FormManager.FormShowStmCleaner(App.FullSteamPath, SelGame.FullBackUpDirPath);
+            FormManager.FormShowStmCleaner(App.FullSteamPath, SelGame.FullBackUpDirPath, App.Platform.SteamAppsFolderName, App.Platform.SteamProcName);
         }
 
         private void MNUMuteMan_Click(object sender, EventArgs e)
