@@ -44,50 +44,64 @@ namespace srcrepair
         /// <summary>
         /// Возвращает название текущей платформы, на которой запущено приложение.
         /// </summary>
-        /// <returns>Название текущей платформы.</returns>
         public string OSFriendlyName => OS.ToString();
 
+        /// <summary>
+        /// Возвращает платформо-зависимое название бинарника Steam.
+        /// </summary>
         public string SteamBinaryName
         {
             get
             {
                 switch (OS)
                 {
+                    case OSType.Windows:
+                        return Properties.Resources.SteamExecBinWin;
                     case OSType.Linux:
                         return Properties.Resources.SteamExecBinLin;
                     case OSType.MacOSX:
                         return Properties.Resources.SteamExecBinMac;
-                    default: return Properties.Resources.SteamExecBinWin;
+                    default: return String.Empty;
                 }
             }
         }
 
+        /// <summary>
+        /// Возвращает платформо-зависимое название каталога SteamApps.
+        /// </summary>
         public string SteamAppsFolderName
         {
             get
             {
                 switch (OS)
                 {
+                    case OSType.Windows:
+                        return Properties.Resources.SteamAppsFolderNameWin;
                     case OSType.Linux:
                         return Properties.Resources.SteamAppsFolderNameLin;
                     case OSType.MacOSX:
                         return Properties.Resources.SteamAppsFolderNameMac;
-                    default: return Properties.Resources.SteamAppsFolderNameWin;
+                    default: return String.Empty;
                 }
             }
         }
 
+        /// <summary>
+        /// Возвращает платформо-зависимое имя процесса Steam.
+        /// </summary>
         public string SteamProcName
         {
             get
             {
                 switch (OS)
                 {
+                    case OSType.Windows:
+                        return Properties.Resources.SteamProcNameWin;
                     case OSType.Linux:
                         return Properties.Resources.SteamProcNameLin;
                     case OSType.MacOSX:
                         return Properties.Resources.SteamProcNameMac;
-                    default: return Properties.Resources.SteamProcNameWin;
+                    default: return String.Empty;
                 }
             }
         }
