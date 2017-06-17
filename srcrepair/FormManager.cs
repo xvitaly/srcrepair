@@ -245,9 +245,11 @@ namespace srcrepair
         /// </summary>
         /// <param name="FullSteamPath">Путь к каталогу установки Steam</param>
         /// <param name="FullBackUpDirPath">Путь к каталогу хранения резервных копий</param>
-        public static void FormShowStmCleaner(string FullSteamPath, string FullBackUpDirPath)
+        /// <param name="SteamAppsDirName">Платформо-зависимое название каталога SteamApps</param>
+        /// <param name="SteamProcName">Платформо-зависимое имя процесса Steam</param>
+        public static void FormShowStmCleaner(string FullSteamPath, string FullBackUpDirPath, string SteamAppsDirName, string SteamProcName)
         {
-            using (FrmStmClean StmCln = new FrmStmClean(FullSteamPath, FullBackUpDirPath))
+            using (FrmStmClean StmCln = new FrmStmClean(FullSteamPath, FullBackUpDirPath, SteamAppsDirName, SteamProcName))
             {
                 StmCln.ShowDialog();
             }
