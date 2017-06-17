@@ -46,6 +46,21 @@ namespace srcrepair
         /// </summary>
         /// <returns>Название текущей платформы.</returns>
         public string OSFriendlyName => OS.ToString();
+
+        public string SteamBinaryName
+        {
+            get
+            {
+                switch (OS)
+                {
+                    case OSType.Linux:
+                        return Properties.Resources.SteamExecBinLin;
+                    case OSType.MacOSX:
+                        return Properties.Resources.SteamExecBinMac;
+                    default: return Properties.Resources.SteamExecBinWin;
+                }
+            }
+        }
         
         /// <summary>
         /// Возвращает код текущей платформы, на которой запущено приложение.
