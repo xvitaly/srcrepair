@@ -18,10 +18,10 @@
 */
 using System;
 using System.Diagnostics;
+using System.IO;
 using System.Security.Permissions;
 using System.Security.Principal;
 using System.Threading;
-using System.IO;
 
 namespace srcrepair
 {
@@ -35,7 +35,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="ProcessName">Имя образа процесса</param>
         /// <returns>PID снятого процесса, либо 0 если процесс не был найден</returns>
-        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static int ProcessTerminate(string ProcessName)
         {
             // Обнуляем PID...
@@ -60,7 +60,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="ProcessName">Имя образа процесса</param>
         /// <returns>Возвращает булево true если такой процесс запущен, иначе - false.</returns>
-        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static bool IsProcessRunning(string ProcessName)
         {
             Process[] LocalByName = Process.GetProcessesByName(ProcessName);
@@ -72,7 +72,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="FileName">Путь к файлу для выполнения</param>
         /// <returns>Возвращает PID запущенного процесса.</returns>
-        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static int StartWithUAC(string FileName)
         {
             // Создаём объекты...
@@ -100,7 +100,7 @@ namespace srcrepair
         /// программа, привилегии локального администратора.
         /// </summary>
         /// <returns>Булево true если есть</returns>
-        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static bool IsCurrentUserAdmin()
         {
             bool Result; // Переменная для хранения результата...
@@ -125,7 +125,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="SAppName">Путь к приложению или его имя</param>
         /// <param name="SParameters">Параметры запуска</param>
-        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static void StartProcessAndWait(string SAppName, string SParameters)
         {
             // Создаём объект с нужными параметрами...
@@ -153,7 +153,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="SAppName">Путь к приложению или его имя</param>
         /// <param name="SParameters">Параметры запуска</param>
-        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static string StartProcessWithStdOut(string SAppName, string SParameters)
         {
             // Создаём переменную для хранения результата...
@@ -187,7 +187,7 @@ namespace srcrepair
         /// Открывает указанный URL в системном браузере по умолчанию.
         /// </summary>
         /// <param name="URI">URL для загрузки в браузере</param>
-        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static void OpenWebPage(string URI)
         {
             try { Process.Start(URI); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
@@ -198,7 +198,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="FileName">Файл для загрузки</param>
         /// <param name="OS">Код платформы, на которой запущено приложение</param>
-        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static void OpenTextEditor(string FileName, CurrentPlatform.OSType OS)
         {
             try
@@ -225,7 +225,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="FileName">Файл для отображения</param>
         /// <param name="OS">Код платформы, на которой запущено приложение</param>
-        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static void OpenExplorer(string FileName, CurrentPlatform.OSType OS)
         {
             try
