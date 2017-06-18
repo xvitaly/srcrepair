@@ -172,9 +172,10 @@ namespace srcrepair
                         Process.Start(Properties.Settings.Default.EditorBin, FileName);
                         break;
                     case CurrentPlatform.OSType.Linux:
-                        Process.Start("xdg-open", FileName);
+                        Process.Start(Properties.Resources.AppOpenHandlerLin, FileName);
                         break;
                     case CurrentPlatform.OSType.MacOSX:
+                        Process.Start(Properties.Resources.AppOpenHandlerMac, String.Format("{0} \"{1}\"", "-t", FileName));
                         break;
                 }
             }
