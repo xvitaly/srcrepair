@@ -172,8 +172,9 @@ namespace srcrepair
         /// пользователем оболочке.
         /// </summary>
         /// <param name="FileName">Файл для отображения</param>
+        /// <param name="OS">Код платформы, на которой запущено приложение</param>
         [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
-        public static void OpenExplorer(string FileName)
+        public static void OpenExplorer(string FileName, CurrentPlatform.OSType OS)
         {
             try { Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, FileName)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
