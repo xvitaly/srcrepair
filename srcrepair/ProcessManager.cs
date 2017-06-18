@@ -164,7 +164,21 @@ namespace srcrepair
         [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
         public static void OpenTextEditor(string FileName, CurrentPlatform.OSType OS)
         {
-            try { Process.Start(Properties.Settings.Default.EditorBin, FileName); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try
+            {
+                switch (OS)
+                {
+                    case CurrentPlatform.OSType.Windows:
+                        Process.Start(Properties.Settings.Default.EditorBin, FileName);
+                        break;
+                    case CurrentPlatform.OSType.Linux:
+                        Process.Start("xdg-open", FileName);
+                        break;
+                    case CurrentPlatform.OSType.MacOSX:
+                        break;
+                }
+            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         /// <summary>
