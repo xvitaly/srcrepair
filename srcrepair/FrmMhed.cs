@@ -307,7 +307,7 @@ namespace srcrepair
         /// </summary>
         private void HEd_M_Notepad_Click(object sender, EventArgs e)
         {
-            try { Process.Start(Properties.Settings.Default.EditorBin, String.Format("\"{0}\"", HostsFilePath)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            ProcessManager.OpenTextEditor(HostsFilePath, Platform.OS);
         }
         #endregion
     }
