@@ -2102,7 +2102,7 @@ namespace srcrepair
             else
             {
                 // Загрузим файл в Блокноте...
-                ProcessManager.OpenTextEditor(ConfigFile);
+                ProcessManager.OpenTextEditor(ConfigFile, App.Platform.OS);
             }
         }
 
@@ -2122,7 +2122,7 @@ namespace srcrepair
             {
                 if (BU_LVTable.SelectedItems.Count > 0)
                 {
-                    if (Regex.IsMatch(Path.GetExtension(BU_LVTable.SelectedItems[0].SubItems[4].Text), @"\.(txt|cfg|[0-9]|reg)")) { ProcessManager.OpenTextEditor(Path.Combine(SelGame.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text)); } else { MessageBox.Show(AppStrings.BU_BinaryFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                    if (Regex.IsMatch(Path.GetExtension(BU_LVTable.SelectedItems[0].SubItems[4].Text), @"\.(txt|cfg|[0-9]|reg)")) { ProcessManager.OpenTextEditor(Path.Combine(SelGame.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text), App.Platform.OS); } else { MessageBox.Show(AppStrings.BU_BinaryFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
                 }
                 else
                 {
@@ -2155,7 +2155,7 @@ namespace srcrepair
                 if (BU_LVTable.SelectedItems.Count > 0)
                 {
                     // Откроем выбранный бэкап в Проводнике Windows...
-                    ProcessManager.OpenExplorer(Path.Combine(SelGame.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text));
+                    ProcessManager.OpenExplorer(Path.Combine(SelGame.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text), App.Platform.OS);
                 }
                 else
                 {
@@ -2184,7 +2184,7 @@ namespace srcrepair
         {
             if (!(String.IsNullOrEmpty(CFGFileName)))
             {
-                ProcessManager.OpenTextEditor(CFGFileName);
+                ProcessManager.OpenTextEditor(CFGFileName, App.Platform.OS);
             }
             else
             {
@@ -2495,7 +2495,7 @@ namespace srcrepair
         private void HD_OpenDir_Click(object sender, EventArgs e)
         {
             // Покажем файлы установленного HUD в Проводнике...
-            ProcessManager.OpenExplorer(Path.Combine(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir));
+            ProcessManager.OpenExplorer(Path.Combine(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir), App.Platform.OS);
         }
 
         private void MNUExtClnSteam_Click(object sender, EventArgs e)

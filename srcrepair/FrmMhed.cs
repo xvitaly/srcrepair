@@ -56,6 +56,12 @@ namespace srcrepair
         /// Хранит путь к файлу Hosts.
         /// </summary>
         private string HostsFilePath { get; set; }
+
+        /// <summary>
+        /// Хранит и возвращает ID текущей платформы, на которой запущено
+        /// приложение (внешний модуль).
+        /// </summary>
+        private CurrentPlatform Platform { get; set; }
         #endregion
 
         #region IM
@@ -134,6 +140,9 @@ namespace srcrepair
         /// </summary>
         private void FrmHEd_Load(object sender, EventArgs e)
         {
+            // Проверим используемую платформу...
+            Platform = new CurrentPlatform();
+            
             // Проверим наличие прав администратора. Если они отсутствуют - отключим функции сохранения...
             if (!(ProcessManager.IsCurrentUserAdmin())) { HEd_M_Save.Enabled = false; HEd_T_Save.Enabled = false; HEd_M_RestDef.Enabled = false; HEd_Table.ReadOnly = true; HEd_T_Cut.Enabled = false; HEd_T_Paste.Enabled = false; HEd_T_RemRw.Enabled = false; }
 
@@ -250,7 +259,7 @@ namespace srcrepair
         {
             if (MessageBox.Show(String.Format(AppStrings.AHE_HMessg, HostsFilePath), PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                ProcessManager.OpenExplorer(HostsFilePath);
+                ProcessManager.OpenExplorer(HostsFilePath, Platform.OS);
             }
         }
 

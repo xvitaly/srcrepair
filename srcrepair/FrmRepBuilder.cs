@@ -165,7 +165,7 @@ namespace srcrepair
                         MessageBox.Show(String.Format(AppStrings.RPB_ComprGen, Path.GetFileName(ArchName)), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         // Открываем каталог с отчётами в оболочке и выделяем созданный файл...
-                        if (File.Exists(ArchName)) { ProcessManager.OpenExplorer(ArchName); }
+                        if (File.Exists(ArchName)) { ProcessManager.OpenExplorer(ArchName, CurrentPlatform.OSType.Windows); }
                     }
                     catch (Exception Ex)
                     {
