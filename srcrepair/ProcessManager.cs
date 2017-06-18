@@ -235,11 +235,13 @@ namespace srcrepair
                     case CurrentPlatform.OSType.Windows:
                         Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, FileName));
                         break;
-                    case CurrentPlatform.OSType.MacOSX:
+                    case CurrentPlatform.OSType.Linux:
                         Process.Start(Properties.Resources.AppOpenHandlerLin, Path.GetDirectoryName(FileName));
                         break;
-                    case CurrentPlatform.OSType.Linux:
+                    case CurrentPlatform.OSType.MacOSX:
+                        Process.Start(Properties.Resources.AppOpenHandlerMac, Path.GetDirectoryName(FileName));
                         break;
+                    
                 }
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
