@@ -415,4 +415,10 @@
   <data name="SteamProcNameWin" xml:space="preserve">
     <value>Steam</value>
   </data>
+  <data name="AppOpenHandlerLin" xml:space="preserve">
+    <value>xdg-open</value>
+  </data>
+  <data name="AppOpenHandlerMac" xml:space="preserve">
+    <value>open</value>
+  </data>
 </root>

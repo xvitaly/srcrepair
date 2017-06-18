@@ -143,6 +143,24 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to xdg-open.
+        /// </summary>
+        internal static string AppOpenHandlerLin {
+            get {
+                return ResourceManager.GetString("AppOpenHandlerLin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to open.
+        /// </summary>
+        internal static string AppOpenHandlerMac {
+            get {
+                return ResourceManager.GetString("AppOpenHandlerMac", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to tg://resolve?domain=easycoding.
         /// </summary>
         internal static string AppTgChannel {
