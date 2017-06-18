@@ -160,8 +160,9 @@ namespace srcrepair
         /// Открывает указанный URL в выбранном в настройках текстовом редакторе.
         /// </summary>
         /// <param name="FileName">Файл для загрузки</param>
+        /// <param name="OS">Код платформы, на которой запущено приложение</param>
         [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
-        public static void OpenTextEditor(string FileName)
+        public static void OpenTextEditor(string FileName, CurrentPlatform.OSType OS)
         {
             try { Process.Start(Properties.Settings.Default.EditorBin, FileName); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
