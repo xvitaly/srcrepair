@@ -21,6 +21,7 @@ using System.Diagnostics;
 using System.Security.Permissions;
 using System.Security.Principal;
 using System.Threading;
+using System.IO;
 
 namespace srcrepair
 {
@@ -147,6 +148,42 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Запускает указанное приложение и ждёт завершения с передачей
+        /// его вывода.
+        /// </summary>
+        /// <param name="SAppName">Путь к приложению или его имя</param>
+        /// <param name="SParameters">Параметры запуска</param>
+        [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
+        public static string StartProcessWithStdOut(string SAppName, string SParameters)
+        {
+            // Создаём переменную для хранения результата...
+            string Result = String.Empty;
+
+            // Создаём объект с нужными параметрами...
+            ProcessStartInfo ST = new ProcessStartInfo()
+            {
+                FileName = SAppName,
+                Arguments = SParameters,
+                WindowStyle = ProcessWindowStyle.Hidden,
+                UseShellExecute = false,
+                RedirectStandardOutput = true,
+                CreateNoWindow = true
+            };
+
+            // Запускаем процесс...
+            Process NewProcess = Process.Start(ST);
+
+            // Читаем stdout запущенного процеса...
+            Result = NewProcess.StandardOutput.ReadToEnd();
+
+            // Ждём завершения процесса...
+            NewProcess.WaitForExit();
+
+            // Возвращаем результат...
+            return Result;
+        }
+
+        /// <summary>
         /// Открывает указанный URL в системном браузере по умолчанию.
         /// </summary>
         /// <param name="URI">URL для загрузки в браузере</param>
@@ -191,7 +228,21 @@ namespace srcrepair
         [EnvironmentPermissionAttribute(SecurityAction.Demand, Unrestricted = true)]
         public static void OpenExplorer(string FileName, CurrentPlatform.OSType OS)
         {
-            try { Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, FileName)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try
+            {
+                switch (OS)
+                {
+                    case CurrentPlatform.OSType.Windows:
+                        Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, FileName));
+                        break;
+                    case CurrentPlatform.OSType.MacOSX:
+                        Process.Start(Properties.Resources.AppOpenHandlerLin, Path.GetDirectoryName(FileName));
+                        break;
+                    case CurrentPlatform.OSType.Linux:
+                        break;
+                }
+            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
     }
 }
