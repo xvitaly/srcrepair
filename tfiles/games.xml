@@ -289,7 +289,7 @@
     <Executable>portal2.exe</Executable>
   </Game>
   <Game Name="Dota 2">
-    <Enabled>1</Enabled>
+    <Enabled>0</Enabled>
     <HasVF>1</HasVF>
     <DirName>dota 2</DirName>
     <SmallName>dota</SmallName>
@@ -301,7 +301,7 @@
     <Executable>dota.exe</Executable>
   </Game>
   <Game Name="Dota 2 Beta">
-    <Enabled>1</Enabled>
+    <Enabled>0</Enabled>
     <HasVF>1</HasVF>
     <DirName>dota 2 beta</DirName>
     <SmallName>game\dota</SmallName>
@@ -313,7 +313,7 @@
     <Executable>dota2.exe</Executable>
   </Game>
   <Game Name="Dota 2 Test">
-    <Enabled>1</Enabled>
+    <Enabled>0</Enabled>
     <HasVF>1</HasVF>
     <DirName>dota 2 test</DirName>
     <SmallName>dota</SmallName>
