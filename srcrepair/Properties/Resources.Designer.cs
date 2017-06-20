@@ -179,6 +179,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to https://www.easycoding.org/donate.
+        /// </summary>
+        internal static string AppURLDonate {
+            get {
+                return ResourceManager.GetString("AppURLDonate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to https://www.easycoding.org/projects/srcrepair/help/{0}.
         /// </summary>
         internal static string AppURLHelpSystem {

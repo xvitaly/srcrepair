@@ -421,4 +421,7 @@
   <data name="AppOpenHandlerMac" xml:space="preserve">
     <value>open</value>
   </data>
+  <data name="AppURLDonate" xml:space="preserve">
+    <value>https://www.easycoding.org/donate</value>
+  </data>
 </root>
