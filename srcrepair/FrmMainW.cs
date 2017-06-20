@@ -2532,7 +2532,8 @@ namespace srcrepair
 
         private void MNUDonate_Click(object sender, EventArgs e)
         {
-            //
+            // Откроем веб-страницу с реквизитами...
+            ProcessManager.OpenWebPage(Properties.Resources.AppURLDonate);
         }
     }
 }
