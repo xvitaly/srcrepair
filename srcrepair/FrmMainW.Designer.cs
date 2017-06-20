@@ -220,6 +220,7 @@
             this.MNUReportBug = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUShowLog = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUOpinion = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUDonate = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep3 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUSupportChat = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSteamGroup = new System.Windows.Forms.ToolStripMenuItem();
@@ -1825,6 +1826,7 @@
             this.MNUReportBug,
             this.MNUShowLog,
             this.MNUOpinion,
+            this.MNUDonate,
             this.MNUSep3,
             this.MNUSupportChat,
             this.MNUSteamGroup,
@@ -1875,6 +1877,13 @@
             this.MNUOpinion.Name = "MNUOpinion";
             resources.ApplyResources(this.MNUOpinion, "MNUOpinion");
             this.MNUOpinion.Click += new System.EventHandler(this.MNUOpinion_Click);
+            // 
+            // MNUDonate
+            // 
+            this.MNUDonate.Image = global::srcrepair.Properties.Resources.Donate;
+            this.MNUDonate.Name = "MNUDonate";
+            resources.ApplyResources(this.MNUDonate, "MNUDonate");
+            this.MNUDonate.Click += new System.EventHandler(this.MNUDonate_Click);
             // 
             // MNUSep3
             // 
@@ -2291,6 +2300,7 @@
         private System.Windows.Forms.TextBox GT_LaunchOptions;
         private System.Windows.Forms.Label L_GT_LaunchOptions;
         private System.Windows.Forms.ToolStripStatusLabel SB_SteamID;
+        private System.Windows.Forms.ToolStripMenuItem MNUDonate;
     }
 }
 
