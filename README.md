@@ -1,9 +1,8 @@
 SRC Repair
 =========
-[![GitHub release](https://img.shields.io/github/release/xvitaly/srcrepair.svg?label=version&maxAge=60)](https://github.com/xvitaly/srcrepair/releases/latest)
+[![SourceForge downloads](https://img.shields.io/sourceforge/dt/srcrepair.svg?label=downloads&maxAge=60)](https://sourceforge.net/projects/srcrepair/files/)
 [![Build status](https://travis-ci.org/xvitaly/srcrepair.svg?branch=master)](https://travis-ci.org/xvitaly/srcrepair)
 [![Build status](https://ci.appveyor.com/api/projects/status/9r2yma3aab972blf?svg=true)](https://ci.appveyor.com/project/xvitaly/srcrepair)
-[![SourceForge downloads](https://img.shields.io/sourceforge/dt/srcrepair.svg?label=downloads&maxAge=60)](https://sourceforge.net/projects/srcrepair/files/)
 [![GitHub issues](https://img.shields.io/github/issues/xvitaly/srcrepair.svg?label=issues&maxAge=60)](https://github.com/xvitaly/srcrepair/issues)
 [![Bitcoin donate](https://img.shields.io/badge/Bitcoin-donate-yellow.svg)](https://blockchain.info/payment_request?address=1WGFbQxLiPVhDvprjttKaY6rRMjhA7vto)
 [![GitHub license](https://img.shields.io/github/license/xvitaly/srcrepair.svg?label=license&maxAge=60)](COPYING)
