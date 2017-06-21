@@ -685,7 +685,18 @@ namespace srcrepair
         /// <param name="State">Устанавливаемый статус</param>
         private void ChangePrvControlState(bool State)
         {
-            MNUWinMnuDisabler.Enabled = State;
+            // Проверяем платформу выполнения приложения...
+            if (App.Platform.OS == CurrentPlatform.OSType.Windows)
+            {
+                // Платформа Windows, применяем стандартные ограничения...
+                MNUWinMnuDisabler.Enabled = State;
+            }
+            else
+            {
+                // Платформа GNU/Linux или MacOS X, отключим ряд контролов...
+                MNUReportBuilder.Enabled = false;
+                MNUWinMnuDisabler.Enabled = false;
+            }
         }
 
         /// <summary>
