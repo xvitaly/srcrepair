@@ -651,6 +651,7 @@ namespace srcrepair
         /// Переключает вид страницы графического твикера с в соответствие с выбранным
         /// движком.
         /// </summary>
+        /// <param name="SType">Тип движка Source</param>
         private void SelectGraphicWidget(string SType)
         {
             // Переключаем виджеты...
