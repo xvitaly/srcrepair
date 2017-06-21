@@ -106,7 +106,7 @@ namespace srcrepair
                         {
                             if (XMLD.GetElementsByTagName("Enabled")[i].InnerText == "1")
                             {
-                                SourceGame SG = new SourceGame(XMLNode[i].Attributes["Name"].Value, XMLD.GetElementsByTagName("DirName")[i].InnerText, XMLD.GetElementsByTagName("SmallName")[i].InnerText, XMLD.GetElementsByTagName("Executable")[i].InnerText, XMLD.GetElementsByTagName("SID")[i].InnerText, XMLD.GetElementsByTagName("SVer")[i].InnerText, XMLD.GetElementsByTagName("VFDir")[i].InnerText, XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1", XMLD.GetElementsByTagName("UserDir")[i].InnerText == "1", XMLD.GetElementsByTagName("HUDsAvail")[i].InnerText == "1", App.FullAppPath, App.AppUserDir, App.FullSteamPath, App.Platform.SteamAppsFolderName, GameDirs);
+                                SourceGame SG = new SourceGame(XMLNode[i].Attributes["Name"].Value, XMLD.GetElementsByTagName("DirName")[i].InnerText, XMLD.GetElementsByTagName("SmallName")[i].InnerText, XMLD.GetElementsByTagName("Executable")[i].InnerText, XMLD.GetElementsByTagName("SID")[i].InnerText, XMLD.GetElementsByTagName("SVer")[i].InnerText, XMLD.GetElementsByTagName("VFDir")[i].InnerText, App.Platform.OS == CurrentPlatform.OSType.Windows ? XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1" : true, XMLD.GetElementsByTagName("UserDir")[i].InnerText == "1", XMLD.GetElementsByTagName("HUDsAvail")[i].InnerText == "1", App.FullAppPath, App.AppUserDir, App.FullSteamPath, App.Platform.SteamAppsFolderName, GameDirs);
                                 if (SG.IsInstalled)
                                 {
                                     SourceGames.Add(SG);
@@ -555,7 +555,7 @@ namespace srcrepair
             switch (SelGame.SourceType)
             {
                 case "1": /* Source 1, Type 1 (ex. GCF). */
-                    ReadType1VideoSettings();
+                    if (App.Platform.OS == CurrentPlatform.OSType.Windows) { ReadType1VideoSettings(); } else { ReadType2VideoSettings(); }
                     break;
                 case "2": /* Source 1, Type 2 (ex. NCF). */
                     ReadType2VideoSettings();
@@ -565,7 +565,7 @@ namespace srcrepair
             }
 
             // Переключаем графический твикер в режим GCF/NCF...
-            SelectGraphicWidget();
+            SelectGraphicWidget(App.Platform.OS == CurrentPlatform.OSType.Windows ? SelGame.SourceType : "2");
         }
 
         /// <summary>
@@ -592,10 +592,10 @@ namespace srcrepair
         /// Переключает вид страницы графического твикера с в соответствие с выбранным
         /// движком.
         /// </summary>
-        private void SelectGraphicWidget()
+        private void SelectGraphicWidget(string SType)
         {
             // Переключаем виджеты...
-            switch (SelGame.SourceType)
+            switch (SType)
             {
                 case "1":
                     GT_GType1.Visible = true;
