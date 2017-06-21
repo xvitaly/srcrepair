@@ -568,6 +568,36 @@ namespace srcrepair
             SelectGraphicWidget((App.Platform.OS != CurrentPlatform.OSType.Windows) && (SelGame.SourceType == "1") ? "2": SelGame.SourceType);
         }
 
+        private void PrepareWriteType1VideoSettings()
+        {
+            // Генерируем путь к ветке реестра с настройками...
+            string GameRegKey = Type1Video.GetGameRegKey(SelGame.SmallAppName);
+
+            // Создаём резервную копию если включена опция безопасной очистки...
+            if (Properties.Settings.Default.SafeCleanup)
+            {
+                try { Type1Video.BackUpVideoSettings(GameRegKey, "Game_AutoBackUp", SelGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            }
+
+            // Запускаем процесс...
+            try
+            {
+                // Проверяем существование ключа реестра и если его нет, создаём...
+                if (!(Type1Video.CheckRegKeyExists(GameRegKey))) { Type1Video.CreateRegKey(GameRegKey); }
+
+                // Записываем настройки в реестр...
+                WriteType1VideoSettings();
+
+                // Выводим сообщение об успехе...
+                MessageBox.Show(AppStrings.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception Ex)
+            {
+                // Записываем в журнал и выводим сообщение об ошибке...
+                CoreLib.HandleExceptionEx(AppStrings.GT_SaveFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+            }
+        }
+
         /// <summary>
         /// Сохраняет настройки видео для выбранной игры.
         /// </summary>
@@ -577,9 +607,7 @@ namespace srcrepair
             switch (SelGame.SourceType)
             {
                 case "1":
-                    string GameRegKey = Type1Video.GetGameRegKey(SelGame.SmallAppName);
-                    if (Properties.Settings.Default.SafeCleanup) { try { Type1Video.BackUpVideoSettings(GameRegKey, "Game_AutoBackUp", SelGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } }
-                    try { if (!(Type1Video.CheckRegKeyExists(GameRegKey))) { Type1Video.CreateRegKey(GameRegKey); } WriteType1VideoSettings(); MessageBox.Show(AppStrings.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.GT_SaveFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+                    PrepareWriteType1VideoSettings();
                     break;
                 case "2":
                     if (Properties.Settings.Default.SafeCleanup) { FileManager.CreateConfigBackUp(SelGame.VideoCfgFiles, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto); }
