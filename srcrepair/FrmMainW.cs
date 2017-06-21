@@ -950,7 +950,7 @@ namespace srcrepair
             switch (SelGame.SourceType)
             {
                 case "1":
-                    Result = CheckType1Settings();
+                    Result = App.Platform.OS == CurrentPlatform.OSType.Windows ? CheckType1Settings() : CheckType2Settings();
                     break;
                 case "2":
                     Result = CheckType2Settings();
