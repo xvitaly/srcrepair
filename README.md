@@ -7,7 +7,7 @@ SRC Repair
 [![GitHub issues](https://img.shields.io/github/issues/xvitaly/srcrepair.svg?label=issues&maxAge=60)](issues)
 [![GitHub license](https://img.shields.io/github/license/xvitaly/srcrepair.svg?label=license&maxAge=60)](COPYING)
 ---
-=========
+
 **SRC Repair** (ex. TF2 Repair) is a free open source tool that can be used for tuning and cleaning up Steam and Source
 engine games. You can also create and edit .cfg files (configs), backup and restore game settings, apply FPS configs or
 sprays into the game with one click.
