@@ -568,6 +568,10 @@ namespace srcrepair
             SelectGraphicWidget((App.Platform.OS != CurrentPlatform.OSType.Windows) && (SelGame.SourceType == "1") ? "2": SelGame.SourceType);
         }
 
+        /// <summary>
+        /// Выполняет особые действия и начинает процесс сохранения настроек видео
+        /// для Type 1 игры.
+        /// </summary>
         private void PrepareWriteType1VideoSettings()
         {
             // Генерируем путь к ветке реестра с настройками...
@@ -598,6 +602,10 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Выполняет особые действия и начинает процесс сохранения настроек видео
+        /// для Type 2 игры.
+        /// </summary>
         private void PrepareWriteType2VideoSettings()
         {
             // Создаём резервную копию если включена опция безопасной очистки...
