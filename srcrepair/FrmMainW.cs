@@ -598,6 +598,30 @@ namespace srcrepair
             }
         }
 
+        private void PrepareWriteType2VideoSettings()
+        {
+            // Создаём резервную копию если включена опция безопасной очистки...
+            if (Properties.Settings.Default.SafeCleanup)
+            {
+                FileManager.CreateConfigBackUp(SelGame.VideoCfgFiles, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
+            }
+            
+            // Запускаем процесс...
+            try
+            {
+                // Записываем настройки в файл...
+                WriteType2VideoSettings();
+
+                // Выводим сообщение об успехе...
+                MessageBox.Show(AppStrings.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception Ex)
+            {
+                // Записываем в журнал и выводим сообщение об ошибке...
+                CoreLib.HandleExceptionEx(AppStrings.GT_NCFFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+            }
+        }
+
         /// <summary>
         /// Сохраняет настройки видео для выбранной игры.
         /// </summary>
@@ -610,8 +634,7 @@ namespace srcrepair
                     PrepareWriteType1VideoSettings();
                     break;
                 case "2":
-                    if (Properties.Settings.Default.SafeCleanup) { FileManager.CreateConfigBackUp(SelGame.VideoCfgFiles, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto); }
-                    try { WriteType2VideoSettings(); MessageBox.Show(AppStrings.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.GT_NCFFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+                    PrepareWriteType2VideoSettings();
                     break;
             }
         }
