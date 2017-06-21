@@ -565,7 +565,7 @@ namespace srcrepair
             }
 
             // Переключаем графический твикер в режим GCF/NCF...
-            SelectGraphicWidget(App.Platform.OS == CurrentPlatform.OSType.Windows ? SelGame.SourceType : "2");
+            SelectGraphicWidget((App.Platform.OS != CurrentPlatform.OSType.Windows) && (SelGame.SourceType == "1") ? "2": SelGame.SourceType);
         }
 
         /// <summary>
