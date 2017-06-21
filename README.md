@@ -1,7 +1,12 @@
 SRC Repair
 =========
-[![Build Status](https://travis-ci.org/xvitaly/srcrepair.svg?branch=master)](https://travis-ci.org/xvitaly/srcrepair)
+[![GitHub release](https://img.shields.io/github/release/xvitaly/srcrepair.svg?label=version&maxAge=60)](releases/latest)
+[![Build status](https://travis-ci.org/xvitaly/srcrepair.svg?branch=master)](https://travis-ci.org/xvitaly/srcrepair)
 [![Build status](https://ci.appveyor.com/api/projects/status/9r2yma3aab972blf?svg=true)](https://ci.appveyor.com/project/xvitaly/srcrepair)
+[![SourceForge downloads](https://img.shields.io/sourceforge/dt/srcrepair.svg?label=downloads&maxAge=60)](https://sourceforge.net/projects/srcrepair/files/)
+[![GitHub issues](https://img.shields.io/github/issues/xvitaly/srcrepair.svg?label=issues&maxAge=60)](issues)
+[![GitHub license](https://img.shields.io/github/license/xvitaly/srcrepair.svg?label=license&maxAge=60)](COPYING)
+
 =========
 **SRC Repair** (ex. TF2 Repair) is a free open source tool that can be used for tuning and cleaning up Steam and Source
 engine games. You can also create and edit .cfg files (configs), backup and restore game settings, apply FPS configs or
@@ -15,7 +20,7 @@ sprays into the game with one click.
 
 **Dependencies on Windows**: [Microsoft .NET Framework 4.6.1](https://www.microsoft.com/en-us/download/details.aspx?id=49981).
 
-Downloads [![SourceForge](https://img.shields.io/sourceforge/dt/srcrepair.svg?maxAge=2592000)](https://sourceforge.net/projects/srcrepair/files/)
+Downloads
 =========
 Download application (always contains latest version):
 
