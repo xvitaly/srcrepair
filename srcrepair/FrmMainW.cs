@@ -503,7 +503,7 @@ namespace srcrepair
             switch (SelGame.SourceType)
             {
                 case "1":
-                    NullType1Settings();
+                    if (App.Platform.OS == CurrentPlatform.OSType.Windows) { NullType1Settings(); } else { NullType2Settings(); }
                     break;
                 case "2":
                     NullType2Settings();
