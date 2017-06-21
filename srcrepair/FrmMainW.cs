@@ -639,7 +639,7 @@ namespace srcrepair
             switch (SelGame.SourceType)
             {
                 case "1":
-                    PrepareWriteType1VideoSettings();
+                    if (App.Platform.OS == CurrentPlatform.OSType.Windows) { PrepareWriteType1VideoSettings(); } else { PrepareWriteType2VideoSettings(); }
                     break;
                 case "2":
                     PrepareWriteType2VideoSettings();
