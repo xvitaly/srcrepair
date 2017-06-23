@@ -179,7 +179,7 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://www.easycoding.org/donate.
+        ///   Looks up a localized string similar to https://github.com/xvitaly/srcrepair/blob/master/tfiles/donate.md.
         /// </summary>
         internal static string AppURLDonate {
             get {
