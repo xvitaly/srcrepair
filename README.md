@@ -4,7 +4,7 @@ SRC Repair
 [![Build status](https://travis-ci.org/xvitaly/srcrepair.svg?branch=master)](https://travis-ci.org/xvitaly/srcrepair)
 [![Build status](https://ci.appveyor.com/api/projects/status/9r2yma3aab972blf?svg=true)](https://ci.appveyor.com/project/xvitaly/srcrepair)
 [![GitHub issues](https://img.shields.io/github/issues/xvitaly/srcrepair.svg?label=issues&maxAge=60)](https://github.com/xvitaly/srcrepair/issues)
-[![Bitcoin donate](https://img.shields.io/badge/Bitcoin-donate-yellow.svg)](https://blockchain.info/payment_request?address=1WGFbQxLiPVhDvprjttKaY6rRMjhA7vto)
+[![Bitcoin donate](https://img.shields.io/badge/Bitcoin-donate-yellow.svg)](tfiles/donate.md)
 [![GitHub license](https://img.shields.io/github/license/xvitaly/srcrepair.svg?label=license&maxAge=60)](COPYING)
 ---
 
