@@ -5,7 +5,6 @@ SRC Repair
 [![Build status](https://ci.appveyor.com/api/projects/status/9r2yma3aab972blf?svg=true)](https://ci.appveyor.com/project/xvitaly/srcrepair)
 [![GitHub issues](https://img.shields.io/github/issues/xvitaly/srcrepair.svg?label=issues&maxAge=60)](https://github.com/xvitaly/srcrepair/issues)
 [![Bitcoin donate](https://img.shields.io/badge/Bitcoin-donate-yellow.svg)](tfiles/donate.md)
-[![GitHub license](https://img.shields.io/github/license/xvitaly/srcrepair.svg?label=license&maxAge=60)](COPYING)
 ---
 
 **SRC Repair** (ex. TF2 Repair) is a free open source tool that can be used for tuning and cleaning up Steam and Source
