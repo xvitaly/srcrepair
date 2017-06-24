@@ -1,5 +1,6 @@
 SRC Repair
 =========
+[![GitHub version](https://badge.fury.io/gh/xvitaly%2Fsrcrepair.svg)](https://github.com/xvitaly/srcrepair/releases)
 [![SourceForge downloads](https://img.shields.io/sourceforge/dt/srcrepair.svg?label=downloads&maxAge=60)](https://sourceforge.net/projects/srcrepair/files/)
 [![Build status](https://travis-ci.org/xvitaly/srcrepair.svg?branch=master)](https://travis-ci.org/xvitaly/srcrepair)
 [![Build status](https://ci.appveyor.com/api/projects/status/9r2yma3aab972blf?svg=true)](https://ci.appveyor.com/project/xvitaly/srcrepair)
