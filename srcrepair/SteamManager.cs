@@ -68,6 +68,16 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Тестирует переданный каталог в качестве пути установки Steam.
+        /// </summary>
+        /// <param name="SteamPath">Каталог установки Steam</param>
+        /// <returns>Каталог установки Steam</returns>
+        public static string TrySteamPath(string SteamPath)
+        {
+            if (Directory.Exists(SteamPath)) { return SteamPath; } else { throw new DirectoryNotFoundException(); }
+        }
+
+        /// <summary>
         /// Возвращает путь к главному VDF конфигу Steam.
         /// </summary>
         /// <param name="SteamPath">Каталог установки Steam</param>
