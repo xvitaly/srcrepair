@@ -1216,7 +1216,19 @@ namespace srcrepair
             SourceGames = new List<SourceGame>();
 
             // Узнаем путь к установленному клиенту Steam...
-            try { App.FullSteamPath = SteamManager.GetSteamPath(); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); ValidateAndHandle(); }
+            try
+            {
+                switch (App.Platform.OS)
+                {
+                    case CurrentPlatform.OSType.Windows:
+                        App.FullSteamPath = SteamManager.GetSteamPath();
+                        break;
+                    default:
+                        App.FullSteamPath = SteamManager.TrySteamPath(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Steam"));
+                        break;
+                }
+            }
+            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); ValidateAndHandle(); }
 
             // Начинаем платформо-зависимые процедуры...
             ChangePrvControlState(ProcessManager.IsCurrentUserAdmin());
