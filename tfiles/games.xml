@@ -123,7 +123,7 @@
   <Game Name="Age of Chivalry">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>age of chivalry</DirName>
+    <DirName>Source SDK Base 2007</DirName>
     <SmallName>ageofchivalry</SmallName>
     <VFDir>ageofchivalry</VFDir>
     <UserDir>0</UserDir>
@@ -135,7 +135,7 @@
   <Game Name="D.I.P.R.I.P.: Warm Up">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>diprip warm up</DirName>
+    <DirName>Source SDK Base 2007</DirName>
     <SmallName>diprip</SmallName>
     <VFDir>diprip</VFDir>
     <UserDir>0</UserDir>
@@ -159,7 +159,7 @@
   <Game Name="Insurgency: Modern Infantry Combat">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>insurgency</DirName>
+    <DirName>Source SDK Base</DirName>
     <SmallName>insurgency</SmallName>
     <VFDir>insurgency</VFDir>
     <UserDir>0</UserDir>
@@ -183,7 +183,7 @@
   <Game Name="Smashball">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>smashball</DirName>
+    <DirName>Source SDK Base 2007</DirName>
     <SmallName>Smashball</SmallName>
     <VFDir>Smashball</VFDir>
     <UserDir>0</UserDir>
@@ -207,7 +207,7 @@
   <Game Name="Zombie Panic! Source">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>zombie panic! source</DirName>
+    <DirName>Source SDK Base 2007</DirName>
     <SmallName>zps</SmallName>
     <VFDir>zps</VFDir>
     <UserDir>0</UserDir>
