@@ -31,6 +31,7 @@ Supported games
 Supported Valve games:
  * Team Fortress 2;
  * Counter-Strike: Source;
+ * Counter-Strike Global Offensive;
  * Day of Defeat: Source;
  * Half-Life 2;
  * Half-Life 2: Deathmatch;
@@ -43,10 +44,7 @@ Supported Valve games:
  * Left 4 Dead;
  * Left 4 Dead 2;
  * Portal 2;
- * Alien Swarm;
- * Dota 2;
- * Dota 2 Beta;
- * Counter-Strike Global Offensive.
+ * Alien Swarm.
 
 Supported mods and third-party Source engine games:
  * Garry’s Mod;
