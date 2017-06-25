@@ -8,8 +8,8 @@
 ; Запрещается использовать этот файл при использовании любой
 ; лицензии, отличной от GNU GPL версии 3 и с ней совместимой.
 ; 
-; Официальный блог EasyCoding Team: http://www.easycoding.org/
-; Официальная страница проекта: http://www.easycoding.org/projects/srcrepair
+; Официальный блог EasyCoding Team: https://www.easycoding.org/
+; Официальная страница проекта: https://www.easycoding.org/projects/srcrepair
 ; 
 ; Более подробная инфорация о программе в readme.txt, о лицензии - в GPL.txt.
 
@@ -20,14 +20,14 @@ AppName=SRC Repair
 AppVerName=SRC Repair
 AppPublisher=EasyCoding Team
 AppPublisherURL=https://www.easycoding.org/
-AppVersion=27.0.0.4826
+AppVersion=28.0.0.5138
 AppSupportURL=https://www.easycoding.org/projects/srcrepair
 AppUpdatesURL=https://www.easycoding.org/projects/srcrepair
 DefaultDirName={code:GetDefRoot}\SRC Repair
 DefaultGroupName=SRC Repair
 AllowNoIcons=yes
 LicenseFile=COPYING
-OutputBaseFilename=srcrepair_270_final
+OutputBaseFilename=srcrepair_280_final
 SetupIconFile=srcrepair.ico
 UninstallDisplayIcon={app}\srcrepair.exe
 Compression=lzma2
@@ -37,7 +37,7 @@ ArchitecturesInstallIn64BitMode=x64
 MinVersion=6.1
 
 ; Здесь указываем данные, которые будут добавлены в свойства установщика...
-VersionInfoVersion=27.0.0.4826
+VersionInfoVersion=28.0.0.5138
 VersionInfoDescription=SRC Repair Setup
 VersionInfoCopyright=(c) 2005-2017 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
