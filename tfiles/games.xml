@@ -3,7 +3,7 @@
   <Game Name="Team Fortress 2">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>team fortress 2</DirName>
+    <DirName>Team Fortress 2</DirName>
     <SmallName>tf</SmallName>
     <VFDir>tf</VFDir>
     <UserDir>1</UserDir>
@@ -15,7 +15,7 @@
   <Game Name="Counter-Strike: Source">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>counter-strike source</DirName>
+    <DirName>Counter-Strike Source</DirName>
     <SmallName>cstrike</SmallName>
     <VFDir>cstrike</VFDir>
     <UserDir>1</UserDir>
@@ -27,7 +27,7 @@
   <Game Name="Day of Defeat: Source">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>day of defeat source</DirName>
+    <DirName>Day of Defeat Source</DirName>
     <SmallName>dod</SmallName>
     <VFDir>dod</VFDir>
     <UserDir>1</UserDir>
@@ -39,7 +39,7 @@
   <Game Name="Half-Life 2: Deathmatch">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>half-life 2 deathmatch</DirName>
+    <DirName>Half-Life 2 Deathmatch</DirName>
     <SmallName>hl2mp</SmallName>
     <VFDir>hl2mp</VFDir>
     <UserDir>0</UserDir>
@@ -51,7 +51,7 @@
   <Game Name="Half-Life 2">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>half-life 2</DirName>
+    <DirName>Half-Life 2</DirName>
     <SmallName>hl2</SmallName>
     <VFDir>hl2</VFDir>
     <UserDir>0</UserDir>
@@ -63,7 +63,7 @@
   <Game Name="Half-Life 2: Episode One">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>half-life 2 episode one</DirName>
+    <DirName>Half-Life 2</DirName>
     <SmallName>episodic</SmallName>
     <VFDir>episodic</VFDir>
     <UserDir>0</UserDir>
@@ -75,7 +75,7 @@
   <Game Name="Half-Life 2: Episode Two">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>half-life 2 episode two</DirName>
+    <DirName>Half-Life 2</DirName>
     <SmallName>ep2</SmallName>
     <VFDir>ep2</VFDir>
     <UserDir>0</UserDir>
@@ -87,7 +87,7 @@
   <Game Name="Half-Life 2: Lost Coast">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>half-life 2 lostcoast</DirName>
+    <DirName>Half-Life 2</DirName>
     <SmallName>lostcoast</SmallName>
     <VFDir>lostcoast</VFDir>
     <UserDir>0</UserDir>
@@ -99,7 +99,7 @@
   <Game Name="Portal">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>portal</DirName>
+    <DirName>Portal</DirName>
     <SmallName>portal</SmallName>
     <VFDir>portal</VFDir>
     <UserDir>0</UserDir>
@@ -111,7 +111,7 @@
   <Game Name="Garry's Mod">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>garrysmod</DirName>
+    <DirName>GarrysMod</DirName>
     <SmallName>garrysmod</SmallName>
     <VFDir>garrysmod</VFDir>
     <UserDir>0</UserDir>
@@ -147,7 +147,7 @@
   <Game Name="Dystopia">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>dystopia</DirName>
+    <DirName>Dystopia</DirName>
     <SmallName>Dystopia</SmallName>
     <VFDir>Dystopia</VFDir>
     <UserDir>0</UserDir>
@@ -195,7 +195,7 @@
   <Game Name="Synergy">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>synergy</DirName>
+    <DirName>Synergy</DirName>
     <SmallName>synergy</SmallName>
     <VFDir>synergy</VFDir>
     <UserDir>0</UserDir>
@@ -219,7 +219,7 @@
   <Game Name="Half-Life: Source">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>half-life source</DirName>
+    <DirName>Half-Life 2</DirName>
     <SmallName>hl1</SmallName>
     <VFDir>hl1</VFDir>
     <UserDir>0</UserDir>
@@ -231,7 +231,7 @@
   <Game Name="Half-Life Deathmatch: Source">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>half-life deathmatch source</DirName>
+    <DirName>Half-Life 1 Source Deathmatch</DirName>
     <SmallName>hl1mp</SmallName>
     <VFDir>hl1mp</VFDir>
     <UserDir>0</UserDir>
@@ -255,7 +255,7 @@
   <Game Name="Left 4 Dead 2">
     <Enabled>1</Enabled>
     <HasVF>1</HasVF>
-    <DirName>left 4 dead 2</DirName>
+    <DirName>Left 4 Dead 2</DirName>
     <SmallName>left4dead2</SmallName>
     <VFDir>left4dead2</VFDir>
     <UserDir>0</UserDir>
@@ -267,7 +267,7 @@
   <Game Name="Alien Swarm">
     <Enabled>1</Enabled>
     <HasVF>1</HasVF>
-    <DirName>alien swarm</DirName>
+    <DirName>Alien Swarm</DirName>
     <SmallName>swarm</SmallName>
     <VFDir>swarm</VFDir>
     <UserDir>0</UserDir>
@@ -279,7 +279,7 @@
   <Game Name="Portal 2">
     <Enabled>1</Enabled>
     <HasVF>1</HasVF>
-    <DirName>portal 2</DirName>
+    <DirName>Portal 2</DirName>
     <SmallName>portal2</SmallName>
     <VFDir>update</VFDir>
     <UserDir>0</UserDir>
@@ -300,7 +300,7 @@
     <SVer>3</SVer>
     <Executable>dota.exe</Executable>
   </Game>
-  <Game Name="Dota 2 Beta">
+  <Game Name="Dota 2: Reborn">
     <Enabled>0</Enabled>
     <HasVF>1</HasVF>
     <DirName>dota 2 beta</DirName>
@@ -312,22 +312,10 @@
     <SVer>3</SVer>
     <Executable>dota2.exe</Executable>
   </Game>
-  <Game Name="Dota 2 Test">
-    <Enabled>0</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>dota 2 test</DirName>
-    <SmallName>dota</SmallName>
-    <VFDir>dota</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>570</SID>
-    <SVer>3</SVer>
-    <Executable>dota2.exe</Executable>
-  </Game>
   <Game Name="Counter-Strike Global Offensive">
     <Enabled>1</Enabled>
     <HasVF>1</HasVF>
-    <DirName>counter-strike global offensive</DirName>
+    <DirName>Counter-Strike Global Offensive</DirName>
     <SmallName>csgo</SmallName>
     <VFDir>csgo</VFDir>
     <UserDir>0</UserDir>
@@ -339,7 +327,7 @@
   <Game Name="Nuclear Dawn">
     <Enabled>1</Enabled>
     <HasVF>1</HasVF>
-    <DirName>nuclear dawn</DirName>
+    <DirName>Nuclear Dawn</DirName>
     <SmallName>nucleardawn</SmallName>
     <VFDir>nucleardawn</VFDir>
     <UserDir>0</UserDir>
@@ -351,7 +339,7 @@
   <Game Name="Postal III">
     <Enabled>1</Enabled>
     <HasVF>1</HasVF>
-    <DirName>postal iii</DirName>
+    <DirName>Postal III</DirName>
     <SmallName>p3</SmallName>
     <VFDir>p3</VFDir>
     <UserDir>0</UserDir>
@@ -363,7 +351,7 @@
   <Game Name="E.Y.E.: Divine Cybermancy">
     <Enabled>1</Enabled>
     <HasVF>1</HasVF>
-    <DirName>eye</DirName>
+    <DirName>EYE</DirName>
     <SmallName>EYE</SmallName>
     <VFDir>EYE</VFDir>
     <UserDir>0</UserDir>
@@ -375,7 +363,7 @@
   <Game Name="Dark Messiah MM SP">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>dark messiah might and magic single player</DirName>
+    <DirName>Dark Messiah Might and Magic Single Player</DirName>
     <SmallName>mm</SmallName>
     <VFDir>mm</VFDir>
     <UserDir>0</UserDir>
@@ -387,19 +375,19 @@
   <Game Name="Dark Messiah MM MP">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>dark messiah might and magic multiplayer</DirName>
+    <DirName>Dark Messiah Might and Magic Multi-Player</DirName>
     <SmallName>mm</SmallName>
     <VFDir>mm</VFDir>
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
-    <SID>2100</SID>
+    <SID>2130</SID>
     <SVer>1</SVer>
     <Executable>mm.exe</Executable>
   </Game>
   <Game Name="The Ship">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>the ship</DirName>
+    <DirName>The Ship</DirName>
     <SmallName>ship</SmallName>
     <VFDir>ship</VFDir>
     <UserDir>0</UserDir>
@@ -411,7 +399,7 @@
   <Game Name="The Ship Singleplayer">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>the ship single player</DirName>
+    <DirName>The Ship Single Player</DirName>
     <SmallName>ship</SmallName>
     <VFDir>ship</VFDir>
     <UserDir>0</UserDir>
@@ -423,7 +411,7 @@
   <Game Name="SiN Episodes: Emergence">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>sin episodes emergence</DirName>
+    <DirName>SiN Episodes Emergence</DirName>
     <SmallName>SE1</SmallName>
     <VFDir>SE1</VFDir>
     <UserDir>0</UserDir>
@@ -435,7 +423,7 @@
   <Game Name="Vampire: The Masquerade - Bloodlines">
     <Enabled>1</Enabled>
     <HasVF>1</HasVF>
-    <DirName>vampire the masquerade - bloodlines</DirName>
+    <DirName>Vampire The Masquerade - Bloodlines</DirName>
     <SmallName>vampire</SmallName>
     <VFDir>vampire</VFDir>
     <UserDir>0</UserDir>
@@ -447,7 +435,7 @@
   <Game Name="Zeno Clash">
     <Enabled>1</Enabled>
     <HasVF>1</HasVF>
-    <DirName>zenoclash</DirName>
+    <DirName>ZenoClash</DirName>
     <SmallName>zenozoik</SmallName>
     <VFDir>zenozoik</VFDir>
     <UserDir>0</UserDir>
@@ -459,7 +447,7 @@
   <Game Name="Dear Esther">
     <Enabled>1</Enabled>
     <HasVF>1</HasVF>
-    <DirName>dear esther</DirName>
+    <DirName>Dear Esther</DirName>
     <SmallName>dearesther</SmallName>
     <VFDir>dearesther</VFDir>
     <UserDir>0</UserDir>
@@ -495,7 +483,7 @@
   <Game Name="Bloody Good Time">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>bloody good time</DirName>
+    <DirName>Bloody Good Time</DirName>
     <SmallName>pm</SmallName>
     <VFDir>pm</VFDir>
     <UserDir>0</UserDir>
@@ -507,7 +495,7 @@
   <Game Name="Revelations 2012">
     <Enabled>1</Enabled>
     <HasVF>1</HasVF>
-    <DirName>revelations 2012</DirName>
+    <DirName>Revelations 2012</DirName>
     <SmallName>revelations</SmallName>
     <VFDir>revelations</VFDir>
     <UserDir>0</UserDir>
@@ -519,7 +507,7 @@
   <Game Name="MINERVA: Metastasis">
     <Enabled>1</Enabled>
     <HasVF>0</HasVF>
-    <DirName>Minerva</DirName>
+    <DirName>MINERVA</DirName>
     <SmallName>minerva</SmallName>
     <VFDir>minerva</VFDir>
     <UserDir>0</UserDir>
@@ -699,7 +687,7 @@
   <Game Name="Alien Swarm: Reactive Drop">
     <Enabled>1</Enabled>
     <HasVF>1</HasVF>
-    <DirName>reactivedrop</DirName>
+    <DirName>Alien Swarm Reactive Drop</DirName>
     <SmallName>reactivedrop</SmallName>
     <VFDir>reactivedrop</VFDir>
     <UserDir>0</UserDir>
