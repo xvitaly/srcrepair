@@ -236,12 +236,11 @@ namespace srcrepair
                         Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, FileName));
                         break;
                     case CurrentPlatform.OSType.Linux:
-                        Process.Start(Properties.Resources.AppOpenHandlerLin, Path.GetDirectoryName(FileName));
+                        Process.Start(Properties.Resources.AppOpenHandlerLin, String.Format("\"{0}\"", Path.GetDirectoryName(FileName)));
                         break;
                     case CurrentPlatform.OSType.MacOSX:
-                        Process.Start(Properties.Resources.AppOpenHandlerMac, Path.GetDirectoryName(FileName));
+                        Process.Start(Properties.Resources.AppOpenHandlerMac, String.Format("\"{0}\"", Path.GetDirectoryName(FileName)));
                         break;
-                    
                 }
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
