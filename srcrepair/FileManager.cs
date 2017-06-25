@@ -86,26 +86,41 @@ namespace srcrepair
         /// <summary>
         /// Определяет путь к файлу Hosts...
         /// </summary>
+        /// <param name="OS">Платформа, на которой запущен плагин</param>
         /// <returns>Полный путь к Hosts...</returns>
-        public static string GetHostsFileFullPath()
+        public static string GetHostsFileFullPath(CurrentPlatform.OSType OS)
         {
+            // Создаём переменную для промежуточного хранения результата...
             string Result = String.Empty;
-            try
+
+            // Определяем платформу, на которой запущено приложение...
+            if (OS == CurrentPlatform.OSType.Windows)
             {
-                // Получим путь к файлу hosts (вдруг он переопределён каким-либо зловредом)...
-                RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\Tcpip\Parameters", false);
-                if (ResKey != null) { Result = (string)ResKey.GetValue("DataBasePath"); }
-                // Проверим получен ли путь из реестра. Если нет, вставим стандартный...
-                if (String.IsNullOrWhiteSpace(Result)) { Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc"); }
+                try
+                {
+                    // Получим путь к файлу hosts (вдруг он переопределён каким-либо зловредом)...
+                    RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\Tcpip\Parameters", false);
+                    if (ResKey != null) { Result = (string)ResKey.GetValue("DataBasePath"); }
+                    
+                    // Проверим получен ли путь из реестра. Если нет, вставим стандартный...
+                    if (String.IsNullOrWhiteSpace(Result)) { Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc"); }
+                }
+                catch
+                {
+                    // Произошло исключение, поэтому укажем вручную...
+                    Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc");
+                }
             }
-            catch
+            else
             {
-                // Произошло исключение, поэтому укажем вручную...
-                Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc");
+                // Мы под Unix, поэтому вставим стандартный путь к /etc...
+                Result = "/etc";
             }
 
             // Сгенерируем полный путь к файлу hosts...
             Result = Path.Combine(Result, "hosts");
+
+            // Возвращаем результат...
             return Result;
         }
 

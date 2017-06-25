@@ -101,7 +101,7 @@ namespace srcrepair
             // Генерируем именя файлов с полными путями...
             string RepName = String.Format("report_{0}.{1}", CrDt, "txt");
             string ArchName = Path.Combine(RepDir, Path.ChangeExtension(RepName, ".zip"));
-            string HostsFile = FileManager.GetHostsFileFullPath();
+            string HostsFile = FileManager.GetHostsFileFullPath(CurrentPlatform.OSType.Windows);
             string FNameRep = Path.Combine(TempDir, RepName);
             string FNameFPSCfg = Path.Combine(TempDir, String.Format("fpscfg_{0}.zip", CrDt));
             string FNamePing = Path.Combine(TempDir, String.Format("ping_{0}.log", CrDt));
