@@ -61,7 +61,8 @@ namespace srcrepair
                         return Properties.Resources.SteamExecBinLin;
                     case OSType.MacOSX:
                         return Properties.Resources.SteamExecBinMac;
-                    default: return String.Empty;
+                    default:
+                        throw new PlatformNotSupportedException();
                 }
             }
         }
@@ -81,7 +82,8 @@ namespace srcrepair
                         return Properties.Resources.SteamAppsFolderNameLin;
                     case OSType.MacOSX:
                         return Properties.Resources.SteamAppsFolderNameMac;
-                    default: return String.Empty;
+                    default:
+                        throw new PlatformNotSupportedException();
                 }
             }
         }
@@ -101,7 +103,8 @@ namespace srcrepair
                         return Properties.Resources.SteamProcNameLin;
                     case OSType.MacOSX:
                         return Properties.Resources.SteamProcNameMac;
-                    default: return String.Empty;
+                    default:
+                        throw new PlatformNotSupportedException();
                 }
             }
         }
