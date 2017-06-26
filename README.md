@@ -20,6 +20,8 @@ sprays into the game with one click.
 
 **Dependencies on Windows**: [Microsoft .NET Framework 4.6.1](https://www.microsoft.com/en-us/download/details.aspx?id=49981).
 
+**Dependencies on other OS**: [Mono 4.2.x](http://www.mono-project.com/download/) or above.
+
 Downloads
 =========
 Download application (always contains latest version):
