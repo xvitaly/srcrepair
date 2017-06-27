@@ -12,7 +12,7 @@ SRC Repair
 engine games. You can also create and edit .cfg files (configs), backup and restore game settings, apply FPS configs or
 sprays into the game with one click.
 
-**License**: GNU GPL version 3.
+**License**: [GNU GPL version 3](COPYING).
 
 **Supported OS**: Windows 7 SP1, 8, 8.1, 10 (all editions except Starter), GNU/Linux (Mono), MacOS X (mono).
 
