@@ -2180,7 +2180,7 @@ namespace srcrepair
         private void MNUUpdateCheck_Click(object sender, EventArgs e)
         {
             // Откроем форму модуля проверки обновлений...
-            FormManager.FormShowUpdater(App.UserAgent, App.FullAppPath, App.AppUserDir);
+            FormManager.FormShowUpdater(App.UserAgent, App.FullAppPath, App.AppUserDir, App.Platform.OS);
             
             // Перечитаем базу игр...
             FindGames();
