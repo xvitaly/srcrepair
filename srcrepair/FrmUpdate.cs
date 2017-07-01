@@ -64,6 +64,11 @@ namespace srcrepair
         private string FullAppPath { get; set; }
 
         /// <summary>
+        /// Хранит тип ОС, под которой запущено приложение.
+        /// </summary>
+        private CurrentPlatform.OSType OS { get; set; }
+
+        /// <summary>
         /// Устанавливает дату последней проверки обновлений приложения.
         /// </summary>
         private void UpdateTimeSetApp()
