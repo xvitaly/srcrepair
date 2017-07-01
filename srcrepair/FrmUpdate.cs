@@ -35,12 +35,14 @@ namespace srcrepair
         /// <param name="UA">Заголовок UserAgent</param>
         /// <param name="A">Путь к каталогу программы</param>
         /// <param name="U">Путь к пользовательскому каталогу</param>
-        public FrmUpdate(string UA, string A, string U)
+        /// <param name="O">Тип ОС, под которой запущено приложение</param>
+        public FrmUpdate(string UA, string A, string U, CurrentPlatform.OSType O)
         {
             InitializeComponent();
             UserAgent = UA;
             FullAppPath = A;
             AppUserDir = U;
+            OS = O;
         }
 
         /// <summary>
