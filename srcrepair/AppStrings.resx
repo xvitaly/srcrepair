@@ -669,4 +669,7 @@
   <data name="AppIncorrectSrcVersion" xml:space="preserve">
     <value>Incorrect Source version detected. This game is not fully supported. Please report this bug to developers!</value>
   </data>
+  <data name="UPD_AppOtherPlatform" xml:space="preserve">
+    <value>Automatic updates on {0} platform is not supported yet. Please install update from official site manually.</value>
+  </data>
 </root>

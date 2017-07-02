@@ -1582,6 +1582,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Automatic updates on {0} platform is not supported yet. Please install update from official site manually..
+        /// </summary>
+        internal static string UPD_AppOtherPlatform {
+            get {
+                return ResourceManager.GetString("UPD_AppOtherPlatform", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Application update available. New version: {0}..
         /// </summary>
         internal static string UPD_AppUpdateAvail {
