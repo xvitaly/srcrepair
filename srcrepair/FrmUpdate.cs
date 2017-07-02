@@ -36,13 +36,13 @@ namespace srcrepair
         /// <param name="A">Путь к каталогу программы</param>
         /// <param name="U">Путь к пользовательскому каталогу</param>
         /// <param name="O">Тип ОС, под которой запущено приложение</param>
-        public FrmUpdate(string UA, string A, string U, CurrentPlatform.OSType O)
+        public FrmUpdate(string UA, string A, string U, CurrentPlatform O)
         {
             InitializeComponent();
             UserAgent = UA;
             FullAppPath = A;
             AppUserDir = U;
-            OS = O;
+            Platform = O;
         }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace srcrepair
         /// <summary>
         /// Хранит тип ОС, под которой запущено приложение.
         /// </summary>
-        private CurrentPlatform.OSType OS { get; set; }
+        private CurrentPlatform Platform { get; set; }
 
         /// <summary>
         /// Устанавливает дату последней проверки обновлений приложения.
@@ -284,11 +284,20 @@ namespace srcrepair
                 // Проверяем наличие обновлений программы...
                 if (UpMan.CheckAppUpdate())
                 {
-                    // Устанавливаем доступное обновление...
-                    if (InstallBinaryUpdate(UpMan.AppUpdateURL, UpMan.AppUpdateHash))
+                    // Проверяем платформу, на которой запущено приложение...
+                    if (Platform.OS == CurrentPlatform.OSType.Windows)
                     {
-                        // Загрузка завершилась успешно. Завершаем работу приложения для установки...
-                        Environment.Exit(9);
+                        // Устанавливаем доступное обновление...
+                        if (InstallBinaryUpdate(UpMan.AppUpdateURL, UpMan.AppUpdateHash))
+                        {
+                            // Загрузка завершилась успешно. Завершаем работу приложения для установки...
+                            Environment.Exit(9);
+                        }
+                    }
+                    else
+                    {
+                        // Платформа не Windows, выведем сообщение...
+                        MessageBox.Show(String.Format(AppStrings.UPD_AppOtherPlatform, Platform.OSFriendlyName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
