@@ -198,10 +198,10 @@ namespace srcrepair
         /// <param name="UserAgent">Заголовок HTTP User-Agent, который будет отправляться при проверке обновлений</param>
         /// <param name="FullAppPath">Полный путь к каталогу установки программы</param>
         /// <param name="AppUserDir">Путь к каталогу пользователя программы</param>
-        /// <param name="OS">Тип ОС, под которой запущено приложение</param>
-        public static void FormShowUpdater(string UserAgent, string FullAppPath, string AppUserDir, CurrentPlatform.OSType OS)
+        /// <param name="Platform">Тип ОС, под которой запущено приложение</param>
+        public static void FormShowUpdater(string UserAgent, string FullAppPath, string AppUserDir, CurrentPlatform Platform)
         {
-            using (FrmUpdate UpdFrm = new FrmUpdate(UserAgent, FullAppPath, AppUserDir, OS))
+            using (FrmUpdate UpdFrm = new FrmUpdate(UserAgent, FullAppPath, AppUserDir, Platform))
             {
                 UpdFrm.ShowDialog();
             }
