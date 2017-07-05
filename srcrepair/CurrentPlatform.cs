@@ -109,6 +109,24 @@ namespace srcrepair
             }
         }
 
+        public string UASuffix
+        {
+            get
+            {
+                switch (OS)
+                {
+                    case OSType.Windows:
+                        return Properties.Resources.AppUASuffixWin;
+                    case OSType.Linux:
+                        return Properties.Resources.AppUASuffixOther;
+                    case OSType.MacOSX:
+                        return Properties.Resources.AppUASuffixOther;
+                    default:
+                        throw new PlatformNotSupportedException();
+                }
+            }
+        }
+
         /// <summary>
         /// Возвращает код текущей платформы, на которой запущено приложение.
         /// </summary>
