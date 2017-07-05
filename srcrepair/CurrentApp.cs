@@ -119,7 +119,7 @@ namespace srcrepair
             }
 
             // Генерируем User-Agent для SRC Repair...
-            UserAgent = String.Format(Properties.Resources.AppDefUA, Platform.OSFriendlyName, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersion, Properties.Resources.AppName, SystemArch);
+            UserAgent = String.Format(Properties.Resources.AppDefUA, "NT", Platform.OSFriendlyName, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersion, Properties.Resources.AppName, SystemArch);
         }
     }
 }
