@@ -179,6 +179,24 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to (mono).
+        /// </summary>
+        internal static string AppUASuffixOther {
+            get {
+                return ResourceManager.GetString("AppUASuffixOther", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NT.
+        /// </summary>
+        internal static string AppUASuffixWin {
+            get {
+                return ResourceManager.GetString("AppUASuffixWin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to https://github.com/xvitaly/srcrepair/blob/master/tfiles/donate.md.
         /// </summary>
         internal static string AppURLDonate {

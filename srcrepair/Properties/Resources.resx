@@ -424,4 +424,10 @@
   <data name="AppURLDonate" xml:space="preserve">
     <value>https://github.com/xvitaly/srcrepair/blob/master/tfiles/donate.md</value>
   </data>
+  <data name="AppUASuffixOther" xml:space="preserve">
+    <value>(mono)</value>
+  </data>
+  <data name="AppUASuffixWin" xml:space="preserve">
+    <value>NT</value>
+  </data>
 </root>
