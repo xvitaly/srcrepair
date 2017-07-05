@@ -109,6 +109,9 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Возвращает платформо-зависимый суффикс для заголовка HTTP_USER_AGENT.
+        /// </summary>
         public string UASuffix
         {
             get
