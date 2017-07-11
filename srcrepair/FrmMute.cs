@@ -160,7 +160,7 @@ namespace srcrepair
         /// </summary>
         private void AboutDlg(object sender, EventArgs e)
         {
-            MessageBox.Show(String.Format(AppStrings.AppPluginAboutDlg, Text, CurrentApp.AppCompany), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            FormManager.FormShowAboutApp();
         }
 
         /// <summary>
