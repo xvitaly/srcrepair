@@ -259,15 +259,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} by {1}..
-        /// </summary>
-        internal static string AppPluginAboutDlg {
-            get {
-                return ResourceManager.GetString("AppPluginAboutDlg", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to {0}?.
         /// </summary>
         internal static string AppQuestionTemplate {
