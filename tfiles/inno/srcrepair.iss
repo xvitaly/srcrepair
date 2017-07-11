@@ -34,7 +34,7 @@ Compression=lzma2
 SolidCompression=yes
 PrivilegesRequired=lowest
 ArchitecturesInstallIn64BitMode=x64
-MinVersion=6.1
+MinVersion=6.1.7601
 
 ; Здесь указываем данные, которые будут добавлены в свойства установщика...
 VersionInfoVersion=28.0.0.5138
