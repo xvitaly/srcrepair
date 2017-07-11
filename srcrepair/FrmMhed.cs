@@ -218,7 +218,7 @@ namespace srcrepair
         /// </summary>
         private void HEd_M_About_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(String.Format(Properties.Resources.AHE_About, PluginName, Properties.Resources.AppName, CurrentApp.AppCompany, PluginVersion), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            FormManager.FormShowAboutApp();
         }
 
         /// <summary>
