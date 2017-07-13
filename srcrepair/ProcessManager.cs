@@ -140,11 +140,7 @@ namespace srcrepair
             Process NewProcess = Process.Start(ST);
 
             // Ждём завершения процесса...
-            while (!(NewProcess.HasExited))
-            {
-                // Заставляем приложение "заснуть"...
-                Thread.Sleep(1200);
-            }
+            NewProcess.WaitForExit();
         }
 
         /// <summary>
