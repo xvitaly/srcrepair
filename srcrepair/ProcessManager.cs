@@ -21,7 +21,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Security.Permissions;
 using System.Security.Principal;
-using System.Threading;
 
 namespace srcrepair
 {
