@@ -696,4 +696,16 @@
     <SVer>2</SVer>
     <Executable>reactivedrop.exe</Executable>
   </Game>
+  <Game Name="Dino D-Day">
+    <Enabled>1</Enabled>
+    <HasVF>1</HasVF>
+    <DirName>Dino D-Day</DirName>
+    <SmallName>dinodday</SmallName>
+    <VFDir>dinodday</VFDir>
+    <UserDir>0</UserDir>
+    <HUDsAvail>0</HUDsAvail>
+    <SID>70000</SID>
+    <SVer>2</SVer>
+    <Executable>dinodday.exe</Executable>
+  </Game>
 </Games>
