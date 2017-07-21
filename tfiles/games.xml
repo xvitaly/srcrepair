@@ -720,4 +720,16 @@
     <SVer>1</SVer>
     <Executable>stanley.exe</Executable>
   </Game>
+  <Game Name="Double Action: Boogaloo">
+    <Enabled>1</Enabled>
+    <HasVF>0</HasVF>
+    <DirName>Double Action</DirName>
+    <SmallName>dab</SmallName>
+    <VFDir>dab</VFDir>
+    <UserDir>0</UserDir>
+    <HUDsAvail>0</HUDsAvail>
+    <SID>317360</SID>
+    <SVer>1</SVer>
+    <Executable>hl2.exe</Executable>
+  </Game>
 </Games>
