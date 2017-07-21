@@ -756,4 +756,16 @@
     <SVer>2</SVer>
     <Executable>berimbau.exe</Executable>
   </Game>
+  <Game Name="The Beginner's Guide">
+    <Enabled>1</Enabled>
+    <HasVF>1</HasVF>
+    <DirName>The Beginners Guide</DirName>
+    <SmallName>beginnersguide</SmallName>
+    <VFDir>beginnersguide</VFDir>
+    <UserDir>0</UserDir>
+    <HUDsAvail>0</HUDsAvail>
+    <SID>303210</SID>
+    <SVer>2</SVer>
+    <Executable>beginnersguide.exe</Executable>
+  </Game>
 </Games>
