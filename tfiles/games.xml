@@ -708,4 +708,16 @@
     <SVer>2</SVer>
     <Executable>dinodday.exe</Executable>
   </Game>
+  <Game Name="The Stanley Parable">
+    <Enabled>1</Enabled>
+    <HasVF>0</HasVF>
+    <DirName>The Stanley Parable</DirName>
+    <SmallName>thestanleyparable</SmallName>
+    <VFDir>thestanleyparable</VFDir>
+    <UserDir>0</UserDir>
+    <HUDsAvail>0</HUDsAvail>
+    <SID>221910</SID>
+    <SVer>1</SVer>
+    <Executable>stanley.exe</Executable>
+  </Game>
 </Games>
