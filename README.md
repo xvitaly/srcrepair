@@ -85,7 +85,15 @@ Supported mods and third-party Source engine games:
  * Prospekt;
  * Transmissions: Element 120;
  * Half-Life 2: DownFall;
- * Alien Swarm: Reactive Drop.
+ * Alien Swarm: Reactive Drop;
+ * Dino D-Day;
+ * The Stanley Parable;
+ * Double Action: Boogaloo;
+ * CONSORTIUM;
+ * Blade Symphony;
+ * The Beginner's Guide;
+ * Codename CURE;
+ * INFRA.
 
 3rd party libraries
 =========
