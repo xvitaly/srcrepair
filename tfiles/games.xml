@@ -732,4 +732,16 @@
     <SVer>1</SVer>
     <Executable>hl2.exe</Executable>
   </Game>
+  <Game Name="CONSORTIUM">
+    <Enabled>1</Enabled>
+    <HasVF>1</HasVF>
+    <DirName>Consortium</DirName>
+    <SmallName>consortium</SmallName>
+    <VFDir>consortium</VFDir>
+    <UserDir>0</UserDir>
+    <HUDsAvail>0</HUDsAvail>
+    <SID>264240</SID>
+    <SVer>2</SVer>
+    <Executable>consortium.exe</Executable>
+  </Game>
 </Games>
