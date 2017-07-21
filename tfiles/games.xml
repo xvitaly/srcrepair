@@ -768,4 +768,16 @@
     <SVer>2</SVer>
     <Executable>beginnersguide.exe</Executable>
   </Game>
+  <Game Name="Codename CURE">
+    <Enabled>1</Enabled>
+    <HasVF>0</HasVF>
+    <DirName>Codename CURE</DirName>
+    <SmallName>cure</SmallName>
+    <VFDir>cure</VFDir>
+    <UserDir>0</UserDir>
+    <HUDsAvail>0</HUDsAvail>
+    <SID>355180</SID>
+    <SVer>1</SVer>
+    <Executable>cure.exe</Executable>
+  </Game>
 </Games>
