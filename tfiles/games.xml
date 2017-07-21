@@ -744,4 +744,16 @@
     <SVer>2</SVer>
     <Executable>consortium.exe</Executable>
   </Game>
+  <Game Name="Blade Symphony">
+    <Enabled>1</Enabled>
+    <HasVF>1</HasVF>
+    <DirName>Blade Symphony</DirName>
+    <SmallName>berimbau</SmallName>
+    <VFDir>berimbau</VFDir>
+    <UserDir>0</UserDir>
+    <HUDsAvail>0</HUDsAvail>
+    <SID>225600</SID>
+    <SVer>2</SVer>
+    <Executable>berimbau.exe</Executable>
+  </Game>
 </Games>
