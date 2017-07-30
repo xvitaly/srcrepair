@@ -73,7 +73,7 @@ def renamefile(fname, chash):
     return result
 
 
-def calculatehash(fname):
+def sha1hash(fname):
     return sha1(open(fname, 'rb').read()).hexdigest()
 
 
@@ -87,7 +87,7 @@ def handlehud(name, url, repo, ltime, lfname):
             print('%s is up to date.' % name)
     else:
         filednl = downloadfile(url, name)
-        fullfile = renamefile(filednl, calculatehash(filednl))
+        fullfile = renamefile(filednl, sha1hash(filednl))
         shortfile = path.basename(fullfile)
         if shortfile != lfname:
             print('%s downloaded. Filename: %s.' % (name, shortfile))
