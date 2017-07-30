@@ -95,7 +95,7 @@ def handlehud(name, url, repo, ltime, lfname):
         fullfile = renamefile(filednl, sha1hash(filednl))
         shortfile = path.basename(fullfile)
         if shortfile != lfname:
-            print('%s downloaded. Filename: %s.' % (name, shortfile))
+            print('%s downloaded. Hash: %s, filename: %s.' % (name, md5hash(fullfile), shortfile))
         else:
             rmtree(path.dirname(fullfile))
             print('%s is up to date.' % name)
