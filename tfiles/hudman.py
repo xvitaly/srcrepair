@@ -22,7 +22,7 @@
 
 from calendar import timegm
 from datetime import datetime
-from hashlib import sha1
+from hashlib import md5, sha1
 from json import loads
 from os import path, getcwd, makedirs, rename
 from shutil import rmtree
@@ -71,6 +71,10 @@ def renamefile(fname, chash):
     result = path.join(fdir, '%s_%s.zip' % (path.splitext(path.basename(fname))[0], chash[:8]))
     rename(fname, result)
     return result
+
+
+def md5hash(fname):
+    return md5(open(fname, 'rb').read()).hexdigest()
 
 
 def sha1hash(fname):
