@@ -76,11 +76,14 @@ namespace srcrepair
         public string InstallDir { get; private set; }
 
         /// <summary>
+        /// Содержит хеш-сумму файла загрузки с HUD.
+        /// </summary>
+        public string UpdateHash { get; private set; }
+
+        /// <summary>
         /// Содержит локальный путь к загруженному файлу.
         /// </summary>
         public string LocalFile { get; private set; }
-
-        public string UpdateHash { get; private set; }
 
         /// <summary>
         /// Конструктор класса. Получает информацию о выбранном HUD.
