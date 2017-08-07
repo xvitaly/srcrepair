@@ -80,6 +80,8 @@ namespace srcrepair
         /// </summary>
         public string LocalFile { get; private set; }
 
+        public string UpdateHash { get; private set; }
+
         /// <summary>
         /// Конструктор класса. Получает информацию о выбранном HUD.
         /// </summary>
