@@ -78,7 +78,7 @@ namespace srcrepair
         /// <summary>
         /// Содержит хеш-сумму файла загрузки с HUD.
         /// </summary>
-        public string UpdateHash { get; private set; }
+        public string FileHash { get; private set; }
 
         /// <summary>
         /// Содержит локальный путь к загруженному файлу.
@@ -113,7 +113,7 @@ namespace srcrepair
             ArchiveDir = HDAd;
             InstallDir = HDId;
             LocalFile = HDLocal;
-            UpdateHash = UPDHash;
+            FileHash = UPDHash;
         }
     }
 }
