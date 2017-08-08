@@ -2478,11 +2478,23 @@ namespace srcrepair
                         // Начинаем загрузку архива с HUD...
                         FormManager.FormShowDownloader(Properties.Settings.Default.HUDUseUpstream ? SelGame.HUDMan.SelectedHUD.UpURI : SelGame.HUDMan.SelectedHUD.URI, SelGame.HUDMan.SelectedHUD.LocalFile);
 
-                        // Распаковываем загруженный архив с файлами HUD...
-                        FormManager.FormShowArchiveExtract(SelGame.HUDMan.SelectedHUD.LocalFile, Path.Combine(SelGame.CustomInstallDir, "hudtemp"));
+                        // Проверяем контрольную сумму загруженного архива...
+                        if (FileManager.CalculateFileMD5(SelGame.HUDMan.SelectedHUD.LocalFile) == SelGame.HUDMan.SelectedHUD.FileHash)
+                        {
+                            // Распаковываем загруженный архив с файлами HUD...
+                            FormManager.FormShowArchiveExtract(SelGame.HUDMan.SelectedHUD.LocalFile, Path.Combine(SelGame.CustomInstallDir, "hudtemp"));
 
-                        // Запускаем установку пакета в отдельном потоке...
-                        if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(); }
+                            // Запускаем установку пакета в отдельном потоке...
+                            if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(); }
+                        }
+                        else
+                        {
+                            // Проверка хеша загруженного файла не удалась. Выведем сообщение об этом...
+                            MessageBox.Show(AppStrings.HD_HashError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                            // Удалим загруженный файл...
+                            File.Delete(SelGame.HUDMan.SelectedHUD.LocalFile);
+                        }
                     }
                 }
                 else
