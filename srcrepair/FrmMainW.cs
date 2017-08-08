@@ -2472,8 +2472,11 @@ namespace srcrepair
                             FormManager.FormShowRemoveFiles(SingleToArray(Path.Combine(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir)));
                         }
 
-                        // Начинаем загрузку если файл не существует...
-                        if (!File.Exists(SelGame.HUDMan.SelectedHUD.LocalFile)) { FormManager.FormShowDownloader(Properties.Settings.Default.HUDUseUpstream ? SelGame.HUDMan.SelectedHUD.UpURI : SelGame.HUDMan.SelectedHUD.URI, SelGame.HUDMan.SelectedHUD.LocalFile); }
+                        // Проверяем существует ли такой файл. Если да, то удаляем...
+                        if (File.Exists(SelGame.HUDMan.SelectedHUD.LocalFile)) { File.Delete(SelGame.HUDMan.SelectedHUD.LocalFile); }
+
+                        // Начинаем загрузку архива с HUD...
+                        FormManager.FormShowDownloader(Properties.Settings.Default.HUDUseUpstream ? SelGame.HUDMan.SelectedHUD.UpURI : SelGame.HUDMan.SelectedHUD.URI, SelGame.HUDMan.SelectedHUD.LocalFile);
 
                         // Распаковываем загруженный архив с файлами HUD...
                         FormManager.FormShowArchiveExtract(SelGame.HUDMan.SelectedHUD.LocalFile, Path.Combine(SelGame.CustomInstallDir, "hudtemp"));
