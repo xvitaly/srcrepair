@@ -669,4 +669,7 @@
   <data name="UPD_AppOtherPlatform" xml:space="preserve">
     <value>Automatic updates on {0} platform is not supported yet. Please install update from official site manually.</value>
   </data>
+  <data name="HD_HashError" xml:space="preserve">
+    <value>Failed to check hash sum of downloaded file. Maybe it was damaged. Please try again later!</value>
+  </data>
 </root>
