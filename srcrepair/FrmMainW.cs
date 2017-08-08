@@ -2473,7 +2473,7 @@ namespace srcrepair
                         FormManager.FormShowDownloader(Properties.Settings.Default.HUDUseUpstream ? SelGame.HUDMan.SelectedHUD.UpURI : SelGame.HUDMan.SelectedHUD.URI, SelGame.HUDMan.SelectedHUD.LocalFile);
 
                         // Проверяем контрольную сумму загруженного архива...
-                        if (FileManager.CalculateFileMD5(SelGame.HUDMan.SelectedHUD.LocalFile) == SelGame.HUDMan.SelectedHUD.FileHash)
+                        if (Properties.Settings.Default.HUDUseUpstream || FileManager.CalculateFileMD5(SelGame.HUDMan.SelectedHUD.LocalFile) == SelGame.HUDMan.SelectedHUD.FileHash)
                         {
                             // Распаковываем загруженный архив с файлами HUD...
                             FormManager.FormShowArchiveExtract(SelGame.HUDMan.SelectedHUD.LocalFile, Path.Combine(SelGame.CustomInstallDir, "hudtemp"));
