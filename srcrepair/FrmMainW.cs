@@ -1187,9 +1187,6 @@ namespace srcrepair
                 // Устанавливаем и очищаем временный каталог...
                 try { Directory.Move(Path.Combine(InstallTmp, HUDManager.FormatIntDir(SelGame.HUDMan.SelectedHUD.ArchiveDir)), Path.Combine(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir)); }
                 finally { if (Directory.Exists(InstallTmp)) { Directory.Delete(InstallTmp, true); } }
-
-                // Удаляем архив с загруженным HUD...
-                if (File.Exists(SelGame.HUDMan.SelectedHUD.LocalFile)) { File.Delete(SelGame.HUDMan.SelectedHUD.LocalFile); }
             }
             finally
             {
@@ -2472,9 +2469,6 @@ namespace srcrepair
                             FormManager.FormShowRemoveFiles(SingleToArray(Path.Combine(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir)));
                         }
 
-                        // Проверяем существует ли такой файл. Если да, то удаляем...
-                        if (File.Exists(SelGame.HUDMan.SelectedHUD.LocalFile)) { File.Delete(SelGame.HUDMan.SelectedHUD.LocalFile); }
-
                         // Начинаем загрузку архива с HUD...
                         FormManager.FormShowDownloader(Properties.Settings.Default.HUDUseUpstream ? SelGame.HUDMan.SelectedHUD.UpURI : SelGame.HUDMan.SelectedHUD.URI, SelGame.HUDMan.SelectedHUD.LocalFile);
 
@@ -2491,10 +2485,10 @@ namespace srcrepair
                         {
                             // Проверка хеша загруженного файла не удалась. Выведем сообщение об этом...
                             MessageBox.Show(AppStrings.HD_HashError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                            // Удалим загруженный файл...
-                            File.Delete(SelGame.HUDMan.SelectedHUD.LocalFile);
                         }
+
+                        // Проверяем существует ли файл с архивом. Если да, то удаляем...
+                        try { if (File.Exists(SelGame.HUDMan.SelectedHUD.LocalFile)) { File.Delete(SelGame.HUDMan.SelectedHUD.LocalFile); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     }
                 }
                 else
