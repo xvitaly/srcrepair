@@ -1099,6 +1099,15 @@ namespace srcrepair
             }
         }
 
+        private void BW_UpChk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            // Произошла ошибка во время проверки наличия обновлений. Запишем в журнал...
+            if (e.Error != null)
+            {
+                CoreLib.WriteStringToLog(e.Error.Message);
+            }
+        }
+
         private void BW_FPRecv_DoWork(object sender, DoWorkEventArgs e)
         {
             try

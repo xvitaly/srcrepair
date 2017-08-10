@@ -1991,6 +1991,7 @@
             // BW_UpChk
             // 
             this.BW_UpChk.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_UpChk_DoWork);
+            this.BW_UpChk.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BW_UpChk_RunWorkerCompleted);
             // 
             // BW_FPRecv
             // 
