@@ -247,5 +247,17 @@ namespace srcrepair.Properties {
                 this["LastSteamID"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool HideUnsupportedGames {
+            get {
+                return ((bool)(this["HideUnsupportedGames"]));
+            }
+            set {
+                this["HideUnsupportedGames"] = value;
+            }
+        }
     }
 }
