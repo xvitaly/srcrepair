@@ -61,18 +61,6 @@ namespace srcrepair.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool EnableAutoUpdate {
-            get {
-                return ((bool)(this["EnableAutoUpdate"]));
-            }
-            set {
-                this["EnableAutoUpdate"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2017-06-25")]
         public global::System.DateTime LastUpdateTime {
             get {

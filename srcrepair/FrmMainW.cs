@@ -1238,11 +1238,8 @@ namespace srcrepair
 
             try
             {
-                // Проверим наличие обновлений программы (если разрешено в настройках)...
-                if (Properties.Settings.Default.EnableAutoUpdate)
-                {
-                    if (!BW_UpChk.IsBusy) { BW_UpChk.RunWorkerAsync(); }
-                }
+                // Проверим наличие обновлений программы...
+                if (!BW_UpChk.IsBusy) { BW_UpChk.RunWorkerAsync(); }
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }

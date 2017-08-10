@@ -11,9 +11,6 @@
     <Setting Name="LastSteamPath" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="EnableAutoUpdate" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
-    </Setting>
     <Setting Name="LastUpdateTime" Type="System.DateTime" Scope="User">
       <Value Profile="(Default)">2017-06-25</Value>
     </Setting>
