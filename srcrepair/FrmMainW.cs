@@ -1011,6 +1011,14 @@ namespace srcrepair
         }
 
         /// <summary>
+        /// Запускает проверку наличия обновлений программы.
+        /// </summary>
+        private void CheckForUpdates()
+        {
+            if (!BW_UpChk.IsBusy) { BW_UpChk.RunWorkerAsync(); }
+        }
+
+        /// <summary>
         /// Генерирует ссылку онлайновой справочной системы на основе информации
         /// о текущей вкладке.
         /// </summary>
@@ -1236,12 +1244,8 @@ namespace srcrepair
             // Запустим поиск установленных игр и проверим нашлось ли что-то...
             FindGames();
 
-            try
-            {
-                // Проверим наличие обновлений программы...
-                if (!BW_UpChk.IsBusy) { BW_UpChk.RunWorkerAsync(); }
-            }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            // Проверим наличие обновлений программы...
+            CheckForUpdates();
         }
 
         private void PS_CleanBlobs_CheckedChanged(object sender, EventArgs e)
