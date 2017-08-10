@@ -43,7 +43,7 @@ namespace srcrepair
         {
             // Считаем текущие настройки...
             MO_ConfirmExit.Checked = Properties.Settings.Default.ConfirmExit;
-            MO_AutoUpdate.Checked = Properties.Settings.Default.EnableAutoUpdate;
+            MO_HideUnsupported.Checked = Properties.Settings.Default.HideUnsupportedGames;
             MO_RemEmptyDirs.Checked = Properties.Settings.Default.RemoveEmptyDirs;
             MO_HighlightOldBackUps.Checked = Properties.Settings.Default.HighlightOldBackUps;
             MO_EnableAppLogs.Checked = Properties.Settings.Default.EnableDebugLog;
@@ -65,7 +65,7 @@ namespace srcrepair
         {
             // Сохраняем настройки для текущего сеанса...
             Properties.Settings.Default.ConfirmExit = MO_ConfirmExit.Checked;
-            Properties.Settings.Default.EnableAutoUpdate = MO_AutoUpdate.Checked;
+            Properties.Settings.Default.HideUnsupportedGames = MO_HideUnsupported.Checked;
             Properties.Settings.Default.RemoveEmptyDirs = MO_RemEmptyDirs.Checked;
             Properties.Settings.Default.HighlightOldBackUps = MO_HighlightOldBackUps.Checked;
             Properties.Settings.Default.EnableDebugLog = MO_EnableAppLogs.Checked;
