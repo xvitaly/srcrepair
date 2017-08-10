@@ -291,34 +291,34 @@
   <data name="&gt;&gt;MO_HighlightOldBackUps.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="MO_AutoUpdate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="MO_HideUnsupported.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="MO_AutoUpdate.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="MO_HideUnsupported.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="MO_AutoUpdate.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MO_HideUnsupported.Location" type="System.Drawing.Point, System.Drawing">
     <value>19, 39</value>
   </data>
-  <data name="MO_AutoUpdate.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MO_HideUnsupported.Size" type="System.Drawing.Size, System.Drawing">
     <value>267, 17</value>
   </data>
-  <data name="MO_AutoUpdate.TabIndex" type="System.Int32, mscorlib">
+  <data name="MO_HideUnsupported.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="MO_AutoUpdate.Text" xml:space="preserve">
-    <value>Enable automatic updates</value>
+  <data name="MO_HideUnsupported.Text" xml:space="preserve">
+    <value>Hide unsupported by application games</value>
   </data>
-  <data name="&gt;&gt;MO_AutoUpdate.Name" xml:space="preserve">
-    <value>MO_AutoUpdate</value>
+  <data name="&gt;&gt;MO_HideUnsupported.Name" xml:space="preserve">
+    <value>MO_HideUnsupported</value>
   </data>
-  <data name="&gt;&gt;MO_AutoUpdate.Type" xml:space="preserve">
+  <data name="&gt;&gt;MO_HideUnsupported.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MO_AutoUpdate.Parent" xml:space="preserve">
+  <data name="&gt;&gt;MO_HideUnsupported.Parent" xml:space="preserve">
     <value>MO_TP1</value>
   </data>
-  <data name="&gt;&gt;MO_AutoUpdate.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MO_HideUnsupported.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <metadata name="MO_ConfirmExit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

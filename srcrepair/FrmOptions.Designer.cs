@@ -37,7 +37,7 @@
             this.MO_RemEmptyDirs = new System.Windows.Forms.CheckBox();
             this.MO_ZipCompress = new System.Windows.Forms.CheckBox();
             this.MO_HighlightOldBackUps = new System.Windows.Forms.CheckBox();
-            this.MO_AutoUpdate = new System.Windows.Forms.CheckBox();
+            this.MO_HideUnsupported = new System.Windows.Forms.CheckBox();
             this.MO_ConfirmExit = new System.Windows.Forms.CheckBox();
             this.MO_TP2 = new System.Windows.Forms.TabPage();
             this.MO_UnSafeOps = new System.Windows.Forms.CheckBox();
@@ -85,7 +85,7 @@
             this.MO_TP1.Controls.Add(this.MO_RemEmptyDirs);
             this.MO_TP1.Controls.Add(this.MO_ZipCompress);
             this.MO_TP1.Controls.Add(this.MO_HighlightOldBackUps);
-            this.MO_TP1.Controls.Add(this.MO_AutoUpdate);
+            this.MO_TP1.Controls.Add(this.MO_HideUnsupported);
             this.MO_TP1.Controls.Add(this.MO_ConfirmExit);
             resources.ApplyResources(this.MO_TP1, "MO_TP1");
             this.MO_TP1.Name = "MO_TP1";
@@ -115,11 +115,11 @@
             this.MO_HighlightOldBackUps.Name = "MO_HighlightOldBackUps";
             this.MO_HighlightOldBackUps.UseVisualStyleBackColor = true;
             // 
-            // MO_AutoUpdate
+            // MO_HideUnsupported
             // 
-            resources.ApplyResources(this.MO_AutoUpdate, "MO_AutoUpdate");
-            this.MO_AutoUpdate.Name = "MO_AutoUpdate";
-            this.MO_AutoUpdate.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.MO_HideUnsupported, "MO_HideUnsupported");
+            this.MO_HideUnsupported.Name = "MO_HideUnsupported";
+            this.MO_HideUnsupported.UseVisualStyleBackColor = true;
             // 
             // MO_ConfirmExit
             // 
@@ -237,7 +237,7 @@
         private System.Windows.Forms.Button MO_Cancel;
         private System.Windows.Forms.TabControl MO_TC;
         private System.Windows.Forms.TabPage MO_TP1;
-        private System.Windows.Forms.CheckBox MO_AutoUpdate;
+        private System.Windows.Forms.CheckBox MO_HideUnsupported;
         private System.Windows.Forms.CheckBox MO_ConfirmExit;
         private System.Windows.Forms.TabPage MO_TP2;
         private System.Windows.Forms.CheckBox MO_EnableAppLogs;

@@ -136,11 +136,8 @@
   <data name="MO_HighlightOldBackUps.Text" xml:space="preserve">
     <value>Выделять цветом старые резервные копии</value>
   </data>
-  <data name="MO_AutoUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 17</value>
-  </data>
-  <data name="MO_AutoUpdate.Text" xml:space="preserve">
-    <value>Включить автоматическое обновление</value>
+  <data name="MO_HideUnsupported.Text" xml:space="preserve">
+    <value>Скрывать не поддерживаемые игры</value>
   </data>
   <data name="MO_ConfirmExit.Text" xml:space="preserve">
     <value>Подтверждать выход из программы</value>
