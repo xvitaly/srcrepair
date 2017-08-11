@@ -259,5 +259,17 @@ namespace srcrepair.Properties {
                 this["HideUnsupportedGames"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AutoUpdateCheck {
+            get {
+                return ((bool)(this["AutoUpdateCheck"]));
+            }
+            set {
+                this["AutoUpdateCheck"] = value;
+            }
+        }
     }
 }
