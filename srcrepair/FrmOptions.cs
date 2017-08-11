@@ -50,6 +50,7 @@ namespace srcrepair
             MO_TextEdBin.Text = Properties.Settings.Default.EditorBin;
             MO_CustDirName.Text = Properties.Settings.Default.UserCustDirName;
             MO_ZipCompress.Checked = Properties.Settings.Default.PackBeforeCleanup;
+            MO_AutoCheckUpdates.Checked = Properties.Settings.Default.AutoUpdateCheck;
             MO_UnSafeOps.Checked = Properties.Settings.Default.AllowUnSafeCleanup;
             MO_UseUpstream.Checked = Properties.Settings.Default.HUDUseUpstream;
 
@@ -70,6 +71,7 @@ namespace srcrepair
             Properties.Settings.Default.EnableDebugLog = MO_EnableAppLogs.Checked;
             Properties.Settings.Default.EditorBin = MO_TextEdBin.Text;
             Properties.Settings.Default.PackBeforeCleanup = MO_ZipCompress.Checked;
+            Properties.Settings.Default.AutoUpdateCheck = MO_AutoCheckUpdates.Checked;
             Properties.Settings.Default.AllowUnSafeCleanup = MO_UnSafeOps.Checked;
             Properties.Settings.Default.HUDUseUpstream = MO_UseUpstream.Checked;
             if (Regex.IsMatch(MO_CustDirName.Text, Properties.Resources.MO_CustomDirRegex)) { Properties.Settings.Default.UserCustDirName = MO_CustDirName.Text; }
