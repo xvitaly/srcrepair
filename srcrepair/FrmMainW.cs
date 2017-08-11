@@ -1015,7 +1015,8 @@ namespace srcrepair
         /// </summary>
         private void CheckForUpdates()
         {
-            if (!BW_UpChk.IsBusy) { BW_UpChk.RunWorkerAsync(); }
+            // Запускаем проверку обновлений если это разрешено в настройках...
+            if (Properties.Settings.Default.AutoUpdateCheck) { if (!BW_UpChk.IsBusy) { BW_UpChk.RunWorkerAsync(); } }
         }
 
         /// <summary>
