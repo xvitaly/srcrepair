@@ -430,4 +430,10 @@
   <data name="AppUASuffixWin" xml:space="preserve">
     <value>NT</value>
   </data>
+  <data name="ShBinWin" xml:space="preserve">
+    <value>explorer.exe</value>
+  </data>
+  <data name="ShParamWin" xml:space="preserve">
+    <value>/select,</value>
+  </data>
 </root>

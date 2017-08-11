@@ -142,30 +142,6 @@ namespace srcrepair.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("explorer.exe")]
-        public string ShBin {
-            get {
-                return ((string)(this["ShBin"]));
-            }
-            set {
-                this["ShBin"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("/select,")]
-        public string ShParam {
-            get {
-                return ((string)(this["ShParam"]));
-            }
-            set {
-                this["ShParam"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("srcrepair")]
         public string UserCustDirName {
             get {

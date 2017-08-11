@@ -802,12 +802,30 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to explorer.exe.
+        /// </summary>
+        internal static string ShBinWin {
+            get {
+                return ResourceManager.GetString("ShBinWin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Shopcart {
             get {
                 object obj = ResourceManager.GetObject("Shopcart", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /select,.
+        /// </summary>
+        internal static string ShParamWin {
+            get {
+                return ResourceManager.GetString("ShParamWin", resourceCulture);
             }
         }
         

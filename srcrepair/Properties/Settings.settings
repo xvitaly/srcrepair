@@ -32,12 +32,6 @@
     <Setting Name="EditorBin" Type="System.String" Scope="User">
       <Value Profile="(Default)">notepad.exe</Value>
     </Setting>
-    <Setting Name="ShBin" Type="System.String" Scope="User">
-      <Value Profile="(Default)">explorer.exe</Value>
-    </Setting>
-    <Setting Name="ShParam" Type="System.String" Scope="User">
-      <Value Profile="(Default)">/select,</Value>
-    </Setting>
     <Setting Name="UserCustDirName" Type="System.String" Scope="User">
       <Value Profile="(Default)">srcrepair</Value>
     </Setting>
