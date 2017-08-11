@@ -228,7 +228,7 @@ namespace srcrepair
                 switch (OS)
                 {
                     case CurrentPlatform.OSType.Windows:
-                        Process.Start(Properties.Settings.Default.ShBin, String.Format("{0} \"{1}\"", Properties.Settings.Default.ShParam, FileName));
+                        Process.Start(Properties.Resources.ShBinWin, String.Format("{0} \"{1}\"", Properties.Resources.ShParamWin, FileName));
                         break;
                     case CurrentPlatform.OSType.Linux:
                         Process.Start(Properties.Resources.AppOpenHandlerLin, String.Format("\"{0}\"", Path.GetDirectoryName(FileName)));
