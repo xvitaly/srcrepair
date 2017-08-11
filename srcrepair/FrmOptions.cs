@@ -47,7 +47,6 @@ namespace srcrepair
             MO_RemEmptyDirs.Checked = Properties.Settings.Default.RemoveEmptyDirs;
             MO_HighlightOldBackUps.Checked = Properties.Settings.Default.HighlightOldBackUps;
             MO_EnableAppLogs.Checked = Properties.Settings.Default.EnableDebugLog;
-            MO_ShBin.Text = Properties.Settings.Default.ShBin;
             MO_TextEdBin.Text = Properties.Settings.Default.EditorBin;
             MO_CustDirName.Text = Properties.Settings.Default.UserCustDirName;
             MO_ZipCompress.Checked = Properties.Settings.Default.PackBeforeCleanup;
@@ -70,7 +69,6 @@ namespace srcrepair
             Properties.Settings.Default.HighlightOldBackUps = MO_HighlightOldBackUps.Checked;
             Properties.Settings.Default.EnableDebugLog = MO_EnableAppLogs.Checked;
             Properties.Settings.Default.EditorBin = MO_TextEdBin.Text;
-            Properties.Settings.Default.ShBin = MO_ShBin.Text;
             Properties.Settings.Default.PackBeforeCleanup = MO_ZipCompress.Checked;
             Properties.Settings.Default.AllowUnSafeCleanup = MO_UnSafeOps.Checked;
             Properties.Settings.Default.HUDUseUpstream = MO_UseUpstream.Checked;
@@ -104,17 +102,6 @@ namespace srcrepair
             if (MO_SearchBin.ShowDialog() == DialogResult.OK)
             {
                 MO_TextEdBin.Text = MO_SearchBin.FileName;
-            }
-        }
-
-        /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку поиска шелла.
-        /// </summary>
-        private void MO_FindShBin_Click(object sender, EventArgs e)
-        {
-            if (MO_SearchBin.ShowDialog() == DialogResult.OK)
-            {
-                MO_ShBin.Text = MO_SearchBin.FileName;
             }
         }
 

@@ -40,13 +40,11 @@
             this.MO_HideUnsupported = new System.Windows.Forms.CheckBox();
             this.MO_ConfirmExit = new System.Windows.Forms.CheckBox();
             this.MO_TP2 = new System.Windows.Forms.TabPage();
+            this.MO_AutoCheckUpdates = new System.Windows.Forms.CheckBox();
             this.MO_UnSafeOps = new System.Windows.Forms.CheckBox();
             this.MO_CustDirName = new System.Windows.Forms.TextBox();
             this.L_MO_CustDirName = new System.Windows.Forms.Label();
-            this.MO_FindShBin = new System.Windows.Forms.Button();
             this.MO_FindTextEd = new System.Windows.Forms.Button();
-            this.MO_ShBin = new System.Windows.Forms.TextBox();
-            this.L_MO_ShBin = new System.Windows.Forms.Label();
             this.MO_TextEdBin = new System.Windows.Forms.TextBox();
             this.L_MO_TextEdBin = new System.Windows.Forms.Label();
             this.MO_EnableAppLogs = new System.Windows.Forms.CheckBox();
@@ -129,19 +127,23 @@
             // 
             // MO_TP2
             // 
+            this.MO_TP2.Controls.Add(this.MO_AutoCheckUpdates);
             this.MO_TP2.Controls.Add(this.MO_UnSafeOps);
             this.MO_TP2.Controls.Add(this.MO_CustDirName);
             this.MO_TP2.Controls.Add(this.L_MO_CustDirName);
-            this.MO_TP2.Controls.Add(this.MO_FindShBin);
             this.MO_TP2.Controls.Add(this.MO_FindTextEd);
-            this.MO_TP2.Controls.Add(this.MO_ShBin);
-            this.MO_TP2.Controls.Add(this.L_MO_ShBin);
             this.MO_TP2.Controls.Add(this.MO_TextEdBin);
             this.MO_TP2.Controls.Add(this.L_MO_TextEdBin);
             this.MO_TP2.Controls.Add(this.MO_EnableAppLogs);
             resources.ApplyResources(this.MO_TP2, "MO_TP2");
             this.MO_TP2.Name = "MO_TP2";
             this.MO_TP2.UseVisualStyleBackColor = true;
+            // 
+            // MO_AutoCheckUpdates
+            // 
+            resources.ApplyResources(this.MO_AutoCheckUpdates, "MO_AutoCheckUpdates");
+            this.MO_AutoCheckUpdates.Name = "MO_AutoCheckUpdates";
+            this.MO_AutoCheckUpdates.UseVisualStyleBackColor = true;
             // 
             // MO_UnSafeOps
             // 
@@ -160,14 +162,6 @@
             resources.ApplyResources(this.L_MO_CustDirName, "L_MO_CustDirName");
             this.L_MO_CustDirName.Name = "L_MO_CustDirName";
             // 
-            // MO_FindShBin
-            // 
-            this.MO_FindShBin.Image = global::srcrepair.Properties.Resources.Search;
-            resources.ApplyResources(this.MO_FindShBin, "MO_FindShBin");
-            this.MO_FindShBin.Name = "MO_FindShBin";
-            this.MO_FindShBin.UseVisualStyleBackColor = true;
-            this.MO_FindShBin.Click += new System.EventHandler(this.MO_FindShBin_Click);
-            // 
             // MO_FindTextEd
             // 
             this.MO_FindTextEd.Image = global::srcrepair.Properties.Resources.Search;
@@ -175,16 +169,6 @@
             this.MO_FindTextEd.Name = "MO_FindTextEd";
             this.MO_FindTextEd.UseVisualStyleBackColor = true;
             this.MO_FindTextEd.Click += new System.EventHandler(this.MO_FindTextEd_Click);
-            // 
-            // MO_ShBin
-            // 
-            resources.ApplyResources(this.MO_ShBin, "MO_ShBin");
-            this.MO_ShBin.Name = "MO_ShBin";
-            // 
-            // L_MO_ShBin
-            // 
-            resources.ApplyResources(this.L_MO_ShBin, "L_MO_ShBin");
-            this.L_MO_ShBin.Name = "L_MO_ShBin";
             // 
             // MO_TextEdBin
             // 
@@ -241,11 +225,8 @@
         private System.Windows.Forms.CheckBox MO_ConfirmExit;
         private System.Windows.Forms.TabPage MO_TP2;
         private System.Windows.Forms.CheckBox MO_EnableAppLogs;
-        private System.Windows.Forms.TextBox MO_ShBin;
-        private System.Windows.Forms.Label L_MO_ShBin;
         private System.Windows.Forms.TextBox MO_TextEdBin;
         private System.Windows.Forms.Label L_MO_TextEdBin;
-        private System.Windows.Forms.Button MO_FindShBin;
         private System.Windows.Forms.Button MO_FindTextEd;
         private System.Windows.Forms.OpenFileDialog MO_SearchBin;
         private System.Windows.Forms.CheckBox MO_HighlightOldBackUps;
@@ -255,5 +236,6 @@
         private System.Windows.Forms.CheckBox MO_UnSafeOps;
         private System.Windows.Forms.CheckBox MO_RemEmptyDirs;
         private System.Windows.Forms.CheckBox MO_UseUpstream;
+        private System.Windows.Forms.CheckBox MO_AutoCheckUpdates;
     }
 }
