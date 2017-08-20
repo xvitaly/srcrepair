@@ -1230,6 +1230,9 @@ namespace srcrepair
             App = new CurrentApp();
             SourceGames = new List<SourceGame>();
 
+            // Инкрементируем счётчик запусков программы...
+            Properties.Settings.Default.LaunchCounter++;
+
             // Узнаем путь к установленному клиенту Steam...
             try { App.FullSteamPath = App.Platform.OS == CurrentPlatform.OSType.Windows ? SteamManager.GetSteamPath() : SteamManager.TrySteamPath(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Steam")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); ValidateAndHandle(); }
 
