@@ -8,42 +8,42 @@ Feel free to open issues and report bugs or ask for feature requests.
 
 ## Pull requests
 
- # Create your own fork by pressing **Fork** button.
+ 1. Create your own fork by pressing **Fork** button.
  
- # Clone your repository
+ 2. Clone your repository
  ```bash
  git clone git@github.com:YOURNAME/srcrepair.git
  ```
  
- # Create a new feature branch and switch to it:
+ 3. Create a new feature branch and switch to it:
  ```bash
  git checkout -b new_feature
  ```
  
- # Commit your changes:
+ 4. Commit your changes:
  ```bash
  git add . && git commit -sm "Full description of your changes"
  ```
  
- # Add upstream as [remote repository](https://help.github.com/articles/configuring-a-remote-for-a-fork/):
+ 5. Add upstream as [remote repository](https://help.github.com/articles/configuring-a-remote-for-a-fork/):
  ```bash
  git remote add upstream https://github.com/xvitaly/srcrepair.git
  ```
  
- # Fetch upstream and [sync](https://help.github.com/articles/syncing-a-fork/) your fork's master with it:
+ 6. Fetch upstream and [sync](https://help.github.com/articles/syncing-a-fork/) your fork's master with it:
  ```bash
  git fetch upstream
  git checkout master
  git merge upstream/master
  ```
  
- # Rebase your feature branch to master:
+ 7. Rebase your feature branch to master:
  ```bash
  git checkout new_feature
  git rebase master
  ```
  
- # Squash all your commits into single one and open a new pull request.
+ 8. Squash all your commits into single one and open a new pull request.
 
 ## Signing off your work
 
