@@ -60,5 +60,5 @@ We cannot accept pull requests with commits without this signature.
  * Don't upload any binary files to repository (*.dll, *.exe, etc.).
  * Don't add and upload any temporary files.
  * Use only latest version of Visual Studio 2017 IDE.
- * Don't use any libraries incompactible with [GNU GPL v3 license](COPYING).
+ * Don't use any libraries incompactible with [GNU GPL v3 license](../COPYING).
  * Use only NuGet to add new libraries to project.
