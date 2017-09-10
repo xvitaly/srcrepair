@@ -20,4 +20,4 @@ Thanks to:
  * Evg – bug reports, feature requests;
  * SkuLL - TF2 FPS-config.
 
-If you have your own good FPS-config, email it to us: srcrepair@easycoding.org. Config will be tested and added to the tool if it meets all requirements.
+If you know a good FPS-config or want to request a new feature or report a bug, feel free to open a new ticket in our official bug tracker: https://github.com/xvitaly/srcrepair/issues.
