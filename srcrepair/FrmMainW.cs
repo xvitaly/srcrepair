@@ -38,6 +38,9 @@ namespace srcrepair
     /// </summary>
     public partial class FrmMainW : Form
     {
+        /// <summary>
+        /// Конструктор главной формы приложения.
+        /// </summary>
         public FrmMainW()
         {
             // Инициализация...
