@@ -1,20 +1,22 @@
 ﻿/*
- * Класс для взаимодействия с клиентом Steam.
+ * This file is a part of SRC Repair project. For more information
+ * visit official site: https://www.easycoding.org/projects/srcrepair
  * 
- * Copyright 2011 - 2017 EasyCoding Team (ECTeam).
- * Copyright 2005 - 2017 EasyCoding Team.
+ * Copyright (c) 2011 - 2017 EasyCoding Team (ECTeam).
+ * Copyright (c) 2005 - 2017 EasyCoding Team.
  * 
- * Лицензия: GPL v3 (см. файл GPL.txt).
- * Лицензия контента: Creative Commons 3.0 BY.
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
  * 
- * Запрещается использовать этот файл при использовании любой
- * лицензии, отличной от GNU GPL версии 3 и с ней совместимой.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
  * 
- * Официальный блог EasyCoding Team: https://www.easycoding.org/
- * Официальная страница проекта: https://www.easycoding.org/projects/srcrepair
- * 
- * Более подробная инфорация о программе в readme.txt,
- * о лицензии - в GPL.txt.
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 using System;
 using System.Collections.Generic;
