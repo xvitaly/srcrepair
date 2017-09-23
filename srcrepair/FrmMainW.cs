@@ -33,6 +33,9 @@ using System.Text.RegularExpressions; // для работы с регулярн
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс главной формы приложения.
+    /// </summary>
     public partial class FrmMainW : Form
     {
         public FrmMainW()
