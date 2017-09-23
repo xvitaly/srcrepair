@@ -36,7 +36,6 @@
             this.labelLicense = new System.Windows.Forms.Label();
             this.labelCopyright = new System.Windows.Forms.Label();
             this.okButton = new System.Windows.Forms.Button();
-            this.labelContent = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.iconApp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,18 +85,12 @@
             this.okButton.UseVisualStyleBackColor = true;
             this.okButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
-            // labelContent
-            // 
-            resources.ApplyResources(this.labelContent, "labelContent");
-            this.labelContent.Name = "labelContent";
-            // 
             // FrmAbout
             // 
             this.AcceptButton = this.okButton;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.okButton;
-            this.Controls.Add(this.labelContent);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.labelCopyright);
             this.Controls.Add(this.labelLicense);
@@ -130,7 +123,6 @@
         private System.Windows.Forms.Label labelLicense;
         private System.Windows.Forms.Label labelCopyright;
         private System.Windows.Forms.Button okButton;
-        private System.Windows.Forms.Label labelContent;
 
     }
 }

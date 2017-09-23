@@ -241,7 +241,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;iconApp.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <metadata name="labelProductName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -274,7 +274,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelProductName.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <metadata name="labelVersion.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -301,7 +301,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelVersion.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <metadata name="labelCompanyName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -328,7 +328,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelCompanyName.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <metadata name="textBoxDescription.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -409,7 +409,7 @@ Translators:
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxDescription.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <metadata name="labelLicense.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -418,13 +418,13 @@ Translators:
     <value>131, 72</value>
   </data>
   <data name="labelLicense.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 31</value>
+    <value>122, 69</value>
   </data>
   <data name="labelLicense.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="labelLicense.Text" xml:space="preserve">
-    <value>Licensed under the terms of GNU GPL v3.</value>
+    <value>Licensed under the terms of GNU General Public License version 3 (except graphics; more info in iconinfo.md). </value>
   </data>
   <data name="&gt;&gt;labelLicense.Name" xml:space="preserve">
     <value>labelLicense</value>
@@ -436,7 +436,7 @@ Translators:
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelLicense.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <metadata name="labelCopyright.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -463,7 +463,7 @@ Translators:
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelCopyright.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <metadata name="okButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -490,33 +490,6 @@ Translators:
     <value>$this</value>
   </data>
   <data name="&gt;&gt;okButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="labelContent.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="labelContent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>131, 108</value>
-  </data>
-  <data name="labelContent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 33</value>
-  </data>
-  <data name="labelContent.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="labelContent.Text" xml:space="preserve">
-    <value>Content license: Creative Commons BY.</value>
-  </data>
-  <data name="&gt;&gt;labelContent.Name" xml:space="preserve">
-    <value>labelContent</value>
-  </data>
-  <data name="&gt;&gt;labelContent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelContent.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;labelContent.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
