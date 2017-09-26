@@ -161,13 +161,7 @@ namespace srcrepair
                             if (File.Exists(FNameFPSCfg)) { ZBkUp.AddFile(FNameFPSCfg, "fps"); }
 
                             // Добавляем в архив журнал программы...
-                            if (File.Exists(FNameInternal))
-                            {
-                                if (FileManager.GetFileSize(FNameInternal) > 0)
-                                {
-                                    ZBkUp.AddFile(FNameInternal, "srcrep");
-                                }
-                            }
+                            try { if (File.Exists(FNameInternal)) { if (FileManager.GetFileSize(FNameInternal) > 0) { ZBkUp.AddFile(FNameInternal, "srcrep"); } } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                             // Сохраняем архив...
                             ZBkUp.Save();
