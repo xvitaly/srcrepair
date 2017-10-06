@@ -374,12 +374,12 @@
     <Name>mkHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/mkhud/mkhud_721080c6.zip</URI>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/mkhud/mkhud_291431e5.zip</URI>
     <UpURI>https://github.com/nimtra/mkHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/mkhud.jpg</Preview>
     <RepoPath>https://github.com/nimtra/mkHUD</RepoPath>
-    <Hash>0eb81c2b39850ee9e01e63a3b78285a6</Hash>
-    <LastUpdate>1482813964</LastUpdate>
+    <Hash>543ac9d567137eb33ec168e50bc3258e</Hash>
+    <LastUpdate>1506991229</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=231</Site>
     <ArchiveDir>mkHUD-master</ArchiveDir>
     <InstallDir>mkhud</InstallDir>
