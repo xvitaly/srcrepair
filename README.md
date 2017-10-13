@@ -93,7 +93,8 @@ Supported mods and third-party Source engine games:
  * Blade Symphony;
  * The Beginner's Guide;
  * Codename CURE;
- * INFRA.
+ * INFRA;
+ * Entropy: Zero.
 
 3rd party libraries
 =========
