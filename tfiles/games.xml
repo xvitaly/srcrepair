@@ -812,4 +812,16 @@
     <SVer>2</SVer>
     <Executable>infra.exe</Executable>
   </Game>
+  <Game Name="Entropy: Zero">
+    <Enabled>1</Enabled>
+    <HasVF>0</HasVF>
+    <DirName>Entropy Zero</DirName>
+    <SmallName>EntropyZero</SmallName>
+    <VFDir>EntropyZero</VFDir>
+    <UserDir>0</UserDir>
+    <HUDsAvail>0</HUDsAvail>
+    <SID>714070</SID>
+    <SVer>1</SVer>
+    <Executable>hl2.exe</Executable>
+  </Game>
 </Games>
