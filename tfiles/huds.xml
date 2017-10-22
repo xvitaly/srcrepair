@@ -219,13 +219,13 @@
   <HUD>
     <Name>FrankenHUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/frankenhud/frankenhud_96d6b90a.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/frankenhud/frankenhud_19cf48df.zip</URI>
     <UpURI>https://github.com/TheKins/frankenhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/frankenhud.jpg</Preview>
     <RepoPath>https://github.com/TheKins/frankenhud</RepoPath>
-    <Hash>e8b90e619a901ea2c8d442e873b92f5d</Hash>
-    <LastUpdate>1467951176</LastUpdate>
+    <Hash>9a11da5aa9f3dd2b2bc520ff853bfc1e</Hash>
+    <LastUpdate>1508582045</LastUpdate>
     <Site>http://huds.tf/frankenhud/</Site>
     <ArchiveDir>frankenhud-master/hud_src</ArchiveDir>
     <InstallDir>frankenhud</InstallDir>
