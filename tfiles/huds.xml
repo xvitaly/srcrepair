@@ -51,13 +51,13 @@
   <HUD>
     <Name>ToonHUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/toonhud/toonhud_bb68a7a7.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/toonhud/toonhud_4df1274d.zip</URI>
     <UpURI>http://toonhud.com/downloads/toonhud_10.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/toonhud.jpg</Preview>
     <RepoPath>null</RepoPath>
-    <Hash>e215c72ce8cbba7723d9b10c8357d8c4</Hash>
-    <LastUpdate>1489600800</LastUpdate>
+    <Hash>3a2a8e5aef2154ac3ae7b47cbd9d7a41</Hash>
+    <LastUpdate>1508688000</LastUpdate>
     <Site>http://toonhud.com/</Site>
     <ArchiveDir>toonhud</ArchiveDir>
     <InstallDir>toonhud</InstallDir>
