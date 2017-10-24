@@ -65,13 +65,13 @@
   <HUD>
     <Name>voidHUD2.0</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/voidhud/voidhud_c20322eb.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/voidhud/voidhud_9f45a9cb.zip</URI>
     <UpURI>https://github.com/TheStaticVoid/VoidHUD2.0/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/voidhud.jpg</Preview>
     <RepoPath>https://github.com/TheStaticVoid/voidhud2.0</RepoPath>
-    <Hash>5c42d20e2c62b1da4f84317ba91bf4c3</Hash>
-    <LastUpdate>1468552619</LastUpdate>
+    <Hash>2cbeba0cac0eff06138ac88b36721b05</Hash>
+    <LastUpdate>1508784702</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=226</Site>
     <ArchiveDir>voidhud2.0-master</ArchiveDir>
     <InstallDir>voidhud</InstallDir>
