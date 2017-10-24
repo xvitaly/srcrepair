@@ -289,13 +289,13 @@
   <HUD>
     <Name>BoredHUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/boredhud/boredhud_d632c40d.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/boredhud/boredhud_09f5a406.zip</URI>
     <UpURI>https://github.com/TheStaticVoid/boredHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/boredhud.jpg</Preview>
     <RepoPath>https://github.com/TheStaticVoid/boredHUD</RepoPath>
-    <Hash>5f3b8cb45d6346d64212d6f3b6a07f1f</Hash>
-    <LastUpdate>1468552838</LastUpdate>
+    <Hash>2deb28d241bffe8615b2672a97b9fc20</Hash>
+    <LastUpdate>1508823179</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=209</Site>
     <ArchiveDir>boredHUD-master</ArchiveDir>
     <InstallDir>boredhud</InstallDir>
