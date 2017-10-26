@@ -5587,6 +5587,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Debug command. Show list of available stages on current map..
+        /// </summary>
+        internal static string tf_listrounds {
+            get {
+                return ResourceManager.GetString("tf_listrounds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Prints local lobby objects..
         /// </summary>
         internal static string tf_lobby_debug {
