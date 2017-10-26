@@ -2334,6 +2334,15 @@
   <data name="sv_allow_legacy_cmd_execution_from_client" xml:space="preserve">
     <value>Allow / disallow command execution received from connected clients.</value>
   </data>
+  <data name="say" xml:space="preserve">
+    <value>Open global chat window.</value>
+  </data>
+  <data name="say_party" xml:space="preserve">
+    <value>Open party chat window.</value>
+  </data>
+  <data name="say_team" xml:space="preserve">
+    <value>Open team chat window.</value>
+  </data>
   <data name="tf_listrounds" xml:space="preserve">
     <value>Debug command. Show list of available stages on current map.</value>
   </data>

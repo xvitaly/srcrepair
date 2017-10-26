@@ -3175,6 +3175,33 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Open global chat window..
+        /// </summary>
+        internal static string say {
+            get {
+                return ResourceManager.GetString("say", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open party chat window..
+        /// </summary>
+        internal static string say_party {
+            get {
+                return ResourceManager.GetString("say_party", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open team chat window..
+        /// </summary>
+        internal static string say_team {
+            get {
+                return ResourceManager.GetString("say_team", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Time spent with the freeze panel still up after observer freeze cam is done..
         /// </summary>
         internal static string spec_freeze_panel_extended_time {
