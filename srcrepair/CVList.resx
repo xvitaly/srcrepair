@@ -2334,6 +2334,9 @@
   <data name="sv_allow_legacy_cmd_execution_from_client" xml:space="preserve">
     <value>Allow / disallow command execution received from connected clients.</value>
   </data>
+  <data name="cl_crosshair_t" xml:space="preserve">
+    <value>Use T-shaped crosshair.</value>
+  </data>
   <data name="say" xml:space="preserve">
     <value>Open global chat window.</value>
   </data>

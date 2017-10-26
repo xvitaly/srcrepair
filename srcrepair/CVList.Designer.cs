@@ -538,6 +538,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Use T-shaped crosshair..
+        /// </summary>
+        internal static string cl_crosshair_t {
+            get {
+                return ResourceManager.GetString("cl_crosshair_t", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enable customized player sound playback..
         /// </summary>
         internal static string cl_customsounds {
