@@ -3723,4 +3723,7 @@
   <data name="tf_playgrounds" xml:space="preserve">
     <value>Отладочная команда, предназначенная для перехода на другую стадию на картах с несколькими стадиями.</value>
   </data>
+  <data name="tv_allow_camera_man_override" xml:space="preserve">
+    <value>Разрешает / запрещает игрокам, подключённым в SourceTV серверу, самостоятельно управлять камерой.</value>
+  </data>
 </root>

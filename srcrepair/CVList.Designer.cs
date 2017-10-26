@@ -6703,6 +6703,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allow / disallow to override caster-camera on SourceTV server..
+        /// </summary>
+        internal static string tv_allow_camera_man_override {
+            get {
+                return ResourceManager.GetString("tv_allow_camera_man_override", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Prevent manual map changes if SourceTV has not caught up with a major event like the end of a round..
         /// </summary>
         internal static string tv_delaymapchange_protect {
