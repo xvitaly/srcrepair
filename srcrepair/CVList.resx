@@ -2346,6 +2346,9 @@
   <data name="say_team" xml:space="preserve">
     <value>Open team chat window.</value>
   </data>
+  <data name="snd_mix_async" xml:space="preserve">
+    <value>Enable / disable asynchronous audio mixing.</value>
+  </data>
   <data name="snd_occlusion" xml:space="preserve">
     <value>Enable / disable new sound occlusion on CS:GO.</value>
   </data>

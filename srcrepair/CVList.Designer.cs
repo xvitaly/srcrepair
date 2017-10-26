@@ -3211,6 +3211,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable / disable asynchronous audio mixing..
+        /// </summary>
+        internal static string snd_mix_async {
+            get {
+                return ResourceManager.GetString("snd_mix_async", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enable / disable new sound occlusion on CS:GO..
         /// </summary>
         internal static string snd_occlusion {
