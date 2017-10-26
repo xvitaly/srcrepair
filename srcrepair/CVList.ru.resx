@@ -3705,6 +3705,9 @@
   <data name="sv_allow_legacy_cmd_execution_from_client" xml:space="preserve">
     <value>Разрешает / запрещает исполнение на сервере команд, полученных от подключённых клиентов.</value>
   </data>
+  <data name="tf_listrounds" xml:space="preserve">
+    <value>Отладочная команда, выводящая список всех доступных на текущей карте стадий.</value>
+  </data>
   <data name="tf_playgrounds" xml:space="preserve">
     <value>Отладочная команда, предназначенная для перехода на другую стадию на картах с несколькими стадиями.</value>
   </data>
