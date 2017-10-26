@@ -2364,6 +2364,9 @@
   <data name="tv_allow_camera_man_override" xml:space="preserve">
     <value>Allow / disallow to override caster-camera on SourceTV server.</value>
   </data>
+  <data name="tv_allow_camera_man_steamid2" xml:space="preserve">
+    <value>Configuring an additional interactive caster account, with the developed scenario connecting the main caster as a live spectator on the game server directly, and the additional interactive caster connect to TV1 server with a small delay.</value>
+  </data>
   <data name="tv_delay1" xml:space="preserve">
     <value>Set a custom delay on TV1 SourceTV server.</value>
   </data>

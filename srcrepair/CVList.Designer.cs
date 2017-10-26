@@ -6721,6 +6721,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Configuring an additional interactive caster account, with the developed scenario connecting the main caster as a live spectator on the game server directly, and the additional interactive caster connect to TV1 server with a small delay..
+        /// </summary>
+        internal static string tv_allow_camera_man_steamid2 {
+            get {
+                return ResourceManager.GetString("tv_allow_camera_man_steamid2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Set a custom delay on TV1 SourceTV server..
         /// </summary>
         internal static string tv_delay1 {
