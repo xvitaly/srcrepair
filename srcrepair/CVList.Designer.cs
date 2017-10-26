@@ -3202,6 +3202,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable / disable new sound occlusion on CS:GO..
+        /// </summary>
+        internal static string snd_occlusion {
+            get {
+                return ResourceManager.GetString("snd_occlusion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Time spent with the freeze panel still up after observer freeze cam is done..
         /// </summary>
         internal static string spec_freeze_panel_extended_time {
