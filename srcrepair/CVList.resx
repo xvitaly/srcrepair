@@ -2334,4 +2334,7 @@
   <data name="sv_allow_legacy_cmd_execution_from_client" xml:space="preserve">
     <value>Allow / disallow command execution received from connected clients.</value>
   </data>
+  <data name="tf_playgrounds" xml:space="preserve">
+    <value>Debug command. Switch to specified stage on maps with multiple stages.</value>
+  </data>
 </root>

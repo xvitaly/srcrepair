@@ -19,7 +19,7 @@ namespace srcrepair {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class CVList {
@@ -6078,6 +6078,15 @@ namespace srcrepair {
         internal static string tf_playergib {
             get {
                 return ResourceManager.GetString("tf_playergib", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Debug command. Switch to specified stage on maps with multiple stages..
+        /// </summary>
+        internal static string tf_playgrounds {
+            get {
+                return ResourceManager.GetString("tf_playgrounds", resourceCulture);
             }
         }
         
