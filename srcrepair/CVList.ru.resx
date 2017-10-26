@@ -3705,6 +3705,9 @@
   <data name="sv_allow_legacy_cmd_execution_from_client" xml:space="preserve">
     <value>Разрешает / запрещает исполнение на сервере команд, полученных от подключённых клиентов.</value>
   </data>
+  <data name="say_party" xml:space="preserve">
+    <value>Открыто окно чата группы. В качестве параметра может быть указан текст, который сразу будет отправлен без открытия окна.</value>
+  </data>
   <data name="tf_listrounds" xml:space="preserve">
     <value>Отладочная команда, выводящая список всех доступных на текущей карте стадий.</value>
   </data>
