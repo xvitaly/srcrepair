@@ -556,6 +556,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allow / disallow appending observer numbers to kill feed (0: defaults for no numbers, 1: to use just observer numbers in death notices, 2: append observer numbers in front of names in death notices)..
+        /// </summary>
+        internal static string cl_deathnotices_show_numbers {
+            get {
+                return ResourceManager.GetString("cl_deathnotices_show_numbers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Turn on rumble debugging spew..
         /// </summary>
         internal static string cl_debugrumble {

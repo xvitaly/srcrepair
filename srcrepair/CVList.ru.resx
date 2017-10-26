@@ -3708,6 +3708,9 @@
   <data name="cl_crosshair_t" xml:space="preserve">
     <value>Позволяет использовать T-shaped перекрестие прицела.</value>
   </data>
+  <data name="cl_deathnotices_show_numbers" xml:space="preserve">
+    <value>Разрешает / запрещает отображать в ленте убийство количество наблюдателей.</value>
+  </data>
   <data name="say_party" xml:space="preserve">
     <value>Открыто окно чата группы. В качестве параметра может быть указан текст, который сразу будет отправлен без открытия окна.</value>
   </data>

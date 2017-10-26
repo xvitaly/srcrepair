@@ -2337,6 +2337,9 @@
   <data name="cl_crosshair_t" xml:space="preserve">
     <value>Use T-shaped crosshair.</value>
   </data>
+  <data name="cl_deathnotices_show_numbers" xml:space="preserve">
+    <value>Allow / disallow appending observer numbers to kill feed (0: defaults for no numbers, 1: to use just observer numbers in death notices, 2: append observer numbers in front of names in death notices).</value>
+  </data>
   <data name="say" xml:space="preserve">
     <value>Open global chat window.</value>
   </data>
