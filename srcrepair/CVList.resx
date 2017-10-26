@@ -2355,6 +2355,9 @@
   <data name="snd_occlusion" xml:space="preserve">
     <value>Enable / disable new sound occlusion on CS:GO.</value>
   </data>
+  <data name="sv_disable_motd" xml:space="preserve">
+    <value>Enable / disable MOTD window after connecting to this server.</value>
+  </data>
   <data name="sv_record_item_time_data" xml:space="preserve">
     <value>Enable / disable adding player weapon usage data to server logs.</value>
   </data>

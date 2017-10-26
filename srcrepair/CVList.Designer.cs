@@ -3652,6 +3652,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable / disable MOTD window after connecting to this server..
+        /// </summary>
+        internal static string sv_disable_motd {
+            get {
+                return ResourceManager.GetString("sv_disable_motd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Debug - disable trace query cache..
         /// </summary>
         internal static string sv_disable_querycache {

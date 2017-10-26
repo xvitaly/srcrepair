@@ -3720,6 +3720,9 @@
   <data name="snd_occlusion" xml:space="preserve">
     <value>Включает / отключает использование новой звуковой модели для окружающих звуков в CS:GO.</value>
   </data>
+  <data name="sv_disable_motd" xml:space="preserve">
+    <value>Включает / отключает вывод окна MOTD при подключении к данному игровому серверу.</value>
+  </data>
   <data name="sv_record_item_time_data" xml:space="preserve">
     <value>Включает / отключает запись в журнал сервера информации об используемых игроками предметах.</value>
   </data>
