@@ -4192,6 +4192,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable / disable adding player weapon usage data to server logs..
+        /// </summary>
+        internal static string sv_record_item_time_data {
+            get {
+                return ResourceManager.GetString("sv_record_item_time_data", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The region of the world to report this server in..
         /// </summary>
         internal static string sv_region {

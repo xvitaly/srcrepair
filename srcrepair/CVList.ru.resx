@@ -3720,6 +3720,9 @@
   <data name="snd_occlusion" xml:space="preserve">
     <value>Включает / отключает использование новой звуковой модели для окружающих звуков в CS:GO.</value>
   </data>
+  <data name="sv_record_item_time_data" xml:space="preserve">
+    <value>Включает / отключает запись в журнал сервера информации об используемых игроками предметах.</value>
+  </data>
   <data name="tf_listrounds" xml:space="preserve">
     <value>Отладочная команда, выводящая список всех доступных на текущей карте стадий.</value>
   </data>
