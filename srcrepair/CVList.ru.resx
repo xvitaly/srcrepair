@@ -3729,4 +3729,7 @@
   <data name="tv_allow_camera_man_override" xml:space="preserve">
     <value>Разрешает / запрещает игрокам, подключённым в SourceTV серверу, самостоятельно управлять камерой.</value>
   </data>
+  <data name="tv_delay1" xml:space="preserve">
+    <value>Задаёт задержку для особого TV1 сервера SourceTV.</value>
+  </data>
 </root>

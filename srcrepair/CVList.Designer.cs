@@ -6721,6 +6721,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Set a custom delay on TV1 SourceTV server..
+        /// </summary>
+        internal static string tv_delay1 {
+            get {
+                return ResourceManager.GetString("tv_delay1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Prevent manual map changes if SourceTV has not caught up with a major event like the end of a round..
         /// </summary>
         internal static string tv_delaymapchange_protect {

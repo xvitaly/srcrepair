@@ -2364,4 +2364,7 @@
   <data name="tv_allow_camera_man_override" xml:space="preserve">
     <value>Allow / disallow to override caster-camera on SourceTV server.</value>
   </data>
+  <data name="tv_delay1" xml:space="preserve">
+    <value>Set a custom delay on TV1 SourceTV server.</value>
+  </data>
 </root>
