@@ -3708,6 +3708,9 @@
   <data name="say_party" xml:space="preserve">
     <value>Открыто окно чата группы. В качестве параметра может быть указан текст, который сразу будет отправлен без открытия окна.</value>
   </data>
+  <data name="snd_occlusion" xml:space="preserve">
+    <value>Включает / отключает использование новой звуковой модели для окружающих звуков в CS:GO.</value>
+  </data>
   <data name="tf_listrounds" xml:space="preserve">
     <value>Отладочная команда, выводящая список всех доступных на текущей карте стадий.</value>
   </data>
