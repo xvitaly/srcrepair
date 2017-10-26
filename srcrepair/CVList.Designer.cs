@@ -6730,6 +6730,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A set of comma-separated IP ranges, clients connecting from those IP addresses will go through full Steam authentication even for GOTV connections, which is necessary for additional interactive caster authentication..
+        /// </summary>
+        internal static string tv_challenge_steam_iprange {
+            get {
+                return ResourceManager.GetString("tv_challenge_steam_iprange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Set a custom delay on TV1 SourceTV server..
         /// </summary>
         internal static string tv_delay1 {

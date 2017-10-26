@@ -3732,6 +3732,9 @@
   <data name="tv_allow_camera_man_steamid2" xml:space="preserve">
     <value>Дополнительный аккаунт для стримера, который подключается к особому TV1 серверу SourceTV с низкой задержкой.</value>
   </data>
+  <data name="tv_challenge_steam_iprange" xml:space="preserve">
+    <value>Список IP-адресов, разделённых запятыми, с которых может подключаться к SourceTV серверу стример. Используется как дополнительный слой защиты.</value>
+  </data>
   <data name="tv_delay1" xml:space="preserve">
     <value>Задаёт задержку для особого TV1 сервера SourceTV.</value>
   </data>
