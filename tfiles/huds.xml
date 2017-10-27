@@ -80,12 +80,12 @@
     <Name>ahud</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/ahud/ahud_81da48e2.zip</URI>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/ahud/ahud_f728921d.zip</URI>
     <UpURI>https://github.com/n0kk/ahud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/ahud.jpg</Preview>
     <RepoPath>https://github.com/n0kk/ahud</RepoPath>
-    <Hash>e7f7a6da9279459f856139ff1bdebdf8</Hash>
-    <LastUpdate>1508889364</LastUpdate>
+    <Hash>9dc0ca65d10c4d2a86ae1ae59f8fee6a</Hash>
+    <LastUpdate>1509063006</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=191</Site>
     <ArchiveDir>ahud-master</ArchiveDir>
     <InstallDir>ahud</InstallDir>
