@@ -94,6 +94,12 @@ namespace srcrepair
                 CleanDirs.Add(Path.Combine(SteamPath, "depotcache", "*.*"));
             }
 
+            if (EC_ShaderCache.Checked)
+            {
+                // Очистим кэш шейдеров клиента Steam...
+                CleanDirs.Add(Path.Combine(SteamPath, "shadercache", "*.*"));
+            }
+
             if (EC_Logs.Checked)
             {
                 // Очистим логи клиента Steam...
