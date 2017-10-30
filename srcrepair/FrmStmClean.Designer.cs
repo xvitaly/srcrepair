@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStmClean));
             this.EC_GB_Basic = new System.Windows.Forms.GroupBox();
+            this.EC_ShaderCache = new System.Windows.Forms.CheckBox();
             this.EC_DepotCache = new System.Windows.Forms.CheckBox();
             this.EC_HTTPCache = new System.Windows.Forms.CheckBox();
             this.EC_HTMLCache = new System.Windows.Forms.CheckBox();
@@ -56,12 +57,19 @@
             // 
             // EC_GB_Basic
             // 
+            this.EC_GB_Basic.Controls.Add(this.EC_ShaderCache);
             this.EC_GB_Basic.Controls.Add(this.EC_DepotCache);
             this.EC_GB_Basic.Controls.Add(this.EC_HTTPCache);
             this.EC_GB_Basic.Controls.Add(this.EC_HTMLCache);
             resources.ApplyResources(this.EC_GB_Basic, "EC_GB_Basic");
             this.EC_GB_Basic.Name = "EC_GB_Basic";
             this.EC_GB_Basic.TabStop = false;
+            // 
+            // EC_ShaderCache
+            // 
+            resources.ApplyResources(this.EC_ShaderCache, "EC_ShaderCache");
+            this.EC_ShaderCache.Name = "EC_ShaderCache";
+            this.EC_ShaderCache.UseVisualStyleBackColor = true;
             // 
             // EC_DepotCache
             // 
@@ -231,5 +239,6 @@
         private System.Windows.Forms.CheckBox EC_Guard;
         private System.Windows.Forms.CheckBox EC_Updater;
         private System.Windows.Forms.CheckBox EC_DepotCache;
+        private System.Windows.Forms.CheckBox EC_ShaderCache;
     }
 }
