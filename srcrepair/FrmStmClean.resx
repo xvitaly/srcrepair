@@ -123,14 +123,17 @@
   <metadata name="EC_ShaderCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="EC_ShaderCache.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="EC_ShaderCache.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 91</value>
   </data>
   <data name="EC_ShaderCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 17</value>
+    <value>124, 17</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="EC_ShaderCache.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
@@ -152,11 +155,14 @@
   <metadata name="EC_DepotCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="EC_DepotCache.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="EC_DepotCache.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 68</value>
   </data>
   <data name="EC_DepotCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 17</value>
+    <value>147, 17</value>
   </data>
   <data name="EC_DepotCache.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -179,11 +185,14 @@
   <metadata name="EC_HTTPCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="EC_HTTPCache.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="EC_HTTPCache.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 45</value>
   </data>
   <data name="EC_HTTPCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 17</value>
+    <value>198, 17</value>
   </data>
   <data name="EC_HTTPCache.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -206,6 +215,9 @@
   <metadata name="EC_HTMLCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="EC_HTMLCache.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="EC_HTMLCache.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 22</value>
   </data>
@@ -260,11 +272,14 @@
   <metadata name="EC_BuildCache.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="EC_BuildCache.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="EC_BuildCache.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 88</value>
   </data>
   <data name="EC_BuildCache.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 17</value>
+    <value>114, 17</value>
   </data>
   <data name="EC_BuildCache.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -287,11 +302,14 @@
   <metadata name="EC_ErrDmps.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="EC_ErrDmps.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="EC_ErrDmps.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 65</value>
   </data>
   <data name="EC_ErrDmps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 17</value>
+    <value>114, 17</value>
   </data>
   <data name="EC_ErrDmps.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -314,11 +332,14 @@
   <metadata name="EC_OldBins.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="EC_OldBins.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="EC_OldBins.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 42</value>
   </data>
   <data name="EC_OldBins.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 17</value>
+    <value>112, 17</value>
   </data>
   <data name="EC_OldBins.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -341,11 +362,14 @@
   <metadata name="EC_Logs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="EC_Logs.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="EC_Logs.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 19</value>
   </data>
   <data name="EC_Logs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 17</value>
+    <value>106, 17</value>
   </data>
   <data name="EC_Logs.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -395,11 +419,14 @@
   <metadata name="EC_Skins.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="EC_Skins.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="EC_Skins.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 111</value>
   </data>
   <data name="EC_Skins.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 17</value>
+    <value>120, 17</value>
   </data>
   <data name="EC_Skins.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -422,11 +449,14 @@
   <metadata name="EC_Music.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="EC_Music.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="EC_Music.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 88</value>
   </data>
   <data name="EC_Music.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 17</value>
+    <value>133, 17</value>
   </data>
   <data name="EC_Music.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -449,11 +479,14 @@
   <metadata name="EC_Stats.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="EC_Stats.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="EC_Stats.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 65</value>
   </data>
   <data name="EC_Stats.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 17</value>
+    <value>135, 17</value>
   </data>
   <data name="EC_Stats.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -476,11 +509,14 @@
   <metadata name="EC_Cloud.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="EC_Cloud.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="EC_Cloud.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 42</value>
   </data>
   <data name="EC_Cloud.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 17</value>
+    <value>149, 17</value>
   </data>
   <data name="EC_Cloud.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -503,6 +539,9 @@
   <metadata name="EC_GameIcons.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="EC_GameIcons.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="EC_GameIcons.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -511,7 +550,7 @@
     <value>14, 19</value>
   </data>
   <data name="EC_GameIcons.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 17</value>
+    <value>152, 17</value>
   </data>
   <data name="EC_GameIcons.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -588,6 +627,9 @@
   <metadata name="EC_Guard.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="EC_Guard.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="EC_Guard.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -595,7 +637,7 @@
     <value>14, 42</value>
   </data>
   <data name="EC_Guard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 17</value>
+    <value>121, 17</value>
   </data>
   <data name="EC_Guard.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -618,6 +660,9 @@
   <metadata name="EC_Updater.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="EC_Updater.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="EC_Updater.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -625,7 +670,7 @@
     <value>14, 19</value>
   </data>
   <data name="EC_Updater.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 17</value>
+    <value>128, 17</value>
   </data>
   <data name="EC_Updater.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
