@@ -208,13 +208,9 @@
             this.Name = "FrmStmClean";
             this.ShowInTaskbar = false;
             this.EC_GB_Basic.ResumeLayout(false);
-            this.EC_GB_Basic.PerformLayout();
             this.EC_GB_Garb.ResumeLayout(false);
-            this.EC_GB_Garb.PerformLayout();
             this.EC_GB_ExCn.ResumeLayout(false);
-            this.EC_GB_ExCn.PerformLayout();
             this.EC_GB_Trsh.ResumeLayout(false);
-            this.EC_GB_Trsh.PerformLayout();
             this.ResumeLayout(false);
 
         }
