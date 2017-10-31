@@ -38,35 +38,34 @@ namespace srcrepair
         public static string GetSteamPath()
         {
             // Подключаем реестр и открываем ключ только для чтения...
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false);
-
-            // Создаём строку для хранения результатов...
-            string ResString = String.Empty;
-
-            // Проверяем чтобы ключ реестр существовал и был доступен...
-            if (ResKey != null)
+            using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false))
             {
-                // Получаем значение открытого ключа...
-                object ResObj = ResKey.GetValue("SteamPath");
 
-                // Проверяем чтобы значение существовало...
-                if (ResObj != null)
+                // Создаём строку для хранения результатов...
+                string ResString = String.Empty;
+
+                // Проверяем чтобы ключ реестр существовал и был доступен...
+                if (ResKey != null)
                 {
-                    // Существует, возвращаем...
-                    ResString = Path.GetFullPath(Convert.ToString(ResObj));
+                    // Получаем значение открытого ключа...
+                    object ResObj = ResKey.GetValue("SteamPath");
+
+                    // Проверяем чтобы значение существовало...
+                    if (ResObj != null)
+                    {
+                        // Существует, возвращаем...
+                        ResString = Path.GetFullPath(Convert.ToString(ResObj));
+                    }
+                    else
+                    {
+                        // Значение не существует, поэтому сгенерируем исключение для обработки в основном коде...
+                        throw new NullReferenceException("Exception: No InstallPath value detected! Please run Steam.");
+                    }
                 }
-                else
-                {
-                    // Значение не существует, поэтому сгенерируем исключение для обработки в основном коде...
-                    throw new NullReferenceException("Exception: No InstallPath value detected! Please run Steam.");
-                }
+
+                // Возвращаем результат...
+                return ResString;
             }
-
-            // Закрываем открытый ранее ключ реестра...
-            ResKey.Close();
-
-            // Возвращаем результат...
-            return ResString;
         }
 
         /// <summary>
