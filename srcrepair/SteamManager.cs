@@ -69,6 +69,16 @@ namespace srcrepair
             return ResString;
         }
 
+        public static string GetSteamLanguage()
+        {
+            using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false))
+            {
+                string Result = String.Empty;
+                if (ResKey != null) { object ResObj = ResKey.GetValue("Language"); if (ResObj != null) { Result = Convert.ToString(ResObj); } else { throw new NullReferenceException("Exception: No Language value detected! Please run Steam."); } }
+                return Result;
+            }
+        }
+
         /// <summary>
         /// Тестирует переданный каталог в качестве пути установки Steam.
         /// </summary>
