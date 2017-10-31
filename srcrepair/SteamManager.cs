@@ -69,6 +69,10 @@ namespace srcrepair
             return ResString;
         }
 
+        /// <summary>
+        /// Получает из реестра и возвращает текущий язык клиента Steam.
+        /// </summary>
+        /// <returns>Язык клиента Steam</returns>
         public static string GetSteamLanguage()
         {
             using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false))
