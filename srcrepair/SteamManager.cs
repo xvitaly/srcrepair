@@ -37,13 +37,12 @@ namespace srcrepair
         /// <returns>Путь к клиенту Steam</returns>
         public static string GetSteamPath()
         {
+            // Создаём строку для хранения результатов...
+            string ResString = String.Empty;
+
             // Подключаем реестр и открываем ключ только для чтения...
             using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false))
             {
-
-                // Создаём строку для хранения результатов...
-                string ResString = String.Empty;
-
                 // Проверяем чтобы ключ реестр существовал и был доступен...
                 if (ResKey != null)
                 {
@@ -62,10 +61,10 @@ namespace srcrepair
                         throw new NullReferenceException("Exception: No InstallPath value detected! Please run Steam.");
                     }
                 }
-
-                // Возвращаем результат...
-                return ResString;
             }
+
+            // Возвращаем результат...
+            return ResString;
         }
 
         /// <summary>
@@ -74,12 +73,7 @@ namespace srcrepair
         /// <returns>Язык клиента Steam</returns>
         public static string GetSteamLanguage()
         {
-            using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false))
-            {
-                string Result = String.Empty;
-                if (ResKey != null) { object ResObj = ResKey.GetValue("Language"); if (ResObj != null) { Result = Convert.ToString(ResObj); } else { throw new NullReferenceException("Exception: No Language value detected! Please run Steam."); } }
-                return Result;
-            }
+            string Result = String.Empty; using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false)) { if (ResKey != null) { object ResObj = ResKey.GetValue("Language"); if (ResObj != null) { Result = Convert.ToString(ResObj); } else { throw new NullReferenceException("Exception: No Language value detected! Please run Steam."); } } } return Result;
         }
 
         /// <summary>
