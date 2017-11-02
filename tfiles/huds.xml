@@ -191,13 +191,13 @@
   <HUD>
     <Name>E.V.E. HUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/evehud/evehud_91e95e49.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/evehud/evehud_bfec8aa8.zip</URI>
     <UpURI>https://files.gamebanana.com/guis/eve_hud_v416.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/evehud.jpg</Preview>
     <RepoPath>null</RepoPath>
-    <Hash>f6319cae1b18b1af7117f83424645b9e</Hash>
-    <LastUpdate>1482609600</LastUpdate>
+    <Hash>4eec57ab29977d8bcd0f7b950cf921ce</Hash>
+    <LastUpdate>1509537600</LastUpdate>
     <Site>https://gamebanana.com/guis/25711</Site>
     <ArchiveDir>eve hud</ArchiveDir>
     <InstallDir>evehud</InstallDir>
