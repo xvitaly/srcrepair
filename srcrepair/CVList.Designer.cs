@@ -5128,6 +5128,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allow / disallow bots reselecting their class while in spawn rooms..
+        /// </summary>
+        internal static string tf_bot_reevaluate_class_in_spawnroom {
+            get {
+                return ResourceManager.GetString("tf_bot_reevaluate_class_in_spawnroom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to If set, Snipers will stop on their way to their preferred lurking spot to snipe at opportunistic targets..
         /// </summary>
         internal static string tf_bot_sniper_allow_opportunistic {

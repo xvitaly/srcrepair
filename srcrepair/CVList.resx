@@ -2379,4 +2379,7 @@
   <data name="tv_delay1" xml:space="preserve">
     <value>Set a custom delay on TV1 SourceTV server.</value>
   </data>
+  <data name="tf_bot_reevaluate_class_in_spawnroom" xml:space="preserve">
+    <value>Allow / disallow bots reselecting their class while in spawn rooms.</value>
+  </data>
 </root>
