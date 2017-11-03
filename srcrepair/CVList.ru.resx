@@ -3744,4 +3744,7 @@
   <data name="tv_delay1" xml:space="preserve">
     <value>Задаёт задержку для особого TV1 сервера SourceTV.</value>
   </data>
+  <data name="tf_bot_reevaluate_class_in_spawnroom" xml:space="preserve">
+    <value>Разрешить / запретить ботам менять свои классы во время нахождения внутри комнат возрождения.</value>
+  </data>
 </root>
