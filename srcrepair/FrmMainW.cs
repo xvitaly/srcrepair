@@ -1280,8 +1280,32 @@ namespace srcrepair
             // Включаем список с доступными языками клиента Steam...
             PS_SteamLang.Enabled = PS_CleanRegistry.Checked;
 
-            // Выбираем язык по умолчанию согласно языку приложения...
-            PS_SteamLang.SelectedIndex = Convert.ToInt32(AppStrings.AppDefaultSteamLangID);
+            // Получим значение текущего языка из реестра Windows...
+            if (App.Platform.OS == CurrentPlatform.OSType.Windows)
+            {
+                try
+                {
+                    switch (SteamManager.GetSteamLanguage())
+                    {
+                        case "russian":
+                            PS_SteamLang.SelectedIndex = 1;
+                            break;
+                        default:
+                            PS_SteamLang.SelectedIndex = 0;
+                            break;
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    CoreLib.WriteStringToLog(Ex.Message);
+                    PS_SteamLang.SelectedIndex = 0;
+                }
+            }
+            else
+            {
+                // Выбираем язык по умолчанию согласно языку приложения...
+                PS_SteamLang.SelectedIndex = Convert.ToInt32(AppStrings.AppDefaultSteamLangID);
+            }
 
             // Управляем доступностью кнопки запуска очистки...
             PS_ExecuteNow.Enabled = PS_CleanRegistry.Checked || PS_CleanBlobs.Checked;
