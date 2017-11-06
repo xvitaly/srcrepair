@@ -1230,6 +1230,24 @@ namespace srcrepair
             SetHUDButtons(HUDManager.CheckInstalledHUD(SelGame.CustomInstallDir, SelGame.HUDMan.SelectedHUD.InstallDir));
         }
 
+        private void BW_LOptsRecv_DoWork(object sender, DoWorkEventArgs e)
+        {
+            // Получаем параметры запуска...
+            string Opts = SteamManager.GetLaunchOptions(App.FullSteamPath, SB_SteamID.Text, SelGame.GameInternalID);
+
+            // Устанавливаем полученное значение в форму...
+            Invoke((MethodInvoker)delegate () { GT_LaunchOptions.Text = Opts; });
+        }
+
+        private void BW_LOptsRecv_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            // Проверяем результат асинхронной операции и при ошибке вставляем пустое значение...
+            if (e.Error != null)
+            {
+                GT_LaunchOptions.Text = String.Empty;
+            }
+        }
+
         #endregion
 
         private void FrmMainW_Load(object sender, EventArgs e)
@@ -1402,9 +1420,6 @@ namespace srcrepair
                 // Считаем настройки графики...
                 try { LoadGraphicSettings(); } catch (NotSupportedException) { MessageBox.Show(AppStrings.AppIncorrectSrcVersion, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
-                // Получим параметры запуска...
-                GT_LaunchOptions.Text = SelGame.LaunchOptions;
-
                 // Получаем текущий SteamID...
                 HandleSteamIDs(Properties.Settings.Default.LastSteamID);
 
@@ -1431,6 +1446,9 @@ namespace srcrepair
                 
                 // Считаем список бэкапов...
                 if (!BW_BkUpRecv.IsBusy) { BW_BkUpRecv.RunWorkerAsync(); }
+
+                // Получим параметры запуска...
+                if (!BW_LOptsRecv.IsBusy) { BW_LOptsRecv.RunWorkerAsync(); }
 
                 // Создадим каталоги...
                 if (!Directory.Exists(SelGame.AppHUDDir)) { Directory.CreateDirectory(SelGame.AppHUDDir); }
