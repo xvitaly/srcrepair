@@ -155,11 +155,6 @@ namespace srcrepair
         public bool IsInstalled { get; private set; }
 
         /// <summary>
-        /// Хранит параметры запуска игры.
-        /// </summary>
-        public string LaunchOptions { get; private set; }
-
-        /// <summary>
         /// Содержит путь к установленному клиенту Steam.
         /// </summary>
         private string SteamPath { get; set; }
@@ -303,7 +298,6 @@ namespace srcrepair
                 if (IsUsingVideoFile) { UpdateVideoFilesList(); }
                 UpdateBanlistFilesList();
                 CloudConfigs = GetCloudConfigs();
-                LaunchOptions = SteamManager.GetLaunchOptions(SteamPath, GameInternalID);
             }
         }
     }
