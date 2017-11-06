@@ -23,6 +23,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using Microsoft.Win32;
+using Gameloop.Vdf;
 
 namespace srcrepair
 {
@@ -140,12 +141,15 @@ namespace srcrepair
         /// Получает и возвращает параметры запуска указанного приложения.
         /// </summary>
         /// <param name="SteamPath">Каталог установки Steam</param>
+        /// <param name="UserID">Steam UserID выбранного пользователя</param>
         /// <param name="GameID">ID приложения, параметры запуска которого нужно определить</param>
         /// <returns>Параметры запуска приложения</returns>
-        public static string GetLaunchOptions(string SteamPath, string GameID)
+        public static string GetLaunchOptions(string SteamPath, string UserID, string GameID)
         {
             // Возвращаем результат...
-            return String.Empty;
+            string ConfigFile = Path.Combine(SteamPath, "userdata", UserID, "config", "localconfig.vdf");
+            dynamic SteamDB = VdfConvert.Deserialize(File.ReadAllText(ConfigFile));
+            return Convert.ToString(SteamDB.Value["Software"]["Valve"]["Steam"]["apps"][GameID]["LaunchOptions"]);
         }
 
         /// <summary>
