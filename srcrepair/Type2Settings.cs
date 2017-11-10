@@ -125,25 +125,25 @@ namespace srcrepair
         /// </summary>
         private void SetSettingsV2()
         {
-            ScreenWidth = "setting.defaultres";
-            ScreenHeight = "setting.defaultresheight";
-            ScreenRatio = "setting.aspectratiomode";
-            Brightness = "setting.mat_monitorgamma";
-            ShadowQuality = "setting.csm_quality_level";
-            MotionBlur = "setting.mat_motion_blur_enabled";
-            DisplayMode = "setting.fullscreen";
-            DisplayBorderless = "setting.nowindowborder";
-            AntiAliasing = "setting.mat_antialias";
-            AntiAliasQuality = "setting.mat_aaquality";
-            FilteringMode = "setting.mat_forceaniso";
-            VSync = "setting.mat_vsync";
-            VSyncMode = "setting.mat_triplebuffered";
-            MCRendering = "setting.mat_queue_mode";
-            ShaderEffects = "setting.gpu_level";
-            EffectDetails = "setting.cpu_level";
-            MemoryPoolType = "setting.mem_level";
-            TextureModelQuality = "setting.gpu_mem_level";
-            GrainScaleOverride = "setting.mat_grain_scale_override";
+            ScreenWidth = "defaultres";
+            ScreenHeight = "defaultresheight";
+            ScreenRatio = "aspectratiomode";
+            Brightness = "mat_monitorgamma";
+            ShadowQuality = "csm_quality_level";
+            MotionBlur = "mat_motion_blur_enabled";
+            DisplayMode = "fullscreen";
+            DisplayBorderless = "nowindowborder";
+            AntiAliasing = "mat_antialias";
+            AntiAliasQuality = "mat_aaquality";
+            FilteringMode = "mat_forceaniso";
+            VSync = "mat_vsync";
+            VSyncMode = "mat_triplebuffered";
+            MCRendering = "mat_queue_mode";
+            ShaderEffects = "gpu_level";
+            EffectDetails = "cpu_level";
+            MemoryPoolType = "mem_level";
+            TextureModelQuality = "gpu_mem_level";
+            GrainScaleOverride = "mat_grain_scale_override";
         }
 
         /// <summary>
