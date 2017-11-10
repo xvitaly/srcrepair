@@ -418,6 +418,9 @@ namespace srcrepair
 
                 switch (_FilteringMode)
                 {
+                    case -1:
+                        res = 3;
+                        break;
                     case 0:
                         res = 0;
                         break;
