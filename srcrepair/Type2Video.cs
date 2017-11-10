@@ -802,7 +802,7 @@ namespace srcrepair
             using (StreamWriter CFile = new StreamWriter(VideoFileName))
             {
                 // Генерируем шаблон...
-                string Templt = "\t\"{0}\"\t\t\"{1}\"";
+                string Templt = "\t\"setting.{0}\"\t\t\"{1}\"";
 
                 // Явно указываем локаль для записи вещественных чисел...
                 CultureInfo CI = new CultureInfo("en-US");
