@@ -19,7 +19,7 @@ rem
 rem You should have received a copy of the GNU General Public License
 rem along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-set GPGKEY=D45AB90A
+set GPGKEY=A989AAAA
 
 echo Starting build process using MSBUILD...
 "%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\msbuild.exe" ..\srcrepair.sln /m /t:Build /p:Configuration=Release /p:TargetFramework=v4.6.1
