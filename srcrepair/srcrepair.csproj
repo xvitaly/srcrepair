@@ -130,6 +130,14 @@
     <Compile Include="FrmAbout.Designer.cs">
       <DependentUpon>FrmAbout.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMainW.Methods.cs">
+      <DependentUpon>FrmMainW.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMainW.Workers.cs">
+      <DependentUpon>FrmMainW.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmMhed.cs">
       <SubType>Form</SubType>
     </Compile>
