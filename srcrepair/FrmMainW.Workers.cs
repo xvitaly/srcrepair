@@ -28,7 +28,7 @@ using System.Windows.Forms;
 
 namespace srcrepair
 {
-    partial class FrmMainW
+    public partial class FrmMainW
     {
         private void BW_UpChk_DoWork(object sender, DoWorkEventArgs e)
         {

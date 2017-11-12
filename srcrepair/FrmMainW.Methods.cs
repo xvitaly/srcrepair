@@ -28,7 +28,7 @@ using System.Xml;
 
 namespace srcrepair
 {
-    partial class FrmMainW
+    public partial class FrmMainW
     {
         /// <summary>
         /// Сохраняет содержимое таблицы в файл конфигурации, указанный в
