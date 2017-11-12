@@ -1429,8 +1429,8 @@ namespace srcrepair
                 // Считаем список бэкапов...
                 if (!BW_BkUpRecv.IsBusy) { BW_BkUpRecv.RunWorkerAsync(); }
 
-                // Создадим каталоги...
-                if (!Directory.Exists(SelGame.AppHUDDir)) { Directory.CreateDirectory(SelGame.AppHUDDir); }
+                // Создадим каталоги кэшей для HUD...
+                if (SelGame.IsHUDsAvailable && !Directory.Exists(SelGame.AppHUDDir)) { Directory.CreateDirectory(SelGame.AppHUDDir); }
             }
             catch (Exception Ex)
             {
