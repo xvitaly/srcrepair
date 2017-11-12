@@ -244,7 +244,6 @@
             this.BW_HUDScreen = new System.ComponentModel.BackgroundWorker();
             this.BW_HudInstall = new System.ComponentModel.BackgroundWorker();
             this.AppRefresh = new System.Windows.Forms.Button();
-            this.BW_LOptsRecv = new System.ComponentModel.BackgroundWorker();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             this.GT_GType1.SuspendLayout();
@@ -2024,11 +2023,6 @@
             this.AppRefresh.UseVisualStyleBackColor = true;
             this.AppRefresh.Click += new System.EventHandler(this.AppRefresh_Click);
             // 
-            // BW_LOptsRecv
-            // 
-            this.BW_LOptsRecv.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_LOptsRecv_DoWork);
-            this.BW_LOptsRecv.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BW_LOptsRecv_RunWorkerCompleted);
-            // 
             // FrmMainW
             // 
             resources.ApplyResources(this, "$this");
@@ -2308,7 +2302,6 @@
         private System.Windows.Forms.Label L_GT_LaunchOptions;
         private System.Windows.Forms.ToolStripStatusLabel SB_SteamID;
         private System.Windows.Forms.ToolStripMenuItem MNUDonate;
-        private System.ComponentModel.BackgroundWorker BW_LOptsRecv;
     }
 }
 
