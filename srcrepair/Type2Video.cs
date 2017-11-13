@@ -23,6 +23,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace srcrepair
 {
@@ -755,7 +756,7 @@ namespace srcrepair
         /// <param name="CVar">Переменная</param>
         private int GetNCFDWord(string CVar)
         {
-            int res; try { res = Convert.ToInt32(ExtractCVFromLine(VideoFile.FirstOrDefault(s => s.Contains(CVar)))); } catch { res = Convert.ToInt32(ExtractCVFromLine(DefaultsFile.FirstOrDefault(s => s.Contains(CVar)))); } return res;
+            int Result; try { string StrRes = VideoFile.FirstOrDefault(s => s.Contains(CVar) && Regex.IsMatch(s, "setting.")); if (String.IsNullOrEmpty(StrRes)) { StrRes = DefaultsFile.FirstOrDefault(s => s.Contains(CVar)); } Result = Convert.ToInt32(ExtractCVFromLine(StrRes)); } catch { Result = -1; } return Result;
         }
 
         /// <summary>
@@ -764,7 +765,7 @@ namespace srcrepair
         /// <param name="CVar">Переменная</param>
         private decimal GetNCFDble(string CVar)
         {
-            decimal res; CultureInfo CI = new CultureInfo("en-US"); try { res = Convert.ToDecimal(ExtractCVFromLine(VideoFile.FirstOrDefault(s => s.Contains(CVar))), CI); } catch { res = Convert.ToDecimal(ExtractCVFromLine(DefaultsFile.FirstOrDefault(s => s.Contains(CVar))), CI); } return res;
+            decimal Result; CultureInfo CI = new CultureInfo("en-US"); try { string StrRes = VideoFile.FirstOrDefault(s => s.Contains(CVar) && Regex.IsMatch(s, "setting.")); if (String.IsNullOrEmpty(StrRes)) { StrRes = DefaultsFile.FirstOrDefault(s => s.Contains(CVar)); } Result = Convert.ToDecimal(ExtractCVFromLine(StrRes), CI); } catch { Result = 2.2M; } return Result;
         }
 
         /// <summary>
