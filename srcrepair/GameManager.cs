@@ -11,6 +11,11 @@ namespace srcrepair
         private List<SourceGame> SourceGames;
         public SourceGame SelectedGame { get; private set; }
 
+        public void Select(string GameName)
+        {
+            SelectedGame = SourceGames.Find(Item => String.Equals(Item.FullAppName, GameName, StringComparison.CurrentCultureIgnoreCase));
+        }
+
         public GameManager()
         {
         }
