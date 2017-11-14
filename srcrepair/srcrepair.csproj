@@ -198,6 +198,7 @@
     <Compile Include="FrmOptions.Designer.cs">
       <DependentUpon>FrmOptions.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameManager.cs" />
     <Compile Include="Type1Settings.cs" />
     <Compile Include="Type1Video.cs" />
     <Compile Include="HUDManager.cs" />
