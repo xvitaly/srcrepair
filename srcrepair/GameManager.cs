@@ -9,6 +9,7 @@ namespace srcrepair
     public sealed class GameManager
     {
         private List<SourceGame> SourceGames;
+        public SourceGame SelectedGame { get; private set; }
 
         public GameManager()
         {
