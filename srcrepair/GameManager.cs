@@ -8,6 +8,8 @@ namespace srcrepair
 {
     public sealed class GameManager
     {
+        private List<SourceGame> SourceGames;
+
         public GameManager()
         {
         }
