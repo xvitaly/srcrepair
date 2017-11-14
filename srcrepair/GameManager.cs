@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace srcrepair
 {
-    class GameManager
+    public sealed class GameManager
     {
     }
 }
