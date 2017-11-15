@@ -53,43 +53,16 @@ namespace srcrepair
         /// </summary>
         private void DetectInstalledGames()
         {
-            // Очистим список игр...
-            AppSelector.Items.Clear();
-            SourceGames.Clear();
-
-            // При использовании нового метода поиска установленных игр, считаем их из конфига Steam...
-            List<String> GameDirs = SteamManager.FormatInstallDirs(App.FullSteamPath, App.Platform.SteamAppsFolderName);
-
             try
             {
-                // Создаём поток с XML-файлом...
-                using (FileStream XMLFS = new FileStream(Path.Combine(App.FullAppPath, Properties.Resources.GameListFile), FileMode.Open, FileAccess.Read))
-                {
-                    // Создаём объект документа XML...
-                    XmlDocument XMLD = new XmlDocument();
+                // Считаем базу данных и заполним таблицу...
+                App.SourceGames = new GameManager(App);
 
-                    // Загружаем поток в объект XML документа...
-                    XMLD.Load(XMLFS);
+                // Очистим список игр...
+                AppSelector.Items.Clear();
 
-                    // Обходим полученный список в цикле...
-                    XmlNodeList XMLNode = XMLD.GetElementsByTagName("Game");
-                    for (int i = 0; i < XMLNode.Count; i++)
-                    {
-                        try
-                        {
-                            if (XMLD.GetElementsByTagName("Enabled")[i].InnerText == "1" || !Properties.Settings.Default.HideUnsupportedGames)
-                            {
-                                SourceGame SG = new SourceGame(XMLNode[i].Attributes["Name"].Value, XMLD.GetElementsByTagName("DirName")[i].InnerText, XMLD.GetElementsByTagName("SmallName")[i].InnerText, XMLD.GetElementsByTagName("Executable")[i].InnerText, XMLD.GetElementsByTagName("SID")[i].InnerText, XMLD.GetElementsByTagName("SVer")[i].InnerText, XMLD.GetElementsByTagName("VFDir")[i].InnerText, App.Platform.OS == CurrentPlatform.OSType.Windows ? XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1" : true, XMLD.GetElementsByTagName("UserDir")[i].InnerText == "1", XMLD.GetElementsByTagName("HUDsAvail")[i].InnerText == "1", App.FullAppPath, App.AppUserDir, App.FullSteamPath, App.Platform.SteamAppsFolderName, GameDirs);
-                                if (SG.IsInstalled)
-                                {
-                                    SourceGames.Add(SG);
-                                    AppSelector.Items.Add(XMLNode[i].Attributes["Name"].Value);
-                                }
-                            }
-                        }
-                        catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    }
-                }
+                // Заполним селектор...
+                
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
@@ -100,7 +73,7 @@ namespace srcrepair
         private void WriteType1VideoSettings()
         {
             // Создаём новый объект без получения данных из реестра...
-            Type1Video Video = new Type1Video(SelGame.SmallAppName, false)
+            Type1Video Video = new Type1Video(App.SourceGames.SelectedGame.SmallAppName, false)
             {
                 // Записываем пользовательские настройки...
                 ScreenWidth = (int)GT_ResHor.Value,
@@ -130,7 +103,7 @@ namespace srcrepair
         private void WriteType2VideoSettings()
         {
             // Создаём новый объект без получения данных из файла...
-            Type2Video Video = new Type2Video(SelGame.GetActualVideoFile(), SelGame.SourceType, false)
+            Type2Video Video = new Type2Video(App.SourceGames.SelectedGame.GetActualVideoFile(), App.SourceGames.SelectedGame.SourceType, false)
             {
                 // Записываем пользовательские настройки...
                 ScreenWidth = (int)GT_NCF_HorRes.Value,
@@ -163,7 +136,7 @@ namespace srcrepair
             try
             {
                 // Получаем графические настройки...
-                Type1Video Video = new Type1Video(SelGame.SmallAppName, true);
+                Type1Video Video = new Type1Video(App.SourceGames.SelectedGame.SmallAppName, true);
 
                 // Заполняем общие настройки...
                 GT_ResHor.Value = Video.ScreenWidth;
@@ -200,13 +173,13 @@ namespace srcrepair
             try
             {
                 // Получаем актуальный файл с настройками видео...
-                string VFileName = SelGame.GetActualVideoFile();
+                string VFileName = App.SourceGames.SelectedGame.GetActualVideoFile();
 
                 // Загружаем содержимое если он существует...
                 if (File.Exists(VFileName))
                 {
                     // Получаем графические настройки...
-                    Type2Video Video = new Type2Video(VFileName, SelGame.SourceType, true);
+                    Type2Video Video = new Type2Video(VFileName, App.SourceGames.SelectedGame.SourceType, true);
 
                     // Заполняем общие настройки...
                     GT_NCF_HorRes.Value = Video.ScreenWidth;
@@ -230,7 +203,7 @@ namespace srcrepair
                 else
                 {
                     // Записываем в журнал сообщение об ошибке...
-                    CoreLib.WriteStringToLog(String.Format(AppStrings.AppVideoDbNotFound, SelGame.FullAppName, VFileName));
+                    CoreLib.WriteStringToLog(String.Format(AppStrings.AppVideoDbNotFound, App.SourceGames.SelectedGame.FullAppName, VFileName));
                 }
             }
             catch (Exception Ex)
@@ -402,7 +375,7 @@ namespace srcrepair
             Invoke((MethodInvoker)delegate () { BU_LVTable.Items.Clear(); });
 
             // Открываем каталог...
-            DirectoryInfo DInfo = new DirectoryInfo(SelGame.FullBackUpDirPath);
+            DirectoryInfo DInfo = new DirectoryInfo(App.SourceGames.SelectedGame.FullBackUpDirPath);
 
             // Считываем список файлов по заданной маске...
             FileInfo[] DirList = DInfo.GetFiles("*.*");
@@ -473,7 +446,7 @@ namespace srcrepair
         /// </summary>
         private void NullGraphSettings()
         {
-            switch (SelGame.SourceType)
+            switch (App.SourceGames.SelectedGame.SourceType)
             {
                 case "1":
                     if (App.Platform.OS == CurrentPlatform.OSType.Windows) { NullType1Settings(); } else { NullType2Settings(); }
@@ -525,7 +498,7 @@ namespace srcrepair
             NullGraphSettings();
 
             // Загружаем настройки графики согласно указанного движка...
-            switch (SelGame.SourceType)
+            switch (App.SourceGames.SelectedGame.SourceType)
             {
                 case "1": /* Source 1, Type 1 (ex. GCF). */
                     if (App.Platform.OS == CurrentPlatform.OSType.Windows) { ReadType1VideoSettings(); } else { ReadType2VideoSettings(); }
@@ -538,7 +511,7 @@ namespace srcrepair
             }
 
             // Переключаем графический твикер в режим GCF/NCF...
-            SelectGraphicWidget((App.Platform.OS != CurrentPlatform.OSType.Windows) && (SelGame.SourceType == "1") ? "2" : SelGame.SourceType);
+            SelectGraphicWidget((App.Platform.OS != CurrentPlatform.OSType.Windows) && (App.SourceGames.SelectedGame.SourceType == "1") ? "2" : App.SourceGames.SelectedGame.SourceType);
         }
 
         /// <summary>
@@ -548,12 +521,12 @@ namespace srcrepair
         private void PrepareWriteType1VideoSettings()
         {
             // Генерируем путь к ветке реестра с настройками...
-            string GameRegKey = Type1Video.GetGameRegKey(SelGame.SmallAppName);
+            string GameRegKey = Type1Video.GetGameRegKey(App.SourceGames.SelectedGame.SmallAppName);
 
             // Создаём резервную копию если включена опция безопасной очистки...
             if (Properties.Settings.Default.SafeCleanup)
             {
-                try { Type1Video.BackUpVideoSettings(GameRegKey, "Game_AutoBackUp", SelGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { Type1Video.BackUpVideoSettings(GameRegKey, "Game_AutoBackUp", App.SourceGames.SelectedGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
             }
 
             // Запускаем процесс...
@@ -584,7 +557,7 @@ namespace srcrepair
             // Создаём резервную копию если включена опция безопасной очистки...
             if (Properties.Settings.Default.SafeCleanup)
             {
-                FileManager.CreateConfigBackUp(SelGame.VideoCfgFiles, SelGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
+                FileManager.CreateConfigBackUp(App.SourceGames.SelectedGame.VideoCfgFiles, App.SourceGames.SelectedGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
             }
 
             // Запускаем процесс...
@@ -609,7 +582,7 @@ namespace srcrepair
         private void WriteGraphicSettings()
         {
             // Определим тип игры...
-            switch (SelGame.SourceType)
+            switch (App.SourceGames.SelectedGame.SourceType)
             {
                 case "1":
                     if (App.Platform.OS == CurrentPlatform.OSType.Windows) { PrepareWriteType1VideoSettings(); } else { PrepareWriteType2VideoSettings(); }
@@ -739,7 +712,7 @@ namespace srcrepair
         {
             try
             {
-                PS_OSDrive.Text = String.Format(PS_OSDrive.Text, FileManager.DetectDriveFileSystem(Path.GetPathRoot(SelGame.FullGamePath)));
+                PS_OSDrive.Text = String.Format(PS_OSDrive.Text, FileManager.DetectDriveFileSystem(Path.GetPathRoot(App.SourceGames.SelectedGame.FullGamePath)));
             }
             catch (Exception Ex)
             {
@@ -801,11 +774,11 @@ namespace srcrepair
         /// </summary>
         private void CheckSymbolsGame()
         {
-            if (!(FileManager.CheckNonASCII(SelGame.FullGamePath)))
+            if (!(FileManager.CheckNonASCII(App.SourceGames.SelectedGame.FullGamePath)))
             {
                 PS_PathGame.ForeColor = Color.Red;
                 PS_PathGame.Image = Properties.Resources.upd_err;
-                CoreLib.WriteStringToLog(String.Format(AppStrings.AppRestrSymbLog, SelGame.FullGamePath));
+                CoreLib.WriteStringToLog(String.Format(AppStrings.AppRestrSymbLog, App.SourceGames.SelectedGame.FullGamePath));
             }
             else
             {
@@ -819,9 +792,9 @@ namespace srcrepair
         /// </summary>
         private void HandleConfigs()
         {
-            SelGame.FPSConfigs = FileManager.ExpandFileList(ConfigManager.ListFPSConfigs(SelGame.FullGamePath, SelGame.IsUsingUserDir), true);
-            GT_Warning.Visible = SelGame.FPSConfigs.Count > 0;
-            FP_Uninstall.Enabled = SelGame.FPSConfigs.Count > 0;
+            App.SourceGames.SelectedGame.FPSConfigs = FileManager.ExpandFileList(ConfigManager.ListFPSConfigs(App.SourceGames.SelectedGame.FullGamePath, App.SourceGames.SelectedGame.IsUsingUserDir), true);
+            GT_Warning.Visible = App.SourceGames.SelectedGame.FPSConfigs.Count > 0;
+            FP_Uninstall.Enabled = App.SourceGames.SelectedGame.FPSConfigs.Count > 0;
         }
 
         /// <summary>
@@ -832,7 +805,7 @@ namespace srcrepair
         {
             try
             {
-                string Result = SelGame.GetCurrentSteamID(SID);
+                string Result = App.SourceGames.SelectedGame.GetCurrentSteamID(SID);
                 SB_SteamID.Text = Result;
                 Properties.Settings.Default.LastSteamID = Result;
             }
@@ -920,7 +893,7 @@ namespace srcrepair
         private bool ValidateGameSettings()
         {
             bool Result = false;
-            switch (SelGame.SourceType)
+            switch (App.SourceGames.SelectedGame.SourceType)
             {
                 case "1":
                     Result = App.Platform.OS == CurrentPlatform.OSType.Windows ? CheckType1Settings() : CheckType2Settings();
@@ -957,7 +930,7 @@ namespace srcrepair
                 CoreLib.WriteStringToLog(Ex.Message);
 
                 // Создадим каталог для хранения резервных копий если его ещё нет...
-                if (!Directory.Exists(SelGame.FullBackUpDirPath)) { Directory.CreateDirectory(SelGame.FullBackUpDirPath); }
+                if (!Directory.Exists(App.SourceGames.SelectedGame.FullBackUpDirPath)) { Directory.CreateDirectory(App.SourceGames.SelectedGame.FullBackUpDirPath); }
             }
         }
 
