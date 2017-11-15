@@ -18,13 +18,13 @@ namespace srcrepair
             SelectedGame = SourceGames.Find(Item => String.Equals(Item.FullAppName, GameName, StringComparison.CurrentCultureIgnoreCase));
         }
 
-        public GameManager(string FullSteamPath, string SteamAppsFolderName, string FullAppPath)
+        public GameManager(CurrentApp App)
         {
             // При использовании нового метода поиска установленных игр, считаем их из конфига Steam...
-            List<String> GameDirs = SteamManager.FormatInstallDirs(FullSteamPath, SteamAppsFolderName);
+            List<String> GameDirs = SteamManager.FormatInstallDirs(App.FullSteamPath, App.Platform.SteamAppsFolderName);
 
             // Создаём поток с XML-файлом...
-            using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, Properties.Resources.GameListFile), FileMode.Open, FileAccess.Read))
+            using (FileStream XMLFS = new FileStream(Path.Combine(App.FullAppPath, Properties.Resources.GameListFile), FileMode.Open, FileAccess.Read))
             {
                 // Создаём объект документа XML...
                 XmlDocument XMLD = new XmlDocument();
