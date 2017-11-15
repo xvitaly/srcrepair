@@ -11,6 +11,7 @@ namespace srcrepair
     public sealed class GameManager
     {
         private List<SourceGame> SourceGames;
+        public List<String> InstalledGames { get; private set; }
         public SourceGame SelectedGame { get; private set; }
 
         public void Select(string GameName)
@@ -20,8 +21,9 @@ namespace srcrepair
 
         public GameManager(CurrentApp App)
         {
-            // Создаём объект для хранения базы данных...
+            // Создаём объекты для хранения базы игр...
             SourceGames = new List<SourceGame>();
+            InstalledGames = new List<String>();
 
             // При использовании нового метода поиска установленных игр, считаем их из конфига Steam...
             List<String> GameDirs = SteamManager.FormatInstallDirs(App.FullSteamPath, App.Platform.SteamAppsFolderName);
@@ -47,6 +49,7 @@ namespace srcrepair
                             if (SG.IsInstalled)
                             {
                                 SourceGames.Add(SG);
+                                InstalledGames.Add(SG.FullAppName);
                             }
                         }
                     }
