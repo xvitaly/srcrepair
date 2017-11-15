@@ -61,10 +61,7 @@ namespace srcrepair
                 AppSelector.Items.Clear();
 
                 // Заполним селектор...
-                foreach (string Str in App.SourceGames.InstalledGames)
-                {
-                    AppSelector.Items.Add(Str);
-                }
+                AppSelector.Items.AddRange(App.SourceGames.InstalledGames.ToArray());
 
             }
             catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
