@@ -25,17 +25,40 @@ using System.Xml;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс для работы с коллекцией установленных поддерживаемых игр.
+    /// </summary>
     public sealed class GameManager
     {
+        /// <summary>
+        /// Хранит информацию о всех доступных поддерживаемых играх.
+        /// </summary>
         private List<SourceGame> SourceGames;
+
+        /// <summary>
+        /// Хранит названия установленных игр в виде списка. Используется
+        /// в основном селектором игр в главном окне.
+        /// </summary>
         public List<String> InstalledGames { get; private set; }
+
+        /// <summary>
+        /// Хранит информацию о выбранной игре. Для заполнения используется метод Select().
+        /// </summary>
         public SourceGame SelectedGame { get; private set; }
 
+        /// <summary>
+        /// Выбирает определённую игру по имени.
+        /// </summary>
+        /// <param name="GameName">Имя игры</param>
         public void Select(string GameName)
         {
             SelectedGame = SourceGames.Find(Item => String.Equals(Item.FullAppName, GameName, StringComparison.CurrentCultureIgnoreCase));
         }
 
+        /// <summary>
+        /// Главный конструктор класса GameManager.
+        /// </summary>
+        /// <param name="App">Экземпляр класса с параметрами приложения</param>
         public GameManager(CurrentApp App)
         {
             // Создаём объекты для хранения базы игр...
