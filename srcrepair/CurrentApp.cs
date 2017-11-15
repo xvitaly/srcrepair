@@ -58,6 +58,9 @@ namespace srcrepair
         /// </summary>
         public CurrentPlatform Platform { get; private set; }
 
+        /// <summary>
+        /// Управляет базой доступных для управления игр.
+        /// </summary>
         public GameManager SourceGames { get; set; }
 
         /// <summary>
