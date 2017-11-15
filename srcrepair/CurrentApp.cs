@@ -58,6 +58,8 @@ namespace srcrepair
         /// </summary>
         public CurrentPlatform Platform { get; private set; }
 
+        public GameManager SourceGames { get; set; }
+
         /// <summary>
         /// Возвращает архитектуру операционной системы.
         /// </summary>
