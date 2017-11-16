@@ -84,5 +84,14 @@ namespace srcrepair
             // Закрываем форму...
             Close();
         }
+
+        /// <summary>
+        /// Метод, срабатывающий при выборе одного из конфигов.
+        /// </summary>
+        private void CS_CfgSel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Указываем полный путь во всплывающей подсказке...
+            CS_ToolTip.SetToolTip((ComboBox)sender, ((ComboBox)sender).Text);
+        }
     }
 }

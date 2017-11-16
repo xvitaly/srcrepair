@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCfgSelector));
             this.CS_Cancel = new System.Windows.Forms.Button();
             this.CS_OK = new System.Windows.Forms.Button();
             this.CS_CfgSel = new System.Windows.Forms.ComboBox();
             this.CS_WMsg = new System.Windows.Forms.Label();
+            this.CS_ToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // CS_Cancel
@@ -56,6 +58,7 @@
             this.CS_CfgSel.FormattingEnabled = true;
             resources.ApplyResources(this.CS_CfgSel, "CS_CfgSel");
             this.CS_CfgSel.Name = "CS_CfgSel";
+            this.CS_CfgSel.SelectedIndexChanged += new System.EventHandler(this.CS_CfgSel_SelectedIndexChanged);
             // 
             // CS_WMsg
             // 
@@ -89,5 +92,6 @@
         private System.Windows.Forms.Button CS_OK;
         private System.Windows.Forms.ComboBox CS_CfgSel;
         private System.Windows.Forms.Label CS_WMsg;
+        private System.Windows.Forms.ToolTip CS_ToolTip;
     }
 }
