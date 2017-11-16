@@ -943,7 +943,7 @@ namespace srcrepair
             try { DetectInstalledGames(); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.AppXMLParseError, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); Environment.Exit(16); }
 
             // Проверим нашлись ли игры...
-            CheckGames(AppSelector.Items.Count);
+            CheckGames(App.SourceGames.InstalledGames.Count);
         }
 
         /// <summary>
