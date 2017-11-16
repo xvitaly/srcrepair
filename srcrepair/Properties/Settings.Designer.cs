@@ -247,17 +247,5 @@ namespace srcrepair.Properties {
                 this["AutoUpdateCheck"] = value;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public long LaunchCounter {
-            get {
-                return ((long)(this["LaunchCounter"]));
-            }
-            set {
-                this["LaunchCounter"] = value;
-            }
-        }
     }
 }
