@@ -233,13 +233,13 @@
   <HUD>
     <Name>Isaac Hud</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/isaachud/isaachud_ff41b0d7.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/isaachud/isaachud_6397e989.zip</URI>
     <UpURI>https://github.com/Xeletron/Isaac-Hud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/isaachud.jpg</Preview>
     <RepoPath>https://github.com/Xeletron/Isaac-Hud</RepoPath>
-    <Hash>e0e0fabcaa2a8ec471fcf9600f1d7dcd</Hash>
-    <LastUpdate>1487708345</LastUpdate>
+    <Hash>c0f38ee657142eb713864b622e6aa145</Hash>
+    <LastUpdate>1510429518</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=211</Site>
     <ArchiveDir>Isaac-Hud-master/IsaacHUD</ArchiveDir>
     <InstallDir>isaachud</InstallDir>
