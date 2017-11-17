@@ -55,6 +55,7 @@ namespace srcrepair
             MO_AutoCheckUpdates.Checked = Properties.Settings.Default.AutoUpdateCheck;
             MO_UnSafeOps.Checked = Properties.Settings.Default.AllowUnSafeCleanup;
             MO_UseUpstream.Checked = Properties.Settings.Default.HUDUseUpstream;
+            MO_HideOutdatedHUDs.Checked = Properties.Settings.Default.HUDHideOutdated;
 
             // Укажем название приложения в заголовке окна...
             Text = String.Format(Text, Properties.Resources.AppName);
@@ -76,6 +77,7 @@ namespace srcrepair
             Properties.Settings.Default.AutoUpdateCheck = MO_AutoCheckUpdates.Checked;
             Properties.Settings.Default.AllowUnSafeCleanup = MO_UnSafeOps.Checked;
             Properties.Settings.Default.HUDUseUpstream = MO_UseUpstream.Checked;
+            Properties.Settings.Default.HUDHideOutdated = MO_HideOutdatedHUDs.Checked;
             if (Regex.IsMatch(MO_CustDirName.Text, Properties.Resources.MO_CustomDirRegex)) { Properties.Settings.Default.UserCustDirName = MO_CustDirName.Text; }
 
             // Сохраняем настройки...
