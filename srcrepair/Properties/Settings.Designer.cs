@@ -247,5 +247,17 @@ namespace srcrepair.Properties {
                 this["AutoUpdateCheck"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool HUDHideOutdated {
+            get {
+                return ((bool)(this["HUDHideOutdated"]));
+            }
+            set {
+                this["HUDHideOutdated"] = value;
+            }
+        }
     }
 }
