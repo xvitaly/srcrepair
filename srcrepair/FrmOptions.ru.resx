@@ -145,6 +145,9 @@
   <data name="MO_TP1.Text" xml:space="preserve">
     <value>Общие настройки</value>
   </data>
+  <data name="MO_HideOutdatedHUDs.Text" xml:space="preserve">
+    <value>Не показывать устаревшие HUD</value>
+  </data>
   <data name="MO_AutoCheckUpdates.Text" xml:space="preserve">
     <value>Проверять обновления при запуске</value>
   </data>

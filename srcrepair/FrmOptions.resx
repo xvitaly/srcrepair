@@ -381,6 +381,33 @@
   <metadata name="MO_TP2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="MO_HideOutdatedHUDs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="MO_HideOutdatedHUDs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 85</value>
+  </data>
+  <data name="MO_HideOutdatedHUDs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>271, 17</value>
+  </data>
+  <data name="MO_HideOutdatedHUDs.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="MO_HideOutdatedHUDs.Text" xml:space="preserve">
+    <value>Don't show outdated HUDs</value>
+  </data>
+  <data name="&gt;&gt;MO_HideOutdatedHUDs.Name" xml:space="preserve">
+    <value>MO_HideOutdatedHUDs</value>
+  </data>
+  <data name="&gt;&gt;MO_HideOutdatedHUDs.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MO_HideOutdatedHUDs.Parent" xml:space="preserve">
+    <value>MO_TP2</value>
+  </data>
+  <data name="&gt;&gt;MO_HideOutdatedHUDs.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="MO_AutoCheckUpdates.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -406,7 +433,7 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;MO_AutoCheckUpdates.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="MO_UnSafeOps.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -433,19 +460,19 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;MO_UnSafeOps.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="MO_CustDirName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="MO_CustDirName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 125</value>
+    <value>127, 134</value>
   </data>
   <data name="MO_CustDirName.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 20</value>
   </data>
   <data name="MO_CustDirName.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;MO_CustDirName.Name" xml:space="preserve">
     <value>MO_CustDirName</value>
@@ -457,7 +484,7 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;MO_CustDirName.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <metadata name="L_MO_CustDirName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -466,13 +493,13 @@
     <value>True</value>
   </data>
   <data name="L_MO_CustDirName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 128</value>
+    <value>16, 137</value>
   </data>
   <data name="L_MO_CustDirName.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 13</value>
   </data>
   <data name="L_MO_CustDirName.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="L_MO_CustDirName.Text" xml:space="preserve">
     <value>Custom dir. name:</value>
@@ -487,19 +514,19 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;L_MO_CustDirName.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <metadata name="MO_FindTextEd.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="MO_FindTextEd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>266, 92</value>
+    <value>266, 105</value>
   </data>
   <data name="MO_FindTextEd.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
   </data>
   <data name="MO_FindTextEd.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;MO_FindTextEd.Name" xml:space="preserve">
     <value>MO_FindTextEd</value>
@@ -511,19 +538,19 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;MO_FindTextEd.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <metadata name="MO_TextEdBin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="MO_TextEdBin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 95</value>
+    <value>127, 108</value>
   </data>
   <data name="MO_TextEdBin.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 20</value>
   </data>
   <data name="MO_TextEdBin.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;MO_TextEdBin.Name" xml:space="preserve">
     <value>MO_TextEdBin</value>
@@ -535,7 +562,7 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;MO_TextEdBin.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <metadata name="L_MO_TextEdBin.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -547,13 +574,13 @@
     <value>NoControl</value>
   </data>
   <data name="L_MO_TextEdBin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 98</value>
+    <value>16, 111</value>
   </data>
   <data name="L_MO_TextEdBin.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 13</value>
   </data>
   <data name="L_MO_TextEdBin.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="L_MO_TextEdBin.Text" xml:space="preserve">
     <value>Text editor binary:</value>
@@ -568,7 +595,7 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;L_MO_TextEdBin.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <metadata name="MO_EnableAppLogs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -598,7 +625,7 @@
     <value>MO_TP2</value>
   </data>
   <data name="&gt;&gt;MO_EnableAppLogs.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="MO_TP2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>

@@ -40,6 +40,7 @@
             this.MO_HideUnsupported = new System.Windows.Forms.CheckBox();
             this.MO_ConfirmExit = new System.Windows.Forms.CheckBox();
             this.MO_TP2 = new System.Windows.Forms.TabPage();
+            this.MO_HideOutdatedHUDs = new System.Windows.Forms.CheckBox();
             this.MO_AutoCheckUpdates = new System.Windows.Forms.CheckBox();
             this.MO_UnSafeOps = new System.Windows.Forms.CheckBox();
             this.MO_CustDirName = new System.Windows.Forms.TextBox();
@@ -127,6 +128,7 @@
             // 
             // MO_TP2
             // 
+            this.MO_TP2.Controls.Add(this.MO_HideOutdatedHUDs);
             this.MO_TP2.Controls.Add(this.MO_AutoCheckUpdates);
             this.MO_TP2.Controls.Add(this.MO_UnSafeOps);
             this.MO_TP2.Controls.Add(this.MO_CustDirName);
@@ -138,6 +140,12 @@
             resources.ApplyResources(this.MO_TP2, "MO_TP2");
             this.MO_TP2.Name = "MO_TP2";
             this.MO_TP2.UseVisualStyleBackColor = true;
+            // 
+            // MO_HideOutdatedHUDs
+            // 
+            resources.ApplyResources(this.MO_HideOutdatedHUDs, "MO_HideOutdatedHUDs");
+            this.MO_HideOutdatedHUDs.Name = "MO_HideOutdatedHUDs";
+            this.MO_HideOutdatedHUDs.UseVisualStyleBackColor = true;
             // 
             // MO_AutoCheckUpdates
             // 
@@ -237,5 +245,6 @@
         private System.Windows.Forms.CheckBox MO_RemEmptyDirs;
         private System.Windows.Forms.CheckBox MO_UseUpstream;
         private System.Windows.Forms.CheckBox MO_AutoCheckUpdates;
+        private System.Windows.Forms.CheckBox MO_HideOutdatedHUDs;
     }
 }
