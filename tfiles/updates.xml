@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Updates>
   <Application>
-    <Version>29.0.0.5222</Version>
+    <Version>30.0.0.5264</Version>
     <URL>https://www.easycoding.org/files/srcrepair_latest.exe</URL>
-    <Hash>f783604ebeb895efda8627030a355aa5</Hash>
+    <Hash>a85ff5ccc9ccabb3fd4f692f8961828b</Hash>
   </Application>
   <GameDB>
     <Version>master</Version>
