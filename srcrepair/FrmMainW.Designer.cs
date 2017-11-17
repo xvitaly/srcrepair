@@ -1943,6 +1943,7 @@
             this.SB_App});
             resources.ApplyResources(this.StatusBar, "StatusBar");
             this.StatusBar.Name = "StatusBar";
+            this.StatusBar.SizingGrip = false;
             // 
             // SB_Status
             // 
