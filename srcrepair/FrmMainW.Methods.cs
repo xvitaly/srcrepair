@@ -921,6 +921,9 @@ namespace srcrepair
         {
             try
             {
+                // Создадим каталог для хранения резервных копий если его ещё нет...
+                if (!Directory.Exists(App.SourceGames.SelectedGame.FullBackUpDirPath)) { Directory.CreateDirectory(App.SourceGames.SelectedGame.FullBackUpDirPath); }
+
                 // Считываем и выводим в таблицу файлы резервных копий...
                 ReadBackUpList2Table();
             }
@@ -928,9 +931,6 @@ namespace srcrepair
             {
                 // Произошло исключение. Запишем в журнал...
                 CoreLib.WriteStringToLog(Ex.Message);
-
-                // Создадим каталог для хранения резервных копий если его ещё нет...
-                if (!Directory.Exists(App.SourceGames.SelectedGame.FullBackUpDirPath)) { Directory.CreateDirectory(App.SourceGames.SelectedGame.FullBackUpDirPath); }
             }
         }
 
