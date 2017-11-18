@@ -83,6 +83,7 @@
             this.Controls.Add(this.SD_IDSel);
             this.Controls.Add(this.SD_WMsg);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmStmSelector";
