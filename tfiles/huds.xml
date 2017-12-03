@@ -385,20 +385,6 @@
     <InstallDir>mhud</InstallDir>
   </HUD>
   <HUD>
-    <Name>DoodleHUD</Name>
-    <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/doodlehud/doodlehud_2fde17ca.zip</URI>
-    <UpURI>https://github.com/CookeiMonstr/doodlehud-update/archive/master.zip</UpURI>
-    <Preview>https://www.easycoding.org/files/srcrepair/huds/doodlehud.jpg</Preview>
-    <RepoPath>https://github.com/CookeiMonstr/doodlehud-update</RepoPath>
-    <Hash>8548b6f41148e79f84972ab49a0bc71c</Hash>
-    <LastUpdate>1468392124</LastUpdate>
-    <Site>http://huds.tf/forum/showthread.php?tid=285</Site>
-    <ArchiveDir>doodlehud-update-master</ArchiveDir>
-    <InstallDir>doodlehud</InstallDir>
-  </HUD>
-  <HUD>
     <Name>Overwatch HUD</Name>
     <Game>tf</Game>
     <IsUpdated>0</IsUpdated>
