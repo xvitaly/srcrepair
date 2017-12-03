@@ -457,13 +457,13 @@
   <HUD>
     <Name>AntsHUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/antshud/antshud_b94917bf.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/antshud/antshud_ffe3ab5e.zip</URI>
     <UpURI>https://github.com/AsianAntwan/AntsHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/antshud.jpg</Preview>
     <RepoPath>https://github.com/AsianAntwan/AntsHUD</RepoPath>
-    <Hash>89865a04a95b67c90afa946968abceb8</Hash>
-    <LastUpdate>1507609789</LastUpdate>
+    <Hash>06b3b70a0ec89aadd84d1c2c29b628f0</Hash>
+    <LastUpdate>1511242948</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=270</Site>
     <ArchiveDir>AntsHUD-master</ArchiveDir>
     <InstallDir>antshud</InstallDir>
