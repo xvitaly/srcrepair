@@ -52,12 +52,12 @@
     <Name>ToonHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/toonhud/toonhud_30aeb2ea.zip</URI>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/toonhud/toonhud_8f4b19d1.zip</URI>
     <UpURI>http://toonhud.com/downloads/toonhud_10-2.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/toonhud.jpg</Preview>
     <RepoPath>null</RepoPath>
-    <Hash>894f1ee000106c09d0f67bb91029285a</Hash>
-    <LastUpdate>1509206400</LastUpdate>
+    <Hash>165be79f625dc9dfbc2b19896948eaeb</Hash>
+    <LastUpdate>1511028000</LastUpdate>
     <Site>http://toonhud.com/</Site>
     <ArchiveDir>toonhud</ArchiveDir>
     <InstallDir>toonhud</InstallDir>
