@@ -318,12 +318,12 @@
     <Name>FlawHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/flawhud/flawhud_f14c12c8.zip</URI>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/flawhud/flawhud_cf9ad30d.zip</URI>
     <UpURI>https://github.com/CriticalFlaw/FlawHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/flawhud.jpg</Preview>
     <RepoPath>https://github.com/CriticalFlaw/FlawHUD</RepoPath>
-    <Hash>347878ea981b3c22014acb06e1b22173</Hash>
-    <LastUpdate>1509378756</LastUpdate>
+    <Hash>a91cc61312976436b27842e11c38f8ce</Hash>
+    <LastUpdate>1511134771</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=252</Site>
     <ArchiveDir>FlawHUD-master</ArchiveDir>
     <InstallDir>flawhud</InstallDir>
