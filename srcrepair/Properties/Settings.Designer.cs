@@ -61,7 +61,7 @@ namespace srcrepair.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2017-11-18")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2017-12-08")]
         public global::System.DateTime LastUpdateTime {
             get {
                 return ((global::System.DateTime)(this["LastUpdateTime"]));
@@ -190,7 +190,7 @@ namespace srcrepair.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2017-11-18")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2017-12-08")]
         public global::System.DateTime LastHUDTime {
             get {
                 return ((global::System.DateTime)(this["LastHUDTime"]));
