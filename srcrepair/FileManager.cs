@@ -323,8 +323,11 @@ namespace srcrepair
             // Проверяем чтобы каталог для бэкапов существовал...
             if (!(Directory.Exists(BackUpDir))) { Directory.CreateDirectory(BackUpDir); }
 
+            // Проверим существование конфигов и запишем в список только имена реально существующих файлов...
+            Configs = GetRealFilesFromList(Configs);
+
             // Копируем оригинальный файл в файл бэкапа...
-            try { if (CheckFilesInList(Configs)) { CompressFiles(Configs, GenerateBackUpFileName(BackUpDir, Prefix)); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { if (Configs.Count > 0) { CompressFiles(Configs, GenerateBackUpFileName(BackUpDir, Prefix)); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         /// <summary>
