@@ -290,20 +290,26 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Проверяет существует ли хотя бы один из файлов, указанный в списке.
+        /// Возвращает только существующие файлы в списке.
         /// </summary>
         /// <param name="Configs">Список файлов с полными путями</param>
-        /// <returns>Возвращает true если хотя бы один файл существует</returns>
-        public static bool CheckFilesInList(List<String> Configs)
+        /// <returns>Возвращает только существующие файлы в списке</returns>
+        public static List<String> GetRealFilesFromList(List<String> Configs)
         {
+            // Создаём новый список...
+            List<String> Result = new List<String>();
+
+            // Обходим в цикле и проверяем существование...
             foreach (string Config in Configs)
             {
                 if (File.Exists(Config))
                 {
-                    return true;
+                    Result.Add(Config);
                 }
             }
-            return false;
+
+            // Возвращаем результат...
+            return Result;
         }
 
         /// <summary>
