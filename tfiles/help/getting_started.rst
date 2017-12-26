@@ -45,9 +45,9 @@ SRC Repair, запущенная стандартным способом, авт
 Хранение параметров и резервных копий
 ==========================================
 
-Настройки SRC Repair хранятся в каталоге **%USERPROFILE%\Local Settings\Application Data\EasyCoding_Team** (Windows XP), либо **%USERPROFILE%\Local\EasyCoding_Team** (Windows 7 и выше).
+Настройки SRC Repair хранятся в каталоге **%USERPROFILE%\\Local Settings\\Application Data\\EasyCoding_Team** (Windows XP), либо **%USERPROFILE%\\Local\\EasyCoding_Team** (Windows 7 и выше).
 
-Резервные копии, создаваемые программой, хранятся в каталоге **%APPDATA%\SRC Repair**.
+Резервные копии, создаваемые программой, хранятся в каталоге **%APPDATA%\\SRC Repair**.
 
 .. _updating-app:
 
