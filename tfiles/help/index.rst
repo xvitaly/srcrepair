@@ -3,17 +3,19 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to SRC Repair's documentation!
+Справочная система SRC Repair
 ======================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Содержание:
+   
+   getting_started.rst
 
 
 
-Indices and tables
-==================
+Прочие служебные страницы
+======================================
 
 * :ref:`genindex`
 * :ref:`modindex`
