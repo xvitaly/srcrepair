@@ -24,6 +24,13 @@ set GPGKEY=A989AAAA
 echo Starting build process using MSBUILD...
 "%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\msbuild.exe" ..\srcrepair.sln /m /t:Build /p:Configuration=Release /p:TargetFramework=v4.6.1
 
+echo Generating documentation in HTML format...
+call "help\make.bat" htmlhelp
+
+echo Generating HTML help file...
+"%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "help\_build\htmlhelp\srcrepair.hhp"
+move "help\_build\htmlhelp\srcrepair.chm" "..\srcrepair\bin\Release\srcrepair.chm"
+
 echo Changing directory to built version...
 cd "..\srcrepair\bin\Release"
 
