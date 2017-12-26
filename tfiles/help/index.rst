@@ -11,6 +11,7 @@
    :caption: Содержание:
    
    getting_started.rst
+   graphic_tweaker.rst
 
 
 
