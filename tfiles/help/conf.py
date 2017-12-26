@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'SRC Repair'
-copyright = '2017, EasyCoding Team'
+copyright = '2011 - 2017, EasyCoding Team'
 author = 'EasyCoding Team'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -112,7 +112,7 @@ html_sidebars = {
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'SRCRepairdoc'
+htmlhelp_basename = 'srcrepair'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -139,7 +139,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'SRCRepair.tex', 'SRC Repair Documentation',
+    (master_doc, 'srcrepair.tex', 'SRC Repair Documentation',
      'EasyCoding Team', 'manual'),
 ]
 
@@ -160,8 +160,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'SRCRepair', 'SRC Repair Documentation',
-     author, 'SRCRepair', 'One line description of project.',
+    (master_doc, 'srcrepair', 'SRC Repair Documentation',
+     author, 'srcrepair', 'One line description of project.',
      'Miscellaneous'),
 ]
 
