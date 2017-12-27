@@ -9,6 +9,7 @@
    getting-started.rst
    graphic-tweaker.rst
    config-editor.rst
+   cleanup.rst
 
 
 .. _internal:
