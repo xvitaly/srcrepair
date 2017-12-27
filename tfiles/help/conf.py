@@ -67,7 +67,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'SRC Repair'
-copyright = '2011 - 2018, EasyCoding Team'
+copyright = '2011 - 2018, EasyCoding Team. All rights reserved'
 author = 'EasyCoding Team'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -109,7 +109,12 @@ html_theme = 'alabaster'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+    'font_family': 'sans-serif',
+    'head_font_family': 'serif',
+    'font_size': '16px',
+    'show_powered_by': False
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
