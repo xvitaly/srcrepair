@@ -6,9 +6,9 @@
 .. toctree::
    :maxdepth: 2
    
-   getting_started.rst
-   graphic_tweaker.rst
-   config_editor.rst
+   getting-started.rst
+   graphic-tweaker.rst
+   config-editor.rst
 
 
 .. _internal:
