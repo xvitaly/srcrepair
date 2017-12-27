@@ -42,7 +42,11 @@
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
-# needs_sphinx = '1.0'
+needs_sphinx = '1.6'
+
+# If true, keep warnings as system message paragraphs in the built documents.
+#
+keep_warnings = False
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -91,7 +95,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 pygments_style = 'sphinx'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = True
+todo_include_todos = False
 
 
 # -- Options for HTML output ----------------------------------------------
@@ -123,6 +127,11 @@ html_sidebars = {
         'searchbox.html',
     ]
 }
+
+# Other HTML options
+html_copy_source = False
+html_show_sourcelink = False
+html_show_sphinx = False
 
 
 # -- Options for HTMLHelp output ------------------------------------------
