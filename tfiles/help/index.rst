@@ -10,6 +10,7 @@
    graphic-tweaker.rst
    config-editor.rst
    cleanup.rst
+   fps-configs.rst
 
 
 .. _internal:
