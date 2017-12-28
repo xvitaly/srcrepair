@@ -13,6 +13,7 @@
    fps-configs.rst
    hud-manager.rst
    backups.rst
+   modules.rst
 
 
 .. _internal:
