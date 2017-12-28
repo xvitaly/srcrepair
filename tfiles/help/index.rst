@@ -11,6 +11,7 @@
    config-editor.rst
    cleanup.rst
    fps-configs.rst
+   hud-manager.rst
 
 
 .. _internal:
