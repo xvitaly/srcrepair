@@ -12,6 +12,7 @@
    cleanup.rst
    fps-configs.rst
    hud-manager.rst
+   backups.rst
 
 
 .. _internal:
