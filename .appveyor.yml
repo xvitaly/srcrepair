@@ -5,6 +5,8 @@ image: Visual Studio 2017
 configuration: Release
 platform: Any CPU
 clone_depth: 1
+init:
+- cmd: git config --global core.autocrlf true
 assembly_info:
   patch: true
   file: '**\AssemblyInfo.*'
