@@ -2090,8 +2090,17 @@ namespace srcrepair
             // Сгенерируем путь к файлу CHM справочной системы...
             string CHMFile = Path.Combine(App.FullAppPath, "help", String.Format(Properties.Resources.AppHelpFileName, AppStrings.AppLangPrefix));
 
-            // Отобразим справочную систему в зависимости от контекста...
-            Help.ShowHelp(this, CHMFile, HelpNavigator.Topic, GetHelpWebPage(MainTabControl.SelectedIndex));
+            // Проверим существование файла справки...
+            if (File.Exists(CHMFile))
+            {
+                // Отобразим справочную систему в зависимости от контекста...
+                Help.ShowHelp(this, CHMFile, HelpNavigator.Topic, GetHelpWebPage(MainTabControl.SelectedIndex));
+            }
+            else
+            {
+                // Скомпилированный файл справки не найден. Выводим сообщение об ошибке...
+                MessageBox.Show(AppStrings.AppHelpCHMNotFound, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void MNUOpinion_Click(object sender, EventArgs e)
