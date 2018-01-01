@@ -479,10 +479,6 @@
     <None Include="Resources\red_circle.png" />
     <None Include="Resources\green_circle.png" />
     <None Include="Resources\source.png" />
-    <Content Include="..\tfiles\changelog.txt">
-      <Link>changelog.txt</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\tfiles\games.xml">
       <Link>games.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
