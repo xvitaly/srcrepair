@@ -57,9 +57,6 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-; Копируем файл со списком изменений...
-Source: "changelog.txt"; DestDir: "{app}"; Flags: ignoreversion
-
 ; Копируем файл со списком поддерживаемых игр и их параметрами...
 Source: "games.xml"; DestDir: "{app}"; Flags: ignoreversion
 
