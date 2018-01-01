@@ -134,6 +134,15 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to srcrepair_{0}.chm.
+        /// </summary>
+        internal static string AppHelpFileName {
+            get {
+                return ResourceManager.GetString("AppHelpFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SRC Repair.
         /// </summary>
         internal static string AppName {
