@@ -2087,8 +2087,11 @@ namespace srcrepair
 
         private void MNUHelp_Click(object sender, EventArgs e)
         {
+            // Сгенерируем путь к файлу CHM справочной системы...
+            string CHMFile = Path.Combine(App.FullAppPath, "help", String.Format("srcrepair_{0}.chm", AppStrings.AppLangPrefix));
+
             // Отобразим справочную систему в зависимости от контекста...
-            ProcessManager.OpenWebPage(GetHelpWebPage(MainTabControl.SelectedIndex));
+            Help.ShowHelp(this, CHMFile, HelpNavigator.Topic, GetHelpWebPage(MainTabControl.SelectedIndex));
         }
 
         private void MNUOpinion_Click(object sender, EventArgs e)
