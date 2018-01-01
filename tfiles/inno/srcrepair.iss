@@ -2,8 +2,8 @@
 ; This file is a part of SRC Repair project. For more information
 ; visit official site: https://www.easycoding.org/projects/srcrepair
 ; 
-; Copyright (c) 2011 - 2017 EasyCoding Team (ECTeam).
-; Copyright (c) 2005 - 2017 EasyCoding Team.
+; Copyright (c) 2011 - 2018 EasyCoding Team (ECTeam).
+; Copyright (c) 2005 - 2018 EasyCoding Team.
 ; 
 ; This program is free software: you can redistribute it and/or modify
 ; it under the terms of the GNU General Public License as published by
@@ -45,7 +45,7 @@ MinVersion=6.1.7601
 ; Здесь указываем данные, которые будут добавлены в свойства установщика...
 VersionInfoVersion=30.0.2.5296
 VersionInfoDescription=SRC Repair Setup
-VersionInfoCopyright=(c) 2005-2017 EasyCoding Team. All rights reserved.
+VersionInfoCopyright=(c) 2005-2018 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
 
 [Languages]

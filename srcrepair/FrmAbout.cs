@@ -2,8 +2,8 @@
  * This file is a part of SRC Repair project. For more information
  * visit official site: https://www.easycoding.org/projects/srcrepair
  * 
- * Copyright (c) 2011 - 2017 EasyCoding Team (ECTeam).
- * Copyright (c) 2005 - 2017 EasyCoding Team.
+ * Copyright (c) 2011 - 2018 EasyCoding Team (ECTeam).
+ * Copyright (c) 2005 - 2018 EasyCoding Team.
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
