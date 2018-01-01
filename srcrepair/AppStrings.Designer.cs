@@ -19,7 +19,7 @@ namespace srcrepair {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class AppStrings {
@@ -201,6 +201,15 @@ namespace srcrepair {
         internal static string AppGenericError {
             get {
                 return ResourceManager.GetString("AppGenericError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Help system for current language is not supported yet! You can help us to translate it. Please visit our GitHub page for more information..
+        /// </summary>
+        internal static string AppHelpCHMNotFound {
+            get {
+                return ResourceManager.GetString("AppHelpCHMNotFound", resourceCulture);
             }
         }
         
