@@ -29,7 +29,6 @@ call "help\make.cmd" htmlhelp
 
 echo Generating HTML help file...
 "%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "help\_build\htmlhelp\srcrepair.hhp"
-mkdir "..\srcrepair\bin\Release\help"
 move "help\_build\htmlhelp\srcrepair.chm" "..\srcrepair\bin\Release\help\srcrepair_ru.chm"
 
 echo Changing directory to built version...
