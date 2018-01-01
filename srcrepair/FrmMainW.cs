@@ -1013,19 +1013,19 @@ namespace srcrepair
             switch (TabIndex)
             {
                 case 0: /* графический твикер. */
-                    Result = "gtweaker";
+                    Result = "graphic-tweaker";
                     break;
                 case 1: /* Редактор конфигов. */
-                    Result = "cfgeditor";
+                    Result = "config-editor";
                     break;
                 case 2: /* Устранение проблем и очистка. */
                     Result = "cleanup";
                     break;
                 case 3: /* FPS-конфиги. */
-                    Result = "fpscfgs";
+                    Result = "fps-configs";
                     break;
                 case 4: /* Менеджер HUD. */
-                    Result = "hudman";
+                    Result = "hud-manager";
                     break;
                 case 5: /* Резервные копии. */
                     Result = "backups";
@@ -1033,7 +1033,7 @@ namespace srcrepair
             }
 
             // Возвращаем финальный URL...
-            return String.Format(Properties.Resources.AppURLHelpSystem, Result);
+            return String.Format("{0}.html", Result);
         }
 
 
