@@ -8,16 +8,16 @@
   <GameDB>
     <Version>master</Version>
     <URL>https://www.easycoding.org/files/srcrepair/updates/games.xml</URL>
-    <Hash>fad07a399eec1cfff5a8c60a9adc4529</Hash>
+    <Hash>d17d274c4d2d19a48bae71b89b38b3f6</Hash>
   </GameDB>
   <HUDDB>
     <Version>master</Version>
     <URL>https://www.easycoding.org/files/srcrepair/updates/huds.xml</URL>
-    <Hash>e8fbf1126e2bbb8946aa07aeeadb1c25</Hash>
+    <Hash>b0574bd16613020efe281d5d5db881fc</Hash>
   </HUDDB>
   <CfgDB>
     <Version>master</Version>
     <URL>https://www.easycoding.org/files/srcrepair/updates/configs.xml</URL>
-    <Hash>68c479fb068cf8e3efbb3beb62aa7730</Hash>
+    <Hash>975339888a1af049b9c5d7e0abb6adce</Hash>
   </CfgDB>
 </Updates>
