@@ -15,5 +15,6 @@
    backups.rst
    modules.rst
    changelog.rst
+   legalinfo.rst
 
 
