@@ -1,6 +1,6 @@
 ﻿SRC Repair is a free open source tool that can be used for tuning and cleaning up Steam and Source engine games. You can also create and edit .cfg files (configs), backup and restore game settings, apply FPS configs or sprays into the game with one click.
 
-Before using, please, read official help manual: https://www.easycoding.org/projects/srcrepair/help.
+Before using, please, read official help manual (select Help - Show help or press F1 key in main window).
 
 You must have Microsoft .NET Framework 4.6.1 or newer installed in order to run this application. You can download it from Microsoft's official site: https://www.microsoft.com/en-us/download/details.aspx?id=49981
 
