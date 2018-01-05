@@ -60,11 +60,13 @@ namespace srcrepair
             labelCopyright.Text = CurrentApp.AppCopyright;
             labelCompanyName.Text = CurrentApp.AppCompany;
 
+            // Получаем текущий месяц и число для проверки на НГ...
+            DateTime XDate = DateTime.Now;
+            int XMonth = XDate.Month;
+            int XDay = XDate.Day;
+
             // Проверяем систему на НГ (диапазон от 20.12.XXXX до 10.1.XXXX+1)...
-            DateTime XDate = DateTime.Now; // Получаем текущую дату...
-            if (((Convert.ToInt32(XDate.Month) == 12) && ((Convert.ToInt32(XDate.Day) >= 20)
-                && (Convert.ToInt32(XDate.Day) <= 31))) || ((Convert.ToInt32(XDate.Month) == 1)
-                    && ((Convert.ToInt32(XDate.Day) >= 1) && (Convert.ToInt32(XDate.Day) <= 10))))
+            if ((XMonth == 12 && (XDay >= 20 && XDay <= 31)) || (XMonth == 1 && (XDay >= 1 && XDay <= 10)))
             {
                 // НГ! Меняем логотип программы на специально заготовленный...
                 iconApp.Image = Properties.Resources.Xmas;
