@@ -424,7 +424,7 @@ Translators:
     <value>3</value>
   </data>
   <data name="labelLicense.Text" xml:space="preserve">
-    <value>Licensed under the terms of GNU General Public License version 3 (except graphics; more info in iconinfo.md file). </value>
+    <value>Licensed under the terms of GNU General Public License version 3 (except graphics; more info in help system).</value>
   </data>
   <data name="&gt;&gt;labelLicense.Name" xml:space="preserve">
     <value>labelLicense</value>
