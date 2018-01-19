@@ -1,8 +1,8 @@
 SRC Repair
 =========
 [![GitHub version](https://badge.fury.io/gh/xvitaly%2Fsrcrepair.svg)](https://github.com/xvitaly/srcrepair/releases)
-[![SourceForge downloads](https://img.shields.io/sourceforge/dt/srcrepair.svg?label=SF downloads&maxAge=60)](https://sourceforge.net/projects/srcrepair/files/)
-[![Github downloads](https://img.shields.io/github/downloads/xvitaly/srcrepair/total.svg?label=GH downloads&maxAge=60)](https://github.com/xvitaly/srcrepair/releases)
+[![SourceForge downloads](https://img.shields.io/sourceforge/dt/srcrepair.svg?label=SF%20downloads&maxAge=60)](https://sourceforge.net/projects/srcrepair/files/)
+[![Github downloads](https://img.shields.io/github/downloads/xvitaly/srcrepair/total.svg?label=GH%20downloads&maxAge=60)](https://github.com/xvitaly/srcrepair/releases)
 [![Build status](https://travis-ci.org/xvitaly/srcrepair.svg?branch=master)](https://travis-ci.org/xvitaly/srcrepair)
 [![Build status](https://ci.appveyor.com/api/projects/status/9r2yma3aab972blf?svg=true)](https://ci.appveyor.com/project/xvitaly/srcrepair)
 [![GitHub issues](https://img.shields.io/github/issues/xvitaly/srcrepair.svg?label=issues&maxAge=60)](https://github.com/xvitaly/srcrepair/issues)
