@@ -206,12 +206,12 @@
     <Name>biscottiHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/biscottihud/biscottihud_48efb4ec.zip</URI>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/biscottihud/biscottihud_7e9e059d.zip</URI>
     <UpURI>https://github.com/MedicodiBiscotti/biscottiHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/biscottihud.jpg</Preview>
     <RepoPath>https://github.com/MedicodiBiscotti/biscottiHUD</RepoPath>
-    <Hash>07293fe68164714fd2c7ee86fa95b741</Hash>
-    <LastUpdate>1511382737</LastUpdate>
+    <Hash>e497adce7e1d7d57b4e4ca0772e277fa</Hash>
+    <LastUpdate>1516166702</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=236</Site>
     <ArchiveDir>biscottiHUD-master/biscottiHUD</ArchiveDir>
     <InstallDir>biscottihud</InstallDir>
