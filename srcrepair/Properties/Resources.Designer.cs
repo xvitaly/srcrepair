@@ -206,7 +206,7 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://github.com/xvitaly/srcrepair/blob/master/tfiles/donate.md.
+        ///   Looks up a localized string similar to https://github.com/xvitaly/srcrepair#donate.
         /// </summary>
         internal static string AppURLDonate {
             get {

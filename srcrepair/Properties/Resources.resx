@@ -419,7 +419,7 @@
     <value>open</value>
   </data>
   <data name="AppURLDonate" xml:space="preserve">
-    <value>https://github.com/xvitaly/srcrepair/blob/master/tfiles/donate.md</value>
+    <value>https://github.com/xvitaly/srcrepair#donate</value>
   </data>
   <data name="AppUASuffixOther" xml:space="preserve">
     <value>(mono)</value>
