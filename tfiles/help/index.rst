@@ -14,6 +14,7 @@
    hud-manager.rst
    backups.rst
    modules.rst
+   settings.rst
    legalinfo.rst
    changelog.rst
 
