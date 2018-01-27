@@ -121,7 +121,7 @@
 
 
 
-.. index:: очистка Steam, кэши Steam, модуль очистки Steam
+.. index:: очистка Steam, кэши Steam, модуль расширенной очистки Steam
 .. _modules-stmcln:
 
 Модуль расширенной очистки кэшей Steam
