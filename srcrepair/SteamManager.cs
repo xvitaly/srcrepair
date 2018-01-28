@@ -62,7 +62,7 @@ namespace srcrepair
         /// Получает из реестра и возвращает путь к установленному клиенту Steam.
         /// </summary>
         /// <returns>Путь к клиенту Steam</returns>
-        public string GetSteamPath()
+        private string GetSteamPath()
         {
             // Создаём строку для хранения результатов...
             string ResString = String.Empty;
@@ -139,7 +139,7 @@ namespace srcrepair
         /// Возвращает список используемых на данном компьютере SteamID.
         /// </summary>
         /// <returns>Список Steam user ID</returns>
-        public List<String> GetUserIDs()
+        private List<String> GetUserIDs()
         {
             // Создаём новый список...
             List<String> Result = new List<String>();
@@ -236,7 +236,7 @@ namespace srcrepair
         /// <summary>
         /// Считывает из главного файла конфигурации Steam пути к дополнительным точкам монтирования.
         /// </summary>
-        public List<String> GetSteamMountPoints()
+        private List<String> GetSteamMountPoints()
         {
             // Создаём массив, в который будем помещать найденные пути...
             List<String> Result = new List<String> { FullSteamPath };
