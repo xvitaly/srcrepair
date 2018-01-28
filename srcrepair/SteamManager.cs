@@ -29,13 +29,40 @@ namespace srcrepair
     /// <summary>
     /// Класс для взаимодействия с клиентом Steam.
     /// </summary>
-    public static class SteamManager
+    public sealed class SteamManager
     {
+        /// <summary>
+        /// Хранит полный путь к каталогу установленного клиента Steam.
+        /// </summary>
+        public string FullSteamPath { get; set; }
+
+        /// <summary>
+        /// Содержит найденные userid профилей Steam.
+        /// </summary>
+        public List<String> SteamIDs { get; private set; }
+
+        /// <summary>
+        /// Управляет текущим выбранным пользователем SteamID.
+        /// </summary>
+        public string SteamID { get; set; }
+
+        /// <summary>
+        /// Проверяет доступен ли переданный в качестве параметра SteamID. Если нет,
+        /// то возвращает первый элемент списка из SteamID.
+        /// </summary>
+        /// <param name="SID">SteamID для проверки</param>
+        /// <returns>Возвращает значение SteamID</returns>
+        public string GetCurrentSteamID(string SID)
+        {
+            if (SteamIDs.Count < 1) { throw new ArgumentOutOfRangeException("SteamID list is empty. Can not select one of them."); }
+            return SteamIDs.IndexOf(SID) != -1 ? SID : SteamIDs[0];
+        }
+
         /// <summary>
         /// Получает из реестра и возвращает путь к установленному клиенту Steam.
         /// </summary>
         /// <returns>Путь к клиенту Steam</returns>
-        public static string GetSteamPath()
+        public string GetSteamPath()
         {
             // Создаём строку для хранения результатов...
             string ResString = String.Empty;
@@ -71,7 +98,7 @@ namespace srcrepair
         /// Получает из реестра и возвращает текущий язык клиента Steam.
         /// </summary>
         /// <returns>Язык клиента Steam</returns>
-        public static string GetSteamLanguage()
+        public string GetSteamLanguage()
         {
             string Result = String.Empty; using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false)) { if (ResKey != null) { object ResObj = ResKey.GetValue("Language"); if (ResObj != null) { Result = Convert.ToString(ResObj); } else { throw new NullReferenceException("Exception: No Language value detected! Please run Steam."); } } } return Result;
         }
@@ -79,7 +106,6 @@ namespace srcrepair
         /// <summary>
         /// Тестирует переданный каталог в качестве пути установки Steam.
         /// </summary>
-        /// <param name="SteamPath">Каталог установки Steam</param>
         /// <returns>Каталог установки Steam</returns>
         public static string TrySteamPath(string SteamPath)
         {
@@ -89,24 +115,22 @@ namespace srcrepair
         /// <summary>
         /// Возвращает путь к главному VDF конфигу Steam.
         /// </summary>
-        /// <param name="SteamPath">Каталог установки Steam</param>
         /// <returns>Путь к VDF конфигу</returns>
-        public static string GetSteamConfig(string SteamPath)
+        public string GetSteamConfig()
         {
-            return Path.Combine(SteamPath, "config", "config.vdf");
+            return Path.Combine(FullSteamPath, "config", "config.vdf");
         }
 
         /// <summary>
         /// Возвращает путь к локально хранящемуся VDF конфигу Steam.
         /// </summary>
-        /// <param name="SteamPath">Каталог установки Steam</param>
         /// <returns>Путь к локальному VDF конфигу</returns>
-        public static List<String> GetSteamLocalConfig(string SteamPath)
+        public List<String> GetSteamLocalConfig()
         {
             List<String> Result = new List<String>();
-            foreach (string ID in GetUserIDs(SteamPath))
+            foreach (string ID in GetUserIDs())
             {
-                Result.AddRange(FileManager.FindFiles(Path.Combine(SteamPath, "userdata", ID, "config"), "localconfig.vdf"));
+                Result.AddRange(FileManager.FindFiles(Path.Combine(FullSteamPath, "userdata", ID, "config"), "localconfig.vdf"));
             }
             return Result;
         }
@@ -114,15 +138,14 @@ namespace srcrepair
         /// <summary>
         /// Возвращает список используемых на данном компьютере SteamID.
         /// </summary>
-        /// <param name="SteamPath">Каталог установки Steam</param>
         /// <returns>Список Steam user ID</returns>
-        public static List<String> GetUserIDs(string SteamPath)
+        public List<String> GetUserIDs()
         {
             // Создаём новый список...
             List<String> Result = new List<String>();
 
             // Получаем список каталогов...
-            string DDir = Path.Combine(SteamPath, "userdata");
+            string DDir = Path.Combine(FullSteamPath, "userdata");
             if (Directory.Exists(DDir))
             {
                 DirectoryInfo DInfo = new DirectoryInfo(DDir);
@@ -139,14 +162,13 @@ namespace srcrepair
         /// <summary>
         /// Очищает блобы (файлы с расширением *.blob) из каталога Steam.
         /// </summary>
-        /// <param name="SteamPath">Полный путь к каталогу Steam</param>
-        public static void CleanBlobsNow(string SteamPath)
+        public void CleanBlobsNow()
         {
             // Инициализируем буферную переменную, в которой будем хранить имя файла...
             string FileName;
 
             // Генерируем имя первого кандидата на удаление с полным путём до него...
-            FileName = Path.Combine(SteamPath, "AppUpdateStats.blob");
+            FileName = Path.Combine(FullSteamPath, "AppUpdateStats.blob");
 
             // Проверяем существует ли данный файл...
             if (File.Exists(FileName))
@@ -156,7 +178,7 @@ namespace srcrepair
             }
 
             // Аналогично генерируем имя второго кандидата...
-            FileName = Path.Combine(SteamPath, "ClientRegistry.blob");
+            FileName = Path.Combine(FullSteamPath, "ClientRegistry.blob");
 
             // Проверяем, существует ли файл...
             if (File.Exists(FileName))
@@ -171,7 +193,7 @@ namespace srcrepair
         /// а также записывает значение языка.
         /// </summary>
         /// <param name="LangCode">ID языка Steam</param>
-        public static void CleanRegistryNow(int LangCode)
+        public void CleanRegistryNow(int LangCode)
         {
             // Удаляем ключ HKEY_LOCAL_MACHINE\Software\Valve рекурсивно (если есть права администратора)...
             if (ProcessManager.IsCurrentUserAdmin()) { Registry.LocalMachine.DeleteSubKeyTree(Path.Combine("Software", "Valve"), false); }
@@ -214,17 +236,16 @@ namespace srcrepair
         /// <summary>
         /// Считывает из главного файла конфигурации Steam пути к дополнительным точкам монтирования.
         /// </summary>
-        /// <param name="SteamPath">Путь к клиенту Steam</param>
-        public static List<String> GetSteamMountPoints(string SteamPath)
+        public List<String> GetSteamMountPoints()
         {
             // Создаём массив, в который будем помещать найденные пути...
-            List<String> Result = new List<String> { SteamPath };
+            List<String> Result = new List<String> { FullSteamPath };
 
             // Начинаем чтение главного файла конфигурации...
             try
             {
                 // Открываем файл как поток...
-                using (StreamReader SteamConfig = new StreamReader(Path.Combine(SteamPath, "config", "config.vdf"), Encoding.Default))
+                using (StreamReader SteamConfig = new StreamReader(Path.Combine(FullSteamPath, "config", "config.vdf"), Encoding.Default))
                 {
                     // Инициализируем буферную переменную...
                     string RdStr;
@@ -261,15 +282,14 @@ namespace srcrepair
         /// <summary>
         /// Формирует полные пути к библиотекам с установленными играми.
         /// </summary>
-        /// <param name="SteamPath">Путь установки Steam</param>
         /// <param name="SteamAppsFolderName">Платформо-зависимое название каталога SteamApps</param>
-        public static List<String> FormatInstallDirs(string SteamPath, string SteamAppsFolderName)
+        public List<String> FormatInstallDirs(string SteamAppsFolderName)
         {
             // Создаём массив, в который будем помещать найденные пути...
             List<String> Result = new List<String>();
 
             // Считываем все возможные расположения локальных библиотек игр...
-            List<String> MntPnts = GetSteamMountPoints(SteamPath);
+            List<String> MntPnts = GetSteamMountPoints();
 
             // Начинаем обход каталога и получение поддиректорий...
             foreach (string MntPnt in MntPnts)
@@ -279,6 +299,17 @@ namespace srcrepair
 
             // Возвращаем сформированный массив...
             return Result;
+        }
+
+        /// <summary>
+        /// Главный конструктор класса SteamManager.
+        /// </summary>
+        public SteamManager(CurrentPlatform.OSType OS)
+        {
+            // Получим путь к Steam...
+            FullSteamPath = OS == CurrentPlatform.OSType.Windows ? GetSteamPath() : TrySteamPath(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Steam"));
+            SteamIDs = GetUserIDs();
+            SteamID = GetCurrentSteamID(Properties.Settings.Default.LastSteamID);
         }
     }
 }

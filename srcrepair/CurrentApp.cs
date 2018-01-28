@@ -37,11 +37,6 @@ namespace srcrepair
         public string UserAgent { get; private set; }
 
         /// <summary>
-        /// Хранит полный путь к каталогу установленного клиента Steam.
-        /// </summary>
-        public string FullSteamPath { get; set; }
-
-        /// <summary>
         /// Хранит полный путь к каталогу с утилитой SRCRepair для служебных
         /// целей.
         /// </summary>
@@ -62,6 +57,11 @@ namespace srcrepair
         /// Управляет базой доступных для управления игр.
         /// </summary>
         public GameManager SourceGames { get; set; }
+
+        /// <summary>
+        /// Управляет настройками клиента Steam.
+        /// </summary>
+        public SteamManager SteamClient { get; set; }
 
         /// <summary>
         /// Возвращает архитектуру операционной системы.

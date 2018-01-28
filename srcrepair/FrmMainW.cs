@@ -699,7 +699,7 @@ namespace srcrepair
         {
             try
             {
-                App.FullSteamPath = CheckLastSteamPath(Properties.Settings.Default.LastSteamPath);
+                App.SteamClient.FullSteamPath = CheckLastSteamPath(Properties.Settings.Default.LastSteamPath);
             }
             catch (FileNotFoundException Ex)
             {
@@ -765,7 +765,7 @@ namespace srcrepair
                 case 0:
                     {
                         // Запишем в лог...
-                        CoreLib.WriteStringToLog(String.Format(AppStrings.AppNoGamesDLog, App.FullSteamPath));
+                        CoreLib.WriteStringToLog(String.Format(AppStrings.AppNoGamesDLog, App.SteamClient.FullSteamPath));
                         // Нет, не нашлись, выведем сообщение...
                         MessageBox.Show(AppStrings.AppNoGamesDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         // Завершим работу приложения...
@@ -794,11 +794,11 @@ namespace srcrepair
         /// </summary>
         private void CheckSymbolsSteam()
         {
-            if (!(FileManager.CheckNonASCII(App.FullSteamPath)))
+            if (!(FileManager.CheckNonASCII(App.SteamClient.FullSteamPath)))
             {
                 PS_PathSteam.ForeColor = Color.Red;
                 PS_PathSteam.Image = Properties.Resources.upd_err;
-                CoreLib.WriteStringToLog(String.Format(AppStrings.AppRestrSymbLog, App.FullSteamPath));
+                CoreLib.WriteStringToLog(String.Format(AppStrings.AppRestrSymbLog, App.SteamClient.FullSteamPath));
             }
         }
 
@@ -838,7 +838,7 @@ namespace srcrepair
         {
             try
             {
-                string Result = App.SourceGames.SelectedGame.GetCurrentSteamID(SID);
+                string Result = App.SteamClient.GetCurrentSteamID(SID);
                 SB_SteamID.Text = Result;
                 Properties.Settings.Default.LastSteamID = Result;
             }
@@ -1209,13 +1209,13 @@ namespace srcrepair
             App = new CurrentApp();
 
             // Узнаем путь к установленному клиенту Steam...
-            try { App.FullSteamPath = App.Platform.OS == CurrentPlatform.OSType.Windows ? SteamManager.GetSteamPath() : SteamManager.TrySteamPath(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Steam")); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); ValidateAndHandle(); }
-
+            try { App.SteamClient = new SteamManager(App.Platform.OS); } catch (ArgumentOutOfRangeException) { MessageBox.Show(AppStrings.AppNoSteamIDSetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); Environment.Exit(2); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); ValidateAndHandle(); }
+            
             // Начинаем платформо-зависимые процедуры...
             ChangePrvControlState(ProcessManager.IsCurrentUserAdmin());
 
             // Сохраним последний путь к Steam в файл конфигурации...
-            Properties.Settings.Default.LastSteamPath = App.FullSteamPath;
+            Properties.Settings.Default.LastSteamPath = App.SteamClient.FullSteamPath;
 
             // Вставляем информацию о версии в заголовок формы...
             Text = String.Format(Text, Properties.Resources.AppName, App.Platform.OSFriendlyName, CurrentApp.AppVersion);
@@ -1224,7 +1224,7 @@ namespace srcrepair
             CheckSafeClnStatus();
 
             // Укажем путь к Steam на странице "Устранение проблем"...
-            PS_StPath.Text = String.Format(PS_StPath.Text, App.FullSteamPath);
+            PS_StPath.Text = String.Format(PS_StPath.Text, App.SteamClient.FullSteamPath);
             
             // Проверим на наличие запрещённых символов в пути к установленному клиенту Steam...
             CheckSymbolsSteam();
@@ -1252,7 +1252,7 @@ namespace srcrepair
             {
                 try
                 {
-                    switch (SteamManager.GetSteamLanguage())
+                    switch (App.SteamClient.GetSteamLanguage())
                     {
                         case "russian":
                             PS_SteamLang.SelectedIndex = 1;
@@ -1300,7 +1300,7 @@ namespace srcrepair
                         try
                         {
                             // Чистим блобы...
-                            SteamManager.CleanBlobsNow(App.FullSteamPath);
+                            App.SteamClient.CleanBlobsNow();
                         }
                         catch (Exception Ex)
                         {
@@ -1317,13 +1317,13 @@ namespace srcrepair
                             if (PS_SteamLang.SelectedIndex != -1)
                             {
                                 // Всё в порядке, чистим реестр...
-                                SteamManager.CleanRegistryNow(PS_SteamLang.SelectedIndex);
+                                App.SteamClient.CleanRegistryNow(PS_SteamLang.SelectedIndex);
                             }
                             else
                             {
                                 // Пользователь не выбрал язык, поэтому будем использовать английский...
                                 MessageBox.Show(AppStrings.PS_NoLangSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                SteamManager.CleanRegistryNow(0);
+                                App.SteamClient.CleanRegistryNow(0);
                             }
                         }
                         catch (Exception Ex)
@@ -1336,7 +1336,7 @@ namespace srcrepair
                     MessageBox.Show(AppStrings.PS_SeqCompleted, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Запустим Steam...
-                    if (File.Exists(Path.Combine(App.FullSteamPath, App.Platform.SteamBinaryName))) { Process.Start(Path.Combine(App.FullSteamPath, App.Platform.SteamBinaryName)); }
+                    if (File.Exists(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName))) { Process.Start(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName)); }
                 }
             }
         }
@@ -1848,7 +1848,7 @@ namespace srcrepair
             if ((AppSelector.Items.Count > 0) && (AppSelector.SelectedIndex != -1))
             {
                 // Запускаем форму создания отчёта для Техподдержки...
-                FormManager.FormShowRepBuilder(App.AppUserDir, App.FullSteamPath, App.SourceGames.SelectedGame);
+                FormManager.FormShowRepBuilder(App.AppUserDir, App.SteamClient.FullSteamPath, App.SourceGames.SelectedGame);
             }
             else
             {
@@ -1917,7 +1917,7 @@ namespace srcrepair
                                     break;
                                 case ".bud":
                                     // Распаковываем архив с выводом прогресса...
-                                    FormManager.FormShowArchiveExtract(Path.Combine(App.SourceGames.SelectedGame.FullBackUpDirPath, BU_Item.SubItems[4].Text), Path.GetPathRoot(App.FullSteamPath));
+                                    FormManager.FormShowArchiveExtract(Path.Combine(App.SourceGames.SelectedGame.FullBackUpDirPath, BU_Item.SubItems[4].Text), Path.GetPathRoot(App.SteamClient.FullSteamPath));
 
                                     // Обновляем список FPS-конфигов...
                                     HandleConfigs();
@@ -2603,7 +2603,7 @@ namespace srcrepair
         private void MNUExtClnSteam_Click(object sender, EventArgs e)
         {
             // Запустим модуль очистки кэшей Steam...
-            FormManager.FormShowStmCleaner(App.FullSteamPath, App.SourceGames.SelectedGame.FullBackUpDirPath, App.Platform.SteamAppsFolderName, App.Platform.SteamProcName);
+            FormManager.FormShowStmCleaner(App.SteamClient.FullSteamPath, App.SourceGames.SelectedGame.FullBackUpDirPath, App.Platform.SteamAppsFolderName, App.Platform.SteamProcName);
         }
 
         private void MNUMuteMan_Click(object sender, EventArgs e)
@@ -2621,7 +2621,7 @@ namespace srcrepair
         private void SB_SteamID_Click(object sender, EventArgs e)
         {
             // Открываем диалог выбора SteamID и прописываем пользовательский выбор...
-            try { string Result = FormManager.FormShowIDSelect(App.SourceGames.SelectedGame.SteamIDs); if (!(String.IsNullOrWhiteSpace(Result))) { SB_SteamID.Text = Result; Properties.Settings.Default.LastSteamID = Result; FindGames(); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { string Result = FormManager.FormShowIDSelect(App.SteamClient.SteamIDs); if (!(String.IsNullOrWhiteSpace(Result))) { SB_SteamID.Text = Result; Properties.Settings.Default.LastSteamID = Result; FindGames(); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void BU_LVTable_SelectedIndexChanged(object sender, EventArgs e)

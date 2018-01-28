@@ -160,12 +160,7 @@ namespace srcrepair
         private string SteamPath { get; set; }
 
         /// <summary>
-        /// Содержит найденные userid профилей Steam.
-        /// </summary>
-        public List<String> SteamIDs { get; private set; }
-
-        /// <summary>
-        /// Управляет текущим выбранным пользователем SteamID.
+        /// Содержит выбранный SteamID пользователя.
         /// </summary>
         private string SteamID { get; set; }
 
@@ -236,18 +231,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Проверяет доступен ли переданный в качестве параметра SteamID. Если нет,
-        /// то возвращает первый элемент списка из SteamID.
-        /// </summary>
-        /// <param name="SID">SteamID для проверки</param>
-        /// <returns>Возвращает значение SteamID</returns>
-        public string GetCurrentSteamID(string SID)
-        {
-            if (SteamIDs.Count < 1) { throw new ArgumentOutOfRangeException("SteamID list is empty. Can not select one of them."); }
-            return SteamIDs.IndexOf(SID) != -1 ? SID : SteamIDs[0];
-        }
-
-        /// <summary>
         /// Конструктор класса. Заполняет информацию о выбранном приложении.
         /// </summary>
         /// <param name="AppName">Название приложения (из БД)</param>
@@ -264,7 +247,7 @@ namespace srcrepair
         /// <param name="UserDir">Путь к пользовательскому каталогу SRC Repair</param>
         /// <param name="SteamDir">Путь к установленному клиенту Steam</param>
         /// <param name="SteamAppsDirName">Платформо-зависимое название каталога SteamApps</param>
-        public SourceGame(string AppName, string DirName, string SmallName, string Executable, string SID, string SV, string VFDir, bool HasVF, bool UserDir, bool HUDAv, string AppPath, string AUserDir, string SteamDir, string SteamAppsDirName, List<String> GameDirs)
+        public SourceGame(string AppName, string DirName, string SmallName, string Executable, string SID, string SV, string VFDir, bool HasVF, bool UserDir, bool HUDAv, string AppPath, string AUserDir, string SteamDir, string SteamAppsDirName, string SelectedSteamID, List<String> GameDirs)
         {
             // Начинаем определять нужные нам значения переменных...
             FullAppName = AppName;
@@ -287,8 +270,7 @@ namespace srcrepair
             // Заполняем остальные свойства класса если приложение установлено...
             if (IsInstalled)
             {
-                SteamIDs = SteamManager.GetUserIDs(SteamPath);
-                SteamID = GetCurrentSteamID(Properties.Settings.Default.LastSteamID);
+                SteamID = SelectedSteamID;
                 FullGamePath = Path.Combine(GamePath, SmallAppName);
                 FullCfgPath = Path.Combine(FullGamePath, "cfg");
                 FullBackUpDirPath = Path.Combine(AUserDir, "backups", Path.GetFileName(SmallAppName));
