@@ -268,6 +268,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No Steam user profiles detected! Please run Steam at least once and then try again..
+        /// </summary>
+        internal static string AppNoSteamIDSetected {
+            get {
+                return ResourceManager.GetString("AppNoSteamIDSetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0}?.
         /// </summary>
         internal static string AppQuestionTemplate {
