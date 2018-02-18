@@ -377,10 +377,6 @@
       <Link>huds.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\tfiles\inno\srcrepair.iss">
-      <Link>srcrepair.iss</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\tfiles\cfgs\chrisdx9frames.cfg">
       <Link>cfgs\chrisdx9frames.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -393,14 +389,6 @@
       <Link>cfgs\chrismaxquality.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <Content Include="..\tfiles\inno\en-US.isl">
-      <Link>en-US.isl</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\tfiles\inno\ru-RU.isl">
-      <Link>ru-RU.isl</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\tfiles\cfgs\comangliamaxfps.cfg">
       <Link>cfgs\comangliamaxfps.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -413,6 +401,22 @@
       <Link>cfgs\comangliastability.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="..\tfiles\inno\en-US.isl">
+      <Link>inno\en-US.isl</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\tfiles\inno\readme_en.rtf">
+      <Link>inno\readme_en.rtf</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\tfiles\inno\readme_ru.rtf">
+      <Link>inno\readme_ru.rtf</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\tfiles\inno\ru-RU.isl">
+      <Link>inno\ru-RU.isl</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -485,14 +489,6 @@
     </Content>
     <None Include="Resources\clean.png" />
     <None Include="Resources\backup.png" />
-    <Content Include="..\tfiles\readme.txt">
-      <Link>readme.txt</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\tfiles\readme_en.txt">
-      <Link>readme_en.txt</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="Resources\arrow.png" />
     <EmbeddedResource Include="Resources\HtTemplate.txt" />
     <None Include="Resources\upd_av.png" />
@@ -514,6 +510,10 @@
     <None Include="Resources\Open.png" />
     <None Include="Resources\Mhint.png" />
     <None Include="Resources\telegram.png" />
+    <Content Include="..\tfiles\inno\srcrepair.iss">
+      <Link>inno\srcrepair.iss</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="srcrepair.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
