@@ -32,9 +32,9 @@ AppUpdatesURL=https://www.easycoding.org/projects/srcrepair
 DefaultDirName={code:GetDefRoot}\SRC Repair
 DefaultGroupName=SRC Repair
 AllowNoIcons=yes
-LicenseFile=COPYING
+LicenseFile=..\COPYING
 OutputBaseFilename=srcrepair_310_final
-SetupIconFile=srcrepair.ico
+SetupIconFile=..\srcrepair.ico
 UninstallDisplayIcon={app}\srcrepair.exe
 Compression=lzma2
 SolidCompression=yes
@@ -49,8 +49,8 @@ VersionInfoCopyright=(c) 2005-2018 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
 
 [Languages]
-Name: "english"; MessagesFile: "compiler:Default.isl,en-US.isl"; InfoBeforeFile: "readme_en.txt"
-Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl,ru-RU.isl"; InfoBeforeFile: "readme.txt"
+Name: "english"; MessagesFile: "compiler:Default.isl,en-US.isl"; InfoBeforeFile: "readme_en.rtf"
+Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl,ru-RU.isl"; InfoBeforeFile: "readme_ru.rtf"
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
@@ -58,30 +58,30 @@ Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescrip
 
 [Files]
 ; Копируем файл со списком поддерживаемых игр и их параметрами...
-Source: "games.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\games.xml"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Копируем файл с базой данных HUD...
-Source: "huds.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\huds.xml"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Копируем файл с базой данных FPS-конфигов...
-Source: "configs.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\configs.xml"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Копируем модуль поддержки сжатия (собран как AnyCPU)...
-Source: "DotNetZip.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "DotNetZip.dll.sig"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\DotNetZip.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\DotNetZip.dll.sig"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Устанавливаем бинарники приложения...
-Source: "srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion
-Source: "ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 ; Копируем файл стандартных настроек программы...
-Source: "srcrepair.exe.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\srcrepair.exe.config"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Устанавливаем остальные файлы...
-Source: "cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "help\*"; DestDir: "{app}\help\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\help\*"; DestDir: "{app}\help\"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 ; Создаём ярлык для приложения...
