@@ -40,10 +40,10 @@ cd "..\srcrepair\bin\Release"
 echo Signing binaries...
 "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% srcrepair.exe
 "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% DotNetZip.dll
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ru/srcrepair.resources.dll
+"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ru\srcrepair.resources.dll
 
 echo Compiling Installer...
-"%ProgramFiles(x86)%\Inno Setup 5\ISCC.exe" srcrepair.iss
+"%ProgramFiles(x86)%\Inno Setup 5\ISCC.exe" inno\srcrepair.iss
 
 echo Signing installer...
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% Output/srcrepair_*_final.exe
+"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% inno\Output\srcrepair_*.exe
