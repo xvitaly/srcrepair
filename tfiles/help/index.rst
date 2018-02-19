@@ -16,6 +16,5 @@
    modules.rst
    settings.rst
    legalinfo.rst
-   changelog.rst
 
 
