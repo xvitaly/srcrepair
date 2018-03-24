@@ -514,12 +514,12 @@
     <Name>RebelHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/rebelhud/rebelhud_92b19134.zip</URI>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/rebelhud/rebelhud_a0e04751.zip</URI>
     <UpURI>https://github.com/TheRebelCreeper/RebelHud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/rebelhud.jpg</Preview>
     <RepoPath>https://github.com/TheRebelCreeper/RebelHud</RepoPath>
-    <Hash>c577f88a84903102c7f85bf78b048278</Hash>
-    <LastUpdate>1519866129</LastUpdate>
+    <Hash>f279a2fd4612fc294027d8edc3671238</Hash>
+    <LastUpdate>1521657075</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=240</Site>
     <ArchiveDir>RebelHud-master/custom/RebelHud</ArchiveDir>
     <InstallDir>rebelhud</InstallDir>
