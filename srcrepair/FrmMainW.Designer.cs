@@ -203,7 +203,6 @@
             this.MNUSep1 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUReportBuilder = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUInstaller = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNUHEd = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUWinMnuDisabler = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUMuteMan = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUExtClnSub = new System.Windows.Forms.ToolStripMenuItem();
@@ -1705,7 +1704,6 @@
             this.MNUSep1,
             this.MNUReportBuilder,
             this.MNUInstaller,
-            this.MNUHEd,
             this.MNUWinMnuDisabler,
             this.MNUMuteMan,
             this.MNUExtClnSub,
@@ -1746,13 +1744,6 @@
             this.MNUInstaller.Image = global::srcrepair.Properties.Resources.installer;
             this.MNUInstaller.Name = "MNUInstaller";
             this.MNUInstaller.Click += new System.EventHandler(this.MNUInstaller_Click);
-            // 
-            // MNUHEd
-            // 
-            this.MNUHEd.Image = global::srcrepair.Properties.Resources.hosts;
-            this.MNUHEd.Name = "MNUHEd";
-            resources.ApplyResources(this.MNUHEd, "MNUHEd");
-            this.MNUHEd.Click += new System.EventHandler(this.MNUHEd_Click);
             // 
             // MNUWinMnuDisabler
             // 
@@ -2175,7 +2166,6 @@
         private System.Windows.Forms.ToolStripMenuItem BUT_L_AllSteam;
         private System.Windows.Forms.ToolStripMenuItem BUT_L_AllSRC;
         private System.Windows.Forms.FolderBrowserDialog FldrBrwse;
-        private System.Windows.Forms.ToolStripMenuItem MNUHEd;
         private System.Windows.Forms.ToolStripSeparator CE_ToolSep1;
         private System.Windows.Forms.ToolStripButton CE_RmRow;
         private System.Windows.Forms.GroupBox PS_GB_AdvRepr;
