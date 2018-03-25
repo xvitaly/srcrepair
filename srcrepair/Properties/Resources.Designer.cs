@@ -71,33 +71,6 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} for {1} by {2}. Version: {3}..
-        /// </summary>
-        internal static string AHE_About {
-            get {
-                return ResourceManager.GetString("AHE_About", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to https://www.easycoding.org/projects/mhed.
-        /// </summary>
-        internal static string AHE_HelpURL {
-            get {
-                return ResourceManager.GetString("AHE_HelpURL", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to srcrepair.Resources.HtTemplate.txt.
-        /// </summary>
-        internal static string AHE_TemplateFile {
-            get {
-                return ResourceManager.GetString("AHE_TemplateFile", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to The program is already running. Starting the second copy is not allowed..
         /// </summary>
         internal static string AppAlrLaunched {
@@ -506,36 +479,6 @@ namespace srcrepair.Properties {
             get {
                 object obj = ResourceManager.GetObject("Home", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap hosts {
-            get {
-                object obj = ResourceManager.GetObject("hosts", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to # Copyright (c) 1993-2009 Microsoft Corp.
-        ///#
-        ///# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
-        ///#
-        ///# This file contains the mappings of IP addresses to host names. Each
-        ///# entry should be kept on an individual line. The IP address should
-        ///# be placed in the first column followed by the corresponding host name.
-        ///# The IP address and the host name should be separated by at least one
-        ///# space.
-        ///#
-        ///# Additionally, comments (such as these) may be inserted on individual
-        ///# lines or following th [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string HtTemplate {
-            get {
-                return ResourceManager.GetString("HtTemplate", resourceCulture);
             }
         }
         

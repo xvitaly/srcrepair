@@ -130,12 +130,6 @@
     <Compile Include="FrmAbout.Designer.cs">
       <DependentUpon>FrmAbout.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMhed.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMhed.Designer.cs">
-      <DependentUpon>FrmMhed.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmMute.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +185,11 @@
       <DependentUpon>FrmOptions.cs</DependentUpon>
     </Compile>
     <Compile Include="GameManager.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Type1Settings.cs" />
     <Compile Include="Type1Video.cs" />
     <Compile Include="HUDManager.cs" />
@@ -267,12 +266,6 @@
     <EmbeddedResource Include="FrmAbout.ru.resx">
       <DependentUpon>FrmAbout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMhed.resx">
-      <DependentUpon>FrmMhed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmMhed.ru.resx">
-      <DependentUpon>FrmMhed.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmMute.resx">
       <DependentUpon>FrmMute.cs</DependentUpon>
     </EmbeddedResource>
@@ -329,14 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Content Include="..\tfiles\cfgs\bonhighfps.cfg">
       <Link>cfgs\bonhighfps.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -472,7 +460,6 @@
   <ItemGroup>
     <None Include="Resources\Add.png" />
     <None Include="Resources\Xmas.png" />
-    <None Include="Resources\hosts.png" />
     <None Include="Resources\TextEditor.png" />
     <None Include="Resources\Globe.png" />
     <None Include="Resources\Options.png" />
@@ -490,7 +477,6 @@
     <None Include="Resources\clean.png" />
     <None Include="Resources\backup.png" />
     <None Include="Resources\arrow.png" />
-    <EmbeddedResource Include="Resources\HtTemplate.txt" />
     <None Include="Resources\upd_av.png" />
     <None Include="Resources\upd_nx.png" />
     <None Include="Resources\upd_chk.png" />
