@@ -2123,12 +2123,6 @@ namespace srcrepair
             ProcessManager.OpenWebPage(Properties.Resources.AppURLSpnTFSU);
         }
 
-        private void MNUHEd_Click(object sender, EventArgs e)
-        {
-            // Отобразим форму редактора файла hosts...
-            FormManager.FormShowHostsEditor();
-        }
-
         private void CE_RmRow_Click(object sender, EventArgs e)
         {
             try

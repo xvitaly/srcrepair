@@ -184,17 +184,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Вызывает форму модуля "Редактор Hosts".
-        /// </summary>
-        public static void FormShowHostsEditor()
-        {
-            using (FrmHEd HEdFrm = new FrmHEd())
-            {
-                HEdFrm.ShowDialog();
-            }
-        }
-
-        /// <summary>
         /// Вызывает форму модуля обновления программы.
         /// </summary>
         /// <param name="UserAgent">Заголовок HTTP User-Agent, который будет отправляться при проверке обновлений</param>
