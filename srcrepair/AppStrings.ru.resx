@@ -359,22 +359,6 @@
     <value>Переменная в выделенной строке не найдена!</value>
     <comment>Сообщение при возникновении исключения при попытке считать описание переменной в Редакторе конфигов</comment>
   </data>
-  <data name="AHE_ExceptionDetected" xml:space="preserve">
-    <value>Во время открытия файла {0} произошла ошибка. Файл может быть открыт некорректно!</value>
-    <comment>Сообщение, выдаваемое при возникновении исключения во время парсинга файла Hosts</comment>
-  </data>
-  <data name="AHE_RestDef" xml:space="preserve">
-    <value>Восстановить стандартные значения файла Hosts?</value>
-    <comment>Вопрос о восстановлении стандартного файла Hosts</comment>
-  </data>
-  <data name="AHE_Saved" xml:space="preserve">
-    <value>Изменения в файле hosts были успешно сохранены!</value>
-    <comment>Сообщение об успешном сохранении файла hosts</comment>
-  </data>
-  <data name="AHE_SaveException" xml:space="preserve">
-    <value>Внимание! Произошла ошибка во время записи в файл {0}. Возможно, у вас недостаточно для этого прав, либо кто-то блокирует попытку записи.</value>
-    <comment>Сообщение, выдаваемое при ошибке записи в файл hosts</comment>
-  </data>
   <data name="PS_LoadErr" xml:space="preserve">
     <value>Файлы для удаления не найдены! Очистка не требуется.</value>
     <comment>Сообщение, выдаваемое при невозможности загрузить список файлов для очистки</comment>
@@ -471,10 +455,6 @@
     <value>Произошла ошибка при разборе XML файла со списком игр. Возможно он отсутствует или повреждён. Пожалуйста, переустановите программу.</value>
     <comment>Сообщение, выдаваемое при возникновении исключения при разборе (парсинге) XML</comment>
   </data>
-  <data name="AHE_HMessg" xml:space="preserve">
-    <value>Активный файл hosts расположен в: {0}. Показать в Проводнике?</value>
-    <comment>Сообщение, выдаваемое при вызове функции вывода пути к файлу hosts</comment>
-  </data>
   <data name="AppDefaultSteamLangID" xml:space="preserve">
     <value>1</value>
     <comment>Номер языка клиента Steam по умолчанию из раскрывающегося списка на странице устранения проблем и очистки</comment>
@@ -527,21 +507,9 @@
     <value>Для сохранения графических настроек вы должны заполнить все параметры!</value>
     <comment>Сообщение при попытке сохранить графические опции с пустыми полями</comment>
   </data>
-  <data name="AHE_KRegErr" xml:space="preserve">
-    <value>Не удалось получить путь к Hosts из реестра. Попробуем стандартный путь.</value>
-    <comment>Сообщение, выдаваемое при невозможности получения пути к файлу Hosts из реестра</comment>
-  </data>
-  <data name="AHE_NoFileDetected" xml:space="preserve">
-    <value>Файл Hosts по полученному пути {0} не может быть найден.</value>
-    <comment>Сообщение, выдаваемое при отсутствии файла Hosts по полученному из реестра адресу</comment>
-  </data>
   <data name="AppGenericError" xml:space="preserve">
     <value>Внимание! Произошла критическая ошибка. Работа приложения остановлена.</value>
     <comment>Сообщение, выдаваемое при возникновении критических ошибок</comment>
-  </data>
-  <data name="AHE_NoAdminRights" xml:space="preserve">
-    <value>Для выполнения этого действия необходимы права локального администратора!</value>
-    <comment>Сообщение, выдаваемое при попытке записи в Hosts при отсутствии прав локального администратора</comment>
   </data>
   <data name="BU_BType_Cont" xml:space="preserve">
     <value>Архив</value>

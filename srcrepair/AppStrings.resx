@@ -300,18 +300,6 @@
   <data name="CE_ClSelErr" xml:space="preserve">
     <value>No variables detected in selected row!</value>
   </data>
-  <data name="AHE_ExceptionDetected" xml:space="preserve">
-    <value>Warning! Parse error detected. Probably the file {0} is opened with some errors.</value>
-  </data>
-  <data name="AHE_RestDef" xml:space="preserve">
-    <value>Restore default Hosts file?</value>
-  </data>
-  <data name="AHE_Saved" xml:space="preserve">
-    <value>Hosts file was successfully saved!</value>
-  </data>
-  <data name="AHE_SaveException" xml:space="preserve">
-    <value>Warning! An error occurred while trying to write into {0}. Maybe you have not enough rights for this or someone (for example antivirus software) is blocking our write attempts.</value>
-  </data>
   <data name="PS_LoadErr" xml:space="preserve">
     <value>Cleanup is not required.</value>
   </data>
@@ -384,9 +372,6 @@
   <data name="AppXMLParseError" xml:space="preserve">
     <value>An error occurred while parsing XML file with a list of games. Perhaps it is missing or damaged. Please reinstall the program.</value>
   </data>
-  <data name="AHE_HMessg" xml:space="preserve">
-    <value>Hosts file location: {0}. Show it in Windows Explorer?</value>
-  </data>
   <data name="AppDefaultSteamLangID" xml:space="preserve">
     <value>0</value>
   </data>
@@ -426,17 +411,8 @@
   <data name="GT_NCFNReady" xml:space="preserve">
     <value>Warning! To save the graphical settings, you must fill in all the forms!</value>
   </data>
-  <data name="AHE_KRegErr" xml:space="preserve">
-    <value>Unable to get path to the Hosts file from registry. Will try standard path.</value>
-  </data>
-  <data name="AHE_NoFileDetected" xml:space="preserve">
-    <value>The Hosts file {0} could not be found.</value>
-  </data>
   <data name="AppGenericError" xml:space="preserve">
     <value>Fatal error occurred! The application will be terminated.</value>
-  </data>
-  <data name="AHE_NoAdminRights" xml:space="preserve">
-    <value>Local admin rights is required to perform requested action!</value>
   </data>
   <data name="BU_BType_Cont" xml:space="preserve">
     <value>Archive</value>
