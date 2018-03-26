@@ -336,67 +336,55 @@ namespace srcrepair
         /// <summary>
         /// Генерирует удобочитаемое название для файла резервной копии.
         /// </summary>
-        /// <param name="FileName">Указатель на файл резервной копии</param>
+        /// <param name="FileName">Ссылка на файл резервной копии</param>
         /// <returns>Возвращает пару "тип архива" и "удобочитаемое название"</returns>
         private Tuple<string, string> GenUserFriendlyBackupDesc(FileInfo FileName)
         {
-            string BufName = Path.GetFileNameWithoutExtension(FileName.Name);
-            string Buf = String.Empty;
-
-            switch (FileName.Extension)
+            string ConfRow, ConfType = String.Empty;
+            switch (FileName.Name.Substring(0, FileName.Name.LastIndexOf('_')))
             {
-                case ".reg":
-                    Buf = AppStrings.BU_BType_Reg;
-                    if (BufName.IndexOf("Game_Options", StringComparison.CurrentCultureIgnoreCase) != -1)
-                    {
-                        BufName = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_GRGame, FileName.CreationTime);
-                    }
-                    else if (BufName.IndexOf("Source_Options", StringComparison.CurrentCultureIgnoreCase) != -1)
-                    {
-                        BufName = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_SRCAll, FileName.CreationTime);
-                    }
-                    else if (BufName.IndexOf("Steam_BackUp", StringComparison.CurrentCultureIgnoreCase) != -1)
-                    {
-                        BufName = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_SteamAll, FileName.CreationTime);
-                    }
-                    else if (BufName.IndexOf("Game_AutoBackUp", StringComparison.CurrentCultureIgnoreCase) != -1)
-                    {
-                        BufName = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_GameAuto, FileName.CreationTime);
-                    }
+                case "Container":
+                    ConfRow = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_Bud, FileName.CreationTime);
+                    ConfType = AppStrings.BU_BType_Cont;
                     break;
-                case ".bud":
-                    Buf = AppStrings.BU_BType_Cont;
-                    if (BufName.IndexOf(Properties.Resources.BU_PrefixDef, StringComparison.CurrentCultureIgnoreCase) != -1)
-                    {
-                        BufName = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_Bud, FileName.CreationTime);
-                    }
-                    else if (BufName.IndexOf(Properties.Resources.BU_PrefixCfg, StringComparison.CurrentCultureIgnoreCase) != -1)
-                    {
-                        Buf = AppStrings.BU_BType_Cfg;
-                        BufName = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_Config, FileName.CreationTime);
-                    }
-                    else if (BufName.IndexOf(Properties.Resources.BU_PrefixVChat, StringComparison.CurrentCultureIgnoreCase) != -1)
-                    {
-                        Buf = AppStrings.BU_BType_DB;
-                        BufName = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_VChat, FileName.CreationTime);
-                    }
-                    else if (BufName.IndexOf(Properties.Resources.BU_PrefixVideo, StringComparison.CurrentCultureIgnoreCase) != -1)
-                    {
-                        Buf = AppStrings.BU_BType_Video;
-                        BufName = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_GRGame, FileName.CreationTime);
-                    }
-                    else if (BufName.IndexOf(Properties.Resources.BU_PrefixVidAuto, StringComparison.CurrentCultureIgnoreCase) != -1)
-                    {
-                        Buf = AppStrings.BU_BType_Video;
-                        BufName = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_GameAuto, FileName.CreationTime);
-                    }
+                case "Config":
+                    ConfRow = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_Config, FileName.CreationTime);
+                    ConfType = AppStrings.BU_BType_Cfg;
+                    break;
+                case "VoiceBan":
+                    ConfRow = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_VChat, FileName.CreationTime);
+                    ConfType = AppStrings.BU_BType_DB;
+                    break;
+                case "VideoCfg":
+                    ConfRow = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_GRGame, FileName.CreationTime);
+                    ConfType = AppStrings.BU_BType_Video;
+                    break;
+                case "VideoAutoCfg":
+                    ConfRow = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_GameAuto, FileName.CreationTime);
+                    ConfType = AppStrings.BU_BType_Video;
+                    break;
+                case "Game_Options":
+                    ConfRow = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_GRGame, FileName.CreationTime);
+                    ConfType = AppStrings.BU_BType_Reg;
+                    break;
+                case "Source_Options":
+                    ConfRow = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_SRCAll, FileName.CreationTime);
+                    ConfType = AppStrings.BU_BType_Reg;
+                    break;
+                case "Steam_BackUp":
+                    ConfRow = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_SteamAll, FileName.CreationTime);
+                    ConfType = AppStrings.BU_BType_Reg;
+                    break;
+                case "Game_AutoBackUp":
+                    ConfRow = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_GameAuto, FileName.CreationTime);
+                    ConfType = AppStrings.BU_BType_Reg;
                     break;
                 default:
-                    Buf = AppStrings.BU_BType_Unkn;
+                    ConfRow = Path.GetFileNameWithoutExtension(FileName.Name);
+                    ConfType = AppStrings.BU_BType_Unkn;
                     break;
             }
-
-            return Tuple.Create(Buf, BufName);
+            return Tuple.Create(ConfType, ConfRow);
         }
 
         /// <summary>
