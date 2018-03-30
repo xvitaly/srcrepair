@@ -177,13 +177,13 @@
   <HUD>
     <Name>rayshud</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/rayshud/rayshud_aab49e45.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/rayshud/rayshud_dbb35113.zip</URI>
     <UpURI>https://github.com/raysfire/rayshud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/rayshud.jpg</Preview>
     <RepoPath>https://github.com/raysfire/rayshud</RepoPath>
-    <Hash>c38f6d35355bcaf29ca808aeb71e5fd3</Hash>
-    <LastUpdate>1518123978</LastUpdate>
+    <Hash>e857f00460302aa6c2431f01c0c7dd3c</Hash>
+    <LastUpdate>1522322156</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=254</Site>
     <ArchiveDir>rayshud-master</ArchiveDir>
     <InstallDir>rayshud</InstallDir>
