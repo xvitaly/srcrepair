@@ -345,13 +345,13 @@
   <HUD>
     <Name>m0re Hud</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/m0rehud/m0rehud_7c8dd2eb.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/m0rehud/m0rehud_c2912364.zip</URI>
     <UpURI>https://github.com/Hypnootize/m0rehud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/m0rehud.jpg</Preview>
     <RepoPath>https://github.com/Hypnootize/m0rehud</RepoPath>
-    <Hash>49c91486b281209b44ca27952d29e321</Hash>
-    <LastUpdate>1520523451</LastUpdate>
+    <Hash>21ce5bf31f7e74d550182d61c4c798c9</Hash>
+    <LastUpdate>1522339127</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=248</Site>
     <ArchiveDir>m0rehud-master/m0rehud</ArchiveDir>
     <InstallDir>m0rehud</InstallDir>
