@@ -107,13 +107,13 @@
   <HUD>
     <Name>bwHUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/bwhud/bwhud_74fa3c17.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/bwhud/bwhud_e3646579.zip</URI>
     <UpURI>https://github.com/bw-/bwhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/bwhud.jpg</Preview>
     <RepoPath>https://github.com/bw-/bwhud</RepoPath>
-    <Hash>2dcbc8330b895e865a2890b672863795</Hash>
-    <LastUpdate>1508644681</LastUpdate>
+    <Hash>7cc9674ce976d94c41112e4e12e8bf08</Hash>
+    <LastUpdate>1522281493</LastUpdate>
     <Site>http://huds.tf/forum/showthread.php?tid=224</Site>
     <ArchiveDir>bwhud-master</ArchiveDir>
     <InstallDir>bwhud</InstallDir>
