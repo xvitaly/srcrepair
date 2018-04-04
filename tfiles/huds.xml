@@ -276,12 +276,12 @@
     <Name>SolarHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/solarhud/solarhud_e56048bb.zip</URI>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/solarhud/solarhud_7d96529f.zip</URI>
     <UpURI>https://github.com/Stochast1c/solarhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/solarhud.jpg</Preview>
     <RepoPath>https://github.com/Stochast1c/solarhud</RepoPath>
-    <Hash>101eecc9d5abd25dad6f1e0b43fec5f8</Hash>
-    <LastUpdate>1522293217</LastUpdate>
+    <Hash>9da7ded80d1c5466a39eed78038a0a99</Hash>
+    <LastUpdate>1522812673</LastUpdate>
     <Site>http://huds.tf/solarhud/</Site>
     <ArchiveDir>solarhud-master</ArchiveDir>
     <InstallDir>solarhud</InstallDir>
