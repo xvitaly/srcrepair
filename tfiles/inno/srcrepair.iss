@@ -20,6 +20,7 @@
 ;
 
 ; Задаём особые директивы препроцессора...
+#define VERSION GetFileVersion("../srcrepair.exe")
 #define CI_COMMIT GetEnv('CI_HASH')
 #if CI_COMMIT == ''
 #define _RELEASE 1
@@ -32,7 +33,7 @@ AppName=SRC Repair
 AppVerName=SRC Repair
 AppPublisher=EasyCoding Team
 AppPublisherURL=https://www.easycoding.org/
-AppVersion=31.0.0.6000
+AppVersion={#VERSION}
 AppSupportURL=https://www.easycoding.org/projects/srcrepair
 AppUpdatesURL=https://www.easycoding.org/projects/srcrepair
 DefaultDirName={code:GetDefRoot}\SRC Repair
@@ -53,7 +54,7 @@ ArchitecturesInstallIn64BitMode=x64
 MinVersion=6.1.7601
 
 ; Здесь указываем данные, которые будут добавлены в свойства установщика...
-VersionInfoVersion=31.0.0.6000
+VersionInfoVersion={#VERSION}
 VersionInfoDescription=SRC Repair Setup
 VersionInfoCopyright=(c) 2005-2018 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
