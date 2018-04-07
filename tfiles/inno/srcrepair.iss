@@ -21,6 +21,7 @@
 
 ; Задаём особые директивы препроцессора...
 #define _RELEASE 1
+#define _SNAPSHOT "{#GetEnv('%APPVEYOR_REPO_COMMIT:~0,7%')}"
 
 [Setup]
 ; Задаём основные параметры...
@@ -36,7 +37,11 @@ DefaultDirName={code:GetDefRoot}\SRC Repair
 DefaultGroupName=SRC Repair
 AllowNoIcons=yes
 LicenseFile=..\COPYING
+#ifdef _RELEASE
 OutputBaseFilename=srcrepair_310_final
+#else
+OutputBaseFilename=snapshot_{#APP_URL}
+#endif
 SetupIconFile=..\srcrepair.ico
 UninstallDisplayIcon={app}\srcrepair.exe
 Compression=lzma2
