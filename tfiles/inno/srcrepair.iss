@@ -20,7 +20,10 @@
 ;
 
 ; Задаём особые директивы препроцессора...
+#define CI_COMMIT GetEnv('CI_HASH')
+#if CI_COMMIT == ''
 #define _RELEASE 1
+#endif
 
 [Setup]
 ; Задаём основные параметры...
@@ -39,7 +42,7 @@ LicenseFile=..\COPYING
 #ifdef _RELEASE
 OutputBaseFilename=srcrepair_310_final
 #else
-OutputBaseFilename=snapshot_{#GetEnv('CI_HASH')}
+OutputBaseFilename=snapshot_{#CI_COMMIT}
 #endif
 SetupIconFile=..\srcrepair.ico
 UninstallDisplayIcon={app}\srcrepair.exe
