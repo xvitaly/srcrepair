@@ -89,7 +89,9 @@ Source: "..\srcrepair.exe.config"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Устанавливаем остальные файлы...
 Source: "..\cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
+#ifdef _RELEASE
 Source: "..\help\*"; DestDir: "{app}\help\"; Flags: ignoreversion recursesubdirs createallsubdirs
+#endif
 
 ; Устанавливаем файлы с отсоединёнными подписями для официальных сборок...
 #ifdef _RELEASE
