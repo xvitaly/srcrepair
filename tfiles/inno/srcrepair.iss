@@ -59,6 +59,9 @@ VersionInfoDescription=SRC Repair Setup
 VersionInfoCopyright=(c) 2005-2018 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
 
+[Messages]
+BeveledLabel=EasyCoding Team
+
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl,en-US.isl"; InfoBeforeFile: "readme_en.rtf"
 Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl,ru-RU.isl"; InfoBeforeFile: "readme_ru.rtf"
