@@ -19,6 +19,9 @@
 ; along with this program. If not, see <http://www.gnu.org/licenses/>.
 ;
 
+; Задаём особые директивы препроцессора...
+#define _RELEASE 1
+
 [Setup]
 ; Задаём основные параметры...
 AppId={{77A71DAB-56AA-4F33-BDE8-F00798468B9D}
@@ -68,12 +71,10 @@ Source: "..\configs.xml"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Копируем модуль поддержки сжатия (собран как AnyCPU)...
 Source: "..\DotNetZip.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\DotNetZip.dll.sig"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Устанавливаем бинарники приложения...
 Source: "..\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 ; Копируем файл стандартных настроек программы...
@@ -82,6 +83,11 @@ Source: "..\srcrepair.exe.config"; DestDir: "{app}"; Flags: ignoreversion
 ; Устанавливаем остальные файлы...
 Source: "..\cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "..\help\*"; DestDir: "{app}\help\"; Flags: ignoreversion recursesubdirs createallsubdirs
+
+; Устанавливаем файлы с отсоединёнными подписями для официальных сборок...
+#ifdef _RELEASE
+Source: "..\*.sig"; DestDir: "{app}"; Flags: ignoreversion
+#endif
 
 [Icons]
 ; Создаём ярлык для приложения...
