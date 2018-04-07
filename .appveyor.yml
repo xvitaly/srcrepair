@@ -32,5 +32,5 @@ test: off
 artifacts:
 - path: snapshot_*.7z
   name: snapshot
-- path: snapshot_*.exe
+- path: inno\Output\snapshot_*.exe
   name: innosetup
