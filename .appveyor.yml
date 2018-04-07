@@ -27,8 +27,6 @@ after_build:
 
     7z a snapshot_%CI_HASH%.7z %CI_DIR%\*
 
-    findstr /V "_RELEASE" %CI_DIR%\inno\srcrepair.iss > %CI_DIR%\inno\srcrepair.iss
-
     "%ProgramFiles(x86)%\Inno Setup 5\ISCC.exe" %CI_DIR%\inno\srcrepair.iss
 test: off
 artifacts:
