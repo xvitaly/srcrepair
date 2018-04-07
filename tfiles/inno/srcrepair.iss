@@ -21,7 +21,6 @@
 
 ; Задаём особые директивы препроцессора...
 #define _RELEASE 1
-#define _SNAPSHOT "{#GetEnv('%APPVEYOR_REPO_COMMIT:~0,7%')}"
 
 [Setup]
 ; Задаём основные параметры...
@@ -40,7 +39,7 @@ LicenseFile=..\COPYING
 #ifdef _RELEASE
 OutputBaseFilename=srcrepair_310_final
 #else
-OutputBaseFilename=snapshot_{#_SNAPSHOT}
+OutputBaseFilename=snapshot_{#GetEnv('APPVEYOR_REPO_COMMIT')}
 #endif
 SetupIconFile=..\srcrepair.ico
 UninstallDisplayIcon={app}\srcrepair.exe
