@@ -21,13 +21,15 @@ build:
   verbosity: normal
 after_build:
 - cmd: >-
-    set CHASH=%APPVEYOR_REPO_COMMIT:~0,7%
+    set CI_DIR=%APPVEYOR_BUILD_FOLDER%\srcrepair\bin\%CONFIGURATION%
 
-    7z a snapshot_%CHASH%.7z %APPVEYOR_BUILD_FOLDER%\srcrepair\bin\%CONFIGURATION%\*
+    set CI_HASH=%APPVEYOR_REPO_COMMIT:~0,7%
 
-    findstr /V "_RELEASE" inno\srcrepair.iss > inno\srcrepair.iss
+    7z a snapshot_%CI_HASH%.7z %CI_DIR%\*
 
-    "%ProgramFiles(x86)%\Inno Setup 5\ISCC.exe" inno\srcrepair.iss
+    findstr /V "_RELEASE" %CI_DIR%\inno\srcrepair.iss > %CI_DIR%\inno\srcrepair.iss
+
+    "%ProgramFiles(x86)%\Inno Setup 5\ISCC.exe" %CI_DIR%\inno\srcrepair.iss
 test: off
 artifacts:
 - path: snapshot_*.7z

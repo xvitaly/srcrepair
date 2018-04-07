@@ -39,7 +39,7 @@ LicenseFile=..\COPYING
 #ifdef _RELEASE
 OutputBaseFilename=srcrepair_310_final
 #else
-OutputBaseFilename=snapshot_{#GetEnv('CHASH')}
+OutputBaseFilename=snapshot_{#GetEnv('CI_HASH')}
 #endif
 SetupIconFile=..\srcrepair.ico
 UninstallDisplayIcon={app}\srcrepair.exe
