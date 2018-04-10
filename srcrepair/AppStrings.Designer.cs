@@ -133,7 +133,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Help system for current language is not supported yet! You can help us to translate it. Please visit our GitHub page for more information..
+        ///   Looks up a localized string similar to Offline help system is not installed or not available for your language yet!.
         /// </summary>
         internal static string AppHelpCHMNotFound {
             get {

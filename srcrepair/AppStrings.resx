@@ -649,7 +649,7 @@
     <value>Failed to check hash sum of downloaded file. Maybe it was damaged. Please try again later!</value>
   </data>
   <data name="AppHelpCHMNotFound" xml:space="preserve">
-    <value>Help system for current language is not supported yet! You can help us to translate it. Please visit our GitHub page for more information.</value>
+    <value>Offline help system is not installed or not available for your language yet!</value>
   </data>
   <data name="AppNoSteamIDSetected" xml:space="preserve">
     <value>No Steam user profiles detected! Please run Steam at least once and then try again.</value>
