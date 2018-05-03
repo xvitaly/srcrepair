@@ -375,11 +375,9 @@ Graphics by:
  - Customicondesign;
  - Designkindle;
  - Everaldo Coelho;
- - Fasticon;
  - FatCow;
  - Flahorn;
  - GNOME icon artists;
- - Iconshock;
  - IconsPedia;
  - Iconsolid;
  - Icontoaster;
@@ -393,11 +391,7 @@ Graphics by:
 SRC Repair's icon by Lopagof (https://lopagof.deviantart.com). Licensed under the terms of CC Attribution Non-Commercial No Derivatives license.
 
 3rd party libraries (dynamic linked):
- - DotNetZip (MPL license + zlib license).
-
-Translators:
- - Russian (native) - V1TSK (vitaly@easycoding.org);
- - English - Google Translate (;-)).</value>
+ - DotNetZip (MPL license + zlib license).</value>
   </data>
   <data name="&gt;&gt;textBoxDescription.Name" xml:space="preserve">
     <value>textBoxDescription</value>
