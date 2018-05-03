@@ -2101,16 +2101,6 @@ namespace srcrepair
             try { Process.Start(Properties.Resources.AppURLSteamGrID); } catch { ProcessManager.OpenWebPage(Properties.Resources.AppURLSteamGroup); }
         }
 
-        private void MNULnkEasyCoding_Click(object sender, EventArgs e)
-        {
-            ProcessManager.OpenWebPage(Properties.Resources.AppURLOffSite);
-        }
-
-        private void MNULnkTFRU_Click(object sender, EventArgs e)
-        {
-            ProcessManager.OpenWebPage(Properties.Resources.AppURLSpnTFSU);
-        }
-
         private void CE_RmRow_Click(object sender, EventArgs e)
         {
             try
@@ -2592,12 +2582,6 @@ namespace srcrepair
         {
             // Запустим менеджер управления отключёнными игроками...
             FormManager.FormShowMuteManager(App.SourceGames.SelectedGame.GetActualBanlistFile(), App.SourceGames.SelectedGame.FullBackUpDirPath);
-        }
-
-        private void MNUSupportChat_Click(object sender, EventArgs e)
-        {
-            // Откроем канал поддержки в клиенте Telegram для десктопа, а если он не установлен - в браузере...
-            try { Process.Start(Properties.Resources.AppTgChannel); } catch { ProcessManager.OpenWebPage(Properties.Resources.AppTgChannelURL); }
         }
 
         private void SB_SteamID_Click(object sender, EventArgs e)
