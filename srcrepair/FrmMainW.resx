@@ -125,7 +125,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACC
-        DwAAAk1TRnQBSQFMAgEBBgEAAXABAwFwAQMBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DwAAAk1TRnQBSQFMAgEBBgEAAYQBAwGEAQMBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -4553,8 +4553,14 @@
   <data name="MNUUpdateCheck.Text" xml:space="preserve">
     <value>Chec&amp;k for Updates...</value>
   </data>
-  <data name="MNUSep5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MNUSep3.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 6</value>
+  </data>
+  <data name="MNUOpinion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 22</value>
+  </data>
+  <data name="MNUOpinion.Text" xml:space="preserve">
+    <value>Give &amp;feedback</value>
   </data>
   <data name="MNUReportBug.Size" type="System.Drawing.Size, System.Drawing">
     <value>227, 22</value>
@@ -4566,13 +4572,10 @@
     <value>227, 22</value>
   </data>
   <data name="MNUShowLog.Text" xml:space="preserve">
-    <value>&amp;Show debug log</value>
+    <value>&amp;Show debug log...</value>
   </data>
-  <data name="MNUOpinion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 22</value>
-  </data>
-  <data name="MNUOpinion.Text" xml:space="preserve">
-    <value>Give &amp;feedback</value>
+  <data name="MNUSep4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 6</value>
   </data>
   <data name="MNUDonate.Size" type="System.Drawing.Size, System.Drawing">
     <value>227, 22</value>
@@ -4580,37 +4583,13 @@
   <data name="MNUDonate.Text" xml:space="preserve">
     <value>&amp;Donate</value>
   </data>
-  <data name="MNUSep3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 6</value>
-  </data>
-  <data name="MNUSupportChat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 22</value>
-  </data>
-  <data name="MNUSupportChat.Text" xml:space="preserve">
-    <value>&amp;Telegram channel</value>
-  </data>
   <data name="MNUSteamGroup.Size" type="System.Drawing.Size, System.Drawing">
     <value>227, 22</value>
   </data>
   <data name="MNUSteamGroup.Text" xml:space="preserve">
-    <value>SRC Repa&amp;ir's Steam group</value>
+    <value>S&amp;team group</value>
   </data>
-  <data name="MNUSep4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 6</value>
-  </data>
-  <data name="MNULnkEasyCoding.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 22</value>
-  </data>
-  <data name="MNULnkEasyCoding.Text" xml:space="preserve">
-    <value>&amp;EasyCoding Team</value>
-  </data>
-  <data name="MNULnkTFRU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 22</value>
-  </data>
-  <data name="MNULnkTFRU.Text" xml:space="preserve">
-    <value>TEA&amp;M-FORTRESS.SU</value>
-  </data>
-  <data name="MNUSep7.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MNUSep5.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 6</value>
   </data>
   <data name="MNUAbout.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
@@ -5714,11 +5693,17 @@
   <data name="&gt;&gt;MNUUpdateCheck.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MNUSep5.Name" xml:space="preserve">
-    <value>MNUSep5</value>
+  <data name="&gt;&gt;MNUSep3.Name" xml:space="preserve">
+    <value>MNUSep3</value>
   </data>
-  <data name="&gt;&gt;MNUSep5.Type" xml:space="preserve">
+  <data name="&gt;&gt;MNUSep3.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUOpinion.Name" xml:space="preserve">
+    <value>MNUOpinion</value>
+  </data>
+  <data name="&gt;&gt;MNUOpinion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUReportBug.Name" xml:space="preserve">
     <value>MNUReportBug</value>
@@ -5732,28 +5717,16 @@
   <data name="&gt;&gt;MNUShowLog.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MNUOpinion.Name" xml:space="preserve">
-    <value>MNUOpinion</value>
+  <data name="&gt;&gt;MNUSep4.Name" xml:space="preserve">
+    <value>MNUSep4</value>
   </data>
-  <data name="&gt;&gt;MNUOpinion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;MNUSep4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUDonate.Name" xml:space="preserve">
     <value>MNUDonate</value>
   </data>
   <data name="&gt;&gt;MNUDonate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MNUSep3.Name" xml:space="preserve">
-    <value>MNUSep3</value>
-  </data>
-  <data name="&gt;&gt;MNUSep3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MNUSupportChat.Name" xml:space="preserve">
-    <value>MNUSupportChat</value>
-  </data>
-  <data name="&gt;&gt;MNUSupportChat.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUSteamGroup.Name" xml:space="preserve">
@@ -5762,28 +5735,10 @@
   <data name="&gt;&gt;MNUSteamGroup.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MNUSep4.Name" xml:space="preserve">
-    <value>MNUSep4</value>
+  <data name="&gt;&gt;MNUSep5.Name" xml:space="preserve">
+    <value>MNUSep5</value>
   </data>
-  <data name="&gt;&gt;MNUSep4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MNULnkEasyCoding.Name" xml:space="preserve">
-    <value>MNULnkEasyCoding</value>
-  </data>
-  <data name="&gt;&gt;MNULnkEasyCoding.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MNULnkTFRU.Name" xml:space="preserve">
-    <value>MNULnkTFRU</value>
-  </data>
-  <data name="&gt;&gt;MNULnkTFRU.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MNUSep7.Name" xml:space="preserve">
-    <value>MNUSep7</value>
-  </data>
-  <data name="&gt;&gt;MNUSep7.Type" xml:space="preserve">
+  <data name="&gt;&gt;MNUSep5.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUAbout.Name" xml:space="preserve">

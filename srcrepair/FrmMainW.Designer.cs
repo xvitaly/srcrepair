@@ -215,18 +215,14 @@
             this.HelpMNU = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUUpdateCheck = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNUSep5 = new System.Windows.Forms.ToolStripSeparator();
+            this.MNUSep3 = new System.Windows.Forms.ToolStripSeparator();
+            this.MNUOpinion = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUReportBug = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUShowLog = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNUOpinion = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNUDonate = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNUSep3 = new System.Windows.Forms.ToolStripSeparator();
-            this.MNUSupportChat = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNUSteamGroup = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep4 = new System.Windows.Forms.ToolStripSeparator();
-            this.MNULnkEasyCoding = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNULnkTFRU = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNUSep7 = new System.Windows.Forms.ToolStripSeparator();
+            this.MNUDonate = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUSteamGroup = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUSep5 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusBar = new System.Windows.Forms.StatusStrip();
             this.SB_Status = new System.Windows.Forms.ToolStripStatusLabel();
@@ -1813,18 +1809,14 @@
             this.HelpMNU.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MNUHelp,
             this.MNUUpdateCheck,
-            this.MNUSep5,
+            this.MNUSep3,
+            this.MNUOpinion,
             this.MNUReportBug,
             this.MNUShowLog,
-            this.MNUOpinion,
-            this.MNUDonate,
-            this.MNUSep3,
-            this.MNUSupportChat,
-            this.MNUSteamGroup,
             this.MNUSep4,
-            this.MNULnkEasyCoding,
-            this.MNULnkTFRU,
-            this.MNUSep7,
+            this.MNUDonate,
+            this.MNUSteamGroup,
+            this.MNUSep5,
             this.MNUAbout});
             this.HelpMNU.Name = "HelpMNU";
             resources.ApplyResources(this.HelpMNU, "HelpMNU");
@@ -1843,10 +1835,17 @@
             resources.ApplyResources(this.MNUUpdateCheck, "MNUUpdateCheck");
             this.MNUUpdateCheck.Click += new System.EventHandler(this.MNUUpdateCheck_Click);
             // 
-            // MNUSep5
+            // MNUSep3
             // 
-            this.MNUSep5.Name = "MNUSep5";
-            resources.ApplyResources(this.MNUSep5, "MNUSep5");
+            this.MNUSep3.Name = "MNUSep3";
+            resources.ApplyResources(this.MNUSep3, "MNUSep3");
+            // 
+            // MNUOpinion
+            // 
+            this.MNUOpinion.Image = global::srcrepair.Properties.Resources.Home;
+            this.MNUOpinion.Name = "MNUOpinion";
+            resources.ApplyResources(this.MNUOpinion, "MNUOpinion");
+            this.MNUOpinion.Click += new System.EventHandler(this.MNUOpinion_Click);
             // 
             // MNUReportBug
             // 
@@ -1862,12 +1861,10 @@
             resources.ApplyResources(this.MNUShowLog, "MNUShowLog");
             this.MNUShowLog.Click += new System.EventHandler(this.MNUShowLog_Click);
             // 
-            // MNUOpinion
+            // MNUSep4
             // 
-            this.MNUOpinion.Image = global::srcrepair.Properties.Resources.Home;
-            this.MNUOpinion.Name = "MNUOpinion";
-            resources.ApplyResources(this.MNUOpinion, "MNUOpinion");
-            this.MNUOpinion.Click += new System.EventHandler(this.MNUOpinion_Click);
+            this.MNUSep4.Name = "MNUSep4";
+            resources.ApplyResources(this.MNUSep4, "MNUSep4");
             // 
             // MNUDonate
             // 
@@ -1876,18 +1873,6 @@
             resources.ApplyResources(this.MNUDonate, "MNUDonate");
             this.MNUDonate.Click += new System.EventHandler(this.MNUDonate_Click);
             // 
-            // MNUSep3
-            // 
-            this.MNUSep3.Name = "MNUSep3";
-            resources.ApplyResources(this.MNUSep3, "MNUSep3");
-            // 
-            // MNUSupportChat
-            // 
-            this.MNUSupportChat.Image = global::srcrepair.Properties.Resources.telegram;
-            this.MNUSupportChat.Name = "MNUSupportChat";
-            resources.ApplyResources(this.MNUSupportChat, "MNUSupportChat");
-            this.MNUSupportChat.Click += new System.EventHandler(this.MNUSupportChat_Click);
-            // 
             // MNUSteamGroup
             // 
             this.MNUSteamGroup.Image = global::srcrepair.Properties.Resources.steam;
@@ -1895,29 +1880,10 @@
             resources.ApplyResources(this.MNUSteamGroup, "MNUSteamGroup");
             this.MNUSteamGroup.Click += new System.EventHandler(this.MNUSteamGroup_Click);
             // 
-            // MNUSep4
+            // MNUSep5
             // 
-            this.MNUSep4.Name = "MNUSep4";
-            resources.ApplyResources(this.MNUSep4, "MNUSep4");
-            // 
-            // MNULnkEasyCoding
-            // 
-            this.MNULnkEasyCoding.Image = global::srcrepair.Properties.Resources.EasyCoding;
-            this.MNULnkEasyCoding.Name = "MNULnkEasyCoding";
-            resources.ApplyResources(this.MNULnkEasyCoding, "MNULnkEasyCoding");
-            this.MNULnkEasyCoding.Click += new System.EventHandler(this.MNULnkEasyCoding_Click);
-            // 
-            // MNULnkTFRU
-            // 
-            this.MNULnkTFRU.Image = global::srcrepair.Properties.Resources.tfru;
-            this.MNULnkTFRU.Name = "MNULnkTFRU";
-            resources.ApplyResources(this.MNULnkTFRU, "MNULnkTFRU");
-            this.MNULnkTFRU.Click += new System.EventHandler(this.MNULnkTFRU_Click);
-            // 
-            // MNUSep7
-            // 
-            this.MNUSep7.Name = "MNUSep7";
-            resources.ApplyResources(this.MNUSep7, "MNUSep7");
+            this.MNUSep5.Name = "MNUSep5";
+            resources.ApplyResources(this.MNUSep5, "MNUSep5");
             // 
             // MNUAbout
             // 
@@ -2099,9 +2065,6 @@
         private System.Windows.Forms.ToolStripMenuItem MNUOpinion;
         private System.Windows.Forms.ToolStripMenuItem MNUReportBug;
         private System.Windows.Forms.ToolStripMenuItem MNUSteamGroup;
-        private System.Windows.Forms.ToolStripSeparator MNUSep3;
-        private System.Windows.Forms.ToolStripMenuItem MNULnkEasyCoding;
-        private System.Windows.Forms.ToolStripMenuItem MNULnkTFRU;
         private System.Windows.Forms.ToolStripSeparator MNUSep4;
         private System.Windows.Forms.ToolStripMenuItem MNUAbout;
         private System.Windows.Forms.StatusStrip StatusBar;
@@ -2261,7 +2224,7 @@
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnAppCache;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnTmpDir;
         private System.Windows.Forms.ToolStripMenuItem MNUShowLog;
-        private System.Windows.Forms.ToolStripSeparator MNUSep5;
+        private System.Windows.Forms.ToolStripSeparator MNUSep3;
         private System.Windows.Forms.ComboBox GT_NCF_MBlur;
         private System.Windows.Forms.Label L_GT_NCF_MBlur;
         private System.Windows.Forms.ComboBox GT_NCF_Shadows;
@@ -2287,8 +2250,7 @@
         private System.Windows.Forms.PictureBox HUD_NAImg;
         private System.Windows.Forms.Label HD_LastUpdate;
         private System.Windows.Forms.Label FP_Comp;
-        private System.Windows.Forms.ToolStripMenuItem MNUSupportChat;
-        private System.Windows.Forms.ToolStripSeparator MNUSep7;
+        private System.Windows.Forms.ToolStripSeparator MNUSep5;
         private System.Windows.Forms.TextBox GT_LaunchOptions;
         private System.Windows.Forms.Label L_GT_LaunchOptions;
         private System.Windows.Forms.ToolStripStatusLabel SB_SteamID;
