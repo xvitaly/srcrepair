@@ -28,7 +28,6 @@ bug.ico            Asher                CC Attribution Share Alike              
 clear.ico          GNOME icon artists   GNU General Public License, version 2            http://www.iconspedia.com/icon/gnome-edit-clear-10--7.html
 delete.ico         VisualPharm          CC Attribution No Derivatives                    http://www.iconspedia.com/icon/delete--832.html
 Exit.ico           GNOME icon artists   GNU General Public License, version 2            http://www.iconspedia.com/icon/gnome-application-exit-10-41.html
-Feeds.ico          FastIcon             Free for non commercial use                      http://www.iconspedia.com/icon/rss.html
 filesave.ico       Everaldo Coelho      GNU Lesser General Public License                http://www.iconspedia.com/icon/save-file-4082.html
 filesaveas.ico     Everaldo Coelho      GNU Lesser General Public License                http://www.iconspedia.com/icon/file-save-as-4083.html
 Help.ico           Asher                CC Attribution Share Alike                       http://www.iconspedia.com/icon/help-8051.html
@@ -41,10 +40,7 @@ open.ico           VisualPharm          CC Attribution Share Alike              
 report.ico         ArtistValley         Free for non commercial use                      http://www.iconspedia.com/icon/task-report-hot-3-17.html
 Screwdriver.png    Babasse              CC Attribution                                   http://www.iconspedia.com/icon/screwdriver-1468.html
 steam.ico          Valve Corporation    Proprietary                                      http://store.steampowered.com/
-tf2world.ico       Valve Corporation    Proprietary                                      http://www.teamfortress.com/
-tf-ru.ico          Valve Corporation    Proprietary                                      http://www.teamfortress.com/
 Warning.ico        La Glanz Studio      Free                                             http://www.iconspedia.com/icon/warning-16712.html
-Wizard.ico         Iconshock            Free for non commercial use                      http://www.iconspedia.com/icon/wizard-15575.html
 TF2 Logo           Lopagof              CC Attribution Non-Commercial No Derivatives     http://www.iconspedia.com/icon/team-fortress-2-4585.html
 Wrench Icon        Brsev                CC Attribution Non-Commercial No Derivatives     http://www.iconspedia.com/icon/wrench-14054.html
 Refresh.ico        GNOME icon artists   GNU General Public License, version 2            http://www.iconspedia.com/icon/gnome-view-refresh-111-4.html
@@ -59,7 +55,6 @@ BackUp.png         Icontoaster          Free for non commercial use             
 Graphics.png       GNOME icon artists   GNU General Public License, version 2            http://www.iconspedia.com/icon/gnome-applications-graphics-10-46.html
 Search.png         Flahorn              CC Attribution Non-Commercial No Derivatives     http://www.iconspedia.com/icon/search-26-2.html
 Keyboard.ico       GNOME icon artists   GNU General Public License, version 2            http://www.iconspedia.com/icon/gnome-preferences-desktop-keyboard-1113-.html
-Shopcart.png       Fasticon             Free for non commercial use                      http://www.iconspedia.com/icon/shopcart-6254.html
 Donate.png         Customicondesign     Free for non commercial use                      http://www.iconspedia.com/icon/us-dollar-18656.html
 green_circle.png   Chris Ringeisen      CC Attribution Non-Commercial No Derivatives     http://www.iconspedia.com/icon/green-circle-icon-25988.html
 red_circle.png     Chris Ringeisen      CC Attribution Non-Commercial No Derivatives     http://www.iconspedia.com/icon/red-circle-icon-25995.html

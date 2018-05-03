@@ -143,24 +143,6 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to tg://resolve?domain=easycoding.
-        /// </summary>
-        internal static string AppTgChannel {
-            get {
-                return ResourceManager.GetString("AppTgChannel", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to https://t.me/easycoding.
-        /// </summary>
-        internal static string AppTgChannelURL {
-            get {
-                return ResourceManager.GetString("AppTgChannelURL", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to (mono).
         /// </summary>
         internal static string AppUASuffixOther {
@@ -188,29 +170,11 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://www.easycoding.org/.
-        /// </summary>
-        internal static string AppURLOffSite {
-            get {
-                return ResourceManager.GetString("AppURLOffSite", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to https://www.easycoding.org/projects/srcrepair#respond.
         /// </summary>
         internal static string AppURLReply {
             get {
                 return ResourceManager.GetString("AppURLReply", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to http://www.team-fortress.su/.
-        /// </summary>
-        internal static string AppURLSpnTFSU {
-            get {
-                return ResourceManager.GetString("AppURLSpnTFSU", resourceCulture);
             }
         }
         
@@ -399,16 +363,6 @@ namespace srcrepair.Properties {
         internal static System.Drawing.Bitmap Donate {
             get {
                 object obj = ResourceManager.GetObject("Donate", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap EasyCoding {
-            get {
-                object obj = ResourceManager.GetObject("EasyCoding", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -754,16 +708,6 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Shopcart {
-            get {
-                object obj = ResourceManager.GetObject("Shopcart", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to /select,.
         /// </summary>
         internal static string ShParamWin {
@@ -876,39 +820,9 @@ namespace srcrepair.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap telegram {
-            get {
-                object obj = ResourceManager.GetObject("telegram", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap TextEditor {
             get {
                 object obj = ResourceManager.GetObject("TextEditor", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap tf2world {
-            get {
-                object obj = ResourceManager.GetObject("tf2world", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap tfru {
-            get {
-                object obj = ResourceManager.GetObject("tfru", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -995,16 +909,6 @@ namespace srcrepair.Properties {
         internal static System.Drawing.Bitmap Warning_Large {
             get {
                 object obj = ResourceManager.GetObject("Warning_Large", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Wizard {
-            get {
-                object obj = ResourceManager.GetObject("Wizard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

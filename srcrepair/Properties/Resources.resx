@@ -130,9 +130,6 @@
   <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EasyCoding" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EasyCoding.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="AppAlrLaunched" xml:space="preserve">
     <value>The program is already running. Starting the second copy is not allowed.</value>
   </data>
@@ -162,9 +159,6 @@
   </data>
   <data name="Notebook" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Notebook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Wizard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Wizard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BU_PrefixCfg" xml:space="preserve">
     <value>Config</value>
@@ -232,9 +226,6 @@
   <data name="New" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\New.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tfru" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tf-ru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="TextEditor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TextEditor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -249,9 +240,6 @@
   </data>
   <data name="Convert" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Convert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tf2world" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tf2world.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Help" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -277,9 +265,6 @@
   <data name="Monitor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Monitor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Shopcart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Shopcart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="AppURLReply" xml:space="preserve">
     <value>https://www.easycoding.org/projects/srcrepair#respond</value>
   </data>
@@ -297,9 +282,6 @@
   </data>
   <data name="HUDDbFile" xml:space="preserve">
     <value>huds.xml</value>
-  </data>
-  <data name="AppURLOffSite" xml:space="preserve">
-    <value>https://www.easycoding.org/</value>
   </data>
   <data name="GameListFile" xml:space="preserve">
     <value>games.xml</value>
@@ -346,20 +328,8 @@
   <data name="LoadingFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoadingFile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AppURLSpnTFSU" xml:space="preserve">
-    <value>http://www.team-fortress.su/</value>
-  </data>
   <data name="Exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="telegram" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\telegram.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AppTgChannel" xml:space="preserve">
-    <value>tg://resolve?domain=easycoding</value>
-  </data>
-  <data name="AppTgChannelURL" xml:space="preserve">
-    <value>https://t.me/easycoding</value>
   </data>
   <data name="HUDLocalDir" xml:space="preserve">
     <value>HUDs</value>
