@@ -12,7 +12,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="LastUpdateTime" Type="System.DateTime" Scope="User">
-      <Value Profile="(Default)">2018-04-28</Value>
+      <Value Profile="(Default)">2018-05-05</Value>
     </Setting>
     <Setting Name="RemoveEmptyDirs" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
@@ -45,7 +45,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="LastHUDTime" Type="System.DateTime" Scope="User">
-      <Value Profile="(Default)">2018-04-28</Value>
+      <Value Profile="(Default)">2018-05-05</Value>
     </Setting>
     <Setting Name="HighlightOldBackUps" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
