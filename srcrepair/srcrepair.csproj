@@ -389,20 +389,12 @@
       <Link>cfgs\comangliastability.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="..\tfiles\inno\en-US.isl">
-      <Link>inno\en-US.isl</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="..\tfiles\inno\readme_en.rtf">
       <Link>inno\readme_en.rtf</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="..\tfiles\inno\readme_ru.rtf">
       <Link>inno\readme_ru.rtf</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="..\tfiles\inno\ru-RU.isl">
-      <Link>inno\ru-RU.isl</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="app.config" />
