@@ -62,9 +62,15 @@ VersionInfoCompany=EasyCoding Team
 [Messages]
 BeveledLabel=EasyCoding Team
 
+[CustomMessages]
+OptNetStatus=Optimizing MSIL binary...
+OptNetUninstallStatus=Removing optimized MSIL binaries...
+russian.OptNetStatus=Идёт оптимизация MSIL приложения...
+russian.OptNetUninstallStatus=Идёт удаление машинных сборок MSIL...
+
 [Languages]
-Name: "english"; MessagesFile: "compiler:Default.isl,en-US.isl"; InfoBeforeFile: "readme_en.rtf"
-Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl,ru-RU.isl"; InfoBeforeFile: "readme_ru.rtf"
+Name: "english"; MessagesFile: "compiler:Default.isl"; InfoBeforeFile: "readme_en.rtf"
+Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"; InfoBeforeFile: "readme_ru.rtf"
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
