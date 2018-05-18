@@ -538,4 +538,18 @@
     <ArchiveDir>Hypnotize-Hud-master/hypnotize hud</ArchiveDir>
     <InstallDir>hypnotizehud</InstallDir>
   </HUD>
+  <HUD>
+    <Name>MoesHUD</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/moeshud/moeshud_ae8db904.zip</URI>
+    <UpURI>https://github.com/MoeLesting/MoesHUD/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/moeshud.jpg</Preview>
+    <RepoPath>https://github.com/MoeLesting/MoesHUD</RepoPath>
+    <Hash>522445145e167126ead385ba58bed5d2</Hash>
+    <LastUpdate>1522356451</LastUpdate>
+    <Site>https://huds.tf/forum/showthread.php?tid=461</Site>
+    <ArchiveDir>moeshud-master</ArchiveDir>
+    <InstallDir>moeshud</InstallDir>
+  </HUD>
 </HUDs>
