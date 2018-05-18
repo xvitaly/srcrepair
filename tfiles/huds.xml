@@ -552,4 +552,18 @@
     <ArchiveDir>moeshud-master</ArchiveDir>
     <InstallDir>moeshud</InstallDir>
   </HUD>
+  <HUD>
+    <Name>SlagHUD</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/slaghud/slaghud_0b8745d9.zip</URI>
+    <UpURI>https://github.com/MagmaDude/SlagHUD/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/slaghud.jpg</Preview>
+    <RepoPath>https://github.com/MagmaDude/SlagHUD</RepoPath>
+    <Hash>3c12987dd39fdd44432cb9b6a3f5993c</Hash>
+    <LastUpdate>1523198816</LastUpdate>
+    <Site>https://huds.tf/forum/showthread.php?tid=652</Site>
+    <ArchiveDir>SlagHUD-master</ArchiveDir>
+    <InstallDir>slaghud</InstallDir>
+  </HUD>
 </HUDs>
