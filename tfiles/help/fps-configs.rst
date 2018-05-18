@@ -20,7 +20,7 @@
 Поддерживаемые FPS-конфиги
 ==========================================
 
-В текущей версии доступно более 10 различных конфигов:
+В текущей версии доступно более 15 различных конфигов:
 
  * v1tsk_high_fps;
  * m0refps;
@@ -34,7 +34,9 @@
  * comangliastability;
  * comangliamaxfps;
  * comangliacinema;
- * dt_legal.
+ * dt_legal;
+ * mastercomfig-maxperf;
+ * mastercomfig-quality.
 
 .. index:: установка FPS-конфига
 .. _fps-install:
