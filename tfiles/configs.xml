@@ -190,7 +190,7 @@ Graphics degradation: Medium]]>
     <![CDATA[Well-known config with limited FPS increase while reducing graphics quality. Recommended for use on some budget PCs.
 
 FPS increase: Medium
-Graphics degradation: Some]]>
+Graphics degradation: Moderate]]>
     </en>
   </Config>
   <Config>
@@ -224,7 +224,7 @@ Graphics degradation: High]]>
     <![CDATA[Skull's config. Practically the same as bon's one but the with slightly better graphics than the one from bonhighfps config. Recommended for use on low-end laptops and old PCs.
 
 FPS increase: High
-Graphics degradation: Some]]>
+Graphics degradation: Moderate]]>
     </en>
   </Config>
   <Config>
@@ -242,6 +242,40 @@ Graphics degradation: Some]]>
 
 FPS increase: Low
 Graphics degradation: No]]>
+    </en>
+  </Config>
+  <Config>
+    <Name>mastercomfig-maxperf</Name>
+    <FileName>mastercomfigpf.cfg</FileName>
+    <SupportedGames>440</SupportedGames>
+    <ru>
+    <![CDATA[Доработанный и улучшенный вариант FPS-конфига. Обеспечивает значительный прирост кадровой частоты при очень сильном ухудшении качества картинки. Должен обеспечивать максимально высокий прирост производительности игры.
+
+Прирост производительности: Высокий
+Ухудшение качества графики: Очень высокое]]>
+    </ru>
+    <en>
+    <![CDATA[Special modern config created to provide a large performance boost. Significantly decreases the graphics quality and increasing performance on low-end computers.
+
+FPS increase: High
+Graphics degradation: 16-bit style]]>
+    </en>
+  </Config>
+  <Config>
+    <Name>mastercomfig-quality</Name>
+    <FileName>mastercomfigmq.cfg</FileName>
+    <SupportedGames>440</SupportedGames>
+    <ru>
+    <![CDATA[FPS-конфиг "наоборот". Устанавливает все графические настройки игры на максимум, что позволит получить наилучшее качество графики. Данный конфиг создан специально для создателей видеороликов. Используйте только на мощном современном компьютере.
+
+Прирост производительности: Отрицательный
+Ухудшение качества графики: Нет]]>
+    </ru>
+    <en>
+    <![CDATA[This config, designed for movie makers, will set all graphic settings to maximum. This will require a powerful PC.
+
+FPS increase: None
+Graphics degradation: None]]>
     </en>
   </Config>
 </Configs>
