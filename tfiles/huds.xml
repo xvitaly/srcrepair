@@ -528,12 +528,12 @@
     <Name>Hypnotize HUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/hypnotizehud/hypnotizehud_6f14906c.zip</URI>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/hypnotizehud/hypnotizehud_b991fadc.zip</URI>
     <UpURI>https://github.com/Hypnootize/Hypnotize-Hud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/hypnotizehud.jpg</Preview>
     <RepoPath>https://github.com/Hypnootize/Hypnotize-Hud</RepoPath>
-    <Hash>578393abb0d872f6a6ed3fe95192b118</Hash>
-    <LastUpdate>1526575159</LastUpdate>
+    <Hash>31789ff272fd06b3c94f9c00dc8eacfe</Hash>
+    <LastUpdate>1527341976</LastUpdate>
     <Site>https://huds.tf/forum/showthread.php?tid=341</Site>
     <ArchiveDir>Hypnotize-Hud-master/hypnotize hud</ArchiveDir>
     <InstallDir>hypnotizehud</InstallDir>
