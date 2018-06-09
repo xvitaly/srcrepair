@@ -385,20 +385,6 @@
     <InstallDir>mhud</InstallDir>
   </HUD>
   <HUD>
-    <Name>Overwatch HUD</Name>
-    <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/overwatchhud/overwatchhud_a63d42f6.zip</URI>
-    <UpURI>https://github.com/nimtra/overwatchhud/archive/master.zip</UpURI>
-    <Preview>https://www.easycoding.org/files/srcrepair/huds/overwatchhud.jpg</Preview>
-    <RepoPath>https://github.com/nimtra/overwatchhud</RepoPath>
-    <Hash>9cc18133a5751a38d64b65b840d30ee9</Hash>
-    <LastUpdate>1515153142</LastUpdate>
-    <Site>https://huds.tf/forum/showthread.php?tid=284</Site>
-    <ArchiveDir>overwatchhud-master</ArchiveDir>
-    <InstallDir>overwatchhud</InstallDir>
-  </HUD>
-  <HUD>
     <Name>omphud-redux</Name>
     <Game>tf</Game>
     <IsUpdated>0</IsUpdated>
