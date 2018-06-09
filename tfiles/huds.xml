@@ -63,17 +63,17 @@
     <InstallDir>toonhud</InstallDir>
   </HUD>
   <HUD>
-    <Name>voidHUD2.0</Name>
+    <Name>VoidHUD 2.0</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/voidhud/voidhud_732306f5.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/voidhud/voidhud_aeac0f0f.zip</URI>
     <UpURI>https://github.com/TheStaticVoid/VoidHUD2.0/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/voidhud.jpg</Preview>
     <RepoPath>https://github.com/TheStaticVoid/voidhud2.0</RepoPath>
-    <Hash>ef12bc159e6618a612cc42478e9451fc</Hash>
-    <LastUpdate>1508960663</LastUpdate>
+    <Hash>79bb5e66c5613caf81165c772a2d38c9</Hash>
+    <LastUpdate>1528073891</LastUpdate>
     <Site>https://huds.tf/forum/showthread.php?tid=226</Site>
-    <ArchiveDir>voidhud2.0-master</ArchiveDir>
+    <ArchiveDir>VoidHUD2.0-master</ArchiveDir>
     <InstallDir>voidhud</InstallDir>
   </HUD>
   <HUD>
