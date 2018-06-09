@@ -122,12 +122,12 @@
     <Name>budhud</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/budhud/budhud_d2ad635e.zip</URI>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/budhud/budhud_c54ba8c4.zip</URI>
     <UpURI>https://github.com/WhiskerBiscuit/budhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.jpg</Preview>
     <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
-    <Hash>c8d206cf0f1231f5deb0ddd224681092</Hash>
-    <LastUpdate>1525767936</LastUpdate>
+    <Hash>e9980fedbd1bc1b376ebb49dd2bfc3a9</Hash>
+    <LastUpdate>1528418936</LastUpdate>
     <Site>https://huds.tf/forum/showthread.php?tid=207</Site>
     <ArchiveDir>budhud-master</ArchiveDir>
     <InstallDir>budhud</InstallDir>
