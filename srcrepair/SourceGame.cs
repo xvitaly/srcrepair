@@ -175,7 +175,7 @@ namespace srcrepair
             foreach (string Dir in GameDirs)
             {
                 string GamePath = Path.Combine(Dir, AppName);
-                if (Directory.Exists(Path.Combine(GamePath, SmallAppName)))
+                if (Directory.Exists(Path.Combine(GamePath, SmallAppName)) && File.Exists(Path.Combine(GamePath, GameBinaryFile)))
                 {
                     return GamePath;
                 }
@@ -263,7 +263,7 @@ namespace srcrepair
 
             // Получаем полный путь до каталога управляемого приложения...
             GamePath = GetGameDirectory(DirName, GameDirs);
-            
+
             // Проверяем установлено ли приложение...
             IsInstalled = !String.IsNullOrWhiteSpace(GamePath);
 
