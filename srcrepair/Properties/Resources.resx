@@ -145,9 +145,6 @@
   <data name="AppDefUA" xml:space="preserve">
     <value>Mozilla/5.0 ({0} {1} {2}.{3}; {4}; rv:{5}) {6} ({7})</value>
   </data>
-  <data name="Donate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Donate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -372,9 +369,6 @@
   </data>
   <data name="AppOpenHandlerMac" xml:space="preserve">
     <value>open</value>
-  </data>
-  <data name="AppURLDonate" xml:space="preserve">
-    <value>https://github.com/xvitaly/srcrepair#donate</value>
   </data>
   <data name="AppUASuffixOther" xml:space="preserve">
     <value>(mono)</value>

@@ -422,9 +422,6 @@
     <None Include="Resources\hint.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Wizard.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\report.png" />
   </ItemGroup>
   <ItemGroup>
@@ -446,15 +443,6 @@
     <None Include="Resources\steam.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\EasyCoding.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tf-ru.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tf2world.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Info.png" />
   </ItemGroup>
   <ItemGroup>
@@ -465,8 +453,6 @@
     <None Include="Resources\Options.png" />
     <None Include="Resources\Search.png" />
     <None Include="Resources\Keyboard.png" />
-    <None Include="Resources\Shopcart.png" />
-    <None Include="Resources\Donate.png" />
     <None Include="Resources\red_circle.png" />
     <None Include="Resources\green_circle.png" />
     <None Include="Resources\source.png" />
@@ -495,7 +481,6 @@
     <None Include="Resources\New.png" />
     <None Include="Resources\Open.png" />
     <None Include="Resources\Mhint.png" />
-    <None Include="Resources\telegram.png" />
     <Content Include="..\tfiles\inno\srcrepair.iss">
       <Link>inno\srcrepair.iss</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

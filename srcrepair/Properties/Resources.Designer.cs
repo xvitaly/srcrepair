@@ -161,15 +161,6 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://github.com/xvitaly/srcrepair#donate.
-        /// </summary>
-        internal static string AppURLDonate {
-            get {
-                return ResourceManager.GetString("AppURLDonate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to https://www.easycoding.org/projects/srcrepair#respond.
         /// </summary>
         internal static string AppURLReply {
@@ -353,16 +344,6 @@ namespace srcrepair.Properties {
         internal static System.Drawing.Bitmap Delete {
             get {
                 object obj = ResourceManager.GetObject("Delete", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Donate {
-            get {
-                object obj = ResourceManager.GetObject("Donate", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
