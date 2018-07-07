@@ -99,9 +99,3 @@ Supported mods and third-party Source engine games:
 # 3rd party libraries
 
  * [DotNetZip](https://github.com/haf/DotNetZip.Semverd) (MPL license + zlib license).
-
-# Donate
-
-You can send your donation via Bitcoin directly to our wallet: `1WGFbQxLiPVhDvprjttKaY6rRMjhA7vto`. All donations will be spent on maintaining our server infrastructure.
-
-[![QR code](https://chart.googleapis.com/chart?chs=250x250&cht=qr&chl=bitcoin:1WGFbQxLiPVhDvprjttKaY6rRMjhA7vto&choe=UTF-8)](https://blockchain.info/payment_request?address=1WGFbQxLiPVhDvprjttKaY6rRMjhA7vto)
