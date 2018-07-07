@@ -2597,11 +2597,5 @@ namespace srcrepair
             BUT_OpenNpad.Enabled = IsSingle;
             BUT_ExploreBUp.Enabled = IsSingle;
         }
-
-        private void MNUDonate_Click(object sender, EventArgs e)
-        {
-            // Откроем веб-страницу с реквизитами...
-            ProcessManager.OpenWebPage(Properties.Resources.AppURLDonate);
-        }
     }
 }
