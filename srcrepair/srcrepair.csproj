@@ -323,7 +323,6 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Content Include="..\tfiles\cfgs\bonhighfps.cfg">
       <Link>cfgs\bonhighfps.cfg</Link>
