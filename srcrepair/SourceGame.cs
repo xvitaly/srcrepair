@@ -169,13 +169,14 @@ namespace srcrepair
         /// </summary>
         /// <param name="AppName">Имя каталога приложения</param>
         /// <param name="GameDirs">Возможные каталоги установки</param>
+        /// <param name="OSType">Платформа ОС, под которой запущено приложение</param>
         /// <returns>Возвращает путь к каталогу игры или пустую строку</returns>
-        private string GetGameDirectory(string AppName, List<String> GameDirs)
+        private string GetGameDirectory(string AppName, List<String> GameDirs, CurrentPlatform.OSType OSType)
         {
             foreach (string Dir in GameDirs)
             {
                 string GamePath = Path.Combine(Dir, AppName);
-                if (Directory.Exists(Path.Combine(GamePath, SmallAppName)) && File.Exists(Path.Combine(GamePath, GameBinaryFile)))
+                if (Directory.Exists(Path.Combine(GamePath, SmallAppName)) && (File.Exists(Path.Combine(GamePath, GameBinaryFile)) || OSType != CurrentPlatform.OSType.Windows))
                 {
                     return GamePath;
                 }
@@ -247,7 +248,8 @@ namespace srcrepair
         /// <param name="UserDir">Путь к пользовательскому каталогу SRC Repair</param>
         /// <param name="SteamDir">Путь к установленному клиенту Steam</param>
         /// <param name="SteamAppsDirName">Платформо-зависимое название каталога SteamApps</param>
-        public SourceGame(string AppName, string DirName, string SmallName, string Executable, string SID, string SV, string VFDir, bool HasVF, bool UserDir, bool HUDAv, string AppPath, string AUserDir, string SteamDir, string SteamAppsDirName, string SelectedSteamID, List<String> GameDirs)
+        /// <param name="OS">Платформа ОС, под которой запущено приложение</param>
+        public SourceGame(string AppName, string DirName, string SmallName, string Executable, string SID, string SV, string VFDir, bool HasVF, bool UserDir, bool HUDAv, string AppPath, string AUserDir, string SteamDir, string SteamAppsDirName, string SelectedSteamID, List<String> GameDirs, CurrentPlatform.OSType OS)
         {
             // Начинаем определять нужные нам значения переменных...
             FullAppName = AppName;
@@ -262,7 +264,7 @@ namespace srcrepair
             SteamPath = SteamDir;
 
             // Получаем полный путь до каталога управляемого приложения...
-            GamePath = GetGameDirectory(DirName, GameDirs);
+            GamePath = GetGameDirectory(DirName, GameDirs, OS);
 
             // Проверяем установлено ли приложение...
             IsInstalled = !String.IsNullOrWhiteSpace(GamePath);
