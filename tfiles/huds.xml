@@ -444,12 +444,12 @@
     <Name>AntsHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/antshud/antshud_a24bfbc1.zip</URI>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/antshud/antshud_5cefe97e.zip</URI>
     <UpURI>https://github.com/AsianAntwan/AntsHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/antshud.jpg</Preview>
     <RepoPath>https://github.com/AsianAntwan/AntsHUD</RepoPath>
-    <Hash>cfbf283860ff509cc4bbc6ede0979ee2</Hash>
-    <LastUpdate>1530340333</LastUpdate>
+    <Hash>18d79d4cc02a0fdddccbcbd46c7c1ed5</Hash>
+    <LastUpdate>1532634666</LastUpdate>
     <Site>https://huds.tf/forum/showthread.php?tid=270</Site>
     <ArchiveDir>AntsHUD-master</ArchiveDir>
     <InstallDir>antshud</InstallDir>
