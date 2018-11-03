@@ -528,12 +528,12 @@
     <Name>MoesHUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/moeshud/moeshud_5bfd142b.zip</URI>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/moeshud/moeshud_f2a87ce8.zip</URI>
     <UpURI>https://github.com/MoeLesting/MoesHUD/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/moeshud.jpg</Preview>
     <RepoPath>https://github.com/MoeLesting/MoesHUD</RepoPath>
-    <Hash>bd237b98cb81a1725b2769b143f16437</Hash>
-    <LastUpdate>1531579029</LastUpdate>
+    <Hash>9fc2026d72d3c10df88004e67e308cd3</Hash>
+    <LastUpdate>1539620497</LastUpdate>
     <Site>https://huds.tf/forum/showthread.php?tid=461</Site>
     <ArchiveDir>moeshud-master</ArchiveDir>
     <InstallDir>moeshud</InstallDir>
