@@ -164,12 +164,12 @@
     <Name>KBNHud</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/kbnhud/kbnhud_b3d3c8ae.zip</URI>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/kbnhud/kbnhud_76ea7aed.zip</URI>
     <UpURI>https://github.com/Jotunn/KBNHud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/kbnhud.jpg</Preview>
     <RepoPath>https://github.com/Jotunn/KBNHud</RepoPath>
-    <Hash>2876a200b0796279620d1feac5d0beb0</Hash>
-    <LastUpdate>1537412888</LastUpdate>
+    <Hash>6bda5445f9d83c73e0f790f937a4b962</Hash>
+    <LastUpdate>1540071080</LastUpdate>
     <Site>https://huds.tf/forum/showthread.php?tid=271</Site>
     <ArchiveDir>KBNHud-master</ArchiveDir>
     <InstallDir>kbnhud</InstallDir>
