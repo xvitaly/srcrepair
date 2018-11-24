@@ -274,5 +274,13 @@ namespace srcrepair
                 Column.Width = (int)Math.Round(Column.Width * ScaleFactor.Width);
             }
         }
+
+        public static void ScaleSpecifiedControl(ListView ScaleSource, SizeF ScaleFactor)
+        {
+            foreach (ColumnHeader Column in ScaleSource.Columns)
+            {
+                Column.Width = (int)Math.Round(Column.Width * ScaleFactor.Width);
+            }
+        }
     }
 }
