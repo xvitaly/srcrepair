@@ -289,6 +289,12 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Изменяет размеры столбцов в StatusStrip, т.к. сама платформа CLR
+        /// не способна сделать это автоматически.
+        /// </summary>
+        /// <param name="ScaleSource">Ссылка на контрол StatusStrip</param>
+        /// <param name="ScaleFactor">Множитель</param>
         public static void ScaleColumnsInControl(StatusStrip ScaleSource, SizeF ScaleFactor)
         {
             foreach (ToolStripItem StatusBarItem in ScaleSource.Items)
