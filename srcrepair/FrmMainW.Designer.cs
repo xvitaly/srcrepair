@@ -1975,7 +1975,7 @@
             // FrmMainW
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.AppRefresh);
             this.Controls.Add(this.AppSelector);
             this.Controls.Add(this.StatusBar);
