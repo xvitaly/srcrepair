@@ -267,7 +267,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="ScaleSource">Ссылка на контрол DataGridView</param>
         /// <param name="ScaleFactor">Множитель</param>
-        public static void ScaleSpecifiedControl(DataGridView ScaleSource, SizeF ScaleFactor)
+        public static void ScaleColumnsInControl(DataGridView ScaleSource, SizeF ScaleFactor)
         {
             foreach (DataGridViewColumn Column in ScaleSource.Columns)
             {
@@ -281,7 +281,7 @@ namespace srcrepair
         /// </summary>
         /// <param name="ScaleSource">Ссылка на контрол ListView</param>
         /// <param name="ScaleFactor">Множитель</param>
-        public static void ScaleSpecifiedControl(ListView ScaleSource, SizeF ScaleFactor)
+        public static void ScaleColumnsInControl(ListView ScaleSource, SizeF ScaleFactor)
         {
             foreach (ColumnHeader Column in ScaleSource.Columns)
             {
