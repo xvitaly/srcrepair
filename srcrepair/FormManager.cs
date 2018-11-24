@@ -261,6 +261,12 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Изменяет размеры столбцов в DataGridView, т.к. сама платформа CLR
+        /// не способна сделать это автоматически.
+        /// </summary>
+        /// <param name="ScaleSource">Ссылка на контрол DataGridView</param>
+        /// <param name="ScaleFactor">Множитель</param>
         public static void ScaleSpecifiedControl(DataGridView ScaleSource, SizeF ScaleFactor)
         {
             foreach (DataGridViewColumn Column in ScaleSource.Columns)
