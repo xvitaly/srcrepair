@@ -53,6 +53,13 @@ namespace srcrepair
             }
         }
 
+        protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified Bounds)
+        {
+            base.ScaleControl(ScalingFactor, Bounds);
+            FormManager.ScaleColumnsInControl(CE_Editor, ScalingFactor);
+            FormManager.ScaleColumnsInControl(BU_LVTable, ScalingFactor);
+        }
+
         #region Internal Variables
 
         private string CFGFileName;
