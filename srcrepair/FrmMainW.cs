@@ -53,6 +53,8 @@ namespace srcrepair
             }
         }
 
+        #region HiDPI hacks
+
         /// <summary>
         /// Управляет масштабированием элементов управления на форме.
         /// </summary>
@@ -64,6 +66,8 @@ namespace srcrepair
             FormManager.ScaleColumnsInControl(CE_Editor, ScalingFactor);
             FormManager.ScaleColumnsInControl(BU_LVTable, ScalingFactor);
         }
+
+        #endregion
 
         #region Internal Variables
 
