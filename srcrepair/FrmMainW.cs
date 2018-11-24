@@ -65,6 +65,7 @@ namespace srcrepair
             base.ScaleControl(ScalingFactor, Bounds);
             FormManager.ScaleColumnsInControl(CE_Editor, ScalingFactor);
             FormManager.ScaleColumnsInControl(BU_LVTable, ScalingFactor);
+            FormManager.ScaleColumnsInControl(StatusBar, ScalingFactor);
         }
 
         #endregion
