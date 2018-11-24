@@ -275,6 +275,12 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Изменяет размеры столбцов в ListView, т.к. сама платформа CLR
+        /// не способна сделать это автоматически.
+        /// </summary>
+        /// <param name="ScaleSource">Ссылка на контрол ListView</param>
+        /// <param name="ScaleFactor">Множитель</param>
         public static void ScaleSpecifiedControl(ListView ScaleSource, SizeF ScaleFactor)
         {
             foreach (ColumnHeader Column in ScaleSource.Columns)
