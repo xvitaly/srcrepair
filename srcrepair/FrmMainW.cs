@@ -53,6 +53,11 @@ namespace srcrepair
             }
         }
 
+        /// <summary>
+        /// Управляет масштабированием элементов управления на форме.
+        /// </summary>
+        /// <param name="ScalingFactor">Множитель масштабирования</param>
+        /// <param name="Bounds">Границы элемента управления</param>
         protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified Bounds)
         {
             base.ScaleControl(ScalingFactor, Bounds);
