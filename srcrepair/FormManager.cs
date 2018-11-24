@@ -20,6 +20,7 @@
 */
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -257,6 +258,14 @@ namespace srcrepair
             using (FrmMute FMm = new FrmMute(Banlist, FullBackUpDirPath))
             {
                 FMm.ShowDialog();
+            }
+        }
+
+        public static void ScaleSpecifiedControl(DataGridView ScaleSource, SizeF ScaleFactor)
+        {
+            foreach (DataGridViewColumn Column in ScaleSource.Columns)
+            {
+                Column.Width = (int)Math.Round(Column.Width * ScaleFactor.Width);
             }
         }
     }
