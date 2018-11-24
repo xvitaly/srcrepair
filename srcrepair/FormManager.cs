@@ -288,5 +288,13 @@ namespace srcrepair
                 Column.Width = (int)Math.Round(Column.Width * ScaleFactor.Width);
             }
         }
+
+        public static void ScaleColumnsInControl(StatusStrip ScaleSource, SizeF ScaleFactor)
+        {
+            foreach (ToolStripItem StatusBarItem in ScaleSource.Items)
+            {
+                StatusBarItem.Width = (int)Math.Round(StatusBarItem.Width * ScaleFactor.Width);
+            }
+        }
     }
 }
