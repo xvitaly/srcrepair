@@ -20,10 +20,11 @@
 */
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using System.Text;
-using System.IO;
 
 namespace srcrepair
 {
@@ -42,6 +43,17 @@ namespace srcrepair
             InitializeComponent();
             Banlist = BL;
             BackUpDir = BD;
+        }
+
+        /// <summary>
+        /// Управляет масштабированием элементов управления на форме.
+        /// </summary>
+        /// <param name="ScalingFactor">Множитель масштабирования</param>
+        /// <param name="Bounds">Границы элемента управления</param>
+        protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified Bounds)
+        {
+            base.ScaleControl(ScalingFactor, Bounds);
+            FormManager.ScaleColumnsInControl(MM_Table, ScalingFactor);
         }
 
         #region IV
