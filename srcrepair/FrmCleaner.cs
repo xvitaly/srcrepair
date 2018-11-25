@@ -21,6 +21,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -53,6 +54,17 @@ namespace srcrepair
             ForceBackUp = FB;
             SuccessMessage = SM;
             FullBackUpDirPath = BD;
+        }
+
+        /// <summary>
+        /// Управляет масштабированием элементов управления на форме.
+        /// </summary>
+        /// <param name="ScalingFactor">Множитель масштабирования</param>
+        /// <param name="Bounds">Границы элемента управления</param>
+        protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified Bounds)
+        {
+            base.ScaleControl(ScalingFactor, Bounds);
+            FormManager.ScaleColumnsInControl(CM_FTable, ScalingFactor);
         }
 
         /// <summary>
