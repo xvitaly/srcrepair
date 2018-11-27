@@ -113,7 +113,8 @@ namespace srcrepair
             string FNameRouting = Path.Combine(TempDir, String.Format("routing_{0}.log", CrDt));
             string FNameNetStat = Path.Combine(TempDir, String.Format("netstat_{0}.log", CrDt));
             string FNameDxDiag = Path.Combine(TempDir, String.Format("dxdiag_{0}.log", CrDt));
-            
+            string FNameUsers = Path.Combine(TempDir, String.Format("users_{0}.log", CrDt));
+
             // Начинаем сборку отчёта...
             try
             {
@@ -131,6 +132,7 @@ namespace srcrepair
                     try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C ipconfig /all > \"{0}\"", FNameIpConfig)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C netstat -a > \"{0}\"", FNameNetStat)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
                     try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C route print > \"{0}\"", FNameRouting)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C net user > \"{0}\"", FNameUsers)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
 
                     try
                     {
@@ -158,6 +160,7 @@ namespace srcrepair
                             if (File.Exists(FNameRouting)) { ZBkUp.AddFile(FNameRouting, "system"); }
                             if (File.Exists(FNameNetStat)) { ZBkUp.AddFile(FNameNetStat, "system"); }
                             if (File.Exists(FNameDxDiag)) { ZBkUp.AddFile(FNameDxDiag, "system"); }
+                            if (File.Exists(FNameUsers)) { ZBkUp.AddFile(FNameUsers, "system"); }
                             if (File.Exists(FNameFPSCfg)) { ZBkUp.AddFile(FNameFPSCfg, "fps"); }
 
                             // Добавляем в архив журнал программы...
