@@ -136,12 +136,12 @@
     <Name>Improved Default HUD</Name>
     <Game>tf</Game>
     <IsUpdated>1</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/idhud/idhud_656a59c3.zip</URI>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/idhud/idhud_ca2f832e.zip</URI>
     <UpURI>https://github.com/Eniere/idhud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/idhud.jpg</Preview>
     <RepoPath>https://github.com/Eniere/idhud</RepoPath>
-    <Hash>ca78cb3d6ee8a7261245c17198626ef8</Hash>
-    <LastUpdate>1522341805</LastUpdate>
+    <Hash>2ee430ea8172d0331181cf860749c78c</Hash>
+    <LastUpdate>1543053825</LastUpdate>
     <Site>https://huds.tf/forum/showthread.php?tid=276</Site>
     <ArchiveDir>idhud-master</ArchiveDir>
     <InstallDir>idhud</InstallDir>
