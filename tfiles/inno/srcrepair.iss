@@ -41,7 +41,7 @@ DefaultGroupName=SRC Repair
 AllowNoIcons=yes
 LicenseFile=..\COPYING
 #ifdef _RELEASE
-OutputBaseFilename=srcrepair_324_final
+OutputBaseFilename=srcrepair_330_final
 #else
 OutputBaseFilename=snapshot_{#CI_COMMIT}
 #endif
