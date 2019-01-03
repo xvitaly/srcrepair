@@ -24,6 +24,9 @@ using System.Windows.Forms;
 
 namespace srcrepair
 {
+    /// <summary>
+    /// Класс для работы с экранами с высокой плотностью пикселей.
+    /// </summary>
     public static class DpiManager
     {
         /// <summary>
