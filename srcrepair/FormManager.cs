@@ -20,7 +20,6 @@
 */
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -258,48 +257,6 @@ namespace srcrepair
             using (FrmMute FMm = new FrmMute(Banlist, FullBackUpDirPath))
             {
                 FMm.ShowDialog();
-            }
-        }
-
-        /// <summary>
-        /// Изменяет размеры столбцов в DataGridView, т.к. сама платформа CLR
-        /// не способна сделать это автоматически.
-        /// </summary>
-        /// <param name="ScaleSource">Ссылка на контрол DataGridView</param>
-        /// <param name="ScaleFactor">Множитель</param>
-        public static void ScaleColumnsInControl(DataGridView ScaleSource, SizeF ScaleFactor)
-        {
-            foreach (DataGridViewColumn Column in ScaleSource.Columns)
-            {
-                Column.Width = (int)Math.Round(Column.Width * ScaleFactor.Width);
-            }
-        }
-
-        /// <summary>
-        /// Изменяет размеры столбцов в ListView, т.к. сама платформа CLR
-        /// не способна сделать это автоматически.
-        /// </summary>
-        /// <param name="ScaleSource">Ссылка на контрол ListView</param>
-        /// <param name="ScaleFactor">Множитель</param>
-        public static void ScaleColumnsInControl(ListView ScaleSource, SizeF ScaleFactor)
-        {
-            foreach (ColumnHeader Column in ScaleSource.Columns)
-            {
-                Column.Width = (int)Math.Round(Column.Width * ScaleFactor.Width);
-            }
-        }
-
-        /// <summary>
-        /// Изменяет размеры столбцов в StatusStrip, т.к. сама платформа CLR
-        /// не способна сделать это автоматически.
-        /// </summary>
-        /// <param name="ScaleSource">Ссылка на контрол StatusStrip</param>
-        /// <param name="ScaleFactor">Множитель</param>
-        public static void ScaleColumnsInControl(StatusStrip ScaleSource, SizeF ScaleFactor)
-        {
-            foreach (ToolStripItem StatusBarItem in ScaleSource.Items)
-            {
-                StatusBarItem.Width = (int)Math.Round(StatusBarItem.Width * ScaleFactor.Width);
             }
         }
     }

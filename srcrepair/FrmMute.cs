@@ -53,7 +53,7 @@ namespace srcrepair
         protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified Bounds)
         {
             base.ScaleControl(ScalingFactor, Bounds);
-            FormManager.ScaleColumnsInControl(MM_Table, ScalingFactor);
+            DpiManager.ScaleColumnsInControl(MM_Table, ScalingFactor);
         }
 
         #region IV

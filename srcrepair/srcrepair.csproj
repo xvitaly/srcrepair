@@ -86,6 +86,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CVList.ru.resx</DependentUpon>
     </Compile>
+    <Compile Include="DpiManager.cs" />
     <Compile Include="FileManager.cs" />
     <Compile Include="FrmArchWrk.cs">
       <SubType>Form</SubType>
