@@ -63,7 +63,7 @@ namespace srcrepair
         protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified Bounds)
         {
             base.ScaleControl(ScalingFactor, Bounds);
-            if (Math.Max(ScalingFactor.Width, ScalingFactor.Height) != 1.0f)
+            if (!(Math.Abs(Math.Max(ScalingFactor.Width, ScalingFactor.Height) - 1.0f) < 0.00001f))
             {
                 DpiManager.ScaleColumnsInControl(CE_Editor, ScalingFactor);
                 DpiManager.ScaleColumnsInControl(BU_LVTable, ScalingFactor);
