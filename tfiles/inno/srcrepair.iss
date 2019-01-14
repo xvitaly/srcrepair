@@ -95,8 +95,9 @@ Source: "..\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs
 
-; Копируем файл стандартных настроек программы...
+; Копируем файлs стандартных настроек программы...
 Source: "..\srcrepair.exe.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\NLog.config"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Устанавливаем остальные файлы...
 Source: "..\cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
