@@ -29,6 +29,7 @@ using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using NLog;
 
 namespace srcrepair
 {
@@ -77,6 +78,7 @@ namespace srcrepair
 
         private string CFGFileName;
         private CurrentApp App;
+        private Logger Logger = LogManager.GetCurrentClassLogger();
 
         #endregion
 
