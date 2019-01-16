@@ -23,6 +23,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.IO;
+using NLog;
 
 namespace srcrepair
 {
@@ -31,6 +32,11 @@ namespace srcrepair
     /// </summary>
     public partial class FrmRmWrk : Form
     {
+        /// <summary>
+        /// Управляет записью событий в журнал.
+        /// </summary>
+        private Logger Logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Хранит статус выполнения процесса очистки.
         /// </summary>
@@ -153,7 +159,13 @@ namespace srcrepair
         {
             // Удаление завершено. Закроем форму...
             IsRunning = false;
-            if (e.Error != null) { CoreLib.HandleExceptionEx(AppStrings.RW_RmException, Properties.Resources.AppName, e.Error.Message, e.Error.Source, MessageBoxIcon.Warning); }
+
+            if (e.Error != null)
+            {
+                MessageBox.Show(AppStrings.RW_RmException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(e.Error, "Exception while removing files.");
+            }
+
             Close();
         }
 
