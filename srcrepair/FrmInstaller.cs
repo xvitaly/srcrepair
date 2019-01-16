@@ -21,6 +21,7 @@
 using System;
 using System.Windows.Forms;
 using System.IO;
+using NLog;
 
 namespace srcrepair
 {
@@ -29,6 +30,11 @@ namespace srcrepair
     /// </summary>
     public partial class FrmInstaller : Form
     {
+        /// <summary>
+        /// Управляет записью событий в журнал.
+        /// </summary>
+        private Logger Logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Конструктор класса формы модуля распаковки файлов из архивов.
         /// </summary>
@@ -198,7 +204,8 @@ namespace srcrepair
                 catch (Exception Ex)
                 {
                     // Произошло исключение, выведем сообщение...
-                    CoreLib.HandleExceptionEx(AppStrings.QI_Excpt, PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.QI_Excpt, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Logger.Error(Ex, "Exception while running installation of selected file.");
                 }
             }
             else
