@@ -24,6 +24,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using NLog;
 
 namespace srcrepair
 {
@@ -32,6 +33,11 @@ namespace srcrepair
     /// </summary>
     public partial class FrmCleaner : Form
     {
+        /// <summary>
+        /// Управляет записью событий в журнал.
+        /// </summary>
+        private Logger Logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Конструктор класса формы менеджера очистки.
         /// </summary>
@@ -316,14 +322,16 @@ namespace srcrepair
                     }
                     catch (Exception Ex)
                     {
-                        CoreLib.HandleExceptionEx(AppStrings.PS_CleanEmptyDirsError, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                        MessageBox.Show(AppStrings.PS_CleanEmptyDirsError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        Logger.Error(Ex, "Exception while cleaning up empty directories.");
                     }
                 }
             }
             catch (Exception Ex)
             {
                 // Произошло исключение...
-                CoreLib.HandleExceptionEx(AppStrings.PS_CleanupErr, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.PS_CleanupErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, "Exception while removing files from queue.");
             }
         }
 
