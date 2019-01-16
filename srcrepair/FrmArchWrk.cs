@@ -23,6 +23,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.IO;
 using Ionic.Zip;
+using NLog;
 
 namespace srcrepair
 {
@@ -31,6 +32,11 @@ namespace srcrepair
     /// </summary>
     public partial class FrmArchWrk : Form
     {
+        /// <summary>
+        /// Управляет записью событий в журнал.
+        /// </summary>
+        private Logger Logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Хранит статус выполнения процесса распаковки.
         /// </summary>
@@ -111,7 +117,13 @@ namespace srcrepair
         {
             // Работа завершена. Закроем форму...
             IsRunning = false;
-            if (e.Error != null) { CoreLib.HandleExceptionEx(AppStrings.AR_UnpackException, Properties.Resources.AppName, e.Error.Message, e.Error.Source, MessageBoxIcon.Warning); }
+
+            if (e.Error != null)
+            {
+                MessageBox.Show(AppStrings.AR_UnpackException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(e.Error, "Exception during unpacking files from Zip archives.");
+            }
+
             Close();
         }
 
