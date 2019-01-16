@@ -24,6 +24,7 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using Ionic.Zip;
+using NLog;
 
 namespace srcrepair
 {
@@ -32,6 +33,11 @@ namespace srcrepair
     /// </summary>
     public partial class FrmRepBuilder : Form
     {
+        /// <summary>
+        /// Управляет записью событий в журнал.
+        /// </summary>
+        private Logger Logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Конструктор класса формы модуля создания отчётов для техподдержки.
         /// </summary>
@@ -178,7 +184,8 @@ namespace srcrepair
                     }
                     catch (Exception Ex)
                     {
-                        CoreLib.HandleExceptionEx(AppStrings.PS_ArchFailed, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                        MessageBox.Show(AppStrings.PS_ArchFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        Logger.Error(Ex, "Exception while trying to pack all generated logs to a single Zip archive.");
                     }
                 }
 
@@ -199,7 +206,8 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 // Произошло исключение...
-                CoreLib.HandleExceptionEx(AppStrings.RPB_GenException, PluginName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.RPB_GenException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, "Exception while generating report.");
             }
         }
 
