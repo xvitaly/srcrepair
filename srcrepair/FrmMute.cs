@@ -25,6 +25,7 @@ using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using NLog;
 
 namespace srcrepair
 {
@@ -57,6 +58,11 @@ namespace srcrepair
         }
 
         #region IV
+        /// <summary>
+        /// Управляет записью событий в журнал.
+        /// </summary>
+        private Logger Logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Хранит путь к файлу с БД отключённых игроков.
         /// </summary>
@@ -153,7 +159,16 @@ namespace srcrepair
         /// </summary>
         private void UpdateTable(object sender, EventArgs e)
         {
-            try { MM_Table.Rows.Clear(); ReadFileToTable(Banlist); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.MM_ExceptionDetected, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+            try
+            {
+                MM_Table.Rows.Clear();
+                ReadFileToTable(Banlist);
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(AppStrings.MM_ExceptionDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, "Exception while reading muted users database.");
+            }
         }
 
         /// <summary>
@@ -163,10 +178,21 @@ namespace srcrepair
         {
             try
             {
-                if (Properties.Settings.Default.SafeCleanup) { if (File.Exists(Banlist)) { FileManager.CreateConfigBackUp(Banlist, BackUpDir, Properties.Resources.BU_PrefixVChat); } }
-                WriteTableToFile(Banlist); MessageBox.Show(AppStrings.MM_SavedOK, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (Properties.Settings.Default.SafeCleanup)
+                {
+                    if (File.Exists(Banlist))
+                    {
+                        FileManager.CreateConfigBackUp(Banlist, BackUpDir, Properties.Resources.BU_PrefixVChat);
+                    }
+                }
+                WriteTableToFile(Banlist);
+                MessageBox.Show(AppStrings.MM_SavedOK, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.MM_SaveException, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(AppStrings.MM_SaveException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, "Exception while writing to save muted users database.");
+            }
         }
 
         /// <summary>
