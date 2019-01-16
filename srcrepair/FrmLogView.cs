@@ -21,6 +21,7 @@
 using System;
 using System.Windows.Forms;
 using System.IO;
+using NLog;
 
 namespace srcrepair
 {
@@ -29,6 +30,11 @@ namespace srcrepair
     /// </summary>
     public partial class FrmLogView : Form
     {
+        /// <summary>
+        /// Управляет записью событий в журнал.
+        /// </summary>
+        private Logger Logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Хранит путь к файлу журнала.
         /// </summary>
@@ -60,7 +66,15 @@ namespace srcrepair
         /// <param name="FileName">Путь к файлу журнала</param>
         private void LoadLog(string FileName)
         {
-            try { LoadTextFile(FileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.LV_LoadFailed, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+            try
+            {
+                LoadTextFile(FileName);
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(AppStrings.LV_LoadFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, "Exception while trying to load current debug log file.");
+            }
         }
 
         /// <summary>
@@ -108,7 +122,19 @@ namespace srcrepair
             LV_LogArea.Clear();
 
             // Очистим файл журнала...
-            try { if (File.Exists(LogFileName)) { File.Delete(LogFileName); FileManager.CreateFile(LogFileName); } } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.LV_ClearEx, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+            try
+            {
+                if (File.Exists(LogFileName))
+                {
+                    File.Delete(LogFileName);
+                    FileManager.CreateFile(LogFileName);
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(AppStrings.LV_ClearEx, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, "Exception while cleaning up debug log file.");
+            }
         }
     }
 }
