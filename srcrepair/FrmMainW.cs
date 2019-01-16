@@ -215,7 +215,8 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 // Выводим сообщение об ошибке...
-                CoreLib.HandleExceptionEx(AppStrings.GT_RegOpenErr, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.GT_RegOpenErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, "Exception while filling Graphic tweaker for Type1 game.");
             }
         }
 
@@ -264,7 +265,8 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 // Выводим сообщение об ошибке...
-                CoreLib.HandleExceptionEx(AppStrings.GT_NCFLoadFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.GT_NCFLoadFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, "Exception while filling Graphic tweaker for Type2 game.");
             }
         }
 
@@ -346,7 +348,8 @@ namespace srcrepair
                 catch (Exception Ex)
                 {
                     // Произошло исключение...
-                    CoreLib.HandleExceptionEx(AppStrings.CE_ExceptionDetected, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.CE_ExceptionDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Logger.Error(Ex, "Exception while reading config file in Config editor.");
                 }
             }
             else
@@ -587,7 +590,8 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 // Записываем в журнал и выводим сообщение об ошибке...
-                CoreLib.HandleExceptionEx(AppStrings.GT_SaveFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.GT_SaveFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, "Exception while trying to save Type1 graphical settings.");
             }
         }
 
@@ -615,7 +619,8 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 // Записываем в журнал и выводим сообщение об ошибке...
-                CoreLib.HandleExceptionEx(AppStrings.GT_NCFFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.GT_NCFFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, "Exception while trying to save Type2 graphical settings.");
             }
         }
 
@@ -713,17 +718,20 @@ namespace srcrepair
             }
             catch (FileNotFoundException Ex)
             {
-                CoreLib.HandleExceptionEx(AppStrings.SteamPathEnterErr, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                MessageBox.Show(AppStrings.SteamPathEnterErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.Error(Ex, "Exception while trying to get Steam path. Application will be terminated.");
                 Environment.Exit(7);
             }
             catch (OperationCanceledException Ex)
             {
-                CoreLib.HandleExceptionEx(AppStrings.SteamPathCancel, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                MessageBox.Show(AppStrings.SteamPathCancel, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.Error(Ex, "Exception while trying to get Steam path. Application will be terminated.");
                 Environment.Exit(19);
             }
             catch (Exception Ex)
             {
-                CoreLib.HandleExceptionEx(AppStrings.AppGenericError, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                MessageBox.Show(AppStrings.AppGenericError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.Error(Ex, "Exception while trying to get Steam path. Application will be terminated.");
                 Environment.Exit(24);
             }
         }
@@ -983,7 +991,16 @@ namespace srcrepair
         private void FindGames()
         {
             // Начинаем определять установленные игры...
-            try { DetectInstalledGames(); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.AppXMLParseError, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); Environment.Exit(16); }
+            try
+            {
+                DetectInstalledGames();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(AppStrings.AppXMLParseError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.Error(Ex, "Exception on parsing XML game database. Application will be terminated.");
+                Environment.Exit(16);
+            }
 
             // Проверим нашлись ли игры...
             CheckGames(App.SourceGames.InstalledGames.Count);
@@ -1205,7 +1222,15 @@ namespace srcrepair
         private void BW_HudInstall_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             // Выводим сообщение...
-            if (e.Error == null) { MessageBox.Show(AppStrings.HD_InstallSuccessfull, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { CoreLib.HandleExceptionEx(AppStrings.HD_InstallError, Properties.Resources.AppName, e.Error.Message, e.Error.Source, MessageBoxIcon.Error); }
+            if (e.Error == null)
+            {
+                MessageBox.Show(AppStrings.HD_InstallSuccessfull, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(AppStrings.HD_InstallError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.Error(e.Error, "Exception during HUD installation.");
+            }
 
             // Включаем кнопку удаления если HUD установлен...
             SetHUDButtons(HUDManager.CheckInstalledHUD(App.SourceGames.SelectedGame.CustomInstallDir, App.SourceGames.SelectedGame.HUDMan.SelectedHUD.InstallDir));
@@ -1314,7 +1339,8 @@ namespace srcrepair
                         }
                         catch (Exception Ex)
                         {
-                            CoreLib.HandleExceptionEx(AppStrings.PS_CleanException, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                            MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            Logger.Error(Ex, "Exception while cleaning up Steam blob files.");
                         }
                     }
 
@@ -1338,7 +1364,8 @@ namespace srcrepair
                         }
                         catch (Exception Ex)
                         {
-                            CoreLib.HandleExceptionEx(AppStrings.PS_CleanException, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                            MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            Logger.Error(Ex, "Exception while cleaning up Steam registry entries.");
                         }
                     }
 
@@ -1411,7 +1438,8 @@ namespace srcrepair
             }
             catch (Exception Ex)
             {
-                CoreLib.HandleExceptionEx(AppStrings.AppFailedToGetData, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.AppFailedToGetData, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, "Exception while handling selected game by user or application.");
             }
         }
 
@@ -1592,7 +1620,8 @@ namespace srcrepair
                     catch (Exception Ex)
                     {
                         // Установка не удалась. Выводим сообщение об этом...
-                        CoreLib.HandleExceptionEx(AppStrings.FP_InstallFailed, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                        MessageBox.Show(AppStrings.FP_InstallFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        Logger.Error(Ex, "Exception during HUD installation.");
                     }
                 }
             }
@@ -1623,7 +1652,8 @@ namespace srcrepair
             }
             catch (Exception Ex)
             {
-                CoreLib.HandleExceptionEx(AppStrings.FP_RemoveFailed, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                MessageBox.Show(AppStrings.FP_RemoveFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.Error(Ex, "Exception during FPS config uninstallation.");
             }
         }
 
@@ -1646,7 +1676,8 @@ namespace srcrepair
             }
             catch (Exception Ex)
             {
-                CoreLib.HandleExceptionEx(AppStrings.CS_FailedToOpenCfg, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.CS_FailedToOpenCfg, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, "Exception during FPS config selection (click on warning icon).");
             }
         }
 
@@ -1690,7 +1721,15 @@ namespace srcrepair
                 }
 
                 // Начинаем сохранение в тот же файл...
-                try { WriteTableToFileNow(CFGFileName); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.CE_CfgSVVEx, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+                try
+                {
+                    WriteTableToFileNow(CFGFileName);
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(AppStrings.CE_CfgSVVEx, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Logger.Error(Ex, "Exception during saving file in Config editor.");
+                }
             }
             else
             {
@@ -1827,7 +1866,8 @@ namespace srcrepair
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.HandleExceptionEx(AppStrings.PS_CleanupErr, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.PS_CleanupErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Logger.Error(Ex, "Exception during removal of game settings.");
                 }
             }
         }
@@ -1849,7 +1889,15 @@ namespace srcrepair
         {
             if (MessageBox.Show(String.Format(AppStrings.AppQuestionTemplate, ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                try { Process.Start(String.Format("steam://validate/{0}", App.SourceGames.SelectedGame.GameInternalID)); } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.AppStartSteamFailed, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning); }
+                try
+                {
+                    Process.Start(String.Format("steam://validate/{0}", App.SourceGames.SelectedGame.GameInternalID));
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(AppStrings.AppStartSteamFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Logger.Error(Ex, "Exception on trying to launch Steam to validate game cache.");
+                }
             }
         }
 
@@ -1922,7 +1970,8 @@ namespace srcrepair
                                     catch (Exception Ex)
                                     {
                                         // Произошло исключение...
-                                        CoreLib.HandleExceptionEx(AppStrings.BU_RestFailed, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                                        MessageBox.Show(AppStrings.BU_RestFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        Logger.Error(Ex, "Exception on trying to launch Windows registry editor to restore saved registry file.");
                                     }
                                     break;
                                 case ".bud":
@@ -1977,7 +2026,8 @@ namespace srcrepair
                             catch (Exception Ex)
                             {
                                 // Произошло исключение при попытке удаления файла резервной копии...
-                                CoreLib.HandleExceptionEx(AppStrings.BU_DelFailed, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                                MessageBox.Show(AppStrings.BU_DelFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                Logger.Error(Ex, "Exception while trying to remove selected backups.");
                             }
                         }
 
@@ -2029,7 +2079,8 @@ namespace srcrepair
                 catch (Exception Ex)
                 {
                     // Выводим сообщение об ошибке и пишем в журнал отладки...
-                    CoreLib.HandleExceptionEx(AppStrings.BU_RegErr, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Logger.Error(Ex, "Exception while trying to create graphical settings backup of selected game.");
                 }
             }
         }
@@ -2053,7 +2104,8 @@ namespace srcrepair
                 catch (Exception Ex)
                 {
                     // Произошло исключение, уведомим пользователя...
-                    CoreLib.HandleExceptionEx(AppStrings.BU_RegErr, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Logger.Error(Ex, "Exception while trying to create backup of all Steam settings stored in registry.");
                 }
             }
         }
@@ -2071,7 +2123,8 @@ namespace srcrepair
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.HandleExceptionEx(AppStrings.BU_RegErr, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Logger.Error(Ex, "Exception while trying to create graphical settings backup of all games.");
                 }
             }
         }
