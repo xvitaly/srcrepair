@@ -23,6 +23,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
+using NLog;
 
 namespace srcrepair
 {
@@ -31,6 +32,11 @@ namespace srcrepair
     /// </summary>
     public partial class FrmUpdate : Form
     {
+        /// <summary>
+        /// Управляет записью событий в журнал.
+        /// </summary>
+        private Logger Logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Конструктор класса формы модуля обновления программы SRC Repair.
         /// </summary>
@@ -141,7 +147,8 @@ namespace srcrepair
                 catch (Exception Ex)
                 {
                     // Выводим сообщение об ошибке...
-                    CoreLib.HandleExceptionEx(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error);
+                    MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Logger.Error(Ex, "Exception while trying to install XML database update.");
                 }
 
                 // Удаляем загруженный файл если он существует...
@@ -190,7 +197,23 @@ namespace srcrepair
                     MessageBox.Show(AppStrings.UPD_UpdateSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Запускаем установку standalone-обновления...
-                    try { if (FileManager.IsDirectoryWritable(FullAppPath)) { Process.Start(UpdateFileName); } else { ProcessManager.StartWithUAC(UpdateFileName); } Result = true; } catch (Exception Ex) { CoreLib.HandleExceptionEx(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Error); }
+                    try
+                    {
+                        if (FileManager.IsDirectoryWritable(FullAppPath))
+                        {
+                            Process.Start(UpdateFileName);
+                        }
+                        else
+                        {
+                            ProcessManager.StartWithUAC(UpdateFileName);
+                        }
+                        Result = true;
+                    }
+                    catch (Exception Ex)
+                    {
+                        MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Logger.Error(Ex, "Exception while trying to install binary update.");
+                    }
                 }
                 else
                 {
