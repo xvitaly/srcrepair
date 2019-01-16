@@ -21,6 +21,7 @@
 using System;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using NLog;
 
 namespace srcrepair
 {
@@ -29,6 +30,11 @@ namespace srcrepair
     /// </summary>
     public partial class FrmKBHelper : Form
     {
+        /// <summary>
+        /// Управляет записью событий в журнал.
+        /// </summary>
+        private Logger Logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Конструктор класса формы модуля отключения системных клавиш.
         /// </summary>
@@ -74,7 +80,8 @@ namespace srcrepair
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.HandleExceptionEx(AppStrings.KB_ExException, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Logger.Error(Ex, "Exception while trying to disable left WIN key.");
                 }
             }
         }
@@ -96,7 +103,8 @@ namespace srcrepair
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.HandleExceptionEx(AppStrings.KB_ExException, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Logger.Error(Ex, "Exception while trying to disable both WIN keys.");
                 }
             }
         }
@@ -118,7 +126,8 @@ namespace srcrepair
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.HandleExceptionEx(AppStrings.KB_ExException, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Logger.Error(Ex, "Exception while trying to disable right WIN and CONTEXT keys.");
                 }
             }
         }
@@ -140,7 +149,8 @@ namespace srcrepair
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.HandleExceptionEx(AppStrings.KB_ExException, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Logger.Error(Ex, "Exception while trying to disable both WIN and CONTEXT keys.");
                 }
             }
         }
@@ -161,7 +171,8 @@ namespace srcrepair
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.HandleExceptionEx(AppStrings.KB_ExException, Properties.Resources.AppName, Ex.Message, Ex.Source, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Logger.Error(Ex, "Exception while trying to disable all custom key overrides.");
                 }
             }
         }
