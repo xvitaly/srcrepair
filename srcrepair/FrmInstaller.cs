@@ -92,7 +92,7 @@ namespace srcrepair
             // Начинаем...
             using (StreamWriter CFile = new StreamWriter(FileName))
             {
-                try { CFile.WriteLine(CoreLib.GetTemplateFromResource(Properties.Resources.PI_TemplateFile).Replace("{D}", Path.Combine("vgui", "logos", Path.GetFileNameWithoutExtension(FileName)))); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { CFile.WriteLine(CoreLib.GetTemplateFromResource(Properties.Resources.PI_TemplateFile).Replace("{D}", Path.Combine("vgui", "logos", Path.GetFileNameWithoutExtension(FileName)))); } catch (Exception Ex) { Logger.Warn(Ex); }
             }
         }
 
