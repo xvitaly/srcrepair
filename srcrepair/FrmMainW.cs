@@ -119,7 +119,7 @@ namespace srcrepair
                 AppSelector.Items.AddRange(App.SourceGames.InstalledGames.ToArray());
 
             }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            catch (Exception Ex) { Logger.Warn(Ex); }
         }
 
         /// <summary>
@@ -259,7 +259,7 @@ namespace srcrepair
                 else
                 {
                     // Записываем в журнал сообщение об ошибке...
-                    CoreLib.WriteStringToLog(String.Format(AppStrings.AppVideoDbNotFound, App.SourceGames.SelectedGame.FullAppName, VFileName));
+                    Logger.Warn(String.Format(AppStrings.AppVideoDbNotFound, App.SourceGames.SelectedGame.FullAppName, VFileName));
                 }
             }
             catch (Exception Ex)
@@ -572,7 +572,11 @@ namespace srcrepair
             // Создаём резервную копию если включена опция безопасной очистки...
             if (Properties.Settings.Default.SafeCleanup)
             {
-                try { Type1Video.BackUpVideoSettings(GameRegKey, "Game_AutoBackUp", App.SourceGames.SelectedGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try
+                {
+                    Type1Video.BackUpVideoSettings(GameRegKey, "Game_AutoBackUp", App.SourceGames.SelectedGame.FullBackUpDirPath);
+                }
+                catch (Exception Ex) { Logger.Warn(Ex); }
             }
 
             // Запускаем процесс...
@@ -768,7 +772,7 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 PS_OSDrive.Text = String.Format(PS_OSDrive.Text, "Unknown");
-                CoreLib.WriteStringToLog(Ex.Message);
+                Logger.Warn(Ex);
             }
         }
 
@@ -783,7 +787,7 @@ namespace srcrepair
                 case 0:
                     {
                         // Запишем в лог...
-                        CoreLib.WriteStringToLog(String.Format(AppStrings.AppNoGamesDLog, App.SteamClient.FullSteamPath));
+                        Logger.Warn(String.Format(AppStrings.AppNoGamesDLog, App.SteamClient.FullSteamPath));
                         // Нет, не нашлись, выведем сообщение...
                         MessageBox.Show(AppStrings.AppNoGamesDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         // Завершим работу приложения...
@@ -816,7 +820,7 @@ namespace srcrepair
             {
                 PS_PathSteam.ForeColor = Color.Red;
                 PS_PathSteam.Image = Properties.Resources.upd_err;
-                CoreLib.WriteStringToLog(String.Format(AppStrings.AppRestrSymbLog, App.SteamClient.FullSteamPath));
+                Logger.Warn(String.Format(AppStrings.AppRestrSymbLog, App.SteamClient.FullSteamPath));
             }
         }
 
@@ -829,7 +833,7 @@ namespace srcrepair
             {
                 PS_PathGame.ForeColor = Color.Red;
                 PS_PathGame.Image = Properties.Resources.upd_err;
-                CoreLib.WriteStringToLog(String.Format(AppStrings.AppRestrSymbLog, App.SourceGames.SelectedGame.FullGamePath));
+                Logger.Warn(String.Format(AppStrings.AppRestrSymbLog, App.SourceGames.SelectedGame.FullGamePath));
             }
             else
             {
@@ -862,7 +866,7 @@ namespace srcrepair
             }
             catch (Exception Ex)
             {
-                CoreLib.WriteStringToLog(Ex.Message);
+                Logger.Warn(Ex);
                 SB_SteamID.Text = String.Empty;
             }
         }
@@ -981,7 +985,7 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 // Произошло исключение. Запишем в журнал...
-                CoreLib.WriteStringToLog(Ex.Message);
+                Logger.Warn(Ex);
             }
         }
 
@@ -1081,28 +1085,21 @@ namespace srcrepair
 
         private void BW_UpChk_DoWork(object sender, DoWorkEventArgs e)
         {
-            try
+            // Вычисляем разницу между текущей датой и датой последнего обновления...
+            TimeSpan TS = DateTime.Now - Properties.Settings.Default.LastUpdateTime;
+            if (TS.Days >= 7) // Проверяем не прошла ли неделя с момента последней прверки...
             {
-                // Вычисляем разницу между текущей датой и датой последнего обновления...
-                TimeSpan TS = DateTime.Now - Properties.Settings.Default.LastUpdateTime;
-                if (TS.Days >= 7) // Проверяем не прошла ли неделя с момента последней прверки...
+                // Требуется проверка обновлений...
+                if (AutoUpdateCheck())
                 {
-                    // Требуется проверка обновлений...
-                    if (AutoUpdateCheck())
-                    {
-                        // Доступны обновления...
-                        MessageBox.Show(String.Format(AppStrings.AppUpdateAvailable, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        // Установим время последней проверки обновлений...
-                        Properties.Settings.Default.LastUpdateTime = DateTime.Now;
-                    }
+                    // Доступны обновления...
+                    MessageBox.Show(String.Format(AppStrings.AppUpdateAvailable, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            catch (Exception Ex)
-            {
-                CoreLib.WriteStringToLog(Ex.Message);
+                else
+                {
+                    // Установим время последней проверки обновлений...
+                    Properties.Settings.Default.LastUpdateTime = DateTime.Now;
+                }
             }
         }
 
@@ -1111,27 +1108,28 @@ namespace srcrepair
             // Произошла ошибка во время проверки наличия обновлений. Запишем в журнал...
             if (e.Error != null)
             {
-                CoreLib.WriteStringToLog(e.Error.Message);
+                Logger.Warn(e.Error, "Exception while checking for updates during application startup.");
             }
         }
 
         private void BW_FPRecv_DoWork(object sender, DoWorkEventArgs e)
         {
-            try
-            {
-                // Получаем список установленных конфигов из БД...
-                App.SourceGames.SelectedGame.CFGMan = new ConfigManager(Path.Combine(App.FullAppPath, Properties.Resources.CfgDbFile), AppStrings.AppLangPrefix);
+            // Получаем список установленных конфигов из БД...
+            App.SourceGames.SelectedGame.CFGMan = new ConfigManager(Path.Combine(App.FullAppPath, Properties.Resources.CfgDbFile), AppStrings.AppLangPrefix);
 
-                // Выведем установленные в форму...
-                foreach (string Str in App.SourceGames.SelectedGame.CFGMan.GetAllCfg())
-                {
-                    Invoke((MethodInvoker)delegate () { FP_ConfigSel.Items.Add(Str); });
-                }
+            // Выведем установленные в форму...
+            foreach (string Str in App.SourceGames.SelectedGame.CFGMan.GetAllCfg())
+            {
+                Invoke((MethodInvoker)delegate () { FP_ConfigSel.Items.Add(Str); });
             }
-            catch (Exception Ex)
+        }
+
+        private void BW_FPRecv_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error != null)
             {
                 // FPS-конфигов не найдено. Запишем в лог...
-                CoreLib.WriteStringToLog(Ex.Message);
+                Logger.Warn(e.Error);
 
                 // Выводим текст об этом...
                 FP_Description.Text = AppStrings.FP_NoCfgGame;
@@ -1142,16 +1140,15 @@ namespace srcrepair
                 FP_ConfigSel.Enabled = false;
                 FP_OpenNotepad.Enabled = false;
             }
-        }
-
-        private void BW_FPRecv_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            // Проверяем, нашлись ли конфиги...
-            if (FP_ConfigSel.Items.Count >= 1)
+            else
             {
-                FP_Description.Text = AppStrings.FP_SelectFromList;
-                FP_Description.ForeColor = Color.Black;
-                FP_ConfigSel.Enabled = true;
+                // Проверяем, нашлись ли конфиги...
+                if (FP_ConfigSel.Items.Count >= 1)
+                {
+                    FP_Description.Text = AppStrings.FP_SelectFromList;
+                    FP_Description.ForeColor = Color.Black;
+                    FP_ConfigSel.Enabled = true;
+                }
             }
         }
 
@@ -1163,15 +1160,20 @@ namespace srcrepair
 
         private void BW_HUDList_DoWork(object sender, DoWorkEventArgs e)
         {
-            try
-            {
-                // Получаем список доступных HUD...
-                App.SourceGames.SelectedGame.HUDMan = new HUDManager(Path.Combine(App.FullAppPath, Properties.Resources.HUDDbFile), App.SourceGames.SelectedGame.AppHUDDir);
+            // Получаем список доступных HUD...
+            App.SourceGames.SelectedGame.HUDMan = new HUDManager(Path.Combine(App.FullAppPath, Properties.Resources.HUDDbFile), App.SourceGames.SelectedGame.AppHUDDir);
 
-                // Вносим HUD текущей игры в форму...
-                Invoke((MethodInvoker)delegate () { HD_HSel.Items.AddRange(App.SourceGames.SelectedGame.HUDMan.GetHUDNames(App.SourceGames.SelectedGame.SmallAppName).ToArray<object>()); });
+            // Вносим HUD текущей игры в форму...
+            Invoke((MethodInvoker)delegate () { HD_HSel.Items.AddRange(App.SourceGames.SelectedGame.HUDMan.GetHUDNames(App.SourceGames.SelectedGame.SmallAppName).ToArray<object>()); });
+        }
+
+
+        private void BW_HUDList_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                Logger.Warn(e.Error);
             }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         private void BW_HUDScreen_DoWork(object sender, DoWorkEventArgs e)
@@ -1179,22 +1181,29 @@ namespace srcrepair
             // Сгенерируем путь к файлу со скриншотом...
             string ScreenFile = Path.Combine(App.SourceGames.SelectedGame.AppHUDDir, Path.GetFileName(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.Preview));
 
-            try
+            // Загрузим файл если не существует...
+            if (!File.Exists(ScreenFile))
             {
-                // Загрузим файл если не существует...
-                if (!File.Exists(ScreenFile))
+                using (WebClient Downloader = new WebClient())
                 {
-                    using (WebClient Downloader = new WebClient())
-                    {
-                        Downloader.Headers.Add("User-Agent", App.UserAgent);
-                        Downloader.DownloadFile(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.Preview, ScreenFile);
-                    }
+                    Downloader.Headers.Add("User-Agent", App.UserAgent);
+                    Downloader.DownloadFile(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.Preview, ScreenFile);
                 }
-
-                // Установим...
-                Invoke((MethodInvoker)delegate () { HD_GB_Pbx.Image = Image.FromFile(ScreenFile); });
             }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); if (File.Exists(ScreenFile)) { File.Delete(ScreenFile); } }
+
+            // Установим...
+            Invoke((MethodInvoker)delegate () { HD_GB_Pbx.Image = Image.FromFile(ScreenFile); });
+        }
+
+        private void BW_HUDScreen_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            string ScreenFile = Path.Combine(App.SourceGames.SelectedGame.AppHUDDir, Path.GetFileName(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.Preview));
+
+            if (e.Error != null)
+            {
+                Logger.Warn(e.Error);
+                if (File.Exists(ScreenFile)) { File.Delete(ScreenFile); }
+            }
         }
 
         private void BW_HudInstall_DoWork(object sender, DoWorkEventArgs e)
@@ -1244,7 +1253,20 @@ namespace srcrepair
             App = new CurrentApp();
 
             // Узнаем путь к установленному клиенту Steam...
-            try { App.SteamClient = new SteamManager(App.Platform.OS); } catch (ArgumentOutOfRangeException) { MessageBox.Show(AppStrings.AppNoSteamIDSetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); Environment.Exit(2); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); ValidateAndHandle(); }
+            try
+            {
+                App.SteamClient = new SteamManager(App.Platform.OS);
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                MessageBox.Show(AppStrings.AppNoSteamIDSetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(2);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, "Exception while initializing SteamManager class instance.");
+                ValidateAndHandle();
+            }
             
             // Начинаем платформо-зависимые процедуры...
             ChangePrvControlState(ProcessManager.IsCurrentUserAdmin());
@@ -1299,7 +1321,7 @@ namespace srcrepair
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.WriteStringToLog(Ex.Message);
+                    Logger.Warn(Ex);
                     PS_SteamLang.SelectedIndex = 0;
                 }
             }
@@ -1566,7 +1588,11 @@ namespace srcrepair
             try
             {
                 // Загружаем данные выбранного конфига...
-                try { App.SourceGames.SelectedGame.CFGMan.Select(FP_ConfigSel.Text); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try
+                {
+                    App.SourceGames.SelectedGame.CFGMan.Select(FP_ConfigSel.Text);
+                }
+                catch (Exception Ex) { Logger.Warn(Ex); }
 
                 // Выводим описание...
                 FP_Description.Text = App.SourceGames.SelectedGame.CFGMan.FPSConfig.Description;
@@ -1583,7 +1609,7 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 // Не получилось загрузить описание выбранного конфига. Выведем стандартное сообщение...
-                CoreLib.WriteStringToLog(Ex.Message);
+                Logger.Warn(Ex);
                 FP_Description.Text = AppStrings.FP_NoDescr;
             }
         }
@@ -1837,7 +1863,14 @@ namespace srcrepair
                         string GameRegKey = Type1Video.GetGameRegKey(App.SourceGames.SelectedGame.SmallAppName);
 
                         // Создаём резервную копию куста реестра...
-                        if (Properties.Settings.Default.SafeCleanup) { try { Type1Video.BackUpVideoSettings(GameRegKey, "Game_AutoBackUp", App.SourceGames.SelectedGame.FullBackUpDirPath); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } }
+                        if (Properties.Settings.Default.SafeCleanup)
+                        {
+                            try
+                            {
+                                Type1Video.BackUpVideoSettings(GameRegKey, "Game_AutoBackUp", App.SourceGames.SelectedGame.FullBackUpDirPath);
+                            }
+                            catch (Exception Ex) { Logger.Warn(Ex); }
+                        }
 
                         // Удаляем ключ HKEY_CURRENT_USER\Software\Valve\Source\tf\Settings из реестра...
                         Type1Video.RemoveRegKey(GameRegKey);
@@ -2185,7 +2218,7 @@ namespace srcrepair
                     CE_Editor.Rows.Remove(CE_Editor.CurrentRow);
                 }
             }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            catch (Exception Ex) { Logger.Warn(Ex, "Exception while trying to remove item in Config editor."); }
         }
 
         private void CE_Copy_Click(object sender, EventArgs e)
@@ -2196,7 +2229,7 @@ namespace srcrepair
                 foreach (DataGridViewCell DV in CE_Editor.SelectedCells) { if (DV.Value != null) { SB.AppendFormat("{0} ", DV.Value); } }
                 Clipboard.SetText(SB.ToString().Trim());
             }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            catch (Exception Ex) { Logger.Warn(Ex, "Exception while trying to copy item to clipboard in Config editor."); }
         }
 
         private void CE_Cut_Click(object sender, EventArgs e)
@@ -2207,7 +2240,7 @@ namespace srcrepair
                 foreach (DataGridViewCell DV in CE_Editor.SelectedCells) { if (DV.Value != null) { SB.AppendFormat("{0} ", DV.Value); DV.Value = null; } }
                 Clipboard.SetText(SB.ToString().Trim());
             }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            catch (Exception Ex) { Logger.Warn(Ex, "Exception while trying to cut item to clipboard in Config editor."); }
         }
 
         private void CE_Paste_Click(object sender, EventArgs e)
@@ -2219,7 +2252,7 @@ namespace srcrepair
                     CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value = Clipboard.GetText();
                 }
             }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            catch (Exception Ex) { Logger.Warn(Ex, "Exception while trying to paste item from clipboard in Config editor."); }
         }
 
         private void FP_OpenNotepad_Click(object sender, EventArgs e)
@@ -2499,7 +2532,11 @@ namespace srcrepair
         private void HD_HSel_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Получим информацию о выбранном HUD...
-            try { App.SourceGames.SelectedGame.HUDMan.Select(HD_HSel.Text); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try
+            {
+                App.SourceGames.SelectedGame.HUDMan.Select(HD_HSel.Text);
+            }
+            catch (Exception Ex) { Logger.Warn(Ex, "Exception while trying to select another HUD."); }
                 
             // Проверяем результат...
             bool Success = !String.IsNullOrEmpty(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.Name);
@@ -2557,7 +2594,13 @@ namespace srcrepair
                         }
 
                         // Проверяем существует ли файл с архивом. Если да, то удаляем...
-                        try { if (File.Exists(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile)) { File.Delete(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                        try
+                        {
+                            if (File.Exists(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile))
+                            {
+                                File.Delete(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile);
+                            }
+                        } catch (Exception Ex) { Logger.Warn(Ex, "Exception while removing HUD archive file."); }
                     }
                 }
                 else
@@ -2662,7 +2705,16 @@ namespace srcrepair
         private void SB_SteamID_Click(object sender, EventArgs e)
         {
             // Открываем диалог выбора SteamID и прописываем пользовательский выбор...
-            try { string Result = FormManager.FormShowIDSelect(App.SteamClient.SteamIDs); if (!(String.IsNullOrWhiteSpace(Result))) { SB_SteamID.Text = Result; Properties.Settings.Default.LastSteamID = Result; FindGames(); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try
+            {
+                string Result = FormManager.FormShowIDSelect(App.SteamClient.SteamIDs);
+                if (!String.IsNullOrWhiteSpace(Result))
+                {
+                    SB_SteamID.Text = Result;
+                    Properties.Settings.Default.LastSteamID = Result;
+                    FindGames();
+                }
+            } catch (Exception Ex) { Logger.Warn(Ex, "Exception during new UserID selection."); }
         }
 
         private void BU_LVTable_SelectedIndexChanged(object sender, EventArgs e)

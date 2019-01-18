@@ -1954,10 +1954,12 @@
             // BW_HUDList
             // 
             this.BW_HUDList.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_HUDList_DoWork);
+            this.BW_HUDList.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BW_HUDList_RunWorkerCompleted);
             // 
             // BW_HUDScreen
             // 
             this.BW_HUDScreen.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_HUDScreen_DoWork);
+            this.BW_HUDScreen.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BW_HUDScreen_RunWorkerCompleted);
             // 
             // BW_HudInstall
             // 
