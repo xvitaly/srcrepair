@@ -125,20 +125,20 @@ namespace srcrepair
             try
             {
                 // Генерируем основной отчёт...
-                try { ProcessManager.StartProcessAndWait("msinfo32.exe", String.Format("/report \"{0}\"", FNameRep)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                try { ProcessManager.StartProcessAndWait("msinfo32.exe", String.Format("/report \"{0}\"", FNameRep)); } catch (Exception Ex) { Logger.Warn(Ex); }
                 
                 // Если пользователь вдруг отменил его создание, больше ничего не делаем...
                 if (File.Exists(FNameRep))
                 {
                     // Запускаем последовательность...
-                    try { ProcessManager.StartProcessAndWait("dxdiag.exe", String.Format("/t {0}", FNameDxDiag)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } /* DxDiag неадекватно реагирует на кавычки в пути. */
-                    try { if (SelectedGame.FPSConfigs.Count > 0) { FileManager.CompressFiles(SelectedGame.FPSConfigs, FNameFPSCfg); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C ping steampowered.com > \"{0}\"", FNamePing)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C tracert steampowered.com > \"{0}\"", FNameTrace)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C ipconfig /all > \"{0}\"", FNameIpConfig)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C netstat -a > \"{0}\"", FNameNetStat)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C route print > \"{0}\"", FNameRouting)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
-                    try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C net user > \"{0}\"", FNameUsers)); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { ProcessManager.StartProcessAndWait("dxdiag.exe", String.Format("/t {0}", FNameDxDiag)); } catch (Exception Ex) { Logger.Warn(Ex); } /* DxDiag неадекватно реагирует на кавычки в пути. */
+                    try { if (SelectedGame.FPSConfigs.Count > 0) { FileManager.CompressFiles(SelectedGame.FPSConfigs, FNameFPSCfg); } } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C ping steampowered.com > \"{0}\"", FNamePing)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C tracert steampowered.com > \"{0}\"", FNameTrace)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C ipconfig /all > \"{0}\"", FNameIpConfig)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C netstat -a > \"{0}\"", FNameNetStat)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C route print > \"{0}\"", FNameRouting)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { ProcessManager.StartProcessAndWait("cmd.exe", String.Format("/C net user > \"{0}\"", FNameUsers)); } catch (Exception Ex) { Logger.Warn(Ex); }
 
                     try
                     {
@@ -170,7 +170,7 @@ namespace srcrepair
                             if (File.Exists(FNameFPSCfg)) { ZBkUp.AddFile(FNameFPSCfg, "fps"); }
 
                             // Добавляем в архив журнал программы...
-                            try { if (File.Exists(FNameInternal)) { if (FileManager.GetFileSize(FNameInternal) > 0) { ZBkUp.AddFile(FNameInternal, "srcrep"); } } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                            try { if (File.Exists(FNameInternal)) { if (FileManager.GetFileSize(FNameInternal) > 0) { ZBkUp.AddFile(FNameInternal, "srcrep"); } } } catch (Exception Ex) { Logger.Warn(Ex); }
 
                             // Сохраняем архив...
                             ZBkUp.Save();
@@ -200,7 +200,7 @@ namespace srcrepair
                 }
                 catch (Exception Ex)
                 {
-                    CoreLib.WriteStringToLog(Ex.Message);
+                    Logger.Warn(Ex);
                 }
             }
             catch (Exception Ex)
@@ -242,7 +242,7 @@ namespace srcrepair
                 ControlBox = false;
 
                 // Запускаем асинхронный обработчик...
-                if (!BwGen.IsBusy) { BwGen.RunWorkerAsync(); } else { CoreLib.WriteStringToLog("RepGen Worker is busy. Can't start build sequence."); }
+                if (!BwGen.IsBusy) { BwGen.RunWorkerAsync(); } else { Logger.Warn("RepGen Worker is busy. Can't start build sequence."); }
             }
             else
             {
