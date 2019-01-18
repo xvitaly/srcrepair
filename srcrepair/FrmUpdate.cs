@@ -218,7 +218,7 @@ namespace srcrepair
                 else
                 {
                     // Хеш-сумма не совпала, поэтому файл скорее всего повреждён. Удаляем...
-                    try { File.Delete(UpdateFileName); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { File.Delete(UpdateFileName); } catch (Exception Ex) { Logger.Warn(Ex); }
 
                     // Выводим сообщение о несовпадении контрольной суммы...
                     MessageBox.Show(AppStrings.UPD_HashFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -287,13 +287,13 @@ namespace srcrepair
                     UpdHUDStatus.Text = AppStrings.UPD_HUDCheckFailure;
 
                     // Запишем в журнал...
-                    CoreLib.WriteStringToLog(e.Error.Message);
+                    Logger.Warn(e.Error);
                 }
 
             }
             catch (Exception Ex)
             {
-                CoreLib.WriteStringToLog(Ex.Message);
+                Logger.Warn(Ex);
             }
         }
 
