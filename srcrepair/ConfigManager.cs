@@ -22,6 +22,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
+using NLog;
 
 namespace srcrepair
 {
@@ -30,6 +31,11 @@ namespace srcrepair
     /// </summary>
     public sealed class ConfigManager
     {
+        /// <summary>
+        /// Управляет записью событий в журнал.
+        /// </summary>
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Хранит информацию обо всех доступных конфигах.
         /// </summary>
@@ -132,7 +138,7 @@ namespace srcrepair
                 // Разбираем XML файл и обходим его в цикле...
                 for (int i = 0; i < XMLD.GetElementsByTagName("Config").Count; i++)
                 {
-                    try { Configs.Add(new CFGTlx(XMLD.GetElementsByTagName("Name")[i].InnerText, XMLD.GetElementsByTagName("FileName")[i].InnerText, XMLD.GetElementsByTagName(LangPrefix)[i].InnerText, XMLD.GetElementsByTagName("SupportedGames")[i].InnerText.Split(';'))); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    try { Configs.Add(new CFGTlx(XMLD.GetElementsByTagName("Name")[i].InnerText, XMLD.GetElementsByTagName("FileName")[i].InnerText, XMLD.GetElementsByTagName(LangPrefix)[i].InnerText, XMLD.GetElementsByTagName("SupportedGames")[i].InnerText.Split(';'))); } catch (Exception Ex) { Logger.Warn(Ex, "Minor exception while while building Config list object."); }
                 }
             }
         }
