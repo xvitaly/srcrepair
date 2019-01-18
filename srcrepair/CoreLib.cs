@@ -19,9 +19,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 using System;
-using System.Windows.Forms; // для работы с формами...
-using System.IO; // для работы с файлами...
-using System.Reflection; // для работы со сборками...
+using System.IO;
+using System.Reflection;
 
 namespace srcrepair
 {
