@@ -241,7 +241,7 @@ namespace srcrepair
                 }
                 Clipboard.SetText(SB.ToString());
             }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            catch (Exception Ex) { Logger.Warn(Ex); }
         }
 
         /// <summary>
@@ -259,7 +259,7 @@ namespace srcrepair
                 }
                 Clipboard.SetText(SB.ToString());
             }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            catch (Exception Ex) { Logger.Warn(Ex); }
         }
 
         /// <summary>
@@ -276,7 +276,7 @@ namespace srcrepair
                     foreach (string Row in Rows) { MM_Table.Rows.Add(Row); }
                 }
             }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            catch (Exception Ex) { Logger.Warn(Ex); }
             
         }
 
@@ -292,7 +292,7 @@ namespace srcrepair
                     if (Cell.Selected) { MM_Table.Rows.RemoveAt(Cell.RowIndex); }
                 }
             }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            catch (Exception Ex) { Logger.Warn(Ex); }
         }
 
         /// <summary>
@@ -319,7 +319,7 @@ namespace srcrepair
                     }
                 }
             }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            catch (Exception Ex) { Logger.Warn(Ex); }
         }
 
         /// <summary>
@@ -336,7 +336,7 @@ namespace srcrepair
                     ProcessManager.OpenWebPage(String.Format(Properties.Resources.MM_CommunityURL, Regex.IsMatch(Value, Properties.Resources.MM_SteamID32Regex) ? SteamConv.ConvSid32Sid64(Value) : SteamConv.ConvSidv3Sid64(Value)));
                 }
             }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            catch (Exception Ex) { Logger.Warn(Ex); }
         }
         #endregion
     }
