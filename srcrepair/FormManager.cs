@@ -72,11 +72,17 @@ namespace srcrepair
         /// <param name="ForceBackUp">Включает / отключает принудительное создание резервных копий</param>
         public static void FormShowCleanup(List<String> Paths, string LText, string ResultMsg, string BackUpDir, string CheckBin, bool ReadOnly = false, bool NoAuto = false, bool Recursive = true, bool ForceBackUp = false)
         {
-            try
+            if (!ProcessManager.IsProcessRunning(Path.GetFileNameWithoutExtension(CheckBin)))
             {
-                if (!ProcessManager.IsProcessRunning(Path.GetFileNameWithoutExtension(CheckBin))) { using (FrmCleaner FCl = new FrmCleaner(Paths, BackUpDir, LText, ResultMsg, ReadOnly, NoAuto, Recursive, ForceBackUp)) { FCl.ShowDialog(); } } else { MessageBox.Show(String.Format(AppStrings.PS_AppRunning, CheckBin), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                using (FrmCleaner FCl = new FrmCleaner(Paths, BackUpDir, LText, ResultMsg, ReadOnly, NoAuto, Recursive, ForceBackUp))
+                {
+                    FCl.ShowDialog();
+                }
             }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            else
+            {
+                MessageBox.Show(String.Format(AppStrings.PS_AppRunning, CheckBin), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         /// <summary>
