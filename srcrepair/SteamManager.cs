@@ -23,6 +23,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using Microsoft.Win32;
+using NLog;
 
 namespace srcrepair
 {
@@ -31,6 +32,11 @@ namespace srcrepair
     /// </summary>
     public sealed class SteamManager
     {
+        /// <summary>
+        /// Управляет записью событий в журнал.
+        /// </summary>
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Хранит полный путь к каталогу установленного клиента Steam.
         /// </summary>
@@ -272,7 +278,7 @@ namespace srcrepair
             }
             catch (Exception Ex)
             {
-                CoreLib.WriteStringToLog(Ex.Message);
+                Logger.Warn(Ex, "Minor exception while fetching Steam mount points.");
             }
 
             // Возвращаем сформированный массив...

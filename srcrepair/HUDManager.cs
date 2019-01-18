@@ -22,6 +22,7 @@ using System;
 using System.IO;
 using System.Xml;
 using System.Collections.Generic;
+using NLog;
 
 namespace srcrepair
 {
@@ -30,6 +31,11 @@ namespace srcrepair
     /// </summary>
     public sealed class HUDManager
     {
+        /// <summary>
+        /// Управляет записью событий в журнал.
+        /// </summary>
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Хранит информацию о всех доступных HUD.
         /// </summary>
@@ -142,7 +148,10 @@ namespace srcrepair
                             HUDsAvailable.Add(new HUDTlx(AppHUDDir, XMLD.GetElementsByTagName("Name")[i].InnerText, XMLD.GetElementsByTagName("Game")[i].InnerText, XMLD.GetElementsByTagName("URI")[i].InnerText, XMLD.GetElementsByTagName("UpURI")[i].InnerText, XMLD.GetElementsByTagName("IsUpdated")[i].InnerText == "1", XMLD.GetElementsByTagName("Preview")[i].InnerText, XMLD.GetElementsByTagName("LastUpdate")[i].InnerText, XMLD.GetElementsByTagName("Site")[i].InnerText, XMLD.GetElementsByTagName("ArchiveDir")[i].InnerText, XMLD.GetElementsByTagName("InstallDir")[i].InnerText, XMLD.GetElementsByTagName("Hash")[i].InnerText, Path.Combine(AppHUDDir, Path.ChangeExtension(Path.GetFileName(XMLD.GetElementsByTagName("Name")[i].InnerText), ".zip"))));
                         }
                     }
-                    catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    catch (Exception Ex)
+                    {
+                        Logger.Warn(Ex, "Minor exception while building HUD list object.");
+                    }
                 }
             }
         }

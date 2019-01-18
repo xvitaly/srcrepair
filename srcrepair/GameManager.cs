@@ -22,6 +22,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
+using NLog;
 
 namespace srcrepair
 {
@@ -30,6 +31,11 @@ namespace srcrepair
     /// </summary>
     public sealed class GameManager
     {
+        /// <summary>
+        /// Управляет записью событий в журнал.
+        /// </summary>
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Хранит информацию о всех доступных поддерживаемых играх.
         /// </summary>
@@ -93,7 +99,10 @@ namespace srcrepair
                             }
                         }
                     }
-                    catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    catch (Exception Ex)
+                    {
+                        Logger.Warn(Ex, "Minor exception while building games list object.");
+                    }
                 }
             }
         }
