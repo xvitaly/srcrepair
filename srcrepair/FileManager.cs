@@ -205,10 +205,10 @@ namespace srcrepair
                     ZBkUp.Save();
                 }
             }
-            catch (Exception Ex)
+            catch
             {
-                try { if (File.Exists(ArchiveName)) { File.Delete(ArchiveName); } } catch (Exception E1) { CoreLib.WriteStringToLog(E1.Message); }
-                CoreLib.WriteStringToLog(Ex.Message);
+                if (File.Exists(ArchiveName)) { File.Delete(ArchiveName); }
+                return false;
             }
             return File.Exists(ArchiveName);
         }
@@ -281,9 +281,9 @@ namespace srcrepair
                         DirectoryInfo DInfo = new DirectoryInfo(CleanDir);
                         FileInfo[] DirList = DInfo.GetFiles(CleanMask);
                         foreach (FileInfo DItem in DirList) { Result.Add(DItem.FullName); }
-                        if (IsRecursive) { try { List<String> SubDirs = new List<string>(); foreach (DirectoryInfo Dir in DInfo.GetDirectories()) { SubDirs.Add(Path.Combine(Dir.FullName, CleanMask)); } if (SubDirs.Count > 0) { Result.AddRange(ExpandFileList(SubDirs, true)); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); } }
+                        if (IsRecursive) { try { List<String> SubDirs = new List<string>(); foreach (DirectoryInfo Dir in DInfo.GetDirectories()) { SubDirs.Add(Path.Combine(Dir.FullName, CleanMask)); } if (SubDirs.Count > 0) { Result.AddRange(ExpandFileList(SubDirs, true)); } } catch { } }
                     }
-                    catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+                    catch { }
                 }
             }
             return Result;
@@ -327,7 +327,10 @@ namespace srcrepair
             Configs = GetRealFilesFromList(Configs);
 
             // Копируем оригинальный файл в файл бэкапа...
-            try { if (Configs.Count > 0) { CompressFiles(Configs, GenerateBackUpFileName(BackUpDir, Prefix)); } } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            if (Configs.Count > 0)
+            {
+                CompressFiles(Configs, GenerateBackUpFileName(BackUpDir, Prefix));
+            }
         }
 
         /// <summary>

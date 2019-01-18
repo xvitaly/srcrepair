@@ -608,7 +608,14 @@ namespace srcrepair
             // Создаём резервную копию если включена опция безопасной очистки...
             if (Properties.Settings.Default.SafeCleanup)
             {
-                FileManager.CreateConfigBackUp(App.SourceGames.SelectedGame.VideoCfgFiles, App.SourceGames.SelectedGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
+                try
+                {
+                    FileManager.CreateConfigBackUp(App.SourceGames.SelectedGame.VideoCfgFiles, App.SourceGames.SelectedGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex, "Exception while trying to save auto backup before saving Type2 game settings.");
+                }
             }
 
             // Запускаем процесс...
@@ -1628,7 +1635,14 @@ namespace srcrepair
                         if (App.SourceGames.SelectedGame.FPSConfigs.Count > 0)
                         {
                             // Создаём резервную копию...
-                            FileManager.CompressFiles(App.SourceGames.SelectedGame.FPSConfigs, FileManager.GenerateBackUpFileName(App.SourceGames.SelectedGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg));
+                            try
+                            {
+                                FileManager.CompressFiles(App.SourceGames.SelectedGame.FPSConfigs, FileManager.GenerateBackUpFileName(App.SourceGames.SelectedGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg));
+                            }
+                            catch (Exception Ex)
+                            {
+                                Logger.Warn(Ex, "Exception while compressing files as backup before installation of new FPS config.");
+                            }
                         }
                     }
 
@@ -1743,7 +1757,17 @@ namespace srcrepair
                 if (Properties.Settings.Default.SafeCleanup)
                 {
                     // Создаём резервную копию...
-                    if (File.Exists(CFGFileName)) { FileManager.CreateConfigBackUp(CFGFileName, App.SourceGames.SelectedGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg); }
+                    if (File.Exists(CFGFileName))
+                    {
+                        try
+                        {
+                            FileManager.CreateConfigBackUp(CFGFileName, App.SourceGames.SelectedGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
+                        }
+                        catch (Exception Ex)
+                        {
+                            Logger.Warn(Ex, "Exception while trying to save config auto backup before saving it in Config editor.");
+                        }
+                    }
                 }
 
                 // Начинаем сохранение в тот же файл...
@@ -1878,14 +1902,34 @@ namespace srcrepair
                     else
                     {
                         // Создадим бэкап файла с графическими настройками...
-                        if (Properties.Settings.Default.SafeCleanup) { FileManager.CreateConfigBackUp(App.SourceGames.SelectedGame.VideoCfgFiles, App.SourceGames.SelectedGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto); }
+                        if (Properties.Settings.Default.SafeCleanup)
+                        {
+                            try
+                            {
+                                FileManager.CreateConfigBackUp(App.SourceGames.SelectedGame.VideoCfgFiles, App.SourceGames.SelectedGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
+                            }
+                            catch (Exception Ex)
+                            {
+                                Logger.Warn(Ex, "Exception while trying to save video auto backup before removing game settings.");
+                            }
+                        }
 
                         // Помечаем его на удаление...
                         CleanDirs.AddRange(App.SourceGames.SelectedGame.VideoCfgFiles);
                     }
 
                     // Создаём резервную копию...
-                    if (Properties.Settings.Default.SafeCleanup) { FileManager.CreateConfigBackUp(App.SourceGames.SelectedGame.CloudConfigs, App.SourceGames.SelectedGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg); }
+                    if (Properties.Settings.Default.SafeCleanup)
+                    {
+                        try
+                        {
+                            FileManager.CreateConfigBackUp(App.SourceGames.SelectedGame.CloudConfigs, App.SourceGames.SelectedGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
+                        }
+                        catch (Exception Ex)
+                        {
+                            Logger.Warn(Ex, "Exception while trying to save configs auto backup before removing game settings.");
+                        }
+                    }
 
                     // Помечаем конфиги игры на удаление...
                     CleanDirs.Add(Path.Combine(App.SourceGames.SelectedGame.FullCfgPath, "config.cfg"));
@@ -2107,7 +2151,14 @@ namespace srcrepair
                     else
                     {
                         // Проверяем существование файла с графическими настройками игры...
-                        FileManager.CreateConfigBackUp(App.SourceGames.SelectedGame.VideoCfgFiles, App.SourceGames.SelectedGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVideo);
+                        try
+                        {
+                            FileManager.CreateConfigBackUp(App.SourceGames.SelectedGame.VideoCfgFiles, App.SourceGames.SelectedGame.FullBackUpDirPath, Properties.Resources.BU_PrefixVideo);
+                        }
+                        catch (Exception Ex)
+                        {
+                            Logger.Warn(Ex, "Exception while trying to save auto backup before saving game settings.");
+                        }
                     }
                     
                     // Выводим сообщение об успехе...
@@ -2517,8 +2568,15 @@ namespace srcrepair
             {
                 if (File.Exists(CFGFileName))
                 {
-                    FileManager.CreateConfigBackUp(CFGFileName, App.SourceGames.SelectedGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
-                    MessageBox.Show(String.Format(AppStrings.CE_BackUpCreated, Path.GetFileName(CFGFileName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    try
+                    {
+                        FileManager.CreateConfigBackUp(CFGFileName, App.SourceGames.SelectedGame.FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
+                        MessageBox.Show(String.Format(AppStrings.CE_BackUpCreated, Path.GetFileName(CFGFileName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception Ex)
+                    {
+                        Logger.Warn(Ex, "Exception while trying to create manual backup of config file.");
+                    }
                 }
             }
             else

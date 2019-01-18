@@ -185,7 +185,14 @@ namespace srcrepair
                 {
                     if (File.Exists(Banlist))
                     {
-                        FileManager.CreateConfigBackUp(Banlist, BackUpDir, Properties.Resources.BU_PrefixVChat);
+                        try
+                        {
+                            FileManager.CreateConfigBackUp(Banlist, BackUpDir, Properties.Resources.BU_PrefixVChat);
+                        }
+                        catch (Exception Ex)
+                        {
+                            Logger.Warn(Ex, "Exception while trying to save blacklist auto backup before saving it.");
+                        }
                     }
                 }
                 WriteTableToFile(Banlist);
