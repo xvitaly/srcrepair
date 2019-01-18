@@ -60,36 +60,6 @@ namespace srcrepair
         }
 
         /// <summary>
-        /// Функция, записывающая в лог-файл строку. Например, сообщение об ошибке.
-        /// </summary>
-        /// <param name="TextMessage">Сообщение для записи в лог</param>
-        public static void WriteStringToLog(string TextMessage)
-        {
-            if (Properties.Settings.Default.EnableDebugLog) // Пишем в лог если включено...
-            {
-                try // Начинаем работу...
-                {
-                    // Сгенерируем путь к файлу с логом...
-                    string DebugFileName = Path.Combine(CurrentApp.AppUserPath, Properties.Resources.DebugLogFileName);
-                    
-                    // Если файл не существует, создадим его и сразу закроем...
-                    if (!File.Exists(DebugFileName))
-                    {
-                        FileManager.CreateFile(DebugFileName);
-                    }
-                    
-                    // Начинаем записывать в лог-файл...
-                    using (StreamWriter DFile = new StreamWriter(DebugFileName, true))
-                    {
-                        // Делаем запись...
-                        DFile.WriteLine(String.Format("{0}: {1}", DateTime.Now.ToString(), TextMessage));
-                    }
-                }
-                catch { /* Подавляем исключения... */ }
-            }
-        }
-
-        /// <summary>
         /// Чистит строку от табуляций и лишних пробелов.
         /// </summary>
         /// <param name="RecvStr">Исходная строка</param>
