@@ -187,7 +187,7 @@ namespace srcrepair
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static void OpenWebPage(string URI)
         {
-            try { Process.Start(URI); } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            Process.Start(URI);
         }
 
         /// <summary>
@@ -198,22 +198,18 @@ namespace srcrepair
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static void OpenTextEditor(string FileName, CurrentPlatform.OSType OS)
         {
-            try
+            switch (OS)
             {
-                switch (OS)
-                {
-                    case CurrentPlatform.OSType.Windows:
-                        Process.Start(Properties.Settings.Default.EditorBin, FileName);
-                        break;
-                    case CurrentPlatform.OSType.Linux:
-                        Process.Start(Properties.Resources.AppOpenHandlerLin, FileName);
-                        break;
-                    case CurrentPlatform.OSType.MacOSX:
-                        Process.Start(Properties.Resources.AppOpenHandlerMac, String.Format("{0} \"{1}\"", "-t", FileName));
-                        break;
-                }
+                case CurrentPlatform.OSType.Windows:
+                    Process.Start(Properties.Settings.Default.EditorBin, FileName);
+                    break;
+                case CurrentPlatform.OSType.Linux:
+                    Process.Start(Properties.Resources.AppOpenHandlerLin, FileName);
+                    break;
+                case CurrentPlatform.OSType.MacOSX:
+                    Process.Start(Properties.Resources.AppOpenHandlerMac, String.Format("{0} \"{1}\"", "-t", FileName));
+                    break;
             }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
 
         /// <summary>
@@ -225,22 +221,18 @@ namespace srcrepair
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static void OpenExplorer(string FileName, CurrentPlatform.OSType OS)
         {
-            try
+            switch (OS)
             {
-                switch (OS)
-                {
-                    case CurrentPlatform.OSType.Windows:
-                        Process.Start(Properties.Resources.ShBinWin, String.Format("{0} \"{1}\"", Properties.Resources.ShParamWin, FileName));
-                        break;
-                    case CurrentPlatform.OSType.Linux:
-                        Process.Start(Properties.Resources.AppOpenHandlerLin, String.Format("\"{0}\"", Path.GetDirectoryName(FileName)));
-                        break;
-                    case CurrentPlatform.OSType.MacOSX:
-                        Process.Start(Properties.Resources.AppOpenHandlerMac, String.Format("\"{0}\"", Path.GetDirectoryName(FileName)));
-                        break;
-                }
+                case CurrentPlatform.OSType.Windows:
+                    Process.Start(Properties.Resources.ShBinWin, String.Format("{0} \"{1}\"", Properties.Resources.ShParamWin, FileName));
+                    break;
+                case CurrentPlatform.OSType.Linux:
+                    Process.Start(Properties.Resources.AppOpenHandlerLin, String.Format("\"{0}\"", Path.GetDirectoryName(FileName)));
+                    break;
+                case CurrentPlatform.OSType.MacOSX:
+                    Process.Start(Properties.Resources.AppOpenHandlerMac, String.Format("\"{0}\"", Path.GetDirectoryName(FileName)));
+                    break;
             }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
         }
     }
 }

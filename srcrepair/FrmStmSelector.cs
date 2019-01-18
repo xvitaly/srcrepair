@@ -21,6 +21,7 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using NLog;
 
 namespace srcrepair
 {
@@ -29,6 +30,11 @@ namespace srcrepair
     /// </summary>
     public partial class FrmStmSelector : Form
     {
+        /// <summary>
+        /// Управляет записью событий в журнал.
+        /// </summary>
+        private Logger Logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Хранит и возвращает SteamID.
         /// </summary>
@@ -91,7 +97,14 @@ namespace srcrepair
         private void SD_Follow_Click(object sender, EventArgs e)
         {
             // Открываем URL в браузере по умолчанию...
-            ProcessManager.OpenWebPage(String.Format(Properties.Resources.MM_CommunityURL, SteamConv.ConvSidv3Sid64(SD_IDSel.Text)));
+            try
+            {
+                ProcessManager.OpenWebPage(String.Format(Properties.Resources.MM_CommunityURL, SteamConv.ConvSidv3Sid64(SD_IDSel.Text)));
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, "Exception while trying to open web browser to show Steam profile.");
+            }
         }
     }
 }

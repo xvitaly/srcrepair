@@ -1968,7 +1968,14 @@ namespace srcrepair
         private void MNUReportBug_Click(object sender, EventArgs e)
         {
             // Перейдём в баг-трекер...
-            ProcessManager.OpenWebPage(Properties.Resources.AppBtURL);
+            try
+            {
+                ProcessManager.OpenWebPage(Properties.Resources.AppBtURL);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, "Exception while trying to open web browser to open bug tracker URL.");
+            }
         }
 
         private void BUT_Refresh_Click(object sender, EventArgs e)
@@ -2201,12 +2208,33 @@ namespace srcrepair
 
         private void MNUOpinion_Click(object sender, EventArgs e)
         {
-            ProcessManager.OpenWebPage(Properties.Resources.AppURLReply);
+            try
+            {
+                ProcessManager.OpenWebPage(Properties.Resources.AppURLReply);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, "Exception while trying to open web browser to show app commentary page.");
+            }
         }
 
         private void MNUSteamGroup_Click(object sender, EventArgs e)
         {
-            try { Process.Start(Properties.Resources.AppURLSteamGrID); } catch { ProcessManager.OpenWebPage(Properties.Resources.AppURLSteamGroup); }
+            try
+            {
+                Process.Start(Properties.Resources.AppURLSteamGrID);
+            }
+            catch
+            {
+                try
+                {
+                    ProcessManager.OpenWebPage(Properties.Resources.AppURLSteamGroup);
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex, "Exception while trying to open web browser to show Steam group profile.");
+                }
+            }
         }
 
         private void CE_RmRow_Click(object sender, EventArgs e)
@@ -2272,7 +2300,14 @@ namespace srcrepair
             else
             {
                 // Загрузим файл в Блокноте...
-                ProcessManager.OpenTextEditor(ConfigFile, App.Platform.OS);
+                try
+                {
+                    ProcessManager.OpenTextEditor(ConfigFile, App.Platform.OS);
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex, "Exception while trying to load config file in text editor.");
+                }
             }
         }
 
@@ -2292,7 +2327,21 @@ namespace srcrepair
             {
                 if (BU_LVTable.SelectedItems.Count > 0)
                 {
-                    if (Regex.IsMatch(Path.GetExtension(BU_LVTable.SelectedItems[0].SubItems[4].Text), @"\.(txt|cfg|[0-9]|reg)")) { ProcessManager.OpenTextEditor(Path.Combine(App.SourceGames.SelectedGame.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text), App.Platform.OS); } else { MessageBox.Show(AppStrings.BU_BinaryFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                    if (Regex.IsMatch(Path.GetExtension(BU_LVTable.SelectedItems[0].SubItems[4].Text), @"\.(txt|cfg|[0-9]|reg)"))
+                    {
+                        try
+                        {
+                            ProcessManager.OpenTextEditor(Path.Combine(App.SourceGames.SelectedGame.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text), App.Platform.OS);
+                        }
+                        catch (Exception Ex)
+                        {
+                            Logger.Warn(Ex, "Exception while trying to load backup file in text editor.");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(AppStrings.BU_BinaryFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
                 else
                 {
@@ -2325,7 +2374,14 @@ namespace srcrepair
                 if (BU_LVTable.SelectedItems.Count > 0)
                 {
                     // Откроем выбранный бэкап в Проводнике Windows...
-                    ProcessManager.OpenExplorer(Path.Combine(App.SourceGames.SelectedGame.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text), App.Platform.OS);
+                    try
+                    {
+                        ProcessManager.OpenExplorer(Path.Combine(App.SourceGames.SelectedGame.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text), App.Platform.OS);
+                    }
+                    catch (Exception Ex)
+                    {
+                        Logger.Warn(Ex, "Exception while trying to show selected backup file in file manager.");
+                    }
                 }
                 else
                 {
@@ -2354,7 +2410,14 @@ namespace srcrepair
         {
             if (!(String.IsNullOrEmpty(CFGFileName)))
             {
-                ProcessManager.OpenTextEditor(CFGFileName, App.Platform.OS);
+                try
+                {
+                    ProcessManager.OpenTextEditor(CFGFileName, App.Platform.OS);
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex, "Exception while trying to load config file in text editor.");
+                }
             }
             else
             {
@@ -2438,7 +2501,14 @@ namespace srcrepair
 
         private void CE_OpenCVList_Click(object sender, EventArgs e)
         {
-            ProcessManager.OpenWebPage(AppStrings.AppCVListURL);
+            try
+            {
+                ProcessManager.OpenWebPage(AppStrings.AppCVListURL);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, "Exception while trying to open web browser to show cvarlist.");
+            }
         }
 
         private void CE_ManualBackUpCfg_Click(object sender, EventArgs e)
@@ -2641,7 +2711,17 @@ namespace srcrepair
         private void HD_Homepage_Click(object sender, EventArgs e)
         {
             // Откроем домашнюю страницу выбранного HUD...
-            if (!String.IsNullOrEmpty(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.Site)) { ProcessManager.OpenWebPage(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.Site); }
+            if (!String.IsNullOrEmpty(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.Site))
+            {
+                try
+                {
+                    ProcessManager.OpenWebPage(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.Site);
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex, "Exception while trying to open web browser to show HUD's homepage.");
+                }
+            }
         }
 
         private void MNUExtClnAppCache_Click(object sender, EventArgs e)
@@ -2687,7 +2767,14 @@ namespace srcrepair
         private void HD_OpenDir_Click(object sender, EventArgs e)
         {
             // Покажем файлы установленного HUD в Проводнике...
-            ProcessManager.OpenExplorer(Path.Combine(App.SourceGames.SelectedGame.CustomInstallDir, App.SourceGames.SelectedGame.HUDMan.SelectedHUD.InstallDir), App.Platform.OS);
+            try
+            {
+                ProcessManager.OpenExplorer(Path.Combine(App.SourceGames.SelectedGame.CustomInstallDir, App.SourceGames.SelectedGame.HUDMan.SelectedHUD.InstallDir), App.Platform.OS);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, "Exception while trying to show selected HUD directory in file manager.");
+            }
         }
 
         private void MNUExtClnSteam_Click(object sender, EventArgs e)

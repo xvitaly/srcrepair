@@ -423,7 +423,14 @@ namespace srcrepair
             CM_FTable.SelectedItems[0].Checked = !CM_FTable.SelectedItems[0].Checked;
 
             // Запускаем Проводник и выделяем в нём выбранный пользователем файл...
-            ProcessManager.OpenExplorer(CM_FTable.SelectedItems[0].ToolTipText, new CurrentPlatform().OS);
+            try
+            {
+                ProcessManager.OpenExplorer(CM_FTable.SelectedItems[0].ToolTipText, new CurrentPlatform().OS);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, "Exception while trying to show selected file in file manager.");
+            }
         }
 
         /// <summary>
