@@ -23,6 +23,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Net;
 using System.IO;
+using NLog;
 
 namespace srcrepair
 {
@@ -31,6 +32,11 @@ namespace srcrepair
     /// </summary>
     public partial class FrmDnWrk : Form
     {
+        /// <summary>
+        /// Управляет записью событий в журнал.
+        /// </summary>
+        private Logger Logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Хранит статус выполнения процесса загрузки.
         /// </summary>
@@ -74,7 +80,7 @@ namespace srcrepair
         private void DownloaderProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
             // Отрисовываем статус в прогресс-баре...
-            try { DN_PrgBr.Value = e.ProgressPercentage; } catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            try { DN_PrgBr.Value = e.ProgressPercentage; } catch (Exception Ex) { Logger.Warn(Ex); }
         }
 
         /// <summary>
@@ -94,7 +100,7 @@ namespace srcrepair
                     }
                 }
             }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            catch (Exception Ex) { Logger.Warn(Ex); }
 
             // Закроем форму...
             IsRunning = false;
@@ -120,7 +126,7 @@ namespace srcrepair
                     FileDownloader.DownloadFileAsync(new Uri(URI), FileName);
                 }
             }
-            catch (Exception Ex) { CoreLib.WriteStringToLog(Ex.Message); }
+            catch (Exception Ex) { Logger.Warn(Ex); }
         }
 
         /// <summary>
