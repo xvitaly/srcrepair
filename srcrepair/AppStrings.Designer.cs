@@ -916,7 +916,7 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occured. Cannot find downloaded HUD archive!.
+        ///   Looks up a localized string similar to Cannot find downloaded HUD archive. Please try again later..
         /// </summary>
         internal static string HD_DownloadError {
             get {

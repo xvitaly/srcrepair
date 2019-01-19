@@ -2706,29 +2706,35 @@ namespace srcrepair
                         // Начинаем загрузку архива с HUD...
                         FormManager.FormShowDownloader(Properties.Settings.Default.HUDUseUpstream ? App.SourceGames.SelectedGame.HUDMan.SelectedHUD.UpURI : App.SourceGames.SelectedGame.HUDMan.SelectedHUD.URI, App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile);
 
-                        // Проверяем контрольную сумму загруженного архива...
-                        if (Properties.Settings.Default.HUDUseUpstream || FileManager.CalculateFileMD5(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile) == App.SourceGames.SelectedGame.HUDMan.SelectedHUD.FileHash)
+                        // Проверяем существует ли файл с архивом...
+                        if (File.Exists(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile))
                         {
-                            // Распаковываем загруженный архив с файлами HUD...
-                            FormManager.FormShowArchiveExtract(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile, Path.Combine(App.SourceGames.SelectedGame.CustomInstallDir, "hudtemp"));
+                            // Проверяем контрольную сумму загруженного архива...
+                            if (Properties.Settings.Default.HUDUseUpstream || FileManager.CalculateFileMD5(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile) == App.SourceGames.SelectedGame.HUDMan.SelectedHUD.FileHash)
+                            {
+                                // Распаковываем загруженный архив с файлами HUD...
+                                FormManager.FormShowArchiveExtract(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile, Path.Combine(App.SourceGames.SelectedGame.CustomInstallDir, "hudtemp"));
 
-                            // Запускаем установку пакета в отдельном потоке...
-                            if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(); }
-                        }
-                        else
-                        {
-                            // Проверка хеша загруженного файла не удалась. Выведем сообщение об этом...
-                            MessageBox.Show(AppStrings.HD_HashError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
+                                // Запускаем установку пакета в отдельном потоке...
+                                if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(); }
+                            }
+                            else
+                            {
+                                // Проверка хеша загруженного файла не удалась. Выведем сообщение об этом...
+                                MessageBox.Show(AppStrings.HD_HashError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
 
-                        // Проверяем существует ли файл с архивом. Если да, то удаляем...
-                        try
-                        {
-                            if (File.Exists(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile))
+                            // Удаляем загруженный файл архива...
+                            try
                             {
                                 File.Delete(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile);
                             }
-                        } catch (Exception Ex) { Logger.Warn(Ex, "Exception while removing HUD archive file."); }
+                            catch (Exception Ex) { Logger.Warn(Ex, "Exception while removing HUD archive file."); }
+                        }
+                        else
+                        {
+                            MessageBox.Show(AppStrings.HD_DownloadError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 }
                 else
