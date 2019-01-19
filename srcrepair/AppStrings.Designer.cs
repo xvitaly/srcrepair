@@ -916,6 +916,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occured. Cannot find downloaded HUD archive!.
+        /// </summary>
+        internal static string HD_DownloadError {
+            get {
+                return ResourceManager.GetString("HD_DownloadError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to HUD database {0}. Last update: {1}..
         /// </summary>
         internal static string HD_DynBarText {

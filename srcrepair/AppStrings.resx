@@ -654,4 +654,7 @@
   <data name="AppNoSteamIDSetected" xml:space="preserve">
     <value>No Steam user profiles detected! Please run Steam at least once and then try again.</value>
   </data>
+  <data name="HD_DownloadError" xml:space="preserve">
+    <value>An error occured. Cannot find downloaded HUD archive!</value>
+  </data>
 </root>
