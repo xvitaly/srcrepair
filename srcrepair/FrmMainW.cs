@@ -2696,13 +2696,6 @@ namespace srcrepair
                     // Спросим пользователя о необходимости установки/обновления HUD...
                     if (MessageBox.Show(String.Format("{0}?", ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
-                        // Проверим установлен ли выбранный HUD...
-                        if (HUDManager.CheckInstalledHUD(App.SourceGames.SelectedGame.CustomInstallDir, App.SourceGames.SelectedGame.HUDMan.SelectedHUD.InstallDir))
-                        {
-                            // Удаляем уже установленные файлы HUD...
-                            FormManager.FormShowRemoveFiles(SingleToArray(Path.Combine(App.SourceGames.SelectedGame.CustomInstallDir, App.SourceGames.SelectedGame.HUDMan.SelectedHUD.InstallDir)));
-                        }
-
                         // Начинаем загрузку архива с HUD...
                         FormManager.FormShowDownloader(Properties.Settings.Default.HUDUseUpstream ? App.SourceGames.SelectedGame.HUDMan.SelectedHUD.UpURI : App.SourceGames.SelectedGame.HUDMan.SelectedHUD.URI, App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile);
 
@@ -2712,6 +2705,13 @@ namespace srcrepair
                             // Проверяем контрольную сумму загруженного архива...
                             if (Properties.Settings.Default.HUDUseUpstream || FileManager.CalculateFileMD5(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile) == App.SourceGames.SelectedGame.HUDMan.SelectedHUD.FileHash)
                             {
+                                // Проверим установлен ли выбранный HUD...
+                                if (HUDManager.CheckInstalledHUD(App.SourceGames.SelectedGame.CustomInstallDir, App.SourceGames.SelectedGame.HUDMan.SelectedHUD.InstallDir))
+                                {
+                                    // Удаляем уже установленные файлы HUD...
+                                    FormManager.FormShowRemoveFiles(SingleToArray(Path.Combine(App.SourceGames.SelectedGame.CustomInstallDir, App.SourceGames.SelectedGame.HUDMan.SelectedHUD.InstallDir)));
+                                }
+
                                 // Распаковываем загруженный архив с файлами HUD...
                                 FormManager.FormShowArchiveExtract(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile, Path.Combine(App.SourceGames.SelectedGame.CustomInstallDir, "hudtemp"));
 
