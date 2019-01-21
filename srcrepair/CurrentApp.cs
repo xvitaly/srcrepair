@@ -23,6 +23,7 @@ using System.Globalization;
 using System.IO;
 using System.Reflection;
 using System.Resources;
+using NLog;
 
 namespace srcrepair
 {
@@ -67,6 +68,18 @@ namespace srcrepair
         /// Возвращает архитектуру операционной системы.
         /// </summary>
         private string SystemArch { get { return Environment.Is64BitOperatingSystem ? "Amd64" : "x86"; } }
+
+        /// <summary>
+        /// Возвращает полный путь к используему файлу журнала Nlog.
+        /// </summary>
+        public string LogFileName
+        {
+            get
+            {
+                NLog.Targets.FileTarget LogTarget = (NLog.Targets.FileTarget)LogManager.Configuration.FindTargetByName("logfile");
+                return Path.GetFullPath(LogTarget.FileName.Render(new LogEventInfo()));
+            }
+        }
 
         /// <summary>
         /// Возвращает путь к пользовательскому каталогу программы.
