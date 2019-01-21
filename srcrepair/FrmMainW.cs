@@ -2813,7 +2813,7 @@ namespace srcrepair
             // Выведем на экран содержимое отладочного журнала...
             if (Properties.Settings.Default.EnableDebugLog)
             {
-                string DFile = Path.Combine(App.AppUserDir, Properties.Resources.DebugLogFileName);
+                string DFile = App.LogFileName;
                 if (File.Exists(DFile)) { FormManager.FormShowLogViewer(DFile); } else { MessageBox.Show(AppStrings.AppNoDebugFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             }
             else
