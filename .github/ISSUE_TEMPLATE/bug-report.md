@@ -4,9 +4,9 @@ about: Create a new bug report ticket
 ---
 
 
-SRC Repair version:
-Platform:
-Windows (or other OS) version:
+SRC Repair version: 
+Platform: 
+Windows (or other OS) version: 
 
 Problem details:
 
