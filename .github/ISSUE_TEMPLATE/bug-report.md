@@ -11,4 +11,7 @@ Windows (or other OS) version:
 Problem details:
 
 
+
+<!--
 Don't forget to include SRC Repair's debug logs from file `%APPDATA%\SRC Repair\debug.log`.
+-->
