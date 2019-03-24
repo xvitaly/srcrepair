@@ -2811,15 +2811,8 @@ namespace srcrepair
         private void MNUShowLog_Click(object sender, EventArgs e)
         {
             // Выведем на экран содержимое отладочного журнала...
-            if (Properties.Settings.Default.EnableDebugLog)
-            {
-                string DFile = App.LogFileName;
-                if (File.Exists(DFile)) { FormManager.FormShowLogViewer(DFile); } else { MessageBox.Show(AppStrings.AppNoDebugFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
-            }
-            else
-            {
-                MessageBox.Show(AppStrings.AppDebugDisabled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            string DFile = App.LogFileName;
+            if (File.Exists(DFile)) { FormManager.FormShowLogViewer(DFile); } else { MessageBox.Show(AppStrings.AppNoDebugFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
 
         private void HD_Warning_Click(object sender, EventArgs e)
