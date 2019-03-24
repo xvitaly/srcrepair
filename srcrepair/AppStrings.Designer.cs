@@ -88,15 +88,6 @@ namespace srcrepair {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Debug log has been disabled. Please enable it first in application settings..
-        /// </summary>
-        internal static string AppDebugDisabled {
-            get {
-                return ResourceManager.GetString("AppDebugDisabled", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to 0.
         /// </summary>
         internal static string AppDefaultSteamLangID {

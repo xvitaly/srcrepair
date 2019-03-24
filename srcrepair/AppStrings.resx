@@ -507,9 +507,6 @@
   <data name="PS_ProcessPrepare" xml:space="preserve">
     <value>Starting cleanup...</value>
   </data>
-  <data name="AppDebugDisabled" xml:space="preserve">
-    <value>Debug log has been disabled. Please enable it first in application settings.</value>
-  </data>
   <data name="AppNoDebugFile" xml:space="preserve">
     <value>Debug log file not found!</value>
   </data>
