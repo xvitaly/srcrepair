@@ -385,7 +385,7 @@
     <value>True</value>
   </metadata>
   <data name="MO_HideOutdatedHUDs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 85</value>
+    <value>19, 62</value>
   </data>
   <data name="MO_HideOutdatedHUDs.Size" type="System.Drawing.Size, System.Drawing">
     <value>271, 17</value>
@@ -412,7 +412,7 @@
     <value>True</value>
   </metadata>
   <data name="MO_AutoCheckUpdates.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 62</value>
+    <value>19, 39</value>
   </data>
   <data name="MO_AutoCheckUpdates.Size" type="System.Drawing.Size, System.Drawing">
     <value>271, 17</value>
@@ -439,7 +439,7 @@
     <value>True</value>
   </metadata>
   <data name="MO_UnSafeOps.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 39</value>
+    <value>19, 16</value>
   </data>
   <data name="MO_UnSafeOps.Size" type="System.Drawing.Size, System.Drawing">
     <value>271, 17</value>
@@ -466,7 +466,7 @@
     <value>True</value>
   </metadata>
   <data name="MO_CustDirName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 134</value>
+    <value>127, 119</value>
   </data>
   <data name="MO_CustDirName.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 20</value>
@@ -493,7 +493,7 @@
     <value>True</value>
   </data>
   <data name="L_MO_CustDirName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 137</value>
+    <value>16, 122</value>
   </data>
   <data name="L_MO_CustDirName.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 13</value>
@@ -520,7 +520,7 @@
     <value>True</value>
   </metadata>
   <data name="MO_FindTextEd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>266, 105</value>
+    <value>266, 90</value>
   </data>
   <data name="MO_FindTextEd.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -544,7 +544,7 @@
     <value>True</value>
   </metadata>
   <data name="MO_TextEdBin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>127, 108</value>
+    <value>127, 93</value>
   </data>
   <data name="MO_TextEdBin.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 20</value>
@@ -574,7 +574,7 @@
     <value>NoControl</value>
   </data>
   <data name="L_MO_TextEdBin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 111</value>
+    <value>16, 96</value>
   </data>
   <data name="L_MO_TextEdBin.Size" type="System.Drawing.Size, System.Drawing">
     <value>91, 13</value>
@@ -596,36 +596,6 @@
   </data>
   <data name="&gt;&gt;L_MO_TextEdBin.ZOrder" xml:space="preserve">
     <value>7</value>
-  </data>
-  <metadata name="MO_EnableAppLogs.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="MO_EnableAppLogs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="MO_EnableAppLogs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 16</value>
-  </data>
-  <data name="MO_EnableAppLogs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>271, 17</value>
-  </data>
-  <data name="MO_EnableAppLogs.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="MO_EnableAppLogs.Text" xml:space="preserve">
-    <value>Enable logging application events and errors</value>
-  </data>
-  <data name="&gt;&gt;MO_EnableAppLogs.Name" xml:space="preserve">
-    <value>MO_EnableAppLogs</value>
-  </data>
-  <data name="&gt;&gt;MO_EnableAppLogs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MO_EnableAppLogs.Parent" xml:space="preserve">
-    <value>MO_TP2</value>
-  </data>
-  <data name="&gt;&gt;MO_EnableAppLogs.ZOrder" xml:space="preserve">
-    <value>8</value>
   </data>
   <data name="MO_TP2.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>

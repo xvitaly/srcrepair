@@ -48,7 +48,6 @@
             this.MO_FindTextEd = new System.Windows.Forms.Button();
             this.MO_TextEdBin = new System.Windows.Forms.TextBox();
             this.L_MO_TextEdBin = new System.Windows.Forms.Label();
-            this.MO_EnableAppLogs = new System.Windows.Forms.CheckBox();
             this.MO_SearchBin = new System.Windows.Forms.OpenFileDialog();
             this.MO_TC.SuspendLayout();
             this.MO_TP1.SuspendLayout();
@@ -136,7 +135,6 @@
             this.MO_TP2.Controls.Add(this.MO_FindTextEd);
             this.MO_TP2.Controls.Add(this.MO_TextEdBin);
             this.MO_TP2.Controls.Add(this.L_MO_TextEdBin);
-            this.MO_TP2.Controls.Add(this.MO_EnableAppLogs);
             resources.ApplyResources(this.MO_TP2, "MO_TP2");
             this.MO_TP2.Name = "MO_TP2";
             this.MO_TP2.UseVisualStyleBackColor = true;
@@ -188,12 +186,6 @@
             resources.ApplyResources(this.L_MO_TextEdBin, "L_MO_TextEdBin");
             this.L_MO_TextEdBin.Name = "L_MO_TextEdBin";
             // 
-            // MO_EnableAppLogs
-            // 
-            resources.ApplyResources(this.MO_EnableAppLogs, "MO_EnableAppLogs");
-            this.MO_EnableAppLogs.Name = "MO_EnableAppLogs";
-            this.MO_EnableAppLogs.UseVisualStyleBackColor = true;
-            // 
             // MO_SearchBin
             // 
             resources.ApplyResources(this.MO_SearchBin, "MO_SearchBin");
@@ -232,7 +224,6 @@
         private System.Windows.Forms.CheckBox MO_HideUnsupported;
         private System.Windows.Forms.CheckBox MO_ConfirmExit;
         private System.Windows.Forms.TabPage MO_TP2;
-        private System.Windows.Forms.CheckBox MO_EnableAppLogs;
         private System.Windows.Forms.TextBox MO_TextEdBin;
         private System.Windows.Forms.Label L_MO_TextEdBin;
         private System.Windows.Forms.Button MO_FindTextEd;

@@ -48,7 +48,6 @@ namespace srcrepair
             MO_HideUnsupported.Checked = Properties.Settings.Default.HideUnsupportedGames;
             MO_RemEmptyDirs.Checked = Properties.Settings.Default.RemoveEmptyDirs;
             MO_HighlightOldBackUps.Checked = Properties.Settings.Default.HighlightOldBackUps;
-            MO_EnableAppLogs.Checked = Properties.Settings.Default.EnableDebugLog;
             MO_TextEdBin.Text = Properties.Settings.Default.EditorBin;
             MO_CustDirName.Text = Properties.Settings.Default.UserCustDirName;
             MO_ZipCompress.Checked = Properties.Settings.Default.PackBeforeCleanup;
@@ -71,7 +70,6 @@ namespace srcrepair
             Properties.Settings.Default.HideUnsupportedGames = MO_HideUnsupported.Checked;
             Properties.Settings.Default.RemoveEmptyDirs = MO_RemEmptyDirs.Checked;
             Properties.Settings.Default.HighlightOldBackUps = MO_HighlightOldBackUps.Checked;
-            Properties.Settings.Default.EnableDebugLog = MO_EnableAppLogs.Checked;
             Properties.Settings.Default.EditorBin = MO_TextEdBin.Text;
             Properties.Settings.Default.PackBeforeCleanup = MO_ZipCompress.Checked;
             Properties.Settings.Default.AutoUpdateCheck = MO_AutoCheckUpdates.Checked;
