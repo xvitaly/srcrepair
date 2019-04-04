@@ -27,7 +27,7 @@ after_build:
 
     call tfiles\help\make.cmd htmlhelp
 
-    hhc.exe tfiles\help\_build\htmlhelp\srcrepair.hhp
+    hhc.exe tfiles\help\_build\htmlhelp\srcrepair.htp
 
     set CI_DIR=%APPVEYOR_BUILD_FOLDER%\srcrepair\bin\%CONFIGURATION%
 
