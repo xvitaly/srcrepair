@@ -25,6 +25,8 @@ after_build:
 
     pip3 install sphinx
 
+    call help\make.cmd htmlhelp
+
     set CI_DIR=%APPVEYOR_BUILD_FOLDER%\srcrepair\bin\%CONFIGURATION%
 
     set CI_HASH=%APPVEYOR_REPO_COMMIT:~0,7%
