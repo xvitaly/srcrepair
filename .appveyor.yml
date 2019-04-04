@@ -25,7 +25,7 @@ after_build:
 
     pip3 install sphinx
 
-    dir
+    call tfiles\help\make.cmd htmlhelp
 
     set CI_DIR=%APPVEYOR_BUILD_FOLDER%\srcrepair\bin\%CONFIGURATION%
 
