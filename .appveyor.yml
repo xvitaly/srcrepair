@@ -21,19 +21,39 @@ build:
   verbosity: normal
 after_build:
 - cmd: >-
+    echo Overriding default path...
+
     set PATH=C:\Python37-x64;C:\Python37-x64\Scripts;%ProgramFiles(x86)%\HTML Help Workshop;%PATH%
 
-    pip3 install "sphinx==1.8.2"
-
-    call tfiles\help\make.cmd htmlhelp
-
-    hhc.exe tfiles\help\_build\htmlhelp\srcrepair.hhp && exit /b 1 || exit /b 0
+    echo Setting some constants...
 
     set CI_DIR=%APPVEYOR_BUILD_FOLDER%\srcrepair\bin\%CONFIGURATION%
 
     set CI_HASH=%APPVEYOR_REPO_COMMIT:~0,7%
 
+    echo Downloading Sphinx-doc using PIP...
+
+    pip3 install "sphinx==1.8.2"
+
+    echo Generating HTML help project using Sphinx...
+
+    call tfiles\help\make.cmd htmlhelp
+
+    echo Compiling CHM file using HTML Help Workshop...
+
+    hhc.exe tfiles\help\_build\htmlhelp\srcrepair.hhp && exit /b 1 || exit /b 0
+
+    echo Copying build CHM files to output directory...
+
+    mkdir %CI_DIR%\help
+
+    move tfiles\help\_build\htmlhelp\srcrepair.chm %CI_DIR%\help\srcrepair_ru.chm
+
+    echo Creating archive with final build result...
+
     7z a snapshot_%CI_HASH%.7z %CI_DIR%\*
+
+    echo Creating Inno Setup installer with final build result...
 
     "%ProgramFiles(x86)%\Inno Setup 5\ISCC.exe" %CI_DIR%\inno\srcrepair.iss
 
