@@ -21,6 +21,10 @@ build:
   verbosity: normal
 after_build:
 - cmd: >-
+    set PATH=C:\Python37-x64;C:\Python37-x64\Scripts;%ProgramFiles(x86)%\HTML Help Workshop;%PATH%
+
+    pip3 install sphinx
+
     set CI_DIR=%APPVEYOR_BUILD_FOLDER%\srcrepair\bin\%CONFIGURATION%
 
     set CI_HASH=%APPVEYOR_REPO_COMMIT:~0,7%
