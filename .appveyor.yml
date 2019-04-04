@@ -23,7 +23,7 @@ after_build:
 - cmd: >-
     set PATH=C:\Python37-x64;C:\Python37-x64\Scripts;%ProgramFiles(x86)%\HTML Help Workshop;%PATH%
 
-    pip3 install sphinx
+    pip3 install "sphinx==1.8.2"
 
     call tfiles\help\make.cmd htmlhelp
 
