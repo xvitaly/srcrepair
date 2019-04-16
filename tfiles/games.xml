@@ -553,12 +553,12 @@
     <HasVF>0</HasVF>
     <DirName>nmrih</DirName>
     <SmallName>nmrih</SmallName>
-    <VFDir>nmrih</VFDir>
+    <VFDir>../nmrih</VFDir>
     <UserDir>0</UserDir>
     <HUDsAvail>0</HUDsAvail>
     <SID>224260</SID>
     <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
+    <Executable>sdk/hl2.exe</Executable>
   </Game>
   <Game Name="Contagion">
     <Enabled>1</Enabled>
