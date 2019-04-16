@@ -864,10 +864,11 @@ namespace srcrepair
         /// Возвращает ключ реестра c графическими настройками для выбранной игры.
         /// </summary>
         /// <param name="SAppName">Короткое название игры (из БД)</param>
+        /// <param name="ExpandPath">Разрешает, либо запрещает разворачивать путь</param>
         /// <returns>Возвращает полный путь к ключу реестра</returns>
-        public static string GetGameRegKey(string SAppName)
+        public static string GetGameRegKey(string SAppName, bool ExpandPath = true)
         {
-            return Path.Combine("Software", "Valve", "Source", SAppName, "Settings");
+            return ExpandPath ? Path.Combine("Software", "Valve", "Source", SAppName, "Settings") : String.Format(@"Software\Valve\Source\{0}\Settings", SAppName);
         }
 
         /// <summary>
