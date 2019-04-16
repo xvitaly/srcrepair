@@ -113,8 +113,8 @@ namespace srcrepair
         public List<String> VideoCfgFiles { get; private set; }
 
         /// <summary>
-        /// Содержит имя каталога с графическими настройками NCF игр. Используется
-        /// в последних играх.
+        /// Содержит имя каталога, либо ключа реестра с графическими
+        /// настройками.
         /// </summary>
         public string ConfDir { get; private set; }
 

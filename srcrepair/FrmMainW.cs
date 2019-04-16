@@ -128,7 +128,7 @@ namespace srcrepair
         private void WriteType1VideoSettings()
         {
             // Создаём новый объект без получения данных из реестра...
-            Type1Video Video = new Type1Video(App.SourceGames.SelectedGame.SmallAppName, false)
+            Type1Video Video = new Type1Video(App.SourceGames.SelectedGame.ConfDir, false)
             {
                 // Записываем пользовательские настройки...
                 ScreenWidth = (int)GT_ResHor.Value,
@@ -191,7 +191,7 @@ namespace srcrepair
             try
             {
                 // Получаем графические настройки...
-                Type1Video Video = new Type1Video(App.SourceGames.SelectedGame.SmallAppName, true);
+                Type1Video Video = new Type1Video(App.SourceGames.SelectedGame.ConfDir, true);
 
                 // Заполняем общие настройки...
                 GT_ResHor.Value = Video.ScreenWidth;

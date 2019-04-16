@@ -938,7 +938,7 @@ namespace srcrepair
         /// <summary>
         /// Базовый конструктор класса.
         /// </summary>
-        /// <param name="SAppName">Короткое название игры (из БД)</param>
+        /// <param name="SAppName">Путь к настройкам видео (из БД)</param>
         /// <param name="ReadNow">Включает автоматическое считывание настроек из реестра</param>
         public Type1Video(string SAppName, bool ReadNow = true)
         {
