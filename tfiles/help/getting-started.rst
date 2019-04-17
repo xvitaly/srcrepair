@@ -164,7 +164,7 @@ SRC Repair, запущенная стандартным способом, авт
 
 **При попытке запуска программы появляется сообщение об ошибке Microsoft .NET Framework 4.**
 
-Для работы программы необходим пакет Microsoft .NET Framework версии 4.6.1 или выше. Установите его с `официального сайта Microsoft <https://www.microsoft.com/ru-RU/download/details.aspx?id=49981>`_.
+Для работы программы необходим пакет Microsoft .NET Framework версии 4.7.1 или выше. Установите его с `официального сайта Microsoft <https://www.microsoft.com/net/download/dotnet-framework-runtime>`_.
 
 **Как я могу запустить программу под Windows XP/Vista?**
 
@@ -222,7 +222,7 @@ C#.
 
 Выберите пункт Справка — Сообщить об ошибке и создайте заявку на добавление новой игры или модификации. Помните, что поддерживаются только игры на движке Source.
 
-**Сколько занимает пакет Microsoft .NET Framework 4.6.1?**
+**Сколько занимает пакет Microsoft .NET Framework 4.7.1?**
 
 Около 40-45 МБ.
 
