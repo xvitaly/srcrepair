@@ -261,13 +261,13 @@
   <HUD>
     <Name>yayahud</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/yayahud/yayahud_5b400288.zip</URI>
+    <IsUpdated>1</IsUpdated>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/yayahud/yayahud_e753a9bf.zip</URI>
     <UpURI>https://github.com/Yttrium-tYcLief/yayahud/archive/master.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/yayahud.jpg</Preview>
     <RepoPath>https://github.com/yttrium-tyclief/yayahud</RepoPath>
-    <Hash>b793cd7194b73090c0c8ce99542f714f</Hash>
-    <LastUpdate>1508699024</LastUpdate>
+    <Hash>f1280869df3f78820f7260b6f188f2c1</Hash>
+    <LastUpdate>1555972291</LastUpdate>
     <Site>https://huds.tf/forum/showthread.php?tid=265</Site>
     <ArchiveDir>yayahud-master/yayahud</ArchiveDir>
     <InstallDir>yayahud</InstallDir>
