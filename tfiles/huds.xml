@@ -552,4 +552,18 @@
     <ArchiveDir>SlagHUD-master</ArchiveDir>
     <InstallDir>slaghud</InstallDir>
   </HUD>
+  <HUD>
+    <Name>BX-HUD</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/bxhud/bxhud_fea21466.zip</URI>
+    <UpURI>https://github.com/Hypnootize/BX-Hud/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/bxhud.jpg</Preview>
+    <RepoPath>https://github.com/Hypnootize/BX-Hud</RepoPath>
+    <Hash>2d4c2d49ba6f1e32da7f32e09af7538f</Hash>
+    <LastUpdate>1556364496</LastUpdate>
+    <Site>https://huds.tf/forum/showthread.php?tid=1437</Site>
+    <ArchiveDir>BX-Hud-master/BX Hud</ArchiveDir>
+    <InstallDir>bxhud</InstallDir>
+  </HUD>
 </HUDs>
