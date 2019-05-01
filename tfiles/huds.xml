@@ -580,4 +580,18 @@
     <ArchiveDir>Garm3n-QL-master/Garm3n QL</ArchiveDir>
     <InstallDir>garm3nql</InstallDir>
   </HUD>
+  <HUD>
+    <Name>Deli HUD</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/delihud/delihud_b0c6dba0.zip</URI>
+    <UpURI>https://github.com/Hypnootize/Deli-Hud/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/delihud.jpg</Preview>
+    <RepoPath>https://github.com/Hypnootize/Deli-Hud</RepoPath>
+    <Hash>eed341631fc23d77b275640e0ec51be8</Hash>
+    <LastUpdate>1549298664</LastUpdate>
+    <Site>https://huds.tf/forum/showthread.php?tid=1440</Site>
+    <ArchiveDir>Deli-Hud-master/Deli Hud Normal</ArchiveDir>
+    <InstallDir>delihud</InstallDir>
+  </HUD>
 </HUDs>
