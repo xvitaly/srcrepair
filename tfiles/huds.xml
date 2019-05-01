@@ -566,4 +566,18 @@
     <ArchiveDir>BX-Hud-master/BX Hud</ArchiveDir>
     <InstallDir>bxhud</InstallDir>
   </HUD>
+  <HUD>
+    <Name>Garm3n-QL</Name>
+    <Game>tf</Game>
+    <IsUpdated>1</IsUpdated>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/garm3nql/garm3nql_d7338a2a.zip</URI>
+    <UpURI>https://github.com/Hypnootize/Garm3n-QL/archive/master.zip</UpURI>
+    <Preview>https://www.easycoding.org/files/srcrepair/huds/garm3nql.jpg</Preview>
+    <RepoPath>https://github.com/Hypnootize/Garm3n-QL</RepoPath>
+    <Hash>8338d02c1b8acf8bffed126182c8efba</Hash>
+    <LastUpdate>1555169001</LastUpdate>
+    <Site>https://huds.tf/forum/showthread.php?tid=1436</Site>
+    <ArchiveDir>Garm3n-QL-master/Garm3n QL</ArchiveDir>
+    <InstallDir>garm3nql</InstallDir>
+  </HUD>
 </HUDs>
