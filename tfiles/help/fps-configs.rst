@@ -36,7 +36,8 @@
  * comangliacinema;
  * dt_legal;
  * mastercomfig-maxperf;
- * mastercomfig-quality.
+ * mastercomfig-quality;
+ * rhaprody-perf.
 
 .. index:: установка FPS-конфига
 .. _fps-install:
