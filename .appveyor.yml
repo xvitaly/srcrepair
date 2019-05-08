@@ -1,4 +1,4 @@
-version: 33.0.0.{build}
+version: 34.0.0.{build}
 pull_requests:
   do_not_increment_build_number: true
 image: Visual Studio 2017
