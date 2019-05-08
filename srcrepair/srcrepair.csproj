@@ -405,6 +405,10 @@
       <Link>cfgs\mastercomfigpf.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\tfiles\cfgs\rhapsodyfps.cfg">
+      <Link>cfgs\rhapsodyfps.cfg</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="..\tfiles\inno\readme_en.rtf">
       <Link>inno\readme_en.rtf</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
