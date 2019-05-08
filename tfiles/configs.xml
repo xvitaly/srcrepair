@@ -278,4 +278,21 @@ FPS increase: None
 Graphics degradation: None]]>
     </en>
   </Config>
+  <Config>
+    <Name>rhaprody-perf</Name>
+    <FileName>rhapsodyfps.cfg</FileName>
+    <SupportedGames>440</SupportedGames>
+    <ru>
+    <![CDATA[Неплохой вариант FPS-конфига. Обеспечивает прирост кадровой частоты при среднем ухудшении качества графики. Должен обеспечивать приемлемую производительность игры на большинстве компьютеров.
+
+Прирост производительности: Высокий
+Ухудшение качества графики: Очень высокое]]>
+    </ru>
+    <en>
+    <![CDATA[Typical FPS config, created to provide moderate performance boost. Insignificantly decreases the graphics quality and increase performance on most computers.
+
+FPS increase: Moderate
+Graphics degradation: Moderate]]>
+    </en>
+  </Config>
 </Configs>
