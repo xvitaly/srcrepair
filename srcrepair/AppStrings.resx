@@ -795,6 +795,18 @@
   <data name="AppDbgExRemVdAutoGs" xml:space="preserve">
     <value>Exception while trying to save video auto backup before removing game settings.</value>
   </data>
+  <data name="AppDbgExRepFm" xml:space="preserve">
+    <value>Exception while trying to show generated report file in file manager.</value>
+  </data>
+  <data name="AppDbgExRepGen" xml:space="preserve">
+    <value>Exception while generating report.</value>
+  </data>
+  <data name="AppDbgExRepPack" xml:space="preserve">
+    <value>Exception while trying to pack all generated logs to a single Zip archive.</value>
+  </data>
+  <data name="AppDbgExRepWrkBusy" xml:space="preserve">
+    <value>RepGen Worker is busy. Can't start build sequence.</value>
+  </data>
   <data name="AppDbgExSelGame" xml:space="preserve">
     <value>Exception while handling selected game by user or application.</value>
   </data>

@@ -188,14 +188,14 @@ namespace srcrepair
                             }
                             catch (Exception Ex)
                             {
-                                Logger.Warn(Ex, "Exception while trying to show generated report file in file manager.");
+                                Logger.Warn(Ex, AppStrings.AppDbgExRepFm);
                             }
                         }
                     }
                     catch (Exception Ex)
                     {
                         MessageBox.Show(AppStrings.PS_ArchFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        Logger.Error(Ex, "Exception while trying to pack all generated logs to a single Zip archive.");
+                        Logger.Error(Ex, AppStrings.AppDbgExRepPack);
                     }
                 }
 
@@ -217,7 +217,7 @@ namespace srcrepair
             {
                 // Произошло исключение...
                 MessageBox.Show(AppStrings.RPB_GenException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, "Exception while generating report.");
+                Logger.Error(Ex, AppStrings.AppDbgExRepGen);
             }
         }
 
@@ -252,7 +252,7 @@ namespace srcrepair
                 ControlBox = false;
 
                 // Запускаем асинхронный обработчик...
-                if (!BwGen.IsBusy) { BwGen.RunWorkerAsync(); } else { Logger.Warn("RepGen Worker is busy. Can't start build sequence."); }
+                if (!BwGen.IsBusy) { BwGen.RunWorkerAsync(); } else { Logger.Warn(AppStrings.AppDbgExRepWrkBusy); }
             }
             else
             {

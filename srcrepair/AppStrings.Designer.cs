@@ -511,6 +511,42 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to show generated report file in file manager..
+        /// </summary>
+        internal static string AppDbgExRepFm {
+            get {
+                return ResourceManager.GetString("AppDbgExRepFm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while generating report..
+        /// </summary>
+        internal static string AppDbgExRepGen {
+            get {
+                return ResourceManager.GetString("AppDbgExRepGen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to pack all generated logs to a single Zip archive..
+        /// </summary>
+        internal static string AppDbgExRepPack {
+            get {
+                return ResourceManager.GetString("AppDbgExRepPack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RepGen Worker is busy. Can&apos;t start build sequence..
+        /// </summary>
+        internal static string AppDbgExRepWrkBusy {
+            get {
+                return ResourceManager.GetString("AppDbgExRepWrkBusy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while handling selected game by user or application..
         /// </summary>
         internal static string AppDbgExSelGame {
