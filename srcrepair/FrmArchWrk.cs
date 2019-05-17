@@ -96,7 +96,7 @@ namespace srcrepair
             }
             else
             {
-                throw new FileNotFoundException("Archive not found.", ArchName);
+                throw new FileNotFoundException(AppStrings.AR_BkgWrkExText, ArchName);
             }
         }
 
@@ -121,7 +121,7 @@ namespace srcrepair
             if (e.Error != null)
             {
                 MessageBox.Show(AppStrings.AR_UnpackException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(e.Error, "Exception during unpacking files from Zip archives.");
+                Logger.Error(e.Error, AppStrings.AppDbgExArWrkUnpack);
             }
 
             Close();

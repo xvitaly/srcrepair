@@ -88,6 +88,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception during unpacking files from Zip archives..
+        /// </summary>
+        internal static string AppDbgExArWrkUnpack {
+            get {
+                return ResourceManager.GetString("AppDbgExArWrkUnpack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to remove selected backups..
         /// </summary>
         internal static string AppDbgExBackupRem {
@@ -732,6 +741,15 @@ namespace srcrepair {
         internal static string AppXMLParseError {
             get {
                 return ResourceManager.GetString("AppXMLParseError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Archive not found..
+        /// </summary>
+        internal static string AR_BkgWrkExText {
+            get {
+                return ResourceManager.GetString("AR_BkgWrkExText", resourceCulture);
             }
         }
         

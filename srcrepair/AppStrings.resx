@@ -654,6 +654,9 @@
   <data name="HD_DownloadError" xml:space="preserve">
     <value>Cannot find downloaded HUD archive. Please try again later.</value>
   </data>
+  <data name="AppDbgExArWrkUnpack" xml:space="preserve">
+    <value>Exception during unpacking files from Zip archives.</value>
+  </data>
   <data name="AppDbgExBackupRem" xml:space="preserve">
     <value>Exception while trying to remove selected backups.</value>
   </data>
@@ -794,5 +797,8 @@
   </data>
   <data name="AppDbgExXmlParse" xml:space="preserve">
     <value>Exception on parsing XML game database. Application will be terminated.</value>
+  </data>
+  <data name="AR_BkgWrkExText" xml:space="preserve">
+    <value>Archive not found.</value>
   </data>
 </root>
