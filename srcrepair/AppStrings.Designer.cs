@@ -448,6 +448,33 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to save blacklist auto backup before saving it..
+        /// </summary>
+        internal static string AppDbgExMMAutoSave {
+            get {
+                return ResourceManager.GetString("AppDbgExMMAutoSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while reading muted users database..
+        /// </summary>
+        internal static string AppDbgExMMReadDb {
+            get {
+                return ResourceManager.GetString("AppDbgExMMReadDb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while writing to save muted users database..
+        /// </summary>
+        internal static string AppDbgExMMSaveDb {
+            get {
+                return ResourceManager.GetString("AppDbgExMMSaveDb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception on trying to launch Windows registry editor to restore saved registry file..
         /// </summary>
         internal static string AppDbgExRegedit {

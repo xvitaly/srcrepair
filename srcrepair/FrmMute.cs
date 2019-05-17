@@ -170,7 +170,7 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 MessageBox.Show(AppStrings.MM_ExceptionDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, "Exception while reading muted users database.");
+                Logger.Error(Ex, AppStrings.AppDbgExMMReadDb);
             }
         }
 
@@ -191,7 +191,7 @@ namespace srcrepair
                         }
                         catch (Exception Ex)
                         {
-                            Logger.Warn(Ex, "Exception while trying to save blacklist auto backup before saving it.");
+                            Logger.Warn(Ex, AppStrings.AppDbgExMMAutoSave);
                         }
                     }
                 }
@@ -201,7 +201,7 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 MessageBox.Show(AppStrings.MM_SaveException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, "Exception while writing to save muted users database.");
+                Logger.Error(Ex, AppStrings.AppDbgExMMSaveDb);
             }
         }
 

@@ -774,6 +774,15 @@
   <data name="AppDbgExLvLoad" xml:space="preserve">
     <value>Exception while trying to load current debug log file.</value>
   </data>
+  <data name="AppDbgExMMAutoSave" xml:space="preserve">
+    <value>Exception while trying to save blacklist auto backup before saving it.</value>
+  </data>
+  <data name="AppDbgExMMReadDb" xml:space="preserve">
+    <value>Exception while reading muted users database.</value>
+  </data>
+  <data name="AppDbgExMMSaveDb" xml:space="preserve">
+    <value>Exception while writing to save muted users database.</value>
+  </data>
   <data name="AppDbgExRegedit" xml:space="preserve">
     <value>Exception on trying to launch Windows registry editor to restore saved registry file.</value>
   </data>
