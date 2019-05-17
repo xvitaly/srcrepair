@@ -547,6 +547,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while removing files..
+        /// </summary>
+        internal static string AppDbgExRmRf {
+            get {
+                return ResourceManager.GetString("AppDbgExRmRf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while handling selected game by user or application..
         /// </summary>
         internal static string AppDbgExSelGame {

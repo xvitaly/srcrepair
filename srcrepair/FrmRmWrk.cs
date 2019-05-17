@@ -163,7 +163,7 @@ namespace srcrepair
             if (e.Error != null)
             {
                 MessageBox.Show(AppStrings.RW_RmException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(e.Error, "Exception while removing files.");
+                Logger.Error(e.Error, AppStrings.AppDbgExRmRf);
             }
 
             Close();

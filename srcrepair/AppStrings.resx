@@ -807,6 +807,9 @@
   <data name="AppDbgExRepWrkBusy" xml:space="preserve">
     <value>RepGen Worker is busy. Can't start build sequence.</value>
   </data>
+  <data name="AppDbgExRmRf" xml:space="preserve">
+    <value>Exception while removing files.</value>
+  </data>
   <data name="AppDbgExSelGame" xml:space="preserve">
     <value>Exception while handling selected game by user or application.</value>
   </data>
