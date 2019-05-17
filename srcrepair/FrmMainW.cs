@@ -216,7 +216,7 @@ namespace srcrepair
             {
                 // Выводим сообщение об ошибке...
                 MessageBox.Show(AppStrings.GT_RegOpenErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, "Exception while filling Graphic tweaker for Type1 game.");
+                Logger.Error(Ex, AppStrings.AppDbgExT1LoadFail);
             }
         }
 
@@ -266,7 +266,7 @@ namespace srcrepair
             {
                 // Выводим сообщение об ошибке...
                 MessageBox.Show(AppStrings.GT_NCFLoadFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, "Exception while filling Graphic tweaker for Type2 game.");
+                Logger.Error(Ex, AppStrings.AppDbgExT2LoadFail);
             }
         }
 
@@ -349,7 +349,7 @@ namespace srcrepair
                 {
                     // Произошло исключение...
                     MessageBox.Show(AppStrings.CE_ExceptionDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, "Exception while reading config file in Config editor.");
+                    Logger.Error(Ex, AppStrings.AppDbgExCfgEdLoad);
                 }
             }
             else
@@ -595,7 +595,7 @@ namespace srcrepair
             {
                 // Записываем в журнал и выводим сообщение об ошибке...
                 MessageBox.Show(AppStrings.GT_SaveFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, "Exception while trying to save Type1 graphical settings.");
+                Logger.Error(Ex, AppStrings.AppDbgExT1SaveFail);
             }
         }
 
@@ -614,7 +614,7 @@ namespace srcrepair
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Warn(Ex, "Exception while trying to save auto backup before saving Type2 game settings.");
+                    Logger.Warn(Ex, AppStrings.AppDbgExT2AutoFail);
                 }
             }
 
@@ -631,7 +631,7 @@ namespace srcrepair
             {
                 // Записываем в журнал и выводим сообщение об ошибке...
                 MessageBox.Show(AppStrings.GT_NCFFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, "Exception while trying to save Type2 graphical settings.");
+                Logger.Error(Ex, AppStrings.AppDbgExT2SaveFail);
             }
         }
 
@@ -730,19 +730,19 @@ namespace srcrepair
             catch (FileNotFoundException Ex)
             {
                 MessageBox.Show(AppStrings.SteamPathEnterErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Logger.Error(Ex, "Exception while trying to get Steam path. Application will be terminated.");
+                Logger.Error(Ex, AppStrings.AppDbgExSteamPath);
                 Environment.Exit(7);
             }
             catch (OperationCanceledException Ex)
             {
                 MessageBox.Show(AppStrings.SteamPathCancel, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Logger.Error(Ex, "Exception while trying to get Steam path. Application will be terminated.");
+                Logger.Error(Ex, AppStrings.AppDbgExSteamPath);
                 Environment.Exit(19);
             }
             catch (Exception Ex)
             {
                 MessageBox.Show(AppStrings.AppGenericError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Logger.Error(Ex, "Exception while trying to get Steam path. Application will be terminated.");
+                Logger.Error(Ex, AppStrings.AppDbgExSteamPath);
                 Environment.Exit(24);
             }
         }
@@ -1009,7 +1009,7 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 MessageBox.Show(AppStrings.AppXMLParseError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Logger.Error(Ex, "Exception on parsing XML game database. Application will be terminated.");
+                Logger.Error(Ex, AppStrings.AppDbgExXmlParse);
                 Environment.Exit(16);
             }
 
@@ -1115,7 +1115,7 @@ namespace srcrepair
             // Произошла ошибка во время проверки наличия обновлений. Запишем в журнал...
             if (e.Error != null)
             {
-                Logger.Warn(e.Error, "Exception while checking for updates during application startup.");
+                Logger.Warn(e.Error, AppStrings.AppDbgExBgWChk);
             }
         }
 
@@ -1245,7 +1245,7 @@ namespace srcrepair
             else
             {
                 MessageBox.Show(AppStrings.HD_InstallError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Logger.Error(e.Error, "Exception during HUD installation.");
+                Logger.Error(e.Error, AppStrings.AppDbgExHUDInstall);
             }
 
             // Включаем кнопку удаления если HUD установлен...
@@ -1271,7 +1271,7 @@ namespace srcrepair
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, "Exception while initializing SteamManager class instance.");
+                Logger.Warn(Ex, AppStrings.AppDbgExStmmInit);
                 ValidateAndHandle();
             }
             
@@ -1369,7 +1369,7 @@ namespace srcrepair
                         catch (Exception Ex)
                         {
                             MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            Logger.Error(Ex, "Exception while cleaning up Steam blob files.");
+                            Logger.Error(Ex, AppStrings.AppDbgExClnBlobs);
                         }
                     }
 
@@ -1394,7 +1394,7 @@ namespace srcrepair
                         catch (Exception Ex)
                         {
                             MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            Logger.Error(Ex, "Exception while cleaning up Steam registry entries.");
+                            Logger.Error(Ex, AppStrings.AppDbgExClnReg);
                         }
                     }
 
@@ -1468,7 +1468,7 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 MessageBox.Show(AppStrings.AppFailedToGetData, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, "Exception while handling selected game by user or application.");
+                Logger.Error(Ex, AppStrings.AppDbgExSelGame);
             }
         }
 
@@ -1641,7 +1641,7 @@ namespace srcrepair
                             }
                             catch (Exception Ex)
                             {
-                                Logger.Warn(Ex, "Exception while compressing files as backup before installation of new FPS config.");
+                                Logger.Warn(Ex, AppStrings.AppDbgExFpsInstBackup);
                             }
                         }
                     }
@@ -1661,7 +1661,7 @@ namespace srcrepair
                     {
                         // Установка не удалась. Выводим сообщение об этом...
                         MessageBox.Show(AppStrings.FP_InstallFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        Logger.Error(Ex, "Exception during HUD installation.");
+                        Logger.Error(Ex, AppStrings.AppDbgExFpsInstall);
                     }
                 }
             }
@@ -1693,7 +1693,7 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 MessageBox.Show(AppStrings.FP_RemoveFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Logger.Error(Ex, "Exception during FPS config uninstallation.");
+                Logger.Error(Ex, AppStrings.AppDbgExFpsUninstall);
             }
         }
 
@@ -1717,7 +1717,7 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 MessageBox.Show(AppStrings.CS_FailedToOpenCfg, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, "Exception during FPS config selection (click on warning icon).");
+                Logger.Error(Ex, AppStrings.AppDbgExCfgSelection);
             }
         }
 
@@ -1765,7 +1765,7 @@ namespace srcrepair
                         }
                         catch (Exception Ex)
                         {
-                            Logger.Warn(Ex, "Exception while trying to save config auto backup before saving it in Config editor.");
+                            Logger.Warn(Ex, AppStrings.AppDbgExCfgEdAutoBackup);
                         }
                     }
                 }
@@ -1778,7 +1778,7 @@ namespace srcrepair
                 catch (Exception Ex)
                 {
                     MessageBox.Show(AppStrings.CE_CfgSVVEx, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, "Exception during saving file in Config editor.");
+                    Logger.Error(Ex, AppStrings.AppDbgExCfgEdSave);
                 }
             }
             else
@@ -1910,7 +1910,7 @@ namespace srcrepair
                             }
                             catch (Exception Ex)
                             {
-                                Logger.Warn(Ex, "Exception while trying to save video auto backup before removing game settings.");
+                                Logger.Warn(Ex, AppStrings.AppDbgExRemVdAutoGs);
                             }
                         }
 
@@ -1927,7 +1927,7 @@ namespace srcrepair
                         }
                         catch (Exception Ex)
                         {
-                            Logger.Warn(Ex, "Exception while trying to save configs auto backup before removing game settings.");
+                            Logger.Warn(Ex, AppStrings.AppDbgExRemVdAutoCfg);
                         }
                     }
 
@@ -1944,7 +1944,7 @@ namespace srcrepair
                 catch (Exception Ex)
                 {
                     MessageBox.Show(AppStrings.PS_CleanupErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, "Exception during removal of game settings.");
+                    Logger.Error(Ex, AppStrings.AppDbgExRemVd);
                 }
             }
         }
@@ -1973,7 +1973,7 @@ namespace srcrepair
                 catch (Exception Ex)
                 {
                     MessageBox.Show(AppStrings.AppStartSteamFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, "Exception on trying to launch Steam to validate game cache.");
+                    Logger.Error(Ex, AppStrings.AppDbgExValCache);
                 }
             }
         }
@@ -2018,7 +2018,7 @@ namespace srcrepair
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, "Exception while trying to open web browser to open bug tracker URL.");
+                Logger.Warn(Ex, AppStrings.AppDbgExBugRep);
             }
         }
 
@@ -2055,7 +2055,7 @@ namespace srcrepair
                                     {
                                         // Произошло исключение...
                                         MessageBox.Show(AppStrings.BU_RestFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                        Logger.Error(Ex, "Exception on trying to launch Windows registry editor to restore saved registry file.");
+                                        Logger.Error(Ex, AppStrings.AppDbgExRegedit);
                                     }
                                     break;
                                 case ".bud":
@@ -2111,7 +2111,7 @@ namespace srcrepair
                             {
                                 // Произошло исключение при попытке удаления файла резервной копии...
                                 MessageBox.Show(AppStrings.BU_DelFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                Logger.Error(Ex, "Exception while trying to remove selected backups.");
+                                Logger.Error(Ex, AppStrings.AppDbgExBackupRem);
                             }
                         }
 
@@ -2157,7 +2157,7 @@ namespace srcrepair
                         }
                         catch (Exception Ex)
                         {
-                            Logger.Warn(Ex, "Exception while trying to save auto backup before saving game settings.");
+                            Logger.Warn(Ex, AppStrings.AppDbgExBkGsAuto);
                         }
                     }
                     
@@ -2171,7 +2171,7 @@ namespace srcrepair
                 {
                     // Выводим сообщение об ошибке и пишем в журнал отладки...
                     MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, "Exception while trying to create graphical settings backup of selected game.");
+                    Logger.Error(Ex, AppStrings.AppDbgExBkSg);
                 }
             }
         }
@@ -2196,7 +2196,7 @@ namespace srcrepair
                 {
                     // Произошло исключение, уведомим пользователя...
                     MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, "Exception while trying to create backup of all Steam settings stored in registry.");
+                    Logger.Error(Ex, AppStrings.AppDbgExBkAllStm);
                 }
             }
         }
@@ -2215,7 +2215,7 @@ namespace srcrepair
                 catch (Exception Ex)
                 {
                     MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, "Exception while trying to create graphical settings backup of all games.");
+                    Logger.Error(Ex, AppStrings.AppDbgExBkAllGames);
                 }
             }
         }
@@ -2265,7 +2265,7 @@ namespace srcrepair
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, "Exception while trying to open web browser to show app commentary page.");
+                Logger.Warn(Ex, AppStrings.AppDbgExUrlHome);
             }
         }
 
@@ -2283,7 +2283,7 @@ namespace srcrepair
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Warn(Ex, "Exception while trying to open web browser to show Steam group profile.");
+                    Logger.Warn(Ex, AppStrings.AppDbgExUrlGroup);
                 }
             }
         }
@@ -2297,7 +2297,7 @@ namespace srcrepair
                     CE_Editor.Rows.Remove(CE_Editor.CurrentRow);
                 }
             }
-            catch (Exception Ex) { Logger.Warn(Ex, "Exception while trying to remove item in Config editor."); }
+            catch (Exception Ex) { Logger.Warn(Ex, AppStrings.AppDbgExCfgEdRemRow); }
         }
 
         private void CE_Copy_Click(object sender, EventArgs e)
@@ -2308,7 +2308,7 @@ namespace srcrepair
                 foreach (DataGridViewCell DV in CE_Editor.SelectedCells) { if (DV.Value != null) { SB.AppendFormat("{0} ", DV.Value); } }
                 Clipboard.SetText(SB.ToString().Trim());
             }
-            catch (Exception Ex) { Logger.Warn(Ex, "Exception while trying to copy item to clipboard in Config editor."); }
+            catch (Exception Ex) { Logger.Warn(Ex, AppStrings.AppDbgExCfgEdCopy); }
         }
 
         private void CE_Cut_Click(object sender, EventArgs e)
@@ -2319,7 +2319,7 @@ namespace srcrepair
                 foreach (DataGridViewCell DV in CE_Editor.SelectedCells) { if (DV.Value != null) { SB.AppendFormat("{0} ", DV.Value); DV.Value = null; } }
                 Clipboard.SetText(SB.ToString().Trim());
             }
-            catch (Exception Ex) { Logger.Warn(Ex, "Exception while trying to cut item to clipboard in Config editor."); }
+            catch (Exception Ex) { Logger.Warn(Ex, AppStrings.AppDbgExCfgEdCut); }
         }
 
         private void CE_Paste_Click(object sender, EventArgs e)
@@ -2331,7 +2331,7 @@ namespace srcrepair
                     CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value = Clipboard.GetText();
                 }
             }
-            catch (Exception Ex) { Logger.Warn(Ex, "Exception while trying to paste item from clipboard in Config editor."); }
+            catch (Exception Ex) { Logger.Warn(Ex, AppStrings.AppDbgExCfgEdPaste); }
         }
 
         private void FP_OpenNotepad_Click(object sender, EventArgs e)
@@ -2357,7 +2357,7 @@ namespace srcrepair
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Warn(Ex, "Exception while trying to load config file in text editor.");
+                    Logger.Warn(Ex, AppStrings.AppDbgExCfgEdExtEdt);
                 }
             }
         }
@@ -2386,7 +2386,7 @@ namespace srcrepair
                         }
                         catch (Exception Ex)
                         {
-                            Logger.Warn(Ex, "Exception while trying to load backup file in text editor.");
+                            Logger.Warn(Ex, AppStrings.AppDbgExBkExtEdt);
                         }
                     }
                     else
@@ -2431,7 +2431,7 @@ namespace srcrepair
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Warn(Ex, "Exception while trying to show selected backup file in file manager.");
+                        Logger.Warn(Ex, AppStrings.AppDbgExBkFMan);
                     }
                 }
                 else
@@ -2467,7 +2467,7 @@ namespace srcrepair
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Warn(Ex, "Exception while trying to load config file in text editor.");
+                    Logger.Warn(Ex, AppStrings.AppDbgExCfgEdExtEdt);
                 }
             }
             else
@@ -2558,7 +2558,7 @@ namespace srcrepair
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, "Exception while trying to open web browser to show cvarlist.");
+                Logger.Warn(Ex, AppStrings.AppDbgExUrlCvList);
             }
         }
 
@@ -2575,7 +2575,7 @@ namespace srcrepair
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Warn(Ex, "Exception while trying to create manual backup of config file.");
+                        Logger.Warn(Ex, AppStrings.AppDbgExCfgEdBkMan);
                     }
                 }
             }
@@ -2664,7 +2664,7 @@ namespace srcrepair
             {
                 App.SourceGames.SelectedGame.HUDMan.Select(HD_HSel.Text);
             }
-            catch (Exception Ex) { Logger.Warn(Ex, "Exception while trying to select another HUD."); }
+            catch (Exception Ex) { Logger.Warn(Ex, AppStrings.AppDbgExHudSelect); }
                 
             // Проверяем результат...
             bool Success = !String.IsNullOrEmpty(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.Name);
@@ -2729,7 +2729,7 @@ namespace srcrepair
                             {
                                 File.Delete(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile);
                             }
-                            catch (Exception Ex) { Logger.Warn(Ex, "Exception while removing HUD archive file."); }
+                            catch (Exception Ex) { Logger.Warn(Ex, AppStrings.AppDbgExHudArchRem); }
                         }
                         else
                         {
@@ -2783,7 +2783,7 @@ namespace srcrepair
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Warn(Ex, "Exception while trying to open web browser to show HUD's homepage.");
+                    Logger.Warn(Ex, AppStrings.AppDbgExUrlHudHome);
                 }
             }
         }
@@ -2830,7 +2830,7 @@ namespace srcrepair
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, "Exception while trying to show selected HUD directory in file manager.");
+                Logger.Warn(Ex, AppStrings.AppDbgExHudExtFm);
             }
         }
 
@@ -2858,7 +2858,7 @@ namespace srcrepair
                     Properties.Settings.Default.LastSteamID = Result;
                     FindGames();
                 }
-            } catch (Exception Ex) { Logger.Warn(Ex, "Exception during new UserID selection."); }
+            } catch (Exception Ex) { Logger.Warn(Ex, AppStrings.AppDbgExUserIdSel); }
         }
 
         private void BU_LVTable_SelectedIndexChanged(object sender, EventArgs e)

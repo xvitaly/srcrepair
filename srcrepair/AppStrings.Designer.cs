@@ -88,6 +88,429 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to remove selected backups..
+        /// </summary>
+        internal static string AppDbgExBackupRem {
+            get {
+                return ResourceManager.GetString("AppDbgExBackupRem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while checking for updates during application startup..
+        /// </summary>
+        internal static string AppDbgExBgWChk {
+            get {
+                return ResourceManager.GetString("AppDbgExBgWChk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to create graphical settings backup of all games..
+        /// </summary>
+        internal static string AppDbgExBkAllGames {
+            get {
+                return ResourceManager.GetString("AppDbgExBkAllGames", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to create backup of all Steam settings stored in registry..
+        /// </summary>
+        internal static string AppDbgExBkAllStm {
+            get {
+                return ResourceManager.GetString("AppDbgExBkAllStm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to load backup file in text editor..
+        /// </summary>
+        internal static string AppDbgExBkExtEdt {
+            get {
+                return ResourceManager.GetString("AppDbgExBkExtEdt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to show selected backup file in file manager..
+        /// </summary>
+        internal static string AppDbgExBkFMan {
+            get {
+                return ResourceManager.GetString("AppDbgExBkFMan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to save auto backup before saving game settings..
+        /// </summary>
+        internal static string AppDbgExBkGsAuto {
+            get {
+                return ResourceManager.GetString("AppDbgExBkGsAuto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to create graphical settings backup of selected game..
+        /// </summary>
+        internal static string AppDbgExBkSg {
+            get {
+                return ResourceManager.GetString("AppDbgExBkSg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to open web browser to open bug tracker URL..
+        /// </summary>
+        internal static string AppDbgExBugRep {
+            get {
+                return ResourceManager.GetString("AppDbgExBugRep", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to save config auto backup before saving it in Config editor..
+        /// </summary>
+        internal static string AppDbgExCfgEdAutoBackup {
+            get {
+                return ResourceManager.GetString("AppDbgExCfgEdAutoBackup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to create manual backup of config file..
+        /// </summary>
+        internal static string AppDbgExCfgEdBkMan {
+            get {
+                return ResourceManager.GetString("AppDbgExCfgEdBkMan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to copy item to clipboard in Config editor..
+        /// </summary>
+        internal static string AppDbgExCfgEdCopy {
+            get {
+                return ResourceManager.GetString("AppDbgExCfgEdCopy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to cut item to clipboard in Config editor..
+        /// </summary>
+        internal static string AppDbgExCfgEdCut {
+            get {
+                return ResourceManager.GetString("AppDbgExCfgEdCut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to load config file in text editor..
+        /// </summary>
+        internal static string AppDbgExCfgEdExtEdt {
+            get {
+                return ResourceManager.GetString("AppDbgExCfgEdExtEdt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while reading config file in Config editor..
+        /// </summary>
+        internal static string AppDbgExCfgEdLoad {
+            get {
+                return ResourceManager.GetString("AppDbgExCfgEdLoad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to paste item from clipboard in Config editor..
+        /// </summary>
+        internal static string AppDbgExCfgEdPaste {
+            get {
+                return ResourceManager.GetString("AppDbgExCfgEdPaste", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to remove item in Config editor..
+        /// </summary>
+        internal static string AppDbgExCfgEdRemRow {
+            get {
+                return ResourceManager.GetString("AppDbgExCfgEdRemRow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception during saving file in Config editor..
+        /// </summary>
+        internal static string AppDbgExCfgEdSave {
+            get {
+                return ResourceManager.GetString("AppDbgExCfgEdSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception during FPS config selection (click on warning icon)..
+        /// </summary>
+        internal static string AppDbgExCfgSelection {
+            get {
+                return ResourceManager.GetString("AppDbgExCfgSelection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while cleaning up Steam blob files..
+        /// </summary>
+        internal static string AppDbgExClnBlobs {
+            get {
+                return ResourceManager.GetString("AppDbgExClnBlobs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while cleaning up Steam registry entries..
+        /// </summary>
+        internal static string AppDbgExClnReg {
+            get {
+                return ResourceManager.GetString("AppDbgExClnReg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception during FPS config installation..
+        /// </summary>
+        internal static string AppDbgExFpsInstall {
+            get {
+                return ResourceManager.GetString("AppDbgExFpsInstall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while compressing files as backup before installation of new FPS config..
+        /// </summary>
+        internal static string AppDbgExFpsInstBackup {
+            get {
+                return ResourceManager.GetString("AppDbgExFpsInstBackup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception during FPS config uninstallation..
+        /// </summary>
+        internal static string AppDbgExFpsUninstall {
+            get {
+                return ResourceManager.GetString("AppDbgExFpsUninstall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while removing HUD archive file..
+        /// </summary>
+        internal static string AppDbgExHudArchRem {
+            get {
+                return ResourceManager.GetString("AppDbgExHudArchRem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to show selected HUD directory in file manager..
+        /// </summary>
+        internal static string AppDbgExHudExtFm {
+            get {
+                return ResourceManager.GetString("AppDbgExHudExtFm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception during HUD installation..
+        /// </summary>
+        internal static string AppDbgExHUDInstall {
+            get {
+                return ResourceManager.GetString("AppDbgExHUDInstall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to select another HUD..
+        /// </summary>
+        internal static string AppDbgExHudSelect {
+            get {
+                return ResourceManager.GetString("AppDbgExHudSelect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception on trying to launch Windows registry editor to restore saved registry file..
+        /// </summary>
+        internal static string AppDbgExRegedit {
+            get {
+                return ResourceManager.GetString("AppDbgExRegedit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception during removal of game settings..
+        /// </summary>
+        internal static string AppDbgExRemVd {
+            get {
+                return ResourceManager.GetString("AppDbgExRemVd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to save configs auto backup before removing game settings..
+        /// </summary>
+        internal static string AppDbgExRemVdAutoCfg {
+            get {
+                return ResourceManager.GetString("AppDbgExRemVdAutoCfg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to save video auto backup before removing game settings..
+        /// </summary>
+        internal static string AppDbgExRemVdAutoGs {
+            get {
+                return ResourceManager.GetString("AppDbgExRemVdAutoGs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while handling selected game by user or application..
+        /// </summary>
+        internal static string AppDbgExSelGame {
+            get {
+                return ResourceManager.GetString("AppDbgExSelGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to get Steam path. Application will be terminated..
+        /// </summary>
+        internal static string AppDbgExSteamPath {
+            get {
+                return ResourceManager.GetString("AppDbgExSteamPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while initializing SteamManager class instance..
+        /// </summary>
+        internal static string AppDbgExStmmInit {
+            get {
+                return ResourceManager.GetString("AppDbgExStmmInit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while filling Graphic tweaker for Type1 game..
+        /// </summary>
+        internal static string AppDbgExT1LoadFail {
+            get {
+                return ResourceManager.GetString("AppDbgExT1LoadFail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to save Type1 graphical settings..
+        /// </summary>
+        internal static string AppDbgExT1SaveFail {
+            get {
+                return ResourceManager.GetString("AppDbgExT1SaveFail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to save auto backup before saving Type2 game settings..
+        /// </summary>
+        internal static string AppDbgExT2AutoFail {
+            get {
+                return ResourceManager.GetString("AppDbgExT2AutoFail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while filling Graphic tweaker for Type2 game..
+        /// </summary>
+        internal static string AppDbgExT2LoadFail {
+            get {
+                return ResourceManager.GetString("AppDbgExT2LoadFail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to save Type2 graphical settings..
+        /// </summary>
+        internal static string AppDbgExT2SaveFail {
+            get {
+                return ResourceManager.GetString("AppDbgExT2SaveFail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to open web browser to show cvarlist..
+        /// </summary>
+        internal static string AppDbgExUrlCvList {
+            get {
+                return ResourceManager.GetString("AppDbgExUrlCvList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to open web browser to show Steam group profile..
+        /// </summary>
+        internal static string AppDbgExUrlGroup {
+            get {
+                return ResourceManager.GetString("AppDbgExUrlGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to open web browser to show app commentary page..
+        /// </summary>
+        internal static string AppDbgExUrlHome {
+            get {
+                return ResourceManager.GetString("AppDbgExUrlHome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to open web browser to show HUD&apos;s homepage..
+        /// </summary>
+        internal static string AppDbgExUrlHudHome {
+            get {
+                return ResourceManager.GetString("AppDbgExUrlHudHome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception during new UserID selection..
+        /// </summary>
+        internal static string AppDbgExUserIdSel {
+            get {
+                return ResourceManager.GetString("AppDbgExUserIdSel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception on trying to launch Steam to validate game cache..
+        /// </summary>
+        internal static string AppDbgExValCache {
+            get {
+                return ResourceManager.GetString("AppDbgExValCache", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception on parsing XML game database. Application will be terminated..
+        /// </summary>
+        internal static string AppDbgExXmlParse {
+            get {
+                return ResourceManager.GetString("AppDbgExXmlParse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 0.
         /// </summary>
         internal static string AppDefaultSteamLangID {
