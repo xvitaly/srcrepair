@@ -430,6 +430,24 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while cleaning up debug log file..
+        /// </summary>
+        internal static string AppDbgExLvClean {
+            get {
+                return ResourceManager.GetString("AppDbgExLvClean", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to load current debug log file..
+        /// </summary>
+        internal static string AppDbgExLvLoad {
+            get {
+                return ResourceManager.GetString("AppDbgExLvLoad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception on trying to launch Windows registry editor to restore saved registry file..
         /// </summary>
         internal static string AppDbgExRegedit {

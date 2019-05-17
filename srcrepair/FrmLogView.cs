@@ -73,7 +73,7 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 MessageBox.Show(AppStrings.LV_LoadFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, "Exception while trying to load current debug log file.");
+                Logger.Error(Ex, AppStrings.AppDbgExLvLoad);
             }
         }
 
@@ -133,7 +133,7 @@ namespace srcrepair
             catch (Exception Ex)
             {
                 MessageBox.Show(AppStrings.LV_ClearEx, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, "Exception while cleaning up debug log file.");
+                Logger.Error(Ex, AppStrings.AppDbgExLvClean);
             }
         }
     }

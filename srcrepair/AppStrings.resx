@@ -768,6 +768,12 @@
   <data name="AppDbgExKbRWCtx" xml:space="preserve">
     <value>Exception while trying to disable right WIN and CONTEXT keys.</value>
   </data>
+  <data name="AppDbgExLvClean" xml:space="preserve">
+    <value>Exception while cleaning up debug log file.</value>
+  </data>
+  <data name="AppDbgExLvLoad" xml:space="preserve">
+    <value>Exception while trying to load current debug log file.</value>
+  </data>
   <data name="AppDbgExRegedit" xml:space="preserve">
     <value>Exception on trying to launch Windows registry editor to restore saved registry file.</value>
   </data>
