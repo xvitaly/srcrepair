@@ -717,6 +717,15 @@
   <data name="AppDbgExClnBlobs" xml:space="preserve">
     <value>Exception while cleaning up Steam blob files.</value>
   </data>
+  <data name="AppDbgExClnEmptyDirs" xml:space="preserve">
+    <value>Exception while cleaning up empty directories.</value>
+  </data>
+  <data name="AppDbgExClnFm" xml:space="preserve">
+    <value>Exception while trying to show selected file in file manager.</value>
+  </data>
+  <data name="AppDbgExClnQueueRun" xml:space="preserve">
+    <value>Exception while removing files from queue.</value>
+  </data>
   <data name="AppDbgExClnReg" xml:space="preserve">
     <value>Exception while cleaning up Steam registry entries.</value>
   </data>

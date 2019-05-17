@@ -325,7 +325,7 @@ namespace srcrepair
                     catch (Exception Ex)
                     {
                         MessageBox.Show(AppStrings.PS_CleanEmptyDirsError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        Logger.Error(Ex, "Exception while cleaning up empty directories.");
+                        Logger.Error(Ex, AppStrings.AppDbgExClnEmptyDirs);
                     }
                 }
             }
@@ -333,7 +333,7 @@ namespace srcrepair
             {
                 // Произошло исключение...
                 MessageBox.Show(AppStrings.PS_CleanupErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, "Exception while removing files from queue.");
+                Logger.Error(Ex, AppStrings.AppDbgExClnQueueRun);
             }
         }
 
@@ -429,7 +429,7 @@ namespace srcrepair
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, "Exception while trying to show selected file in file manager.");
+                Logger.Warn(Ex, AppStrings.AppDbgExClnFm);
             }
         }
 

@@ -277,6 +277,33 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while cleaning up empty directories..
+        /// </summary>
+        internal static string AppDbgExClnEmptyDirs {
+            get {
+                return ResourceManager.GetString("AppDbgExClnEmptyDirs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to show selected file in file manager..
+        /// </summary>
+        internal static string AppDbgExClnFm {
+            get {
+                return ResourceManager.GetString("AppDbgExClnFm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while removing files from queue..
+        /// </summary>
+        internal static string AppDbgExClnQueueRun {
+            get {
+                return ResourceManager.GetString("AppDbgExClnQueueRun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while cleaning up Steam registry entries..
         /// </summary>
         internal static string AppDbgExClnReg {
