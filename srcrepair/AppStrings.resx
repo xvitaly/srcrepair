@@ -750,6 +750,9 @@
   <data name="AppDbgExHudSelect" xml:space="preserve">
     <value>Exception while trying to select another HUD.</value>
   </data>
+  <data name="AppDbgExInstRun" xml:space="preserve">
+    <value>Exception while running installation of selected file.</value>
+  </data>
   <data name="AppDbgExRegedit" xml:space="preserve">
     <value>Exception on trying to launch Windows registry editor to restore saved registry file.</value>
   </data>

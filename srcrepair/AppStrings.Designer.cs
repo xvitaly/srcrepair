@@ -376,6 +376,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while running installation of selected file..
+        /// </summary>
+        internal static string AppDbgExInstRun {
+            get {
+                return ResourceManager.GetString("AppDbgExInstRun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception on trying to launch Windows registry editor to restore saved registry file..
         /// </summary>
         internal static string AppDbgExRegedit {

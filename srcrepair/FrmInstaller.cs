@@ -205,7 +205,7 @@ namespace srcrepair
                 {
                     // Произошло исключение, выведем сообщение...
                     MessageBox.Show(AppStrings.QI_Excpt, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, "Exception while running installation of selected file.");
+                    Logger.Error(Ex, AppStrings.AppDbgExInstRun);
                 }
             }
             else
