@@ -385,6 +385,51 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to disable both WIN keys..
+        /// </summary>
+        internal static string AppDbgExKbBW {
+            get {
+                return ResourceManager.GetString("AppDbgExKbBW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to disable both WIN and CONTEXT keys..
+        /// </summary>
+        internal static string AppDbgExKbBWCtx {
+            get {
+                return ResourceManager.GetString("AppDbgExKbBWCtx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to disable left WIN key..
+        /// </summary>
+        internal static string AppDbgExKbLW {
+            get {
+                return ResourceManager.GetString("AppDbgExKbLW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to disable all custom key overrides..
+        /// </summary>
+        internal static string AppDbgExKbRestore {
+            get {
+                return ResourceManager.GetString("AppDbgExKbRestore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to disable right WIN and CONTEXT keys..
+        /// </summary>
+        internal static string AppDbgExKbRWCtx {
+            get {
+                return ResourceManager.GetString("AppDbgExKbRWCtx", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception on trying to launch Windows registry editor to restore saved registry file..
         /// </summary>
         internal static string AppDbgExRegedit {

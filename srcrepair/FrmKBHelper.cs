@@ -36,6 +36,16 @@ namespace srcrepair
         private Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
+        /// Имя значения реестра с переопредением скан-кодов клавиш.
+        /// </summary>
+        private const string RegValueName = "Scancode Map";
+
+        /// <summary>
+        /// Имя ветки реестра, хранящей настройки клавиатуры.
+        /// </summary>
+        private const string RegKeyName = @"SYSTEM\CurrentControlSet\Control\Keyboard Layout";
+
+        /// <summary>
         /// Конструктор класса формы модуля отключения системных клавиш.
         /// </summary>
         public FrmKBHelper()
@@ -48,8 +58,8 @@ namespace srcrepair
         /// </summary>
         private void WriteKBS(byte[] Value)
         {
-            RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Control\Keyboard Layout", true);
-            ResKey.SetValue("Scancode Map", Value, RegistryValueKind.Binary);
+            RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(RegKeyName, true);
+            ResKey.SetValue(RegValueName, Value, RegistryValueKind.Binary);
             ResKey.Close();
         }
 
@@ -58,7 +68,7 @@ namespace srcrepair
         /// </summary>
         private void DeleteKBS(string Value)
         {
-            RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Control\Keyboard Layout", true);
+            RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(RegKeyName, true);
             ResKey.DeleteValue(Value);
             ResKey.Close();
         }
@@ -81,7 +91,7 @@ namespace srcrepair
                 catch (Exception Ex)
                 {
                     MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, "Exception while trying to disable left WIN key.");
+                    Logger.Error(Ex, AppStrings.AppDbgExKbLW);
                 }
             }
         }
@@ -104,7 +114,7 @@ namespace srcrepair
                 catch (Exception Ex)
                 {
                     MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, "Exception while trying to disable both WIN keys.");
+                    Logger.Error(Ex, AppStrings.AppDbgExKbBW);
                 }
             }
         }
@@ -127,7 +137,7 @@ namespace srcrepair
                 catch (Exception Ex)
                 {
                     MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, "Exception while trying to disable right WIN and CONTEXT keys.");
+                    Logger.Error(Ex, AppStrings.AppDbgExKbRWCtx);
                 }
             }
         }
@@ -150,7 +160,7 @@ namespace srcrepair
                 catch (Exception Ex)
                 {
                     MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, "Exception while trying to disable both WIN and CONTEXT keys.");
+                    Logger.Error(Ex, AppStrings.AppDbgExKbBWCtx);
                 }
             }
         }
@@ -165,14 +175,14 @@ namespace srcrepair
             {
                 try
                 {
-                    DeleteKBS("Scancode Map");
+                    DeleteKBS(RegValueName);
                     MessageBox.Show(AppStrings.KB_ExSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
                 catch (Exception Ex)
                 {
                     MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, "Exception while trying to disable all custom key overrides.");
+                    Logger.Error(Ex, AppStrings.AppDbgExKbRestore);
                 }
             }
         }
