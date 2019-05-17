@@ -628,6 +628,24 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to install binary update..
+        /// </summary>
+        internal static string AppDbgExUpdBinInst {
+            get {
+                return ResourceManager.GetString("AppDbgExUpdBinInst", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to install XML database update..
+        /// </summary>
+        internal static string AppDbgExUpdXmlDbInst {
+            get {
+                return ResourceManager.GetString("AppDbgExUpdXmlDbInst", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to open web browser to show cvarlist..
         /// </summary>
         internal static string AppDbgExUrlCvList {

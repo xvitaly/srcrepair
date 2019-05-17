@@ -148,7 +148,7 @@ namespace srcrepair
                 {
                     // Выводим сообщение об ошибке...
                     MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Logger.Error(Ex, "Exception while trying to install XML database update.");
+                    Logger.Error(Ex, AppStrings.AppDbgExUpdXmlDbInst);
                 }
 
                 // Удаляем загруженный файл если он существует...
@@ -212,7 +212,7 @@ namespace srcrepair
                     catch (Exception Ex)
                     {
                         MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        Logger.Error(Ex, "Exception while trying to install binary update.");
+                        Logger.Error(Ex, AppStrings.AppDbgExUpdBinInst);
                     }
                 }
                 else

@@ -834,6 +834,12 @@
   <data name="AppDbgExT2SaveFail" xml:space="preserve">
     <value>Exception while trying to save Type2 graphical settings.</value>
   </data>
+  <data name="AppDbgExUpdBinInst" xml:space="preserve">
+    <value>Exception while trying to install binary update.</value>
+  </data>
+  <data name="AppDbgExUpdXmlDbInst" xml:space="preserve">
+    <value>Exception while trying to install XML database update.</value>
+  </data>
   <data name="AppDbgExUrlCvList" xml:space="preserve">
     <value>Exception while trying to open web browser to show cvarlist.</value>
   </data>
