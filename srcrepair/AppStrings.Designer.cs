@@ -664,6 +664,15 @@ namespace srcrepair {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to open web browser to show Steam profile..
+        /// </summary>
+        internal static string AppDbgExUrlStmSel {
+            get {
+                return ResourceManager.GetString("AppDbgExUrlStmSel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception during new UserID selection..
         /// </summary>
         internal static string AppDbgExUserIdSel {

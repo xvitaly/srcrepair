@@ -103,7 +103,7 @@ namespace srcrepair
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, "Exception while trying to open web browser to show Steam profile.");
+                Logger.Warn(Ex, AppStrings.AppDbgExUrlStmSel);
             }
         }
     }
