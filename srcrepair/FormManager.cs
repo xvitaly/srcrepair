@@ -22,8 +22,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
+using srcrepair.core;
 
-namespace srcrepair.core
+namespace srcrepair.gui
 {
     /// <summary>
     /// Класс для взаимодействия с отдельным формами и расширениями.

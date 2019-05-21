@@ -23,7 +23,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 
-namespace srcrepair
+namespace srcrepair.gui
 {
     /// <summary>
     /// Класс формы модуля настроек программы.

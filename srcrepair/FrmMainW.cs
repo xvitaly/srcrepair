@@ -26,13 +26,14 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Resources;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using NLog;
 using srcrepair.core;
 
-namespace srcrepair
+namespace srcrepair.gui
 {
     /// <summary>
     /// Класс главной формы приложения.
@@ -1085,6 +1086,18 @@ namespace srcrepair
         {
             List<String> Result = new List<String> { Str };
             return Result;
+        }
+
+        /// <summary>
+        /// Возвращает описание переданной в качестве параметра переменной, получая
+        /// эту информацию из ресурса CVList с учётом локализации.
+        /// </summary>
+        /// <param name="CVar">Название переменной</param>
+        /// <returns>Описание переменной с учётом локализации</returns>
+        public string GetConVarDescription(string CVar)
+        {
+            ResourceManager DM = new ResourceManager(Properties.Resources.CE_CVResDf, typeof(FrmMainW).Assembly);
+            return DM.GetString(CVar);
         }
 
         #endregion
@@ -2232,7 +2245,7 @@ namespace srcrepair
             try
             {
                 string Buf = CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[0].Value.ToString();
-                if (!(String.IsNullOrEmpty(Buf))) { Buf = CurrentApp.GetConVarDescription(Buf); if (!(String.IsNullOrEmpty(Buf))) { MessageBox.Show(Buf, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(AppStrings.CE_ClNoDescr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } } else { MessageBox.Show(AppStrings.CE_ClSelErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                if (!(String.IsNullOrEmpty(Buf))) { Buf = GetConVarDescription(Buf); if (!(String.IsNullOrEmpty(Buf))) { MessageBox.Show(Buf, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(AppStrings.CE_ClNoDescr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } } else { MessageBox.Show(AppStrings.CE_ClSelErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             }
             catch
             {

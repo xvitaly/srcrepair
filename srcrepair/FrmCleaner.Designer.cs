@@ -1,4 +1,4 @@
-﻿namespace srcrepair
+﻿namespace srcrepair.gui
 {
     partial class FrmCleaner
     {

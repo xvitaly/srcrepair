@@ -24,7 +24,7 @@ using System.Windows.Forms;
 using System.IO;
 using srcrepair.core;
 
-namespace srcrepair
+namespace srcrepair.gui
 {
     /// <summary>
     /// Класс формы модуля очистки кэшей Steam.

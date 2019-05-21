@@ -27,7 +27,7 @@ using Ionic.Zip;
 using NLog;
 using srcrepair.core;
 
-namespace srcrepair
+namespace srcrepair.gui
 {
     /// <summary>
     /// Класс формы модуля создания отчётов для техподдержки.

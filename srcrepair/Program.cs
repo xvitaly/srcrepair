@@ -22,7 +22,7 @@ using System;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace srcrepair
+namespace srcrepair.gui
 {
     static class Program
     {

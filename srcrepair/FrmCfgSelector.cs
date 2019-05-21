@@ -22,7 +22,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace srcrepair
+namespace srcrepair.gui
 {
     /// <summary>
     /// Класс формы модуля выбора конфига.

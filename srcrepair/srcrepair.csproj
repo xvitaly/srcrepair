@@ -16,7 +16,7 @@
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>srcrepair.Program</StartupObject>
+    <StartupObject>srcrepair.gui.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>srcrepair.ico</ApplicationIcon>

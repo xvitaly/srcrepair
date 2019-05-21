@@ -25,7 +25,7 @@ using System.IO;
 using Ionic.Zip;
 using NLog;
 
-namespace srcrepair
+namespace srcrepair.gui
 {
     /// <summary>
     /// Класс формы модуля распаковки файлов из архивов.

@@ -22,7 +22,7 @@ using System;
 using System.Windows.Forms;
 using srcrepair.core;
 
-namespace srcrepair
+namespace srcrepair.gui
 {
     /// <summary>
     /// Класс формы "О программе".

@@ -23,7 +23,7 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using NLog;
 
-namespace srcrepair
+namespace srcrepair.gui
 {
     /// <summary>
     /// Класс формы модуля отключения системных клавиш.

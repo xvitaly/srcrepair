@@ -26,7 +26,7 @@ using System.Windows.Forms;
 using NLog;
 using srcrepair.core;
 
-namespace srcrepair
+namespace srcrepair.gui
 {
     /// <summary>
     /// Класс формы модуля обновления программы SRC Repair.

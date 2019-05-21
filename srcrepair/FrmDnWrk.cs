@@ -25,7 +25,7 @@ using System.Net;
 using System.IO;
 using NLog;
 
-namespace srcrepair
+namespace srcrepair.gui
 {
     /// <summary>
     /// Класс формы модуля загрузки файлов из Интернета.

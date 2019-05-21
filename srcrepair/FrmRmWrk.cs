@@ -26,7 +26,7 @@ using System.IO;
 using NLog;
 using srcrepair.core;
 
-namespace srcrepair
+namespace srcrepair.gui
 {
     /// <summary>
     /// Класс формы модуля быстрой очистки.

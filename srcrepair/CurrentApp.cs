@@ -107,18 +107,6 @@ namespace srcrepair.core
         public static string AppCopyright { get { object[] Attribs = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false); return Attribs.Length != 0 ? ((AssemblyCopyrightAttribute)Attribs[0]).Copyright : String.Empty; } }
 
         /// <summary>
-        /// Возвращает описание переданной в качестве параметра переменной, получая
-        /// эту информацию из ресурса CVList с учётом локализации.
-        /// </summary>
-        /// <param name="CVar">Название переменной</param>
-        /// <returns>Описание переменной с учётом локализации</returns>
-        public static string GetConVarDescription(string CVar)
-        {
-            ResourceManager DM = new ResourceManager(Properties.Resources.CE_CVResDf, typeof(FrmMainW).Assembly);
-            return DM.GetString(CVar);
-        }
-
-        /// <summary>
         /// Конструктор класса. Получает информацию для рантайма.
         /// </summary>
         public CurrentApp()
