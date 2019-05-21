@@ -179,7 +179,7 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://steamcommunity.com/groups/srcrepair.
+        ///   Looks up a localized string similar to https://steamcommunity.com/groups/srcrepair.
         /// </summary>
         internal static string AppURLSteamGroup {
             get {
@@ -486,7 +486,7 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://steamcommunity.com/profiles/{0}/.
+        ///   Looks up a localized string similar to https://steamcommunity.com/profiles/{0}/.
         /// </summary>
         internal static string MM_CommunityURL {
             get {
