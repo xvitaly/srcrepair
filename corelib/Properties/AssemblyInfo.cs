@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("corelib")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("SRC Repair Core Library")]
+[assembly: AssemblyDescription("SRC Repair Core Library")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("corelib")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("EasyCoding Team")]
+[assembly: AssemblyProduct("SRC Repair Core Library")]
+[assembly: AssemblyCopyright("(c) 2005-2019 EasyCoding Team. All rights reserved.")]
+[assembly: AssemblyTrademark("EasyCoding, EasyCoding Software Group and EasyCoding Team are trademarks of EasyCoding Team.")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
