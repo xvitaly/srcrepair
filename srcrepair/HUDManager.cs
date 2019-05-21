@@ -24,7 +24,7 @@ using System.Xml;
 using System.Collections.Generic;
 using NLog;
 
-namespace srcrepair
+namespace srcrepair.core
 {
     /// <summary>
     /// Класс для работы с коллекцией HUD.

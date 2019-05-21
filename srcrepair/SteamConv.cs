@@ -21,7 +21,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace srcrepair
+namespace srcrepair.core
 {
     public static class SteamConv
     {

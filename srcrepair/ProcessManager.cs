@@ -24,7 +24,7 @@ using System.IO;
 using System.Security.Permissions;
 using System.Security.Principal;
 
-namespace srcrepair
+namespace srcrepair.core
 {
     /// <summary>
     /// Класс для взаимодействия с внешними процессами.

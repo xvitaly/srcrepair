@@ -22,7 +22,7 @@ using System;
 using System.IO;
 using System.Reflection;
 
-namespace srcrepair
+namespace srcrepair.core
 {
     /// <summary>
     /// Класс, предоставляющий методы для общих целей.

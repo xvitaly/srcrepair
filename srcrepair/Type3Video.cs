@@ -24,7 +24,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace srcrepair
+namespace srcrepair.core
 {
     public class Type3Video : VideoSettings
     {

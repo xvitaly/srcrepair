@@ -26,6 +26,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using NLog;
+using srcrepair.core;
 
 namespace srcrepair
 {

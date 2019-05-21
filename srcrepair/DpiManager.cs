@@ -22,7 +22,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace srcrepair
+namespace srcrepair.core
 {
     /// <summary>
     /// Класс для работы с экранами с высокой плотностью пикселей.

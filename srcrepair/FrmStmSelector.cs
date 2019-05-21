@@ -22,6 +22,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using NLog;
+using srcrepair.core;
 
 namespace srcrepair
 {

@@ -24,7 +24,7 @@ using System.IO;
 using System.Xml;
 using NLog;
 
-namespace srcrepair
+namespace srcrepair.core
 {
     /// <summary>
     /// Класс для работы с коллекцией установленных поддерживаемых игр.

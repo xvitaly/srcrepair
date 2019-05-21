@@ -21,7 +21,7 @@
 using System;
 using System.IO;
 
-namespace srcrepair
+namespace srcrepair.core
 {
     /// <summary>
     /// Класс для определения запущенной платформы и работы с ней.

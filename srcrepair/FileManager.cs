@@ -28,7 +28,7 @@ using System.Text.RegularExpressions;
 using Microsoft.Win32;
 using Ionic.Zip;
 
-namespace srcrepair
+namespace srcrepair.core
 {
     /// <summary>
     /// Класс для работы с отдельными файлами и каталогами.

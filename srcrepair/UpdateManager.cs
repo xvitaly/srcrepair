@@ -24,7 +24,7 @@ using System.Net;
 using System.Reflection;
 using System.Xml;
 
-namespace srcrepair
+namespace srcrepair.core
 {
     /// <summary>
     /// Класс, используемый для проверки обновлений.

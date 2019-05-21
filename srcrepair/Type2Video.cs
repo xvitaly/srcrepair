@@ -25,7 +25,7 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace srcrepair
+namespace srcrepair.core
 {
     /// <summary>
     /// Управляет графическими настройками Type 2 приложений.

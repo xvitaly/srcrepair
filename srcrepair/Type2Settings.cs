@@ -18,7 +18,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
-namespace srcrepair
+namespace srcrepair.core
 {
     /// <summary>
     /// Служебный класс работы с настройками графики Type 2 игр.

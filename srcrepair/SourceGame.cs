@@ -22,7 +22,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace srcrepair
+namespace srcrepair.core
 {
     public sealed class SourceGame
     {

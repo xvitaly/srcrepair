@@ -24,6 +24,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.IO;
 using NLog;
+using srcrepair.core;
 
 namespace srcrepair
 {

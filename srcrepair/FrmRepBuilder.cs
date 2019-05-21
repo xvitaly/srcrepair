@@ -25,6 +25,7 @@ using System.Text;
 using System.Windows.Forms;
 using Ionic.Zip;
 using NLog;
+using srcrepair.core;
 
 namespace srcrepair
 {

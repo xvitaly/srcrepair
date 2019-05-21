@@ -25,7 +25,7 @@ using System.Reflection;
 using System.Resources;
 using NLog;
 
-namespace srcrepair
+namespace srcrepair.core
 {
     /// <summary>
     /// Класс работы с рантаймом.

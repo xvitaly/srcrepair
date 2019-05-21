@@ -20,7 +20,7 @@
 */
 using System;
 
-namespace srcrepair
+namespace srcrepair.core
 {
     /// <summary>
     /// Класс для работы с определённым HUD.

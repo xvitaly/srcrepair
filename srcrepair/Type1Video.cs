@@ -23,7 +23,7 @@ using System.IO;
 using Microsoft.Win32;
 using NLog;
 
-namespace srcrepair
+namespace srcrepair.core
 {
     /// <summary>
     /// Управляет графическими настройками Type 1 приложений.

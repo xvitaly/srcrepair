@@ -25,7 +25,7 @@ using System.Text;
 using Microsoft.Win32;
 using NLog;
 
-namespace srcrepair
+namespace srcrepair.core
 {
     /// <summary>
     /// Класс для взаимодействия с клиентом Steam.
