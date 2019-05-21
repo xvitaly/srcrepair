@@ -22,7 +22,6 @@ using System;
 using System.Globalization;
 using System.IO;
 using System.Reflection;
-using System.Resources;
 using NLog;
 
 namespace srcrepair.core
