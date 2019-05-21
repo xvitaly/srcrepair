@@ -21,7 +21,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace srcrepair
+namespace srcrepair.core
 {
     /// <summary>
     /// Класс для работы с определённым конфигом.

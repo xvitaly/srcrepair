@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.26430.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "srcrepair", "srcrepair\srcrepair.csproj", "{83A0493F-A5D9-4306-9AB6-FB722EBE85BD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2CE9E668-998B-4A77-911F-ED8A2D4E3153} = {2CE9E668-998B-4A77-911F-ED8A2D4E3153}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "corelib", "corelib\corelib.csproj", "{2CE9E668-998B-4A77-911F-ED8A2D4E3153}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +20,15 @@ Global
 		{83A0493F-A5D9-4306-9AB6-FB722EBE85BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83A0493F-A5D9-4306-9AB6-FB722EBE85BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83A0493F-A5D9-4306-9AB6-FB722EBE85BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CE9E668-998B-4A77-911F-ED8A2D4E3153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CE9E668-998B-4A77-911F-ED8A2D4E3153}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CE9E668-998B-4A77-911F-ED8A2D4E3153}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CE9E668-998B-4A77-911F-ED8A2D4E3153}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B585AD38-5357-44E3-A22F-AD0599BFB786}
 	EndGlobalSection
 EndGlobal
