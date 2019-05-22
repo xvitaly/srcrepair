@@ -105,11 +105,12 @@ namespace srcrepair.core
         /// <param name="ConfName">Имя конфига</param>
         /// <param name="AppPath">Путь к программе SRC Repair</param>
         /// <param name="GameDir">Путь к каталогу игры</param>
-        /// <param name="CustmDir">Флаг использования игрой н. с. к.</param>
-        public static void InstallConfigNow(string ConfName, string AppPath, string GameDir, bool CustmDir)
+        /// <param name="UseCustmDir">Флаг использования игрой н. с. к.</param>
+        /// <param name="CustmDir">Имя нестандартного каталога</param>
+        public static void InstallConfigNow(string ConfName, string AppPath, string GameDir, bool UseCustmDir, string CustmDir)
         {
             // Генерируем путь к каталогу установки конфига...
-            string DestPath = Path.Combine(GameDir, CustmDir ? Path.Combine("custom", Properties.Settings.Default.UserCustDirName) : String.Empty, "cfg");
+            string DestPath = Path.Combine(GameDir, UseCustmDir ? Path.Combine("custom", CustmDir) : String.Empty, "cfg");
 
             // Проверяем существование каталога и если его не существует - создаём...
             if (!Directory.Exists(DestPath)) { Directory.CreateDirectory(DestPath); }
