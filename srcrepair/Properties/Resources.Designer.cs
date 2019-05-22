@@ -116,24 +116,6 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to xdg-open.
-        /// </summary>
-        internal static string AppOpenHandlerLin {
-            get {
-                return ResourceManager.GetString("AppOpenHandlerLin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to open.
-        /// </summary>
-        internal static string AppOpenHandlerMac {
-            get {
-                return ResourceManager.GetString("AppOpenHandlerMac", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to https://www.easycoding.org/projects/srcrepair#respond.
         /// </summary>
         internal static string AppURLReply {
@@ -640,24 +622,6 @@ namespace srcrepair.Properties {
             get {
                 object obj = ResourceManager.GetObject("Search", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to explorer.exe.
-        /// </summary>
-        internal static string ShBinWin {
-            get {
-                return ResourceManager.GetString("ShBinWin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to /select,.
-        /// </summary>
-        internal static string ShParamWin {
-            get {
-                return ResourceManager.GetString("ShParamWin", resourceCulture);
             }
         }
         

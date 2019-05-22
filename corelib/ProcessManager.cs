@@ -194,14 +194,15 @@ namespace srcrepair.core
         /// Открывает указанный URL в выбранном в настройках текстовом редакторе.
         /// </summary>
         /// <param name="FileName">Файл для загрузки</param>
+        /// <param name="EditorBin">Приложение текстового редактора</param>
         /// <param name="OS">Код платформы, на которой запущено приложение</param>
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
-        public static void OpenTextEditor(string FileName, CurrentPlatform.OSType OS)
+        public static void OpenTextEditor(string FileName, string EditorBin, CurrentPlatform.OSType OS)
         {
             switch (OS)
             {
                 case CurrentPlatform.OSType.Windows:
-                    Process.Start(Properties.Settings.Default.EditorBin, FileName);
+                    Process.Start(EditorBin, FileName);
                     break;
                 case CurrentPlatform.OSType.Linux:
                     Process.Start(Properties.Resources.AppOpenHandlerLin, FileName);

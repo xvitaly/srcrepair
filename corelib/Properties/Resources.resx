@@ -120,6 +120,12 @@
   <data name="AppDefUA" xml:space="preserve">
     <value>Mozilla/5.0 ({0} {1} {2}.{3}; {4}; rv:{5}) {6} ({7})</value>
   </data>
+  <data name="AppOpenHandlerLin" xml:space="preserve">
+    <value>xdg-open</value>
+  </data>
+  <data name="AppOpenHandlerMac" xml:space="preserve">
+    <value>open</value>
+  </data>
   <data name="AppUASuffixOther" xml:space="preserve">
     <value>(mono)</value>
   </data>
@@ -128,6 +134,12 @@
   </data>
   <data name="PathValidateRegex" xml:space="preserve">
     <value>^[0-9a-zA-Z :()-_./\\\\]*$</value>
+  </data>
+  <data name="ShBinWin" xml:space="preserve">
+    <value>explorer.exe</value>
+  </data>
+  <data name="ShParamWin" xml:space="preserve">
+    <value>/select,</value>
   </data>
   <data name="SteamAppsFolderNameLin" xml:space="preserve">
     <value>steamapps</value>

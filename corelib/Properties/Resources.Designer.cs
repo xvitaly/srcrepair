@@ -70,6 +70,24 @@ namespace srcrepair.core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to xdg-open.
+        /// </summary>
+        internal static string AppOpenHandlerLin {
+            get {
+                return ResourceManager.GetString("AppOpenHandlerLin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to open.
+        /// </summary>
+        internal static string AppOpenHandlerMac {
+            get {
+                return ResourceManager.GetString("AppOpenHandlerMac", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to (mono).
         /// </summary>
         internal static string AppUASuffixOther {
@@ -93,6 +111,24 @@ namespace srcrepair.core.Properties {
         internal static string PathValidateRegex {
             get {
                 return ResourceManager.GetString("PathValidateRegex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to explorer.exe.
+        /// </summary>
+        internal static string ShBinWin {
+            get {
+                return ResourceManager.GetString("ShBinWin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /select,.
+        /// </summary>
+        internal static string ShParamWin {
+            get {
+                return ResourceManager.GetString("ShParamWin", resourceCulture);
             }
         }
         

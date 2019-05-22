@@ -331,18 +331,6 @@
   <data name="CE_CVResDf" xml:space="preserve">
     <value>srcrepair.CVList</value>
   </data>
-  <data name="AppOpenHandlerLin" xml:space="preserve">
-    <value>xdg-open</value>
-  </data>
-  <data name="AppOpenHandlerMac" xml:space="preserve">
-    <value>open</value>
-  </data>
-  <data name="ShBinWin" xml:space="preserve">
-    <value>explorer.exe</value>
-  </data>
-  <data name="ShParamWin" xml:space="preserve">
-    <value>/select,</value>
-  </data>
   <data name="AppHelpFileName" xml:space="preserve">
     <value>srcrepair_{0}.chm</value>
   </data>
