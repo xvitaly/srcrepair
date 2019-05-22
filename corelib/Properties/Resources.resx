@@ -117,7 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AppDefUA" xml:space="preserve">
+    <value>Mozilla/5.0 ({0} {1} {2}.{3}; {4}; rv:{5}) {6} ({7})</value>
+  </data>
+  <data name="AppUASuffixOther" xml:space="preserve">
+    <value>(mono)</value>
+  </data>
+  <data name="AppUASuffixWin" xml:space="preserve">
+    <value>NT</value>
+  </data>
   <data name="PathValidateRegex" xml:space="preserve">
     <value>^[0-9a-zA-Z :()-_./\\\\]*$</value>
+  </data>
+  <data name="SteamAppsFolderNameLin" xml:space="preserve">
+    <value>steamapps</value>
+  </data>
+  <data name="SteamAppsFolderNameMac" xml:space="preserve">
+    <value>steamapps</value>
+  </data>
+  <data name="SteamAppsFolderNameWin" xml:space="preserve">
+    <value>SteamApps</value>
+  </data>
+  <data name="SteamExecBinLin" xml:space="preserve">
+    <value>steam</value>
+  </data>
+  <data name="SteamExecBinMac" xml:space="preserve">
+    <value>steam</value>
+  </data>
+  <data name="SteamExecBinWin" xml:space="preserve">
+    <value>Steam.exe</value>
+  </data>
+  <data name="SteamProcNameLin" xml:space="preserve">
+    <value>steam</value>
+  </data>
+  <data name="SteamProcNameMac" xml:space="preserve">
+    <value>steam</value>
+  </data>
+  <data name="SteamProcNameWin" xml:space="preserve">
+    <value>Steam</value>
   </data>
 </root>

@@ -89,15 +89,6 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mozilla/5.0 ({0} {1} {2}.{3}; {4}; rv:{5}) {6} ({7}).
-        /// </summary>
-        internal static string AppDefUA {
-            get {
-                return ResourceManager.GetString("AppDefUA", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to wget.
         /// </summary>
         internal static string AppDnlUA {
@@ -139,24 +130,6 @@ namespace srcrepair.Properties {
         internal static string AppOpenHandlerMac {
             get {
                 return ResourceManager.GetString("AppOpenHandlerMac", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to (mono).
-        /// </summary>
-        internal static string AppUASuffixOther {
-            get {
-                return ResourceManager.GetString("AppUASuffixOther", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to NT.
-        /// </summary>
-        internal static string AppUASuffixWin {
-            get {
-                return ResourceManager.GetString("AppUASuffixWin", resourceCulture);
             }
         }
         
@@ -705,87 +678,6 @@ namespace srcrepair.Properties {
             get {
                 object obj = ResourceManager.GetObject("steam", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to steamapps.
-        /// </summary>
-        internal static string SteamAppsFolderNameLin {
-            get {
-                return ResourceManager.GetString("SteamAppsFolderNameLin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to steamapps.
-        /// </summary>
-        internal static string SteamAppsFolderNameMac {
-            get {
-                return ResourceManager.GetString("SteamAppsFolderNameMac", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to SteamApps.
-        /// </summary>
-        internal static string SteamAppsFolderNameWin {
-            get {
-                return ResourceManager.GetString("SteamAppsFolderNameWin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to steam.
-        /// </summary>
-        internal static string SteamExecBinLin {
-            get {
-                return ResourceManager.GetString("SteamExecBinLin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to steam.
-        /// </summary>
-        internal static string SteamExecBinMac {
-            get {
-                return ResourceManager.GetString("SteamExecBinMac", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Steam.exe.
-        /// </summary>
-        internal static string SteamExecBinWin {
-            get {
-                return ResourceManager.GetString("SteamExecBinWin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to steam.
-        /// </summary>
-        internal static string SteamProcNameLin {
-            get {
-                return ResourceManager.GetString("SteamProcNameLin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to steam.
-        /// </summary>
-        internal static string SteamProcNameMac {
-            get {
-                return ResourceManager.GetString("SteamProcNameMac", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Steam.
-        /// </summary>
-        internal static string SteamProcNameWin {
-            get {
-                return ResourceManager.GetString("SteamProcNameWin", resourceCulture);
             }
         }
         

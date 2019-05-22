@@ -103,7 +103,7 @@ namespace srcrepair.core
         /// <summary>
         /// Конструктор класса. Получает информацию для рантайма.
         /// </summary>
-        public CurrentApp(bool IsPortable, string AppName, string UserAgent)
+        public CurrentApp(bool IsPortable, string AppName)
         {
             // Получим информацию о платформе, на которой запущено приложение...
             Platform = new CurrentPlatform();
@@ -121,7 +121,7 @@ namespace srcrepair.core
             }
 
             // Генерируем User-Agent для SRC Repair...
-            UserAgent = String.Format(UserAgent, Platform.OSFriendlyName, Platform.UASuffix, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersion, AppName, SystemArch);
+            UserAgent = String.Format(Properties.Resources.AppDefUA, Platform.OSFriendlyName, Platform.UASuffix, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersion, AppName, SystemArch);
         }
     }
 }

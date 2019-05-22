@@ -65,7 +65,9 @@ namespace srcrepair.core
         /// Главный конструктор класса GameManager.
         /// </summary>
         /// <param name="App">Экземпляр класса с параметрами приложения</param>
-        public GameManager(CurrentApp App)
+        /// <param name="GameDbFile">Имя файла с базой игр</param>
+        /// <param name="HideUnsupported">Добавлять ли в список неподдерживаемые</param>
+        public GameManager(CurrentApp App, string GameDbFile, bool HideUnsupported)
         {
             // Создаём объекты для хранения базы игр...
             SourceGames = new List<SourceGame>();
@@ -75,7 +77,7 @@ namespace srcrepair.core
             List<String> GameDirs = App.SteamClient.FormatInstallDirs(App.Platform.SteamAppsFolderName);
 
             // Создаём поток с XML-файлом...
-            using (FileStream XMLFS = new FileStream(Path.Combine(App.FullAppPath, Properties.Resources.GameListFile), FileMode.Open, FileAccess.Read))
+            using (FileStream XMLFS = new FileStream(Path.Combine(App.FullAppPath, GameDbFile), FileMode.Open, FileAccess.Read))
             {
                 // Создаём объект документа XML...
                 XmlDocument XMLD = new XmlDocument();
@@ -89,7 +91,7 @@ namespace srcrepair.core
                 {
                     try
                     {
-                        if (XMLD.GetElementsByTagName("Enabled")[i].InnerText == "1" || !Properties.Settings.Default.HideUnsupportedGames)
+                        if (XMLD.GetElementsByTagName("Enabled")[i].InnerText == "1" || !HideUnsupported)
                         {
                             SourceGame SG = new SourceGame(XMLNode[i].Attributes["Name"].Value, XMLD.GetElementsByTagName("DirName")[i].InnerText, XMLD.GetElementsByTagName("SmallName")[i].InnerText, XMLD.GetElementsByTagName("Executable")[i].InnerText, XMLD.GetElementsByTagName("SID")[i].InnerText, XMLD.GetElementsByTagName("SVer")[i].InnerText, XMLD.GetElementsByTagName("VFDir")[i].InnerText, App.Platform.OS == CurrentPlatform.OSType.Windows ? XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1" : true, XMLD.GetElementsByTagName("UserDir")[i].InnerText == "1", XMLD.GetElementsByTagName("HUDsAvail")[i].InnerText == "1", App.FullAppPath, App.AppUserDir, App.SteamClient.FullSteamPath, App.Platform.SteamAppsFolderName, App.SteamClient.SteamID, GameDirs, App.Platform.OS);
                             if (SG.IsInstalled)
