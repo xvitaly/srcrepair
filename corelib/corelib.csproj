@@ -7,7 +7,7 @@
     <ProjectGuid>{2CE9E668-998B-4A77-911F-ED8A2D4E3153}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>corelib</RootNamespace>
+    <RootNamespace>srcrepair.core</RootNamespace>
     <AssemblyName>corelib</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
