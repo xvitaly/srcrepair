@@ -70,5 +70,16 @@ namespace srcrepair.core
                 StatusBarItem.Width = (int)Math.Round(StatusBarItem.Width * ScaleFactor.Width);
             }
         }
+
+        /// <summary>
+        /// Сравнивает два вещественных числа одинарной точности друг с другом.
+        /// </summary>
+        /// <param name="First">Первое число</param>
+        /// <param name="Second">Второе число</param>
+        /// <returns>Результат сравнения</returns>
+        public static bool CompareFloats(float First, float Second)
+        {
+            return Math.Abs(First - Second) < 0.00001f;
+        }
     }
 }

@@ -29,7 +29,7 @@ namespace srcrepair.gui
     /// <summary>
     /// Класс для взаимодействия с отдельным формами и расширениями.
     /// </summary>
-    public static class FormManager
+    public static class GuiHelpers
     {
         /// <summary>
         /// Начинает загрузку с указанного URL с подробным отображением процесса.
@@ -265,6 +265,35 @@ namespace srcrepair.gui
             {
                 FMm.ShowDialog();
             }
+        }
+
+        /// <summary>
+        /// Форматирует размер файла для удобства пользователя.
+        /// Файлы от 0 до 1 КБ - 1 записываются в байтах, от 1 КБ до
+        /// 1 МБ - 1 - в килобайтах, от 1 МБ до 1 ГБ - 1 - в мегабайтах.
+        /// </summary>
+        /// <param name="InpNumber">Размер файла в байтах</param>
+        /// <returns>Форматированная строка</returns>
+        public static string SclBytes(long InpNumber)
+        {
+            // Задаём константы...
+            const long B = 1024;
+            const long KB = B * B;
+            const long MB = B * B * B;
+            const long GB = B * B * B * B;
+            const string Template = "{0} {1}";
+
+            // Проверяем на размер в байтах...
+            if ((InpNumber >= 0) && (InpNumber < B)) { return String.Format(Template, InpNumber, AppStrings.AppSizeBytes); }
+            // ...килобайтах...
+            else if ((InpNumber >= B) && (InpNumber < KB)) { return String.Format(Template, Math.Round((float)InpNumber / B, 2), AppStrings.AppSizeKilobytes); }
+            // ...мегабайтах...
+            else if ((InpNumber >= KB) && (InpNumber < MB)) { return String.Format(Template, Math.Round((float)InpNumber / KB, 2), AppStrings.AppSizeMegabytes); }
+            // ...гигабайтах.
+            else if ((InpNumber >= MB) && (InpNumber < GB)) { return String.Format(Template, Math.Round((float)InpNumber / MB, 2), AppStrings.AppSizeGigabytes); }
+
+            // Если размер всё-таки больше, выведем просто строку...
+            return InpNumber.ToString();
         }
     }
 }

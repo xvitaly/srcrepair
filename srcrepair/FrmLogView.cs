@@ -111,7 +111,7 @@ namespace srcrepair.gui
         private void LV_MenuHelpAbout_Click(object sender, EventArgs e)
         {
             // Выводим сообщение с краткой информацией о плагине...
-            FormManager.FormShowAboutApp();
+            GuiHelpers.FormShowAboutApp();
         }
 
         /// <summary>

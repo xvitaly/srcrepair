@@ -211,7 +211,7 @@ namespace srcrepair.gui
         /// </summary>
         private void AboutDlg(object sender, EventArgs e)
         {
-            FormManager.FormShowAboutApp();
+            GuiHelpers.FormShowAboutApp();
         }
 
         /// <summary>

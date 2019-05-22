@@ -1694,7 +1694,7 @@ namespace srcrepair.gui
                 if (App.SourceGames.SelectedGame.FPSConfigs.Count > 0)
                 {
                     // Удаляем конфиги...
-                    FormManager.FormShowCleanup(App.SourceGames.SelectedGame.FPSConfigs, ((Button)sender).Text.ToLower(), AppStrings.FP_RemoveSuccessful, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile, false, false, false, Properties.Settings.Default.SafeCleanup);
+                    GuiHelpers.FormShowCleanup(App.SourceGames.SelectedGame.FPSConfigs, ((Button)sender).Text.ToLower(), AppStrings.FP_RemoveSuccessful, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile, false, false, false, Properties.Settings.Default.SafeCleanup);
 
                     // Перечитаем список конфигов...
                     HandleConfigs();
@@ -1716,7 +1716,7 @@ namespace srcrepair.gui
             try
             {
                 // Предложим пользователю выбрать FPS-конфиг...
-                string ConfigFile = FormManager.FormShowCfgSelect(App.SourceGames.SelectedGame.FPSConfigs);
+                string ConfigFile = GuiHelpers.FormShowCfgSelect(App.SourceGames.SelectedGame.FPSConfigs);
 
                 // Проверим выбрал ли что-то пользователь в специальной форме...
                 if (!(String.IsNullOrWhiteSpace(ConfigFile)))
@@ -1832,7 +1832,7 @@ namespace srcrepair.gui
                 Path.Combine(App.SourceGames.SelectedGame.AppWorkshopDir, "*.bsp")
             };
             if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(App.SourceGames.SelectedGame.FullGamePath, "maps", "*.bsp")); }
-            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
+            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
         }
 
         private void PS_RemDnlCache_Click(object sender, EventArgs e)
@@ -1844,7 +1844,7 @@ namespace srcrepair.gui
                 Path.Combine(App.SourceGames.SelectedGame.FullGamePath, "downloads", "*.*"),
                 Path.Combine(App.SourceGames.SelectedGame.FullGamePath, "streams", "*.*")
             };
-            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
+            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
         }
 
         private void PS_RemSoundCache_Click(object sender, EventArgs e)
@@ -1857,7 +1857,7 @@ namespace srcrepair.gui
                 Path.Combine(App.SourceGames.SelectedGame.FullGamePath, "download", "sound", "*.*"),
                 Path.Combine(App.SourceGames.SelectedGame.FullGamePath, "*.cache")
             };
-            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
+            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
         }
 
         private void PS_RemScreenShots_Click(object sender, EventArgs e)
@@ -1867,7 +1867,7 @@ namespace srcrepair.gui
             {
                 Path.Combine(App.SourceGames.SelectedGame.FullGamePath, "screenshots", "*.*")
             };
-            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile, false, false, false);
+            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile, false, false, false);
         }
 
         private void PS_RemDemos_Click(object sender, EventArgs e)
@@ -1881,7 +1881,7 @@ namespace srcrepair.gui
                 Path.Combine(App.SourceGames.SelectedGame.FullGamePath, "*.tga"),
                 Path.Combine(App.SourceGames.SelectedGame.FullGamePath, "*.wav")
             };
-            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile, false, false, false, false);
+            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile, false, false, false, false);
         }
 
         private void PS_RemGameOpts_Click(object sender, EventArgs e)
@@ -1950,7 +1950,7 @@ namespace srcrepair.gui
                     CleanDirs.AddRange(App.SourceGames.SelectedGame.CloudConfigs);
 
                     // Удаляем всю очередь...
-                    FormManager.FormShowRemoveFiles(CleanDirs);
+                    GuiHelpers.FormShowRemoveFiles(CleanDirs);
 
                     // Выводим сообщение...
                     MessageBox.Show(AppStrings.PS_CleanupSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -1973,7 +1973,7 @@ namespace srcrepair.gui
                 Path.Combine(App.SourceGames.SelectedGame.GamePath, "*.exe")
             };
             if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(App.SourceGames.SelectedGame.GamePath, "platform", "*.*")); }
-            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CacheChkReq, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
+            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CacheChkReq, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
         }
 
         private void PS_CheckCache_Click(object sender, EventArgs e)
@@ -1997,7 +1997,7 @@ namespace srcrepair.gui
             if ((AppSelector.Items.Count > 0) && (AppSelector.SelectedIndex != -1))
             {
                 // Запускаем форму создания отчёта для Техподдержки...
-                FormManager.FormShowRepBuilder(App.AppUserDir, App.SteamClient.FullSteamPath, App.SourceGames.SelectedGame);
+                GuiHelpers.FormShowRepBuilder(App.AppUserDir, App.SteamClient.FullSteamPath, App.SourceGames.SelectedGame);
             }
             else
             {
@@ -2008,7 +2008,7 @@ namespace srcrepair.gui
         private void MNUInstaller_Click(object sender, EventArgs e)
         {
             // Запускаем форму установщика спреев, демок и конфигов...
-            FormManager.FormShowInstaller(App.SourceGames.SelectedGame.FullGamePath, App.SourceGames.SelectedGame.IsUsingUserDir, App.SourceGames.SelectedGame.CustomInstallDir);
+            GuiHelpers.FormShowInstaller(App.SourceGames.SelectedGame.FullGamePath, App.SourceGames.SelectedGame.IsUsingUserDir, App.SourceGames.SelectedGame.CustomInstallDir);
         }
 
         private void MNUExit_Click(object sender, EventArgs e)
@@ -2020,7 +2020,7 @@ namespace srcrepair.gui
         private void MNUAbout_Click(object sender, EventArgs e)
         {
             // Отобразим форму "О программе"...
-            FormManager.FormShowAboutApp();
+            GuiHelpers.FormShowAboutApp();
         }
 
         private void MNUReportBug_Click(object sender, EventArgs e)
@@ -2074,7 +2074,7 @@ namespace srcrepair.gui
                                     break;
                                 case ".bud":
                                     // Распаковываем архив с выводом прогресса...
-                                    FormManager.FormShowArchiveExtract(Path.Combine(App.SourceGames.SelectedGame.FullBackUpDirPath, BU_Item.SubItems[4].Text), Path.GetPathRoot(App.SteamClient.FullSteamPath));
+                                    GuiHelpers.FormShowArchiveExtract(Path.Combine(App.SourceGames.SelectedGame.FullBackUpDirPath, BU_Item.SubItems[4].Text), Path.GetPathRoot(App.SteamClient.FullSteamPath));
 
                                     // Обновляем список FPS-конфигов...
                                     HandleConfigs();
@@ -2379,7 +2379,7 @@ namespace srcrepair.gui
         private void MNUUpdateCheck_Click(object sender, EventArgs e)
         {
             // Откроем форму модуля проверки обновлений...
-            FormManager.FormShowUpdater(App.UserAgent, App.FullAppPath, App.AppUserDir, App.Platform);
+            GuiHelpers.FormShowUpdater(App.UserAgent, App.FullAppPath, App.AppUserDir, App.Platform);
             
             // Перечитаем базу игр...
             FindGames();
@@ -2422,7 +2422,7 @@ namespace srcrepair.gui
         private void MNUAppOptions_Click(object sender, EventArgs e)
         {
             // Показываем форму настроек...
-            FormManager.FormShowOptions();
+            GuiHelpers.FormShowOptions();
         }
 
         private void BU_LVTable_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
@@ -2468,7 +2468,7 @@ namespace srcrepair.gui
         private void MNUWinMnuDisabler_Click(object sender, EventArgs e)
         {
             // Показываем модуля отключения клавиш...
-            FormManager.FormShowKBHelper();
+            GuiHelpers.FormShowKBHelper();
         }
 
         private void CE_OpenInNotepad_Click(object sender, EventArgs e)
@@ -2507,7 +2507,7 @@ namespace srcrepair.gui
             {
                 Path.Combine(App.SourceGames.SelectedGame.FullGamePath, "replay", "*.*")
             };
-            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
+            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
         }
 
         private void PS_RemTextures_Click(object sender, EventArgs e)
@@ -2534,7 +2534,7 @@ namespace srcrepair.gui
                 CleanDirs.Add(Path.Combine(App.SourceGames.SelectedGame.FullGamePath, "materials", "*.*"));
                 CleanDirs.Add(Path.Combine(App.SourceGames.SelectedGame.FullGamePath, "models", "*.*"));
             }
-            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
+            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
         }
 
         private void PS_RemSecndCache_Click(object sender, EventArgs e)
@@ -2546,7 +2546,7 @@ namespace srcrepair.gui
                 Path.Combine(App.SourceGames.SelectedGame.FullGamePath, "custom", "user_custom", "*.*"), // Кэш спреев игр с н.с.к...
                 Path.Combine(App.SourceGames.SelectedGame.GamePath, "config", "html", "*.*") // Кэш MOTD...
             };
-            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
+            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
         }
 
         private void SB_App_DoubleClick(object sender, EventArgs e)
@@ -2608,7 +2608,7 @@ namespace srcrepair.gui
                 Path.Combine(App.SourceGames.SelectedGame.FullGamePath, "download", "*.wav")
             };
             if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(App.SourceGames.SelectedGame.FullGamePath, "sound", "*.*")); }
-            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
+            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
         }
 
         private void PS_RemCustDir_Click(object sender, EventArgs e)
@@ -2619,7 +2619,7 @@ namespace srcrepair.gui
                 Path.Combine(App.SourceGames.SelectedGame.FullGamePath, "custom", "*.*"),
                 Path.Combine(App.SourceGames.SelectedGame.AppWorkshopDir, "*.*")
             };
-            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
+            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
         }
 
         private void PS_DeepCleanup_Click(object sender, EventArgs e)
@@ -2656,7 +2656,7 @@ namespace srcrepair.gui
             if (App.SourceGames.SelectedGame.IsUsingVideoFile) { CleanDirs.AddRange(App.SourceGames.SelectedGame.VideoCfgFiles); }
 
             // Запускаем процесс очистки...
-            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CacheChkReq, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
+            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CacheChkReq, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
         }
 
         private void PS_RemConfigs_Click(object sender, EventArgs e)
@@ -2668,7 +2668,7 @@ namespace srcrepair.gui
                 Path.Combine(App.SourceGames.SelectedGame.FullGamePath, "custom", "*.cfg")
             };
             CleanDirs.AddRange(App.SourceGames.SelectedGame.CloudConfigs);
-            FormManager.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
+            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
         }
 
         private void HD_HSel_SelectedIndexChanged(object sender, EventArgs e)
@@ -2711,7 +2711,7 @@ namespace srcrepair.gui
                     if (MessageBox.Show(String.Format("{0}?", ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
                         // Начинаем загрузку архива с HUD...
-                        FormManager.FormShowDownloader(Properties.Settings.Default.HUDUseUpstream ? App.SourceGames.SelectedGame.HUDMan.SelectedHUD.UpURI : App.SourceGames.SelectedGame.HUDMan.SelectedHUD.URI, App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile);
+                        GuiHelpers.FormShowDownloader(Properties.Settings.Default.HUDUseUpstream ? App.SourceGames.SelectedGame.HUDMan.SelectedHUD.UpURI : App.SourceGames.SelectedGame.HUDMan.SelectedHUD.URI, App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile);
 
                         // Проверяем существует ли файл с архивом...
                         if (File.Exists(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile))
@@ -2723,11 +2723,11 @@ namespace srcrepair.gui
                                 if (HUDManager.CheckInstalledHUD(App.SourceGames.SelectedGame.CustomInstallDir, App.SourceGames.SelectedGame.HUDMan.SelectedHUD.InstallDir))
                                 {
                                     // Удаляем уже установленные файлы HUD...
-                                    FormManager.FormShowRemoveFiles(SingleToArray(Path.Combine(App.SourceGames.SelectedGame.CustomInstallDir, App.SourceGames.SelectedGame.HUDMan.SelectedHUD.InstallDir)));
+                                    GuiHelpers.FormShowRemoveFiles(SingleToArray(Path.Combine(App.SourceGames.SelectedGame.CustomInstallDir, App.SourceGames.SelectedGame.HUDMan.SelectedHUD.InstallDir)));
                                 }
 
                                 // Распаковываем загруженный архив с файлами HUD...
-                                FormManager.FormShowArchiveExtract(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile, Path.Combine(App.SourceGames.SelectedGame.CustomInstallDir, "hudtemp"));
+                                GuiHelpers.FormShowArchiveExtract(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile, Path.Combine(App.SourceGames.SelectedGame.CustomInstallDir, "hudtemp"));
 
                                 // Запускаем установку пакета в отдельном потоке...
                                 if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(); }
@@ -2773,7 +2773,7 @@ namespace srcrepair.gui
                 string HUDPath = Path.Combine(App.SourceGames.SelectedGame.CustomInstallDir, App.SourceGames.SelectedGame.HUDMan.SelectedHUD.InstallDir);
 
                 // Воспользуемся модулем быстрой очистки для удаления выбранного HUD...
-                FormManager.FormShowRemoveFiles(SingleToArray(HUDPath));
+                GuiHelpers.FormShowRemoveFiles(SingleToArray(HUDPath));
 
                 // Проверяем установлен ли выбранный HUD...
                 bool IsInstalled = HUDManager.CheckInstalledHUD(App.SourceGames.SelectedGame.CustomInstallDir, App.SourceGames.SelectedGame.HUDMan.SelectedHUD.InstallDir);
@@ -2809,7 +2809,7 @@ namespace srcrepair.gui
             {
                 Path.Combine(App.AppUserDir, Properties.Resources.HUDLocalDir, "*.*")
             };
-            FormManager.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
+            GuiHelpers.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
         }
 
         private void MNUExtClnTmpDir_Click(object sender, EventArgs e)
@@ -2819,14 +2819,14 @@ namespace srcrepair.gui
             {
                 Path.Combine(Path.GetTempPath(), "*.*")
             };
-            FormManager.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
+            GuiHelpers.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
         }
 
         private void MNUShowLog_Click(object sender, EventArgs e)
         {
             // Выведем на экран содержимое отладочного журнала...
             string DFile = App.LogFileName;
-            if (File.Exists(DFile)) { FormManager.FormShowLogViewer(DFile); } else { MessageBox.Show(AppStrings.AppNoDebugFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            if (File.Exists(DFile)) { GuiHelpers.FormShowLogViewer(DFile); } else { MessageBox.Show(AppStrings.AppNoDebugFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
 
         private void HD_Warning_Click(object sender, EventArgs e)
@@ -2851,13 +2851,13 @@ namespace srcrepair.gui
         private void MNUExtClnSteam_Click(object sender, EventArgs e)
         {
             // Запустим модуль очистки кэшей Steam...
-            FormManager.FormShowStmCleaner(App.SteamClient.FullSteamPath, App.SourceGames.SelectedGame.FullBackUpDirPath, App.Platform.SteamAppsFolderName, App.Platform.SteamProcName);
+            GuiHelpers.FormShowStmCleaner(App.SteamClient.FullSteamPath, App.SourceGames.SelectedGame.FullBackUpDirPath, App.Platform.SteamAppsFolderName, App.Platform.SteamProcName);
         }
 
         private void MNUMuteMan_Click(object sender, EventArgs e)
         {
             // Запустим менеджер управления отключёнными игроками...
-            FormManager.FormShowMuteManager(App.SourceGames.SelectedGame.GetActualBanlistFile(), App.SourceGames.SelectedGame.FullBackUpDirPath);
+            GuiHelpers.FormShowMuteManager(App.SourceGames.SelectedGame.GetActualBanlistFile(), App.SourceGames.SelectedGame.FullBackUpDirPath);
         }
 
         private void SB_SteamID_Click(object sender, EventArgs e)
@@ -2865,7 +2865,7 @@ namespace srcrepair.gui
             // Открываем диалог выбора SteamID и прописываем пользовательский выбор...
             try
             {
-                string Result = FormManager.FormShowIDSelect(App.SteamClient.SteamIDs);
+                string Result = GuiHelpers.FormShowIDSelect(App.SteamClient.SteamIDs);
                 if (!String.IsNullOrWhiteSpace(Result))
                 {
                     SB_SteamID.Text = Result;

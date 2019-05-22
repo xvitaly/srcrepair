@@ -123,7 +123,7 @@ namespace srcrepair.gui
                 string UpdateTempFile = Path.GetTempFileName();
 
                 // Загружаем файл с сервера...
-                FormManager.FormShowDownloader(UpdateURL, UpdateTempFile);
+                GuiHelpers.FormShowDownloader(UpdateURL, UpdateTempFile);
 
                 try
                 {
@@ -183,7 +183,7 @@ namespace srcrepair.gui
             string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(AppUserDir, Path.GetFileName(UpdateURL)));
 
             // Загружаем файл асинхронно...
-            FormManager.FormShowDownloader(UpMan.AppUpdateURL, UpdateFileName);
+            GuiHelpers.FormShowDownloader(UpMan.AppUpdateURL, UpdateFileName);
 
             // Выполняем проверки и устанавливаем обновление...
             if (File.Exists(UpdateFileName))

@@ -173,7 +173,7 @@ namespace srcrepair.gui
             }
 
             // Запустим очистку...
-            if (CleanDirs.Count > 0) { FormManager.FormShowCleanup(CleanDirs, Text, AppStrings.PS_CleanupSuccess, BackUpDir, SteamProcName); } else { MessageBox.Show(AppStrings.AC_NoItemsSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            if (CleanDirs.Count > 0) { GuiHelpers.FormShowCleanup(CleanDirs, Text, AppStrings.PS_CleanupSuccess, BackUpDir, SteamProcName); } else { MessageBox.Show(AppStrings.AC_NoItemsSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
     }
 }

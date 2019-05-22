@@ -79,11 +79,6 @@ namespace srcrepair.core
                 return Path.GetFullPath(LogTarget.FileName.Render(new LogEventInfo()));
             }
         }
-
-        /// <summary>
-        /// Возвращает путь к пользовательскому каталогу программы.
-        /// </summary>
-        public static string AppUserPath { get { return Properties.Settings.Default.IsPortable ? Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), Properties.Resources.AppName); } }
         
         /// <summary>
         /// Возвращает название продукта (из ресурса сборки).
@@ -108,7 +103,7 @@ namespace srcrepair.core
         /// <summary>
         /// Конструктор класса. Получает информацию для рантайма.
         /// </summary>
-        public CurrentApp()
+        public CurrentApp(bool IsPortable, string AppName, string UserAgent)
         {
             // Получим информацию о платформе, на которой запущено приложение...
             Platform = new CurrentPlatform();
@@ -117,7 +112,7 @@ namespace srcrepair.core
             FullAppPath = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
 
             // Укажем путь к пользовательским данным и создадим если не существует...
-            AppUserDir = AppUserPath;
+            AppUserDir = IsPortable ? Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppName); ;
 
             // Проверим существование каталога пользовательских данных и при необходимости создадим...
             if (!(Directory.Exists(AppUserDir)))
@@ -126,7 +121,7 @@ namespace srcrepair.core
             }
 
             // Генерируем User-Agent для SRC Repair...
-            UserAgent = String.Format(Properties.Resources.AppDefUA, Platform.OSFriendlyName, Platform.UASuffix, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersion, Properties.Resources.AppName, SystemArch);
+            UserAgent = String.Format(UserAgent, Platform.OSFriendlyName, Platform.UASuffix, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersion, AppName, SystemArch);
         }
     }
 }
