@@ -205,7 +205,7 @@ namespace srcrepair.core
                     {
                         foreach (string SFile in Files)
                         {
-                            ZipArch.CreateEntryFromFile(SFile, Path.GetFullPath(SFile));
+                            ZipArch.CreateEntryFromFile(SFile, Path.GetFullPath(SFile), CompressionLevel.Optimal);
                         }
                     }
                 }
