@@ -21,12 +21,12 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using Microsoft.Win32;
-using Ionic.Zip;
 
 namespace srcrepair.core
 {
@@ -199,10 +199,15 @@ namespace srcrepair.core
         {
             try
             {
-                using (ZipFile ZBkUp = new ZipFile(ArchiveName, Encoding.UTF8))
+                using (FileStream ZipStream = new FileStream(ArchiveName, FileMode.Create))
                 {
-                    ZBkUp.AddFiles(Files, true, String.Empty);
-                    ZBkUp.Save();
+                    using (ZipArchive ZipArch = new ZipArchive(ZipStream, ZipArchiveMode.Create))
+                    {
+                        foreach (string SFile in Files)
+                        {
+                            ZipArch.CreateEntryFromFile(SFile, Path.GetFullPath(SFile));
+                        }
+                    }
                 }
             }
             catch
