@@ -132,6 +132,9 @@
   <data name="AppUASuffixWin" xml:space="preserve">
     <value>NT</value>
   </data>
+  <data name="HUDLocalDir" xml:space="preserve">
+    <value>HUDs</value>
+  </data>
   <data name="PathValidateRegex" xml:space="preserve">
     <value>^[0-9a-zA-Z :()-_./\\\\]*$</value>
   </data>
@@ -167,5 +170,8 @@
   </data>
   <data name="SteamProcNameWin" xml:space="preserve">
     <value>Steam</value>
+  </data>
+  <data name="WorkshopFolderName" xml:space="preserve">
+    <value>workshop</value>
   </data>
 </root>

@@ -382,15 +382,6 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to HUDs.
-        /// </summary>
-        internal static string HUDLocalDir {
-            get {
-                return ResourceManager.GetString("HUDLocalDir", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Info {
@@ -738,15 +729,6 @@ namespace srcrepair.Properties {
             get {
                 object obj = ResourceManager.GetObject("Warning_Large", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to workshop.
-        /// </summary>
-        internal static string WorkshopFolderName {
-            get {
-                return ResourceManager.GetString("WorkshopFolderName", resourceCulture);
             }
         }
         
