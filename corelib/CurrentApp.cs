@@ -83,22 +83,22 @@ namespace srcrepair.core
         /// <summary>
         /// Возвращает название продукта (из ресурса сборки).
         /// </summary>
-        public static string AppProduct { get { object[] Attribs = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false); return Attribs.Length != 0 ? ((AssemblyProductAttribute)Attribs[0]).Product : String.Empty; } }
+        public static string AppProduct { get { object[] Attribs = Assembly.GetCallingAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false); return Attribs.Length != 0 ? ((AssemblyProductAttribute)Attribs[0]).Product : String.Empty; } }
 
         /// <summary>
         /// Возвращает версию приложения ((из ресурса сборки).
         /// </summary>
-        public static string AppVersion { get { return Assembly.GetExecutingAssembly().GetName().Version.ToString(); } }
+        public static string AppVersion { get { return Assembly.GetCallingAssembly().GetName().Version.ToString(); } }
 
         /// <summary>
         /// Возвращает название компании-разработчика (из ресурса сборки).
         /// </summary>
-        public static string AppCompany { get { object[] Attribs = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false); return Attribs.Length != 0 ? ((AssemblyCompanyAttribute)Attribs[0]).Company : String.Empty; } }
+        public static string AppCompany { get { object[] Attribs = Assembly.GetCallingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false); return Attribs.Length != 0 ? ((AssemblyCompanyAttribute)Attribs[0]).Company : String.Empty; } }
 
         /// <summary>
         /// Возвращает копирайты приложения (из ресурса сборки).
         /// </summary>
-        public static string AppCopyright { get { object[] Attribs = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false); return Attribs.Length != 0 ? ((AssemblyCopyrightAttribute)Attribs[0]).Copyright : String.Empty; } }
+        public static string AppCopyright { get { object[] Attribs = Assembly.GetCallingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false); return Attribs.Length != 0 ? ((AssemblyCopyrightAttribute)Attribs[0]).Copyright : String.Empty; } }
 
         /// <summary>
         /// Конструктор класса. Получает информацию для рантайма.
@@ -109,10 +109,10 @@ namespace srcrepair.core
             Platform = new CurrentPlatform();
 
             // Получаем путь к каталогу приложения...
-            FullAppPath = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            FullAppPath = Path.GetDirectoryName(Assembly.GetCallingAssembly().Location);
 
             // Укажем путь к пользовательским данным и создадим если не существует...
-            AppUserDir = IsPortable ? Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppName); ;
+            AppUserDir = IsPortable ? Path.Combine(Path.GetDirectoryName(Assembly.GetCallingAssembly().Location), "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppName); ;
 
             // Проверим существование каталога пользовательских данных и при необходимости создадим...
             if (!(Directory.Exists(AppUserDir)))

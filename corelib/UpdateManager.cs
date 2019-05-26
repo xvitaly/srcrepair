@@ -151,7 +151,7 @@ namespace srcrepair.core
         /// <returns>Возвращает булево наличия обновлений</returns>
         public bool CheckAppUpdate()
         {
-            return AppUpdateVersion > Assembly.GetEntryAssembly().GetName().Version;
+            return AppUpdateVersion > Assembly.GetCallingAssembly().GetName().Version;
         }
 
         /// <summary>
