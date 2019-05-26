@@ -132,6 +132,15 @@
   <data name="AppUASuffixWin" xml:space="preserve">
     <value>NT</value>
   </data>
+  <data name="CfgDbFile" xml:space="preserve">
+    <value>configs.xml</value>
+  </data>
+  <data name="GameListFile" xml:space="preserve">
+    <value>games.xml</value>
+  </data>
+  <data name="HUDDbFile" xml:space="preserve">
+    <value>huds.xml</value>
+  </data>
   <data name="HUDLocalDir" xml:space="preserve">
     <value>HUDs</value>
   </data>

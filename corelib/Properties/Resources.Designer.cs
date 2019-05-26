@@ -106,6 +106,33 @@ namespace srcrepair.core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to configs.xml.
+        /// </summary>
+        internal static string CfgDbFile {
+            get {
+                return ResourceManager.GetString("CfgDbFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to games.xml.
+        /// </summary>
+        internal static string GameListFile {
+            get {
+                return ResourceManager.GetString("GameListFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to huds.xml.
+        /// </summary>
+        internal static string HUDDbFile {
+            get {
+                return ResourceManager.GetString("HUDDbFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to HUDs.
         /// </summary>
         internal static string HUDLocalDir {

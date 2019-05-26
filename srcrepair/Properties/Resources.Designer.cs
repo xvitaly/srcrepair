@@ -236,15 +236,6 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to configs.xml.
-        /// </summary>
-        internal static string CfgDbFile {
-            get {
-                return ResourceManager.GetString("CfgDbFile", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap clean {
@@ -314,15 +305,6 @@ namespace srcrepair.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to games.xml.
-        /// </summary>
-        internal static string GameListFile {
-            get {
-                return ResourceManager.GetString("GameListFile", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Globe {
@@ -369,15 +351,6 @@ namespace srcrepair.Properties {
             get {
                 object obj = ResourceManager.GetObject("Home", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to huds.xml.
-        /// </summary>
-        internal static string HUDDbFile {
-            get {
-                return ResourceManager.GetString("HUDDbFile", resourceCulture);
             }
         }
         
