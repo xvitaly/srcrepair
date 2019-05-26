@@ -310,12 +310,14 @@ namespace srcrepair.core
         /// <summary>
         /// Главный конструктор класса SteamManager.
         /// </summary>
-        public SteamManager(CurrentPlatform.OSType OS)
+        /// <param name="LastSteamID">Последний использованный SteamID.</param>
+        /// <param name="OS">Используемая ОС.</param>
+        public SteamManager(string LastSteamID, CurrentPlatform.OSType OS)
         {
             // Получим путь к Steam...
             FullSteamPath = OS == CurrentPlatform.OSType.Windows ? GetSteamPath() : TrySteamPath(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Steam"));
             SteamIDs = GetUserIDs();
-            SteamID = GetCurrentSteamID(Properties.Settings.Default.LastSteamID);
+            SteamID = GetCurrentSteamID(LastSteamID);
         }
     }
 }
