@@ -66,7 +66,7 @@ namespace srcrepair.gui
         protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified Bounds)
         {
             base.ScaleControl(ScalingFactor, Bounds);
-            if (!CoreLib.CompareFloats(Math.Max(ScalingFactor.Width, ScalingFactor.Height), 1.0f))
+            if (!DpiManager.CompareFloats(Math.Max(ScalingFactor.Width, ScalingFactor.Height), 1.0f))
             {
                 DpiManager.ScaleColumnsInControl(CE_Editor, ScalingFactor);
                 DpiManager.ScaleColumnsInControl(BU_LVTable, ScalingFactor);
@@ -112,7 +112,7 @@ namespace srcrepair.gui
             try
             {
                 // Считаем базу данных и заполним таблицу...
-                App.SourceGames = new GameManager(App);
+                App.SourceGames = new GameManager(App, Properties.Settings.Default.HideUnsupportedGames);
 
                 // Очистим список игр...
                 AppSelector.Items.Clear();
@@ -438,7 +438,7 @@ namespace srcrepair.gui
                 ListViewItem LvItem = new ListViewItem(Rs.Item2);
                 if (Properties.Settings.Default.HighlightOldBackUps) { if (DateTime.UtcNow - DItem.CreationTimeUtc > TimeSpan.FromDays(30)) { LvItem.BackColor = Color.LightYellow; } }
                 LvItem.SubItems.Add(Rs.Item1);
-                LvItem.SubItems.Add(CoreLib.SclBytes(DItem.Length));
+                LvItem.SubItems.Add(GuiHelpers.SclBytes(DItem.Length));
                 LvItem.SubItems.Add(DItem.CreationTime.ToString());
                 LvItem.SubItems.Add(DItem.Name);
                 Invoke((MethodInvoker)delegate () { BU_LVTable.Items.Add(LvItem); });
@@ -1136,7 +1136,7 @@ namespace srcrepair.gui
         private void BW_FPRecv_DoWork(object sender, DoWorkEventArgs e)
         {
             // Получаем список установленных конфигов из БД...
-            App.SourceGames.SelectedGame.CFGMan = new ConfigManager(Path.Combine(App.FullAppPath, Properties.Resources.CfgDbFile), AppStrings.AppLangPrefix);
+            App.SourceGames.SelectedGame.CFGMan = new ConfigManager(Path.Combine(App.FullAppPath, StringsManager.ConfigDatabaseName), AppStrings.AppLangPrefix);
 
             // Выведем установленные в форму...
             foreach (string Str in App.SourceGames.SelectedGame.CFGMan.GetAllCfg())
@@ -1182,7 +1182,7 @@ namespace srcrepair.gui
         private void BW_HUDList_DoWork(object sender, DoWorkEventArgs e)
         {
             // Получаем список доступных HUD...
-            App.SourceGames.SelectedGame.HUDMan = new HUDManager(Path.Combine(App.FullAppPath, Properties.Resources.HUDDbFile), App.SourceGames.SelectedGame.AppHUDDir);
+            App.SourceGames.SelectedGame.HUDMan = new HUDManager(Path.Combine(App.FullAppPath, StringsManager.HudDatabaseName), App.SourceGames.SelectedGame.AppHUDDir, Properties.Settings.Default.HUDHideOutdated);
 
             // Вносим HUD текущей игры в форму...
             Invoke((MethodInvoker)delegate () { HD_HSel.Items.AddRange(App.SourceGames.SelectedGame.HUDMan.GetHUDNames(App.SourceGames.SelectedGame.SmallAppName).ToArray<object>()); });
@@ -1271,12 +1271,12 @@ namespace srcrepair.gui
         private void FrmMainW_Load(object sender, EventArgs e)
         {
             // Событие инициализации формы...
-            App = new CurrentApp();
+            App = new CurrentApp(Properties.Settings.Default.IsPortable, Properties.Resources.AppName);
 
             // Узнаем путь к установленному клиенту Steam...
             try
             {
-                App.SteamClient = new SteamManager(App.Platform.OS);
+                App.SteamClient = new SteamManager(Properties.Settings.Default.LastSteamID, App.Platform.OS);
             }
             catch (ArgumentOutOfRangeException)
             {
@@ -1663,7 +1663,7 @@ namespace srcrepair.gui
                     try
                     {
                         // Устанавливаем...
-                        ConfigManager.InstallConfigNow(App.SourceGames.SelectedGame.CFGMan.FPSConfig.FileName, App.FullAppPath, App.SourceGames.SelectedGame.FullGamePath, App.SourceGames.SelectedGame.IsUsingUserDir);
+                        ConfigManager.InstallConfigNow(App.SourceGames.SelectedGame.CFGMan.FPSConfig.FileName, App.FullAppPath, App.SourceGames.SelectedGame.FullGamePath, App.SourceGames.SelectedGame.IsUsingUserDir, Properties.Settings.Default.UserCustDirName);
                         
                         // Выводим сообщение об успешной установке...
                         MessageBox.Show(AppStrings.FP_InstallSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -2367,7 +2367,7 @@ namespace srcrepair.gui
                 // Загрузим файл в Блокноте...
                 try
                 {
-                    ProcessManager.OpenTextEditor(ConfigFile, App.Platform.OS);
+                    ProcessManager.OpenTextEditor(ConfigFile, Properties.Settings.Default.EditorBin, App.Platform.OS);
                 }
                 catch (Exception Ex)
                 {
@@ -2396,7 +2396,7 @@ namespace srcrepair.gui
                     {
                         try
                         {
-                            ProcessManager.OpenTextEditor(Path.Combine(App.SourceGames.SelectedGame.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text), App.Platform.OS);
+                            ProcessManager.OpenTextEditor(Path.Combine(App.SourceGames.SelectedGame.FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text), Properties.Settings.Default.EditorBin, App.Platform.OS);
                         }
                         catch (Exception Ex)
                         {
@@ -2477,7 +2477,7 @@ namespace srcrepair.gui
             {
                 try
                 {
-                    ProcessManager.OpenTextEditor(CFGFileName, App.Platform.OS);
+                    ProcessManager.OpenTextEditor(CFGFileName, Properties.Settings.Default.EditorBin, App.Platform.OS);
                 }
                 catch (Exception Ex)
                 {
@@ -2807,7 +2807,7 @@ namespace srcrepair.gui
             // Очистим загруженные приложением файлы...
             List<String> CleanDirs = new List<string>
             {
-                Path.Combine(App.AppUserDir, Properties.Resources.HUDLocalDir, "*.*")
+                Path.Combine(App.AppUserDir, StringsManager.HudDirectoryName, "*.*")
             };
             GuiHelpers.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), AppStrings.PS_CleanupSuccess, App.SourceGames.SelectedGame.FullBackUpDirPath, App.SourceGames.SelectedGame.GameBinaryFile);
         }

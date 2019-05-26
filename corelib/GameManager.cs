@@ -65,9 +65,8 @@ namespace srcrepair.core
         /// Главный конструктор класса GameManager.
         /// </summary>
         /// <param name="App">Экземпляр класса с параметрами приложения</param>
-        /// <param name="GameDbFile">Имя файла с базой игр</param>
         /// <param name="HideUnsupported">Добавлять ли в список неподдерживаемые</param>
-        public GameManager(CurrentApp App, string GameDbFile, bool HideUnsupported)
+        public GameManager(CurrentApp App, bool HideUnsupported)
         {
             // Создаём объекты для хранения базы игр...
             SourceGames = new List<SourceGame>();
@@ -77,7 +76,7 @@ namespace srcrepair.core
             List<String> GameDirs = App.SteamClient.FormatInstallDirs(App.Platform.SteamAppsFolderName);
 
             // Создаём поток с XML-файлом...
-            using (FileStream XMLFS = new FileStream(Path.Combine(App.FullAppPath, GameDbFile), FileMode.Open, FileAccess.Read))
+            using (FileStream XMLFS = new FileStream(Path.Combine(App.FullAppPath, Properties.Resources.GameListFile), FileMode.Open, FileAccess.Read))
             {
                 // Создаём объект документа XML...
                 XmlDocument XMLD = new XmlDocument();

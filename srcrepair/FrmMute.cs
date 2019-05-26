@@ -55,7 +55,7 @@ namespace srcrepair.gui
         protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified Bounds)
         {
             base.ScaleControl(ScalingFactor, Bounds);
-            if (!CoreLib.CompareFloats(Math.Max(ScalingFactor.Width, ScalingFactor.Height), 1.0f))
+            if (!DpiManager.CompareFloats(Math.Max(ScalingFactor.Width, ScalingFactor.Height), 1.0f))
             {
                 DpiManager.ScaleColumnsInControl(MM_Table, ScalingFactor);
             }

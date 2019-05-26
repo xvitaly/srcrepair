@@ -71,7 +71,7 @@ namespace srcrepair.gui
         protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified Bounds)
         {
             base.ScaleControl(ScalingFactor, Bounds);
-            if (!CoreLib.CompareFloats(Math.Max(ScalingFactor.Width, ScalingFactor.Height), 1.0f))
+            if (!DpiManager.CompareFloats(Math.Max(ScalingFactor.Width, ScalingFactor.Height), 1.0f))
             {
                 DpiManager.ScaleColumnsInControl(CM_FTable, ScalingFactor);
             }
@@ -158,7 +158,7 @@ namespace srcrepair.gui
                             };
 
                             // Вычисляем и указываем размер и дату изменения...
-                            LvItem.SubItems.Add(CoreLib.SclBytes(DItem.Length));
+                            LvItem.SubItems.Add(GuiHelpers.SclBytes(DItem.Length));
                             LvItem.SubItems.Add(DItem.LastWriteTime.ToString());
                             
                             if (CM_FTable.InvokeRequired)
@@ -449,7 +449,7 @@ namespace srcrepair.gui
         private void GttWrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             // Указываем сколько МБ освободится при удалении всех файлов...
-            CM_Info.Text = String.Format(AppStrings.PS_FrFInfo, CoreLib.SclBytes(TotalSize));
+            CM_Info.Text = String.Format(AppStrings.PS_FrFInfo, GuiHelpers.SclBytes(TotalSize));
 
             // Проверим есть ли кандидаты для удаления (очистки)...
             if (CM_FTable.Items.Count == 0)

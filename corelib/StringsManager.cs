@@ -21,11 +21,12 @@
 
 namespace srcrepair.core
 {
-    public static class ResourceManager
+    public static class StringsManager
     {
         public static string ConfigDatabaseName => Properties.Resources.CfgDbFile;
         public static string GameDatabaseName => Properties.Resources.GameListFile;
         public static string HudDatabaseName => Properties.Resources.HUDDbFile;
         public static string UpdateDatabaseUrl => Properties.Resources.UpdateDBURL;
+        public static string HudDirectoryName => Properties.Resources.HUDLocalDir;
     }
 }

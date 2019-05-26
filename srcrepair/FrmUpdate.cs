@@ -346,7 +346,7 @@ namespace srcrepair.gui
                 if (UpMan.CheckHUDUpdate())
                 {
                     // Запускаем процесс установки обновления...
-                    if (InstallDatabaseUpdate(Properties.Resources.HUDDbFile, UpMan.HUDUpdateURL, UpMan.HUDUpdateHash))
+                    if (InstallDatabaseUpdate(StringsManager.HudDatabaseName, UpMan.HUDUpdateURL, UpMan.HUDUpdateHash))
                     {
                         // Обновляем дату последней проверки обновлений...
                         UpdateTimeSetHUD();
@@ -370,7 +370,7 @@ namespace srcrepair.gui
             {
                 if (UpMan.CheckGameDBUpdate())
                 {
-                    InstallDatabaseUpdate(Properties.Resources.GameListFile, UpMan.GameUpdateURL, UpMan.GameUpdateHash);
+                    InstallDatabaseUpdate(StringsManager.GameDatabaseName, UpMan.GameUpdateURL, UpMan.GameUpdateHash);
                 }
                 else
                 {
