@@ -796,7 +796,7 @@ namespace srcrepair.core
             else
             {
                 // Произошла ошибка при открытии ключа реестра. Выбросим исключение...
-                throw new Exception(AppStrings.GT_RegOpenErr);
+                throw new Exception("Failed to open registry key.");
             }
         }
 
