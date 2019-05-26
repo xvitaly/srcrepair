@@ -69,6 +69,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ResourceManager.cs" />
     <Compile Include="SourceGame.cs" />
     <Compile Include="SteamConv.cs" />
     <Compile Include="SteamManager.cs" />
