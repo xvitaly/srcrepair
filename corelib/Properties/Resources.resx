@@ -180,6 +180,9 @@
   <data name="SteamProcNameWin" xml:space="preserve">
     <value>Steam</value>
   </data>
+  <data name="UpdateDBURL" xml:space="preserve">
+    <value>https://www.easycoding.org/files/srcrepair/updates/updates.xml</value>
+  </data>
   <data name="WorkshopFolderName" xml:space="preserve">
     <value>workshop</value>
   </data>

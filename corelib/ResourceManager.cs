@@ -26,5 +26,6 @@ namespace srcrepair.core
         public static string ConfigDatabaseName => Properties.Resources.CfgDbFile;
         public static string GameDatabaseName => Properties.Resources.GameListFile;
         public static string HudDatabaseName => Properties.Resources.HUDDbFile;
+        public static string UpdateDatabaseUrl => Properties.Resources.UpdateDBURL;
     }
 }
