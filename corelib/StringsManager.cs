@@ -21,12 +21,34 @@
 
 namespace srcrepair.core
 {
+    /// <summary>
+    /// Class for work with strings, stored in resources section of library.
+    /// </summary>
     public static class StringsManager
     {
+        /// <summary>
+        /// Get config database file name.
+        /// </summary>
         public static string ConfigDatabaseName => Properties.Resources.CfgDbFile;
+
+        /// <summary>
+        /// Get game database file name.
+        /// </summary>
         public static string GameDatabaseName => Properties.Resources.GameListFile;
+
+        /// <summary>
+        /// Get HUD database file name.
+        /// </summary>
         public static string HudDatabaseName => Properties.Resources.HUDDbFile;
+
+        /// <summary>
+        /// Get full update checker URL.
+        /// </summary>
         public static string UpdateDatabaseUrl => Properties.Resources.UpdateDBURL;
+
+        /// <summary>
+        /// Get HUD local directory name.
+        /// </summary>
         public static string HudDirectoryName => Properties.Resources.HUDLocalDir;
     }
 }
