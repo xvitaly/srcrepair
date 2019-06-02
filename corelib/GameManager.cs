@@ -66,7 +66,7 @@ namespace srcrepair.core
         /// </summary>
         /// <param name="App">Экземпляр класса с параметрами приложения</param>
         /// <param name="HideUnsupported">Добавлять ли в список неподдерживаемые</param>
-        public GameManager(CurrentApp App, bool HideUnsupported)
+        public GameManager(CurrentApp App, bool HideUnsupported = true)
         {
             // Создаём объекты для хранения базы игр...
             SourceGames = new List<SourceGame>();

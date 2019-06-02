@@ -127,7 +127,7 @@ namespace srcrepair.core
         /// <param name="FullAppPath">Full path to application's directory</param>
         /// <param name="AppHUDDir">Full HUD directory installation path</param>
         /// <param name="HideOutdated">Скрывать устаревшие HUD</param>
-        public HUDManager(string FullAppPath, string AppHUDDir, bool HideOutdated)
+        public HUDManager(string FullAppPath, string AppHUDDir, bool HideOutdated = true)
         {
             // Инициализируем наш список...
             HUDsAvailable = new List<HUDTlx>();
