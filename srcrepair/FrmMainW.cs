@@ -1125,7 +1125,7 @@ namespace srcrepair.gui
         private void BW_FPRecv_DoWork(object sender, DoWorkEventArgs e)
         {
             // Получаем список установленных конфигов из БД...
-            App.SourceGames.SelectedGame.CFGMan = new ConfigManager(Path.Combine(App.FullAppPath, StringsManager.ConfigDatabaseName), AppStrings.AppLangPrefix);
+            App.SourceGames.SelectedGame.CFGMan = new ConfigManager(App.FullAppPath, AppStrings.AppLangPrefix);
 
             // Выведем установленные в форму...
             foreach (string Str in App.SourceGames.SelectedGame.CFGMan.GetAllCfg())

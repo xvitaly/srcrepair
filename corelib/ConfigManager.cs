@@ -122,15 +122,15 @@ namespace srcrepair.core
         /// <summary>
         /// Конструктор класса. Читает базу данных в формате XML и заполняет нашу структуру.
         /// </summary>
-        /// <param name="CfgDbFile">Путь к БД конфигов</param>
+        /// <param name="FullAppPath">Full path to application directory</param>
         /// <param name="LangPrefix">Языковой код</param>
-        public ConfigManager(string CfgDbFile, string LangPrefix)
+        public ConfigManager(string FullAppPath, string LangPrefix)
         {
             // Инициализируем список...
             Configs = new List<CFGTlx>();
 
             // Получаем полный список доступных конфигов. Открываем поток...
-            using (FileStream XMLFS = new FileStream(CfgDbFile, FileMode.Open, FileAccess.Read))
+            using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, StringsManager.ConfigDatabaseName), FileMode.Open, FileAccess.Read))
             {
                 // Загружаем XML из потока...
                 XmlDocument XMLD = new XmlDocument();
