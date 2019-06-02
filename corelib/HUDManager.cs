@@ -124,15 +124,16 @@ namespace srcrepair.core
         /// <summary>
         /// Конструктор класса. Читает базу данных в формате XML и заполняет нашу структуру.
         /// </summary>
-        /// <param name="App">App class instance</param>
+        /// <param name="FullAppPath">Full path to application's directory</param>
+        /// <param name="AppHUDDir">Full HUD directory installation path</param>
         /// <param name="HideOutdated">Скрывать устаревшие HUD</param>
-        public HUDManager(CurrentApp App, bool HideOutdated)
+        public HUDManager(string FullAppPath, string AppHUDDir, bool HideOutdated)
         {
             // Инициализируем наш список...
             HUDsAvailable = new List<HUDTlx>();
 
             // Получаем полный список доступных HUD для данной игры. Открываем поток...
-            using (FileStream XMLFS = new FileStream(Path.Combine(App.FullAppPath, StringsManager.HudDatabaseName), FileMode.Open, FileAccess.Read))
+            using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, StringsManager.HudDatabaseName), FileMode.Open, FileAccess.Read))
             {
                 // Загружаем XML из потока...
                 XmlDocument XMLD = new XmlDocument();
@@ -145,7 +146,7 @@ namespace srcrepair.core
                     {
                         if (!HideOutdated || XMLD.GetElementsByTagName("IsUpdated")[i].InnerText == "1")
                         {
-                            HUDsAvailable.Add(new HUDTlx(App.SourceGames.SelectedGame.AppHUDDir, XMLD.GetElementsByTagName("Name")[i].InnerText, XMLD.GetElementsByTagName("Game")[i].InnerText, XMLD.GetElementsByTagName("URI")[i].InnerText, XMLD.GetElementsByTagName("UpURI")[i].InnerText, XMLD.GetElementsByTagName("IsUpdated")[i].InnerText == "1", XMLD.GetElementsByTagName("Preview")[i].InnerText, XMLD.GetElementsByTagName("LastUpdate")[i].InnerText, XMLD.GetElementsByTagName("Site")[i].InnerText, XMLD.GetElementsByTagName("ArchiveDir")[i].InnerText, XMLD.GetElementsByTagName("InstallDir")[i].InnerText, XMLD.GetElementsByTagName("Hash")[i].InnerText, Path.Combine(App.SourceGames.SelectedGame.AppHUDDir, Path.ChangeExtension(Path.GetFileName(XMLD.GetElementsByTagName("Name")[i].InnerText), ".zip"))));
+                            HUDsAvailable.Add(new HUDTlx(AppHUDDir, XMLD.GetElementsByTagName("Name")[i].InnerText, XMLD.GetElementsByTagName("Game")[i].InnerText, XMLD.GetElementsByTagName("URI")[i].InnerText, XMLD.GetElementsByTagName("UpURI")[i].InnerText, XMLD.GetElementsByTagName("IsUpdated")[i].InnerText == "1", XMLD.GetElementsByTagName("Preview")[i].InnerText, XMLD.GetElementsByTagName("LastUpdate")[i].InnerText, XMLD.GetElementsByTagName("Site")[i].InnerText, XMLD.GetElementsByTagName("ArchiveDir")[i].InnerText, XMLD.GetElementsByTagName("InstallDir")[i].InnerText, XMLD.GetElementsByTagName("Hash")[i].InnerText, Path.Combine(AppHUDDir, Path.ChangeExtension(Path.GetFileName(XMLD.GetElementsByTagName("Name")[i].InnerText), ".zip"))));
                         }
                     }
                     catch (Exception Ex)

@@ -122,7 +122,7 @@ namespace srcrepair.core
         /// <summary>
         /// Конструктор класса. Читает базу данных в формате XML и заполняет нашу структуру.
         /// </summary>
-        /// <param name="FullAppPath">Full path to application directory</param>
+        /// <param name="FullAppPath">Full path to application's directory</param>
         /// <param name="LangPrefix">Языковой код</param>
         public ConfigManager(string FullAppPath, string LangPrefix)
         {
