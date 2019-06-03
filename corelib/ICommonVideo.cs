@@ -18,15 +18,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace srcrepair.core
 {
-    public class Type3Video
+    interface ICommonVideo
     {
+        int AntiAliasing { get; set; }
+        int MotionBlur { get; set; }
+        int ShadowQuality { get; set; }
+        int ScreenWidth { get; set; }
+        int ScreenHeight { get; set; }
+        int VSync { get; set; }
+
+        void WriteSettings();
     }
 }

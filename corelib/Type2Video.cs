@@ -30,7 +30,7 @@ namespace srcrepair.core
     /// <summary>
     /// Управляет графическими настройками Type 2 приложений.
     /// </summary>
-    public class Type2Video : VideoSettings
+    public class Type2Video : ICommonVideo, IType2Video
     {
         /// <summary>
         /// Хранит путь к актуальному файлу с графическими настройками игры.
@@ -57,6 +57,16 @@ namespace srcrepair.core
         /// Хранит содержимое файла со стандартными настройками игры для текущего ПК.
         /// </summary>
         protected List<String> DefaultsFile;
+
+        /// <summary>
+        /// Хранит разрешение по горизонтали.
+        /// </summary>
+        protected int _ScreenWidth = 800;
+
+        /// <summary>
+        /// Хранит разрешение по вертикали.
+        /// </summary>
+        protected int _ScreenHeight = 600;
 
         /// <summary>
         /// Хранит настройки соотношения сторон NCF-игры на движке Source 1: setting.aspectratiomode.
@@ -137,6 +147,16 @@ namespace srcrepair.core
         /// Хранит настройки качества детализации моделей и текстур NCF-игры на движке Source 1: setting.gpu_mem_level.
         /// </summary>
         protected int _TextureModelQuality;
+
+        /// <summary>
+        /// Возвращает / задаёт разрешение по горизонтали.
+        /// </summary>
+        public int ScreenWidth { get { return _ScreenWidth; } set { _ScreenWidth = value; } }
+
+        /// <summary>
+        /// Возвращает / задаёт разрешение по вертикали.
+        /// </summary>
+        public int ScreenHeight { get { return _ScreenHeight; } set { _ScreenHeight = value; } }
 
         /// <summary>
         /// Возвращает / задаёт настройки соотношения сторон NCF-игры на движке Source 1.

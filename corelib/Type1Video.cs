@@ -28,7 +28,7 @@ namespace srcrepair.core
     /// <summary>
     /// Управляет графическими настройками Type 1 приложений.
     /// </summary>
-    public class Type1Video : VideoSettings
+    public class Type1Video : ICommonVideo, IType1Video
     {
         /// <summary>
         /// Управляет записью событий в журнал.
@@ -40,6 +40,16 @@ namespace srcrepair.core
         /// в зависимости от версии движка Source Engine.
         /// </summary>
         private Type1Settings VSettings;
+
+        /// <summary>
+        /// Хранит разрешение по горизонтали.
+        /// </summary>
+        protected int _ScreenWidth = 800;
+
+        /// <summary>
+        /// Хранит разрешение по вертикали.
+        /// </summary>
+        protected int _ScreenHeight = 600;
 
         /// <summary>
         /// Хранит значеение режима окна: ScreenWidth.
@@ -125,6 +135,16 @@ namespace srcrepair.core
         /// Хранит путь к ветке реестра с графическими настройками игры.
         /// </summary>
         protected string RegKey;
+
+        /// <summary>
+        /// Возвращает / задаёт разрешение по горизонтали.
+        /// </summary>
+        public int ScreenWidth { get { return _ScreenWidth; } set { _ScreenWidth = value; } }
+
+        /// <summary>
+        /// Возвращает / задаёт разрешение по вертикали.
+        /// </summary>
+        public int ScreenHeight { get { return _ScreenHeight; } set { _ScreenHeight = value; } }
 
         /// <summary>
         /// Возвращает / задаёт значение режима отображения.
