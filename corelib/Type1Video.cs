@@ -33,13 +33,13 @@ namespace srcrepair.core
         /// <summary>
         /// Управляет записью событий в журнал.
         /// </summary>
-        private Logger Logger = LogManager.GetCurrentClassLogger();
+        protected Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
         /// Хранит и определяет названия переменных настроек графики
         /// в зависимости от версии движка Source Engine.
         /// </summary>
-        private Type1Settings VSettings;
+        protected Type1Settings VSettings;
 
         /// <summary>
         /// Хранит разрешение по горизонтали.
@@ -752,7 +752,7 @@ namespace srcrepair.core
         /// <summary>
         /// Считывает графические настройки игры из реестра.
         /// </summary>
-        private void ReadSettings()
+        protected void ReadSettings()
         {
             // Открываем ключ реестра для чтения...
             RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(RegKey, false);

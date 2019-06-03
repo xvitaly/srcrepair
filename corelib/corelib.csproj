@@ -63,7 +63,9 @@
     <Compile Include="HUDManager.cs" />
     <Compile Include="HUDTlx.cs" />
     <Compile Include="ICommonVideo.cs" />
+    <Compile Include="IType1Settings.cs" />
     <Compile Include="IType1Video.cs" />
+    <Compile Include="IType2Settings.cs" />
     <Compile Include="IType2Video.cs" />
     <Compile Include="ProcessManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

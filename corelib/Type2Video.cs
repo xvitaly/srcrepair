@@ -764,7 +764,7 @@ namespace srcrepair.core
         /// Извлекает значение переменной из строки.
         /// </summary>
         /// <param name="LineA">Строка для извлечения</param>
-        private string ExtractCVFromLine(string LineA)
+        protected string ExtractCVFromLine(string LineA)
         {
             LineA = CoreLib.CleanStrWx(LineA, true);
             return LineA.Substring(LineA.LastIndexOf(" ")).Trim();
@@ -774,7 +774,7 @@ namespace srcrepair.core
         /// Возвращает значение переменной, переданной в параметре, хранящейся в файле.
         /// </summary>
         /// <param name="CVar">Переменная</param>
-        private int GetNCFDWord(string CVar)
+        protected int GetNCFDWord(string CVar)
         {
             int Result; try { string StrRes = VideoFile.FirstOrDefault(s => s.Contains(CVar) && Regex.IsMatch(s, "setting.")); if (String.IsNullOrEmpty(StrRes)) { StrRes = DefaultsFile.FirstOrDefault(s => s.Contains(CVar)); } Result = Convert.ToInt32(ExtractCVFromLine(StrRes)); } catch { Result = -1; } return Result;
         }
@@ -783,7 +783,7 @@ namespace srcrepair.core
         /// Возвращает значение переменной типа double, переданной в параметре, хранящейся в файле.
         /// </summary>
         /// <param name="CVar">Переменная</param>
-        private decimal GetNCFDble(string CVar)
+        protected decimal GetNCFDble(string CVar)
         {
             decimal Result; CultureInfo CI = new CultureInfo("en-US"); try { string StrRes = VideoFile.FirstOrDefault(s => s.Contains(CVar) && Regex.IsMatch(s, "setting.")); if (String.IsNullOrEmpty(StrRes)) { StrRes = DefaultsFile.FirstOrDefault(s => s.Contains(CVar)); } Result = Convert.ToDecimal(ExtractCVFromLine(StrRes), CI); } catch { Result = 2.2M; } return Result;
         }
@@ -791,7 +791,7 @@ namespace srcrepair.core
         /// <summary>
         /// Считывает графические настройки игры из файла.
         /// </summary>
-        private void ReadSettings()
+        protected void ReadSettings()
         {
             // Считываем настройки графики из файла...
             _ScreenWidth = GetNCFDWord(VSettings.ScreenWidth);

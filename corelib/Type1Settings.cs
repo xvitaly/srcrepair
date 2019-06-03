@@ -23,112 +23,112 @@ namespace srcrepair.core
     /// <summary>
     /// Служебный класс работы с настройками графики Type 1 игр.
     /// </summary>
-    public class Type1Settings
+    public class Type1Settings : IType1Settings
     {
         /// <summary>
         /// Хранит имя настройки разрешения по горизонтали.
         /// </summary>
-        public string ScreenWidth { get; private set; }
+        public string ScreenWidth { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки разрешения по вертикали.
         /// </summary>
-        public string ScreenHeight { get; private set; }
+        public string ScreenHeight { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки соотношения сторон.
         /// </summary>
-        public string DisplayMode { get; private set; }
+        public string DisplayMode { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки детализации моделей.
         /// </summary>
-        public string ModelDetail { get; private set; }
+        public string ModelDetail { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки детализации текстур.
         /// </summary>
-        public string TextureDetail { get; private set; }
+        public string TextureDetail { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки качества шейдерных эффектов.
         /// </summary>
-        public string ShaderDetail { get; private set; }
+        public string ShaderDetail { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки качества прорисовки воды.
         /// </summary>
-        public string WaterDetail { get; private set; }
+        public string WaterDetail { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки качества отражений в воде.
         /// </summary>
-        public string WaterReflections { get; private set; }
+        public string WaterReflections { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки качества теней.
         /// </summary>
-        public string ShadowDetail { get; private set; }
+        public string ShadowDetail { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки коррекции цвета.
         /// </summary>
-        public string ColorCorrection { get; private set; }
+        public string ColorCorrection { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки настроек полноэкранного сглаживания.
         /// </summary>
-        public string AntiAliasing { get; private set; }
+        public string AntiAliasing { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки настроек полноэкранного сглаживания (MSAA).
         /// </summary>
-        public string AntiAliasingMSAA { get; private set; }
+        public string AntiAliasingMSAA { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки глубины полноэкранного сглаживания.
         /// </summary>
-        public string AntiAliasQuality { get; private set; }
+        public string AntiAliasQuality { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки глубины полноэкранного сглаживания (MSAA).
         /// </summary>
-        public string AntiAliasQualityMSAA { get; private set; }
+        public string AntiAliasQualityMSAA { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки анизотропной фильтрации текстур.
         /// </summary>
-        public string FilteringMode { get; private set; }
+        public string FilteringMode { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки трилинейной фильтрации текстур.
         /// </summary>
-        public string FilteringTrilinear { get; private set; }
+        public string FilteringTrilinear { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки вертикальной синхронизации.
         /// </summary>
-        public string VSync { get; private set; }
+        public string VSync { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки размытия движения.
         /// </summary>
-        public string MotionBlur { get; private set; }
+        public string MotionBlur { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки режима DirectX.
         /// </summary>
-        public string DirectXMode { get; private set; }
+        public string DirectXMode { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки HDR.
         /// </summary>
-        public string HDRMode { get; private set; }
+        public string HDRMode { get; protected set; }
 
         /// <summary>
         /// Заполняет свойства класса настройками для базы версии 1 (Source 1; хранение в реестре).
         /// </summary>
-        private void SetSettingsV1()
+        protected void SetSettingsV1()
         {
             ScreenWidth = "ScreenWidth";
             ScreenHeight = "ScreenHeight";

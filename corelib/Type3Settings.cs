@@ -28,219 +28,219 @@ namespace srcrepair.core
         /// <summary>
         /// Хранит имя настройки ID производителя видеокарты.
         /// </summary>
-        public string VendorID { get; private set; }
+        public string VendorID { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки ID видеокарты.
         /// </summary>
-        public string DeviceID { get; private set; }
+        public string DeviceID { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки качества обычных эффектов.
         /// </summary>
-        public string EffectDetails { get; private set; }
+        public string EffectDetails { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки выделенного игре пула памяти.
         /// </summary>
-        public string MemoryPoolType { get; private set; }
+        public string MemoryPoolType { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки качества детализации моделей и текстур.
         /// </summary>
-        public string TextureModelQuality { get; private set; }
+        public string TextureModelQuality { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки разрешения по горизонтали.
         /// </summary>
-        public string ScreenWidth { get; private set; }
+        public string ScreenWidth { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки разрешения по вертикали.
         /// </summary>
-        public string ScreenHeight { get; private set; }
+        public string ScreenHeight { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки качества шейдерных эффектов.
         /// </summary>
-        public string ShaderEffects { get; private set; }
+        public string ShaderEffects { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки версии конфига настроек графики.
         /// </summary>
-        public string SchemaVersion { get; private set; }
+        public string SchemaVersion { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки известности устройства.
         /// </summary>
-        public string KnownDevice { get; private set; }
+        public string KnownDevice { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки параметров полноэкранного режима.
         /// </summary>
-        public string FullScreenMode { get; private set; }
+        public string FullScreenMode { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки параметров полноэкранного режима в
         /// кооперативном режиме.
         /// </summary>
-        public string FullScreenModeCoop { get; private set; }
+        public string FullScreenModeCoop { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки других параметров графического режима (без рамки).
         /// </summary>
-        public string DisplayBorderless { get; private set; }
+        public string DisplayBorderless { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки вертикальной синхронизации.
         /// </summary>
-        public string VSync { get; private set; }
+        public string VSync { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки параметров полноэкранного режима при потере фокуса.
         /// </summary>
-        public string DisplayModeFocusLoss { get; private set; }
+        public string DisplayModeFocusLoss { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки параметров рендеринга водных поверхностей.
         /// </summary>
-        public string CheapWaterReflections { get; private set; }
+        public string CheapWaterReflections { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки высоты и качества эффектов тумана.
         /// </summary>
-        public string FogHeight { get; private set; }
+        public string FogHeight { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки, позволяющей использовать только простые
         /// источники освещения.
         /// </summary>
-        public string SimpleLight { get; private set; }
+        public string SimpleLight { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки SSAO для освещения.
         /// </summary>
-        public string SSAOLights { get; private set; }
+        public string SSAOLights { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки глобальной карты теней.
         /// </summary>
-        public string GlobalShadowMode { get; private set; }
+        public string GlobalShadowMode { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки полноэкранного сглаживания.
         /// </summary>
-        public string AntiAliasing { get; private set; }
+        public string AntiAliasing { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки глубины полноэкранного сглаживания.
         /// </summary>
-        public string AntiAliasQuality { get; private set; }
+        public string AntiAliasQuality { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки портретной анимации.
         /// </summary>
-        public string PortraitAnimation { get; private set; }
+        public string PortraitAnimation { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки Specular Shading.
         /// </summary>
-        public string SpecularShading { get; private set; }
+        public string SpecularShading { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки Specular Bloom Shading.
         /// </summary>
-        public string SpecularBloomShading { get; private set; }
+        public string SpecularBloomShading { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки рендеринга второстепенных предметов на карте.
         /// </summary>
-        public string AmbientCreatures { get; private set; }
+        public string AmbientCreatures { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки стриминга текстур.
         /// </summary>
-        public string TextureStreaming { get; private set; }
+        public string TextureStreaming { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки карт нормалей.
         /// </summary>
-        public string NormalMaps { get; private set; }
+        public string NormalMaps { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки качества детализации таблицы результатов.
         /// </summary>
-        public string DashboardQuality { get; private set; }
+        public string DashboardQuality { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки качества шейдерных эффектов.
         /// </summary>
-        public string ShaderQuality { get; private set; }
+        public string ShaderQuality { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки рекомендованного разрешения по вертикали.
         /// </summary>
-        public string RecommendedHeight { get; private set; }
+        public string RecommendedHeight { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки области рендеринга.
         /// </summary>
-        public string ViewportScale { get; private set; }
+        public string ViewportScale { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки контрастности и цветовой гаммы.
         /// </summary>
-        public string Brightness { get; private set; }
+        public string Brightness { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки активации расширенных опций видео.
         /// </summary>
-        public string UseAdvanced { get; private set; }
+        public string UseAdvanced { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки рендеринга ambient cloth.
         /// </summary>
-        public string AmbientCloth { get; private set; }
+        public string AmbientCloth { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки качества детализации травы.
         /// </summary>
-        public string GrassQuality { get; private set; }
+        public string GrassQuality { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки качества детализации эффекта "ветер".
         /// </summary>
-        public string WindEffects { get; private set; }
+        public string WindEffects { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки качества эффектов Parallax Mapping.
         /// </summary>
-        public string ParallaxMapping { get; private set; }
+        public string ParallaxMapping { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки particle fallback.
         /// </summary>
-        public string ParticleFallback { get; private set; }
+        public string ParticleFallback { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки множителя particle fallback.
         /// </summary>
-        public string ParticleFallbackMultiplier { get; private set; }
+        public string ParticleFallbackMultiplier { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки сброса графических настроек.
         /// </summary>
-        public string ResetToDefaults { get; private set; }
+        public string ResetToDefaults { get; protected set; }
 
         /// <summary>
         /// Хранит имя настройки соотношения сторон.
         /// </summary>
-        public string ScreenRatio { get; private set; }
+        public string ScreenRatio { get; protected set; }
 
         /// <summary>
         /// Заполняет свойства класса настройками для базы версии 3 (Source 2, DotA 2: Reborn).
         /// </summary>
-        private void SetSettingsV3()
+        protected void SetSettingsV3()
         {
             VendorID = "VendorID";
             DeviceID = "DeviceID";
