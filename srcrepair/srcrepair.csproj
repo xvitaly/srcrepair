@@ -387,11 +387,11 @@
       <Link>cfgs\rhapsodyfps.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="..\tfiles\inno\readme_en.rtf">
+    <None Include="..\packaging\inno\readme_en.rtf">
       <Link>inno\readme_en.rtf</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="..\tfiles\inno\readme_ru.rtf">
+    <None Include="..\packaging\inno\readme_ru.rtf">
       <Link>inno\readme_ru.rtf</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -474,7 +474,7 @@
     <None Include="Resources\New.png" />
     <None Include="Resources\Open.png" />
     <None Include="Resources\Mhint.png" />
-    <Content Include="..\tfiles\inno\srcrepair.iss">
+    <Content Include="..\packaging\inno\srcrepair.iss">
       <Link>inno\srcrepair.iss</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
