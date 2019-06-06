@@ -25,14 +25,14 @@ echo Starting build process using MSBUILD...
 "%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\msbuild.exe" ..\srcrepair.sln /m /t:Build /p:Configuration=Release /p:TargetFramework=v4.7.1
 
 echo Generating documentation in HTML format...
-call "help\make.cmd" htmlhelp
+call "..\help\ru\make.cmd" htmlhelp
 
 echo Generating HTML help file...
-"%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "help\_build\htmlhelp\srcrepair.hhp"
+"%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "..\help\ru\build\htmlhelp\srcrepair_ru.hhp"
 
 echo Installing generated CHM files...
 mkdir "..\srcrepair\bin\Release\help"
-move "help\_build\htmlhelp\srcrepair.chm" "..\srcrepair\bin\Release\help\srcrepair_ru.chm"
+move "..\help\ru\build\htmlhelp\srcrepair_ru.chm" "..\srcrepair\bin\Release\help\srcrepair_ru.chm"
 
 echo Changing directory to built version...
 cd "..\srcrepair\bin\Release"
