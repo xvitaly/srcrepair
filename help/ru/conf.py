@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 # This file is a part of SRC Repair project. For more information
@@ -142,34 +142,26 @@ html_show_sphinx = False
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'srcrepair'
+htmlhelp_basename = 'srcrepair_ru'
 
 
 # -- Options for LaTeX output ---------------------------------------------
 
+latex_engine = 'xelatex'
 latex_elements = {
-    # The paper size ('letterpaper' or 'a4paper').
-    #
-    # 'papersize': 'letterpaper',
-
-    # The font size ('10pt', '11pt' or '12pt').
-    #
-    # 'pointsize': '10pt',
-
-    # Additional stuff for the LaTeX preamble.
-    #
-    # 'preamble': '',
-
-    # Latex figure (float) alignment
-    #
-    # 'figure_align': 'htbp',
+    'fontpkg': r'''
+\setmainfont{DejaVu Serif}
+\setromanfont{DejaVu Sans}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+'''
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'srcrepair.tex', 'SRC Repair Documentation',
+    (master_doc, 'srcrepair_ru.tex', 'Справочная система SRC Repair',
      'EasyCoding Team', 'manual'),
 ]
 
@@ -179,7 +171,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'srcrepair', 'SRC Repair Documentation',
+    (master_doc, 'srcrepair_ru', 'Справочная система SRC Repair',
      [author], 1)
 ]
 
@@ -190,8 +182,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'srcrepair', 'SRC Repair Documentation',
-     author, 'srcrepair', 'One line description of project.',
+    (master_doc, 'srcrepair_ru', 'Справочная система SRC Repair',
+     author, 'srcrepair_ru', 'Справочная система SRC Repair.',
      'Miscellaneous'),
 ]
 
