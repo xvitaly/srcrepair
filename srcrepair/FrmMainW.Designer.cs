@@ -925,7 +925,7 @@
             // GT_Warning
             // 
             this.GT_Warning.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.GT_Warning.Image = global::srcrepair.Properties.Resources.Warning;
+            this.GT_Warning.Image = global::srcrepair.gui.Properties.Resources.Warning;
             resources.ApplyResources(this.GT_Warning, "GT_Warning");
             this.GT_Warning.Name = "GT_Warning";
             this.GT_Warning.TabStop = false;
@@ -984,7 +984,7 @@
             // CE_New
             // 
             this.CE_New.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CE_New.Image = global::srcrepair.Properties.Resources.New;
+            this.CE_New.Image = global::srcrepair.gui.Properties.Resources.New;
             resources.ApplyResources(this.CE_New, "CE_New");
             this.CE_New.Name = "CE_New";
             this.CE_New.Click += new System.EventHandler(this.CE_New_Click);
@@ -992,7 +992,7 @@
             // CE_Open
             // 
             this.CE_Open.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CE_Open.Image = global::srcrepair.Properties.Resources.Open;
+            this.CE_Open.Image = global::srcrepair.gui.Properties.Resources.Open;
             resources.ApplyResources(this.CE_Open, "CE_Open");
             this.CE_Open.Name = "CE_Open";
             this.CE_Open.Click += new System.EventHandler(this.CE_Open_Click);
@@ -1000,7 +1000,7 @@
             // CE_Save
             // 
             this.CE_Save.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CE_Save.Image = global::srcrepair.Properties.Resources.Save;
+            this.CE_Save.Image = global::srcrepair.gui.Properties.Resources.Save;
             resources.ApplyResources(this.CE_Save, "CE_Save");
             this.CE_Save.Name = "CE_Save";
             this.CE_Save.Click += new System.EventHandler(this.CE_Save_Click);
@@ -1008,7 +1008,7 @@
             // CE_SaveAs
             // 
             this.CE_SaveAs.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CE_SaveAs.Image = global::srcrepair.Properties.Resources.SaveAs;
+            this.CE_SaveAs.Image = global::srcrepair.gui.Properties.Resources.SaveAs;
             resources.ApplyResources(this.CE_SaveAs, "CE_SaveAs");
             this.CE_SaveAs.Name = "CE_SaveAs";
             this.CE_SaveAs.Click += new System.EventHandler(this.CE_SaveAs_Click);
@@ -1021,7 +1021,7 @@
             // CE_Cut
             // 
             this.CE_Cut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CE_Cut.Image = global::srcrepair.Properties.Resources.Cut;
+            this.CE_Cut.Image = global::srcrepair.gui.Properties.Resources.Cut;
             resources.ApplyResources(this.CE_Cut, "CE_Cut");
             this.CE_Cut.Name = "CE_Cut";
             this.CE_Cut.Click += new System.EventHandler(this.CE_Cut_Click);
@@ -1029,7 +1029,7 @@
             // CE_Copy
             // 
             this.CE_Copy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CE_Copy.Image = global::srcrepair.Properties.Resources.Copy;
+            this.CE_Copy.Image = global::srcrepair.gui.Properties.Resources.Copy;
             resources.ApplyResources(this.CE_Copy, "CE_Copy");
             this.CE_Copy.Name = "CE_Copy";
             this.CE_Copy.Click += new System.EventHandler(this.CE_Copy_Click);
@@ -1037,7 +1037,7 @@
             // CE_Paste
             // 
             this.CE_Paste.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CE_Paste.Image = global::srcrepair.Properties.Resources.Paste;
+            this.CE_Paste.Image = global::srcrepair.gui.Properties.Resources.Paste;
             resources.ApplyResources(this.CE_Paste, "CE_Paste");
             this.CE_Paste.Name = "CE_Paste";
             this.CE_Paste.Click += new System.EventHandler(this.CE_Paste_Click);
@@ -1045,7 +1045,7 @@
             // CE_RmRow
             // 
             this.CE_RmRow.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CE_RmRow.Image = global::srcrepair.Properties.Resources.Delete;
+            this.CE_RmRow.Image = global::srcrepair.gui.Properties.Resources.Delete;
             resources.ApplyResources(this.CE_RmRow, "CE_RmRow");
             this.CE_RmRow.Name = "CE_RmRow";
             this.CE_RmRow.Click += new System.EventHandler(this.CE_RmRow_Click);
@@ -1058,7 +1058,7 @@
             // CE_OpenInNotepad
             // 
             this.CE_OpenInNotepad.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CE_OpenInNotepad.Image = global::srcrepair.Properties.Resources.TextEditor;
+            this.CE_OpenInNotepad.Image = global::srcrepair.gui.Properties.Resources.TextEditor;
             resources.ApplyResources(this.CE_OpenInNotepad, "CE_OpenInNotepad");
             this.CE_OpenInNotepad.Name = "CE_OpenInNotepad";
             this.CE_OpenInNotepad.Click += new System.EventHandler(this.CE_OpenInNotepad_Click);
@@ -1066,7 +1066,7 @@
             // CE_ManualBackUpCfg
             // 
             this.CE_ManualBackUpCfg.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CE_ManualBackUpCfg.Image = global::srcrepair.Properties.Resources.backup;
+            this.CE_ManualBackUpCfg.Image = global::srcrepair.gui.Properties.Resources.backup;
             resources.ApplyResources(this.CE_ManualBackUpCfg, "CE_ManualBackUpCfg");
             this.CE_ManualBackUpCfg.Name = "CE_ManualBackUpCfg";
             this.CE_ManualBackUpCfg.Click += new System.EventHandler(this.CE_ManualBackUpCfg_Click);
@@ -1079,7 +1079,7 @@
             // CE_ShowHint
             // 
             this.CE_ShowHint.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CE_ShowHint.Image = global::srcrepair.Properties.Resources.Mhint;
+            this.CE_ShowHint.Image = global::srcrepair.gui.Properties.Resources.Mhint;
             resources.ApplyResources(this.CE_ShowHint, "CE_ShowHint");
             this.CE_ShowHint.Name = "CE_ShowHint";
             this.CE_ShowHint.Click += new System.EventHandler(this.CE_ShowHint_Click);
@@ -1087,7 +1087,7 @@
             // CE_OpenCVList
             // 
             this.CE_OpenCVList.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CE_OpenCVList.Image = global::srcrepair.Properties.Resources.source;
+            this.CE_OpenCVList.Image = global::srcrepair.gui.Properties.Resources.source;
             resources.ApplyResources(this.CE_OpenCVList, "CE_OpenCVList");
             this.CE_OpenCVList.Name = "CE_OpenCVList";
             this.CE_OpenCVList.Click += new System.EventHandler(this.CE_OpenCVList_Click);
@@ -1269,7 +1269,7 @@
             // 
             this.PS_PathGame.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PS_PathGame.ForeColor = System.Drawing.Color.Green;
-            this.PS_PathGame.Image = global::srcrepair.Properties.Resources.upd_nx;
+            this.PS_PathGame.Image = global::srcrepair.gui.Properties.Resources.upd_nx;
             resources.ApplyResources(this.PS_PathGame, "PS_PathGame");
             this.PS_PathGame.Name = "PS_PathGame";
             this.PS_PathGame.Click += new System.EventHandler(this.PS_PathGame_Click);
@@ -1278,7 +1278,7 @@
             // 
             this.PS_PathSteam.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PS_PathSteam.ForeColor = System.Drawing.Color.Green;
-            this.PS_PathSteam.Image = global::srcrepair.Properties.Resources.upd_nx;
+            this.PS_PathSteam.Image = global::srcrepair.gui.Properties.Resources.upd_nx;
             resources.ApplyResources(this.PS_PathSteam, "PS_PathSteam");
             this.PS_PathSteam.Name = "PS_PathSteam";
             this.PS_PathSteam.Click += new System.EventHandler(this.PS_PathDetector_Click);
@@ -1356,7 +1356,7 @@
             // FP_OpenNotepad
             // 
             resources.ApplyResources(this.FP_OpenNotepad, "FP_OpenNotepad");
-            this.FP_OpenNotepad.Image = global::srcrepair.Properties.Resources.TextEditor;
+            this.FP_OpenNotepad.Image = global::srcrepair.gui.Properties.Resources.TextEditor;
             this.FP_OpenNotepad.Name = "FP_OpenNotepad";
             this.FP_OpenNotepad.TabStop = false;
             this.FP_OpenNotepad.UseVisualStyleBackColor = true;
@@ -1437,7 +1437,7 @@
             // HD_OpenDir
             // 
             resources.ApplyResources(this.HD_OpenDir, "HD_OpenDir");
-            this.HD_OpenDir.Image = global::srcrepair.Properties.Resources.Search;
+            this.HD_OpenDir.Image = global::srcrepair.gui.Properties.Resources.Search;
             this.HD_OpenDir.Name = "HD_OpenDir";
             this.HD_OpenDir.UseVisualStyleBackColor = true;
             this.HD_OpenDir.Click += new System.EventHandler(this.HD_OpenDir_Click);
@@ -1445,7 +1445,7 @@
             // HD_Homepage
             // 
             resources.ApplyResources(this.HD_Homepage, "HD_Homepage");
-            this.HD_Homepage.Image = global::srcrepair.Properties.Resources.Home;
+            this.HD_Homepage.Image = global::srcrepair.gui.Properties.Resources.Home;
             this.HD_Homepage.Name = "HD_Homepage";
             this.HD_Homepage.UseVisualStyleBackColor = true;
             this.HD_Homepage.Click += new System.EventHandler(this.HD_Homepage_Click);
@@ -1476,7 +1476,7 @@
             // HD_Warning
             // 
             this.HD_Warning.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.HD_Warning.Image = global::srcrepair.Properties.Resources.Warning;
+            this.HD_Warning.Image = global::srcrepair.gui.Properties.Resources.Warning;
             resources.ApplyResources(this.HD_Warning, "HD_Warning");
             this.HD_Warning.Name = "HD_Warning";
             this.HD_Warning.TabStop = false;
@@ -1526,7 +1526,7 @@
             // 
             // HUD_NAImg
             // 
-            this.HUD_NAImg.Image = global::srcrepair.Properties.Resources.Warning_Large;
+            this.HUD_NAImg.Image = global::srcrepair.gui.Properties.Resources.Warning_Large;
             resources.ApplyResources(this.HUD_NAImg, "HUD_NAImg");
             this.HUD_NAImg.Name = "HUD_NAImg";
             this.HUD_NAImg.TabStop = false;
@@ -1598,7 +1598,7 @@
             // BUT_Refresh
             // 
             this.BUT_Refresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BUT_Refresh.Image = global::srcrepair.Properties.Resources.Refresh;
+            this.BUT_Refresh.Image = global::srcrepair.gui.Properties.Resources.Refresh;
             resources.ApplyResources(this.BUT_Refresh, "BUT_Refresh");
             this.BUT_Refresh.Name = "BUT_Refresh";
             this.BUT_Refresh.Click += new System.EventHandler(this.BUT_Refresh_Click);
@@ -1611,7 +1611,7 @@
             // BUT_RestoreB
             // 
             this.BUT_RestoreB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BUT_RestoreB.Image = global::srcrepair.Properties.Resources.Restore;
+            this.BUT_RestoreB.Image = global::srcrepair.gui.Properties.Resources.Restore;
             resources.ApplyResources(this.BUT_RestoreB, "BUT_RestoreB");
             this.BUT_RestoreB.Name = "BUT_RestoreB";
             this.BUT_RestoreB.Click += new System.EventHandler(this.BUT_RestoreB_Click);
@@ -1619,7 +1619,7 @@
             // BUT_DelB
             // 
             this.BUT_DelB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BUT_DelB.Image = global::srcrepair.Properties.Resources.Delete;
+            this.BUT_DelB.Image = global::srcrepair.gui.Properties.Resources.Delete;
             resources.ApplyResources(this.BUT_DelB, "BUT_DelB");
             this.BUT_DelB.Name = "BUT_DelB";
             this.BUT_DelB.Click += new System.EventHandler(this.BUT_DelB_Click);
@@ -1632,7 +1632,7 @@
             // BUT_OpenNpad
             // 
             this.BUT_OpenNpad.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BUT_OpenNpad.Image = global::srcrepair.Properties.Resources.TextEditor;
+            this.BUT_OpenNpad.Image = global::srcrepair.gui.Properties.Resources.TextEditor;
             resources.ApplyResources(this.BUT_OpenNpad, "BUT_OpenNpad");
             this.BUT_OpenNpad.Name = "BUT_OpenNpad";
             this.BUT_OpenNpad.Click += new System.EventHandler(this.BUT_OpenNpad_Click);
@@ -1640,7 +1640,7 @@
             // BUT_ExploreBUp
             // 
             this.BUT_ExploreBUp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BUT_ExploreBUp.Image = global::srcrepair.Properties.Resources.Search;
+            this.BUT_ExploreBUp.Image = global::srcrepair.gui.Properties.Resources.Search;
             resources.ApplyResources(this.BUT_ExploreBUp, "BUT_ExploreBUp");
             this.BUT_ExploreBUp.Name = "BUT_ExploreBUp";
             this.BUT_ExploreBUp.Click += new System.EventHandler(this.BUT_ExploreBUp_Click);
@@ -1657,28 +1657,28 @@
             this.BUT_L_GameSettings,
             this.BUT_L_AllSteam,
             this.BUT_L_AllSRC});
-            this.BUT_CrBkupReg.Image = global::srcrepair.Properties.Resources.Add;
+            this.BUT_CrBkupReg.Image = global::srcrepair.gui.Properties.Resources.Add;
             resources.ApplyResources(this.BUT_CrBkupReg, "BUT_CrBkupReg");
             this.BUT_CrBkupReg.Name = "BUT_CrBkupReg";
             this.BUT_CrBkupReg.ButtonClick += new System.EventHandler(this.BUT_CrBkupReg_ButtonClick);
             // 
             // BUT_L_GameSettings
             // 
-            this.BUT_L_GameSettings.Image = global::srcrepair.Properties.Resources.Add;
+            this.BUT_L_GameSettings.Image = global::srcrepair.gui.Properties.Resources.Add;
             this.BUT_L_GameSettings.Name = "BUT_L_GameSettings";
             resources.ApplyResources(this.BUT_L_GameSettings, "BUT_L_GameSettings");
             this.BUT_L_GameSettings.Click += new System.EventHandler(this.BUT_L_GameSettings_Click);
             // 
             // BUT_L_AllSteam
             // 
-            this.BUT_L_AllSteam.Image = global::srcrepair.Properties.Resources.Add;
+            this.BUT_L_AllSteam.Image = global::srcrepair.gui.Properties.Resources.Add;
             this.BUT_L_AllSteam.Name = "BUT_L_AllSteam";
             resources.ApplyResources(this.BUT_L_AllSteam, "BUT_L_AllSteam");
             this.BUT_L_AllSteam.Click += new System.EventHandler(this.BUT_L_AllSteam_Click);
             // 
             // BUT_L_AllSRC
             // 
-            this.BUT_L_AllSRC.Image = global::srcrepair.Properties.Resources.Add;
+            this.BUT_L_AllSRC.Image = global::srcrepair.gui.Properties.Resources.Add;
             this.BUT_L_AllSRC.Name = "BUT_L_AllSRC";
             resources.ApplyResources(this.BUT_L_AllSRC, "BUT_L_AllSRC");
             this.BUT_L_AllSRC.Click += new System.EventHandler(this.BUT_L_AllSRC_Click);
@@ -1710,13 +1710,13 @@
             // MNUShowEdHint
             // 
             resources.ApplyResources(this.MNUShowEdHint, "MNUShowEdHint");
-            this.MNUShowEdHint.Image = global::srcrepair.Properties.Resources.hint;
+            this.MNUShowEdHint.Image = global::srcrepair.gui.Properties.Resources.hint;
             this.MNUShowEdHint.Name = "MNUShowEdHint";
             this.MNUShowEdHint.Click += new System.EventHandler(this.CE_ShowHint_Click);
             // 
             // MNUAppOptions
             // 
-            this.MNUAppOptions.Image = global::srcrepair.Properties.Resources.Options;
+            this.MNUAppOptions.Image = global::srcrepair.gui.Properties.Resources.Options;
             this.MNUAppOptions.Name = "MNUAppOptions";
             resources.ApplyResources(this.MNUAppOptions, "MNUAppOptions");
             this.MNUAppOptions.Click += new System.EventHandler(this.MNUAppOptions_Click);
@@ -1728,7 +1728,7 @@
             // 
             // MNUReportBuilder
             // 
-            this.MNUReportBuilder.Image = global::srcrepair.Properties.Resources.report;
+            this.MNUReportBuilder.Image = global::srcrepair.gui.Properties.Resources.report;
             this.MNUReportBuilder.Name = "MNUReportBuilder";
             resources.ApplyResources(this.MNUReportBuilder, "MNUReportBuilder");
             this.MNUReportBuilder.Click += new System.EventHandler(this.MNUReportBuilder_Click);
@@ -1736,20 +1736,20 @@
             // MNUInstaller
             // 
             resources.ApplyResources(this.MNUInstaller, "MNUInstaller");
-            this.MNUInstaller.Image = global::srcrepair.Properties.Resources.installer;
+            this.MNUInstaller.Image = global::srcrepair.gui.Properties.Resources.installer;
             this.MNUInstaller.Name = "MNUInstaller";
             this.MNUInstaller.Click += new System.EventHandler(this.MNUInstaller_Click);
             // 
             // MNUWinMnuDisabler
             // 
-            this.MNUWinMnuDisabler.Image = global::srcrepair.Properties.Resources.Keyboard;
+            this.MNUWinMnuDisabler.Image = global::srcrepair.gui.Properties.Resources.Keyboard;
             this.MNUWinMnuDisabler.Name = "MNUWinMnuDisabler";
             resources.ApplyResources(this.MNUWinMnuDisabler, "MNUWinMnuDisabler");
             this.MNUWinMnuDisabler.Click += new System.EventHandler(this.MNUWinMnuDisabler_Click);
             // 
             // MNUMuteMan
             // 
-            this.MNUMuteMan.Image = global::srcrepair.Properties.Resources.Mute;
+            this.MNUMuteMan.Image = global::srcrepair.gui.Properties.Resources.Mute;
             this.MNUMuteMan.Name = "MNUMuteMan";
             resources.ApplyResources(this.MNUMuteMan, "MNUMuteMan");
             this.MNUMuteMan.Click += new System.EventHandler(this.MNUMuteMan_Click);
@@ -1761,13 +1761,13 @@
             this.MNUSep6,
             this.MNUExtClnAppCache,
             this.MNUExtClnTmpDir});
-            this.MNUExtClnSub.Image = global::srcrepair.Properties.Resources.clean;
+            this.MNUExtClnSub.Image = global::srcrepair.gui.Properties.Resources.clean;
             this.MNUExtClnSub.Name = "MNUExtClnSub";
             resources.ApplyResources(this.MNUExtClnSub, "MNUExtClnSub");
             // 
             // MNUExtClnSteam
             // 
-            this.MNUExtClnSteam.Image = global::srcrepair.Properties.Resources.clean;
+            this.MNUExtClnSteam.Image = global::srcrepair.gui.Properties.Resources.clean;
             this.MNUExtClnSteam.Name = "MNUExtClnSteam";
             resources.ApplyResources(this.MNUExtClnSteam, "MNUExtClnSteam");
             this.MNUExtClnSteam.Click += new System.EventHandler(this.MNUExtClnSteam_Click);
@@ -1779,14 +1779,14 @@
             // 
             // MNUExtClnAppCache
             // 
-            this.MNUExtClnAppCache.Image = global::srcrepair.Properties.Resources.clean;
+            this.MNUExtClnAppCache.Image = global::srcrepair.gui.Properties.Resources.clean;
             this.MNUExtClnAppCache.Name = "MNUExtClnAppCache";
             resources.ApplyResources(this.MNUExtClnAppCache, "MNUExtClnAppCache");
             this.MNUExtClnAppCache.Click += new System.EventHandler(this.MNUExtClnAppCache_Click);
             // 
             // MNUExtClnTmpDir
             // 
-            this.MNUExtClnTmpDir.Image = global::srcrepair.Properties.Resources.clean;
+            this.MNUExtClnTmpDir.Image = global::srcrepair.gui.Properties.Resources.clean;
             this.MNUExtClnTmpDir.Name = "MNUExtClnTmpDir";
             resources.ApplyResources(this.MNUExtClnTmpDir, "MNUExtClnTmpDir");
             this.MNUExtClnTmpDir.Click += new System.EventHandler(this.MNUExtClnTmpDir_Click);
@@ -1798,7 +1798,7 @@
             // 
             // MNUExit
             // 
-            this.MNUExit.Image = global::srcrepair.Properties.Resources.Exit;
+            this.MNUExit.Image = global::srcrepair.gui.Properties.Resources.Exit;
             this.MNUExit.Name = "MNUExit";
             resources.ApplyResources(this.MNUExit, "MNUExit");
             this.MNUExit.Click += new System.EventHandler(this.MNUExit_Click);
@@ -1821,14 +1821,14 @@
             // 
             // MNUHelp
             // 
-            this.MNUHelp.Image = global::srcrepair.Properties.Resources.Help;
+            this.MNUHelp.Image = global::srcrepair.gui.Properties.Resources.Help;
             this.MNUHelp.Name = "MNUHelp";
             resources.ApplyResources(this.MNUHelp, "MNUHelp");
             this.MNUHelp.Click += new System.EventHandler(this.MNUHelp_Click);
             // 
             // MNUUpdateCheck
             // 
-            this.MNUUpdateCheck.Image = global::srcrepair.Properties.Resources.Globe;
+            this.MNUUpdateCheck.Image = global::srcrepair.gui.Properties.Resources.Globe;
             this.MNUUpdateCheck.Name = "MNUUpdateCheck";
             resources.ApplyResources(this.MNUUpdateCheck, "MNUUpdateCheck");
             this.MNUUpdateCheck.Click += new System.EventHandler(this.MNUUpdateCheck_Click);
@@ -1840,21 +1840,21 @@
             // 
             // MNUOpinion
             // 
-            this.MNUOpinion.Image = global::srcrepair.Properties.Resources.Home;
+            this.MNUOpinion.Image = global::srcrepair.gui.Properties.Resources.Home;
             this.MNUOpinion.Name = "MNUOpinion";
             resources.ApplyResources(this.MNUOpinion, "MNUOpinion");
             this.MNUOpinion.Click += new System.EventHandler(this.MNUOpinion_Click);
             // 
             // MNUReportBug
             // 
-            this.MNUReportBug.Image = global::srcrepair.Properties.Resources.bug;
+            this.MNUReportBug.Image = global::srcrepair.gui.Properties.Resources.bug;
             this.MNUReportBug.Name = "MNUReportBug";
             resources.ApplyResources(this.MNUReportBug, "MNUReportBug");
             this.MNUReportBug.Click += new System.EventHandler(this.MNUReportBug_Click);
             // 
             // MNUShowLog
             // 
-            this.MNUShowLog.Image = global::srcrepair.Properties.Resources.Notebook;
+            this.MNUShowLog.Image = global::srcrepair.gui.Properties.Resources.Notebook;
             this.MNUShowLog.Name = "MNUShowLog";
             resources.ApplyResources(this.MNUShowLog, "MNUShowLog");
             this.MNUShowLog.Click += new System.EventHandler(this.MNUShowLog_Click);
@@ -1866,7 +1866,7 @@
             // 
             // MNUSteamGroup
             // 
-            this.MNUSteamGroup.Image = global::srcrepair.Properties.Resources.steam;
+            this.MNUSteamGroup.Image = global::srcrepair.gui.Properties.Resources.steam;
             this.MNUSteamGroup.Name = "MNUSteamGroup";
             resources.ApplyResources(this.MNUSteamGroup, "MNUSteamGroup");
             this.MNUSteamGroup.Click += new System.EventHandler(this.MNUSteamGroup_Click);
@@ -1878,7 +1878,7 @@
             // 
             // MNUAbout
             // 
-            this.MNUAbout.Image = global::srcrepair.Properties.Resources.Info;
+            this.MNUAbout.Image = global::srcrepair.gui.Properties.Resources.Info;
             this.MNUAbout.Name = "MNUAbout";
             resources.ApplyResources(this.MNUAbout, "MNUAbout");
             this.MNUAbout.Click += new System.EventHandler(this.MNUAbout_Click);
@@ -1909,7 +1909,7 @@
             // 
             resources.ApplyResources(this.SB_App, "SB_App");
             this.SB_App.DoubleClickEnabled = true;
-            this.SB_App.Image = global::srcrepair.Properties.Resources.green_circle;
+            this.SB_App.Image = global::srcrepair.gui.Properties.Resources.green_circle;
             this.SB_App.Name = "SB_App";
             this.SB_App.DoubleClick += new System.EventHandler(this.SB_App_DoubleClick);
             // 
@@ -1968,7 +1968,7 @@
             // 
             // AppRefresh
             // 
-            this.AppRefresh.Image = global::srcrepair.Properties.Resources.Refresh;
+            this.AppRefresh.Image = global::srcrepair.gui.Properties.Resources.Refresh;
             resources.ApplyResources(this.AppRefresh, "AppRefresh");
             this.AppRefresh.Name = "AppRefresh";
             this.AppRefresh.UseVisualStyleBackColor = true;

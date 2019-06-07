@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace srcrepair {
+namespace srcrepair.gui {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace srcrepair {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("srcrepair.CVList", typeof(CVList).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("srcrepair.gui.CVList", typeof(CVList).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

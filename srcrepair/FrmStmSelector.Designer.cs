@@ -65,7 +65,7 @@
             // 
             // SD_Follow
             // 
-            this.SD_Follow.Image = global::srcrepair.Properties.Resources.arrow;
+            this.SD_Follow.Image = global::srcrepair.gui.Properties.Resources.arrow;
             resources.ApplyResources(this.SD_Follow, "SD_Follow");
             this.SD_Follow.Name = "SD_Follow";
             this.SD_Follow.UseVisualStyleBackColor = true;

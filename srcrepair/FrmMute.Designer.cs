@@ -88,21 +88,21 @@
             // 
             // MM_FReload
             // 
-            this.MM_FReload.Image = global::srcrepair.Properties.Resources.Refresh;
+            this.MM_FReload.Image = global::srcrepair.gui.Properties.Resources.Refresh;
             this.MM_FReload.Name = "MM_FReload";
             resources.ApplyResources(this.MM_FReload, "MM_FReload");
             this.MM_FReload.Click += new System.EventHandler(this.UpdateTable);
             // 
             // MM_FSave
             // 
-            this.MM_FSave.Image = global::srcrepair.Properties.Resources.Save;
+            this.MM_FSave.Image = global::srcrepair.gui.Properties.Resources.Save;
             this.MM_FSave.Name = "MM_FSave";
             resources.ApplyResources(this.MM_FSave, "MM_FSave");
             this.MM_FSave.Click += new System.EventHandler(this.WriteTable);
             // 
             // MM_Exit
             // 
-            this.MM_Exit.Image = global::srcrepair.Properties.Resources.Exit;
+            this.MM_Exit.Image = global::srcrepair.gui.Properties.Resources.Exit;
             this.MM_Exit.Name = "MM_Exit";
             resources.ApplyResources(this.MM_Exit, "MM_Exit");
             this.MM_Exit.Click += new System.EventHandler(this.MM_Exit_Click);
@@ -116,7 +116,7 @@
             // 
             // MM_HAbout
             // 
-            this.MM_HAbout.Image = global::srcrepair.Properties.Resources.Info;
+            this.MM_HAbout.Image = global::srcrepair.gui.Properties.Resources.Info;
             this.MM_HAbout.Name = "MM_HAbout";
             resources.ApplyResources(this.MM_HAbout, "MM_HAbout");
             this.MM_HAbout.Click += new System.EventHandler(this.AboutDlg);
@@ -164,21 +164,21 @@
             // 
             // MM_CCut
             // 
-            this.MM_CCut.Image = global::srcrepair.Properties.Resources.Cut;
+            this.MM_CCut.Image = global::srcrepair.gui.Properties.Resources.Cut;
             this.MM_CCut.Name = "MM_CCut";
             resources.ApplyResources(this.MM_CCut, "MM_CCut");
             this.MM_CCut.Click += new System.EventHandler(this.MM_Cut_Click);
             // 
             // MM_CCopy
             // 
-            this.MM_CCopy.Image = global::srcrepair.Properties.Resources.Copy;
+            this.MM_CCopy.Image = global::srcrepair.gui.Properties.Resources.Copy;
             this.MM_CCopy.Name = "MM_CCopy";
             resources.ApplyResources(this.MM_CCopy, "MM_CCopy");
             this.MM_CCopy.Click += new System.EventHandler(this.MM_Copy_Click);
             // 
             // MM_CPaste
             // 
-            this.MM_CPaste.Image = global::srcrepair.Properties.Resources.Paste;
+            this.MM_CPaste.Image = global::srcrepair.gui.Properties.Resources.Paste;
             this.MM_CPaste.Name = "MM_CPaste";
             resources.ApplyResources(this.MM_CPaste, "MM_CPaste");
             this.MM_CPaste.Click += new System.EventHandler(this.MM_Paste_Click);
@@ -190,21 +190,21 @@
             // 
             // MM_CRemove
             // 
-            this.MM_CRemove.Image = global::srcrepair.Properties.Resources.Delete;
+            this.MM_CRemove.Image = global::srcrepair.gui.Properties.Resources.Delete;
             this.MM_CRemove.Name = "MM_CRemove";
             resources.ApplyResources(this.MM_CRemove, "MM_CRemove");
             this.MM_CRemove.Click += new System.EventHandler(this.MM_Delete_Click);
             // 
             // MM_CConvert
             // 
-            this.MM_CConvert.Image = global::srcrepair.Properties.Resources.Convert;
+            this.MM_CConvert.Image = global::srcrepair.gui.Properties.Resources.Convert;
             this.MM_CConvert.Name = "MM_CConvert";
             resources.ApplyResources(this.MM_CConvert, "MM_CConvert");
             this.MM_CConvert.Click += new System.EventHandler(this.MM_Convert_Click);
             // 
             // showSteamProfileToolStripMenuItem
             // 
-            this.showSteamProfileToolStripMenuItem.Image = global::srcrepair.Properties.Resources.steam;
+            this.showSteamProfileToolStripMenuItem.Image = global::srcrepair.gui.Properties.Resources.steam;
             this.showSteamProfileToolStripMenuItem.Name = "showSteamProfileToolStripMenuItem";
             resources.ApplyResources(this.showSteamProfileToolStripMenuItem, "showSteamProfileToolStripMenuItem");
             this.showSteamProfileToolStripMenuItem.Click += new System.EventHandler(this.MM_Steam_Click);
@@ -230,7 +230,7 @@
             // MM_Refresh
             // 
             this.MM_Refresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.MM_Refresh.Image = global::srcrepair.Properties.Resources.Refresh;
+            this.MM_Refresh.Image = global::srcrepair.gui.Properties.Resources.Refresh;
             resources.ApplyResources(this.MM_Refresh, "MM_Refresh");
             this.MM_Refresh.Name = "MM_Refresh";
             this.MM_Refresh.Click += new System.EventHandler(this.UpdateTable);
@@ -238,7 +238,7 @@
             // MM_Save
             // 
             this.MM_Save.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.MM_Save.Image = global::srcrepair.Properties.Resources.Save;
+            this.MM_Save.Image = global::srcrepair.gui.Properties.Resources.Save;
             resources.ApplyResources(this.MM_Save, "MM_Save");
             this.MM_Save.Name = "MM_Save";
             this.MM_Save.Click += new System.EventHandler(this.WriteTable);
@@ -251,7 +251,7 @@
             // MM_Cut
             // 
             this.MM_Cut.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.MM_Cut.Image = global::srcrepair.Properties.Resources.Cut;
+            this.MM_Cut.Image = global::srcrepair.gui.Properties.Resources.Cut;
             resources.ApplyResources(this.MM_Cut, "MM_Cut");
             this.MM_Cut.Name = "MM_Cut";
             this.MM_Cut.Click += new System.EventHandler(this.MM_Cut_Click);
@@ -259,7 +259,7 @@
             // MM_Copy
             // 
             this.MM_Copy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.MM_Copy.Image = global::srcrepair.Properties.Resources.Copy;
+            this.MM_Copy.Image = global::srcrepair.gui.Properties.Resources.Copy;
             resources.ApplyResources(this.MM_Copy, "MM_Copy");
             this.MM_Copy.Name = "MM_Copy";
             this.MM_Copy.Click += new System.EventHandler(this.MM_Copy_Click);
@@ -267,7 +267,7 @@
             // MM_Paste
             // 
             this.MM_Paste.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.MM_Paste.Image = global::srcrepair.Properties.Resources.Paste;
+            this.MM_Paste.Image = global::srcrepair.gui.Properties.Resources.Paste;
             resources.ApplyResources(this.MM_Paste, "MM_Paste");
             this.MM_Paste.Name = "MM_Paste";
             this.MM_Paste.Click += new System.EventHandler(this.MM_Paste_Click);
@@ -280,7 +280,7 @@
             // MM_Delete
             // 
             this.MM_Delete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.MM_Delete.Image = global::srcrepair.Properties.Resources.Delete;
+            this.MM_Delete.Image = global::srcrepair.gui.Properties.Resources.Delete;
             resources.ApplyResources(this.MM_Delete, "MM_Delete");
             this.MM_Delete.Name = "MM_Delete";
             this.MM_Delete.Click += new System.EventHandler(this.MM_Delete_Click);
@@ -288,7 +288,7 @@
             // MM_Convert
             // 
             this.MM_Convert.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.MM_Convert.Image = global::srcrepair.Properties.Resources.Convert;
+            this.MM_Convert.Image = global::srcrepair.gui.Properties.Resources.Convert;
             resources.ApplyResources(this.MM_Convert, "MM_Convert");
             this.MM_Convert.Name = "MM_Convert";
             this.MM_Convert.Click += new System.EventHandler(this.MM_Convert_Click);
@@ -296,7 +296,7 @@
             // MM_Steam
             // 
             this.MM_Steam.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.MM_Steam.Image = global::srcrepair.Properties.Resources.steam;
+            this.MM_Steam.Image = global::srcrepair.gui.Properties.Resources.steam;
             resources.ApplyResources(this.MM_Steam, "MM_Steam");
             this.MM_Steam.Name = "MM_Steam";
             this.MM_Steam.Click += new System.EventHandler(this.MM_Steam_Click);
@@ -309,7 +309,7 @@
             // MM_About
             // 
             this.MM_About.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.MM_About.Image = global::srcrepair.Properties.Resources.Info;
+            this.MM_About.Image = global::srcrepair.gui.Properties.Resources.Info;
             resources.ApplyResources(this.MM_About, "MM_About");
             this.MM_About.Name = "MM_About";
             this.MM_About.Click += new System.EventHandler(this.AboutDlg);

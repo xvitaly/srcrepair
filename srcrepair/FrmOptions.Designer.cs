@@ -170,7 +170,7 @@
             // 
             // MO_FindTextEd
             // 
-            this.MO_FindTextEd.Image = global::srcrepair.Properties.Resources.Search;
+            this.MO_FindTextEd.Image = global::srcrepair.gui.Properties.Resources.Search;
             resources.ApplyResources(this.MO_FindTextEd, "MO_FindTextEd");
             this.MO_FindTextEd.Name = "MO_FindTextEd";
             this.MO_FindTextEd.UseVisualStyleBackColor = true;

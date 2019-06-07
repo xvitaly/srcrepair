@@ -76,14 +76,14 @@
             // 
             // LV_MenuFileReload
             // 
-            this.LV_MenuFileReload.Image = global::srcrepair.Properties.Resources.Refresh;
+            this.LV_MenuFileReload.Image = global::srcrepair.gui.Properties.Resources.Refresh;
             this.LV_MenuFileReload.Name = "LV_MenuFileReload";
             resources.ApplyResources(this.LV_MenuFileReload, "LV_MenuFileReload");
             this.LV_MenuFileReload.Click += new System.EventHandler(this.LV_MenuFileReload_Click);
             // 
             // LV_MunuFileClearLog
             // 
-            this.LV_MunuFileClearLog.Image = global::srcrepair.Properties.Resources.clean;
+            this.LV_MunuFileClearLog.Image = global::srcrepair.gui.Properties.Resources.clean;
             this.LV_MunuFileClearLog.Name = "LV_MunuFileClearLog";
             resources.ApplyResources(this.LV_MunuFileClearLog, "LV_MunuFileClearLog");
             this.LV_MunuFileClearLog.Click += new System.EventHandler(this.LV_MunuFileClearLog_Click);
@@ -95,7 +95,7 @@
             // 
             // LV_MenuFileExit
             // 
-            this.LV_MenuFileExit.Image = global::srcrepair.Properties.Resources.Exit;
+            this.LV_MenuFileExit.Image = global::srcrepair.gui.Properties.Resources.Exit;
             this.LV_MenuFileExit.Name = "LV_MenuFileExit";
             resources.ApplyResources(this.LV_MenuFileExit, "LV_MenuFileExit");
             this.LV_MenuFileExit.Click += new System.EventHandler(this.LV_MenuFileExit_Click);
@@ -109,7 +109,7 @@
             // 
             // LV_MenuHelpAbout
             // 
-            this.LV_MenuHelpAbout.Image = global::srcrepair.Properties.Resources.Info;
+            this.LV_MenuHelpAbout.Image = global::srcrepair.gui.Properties.Resources.Info;
             this.LV_MenuHelpAbout.Name = "LV_MenuHelpAbout";
             resources.ApplyResources(this.LV_MenuHelpAbout, "LV_MenuHelpAbout");
             this.LV_MenuHelpAbout.Click += new System.EventHandler(this.LV_MenuHelpAbout_Click);

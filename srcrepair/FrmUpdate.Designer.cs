@@ -44,7 +44,7 @@
             // UpdAppImg
             // 
             this.UpdAppImg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UpdAppImg.Image = global::srcrepair.Properties.Resources.upd_av;
+            this.UpdAppImg.Image = global::srcrepair.gui.Properties.Resources.upd_av;
             resources.ApplyResources(this.UpdAppImg, "UpdAppImg");
             this.UpdAppImg.Name = "UpdAppImg";
             this.UpdAppImg.TabStop = false;
@@ -53,7 +53,7 @@
             // UpdDBImg
             // 
             this.UpdDBImg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UpdDBImg.Image = global::srcrepair.Properties.Resources.upd_nx;
+            this.UpdDBImg.Image = global::srcrepair.gui.Properties.Resources.upd_nx;
             resources.ApplyResources(this.UpdDBImg, "UpdDBImg");
             this.UpdDBImg.Name = "UpdDBImg";
             this.UpdDBImg.TabStop = false;
@@ -81,7 +81,7 @@
             // UpdHUDDbImg
             // 
             this.UpdHUDDbImg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UpdHUDDbImg.Image = global::srcrepair.Properties.Resources.upd_chk;
+            this.UpdHUDDbImg.Image = global::srcrepair.gui.Properties.Resources.upd_chk;
             resources.ApplyResources(this.UpdHUDDbImg, "UpdHUDDbImg");
             this.UpdHUDDbImg.Name = "UpdHUDDbImg";
             this.UpdHUDDbImg.TabStop = false;
