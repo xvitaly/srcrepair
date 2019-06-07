@@ -18,7 +18,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
-namespace srcrepair.Properties {
+namespace srcrepair.gui.Properties {
     
     
     // This class allows you to handle specific events on the settings class:
