@@ -189,14 +189,14 @@ namespace srcrepair.gui
                             }
                             catch (Exception Ex)
                             {
-                                Logger.Warn(Ex, AppStrings.AppDbgExRepFm);
+                                Logger.Warn(Ex, DebugStrings.AppDbgExRepFm);
                             }
                         }
                     }
                     catch (Exception Ex)
                     {
                         MessageBox.Show(AppStrings.PS_ArchFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        Logger.Error(Ex, AppStrings.AppDbgExRepPack);
+                        Logger.Error(Ex, DebugStrings.AppDbgExRepPack);
                     }
                 }
 
@@ -218,7 +218,7 @@ namespace srcrepair.gui
             {
                 // Произошло исключение...
                 MessageBox.Show(AppStrings.RPB_GenException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, AppStrings.AppDbgExRepGen);
+                Logger.Error(Ex, DebugStrings.AppDbgExRepGen);
             }
         }
 
@@ -253,7 +253,7 @@ namespace srcrepair.gui
                 ControlBox = false;
 
                 // Запускаем асинхронный обработчик...
-                if (!BwGen.IsBusy) { BwGen.RunWorkerAsync(); } else { Logger.Warn(AppStrings.AppDbgExRepWrkBusy); }
+                if (!BwGen.IsBusy) { BwGen.RunWorkerAsync(); } else { Logger.Warn(DebugStrings.AppDbgExRepWrkBusy); }
             }
             else
             {

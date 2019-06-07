@@ -74,7 +74,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 MessageBox.Show(AppStrings.LV_LoadFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, AppStrings.AppDbgExLvLoad);
+                Logger.Error(Ex, DebugStrings.AppDbgExLvLoad);
             }
         }
 
@@ -134,7 +134,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 MessageBox.Show(AppStrings.LV_ClearEx, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, AppStrings.AppDbgExLvClean);
+                Logger.Error(Ex, DebugStrings.AppDbgExLvClean);
             }
         }
     }

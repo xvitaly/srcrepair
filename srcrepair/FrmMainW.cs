@@ -219,7 +219,7 @@ namespace srcrepair.gui
             {
                 // Выводим сообщение об ошибке...
                 MessageBox.Show(AppStrings.GT_RegOpenErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, AppStrings.AppDbgExT1LoadFail);
+                Logger.Error(Ex, DebugStrings.AppDbgExT1LoadFail);
             }
         }
 
@@ -269,7 +269,7 @@ namespace srcrepair.gui
             {
                 // Выводим сообщение об ошибке...
                 MessageBox.Show(AppStrings.GT_NCFLoadFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, AppStrings.AppDbgExT2LoadFail);
+                Logger.Error(Ex, DebugStrings.AppDbgExT2LoadFail);
             }
         }
 
@@ -352,7 +352,7 @@ namespace srcrepair.gui
                 {
                     // Произошло исключение...
                     MessageBox.Show(AppStrings.CE_ExceptionDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, AppStrings.AppDbgExCfgEdLoad);
+                    Logger.Error(Ex, DebugStrings.AppDbgExCfgEdLoad);
                 }
             }
             else
@@ -598,7 +598,7 @@ namespace srcrepair.gui
             {
                 // Записываем в журнал и выводим сообщение об ошибке...
                 MessageBox.Show(AppStrings.GT_SaveFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, AppStrings.AppDbgExT1SaveFail);
+                Logger.Error(Ex, DebugStrings.AppDbgExT1SaveFail);
             }
         }
 
@@ -617,7 +617,7 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Warn(Ex, AppStrings.AppDbgExT2AutoFail);
+                    Logger.Warn(Ex, DebugStrings.AppDbgExT2AutoFail);
                 }
             }
 
@@ -634,7 +634,7 @@ namespace srcrepair.gui
             {
                 // Записываем в журнал и выводим сообщение об ошибке...
                 MessageBox.Show(AppStrings.GT_NCFFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, AppStrings.AppDbgExT2SaveFail);
+                Logger.Error(Ex, DebugStrings.AppDbgExT2SaveFail);
             }
         }
 
@@ -733,19 +733,19 @@ namespace srcrepair.gui
             catch (FileNotFoundException Ex)
             {
                 MessageBox.Show(AppStrings.SteamPathEnterErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Logger.Error(Ex, AppStrings.AppDbgExSteamPath);
+                Logger.Error(Ex, DebugStrings.AppDbgExSteamPath);
                 Environment.Exit(7);
             }
             catch (OperationCanceledException Ex)
             {
                 MessageBox.Show(AppStrings.SteamPathCancel, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Logger.Error(Ex, AppStrings.AppDbgExSteamPath);
+                Logger.Error(Ex, DebugStrings.AppDbgExSteamPath);
                 Environment.Exit(19);
             }
             catch (Exception Ex)
             {
                 MessageBox.Show(AppStrings.AppGenericError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Logger.Error(Ex, AppStrings.AppDbgExSteamPath);
+                Logger.Error(Ex, DebugStrings.AppDbgExSteamPath);
                 Environment.Exit(24);
             }
         }
@@ -1012,7 +1012,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 MessageBox.Show(AppStrings.AppXMLParseError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Logger.Error(Ex, AppStrings.AppDbgExXmlParse);
+                Logger.Error(Ex, DebugStrings.AppDbgExXmlParse);
                 Environment.Exit(16);
             }
 
@@ -1118,7 +1118,7 @@ namespace srcrepair.gui
             // Произошла ошибка во время проверки наличия обновлений. Запишем в журнал...
             if (e.Error != null)
             {
-                Logger.Warn(e.Error, AppStrings.AppDbgExBgWChk);
+                Logger.Warn(e.Error, DebugStrings.AppDbgExBgWChk);
             }
         }
 
@@ -1248,7 +1248,7 @@ namespace srcrepair.gui
             else
             {
                 MessageBox.Show(AppStrings.HD_InstallError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Logger.Error(e.Error, AppStrings.AppDbgExHUDInstall);
+                Logger.Error(e.Error, DebugStrings.AppDbgExHUDInstall);
             }
 
             // Включаем кнопку удаления если HUD установлен...
@@ -1274,7 +1274,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, AppStrings.AppDbgExStmmInit);
+                Logger.Warn(Ex, DebugStrings.AppDbgExStmmInit);
                 ValidateAndHandle();
             }
             
@@ -1372,7 +1372,7 @@ namespace srcrepair.gui
                         catch (Exception Ex)
                         {
                             MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            Logger.Error(Ex, AppStrings.AppDbgExClnBlobs);
+                            Logger.Error(Ex, DebugStrings.AppDbgExClnBlobs);
                         }
                     }
 
@@ -1397,7 +1397,7 @@ namespace srcrepair.gui
                         catch (Exception Ex)
                         {
                             MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            Logger.Error(Ex, AppStrings.AppDbgExClnReg);
+                            Logger.Error(Ex, DebugStrings.AppDbgExClnReg);
                         }
                     }
 
@@ -1471,7 +1471,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 MessageBox.Show(AppStrings.AppFailedToGetData, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, AppStrings.AppDbgExSelGame);
+                Logger.Error(Ex, DebugStrings.AppDbgExSelGame);
             }
         }
 
@@ -1644,7 +1644,7 @@ namespace srcrepair.gui
                             }
                             catch (Exception Ex)
                             {
-                                Logger.Warn(Ex, AppStrings.AppDbgExFpsInstBackup);
+                                Logger.Warn(Ex, DebugStrings.AppDbgExFpsInstBackup);
                             }
                         }
                     }
@@ -1664,7 +1664,7 @@ namespace srcrepair.gui
                     {
                         // Установка не удалась. Выводим сообщение об этом...
                         MessageBox.Show(AppStrings.FP_InstallFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        Logger.Error(Ex, AppStrings.AppDbgExFpsInstall);
+                        Logger.Error(Ex, DebugStrings.AppDbgExFpsInstall);
                     }
                 }
             }
@@ -1696,7 +1696,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 MessageBox.Show(AppStrings.FP_RemoveFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Logger.Error(Ex, AppStrings.AppDbgExFpsUninstall);
+                Logger.Error(Ex, DebugStrings.AppDbgExFpsUninstall);
             }
         }
 
@@ -1720,7 +1720,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 MessageBox.Show(AppStrings.CS_FailedToOpenCfg, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, AppStrings.AppDbgExCfgSelection);
+                Logger.Error(Ex, DebugStrings.AppDbgExCfgSelection);
             }
         }
 
@@ -1768,7 +1768,7 @@ namespace srcrepair.gui
                         }
                         catch (Exception Ex)
                         {
-                            Logger.Warn(Ex, AppStrings.AppDbgExCfgEdAutoBackup);
+                            Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdAutoBackup);
                         }
                     }
                 }
@@ -1781,7 +1781,7 @@ namespace srcrepair.gui
                 catch (Exception Ex)
                 {
                     MessageBox.Show(AppStrings.CE_CfgSVVEx, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, AppStrings.AppDbgExCfgEdSave);
+                    Logger.Error(Ex, DebugStrings.AppDbgExCfgEdSave);
                 }
             }
             else
@@ -1913,7 +1913,7 @@ namespace srcrepair.gui
                             }
                             catch (Exception Ex)
                             {
-                                Logger.Warn(Ex, AppStrings.AppDbgExRemVdAutoGs);
+                                Logger.Warn(Ex, DebugStrings.AppDbgExRemVdAutoGs);
                             }
                         }
 
@@ -1930,7 +1930,7 @@ namespace srcrepair.gui
                         }
                         catch (Exception Ex)
                         {
-                            Logger.Warn(Ex, AppStrings.AppDbgExRemVdAutoCfg);
+                            Logger.Warn(Ex, DebugStrings.AppDbgExRemVdAutoCfg);
                         }
                     }
 
@@ -1947,7 +1947,7 @@ namespace srcrepair.gui
                 catch (Exception Ex)
                 {
                     MessageBox.Show(AppStrings.PS_CleanupErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, AppStrings.AppDbgExRemVd);
+                    Logger.Error(Ex, DebugStrings.AppDbgExRemVd);
                 }
             }
         }
@@ -1976,7 +1976,7 @@ namespace srcrepair.gui
                 catch (Exception Ex)
                 {
                     MessageBox.Show(AppStrings.AppStartSteamFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, AppStrings.AppDbgExValCache);
+                    Logger.Error(Ex, DebugStrings.AppDbgExValCache);
                 }
             }
         }
@@ -2021,7 +2021,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, AppStrings.AppDbgExBugRep);
+                Logger.Warn(Ex, DebugStrings.AppDbgExBugRep);
             }
         }
 
@@ -2058,7 +2058,7 @@ namespace srcrepair.gui
                                     {
                                         // Произошло исключение...
                                         MessageBox.Show(AppStrings.BU_RestFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                        Logger.Error(Ex, AppStrings.AppDbgExRegedit);
+                                        Logger.Error(Ex, DebugStrings.AppDbgExRegedit);
                                     }
                                     break;
                                 case ".bud":
@@ -2114,7 +2114,7 @@ namespace srcrepair.gui
                             {
                                 // Произошло исключение при попытке удаления файла резервной копии...
                                 MessageBox.Show(AppStrings.BU_DelFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                Logger.Error(Ex, AppStrings.AppDbgExBackupRem);
+                                Logger.Error(Ex, DebugStrings.AppDbgExBackupRem);
                             }
                         }
 
@@ -2160,7 +2160,7 @@ namespace srcrepair.gui
                         }
                         catch (Exception Ex)
                         {
-                            Logger.Warn(Ex, AppStrings.AppDbgExBkGsAuto);
+                            Logger.Warn(Ex, DebugStrings.AppDbgExBkGsAuto);
                         }
                     }
                     
@@ -2174,7 +2174,7 @@ namespace srcrepair.gui
                 {
                     // Выводим сообщение об ошибке и пишем в журнал отладки...
                     MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, AppStrings.AppDbgExBkSg);
+                    Logger.Error(Ex, DebugStrings.AppDbgExBkSg);
                 }
             }
         }
@@ -2199,7 +2199,7 @@ namespace srcrepair.gui
                 {
                     // Произошло исключение, уведомим пользователя...
                     MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, AppStrings.AppDbgExBkAllStm);
+                    Logger.Error(Ex, DebugStrings.AppDbgExBkAllStm);
                 }
             }
         }
@@ -2218,7 +2218,7 @@ namespace srcrepair.gui
                 catch (Exception Ex)
                 {
                     MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, AppStrings.AppDbgExBkAllGames);
+                    Logger.Error(Ex, DebugStrings.AppDbgExBkAllGames);
                 }
             }
         }
@@ -2268,7 +2268,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, AppStrings.AppDbgExUrlHome);
+                Logger.Warn(Ex, DebugStrings.AppDbgExUrlHome);
             }
         }
 
@@ -2286,7 +2286,7 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Warn(Ex, AppStrings.AppDbgExUrlGroup);
+                    Logger.Warn(Ex, DebugStrings.AppDbgExUrlGroup);
                 }
             }
         }
@@ -2300,7 +2300,7 @@ namespace srcrepair.gui
                     CE_Editor.Rows.Remove(CE_Editor.CurrentRow);
                 }
             }
-            catch (Exception Ex) { Logger.Warn(Ex, AppStrings.AppDbgExCfgEdRemRow); }
+            catch (Exception Ex) { Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdRemRow); }
         }
 
         private void CE_Copy_Click(object sender, EventArgs e)
@@ -2311,7 +2311,7 @@ namespace srcrepair.gui
                 foreach (DataGridViewCell DV in CE_Editor.SelectedCells) { if (DV.Value != null) { SB.AppendFormat("{0} ", DV.Value); } }
                 Clipboard.SetText(SB.ToString().Trim());
             }
-            catch (Exception Ex) { Logger.Warn(Ex, AppStrings.AppDbgExCfgEdCopy); }
+            catch (Exception Ex) { Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdCopy); }
         }
 
         private void CE_Cut_Click(object sender, EventArgs e)
@@ -2322,7 +2322,7 @@ namespace srcrepair.gui
                 foreach (DataGridViewCell DV in CE_Editor.SelectedCells) { if (DV.Value != null) { SB.AppendFormat("{0} ", DV.Value); DV.Value = null; } }
                 Clipboard.SetText(SB.ToString().Trim());
             }
-            catch (Exception Ex) { Logger.Warn(Ex, AppStrings.AppDbgExCfgEdCut); }
+            catch (Exception Ex) { Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdCut); }
         }
 
         private void CE_Paste_Click(object sender, EventArgs e)
@@ -2334,7 +2334,7 @@ namespace srcrepair.gui
                     CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value = Clipboard.GetText();
                 }
             }
-            catch (Exception Ex) { Logger.Warn(Ex, AppStrings.AppDbgExCfgEdPaste); }
+            catch (Exception Ex) { Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdPaste); }
         }
 
         private void FP_OpenNotepad_Click(object sender, EventArgs e)
@@ -2360,7 +2360,7 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Warn(Ex, AppStrings.AppDbgExCfgEdExtEdt);
+                    Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdExtEdt);
                 }
             }
         }
@@ -2389,7 +2389,7 @@ namespace srcrepair.gui
                         }
                         catch (Exception Ex)
                         {
-                            Logger.Warn(Ex, AppStrings.AppDbgExBkExtEdt);
+                            Logger.Warn(Ex, DebugStrings.AppDbgExBkExtEdt);
                         }
                     }
                     else
@@ -2434,7 +2434,7 @@ namespace srcrepair.gui
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Warn(Ex, AppStrings.AppDbgExBkFMan);
+                        Logger.Warn(Ex, DebugStrings.AppDbgExBkFMan);
                     }
                 }
                 else
@@ -2470,7 +2470,7 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Warn(Ex, AppStrings.AppDbgExCfgEdExtEdt);
+                    Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdExtEdt);
                 }
             }
             else
@@ -2561,7 +2561,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, AppStrings.AppDbgExUrlCvList);
+                Logger.Warn(Ex, DebugStrings.AppDbgExUrlCvList);
             }
         }
 
@@ -2578,7 +2578,7 @@ namespace srcrepair.gui
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Warn(Ex, AppStrings.AppDbgExCfgEdBkMan);
+                        Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdBkMan);
                     }
                 }
             }
@@ -2667,7 +2667,7 @@ namespace srcrepair.gui
             {
                 App.SourceGames.SelectedGame.HUDMan.Select(HD_HSel.Text);
             }
-            catch (Exception Ex) { Logger.Warn(Ex, AppStrings.AppDbgExHudSelect); }
+            catch (Exception Ex) { Logger.Warn(Ex, DebugStrings.AppDbgExHudSelect); }
                 
             // Проверяем результат...
             bool Success = !String.IsNullOrEmpty(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.Name);
@@ -2732,7 +2732,7 @@ namespace srcrepair.gui
                             {
                                 File.Delete(App.SourceGames.SelectedGame.HUDMan.SelectedHUD.LocalFile);
                             }
-                            catch (Exception Ex) { Logger.Warn(Ex, AppStrings.AppDbgExHudArchRem); }
+                            catch (Exception Ex) { Logger.Warn(Ex, DebugStrings.AppDbgExHudArchRem); }
                         }
                         else
                         {
@@ -2786,7 +2786,7 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Warn(Ex, AppStrings.AppDbgExUrlHudHome);
+                    Logger.Warn(Ex, DebugStrings.AppDbgExUrlHudHome);
                 }
             }
         }
@@ -2833,7 +2833,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, AppStrings.AppDbgExHudExtFm);
+                Logger.Warn(Ex, DebugStrings.AppDbgExHudExtFm);
             }
         }
 
@@ -2861,7 +2861,7 @@ namespace srcrepair.gui
                     Properties.Settings.Default.LastSteamID = Result;
                     FindGames();
                 }
-            } catch (Exception Ex) { Logger.Warn(Ex, AppStrings.AppDbgExUserIdSel); }
+            } catch (Exception Ex) { Logger.Warn(Ex, DebugStrings.AppDbgExUserIdSel); }
         }
 
         private void BU_LVTable_SelectedIndexChanged(object sender, EventArgs e)

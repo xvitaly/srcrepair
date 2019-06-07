@@ -326,7 +326,7 @@ namespace srcrepair.gui
                     catch (Exception Ex)
                     {
                         MessageBox.Show(AppStrings.PS_CleanEmptyDirsError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        Logger.Error(Ex, AppStrings.AppDbgExClnEmptyDirs);
+                        Logger.Error(Ex, DebugStrings.AppDbgExClnEmptyDirs);
                     }
                 }
             }
@@ -334,7 +334,7 @@ namespace srcrepair.gui
             {
                 // Произошло исключение...
                 MessageBox.Show(AppStrings.PS_CleanupErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, AppStrings.AppDbgExClnQueueRun);
+                Logger.Error(Ex, DebugStrings.AppDbgExClnQueueRun);
             }
         }
 
@@ -430,7 +430,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, AppStrings.AppDbgExClnFm);
+                Logger.Warn(Ex, DebugStrings.AppDbgExClnFm);
             }
         }
 

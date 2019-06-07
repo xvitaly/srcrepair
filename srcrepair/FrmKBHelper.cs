@@ -91,7 +91,7 @@ namespace srcrepair.gui
                 catch (Exception Ex)
                 {
                     MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, AppStrings.AppDbgExKbLW);
+                    Logger.Error(Ex, DebugStrings.AppDbgExKbLW);
                 }
             }
         }
@@ -114,7 +114,7 @@ namespace srcrepair.gui
                 catch (Exception Ex)
                 {
                     MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, AppStrings.AppDbgExKbBW);
+                    Logger.Error(Ex, DebugStrings.AppDbgExKbBW);
                 }
             }
         }
@@ -137,7 +137,7 @@ namespace srcrepair.gui
                 catch (Exception Ex)
                 {
                     MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, AppStrings.AppDbgExKbRWCtx);
+                    Logger.Error(Ex, DebugStrings.AppDbgExKbRWCtx);
                 }
             }
         }
@@ -160,7 +160,7 @@ namespace srcrepair.gui
                 catch (Exception Ex)
                 {
                     MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, AppStrings.AppDbgExKbBWCtx);
+                    Logger.Error(Ex, DebugStrings.AppDbgExKbBWCtx);
                 }
             }
         }
@@ -182,7 +182,7 @@ namespace srcrepair.gui
                 catch (Exception Ex)
                 {
                     MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, AppStrings.AppDbgExKbRestore);
+                    Logger.Error(Ex, DebugStrings.AppDbgExKbRestore);
                 }
             }
         }

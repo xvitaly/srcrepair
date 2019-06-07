@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppDbgExArWrkUnpack" xml:space="preserve">
+    <value>Exception during unpacking files from Zip archives.</value>
+  </data>
+  <data name="AppDbgExBackupRem" xml:space="preserve">
+    <value>Exception while trying to remove selected backups.</value>
+  </data>
+  <data name="AppDbgExBgWChk" xml:space="preserve">
+    <value>Exception while checking for updates during application startup.</value>
+  </data>
+  <data name="AppDbgExBkAllGames" xml:space="preserve">
+    <value>Exception while trying to create graphical settings backup of all games.</value>
+  </data>
+  <data name="AppDbgExBkAllStm" xml:space="preserve">
+    <value>Exception while trying to create backup of all Steam settings stored in registry.</value>
+  </data>
+  <data name="AppDbgExBkExtEdt" xml:space="preserve">
+    <value>Exception while trying to load backup file in text editor.</value>
+  </data>
+  <data name="AppDbgExBkFMan" xml:space="preserve">
+    <value>Exception while trying to show selected backup file in file manager.</value>
+  </data>
+  <data name="AppDbgExBkGsAuto" xml:space="preserve">
+    <value>Exception while trying to save auto backup before saving game settings.</value>
+  </data>
+  <data name="AppDbgExBkSg" xml:space="preserve">
+    <value>Exception while trying to create graphical settings backup of selected game.</value>
+  </data>
+  <data name="AppDbgExBugRep" xml:space="preserve">
+    <value>Exception while trying to open web browser to open bug tracker URL.</value>
+  </data>
+  <data name="AppDbgExCfgEdAutoBackup" xml:space="preserve">
+    <value>Exception while trying to save config auto backup before saving it in Config editor.</value>
+  </data>
+  <data name="AppDbgExCfgEdBkMan" xml:space="preserve">
+    <value>Exception while trying to create manual backup of config file.</value>
+  </data>
+  <data name="AppDbgExCfgEdCopy" xml:space="preserve">
+    <value>Exception while trying to copy item to clipboard in Config editor.</value>
+  </data>
+  <data name="AppDbgExCfgEdCut" xml:space="preserve">
+    <value>Exception while trying to cut item to clipboard in Config editor.</value>
+  </data>
+  <data name="AppDbgExCfgEdExtEdt" xml:space="preserve">
+    <value>Exception while trying to load config file in text editor.</value>
+  </data>
+  <data name="AppDbgExCfgEdLoad" xml:space="preserve">
+    <value>Exception while reading config file in Config editor.</value>
+  </data>
+  <data name="AppDbgExCfgEdPaste" xml:space="preserve">
+    <value>Exception while trying to paste item from clipboard in Config editor.</value>
+  </data>
+  <data name="AppDbgExCfgEdRemRow" xml:space="preserve">
+    <value>Exception while trying to remove item in Config editor.</value>
+  </data>
+  <data name="AppDbgExCfgEdSave" xml:space="preserve">
+    <value>Exception during saving file in Config editor.</value>
+  </data>
+  <data name="AppDbgExCfgSelection" xml:space="preserve">
+    <value>Exception during FPS config selection (click on warning icon).</value>
+  </data>
+  <data name="AppDbgExClnBlobs" xml:space="preserve">
+    <value>Exception while cleaning up Steam blob files.</value>
+  </data>
+  <data name="AppDbgExClnEmptyDirs" xml:space="preserve">
+    <value>Exception while cleaning up empty directories.</value>
+  </data>
+  <data name="AppDbgExClnFm" xml:space="preserve">
+    <value>Exception while trying to show selected file in file manager.</value>
+  </data>
+  <data name="AppDbgExClnQueueRun" xml:space="preserve">
+    <value>Exception while removing files from queue.</value>
+  </data>
+  <data name="AppDbgExClnReg" xml:space="preserve">
+    <value>Exception while cleaning up Steam registry entries.</value>
+  </data>
+  <data name="AppDbgExFpsInstall" xml:space="preserve">
+    <value>Exception during FPS config installation.</value>
+  </data>
+  <data name="AppDbgExFpsInstBackup" xml:space="preserve">
+    <value>Exception while compressing files as backup before installation of new FPS config.</value>
+  </data>
+  <data name="AppDbgExFpsUninstall" xml:space="preserve">
+    <value>Exception during FPS config uninstallation.</value>
+  </data>
+  <data name="AppDbgExHudArchRem" xml:space="preserve">
+    <value>Exception while removing HUD archive file.</value>
+  </data>
+  <data name="AppDbgExHudExtFm" xml:space="preserve">
+    <value>Exception while trying to show selected HUD directory in file manager.</value>
+  </data>
+  <data name="AppDbgExHUDInstall" xml:space="preserve">
+    <value>Exception during HUD installation.</value>
+  </data>
+  <data name="AppDbgExHudSelect" xml:space="preserve">
+    <value>Exception while trying to select another HUD.</value>
+  </data>
+  <data name="AppDbgExInstRun" xml:space="preserve">
+    <value>Exception while running installation of selected file.</value>
+  </data>
+  <data name="AppDbgExKbBW" xml:space="preserve">
+    <value>Exception while trying to disable both WIN keys.</value>
+  </data>
+  <data name="AppDbgExKbBWCtx" xml:space="preserve">
+    <value>Exception while trying to disable both WIN and CONTEXT keys.</value>
+  </data>
+  <data name="AppDbgExKbLW" xml:space="preserve">
+    <value>Exception while trying to disable left WIN key.</value>
+  </data>
+  <data name="AppDbgExKbRestore" xml:space="preserve">
+    <value>Exception while trying to disable all custom key overrides.</value>
+  </data>
+  <data name="AppDbgExKbRWCtx" xml:space="preserve">
+    <value>Exception while trying to disable right WIN and CONTEXT keys.</value>
+  </data>
+  <data name="AppDbgExLvClean" xml:space="preserve">
+    <value>Exception while cleaning up debug log file.</value>
+  </data>
+  <data name="AppDbgExLvLoad" xml:space="preserve">
+    <value>Exception while trying to load current debug log file.</value>
+  </data>
+  <data name="AppDbgExMMAutoSave" xml:space="preserve">
+    <value>Exception while trying to save blacklist auto backup before saving it.</value>
+  </data>
+  <data name="AppDbgExMMReadDb" xml:space="preserve">
+    <value>Exception while reading muted users database.</value>
+  </data>
+  <data name="AppDbgExMMSaveDb" xml:space="preserve">
+    <value>Exception while writing to save muted users database.</value>
+  </data>
+  <data name="AppDbgExRegedit" xml:space="preserve">
+    <value>Exception on trying to launch Windows registry editor to restore saved registry file.</value>
+  </data>
+  <data name="AppDbgExRemVd" xml:space="preserve">
+    <value>Exception during removal of game settings.</value>
+  </data>
+  <data name="AppDbgExRemVdAutoCfg" xml:space="preserve">
+    <value>Exception while trying to save configs auto backup before removing game settings.</value>
+  </data>
+  <data name="AppDbgExRemVdAutoGs" xml:space="preserve">
+    <value>Exception while trying to save video auto backup before removing game settings.</value>
+  </data>
+  <data name="AppDbgExRepFm" xml:space="preserve">
+    <value>Exception while trying to show generated report file in file manager.</value>
+  </data>
+  <data name="AppDbgExRepGen" xml:space="preserve">
+    <value>Exception while generating report.</value>
+  </data>
+  <data name="AppDbgExRepPack" xml:space="preserve">
+    <value>Exception while trying to pack all generated logs to a single Zip archive.</value>
+  </data>
+  <data name="AppDbgExRepWrkBusy" xml:space="preserve">
+    <value>RepGen Worker is busy. Can't start build sequence.</value>
+  </data>
+  <data name="AppDbgExRmRf" xml:space="preserve">
+    <value>Exception while removing files.</value>
+  </data>
+  <data name="AppDbgExSelGame" xml:space="preserve">
+    <value>Exception while handling selected game by user or application.</value>
+  </data>
+  <data name="AppDbgExSteamPath" xml:space="preserve">
+    <value>Exception while trying to get Steam path. Application will be terminated.</value>
+  </data>
+  <data name="AppDbgExStmmInit" xml:space="preserve">
+    <value>Exception while initializing SteamManager class instance.</value>
+  </data>
+  <data name="AppDbgExT1LoadFail" xml:space="preserve">
+    <value>Exception while filling Graphic tweaker for Type1 game.</value>
+  </data>
+  <data name="AppDbgExT1SaveFail" xml:space="preserve">
+    <value>Exception while trying to save Type1 graphical settings.</value>
+  </data>
+  <data name="AppDbgExT2AutoFail" xml:space="preserve">
+    <value>Exception while trying to save auto backup before saving Type2 game settings.</value>
+  </data>
+  <data name="AppDbgExT2LoadFail" xml:space="preserve">
+    <value>Exception while filling Graphic tweaker for Type2 game.</value>
+  </data>
+  <data name="AppDbgExT2SaveFail" xml:space="preserve">
+    <value>Exception while trying to save Type2 graphical settings.</value>
+  </data>
+  <data name="AppDbgExUpdBinInst" xml:space="preserve">
+    <value>Exception while trying to install binary update.</value>
+  </data>
+  <data name="AppDbgExUpdXmlDbInst" xml:space="preserve">
+    <value>Exception while trying to install XML database update.</value>
+  </data>
+  <data name="AppDbgExUrlCvList" xml:space="preserve">
+    <value>Exception while trying to open web browser to show cvarlist.</value>
+  </data>
+  <data name="AppDbgExUrlGroup" xml:space="preserve">
+    <value>Exception while trying to open web browser to show Steam group profile.</value>
+  </data>
+  <data name="AppDbgExUrlHome" xml:space="preserve">
+    <value>Exception while trying to open web browser to show app commentary page.</value>
+  </data>
+  <data name="AppDbgExUrlHudHome" xml:space="preserve">
+    <value>Exception while trying to open web browser to show HUD's homepage.</value>
+  </data>
+  <data name="AppDbgExUrlStmSel" xml:space="preserve">
+    <value>Exception while trying to open web browser to show Steam profile.</value>
+  </data>
+  <data name="AppDbgExUserIdSel" xml:space="preserve">
+    <value>Exception during new UserID selection.</value>
+  </data>
+  <data name="AppDbgExValCache" xml:space="preserve">
+    <value>Exception on trying to launch Steam to validate game cache.</value>
+  </data>
+  <data name="AppDbgExXmlParse" xml:space="preserve">
+    <value>Exception on parsing XML game database. Application will be terminated.</value>
+  </data>
+</root>

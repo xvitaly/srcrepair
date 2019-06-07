@@ -149,7 +149,7 @@ namespace srcrepair.gui
                 {
                     // Выводим сообщение об ошибке...
                     MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Logger.Error(Ex, AppStrings.AppDbgExUpdXmlDbInst);
+                    Logger.Error(Ex, DebugStrings.AppDbgExUpdXmlDbInst);
                 }
 
                 // Удаляем загруженный файл если он существует...
@@ -213,7 +213,7 @@ namespace srcrepair.gui
                     catch (Exception Ex)
                     {
                         MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        Logger.Error(Ex, AppStrings.AppDbgExUpdBinInst);
+                        Logger.Error(Ex, DebugStrings.AppDbgExUpdBinInst);
                     }
                 }
                 else

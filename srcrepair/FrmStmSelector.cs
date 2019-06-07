@@ -104,7 +104,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, AppStrings.AppDbgExUrlStmSel);
+                Logger.Warn(Ex, DebugStrings.AppDbgExUrlStmSel);
             }
         }
     }

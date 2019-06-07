@@ -89,6 +89,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CVList.ru.resx</DependentUpon>
     </Compile>
+    <Compile Include="DebugStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DebugStrings.resx</DependentUpon>
+    </Compile>
     <Compile Include="FrmArchWrk.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +214,10 @@
     <EmbeddedResource Include="CVList.ru.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CVList.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebugStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DebugStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmArchWrk.resx">
       <DependentUpon>FrmArchWrk.cs</DependentUpon>

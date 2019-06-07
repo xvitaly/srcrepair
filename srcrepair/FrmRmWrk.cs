@@ -164,7 +164,7 @@ namespace srcrepair.gui
             if (e.Error != null)
             {
                 MessageBox.Show(AppStrings.RW_RmException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(e.Error, AppStrings.AppDbgExRmRf);
+                Logger.Error(e.Error, DebugStrings.AppDbgExRmRf);
             }
 
             Close();

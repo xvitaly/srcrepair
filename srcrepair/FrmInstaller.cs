@@ -206,7 +206,7 @@ namespace srcrepair.gui
                 {
                     // Произошло исключение, выведем сообщение...
                     MessageBox.Show(AppStrings.QI_Excpt, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, AppStrings.AppDbgExInstRun);
+                    Logger.Error(Ex, DebugStrings.AppDbgExInstRun);
                 }
             }
             else

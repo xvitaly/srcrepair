@@ -121,7 +121,7 @@ namespace srcrepair.gui
             if (e.Error != null)
             {
                 MessageBox.Show(AppStrings.AR_UnpackException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(e.Error, AppStrings.AppDbgExArWrkUnpack);
+                Logger.Error(e.Error, DebugStrings.AppDbgExArWrkUnpack);
             }
 
             Close();
