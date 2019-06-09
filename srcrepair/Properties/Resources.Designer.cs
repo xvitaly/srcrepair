@@ -276,15 +276,6 @@ namespace srcrepair.gui.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to debug.log.
-        /// </summary>
-        internal static string DebugLogFileName {
-            get {
-                return ResourceManager.GetString("DebugLogFileName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Delete {
