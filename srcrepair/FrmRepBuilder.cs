@@ -112,7 +112,6 @@ namespace srcrepair.gui
             string ArchName = Path.Combine(RepDir, Path.ChangeExtension(RepName, ".zip"));
             string HostsFile = FileManager.GetHostsFileFullPath(CurrentPlatform.OSType.Windows);
             string FNameRep = Path.Combine(TempDir, RepName);
-            string FNameInternal = Path.Combine(AppUserDir, Properties.Resources.DebugLogFileName);
             string FNameFPSCfg = Path.Combine(TempDir, String.Format("fpscfg_{0}.zip", CrDt));
             string FNamePing = Path.Combine(TempDir, String.Format("ping_{0}.log", CrDt));
             string FNameTrace = Path.Combine(TempDir, String.Format("traceroute_{0}.log", CrDt));
@@ -171,7 +170,7 @@ namespace srcrepair.gui
                             if (File.Exists(FNameFPSCfg)) { ZBkUp.AddFile(FNameFPSCfg, "fps"); }
 
                             // Добавляем в архив журнал программы...
-                            try { if (File.Exists(FNameInternal)) { if (FileManager.GetFileSize(FNameInternal) > 0) { ZBkUp.AddFile(FNameInternal, "srcrep"); } } } catch (Exception Ex) { Logger.Warn(Ex); }
+                            try { if (Directory.Exists(CurrentApp.LogDirectoryPath)) { ZBkUp.AddDirectory(CurrentApp.LogDirectoryPath, "srcrep"); } } catch (Exception Ex) { Logger.Warn(Ex); }
 
                             // Сохраняем архив...
                             ZBkUp.Save();
