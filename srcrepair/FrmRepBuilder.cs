@@ -170,7 +170,7 @@ namespace srcrepair.gui
                             if (File.Exists(FNameFPSCfg)) { ZBkUp.AddFile(FNameFPSCfg, "fps"); }
 
                             // Добавляем в архив журнал программы...
-                            try { if (Directory.Exists(CurrentApp.LogDirectoryPath)) { ZBkUp.AddDirectory(CurrentApp.LogDirectoryPath, "srcrep"); } } catch (Exception Ex) { Logger.Warn(Ex); }
+                            try { if (Directory.Exists(CurrentApp.LogDirectoryPath)) { ZBkUp.AddDirectory(CurrentApp.LogDirectoryPath, "debug"); } } catch (Exception Ex) { Logger.Warn(Ex); }
 
                             // Сохраняем архив...
                             ZBkUp.Save();
