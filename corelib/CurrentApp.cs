@@ -71,7 +71,7 @@ namespace srcrepair.core
         /// <summary>
         /// Возвращает полный путь к используему файлу журнала Nlog.
         /// </summary>
-        public string LogFileName
+        public static string LogFileName
         {
             get
             {
@@ -79,7 +79,18 @@ namespace srcrepair.core
                 return Path.GetFullPath(LogTarget.FileName.Render(new LogEventInfo()));
             }
         }
-        
+
+        /// <summary>
+        /// Возвращает полный путь к каталогу хранения журналов Nlog.
+        /// </summary>
+        public static string LogDirectoryPath
+        {
+            get
+            {
+                return Path.GetDirectoryName(LogFileName);
+            }
+        }
+
         /// <summary>
         /// Возвращает название продукта (из ресурса сборки).
         /// </summary>

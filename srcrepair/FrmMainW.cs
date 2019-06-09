@@ -2814,7 +2814,7 @@ namespace srcrepair.gui
         private void MNUShowLog_Click(object sender, EventArgs e)
         {
             // Выведем на экран содержимое отладочного журнала...
-            string DFile = App.LogFileName;
+            string DFile = CurrentApp.LogFileName;
             if (File.Exists(DFile)) { GuiHelpers.FormShowLogViewer(DFile); } else { MessageBox.Show(AppStrings.AppNoDebugFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
 
