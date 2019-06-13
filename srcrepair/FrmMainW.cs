@@ -80,8 +80,8 @@ namespace srcrepair.gui
 
         private string CFGFileName;
         private CurrentApp App;
-        private Logger Logger = LogManager.GetCurrentClassLogger();
-        private ResourceManager CvarFetcher = new ResourceManager(Properties.Resources.CE_CVResDf, typeof(FrmMainW).Assembly);
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
+        private readonly ResourceManager CvarFetcher = new ResourceManager(Properties.Resources.CE_CVResDf, typeof(FrmMainW).Assembly);
 
         #endregion
 
