@@ -45,7 +45,7 @@ Feel free to open issues and report bugs or ask for feature requests.
  
  8. Squash all your commits into single one and open a new pull request.
 
-## Signing off your work
+### Signing off your work
 
 Don't forget to sign off your work by using `git commit -s`:
 ```
@@ -54,11 +54,11 @@ Signed-off-by: Name Surname <username@example.org>
 
 We cannot accept pull requests with commits without this signature.
 
-## Some important warnings
+### Some important warnings
 
  * Don't mix different line endings.
  * Don't upload any binary files to repository (*.dll, *.exe, etc.).
  * Don't add and upload any temporary files.
  * Use only latest version of Visual Studio 2017 IDE.
- * Don't use any libraries incompactible with [GNU GPL v3 license](../COPYING).
+ * Don't use any libraries incompatible with [GNU GPL v3 license](../COPYING).
  * Use only NuGet to add new libraries to project.
