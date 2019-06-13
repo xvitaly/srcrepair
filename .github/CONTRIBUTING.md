@@ -15,7 +15,7 @@ Feel free to open issues and report bugs or ask for feature requests.
  git clone git@github.com:YOURNAME/srcrepair.git
  ```
  
- 3. Create a new feature branch and switch to it:
+ 3. Create a new feature branch `new_feature` and switch to it:
  ```bash
  git checkout -b new_feature
  ```
@@ -30,17 +30,17 @@ Feel free to open issues and report bugs or ask for feature requests.
  git remote add upstream https://github.com/xvitaly/srcrepair.git
  ```
  
- 6. Fetch upstream and [sync](https://help.github.com/articles/syncing-a-fork/) your fork's master with it:
+ 6. Fetch upstream changes and [sync](https://help.github.com/articles/syncing-a-fork/) your fork's `dev` branch with it:
  ```bash
  git fetch upstream
- git checkout master
- git merge upstream/master
+ git checkout dev
+ git merge upstream/dev
  ```
  
- 7. Rebase your feature branch to master:
+ 7. Rebase your feature branch to updated `dev`:
  ```bash
  git checkout new_feature
- git rebase master
+ git rebase dev
  ```
  
  8. Squash all your commits into single one and open a new pull request.
