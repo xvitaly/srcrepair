@@ -39,7 +39,7 @@ namespace srcrepair.core
         /// <summary>
         /// Хранит информацию обо всех доступных конфигах.
         /// </summary>
-        private List<CFGTlx> Configs;
+        private readonly List<CFGTlx> Configs;
 
         /// <summary>
         /// Управляет выбранным конфигом.
