@@ -26,7 +26,7 @@ namespace srcrepair.core
     /// <summary>
     /// Class for working with a single FPS-config.
     /// </summary>
-    public sealed class CFGTlx
+    public sealed class FPSConfig
     {
         /// <summary>
         /// Get or sets FPS-config friendly name.
@@ -65,7 +65,7 @@ namespace srcrepair.core
         /// <param name="CfFileName">FPS-config file name.</param>
         /// <param name="CfDescr">FPS-config description.</param>
         /// <param name="CfGames">Array of supported by FPS-configs game IDs.</param>
-        public CFGTlx(string CfName, string CfFileName, string CfDescr, string[] CfGames)
+        public FPSConfig(string CfName, string CfFileName, string CfDescr, string[] CfGames)
         {
             // Setting class properties...
             Name = CfName;
