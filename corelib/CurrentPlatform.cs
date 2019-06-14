@@ -24,12 +24,12 @@ using System.IO;
 namespace srcrepair.core
 {
     /// <summary>
-    /// Класс для определения запущенной платформы и работы с ней.
+    /// Class for working with platform-dependent functions.
     /// </summary>
     public sealed class CurrentPlatform
     {
         /// <summary>
-        /// Содержит коды известных платформ.
+        /// Codes and IDs of available platforms.
         /// </summary>
         public enum OSType
         {
@@ -39,17 +39,17 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Хранит и возвращает код текущей платформы, на которой запущено приложение.
+        /// Get current operating system ID.
         /// </summary>
         public OSType OS { get; private set; }
 
         /// <summary>
-        /// Возвращает название текущей платформы, на которой запущено приложение.
+        /// Get current operating system friendly name.
         /// </summary>
         public string OSFriendlyName => OS.ToString();
 
         /// <summary>
-        /// Возвращает платформо-зависимое название бинарника Steam.
+        /// Get platform-dependent Steam launcher file name.
         /// </summary>
         public string SteamBinaryName
         {
@@ -70,7 +70,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает платформо-зависимое название каталога SteamApps.
+        /// Get platform-dependent SteamApps directory name.
         /// </summary>
         public string SteamAppsFolderName
         {
@@ -91,7 +91,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает платформо-зависимое имя процесса Steam.
+        /// Get platform-dependent Steam process name.
         /// </summary>
         public string SteamProcName
         {
@@ -112,7 +112,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает платформо-зависимый суффикс для заголовка HTTP_USER_AGENT.
+        /// Get platform-dependent suffix for HTTP_USER_AGENT header.
         /// </summary>
         public string UASuffix
         {
@@ -133,9 +133,9 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает код текущей платформы, на которой запущено приложение.
+        /// Get name and ID of running operating system.
         /// </summary>
-        /// <returns>Код текущей платформы.</returns>
+        /// <returns>Platform ID.</returns>
         private OSType GetRunningOS()
         {
             switch (Environment.OSVersion.Platform)
@@ -149,11 +149,11 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Базовый конструктор класса CurrentPlatform.
+        /// CurrentPlatform class constructor.
         /// </summary>
         public CurrentPlatform()
         {
-            // Получаем ID платформы...
+            // Getting information about running operating system...
             OS = GetRunningOS();
         }
     }
