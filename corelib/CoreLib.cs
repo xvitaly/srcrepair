@@ -25,37 +25,38 @@ using System.Reflection;
 namespace srcrepair.core
 {
     /// <summary>
-    /// Класс, предоставляющий методы для общих целей.
+    /// Class with different helper methods.
     /// </summary>
     public static class CoreLib
     {
         /// <summary>
-        /// Чистит строку от табуляций и лишних пробелов.
+        /// Remove different special characters from specified string.
         /// </summary>
-        /// <param name="RecvStr">Исходная строка</param>
-        /// <param name="CleanQuotes">Задаёт параметры очистки кавычек</param>
-        /// <param name="CleanSlashes">Задаёт параметры очистки двойных слэшей</param>
+        /// <param name="RecvStr">Source string for cleanup.</param>
+        /// <param name="CleanQuotes">Enable removal of quotes.</param>
+        /// <param name="CleanSlashes">Enable removal of double slashes.</param>
+        /// <returns>Clean string with removed special characters.</returns>
         public static string CleanStrWx(string RecvStr, bool CleanQuotes = false, bool CleanSlashes = false)
         {
-            // Почистим от табуляций...
+            // Removing tabulations...
             while (RecvStr.IndexOf("\t") != -1)
             {
                 RecvStr = RecvStr.Replace("\t", " ");
             }
 
-            // Заменим все NULL символы на пробелы...
+            // Replacing all NUL symbols with spaces...
             while (RecvStr.IndexOf("\0") != -1)
             {
                 RecvStr = RecvStr.Replace("\0", " ");
             }
 
-            // Удалим все лишние пробелы...
+            // Removing multiple spaces...
             while (RecvStr.IndexOf("  ") != -1)
             {
                 RecvStr = RecvStr.Replace("  ", " ");
             }
 
-            // Удалим кавычки если это разрешено...
+            // Removing quotes if enabled...
             if (CleanQuotes)
             {
                 while (RecvStr.IndexOf('"') != -1)
@@ -64,7 +65,7 @@ namespace srcrepair.core
                 }
             }
 
-            // Удаляем двойные слэши если разрешено...
+            // Removing double slashes if enabled...
             if (CleanSlashes)
             {
                 while (RecvStr.IndexOf(@"\\") != -1)
@@ -73,15 +74,15 @@ namespace srcrepair.core
                 }
             }
 
-            // Возвращаем результат очистки...
+            // Return result with removal of leading and trailing white-spaces...
             return RecvStr.Trim();
         }
 
         /// <summary>
-        /// Получает содержимое текстового файла из внутреннего ресурса приложения.
+        /// Return contents of text file from internal resource section of calling assembly.
         /// </summary>
-        /// <param name="FileName">Внутреннее имя ресурсного файла</param>
-        /// <returns>Содержимое текстового файла</returns>
+        /// <param name="FileName">Internal resource file name.</param>
+        /// <returns>Contents of bundled in resource text file.</returns>
         public static string GetTemplateFromResource(string FileName)
         {
             string Result = String.Empty;
