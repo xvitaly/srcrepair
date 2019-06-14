@@ -25,16 +25,16 @@ using System.Windows.Forms;
 namespace srcrepair.core
 {
     /// <summary>
-    /// Класс для работы с экранами с высокой плотностью пикселей.
+    /// Class with hacks for high pixel density displays.
     /// </summary>
     public static class DpiManager
     {
         /// <summary>
-        /// Изменяет размеры столбцов в DataGridView, т.к. сама платформа CLR
-        /// не способна сделать это автоматически.
+        /// Correctly scale columns width in DataGridView container on high
+        /// pixel density displays.
         /// </summary>
-        /// <param name="ScaleSource">Ссылка на контрол DataGridView</param>
-        /// <param name="ScaleFactor">Множитель</param>
+        /// <param name="ScaleSource">DataGridView control name.</param>
+        /// <param name="ScaleFactor">Scale factor value.</param>
         public static void ScaleColumnsInControl(DataGridView ScaleSource, SizeF ScaleFactor)
         {
             foreach (DataGridViewColumn Column in ScaleSource.Columns)
@@ -44,11 +44,11 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Изменяет размеры столбцов в ListView, т.к. сама платформа CLR
-        /// не способна сделать это автоматически.
+        /// Correctly scale columns width in ListView container on high
+        /// pixel density displays.
         /// </summary>
-        /// <param name="ScaleSource">Ссылка на контрол ListView</param>
-        /// <param name="ScaleFactor">Множитель</param>
+        /// <param name="ScaleSource">ListView control name.</param>
+        /// <param name="ScaleFactor">Scale factor value.</param>
         public static void ScaleColumnsInControl(ListView ScaleSource, SizeF ScaleFactor)
         {
             foreach (ColumnHeader Column in ScaleSource.Columns)
@@ -58,11 +58,11 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Изменяет размеры столбцов в StatusStrip, т.к. сама платформа CLR
-        /// не способна сделать это автоматически.
+        /// Correctly scale columns width in StatusStrip container on high
+        /// pixel density displays.
         /// </summary>
-        /// <param name="ScaleSource">Ссылка на контрол StatusStrip</param>
-        /// <param name="ScaleFactor">Множитель</param>
+        /// <param name="ScaleSource">StatusStrip control name.</param>
+        /// <param name="ScaleFactor">Scale factor value.</param>
         public static void ScaleColumnsInControl(StatusStrip ScaleSource, SizeF ScaleFactor)
         {
             foreach (ToolStripItem StatusBarItem in ScaleSource.Items)
@@ -72,11 +72,11 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Сравнивает два вещественных числа одинарной точности друг с другом.
+        /// Compare two floating point numbers.
         /// </summary>
-        /// <param name="First">Первое число</param>
-        /// <param name="Second">Второе число</param>
-        /// <returns>Результат сравнения</returns>
+        /// <param name="First">First floating point number.</param>
+        /// <param name="Second">Second floating point number.</param>
+        /// <returns>Comparison result.</returns>
         public static bool CompareFloats(float First, float Second)
         {
             return Math.Abs(First - Second) < 0.00001f;
