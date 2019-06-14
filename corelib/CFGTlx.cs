@@ -24,50 +24,50 @@ using System.Collections.Generic;
 namespace srcrepair.core
 {
     /// <summary>
-    /// Класс для работы с определённым конфигом.
+    /// Class for working with a single FPS-config.
     /// </summary>
     public sealed class CFGTlx
     {
         /// <summary>
-        /// Задаёт / возвращает имя конфига.
+        /// Get or sets FPS-config friendly name.
         /// </summary>
         public string Name { get; private set; }
 
         /// <summary>
-        /// Задаёт / возвращает имя файла конфига.
+        /// Gets or sets FPS-config file name.
         /// </summary>
         public string FileName { get; private set; }
 
         /// <summary>
-        /// Задаёт / возвращает описание конфига.
+        /// Gets or sets FPS-config user-friendly description.
         /// </summary>
         public string Description { get; private set; }
 
         /// <summary>
-        /// Задаёт / возвращает список поддерживаемых конфигом игр.
+        /// Gets or sets list of supported by FPS-config games.
         /// </summary>
         public List<String> SupportedGames { get; private set; }
 
         /// <summary>
-        /// Проверяет совместимость конфига с игрой.
+        /// Checks compatibility with specified game ID.
         /// </summary>
         /// <param name="GameID">ID проверямой игры</param>
         public bool CheckCompactibility(string GameID)
         {
-            // Проверяем список...
+            // Check if GameID exists in list...
             return SupportedGames.Contains(GameID);
         }
 
         /// <summary>
-        /// Конструктор класса. Прописывает информацию о выбранном конфиге.
+        /// CFGTlx class constructor.
         /// </summary>
-        /// <param name="CfName">Имя конфига</param>
-        /// <param name="CfFileName">Имя файла конфига</param>
-        /// <param name="CfDescr">Описание конфига</param>
-        /// <param name="CfGames">Список поддерживаемых конфигом игр</param>
+        /// <param name="CfName">FPS-config friendly name.</param>
+        /// <param name="CfFileName">FPS-config file name.</param>
+        /// <param name="CfDescr">FPS-config description.</param>
+        /// <param name="CfGames">Array of supported by FPS-configs game IDs.</param>
         public CFGTlx(string CfName, string CfFileName, string CfDescr, string[] CfGames)
         {
-            // Заполняем свойства класса...
+            // Setting class properties...
             Name = CfName;
             FileName = CfFileName;
             Description = CfDescr;
