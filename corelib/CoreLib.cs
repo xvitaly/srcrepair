@@ -79,14 +79,14 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Return contents of text file from internal resource section of calling assembly.
+        /// Return contents of text file from internal resource section of the calling assembly.
         /// </summary>
         /// <param name="FileName">Internal resource file name.</param>
         /// <returns>Contents of bundled in resource text file.</returns>
         public static string GetTemplateFromResource(string FileName)
         {
             string Result = String.Empty;
-            using (StreamReader Reader = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream(FileName)))
+            using (StreamReader Reader = new StreamReader(Assembly.GetCallingAssembly().GetManifestResourceStream(FileName)))
             {
                 Result = Reader.ReadToEnd();
             }
