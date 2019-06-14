@@ -51,8 +51,8 @@ namespace srcrepair.core
         /// <summary>
         /// Checks compatibility with specified game ID.
         /// </summary>
-        /// <param name="GameID">ID проверямой игры</param>
-        public bool CheckCompactibility(string GameID)
+        /// <param name="GameID">Game ID.</param>
+        public bool CheckCompatibility(string GameID)
         {
             // Check if GameID exists in list...
             return SupportedGames.Contains(GameID);

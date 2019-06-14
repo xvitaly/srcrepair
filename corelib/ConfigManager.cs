@@ -27,49 +27,44 @@ using NLog;
 namespace srcrepair.core
 {
     /// <summary>
-    /// Класс для работы с коллекцией FPS-конфигов.
+    /// Class for working with collection of FPS-configs.
     /// </summary>
     public sealed class ConfigManager
     {
         /// <summary>
-        /// Управляет записью событий в журнал.
+        /// Logger instance for ConfigManager class.
         /// </summary>
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Хранит информацию обо всех доступных конфигах.
+        /// Store full list of available FPS-configs.
         /// </summary>
         private readonly List<CFGTlx> Configs;
 
         /// <summary>
-        /// Управляет выбранным конфигом.
+        /// Gets list of available FPS-config names for specified game ID.
         /// </summary>
-        public CFGTlx FPSConfig { get; private set; }
-
-        /// <summary>
-        /// Получает имена найденных конфигов для указанной игры.
-        /// </summary>
-        /// <param name="GameID">ID игры</param>
-        /// <returns>Возвращает имена найденных конфигов</returns>
+        /// <param name="GameID">Game ID.</param>
+        /// <returns>List of available FPS-config names.</returns>
         public List<String> GetCfgById(string GameID)
         {
-            // Инициализируем список...
+            // Initializing empty list...
             List<String> Result = new List<String>();
 
-            // Выполняем запрос...
+            // Executing query with LINQ...
             foreach (CFGTlx Cfg in Configs.FindAll(Item => Item.SupportedGames.Exists(ID => ID.Equals(GameID))))
             {
                 Result.Add(Cfg.Name);
             }
 
-            // Возвращаем результат...
+            // Return result...
             return Result;
         }
 
         /// <summary>
-        /// Получает имена всех доступных конфигов.
+        /// Gets list of all available FPS-config names.
         /// </summary>
-        /// <returns>Возвращает имена всех конфигов</returns>
+        /// <returns>List of all available FPS-config names.</returns>
         public List<String> GetAllCfg()
         {
             List<String> Result = new List<String>();
@@ -78,20 +73,22 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Выбирает определённый конфиг.
+        /// Return FPS-config by it's name.
         /// </summary>
-        /// <param name="HUDName">Имя конфига, информацию о котором надо получить</param>
-        public void Select(string CfgName)
-        {
-            FPSConfig = Configs.Find(Item => String.Equals(Item.Name, CfgName, StringComparison.CurrentCultureIgnoreCase));
-        }
+        /// <param name="CfgName">FPS-config name.</param>
+        private CFGTlx ReturnConfigByName(string CfgName) => Configs.Find(Item => String.Equals(Item.Name, CfgName, StringComparison.CurrentCultureIgnoreCase));
 
         /// <summary>
-        /// Генерирует массив, содержащий пути к FPS-конфигам.
+        /// Overloading inxeding operator to return FPS-config by specified name.
         /// </summary>
-        /// <param name="GamePath">Каталог управляемого приложения</param>
-        /// <param name="UserDir">Указывает использует ли управляемое приложение пользовательский каталог</param>
-        /// <returns>Возвращает массив с сгенерированными путями до FPS-конфигов</returns>
+        public CFGTlx this[string key] => ReturnConfigByName(key);
+
+        /// <summary>
+        /// Get list of common FPS-config paths installation.
+        /// </summary>
+        /// <param name="GamePath">Game installation directory.</param>
+        /// <param name="UserDir">If game use custom user directories for custom stuff.</param>
+        /// <returns>List of common FPS-config paths.</returns>
         public static List<String> ListFPSConfigs(string GamePath, bool UserDir)
         {
             List<String> Result = new List<String> { Path.Combine(GamePath, "cfg", "autoexec.cfg") };
@@ -100,43 +97,43 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Устанавливает требуемый FPS-конфиг.
+        /// Install FPS-config to game.
         /// </summary>
-        /// <param name="ConfName">Имя конфига</param>
-        /// <param name="AppPath">Путь к программе SRC Repair</param>
-        /// <param name="GameDir">Путь к каталогу игры</param>
-        /// <param name="UseCustmDir">Флаг использования игрой н. с. к.</param>
-        /// <param name="CustmDir">Имя нестандартного каталога</param>
+        /// <param name="ConfName">FPS-config name.</param>
+        /// <param name="AppPath">Path to SRC Repair installation directory.</param>
+        /// <param name="GameDir">Path to game installation directory.</param>
+        /// <param name="UseCustmDir">If game use custom user directories for custom stuff.</param>
+        /// <param name="CustmDir">Name of custom game stuff directory.</param>
         public static void InstallConfigNow(string ConfName, string AppPath, string GameDir, bool UseCustmDir, string CustmDir)
         {
-            // Генерируем путь к каталогу установки конфига...
+            // Generating full path to destination...
             string DestPath = Path.Combine(GameDir, UseCustmDir ? Path.Combine("custom", CustmDir) : String.Empty, "cfg");
 
-            // Проверяем существование каталога и если его не существует - создаём...
+            // Checking if destination exists. If not, creating...
             if (!Directory.Exists(DestPath)) { Directory.CreateDirectory(DestPath); }
 
-            // Устанавливаем...
+            // Installing FPS-config by copying it's file to destination...
             File.Copy(Path.Combine(AppPath, "cfgs", ConfName), Path.Combine(DestPath, "autoexec.cfg"), true);
         }
 
         /// <summary>
-        /// Конструктор класса. Читает базу данных в формате XML и заполняет нашу структуру.
+        /// ConfigManager class constructor.
         /// </summary>
-        /// <param name="FullAppPath">Full path to application's directory</param>
-        /// <param name="LangPrefix">Языковой код</param>
+        /// <param name="FullAppPath">Path to SRC Repair installation directory.</param>
+        /// <param name="LangPrefix">SRC Repair language code.</param>
         public ConfigManager(string FullAppPath, string LangPrefix)
         {
-            // Инициализируем список...
+            // Initializing empty list...
             Configs = new List<CFGTlx>();
 
-            // Получаем полный список доступных конфигов. Открываем поток...
+            // Fetching list of available FPS-configs from XML database file...
             using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, StringsManager.ConfigDatabaseName), FileMode.Open, FileAccess.Read))
             {
-                // Загружаем XML из потока...
+                // Loading XML file from file stream...
                 XmlDocument XMLD = new XmlDocument();
                 XMLD.Load(XMLFS);
 
-                // Разбираем XML файл и обходим его в цикле...
+                // Parsing XML and filling our structures...
                 for (int i = 0; i < XMLD.GetElementsByTagName("Config").Count; i++)
                 {
                     try { Configs.Add(new CFGTlx(XMLD.GetElementsByTagName("Name")[i].InnerText, XMLD.GetElementsByTagName("FileName")[i].InnerText, XMLD.GetElementsByTagName(LangPrefix)[i].InnerText, XMLD.GetElementsByTagName("SupportedGames")[i].InnerText.Split(';'))); } catch (Exception Ex) { Logger.Warn(Ex, "Minor exception while while building Config list object."); }

@@ -1597,18 +1597,11 @@ namespace srcrepair.gui
         {
             try
             {
-                // Загружаем данные выбранного конфига...
-                try
-                {
-                    App.SourceGames.SelectedGame.CFGMan.Select(FP_ConfigSel.Text);
-                }
-                catch (Exception Ex) { Logger.Warn(Ex); }
-
                 // Выводим описание...
-                FP_Description.Text = App.SourceGames.SelectedGame.CFGMan.FPSConfig.Description;
+                FP_Description.Text = App.SourceGames.SelectedGame.CFGMan[FP_ConfigSel.Text].Description;
 
                 // Проверим совместимость конфига с игрой...
-                FP_Comp.Visible = !App.SourceGames.SelectedGame.CFGMan.FPSConfig.CheckCompactibility(App.SourceGames.SelectedGame.GameInternalID);
+                FP_Comp.Visible = !App.SourceGames.SelectedGame.CFGMan[FP_ConfigSel.Text].CheckCompatibility(App.SourceGames.SelectedGame.GameInternalID);
 
                 // Включаем кнопку открытия конфига в Блокноте...
                 FP_OpenNotepad.Enabled = true;
@@ -1652,7 +1645,7 @@ namespace srcrepair.gui
                     try
                     {
                         // Устанавливаем...
-                        ConfigManager.InstallConfigNow(App.SourceGames.SelectedGame.CFGMan.FPSConfig.FileName, App.FullAppPath, App.SourceGames.SelectedGame.FullGamePath, App.SourceGames.SelectedGame.IsUsingUserDir, Properties.Settings.Default.UserCustDirName);
+                        ConfigManager.InstallConfigNow(App.SourceGames.SelectedGame.CFGMan[FP_ConfigSel.Text].FileName, App.FullAppPath, App.SourceGames.SelectedGame.FullGamePath, App.SourceGames.SelectedGame.IsUsingUserDir, Properties.Settings.Default.UserCustDirName);
                         
                         // Выводим сообщение об успешной установке...
                         MessageBox.Show(AppStrings.FP_InstallSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -2340,7 +2333,7 @@ namespace srcrepair.gui
         private void FP_OpenNotepad_Click(object sender, EventArgs e)
         {
             // Сгенерируем путь к файлу...
-            string ConfigFile = Path.Combine(App.FullAppPath, "cfgs", App.SourceGames.SelectedGame.CFGMan.FPSConfig.FileName);
+            string ConfigFile = Path.Combine(App.FullAppPath, "cfgs", App.SourceGames.SelectedGame.CFGMan[FP_ConfigSel.Text].FileName);
             
             // Проверим зажал ли пользователь Shift перед тем, как кликнуть по кнопке...
             if (Control.ModifierKeys == Keys.Shift)
