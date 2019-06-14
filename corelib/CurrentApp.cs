@@ -27,49 +27,48 @@ using NLog;
 namespace srcrepair.core
 {
     /// <summary>
-    /// Класс работы с рантаймом.
+    /// Class for working with running application instance.
     /// </summary>
     public sealed class CurrentApp
     {
         /// <summary>
-        /// Хранит User-Agent, которым представляется удалённым службам...
+        /// Get User-Agent header for outgoing HTTP queries.
         /// </summary>
         public string UserAgent { get; private set; }
 
         /// <summary>
-        /// Хранит полный путь к каталогу с утилитой SRCRepair для служебных
+        /// Get SRC Repair's installation directory.
         /// целей.
         /// </summary>
         public string FullAppPath { get; private set; }
 
         /// <summary>
-        /// Хранить путь до каталога пользователя программы. Используется
-        /// для служебных целей.
+        /// Get path to SRC Repair's user directory.
         /// </summary>
         public string AppUserDir { get; private set; }
 
         /// <summary>
-        /// Хранит и возвращает код текущей платформы, на которой запущено приложение.
+        /// Get information about running operating system.
         /// </summary>
         public CurrentPlatform Platform { get; private set; }
 
         /// <summary>
-        /// Управляет базой доступных для управления игр.
+        /// Get or set list of available Source games.
         /// </summary>
         public GameManager SourceGames { get; set; }
 
         /// <summary>
-        /// Управляет настройками клиента Steam.
+        /// Get or set Steam configuration.
         /// </summary>
         public SteamManager SteamClient { get; set; }
 
         /// <summary>
-        /// Возвращает архитектуру операционной системы.
+        /// Get information about hardware architecture.
         /// </summary>
-        private string SystemArch { get { return Environment.Is64BitOperatingSystem ? "Amd64" : "x86"; } }
+        private string SystemArch => Environment.Is64BitOperatingSystem ? "Amd64" : "x86";
 
         /// <summary>
-        /// Возвращает полный путь к используему файлу журнала Nlog.
+        /// Get full path to Nlog active log file.
         /// </summary>
         public static string LogFileName
         {
@@ -81,57 +80,54 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает полный путь к каталогу хранения журналов Nlog.
+        /// Get full path to Nlog's directory for storing log files.
         /// </summary>
-        public static string LogDirectoryPath
-        {
-            get
-            {
-                return Path.GetDirectoryName(LogFileName);
-            }
-        }
+        public static string LogDirectoryPath => Path.GetDirectoryName(LogFileName);
 
         /// <summary>
-        /// Возвращает название продукта (из ресурса сборки).
+        /// Get application name from the resource section of calling assembly.
         /// </summary>
         public static string AppProduct { get { object[] Attribs = Assembly.GetCallingAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false); return Attribs.Length != 0 ? ((AssemblyProductAttribute)Attribs[0]).Product : String.Empty; } }
 
         /// <summary>
-        /// Возвращает версию приложения ((из ресурса сборки).
+        /// Get application version from the resource section of calling assembly.
         /// </summary>
         public static string AppVersion { get { return Assembly.GetCallingAssembly().GetName().Version.ToString(); } }
 
         /// <summary>
-        /// Возвращает название компании-разработчика (из ресурса сборки).
+        /// Get application developer name from the resource section of calling assembly.
+        /// 
         /// </summary>
         public static string AppCompany { get { object[] Attribs = Assembly.GetCallingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false); return Attribs.Length != 0 ? ((AssemblyCompanyAttribute)Attribs[0]).Company : String.Empty; } }
 
         /// <summary>
-        /// Возвращает копирайты приложения (из ресурса сборки).
+        /// Get application copyright from the resource section of calling assembly.
         /// </summary>
         public static string AppCopyright { get { object[] Attribs = Assembly.GetCallingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false); return Attribs.Length != 0 ? ((AssemblyCopyrightAttribute)Attribs[0]).Copyright : String.Empty; } }
 
         /// <summary>
-        /// Конструктор класса. Получает информацию для рантайма.
+        /// CurrentApp class constructor.
         /// </summary>
+        /// <param name="IsPortable">Enable portable mode (with settings in the same directory as executable).</param>
+        /// <param name="AppName">Application name.</param>
         public CurrentApp(bool IsPortable, string AppName)
         {
-            // Получим информацию о платформе, на которой запущено приложение...
+            // Getting information about operating system and platform...
             Platform = new CurrentPlatform();
 
-            // Получаем путь к каталогу приложения...
+            // Getting full path to application installation directory...
             FullAppPath = Path.GetDirectoryName(Assembly.GetCallingAssembly().Location);
 
-            // Укажем путь к пользовательским данным и создадим если не существует...
+            // Getting full to application user directory...
             AppUserDir = IsPortable ? Path.Combine(Path.GetDirectoryName(Assembly.GetCallingAssembly().Location), "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppName); ;
 
-            // Проверим существование каталога пользовательских данных и при необходимости создадим...
+            // Checking if user directory exists. If not - creating it...
             if (!(Directory.Exists(AppUserDir)))
             {
                 Directory.CreateDirectory(AppUserDir);
             }
 
-            // Генерируем User-Agent для SRC Repair...
+            // Generating User-Agent header for outgoing HTTP queries...
             UserAgent = String.Format(Properties.Resources.AppDefUA, Platform.OSFriendlyName, Platform.UASuffix, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersion, AppName, SystemArch);
         }
     }
