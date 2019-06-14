@@ -31,45 +31,46 @@ using Microsoft.Win32;
 namespace srcrepair.core
 {
     /// <summary>
-    /// Класс для работы с отдельными файлами и каталогами.
+    /// Class for working with files and directories.
     /// </summary>
     public static class FileManager
     {
         /// <summary>
-        /// Проверяет наличие не-ASCII-символов в строке.
+        /// Checks for non-ASCII characters in string.
         /// </summary>
-        /// <param name="Path">Путь для проверки</param>
-        /// <returns>Возвращает True если не обнаружено запрещённых симолов</returns>
+        /// <param name="Path">Source string to check.</param>
+        /// <returns>Returns True if string doesn't contains any restricted characters.</returns>
         public static bool CheckNonASCII(string Path)
         {
-            // Проверяем строку на соответствие регулярному выражению...
+            // Use regular expression to check source string...
             return Regex.IsMatch(Path, Properties.Resources.PathValidateRegex);
         }
 
         /// <summary>
-        /// Создаёт новый файл по указанному адресу.
+        /// Creates a new empty file with specified path. Will
+        /// automatically create directories when needed.
         /// </summary>
-        /// <param name="FileName">Имя создаваемого файла</param>
+        /// <param name="FileName">Full path to file.</param>
         public static void CreateFile(string FileName)
         {
             try
             {
-                // Проверим существование каталога...
+                // Generating full path to destination directory...
                 string Dir = Path.GetDirectoryName(FileName);
 
-                // Создадим при отсутствии...
+                // Check if destination directory exists. If not - creating...
                 if (!(Directory.Exists(Dir))) { Directory.CreateDirectory(Dir); }
 
-                // Создаём файл...
+                // Creating a mew empty file...
                 using (FileStream fs = File.Create(FileName)) { }
             }
             catch { /* Do nothing */ }
         }
 
         /// <summary>
-        /// Вычисляет MD5 хеш файла.
+        /// Calculates MD5 hash of specified file.
         /// </summary>
-        /// <param name="FileName">Имя файла</param>
+        /// <param name="FileName">Full path to source file.</param>
         public static string CalculateFileMD5(string FileName)
         {
             byte[] RValue;
@@ -86,51 +87,51 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Определяет путь к файлу Hosts...
+        /// Return platform-dependent path to Hosts file.
         /// </summary>
-        /// <param name="OS">Платформа, на которой запущен плагин</param>
-        /// <returns>Полный путь к Hosts...</returns>
+        /// <param name="OS">Running platform ID.</param>
+        /// <returns>Full path to Hosts file.</returns>
         public static string GetHostsFileFullPath(CurrentPlatform.OSType OS)
         {
-            // Создаём переменную для промежуточного хранения результата...
+            // Creating an empty string...
             string Result = String.Empty;
 
-            // Определяем платформу, на которой запущено приложение...
+            // Checking of running platform...
             if (OS == CurrentPlatform.OSType.Windows)
             {
                 try
                 {
-                    // Получим путь к файлу hosts (вдруг он переопределён каким-либо зловредом)...
+                    // Getting full Hosts path from Windows Registry (can be overrided by some applications)...
                     RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\Tcpip\Parameters", false);
                     if (ResKey != null) { Result = (string)ResKey.GetValue("DataBasePath"); }
                     
-                    // Проверим получен ли путь из реестра. Если нет, вставим стандартный...
+                    // Checking result. If empty, using generic...
                     if (String.IsNullOrWhiteSpace(Result)) { Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc"); }
                 }
                 catch
                 {
-                    // Произошло исключение, поэтому укажем вручную...
+                    // Exception occured. Generating Hosts file path using generic patterns...
                     Result = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc");
                 }
             }
             else
             {
-                // Мы под Unix, поэтому вставим стандартный путь к /etc...
+                // Unix detected, returning standard POSIX path...
                 Result = "/etc";
             }
 
-            // Сгенерируем полный путь к файлу hosts...
+            // Generating full file name...
             Result = Path.Combine(Result, "hosts");
 
-            // Возвращаем результат...
+            // Returning result...
             return Result;
         }
 
         /// <summary>
-        /// Определяет файловую систему на диске...
+        /// Get file system on specified drive or mount point.
         /// </summary>
-        /// <param name="CDrive">Диск, ФС которого нужно получить</param>
-        /// <returns>Название файловой системы или Unknown</returns>
+        /// <param name="CDrive">Drive letter or mount point path.</param>
+        /// <returns>File system name or Unknown if we cannot detect it.</returns>
         public static string DetectDriveFileSystem(string CDrive)
         {
             string Result = "Unknown";
@@ -147,10 +148,10 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Проверяет наличие прав на запись в указанном в качестве параметра каталоге.
+        /// Checks if specified directory writable.
         /// </summary>
-        /// <param name="DirName">Путь к проверяемому каталогу</param>
-        /// <returns>Булево наличия прав на запись</returns>
+        /// <param name="DirName">Full directory path.</param>
+        /// <returns>Return True if directory writable.</returns>
         public static bool IsDirectoryWritable(string DirName)
         {
             try { using (FileStream fs = File.Create(Path.Combine(DirName, Path.GetRandomFileName()), 1, FileOptions.DeleteOnClose)) { /* Nothing here. */ } } catch { return false; }
@@ -158,43 +159,42 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Конвертирует дату и время из формата DateTime .NET в Unix-формат.
+        /// Converts date from DateTime format to Unixtime.
         /// </summary>
-        /// <param name="DTime">Дата и время в формате DateTime</param>
-        /// <returns>Дата и время в формате UnixTime</returns>
+        /// <param name="DTime">Date in DateTime format.</param>
+        /// <returns>Date in UnixTime format.</returns>
         public static string DateTime2Unix(DateTime DTime)
         {
             return Math.Round((DTime - new DateTime(1970, 1, 1, 0, 0, 0).ToLocalTime()).TotalSeconds, 0).ToString();
         }
 
         /// <summary>
-        /// Конвертирует дату и время из Unix-формата в DateTime.
+        /// Converts date from Unixtime to DateTime format.
         /// </summary>
-        /// <param name="UnixTime">Дата и время в Unix-формате</param>
-        /// <returns>Дата и время в формате DateTime</returns>
+        /// <param name="UnixTime">Date in Unixtime format.</param>
+        /// <returns>Date in DateTime format.</returns>
         public static DateTime Unix2DateTime(long UnixTime)
         {
             return (new DateTime(1970, 1, 1, 0, 0, 0, 0)).AddSeconds(UnixTime);
         }
 
         /// <summary>
-        /// Генерирует уникальное имя для файла резервной копии.
+        /// Generated full unique file name for backup file.
         /// </summary>
-        /// <param name="BackUpDir">Каталог хранения резервных копий</param>
-        /// <param name="Prefix">Префикс имени файла резервной копии</param>
-        /// <returns>Имя файла резервной копии</returns>
+        /// <param name="BackUpDir">Full path to directory for saving backups.</param>
+        /// <param name="Prefix">Backup file pre-defined prefix.</param>
+        /// <returns>Full backup file name.</returns>
         public static string GenerateBackUpFileName(string BackUpDir, string Prefix)
         {
             return Path.Combine(BackUpDir, String.Format("{0}_{1}.bud", Prefix, DateTime2Unix(DateTime.Now)));
         }
 
         /// <summary>
-        /// Упаковывает файлы, имена которых переданых в массиве, в Zip-архив с
-        /// произвольным именем.
+        /// Compresses specified files to a single Zip archive.
         /// </summary>
-        /// <param name="Files">Массив с именами файлов, которые будут добавлены в архив</param>
-        /// <param name="ArchiveName">Имя для создаваемого архивного файла</param>
-        /// <returns>В случае успеха возвращает истину, иначе - ложь</returns>
+        /// <param name="Files">List with full file names to be compressed.</param>
+        /// <param name="ArchiveName">Archive name with full path.</param>
+        /// <returns>Return True if archive was created successfully.</returns>
         public static bool CompressFiles(List<String> Files, string ArchiveName)
         {
             try
@@ -219,9 +219,10 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает размер файла в байтах.
+        /// Returns size in bytes of specified file.
         /// </summary>
-        /// <param name="FileName">Имя файла с полным путём</param>
+        /// <param name="FileName">Full file path.</param>
+        /// <returns>File size in bytes.</returns>
         public static long GetFileSize(string FileName)
         {
             FileInfo FI = new FileInfo(FileName);
@@ -229,9 +230,9 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Ищет и удаляет пустые каталоги, оставшиеся после удаления файлов из них.
+        /// Finds and removes empty directories in specified directory.
         /// </summary>
-        /// <param name="StartDir">Каталог для выполнения очистки</param>
+        /// <param name="StartDir">Full path to start directory.</param>
         public static void RemoveEmptyDirectories(string StartDir)
         {
             if (Directory.Exists(StartDir))
@@ -248,12 +249,12 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Ищет файлы по заданной маске в указанном каталоге.
+        /// Finds files by specified mask in specified directory.
         /// </summary>
-        /// <param name="SearchPath">Каталог, в котором будем искать файлы</param>
-        /// <param name="SrcMask">Маска файлов</param>
-        /// <param name="IsRecursive">Включает / отключает рекурсивный поиск</param>
-        /// <returns>Возвращает список файлов, удовлетворяющих указанной маске.</returns>
+        /// <param name="SearchPath">Start directory.</param>
+        /// <param name="SrcMask">File mask (wildcards are supported).</param>
+        /// <param name="IsRecursive">Use recursive (include subdirectories) search.</param>
+        /// <returns>List of files with full paths, matches mask.</returns>
         public static List<String> FindFiles(string SearchPath, string SrcMask, bool IsRecursive = true)
         {
             List<String> Result = new List<String>();
@@ -268,11 +269,12 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Ищет файлы по указанным маскам в указанных каталогах.
+        /// Finds files by specified mask in specified directories. Mask must be
+        /// added to the end of path.
         /// </summary>
-        /// <param name="CleanDirs">Каталоги для выполнения очистки с маской имени</param>
-        /// <param name="IsRecursive">Включает / отключает рекурсивный поиск</param>
-        /// <returns>Возвращает массив с именами файлов и полными путями</returns>
+        /// <param name="CleanDirs">List of directories with masks.</param>
+        /// <param name="IsRecursive">Use recursive (include subdirectories) search.</param>
+        /// <returns>List of files with full paths, matches mask.</returns>
         public static List<String> ExpandFileList(List<String> CleanDirs, bool IsRecursive)
         {
             List<String> Result = new List<String>();
@@ -295,16 +297,16 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Обходит список и возвращает только имена реально существующих файлов.
+        /// Finds and returns only existing files from specified list.
         /// </summary>
-        /// <param name="Configs">Список файлов с полными путями</param>
-        /// <returns>Возвращает только существующие файлы в списке</returns>
+        /// <param name="Configs">List of files with full paths to check.</param>
+        /// <returns>List with existing files.</returns>
         public static List<String> GetRealFilesFromList(List<String> Configs)
         {
-            // Создаём новый список...
+            // Creating a new empty list...
             List<String> Result = new List<String>();
 
-            // Обходим в цикле и проверяем существование...
+            // Using loop to check a single item from source list...
             foreach (string Config in Configs)
             {
                 if (File.Exists(Config))
@@ -313,25 +315,25 @@ namespace srcrepair.core
                 }
             }
 
-            // Возвращаем результат...
+            // Returning result...
             return Result;
         }
 
         /// <summary>
-        /// Создаёт резервную копию конфигов, имена которых переданы в параметре.
+        /// Creates a backup copy in Zip archive of specified files.
         /// </summary>
-        /// <param name="Configs">Конфиги для бэкапа</param>
-        /// <param name="BackUpDir">Путь к каталогу с резервными копиями</param>
-        /// <param name="Prefix">Префикс имени файла резервной копии</param>
+        /// <param name="Configs">List of files to be backed up.</param>
+        /// <param name="BackUpDir">Full path to directory for saving backups.</param>
+        /// <param name="Prefix">Backup file pre-defined prefix.</param>
         public static void CreateConfigBackUp(List<String> Configs, string BackUpDir, string Prefix)
         {
-            // Проверяем чтобы каталог для бэкапов существовал...
+            // Checking if destination directory exists...
             if (!(Directory.Exists(BackUpDir))) { Directory.CreateDirectory(BackUpDir); }
 
-            // Проверим существование конфигов и запишем в список только имена реально существующих файлов...
+            // Generating a new list only with existing files...
             Configs = GetRealFilesFromList(Configs);
 
-            // Копируем оригинальный файл в файл бэкапа...
+            // Running backup sequence only if we have at least one candidate...
             if (Configs.Count > 0)
             {
                 CompressFiles(Configs, GenerateBackUpFileName(BackUpDir, Prefix));
@@ -339,37 +341,37 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Создаёт резервную копию конфигов, имена которых переданы в параметре.
+        /// Creates a backup copy in Zip archive of specified file.
         /// </summary>
-        /// <param name="Config">Конфиг для бэкапа</param>
-        /// <param name="BackUpDir">Путь к каталогу с резервными копиями</param>
-        /// <param name="Prefix">Префикс имени файла резервной копии</param>
+        /// <param name="Config">Full path to file to be backed up.</param>
+        /// <param name="BackUpDir">Full path to directory for saving backups.</param>
+        /// <param name="Prefix">Backup file pre-defined prefix.</param>
         public static void CreateConfigBackUp(string Config, string BackUpDir, string Prefix)
         {
-            // Создаём список...
+            // Adding only one file to list...
             List<String> Configs = new List<String> { Config };
 
-            // Выполняем...
+            // Running another overloaded version of this method...
             CreateConfigBackUp(Configs, BackUpDir, Prefix);
         }
 
         /// <summary>
-        /// Ищет самый свежий файл в переданном списке.
+        /// Finds and returns the newerest file from specified list.
         /// </summary>
-        /// <param name="FileList">Список файлов с полными путями для обхода</param>
-        /// <returns>Полный путь к самому свежему файлу</returns>
+        /// <param name="FileList">List of files for check.</param>
+        /// <returns>Full path to the newerest file.</returns>
         public static string FindNewerestFile(List<String> FileList)
         {
-            // Создаём список типа FileInfo...
+            // Creating a new list of FileInfo...
             List<FileInfo> FF = new List<FileInfo>();
 
-            // Заполняем наш список...
+            // Adding FileInfo objects to our list...
             foreach (string Config in FileList)
             {
                 FF.Add(new FileInfo(Config));
             }
 
-            // При помощи Linq ищем самый свежий...
+            // Using LINQ to find the newerest file...
             return FF.OrderByDescending(x => x.LastWriteTimeUtc).FirstOrDefault().FullName;
         }
     }
