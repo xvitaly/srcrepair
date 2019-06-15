@@ -62,7 +62,7 @@
     <Compile Include="FileManager.cs" />
     <Compile Include="GameManager.cs" />
     <Compile Include="HUDManager.cs" />
-    <Compile Include="HUDTlx.cs" />
+    <Compile Include="HUDSingle.cs" />
     <Compile Include="ICommonVideo.cs" />
     <Compile Include="IType1Settings.cs" />
     <Compile Include="IType1Video.cs" />

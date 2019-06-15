@@ -39,13 +39,13 @@ namespace srcrepair.core
         /// <summary>
         /// Store full list of available HUDs.
         /// </summary>
-        private readonly List<HUDTlx> HUDsAvailable;
+        private readonly List<HUDSingle> HUDsAvailable;
 
         /// <summary>
         /// Returns HUD by it's name.
         /// </summary>
         /// <param name="HUDName">HUD name.</param>
-        private HUDTlx GetHUDByName(string HUDName)
+        private HUDSingle GetHUDByName(string HUDName)
         {
             return HUDsAvailable.Find(Item => String.Equals(Item.Name, HUDName, StringComparison.CurrentCultureIgnoreCase));
         }
@@ -53,7 +53,7 @@ namespace srcrepair.core
         /// <summary>
         /// Overloaded inxeding operator, returning HUD by specified name.
         /// </summary>
-        public HUDTlx this[string key] => GetHUDByName(key);
+        public HUDSingle this[string key] => GetHUDByName(key);
 
         /// <summary>
         /// Gets list of available HUD names for specified game ID.
@@ -66,7 +66,7 @@ namespace srcrepair.core
             List<String> Result = new List<String>();
 
             // Executing LINQ query...
-            foreach (HUDTlx HUD in HUDsAvailable.FindAll(Item => String.Equals(Item.Game, GameName, StringComparison.CurrentCultureIgnoreCase)))
+            foreach (HUDSingle HUD in HUDsAvailable.FindAll(Item => String.Equals(Item.Game, GameName, StringComparison.CurrentCultureIgnoreCase)))
             {
                 Result.Add(HUD.Name);
             }
@@ -130,7 +130,7 @@ namespace srcrepair.core
         public HUDManager(string FullAppPath, string AppHUDDir, bool HideOutdated = true)
         {
             // Initializing empty list...
-            HUDsAvailable = new List<HUDTlx>();
+            HUDsAvailable = new List<HUDSingle>();
 
             // Fetching list of available HUDs from XML database file...
             using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, StringsManager.HudDatabaseName), FileMode.Open, FileAccess.Read))
@@ -146,7 +146,7 @@ namespace srcrepair.core
                     {
                         if (!HideOutdated || XMLD.GetElementsByTagName("IsUpdated")[i].InnerText == "1")
                         {
-                            HUDsAvailable.Add(new HUDTlx(AppHUDDir, XMLD.GetElementsByTagName("Name")[i].InnerText, XMLD.GetElementsByTagName("Game")[i].InnerText, XMLD.GetElementsByTagName("URI")[i].InnerText, XMLD.GetElementsByTagName("UpURI")[i].InnerText, XMLD.GetElementsByTagName("IsUpdated")[i].InnerText == "1", XMLD.GetElementsByTagName("Preview")[i].InnerText, XMLD.GetElementsByTagName("LastUpdate")[i].InnerText, XMLD.GetElementsByTagName("Site")[i].InnerText, XMLD.GetElementsByTagName("ArchiveDir")[i].InnerText, XMLD.GetElementsByTagName("InstallDir")[i].InnerText, XMLD.GetElementsByTagName("Hash")[i].InnerText, Path.Combine(AppHUDDir, Path.ChangeExtension(Path.GetFileName(XMLD.GetElementsByTagName("Name")[i].InnerText), ".zip"))));
+                            HUDsAvailable.Add(new HUDSingle(XMLD.GetElementsByTagName("Name")[i].InnerText, XMLD.GetElementsByTagName("Game")[i].InnerText, XMLD.GetElementsByTagName("URI")[i].InnerText, XMLD.GetElementsByTagName("UpURI")[i].InnerText, XMLD.GetElementsByTagName("IsUpdated")[i].InnerText == "1", XMLD.GetElementsByTagName("Preview")[i].InnerText, XMLD.GetElementsByTagName("LastUpdate")[i].InnerText, XMLD.GetElementsByTagName("Site")[i].InnerText, XMLD.GetElementsByTagName("ArchiveDir")[i].InnerText, XMLD.GetElementsByTagName("InstallDir")[i].InnerText, XMLD.GetElementsByTagName("Hash")[i].InnerText, Path.Combine(AppHUDDir, Path.ChangeExtension(Path.GetFileName(XMLD.GetElementsByTagName("Name")[i].InnerText), ".zip"))));
                         }
                     }
                     catch (Exception Ex)

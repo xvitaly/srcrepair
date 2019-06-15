@@ -23,86 +23,85 @@ using System;
 namespace srcrepair.core
 {
     /// <summary>
-    /// Класс для работы с определённым HUD.
+    /// Class for working with a single HUD.
     /// </summary>
-    public sealed class HUDTlx
+    public sealed class HUDSingle
     {
         /// <summary>
-        /// Содержит имя HUD.
+        /// Gets HUD user-friendly name.
         /// </summary>
         public string Name { get; private set; }
 
         /// <summary>
-        /// Короткое название игры.
+        /// Gets small game name.
         /// </summary>
         public string Game { get; private set; }
 
         /// <summary>
-        /// Содержит URI для загрузки.
+        /// Gets HUD download URL.
         /// </summary>
         public string URI { get; private set; }
 
         /// <summary>
-        /// Содержит URI апстрима.
+        /// Gets HUD upstream download URL.
         /// </summary>
         public string UpURI { get; private set; }
 
         /// <summary>
-        /// Принимает истинное значение если HUD поддерживает последнюю версию игры.
+        /// Gets information if HUD supported latest version of game.
         /// </summary>
         public bool IsUpdated { get; private set; }
 
         /// <summary>
-        /// Содержит URI скриншота.
+        /// Gets HUD screenshot download URL.
         /// </summary>
         public string Preview { get; private set; }
 
         /// <summary>
-        /// Содержит время последнего обновления базы в формате unixtime.
+        /// Gets HUD last update time in Unixtime format.
         /// </summary>
         public long LastUpdate { get; private set; }
 
         /// <summary>
-        /// Содержит ссылку на официальный сайт HUD.
+        /// Gets link to HUD's official website.
         /// </summary>
         public string Site { get; private set; }
 
         /// <summary>
-        /// Содержит имя каталога внутри архива.
+        /// Gets archive name inside of HUD's archive.
         /// </summary>
         public string ArchiveDir { get; private set; }
 
         /// <summary>
-        /// Содержит имя каталога для установки.
+        /// Gets HUD installation directory name.
         /// </summary>
         public string InstallDir { get; private set; }
 
         /// <summary>
-        /// Содержит хеш-сумму файла загрузки с HUD.
+        /// Gets HUD download file checksum.
         /// </summary>
         public string FileHash { get; private set; }
 
         /// <summary>
-        /// Содержит локальный путь к загруженному файлу.
+        /// Gets full path to downloaded HUD archive file on disk.
         /// </summary>
         public string LocalFile { get; private set; }
 
         /// <summary>
-        /// Конструктор класса. Получает информацию о выбранном HUD.
+        /// HUDSingle class constructor.
         /// </summary>
-        /// <param name="AppHUDDir">Путь к локальному каталогу с HUD</param>
-        /// <param name="HDName">Значение Name из БД</param>
-        /// <param name="HDGame">Значение Game из БД</param>
-        /// <param name="HDURI">Значение URI из БД</param>
-        /// <param name="HDUpURI">Значение UpURI из БД</param>
-        /// <param name="HDIsUp">Значение IsUpdated из БД</param>
-        /// <param name="HDPreview">Значение Preview из БД</param>
-        /// <param name="HDSite">Значение Site из БД</param>
-        /// <param name="HDAd">Значение ArchiveDir из БД</param>
-        /// <param name="HDId">Значение InstallDir из БД</param>
-        /// <param name="UPDHash">Значение Hash из БД</param>
-        /// <param name="HDLocal">Локальный путь к файлу с HUD</param>
-        public HUDTlx(string AppHUDDir, string HDName, string HDGame, string HDURI, string HDUpURI, bool HDIsUp, string HDPreview, string HDUpTime, string HDSite, string HDAd, string HDId, string UPDHash, string HDLocal)
+        /// <param name="HDName">Value Name from database.</param>
+        /// <param name="HDGame">Value Game from database.</param>
+        /// <param name="HDURI">Value URI from database.</param>
+        /// <param name="HDUpURI">Value UpURI from database.</param>
+        /// <param name="HDIsUp">Value IsUpdated from database.</param>
+        /// <param name="HDPreview">Value Preview from database.</param>
+        /// <param name="HDSite">Value Site from database.</param>
+        /// <param name="HDAd">Value ArchiveDir from database.</param>
+        /// <param name="HDId">Value InstallDir from database.</param>
+        /// <param name="UPDHash">Value Hash from database.</param>
+        /// <param name="HDLocal">Full path to HUD archive file on disk.</param>
+        public HUDSingle(string HDName, string HDGame, string HDURI, string HDUpURI, bool HDIsUp, string HDPreview, string HDUpTime, string HDSite, string HDAd, string HDId, string UPDHash, string HDLocal)
         {
             Name = HDName;
             Game = HDGame;
