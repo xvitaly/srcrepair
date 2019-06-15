@@ -76,12 +76,12 @@ namespace srcrepair.core
         /// Return FPS-config by it's name.
         /// </summary>
         /// <param name="CfgName">FPS-config name.</param>
-        private FPSConfig ReturnConfigByName(string CfgName) => Configs.Find(Item => String.Equals(Item.Name, CfgName, StringComparison.CurrentCultureIgnoreCase));
+        private FPSConfig GetConfigByName(string CfgName) => Configs.Find(Item => String.Equals(Item.Name, CfgName, StringComparison.CurrentCultureIgnoreCase));
 
         /// <summary>
         /// Overloading inxeding operator to return FPS-config by specified name.
         /// </summary>
-        public FPSConfig this[string key] => ReturnConfigByName(key);
+        public FPSConfig this[string key] => GetConfigByName(key);
 
         /// <summary>
         /// Get list of common FPS-config paths installation.
