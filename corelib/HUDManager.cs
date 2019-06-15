@@ -27,119 +27,119 @@ using NLog;
 namespace srcrepair.core
 {
     /// <summary>
-    /// Класс для работы с коллекцией HUD.
+    /// Class for working with collection of HUDs.
     /// </summary>
     public sealed class HUDManager
     {
         /// <summary>
-        /// Управляет записью событий в журнал.
+        /// Logger instance for HUDManager class.
         /// </summary>
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Хранит информацию о всех доступных HUD.
+        /// Store full list of available HUDs.
         /// </summary>
-        private List<HUDTlx> HUDsAvailable;
-        
-        /// <summary>
-        /// Хранит информацию о выбранном HUD. Для заполнения используется метод Select().
-        /// </summary>
-        public HUDTlx SelectedHUD { get; private set; }
+        private readonly List<HUDTlx> HUDsAvailable;
 
         /// <summary>
-        /// Выбирает определённый HUD.
+        /// Returns HUD by it's name.
         /// </summary>
-        /// <param name="HUDName">Имя HUD, информацию о котором надо получить</param>
-        public void Select(string HUDName)
+        /// <param name="HUDName">HUD name.</param>
+        private HUDTlx GetHUDByName(string HUDName)
         {
-            SelectedHUD = HUDsAvailable.Find(Item => String.Equals(Item.Name, HUDName, StringComparison.CurrentCultureIgnoreCase));
+            return HUDsAvailable.Find(Item => String.Equals(Item.Name, HUDName, StringComparison.CurrentCultureIgnoreCase));
         }
 
         /// <summary>
-        /// Получает имена найденных HUD для указанной игры.
+        /// Overloaded inxeding operator, returning HUD by specified name.
         /// </summary>
-        /// <param name="GameName">ID игры</param>
-        /// <returns>Возвращает имена найденных HUD</returns>
+        public HUDTlx this[string key] => GetHUDByName(key);
+
+        /// <summary>
+        /// Gets list of available HUD names for specified game ID.
+        /// </summary>
+        /// <param name="GameName">Game ID.</param>
+        /// <returns>List of available HUD names for specified game ID.</returns>
         public List<String> GetHUDNames(string GameName)
         {
-            // Инициализируем список...
+            // Creating an empty list...
             List<String> Result = new List<String>();
 
-            // Выполняем запрос...
+            // Executing LINQ query...
             foreach (HUDTlx HUD in HUDsAvailable.FindAll(Item => String.Equals(Item.Game, GameName, StringComparison.CurrentCultureIgnoreCase)))
             {
                 Result.Add(HUD.Name);
             }
 
-            // Возвращаем результат...
+            // Returning result...
             return Result;
         }
 
         /// <summary>
-        /// Проверяет установлен ли указанный HUD.
+        /// Checks if specified HUD installed.
         /// </summary>
-        /// <param name="CustomInstallDir">Каталог установки кастомных файлов</param>
-        /// <param name="HUDDir">Каталог установки проверяемого HUD</param>
-        /// <returns>Возвращает истину если HUD с указанным именем установлен</returns>
+        /// <param name="CustomInstallDir">Full path to custom game stuff directory.</param>
+        /// <param name="HUDDir">HUD installation directory name.</param>
+        /// <returns>Return True if specified config is installed.</returns>
         public static bool CheckInstalledHUD(string CustomInstallDir, string HUDDir)
         {
-            // Описываем локальные переменные...
+            // Creating some local variables...
             bool Result = false;
             string HUDPath = Path.Combine(CustomInstallDir, HUDDir);
 
-            // Проверим существование каталога...
+            // Checks if directory exists...
             if (Directory.Exists(HUDPath))
             {
-                // Проверим наличие файлов или каталогов внутри...
+                // Checks if any files exists in this directory...
                 using (IEnumerator<String> StrEn = Directory.EnumerateFileSystemEntries(HUDPath).GetEnumerator())
                 {
                     Result = StrEn.MoveNext();
                 }
             }
 
-            // Возвращаем результат...
+            // Returning result...
             return Result;
         }
 
         /// <summary>
-        /// Форматирует путь в соответствии с типом ОС.
+        /// Formats path with platform-dependent trailing path separator.
         /// </summary>
-        /// <param name="IntDir">Исходное значение</param>
-        /// <returns>Отформатированное значение</returns>
+        /// <param name="IntDir">Source string with full path.</param>
+        /// <returns>Formatted string.</returns>
         public static string FormatIntDir(string IntDir)
         {
             return IntDir.Replace('/', Path.DirectorySeparatorChar);
         }
 
         /// <summary>
-        /// Проверяет актуальность базы HUD.
+        /// Checks if HUD database need to be updated.
         /// </summary>
-        /// <param name="LastHUDUpdate">Дата последней проверки обновлений базы HUD</param>
-        /// <returns>Булево актуальности базы HUD</returns>
+        /// <param name="LastHUDUpdate">Date of the last HUD database update.</param>
+        /// <returns>Returns True if database need to be updated.</returns>
         public static bool CheckHUDDatabase(DateTime LastHUDUpdate)
         {
             return (DateTime.Now - LastHUDUpdate).Days >= 7;
         }
 
         /// <summary>
-        /// Конструктор класса. Читает базу данных в формате XML и заполняет нашу структуру.
+        /// ConfigManager class constructor.
         /// </summary>
         /// <param name="FullAppPath">Full path to application's directory</param>
         /// <param name="AppHUDDir">Full HUD directory installation path</param>
-        /// <param name="HideOutdated">Скрывать устаревшие HUD</param>
+        /// <param name="HideOutdated">Enable hiding of outdated HUDs.</param>
         public HUDManager(string FullAppPath, string AppHUDDir, bool HideOutdated = true)
         {
-            // Инициализируем наш список...
+            // Initializing empty list...
             HUDsAvailable = new List<HUDTlx>();
 
-            // Получаем полный список доступных HUD для данной игры. Открываем поток...
+            // Fetching list of available HUDs from XML database file...
             using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, StringsManager.HudDatabaseName), FileMode.Open, FileAccess.Read))
             {
-                // Загружаем XML из потока...
+                // Loading XML file from file stream...
                 XmlDocument XMLD = new XmlDocument();
                 XMLD.Load(XMLFS);
 
-                // Разбираем XML файл и обходим его в цикле...
+                // Parsing XML and filling our structures...
                 for (int i = 0; i < XMLD.GetElementsByTagName("HUD").Count; i++)
                 {
                     try

@@ -1190,7 +1190,7 @@ namespace srcrepair.gui
         private void BW_HUDScreen_DoWork(object sender, DoWorkEventArgs e)
         {
             // Сгенерируем путь к файлу со скриншотом...
-            string ScreenFile = Path.Combine(App.SourceGames[SelectedGame].AppHUDDir, Path.GetFileName(App.SourceGames[SelectedGame].HUDMan.SelectedHUD.Preview));
+            string ScreenFile = Path.Combine(App.SourceGames[SelectedGame].AppHUDDir, Path.GetFileName(App.SourceGames[SelectedGame].HUDMan[(string)e.Argument].Preview));
 
             // Загрузим файл если не существует...
             if (!File.Exists(ScreenFile))
@@ -1198,7 +1198,7 @@ namespace srcrepair.gui
                 using (WebClient Downloader = new WebClient())
                 {
                     Downloader.Headers.Add("User-Agent", App.UserAgent);
-                    Downloader.DownloadFile(App.SourceGames[SelectedGame].HUDMan.SelectedHUD.Preview, ScreenFile);
+                    Downloader.DownloadFile(App.SourceGames[SelectedGame].HUDMan[(string)e.Argument].Preview, ScreenFile);
                 }
             }
 
@@ -1208,7 +1208,7 @@ namespace srcrepair.gui
 
         private void BW_HUDScreen_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            string ScreenFile = Path.Combine(App.SourceGames[SelectedGame].AppHUDDir, Path.GetFileName(App.SourceGames[SelectedGame].HUDMan.SelectedHUD.Preview));
+            string ScreenFile = Path.Combine(App.SourceGames[SelectedGame].AppHUDDir, Path.GetFileName(App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].Preview));
 
             if (e.Error != null)
             {
@@ -1219,8 +1219,7 @@ namespace srcrepair.gui
 
         private void BW_HudInstall_DoWork(object sender, DoWorkEventArgs e)
         {
-            // Сохраняем предыдующий текст кнопки...
-            string CaptText = HD_Install.Text;
+            List<String> Arguments = e.Argument as List<String>;
             string InstallTmp = Path.Combine(App.SourceGames[SelectedGame].CustomInstallDir, "hudtemp");
 
             try
@@ -1229,13 +1228,22 @@ namespace srcrepair.gui
                 Invoke((MethodInvoker)delegate () { HD_Install.Text = AppStrings.HD_InstallBtnProgress; HD_Install.Enabled = false; });
 
                 // Устанавливаем и очищаем временный каталог...
-                try { Directory.Move(Path.Combine(InstallTmp, HUDManager.FormatIntDir(App.SourceGames[SelectedGame].HUDMan.SelectedHUD.ArchiveDir)), Path.Combine(App.SourceGames[SelectedGame].CustomInstallDir, App.SourceGames[SelectedGame].HUDMan.SelectedHUD.InstallDir)); }
-                finally { if (Directory.Exists(InstallTmp)) { Directory.Delete(InstallTmp, true); } }
+                try
+                {
+                    Directory.Move(Path.Combine(InstallTmp, HUDManager.FormatIntDir(App.SourceGames[SelectedGame].HUDMan[Arguments[1]].ArchiveDir)), Path.Combine(App.SourceGames[SelectedGame].CustomInstallDir, App.SourceGames[SelectedGame].HUDMan[Arguments[1]].InstallDir));
+                }
+                finally
+                {
+                    if (Directory.Exists(InstallTmp))
+                    {
+                        Directory.Delete(InstallTmp, true);
+                    }
+                }
             }
             finally
             {
                 // Возвращаем сохранённый...
-                Invoke((MethodInvoker)delegate () { HD_Install.Text = CaptText; HD_Install.Enabled = true; });
+                Invoke((MethodInvoker)delegate () { HD_Install.Text = Arguments[0]; HD_Install.Enabled = true; });
             }
         }
 
@@ -1253,7 +1261,7 @@ namespace srcrepair.gui
             }
 
             // Включаем кнопку удаления если HUD установлен...
-            SetHUDButtons(HUDManager.CheckInstalledHUD(App.SourceGames[SelectedGame].CustomInstallDir, App.SourceGames[SelectedGame].HUDMan.SelectedHUD.InstallDir));
+            SetHUDButtons(HUDManager.CheckInstalledHUD(App.SourceGames[SelectedGame].CustomInstallDir, App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].InstallDir));
         }
 
         #endregion
@@ -2655,32 +2663,25 @@ namespace srcrepair.gui
         }
 
         private void HD_HSel_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Получим информацию о выбранном HUD...
-            try
-            {
-                App.SourceGames[SelectedGame].HUDMan.Select(HD_HSel.Text);
-            }
-            catch (Exception Ex) { Logger.Warn(Ex, DebugStrings.AppDbgExHudSelect); }
-                
+        {                
             // Проверяем результат...
-            bool Success = !String.IsNullOrEmpty(App.SourceGames[SelectedGame].HUDMan.SelectedHUD.Name);
+            bool Success = !String.IsNullOrEmpty(App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].Name);
 
             // Переключаем статус элементов управления...
             HD_GB_Pbx.Image = Properties.Resources.LoadingFile;
             HD_Install.Enabled = Success;
             HD_Homepage.Enabled = Success;
-            HD_Warning.Visible = Success && !App.SourceGames[SelectedGame].HUDMan.SelectedHUD.IsUpdated;
+            HD_Warning.Visible = Success && !App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].IsUpdated;
 
             // Выводим информацию о последнем обновлении HUD...
             HD_LastUpdate.Visible = Success;
-            if (Success) { HD_LastUpdate.Text = String.Format(AppStrings.HD_LastUpdateInfo, FileManager.Unix2DateTime(App.SourceGames[SelectedGame].HUDMan.SelectedHUD.LastUpdate).ToLocalTime()); }
+            if (Success) { HD_LastUpdate.Text = String.Format(AppStrings.HD_LastUpdateInfo, FileManager.Unix2DateTime(App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].LastUpdate).ToLocalTime()); }
 
             // Проверяем установлен ли выбранный HUD...
-            SetHUDButtons(HUDManager.CheckInstalledHUD(App.SourceGames[SelectedGame].CustomInstallDir, App.SourceGames[SelectedGame].HUDMan.SelectedHUD.InstallDir));
+            SetHUDButtons(HUDManager.CheckInstalledHUD(App.SourceGames[SelectedGame].CustomInstallDir, App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].InstallDir));
 
             // Загрузим скриншот выбранного HUD...
-            if (Success && !BW_HUDScreen.IsBusy) { BW_HUDScreen.RunWorkerAsync(); }
+            if (Success && !BW_HUDScreen.IsBusy) { BW_HUDScreen.RunWorkerAsync(argument: HD_HSel.Text); }
         }
 
         private void HD_Install_Click(object sender, EventArgs e)
@@ -2688,32 +2689,37 @@ namespace srcrepair.gui
             if (!HUDManager.CheckHUDDatabase(Properties.Settings.Default.LastHUDTime))
             {
                 // Проверим поддерживает ли выбранный HUD последнюю версию игры...
-                if (App.SourceGames[SelectedGame].HUDMan.SelectedHUD.IsUpdated)
+                if (App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].IsUpdated)
                 {
                     // Спросим пользователя о необходимости установки/обновления HUD...
                     if (MessageBox.Show(String.Format("{0}?", ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
                         // Начинаем загрузку архива с HUD...
-                        GuiHelpers.FormShowDownloader(Properties.Settings.Default.HUDUseUpstream ? App.SourceGames[SelectedGame].HUDMan.SelectedHUD.UpURI : App.SourceGames[SelectedGame].HUDMan.SelectedHUD.URI, App.SourceGames[SelectedGame].HUDMan.SelectedHUD.LocalFile);
+                        GuiHelpers.FormShowDownloader(Properties.Settings.Default.HUDUseUpstream ? App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].UpURI : App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].URI, App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].LocalFile);
 
                         // Проверяем существует ли файл с архивом...
-                        if (File.Exists(App.SourceGames[SelectedGame].HUDMan.SelectedHUD.LocalFile))
+                        if (File.Exists(App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].LocalFile))
                         {
                             // Проверяем контрольную сумму загруженного архива...
-                            if (Properties.Settings.Default.HUDUseUpstream || FileManager.CalculateFileMD5(App.SourceGames[SelectedGame].HUDMan.SelectedHUD.LocalFile) == App.SourceGames[SelectedGame].HUDMan.SelectedHUD.FileHash)
+                            if (Properties.Settings.Default.HUDUseUpstream || FileManager.CalculateFileMD5(App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].LocalFile) == App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].FileHash)
                             {
                                 // Проверим установлен ли выбранный HUD...
-                                if (HUDManager.CheckInstalledHUD(App.SourceGames[SelectedGame].CustomInstallDir, App.SourceGames[SelectedGame].HUDMan.SelectedHUD.InstallDir))
+                                if (HUDManager.CheckInstalledHUD(App.SourceGames[SelectedGame].CustomInstallDir, App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].InstallDir))
                                 {
                                     // Удаляем уже установленные файлы HUD...
-                                    GuiHelpers.FormShowRemoveFiles(SingleToArray(Path.Combine(App.SourceGames[SelectedGame].CustomInstallDir, App.SourceGames[SelectedGame].HUDMan.SelectedHUD.InstallDir)));
+                                    GuiHelpers.FormShowRemoveFiles(SingleToArray(Path.Combine(App.SourceGames[SelectedGame].CustomInstallDir, App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].InstallDir)));
                                 }
 
                                 // Распаковываем загруженный архив с файлами HUD...
-                                GuiHelpers.FormShowArchiveExtract(App.SourceGames[SelectedGame].HUDMan.SelectedHUD.LocalFile, Path.Combine(App.SourceGames[SelectedGame].CustomInstallDir, "hudtemp"));
+                                GuiHelpers.FormShowArchiveExtract(App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].LocalFile, Path.Combine(App.SourceGames[SelectedGame].CustomInstallDir, "hudtemp"));
 
                                 // Запускаем установку пакета в отдельном потоке...
-                                if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(); }
+                                List<String> HudWrkArguments = new List<String>
+                                {
+                                    HD_Install.Text,
+                                    HD_HSel.Text
+                                };
+                                if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(argument: HudWrkArguments); }
                             }
                             else
                             {
@@ -2724,7 +2730,7 @@ namespace srcrepair.gui
                             // Удаляем загруженный файл архива...
                             try
                             {
-                                File.Delete(App.SourceGames[SelectedGame].HUDMan.SelectedHUD.LocalFile);
+                                File.Delete(App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].LocalFile);
                             }
                             catch (Exception Ex) { Logger.Warn(Ex, DebugStrings.AppDbgExHudArchRem); }
                         }
@@ -2753,13 +2759,13 @@ namespace srcrepair.gui
             if (MessageBox.Show(String.Format("{0}?", ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 // Сгенерируем полный путь к установленному HUD...
-                string HUDPath = Path.Combine(App.SourceGames[SelectedGame].CustomInstallDir, App.SourceGames[SelectedGame].HUDMan.SelectedHUD.InstallDir);
+                string HUDPath = Path.Combine(App.SourceGames[SelectedGame].CustomInstallDir, App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].InstallDir);
 
                 // Воспользуемся модулем быстрой очистки для удаления выбранного HUD...
                 GuiHelpers.FormShowRemoveFiles(SingleToArray(HUDPath));
 
                 // Проверяем установлен ли выбранный HUD...
-                bool IsInstalled = HUDManager.CheckInstalledHUD(App.SourceGames[SelectedGame].CustomInstallDir, App.SourceGames[SelectedGame].HUDMan.SelectedHUD.InstallDir);
+                bool IsInstalled = HUDManager.CheckInstalledHUD(App.SourceGames[SelectedGame].CustomInstallDir, App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].InstallDir);
 
                 // При успешном удалении HUD выводим сообщение и сносим и его каталог...
                 if (!IsInstalled) { MessageBox.Show(AppStrings.PS_CleanupSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); if (Directory.Exists(HUDPath)) { Directory.Delete(HUDPath); } }
@@ -2772,11 +2778,11 @@ namespace srcrepair.gui
         private void HD_Homepage_Click(object sender, EventArgs e)
         {
             // Откроем домашнюю страницу выбранного HUD...
-            if (!String.IsNullOrEmpty(App.SourceGames[SelectedGame].HUDMan.SelectedHUD.Site))
+            if (!String.IsNullOrEmpty(App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].Site))
             {
                 try
                 {
-                    ProcessManager.OpenWebPage(App.SourceGames[SelectedGame].HUDMan.SelectedHUD.Site);
+                    ProcessManager.OpenWebPage(App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].Site);
                 }
                 catch (Exception Ex)
                 {
@@ -2815,7 +2821,7 @@ namespace srcrepair.gui
         private void HD_Warning_Click(object sender, EventArgs e)
         {
             // Выведем предупреждающие сообщения...
-            if (!App.SourceGames[SelectedGame].HUDMan.SelectedHUD.IsUpdated) { MessageBox.Show(AppStrings.HD_NotTested, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            if (!App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].IsUpdated) { MessageBox.Show(AppStrings.HD_NotTested, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
 
         private void HD_OpenDir_Click(object sender, EventArgs e)
@@ -2823,7 +2829,7 @@ namespace srcrepair.gui
             // Покажем файлы установленного HUD в Проводнике...
             try
             {
-                ProcessManager.OpenExplorer(Path.Combine(App.SourceGames[SelectedGame].CustomInstallDir, App.SourceGames[SelectedGame].HUDMan.SelectedHUD.InstallDir), App.Platform.OS);
+                ProcessManager.OpenExplorer(Path.Combine(App.SourceGames[SelectedGame].CustomInstallDir, App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].InstallDir), App.Platform.OS);
             }
             catch (Exception Ex)
             {
