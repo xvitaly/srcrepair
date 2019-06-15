@@ -27,64 +27,61 @@ using NLog;
 namespace srcrepair.core
 {
     /// <summary>
-    /// Класс для работы с коллекцией установленных поддерживаемых игр.
+    /// Class for working with collection of available games.
     /// </summary>
     public sealed class GameManager
     {
         /// <summary>
-        /// Управляет записью событий в журнал.
+        /// Logger instance for GameManager class.
         /// </summary>
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Хранит информацию о всех доступных поддерживаемых играх.
+        /// Store full list of available games.
         /// </summary>
-        private List<SourceGame> SourceGames;
+        private readonly List<SourceGame> SourceGames;
 
         /// <summary>
-        /// Хранит названия установленных игр в виде списка. Используется
-        /// в основном селектором игр в главном окне.
+        /// Get names of installed games.
         /// </summary>
         public List<String> InstalledGames { get; private set; }
 
         /// <summary>
-        /// Хранит информацию о выбранной игре. Для заполнения используется метод Select().
+        /// Return SourceGame object instance by it's name.
         /// </summary>
-        public SourceGame SelectedGame { get; private set; }
-
-        /// <summary>
-        /// Выбирает определённую игру по имени.
-        /// </summary>
-        /// <param name="GameName">Имя игры</param>
-        public void Select(string GameName)
+        /// <param name="GameName">Game name.</param>
+        private SourceGame GetGameByName(string GameName)
         {
-            SelectedGame = SourceGames.Find(Item => String.Equals(Item.FullAppName, GameName, StringComparison.CurrentCultureIgnoreCase));
+            return SourceGames.Find(Item => String.Equals(Item.FullAppName, GameName, StringComparison.CurrentCultureIgnoreCase));
         }
 
         /// <summary>
-        /// Главный конструктор класса GameManager.
+        /// Overloaded inxeding operator, returning SourceGame instance by specified name.
         /// </summary>
-        /// <param name="App">Экземпляр класса с параметрами приложения</param>
-        /// <param name="HideUnsupported">Добавлять ли в список неподдерживаемые</param>
+        public SourceGame this[string key] => GetGameByName(key);
+
+        /// <summary>
+        /// GameManager class constructor.
+        /// </summary>
+        /// <param name="App">CurrentApp class instance.</param>
+        /// <param name="HideUnsupported">Enable or disable adding unsupported games to list.</param>
         public GameManager(CurrentApp App, bool HideUnsupported = true)
         {
-            // Создаём объекты для хранения базы игр...
+            // Creating empty lists...
             SourceGames = new List<SourceGame>();
             InstalledGames = new List<String>();
 
-            // При использовании нового метода поиска установленных игр, считаем их из конфига Steam...
+            // Fetching game libraries...
             List<String> GameDirs = App.SteamClient.FormatInstallDirs(App.Platform.SteamAppsFolderName);
 
-            // Создаём поток с XML-файлом...
+            // Creating FileStream for XML database...
             using (FileStream XMLFS = new FileStream(Path.Combine(App.FullAppPath, Properties.Resources.GameListFile), FileMode.Open, FileAccess.Read))
             {
-                // Создаём объект документа XML...
+                // Loading XML file from file stream...
                 XmlDocument XMLD = new XmlDocument();
-
-                // Загружаем поток в объект XML документа...
                 XMLD.Load(XMLFS);
 
-                // Обходим полученный список в цикле...
+                // Parsing XML and filling our structures...
                 XmlNodeList XMLNode = XMLD.GetElementsByTagName("Game");
                 for (int i = 0; i < XMLNode.Count; i++)
                 {
