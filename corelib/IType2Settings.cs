@@ -27,97 +27,97 @@ namespace srcrepair.core
     public interface IType2Settings
     {
         /// <summary>
-        /// Gets and sets anti-aliasing video setting name.
+        /// Gets anti-aliasing video setting name.
         /// </summary>
         string AntiAliasing { get; }
 
         /// <summary>
-        /// Gets and sets anti-aliasing multiplier video setting name.
+        /// Gets anti-aliasing multiplier video setting name.
         /// </summary>
         string AntiAliasQuality { get; }
 
         /// <summary>
-        /// Gets and sets brightness video setting name.
+        /// Gets brightness video setting name.
         /// </summary>
         string Brightness { get; }
 
         /// <summary>
-        /// Gets and sets borderless window video setting name.
+        /// Gets borderless window video setting name.
         /// </summary>
         string DisplayBorderless { get; }
 
         /// <summary>
-        /// Gets and sets display mode (fullscreen, windowed) video setting name.
+        /// Gets display mode (fullscreen, windowed) video setting name.
         /// </summary>
         string DisplayMode { get; }
 
         /// <summary>
-        /// Gets and sets standard effects video setting name.
+        /// Gets standard effects video setting name.
         /// </summary>
         string EffectDetails { get; }
 
         /// <summary>
-        /// Gets and sets filtering mode video setting name.
+        /// Gets filtering mode video setting name.
         /// </summary>
         string FilteringMode { get; }
 
         /// <summary>
-        /// Gets and sets grain scale video setting name.
+        /// Gets grain scale video setting name.
         /// </summary>
         string GrainScaleOverride { get; }
 
         /// <summary>
-        /// Gets and sets multicore rendering video setting name.
+        /// Gets multicore rendering video setting name.
         /// </summary>
         string MCRendering { get; }
 
         /// <summary>
-        /// Gets and sets memory pool video setting name.
+        /// Gets memory pool video setting name.
         /// </summary>
         string MemoryPoolType { get; }
 
         /// <summary>
-        /// Gets and sets motion blur video setting name.
+        /// Gets motion blur video setting name.
         /// </summary>
         string MotionBlur { get; }
 
         /// <summary>
-        /// Gets and sets screen height video setting name.
+        /// Gets screen height video setting name.
         /// </summary>
         string ScreenHeight { get; }
 
         /// <summary>
-        /// Gets and sets screen aspect ratio video setting name.
+        /// Gets screen aspect ratio video setting name.
         /// </summary>
         string ScreenRatio { get; }
 
         /// <summary>
-        /// Gets and sets screen width video setting name.
+        /// Gets screen width video setting name.
         /// </summary>
         string ScreenWidth { get; }
 
         /// <summary>
-        /// Gets and sets shader effects level video setting name.
+        /// Gets shader effects level video setting name.
         /// </summary>
         string ShaderEffects { get; }
 
         /// <summary>
-        /// Gets and sets shadow effects quality video setting name.
+        /// Gets shadow effects quality video setting name.
         /// </summary>
         string ShadowQuality { get; }
 
         /// <summary>
-        /// Gets and sets texture quality video setting name.
+        /// Gets texture quality video setting name.
         /// </summary>
         string TextureModelQuality { get; }
 
         /// <summary>
-        /// Gets and sets vertical synchronization video setting name.
+        /// Gets vertical synchronization video setting name.
         /// </summary>
         string VSync { get; }
 
         /// <summary>
-        /// Gets and sets vertical synchronization quality video setting name.
+        /// Gets vertical synchronization quality video setting name.
         /// </summary>
         string VSyncMode { get; }
     }

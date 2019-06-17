@@ -27,102 +27,102 @@ namespace srcrepair.core
     public interface IType1Settings
     {
         /// <summary>
-        /// Gets and sets anti-aliasing video setting name.
+        /// Gets anti-aliasing video setting name.
         /// </summary>
         string AntiAliasing { get; }
 
         /// <summary>
-        /// Gets and sets anti-aliasing (MSAA) video setting name.
+        /// Gets anti-aliasing (MSAA) video setting name.
         /// </summary>
         string AntiAliasingMSAA { get; }
 
         /// <summary>
-        /// Gets and sets anti-aliasing multiplier video setting name.
+        /// Gets anti-aliasing multiplier video setting name.
         /// </summary>
         string AntiAliasQuality { get; }
 
         /// <summary>
-        /// Gets and sets anti-aliasing multiplier (MSAA) video setting name.
+        /// Gets anti-aliasing multiplier (MSAA) video setting name.
         /// </summary>
         string AntiAliasQualityMSAA { get; }
 
         /// <summary>
-        /// Gets and sets color correction video setting name.
+        /// Gets color correction video setting name.
         /// </summary>
         string ColorCorrection { get; }
 
         /// <summary>
-        /// Gets and sets DirectX mode (version) video setting name.
+        /// Gets DirectX mode (version) video setting name.
         /// </summary>
         string DirectXMode { get; }
 
         /// <summary>
-        /// Gets and sets display mode (fullscreen, windowed) video setting name.
+        /// Gets display mode (fullscreen, windowed) video setting name.
         /// </summary>
         string DisplayMode { get; }
 
         /// <summary>
-        /// Gets and sets filtering mode video setting name.
+        /// Gets filtering mode video setting name.
         /// </summary>
         string FilteringMode { get; }
 
         /// <summary>
-        /// Gets and sets trilinear filtering mode video setting name.
+        /// Gets trilinear filtering mode video setting name.
         /// </summary>
         string FilteringTrilinear { get; }
 
         /// <summary>
-        /// Gets and sets HDR level video setting name.
+        /// Gets HDR level video setting name.
         /// </summary>
         string HDRMode { get; }
 
         /// <summary>
-        /// Gets and sets model quality video setting name.
+        /// Gets model quality video setting name.
         /// </summary>
         string ModelDetail { get; }
 
         /// <summary>
-        /// Gets and sets motion blur video setting name.
+        /// Gets motion blur video setting name.
         /// </summary>
         string MotionBlur { get; }
 
         /// <summary>
-        /// Gets and sets screen height video setting name.
+        /// Gets screen height video setting name.
         /// </summary>
         string ScreenHeight { get; }
 
         /// <summary>
-        /// Gets and sets screen width video setting name.
+        /// Gets screen width video setting name.
         /// </summary>
         string ScreenWidth { get; }
 
         /// <summary>
-        /// Gets and sets shader effects level video setting name.
+        /// Gets shader effects level video setting name.
         /// </summary>
         string ShaderDetail { get; }
 
         /// <summary>
-        /// Gets and sets shadow effects quality video setting name.
+        /// Gets shadow effects quality video setting name.
         /// </summary>
         string ShadowDetail { get; }
 
         /// <summary>
-        /// Gets and sets texture quality video setting name.
+        /// Gets texture quality video setting name.
         /// </summary>
         string TextureDetail { get; }
 
         /// <summary>
-        /// Gets and sets vertical synchronization video setting name.
+        /// Gets vertical synchronization video setting name.
         /// </summary>
         string VSync { get; }
 
         /// <summary>
-        /// Gets and sets water quality video setting name.
+        /// Gets water quality video setting name.
         /// </summary>
         string WaterDetail { get; }
 
         /// <summary>
-        /// Gets and sets water reflections level video setting name.
+        /// Gets water reflections level video setting name.
         /// </summary>
         string WaterReflections { get; }
     }
