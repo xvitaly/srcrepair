@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=SRC Repair
+GenericName=SRC Repair
+Exec=srcrepair %u
+Icon=srcrepair
+Terminal=false
+Type=Application
+StartupWMClass=srcrepair
+Categories=Utility;
+Keywords=tweaker;editor;games;
