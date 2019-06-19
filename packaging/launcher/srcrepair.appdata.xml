@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2019 Vitaly Zaitsev <vitaly@easycoding.org> -->
+<component type="desktop">
+  <id>org.easycoding.srcrepair</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>SRC Repair</name>
+  <summary>A free open source tool for tuning and cleaning up Source engine games</summary>
+  <description>
+    <p>SRC Repair (ex. TF2 Repair) is a free open source tool that can be used for tuning and cleaning up Steam and Source engine games. You can also create and edit .cfg files (configs), backup and restore game settings, apply FPS configs or sprays into the game with one click.</p>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://www.easycoding.org/wp-content/uploads/srcrep_main.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.easycoding.org/wp-content/uploads/srcrep_ncf.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.easycoding.org/wp-content/uploads/srcrep_confed.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.easycoding.org/wp-content/uploads/srcrep_prsolv.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.easycoding.org/wp-content/uploads/srcrep_fpswiz.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.easycoding.org/wp-content/uploads/srcrep_hudwiz.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.easycoding.org/wp-content/uploads/srcrep_bkup.png</image>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://github.com/xvitaly/srcrepair</url>
+  <update_contact>https://github.com/xvitaly</update_contact>
+</component>
