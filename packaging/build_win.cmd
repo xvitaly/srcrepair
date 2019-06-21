@@ -36,14 +36,11 @@ echo Installing generated CHM files...
 mkdir "..\srcrepair\bin\Release\help"
 move "..\help\ru\build\htmlhelp\srcrepair_ru.chm" "..\srcrepair\bin\Release\help\srcrepair_ru.chm"
 
-echo Changing directory to built version...
-cd "..\srcrepair\bin\Release"
-
 echo Signing binaries...
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% srcrepair.exe
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% DotNetZip.dll
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% NLog.dll
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ru\srcrepair.resources.dll
+"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\srcrepair\bin\Release\srcrepair.exe
+"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\srcrepair\bin\Release\DotNetZip.dll
+"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\srcrepair\bin\Release\NLog.dll
+"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\srcrepair\bin\Release\ru\srcrepair.resources.dll
 
 echo Compiling Installer...
 "%ProgramFiles(x86)%\Inno Setup 5\ISCC.exe" inno\srcrepair.iss

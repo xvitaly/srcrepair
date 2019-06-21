@@ -20,7 +20,7 @@
 ;
 
 ; Задаём особые директивы препроцессора...
-#define VERSION GetFileVersion("../srcrepair.exe")
+#define VERSION GetFileVersion("..\..\srcrepair\bin\Release\srcrepair.exe")
 #define CI_COMMIT GetEnv('CI_HASH')
 #if CI_COMMIT == ''
 #define _RELEASE 1
@@ -34,18 +34,18 @@ AppVerName=SRC Repair
 AppPublisher=EasyCoding Team
 AppPublisherURL=https://www.easycoding.org/
 AppVersion={#VERSION}
-AppSupportURL=https://www.easycoding.org/projects/srcrepair
-AppUpdatesURL=https://www.easycoding.org/projects/srcrepair
+AppSupportURL=https://github.com/xvitaly/srcrepair/issues
+AppUpdatesURL=https://github.com/xvitaly/srcrepair/releases
 DefaultDirName={code:GetDefRoot}\SRC Repair
 DefaultGroupName=SRC Repair
 AllowNoIcons=yes
-LicenseFile=..\COPYING
+LicenseFile=..\..\COPYING
 #ifdef _RELEASE
 OutputBaseFilename=srcrepair_340_final
 #else
 OutputBaseFilename=snapshot_{#CI_COMMIT}
 #endif
-SetupIconFile=..\srcrepair.ico
+SetupIconFile=..\..\srcrepair\srcrepair.ico
 UninstallDisplayIcon={app}\srcrepair.exe
 Compression=lzma2
 SolidCompression=yes
@@ -78,36 +78,36 @@ Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescrip
 
 [Files]
 ; Копируем файл со списком поддерживаемых игр и их параметрами...
-Source: "..\games.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\..\srcrepair\bin\Release\games.xml"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Копируем файл с базой данных HUD...
-Source: "..\huds.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\..\srcrepair\bin\Release\huds.xml"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Копируем файл с базой данных FPS-конфигов...
-Source: "..\configs.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\..\srcrepair\bin\Release\configs.xml"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Копируем динамические библиотеки сторонних модулей...
-Source: "..\DotNetZip.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\NLog.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\..\srcrepair\bin\Release\DotNetZip.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\..\srcrepair\bin\Release\NLog.dll"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Устанавливаем бинарники приложения...
-Source: "..\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\corelib.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\corelib.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\..\srcrepair\bin\Release\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\..\srcrepair\bin\Release\srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\..\srcrepair\bin\Release\corelib.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\..\srcrepair\bin\Release\corelib.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\..\srcrepair\bin\Release\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 ; Копируем файлs стандартных настроек программы...
-Source: "..\srcrepair.exe.config"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\NLog.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\..\srcrepair\bin\Release\srcrepair.exe.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\..\srcrepair\bin\Release\NLog.config"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Устанавливаем остальные файлы...
-Source: "..\cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "..\help\*"; DestDir: "{app}\help\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\..\srcrepair\bin\Release\cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "..\..\srcrepair\bin\Release\help\*"; DestDir: "{app}\help\"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 ; Устанавливаем файлы с отсоединёнными подписями для официальных сборок...
 #ifdef _RELEASE
-Source: "..\*.sig"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\..\srcrepair\bin\Release\*.sig"; DestDir: "{app}"; Flags: ignoreversion
 #endif
 
 [Icons]
