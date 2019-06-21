@@ -39,26 +39,25 @@ namespace srcrepair.core
         /// <summary>
         /// Store full list of available games.
         /// </summary>
-        private readonly List<SourceGame> SourceGames;
+        private readonly Dictionary<string, SourceGame> SourceGames;
 
         /// <summary>
         /// Get names of installed games.
         /// </summary>
-        public List<String> InstalledGames { get; private set; }
-
-        /// <summary>
-        /// Return SourceGame object instance by it's name.
-        /// </summary>
-        /// <param name="GameName">Game name.</param>
-        private SourceGame GetGameByName(string GameName)
+        public List<String> InstalledGames
         {
-            return SourceGames.Find(Item => String.Equals(Item.FullAppName, GameName, StringComparison.CurrentCultureIgnoreCase));
+            get
+            {
+                List<String> Result = new List<String>();
+                foreach (string IG in SourceGames.Keys) { Result.Add(IG); }
+                return Result;
+            }
         }
 
         /// <summary>
         /// Overloaded inxeding operator, returning SourceGame instance by specified name.
         /// </summary>
-        public SourceGame this[string key] => GetGameByName(key);
+        public SourceGame this[string key] => SourceGames[key];
 
         /// <summary>
         /// GameManager class constructor.
@@ -67,9 +66,8 @@ namespace srcrepair.core
         /// <param name="HideUnsupported">Enable or disable adding unsupported games to list.</param>
         public GameManager(CurrentApp App, bool HideUnsupported = true)
         {
-            // Creating empty lists...
-            SourceGames = new List<SourceGame>();
-            InstalledGames = new List<String>();
+            // Creating empty dictionary...
+            SourceGames = new Dictionary<string, SourceGame>();
 
             // Fetching game libraries...
             List<String> GameDirs = App.SteamClient.FormatInstallDirs(App.Platform.SteamAppsFolderName);
@@ -92,8 +90,7 @@ namespace srcrepair.core
                             SourceGame SG = new SourceGame(XMLNode[i].Attributes["Name"].Value, XMLD.GetElementsByTagName("DirName")[i].InnerText, XMLD.GetElementsByTagName("SmallName")[i].InnerText, XMLD.GetElementsByTagName("Executable")[i].InnerText, XMLD.GetElementsByTagName("SID")[i].InnerText, XMLD.GetElementsByTagName("SVer")[i].InnerText, XMLD.GetElementsByTagName("VFDir")[i].InnerText, App.Platform.OS == CurrentPlatform.OSType.Windows ? XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1" : true, XMLD.GetElementsByTagName("UserDir")[i].InnerText == "1", XMLD.GetElementsByTagName("HUDsAvail")[i].InnerText == "1", App.FullAppPath, App.AppUserDir, App.SteamClient.FullSteamPath, App.Platform.SteamAppsFolderName, App.SteamClient.SteamID, GameDirs, App.Platform.OS);
                             if (SG.IsInstalled)
                             {
-                                SourceGames.Add(SG);
-                                InstalledGames.Add(SG.FullAppName);
+                                SourceGames.Add(XMLNode[i].Attributes["Name"].Value, SG);
                             }
                         }
                     }
