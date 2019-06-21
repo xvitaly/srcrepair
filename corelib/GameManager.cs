@@ -44,7 +44,7 @@ namespace srcrepair.core
         /// <summary>
         /// Get names of installed games.
         /// </summary>
-        public List<String> InstalledGames
+        public List<String> InstalledGameNames
         {
             get
             {

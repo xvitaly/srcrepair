@@ -120,7 +120,7 @@ namespace srcrepair.gui
                 AppSelector.Items.Clear();
 
                 // Заполним селектор...
-                AppSelector.Items.AddRange(App.SourceGames.InstalledGames.ToArray());
+                AppSelector.Items.AddRange(App.SourceGames.InstalledGameNames.ToArray());
 
             }
             catch (Exception Ex) { Logger.Warn(Ex); }
@@ -1018,7 +1018,7 @@ namespace srcrepair.gui
             }
 
             // Проверим нашлись ли игры...
-            CheckGames(App.SourceGames.InstalledGames.Count);
+            CheckGames(App.SourceGames.InstalledGameNames.Count);
         }
 
         /// <summary>
@@ -1129,7 +1129,7 @@ namespace srcrepair.gui
             App.SourceGames[SelectedGame].CFGMan = new ConfigManager(App.FullAppPath, AppStrings.AppLangPrefix);
 
             // Выведем установленные в форму...
-            foreach (string Str in App.SourceGames[SelectedGame].CFGMan.GetAllConfigs())
+            foreach (string Str in App.SourceGames[SelectedGame].CFGMan.ConfigNames)
             {
                 Invoke((MethodInvoker)delegate () { FP_ConfigSel.Items.Add(Str); });
             }
@@ -1175,7 +1175,7 @@ namespace srcrepair.gui
             App.SourceGames[SelectedGame].HUDMan = new HUDManager(App.SourceGames[SelectedGame].SmallAppName, App.FullAppPath, App.SourceGames[SelectedGame].AppHUDDir, Properties.Settings.Default.HUDHideOutdated);
 
             // Вносим HUD текущей игры в форму...
-            Invoke((MethodInvoker)delegate () { HD_HSel.Items.AddRange(App.SourceGames[SelectedGame].HUDMan.GetAllHUDs().ToArray<object>()); });
+            Invoke((MethodInvoker)delegate () { HD_HSel.Items.AddRange(App.SourceGames[SelectedGame].HUDMan.AvailableHUDNames.ToArray<object>()); });
         }
 
 

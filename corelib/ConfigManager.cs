@@ -44,12 +44,14 @@ namespace srcrepair.core
         /// <summary>
         /// Gets list of all available FPS-config names.
         /// </summary>
-        /// <returns>List of all available FPS-config names.</returns>
-        public List<String> GetAllConfigs()
+        public List<String> ConfigNames
         {
-            List<String> Result = new List<String>();
-            foreach (string Cfg in Configs.Keys) { Result.Add(Cfg); }
-            return Result;
+            get
+            {
+                List<String> Result = new List<String>();
+                foreach (string Cfg in Configs.Keys) { Result.Add(Cfg); }
+                return Result;
+            }
         }
 
         /// <summary>
