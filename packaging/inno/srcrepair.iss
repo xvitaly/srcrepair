@@ -21,6 +21,7 @@
 
 ; Задаём особые директивы препроцессора...
 #define VERSION GetFileVersion("..\..\srcrepair\bin\Release\srcrepair.exe")
+#define BASEDIR "..\..\srcrepair"
 #define CI_COMMIT GetEnv('CI_HASH')
 #if CI_COMMIT == ''
 #define _RELEASE 1
@@ -45,7 +46,7 @@ OutputBaseFilename=srcrepair_340_final
 #else
 OutputBaseFilename=snapshot_{#CI_COMMIT}
 #endif
-SetupIconFile=..\..\srcrepair\srcrepair.ico
+SetupIconFile={#BASEDIR}\srcrepair.ico
 UninstallDisplayIcon={app}\srcrepair.exe
 Compression=lzma2
 SolidCompression=yes
@@ -78,36 +79,36 @@ Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescrip
 
 [Files]
 ; Копируем файл со списком поддерживаемых игр и их параметрами...
-Source: "..\..\srcrepair\bin\Release\games.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#BASEDIR}\bin\Release\games.xml"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Копируем файл с базой данных HUD...
-Source: "..\..\srcrepair\bin\Release\huds.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#BASEDIR}\bin\Release\huds.xml"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Копируем файл с базой данных FPS-конфигов...
-Source: "..\..\srcrepair\bin\Release\configs.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#BASEDIR}\bin\Release\configs.xml"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Копируем динамические библиотеки сторонних модулей...
-Source: "..\..\srcrepair\bin\Release\DotNetZip.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\..\srcrepair\bin\Release\NLog.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#BASEDIR}\bin\Release\DotNetZip.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#BASEDIR}\bin\Release\NLog.dll"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Устанавливаем бинарники приложения...
-Source: "..\..\srcrepair\bin\Release\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\..\srcrepair\bin\Release\srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\..\srcrepair\bin\Release\corelib.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\..\srcrepair\bin\Release\corelib.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\..\srcrepair\bin\Release\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#BASEDIR}\bin\Release\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#BASEDIR}\bin\Release\srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#BASEDIR}\bin\Release\corelib.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#BASEDIR}\bin\Release\corelib.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#BASEDIR}\bin\Release\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 ; Копируем файлs стандартных настроек программы...
-Source: "..\..\srcrepair\bin\Release\srcrepair.exe.config"; DestDir: "{app}"; Flags: ignoreversion
-Source: "..\..\srcrepair\bin\Release\NLog.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#BASEDIR}\bin\Release\srcrepair.exe.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#BASEDIR}\bin\Release\NLog.config"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Устанавливаем остальные файлы...
-Source: "..\..\srcrepair\bin\Release\cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "..\..\srcrepair\bin\Release\help\*"; DestDir: "{app}\help\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#BASEDIR}\bin\Release\cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#BASEDIR}\bin\Release\help\*"; DestDir: "{app}\help\"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 ; Устанавливаем файлы с отсоединёнными подписями для официальных сборок...
 #ifdef _RELEASE
-Source: "..\..\srcrepair\bin\Release\*.sig"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#BASEDIR}\bin\Release\*.sig"; DestDir: "{app}"; Flags: ignoreversion
 #endif
 
 [Icons]
