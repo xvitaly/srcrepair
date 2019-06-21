@@ -1129,7 +1129,7 @@ namespace srcrepair.gui
             App.SourceGames[SelectedGame].CFGMan = new ConfigManager(App.FullAppPath, AppStrings.AppLangPrefix);
 
             // Выведем установленные в форму...
-            foreach (string Str in App.SourceGames[SelectedGame].CFGMan.GetAllCfg())
+            foreach (string Str in App.SourceGames[SelectedGame].CFGMan.GetAllConfigs())
             {
                 Invoke((MethodInvoker)delegate () { FP_ConfigSel.Items.Add(Str); });
             }

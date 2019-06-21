@@ -39,49 +39,23 @@ namespace srcrepair.core
         /// <summary>
         /// Store full list of available FPS-configs.
         /// </summary>
-        private readonly List<FPSConfig> Configs;
-
-        /// <summary>
-        /// Gets list of available FPS-config names for specified game ID.
-        /// </summary>
-        /// <param name="GameID">Game ID.</param>
-        /// <returns>List of available FPS-config names.</returns>
-        public List<String> GetCfgById(string GameID)
-        {
-            // Initializing empty list...
-            List<String> Result = new List<String>();
-
-            // Executing query with LINQ...
-            foreach (FPSConfig Cfg in Configs.FindAll(Item => Item.SupportedGames.Exists(ID => ID.Equals(GameID))))
-            {
-                Result.Add(Cfg.Name);
-            }
-
-            // Return result...
-            return Result;
-        }
+        private readonly Dictionary<string, FPSConfig> Configs;
 
         /// <summary>
         /// Gets list of all available FPS-config names.
         /// </summary>
         /// <returns>List of all available FPS-config names.</returns>
-        public List<String> GetAllCfg()
+        public List<String> GetAllConfigs()
         {
             List<String> Result = new List<String>();
-            foreach (FPSConfig Cfg in Configs) { Result.Add(Cfg.Name); }
+            foreach (string Cfg in Configs.Keys) { Result.Add(Cfg); }
             return Result;
         }
 
         /// <summary>
-        /// Return FPS-config by it's name.
-        /// </summary>
-        /// <param name="CfgName">FPS-config name.</param>
-        private FPSConfig GetConfigByName(string CfgName) => Configs.Find(Item => String.Equals(Item.Name, CfgName, StringComparison.CurrentCultureIgnoreCase));
-
-        /// <summary>
         /// Overloading inxeding operator to return FPS-config by specified name.
         /// </summary>
-        public FPSConfig this[string key] => GetConfigByName(key);
+        public FPSConfig this[string key] => Configs[key];
 
         /// <summary>
         /// Get list of common FPS-config paths installation.
@@ -123,8 +97,8 @@ namespace srcrepair.core
         /// <param name="LangPrefix">SRC Repair language code.</param>
         public ConfigManager(string FullAppPath, string LangPrefix)
         {
-            // Initializing empty list...
-            Configs = new List<FPSConfig>();
+            // Initializing empty dictionary...
+            Configs = new Dictionary<string, FPSConfig>();
 
             // Fetching list of available FPS-configs from XML database file...
             using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, StringsManager.ConfigDatabaseName), FileMode.Open, FileAccess.Read))
@@ -136,7 +110,7 @@ namespace srcrepair.core
                 // Parsing XML and filling our structures...
                 for (int i = 0; i < XMLD.GetElementsByTagName("Config").Count; i++)
                 {
-                    try { Configs.Add(new FPSConfig(XMLD.GetElementsByTagName("Name")[i].InnerText, XMLD.GetElementsByTagName("FileName")[i].InnerText, XMLD.GetElementsByTagName(LangPrefix)[i].InnerText, XMLD.GetElementsByTagName("SupportedGames")[i].InnerText.Split(';'))); } catch (Exception Ex) { Logger.Warn(Ex, "Minor exception while while building Config list object."); }
+                    try { Configs.Add(XMLD.GetElementsByTagName("Name")[i].InnerText, new FPSConfig(XMLD.GetElementsByTagName("Name")[i].InnerText, XMLD.GetElementsByTagName("FileName")[i].InnerText, XMLD.GetElementsByTagName(LangPrefix)[i].InnerText, XMLD.GetElementsByTagName("SupportedGames")[i].InnerText.Split(';'))); } catch (Exception Ex) { Logger.Warn(Ex, "Minor exception while while building Config list object."); }
                 }
             }
         }
