@@ -39,39 +39,21 @@ namespace srcrepair.core
         /// <summary>
         /// Store full list of available HUDs.
         /// </summary>
-        private readonly List<HUDSingle> HUDsAvailable;
-
-        /// <summary>
-        /// Returns HUD by it's name.
-        /// </summary>
-        /// <param name="HUDName">HUD name.</param>
-        private HUDSingle GetHUDByName(string HUDName)
-        {
-            return HUDsAvailable.Find(Item => String.Equals(Item.Name, HUDName, StringComparison.CurrentCultureIgnoreCase));
-        }
+        private readonly Dictionary<string, HUDSingle> HUDsAvailable;
 
         /// <summary>
         /// Overloaded inxeding operator, returning HUD by specified name.
         /// </summary>
-        public HUDSingle this[string key] => GetHUDByName(key);
+        public HUDSingle this[string key] => HUDsAvailable[key];
 
         /// <summary>
-        /// Gets list of available HUD names for specified game ID.
+        /// Gets list of all available HUDs.
         /// </summary>
-        /// <param name="GameName">Game ID.</param>
-        /// <returns>List of available HUD names for specified game ID.</returns>
-        public List<String> GetHUDNames(string GameName)
+        /// <returns>List of available HUDs.</returns>
+        public List<String> GetAllHUDs()
         {
-            // Creating an empty list...
             List<String> Result = new List<String>();
-
-            // Executing LINQ query...
-            foreach (HUDSingle HUD in HUDsAvailable.FindAll(Item => String.Equals(Item.Game, GameName, StringComparison.CurrentCultureIgnoreCase)))
-            {
-                Result.Add(HUD.Name);
-            }
-
-            // Returning result...
+            foreach (string Hud in HUDsAvailable.Keys) { Result.Add(Hud); }
             return Result;
         }
 
@@ -124,13 +106,14 @@ namespace srcrepair.core
         /// <summary>
         /// ConfigManager class constructor.
         /// </summary>
+        /// <param name="GameID">Game ID.</param>
         /// <param name="FullAppPath">Full path to application's directory</param>
         /// <param name="AppHUDDir">Full HUD directory installation path</param>
         /// <param name="HideOutdated">Enable hiding of outdated HUDs.</param>
-        public HUDManager(string FullAppPath, string AppHUDDir, bool HideOutdated = true)
+        public HUDManager(string GameID, string FullAppPath, string AppHUDDir, bool HideOutdated = true)
         {
-            // Initializing empty list...
-            HUDsAvailable = new List<HUDSingle>();
+            // Initializing empty dictionary...
+            HUDsAvailable = new Dictionary<string, HUDSingle>();
 
             // Fetching list of available HUDs from XML database file...
             using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, StringsManager.HudDatabaseName), FileMode.Open, FileAccess.Read))
@@ -144,9 +127,9 @@ namespace srcrepair.core
                 {
                     try
                     {
-                        if (!HideOutdated || XMLD.GetElementsByTagName("IsUpdated")[i].InnerText == "1")
+                        if ((!HideOutdated || XMLD.GetElementsByTagName("IsUpdated")[i].InnerText == "1") && (XMLD.GetElementsByTagName("Game")[i].InnerText == GameID))
                         {
-                            HUDsAvailable.Add(new HUDSingle(XMLD.GetElementsByTagName("Name")[i].InnerText, XMLD.GetElementsByTagName("Game")[i].InnerText, XMLD.GetElementsByTagName("URI")[i].InnerText, XMLD.GetElementsByTagName("UpURI")[i].InnerText, XMLD.GetElementsByTagName("IsUpdated")[i].InnerText == "1", XMLD.GetElementsByTagName("Preview")[i].InnerText, XMLD.GetElementsByTagName("LastUpdate")[i].InnerText, XMLD.GetElementsByTagName("Site")[i].InnerText, XMLD.GetElementsByTagName("ArchiveDir")[i].InnerText, XMLD.GetElementsByTagName("InstallDir")[i].InnerText, XMLD.GetElementsByTagName("Hash")[i].InnerText, Path.Combine(AppHUDDir, Path.ChangeExtension(Path.GetFileName(XMLD.GetElementsByTagName("Name")[i].InnerText), ".zip"))));
+                            HUDsAvailable.Add(XMLD.GetElementsByTagName("Name")[i].InnerText, new HUDSingle(XMLD.GetElementsByTagName("Name")[i].InnerText, XMLD.GetElementsByTagName("Game")[i].InnerText, XMLD.GetElementsByTagName("URI")[i].InnerText, XMLD.GetElementsByTagName("UpURI")[i].InnerText, XMLD.GetElementsByTagName("IsUpdated")[i].InnerText == "1", XMLD.GetElementsByTagName("Preview")[i].InnerText, XMLD.GetElementsByTagName("LastUpdate")[i].InnerText, XMLD.GetElementsByTagName("Site")[i].InnerText, XMLD.GetElementsByTagName("ArchiveDir")[i].InnerText, XMLD.GetElementsByTagName("InstallDir")[i].InnerText, XMLD.GetElementsByTagName("Hash")[i].InnerText, Path.Combine(AppHUDDir, Path.ChangeExtension(Path.GetFileName(XMLD.GetElementsByTagName("Name")[i].InnerText), ".zip"))));
                         }
                     }
                     catch (Exception Ex)

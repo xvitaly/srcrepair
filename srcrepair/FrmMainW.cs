@@ -1172,10 +1172,10 @@ namespace srcrepair.gui
         private void BW_HUDList_DoWork(object sender, DoWorkEventArgs e)
         {
             // Получаем список доступных HUD...
-            App.SourceGames[SelectedGame].HUDMan = new HUDManager(App.FullAppPath, App.SourceGames[SelectedGame].AppHUDDir, Properties.Settings.Default.HUDHideOutdated);
+            App.SourceGames[SelectedGame].HUDMan = new HUDManager(App.SourceGames[SelectedGame].SmallAppName, App.FullAppPath, App.SourceGames[SelectedGame].AppHUDDir, Properties.Settings.Default.HUDHideOutdated);
 
             // Вносим HUD текущей игры в форму...
-            Invoke((MethodInvoker)delegate () { HD_HSel.Items.AddRange(App.SourceGames[SelectedGame].HUDMan.GetHUDNames(App.SourceGames[SelectedGame].SmallAppName).ToArray<object>()); });
+            Invoke((MethodInvoker)delegate () { HD_HSel.Items.AddRange(App.SourceGames[SelectedGame].HUDMan.GetAllHUDs().ToArray<object>()); });
         }
 
 
