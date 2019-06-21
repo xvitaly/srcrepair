@@ -39,9 +39,9 @@ after_build:
 
     7z a snapshot_%CI_HASH%.7z %CI_DIR%\*
 
-    "%ProgramFiles(x86)%\Inno Setup 5\ISCC.exe" %CI_DIR%\inno\srcrepair.iss
+    "%ProgramFiles(x86)%\Inno Setup 5\ISCC.exe" packaging\inno\srcrepair.iss
 
-    move "%CI_DIR%\inno\Output\*.exe" .
+    move packaging\inno\Output\*.exe .
 test: off
 artifacts:
 - path: snapshot_*.7z
