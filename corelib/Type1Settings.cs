@@ -21,112 +21,112 @@
 namespace srcrepair.core
 {
     /// <summary>
-    /// Служебный класс работы с настройками графики Type 1 игр.
+    /// Class for working with Type 1 game video settings names.
     /// </summary>
     public class Type1Settings : IType1Settings
     {
         /// <summary>
-        /// Хранит имя настройки разрешения по горизонтали.
+        /// Gets or sets screen width video setting name.
         /// </summary>
         public string ScreenWidth { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки разрешения по вертикали.
+        /// Gets or sets screen height video setting name.
         /// </summary>
         public string ScreenHeight { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки соотношения сторон.
+        /// Gets or sets display mode (fullscreen, windowed) video setting name.
         /// </summary>
         public string DisplayMode { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки детализации моделей.
+        /// Gets or sets model quality video setting name.
         /// </summary>
         public string ModelDetail { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки детализации текстур.
+        /// Gets or sets texture quality video setting name.
         /// </summary>
         public string TextureDetail { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки качества шейдерных эффектов.
+        /// Gets or sets shader effects level video setting name.
         /// </summary>
         public string ShaderDetail { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки качества прорисовки воды.
+        /// Gets or sets water quality video setting name.
         /// </summary>
         public string WaterDetail { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки качества отражений в воде.
+        /// Gets or sets water reflections level video setting name.
         /// </summary>
         public string WaterReflections { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки качества теней.
+        /// Gets or sets shadow effects quality video setting name.
         /// </summary>
         public string ShadowDetail { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки коррекции цвета.
+        /// Gets or sets color correction video setting name.
         /// </summary>
         public string ColorCorrection { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки настроек полноэкранного сглаживания.
+        /// Gets or sets anti-aliasing video setting name.
         /// </summary>
         public string AntiAliasing { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки настроек полноэкранного сглаживания (MSAA).
+        /// Gets or sets anti-aliasing (MSAA) video setting name.
         /// </summary>
         public string AntiAliasingMSAA { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки глубины полноэкранного сглаживания.
+        /// Gets or sets anti-aliasing multiplier video setting name.
         /// </summary>
         public string AntiAliasQuality { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки глубины полноэкранного сглаживания (MSAA).
+        /// Gets or sets anti-aliasing multiplier (MSAA) video setting name.
         /// </summary>
         public string AntiAliasQualityMSAA { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки анизотропной фильтрации текстур.
+        /// Gets or sets filtering mode video setting name.
         /// </summary>
         public string FilteringMode { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки трилинейной фильтрации текстур.
+        /// Gets or sets trilinear filtering mode video setting name.
         /// </summary>
         public string FilteringTrilinear { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки вертикальной синхронизации.
+        /// Gets or sets vertical synchronization video setting name.
         /// </summary>
         public string VSync { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки размытия движения.
+        /// Gets or sets motion blur video setting name.
         /// </summary>
         public string MotionBlur { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки режима DirectX.
+        /// Gets or sets DirectX mode (version) video setting name.
         /// </summary>
         public string DirectXMode { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки HDR.
+        /// Gets or sets HDR level video setting name.
         /// </summary>
         public string HDRMode { get; protected set; }
 
         /// <summary>
-        /// Заполняет свойства класса настройками для базы версии 1 (Source 1; хранение в реестре).
+        /// Sets properties data.
         /// </summary>
         protected void SetSettingsV1()
         {
@@ -153,11 +153,10 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Базовый конструктор класса.
+        /// Type1Settings class constructor.
         /// </summary>
         public Type1Settings()
         {
-            // Заполняем значения...
             SetSettingsV1();
         }
     }
