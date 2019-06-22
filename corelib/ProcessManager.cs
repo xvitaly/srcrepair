@@ -27,40 +27,46 @@ using System.Security.Principal;
 namespace srcrepair.core
 {
     /// <summary>
-    /// Класс для взаимодействия с внешними процессами.
+    /// Class for working with processes.
     /// </summary>
     public static class ProcessManager
     {
         /// <summary>
-        /// Возвращает PID процесса если он был найден в памяти и завершает его.
+        /// Terminates process with specified name and return it's PID.
+        /// If multiple processes with the same image name detected,
+        /// will return PID of the last terminated process.
+        /// If no processes matches criteria, will return 0.
         /// </summary>
-        /// <param name="ProcessName">Имя образа процесса</param>
-        /// <returns>PID снятого процесса, либо 0 если процесс не был найден</returns>
+        /// <param name="ProcessName">Process name.</param>
+        /// <returns>PID of terminated process or 0.</returns>
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static int ProcessTerminate(string ProcessName)
         {
-            // Обнуляем PID...
+            // Setting default PID to 0...
             int ProcID = 0;
 
-            // Фильтруем список процессов по заданной маске в параметрах и вставляем в массив...
+            // Filtering processes by name and creating array...
             Process[] LocalByName = Process.GetProcessesByName(ProcessName);
 
-            // Запускаем цикл по поиску и завершению процессов...
+            // Using loop to terminate all processes from this array...
             foreach (Process ResName in LocalByName)
             {
-                ProcID = ResName.Id; // Сохраняем PID процесса...
-                ResName.Kill(); // Завершаем процесс...
+                // Saving PID...
+                ProcID = ResName.Id;
+                
+                // Terminating process...
+                ResName.Kill();
             }
 
-            // Возвращаем PID как результат функции...
+            // Returning PID of terminated process or default value...
             return ProcID;
         }
 
         /// <summary>
-        /// Проверяет запущен ли процесс, имя образа которого передано в качестве параметра.
+        /// Checks if process with specified name is running.
         /// </summary>
-        /// <param name="ProcessName">Имя образа процесса</param>
-        /// <returns>Возвращает булево true если такой процесс запущен, иначе - false.</returns>
+        /// <param name="ProcessName">Process name.</param>
+        /// <returns>Returns True if process exists.</returns>
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static bool IsProcessRunning(string ProcessName)
         {
@@ -69,67 +75,64 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Запускает процесс с правами администратора посредством UAC.
+        /// Runs an external executable with UAC-elevated access rights
+        /// (run as admininstrator).
         /// </summary>
-        /// <param name="FileName">Путь к файлу для выполнения</param>
-        /// <returns>Возвращает PID запущенного процесса.</returns>
+        /// <param name="FileName">Full path to executable.</param>
+        /// <returns>Returns PID of newly created process.</returns>
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static int StartWithUAC(string FileName)
         {
-            // Создаём объекты...
-            Process p = new Process();
-
-            // Задаём свойства...
-            ProcessStartInfo ps = new ProcessStartInfo()
+            // Setting advanced properties...
+            ProcessStartInfo ST = new ProcessStartInfo()
             {
                 FileName = FileName,
                 Verb = "runas",
                 WindowStyle = ProcessWindowStyle.Normal,
                 UseShellExecute = true
             };
-            p.StartInfo = ps;
 
-            // Запускаем процесс...
-            p.Start();
+            // Starting process...
+            Process NewProcess = Process.Start(ST);
 
-            // Возвращаем PID запущенного процесса...
-            return p.Id;
+            // Returning PID of created process...
+            return NewProcess.Id;
         }
 
         /// <summary>
-        /// Проверяет есть ли у пользователя, с правами которого запускается
-        /// программа, привилегии локального администратора.
+        /// Checks if current user has local adminstrators access rights
+        /// (permissions).
         /// </summary>
-        /// <returns>Булево true если есть</returns>
+        /// <returns>Returns True if current user has admin rights.</returns>
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static bool IsCurrentUserAdmin()
         {
-            bool Result; // Переменная для хранения результата...
+            bool Result;
             try
             {
-                // Получаем сведения...
+                // Checking access rights of currently logged-in user...
                 WindowsPrincipal UP = new WindowsPrincipal(WindowsIdentity.GetCurrent());
-                // Проверяем, состоит ли пользователь в группе администраторов...
+                // Checking if current user is in Administrators group...
                 Result = UP.IsInRole(WindowsBuiltInRole.Administrator);
             }
             catch
             {
-                // Произошло исключение. Пользователь не администратор...
+                // Exception detected. User has no admin rights.
                 Result = false;
             }
-            // Возвращает результат...
             return Result;
         }
 
         /// <summary>
-        /// Запускает указанное приложение и ждёт его завершения.
+        /// Runs external executable in hidden state with optional command-line
+        /// options and waits for its completion.
         /// </summary>
-        /// <param name="SAppName">Путь к приложению или его имя</param>
-        /// <param name="SParameters">Параметры запуска</param>
+        /// <param name="SAppName">Full path to external executable.</param>
+        /// <param name="SParameters">Command-line options.</param>
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static void StartProcessAndWait(string SAppName, string SParameters)
         {
-            // Создаём объект с нужными параметрами...
+            // Setting advanced properties...
             ProcessStartInfo ST = new ProcessStartInfo()
             {
                 FileName = SAppName,
@@ -137,26 +140,26 @@ namespace srcrepair.core
                 WindowStyle = ProcessWindowStyle.Hidden
             };
 
-            // Запускаем процесс...
+            // Starting process...
             Process NewProcess = Process.Start(ST);
 
-            // Ждём завершения процесса...
+            // Waiting for completion...
             NewProcess.WaitForExit();
         }
 
         /// <summary>
-        /// Запускает указанное приложение и ждёт завершения с передачей
-        /// его вывода.
+        /// Runs external executable in hidden state with optional command-line
+        /// options, waits for its completion and returns its stdout output.
         /// </summary>
-        /// <param name="SAppName">Путь к приложению или его имя</param>
-        /// <param name="SParameters">Параметры запуска</param>
+        /// <param name="SAppName">Full path to external executable.</param>
+        /// <param name="SParameters">Command-line options.</param>
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static string StartProcessWithStdOut(string SAppName, string SParameters)
         {
-            // Создаём переменную для хранения результата...
-            string Result = String.Empty;
+            // Creating local variable for saving result...
+            string Result;
 
-            // Создаём объект с нужными параметрами...
+            // Setting advanced properties...
             ProcessStartInfo ST = new ProcessStartInfo()
             {
                 FileName = SAppName,
@@ -167,23 +170,23 @@ namespace srcrepair.core
                 CreateNoWindow = true
             };
 
-            // Запускаем процесс...
+            // Starting process...
             Process NewProcess = Process.Start(ST);
 
-            // Читаем stdout запущенного процеса...
+            // Reading stdout output of running process...
             Result = NewProcess.StandardOutput.ReadToEnd();
 
-            // Ждём завершения процесса...
+            // Waiting for completion...
             NewProcess.WaitForExit();
 
-            // Возвращаем результат...
+            // Returning result...
             return Result;
         }
 
         /// <summary>
-        /// Открывает указанный URL в системном браузере по умолчанию.
+        /// Opens specified URL in default Web browser.
         /// </summary>
-        /// <param name="URI">URL для загрузки в браузере</param>
+        /// <param name="URI">Full URL.</param>
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static void OpenWebPage(string URI)
         {
@@ -191,11 +194,12 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Открывает указанный URL в выбранном в настройках текстовом редакторе.
+        /// Opens specified text file in a default (or overrided in application's
+        /// settings (only on Windows platform)) text editor.
         /// </summary>
-        /// <param name="FileName">Файл для загрузки</param>
-        /// <param name="EditorBin">Приложение текстового редактора</param>
-        /// <param name="OS">Код платформы, на которой запущено приложение</param>
+        /// <param name="FileName">Full path to text file.</param>
+        /// <param name="EditorBin">External text editor (Windows only).</param>
+        /// <param name="OS">Operating system type.</param>
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static void OpenTextEditor(string FileName, string EditorBin, CurrentPlatform.OSType OS)
         {
@@ -214,11 +218,10 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Показывает выбранный файл в Проводнике Windows или другой выбранной
-        /// пользователем оболочке.
+        /// Shows specified file in a default file manager.
         /// </summary>
-        /// <param name="FileName">Файл для отображения</param>
-        /// <param name="OS">Код платформы, на которой запущено приложение</param>
+        /// <param name="FileName">Full path to file.</param>
+        /// <param name="OS">Operating system type.</param>
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public static void OpenExplorer(string FileName, CurrentPlatform.OSType OS)
         {
