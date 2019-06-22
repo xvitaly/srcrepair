@@ -24,153 +24,147 @@ using System.IO;
 
 namespace srcrepair.core
 {
+    /// <summary>
+    /// Class for working with a single game.
+    /// </summary>
     public sealed class SourceGame
     {
         /// <summary>
-        /// В этой переменной будем хранить путь установки кастомных файлов.
+        /// Gets full path to custom user stuff directory.
         /// </summary>
         public string CustomInstallDir { get; private set; }
 
         /// <summary>
-        /// В этой переменной будем хранить полный путь к каталогу игры, которой
-        /// мы будем управлять данной утилитой.
+        /// Gets full path to installation directory.
         /// </summary>
         public string FullGamePath { get; private set; }
 
         /// <summary>
-        /// В этой переменной будем хранить полный путь к каталогу игры без
-        /// включения в путь GV.SmallAppName для служебных целей.
+        /// Gets full path to installation directory without
+        /// adding SmallAppName.
         /// </summary>
         public string GamePath { get; private set; }
 
         /// <summary>
-        /// В этой переменной будем хранить полное имя управляемого приложения
-        /// для служебных целей.
+        /// Gets full user-friendly name.
         /// </summary>
         public string FullAppName { get; private set; }
 
         /// <summary>
-        /// В этой переменной мы будем хранить краткое имя управляемого приложения
-        /// для служебных целей (SteamAlias).
+        /// Gets internal name (the name of subdirectory in GamePath).
         /// </summary>
         public string SmallAppName { get; private set; }
 
         /// <summary>
-        /// В этой переменной мы будем хранить имя главного процесса игры.
+        /// Gets launcher's binary name.
         /// </summary>
         public string GameBinaryFile { get; private set; }
 
         /// <summary>
-        /// В этой переменной мы будем пути к каталогам с облачными конфигами.
+        /// Gets full paths to local copies of configs, stored in Cloud.
         /// </summary>
         public List<String> CloudConfigs { get; private set; }
 
         /// <summary>
-        /// В этой переменной мы будем хранить полный путь до каталога с
-        /// файлами конфигурации управляемого приложения.
+        /// Gets full path to directory with game configs.
         /// </summary>
         public string FullCfgPath { get; private set; }
 
         /// <summary>
-        /// В этой переменной мы будем хранить полный путь до каталога с
-        /// резервными копиями управляемого приложения.
+        /// Gets full path to directory for saving backups.
         /// </summary>
         public string FullBackUpDirPath { get; private set; }
 
         /// <summary>
-        /// Указывает использует ли игра файл video.txt для хранения
-        /// своих настроек.
+        /// Gets information if current game is using configs for
+        /// storing video settings, or not (use registry instead).
+        /// Always True on non-Windows platforms.
         /// </summary>
         public bool IsUsingVideoFile { get; private set; }
 
         /// <summary>
-        /// Определяет использует ли игра специальный каталог для хранения
-        /// пользовательских настроек и скриптов.
+        /// Gets information if current game is using a special directory
+        /// for custom user stuff.
         /// </summary>
         public bool IsUsingUserDir { get; private set; }
 
         /// <summary>
-        /// Указывает поддерживает ли конкретная игра кастомные HUD и имеется
-        /// ли их поддержка в SRC Repair.
+        /// Gets information if current game has available HUDs.
         /// </summary>
         public bool IsHUDsAvailable { get; private set; }
 
         /// <summary>
-        /// Эта переменная хранит ID игры по базе данных Steam. Используется
-        /// для служебных целей.
+        /// Gets internal unique ID.
         /// </summary>
         public string GameInternalID { get; private set; }
 
         /// <summary>
-        /// Хранит тип механизма хранения настроек движка Source.
+        /// Gets Source engine type.
         /// </summary>
         public string SourceType { get; private set; }
 
         /// <summary>
-        /// В этом списке хранятся пути ко всем найденным файлами
-        /// с графическими настройками.
+        /// Gets full paths to all found configs with video settings.
         /// </summary>
         public List<String> VideoCfgFiles { get; private set; }
 
         /// <summary>
-        /// Содержит имя каталога, либо ключа реестра с графическими
-        /// настройками.
+        /// Gets the name of directory or registry key with video settings.
         /// </summary>
         public string ConfDir { get; private set; }
 
         /// <summary>
-        /// В этой переменной будем хранить путь до каталога локального хранения
-        /// загруженных файлов HUD и их мета-информации.
+        /// Gets full path to the local HUDs download directory.
         /// </summary>
         public string AppHUDDir { get; private set; }
 
         /// <summary>
-        /// Содержит пути к установленным FPS-конфигам управляемой игры.
+        /// Gets full paths to all found FPS-configs.
         /// </summary>
         public List<String> FPSConfigs { get; set; }
 
         /// <summary>
-        /// Содержит список доступных HUD для управляемой игры.
+        /// Gets or sets instance of HUDManager class.
         /// </summary>
         public HUDManager HUDMan { get; set; }
 
         /// <summary>
-        /// Содержит список доступных HUD для управляемой игры.
+        /// Gets or sets instance of ConfigManager class.
         /// </summary>
         public ConfigManager CFGMan { get; set; }
 
         /// <summary>
-        /// Содержит путь к каталогу с загруженными данными из Steam Workshop.
+        /// Gets full path of Workshop directory.
         /// </summary>
         public string AppWorkshopDir { get; private set; }
 
         /// <summary>
-        /// Содержит путь к файлу со списком заглушенных пользователей.
+        /// Gets full paths to all found voice ban list files.
         /// </summary>
         public List<String> BanlistFiles { get; private set; }
 
         /// <summary>
-        /// Указывает установлено ли данное приложение.
+        /// Gets if the game is installed.
         /// </summary>
         public bool IsInstalled { get; private set; }
 
         /// <summary>
-        /// Содержит путь к установленному клиенту Steam.
+        /// Gets full path to installed Steam client.
         /// </summary>
         private string SteamPath { get; set; }
 
         /// <summary>
-        /// Содержит выбранный SteamID пользователя.
+        /// Gets selected in main window user ID.
         /// </summary>
         private string SteamID { get; set; }
 
         /// <summary>
-        /// Генерирует путь к каталогу установки игры.
+        /// Generates full path to installed game.
         /// </summary>
-        /// <param name="AppName">Имя каталога приложения</param>
-        /// <param name="GameDirs">Возможные каталоги установки</param>
-        /// <param name="OSType">Платформа ОС, под которой запущено приложение</param>
-        /// <returns>Возвращает путь к каталогу игры или пустую строку</returns>
+        /// <param name="AppName">Game directory name.</param>
+        /// <param name="GameDirs">Paths to all available game libraries.</param>
+        /// <param name="OSType">Operating system type.</param>
+        /// <returns>Returns full path or empty string if nothing was found.</returns>
         private string GetGameDirectory(string AppName, List<String> GameDirs, CurrentPlatform.OSType OSType)
         {
             foreach (string Dir in GameDirs)
@@ -185,29 +179,27 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Ищет все доступные конфиги, хранящиеся в Cloud или его локальной копии.
+        /// Returns full paths to all found local copies of configs,
+        /// stored in Cloud.
         /// </summary>
-        /// <param name="Mask">Маска файлов для поиска</param>
-        /// <returns>Возвращает список найденных файлов с графическими настройками</returns>
+        /// <param name="Mask">File mask (pattern).</param>
+        /// <returns>List of all found local copies of cloud configs.</returns>
         private List<String> GetCloudConfigs(string Mask = "*.*cfg")
         {
             return FileManager.FindFiles(Path.Combine(SteamPath, "userdata", SteamID, GameInternalID), Mask);
         }
 
         /// <summary>
-        /// Обновляет список файлов с графическими настройками выбранной игры.
+        /// Updates list of files with video settings.
         /// </summary>
         private void UpdateVideoFilesList()
         {
-            // Ищем файлы с графическими настройками из локального хранилища...
             VideoCfgFiles = GetCloudConfigs("video.txt");
-            
-            // Добавляем в базу Legacy конфиг...
             VideoCfgFiles.Add(Path.Combine(GamePath, ConfDir, "cfg", "video.txt"));
         }
 
         /// <summary>
-        /// Обновляет список файлов с заблокированными пользователями выбранной игры.
+        /// Updates list of voice ban files.
         /// </summary>
         private void UpdateBanlistFilesList()
         {
@@ -216,7 +208,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает актуальный файл графических настроек игры.
+        /// Returns the newerest file with video settings.
         /// </summary>
         public string GetActualVideoFile()
         {
@@ -224,7 +216,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает актуальный файл с базой заблокированных игроков.
+        /// Returns the newerest file with voice bans.
         /// </summary>
         public string GetActualBanlistFile()
         {
@@ -232,26 +224,24 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Конструктор класса. Заполняет информацию о выбранном приложении.
+        /// SourceGame class constructor.
         /// </summary>
-        /// <param name="AppName">Название приложения (из БД)</param>
-        /// <param name="DirName">Каталог приложения (из БД)</param>
-        /// <param name="SmallName">Внутренний каталог приложения (из БД)</param>
-        /// <param name="Executable">Имя главного бинарника (из БД)</param>
-        /// <param name="SID">Внутренний ID приложения в Steam (из БД)</param>
-        /// <param name="SV">Механизм хранения настроек движка (из БД)</param>
-        /// <param name="VFDir">Каталог хранения графических настроек (из БД)</param>
-        /// <param name="HasVF">Задаёт формат приложения: GCF/NCF (из БД)</param>
-        /// <param name="UserDir">Указывает использует ли приложение кастомный каталог (из БД)</param>
-        /// <param name="AppPath">Путь к каталогу SRC Repair</param>
-        /// <param name="AUserDir">Путь к каталогу с данными SRC Repair</param>
-        /// <param name="UserDir">Путь к пользовательскому каталогу SRC Repair</param>
-        /// <param name="SteamDir">Путь к установленному клиенту Steam</param>
-        /// <param name="SteamAppsDirName">Платформо-зависимое название каталога SteamApps</param>
-        /// <param name="OS">Платформа ОС, под которой запущено приложение</param>
-        public SourceGame(string AppName, string DirName, string SmallName, string Executable, string SID, string SV, string VFDir, bool HasVF, bool UserDir, bool HUDAv, string AppPath, string AUserDir, string SteamDir, string SteamAppsDirName, string SelectedSteamID, List<String> GameDirs, CurrentPlatform.OSType OS)
+        /// <param name="AppName">Name (from database).</param>
+        /// <param name="DirName">Directory name (from database).</param>
+        /// <param name="SmallName">Internal directory name (from database).</param>
+        /// <param name="Executable">Binary name (from database).</param>
+        /// <param name="SID">Internal ID (from database).</param>
+        /// <param name="SV">Source type (from database).</param>
+        /// <param name="VFDir">Name of directory with video settings (from database).</param>
+        /// <param name="HasVF">Is using video file (from database).</param>
+        /// <param name="UserDir">Is using custom directory (from database).</param>
+        /// <param name="AUserDir">Full path to data directory.</param>
+        /// <param name="SteamDir">Full path to Steam directory.</param>
+        /// <param name="SteamAppsDirName">Platform-dependent SteamApps directory name.</param>
+        /// <param name="OS">Operating system type.</param>
+        public SourceGame(string AppName, string DirName, string SmallName, string Executable, string SID, string SV, string VFDir, bool HasVF, bool UserDir, bool HUDAv, string AUserDir, string SteamDir, string SteamAppsDirName, string SelectedSteamID, List<String> GameDirs, CurrentPlatform.OSType OS)
         {
-            // Начинаем определять нужные нам значения переменных...
+            // Setting basic properties...
             FullAppName = AppName;
             SmallAppName = SmallName;
             GameBinaryFile = Executable;
@@ -263,13 +253,13 @@ namespace srcrepair.core
             IsHUDsAvailable = HUDAv;
             SteamPath = SteamDir;
 
-            // Получаем полный путь до каталога управляемого приложения...
+            // Getting game installation directory...
             GamePath = GetGameDirectory(DirName, GameDirs, OS);
 
-            // Проверяем установлено ли приложение...
+            // Checking if game installed...
             IsInstalled = !String.IsNullOrWhiteSpace(GamePath);
 
-            // Заполняем остальные свойства класса если приложение установлено...
+            // Setting all other properties only for installed games...
             if (IsInstalled)
             {
                 SteamID = SelectedSteamID;
