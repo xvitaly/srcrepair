@@ -26,128 +26,127 @@ using NLog;
 namespace srcrepair.core
 {
     /// <summary>
-    /// Управляет графическими настройками Type 1 приложений.
+    /// Class for working with Type 1 game video settings.
     /// </summary>
     public class Type1Video : ICommonVideo, IType1Video
     {
         /// <summary>
-        /// Управляет записью событий в журнал.
+        /// Logger instance for Type1Video class.
         /// </summary>
         protected Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Хранит и определяет названия переменных настроек графики
-        /// в зависимости от версии движка Source Engine.
+        /// Stores instance of Type1Settings class.
         /// </summary>
         protected Type1Settings VSettings;
 
         /// <summary>
-        /// Хранит разрешение по горизонтали.
+        /// Stores screen width.
         /// </summary>
         protected int _ScreenWidth = 800;
 
         /// <summary>
-        /// Хранит разрешение по вертикали.
+        /// Stores screen height.
         /// </summary>
         protected int _ScreenHeight = 600;
 
         /// <summary>
-        /// Хранит значеение режима окна: ScreenWidth.
+        /// Stores window mode settings: ScreenWidth.
         /// </summary>
         protected int _DisplayMode;
 
         /// <summary>
-        /// Хранит значение детализации моделей: r_rootlod.
+        /// Stores model quality: r_rootlod.
         /// </summary>
         protected int _ModelDetail;
 
         /// <summary>
-        /// Хранит значение детализации текстур: mat_picmip.
+        /// Stores texture quality: mat_picmip.
         /// </summary>
         protected int _TextureDetail;
 
         /// <summary>
-        /// Хранит значение качества шейдерных эффектов: mat_reducefillrate.
+        /// Stores shader effects quality: mat_reducefillrate.
         /// </summary>
         protected int _ShaderDetail;
 
         /// <summary>
-        /// Хранит значение качества отражений в воде: r_waterforceexpensive.
+        /// Stores water quality: r_waterforceexpensive.
         /// </summary>
         protected int _WaterDetail;
 
         /// <summary>
-        /// Хранит значение качества отражений в воде: r_waterforcereflectentities.
+        /// Stores water reflections quality: r_waterforcereflectentities.
         /// </summary>
         protected int _WaterReflections;
 
         /// <summary>
-        /// Хранит значение качества теней: r_shadowrendertotexture.
+        /// Stores shadow effects quality: r_shadowrendertotexture.
         /// </summary>
         protected int _ShadowDetail;
 
         /// <summary>
-        /// Хранит значение настроек коррекции цвета: mat_colorcorrection.
+        /// Stores color correction setting: mat_colorcorrection.
         /// </summary>
         protected int _ColorCorrection;
 
         /// <summary>
-        /// Хранит значение настроек полноэкранного сглаживания: mat_antialias.
+        /// Stores anti-aliasing setting: mat_antialias.
         /// </summary>
         protected int _AntiAliasing;
 
         /// <summary>
-        /// Хранит значение глубины полноэкранного сглаживания: mat_aaquality.
+        /// Stores anti-aliasing multiplier: mat_aaquality.
         /// </summary>
         protected int _AntiAliasQuality;
 
         /// <summary>
-        /// Хранит значение настроек анизотропной фильтрации текстур: mat_forceaniso.
+        /// Stores filtering mode type: mat_forceaniso.
         /// </summary>
         protected int _FilteringMode;
 
         /// <summary>
-        /// Хранит значение настроек трилинейной фильтрации текстур: mat_trilinear.
+        /// Stores trilinear filtering mode type: mat_trilinear.
         /// </summary>
         protected int _FilteringTrilinear;
 
         /// <summary>
-        /// Хранит значение настроек вертикальной синхронизации: mat_vsync.
+        /// Stores vertical synchronization setting: mat_vsync.
         /// </summary>
         protected int _VSync;
 
         /// <summary>
-        /// Хранит значение настроек размытия движения: MotionBlur.
+        /// Stores motion blur setting: MotionBlur.
         /// </summary>
         protected int _MotionBlur;
 
         /// <summary>
-        /// Хранит значение настроек режима DirectX: DXLevel_V1.
+        /// Stores DirectX mode (effects level): DXLevel_V1.
         /// </summary>
         protected int _DirectXMode;
 
         /// <summary>
-        /// Хранит значение настроек HDR: mat_hdr_level.
+        /// Stores HDR level: mat_hdr_level.
         /// </summary>
         protected int _HDRMode;
 
         /// <summary>
-        /// Хранит путь к ветке реестра с графическими настройками игры.
+        /// Stores graphic settings registry key full path.
         /// </summary>
         protected string RegKey;
 
         /// <summary>
-        /// Возвращает / задаёт разрешение по горизонтали.
+        /// Gets or sets screen width video setting.
         /// </summary>
-        public int ScreenWidth { get { return _ScreenWidth; } set { _ScreenWidth = value; } }
+        public int ScreenWidth { get => _ScreenWidth; set { _ScreenWidth = value; } }
 
         /// <summary>
-        /// Возвращает / задаёт разрешение по вертикали.
+        /// Gets or sets screen height video setting.
         /// </summary>
-        public int ScreenHeight { get { return _ScreenHeight; } set { _ScreenHeight = value; } }
+        public int ScreenHeight { get => _ScreenHeight; set { _ScreenHeight = value; } }
 
         /// <summary>
-        /// Возвращает / задаёт значение режима отображения.
+        /// Gets or sets display mode (fullscreen, windowed) video setting.
         /// </summary>
         public int DisplayMode
         {
@@ -183,7 +182,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт значение качества моделей.
+        /// Gets or sets model quality video setting.
         /// </summary>
         public int ModelQuality
         {
@@ -225,7 +224,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт значение качества текстур.
+        /// Gets or sets texture quality video setting.
         /// </summary>
         public int TextureQuality
         {
@@ -273,7 +272,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт значение качества шейдерных эффектов.
+        /// Gets or sets shader effects quality video setting.
         /// </summary>
         public int ShaderQuality
         {
@@ -309,7 +308,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт значение качества отражений в воде.
+        /// Gets or sets water reflections quality video setting.
         /// </summary>
         public int ReflectionsQuality
         {
@@ -359,7 +358,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт значение качества теней.
+        /// Gets or sets shadow effects quality video setting.
         /// </summary>
         public int ShadowQuality
         {
@@ -395,7 +394,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт значение качества коррекции цвета.
+        /// Gets or sets color correction video setting.
         /// </summary>
         public int ColorCorrection
         {
@@ -431,7 +430,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт значение настроек полноэкранного сглаживания.
+        /// Gets or sets anti-aliasing video setting.
         /// </summary>
         public int AntiAliasing
         {
@@ -484,7 +483,7 @@ namespace srcrepair.core
             {
                 switch (value)
                 {
-                    case 0: // Нет сглаживания
+                    case 0: // No AA
                         _AntiAliasing = 1;
                         _AntiAliasQuality = 0;
                         break;
@@ -517,7 +516,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт значение настроек фильтрации текстур.
+        /// Gets or sets filtering mode video setting.
         /// </summary>
         public int FilteringMode
         {
@@ -559,27 +558,27 @@ namespace srcrepair.core
             {
                 switch (value)
                 {
-                    case 0: // Билинейная
+                    case 0: // Bilinear
                         _FilteringMode = 1;
                         _FilteringTrilinear = 0;
                         break;
-                    case 1: // Трилинейная
+                    case 1: // Trilinear
                         _FilteringMode = 1;
                         _FilteringTrilinear = 1;
                         break;
-                    case 2: // Анизотропная 2x
+                    case 2: // Anisotrophic 2x
                         _FilteringMode = 2;
                         _FilteringTrilinear = 0;
                         break;
-                    case 3: // Анизотропная 4x
+                    case 3: // Anisotrophic 4x
                         _FilteringMode = 4;
                         _FilteringTrilinear = 0;
                         break;
-                    case 4: // Анизотропная 8x
+                    case 4: // Anisotrophic 8x
                         _FilteringMode = 8;
                         _FilteringTrilinear = 0;
                         break;
-                    case 5: // Анизотропная 16x
+                    case 5: // Anisotrophic 16x
                         _FilteringMode = 16;
                         _FilteringTrilinear = 0;
                         break;
@@ -588,7 +587,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт значение настроек вертикальной синхронизации.
+        /// Gets or sets vertical synchronization video setting.
         /// </summary>
         public int VSync
         {
@@ -624,7 +623,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт значение настроек размытия движения.
+        /// Gets or sets motion blur video setting.
         /// </summary>
         public int MotionBlur
         {
@@ -660,7 +659,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт значение настроек режима DirectX.
+        /// Gets or sets DirectX mode (version) video setting.
         /// </summary>
         public int DirectXMode
         {
@@ -708,7 +707,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт значение настроек HDR.
+        /// Gets or sets HDR level video setting.
         /// </summary>
         public int HDRType
         {
@@ -750,179 +749,107 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Считывает графические настройки игры из реестра.
+        /// Reads Type 1 game video settings from Windows registry.
         /// </summary>
         protected void ReadSettings()
         {
-            // Открываем ключ реестра для чтения...
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(RegKey, false);
-
-            // Проверяем открылся ли ключ...
-            if (ResKey != null)
+            using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(RegKey, false))
             {
-                // Получаем значение разрешения по горизонтали...
-                try { _ScreenWidth = Convert.ToInt32(ResKey.GetValue(VSettings.ScreenWidth)); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-                // Получаем значение разрешения по вертикали...
-                try { _ScreenHeight = Convert.ToInt32(ResKey.GetValue(VSettings.ScreenHeight)); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-                // Получаем режим окна (ScreenWindowed): 1-window, 0-fullscreen...
-                try { _DisplayMode = Convert.ToInt32(ResKey.GetValue(VSettings.DisplayMode)); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-                // Получаем детализацию моделей (r_rootlod): 0-high, 1-med, 2-low...
-                try { _ModelDetail = Convert.ToInt32(ResKey.GetValue(VSettings.ModelDetail)); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-                // Получаем детализацию текстур (mat_picmip): 0-high, 1-med, 2-low...
-                try { _TextureDetail = Convert.ToInt32(ResKey.GetValue(VSettings.TextureDetail)); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-                // Получаем настройки шейдеров (mat_reducefillrate): 0-high, 1-low...
-                try { _ShaderDetail = Convert.ToInt32(ResKey.GetValue(VSettings.ShaderDetail)); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-                // Начинаем работать над отражениями (здесь сложнее)...
-                try { _WaterDetail = Convert.ToInt32(ResKey.GetValue(VSettings.WaterDetail)); } catch (Exception Ex) { Logger.Warn(Ex); }
-                try { _WaterReflections = Convert.ToInt32(ResKey.GetValue(VSettings.WaterReflections)); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-                // Получаем настройки теней (r_shadowrendertotexture): 0-low, 1-high...
-                try { _ShadowDetail = Convert.ToInt32(ResKey.GetValue(VSettings.ShadowDetail)); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-                // Получаем настройки коррекции цвета (mat_colorcorrection): 0-off, 1-on...
-                try { _ColorCorrection = Convert.ToInt32(ResKey.GetValue(VSettings.ColorCorrection)); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-                // Получаем настройки сглаживания (mat_antialias): 1-off, 2-2x, 4-4x, etc...
-                // 2x MSAA - 2:0; 4xMSAA - 4:0; 8xCSAA - 4:2; 16xCSAA - 4:4; 8xMSAA - 8:0; 16xQ CSAA - 8:2.
-                try { _AntiAliasing = Convert.ToInt32(ResKey.GetValue(VSettings.AntiAliasing)); } catch (Exception Ex) { Logger.Warn(Ex); }
-                try { _AntiAliasQuality = Convert.ToInt32(ResKey.GetValue(VSettings.AntiAliasQuality)); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-                // Получаем настройки анизотропии (mat_forceaniso): 1-off, etc...
-                try { _FilteringMode = Convert.ToInt32(ResKey.GetValue(VSettings.FilteringMode)); } catch (Exception Ex) { Logger.Warn(Ex); }
-                try { _FilteringTrilinear = Convert.ToInt32(ResKey.GetValue(VSettings.FilteringTrilinear)); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-                // Получаем настройки вертикальной синхронизации (mat_vsync): 0-off, 1-on...
-                try { _VSync = Convert.ToInt32(ResKey.GetValue(VSettings.VSync)); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-                // Получаем настройки размытия движения (MotionBlur): 0-off, 1-on...
-                try { _MotionBlur = Convert.ToInt32(ResKey.GetValue(VSettings.MotionBlur)); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-                // Получаем настройки режима рендера (DXLevel_V1):
-                // 80-DirectX 8.0; 81-DirectX 8.1; 90-DirectX 9.0; 95-DirectX 9.0c...
-                try { _DirectXMode = Convert.ToInt32(ResKey.GetValue(VSettings.DirectXMode)); } catch (Exception Ex) { Logger.Warn(Ex); ; }
-
-                // Получаем настройки HDR (mat_hdr_level): 0-off, 1-bloom, 2-full...
-                try { _HDRMode = Convert.ToInt32(ResKey.GetValue(VSettings.HDRMode)); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-                // Закрываем ключ реестра...
-                ResKey.Close();
-            }
-            else
-            {
-                // Произошла ошибка при открытии ключа реестра. Выбросим исключение...
-                throw new Exception("Failed to open registry key.");
+                if (ResKey != null)
+                {
+                    try { _ScreenWidth = Convert.ToInt32(ResKey.GetValue(VSettings.ScreenWidth)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { _ScreenHeight = Convert.ToInt32(ResKey.GetValue(VSettings.ScreenHeight)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { _DisplayMode = Convert.ToInt32(ResKey.GetValue(VSettings.DisplayMode)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { _ModelDetail = Convert.ToInt32(ResKey.GetValue(VSettings.ModelDetail)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { _TextureDetail = Convert.ToInt32(ResKey.GetValue(VSettings.TextureDetail)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { _ShaderDetail = Convert.ToInt32(ResKey.GetValue(VSettings.ShaderDetail)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { _WaterDetail = Convert.ToInt32(ResKey.GetValue(VSettings.WaterDetail)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { _WaterReflections = Convert.ToInt32(ResKey.GetValue(VSettings.WaterReflections)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { _ShadowDetail = Convert.ToInt32(ResKey.GetValue(VSettings.ShadowDetail)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { _ColorCorrection = Convert.ToInt32(ResKey.GetValue(VSettings.ColorCorrection)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { _AntiAliasing = Convert.ToInt32(ResKey.GetValue(VSettings.AntiAliasing)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { _AntiAliasQuality = Convert.ToInt32(ResKey.GetValue(VSettings.AntiAliasQuality)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { _FilteringMode = Convert.ToInt32(ResKey.GetValue(VSettings.FilteringMode)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { _FilteringTrilinear = Convert.ToInt32(ResKey.GetValue(VSettings.FilteringTrilinear)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { _VSync = Convert.ToInt32(ResKey.GetValue(VSettings.VSync)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { _MotionBlur = Convert.ToInt32(ResKey.GetValue(VSettings.MotionBlur)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { _DirectXMode = Convert.ToInt32(ResKey.GetValue(VSettings.DirectXMode)); } catch (Exception Ex) { Logger.Warn(Ex); ; }
+                    try { _HDRMode = Convert.ToInt32(ResKey.GetValue(VSettings.HDRMode)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                }
+                else
+                {
+                    throw new Exception("Failed to open registry key.");
+                }
             }
         }
 
         /// <summary>
-        /// Сохраняет графические настройки игры в реестр.
+        /// Writes Type 1 game video settings to Windows registry.
         /// </summary>
         public void WriteSettings()
         {
-            // Открываеам ключ реестра для записи...
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(RegKey, true);
-
-            // Запишем в реестр настройки разрешения экрана...
-            try { ResKey.SetValue(VSettings.ScreenWidth, _ScreenWidth, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-            try { ResKey.SetValue(VSettings.ScreenHeight, _ScreenHeight, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-            // Запишем в реестр настройки режима запуска приложения (ScreenWindowed)...
-            try { ResKey.SetValue(VSettings.DisplayMode, _DisplayMode, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-            // Запишем в реестр настройки детализации моделей...
-            try { ResKey.SetValue(VSettings.ModelDetail, _ModelDetail, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-            // Запишем в реестр настройки детализации текстур...
-            try { ResKey.SetValue(VSettings.TextureDetail, _TextureDetail, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-            // Запишем в реестр настройки качества шейдерных эффектов...
-            try { ResKey.SetValue(VSettings.ShaderDetail, _ShaderDetail, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-            // Запишем в реестр настройки отражений в воде...
-            try { ResKey.SetValue(VSettings.WaterDetail, _WaterDetail, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-            try { ResKey.SetValue(VSettings.WaterReflections, _WaterReflections, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-            // Запишем в реестр настройки прорисовки теней...
-            try { ResKey.SetValue(VSettings.ShadowDetail, _ShadowDetail, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-            // Запишем в реестр настройки коррекции цвета...
-            try { ResKey.SetValue(VSettings.ColorCorrection, _ColorCorrection, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-            // Запишем в реестр настройки сглаживания...
-            try { ResKey.SetValue(VSettings.AntiAliasing, _AntiAliasing, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-            try { ResKey.SetValue(VSettings.AntiAliasQuality, _AntiAliasQuality, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-            try { ResKey.SetValue(VSettings.AntiAliasingMSAA, _AntiAliasing, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-            try { ResKey.SetValue(VSettings.AntiAliasQualityMSAA, _AntiAliasQuality, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-            // Запишем в реестр настройки фильтрации...
-            try { ResKey.SetValue(VSettings.FilteringMode, _FilteringMode, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-            try { ResKey.SetValue(VSettings.FilteringTrilinear, _FilteringTrilinear, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-            // Запишем в реестр настройки вертикальной синхронизации...
-            try { ResKey.SetValue(VSettings.VSync, _VSync, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-            // Запишем в реестр настройки размытия движения...
-            try { ResKey.SetValue(VSettings.MotionBlur, _MotionBlur, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-            // Запишем в реестр настройки режима DirectX...
-            try { ResKey.SetValue(VSettings.DirectXMode, _DirectXMode, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-            // Запишем в реестр настройки HDR...
-            try { ResKey.SetValue(VSettings.HDRMode, _HDRMode, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-
-            // Закрываем открытый ранее ключ реестра...
-            ResKey.Close();
+            using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(RegKey, true))
+            {
+                try { ResKey.SetValue(VSettings.ScreenWidth, _ScreenWidth, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.ScreenHeight, _ScreenHeight, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.DisplayMode, _DisplayMode, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.ModelDetail, _ModelDetail, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.TextureDetail, _TextureDetail, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.ShaderDetail, _ShaderDetail, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.WaterDetail, _WaterDetail, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.WaterReflections, _WaterReflections, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.ShadowDetail, _ShadowDetail, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.ColorCorrection, _ColorCorrection, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.AntiAliasing, _AntiAliasing, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.AntiAliasQuality, _AntiAliasQuality, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.AntiAliasingMSAA, _AntiAliasing, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.AntiAliasQualityMSAA, _AntiAliasQuality, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.FilteringMode, _FilteringMode, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.FilteringTrilinear, _FilteringTrilinear, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.VSync, _VSync, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.MotionBlur, _MotionBlur, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.DirectXMode, _DirectXMode, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.HDRMode, _HDRMode, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+            }
         }
 
         /// <summary>
-        /// Возвращает ключ реестра c графическими настройками для выбранной игры.
+        /// Gets registry key, used for storing video settings.
         /// </summary>
-        /// <param name="SAppName">Короткое название игры (из БД)</param>
-        /// <param name="ExpandPath">Разрешает, либо запрещает разворачивать путь</param>
-        /// <returns>Возвращает полный путь к ключу реестра</returns>
+        /// <param name="SAppName">The name of registry subkey, used for storing video settings.</param>
+        /// <param name="ExpandPath">Allow to expand path.</param>
+        /// <returns>Full registry key path.</returns>
         public static string GetGameRegKey(string SAppName, bool ExpandPath = true)
         {
             return ExpandPath ? Path.Combine("Software", "Valve", "Source", SAppName, "Settings") : String.Format(@"Software\Valve\Source\{0}\Settings", SAppName);
         }
 
         /// <summary>
-        /// Проверяет существование в реестре требуемого ключа. При отсутствии оного
-        /// возвращает false.
+        /// Checks if specified registry subkey exists in HKEY_CURRENT_USER branch.
         /// </summary>
-        /// <param name="Subkey">Подключ реестра для проверки</param>
-        /// <returns>Возвращает булево существует ли указанный ключ реестра</returns>
+        /// <param name="Subkey">Subkey.</param>
+        /// <returns>Returns True if registry subkey exists.</returns>
         public static bool CheckRegKeyExists(string Subkey)
         {
-            // Открываем проверяемый ключ реестра... При ошибке вернёт null.
-            RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(Subkey, false);
-            
-            // Получаем результат проверки...
-            bool Result = ResKey != null;
-            
-            // Если ключ был успешно открыт, закрываем.
-            if (Result) { ResKey.Close(); }
-            
-            // Возвращаем результат функции...
+            bool Result;
+            using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(Subkey, false))
+            {
+                Result = ResKey != null;
+            }
             return Result;
         }
 
         /// <summary>
-        /// Создаёт в реестре указанный ключ.
+        /// Creates specified subkey in registry (HKEY_CURRENT_USER branch).
         /// </summary>
-        /// <param name="Subkey">Подключ реестра для создания</param>
+        /// <param name="Subkey">Subkey.</param>
         public static void CreateRegKey(string Subkey)
         {
             Registry.CurrentUser.CreateSubKey(Subkey);
         }
 
         /// <summary>
-        /// Удаляет из реестра указанный ключ.
+        /// Removed specified subkey from registry (HKEY_CURRENT_USER branch).
         /// </summary>
         /// <param name="Subkey">Подключ реестра для удаления</param>
         public static void RemoveRegKey(string Subkey)
@@ -931,44 +858,37 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Используется для создания резервной копии выбранной ветки
-        /// реестра в переданный в параметре файл.
+        /// Creates a backup copy of specified registry key.
         /// </summary>
-        /// <param name="RegKey">Ключ реестра</param>
-        /// <param name="FileName">Имя файла резервной копии</param>
-        /// <param name="DestDir">Каталог с резервными копиями</param>
+        /// <param name="RegKey">Registry key.</param>
+        /// <param name="FileName">Backup file name.</param>
+        /// <param name="DestDir">Directory for saving backups.</param>
         public static void CreateRegBackUpNow(string RegKey, string FileName, string DestDir)
         {
-            // Запускаем и ждём завершения...
             ProcessManager.StartProcessAndWait("regedit.exe", String.Format("/ea \"{0}\" {1}", Path.Combine(DestDir, String.Format("{0}_{1}.reg", FileName, FileManager.DateTime2Unix(DateTime.Now))), RegKey));
         }
 
         /// <summary>
-        /// Используется для создания резервной копии графических настроек
-        /// GCF игр в файл.
+        /// Creates a backup copy of specified registry subkey
+        /// (HKEY_CURRENT_USER branch).
         /// </summary>
-        /// <param name="RegKey">Ключ реестра</param>
-        /// <param name="FileName">Имя файла резервной копии</param>
-        /// <param name="DestDir">Каталог с резервными копиями</param>
+        /// <param name="RegKey">Registry subkey.</param>
+        /// <param name="FileName">Backup file name.</param>
+        /// <param name="DestDir">Directory for saving backups.</param>
         public static void BackUpVideoSettings(string RegKey, string FileName, string DestDir)
         {
             CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", RegKey), FileName, DestDir);
         }
 
         /// <summary>
-        /// Базовый конструктор класса.
+        /// Type1Video class constructor.
         /// </summary>
-        /// <param name="SAppName">Путь к настройкам видео (из БД)</param>
-        /// <param name="ReadNow">Включает автоматическое считывание настроек из реестра</param>
+        /// <param name="SAppName">The name of registry subkey, used for storing video settings.</param>
+        /// <param name="ReadNow">Enable immediate reading of video settings.</param>
         public Type1Video(string SAppName, bool ReadNow = true)
         {
-            // Подготовим базу с названиями переменных...
             VSettings = new Type1Settings();
-
-            // Сгенерируем путь к ключу реестра...
             RegKey = GetGameRegKey(SAppName);
-
-            // Считываем настройки из реестра...
             if (ReadNow) { ReadSettings(); }
         }
     }

@@ -27,77 +27,77 @@ namespace srcrepair.core
     public interface IType1Video
     {
         /// <summary>
-        /// Gets and sets anti-aliasing video setting.
+        /// Gets or sets anti-aliasing video setting.
         /// </summary>
         int AntiAliasing { get; set; }
 
         /// <summary>
-        /// Gets and sets color correction video setting.
+        /// Gets or sets color correction video setting.
         /// </summary>
         int ColorCorrection { get; set; }
 
         /// <summary>
-        /// Gets and sets DirectX mode (version) video setting.
+        /// Gets or sets DirectX mode (version) video setting.
         /// </summary>
         int DirectXMode { get; set; }
 
         /// <summary>
-        /// Gets and sets display mode (fullscreen, windowed) video setting.
+        /// Gets or sets display mode (fullscreen, windowed) video setting.
         /// </summary>
         int DisplayMode { get; set; }
 
         /// <summary>
-        /// Gets and sets filtering mode video setting.
+        /// Gets or sets filtering mode video setting.
         /// </summary>
         int FilteringMode { get; set; }
 
         /// <summary>
-        /// Gets and sets HDR level video setting.
+        /// Gets or sets HDR level video setting.
         /// </summary>
         int HDRType { get; set; }
 
         /// <summary>
-        /// Gets and sets model quality video setting.
+        /// Gets or sets model quality video setting.
         /// </summary>
         int ModelQuality { get; set; }
 
         /// <summary>
-        /// Gets and sets motion blur video setting.
+        /// Gets or sets motion blur video setting.
         /// </summary>
         int MotionBlur { get; set; }
 
         /// <summary>
-        /// Gets and sets water reflections quality video setting.
+        /// Gets or sets water reflections quality video setting.
         /// </summary>
         int ReflectionsQuality { get; set; }
 
         /// <summary>
-        /// Gets and sets screen height video setting.
+        /// Gets or sets screen height video setting.
         /// </summary>
         int ScreenHeight { get; set; }
 
         /// <summary>
-        /// Gets and sets screen width video setting.
+        /// Gets or sets screen width video setting.
         /// </summary>
         int ScreenWidth { get; set; }
 
         /// <summary>
-        /// Gets and sets shader effects quality video setting.
+        /// Gets or sets shader effects quality video setting.
         /// </summary>
         int ShaderQuality { get; set; }
 
         /// <summary>
-        /// Gets and sets shadow effects quality video setting.
+        /// Gets or sets shadow effects quality video setting.
         /// </summary>
         int ShadowQuality { get; set; }
 
         /// <summary>
-        /// Gets and sets texture quality video setting.
+        /// Gets or sets texture quality video setting.
         /// </summary>
         int TextureQuality { get; set; }
 
         /// <summary>
-        /// Gets and sets vertical synchronization video setting.
+        /// Gets or sets vertical synchronization video setting.
         /// </summary>
         int VSync { get; set; }
 
