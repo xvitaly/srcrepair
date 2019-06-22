@@ -23,18 +23,21 @@ using System.Text.RegularExpressions;
 
 namespace srcrepair.core
 {
+    /// <summary>
+    /// Class with different converters of SteamID formats.
+    /// </summary>
     public static class SteamConv
     {
         /// <summary>
-        /// Магическая константа, используемая для преобразований форматов.
+        /// Special pre-defined magic constant, using in all conversions.
         /// </summary>
         public const long Multi = 76561197960265728;
 
         /// <summary>
-        /// Получает значение UserID из старого формата SteamID32.
+        /// Gets UserID from SteamID32.
         /// </summary>
-        /// <param name="Sid32">SteamID32</param>
-        /// <returns>UserID</returns>
+        /// <param name="Sid32">SteamID32.</param>
+        /// <returns>UserID.</returns>
         public static long GetUserID(string Sid32)
         {
             string[] SidArr = Sid32.Split(':');
@@ -42,30 +45,30 @@ namespace srcrepair.core
         }
         
         /// <summary>
-        /// Преобразовывает старый формат SteamID32 в новый SteamIDv3.
+        /// Gets SteamIDv3 from SteamID32.
         /// </summary>
-        /// <param name="Sid32">SteamID32</param>
-        /// <returns>SteamIDv3</returns>
+        /// <param name="Sid32">SteamID32.</param>
+        /// <returns>SteamIDv3.</returns>
         public static string ConvSid32Sidv3(string Sid32)
         {
             return String.Format("[U:1:{0}]", GetUserID(Sid32));
         }
 
         /// <summary>
-        /// Преобразовывает старый формат SteamID32 в универсальный SteamID64.
+        /// Gets SteamID64 from SteamID32.
         /// </summary>
-        /// <param name="Sid32">SteamID32</param>
-        /// <returns>SteamID64</returns>
+        /// <param name="Sid32">SteamID32.</param>
+        /// <returns>SteamID64.</returns>
         public static long ConvSid32Sid64(string Sid32)
         {
             return GetUserID(Sid32) + Multi;
         }
 
         /// <summary>
-        /// Преобразовывает новый формат SteamIDv3 в универсальный SteamID64.
+        /// Gets SteamID64 from SteamIDv3.
         /// </summary>
-        /// <param name="Sidv3">SteamIDv3</param>
-        /// <returns>SteamID64</returns>
+        /// <param name="Sidv3">SteamIDv3.</param>
+        /// <returns>SteamID64.</returns>
         public static long ConvSidv3Sid64(string Sidv3)
         {
             return Int64.Parse(Regex.Match(Sidv3, @"\d{2,12}").Value) + Multi;
