@@ -81,12 +81,12 @@ namespace srcrepair.core
         public string FilteringMode { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки вертикальной синхронизации.
+        /// Gets or sets vertical synchronization video setting name.
         /// </summary>
         public string VSync { get; protected set; }
 
         /// <summary>
-        /// Gets or sets vertical synchronization video setting name.
+        /// Gets or sets vertical synchronization quality video setting name.
         /// </summary>
         public string VSyncMode { get; protected set; }
 

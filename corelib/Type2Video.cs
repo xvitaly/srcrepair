@@ -28,144 +28,145 @@ using System.Text.RegularExpressions;
 namespace srcrepair.core
 {
     /// <summary>
-    /// Управляет графическими настройками Type 2 приложений.
+    /// Class for working with Type 2 game video settings.
     /// </summary>
     public class Type2Video : ICommonVideo, IType2Video
     {
         /// <summary>
-        /// Хранит путь к актуальному файлу с графическими настройками игры.
+        /// Stores full path to video settings file.
         /// </summary>
         protected string VideoFileName;
 
         /// <summary>
-        /// Хранит путь к файлу со стандартными настройками для текущего ПК.
+        /// Stores full path to video settings file with default
+        /// options for this system.
         /// </summary>
         protected string DefaultsFileName;
 
         /// <summary>
-        /// Хранит и определяет названия переменных внутри базы настроек графики
-        /// в зависимости от версии движка Source Engine.
+        /// Stores instance of Type2Settings class.
         /// </summary>
         protected Type2Settings VSettings;
 
         /// <summary>
-        /// Хранит содержимое файла с графическими настройками игры.
+        /// Stores contents of video settings file.
         /// </summary>
         protected List<String> VideoFile;
 
         /// <summary>
-        /// Хранит содержимое файла со стандартными настройками игры для текущего ПК.
+        /// Stores contents of video settings file with default
+        /// options for this system.
         /// </summary>
         protected List<String> DefaultsFile;
 
         /// <summary>
-        /// Хранит разрешение по горизонтали.
+        /// Stores screen width.
         /// </summary>
         protected int _ScreenWidth = 800;
 
         /// <summary>
-        /// Хранит разрешение по вертикали.
+        /// Stores screen height.
         /// </summary>
         protected int _ScreenHeight = 600;
 
         /// <summary>
-        /// Хранит настройки соотношения сторон NCF-игры на движке Source 1: setting.aspectratiomode.
+        /// Stores screen aspect ratio: setting.aspectratiomode.
         /// </summary>
         protected int _ScreenRatio;
 
         /// <summary>
-        /// Хранит настройки контрастности и цветовой гаммы NCF-игры на движке Source 1: setting.mat_monitorgamma.
+        /// Stores brightness value: setting.mat_monitorgamma.
         /// </summary>
         protected int _Brightness;
 
         /// <summary>
-        /// Хранит настройки качества теней NCF-игры на движке Source 1: setting.csm_quality_level.
+        /// Stores shadow effects quality: setting.csm_quality_level.
         /// </summary>
         protected int _ShadowQuality;
 
         /// <summary>
-        /// Хранит настройки размытия движений NCF-игры на движке Source 1: setting.mat_motion_blur_enabled.
+        /// Stores motion blur setting: setting.mat_motion_blur_enabled.
         /// </summary>
         protected int _MotionBlur;
 
         /// <summary>
-        /// Хранит настройки графического режима NCF-игры на движке Source 1: setting.fullscreen.
+        /// Stores display mode (fullscreen, windowed): setting.fullscreen.
         /// </summary>
         protected int _DisplayMode;
 
         /// <summary>
-        /// Хранит настройки графического режима NCF-игры на движке Source 1: setting.nowindowborder.
+        /// Stores borderless window video setting: setting.nowindowborder.
         /// </summary>
         protected int _DisplayBorderless;
 
         /// <summary>
-        /// Хранит настройки полноэкранного сглаживания NCF-игры на движке Source 1: setting.mat_antialias.
+        /// Stores anti-aliasing setting: setting.mat_antialias.
         /// </summary>
         protected int _AntiAliasing;
 
         /// <summary>
-        /// Хранит значение глубины полноэкранного сглаживания NCF-игры на движке Source 1: setting.mat_aaquality.
+        /// Stores anti-aliasing multiplier: setting.mat_aaquality.
         /// </summary>
         protected int _AntiAliasQuality;
 
         /// <summary>
-        /// Хранит настройки качества фильтрации текстур NCF-игры на движке Source 1: setting.mat_forceaniso.
+        /// Stores filtering mode setting: setting.mat_forceaniso.
         /// </summary>
         protected int _FilteringMode;
 
         /// <summary>
-        /// Хранит настройки вертикальной синхронизации NCF-игры на движке Source 1: setting.mat_vsync.
+        /// Stores vertical synchronization video setting: setting.mat_vsync.
         /// </summary>
         protected int _VSync;
 
         /// <summary>
-        /// Хранит настройки качества вертикальной синхронизации NCF-игры на движке Source 1: setting.mat_triplebuffered.
+        /// Stores vertical synchronization quality: setting.mat_triplebuffered.
         /// </summary>
         protected int _VSyncMode;
 
         /// <summary>
-        /// Хранит настройки многоядерного рендеринга NCF-игры на движке Source 1: setting.mat_queue_mode.
+        /// Stores multicore rendering video setting: setting.mat_queue_mode.
         /// </summary>
         protected int _MCRendering;
 
         /// <summary>
-        /// Хранит настройки качества шейдерных эффектов NCF-игры на движке Source 1: setting.gpu_level.
+        /// Stores shader effects level: setting.gpu_level.
         /// </summary>
         protected int _ShaderEffects;
 
         /// <summary>
-        /// Хранит настройки качества обычных эффектов NCF-игры на движке Source 1: setting.cpu_level.
+        /// Stores standard effects level: setting.cpu_level.
         /// </summary>
         protected int _EffectDetails;
 
         /// <summary>
-        /// Хранит настройки выделенного игре пула памяти NCF-игры на движке Source 1: setting.mem_level.
+        /// Stores memory pool type: setting.mem_level.
         /// </summary>
         protected int _MemoryPoolType;
 
         /// <summary>
-        /// Хранит настройки качества детализации моделей и текстур NCF-игры на движке Source 1: setting.gpu_mem_level.
+        /// Stores texture quality: setting.gpu_mem_level.
         /// </summary>
         protected int _TextureModelQuality;
 
         /// <summary>
-        /// Возвращает / задаёт разрешение по горизонтали.
+        /// Gets or sets screen width video setting.
         /// </summary>
-        public int ScreenWidth { get { return _ScreenWidth; } set { _ScreenWidth = value; } }
+        public int ScreenWidth { get => _ScreenWidth; set { _ScreenWidth = value; } }
 
         /// <summary>
-        /// Возвращает / задаёт разрешение по вертикали.
+        /// Gets or sets screen height video setting.
         /// </summary>
-        public int ScreenHeight { get { return _ScreenHeight; } set { _ScreenHeight = value; } }
+        public int ScreenHeight { get => _ScreenHeight; set { _ScreenHeight = value; } }
 
         /// <summary>
-        /// Возвращает / задаёт настройки соотношения сторон NCF-игры на движке Source 1.
+        /// Gets or sets screen aspect ratio video setting.
         /// </summary>
         public int ScreenRatio
         {
             get
             {
-                int res = -1;
+                int res;
 
                 switch (_ScreenRatio)
                 {
@@ -204,12 +205,12 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт настройки контрастности и цветовой гаммы NCF-игры на движке Source 1.
+        /// Gets or sets screen gamma video setting..
         /// </summary>
-        public string ScreenGamma { get { return _Brightness.ToString(); } set { _Brightness = Convert.ToInt32(value); } }
+        public string ScreenGamma { get => _Brightness.ToString(); set { _Brightness = Convert.ToInt32(value); } }
 
         /// <summary>
-        /// Возвращает / задаёт настройки качества теней NCF-игры на движке Source 1.
+        /// Gets or sets shadow effects quality video setting.
         /// </summary>
         public int ShadowQuality
         {
@@ -257,7 +258,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт настройки размытия движений NCF-игры на движке Source 1.
+        /// Gets or sets motion blur video setting.
         /// </summary>
         public int MotionBlur
         {
@@ -293,7 +294,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт настройки графического режима NCF-игры на движке Source 1.
+        /// Gets or sets display mode (fullscreen, windowed) video setting.
         /// </summary>
         public int ScreenMode
         {
@@ -343,7 +344,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт настройки полноэкранного сглаживания NCF-игры на движке Source 1.
+        /// Gets or sets anti-aliasing video setting.
         /// </summary>
         public int AntiAliasing
         {
@@ -429,7 +430,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт настройки качества фильтрации текстур NCF-игры на движке Source 1.
+        /// Gets or sets filtering mode video setting.
         /// </summary>
         public int FilteringMode
         {
@@ -492,7 +493,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт настройки вертикальной синхронизации NCF-игры на движке Source 1.
+        /// Gets or sets vertical synchronization video setting.
         /// </summary>
         public int VSync
         {
@@ -542,7 +543,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт настройки многоядерного рендеринга NCF-игры на движке Source 1.
+        /// Gets or sets multicore rendering video setting.
         /// </summary>
         public int RenderingMode
         {
@@ -584,7 +585,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт настройки качества шейдерных эффектов NCF-игры на движке Source 1.
+        /// Gets or sets shader effects level video setting.
         /// </summary>
         public int ShaderEffects
         {
@@ -632,7 +633,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт настройки качества обычных эффектов NCF-игры на движке Source 1.
+        /// Gets or sets standard effects video setting.
         /// </summary>
         public int Effects
         {
@@ -674,7 +675,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт настройки выделенного игре пула памяти NCF-игры на движке Source 1.
+        /// Gets or sets memory pool video setting.
         /// </summary>
         public int MemoryPool
         {
@@ -719,7 +720,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает / задаёт настройки качества детализации моделей и текстур NCF-игры на движке Source 1.
+        /// Gets or sets model quality video setting.
         /// </summary>
         public int ModelQuality
         {
@@ -761,9 +762,10 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Извлекает значение переменной из строки.
+        /// Gets Cvar value from string.
         /// </summary>
-        /// <param name="LineA">Строка для извлечения</param>
+        /// <param name="LineA">Source string.</param>
+        /// <returns>Extracted from source string value.</returns>
         protected string ExtractCVFromLine(string LineA)
         {
             LineA = CoreLib.CleanStrWx(LineA, true);
@@ -771,29 +773,59 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Возвращает значение переменной, переданной в параметре, хранящейся в файле.
+        /// Gets Cvar value of integer type from video file.
         /// </summary>
-        /// <param name="CVar">Переменная</param>
+        /// <param name="CVar">Cvar name.</param>
+        /// <returns>Cvar value from video file.</returns>
         protected int GetNCFDWord(string CVar)
         {
-            int Result; try { string StrRes = VideoFile.FirstOrDefault(s => s.Contains(CVar) && Regex.IsMatch(s, "setting.")); if (String.IsNullOrEmpty(StrRes)) { StrRes = DefaultsFile.FirstOrDefault(s => s.Contains(CVar)); } Result = Convert.ToInt32(ExtractCVFromLine(StrRes)); } catch { Result = -1; } return Result;
+            int Result;
+            try
+            {
+                string StrRes = VideoFile.FirstOrDefault(s => s.Contains(CVar) && Regex.IsMatch(s, "setting."));
+                if (String.IsNullOrEmpty(StrRes))
+                {
+                    StrRes = DefaultsFile.FirstOrDefault(s => s.Contains(CVar));
+                }
+                Result = Convert.ToInt32(ExtractCVFromLine(StrRes));
+            }
+            catch
+            {
+                Result = -1;
+            }
+            return Result;
         }
 
         /// <summary>
-        /// Возвращает значение переменной типа double, переданной в параметре, хранящейся в файле.
+        /// Gets Cvar value of decimal type from video file.
         /// </summary>
-        /// <param name="CVar">Переменная</param>
+        /// <param name="CVar">Cvar name.</param>
+        /// <returns>Cvar value from video file.</returns>
         protected decimal GetNCFDble(string CVar)
         {
-            decimal Result; CultureInfo CI = new CultureInfo("en-US"); try { string StrRes = VideoFile.FirstOrDefault(s => s.Contains(CVar) && Regex.IsMatch(s, "setting.")); if (String.IsNullOrEmpty(StrRes)) { StrRes = DefaultsFile.FirstOrDefault(s => s.Contains(CVar)); } Result = Convert.ToDecimal(ExtractCVFromLine(StrRes), CI); } catch { Result = 2.2M; } return Result;
+            decimal Result;
+            CultureInfo CI = new CultureInfo("en-US");
+            try
+            {
+                string StrRes = VideoFile.FirstOrDefault(s => s.Contains(CVar) && Regex.IsMatch(s, "setting."));
+                if (String.IsNullOrEmpty(StrRes))
+                {
+                    StrRes = DefaultsFile.FirstOrDefault(s => s.Contains(CVar));
+                }
+                Result = Convert.ToDecimal(ExtractCVFromLine(StrRes), CI);
+            }
+            catch
+            {
+                Result = 2.2M;
+            }
+            return Result;
         }
 
         /// <summary>
-        /// Считывает графические настройки игры из файла.
+        /// Reads Type 2 game video settings from file.
         /// </summary>
         protected void ReadSettings()
         {
-            // Считываем настройки графики из файла...
             _ScreenWidth = GetNCFDWord(VSettings.ScreenWidth);
             _ScreenHeight = GetNCFDWord(VSettings.ScreenHeight);
             _ScreenRatio = GetNCFDWord(VSettings.ScreenRatio);
@@ -815,27 +847,27 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Сохраняет графические настройки игры в файл.
+        /// Writes Type 2 game video settings to file.
         /// </summary>
         public void WriteSettings()
         {
-            // Проверим существует ли файл...
+            // Checking if file exists. If not - create it...
             if (!(File.Exists(VideoFileName))) { FileManager.CreateFile(VideoFileName); }
 
-            // Начинаем сохранять содержимое объекта в файл...
+            // Writing to file...
             using (StreamWriter CFile = new StreamWriter(VideoFileName))
             {
-                // Генерируем шаблон...
+                // Generating template...
                 string Templt = "\t\"setting.{0}\"\t\t\"{1}\"";
 
-                // Явно указываем локаль для записи вещественных чисел...
+                // Explicitly setting en-US locale for writing floating point numbers...
                 CultureInfo CI = new CultureInfo("en-US");
 
-                // Вставляем стандартный заголовок...
+                // Adding standard header...
                 CFile.WriteLine("\"VideoConfig\"");
                 CFile.WriteLine("{");
 
-                // Вставляем настройки графики...
+                // Adding video settings...
                 CFile.WriteLine(String.Format(Templt, VSettings.EffectDetails, _EffectDetails));
                 CFile.WriteLine(String.Format(Templt, VSettings.ShaderEffects, _ShaderEffects));
                 CFile.WriteLine(String.Format(Templt, VSettings.AntiAliasing, _AntiAliasing));
@@ -856,41 +888,28 @@ namespace srcrepair.core
                 CFile.WriteLine(String.Format(Templt, VSettings.DisplayMode, _DisplayMode));
                 CFile.WriteLine(String.Format(Templt, VSettings.DisplayBorderless, _DisplayBorderless));
 
-                // Вставляем закрывающую скобку...
+                // Adding standard footer...
                 CFile.WriteLine("}");
             }
         }
 
         /// <summary>
-        /// Базовый конструктор класса.
+        /// Type2Video class constructor.
         /// </summary>
-        /// <param name="VFile">Путь к файлу с настройками графики</param>
-        /// <param name="ReadNow">Включает автоматическое считывание настроек из файла</param>
+        /// <param name="VFile">Full path to video settings file.</param>
+        /// <param name="ReadNow">Enable immediate reading of video settings.</param>
         public Type2Video(string VFile, bool ReadNow = true)
         {
-            // Подготовим базу с названиями переменных базы нужной версии...
             VSettings = new Type2Settings();
-            
-            // Сохраним путь к файлу с графическими настройками...
             VideoFileName = VFile;
-
-            // Сгенерируем путь к файлу со стандартными настройками графики текущей системы...
             DefaultsFileName = Path.Combine(Path.GetDirectoryName(VideoFileName), "videodefaults.txt");
-
-            // Создаём массивы...
             VideoFile = new List<String>();
             DefaultsFile = new List<String>();
 
-            // Считываем настройки из файла если зто разрешено...
             if (ReadNow)
             {
-                // Получаем содержимое файла графических настроек...
                 VideoFile.AddRange(File.ReadAllLines(VideoFileName));
-
-                // Получаем содержимое файла стандартных настроек (если он существует)...
                 if (File.Exists(DefaultsFileName)) { DefaultsFile.AddRange(File.ReadAllLines(DefaultsFileName)); }
-
-                // Запускаем непосредственно процесс...
                 ReadSettings();
             }
         }
