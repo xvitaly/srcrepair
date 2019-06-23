@@ -865,12 +865,11 @@ namespace srcrepair.core
         /// Базовый конструктор класса.
         /// </summary>
         /// <param name="VFile">Путь к файлу с настройками графики</param>
-        /// <param name="SVID">Тип механизма хранения настроек движка Source</param>
         /// <param name="ReadNow">Включает автоматическое считывание настроек из файла</param>
-        public Type2Video(string VFile, string SVID, bool ReadNow = true)
+        public Type2Video(string VFile, bool ReadNow = true)
         {
             // Подготовим базу с названиями переменных базы нужной версии...
-            VSettings = new Type2Settings(SVID);
+            VSettings = new Type2Settings();
             
             // Сохраним путь к файлу с графическими настройками...
             VideoFileName = VFile;

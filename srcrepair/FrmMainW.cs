@@ -162,7 +162,7 @@ namespace srcrepair.gui
         private void WriteType2VideoSettings()
         {
             // Создаём новый объект без получения данных из файла...
-            Type2Video Video = new Type2Video(App.SourceGames[SelectedGame].GetActualVideoFile(), App.SourceGames[SelectedGame].SourceType, false)
+            Type2Video Video = new Type2Video(App.SourceGames[SelectedGame].GetActualVideoFile(), false)
             {
                 // Записываем пользовательские настройки...
                 ScreenWidth = (int)GT_NCF_HorRes.Value,
@@ -239,7 +239,7 @@ namespace srcrepair.gui
                 if (File.Exists(VFileName))
                 {
                     // Получаем графические настройки...
-                    Type2Video Video = new Type2Video(VFileName, App.SourceGames[SelectedGame].SourceType, true);
+                    Type2Video Video = new Type2Video(VFileName, true);
 
                     // Заполняем общие настройки...
                     GT_NCF_HorRes.Value = Video.ScreenWidth;

@@ -21,62 +21,62 @@
 namespace srcrepair.core
 {
     /// <summary>
-    /// Служебный класс работы с настройками графики Type 2 игр.
+    /// Class for working with Type 2 game video settings names.
     /// </summary>
     public class Type2Settings : IType2Settings
     {
         /// <summary>
-        /// Хранит имя настройки разрешения по горизонтали.
+        /// Gets or sets screen width video setting name.
         /// </summary>
         public string ScreenWidth { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки разрешения по вертикали.
+        /// Gets or sets screen height video setting name.
         /// </summary>
         public string ScreenHeight { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки соотношения сторон.
+        /// Gets or sets screen aspect ratio video setting name.
         /// </summary>
         public string ScreenRatio { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки контрастности и цветовой гаммы.
+        /// Gets or sets brightness video setting name.
         /// </summary>
         public string Brightness { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки качества теней.
+        /// Gets or sets shadow effects quality video setting name.
         /// </summary>
         public string ShadowQuality { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки размытия движений.
+        /// Gets or sets motion blur video setting name.
         /// </summary>
         public string MotionBlur { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки параметров графического режима.
+        /// Gets or sets display mode (fullscreen, windowed) video setting name.
         /// </summary>
         public string DisplayMode { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки других параметров графического режима (без рамки).
+        /// Gets or sets borderless window video setting name.
         /// </summary>
         public string DisplayBorderless { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки полноэкранного сглаживания.
+        /// Gets or sets anti-aliasing video setting name.
         /// </summary>
         public string AntiAliasing { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки глубины полноэкранного сглаживания.
+        /// Gets or sets anti-aliasing multiplier video setting name.
         /// </summary>
         public string AntiAliasQuality { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки качества фильтрации текстур.
+        /// Gets or sets filtering mode video setting name.
         /// </summary>
         public string FilteringMode { get; protected set; }
 
@@ -86,42 +86,42 @@ namespace srcrepair.core
         public string VSync { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки качества вертикальной синхронизации.
+        /// Gets or sets vertical synchronization video setting name.
         /// </summary>
         public string VSyncMode { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки многоядерного рендеринга.
+        /// Gets or sets multicore rendering video setting name.
         /// </summary>
         public string MCRendering { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки качества шейдерных эффектов.
+        /// Gets or sets shader effects level video setting name.
         /// </summary>
         public string ShaderEffects { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки качества обычных эффектов.
+        /// Gets or sets standard effects video setting name.
         /// </summary>
         public string EffectDetails { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки выделенного игре пула памяти.
+        /// Gets or sets memory pool video setting name.
         /// </summary>
         public string MemoryPoolType { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки качества детализации моделей и текстур.
+        /// Gets or sets texture quality video setting name.
         /// </summary>
         public string TextureModelQuality { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки зернистости.
+        /// Gets or sets grain scale video setting name.
         /// </summary>
         public string GrainScaleOverride { get; protected set; }
 
         /// <summary>
-        /// Заполняет свойства класса настройками для базы версии 2 (Source 1; до CS:GO включительно).
+        /// Sets properties data.
         /// </summary>
         protected void SetSettingsV2()
         {
@@ -147,12 +147,10 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Базовый конструктор класса.
+        /// Type1Settings class constructor.
         /// </summary>
-        /// <param name="ID">Тип механизма хранения настроек движка Source</param>
-        public Type2Settings(string ID)
+        public Type2Settings()
         {
-            // Временно заполним без указания ID...
             SetSettingsV2();
         }
     }
