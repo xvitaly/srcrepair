@@ -19,7 +19,6 @@
 ; along with this program. If not, see <http://www.gnu.org/licenses/>.
 ;
 
-; Задаём особые директивы препроцессора...
 #define VERSION GetFileVersion("..\..\srcrepair\bin\Release\srcrepair.exe")
 #define BASEDIR "..\..\srcrepair"
 #define CI_COMMIT GetEnv('CI_HASH')
@@ -28,7 +27,6 @@
 #endif
 
 [Setup]
-; Задаём основные параметры...
 AppId={{77A71DAB-56AA-4F33-BDE8-F00798468B9D}
 AppName=SRC Repair
 AppVerName=SRC Repair
@@ -53,8 +51,6 @@ SolidCompression=yes
 PrivilegesRequired=lowest
 ArchitecturesInstallIn64BitMode=x64
 MinVersion=6.1.7601
-
-; Здесь указываем данные, которые будут добавлены в свойства установщика...
 VersionInfoVersion={#VERSION}
 VersionInfoDescription=SRC Repair Setup
 VersionInfoCopyright=(c) 2005-2019 EasyCoding Team. All rights reserved.
@@ -78,50 +74,30 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-; Копируем файл со списком поддерживаемых игр и их параметрами...
 Source: "{#BASEDIR}\bin\Release\games.xml"; DestDir: "{app}"; Flags: ignoreversion
-
-; Копируем файл с базой данных HUD...
 Source: "{#BASEDIR}\bin\Release\huds.xml"; DestDir: "{app}"; Flags: ignoreversion
-
-; Копируем файл с базой данных FPS-конфигов...
 Source: "{#BASEDIR}\bin\Release\configs.xml"; DestDir: "{app}"; Flags: ignoreversion
-
-; Копируем динамические библиотеки сторонних модулей...
 Source: "{#BASEDIR}\bin\Release\DotNetZip.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#BASEDIR}\bin\Release\NLog.dll"; DestDir: "{app}"; Flags: ignoreversion
-
-; Устанавливаем бинарники приложения...
 Source: "{#BASEDIR}\bin\Release\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#BASEDIR}\bin\Release\srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#BASEDIR}\bin\Release\corelib.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#BASEDIR}\bin\Release\corelib.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BASEDIR}\bin\Release\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs
-
-; Копируем файлs стандартных настроек программы...
 Source: "{#BASEDIR}\bin\Release\srcrepair.exe.config"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#BASEDIR}\bin\Release\NLog.config"; DestDir: "{app}"; Flags: ignoreversion
 
-; Устанавливаем остальные файлы...
+Source: "{#BASEDIR}\bin\Release\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#BASEDIR}\bin\Release\cfgs\*"; DestDir: "{app}\cfgs\"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#BASEDIR}\bin\Release\help\*"; DestDir: "{app}\help\"; Flags: ignoreversion recursesubdirs createallsubdirs
 
-; Устанавливаем файлы с отсоединёнными подписями для официальных сборок...
 #ifdef _RELEASE
 Source: "{#BASEDIR}\bin\Release\*.sig"; DestDir: "{app}"; Flags: ignoreversion
 #endif
 
 [Icons]
-; Создаём ярлык для приложения...
 Name: "{group}\SRC Repair"; Filename: "{app}\srcrepair.exe"
-
-; Создаём "ярлык Интернета", указывающий на официальный сайт программы...
-Name: "{group}\{cm:ProgramOnTheWeb,SRC Repair}"; Filename: "https://www.easycoding.org/projects/srcrepair"
-
-; Создаём ярлык на рабочем столе (если выбрано)...
+Name: "{group}\{cm:ProgramOnTheWeb,SRC Repair}"; Filename: "https://github.com/xvitaly/srcrepair"
 Name: "{userdesktop}\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: desktopicon
-
-; Создаём ярлык на панели быстрого запуска (если выбрано)...
 Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: quicklaunchicon
 
 [Run]
