@@ -27,78 +27,77 @@ using System.Xml;
 namespace srcrepair.core
 {
     /// <summary>
-    /// Класс, используемый для проверки обновлений.
+    /// Class for checking and working with updates.
     /// </summary>
     public class UpdateManager
     {
         /// <summary>
-        /// Хранит последнюю доступную версию приложения.
+        /// Gets or sets latest available version of application.
         /// </summary>
         public Version AppUpdateVersion { get; private set; }
 
         /// <summary>
-        /// Хранит URL для загрузки последней доступной версии приложения.
+        /// Gets or sets download URL of application update.
         /// </summary>
         public string AppUpdateURL { get; private set; }
 
         /// <summary>
-        /// Хранит хеш-сумму установщика последней доступной версии приложения.
+        /// Gets or sets hash of application update file.
         /// </summary>
         public string AppUpdateHash { get; private set; }
 
         /// <summary>
-        /// Хранит URL для загрузки последней доступной версии базы игр.
+        /// Gets or sets download URL of game database update.
         /// </summary>
         public string GameUpdateURL { get; private set; }
 
         /// <summary>
-        /// Хранит хеш-сумму последней доступной версии базы игр.
+        /// Gets or sets hash of game database update file.
         /// </summary>
         public string GameUpdateHash { get; private set; }
 
         /// <summary>
-        /// Хранит URL для загрузки последней доступной версии базы HUD.
+        /// Gets or sets download URL of HUD database update.
         /// </summary>
         public string HUDUpdateURL { get; private set; }
 
         /// <summary>
-        /// Хранит хеш-сумму последней доступной версии базы HUD.
+        /// Gets or sets hash of HUD database update file.
         /// </summary>
         public string HUDUpdateHash { get; private set; }
 
         /// <summary>
-        /// Хранит URL для загрузки последней доступной версии базы конфигов.
+        /// Gets or sets download URL of configs database update.
         /// </summary>
         public string CfgUpdateURL { get; private set; }
 
         /// <summary>
-        /// Хранит хеш-сумму последней доступной версии базы конфигов.
+        /// Gets or sets hash of configs database update file.
         /// </summary>
         public string CfgUpdateHash { get; private set; }
 
         /// <summary>
-        /// Хранит путь к каталогу приложения для служебных целей.
+        /// Stores full path to installed application.
         /// </summary>
-        private string FullAppPath;
+        private readonly string FullAppPath;
 
         /// <summary>
-        /// Хранит UserAgent, который будет использоваться в соответствующем
-        /// HTTP заголовке запроса.
+        /// Stores HTTP UserAgent header, used during updates check.
         /// </summary>
-        private string UserAgent;
+        private readonly string UserAgent;
 
         /// <summary>
-        /// Хранит загруженный с сервера обновлений XML.
+        /// Stores downloaded from server XML file with information
+        /// about latest updates.
         /// </summary>
         private string UpdateXML;
 
         /// <summary>
-        /// Загружает XML со списком обновлений с сервера обновлений.
-        /// Вызывается конструктором класса.
+        /// Downloads XML file with imformation about latest updates
+        /// from server and stores it in class field.
         /// </summary>
         private void DownloadXML()
         {
-            // Загружаем XML...
             using (WebClient Downloader = new WebClient())
             {
                 Downloader.Headers.Add("User-Agent", UserAgent);
@@ -107,16 +106,16 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Парсит загруженный XML файл. Заполняет поля класса значениями.
-        /// Вызывается конструктором класса.
+        /// Parses downloaded XML file with information about
+        /// latest updates and fills our properties.
         /// </summary>
         private void ParseXML()
         {
-            // Загружаем XML...
+            // Loading XML from variable...
             XmlDocument XMLD = new XmlDocument();
             XMLD.LoadXml(UpdateXML);
 
-            // Разбираем XML в цикле...
+            // Parsing XML...
             foreach (XmlNode Node in XMLD.SelectNodes("Updates"))
             {
                 foreach (XmlNode Child in Node.ChildNodes)
@@ -146,73 +145,73 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Проверяет наличие обновлений для приложения.
+        /// Checks if application needs to be updated.
         /// </summary>
-        /// <returns>Возвращает булево наличия обновлений</returns>
+        /// <returns>Returns True if application update available.</returns>
         public bool CheckAppUpdate()
         {
             return AppUpdateVersion > Assembly.GetCallingAssembly().GetName().Version;
         }
 
         /// <summary>
-        /// Проверяет hash обновления приложения с переданным в качестве параметра.
+        /// Checks hash of downloaded application update.
         /// </summary>
-        /// <param name="Hash">Хеш загруженного файла</param>
-        /// <returns>Возвращает булево соответствия хешей</returns>
+        /// <param name="Hash">Hash of downloaded file.</param>
+        /// <returns>Returns True if hashes are equal.</returns>
         public bool CheckAppHash(string Hash)
         {
             return AppUpdateHash == Hash;
         }
 
         /// <summary>
-        /// Проверяет наличие обновлений для базы игр.
+        /// Checks if game database needs to be updated.
         /// </summary>
-        /// <returns>Возвращает булево наличия обновлений</returns>
+        /// <returns>Returns True if game database update available.</returns>
         public bool CheckGameDBUpdate()
         {
             return FileManager.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Resources.GameListFile)) != GameUpdateHash;
         }
 
         /// <summary>
-        /// Проверяет наличие обновлений для базы HUD.
+        /// Checks if HUD database needs to be updated.
         /// </summary>
-        /// <returns>Возвращает булево наличия обновлений</returns>
+        /// <returns>Returns True if HUD database update available.</returns>
         public bool CheckHUDUpdate()
         {
             return FileManager.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Resources.HUDDbFile)) != HUDUpdateHash;
         }
 
         /// <summary>
-        /// Проверяет наличие обновлений для базы FPS-конфигов.
+        /// Checks if configs database needs to be updated.
         /// </summary>
-        /// <returns>Возвращает булево наличия обновлений</returns>
+        /// <returns>Returns True if configs database update available.</returns>
         public bool CheckCfgUpdate()
         {
             return FileManager.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Resources.CfgDbFile)) != CfgUpdateHash;
         }
 
         /// <summary>
-        /// Генерирует имя файла на диске для обновления.
+        /// Gets local application update file name.
         /// </summary>
-        /// <param name="Url">URL загрузки</param>
-        /// <returns>Возвращает имя файла</returns>
+        /// <param name="Url">Download URL.</param>
+        /// <returns>Local file name.</returns>
         public static string GenerateUpdateFileName(string Url)
         {
             return Path.HasExtension(Url) ? Url : Path.ChangeExtension(Url, "exe");
         }
 
         /// <summary>
-        /// Конструктор класса. Получает информацию об обновлениях.
+        /// UpdateManager class constructor.
         /// </summary>
-        /// <param name="AppPath">Путь к каталогу приложения</param>
-        /// <param name="UA">UserAgent приложения</param>
+        /// <param name="AppPath">Application installation directory.</param>
+        /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
         public UpdateManager(string AppPath, string UA)
         {
-            // Сохраняем путь...
+            // Saving paths...
             FullAppPath = AppPath;
             UserAgent = UA;
 
-            // Загружаем и парсим XML...
+            // Downloading and parsing XML...
             DownloadXML();
             ParseXML();
         }
