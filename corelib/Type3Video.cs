@@ -19,14 +19,20 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace srcrepair.core
 {
+    /// <summary>
+    /// Class for working with Type 3 game video settings.
+    /// </summary>
     public class Type3Video
     {
+        /// <summary>
+        /// Type3Video class constructor.
+        /// </summary>
+        public Type3Video()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
