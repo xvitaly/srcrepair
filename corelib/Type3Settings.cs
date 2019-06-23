@@ -21,42 +21,42 @@
 namespace srcrepair.core
 {
     /// <summary>
-    /// Служебный класс работы с настройками графики Type 3 игр.
+    /// Class for working with Type 3 game video settings names.
     /// </summary>
     public class Type3Settings
     {
         /// <summary>
-        /// Хранит имя настройки ID производителя видеокарты.
+        /// Gets or sets vendor ID of video adapter video setting name.
         /// </summary>
         public string VendorID { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки ID видеокарты.
+        /// Gets or sets video adapter ID video setting name.
         /// </summary>
         public string DeviceID { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки качества обычных эффектов.
+        /// Gets or sets standard effects video setting name.
         /// </summary>
         public string EffectDetails { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки выделенного игре пула памяти.
+        /// Gets or sets memory pool video setting name.
         /// </summary>
         public string MemoryPoolType { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки качества детализации моделей и текстур.
+        /// Gets or sets model and texture quality video setting name.
         /// </summary>
         public string TextureModelQuality { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки разрешения по горизонтали.
+        /// Gets or sets screen width video setting name.
         /// </summary>
         public string ScreenWidth { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки разрешения по вертикали.
+        /// Gets or sets screen height video setting name.
         /// </summary>
         public string ScreenHeight { get; protected set; }
 
@@ -66,179 +66,178 @@ namespace srcrepair.core
         public string ShaderEffects { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки версии конфига настроек графики.
+        /// Gets or sets shader effects level video setting name.
         /// </summary>
         public string SchemaVersion { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки известности устройства.
+        /// Gets or sets video adapter device knowledge video setting name.
         /// </summary>
         public string KnownDevice { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки параметров полноэкранного режима.
+        /// Gets or sets display mode (fullscreen, windowed) video setting name.
         /// </summary>
         public string FullScreenMode { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки параметров полноэкранного режима в
-        /// кооперативном режиме.
+        /// Gets or sets display mode (fullscreen, windowed) in co-op mode
+        /// video setting name.
         /// </summary>
         public string FullScreenModeCoop { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки других параметров графического режима (без рамки).
+        /// Gets or sets borderless window video setting name.
         /// </summary>
         public string DisplayBorderless { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки вертикальной синхронизации.
+        /// Gets or sets vertical synchronization video setting name.
         /// </summary>
         public string VSync { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки параметров полноэкранного режима при потере фокуса.
+        /// Gets or sets display mode on focus loss video setting name.
         /// </summary>
         public string DisplayModeFocusLoss { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки параметров рендеринга водных поверхностей.
+        /// Gets or sets cheap water reflections video setting name.
         /// </summary>
         public string CheapWaterReflections { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки высоты и качества эффектов тумана.
+        /// Gets or sets fog of war height video setting name.
         /// </summary>
         public string FogHeight { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки, позволяющей использовать только простые
-        /// источники освещения.
+        /// Gets or sets simple lighting effects video setting name.
         /// </summary>
         public string SimpleLight { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки SSAO для освещения.
+        /// Gets or sets SSAO lighting effects video setting name.
         /// </summary>
         public string SSAOLights { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки глобальной карты теней.
+        /// Gets or sets global shadow effects video setting name.
         /// </summary>
         public string GlobalShadowMode { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки полноэкранного сглаживания.
+        /// Gets or sets anti-aliasing video setting name.
         /// </summary>
         public string AntiAliasing { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки глубины полноэкранного сглаживания.
+        /// Gets or sets anti-aliasing multiplier video setting name.
         /// </summary>
         public string AntiAliasQuality { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки портретной анимации.
+        /// Gets or sets portrait animations video setting name.
         /// </summary>
         public string PortraitAnimation { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки Specular Shading.
+        /// Gets or sets specular shading video setting name.
         /// </summary>
         public string SpecularShading { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки Specular Bloom Shading.
+        /// Gets or sets specular bloom shading video setting name.
         /// </summary>
         public string SpecularBloomShading { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки рендеринга второстепенных предметов на карте.
+        /// Gets or sets ambient creatures video setting name.
         /// </summary>
         public string AmbientCreatures { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки стриминга текстур.
+        /// Gets or sets texture streaming video setting name.
         /// </summary>
         public string TextureStreaming { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки карт нормалей.
+        /// Gets or sets normal maps video setting name.
         /// </summary>
         public string NormalMaps { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки качества детализации таблицы результатов.
+        /// Gets or sets dashboard quality video setting name.
         /// </summary>
         public string DashboardQuality { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки качества шейдерных эффектов.
+        /// Gets or sets shader effects level video setting name.
         /// </summary>
         public string ShaderQuality { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки рекомендованного разрешения по вертикали.
+        /// Gets or sets recommended height video setting name.
         /// </summary>
         public string RecommendedHeight { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки области рендеринга.
+        /// Gets or sets viewport scale video setting name.
         /// </summary>
         public string ViewportScale { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки контрастности и цветовой гаммы.
+        /// Gets or sets brightness video setting name.
         /// </summary>
         public string Brightness { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки активации расширенных опций видео.
+        /// Gets or sets advanced options video setting name.
         /// </summary>
         public string UseAdvanced { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки рендеринга ambient cloth.
+        /// Gets or sets ambient cloth quality video setting name.
         /// </summary>
         public string AmbientCloth { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки качества детализации травы.
+        /// Gets or sets grass quality video setting name.
         /// </summary>
         public string GrassQuality { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки качества детализации эффекта "ветер".
+        /// Gets or sets wind effects quality video setting name.
         /// </summary>
         public string WindEffects { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки качества эффектов Parallax Mapping.
+        /// Gets or sets parallax mapping video setting name.
         /// </summary>
         public string ParallaxMapping { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки particle fallback.
+        /// Gets or sets particle fallback video setting name.
         /// </summary>
         public string ParticleFallback { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки множителя particle fallback.
+        /// Gets or sets particle fallback multiplier video setting name.
         /// </summary>
         public string ParticleFallbackMultiplier { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки сброса графических настроек.
+        /// Gets or sets reset to defaults video setting name.
         /// </summary>
         public string ResetToDefaults { get; protected set; }
 
         /// <summary>
-        /// Хранит имя настройки соотношения сторон.
+        /// Gets or sets screen aspect ratio video setting name.
         /// </summary>
         public string ScreenRatio { get; protected set; }
 
         /// <summary>
-        /// Заполняет свойства класса настройками для базы версии 3 (Source 2, DotA 2: Reborn).
+        /// Sets properties data.
         /// </summary>
         protected void SetSettingsV3()
         {
@@ -287,11 +286,10 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Базовый конструктор класса.
+        /// Type3Settings class constructor.
         /// </summary>
         public Type3Settings()
         {
-            // Заполняем свойства класса...
             SetSettingsV3();
         }
     }

@@ -147,7 +147,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Type1Settings class constructor.
+        /// Type2Settings class constructor.
         /// </summary>
         public Type2Settings()
         {
