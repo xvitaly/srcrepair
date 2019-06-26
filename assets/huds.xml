@@ -471,15 +471,15 @@
   <HUD>
     <Name>SlimHUD</Name>
     <Game>tf</Game>
-    <IsUpdated>0</IsUpdated>
-    <URI>https://sourceforge.net/projects/srcrepair/files/huds/slimhud/slimhud_b5b67129.zip</URI>
-    <UpURI>https://github.com/JackStanley/TF2slimHUD/archive/Main.zip</UpURI>
+    <IsUpdated>1</IsUpdated>
+    <URI>https://sourceforge.net/projects/srcrepair/files/huds/slimhud/slimhud_0cfd5b12.zip</URI>
+    <UpURI>https://huds.tf/forum/xthreads_attach.php/119_1548695581_32f5cd5d/18b7f8d9f144b851879b7df3409769c6/slimHUD.zip</UpURI>
     <Preview>https://www.easycoding.org/files/srcrepair/huds/slimhud.jpg</Preview>
-    <RepoPath>https://github.com/JackStanley/TF2slimHUD</RepoPath>
-    <Hash>fd39f8842e136af5dce985ad5b79a6a8</Hash>
-    <LastUpdate>1466604333</LastUpdate>
+    <RepoPath>null</RepoPath>
+    <Hash>18b7f8d9f144b851879b7df3409769c6</Hash>
+    <LastUpdate>1548695455</LastUpdate>
     <Site>https://huds.tf/forum/showthread.php?tid=220</Site>
-    <ArchiveDir>TF2slimHUD-Main/slimHUD</ArchiveDir>
+    <ArchiveDir>slimHUD</ArchiveDir>
     <InstallDir>slimhud</InstallDir>
   </HUD>
   <HUD>
