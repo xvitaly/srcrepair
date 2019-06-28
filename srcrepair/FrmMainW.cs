@@ -1102,11 +1102,21 @@ namespace srcrepair.gui
 
         #region Internal Workers
 
+        /// <summary>
+        /// Checks for application updates in a separate thread.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Additional arguments.</param>
         private void BW_UpChk_DoWork(object sender, DoWorkEventArgs e)
         {
             e.Result = AutoUpdateCheck();
         }
 
+        /// <summary>
+        /// Handles result of application update check.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Completion arguments and results.</param>
         private void BW_UpChk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             if (e.Error == null)
