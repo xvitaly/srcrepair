@@ -1032,12 +1032,11 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Запускает проверку наличия обновлений программы.
+        /// Launches program update checker.
         /// </summary>
         private void CheckForUpdates()
         {
-            // Запускаем проверку обновлений если это разрешено в настройках...
-            if (Properties.Settings.Default.AutoUpdateCheck) { if (!BW_UpChk.IsBusy) { BW_UpChk.RunWorkerAsync(); } }
+            if (Properties.Settings.Default.AutoUpdateCheck && IsAutoUpdateCheckNeeded()) { if (!BW_UpChk.IsBusy) { BW_UpChk.RunWorkerAsync(); } }
         }
 
         /// <summary>
@@ -1090,34 +1089,38 @@ namespace srcrepair.gui
             return Result;
         }
 
+        /// <summary>
+        /// Checks if application update check is required.
+        /// </summary>
+        private bool IsAutoUpdateCheckNeeded()
+        {
+            TimeSpan TS = DateTime.Now - Properties.Settings.Default.LastUpdateTime;
+            return TS.Days >= 7;
+        }
+
         #endregion
 
         #region Internal Workers
 
         private void BW_UpChk_DoWork(object sender, DoWorkEventArgs e)
         {
-            // Вычисляем разницу между текущей датой и датой последнего обновления...
-            TimeSpan TS = DateTime.Now - Properties.Settings.Default.LastUpdateTime;
-            if (TS.Days >= 7) // Проверяем не прошла ли неделя с момента последней прверки...
-            {
-                // Требуется проверка обновлений...
-                if (AutoUpdateCheck())
-                {
-                    // Доступны обновления...
-                    MessageBox.Show(String.Format(AppStrings.AppUpdateAvailable, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    // Установим время последней проверки обновлений...
-                    Properties.Settings.Default.LastUpdateTime = DateTime.Now;
-                }
-            }
+            e.Result = AutoUpdateCheck();
         }
 
         private void BW_UpChk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            // Произошла ошибка во время проверки наличия обновлений. Запишем в журнал...
-            if (e.Error != null)
+            if (e.Error == null)
+            {
+                if ((bool)e.Result)
+                {
+                    MessageBox.Show(String.Format(AppStrings.AppUpdateAvailable, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    Properties.Settings.Default.LastUpdateTime = DateTime.Now;
+                }
+            }
+            else
             {
                 Logger.Warn(e.Error, DebugStrings.AppDbgExBgWChk);
             }
