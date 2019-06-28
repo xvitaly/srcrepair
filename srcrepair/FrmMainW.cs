@@ -1119,7 +1119,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Checks for available FPS configs.
+        /// Gets collection of available FPS-configs.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Additional arguments.</param>
@@ -1129,7 +1129,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Handles result of checking for available FPS-configs.
+        /// Renders collection of available FPS-configs on its tab.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Completion arguments and results.</param>
@@ -1164,6 +1164,11 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// Gets collection of available backups.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Additional arguments.</param>
         private void BW_BkUpRecv_DoWork(object sender, DoWorkEventArgs e)
         {
             if (!Directory.Exists(App.SourceGames[(string)e.Argument].FullBackUpDirPath))
@@ -1174,6 +1179,11 @@ namespace srcrepair.gui
             e.Result = DInfo.GetFiles("*.*");
         }
 
+        /// <summary>
+        /// Renders collection of available backups on its tab.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Completion arguments and results.</param>
         private void BW_BkUpRecv_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             if (e.Error == null)
