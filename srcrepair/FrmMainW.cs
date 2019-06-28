@@ -1136,11 +1136,21 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// Checks for available FPS configs.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Additional arguments.</param>
         private void BW_FPRecv_DoWork(object sender, DoWorkEventArgs e)
         {
             App.SourceGames[SelectedGame].CFGMan = new ConfigManager(App.FullAppPath, AppStrings.AppLangPrefix);
         }
 
+        /// <summary>
+        /// Handles result of checking for available FPS-configs.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Completion arguments and results.</param>
         private void BW_FPRecv_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             if (e.Error == null)
