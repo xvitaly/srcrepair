@@ -1138,41 +1138,37 @@ namespace srcrepair.gui
 
         private void BW_FPRecv_DoWork(object sender, DoWorkEventArgs e)
         {
-            // Получаем список установленных конфигов из БД...
             App.SourceGames[SelectedGame].CFGMan = new ConfigManager(App.FullAppPath, AppStrings.AppLangPrefix);
-
-            // Выведем установленные в форму...
-            foreach (string Str in App.SourceGames[SelectedGame].CFGMan.ConfigNames)
-            {
-                Invoke((MethodInvoker)delegate () { FP_ConfigSel.Items.Add(Str); });
-            }
         }
 
         private void BW_FPRecv_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (e.Error != null)
+            if (e.Error == null)
             {
-                // FPS-конфигов не найдено. Запишем в лог...
-                Logger.Warn(e.Error);
+                // Adding configs to collection...
+                FP_ConfigSel.Items.AddRange(App.SourceGames[SelectedGame].CFGMan.ConfigNames.ToArray());
 
-                // Выводим текст об этом...
-                FP_Description.Text = AppStrings.FP_NoCfgGame;
-                FP_Description.ForeColor = Color.Red;
-
-                // ...и блокируем контролы, отвечающие за установку...
-                FP_Install.Enabled = false;
-                FP_ConfigSel.Enabled = false;
-                FP_OpenNotepad.Enabled = false;
-            }
-            else
-            {
-                // Проверяем, нашлись ли конфиги...
+                // Checking if collection contains any items...
                 if (FP_ConfigSel.Items.Count >= 1)
                 {
                     FP_Description.Text = AppStrings.FP_SelectFromList;
                     FP_Description.ForeColor = Color.Black;
                     FP_ConfigSel.Enabled = true;
                 }
+            }
+            else
+            {
+                // Exception detected. Writing to log...
+                Logger.Warn(e.Error);
+
+                // Showing message...
+                FP_Description.Text = AppStrings.FP_NoCfgGame;
+                FP_Description.ForeColor = Color.Red;
+
+                // Blockg some form controls...
+                FP_Install.Enabled = false;
+                FP_ConfigSel.Enabled = false;
+                FP_OpenNotepad.Enabled = false;
             }
         }
 
