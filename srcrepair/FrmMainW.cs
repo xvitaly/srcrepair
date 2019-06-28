@@ -1143,7 +1143,7 @@ namespace srcrepair.gui
         /// <param name="e">Additional arguments.</param>
         private void BW_FPRecv_DoWork(object sender, DoWorkEventArgs e)
         {
-            App.SourceGames[SelectedGame].CFGMan = new ConfigManager(App.FullAppPath, AppStrings.AppLangPrefix);
+            App.SourceGames[(string)e.Argument].CFGMan = new ConfigManager(App.FullAppPath, AppStrings.AppLangPrefix);
         }
 
         /// <summary>
@@ -1476,7 +1476,7 @@ namespace srcrepair.gui
                 if (!(String.IsNullOrEmpty(CFGFileName))) { CloseEditorConfigs(); }
 
                 // Считаем имеющиеся FPS-конфиги...
-                if (!BW_FPRecv.IsBusy) { BW_FPRecv.RunWorkerAsync(); }
+                if (!BW_FPRecv.IsBusy) { BW_FPRecv.RunWorkerAsync(SelectedGame); }
 
                 // Обновляем статус...
                 UpdateStatusBar();
