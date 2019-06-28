@@ -1950,6 +1950,7 @@
             // BW_BkUpRecv
             // 
             this.BW_BkUpRecv.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_BkUpRecv_DoWork);
+            this.BW_BkUpRecv.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BW_BkUpRecv_RunWorkerCompleted);
             // 
             // BW_HUDList
             // 

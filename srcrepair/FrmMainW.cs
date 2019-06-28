@@ -417,37 +417,6 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Считывает файлы резервных копий из указанного каталога и помещает в таблицу.
-        /// </summary>
-        private void ReadBackUpList2Table()
-        {
-            // Очистим таблицу...
-            Invoke((MethodInvoker)delegate () { BU_LVTable.Items.Clear(); });
-
-            // Открываем каталог...
-            DirectoryInfo DInfo = new DirectoryInfo(App.SourceGames[SelectedGame].FullBackUpDirPath);
-
-            // Считываем список файлов по заданной маске...
-            FileInfo[] DirList = DInfo.GetFiles("*.*");
-
-            // Начинаем обход массива...
-            foreach (FileInfo DItem in DirList)
-            {
-                // Обрабатываем найденное...
-                var Rs = GenUserFriendlyBackupDesc(DItem);
-
-                // Добавляем в таблицу...
-                ListViewItem LvItem = new ListViewItem(Rs.Item2);
-                if (Properties.Settings.Default.HighlightOldBackUps) { if (DateTime.UtcNow - DItem.CreationTimeUtc > TimeSpan.FromDays(30)) { LvItem.BackColor = Color.LightYellow; } }
-                LvItem.SubItems.Add(Rs.Item1);
-                LvItem.SubItems.Add(GuiHelpers.SclBytes(DItem.Length));
-                LvItem.SubItems.Add(DItem.CreationTime.ToString());
-                LvItem.SubItems.Add(DItem.Name);
-                Invoke((MethodInvoker)delegate () { BU_LVTable.Items.Add(LvItem); });
-            }
-        }
-
-        /// <summary>
         /// Обнуляет контролы на странице графических настроек для Type 1 игры.
         /// </summary>
         private void NullType1Settings()
@@ -981,23 +950,11 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Получает список резеервных копий и заносит их в таблицу...
+        /// Gets full list of available backups.
         /// </summary>
         private void UpdateBackUpList()
         {
-            try
-            {
-                // Создадим каталог для хранения резервных копий если его ещё нет...
-                if (!Directory.Exists(App.SourceGames[SelectedGame].FullBackUpDirPath)) { Directory.CreateDirectory(App.SourceGames[SelectedGame].FullBackUpDirPath); }
-
-                // Считываем и выводим в таблицу файлы резервных копий...
-                ReadBackUpList2Table();
-            }
-            catch (Exception Ex)
-            {
-                // Произошло исключение. Запишем в журнал...
-                Logger.Warn(Ex);
-            }
+            if (!BW_BkUpRecv.IsBusy) { BW_BkUpRecv.RunWorkerAsync(SelectedGame); }
         }
 
         /// <summary>
@@ -1098,6 +1055,31 @@ namespace srcrepair.gui
             return TS.Days >= 7;
         }
 
+        /// <summary>
+        /// Adds found backup files to collection on BackUps tab.
+        /// </summary>
+        /// <param name="DItems">Found items.</param>
+        private void AddBackUpsToTable(FileInfo[] DItems)
+        {
+            foreach (FileInfo DItem in DItems)
+            {
+                Tuple<string, string> Rs = GenUserFriendlyBackupDesc(DItem);
+                ListViewItem LvItem = new ListViewItem(Rs.Item2);
+                if (Properties.Settings.Default.HighlightOldBackUps)
+                {
+                    if (DateTime.UtcNow - DItem.CreationTimeUtc > TimeSpan.FromDays(30))
+                    {
+                        LvItem.BackColor = Color.LightYellow;
+                    }
+                }
+                LvItem.SubItems.Add(Rs.Item1);
+                LvItem.SubItems.Add(GuiHelpers.SclBytes(DItem.Length));
+                LvItem.SubItems.Add(DItem.CreationTime.ToString());
+                LvItem.SubItems.Add(DItem.Name);
+                BU_LVTable.Items.Add(LvItem);
+            }
+        }
+
         #endregion
 
         #region Internal Workers
@@ -1184,8 +1166,32 @@ namespace srcrepair.gui
 
         private void BW_BkUpRecv_DoWork(object sender, DoWorkEventArgs e)
         {
-            // Получаем список резеверных копий...
-            UpdateBackUpList();
+            if (!Directory.Exists(App.SourceGames[(string)e.Argument].FullBackUpDirPath))
+            {
+                Directory.CreateDirectory(App.SourceGames[(string)e.Argument].FullBackUpDirPath);
+            }
+            DirectoryInfo DInfo = new DirectoryInfo(App.SourceGames[(string)e.Argument].FullBackUpDirPath);
+            e.Result = DInfo.GetFiles("*.*");
+        }
+
+        private void BW_BkUpRecv_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error == null)
+            {
+                try
+                {
+                    BU_LVTable.Items.Clear();
+                    AddBackUpsToTable((FileInfo[])e.Result);
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex);
+                }
+            }
+            else
+            {
+                Logger.Warn(e.Error);
+            }
         }
 
         private void BW_HUDList_DoWork(object sender, DoWorkEventArgs e)
@@ -1489,9 +1495,9 @@ namespace srcrepair.gui
 
                 // Считаем список доступных HUD для данной игры...
                 if (App.SourceGames[SelectedGame].IsHUDsAvailable) { if (!BW_HUDList.IsBusy) { BW_HUDList.RunWorkerAsync(); } }
-                
+
                 // Считаем список бэкапов...
-                if (!BW_BkUpRecv.IsBusy) { BW_BkUpRecv.RunWorkerAsync(); }
+                UpdateBackUpList();
 
                 // Создадим каталоги кэшей для HUD...
                 if (App.SourceGames[SelectedGame].IsHUDsAvailable && !Directory.Exists(App.SourceGames[SelectedGame].AppHUDDir)) { Directory.CreateDirectory(App.SourceGames[SelectedGame].AppHUDDir); }
