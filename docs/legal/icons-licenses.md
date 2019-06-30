@@ -1,4 +1,4 @@
-# Ions licensing
+# Icons licenses
 
 | File name | Author | License name | URL |
 | --------- | ------ | -------------- | ------------------------------------- |
