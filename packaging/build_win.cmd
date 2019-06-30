@@ -33,8 +33,8 @@ echo Generating HTML help file...
 "%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "..\docs\help\ru\build\htmlhelp\srcrepair_ru.hhp"
 
 echo Installing generated CHM files...
-mkdir "..\srcrepair\bin\Release\docs\help"
-move "..\docs\help\ru\build\htmlhelp\srcrepair_ru.chm" "..\srcrepair\bin\Release\docs\help\srcrepair_ru.chm"
+mkdir "..\srcrepair\bin\Release\help"
+move "..\docs\help\ru\build\htmlhelp\srcrepair_ru.chm" "..\srcrepair\bin\Release\help\srcrepair_ru.chm"
 
 echo Signing binaries...
 "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\srcrepair\bin\Release\srcrepair.exe
