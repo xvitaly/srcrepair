@@ -15,6 +15,5 @@
    backups.rst
    modules.rst
    settings.rst
-   legalinfo.rst
 
 
