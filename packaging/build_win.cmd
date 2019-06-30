@@ -27,14 +27,14 @@ echo Starting build process using MSBUILD...
 "%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" ..\srcrepair.sln /m /t:Build /p:Configuration=Release /p:TargetFramework=v4.7.2
 
 echo Generating documentation in HTML format...
-call "..\help\ru\make.cmd" htmlhelp
+call "..\docs\help\ru\make.cmd" htmlhelp
 
 echo Generating HTML help file...
-"%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "..\help\ru\build\htmlhelp\srcrepair_ru.hhp"
+"%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "..\docs\help\ru\build\htmlhelp\srcrepair_ru.hhp"
 
 echo Installing generated CHM files...
-mkdir "..\srcrepair\bin\Release\help"
-move "..\help\ru\build\htmlhelp\srcrepair_ru.chm" "..\srcrepair\bin\Release\help\srcrepair_ru.chm"
+mkdir "..\srcrepair\bin\Release\docs\help"
+move "..\docs\help\ru\build\htmlhelp\srcrepair_ru.chm" "..\srcrepair\bin\Release\docs\help\srcrepair_ru.chm"
 
 echo Signing binaries...
 "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\srcrepair\bin\Release\srcrepair.exe
