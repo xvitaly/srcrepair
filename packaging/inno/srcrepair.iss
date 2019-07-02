@@ -39,7 +39,7 @@ DefaultDirName={code:GetDefRoot}\SRC Repair
 DefaultGroupName=SRC Repair
 AllowNoIcons=yes
 LicenseFile=..\..\COPYING
-OutputDir=..\..\results
+OutputDir=..\results
 #ifdef _RELEASE
 OutputBaseFilename=srcrepair_340_final
 #else

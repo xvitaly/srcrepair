@@ -69,6 +69,5 @@ packages/
 
 # Other
 /srcrepair/cfgs
-/packaging/inno/Output
+/packaging/results
 /doxyout
-/results
