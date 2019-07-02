@@ -52,3 +52,11 @@ echo Compiling Installer...
 
 echo Signing installer...
 "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% inno\Output\srcrepair_*.exe
+
+echo Removing temporary files and directories...
+rd /S /Q "..\docs\help\ru\build\doctrees"
+rd /S /Q "..\docs\help\ru\build\htmlhelp"
+rd /S /Q "..\srcrepair\bin"
+rd /S /Q "..\srcrepair\obj"
+rd /S /Q "..\corelib\bin"
+rd /S /Q "..\corelib\obj"
