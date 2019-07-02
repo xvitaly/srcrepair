@@ -23,6 +23,11 @@ title Building SRC Repair release binaries...
 
 set GPGKEY=A989AAAA
 
+echo Installing dependencies using NuGet package manager...
+pushd ..
+nuget restore
+popd
+
 echo Starting build process using MSBUILD...
 "%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" ..\srcrepair.sln /m /t:Build /p:Configuration=Release /p:TargetFramework=v4.7.2
 
