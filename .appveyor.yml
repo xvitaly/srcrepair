@@ -41,7 +41,7 @@ after_build:
 
     "%ProgramFiles(x86)%\Inno Setup 5\ISCC.exe" packaging\inno\srcrepair.iss
 
-    move packaging\inno\Output\*.exe .
+    move results\*.exe .
 test: off
 artifacts:
 - path: snapshot_*.7z
