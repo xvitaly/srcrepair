@@ -29,8 +29,8 @@ echo Generating developer documntation HTML help file...
 "%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "doxyout\html\index.hhp"
 
 echo Installing generated developer documentation CHM files...
-mkdir "srcrepair\bin\Release\help"
-move "doxyout\html\srcrepair_dev.chm" "srcrepair\bin\Release\help\srcrepair_dev.chm"
+mkdir results
+"%PROGRAMFILES%\7-Zip\7z.exe" a -m0=LZMA2 -mx9 -t7z "results\srcrepair_dev.7z" ".\doxyout\html\srcrepair_dev.chm"
 
 echo Removing temporary files after building developer documentation...
 rd /S /Q doxyout
