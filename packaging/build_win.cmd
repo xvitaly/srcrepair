@@ -24,6 +24,9 @@ title Building SRC Repair release binaries...
 set GPGKEY=A989AAAA
 set RELVER=340
 
+echo Removing previous build results...
+if exist results rd /S /Q results
+
 echo Installing dependencies using NuGet package manager...
 pushd ..
 nuget restore
@@ -54,9 +57,17 @@ echo Compiling Installer...
 echo Generating archive for non-Windows platforms...
 "%PROGRAMFILES%\7-Zip\7z.exe" a -m0=LZMA2 -mx9 -t7z -x!*.ico -x!DotNetZip.xml "results\srcrepair_%RELVER%_final.7z" ".\..\srcrepair\bin\Release\*"
 
+echo Generating developer documentation in HTML format...
+pushd ..
+"%PROGRAMFILES%\doxygen\bin\doxygen.exe" Doxyfile
+"%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "doxyout\html\index.hhp"
+"%PROGRAMFILES%\7-Zip\7z.exe" a -m0=LZMA2 -mx9 -t7z "packaging\results\srcrepair_%RELVER%_dev.7z" ".\doxyout\html\srcrepair_dev.chm"
+popd
+
 echo Signing built artifacts...
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\srcrepair_*.exe
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\srcrepair_*.7z
+"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\srcrepair_%RELVER%_final.exe
+"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\srcrepair_%RELVER%_final.7z
+"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\srcrepair_%RELVER%_dev.7z
 
 echo Removing temporary files and directories...
 rd /S /Q "..\docs\help\ru\build\doctrees"
@@ -65,3 +76,4 @@ rd /S /Q "..\srcrepair\bin"
 rd /S /Q "..\srcrepair\obj"
 rd /S /Q "..\corelib\bin"
 rd /S /Q "..\corelib\obj"
+rd /S /Q "..\doxyout"
