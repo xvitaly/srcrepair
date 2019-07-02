@@ -12,8 +12,9 @@ First you will need to install C# complier, Microsoft .NET Framework SDK and oth
   1. download [Microsoft Visual Studio 2019 Community](https://visualstudio.microsoft.com/vs/community/) installer and run it;
   2. select **Microsoft Visual Studio 2019 Community**, enable **Classic .NET application development** component, then switch to **Additional components** tab and enable **NuGet package manager**;
   3. install Microsoft Visual Studio 2019 Community;
-  4. install [Doxygen for Windows](http://www.doxygen.nl/download.html) to default directory;
-  5. download and install [HTML Help Workshop](https://www.microsoft.com/en-us/download/details.aspx?id=21138);
-  6. download and install [Gpg4Win](https://www.gpg4win.org/) to default directory;
-  7. download and install [Python 3.7 for Windows](https://www.python.org/downloads/windows/);
-  8. open terminal and install Sphinx-doc 1.8.2 using PIP: `pip3 install "sphinx==1.8.2"`.
+  4. download latest version of [NuGet CLI](https://www.nuget.org/downloads) and copy executable to any directory, located in `%PATH%` environment variable;
+  5. install [Doxygen for Windows](http://www.doxygen.nl/download.html) to default directory;
+  6. download and install [HTML Help Workshop](https://www.microsoft.com/en-us/download/details.aspx?id=21138);
+  7. download and install [Gpg4Win](https://www.gpg4win.org/) to default directory;
+  8. download and install [Python 3.7 for Windows](https://www.python.org/downloads/windows/);
+  9. open terminal and install Sphinx-doc 1.8.2 using PIP: `pip3 install "sphinx==1.8.2"`.
