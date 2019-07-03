@@ -15,5 +15,6 @@
    backups.rst
    modules.rst
    settings.rst
+   faq.rst
 
 
