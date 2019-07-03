@@ -1,7 +1,7 @@
 version: 34.0.0.{build}
 pull_requests:
   do_not_increment_build_number: true
-image: Visual Studio 2017
+image: Visual Studio 2019
 configuration: Release
 platform: Any CPU
 clone_depth: 1
@@ -39,7 +39,7 @@ after_build:
 
     7z a -m0=LZMA2 -mx9 -t7z -x!*.ico -x!DotNetZip.xml -x!NLog.xml packaging\results\snapshot_%CI_HASH%.7z %CI_DIR%\*
 
-    "%ProgramFiles(x86)%\Inno Setup 5\ISCC.exe" packaging\inno\srcrepair.iss
+    "%ProgramFiles(x86)%\Inno Setup 6\ISCC.exe" packaging\inno\srcrepair.iss
 test: off
 artifacts:
 - path: packaging\results\snapshot_*.7z
