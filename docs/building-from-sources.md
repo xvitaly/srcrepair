@@ -48,3 +48,13 @@ If you don't want to use automatic method, you can build this project manually.
   5. **Build** - **Build solution**.
 
 You will find results in `srcrepair/bin/Release` directory.
+
+## Building installer
+
+  1. Run InnoSetup Compiler.
+  2. Open file `packaging/inno/srcrepair.iss`.
+  3. **Build** - **Compile**.
+
+If InnoSetup will complain about missing `*.sig` files, you will need to manually sign compiled binaries with detached GnuPG signatures using Gpg4Win, or remove this rows from InnoSetup script.
+
+You will find results in `packaging/results` directory.
