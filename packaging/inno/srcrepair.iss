@@ -117,7 +117,7 @@ Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\NLog.dll"""; Sta
 [Code]
 function GetDefRoot(Param: String): String;
 begin
-  if not IsAdminLoggedOn then
+  if not IsAdmin then
     Result := ExpandConstant('{localappdata}')
   else
     Result := ExpandConstant('{pf}')
