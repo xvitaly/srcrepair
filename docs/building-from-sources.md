@@ -5,6 +5,11 @@ There are two supported ways to build application from sources:
   * fully automatic build;
   * manual build.
 
+# Preparing to build
+
+  1. Clone this repository or download [source tarball](https://github.com/xvitaly/srcrepair/releases).
+  2. Install pre-requirements.
+
 # Installing pre-requirements
 
 First you will need to install C# complier, Microsoft .NET Framework SDK and other required tools (all steps are mandatory):
@@ -31,10 +36,7 @@ You will find results in `packaging/results` directory.
 
 # Manual build
 
-## Preparing to build
-
-  1. Clone this repository or download [source tarball](https://github.com/xvitaly/srcrepair/releases).
-  2. Install pre-requirements.
+If you don't want to use automatic method, you can build this project manually.
 
 ## Building main project
 
