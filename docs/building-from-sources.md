@@ -24,7 +24,24 @@ First you will need to install C# complier, Microsoft .NET Framework SDK and oth
 
 If you want to use automatic build, follow this steps:
 
-  1. install pre-requirements.
+  1. install pre-requirements;
   2. double click on `packaging/build_win.cmd`.
 
 You will find results in `packaging/results` directory.
+
+# Manual build
+
+## Preparing to build
+
+  1. Clone this repository or download [source tarball](https://github.com/xvitaly/srcrepair/releases).
+  2. Install pre-requirements.
+
+## Building main project
+
+  1. Run Microsoft Visual Studio 2019 Community.
+  2. **File** - **Open** - **Project or solution**, select `srcrepair.sln`, then press **Open** button.
+  3. **Tools** - **NuGet Package Manager** - **Manage NuGet packages for Solution**, press **Restore** button.
+  4. **Build** - **Configuration manager** - **Active solution configuration** - **Release**, then press **Close** button.
+  5. **Build** - **Build solution**.
+
+You will find results in `srcrepair/bin/Release` directory.
