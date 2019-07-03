@@ -19,3 +19,12 @@ First you will need to install C# complier, Microsoft .NET Framework SDK and oth
   8. download and install [Python 3.7 for Windows](https://www.python.org/downloads/windows/);
   9. open terminal and install Sphinx-doc 1.8.2 using PIP: `pip3 install "sphinx==1.8.2"`;
   10. download and install [7-Zip for Windows](https://www.7-zip.org/download.html) to default directory.
+
+# Automatic build
+
+If you want to use automatic build, follow this steps:
+
+  1. install pre-requirements.
+  2. double click on `packaging/build_win.cmd`.
+
+You will find results in `packaging/results` directory.
