@@ -23,7 +23,8 @@ First you will need to install C# complier, Microsoft .NET Framework SDK and oth
   7. download and install [Gpg4Win](https://www.gpg4win.org/) to default directory;
   8. download and install [Python 3.7 for Windows](https://www.python.org/downloads/windows/);
   9. open terminal and install Sphinx-doc 1.8.2 using PIP: `pip3 install "sphinx==1.8.2"`;
-  10. download and install [7-Zip for Windows](https://www.7-zip.org/download.html) to default directory.
+  10. download and install [7-Zip for Windows](https://www.7-zip.org/download.html) to default directory;
+  11. download and install [InnoSetup](http://www.jrsoftware.org/isdl.php) to default directory.
 
 # Automatic build
 
