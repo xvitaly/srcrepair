@@ -51,6 +51,7 @@ Compression=lzma2
 SolidCompression=yes
 PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=commandline
+ShowLanguageDialog=auto
 ArchitecturesInstallIn64BitMode=x64
 MinVersion=6.1.7601
 VersionInfoVersion={#VERSION}
