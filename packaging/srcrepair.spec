@@ -21,6 +21,7 @@ BuildRequires: desktop-file-utils
 BuildRequires: libappstream-glib
 BuildRequires: ca-certificates
 BuildRequires: mono-winforms
+BuildRequires: mono-complete
 BuildRequires: mono-devel
 
 Requires: hicolor-icon-theme
@@ -35,9 +36,14 @@ click.
 
 %prep
 %autosetup -p1
+mkdir nuget
+cp -f {%{SOURCE1},%{SOURCE2},%{SOURCE3}} nuget/
+
 cat /etc/ssl/certs/* > bundle.pem
 cert-sync --user bundle.pem
-nuget restore %{name}.sln
+
+mono nuget/nuget-%{nuget_version}.exe install DotNetZip -Source $PWD/nuget -OutputDirectory packages
+mono nuget/nuget-%{nuget_version}.exe install NLog -Source $PWD/nuget -OutputDirectory packages
 
 %build
 xbuild /p:Configuration=Release %{name}.sln
