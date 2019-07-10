@@ -22,7 +22,6 @@ BuildRequires: libappstream-glib
 BuildRequires: ca-certificates
 BuildRequires: mono-winforms
 BuildRequires: mono-devel
-BuildRequires: nuget
 
 Requires: hicolor-icon-theme
 Requires: mono-winforms
