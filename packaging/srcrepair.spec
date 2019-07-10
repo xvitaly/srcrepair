@@ -1,5 +1,9 @@
 %global debug_package %{nil}
 
+%global nuget_version 5.0.2
+%global dotnetzip_version 1.13.3
+%global nlog_version 4.6.5
+
 Name: srcrepair
 Version: 35.0.0
 Release: 1%{?dist}
@@ -8,6 +12,9 @@ Summary: A free open source tool for tuning and cleaning up Source engine games
 License: GPLv3+
 URL: https://github.com/xvitaly/%{name}
 Source0: %{url}/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source1: https://dist.nuget.org/win-x86-commandline/v%{nuget_version}/nuget.exe#/nuget-%{nuget_version}.exe
+Source2: https://www.nuget.org/api/v2/package/DotNetZip/%{dotnetzip_version}#/dotnetzip.%{dotnetzip_version}.nupkg
+Source3: https://www.nuget.org/api/v2/package/NLog/%{nlog_version}#/nlog.%{nlog_version}.nupkg
 BuildArch: noarch
 
 BuildRequires: desktop-file-utils
