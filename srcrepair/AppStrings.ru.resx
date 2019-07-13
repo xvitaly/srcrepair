@@ -603,10 +603,6 @@
     <value>При установке HUD произошла ошибка. Повторите попытку позднее.</value>
     <comment>Сообщение при ошибке во время установки HUD.</comment>
   </data>
-  <data name="HD_InstallBtnProgress" xml:space="preserve">
-    <value>Идёт установка... Ждите.</value>
-    <comment>Текст кнопки во время распаковки HUD.</comment>
-  </data>
   <data name="UPD_HUDNoUpdates" xml:space="preserve">
     <value>Нет новых обновлений базы HUD. Используется свежайшая версия.</value>
     <comment>Выводится в случае если модуль не смог найти новых версий базы HUD</comment>
