@@ -1280,36 +1280,31 @@ namespace srcrepair.gui
         private void BW_HudInstall_DoWork(object sender, DoWorkEventArgs e)
         {
             List<String> Arguments = e.Argument as List<String>;
-            string InstallTmp = Path.Combine(App.SourceGames[SelectedGame].CustomInstallDir, "hudtemp");
+            string InstallTmp = Path.Combine(App.SourceGames[Arguments[0]].CustomInstallDir, "hudtemp");
 
             try
             {
-                // Изменяем текст на "Идёт установка" и отключаем её...
-                Invoke((MethodInvoker)delegate () { HD_Install.Text = AppStrings.HD_InstallBtnProgress; HD_Install.Enabled = false; });
-
-                // Устанавливаем и очищаем временный каталог...
+                Directory.Move(Path.Combine(InstallTmp, HUDManager.FormatIntDir(App.SourceGames[Arguments[0]].HUDMan[Arguments[1]].ArchiveDir)), Path.Combine(App.SourceGames[Arguments[0]].CustomInstallDir, App.SourceGames[Arguments[0]].HUDMan[Arguments[1]].InstallDir));
+            }
+            finally
+            {
                 try
-                {
-                    Directory.Move(Path.Combine(InstallTmp, HUDManager.FormatIntDir(App.SourceGames[SelectedGame].HUDMan[Arguments[1]].ArchiveDir)), Path.Combine(App.SourceGames[SelectedGame].CustomInstallDir, App.SourceGames[SelectedGame].HUDMan[Arguments[1]].InstallDir));
-                }
-                finally
                 {
                     if (Directory.Exists(InstallTmp))
                     {
                         Directory.Delete(InstallTmp, true);
                     }
                 }
-            }
-            finally
-            {
-                // Возвращаем сохранённый...
-                Invoke((MethodInvoker)delegate () { HD_Install.Text = Arguments[0]; HD_Install.Enabled = true; });
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex);
+                }
             }
         }
 
         private void BW_HudInstall_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            // Выводим сообщение...
+            HD_Install.Enabled = true;
             if (e.Error == null)
             {
                 MessageBox.Show(AppStrings.HD_InstallSuccessfull, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -1319,8 +1314,6 @@ namespace srcrepair.gui
                 MessageBox.Show(AppStrings.HD_InstallError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Logger.Error(e.Error, DebugStrings.AppDbgExHUDInstall);
             }
-
-            // Включаем кнопку удаления если HUD установлен...
             SetHUDButtons(HUDManager.CheckInstalledHUD(App.SourceGames[SelectedGame].CustomInstallDir, App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].InstallDir));
         }
 
@@ -2774,12 +2767,7 @@ namespace srcrepair.gui
                                 GuiHelpers.FormShowArchiveExtract(App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].LocalFile, Path.Combine(App.SourceGames[SelectedGame].CustomInstallDir, "hudtemp"));
 
                                 // Запускаем установку пакета в отдельном потоке...
-                                List<String> HudWrkArguments = new List<String>
-                                {
-                                    HD_Install.Text,
-                                    HD_HSel.Text
-                                };
-                                if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(argument: HudWrkArguments); }
+                                if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(argument: new List<String> { SelectedGame, HD_HSel.Text }); }
                             }
                             else
                             {
