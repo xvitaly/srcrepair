@@ -1251,7 +1251,7 @@ namespace srcrepair.gui
                 using (WebClient Downloader = new WebClient())
                 {
                     Downloader.Headers.Add("User-Agent", App.UserAgent);
-                    Downloader.DownloadFile(App.SourceGames[SelectedGame].HUDMan[(string)Agruments[1]].Preview, ScreenFile);
+                    Downloader.DownloadFile(App.SourceGames[(string)Agruments[0]].HUDMan[(string)Agruments[1]].Preview, ScreenFile);
                 }
             }
 
