@@ -1234,31 +1234,36 @@ namespace srcrepair.gui
 
         private void BW_HUDScreen_DoWork(object sender, DoWorkEventArgs e)
         {
-            // Сгенерируем путь к файлу со скриншотом...
-            string ScreenFile = Path.Combine(App.SourceGames[SelectedGame].AppHUDDir, Path.GetFileName(App.SourceGames[SelectedGame].HUDMan[(string)e.Argument].Preview));
+            // Parsing arguments...
+            List<object> Agruments = e.Argument as List<object>;
 
-            // Загрузим файл если не существует...
+            // Generating full file name for HUD screenshot...
+            string ScreenFile = Path.Combine(App.SourceGames[(string)Agruments[0]].AppHUDDir, Path.GetFileName(App.SourceGames[(string)Agruments[0]].HUDMan[(string)Agruments[1]].Preview));
+
+            // Downloading file if it doesn't exists...
             if (!File.Exists(ScreenFile))
             {
                 using (WebClient Downloader = new WebClient())
                 {
                     Downloader.Headers.Add("User-Agent", App.UserAgent);
-                    Downloader.DownloadFile(App.SourceGames[SelectedGame].HUDMan[(string)e.Argument].Preview, ScreenFile);
+                    Downloader.DownloadFile(App.SourceGames[SelectedGame].HUDMan[(string)Agruments[1]].Preview, ScreenFile);
                 }
             }
 
-            // Установим...
-            Invoke((MethodInvoker)delegate () { HD_GB_Pbx.Image = Image.FromFile(ScreenFile); });
+            // Returning result to callback...
+            e.Result = ScreenFile;
         }
 
         private void BW_HUDScreen_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            string ScreenFile = Path.Combine(App.SourceGames[SelectedGame].AppHUDDir, Path.GetFileName(App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].Preview));
-
-            if (e.Error != null)
+            if (e.Error == null)
+            {
+                HD_GB_Pbx.Image = Image.FromFile((string)e.Result);
+            }
+            else
             {
                 Logger.Warn(e.Error);
-                if (File.Exists(ScreenFile)) { File.Delete(ScreenFile); }
+                if (File.Exists((string)e.Result)) { File.Delete((string)e.Result); }
             }
         }
 
@@ -2726,7 +2731,7 @@ namespace srcrepair.gui
             SetHUDButtons(HUDManager.CheckInstalledHUD(App.SourceGames[SelectedGame].CustomInstallDir, App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].InstallDir));
 
             // Загрузим скриншот выбранного HUD...
-            if (Success && !BW_HUDScreen.IsBusy) { BW_HUDScreen.RunWorkerAsync(argument: HD_HSel.Text); }
+            if (Success && !BW_HUDScreen.IsBusy) { BW_HUDScreen.RunWorkerAsync(argument: new List<object> { SelectedGame, HD_HSel.Text }); }
         }
 
         private void HD_Install_Click(object sender, EventArgs e)
