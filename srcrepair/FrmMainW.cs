@@ -1232,6 +1232,11 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// Gets screenshot of selected HUD from disk or URL.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Additional arguments.</param>
         private void BW_HUDScreen_DoWork(object sender, DoWorkEventArgs e)
         {
             // Parsing arguments...
@@ -1254,6 +1259,11 @@ namespace srcrepair.gui
             e.Result = ScreenFile;
         }
 
+        /// <summary>
+        /// Renders screenshot of selected HUD on its tab.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Completion arguments and results.</param>
         private void BW_HUDScreen_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             if (e.Error == null)
