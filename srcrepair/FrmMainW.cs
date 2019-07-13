@@ -2777,6 +2777,7 @@ namespace srcrepair.gui
                                 GuiHelpers.FormShowArchiveExtract(App.SourceGames[SelectedGame].HUDMan[HD_HSel.Text].LocalFile, Path.Combine(App.SourceGames[SelectedGame].CustomInstallDir, "hudtemp"));
 
                                 // Запускаем установку пакета в отдельном потоке...
+                                ((Button)sender).Enabled = false;
                                 if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(argument: new List<String> { SelectedGame, HD_HSel.Text }); }
                             }
                             else
