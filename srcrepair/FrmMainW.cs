@@ -1204,12 +1204,22 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// Gets collection of available HUDs.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Additional arguments.</param>
         private void BW_HUDList_DoWork(object sender, DoWorkEventArgs e)
         {
             App.SourceGames[(string)e.Argument].HUDMan = new HUDManager(App.SourceGames[(string)e.Argument].SmallAppName, App.FullAppPath, App.SourceGames[(string)e.Argument].AppHUDDir, Properties.Settings.Default.HUDHideOutdated);
         }
 
 
+        /// <summary>
+        /// Renders collection of available HUDs on its tab.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Completion arguments and results.</param>
         private void BW_HUDList_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             if (e.Error == null)
