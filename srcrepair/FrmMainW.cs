@@ -1277,6 +1277,11 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// Finalizes installation of selected HUD.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Additional arguments.</param>
         private void BW_HudInstall_DoWork(object sender, DoWorkEventArgs e)
         {
             List<String> Arguments = e.Argument as List<String>;
@@ -1302,6 +1307,11 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// Returns information with HUD installation result.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Completion arguments and results.</param>
         private void BW_HudInstall_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             HD_Install.Enabled = true;
