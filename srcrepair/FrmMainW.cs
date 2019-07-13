@@ -1206,7 +1206,7 @@ namespace srcrepair.gui
 
         private void BW_HUDList_DoWork(object sender, DoWorkEventArgs e)
         {
-            App.SourceGames[SelectedGame].HUDMan = new HUDManager(App.SourceGames[SelectedGame].SmallAppName, App.FullAppPath, App.SourceGames[SelectedGame].AppHUDDir, Properties.Settings.Default.HUDHideOutdated);
+            App.SourceGames[(string)e.Argument].HUDMan = new HUDManager(App.SourceGames[(string)e.Argument].SmallAppName, App.FullAppPath, App.SourceGames[(string)e.Argument].AppHUDDir, Properties.Settings.Default.HUDHideOutdated);
         }
 
 
@@ -1504,7 +1504,7 @@ namespace srcrepair.gui
                 HandleHUDMode(App.SourceGames[SelectedGame].IsHUDsAvailable);
 
                 // Считаем список доступных HUD для данной игры...
-                if (App.SourceGames[SelectedGame].IsHUDsAvailable) { if (!BW_HUDList.IsBusy) { BW_HUDList.RunWorkerAsync(); } }
+                if (App.SourceGames[SelectedGame].IsHUDsAvailable) { if (!BW_HUDList.IsBusy) { BW_HUDList.RunWorkerAsync(SelectedGame); } }
 
                 // Считаем список бэкапов...
                 UpdateBackUpList();
