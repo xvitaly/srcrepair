@@ -1474,15 +1474,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Specify the path to Steam:.
-        /// </summary>
-        internal static string SteamPathEnterText {
-            get {
-                return ResourceManager.GetString("SteamPathEnterText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Specify the path to Steam.
         /// </summary>
         internal static string SteamPathEnterTitle {

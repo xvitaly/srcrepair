@@ -664,20 +664,29 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Требует указать путь к Steam вручную при невозможности автоопределения.
+        /// Returns manually entered by user path to installed Steam client.
         /// </summary>
+        /// <returns>Path to installed Steam client.</returns>
         private string GetPathByMEnter()
         {
-            // Задаём начальное значение...
-            string Result = String.Empty;
+            string Result;
 
-            // Указываем текст в диалоге поиска каталога...
-            FldrBrwse.Description = AppStrings.SteamPathEnterText;
+            if (FldrBrwse.ShowDialog() == DialogResult.OK)
+            {
+                if (!File.Exists(Path.Combine(FldrBrwse.SelectedPath, App.Platform.SteamBinaryName)))
+                {
+                    throw new FileNotFoundException("Invalid Steam directory entered by user", Path.Combine(FldrBrwse.SelectedPath, App.Platform.SteamBinaryName));
+                }
+                else
+                {
+                    Result = FldrBrwse.SelectedPath;
+                }
+            }
+            else
+            {
+                throw new OperationCanceledException("User closed opendir window");
+            }
 
-            // Отображаем стандартный диалог поиска каталога...
-            if (FldrBrwse.ShowDialog() == DialogResult.OK) { if (!(File.Exists(Path.Combine(FldrBrwse.SelectedPath, App.Platform.SteamBinaryName)))) { throw new FileNotFoundException("Invalid Steam directory entered by user", Path.Combine(FldrBrwse.SelectedPath, App.Platform.SteamBinaryName)); } else { Result = FldrBrwse.SelectedPath; } } else { throw new OperationCanceledException("User closed opendir window"); }
-
-            // Возвращаем результат...
             return Result;
         }
 

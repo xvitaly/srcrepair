@@ -245,10 +245,6 @@
     <value>Вы указали неправильный путь! Программа будет завершена.</value>
     <comment>Сообщение при вводе неверного пути</comment>
   </data>
-  <data name="SteamPathEnterText" xml:space="preserve">
-    <value>Укажите путь к установленному Steam:</value>
-    <comment>Текст InputBox'а ввода пути Steam</comment>
-  </data>
   <data name="SteamPathEnterTitle" xml:space="preserve">
     <value>Укажите путь к Steam</value>
     <comment>Заголовок InputBox'а ввода пути Steam</comment>

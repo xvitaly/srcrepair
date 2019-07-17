@@ -213,9 +213,6 @@
   <data name="SteamPathEnterErr" xml:space="preserve">
     <value>You have entered the wrong path! The program will be terminated.</value>
   </data>
-  <data name="SteamPathEnterText" xml:space="preserve">
-    <value>Specify the path to Steam:</value>
-  </data>
   <data name="SteamPathEnterTitle" xml:space="preserve">
     <value>Specify the path to Steam</value>
   </data>

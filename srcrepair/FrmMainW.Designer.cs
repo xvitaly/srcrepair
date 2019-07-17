@@ -1935,6 +1935,7 @@
             // 
             // FldrBrwse
             // 
+            resources.ApplyResources(this.FldrBrwse, "FldrBrwse");
             this.FldrBrwse.ShowNewFolderButton = false;
             // 
             // BW_UpChk
