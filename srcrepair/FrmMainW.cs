@@ -368,7 +368,7 @@ namespace srcrepair.gui
         /// <returns>Возвращает пару "тип архива" и "удобочитаемое название"</returns>
         private Tuple<string, string> GenUserFriendlyBackupDesc(FileInfo FileName)
         {
-            string ConfRow, ConfType = String.Empty;
+            string ConfRow, ConfType;
             switch (FileName.Name.Substring(0, FileName.Name.LastIndexOf('_')))
             {
                 case "Container":
