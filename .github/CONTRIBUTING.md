@@ -4,7 +4,7 @@ This document describes how you can contribute to SRC Repair. Please read it car
 
 ## Issues
 
-Feel free to open issues and report bugs or ask for feature requests.
+Feel free to open issues and [report bugs](https://github.com/xvitaly/srcrepair/issues/new?template=bug-report.md) or ask for [feature requests](https://github.com/xvitaly/srcrepair/issues/new?template=feature-request.md).
 
 ## Pull requests
 
@@ -25,7 +25,7 @@ Feel free to open issues and report bugs or ask for feature requests.
  git add . && git commit -sm "Full description of your changes"
  ```
  
- 5. Add upstream as [remote repository](https://help.github.com/articles/configuring-a-remote-for-a-fork/):
+ 5. Add upstream as a [remote repository](https://help.github.com/articles/configuring-a-remote-for-a-fork/):
  ```bash
  git remote add upstream https://github.com/xvitaly/srcrepair.git
  ```
@@ -43,7 +43,7 @@ Feel free to open issues and report bugs or ask for feature requests.
  git rebase dev
  ```
  
- 8. Squash all your commits into single one and open a new pull request.
+ 8. Squash all your commits into a single one and open a new pull request.
 
 ### Signing off your work
 
