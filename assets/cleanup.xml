@@ -20,4 +20,132 @@
   along with this program. If not, see <http://www.gnu.org/licenses/>.
 -->
 <Targets>
+    <Target>
+        <ID>0</ID>
+        <Name>Custom maps</Name>
+        <Directories>
+            <Directory Class="Safe">$FullGamePath$/custom/*.bsp</Directory>
+            <Directory Class="Safe">$FullGamePath$/download/*.bsp</Directory>
+            <Directory Class="Safe">$AppWorkshopDir$/*.bsp</Directory>
+        </Directories>
+    </Target>
+    <Target>
+        <ID>1</ID>
+        <Name>Download cache</Name>
+        <Directories>
+            <Directory Class="Safe">$FullGamePath$/download/*.*</Directory>
+            <Directory Class="Safe">$FullGamePath$/downloads/*.*</Directory>
+            <Directory Class="Safe">$FullGamePath$/streams/*.*</Directory>
+        </Directories>
+    </Target>
+    <Target>
+        <ID>2</ID>
+        <Name>Sound cache</Name>
+        <Directories>
+            <Directory Class="Safe">$FullGamePath$/maps/graphs/*.*</Directory>
+            <Directory Class="Safe">$FullGamePath$/maps/soundcache/*.*</Directory>
+            <Directory Class="Safe">$FullGamePath$/download/sound/*.*</Directory>
+            <Directory Class="Safe">$FullGamePath$/*.cache</Directory>
+        </Directories>
+    </Target>
+    <Target>
+        <ID>3</ID>
+        <Name>Screenshots</Name>
+        <Directories>
+            <Directory Class="Safe">$FullGamePath$/screenshots/*.*</Directory>
+        </Directories>
+    </Target>
+    <Target>
+        <ID>4</ID>
+        <Name>Recorded demos</Name>
+        <Directories>
+            <Directory Class="Safe">$FullGamePath$/demos/*.*</Directory>
+            <Directory Class="Safe">$FullGamePath$/*.dem</Directory>
+            <Directory Class="Safe">$FullGamePath$/*.mp4</Directory>
+            <Directory Class="Safe">$FullGamePath$/*.tga</Directory>
+            <Directory Class="Safe">$FullGamePath$/*.wav</Directory>
+        </Directories>
+    </Target>
+    <Target>
+        <ID>5</ID>
+        <Name>Old binaries</Name>
+        <Directories>
+            <Directory Class="Safe">$GamePath$/$FIXME$/bin/*.*</Directory>
+            <Directory Class="Safe">$FullGamePath$/bin/*.*</Directory>
+            <Directory Class="Safe">$GamePath$/*.exe</Directory>
+            <Directory Class="Unsafe">$GamePath$/platform/*.*</Directory>
+        </Directories>
+    </Target>
+    <Target>
+        <ID>6</ID>
+        <Name>Replays</Name>
+        <Directories>
+            <Directory Class="Safe">$FullGamePath$/replay/*.*</Directory>
+        </Directories>
+    </Target>
+    <Target>
+        <ID>7</ID>
+        <Name>Custom models and textures</Name>
+        <Directories>
+            <Directory Class="Safe">$FullGamePath$/download/*.vt*</Directory>
+            <Directory Class="Safe">$FullGamePath$/download/*.vmt</Directory>
+            <Directory Class="Safe">$FullGamePath$/download/*.mdl</Directory>
+            <Directory Class="Safe">$FullGamePath$/download/*.phy</Directory>
+            <Directory Class="Safe">$FullGamePath$/custom/*.vt*</Directory>
+            <Directory Class="Safe">$FullGamePath$/custom/*.vmt</Directory>
+            <Directory Class="Safe">$FullGamePath$/custom/*.mdl</Directory>
+            <Directory Class="Safe">$FullGamePath$/custom/*.phy</Directory>
+            <Directory Class="Unsafe">$FullGamePath$/materials/*.*</Directory>
+            <Directory Class="Unsafe">$FullGamePath$/models/*.*</Directory>
+        </Directories>
+    </Target>
+    <Target>
+        <ID>8</ID>
+        <Name>Secondary cache</Name>
+        <Directories>
+            <Directory Class="Safe">$FullGamePath$/cache/*.*</Directory>
+            <Directory Class="Safe">$FullGamePath$/custom/user_custom/*.*</Directory>
+            <Directory Class="Safe">$GamePath$/config/html/*.*</Directory>
+        </Directories>
+    </Target>
+    <Target>
+        <ID>9</ID>
+        <Name>Custom sounds</Name>
+        <Directories>
+            <Directory Class="Safe">$FullGamePath$/download/*.mp3</Directory>
+            <Directory Class="Safe">$FullGamePath$/download/*.wav</Directory>
+            <Directory Class="Unsafe">$FullGamePath$/sound/*.*</Directory>
+        </Directories>
+    </Target>
+    <Target>
+        <ID>10</ID>
+        <Name>Custom directory contents</Name>
+        <Directories>
+            <Directory Class="Safe">$FullGamePath$/custom/*.*</Directory>
+            <Directory Class="Safe">$AppWorkshopDir$/*.*</Directory>
+        </Directories>
+    </Target>
+    <Target>
+        <ID>11</ID>
+        <Name>Deep cleanup</Name>
+        <Directories>
+            <Directory Class="Safe">$GamePath$/$FIXME$/bin/*.*</Directory>
+            <Directory Class="Safe">$FullGamePath$/bin/*.*</Directory>
+            <Directory Class="Safe">$GamePath$/*.exe</Directory>
+            <Directory Class="Safe">$FullGamePath$/download/*.*</Directory>
+            <Directory Class="Safe">$FullGamePath$/custom/*.*</Directory>
+            <Directory Class="Safe">$AppWorkshopDir$/*.*</Directory>
+            <Directory Class="Safe">$FullGamePath$/cache/*.*</Directory>
+            <Directory Class="Safe">$FullGamePath$/cfg/*.cfg</Directory>
+            <Directory Class="Unsafe">$GamePath$/platform/*.*</Directory>
+        </Directories>
+    </Target>
+    <Target>
+        <ID>12</ID>
+        <Name>Game configs</Name>
+        <Directories>
+            <Directory Class="Safe">$FullGamePath$/cfg/*.*</Directory>
+            <Directory Class="Safe">$FullGamePath$/custom/*.cfg</Directory>
+        </Directories>
+    </Target>
 </Targets>
