@@ -20,279 +20,279 @@
   along with this program. If not, see <http://www.gnu.org/licenses/>.
 -->
 <Configs>
-  <Config>
-    <Name>bonhighfps</Name>
-    <FileName>bonhighfps.cfg</FileName>
-    <SupportedGames>240</SupportedGames>
-    <ru>
-    <![CDATA[Один из самых продвинутых FPS-конфигов. При его использовании изображение становится похожим на картинку на 16-битной консоли.
+    <Config>
+        <Name>bonhighfps</Name>
+        <FileName>bonhighfps.cfg</FileName>
+        <SupportedGames>240</SupportedGames>
+        <ru>
+        <![CDATA[Один из самых продвинутых FPS-конфигов. При его использовании изображение становится похожим на картинку на 16-битной консоли.
 
 Прирост производительности: Очень высокий
 Ухудшение качества графики: Максимальное]]>
-    </ru>
-    <en>
-    <![CDATA[One of the most effective FPS configs. Makes TF2 look like a 16-bit game. Strongly recommended for old or low-end PCs and graphics cards. This config gives the greatest FPS increase.
+        </ru>
+        <en>
+        <![CDATA[One of the most effective FPS configs. Makes TF2 look like a 16-bit game. Strongly recommended for old or low-end PCs and graphics cards. This config gives the greatest FPS increase.
 
 FPS increase: Maximum
 Graphics degradation: 16-bit style
 
 Warning: outdated. Do not use on latest Team Fortress 2 versions!
 ]]>
-    </en>
-  </Config>
-  <Config>
-    <Name>chrisdx9frames</Name>
-    <FileName>chrisdx9frames.cfg</FileName>
-    <SupportedGames>240</SupportedGames>
-    <ru>
-    <![CDATA[Dx9frames - это специальная модификация конфига chrishighframes для работы в режиме DirectX 9.0. Рекомендуется на не слишком старых ПК.
+        </en>
+    </Config>
+    <Config>
+        <Name>chrisdx9frames</Name>
+        <FileName>chrisdx9frames.cfg</FileName>
+        <SupportedGames>240</SupportedGames>
+        <ru>
+        <![CDATA[Dx9frames - это специальная модификация конфига chrishighframes для работы в режиме DirectX 9.0. Рекомендуется на не слишком старых ПК.
 
 Прирост производительности: Высокий
 Ухудшение качества графики: Значительное]]>
-    </ru>
-    <en>
+        </ru>
+        <en>
     <![CDATA[Dx9frames is a chrishighframes cfg derivative designed to work without issue in DirectX 9 mode. Recommended for use on low-end PCs.
 
 FPS increase: High
 Graphics degradation: Some]]>
-    </en>
-  </Config>
-  <Config>
-    <Name>chrishighframes</Name>
-    <FileName>chrishighframes.cfg</FileName>
-    <SupportedGames>240</SupportedGames>
-    <ru>
-    <![CDATA[Неплохой FPS-конфиг, при значительном увеличении кадровой частоты, не сильно портящий изображение. Рекомендуется на не слишком старых ПК.
+        </en>
+    </Config>
+    <Config>
+        <Name>chrishighframes</Name>
+        <FileName>chrishighframes.cfg</FileName>
+        <SupportedGames>240</SupportedGames>
+        <ru>
+        <![CDATA[Неплохой FPS-конфиг, при значительном увеличении кадровой частоты, не сильно портящий изображение. Рекомендуется на не слишком старых ПК.
 
 Прирост производительности: Высокий
 Ухудшение качества графики: Значительное]]>
-    </ru>
-    <en>
+        </ru>
+        <en>
     <![CDATA[Хороший FPS-конфиг, при значительном увеличении кадровой частоты, незначительно портящий изображение. Рекомендуется к использованию на старых ПК.
 
 Прирост производительности: Высокий
 Ухудшение качества графики: Высокое]]>
-    </en>
-  </Config>
-  <Config>
-    <Name>chrismaxfps</Name>
-    <FileName>chrismaxfps.cfg</FileName>
-    <SupportedGames>240</SupportedGames>
-    <ru>
-    <![CDATA[Хороший FPS-конфиг, при значительном увеличении кадровой частоты, незначительно портящий изображение. Рекомендуется к использованию на старых ПК.
+        </en>
+    </Config>
+    <Config>
+        <Name>chrismaxfps</Name>
+        <FileName>chrismaxfps.cfg</FileName>
+        <SupportedGames>240</SupportedGames>
+        <ru>
+        <![CDATA[Хороший FPS-конфиг, при значительном увеличении кадровой частоты, незначительно портящий изображение. Рекомендуется к использованию на старых ПК.
 
 Прирост производительности: Высокий
 Ухудшение качества графики: Высокое]]>
-    </ru>
-    <en>
-    <![CDATA[Nice FPS config that does a good job and gives you a decent picture. Recommended for use on low-end PCs.
+        </ru>
+        <en>
+        <![CDATA[Nice FPS config that does a good job and gives you a decent picture. Recommended for use on low-end PCs.
 
 FPS increase: High
 Graphics degradation: Some]]>
-    </en>
-  </Config>
-  <Config>
-    <Name>chrismaxquality</Name>
-    <FileName>chrismaxquality.cfg</FileName>
-    <SupportedGames>240</SupportedGames>
-    <ru>
-    <![CDATA[FPS-конфиг "наоборот". Устанавливает все графические настройки игры на максимум, что позволит получить наилучшее качество графики. Устанавливайте только на мощном современном компьютере.
+        </en>
+    </Config>
+    <Config>
+        <Name>chrismaxquality</Name>
+        <FileName>chrismaxquality.cfg</FileName>
+        <SupportedGames>240</SupportedGames>
+        <ru>
+        <![CDATA[FPS-конфиг "наоборот". Устанавливает все графические настройки игры на максимум, что позволит получить наилучшее качество графики. Устанавливайте только на мощном современном компьютере.
 
 Прирост производительности: Отрицательный
 Ухудшение качества графики: Нет]]>
-    </ru>
-    <en>
-    <![CDATA[This config will set all graphic settings to maximum. This will require a powerful PC.
+        </ru>
+        <en>
+        <![CDATA[This config will set all graphic settings to maximum. This will require a powerful PC.
 
 FPS increase: None
 Graphics degradation: None]]>
-    </en>
-  </Config>
-  <Config>
-    <Name>comangliacinema</Name>
-    <FileName>comangliacinema.cfg</FileName>
-    <SupportedGames>240;440</SupportedGames>
-    <ru>
-    <![CDATA[FPS-конфиг "наоборот". Устанавливает все графические настройки игры на максимум, что позволит получить наилучшее качество графики. Данный конфиг создан специально для создателей видеороликов. Используйте только на мощном современном компьютере.
+        </en>
+    </Config>
+    <Config>
+        <Name>comangliacinema</Name>
+        <FileName>comangliacinema.cfg</FileName>
+        <SupportedGames>240;440</SupportedGames>
+        <ru>
+        <![CDATA[FPS-конфиг "наоборот". Устанавливает все графические настройки игры на максимум, что позволит получить наилучшее качество графики. Данный конфиг создан специально для создателей видеороликов. Используйте только на мощном современном компьютере.
 
 Прирост производительности: Отрицательный
 Ухудшение качества графики: Нет]]>
-    </ru>
-    <en>
-    <![CDATA[This config, designed for movie makers, will set all graphic settings to maximum. This will require a powerful PC.
+        </ru>
+        <en>
+        <![CDATA[This config, designed for movie makers, will set all graphic settings to maximum. This will require a powerful PC.
 
 FPS increase: None
 Graphics degradation: None]]>
-    </en>
-  </Config>
-  <Config>
-    <Name>comangliamaxfps</Name>
-    <FileName>comangliamaxfps.cfg</FileName>
-    <SupportedGames>240;440</SupportedGames>
-    <ru>
-    <![CDATA[Улучшенный вариант FPS-конфига от Chris. Обеспечивает значительный прирост кадровой частоты при сильном ухудшении качества картинки. Автор предупреждает о том, что данный конфиг нестабилен на системах с одноядерным процессором (вместо него следует использовать comangliastability.cfg).
+        </en>
+    </Config>
+    <Config>
+        <Name>comangliamaxfps</Name>
+        <FileName>comangliamaxfps.cfg</FileName>
+        <SupportedGames>240;440</SupportedGames>
+        <ru>
+        <![CDATA[Улучшенный вариант FPS-конфига от Chris. Обеспечивает значительный прирост кадровой частоты при сильном ухудшении качества картинки. Автор предупреждает о том, что данный конфиг нестабилен на системах с одноядерным процессором (вместо него следует использовать comangliastability.cfg).
 
 Прирост производительности: Высокий
 Ухудшение качества графики: Очень высокое]]>
-    </ru>
-    <en>
-    <![CDATA[Comanglia' frames config config inspired by chris, designed to get you a large performance boost. Very unstable on singe-core CPUs (use comangliastability.cfg instead).
+        </ru>
+        <en>
+        <![CDATA[Comanglia' frames config config inspired by chris, designed to get you a large performance boost. Very unstable on singe-core CPUs (use comangliastability.cfg instead).
 
 FPS increase: High
 Graphics degradation: 16-bit style]]>
-    </en>
-  </Config>
-  <Config>
-    <Name>comangliastability</Name>
-    <FileName>comangliastability.cfg</FileName>
-    <SupportedGames>240;440</SupportedGames>
-    <ru>
-    <![CDATA[Неплохой FPS-конфиг, при значительном увеличении кадровой частоты, не сильно портящий изображение. Улучшенная версия конфига от Криса. Оптимизирован для максимальной стабильности. Рекомендуется на не слишком старых ПК.
+        </en>
+    </Config>
+    <Config>
+        <Name>comangliastability</Name>
+        <FileName>comangliastability.cfg</FileName>
+        <SupportedGames>240;440</SupportedGames>
+        <ru>
+        <![CDATA[Неплохой FPS-конфиг, при значительном увеличении кадровой частоты, не сильно портящий изображение. Улучшенная версия конфига от Криса. Оптимизирован для максимальной стабильности. Рекомендуется на не слишком старых ПК.
 
 Прирост производительности: Высокий
 Ухудшение качества графики: Значительное]]>
-    </ru>
-    <en>
+        </ru>
+        <en>
     <![CDATA[Nice FPS config that does a good job and gives you a decent picture. Optimized for max stability. Recommended for use on middle-end PCs.
 
 FPS increase: High
 Graphics degradation: Moderate]]>
-    </en>
-  </Config>
-  <Config>
-    <Name>dt_legal</Name>
-    <FileName>dt_legal.cfg</FileName>
-    <SupportedGames>240</SupportedGames>
-    <ru>
+        </en>
+    </Config>
+    <Config>
+        <Name>dt_legal</Name>
+        <FileName>dt_legal.cfg</FileName>
+        <SupportedGames>240</SupportedGames>
+        <ru>
     <![CDATA[Хороший конфиг для слабых машин, обеспечивающий значительный прирост кадровой частоты. Полностью легален для использования в большинстве европейских киберспортивных лиг.
 
 Прирост производительности: Значительный
 Ухудшение качества графики: Среднее]]>
-    </ru>
-    <en>
+        </ru>
+        <en>
     <![CDATA[Useful for low-end PCs. Gives a good FPS increase. Allowed by almost all European TF2 leagues.
 
 FPS increase: Pretty much
 Graphics degradation: Medium]]>
-    </en>
-  </Config>
-  <Config>
-    <Name>m0refps</Name>
-    <FileName>m0refps.cfg</FileName>
-    <SupportedGames>240</SupportedGames>
-    <ru>
-    <![CDATA[Довольно известный в кругу киберспортсменов конфиг, который при достаточно сильном снижении качества графики даёт не слишком большой прирост в FPS. Рекомендуется использовать сей конфиг лишь на «средних» компьютерах.
+        </en>
+    </Config>
+    <Config>
+        <Name>m0refps</Name>
+        <FileName>m0refps.cfg</FileName>
+        <SupportedGames>240</SupportedGames>
+        <ru>
+        <![CDATA[Довольно известный в кругу киберспортсменов конфиг, который при достаточно сильном снижении качества графики даёт не слишком большой прирост в FPS. Рекомендуется использовать сей конфиг лишь на «средних» компьютерах.
 
 Прирост производительности: Средний
 Ухудшение качества графики: Выше среднего]]>
-    </ru>
-    <en>
-    <![CDATA[Well-known config with limited FPS increase while reducing graphics quality. Recommended for use on some budget PCs.
+        </ru>
+        <en>
+        <![CDATA[Well-known config with limited FPS increase while reducing graphics quality. Recommended for use on some budget PCs.
 
 FPS increase: Medium
 Graphics degradation: Moderate]]>
-    </en>
-  </Config>
-  <Config>
-    <Name>m0rehighfps</Name>
-    <FileName>m0rehighfps.cfg</FileName>
-    <SupportedGames>240</SupportedGames>
-    <ru>
-    <![CDATA[Первый мощный и качественный FPS-конфиг, рассчитанный в основном на старые компьютеры. Очень сильно ухудшает качество графики TF2 (игра начинает напоминать CS 1.6), но позволяет играть даже на самых слабых компьютерах.
+        </en>
+    </Config>
+    <Config>
+        <Name>m0rehighfps</Name>
+        <FileName>m0rehighfps.cfg</FileName>
+        <SupportedGames>240</SupportedGames>
+        <ru>
+        <![CDATA[Первый мощный и качественный FPS-конфиг, рассчитанный в основном на старые компьютеры. Очень сильно ухудшает качество графики TF2 (игра начинает напоминать CS 1.6), но позволяет играть даже на самых слабых компьютерах.
 
 Прирост производительности: Высокий
 Ухудшение качества графики: Довольно сильное]]>
-    </ru>
-    <en>
-    <![CDATA[First advanced quality FPS config which can be useful for older PCs. TF2 turns into TFC (sadly, with hats) but it gives you the chance to play even on some ancient PCs.
+        </ru>
+        <en>
+        <![CDATA[First advanced quality FPS config which can be useful for older PCs. TF2 turns into TFC (sadly, with hats) but it gives you the chance to play even on some ancient PCs.
 
 FPS increase: High
 Graphics degradation: High]]>
-    </en>
-  </Config>
-  <Config>
-    <Name>skullhighfps</Name>
-    <FileName>skullhighfps.cfg</FileName>
-    <SupportedGames>240</SupportedGames>
-    <ru>
-    <![CDATA[Конфиг от Skull'a. По производительности почти идентичен конфигу bon'a, но графика в игре становится немного лучше, чем при использовании bonhighfps. Рекомендуется использовать на старых ПК, страдающих острой нехваткой кадровой частоты.
+        </en>
+    </Config>
+    <Config>
+        <Name>skullhighfps</Name>
+        <FileName>skullhighfps.cfg</FileName>
+        <SupportedGames>240</SupportedGames>
+        <ru>
+        <![CDATA[Конфиг от Skull'a. По производительности почти идентичен конфигу bon'a, но графика в игре становится немного лучше, чем при использовании bonhighfps. Рекомендуется использовать на старых ПК, страдающих острой нехваткой кадровой частоты.
 
 Прирост производительности: Высокий
 Ухудшение качества графики: Довольно сильное]]>
-    </ru>
-    <en>
-    <![CDATA[Skull's config. Practically the same as bon's one but the with slightly better graphics than the one from bonhighfps config. Recommended for use on low-end laptops and old PCs.
+        </ru>
+        <en>
+        <![CDATA[Skull's config. Practically the same as bon's one but the with slightly better graphics than the one from bonhighfps config. Recommended for use on low-end laptops and old PCs.
 
 FPS increase: High
 Graphics degradation: Moderate]]>
-    </en>
-  </Config>
-  <Config>
-    <Name>v1tsk's_generic</Name>
-    <FileName>v1tsk's_generic.cfg</FileName>
-    <SupportedGames>240;440</SupportedGames>
-    <ru>
-    <![CDATA[Базовый конфиг (ранее назывался team-fortress.ru), обеспечивающий небольшой плюс к FPS, но и не портящий изображение. Он снижает только те параметры, которые обеспечивают максимальный прирост графики. Рекомендуется к использованию любому игроку.
+        </en>
+    </Config>
+    <Config>
+        <Name>v1tsk's_generic</Name>
+        <FileName>v1tsk's_generic.cfg</FileName>
+        <SupportedGames>240;440</SupportedGames>
+        <ru>
+        <![CDATA[Базовый конфиг (ранее назывался team-fortress.ru), обеспечивающий небольшой плюс к FPS, но и не портящий изображение. Он снижает только те параметры, которые обеспечивают максимальный прирост графики. Рекомендуется к использованию любому игроку.
 
 Прирост производительности: Ниже среднего
 Ухудшение качества графики: Нет]]>
-    </ru>
-    <en>
-    <![CDATA[Config for those who want a bit more FPS while maintaining good graphics. It disables only particularly graphically intense settings. Recommended for everyone.
+        </ru>
+        <en>
+        <![CDATA[Config for those who want a bit more FPS while maintaining good graphics. It disables only particularly graphically intense settings. Recommended for everyone.
 
 FPS increase: Low
 Graphics degradation: No]]>
-    </en>
-  </Config>
-  <Config>
-    <Name>mastercomfig-maxperf</Name>
-    <FileName>mastercomfigpf.cfg</FileName>
-    <SupportedGames>440</SupportedGames>
-    <ru>
-    <![CDATA[Доработанный и улучшенный вариант FPS-конфига. Обеспечивает значительный прирост кадровой частоты при очень сильном ухудшении качества картинки. Должен обеспечивать максимально высокий прирост производительности игры.
+        </en>
+    </Config>
+    <Config>
+        <Name>mastercomfig-maxperf</Name>
+        <FileName>mastercomfigpf.cfg</FileName>
+        <SupportedGames>440</SupportedGames>
+        <ru>
+        <![CDATA[Доработанный и улучшенный вариант FPS-конфига. Обеспечивает значительный прирост кадровой частоты при очень сильном ухудшении качества картинки. Должен обеспечивать максимально высокий прирост производительности игры.
 
 Прирост производительности: Высокий
 Ухудшение качества графики: Очень высокое]]>
-    </ru>
-    <en>
-    <![CDATA[Special modern config created to provide a large performance boost. Significantly decreases the graphics quality and increasing performance on low-end computers.
+        </ru>
+        <en>
+        <![CDATA[Special modern config created to provide a large performance boost. Significantly decreases the graphics quality and increasing performance on low-end computers.
 
 FPS increase: High
 Graphics degradation: 16-bit style]]>
-    </en>
-  </Config>
-  <Config>
-    <Name>mastercomfig-quality</Name>
-    <FileName>mastercomfigmq.cfg</FileName>
-    <SupportedGames>440</SupportedGames>
-    <ru>
-    <![CDATA[FPS-конфиг "наоборот". Устанавливает все графические настройки игры на максимум, что позволит получить наилучшее качество графики. Данный конфиг создан специально для создателей видеороликов. Используйте только на мощном современном компьютере.
+        </en>
+    </Config>
+    <Config>
+        <Name>mastercomfig-quality</Name>
+        <FileName>mastercomfigmq.cfg</FileName>
+        <SupportedGames>440</SupportedGames>
+        <ru>
+        <![CDATA[FPS-конфиг "наоборот". Устанавливает все графические настройки игры на максимум, что позволит получить наилучшее качество графики. Данный конфиг создан специально для создателей видеороликов. Используйте только на мощном современном компьютере.
 
 Прирост производительности: Отрицательный
 Ухудшение качества графики: Нет]]>
-    </ru>
-    <en>
-    <![CDATA[This config, designed for movie makers, will set all graphic settings to maximum. This will require a powerful PC.
+        </ru>
+        <en>
+        <![CDATA[This config, designed for movie makers, will set all graphic settings to maximum. This will require a powerful PC.
 
 FPS increase: None
 Graphics degradation: None]]>
-    </en>
-  </Config>
-  <Config>
-    <Name>rhaprody-perf</Name>
-    <FileName>rhapsodyfps.cfg</FileName>
-    <SupportedGames>440</SupportedGames>
-    <ru>
-    <![CDATA[Неплохой вариант FPS-конфига. Обеспечивает прирост кадровой частоты при среднем ухудшении качества графики. Должен обеспечивать приемлемую производительность игры на большинстве компьютеров.
+        </en>
+    </Config>
+    <Config>
+        <Name>rhaprody-perf</Name>
+        <FileName>rhapsodyfps.cfg</FileName>
+        <SupportedGames>440</SupportedGames>
+        <ru>
+        <![CDATA[Неплохой вариант FPS-конфига. Обеспечивает прирост кадровой частоты при среднем ухудшении качества графики. Должен обеспечивать приемлемую производительность игры на большинстве компьютеров.
 
 Прирост производительности: Высокий
 Ухудшение качества графики: Очень высокое]]>
-    </ru>
-    <en>
-    <![CDATA[Typical FPS config, created to provide moderate performance boost. Insignificantly decreases the graphics quality and increase performance on most computers.
+        </ru>
+        <en>
+        <![CDATA[Typical FPS config, created to provide moderate performance boost. Insignificantly decreases the graphics quality and increase performance on most computers.
 
 FPS increase: Moderate
 Graphics degradation: Moderate]]>
-    </en>
-  </Config>
+        </en>
+    </Config>
 </Configs>
