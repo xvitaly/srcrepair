@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Updates>
-  <Application>
-    <Version>34.0.0.7000</Version>
-    <URL>https://www.easycoding.org/files/srcrepair_latest.exe</URL>
-    <Hash>8451834d188b668e39f028fff0da389b</Hash>
-  </Application>
-  <GameDB>
-    <Version>master</Version>
-    <URL>https://www.easycoding.org/files/srcrepair/updates/games.xml</URL>
-    <Hash>6b7a16c95d32a5a2ceea17288f4b309f</Hash>
-  </GameDB>
-  <HUDDB>
-    <Version>master</Version>
-    <URL>https://www.easycoding.org/files/srcrepair/updates/huds.xml</URL>
-    <Hash>542d4b1179142e7320079f457c259d22</Hash>
-  </HUDDB>
-  <CfgDB>
-    <Version>master</Version>
-    <URL>https://www.easycoding.org/files/srcrepair/updates/configs.xml</URL>
-    <Hash>3f33b5610cf84fa59b9004a6d6c9719c</Hash>
-  </CfgDB>
+    <Application>
+        <Version>34.0.0.7000</Version>
+        <URL>https://www.easycoding.org/files/srcrepair_latest.exe</URL>
+        <Hash>8451834d188b668e39f028fff0da389b</Hash>
+    </Application>
+    <GameDB>
+        <Version>master</Version>
+        <URL>https://www.easycoding.org/files/srcrepair/updates/games.xml</URL>
+        <Hash>6b7a16c95d32a5a2ceea17288f4b309f</Hash>
+    </GameDB>
+    <HUDDB>
+        <Version>master</Version>
+        <URL>https://www.easycoding.org/files/srcrepair/updates/huds.xml</URL>
+        <Hash>542d4b1179142e7320079f457c259d22</Hash>
+    </HUDDB>
+    <CfgDB>
+        <Version>master</Version>
+        <URL>https://www.easycoding.org/files/srcrepair/updates/configs.xml</URL>
+        <Hash>3f33b5610cf84fa59b9004a6d6c9719c</Hash>
+    </CfgDB>
 </Updates>
