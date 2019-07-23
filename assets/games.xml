@@ -20,808 +20,808 @@
   along with this program. If not, see <http://www.gnu.org/licenses/>.
 -->
 <Games>
-  <Game Name="Team Fortress 2">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Team Fortress 2</DirName>
-    <SmallName>tf</SmallName>
-    <VFDir>tf</VFDir>
-    <UserDir>1</UserDir>
-    <HUDsAvail>1</HUDsAvail>
-    <SID>440</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Counter-Strike: Source">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Counter-Strike Source</DirName>
-    <SmallName>cstrike</SmallName>
-    <VFDir>cstrike</VFDir>
-    <UserDir>1</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>240</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Day of Defeat: Source">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Day of Defeat Source</DirName>
-    <SmallName>dod</SmallName>
-    <VFDir>dod</VFDir>
-    <UserDir>1</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>300</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Half-Life 2: Deathmatch">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Half-Life 2 Deathmatch</DirName>
-    <SmallName>hl2mp</SmallName>
-    <VFDir>hl2mp</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>320</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Half-Life 2">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Half-Life 2</DirName>
-    <SmallName>hl2</SmallName>
-    <VFDir>hl2</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>220</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Half-Life 2: Episode One">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Half-Life 2</DirName>
-    <SmallName>episodic</SmallName>
-    <VFDir>episodic</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>380</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Half-Life 2: Episode Two">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Half-Life 2</DirName>
-    <SmallName>ep2</SmallName>
-    <VFDir>ep2</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>420</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Half-Life 2: Lost Coast">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Half-Life 2</DirName>
-    <SmallName>lostcoast</SmallName>
-    <VFDir>lostcoast</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>340</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Portal">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Portal</DirName>
-    <SmallName>portal</SmallName>
-    <VFDir>portal</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>400</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Garry's Mod">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>GarrysMod</DirName>
-    <SmallName>garrysmod</SmallName>
-    <VFDir>garrysmod</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>4000</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Age of Chivalry">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Source SDK Base 2007</DirName>
-    <SmallName>ageofchivalry</SmallName>
-    <VFDir>ageofchivalry</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>17510</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="D.I.P.R.I.P.: Warm Up">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Source SDK Base 2007</DirName>
-    <SmallName>diprip</SmallName>
-    <VFDir>diprip</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>17530</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Dystopia">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Dystopia</DirName>
-    <SmallName>Dystopia</SmallName>
-    <VFDir>Dystopia</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>17580</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Insurgency: Modern Infantry Combat">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Source SDK Base</DirName>
-    <SmallName>insurgency</SmallName>
-    <VFDir>insurgency</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>17700</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Pirates, Vikings, and Knights II">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>pirates, vikings, and knights ii</DirName>
-    <SmallName>pvkii</SmallName>
-    <VFDir>pvkii</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>17570</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Smashball">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Source SDK Base 2007</DirName>
-    <SmallName>Smashball</SmallName>
-    <VFDir>Smashball</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>17730</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Synergy">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Synergy</DirName>
-    <SmallName>synergy</SmallName>
-    <VFDir>synergy</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>17520</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Zombie Panic! Source">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Source SDK Base 2007</DirName>
-    <SmallName>zps</SmallName>
-    <VFDir>zps</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>17500</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Half-Life: Source">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Half-Life 2</DirName>
-    <SmallName>hl1</SmallName>
-    <VFDir>hl1</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>280</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Half-Life Deathmatch: Source">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Half-Life 1 Source Deathmatch</DirName>
-    <SmallName>hl1mp</SmallName>
-    <VFDir>hl1mp</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>360</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Left 4 Dead">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>left 4 dead</DirName>
-    <SmallName>left4dead</SmallName>
-    <VFDir>left4dead</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>500</SID>
-    <SVer>2</SVer>
-    <Executable>left4dead.exe</Executable>
-  </Game>
-  <Game Name="Left 4 Dead 2">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>Left 4 Dead 2</DirName>
-    <SmallName>left4dead2</SmallName>
-    <VFDir>left4dead2</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>550</SID>
-    <SVer>2</SVer>
-    <Executable>left4dead2.exe</Executable>
-  </Game>
-  <Game Name="Alien Swarm">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>Alien Swarm</DirName>
-    <SmallName>swarm</SmallName>
-    <VFDir>swarm</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>630</SID>
-    <SVer>2</SVer>
-    <Executable>swarm.exe</Executable>
-  </Game>
-  <Game Name="Portal 2">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>Portal 2</DirName>
-    <SmallName>portal2</SmallName>
-    <VFDir>update</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>620</SID>
-    <SVer>2</SVer>
-    <Executable>portal2.exe</Executable>
-  </Game>
-  <Game Name="Dota 2">
-    <Enabled>0</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>dota 2</DirName>
-    <SmallName>dota</SmallName>
-    <VFDir>dota</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>570</SID>
-    <SVer>3</SVer>
-    <Executable>dota.exe</Executable>
-  </Game>
-  <Game Name="Dota 2: Reborn">
-    <Enabled>0</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>dota 2 beta</DirName>
-    <SmallName>game\dota</SmallName>
-    <VFDir>game\dota</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>570</SID>
-    <SVer>3</SVer>
-    <Executable>dota2.exe</Executable>
-  </Game>
-  <Game Name="Counter-Strike Global Offensive">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>Counter-Strike Global Offensive</DirName>
-    <SmallName>csgo</SmallName>
-    <VFDir>csgo</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>730</SID>
-    <SVer>2</SVer>
-    <Executable>csgo.exe</Executable>
-  </Game>
-  <Game Name="Nuclear Dawn">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>Nuclear Dawn</DirName>
-    <SmallName>nucleardawn</SmallName>
-    <VFDir>nucleardawn</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>17710</SID>
-    <SVer>2</SVer>
-    <Executable>nucleardawn.exe</Executable>
-  </Game>
-  <Game Name="Postal III">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>Postal III</DirName>
-    <SmallName>p3</SmallName>
-    <VFDir>p3</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>10220</SID>
-    <SVer>2</SVer>
-    <Executable>p3.exe</Executable>
-  </Game>
-  <Game Name="E.Y.E.: Divine Cybermancy">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>EYE</DirName>
-    <SmallName>EYE</SmallName>
-    <VFDir>EYE</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>91700</SID>
-    <SVer>2</SVer>
-    <Executable>EYE.exe</Executable>
-  </Game>
-  <Game Name="Dark Messiah MM SP">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Dark Messiah Might and Magic Single Player</DirName>
-    <SmallName>mm</SmallName>
-    <VFDir>mm</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>2100</SID>
-    <SVer>1</SVer>
-    <Executable>mm.exe</Executable>
-  </Game>
-  <Game Name="Dark Messiah MM MP">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Dark Messiah Might and Magic Multi-Player</DirName>
-    <SmallName>mm</SmallName>
-    <VFDir>mm</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>2130</SID>
-    <SVer>1</SVer>
-    <Executable>mm.exe</Executable>
-  </Game>
-  <Game Name="The Ship">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>The Ship</DirName>
-    <SmallName>ship</SmallName>
-    <VFDir>ship</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>2400</SID>
-    <SVer>1</SVer>
-    <Executable>ship.exe</Executable>
-  </Game>
-  <Game Name="The Ship Singleplayer">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>The Ship Single Player</DirName>
-    <SmallName>ship</SmallName>
-    <VFDir>ship</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>2420</SID>
-    <SVer>1</SVer>
-    <Executable>ship.exe</Executable>
-  </Game>
-  <Game Name="SiN Episodes: Emergence">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>SiN Episodes Emergence</DirName>
-    <SmallName>SE1</SmallName>
-    <VFDir>SE1</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>1300</SID>
-    <SVer>1</SVer>
-    <Executable>SinEpisodes.exe</Executable>
-  </Game>
-  <Game Name="Vampire: The Masquerade - Bloodlines">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>Vampire The Masquerade - Bloodlines</DirName>
-    <SmallName>vampire</SmallName>
-    <VFDir>vampire</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>2600</SID>
-    <SVer>2</SVer>
-    <Executable>vampire.exe</Executable>
-  </Game>
-  <Game Name="Zeno Clash">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>ZenoClash</DirName>
-    <SmallName>zenozoik</SmallName>
-    <VFDir>zenozoik</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>22200</SID>
-    <SVer>2</SVer>
-    <Executable>zenoclash.exe</Executable>
-  </Game>
-  <Game Name="Dear Esther">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>Dear Esther</DirName>
-    <SmallName>dearesther</SmallName>
-    <VFDir>dearesther</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>203810</SID>
-    <SVer>2</SVer>
-    <Executable>dearesther.exe</Executable>
-  </Game>
-  <Game Name="Eternal Silence">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>eternal-silence</DirName>
-    <SmallName>esmod</SmallName>
-    <VFDir>esmod</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>17550</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Vindictus">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>Vindictus</DirName>
-    <SmallName>en-US</SmallName>
-    <VFDir>en-US</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>212160</SID>
-    <SVer>2</SVer>
-    <Executable>nxsteam.exe</Executable>
-  </Game>
-  <Game Name="Bloody Good Time">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Bloody Good Time</DirName>
-    <SmallName>pm</SmallName>
-    <VFDir>pm</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>2450</SID>
-    <SVer>1</SVer>
-    <Executable>bgt.exe</Executable>
-  </Game>
-  <Game Name="Revelations 2012">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>Revelations 2012</DirName>
-    <SmallName>revelations</SmallName>
-    <VFDir>revelations</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>201070</SID>
-    <SVer>2</SVer>
-    <Executable>revelations.exe</Executable>
-  </Game>
-  <Game Name="MINERVA: Metastasis">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>MINERVA</DirName>
-    <SmallName>minerva</SmallName>
-    <VFDir>minerva</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>235780</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Insurgency">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>insurgency2</DirName>
-    <SmallName>insurgency</SmallName>
-    <VFDir>insurgency</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>222880</SID>
-    <SVer>2</SVer>
-    <Executable>insurgency.exe</Executable>
-  </Game>
-  <Game Name="No More Room in Hell">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>nmrih</DirName>
-    <SmallName>nmrih</SmallName>
-    <VFDir>../nmrih</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>224260</SID>
-    <SVer>1</SVer>
-    <Executable>sdk/hl2.exe</Executable>
-  </Game>
-  <Game Name="Contagion">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>Contagion</DirName>
-    <SmallName>contagion</SmallName>
-    <VFDir>contagion</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>238430</SID>
-    <SVer>2</SVer>
-    <Executable>contagion.exe</Executable>
-  </Game>
-  <Game Name="NeoTokyo">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>NEOTOKYO</DirName>
-    <SmallName>NeotokyoSource</SmallName>
-    <VFDir>NeotokyoSource</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>244630</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Half-Life 2: Update">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Half-Life 2 Update</DirName>
-    <SmallName>hl2</SmallName>
-    <VFDir>hl2</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>290930</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Lambda Wars">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>Lambda Wars</DirName>
-    <SmallName>lambdawars</SmallName>
-    <VFDir>lambdawars</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>270370</SID>
-    <SVer>2</SVer>
-    <Executable>lambdawars.exe</Executable>
-  </Game>
-  <Game Name="Rexaura">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Rexaura</DirName>
-    <SmallName>rexaura</SmallName>
-    <VFDir>rexaura</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>317790</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Black Mesa">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Black Mesa</DirName>
-    <SmallName>bms</SmallName>
-    <VFDir>bms</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>362890</SID>
-    <SVer>1</SVer>
-    <Executable>bms.exe</Executable>
-  </Game>
-  <Game Name="Portal Stories: Mel">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>Portal Stories Mel</DirName>
-    <SmallName>portal_stories</SmallName>
-    <VFDir>portal_stories</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>317400</SID>
-    <SVer>2</SVer>
-    <Executable>portal2.exe</Executable>
-  </Game>
-  <Game Name="FIREFIGHT RELOADED">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>FIREFIGHT RELOADED</DirName>
-    <SmallName>firefightreloaded</SmallName>
-    <VFDir>firefightreloaded</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>397680</SID>
-    <SVer>1</SVer>
-    <Executable>fr.exe</Executable>
-  </Game>
-  <Game Name="Aperture Tag">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>Aperture Tag</DirName>
-    <SmallName>aperturetag</SmallName>
-    <VFDir>aperturetag</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>280740</SID>
-    <SVer>2</SVer>
-    <Executable>portal2.exe</Executable>
-  </Game>
-  <Game Name="Prospekt">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Prospekt</DirName>
-    <SmallName>prospekt</SmallName>
-    <VFDir>prospekt</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>399120</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Transmissions: Element 120">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Transmissions Element 120</DirName>
-    <SmallName>te120</SmallName>
-    <VFDir>te120</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>365300</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Half-Life 2: DownFall">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Half-Life 2 DownFall</DirName>
-    <SmallName>downfall</SmallName>
-    <VFDir>downfall</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>587650</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="Alien Swarm: Reactive Drop">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>Alien Swarm Reactive Drop</DirName>
-    <SmallName>reactivedrop</SmallName>
-    <VFDir>reactivedrop</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>563560</SID>
-    <SVer>2</SVer>
-    <Executable>reactivedrop.exe</Executable>
-  </Game>
-  <Game Name="Dino D-Day">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>Dino D-Day</DirName>
-    <SmallName>dinodday</SmallName>
-    <VFDir>dinodday</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>70000</SID>
-    <SVer>2</SVer>
-    <Executable>dinodday.exe</Executable>
-  </Game>
-  <Game Name="The Stanley Parable">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>The Stanley Parable</DirName>
-    <SmallName>thestanleyparable</SmallName>
-    <VFDir>thestanleyparable</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>221910</SID>
-    <SVer>1</SVer>
-    <Executable>stanley.exe</Executable>
-  </Game>
-  <Game Name="Double Action: Boogaloo">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Double Action</DirName>
-    <SmallName>dab</SmallName>
-    <VFDir>dab</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>317360</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
-  <Game Name="CONSORTIUM">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>Consortium</DirName>
-    <SmallName>consortium</SmallName>
-    <VFDir>consortium</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>264240</SID>
-    <SVer>2</SVer>
-    <Executable>consortium.exe</Executable>
-  </Game>
-  <Game Name="Blade Symphony">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>Blade Symphony</DirName>
-    <SmallName>berimbau</SmallName>
-    <VFDir>berimbau</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>225600</SID>
-    <SVer>2</SVer>
-    <Executable>berimbau.exe</Executable>
-  </Game>
-  <Game Name="The Beginner's Guide">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>The Beginners Guide</DirName>
-    <SmallName>beginnersguide</SmallName>
-    <VFDir>beginnersguide</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>303210</SID>
-    <SVer>2</SVer>
-    <Executable>beginnersguide.exe</Executable>
-  </Game>
-  <Game Name="Codename CURE">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Codename CURE</DirName>
-    <SmallName>cure</SmallName>
-    <VFDir>cure</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>355180</SID>
-    <SVer>1</SVer>
-    <Executable>cure.exe</Executable>
-  </Game>
-  <Game Name="INFRA">
-    <Enabled>1</Enabled>
-    <HasVF>1</HasVF>
-    <DirName>infra</DirName>
-    <SmallName>infra</SmallName>
-    <VFDir>infra</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>251110</SID>
-    <SVer>2</SVer>
-    <Executable>infra.exe</Executable>
-  </Game>
-  <Game Name="Entropy: Zero">
-    <Enabled>1</Enabled>
-    <HasVF>0</HasVF>
-    <DirName>Entropy Zero</DirName>
-    <SmallName>EntropyZero</SmallName>
-    <VFDir>EntropyZero</VFDir>
-    <UserDir>0</UserDir>
-    <HUDsAvail>0</HUDsAvail>
-    <SID>714070</SID>
-    <SVer>1</SVer>
-    <Executable>hl2.exe</Executable>
-  </Game>
+    <Game Name="Team Fortress 2">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Team Fortress 2</DirName>
+        <SmallName>tf</SmallName>
+        <VFDir>tf</VFDir>
+        <UserDir>1</UserDir>
+        <HUDsAvail>1</HUDsAvail>
+        <SID>440</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Counter-Strike: Source">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Counter-Strike Source</DirName>
+        <SmallName>cstrike</SmallName>
+        <VFDir>cstrike</VFDir>
+        <UserDir>1</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>240</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Day of Defeat: Source">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Day of Defeat Source</DirName>
+        <SmallName>dod</SmallName>
+        <VFDir>dod</VFDir>
+        <UserDir>1</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>300</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Half-Life 2: Deathmatch">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Half-Life 2 Deathmatch</DirName>
+        <SmallName>hl2mp</SmallName>
+        <VFDir>hl2mp</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>320</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Half-Life 2">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Half-Life 2</DirName>
+        <SmallName>hl2</SmallName>
+        <VFDir>hl2</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>220</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Half-Life 2: Episode One">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Half-Life 2</DirName>
+        <SmallName>episodic</SmallName>
+        <VFDir>episodic</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>380</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Half-Life 2: Episode Two">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Half-Life 2</DirName>
+        <SmallName>ep2</SmallName>
+        <VFDir>ep2</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>420</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Half-Life 2: Lost Coast">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Half-Life 2</DirName>
+        <SmallName>lostcoast</SmallName>
+        <VFDir>lostcoast</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>340</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Portal">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Portal</DirName>
+        <SmallName>portal</SmallName>
+        <VFDir>portal</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>400</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Garry's Mod">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>GarrysMod</DirName>
+        <SmallName>garrysmod</SmallName>
+        <VFDir>garrysmod</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>4000</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Age of Chivalry">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Source SDK Base 2007</DirName>
+        <SmallName>ageofchivalry</SmallName>
+        <VFDir>ageofchivalry</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>17510</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="D.I.P.R.I.P.: Warm Up">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Source SDK Base 2007</DirName>
+        <SmallName>diprip</SmallName>
+        <VFDir>diprip</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>17530</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Dystopia">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Dystopia</DirName>
+        <SmallName>Dystopia</SmallName>
+        <VFDir>Dystopia</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>17580</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Insurgency: Modern Infantry Combat">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Source SDK Base</DirName>
+        <SmallName>insurgency</SmallName>
+        <VFDir>insurgency</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>17700</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Pirates, Vikings, and Knights II">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>pirates, vikings, and knights ii</DirName>
+        <SmallName>pvkii</SmallName>
+        <VFDir>pvkii</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>17570</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Smashball">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Source SDK Base 2007</DirName>
+        <SmallName>Smashball</SmallName>
+        <VFDir>Smashball</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>17730</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Synergy">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Synergy</DirName>
+        <SmallName>synergy</SmallName>
+        <VFDir>synergy</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>17520</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Zombie Panic! Source">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Source SDK Base 2007</DirName>
+        <SmallName>zps</SmallName>
+        <VFDir>zps</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>17500</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Half-Life: Source">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Half-Life 2</DirName>
+        <SmallName>hl1</SmallName>
+        <VFDir>hl1</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>280</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Half-Life Deathmatch: Source">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Half-Life 1 Source Deathmatch</DirName>
+        <SmallName>hl1mp</SmallName>
+        <VFDir>hl1mp</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>360</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Left 4 Dead">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>left 4 dead</DirName>
+        <SmallName>left4dead</SmallName>
+        <VFDir>left4dead</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>500</SID>
+        <SVer>2</SVer>
+        <Executable>left4dead.exe</Executable>
+    </Game>
+    <Game Name="Left 4 Dead 2">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>Left 4 Dead 2</DirName>
+        <SmallName>left4dead2</SmallName>
+        <VFDir>left4dead2</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>550</SID>
+        <SVer>2</SVer>
+        <Executable>left4dead2.exe</Executable>
+    </Game>
+    <Game Name="Alien Swarm">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>Alien Swarm</DirName>
+        <SmallName>swarm</SmallName>
+        <VFDir>swarm</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>630</SID>
+        <SVer>2</SVer>
+        <Executable>swarm.exe</Executable>
+    </Game>
+    <Game Name="Portal 2">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>Portal 2</DirName>
+        <SmallName>portal2</SmallName>
+        <VFDir>update</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>620</SID>
+        <SVer>2</SVer>
+        <Executable>portal2.exe</Executable>
+    </Game>
+    <Game Name="Dota 2">
+        <Enabled>0</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>dota 2</DirName>
+        <SmallName>dota</SmallName>
+        <VFDir>dota</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>570</SID>
+        <SVer>3</SVer>
+        <Executable>dota.exe</Executable>
+    </Game>
+    <Game Name="Dota 2: Reborn">
+        <Enabled>0</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>dota 2 beta</DirName>
+        <SmallName>game\dota</SmallName>
+        <VFDir>game\dota</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>570</SID>
+        <SVer>3</SVer>
+        <Executable>dota2.exe</Executable>
+    </Game>
+    <Game Name="Counter-Strike Global Offensive">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>Counter-Strike Global Offensive</DirName>
+        <SmallName>csgo</SmallName>
+        <VFDir>csgo</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>730</SID>
+        <SVer>2</SVer>
+        <Executable>csgo.exe</Executable>
+    </Game>
+    <Game Name="Nuclear Dawn">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>Nuclear Dawn</DirName>
+        <SmallName>nucleardawn</SmallName>
+        <VFDir>nucleardawn</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>17710</SID>
+        <SVer>2</SVer>
+        <Executable>nucleardawn.exe</Executable>
+    </Game>
+    <Game Name="Postal III">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>Postal III</DirName>
+        <SmallName>p3</SmallName>
+        <VFDir>p3</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>10220</SID>
+        <SVer>2</SVer>
+        <Executable>p3.exe</Executable>
+    </Game>
+    <Game Name="E.Y.E.: Divine Cybermancy">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>EYE</DirName>
+        <SmallName>EYE</SmallName>
+        <VFDir>EYE</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>91700</SID>
+        <SVer>2</SVer>
+        <Executable>EYE.exe</Executable>
+    </Game>
+    <Game Name="Dark Messiah MM SP">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Dark Messiah Might and Magic Single Player</DirName>
+        <SmallName>mm</SmallName>
+        <VFDir>mm</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>2100</SID>
+        <SVer>1</SVer>
+        <Executable>mm.exe</Executable>
+    </Game>
+    <Game Name="Dark Messiah MM MP">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Dark Messiah Might and Magic Multi-Player</DirName>
+        <SmallName>mm</SmallName>
+        <VFDir>mm</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>2130</SID>
+        <SVer>1</SVer>
+        <Executable>mm.exe</Executable>
+    </Game>
+    <Game Name="The Ship">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>The Ship</DirName>
+        <SmallName>ship</SmallName>
+        <VFDir>ship</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>2400</SID>
+        <SVer>1</SVer>
+        <Executable>ship.exe</Executable>
+    </Game>
+    <Game Name="The Ship Singleplayer">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>The Ship Single Player</DirName>
+        <SmallName>ship</SmallName>
+        <VFDir>ship</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>2420</SID>
+        <SVer>1</SVer>
+        <Executable>ship.exe</Executable>
+    </Game>
+    <Game Name="SiN Episodes: Emergence">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>SiN Episodes Emergence</DirName>
+        <SmallName>SE1</SmallName>
+        <VFDir>SE1</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>1300</SID>
+        <SVer>1</SVer>
+        <Executable>SinEpisodes.exe</Executable>
+    </Game>
+    <Game Name="Vampire: The Masquerade - Bloodlines">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>Vampire The Masquerade - Bloodlines</DirName>
+        <SmallName>vampire</SmallName>
+        <VFDir>vampire</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>2600</SID>
+        <SVer>2</SVer>
+        <Executable>vampire.exe</Executable>
+    </Game>
+    <Game Name="Zeno Clash">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>ZenoClash</DirName>
+        <SmallName>zenozoik</SmallName>
+        <VFDir>zenozoik</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>22200</SID>
+        <SVer>2</SVer>
+        <Executable>zenoclash.exe</Executable>
+    </Game>
+    <Game Name="Dear Esther">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>Dear Esther</DirName>
+        <SmallName>dearesther</SmallName>
+        <VFDir>dearesther</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>203810</SID>
+        <SVer>2</SVer>
+        <Executable>dearesther.exe</Executable>
+    </Game>
+    <Game Name="Eternal Silence">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>eternal-silence</DirName>
+        <SmallName>esmod</SmallName>
+        <VFDir>esmod</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>17550</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Vindictus">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>Vindictus</DirName>
+        <SmallName>en-US</SmallName>
+        <VFDir>en-US</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>212160</SID>
+        <SVer>2</SVer>
+        <Executable>nxsteam.exe</Executable>
+    </Game>
+    <Game Name="Bloody Good Time">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Bloody Good Time</DirName>
+        <SmallName>pm</SmallName>
+        <VFDir>pm</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>2450</SID>
+        <SVer>1</SVer>
+        <Executable>bgt.exe</Executable>
+    </Game>
+    <Game Name="Revelations 2012">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>Revelations 2012</DirName>
+        <SmallName>revelations</SmallName>
+        <VFDir>revelations</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>201070</SID>
+        <SVer>2</SVer>
+        <Executable>revelations.exe</Executable>
+    </Game>
+    <Game Name="MINERVA: Metastasis">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>MINERVA</DirName>
+        <SmallName>minerva</SmallName>
+        <VFDir>minerva</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>235780</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Insurgency">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>insurgency2</DirName>
+        <SmallName>insurgency</SmallName>
+        <VFDir>insurgency</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>222880</SID>
+        <SVer>2</SVer>
+        <Executable>insurgency.exe</Executable>
+    </Game>
+    <Game Name="No More Room in Hell">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>nmrih</DirName>
+        <SmallName>nmrih</SmallName>
+        <VFDir>../nmrih</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>224260</SID>
+        <SVer>1</SVer>
+        <Executable>sdk/hl2.exe</Executable>
+    </Game>
+    <Game Name="Contagion">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>Contagion</DirName>
+        <SmallName>contagion</SmallName>
+        <VFDir>contagion</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>238430</SID>
+        <SVer>2</SVer>
+        <Executable>contagion.exe</Executable>
+    </Game>
+    <Game Name="NeoTokyo">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>NEOTOKYO</DirName>
+        <SmallName>NeotokyoSource</SmallName>
+        <VFDir>NeotokyoSource</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>244630</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Half-Life 2: Update">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Half-Life 2 Update</DirName>
+        <SmallName>hl2</SmallName>
+        <VFDir>hl2</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>290930</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Lambda Wars">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>Lambda Wars</DirName>
+        <SmallName>lambdawars</SmallName>
+        <VFDir>lambdawars</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>270370</SID>
+        <SVer>2</SVer>
+        <Executable>lambdawars.exe</Executable>
+    </Game>
+    <Game Name="Rexaura">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Rexaura</DirName>
+        <SmallName>rexaura</SmallName>
+        <VFDir>rexaura</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>317790</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Black Mesa">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Black Mesa</DirName>
+        <SmallName>bms</SmallName>
+        <VFDir>bms</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>362890</SID>
+        <SVer>1</SVer>
+        <Executable>bms.exe</Executable>
+    </Game>
+    <Game Name="Portal Stories: Mel">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>Portal Stories Mel</DirName>
+        <SmallName>portal_stories</SmallName>
+        <VFDir>portal_stories</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>317400</SID>
+        <SVer>2</SVer>
+        <Executable>portal2.exe</Executable>
+    </Game>
+    <Game Name="FIREFIGHT RELOADED">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>FIREFIGHT RELOADED</DirName>
+        <SmallName>firefightreloaded</SmallName>
+        <VFDir>firefightreloaded</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>397680</SID>
+        <SVer>1</SVer>
+        <Executable>fr.exe</Executable>
+    </Game>
+    <Game Name="Aperture Tag">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>Aperture Tag</DirName>
+        <SmallName>aperturetag</SmallName>
+        <VFDir>aperturetag</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>280740</SID>
+        <SVer>2</SVer>
+        <Executable>portal2.exe</Executable>
+    </Game>
+    <Game Name="Prospekt">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Prospekt</DirName>
+        <SmallName>prospekt</SmallName>
+        <VFDir>prospekt</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>399120</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Transmissions: Element 120">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Transmissions Element 120</DirName>
+        <SmallName>te120</SmallName>
+        <VFDir>te120</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>365300</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Half-Life 2: DownFall">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Half-Life 2 DownFall</DirName>
+        <SmallName>downfall</SmallName>
+        <VFDir>downfall</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>587650</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="Alien Swarm: Reactive Drop">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>Alien Swarm Reactive Drop</DirName>
+        <SmallName>reactivedrop</SmallName>
+        <VFDir>reactivedrop</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>563560</SID>
+        <SVer>2</SVer>
+        <Executable>reactivedrop.exe</Executable>
+    </Game>
+    <Game Name="Dino D-Day">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>Dino D-Day</DirName>
+        <SmallName>dinodday</SmallName>
+        <VFDir>dinodday</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>70000</SID>
+        <SVer>2</SVer>
+        <Executable>dinodday.exe</Executable>
+    </Game>
+    <Game Name="The Stanley Parable">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>The Stanley Parable</DirName>
+        <SmallName>thestanleyparable</SmallName>
+        <VFDir>thestanleyparable</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>221910</SID>
+        <SVer>1</SVer>
+        <Executable>stanley.exe</Executable>
+    </Game>
+    <Game Name="Double Action: Boogaloo">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Double Action</DirName>
+        <SmallName>dab</SmallName>
+        <VFDir>dab</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>317360</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
+    <Game Name="CONSORTIUM">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>Consortium</DirName>
+        <SmallName>consortium</SmallName>
+        <VFDir>consortium</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>264240</SID>
+        <SVer>2</SVer>
+        <Executable>consortium.exe</Executable>
+    </Game>
+    <Game Name="Blade Symphony">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>Blade Symphony</DirName>
+        <SmallName>berimbau</SmallName>
+        <VFDir>berimbau</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>225600</SID>
+        <SVer>2</SVer>
+        <Executable>berimbau.exe</Executable>
+    </Game>
+    <Game Name="The Beginner's Guide">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>The Beginners Guide</DirName>
+        <SmallName>beginnersguide</SmallName>
+        <VFDir>beginnersguide</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>303210</SID>
+        <SVer>2</SVer>
+        <Executable>beginnersguide.exe</Executable>
+    </Game>
+    <Game Name="Codename CURE">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Codename CURE</DirName>
+        <SmallName>cure</SmallName>
+        <VFDir>cure</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>355180</SID>
+        <SVer>1</SVer>
+        <Executable>cure.exe</Executable>
+    </Game>
+    <Game Name="INFRA">
+        <Enabled>1</Enabled>
+        <HasVF>1</HasVF>
+        <DirName>infra</DirName>
+        <SmallName>infra</SmallName>
+        <VFDir>infra</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>251110</SID>
+        <SVer>2</SVer>
+        <Executable>infra.exe</Executable>
+    </Game>
+    <Game Name="Entropy: Zero">
+        <Enabled>1</Enabled>
+        <HasVF>0</HasVF>
+        <DirName>Entropy Zero</DirName>
+        <SmallName>EntropyZero</SmallName>
+        <VFDir>EntropyZero</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>714070</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
 </Games>
