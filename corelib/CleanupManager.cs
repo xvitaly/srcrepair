@@ -20,13 +20,72 @@
 */
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+using System.Xml;
+using NLog;
 
 namespace srcrepair.core
 {
-    class CleanupManager
+    /// <summary>
+    /// Class for working with collection of cleanup targets.
+    /// </summary>
+    public sealed class CleanupManager
     {
+        /// <summary>
+        /// Logger instance for CleanupManager class.
+        /// </summary>
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
+
+        /// <summary>
+        /// Store full list of available cleanup targets.
+        /// </summary>
+        private readonly Dictionary<string, CleanupTarget> CleanupTargets;
+
+        /// <summary>
+        /// Overloading inxeding operator to return cleanup target instance
+        /// by specified name.
+        /// </summary>
+        public CleanupTarget this[string key] => CleanupTargets[key];
+
+        /// <summary>
+        /// CleanupManager class constructor.
+        /// </summary>
+        /// <param name="FullAppPath">Path to SRC Repair installation directory.</param>
+        public CleanupManager(string FullAppPath)
+        {
+            // Initializing empty dictionary...
+            CleanupTargets = new Dictionary<string, CleanupTarget>();
+
+            // Fetching list of available cleanup targets from XML database file...
+            using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, StringsManager.CleanupDatabaseName), FileMode.Open, FileAccess.Read))
+            {
+                // Loading XML file from file stream...
+                XmlDocument XMLD = new XmlDocument();
+                XMLD.Load(XMLFS);
+
+                // Parsing XML and filling our structures...
+                for (int i = 0; i < XMLD.GetElementsByTagName("Target").Count; i++)
+                {
+                    try
+                    {
+                        List<String> DirList = new List<String>();
+
+                        foreach (XmlNode CtDir in XMLD.GetElementsByTagName("Directories")[i])
+                        {
+                            if (CtDir.Attributes["Class"].Value == "Safe")
+                            {
+                                DirList.Add(CtDir.InnerText);
+                            }
+                        }
+
+                        CleanupTargets.Add(XMLD.GetElementsByTagName("ID")[i].InnerText, new CleanupTarget(XMLD.GetElementsByTagName("Name")[i].InnerText, DirList));
+                    }
+                    catch (Exception Ex)
+                    {
+                        Logger.Warn(Ex, "Minor exception while while building CleanupTargets list object.");
+                    }
+                }
+            }
+        }
     }
 }
