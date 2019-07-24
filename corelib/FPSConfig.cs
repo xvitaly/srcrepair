@@ -59,7 +59,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// CFGTlx class constructor.
+        /// FPSConfig class constructor.
         /// </summary>
         /// <param name="CfName">FPS-config friendly name.</param>
         /// <param name="CfFileName">FPS-config file name.</param>
