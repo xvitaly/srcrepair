@@ -64,13 +64,13 @@ namespace srcrepair.core
                 XMLD.Load(XMLFS);
 
                 // Parsing XML and filling our structures...
-                for (int i = 0; i < XMLD.GetElementsByTagName("Target").Count; i++)
+                foreach (XmlNode XmlItem in XMLD.SelectNodes("Targets/Target"))
                 {
                     try
                     {
                         List<String> DirList = new List<String>();
 
-                        foreach (XmlNode CtDir in XMLD.GetElementsByTagName("Directories")[i])
+                        foreach (XmlNode CtDir in XmlItem.SelectSingleNode("Directories"))
                         {
                             if (CtDir.Attributes["Class"].Value == "Safe")
                             {
@@ -78,7 +78,7 @@ namespace srcrepair.core
                             }
                         }
 
-                        CleanupTargets.Add(XMLD.GetElementsByTagName("ID")[i].InnerText, new CleanupTarget(XMLD.GetElementsByTagName("Name")[i].InnerText, DirList));
+                        CleanupTargets.Add(XmlItem.SelectSingleNode("ID").InnerText, new CleanupTarget(XmlItem.SelectSingleNode("Name").InnerText, DirList));
                     }
                     catch (Exception Ex)
                     {
