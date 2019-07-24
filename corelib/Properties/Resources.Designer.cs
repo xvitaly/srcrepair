@@ -115,6 +115,15 @@ namespace srcrepair.core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to cleanup.xml.
+        /// </summary>
+        internal static string CleanupDbFile {
+            get {
+                return ResourceManager.GetString("CleanupDbFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to games.xml.
         /// </summary>
         internal static string GameListFile {

@@ -51,5 +51,10 @@ namespace srcrepair.core
         /// Gets HUD local directory name.
         /// </summary>
         public static string HudDirectoryName => Properties.Resources.HUDLocalDir;
+
+        /// <summary>
+        /// Gets cleanup targets database file name.
+        /// </summary>
+        public static string CleanupDatabaseName => Properties.Resources.CleanupDbFile;
     }
 }

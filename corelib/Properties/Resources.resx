@@ -135,6 +135,9 @@
   <data name="CfgDbFile" xml:space="preserve">
     <value>configs.xml</value>
   </data>
+  <data name="CleanupDbFile" xml:space="preserve">
+    <value>cleanup.xml</value>
+  </data>
   <data name="GameListFile" xml:space="preserve">
     <value>games.xml</value>
   </data>
