@@ -20,13 +20,33 @@
 */
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace srcrepair.core
 {
+    /// <summary>
+    /// Class for working with a single cleanup target.
+    /// </summary>
     public sealed class CleanupTarget
     {
+        /// <summary>
+        /// Get or sets cleanup target friendly name.
+        /// </summary>
+        public string Name { get; private set; }
+        
+        /// <summary>
+        /// Gets or sets list of directories for cleanup.
+        /// </summary>
+        public List<String> Directories { get; private set; }
+
+        /// <summary>
+        /// CleanupTarget class constructor.
+        /// </summary>
+        /// <param name="CtName">Cleanup target friendly name.</param>
+        /// <param name="CtDirectories">List of directories for cleanup.</param>
+        public CleanupTarget(string CtName, List<String> CtDirectories)
+        {
+            Name = CtName;
+            Directories = CtDirectories;
+        }
     }
 }
