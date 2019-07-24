@@ -352,6 +352,10 @@
       <Link>cfgs\v1tsk%27s_generic.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\assets\cleanup.xml">
+      <Link>cleanup.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\assets\configs.xml">
       <Link>configs.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

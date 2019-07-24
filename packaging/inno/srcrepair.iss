@@ -80,6 +80,7 @@ Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescrip
 Source: "{#BASEDIR}\bin\Release\games.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#BASEDIR}\bin\Release\huds.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#BASEDIR}\bin\Release\configs.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#BASEDIR}\bin\Release\cleanup.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#BASEDIR}\bin\Release\DotNetZip.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#BASEDIR}\bin\Release\NLog.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#BASEDIR}\bin\Release\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion
