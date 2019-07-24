@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CleanupManager.cs" />
     <Compile Include="CleanupTarget.cs" />
     <Compile Include="FPSConfig.cs" />
     <Compile Include="ConfigManager.cs" />
