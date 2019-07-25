@@ -80,17 +80,16 @@ namespace srcrepair.core
                 XMLD.Load(XMLFS);
 
                 // Parsing XML and filling our structures...
-                XmlNodeList XMLNode = XMLD.GetElementsByTagName("Game");
-                for (int i = 0; i < XMLNode.Count; i++)
+                foreach (XmlNode XmlItem in XMLD.SelectNodes("Games/Game"))
                 {
                     try
                     {
-                        if (XMLD.GetElementsByTagName("Enabled")[i].InnerText == "1" || !HideUnsupported)
+                        if (XmlItem.SelectSingleNode("Enabled").InnerText == "1" || !HideUnsupported)
                         {
-                            SourceGame SG = new SourceGame(XMLNode[i].Attributes["Name"].Value, XMLD.GetElementsByTagName("DirName")[i].InnerText, XMLD.GetElementsByTagName("SmallName")[i].InnerText, XMLD.GetElementsByTagName("Executable")[i].InnerText, XMLD.GetElementsByTagName("SID")[i].InnerText, XMLD.GetElementsByTagName("SVer")[i].InnerText, XMLD.GetElementsByTagName("VFDir")[i].InnerText, App.Platform.OS == CurrentPlatform.OSType.Windows ? XMLD.GetElementsByTagName("HasVF")[i].InnerText == "1" : true, XMLD.GetElementsByTagName("UserDir")[i].InnerText == "1", XMLD.GetElementsByTagName("HUDsAvail")[i].InnerText == "1", App.AppUserDir, App.SteamClient.FullSteamPath, App.Platform.SteamAppsFolderName, App.SteamClient.SteamID, GameDirs, App.Platform.OS);
+                            SourceGame SG = new SourceGame(XmlItem.Attributes["Name"].Value, XmlItem.SelectSingleNode("DirName").InnerText, XmlItem.SelectSingleNode("SmallName").InnerText, XmlItem.SelectSingleNode("Executable").InnerText, XmlItem.SelectSingleNode("SID").InnerText, XmlItem.SelectSingleNode("SVer").InnerText, XmlItem.SelectSingleNode("VFDir").InnerText, App.Platform.OS == CurrentPlatform.OSType.Windows ? XmlItem.SelectSingleNode("HasVF").InnerText == "1" : true, XmlItem.SelectSingleNode("UserDir").InnerText == "1", XmlItem.SelectSingleNode("HUDsAvail").InnerText == "1", App.AppUserDir, App.SteamClient.FullSteamPath, App.Platform.SteamAppsFolderName, App.SteamClient.SteamID, GameDirs, App.Platform.OS);
                             if (SG.IsInstalled)
                             {
-                                SourceGames.Add(XMLNode[i].Attributes["Name"].Value, SG);
+                                SourceGames.Add(XmlItem.Attributes["Name"].Value, SG);
                             }
                         }
                     }
