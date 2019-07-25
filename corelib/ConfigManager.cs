@@ -110,9 +110,16 @@ namespace srcrepair.core
                 XMLD.Load(XMLFS);
 
                 // Parsing XML and filling our structures...
-                for (int i = 0; i < XMLD.GetElementsByTagName("Config").Count; i++)
+                foreach (XmlNode XmlItem in XMLD.SelectNodes("Configs/Config"))
                 {
-                    try { Configs.Add(XMLD.GetElementsByTagName("Name")[i].InnerText, new FPSConfig(XMLD.GetElementsByTagName("Name")[i].InnerText, XMLD.GetElementsByTagName("FileName")[i].InnerText, XMLD.GetElementsByTagName(LangPrefix)[i].InnerText, XMLD.GetElementsByTagName("SupportedGames")[i].InnerText.Split(';'))); } catch (Exception Ex) { Logger.Warn(Ex, "Minor exception while while building Config list object."); }
+                    try
+                    {
+                        Configs.Add(XmlItem.SelectSingleNode("Name").InnerText, new FPSConfig(XmlItem.SelectSingleNode("Name").InnerText, XmlItem.SelectSingleNode("FileName").InnerText, XmlItem.SelectSingleNode(LangPrefix).InnerText, XmlItem.SelectSingleNode("SupportedGames").InnerText.Split(';')));
+                    }
+                    catch (Exception Ex)
+                    {
+                        Logger.Warn(Ex, "Minor exception while while building Config list object.");
+                    }
                 }
             }
         }
