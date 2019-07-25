@@ -125,37 +125,31 @@ namespace srcrepair.core
             XmlDocument XMLD = new XmlDocument();
             XMLD.LoadXml(UpdateXML);
 
-            // Parsing XML...
-            foreach (XmlNode Node in XMLD.SelectNodes("Updates"))
-            {
-                foreach (XmlNode Child in Node.ChildNodes)
-                {
-                    switch (Child.Name)
-                    {
-                        case "Application":
-                            AppUpdateVersion = new Version(Child.ChildNodes[0].InnerText);
-                            AppUpdateURL = Child.ChildNodes[1].InnerText;
-                            AppUpdateHash = Child.ChildNodes[2].InnerText;
-                            break;
-                        case "GameDB":
-                            GameUpdateURL = Child.ChildNodes[1].InnerText;
-                            GameUpdateHash = Child.ChildNodes[2].InnerText;
-                            break;
-                        case "HUDDB":
-                            HUDUpdateURL = Child.ChildNodes[1].InnerText;
-                            HUDUpdateHash = Child.ChildNodes[2].InnerText;
-                            break;
-                        case "CfgDB":
-                            CfgUpdateURL = Child.ChildNodes[1].InnerText;
-                            CfgUpdateHash = Child.ChildNodes[2].InnerText;
-                            break;
-                        case "ClnDB":
-                            ClnUpdateURL = Child.ChildNodes[1].InnerText;
-                            ClnUpdateHash = Child.ChildNodes[2].InnerText;
-                            break;
-                    }
-                }
-            }
+            // Extracting information about application update...
+            XmlNode AppNode = XMLD.SelectSingleNode("Updates/Application");
+            AppUpdateVersion = new Version(AppNode.SelectSingleNode("Version").InnerText);
+            AppUpdateURL = AppNode.SelectSingleNode("URL").InnerText;
+            AppUpdateHash = AppNode.SelectSingleNode("Hash").InnerText;
+
+            // Extracting information about game database update...
+            XmlNode GameDbNode = XMLD.SelectSingleNode("Updates/GameDB");
+            GameUpdateURL = GameDbNode.SelectSingleNode("URL").InnerText;
+            GameUpdateHash = GameDbNode.SelectSingleNode("Hash").InnerText;
+
+            // Extracting information about hud database update...
+            XmlNode HudDbNode = XMLD.SelectSingleNode("Updates/HUDDB");
+            HUDUpdateURL = HudDbNode.SelectSingleNode("URL").InnerText;
+            HUDUpdateHash = HudDbNode.SelectSingleNode("Hash").InnerText;
+
+            // Extracting information about config database update...
+            XmlNode CfgDbNode = XMLD.SelectSingleNode("Updates/CfgDB");
+            CfgUpdateURL = CfgDbNode.SelectSingleNode("URL").InnerText;
+            CfgUpdateHash = CfgDbNode.SelectSingleNode("Hash").InnerText;
+
+            // Extracting information about cleanup targets database update...
+            XmlNode ClnDbNode = XMLD.SelectSingleNode("Updates/ClnDB");
+            ClnUpdateURL = ClnDbNode.SelectSingleNode("URL").InnerText;
+            ClnUpdateHash = ClnDbNode.SelectSingleNode("Hash").InnerText;
         }
 
         /// <summary>
