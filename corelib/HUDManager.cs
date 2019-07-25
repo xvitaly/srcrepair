@@ -125,13 +125,13 @@ namespace srcrepair.core
                 XMLD.Load(XMLFS);
 
                 // Parsing XML and filling our structures...
-                for (int i = 0; i < XMLD.GetElementsByTagName("HUD").Count; i++)
+                foreach (XmlNode XmlItem in XMLD.SelectNodes("HUDs/HUD"))
                 {
                     try
                     {
-                        if ((!HideOutdated || XMLD.GetElementsByTagName("IsUpdated")[i].InnerText == "1") && (XMLD.GetElementsByTagName("Game")[i].InnerText == GameID))
+                        if ((!HideOutdated || XmlItem.SelectSingleNode("IsUpdated").InnerText == "1") && (XmlItem.SelectSingleNode("Game").InnerText == GameID))
                         {
-                            HUDsAvailable.Add(XMLD.GetElementsByTagName("Name")[i].InnerText, new HUDSingle(XMLD.GetElementsByTagName("Name")[i].InnerText, XMLD.GetElementsByTagName("Game")[i].InnerText, XMLD.GetElementsByTagName("URI")[i].InnerText, XMLD.GetElementsByTagName("UpURI")[i].InnerText, XMLD.GetElementsByTagName("IsUpdated")[i].InnerText == "1", XMLD.GetElementsByTagName("Preview")[i].InnerText, XMLD.GetElementsByTagName("LastUpdate")[i].InnerText, XMLD.GetElementsByTagName("Site")[i].InnerText, XMLD.GetElementsByTagName("ArchiveDir")[i].InnerText, XMLD.GetElementsByTagName("InstallDir")[i].InnerText, XMLD.GetElementsByTagName("Hash")[i].InnerText, Path.Combine(AppHUDDir, Path.ChangeExtension(Path.GetFileName(XMLD.GetElementsByTagName("Name")[i].InnerText), ".zip"))));
+                            HUDsAvailable.Add(XmlItem.SelectSingleNode("Name").InnerText, new HUDSingle(XmlItem.SelectSingleNode("Name").InnerText, XmlItem.SelectSingleNode("Game").InnerText, XmlItem.SelectSingleNode("URI").InnerText, XmlItem.SelectSingleNode("UpURI").InnerText, XmlItem.SelectSingleNode("IsUpdated").InnerText == "1", XmlItem.SelectSingleNode("Preview").InnerText, XmlItem.SelectSingleNode("LastUpdate").InnerText, XmlItem.SelectSingleNode("Site").InnerText, XmlItem.SelectSingleNode("ArchiveDir").InnerText, XmlItem.SelectSingleNode("InstallDir").InnerText, XmlItem.SelectSingleNode("Hash").InnerText, Path.Combine(AppHUDDir, Path.ChangeExtension(Path.GetFileName(XmlItem.SelectSingleNode("Name").InnerText), ".zip"))));
                         }
                     }
                     catch (Exception Ex)
