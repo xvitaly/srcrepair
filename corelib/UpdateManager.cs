@@ -177,7 +177,7 @@ namespace srcrepair.core
         /// <returns>Returns True if game database update available.</returns>
         public bool CheckGameDBUpdate()
         {
-            return FileManager.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Resources.GameListFile)) != GameUpdateHash;
+            return FileManager.CalculateFileMD5(Path.Combine(FullAppPath, StringsManager.GameDatabaseName)) != GameUpdateHash;
         }
 
         /// <summary>
@@ -186,7 +186,7 @@ namespace srcrepair.core
         /// <returns>Returns True if HUD database update available.</returns>
         public bool CheckHUDUpdate()
         {
-            return FileManager.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Resources.HUDDbFile)) != HUDUpdateHash;
+            return FileManager.CalculateFileMD5(Path.Combine(FullAppPath, StringsManager.HudDatabaseName)) != HUDUpdateHash;
         }
 
         /// <summary>
@@ -195,7 +195,7 @@ namespace srcrepair.core
         /// <returns>Returns True if configs database update available.</returns>
         public bool CheckCfgUpdate()
         {
-            return FileManager.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Resources.CfgDbFile)) != CfgUpdateHash;
+            return FileManager.CalculateFileMD5(Path.Combine(FullAppPath, StringsManager.ConfigDatabaseName)) != CfgUpdateHash;
         }
 
         /// <summary>
@@ -204,7 +204,7 @@ namespace srcrepair.core
         /// <returns>Returns True if cleanup targets database update available.</returns>
         public bool CheckClnUpdate()
         {
-            return FileManager.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Resources.CleanupDbFile)) != ClnUpdateHash;
+            return FileManager.CalculateFileMD5(Path.Combine(FullAppPath, StringsManager.CleanupDatabaseName)) != ClnUpdateHash;
         }
 
         /// <summary>
