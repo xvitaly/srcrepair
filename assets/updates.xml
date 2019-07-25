@@ -20,4 +20,9 @@
         <URL>https://www.easycoding.org/files/srcrepair/updates/configs.xml</URL>
         <Hash>3f33b5610cf84fa59b9004a6d6c9719c</Hash>
     </CfgDB>
+    <ClnDB>
+        <Version>master</Version>
+        <URL>https://www.easycoding.org/files/srcrepair/updates/cleanup.xml</URL>
+        <Hash>58c71561027c22eee35646056bd05df0</Hash>
+    </ClnDB>
 </Updates>
