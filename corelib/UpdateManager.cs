@@ -77,6 +77,16 @@ namespace srcrepair.core
         public string CfgUpdateHash { get; private set; }
 
         /// <summary>
+        /// Gets or sets download URL of cleanup targets database update.
+        /// </summary>
+        public string ClnUpdateURL { get; private set; }
+
+        /// <summary>
+        /// Gets or sets hash of cleanup targets database update file.
+        /// </summary>
+        public string ClnUpdateHash { get; private set; }
+
+        /// <summary>
         /// Stores full path to installed application.
         /// </summary>
         private readonly string FullAppPath;
@@ -139,6 +149,10 @@ namespace srcrepair.core
                             CfgUpdateURL = Child.ChildNodes[1].InnerText;
                             CfgUpdateHash = Child.ChildNodes[2].InnerText;
                             break;
+                        case "ClnDB":
+                            ClnUpdateURL = Child.ChildNodes[1].InnerText;
+                            ClnUpdateHash = Child.ChildNodes[2].InnerText;
+                            break;
                     }
                 }
             }
@@ -188,6 +202,15 @@ namespace srcrepair.core
         public bool CheckCfgUpdate()
         {
             return FileManager.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Resources.CfgDbFile)) != CfgUpdateHash;
+        }
+
+        /// <summary>
+        /// Checks if cleanup targets database needs to be updated.
+        /// </summary>
+        /// <returns>Returns True if cleanup targets database update available.</returns>
+        public bool CheckClnUpdate()
+        {
+            return FileManager.CalculateFileMD5(Path.Combine(FullAppPath, Properties.Resources.CleanupDbFile)) != ClnUpdateHash;
         }
 
         /// <summary>
