@@ -96,7 +96,9 @@ namespace srcrepair.core
         /// <param name="SgGamePath">Path to installation directory without SmallAppName.</param>
         /// <param name="SgFullGamePath">Full path to installation directory.</param>
         /// <param name="SgAppWorkshopDir">Full path of Workshop directory.</param>
-        public CleanupManager(string FullAppPath, string SgGamePath, string SgFullGamePath, string SgAppWorkshopDir)
+        /// <param name="SgAppWorkshopDir">Full path of Workshop directory.</param>
+        /// <param name="SafeClean">Current status of safe cleanup.</param>
+        public CleanupManager(string FullAppPath, string SgGamePath, string SgFullGamePath, string SgAppWorkshopDir, bool SafeClean = true)
         {
             // Filling some private fields...
             GamePath = SgGamePath;
@@ -122,9 +124,9 @@ namespace srcrepair.core
 
                         foreach (XmlNode CtDir in XmlItem.SelectSingleNode("Directories"))
                         {
-                            if (CtDir.Attributes["Class"].Value == "Safe")
+                            if (CtDir.Attributes["Class"].Value == "Safe" || !SafeClean)
                             {
-                                DirList.Add(CtDir.InnerText);
+                                DirList.Add(GetFullPath(CtDir.InnerText));
                             }
                         }
 
