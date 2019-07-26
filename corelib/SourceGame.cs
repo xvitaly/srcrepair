@@ -46,6 +46,11 @@ namespace srcrepair.core
         public string GamePath { get; private set; }
 
         /// <summary>
+        /// Gets full path to engine's core binaries.
+        /// </summary>
+        public string CoreEngineBinPath { get; private set; }
+
+        /// <summary>
         /// Gets full user-friendly name.
         /// </summary>
         public string FullAppName { get; private set; }
@@ -265,6 +270,7 @@ namespace srcrepair.core
                 SteamID = SelectedSteamID;
                 FullGamePath = Path.Combine(GamePath, SmallAppName);
                 FullCfgPath = Path.Combine(FullGamePath, "cfg");
+                CoreEngineBinPath = Path.Combine(GamePath, "bin");
                 FullBackUpDirPath = Path.Combine(AUserDir, "backups", Path.GetFileName(SmallAppName));
                 AppHUDDir = Path.Combine(AUserDir, Properties.Resources.HUDLocalDir, SmallAppName);
                 CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : String.Empty);
