@@ -52,6 +52,11 @@ namespace srcrepair.core
         /// </summary>
         public CleanupTarget this[string key] => CleanupTargets[key];
 
+        /// <summary>
+        /// Fill templates with real application paths.
+        /// </summary>
+        /// <param name="Row">String with templates to be filled.</param>
+        /// <returns>Fully qualified string with path.</returns>
         private string ParseRow(string Row)
         {
             StringBuilder Result = new StringBuilder(Row);
