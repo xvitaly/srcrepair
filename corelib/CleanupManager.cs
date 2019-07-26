@@ -21,6 +21,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System.Xml;
 using NLog;
 
@@ -41,18 +42,41 @@ namespace srcrepair.core
         /// </summary>
         private readonly Dictionary<string, CleanupTarget> CleanupTargets;
 
+        private readonly string GamePath;
+        private readonly string FullGamePath;
+        private readonly string AppWorkshopDir;
+
         /// <summary>
         /// Overloading inxeding operator to return cleanup target instance
         /// by specified name.
         /// </summary>
         public CleanupTarget this[string key] => CleanupTargets[key];
 
+        private string ParseRow(string Row)
+        {
+            StringBuilder Result = new StringBuilder(Row);
+
+            Row.Replace("$GamePath$", GamePath);
+            Row.Replace("$FullGamePath$", FullGamePath);
+            Row.Replace("$AppWorkshopDir$", AppWorkshopDir);
+
+            return Result.ToString();
+        }
+
         /// <summary>
         /// CleanupManager class constructor.
         /// </summary>
         /// <param name="FullAppPath">Path to SRC Repair installation directory.</param>
-        public CleanupManager(string FullAppPath)
+        /// <param name="SgGamePath">Path to installation directory without SmallAppName.</param>
+        /// <param name="SgFullGamePath">Full path to installation directory.</param>
+        /// <param name="SgAppWorkshopDir">Full path of Workshop directory.</param>
+        public CleanupManager(string FullAppPath, string SgGamePath, string SgFullGamePath, string SgAppWorkshopDir)
         {
+            // Filling some private fields...
+            GamePath = SgGamePath;
+            FullGamePath = SgFullGamePath;
+            AppWorkshopDir = SgAppWorkshopDir;
+            
             // Initializing empty dictionary...
             CleanupTargets = new Dictionary<string, CleanupTarget>();
 
