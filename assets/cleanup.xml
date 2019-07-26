@@ -129,7 +129,7 @@
         <ID>11</ID>
         <Name>Deep cleanup</Name>
         <Directories>
-            <Directory Class="Safe">$GamePath$/$FIXME$/bin/*.*</Directory>
+            <Directory Class="Safe">$GamePath$/bin/*.*</Directory>
             <Directory Class="Safe">$FullGamePath$/bin/*.*</Directory>
             <Directory Class="Safe">$GamePath$/*.exe</Directory>
             <Directory Class="Safe">$FullGamePath$/download/*.*</Directory>
