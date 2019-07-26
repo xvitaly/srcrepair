@@ -38,12 +38,23 @@ namespace srcrepair.core
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Store full list of available cleanup targets.
+        /// Stores full list of available cleanup targets.
         /// </summary>
         private readonly Dictionary<string, CleanupTarget> CleanupTargets;
 
+        /// <summary>
+        /// Stores path to installation directory without SmallAppName.
+        /// </summary>
         private readonly string GamePath;
+
+        /// <summary>
+        /// Stores full path to installation directory.
+        /// </summary>
         private readonly string FullGamePath;
+
+        /// <summary>
+        /// Stores full path of Workshop directory.
+        /// </summary>
         private readonly string AppWorkshopDir;
 
         /// <summary>
