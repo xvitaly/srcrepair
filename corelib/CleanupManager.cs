@@ -79,6 +79,11 @@ namespace srcrepair.core
             return Result.ToString();
         }
 
+        private string GetFullPath(string Row)
+        {
+            return Path.GetFullPath(ParseRow(Row));
+        }
+
         /// <summary>
         /// CleanupManager class constructor.
         /// </summary>
