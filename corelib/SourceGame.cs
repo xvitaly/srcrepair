@@ -215,6 +215,7 @@ namespace srcrepair.core
         /// <summary>
         /// Returns the newerest file with video settings.
         /// </summary>
+        /// <returns>Full path to the newerest file with video settings.</returns>
         public string GetActualVideoFile()
         {
             return FileManager.FindNewerestFile(VideoCfgFiles);
@@ -223,6 +224,7 @@ namespace srcrepair.core
         /// <summary>
         /// Returns the newerest file with voice bans.
         /// </summary>
+        /// <returns>Full path to the newerest file with voice bans.</returns>
         public string GetActualBanlistFile()
         {
             return FileManager.FindNewerestFile(BanlistFiles);
