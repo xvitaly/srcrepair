@@ -2687,7 +2687,7 @@ namespace srcrepair.gui
             List<String> CleanDirs = new List<string>
             {
                 // Удалим старые бинарники и лаунчеры...
-                Path.Combine(App.SourceGames[AppSelector.Text].GamePath, Path.GetDirectoryName(App.SourceGames[AppSelector.Text].SmallAppName), "bin", "*.*"),
+                Path.Combine(App.SourceGames[AppSelector.Text].CoreEngineBinPath, "*.*"),
                 Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "bin", "*.*"),
                 Path.Combine(App.SourceGames[AppSelector.Text].GamePath, "*.exe"),
 
