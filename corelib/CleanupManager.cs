@@ -72,9 +72,10 @@ namespace srcrepair.core
         {
             StringBuilder Result = new StringBuilder(Row);
 
-            Row.Replace("$GamePath$", GamePath);
-            Row.Replace("$FullGamePath$", FullGamePath);
-            Row.Replace("$AppWorkshopDir$", AppWorkshopDir);
+            Result.Replace("$GamePath$", GamePath);
+            Result.Replace("$FullGamePath$", FullGamePath);
+            Result.Replace("$AppWorkshopDir$", AppWorkshopDir);
+            Result.Replace('/', Path.DirectorySeparatorChar);
 
             return Result.ToString();
         }
@@ -86,7 +87,7 @@ namespace srcrepair.core
         /// <returns>Fully qualified path.</returns>
         private string GetFullPath(string Row)
         {
-            return Path.GetFullPath(ParseRow(Row));
+            return ParseRow(Row);
         }
 
         /// <summary>
