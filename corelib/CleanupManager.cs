@@ -79,6 +79,11 @@ namespace srcrepair.core
             return Result.ToString();
         }
 
+        /// <summary>
+        /// Gets fully qualified path from specified source string.
+        /// </summary>
+        /// <param name="Row">Source string.</param>
+        /// <returns>Fully qualified path.</returns>
         private string GetFullPath(string Row)
         {
             return Path.GetFullPath(ParseRow(Row));
