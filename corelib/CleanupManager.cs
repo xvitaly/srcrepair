@@ -95,8 +95,8 @@ namespace srcrepair.core
         /// </summary>
         /// <param name="FullAppPath">Path to SRC Repair installation directory.</param>
         /// <param name="SelectedGame">Instance of SourceGame class with selected in main window game.</param>
-        /// <param name="SafeClean">Current status of safe cleanup.</param>
-        public CleanupManager(string FullAppPath, SourceGame SelectedGame, bool SafeClean = true)
+        /// <param name="AllowUnsafe">Allow or disallow to use unsafe cleanup methods.</param>
+        public CleanupManager(string FullAppPath, SourceGame SelectedGame, bool AllowUnsafe = false)
         {
             // Filling some private fields...
             GamePath = SelectedGame.GamePath;
@@ -122,7 +122,7 @@ namespace srcrepair.core
 
                         foreach (XmlNode CtDir in XmlItem.SelectSingleNode("Directories"))
                         {
-                            if (CtDir.Attributes["Class"].Value == "Safe" || !SafeClean)
+                            if (CtDir.Attributes["Class"].Value == "Safe" || AllowUnsafe)
                             {
                                 DirList.Add(GetFullPath(CtDir.InnerText));
                             }
