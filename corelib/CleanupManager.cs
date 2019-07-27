@@ -94,17 +94,14 @@ namespace srcrepair.core
         /// CleanupManager class constructor.
         /// </summary>
         /// <param name="FullAppPath">Path to SRC Repair installation directory.</param>
-        /// <param name="SgGamePath">Path to installation directory without SmallAppName.</param>
-        /// <param name="SgFullGamePath">Full path to installation directory.</param>
-        /// <param name="SgAppWorkshopDir">Full path of Workshop directory.</param>
-        /// <param name="SgAppWorkshopDir">Full path of Workshop directory.</param>
+        /// <param name="SelectedGame">Instance of SourceGame class with selected in main window game.</param>
         /// <param name="SafeClean">Current status of safe cleanup.</param>
-        public CleanupManager(string FullAppPath, string SgGamePath, string SgFullGamePath, string SgAppWorkshopDir, bool SafeClean = true)
+        public CleanupManager(string FullAppPath, SourceGame SelectedGame, bool SafeClean = true)
         {
             // Filling some private fields...
-            GamePath = SgGamePath;
-            FullGamePath = SgFullGamePath;
-            AppWorkshopDir = SgAppWorkshopDir;
+            GamePath = SelectedGame.GamePath;
+            FullGamePath = SelectedGame.FullGamePath;
+            AppWorkshopDir = SelectedGame.AppWorkshopDir;
             
             // Initializing empty dictionary...
             CleanupTargets = new Dictionary<string, CleanupTarget>();
