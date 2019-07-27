@@ -1141,6 +1141,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cleanup targets is not yet available! Please try again in 10 seconds..
+        /// </summary>
+        internal static string PS_BwBusy {
+            get {
+                return ResourceManager.GetString("PS_BwBusy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cleanup successfully completed! You should run game cache integrity check now..
         /// </summary>
         internal static string PS_CacheChkReq {

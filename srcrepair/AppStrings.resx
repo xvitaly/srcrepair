@@ -651,4 +651,7 @@
   <data name="AR_BkgWrkExText" xml:space="preserve">
     <value>Archive not found.</value>
   </data>
+  <data name="PS_BwBusy" xml:space="preserve">
+    <value>Cleanup targets is not yet available! Please try again in 10 seconds.</value>
+  </data>
 </root>
