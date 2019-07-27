@@ -39,24 +39,6 @@ namespace srcrepair.core
         public List<String> Directories { get; private set; }
 
         /// <summary>
-        /// Adds custom directory for cleanup.
-        /// </summary>
-        /// <param name="Target">Custom directory to be added to list.</param>
-        public void AddTarget(string Target)
-        {
-            Directories.Add(Target);
-        }
-
-        /// <summary>
-        /// Adds collection of custom directories for cleanup.
-        /// </summary>
-        /// <param name="Targets">Collection of custom directories to be added to list.</param>
-        public void AddTargets(List<String> Targets)
-        {
-            Directories.AddRange(Targets);
-        }
-
-        /// <summary>
         /// CleanupTarget class constructor.
         /// </summary>
         /// <param name="CtName">Cleanup target friendly name.</param>
