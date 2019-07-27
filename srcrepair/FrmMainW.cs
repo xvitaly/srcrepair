@@ -1088,6 +1088,23 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// Opens cleanup window and start cleanup sequence.
+        /// </summary>
+        /// <param name="ID">Cleanup target ID.</param>
+        /// <param name="Title">Title for cleanup window.</param>
+        private void StartCleanup(string ID, string Title)
+        {
+            if (!BW_ClnList.IsBusy)
+            {
+                GuiHelpers.FormShowCleanup(App.SourceGames[AppSelector.Text].ClnMan[ID].Directories, Title.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+            }
+            else
+            {
+                MessageBox.Show(AppStrings.PS_BwBusy, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         #endregion
 
         #region Internal Workers
@@ -1910,14 +1927,7 @@ namespace srcrepair.gui
         private void PS_RemCustMaps_Click(object sender, EventArgs e)
         {
             // Удаляем кастомные (нестандартные) карты...
-            List<String> CleanDirs = new List<string>
-            {
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "custom", "*.bsp"),
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "download", "*.bsp"),
-                Path.Combine(App.SourceGames[AppSelector.Text].AppWorkshopDir, "*.bsp")
-            };
-            if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "maps", "*.bsp")); }
-            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+            StartCleanup("0", ((Button)sender).Text);
         }
 
         private void PS_RemDnlCache_Click(object sender, EventArgs e)
