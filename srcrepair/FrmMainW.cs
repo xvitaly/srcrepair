@@ -1335,6 +1335,29 @@ namespace srcrepair.gui
             SetHUDButtons(HUDManager.CheckInstalledHUD(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir));
         }
 
+        /// <summary>
+        /// Gets collection of available cleanup targets for selected game.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Additional arguments.</param>
+        private void BW_ClnList_DoWork(object sender, DoWorkEventArgs e)
+        {
+            App.SourceGames[(string)e.Argument].ClnMan = new CleanupManager(App.FullAppPath, App.SourceGames[(string)e.Argument], Properties.Settings.Default.AllowUnSafeCleanup);
+        }
+
+        /// <summary>
+        /// Finalizes check of available cleanup targets for selected game.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Completion arguments and results.</param>
+        private void BW_ClnList_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                Logger.Warn(e.Error);
+            }
+        }
+
         #endregion
 
         private void FrmMainW_Load(object sender, EventArgs e)
@@ -1544,6 +1567,9 @@ namespace srcrepair.gui
 
                 // Создадим каталоги кэшей для HUD...
                 if (App.SourceGames[AppSelector.Text].IsHUDsAvailable && !Directory.Exists(App.SourceGames[AppSelector.Text].AppHUDDir)) { Directory.CreateDirectory(App.SourceGames[AppSelector.Text].AppHUDDir); }
+
+                // Checking for available cleanup targets...
+                if (!BW_ClnList.IsBusy) { BW_ClnList.RunWorkerAsync(AppSelector.Text); }
             }
             catch (Exception Ex)
             {
@@ -1897,13 +1923,7 @@ namespace srcrepair.gui
         private void PS_RemDnlCache_Click(object sender, EventArgs e)
         {
             // Удаляем кэш загрузок...
-            List<String> CleanDirs = new List<string>
-            {
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "download", "*.*"),
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "downloads", "*.*"),
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "streams", "*.*")
-            };
-            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+            GuiHelpers.FormShowCleanup(App.SourceGames[AppSelector.Text].ClnMan["1"].Directories, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
         }
 
         private void PS_RemSoundCache_Click(object sender, EventArgs e)
