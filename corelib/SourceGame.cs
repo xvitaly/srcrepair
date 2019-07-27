@@ -139,6 +139,11 @@ namespace srcrepair.core
         public ConfigManager CFGMan { get; set; }
 
         /// <summary>
+        /// Gets or sets instance of CleanupManager class.
+        /// </summary>
+        public CleanupManager ClnMan { get; set; }
+
+        /// <summary>
         /// Gets full path of Workshop directory.
         /// </summary>
         public string AppWorkshopDir { get; private set; }
