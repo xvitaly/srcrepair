@@ -1222,6 +1222,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occured while trying to open cleanup window. Additional information about this issue has been added to logs..
+        /// </summary>
+        internal static string PS_ClnWndInitError {
+            get {
+                return ResourceManager.GetString("PS_ClnWndInitError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Perform this cleanup?.
         /// </summary>
         internal static string PS_ExecuteMSG {

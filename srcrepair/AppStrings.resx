@@ -654,4 +654,7 @@
   <data name="PS_BwBusy" xml:space="preserve">
     <value>Cleanup targets is not yet available! Please try again in 10 seconds.</value>
   </data>
+  <data name="PS_ClnWndInitError" xml:space="preserve">
+    <value>An error occured while trying to open cleanup window. Additional information about this issue has been added to logs.</value>
+  </data>
 </root>

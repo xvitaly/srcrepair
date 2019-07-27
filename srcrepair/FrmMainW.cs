@@ -1089,20 +1089,44 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Opens cleanup window and start cleanup sequence with additional targets.
+        /// </summary>
+        /// <param name="ID">Cleanup target ID.</param>
+        /// <param name="Title">Title for cleanup window.</param>
+        /// <param name="Targets">Additional targets for cleanup.</param>
+        private void StartCleanup(string ID, string Title, List<String> Targets)
+        {
+            if (!BW_ClnList.IsBusy)
+            {
+                try
+                {
+                    List<String> CleanDirs = new List<String>(App.SourceGames[AppSelector.Text].ClnMan[ID].Directories);
+                    if (Targets.Count > 0)
+                    {
+                        CleanDirs.AddRange(Targets);
+                    }
+                    GuiHelpers.FormShowCleanup(CleanDirs, Title.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Error(Ex);
+                    MessageBox.Show(AppStrings.PS_ClnWndInitError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show(AppStrings.PS_BwBusy, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
         /// Opens cleanup window and start cleanup sequence.
         /// </summary>
         /// <param name="ID">Cleanup target ID.</param>
         /// <param name="Title">Title for cleanup window.</param>
         private void StartCleanup(string ID, string Title)
         {
-            if (!BW_ClnList.IsBusy)
-            {
-                GuiHelpers.FormShowCleanup(App.SourceGames[AppSelector.Text].ClnMan[ID].Directories, Title.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
-            }
-            else
-            {
-                MessageBox.Show(AppStrings.PS_BwBusy, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            StartCleanup(ID, Title, new List<String>());
         }
 
         #endregion
@@ -1933,44 +1957,25 @@ namespace srcrepair.gui
         private void PS_RemDnlCache_Click(object sender, EventArgs e)
         {
             // Удаляем кэш загрузок...
-            GuiHelpers.FormShowCleanup(App.SourceGames[AppSelector.Text].ClnMan["1"].Directories, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+            StartCleanup("1", ((Button)sender).Text);
         }
 
         private void PS_RemSoundCache_Click(object sender, EventArgs e)
         {
             // Удаляем звуковой кэш...
-            List<String> CleanDirs = new List<string>
-            {
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "maps", "graphs", "*.*"),
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "maps", "soundcache", "*.*"),
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "download", "sound", "*.*"),
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "*.cache")
-            };
-            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+            StartCleanup("2", ((Button)sender).Text);
         }
 
         private void PS_RemScreenShots_Click(object sender, EventArgs e)
         {
             // Удаляем все скриншоты...
-            List<String> CleanDirs = new List<string>
-            {
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "screenshots", "*.*")
-            };
-            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile, false, false, false);
+            StartCleanup("3", ((Button)sender).Text);
         }
 
         private void PS_RemDemos_Click(object sender, EventArgs e)
         {
             // Удаляем все записанные демки...
-            List<String> CleanDirs = new List<string>
-            {
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "demos", "*.*"),
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "*.dem"),
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "*.mp4"),
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "*.tga"),
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "*.wav")
-            };
-            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile, false, false, false, false);
+            StartCleanup("4", ((Button)sender).Text);
         }
 
         private void PS_RemGameOpts_Click(object sender, EventArgs e)
@@ -2055,14 +2060,7 @@ namespace srcrepair.gui
         private void PS_RemOldBin_Click(object sender, EventArgs e)
         {
             // Удаляем старые бинарники...
-            List<String> CleanDirs = new List<string>
-            {
-                Path.Combine(App.SourceGames[AppSelector.Text].CoreEngineBinPath, "*.*"),
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "bin", "*.*"),
-                Path.Combine(App.SourceGames[AppSelector.Text].GamePath, "*.exe")
-            };
-            if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(App.SourceGames[AppSelector.Text].GamePath, "platform", "*.*")); }
-            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CacheChkReq, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+            StartCleanup("5", ((Button)sender).Text);
         }
 
         private void PS_CheckCache_Click(object sender, EventArgs e)
@@ -2592,50 +2590,19 @@ namespace srcrepair.gui
         private void PS_RemReplays_Click(object sender, EventArgs e)
         {
             // Удаляем все реплеи...
-            List<String> CleanDirs = new List<string>
-            {
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "replay", "*.*")
-            };
-            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+            StartCleanup("6", ((Button)sender).Text);
         }
 
         private void PS_RemTextures_Click(object sender, EventArgs e)
         {
             // Удаляем все кастомные текстуры...
-            List<String> CleanDirs = new List<string>
-            {
-                // Чистим загруженные с серверов модели и текстуры...
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "download", "*.vt*"),
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "download", "*.vmt"),
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "download", "*.mdl"),
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "download", "*.phy"),
-                
-                // Чистим установленные пользователем модели и текстуры...
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "custom", "*.vt*"),
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "custom", "*.vmt"),
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "custom", "*.mdl"),
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "custom", "*.phy")
-            };
-
-            // Чистим базы игр со старой системой. Удалить после полного перехода на новую...
-            if (Properties.Settings.Default.AllowUnSafeCleanup)
-            {
-                CleanDirs.Add(Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "materials", "*.*"));
-                CleanDirs.Add(Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "models", "*.*"));
-            }
-            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+            StartCleanup("7", ((Button)sender).Text);
         }
 
         private void PS_RemSecndCache_Click(object sender, EventArgs e)
         {
             // Удаляем содержимое вторичного кэша загрузок...
-            List<String> CleanDirs = new List<string>
-            {
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "cache", "*.*"), // Кэш...
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "custom", "user_custom", "*.*"), // Кэш спреев игр с н.с.к...
-                Path.Combine(App.SourceGames[AppSelector.Text].GamePath, "config", "html", "*.*") // Кэш MOTD...
-            };
-            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+            StartCleanup("8", ((Button)sender).Text);
         }
 
         private void SB_App_DoubleClick(object sender, EventArgs e)
@@ -2691,73 +2658,30 @@ namespace srcrepair.gui
         private void PS_RemSounds_Click(object sender, EventArgs e)
         {
             // Удаляем кастомные звуки...
-            List<String> CleanDirs = new List<string>
-            {
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "download", "*.mp3"),
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "download", "*.wav")
-            };
-            if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "sound", "*.*")); }
-            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+            StartCleanup("9", ((Button)sender).Text);
         }
 
         private void PS_RemCustDir_Click(object sender, EventArgs e)
         {
             // Удаляем пользовательного каталога...
-            List<String> CleanDirs = new List<string>
-            {
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "custom", "*.*"),
-                Path.Combine(App.SourceGames[AppSelector.Text].AppWorkshopDir, "*.*")
-            };
-            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+            StartCleanup("10", ((Button)sender).Text);
         }
 
         private void PS_DeepCleanup_Click(object sender, EventArgs e)
         {
             // Проведём глубокую очистку...
-            List<String> CleanDirs = new List<string>
+            List<String> CleanDirs = new List<String>(App.SourceGames[AppSelector.Text].CloudConfigs);
+            if (App.SourceGames[AppSelector.Text].IsUsingVideoFile)
             {
-                // Удалим старые бинарники и лаунчеры...
-                Path.Combine(App.SourceGames[AppSelector.Text].CoreEngineBinPath, "*.*"),
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "bin", "*.*"),
-                Path.Combine(App.SourceGames[AppSelector.Text].GamePath, "*.exe"),
-
-                // Удалим кэш загрузок...
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "download", "*.*"),
-
-                // Удалим кастомные файлы...
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "custom", "*.*"),
-                Path.Combine(App.SourceGames[AppSelector.Text].AppWorkshopDir, "*.*"),
-
-                // Удалим другие кэши...
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "cache", "*.*"),
-
-                // Удалим пользовательские конфиги...
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "cfg", "*.cfg")
-            };
-
-            // Конфиги их хранилища Steam Cloud...
-            CleanDirs.AddRange(App.SourceGames[AppSelector.Text].CloudConfigs);
-
-            // Данные платформы...
-            if (Properties.Settings.Default.AllowUnSafeCleanup) { CleanDirs.Add(Path.Combine(App.SourceGames[AppSelector.Text].GamePath, "platform", "*.*")); }
-            
-            // Удаляем графические настройки NCF-игры...
-            if (App.SourceGames[AppSelector.Text].IsUsingVideoFile) { CleanDirs.AddRange(App.SourceGames[AppSelector.Text].VideoCfgFiles); }
-
-            // Запускаем процесс очистки...
-            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CacheChkReq, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+                CleanDirs.AddRange(App.SourceGames[AppSelector.Text].VideoCfgFiles);
+            }
+            StartCleanup("11", ((Button)sender).Text, CleanDirs);
         }
 
         private void PS_RemConfigs_Click(object sender, EventArgs e)
         {
             // Удаляем пользовательного каталога...
-            List<String> CleanDirs = new List<string>
-            {
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "cfg", "*.*"),
-                Path.Combine(App.SourceGames[AppSelector.Text].FullGamePath, "custom", "*.cfg")
-            };
-            CleanDirs.AddRange(App.SourceGames[AppSelector.Text].CloudConfigs);
-            GuiHelpers.FormShowCleanup(CleanDirs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+            StartCleanup("12", ((Button)sender).Text, App.SourceGames[AppSelector.Text].CloudConfigs);
         }
 
         private void HD_HSel_SelectedIndexChanged(object sender, EventArgs e)
