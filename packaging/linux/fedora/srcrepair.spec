@@ -2,7 +2,7 @@
 
 %global nuget_version 5.0.2
 %global dotnetzip_version 1.13.3
-%global nlog_version 4.6.5
+%global nlog_version 4.6.6
 
 Name: srcrepair
 Version: 35.0.0
