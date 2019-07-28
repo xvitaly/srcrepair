@@ -270,7 +270,7 @@ namespace srcrepair.core
                             // Finding additional game libraries...
                             if (RdStr.IndexOf("BaseInstallFolder", StringComparison.CurrentCultureIgnoreCase) != -1)
                             {
-                                RdStr = CoreLib.CleanStrWx(RdStr, true, true);
+                                RdStr = StringsManager.CleanString(RdStr, true, true);
                                 RdStr = RdStr.Remove(0, RdStr.IndexOf(" ") + 1);
                                 if (!(String.IsNullOrWhiteSpace(RdStr))) { Result.Add(RdStr); }
                             }

@@ -315,7 +315,7 @@ namespace srcrepair.gui
                         while (ConfigFile.Peek() >= 0)
                         {
                             // Почистим строку от лишних пробелов и табуляций...
-                            ImpStr = CoreLib.CleanStrWx(ConfigFile.ReadLine());
+                            ImpStr = StringsManager.CleanString(ConfigFile.ReadLine());
 
                             // Проверяем, не пустая ли строка...
                             if (!(String.IsNullOrEmpty(ImpStr)))

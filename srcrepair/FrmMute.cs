@@ -95,7 +95,7 @@ namespace srcrepair.gui
                     while (OpenedHosts.Peek() >= 0)
                     {
                         // Почистим строку от лишних символов...
-                        string ImpStr = CoreLib.CleanStrWx(OpenedHosts.ReadLine());
+                        string ImpStr = StringsManager.CleanString(OpenedHosts.ReadLine());
 
                         // Представим строку как массив...
                         List<String> Res = ParseRow(ImpStr);

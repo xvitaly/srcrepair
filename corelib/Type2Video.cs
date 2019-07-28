@@ -768,7 +768,7 @@ namespace srcrepair.core
         /// <returns>Extracted from source string value.</returns>
         protected string ExtractCVFromLine(string LineA)
         {
-            LineA = CoreLib.CleanStrWx(LineA, true);
+            LineA = StringsManager.CleanString(LineA, true);
             return LineA.Substring(LineA.LastIndexOf(" ")).Trim();
         }
 
