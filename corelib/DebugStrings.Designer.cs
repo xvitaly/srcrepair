@@ -86,5 +86,14 @@ namespace srcrepair.core {
                 return ResourceManager.GetString("AppDbgExCoreGameManConstructor", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minor exception while building HUD list object..
+        /// </summary>
+        internal static string AppDbgExCoreHudManConstructor {
+            get {
+                return ResourceManager.GetString("AppDbgExCoreHudManConstructor", resourceCulture);
+            }
+        }
     }
 }

@@ -126,4 +126,7 @@
   <data name="AppDbgExCoreGameManConstructor" xml:space="preserve">
     <value>Minor exception while building games list object.</value>
   </data>
+  <data name="AppDbgExCoreHudManConstructor" xml:space="preserve">
+    <value>Minor exception while building HUD list object.</value>
+  </data>
 </root>
