@@ -190,7 +190,8 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Compresses specified files to a single Zip archive.
+        /// Compresses specified files to a single Zip archive with preserving
+        /// absolute paths.
         /// </summary>
         /// <param name="Files">List with full file names to be compressed.</param>
         /// <param name="ArchiveName">Archive name with full path.</param>
