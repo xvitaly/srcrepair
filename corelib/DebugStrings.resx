@@ -123,4 +123,7 @@
   <data name="AppDbgExCoreConfManConstructor" xml:space="preserve">
     <value>Minor exception while while building Config list object.</value>
   </data>
+  <data name="AppDbgExCoreGameManConstructor" xml:space="preserve">
+    <value>Minor exception while building games list object.</value>
+  </data>
 </root>

@@ -95,7 +95,7 @@ namespace srcrepair.core
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Warn(Ex, "Minor exception while building games list object.");
+                        Logger.Warn(Ex, DebugStrings.AppDbgExCoreGameManConstructor);
                     }
                 }
             }

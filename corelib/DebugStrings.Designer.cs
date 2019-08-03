@@ -77,5 +77,14 @@ namespace srcrepair.core {
                 return ResourceManager.GetString("AppDbgExCoreConfManConstructor", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minor exception while building games list object..
+        /// </summary>
+        internal static string AppDbgExCoreGameManConstructor {
+            get {
+                return ResourceManager.GetString("AppDbgExCoreGameManConstructor", resourceCulture);
+            }
+        }
     }
 }
