@@ -131,5 +131,14 @@ namespace srcrepair.core {
                 return ResourceManager.GetString("AppDbgExCoreStmManSidListEmpty", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to open registry key..
+        /// </summary>
+        internal static string AppDbgExCoreType1VideoRegOpenError {
+            get {
+                return ResourceManager.GetString("AppDbgExCoreType1VideoRegOpenError", resourceCulture);
+            }
+        }
     }
 }

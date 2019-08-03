@@ -141,4 +141,7 @@
   <data name="AppDbgExCoreStmManSidListEmpty" xml:space="preserve">
     <value>SteamID list is empty. Can not select one of them.</value>
   </data>
+  <data name="AppDbgExCoreType1VideoRegOpenError" xml:space="preserve">
+    <value>Failed to open registry key.</value>
+  </data>
 </root>

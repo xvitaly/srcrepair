@@ -778,7 +778,7 @@ namespace srcrepair.core
                 }
                 else
                 {
-                    throw new Exception("Failed to open registry key.");
+                    throw new Exception(DebugStrings.AppDbgExCoreType1VideoRegOpenError);
                 }
             }
         }
