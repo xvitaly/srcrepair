@@ -95,5 +95,41 @@ namespace srcrepair.core {
                 return ResourceManager.GetString("AppDbgExCoreHudManConstructor", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minor exception while fetching Steam mount points..
+        /// </summary>
+        internal static string AppDbgExCoreStmManMountPointsFetchError {
+            get {
+                return ResourceManager.GetString("AppDbgExCoreStmManMountPointsFetchError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception: No InstallPath value detected! Please run Steam..
+        /// </summary>
+        internal static string AppDbgExCoreStmManNoInstallPathDetected {
+            get {
+                return ResourceManager.GetString("AppDbgExCoreStmManNoInstallPathDetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception: No Language value detected! Please run Steam..
+        /// </summary>
+        internal static string AppDbgExCoreStmManNoLangNameDetected {
+            get {
+                return ResourceManager.GetString("AppDbgExCoreStmManNoLangNameDetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SteamID list is empty. Can not select one of them..
+        /// </summary>
+        internal static string AppDbgExCoreStmManSidListEmpty {
+            get {
+                return ResourceManager.GetString("AppDbgExCoreStmManSidListEmpty", resourceCulture);
+            }
+        }
     }
 }

@@ -129,4 +129,16 @@
   <data name="AppDbgExCoreHudManConstructor" xml:space="preserve">
     <value>Minor exception while building HUD list object.</value>
   </data>
+  <data name="AppDbgExCoreStmManMountPointsFetchError" xml:space="preserve">
+    <value>Minor exception while fetching Steam mount points.</value>
+  </data>
+  <data name="AppDbgExCoreStmManNoInstallPathDetected" xml:space="preserve">
+    <value>Exception: No InstallPath value detected! Please run Steam.</value>
+  </data>
+  <data name="AppDbgExCoreStmManNoLangNameDetected" xml:space="preserve">
+    <value>Exception: No Language value detected! Please run Steam.</value>
+  </data>
+  <data name="AppDbgExCoreStmManSidListEmpty" xml:space="preserve">
+    <value>SteamID list is empty. Can not select one of them.</value>
+  </data>
 </root>

@@ -60,7 +60,10 @@ namespace srcrepair.core
         /// <returns>Checked or default UserID.</returns>
         public string GetCurrentSteamID(string SID)
         {
-            if (SteamIDs.Count < 1) { throw new ArgumentOutOfRangeException("SteamID list is empty. Can not select one of them."); }
+            if (SteamIDs.Count < 1)
+            {
+                throw new ArgumentOutOfRangeException(DebugStrings.AppDbgExCoreStmManSidListEmpty);
+            }
             return SteamIDs.IndexOf(SID) != -1 ? SID : SteamIDs[0];
         }
 
@@ -91,7 +94,7 @@ namespace srcrepair.core
                     else
                     {
                         // Does not exists. Throwing exception...
-                        throw new NullReferenceException("Exception: No InstallPath value detected! Please run Steam.");
+                        throw new NullReferenceException(DebugStrings.AppDbgExCoreStmManNoInstallPathDetected);
                     }
                 }
             }
@@ -118,7 +121,7 @@ namespace srcrepair.core
                     }
                     else
                     {
-                        throw new NullReferenceException("Exception: No Language value detected! Please run Steam.");
+                        throw new NullReferenceException(DebugStrings.AppDbgExCoreStmManNoLangNameDetected);
                     }
                 }
             }
@@ -280,7 +283,7 @@ namespace srcrepair.core
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, "Minor exception while fetching Steam mount points.");
+                Logger.Warn(Ex, DebugStrings.AppDbgExCoreStmManMountPointsFetchError);
             }
 
             // Returning final list...
