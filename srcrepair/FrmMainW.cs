@@ -2161,7 +2161,7 @@ namespace srcrepair.gui
                                     break;
                                 case ".bud":
                                     // Распаковываем архив с выводом прогресса...
-                                    GuiHelpers.FormShowArchiveExtract(Path.Combine(App.SourceGames[AppSelector.Text].FullBackUpDirPath, BU_Item.SubItems[4].Text), Path.GetPathRoot(App.SteamClient.FullSteamPath));
+                                    GuiHelpers.FormShowArchiveExtract(Path.Combine(App.SourceGames[AppSelector.Text].FullBackUpDirPath, BU_Item.SubItems[4].Text), Path.GetPathRoot(App.SourceGames[AppSelector.Text].FullGamePath));
 
                                     // Обновляем список FPS-конфигов...
                                     HandleConfigs();
