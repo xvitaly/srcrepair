@@ -132,7 +132,7 @@ namespace srcrepair.core
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Warn(Ex, DebugStrings.AppDbgExCoreCMConstructor);
+                        Logger.Warn(Ex, DebugStrings.AppDbgExCoreClnManConstructor);
                     }
                 }
             }

@@ -118,7 +118,7 @@ namespace srcrepair.core
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Warn(Ex, "Minor exception while while building Config list object.");
+                        Logger.Warn(Ex, DebugStrings.AppDbgExCoreConfManConstructor);
                     }
                 }
             }

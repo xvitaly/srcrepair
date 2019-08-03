@@ -63,9 +63,18 @@ namespace srcrepair.core {
         /// <summary>
         ///   Looks up a localized string similar to Minor exception while while building CleanupTargets list object..
         /// </summary>
-        internal static string AppDbgExCoreCMConstructor {
+        internal static string AppDbgExCoreClnManConstructor {
             get {
-                return ResourceManager.GetString("AppDbgExCoreCMConstructor", resourceCulture);
+                return ResourceManager.GetString("AppDbgExCoreClnManConstructor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minor exception while while building Config list object..
+        /// </summary>
+        internal static string AppDbgExCoreConfManConstructor {
+            get {
+                return ResourceManager.GetString("AppDbgExCoreConfManConstructor", resourceCulture);
             }
         }
     }
