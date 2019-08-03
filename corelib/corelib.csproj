@@ -55,6 +55,11 @@
   <ItemGroup>
     <Compile Include="CleanupManager.cs" />
     <Compile Include="CleanupTarget.cs" />
+    <Compile Include="DebugStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DebugStrings.resx</DependentUpon>
+    </Compile>
     <Compile Include="FPSConfig.cs" />
     <Compile Include="ConfigManager.cs" />
     <Compile Include="CurrentApp.cs" />
@@ -89,6 +94,10 @@
     <Compile Include="UpdateManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DebugStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DebugStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

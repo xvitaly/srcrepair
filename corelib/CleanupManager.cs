@@ -132,7 +132,7 @@ namespace srcrepair.core
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Warn(Ex, "Minor exception while while building CleanupTargets list object.");
+                        Logger.Warn(Ex, DebugStrings.AppDbgExCoreCMConstructor);
                     }
                 }
             }
