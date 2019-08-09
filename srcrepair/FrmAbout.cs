@@ -25,12 +25,12 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Класс формы "О программе".
+    /// Class of form "About".
     /// </summary>
     partial class FrmAbout : Form
     {
         /// <summary>
-        /// Конструктор класса формы "О программе".
+        /// FrmAbout class constructor.
         /// </summary>
         public FrmAbout()
         {
@@ -38,7 +38,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку "OK".
+        /// "OK" button click handler.
         /// </summary>
         private void OkButton_Click(object sender, EventArgs e)
         {
@@ -46,14 +46,13 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий создании формы.
+        /// "Form create" event handler.
         /// </summary>
         private void FrmAbout_Load(object sender, EventArgs e)
         {
-            // Заполняем информацию о версии, копирайте...
-            string AppProduct = CurrentApp.AppProduct;
-            Text = String.Format("About {0}...", AppProduct);
-            labelProductName.Text = AppProduct;
+            // Adding information about product version and copyrights...
+            Text = String.Format("About {0}...", CurrentApp.AppProduct);
+            labelProductName.Text = CurrentApp.AppProduct;
             #if DEBUG
             labelProductName.Text += " DEBUG";
             #endif
@@ -61,15 +60,9 @@ namespace srcrepair.gui
             labelCopyright.Text = CurrentApp.AppCopyright;
             labelCompanyName.Text = CurrentApp.AppCompany;
 
-            // Получаем текущий месяц и число для проверки на НГ...
-            DateTime XDate = DateTime.Now;
-            int XMonth = XDate.Month;
-            int XDay = XDate.Day;
-
-            // Проверяем систему на НГ (диапазон от 20.12.XXXX до 10.1.XXXX+1)...
-            if ((XMonth == 12 && (XDay >= 20 && XDay <= 31)) || (XMonth == 1 && (XDay >= 1 && XDay <= 10)))
+            // Checking for the New Year eve...
+            if (CurrentApp.IsNewYear)
             {
-                // НГ! Меняем логотип программы на специально заготовленный...
                 iconApp.Image = Properties.Resources.Xmas;
             }
         }
