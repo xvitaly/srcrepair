@@ -87,23 +87,55 @@ namespace srcrepair.core
         /// <summary>
         /// Get application name from the resource section of calling assembly.
         /// </summary>
-        public static string AppProduct { get { object[] Attribs = Assembly.GetCallingAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false); return Attribs.Length != 0 ? ((AssemblyProductAttribute)Attribs[0]).Product : String.Empty; } }
+        public static string AppProduct
+        {
+            get
+            {
+                object[] Attribs = Assembly.GetCallingAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false);
+                return Attribs.Length != 0 ? ((AssemblyProductAttribute)Attribs[0]).Product : String.Empty;
+            }
+        }
 
         /// <summary>
         /// Get application version from the resource section of calling assembly.
         /// </summary>
-        public static string AppVersion { get { return Assembly.GetCallingAssembly().GetName().Version.ToString(); } }
+        public static string AppVersion => Assembly.GetCallingAssembly().GetName().Version.ToString();
 
         /// <summary>
         /// Get application developer name from the resource section of calling assembly.
-        /// 
         /// </summary>
-        public static string AppCompany { get { object[] Attribs = Assembly.GetCallingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false); return Attribs.Length != 0 ? ((AssemblyCompanyAttribute)Attribs[0]).Company : String.Empty; } }
+        public static string AppCompany
+        {
+            get
+            {
+                object[] Attribs = Assembly.GetCallingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
+                return Attribs.Length != 0 ? ((AssemblyCompanyAttribute)Attribs[0]).Company : String.Empty;
+            }
+        }
 
         /// <summary>
         /// Get application copyright from the resource section of calling assembly.
         /// </summary>
-        public static string AppCopyright { get { object[] Attribs = Assembly.GetCallingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false); return Attribs.Length != 0 ? ((AssemblyCopyrightAttribute)Attribs[0]).Copyright : String.Empty; } }
+        public static string AppCopyright
+        {
+            get
+            {
+                object[] Attribs = Assembly.GetCallingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
+                return Attribs.Length != 0 ? ((AssemblyCopyrightAttribute)Attribs[0]).Copyright : String.Empty;
+            }
+        }
+
+        /// <summary>
+        /// Checks if current date belongs to the New Year eve.
+        /// </summary>
+        public static bool IsNewYear
+        {
+            get
+            {
+                DateTime XDate = DateTime.Now;
+                return (XDate.Month == 12 && XDate.Day >= 20 && XDate.Day <= 31) || (XDate.Month == 1 && XDate.Day >= 1 && XDate.Day <= 10);
+            }
+        }
 
         /// <summary>
         /// CurrentApp class constructor.
