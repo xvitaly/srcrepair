@@ -19,103 +19,121 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
-using System.Windows.Forms;
 using System.IO;
-using Ionic.Zip;
+using System.Windows.Forms;
 using NLog;
+using Ionic.Zip;
 
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Класс формы модуля распаковки файлов из архивов.
+    /// Class of archive extractor window.
     /// </summary>
     public partial class FrmArchWrk : Form
     {
         /// <summary>
-        /// Управляет записью событий в журнал.
+        /// Logger instance for FrmArchWrk class.
         /// </summary>
-        private Logger Logger = LogManager.GetCurrentClassLogger();
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Хранит статус выполнения процесса распаковки.
+        /// Gets or sets status of currently running process.
         /// </summary>
         private bool IsRunning { get; set; } = true;
 
         /// <summary>
-        /// Хранит имя архива, который мы распаковываем.
+        /// Gets or sets archive name with full path.
         /// </summary>
-        private string ArchName { get; set; }
+        private string ArchiveName { get; set; }
 
         /// <summary>
-        /// Хранит каталог назначения.
+        /// Gets or sets destination directory.
         /// </summary>
-        private string DestDir { get; set; }
+        private string DestinationDirectory { get; set; }
 
         /// <summary>
-        /// Конструктор класса формы модуля распаковки файлов из архивов.
+        /// FrmArchWrk class constructor.
         /// </summary>
-        /// <param name="A">Архив для распаковки</param>
-        /// <param name="D">Каталог назначения</param>
+        /// <param name="A">Full path to archive.</param>
+        /// <param name="D">Full destination path.</param>
         public FrmArchWrk(string A, string D)
         {
             InitializeComponent();
-            ArchName = A;
-            DestDir = D;
+            ArchiveName = A;
+            DestinationDirectory = D;
         }
 
         /// <summary>
-        /// Метод, срабатывающий при возникновении события "загрузка формы".
+        /// "Form create" event handler.
         /// </summary>
         private void FrmArchWrk_Load(object sender, EventArgs e)
         {
             // Начинаем процесс распаковки асинхронно...
-            if (!AR_Wrk.IsBusy) { AR_Wrk.RunWorkerAsync(); }
+            if (!AR_Wrk.IsBusy) { AR_Wrk.RunWorkerAsync(new List<String> { ArchiveName, DestinationDirectory }); }
         }
 
         /// <summary>
-        /// Метод, работающий в отдельном потоке при запуске механизма распаковки.
+        /// Extracts archive to specified destination directory.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Additional arguments.</param>
         private void AR_Wrk_DoWork(object sender, DoWorkEventArgs e)
         {
-            // Начинаем процесс распаковки с выводом индикатора прогресса...
-            if (File.Exists(ArchName))
+            // Parsing arguments list...
+            List<String> Arguments = e.Argument as List<String>;
+
+            // Checking if archive file exists...
+            if (File.Exists(Arguments[0]))
             {
-                using (ZipFile Zip = ZipFile.Read(ArchName))
+                // Opening archive...
+                using (ZipFile Zip = ZipFile.Read(Arguments[0]))
                 {
-                    // Формируем счётчики...
+                    // Creating some counters...
                     int TotalFiles = Zip.Count;
-                    int i = 1, j = 0;
+                    int CurrentFile = 1, CurrentPercent = 0;
                     
-                    // Начинаем распаковку архива...
+                    // Unpacking archive contents...
                     foreach (ZipEntry ZFile in Zip)
                     {
-                        try { ZFile.Extract(DestDir, ExtractExistingFileAction.OverwriteSilently); j = (int)Math.Round(((double)i / (double)TotalFiles * (double)100.00), 0); i++; if ((j >= 0) && (j <= 100)) { AR_Wrk.ReportProgress(j); } } catch (Exception Ex) { Logger.Warn(Ex); }
+                        try
+                        {
+                            // Extracting file, then counting and reporting progress...
+                            ZFile.Extract(Arguments[1], ExtractExistingFileAction.OverwriteSilently);
+                            CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
+                            if ((CurrentPercent >= 0) && (CurrentPercent <= 100))
+                            {
+                                AR_Wrk.ReportProgress(CurrentPercent);
+                            }
+                        }
+                        catch (Exception Ex) { Logger.Warn(Ex); }
                     }
                 }
             }
             else
             {
-                throw new FileNotFoundException(AppStrings.AR_BkgWrkExText, ArchName);
+                throw new FileNotFoundException(AppStrings.AR_BkgWrkExText, Arguments[0]);
             }
         }
 
         /// <summary>
-        /// Метод, информирующий основную форму о прогрессе распаковки файлов, который
-        /// выполняется в отдельном потоке.
+        /// Reports progress to progress bar on form.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Additional arguments.</param>
         private void AR_Wrk_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            // Отображаем прогресс распаковки архива в баре...
             AR_PrgBr.Value = e.ProgressPercentage;
         }
 
         /// <summary>
-        /// Метод, срабатывающий по окончании работы механизма распаковки в отдельном потоке.
+        /// Finalizes unpacking procedure.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Completion arguments and results.</param>
         private void AR_Wrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            // Работа завершена. Закроем форму...
             IsRunning = false;
 
             if (e.Error != null)
@@ -128,11 +146,11 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий при попытке закрытия формы.
+        /// "Form close" event handler.
         /// </summary>
         private void FrmArchWrk_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Блокируем возможность закрытия формы при работающем процессе...
+            // Blocking ability to close form window during extraction process...
             e.Cancel = IsRunning;
         }
     }
