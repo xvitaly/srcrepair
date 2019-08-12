@@ -38,8 +38,10 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "OK" button click handler.
+        /// "OK" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void OkButton_Click(object sender, EventArgs e)
         {
             Close();
@@ -48,6 +50,8 @@ namespace srcrepair.gui
         /// <summary>
         /// "Form create" event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmAbout_Load(object sender, EventArgs e)
         {
             // Adding information about product version and copyrights...
