@@ -28,35 +28,35 @@ using NLog;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Класс формы модуля загрузки файлов из Интернета.
+    /// Class of Internet downloader window.
     /// </summary>
     public partial class FrmDnWrk : Form
     {
         /// <summary>
-        /// Управляет записью событий в журнал.
+        /// Logger instance for FrmDnWrk class.
         /// </summary>
-        private Logger Logger = LogManager.GetCurrentClassLogger();
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Хранит статус выполнения процесса загрузки.
+        /// Gets or sets status of currently running process.
         /// </summary>
         private bool IsRunning { get; set; } = true;
 
         /// <summary>
-        /// Хранит URL файла, который нужно загрузить.
+        /// Gets or sets URL of download.
         /// </summary>
         private string RemoteURI { get; set; }
 
         /// <summary>
-        /// Хранит путь к локальному файлу, куда нужно сохранить результат.
+        /// Gets or sets full path of local destination file.
         /// </summary>
         private string LocalFile { get; set; }
 
         /// <summary>
-        /// Конструктор класса формы модуля загрузки файлов из Интернета.
+        /// FrmDnWrk class constructor.
         /// </summary>
-        /// <param name="R">URL файла загрузки</param>
-        /// <param name="L">Путь сохранения файла</param>
+        /// <param name="R">Download URL.</param>
+        /// <param name="L">Full path to destination file.</param>
         public FrmDnWrk(string R, string L)
         {
             InitializeComponent();
@@ -65,32 +65,38 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий при возникновении события "загрузка формы".
+        /// "Form create" event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmDnWrk_Load(object sender, EventArgs e)
         {
-            // Начинаем процесс загрузки в отдельном потоке...
+            // Starting asynchronous download process in a separate thread...
             DownloaderStart(RemoteURI, LocalFile);
         }
 
         /// <summary>
-        /// Метод, информирующий основную форму о прогрессе загрузки файлов, который
-        /// выполняется в отдельном потоке.
+        /// Reports progress to progress bar on form.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void DownloaderProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            // Отрисовываем статус в прогресс-баре...
+            // Rendering progress on form...
+            // Sometimes it can give us incorrect (out of range) values.
             try { DN_PrgBr.Value = e.ProgressPercentage; } catch (Exception Ex) { Logger.Warn(Ex); }
         }
 
         /// <summary>
-        /// Метод, срабатывающий по окончании работы механизма загрузки в отдельном потоке.
+        /// Finalizes downloading sequence.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Completion arguments and results.</param>
         private void DownloaderCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            // Загрузка завершена. Проверим скачалось ли что-то. Если нет, удалим пустой файл...
             try
             {
+                // Download completed. Checking if file exists and is not empty...
                 if (File.Exists(LocalFile))
                 {
                     FileInfo Fi = new FileInfo(LocalFile);
@@ -102,22 +108,24 @@ namespace srcrepair.gui
             }
             catch (Exception Ex) { Logger.Warn(Ex); }
 
-            // Закроем форму...
+            // Finalizing and closing form...
             IsRunning = false;
             Close();
         }
 
         /// <summary>
-        /// Метод, инициирущий процесс загрузки файла из Интернета.
+        /// Downloads file from the Internet.
         /// </summary>
+        /// <param name="URI">Download URL.</param>
+        /// <param name="FileName">Full path to destination file.</param>
         private void DownloaderStart(string URI, string FileName)
         {
             try
             {
-                // Проверим существование файла и удалим...
+                // Checking if destination file exists. If so, delete it...
                 if (File.Exists(FileName)) { File.Delete(FileName); }
 
-                // Начинаем асинхронную загрузку файла...
+                // Starting asynchronous download...
                 using (WebClient FileDownloader = new WebClient())
                 {
                     FileDownloader.Headers.Add("User-Agent", Properties.Resources.AppDnlUA);
@@ -130,8 +138,10 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий при попытке закрытия формы.
+        /// "Form close" event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmDnWrk_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = IsRunning;
