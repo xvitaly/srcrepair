@@ -70,7 +70,7 @@ namespace srcrepair.gui
         /// </summary>
         private void FrmArchWrk_Load(object sender, EventArgs e)
         {
-            // Начинаем процесс распаковки асинхронно...
+            // Starting async unpack sequence...
             if (!AR_Wrk.IsBusy) { AR_Wrk.RunWorkerAsync(new List<String> { ArchiveName, DestinationDirectory }); }
         }
 
