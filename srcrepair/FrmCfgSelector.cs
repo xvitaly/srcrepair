@@ -25,24 +25,24 @@ using System.Windows.Forms;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Класс формы модуля выбора конфига.
+    /// Class of config file selector window.
     /// </summary>
     public partial class FrmCfgSelector : Form
     {
         /// <summary>
-        /// Хранит и возвращает выбранный пользователем конфиг.
+        /// Gets or sets full path to selected by user config file.
         /// </summary>
         public string Config { get; private set; }
 
         /// <summary>
-        /// Хранит список доступных конфигов.
+        /// Gets or sets list of available configs.
         /// </summary>
         private List<String> Configs { get; set; }
 
         /// <summary>
-        /// Конструктор класса формы модуля выбора конфига.
+        /// FrmCfgSelector class constructor.
         /// </summary>
-        /// <param name="C">Список конфигов для выбора</param>
+        /// <param name="C">List of available configs.</param>
         public FrmCfgSelector(List<String> C)
         {
             InitializeComponent();
@@ -50,47 +50,46 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий при возникновении события "загрузка формы".
+        /// "Form create" event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmCfgSelector_Load(object sender, EventArgs e)
         {
-            // Указываем откуда следует брать список с конфигами...
             CS_CfgSel.DataSource = Configs;
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку "OK".
+        /// "OK" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void CS_OK_Click(object sender, EventArgs e)
         {
-            // Возвращаем результат...
             Config = CS_CfgSel.Text;
-
-            // Возвращаем результат формы "успех"...
             DialogResult = DialogResult.OK;
-
-            // Закрываем форму...
             Close();
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку "Отмена".
+        /// "Cancel" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void CS_Cancel_Click(object sender, EventArgs e)
         {
-            // Возвращаем результат формы "отменено"...
             DialogResult = DialogResult.Cancel;
-
-            // Закрываем форму...
             Close();
         }
 
         /// <summary>
-        /// Метод, срабатывающий при выборе одного из конфигов.
+        /// "Config selected" event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void CS_CfgSel_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Указываем полный путь во всплывающей подсказке...
+            // Setting full path to tooltip...
             CS_ToolTip.SetToolTip((ComboBox)sender, ((ComboBox)sender).Text);
         }
     }
