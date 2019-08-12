@@ -88,7 +88,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Finalizes downloading sequence.
+        /// Finalizes download sequence.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Completion arguments and results.</param>
@@ -97,13 +97,10 @@ namespace srcrepair.gui
             try
             {
                 // Download completed. Checking if file exists and is not empty...
-                if (File.Exists(LocalFile))
+                FileInfo Fi = new FileInfo(LocalFile);
+                if (Fi.Exists && Fi.Length == 0)
                 {
-                    FileInfo Fi = new FileInfo(LocalFile);
-                    if (Fi.Length == 0)
-                    {
-                        File.Delete(LocalFile);
-                    }
+                    Fi.Delete();
                 }
             }
             catch (Exception Ex) { Logger.Warn(Ex); }
