@@ -68,6 +68,8 @@ namespace srcrepair.gui
         /// <summary>
         /// "Form create" event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmArchWrk_Load(object sender, EventArgs e)
         {
             // Starting async unpack sequence...
@@ -148,6 +150,8 @@ namespace srcrepair.gui
         /// <summary>
         /// "Form close" event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmArchWrk_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Blocking ability to close form window during extraction process...
