@@ -6,6 +6,6 @@ If you want to build project from sources, please see [this page](building-from-
 
 ## Legal
 
- * [Icons licensing](icons-licenses.md).
- * [3rd party libraries licensing](libraries-licenses.md).
- * [Used in project trademarks](trademarks.md).
+ * [Icons licensing](legal/icons-licenses.md).
+ * [3rd party libraries licensing](legal/libraries-licenses.md).
+ * [Used in project trademarks](legal/trademarks.md).
