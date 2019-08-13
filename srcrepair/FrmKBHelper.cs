@@ -26,27 +26,27 @@ using NLog;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Класс формы модуля отключения системных клавиш.
+    /// Class of system keyboard keys disable window.
     /// </summary>
     public partial class FrmKBHelper : Form
     {
         /// <summary>
-        /// Управляет записью событий в журнал.
+        /// Logger instance for FrmKBHelper class.
         /// </summary>
-        private Logger Logger = LogManager.GetCurrentClassLogger();
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Имя значения реестра с переопредением скан-кодов клавиш.
+        /// Stores registry value name with scan code overrides.
         /// </summary>
         private const string RegValueName = "Scancode Map";
 
         /// <summary>
-        /// Имя ветки реестра, хранящей настройки клавиатуры.
+        /// Stores registry key name for storing keyboard settings.
         /// </summary>
         private const string RegKeyName = @"SYSTEM\CurrentControlSet\Control\Keyboard Layout";
 
         /// <summary>
-        /// Конструктор класса формы модуля отключения системных клавиш.
+        /// FrmKBHelper class constructor.
         /// </summary>
         public FrmKBHelper()
         {
@@ -54,31 +54,37 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Записывает массив байт в реестр.
+        /// Writes bytes array with new keyboard overrides to registry.
         /// </summary>
+        /// <param name="Value">Bytes array with new settings.</param>
         private void WriteKBS(byte[] Value)
         {
-            RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(RegKeyName, true);
-            ResKey.SetValue(RegValueName, Value, RegistryValueKind.Binary);
-            ResKey.Close();
+            using (RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(RegKeyName, true))
+            {
+                ResKey.SetValue(RegValueName, Value, RegistryValueKind.Binary);
+            }
         }
 
         /// <summary>
-        /// Удаляет указанное значение из реестра.
+        /// Removes specified value from registry key with keyboard settings.
         /// </summary>
+        /// <param name="Value">Value name to remove.</param>
         private void DeleteKBS(string Value)
         {
-            RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(RegKeyName, true);
-            ResKey.DeleteValue(Value);
-            ResKey.Close();
+            using (RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(RegKeyName, true))
+            {
+                ResKey.DeleteValue(Value);
+            }
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии кнопки отключения левой клавиши WIN.
+        /// "Disable left WIN" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void Dis_LWIN_Click(object sender, EventArgs e)
         {
-            // Отключаем левую клавишу WIN...
+            // Disable left Windows button...
             // 00 00 00 00 00 00 00 00 02 00 00 00 00 00 5B E0 00 00 00 00
             if (MessageBox.Show(String.Format(AppStrings.KB_ExQuestion, ((Button)sender).Text.ToLower()), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -97,11 +103,13 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии кнопки отключения обеих клавиш WIN.
+        /// "Disable both WIN" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void Dis_BWIN_Click(object sender, EventArgs e)
         {
-            // Отключаем обе клавиши WIN...
+            // Disable both Windows keys...
             // 00 00 00 00 00 00 00 00 03 00 00 00 00 00 5B E0 00 00 5C E0 00 00 00 00
             if (MessageBox.Show(String.Format(AppStrings.KB_ExQuestion, ((Button)sender).Text.ToLower()), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -120,11 +128,13 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии кнопки отключения правой клавиши WIN и CONTEXT.
+        /// "Disable right WIN and CONTEXT" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void Dis_RWinMnu_Click(object sender, EventArgs e)
         {
-            // Отключаем правую клавишу WIN и MENU...
+            // Disable right Windows and Context keys...
             // 00 00 00 00 00 00 00 00 03 00 00 00 00 00 5C E0 00 00 5D E0 00 00 00 00
             if (MessageBox.Show(String.Format(AppStrings.KB_ExQuestion, ((Button)sender).Text.ToLower()), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -143,11 +153,13 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии кнопки отключения обеих клавиш WIN и CONTEXT.
+        /// "Disable both WIN and CONTEXT" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void Dis_BWinMnu_Click(object sender, EventArgs e)
         {
-            // Отключаем обе WIN и MENU...
+            // Disable both Windows and Context buttons...
             // 00 00 00 00 00 00 00 00 04 00 00 00 00 00 5B E0 00 00 5C E0 00 00 5D E0 00 00 00 00
             if (MessageBox.Show(String.Format(AppStrings.KB_ExQuestion, ((Button)sender).Text.ToLower()), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -166,11 +178,13 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии кнопки отмены произведённых изменений.
+        /// "Restore settings" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void Dis_Restore_Click(object sender, EventArgs e)
         {
-            // Восстанавливаем настройки по умолчанию...
+            // Restoring default settings by removing manual overrides...
             if (MessageBox.Show(AppStrings.KB_ExRestore, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
