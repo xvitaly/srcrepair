@@ -27,24 +27,24 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Класс формы модуля просмотра журналов.
+    /// Class of log viewer window.
     /// </summary>
     public partial class FrmLogView : Form
     {
         /// <summary>
-        /// Управляет записью событий в журнал.
+        /// Logger instance for FrmLogView class.
         /// </summary>
-        private Logger Logger = LogManager.GetCurrentClassLogger();
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Хранит путь к файлу журнала.
+        /// Gets or sets full path to log file.
         /// </summary>
         private string LogFileName { get; set; }
 
         /// <summary>
-        /// Конструктор класса формы модуля просмотра журналов.
+        /// FrmLogView class constructor.
         /// </summary>
-        /// <param name="LogFile">Путь к файлу журнала</param>
+        /// <param name="LogFile">Full path to log file.</param>
         public FrmLogView(string LogFile)
         {
             InitializeComponent();
@@ -52,9 +52,9 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Непосредственно загружает содержимое текстового файла в TextBox на форме.
+        /// Loads contents of text file and renders it on form.
         /// </summary>
-        /// <param name="FileName">Путь к текстовому файлу</param>
+        /// <param name="FileName">Full path to log file.</param>
         private void LoadTextFile(string FileName)
         {
             LV_LogArea.Clear();
@@ -62,9 +62,9 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Загружает содержимое журнала в TextBox на форме.
+        /// Loads contents of log file and handles it.
         /// </summary>
-        /// <param name="FileName">Путь к файлу журнала</param>
+        /// <param name="FileName">Full path to log file.</param>
         private void LoadLog(string FileName)
         {
             try
@@ -79,50 +79,60 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий при возникновении события "загрузка формы".
+        /// "Form create" event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmLogView_Load(object sender, EventArgs e)
         {
-            // Считаем содержимое выбранного файла...
+            // Reading log file contents...
             LoadLog(LogFileName);
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку "Перечитать файл".
+        /// "Reload file" menu item click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void LV_MenuFileReload_Click(object sender, EventArgs e)
         {
-            // Перечитаем содержимое журнала...
+            // Re-reading log file contents...
             LoadLog(LogFileName);
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку выхода.
+        /// "Exit" menu item click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void LV_MenuFileExit_Click(object sender, EventArgs e)
         {
-            // Закроем модуль...
+            // Closing window...
             Close();
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку "О модуле".
+        /// "About" menu item click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void LV_MenuHelpAbout_Click(object sender, EventArgs e)
         {
-            // Выводим сообщение с краткой информацией о плагине...
+            // Show about dialog...
             GuiHelpers.FormShowAboutApp();
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку "Очистить журнал".
+        /// "Clear log" menu item click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void LV_MunuFileClearLog_Click(object sender, EventArgs e)
         {
-            // Очистим форму...
+            // Clearing text area...
             LV_LogArea.Clear();
 
-            // Очистим файл журнала...
+            // Clearing log file...
             try
             {
                 if (File.Exists(LogFileName))
