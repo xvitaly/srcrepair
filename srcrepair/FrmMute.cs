@@ -31,15 +31,15 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Класс формы модуля управления отключёнными игроками.
+    /// Class of editor of muted players window.
     /// </summary>
     public partial class FrmMute : Form
     {
         /// <summary>
-        /// Конструктор класса формы модуля управления отключёнными игроками.
+        /// FrmMute class constructor.
         /// </summary>
-        /// <param name="BL">Путь к файлу с БД отключённых игроков</param>
-        /// <param name="BD">Путь к каталогу резервных копий</param>
+        /// <param name="BL">Full path to muted players database file.</param>
+        /// <param name="BD">Full path to game backups directory.</param>
         public FrmMute(string BL, string BD)
         {
             InitializeComponent();
@@ -48,10 +48,10 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Управляет масштабированием элементов управления на форме.
+        /// Scales controls on current form with some additional hacks applied.
         /// </summary>
-        /// <param name="ScalingFactor">Множитель масштабирования</param>
-        /// <param name="Bounds">Границы элемента управления</param>
+        /// <param name="ScalingFactor">Scaling factor.</param>
+        /// <param name="Bounds">Bounds of control.</param>
         protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified Bounds)
         {
             base.ScaleControl(ScalingFactor, Bounds);
@@ -63,47 +63,37 @@ namespace srcrepair.gui
 
         #region IV
         /// <summary>
-        /// Управляет записью событий в журнал.
+        /// Logger instance for FrmMute class.
         /// </summary>
-        private Logger Logger = LogManager.GetCurrentClassLogger();
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Хранит путь к файлу с БД отключённых игроков.
+        /// Gets or sets full path to muted players database file.
         /// </summary>
         private string Banlist { get; set; }
 
         /// <summary>
-        /// Хранит путь к каталогу резервных копий.
+        /// Gets or sets full path to game backups directory.
         /// </summary>
         private string BackUpDir { get; set; }
         #endregion
 
         #region IM
         /// <summary>
-        /// Считывает содержимое БД и помещает в таблицу формы.
+        /// Reads contents from muted players database file and
+        /// renders it on form.
         /// </summary>
-        /// <param name="FileName">Путь к файлу с БД отключённых игроков</param>
-        private void ReadFileToTable(string FileName)
+        private void ReadFileToTable()
         {
-            // Проверим существование файла...
-            if (File.Exists(FileName))
+            if (File.Exists(Banlist))
             {
-                // Откроем файл...
-                using (StreamReader OpenedHosts = new StreamReader(FileName, Encoding.Default))
+                using (StreamReader OpenedHosts = new StreamReader(Banlist, Encoding.Default))
                 {
-                    // Читаем файл до получения маркера конца файла...
                     while (OpenedHosts.Peek() >= 0)
                     {
-                        // Почистим строку от лишних символов...
-                        string ImpStr = StringsManager.CleanString(OpenedHosts.ReadLine());
-
-                        // Представим строку как массив...
-                        List<String> Res = ParseRow(ImpStr);
-                        
-                        // Обойдём полученный массив в цикле...
+                        List<String> Res = ParseRow(StringsManager.CleanString(OpenedHosts.ReadLine()));
                         foreach (string Str in Res)
                         {
-                            // Добавляем в форму...
                             MM_Table.Rows.Add(Str);
                         }
                     }
@@ -112,29 +102,23 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Сохраняет содержимое таблицы формы в файл с БД отключённых игроков.
+        /// Writes contents of muted players to database file.
         /// </summary>
-        /// <param name="FileName">Путь к файлу с БД отключённых игроков</param>
-        private void WriteTableToFile(string FileName)
+        private void WriteTableToFile()
         {
-            using (StreamWriter CFile = new StreamWriter(FileName, false, Encoding.Default))
+            using (StreamWriter CFile = new StreamWriter(Banlist, false, Encoding.Default))
             {
-                // Записываем заголовок...
+                // Writing mandatory header...
                 CFile.Write("\x01\x00\x00\x00");
                 
-                // Обходим таблицу в цикле...
                 for (int i = 0; i < MM_Table.Rows.Count - 1; i++)
                 {
-                    // Работаем только с заполненными полями...
                     if (MM_Table.Rows[i].Cells[0].Value != null)
                     {
-                        // Получаем строку...
                         string Str = MM_Table.Rows[i].Cells[0].Value.ToString();
-                        
-                        // Проверяем на соответствие регулярному выражению...
                         if (Regex.IsMatch(Str, String.Format("^{0}$", Properties.Resources.MM_SteamIDRegex)))
                         {
-                            // Строим строку. Для выравнивания используем NULL символы...
+                            // Building result with using NULL bytes for aligning...
                             StringBuilder SB = new StringBuilder();
                             SB.Append(Str);
                             SB.Append('\0', 32 - Str.Length);
@@ -146,27 +130,31 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Ищет в строке валидные SteamID.
+        /// Extracts valid SteamIDs from source string.
         /// </summary>
-        /// <param name="Row">Строка для разбора</param>
-        /// <returns>Возвращает найденные валидные SteamID.</returns>
+        /// <param name="Row">Source string.</param>
+        /// <returns>List of valid SteamIDs.</returns>
         private List<String> ParseRow(string Row)
         {
             List<String> Result = new List<String>();
-            MatchCollection Matches = Regex.Matches(Row, Properties.Resources.MM_SteamIDRegex);
-            foreach (Match Mh in Matches) { Result.Add(Mh.Value); }
+            foreach (Match Mh in Regex.Matches(Row, Properties.Resources.MM_SteamIDRegex))
+            {
+                Result.Add(Mh.Value);
+            }
             return Result;
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку обновления таблицы.
+        /// "Update table" menu item and button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void UpdateTable(object sender, EventArgs e)
         {
             try
             {
                 MM_Table.Rows.Clear();
-                ReadFileToTable(Banlist);
+                ReadFileToTable();
             }
             catch (Exception Ex)
             {
@@ -176,8 +164,10 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку сохранения.
+        /// "Save database" menu item and button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void WriteTable(object sender, EventArgs e)
         {
             try
@@ -196,7 +186,7 @@ namespace srcrepair.gui
                         }
                     }
                 }
-                WriteTableToFile(Banlist);
+                WriteTableToFile();
                 MessageBox.Show(AppStrings.MM_SavedOK, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception Ex)
@@ -207,33 +197,40 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку "О плагине".
+        /// "About" menu item and button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void AboutDlg(object sender, EventArgs e)
         {
             GuiHelpers.FormShowAboutApp();
         }
 
         /// <summary>
-        /// Метод, срабатывающий по окончании загрузки формы.
+        /// "Form create" event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmMute_Load(object sender, EventArgs e)
         {
             UpdateTable(sender, e);
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку выхода.
+        /// "Exit" menu item click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MM_Exit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку вырезания
-        /// строки в буфер обмена.
+        /// "Cut to clipboard" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MM_Cut_Click(object sender, EventArgs e)
         {
             try
@@ -249,13 +246,17 @@ namespace srcrepair.gui
                 }
                 Clipboard.SetText(SB.ToString());
             }
-            catch (Exception Ex) { Logger.Warn(Ex); }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex);
+            }
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку копирования
-        /// строки в буфер обмена.
+        /// "Copy to clipboard" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MM_Copy_Click(object sender, EventArgs e)
         {
             try
@@ -263,50 +264,71 @@ namespace srcrepair.gui
                 StringBuilder SB = new StringBuilder();
                 foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
                 {
-                    if (Cell.Selected) { SB.AppendFormat("{0} ", Cell.Value); }
+                    if (Cell.Selected)
+                    {
+                        SB.AppendFormat("{0} ", Cell.Value);
+                    }
                 }
                 Clipboard.SetText(SB.ToString());
             }
-            catch (Exception Ex) { Logger.Warn(Ex); }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex);
+            }
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку вставки из
-        /// буфера обмена.
+        /// "Paste from clipboard" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MM_Paste_Click(object sender, EventArgs e)
         {
             try
             {
                 if (Clipboard.ContainsText())
                 {
-                    List<String> Rows = ParseRow(Clipboard.GetText());
-                    foreach (string Row in Rows) { MM_Table.Rows.Add(Row); }
+                    foreach (string Row in ParseRow(Clipboard.GetText()))
+                    {
+                        MM_Table.Rows.Add(Row);
+                    }
                 }
             }
-            catch (Exception Ex) { Logger.Warn(Ex); }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex);
+            }
             
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку удаления строки.
+        /// "Delete row" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MM_Delete_Click(object sender, EventArgs e)
         {
             try
             {
                 foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
                 {
-                    if (Cell.Selected) { MM_Table.Rows.RemoveAt(Cell.RowIndex); }
+                    if (Cell.Selected)
+                    {
+                        MM_Table.Rows.RemoveAt(Cell.RowIndex);
+                    }
                 }
             }
-            catch (Exception Ex) { Logger.Warn(Ex); }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex);
+            }
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку преобразования
-        /// формата SteamID.
+        /// "Convert SteamID format" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MM_Convert_Click(object sender, EventArgs e)
         {
             try
@@ -327,13 +349,17 @@ namespace srcrepair.gui
                     }
                 }
             }
-            catch (Exception Ex) { Logger.Warn(Ex); }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex);
+            }
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку перехода к Steam
-        /// профилю выбранного пользователя.
+        /// "Show profile page" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MM_Steam_Click(object sender, EventArgs e)
         {
             try
@@ -344,7 +370,10 @@ namespace srcrepair.gui
                     ProcessManager.OpenWebPage(String.Format(Properties.Resources.MM_CommunityURL, Regex.IsMatch(Value, Properties.Resources.MM_SteamID32Regex) ? SteamConv.ConvSid32Sid64(Value) : SteamConv.ConvSidv3Sid64(Value)));
                 }
             }
-            catch (Exception Ex) { Logger.Warn(Ex); }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex);
+            }
         }
         #endregion
     }
