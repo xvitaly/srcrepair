@@ -27,29 +27,29 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Класс формы модуля выбора SteamID.
+    /// Class of UserID selection window.
     /// </summary>
     public partial class FrmStmSelector : Form
     {
         /// <summary>
-        /// Управляет записью событий в журнал.
+        /// Logger instance for FrmStmSelector class.
         /// </summary>
-        private Logger Logger = LogManager.GetCurrentClassLogger();
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Хранит и возвращает SteamID.
+        /// Gets or sets Steam UserID.
         /// </summary>
         public string SteamID { get; private set; }
 
         /// <summary>
-        /// Хранит список полученных SteamID.
+        /// Gets or sets list of available Steam UserIDs.
         /// </summary>
         private List<String> SteamIDs { get; set; }
 
         /// <summary>
-        /// Конструктор класса формы модуля выбора SteamID.
+        /// FrmStmSelector class constructor.
         /// </summary>
-        /// <param name="S">Список SteamID для выбора</param>
+        /// <param name="S">List of available Steam UserIDs.</param>
         public FrmStmSelector(List<String> S)
         {
             InitializeComponent();
@@ -57,47 +57,46 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий при возникновении события "загрузка формы".
+        /// "Form create" event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmStmSelector_Load(object sender, EventArgs e)
         {
-            // Указываем откуда следует брать список со SteamID...
+            // Connecting SteamIDs object with ComboBox on form...
             SD_IDSel.DataSource = SteamIDs;
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку "OK".
+        /// "OK" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void ST_OK_Click(object sender, EventArgs e)
         {
-            // Возвращаем результат...
             SteamID = SD_IDSel.Text;
-
-            // Возвращаем результат формы "успех"...
             DialogResult = DialogResult.OK;
-
-            // Закрываем форму...
             Close();
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку "Отмена".
+        /// "Cancel" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void ST_Cancel_Click(object sender, EventArgs e)
         {
-            // Возвращаем результат формы "отменено"...
             DialogResult = DialogResult.Cancel;
-
-            // Закрываем форму...
             Close();
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку "Показать профиль в браузере".
+        /// "Show profile page" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void SD_Follow_Click(object sender, EventArgs e)
         {
-            // Открываем URL в браузере по умолчанию...
             try
             {
                 ProcessManager.OpenWebPage(String.Format(Properties.Resources.MM_CommunityURL, SteamConv.ConvSidv3Sid64(SD_IDSel.Text)));
