@@ -26,12 +26,12 @@ using System.Text.RegularExpressions;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Класс формы модуля настроек программы.
+    /// Class of settings editor window.
     /// </summary>
     public partial class FrmOptions : Form
     {
         /// <summary>
-        /// Конструктор класса формы модуля настроек программы.
+        /// FrmOptions class constructor.
         /// </summary>
         public FrmOptions()
         {
@@ -39,11 +39,13 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий при возникновении события "загрузка формы".
+        /// "Form create" event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmOptions_Load(object sender, EventArgs e)
         {
-            // Считаем текущие настройки...
+            // Reading current settings from configuration file...
             MO_ConfirmExit.Checked = Properties.Settings.Default.ConfirmExit;
             MO_HideUnsupported.Checked = Properties.Settings.Default.HideUnsupportedGames;
             MO_RemEmptyDirs.Checked = Properties.Settings.Default.RemoveEmptyDirs;
@@ -56,16 +58,18 @@ namespace srcrepair.gui
             MO_UseUpstream.Checked = Properties.Settings.Default.HUDUseUpstream;
             MO_HideOutdatedHUDs.Checked = Properties.Settings.Default.HUDHideOutdated;
 
-            // Укажем название приложения в заголовке окна...
+            // Settig application name in window title...
             Text = String.Format(Text, Properties.Resources.AppName);
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку "OK".
+        /// "OK" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MO_Okay_Click(object sender, EventArgs e)
         {
-            // Сохраняем настройки для текущего сеанса...
+            // Storing settings...
             Properties.Settings.Default.ConfirmExit = MO_ConfirmExit.Checked;
             Properties.Settings.Default.HideUnsupportedGames = MO_HideUnsupported.Checked;
             Properties.Settings.Default.RemoveEmptyDirs = MO_RemEmptyDirs.Checked;
@@ -78,29 +82,30 @@ namespace srcrepair.gui
             Properties.Settings.Default.HUDHideOutdated = MO_HideOutdatedHUDs.Checked;
             if (Regex.IsMatch(MO_CustDirName.Text, Properties.Resources.MO_CustomDirRegex)) { Properties.Settings.Default.UserCustDirName = MO_CustDirName.Text; }
 
-            // Сохраняем настройки...
+            // Saving settings to disk...
             Properties.Settings.Default.Save();
 
-            // Показываем сообщение...
+            // Showing message and closing form...
             MessageBox.Show(AppStrings.Opts_Saved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
-            // Закрываем форму...
             Close();
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку "Отмена".
+        /// "Cancel" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MO_Cancel_Click(object sender, EventArgs e)
         {
-            // Закрываем форму без сохранения изменений...
+            // Closing form without saving anything...
             Close();
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку поиска приложения
-        /// для открытия текстовых файлов.
+        /// "Browse" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MO_FindTextEd_Click(object sender, EventArgs e)
         {
             if (MO_SearchBin.ShowDialog() == DialogResult.OK)
@@ -110,9 +115,10 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий при начале ввода текста в поле кастомного
-        /// названия каталога.
+        /// "Textbox text changed" event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MO_CustDirName_TextChanged(object sender, EventArgs e)
         {
             ((TextBox)sender).BackColor = Regex.IsMatch(((TextBox)sender).Text, Properties.Resources.MO_CustomDirRegex) ? SystemColors.Window : Color.FromArgb(255, 155, 95);
