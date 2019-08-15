@@ -73,7 +73,10 @@ namespace srcrepair.gui
         private void FrmArchWrk_Load(object sender, EventArgs e)
         {
             // Starting async unpack sequence...
-            if (!AR_Wrk.IsBusy) { AR_Wrk.RunWorkerAsync(new List<String> { ArchiveName, DestinationDirectory }); }
+            if (!AR_Wrk.IsBusy)
+            {
+                AR_Wrk.RunWorkerAsync(new List<String> { ArchiveName, DestinationDirectory });
+            }
         }
 
         /// <summary>
@@ -109,7 +112,10 @@ namespace srcrepair.gui
                                 AR_Wrk.ReportProgress(CurrentPercent);
                             }
                         }
-                        catch (Exception Ex) { Logger.Warn(Ex); }
+                        catch (Exception Ex)
+                        {
+                            Logger.Warn(Ex);
+                        }
                     }
                 }
             }
