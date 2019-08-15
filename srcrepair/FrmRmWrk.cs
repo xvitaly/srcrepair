@@ -29,29 +29,29 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Класс формы модуля быстрой очистки.
+    /// Class of recursive directory cleanup window.
     /// </summary>
     public partial class FrmRmWrk : Form
     {
         /// <summary>
-        /// Управляет записью событий в журнал.
+        /// Logger instance for FrmRmWrk class.
         /// </summary>
-        private Logger Logger = LogManager.GetCurrentClassLogger();
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Хранит статус выполнения процесса очистки.
+        /// Gets or sets status of currently running process.
         /// </summary>
         private bool IsRunning { get; set; } = true;
 
         /// <summary>
-        /// Хранит список каталогов для очистки.
+        /// Gets or sets list of directories for cleanup.
         /// </summary>
         private List<String> RemDirs { get; set; }
 
         /// <summary>
-        /// Конструктор класса формы модуля быстрой очистки.
+        /// FrmRmWrk class constructor.
         /// </summary>
-        /// <param name="SL">Список каталогов для очистки</param>
+        /// <param name="SL">List of directories for cleanup.</param>
         public FrmRmWrk(List<String> SL)
         {
             InitializeComponent();
@@ -59,22 +59,22 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Генерирует список кандидатов на удаление.
+        /// Gets full list of files for deletion.
         /// </summary>
-        /// <param name="CleanDirs">Список каталогов для очистки</param>
-        /// <returns>Возвращает список файлов для удаления</returns>
+        /// <param name="CleanDirs">List of directories for cleanup.</param>
+        /// <returns>List of files for deletion.</returns>
         private List<String> DetectFilesForCleanup(List<String> CleanDirs)
         {
-            // Создаём массив, в котором будем хранить имена файлов...
+            // Generating an empty list for storing results...
             List<String> Result = new List<String>();
 
-            // Заполняем наш массив...
+            // Expanding every directory from source list...
             foreach (string CleanCnd in CleanDirs)
             {
-                // Проверяем существование каталога...
+                // Checking if directory exists...
                 if (Directory.Exists(CleanCnd))
                 {
-                    // Получаем содержимое каталога и добавляем их в очередь для удаления...
+                    // Getting full contents of directory and adding them to result...
                     DirectoryInfo DInfo = new DirectoryInfo(CleanCnd);
                     FileInfo[] DirList = DInfo.GetFiles("*.*");
                     foreach (FileInfo DItem in DirList)
@@ -82,14 +82,14 @@ namespace srcrepair.gui
                         Result.Add(DItem.FullName);
                     }
 
-                    // Получаем список вложенных каталогов...
+                    // Getting subdirectories...
                     List<String> SubDirs = new List<string>();
                     foreach (DirectoryInfo Dir in DInfo.GetDirectories())
                     {
                         SubDirs.Add(Path.Combine(Dir.FullName));
                     }
 
-                    // Обходим полученные подкаталоги рекурсивно...
+                    // If subdirectories exists, run this method recursively...
                     if (SubDirs.Count > 0)
                     {
                         Result.AddRange(DetectFilesForCleanup(SubDirs));
@@ -97,7 +97,7 @@ namespace srcrepair.gui
                 }
                 else
                 {
-                    // Если это не каталог, значит может быть обычным файлом. Проверим...
+                    // If directory does not exists, checking for file with the same name...
                     if (File.Exists(CleanCnd))
                     {
                         Result.Add(CleanCnd);
@@ -105,60 +105,91 @@ namespace srcrepair.gui
                 }
             }
 
-            // Выводим результат...
+            // Returning result...
             return Result;
         }
 
         /// <summary>
-        /// Метод, срабатывающий при возникновении события "загрузка формы".
+        /// "Form create" event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmRmWrk_Load(object sender, EventArgs e)
         {
-            // Запускаем удаление асинхронно...
-            if (!RW_Wrk.IsBusy) { RW_Wrk.RunWorkerAsync(); }
+            // Starting async removal sequence...
+            if (!RW_Wrk.IsBusy)
+            {
+                RW_Wrk.RunWorkerAsync(RemDirs);
+            }
         }
 
         /// <summary>
-        /// Метод, работающий в отдельном потоке при запуске механизма поиска и удаления.
+        /// Removes all files and directories recursively from specified directories.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Additional arguments.</param>
         private void RW_Wrk_DoWork(object sender, DoWorkEventArgs e)
         {
-            // Создаём список файлов для удаления...
-            List<string> DeleteQueue = DetectFilesForCleanup(RemDirs);
+            // Parsing arguments list...
+            List<String> Arguments = e.Argument as List<String>;
 
-            // Формируем счётчики...
+            // Searching for candidates...
+            List<string> DeleteQueue = DetectFilesForCleanup(Arguments);
+
+            // Creating some counters...
             int TotalFiles = DeleteQueue.Count;
-            int i = 1, j = 0;
+            int CurrentFile = 1, CurrentPercent;
 
-            // Удаляем файлы из очереди очистки...
+            // Removing all files from list...
             foreach (string Fl in DeleteQueue)
             {
-                try { j = (int)Math.Round(((double)i / (double)TotalFiles * (double)100.00), 0); i++; if ((j >= 0) && (j <= 100)) { RW_Wrk.ReportProgress(j); } } catch (Exception Ex) { Logger.Warn(Ex); }
-                try { if (File.Exists(Fl)) { File.SetAttributes(Fl, FileAttributes.Normal); File.Delete(Fl); } } catch (Exception Ex) { Logger.Warn(Ex); }
+                try
+                {
+                    // Removing file if exists...
+                    if (File.Exists(Fl))
+                    {
+                        File.SetAttributes(Fl, FileAttributes.Normal);
+                        File.Delete(Fl);
+                    }
+                    
+                    // Reporting progress to form...
+                    CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
+                    if ((CurrentPercent >= 0) && (CurrentPercent <= 100))
+                    {
+                        RW_Wrk.ReportProgress(CurrentPercent);
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex);
+                }
             }
 
-            // Удаляем пустые каталоги...
-            foreach (string Dir in RemDirs) { FileManager.RemoveEmptyDirectories(Path.GetDirectoryName(Dir)); }
+            // Removing empty directories after files removal...
+            foreach (string Dir in Arguments)
+            {
+                FileManager.RemoveEmptyDirectories(Path.GetDirectoryName(Dir));
+            }
 
         }
 
         /// <summary>
-        /// Метод, информирующий основную форму о прогрессе удаления файлов, который
-        /// выполняется в отдельном потоке.
+        /// Reports progress to progress bar on form.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Additional arguments.</param>
         private void RW_Wrk_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            // Отображаем прогресс удаления файлов...
             RW_PrgBr.Value = e.ProgressPercentage;
         }
 
         /// <summary>
-        /// Метод, срабатывающий по окончании работы механизма удаления файлов
-        /// в отдельном потоке.
+        /// Finalizes cleanup procedure.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Completion arguments and results.</param>
         private void RW_Wrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            // Удаление завершено. Закроем форму...
             IsRunning = false;
 
             if (e.Error != null)
@@ -171,11 +202,13 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий при попытке закрытия формы.
+        /// "Form close" event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmRmWrk_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Блокируем возможность закрытия формы при работающем процессе...
+            // Blocking ability to close form window during cleanup process...
             e.Cancel = IsRunning;
         }
     }
