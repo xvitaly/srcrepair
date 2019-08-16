@@ -27,21 +27,21 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Класс формы модуля быстрой установки.
+    /// Class of custom stuff installer window.
     /// </summary>
     public partial class FrmInstaller : Form
     {
         /// <summary>
-        /// Управляет записью событий в журнал.
+        /// Logger instance for FrmInstaller class.
         /// </summary>
-        private Logger Logger = LogManager.GetCurrentClassLogger();
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Конструктор класса формы модуля распаковки файлов из архивов.
+        /// FrmInstaller class constructor.
         /// </summary>
-        /// <param name="F">Путь к каталогу игры</param>
-        /// <param name="I">Использует ли игра кастомный каталог</param>
-        /// <param name="U">Имя кастомного каталога</param>
+        /// <param name="F">Path to game installation directory.</param>
+        /// <param name="I">If current game is using a special directory for custom user stuff.</param>
+        /// <param name="U">Path to custom user stuff directory.</param>
         public FrmInstaller(string F, bool I, string U)
         {
             InitializeComponent();
@@ -51,103 +51,126 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Хранит название плагина для служебных целей.
+        /// Stores plugin's name.
         /// </summary>
         private const string PluginName = "Quick Installer";
 
         /// <summary>
-        /// Хранит полный путь к каталогу игры.
+        /// Gets or sets path to game installation directory.
         /// </summary>
         private string FullGamePath { get; set; }
 
         /// <summary>
-        /// Использует ли игра особый кастомный каталог.
+        /// Gets or sets if current game is using a special directory
+        /// for custom user stuff.
         /// </summary>
         private bool IsUsingUserDir { get; set; }
 
         /// <summary>
-        /// Хранит название директории внутри кастомного каталога.
+        /// Gets or sets path to custom user stuff directory.
         /// </summary>
         private string CustomInstallDir { get; set; }
 
         /// <summary>
-        /// Устанавливает файл в указанный каталог.
+        /// Installs custom file to game.
         /// </summary>
-        /// <param name="FileName">Имя устанавливаемого файла с полным путём</param>
-        /// <param name="DestDir">Каталог, в который файл будет установлен</param>
+        /// <param name="FileName">Full path to source file.</param>
+        /// <param name="DestDir">Full path to destination file.</param>
         private void InstallFileNow(string FileName, string DestDir)
         {
-            // Проверяем существование каталога установки и если его нет, создаём...
-            if (!(Directory.Exists(DestDir))) { Directory.CreateDirectory(DestDir); }
+            // Checking if destination directory exists...
+            if (!Directory.Exists(DestDir)) { Directory.CreateDirectory(DestDir); }
 
-            // Устанавливаем файл...
+            // Copying file from source to destination...
             File.Copy(FileName, Path.Combine(DestDir, Path.GetFileName(FileName)), true);
         }
 
         /// <summary>
-        /// Компилирует VMT файл из VTF.
+        /// Compiles VMT file from VTF.
         /// </summary>
-        /// <param name="FileName">Имя VMT файла с полным путём до него</param>
+        /// <param name="FileName">Full path to destination VMT file.</param>
         private void CompileFromVTF(string FileName)
         {
-            // Начинаем...
             using (StreamWriter CFile = new StreamWriter(FileName))
             {
-                try { CFile.WriteLine(StringsManager.GetTemplateFromResource(Properties.Resources.PI_TemplateFile).Replace("{D}", Path.Combine("vgui", "logos", Path.GetFileNameWithoutExtension(FileName)))); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try
+                {
+                    CFile.WriteLine(StringsManager.GetTemplateFromResource(Properties.Resources.PI_TemplateFile).Replace("{D}", Path.Combine("vgui", "logos", Path.GetFileNameWithoutExtension(FileName))));
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex);
+                }
             }
         }
 
         /// <summary>
-        /// Устанавливает спрей в игру.
+        /// Installs custom spray to game.
         /// </summary>
-        /// <param name="FileName">Имя файла спрея с полным путём для установки</param>
+        /// <param name="FileName">Full path to source file with spray.</param>
         private void InstallSprayNow(string FileName)
         {
-            // Заполняем необходимые переменные...
-            string CDir = Path.GetDirectoryName(FileName); // Получаем каталог с файлами для копирования...
-            string FPath = Path.Combine(FullGamePath, "materials", "vgui", "logos"); // Получаем путь к каталогу назначения...
-            string FFPath = Path.Combine(FPath, Path.GetFileName(FileName)); // Получаем полный путь к файлу...
-            string VMTFileDest = Path.Combine(FPath, Path.GetFileNameWithoutExtension(Path.GetFileName(FileName)) + ".vmt"); // Генерируем путь назначения с именем файла...
-            string VMTFile = Path.Combine(CDir, Path.GetFileName(VMTFileDest)); // Получаем путь до VMT-файла, лежащего в папке с VTF...
+            // Generating path to source directory...
+            string CDir = Path.GetDirectoryName(FileName);
+
+            // Generating path to destination directory...
+            string FPath = Path.Combine(FullGamePath, "materials", "vgui", "logos");
+
+            // Generating full path to destination spray file...
+            string FFPath = Path.Combine(FPath, Path.GetFileName(FileName));
+
+            // Generating full path to destination VMT file...
+            string VMTFileDest = Path.Combine(FPath, Path.GetFileNameWithoutExtension(Path.GetFileName(FileName)) + ".vmt");
+
+            // Generating full path to source VMT file...
+            string VMTFile = Path.Combine(CDir, Path.GetFileName(VMTFileDest));
             bool UseVMT;
 
-            // Начинаем...
-            // Проверим наличие VMT-файла и если его нет, соберём вручную...
-            if (File.Exists(VMTFile)) // Проверяем...
+            // Checking if precompiled VMT file exists...
+            if (File.Exists(VMTFile))
             {
-                UseVMT = true; // Файл найден, включаем установку и VMT...
+                // Found. Will use it...
+                UseVMT = true;
             }
             else
             {
-                // Файл не найден, спросим нужно ли создать...
+                // Not found. Asking user to allow its compilation...
                 if (MessageBox.Show(AppStrings.QI_GenVMTMsg, PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    // Да, нужно.
+                    // Will compile VMT file automatically...
                     UseVMT = true;
                     CompileFromVTF(VMTFile);
                 }
                 else
                 {
-                    UseVMT = false; // Отключаем установку VMT-файла...
+                    // Will not install VMT file...
+                    UseVMT = false;
                 }
             }
 
-            // Проверим существование каталога назначения...
-            if (!Directory.Exists(FPath)) { Directory.CreateDirectory(FPath); }
+            // Checking if destination directory exists...
+            if (!Directory.Exists(FPath))
+            {
+                Directory.CreateDirectory(FPath);
+            }
 
-            // Копируем VTF-файл...
+            // Compying spray file...
             File.Copy(FileName, Path.Combine(FPath, Path.GetFileName(FFPath)), true);
 
-            // Копируем VMT-файл если задано...
-            if (UseVMT) { File.Copy(VMTFile, VMTFileDest, true); }
+            // Copying VMT file if allowed...
+            if (UseVMT)
+            {
+                File.Copy(VMTFile, VMTFileDest, true);
+            }
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии кнопки открытия файла.
+        /// "Browse" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void BtnBrowse_Click(object sender, EventArgs e)
         {
-            // Открываем диалоговое окно выбора файла и записываем путь в Edit...
             if (openDialog.ShowDialog() == DialogResult.OK)
             {
                 InstallPath.Text = openDialog.FileName;
@@ -155,63 +178,64 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии кнопки, запускающей установку.
+        /// "Install" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void BtnInstall_Click(object sender, EventArgs e)
         {
-            // А здесь собственно установка...
             if (!(String.IsNullOrEmpty(InstallPath.Text)))
             {
                 try
                 {
-                    // Сгенерируем путь...
+                    // Generating full path to destination directory, depending on selected in main window game...
                     string InstallDir = IsUsingUserDir ? Path.Combine(CustomInstallDir, Properties.Settings.Default.UserCustDirName) : FullGamePath;
 
-                    // У нас множество алгоритмов, поэтому придётся делать проверки...
+                    // Using different methods, based on source file extension...
                     switch (Path.GetExtension(InstallPath.Text))
                     {
-                        // Будем устанавливать демку...
+                        // Installing demo file...
                         case ".dem": InstallFileNow(InstallPath.Text, FullGamePath);
                             break;
-                        // Будем устанавливать пакет...
+                        // Installing VPK package...
                         case ".vpk": InstallFileNow(InstallPath.Text, CustomInstallDir);
                             break;
-                        // Будем устанавливать конфиг...
+                        // Installing game config...
                         case ".cfg": InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "cfg"));
                             break;
-                        // Будем устанавливать карту...
+                        // Installing map...
                         case ".bsp": InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "maps"));
                             break;
-                        // Будем устанавливать хитсаунд...
+                        // Installing hitsound...
                         case ".wav": InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "sound", "ui"));
                             break;
-                        // Будем устанавливай спрей...
+                        // Installing spray...
                         case ".vtf": InstallSprayNow(InstallPath.Text);
                             break;
-                        // Будем устанавливать содержимое архива...
+                        // Installing contents of Zip archive...
                         case ".zip": GuiHelpers.FormShowArchiveExtract(InstallPath.Text, CustomInstallDir);
                             break;
-                        // Будем устанавливать бинарный модуль (плагин)...
+                        // Installing binary plugin...
                         case ".dll": InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "addons"));
                             break;
                     }
 
-                    // Выведем сообщение...
+                    // Showing message...
                     MessageBox.Show(AppStrings.QI_InstSuccessfull, PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Закрываем окно...
+                    // Closing window...
                     Close();
                 }
                 catch (Exception Ex)
                 {
-                    // Произошло исключение, выведем сообщение...
+                    // An error occured. Showing message and writing issue to logs...
                     MessageBox.Show(AppStrings.QI_Excpt, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Logger.Error(Ex, DebugStrings.AppDbgExInstRun);
                 }
             }
             else
             {
-                // Пользователь ничего не выбрал для установки, укажем ему на это...
+                // User selected nothing. Showing message...
                 MessageBox.Show(AppStrings.QI_InstUnav, PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
