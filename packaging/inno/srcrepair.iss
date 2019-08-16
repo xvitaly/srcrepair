@@ -88,6 +88,7 @@ Source: "{#BASEDIR}\bin\Release\srcrepair.pdb"; DestDir: "{app}"; Flags: ignorev
 Source: "{#BASEDIR}\bin\Release\corelib.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#BASEDIR}\bin\Release\corelib.pdb"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#BASEDIR}\bin\Release\srcrepair.exe.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#BASEDIR}\bin\Release\srcrepair.VisualElementsManifest.xml"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#BASEDIR}\bin\Release\NLog.config"; DestDir: "{app}"; Flags: ignoreversion
 
 Source: "{#BASEDIR}\bin\Release\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs
