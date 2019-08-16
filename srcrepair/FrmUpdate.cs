@@ -45,7 +45,7 @@ namespace srcrepair.gui
         /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
         /// <param name="A">App's installation directory.</param>
         /// <param name="U">App's user directory.</param>
-        /// <param name="O">Currently operating system ID.</param>
+        /// <param name="O">Currently running operating system ID.</param>
         public FrmUpdate(string UA, string A, string U, CurrentPlatform O)
         {
             InitializeComponent();
