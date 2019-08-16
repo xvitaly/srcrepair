@@ -19,6 +19,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -29,22 +30,22 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Класс формы модуля обновления программы SRC Repair.
+    /// Class of update checker window.
     /// </summary>
     public partial class FrmUpdate : Form
     {
         /// <summary>
-        /// Управляет записью событий в журнал.
+        /// Logger instance for FrmUpdate class.
         /// </summary>
-        private Logger Logger = LogManager.GetCurrentClassLogger();
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Конструктор класса формы модуля обновления программы SRC Repair.
+        /// FrmUpdate class constructor.
         /// </summary>
-        /// <param name="UA">Заголовок UserAgent</param>
-        /// <param name="A">Путь к каталогу программы</param>
-        /// <param name="U">Путь к пользовательскому каталогу</param>
-        /// <param name="O">Тип ОС, под которой запущено приложение</param>
+        /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
+        /// <param name="A">App's installation directory.</param>
+        /// <param name="U">App's user directory.</param>
+        /// <param name="O">Currently operating system ID.</param>
         public FrmUpdate(string UA, string A, string U, CurrentPlatform O)
         {
             InitializeComponent();
@@ -55,32 +56,33 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Менеджер обновлений: управляет процессом поиска и установки обновлений.
+        /// Gets or sets instance of UpdateManager class for working
+        /// with updates.
         /// </summary>
         private UpdateManager UpMan { get; set; }
 
         /// <summary>
-        /// Хранит полученный UserAgent для HTTP запросов.
+        /// Gets or sets User-Agent header for outgoing HTTP queries.
         /// </summary>
         private string UserAgent { get; set; }
 
         /// <summary>
-        /// Хранит путь к пользовательскому каталогу SRC Repair.
+        /// Gets or sets app's user directory.
         /// </summary>
         private string AppUserDir { get; set; }
 
         /// <summary>
-        /// Хранит путь установки SRC Repair.
+        /// Gets or sets app's installation directory.
         /// </summary>
         private string FullAppPath { get; set; }
 
         /// <summary>
-        /// Хранит тип ОС, под которой запущено приложение.
+        /// Gets or sets currently operating system ID.
         /// </summary>
         private CurrentPlatform Platform { get; set; }
 
         /// <summary>
-        /// Устанавливает дату последней проверки обновлений приложения.
+        /// Sets time of last application update check.
         /// </summary>
         private void UpdateTimeSetApp()
         {
@@ -88,7 +90,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Устанавливает дату последней проверки обновлений базы HUD.
+        /// Sets time of last HUD database update check.
         /// </summary>
         private void UpdateTimeSetHUD()
         {
@@ -96,116 +98,128 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Начинает процесс поиска обновлений в отдельном потоке.
+        /// Starts update checking sequence in a separate thread.
         /// </summary>
         private void CheckForUpdates()
         {
-            if (!WrkChkApp.IsBusy) { WrkChkApp.RunWorkerAsync(); }
+            // Changing icons...
+            UpdAppImg.Image = Properties.Resources.upd_chk;
+            UpdDBImg.Image = Properties.Resources.upd_chk;
+            UpdHUDDbImg.Image = Properties.Resources.upd_chk;
+
+            // Starting updates check in a separate thread...
+            if (!WrkChkApp.IsBusy) { WrkChkApp.RunWorkerAsync(new List<String> { FullAppPath, UserAgent }); }
         }
 
         /// <summary>
-        /// Устанавливает обновление базы данных.
+        /// Installs database update.
         /// </summary>
-        /// <param name="ResFileName">Имя файла для обновления</param>
-        /// <param name="UpdateURL">URL загрузки обновления</param>
-        /// <param name="UpdateHash">Контрольная сумма файла обновления</param>
-        /// <returns>Возвращает true при успешной установке обновления, иначе - false.</returns>
+        /// <param name="ResFileName">Full path to local file, to be updated.</param>
+        /// <param name="UpdateURL">Full download URL.</param>
+        /// <param name="UpdateHash">Download hash.</param>
+        /// <returns>Result of operation.</returns>
         private bool InstallDatabaseUpdate(string ResFileName, string UpdateURL, string UpdateHash)
         {
-            // Задаём значения переменных по умолчанию...
+            // Setting default value for result...
             bool Result = false;
 
-            // Проверяем наличие прав на запись в каталог...
+            // Checking if app's installation directory is writable...
             if (FileManager.IsDirectoryWritable(FullAppPath))
             {
-                // Генерируем пути к файлам...
+                // Generating full paths to files...
                 string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(FullAppPath, ResFileName));
                 string UpdateTempFile = Path.GetTempFileName();
 
-                // Загружаем файл с сервера...
+                // Downloading update from server...
                 GuiHelpers.FormShowDownloader(UpdateURL, UpdateTempFile);
 
                 try
                 {
-                    // Проверяем контрольную сумму...
+                    // Checking hashes...
                     if (FileManager.CalculateFileMD5(UpdateTempFile) == UpdateHash)
                     {
-                        // Копируем загруженный файл...
+                        // Overwriting old file by downloaded one...
                         File.Copy(UpdateTempFile, UpdateFileName, true);
 
-                        // Выводим сообщение об успехе...
+                        // Showing message about successful update...
                         MessageBox.Show(AppStrings.UPD_UpdateDBSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        // Возвращаем положительный результат...
+                        // Setting result...
                         Result = true;
                     }
                     else
                     {
-                        // Выводим сообщение о несовпадении хешей...
+                        // Showing message about hash missmatch...
                         MessageBox.Show(AppStrings.UPD_HashFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (Exception Ex)
                 {
-                    // Выводим сообщение об ошибке...
+                    // An error occured. Showing message and writing this issue to log...
                     MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Logger.Error(Ex, DebugStrings.AppDbgExUpdXmlDbInst);
                 }
 
-                // Удаляем загруженный файл если он существует...
-                if (File.Exists(UpdateTempFile)) { File.Delete(UpdateTempFile); }
+                // Removing downloaded file if it still exists...
+                if (File.Exists(UpdateTempFile))
+                {
+                    File.Delete(UpdateTempFile);
+                }
 
-                // Повторяем поиск обновлений...
+                // Checking for updates again...
                 CheckForUpdates();
             }
             else
             {
-                // Выводим сообщение об отсутствии прав на запись в каталог...
+                // Showing message if we have no permissions to rewrite existing files...
                 MessageBox.Show(AppStrings.UPD_NoWritePermissions, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            // Возвращаем результат...
+            // Returning result...
             return Result;
         }
 
         /// <summary>
-        /// Устанавливает обновление в виде отдельного исполняемого файла.
+        /// Installs standalone update.
         /// </summary>
-        /// <param name="UpdateURL">URL загрузки обновления</param>
-        /// <param name="UpdateHash">Контрольная сумма файла обновления</param>
-        /// <returns>Возвращает true при успешной установке обновления, иначе - false.</returns>
+        /// <param name="UpdateURL">Full download URL.</param>
+        /// <param name="UpdateHash">Download hash.</param>
+        /// <returns>Result of operation.</returns>
         private bool InstallBinaryUpdate(string UpdateURL, string UpdateHash)
         {
-            // Задаём значения переменных по умолчанию...
+            // Setting default value for result...
             bool Result = false;
 
-            // Генерируем имя файла обновления...
+            // Generating full paths to files...
             string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(AppUserDir, Path.GetFileName(UpdateURL)));
 
-            // Загружаем файл асинхронно...
+            // Downloading update from server...
             GuiHelpers.FormShowDownloader(UpMan.AppUpdateURL, UpdateFileName);
 
-            // Выполняем проверки и устанавливаем обновление...
+            // Checking if downloaded file exists...
             if (File.Exists(UpdateFileName))
             {
-                // Проверяем хеш загруженного файла с эталоном...
+                // Checking hashes...
                 if (FileManager.CalculateFileMD5(UpdateFileName) == UpdateHash)
                 {
-                    // Обновляем дату последней проверки обновлений...
+                    // Setting last update check date...
                     UpdateTimeSetApp();
 
-                    // Выводим сообщение об успешном окончании загрузки и готовности к установке обновления...
+                    // Showing message about successful download...
                     MessageBox.Show(AppStrings.UPD_UpdateSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Запускаем установку standalone-обновления...
+                    // Installing standalone update...
                     try
                     {
+                        // Checking if app's installation directory is writable...
                         if (FileManager.IsDirectoryWritable(FullAppPath))
                         {
+                            // Running installer with current access rights...
                             Process.Start(UpdateFileName);
                         }
                         else
                         {
+                            // Running installer with UAC access rights elevation...
                             ProcessManager.StartWithUAC(UpdateFileName);
                         }
                         Result = true;
@@ -218,68 +232,113 @@ namespace srcrepair.gui
                 }
                 else
                 {
-                    // Хеш-сумма не совпала, поэтому файл скорее всего повреждён. Удаляем...
-                    try { File.Delete(UpdateFileName); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    // Hash missmatch. File was damaged. Removing it...
+                    try
+                    {
+                        File.Delete(UpdateFileName);
+                    }
+                    catch (Exception Ex)
+                    {
+                        Logger.Warn(Ex);
+                    }
 
-                    // Выводим сообщение о несовпадении контрольной суммы...
+                    // Showing message about hash missmatch...
                     MessageBox.Show(AppStrings.UPD_HashFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                // Не удалось загрузить файл обновления. Выводим сообщение об ошибке...
+                // Showing error about update failure...
                 MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            // Повторно запускаем проверку обновлений...
+            // Checking for updates again...
             CheckForUpdates();
 
-            // Возвращаем результат...
+            // Returning result...
             return Result;
         }
 
+        /// <summary>
+        /// "Form create" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmUpdate_Load(object sender, EventArgs e)
         {
-            // Заполняем...
+            // Setting app name in form title...
             Text = String.Format(Text, Properties.Resources.AppName);
 
-            // Запускаем функцию проверки обновлений...
+            // Starting checking for updates...
             CheckForUpdates();
         }
 
+        /// <summary>
+        /// Checks for updates.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Additional arguments.</param>
         private void WrkChkApp_DoWork(object sender, DoWorkEventArgs e)
         {
-            // Установим значок проверки обновлений...
-            Invoke((MethodInvoker)delegate()
-            {
-                UpdAppImg.Image = Properties.Resources.upd_chk;
-                UpdDBImg.Image = Properties.Resources.upd_chk;
-                UpdHUDDbImg.Image = Properties.Resources.upd_chk;
-            });
+            // Parsing arguments list...
+            List<String> Arguments = e.Argument as List<String>;
 
-            // Запускаем механизм проверки обновлений асинхронно...
-            UpMan = new UpdateManager(FullAppPath, UserAgent);
+            // Checking for updates...
+            UpMan = new UpdateManager(Arguments[0], Arguments[1]);
         }
 
+        /// <summary>
+        /// Finalizes update checking procedure.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Completion arguments and results.</param>
         private void WrkChkApp_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             try
             {
-                // Проверим статус проверки...
                 if (e.Error == null)
                 {
-                    // Проверим наличие обновлений для приложения...
-                    if (UpMan.CheckAppUpdate()) { UpdAppImg.Image = Properties.Resources.upd_av; UpdAppStatus.Text = String.Format(AppStrings.UPD_AppUpdateAvail, UpMan.AppUpdateVersion); } else { UpdAppImg.Image = Properties.Resources.upd_nx; UpdAppStatus.Text = AppStrings.UPD_AppNoUpdates; UpdateTimeSetApp(); }
+                    // Checking for application update...
+                    if (UpMan.CheckAppUpdate())
+                    {
+                        UpdAppImg.Image = Properties.Resources.upd_av;
+                        UpdAppStatus.Text = String.Format(AppStrings.UPD_AppUpdateAvail, UpMan.AppUpdateVersion);
+                    }
+                    else
+                    {
+                        UpdAppImg.Image = Properties.Resources.upd_nx;
+                        UpdAppStatus.Text = AppStrings.UPD_AppNoUpdates;
+                        UpdateTimeSetApp();
+                    }
 
-                    // Проверим наличие обновлений для базы игр...
-                    if (UpMan.CheckGameDBUpdate()) { UpdDBImg.Image = Properties.Resources.upd_av; UpdDBStatus.Text = String.Format(AppStrings.UPD_DbUpdateAvail, UpMan.GameUpdateHash.Substring(0, 7)); } else { UpdDBImg.Image = Properties.Resources.upd_nx; UpdDBStatus.Text = AppStrings.UPD_DbNoUpdates; }
+                    // Checking for game database update...
+                    if (UpMan.CheckGameDBUpdate())
+                    {
+                        UpdDBImg.Image = Properties.Resources.upd_av;
+                        UpdDBStatus.Text = String.Format(AppStrings.UPD_DbUpdateAvail, UpMan.GameUpdateHash.Substring(0, 7));
+                    }
+                    else
+                    {
+                        UpdDBImg.Image = Properties.Resources.upd_nx;
+                        UpdDBStatus.Text = AppStrings.UPD_DbNoUpdates;
+                    }
 
-                    // Проверим наличие обновлений для базы HUD...
-                    if (UpMan.CheckHUDUpdate()) { UpdHUDDbImg.Image = Properties.Resources.upd_av; UpdHUDStatus.Text = String.Format(AppStrings.UPD_HUDUpdateAvail, UpMan.HUDUpdateHash.Substring(0, 7)); } else { UpdHUDDbImg.Image = Properties.Resources.upd_nx; UpdHUDStatus.Text = AppStrings.UPD_HUDNoUpdates; UpdateTimeSetHUD(); }
+                    // Checking for HUD database update...
+                    if (UpMan.CheckHUDUpdate())
+                    {
+                        UpdHUDDbImg.Image = Properties.Resources.upd_av;
+                        UpdHUDStatus.Text = String.Format(AppStrings.UPD_HUDUpdateAvail, UpMan.HUDUpdateHash.Substring(0, 7));
+                    }
+                    else
+                    {
+                        UpdHUDDbImg.Image = Properties.Resources.upd_nx;
+                        UpdHUDStatus.Text = AppStrings.UPD_HUDNoUpdates;
+                        UpdateTimeSetHUD();
+                    }
                 }
                 else
                 {
-                    // Произошла ошибка...
+                    // Changing controls texts...
                     UpdAppImg.Image = Properties.Resources.upd_err;
                     UpdAppStatus.Text = AppStrings.UPD_AppCheckFailure;
                     UpdDBImg.Image = Properties.Resources.upd_err;
@@ -287,7 +346,7 @@ namespace srcrepair.gui
                     UpdHUDDbImg.Image = Properties.Resources.upd_err;
                     UpdHUDStatus.Text = AppStrings.UPD_HUDCheckFailure;
 
-                    // Запишем в журнал...
+                    // Writing issue to log...
                     Logger.Warn(e.Error);
                 }
 
@@ -298,37 +357,41 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Form close" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmUpdate_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = (e.CloseReason == CloseReason.UserClosing) && WrkChkApp.IsBusy;
         }
 
+        /// <summary>
+        /// "Install app update" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void UpdAppStatus_Click(object sender, EventArgs e)
         {
             if (!WrkChkApp.IsBusy)
             {
-                // Проверяем наличие обновлений программы...
                 if (UpMan.CheckAppUpdate())
                 {
-                    // Проверяем платформу, на которой запущено приложение...
                     if (Platform.OS == CurrentPlatform.OSType.Windows)
                     {
-                        // Устанавливаем доступное обновление...
                         if (InstallBinaryUpdate(UpMan.AppUpdateURL, UpMan.AppUpdateHash))
                         {
-                            // Загрузка завершилась успешно. Завершаем работу приложения для установки...
                             Environment.Exit(9);
                         }
                     }
                     else
                     {
-                        // Платформа не Windows, выведем сообщение...
                         MessageBox.Show(String.Format(AppStrings.UPD_AppOtherPlatform, Platform.OSFriendlyName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    // Обновление не требуется, поэтому просто выводим сообщение об этом...
                     MessageBox.Show(AppStrings.UPD_LatestInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -338,23 +401,24 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Install HUD database update" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void UpdHUDStatus_Click(object sender, EventArgs e)
         {
             if (!WrkChkApp.IsBusy)
             {
-                // Проверяем наличие обновлений...
                 if (UpMan.CheckHUDUpdate())
                 {
-                    // Запускаем процесс установки обновления...
                     if (InstallDatabaseUpdate(StringsManager.HudDatabaseName, UpMan.HUDUpdateURL, UpMan.HUDUpdateHash))
                     {
-                        // Обновляем дату последней проверки обновлений...
                         UpdateTimeSetHUD();
                     }
                 }
                 else
                 {
-                    // Обновление не требуется. Выводим соответствующее сообщение...
                     MessageBox.Show(AppStrings.UPD_LatestDBInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -364,6 +428,11 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Install game database update" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void UpdDBStatus_Click(object sender, EventArgs e)
         {
             if (!WrkChkApp.IsBusy)
