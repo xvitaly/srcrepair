@@ -27,15 +27,16 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Класс для взаимодействия с отдельным формами и расширениями.
+    /// Class with helper methods for working with forms.
     /// </summary>
     public static class GuiHelpers
     {
         /// <summary>
-        /// Начинает загрузку с указанного URL с подробным отображением процесса.
+        /// Opens downloader window and downloads specified file
+        /// to a specified location.
         /// </summary>
-        /// <param name="URI">URL для загрузки</param>
-        /// <param name="FileName">Путь для сохранения</param>
+        /// <param name="URI">Download URL.</param>
+        /// <param name="FileName">Full path to destination file.</param>
         public static void FormShowDownloader(string URI, string FileName)
         {
             using (FrmDnWrk DnW = new FrmDnWrk(URI, FileName))
@@ -45,11 +46,11 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Распаковывает архив в указанный каталог при помощи библиотеки DotNetZip
-        /// с выводом прогресса в отдельном окне.
+        /// Opens archive extract window with progress and extracts
+        /// specified file to a specified directory.
         /// </summary>
-        /// <param name="ArchName">Имя архивного файла с указанием полного пути</param>
-        /// <param name="DestDir">Каталог назначения</param>
+        /// <param name="ArchName">Full path to archive.</param>
+        /// <param name="DestDir">Full destination path.</param>
         public static void FormShowArchiveExtract(string ArchName, string DestDir)
         {
             using (FrmArchWrk ArW = new FrmArchWrk(ArchName, DestDir))
@@ -59,18 +60,17 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Отображает диалоговое окно менеджера быстрой очистки.
+        /// Opens interactive cleanup window.
         /// </summary>
-        /// <param name="Paths">Каталоги для очистки</param>
-        /// <param name="Mask">Маска файлов, подлежащих очистке</param>
-        /// <param name="LText">Текст заголовка</param>
-        /// <param name="CheckBin">Имя бинарника, работа которого будет проверяться перед запуском очистки</param>
-        /// <param name="ResultMsg">Текст сообщения, которое будет выдаваться по завершении очистки</param>
-        /// <param name="BackUpDir">Каталог для сохранения резервных копий</param>
-        /// <param name="ReadOnly">Пользователю будет запрещено изменять выбор удаляемых файлов</param>
-        /// <param name="NoAuto">Включает / отключает автовыбор файлов флажками</param>
-        /// <param name="Recursive">Включает / отключает рекурсивный обход</param>
-        /// <param name="ForceBackUp">Включает / отключает принудительное создание резервных копий</param>
+        /// <param name="Paths">List of files and directories for cleanup.</param>
+        /// <param name="LText">Cleanup window title.</param>
+        /// <param name="CheckBin">Process name to be checked before cleanup.</param>
+        /// <param name="ResultMsg">Successful cleanup completion message text.</param>
+        /// <param name="BackUpDir">Path to directory for saving backups.</param>
+        /// <param name="ReadOnly">Allow user to manually select files for deletion.</param>
+        /// <param name="NoAuto">Disable automatically mark found files to deletion.</param>
+        /// <param name="Recursive">Enable recursive cleanup.</param>
+        /// <param name="ForceBackUp">Force backup file creation before running cleanup.</param>
         public static void FormShowCleanup(List<String> Paths, string LText, string ResultMsg, string BackUpDir, string CheckBin, bool ReadOnly = false, bool NoAuto = false, bool Recursive = true, bool ForceBackUp = false)
         {
             if (!ProcessManager.IsProcessRunning(Path.GetFileNameWithoutExtension(CheckBin)))
@@ -87,9 +87,9 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Удаляет указанные файлы или каталоги с выводом прогресса.
+        /// Opens non-interactive cleanup window.
         /// </summary>
-        /// <param name="Path">Пути к каталогам или файлам для очистки</param>
+        /// <param name="Paths">List of files and directories for cleanup.</param>
         public static void FormShowRemoveFiles(List<String> Paths)
         {
             using (FrmRmWrk Rm = new FrmRmWrk(Paths))
@@ -99,19 +99,22 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Вызывает форму выбора SteamID из заданных значений.
+        /// Opens Steam UserID selection window.
         /// </summary>
-        /// <param name="SteamIDs">Список доступных SteamID</param>
-        /// <returns>Выбранный пользователем SteamID</returns>
+        /// <param name="SteamIDs">List of available Steam UserIDs.</param>
+        /// <returns>Selected by user Steam UserID.</returns>
         public static string FormShowIDSelect(List<String> SteamIDs)
         {
-            // Проверяем количество SteamID в списке...
-            if (SteamIDs.Count < 1) { throw new ArgumentOutOfRangeException(AppStrings.SD_NEParamsFormException); }
+            // Checking number of available Steam UserIDs...
+            if (SteamIDs.Count < 1)
+            {
+                throw new ArgumentOutOfRangeException(AppStrings.SD_NEParamsFormException);
+            }
 
-            // Создаём переменную для хранения результата...
+            // Creating local variable for storing result...
             string Result = String.Empty;
 
-            // Вызываем форму и получам результат выбора пользователя...
+            // Starting form...
             using (FrmStmSelector StmSel = new FrmStmSelector(SteamIDs))
             {
                 if (StmSel.ShowDialog() == DialogResult.OK)
@@ -120,24 +123,27 @@ namespace srcrepair.gui
                 }
             }
 
-            // Возвращаем результат...
+            // Returning result...
             return Result;
         }
 
         /// <summary>
-        /// Вызывает форму выбора конфига из заданных значений.
+        /// Opens config selection window.
         /// </summary>
-        /// <param name="Cfgs">Список доступных конфигов</param>
-        /// <returns>Выбранный пользователем конфиг</returns>
+        /// <param name="Cfgs">List of available configs.</param>
+        /// <returns>Selected by user config.</returns>
         public static string FormShowCfgSelect(List<String> Cfgs)
         {
-            // Проверяем количество конфигов в списке...
-            if (Cfgs.Count < 1) { throw new ArgumentOutOfRangeException(AppStrings.CS_NEParamsFormException); }
+            // Checking number of available configs...
+            if (Cfgs.Count < 1)
+            {
+                throw new ArgumentOutOfRangeException(AppStrings.CS_NEParamsFormException);
+            }
 
-            // Создаём переменную для хранения результата...
+            // Creating local variable for storing result...
             string Result = String.Empty;
 
-            // Вызываем форму и получам результат выбора пользователя...
+            // Starting form...
             using (FrmCfgSelector CfgSel = new FrmCfgSelector(Cfgs))
             {
                 if (CfgSel.ShowDialog() == DialogResult.OK)
@@ -146,17 +152,16 @@ namespace srcrepair.gui
                 }
             }
 
-            // Возвращаем результат...
+            // Returning result...
             return Result;
         }
 
         /// <summary>
-        /// Вызывает форму модуля создания отчётов для Техподдержки.
+        /// Opens reports generation window.
         /// </summary>
-        /// <param name="AppUserDir">Путь к каталогу пользователя программы</param>
-        /// <param name="FullSteamPath">Путь к каталогу установки Steam</param>
-        /// <param name="FullCfgPath">Путь к каталогу с конфигами выбранной игры</param>
-        /// <param name="SelectedGame">Конфигурация выбранной в главном окне игры</param>
+        /// <param name="AppUserDir">App's user directory.</param>
+        /// <param name="FullSteamPath">Full path to Steam client directory.</param>
+        /// <param name="SelectedGame">Instance of SourceGame class, selected in main window.</param>
         public static void FormShowRepBuilder(string AppUserDir, string FullSteamPath, SourceGame SelectedGame)
         {
             using (FrmRepBuilder RBF = new FrmRepBuilder(AppUserDir, FullSteamPath, SelectedGame))
@@ -166,11 +171,11 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Вызывает форму модуля установки кастомного контента в игру.
+        /// Opens installer window.
         /// </summary>
-        /// <param name="FullGamePath">Путь к каталогу установки выбранной игры</param>
-        /// <param name="IsUsingUserDir">Использует ли игра отдельный кастомный каталог</param>
-        /// <param name="CustomInstallDir">Путь к каталогу кастомных файлов</param>
+        /// <param name="FullGamePath">Path to game installation directory.</param>
+        /// <param name="IsUsingUserDir">If current game is using a special directory for custom user stuff.</param>
+        /// <param name="CustomInstallDir">Path to custom user stuff directory.</param>
         public static void FormShowInstaller(string FullGamePath, bool IsUsingUserDir, string CustomInstallDir)
         {
             using (FrmInstaller InstF = new FrmInstaller(FullGamePath, IsUsingUserDir, CustomInstallDir))
@@ -180,7 +185,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Вызывает форму "О программе".
+        /// Opens about application window.
         /// </summary>
         public static void FormShowAboutApp()
         {
@@ -191,12 +196,12 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Вызывает форму модуля обновления программы.
+        /// Opens updater window.
         /// </summary>
-        /// <param name="UserAgent">Заголовок HTTP User-Agent, который будет отправляться при проверке обновлений</param>
-        /// <param name="FullAppPath">Полный путь к каталогу установки программы</param>
-        /// <param name="AppUserDir">Путь к каталогу пользователя программы</param>
-        /// <param name="Platform">Тип ОС, под которой запущено приложение</param>
+        /// <param name="UserAgent">User-Agent header for outgoing HTTP queries.</param>
+        /// <param name="FullAppPath">App's installation directory.</param>
+        /// <param name="AppUserDir">App's user directory.</param>
+        /// <param name="Platform">Currently running operating system ID.</param>
         public static void FormShowUpdater(string UserAgent, string FullAppPath, string AppUserDir, CurrentPlatform Platform)
         {
             using (FrmUpdate UpdFrm = new FrmUpdate(UserAgent, FullAppPath, AppUserDir, Platform))
@@ -206,7 +211,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Вызывает форму модуля настроек программы.
+        /// Opens settings window.
         /// </summary>
         public static void FormShowOptions()
         {
@@ -217,7 +222,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Вызывает форму модуля отключения системных клавиш.
+        /// Opens system keyboard keys disable window.
         /// </summary>
         public static void FormShowKBHelper()
         {
@@ -228,9 +233,9 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Вызывает форму модуля просмотра отладочных журналов.
+        /// Opens log viewer window.
         /// </summary>
-        /// <param name="LogFile">Путь к файлу журнала</param>
+        /// <param name="LogFile">Full path to active log file.</param>
         public static void FormShowLogViewer(string LogFile)
         {
             using (FrmLogView Lv = new FrmLogView(LogFile))
@@ -240,12 +245,12 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Вызывает форму модуля очистки кэшей клиента Steam.
+        /// Opens interactive cleanup window.
         /// </summary>
-        /// <param name="FullSteamPath">Путь к каталогу установки Steam</param>
-        /// <param name="FullBackUpDirPath">Путь к каталогу хранения резервных копий</param>
-        /// <param name="SteamAppsDirName">Платформо-зависимое название каталога SteamApps</param>
-        /// <param name="SteamProcName">Платформо-зависимое имя процесса Steam</param>
+        /// <param name="FullSteamPath">Full path to Steam client directory.</param>
+        /// <param name="FullBackUpDirPath">Path to directory for saving backups.</param>
+        /// <param name="SteamAppsDirName">Platform-dependent SteamApps directory name.</param>
+        /// <param name="SteamProcName">Platform-dependent Steam process name.</param>
         public static void FormShowStmCleaner(string FullSteamPath, string FullBackUpDirPath, string SteamAppsDirName, string SteamProcName)
         {
             using (FrmStmClean StmCln = new FrmStmClean(FullSteamPath, FullBackUpDirPath, SteamAppsDirName, SteamProcName))
@@ -255,10 +260,10 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Вызывает форму модуля управления отключёнными игроками.
+        /// Opens muted players manager window.
         /// </summary>
-        /// <param name="Banlist">Путь к базе отключённых игроков</param>
-        /// <param name="FullBackUpDirPath">Путь к каталогу хранения резервных копий</param>
+        /// <param name="Banlist">Full path to muted players database file.</param>
+        /// <param name="FullBackUpDirPath">Full path to game backups directory.</param>
         public static void FormShowMuteManager(string Banlist, string FullBackUpDirPath)
         {
             using (FrmMute FMm = new FrmMute(Banlist, FullBackUpDirPath))
@@ -268,31 +273,29 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Форматирует размер файла для удобства пользователя.
-        /// Файлы от 0 до 1 КБ - 1 записываются в байтах, от 1 КБ до
-        /// 1 МБ - 1 - в килобайтах, от 1 МБ до 1 ГБ - 1 - в мегабайтах.
+        /// Formats bytes file size to user-friendly format.
         /// </summary>
-        /// <param name="InpNumber">Размер файла в байтах</param>
-        /// <returns>Форматированная строка</returns>
+        /// <param name="InpNumber">File size in bytes.</param>
+        /// <returns>User-friendly formatted string.</returns>
         public static string SclBytes(long InpNumber)
         {
-            // Задаём константы...
+            // Setting constants...
             const long B = 1024;
             const long KB = B * B;
             const long MB = B * B * B;
             const long GB = B * B * B * B;
             const string Template = "{0} {1}";
 
-            // Проверяем на размер в байтах...
+            // Checking bytes...
             if ((InpNumber >= 0) && (InpNumber < B)) { return String.Format(Template, InpNumber, AppStrings.AppSizeBytes); }
-            // ...килобайтах...
+            // ...kilobytes...
             else if ((InpNumber >= B) && (InpNumber < KB)) { return String.Format(Template, Math.Round((float)InpNumber / B, 2), AppStrings.AppSizeKilobytes); }
-            // ...мегабайтах...
+            // ...megabytes...
             else if ((InpNumber >= KB) && (InpNumber < MB)) { return String.Format(Template, Math.Round((float)InpNumber / KB, 2), AppStrings.AppSizeMegabytes); }
-            // ...гигабайтах.
+            // ...gitabytes.
             else if ((InpNumber >= MB) && (InpNumber < GB)) { return String.Format(Template, Math.Round((float)InpNumber / MB, 2), AppStrings.AppSizeGigabytes); }
 
-            // Если размер всё-таки больше, выведем просто строку...
+            // Return source as result...
             return InpNumber.ToString();
         }
     }
