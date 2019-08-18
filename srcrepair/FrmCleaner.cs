@@ -304,13 +304,31 @@ namespace srcrepair.gui
 
                 // Формируем счётчики...
                 int TotalFiles = DeleteQueue.Count;
-                int i = 1, j = 0;
+                int CurrentFile = 1, CurrentPercent = 0;
 
                 // Удаляем файлы из очереди очистки...
                 foreach (string Fl in DeleteQueue)
                 {
-                    try { j = (int)Math.Round(((double)i / (double)TotalFiles * (double)100.00), 0); i++; if ((j >= 0) && (j <= 100)) { ClnWrk.ReportProgress(j); } } catch (Exception Ex) { Logger.Warn(Ex); }
-                    try { if (File.Exists(Fl)) { File.SetAttributes(Fl, FileAttributes.Normal); File.Delete(Fl); } } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try
+                    {
+                        // Removing file if exists...
+                        if (File.Exists(Fl))
+                        {
+                            File.SetAttributes(Fl, FileAttributes.Normal);
+                            File.Delete(Fl);
+                        }
+
+                        // Reporting progress to form...
+                        CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
+                        if ((CurrentPercent >= 0) && (CurrentPercent <= 100))
+                        {
+                            ClnWrk.ReportProgress(CurrentPercent);
+                        }
+                    }
+                    catch (Exception Ex)
+                    {
+                        Logger.Warn(Ex);
+                    }
                 }
 
                 // Удалим пустые каталоги (если разрешено)...
