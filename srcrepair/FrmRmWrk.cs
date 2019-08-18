@@ -168,7 +168,14 @@ namespace srcrepair.gui
             // Removing empty directories after files removal...
             foreach (string Dir in Arguments)
             {
-                FileManager.RemoveEmptyDirectories(Path.GetDirectoryName(Dir));
+                try
+                {
+                    FileManager.RemoveEmptyDirectories(Path.GetDirectoryName(Dir));
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Error(Ex, DebugStrings.AppDbgExClnEmptyDirs);
+                }
             }
 
         }
