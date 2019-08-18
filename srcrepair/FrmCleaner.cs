@@ -331,20 +331,19 @@ namespace srcrepair.gui
                     }
                 }
 
-                // Удалим пустые каталоги (если разрешено)...
+                // Removing empty directories if allowed...
                 if (Properties.Settings.Default.RemoveEmptyDirs)
                 {
-                    try
+                    foreach (string Dir in CleanDirs)
                     {
-                        foreach (string Dir in CleanDirs)
+                        try
                         {
                             FileManager.RemoveEmptyDirectories(Path.GetDirectoryName(Dir));
                         }
-                    }
-                    catch (Exception Ex)
-                    {
-                        MessageBox.Show(AppStrings.PS_CleanEmptyDirsError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        Logger.Error(Ex, DebugStrings.AppDbgExClnEmptyDirs);
+                        catch (Exception Ex)
+                        {
+                            Logger.Error(Ex, DebugStrings.AppDbgExClnEmptyDirs);
+                        }
                     }
                 }
             }
