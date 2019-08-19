@@ -23,6 +23,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.IO;
+using System.Text;
 using System.Windows.Forms;
 using NLog;
 using srcrepair.core;
@@ -30,26 +31,26 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Класс формы менеджера очистки.
+    /// Class of interactive cleanup window.
     /// </summary>
     public partial class FrmCleaner : Form
     {
         /// <summary>
-        /// Управляет записью событий в журнал.
+        /// Logger instance for FrmCleaner class.
         /// </summary>
-        private Logger Logger = LogManager.GetCurrentClassLogger();
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Конструктор класса формы менеджера очистки.
+        /// FrmCleaner class constructor.
         /// </summary>
-        /// <param name="CD">Каталоги для очистки</param>
-        /// <param name="BD">Каталог для сохранения резервных копий</param>
-        /// <param name="CI">Текст заголовка</param>
-        /// <param name="SM">Текст сообщения, которое будет выдаваться по завершении очистки</param>
-        /// <param name="RO">Разрешает / запрещает изменять выбор удаляемых файлов</param>
-        /// <param name="NA">Включает / отключает автовыбор файлов флажками</param>
-        /// <param name="RS">Включает / отключает рекурсивную очистку</param>
-        /// <param name="FB">Включает / отключает принудительное создание резервных копий</param>
+        /// <param name="CD">List of files and directories for cleanup.</param>
+        /// <param name="BD">Path to directory for saving backups.</param>
+        /// <param name="CI">Cleanup window title.</param>
+        /// <param name="SM">Successful cleanup completion message text.</param>
+        /// <param name="RO">Allow user to manually select files for deletion.</param>
+        /// <param name="NA">Disable automatically mark found files to deletion.</param>
+        /// <param name="RS">Enable recursive cleanup.</param>
+        /// <param name="FB">Force backup file creation before running cleanup.</param>
         public FrmCleaner(List<String> CD, string BD, string CI, string SM, bool RO, bool NA, bool RS, bool FB)
         {
             InitializeComponent();
@@ -64,10 +65,10 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Управляет масштабированием элементов управления на форме.
+        /// Scales controls on current form with some additional hacks applied.
         /// </summary>
-        /// <param name="ScalingFactor">Множитель масштабирования</param>
-        /// <param name="Bounds">Границы элемента управления</param>
+        /// <param name="ScalingFactor">Scaling factor.</param>
+        /// <param name="Bounds">Bounds of control.</param>
         protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified Bounds)
         {
             base.ScaleControl(ScalingFactor, Bounds);
@@ -78,115 +79,103 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Хранит список каталогов для очистки.
+        /// Gets or sets list of files and directories for cleanup.
         /// </summary>
         private List<String> CleanDirs { get; set; }
 
         /// <summary>
-        /// Разрешает / запрещает изменять выбор удаляемых файлов.
+        /// Gets or sets if manual selection of files is allowed.
         /// </summary>
         private bool IsReadOnly { get; set; }
 
         /// <summary>
-        /// Включает / отключает автовыбор файлов флажками.
+        /// Gets or sets if automatic files selection is disallowed.
         /// </summary>
         private bool NoAutoCheck { get; set; }
 
         /// <summary>
-        /// Включает / отключает рекурсивную очистку.
+        /// Gets or sets if recursive cleanup is allowed.
         /// </summary>
         private bool IsRecursive { get; set; }
 
         /// <summary>
-        /// Включает / отключает принудительное создание резервных копий.
+        /// Gets or sets if backups are forced.
         /// </summary>
         private bool ForceBackUp { get; set; }
 
         /// <summary>
-        /// Хранит путь к каталогу для сохранения резервных копий.
+        /// Gets or sets full path to directory for saving backups.
         /// </summary>
         private string FullBackUpDirPath { get; set; }
 
         /// <summary>
-        /// Содержит текст сообщения, которое будет выдаваться по завершении очистки.
+        /// Gets or sets successful cleanup completion message text.
         /// </summary>
         private string SuccessMessage { get; set; }
 
         /// <summary>
-        /// Содержит текст заголовка.
+        /// Gets or sets cleanup window title.
         /// </summary>
         private string CleanInfo { get; set; }
 
         /// <summary>
-        /// Счётчик общего размера удаляемых файлов (в байтах).
+        /// Gets or sets total files size (in bytes).
         /// </summary>
         private long TotalSize { get; set; } = 0;
 
         /// <summary>
-        /// Ищет и добавляет файлы для удаления в таблицу модуля очистки.
+        /// Gets full list of files for deletion.
         /// </summary>
-        /// <param name="CleanDirs">Каталоги для выполнения очистки с маской имени</param>
-        /// <param name="Recursive">Включает / отключает рекурсивный поиск</param>
+        /// <param name="CleanDirs">List of files and directories for cleanup.</param>
+        /// <param name="Recursive">Enable recursive cleanup.</param>
         private void DetectFilesForCleanup(List<String> CleanDirs, bool Recursive)
         {
             foreach (string DirMs in CleanDirs)
             {
-                // Извлечём имя каталога с полным путём и маску...
+                // Extracting directory path and file mask from combined string...
                 string CleanDir = Path.GetDirectoryName(DirMs);
                 string CleanMask = Path.GetFileName(DirMs);
                 
-                // Проверим чтобы каталог существовал...
+                // Checking if directory exists...
                 if (Directory.Exists(CleanDir))
                 {
-                    // Запускаем...
                     try
                     {
-                        // Открываем каталог...
+                        // Getting full contents of directory and adding them to result...
                         DirectoryInfo DInfo = new DirectoryInfo(CleanDir);
-                        
-                        // Считываем список файлов по заданной маске...
                         FileInfo[] DirList = DInfo.GetFiles(CleanMask);
-                        
-                        // Начинаем обход массива...
                         foreach (FileInfo DItem in DirList)
                         {
-                            // Обрабатываем найденное. Добавляем...
                             ListViewItem LvItem = new ListViewItem(DItem.Name)
                             {
-                                Checked = !NoAutoCheck, // Помечаем флажком...
-                                ToolTipText = Path.Combine(CleanDir, DItem.Name) // Указываем полный путь во всплывающую подсказку...
+                                Checked = !NoAutoCheck,
+                                ToolTipText = Path.Combine(CleanDir, DItem.Name),
+                                SubItems =
+                                {
+                                    GuiHelpers.SclBytes(DItem.Length),
+                                    DItem.LastWriteTime.ToString()
+                                }
                             };
 
-                            // Вычисляем и указываем размер и дату изменения...
-                            LvItem.SubItems.Add(GuiHelpers.SclBytes(DItem.Length));
-                            LvItem.SubItems.Add(DItem.LastWriteTime.ToString());
-                            
-                            if (CM_FTable.InvokeRequired)
-                            {
-                                // Вставляем в таблицу...
-                                Invoke((MethodInvoker)delegate() { CM_FTable.Items.Add(LvItem); });
-                            }
-                            
-                            TotalSize += DItem.Length; // Инкрементируем общий счётчик...
+                            // Adding file to main list and incrementing counter...
+                            Invoke((MethodInvoker)delegate () { CM_FTable.Items.Add(LvItem); });
+                            TotalSize += DItem.Length;
                         }
 
                         if (Recursive)
                         {
                             try
                             {
-                                // Пройдём по подкаталогам рекурсивно. Получаем список вложенных...
+                                // Getting subdirectories...
                                 List<String> SubDirs = new List<string>();
-
-                                // Обойдём вложенные каталоги...
                                 foreach (DirectoryInfo Dir in DInfo.GetDirectories())
                                 {
                                     SubDirs.Add(Path.Combine(Dir.FullName, CleanMask));
                                 }
 
-                                // Проверим наличие элементов для обхода...
+                                // If subdirectories exists, run this method recursively...
                                 if (SubDirs.Count > 0)
                                 {
-                                    // Вызовем функцию рекурсивно...
                                     DetectFilesForCleanup(SubDirs, true);
                                 }
                             }
@@ -205,28 +194,68 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий при возникновении события "загрузка формы".
+        /// Changes state of some controls on form on cleanup start.
         /// </summary>
+        private void ChangeControlsState()
+        {
+            // Setting new status...
+            CM_Info.Text = AppStrings.PS_ProcessPrepare;
+
+            // Disabling "Execute cleanup" button...
+            CM_Clean.Text = AppStrings.PS_CleanInProgress;
+            CM_Clean.Enabled = false;
+            CM_Clean.Visible = false;
+
+            // Changing the state of other controls...
+            CM_Cancel.Enabled = false;
+            CM_Cancel.Visible = false;
+            PrbMain.Visible = true;
+        }
+
+        /// <summary>
+        /// Gets list of files for removal.
+        /// </summary>
+        /// <returns>List of files to be removed.</returns>
+        private List<String> GetDeleteFilesList()
+        {
+            List<String> DeleteQueue = new List<String>();
+            foreach (ListViewItem LVI in CM_FTable.Items)
+            {
+                if (LVI.Checked)
+                {
+                    DeleteQueue.Add(LVI.ToolTipText);
+                }
+            }
+            return DeleteQueue;
+        }
+
+        /// <summary>
+        /// "Form create" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmCleaner_Load(object sender, EventArgs e)
         {
-            // Изменяем заголовок окна...
+            // Changing window title...
             Text = String.Format(Text, CleanInfo);
             
-            // Запускаем очистку согласно полученным параметрам...
+            // Starting searching for candidates...
             if (!GttWrk.IsBusy) { GttWrk.RunWorkerAsync(); }
 
-            // Блокируем возможность изменять выбор...
+            // Blocking selection if required...
             CM_FTable.Enabled = !IsReadOnly;
         }
 
         /// <summary>
-        /// Метод, срабатывающий при возникновении события "нажатие клавиши"
-        /// внутри списка найденных элементов.
+        /// "On key down" event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void CM_FTable_KeyDown(object sender, KeyEventArgs e)
         {
             if (!GttWrk.IsBusy)
             {
+                // "Ctrl + A" pressed...
                 if (e.Control && e.KeyCode == Keys.A)
                 {
                     foreach (ListViewItem LVI in CM_FTable.Items)
@@ -235,6 +264,7 @@ namespace srcrepair.gui
                     }
                 }
 
+                // "Ctrl + D" pressed...
                 if (e.Control && e.KeyCode == Keys.D)
                 {
                     foreach (ListViewItem LVI in CM_FTable.Items)
@@ -243,6 +273,7 @@ namespace srcrepair.gui
                     }
                 }
 
+                // "Ctrl + R" pressed...
                 if (e.Control && e.KeyCode == Keys.R)
                 {
                     foreach (ListViewItem LVI in CM_FTable.Items)
@@ -251,143 +282,135 @@ namespace srcrepair.gui
                     }
                 }
 
+                // "Ctrl + C" pressed...
                 if (e.Control && e.KeyCode == Keys.C)
                 {
-                    string SelectedFiles = String.Empty;
+                    StringBuilder SelectedFiles = new StringBuilder();
                     foreach (ListViewItem LVI in CM_FTable.Items)
                     {
                         if (LVI.Checked)
                         {
-                            SelectedFiles += String.Format("{0}{1}", LVI.ToolTipText, Environment.NewLine);
+                            SelectedFiles.AppendLine(LVI.ToolTipText);
                         }
                     }
-                    Clipboard.SetText(SelectedFiles);
+                    Clipboard.SetText(SelectedFiles.ToString());
                 }
             }
         }
 
         /// <summary>
-        /// Метод, срабатывающий асинхронно при запуске механизма очистки.
+        /// Removes all selected files and directories.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Additional arguments.</param>
         private void ClnWrk_DoWork(object sender, DoWorkEventArgs e)
         {
-            try
+            // Extracting list from arguments...
+            List<String> DeleteQueue = e.Argument as List<String>;
+
+            // Creating backup if enabled or required by policy...
+            if (Properties.Settings.Default.PackBeforeCleanup || ForceBackUp)
             {
-                // Задаём массив для хранения имён удаляемых файлов...
-                List<string> DeleteQueue = new List<string>();
-
-                // Добавляем в очередь для очистки...
-                Invoke((MethodInvoker)delegate()
+                ClnWrk.ReportProgress(0, AppStrings.PS_ProgressArchive);
+                if (!FileManager.CompressFiles(DeleteQueue, FileManager.GenerateBackUpFileName(FullBackUpDirPath, Properties.Resources.BU_PrefixDef)))
                 {
-                    CM_Info.Text = AppStrings.PS_ProcessPrepare;
-                    foreach (ListViewItem LVI in CM_FTable.Items)
+                    Logger.Error(AppStrings.PS_ArchFailed);
+                }
+            }
+
+            // Reporting new status...
+            ClnWrk.ReportProgress(0, AppStrings.PS_ProgressCleanup);
+
+            // Creating some counters...
+            int TotalFiles = DeleteQueue.Count;
+            int CurrentFile = 1, CurrentPercent;
+
+            // Removing all files from list...
+            foreach (string Fl in DeleteQueue)
+            {
+                try
+                {
+                    // Removing file if exists...
+                    if (File.Exists(Fl))
                     {
-                        if (LVI.Checked)
-                        {
-                            DeleteQueue.Add(LVI.ToolTipText);
-                        }
+                        File.SetAttributes(Fl, FileAttributes.Normal);
+                        File.Delete(Fl);
                     }
-                });
 
-                // Добавляем в архив (если выбрано)...
-                if (Properties.Settings.Default.PackBeforeCleanup || ForceBackUp)
-                {
-                    Invoke((MethodInvoker)delegate() { CM_Info.Text = AppStrings.PS_ProgressArchive; });
-                    if (!FileManager.CompressFiles(DeleteQueue, FileManager.GenerateBackUpFileName(FullBackUpDirPath, Properties.Resources.BU_PrefixDef)))
+                    // Reporting progress to form...
+                    CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
+                    if ((CurrentPercent >= 0) && (CurrentPercent <= 100))
                     {
-                        MessageBox.Show(AppStrings.PS_ArchFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ClnWrk.ReportProgress(CurrentPercent);
                     }
                 }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex);
+                }
+            }
 
-                // Меняем текст в строке статуса...
-                Invoke((MethodInvoker)delegate() { CM_Info.Text = AppStrings.PS_ProgressCleanup; });
-
-                // Формируем счётчики...
-                int TotalFiles = DeleteQueue.Count;
-                int CurrentFile = 1, CurrentPercent = 0;
-
-                // Удаляем файлы из очереди очистки...
-                foreach (string Fl in DeleteQueue)
+            // Removing empty directories if allowed...
+            if (Properties.Settings.Default.RemoveEmptyDirs)
+            {
+                foreach (string Dir in CleanDirs)
                 {
                     try
                     {
-                        // Removing file if exists...
-                        if (File.Exists(Fl))
-                        {
-                            File.SetAttributes(Fl, FileAttributes.Normal);
-                            File.Delete(Fl);
-                        }
-
-                        // Reporting progress to form...
-                        CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
-                        if ((CurrentPercent >= 0) && (CurrentPercent <= 100))
-                        {
-                            ClnWrk.ReportProgress(CurrentPercent);
-                        }
+                        FileManager.RemoveEmptyDirectories(Path.GetDirectoryName(Dir));
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Warn(Ex);
+                        Logger.Error(Ex, DebugStrings.AppDbgExClnEmptyDirs);
                     }
                 }
-
-                // Removing empty directories if allowed...
-                if (Properties.Settings.Default.RemoveEmptyDirs)
-                {
-                    foreach (string Dir in CleanDirs)
-                    {
-                        try
-                        {
-                            FileManager.RemoveEmptyDirectories(Path.GetDirectoryName(Dir));
-                        }
-                        catch (Exception Ex)
-                        {
-                            Logger.Error(Ex, DebugStrings.AppDbgExClnEmptyDirs);
-                        }
-                    }
-                }
-            }
-            catch (Exception Ex)
-            {
-                // Произошло исключение...
-                MessageBox.Show(AppStrings.PS_CleanupErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, DebugStrings.AppDbgExClnQueueRun);
             }
         }
 
         /// <summary>
-        /// Метод, информирующий основную форму о прогрессе очистки внутри, выполняющейся
-        /// в отдельном потоке.
+        /// Reports progress to progress bar on form.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Additional arguments.</param>
         private void ClnWrk_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             PrbMain.Value = e.ProgressPercentage;
+            if (e.UserState != null)
+            {
+                CM_Info.Text = (string)e.UserState;
+            }
         }
 
         /// <summary>
-        /// Метод, срабатывающий по окончании работы механизма очистки в отдельном потоке.
+        /// Finalizes cleanup procedure.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Completion arguments and results.</param>
         private void ClnWrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            // Reporing new status...
+            CM_Info.Text = AppStrings.PS_ProgressFinished;
+
+            // Checking async task results...
             if (e.Error == null)
             {
-                // Выводим сообщение об успешном окончании очистки...
-                CM_Info.Text = AppStrings.PS_ProgressFinished;
                 MessageBox.Show(SuccessMessage, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                // В случае исключений пишем в отладочный лог...
-                Logger.Warn(e.Error);
+                MessageBox.Show(AppStrings.PS_CleanupErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(e.Error, DebugStrings.AppDbgExClnQueueRun);
             }
 
-            // Закрываем форму...
+            // Closing form...
             Close();
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку запуска очистки.
+        /// "Execute cleanup" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void CM_Clean_Click(object sender, EventArgs e)
         {
             if (CM_FTable.Items.Count > 0)
@@ -396,20 +419,10 @@ namespace srcrepair.gui
                 {
                     if (MessageBox.Show(String.Format(AppStrings.PS_CleanupExecuteQ, CleanInfo), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
-                        // Отключаем кнопку отмены, очистки и меняем её текст...
-                        CM_Clean.Text = AppStrings.PS_CleanInProgress;
-                        CM_Clean.Enabled = false;
-                        CM_Clean.Visible = false;
-                        
-                        // Переключаем видимость контролов...
-                        CM_Cancel.Enabled = false;
-                        CM_Cancel.Visible = false;
-                        PrbMain.Visible = true;
-
-                        // Запускаем поток для выполнения очистки...
+                        ChangeControlsState();
                         if (!ClnWrk.IsBusy)
                         {
-                            ClnWrk.RunWorkerAsync();
+                            ClnWrk.RunWorkerAsync(GetDeleteFilesList());
                         }
                     }
                 }
@@ -425,24 +438,28 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку отмены очистки.
+        /// "Cancel" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void CM_Cancel_Click(object sender, EventArgs e)
         {
             Close();
         }
 
         /// <summary>
-        /// Метод, срабатывающий при двойном клике по таблице кандидатов на удаление.
+        /// ListView item double click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void CM_FTable_DoubleClick(object sender, EventArgs e)
         {
-            // Исправим известный баг VS с обработчиком двойного клика, снимающим флажок у файла.
+            // Workaround to known bug with unchecking selected item on double click...
             CM_FTable.SelectedItems[0].Checked = !CM_FTable.SelectedItems[0].Checked;
 
-            // Запускаем Проводник и выделяем в нём выбранный пользователем файл...
             try
             {
+                // Starting default shell and selecting file in its window...
                 ProcessManager.OpenExplorer(CM_FTable.SelectedItems[0].ToolTipText, new CurrentPlatform().OS);
             }
             catch (Exception Ex)
@@ -452,47 +469,48 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Асинхронный метод, обнаруживающий и помечающий файлы для удаления.
+        /// Finds candidates for deletion async.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Additional arguments.</param>
         private void GttWrk_DoWork(object sender, DoWorkEventArgs e)
         {
             DetectFilesForCleanup(CleanDirs, IsRecursive);
         }
 
         /// <summary>
-        /// Метод, срабатывающий по окончании работы механизма поиска кандидатов
-        /// на удаление в отдельном потоке.
+        /// Finalizes candidates find procedure.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Completion arguments and results.</param>
         private void GttWrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            // Указываем сколько МБ освободится при удалении всех файлов...
+            // Showing estimated of free space to be free after removing all found files...
             CM_Info.Text = String.Format(AppStrings.PS_FrFInfo, GuiHelpers.SclBytes(TotalSize));
 
-            // Проверим есть ли кандидаты для удаления (очистки)...
+            // Checking if candidates are found...
             if (CM_FTable.Items.Count == 0)
             {
-                // Выдадим сообщение если очищать нечего...
+                // Nothing found. Showing message and closing form...
                 MessageBox.Show(AppStrings.PS_LoadErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                
-                // Отключим кнопку запуска очистки...
                 CM_Clean.Enabled = false;
-                
-                // Закроем форму.
                 Close();
             }
             else
             {
-                // Включаем кнопку очистки...
+                // At least one candidate found. Enabling cleanup button...
                 CM_Clean.Enabled = true;
             }
         }
 
         /// <summary>
-        /// Метод, срабатывающий при попытке закрытия формы.
+        /// "Form close" event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmCleaner_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = ((e.CloseReason == CloseReason.UserClosing) && (ClnWrk.IsBusy || GttWrk.IsBusy));
+            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && (ClnWrk.IsBusy || GttWrk.IsBusy);
         }
     }
 }
