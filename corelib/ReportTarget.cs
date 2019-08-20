@@ -18,15 +18,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace srcrepair.core
 {
     public sealed class ReportTarget
     {
+        public string Program { get; private set; }
+        public string Parameters { get; private set; }
+        public ReportTarget(string RtProgram, string RtParameters)
+        {
+            Program = RtProgram;
+            Parameters = RtParameters;
+        }
     }
 }
