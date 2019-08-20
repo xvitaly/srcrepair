@@ -22,10 +22,19 @@ using System.Collections.Generic;
 
 namespace srcrepair.core
 {
+    /// <summary>
+    /// Class for working with collection of custom report generators.
+    /// </summary>
     public sealed class ReportManager
     {
+        /// <summary>
+        /// Gets or sets collection of custom report generators.
+        /// </summary>
         public List<ReportTarget> ReportTargets { get; private set; }
 
+        /// <summary>
+        /// Adds custom report generators to collection.
+        /// </summary>
         private void SetTargets()
         {
             ReportTargets.Add(new ReportTarget("msinfo32.exe", "/report \"{0}\"", "report_{0}.txt"));
@@ -38,12 +47,12 @@ namespace srcrepair.core
             ReportTargets.Add(new ReportTarget("cmd.exe", "/C net user > \"{0}\"", "users_{0}.log"));
         }
 
+        /// <summary>
+        /// ReportManager class constructor.
+        /// </summary>
         public ReportManager()
         {
-            // Initializing a new empty list...
             ReportTargets = new List<ReportTarget>();
-
-            // Adding targets to list...
             SetTargets();
         }
     }
