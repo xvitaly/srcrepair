@@ -18,15 +18,33 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace srcrepair.core
 {
     public sealed class ReportManager
     {
+        public List<ReportTarget> ReportTargets { get; private set; }
+
+        private void SetTargets()
+        {
+            ReportTargets.Add(new ReportTarget("msinfo32.exe", "/report \"{0}\"", "report_{0}.txt"));
+            ReportTargets.Add(new ReportTarget("dxdiag.exe", "/t {0}", "dxdiag_{0}.log"));
+            ReportTargets.Add(new ReportTarget("cmd.exe", "/C ping steampowered.com > \"{0}\"", "ping_{0}.log"));
+            ReportTargets.Add(new ReportTarget("cmd.exe", "/C tracert steampowered.com > \"{0}\"", "traceroute_{0}.log"));
+            ReportTargets.Add(new ReportTarget("cmd.exe", "/C ipconfig /all > \"{0}\"", "ipconfig_{0}.log"));
+            ReportTargets.Add(new ReportTarget("cmd.exe", "/C netstat -a > \"{0}\"", "netstat_{0}.log"));
+            ReportTargets.Add(new ReportTarget("cmd.exe", "/C route print > \"{0}\"", "routing_{0}.log"));
+            ReportTargets.Add(new ReportTarget("cmd.exe", "/C net user > \"{0}\"", "users_{0}.log"));
+        }
+
+        public ReportManager()
+        {
+            // Initializing a new empty list...
+            ReportTargets = new List<ReportTarget>();
+
+            // Adding targets to list...
+            SetTargets();
+        }
     }
 }
