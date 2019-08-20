@@ -81,6 +81,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="ReportManager.cs" />
     <Compile Include="ReportTarget.cs" />
     <Compile Include="StringsManager.cs" />
     <Compile Include="SourceGame.cs" />
