@@ -50,6 +50,11 @@ namespace srcrepair.core
         private readonly string LocalReportsDir;
 
         /// <summary>
+        /// Gets report file name with full path.
+        /// </summary>
+        public string ReportArchiveName => Path.Combine(LocalReportsDir, String.Format("report_{0}.zip", CurrentUnixTime));
+
+        /// <summary>
         /// Adds custom report generators to collection.
         /// </summary>
         private void SetTargets()
