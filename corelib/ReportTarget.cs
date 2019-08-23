@@ -43,16 +43,23 @@ namespace srcrepair.core
         public string OutputFileName { get; private set; }
 
         /// <summary>
+        /// Gets or sets directory name inside of the final archive.
+        /// </summary>
+        public string ArchiveDirectoryName { get; private set; }
+
+        /// <summary>
         /// ReportTarget class constructor.
         /// </summary>
         /// <param name="RtProgram">Full path to application executable.</param>
         /// <param name="RtParameters">Additional command-line arguments.</param>
         /// <param name="RtOutputFileName">Output file name with full path.</param>
-        public ReportTarget(string RtProgram, string RtParameters, string RtOutputFileName)
+        /// <param name="RtArchiveDirectoryName">Directory name inside of the final archive.</param>
+        public ReportTarget(string RtProgram, string RtParameters, string RtOutputFileName, string RtArchiveDirectoryName)
         {
             Program = RtProgram;
             Parameters = RtParameters;
             OutputFileName = RtOutputFileName;
+            ArchiveDirectoryName = RtArchiveDirectoryName;
         }
     }
 }
