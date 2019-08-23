@@ -38,21 +38,21 @@ namespace srcrepair.core
         public string Parameters { get; private set; }
 
         /// <summary>
-        /// Gets or sets pattern of output file name.
+        /// Gets or sets output file name with full path.
         /// </summary>
-        public string OutputFilePattern { get; private set; }
+        public string OutputFileName { get; private set; }
 
         /// <summary>
         /// ReportTarget class constructor.
         /// </summary>
         /// <param name="RtProgram">Full path to application executable.</param>
         /// <param name="RtParameters">Additional command-line arguments.</param>
-        /// <param name="RtOutputFilePattern">Pattern of output file name..</param>
-        public ReportTarget(string RtProgram, string RtParameters, string RtOutputFilePattern)
+        /// <param name="RtOutputFileName">Output file name with full path.</param>
+        public ReportTarget(string RtProgram, string RtParameters, string RtOutputFileName)
         {
             Program = RtProgram;
             Parameters = RtParameters;
-            OutputFilePattern = RtOutputFilePattern;
+            OutputFileName = RtOutputFileName;
         }
     }
 }
