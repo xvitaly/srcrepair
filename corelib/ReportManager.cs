@@ -72,6 +72,7 @@ namespace srcrepair.core
         /// <summary>
         /// ReportManager class constructor.
         /// </summary>
+        /// <param name="AppUserDir">Path to apps's user directory.</param>
         public ReportManager(string AppUserDir)
         {
             ReportTargets = new List<ReportTarget>();
