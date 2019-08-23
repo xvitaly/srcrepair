@@ -18,6 +18,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
+using System;
 using System.Collections.Generic;
 
 namespace srcrepair.core
@@ -31,6 +32,11 @@ namespace srcrepair.core
         /// Gets or sets collection of custom report generators.
         /// </summary>
         public List<ReportTarget> ReportTargets { get; private set; }
+
+        /// <summary>
+        /// Stores current UnixTime as string.
+        /// </summary>
+        private readonly string CurrentUnixTime;
 
         /// <summary>
         /// Adds custom report generators to collection.
@@ -53,6 +59,7 @@ namespace srcrepair.core
         public ReportManager()
         {
             ReportTargets = new List<ReportTarget>();
+            CurrentUnixTime = FileManager.DateTime2Unix(DateTime.Now);
             SetTargets();
         }
     }
