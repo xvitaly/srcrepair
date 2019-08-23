@@ -20,6 +20,7 @@
 */
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace srcrepair.core
 {
@@ -37,6 +38,11 @@ namespace srcrepair.core
         /// Stores current UnixTime as string.
         /// </summary>
         private readonly string CurrentUnixTime;
+
+        /// <summary>
+        /// Stores full path to temporary working directory.
+        /// </summary>
+        private readonly string TempDirectory;
 
         /// <summary>
         /// Adds custom report generators to collection.
@@ -59,6 +65,7 @@ namespace srcrepair.core
         public ReportManager()
         {
             ReportTargets = new List<ReportTarget>();
+            TempDirectory = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
             CurrentUnixTime = FileManager.DateTime2Unix(DateTime.Now);
             SetTargets();
         }
