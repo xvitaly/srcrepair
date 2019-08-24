@@ -109,17 +109,17 @@ namespace srcrepair.gui
                 // Adding generic report files...
                 foreach (ReportTarget RepTarget in RepMan.ReportTargets)
                 {
-                    try
+                    ProcessManager.StartProcessAndWait(RepTarget.Program, String.Format(RepTarget.Parameters, RepTarget.OutputFileName));
+                    if (File.Exists(RepTarget.OutputFileName))
                     {
-                        ProcessManager.StartProcessAndWait(RepTarget.Program, String.Format(RepTarget.Parameters, RepTarget.OutputFileName));
-                        if (File.Exists(RepTarget.OutputFileName))
-                        {
-                            ZBkUp.AddFile(RepTarget.OutputFileName, RepTarget.ArchiveDirectoryName);
-                        }
+                        ZBkUp.AddFile(RepTarget.OutputFileName, RepTarget.ArchiveDirectoryName);
                     }
-                    catch (Exception Ex)
+                    else
                     {
-                        Logger.Warn(Ex);
+                        if (RepTarget.IsMandatory)
+                        {
+                            throw new FileNotFoundException("Mandatory report was not created.");
+                        }
                     }
                 }
 
@@ -183,6 +183,29 @@ namespace srcrepair.gui
             }
         }
 
+        private void RepRemoveArchive()
+        {
+            try
+            {
+                if (File.Exists(RepMan.ReportArchiveName))
+                {
+                    File.Delete(RepMan.ReportArchiveName);
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex);
+            }
+        }
+
+        private void RepWindowFinalize()
+        {
+            GenerateNow.Text = AppStrings.RPB_CloseCpt;
+            GenerateNow.Enabled = true;
+            ControlBox = true;
+            IsCompleted = true;
+        }
+
         /// <summary>
         /// Метод, работающий в отдельном потоке при запуске механизма создания
         /// отчёта.
@@ -205,13 +228,10 @@ namespace srcrepair.gui
         /// </summary>
         private void BwGen_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            RepWindowFinalize();
+
             if (e.Error == null)
             {
-                GenerateNow.Text = AppStrings.RPB_CloseCpt;
-                GenerateNow.Enabled = true;
-                ControlBox = true;
-                IsCompleted = true;
-
                 // Открываем каталог с отчётами в оболочке и выделяем созданный файл...
                 if (File.Exists(RepMan.ReportArchiveName))
                 {
@@ -234,6 +254,7 @@ namespace srcrepair.gui
             {
                 MessageBox.Show(AppStrings.RPB_GenException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Logger.Error(e.Error, DebugStrings.AppDbgExRepPack);
+                RepRemoveArchive();
             }
         }
 
