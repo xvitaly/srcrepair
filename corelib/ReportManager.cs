@@ -59,7 +59,7 @@ namespace srcrepair.core
         /// </summary>
         private void SetTargets()
         {
-            ReportTargets.Add(new ReportTarget("msinfo32.exe", "/report \"{0}\"", Path.Combine(TempDirectory, String.Format("report_{0}.txt", CurrentUnixTime)), "report"));
+            ReportTargets.Add(new ReportTarget("msinfo32.exe", "/report \"{0}\"", Path.Combine(TempDirectory, String.Format("report_{0}.txt", CurrentUnixTime)), "report", true));
             ReportTargets.Add(new ReportTarget("dxdiag.exe", "/t {0}", Path.Combine(TempDirectory, String.Format("dxdiag_{0}.log", CurrentUnixTime)), "system"));
             ReportTargets.Add(new ReportTarget("cmd.exe", "/C ping steampowered.com > \"{0}\"", Path.Combine(TempDirectory, String.Format("ping_{0}.log", CurrentUnixTime)), "system"));
             ReportTargets.Add(new ReportTarget("cmd.exe", "/C tracert steampowered.com > \"{0}\"", Path.Combine(TempDirectory, String.Format("traceroute_{0}.log", CurrentUnixTime)), "system"));
