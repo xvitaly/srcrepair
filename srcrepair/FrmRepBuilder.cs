@@ -19,7 +19,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Text;
@@ -31,21 +30,21 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Класс формы модуля создания отчётов для техподдержки.
+    /// Class of report generator window.
     /// </summary>
     public partial class FrmRepBuilder : Form
     {
         /// <summary>
-        /// Управляет записью событий в журнал.
+        /// Logger instance for FrmRepBuilder class.
         /// </summary>
-        private Logger Logger = LogManager.GetCurrentClassLogger();
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Конструктор класса формы модуля создания отчётов для техподдержки.
+        /// FrmRepBuilder class constructor.
         /// </summary>
-        /// <param name="A">Путь к каталогу пользователя</param>
-        /// <param name="FS">Путь к каталогу установки Steam</param>
-        /// <param name="SG">Конфигурация выбранной в главном окне игры</param>
+        /// <param name="A">Path to app's user directory.</param>
+        /// <param name="FS">Full path to Steam client directory.</param>
+        /// <param name="SG">Instance of SourceGame class, selected in main window.</param>
         public FrmRepBuilder(string A, string FS, SourceGame SG)
         {
             InitializeComponent();
@@ -55,40 +54,50 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Хранит название модуля для внутренних целей.
+        /// Stores plugin's name for internal purposes.
         /// </summary>
         private const string PluginName = "Report Builder";
 
         /// <summary>
-        /// Хранит статус выполнения процесса создания отчёта.
+        /// Gets or sets status of currently running process.
         /// </summary>
         private bool IsCompleted { get; set; } = false;
 
         /// <summary>
-        /// Хранит путь к пользовательскому каталогу приложения.
+        /// Gets or sets path to app's user directory.
         /// </summary>
         private string AppUserDir { get; set; }
 
         /// <summary>
-        /// Хранит путь к каталогу установки клиента Steam.
+        /// Gets or sets full path to Steam client directory.
         /// </summary>
         private string FullSteamPath { get; set; }
 
         /// <summary>
-        /// Хранит конфигурацию выбранной в главном окне игры.
+        /// Gets or sets instance of SourceGame class, selected in main window.
         /// </summary>
         private SourceGame SelectedGame { get; set; }
 
+        /// <summary>
+        /// Gets or sets instance of ReportManager class for managing generic
+        /// report targets.
+        /// </summary>
         private ReportManager RepMan { get; set; }
 
         /// <summary>
-        /// Метод, срабатывающий при возникновении события "загрузка формы".
+        /// "Form create" event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmRepBuilder_Load(object sender, EventArgs e)
         {
             RepMan = new ReportManager(AppUserDir);
         }
 
+        /// <summary>
+        /// Creates directories for storing generating report and working
+        /// directory if does not exists.
+        /// </summary>
         private void RepCreateDirectories()
         {
             if (!Directory.Exists(RepMan.ReportsDirectory))
@@ -102,6 +111,9 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// Creates compressed report and saves it to disk.
+        /// </summary>
         private void RepCreateReport()
         {
             using (ZipFile ZBkUp = new ZipFile(RepMan.ReportArchiveName, Encoding.UTF8))
@@ -179,6 +191,9 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// Removes temporary working directory with all its contents.
+        /// </summary>
         private void RepCleanupDirectories()
         {
             try
@@ -194,6 +209,9 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// Removes generated report file if exists.
+        /// </summary>
         private void RepRemoveArchive()
         {
             try
@@ -209,6 +227,9 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// Enables status bar and hides some buttons.
+        /// </summary>
         private void RepWindowStart()
         {
             RB_Progress.Visible = true;
@@ -216,6 +237,9 @@ namespace srcrepair.gui
             ControlBox = false;
         }
 
+        /// <summary>
+        /// Disables status bar and show all previously hidden buttons.
+        /// </summary>
         private void RepWindowFinalize()
         {
             RB_Progress.Visible = false;
@@ -226,9 +250,10 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, работающий в отдельном потоке при запуске механизма создания
-        /// отчёта.
+        /// Generates report in a separate thread.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Additional arguments.</param>
         private void BwGen_DoWork(object sender, DoWorkEventArgs e)
         {
             // Creating directories if does not exists...
@@ -242,16 +267,26 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий по окончании работы механизма создания отчёта
-        /// в отдельном потоке.
+        /// Reports progress to progress bar on form.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Additional arguments.</param>
+        private void BwGen_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            RB_Progress.Value = e.ProgressPercentage;
+        }
+
+        /// <summary>
+        /// Finalizes report generating procedure.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Completion arguments and results.</param>
         private void BwGen_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             RepWindowFinalize();
 
             if (e.Error == null)
             {
-                // Открываем каталог с отчётами в оболочке и выделяем созданный файл...
                 if (File.Exists(RepMan.ReportArchiveName))
                 {
                     try
@@ -278,38 +313,40 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Метод, срабатывающий при нажатии на кнопку "Создать/Закрыть".
+        /// "Create/close" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void GenerateNow_Click(object sender, EventArgs e)
         {
-            // Проверим необходим ли нам запуск очистки или закрытие формы...
             if (!IsCompleted)
             {
-                // Отключим контролы...
                 RepWindowStart();
 
-                // Запускаем асинхронный обработчик...
-                if (!BwGen.IsBusy) { BwGen.RunWorkerAsync(); } else { Logger.Warn(DebugStrings.AppDbgExRepWrkBusy); }
+                if (!BwGen.IsBusy)
+                {
+                    BwGen.RunWorkerAsync();
+                }
+                else
+                {
+                    Logger.Warn(DebugStrings.AppDbgExRepWrkBusy);
+                }
             }
             else
             {
-                // Закрываем форму...
                 Close();
             }
         }
 
         /// <summary>
-        /// Метод, срабатывающий при попытке закрытия формы.
+        /// "Form close" event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmRepBuilder_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Блокируем возможность закрытия формы во время работы модуля...
+            // Blocking ability to close form window during report generating process...
             e.Cancel = BwGen.IsBusy;
-        }
-
-        private void BwGen_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-            RB_Progress.Value = e.ProgressPercentage;
         }
     }
 }
