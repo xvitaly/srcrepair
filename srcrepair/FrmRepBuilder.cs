@@ -54,11 +54,6 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Stores plugin's name for internal purposes.
-        /// </summary>
-        private const string PluginName = "Report Builder";
-
-        /// <summary>
         /// Gets or sets status of currently running process.
         /// </summary>
         private bool IsCompleted { get; set; } = false;
@@ -291,7 +286,7 @@ namespace srcrepair.gui
                 {
                     try
                     {
-                        MessageBox.Show(String.Format(AppStrings.RPB_ComprGen, Path.GetFileName(RepMan.ReportArchiveName)), PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(String.Format(AppStrings.RPB_ComprGen, Path.GetFileName(RepMan.ReportArchiveName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ProcessManager.OpenExplorer(RepMan.ReportArchiveName, CurrentPlatform.OSType.Windows);
                     }
                     catch (Exception Ex)
