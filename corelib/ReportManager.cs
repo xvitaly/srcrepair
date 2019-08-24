@@ -42,17 +42,17 @@ namespace srcrepair.core
         /// <summary>
         /// Stores full path to temporary working directory.
         /// </summary>
-        private readonly string TempDirectory;
+        public string TempDirectory { get; private set; }
 
         /// <summary>
-        /// Stores full path to directory for saving generated reports.
+        /// Gets or sets full path to directory for saving generated reports.
         /// </summary>
-        private readonly string LocalReportsDir;
+        public string ReportsDirectory { get; private set; }
 
         /// <summary>
         /// Gets report file name with full path.
         /// </summary>
-        public string ReportArchiveName => Path.Combine(LocalReportsDir, String.Format("report_{0}.zip", CurrentUnixTime));
+        public string ReportArchiveName => Path.Combine(ReportsDirectory, String.Format("report_{0}.zip", CurrentUnixTime));
 
         /// <summary>
         /// Adds custom report generators to collection.
@@ -78,7 +78,7 @@ namespace srcrepair.core
             ReportTargets = new List<ReportTarget>();
             TempDirectory = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
             CurrentUnixTime = FileManager.DateTime2Unix(DateTime.Now);
-            LocalReportsDir = Path.Combine(AppUserDir, "reports");
+            ReportsDirectory = Path.Combine(AppUserDir, "reports");
             SetTargets();
         }
     }
