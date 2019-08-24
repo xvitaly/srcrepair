@@ -1384,15 +1384,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Working... Please wait..
-        /// </summary>
-        internal static string RPB_CptWrk {
-            get {
-                return ResourceManager.GetString("RPB_CptWrk", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to An error occurred. Unable to execute Microsoft System Information tool. Perhaps it is not installed on this operating system. Creating a report is impossible..
         /// </summary>
         internal static string RPB_GenException {

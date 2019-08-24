@@ -106,10 +106,21 @@ namespace srcrepair.gui
         {
             using (ZipFile ZBkUp = new ZipFile(RepMan.ReportArchiveName, Encoding.UTF8))
             {
+                // Creating some counters...
+                int TotalFiles = RepMan.ReportTargets.Count;
+                int CurrentFile = 1, CurrentPercent;
+
                 // Adding generic report files...
                 foreach (ReportTarget RepTarget in RepMan.ReportTargets)
                 {
                     ProcessManager.StartProcessAndWait(RepTarget.Program, String.Format(RepTarget.Parameters, RepTarget.OutputFileName));
+
+                    CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
+                    if ((CurrentPercent >= 0) && (CurrentPercent <= 100))
+                    {
+                        BwGen.ReportProgress(CurrentPercent);
+                    }
+
                     if (File.Exists(RepTarget.OutputFileName))
                     {
                         ZBkUp.AddFile(RepTarget.OutputFileName, RepTarget.ArchiveDirectoryName);
@@ -198,8 +209,16 @@ namespace srcrepair.gui
             }
         }
 
+        private void RepWindowStart()
+        {
+            RB_Progress.Visible = true;
+            GenerateNow.Enabled = false;
+            ControlBox = false;
+        }
+
         private void RepWindowFinalize()
         {
+            RB_Progress.Visible = false;
             GenerateNow.Text = AppStrings.RPB_CloseCpt;
             GenerateNow.Enabled = true;
             ControlBox = true;
@@ -267,9 +286,7 @@ namespace srcrepair.gui
             if (!IsCompleted)
             {
                 // Отключим контролы...
-                GenerateNow.Text = AppStrings.RPB_CptWrk;
-                GenerateNow.Enabled = false;
-                ControlBox = false;
+                RepWindowStart();
 
                 // Запускаем асинхронный обработчик...
                 if (!BwGen.IsBusy) { BwGen.RunWorkerAsync(); } else { Logger.Warn(DebugStrings.AppDbgExRepWrkBusy); }
@@ -288,6 +305,11 @@ namespace srcrepair.gui
         {
             // Блокируем возможность закрытия формы во время работы модуля...
             e.Cancel = BwGen.IsBusy;
+        }
+
+        private void BwGen_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            RB_Progress.Value = e.ProgressPercentage;
         }
     }
 }

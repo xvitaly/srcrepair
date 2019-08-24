@@ -243,9 +243,6 @@
   <data name="RPB_ComprGen" xml:space="preserve">
     <value>Compressed report {0} has been successfully created! Now we will open the directory with generated report file, so you can upload it to technical support service.</value>
   </data>
-  <data name="RPB_CptWrk" xml:space="preserve">
-    <value>Working... Please wait.</value>
-  </data>
   <data name="RPB_GenException" xml:space="preserve">
     <value>An error occurred. Unable to execute Microsoft System Information tool. Perhaps it is not installed on this operating system. Creating a report is impossible.</value>
   </data>

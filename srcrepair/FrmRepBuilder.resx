@@ -144,13 +144,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;WelcomeLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="GenerateNow.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="GenerateNow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 61</value>
+    <value>96, 63</value>
   </data>
   <data name="GenerateNow.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 23</value>
@@ -171,11 +171,38 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;GenerateNow.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="BwGen.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="RB_Progress.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="RB_Progress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 63</value>
+  </data>
+  <data name="RB_Progress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 23</value>
+  </data>
+  <data name="RB_Progress.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="RB_Progress.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;RB_Progress.Name" xml:space="preserve">
+    <value>RB_Progress</value>
+  </data>
+  <data name="&gt;&gt;RB_Progress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RB_Progress.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RB_Progress.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -186,7 +213,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>356, 96</value>
+    <value>356, 99</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
