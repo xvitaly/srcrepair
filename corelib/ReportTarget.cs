@@ -48,18 +48,25 @@ namespace srcrepair.core
         public string ArchiveDirectoryName { get; private set; }
 
         /// <summary>
+        /// Gets or sets if current target is mandatory.
+        /// </summary>
+        public bool IsMandatory { get; private set; }
+
+        /// <summary>
         /// ReportTarget class constructor.
         /// </summary>
         /// <param name="RtProgram">Full path to application executable.</param>
         /// <param name="RtParameters">Additional command-line arguments.</param>
         /// <param name="RtOutputFileName">Output file name with full path.</param>
         /// <param name="RtArchiveDirectoryName">Directory name inside of the final archive.</param>
-        public ReportTarget(string RtProgram, string RtParameters, string RtOutputFileName, string RtArchiveDirectoryName)
+        /// <param name="RtIsMandatory">If current target is mandatory.</param>
+        public ReportTarget(string RtProgram, string RtParameters, string RtOutputFileName, string RtArchiveDirectoryName, bool RtIsMandatory = false)
         {
             Program = RtProgram;
             Parameters = RtParameters;
             OutputFileName = RtOutputFileName;
             ArchiveDirectoryName = RtArchiveDirectoryName;
+            IsMandatory = RtIsMandatory;
         }
     }
 }
