@@ -273,6 +273,9 @@
   <data name="AppDbgExRmRf" xml:space="preserve">
     <value>Exception while removing files.</value>
   </data>
+  <data name="AppDbgExRpMdrNotCreated" xml:space="preserve">
+    <value>Mandatory report was not created.</value>
+  </data>
   <data name="AppDbgExSelGame" xml:space="preserve">
     <value>Exception while handling selected game by user or application.</value>
   </data>

@@ -141,7 +141,7 @@ namespace srcrepair.gui
                     {
                         if (RepTarget.IsMandatory)
                         {
-                            throw new FileNotFoundException("Mandatory report was not created.");
+                            throw new FileNotFoundException(DebugStrings.AppDbgExRpMdrNotCreated);
                         }
                     }
                 }

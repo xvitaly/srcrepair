@@ -529,6 +529,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mandatory report was not created..
+        /// </summary>
+        internal static string AppDbgExRpMdrNotCreated {
+            get {
+                return ResourceManager.GetString("AppDbgExRpMdrNotCreated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while handling selected game by user or application..
         /// </summary>
         internal static string AppDbgExSelGame {
