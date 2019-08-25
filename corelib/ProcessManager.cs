@@ -198,7 +198,7 @@ namespace srcrepair.core
         /// </summary>
         /// <param name="Source">Source string with path.</param>
         /// <returns>Quoted string with path.</returns>
-        private static string AddQuotesToPath(string Source)
+        public static string AddQuotesToPath(string Source)
         {
             return String.Format(Properties.Resources.AppOpenHandlerEscapeTemplate, Source);
         }
