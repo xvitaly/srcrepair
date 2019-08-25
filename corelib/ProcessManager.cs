@@ -193,6 +193,11 @@ namespace srcrepair.core
             Process.Start(URI);
         }
 
+        private static string AddQuotesToPath(string Source)
+        {
+            return String.Format(Properties.Resources.AppOpenHandlerEscapeTemplate, Source);
+        }
+
         /// <summary>
         /// Opens specified text file in a default (or overrided in application's
         /// settings (only on Windows platform)) text editor.
@@ -206,10 +211,10 @@ namespace srcrepair.core
             switch (OS)
             {
                 case CurrentPlatform.OSType.Windows:
-                    Process.Start(EditorBin, String.Format(Properties.Resources.AppOpenHandlerEscapeTemplate, FileName));
+                    Process.Start(EditorBin, AddQuotesToPath(FileName));
                     break;
                 case CurrentPlatform.OSType.Linux:
-                    Process.Start(Properties.Resources.AppOpenHandlerLin, FileName);
+                    Process.Start(Properties.Resources.AppOpenHandlerLin, AddQuotesToPath(FileName));
                     break;
                 case CurrentPlatform.OSType.MacOSX:
                     Process.Start(Properties.Resources.AppOpenHandlerMac, String.Format("{0} \"{1}\"", "-t", FileName));
