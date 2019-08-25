@@ -59,14 +59,14 @@ namespace srcrepair.core
         /// </summary>
         private void SetTargets()
         {
-            ReportTargets.Add(new ReportTarget("msinfo32.exe", "/report \"{0}\"", Path.Combine(TempDirectory, String.Format("report_{0}.txt", CurrentUnixTime)), "report", true));
-            ReportTargets.Add(new ReportTarget("dxdiag.exe", "/t {0}", Path.Combine(TempDirectory, String.Format("dxdiag_{0}.log", CurrentUnixTime)), "system"));
-            ReportTargets.Add(new ReportTarget("cmd.exe", "/C ping steampowered.com > \"{0}\"", Path.Combine(TempDirectory, String.Format("ping_{0}.log", CurrentUnixTime)), "system"));
-            ReportTargets.Add(new ReportTarget("cmd.exe", "/C tracert steampowered.com > \"{0}\"", Path.Combine(TempDirectory, String.Format("traceroute_{0}.log", CurrentUnixTime)), "system"));
-            ReportTargets.Add(new ReportTarget("cmd.exe", "/C ipconfig /all > \"{0}\"", Path.Combine(TempDirectory, String.Format("ipconfig_{0}.log", CurrentUnixTime)), "system"));
-            ReportTargets.Add(new ReportTarget("cmd.exe", "/C netstat -a > \"{0}\"", Path.Combine(TempDirectory, String.Format("netstat_{0}.log", CurrentUnixTime)), "system"));
-            ReportTargets.Add(new ReportTarget("cmd.exe", "/C route print > \"{0}\"", Path.Combine(TempDirectory, String.Format("routing_{0}.log", CurrentUnixTime)), "system"));
-            ReportTargets.Add(new ReportTarget("cmd.exe", "/C net user > \"{0}\"", Path.Combine(TempDirectory, String.Format("users_{0}.log", CurrentUnixTime)), "system"));
+            ReportTargets.Add(new ReportTarget(ReportStrings.MsInfoExe, ReportStrings.MsInfoParams, Path.Combine(TempDirectory, String.Format(ReportStrings.MsInfoOutput, CurrentUnixTime)), ReportStrings.MsInfoArchDirectory, true));
+            ReportTargets.Add(new ReportTarget(ReportStrings.DxDiagExe, ReportStrings.DxDiagParams, Path.Combine(TempDirectory, String.Format(ReportStrings.DxDiagOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory));
+            ReportTargets.Add(new ReportTarget(ReportStrings.CmdIntExe, ReportStrings.PingScParams, Path.Combine(TempDirectory, String.Format(ReportStrings.PingScOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory));
+            ReportTargets.Add(new ReportTarget(ReportStrings.CmdIntExe, ReportStrings.TracertScParams, Path.Combine(TempDirectory, String.Format(ReportStrings.TracertScOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory));
+            ReportTargets.Add(new ReportTarget(ReportStrings.CmdIntExe, ReportStrings.IpConfigParams, Path.Combine(TempDirectory, String.Format(ReportStrings.IpConfigOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory));
+            ReportTargets.Add(new ReportTarget(ReportStrings.CmdIntExe, ReportStrings.NetStatParams, Path.Combine(TempDirectory, String.Format(ReportStrings.NetStatOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory));
+            ReportTargets.Add(new ReportTarget(ReportStrings.CmdIntExe, ReportStrings.RoutesParams, Path.Combine(TempDirectory, String.Format(ReportStrings.RoutesOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory));
+            ReportTargets.Add(new ReportTarget(ReportStrings.CmdIntExe, ReportStrings.UsersParams, Path.Combine(TempDirectory, String.Format(ReportStrings.UsersOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory));
         }
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace srcrepair.core
             ReportTargets = new List<ReportTarget>();
             TempDirectory = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
             CurrentUnixTime = FileManager.DateTime2Unix(DateTime.Now);
-            ReportsDirectory = Path.Combine(AppUserDir, "reports");
+            ReportsDirectory = Path.Combine(AppUserDir, ReportStrings.DirectoryName);
             SetTargets();
         }
     }
