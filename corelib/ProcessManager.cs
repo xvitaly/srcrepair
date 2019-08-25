@@ -193,6 +193,11 @@ namespace srcrepair.core
             Process.Start(URI);
         }
 
+        /// <summary>
+        /// Adds quotes to path.
+        /// </summary>
+        /// <param name="Source">Source string with path.</param>
+        /// <returns>Quoted string with path.</returns>
         private static string AddQuotesToPath(string Source)
         {
             return String.Format(Properties.Resources.AppOpenHandlerEscapeTemplate, Source);
