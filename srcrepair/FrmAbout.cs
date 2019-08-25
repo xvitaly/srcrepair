@@ -21,6 +21,7 @@
 using System;
 using System.Windows.Forms;
 using srcrepair.core;
+using NLog;
 
 namespace srcrepair.gui
 {
@@ -29,6 +30,11 @@ namespace srcrepair.gui
     /// </summary>
     partial class FrmAbout : Form
     {
+        /// <summary>
+        /// Logger instance for FrmAbout class.
+        /// </summary>
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// FrmAbout class constructor.
         /// </summary>
@@ -68,6 +74,23 @@ namespace srcrepair.gui
             if (CurrentApp.IsNewYear)
             {
                 iconApp.Image = Properties.Resources.Xmas;
+            }
+        }
+
+        /// <summary>
+        /// "Legal info" label click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void LabelLicense_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ProcessManager.OpenWebPage(Properties.Resources.AppLegalURL);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex);
             }
         }
     }

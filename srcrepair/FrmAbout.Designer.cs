@@ -69,8 +69,10 @@
             // 
             // labelLicense
             // 
+            this.labelLicense.Cursor = System.Windows.Forms.Cursors.Hand;
             resources.ApplyResources(this.labelLicense, "labelLicense");
             this.labelLicense.Name = "labelLicense";
+            this.labelLicense.Click += new System.EventHandler(this.LabelLicense_Click);
             // 
             // labelCopyright
             // 

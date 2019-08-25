@@ -313,4 +313,7 @@
   <data name="AppHelpFileName" xml:space="preserve">
     <value>srcrepair_{0}.chm</value>
   </data>
+  <data name="AppLegalURL" xml:space="preserve">
+    <value>https://github.com/xvitaly/srcrepair/tree/dev/docs#legal</value>
+  </data>
 </root>

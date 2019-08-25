@@ -425,7 +425,7 @@ SRC Repair's icon by Lopagof (https://lopagof.deviantart.com). Licensed under th
     <value>3</value>
   </data>
   <data name="labelLicense.Text" xml:space="preserve">
-    <value>Licensed under the terms of GNU General Public License version 3 (except graphics; more info in help system).</value>
+    <value>Licensed under the terms of GNU General Public License version 3 (except graphics). Click to view.</value>
   </data>
   <data name="&gt;&gt;labelLicense.Name" xml:space="preserve">
     <value>labelLicense</value>
