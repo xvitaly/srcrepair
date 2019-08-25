@@ -70,6 +70,15 @@ namespace srcrepair.core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &quot;{0}&quot;.
+        /// </summary>
+        internal static string AppOpenHandlerEscapeTemplate {
+            get {
+                return ResourceManager.GetString("AppOpenHandlerEscapeTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to xdg-open.
         /// </summary>
         internal static string AppOpenHandlerLin {

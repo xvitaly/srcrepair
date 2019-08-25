@@ -206,7 +206,7 @@ namespace srcrepair.core
             switch (OS)
             {
                 case CurrentPlatform.OSType.Windows:
-                    Process.Start(EditorBin, FileName);
+                    Process.Start(EditorBin, String.Format(Properties.Resources.AppOpenHandlerEscapeTemplate, FileName));
                     break;
                 case CurrentPlatform.OSType.Linux:
                     Process.Start(Properties.Resources.AppOpenHandlerLin, FileName);

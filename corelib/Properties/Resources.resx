@@ -120,6 +120,9 @@
   <data name="AppDefUA" xml:space="preserve">
     <value>Mozilla/5.0 ({0} {1} {2}.{3}; {4}; rv:{5}) {6} ({7})</value>
   </data>
+  <data name="AppOpenHandlerEscapeTemplate" xml:space="preserve">
+    <value>"{0}"</value>
+  </data>
   <data name="AppOpenHandlerLin" xml:space="preserve">
     <value>xdg-open</value>
   </data>
