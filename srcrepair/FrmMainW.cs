@@ -107,16 +107,15 @@ namespace srcrepair.gui
         #region Internal Methods
 
         /// <summary>
-        /// Сохраняет содержимое таблицы в файл конфигурации, указанный в
-        /// параметре. Используется в Save и SaveAs Редактора конфигов.
+        /// Saves contents of Config Editor to a text file. Used by Save
+        /// and Save As operations.
         /// </summary>
-        /// <param name="Path">Полный путь к файлу конфига</param>
+        /// <param name="Path">Full path to config file.</param>
         private void WriteTableToFileNow(string Path)
         {
-            // Начинаем сохранять содержимое редактора в файл...
             using (StreamWriter CFile = new StreamWriter(Path))
             {
-                for (int i = 0; i < CE_Editor.Rows.Count; i++) // запускаем цикл
+                for (int i = 0; i < CE_Editor.Rows.Count; i++)
                 {
                     CFile.WriteLine("{0} {1}", CE_Editor.Rows[i].Cells[0].Value, CE_Editor.Rows[i].Cells[1].Value);
                 }
@@ -124,35 +123,38 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Определяет установленные игры и заполняет комбо-бокс выбора
-        /// доступных управляемых игр.
+        /// Seaching for installed games and adds them to ComboBox control
+        /// of main window.
         /// </summary>
         private void DetectInstalledGames()
         {
             try
             {
-                // Считаем базу данных и заполним таблицу...
+                // Reading game database...
                 App.SourceGames = new GameManager(App, Properties.Settings.Default.HideUnsupportedGames);
 
-                // Очистим список игр...
+                // Clearing all existing items...
                 AppSelector.Items.Clear();
 
-                // Заполним селектор...
+                // Adding found games to selector...
                 AppSelector.Items.AddRange(App.SourceGames.InstalledGameNames.ToArray());
 
             }
-            catch (Exception Ex) { Logger.Warn(Ex); }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex);
+            }
         }
 
         /// <summary>
-        /// Записывает настройки GCF-игры в реестр Windows.
+        /// Saves video settings of Type 1 game.
         /// </summary>
         private void WriteType1VideoSettings()
         {
-            // Создаём новый объект без получения данных из реестра...
+            // Creating Type1Video instance for operating with video settings...
             Type1Video Video = new Type1Video(App.SourceGames[AppSelector.Text].ConfDir, false)
             {
-                // Записываем пользовательские настройки...
+                // Changing default properties by user selection...
                 ScreenWidth = (int)GT_ResHor.Value,
                 ScreenHeight = (int)GT_ResVert.Value,
                 DisplayMode = GT_ScreenType.SelectedIndex,
@@ -170,19 +172,19 @@ namespace srcrepair.gui
                 HDRType = GT_HDR.SelectedIndex
             };
 
-            // Записываем настройки в реестр...
+            // Saving settings to disk or registry...
             Video.WriteSettings();
         }
 
         /// <summary>
-        /// Сохраняет настройки NCF игры в файл.
+        /// Saves video settings of Type 2 game.
         /// </summary>
         private void WriteType2VideoSettings()
         {
-            // Создаём новый объект без получения данных из файла...
+            // Creating Type2Video instance for operating with video settings...
             Type2Video Video = new Type2Video(App.SourceGames[AppSelector.Text].GetActualVideoFile(), false)
             {
-                // Записываем пользовательские настройки...
+                // Changing default properties by user selection...
                 ScreenWidth = (int)GT_NCF_HorRes.Value,
                 ScreenHeight = (int)GT_NCF_VertRes.Value,
                 ScreenRatio = GT_NCF_Ratio.SelectedIndex,
@@ -200,26 +202,23 @@ namespace srcrepair.gui
                 ModelQuality = GT_NCF_Quality.SelectedIndex
             };
 
-            // Записываем настройки в файл...
+            // Saving settings to disk or registry...
             Video.WriteSettings();
         }
 
         /// <summary>
-        /// Получает настройки первого типа игры из реестра и заполняет
-        /// полученными данными страницу графического твикера.
+        /// Fetches video settings of Type 1 game.
         /// </summary>
         private void ReadType1VideoSettings()
         {
             try
             {
-                // Получаем графические настройки...
+                // Creating Type1Video instance for operating with video settings...
                 Type1Video Video = new Type1Video(App.SourceGames[AppSelector.Text].ConfDir, true);
 
-                // Заполняем общие настройки...
+                // Reading settings and setting them on form...
                 GT_ResHor.Value = Video.ScreenWidth;
                 GT_ResVert.Value = Video.ScreenHeight;
-
-                // Заполняем остальные настройки...
                 GT_ScreenType.SelectedIndex = Video.DisplayMode;
                 GT_ModelQuality.SelectedIndex = Video.ModelQuality;
                 GT_TextureQuality.SelectedIndex = Video.TextureQuality;
@@ -236,34 +235,30 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                // Выводим сообщение об ошибке...
                 MessageBox.Show(AppStrings.GT_RegOpenErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Logger.Error(Ex, DebugStrings.AppDbgExT1LoadFail);
             }
         }
 
         /// <summary>
-        /// Получает настройки второго типа игры из файла и заполняет ими
-        /// таблицу графического твикера программы.
+        /// Fetches video settings of Type 2 game.
         /// </summary>
         private void ReadType2VideoSettings()
         {
             try
             {
-                // Получаем актуальный файл с настройками видео...
+                // Retrieving actual file with video settings...
                 string VFileName = App.SourceGames[AppSelector.Text].GetActualVideoFile();
 
-                // Загружаем содержимое если он существует...
+                // Checking if file with video settings exists...
                 if (File.Exists(VFileName))
                 {
-                    // Получаем графические настройки...
+                    // Creating Type2Video instance for operating with video settings...
                     Type2Video Video = new Type2Video(VFileName, true);
 
-                    // Заполняем общие настройки...
+                    // Reading settings and setting them on form...
                     GT_NCF_HorRes.Value = Video.ScreenWidth;
                     GT_NCF_VertRes.Value = Video.ScreenHeight;
-
-                    // Заполняем остальные настройки...
                     GT_NCF_Ratio.SelectedIndex = Video.ScreenRatio;
                     GT_NCF_Brightness.Text = Video.ScreenGamma;
                     GT_NCF_Shadows.SelectedIndex = Video.ShadowQuality;
@@ -280,13 +275,11 @@ namespace srcrepair.gui
                 }
                 else
                 {
-                    // Записываем в журнал сообщение об ошибке...
                     Logger.Warn(String.Format(AppStrings.AppVideoDbNotFound, App.SourceGames[AppSelector.Text].FullAppName, VFileName));
                 }
             }
             catch (Exception Ex)
             {
-                // Выводим сообщение об ошибке...
                 MessageBox.Show(AppStrings.GT_NCFLoadFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Logger.Error(Ex, DebugStrings.AppDbgExT2LoadFail);
             }
