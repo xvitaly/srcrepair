@@ -483,14 +483,7 @@ namespace srcrepair.gui
             switch (App.SourceGames[AppSelector.Text].SourceType)
             {
                 case "1":
-                    if (App.Platform.OS == CurrentPlatform.OSType.Windows)
-                    {
-                        NullType1Settings();
-                    }
-                    else
-                    {
-                        NullType2Settings();
-                    }
+                    if (App.Platform.OS == CurrentPlatform.OSType.Windows) { NullType1Settings(); } else { NullType2Settings(); }
                     break;
                 case "2":
                     NullType2Settings();
@@ -499,25 +492,25 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Переключает состояние некоторых элементов управления на форме.
+        /// Changes the state of some controls on form.
         /// </summary>
         private void HandleControlsOnSelGame()
         {
-            // Включаем основные элементы управления (контролы)...
+            // Enable main tab selector...
             MainTabControl.Enabled = true;
 
-            // Очистим список FPS-конфигов и HUD-ов...
+            // Clearing lists...
             FP_ConfigSel.Items.Clear();
             HD_HSel.Items.Clear();
 
-            // Отключим кнопку редактирования FPS-конфигов...
+            // Disable "Open in Notepad" button...
             FP_OpenNotepad.Enabled = false;
 
-            // Отключим контролы модуля управления FPS-конфигами...
+            // Disable controls on FPS-config tab...
             FP_Install.Enabled = false;
             FP_Comp.Visible = false;
 
-            // Отключим контролы в менеджере HUD...
+            // Disable controls on HUD Manager tab...
             HD_Install.Enabled = false;
             HD_Homepage.Enabled = false;
             HD_Uninstall.Enabled = false;
@@ -526,19 +519,19 @@ namespace srcrepair.gui
             HD_GB_Pbx.Image = null;
             HD_LastUpdate.Visible = false;
 
-            // Включаем заблокированные ранее контролы...
+            // Enable custom installer menu element...
             MNUInstaller.Enabled = true;
         }
 
         /// <summary>
-        /// Загружает настройки видео для выбранной игры.
+        /// Loads video settings of selected game.
         /// </summary>
         private void LoadGraphicSettings()
         {
-            // Обнуляем графические настройки...
+            // Nulling controls of graphic tweaker...
             NullGraphSettings();
 
-            // Загружаем настройки графики согласно указанного движка...
+            // Reading video settings...
             switch (App.SourceGames[AppSelector.Text].SourceType)
             {
                 case "1": /* Source 1, Type 1 (ex. GCF). */
@@ -551,56 +544,60 @@ namespace srcrepair.gui
                     throw new NotSupportedException();
             }
 
-            // Переключаем графический твикер в режим GCF/NCF...
+            // Switching between graphic tweaker modes...
             SelectGraphicWidget((App.Platform.OS != CurrentPlatform.OSType.Windows) && (App.SourceGames[AppSelector.Text].SourceType == "1") ? "2" : App.SourceGames[AppSelector.Text].SourceType);
         }
 
         /// <summary>
-        /// Выполняет особые действия и начинает процесс сохранения настроек видео
-        /// для Type 1 игры.
+        /// Performes backup and then writes video settings of Type 1 game,
+        /// selected in main window.
         /// </summary>
         private void PrepareWriteType1VideoSettings()
         {
-            // Генерируем путь к ветке реестра с настройками...
+            // Generating registry key name for working with video settings...
             string GameRegKey = Type1Video.GetGameRegKey(App.SourceGames[AppSelector.Text].SmallAppName);
 
-            // Создаём резервную копию если включена опция безопасной очистки...
+            // Creating backup if Safe Clean feature is enabled...
             if (Properties.Settings.Default.SafeCleanup)
             {
                 try
                 {
                     Type1Video.BackUpVideoSettings(GameRegKey, "Game_AutoBackUp", App.SourceGames[AppSelector.Text].FullBackUpDirPath);
                 }
-                catch (Exception Ex) { Logger.Warn(Ex); }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex);
+                }
             }
 
-            // Запускаем процесс...
             try
             {
-                // Проверяем существование ключа реестра и если его нет, создаём...
-                if (!(Type1Video.CheckRegKeyExists(GameRegKey))) { Type1Video.CreateRegKey(GameRegKey); }
+                // Creating registry key if does not exists...
+                if (!Type1Video.CheckRegKeyExists(GameRegKey))
+                {
+                    Type1Video.CreateRegKey(GameRegKey);
+                }
 
-                // Записываем настройки в реестр...
+                // Saving video settings to registry...
                 WriteType1VideoSettings();
 
-                // Выводим сообщение об успехе...
+                // Showing message...
                 MessageBox.Show(AppStrings.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception Ex)
             {
-                // Записываем в журнал и выводим сообщение об ошибке...
                 MessageBox.Show(AppStrings.GT_SaveFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Logger.Error(Ex, DebugStrings.AppDbgExT1SaveFail);
             }
         }
 
         /// <summary>
-        /// Выполняет особые действия и начинает процесс сохранения настроек видео
-        /// для Type 2 игры.
+        /// Performes backup and then writes video settings of Type 2 game,
+        /// selected in main window.
         /// </summary>
         private void PrepareWriteType2VideoSettings()
         {
-            // Создаём резервную копию если включена опция безопасной очистки...
+            // Creating backup if Safe Clean feature is enabled...
             if (Properties.Settings.Default.SafeCleanup)
             {
                 try
@@ -613,29 +610,27 @@ namespace srcrepair.gui
                 }
             }
 
-            // Запускаем процесс...
             try
             {
-                // Записываем настройки в файл...
+                // Saving video settings to file...
                 WriteType2VideoSettings();
 
-                // Выводим сообщение об успехе...
+                // Showing message...
                 MessageBox.Show(AppStrings.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception Ex)
             {
-                // Записываем в журнал и выводим сообщение об ошибке...
                 MessageBox.Show(AppStrings.GT_NCFFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Logger.Error(Ex, DebugStrings.AppDbgExT2SaveFail);
             }
         }
 
         /// <summary>
-        /// Сохраняет настройки видео для выбранной игры.
+        /// Resets controls of video settings on Graphic Tweaker
+        /// to default values.
         /// </summary>
         private void WriteGraphicSettings()
         {
-            // Определим тип игры...
             switch (App.SourceGames[AppSelector.Text].SourceType)
             {
                 case "1":
@@ -648,13 +643,11 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Переключает вид страницы графического твикера с в соответствие с выбранным
-        /// движком.
+        /// Switches between different views of Graphic Tweaker.
         /// </summary>
-        /// <param name="SType">Тип движка Source</param>
+        /// <param name="SType">Source type.</param>
         private void SelectGraphicWidget(string SType)
         {
-            // Переключаем виджеты...
             switch (SType)
             {
                 case "1":
