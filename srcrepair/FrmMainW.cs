@@ -76,10 +76,15 @@ namespace srcrepair.gui
 
         #endregion
 
-        #region Internal Variables
+        #region Internal Properties
 
-        private string CFGFileName;
-        private CurrentApp App;
+        private string CFGFileName { get; set; }
+        private CurrentApp App { get; set; }
+        
+        #endregion
+
+        #region Internal Fields
+
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
         private readonly ResourceManager CvarFetcher = new ResourceManager(Properties.Resources.CE_CVResDf, typeof(FrmMainW).Assembly);
 
