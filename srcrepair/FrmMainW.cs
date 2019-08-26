@@ -36,19 +36,19 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Класс главной формы приложения.
+    /// Class of main form.
     /// </summary>
     public partial class FrmMainW : Form
     {
         /// <summary>
-        /// Конструктор главной формы приложения.
+        /// FrmMainW class constructor.
         /// </summary>
         public FrmMainW()
         {
-            // Инициализация...
+            // Initializing controls...
             InitializeComponent();
             
-            // Импортируем настройки из предыдущей версии...
+            // Importing settings from previous versions (if any)...
             if (Properties.Settings.Default.CallUpgrade)
             {
                 Properties.Settings.Default.Upgrade();
@@ -59,10 +59,10 @@ namespace srcrepair.gui
         #region HiDPI hacks
 
         /// <summary>
-        /// Управляет масштабированием элементов управления на форме.
+        /// Scales controls on current form with some additional hacks applied.
         /// </summary>
-        /// <param name="ScalingFactor">Множитель масштабирования</param>
-        /// <param name="Bounds">Границы элемента управления</param>
+        /// <param name="ScalingFactor">Scaling factor.</param>
+        /// <param name="Bounds">Bounds of control.</param>
         protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified Bounds)
         {
             base.ScaleControl(ScalingFactor, Bounds);
@@ -78,14 +78,28 @@ namespace srcrepair.gui
 
         #region Internal Properties
 
+        /// <summary>
+        /// Gets or sets loaded in Config Editor file name.
+        /// </summary>
         private string CFGFileName { get; set; }
+
+        /// <summary>
+        /// Gets or sets instance of CurrentApp class.
+        /// </summary>
         private CurrentApp App { get; set; }
-        
+
         #endregion
 
         #region Internal Fields
 
+        /// <summary>
+        /// Logger instance for FrmMainW class.
+        /// </summary>
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
+
+        /// <summary>
+        /// ResourceManager instance for managing Cvar descriptions in Config Editor.
+        /// </summary>
         private readonly ResourceManager CvarFetcher = new ResourceManager(Properties.Resources.CE_CVResDf, typeof(FrmMainW).Assembly);
 
         #endregion
