@@ -286,9 +286,9 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Проверяет наличие обновлений для программы. Используется главной формой.
+        /// Checks for application updates.
         /// </summary>
-        /// <returns>Возвращает true при обнаружении обновлений</returns>
+        /// <returns>Check result.</returns>
         private bool AutoUpdateCheck()
         {
             UpdateManager UpMan = new UpdateManager(App.FullAppPath, App.UserAgent);
@@ -296,60 +296,62 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Открывает конфиг, имя которого передано в качестве параметра
-        /// и заполняет им Редактор конфигов с одноимённой страницы.
+        /// Loads config file to Config Editor.
         /// </summary>
-        /// <param name="ConfFileName">Полный путь к файлу конфига</param>
+        /// <param name="ConfFileName">Full path to config file.</param>
         private void ReadConfigFromFile(string ConfFileName)
         {
-            // Описываем буферные переменные...
+            // Creating some variables...
             string ImpStr, CVarName, CVarContent;
 
-            // Проверяем, существует ли файл...
+            // Checking if config file exists...
             if (File.Exists(ConfFileName))
             {
-                // Получаем имя открытого в Редакторе файла без пути...
+                // Setting config file name (without full path)...
                 CFGFileName = ConfFileName;
 
-                // Проверяем, не открыл ли пользователь файл config.cfg и, если да, то сообщаем об этом...
-                if (Path.GetFileName(CFGFileName) == "config.cfg") { MessageBox.Show(AppStrings.CE_RestConfigOpenWarn, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                // Checking if currently opened file is not config.cfg. If so, show warning to user.
+                if (Path.GetFileName(CFGFileName) == "config.cfg")
+                {
+                    MessageBox.Show(AppStrings.CE_RestConfigOpenWarn, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
 
-                // Очищаем область редактирования...
+                // Clearing editor...
                 CE_Editor.Rows.Clear();
 
-                // Загружаем содержимое конфига из файла...
                 try
                 {
-                    // Открываем поток с нужным нам файлом...
+                    // Loading config file...
                     using (StreamReader ConfigFile = new StreamReader(ConfFileName, Encoding.Default))
                     {
-                        // Читаем файл в потоковом режиме от начала и до конца...
+                        // Reading config file to the end...
                         while (ConfigFile.Peek() >= 0)
                         {
-                            // Почистим строку от лишних пробелов и табуляций...
+                            // Clearing string from special chars...
                             ImpStr = StringsManager.CleanString(ConfigFile.ReadLine());
 
-                            // Проверяем, не пустая ли строка...
-                            if (!(String.IsNullOrEmpty(ImpStr)))
+                            // Checking if source string is not empty...
+                            if (!String.IsNullOrEmpty(ImpStr))
                             {
-                                // Проверяем, не комментарий ли...
+                                // Checking if source string is not a commentary...
                                 if (ImpStr[0] != '/')
                                 {
-                                    // Строка почищена, продолжаем...
+                                    // Checking for value in source string...
                                     if (ImpStr.IndexOf(" ") != -1)
                                     {
-                                        // Выделяем переменную...
+                                        // Extracting variable...
                                         CVarName = ImpStr.Substring(0, ImpStr.IndexOf(" "));
                                         ImpStr = ImpStr.Remove(0, ImpStr.IndexOf(" ") + 1);
 
-                                        // Выделяем значение...
+                                        // Extracting value (excluding commentaries if exists)...
                                         CVarContent = ImpStr.IndexOf("//") >= 1 ? ImpStr.Substring(0, ImpStr.IndexOf("//") - 1) : ImpStr;
 
-                                        // Вставляем в таблицу...
+                                        // Adding to table Cvar and its value...
                                         CE_Editor.Rows.Add(CVarName, CVarContent);
                                     }
                                     else
                                     {
+                                        // Adding to table only Cvar with empty value...
                                         CE_Editor.Rows.Add(ImpStr, String.Empty);
                                     }
                                 }
@@ -357,12 +359,11 @@ namespace srcrepair.gui
                         }
                     }
 
-                    // Изменяем содержимое строки статуса...
+                    // Updating status bar text...
                     UpdateStatusBar();
                 }
                 catch (Exception Ex)
                 {
-                    // Произошло исключение...
                     MessageBox.Show(AppStrings.CE_ExceptionDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Logger.Error(Ex, DebugStrings.AppDbgExCfgEdLoad);
                 }
@@ -374,10 +375,10 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Генерирует удобочитаемое название для файла резервной копии.
+        /// Gets user-friendly names for backup files.
         /// </summary>
-        /// <param name="FileName">Ссылка на файл резервной копии</param>
-        /// <returns>Возвращает пару "тип архива" и "удобочитаемое название"</returns>
+        /// <param name="FileName">Backup file name.</param>
+        /// <returns>Returns tuple with backup type and its friendly name.</returns>
         private Tuple<string, string> GenUserFriendlyBackupDesc(FileInfo FileName)
         {
             string ConfRow, ConfType;
@@ -428,7 +429,8 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Обнуляет контролы на странице графических настроек для Type 1 игры.
+        /// Resets controls of Type 1 video settings on Graphic Tweaker
+        /// to default values.
         /// </summary>
         private void NullType1Settings()
         {
@@ -450,7 +452,8 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Обнуляет контролы на странице графических настроек для Type 2 игры.
+        /// Resets controls of Type 2 video settings on Graphic Tweaker
+        /// to default values.
         /// </summary>
         private void NullType2Settings()
         {
@@ -472,14 +475,22 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Обнуляет контролы на странице графических настроек. Функция-заглушка.
+        /// Resets controls of video settings on Graphic Tweaker
+        /// to default values.
         /// </summary>
         private void NullGraphSettings()
         {
             switch (App.SourceGames[AppSelector.Text].SourceType)
             {
                 case "1":
-                    if (App.Platform.OS == CurrentPlatform.OSType.Windows) { NullType1Settings(); } else { NullType2Settings(); }
+                    if (App.Platform.OS == CurrentPlatform.OSType.Windows)
+                    {
+                        NullType1Settings();
+                    }
+                    else
+                    {
+                        NullType2Settings();
+                    }
                     break;
                 case "2":
                     NullType2Settings();
