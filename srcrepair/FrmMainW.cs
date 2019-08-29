@@ -662,8 +662,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Изменяет вид значка и текст безопасной очистки в соответствии с её статусом
-        /// в строке состояния программы.
+        /// Shows current Safe Clean status on form.
         /// </summary>
         private void CheckSafeClnStatus()
         {
