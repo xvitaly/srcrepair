@@ -745,27 +745,28 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Устанавливает статус элементам управления, зависящим от платформы или спец. прав.
+        /// Changes state of some controls, depending on current running
+        /// platform or access level.
         /// </summary>
-        /// <param name="State">Устанавливаемый статус</param>
+        /// <param name="State">Current access level state.</param>
         private void ChangePrvControlState(bool State)
         {
-            // Проверяем платформу выполнения приложения...
+            // Checking platform...
             if (App.Platform.OS == CurrentPlatform.OSType.Windows)
             {
-                // Платформа Windows, применяем стандартные ограничения...
+                // On Windows we will disable "Keyboard disabler" module due to absent admin rights...
                 MNUWinMnuDisabler.Enabled = State;
             }
             else
             {
-                // Платформа GNU/Linux или MacOS X, отключим ряд контролов...
+                // On Linux and MacOS we will disable "Keyboard disabler" and Reporter modules...
                 MNUReportBuilder.Enabled = false;
                 MNUWinMnuDisabler.Enabled = false;
             }
         }
 
         /// <summary>
-        /// Выполняет определение и вывод названия файловой системы на диске установки клиента игры.
+        /// Checks file system name on game installation drive and shows this on form.
         /// </summary>
         private void DetectFS()
         {
@@ -781,33 +782,28 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Проверяет количество найденных установленных игр и выполняет нужные действия.
+        /// Checks the number of found supported games and performes some actions.
         /// </summary>
-        /// <param name="LoginCount">Количество найденных игр</param>
+        /// <param name="GamesCount">The number of found supported games.</param>
         private void CheckGames(int GamesCount)
         {
             switch (GamesCount)
             {
-                case 0:
+                case 0: // No games found.
                     {
-                        // Запишем в лог...
                         Logger.Warn(String.Format(AppStrings.AppNoGamesDLog, App.SteamClient.FullSteamPath));
-                        // Нет, не нашлись, выведем сообщение...
                         MessageBox.Show(AppStrings.AppNoGamesDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        // Завершим работу приложения...
                         Environment.Exit(ReturnCodes.NoGamesDetected);
                     }
                     break;
-                case 1:
+                case 1: // Only one game found. Select it automatically.
                     {
-                        // При наличии единственной игры в списке, выберем её автоматически...
                         AppSelector.SelectedIndex = 0;
                         UpdateStatusBar();
                     }
                     break;
-                default:
+                default: // More than one game found. Selecting last used game.
                     {
-                        // Выберем последнюю использованную игру...
                         int Ai = AppSelector.Items.IndexOf(Properties.Settings.Default.LastGameName);
                         AppSelector.SelectedIndex = Ai != -1 ? Ai : 0;
                     }
@@ -816,11 +812,12 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Запускает проверку на наличие запрещённых символов в пути установки клиента Steam.
+        /// Checks for restricted symbols in Steam installation path and shows
+        /// result on form.
         /// </summary>
         private void CheckSymbolsSteam()
         {
-            if (!(FileManager.CheckNonASCII(App.SteamClient.FullSteamPath)))
+            if (!FileManager.CheckNonASCII(App.SteamClient.FullSteamPath))
             {
                 PS_PathSteam.ForeColor = Color.Red;
                 PS_PathSteam.Image = Properties.Resources.upd_err;
@@ -829,11 +826,12 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Запускает проверку на наличие запрещённых символов в пути установки игры.
+        /// Checks for restricted symbols in selected game installation path
+        /// and shows result on form.
         /// </summary>
         private void CheckSymbolsGame()
         {
-            if (!(FileManager.CheckNonASCII(App.SourceGames[AppSelector.Text].FullGamePath)))
+            if (!FileManager.CheckNonASCII(App.SourceGames[AppSelector.Text].FullGamePath))
             {
                 PS_PathGame.ForeColor = Color.Red;
                 PS_PathGame.Image = Properties.Resources.upd_err;
