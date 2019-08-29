@@ -18,15 +18,49 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace srcrepair.core
 {
+    /// <summary>
+    /// Class for working with application return codes.
+    /// </summary>
     public static class ReturnCodes
     {
+        /// <summary>
+        /// Successful exit without any errors.
+        /// </summary>
+        public const int Success = 0;
+
+        /// <summary>
+        /// Wrong path to Steam client installation directory entered.
+        /// </summary>
+        public const int StmWrongPath = 1;
+
+        /// <summary>
+        /// User refused to find Steam client installation directory.
+        /// </summary>
+        public const int StmPathCancel = 2;
+
+        /// <summary>
+        /// Exception occured while trying to detect Steam client
+        /// installation directory.
+        /// </summary>
+        public const int StmPathException = 3;
+
+        /// <summary>
+        /// No supported installed games detected.
+        /// </summary>
+        public const int NoGamesDetected = 4;
+
+        /// <summary>
+        /// Exception during parsing XML game database and trying
+        /// to find installed supported games.
+        /// </summary>
+        public const int GameDbParseError = 5;
+
+        /// <summary>
+        /// No Steam UserIDs detected.
+        /// </summary>
+        public const int NoUserIdsDetected = 6;
     }
 }
