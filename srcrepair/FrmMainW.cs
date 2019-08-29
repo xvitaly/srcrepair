@@ -706,16 +706,17 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Проверяет значение OldPath на наличие верного пути к клиенту Steam.
+        /// Checks if source string contains valid path to Steam client
+        /// installation directory. If not, opens special dialog.
         /// </summary>
-        /// <param name="OldPath">Проверяемый путь</param>
+        /// <param name="OldPath">Valid path to Steam client installation directory.</param>
         private string CheckLastSteamPath(string OldPath)
         {
-            return (!(String.IsNullOrWhiteSpace(OldPath)) && File.Exists(Path.Combine(OldPath, App.Platform.SteamBinaryName))) ? OldPath : GetPathByMEnter();
+            return (!String.IsNullOrWhiteSpace(OldPath) && File.Exists(Path.Combine(OldPath, App.Platform.SteamBinaryName))) ? OldPath : GetPathByMEnter();
         }
 
         /// <summary>
-        /// Получает путь и обрабатывает возможные исключения.
+        /// Tries to find Steam client installation directory.
         /// </summary>
         private void ValidateAndHandle()
         {
@@ -727,19 +728,19 @@ namespace srcrepair.gui
             {
                 MessageBox.Show(AppStrings.SteamPathEnterErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Logger.Error(Ex, DebugStrings.AppDbgExSteamPath);
-                Environment.Exit(7);
+                Environment.Exit(ReturnCodes.StmWrongPath);
             }
             catch (OperationCanceledException Ex)
             {
                 MessageBox.Show(AppStrings.SteamPathCancel, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Logger.Error(Ex, DebugStrings.AppDbgExSteamPath);
-                Environment.Exit(19);
+                Environment.Exit(ReturnCodes.StmPathCancel);
             }
             catch (Exception Ex)
             {
                 MessageBox.Show(AppStrings.AppGenericError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Logger.Error(Ex, DebugStrings.AppDbgExSteamPath);
-                Environment.Exit(24);
+                Environment.Exit(ReturnCodes.StmPathException);
             }
         }
 
@@ -794,7 +795,7 @@ namespace srcrepair.gui
                         // Нет, не нашлись, выведем сообщение...
                         MessageBox.Show(AppStrings.AppNoGamesDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         // Завершим работу приложения...
-                        Environment.Exit(11);
+                        Environment.Exit(ReturnCodes.NoGamesDetected);
                     }
                     break;
                 case 1:
@@ -994,7 +995,7 @@ namespace srcrepair.gui
             {
                 MessageBox.Show(AppStrings.AppXMLParseError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Logger.Error(Ex, DebugStrings.AppDbgExXmlParse);
-                Environment.Exit(16);
+                Environment.Exit(ReturnCodes.GameDbParseError);
             }
 
             // Проверим нашлись ли игры...
@@ -1429,7 +1430,7 @@ namespace srcrepair.gui
             catch (ArgumentOutOfRangeException)
             {
                 MessageBox.Show(AppStrings.AppNoSteamIDSetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Environment.Exit(2);
+                Environment.Exit(ReturnCodes.NoUserIdsDetected);
             }
             catch (Exception Ex)
             {
@@ -2116,7 +2117,7 @@ namespace srcrepair.gui
         private void MNUExit_Click(object sender, EventArgs e)
         {
             // Завершаем работу программы...
-            Environment.Exit(0);
+            Environment.Exit(ReturnCodes.Success);
         }
 
         private void MNUAbout_Click(object sender, EventArgs e)
