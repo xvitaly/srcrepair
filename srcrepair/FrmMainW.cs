@@ -845,7 +845,8 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Управляет выводом значка активного FPS-конфига и кнопки их удаления.
+        /// Handles with installed FPS-configs, shows special icon and works
+        /// with "Uninstall config" button.
         /// </summary>
         private void HandleConfigs()
         {
@@ -855,9 +856,9 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Управляет выводом текущего SteamID.
+        /// Handles with current Steam UserID.
         /// </summary>
-        /// <param name="SID">Сохранённый SteamID</param>
+        /// <param name="SID">Last used Steam UserID.</param>
         private void HandleSteamIDs(string SID)
         {
             try
@@ -874,9 +875,9 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Управляет видимостью специальных кнопок модуля Менеджер HUD.
+        /// Changes the state of some controls on "HUD Manager" page.
         /// </summary>
-        /// <param name="State">Статус выбранного HUD</param>
+        /// <param name="State">If selected HUD installed.</param>
         private void SetHUDButtons(bool State)
         {
             HD_Install.Text = State ? AppStrings.HD_BtnUpdateText : AppStrings.HD_BtnInstallText;
@@ -885,20 +886,20 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Обновляет содержимое строки состояния в зависимости от контекста.
+        /// Changes the state of the status bar depending of currently selected tab.
         /// </summary>
         private void UpdateStatusBar()
         {
             switch (MainTabControl.SelectedIndex)
             {
-                case 1: // Открыта страница "Редактор конфигов"...
+                case 1: // "Config Editor" page selected...
                     {
                         MNUShowEdHint.Enabled = true;
                         SB_Status.ForeColor = Color.Black;
                         SB_Status.Text = String.Format(AppStrings.StatusOpenedFile, String.IsNullOrEmpty(CFGFileName) ? AppStrings.UnnamedFileName : Path.GetFileName(CFGFileName));
                     }
                     break;
-                case 4:
+                case 4: // "HUD manager" page selected...
                     {
                         bool HUDDbStatus = HUDManager.CheckHUDDatabase(Properties.Settings.Default.LastHUDTime);
                         MNUShowEdHint.Enabled = false;
@@ -906,7 +907,7 @@ namespace srcrepair.gui
                         SB_Status.Text = String.Format(AppStrings.HD_DynBarText, HUDDbStatus ? AppStrings.HD_StatusOutdated : AppStrings.HD_StatusUpdated, Properties.Settings.Default.LastHUDTime);
                     }
                     break;
-                default: // Открыта другая страница...
+                default: // Any other page selected...
                     {
                         MNUShowEdHint.Enabled = false;
                         SB_Status.ForeColor = Color.Black;
@@ -917,7 +918,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Проверяет правильность заполнения графических настроек для Type 1 игр.
+        /// Checks if all Type 1 game video settings were set by user.
         /// </summary>
         private bool CheckType1Settings()
         {
@@ -931,7 +932,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Проверяет правильность заполнения графических настроек для Type 2 игр.
+        /// Checks if all Type 2 game video settings were set by user.
         /// </summary>
         private bool CheckType2Settings()
         {
@@ -945,7 +946,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Проверяет верность заполнения графических настроек
+        /// Checks if all game video settings were set by user.
         /// </summary>
         private bool ValidateGameSettings()
         {
@@ -963,7 +964,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Закрывает все открытые в Редакторе конфигов файлы и очищает таблицу...
+        /// Closes all loaded files in Config Editor and clean its window.
         /// </summary>
         private void CloseEditorConfigs()
         {
@@ -972,11 +973,14 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Gets full list of available backups.
+        /// Gets full list of available backups in a separate thread.
         /// </summary>
         private void UpdateBackUpList()
         {
-            if (!BW_BkUpRecv.IsBusy) { BW_BkUpRecv.RunWorkerAsync(AppSelector.Text); }
+            if (!BW_BkUpRecv.IsBusy)
+            {
+                BW_BkUpRecv.RunWorkerAsync(AppSelector.Text);
+            }
         }
 
         /// <summary>
