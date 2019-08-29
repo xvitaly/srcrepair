@@ -984,11 +984,11 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Ищет установленные игры и выполняет ряд необходимых проверок.
+        /// Searches for installed supported games.
         /// </summary>
         private void FindGames()
         {
-            // Начинаем определять установленные игры...
+            // Searching for installed games...
             try
             {
                 DetectInstalledGames();
@@ -1000,14 +1000,14 @@ namespace srcrepair.gui
                 Environment.Exit(ReturnCodes.GameDbParseError);
             }
 
-            // Проверим нашлись ли игры...
+            // Checking if any installed supported games were found...
             CheckGames(App.SourceGames.InstalledGameNames.Count);
         }
 
         /// <summary>
-        /// Переключает вид страницы модуля Менеджер HUD.
+        /// Enables or disables HUD Manager page.
         /// </summary>
-        /// <param name="Mode">Булево режима</param>
+        /// <param name="Mode">If current game supports custom HUDs.</param>
         private void HandleHUDMode(bool Mode)
         {
             HUD_Panel.Visible = Mode;
@@ -1019,57 +1019,61 @@ namespace srcrepair.gui
         /// </summary>
         private void CheckForUpdates()
         {
-            if (Properties.Settings.Default.AutoUpdateCheck && IsAutoUpdateCheckNeeded()) { if (!BW_UpChk.IsBusy) { BW_UpChk.RunWorkerAsync(); } }
+            if (Properties.Settings.Default.AutoUpdateCheck && IsAutoUpdateCheckNeeded())
+            {
+                if (!BW_UpChk.IsBusy)
+                {
+                    BW_UpChk.RunWorkerAsync();
+                }
+            }
         }
 
         /// <summary>
-        /// Генерирует ссылку онлайновой справочной системы на основе информации
-        /// о текущей вкладке.
+        /// Generates internal offline help URL, based on current tab.
         /// </summary>
-        /// <param name="TabIndex">Индекс текущей вкладки</param>
-        /// <returns>Возвращает URL, пригодный для загрузки в веб-браузере</returns>
+        /// <param name="TabIndex">Current tab index.</param>
+        /// <returns>Internal offline help URL.</returns>
         private string GetHelpWebPage(int TabIndex)
         {
-            // Создаём буферную переменную...
-            string Result = "";
+            // Creating variable for storing result...
+            string Result = String.Empty;
 
-            // Генерируем ID для справочной системы сайта...
+            // Generating page name, based on tab ID...
             switch (TabIndex)
             {
-                case 0: /* графический твикер. */
+                case 0: // Graphic tweaker...
                     Result = "graphic-tweaker";
                     break;
-                case 1: /* Редактор конфигов. */
+                case 1: // Config editor...
                     Result = "config-editor";
                     break;
-                case 2: /* Устранение проблем и очистка. */
+                case 2: // Problem solver...
                     Result = "cleanup";
                     break;
-                case 3: /* FPS-конфиги. */
+                case 3: // FPS-config manager...
                     Result = "fps-configs";
                     break;
-                case 4: /* Менеджер HUD. */
+                case 4: // HUD manager...
                     Result = "hud-manager";
                     break;
-                case 5: /* Резервные копии. */
+                case 5: // BackUps manager...
                     Result = "backups";
                     break;
             }
 
-            // Возвращаем финальный URL...
+            // Returns result...
             return String.Format("{0}.html", Result);
         }
 
 
         /// <summary>
-        /// Возвращает список строк для передачи в особые методы.
+        /// Converts a single string to list.
         /// </summary>
-        /// <param name="Str">Строка для создания списка</param>
-        /// <returns>Возвращает список строк</returns>
+        /// <param name="Str">Source string.</param>
+        /// <returns>List with source string.</returns>
         private List<String> SingleToArray(string Str)
         {
-            List<String> Result = new List<String> { Str };
-            return Result;
+            return new List<String> { Str };
         }
 
         /// <summary>
@@ -1090,18 +1094,17 @@ namespace srcrepair.gui
             foreach (FileInfo DItem in DItems)
             {
                 Tuple<string, string> Rs = GenUserFriendlyBackupDesc(DItem);
-                ListViewItem LvItem = new ListViewItem(Rs.Item2);
-                if (Properties.Settings.Default.HighlightOldBackUps)
+                ListViewItem LvItem = new ListViewItem(Rs.Item2)
                 {
-                    if (DateTime.UtcNow - DItem.CreationTimeUtc > TimeSpan.FromDays(30))
+                    BackColor = Properties.Settings.Default.HighlightOldBackUps && (DateTime.UtcNow - DItem.CreationTimeUtc > TimeSpan.FromDays(30)) ? Color.LightYellow : BU_LVTable.BackColor,
+                    SubItems =
                     {
-                        LvItem.BackColor = Color.LightYellow;
+                        Rs.Item1,
+                        GuiHelpers.SclBytes(DItem.Length),
+                        DItem.CreationTime.ToString(),
+                        DItem.Name
                     }
-                }
-                LvItem.SubItems.Add(Rs.Item1);
-                LvItem.SubItems.Add(GuiHelpers.SclBytes(DItem.Length));
-                LvItem.SubItems.Add(DItem.CreationTime.ToString());
-                LvItem.SubItems.Add(DItem.Name);
+                };
                 BU_LVTable.Items.Add(LvItem);
             }
         }
