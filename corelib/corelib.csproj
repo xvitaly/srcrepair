@@ -88,6 +88,7 @@
       <DependentUpon>ReportStrings.resx</DependentUpon>
     </Compile>
     <Compile Include="ReportTarget.cs" />
+    <Compile Include="ReturnCodes.cs" />
     <Compile Include="StringsManager.cs" />
     <Compile Include="SourceGame.cs" />
     <Compile Include="SteamConv.cs" />
