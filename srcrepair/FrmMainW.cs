@@ -690,7 +690,7 @@ namespace srcrepair.gui
             {
                 if (!File.Exists(Path.Combine(FldrBrwse.SelectedPath, App.Platform.SteamBinaryName)))
                 {
-                    throw new FileNotFoundException("Invalid Steam directory entered by user", Path.Combine(FldrBrwse.SelectedPath, App.Platform.SteamBinaryName));
+                    throw new FileNotFoundException(AppStrings.AppSteamPathEnterInvalid, Path.Combine(FldrBrwse.SelectedPath, App.Platform.SteamBinaryName));
                 }
                 else
                 {
@@ -699,7 +699,7 @@ namespace srcrepair.gui
             }
             else
             {
-                throw new OperationCanceledException("User closed opendir window");
+                throw new OperationCanceledException(AppStrings.AppSteamPathEnterWinClosed);
             }
 
             return Result;
