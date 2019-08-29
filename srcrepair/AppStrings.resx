@@ -651,4 +651,10 @@
   <data name="PS_ClnWndInitError" xml:space="preserve">
     <value>An error occured while trying to open cleanup window. Additional information about this issue has been added to logs.</value>
   </data>
+  <data name="AppSteamPathEnterInvalid" xml:space="preserve">
+    <value>Invalid Steam directory entered by user.</value>
+  </data>
+  <data name="AppSteamPathEnterWinClosed" xml:space="preserve">
+    <value>User closed "Find Steam" window.</value>
+  </data>
 </root>

@@ -286,6 +286,24 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid Steam directory entered by user..
+        /// </summary>
+        internal static string AppSteamPathEnterInvalid {
+            get {
+                return ResourceManager.GetString("AppSteamPathEnterInvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User closed &quot;Find Steam&quot; window..
+        /// </summary>
+        internal static string AppSteamPathEnterWinClosed {
+            get {
+                return ResourceManager.GetString("AppSteamPathEnterWinClosed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Notice! Update for {0} is available. We recommend you upgrade as soon as possible via the menu Help - Check for updates, or manually..
         /// </summary>
         internal static string AppUpdateAvailable {
