@@ -1150,6 +1150,46 @@ namespace srcrepair.gui
             StartCleanup(ID, Title, new List<String>());
         }
 
+        /// <summary>
+        /// Searches for available HUDs.
+        /// </summary>
+        private void HandleHUDs()
+        {
+            if (App.SourceGames[AppSelector.Text].IsHUDsAvailable)
+            {
+                // Creating local directory for saving HUDs if does not exists...
+                if (!Directory.Exists(App.SourceGames[AppSelector.Text].AppHUDDir)) { Directory.CreateDirectory(App.SourceGames[AppSelector.Text].AppHUDDir); }
+
+                // Updating HUDs list in a separate thread...
+                if (!BW_HUDList.IsBusy)
+                {
+                    BW_HUDList.RunWorkerAsync(AppSelector.Text);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Searches for available FPS-configs.
+        /// </summary>
+        private void HandleFpsConfigs()
+        {
+            if (!BW_FPRecv.IsBusy)
+            {
+                BW_FPRecv.RunWorkerAsync(AppSelector.Text);
+            }
+        }
+
+        /// <summary>
+        /// Searches for available cleanup targets.
+        /// </summary>
+        private void HandleCleanupTargets()
+        {
+            if (!BW_ClnList.IsBusy)
+            {
+                BW_ClnList.RunWorkerAsync(AppSelector.Text);
+            }
+        }
+
         #endregion
 
         #region Internal Workers
@@ -1422,12 +1462,15 @@ namespace srcrepair.gui
 
         #endregion
 
+        /// <summary>
+        /// "Form create" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmMainW_Load(object sender, EventArgs e)
         {
-            // Событие инициализации формы...
             App = new CurrentApp(Properties.Settings.Default.IsPortable, Properties.Resources.AppName);
 
-            // Узнаем путь к установленному клиенту Steam...
             try
             {
                 App.SteamClient = new SteamManager(Properties.Settings.Default.LastSteamID, App.Platform.OS);
@@ -1443,43 +1486,38 @@ namespace srcrepair.gui
                 ValidateAndHandle();
             }
             
-            // Начинаем платформо-зависимые процедуры...
-            ChangePrvControlState(ProcessManager.IsCurrentUserAdmin());
-
-            // Сохраним последний путь к Steam в файл конфигурации...
             Properties.Settings.Default.LastSteamPath = App.SteamClient.FullSteamPath;
-
-            // Вставляем информацию о версии в заголовок формы...
             Text = String.Format(Text, Properties.Resources.AppName, App.Platform.OSFriendlyName, CurrentApp.AppVersion);
-
-            // Укажем статус Безопасной очистки...
-            CheckSafeClnStatus();
-
-            // Укажем путь к Steam на странице "Устранение проблем"...
             PS_StPath.Text = String.Format(PS_StPath.Text, App.SteamClient.FullSteamPath);
-            
-            // Проверим на наличие запрещённых символов в пути к установленному клиенту Steam...
+
+            ChangePrvControlState(ProcessManager.IsCurrentUserAdmin());
+            CheckSafeClnStatus();
             CheckSymbolsSteam();
-
-            // Запустим поиск установленных игр и проверим нашлось ли что-то...
             FindGames();
-
-            // Проверим наличие обновлений программы...
             CheckForUpdates();
         }
 
+        /// <summary>
+        /// "Clean blobs" checkbox status changed event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void PS_CleanBlobs_CheckedChanged(object sender, EventArgs e)
         {
-            // Управляем доступностью кнопки запуска очистки...
             PS_ExecuteNow.Enabled = PS_CleanBlobs.Checked || PS_CleanRegistry.Checked;
         }
 
+        /// <summary>
+        /// "Clean registry" checkbox status changed event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void PS_CleanRegistry_CheckedChanged(object sender, EventArgs e)
         {
-            // Включаем список с доступными языками клиента Steam...
+            // Enable control with selector of available Steam languages...
             PS_SteamLang.Enabled = PS_CleanRegistry.Checked;
 
-            // Получим значение текущего языка из реестра Windows...
+            // Getting current language name from Registry...
             if (App.Platform.OS == CurrentPlatform.OSType.Windows)
             {
                 try
@@ -1502,36 +1540,34 @@ namespace srcrepair.gui
             }
             else
             {
-                // Выбираем язык по умолчанию согласно языку приложения...
+                // Performing selection based on current application locale...
                 PS_SteamLang.SelectedIndex = Convert.ToInt32(AppStrings.AppDefaultSteamLangID);
             }
 
-            // Управляем доступностью кнопки запуска очистки...
+            // Enable or disable button based on checkboxes...
             PS_ExecuteNow.Enabled = PS_CleanRegistry.Checked || PS_CleanBlobs.Checked;
         }
 
+        /// <summary>
+        /// "Execute cleanup" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void PS_ExecuteNow_Click(object sender, EventArgs e)
         {
-            // Начинаем очистку...
-
-            // Запрашиваем подтверждение у пользователя...
             if (MessageBox.Show(AppStrings.PS_ExecuteMSG, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                // Подтверждение получено...
                 if ((PS_CleanBlobs.Checked) || (PS_CleanRegistry.Checked))
                 {
-                    // Найдём и завершим работу клиента Steam...
                     if (ProcessManager.ProcessTerminate("Steam") != 0)
                     {
                         MessageBox.Show(AppStrings.PS_ProcessDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
-                    // Проверяем нужно ли чистить блобы...
                     if (PS_CleanBlobs.Checked)
                     {
                         try
                         {
-                            // Чистим блобы...
                             App.SteamClient.CleanBlobsNow();
                         }
                         catch (Exception Ex)
@@ -1541,20 +1577,16 @@ namespace srcrepair.gui
                         }
                     }
 
-                    // Проверяем нужно ли чистить реестр...
                     if (PS_CleanRegistry.Checked)
                     {
                         try
                         {
-                            // Проверяем выбрал ли пользователь язык из выпадающего списка...
                             if (PS_SteamLang.SelectedIndex != -1)
                             {
-                                // Всё в порядке, чистим реестр...
                                 App.SteamClient.CleanRegistryNow(PS_SteamLang.SelectedIndex);
                             }
                             else
                             {
-                                // Пользователь не выбрал язык, поэтому будем использовать английский...
                                 MessageBox.Show(AppStrings.PS_NoLangSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 App.SteamClient.CleanRegistryNow(0);
                             }
@@ -1566,72 +1598,60 @@ namespace srcrepair.gui
                         }
                     }
 
-                    // Выполнение закончено, выведем сообщение о завершении...
                     MessageBox.Show(AppStrings.PS_SeqCompleted, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Запустим Steam...
-                    if (File.Exists(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName))) { Process.Start(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName)); }
+                    if (File.Exists(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName)))
+                    {
+                        Process.Start(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName));
+                    }
                 }
             }
         }
 
+        /// <summary>
+        /// "Form close" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmMainW_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                // Запрашиваем подтверждение у пользователя на закрытие формы...
-                e.Cancel = ((Properties.Settings.Default.ConfirmExit && !(MessageBox.Show(String.Format(AppStrings.FrmCloseQuery, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)) || (BW_BkUpRecv.IsBusy || BW_FPRecv.IsBusy || BW_HudInstall.IsBusy || BW_HUDList.IsBusy || BW_HUDScreen.IsBusy || BW_UpChk.IsBusy || BW_ClnList.IsBusy));
+                e.Cancel = (Properties.Settings.Default.ConfirmExit && !(MessageBox.Show(String.Format(AppStrings.FrmCloseQuery, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)) || (BW_BkUpRecv.IsBusy || BW_FPRecv.IsBusy || BW_HudInstall.IsBusy || BW_HUDList.IsBusy || BW_HUDScreen.IsBusy || BW_UpChk.IsBusy || BW_ClnList.IsBusy);
             }
         }
 
+        /// <summary>
+        /// "Game selected" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void AppSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                // Переключаем состояние некоторых контролов...
                 HandleControlsOnSelGame();
-                
-                // Проверим наличие запрещённых символов в пути...
                 CheckSymbolsGame();
-
-                // Распознаем файловую систему на диске с игрой...
                 DetectFS();
 
-                // Считаем настройки графики...
-                try { LoadGraphicSettings(); } catch (NotSupportedException) { MessageBox.Show(AppStrings.AppIncorrectSrcVersion, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                try
+                {
+                    LoadGraphicSettings();
+                }
+                catch (NotSupportedException)
+                {
+                    MessageBox.Show(AppStrings.AppIncorrectSrcVersion, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
-                // Получаем текущий SteamID...
                 HandleSteamIDs(Properties.Settings.Default.LastSteamID);
-
-                // Проверим, установлен ли FPS-конфиг...
                 HandleConfigs();
-
-                // Закроем открытые конфиги в редакторе...
-                if (!(String.IsNullOrEmpty(CFGFileName))) { CloseEditorConfigs(); }
-
-                // Считаем имеющиеся FPS-конфиги...
-                if (!BW_FPRecv.IsBusy) { BW_FPRecv.RunWorkerAsync(AppSelector.Text); }
-
-                // Обновляем статус...
+                CloseEditorConfigs();
+                HandleFpsConfigs();
                 UpdateStatusBar();
-
-                // Сохраним ID последней выбранной игры...
                 Properties.Settings.Default.LastGameName = AppSelector.Text;
-
-                // Переключаем вид страницы менеджера HUD...
                 HandleHUDMode(App.SourceGames[AppSelector.Text].IsHUDsAvailable);
-
-                // Считаем список доступных HUD для данной игры...
-                if (App.SourceGames[AppSelector.Text].IsHUDsAvailable) { if (!BW_HUDList.IsBusy) { BW_HUDList.RunWorkerAsync(AppSelector.Text); } }
-
-                // Считаем список бэкапов...
+                HandleHUDs();
                 UpdateBackUpList();
-
-                // Создадим каталоги кэшей для HUD...
-                if (App.SourceGames[AppSelector.Text].IsHUDsAvailable && !Directory.Exists(App.SourceGames[AppSelector.Text].AppHUDDir)) { Directory.CreateDirectory(App.SourceGames[AppSelector.Text].AppHUDDir); }
-
-                // Checking for available cleanup targets...
-                if (!BW_ClnList.IsBusy) { BW_ClnList.RunWorkerAsync(AppSelector.Text); }
+                HandleCleanupTargets();
             }
             catch (Exception Ex)
             {
@@ -1640,16 +1660,21 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Refresh game list" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void AppRefresh_Click(object sender, EventArgs e)
         {
-            // Попробуем обновить список игр...
             FindGames();
         }
 
         /// <summary>
-        /// Обработчик нажатия кнопки "Максимальное качество".
-        /// Устанавливает графические настройки на рекомендуемый максимум.
+        /// "Maximum quality" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void GT_Maximum_Graphics_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(AppStrings.GT_MaxPerfMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -1692,9 +1717,10 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Обработчик нажатия кнопки "Максимальная производительность".
-        /// Устанавливает графические настройки на рекомендуемый минимум.
+        /// "Maximum performance" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void GT_Maximum_Performance_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(AppStrings.GT_MinPerfMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -1737,65 +1763,61 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Обработчик нажатия кнопки сохранения графических настроек.
+        /// "Save video settings" button click event handler.
         /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void GT_SaveApply_Click(object sender, EventArgs e)
         {
-            // Сохраняем изменения в графических настройках...
             if (ValidateGameSettings())
             {
-                // Запрашиваем подтверждение у пользователя...
                 if (MessageBox.Show(AppStrings.GT_SaveMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    // Сохраняем настройки графики...
                     WriteGraphicSettings();
                 }
             }
             else
             {
-                // Пользователь заполнил не все поля. Сообщаем ему об этом...
                 MessageBox.Show(AppStrings.GT_NCFNReady, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
+        /// <summary>
+        /// "FPS-config selected" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FP_ConfigSel_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                // Выводим описание...
                 FP_Description.Text = App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].Description;
-
-                // Проверим совместимость конфига с игрой...
                 FP_Comp.Visible = !App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].CheckCompatibility(App.SourceGames[AppSelector.Text].GameInternalID);
-
-                // Включаем кнопку открытия конфига в Блокноте...
                 FP_OpenNotepad.Enabled = true;
-
-                // Включаем кнопку установки конфига...
                 FP_Install.Enabled = true;
             }
             catch (Exception Ex)
             {
-                // Не получилось загрузить описание выбранного конфига. Выведем стандартное сообщение...
                 Logger.Warn(Ex);
                 FP_Description.Text = AppStrings.FP_NoDescr;
             }
         }
 
+        /// <summary>
+        /// "Install FPS-config" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FP_Install_Click(object sender, EventArgs e)
         {
-            // Начинаем устанавливать FPS-конфиг в управляемое приложение...
             if (FP_ConfigSel.SelectedIndex != -1)
             {
                 if (MessageBox.Show(AppStrings.FP_InstallQuestion, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    // Проверим, не нужно ли создавать резервную копию...
                     if (Properties.Settings.Default.SafeCleanup)
                     {
-                        // Проверяем есть ли установленные конфиги...
                         if (App.SourceGames[AppSelector.Text].FPSConfigs.Count > 0)
                         {
-                            // Создаём резервную копию...
                             try
                             {
                                 FileManager.CompressFiles(App.SourceGames[AppSelector.Text].FPSConfigs, FileManager.GenerateBackUpFileName(App.SourceGames[AppSelector.Text].FullBackUpDirPath, Properties.Resources.BU_PrefixCfg));
@@ -1809,18 +1831,12 @@ namespace srcrepair.gui
 
                     try
                     {
-                        // Устанавливаем...
                         ConfigManager.InstallConfigNow(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].FileName, App.FullAppPath, App.SourceGames[AppSelector.Text].FullGamePath, App.SourceGames[AppSelector.Text].IsUsingUserDir, Properties.Settings.Default.UserCustDirName);
-                        
-                        // Выводим сообщение об успешной установке...
                         MessageBox.Show(AppStrings.FP_InstallSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        
-                        // Перечитаем конфиги...
                         HandleConfigs();
                     }
                     catch (Exception Ex)
                     {
-                        // Установка не удалась. Выводим сообщение об этом...
                         MessageBox.Show(AppStrings.FP_InstallFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         Logger.Error(Ex, DebugStrings.AppDbgExFpsInstall);
                     }
@@ -1828,22 +1844,22 @@ namespace srcrepair.gui
             }
             else
             {
-                // Пользователь не выбрал конфиг. Сообщим об этом...
                 MessageBox.Show(AppStrings.FP_NothingSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
+        /// <summary>
+        /// "Uninstall FPS-config" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FP_Uninstall_Click(object sender, EventArgs e)
         {
             try
             {
-                // Проверим есть ли кандидаты на удаление...
                 if (App.SourceGames[AppSelector.Text].FPSConfigs.Count > 0)
                 {
-                    // Удаляем конфиги...
                     GuiHelpers.FormShowCleanup(App.SourceGames[AppSelector.Text].FPSConfigs, ((Button)sender).Text.ToLower(), AppStrings.FP_RemoveSuccessful, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile, false, false, false, Properties.Settings.Default.SafeCleanup);
-
-                    // Перечитаем список конфигов...
                     HandleConfigs();
                 }
                 else
@@ -1858,20 +1874,20 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "FPS-config warning" icon click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void GT_Warning_Click(object sender, EventArgs e)
         {
             try
             {
-                // Предложим пользователю выбрать FPS-конфиг...
                 string ConfigFile = GuiHelpers.FormShowCfgSelect(App.SourceGames[AppSelector.Text].FPSConfigs);
 
-                // Проверим выбрал ли что-то пользователь в специальной форме...
-                if (!(String.IsNullOrWhiteSpace(ConfigFile)))
+                if (!String.IsNullOrWhiteSpace(ConfigFile))
                 {
-                    // Загрузим выбранный конфиг в Редактор конфигов...
                     ReadConfigFromFile(ConfigFile);
-
-                    // Переключимся на него...
                     MainTabControl.SelectedIndex = 1;
                 }
             }
@@ -1882,42 +1898,45 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "New config" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void CE_New_Click(object sender, EventArgs e)
         {
-            // Закрываем все открытые конфиги в Редакторе конфигов и создаём новый пустой файл...
             CloseEditorConfigs();
-
-            // Обновляем содержимое строки статуса...
             UpdateStatusBar();
         }
 
+        /// <summary>
+        /// "Open config" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void CE_Open_Click(object sender, EventArgs e)
         {
-            // Прочитаем конфиг и заполним его содержимым нашу таблицу редактора...
-            
-            // Указываем стартовый каталог в диалоге открытия файла на каталог с конфигами игры...
             CE_OpenCfgDialog.InitialDirectory = App.SourceGames[AppSelector.Text].FullCfgPath;
 
-            // Считывает файл конфига и помещает записи в таблицу
-            if (CE_OpenCfgDialog.ShowDialog() == DialogResult.OK) // Отображаем стандартный диалог открытия файла...
+            if (CE_OpenCfgDialog.ShowDialog() == DialogResult.OK)
             {
-                // Считываем...
                 ReadConfigFromFile(CE_OpenCfgDialog.FileName);
             }
         }
 
+        /// <summary>
+        /// "Save config" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void CE_Save_Click(object sender, EventArgs e)
         {
-            // Указываем путь по умолчанию к конфигам управляемого приложения...
             CE_SaveCfgDialog.InitialDirectory = App.SourceGames[AppSelector.Text].FullCfgPath;
 
-            // Проверяем, открыт ли какой-либо файл...
-            if (!(String.IsNullOrEmpty(CFGFileName)))
+            if (!String.IsNullOrEmpty(CFGFileName))
             {
-                // Будем бэкапить все файлы, сохраняемые в Редакторе...
                 if (Properties.Settings.Default.SafeCleanup)
                 {
-                    // Создаём резервную копию...
                     if (File.Exists(CFGFileName))
                     {
                         try
@@ -1931,7 +1950,6 @@ namespace srcrepair.gui
                     }
                 }
 
-                // Начинаем сохранение в тот же файл...
                 try
                 {
                     WriteTableToFileNow(CFGFileName);
@@ -1944,10 +1962,8 @@ namespace srcrepair.gui
             }
             else
             {
-                // Зададим стандартное имя (см. issue 21)...
                 CE_SaveCfgDialog.FileName = File.Exists(Path.Combine(App.SourceGames[AppSelector.Text].FullCfgPath, "autoexec.cfg")) ? AppStrings.UnnamedFileName : "autoexec.cfg";
 
-                // Файл не был открыт. Отображаем стандартный диалог сохранения файла...
                 if (CE_SaveCfgDialog.ShowDialog() == DialogResult.OK)
                 {
                     WriteTableToFileNow(CE_SaveCfgDialog.FileName);
@@ -1957,65 +1973,91 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Save config as" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void CE_SaveAs_Click(object sender, EventArgs e)
         {
-            // Сохраняем файл с другим, выбранным пользователем, именем...
             CE_SaveCfgDialog.InitialDirectory = App.SourceGames[AppSelector.Text].FullCfgPath;
 
-            // Отображаем стандартный диалог сохранения файла...
             if (CE_SaveCfgDialog.ShowDialog() == DialogResult.OK)
             {
                 WriteTableToFileNow(CE_SaveCfgDialog.FileName);
             }
         }
 
+        /// <summary>
+        /// "Clean custom maps" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void PS_RemCustMaps_Click(object sender, EventArgs e)
         {
-            // Удаляем кастомные (нестандартные) карты...
             StartCleanup("0", ((Button)sender).Text);
         }
 
+        /// <summary>
+        /// "Clean download cache" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void PS_RemDnlCache_Click(object sender, EventArgs e)
         {
-            // Удаляем кэш загрузок...
             StartCleanup("1", ((Button)sender).Text);
         }
 
+        /// <summary>
+        /// "Clean sound cache" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void PS_RemSoundCache_Click(object sender, EventArgs e)
         {
-            // Удаляем звуковой кэш...
             StartCleanup("2", ((Button)sender).Text);
         }
 
+        /// <summary>
+        /// "Clean screenshots" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void PS_RemScreenShots_Click(object sender, EventArgs e)
         {
-            // Удаляем все скриншоты...
             StartCleanup("3", ((Button)sender).Text);
         }
 
+        /// <summary>
+        /// "Clean recorded demos" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void PS_RemDemos_Click(object sender, EventArgs e)
         {
-            // Удаляем все записанные демки...
             StartCleanup("4", ((Button)sender).Text);
         }
 
+        /// <summary>
+        /// "Clean game configs" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void PS_RemGameOpts_Click(object sender, EventArgs e)
         {
-            // Создаём список файлов для удаления...
+            // Creating list with candidates...
             List<String> CleanDirs = new List<string>();
 
-            // Запрашиваем у пользователя подтверждение удаления...
+            // Asking for confirmation...
             if (MessageBox.Show(String.Format(AppStrings.AppQuestionTemplate, ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 try
                 {
-                    // Удаляем графические настройки...
+                    // Removing video settings...
                     if (!App.SourceGames[AppSelector.Text].IsUsingVideoFile)
                     {
-                        // Получаем полный путь к ветке реестра игры...
                         string GameRegKey = Type1Video.GetGameRegKey(App.SourceGames[AppSelector.Text].SmallAppName);
 
-                        // Создаём резервную копию куста реестра...
                         if (Properties.Settings.Default.SafeCleanup)
                         {
                             try
@@ -2025,12 +2067,10 @@ namespace srcrepair.gui
                             catch (Exception Ex) { Logger.Warn(Ex); }
                         }
 
-                        // Удаляем ключ HKEY_CURRENT_USER\Software\Valve\Source\tf\Settings из реестра...
                         Type1Video.RemoveRegKey(GameRegKey);
                     }
                     else
                     {
-                        // Создадим бэкап файла с графическими настройками...
                         if (Properties.Settings.Default.SafeCleanup)
                         {
                             try
@@ -2043,11 +2083,10 @@ namespace srcrepair.gui
                             }
                         }
 
-                        // Помечаем его на удаление...
                         CleanDirs.AddRange(App.SourceGames[AppSelector.Text].VideoCfgFiles);
                     }
 
-                    // Создаём резервную копию...
+                    // Creating backup...
                     if (Properties.Settings.Default.SafeCleanup)
                     {
                         try
@@ -2060,14 +2099,12 @@ namespace srcrepair.gui
                         }
                     }
 
-                    // Помечаем конфиги игры на удаление...
+                    // Adding configs to list...
                     CleanDirs.Add(Path.Combine(App.SourceGames[AppSelector.Text].FullCfgPath, "config.cfg"));
                     CleanDirs.AddRange(App.SourceGames[AppSelector.Text].CloudConfigs);
 
-                    // Удаляем всю очередь...
+                    // Removing all candidates...
                     GuiHelpers.FormShowRemoveFiles(CleanDirs);
-
-                    // Выводим сообщение...
                     MessageBox.Show(AppStrings.PS_CleanupSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception Ex)
@@ -2078,12 +2115,21 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Clean old binaries" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void PS_RemOldBin_Click(object sender, EventArgs e)
         {
-            // Удаляем старые бинарники...
             StartCleanup("5", ((Button)sender).Text);
         }
 
+        /// <summary>
+        /// "Verify integrity of game cache" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void PS_CheckCache_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(String.Format(AppStrings.AppQuestionTemplate, ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
@@ -2100,11 +2146,15 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Open Reporter" menu item click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MNUReportBuilder_Click(object sender, EventArgs e)
         {
             if ((AppSelector.Items.Count > 0) && (AppSelector.SelectedIndex != -1))
             {
-                // Запускаем форму создания отчёта для Техподдержки...
                 GuiHelpers.FormShowRepBuilder(App.AppUserDir, App.SteamClient.FullSteamPath, App.SourceGames[AppSelector.Text]);
             }
             else
@@ -2113,27 +2163,43 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Open Installer" menu item click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MNUInstaller_Click(object sender, EventArgs e)
         {
-            // Запускаем форму установщика спреев, демок и конфигов...
             GuiHelpers.FormShowInstaller(App.SourceGames[AppSelector.Text].FullGamePath, App.SourceGames[AppSelector.Text].IsUsingUserDir, App.SourceGames[AppSelector.Text].CustomInstallDir);
         }
 
+        /// <summary>
+        /// "Quit application" menu item click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MNUExit_Click(object sender, EventArgs e)
         {
-            // Завершаем работу программы...
             Environment.Exit(ReturnCodes.Success);
         }
 
+        /// <summary>
+        /// "About" menu item click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MNUAbout_Click(object sender, EventArgs e)
         {
-            // Отобразим форму "О программе"...
             GuiHelpers.FormShowAboutApp();
         }
 
+        /// <summary>
+        /// "Report bug" menu item click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MNUReportBug_Click(object sender, EventArgs e)
         {
-            // Перейдём в баг-трекер...
             try
             {
                 ProcessManager.OpenWebPage(Properties.Resources.AppBtURL);
@@ -2144,56 +2210,52 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Refresh backups" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void BUT_Refresh_Click(object sender, EventArgs e)
         {
-            // Обновим список резервных копий...
             UpdateBackUpList();
         }
 
+        /// <summary>
+        /// "Restore backup" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void BUT_RestoreB_Click(object sender, EventArgs e)
         {
-            // Восстановим выделенный бэкап...
             if (BU_LVTable.Items.Count > 0)
             {
                 if (BU_LVTable.SelectedItems.Count > 0)
                 {
-                    // Запрашиваем подтверждение...
                     if (MessageBox.Show(AppStrings.BU_QMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
-                        // Обходим выбранные бэкапы в цикле...
                         foreach (ListViewItem BU_Item in BU_LVTable.SelectedItems)
                         {
-                            // Проверяем что восстанавливать: конфиг или реестр...
                             switch (Path.GetExtension(BU_Item.SubItems[4].Text))
                             {
-                                case ".reg":
-                                    // Восстанавливаем файл реестра...
+                                case ".reg": // Registry file...
                                     try
                                     {
-                                        // Восстанавливаем...
                                         Process.Start("regedit.exe", String.Format("/s \"{0}\"", Path.Combine(App.SourceGames[AppSelector.Text].FullBackUpDirPath, BU_Item.SubItems[4].Text)));
                                     }
                                     catch (Exception Ex)
                                     {
-                                        // Произошло исключение...
                                         MessageBox.Show(AppStrings.BU_RestFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                         Logger.Error(Ex, DebugStrings.AppDbgExRegedit);
                                     }
                                     break;
-                                case ".bud":
-                                    // Распаковываем архив с выводом прогресса...
+                                case ".bud": // Standard archive...
                                     GuiHelpers.FormShowArchiveExtract(Path.Combine(App.SourceGames[AppSelector.Text].FullBackUpDirPath, BU_Item.SubItems[4].Text), Path.GetPathRoot(App.SourceGames[AppSelector.Text].FullGamePath));
-
-                                    // Обновляем список FPS-конфигов...
                                     HandleConfigs();
                                     break;
-                                default:
-                                    // Выводим сообщение о неизвестном формате резервной копии...
+                                default: // Unknown type...
                                     MessageBox.Show(AppStrings.BU_UnknownType, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     break;
                             }
-
-                            // Выводим сообщение об успехе...
                             MessageBox.Show(AppStrings.BU_RestSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
@@ -2209,35 +2271,32 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Delete backup" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void BUT_DelB_Click(object sender, EventArgs e)
         {
             if (BU_LVTable.Items.Count > 0)
             {
                 if (BU_LVTable.SelectedItems.Count > 0)
                 {
-                    // Запросим подтверждение...
                     if (MessageBox.Show(AppStrings.BU_DelMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
-                        // Обходим выбранные бэкапы в цикле...
                         foreach (ListViewItem BU_Item in BU_LVTable.SelectedItems)
                         {
                             try
                             {
-                                // Удаляем файл...
                                 File.Delete(Path.Combine(App.SourceGames[AppSelector.Text].FullBackUpDirPath, BU_Item.SubItems[4].Text));
-
-                                // Удаляем строку...
                                 BU_LVTable.Items.Remove(BU_Item);
                             }
                             catch (Exception Ex)
                             {
-                                // Произошло исключение при попытке удаления файла резервной копии...
                                 MessageBox.Show(AppStrings.BU_DelFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 Logger.Error(Ex, DebugStrings.AppDbgExBackupRem);
                             }
                         }
-
-                        // Показываем сообщение об успешном удалении...
                         MessageBox.Show(AppStrings.BU_DelSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
@@ -2252,27 +2311,33 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Create backup" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void BUT_CrBkupReg_ButtonClick(object sender, EventArgs e)
         {
-            // Отображаем выпадающее меню...
             BUT_CrBkupReg.ShowDropDown();
         }
 
+        /// <summary>
+        /// "Create game settings backup" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void BUT_L_GameSettings_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(AppStrings.BU_RegCreate, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                // Создадим резервную копию графических настроек игры...
                 try
                 {
                     if (!App.SourceGames[AppSelector.Text].IsUsingVideoFile)
                     {
-                        // Создаём конфиг ветки реестра...
                         Type1Video.BackUpVideoSettings(Type1Video.GetGameRegKey(App.SourceGames[AppSelector.Text].SmallAppName), "Game_Options", App.SourceGames[AppSelector.Text].FullBackUpDirPath);
                     }
                     else
                     {
-                        // Проверяем существование файла с графическими настройками игры...
                         try
                         {
                             FileManager.CreateConfigBackUp(App.SourceGames[AppSelector.Text].VideoCfgFiles, App.SourceGames[AppSelector.Text].FullBackUpDirPath, Properties.Resources.BU_PrefixVideo);
@@ -2282,50 +2347,47 @@ namespace srcrepair.gui
                             Logger.Warn(Ex, DebugStrings.AppDbgExBkGsAuto);
                         }
                     }
-                    
-                    // Выводим сообщение об успехе...
                     MessageBox.Show(AppStrings.BU_RegDone, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
-                    // Обновляем список резервных копий...
                     UpdateBackUpList();
                 }
                 catch (Exception Ex)
                 {
-                    // Выводим сообщение об ошибке и пишем в журнал отладки...
                     MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Logger.Error(Ex, DebugStrings.AppDbgExBkSg);
                 }
             }
         }
 
+        /// <summary>
+        /// "Create Steam registry settings backup" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void BUT_L_AllSteam_Click(object sender, EventArgs e)
         {
-            // Создадим резервную копию всех настроек Steam...
             if (MessageBox.Show(AppStrings.BU_RegCreate, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
-                    // Создаём...
                     Type1Video.CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve"), "Steam_BackUp", App.SourceGames[AppSelector.Text].FullBackUpDirPath);
-                    
-                    // Выводим сообщение...
                     MessageBox.Show(AppStrings.BU_RegDone, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
-                    // Обновим список бэкапов...
                     UpdateBackUpList();
                 }
                 catch (Exception Ex)
                 {
-                    // Произошло исключение, уведомим пользователя...
                     MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Logger.Error(Ex, DebugStrings.AppDbgExBkAllStm);
                 }
             }
         }
 
+        /// <summary>
+        /// "Create all Source games setting backup" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void BUT_L_AllSRC_Click(object sender, EventArgs e)
         {
-            // Созданим резервную копию графических настроек всех Source-игр...
             if (MessageBox.Show(AppStrings.BU_RegCreate, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
@@ -2342,18 +2404,42 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Current tab changed" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MainTabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Пользователь переключил вкладку. Обновляем содержимое строки статуса...
             UpdateStatusBar();
         }
 
+        /// <summary>
+        /// "Show Cvar description" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void CE_ShowHint_Click(object sender, EventArgs e)
         {
             try
             {
                 string Buf = CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[0].Value.ToString();
-                if (!String.IsNullOrEmpty(Buf)) { Buf = CvarFetcher.GetString(Buf); if (!String.IsNullOrEmpty(Buf)) { MessageBox.Show(Buf, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); } else { MessageBox.Show(AppStrings.CE_ClNoDescr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } } else { MessageBox.Show(AppStrings.CE_ClSelErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                if (!String.IsNullOrEmpty(Buf))
+                {
+                    Buf = CvarFetcher.GetString(Buf);
+                    if (!String.IsNullOrEmpty(Buf))
+                    {
+                        MessageBox.Show(Buf, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(AppStrings.CE_ClNoDescr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(AppStrings.CE_ClSelErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             catch
             {
@@ -2361,24 +2447,30 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Show help system" menu click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MNUHelp_Click(object sender, EventArgs e)
         {
-            // Сгенерируем путь к файлу CHM справочной системы...
             string CHMFile = Path.Combine(App.FullAppPath, "help", String.Format(Properties.Resources.AppHelpFileName, AppStrings.AppLangPrefix));
 
-            // Проверим существование файла справки...
             if (File.Exists(CHMFile))
             {
-                // Отобразим справочную систему в зависимости от контекста...
                 Help.ShowHelp(this, CHMFile, HelpNavigator.Topic, GetHelpWebPage(MainTabControl.SelectedIndex));
             }
             else
             {
-                // Скомпилированный файл справки не найден. Выводим сообщение об ошибке...
                 MessageBox.Show(AppStrings.AppHelpCHMNotFound, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
+        /// <summary>
+        /// "Add review" menu click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MNUOpinion_Click(object sender, EventArgs e)
         {
             try
@@ -2391,6 +2483,11 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Show Steam group" menu click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MNUSteamGroup_Click(object sender, EventArgs e)
         {
             try
@@ -2410,6 +2507,11 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Remove rows" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void CE_RmRow_Click(object sender, EventArgs e)
         {
             try
@@ -2419,31 +2521,68 @@ namespace srcrepair.gui
                     CE_Editor.Rows.Remove(CE_Editor.CurrentRow);
                 }
             }
-            catch (Exception Ex) { Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdRemRow); }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdRemRow);
+            }
         }
 
+        /// <summary>
+        /// "Copy selected rows" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void CE_Copy_Click(object sender, EventArgs e)
         {
             try
             {
                 StringBuilder SB = new StringBuilder();
-                foreach (DataGridViewCell DV in CE_Editor.SelectedCells) { if (DV.Value != null) { SB.AppendFormat("{0} ", DV.Value); } }
+                foreach (DataGridViewCell DV in CE_Editor.SelectedCells)
+                {
+                    if (DV.Value != null)
+                    {
+                        SB.AppendFormat("{0} ", DV.Value);
+                    }
+                }
                 Clipboard.SetText(SB.ToString().Trim());
             }
-            catch (Exception Ex) { Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdCopy); }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdCopy);
+            }
         }
 
+        /// <summary>
+        /// "Cut selected rows" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void CE_Cut_Click(object sender, EventArgs e)
         {
             try
             {
                 StringBuilder SB = new StringBuilder();
-                foreach (DataGridViewCell DV in CE_Editor.SelectedCells) { if (DV.Value != null) { SB.AppendFormat("{0} ", DV.Value); DV.Value = null; } }
+                foreach (DataGridViewCell DV in CE_Editor.SelectedCells)
+                {
+                    if (DV.Value != null)
+                    {
+                        SB.AppendFormat("{0} ", DV.Value);
+                        DV.Value = null;
+                    }
+                }
                 Clipboard.SetText(SB.ToString().Trim());
             }
-            catch (Exception Ex) { Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdCut); }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdCut);
+            }
         }
 
+        /// <summary>
+        /// "Paste from clipboard" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void CE_Paste_Click(object sender, EventArgs e)
         {
             try
@@ -2453,26 +2592,28 @@ namespace srcrepair.gui
                     CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value = Clipboard.GetText();
                 }
             }
-            catch (Exception Ex) { Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdPaste); }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdPaste);
+            }
         }
 
+        /// <summary>
+        /// "Load FPS-config to editor" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FP_OpenNotepad_Click(object sender, EventArgs e)
         {
-            // Сгенерируем путь к файлу...
             string ConfigFile = Path.Combine(App.FullAppPath, "cfgs", App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].FileName);
             
-            // Проверим зажал ли пользователь Shift перед тем, как кликнуть по кнопке...
             if (Control.ModifierKeys == Keys.Shift)
             {
-                // Загрузим выбранный конфиг в Редактор конфигов...
                 ReadConfigFromFile(ConfigFile);
-
-                // Переключимся на него...
                 MainTabControl.SelectedIndex = 1;
             }
             else
             {
-                // Загрузим файл в Блокноте...
                 try
                 {
                     ProcessManager.OpenTextEditor(ConfigFile, Properties.Settings.Default.EditorBin, App.Platform.OS);
@@ -2484,18 +2625,24 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Open Updater" menu item click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MNUUpdateCheck_Click(object sender, EventArgs e)
         {
-            // Откроем форму модуля проверки обновлений...
             GuiHelpers.FormShowUpdater(App.UserAgent, App.FullAppPath, App.AppUserDir, App.Platform);
-            
-            // Перечитаем базу игр...
             FindGames();
         }
 
+        /// <summary>
+        /// "Load backup in text editor" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void BUT_OpenNpad_Click(object sender, EventArgs e)
         {
-            // Откроем выбранный бэкап в Блокноте Windows...
             if (BU_LVTable.Items.Count > 0)
             {
                 if (BU_LVTable.SelectedItems.Count > 0)
@@ -2527,26 +2674,39 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Open Settings" menu item click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MNUAppOptions_Click(object sender, EventArgs e)
         {
-            // Показываем форму настроек...
             GuiHelpers.FormShowOptions();
         }
 
+        /// <summary>
+        /// "Config editor table resized" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void BU_LVTable_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
         {
-            // Запрещаем изменение размеров столбцов таблицы...
+            // Blocking resizing...
             e.NewWidth = BU_LVTable.Columns[e.ColumnIndex].Width;
             e.Cancel = true;
         }
 
+        /// <summary>
+        /// "Show selected backup file in shell" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void BUT_ExploreBUp_Click(object sender, EventArgs e)
         {
             if (BU_LVTable.Items.Count > 0)
             {
                 if (BU_LVTable.SelectedItems.Count > 0)
                 {
-                    // Откроем выбранный бэкап в Проводнике Windows...
                     try
                     {
                         ProcessManager.OpenExplorer(Path.Combine(App.SourceGames[AppSelector.Text].FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text), App.Platform.OS);
@@ -2567,21 +2727,35 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Form closed" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void FrmMainW_FormClosed(object sender, FormClosedEventArgs e)
         {
-            // Форма была закрыта, сохраняем настройки приложения...
+            // Saving application settings...
             Properties.Settings.Default.Save();
         }
 
+        /// <summary>
+        /// "Open Keyboard buttons disabler" menu item click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MNUWinMnuDisabler_Click(object sender, EventArgs e)
         {
-            // Показываем модуля отключения клавиш...
             GuiHelpers.FormShowKBHelper();
         }
 
+        /// <summary>
+        /// "Load config in text editor" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void CE_OpenInNotepad_Click(object sender, EventArgs e)
         {
-            if (!(String.IsNullOrEmpty(CFGFileName)))
+            if (!String.IsNullOrEmpty(CFGFileName))
             {
                 try
                 {
@@ -2598,49 +2772,88 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Restricted symbols in Steam path detector" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void PS_PathDetector_Click(object sender, EventArgs e)
         {
-            if (((Label)sender).ForeColor == Color.Red) { MessageBox.Show(AppStrings.SteamNonASCIIDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } else { MessageBox.Show(AppStrings.SteamNonASCIINotDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            if (((Label)sender).ForeColor == Color.Red)
+            {
+                MessageBox.Show(AppStrings.SteamNonASCIIDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show(AppStrings.SteamNonASCIINotDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
+        /// <summary>
+        /// "Restricted symbols in game path detector" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void PS_PathGame_Click(object sender, EventArgs e)
         {
             if (((Label)sender).ForeColor == Color.Red) { MessageBox.Show(AppStrings.GameNonASCIIDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); } else { MessageBox.Show(AppStrings.GameNonASCIINotDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); }
         }
 
+        /// <summary>
+        /// "Clean saved replays" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void PS_RemReplays_Click(object sender, EventArgs e)
         {
-            // Удаляем все реплеи...
             StartCleanup("6", ((Button)sender).Text);
         }
 
+        /// <summary>
+        /// "Clean custom models and textures" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void PS_RemTextures_Click(object sender, EventArgs e)
         {
-            // Удаляем все кастомные текстуры...
             StartCleanup("7", ((Button)sender).Text);
         }
 
+        /// <summary>
+        /// "Clean secondary cache contents" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void PS_RemSecndCache_Click(object sender, EventArgs e)
         {
-            // Удаляем содержимое вторичного кэша загрузок...
             StartCleanup("8", ((Button)sender).Text);
         }
 
+        /// <summary>
+        /// "Safe Clean status" icon click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void SB_App_DoubleClick(object sender, EventArgs e)
         {
-            // Переключим статус безопасной очистки...
+            // Changing Safe Clean status...
             Properties.Settings.Default.SafeCleanup = !Properties.Settings.Default.SafeCleanup;
             
-            // Сообщим пользователю если он отключил безопасную очистку...
+            // Showing message about consequences of disabling...
             if (!Properties.Settings.Default.SafeCleanup)
             {
                 MessageBox.Show(AppStrings.AppSafeClnDisabled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
-            // Обновим статусную строку...
+            // Updating status bar...
             CheckSafeClnStatus();
         }
 
+        /// <summary>
+        /// "Open list of console variables" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void CE_OpenCVList_Click(object sender, EventArgs e)
         {
             try
@@ -2653,6 +2866,11 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Create backup of current config" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void CE_ManualBackUpCfg_Click(object sender, EventArgs e)
         {
             if (!(String.IsNullOrEmpty(CFGFileName)))
@@ -2676,21 +2894,33 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Clean custom sounds" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void PS_RemSounds_Click(object sender, EventArgs e)
         {
-            // Удаляем кастомные звуки...
             StartCleanup("9", ((Button)sender).Text);
         }
 
+        /// <summary>
+        /// "Clean custom directory contents" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void PS_RemCustDir_Click(object sender, EventArgs e)
         {
-            // Удаляем пользовательного каталога...
             StartCleanup("10", ((Button)sender).Text);
         }
 
+        /// <summary>
+        /// "Execute deep cleanup" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void PS_DeepCleanup_Click(object sender, EventArgs e)
         {
-            // Проведём глубокую очистку...
             List<String> CleanDirs = new List<String>(App.SourceGames[AppSelector.Text].CloudConfigs);
             if (App.SourceGames[AppSelector.Text].IsUsingVideoFile)
             {
@@ -2699,79 +2929,103 @@ namespace srcrepair.gui
             StartCleanup("11", ((Button)sender).Text, CleanDirs);
         }
 
+        /// <summary>
+        /// "Clean game configs" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void PS_RemConfigs_Click(object sender, EventArgs e)
         {
-            // Удаляем пользовательного каталога...
             StartCleanup("12", ((Button)sender).Text, App.SourceGames[AppSelector.Text].CloudConfigs);
         }
 
+        /// <summary>
+        /// "Selected HUD changed" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void HD_HSel_SelectedIndexChanged(object sender, EventArgs e)
         {                
-            // Проверяем результат...
+            // Checking result...
             bool Success = !String.IsNullOrEmpty(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].Name);
 
-            // Переключаем статус элементов управления...
+            // Changing some controls state...
             HD_GB_Pbx.Image = Properties.Resources.LoadingFile;
             HD_Install.Enabled = Success;
             HD_Homepage.Enabled = Success;
             HD_Warning.Visible = Success && !App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].IsUpdated;
 
-            // Выводим информацию о последнем обновлении HUD...
+            // Adding information about last update...
             HD_LastUpdate.Visible = Success;
-            if (Success) { HD_LastUpdate.Text = String.Format(AppStrings.HD_LastUpdateInfo, FileManager.Unix2DateTime(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LastUpdate).ToLocalTime()); }
+            if (Success)
+            {
+                HD_LastUpdate.Text = String.Format(AppStrings.HD_LastUpdateInfo, FileManager.Unix2DateTime(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LastUpdate).ToLocalTime());
+            }
 
-            // Проверяем установлен ли выбранный HUD...
+            // Checking if selected HUD is installed...
             SetHUDButtons(HUDManager.CheckInstalledHUD(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir));
 
-            // Загрузим скриншот выбранного HUD...
-            if (Success && !BW_HUDScreen.IsBusy) { BW_HUDScreen.RunWorkerAsync(argument: new List<String> { AppSelector.Text, HD_HSel.Text }); }
+            // Downloading screenshot...
+            if (Success && !BW_HUDScreen.IsBusy)
+            {
+                BW_HUDScreen.RunWorkerAsync(argument: new List<String> { AppSelector.Text, HD_HSel.Text });
+            }
         }
 
+        /// <summary>
+        /// "Install selected HUD" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void HD_Install_Click(object sender, EventArgs e)
         {
             if (!HUDManager.CheckHUDDatabase(Properties.Settings.Default.LastHUDTime))
             {
-                // Проверим поддерживает ли выбранный HUD последнюю версию игры...
                 if (App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].IsUpdated)
                 {
-                    // Спросим пользователя о необходимости установки/обновления HUD...
                     if (MessageBox.Show(String.Format("{0}?", ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
-                        // Начинаем загрузку архива с HUD...
+                        // Downloading HUD archive...
                         GuiHelpers.FormShowDownloader(Properties.Settings.Default.HUDUseUpstream ? App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].UpURI : App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].URI, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LocalFile);
 
-                        // Проверяем существует ли файл с архивом...
+                        // Checking if downloaded archive exists...
                         if (File.Exists(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LocalFile))
                         {
-                            // Проверяем контрольную сумму загруженного архива...
+                            // Checking hash of downloaded file...
                             if (Properties.Settings.Default.HUDUseUpstream || FileManager.CalculateFileMD5(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LocalFile) == App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].FileHash)
                             {
-                                // Проверим установлен ли выбранный HUD...
+                                // Checking if selected HUD is installed...
                                 if (HUDManager.CheckInstalledHUD(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir))
                                 {
-                                    // Удаляем уже установленные файлы HUD...
+                                    // Removing installed files...
                                     GuiHelpers.FormShowRemoveFiles(SingleToArray(Path.Combine(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir)));
                                 }
 
-                                // Распаковываем загруженный архив с файлами HUD...
+                                // Extracting downloaded archove...
                                 GuiHelpers.FormShowArchiveExtract(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LocalFile, Path.Combine(App.SourceGames[AppSelector.Text].CustomInstallDir, "hudtemp"));
 
-                                // Запускаем установку пакета в отдельном потоке...
+                                // Installing files in a separate thread...
                                 ((Button)sender).Enabled = false;
-                                if (!BW_HudInstall.IsBusy) { BW_HudInstall.RunWorkerAsync(argument: new List<String> { AppSelector.Text, HD_HSel.Text }); }
+                                if (!BW_HudInstall.IsBusy)
+                                {
+                                    BW_HudInstall.RunWorkerAsync(argument: new List<String> { AppSelector.Text, HD_HSel.Text });
+                                }
                             }
                             else
                             {
-                                // Проверка хеша загруженного файла не удалась. Выведем сообщение об этом...
+                                // Hash missmatch. Show error...
                                 MessageBox.Show(AppStrings.HD_HashError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
 
-                            // Удаляем загруженный файл архива...
+                            // Removing downloaded file...
                             try
                             {
                                 File.Delete(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LocalFile);
                             }
-                            catch (Exception Ex) { Logger.Warn(Ex, DebugStrings.AppDbgExHudArchRem); }
+                            catch (Exception Ex)
+                            {
+                                Logger.Warn(Ex, DebugStrings.AppDbgExHudArchRem);
+                            }
                         }
                         else
                         {
@@ -2781,42 +3035,55 @@ namespace srcrepair.gui
                 }
                 else
                 {
-                    // Выбран устаревший HUD. Выведем сообщение об этом...
                     MessageBox.Show(AppStrings.HD_Outdated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                // База HUD устарела. Требуется обновление. Выведем сообщение...
                 MessageBox.Show(AppStrings.HD_DbOutdated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
+        /// <summary>
+        /// "Uninstall selected HUD" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void HD_Uninstall_Click(object sender, EventArgs e)
         {
-            // Спросим пользователя о необходимости удаления HUD...
             if (MessageBox.Show(String.Format("{0}?", ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                // Сгенерируем полный путь к установленному HUD...
+                // Generating full path...
                 string HUDPath = Path.Combine(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir);
 
-                // Воспользуемся модулем быстрой очистки для удаления выбранного HUD...
+                // Removing HUD files...
                 GuiHelpers.FormShowRemoveFiles(SingleToArray(HUDPath));
 
-                // Проверяем установлен ли выбранный HUD...
+                // Checking if HUD installed...
                 bool IsInstalled = HUDManager.CheckInstalledHUD(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir);
 
-                // При успешном удалении HUD выводим сообщение и сносим и его каталог...
-                if (!IsInstalled) { MessageBox.Show(AppStrings.PS_CleanupSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information); if (Directory.Exists(HUDPath)) { Directory.Delete(HUDPath); } }
+                // Showing message and removing empty directory...
+                if (!IsInstalled)
+                {
+                    MessageBox.Show(AppStrings.PS_CleanupSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (Directory.Exists(HUDPath))
+                    {
+                        Directory.Delete(HUDPath);
+                    }
+                }
 
-                // Включаем / отключаем кнопки...
+                // Changing the state of some controls...
                 SetHUDButtons(IsInstalled);
             }
         }
 
+        /// <summary>
+        /// "Visit HUD's homepage" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void HD_Homepage_Click(object sender, EventArgs e)
         {
-            // Откроем домашнюю страницу выбранного HUD...
             if (!String.IsNullOrEmpty(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].Site))
             {
                 try
@@ -2830,9 +3097,13 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Clean downloaded by application files" menu item click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MNUExtClnAppCache_Click(object sender, EventArgs e)
         {
-            // Очистим загруженные приложением файлы...
             List<String> CleanDirs = new List<string>
             {
                 Path.Combine(App.AppUserDir, StringsManager.HudDirectoryName, "*.*")
@@ -2840,9 +3111,13 @@ namespace srcrepair.gui
             GuiHelpers.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
         }
 
+        /// <summary>
+        /// "Clean system temporary files" menu item click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MNUExtClnTmpDir_Click(object sender, EventArgs e)
         {
-            // Очистим каталоги с временными файлами системы...
             List<String> CleanDirs = new List<string>
             {
                 Path.Combine(Path.GetTempPath(), "*.*")
@@ -2850,22 +3125,44 @@ namespace srcrepair.gui
             GuiHelpers.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
         }
 
+        /// <summary>
+        /// "Show Log viewer" menu item click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MNUShowLog_Click(object sender, EventArgs e)
         {
-            // Выведем на экран содержимое отладочного журнала...
             string DFile = CurrentApp.LogFileName;
-            if (File.Exists(DFile)) { GuiHelpers.FormShowLogViewer(DFile); } else { MessageBox.Show(AppStrings.AppNoDebugFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            if (File.Exists(DFile))
+            {
+                GuiHelpers.FormShowLogViewer(DFile);
+            }
+            else
+            {
+                MessageBox.Show(AppStrings.AppNoDebugFile, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
+        /// <summary>
+        /// "Outdated HUD warning" icon click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void HD_Warning_Click(object sender, EventArgs e)
         {
-            // Выведем предупреждающие сообщения...
-            if (!App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].IsUpdated) { MessageBox.Show(AppStrings.HD_NotTested, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            if (!App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].IsUpdated)
+            {
+                MessageBox.Show(AppStrings.HD_NotTested, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
+        /// <summary>
+        /// "Show HUD files in shell" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void HD_OpenDir_Click(object sender, EventArgs e)
         {
-            // Покажем файлы установленного HUD в Проводнике...
             try
             {
                 ProcessManager.OpenExplorer(Path.Combine(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir), App.Platform.OS);
@@ -2876,36 +3173,58 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// "Open Steam cache cleaner" menu item click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MNUExtClnSteam_Click(object sender, EventArgs e)
         {
-            // Запустим модуль очистки кэшей Steam...
             GuiHelpers.FormShowStmCleaner(App.SteamClient.FullSteamPath, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.Platform.SteamAppsFolderName, App.Platform.SteamProcName);
         }
 
+        /// <summary>
+        /// "Open Muted players manager" menu item click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void MNUMuteMan_Click(object sender, EventArgs e)
         {
-            // Запустим менеджер управления отключёнными игроками...
             GuiHelpers.FormShowMuteManager(App.SourceGames[AppSelector.Text].GetActualBanlistFile(), App.SourceGames[AppSelector.Text].FullBackUpDirPath);
         }
 
+        /// <summary>
+        /// "Current Steam UserID" status bar click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void SB_SteamID_Click(object sender, EventArgs e)
         {
-            // Открываем диалог выбора SteamID и прописываем пользовательский выбор...
             try
             {
                 string Result = GuiHelpers.FormShowIDSelect(App.SteamClient.SteamIDs);
+
                 if (!String.IsNullOrWhiteSpace(Result))
                 {
                     SB_SteamID.Text = Result;
                     Properties.Settings.Default.LastSteamID = Result;
                     FindGames();
                 }
-            } catch (Exception Ex) { Logger.Warn(Ex, DebugStrings.AppDbgExUserIdSel); }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExUserIdSel);
+            }
         }
 
+        /// <summary>
+        /// "Backup file selected" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
         private void BU_LVTable_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Блокируем некоторые кнопки на панели инструментов модуля управления резервными копиями если выбрано более одной...
+            // Blocking some buttons if user selected more than one backup file...
             bool IsSingle = BU_LVTable.SelectedItems.Count <= 1;
             BUT_OpenNpad.Enabled = IsSingle;
             BUT_ExploreBUp.Enabled = IsSingle;
