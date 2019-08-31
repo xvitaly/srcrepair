@@ -21,6 +21,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -47,13 +48,9 @@ namespace srcrepair.gui
         {
             // Initializing controls...
             InitializeComponent();
-            
+
             // Importing settings from previous versions (if any)...
-            if (Properties.Settings.Default.CallUpgrade)
-            {
-                Properties.Settings.Default.Upgrade();
-                Properties.Settings.Default.CallUpgrade = false;
-            }
+            ImportSettings();
         }
 
         #region HiDPI hacks
@@ -106,6 +103,25 @@ namespace srcrepair.gui
 
         #region Internal Methods
 
+        /// <summary>
+        /// Imports settings from previous versions of application.
+        /// </summary>
+        private void ImportSettings()
+        {
+            try
+            {
+                if (Properties.Settings.Default.CallUpgrade)
+                {
+                    Properties.Settings.Default.Upgrade();
+                    Properties.Settings.Default.CallUpgrade = false;
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExSettingsLoad);
+            }
+        }
+        
         /// <summary>
         /// Saves contents of Config Editor to a text file. Used by Save
         /// and Save As operations.
