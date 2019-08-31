@@ -279,6 +279,9 @@
   <data name="AppDbgExSelGame" xml:space="preserve">
     <value>Exception while handling selected game by user or application.</value>
   </data>
+  <data name="AppDbgExSettingsLoad" xml:space="preserve">
+    <value>Failed to import settings from previous version.</value>
+  </data>
   <data name="AppDbgExSteamPath" xml:space="preserve">
     <value>Exception while trying to get Steam path. Application will be terminated.</value>
   </data>

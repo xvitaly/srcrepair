@@ -547,6 +547,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to import settings from previous version..
+        /// </summary>
+        internal static string AppDbgExSettingsLoad {
+            get {
+                return ResourceManager.GetString("AppDbgExSettingsLoad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to get Steam path. Application will be terminated..
         /// </summary>
         internal static string AppDbgExSteamPath {
