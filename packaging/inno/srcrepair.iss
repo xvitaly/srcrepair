@@ -41,7 +41,7 @@ AllowNoIcons=yes
 LicenseFile=..\..\COPYING
 OutputDir=..\results
 #ifdef _RELEASE
-OutputBaseFilename=srcrepair_340_final
+OutputBaseFilename=srcrepair_350_final
 #else
 OutputBaseFilename=snapshot_{#CI_COMMIT}
 #endif
