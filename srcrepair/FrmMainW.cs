@@ -2456,8 +2456,9 @@ namespace srcrepair.gui
                     MessageBox.Show(AppStrings.CE_ClSelErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            catch
+            catch (Exception Ex)
             {
+                Logger.Warn(Ex, DebugStrings.AppDbgExCvarDescFetchFailure);
                 MessageBox.Show(AppStrings.CE_ClSelErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
