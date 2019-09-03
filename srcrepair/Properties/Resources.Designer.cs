@@ -236,7 +236,7 @@ namespace srcrepair.gui.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to srcrepair.CVList.
+        ///   Looks up a localized string similar to srcrepair.gui.CVList.
         /// </summary>
         internal static string CE_CVResDf {
             get {
