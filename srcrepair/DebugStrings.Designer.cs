@@ -286,6 +286,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while fetching Cvar description from a separate resource file..
+        /// </summary>
+        internal static string AppDbgExCvarDescFetchFailure {
+            get {
+                return ResourceManager.GetString("AppDbgExCvarDescFetchFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception during FPS config installation..
         /// </summary>
         internal static string AppDbgExFpsInstall {
