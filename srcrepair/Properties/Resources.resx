@@ -269,7 +269,7 @@
     <value>..\Resources\upd_nx.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PI_TemplateFile" xml:space="preserve">
-    <value>srcrepair.Resources.VtTemplate.txt</value>
+    <value>srcrepair.gui.Resources.VtTemplate.txt</value>
   </data>
   <data name="VtTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\VtTemplate.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>

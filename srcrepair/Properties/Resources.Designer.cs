@@ -511,7 +511,7 @@ namespace srcrepair.gui.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to srcrepair.Resources.VtTemplate.txt.
+        ///   Looks up a localized string similar to srcrepair.gui.Resources.VtTemplate.txt.
         /// </summary>
         internal static string PI_TemplateFile {
             get {
