@@ -38,5 +38,10 @@ namespace srcrepair.core
         {
             return Assembly.GetCallingAssembly().GetName().Version == Assembly.GetExecutingAssembly().GetName().Version;
         }
+
+        public static bool CheckLibraryVersion(string RequiredVersion)
+        {
+            return Assembly.GetCallingAssembly().GetName().Version == new Version(RequiredVersion);
+        }
     }
 }
