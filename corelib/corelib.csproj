@@ -74,6 +74,7 @@
     <Compile Include="IType1Video.cs" />
     <Compile Include="IType2Settings.cs" />
     <Compile Include="IType2Video.cs" />
+    <Compile Include="LibraryManager.cs" />
     <Compile Include="ProcessManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
