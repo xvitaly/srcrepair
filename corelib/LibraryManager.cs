@@ -21,6 +21,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,5 +29,14 @@ namespace srcrepair.core
 {
     public static class LibraryManager
     {
+        public static bool CheckABIVersion(string RequiredVersion)
+        {
+            return RequiredVersion == Properties.Resources.LibABIVersion;
+        }
+
+        public static bool CheckLibraryVersion()
+        {
+            return Assembly.GetCallingAssembly().GetName().Version == Assembly.GetExecutingAssembly().GetName().Version;
+        }
     }
 }
