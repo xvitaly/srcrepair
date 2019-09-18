@@ -4,25 +4,30 @@
         <Version>35.0.1.7102</Version>
         <URL>https://www.easycoding.org/files/srcrepair_latest.exe</URL>
         <Hash>6371ce1b13cf68b92af178c1c9156ceb</Hash>
+        <Hash2>16fbac229cc00cdbb08bc752c3c2136e5e807274638866bed1937ab3da3b050fd092fd6a1b1199cd18345300cbc126133e697d884fae85066ebd7119dd743cfd</Hash2>
     </Application>
     <GameDB>
         <Version>master</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/games.xml</URL>
         <Hash>6b7a16c95d32a5a2ceea17288f4b309f</Hash>
+        <Hash2>92835dc5e64f3df834b2979743e640d212ebcdf17f8b71dd9fab036609b0a6fa859e69dfa35203cf89bdc84cd5f0fd17f18684380427623c552cbea1a1ba7756</Hash2>
     </GameDB>
     <HUDDB>
         <Version>master</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/huds.xml</URL>
-        <Hash>e39d44283b4281d5cbad5ed0ec715b53</Hash>
+        <Hash>e0b526e26696c812f0294b70edf6d409</Hash>
+        <Hash2>d9b75dd6189371e4adfef02e0ebc74915421760fcf15bd4ba1581a87955b90744c7d3e37a221b9bae604c18f4130581c8bea18154fffbe1e0299c69654beeb03</Hash2>
     </HUDDB>
     <CfgDB>
         <Version>master</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/configs.xml</URL>
         <Hash>3f33b5610cf84fa59b9004a6d6c9719c</Hash>
+        <Hash2>a3e41c39845fc39612099281278bcbf84d0d2298f1bdf2e88874a0bfc1bcc2b3ed2f97a6c4faf7a73676bd645c078c727ecbde753a2437804d9ee8bc4fdc76ee</Hash2>
     </CfgDB>
     <ClnDB>
         <Version>master</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/cleanup.xml</URL>
         <Hash>8e722efe41939ada655f117287c8503d</Hash>
+        <Hash2>35774188313bb40483abd8c00e1a4b785f3996877fd8313a77d0a3d1b15efb9daa4528101943292cd3483080ec131abcdf9c8c4776005331c30da9d4abad4384</Hash2>
     </ClnDB>
 </Updates>
