@@ -68,6 +68,16 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Extracts string from array of bytes.
+        /// </summary>
+        /// <param name="Source">Source array.</param>
+        /// <returns>Result string.</returns>
+        private static string ConvertBytesToString(byte[] Source)
+        {
+            return BitConverter.ToString(Source).Replace("-", String.Empty).ToLowerInvariant();
+        }
+
+        /// <summary>
         /// Calculates MD5 hash of specified file.
         /// </summary>
         /// <param name="FileName">Full path to source file.</param>
@@ -78,7 +88,23 @@ namespace srcrepair.core
             {
                 using (FileStream SourceStream = File.OpenRead(FileName))
                 {
-                    return BitConverter.ToString(MD5Crypt.ComputeHash(SourceStream)).Replace("-", "").ToLowerInvariant();
+                    return ConvertBytesToString(MD5Crypt.ComputeHash(SourceStream));
+                }
+            }
+        }
+
+        /// <summary>
+        /// Calculates SHA-512 hash of specified file.
+        /// </summary>
+        /// <param name="FileName">Full path to source file.</param>
+        /// <returns>Returns SHA-512 hash of specified file.</returns>
+        public static string CalculateFileSHA512(string FileName)
+        {
+            using (SHA512 SHA512Crypt = SHA512.Create())
+            {
+                using (FileStream SourceStream = File.OpenRead(FileName))
+                {
+                    return ConvertBytesToString(SHA512Crypt.ComputeHash(SourceStream));
                 }
             }
         }
