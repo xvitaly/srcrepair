@@ -71,19 +71,16 @@ namespace srcrepair.core
         /// Calculates MD5 hash of specified file.
         /// </summary>
         /// <param name="FileName">Full path to source file.</param>
+        /// <returns>Returns MD5 hash of specified file.</returns>
         public static string CalculateFileMD5(string FileName)
         {
-            byte[] RValue;
-            using (FileStream FileP = new FileStream(FileName, FileMode.Open))
+            using (MD5 MD5Crypt = MD5.Create())
             {
-                using (MD5 MD5Crypt = new MD5CryptoServiceProvider())
+                using (FileStream SourceStream = File.OpenRead(FileName))
                 {
-                    RValue = MD5Crypt.ComputeHash(FileP);
+                    return BitConverter.ToString(MD5Crypt.ComputeHash(SourceStream)).Replace("-", "").ToLowerInvariant();
                 }
             }
-            StringBuilder StrRes = new StringBuilder();
-            for (int i = 0; i < RValue.Length; i++) { StrRes.Append(RValue[i].ToString("x2")); }
-            return StrRes.ToString();
         }
 
         /// <summary>
