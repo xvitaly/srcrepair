@@ -129,27 +129,27 @@ namespace srcrepair.core
             XmlNode AppNode = XMLD.SelectSingleNode("Updates/Application");
             AppUpdateVersion = new Version(AppNode.SelectSingleNode("Version").InnerText);
             AppUpdateURL = AppNode.SelectSingleNode("URL").InnerText;
-            AppUpdateHash = AppNode.SelectSingleNode("Hash").InnerText;
+            AppUpdateHash = AppNode.SelectSingleNode("Hash2").InnerText;
 
             // Extracting information about game database update...
             XmlNode GameDbNode = XMLD.SelectSingleNode("Updates/GameDB");
             GameUpdateURL = GameDbNode.SelectSingleNode("URL").InnerText;
-            GameUpdateHash = GameDbNode.SelectSingleNode("Hash").InnerText;
+            GameUpdateHash = GameDbNode.SelectSingleNode("Hash2").InnerText;
 
             // Extracting information about hud database update...
             XmlNode HudDbNode = XMLD.SelectSingleNode("Updates/HUDDB");
             HUDUpdateURL = HudDbNode.SelectSingleNode("URL").InnerText;
-            HUDUpdateHash = HudDbNode.SelectSingleNode("Hash").InnerText;
+            HUDUpdateHash = HudDbNode.SelectSingleNode("Hash2").InnerText;
 
             // Extracting information about config database update...
             XmlNode CfgDbNode = XMLD.SelectSingleNode("Updates/CfgDB");
             CfgUpdateURL = CfgDbNode.SelectSingleNode("URL").InnerText;
-            CfgUpdateHash = CfgDbNode.SelectSingleNode("Hash").InnerText;
+            CfgUpdateHash = CfgDbNode.SelectSingleNode("Hash2").InnerText;
 
             // Extracting information about cleanup targets database update...
             XmlNode ClnDbNode = XMLD.SelectSingleNode("Updates/ClnDB");
             ClnUpdateURL = ClnDbNode.SelectSingleNode("URL").InnerText;
-            ClnUpdateHash = ClnDbNode.SelectSingleNode("Hash").InnerText;
+            ClnUpdateHash = ClnDbNode.SelectSingleNode("Hash2").InnerText;
         }
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace srcrepair.core
         /// <returns>Returns True if game database update available.</returns>
         public bool CheckGameDBUpdate()
         {
-            return FileManager.CalculateFileMD5(Path.Combine(FullAppPath, StringsManager.GameDatabaseName)) != GameUpdateHash;
+            return FileManager.CalculateFileSHA512(Path.Combine(FullAppPath, StringsManager.GameDatabaseName)) != GameUpdateHash;
         }
 
         /// <summary>
@@ -186,7 +186,7 @@ namespace srcrepair.core
         /// <returns>Returns True if HUD database update available.</returns>
         public bool CheckHUDUpdate()
         {
-            return FileManager.CalculateFileMD5(Path.Combine(FullAppPath, StringsManager.HudDatabaseName)) != HUDUpdateHash;
+            return FileManager.CalculateFileSHA512(Path.Combine(FullAppPath, StringsManager.HudDatabaseName)) != HUDUpdateHash;
         }
 
         /// <summary>
@@ -195,7 +195,7 @@ namespace srcrepair.core
         /// <returns>Returns True if configs database update available.</returns>
         public bool CheckCfgUpdate()
         {
-            return FileManager.CalculateFileMD5(Path.Combine(FullAppPath, StringsManager.ConfigDatabaseName)) != CfgUpdateHash;
+            return FileManager.CalculateFileSHA512(Path.Combine(FullAppPath, StringsManager.ConfigDatabaseName)) != CfgUpdateHash;
         }
 
         /// <summary>
@@ -204,7 +204,7 @@ namespace srcrepair.core
         /// <returns>Returns True if cleanup targets database update available.</returns>
         public bool CheckClnUpdate()
         {
-            return FileManager.CalculateFileMD5(Path.Combine(FullAppPath, StringsManager.CleanupDatabaseName)) != ClnUpdateHash;
+            return FileManager.CalculateFileSHA512(Path.Combine(FullAppPath, StringsManager.CleanupDatabaseName)) != ClnUpdateHash;
         }
 
         /// <summary>

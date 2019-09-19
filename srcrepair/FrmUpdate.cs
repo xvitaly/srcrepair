@@ -136,7 +136,7 @@ namespace srcrepair.gui
                 try
                 {
                     // Checking hashes...
-                    if (FileManager.CalculateFileMD5(UpdateTempFile) == UpdateHash)
+                    if (FileManager.CalculateFileSHA512(UpdateTempFile) == UpdateHash)
                     {
                         // Overwriting old file by downloaded one...
                         File.Copy(UpdateTempFile, UpdateFileName, true);
@@ -200,7 +200,7 @@ namespace srcrepair.gui
             if (File.Exists(UpdateFileName))
             {
                 // Checking hashes...
-                if (FileManager.CalculateFileMD5(UpdateFileName) == UpdateHash)
+                if (FileManager.CalculateFileSHA512(UpdateFileName) == UpdateHash)
                 {
                     // Setting last update check date...
                     UpdateTimeSetApp();
