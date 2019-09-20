@@ -79,6 +79,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The program is already running. Starting the second copy is not allowed..
+        /// </summary>
+        internal static string AppAlrLaunched {
+            get {
+                return ResourceManager.GetString("AppAlrLaunched", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://developer.valvesoftware.com/wiki/Console_Command_List.
         /// </summary>
         internal static string AppCVListURL {
@@ -147,6 +156,15 @@ namespace srcrepair.gui {
         internal static string AppLangPrefix {
             get {
                 return ResourceManager.GetString("AppLangPrefix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Core library version does not match application version. Please reinstall or report this issue to developers..
+        /// </summary>
+        internal static string AppLibVersionMissmatch {
+            get {
+                return ResourceManager.GetString("AppLibVersionMissmatch", resourceCulture);
             }
         }
         

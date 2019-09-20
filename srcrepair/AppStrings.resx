@@ -657,4 +657,10 @@
   <data name="AppSteamPathEnterWinClosed" xml:space="preserve">
     <value>User closed "Find Steam" window.</value>
   </data>
+  <data name="AppAlrLaunched" xml:space="preserve">
+    <value>The program is already running. Starting the second copy is not allowed.</value>
+  </data>
+  <data name="AppLibVersionMissmatch" xml:space="preserve">
+    <value>Core library version does not match application version. Please reinstall or report this issue to developers.</value>
+  </data>
 </root>

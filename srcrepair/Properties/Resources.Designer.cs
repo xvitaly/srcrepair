@@ -71,15 +71,6 @@ namespace srcrepair.gui.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The program is already running. Starting the second copy is not allowed..
-        /// </summary>
-        internal static string AppAlrLaunched {
-            get {
-                return ResourceManager.GetString("AppAlrLaunched", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to https://github.com/xvitaly/srcrepair/issues/new.
         /// </summary>
         internal static string AppBtURL {

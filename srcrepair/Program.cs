@@ -46,13 +46,23 @@ namespace srcrepair.gui
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);
 
-                    // Starting main form...
-                    Application.Run(new FrmMainW());
+                    // Checking of core library version...
+                    if (LibraryManager.CheckLibraryVersion())
+                    {
+                        // Starting main form...
+                        Application.Run(new FrmMainW());
+                    }
+                    else
+                    {
+                        // Version missmatch. Terminating...
+                        MessageBox.Show(AppStrings.AppLibVersionMissmatch, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Environment.Exit(ReturnCodes.CoreLibVersionMissmatch);
+                    }
                 }
                 else
                 {
                     // Application is already running. Terminating...
-                    MessageBox.Show(Properties.Resources.AppAlrLaunched, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.AppAlrLaunched, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Environment.Exit(ReturnCodes.AppAlreadyRunning);
                 }
             }
