@@ -62,5 +62,10 @@ namespace srcrepair.core
         /// No Steam UserIDs detected.
         /// </summary>
         public const int NoUserIdsDetected = 6;
+
+        /// <summary>
+        /// Application is already running.
+        /// </summary>
+        public const int AppAlreadyRunning = 7;
     }
 }
