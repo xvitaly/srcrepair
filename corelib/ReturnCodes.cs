@@ -67,5 +67,10 @@ namespace srcrepair.core
         /// Application is already running.
         /// </summary>
         public const int AppAlreadyRunning = 7;
+
+        /// <summary>
+        /// Core library version missmatch.
+        /// </summary>
+        public const int CoreLibVersionMissmatch = 8;
     }
 }
