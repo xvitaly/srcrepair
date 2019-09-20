@@ -21,9 +21,13 @@
 using System;
 using System.Threading;
 using System.Windows.Forms;
+using srcrepair.core;
 
 namespace srcrepair.gui
 {
+    /// <summary>
+    /// Main class of application.
+    /// </summary>
     static class Program
     {
         /// <summary>
@@ -32,26 +36,24 @@ namespace srcrepair.gui
         [STAThread]
         static void Main()
         {
-            // Создаём новый мьютекс на время работы программы...
+            // Creating global mutex...
             using (Mutex Mtx = new Mutex(false, Properties.Resources.AppName))
             {
-                // Пробуем занять и заблокировать, тем самым проверяя запущена ли ещё одна копия программы или нет...
+                // Locking mutex...
                 if (Mtx.WaitOne(0, false))
                 {
-                    // Включаем визуальные стили...
+                    // Enabling application visual styles...
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);
 
-                    // Запускаем главную форму...
+                    // Starting main form...
                     Application.Run(new FrmMainW());
                 }
                 else
                 {
-                    // Программа уже запущена. Выводим сообщение об этом...
+                    // Application is already running. Terminating...
                     MessageBox.Show(Properties.Resources.AppAlrLaunched, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Завершаем работу приложения с кодом 16...
-                    Environment.Exit(16);
+                    Environment.Exit(ReturnCodes.AppAlreadyRunning);
                 }
             }
         }
