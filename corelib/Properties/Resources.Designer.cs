@@ -160,15 +160,6 @@ namespace srcrepair.core.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1.
-        /// </summary>
-        internal static string LibABIVersion {
-            get {
-                return ResourceManager.GetString("LibABIVersion", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to ^[0-9a-zA-Z :()-_./\\\\]*$.
         /// </summary>
         internal static string PathValidateRegex {
