@@ -6,8 +6,8 @@ Only specified versions supported:
 
 | Version | Support status     |
 | ------- | ------------------ |
-| 34.x    | :white_check_mark: |
-| < 34.x  | :x:                |
+| 35.x    | :white_check_mark: |
+| < 35.x  | :x:                |
 
 ## Reporting a Vulnerability
 
