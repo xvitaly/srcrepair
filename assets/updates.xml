@@ -15,8 +15,8 @@
     <HUDDB>
         <Version>master</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/huds.xml</URL>
-        <Hash>de93acb2faa331263da1c44eee5e234f</Hash>
-        <Hash2>795cfc82646cf1e7e6a6a222e1395408d4db6f0777382ef66fa92f513efca9f98faf3fbb72f8c67ba795ad431eaec6eb14401ee62c984297d704e7027a01d134</Hash2>
+        <Hash>90aa023392c583d62550dff9a90782dd</Hash>
+        <Hash2>a14f134a8052866438bc149496c9d30f7ae8473dcac7778623fbb276ad09cf60ec2da5fc74b929768318455624c2cfd2986431812a552feb46e564091b43845b</Hash2>
     </HUDDB>
     <CfgDB>
         <Version>master</Version>
