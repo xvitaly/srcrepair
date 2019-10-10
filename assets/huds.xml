@@ -60,7 +60,7 @@
         <RepoPath>null</RepoPath>
         <Hash>2ddd088edaadc86717dad6a2d32bfcb3</Hash>
         <Hash2>7338aa24865a50a1ab3c6bb125480d3b79c22930cd752c1932f98c6c75503d59ebf23551d718561351384b4fce02269d119ff68ab8aac9aa0e88de8cc1e04441</Hash2>
-        <LastUpdate>1540051200</LastUpdate>
+        <LastUpdate>1540068085</LastUpdate>
         <Site>http://toonhud.com/</Site>
         <ArchiveDir>toonhud</ArchiveDir>
         <InstallDir>toonhud</InstallDir>
@@ -114,13 +114,13 @@
         <Name>budhud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/budhud/budhud_b32bf989.zip</URI>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/budhud/budhud_06655377.zip</URI>
         <UpURI>https://github.com/WhiskerBiscuit/budhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.jpg</Preview>
         <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
-        <Hash>223f5447a1745305fac85bec253b7229</Hash>
-        <Hash2>43e2893ab89d3f6c9ccba646571ea35bd80f5b4027b118ff7d8445f467bb55e496b4bad477c75e764a29c7f82a2082e57a43b4b95e4b82bc0b87208924a5944a</Hash2>
-        <LastUpdate>1567309630</LastUpdate>
+        <Hash>ba1912a7fc8350c4056b2752b0261764</Hash>
+        <Hash2>c7c8b6d114af2891eb1aa95ca9c98a9941120f3a561080da17c7aaf2295fe192206cece9874476ebecec45369e0c6383e05b5b96783caf5e65b03e847c1da4c7</Hash2>
+        <LastUpdate>1570173679</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=207</Site>
         <ArchiveDir>budhud-master</ArchiveDir>
         <InstallDir>budhud</InstallDir>
@@ -159,13 +159,13 @@
         <Name>rayshud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/rayshud/rayshud_be4b1817.zip</URI>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/rayshud/rayshud_de0a1781.zip</URI>
         <UpURI>https://github.com/raysfire/rayshud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/rayshud.jpg</Preview>
         <RepoPath>https://github.com/raysfire/rayshud</RepoPath>
-        <Hash>4f9fbfbfce576faf6bf4212cb573e28f</Hash>
-        <Hash2>9f8ecc2b401c6a66bb97024e4a161a9845bec93abb7f82ad1f50b56ca0405a1116dec2624a0a6906437c93efdeee8e76c8cbd60458183c8b6b582208ee800b1e</Hash2>
-        <LastUpdate>1568667660</LastUpdate>
+        <Hash>295c9ae9082c7b45fb27cb117a6c36c5</Hash>
+        <Hash2>b734d5092f8eb0aa15a61dd552beb379127a8e490759e9c42d72a66a2c3770ba6debf5da2472cfee20873718a5803c60a3658c19ff0eaf6f49355a1f1d38b636</Hash2>
+        <LastUpdate>1570284346</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=254</Site>
         <ArchiveDir>rayshud-master</ArchiveDir>
         <InstallDir>rayshud</InstallDir>
@@ -264,13 +264,13 @@
         <Name>FlawHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/flawhud/flawhud_56c5e738.zip</URI>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/flawhud/flawhud_1cd2eb36.zip</URI>
         <UpURI>https://github.com/CriticalFlaw/FlawHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/flawhud.jpg</Preview>
         <RepoPath>https://github.com/CriticalFlaw/FlawHUD</RepoPath>
-        <Hash>a0374d40105e8b953ad771754fd7a8f0</Hash>
-        <Hash2>1e68d93ecae26bc2f5165e5cdd06e864670e6839ba59151936bfffc38e91fcb2067f0d25bf734d23efdb04f4ef57c968cb0ae41b07fb5722bcb0aabf6a757519</Hash2>
-        <LastUpdate>1568835762</LastUpdate>
+        <Hash>1a1a00ba78670eca0efb49566ec2e9a5</Hash>
+        <Hash2>fb011926d782165471072cf63a48e14f90354851f750c018b84e414470dd05e5809f7113ad755fdd6893e29f68f2b32f18ae438aeb2b23e5ba157e94f6ea5a42</Hash2>
+        <LastUpdate>1570654133</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=252</Site>
         <ArchiveDir>FlawHUD-master</ArchiveDir>
         <InstallDir>flawhud</InstallDir>
@@ -279,13 +279,13 @@
         <Name>m0re Hud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/m0rehud/m0rehud_b90944c1.zip</URI>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/m0rehud/m0rehud_ae10091d.zip</URI>
         <UpURI>https://github.com/Hypnootize/m0rehud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/m0rehud.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/m0rehud</RepoPath>
-        <Hash>5d08bc09a8892acd430f35b1fb0477db</Hash>
-        <Hash2>8f91fab23a8b329e0d2c09a6bf98cd66d1f53e58868a0099c19770e843ecb7e81868d73f56be9723dca3736e16eebb04b0d2dec3d15b3cb26ab629884384c6a9</Hash2>
-        <LastUpdate>1558260478</LastUpdate>
+        <Hash>c2245ab7790b60bbf449a4fe07ed8e70</Hash>
+        <Hash2>785968ec1147311871810736e25472c977f9816bf7400ab1f3b6e8190bcb611bc5e4a13d155c905719e97ce192b43bf7c8fde6d055a0a011f7217faf3e860723</Hash2>
+        <LastUpdate>1569422641</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=248</Site>
         <ArchiveDir>m0rehud-master/m0rehud</ArchiveDir>
         <InstallDir>m0rehud</InstallDir>
@@ -345,7 +345,7 @@
         <RepoPath>null</RepoPath>
         <Hash>18b7f8d9f144b851879b7df3409769c6</Hash>
         <Hash2>d86f6aa7f91d4f1ccd62f04dd05d643cab1a2052dae137d22535e4341a6baf16234993273efed09739e14abccb23707d64978df52ac90a43963cb845098d984f</Hash2>
-        <LastUpdate>1548695455</LastUpdate>
+        <LastUpdate>1548695581</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=220</Site>
         <ArchiveDir>slimHUD</ArchiveDir>
         <InstallDir>slimhud</InstallDir>
