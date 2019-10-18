@@ -144,13 +144,13 @@
         <Name>KBNHud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/kbnhud/kbnhud_a799e849.zip</URI>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/kbnhud/kbnhud_aacee389.zip</URI>
         <UpURI>https://github.com/Jotunn/KBNHud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/kbnhud.jpg</Preview>
         <RepoPath>https://github.com/Jotunn/KBNHud</RepoPath>
-        <Hash>c67b9cd4f250d061151b30b00fca1c9a</Hash>
-        <Hash2>1f8828cd243d0c493334e93f19e5632ddef14ea26ccec21cf84c770b2165e459a4a60989248b4ebb00566bc33251626e25c3a55d488374f1bf1c8cc89c836411</Hash2>
-        <LastUpdate>1561254707</LastUpdate>
+        <Hash>9c51b0f96c1f98d233db6aa5703da1b6</Hash>
+        <Hash2>c9be1e9e528a83375376cd5722ea6084d90675f22ced5e5a8db769c7c3092d11088cd2d30531e0a1a5fb803fe6f7f84918d4090056324a6fb4bca8ef3292ffa9</Hash2>
+        <LastUpdate>1570906945</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=271</Site>
         <ArchiveDir>KBNHud-master</ArchiveDir>
         <InstallDir>kbnhud</InstallDir>
@@ -189,13 +189,13 @@
         <Name>biscottiHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/biscottihud/biscottihud_1d44b207.zip</URI>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/biscottihud/biscottihud_d1dd4926.zip</URI>
         <UpURI>https://github.com/MedicodiBiscotti/biscottiHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/biscottihud.jpg</Preview>
         <RepoPath>https://github.com/MedicodiBiscotti/biscottiHUD</RepoPath>
-        <Hash>706e42bb8027e5b6add89133c38bcaae</Hash>
-        <Hash2>583046703ef7c5d4c6de81e1bf790e494af26c14c8c9e2b8f2fec3cd66687971e52609298acf36208ef3ef4ee549fda33782bfd5c6fd678d84ad92f68bd11456</Hash2>
-        <LastUpdate>1546771214</LastUpdate>
+        <Hash>0bb06cbb72d5e8916b6d061d85414c0f</Hash>
+        <Hash2>f75e95a6d169abf558e4ac92cdc828ef0255a20fed437003e215dcb67d83fca20e0bc8818848664a2ae17a4fe5de4d6ed052b53394f9f4e206c7bd40669bb5c0</Hash2>
+        <LastUpdate>1570806781</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=236</Site>
         <ArchiveDir>biscottiHUD-master/biscottiHUD</ArchiveDir>
         <InstallDir>biscottihud</InstallDir>
@@ -264,13 +264,13 @@
         <Name>FlawHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/flawhud/flawhud_1cd2eb36.zip</URI>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/flawhud/flawhud_e3c786cf.zip</URI>
         <UpURI>https://github.com/CriticalFlaw/FlawHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/flawhud.jpg</Preview>
         <RepoPath>https://github.com/CriticalFlaw/FlawHUD</RepoPath>
-        <Hash>1a1a00ba78670eca0efb49566ec2e9a5</Hash>
-        <Hash2>fb011926d782165471072cf63a48e14f90354851f750c018b84e414470dd05e5809f7113ad755fdd6893e29f68f2b32f18ae438aeb2b23e5ba157e94f6ea5a42</Hash2>
-        <LastUpdate>1570654133</LastUpdate>
+        <Hash>abfa936804f58a29570d9ea315d7a05a</Hash>
+        <Hash2>571242583c9c9d6198c67b302dbd1f9ca4d00b3a67a0a5f70894de8c73cc57b459b1db4295befc85bd9342bc2094ff1bea6824f1939756a97f916ed398f0e7c8</Hash2>
+        <LastUpdate>1570928908</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=252</Site>
         <ArchiveDir>FlawHUD-master</ArchiveDir>
         <InstallDir>flawhud</InstallDir>
@@ -369,13 +369,13 @@
         <Name>Hypnotize HUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/hypnotizehud/hypnotizehud_81f95ca9.zip</URI>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/hypnotizehud/hypnotizehud_365800e7.zip</URI>
         <UpURI>https://github.com/Hypnootize/Hypnotize-Hud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/hypnotizehud.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/Hypnotize-Hud</RepoPath>
-        <Hash>66ebdaf3b3c4e709ff1c72c73d3cdd15</Hash>
-        <Hash2>f33e698f4f78ff31e184bcfe29e07d06ea2d1a662d5adb40f074c090fcb9f022435c3a5c8547b508d44758dfa07826398e49eb84389e45de19d47e454bbf55df</Hash2>
-        <LastUpdate>1559153364</LastUpdate>
+        <Hash>b4898e7d83b66b8b26e30e5f5139abfd</Hash>
+        <Hash2>e3f9a70cd7077dff15683e1ac6a0131d6cda9384545aea8d6b9167582a791971284c10e3ae3e41f888cae2834cec2479e4a534077a087e137c8b66b2c3e15856</Hash2>
+        <LastUpdate>1571342909</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=341</Site>
         <ArchiveDir>Hypnotize-Hud-master/hypnotize hud</ArchiveDir>
         <InstallDir>hypnotizehud</InstallDir>
