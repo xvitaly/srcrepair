@@ -24,13 +24,13 @@
         <Name>7HUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/7hud/7hud_b9079825.zip</URI>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/7hud/7hud_7d683399.zip</URI>
         <UpURI>https://github.com/Sevin7/7HUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/7hud.jpg</Preview>
         <RepoPath>https://github.com/Sevin7/7HUD</RepoPath>
-        <Hash>725764cd93391dcd74892611b9627ce7</Hash>
-        <Hash2>a887c499ed5974d07460017013027c65d3fdb7c894a6155b0e819dd63581292a7bf9548963a8058c18a28434255d2105e9cbe313df4e7bc7c7be77195f038e08</Hash2>
-        <LastUpdate>1522285398</LastUpdate>
+        <Hash>b1f58dacf475629f2268aef207850481</Hash>
+        <Hash2>66351349ecaf01736011872c6c18edc4c26f3d9f150c7449bc09f450c6a0de2cfe9c5df94098a47f89c518c8222322508e7471e945dd847d0ff8e1f9d5b41f82</Hash2>
+        <LastUpdate>1572027461</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=261</Site>
         <ArchiveDir>7HUD-master</ArchiveDir>
         <InstallDir>7hud</InstallDir>
