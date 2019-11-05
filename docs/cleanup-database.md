@@ -28,8 +28,8 @@ Available properties:
   * `Name` - user-friendly name;
   * `Directories` - list of directories;
   * `Directory` - path to a single directory with templates support:
-	  - `Safe` - this directory can be safely cleaned;
-	  - `Unsafe` - cleaning up this directory may be dangerous (can be disabled in settings).
+    - `Safe` - this directory can be safely cleaned;
+    - `Unsafe` - cleaning up this directory may be dangerous (can be disabled in settings).
 
 ## Directories
 
