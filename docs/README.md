@@ -8,6 +8,7 @@ If you want to build project from sources, please see [this page](building-from-
 
  * [Cleanup database](cleanup-database.md).
  * [Configs database](configs-database.md).
+ * [Games database](games-database.md).
  * [HUDs database](huds-database.md).
  * [Updates database](updates-database.md).
 
