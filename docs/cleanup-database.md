@@ -20,13 +20,22 @@ Original source file located at `assets/cleanup.xml` of current repository.
 
 ## Properties
 
-Available properties:
+### Level 0
 
-  * `Targets` - XML root element;
-  * `Target` - database entry base element;
+  * `Targets` - XML root element.
+
+### Level 1
+
+  * `Target` - database entry base element.
+
+### Level 2
+
   * `ID` - unique identifier (integer, starting from 1);
   * `Name` - user-friendly name;
-  * `Directories` - list of directories;
+  * `Directories` - list of directories.
+
+### Level 3
+
   * `Directory` - path to a single directory with templates support:
     - `Safe` - this directory can be safely cleaned;
     - `Unsafe` - cleaning up this directory may be dangerous (can be disabled in settings).
