@@ -4,9 +4,12 @@ Original source file located at `assets/updates.xml` of current repository.
 
 ## Properties
 
+### Level 0
+
+  * `Updates` - XML root element.
+
 ### Level 1
 
-  * `Updates` - XML root element;
   * `Application` - sub-element with application update metadata;
   * `GameDB` - sub-element with game database update metadata;
   * `HUDDB` - sub-element with HUD database update metadata;
