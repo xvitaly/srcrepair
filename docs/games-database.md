@@ -24,11 +24,18 @@ Original source file located at `assets/games.xml` of current repository.
 
 ## Properties
 
-Available properties:
+### Level 0
 
-  * `Games` - XML root element;
-  * `Game` - database entry base element;
-  * `Name` - user-friendly game name;
+  * `Games` - XML root element.
+
+### Level 1
+
+  * `Game` - database entry base element:
+    - `Name` - user-friendly game name.
+
+### Level 2
+
+  * `Enabled` - `1` if current game is enabled or `0` - if don't;
   * `HasVF` - `1` if current game use file to store video settings or `0` if current game use Windows registry to store video settings (deprecated);
   * `DirName` - game installation directory in `SteamApps/common`;
   * `SmallName` - game subdirectory name in `SteamApps/common/$DirName`;
