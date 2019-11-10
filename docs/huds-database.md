@@ -32,7 +32,7 @@ Available properties:
   * `HUDs` - XML root element;
   * `HUD` - database entry base element;
   * `Name` - user-friendly name of HUD;
-  * `Game` - short name of supported by this HUD game;
+  * `Game` - short name of supported by this HUD game (`SmallName` from [games database](games-database.md));
   * `IsUpdated` - `1` if HUD support latest version of game, `0` - if don't;
   * `URI` - fully-qualified download URL (no redirects allowed);
   * `UpURI` - upstream download URL (no redirects allowed);
