@@ -27,10 +27,16 @@ Original source file located at `assets/huds.xml` of current repository.
 
 ## Properties
 
-Available properties:
+### Level 0
 
-  * `HUDs` - XML root element;
-  * `HUD` - database entry base element;
+  * `HUDs` - XML root element.
+
+### Level 1
+
+  * `HUD` - database entry base element.
+
+### Level 2
+
   * `Name` - user-friendly name of HUD;
   * `Game` - short name of supported by this HUD game (`SmallName` from [games database](games-database.md));
   * `IsUpdated` - `1` if HUD support latest version of game, `0` - if don't;
