@@ -35,7 +35,7 @@ Available properties:
   * `Game` - short name of supported by this HUD game (`SmallName` from [games database](games-database.md));
   * `IsUpdated` - `1` if HUD support latest version of game, `0` - if don't;
   * `URI` - fully-qualified Zip archive download URL (safe redirects (3XX HTTP codes) are allowed);
-  * `UpURI` - upstream download URL (no redirects allowed);
+  * `UpURI` - upstream download archive URL (safe redirects (3XX HTTP codes) are allowed);
   * `Preview` - screenshot of game using this HUD or any custom image (JPEG and PNG formats are supported);
   * `RepoPath` - path to repository on GitHub or `null`;
   * `Hash` - MD5 hash of download file, speficied in `URI` (deprecated);
