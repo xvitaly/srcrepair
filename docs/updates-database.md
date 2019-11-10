@@ -11,9 +11,9 @@ Original source file located at `assets/updates.xml` of current repository.
 ### Level 1
 
   * `Application` - sub-element with application update metadata;
-  * `GameDB` - sub-element with game database update metadata;
-  * `HUDDB` - sub-element with HUD database update metadata;
-  * `CfgDB` - sub-element with config database update metadata;
+  * `GameDB` - sub-element with [games database](games-database.md) update metadata;
+  * `HUDDB` - sub-element with [HUDs database](huds-database.md) update metadata;
+  * `CfgDB` - sub-element with [configs database](configs-database.md) update metadata;
   * `ClnDB` - sub-element with [cleanup database](cleanup-database.md) update metadata.
 
 ### Level 2
