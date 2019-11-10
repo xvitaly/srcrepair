@@ -23,10 +23,16 @@ Original source file located at `assets/configs.xml` of current repository.
 
 ## Properties
 
-Available properties:
+### Level 0
 
-  * `Configs` - XML root element;
-  * `Config` - database entry base element;
+  * `Configs` - XML root element.
+
+### Level 1
+
+  * `Config` - database entry base element.
+
+### Level 2
+
   * `Name` - user-friendly name of FPS-config;
   * `FileName` - file name of FPS-config (must be located at `assets/cfgs` directory; custom paths are not allowed);
   * `SupportedGames` - comma-separated list of supported game IDs;
