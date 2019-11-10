@@ -41,6 +41,6 @@ Available properties:
   * `Hash` - MD5 hash of download file, speficied in `URI` (deprecated);
   * `Hash2` - SHA2 (SHA-512) hash of download file, speficied in `URI`;
   * `LastUpdate` - HUD last update time in Unix timestamp format;
-  * `Site` - website or homepage;
+  * `Site` - website or homepage URL;
   * `ArchiveDir` - name of directory in archive (subdirectories are supported (use `/` symbol));
   * `InstallDir` - installation directory.
