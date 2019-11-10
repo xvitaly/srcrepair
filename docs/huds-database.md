@@ -43,4 +43,4 @@ Available properties:
   * `LastUpdate` - HUD last update time in Unix timestamp format;
   * `Site` - website or homepage URL;
   * `ArchiveDir` - name of directory in archive (subdirectories are supported (use `/` symbol));
-  * `InstallDir` - installation directory.
+  * `InstallDir` - installation directory name.
