@@ -46,6 +46,8 @@ namespace srcrepair.core
         /// </summary>
         public string AppUpdateHash { get; private set; }
 
+        public Version GameUpdateVersion { get; private set; }
+
         /// <summary>
         /// Gets or sets download URL of game database update.
         /// </summary>
