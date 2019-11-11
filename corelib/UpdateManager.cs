@@ -61,6 +61,9 @@ namespace srcrepair.core
         /// </summary>
         public string GameUpdateHash { get; private set; }
 
+        /// <summary>
+        /// Gets or sets latest available version of HUD database.
+        /// </summary>
         public Version HUDUpdateVersion { get; private set; }
 
         /// <summary>
