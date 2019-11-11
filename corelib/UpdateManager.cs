@@ -70,6 +70,8 @@ namespace srcrepair.core
         /// </summary>
         public string HUDUpdateHash { get; private set; }
 
+        public Version CfgUpdateVersion { get; private set; }
+
         /// <summary>
         /// Gets or sets download URL of configs database update.
         /// </summary>
