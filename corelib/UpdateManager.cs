@@ -153,21 +153,25 @@ namespace srcrepair.core
 
             // Extracting information about game database update...
             XmlNode GameDbNode = XMLD.SelectSingleNode("Updates/GameDB");
+            GameUpdateVersion = Convert.ToInt32(GameDbNode.SelectSingleNode("Version").InnerText);
             GameUpdateURL = GameDbNode.SelectSingleNode("URL").InnerText;
             GameUpdateHash = GameDbNode.SelectSingleNode("Hash2").InnerText;
 
             // Extracting information about hud database update...
             XmlNode HudDbNode = XMLD.SelectSingleNode("Updates/HUDDB");
+            HUDUpdateVersion = Convert.ToInt32(HudDbNode.SelectSingleNode("Version").InnerText);
             HUDUpdateURL = HudDbNode.SelectSingleNode("URL").InnerText;
             HUDUpdateHash = HudDbNode.SelectSingleNode("Hash2").InnerText;
 
             // Extracting information about config database update...
             XmlNode CfgDbNode = XMLD.SelectSingleNode("Updates/CfgDB");
+            CfgUpdateVersion = Convert.ToInt32(CfgDbNode.SelectSingleNode("Version").InnerText);
             CfgUpdateURL = CfgDbNode.SelectSingleNode("URL").InnerText;
             CfgUpdateHash = CfgDbNode.SelectSingleNode("Hash2").InnerText;
 
             // Extracting information about cleanup targets database update...
             XmlNode ClnDbNode = XMLD.SelectSingleNode("Updates/ClnDB");
+            ClnUpdateVersion = Convert.ToInt32(ClnDbNode.SelectSingleNode("Version").InnerText);
             ClnUpdateURL = ClnDbNode.SelectSingleNode("URL").InnerText;
             ClnUpdateHash = ClnDbNode.SelectSingleNode("Hash2").InnerText;
         }
