@@ -91,6 +91,9 @@ namespace srcrepair.core
         /// </summary>
         public string CfgUpdateHash { get; private set; }
 
+        /// <summary>
+        /// Gets or sets latest available version of cleanup targets database.
+        /// </summary>
         public Version ClnUpdateVersion { get; private set; }
 
         /// <summary>
