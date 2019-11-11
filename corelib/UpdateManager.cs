@@ -58,6 +58,8 @@ namespace srcrepair.core
         /// </summary>
         public string GameUpdateHash { get; private set; }
 
+        public Version HUDUpdateVersion { get; private set; }
+
         /// <summary>
         /// Gets or sets download URL of HUD database update.
         /// </summary>
