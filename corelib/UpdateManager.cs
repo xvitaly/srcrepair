@@ -76,6 +76,9 @@ namespace srcrepair.core
         /// </summary>
         public string HUDUpdateHash { get; private set; }
 
+        /// <summary>
+        /// Gets or sets latest available version of configs database.
+        /// </summary>
         public Version CfgUpdateVersion { get; private set; }
 
         /// <summary>
