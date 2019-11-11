@@ -49,7 +49,7 @@ namespace srcrepair.core
         /// <summary>
         /// Gets or sets latest available version of game database.
         /// </summary>
-        public Version GameUpdateVersion { get; private set; }
+        public int GameUpdateVersion { get; private set; }
 
         /// <summary>
         /// Gets or sets download URL of game database update.
@@ -64,7 +64,7 @@ namespace srcrepair.core
         /// <summary>
         /// Gets or sets latest available version of HUD database.
         /// </summary>
-        public Version HUDUpdateVersion { get; private set; }
+        public int HUDUpdateVersion { get; private set; }
 
         /// <summary>
         /// Gets or sets download URL of HUD database update.
@@ -79,7 +79,7 @@ namespace srcrepair.core
         /// <summary>
         /// Gets or sets latest available version of configs database.
         /// </summary>
-        public Version CfgUpdateVersion { get; private set; }
+        public int CfgUpdateVersion { get; private set; }
 
         /// <summary>
         /// Gets or sets download URL of configs database update.
@@ -94,7 +94,7 @@ namespace srcrepair.core
         /// <summary>
         /// Gets or sets latest available version of cleanup targets database.
         /// </summary>
-        public Version ClnUpdateVersion { get; private set; }
+        public int ClnUpdateVersion { get; private set; }
 
         /// <summary>
         /// Gets or sets download URL of cleanup targets database update.
