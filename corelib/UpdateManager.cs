@@ -46,6 +46,9 @@ namespace srcrepair.core
         /// </summary>
         public string AppUpdateHash { get; private set; }
 
+        /// <summary>
+        /// Gets or sets latest available version of game database.
+        /// </summary>
         public Version GameUpdateVersion { get; private set; }
 
         /// <summary>
