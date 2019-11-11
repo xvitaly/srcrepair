@@ -82,6 +82,8 @@ namespace srcrepair.core
         /// </summary>
         public string CfgUpdateHash { get; private set; }
 
+        public Version ClnUpdateVersion { get; private set; }
+
         /// <summary>
         /// Gets or sets download URL of cleanup targets database update.
         /// </summary>
