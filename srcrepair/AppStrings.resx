@@ -457,7 +457,7 @@
     <value>No new updates detected. SRC Repair is using latest version of game database.</value>
   </data>
   <data name="UPD_DbUpdateAvail" xml:space="preserve">
-    <value>Game database update available. Hash of new version: {0}.</value>
+    <value>Game database update available. New version: {0} ({1}).</value>
   </data>
   <data name="DB_WrkInProgress" xml:space="preserve">
     <value>Checking for updates. Please wait!</value>
@@ -478,7 +478,7 @@
     <value>No new updates detected. SRC Repair is using latest version of HUD database.</value>
   </data>
   <data name="UPD_HUDUpdateAvail" xml:space="preserve">
-    <value>HUD database update available. Hash of new version: {0}.</value>
+    <value>HUD database update available. New version: {0} ({1}).</value>
   </data>
   <data name="AR_UnpackException" xml:space="preserve">
     <value>An error occured during unpacking selected archive. Additional information can be found in debug log.</value>

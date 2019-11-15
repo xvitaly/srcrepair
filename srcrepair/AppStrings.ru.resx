@@ -568,7 +568,7 @@
     <comment>Выводится в случае если модуль не смог найти новых версий базы игр</comment>
   </data>
   <data name="UPD_DbUpdateAvail" xml:space="preserve">
-    <value>Доступно обновление базы игр. Хеш новой версии: {0}.</value>
+    <value>Доступно обновление базы игр. Новая версия: {0} ({1}).</value>
     <comment>Выводится в случае обнаружений новой версии базы игр</comment>
   </data>
   <data name="DB_WrkInProgress" xml:space="preserve">
@@ -596,7 +596,7 @@
     <comment>Выводится в случае если модуль не смог найти новых версий базы HUD</comment>
   </data>
   <data name="UPD_HUDUpdateAvail" xml:space="preserve">
-    <value>Доступно обновление базы HUD. Хеш новой версии: {0}.</value>
+    <value>Доступно обновление базы HUD. Новая версия: {0} ({1}).</value>
     <comment>Выводится в случае обнаружений новой версии базы HUD</comment>
   </data>
   <data name="AR_UnpackException" xml:space="preserve">
