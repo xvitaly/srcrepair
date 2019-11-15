@@ -315,7 +315,7 @@ namespace srcrepair.gui
                     if (UpMan.CheckGameDBUpdate())
                     {
                         UpdDBImg.Image = Properties.Resources.upd_av;
-                        UpdDBStatus.Text = String.Format(AppStrings.UPD_DbUpdateAvail, UpMan.GameUpdateHash.Substring(0, 7));
+                        UpdDBStatus.Text = String.Format(AppStrings.UPD_DbUpdateAvail, UpMan.GameUpdateVersion, UpMan.GameUpdateHash.Substring(0, 7));
                     }
                     else
                     {
@@ -327,7 +327,7 @@ namespace srcrepair.gui
                     if (UpMan.CheckHUDUpdate())
                     {
                         UpdHUDDbImg.Image = Properties.Resources.upd_av;
-                        UpdHUDStatus.Text = String.Format(AppStrings.UPD_HUDUpdateAvail, UpMan.HUDUpdateHash.Substring(0, 7));
+                        UpdHUDStatus.Text = String.Format(AppStrings.UPD_HUDUpdateAvail, UpMan.HUDUpdateVersion, UpMan.HUDUpdateHash.Substring(0, 7));
                     }
                     else
                     {
