@@ -784,10 +784,18 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// Sets strings data for main form.
+        /// </summary>
         private void SetAppStrings()
         {
+            // Save last Steam path in application's settings...
             Properties.Settings.Default.LastSteamPath = App.SteamClient.FullSteamPath;
+
+            // Add application version and platform name to form's title...
             Text = String.Format(Text, Properties.Resources.AppName, App.Platform.OSFriendlyName, CurrentApp.AppVersion);
+            
+            // Add Steam client installation path to Troubleshooting page...
             PS_StPath.Text = String.Format(PS_StPath.Text, App.SteamClient.FullSteamPath);
         }
 
