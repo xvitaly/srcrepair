@@ -71,6 +71,11 @@ namespace srcrepair.core
         public List<String> CloudConfigs { get; private set; }
 
         /// <summary>
+        /// Gets full path to local copies of cloud screenshots.
+        /// </summary>
+        public string CloudScreenshotsPath { get; private set; }
+
+        /// <summary>
         /// Gets full path to directory with game configs.
         /// </summary>
         public string FullCfgPath { get; private set; }
@@ -282,6 +287,7 @@ namespace srcrepair.core
                 AppHUDDir = Path.Combine(AUserDir, Properties.Resources.HUDLocalDir, SmallAppName);
                 CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : String.Empty);
                 AppWorkshopDir = Path.Combine(SteamDir, SteamAppsDirName, Properties.Resources.WorkshopFolderName, "content", GameInternalID);
+                CloudScreenshotsPath = Path.Combine(SteamDir, "userdata", SteamID, "760", "remote", GameInternalID, "screenshots");
                 if (IsUsingVideoFile) { UpdateVideoFilesList(); }
                 UpdateBanlistFilesList();
                 CloudConfigs = GetCloudConfigs();
