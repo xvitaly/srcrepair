@@ -53,6 +53,7 @@ Available templates (can be used within `Directory` property):
   * `$GamePath$` - will be replaced by `SelectedGame.GamePath`;
   * `$FullGamePath$` - will be replaced by `SelectedGame.FullGamePath`;
   * `$AppWorkshopDir$` - will be replaced by `SelectedGame.AppWorkshopDir`;
+  * `$CloudScreenshotsPath$` - will be replaced by `SelectedGame.CloudScreenshotsPath`;
   * `\` - will be replaced by correct trailing path directory separator character, depending on running platform.
 
 Multiple templates are supported in a single entry.
