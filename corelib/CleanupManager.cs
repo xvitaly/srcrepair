@@ -58,6 +58,11 @@ namespace srcrepair.core
         private readonly string AppWorkshopDir;
 
         /// <summary>
+        /// Stores full path to cloud screenshots directory.
+        /// </summary>
+        private readonly string CloudScreenshotsPath;
+
+        /// <summary>
         /// Overloading inxeding operator to return cleanup target instance
         /// by specified name.
         /// </summary>
@@ -75,6 +80,7 @@ namespace srcrepair.core
             Result.Replace("$GamePath$", GamePath);
             Result.Replace("$FullGamePath$", FullGamePath);
             Result.Replace("$AppWorkshopDir$", AppWorkshopDir);
+            Result.Replace("$CloudScreenshotsPath$", CloudScreenshotsPath);
             Result.Replace('/', Path.DirectorySeparatorChar);
 
             return Result.ToString();
@@ -102,7 +108,8 @@ namespace srcrepair.core
             GamePath = SelectedGame.GamePath;
             FullGamePath = SelectedGame.FullGamePath;
             AppWorkshopDir = SelectedGame.AppWorkshopDir;
-            
+            CloudScreenshotsPath = SelectedGame.CloudScreenshotsPath;
+
             // Initializing empty dictionary...
             CleanupTargets = new Dictionary<string, CleanupTarget>();
 

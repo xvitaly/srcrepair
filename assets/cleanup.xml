@@ -53,6 +53,7 @@
         <Name>Screenshots</Name>
         <Directories>
             <Directory Class="Safe">$FullGamePath$/screenshots/*.*</Directory>
+            <Directory Class="Unsafe">$CloudScreenshotsPath$/*.*</Directory>
         </Directories>
     </Target>
     <Target>
