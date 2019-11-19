@@ -102,6 +102,12 @@ namespace srcrepair.gui
                 CleanDirs.Add(Path.Combine(SteamPath, "shadercache", "*.*"));
             }
 
+            // Steam library cache...
+            if (EC_LibraryCache.Checked)
+            {
+                CleanDirs.Add(Path.Combine(SteamPath, "appcache", "librarycache", "*.*"));
+            }
+
             // Client logs...
             if (EC_Logs.Checked)
             {
