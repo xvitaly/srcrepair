@@ -784,6 +784,13 @@ namespace srcrepair.gui
             }
         }
 
+        private void SetAppStrings()
+        {
+            Properties.Settings.Default.LastSteamPath = App.SteamClient.FullSteamPath;
+            Text = String.Format(Text, Properties.Resources.AppName, App.Platform.OSFriendlyName, CurrentApp.AppVersion);
+            PS_StPath.Text = String.Format(PS_StPath.Text, App.SteamClient.FullSteamPath);
+        }
+
         /// <summary>
         /// Changes state of some controls, depending on current running
         /// platform or access level.
@@ -1510,11 +1517,7 @@ namespace srcrepair.gui
         private void FrmMainW_Load(object sender, EventArgs e)
         {
             InitializeApp();
-
-            Properties.Settings.Default.LastSteamPath = App.SteamClient.FullSteamPath;
-            Text = String.Format(Text, Properties.Resources.AppName, App.Platform.OSFriendlyName, CurrentApp.AppVersion);
-            PS_StPath.Text = String.Format(PS_StPath.Text, App.SteamClient.FullSteamPath);
-
+            SetAppStrings();
             ChangePrvControlState(ProcessManager.IsCurrentUserAdmin());
             CheckSafeClnStatus();
             CheckSymbolsSteam();
