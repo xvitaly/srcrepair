@@ -759,10 +759,15 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// Creates instances of CurrentApp and SteamManager classes.
+        /// </summary>
         private void InitializeApp()
         {
+            // Create a new instance of CurrentApp class...
             App = new CurrentApp(Properties.Settings.Default.IsPortable, Properties.Resources.AppName);
 
+            // Create a new instance of SteamManager class and take care of possible errors...
             try
             {
                 App.SteamClient = new SteamManager(Properties.Settings.Default.LastSteamID, App.Platform.OS);
