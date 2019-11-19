@@ -759,6 +759,26 @@ namespace srcrepair.gui
             }
         }
 
+        private void InitializeApp()
+        {
+            App = new CurrentApp(Properties.Settings.Default.IsPortable, Properties.Resources.AppName);
+
+            try
+            {
+                App.SteamClient = new SteamManager(Properties.Settings.Default.LastSteamID, App.Platform.OS);
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                MessageBox.Show(AppStrings.AppNoSteamIDSetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(ReturnCodes.NoUserIdsDetected);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExStmmInit);
+                ValidateAndHandle();
+            }
+        }
+
         /// <summary>
         /// Changes state of some controls, depending on current running
         /// platform or access level.
@@ -1484,23 +1504,8 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void FrmMainW_Load(object sender, EventArgs e)
         {
-            App = new CurrentApp(Properties.Settings.Default.IsPortable, Properties.Resources.AppName);
+            InitializeApp();
 
-            try
-            {
-                App.SteamClient = new SteamManager(Properties.Settings.Default.LastSteamID, App.Platform.OS);
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                MessageBox.Show(AppStrings.AppNoSteamIDSetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Environment.Exit(ReturnCodes.NoUserIdsDetected);
-            }
-            catch (Exception Ex)
-            {
-                Logger.Warn(Ex, DebugStrings.AppDbgExStmmInit);
-                ValidateAndHandle();
-            }
-            
             Properties.Settings.Default.LastSteamPath = App.SteamClient.FullSteamPath;
             Text = String.Format(Text, Properties.Resources.AppName, App.Platform.OSFriendlyName, CurrentApp.AppVersion);
             PS_StPath.Text = String.Format(PS_StPath.Text, App.SteamClient.FullSteamPath);
