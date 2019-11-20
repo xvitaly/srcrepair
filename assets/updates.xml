@@ -25,9 +25,9 @@
         <Hash2>a3e41c39845fc39612099281278bcbf84d0d2298f1bdf2e88874a0bfc1bcc2b3ed2f97a6c4faf7a73676bd645c078c727ecbde753a2437804d9ee8bc4fdc76ee</Hash2>
     </CfgDB>
     <ClnDB>
-        <Version>1</Version>
+        <Version>2</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/cleanup.xml</URL>
-        <Hash>8e722efe41939ada655f117287c8503d</Hash>
-        <Hash2>35774188313bb40483abd8c00e1a4b785f3996877fd8313a77d0a3d1b15efb9daa4528101943292cd3483080ec131abcdf9c8c4776005331c30da9d4abad4384</Hash2>
+        <Hash>4a87d83fed9aee9b86c1d89769942606</Hash>
+        <Hash2>c8f636966fff0e049441639912f0696c1f66bca11a6e7ed1022183cf55ab10e17b4e614f10b8da4a35fb1032f785412d2bbd74ae0f54f26e33e87a2e9ce5e999</Hash2>
     </ClnDB>
 </Updates>
