@@ -264,13 +264,13 @@
         <Name>FlawHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/flawhud/flawhud_29f6ce49.zip</URI>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/flawhud/flawhud_06e0cfdb.zip</URI>
         <UpURI>https://github.com/CriticalFlaw/FlawHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/flawhud.jpg</Preview>
         <RepoPath>https://github.com/CriticalFlaw/FlawHUD</RepoPath>
-        <Hash>9f71ed52773f481e9328ac9c034403e3</Hash>
-        <Hash2>963da11263c0d509f3a038121498c18ba786451e21a5cb9269078cfe285f108b6768f0a06d0e09881691b25c91c5c6f6a05d4ef4f0845e59535c9a4c5430cce5</Hash2>
-        <LastUpdate>1573869002</LastUpdate>
+        <Hash>13acd362c00608eaa0defaee088688af</Hash>
+        <Hash2>d21b100e009c3dc795fa8929d688c1d3c71950fb829fe24c5eae57eed60f939ab71db728d645f1b14069048d177ca2b29d4d0c30ae4bfdb8c492a47baa2dad26</Hash2>
+        <LastUpdate>1574982576</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=252</Site>
         <ArchiveDir>FlawHUD-master</ArchiveDir>
         <InstallDir>flawhud</InstallDir>
@@ -279,13 +279,13 @@
         <Name>m0re Hud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/m0rehud/m0rehud_ae10091d.zip</URI>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/m0rehud/m0rehud_649d8201.zip</URI>
         <UpURI>https://github.com/Hypnootize/m0rehud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/m0rehud.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/m0rehud</RepoPath>
-        <Hash>c2245ab7790b60bbf449a4fe07ed8e70</Hash>
-        <Hash2>785968ec1147311871810736e25472c977f9816bf7400ab1f3b6e8190bcb611bc5e4a13d155c905719e97ce192b43bf7c8fde6d055a0a011f7217faf3e860723</Hash2>
-        <LastUpdate>1569422641</LastUpdate>
+        <Hash>bc762e7ddc667a55d62590ad2b394c09</Hash>
+        <Hash2>74eda164135faf73cb6a6ca3dbada8999a5e006fa3eaae65e00237dd5357bb86984e061d5895dd6ff6cf7ad444a92b4c49d231f9c8b54320c310786e1e790c44</Hash2>
+        <LastUpdate>1575132162</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=248</Site>
         <ArchiveDir>m0rehud-master/m0rehud</ArchiveDir>
         <InstallDir>m0rehud</InstallDir>
