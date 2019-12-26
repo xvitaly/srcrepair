@@ -114,13 +114,13 @@
         <Name>budhud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/budhud/budhud_b01685f1.zip</URI>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/budhud/budhud_05f5259a.zip</URI>
         <UpURI>https://github.com/WhiskerBiscuit/budhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.jpg</Preview>
         <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
-        <Hash>63ab78985c4f8fd65dcf38013d8ac83c</Hash>
-        <Hash2>4b282d8f00272776819e25fe8f38b5cb4fabf4900d9ad718eb33b093d5ed3fd07bb598848677e145cb1a0abb14692157d2e9bee8e25462828eebbfdb295c2f4e</Hash2>
-        <LastUpdate>1574036827</LastUpdate>
+        <Hash>c2c60b2eb6873b4cead307643121840b</Hash>
+        <Hash2>461f528193a50db02e7b8794185d4951119c8619de3a43873dedb8aaafdb0c7b3bf543bb4a3eeaf677ca576066d13aded207a10d5c5588054dab2a6a3464a845</Hash2>
+        <LastUpdate>1577002814</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=207</Site>
         <ArchiveDir>budhud-master</ArchiveDir>
         <InstallDir>budhud</InstallDir>
