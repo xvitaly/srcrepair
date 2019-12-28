@@ -60,6 +60,16 @@ namespace srcrepair.core
         public string InstallDir { get; private set; }
 
         /// <summary>
+        /// Gets FPS-config download file checksum.
+        /// </summary>
+        public string FileHash { get; private set; }
+
+        /// <summary>
+        /// Gets full path to downloaded FPS-config archive file on disk.
+        /// </summary>
+        public string LocalFile { get; private set; }
+
+        /// <summary>
         /// Checks compatibility with specified game ID.
         /// </summary>
         /// <param name="GameID">Game ID.</param>
@@ -78,7 +88,9 @@ namespace srcrepair.core
         /// <param name="CfGames">Array of supported by FPS-configs game IDs.</param>
         /// <param name="CfArchiveDIr">Working directory in download archive.</param>
         /// <param name="CfInstallDir">FPS-config installation directory.</param>
-        public FPSConfig(string CfName, string CfURI, string CfDescriptio, string[] CfGames, string CfArchiveDIr, string CfInstallDir)
+        /// <param name="CfFileHash">FPS-config download file checksum.</param>
+        /// <param name="CfLocalFile">Path to downloaded FPS-config archive file on disk.</param>
+        public FPSConfig(string CfName, string CfURI, string CfDescriptio, string[] CfGames, string CfArchiveDIr, string CfInstallDir, string CfFileHash, string CfLocalFile)
         {
             // Setting class properties...
             Name = CfName;
@@ -87,6 +99,8 @@ namespace srcrepair.core
             SupportedGames = new List<String>(CfGames);
             ArchiveDir = CfArchiveDIr;
             InstallDir = CfInstallDir;
+            FileHash = CfFileHash;
+            LocalFile = CfLocalFile;
         }
     }
 }
