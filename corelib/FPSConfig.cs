@@ -34,9 +34,9 @@ namespace srcrepair.core
         public string Name { get; private set; }
 
         /// <summary>
-        /// Gets or sets FPS-config file name.
+        /// Gets or sets FPS-config download URL.
         /// </summary>
-        public string FileName { get; private set; }
+        public string URI { get; private set; }
 
         /// <summary>
         /// Gets or sets FPS-config user-friendly description.
@@ -47,6 +47,17 @@ namespace srcrepair.core
         /// Gets or sets list of supported by FPS-config games.
         /// </summary>
         public List<String> SupportedGames { get; private set; }
+
+        /// <summary>
+        /// Gets or sets archive name inside of fps-config's archive.
+        /// </summary>
+        public string ArchiveDir { get; private set; }
+
+        /// <summary>
+        /// Gets or sets FPS-config installation directory name if
+        /// the game support custom user directories.
+        /// </summary>
+        public string InstallDir { get; private set; }
 
         /// <summary>
         /// Checks compatibility with specified game ID.
@@ -62,16 +73,20 @@ namespace srcrepair.core
         /// FPSConfig class constructor.
         /// </summary>
         /// <param name="CfName">FPS-config friendly name.</param>
-        /// <param name="CfFileName">FPS-config file name.</param>
-        /// <param name="CfDescr">FPS-config description.</param>
+        /// <param name="CfURI">FPS-config file name.</param>
+        /// <param name="CfDescriptio">FPS-config description.</param>
         /// <param name="CfGames">Array of supported by FPS-configs game IDs.</param>
-        public FPSConfig(string CfName, string CfFileName, string CfDescr, string[] CfGames)
+        /// <param name="CfArchiveDIr">Working directory in download archive.</param>
+        /// <param name="CfInstallDir">FPS-config installation directory.</param>
+        public FPSConfig(string CfName, string CfURI, string CfDescriptio, string[] CfGames, string CfArchiveDIr, string CfInstallDir)
         {
             // Setting class properties...
             Name = CfName;
-            FileName = CfFileName;
-            Description = CfDescr;
+            URI = CfURI;
+            Description = CfDescriptio;
             SupportedGames = new List<String>(CfGames);
+            ArchiveDir = CfArchiveDIr;
+            InstallDir = CfInstallDir;
         }
     }
 }
