@@ -41,6 +41,7 @@ Warning: outdated. Do not use on latest Team Fortress 2 versions!
         </en>
         <ArchiveDir>bonhighfps</ArchiveDir>
         <InstallDir>bonhighfps</InstallDir>
+        <Hash2>363a42577e847189adfeaa229748c8d314dd5271a19e0ca643dfc6d2bbadf1ea255a66ce2bd61a8f00652cddae6f7b52f7056884ad51b7621409aff037f45096</Hash2>
     </Config>
     <Config>
         <Name>chrisdx9frames</Name>
@@ -60,6 +61,7 @@ Graphics degradation: Some]]>
         </en>
         <ArchiveDir>chrisdx9frames</ArchiveDir>
         <InstallDir>chrisdx9frames</InstallDir>
+        <Hash2>99c510a751c124247f816fc35812e7cb299d8fb0f006ece536dd708f74a0cf702dbaa6d891ee100a779cac9f40b240481ff1e971dead7b782d6362647e819cb4</Hash2>
     </Config>
     <Config>
         <Name>chrishighframes</Name>
@@ -79,6 +81,7 @@ Graphics degradation: Some]]>
         </en>
         <ArchiveDir>chrishighframes</ArchiveDir>
         <InstallDir>chrishighframes</InstallDir>
+        <Hash2>872f2932ab33630969813443cab119eb2d44f4323215a99365b8920037ea8340aa3b93dad5dbe133381d4a13de5f0ae78f480fb0fb641616cc051456f27a9aa7</Hash2>
     </Config>
     <Config>
         <Name>chrismaxfps</Name>
@@ -98,6 +101,7 @@ Graphics degradation: Some]]>
         </en>
         <ArchiveDir>chrismaxfps</ArchiveDir>
         <InstallDir>chrismaxfps</InstallDir>
+        <Hash2>88a8f540f91c70546ad3a2d42f9d59ccea067336f645273c1db8a56fc0241ab53182747d8d6a2751d2ec20f1c46ce8a34cb8817848b076eb2dc558f5471823fb</Hash2>
     </Config>
     <Config>
         <Name>chrismaxquality</Name>
@@ -117,6 +121,7 @@ Graphics degradation: None]]>
         </en>
         <ArchiveDir>chrismaxquality</ArchiveDir>
         <InstallDir>chrismaxquality</InstallDir>
+        <Hash2>689d4d372b381a13f9cec1f959f26b4943b9e5e61eb6130c748e21de000b4e85698e4150745cbbaac88ffa49c4ab5ab266caa4577f0063490bedfa25798d8d27</Hash2>
     </Config>
     <Config>
         <Name>comangliacinema</Name>
@@ -136,6 +141,7 @@ Graphics degradation: None]]>
         </en>
         <ArchiveDir>comangliacinema</ArchiveDir>
         <InstallDir>comangliacinema</InstallDir>
+        <Hash2>d11a922bcf4492d58e2203f2b8dc88ed141ac0bd8a1dac05f65b10bf8d74165ca4628e78e669d260084cf1ff2a0c29279b7c140b1a528e1428aa6cfd80a450b0</Hash2>
     </Config>
     <Config>
         <Name>comangliamaxfps</Name>
@@ -155,6 +161,7 @@ Graphics degradation: 16-bit style]]>
         </en>
         <ArchiveDir>comangliamaxfps</ArchiveDir>
         <InstallDir>comangliamaxfps</InstallDir>
+        <Hash2>4ca0250c995b5f0fe3b51099c6de488ac4b6768cbbc33125f94ac2348ff912b8fcb79947465b8937cfa57050bd61d4e81f383f7a4858aee67f04a1e7028edcdc</Hash2>
     </Config>
     <Config>
         <Name>comangliastability</Name>
@@ -174,6 +181,7 @@ Graphics degradation: Moderate]]>
         </en>
         <ArchiveDir>comangliastability</ArchiveDir>
         <InstallDir>comangliastability</InstallDir>
+        <Hash2>d0ad2bca483b28ad91e88f750bb0c9202bd7ddfbc18a7b94a86023cd22376c885f31be734158d7ad10c7557fc2fa042160256f996bc5fd8aa03019c7ad7676ba</Hash2>
     </Config>
     <Config>
         <Name>dt_legal</Name>
@@ -193,6 +201,7 @@ Graphics degradation: Medium]]>
         </en>
         <ArchiveDir>dt_legal</ArchiveDir>
         <InstallDir>dt_legal</InstallDir>
+        <Hash2>4acc340f46c5c9ae9aab544b2006d1cb036210b4e335092bf28c395a5fdbb0dc4f81778262a884d4cb1b1ced43c33b67ce67fbb13e66d4987dd9533780039bf2</Hash2>
     </Config>
     <Config>
         <Name>m0refps</Name>
@@ -212,6 +221,7 @@ Graphics degradation: Moderate]]>
         </en>
         <ArchiveDir>m0refps</ArchiveDir>
         <InstallDir>m0refps</InstallDir>
+        <Hash2>0c46c1d820c2a9d8a7fb8a2415664fd321646448e0d89454d2daf5d14bcab6a160577cc13364d306b8142c2b9f6ef88b2a293041cd0692d2f742845d3957cb6d</Hash2>
     </Config>
     <Config>
         <Name>m0rehighfps</Name>
@@ -231,6 +241,7 @@ Graphics degradation: High]]>
         </en>
         <ArchiveDir>m0rehighfps</ArchiveDir>
         <InstallDir>m0rehighfps</InstallDir>
+        <Hash2>574c8808fc0d47f38fb348bf8d9c6b78e35371002402d23ec2bd977b9560fca0076ab5a28ed5e2784fb248e5d013e002e0d20bc1f84bc796ada25aa0c2d97653</Hash2>
     </Config>
     <Config>
         <Name>skullhighfps</Name>
@@ -250,6 +261,7 @@ Graphics degradation: Moderate]]>
         </en>
         <ArchiveDir>skullhighfps</ArchiveDir>
         <InstallDir>skullhighfps</InstallDir>
+        <Hash2>27b682646e379940150bcbff3a99540625f88ff57965f05d4d0f8ab15d45f0704f62423c857e87988df0e768fbab3689aef494e637992ba1ee675924e24648e0</Hash2>
     </Config>
     <Config>
         <Name>v1tsk's_generic</Name>
@@ -269,6 +281,7 @@ Graphics degradation: No]]>
         </en>
         <ArchiveDir>v1tsk_generic</ArchiveDir>
         <InstallDir>v1tsk_generic</InstallDir>
+        <Hash2>083d7e9dcb9430fbe426eda752a0683f56d8ad65aef924bea0cc3fbb8c3d5e27d0ded21c49686595817ded139708fa46f347a5f2b9888737ec021a666f02e140</Hash2>
     </Config>
     <Config>
         <Name>mastercomfig-maxperf</Name>
@@ -288,6 +301,7 @@ Graphics degradation: 16-bit style]]>
         </en>
         <ArchiveDir>mastercomfigpf</ArchiveDir>
         <InstallDir>mastercomfigpf</InstallDir>
+        <Hash2>fba5216ca3e0400be2e5cf0e2a70425160859e77d960631394cbb772266e95db65e0f82b4f5d01144816fd8a4037e0de89bc243f4cbcf1b28f5259ad02005d42</Hash2>
     </Config>
     <Config>
         <Name>mastercomfig-quality</Name>
@@ -307,6 +321,7 @@ Graphics degradation: None]]>
         </en>
         <ArchiveDir>mastercomfigmq</ArchiveDir>
         <InstallDir>mastercomfigmq</InstallDir>
+        <Hash2>061b26887a139e2ae79d5bc6905a3881c35a5ec2eb720393905727ccd51d52bc2b5795af780c70608e5d7176640e8ab0f122cecdc59318d86cff7495d8e14389</Hash2>
     </Config>
     <Config>
         <Name>rhaprody-perf</Name>
@@ -326,5 +341,6 @@ Graphics degradation: Moderate]]>
         </en>
         <ArchiveDir>rhapsodyfps</ArchiveDir>
         <InstallDir>rhapsodyfps</InstallDir>
+        <Hash2>18559535cde2762fc86423ab182ef1ef095182c814d037de3e60b09ec855dceb3691402221235463b5e35b639ef9c1befabbc2c9c9b635f7e4f2a1898588361f</Hash2>
     </Config>
 </Configs>
