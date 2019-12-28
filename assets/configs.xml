@@ -22,7 +22,7 @@
 <Configs>
     <Config>
         <Name>bonhighfps</Name>
-        <FileName>bonhighfps.cfg</FileName>
+        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/bonhighfps/bonhighfps_87b0c90d.zip</URI>
         <SupportedGames>240</SupportedGames>
         <ru>
         <![CDATA[Один из самых продвинутых FPS-конфигов. При его использовании изображение становится похожим на картинку на 16-битной консоли.
@@ -39,10 +39,12 @@ Graphics degradation: 16-bit style
 Warning: outdated. Do not use on latest Team Fortress 2 versions!
 ]]>
         </en>
+        <ArchiveDir>bonhighfps</ArchiveDir>
+        <InstallDir>bonhighfps</InstallDir>
     </Config>
     <Config>
         <Name>chrisdx9frames</Name>
-        <FileName>chrisdx9frames.cfg</FileName>
+        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/chrisdx9frames/chrisdx9frames_27a9de17.zip</URI>
         <SupportedGames>240</SupportedGames>
         <ru>
         <![CDATA[Dx9frames - это специальная модификация конфига chrishighframes для работы в режиме DirectX 9.0. Рекомендуется на не слишком старых ПК.
@@ -56,10 +58,12 @@ Warning: outdated. Do not use on latest Team Fortress 2 versions!
 FPS increase: High
 Graphics degradation: Some]]>
         </en>
+        <ArchiveDir>chrisdx9frames</ArchiveDir>
+        <InstallDir>chrisdx9frames</InstallDir>
     </Config>
     <Config>
         <Name>chrishighframes</Name>
-        <FileName>chrishighframes.cfg</FileName>
+        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/chrishighframes/chrishighframes_1299bd6a.zip</URI>
         <SupportedGames>240</SupportedGames>
         <ru>
         <![CDATA[Неплохой FPS-конфиг, при значительном увеличении кадровой частоты, не сильно портящий изображение. Рекомендуется на не слишком старых ПК.
@@ -73,10 +77,12 @@ Graphics degradation: Some]]>
 Прирост производительности: Высокий
 Ухудшение качества графики: Высокое]]>
         </en>
+        <ArchiveDir>chrishighframes</ArchiveDir>
+        <InstallDir>chrishighframes</InstallDir>
     </Config>
     <Config>
         <Name>chrismaxfps</Name>
-        <FileName>chrismaxfps.cfg</FileName>
+        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/chrismaxfps/chrismaxfps_c6cdb05b.zip</URI>
         <SupportedGames>240</SupportedGames>
         <ru>
         <![CDATA[Хороший FPS-конфиг, при значительном увеличении кадровой частоты, незначительно портящий изображение. Рекомендуется к использованию на старых ПК.
@@ -90,10 +96,12 @@ Graphics degradation: Some]]>
 FPS increase: High
 Graphics degradation: Some]]>
         </en>
+        <ArchiveDir>chrismaxfps</ArchiveDir>
+        <InstallDir>chrismaxfps</InstallDir>
     </Config>
     <Config>
         <Name>chrismaxquality</Name>
-        <FileName>chrismaxquality.cfg</FileName>
+        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/chrismaxquality/chrismaxquality_a4253a96.zip</URI>
         <SupportedGames>240</SupportedGames>
         <ru>
         <![CDATA[FPS-конфиг "наоборот". Устанавливает все графические настройки игры на максимум, что позволит получить наилучшее качество графики. Устанавливайте только на мощном современном компьютере.
@@ -107,10 +115,12 @@ Graphics degradation: Some]]>
 FPS increase: None
 Graphics degradation: None]]>
         </en>
+        <ArchiveDir>chrismaxquality</ArchiveDir>
+        <InstallDir>chrismaxquality</InstallDir>
     </Config>
     <Config>
         <Name>comangliacinema</Name>
-        <FileName>comangliacinema.cfg</FileName>
+        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/comangliacinema/comangliacinema_cd2dc98a.zip</URI>
         <SupportedGames>240;440</SupportedGames>
         <ru>
         <![CDATA[FPS-конфиг "наоборот". Устанавливает все графические настройки игры на максимум, что позволит получить наилучшее качество графики. Данный конфиг создан специально для создателей видеороликов. Используйте только на мощном современном компьютере.
@@ -124,10 +134,12 @@ Graphics degradation: None]]>
 FPS increase: None
 Graphics degradation: None]]>
         </en>
+        <ArchiveDir>comangliacinema</ArchiveDir>
+        <InstallDir>comangliacinema</InstallDir>
     </Config>
     <Config>
         <Name>comangliamaxfps</Name>
-        <FileName>comangliamaxfps.cfg</FileName>
+        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/comangliamaxfps/comangliamaxfps_40ecec45.zip</URI>
         <SupportedGames>240;440</SupportedGames>
         <ru>
         <![CDATA[Улучшенный вариант FPS-конфига от Chris. Обеспечивает значительный прирост кадровой частоты при сильном ухудшении качества картинки. Автор предупреждает о том, что данный конфиг нестабилен на системах с одноядерным процессором (вместо него следует использовать comangliastability.cfg).
@@ -141,10 +153,12 @@ Graphics degradation: None]]>
 FPS increase: High
 Graphics degradation: 16-bit style]]>
         </en>
+        <ArchiveDir>comangliamaxfps</ArchiveDir>
+        <InstallDir>comangliamaxfps</InstallDir>
     </Config>
     <Config>
         <Name>comangliastability</Name>
-        <FileName>comangliastability.cfg</FileName>
+        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/comangliastability/comangliastability_c18909b4.zip</URI>
         <SupportedGames>240;440</SupportedGames>
         <ru>
         <![CDATA[Неплохой FPS-конфиг, при значительном увеличении кадровой частоты, не сильно портящий изображение. Улучшенная версия конфига от Криса. Оптимизирован для максимальной стабильности. Рекомендуется на не слишком старых ПК.
@@ -158,10 +172,12 @@ Graphics degradation: 16-bit style]]>
 FPS increase: High
 Graphics degradation: Moderate]]>
         </en>
+        <ArchiveDir>comangliastability</ArchiveDir>
+        <InstallDir>comangliastability</InstallDir>
     </Config>
     <Config>
         <Name>dt_legal</Name>
-        <FileName>dt_legal.cfg</FileName>
+        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/dt_legal/dt_legal_9750d2a5.zip</URI>
         <SupportedGames>240</SupportedGames>
         <ru>
     <![CDATA[Хороший конфиг для слабых машин, обеспечивающий значительный прирост кадровой частоты. Полностью легален для использования в большинстве европейских киберспортивных лиг.
@@ -175,10 +191,12 @@ Graphics degradation: Moderate]]>
 FPS increase: Pretty much
 Graphics degradation: Medium]]>
         </en>
+        <ArchiveDir>dt_legal</ArchiveDir>
+        <InstallDir>dt_legal</InstallDir>
     </Config>
     <Config>
         <Name>m0refps</Name>
-        <FileName>m0refps.cfg</FileName>
+        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/m0refps/m0refps_a74b1e52.zip</URI>
         <SupportedGames>240</SupportedGames>
         <ru>
         <![CDATA[Довольно известный в кругу киберспортсменов конфиг, который при достаточно сильном снижении качества графики даёт не слишком большой прирост в FPS. Рекомендуется использовать сей конфиг лишь на «средних» компьютерах.
@@ -192,10 +210,12 @@ Graphics degradation: Medium]]>
 FPS increase: Medium
 Graphics degradation: Moderate]]>
         </en>
+        <ArchiveDir>m0refps</ArchiveDir>
+        <InstallDir>m0refps</InstallDir>
     </Config>
     <Config>
         <Name>m0rehighfps</Name>
-        <FileName>m0rehighfps.cfg</FileName>
+        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/m0rehighfps/m0rehighfps_b75625bd.zip</URI>
         <SupportedGames>240</SupportedGames>
         <ru>
         <![CDATA[Первый мощный и качественный FPS-конфиг, рассчитанный в основном на старые компьютеры. Очень сильно ухудшает качество графики TF2 (игра начинает напоминать CS 1.6), но позволяет играть даже на самых слабых компьютерах.
@@ -209,10 +229,12 @@ Graphics degradation: Moderate]]>
 FPS increase: High
 Graphics degradation: High]]>
         </en>
+        <ArchiveDir>m0rehighfps</ArchiveDir>
+        <InstallDir>m0rehighfps</InstallDir>
     </Config>
     <Config>
         <Name>skullhighfps</Name>
-        <FileName>skullhighfps.cfg</FileName>
+        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/skullhighfps/skullhighfps_abb09ec4.zip</URI>
         <SupportedGames>240</SupportedGames>
         <ru>
         <![CDATA[Конфиг от Skull'a. По производительности почти идентичен конфигу bon'a, но графика в игре становится немного лучше, чем при использовании bonhighfps. Рекомендуется использовать на старых ПК, страдающих острой нехваткой кадровой частоты.
@@ -226,10 +248,12 @@ Graphics degradation: High]]>
 FPS increase: High
 Graphics degradation: Moderate]]>
         </en>
+        <ArchiveDir>skullhighfps</ArchiveDir>
+        <InstallDir>skullhighfps</InstallDir>
     </Config>
     <Config>
         <Name>v1tsk's_generic</Name>
-        <FileName>v1tsk's_generic.cfg</FileName>
+        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/v1tsk_generic/v1tsk_generic_ccbbaa8d.zip</URI>
         <SupportedGames>240;440</SupportedGames>
         <ru>
         <![CDATA[Базовый конфиг (ранее назывался team-fortress.ru), обеспечивающий небольшой плюс к FPS, но и не портящий изображение. Он снижает только те параметры, которые обеспечивают максимальный прирост графики. Рекомендуется к использованию любому игроку.
@@ -243,10 +267,12 @@ Graphics degradation: Moderate]]>
 FPS increase: Low
 Graphics degradation: No]]>
         </en>
+        <ArchiveDir>v1tsk_generic</ArchiveDir>
+        <InstallDir>v1tsk_generic</InstallDir>
     </Config>
     <Config>
         <Name>mastercomfig-maxperf</Name>
-        <FileName>mastercomfigpf.cfg</FileName>
+        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/mastercomfigpf/mastercomfigpf_6885cb6d.zip</URI>
         <SupportedGames>440</SupportedGames>
         <ru>
         <![CDATA[Доработанный и улучшенный вариант FPS-конфига. Обеспечивает значительный прирост кадровой частоты при очень сильном ухудшении качества картинки. Должен обеспечивать максимально высокий прирост производительности игры.
@@ -260,10 +286,12 @@ Graphics degradation: No]]>
 FPS increase: High
 Graphics degradation: 16-bit style]]>
         </en>
+        <ArchiveDir>mastercomfigpf</ArchiveDir>
+        <InstallDir>mastercomfigpf</InstallDir>
     </Config>
     <Config>
         <Name>mastercomfig-quality</Name>
-        <FileName>mastercomfigmq.cfg</FileName>
+        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/mastercomfigmq/mastercomfigmq_7356d9b8.zip</URI>
         <SupportedGames>440</SupportedGames>
         <ru>
         <![CDATA[FPS-конфиг "наоборот". Устанавливает все графические настройки игры на максимум, что позволит получить наилучшее качество графики. Данный конфиг создан специально для создателей видеороликов. Используйте только на мощном современном компьютере.
@@ -277,10 +305,12 @@ Graphics degradation: 16-bit style]]>
 FPS increase: None
 Graphics degradation: None]]>
         </en>
+        <ArchiveDir>mastercomfigmq</ArchiveDir>
+        <InstallDir>mastercomfigmq</InstallDir>
     </Config>
     <Config>
         <Name>rhaprody-perf</Name>
-        <FileName>rhapsodyfps.cfg</FileName>
+        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/rhapsodyfps/rhapsodyfps_7ae0f81a.zip</URI>
         <SupportedGames>440</SupportedGames>
         <ru>
         <![CDATA[Неплохой вариант FPS-конфига. Обеспечивает прирост кадровой частоты при среднем ухудшении качества графики. Должен обеспечивать приемлемую производительность игры на большинстве компьютеров.
@@ -294,5 +324,7 @@ Graphics degradation: None]]>
 FPS increase: Moderate
 Graphics degradation: Moderate]]>
         </en>
+        <ArchiveDir>rhapsodyfps</ArchiveDir>
+        <InstallDir>rhapsodyfps</InstallDir>
     </Config>
 </Configs>
