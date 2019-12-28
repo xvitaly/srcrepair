@@ -323,38 +323,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Content Include="..\assets\cfgs\bonhighfps.cfg">
-      <Link>cfgs\bonhighfps.cfg</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\assets\cfgs\chrishighframes.cfg">
-      <Link>cfgs\chrishighframes.cfg</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\assets\cfgs\chrismaxfps.cfg">
-      <Link>cfgs\chrismaxfps.cfg</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\assets\cfgs\dt_legal.cfg">
-      <Link>cfgs\dt_legal.cfg</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\assets\cfgs\m0refps.cfg">
-      <Link>cfgs\m0refps.cfg</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\assets\cfgs\m0rehighfps.cfg">
-      <Link>cfgs\m0rehighfps.cfg</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\assets\cfgs\skullhighfps.cfg">
-      <Link>cfgs\skullhighfps.cfg</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\assets\cfgs\v1tsk%27s_generic.cfg">
-      <Link>cfgs\v1tsk%27s_generic.cfg</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\assets\cleanup.xml">
       <Link>cleanup.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -367,40 +335,8 @@
       <Link>huds.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\assets\cfgs\chrisdx9frames.cfg">
-      <Link>cfgs\chrisdx9frames.cfg</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\COPYING">
       <Link>COPYING</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <None Include="..\assets\cfgs\chrismaxquality.cfg">
-      <Link>cfgs\chrismaxquality.cfg</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <Content Include="..\assets\cfgs\comangliamaxfps.cfg">
-      <Link>cfgs\comangliamaxfps.cfg</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\assets\cfgs\comangliacinema.cfg">
-      <Link>cfgs\comangliacinema.cfg</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\assets\cfgs\comangliastability.cfg">
-      <Link>cfgs\comangliastability.cfg</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\assets\cfgs\mastercomfigmq.cfg">
-      <Link>cfgs\mastercomfigmq.cfg</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\assets\cfgs\mastercomfigpf.cfg">
-      <Link>cfgs\mastercomfigpf.cfg</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\assets\cfgs\rhapsodyfps.cfg">
-      <Link>cfgs\rhapsodyfps.cfg</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="app.config" />
