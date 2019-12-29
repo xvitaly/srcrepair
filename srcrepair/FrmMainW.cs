@@ -905,6 +905,7 @@ namespace srcrepair.gui
         /// </summary>
         private void HandleConfigs()
         {
+            if (!Directory.Exists(App.SourceGames[AppSelector.Text].AppCfgDir)) { Directory.CreateDirectory(App.SourceGames[AppSelector.Text].AppCfgDir); }
             App.SourceGames[AppSelector.Text].FPSConfigs = FileManager.ExpandFileList(ConfigManager.ListFPSConfigs(App.SourceGames[AppSelector.Text].FullGamePath, App.SourceGames[AppSelector.Text].IsUsingUserDir), true);
             GT_Warning.Visible = App.SourceGames[AppSelector.Text].FPSConfigs.Count > 0;
             FP_Uninstall.Enabled = App.SourceGames[AppSelector.Text].FPSConfigs.Count > 0;
@@ -1245,6 +1246,59 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// BackUp available FPS-configs to archive if SafeCleanup
+        /// is enabled.
+        /// </summary>
+        private void BackUpFPSConfigs()
+        {
+            if (Properties.Settings.Default.SafeCleanup)
+            {
+                if (App.SourceGames[AppSelector.Text].FPSConfigs.Count > 0)
+                {
+                    try
+                    {
+                        FileManager.CompressFiles(App.SourceGames[AppSelector.Text].FPSConfigs, FileManager.GenerateBackUpFileName(App.SourceGames[AppSelector.Text].FullBackUpDirPath, Properties.Resources.BU_PrefixCfg));
+                    }
+                    catch (Exception Ex)
+                    {
+                        Logger.Warn(Ex, DebugStrings.AppDbgExFpsInstBackup);
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Shows FPS-config selection dialog and load selected config
+        /// in Config Editor module or default text editor.
+        /// </summary>
+        /// <param name="UseNotepad">Use default text editor instead of Config Editor.</param>
+        private void EditFPSConfig(bool UseNotepad = false)
+        {
+            try
+            {
+                string ConfigFile = GuiHelpers.FormShowCfgSelect(App.SourceGames[AppSelector.Text].FPSConfigs);
+
+                if (!String.IsNullOrWhiteSpace(ConfigFile))
+                {
+                    if (UseNotepad)
+                    {
+                        ProcessManager.OpenTextEditor(ConfigFile, Properties.Settings.Default.EditorBin, App.Platform.OS);
+                    }
+                    else
+                    {
+                        ReadConfigFromFile(ConfigFile);
+                        MainTabControl.SelectedIndex = 1;
+                    }
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(AppStrings.CS_FailedToOpenCfg, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, DebugStrings.AppDbgExCfgSelection);
+            }
+        }
+
         #endregion
 
         #region Internal Workers
@@ -1290,7 +1344,7 @@ namespace srcrepair.gui
         /// <param name="e">Additional arguments.</param>
         private void BW_FPRecv_DoWork(object sender, DoWorkEventArgs e)
         {
-            App.SourceGames[(string)e.Argument].CFGMan = new ConfigManager(App.FullAppPath, AppStrings.AppLangPrefix);
+            App.SourceGames[(string)e.Argument].CFGMan = new ConfigManager(App.FullAppPath, App.SourceGames[(string)e.Argument].AppCfgDir, App.SourceGames[(string)e.Argument].IsUsingUserDir ? App.SourceGames[(string)e.Argument].CustomInstallDir : App.SourceGames[(string)e.Argument].FullGamePath, AppStrings.AppLangPrefix);
         }
 
         /// <summary>
@@ -1850,25 +1904,52 @@ namespace srcrepair.gui
             {
                 if (MessageBox.Show(AppStrings.FP_InstallQuestion, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if (Properties.Settings.Default.SafeCleanup)
+                    BackUpFPSConfigs();
+                    try
                     {
-                        if (App.SourceGames[AppSelector.Text].FPSConfigs.Count > 0)
+                        // Downloading FPS-config archive...
+                        GuiHelpers.FormShowDownloader(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].URI, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile);
+                        
+                        // Checking if downloaded archive exists...
+                        if (File.Exists(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile))
                         {
+                            // Checking hash of downloaded file...
+                            if (FileManager.CalculateFileSHA512(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile) == App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].FileHash)
+                            {
+                                // Checking if selected FPS-config is installed...
+                                if (App.SourceGames[AppSelector.Text].CFGMan.CheckInstalledConfig(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir))
+                                {
+                                    // Removing installed files...
+                                    GuiHelpers.FormShowRemoveFiles(SingleToArray(Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir)));
+                                }
+
+                                // Extracting downloaded archove...
+                                GuiHelpers.FormShowArchiveExtract(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile, App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath);
+                                
+                                // Installation successful message...
+                                MessageBox.Show(AppStrings.FP_InstallSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                // Hash missmatch. Show error...
+                                MessageBox.Show(AppStrings.FP_HashError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                            
+                            // Removing downloaded file...
                             try
                             {
-                                FileManager.CompressFiles(App.SourceGames[AppSelector.Text].FPSConfigs, FileManager.GenerateBackUpFileName(App.SourceGames[AppSelector.Text].FullBackUpDirPath, Properties.Resources.BU_PrefixCfg));
+                                File.Delete(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile);
                             }
                             catch (Exception Ex)
                             {
-                                Logger.Warn(Ex, DebugStrings.AppDbgExFpsInstBackup);
+                                Logger.Warn(Ex, DebugStrings.AppDbgExCfgArchRem);
                             }
-                        }
-                    }
 
-                    try
-                    {
-                        ConfigManager.InstallConfigNow(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].FileName, App.FullAppPath, App.SourceGames[AppSelector.Text].FullGamePath, App.SourceGames[AppSelector.Text].IsUsingUserDir, Properties.Settings.Default.UserCustDirName);
-                        MessageBox.Show(AppStrings.FP_InstallSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show(AppStrings.FP_DownloadError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                         HandleConfigs();
                     }
                     catch (Exception Ex)
@@ -1917,21 +1998,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void GT_Warning_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string ConfigFile = GuiHelpers.FormShowCfgSelect(App.SourceGames[AppSelector.Text].FPSConfigs);
-
-                if (!String.IsNullOrWhiteSpace(ConfigFile))
-                {
-                    ReadConfigFromFile(ConfigFile);
-                    MainTabControl.SelectedIndex = 1;
-                }
-            }
-            catch (Exception Ex)
-            {
-                MessageBox.Show(AppStrings.CS_FailedToOpenCfg, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, DebugStrings.AppDbgExCfgSelection);
-            }
+            EditFPSConfig(ModifierKeys == Keys.Shift);
         }
 
         /// <summary>
@@ -2642,24 +2709,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void FP_OpenNotepad_Click(object sender, EventArgs e)
         {
-            string ConfigFile = Path.Combine(App.FullAppPath, "cfgs", App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].FileName);
-            
-            if (Control.ModifierKeys == Keys.Shift)
-            {
-                ReadConfigFromFile(ConfigFile);
-                MainTabControl.SelectedIndex = 1;
-            }
-            else
-            {
-                try
-                {
-                    ProcessManager.OpenTextEditor(ConfigFile, Properties.Settings.Default.EditorBin, App.Platform.OS);
-                }
-                catch (Exception Ex)
-                {
-                    Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdExtEdt);
-                }
-            }
+            EditFPSConfig(ModifierKeys != Keys.Shift);
         }
 
         /// <summary>
@@ -3143,7 +3193,8 @@ namespace srcrepair.gui
         {
             List<String> CleanDirs = new List<string>
             {
-                Path.Combine(App.AppUserDir, StringsManager.HudDirectoryName, "*.*")
+                Path.Combine(App.AppUserDir, StringsManager.HudDirectoryName, "*.*"),
+                Path.Combine(App.AppUserDir, StringsManager.ConfigDirectoryName, "*.*")
             };
             GuiHelpers.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
         }
