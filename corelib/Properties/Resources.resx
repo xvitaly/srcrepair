@@ -138,6 +138,9 @@
   <data name="CfgDbFile" xml:space="preserve">
     <value>configs.xml</value>
   </data>
+  <data name="CfgLocalDir" xml:space="preserve">
+    <value>cfgs</value>
+  </data>
   <data name="CleanupDbFile" xml:space="preserve">
     <value>cleanup.xml</value>
   </data>

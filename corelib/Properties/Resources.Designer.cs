@@ -124,6 +124,15 @@ namespace srcrepair.core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to cfgs.
+        /// </summary>
+        internal static string CfgLocalDir {
+            get {
+                return ResourceManager.GetString("CfgLocalDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to cleanup.xml.
         /// </summary>
         internal static string CleanupDbFile {
