@@ -1276,25 +1276,21 @@ namespace srcrepair.gui
         /// <param name="UseNotepad">Use default text editor instead of Config Editor.</param>
         private void EditFPSConfig(string ConfigFile, bool UseNotepad = false)
         {
-            try
+            if (!String.IsNullOrWhiteSpace(ConfigFile) && File.Exists(ConfigFile))
             {
-                if (!String.IsNullOrWhiteSpace(ConfigFile) && File.Exists(ConfigFile))
+                if (UseNotepad)
                 {
-                    if (UseNotepad)
-                    {
-                        ProcessManager.OpenTextEditor(ConfigFile, Properties.Settings.Default.EditorBin, App.Platform.OS);
-                    }
-                    else
-                    {
-                        ReadConfigFromFile(ConfigFile);
-                        MainTabControl.SelectedIndex = 1;
-                    }
+                    ProcessManager.OpenTextEditor(ConfigFile, Properties.Settings.Default.EditorBin, App.Platform.OS);
+                }
+                else
+                {
+                    ReadConfigFromFile(ConfigFile);
+                    MainTabControl.SelectedIndex = 1;
                 }
             }
-            catch (Exception Ex)
+            else
             {
-                MessageBox.Show(AppStrings.CS_FailedToOpenCfg, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, DebugStrings.AppDbgExCfgSelection);
+                Logger.Warn(String.Format(DebugStrings.AppDbgExCfgEditorLoad, ConfigFile));
             }
         }
 
@@ -1997,7 +1993,15 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void GT_Warning_Click(object sender, EventArgs e)
         {
-            EditFPSConfig(GuiHelpers.FormShowCfgSelect(App.SourceGames[AppSelector.Text].FPSConfigs), ModifierKeys == Keys.Shift);
+            try
+            {
+                EditFPSConfig(GuiHelpers.FormShowCfgSelect(App.SourceGames[AppSelector.Text].FPSConfigs), ModifierKeys == Keys.Shift);
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(AppStrings.CS_FailedToOpenCfg, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, DebugStrings.AppDbgExCfgSelection);
+            }
         }
 
         /// <summary>
@@ -2708,7 +2712,15 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void FP_OpenNotepad_Click(object sender, EventArgs e)
         {
-            EditFPSConfig(Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, "cfg", "autoexec.cfg"), ModifierKeys != Keys.Shift);
+            try
+            {
+                EditFPSConfig(Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, "cfg", "autoexec.cfg"), ModifierKeys != Keys.Shift);
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(AppStrings.FP_EditorLoadFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, DebugStrings.AppDbgExEditCfg);
+            }
         }
 
         /// <summary>

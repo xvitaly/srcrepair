@@ -205,6 +205,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to find and load &quot;{0}&quot; FPS-config file by editor..
+        /// </summary>
+        internal static string AppDbgExCfgEditorLoad {
+            get {
+                return ResourceManager.GetString("AppDbgExCfgEditorLoad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while reading config file in Config editor..
         /// </summary>
         internal static string AppDbgExCfgEdLoad {
@@ -300,6 +309,15 @@ namespace srcrepair.gui {
         internal static string AppDbgExCvarDescFetchFailure {
             get {
                 return ResourceManager.GetString("AppDbgExCvarDescFetchFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception on trying to load installed FPS-config to editor..
+        /// </summary>
+        internal static string AppDbgExEditCfg {
+            get {
+                return ResourceManager.GetString("AppDbgExEditCfg", resourceCulture);
             }
         }
         

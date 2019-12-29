@@ -709,6 +709,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to load FPS-config to Config Editor!.
+        /// </summary>
+        internal static string FP_EditorLoadFailure {
+            get {
+                return ResourceManager.GetString("FP_EditorLoadFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to check hash sum of downloaded file. Maybe it was damaged. Please try again later!.
         /// </summary>
         internal static string FP_HashError {

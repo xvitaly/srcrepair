@@ -165,6 +165,9 @@
   <data name="AppDbgExCfgEdExtEdt" xml:space="preserve">
     <value>Exception while trying to load config file in text editor.</value>
   </data>
+  <data name="AppDbgExCfgEditorLoad" xml:space="preserve">
+    <value>Failed to find and load "{0}" FPS-config file by editor.</value>
+  </data>
   <data name="AppDbgExCfgEdLoad" xml:space="preserve">
     <value>Exception while reading config file in Config editor.</value>
   </data>
@@ -197,6 +200,9 @@
   </data>
   <data name="AppDbgExCvarDescFetchFailure" xml:space="preserve">
     <value>Exception while fetching Cvar description from a separate resource file.</value>
+  </data>
+  <data name="AppDbgExEditCfg" xml:space="preserve">
+    <value>Exception on trying to load installed FPS-config to editor.</value>
   </data>
   <data name="AppDbgExFpsInstall" xml:space="preserve">
     <value>Exception during FPS config installation.</value>
