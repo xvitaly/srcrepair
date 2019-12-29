@@ -663,4 +663,10 @@
   <data name="AppLibVersionMissmatch" xml:space="preserve">
     <value>Core library version does not match application version. Please reinstall or report this issue to developers.</value>
   </data>
+  <data name="FP_DownloadError" xml:space="preserve">
+    <value>Cannot find downloaded archive with FPS-config. Please try again later.</value>
+  </data>
+  <data name="FP_HashError" xml:space="preserve">
+    <value>Failed to check hash sum of downloaded file. Maybe it was damaged. Please try again later!</value>
+  </data>
 </root>

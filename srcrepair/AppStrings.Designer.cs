@@ -700,6 +700,24 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cannot find downloaded archive with FPS-config. Please try again later..
+        /// </summary>
+        internal static string FP_DownloadError {
+            get {
+                return ResourceManager.GetString("FP_DownloadError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to check hash sum of downloaded file. Maybe it was damaged. Please try again later!.
+        /// </summary>
+        internal static string FP_HashError {
+            get {
+                return ResourceManager.GetString("FP_HashError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A critical error: could not install the selected config!.
         /// </summary>
         internal static string FP_InstallFailed {
