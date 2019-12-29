@@ -151,6 +151,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while removing FPS-config archive file..
+        /// </summary>
+        internal static string AppDbgExCfgArchRem {
+            get {
+                return ResourceManager.GetString("AppDbgExCfgArchRem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to save config auto backup before saving it in Config editor..
         /// </summary>
         internal static string AppDbgExCfgEdAutoBackup {

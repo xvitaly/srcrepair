@@ -147,6 +147,9 @@
   <data name="AppDbgExBugRep" xml:space="preserve">
     <value>Exception while trying to open web browser to open bug tracker URL.</value>
   </data>
+  <data name="AppDbgExCfgArchRem" xml:space="preserve">
+    <value>Exception while removing FPS-config archive file.</value>
+  </data>
   <data name="AppDbgExCfgEdAutoBackup" xml:space="preserve">
     <value>Exception while trying to save config auto backup before saving it in Config editor.</value>
   </data>
