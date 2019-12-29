@@ -60,6 +60,11 @@ namespace srcrepair.core
         public FPSConfig this[string key] => Configs[key];
 
         /// <summary>
+        /// Gets or sets full path to FPS-config installation directory.
+        /// </summary>
+        public string FPSConfigInstallPath { get; private set; }
+
+        /// <summary>
         /// Get list of common FPS-config paths installation.
         /// </summary>
         /// <param name="GamePath">Game installation directory.</param>
@@ -73,34 +78,42 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Install FPS-config to game.
+        /// Checks if specified FPS-config is installed.
         /// </summary>
-        /// <param name="ConfName">FPS-config name.</param>
-        /// <param name="AppPath">Path to SRC Repair installation directory.</param>
-        /// <param name="GameDir">Path to game installation directory.</param>
-        /// <param name="UseCustmDir">If game use custom user directories for custom stuff.</param>
-        /// <param name="CustmDir">Name of custom game stuff directory.</param>
-        public static void InstallConfigNow(string ConfName, string AppPath, string GameDir, bool UseCustmDir, string CustmDir)
+        /// <param name="ConfigInstallDirectory">HUD installation directory name.</param>
+        /// <returns>Return True if specified FPS-config is installed.</returns>
+        public bool CheckInstalledConfig(string ConfigInstallDirectory)
         {
-            // Generating full path to destination...
-            string DestPath = Path.Combine(GameDir, UseCustmDir ? Path.Combine("custom", CustmDir) : String.Empty, "cfg");
+            // Creating some local variables...
+            bool Result = false;
+            string FullInstallPath = Path.Combine(FPSConfigInstallPath, ConfigInstallDirectory);
 
-            // Checking if destination exists. If not, creating...
-            if (!Directory.Exists(DestPath)) { Directory.CreateDirectory(DestPath); }
+            // Checks if directory exists...
+            if (Directory.Exists(FullInstallPath))
+            {
+                // Checks if any files exists in this directory...
+                using (IEnumerator<String> StrEn = Directory.EnumerateFileSystemEntries(FullInstallPath).GetEnumerator())
+                {
+                    Result = StrEn.MoveNext();
+                }
+            }
 
-            // Installing FPS-config by copying it's file to destination...
-            File.Copy(Path.Combine(AppPath, "cfgs", ConfName), Path.Combine(DestPath, "autoexec.cfg"), true);
+            // Returning result...
+            return Result;
         }
 
         /// <summary>
         /// ConfigManager class constructor.
         /// </summary>
         /// <param name="FullAppPath">Path to SRC Repair installation directory.</param>
+        /// <param name="AppCfgDir">Full path to the local FPS-configs download directory.</param>
+        /// <param name="Destination">Full path FPS-config installation directory.</param>
         /// <param name="LangPrefix">SRC Repair language code.</param>
-        public ConfigManager(string FullAppPath, string LangPrefix)
+        public ConfigManager(string FullAppPath, string AppCfgDir, string Destination, string LangPrefix)
         {
             // Initializing empty dictionary...
             Configs = new Dictionary<string, FPSConfig>();
+            FPSConfigInstallPath = Destination;
 
             // Fetching list of available FPS-configs from XML database file...
             using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, StringsManager.ConfigDatabaseName), FileMode.Open, FileAccess.Read))
@@ -114,7 +127,7 @@ namespace srcrepair.core
                 {
                     try
                     {
-                        Configs.Add(XmlItem.SelectSingleNode("Name").InnerText, new FPSConfig(XmlItem.SelectSingleNode("Name").InnerText, XmlItem.SelectSingleNode("URI").InnerText, XmlItem.SelectSingleNode(LangPrefix).InnerText, XmlItem.SelectSingleNode("SupportedGames").InnerText.Split(';'), XmlItem.SelectSingleNode("ArchiveDir").InnerText, XmlItem.SelectSingleNode("InstallDir").InnerText, XmlItem.SelectSingleNode("Hash2").InnerText, Path.GetFileName(XmlItem.SelectSingleNode("URI").InnerText)));
+                        Configs.Add(XmlItem.SelectSingleNode("Name").InnerText, new FPSConfig(XmlItem.SelectSingleNode("Name").InnerText, XmlItem.SelectSingleNode("URI").InnerText, XmlItem.SelectSingleNode(LangPrefix).InnerText, XmlItem.SelectSingleNode("SupportedGames").InnerText.Split(';'), XmlItem.SelectSingleNode("ArchiveDir").InnerText, XmlItem.SelectSingleNode("InstallDir").InnerText, XmlItem.SelectSingleNode("Hash2").InnerText, Path.Combine(AppCfgDir, Path.GetFileName(XmlItem.SelectSingleNode("URI").InnerText))));
                     }
                     catch (Exception Ex)
                     {
