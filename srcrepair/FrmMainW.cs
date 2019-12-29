@@ -1272,14 +1272,13 @@ namespace srcrepair.gui
         /// Shows FPS-config selection dialog and load selected config
         /// in Config Editor module or default text editor.
         /// </summary>
+        /// <param name="ConfigFile">Full path to config file to edit.</param>
         /// <param name="UseNotepad">Use default text editor instead of Config Editor.</param>
-        private void EditFPSConfig(bool UseNotepad = false)
+        private void EditFPSConfig(string ConfigFile, bool UseNotepad = false)
         {
             try
             {
-                string ConfigFile = GuiHelpers.FormShowCfgSelect(App.SourceGames[AppSelector.Text].FPSConfigs);
-
-                if (!String.IsNullOrWhiteSpace(ConfigFile))
+                if (!String.IsNullOrWhiteSpace(ConfigFile) && File.Exists(ConfigFile))
                 {
                     if (UseNotepad)
                     {
@@ -1998,7 +1997,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void GT_Warning_Click(object sender, EventArgs e)
         {
-            EditFPSConfig(ModifierKeys == Keys.Shift);
+            EditFPSConfig(GuiHelpers.FormShowCfgSelect(App.SourceGames[AppSelector.Text].FPSConfigs), ModifierKeys == Keys.Shift);
         }
 
         /// <summary>
@@ -2709,7 +2708,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void FP_OpenNotepad_Click(object sender, EventArgs e)
         {
-            EditFPSConfig(ModifierKeys != Keys.Shift);
+            EditFPSConfig(Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, "cfg", "autoexec.cfg"), ModifierKeys != Keys.Shift);
         }
 
         /// <summary>
