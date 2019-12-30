@@ -1894,8 +1894,10 @@ namespace srcrepair.gui
                 // Changing some controls state...
                 FP_Description.Text = App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].Description;
                 FP_Comp.Visible = !App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].CheckCompatibility(App.SourceGames[AppSelector.Text].GameInternalID);
-                FP_OpenNotepad.Enabled = Success;
                 FP_Install.Enabled = Success;
+
+                // Checking if selected FPS-config is installed...
+                SetFPSButtons(App.SourceGames[AppSelector.Text].CFGMan.CheckInstalledConfig(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir));
             }
             catch (Exception Ex)
             {
