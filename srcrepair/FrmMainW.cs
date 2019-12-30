@@ -943,6 +943,17 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Changes the state of some controls on "FPS-config" page.
+        /// </summary>
+        /// <param name="State">If selected FPS-config installed.</param>
+        private void SetFPSButtons(bool State)
+        {
+            FP_Install.Text = State ? AppStrings.FP_BtnUpdateText : AppStrings.FP_BtnInstallText;
+            FP_OpenNotepad.Enabled = State;
+            FP_Uninstall.Enabled = State;
+        }
+
+        /// <summary>
         /// Changes the state of the status bar depending of currently selected tab.
         /// </summary>
         private void UpdateStatusBar()
