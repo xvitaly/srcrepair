@@ -1877,10 +1877,14 @@ namespace srcrepair.gui
         {
             try
             {
+                // Checking result...
+                bool Success = !String.IsNullOrEmpty(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].Name);
+
+                // Changing some controls state...
                 FP_Description.Text = App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].Description;
                 FP_Comp.Visible = !App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].CheckCompatibility(App.SourceGames[AppSelector.Text].GameInternalID);
-                FP_OpenNotepad.Enabled = true;
-                FP_Install.Enabled = true;
+                FP_OpenNotepad.Enabled = Success;
+                FP_Install.Enabled = Success;
             }
             catch (Exception Ex)
             {
