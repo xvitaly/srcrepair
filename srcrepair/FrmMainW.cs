@@ -524,6 +524,7 @@ namespace srcrepair.gui
             // Disable controls on FPS-config tab...
             FP_Install.Enabled = false;
             FP_OpenNotepad.Enabled = false;
+            FP_Uninstall.Enabled = false;
             FP_Comp.Visible = false;
 
             // Disable controls on HUD Manager tab...
@@ -901,15 +902,13 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Handles with installed FPS-configs, shows special icon and works
-        /// with "Uninstall config" button.
+        /// Handles with installed FPS-configs and shows special icon.
         /// </summary>
         private void HandleConfigs()
         {
             if (!Directory.Exists(App.SourceGames[AppSelector.Text].AppCfgDir)) { Directory.CreateDirectory(App.SourceGames[AppSelector.Text].AppCfgDir); }
             App.SourceGames[AppSelector.Text].FPSConfigs = FileManager.ExpandFileList(ConfigManager.ListFPSConfigs(App.SourceGames[AppSelector.Text].FullGamePath, App.SourceGames[AppSelector.Text].IsUsingUserDir), true);
             GT_Warning.Visible = App.SourceGames[AppSelector.Text].FPSConfigs.Count > 0;
-            FP_Uninstall.Enabled = App.SourceGames[AppSelector.Text].FPSConfigs.Count > 0;
         }
 
         /// <summary>
@@ -949,8 +948,8 @@ namespace srcrepair.gui
         private void SetFPSButtons(bool State)
         {
             FP_Install.Text = State ? AppStrings.FP_BtnUpdateText : AppStrings.FP_BtnInstallText;
-            FP_OpenNotepad.Enabled = State;
             FP_Uninstall.Enabled = State;
+            FP_OpenNotepad.Enabled = State;
         }
 
         /// <summary>
