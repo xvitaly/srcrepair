@@ -523,6 +523,7 @@ namespace srcrepair.gui
 
             // Disable controls on FPS-config tab...
             FP_Install.Enabled = false;
+            FP_OpenNotepad.Enabled = false;
             FP_Comp.Visible = false;
 
             // Disable controls on HUD Manager tab...
