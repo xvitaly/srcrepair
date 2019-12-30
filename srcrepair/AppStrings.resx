@@ -672,4 +672,10 @@
   <data name="FP_EditorLoadFailure" xml:space="preserve">
     <value>Failed to load FPS-config to Config Editor!</value>
   </data>
+  <data name="FP_BtnInstallText" xml:space="preserve">
+    <value>Install selected config</value>
+  </data>
+  <data name="FP_BtnUpdateText" xml:space="preserve">
+    <value>Update selected config</value>
+  </data>
 </root>

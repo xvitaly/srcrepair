@@ -700,6 +700,24 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Install selected config.
+        /// </summary>
+        internal static string FP_BtnInstallText {
+            get {
+                return ResourceManager.GetString("FP_BtnInstallText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update selected config.
+        /// </summary>
+        internal static string FP_BtnUpdateText {
+            get {
+                return ResourceManager.GetString("FP_BtnUpdateText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cannot find downloaded archive with FPS-config. Please try again later..
         /// </summary>
         internal static string FP_DownloadError {

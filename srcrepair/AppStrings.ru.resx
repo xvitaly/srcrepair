@@ -851,4 +851,12 @@
     <value>Произошла ошибка при загрузке FPS-конфига в редактор!</value>
     <comment>Сообщение при исключении при попытке загрузить FPS-конфиг в редактор</comment>
   </data>
+  <data name="FP_BtnInstallText" xml:space="preserve">
+    <value>Установить выбранный конфиг</value>
+    <comment>Текст кнопки Установить выбранный конфиг</comment>
+  </data>
+  <data name="FP_BtnUpdateText" xml:space="preserve">
+    <value>Обновить выбранный конфиг</value>
+    <comment>Текст кнопки Установить при уже установленном FPS-конфиге</comment>
+  </data>
 </root>
