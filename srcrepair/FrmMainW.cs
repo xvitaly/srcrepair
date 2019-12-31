@@ -1960,6 +1960,9 @@ namespace srcrepair.gui
                         {
                             MessageBox.Show(AppStrings.FP_DownloadError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
+                        
+                        // Changing the state of some controls...
+                        SetFPSButtons(true);
                         HandleConfigs();
                     }
                     catch (Exception Ex)
