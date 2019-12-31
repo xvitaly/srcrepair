@@ -99,6 +99,15 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Opens non-interactive cleanup window.
+        /// </summary>
+        /// <param name="RmPath">Path for cleanup.</param>
+        public static void FormShowRemoveFiles(string RmPath)
+        {
+            FormShowRemoveFiles(new List<String> { RmPath });
+        }
+
+        /// <summary>
         /// Opens Steam UserID selection window.
         /// </summary>
         /// <param name="SteamIDs">List of available Steam UserIDs.</param>
