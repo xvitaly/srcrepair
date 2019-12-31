@@ -1305,6 +1305,15 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// Checks if any of FPS-configs are installed.
+        /// </summary>
+        /// <returns>Returns True if at least one FPS-config is installed.</returns>
+        private bool CheckIfFPSConfigInstalled()
+        {
+            return App.SourceGames[AppSelector.Text].CFGMan.CheckInstalledConfig(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, App.SourceGames[AppSelector.Text].IsUsingUserDir);
+        }
+
         #endregion
 
         #region Internal Workers
@@ -1896,7 +1905,7 @@ namespace srcrepair.gui
                 FP_Install.Enabled = Success;
 
                 // Checking if selected FPS-config is installed...
-                SetFPSButtons(App.SourceGames[AppSelector.Text].CFGMan.CheckInstalledConfig(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, App.SourceGames[AppSelector.Text].IsUsingUserDir));
+                SetFPSButtons(CheckIfFPSConfigInstalled());
             }
             catch (Exception Ex)
             {
@@ -1929,7 +1938,7 @@ namespace srcrepair.gui
                             if (FileManager.CalculateFileSHA512(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile) == App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].FileHash)
                             {
                                 // Checking if selected FPS-config is installed...
-                                if (App.SourceGames[AppSelector.Text].CFGMan.CheckInstalledConfig(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, App.SourceGames[AppSelector.Text].IsUsingUserDir))
+                                if (CheckIfFPSConfigInstalled())
                                 {
                                     // Removing installed files...
                                     GuiHelpers.FormShowRemoveFiles(SingleToArray(Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir)));
@@ -2005,7 +2014,7 @@ namespace srcrepair.gui
                     }
 
                     // Checking if FPS-config is installed...
-                    bool IsInstalled = App.SourceGames[AppSelector.Text].CFGMan.CheckInstalledConfig(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, App.SourceGames[AppSelector.Text].IsUsingUserDir);
+                    bool IsInstalled = CheckIfFPSConfigInstalled();
 
                     // Showing message and removing empty directory...
                     if (!IsInstalled)
