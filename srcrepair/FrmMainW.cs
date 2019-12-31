@@ -3205,10 +3205,6 @@ namespace srcrepair.gui
                 if (!IsInstalled)
                 {
                     MessageBox.Show(AppStrings.PS_CleanupSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (Directory.Exists(HUDPath))
-                    {
-                        Directory.Delete(HUDPath);
-                    }
                 }
 
                 // Changing the state of some controls...
