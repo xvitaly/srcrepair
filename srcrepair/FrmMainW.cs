@@ -1896,7 +1896,7 @@ namespace srcrepair.gui
                 FP_Install.Enabled = Success;
 
                 // Checking if selected FPS-config is installed...
-                SetFPSButtons(App.SourceGames[AppSelector.Text].CFGMan.CheckInstalledConfig(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir));
+                SetFPSButtons(App.SourceGames[AppSelector.Text].CFGMan.CheckInstalledConfig(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, App.SourceGames[AppSelector.Text].IsUsingUserDir));
             }
             catch (Exception Ex)
             {
@@ -1929,7 +1929,7 @@ namespace srcrepair.gui
                             if (FileManager.CalculateFileSHA512(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile) == App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].FileHash)
                             {
                                 // Checking if selected FPS-config is installed...
-                                if (App.SourceGames[AppSelector.Text].CFGMan.CheckInstalledConfig(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir))
+                                if (App.SourceGames[AppSelector.Text].CFGMan.CheckInstalledConfig(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, App.SourceGames[AppSelector.Text].IsUsingUserDir))
                                 {
                                     // Removing installed files...
                                     GuiHelpers.FormShowRemoveFiles(SingleToArray(Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir)));
@@ -1986,9 +1986,35 @@ namespace srcrepair.gui
         {
             try
             {
+                // Checking the number of installed FPS-configs...
                 if (App.SourceGames[AppSelector.Text].FPSConfigs.Count > 0)
                 {
-                    GuiHelpers.FormShowCleanup(App.SourceGames[AppSelector.Text].FPSConfigs, ((Button)sender).Text.ToLower(), AppStrings.FP_RemoveSuccessful, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile, false, false, false, Properties.Settings.Default.SafeCleanup);
+                    // If the game is using custom user directory and it exists, silently removing its contents...
+                    if (App.SourceGames[AppSelector.Text].IsUsingUserDir)
+                    {
+                        // Generating full path...
+                        string CfgPath = Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir);
+
+                        // Removing files...
+                        GuiHelpers.FormShowRemoveFiles(SingleToArray(CfgPath));
+                    }
+                    else
+                    {
+                        // Showing interactive dialog with detected FPS-configs...
+                        GuiHelpers.FormShowCleanup(App.SourceGames[AppSelector.Text].FPSConfigs, ((Button)sender).Text.ToLower(), AppStrings.FP_RemoveSuccessful, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile, false, false, false, Properties.Settings.Default.SafeCleanup);
+                    }
+
+                    // Checking if FPS-config is installed...
+                    bool IsInstalled = App.SourceGames[AppSelector.Text].CFGMan.CheckInstalledConfig(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, App.SourceGames[AppSelector.Text].IsUsingUserDir);
+
+                    // Showing message and removing empty directory...
+                    if (!IsInstalled)
+                    {
+                        MessageBox.Show(AppStrings.PS_CleanupSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    // Changing the state of some controls...
+                    SetFPSButtons(IsInstalled);
                     HandleConfigs();
                 }
                 else
