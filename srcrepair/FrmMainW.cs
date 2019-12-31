@@ -1132,17 +1132,6 @@ namespace srcrepair.gui
             return String.Format("{0}.html", Result);
         }
 
-
-        /// <summary>
-        /// Converts a single string to list.
-        /// </summary>
-        /// <param name="Str">Source string.</param>
-        /// <returns>List with source string.</returns>
-        private List<String> SingleToArray(string Str)
-        {
-            return new List<String> { Str };
-        }
-
         /// <summary>
         /// Checks if application update check is required.
         /// </summary>
@@ -1941,7 +1930,7 @@ namespace srcrepair.gui
                                 if (CheckIfFPSConfigInstalled())
                                 {
                                     // Removing installed files...
-                                    GuiHelpers.FormShowRemoveFiles(SingleToArray(Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir)));
+                                    GuiHelpers.FormShowRemoveFiles(Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir));
                                 }
 
                                 // Extracting downloaded archove...
@@ -2005,7 +1994,7 @@ namespace srcrepair.gui
                         string CfgPath = Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir);
 
                         // Removing files...
-                        GuiHelpers.FormShowRemoveFiles(SingleToArray(CfgPath));
+                        GuiHelpers.FormShowRemoveFiles(CfgPath);
                     }
                     else
                     {
@@ -3148,7 +3137,7 @@ namespace srcrepair.gui
                                 if (HUDManager.CheckInstalledHUD(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir))
                                 {
                                     // Removing installed files...
-                                    GuiHelpers.FormShowRemoveFiles(SingleToArray(Path.Combine(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir)));
+                                    GuiHelpers.FormShowRemoveFiles(Path.Combine(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir));
                                 }
 
                                 // Extracting downloaded archove...
@@ -3207,7 +3196,7 @@ namespace srcrepair.gui
                 string HUDPath = Path.Combine(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir);
 
                 // Removing HUD files...
-                GuiHelpers.FormShowRemoveFiles(SingleToArray(HUDPath));
+                GuiHelpers.FormShowRemoveFiles(HUDPath);
 
                 // Checking if HUD installed...
                 bool IsInstalled = HUDManager.CheckInstalledHUD(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir);
