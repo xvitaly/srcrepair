@@ -78,11 +78,11 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Checks if specified FPS-config is installed.
+        /// Checks if specified FPS-config is installed (with support of custom game directory).
         /// </summary>
         /// <param name="ConfigInstallDirectory">HUD installation directory name.</param>
         /// <returns>Return True if specified FPS-config is installed.</returns>
-        public bool CheckInstalledConfig(string ConfigInstallDirectory)
+        private bool CheckInstalledConfigCustom(string ConfigInstallDirectory)
         {
             // Creating some local variables...
             bool Result = false;
@@ -100,6 +100,29 @@ namespace srcrepair.core
 
             // Returning result...
             return Result;
+        }
+
+        /// <summary>
+        /// Checks if specified FPS-config is installed (legacy games without custom user
+        /// directory support).
+        /// </summary>
+        /// <returns>Return True if specified FPS-config is installed.</returns>
+        private bool CheckInstalledConfigLegacy()
+        {
+            // Returning result...
+            return File.Exists(Path.Combine(FPSConfigInstallPath, "cfg", "autoexec.cfg"));
+        }
+
+        /// <summary>
+        /// Checks if specified FPS-config is installed.
+        /// </summary>
+        /// <param name="ConfigInstallDirectory">HUD installation directory name.</param>
+        /// <param name="IsUsingUserDir">If current game is using a custom user stuff directory.</param>
+        /// <returns>Return True if specified FPS-config is installed.</returns>
+        public bool CheckInstalledConfig(string ConfigInstallDirectory, bool IsUsingUserDir)
+        {
+            // Returning result...
+            return IsUsingUserDir ? CheckInstalledConfigCustom(ConfigInstallDirectory) : CheckInstalledConfigLegacy();
         }
 
         /// <summary>
