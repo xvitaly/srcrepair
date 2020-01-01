@@ -538,6 +538,10 @@ namespace srcrepair.gui
 
             // Enable custom installer menu element...
             MNUInstaller.Enabled = true;
+
+            // Reset text captions on some controls...
+            FP_Install.Text = AppStrings.FP_BtnInstallText;
+            HD_Install.Text = AppStrings.HD_BtnInstallText;
         }
 
         /// <summary>
