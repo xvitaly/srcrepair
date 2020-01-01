@@ -1935,6 +1935,11 @@ namespace srcrepair.gui
 
                                 // Extracting downloaded archove...
                                 GuiHelpers.FormShowArchiveExtract(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile, App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath);
+
+                                if (!App.SourceGames[AppSelector.Text].IsUsingUserDir)
+                                {
+                                    App.SourceGames[AppSelector.Text].CFGMan.MoveLegacyConfig(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, App.SourceGames[AppSelector.Text].FullCfgPath);
+                                }
                                 
                                 // Installation successful message...
                                 MessageBox.Show(AppStrings.FP_InstallSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
