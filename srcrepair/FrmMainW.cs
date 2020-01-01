@@ -2007,6 +2007,9 @@ namespace srcrepair.gui
 
                         // Removing files...
                         GuiHelpers.FormShowRemoveFiles(CfgPath);
+
+                        // Showing message...
+                        MessageBox.Show(AppStrings.FP_RemoveSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -2014,17 +2017,8 @@ namespace srcrepair.gui
                         GuiHelpers.FormShowCleanup(App.SourceGames[AppSelector.Text].FPSConfigs, ((Button)sender).Text.ToLower(), AppStrings.FP_RemoveSuccessful, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile, false, false, false, Properties.Settings.Default.SafeCleanup);
                     }
 
-                    // Checking if FPS-config is installed...
-                    bool IsInstalled = CheckIfFPSConfigInstalled();
-
-                    // Showing message and removing empty directory...
-                    if (!IsInstalled)
-                    {
-                        MessageBox.Show(AppStrings.PS_CleanupSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-
                     // Changing the state of some controls...
-                    SetFPSButtons(IsInstalled);
+                    SetFPSButtons(CheckIfFPSConfigInstalled());
                     HandleConfigs();
                 }
                 else
