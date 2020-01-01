@@ -947,7 +947,7 @@ namespace srcrepair.gui
         /// <param name="State">If selected FPS-config installed.</param>
         private void SetFPSButtons(bool State)
         {
-            FP_Install.Text = State ? AppStrings.FP_BtnUpdateText : AppStrings.FP_BtnInstallText;
+            FP_Install.Text = State ? App.SourceGames[AppSelector.Text].IsUsingUserDir ? AppStrings.FP_BtnUpdateText : AppStrings.FP_BtnReplaceText : AppStrings.FP_BtnInstallText;
             FP_Uninstall.Enabled = State;
             FP_OpenNotepad.Enabled = State;
         }
