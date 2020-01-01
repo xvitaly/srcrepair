@@ -678,4 +678,7 @@
   <data name="FP_BtnUpdateText" xml:space="preserve">
     <value>Update selected config</value>
   </data>
+  <data name="FP_BtnReplaceText" xml:space="preserve">
+    <value>Replace to selected config</value>
+  </data>
 </root>

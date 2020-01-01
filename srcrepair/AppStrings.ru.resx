@@ -859,4 +859,8 @@
     <value>Обновить выбранный конфиг</value>
     <comment>Текст кнопки Установить при уже установленном FPS-конфиге</comment>
   </data>
+  <data name="FP_BtnReplaceText" xml:space="preserve">
+    <value>Заменить на выбранный конфиг</value>
+    <comment>Текст кнопки Установить при уже установленном FPS-конфиге для игр без поддержки кастомного каталога</comment>
+  </data>
 </root>

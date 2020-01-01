@@ -709,6 +709,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Replace to selected config.
+        /// </summary>
+        internal static string FP_BtnReplaceText {
+            get {
+                return ResourceManager.GetString("FP_BtnReplaceText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update selected config.
         /// </summary>
         internal static string FP_BtnUpdateText {
