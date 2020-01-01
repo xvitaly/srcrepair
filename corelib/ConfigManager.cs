@@ -116,13 +116,44 @@ namespace srcrepair.core
         /// <summary>
         /// Checks if specified FPS-config is installed.
         /// </summary>
-        /// <param name="ConfigInstallDirectory">HUD installation directory name.</param>
+        /// <param name="ConfigInstallDirectory">FPS-config installation directory name.</param>
         /// <param name="IsUsingUserDir">If current game is using a custom user stuff directory.</param>
         /// <returns>Return True if specified FPS-config is installed.</returns>
         public bool CheckInstalledConfig(string ConfigInstallDirectory, bool IsUsingUserDir)
         {
             // Returning result...
             return IsUsingUserDir ? CheckInstalledConfigCustom(ConfigInstallDirectory) : CheckInstalledConfigLegacy();
+        }
+
+        /// <summary>
+        /// Moves installed FPS-configs to legacy location for games
+        /// without custom user directory support.
+        /// </summary>
+        /// <param name="ConfigInstallDirectory">FPS-config installation directory name.</param>
+        /// <param name="FullCfgPath">Full path to directory with game configs.</param>
+        public void MoveLegacyConfig(string ConfigInstallDirectory, string FullCfgPath)
+        {
+            // Generating source directory full path...
+            string SourcePath = Path.Combine(FPSConfigInstallPath, ConfigInstallDirectory);
+            
+            // Moving all files from old location...
+            foreach (string ConfigFile in Directory.EnumerateFiles(Path.Combine(SourcePath, "cfg")))
+            {
+                // Generating new file name...
+                string Destination = Path.Combine(FullCfgPath, Path.GetFileName(ConfigFile));
+                
+                // Removing existing file if exists...
+                if (File.Exists(Destination))
+                {
+                    File.Delete(Destination);
+                }
+
+                // Moving to destination...
+                File.Move(ConfigFile, Destination);
+            }
+
+            // Performing cleanup...
+            FileManager.RemoveEmptyDirectories(SourcePath);
         }
 
         /// <summary>
