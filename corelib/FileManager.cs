@@ -398,5 +398,36 @@ namespace srcrepair.core
             // Using LINQ to find the newerest file...
             return FF.OrderByDescending(x => x.LastWriteTimeUtc).FirstOrDefault().FullName;
         }
+
+        /// <summary>
+        /// Moves all source directory contents to destination. Will overwrite files
+        /// with the same names.
+        /// </summary>
+        /// <param name="Source">Source directory.</param>
+        /// <param name="Destination">Destination directory.</param>
+        public static void MoveDirectoryContents(string Source, string Destination)
+        {
+            // Creating destination directory if does not exists...
+            if (!Directory.Exists(Destination))
+            {
+                Directory.CreateDirectory(Destination);
+            }
+            
+            // Enumerating all files from old location...
+            foreach (string SingleFile in Directory.EnumerateFiles(Source))
+            {
+                // Generating new file name...
+                string FinalDest = Path.Combine(Destination, Path.GetFileName(SingleFile));
+
+                // Removing existing file if exists...
+                if (File.Exists(FinalDest))
+                {
+                    File.Delete(FinalDest);
+                }
+
+                // Moving file to destination...
+                File.Move(SingleFile, FinalDest);
+            }
+        }
     }
 }
