@@ -135,25 +135,15 @@ namespace srcrepair.core
         {
             // Generating source directory full path...
             string SourcePath = Path.Combine(FPSConfigInstallPath, ConfigInstallDirectory);
-            
-            // Moving all files from old location...
-            foreach (string ConfigFile in Directory.EnumerateFiles(Path.Combine(SourcePath, "cfg")))
-            {
-                // Generating new file name...
-                string Destination = Path.Combine(FullCfgPath, Path.GetFileName(ConfigFile));
-                
-                // Removing existing file if exists...
-                if (File.Exists(Destination))
-                {
-                    File.Delete(Destination);
-                }
 
-                // Moving to destination...
-                File.Move(ConfigFile, Destination);
-            }
+            // Moving FPS-config files...
+            FileManager.MoveDirectoryContents(Path.Combine(SourcePath, "cfg"), FullCfgPath);
 
             // Performing cleanup...
-            FileManager.RemoveEmptyDirectories(SourcePath);
+            if (Directory.Exists(SourcePath))
+            {
+                Directory.Delete(SourcePath, true);
+            }
         }
 
         /// <summary>
