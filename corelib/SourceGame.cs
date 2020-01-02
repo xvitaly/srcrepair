@@ -290,7 +290,7 @@ namespace srcrepair.core
                 CoreEngineBinPath = Path.Combine(GamePath, "bin");
                 FullBackUpDirPath = Path.Combine(AUserDir, "backups", Path.GetFileName(SmallAppName));
                 AppHUDDir = Path.Combine(AUserDir, Properties.Resources.HUDLocalDir, SmallAppName);
-                AppCfgDir = Path.Combine(AUserDir, Properties.Resources.CfgLocalDir, SmallAppName);
+                AppCfgDir = Path.Combine(AUserDir, Properties.Resources.CfgLocalDir);
                 CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : String.Empty);
                 AppWorkshopDir = Path.Combine(SteamDir, SteamAppsDirName, Properties.Resources.WorkshopFolderName, "content", GameInternalID);
                 CloudScreenshotsPath = Path.Combine(SteamDir, "userdata", SteamID, "760", "remote", GameInternalID, "screenshots");
