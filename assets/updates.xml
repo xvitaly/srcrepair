@@ -9,25 +9,25 @@
     <GameDB>
         <Version>1</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/games.xml</URL>
-        <Hash>6b7a16c95d32a5a2ceea17288f4b309f</Hash>
-        <Hash2>92835dc5e64f3df834b2979743e640d212ebcdf17f8b71dd9fab036609b0a6fa859e69dfa35203cf89bdc84cd5f0fd17f18684380427623c552cbea1a1ba7756</Hash2>
+        <Hash>bdbd3101cd7eb69ecf9b9715ebfaed82</Hash>
+        <Hash2>e389440c948b0a312c01c48c4d02e0031d12e805892e5b5d1cf50bf03d4230cc42a0c570707c73da562e17594e75607b00d68069ca21b2880de6a4fd3d502df6</Hash2>
     </GameDB>
     <HUDDB>
         <Version>6</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/huds.xml</URL>
-        <Hash>1facb06c8dfc997f59bfa37e22be3129</Hash>
-        <Hash2>f8904fe9d8366791ebb1c89a5e329cb91642423e939b7cbb92d46a2ab5d3d8aa696df28986be040e6f067067b90e1d163b2d8a1e0eecbcb937f915c0b336ead3</Hash2>
+        <Hash>aaa06b8c5cf6a37cdde54a996cf83da8</Hash>
+        <Hash2>a28251fc1728553c4ba9924bb76b395d084581a5f97c236414e461ec137ccb6ff12182baa07fb22d41027d0e6fb4d5bca28660d4ec193490903b81bdb5cd9c68</Hash2>
     </HUDDB>
     <CfgDB>
         <Version>1</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/configs.xml</URL>
-        <Hash>3f33b5610cf84fa59b9004a6d6c9719c</Hash>
-        <Hash2>a3e41c39845fc39612099281278bcbf84d0d2298f1bdf2e88874a0bfc1bcc2b3ed2f97a6c4faf7a73676bd645c078c727ecbde753a2437804d9ee8bc4fdc76ee</Hash2>
+        <Hash>9843e8ed6a0d7aabe42a08d51a47d6f9</Hash>
+        <Hash2>37323ede987d56dc4adc4cb265afad66af3e0f37ffc44783c28ec8d62d8e40a2917ec065295bb34cdf0a71b13d7c60c2094afb2153526bd0ebad3b5aff910f48</Hash2>
     </CfgDB>
     <ClnDB>
         <Version>2</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/cleanup.xml</URL>
-        <Hash>4a87d83fed9aee9b86c1d89769942606</Hash>
-        <Hash2>c8f636966fff0e049441639912f0696c1f66bca11a6e7ed1022183cf55ab10e17b4e614f10b8da4a35fb1032f785412d2bbd74ae0f54f26e33e87a2e9ce5e999</Hash2>
+        <Hash>a4f15d83acd2d0b701f6cd990871cf8b</Hash>
+        <Hash2>619650f527d8f003147582b125c05605184092386cc0be8cbc12713b63f54a39ab86061ad978229d2b0a5c3c5e44345eeae2f24e812979e5525757a021818815</Hash2>
     </ClnDB>
 </Updates>
