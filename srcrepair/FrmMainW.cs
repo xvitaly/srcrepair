@@ -1957,7 +1957,10 @@ namespace srcrepair.gui
                             // Removing downloaded file...
                             try
                             {
-                                File.Delete(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile);
+                                if (!Properties.Settings.Default.FPSStoreConfigs)
+                                {
+                                    File.Delete(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile);
+                                }
                             }
                             catch (Exception Ex)
                             {
