@@ -863,4 +863,12 @@
     <value>Заменить на выбранный конфиг</value>
     <comment>Текст кнопки Установить при уже установленном FPS-конфиге для игр без поддержки кастомного каталога</comment>
   </data>
+  <data name="FP_BtnUninstallAllText" xml:space="preserve">
+    <value>Удалить имеющийся конфиг</value>
+    <comment>Текст кнопки Удалить конфиг для игр без поддержки пользовательского каталога модификаций</comment>
+  </data>
+  <data name="FP_BtnUninstallSelectedText" xml:space="preserve">
+    <value>Удалить выбранный конфиг</value>
+    <comment>Текст кнопки Удалить конфиг для игр с поддержкой пользовательского каталога модификаций</comment>
+  </data>
 </root>

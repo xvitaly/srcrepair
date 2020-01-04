@@ -681,4 +681,10 @@
   <data name="FP_BtnReplaceText" xml:space="preserve">
     <value>Replace to selected config</value>
   </data>
+  <data name="FP_BtnUninstallAllText" xml:space="preserve">
+    <value>Remove installed config</value>
+  </data>
+  <data name="FP_BtnUninstallSelectedText" xml:space="preserve">
+    <value>Remove selected config</value>
+  </data>
 </root>

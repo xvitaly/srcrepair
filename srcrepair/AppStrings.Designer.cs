@@ -718,6 +718,24 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Remove installed config.
+        /// </summary>
+        internal static string FP_BtnUninstallAllText {
+            get {
+                return ResourceManager.GetString("FP_BtnUninstallAllText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove selected config.
+        /// </summary>
+        internal static string FP_BtnUninstallSelectedText {
+            get {
+                return ResourceManager.GetString("FP_BtnUninstallSelectedText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update selected config.
         /// </summary>
         internal static string FP_BtnUpdateText {
