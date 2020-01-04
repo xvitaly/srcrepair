@@ -518,30 +518,21 @@ namespace srcrepair.gui
             FP_ConfigSel.Items.Clear();
             HD_HSel.Items.Clear();
 
-            // Disable "Open in Notepad" button...
-            FP_OpenNotepad.Enabled = false;
-
             // Disable controls on FPS-config tab...
+            SetFPSButtons(false);
             FP_Install.Enabled = false;
-            FP_OpenNotepad.Enabled = false;
-            FP_Uninstall.Enabled = false;
             FP_Comp.Visible = false;
 
             // Disable controls on HUD Manager tab...
+            SetHUDButtons(false);
             HD_Install.Enabled = false;
             HD_Homepage.Enabled = false;
-            HD_Uninstall.Enabled = false;
-            HD_OpenDir.Enabled = false;
             HD_Warning.Visible = false;
             HD_GB_Pbx.Image = null;
             HD_LastUpdate.Visible = false;
 
             // Enable custom installer menu element...
             MNUInstaller.Enabled = true;
-
-            // Reset text captions on some controls...
-            FP_Install.Text = AppStrings.FP_BtnInstallText;
-            HD_Install.Text = AppStrings.HD_BtnInstallText;
         }
 
         /// <summary>
@@ -1373,7 +1364,6 @@ namespace srcrepair.gui
                 {
                     FP_Description.Text = AppStrings.FP_SelectFromList;
                     FP_Description.ForeColor = Color.Black;
-                    FP_ConfigSel.Enabled = true;
                 }
             }
             else
