@@ -952,6 +952,7 @@ namespace srcrepair.gui
         private void SetFPSButtons(bool State)
         {
             FP_Install.Text = State ? App.SourceGames[AppSelector.Text].IsUsingUserDir ? AppStrings.FP_BtnUpdateText : AppStrings.FP_BtnReplaceText : AppStrings.FP_BtnInstallText;
+            FP_Uninstall.Text = App.SourceGames[AppSelector.Text].IsUsingUserDir ? AppStrings.FP_BtnUninstallSelectedText : AppStrings.FP_BtnUninstallAllText;
             FP_Uninstall.Enabled = State;
             FP_OpenNotepad.Enabled = State;
         }
