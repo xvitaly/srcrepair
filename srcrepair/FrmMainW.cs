@@ -3069,13 +3069,13 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "Clean game configs" button click event handler.
+        /// "Clean FPS-configs" button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
         private void PS_RemConfigs_Click(object sender, EventArgs e)
         {
-            StartCleanup("12", ((Button)sender).Text, App.SourceGames[AppSelector.Text].CloudConfigs);
+            GuiHelpers.FormShowCleanup(App.SourceGames[AppSelector.Text].FPSConfigs, ((Button)sender).Text.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile, false, false, false, Properties.Settings.Default.SafeCleanup);
         }
 
         /// <summary>
