@@ -141,12 +141,4 @@
             <Directory Class="Unsafe">$GamePath$/platform/*.*</Directory>
         </Directories>
     </Target>
-    <Target>
-        <ID>12</ID>
-        <Name>Game configs</Name>
-        <Directories>
-            <Directory Class="Safe">$FullGamePath$/cfg/*.*</Directory>
-            <Directory Class="Safe">$FullGamePath$/custom/*.cfg</Directory>
-        </Directories>
-    </Target>
 </Targets>
