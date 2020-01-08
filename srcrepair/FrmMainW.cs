@@ -1905,79 +1905,76 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void FP_Install_Click(object sender, EventArgs e)
         {
-            if (FP_ConfigSel.SelectedIndex != -1)
+            try
             {
                 if (MessageBox.Show(AppStrings.FP_InstallQuestion, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
+                    // Creating backup of current FPS-config files...
                     BackUpFPSConfigs();
-                    try
+
+                    // Downloading FPS-config archive...
+                    GuiHelpers.FormShowDownloader(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].URI, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile);
+
+                    // Checking if downloaded archive exists...
+                    if (File.Exists(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile))
                     {
-                        // Downloading FPS-config archive...
-                        GuiHelpers.FormShowDownloader(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].URI, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile);
-                        
-                        // Checking if downloaded archive exists...
-                        if (File.Exists(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile))
+                        // Checking hash of downloaded file...
+                        if (FileManager.CalculateFileSHA512(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile) == App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].FileHash)
                         {
-                            // Checking hash of downloaded file...
-                            if (FileManager.CalculateFileSHA512(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile) == App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].FileHash)
+                            // Checking if selected FPS-config is installed...
+                            if (CheckIfFPSConfigInstalled())
                             {
-                                // Checking if selected FPS-config is installed...
-                                if (CheckIfFPSConfigInstalled())
-                                {
-                                    // Removing installed files...
-                                    GuiHelpers.FormShowRemoveFiles(Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir));
-                                }
-
-                                // Extracting downloaded archove...
-                                GuiHelpers.FormShowArchiveExtract(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile, App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath);
-
-                                if (!App.SourceGames[AppSelector.Text].IsUsingUserDir)
-                                {
-                                    App.SourceGames[AppSelector.Text].CFGMan.MoveLegacyConfig(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, App.SourceGames[AppSelector.Text].FullCfgPath);
-                                }
-                                
-                                // Installation successful message...
-                                MessageBox.Show(AppStrings.FP_InstallSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                            else
-                            {
-                                // Hash missmatch. Show error...
-                                MessageBox.Show(AppStrings.FP_HashError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            }
-                            
-                            // Removing downloaded file...
-                            try
-                            {
-                                if (!Properties.Settings.Default.FPSStoreConfigs)
-                                {
-                                    File.Delete(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile);
-                                }
-                            }
-                            catch (Exception Ex)
-                            {
-                                Logger.Warn(Ex, DebugStrings.AppDbgExCfgArchRem);
+                                // Removing installed files...
+                                GuiHelpers.FormShowRemoveFiles(Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir));
                             }
 
+                            // Extracting downloaded archove...
+                            GuiHelpers.FormShowArchiveExtract(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile, App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath);
+
+                            // Moving archive contents for games without user directory support...
+                            if (!App.SourceGames[AppSelector.Text].IsUsingUserDir)
+                            {
+                                App.SourceGames[AppSelector.Text].CFGMan.MoveLegacyConfig(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, App.SourceGames[AppSelector.Text].FullCfgPath);
+                            }
+
+                            // Installation successful message...
+                            MessageBox.Show(AppStrings.FP_InstallSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
-                            MessageBox.Show(AppStrings.FP_DownloadError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            // Hash missmatch. Show error...
+                            MessageBox.Show(AppStrings.FP_HashError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
-                        
-                        // Changing the state of some controls...
-                        SetFPSButtons(true);
-                        HandleConfigs();
                     }
-                    catch (Exception Ex)
+                    else
                     {
-                        MessageBox.Show(AppStrings.FP_InstallFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        Logger.Error(Ex, DebugStrings.AppDbgExFpsInstall);
+                        MessageBox.Show(AppStrings.FP_DownloadError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
+
+                    // Changing the state of some controls...
+                    SetFPSButtons(true);
+                    HandleConfigs();
                 }
             }
-            else
+            catch (Exception Ex)
             {
-                MessageBox.Show(AppStrings.FP_NothingSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.FP_InstallFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, DebugStrings.AppDbgExFpsInstall);
+            }
+            finally
+            {
+                try
+                {
+                    // Removing downloaded file...
+                    if (File.Exists(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile))
+                    {
+                        File.Delete(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile);
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex, DebugStrings.AppDbgExCfgArchRem);
+                }
             }
         }
 

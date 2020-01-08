@@ -817,15 +817,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please select at least one FPS config from list!.
-        /// </summary>
-        internal static string FP_NothingSelected {
-            get {
-                return ResourceManager.GetString("FP_NothingSelected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to An error occurred during removal of the installed config!.
         /// </summary>
         internal static string FP_RemoveFailed {

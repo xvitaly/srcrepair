@@ -144,9 +144,6 @@
   <data name="FP_NoDescr" xml:space="preserve">
     <value>Unfortunately, the description of the chosen config is not available. We apologize for any inconveniences.</value>
   </data>
-  <data name="FP_NothingSelected" xml:space="preserve">
-    <value>Please select at least one FPS config from list!</value>
-  </data>
   <data name="FP_RemoveFailed" xml:space="preserve">
     <value>An error occurred during removal of the installed config!</value>
   </data>
