@@ -247,17 +247,5 @@ namespace srcrepair.gui.Properties {
                 this["HUDHideOutdated"] = value;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool FPSStoreConfigs {
-            get {
-                return ((bool)(this["FPSStoreConfigs"]));
-            }
-            set {
-                this["FPSStoreConfigs"] = value;
-            }
-        }
     }
 }
