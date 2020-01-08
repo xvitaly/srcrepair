@@ -125,7 +125,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACC
-        DwAAAk1TRnQBSQFMAgEBBgEAAfABAwHwAQMBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DwAAAk1TRnQBSQFMAgEBBgEAAQwBBAEMAQQBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -3455,20 +3455,26 @@
   <metadata name="FPSCfgInstall.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="FPS_Panel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="FP_OpenNotepad.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="FP_OpenNotepad.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="FP_OpenNotepad.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="FP_OpenNotepad.Location" type="System.Drawing.Point, System.Drawing">
-    <value>373, 114</value>
+    <value>352, 3</value>
   </data>
   <data name="FP_OpenNotepad.Size" type="System.Drawing.Size, System.Drawing">
-    <value>23, 23</value>
+    <value>24, 24</value>
   </data>
   <data name="FP_OpenNotepad.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;FP_OpenNotepad.Name" xml:space="preserve">
     <value>FP_OpenNotepad</value>
@@ -3477,37 +3483,10 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;FP_OpenNotepad.Parent" xml:space="preserve">
-    <value>FPSCfgInstall</value>
+    <value>FPS_Panel</value>
   </data>
   <data name="&gt;&gt;FP_OpenNotepad.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <metadata name="FP_Uninstall.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="FP_Uninstall.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 339</value>
-  </data>
-  <data name="FP_Uninstall.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 23</value>
-  </data>
-  <data name="FP_Uninstall.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="FP_Uninstall.Text" xml:space="preserve">
-    <value>Remove installed config</value>
-  </data>
-  <data name="&gt;&gt;FP_Uninstall.Name" xml:space="preserve">
-    <value>FP_Uninstall</value>
-  </data>
-  <data name="&gt;&gt;FP_Uninstall.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FP_Uninstall.Parent" xml:space="preserve">
-    <value>FPSCfgInstall</value>
-  </data>
-  <data name="&gt;&gt;FP_Uninstall.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <metadata name="FP_Install.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3515,14 +3494,17 @@
   <data name="FP_Install.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="FP_Install.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="FP_Install.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 339</value>
+    <value>11, 282</value>
   </data>
   <data name="FP_Install.Size" type="System.Drawing.Size, System.Drawing">
     <value>197, 23</value>
   </data>
   <data name="FP_Install.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="FP_Install.Text" xml:space="preserve">
     <value>Install selected config</value>
@@ -3534,10 +3516,10 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;FP_Install.Parent" xml:space="preserve">
-    <value>FPSCfgInstall</value>
+    <value>FPS_Panel</value>
   </data>
   <data name="&gt;&gt;FP_Install.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <metadata name="FP_GB_Desc.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3545,8 +3527,11 @@
   <metadata name="FP_Comp.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="FP_Comp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="FP_Comp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 146</value>
+    <value>6, 212</value>
   </data>
   <data name="FP_Comp.Size" type="System.Drawing.Size, System.Drawing">
     <value>402, 18</value>
@@ -3585,7 +3570,7 @@
     <value>17, 25</value>
   </data>
   <data name="FP_Description.Size" type="System.Drawing.Size, System.Drawing">
-    <value>377, 121</value>
+    <value>377, 180</value>
   </data>
   <data name="FP_Description.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3603,13 +3588,13 @@
     <value>1</value>
   </data>
   <data name="FP_GB_Desc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 155</value>
+    <value>11, 33</value>
   </data>
   <data name="FP_GB_Desc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>414, 169</value>
+    <value>414, 234</value>
   </data>
   <data name="FP_GB_Desc.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="FP_GB_Desc.Text" xml:space="preserve">
     <value>Description of selected FPS-config</value>
@@ -3621,22 +3606,22 @@
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;FP_GB_Desc.Parent" xml:space="preserve">
-    <value>FPSCfgInstall</value>
+    <value>FPS_Panel</value>
   </data>
   <data name="&gt;&gt;FP_GB_Desc.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <metadata name="FP_ConfigSel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="FP_ConfigSel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 115</value>
+    <value>164, 5</value>
   </data>
   <data name="FP_ConfigSel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 21</value>
+    <value>182, 21</value>
   </data>
   <data name="FP_ConfigSel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;FP_ConfigSel.Name" xml:space="preserve">
     <value>FP_ConfigSel</value>
@@ -3645,28 +3630,58 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;FP_ConfigSel.Parent" xml:space="preserve">
-    <value>FPSCfgInstall</value>
+    <value>FPS_Panel</value>
   </data>
   <data name="&gt;&gt;FP_ConfigSel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="FP_Uninstall.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="FP_Uninstall.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="FP_Uninstall.Location" type="System.Drawing.Point, System.Drawing">
+    <value>228, 282</value>
+  </data>
+  <data name="FP_Uninstall.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 23</value>
+  </data>
+  <data name="FP_Uninstall.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="FP_Uninstall.Text" xml:space="preserve">
+    <value>Remove installed config</value>
+  </data>
+  <data name="&gt;&gt;FP_Uninstall.Name" xml:space="preserve">
+    <value>FP_Uninstall</value>
+  </data>
+  <data name="&gt;&gt;FP_Uninstall.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FP_Uninstall.Parent" xml:space="preserve">
+    <value>FPS_Panel</value>
+  </data>
+  <data name="&gt;&gt;FP_Uninstall.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <metadata name="L_FP_ConfigSel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="L_FP_ConfigSel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="L_FP_ConfigSel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="L_FP_ConfigSel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>47, 119</value>
+    <value>31, 8</value>
   </data>
   <data name="L_FP_ConfigSel.Size" type="System.Drawing.Size, System.Drawing">
     <value>155, 13</value>
   </data>
   <data name="L_FP_ConfigSel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="L_FP_ConfigSel.Text" xml:space="preserve">
-    <value>Select one of available configs:</value>
+    <value>Select FPS-config:</value>
   </data>
   <data name="&gt;&gt;L_FP_ConfigSel.Name" xml:space="preserve">
     <value>L_FP_ConfigSel</value>
@@ -3675,10 +3690,31 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;L_FP_ConfigSel.Parent" xml:space="preserve">
-    <value>FPSCfgInstall</value>
+    <value>FPS_Panel</value>
   </data>
   <data name="&gt;&gt;L_FP_ConfigSel.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="FPS_Panel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 57</value>
+  </data>
+  <data name="FPS_Panel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>441, 315</value>
+  </data>
+  <data name="FPS_Panel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;FPS_Panel.Name" xml:space="preserve">
+    <value>FPS_Panel</value>
+  </data>
+  <data name="&gt;&gt;FPS_Panel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FPS_Panel.Parent" xml:space="preserve">
+    <value>FPSCfgInstall</value>
+  </data>
+  <data name="&gt;&gt;FPS_Panel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="FP_TopLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -3687,13 +3723,13 @@
     <value>9, 12</value>
   </data>
   <data name="FP_TopLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>450, 96</value>
+    <value>444, 42</value>
   </data>
   <data name="FP_TopLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="FP_TopLabel.Text" xml:space="preserve">
-    <value>On this page you can install one of available and tested by us FPS-configs into the game. FPS-config is a file autoexec.cfg, which can significantly increase the performance of the game with loss of a picture quality. You can edit installed FPS-config manually later in Config Editor tab. Attention! If you use FPS-config the Graphic Tweaker will not be able to edit graphic settings (the settings obtained from the config have higher priority).</value>
+    <value>On this page you can install one of available and tested FPS-configs into selected game. Settings, obtained from FPS-config, have higher priority than set in Graphic Tweaker or by game itself. Select config to read it's description.</value>
   </data>
   <data name="&gt;&gt;FP_TopLabel.Name" xml:space="preserve">
     <value>FP_TopLabel</value>
@@ -3705,7 +3741,7 @@
     <value>FPSCfgInstall</value>
   </data>
   <data name="&gt;&gt;FP_TopLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>1</value>
   </data>
   <data name="FPSCfgInstall.ImageIndex" type="System.Int32, mscorlib">
     <value>3</value>

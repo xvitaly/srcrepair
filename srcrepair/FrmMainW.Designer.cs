@@ -151,13 +151,14 @@
             this.PS_CleanRegistry = new System.Windows.Forms.CheckBox();
             this.PS_CleanBlobs = new System.Windows.Forms.CheckBox();
             this.FPSCfgInstall = new System.Windows.Forms.TabPage();
+            this.FPS_Panel = new System.Windows.Forms.Panel();
             this.FP_OpenNotepad = new System.Windows.Forms.Button();
-            this.FP_Uninstall = new System.Windows.Forms.Button();
             this.FP_Install = new System.Windows.Forms.Button();
             this.FP_GB_Desc = new System.Windows.Forms.GroupBox();
             this.FP_Comp = new System.Windows.Forms.Label();
             this.FP_Description = new System.Windows.Forms.Label();
             this.FP_ConfigSel = new System.Windows.Forms.ComboBox();
+            this.FP_Uninstall = new System.Windows.Forms.Button();
             this.L_FP_ConfigSel = new System.Windows.Forms.Label();
             this.FP_TopLabel = new System.Windows.Forms.Label();
             this.HUDInstall = new System.Windows.Forms.TabPage();
@@ -257,6 +258,7 @@
             this.PS_GB_SInfo.SuspendLayout();
             this.PS_GB_Solver.SuspendLayout();
             this.FPSCfgInstall.SuspendLayout();
+            this.FPS_Panel.SuspendLayout();
             this.FP_GB_Desc.SuspendLayout();
             this.HUDInstall.SuspendLayout();
             this.HUD_Panel.SuspendLayout();
@@ -1343,16 +1345,22 @@
             // 
             // FPSCfgInstall
             // 
-            this.FPSCfgInstall.Controls.Add(this.FP_OpenNotepad);
-            this.FPSCfgInstall.Controls.Add(this.FP_Uninstall);
-            this.FPSCfgInstall.Controls.Add(this.FP_Install);
-            this.FPSCfgInstall.Controls.Add(this.FP_GB_Desc);
-            this.FPSCfgInstall.Controls.Add(this.FP_ConfigSel);
-            this.FPSCfgInstall.Controls.Add(this.L_FP_ConfigSel);
+            this.FPSCfgInstall.Controls.Add(this.FPS_Panel);
             this.FPSCfgInstall.Controls.Add(this.FP_TopLabel);
             resources.ApplyResources(this.FPSCfgInstall, "FPSCfgInstall");
             this.FPSCfgInstall.Name = "FPSCfgInstall";
             this.FPSCfgInstall.UseVisualStyleBackColor = true;
+            // 
+            // FPS_Panel
+            // 
+            this.FPS_Panel.Controls.Add(this.FP_OpenNotepad);
+            this.FPS_Panel.Controls.Add(this.FP_Install);
+            this.FPS_Panel.Controls.Add(this.FP_GB_Desc);
+            this.FPS_Panel.Controls.Add(this.FP_ConfigSel);
+            this.FPS_Panel.Controls.Add(this.FP_Uninstall);
+            this.FPS_Panel.Controls.Add(this.L_FP_ConfigSel);
+            resources.ApplyResources(this.FPS_Panel, "FPS_Panel");
+            this.FPS_Panel.Name = "FPS_Panel";
             // 
             // FP_OpenNotepad
             // 
@@ -1362,13 +1370,6 @@
             this.FP_OpenNotepad.TabStop = false;
             this.FP_OpenNotepad.UseVisualStyleBackColor = true;
             this.FP_OpenNotepad.Click += new System.EventHandler(this.FP_OpenNotepad_Click);
-            // 
-            // FP_Uninstall
-            // 
-            resources.ApplyResources(this.FP_Uninstall, "FP_Uninstall");
-            this.FP_Uninstall.Name = "FP_Uninstall";
-            this.FP_Uninstall.UseVisualStyleBackColor = true;
-            this.FP_Uninstall.Click += new System.EventHandler(this.FP_Uninstall_Click);
             // 
             // FP_Install
             // 
@@ -1403,6 +1404,13 @@
             resources.ApplyResources(this.FP_ConfigSel, "FP_ConfigSel");
             this.FP_ConfigSel.Name = "FP_ConfigSel";
             this.FP_ConfigSel.SelectedIndexChanged += new System.EventHandler(this.FP_ConfigSel_SelectedIndexChanged);
+            // 
+            // FP_Uninstall
+            // 
+            resources.ApplyResources(this.FP_Uninstall, "FP_Uninstall");
+            this.FP_Uninstall.Name = "FP_Uninstall";
+            this.FP_Uninstall.UseVisualStyleBackColor = true;
+            this.FP_Uninstall.Click += new System.EventHandler(this.FP_Uninstall_Click);
             // 
             // L_FP_ConfigSel
             // 
@@ -2023,7 +2031,7 @@
             this.PS_GB_Solver.ResumeLayout(false);
             this.PS_GB_Solver.PerformLayout();
             this.FPSCfgInstall.ResumeLayout(false);
-            this.FPSCfgInstall.PerformLayout();
+            this.FPS_Panel.ResumeLayout(false);
             this.FP_GB_Desc.ResumeLayout(false);
             this.HUDInstall.ResumeLayout(false);
             this.HUD_Panel.ResumeLayout(false);
@@ -2106,12 +2114,6 @@
         private System.Windows.Forms.ToolStripSeparator CE_ToolSep2;
         private System.Windows.Forms.ToolStripButton CE_ShowHint;
         private System.Windows.Forms.ToolStripButton CE_SaveAs;
-        private System.Windows.Forms.Button FP_Uninstall;
-        private System.Windows.Forms.Button FP_Install;
-        private System.Windows.Forms.GroupBox FP_GB_Desc;
-        private System.Windows.Forms.Label FP_Description;
-        private System.Windows.Forms.ComboBox FP_ConfigSel;
-        private System.Windows.Forms.Label L_FP_ConfigSel;
         private System.Windows.Forms.Label FP_TopLabel;
         private System.Windows.Forms.PictureBox GT_Warning;
         private System.Windows.Forms.ToolStripStatusLabel SB_App;
@@ -2135,7 +2137,6 @@
         private System.Windows.Forms.GroupBox PS_GB_AdvRepr;
         private System.Windows.Forms.Button PS_RemOldBin;
         private System.Windows.Forms.Button PS_RemGameOpts;
-        private System.Windows.Forms.Button FP_OpenNotepad;
         private System.Windows.Forms.ToolStripMenuItem MNUUpdateCheck;
         private System.Windows.Forms.ToolStripButton BUT_OpenNpad;
         private System.Windows.Forms.ToolStripMenuItem MNUAppOptions;
@@ -2250,12 +2251,20 @@
         private System.Windows.Forms.Label HUD_NAText;
         private System.Windows.Forms.PictureBox HUD_NAImg;
         private System.Windows.Forms.Label HD_LastUpdate;
-        private System.Windows.Forms.Label FP_Comp;
         private System.Windows.Forms.ToolStripSeparator MNUSep5;
         private System.Windows.Forms.TextBox GT_LaunchOptions;
         private System.Windows.Forms.Label L_GT_LaunchOptions;
         private System.Windows.Forms.ToolStripStatusLabel SB_SteamID;
         private System.ComponentModel.BackgroundWorker BW_ClnList;
+        private System.Windows.Forms.Panel FPS_Panel;
+        private System.Windows.Forms.Button FP_OpenNotepad;
+        private System.Windows.Forms.Button FP_Install;
+        private System.Windows.Forms.GroupBox FP_GB_Desc;
+        private System.Windows.Forms.Label FP_Comp;
+        private System.Windows.Forms.Label FP_Description;
+        private System.Windows.Forms.ComboBox FP_ConfigSel;
+        private System.Windows.Forms.Button FP_Uninstall;
+        private System.Windows.Forms.Label L_FP_ConfigSel;
     }
 }
 
