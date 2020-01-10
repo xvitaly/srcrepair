@@ -1987,8 +1987,8 @@ namespace srcrepair.gui
         {
             try
             {
-                // Checking the number of installed FPS-configs...
-                if (App.SourceGames[AppSelector.Text].FPSConfigs.Count > 0)
+                // Asking for confirmation...
+                if (MessageBox.Show(AppStrings.FP_UninstallQuestion, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
                     // If the game is using custom user directory and it exists, silently removing its contents...
                     if (App.SourceGames[AppSelector.Text].IsUsingUserDir)
@@ -2011,10 +2011,6 @@ namespace srcrepair.gui
                     // Changing the state of some controls...
                     SetFPSButtons(CheckIfFPSConfigInstalled());
                     HandleConfigs();
-                }
-                else
-                {
-                    MessageBox.Show(AppStrings.FP_RemoveNotExists, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception Ex)
