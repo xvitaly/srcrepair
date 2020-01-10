@@ -157,10 +157,6 @@
     <value>Произошла ошибка при удалении установленного конфига!</value>
     <comment>Сообщение, выдаваемое при ошибке удаления имеющегося конфига</comment>
   </data>
-  <data name="FP_RemoveNotExists" xml:space="preserve">
-    <value>Нечего удалять: для текущей игры FPS-конфиги не установлены!</value>
-    <comment>Сообщение, выдаваемое при отсутствии установленного FPS-конфига в управляемом приложении</comment>
-  </data>
   <data name="FP_RemoveSuccessful" xml:space="preserve">
     <value>Установленный FPS-конфиг был успешно удалён!</value>
     <comment>Сообщение, выдаваемое при успешном удалении FPS-конфига</comment>
@@ -866,5 +862,9 @@
   <data name="FP_BtnUninstallSelectedText" xml:space="preserve">
     <value>Удалить выбранный конфиг</value>
     <comment>Текст кнопки Удалить конфиг для игр с поддержкой пользовательского каталога модификаций</comment>
+  </data>
+  <data name="FP_UninstallQuestion" xml:space="preserve">
+    <value>Удалить FPS-конфиг?</value>
+    <comment>Сообщение при нажатии на кнопку Удалить FPS-конфиг</comment>
   </data>
 </root>

@@ -826,15 +826,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nothing to remove: FPS-config for the selected game is not installed!.
-        /// </summary>
-        internal static string FP_RemoveNotExists {
-            get {
-                return ResourceManager.GetString("FP_RemoveNotExists", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Installed FPS-config has been successfully removed!.
         /// </summary>
         internal static string FP_RemoveSuccessful {
@@ -849,6 +840,15 @@ namespace srcrepair.gui {
         internal static string FP_SelectFromList {
             get {
                 return ResourceManager.GetString("FP_SelectFromList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove FPS-config?.
+        /// </summary>
+        internal static string FP_UninstallQuestion {
+            get {
+                return ResourceManager.GetString("FP_UninstallQuestion", resourceCulture);
             }
         }
         

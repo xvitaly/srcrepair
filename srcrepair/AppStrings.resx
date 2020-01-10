@@ -147,9 +147,6 @@
   <data name="FP_RemoveFailed" xml:space="preserve">
     <value>An error occurred during removal of the installed config!</value>
   </data>
-  <data name="FP_RemoveNotExists" xml:space="preserve">
-    <value>Nothing to remove: FPS-config for the selected game is not installed!</value>
-  </data>
   <data name="FP_RemoveSuccessful" xml:space="preserve">
     <value>Installed FPS-config has been successfully removed!</value>
   </data>
@@ -683,5 +680,8 @@
   </data>
   <data name="FP_BtnUninstallSelectedText" xml:space="preserve">
     <value>Remove selected config</value>
+  </data>
+  <data name="FP_UninstallQuestion" xml:space="preserve">
+    <value>Remove FPS-config?</value>
   </data>
 </root>
