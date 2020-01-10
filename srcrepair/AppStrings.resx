@@ -133,7 +133,7 @@
     <value>A critical error: could not install the selected config!</value>
   </data>
   <data name="FP_InstallQuestion" xml:space="preserve">
-    <value>Warning! Setting FPS-config will reduce all graphics settings to the absolute minimum that will lead to significant deterioration of the quality of game graphics and game performance increase. Are you sure you want to set the FPS-config?</value>
+    <value>Do you want to install selected FPS-config?</value>
   </data>
   <data name="FP_InstallSuccessful" xml:space="preserve">
     <value>FPS config has been successfully installed!</value>

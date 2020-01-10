@@ -781,7 +781,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! Setting FPS-config will reduce all graphics settings to the absolute minimum that will lead to significant deterioration of the quality of game graphics and game performance increase. Are you sure you want to set the FPS-config?.
+        ///   Looks up a localized string similar to Do you want to install selected FPS-config?.
         /// </summary>
         internal static string FP_InstallQuestion {
             get {
