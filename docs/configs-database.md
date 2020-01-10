@@ -9,7 +9,7 @@ Original source file located at `assets/configs.xml` of current repository.
 <Configs>
     <Config>
         <Name>foo-bar</Name>
-        <FileName>foo-bar.cfg</FileName>
+        <URI>https://example.org/foo-bar.zip</URI>
         <SupportedGames>240;440</SupportedGames>
         <ru>
         <![CDATA[Description in Russian.]]>
@@ -17,6 +17,9 @@ Original source file located at `assets/configs.xml` of current repository.
         <en>
         <![CDATA[Description in English.]]>
         </en>
+        <ArchiveDir>foo-bar</ArchiveDir>
+        <InstallDir>foo-bar</InstallDir>
+        <Hash2>SHA-512</Hash2>
     </Config>
 </Configs>
 ```
@@ -34,7 +37,10 @@ Original source file located at `assets/configs.xml` of current repository.
 ### Level 2
 
   * `Name` - user-friendly name of FPS-config;
-  * `FileName` - file name of FPS-config (must be located at `assets/cfgs` directory; custom paths are not allowed);
+  * `URI` - fully-qualified Zip archive download URL (safe redirects (3XX HTTP codes) are allowed);
   * `SupportedGames` - comma-separated list of supported game IDs;
   * `ru` - user-friendly description in Russian (CDATA escaping is required);
-  * `en` - user-friendly description in English (CDATA escaping is required).
+  * `en` - user-friendly description in English (CDATA escaping is required);
+  * `ArchiveDir` - name of directory in archive (subdirectories are supported (use `/` symbol));
+  * `InstallDir` - installation directory name;
+  * `Hash2` - SHA2 (SHA-512) hash of download file, speficied in `URI`.
