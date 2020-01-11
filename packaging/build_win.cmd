@@ -22,7 +22,7 @@ rem along with this program. If not, see <http://www.gnu.org/licenses/>.
 title Building SRC Repair release binaries...
 
 set GPGKEY=A989AAAA
-set RELVER=360
+set RELVER=361
 
 echo Removing previous build results...
 if exist results rd /S /Q results
