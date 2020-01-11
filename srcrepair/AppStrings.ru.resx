@@ -138,7 +138,7 @@
     <comment>Сообщение об ошибке при установке</comment>
   </data>
   <data name="FP_InstallQuestion" xml:space="preserve">
-    <value>Вы уверены, что хотите установить выбранный FPS-конфиг?</value>
+    <value>Установить выбранный FPS-конфиг?</value>
     <comment>Сообщение, выдаваемое при попытке установить FPS-конфиг</comment>
   </data>
   <data name="FP_InstallSuccessful" xml:space="preserve">
@@ -864,7 +864,7 @@
     <comment>Текст кнопки Удалить конфиг для игр с поддержкой пользовательского каталога модификаций</comment>
   </data>
   <data name="FP_UninstallQuestion" xml:space="preserve">
-    <value>Удалить FPS-конфиг?</value>
+    <value>Удалить выбранный FPS-конфиг?</value>
     <comment>Сообщение при нажатии на кнопку Удалить FPS-конфиг</comment>
   </data>
 </root>

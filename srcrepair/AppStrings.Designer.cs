@@ -781,7 +781,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Do you want to install selected FPS-config?.
+        ///   Looks up a localized string similar to Install selected FPS-config?.
         /// </summary>
         internal static string FP_InstallQuestion {
             get {
@@ -844,7 +844,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Remove FPS-config?.
+        ///   Looks up a localized string similar to Remove selected FPS-config?.
         /// </summary>
         internal static string FP_UninstallQuestion {
             get {

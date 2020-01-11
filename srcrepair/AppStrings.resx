@@ -133,7 +133,7 @@
     <value>A critical error: could not install the selected config!</value>
   </data>
   <data name="FP_InstallQuestion" xml:space="preserve">
-    <value>Do you want to install selected FPS-config?</value>
+    <value>Install selected FPS-config?</value>
   </data>
   <data name="FP_InstallSuccessful" xml:space="preserve">
     <value>FPS config has been successfully installed!</value>
@@ -682,6 +682,6 @@
     <value>Remove selected config</value>
   </data>
   <data name="FP_UninstallQuestion" xml:space="preserve">
-    <value>Remove FPS-config?</value>
+    <value>Remove selected FPS-config?</value>
   </data>
 </root>
