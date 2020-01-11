@@ -1987,11 +1987,11 @@ namespace srcrepair.gui
         {
             try
             {
-                // Asking for confirmation...
-                if (MessageBox.Show(AppStrings.FP_UninstallQuestion, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                // If the game is using custom user directory and it exists, silently removing its contents...
+                if (App.SourceGames[AppSelector.Text].IsUsingUserDir)
                 {
-                    // If the game is using custom user directory and it exists, silently removing its contents...
-                    if (App.SourceGames[AppSelector.Text].IsUsingUserDir)
+                    // Asking for confirmation...
+                    if (MessageBox.Show(AppStrings.FP_UninstallQuestion, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
                         // Generating full path...
                         string CfgPath = Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir);
@@ -2002,16 +2002,16 @@ namespace srcrepair.gui
                         // Showing message...
                         MessageBox.Show(AppStrings.FP_RemoveSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    else
-                    {
-                        // Showing interactive dialog with detected FPS-configs...
-                        GuiHelpers.FormShowCleanup(App.SourceGames[AppSelector.Text].FPSConfigs, ((Button)sender).Text.ToLower(), AppStrings.FP_RemoveSuccessful, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile, false, false, false, Properties.Settings.Default.SafeCleanup);
-                    }
-
-                    // Changing the state of some controls...
-                    SetFPSButtons(CheckIfFPSConfigInstalled());
-                    HandleConfigs();
                 }
+                else
+                {
+                    // Showing interactive dialog with detected FPS-configs...
+                    GuiHelpers.FormShowCleanup(App.SourceGames[AppSelector.Text].FPSConfigs, ((Button)sender).Text.ToLower(), AppStrings.FP_RemoveSuccessful, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile, false, false, false, Properties.Settings.Default.SafeCleanup);
+                }
+
+                // Changing the state of some controls...
+                SetFPSButtons(CheckIfFPSConfigInstalled());
+                HandleConfigs();
             }
             catch (Exception Ex)
             {
