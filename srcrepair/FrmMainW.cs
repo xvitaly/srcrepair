@@ -2748,7 +2748,14 @@ namespace srcrepair.gui
         {
             try
             {
-                EditFPSConfig(Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, "cfg", "autoexec.cfg"), ModifierKeys != Keys.Shift);
+                // Saving state of current ModifierKeys before loading new form...
+                Keys MfKeysState = ModifierKeys;
+
+                // Generating full path to installed FPS-config...
+                string ConfigFile = App.SourceGames[AppSelector.Text].IsUsingUserDir ? Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, "cfg", "autoexec.cfg") : GuiHelpers.FormShowCfgSelect(App.SourceGames[AppSelector.Text].FPSConfigs);
+
+                // Loading FPS-config to Notepad or built-in Config Editor...
+                EditFPSConfig(ConfigFile, MfKeysState != Keys.Shift);
             }
             catch (Exception Ex)
             {
