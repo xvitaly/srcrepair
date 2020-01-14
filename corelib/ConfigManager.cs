@@ -171,7 +171,7 @@ namespace srcrepair.core
                 {
                     try
                     {
-                        Configs.Add(XmlItem.SelectSingleNode("Name").InnerText, new FPSConfig(XmlItem.SelectSingleNode("Name").InnerText, XmlItem.SelectSingleNode("URI").InnerText, XmlItem.SelectSingleNode(LangPrefix).InnerText, XmlItem.SelectSingleNode("SupportedGames").InnerText.Split(';'), XmlItem.SelectSingleNode("ArchiveDir").InnerText, XmlItem.SelectSingleNode("InstallDir").InnerText, XmlItem.SelectSingleNode("Hash2").InnerText, Path.Combine(AppCfgDir, Path.GetFileName(XmlItem.SelectSingleNode("URI").InnerText))));
+                        Configs.Add(XmlItem.SelectSingleNode("Name").InnerText, new FPSConfig(XmlItem.SelectSingleNode("Name").InnerText, XmlItem.SelectSingleNode("URI").InnerText, XmlItem.SelectSingleNode("Mirror").InnerText, XmlItem.SelectSingleNode(LangPrefix).InnerText, XmlItem.SelectSingleNode("SupportedGames").InnerText.Split(';'), XmlItem.SelectSingleNode("ArchiveDir").InnerText, XmlItem.SelectSingleNode("InstallDir").InnerText, XmlItem.SelectSingleNode("Hash2").InnerText, Path.Combine(AppCfgDir, Path.GetFileName(XmlItem.SelectSingleNode("URI").InnerText))));
                     }
                     catch (Exception Ex)
                     {
