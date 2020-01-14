@@ -247,5 +247,17 @@ namespace srcrepair.gui.Properties {
                 this["HUDHideOutdated"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool FPSUseMirror {
+            get {
+                return ((bool)(this["FPSUseMirror"]));
+            }
+            set {
+                this["FPSUseMirror"] = value;
+            }
+        }
     }
 }
