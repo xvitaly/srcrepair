@@ -39,6 +39,11 @@ namespace srcrepair.core
         public string URI { get; private set; }
 
         /// <summary>
+        /// Gets or sets FPS-config download mirror URL.
+        /// </summary>
+        public string Mirror { get; private set; }
+
+        /// <summary>
         /// Gets or sets FPS-config user-friendly description.
         /// </summary>
         public string Description { get; private set; }
@@ -83,19 +88,21 @@ namespace srcrepair.core
         /// FPSConfig class constructor.
         /// </summary>
         /// <param name="CfName">FPS-config friendly name.</param>
-        /// <param name="CfURI">FPS-config file name.</param>
-        /// <param name="CfDescriptio">FPS-config description.</param>
+        /// <param name="CfURI">FPS-config download URI.</param>
+        /// <param name="CfURI">FPS-config download mirror URL.</param>
+        /// <param name="CfDescription">FPS-config description.</param>
         /// <param name="CfGames">Array of supported by FPS-configs game IDs.</param>
         /// <param name="CfArchiveDIr">Working directory in download archive.</param>
         /// <param name="CfInstallDir">FPS-config installation directory.</param>
         /// <param name="CfFileHash">FPS-config download file checksum.</param>
         /// <param name="CfLocalFile">Path to downloaded FPS-config archive file on disk.</param>
-        public FPSConfig(string CfName, string CfURI, string CfDescriptio, string[] CfGames, string CfArchiveDIr, string CfInstallDir, string CfFileHash, string CfLocalFile)
+        public FPSConfig(string CfName, string CfURI, string CfMirror, string CfDescription, string[] CfGames, string CfArchiveDIr, string CfInstallDir, string CfFileHash, string CfLocalFile)
         {
             // Setting class properties...
             Name = CfName;
             URI = CfURI;
-            Description = CfDescriptio;
+            Mirror = CfMirror;
+            Description = CfDescription;
             SupportedGames = new List<String>(CfGames);
             ArchiveDir = CfArchiveDIr;
             InstallDir = CfInstallDir;
