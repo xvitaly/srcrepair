@@ -57,6 +57,7 @@ namespace srcrepair.gui
             MO_UnSafeOps.Checked = Properties.Settings.Default.AllowUnSafeCleanup;
             MO_UseUpstream.Checked = Properties.Settings.Default.HUDUseUpstream;
             MO_HideOutdatedHUDs.Checked = Properties.Settings.Default.HUDHideOutdated;
+            MO_FPSUseMirror.Checked = Properties.Settings.Default.FPSUseMirror;
 
             // Settig application name in window title...
             Text = String.Format(Text, Properties.Resources.AppName);
@@ -80,6 +81,7 @@ namespace srcrepair.gui
             Properties.Settings.Default.AllowUnSafeCleanup = MO_UnSafeOps.Checked;
             Properties.Settings.Default.HUDUseUpstream = MO_UseUpstream.Checked;
             Properties.Settings.Default.HUDHideOutdated = MO_HideOutdatedHUDs.Checked;
+            Properties.Settings.Default.FPSUseMirror = MO_FPSUseMirror.Checked;
             if (Regex.IsMatch(MO_CustDirName.Text, Properties.Resources.MO_CustomDirRegex)) { Properties.Settings.Default.UserCustDirName = MO_CustDirName.Text; }
 
             // Saving settings to disk...
