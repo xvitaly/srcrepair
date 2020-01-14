@@ -1913,7 +1913,7 @@ namespace srcrepair.gui
                     BackUpFPSConfigs();
 
                     // Downloading FPS-config archive...
-                    GuiHelpers.FormShowDownloader(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].URI, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile);
+                    GuiHelpers.FormShowDownloader(Properties.Settings.Default.FPSUseMirror ? App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].Mirror : App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].URI, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile);
 
                     // Checking if downloaded archive exists...
                     if (File.Exists(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile))
