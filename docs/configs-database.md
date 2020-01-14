@@ -10,6 +10,7 @@ Original source file located at `assets/configs.xml` of current repository.
     <Config>
         <Name>foo-bar</Name>
         <URI>https://example.org/foo-bar.zip</URI>
+        <Mirror>https://example.com/foo-bar.zip</Mirror>
         <SupportedGames>240;440</SupportedGames>
         <ru>
         <![CDATA[Description in Russian.]]>
@@ -38,6 +39,7 @@ Original source file located at `assets/configs.xml` of current repository.
 
   * `Name` - user-friendly name of FPS-config;
   * `URI` - fully-qualified Zip archive download URL (safe redirects (3XX HTTP codes) are allowed);
+  * `Mirror` - fully-qualified Zip archive download mirror URL (safe redirects (3XX HTTP codes) are allowed);
   * `SupportedGames` - comma-separated list of supported game IDs;
   * `ru` - user-friendly description in Russian (CDATA escaping is required);
   * `en` - user-friendly description in English (CDATA escaping is required);
