@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Updates>
     <Application>
-        <Version>36.0.1.7160</Version>
+        <Version>36.0.2.7166</Version>
         <URL>https://www.easycoding.org/files/srcrepair_latest.exe</URL>
-        <Hash>c9590a698356246d35f836c96dbf4ead</Hash>
-        <Hash2>44b897ee26081f1ca220ca79ca0bde0d6ace8de6a9510ff1e34a52e9e1ddd1be2e16322fca0bc3e60bb757d959ca92a2f55e0caaff8550dfbd4bbf4da0f011e7</Hash2>
+        <Hash>7fff88b237620d3d7bcb346e174c4d2c</Hash>
+        <Hash2>02dc9295b2260fb9ce04e55f69c31624780ff18b5c8310248f7803a3a880c9de17c38f4ae98f27b92895dc07f69dff2a42f2d71592bfaa8b22f845b3c46b5ddc</Hash2>
     </Application>
     <GameDB>
         <Version>1</Version>
