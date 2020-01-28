@@ -117,14 +117,200 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ai_disable" xml:space="preserve">
+    <value>Enable / disable AI.</value>
+  </data>
+  <data name="ai_show_connect" xml:space="preserve">
+    <value>Enable / disable AI connect / disconnect messages.</value>
+  </data>
+  <data name="ai_show_hints" xml:space="preserve">
+    <value>Show hints.</value>
+  </data>
+  <data name="alias" xml:space="preserve">
+    <value>Create command alias for future use.</value>
+  </data>
+  <data name="banid" xml:space="preserve">
+    <value>Ban specified SteamID for specified time (0 - permanent).</value>
+  </data>
+  <data name="banip" xml:space="preserve">
+    <value>Ban specified IP-address for specified time (0 - permanent).</value>
+  </data>
   <data name="bind" xml:space="preserve">
     <value>Binds a key with a command.</value>
+  </data>
+  <data name="bot" xml:space="preserve">
+    <value>Adds a stupid bot in TF2. Marked as cheat.</value>
+  </data>
+  <data name="bot_allow_grenades" xml:space="preserve">
+    <value>If nonzero, bots may use grenades.</value>
+  </data>
+  <data name="bot_allow_machine_guns" xml:space="preserve">
+    <value>If nonzero, bots may use the machine gun.</value>
+  </data>
+  <data name="bot_allow_pistols" xml:space="preserve">
+    <value>If nonzero, bots may use pistols.</value>
+  </data>
+  <data name="bot_allow_rifles" xml:space="preserve">
+    <value>If nonzero, bots may use rifles.</value>
+  </data>
+  <data name="bot_allow_rogues" xml:space="preserve">
+    <value>Allow / disallow following player's orders.</value>
+  </data>
+  <data name="bot_allow_shotguns" xml:space="preserve">
+    <value>If nonzero, bots may use shotguns.</value>
+  </data>
+  <data name="bot_allow_snipers" xml:space="preserve">
+    <value>If nonzero, bots may use sniper rifles.</value>
+  </data>
+  <data name="bot_allow_sub_machine_guns" xml:space="preserve">
+    <value>If nonzero, bots may use sub-machine guns.</value>
+  </data>
+  <data name="bot_all_weapons" xml:space="preserve">
+    <value>Enable / disable use of all available weapons for bots.</value>
+  </data>
+  <data name="bot_autodifficulty_threshold_high" xml:space="preserve">
+    <value>Amount above avg human contribution score, above which a bot should lower its difficulty.</value>
+  </data>
+  <data name="bot_autodifficulty_threshold_low" xml:space="preserve">
+    <value>Amount below avg human contribution score, below which a bot should raise its difficulty.</value>
+  </data>
+  <data name="bot_auto_follow" xml:space="preserve">
+    <value>Bots will follow human players.</value>
+  </data>
+  <data name="bot_auto_vacate" xml:space="preserve">
+    <value>Bots will automatically leave server to free game slots for human players.</value>
+  </data>
+  <data name="bot_changeclass" xml:space="preserve">
+    <value>Force bots to change class.</value>
+  </data>
+  <data name="bot_changeteams" xml:space="preserve">
+    <value>Force bots to change teams.</value>
+  </data>
+  <data name="bot_chatter" xml:space="preserve">
+    <value>Control how bots talk. Allowed values: 'off', 'radio', 'minimal', or 'normal'.</value>
+  </data>
+  <data name="bot_defer_to_human" xml:space="preserve">
+    <value>If nonzero and there is a human on the team, the bots will not do the scenario tasks.</value>
+  </data>
+  <data name="bot_defer_to_human_goals" xml:space="preserve">
+    <value>If nonzero and there is a human on the team, the bots will not do the scenario tasks.</value>
+  </data>
+  <data name="bot_defer_to_human_items" xml:space="preserve">
+    <value>If nonzero and there is a human on the team, the bots will not get scenario items.</value>
+  </data>
+  <data name="bot_difficulty" xml:space="preserve">
+    <value>Bot difficulty.</value>
+  </data>
+  <data name="bot_dontmove" xml:space="preserve">
+    <value>Force bots to stay on spawn.</value>
+  </data>
+  <data name="bot_eco_limit" xml:space="preserve">
+    <value>Force bots in eco mode. Bots will not spend money until reach specified threshold.</value>
+  </data>
+  <data name="bot_join_after_player" xml:space="preserve">
+    <value>Bots will join game only after human players.</value>
+  </data>
+  <data name="bot_join_team" xml:space="preserve">
+    <value>Bots will be allowed to join only specified team.</value>
+  </data>
+  <data name="bot_jump" xml:space="preserve">
+    <value>Force bots to jump.</value>
+  </data>
+  <data name="bot_kill" xml:space="preserve">
+    <value>Kill bot with specified nickname.</value>
+  </data>
+  <data name="bot_mimic" xml:space="preserve">
+    <value>Bots will mimic human players.</value>
+  </data>
+  <data name="bot_mimic_inverse" xml:space="preserve">
+    <value>Bots will mimic human players (inversed).</value>
+  </data>
+  <data name="bot_prefix" xml:space="preserve">
+    <value>Bot's name prefix.</value>
+  </data>
+  <data name="bot_quota" xml:space="preserve">
+    <value>Determines the total number of bots in the game.</value>
+  </data>
+  <data name="bot_quota_mode" xml:space="preserve">
+    <value>Determines the type of quota. Allowed values: 'normal', 'fill', and 'match'. If 'fill', the server will adjust bots to keep N players in the game, where N is bot_quota. If 'match', the server will maintain a 1:N ratio of humans to bots, where N is bot_quota.</value>
+  </data>
+  <data name="bot_randomnames" xml:space="preserve">
+    <value>Randomize bot nicknames.</value>
+  </data>
+  <data name="bot_teleport" xml:space="preserve">
+    <value>Teleport bot to a specified position. Example: bot_teleport &lt;bot name&gt; &lt;X&gt; &lt;Y&gt; &lt;Z&gt; &lt;Pitch&gt; &lt;Yaw&gt; &lt;Roll&gt;.</value>
+  </data>
+  <data name="bot_walk" xml:space="preserve">
+    <value>Force the bots to walk.</value>
+  </data>
+  <data name="buddha" xml:space="preserve">
+    <value>Enable invulnerability. The same as god, but HP will be set to 1 and player will still get damage.</value>
+  </data>
+  <data name="budget_show_history" xml:space="preserve">
+    <value>Show budget history.</value>
+  </data>
+  <data name="bugreporter_uploadasync" xml:space="preserve">
+    <value>Upload bug reports asynchronically.</value>
+  </data>
+  <data name="build" xml:space="preserve">
+    <value>Open TF2 build menu.</value>
+  </data>
+  <data name="cam_collision" xml:space="preserve">
+    <value>Enable / disable camera collision.</value>
+  </data>
+  <data name="cam_idealdelta" xml:space="preserve">
+    <value>Camera's speed until reaching ideal angle in third person mode.</value>
+  </data>
+  <data name="cam_ideallag" xml:space="preserve">
+    <value>Controls how fast you can move your camera around in third person mode.</value>
+  </data>
+  <data name="cam_snapto" xml:space="preserve">
+    <value>Snap camera to its default position in third person mode.</value>
+  </data>
+  <data name="cash_player_damage_hostage" xml:space="preserve">
+    <value>The penalty (or bonus) players get from harming a hostage.</value>
+  </data>
+  <data name="cash_player_get_killed" xml:space="preserve">
+    <value>Money a player can get when they are killed by another player.</value>
+  </data>
+  <data name="cash_player_killed_enemy_default" xml:space="preserve">
+    <value>Money award to player when they kill an enemy (which then gets scaled per weapon).</value>
+  </data>
+  <data name="cash_player_killed_enemy_factor" xml:space="preserve">
+    <value>Scaler that adjusts the money recieved per kill.</value>
+  </data>
+  <data name="cash_player_killed_hostage" xml:space="preserve">
+    <value>The penalty (or bonus) players get for killing a hostage.</value>
+  </data>
+  <data name="cash_player_respawn_amount" xml:space="preserve">
+    <value>The money bonus a play can get when they respawn (if respawning is enabled).</value>
   </data>
   <data name="changelevel" xml:space="preserve">
     <value>Changes the map.</value>
   </data>
+  <data name="cl_allowdownload" xml:space="preserve">
+    <value>Client downloads customization files.</value>
+  </data>
+  <data name="cl_allowupload" xml:space="preserve">
+    <value>Client uploads customization files.</value>
+  </data>
+  <data name="cl_animationinfo" xml:space="preserve">
+    <value>Hud element to examine.</value>
+  </data>
+  <data name="cl_ask_blacklist_for_any_server" xml:space="preserve">
+    <value>If nonzero, auto-ask for local/LAN servers (for debugging).</value>
+  </data>
+  <data name="cl_ask_blacklist_max_session_duration" xml:space="preserve">
+    <value>If player stays on a server for less than this time (in seconds) prompt to add server to blacklist.</value>
+  </data>
   <data name="cl_ask_blacklist_opt_out" xml:space="preserve">
     <value>0/1 - turns question whether to blacklist a server after leaving after a short amount of time off/on.</value>
+  </data>
+  <data name="cl_ask_favorite_for_any_server" xml:space="preserve">
+    <value>If nonzero, auto-ask for local/LAN servers (for debugging).</value>
+  </data>
+  <data name="cl_ask_favorite_min_session_duration" xml:space="preserve">
+    <value>If player stays on a server for longer than this time (in seconds) prompt to add server to favorites.</value>
   </data>
   <data name="cl_ask_favorite_opt_out" xml:space="preserve">
     <value>0/1 - turns question whether to favorite a server after leaving after a longer amount of time off/on.</value>
@@ -135,17 +321,158 @@
   <data name="cl_autorezoom" xml:space="preserve">
     <value>0/1 - turns Sniper Rifle re-zoom off/on.</value>
   </data>
+  <data name="cl_avatar_convert_rgb" xml:space="preserve">
+    <value>Convert players avatars to RGB format.</value>
+  </data>
   <data name="cl_burninggibs" xml:space="preserve">
     <value>0/1 - burning gibs off/on.</value>
+  </data>
+  <data name="cl_chatfilters" xml:space="preserve">
+    <value>Stores the chat filter settings.</value>
+  </data>
+  <data name="cl_class" xml:space="preserve">
+    <value>Default class when joining a game.</value>
+  </data>
+  <data name="cl_clearhinthistory" xml:space="preserve">
+    <value>Clear memory of client side hints displayed to the player.</value>
+  </data>
+  <data name="cl_clockdrift_max_ms" xml:space="preserve">
+    <value>Maximum number of milliseconds the clock is allowed to drift before the client snaps its clock to the server's.</value>
+  </data>
+  <data name="cl_clockdrift_max_ms_threadmode" xml:space="preserve">
+    <value>Maximum number of milliseconds the clock is allowed to drift before the client snaps its clock to the server's.</value>
+  </data>
+  <data name="cl_clock_correction" xml:space="preserve">
+    <value>Enable/disable clock correction on the client.</value>
+  </data>
+  <data name="cl_clock_correction_adjustment_max_amount" xml:space="preserve">
+    <value>Sets the maximum number of milliseconds per second it is allowed to correct the client clock.</value>
+  </data>
+  <data name="cl_clock_correction_adjustment_max_offset" xml:space="preserve">
+    <value>As the clock offset goes from cl_clock_correction_adjustment_min_offset to this value (in milliseconds).</value>
+  </data>
+  <data name="cl_clock_correction_adjustment_min_offset" xml:space="preserve">
+    <value>If the clock offset is less than this amount (in milliseconds), then no clock correction is applied.</value>
+  </data>
+  <data name="cl_clock_correction_force_server_tick" xml:space="preserve">
+    <value>Force clock correction to match the server tick + this offset (-999 disables it).</value>
+  </data>
+  <data name="cl_clock_showdebuginfo" xml:space="preserve">
+    <value>Show debugging info about the clock drift.</value>
+  </data>
+  <data name="cl_cmdrate" xml:space="preserve">
+    <value>Max number of command packets sent to server per second.</value>
+  </data>
+  <data name="cl_coach_find_coach" xml:space="preserve">
+    <value>Request a coach for the current game.</value>
+  </data>
+  <data name="cl_coach_toggle" xml:space="preserve">
+    <value>Toggle coach status.</value>
   </data>
   <data name="cl_crosshair_file" xml:space="preserve">
     <value>Sets crosshair picture. "" is standard-crosshairs.</value>
   </data>
+  <data name="cl_crosshair_sniper_show_normal_inaccuracy" xml:space="preserve">
+    <value>Includes standing inaccuracy and spread in your sniper crosshair blur.</value>
+  </data>
+  <data name="cl_crosshair_sniper_width" xml:space="preserve">
+    <value>Allow increasing width of sniper crosshair lines on high dpi monitors or multimonitor setups.</value>
+  </data>
+  <data name="cl_crosshair_t" xml:space="preserve">
+    <value>Use T-shaped crosshair.</value>
+  </data>
+  <data name="cl_customsounds" xml:space="preserve">
+    <value>Enable customized player sound playback.</value>
+  </data>
+  <data name="cl_deathnotices_show_numbers" xml:space="preserve">
+    <value>Allow / disallow appending observer numbers to kill feed (0: defaults for no numbers, 1: to use just observer numbers in death notices, 2: append observer numbers in front of names in death notices).</value>
+  </data>
+  <data name="cl_debugrumble" xml:space="preserve">
+    <value>Turn on rumble debugging spew.</value>
+  </data>
+  <data name="cl_decline_first_notification" xml:space="preserve">
+    <value>Tries to decline/remove the first notification.</value>
+  </data>
+  <data name="cl_demoviewoverride" xml:space="preserve">
+    <value>Override view during demo playback.</value>
+  </data>
+  <data name="cl_detaildist" xml:space="preserve">
+    <value>Distance at which detail props are no longer visible.</value>
+  </data>
+  <data name="cl_detailfade" xml:space="preserve">
+    <value>Distance across which detail props fade in.</value>
+  </data>
+  <data name="cl_detail_multiplier" xml:space="preserve">
+    <value>Extra details to create.</value>
+  </data>
+  <data name="cl_disablehtmlmotd" xml:space="preserve">
+    <value>Disable HTML motds.</value>
+  </data>
+  <data name="cl_downloadfilter" xml:space="preserve">
+    <value>Determines which files can be downloaded from the server (all, none, nosounds).</value>
+  </data>
   <data name="cl_drawhud" xml:space="preserve">
     <value>Hides/shows the HUD - sv_cheats 1 required.</value>
   </data>
+  <data name="cl_drawhud_force_deathnotices" xml:space="preserve">
+    <value>-1 to force draw no deathnotices, 0 default, 1 to force draw deathnotices even if other HUD is disabled.</value>
+  </data>
+  <data name="cl_drawhud_force_radar" xml:space="preserve">
+    <value>Show / hide radar and minimap on special HUD modes.</value>
+  </data>
+  <data name="cl_drawmaterial" xml:space="preserve">
+    <value>Draw a particular material over the frame.</value>
+  </data>
+  <data name="cl_draw_only_deathnotices" xml:space="preserve">
+    <value>Draw only deathnotices.</value>
+  </data>
+  <data name="cl_dump_particle_stats" xml:space="preserve">
+    <value>Dump particle profiling info to particle_profile.csv.</value>
+  </data>
+  <data name="cl_entityreport" xml:space="preserve">
+    <value>For debugging, draw entity states to console.</value>
+  </data>
+  <data name="cl_entityreport_sorted" xml:space="preserve">
+    <value>For debugging, draw entity states to console in sorted order. [0 = disabled, 1 = average, 2 = current, 3 = peak].</value>
+  </data>
+  <data name="cl_ent_absbox" xml:space="preserve">
+    <value>Displays the client's absbox for the entity under the crosshair.</value>
+  </data>
+  <data name="cl_ent_bbox" xml:space="preserve">
+    <value>Displays the client's bounding box for the entity under the crosshair.</value>
+  </data>
+  <data name="cl_ent_rbox" xml:space="preserve">
+    <value>Displays the client's render box for the entity under the crosshair.</value>
+  </data>
+  <data name="cl_extrapolate" xml:space="preserve">
+    <value>Enable/disable extrapolation if interpolation history runs out.</value>
+  </data>
+  <data name="cl_extrapolate_amount" xml:space="preserve">
+    <value>Set how many seconds the client will extrapolate entities for.</value>
+  </data>
+  <data name="cl_fastdetailsprites" xml:space="preserve">
+    <value>Whether to use new detail sprite system.</value>
+  </data>
+  <data name="cl_find_ent" xml:space="preserve">
+    <value>Find and list all client entities with classnames that contain the specified substring. Format: cl_find_ent &lt;substring&gt;.</value>
+  </data>
+  <data name="cl_find_ent_index" xml:space="preserve">
+    <value>Display data for clientside entity matching specified index. Format: cl_find_ent_index &lt;index&gt;.</value>
+  </data>
+  <data name="cl_first_person_uses_world_model" xml:space="preserve">
+    <value>Allow this mode to be used outside of VR mode.</value>
+  </data>
   <data name="cl_flipviewmodels" xml:space="preserve">
     <value>0/1 - sets viewmodels normal/inverted(left-handed) - does not work while connected to a server.</value>
+  </data>
+  <data name="cl_flushentitypacket" xml:space="preserve">
+    <value>For debugging. Force the engine to flush an entity packet.</value>
+  </data>
+  <data name="cl_forcepreload" xml:space="preserve">
+    <value>Whether we should force preloading.</value>
+  </data>
+  <data name="cl_fullupdate" xml:space="preserve">
+    <value>Forces the server to send a full update packet.</value>
   </data>
   <data name="cl_gameserver_create_identity" xml:space="preserve">
     <value>Create identity for dedicated server.</value>
@@ -153,11 +480,131 @@
   <data name="cl_gameserver_list" xml:space="preserve">
     <value>List all of the game server accounts owned by the currently logged in Steam account.</value>
   </data>
+  <data name="cl_gameserver_reset_identity" xml:space="preserve">
+    <value>Resets the identity token for a given game server.</value>
+  </data>
+  <data name="cl_hudhint_sound" xml:space="preserve">
+    <value>Disable hudhint sounds.</value>
+  </data>
+  <data name="cl_hud_minmode" xml:space="preserve">
+    <value>Set to 1 to turn on the advanced minimalist HUD mode.</value>
+  </data>
+  <data name="cl_ignorepackets" xml:space="preserve">
+    <value>Force client to ignore packets (for debugging).</value>
+  </data>
   <data name="cl_interp" xml:space="preserve">
     <value>Sets how far character models are interpolated (drawn away from their actual position) in the world, a good standard value for hitscan weapons is 0.034.</value>
   </data>
+  <data name="cl_interp_all" xml:space="preserve">
+    <value>Disable interpolation list optimizations.</value>
+  </data>
+  <data name="cl_interp_npcs" xml:space="preserve">
+    <value>Interpolate NPC positions starting this many seconds in past.</value>
+  </data>
+  <data name="cl_interp_ratio" xml:space="preserve">
+    <value>Sets the interpolation amount (final amount is cl_interp_ratio / cl_updaterate).</value>
+  </data>
+  <data name="cl_jiggle_bone_debug" xml:space="preserve">
+    <value>Display physics-based 'jiggle bone' debugging information.</value>
+  </data>
+  <data name="cl_jiggle_bone_debug_pitch_constraints" xml:space="preserve">
+    <value>Display physics-based 'jiggle bone' debugging information.</value>
+  </data>
+  <data name="cl_jiggle_bone_debug_yaw_constraints" xml:space="preserve">
+    <value>Display physics-based 'jiggle bone' debugging information.</value>
+  </data>
+  <data name="cl_jiggle_bone_framerate_cutoff" xml:space="preserve">
+    <value>Skip jiggle bone simulation if framerate drops below this value (frames/second).</value>
+  </data>
+  <data name="cl_lagcompensation" xml:space="preserve">
+    <value>Perform server side lag compensation of weapon firing events.</value>
+  </data>
+  <data name="cl_language" xml:space="preserve">
+    <value>Language (from HKCU\Software\Valve\Steam\Language).</value>
+  </data>
+  <data name="cl_localnetworkbackdoor" xml:space="preserve">
+    <value>Enable network optimizations for single player games.</value>
+  </data>
+  <data name="cl_logofile" xml:space="preserve">
+    <value>Spraypoint logo decal.</value>
+  </data>
+  <data name="cl_maxrenderable_dist" xml:space="preserve">
+    <value>Max distance from the camera at which things will be rendered.</value>
+  </data>
+  <data name="cl_mouselook" xml:space="preserve">
+    <value>Set to 1 to use mouse for look, 0 for keyboard look. Cannot be set while connected to a server.</value>
+  </data>
+  <data name="cl_mute_all_comms" xml:space="preserve">
+    <value>When you mute a player, the mute settings now apply to text chat as well as voice chat.</value>
+  </data>
   <data name="cl_new_impact_effects" xml:space="preserve">
     <value>0/1 - turns new, better looking impact effects off/on, most noticeable on glass.</value>
+  </data>
+  <data name="cl_notifications_max_num_visible" xml:space="preserve">
+    <value>How many notifications are visible in-game.</value>
+  </data>
+  <data name="cl_notifications_move_time" xml:space="preserve">
+    <value>How long it takes for a notification to move.</value>
+  </data>
+  <data name="cl_notifications_show_ingame" xml:space="preserve">
+    <value>Whether notifications should show up in-game.</value>
+  </data>
+  <data name="cl_obj_test_building_damage" xml:space="preserve">
+    <value>Debug building damage.</value>
+  </data>
+  <data name="cl_panelanimation" xml:space="preserve">
+    <value>Shows panel animation variables: &lt;panelname | blank for all panels&gt;.</value>
+  </data>
+  <data name="cl_particleeffect_aabb_buffer" xml:space="preserve">
+    <value>Add this amount to a particle effect's bbox in the leaf system so if it's growing slowly, it won't have to be reinserted as often.</value>
+  </data>
+  <data name="cl_pclass" xml:space="preserve">
+    <value>Dump entity by prediction classname.</value>
+  </data>
+  <data name="cl_pdump" xml:space="preserve">
+    <value>Dump info about this entity to screen.</value>
+  </data>
+  <data name="cl_phys_props_enable" xml:space="preserve">
+    <value>Disable clientside physics props (must be set before loading a level).</value>
+  </data>
+  <data name="cl_phys_props_max" xml:space="preserve">
+    <value>Maximum clientside physic props.</value>
+  </data>
+  <data name="cl_phys_props_respawndist" xml:space="preserve">
+    <value>Minimum distance from the player that a clientside prop must be before it's allowed to respawn.</value>
+  </data>
+  <data name="cl_phys_props_respawnrate" xml:space="preserve">
+    <value>Time, in seconds, between clientside prop respawns.</value>
+  </data>
+  <data name="cl_phys_timescale" xml:space="preserve">
+    <value>Sets the scale of time for client-side physics (ragdolls).</value>
+  </data>
+  <data name="cl_pitchspeed" xml:space="preserve">
+    <value>Client pitch speed.</value>
+  </data>
+  <data name="cl_playback_screenshots" xml:space="preserve">
+    <value>Allows the client to playback screenshot and jpeg commands in demos.</value>
+  </data>
+  <data name="cl_playerspraydisable" xml:space="preserve">
+    <value>Disable player sprays.</value>
+  </data>
+  <data name="cl_precacheinfo" xml:space="preserve">
+    <value>Show precache info (client).</value>
+  </data>
+  <data name="cl_predict" xml:space="preserve">
+    <value>Perform client side prediction.</value>
+  </data>
+  <data name="cl_predictionlist" xml:space="preserve">
+    <value>Show which entities are predicting.</value>
+  </data>
+  <data name="cl_predictweapons" xml:space="preserve">
+    <value>Perform client side prediction of weapon effects.</value>
+  </data>
+  <data name="cl_pred_optimize" xml:space="preserve">
+    <value>Optimize for not copying data if didn't receive a network update (1), and also for not repredicting if there were no errors (2).</value>
+  </data>
+  <data name="cl_pred_track" xml:space="preserve">
+    <value>Track changes to entity index entindex, for field fieldname.</value>
   </data>
   <data name="cl_ragdoll_collide" xml:space="preserve">
     <value>0/1 - turns ragdoll collisions on/off.</value>
@@ -165,29 +612,212 @@
   <data name="cl_ragdoll_fade_time" xml:space="preserve">
     <value>Sets time until ragdolls disappear.</value>
   </data>
+  <data name="cl_ragdoll_physics_enable" xml:space="preserve">
+    <value>Enable/disable ragdoll physics.</value>
+  </data>
+  <data name="cl_removedecals" xml:space="preserve">
+    <value>Remove the decals from the entity under the crosshair.</value>
+  </data>
+  <data name="cl_resend" xml:space="preserve">
+    <value>Delay in seconds before the client will resend the 'connect' attempt.</value>
+  </data>
+  <data name="cl_rumblescale" xml:space="preserve">
+    <value>Scale sensitivity of rumble effects (0 to 1.0).</value>
+  </data>
+  <data name="cl_screenshotname" xml:space="preserve">
+    <value>Custom Screenshot name.</value>
+  </data>
   <data name="cl_showbackpackrarities" xml:space="preserve">
     <value>0/1 - turns color-coded items in backpack off/on.</value>
+  </data>
+  <data name="cl_showbattery" xml:space="preserve">
+    <value>Draw current battery level at top of screen when on battery power.</value>
+  </data>
+  <data name="cl_ShowBoneSetupEnts" xml:space="preserve">
+    <value>Show which entities are having their bones setup each frame.</value>
+  </data>
+  <data name="cl_showdemooverlay" xml:space="preserve">
+    <value>How often to flash demo recording/playback overlay (0 - disable overlay, -1 - show always).</value>
+  </data>
+  <data name="cl_showents" xml:space="preserve">
+    <value>Dump entity list to console.</value>
+  </data>
+  <data name="cl_showerror" xml:space="preserve">
+    <value>Show prediction errors, 2 for above plus detailed field deltas.</value>
+  </data>
+  <data name="cl_showevents" xml:space="preserve">
+    <value>Print event firing info in the console.</value>
   </data>
   <data name="cl_showfps" xml:space="preserve">
     <value>0/1/2 - shows framerate (off/real-time/rounded).</value>
   </data>
+  <data name="cl_showhelp" xml:space="preserve">
+    <value>Set to 0 to not show on-screen help.</value>
+  </data>
+  <data name="cl_showpausedimage" xml:space="preserve">
+    <value>Show the 'Paused' image when game is paused.</value>
+  </data>
+  <data name="cl_showpluginmessages" xml:space="preserve">
+    <value>Allow plugins to display messages to you.</value>
+  </data>
   <data name="cl_showpos" xml:space="preserve">
     <value>0/1 - shows the map coordinates and movement speed of the player.</value>
+  </data>
+  <data name="cl_showtextmsg" xml:space="preserve">
+    <value>Enable/disable text messages printing on the screen.</value>
+  </data>
+  <data name="cl_show_num_particle_systems" xml:space="preserve">
+    <value>Display the number of active particle systems.</value>
+  </data>
+  <data name="cl_show_team_equipment" xml:space="preserve">
+    <value>Bindable function. Will show teammates’ full Target ID, including equipment.</value>
+  </data>
+  <data name="cl_smooth" xml:space="preserve">
+    <value>Smooth view/eye origin after prediction errors.</value>
+  </data>
+  <data name="cl_smoothtime" xml:space="preserve">
+    <value>Smooth client's view after prediction error over this many seconds.</value>
+  </data>
+  <data name="cl_soundemitter_flush" xml:space="preserve">
+    <value>Flushes the sounds.txt system (client only).</value>
+  </data>
+  <data name="cl_soundfile" xml:space="preserve">
+    <value>Jingle sound file.</value>
+  </data>
+  <data name="cl_soundscape_flush" xml:space="preserve">
+    <value>Flushes the client side soundscapes.</value>
+  </data>
+  <data name="cl_soundscape_printdebuginfo" xml:space="preserve">
+    <value>Print soundscapes.</value>
   </data>
   <data name="cl_spec_carrieditems" xml:space="preserve">
     <value>Shows non-standard items being carried by player you're spectating.</value>
   </data>
+  <data name="cl_spec_mode" xml:space="preserve">
+    <value>Spectator mode.</value>
+  </data>
+  <data name="cl_spec_use_tournament_content_standards" xml:space="preserve">
+    <value>Allow / disallow the client to prefer official pro player names when available and omit weapon tags for spectators.</value>
+  </data>
+  <data name="cl_steamscreenshots" xml:space="preserve">
+    <value>Enable/disable saving screenshots to Steam.</value>
+  </data>
+  <data name="cl_team" xml:space="preserve">
+    <value>Default team when joining a game.</value>
+  </data>
+  <data name="cl_teamid_overhead_always" xml:space="preserve">
+    <value>Allow / disable set Team ID to Always On.</value>
+  </data>
+  <data name="cl_threaded_bone_setup" xml:space="preserve">
+    <value>Enable parallel processing of C_BaseAnimating::SetupBones().</value>
+  </data>
+  <data name="cl_timeout" xml:space="preserve">
+    <value>After this many seconds without receiving a packet from the server, the client will disconnect itself.</value>
+  </data>
+  <data name="cl_trade" xml:space="preserve">
+    <value>Trade with a person by player name.</value>
+  </data>
+  <data name="cl_trade_steamid" xml:space="preserve">
+    <value>Trade with a person by steam id.</value>
+  </data>
+  <data name="cl_trading_show_requests_from" xml:space="preserve">
+    <value>View trade requests from a certain group only.</value>
+  </data>
+  <data name="cl_training_class_unlock_all" xml:space="preserve">
+    <value>Unlock all training.</value>
+  </data>
+  <data name="cl_training_completed_with_classes" xml:space="preserve">
+    <value>Bitfield representing what classes have been used to complete training.</value>
+  </data>
+  <data name="cl_trigger_first_notification" xml:space="preserve">
+    <value>Tries to accept/trigger the first notification.</value>
+  </data>
+  <data name="cl_updaterate" xml:space="preserve">
+    <value>Number of packets per second of updates you are requesting from the server.</value>
+  </data>
+  <data name="cl_use_tournament_specgui" xml:space="preserve">
+    <value>When in tournament mode, use the advanced tournament spectator UI.</value>
+  </data>
+  <data name="cl_view" xml:space="preserve">
+    <value>Set the view entity index.</value>
+  </data>
+  <data name="cl_voice_filter" xml:space="preserve">
+    <value>Filter voice by name substring.</value>
+  </data>
+  <data name="cl_weapon_debug_print_accuracy" xml:space="preserve">
+    <value>Show accuracy debug information into game console.</value>
+  </data>
+  <data name="cl_winddir" xml:space="preserve">
+    <value>Weather effects wind direction angle.</value>
+  </data>
+  <data name="cl_windspeed" xml:space="preserve">
+    <value>Weather effects wind speed scalar.</value>
+  </data>
   <data name="cl_yawspeed" xml:space="preserve">
     <value>Sets the speed at which your character turns when using the +left and +right commands.</value>
   </data>
+  <data name="connect" xml:space="preserve">
+    <value>Connect to server.</value>
+  </data>
   <data name="cvarlist" xml:space="preserve">
     <value>View complete cvar list.</value>
+  </data>
+  <data name="c_maxdistance" xml:space="preserve">
+    <value>Maximal camera distance in third person mode.</value>
+  </data>
+  <data name="c_maxpitch" xml:space="preserve">
+    <value>Maximal camera pitch in third person mode.</value>
+  </data>
+  <data name="c_maxyaw" xml:space="preserve">
+    <value>Maximal camera YAW in third person mode.</value>
+  </data>
+  <data name="c_mindistance" xml:space="preserve">
+    <value>Minimal camera distance in third person mode.</value>
+  </data>
+  <data name="c_minpitch" xml:space="preserve">
+    <value>Minimal camera pitch in third person mode.</value>
+  </data>
+  <data name="c_minyaw" xml:space="preserve">
+    <value>Minimal camera YAW in third person mode.</value>
   </data>
   <data name="demoui" xml:space="preserve">
     <value>Brings up a toolbox for replays (Shift+F2 will also bring up the tool box).</value>
   </data>
   <data name="dropitem" xml:space="preserve">
     <value>Drop the flag or intelligence.</value>
+  </data>
+  <data name="ds_dir" xml:space="preserve">
+    <value>Demo support - will put all files into this folder under the gamedir. 24 characters max.</value>
+  </data>
+  <data name="ds_enable" xml:space="preserve">
+    <value>Demo support - enable automatic .dem file recording and features: 0 - manual; 1 - auto-record competitive matches; 2 - auto-record all matches.</value>
+  </data>
+  <data name="ds_kill_delay" xml:space="preserve">
+    <value>Demo support - maximum time between kills for tracking kill streaks.</value>
+  </data>
+  <data name="ds_log" xml:space="preserve">
+    <value>Demo support - log kill streak and bookmark events to an associated .txt file.</value>
+  </data>
+  <data name="ds_mark" xml:space="preserve">
+    <value>Bookmark the current demo tick count for future reference. The [comment] is an optional descriptor you may include.</value>
+  </data>
+  <data name="ds_min_streak" xml:space="preserve">
+    <value>Demo support - minimum kill streak count before being recorded.</value>
+  </data>
+  <data name="ds_notify" xml:space="preserve">
+    <value>Demo support - text output when recording start/stop/bookmark events : 0 - console; 1 - console and chat; 2 - console and HUD.</value>
+  </data>
+  <data name="ds_prefix" xml:space="preserve">
+    <value>Demo support - will prefix files with this string. 24 characters max.</value>
+  </data>
+  <data name="ds_record" xml:space="preserve">
+    <value>Demo support - start recording a demo.</value>
+  </data>
+  <data name="ds_status" xml:space="preserve">
+    <value>Demo support - show the current recording status.</value>
+  </data>
+  <data name="ds_stop" xml:space="preserve">
+    <value>Demo support - stop recording a demo</value>
   </data>
   <data name="endmovie" xml:space="preserve">
     <value>Stops source recorder.</value>
@@ -197,6 +827,21 @@
   </data>
   <data name="explode" xml:space="preserve">
     <value>Commit suicide by exploding into gibs.</value>
+  </data>
+  <data name="ff_damage_bullet_penetration" xml:space="preserve">
+    <value>Control how much penetration power and damage is scaled when hitting a friendly when FF is off.</value>
+  </data>
+  <data name="ff_damage_reduction_bullets" xml:space="preserve">
+    <value>How much to reduce damage done to teammates when shot.  Range is from 0 - 1 (with 1 being damage equal to what is done to an enemy).</value>
+  </data>
+  <data name="ff_damage_reduction_grenade" xml:space="preserve">
+    <value>How much to reduce damage done to teammates by a thrown grenade.  Range is from 0 - 1 (with 1 being damage equal to what is done to an enemy).</value>
+  </data>
+  <data name="ff_damage_reduction_grenade_self" xml:space="preserve">
+    <value>How much to damage a player does to himself with his own grenade.  Range is from 0 - 1 (with 1 being damage equal to what is done to an enemy).</value>
+  </data>
+  <data name="ff_damage_reduction_other" xml:space="preserve">
+    <value>How much to reduce damage done to teammates by things other than bullets and grenades.  Range is from 0 - 1 (with 1 being damage equal to what is done to an enemy).</value>
   </data>
   <data name="find" xml:space="preserve">
     <value>F search function that displays all commands with searched term.</value>
@@ -231,23 +876,242 @@
   <data name="kill" xml:space="preserve">
     <value>Commit suicide.</value>
   </data>
+  <data name="logaddress_add_http" xml:space="preserve">
+    <value>Upload server logs to external server via HTTP POST method.</value>
+  </data>
   <data name="map" xml:space="preserve">
     <value>Changes the map and restarts the server.</value>
   </data>
   <data name="maps" xml:space="preserve">
     <value>Display list of maps.</value>
   </data>
+  <data name="mp_afterroundmoney" xml:space="preserve">
+    <value>Amount of money awared to every player after each round.</value>
+  </data>
+  <data name="mp_allowNPCs" xml:space="preserve">
+    <value>Allow NPCs on server.</value>
+  </data>
+  <data name="mp_allowspectators" xml:space="preserve">
+    <value>Toggles whether the server allows spectator mode or not.</value>
+  </data>
   <data name="mp_autoteambalance" xml:space="preserve">
     <value>Cvar for automatic team balancing.</value>
+  </data>
+  <data name="mp_bonusroundtime" xml:space="preserve">
+    <value>Time after round win until round restarts.</value>
+  </data>
+  <data name="mp_buytime" xml:space="preserve">
+    <value>How many seconds after round start players can buy items for.</value>
+  </data>
+  <data name="mp_buy_allow_grenades" xml:space="preserve">
+    <value>Whether or not grenades can be purchased from the buy menu.</value>
+  </data>
+  <data name="mp_chattime" xml:space="preserve">
+    <value>Amount of time players can chat after the game is over.</value>
+  </data>
+  <data name="mp_clan_readyrestart" xml:space="preserve">
+    <value>If non-zero, game will restart once someone from each team gives the ready signal.</value>
+  </data>
+  <data name="mp_clan_ready_signal" xml:space="preserve">
+    <value>Text that team leader from each team must speak for the match to begin.</value>
+  </data>
+  <data name="mp_ct_default_grenades" xml:space="preserve">
+    <value>The default grenades that the CTs will spawn with.  To give multiple grenades, separate each weapon class with a space like this: 'weapon_molotov weapon_hegrenade'.</value>
+  </data>
+  <data name="mp_ct_default_melee" xml:space="preserve">
+    <value>The default melee weapon that the CTs will spawn with.  Even if this is blank, a knife will be given.  To give a taser, it should look like this: 'weapon_knife weapon_taser'.  Remember to set mp_weapons_allow_zeus to 1 if you want to give a taser!</value>
+  </data>
+  <data name="mp_ct_default_primary" xml:space="preserve">
+    <value>The default primary (rifle) weapon that the CTs will spawn with.</value>
+  </data>
+  <data name="mp_ct_default_secondary" xml:space="preserve">
+    <value>The default secondary (pistol) weapon that the CTs will spawn with.</value>
+  </data>
+  <data name="mp_damage_scale_ct_body" xml:space="preserve">
+    <value>Scales the damage a CT player takes by this much when they take damage in the body. (1 == 100%, 0.5 == 50%)</value>
+  </data>
+  <data name="mp_damage_scale_ct_head" xml:space="preserve">
+    <value>Scales the damage a CT player takes by this much when they take damage in the head. (1 == 100%, 0.5 == 50%)</value>
+  </data>
+  <data name="mp_damage_scale_t_body" xml:space="preserve">
+    <value>Scales the damage a T player takes by this much when they take damage in the body. (1 == 100%, 0.5 == 50%)</value>
+  </data>
+  <data name="mp_damage_scale_t_head" xml:space="preserve">
+    <value>Scales the damage a T player takes by this much when they take damage in the head. (1 == 100%, 0.5 == 50%)</value>
+  </data>
+  <data name="mp_deathcam_skippable" xml:space="preserve">
+    <value>Determines whether a player can early-out of the deathcam.</value>
+  </data>
+  <data name="mp_death_drop_defuser" xml:space="preserve">
+    <value>Whether a defuser drops from a player holding on when they die.</value>
+  </data>
+  <data name="mp_death_drop_grenade" xml:space="preserve">
+    <value>Which grenade to drop on player death: 0=none, 1=best, 2=current or best.</value>
+  </data>
+  <data name="mp_death_drop_gun" xml:space="preserve">
+    <value>Which gun to drop on player death: 0=none, 1=best, 2=current or best.</value>
+  </data>
+  <data name="mp_default_team_winner_no_objective" xml:space="preserve">
+    <value>If set, the map will declare this team the winner when the round timer expires.  (-1 == map default, 0 == draw, 2 == Ts, 3 == CTs).</value>
+  </data>
+  <data name="mp_defuser_allocation" xml:space="preserve">
+    <value>How to allocate defusers to CTs at start or round: 0=none, 1=random, 2=everyone.</value>
+  </data>
+  <data name="mp_disable_autokick" xml:space="preserve">
+    <value>Prevents a userid from being auto-kicked.</value>
   </data>
   <data name="mp_disable_respawn_times" xml:space="preserve">
     <value>Cvar for respawn times.</value>
   </data>
+  <data name="mp_display_kill_assists" xml:space="preserve">
+    <value>Whether to display and score player assists.</value>
+  </data>
+  <data name="mp_enableroundwaittime" xml:space="preserve">
+    <value>Enable timers to wait between rounds.</value>
+  </data>
+  <data name="mp_fadetoblack" xml:space="preserve">
+    <value>Fade a player's screen to black when he dies.</value>
+  </data>
+  <data name="mp_forceautoteam" xml:space="preserve">
+    <value>Automatically assign players to teams when joining.</value>
+  </data>
+  <data name="mp_forcecamera" xml:space="preserve">
+    <value>Restricts spectator modes for dead players.</value>
+  </data>
+  <data name="mp_forcerespawnplayers" xml:space="preserve">
+    <value>Force all players to respawn.</value>
+  </data>
+  <data name="mp_forcewin" xml:space="preserve">
+    <value>Forces team to win.</value>
+  </data>
+  <data name="mp_force_pick_time" xml:space="preserve">
+    <value>The amount of time a player has on the team screen to make a selection before being auto-teamed.</value>
+  </data>
+  <data name="mp_fraglimit" xml:space="preserve">
+    <value>The number of kills at which the map ends.</value>
+  </data>
+  <data name="mp_freezetime" xml:space="preserve">
+    <value>How many seconds to keep players frozen when the round starts.</value>
+  </data>
+  <data name="mp_free_armor" xml:space="preserve">
+    <value>Determines whether armor and helmet are given automatically.</value>
+  </data>
+  <data name="mp_friendlyfire" xml:space="preserve">
+    <value>Allows team members to injure other members of their team.</value>
+  </data>
+  <data name="mp_give_player_c4" xml:space="preserve">
+    <value>Whether this map should spawn a c4 bomb for a player or not.</value>
+  </data>
+  <data name="mp_halftime" xml:space="preserve">
+    <value>Set to 1 to stay in halftime indefinitely. Set to 0 to resume the timer.</value>
+  </data>
+  <data name="mp_halftime_pausetimer" xml:space="preserve">
+    <value>Set to 1 to stay in halftime indefinitely. Set to 0 to resume the timer.</value>
+  </data>
+  <data name="mp_highlander" xml:space="preserve">
+    <value>Allow only 1 of each player class type.</value>
+  </data>
+  <data name="mp_holiday_nogifts" xml:space="preserve">
+    <value>Set to 1 to prevent holiday gifts from spawning when players are killed.</value>
+  </data>
+  <data name="mp_hostagepenalty" xml:space="preserve">
+    <value>Terrorist are kicked for killing too much hostages.</value>
+  </data>
+  <data name="mp_hostages_max" xml:space="preserve">
+    <value>Sets the maximum number of hostages to spawn.</value>
+  </data>
+  <data name="mp_hostages_rescuetime" xml:space="preserve">
+    <value>Setting 0 removes the time extension when CTs pick up the first hostage.</value>
+  </data>
+  <data name="mp_hostages_spawn_farthest" xml:space="preserve">
+    <value>Setting 1 forces hostage spawn points to choose be the farthest possible combinations.</value>
+  </data>
+  <data name="mp_hostages_spawn_force_positions" xml:space="preserve">
+    <value>Setting a comma separate list (ex: 0,2 ) forces specific hostage spawn point combinations.</value>
+  </data>
+  <data name="mp_hostages_spawn_same_every_round" xml:space="preserve">
+    <value>Setting 0 randomizes the hostage spawn points every round.</value>
+  </data>
+  <data name="mp_hostages_takedamage" xml:space="preserve">
+    <value>Setting 0 allows hostages to be hurt.</value>
+  </data>
+  <data name="mp_humans_must_join_team" xml:space="preserve">
+    <value>Restricts human players to a single team {any, blue, red, spectator}.</value>
+  </data>
   <data name="mp_idledealmethod" xml:space="preserve">
     <value>Cvar for managing idle players.</value>
   </data>
+  <data name="mp_idlemaxtime" xml:space="preserve">
+    <value>Maximum time a player is allowed to be idle (in minutes).</value>
+  </data>
+  <data name="mp_items_prohibited" xml:space="preserve">
+    <value>Comma-separated list of forbidden on CS:GO server items.</value>
+  </data>
+  <data name="mp_limitteams" xml:space="preserve">
+    <value>Max # of players 1 team can have over another (0 disables check).</value>
+  </data>
+  <data name="mp_logdetail" xml:space="preserve">
+    <value>Logs' detail of dedicated CS:GO server.</value>
+  </data>
+  <data name="mp_match_can_clinch" xml:space="preserve">
+    <value>0=No mercy rule, 1=team can clinch match win early if they win &gt; 1/2 total rounds.</value>
+  </data>
+  <data name="mp_match_end_at_timelimit" xml:space="preserve">
+    <value>Allow the match to end when mp_timelimit hits instead of waiting for the end of the current round.</value>
+  </data>
+  <data name="mp_maxmoney" xml:space="preserve">
+    <value>Maximum amount of money allowed in a player's account.</value>
+  </data>
+  <data name="mp_maxrounds" xml:space="preserve">
+    <value>Max number of rounds to play before server changes maps.</value>
+  </data>
+  <data name="mp_molotovusedelay" xml:space="preserve">
+    <value>Number of seconds to delay before the molotov can be used after acquiring it.</value>
+  </data>
+  <data name="mp_playercashawards" xml:space="preserve">
+    <value>Players can earn money by performing in-game actions.</value>
+  </data>
+  <data name="mp_radar_showall" xml:space="preserve">
+    <value>Determines who should see all in the radar. 0 = default. 1 = both teams. 2 = Terrorists. 3 = CTs.</value>
+  </data>
+  <data name="mp_randomspawn" xml:space="preserve">
+    <value>Determines whether players are to spawn. 0 = default; 1 = both teams; 2 = Terrorists; 3 = CTs.</value>
+  </data>
+  <data name="mp_respawnwavetime" xml:space="preserve">
+    <value>Time between respawn waves.</value>
+  </data>
+  <data name="mp_respawnwavetime_ct" xml:space="preserve">
+    <value>Time between respawn waves for CTs.</value>
+  </data>
+  <data name="mp_respawnwavetime_t" xml:space="preserve">
+    <value>Time between respawn waves for Terrorists.</value>
+  </data>
+  <data name="mp_respawn_immunitytime" xml:space="preserve">
+    <value>How many seconds after respawn immunity lasts.</value>
+  </data>
+  <data name="mp_respawn_on_death_ct" xml:space="preserve">
+    <value>When set to 1, counter-terrorists will respawn after dying.</value>
+  </data>
+  <data name="mp_respawn_on_death_t" xml:space="preserve">
+    <value>When set to 1, terrorists will respawn after dying.</value>
+  </data>
   <data name="mp_restartgame" xml:space="preserve">
     <value>Restarts the round and resets the round time.</value>
+  </data>
+  <data name="mp_restartgame_immediate" xml:space="preserve">
+    <value>If non-zero, game will restart immediately.</value>
+  </data>
+  <data name="mp_restartround" xml:space="preserve">
+    <value>If non-zero, the current round will restart in the specified number of seconds.</value>
+  </data>
+  <data name="mp_roundtime" xml:space="preserve">
+    <value>How many minutes each round takes.</value>
+  </data>
+  <data name="mp_roundtime_defuse" xml:space="preserve">
+    <value>How many minutes each round of Bomb Defuse takes.</value>
+  </data>
+  <data name="mp_roundtime_hostage" xml:space="preserve">
+    <value>How many minutes each round of Hostage Rescue takes.</value>
   </data>
   <data name="mp_scrambleteams" xml:space="preserve">
     <value>Scramble the teams and restart the game.</value>
@@ -258,11 +1122,89 @@
   <data name="mp_scrambleteams_auto_windifference" xml:space="preserve">
     <value>Number of round wins a team must lead by in order to trigger an auto scramble.</value>
   </data>
+  <data name="mp_showrespawntimes" xml:space="preserve">
+    <value>Show the min respawn times for the teams.</value>
+  </data>
+  <data name="mp_show_voice_icons" xml:space="preserve">
+    <value>Show overhead player voice icons when players are speaking.</value>
+  </data>
+  <data name="mp_solid_teammates" xml:space="preserve">
+    <value>Determines whether teammates are solid or not.</value>
+  </data>
+  <data name="mp_spec_swapplayersides" xml:space="preserve">
+    <value>Lets you swap the default player side position manually (CTs on right and T's on left).</value>
+  </data>
+  <data name="mp_stalemate_enable" xml:space="preserve">
+    <value>Enable/Disable stalemate mode.</value>
+  </data>
+  <data name="mp_stalemate_meleeonly" xml:space="preserve">
+    <value>Restrict everyone to melee weapons only while in Sudden Death.</value>
+  </data>
+  <data name="mp_stalemate_timelimit" xml:space="preserve">
+    <value>Timelimit (in seconds) of the stalemate round.</value>
+  </data>
+  <data name="mp_startmoney" xml:space="preserve">
+    <value>Amount of money each player starts with on match start, half start or reset.</value>
+  </data>
+  <data name="mp_switchteams" xml:space="preserve">
+    <value>Switch teams and restart the game.</value>
+  </data>
+  <data name="mp_teamcashawards" xml:space="preserve">
+    <value>Teams can earn money by performing in-game actions.</value>
+  </data>
+  <data name="mp_teamlogo_1" xml:space="preserve">
+    <value>Set team logo for Team 1.</value>
+  </data>
+  <data name="mp_teamlogo_2" xml:space="preserve">
+    <value>Set team logo for Team 2.</value>
+  </data>
+  <data name="mp_teammates_are_enemies" xml:space="preserve">
+    <value>When set, your teammates act as enemies and all players are valid targets.</value>
+  </data>
   <data name="mp_teams_unbalance_limit" xml:space="preserve">
     <value>Cvar for team force balance.</value>
   </data>
   <data name="mp_timelimit" xml:space="preserve">
     <value>Cvar for map timelimit.</value>
+  </data>
+  <data name="mp_time_between_capscoring" xml:space="preserve">
+    <value>Delay between scoring of owned capture points.</value>
+  </data>
+  <data name="mp_tournament" xml:space="preserve">
+    <value>Enable/Disable Tournament mode.</value>
+  </data>
+  <data name="mp_tournament_allow_non_admin_restart" xml:space="preserve">
+    <value>Allow mp_tournament_restart command to be issued by players other than admin.</value>
+  </data>
+  <data name="mp_tournament_readymode" xml:space="preserve">
+    <value>Allows tournament mode to use a per-player ready system.</value>
+  </data>
+  <data name="mp_tournament_readymode_countdown" xml:space="preserve">
+    <value>The number of seconds before a match begins when both teams are ready.</value>
+  </data>
+  <data name="mp_tournament_readymode_min" xml:space="preserve">
+    <value>Minimum number of players required on the server before players can toggle ready status.</value>
+  </data>
+  <data name="mp_tournament_readymode_team_size" xml:space="preserve">
+    <value>Minimum number of players required to be ready per-team before the game can begin.</value>
+  </data>
+  <data name="mp_tournament_restart" xml:space="preserve">
+    <value>Restart Tournament Mode on the current level.</value>
+  </data>
+  <data name="mp_tournament_whitelist" xml:space="preserve">
+    <value>Specifies the item whitelist file to use.</value>
+  </data>
+  <data name="mp_t_default_grenades" xml:space="preserve">
+    <value>The default grenades that the CTs will spawn with.  To give multiple grenades, separate each weapon class with a space like this: 'weapon_molotov weapon_hegrenade'.</value>
+  </data>
+  <data name="mp_t_default_melee" xml:space="preserve">
+    <value>The default melee weapon that the Ts will spawn with.  Even if this is blank, a knife will be given.  To give a taser, it should look like this: 'weapon_knife weapon_taser'.  Remember to set mp_weapons_allow_zeus to 1 if you want to give a taser!</value>
+  </data>
+  <data name="mp_t_default_primary" xml:space="preserve">
+    <value>The default primary (rifle) weapon that the Ts will spawn with.</value>
+  </data>
+  <data name="mp_t_default_secondary" xml:space="preserve">
+    <value>The default secondary (pistol) weapon that the Ts will spawn with.</value>
   </data>
   <data name="mp_usehwmmodels" xml:space="preserve">
     <value>1 - makes use of the high-polygon class models used in the 'Meet the Team' videos.</value>
@@ -270,8 +1212,41 @@
   <data name="mp_usehwmvcds" xml:space="preserve">
     <value>1 - makes use of the high-polygon class models used in the 'Meet the Team' videos.</value>
   </data>
+  <data name="mp_use_respawn_waves" xml:space="preserve">
+    <value>When set to 1, and that player's team is set to respawn, they will respawn in waves.</value>
+  </data>
   <data name="mp_waitingforplayerscancel" xml:space="preserve">
     <value>1 - cancels "waiting for players..." time.</value>
+  </data>
+  <data name="mp_waitingforplayers_cancel" xml:space="preserve">
+    <value>Set to 1 to end the WaitingForPlayers period.</value>
+  </data>
+  <data name="mp_waitingforplayers_restart" xml:space="preserve">
+    <value>Set to 1 to start or restart the WaitingForPlayers period.</value>
+  </data>
+  <data name="mp_warmuptime" xml:space="preserve">
+    <value>How long the warmup period lasts. Changing this value resets warmup.</value>
+  </data>
+  <data name="mp_warmup_pausetimer" xml:space="preserve">
+    <value>Set to 1 to stay in warmup indefinitely. Set to 0 to resume the timer.</value>
+  </data>
+  <data name="mp_weapons_allow_map_placed" xml:space="preserve">
+    <value>If this convar is set, when a match starts, the game will not delete weapons placed in the map.</value>
+  </data>
+  <data name="mp_weapons_allow_zeus" xml:space="preserve">
+    <value>Determines whether the Zeus is purchasable or not.</value>
+  </data>
+  <data name="mp_weapons_glow_on_ground" xml:space="preserve">
+    <value>If this convar is set, weapons on the ground will have a glow around them and can be seen through walls.</value>
+  </data>
+  <data name="mp_windifference" xml:space="preserve">
+    <value>Score difference between teams before server changes maps.</value>
+  </data>
+  <data name="mp_windifference_min" xml:space="preserve">
+    <value>Minimum score needed for mp_windifference to be applied.</value>
+  </data>
+  <data name="mp_winlimit" xml:space="preserve">
+    <value>Max score one team can reach before server changes maps.</value>
   </data>
   <data name="net_graph" xml:space="preserve">
     <value>Depending on the input value, different amounts of information will be shown such as ping, fps, lerp, packet loss, etc.</value>
@@ -291,14 +1266,47 @@
   <data name="record" xml:space="preserve">
     <value>Records a demo.</value>
   </data>
+  <data name="redirect" xml:space="preserve">
+    <value>Can be used to send clients to a different server. Does not function for clients that came from matchmaking or certain server browser tabs.</value>
+  </data>
   <data name="restart" xml:space="preserve">
     <value>Restarts the current server.</value>
   </data>
   <data name="retry" xml:space="preserve">
     <value>Retry connection to last server.</value>
   </data>
+  <data name="r_drawtracers_firstperson" xml:space="preserve">
+    <value>Enable / disable the drawing of first person bullet tracer particles.</value>
+  </data>
   <data name="r_drawviewmodel" xml:space="preserve">
     <value>Turns viewmodels on and off.</value>
+  </data>
+  <data name="say" xml:space="preserve">
+    <value>Open global chat window.</value>
+  </data>
+  <data name="say_party" xml:space="preserve">
+    <value>Open party chat window.</value>
+  </data>
+  <data name="say_team" xml:space="preserve">
+    <value>Open team chat window.</value>
+  </data>
+  <data name="snd_mix_async" xml:space="preserve">
+    <value>Enable / disable asynchronous audio mixing.</value>
+  </data>
+  <data name="snd_occlusion" xml:space="preserve">
+    <value>Enable / disable new sound occlusion on CS:GO.</value>
+  </data>
+  <data name="spec_freeze_panel_extended_time" xml:space="preserve">
+    <value>Time spent with the freeze panel still up after observer freeze cam is done.</value>
+  </data>
+  <data name="spec_freeze_time" xml:space="preserve">
+    <value>Time spend frozen in observer freeze cam.</value>
+  </data>
+  <data name="spec_lock_to_accountid" xml:space="preserve">
+    <value>When set, will lock the observer target to the specified SteamID64 player. The lock can be set regardless of whether or not the player is currently connected.</value>
+  </data>
+  <data name="spec_player_by_accountid" xml:space="preserve">
+    <value>Switches observer target to the player with SteamID64 passed as argument.</value>
   </data>
   <data name="startmovie" xml:space="preserve">
     <value>Opens up the source recorder during demo play back and allows for high quality avi format recording.</value>
@@ -306,134 +1314,11 @@
   <data name="status" xml:space="preserve">
     <value>Display map and connection status.</value>
   </data>
+  <data name="steam_controller_haptics" xml:space="preserve">
+    <value>Enable / disable Steam Controller haptics.</value>
+  </data>
   <data name="stop" xml:space="preserve">
     <value>Stops the recording of a demo.</value>
-  </data>
-  <data name="sv_allow_votes" xml:space="preserve">
-    <value>Allow voting?</value>
-  </data>
-  <data name="sv_cheats" xml:space="preserve">
-    <value>0/1 - turns cheats off/on.</value>
-  </data>
-  <data name="sv_lan" xml:space="preserve">
-    <value>Cvar for local area network.</value>
-  </data>
-  <data name="sv_pure" xml:space="preserve">
-    <value>Cvar for managing custom content.</value>
-  </data>
-  <data name="sv_use_steam_voice" xml:space="preserve">
-    <value>Use new voice codec instead of old. Deprecated. Replaced by sv_voicecodec.</value>
-  </data>
-  <data name="sv_vote_allow_specators" xml:space="preserve">
-    <value>Allow spectators to vote?</value>
-  </data>
-  <data name="sv_vote_failure_timer" xml:space="preserve">
-    <value>A vote that fails cannot be voted on again during this period.</value>
-  </data>
-  <data name="sv_vote_issue_changelevel_allowed" xml:space="preserve">
-    <value>Allow votes to change levels?</value>
-  </data>
-  <data name="sv_vote_issue_kick_allowed" xml:space="preserve">
-    <value>Allow votes to kick players from the server?</value>
-  </data>
-  <data name="sv_vote_issue_nextlevel_allowed" xml:space="preserve">
-    <value>Allow votes to set the next level?</value>
-  </data>
-  <data name="sv_vote_issue_nextlevel_allowextend" xml:space="preserve">
-    <value>Allow votes to extend the current map?</value>
-  </data>
-  <data name="sv_vote_issue_nextlevel_choicesmode" xml:space="preserve">
-    <value>Present players with a list of maps with the lowest playtimes to choose from?</value>
-  </data>
-  <data name="sv_vote_issue_nextlevel_prevent_change" xml:space="preserve">
-    <value>Prevent voting on the next level if one has already been set.</value>
-  </data>
-  <data name="sv_vote_issue_restart_game_allowed" xml:space="preserve">
-    <value>Allow votes to restart the game?</value>
-  </data>
-  <data name="sv_vote_issue_scramble_teams_allowed" xml:space="preserve">
-    <value>Allow votes to scramble the teams?</value>
-  </data>
-  <data name="sv_vote_kick_ban_duration" xml:space="preserve">
-    <value>How long should a kick vote ban someone from the server? (in minutes)</value>
-  </data>
-  <data name="tf_allow_player_use" xml:space="preserve">
-    <value>0/1 - disallows/allows the +use command on a server, useful for some custom maps, standard is 0.</value>
-  </data>
-  <data name="tf_arena_max_streak" xml:space="preserve">
-    <value>Teams will be scrambled if one team reaches this streak.</value>
-  </data>
-  <data name="tf_damage_disablespread" xml:space="preserve">
-    <value>0/1 - turns random damage-spread (+-10%) for weapons off/on.</value>
-  </data>
-  <data name="tf_dingalingaling" xml:space="preserve">
-    <value>0/1 - turns weapon hit sound off/on.</value>
-  </data>
-  <data name="tf_dingaling_pitchmaxdmg" xml:space="preserve">
-    <value>Sets the pitch when doing maximum damage with your weapon, a lower pitch is recommended in most cases, standard is 100.</value>
-  </data>
-  <data name="tf_dingaling_pitchmindmg" xml:space="preserve">
-    <value>Sets the pitch when doing minimum damage with your weapon, a higher pitch is recommended in most cases, standard is 100.</value>
-  </data>
-  <data name="tf_dingaling_volume" xml:space="preserve">
-    <value>Sets the volume for hit sounds, standard is 1.00.</value>
-  </data>
-  <data name="tf_dingaling_wav_override" xml:space="preserve">
-    <value>Allows using a custom hit sound. No longer used. To use a custom hit sound, rename your sound file "hitsound.wav", and place it in the "tf/sound/ui/" folder.</value>
-  </data>
-  <data name="tf_forced_holiday" xml:space="preserve">
-    <value>0/2/3 - enables holiday mode (0 = default; 2 = halloween; 3 = birthday).</value>
-  </data>
-  <data name="tf_medieval" xml:space="preserve">
-    <value>0/1 - enables Medieval mode on the server, requires map change to take effect.</value>
-  </data>
-  <data name="tf_medieval_autorp" xml:space="preserve">
-    <value>0/1 - enables/disables automatic medieval-style text modification in the chat box.</value>
-  </data>
-  <data name="tf_medieval_thirdperson" xml:space="preserve">
-    <value>0/1 - toggles third person view during Medieval mode.</value>
-  </data>
-  <data name="tf_medigun_autoheal" xml:space="preserve">
-    <value>0/1 - turns automatic healing without holding the left mouse button off/on.</value>
-  </data>
-  <data name="tf_overtime_nag" xml:space="preserve">
-    <value>0/1 - turns endless shouting of "OVERTIME!" in Overtime off/on.</value>
-  </data>
-  <data name="tf_server_identity_account_id" xml:space="preserve">
-    <value>Owner's SteamID.</value>
-  </data>
-  <data name="tf_server_identity_token" xml:space="preserve">
-    <value>Owner's identity token.</value>
-  </data>
-  <data name="tf_use_fixed_weaponspreads" xml:space="preserve">
-    <value>0/1 - turns fixed, consistent spread for weapons like Shotgun, Scattergun and Shortstop off/on.</value>
-  </data>
-  <data name="tf_weapon_criticals" xml:space="preserve">
-    <value>0/1 - turns random criticals off/on.</value>
-  </data>
-  <data name="unbind" xml:space="preserve">
-    <value>Unbinds a key.</value>
-  </data>
-  <data name="use" xml:space="preserve">
-    <value>Used to equip the specified weapon or execute action.</value>
-  </data>
-  <data name="viewmodel_fov" xml:space="preserve">
-    <value>Sets distance in which your weapons are drawn, higher values show more of the weapon and arms but may show missing parts.</value>
-  </data>
-  <data name="zoom_sensitivity_ratio" xml:space="preserve">
-    <value>Sets the ratio of sensitivity while zoomed in with the Sniper Rifle with accordance to actual sensitivity.</value>
-  </data>
-  <data name="sv_bounce" xml:space="preserve">
-    <value>Bounce multiplier for when physically simulated objects collide with other objects.</value>
-  </data>
-  <data name="sv_max_connects_sec" xml:space="preserve">
-    <value>Maximum connections per second to respond to from a single IP address.</value>
-  </data>
-  <data name="sv_max_connects_sec_global" xml:space="preserve">
-    <value>Maximum connections per second to respond to from anywhere.</value>
-  </data>
-  <data name="sv_max_connects_window" xml:space="preserve">
-    <value>Window over which to average connections per second averages.</value>
   </data>
   <data name="sv_allowdownload" xml:space="preserve">
     <value>Allow clients to download files.</value>
@@ -444,8 +1329,17 @@
   <data name="sv_allow_color_correction" xml:space="preserve">
     <value>Allow or disallow clients to use color correction on this server.</value>
   </data>
+  <data name="sv_allow_legacy_cmd_execution_from_client" xml:space="preserve">
+    <value>Allow / disallow command execution received from connected clients.</value>
+  </data>
+  <data name="sv_allow_point_servercommand" xml:space="preserve">
+    <value>Enable / disable point_servercommand entities. Defaults to "official" Valve maps only. Can also be set to "disallow" and "always".</value>
+  </data>
   <data name="sv_allow_voice_from_file" xml:space="preserve">
     <value>Allow or disallow clients from using voice_inputfromfile on this server.</value>
+  </data>
+  <data name="sv_allow_votes" xml:space="preserve">
+    <value>Allow voting?</value>
   </data>
   <data name="sv_allow_wait_command" xml:space="preserve">
     <value>Allow or disallow the wait command on clients connected to this server.</value>
@@ -455,6 +1349,9 @@
   </data>
   <data name="sv_alternateticks" xml:space="preserve">
     <value>If set, server only simulates entities on even numbered ticks.</value>
+  </data>
+  <data name="sv_autobunnyhopping" xml:space="preserve">
+    <value>Holding +jump causes players to automatically re-jump at the exact landing tick.</value>
   </data>
   <data name="sv_autosave" xml:space="preserve">
     <value>Set to 1 to autosave game on level transition. Does not affect autosave triggers.</value>
@@ -483,8 +1380,17 @@
   <data name="sv_bonus_map_unlock" xml:space="preserve">
     <value>Locks a bonus map.</value>
   </data>
+  <data name="sv_bounce" xml:space="preserve">
+    <value>Bounce multiplier for when physically simulated objects collide with other objects.</value>
+  </data>
   <data name="sv_cacheencodedents" xml:space="preserve">
     <value>If set to 1, does an optimization to prevent extra SendTable_Encode calls.</value>
+  </data>
+  <data name="sv_cheats" xml:space="preserve">
+    <value>0/1 - turns cheats off/on.</value>
+  </data>
+  <data name="sv_clamp_unsafe_velocities" xml:space="preserve">
+    <value>Added logic to prevent airstalling (where a player appears to float in midair by disrupting their network stream). Вisable to support surfing, etc.</value>
   </data>
   <data name="sv_clearhinthistory" xml:space="preserve">
     <value>Clear memory of server side hints displayed to the player.</value>
@@ -510,6 +1416,9 @@
   <data name="sv_contact" xml:space="preserve">
     <value>Contact email for server sysop.</value>
   </data>
+  <data name="sv_deadtalk" xml:space="preserve">
+    <value>When set, dead players can speak (voice, text) to the living.</value>
+  </data>
   <data name="sv_debugmanualmode" xml:space="preserve">
     <value>Make sure entities correctly report whether or not their network data has changed.</value>
   </data>
@@ -525,11 +1434,17 @@
   <data name="sv_deltatime" xml:space="preserve">
     <value>Enable profiling of CalcDelta calls.</value>
   </data>
+  <data name="sv_disable_motd" xml:space="preserve">
+    <value>Enable / disable MOTD window after connecting to this server.</value>
+  </data>
   <data name="sv_disable_querycache" xml:space="preserve">
     <value>Debug - disable trace query cache.</value>
   </data>
   <data name="sv_downloadurl" xml:space="preserve">
     <value>Location from which clients can download missing files.</value>
+  </data>
+  <data name="sv_enablebunnyhopping" xml:space="preserve">
+    <value>Enable / disable the air-velocity clamping to 110% of maximum running speed.</value>
   </data>
   <data name="sv_enableoldqueries" xml:space="preserve">
     <value>Enable support for old style (HL1) server queries.</value>
@@ -542,6 +1457,18 @@
   </data>
   <data name="sv_gravity" xml:space="preserve">
     <value>World gravity.</value>
+  </data>
+  <data name="sv_ignoregrenaderadio" xml:space="preserve">
+    <value>Turn off Fire in the hole messages.</value>
+  </data>
+  <data name="sv_jump_impulse" xml:space="preserve">
+    <value>Controls initial upward speed of jumps.</value>
+  </data>
+  <data name="sv_kick_players_with_cooldown" xml:space="preserve">
+    <value>0 - allow all players to play on game server. 1 - kick players with official assigned violation. 2 - kick players with any competitive cooldown.</value>
+  </data>
+  <data name="sv_lan" xml:space="preserve">
+    <value>Cvar for local area network.</value>
   </data>
   <data name="sv_logbans" xml:space="preserve">
     <value>Log server bans in the server logs.</value>
@@ -591,6 +1518,15 @@
   <data name="sv_maxupdaterate" xml:space="preserve">
     <value>Maximum updates per second that the server will allow.</value>
   </data>
+  <data name="sv_max_connects_sec" xml:space="preserve">
+    <value>Maximum connections per second to respond to from a single IP address.</value>
+  </data>
+  <data name="sv_max_connects_sec_global" xml:space="preserve">
+    <value>Maximum connections per second to respond to from anywhere.</value>
+  </data>
+  <data name="sv_max_connects_window" xml:space="preserve">
+    <value>Window over which to average connections per second averages.</value>
+  </data>
   <data name="sv_max_queries_sec" xml:space="preserve">
     <value>Maximum queries per second to respond to from a single IP address.</value>
   </data>
@@ -615,6 +1551,9 @@
   <data name="sv_minupdaterate" xml:space="preserve">
     <value>Minimum updates per second that the server will allow.</value>
   </data>
+  <data name="sv_motd_unload_on_dismissal" xml:space="preserve">
+    <value>Allow server ops to control the default behavior of their MOTD.</value>
+  </data>
   <data name="sv_namechange_cooldown_seconds" xml:space="preserve">
     <value>When a client name change is received, wait N seconds allowing another name change.</value>
   </data>
@@ -638,6 +1577,9 @@
   </data>
   <data name="sv_precacheinfo" xml:space="preserve">
     <value>Show precache info.</value>
+  </data>
+  <data name="sv_pure" xml:space="preserve">
+    <value>Cvar for managing custom content.</value>
   </data>
   <data name="sv_pure_kick_clients" xml:space="preserve">
     <value>If set to 1, the server will kick clients with mismatching files. Otherwise, it will issue a warning to the client.</value>
@@ -672,8 +1614,17 @@
   <data name="sv_rcon_minfailuretime" xml:space="preserve">
     <value>Number of seconds to track failed rcon authentications.</value>
   </data>
+  <data name="sv_rcon_whitelist_address" xml:space="preserve">
+    <value>Rcon clients failing to auth from the specified IP address will never get banned.</value>
+  </data>
+  <data name="sv_record_item_time_data" xml:space="preserve">
+    <value>Enable / disable adding player weapon usage data to server logs.</value>
+  </data>
   <data name="sv_region" xml:space="preserve">
     <value>The region of the world to report this server in.</value>
+  </data>
+  <data name="sv_reliableavatardata" xml:space="preserve">
+    <value>When enabled player avatars are reliably exchanged between all players and casters on the game server, reliably delivered to GOTV spectators, and recorded in demo files</value>
   </data>
   <data name="sv_restrict_aspect_ratio_fov" xml:space="preserve">
     <value>This can be used to limit the effective FOV of users using wide-screen resolutions with aspect ratios wider than 1.85:1.</value>
@@ -684,14 +1635,26 @@
   <data name="sv_showlagcompensation" xml:space="preserve">
     <value>Show lag compensated hitboxes whenever a player is lag compensated.</value>
   </data>
+  <data name="sv_show_team_equipment_prohibit" xml:space="preserve">
+    <value>Allow / disable connected clients to use cl_show_team_equipment.</value>
+  </data>
   <data name="sv_shutdown" xml:space="preserve">
     <value>Sets the server to shutdown next time it's empty.</value>
+  </data>
+  <data name="sv_shutdown_cancel" xml:space="preserve">
+    <value>Cancel a pending shutdown of dedicated server.</value>
   </data>
   <data name="sv_skyname" xml:space="preserve">
     <value>Current name of the skybox texture.</value>
   </data>
   <data name="sv_soundemitter_trace" xml:space="preserve">
     <value>Show all EmitSound calls including their symbolic name and the actual wave file they resolved to.</value>
+  </data>
+  <data name="sv_spec_post_death_additional_time" xml:space="preserve">
+    <value>Allows adding a delay for spectators between the death of a spec target and the switch to a new target.</value>
+  </data>
+  <data name="sv_spec_use_tournament_content_standards" xml:space="preserve">
+    <value>Allow / disallow the server to prefer official pro player names when available and omit weapon tags for spectators.</value>
   </data>
   <data name="sv_stats" xml:space="preserve">
     <value>Collect CPU usage stats.</value>
@@ -708,11 +1671,23 @@
   <data name="sv_tags" xml:space="preserve">
     <value>Server tags. Used to provide extra information to clients when they're browsing for servers. Separate tags with a comma.</value>
   </data>
+  <data name="sv_talk_enemy_dead" xml:space="preserve">
+    <value>Enable / disable alltalk for dead players.</value>
+  </data>
+  <data name="sv_talk_enemy_living" xml:space="preserve">
+    <value>Enable / disable alltalk for living players.</value>
+  </data>
+  <data name="sv_teamid_overhead_always_prohibit" xml:space="preserve">
+    <value>Allow / disable connected clients to use cl_teamid_overhead_always.</value>
+  </data>
   <data name="sv_test_scripted_sequences" xml:space="preserve">
     <value>Tests for scripted sequences that are embedded in the world.</value>
   </data>
   <data name="sv_thinktimecheck" xml:space="preserve">
     <value>Check for thinktimes all on same timestamp.</value>
+  </data>
+  <data name="sv_timebetweenducks" xml:space="preserve">
+    <value>Cooldown to the crouch button to reduce the visual noise from spamming crouch in the air.</value>
   </data>
   <data name="sv_timeout" xml:space="preserve">
     <value>After this many seconds without a message from a client, the client is dropped.</value>
@@ -723,20 +1698,41 @@
   <data name="sv_unlockedchapters" xml:space="preserve">
     <value>Highest unlocked game chapter.</value>
   </data>
+  <data name="sv_use_steam_voice" xml:space="preserve">
+    <value>Use new voice codec instead of old. Deprecated. Replaced by sv_voicecodec.</value>
+  </data>
   <data name="sv_visiblemaxplayers" xml:space="preserve">
     <value>Overrides the max players reported to prospective clients.</value>
   </data>
   <data name="sv_voicecodec" xml:space="preserve">
     <value>Specifies which voice codec to use in a game.</value>
   </data>
+  <data name="sv_vote_allow_specators" xml:space="preserve">
+    <value>Allow spectators to vote?</value>
+  </data>
   <data name="sv_vote_allow_spectators" xml:space="preserve">
     <value>Allow spectators to vote?</value>
+  </data>
+  <data name="sv_vote_count_spectator_votes" xml:space="preserve">
+    <value>Allow / disallow count spectators votes.</value>
+  </data>
+  <data name="sv_vote_failure_timer" xml:space="preserve">
+    <value>A vote that fails cannot be voted on again during this period.</value>
   </data>
   <data name="sv_vote_failure_timer_mvm" xml:space="preserve">
     <value>A vote that fails in MvM cannot be re-submitted for this long.</value>
   </data>
+  <data name="sv_vote_issue_autobalance_allowed" xml:space="preserve">
+    <value>Enable / disable auto team balance vote.</value>
+  </data>
+  <data name="sv_vote_issue_changelevel_allowed" xml:space="preserve">
+    <value>Allow votes to change levels?</value>
+  </data>
   <data name="sv_vote_issue_changelevel_allowed_mvm" xml:space="preserve">
     <value>Can people hold votes to change levels in MvM?</value>
+  </data>
+  <data name="sv_vote_issue_kick_allowed" xml:space="preserve">
+    <value>Allow votes to kick players from the server?</value>
   </data>
   <data name="sv_vote_issue_kick_allowed_mvm" xml:space="preserve">
     <value>Can people hold votes to kick players from the server in MvM?</value>
@@ -744,8 +1740,35 @@
   <data name="sv_vote_issue_mvm_challenge_allowed" xml:space="preserve">
     <value>Can people hold votes to set the challenge level?</value>
   </data>
+  <data name="sv_vote_issue_nextlevel_allowed" xml:space="preserve">
+    <value>Allow votes to set the next level?</value>
+  </data>
+  <data name="sv_vote_issue_nextlevel_allowextend" xml:space="preserve">
+    <value>Allow votes to extend the current map?</value>
+  </data>
+  <data name="sv_vote_issue_nextlevel_choicesmode" xml:space="preserve">
+    <value>Present players with a list of maps with the lowest playtimes to choose from?</value>
+  </data>
+  <data name="sv_vote_issue_nextlevel_prevent_change" xml:space="preserve">
+    <value>Prevent voting on the next level if one has already been set.</value>
+  </data>
+  <data name="sv_vote_issue_restart_game_allowed" xml:space="preserve">
+    <value>Allow votes to restart the game?</value>
+  </data>
+  <data name="sv_vote_issue_scramble_teams_allowed" xml:space="preserve">
+    <value>Allow votes to scramble the teams?</value>
+  </data>
+  <data name="sv_vote_kick_ban_duration" xml:space="preserve">
+    <value>How long should a kick vote ban someone from the server? (in minutes)</value>
+  </data>
   <data name="sv_vote_ui_hide_disabled_issues" xml:space="preserve">
     <value>Suppress listing of disabled issues in the vote setup screen.</value>
+  </data>
+  <data name="tf_allow_player_use" xml:space="preserve">
+    <value>0/1 - disallows/allows the +use command on a server, useful for some custom maps, standard is 0.</value>
+  </data>
+  <data name="tf_allow_server_hibernation" xml:space="preserve">
+    <value>Enable / disable didicated server hibernation.</value>
   </data>
   <data name="tf_allow_taunt_switch" xml:space="preserve">
     <value>0 - players are not allowed to switch weapons while taunting, 1 - players can switch weapons at the start of a taunt.</value>
@@ -758,6 +1781,9 @@
   </data>
   <data name="tf_arena_first_blood" xml:space="preserve">
     <value>Rewards the first player to get a kill each round.</value>
+  </data>
+  <data name="tf_arena_max_streak" xml:space="preserve">
+    <value>Teams will be scrambled if one team reaches this streak.</value>
   </data>
   <data name="tf_arena_override_cap_enable_time" xml:space="preserve">
     <value>Overrides the time (in seconds) it takes for the capture point to become enable, -1 uses the level designer specified time.</value>
@@ -900,6 +1926,9 @@
   <data name="tf_bot_quota_mode" xml:space="preserve">
     <value>Determines the type of quota. Allowed values: 'normal', 'fill', and 'match'.</value>
   </data>
+  <data name="tf_bot_reevaluate_class_in_spawnroom" xml:space="preserve">
+    <value>Allow / disallow bots reselecting their class while in spawn rooms.</value>
+  </data>
   <data name="tf_bot_sniper_allow_opportunistic" xml:space="preserve">
     <value>If set, Snipers will stop on their way to their preferred lurking spot to snipe at opportunistic targets.</value>
   </data>
@@ -957,6 +1986,9 @@
   <data name="tf_ctf_bonus_time" xml:space="preserve">
     <value>Length of team crit time for CTF capture.</value>
   </data>
+  <data name="tf_damage_disablespread" xml:space="preserve">
+    <value>0/1 - turns random damage-spread (+-10%) for weapons off/on.</value>
+  </data>
   <data name="tf_damage_multiplier_blue" xml:space="preserve">
     <value>All incoming damage to a blue player is multiplied by this value.</value>
   </data>
@@ -969,8 +2001,26 @@
   <data name="tf_decoy_lifetime" xml:space="preserve">
     <value>The lifetime of a decoy, in seconds.</value>
   </data>
+  <data name="tf_dingalingaling" xml:space="preserve">
+    <value>0/1 - turns weapon hit sound off/on.</value>
+  </data>
+  <data name="tf_dingaling_pitchmaxdmg" xml:space="preserve">
+    <value>Sets the pitch when doing maximum damage with your weapon, a lower pitch is recommended in most cases, standard is 100.</value>
+  </data>
+  <data name="tf_dingaling_pitchmindmg" xml:space="preserve">
+    <value>Sets the pitch when doing minimum damage with your weapon, a higher pitch is recommended in most cases, standard is 100.</value>
+  </data>
+  <data name="tf_dingaling_volume" xml:space="preserve">
+    <value>Sets the volume for hit sounds, standard is 1.00.</value>
+  </data>
+  <data name="tf_dingaling_wav_override" xml:space="preserve">
+    <value>Allows using a custom hit sound. No longer used. To use a custom hit sound, rename your sound file "hitsound.wav", and place it in the "tf/sound/ui/" folder.</value>
+  </data>
   <data name="tf_disguise_menu_controller_mode" xml:space="preserve">
     <value>Use console controller disguise menus. 1 = ON, 0 = OFF.</value>
+  </data>
+  <data name="tf_dropped_weapon_lifetime" xml:space="preserve">
+    <value>Store dropped weapons for N seconds. 0 - disabled.</value>
   </data>
   <data name="tf_escort_score_rate" xml:space="preserve">
     <value>Score for escorting the train, in points per second.</value>
@@ -1001,6 +2051,24 @@
   </data>
   <data name="tf_flamethrower_boxsize" xml:space="preserve">
     <value>Size of flame damage entities.</value>
+  </data>
+  <data name="tf_forced_holiday" xml:space="preserve">
+    <value>0/2/3 - enables holiday mode (0 = default; 2 = halloween; 3 = birthday).</value>
+  </data>
+  <data name="tf_grapplinghook_enable" xml:space="preserve">
+    <value>Enable / disable the grappling hook on the server.</value>
+  </data>
+  <data name="tf_grapplinghook_jump_up_speed" xml:space="preserve">
+    <value>Sets hook-jump velocity.</value>
+  </data>
+  <data name="tf_grapplinghook_max_distance" xml:space="preserve">
+    <value>Sets hook's max firing distance.</value>
+  </data>
+  <data name="tf_grapplinghook_prevent_fall_damage" xml:space="preserve">
+    <value>Enable / disable fall damage for the grappling hook.</value>
+  </data>
+  <data name="tf_gravetalk" xml:space="preserve">
+    <value>Teammates can always chat with each other while alive or dead.</value>
   </data>
   <data name="tf_halloween_boss_spawn_interval" xml:space="preserve">
     <value>Average interval between boss spawns, in seconds.</value>
@@ -1040,6 +2108,9 @@
   </data>
   <data name="tf_invite_debug" xml:space="preserve">
     <value>Prints local invite objects.</value>
+  </data>
+  <data name="tf_listrounds" xml:space="preserve">
+    <value>Debug command. Show list of available stages on current map.</value>
   </data>
   <data name="tf_lobby_debug" xml:space="preserve">
     <value>Prints local lobby objects.</value>
@@ -1113,6 +2184,18 @@
   <data name="tf_matchmaking_spew_level" xml:space="preserve">
     <value>Set to 1 for basic console spew of quickplay-related decisions. 4 for maximum verbosity.</value>
   </data>
+  <data name="tf_medieval" xml:space="preserve">
+    <value>0/1 - enables Medieval mode on the server, requires map change to take effect.</value>
+  </data>
+  <data name="tf_medieval_autorp" xml:space="preserve">
+    <value>0/1 - enables/disables automatic medieval-style text modification in the chat box.</value>
+  </data>
+  <data name="tf_medieval_thirdperson" xml:space="preserve">
+    <value>0/1 - toggles third person view during Medieval mode.</value>
+  </data>
+  <data name="tf_medigun_autoheal" xml:space="preserve">
+    <value>0/1 - turns automatic healing without holding the left mouse button off/on.</value>
+  </data>
   <data name="tf_mm_player_reservation_timeout_seconds" xml:space="preserve">
     <value>Max duration the server will wait for a player to join, after notification from the backend that we should expect him.</value>
   </data>
@@ -1149,6 +2232,12 @@
   <data name="tf_mvm_popfile" xml:space="preserve">
     <value>Restart the current map with a different population file.</value>
   </data>
+  <data name="tf_mvm_respec_enabled" xml:space="preserve">
+    <value>Allow / disallow skill respec in MvM mode.</value>
+  </data>
+  <data name="tf_mvm_respec_limit" xml:space="preserve">
+    <value>Sets MvM skill respec time limit.</value>
+  </data>
   <data name="tf_mvm_skill" xml:space="preserve">
     <value>Sets the challenge level of the invading bot army: 1 = easiest, 3 = normal, 5 = hardest.</value>
   </data>
@@ -1170,17 +2259,35 @@
   <data name="tf_nav_show_turf_ownership" xml:space="preserve">
     <value>Color nav area by smallest incursion distance.</value>
   </data>
+  <data name="tf_overtime_nag" xml:space="preserve">
+    <value>0/1 - turns endless shouting of "OVERTIME!" in Overtime off/on.</value>
+  </data>
   <data name="tf_particles_disable_weather" xml:space="preserve">
     <value>Disable particles related to weather effects.</value>
   </data>
   <data name="tf_party_debug" xml:space="preserve">
     <value>Prints local party objects.</value>
   </data>
+  <data name="tf_passtime_scores_per_round" xml:space="preserve">
+    <value>Number of scores per round for PASS Time mode.</value>
+  </data>
   <data name="tf_playergib" xml:space="preserve">
     <value>Allow player gibbing: 0 = never; 1 = normal; 2 = always.</value>
   </data>
+  <data name="tf_player_movement_restart_freeze" xml:space="preserve">
+    <value>Controls the freeze period at the beginning of round.</value>
+  </data>
+  <data name="tf_playgrounds" xml:space="preserve">
+    <value>Debug command. Switch to specified stage on maps with multiple stages.</value>
+  </data>
   <data name="tf_populator_active_buffer_range" xml:space="preserve">
     <value>Populate the world this far ahead of lead raider, and this far behind last raider.</value>
+  </data>
+  <data name="tf_powerup_mode" xml:space="preserve">
+    <value>Enable / disable Mannpower mode on the server.</value>
+  </data>
+  <data name="tf_preround_push_from_damage_enable" xml:space="preserve">
+    <value>Allow / disallow players to use blast damage to move during the pre-round freeze period.</value>
   </data>
   <data name="tf_pressandhold_minduration" xml:space="preserve">
     <value>The minimum amount of time to spend in the press-and-hold taunt's pose.</value>
@@ -1203,14 +2310,26 @@
   <data name="tf_respawn_on_loadoutchanges" xml:space="preserve">
     <value>When set to 1, you will automatically respawn whenever you change loadouts inside a respawn zone.</value>
   </data>
+  <data name="tf_scoreboard_mouse_mode" xml:space="preserve">
+    <value>Разрешает / запрещает использовать мышь в таблице результатов (данная функция должна поддерживаться используемым HUD).</value>
+  </data>
+  <data name="tf_scoreboard_ping_as_text" xml:space="preserve">
+    <value>Show ping as text on scoreboard.</value>
+  </data>
   <data name="tf_select_ambush_areas" xml:space="preserve">
     <value>Add good ambush spots to the selected set. For debugging.</value>
   </data>
   <data name="tf_select_with_attribute" xml:space="preserve">
     <value>Selects areas with the given attribute.</value>
   </data>
+  <data name="tf_server_identity_account_id" xml:space="preserve">
+    <value>Owner's SteamID.</value>
+  </data>
   <data name="tf_server_identity_disable_quickplay" xml:space="preserve">
     <value>Disable this server from being chosen by the quickplay matchmaking.</value>
+  </data>
+  <data name="tf_server_identity_token" xml:space="preserve">
+    <value>Owner's identity token.</value>
   </data>
   <data name="tf_server_lobby_debug" xml:space="preserve">
     <value>Prints server lobby object.</value>
@@ -1251,11 +2370,17 @@
   <data name="tf_spectator_target_location" xml:space="preserve">
     <value>Determines the location of the spectator targetID panel.</value>
   </data>
+  <data name="tf_spec_xray" xml:space="preserve">
+    <value>Added teammate player glow outlines, names, and health bars for spectators.</value>
+  </data>
   <data name="tf_stats_nogameplaycheck" xml:space="preserve">
     <value>Disable normal check for valid gameplay, send stats regardless.</value>
   </data>
   <data name="tf_steam_workshop_query_timeout" xml:space="preserve">
     <value>Time in seconds to allow communication with the Steam Workshop server.</value>
+  </data>
+  <data name="tf_taunt_first_person" xml:space="preserve">
+    <value>0/1 - taunts are in first person for full-body awareness mode (for use with Oculus Rift).</value>
   </data>
   <data name="tf_teamtalk" xml:space="preserve">
     <value>Teammates can always chat with each other while alive or dead. Deprecated. Replaced by tf_gravetalk.</value>
@@ -1317,6 +2442,12 @@
   <data name="tf_training_has_prompted_for_training" xml:space="preserve">
     <value>Whether the user has been prompted for training.</value>
   </data>
+  <data name="tf_use_fixed_weaponspreads" xml:space="preserve">
+    <value>0/1 - turns fixed, consistent spread for weapons like Shotgun, Scattergun and Shortstop off/on.</value>
+  </data>
+  <data name="tf_weapon_criticals" xml:space="preserve">
+    <value>0/1 - turns random criticals off/on.</value>
+  </data>
   <data name="tf_weapon_select_demo_start_delay" xml:space="preserve">
     <value>Delay after spawning to start the weapon bucket demo.</value>
   </data>
@@ -1326,1046 +2457,11 @@
   <data name="tf_wipe_attributes" xml:space="preserve">
     <value>Clear all TF-specific attributes of selected area.</value>
   </data>
-  <data name="cl_allowdownload" xml:space="preserve">
-    <value>Client downloads customization files.</value>
-  </data>
-  <data name="cl_allowupload" xml:space="preserve">
-    <value>Client uploads customization files.</value>
-  </data>
-  <data name="cl_animationinfo" xml:space="preserve">
-    <value>Hud element to examine.</value>
-  </data>
-  <data name="cl_ask_blacklist_for_any_server" xml:space="preserve">
-    <value>If nonzero, auto-ask for local/LAN servers (for debugging).</value>
-  </data>
-  <data name="cl_ask_blacklist_max_session_duration" xml:space="preserve">
-    <value>If player stays on a server for less than this time (in seconds) prompt to add server to blacklist.</value>
-  </data>
-  <data name="cl_ask_favorite_for_any_server" xml:space="preserve">
-    <value>If nonzero, auto-ask for local/LAN servers (for debugging).</value>
-  </data>
-  <data name="cl_ask_favorite_min_session_duration" xml:space="preserve">
-    <value>If player stays on a server for longer than this time (in seconds) prompt to add server to favorites.</value>
-  </data>
-  <data name="cl_chatfilters" xml:space="preserve">
-    <value>Stores the chat filter settings.</value>
-  </data>
-  <data name="cl_class" xml:space="preserve">
-    <value>Default class when joining a game.</value>
-  </data>
-  <data name="cl_clearhinthistory" xml:space="preserve">
-    <value>Clear memory of client side hints displayed to the player.</value>
-  </data>
-  <data name="cl_clockdrift_max_ms" xml:space="preserve">
-    <value>Maximum number of milliseconds the clock is allowed to drift before the client snaps its clock to the server's.</value>
-  </data>
-  <data name="cl_clockdrift_max_ms_threadmode" xml:space="preserve">
-    <value>Maximum number of milliseconds the clock is allowed to drift before the client snaps its clock to the server's.</value>
-  </data>
-  <data name="cl_clock_correction" xml:space="preserve">
-    <value>Enable/disable clock correction on the client.</value>
-  </data>
-  <data name="cl_clock_correction_adjustment_max_amount" xml:space="preserve">
-    <value>Sets the maximum number of milliseconds per second it is allowed to correct the client clock.</value>
-  </data>
-  <data name="cl_clock_correction_adjustment_max_offset" xml:space="preserve">
-    <value>As the clock offset goes from cl_clock_correction_adjustment_min_offset to this value (in milliseconds).</value>
-  </data>
-  <data name="cl_clock_correction_adjustment_min_offset" xml:space="preserve">
-    <value>If the clock offset is less than this amount (in milliseconds), then no clock correction is applied.</value>
-  </data>
-  <data name="cl_clock_correction_force_server_tick" xml:space="preserve">
-    <value>Force clock correction to match the server tick + this offset (-999 disables it).</value>
-  </data>
-  <data name="cl_clock_showdebuginfo" xml:space="preserve">
-    <value>Show debugging info about the clock drift.</value>
-  </data>
-  <data name="cl_cmdrate" xml:space="preserve">
-    <value>Max number of command packets sent to server per second.</value>
-  </data>
-  <data name="cl_coach_find_coach" xml:space="preserve">
-    <value>Request a coach for the current game.</value>
-  </data>
-  <data name="cl_coach_toggle" xml:space="preserve">
-    <value>Toggle coach status.</value>
-  </data>
-  <data name="cl_customsounds" xml:space="preserve">
-    <value>Enable customized player sound playback.</value>
-  </data>
-  <data name="cl_debugrumble" xml:space="preserve">
-    <value>Turn on rumble debugging spew.</value>
-  </data>
-  <data name="cl_decline_first_notification" xml:space="preserve">
-    <value>Tries to decline/remove the first notification.</value>
-  </data>
-  <data name="cl_demoviewoverride" xml:space="preserve">
-    <value>Override view during demo playback.</value>
-  </data>
-  <data name="cl_detaildist" xml:space="preserve">
-    <value>Distance at which detail props are no longer visible.</value>
-  </data>
-  <data name="cl_detailfade" xml:space="preserve">
-    <value>Distance across which detail props fade in.</value>
-  </data>
-  <data name="cl_detail_multiplier" xml:space="preserve">
-    <value>Extra details to create.</value>
-  </data>
-  <data name="cl_disablehtmlmotd" xml:space="preserve">
-    <value>Disable HTML motds.</value>
-  </data>
-  <data name="cl_downloadfilter" xml:space="preserve">
-    <value>Determines which files can be downloaded from the server (all, none, nosounds).</value>
-  </data>
-  <data name="cl_drawmaterial" xml:space="preserve">
-    <value>Draw a particular material over the frame.</value>
-  </data>
-  <data name="cl_dump_particle_stats" xml:space="preserve">
-    <value>Dump particle profiling info to particle_profile.csv.</value>
-  </data>
-  <data name="cl_entityreport" xml:space="preserve">
-    <value>For debugging, draw entity states to console.</value>
-  </data>
-  <data name="cl_entityreport_sorted" xml:space="preserve">
-    <value>For debugging, draw entity states to console in sorted order. [0 = disabled, 1 = average, 2 = current, 3 = peak].</value>
-  </data>
-  <data name="cl_ent_absbox" xml:space="preserve">
-    <value>Displays the client's absbox for the entity under the crosshair.</value>
-  </data>
-  <data name="cl_ent_bbox" xml:space="preserve">
-    <value>Displays the client's bounding box for the entity under the crosshair.</value>
-  </data>
-  <data name="cl_ent_rbox" xml:space="preserve">
-    <value>Displays the client's render box for the entity under the crosshair.</value>
-  </data>
-  <data name="cl_extrapolate" xml:space="preserve">
-    <value>Enable/disable extrapolation if interpolation history runs out.</value>
-  </data>
-  <data name="cl_extrapolate_amount" xml:space="preserve">
-    <value>Set how many seconds the client will extrapolate entities for.</value>
-  </data>
-  <data name="cl_fastdetailsprites" xml:space="preserve">
-    <value>Whether to use new detail sprite system.</value>
-  </data>
-  <data name="cl_find_ent" xml:space="preserve">
-    <value>Find and list all client entities with classnames that contain the specified substring. Format: cl_find_ent &lt;substring&gt;.</value>
-  </data>
-  <data name="cl_find_ent_index" xml:space="preserve">
-    <value>Display data for clientside entity matching specified index. Format: cl_find_ent_index &lt;index&gt;.</value>
-  </data>
-  <data name="cl_flushentitypacket" xml:space="preserve">
-    <value>For debugging. Force the engine to flush an entity packet.</value>
-  </data>
-  <data name="cl_forcepreload" xml:space="preserve">
-    <value>Whether we should force preloading.</value>
-  </data>
-  <data name="cl_fullupdate" xml:space="preserve">
-    <value>Forces the server to send a full update packet.</value>
-  </data>
-  <data name="cl_gameserver_reset_identity" xml:space="preserve">
-    <value>Resets the identity token for a given game server.</value>
-  </data>
-  <data name="cl_hudhint_sound" xml:space="preserve">
-    <value>Disable hudhint sounds.</value>
-  </data>
-  <data name="cl_hud_minmode" xml:space="preserve">
-    <value>Set to 1 to turn on the advanced minimalist HUD mode.</value>
-  </data>
-  <data name="cl_ignorepackets" xml:space="preserve">
-    <value>Force client to ignore packets (for debugging).</value>
-  </data>
-  <data name="cl_interp_all" xml:space="preserve">
-    <value>Disable interpolation list optimizations.</value>
-  </data>
-  <data name="cl_interp_npcs" xml:space="preserve">
-    <value>Interpolate NPC positions starting this many seconds in past.</value>
-  </data>
-  <data name="cl_interp_ratio" xml:space="preserve">
-    <value>Sets the interpolation amount (final amount is cl_interp_ratio / cl_updaterate).</value>
-  </data>
-  <data name="cl_jiggle_bone_debug" xml:space="preserve">
-    <value>Display physics-based 'jiggle bone' debugging information.</value>
-  </data>
-  <data name="cl_jiggle_bone_debug_pitch_constraints" xml:space="preserve">
-    <value>Display physics-based 'jiggle bone' debugging information.</value>
-  </data>
-  <data name="cl_jiggle_bone_debug_yaw_constraints" xml:space="preserve">
-    <value>Display physics-based 'jiggle bone' debugging information.</value>
-  </data>
-  <data name="cl_jiggle_bone_framerate_cutoff" xml:space="preserve">
-    <value>Skip jiggle bone simulation if framerate drops below this value (frames/second).</value>
-  </data>
-  <data name="cl_lagcompensation" xml:space="preserve">
-    <value>Perform server side lag compensation of weapon firing events.</value>
-  </data>
-  <data name="cl_language" xml:space="preserve">
-    <value>Language (from HKCU\Software\Valve\Steam\Language).</value>
-  </data>
-  <data name="cl_localnetworkbackdoor" xml:space="preserve">
-    <value>Enable network optimizations for single player games.</value>
-  </data>
-  <data name="cl_logofile" xml:space="preserve">
-    <value>Spraypoint logo decal.</value>
-  </data>
-  <data name="cl_maxrenderable_dist" xml:space="preserve">
-    <value>Max distance from the camera at which things will be rendered.</value>
-  </data>
-  <data name="cl_mouselook" xml:space="preserve">
-    <value>Set to 1 to use mouse for look, 0 for keyboard look. Cannot be set while connected to a server.</value>
-  </data>
-  <data name="cl_notifications_max_num_visible" xml:space="preserve">
-    <value>How many notifications are visible in-game.</value>
-  </data>
-  <data name="cl_notifications_move_time" xml:space="preserve">
-    <value>How long it takes for a notification to move.</value>
-  </data>
-  <data name="cl_notifications_show_ingame" xml:space="preserve">
-    <value>Whether notifications should show up in-game.</value>
-  </data>
-  <data name="cl_obj_test_building_damage" xml:space="preserve">
-    <value>Debug building damage.</value>
-  </data>
-  <data name="cl_panelanimation" xml:space="preserve">
-    <value>Shows panel animation variables: &lt;panelname | blank for all panels&gt;.</value>
-  </data>
-  <data name="cl_particleeffect_aabb_buffer" xml:space="preserve">
-    <value>Add this amount to a particle effect's bbox in the leaf system so if it's growing slowly, it won't have to be reinserted as often.</value>
-  </data>
-  <data name="cl_pclass" xml:space="preserve">
-    <value>Dump entity by prediction classname.</value>
-  </data>
-  <data name="cl_pdump" xml:space="preserve">
-    <value>Dump info about this entity to screen.</value>
-  </data>
-  <data name="cl_phys_props_enable" xml:space="preserve">
-    <value>Disable clientside physics props (must be set before loading a level).</value>
-  </data>
-  <data name="cl_phys_props_max" xml:space="preserve">
-    <value>Maximum clientside physic props.</value>
-  </data>
-  <data name="cl_phys_props_respawndist" xml:space="preserve">
-    <value>Minimum distance from the player that a clientside prop must be before it's allowed to respawn.</value>
-  </data>
-  <data name="cl_phys_props_respawnrate" xml:space="preserve">
-    <value>Time, in seconds, between clientside prop respawns.</value>
-  </data>
-  <data name="cl_phys_timescale" xml:space="preserve">
-    <value>Sets the scale of time for client-side physics (ragdolls).</value>
-  </data>
-  <data name="cl_pitchspeed" xml:space="preserve">
-    <value>Client pitch speed.</value>
-  </data>
-  <data name="cl_playback_screenshots" xml:space="preserve">
-    <value>Allows the client to playback screenshot and jpeg commands in demos.</value>
-  </data>
-  <data name="cl_playerspraydisable" xml:space="preserve">
-    <value>Disable player sprays.</value>
-  </data>
-  <data name="cl_precacheinfo" xml:space="preserve">
-    <value>Show precache info (client).</value>
-  </data>
-  <data name="cl_predict" xml:space="preserve">
-    <value>Perform client side prediction.</value>
-  </data>
-  <data name="cl_predictionlist" xml:space="preserve">
-    <value>Show which entities are predicting.</value>
-  </data>
-  <data name="cl_predictweapons" xml:space="preserve">
-    <value>Perform client side prediction of weapon effects.</value>
-  </data>
-  <data name="cl_pred_optimize" xml:space="preserve">
-    <value>Optimize for not copying data if didn't receive a network update (1), and also for not repredicting if there were no errors (2).</value>
-  </data>
-  <data name="cl_pred_track" xml:space="preserve">
-    <value>Track changes to entity index entindex, for field fieldname.</value>
-  </data>
-  <data name="cl_ragdoll_physics_enable" xml:space="preserve">
-    <value>Enable/disable ragdoll physics.</value>
-  </data>
-  <data name="cl_removedecals" xml:space="preserve">
-    <value>Remove the decals from the entity under the crosshair.</value>
-  </data>
-  <data name="cl_resend" xml:space="preserve">
-    <value>Delay in seconds before the client will resend the 'connect' attempt.</value>
-  </data>
-  <data name="cl_rumblescale" xml:space="preserve">
-    <value>Scale sensitivity of rumble effects (0 to 1.0).</value>
-  </data>
-  <data name="cl_screenshotname" xml:space="preserve">
-    <value>Custom Screenshot name.</value>
-  </data>
-  <data name="cl_showbattery" xml:space="preserve">
-    <value>Draw current battery level at top of screen when on battery power.</value>
-  </data>
-  <data name="cl_ShowBoneSetupEnts" xml:space="preserve">
-    <value>Show which entities are having their bones setup each frame.</value>
-  </data>
-  <data name="cl_showdemooverlay" xml:space="preserve">
-    <value>How often to flash demo recording/playback overlay (0 - disable overlay, -1 - show always).</value>
-  </data>
-  <data name="cl_showents" xml:space="preserve">
-    <value>Dump entity list to console.</value>
-  </data>
-  <data name="cl_showerror" xml:space="preserve">
-    <value>Show prediction errors, 2 for above plus detailed field deltas.</value>
-  </data>
-  <data name="cl_showevents" xml:space="preserve">
-    <value>Print event firing info in the console.</value>
-  </data>
-  <data name="cl_showhelp" xml:space="preserve">
-    <value>Set to 0 to not show on-screen help.</value>
-  </data>
-  <data name="cl_showpausedimage" xml:space="preserve">
-    <value>Show the 'Paused' image when game is paused.</value>
-  </data>
-  <data name="cl_showpluginmessages" xml:space="preserve">
-    <value>Allow plugins to display messages to you.</value>
-  </data>
-  <data name="cl_showtextmsg" xml:space="preserve">
-    <value>Enable/disable text messages printing on the screen.</value>
-  </data>
-  <data name="cl_show_num_particle_systems" xml:space="preserve">
-    <value>Display the number of active particle systems.</value>
-  </data>
-  <data name="cl_smooth" xml:space="preserve">
-    <value>Smooth view/eye origin after prediction errors.</value>
-  </data>
-  <data name="cl_smoothtime" xml:space="preserve">
-    <value>Smooth client's view after prediction error over this many seconds.</value>
-  </data>
-  <data name="cl_soundemitter_flush" xml:space="preserve">
-    <value>Flushes the sounds.txt system (client only).</value>
-  </data>
-  <data name="cl_soundfile" xml:space="preserve">
-    <value>Jingle sound file.</value>
-  </data>
-  <data name="cl_soundscape_flush" xml:space="preserve">
-    <value>Flushes the client side soundscapes.</value>
-  </data>
-  <data name="cl_soundscape_printdebuginfo" xml:space="preserve">
-    <value>Print soundscapes.</value>
-  </data>
-  <data name="cl_spec_mode" xml:space="preserve">
-    <value>Spectator mode.</value>
-  </data>
-  <data name="cl_steamscreenshots" xml:space="preserve">
-    <value>Enable/disable saving screenshots to Steam.</value>
-  </data>
-  <data name="cl_team" xml:space="preserve">
-    <value>Default team when joining a game.</value>
-  </data>
-  <data name="cl_threaded_bone_setup" xml:space="preserve">
-    <value>Enable parallel processing of C_BaseAnimating::SetupBones().</value>
-  </data>
-  <data name="cl_timeout" xml:space="preserve">
-    <value>After this many seconds without receiving a packet from the server, the client will disconnect itself.</value>
-  </data>
-  <data name="cl_trade" xml:space="preserve">
-    <value>Trade with a person by player name.</value>
-  </data>
-  <data name="cl_trade_steamid" xml:space="preserve">
-    <value>Trade with a person by steam id.</value>
-  </data>
-  <data name="cl_trading_show_requests_from" xml:space="preserve">
-    <value>View trade requests from a certain group only.</value>
-  </data>
-  <data name="cl_training_class_unlock_all" xml:space="preserve">
-    <value>Unlock all training.</value>
-  </data>
-  <data name="cl_training_completed_with_classes" xml:space="preserve">
-    <value>Bitfield representing what classes have been used to complete training.</value>
-  </data>
-  <data name="cl_trigger_first_notification" xml:space="preserve">
-    <value>Tries to accept/trigger the first notification.</value>
-  </data>
-  <data name="cl_updaterate" xml:space="preserve">
-    <value>Number of packets per second of updates you are requesting from the server.</value>
-  </data>
-  <data name="cl_use_tournament_specgui" xml:space="preserve">
-    <value>When in tournament mode, use the advanced tournament spectator UI.</value>
-  </data>
-  <data name="cl_view" xml:space="preserve">
-    <value>Set the view entity index.</value>
-  </data>
-  <data name="cl_voice_filter" xml:space="preserve">
-    <value>Filter voice by name substring.</value>
-  </data>
-  <data name="cl_winddir" xml:space="preserve">
-    <value>Weather effects wind direction angle.</value>
-  </data>
-  <data name="cl_windspeed" xml:space="preserve">
-    <value>Weather effects wind speed scalar.</value>
-  </data>
-  <data name="mp_allowNPCs" xml:space="preserve">
-    <value>Allow NPCs on server.</value>
-  </data>
-  <data name="mp_allowspectators" xml:space="preserve">
-    <value>Toggles whether the server allows spectator mode or not.</value>
-  </data>
-  <data name="mp_bonusroundtime" xml:space="preserve">
-    <value>Time after round win until round restarts.</value>
-  </data>
-  <data name="mp_chattime" xml:space="preserve">
-    <value>Amount of time players can chat after the game is over.</value>
-  </data>
-  <data name="mp_clan_readyrestart" xml:space="preserve">
-    <value>If non-zero, game will restart once someone from each team gives the ready signal.</value>
-  </data>
-  <data name="mp_clan_ready_signal" xml:space="preserve">
-    <value>Text that team leader from each team must speak for the match to begin.</value>
-  </data>
-  <data name="mp_disable_autokick" xml:space="preserve">
-    <value>Prevents a userid from being auto-kicked.</value>
-  </data>
-  <data name="mp_enableroundwaittime" xml:space="preserve">
-    <value>Enable timers to wait between rounds.</value>
-  </data>
-  <data name="mp_fadetoblack" xml:space="preserve">
-    <value>Fade a player's screen to black when he dies.</value>
-  </data>
-  <data name="mp_forceautoteam" xml:space="preserve">
-    <value>Automatically assign players to teams when joining.</value>
-  </data>
-  <data name="mp_forcecamera" xml:space="preserve">
-    <value>Restricts spectator modes for dead players.</value>
-  </data>
-  <data name="mp_forcerespawnplayers" xml:space="preserve">
-    <value>Force all players to respawn.</value>
-  </data>
-  <data name="mp_forcewin" xml:space="preserve">
-    <value>Forces team to win.</value>
-  </data>
-  <data name="mp_fraglimit" xml:space="preserve">
-    <value>The number of kills at which the map ends.</value>
-  </data>
-  <data name="mp_friendlyfire" xml:space="preserve">
-    <value>Allows team members to injure other members of their team.</value>
-  </data>
-  <data name="mp_highlander" xml:space="preserve">
-    <value>Allow only 1 of each player class type.</value>
-  </data>
-  <data name="mp_holiday_nogifts" xml:space="preserve">
-    <value>Set to 1 to prevent holiday gifts from spawning when players are killed.</value>
-  </data>
-  <data name="mp_humans_must_join_team" xml:space="preserve">
-    <value>Restricts human players to a single team {any, blue, red, spectator}.</value>
-  </data>
-  <data name="mp_idlemaxtime" xml:space="preserve">
-    <value>Maximum time a player is allowed to be idle (in minutes).</value>
-  </data>
-  <data name="mp_match_end_at_timelimit" xml:space="preserve">
-    <value>Allow the match to end when mp_timelimit hits instead of waiting for the end of the current round.</value>
-  </data>
-  <data name="mp_maxrounds" xml:space="preserve">
-    <value>Max number of rounds to play before server changes maps.</value>
-  </data>
-  <data name="mp_respawnwavetime" xml:space="preserve">
-    <value>Time between respawn waves.</value>
-  </data>
-  <data name="mp_restartgame_immediate" xml:space="preserve">
-    <value>If non-zero, game will restart immediately.</value>
-  </data>
-  <data name="mp_restartround" xml:space="preserve">
-    <value>If non-zero, the current round will restart in the specified number of seconds.</value>
-  </data>
-  <data name="mp_showrespawntimes" xml:space="preserve">
-    <value>Show the min respawn times for the teams.</value>
-  </data>
-  <data name="mp_show_voice_icons" xml:space="preserve">
-    <value>Show overhead player voice icons when players are speaking.</value>
-  </data>
-  <data name="mp_stalemate_enable" xml:space="preserve">
-    <value>Enable/Disable stalemate mode.</value>
-  </data>
-  <data name="mp_stalemate_meleeonly" xml:space="preserve">
-    <value>Restrict everyone to melee weapons only while in Sudden Death.</value>
-  </data>
-  <data name="mp_stalemate_timelimit" xml:space="preserve">
-    <value>Timelimit (in seconds) of the stalemate round.</value>
-  </data>
-  <data name="mp_switchteams" xml:space="preserve">
-    <value>Switch teams and restart the game.</value>
-  </data>
-  <data name="mp_time_between_capscoring" xml:space="preserve">
-    <value>Delay between scoring of owned capture points.</value>
-  </data>
-  <data name="mp_tournament" xml:space="preserve">
-    <value>Enable/Disable Tournament mode.</value>
-  </data>
-  <data name="mp_tournament_allow_non_admin_restart" xml:space="preserve">
-    <value>Allow mp_tournament_restart command to be issued by players other than admin.</value>
-  </data>
-  <data name="mp_tournament_restart" xml:space="preserve">
-    <value>Restart Tournament Mode on the current level.</value>
-  </data>
-  <data name="mp_tournament_whitelist" xml:space="preserve">
-    <value>Specifies the item whitelist file to use.</value>
-  </data>
-  <data name="mp_waitingforplayers_cancel" xml:space="preserve">
-    <value>Set to 1 to end the WaitingForPlayers period.</value>
-  </data>
-  <data name="mp_waitingforplayers_restart" xml:space="preserve">
-    <value>Set to 1 to start or restart the WaitingForPlayers period.</value>
-  </data>
-  <data name="mp_windifference" xml:space="preserve">
-    <value>Score difference between teams before server changes maps.</value>
-  </data>
-  <data name="mp_windifference_min" xml:space="preserve">
-    <value>Minimum score needed for mp_windifference to be applied.</value>
-  </data>
-  <data name="mp_winlimit" xml:space="preserve">
-    <value>Max score one team can reach before server changes maps.</value>
-  </data>
-  <data name="sv_kick_players_with_cooldown" xml:space="preserve">
-    <value>0 - allow all players to play on game server. 1 - kick players with official assigned violation. 2 - kick players with any competitive cooldown.</value>
-  </data>
-  <data name="mp_hostages_max" xml:space="preserve">
-    <value>Sets the maximum number of hostages to spawn.</value>
-  </data>
-  <data name="mp_hostages_rescuetime" xml:space="preserve">
-    <value>Setting 0 removes the time extension when CTs pick up the first hostage.</value>
-  </data>
-  <data name="mp_hostages_spawn_farthest" xml:space="preserve">
-    <value>Setting 1 forces hostage spawn points to choose be the farthest possible combinations.</value>
-  </data>
-  <data name="mp_hostages_spawn_force_positions" xml:space="preserve">
-    <value>Setting a comma separate list (ex: 0,2 ) forces specific hostage spawn point combinations.</value>
-  </data>
-  <data name="mp_hostages_spawn_same_every_round" xml:space="preserve">
-    <value>Setting 0 randomizes the hostage spawn points every round.</value>
-  </data>
-  <data name="mp_hostages_takedamage" xml:space="preserve">
-    <value>Setting 0 allows hostages to be hurt.</value>
-  </data>
-  <data name="cl_first_person_uses_world_model" xml:space="preserve">
-    <value>Allow this mode to be used outside of VR mode.</value>
-  </data>
-  <data name="sv_motd_unload_on_dismissal" xml:space="preserve">
-    <value>Allow server ops to control the default behavior of their MOTD.</value>
-  </data>
-  <data name="bot_allow_grenades" xml:space="preserve">
-    <value>If nonzero, bots may use grenades.</value>
-  </data>
-  <data name="bot_allow_machine_guns" xml:space="preserve">
-    <value>If nonzero, bots may use the machine gun.</value>
-  </data>
-  <data name="bot_allow_pistols" xml:space="preserve">
-    <value>If nonzero, bots may use pistols.</value>
-  </data>
-  <data name="bot_allow_rifles" xml:space="preserve">
-    <value>If nonzero, bots may use rifles.</value>
-  </data>
-  <data name="bot_allow_shotguns" xml:space="preserve">
-    <value>If nonzero, bots may use shotguns.</value>
-  </data>
-  <data name="bot_allow_snipers" xml:space="preserve">
-    <value>If nonzero, bots may use sniper rifles.</value>
-  </data>
-  <data name="bot_allow_sub_machine_guns" xml:space="preserve">
-    <value>If nonzero, bots may use sub-machine guns.</value>
-  </data>
-  <data name="bot_autodifficulty_threshold_high" xml:space="preserve">
-    <value>Amount above avg human contribution score, above which a bot should lower its difficulty.</value>
-  </data>
-  <data name="bot_autodifficulty_threshold_low" xml:space="preserve">
-    <value>Amount below avg human contribution score, below which a bot should raise its difficulty.</value>
-  </data>
-  <data name="bot_chatter" xml:space="preserve">
-    <value>Control how bots talk. Allowed values: 'off', 'radio', 'minimal', or 'normal'.</value>
-  </data>
-  <data name="bot_defer_to_human_goals" xml:space="preserve">
-    <value>If nonzero and there is a human on the team, the bots will not do the scenario tasks.</value>
-  </data>
-  <data name="bot_defer_to_human_items" xml:space="preserve">
-    <value>If nonzero and there is a human on the team, the bots will not get scenario items.</value>
-  </data>
-  <data name="bot_difficulty" xml:space="preserve">
-    <value>Bot difficulty.</value>
-  </data>
-  <data name="bot_quota" xml:space="preserve">
-    <value>Determines the total number of bots in the game.</value>
-  </data>
-  <data name="bot_quota_mode" xml:space="preserve">
-    <value>Determines the type of quota. Allowed values: 'normal', 'fill', and 'match'. If 'fill', the server will adjust bots to keep N players in the game, where N is bot_quota. If 'match', the server will maintain a 1:N ratio of humans to bots, where N is bot_quota.</value>
-  </data>
-  <data name="cash_player_damage_hostage" xml:space="preserve">
-    <value>The penalty (or bonus) players get from harming a hostage.</value>
-  </data>
-  <data name="cash_player_get_killed" xml:space="preserve">
-    <value>Money a player can get when they are killed by another player.</value>
-  </data>
-  <data name="cash_player_killed_enemy_default" xml:space="preserve">
-    <value>Money award to player when they kill an enemy (which then gets scaled per weapon).</value>
-  </data>
-  <data name="cash_player_killed_enemy_factor" xml:space="preserve">
-    <value>Scaler that adjusts the money recieved per kill.</value>
-  </data>
-  <data name="cash_player_killed_hostage" xml:space="preserve">
-    <value>The penalty (or bonus) players get for killing a hostage.</value>
-  </data>
-  <data name="cash_player_respawn_amount" xml:space="preserve">
-    <value>The money bonus a play can get when they respawn (if respawning is enabled).</value>
-  </data>
-  <data name="ff_damage_reduction_bullets" xml:space="preserve">
-    <value>How much to reduce damage done to teammates when shot.  Range is from 0 - 1 (with 1 being damage equal to what is done to an enemy).</value>
-  </data>
-  <data name="ff_damage_reduction_grenade" xml:space="preserve">
-    <value>How much to reduce damage done to teammates by a thrown grenade.  Range is from 0 - 1 (with 1 being damage equal to what is done to an enemy).</value>
-  </data>
-  <data name="ff_damage_reduction_grenade_self" xml:space="preserve">
-    <value>How much to damage a player does to himself with his own grenade.  Range is from 0 - 1 (with 1 being damage equal to what is done to an enemy).</value>
-  </data>
-  <data name="ff_damage_reduction_other" xml:space="preserve">
-    <value>How much to reduce damage done to teammates by things other than bullets and grenades.  Range is from 0 - 1 (with 1 being damage equal to what is done to an enemy).</value>
-  </data>
-  <data name="mp_afterroundmoney" xml:space="preserve">
-    <value>Amount of money awared to every player after each round.</value>
-  </data>
-  <data name="mp_buytime" xml:space="preserve">
-    <value>How many seconds after round start players can buy items for.</value>
-  </data>
-  <data name="mp_buy_allow_grenades" xml:space="preserve">
-    <value>Whether or not grenades can be purchased from the buy menu.</value>
-  </data>
-  <data name="mp_ct_default_grenades" xml:space="preserve">
-    <value>The default grenades that the CTs will spawn with.  To give multiple grenades, separate each weapon class with a space like this: 'weapon_molotov weapon_hegrenade'.</value>
-  </data>
-  <data name="mp_ct_default_melee" xml:space="preserve">
-    <value>The default melee weapon that the CTs will spawn with.  Even if this is blank, a knife will be given.  To give a taser, it should look like this: 'weapon_knife weapon_taser'.  Remember to set mp_weapons_allow_zeus to 1 if you want to give a taser!</value>
-  </data>
-  <data name="mp_ct_default_primary" xml:space="preserve">
-    <value>The default primary (rifle) weapon that the CTs will spawn with.</value>
-  </data>
-  <data name="mp_ct_default_secondary" xml:space="preserve">
-    <value>The default secondary (pistol) weapon that the CTs will spawn with.</value>
-  </data>
-  <data name="mp_damage_scale_ct_body" xml:space="preserve">
-    <value>Scales the damage a CT player takes by this much when they take damage in the body. (1 == 100%, 0.5 == 50%)</value>
-  </data>
-  <data name="mp_damage_scale_ct_head" xml:space="preserve">
-    <value>Scales the damage a CT player takes by this much when they take damage in the head. (1 == 100%, 0.5 == 50%)</value>
-  </data>
-  <data name="mp_damage_scale_t_body" xml:space="preserve">
-    <value>Scales the damage a T player takes by this much when they take damage in the body. (1 == 100%, 0.5 == 50%)</value>
-  </data>
-  <data name="mp_damage_scale_t_head" xml:space="preserve">
-    <value>Scales the damage a T player takes by this much when they take damage in the head. (1 == 100%, 0.5 == 50%)</value>
-  </data>
-  <data name="mp_deathcam_skippable" xml:space="preserve">
-    <value>Determines whether a player can early-out of the deathcam.</value>
-  </data>
-  <data name="mp_death_drop_defuser" xml:space="preserve">
-    <value>Whether a defuser drops from a player holding on when they die.</value>
-  </data>
-  <data name="mp_death_drop_grenade" xml:space="preserve">
-    <value>Which grenade to drop on player death: 0=none, 1=best, 2=current or best.</value>
-  </data>
-  <data name="mp_death_drop_gun" xml:space="preserve">
-    <value>Which gun to drop on player death: 0=none, 1=best, 2=current or best.</value>
-  </data>
-  <data name="mp_default_team_winner_no_objective" xml:space="preserve">
-    <value>If set, the map will declare this team the winner when the round timer expires.  (-1 == map default, 0 == draw, 2 == Ts, 3 == CTs).</value>
-  </data>
-  <data name="mp_defuser_allocation" xml:space="preserve">
-    <value>How to allocate defusers to CTs at start or round: 0=none, 1=random, 2=everyone.</value>
-  </data>
-  <data name="mp_display_kill_assists" xml:space="preserve">
-    <value>Whether to display and score player assists.</value>
-  </data>
-  <data name="mp_force_pick_time" xml:space="preserve">
-    <value>The amount of time a player has on the team screen to make a selection before being auto-teamed.</value>
-  </data>
-  <data name="mp_freezetime" xml:space="preserve">
-    <value>How many seconds to keep players frozen when the round starts.</value>
-  </data>
-  <data name="mp_free_armor" xml:space="preserve">
-    <value>Determines whether armor and helmet are given automatically.</value>
-  </data>
-  <data name="mp_give_player_c4" xml:space="preserve">
-    <value>Whether this map should spawn a c4 bomb for a player or not.</value>
-  </data>
-  <data name="mp_halftime" xml:space="preserve">
-    <value>Set to 1 to stay in halftime indefinitely. Set to 0 to resume the timer.</value>
-  </data>
-  <data name="mp_halftime_pausetimer" xml:space="preserve">
-    <value>Set to 1 to stay in halftime indefinitely. Set to 0 to resume the timer.</value>
-  </data>
-  <data name="mp_hostagepenalty" xml:space="preserve">
-    <value>Terrorist are kicked for killing too much hostages.</value>
-  </data>
-  <data name="mp_limitteams" xml:space="preserve">
-    <value>Max # of players 1 team can have over another (0 disables check).</value>
-  </data>
-  <data name="mp_match_can_clinch" xml:space="preserve">
-    <value>0=No mercy rule, 1=team can clinch match win early if they win &gt; 1/2 total rounds.</value>
-  </data>
-  <data name="mp_maxmoney" xml:space="preserve">
-    <value>Maximum amount of money allowed in a player's account.</value>
-  </data>
-  <data name="mp_molotovusedelay" xml:space="preserve">
-    <value>Number of seconds to delay before the molotov can be used after acquiring it.</value>
-  </data>
-  <data name="mp_playercashawards" xml:space="preserve">
-    <value>Players can earn money by performing in-game actions.</value>
-  </data>
-  <data name="mp_radar_showall" xml:space="preserve">
-    <value>Determines who should see all in the radar. 0 = default. 1 = both teams. 2 = Terrorists. 3 = CTs.</value>
-  </data>
-  <data name="mp_randomspawn" xml:space="preserve">
-    <value>Determines whether players are to spawn. 0 = default; 1 = both teams; 2 = Terrorists; 3 = CTs.</value>
-  </data>
-  <data name="mp_respawnwavetime_ct" xml:space="preserve">
-    <value>Time between respawn waves for CTs.</value>
-  </data>
-  <data name="mp_respawnwavetime_t" xml:space="preserve">
-    <value>Time between respawn waves for Terrorists.</value>
-  </data>
-  <data name="mp_respawn_immunitytime" xml:space="preserve">
-    <value>How many seconds after respawn immunity lasts.</value>
-  </data>
-  <data name="mp_respawn_on_death_ct" xml:space="preserve">
-    <value>When set to 1, counter-terrorists will respawn after dying.</value>
-  </data>
-  <data name="mp_respawn_on_death_t" xml:space="preserve">
-    <value>When set to 1, terrorists will respawn after dying.</value>
-  </data>
-  <data name="mp_roundtime" xml:space="preserve">
-    <value>How many minutes each round takes.</value>
-  </data>
-  <data name="mp_roundtime_defuse" xml:space="preserve">
-    <value>How many minutes each round of Bomb Defuse takes.</value>
-  </data>
-  <data name="mp_roundtime_hostage" xml:space="preserve">
-    <value>How many minutes each round of Hostage Rescue takes.</value>
-  </data>
-  <data name="mp_solid_teammates" xml:space="preserve">
-    <value>Determines whether teammates are solid or not.</value>
-  </data>
-  <data name="mp_startmoney" xml:space="preserve">
-    <value>Amount of money each player starts with on match start, half start or reset.</value>
-  </data>
-  <data name="mp_teamcashawards" xml:space="preserve">
-    <value>Teams can earn money by performing in-game actions.</value>
-  </data>
-  <data name="mp_teammates_are_enemies" xml:space="preserve">
-    <value>When set, your teammates act as enemies and all players are valid targets.</value>
-  </data>
-  <data name="mp_t_default_grenades" xml:space="preserve">
-    <value>The default grenades that the CTs will spawn with.  To give multiple grenades, separate each weapon class with a space like this: 'weapon_molotov weapon_hegrenade'.</value>
-  </data>
-  <data name="mp_t_default_melee" xml:space="preserve">
-    <value>The default melee weapon that the Ts will spawn with.  Even if this is blank, a knife will be given.  To give a taser, it should look like this: 'weapon_knife weapon_taser'.  Remember to set mp_weapons_allow_zeus to 1 if you want to give a taser!</value>
-  </data>
-  <data name="mp_t_default_primary" xml:space="preserve">
-    <value>The default primary (rifle) weapon that the Ts will spawn with.</value>
-  </data>
-  <data name="mp_t_default_secondary" xml:space="preserve">
-    <value>The default secondary (pistol) weapon that the Ts will spawn with.</value>
-  </data>
-  <data name="mp_use_respawn_waves" xml:space="preserve">
-    <value>When set to 1, and that player's team is set to respawn, they will respawn in waves.</value>
-  </data>
-  <data name="mp_warmuptime" xml:space="preserve">
-    <value>How long the warmup period lasts. Changing this value resets warmup.</value>
-  </data>
-  <data name="mp_warmup_pausetimer" xml:space="preserve">
-    <value>Set to 1 to stay in warmup indefinitely. Set to 0 to resume the timer.</value>
-  </data>
-  <data name="mp_weapons_allow_map_placed" xml:space="preserve">
-    <value>If this convar is set, when a match starts, the game will not delete weapons placed in the map.</value>
-  </data>
-  <data name="mp_weapons_allow_zeus" xml:space="preserve">
-    <value>Determines whether the Zeus is purchasable or not.</value>
-  </data>
-  <data name="mp_weapons_glow_on_ground" xml:space="preserve">
-    <value>If this convar is set, weapons on the ground will have a glow around them and can be seen through walls.</value>
-  </data>
-  <data name="spec_freeze_panel_extended_time" xml:space="preserve">
-    <value>Time spent with the freeze panel still up after observer freeze cam is done.</value>
-  </data>
-  <data name="spec_freeze_time" xml:space="preserve">
-    <value>Time spend frozen in observer freeze cam.</value>
-  </data>
-  <data name="sv_deadtalk" xml:space="preserve">
-    <value>When set, dead players can speak (voice, text) to the living.</value>
-  </data>
-  <data name="sv_ignoregrenaderadio" xml:space="preserve">
-    <value>Turn off Fire in the hole messages.</value>
-  </data>
-  <data name="cl_mute_all_comms" xml:space="preserve">
-    <value>When you mute a player, the mute settings now apply to text chat as well as voice chat.</value>
-  </data>
-  <data name="sv_vote_issue_autobalance_allowed" xml:space="preserve">
-    <value>Enable / disable auto team balance vote.</value>
-  </data>
-  <data name="connect" xml:space="preserve">
-    <value>Connect to server.</value>
-  </data>
-  <data name="ff_damage_bullet_penetration" xml:space="preserve">
-    <value>Control how much penetration power and damage is scaled when hitting a friendly when FF is off.</value>
-  </data>
-  <data name="mp_teamlogo_1" xml:space="preserve">
-    <value>Set team logo for Team 1.</value>
-  </data>
-  <data name="mp_teamlogo_2" xml:space="preserve">
-    <value>Set team logo for Team 2.</value>
-  </data>
-  <data name="redirect" xml:space="preserve">
-    <value>Can be used to send clients to a different server. Does not function for clients that came from matchmaking or certain server browser tabs.</value>
-  </data>
-  <data name="r_drawtracers_firstperson" xml:space="preserve">
-    <value>Enable / disable the drawing of first person bullet tracer particles.</value>
-  </data>
-  <data name="sv_rcon_whitelist_address" xml:space="preserve">
-    <value>Rcon clients failing to auth from the specified IP address will never get banned.</value>
-  </data>
-  <data name="sv_reliableavatardata" xml:space="preserve">
-    <value>When enabled player avatars are reliably exchanged between all players and casters on the game server, reliably delivered to GOTV spectators, and recorded in demo files</value>
-  </data>
-  <data name="tf_grapplinghook_jump_up_speed" xml:space="preserve">
-    <value>Sets hook-jump velocity.</value>
-  </data>
-  <data name="tf_grapplinghook_max_distance" xml:space="preserve">
-    <value>Sets hook's max firing distance.</value>
-  </data>
-  <data name="tf_grapplinghook_prevent_fall_damage" xml:space="preserve">
-    <value>Enable / disable fall damage for the grappling hook.</value>
-  </data>
-  <data name="sv_allow_point_servercommand" xml:space="preserve">
-    <value>Enable / disable point_servercommand entities. Defaults to "official" Valve maps only. Can also be set to "disallow" and "always".</value>
-  </data>
   <data name="tf_workshop_map_sync" xml:space="preserve">
     <value>Immediately install a map from the workshop by ID.</value>
   </data>
   <data name="tf_workshop_refresh" xml:space="preserve">
     <value>Recheck tracked workshop maps and refresh subscriptions.</value>
-  </data>
-  <data name="mp_tournament_readymode" xml:space="preserve">
-    <value>Allows tournament mode to use a per-player ready system.</value>
-  </data>
-  <data name="mp_tournament_readymode_countdown" xml:space="preserve">
-    <value>The number of seconds before a match begins when both teams are ready.</value>
-  </data>
-  <data name="mp_tournament_readymode_min" xml:space="preserve">
-    <value>Minimum number of players required on the server before players can toggle ready status.</value>
-  </data>
-  <data name="mp_tournament_readymode_team_size" xml:space="preserve">
-    <value>Minimum number of players required to be ready per-team before the game can begin.</value>
-  </data>
-  <data name="tf_dropped_weapon_lifetime" xml:space="preserve">
-    <value>Store dropped weapons for N seconds. 0 - disabled.</value>
-  </data>
-  <data name="tf_mvm_respec_enabled" xml:space="preserve">
-    <value>Allow / disallow skill respec in MvM mode.</value>
-  </data>
-  <data name="tf_mvm_respec_limit" xml:space="preserve">
-    <value>Sets MvM skill respec time limit.</value>
-  </data>
-  <data name="tf_player_movement_restart_freeze" xml:space="preserve">
-    <value>Controls the freeze period at the beginning of round.</value>
-  </data>
-  <data name="tf_spec_xray" xml:space="preserve">
-    <value>Added teammate player glow outlines, names, and health bars for spectators.</value>
-  </data>
-  <data name="tv_delaymapchange_protect" xml:space="preserve">
-    <value>Prevent manual map changes if SourceTV has not caught up with a major event like the end of a round.</value>
-  </data>
-  <data name="tf_preround_push_from_damage_enable" xml:space="preserve">
-    <value>Allow / disallow players to use blast damage to move during the pre-round freeze period.</value>
-  </data>
-  <data name="tf_scoreboard_ping_as_text" xml:space="preserve">
-    <value>Show ping as text on scoreboard.</value>
-  </data>
-  <data name="weapon_auto_cleanup_time" xml:space="preserve">
-    <value>If set to non-zero, weapons will delete themselves after the specified time (in seconds) if no players are near.</value>
-  </data>
-  <data name="weapon_max_before_cleanup" xml:space="preserve">
-    <value>If set to non-zero, will remove the oldest dropped weapon to maintain the specified number of dropped weapons in the world.</value>
-  </data>
-  <data name="tf_scoreboard_mouse_mode" xml:space="preserve">
-    <value>Разрешает / запрещает использовать мышь в таблице результатов (данная функция должна поддерживаться используемым HUD).</value>
-  </data>
-  <data name="tf_taunt_first_person" xml:space="preserve">
-    <value>0/1 - taunts are in first person for full-body awareness mode (for use with Oculus Rift).</value>
-  </data>
-  <data name="ds_dir" xml:space="preserve">
-    <value>Demo support - will put all files into this folder under the gamedir. 24 characters max.</value>
-  </data>
-  <data name="ds_enable" xml:space="preserve">
-    <value>Demo support - enable automatic .dem file recording and features: 0 - manual; 1 - auto-record competitive matches; 2 - auto-record all matches.</value>
-  </data>
-  <data name="ds_kill_delay" xml:space="preserve">
-    <value>Demo support - maximum time between kills for tracking kill streaks.</value>
-  </data>
-  <data name="ds_log" xml:space="preserve">
-    <value>Demo support - log kill streak and bookmark events to an associated .txt file.</value>
-  </data>
-  <data name="ds_mark" xml:space="preserve">
-    <value>Bookmark the current demo tick count for future reference. The [comment] is an optional descriptor you may include.</value>
-  </data>
-  <data name="ds_min_streak" xml:space="preserve">
-    <value>Demo support - minimum kill streak count before being recorded.</value>
-  </data>
-  <data name="ds_notify" xml:space="preserve">
-    <value>Demo support - text output when recording start/stop/bookmark events : 0 - console; 1 - console and chat; 2 - console and HUD.</value>
-  </data>
-  <data name="ds_prefix" xml:space="preserve">
-    <value>Demo support - will prefix files with this string. 24 characters max.</value>
-  </data>
-  <data name="ds_record" xml:space="preserve">
-    <value>Demo support - start recording a demo.</value>
-  </data>
-  <data name="ds_status" xml:space="preserve">
-    <value>Demo support - show the current recording status.</value>
-  </data>
-  <data name="ds_stop" xml:space="preserve">
-    <value>Demo support - stop recording a demo</value>
-  </data>
-  <data name="tf_passtime_scores_per_round" xml:space="preserve">
-    <value>Number of scores per round for PASS Time mode.</value>
-  </data>
-  <data name="vgui_cache_res_files" xml:space="preserve">
-    <value>Enable / disable VGUI caching.</value>
-  </data>
-  <data name="tf_grapplinghook_enable" xml:space="preserve">
-    <value>Enable / disable the grappling hook on the server.</value>
-  </data>
-  <data name="tf_powerup_mode" xml:space="preserve">
-    <value>Enable / disable Mannpower mode on the server.</value>
-  </data>
-  <data name="cl_avatar_convert_rgb" xml:space="preserve">
-    <value>Convert players avatars to RGB format.</value>
-  </data>
-  <data name="cl_crosshair_sniper_show_normal_inaccuracy" xml:space="preserve">
-    <value>Includes standing inaccuracy and spread in your sniper crosshair blur.</value>
-  </data>
-  <data name="cl_drawhud_force_radar" xml:space="preserve">
-    <value>Show / hide radar and minimap on special HUD modes.</value>
-  </data>
-  <data name="cl_draw_only_deathnotices" xml:space="preserve">
-    <value>Draw only deathnotices.</value>
-  </data>
-  <data name="sv_autobunnyhopping" xml:space="preserve">
-    <value>Holding +jump causes players to automatically re-jump at the exact landing tick.</value>
-  </data>
-  <data name="sv_enablebunnyhopping" xml:space="preserve">
-    <value>Enable / disable the air-velocity clamping to 110% of maximum running speed.</value>
-  </data>
-  <data name="sv_jump_impulse" xml:space="preserve">
-    <value>Controls initial upward speed of jumps.</value>
-  </data>
-  <data name="sv_shutdown_cancel" xml:space="preserve">
-    <value>Cancel a pending shutdown of dedicated server.</value>
-  </data>
-  <data name="sv_timebetweenducks" xml:space="preserve">
-    <value>Cooldown to the crouch button to reduce the visual noise from spamming crouch in the air.</value>
-  </data>
-  <data name="tf_allow_server_hibernation" xml:space="preserve">
-    <value>Enable / disable didicated server hibernation.</value>
-  </data>
-  <data name="tf_gravetalk" xml:space="preserve">
-    <value>Teammates can always chat with each other while alive or dead.</value>
-  </data>
-  <data name="weapon_air_spread_scale" xml:space="preserve">
-    <value>Games that focus on air combat can set this to a lower value to improve weapon accuracy for players in the air.</value>
-  </data>
-  <data name="cl_crosshair_sniper_width" xml:space="preserve">
-    <value>Allow increasing width of sniper crosshair lines on high dpi monitors or multimonitor setups.</value>
-  </data>
-  <data name="cl_spec_use_tournament_content_standards" xml:space="preserve">
-    <value>Allow / disallow the client to prefer official pro player names when available and omit weapon tags for spectators.</value>
-  </data>
-  <data name="cl_weapon_debug_print_accuracy" xml:space="preserve">
-    <value>Show accuracy debug information into game console.</value>
-  </data>
-  <data name="mp_spec_swapplayersides" xml:space="preserve">
-    <value>Lets you swap the default player side position manually (CTs on right and T's on left).</value>
-  </data>
-  <data name="spec_lock_to_accountid" xml:space="preserve">
-    <value>When set, will lock the observer target to the specified SteamID64 player. The lock can be set regardless of whether or not the player is currently connected.</value>
-  </data>
-  <data name="spec_player_by_accountid" xml:space="preserve">
-    <value>Switches observer target to the player with SteamID64 passed as argument.</value>
-  </data>
-  <data name="steam_controller_haptics" xml:space="preserve">
-    <value>Enable / disable Steam Controller haptics.</value>
-  </data>
-  <data name="sv_clamp_unsafe_velocities" xml:space="preserve">
-    <value>Added logic to prevent airstalling (where a player appears to float in midair by disrupting their network stream). Вisable to support surfing, etc.</value>
-  </data>
-  <data name="sv_spec_post_death_additional_time" xml:space="preserve">
-    <value>Allows adding a delay for spectators between the death of a spec target and the switch to a new target.</value>
-  </data>
-  <data name="sv_spec_use_tournament_content_standards" xml:space="preserve">
-    <value>Allow / disallow the server to prefer official pro player names when available and omit weapon tags for spectators.</value>
-  </data>
-  <data name="sv_talk_enemy_dead" xml:space="preserve">
-    <value>Enable / disable alltalk for dead players.</value>
-  </data>
-  <data name="sv_talk_enemy_living" xml:space="preserve">
-    <value>Enable / disable alltalk for living players.</value>
-  </data>
-  <data name="sv_vote_count_spectator_votes" xml:space="preserve">
-    <value>Allow / disallow count spectators votes.</value>
-  </data>
-  <data name="cl_drawhud_force_deathnotices" xml:space="preserve">
-    <value>-1 to force draw no deathnotices, 0 default, 1 to force draw deathnotices even if other HUD is disabled.</value>
-  </data>
-  <data name="cl_show_team_equipment" xml:space="preserve">
-    <value>Bindable function. Will show teammates’ full Target ID, including equipment.</value>
-  </data>
-  <data name="cl_teamid_overhead_always" xml:space="preserve">
-    <value>Allow / disable set Team ID to Always On.</value>
-  </data>
-  <data name="sv_show_team_equipment_prohibit" xml:space="preserve">
-    <value>Allow / disable connected clients to use cl_show_team_equipment.</value>
-  </data>
-  <data name="sv_teamid_overhead_always_prohibit" xml:space="preserve">
-    <value>Allow / disable connected clients to use cl_teamid_overhead_always.</value>
-  </data>
-  <data name="logaddress_add_http" xml:space="preserve">
-    <value>Upload server logs to external server via HTTP POST method.</value>
-  </data>
-  <data name="mp_items_prohibited" xml:space="preserve">
-    <value>Comma-separated list of forbidden on CS:GO server items.</value>
-  </data>
-  <data name="mp_logdetail" xml:space="preserve">
-    <value>Logs' detail of dedicated CS:GO server.</value>
-  </data>
-  <data name="sv_allow_legacy_cmd_execution_from_client" xml:space="preserve">
-    <value>Allow / disallow command execution received from connected clients.</value>
-  </data>
-  <data name="cl_crosshair_t" xml:space="preserve">
-    <value>Use T-shaped crosshair.</value>
-  </data>
-  <data name="cl_deathnotices_show_numbers" xml:space="preserve">
-    <value>Allow / disallow appending observer numbers to kill feed (0: defaults for no numbers, 1: to use just observer numbers in death notices, 2: append observer numbers in front of names in death notices).</value>
-  </data>
-  <data name="say" xml:space="preserve">
-    <value>Open global chat window.</value>
-  </data>
-  <data name="say_party" xml:space="preserve">
-    <value>Open party chat window.</value>
-  </data>
-  <data name="say_team" xml:space="preserve">
-    <value>Open team chat window.</value>
-  </data>
-  <data name="snd_mix_async" xml:space="preserve">
-    <value>Enable / disable asynchronous audio mixing.</value>
-  </data>
-  <data name="snd_occlusion" xml:space="preserve">
-    <value>Enable / disable new sound occlusion on CS:GO.</value>
-  </data>
-  <data name="sv_disable_motd" xml:space="preserve">
-    <value>Enable / disable MOTD window after connecting to this server.</value>
-  </data>
-  <data name="sv_record_item_time_data" xml:space="preserve">
-    <value>Enable / disable adding player weapon usage data to server logs.</value>
-  </data>
-  <data name="tf_listrounds" xml:space="preserve">
-    <value>Debug command. Show list of available stages on current map.</value>
-  </data>
-  <data name="tf_playgrounds" xml:space="preserve">
-    <value>Debug command. Switch to specified stage on maps with multiple stages.</value>
   </data>
   <data name="tv_allow_camera_man_override" xml:space="preserve">
     <value>Allow / disallow to override caster-camera on SourceTV server.</value>
@@ -2379,7 +2475,31 @@
   <data name="tv_delay1" xml:space="preserve">
     <value>Set a custom delay on TV1 SourceTV server.</value>
   </data>
-  <data name="tf_bot_reevaluate_class_in_spawnroom" xml:space="preserve">
-    <value>Allow / disallow bots reselecting their class while in spawn rooms.</value>
+  <data name="tv_delaymapchange_protect" xml:space="preserve">
+    <value>Prevent manual map changes if SourceTV has not caught up with a major event like the end of a round.</value>
+  </data>
+  <data name="unbind" xml:space="preserve">
+    <value>Unbinds a key.</value>
+  </data>
+  <data name="use" xml:space="preserve">
+    <value>Used to equip the specified weapon or execute action.</value>
+  </data>
+  <data name="vgui_cache_res_files" xml:space="preserve">
+    <value>Enable / disable VGUI caching.</value>
+  </data>
+  <data name="viewmodel_fov" xml:space="preserve">
+    <value>Sets distance in which your weapons are drawn, higher values show more of the weapon and arms but may show missing parts.</value>
+  </data>
+  <data name="weapon_air_spread_scale" xml:space="preserve">
+    <value>Games that focus on air combat can set this to a lower value to improve weapon accuracy for players in the air.</value>
+  </data>
+  <data name="weapon_auto_cleanup_time" xml:space="preserve">
+    <value>If set to non-zero, weapons will delete themselves after the specified time (in seconds) if no players are near.</value>
+  </data>
+  <data name="weapon_max_before_cleanup" xml:space="preserve">
+    <value>If set to non-zero, will remove the oldest dropped weapon to maintain the specified number of dropped weapons in the world.</value>
+  </data>
+  <data name="zoom_sensitivity_ratio" xml:space="preserve">
+    <value>Sets the ratio of sensitivity while zoomed in with the Sniper Rifle with accordance to actual sensitivity.</value>
   </data>
 </root>

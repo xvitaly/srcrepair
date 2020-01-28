@@ -61,11 +61,83 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enable / disable AI..
+        /// </summary>
+        internal static string ai_disable {
+            get {
+                return ResourceManager.GetString("ai_disable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable / disable AI connect / disconnect messages..
+        /// </summary>
+        internal static string ai_show_connect {
+            get {
+                return ResourceManager.GetString("ai_show_connect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show hints..
+        /// </summary>
+        internal static string ai_show_hints {
+            get {
+                return ResourceManager.GetString("ai_show_hints", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create command alias for future use..
+        /// </summary>
+        internal static string alias {
+            get {
+                return ResourceManager.GetString("alias", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ban specified SteamID for specified time (0 - permanent)..
+        /// </summary>
+        internal static string banid {
+            get {
+                return ResourceManager.GetString("banid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ban specified IP-address for specified time (0 - permanent)..
+        /// </summary>
+        internal static string banip {
+            get {
+                return ResourceManager.GetString("banip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Binds a key with a command..
         /// </summary>
         internal static string bind {
             get {
                 return ResourceManager.GetString("bind", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adds a stupid bot in TF2. Marked as cheat..
+        /// </summary>
+        internal static string bot {
+            get {
+                return ResourceManager.GetString("bot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable / disable use of all available weapons for bots..
+        /// </summary>
+        internal static string bot_all_weapons {
+            get {
+                return ResourceManager.GetString("bot_all_weapons", resourceCulture);
             }
         }
         
@@ -106,6 +178,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Allow / disallow following player&apos;s orders..
+        /// </summary>
+        internal static string bot_allow_rogues {
+            get {
+                return ResourceManager.GetString("bot_allow_rogues", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to If nonzero, bots may use shotguns..
         /// </summary>
         internal static string bot_allow_shotguns {
@@ -133,6 +214,24 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bots will follow human players..
+        /// </summary>
+        internal static string bot_auto_follow {
+            get {
+                return ResourceManager.GetString("bot_auto_follow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bots will automatically leave server to free game slots for human players..
+        /// </summary>
+        internal static string bot_auto_vacate {
+            get {
+                return ResourceManager.GetString("bot_auto_vacate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Amount above avg human contribution score, above which a bot should lower its difficulty..
         /// </summary>
         internal static string bot_autodifficulty_threshold_high {
@@ -151,11 +250,38 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Force bots to change class..
+        /// </summary>
+        internal static string bot_changeclass {
+            get {
+                return ResourceManager.GetString("bot_changeclass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Force bots to change teams..
+        /// </summary>
+        internal static string bot_changeteams {
+            get {
+                return ResourceManager.GetString("bot_changeteams", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Control how bots talk. Allowed values: &apos;off&apos;, &apos;radio&apos;, &apos;minimal&apos;, or &apos;normal&apos;..
         /// </summary>
         internal static string bot_chatter {
             get {
                 return ResourceManager.GetString("bot_chatter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If nonzero and there is a human on the team, the bots will not do the scenario tasks..
+        /// </summary>
+        internal static string bot_defer_to_human {
+            get {
+                return ResourceManager.GetString("bot_defer_to_human", resourceCulture);
             }
         }
         
@@ -187,6 +313,87 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Force bots to stay on spawn..
+        /// </summary>
+        internal static string bot_dontmove {
+            get {
+                return ResourceManager.GetString("bot_dontmove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Force bots in eco mode. Bots will not spend money until reach specified threshold..
+        /// </summary>
+        internal static string bot_eco_limit {
+            get {
+                return ResourceManager.GetString("bot_eco_limit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bots will join game only after human players..
+        /// </summary>
+        internal static string bot_join_after_player {
+            get {
+                return ResourceManager.GetString("bot_join_after_player", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bots will be allowed to join only specified team..
+        /// </summary>
+        internal static string bot_join_team {
+            get {
+                return ResourceManager.GetString("bot_join_team", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Force bots to jump..
+        /// </summary>
+        internal static string bot_jump {
+            get {
+                return ResourceManager.GetString("bot_jump", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Kill bot with specified nickname..
+        /// </summary>
+        internal static string bot_kill {
+            get {
+                return ResourceManager.GetString("bot_kill", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bots will mimic human players..
+        /// </summary>
+        internal static string bot_mimic {
+            get {
+                return ResourceManager.GetString("bot_mimic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bots will mimic human players (inversed)..
+        /// </summary>
+        internal static string bot_mimic_inverse {
+            get {
+                return ResourceManager.GetString("bot_mimic_inverse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bot&apos;s name prefix..
+        /// </summary>
+        internal static string bot_prefix {
+            get {
+                return ResourceManager.GetString("bot_prefix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Determines the total number of bots in the game..
         /// </summary>
         internal static string bot_quota {
@@ -201,6 +408,159 @@ namespace srcrepair.gui {
         internal static string bot_quota_mode {
             get {
                 return ResourceManager.GetString("bot_quota_mode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Randomize bot nicknames..
+        /// </summary>
+        internal static string bot_randomnames {
+            get {
+                return ResourceManager.GetString("bot_randomnames", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Teleport bot to a specified position. Example: bot_teleport &lt;bot name&gt; &lt;X&gt; &lt;Y&gt; &lt;Z&gt; &lt;Pitch&gt; &lt;Yaw&gt; &lt;Roll&gt;..
+        /// </summary>
+        internal static string bot_teleport {
+            get {
+                return ResourceManager.GetString("bot_teleport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Force the bots to walk..
+        /// </summary>
+        internal static string bot_walk {
+            get {
+                return ResourceManager.GetString("bot_walk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable invulnerability. The same as god, but HP will be set to 1 and player will still get damage..
+        /// </summary>
+        internal static string buddha {
+            get {
+                return ResourceManager.GetString("buddha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show budget history..
+        /// </summary>
+        internal static string budget_show_history {
+            get {
+                return ResourceManager.GetString("budget_show_history", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upload bug reports asynchronically..
+        /// </summary>
+        internal static string bugreporter_uploadasync {
+            get {
+                return ResourceManager.GetString("bugreporter_uploadasync", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open TF2 build menu..
+        /// </summary>
+        internal static string build {
+            get {
+                return ResourceManager.GetString("build", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maximal camera distance in third person mode..
+        /// </summary>
+        internal static string c_maxdistance {
+            get {
+                return ResourceManager.GetString("c_maxdistance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maximal camera pitch in third person mode..
+        /// </summary>
+        internal static string c_maxpitch {
+            get {
+                return ResourceManager.GetString("c_maxpitch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Maximal camera YAW in third person mode..
+        /// </summary>
+        internal static string c_maxyaw {
+            get {
+                return ResourceManager.GetString("c_maxyaw", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minimal camera distance in third person mode..
+        /// </summary>
+        internal static string c_mindistance {
+            get {
+                return ResourceManager.GetString("c_mindistance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minimal camera pitch in third person mode..
+        /// </summary>
+        internal static string c_minpitch {
+            get {
+                return ResourceManager.GetString("c_minpitch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minimal camera YAW in third person mode..
+        /// </summary>
+        internal static string c_minyaw {
+            get {
+                return ResourceManager.GetString("c_minyaw", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable / disable camera collision..
+        /// </summary>
+        internal static string cam_collision {
+            get {
+                return ResourceManager.GetString("cam_collision", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Camera&apos;s speed until reaching ideal angle in third person mode..
+        /// </summary>
+        internal static string cam_idealdelta {
+            get {
+                return ResourceManager.GetString("cam_idealdelta", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Controls how fast you can move your camera around in third person mode..
+        /// </summary>
+        internal static string cam_ideallag {
+            get {
+                return ResourceManager.GetString("cam_ideallag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Snap camera to its default position in third person mode..
+        /// </summary>
+        internal static string cam_snapto {
+            get {
+                return ResourceManager.GetString("cam_snapto", resourceCulture);
             }
         }
         

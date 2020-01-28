@@ -276,6 +276,9 @@
   <data name="cash_player_damage_hostage" xml:space="preserve">
     <value>Задаёт сумму, котая будет отнята у игрока, нанёсшего урон заложнику.</value>
   </data>
+  <data name="cash_player_get_killed" xml:space="preserve">
+    <value>Задаёт сумму, которую получит игрок в случае его убийства другим игроком.</value>
+  </data>
   <data name="cash_player_interact_with_hostage" xml:space="preserve">
     <value>Задаёт сумму, которую получит игрок, начавший процедуру освобождения заложника.</value>
   </data>
@@ -290,6 +293,9 @@
   </data>
   <data name="cash_player_rescued_hostage" xml:space="preserve">
     <value>Задаёт сумму, которую получит игрок, освободивший заложника.</value>
+  </data>
+  <data name="cash_player_respawn_amount" xml:space="preserve">
+    <value>Задаёт сумму, которую получит игрок при возрождении (если оно разрешено).</value>
   </data>
   <data name="cash_team_elimination_bomb_map" xml:space="preserve">
     <value>Задаёт сумму, которую получат игроки выигравшей команды на карте с C4, уничтожив команду противника.</value>
@@ -372,6 +378,9 @@
   <data name="cl_autowepswitch" xml:space="preserve">
     <value>1 - автоматически переключаться на более мощное оружие при его подборе; 0 - оставить текущее.</value>
   </data>
+  <data name="cl_avatar_convert_rgb" xml:space="preserve">
+    <value>Включает / отключает автоматическую конверсию картинок аватаров игроков в RGB.</value>
+  </data>
   <data name="cl_bobamt_lat" xml:space="preserve">
     <value>Задаёт максимальное смещение оружия при беге.</value>
   </data>
@@ -441,6 +450,18 @@
   <data name="cl_crosshair_scale" xml:space="preserve">
     <value>Размер перекрестия прицела.</value>
   </data>
+  <data name="cl_crosshair_sniper_show_normal_inaccuracy" xml:space="preserve">
+    <value>Управляет размытием движения во время прицеливания из снайперской винтовки.</value>
+  </data>
+  <data name="cl_crosshair_sniper_width" xml:space="preserve">
+    <value>Позволяет изменить размер перекрестия прицела снайперских винтовок для игроков с дисплеями с большим DPI, либо несколькими мониторами.</value>
+  </data>
+  <data name="cl_crosshair_t" xml:space="preserve">
+    <value>Позволяет использовать T-shaped перекрестие прицела.</value>
+  </data>
+  <data name="cl_deathnotices_show_numbers" xml:space="preserve">
+    <value>Разрешает / запрещает отображать в ленте убийство количество наблюдателей.</value>
+  </data>
   <data name="cl_debugrumble" xml:space="preserve">
     <value>Включает / отключает отладку шумовых эффектов.</value>
   </data>
@@ -462,14 +483,26 @@
   <data name="cl_drawhud" xml:space="preserve">
     <value>Включить / выключить отображение HUD.</value>
   </data>
+  <data name="cl_drawhud_force_deathnotices" xml:space="preserve">
+    <value>Управляет режимом отображения отчёта об убийствах (deathnotices) HUD: -1 - не показывать никогда; 0 - режим по умолчанию; 2 - показывать всегда даже если другие элементы HUD отключены.</value>
+  </data>
+  <data name="cl_drawhud_force_radar" xml:space="preserve">
+    <value>Включает / отключает отображение радара и мини-карты в ограниченных режимах отображения HUD.</value>
+  </data>
   <data name="cl_drawmonitors" xml:space="preserve">
     <value>Рендеринг внутриигровых "мониторов" которые включают зарендеренные 3D картинки.</value>
+  </data>
+  <data name="cl_draw_only_deathnotices" xml:space="preserve">
+    <value>Включает / отключает особый режим HUD, при котором отображается только журнал убийств.</value>
   </data>
   <data name="cl_dynamiccrosshair" xml:space="preserve">
     <value>1 - включает динамический прицел, увеличивающийся во время бега, либо прыжков; 0 - выключает.</value>
   </data>
   <data name="cl_ejectbrass" xml:space="preserve">
     <value>Отображение гильз.</value>
+  </data>
+  <data name="cl_first_person_uses_world_model" xml:space="preserve">
+    <value>Разрешает / запрещает отображение модели игрока при использовании вида от первого лица.</value>
   </data>
   <data name="cl_flipviewmodels" xml:space="preserve">
     <value>0 - отображать оружие в правой руке руке (стандарт); 1 - в левой.</value>
@@ -518,6 +551,9 @@
   </data>
   <data name="cl_mouselook" xml:space="preserve">
     <value>1 - включить обзор с помощью мыши; 0 - только с клавиатуры. Нельзя сменить, находясь на сервере.</value>
+  </data>
+  <data name="cl_mute_all_comms" xml:space="preserve">
+    <value>Включает / отключает отображение чата для заглушенных пользователем игроков.</value>
   </data>
   <data name="cl_muzzleflash_dlight_1st" xml:space="preserve">
     <value>Динамический свет 1го порядка от вспышек выстрелов.</value>
@@ -603,6 +639,9 @@
   <data name="cl_show_splashes" xml:space="preserve">
     <value>Брызги воды.</value>
   </data>
+  <data name="cl_show_team_equipment" xml:space="preserve">
+    <value>Функция. Используется в биндах. При активации отображает экипировку союзников на экране.</value>
+  </data>
   <data name="cl_smooth" xml:space="preserve">
     <value>Сглаживание ошибок прогнозирования.</value>
   </data>
@@ -618,11 +657,17 @@
   <data name="cl_spec_mode" xml:space="preserve">
     <value>Настройки режима зрителя (спектатора).</value>
   </data>
+  <data name="cl_spec_use_tournament_content_standards" xml:space="preserve">
+    <value>Включает / отключает на клиенте режим отображения настоящих имён игроков, а не никнеймов в режиме наблюдателя.</value>
+  </data>
   <data name="cl_steamscreenshots" xml:space="preserve">
     <value>Включает / отключает автоматическу загрузку скриншотов игры в SteamCloud.</value>
   </data>
   <data name="cl_team" xml:space="preserve">
     <value>Команда по умолчанию при подключении к серверу.</value>
+  </data>
+  <data name="cl_teamid_overhead_always" xml:space="preserve">
+    <value>Разрешает / запрещает всегда отображать Team ID на экране.</value>
   </data>
   <data name="cl_thirdperson" xml:space="preserve">
     <value>Включить / выключить вид от третьего лица (работает только при включённом sv_cheats).</value>
@@ -663,6 +708,9 @@
   <data name="cl_viewmodel_shift_right_amt" xml:space="preserve">
     <value>Включает / отключает движение правой руки при приседании игрока.</value>
   </data>
+  <data name="cl_weapon_debug_print_accuracy" xml:space="preserve">
+    <value>Выводит отладочную информацию, связанную с точностью стрельбы игрока, в консоль.</value>
+  </data>
   <data name="cl_wpn_sway_interp" xml:space="preserve">
     <value>Интерполяция поведения оружия в руках.</value>
   </data>
@@ -674,6 +722,9 @@
   </data>
   <data name="commentary_firstrun" xml:space="preserve">
     <value>Внутренняя переменная: первый ли запуск режима комментариев разработчика.</value>
+  </data>
+  <data name="connect" xml:space="preserve">
+    <value>Подключиться к указанному в качестве параметра серверу.</value>
   </data>
   <data name="console" xml:space="preserve">
     <value>Включает / отключает консоль разработчика.</value>
@@ -738,6 +789,36 @@
   <data name="dsp_water" xml:space="preserve">
     <value>Громкость воды.</value>
   </data>
+  <data name="ds_dir" xml:space="preserve">
+    <value>Название каталога внутри каталога игры, в который будут сохраняться все записанные автоматизированной системой демки.</value>
+  </data>
+  <data name="ds_enable" xml:space="preserve">
+    <value>Включает / отключает автоматизированную систему записи демок и служебной информации. 0 - отключена; 1 - записывать только соревновательные матчи; 2 - записывать все матчи.</value>
+  </data>
+  <data name="ds_kill_delay" xml:space="preserve">
+    <value>Максимальное время между убийствами для расчёта серий убийств.</value>
+  </data>
+  <data name="ds_mark" xml:space="preserve">
+    <value>Создать закладку в текущей демо-записи. Параметр [comment] является опциональным и может содержать пользовательский комментарий.</value>
+  </data>
+  <data name="ds_min_streak" xml:space="preserve">
+    <value>Включает / отключает запись серии убийств, а также игровых событий в текстовый файл.</value>
+  </data>
+  <data name="ds_notify" xml:space="preserve">
+    <value>Задаёт режим вывода информации о событиях в работе автоматизированной системы записи демок: 0 - консоль; 1 - консоль и чат; 2 - консоль и HUD.</value>
+  </data>
+  <data name="ds_prefix" xml:space="preserve">
+    <value>Задаёт префикс имени файлов демо-записей. Максимальная длина - 24 символа.</value>
+  </data>
+  <data name="ds_record" xml:space="preserve">
+    <value>Начать запись демки вручную посредством системы автоматизированной записи демок.</value>
+  </data>
+  <data name="ds_status" xml:space="preserve">
+    <value>Вывести текущий статус автомазированной системы записи демок.</value>
+  </data>
+  <data name="ds_stop" xml:space="preserve">
+    <value>Остановить запись демки и освободить ресурсы.</value>
+  </data>
   <data name="duck" xml:space="preserve">
     <value>Присесть.</value>
   </data>
@@ -752,6 +833,9 @@
   </data>
   <data name="explode" xml:space="preserve">
     <value>Отправляет игрока на респаун путём взрыва.</value>
+  </data>
+  <data name="ff_damage_bullet_penetration" xml:space="preserve">
+    <value>Задаёт множитель урона при атаке товарищей команде.</value>
   </data>
   <data name="ff_damage_reduction_bullets" xml:space="preserve">
     <value>Задаёт коэффициент снижения пулевого урона по игрокам из своей команды.</value>
@@ -807,6 +891,15 @@
   <data name="host_framerate" xml:space="preserve">
     <value>Множитель ускорения при проигрывании демок.</value>
   </data>
+  <data name="host_info_show" xml:space="preserve">
+    <value>Задаёт режим ответа сервера клиентам. 0 - нет ответа, 1 или 2 - стандартный ответ.</value>
+  </data>
+  <data name="host_name_store" xml:space="preserve">
+    <value>Включает / отключает отправку клиентам названия игрового сервера.</value>
+  </data>
+  <data name="host_players_show" xml:space="preserve">
+    <value>1 - не выводит информации об игроках. 2 - выводить стандартную информацию (никнеймы игроков и их счёт).</value>
+  </data>
   <data name="host_thread_mode" xml:space="preserve">
     <value>Количество потоков, задействованных для рендеринга (должно устанавливаться равным числу ядер или число ядер + 1).</value>
   </data>
@@ -830,6 +923,12 @@
   </data>
   <data name="hud_combattext" xml:space="preserve">
     <value>Показывать урон при попаданиях в противника.</value>
+  </data>
+  <data name="hud_combattext_batching" xml:space="preserve">
+    <value>Включает / отключает суммирование урона, нанесённого противникам.</value>
+  </data>
+  <data name="hud_combattext_batching_window" xml:space="preserve">
+    <value>Время в секундах, за которое урон, нанесённый противникам, суммируется.</value>
   </data>
   <data name="hud_combattext_healing" xml:space="preserve">
     <value>Показывать наряду с нанесённым уроном и количество очков лечения.</value>
@@ -1011,6 +1110,9 @@
   <data name="log" xml:space="preserve">
     <value>При установке значения on будет включена запись логов консоли в файл; при установке off - выключена.</value>
   </data>
+  <data name="logaddress_add_http" xml:space="preserve">
+    <value>Включает выгрузку серверных журналов на внешний сервис по протоколу HTTP POST.</value>
+  </data>
   <data name="map" xml:space="preserve">
     <value>Сменить карту и перезапустить сервер. Не используется, объявлена устаревшей.</value>
   </data>
@@ -1139,6 +1241,9 @@
   </data>
   <data name="mat_parallaxmap" xml:space="preserve">
     <value>Цветокоррекция MIP-уровней 2 - карты нормалей; 1 - все остальное.</value>
+  </data>
+  <data name="mat_phong" xml:space="preserve">
+    <value>Включает / отключает блеск моделек.</value>
   </data>
   <data name="mat_picmip" xml:space="preserve">
     <value>Качество детализации текстур.</value>
@@ -1269,6 +1374,15 @@
   <data name="mp_buytime" xml:space="preserve">
     <value>Время в минутах, разрешённое для покупки в CS:S.</value>
   </data>
+  <data name="mp_buy_allow_grenades" xml:space="preserve">
+    <value>Разрешить / запретить игрокам покупать гранаты через меню покупок.</value>
+  </data>
+  <data name="mp_buy_anywhere" xml:space="preserve">
+    <value>Разрешить / запретить осуществлять покупки в любом месте карты, а не только в зоне покупок.</value>
+  </data>
+  <data name="mp_buy_during_immunity" xml:space="preserve">
+    <value>Разрешить / запретить осуществлять покупки во время неуязвимости.</value>
+  </data>
   <data name="mp_c4timer" xml:space="preserve">
     <value>Задаёт время в секундах, по истечению которого установленная C4 взорвётся.</value>
   </data>
@@ -1280,6 +1394,30 @@
   </data>
   <data name="mp_clan_ready_signal" xml:space="preserve">
     <value>Включить / отключить режим, при котором только клан-лидер может запустить матч в режиме чемпионата.</value>
+  </data>
+  <data name="mp_ct_default_grenades" xml:space="preserve">
+    <value>Указывает какие гранаты будут выданы игрокам команды Спецназа при возрождении. В случае если требуется выдать несколько, разделяйте их названия пробелом.</value>
+  </data>
+  <data name="mp_ct_default_melee" xml:space="preserve">
+    <value>Задаёт оружие ближнего боя по умолчанию, которое будет выдано игрокам команды Спецназа при возрождении. Внимание! Нож выдаётся всегда, даже если значение переменной пустое.</value>
+  </data>
+  <data name="mp_ct_default_primary" xml:space="preserve">
+    <value>Задаёт основное оружие, которое будет выдано игрокам команды Спецназа при возрождении.</value>
+  </data>
+  <data name="mp_ct_default_secondary" xml:space="preserve">
+    <value>Задаёт вторичное оружие (пистолеты), которое будет выдано игрокам команды Спецназа при возрождении.</value>
+  </data>
+  <data name="mp_damage_scale_ct_body" xml:space="preserve">
+    <value>Задаёт множитель урона при попадании в тело игрока команды Спецназа.</value>
+  </data>
+  <data name="mp_damage_scale_ct_head" xml:space="preserve">
+    <value>Задаёт множитель урона при попадании в голову игрока команды Спецназа.</value>
+  </data>
+  <data name="mp_damage_scale_t_body" xml:space="preserve">
+    <value>Задаёт множитель урона при попадании в тело игрока команды Террористов.</value>
+  </data>
+  <data name="mp_damage_scale_t_head" xml:space="preserve">
+    <value>Задаёт множитель урона при попадании в голову игрока команды Террористов.</value>
   </data>
   <data name="mp_deathcam_skippable" xml:space="preserve">
     <value>Разрешить / запретить пропуск повтора убийства.</value>
@@ -1302,6 +1440,9 @@
   <data name="mp_defaultteam" xml:space="preserve">
     <value>Задаёт команду по умолчанию для присоединения.</value>
   </data>
+  <data name="mp_default_team_winner_no_objective" xml:space="preserve">
+    <value>Позволяет переопределить определение победителя в случае если команды не выполнили задачу карты: -1 - по умолчанию, 0 - ничья, 2 - Террористы, 3 - Спецназ.</value>
+  </data>
   <data name="mp_defuser_allocation" xml:space="preserve">
     <value>Управляет выдачей комплектов для обезвреживания C4 команде Спецназа.</value>
   </data>
@@ -1310,6 +1451,9 @@
   </data>
   <data name="mp_disable_respawn_times" xml:space="preserve">
     <value>1 - включает быстрый респаун; 0 - выключает.</value>
+  </data>
+  <data name="mp_display_kill_assists" xml:space="preserve">
+    <value>Включить / отключить отображение информации о помощи в убийствах.</value>
   </data>
   <data name="mp_dynamicpricing" xml:space="preserve">
     <value>Разрешает / запрещает динамические цены на оружие в CS:S.</value>
@@ -1350,6 +1494,9 @@
   <data name="mp_forcewin" xml:space="preserve">
     <value>Вызвать победу одной из команд вне зависимости от счёта.</value>
   </data>
+  <data name="mp_force_pick_time" xml:space="preserve">
+    <value>Задаёт время, в течение которого игрок может выбрать команду. По истечении сервер выберет игроку команду автоматически.</value>
+  </data>
   <data name="mp_fraglimit" xml:space="preserve">
     <value>Количество фрагов, после которых карта заканчивается. 0 - лимит отсутствует.</value>
   </data>
@@ -1362,8 +1509,17 @@
   <data name="mp_friendlyfire" xml:space="preserve">
     <value>1 - включает огонь по своим; 0 - выключает.</value>
   </data>
+  <data name="mp_give_player_c4" xml:space="preserve">
+    <value>Включает / отключает автоматическую выдачу C4 произвольному игроку команды Террористов.</value>
+  </data>
   <data name="mp_gungameimmunitytime" xml:space="preserve">
     <value>Задаёт длительности неуязвимости в секундах в режиме Гонка вооружений.</value>
+  </data>
+  <data name="mp_halftime" xml:space="preserve">
+    <value>Запрещает / разрешает смену команд по истечении половины раундов.</value>
+  </data>
+  <data name="mp_halftime_pausetimer" xml:space="preserve">
+    <value>При установке значения 1 перерыв будет длиться бесконечно.</value>
   </data>
   <data name="mp_highlander" xml:space="preserve">
     <value>Включает / отключает режим Хайлендера и устанавливает лимит по одному игроку каждого класса.</value>
@@ -1397,6 +1553,12 @@
   </data>
   <data name="mp_idlemaxtime" xml:space="preserve">
     <value>Через сколько минут простоя игрока выполнять действие: кикнуть или отправить в зрители (0 - отключить).</value>
+  </data>
+  <data name="mp_items_prohibited" xml:space="preserve">
+    <value>Разделённый запятыми список предметов, покупка которых запрещена на сервере CS:GO.</value>
+  </data>
+  <data name="mp_logdetail" xml:space="preserve">
+    <value>Задаёт уровень детализации журналов работы сервера CS:GO.</value>
   </data>
   <data name="mp_logmessages" xml:space="preserve">
     <value>Включает / отключает запись в лог-файл всех пользовательских сообщений.</value>
@@ -1443,8 +1605,29 @@
   <data name="mp_playerid_hold" xml:space="preserve">
     <value>Время, в течение которого после ухода прицела информация будет оставаться на экране.</value>
   </data>
+  <data name="mp_radar_showall" xml:space="preserve">
+    <value>Задаёт параметры отображения игроков на радарах игроков: 0 - по умолчанию, 1 - обе команды, 2 - только Террористы, 3 - только Спецназ.</value>
+  </data>
+  <data name="mp_randomspawn" xml:space="preserve">
+    <value>Включает / отключает режим случайного возрождения для: 0 - по умолчанию, 1 - обе команды, 2 - только Террористы, 3 - только Спецназ.</value>
+  </data>
   <data name="mp_respawnwavetime" xml:space="preserve">
     <value>Задаёт время между волнами возрождения.</value>
+  </data>
+  <data name="mp_respawnwavetime_ct" xml:space="preserve">
+    <value>Задаёт время между волнами возрождения для команды Спецназа.</value>
+  </data>
+  <data name="mp_respawnwavetime_t" xml:space="preserve">
+    <value>Задаёт время между волнами возрождения для команды Террористов.</value>
+  </data>
+  <data name="mp_respawn_immunitytime" xml:space="preserve">
+    <value>Задаёт время, в течение которого игрок после возрождения будет неуязвим.</value>
+  </data>
+  <data name="mp_respawn_on_death_ct" xml:space="preserve">
+    <value>Включить / отключить возрождение для убитых игроков команды Спецназа.</value>
+  </data>
+  <data name="mp_respawn_on_death_t" xml:space="preserve">
+    <value>Включить / отключить возрождение для убитых игроков команды Террористов.</value>
   </data>
   <data name="mp_restartgame" xml:space="preserve">
     <value>Время в секундах, через которое карта будет перезапущена.</value>
@@ -1457,6 +1640,12 @@
   </data>
   <data name="mp_roundtime" xml:space="preserve">
     <value>Задаёт длительность раунда в секундах.</value>
+  </data>
+  <data name="mp_roundtime_defuse" xml:space="preserve">
+    <value>Задаёт длительность (в секундах) раунда в режиме обезвреживания бомбы.</value>
+  </data>
+  <data name="mp_roundtime_hostage" xml:space="preserve">
+    <value>Задаёт длительность (в секундах) раунда в режиме спасения заложников.</value>
   </data>
   <data name="mp_scrambleteams" xml:space="preserve">
     <value>Перемешать команды и перезапустить раунд.</value>
@@ -1479,6 +1668,9 @@
   <data name="mp_spawnprotectiontime" xml:space="preserve">
     <value>Задаёт время защиты игрока после респауна (в секундах). 0 - защита отключена.</value>
   </data>
+  <data name="mp_spec_swapplayersides" xml:space="preserve">
+    <value>Позволяет принудительно сменить стороны в меню наблюдателя (спецназ - справа, террористы - слева).</value>
+  </data>
   <data name="mp_stalemate_enable" xml:space="preserve">
     <value>Включает / выключает режим Мгновенной смерти.</value>
   </data>
@@ -1496,6 +1688,15 @@
   </data>
   <data name="mp_teamcashawards" xml:space="preserve">
     <value>Включает / отключает выдачу дополнительных денег за выполнение задач карты команде.</value>
+  </data>
+  <data name="mp_teamlogo_1" xml:space="preserve">
+    <value>Позволяет указать файл изображения для команды №1 в соревновательном режиме CS:GO.</value>
+  </data>
+  <data name="mp_teamlogo_2" xml:space="preserve">
+    <value>Позволяет указать файл изображения для команды №2 в соревновательном режиме CS:GO.</value>
+  </data>
+  <data name="mp_teammates_are_enemies" xml:space="preserve">
+    <value>Включить режим, при котором товарищи по команде будут считаться врагами: за их убийство будут начисляться очки; они будут подсвечены красным.</value>
   </data>
   <data name="mp_teams_unbalance_limit" xml:space="preserve">
     <value>Задаёт максимальное число несбалансированных игроков.</value>
@@ -1515,6 +1716,18 @@
   <data name="mp_tournament_allow_non_admin_restart" xml:space="preserve">
     <value>1 - позволить не администраторам перезапускать чемпионат; 0 - только администратор может перезапустить чемпионат.</value>
   </data>
+  <data name="mp_tournament_readymode" xml:space="preserve">
+    <value>Разрешить / запретить каждому игроку самостоятельно задавать статус готовности в режиме чемпионата.</value>
+  </data>
+  <data name="mp_tournament_readymode_countdown" xml:space="preserve">
+    <value>Включает или отключает отображение счётчика до начала раунда при готовности команд.</value>
+  </data>
+  <data name="mp_tournament_readymode_min" xml:space="preserve">
+    <value>Задаёт минимальное количество игроков на сервере для появления возможности переключить статус готовности.</value>
+  </data>
+  <data name="mp_tournament_readymode_team_size" xml:space="preserve">
+    <value>Задаёт минимальное количество готовых игроков, по достижении которого начнётся раунд.</value>
+  </data>
   <data name="mp_tournament_restart" xml:space="preserve">
     <value>Перезапустить чемпионат.</value>
   </data>
@@ -1524,11 +1737,26 @@
   <data name="mp_tournament_whitelist" xml:space="preserve">
     <value>Задаёт имя файла со списком разрешённых оружий для использования в режиме чемпионата.</value>
   </data>
+  <data name="mp_t_default_grenades" xml:space="preserve">
+    <value>Указывает какие гранаты будут выданы игрокам команды Террористов при возрождении. В случае если требуется выдать несколько, разделяйте их названия пробелом.</value>
+  </data>
+  <data name="mp_t_default_melee" xml:space="preserve">
+    <value>Задаёт оружие ближнего боя по умолчанию, которое будет выдано игрокам команды Террористов при возрождении. Внимание! Нож выдаётся всегда, даже если значение переменной пустое.</value>
+  </data>
+  <data name="mp_t_default_primary" xml:space="preserve">
+    <value>Задаёт основное оружие, которое будет выдано игрокам команды Террористов при возрождении.</value>
+  </data>
+  <data name="mp_t_default_secondary" xml:space="preserve">
+    <value>Задаёт вторичное оружие (пистолеты), которое будет выдано игрокам команды Террористов при возрождении.</value>
+  </data>
   <data name="mp_usehwmmodels" xml:space="preserve">
     <value>Отключает / включает модели, используемые в "Meet The" видео.</value>
   </data>
   <data name="mp_usehwmvcds" xml:space="preserve">
     <value>Отключает / включает анимацию, используемую в "Meet The" видео.</value>
+  </data>
+  <data name="mp_use_respawn_waves" xml:space="preserve">
+    <value>Включить / отключить режим возрождения волнами (как в Team Fortress 2).</value>
   </data>
   <data name="mp_waitingforplayerscancel" xml:space="preserve">
     <value>Значение 1 отключит функцию ожидание игроков до начала раунда.</value>
@@ -1545,14 +1773,26 @@
   <data name="mp_warmup_end" xml:space="preserve">
     <value>Принудительно остановить разминочный раунд.</value>
   </data>
+  <data name="mp_warmup_pausetimer" xml:space="preserve">
+    <value>При установке значения 1 подготовка будет длиться бесконечно.</value>
+  </data>
   <data name="mp_warmup_start" xml:space="preserve">
     <value>Запустить разминочный раунд.</value>
   </data>
   <data name="mp_weaponstay" xml:space="preserve">
     <value>Оружие остаётся на карте после смерти игрока.</value>
   </data>
+  <data name="mp_weapons_allow_map_placed" xml:space="preserve">
+    <value>Включает / отключает сохранение выброшенного оружия на карте между раундами.</value>
+  </data>
+  <data name="mp_weapons_allow_typecount" xml:space="preserve">
+    <value>Задаёт сколько предметов может купить один игрок за раунд (CS:GO).</value>
+  </data>
   <data name="mp_weapons_allow_zeus" xml:space="preserve">
     <value>Разрешить / запретить оружие Zeus x27 (оружие мгновенной смерти).</value>
+  </data>
+  <data name="mp_weapons_glow_on_ground" xml:space="preserve">
+    <value>Включает / отключает эффект свечения выброшенного оружия на карте (видно через стены).</value>
   </data>
   <data name="mp_windifference" xml:space="preserve">
     <value>Разница между счетом команд до того, как сервер сменит карту.</value>
@@ -1715,6 +1955,9 @@
   </data>
   <data name="record" xml:space="preserve">
     <value>Начинает запись демки. В качестве параметра выступает имя файла (расширение не обязательно).</value>
+  </data>
+  <data name="redirect" xml:space="preserve">
+    <value>Функция. Используется для перенаправления игрока на другой сервер.</value>
   </data>
   <data name="reload" xml:space="preserve">
     <value>Перезарядить оружие.</value>
@@ -1893,6 +2136,9 @@
   <data name="r_drawtracers" xml:space="preserve">
     <value>Включает / отключает трассы пуль при стрельбе.</value>
   </data>
+  <data name="r_drawtracers_firstperson" xml:space="preserve">
+    <value>Включает / отключает отрисовку трассирующих пуль во время стрельбы.</value>
+  </data>
   <data name="r_drawviewmodel" xml:space="preserve">
     <value>Отключает / включает прорисовку модели оружия в руке игрока.</value>
   </data>
@@ -2024,6 +2270,9 @@
   </data>
   <data name="say" xml:space="preserve">
     <value>Открыть окно общего чата. В качестве параметра может быть указан текст, который сразу будет отправлен без открытия окна.</value>
+  </data>
+  <data name="say_party" xml:space="preserve">
+    <value>Открыто окно чата группы. В качестве параметра может быть указан текст, который сразу будет отправлен без открытия окна.</value>
   </data>
   <data name="say_team" xml:space="preserve">
     <value>Открыть окно командного чата. В качестве параметра может быть указан текст, который сразу будет отправлен без открытия окна.</value>
@@ -2166,14 +2415,26 @@
   <data name="snd_mixahead" xml:space="preserve">
     <value>Размер звукового буфера.</value>
   </data>
+  <data name="snd_mix_async" xml:space="preserve">
+    <value>Включает / отключает асинхронное микширование звуков клиента CS:GO.</value>
+  </data>
   <data name="snd_musicvolume" xml:space="preserve">
     <value>Громкость музыки.</value>
+  </data>
+  <data name="snd_occlusion" xml:space="preserve">
+    <value>Включает / отключает использование новой звуковой модели для окружающих звуков в CS:GO.</value>
   </data>
   <data name="spec_freeze_panel_extended_time" xml:space="preserve">
     <value>Задаёт время скрытия панели на экране смерти.</value>
   </data>
   <data name="spec_freeze_time" xml:space="preserve">
     <value>Задаёт время, в течение которого вы будете видеть убивившего вас противника.</value>
+  </data>
+  <data name="spec_lock_to_accountid" xml:space="preserve">
+    <value>Включает режим, при котором камера в режиме наблюдателя будет автоматически переключаться на игрока с указанным в качестве параметром SteamID64.</value>
+  </data>
+  <data name="spec_player_by_accountid" xml:space="preserve">
+    <value>Позволяет наблюдателю быстро переключиться на игрока с указанным в качестве параметра SteamID64.</value>
   </data>
   <data name="spec_scoreboard" xml:space="preserve">
     <value>1 - включить режим таблицы результатов в обычном режиме как в режиме спектра (зрителя).</value>
@@ -2189,6 +2450,9 @@
   </data>
   <data name="status" xml:space="preserve">
     <value>Вывести в консоль информацию о карте, соединении и игроках.</value>
+  </data>
+  <data name="steam_controller_haptics" xml:space="preserve">
+    <value>Включает / отключает тактильную обратную связь при использовании Steam Controller.</value>
   </data>
   <data name="stop" xml:space="preserve">
     <value>Останавливает запрос демки и сохраняет получившийся файл.</value>
@@ -2214,6 +2478,12 @@
   <data name="sv_allow_color_correction" xml:space="preserve">
     <value>Разрешить / запретить клиентам использовать цветовую коррекцию.</value>
   </data>
+  <data name="sv_allow_legacy_cmd_execution_from_client" xml:space="preserve">
+    <value>Разрешает / запрещает исполнение на сервере команд, полученных от подключённых клиентов.</value>
+  </data>
+  <data name="sv_allow_point_servercommand" xml:space="preserve">
+    <value>Разрешает / запрещает картам выполнять на сервере специальные функции (например вызов ботов на картах для тренировок). Допустимые значения: official - разрешено только на картах Valve; disallow - запрещено для всех карт; always - разрешено.</value>
+  </data>
   <data name="sv_allow_voice_from_file" xml:space="preserve">
     <value>Разрешить / запретить клиентам проигрывать файлы в голосовой чат.</value>
   </data>
@@ -2228,6 +2498,9 @@
   </data>
   <data name="sv_arms_race_vote_to_restart_disallowed_after" xml:space="preserve">
     <value>Задаёт уровень, после достижения которого голосование за перезапуск карты в режиме Гонка вооружений будет запрещено.</value>
+  </data>
+  <data name="sv_autobunnyhopping" xml:space="preserve">
+    <value>Включает / отключает режим автоматического повторного прыжка при удерживании +jump (по умолчанию - пробела).</value>
   </data>
   <data name="sv_autosave" xml:space="preserve">
     <value>Включить / отключить автоматическое сохранение при смене уровня.</value>
@@ -2252,6 +2525,9 @@
   </data>
   <data name="sv_cheats" xml:space="preserve">
     <value>1 - включить команды, помеченные как читы (достижения будут недоступны для всех играющих на сервере); 0 - выключить.</value>
+  </data>
+  <data name="sv_clamp_unsafe_velocities" xml:space="preserve">
+    <value>Позволяет разрешить / запретить скольжение игроков по ряду поверхностей.</value>
   </data>
   <data name="sv_clearhinthistory" xml:space="preserve">
     <value>Очистить кэш подсказок, отображаемых в консоли игрока во время набора команды.</value>
@@ -2289,8 +2565,14 @@
   <data name="sv_disablefreezecam" xml:space="preserve">
     <value>Отключить камеру смерти (freezecam) на сервере.</value>
   </data>
+  <data name="sv_disable_motd" xml:space="preserve">
+    <value>Включает / отключает вывод окна MOTD при подключении к данному игровому серверу.</value>
+  </data>
   <data name="sv_downloadurl" xml:space="preserve">
     <value>URL внешнего веб-сервера с именем каталога, с которого клиенты будут скачивать нестандартные файлы (реализация fast download).</value>
+  </data>
+  <data name="sv_enablebunnyhopping" xml:space="preserve">
+    <value>Разрешает / запрещает использовать распрыжку (bunny hop) на сервере.</value>
   </data>
   <data name="sv_enableoldqueries" xml:space="preserve">
     <value>Разрешить / запретить старый тип запросов к серверу (GoldSrc).</value>
@@ -2321,6 +2603,9 @@
   </data>
   <data name="sv_infinite_aux_power" xml:space="preserve">
     <value>Включить / отключить бесконечную энергию HEV-костюма.</value>
+  </data>
+  <data name="sv_jump_impulse" xml:space="preserve">
+    <value>Контролирует начальную скорость прыжка.</value>
   </data>
   <data name="sv_kick_players_with_cooldown" xml:space="preserve">
     <value>0 - разрешить играть на сервере всем игрокам. 1 - кикать только игроков с серьёзными нарушениями. 2 - кикать также игроков, часто покидающих игровые серверы во время матча.</value>
@@ -2391,6 +2676,12 @@
   <data name="sv_max_connects_window" xml:space="preserve">
     <value>Window over which to average connections per second averages.</value>
   </data>
+  <data name="sv_max_queries_sec" xml:space="preserve">
+    <value>Задаёт максимальное число запросов к серверу в секунду с одного IP адреса.</value>
+  </data>
+  <data name="sv_max_queries_sec_global" xml:space="preserve">
+    <value>Задаёт максимальное число запросов к серверу в секунду глобально (для всех).</value>
+  </data>
   <data name="sv_max_usercmd_future_ticks" xml:space="preserve">
     <value>Prevents clients from running usercmds too far in the future. Prevents speed hacks.</value>
   </data>
@@ -2402,6 +2693,9 @@
   </data>
   <data name="sv_minupdaterate" xml:space="preserve">
     <value>Минимально возможное значение updaterate для клиентов.</value>
+  </data>
+  <data name="sv_motd_unload_on_dismissal" xml:space="preserve">
+    <value>Включает / отключает автоматическую выгрузку ресурсов MOTD после закрытия окна игроком.</value>
   </data>
   <data name="sv_namechange_cooldown_seconds" xml:space="preserve">
     <value>Задаёт время в секундах, по истечении которого игрок может сменить ник (по умолчанию 20).</value>
@@ -2487,11 +2781,17 @@
   <data name="sv_rcon_whitelist_address" xml:space="preserve">
     <value>Задаёт IP-адрес, который никогда не будет забанен в случае ввода неправильных RCON паролей.</value>
   </data>
+  <data name="sv_record_item_time_data" xml:space="preserve">
+    <value>Включает / отключает запись в журнал сервера информации об используемых игроками предметах.</value>
+  </data>
   <data name="sv_region" xml:space="preserve">
     <value>Задаёт региональную принадлежность сервера (Европа (в т.ч. и Россия) - 3); -1 - не задано.</value>
   </data>
   <data name="sv_registration_successful" xml:space="preserve">
     <value>Принимает значение 1 при успешной регистрации выделенного сервера на сервере Valve. Во всех остальных случаях - 0.</value>
+  </data>
+  <data name="sv_reliableavatardata" xml:space="preserve">
+    <value>Включает / отключает новый механизм гарантированной доставки и сохранения аватаров игроков на сервере GOTV (SourceTV). Также сохраняет их в файле STV-демки.</value>
   </data>
   <data name="sv_restrict_aspect_ratio_fov" xml:space="preserve">
     <value>Включает / отключает ограничение эффективного угла обзора для игроков с широкоформатными мониторами.</value>
@@ -2501,6 +2801,9 @@
   </data>
   <data name="sv_rollspeed" xml:space="preserve">
     <value>200.</value>
+  </data>
+  <data name="sv_showbullethits" xml:space="preserve">
+    <value>Включает / отключает визуализацию попаданий по противнику на локальном слушающем сервере (CS:GO).</value>
   </data>
   <data name="sv_showimpacts" xml:space="preserve">
     <value>Shows client (red) and server (blue) bullet impact point (1 - both, 2 - client-only, 3 - server-only).</value>
@@ -2514,8 +2817,17 @@
   <data name="sv_show_bot_difficulty_in_name" xml:space="preserve">
     <value>Включить / отключить вывод уровня сложности ботов в их именах.</value>
   </data>
+  <data name="sv_show_team_equipment_prohibit" xml:space="preserve">
+    <value>Разрешает / запрещает использование на клиентах cl_show_team_equipment.</value>
+  </data>
+  <data name="sv_show_voip_indicator_for_enemies" xml:space="preserve">
+    <value>Включает / отключает отображение индикатора активности голосового чата над игроками команды противника (CS:GO).</value>
+  </data>
   <data name="sv_shutdown" xml:space="preserve">
     <value>Включает режим автоматического отключения сервера при отсутствии игроков на нём.</value>
+  </data>
+  <data name="sv_shutdown_cancel" xml:space="preserve">
+    <value>Позволяет отменить запланированное завершение работы выделенного сервера.</value>
   </data>
   <data name="sv_skyname" xml:space="preserve">
     <value>Текущее название skybox текстуры.</value>
@@ -2528,6 +2840,12 @@
   </data>
   <data name="sv_specspeed" xml:space="preserve">
     <value>Задаёт скорость зрителя в режиме свободного полёта.</value>
+  </data>
+  <data name="sv_spec_post_death_additional_time" xml:space="preserve">
+    <value>Задаёт задержку, по истечении которой наблюдатель может переключиться на другого игрока после смерти текущего.</value>
+  </data>
+  <data name="sv_spec_use_tournament_content_standards" xml:space="preserve">
+    <value>Включает / отключает на сервере режим отображения настоящих имён игроков, а не никнеймов в режиме наблюдателя.</value>
   </data>
   <data name="sv_staminajumpcost" xml:space="preserve">
     <value>Затраты выносливости на совершение прыжка.</value>
@@ -2552,6 +2870,18 @@
   </data>
   <data name="sv_tags" xml:space="preserve">
     <value>Содержит теги сервера, которые передаются на мастер-сервер Valve и используются при поиске. Не рекомендуется изменять.</value>
+  </data>
+  <data name="sv_talk_enemy_dead" xml:space="preserve">
+    <value>Включает / отключает общий голосовой чат для всех мёртвых игроков.</value>
+  </data>
+  <data name="sv_talk_enemy_living" xml:space="preserve">
+    <value>Включает / отключает общий голосовой чат для всех живых игроков.</value>
+  </data>
+  <data name="sv_teamid_overhead_always_prohibit" xml:space="preserve">
+    <value>Позволяет разрешить / запретить использование на клиентах cl_teamid_overhead_always.</value>
+  </data>
+  <data name="sv_timebetweenducks" xml:space="preserve">
+    <value>Задаёт кулдаун в секундах до следующего приседания. Позволяет решить проблему со спамом приседаниями во время нахождения в воздухе.</value>
   </data>
   <data name="sv_timeout" xml:space="preserve">
     <value>Таймаут в секундах, по истечении которого игрок будет кикнут с сервера.</value>
@@ -2586,17 +2916,35 @@
   <data name="sv_vote_allow_spectators" xml:space="preserve">
     <value>Разрешить/запретить голосовать зрителям.</value>
   </data>
+  <data name="sv_vote_count_spectator_votes" xml:space="preserve">
+    <value>Позволяет / запрещает учитывать голоса наблюдателей при голосованиях.</value>
+  </data>
   <data name="sv_vote_failure_timer" xml:space="preserve">
     <value>Голосование, потерпевшее неудачу не может быть запущено повторно ранее указанного временного интервала.</value>
   </data>
   <data name="sv_vote_failure_timer_mvm" xml:space="preserve">
     <value>Голосование, потерпевшее неудачу в режиме MvM не может быть запущено повторно ранее указанного временного интервала.</value>
   </data>
+  <data name="sv_vote_issue_autobalance_allowed" xml:space="preserve">
+    <value>Включает / отключает возможность запуска на сервере голосования за отключение / включение автоматической балансировки команд.</value>
+  </data>
   <data name="sv_vote_issue_changelevel_allowed" xml:space="preserve">
     <value>Разрешить/запретить голосования за смену карты.</value>
   </data>
   <data name="sv_vote_issue_changelevel_allowed_mvm" xml:space="preserve">
     <value>Разрешить/запретить голосования за смену карты в режиме MvM.</value>
+  </data>
+  <data name="sv_vote_issue_classlimits_allowed" xml:space="preserve">
+    <value>Разрешить / запретить игрокам голосовать за включение или отключение класс-лимита.</value>
+  </data>
+  <data name="sv_vote_issue_classlimits_allowed_mvm" xml:space="preserve">
+    <value>Разрешить / запретить игрокам голосовать за включение или отключение класс-лимита для режима MvM.</value>
+  </data>
+  <data name="sv_vote_issue_extendlevel_allowed" xml:space="preserve">
+    <value>Разрешает / запрещает игрокам запускать голосование за продление текущей карты.</value>
+  </data>
+  <data name="sv_vote_issue_extendlevel_quorum" xml:space="preserve">
+    <value>Задаёт необходимое соотношение голосов за продление текущей карты.</value>
   </data>
   <data name="sv_vote_issue_kick_allowed" xml:space="preserve">
     <value>Разрешить/запретить голосования за кик игрока с сервера вне зависимости от его статуса (игрок или администратор).</value>
@@ -2654,6 +3002,9 @@
   </data>
   <data name="tf_allow_player_use" xml:space="preserve">
     <value>Разрешить / запретить использование команды use на игрокам на сервере.</value>
+  </data>
+  <data name="tf_allow_server_hibernation" xml:space="preserve">
+    <value>Разрешает / запрещает спящий режим выделенного сервера.</value>
   </data>
   <data name="tf_allow_taunt_switch" xml:space="preserve">
     <value>Разрешает (1 или 2) / запрещает (0) переключение оружия во время выполнения насмешки.</value>
@@ -2739,6 +3090,9 @@
   <data name="tf_bot_quota_mode" xml:space="preserve">
     <value>Задаёт режим балансировки ботов на сервере. Допустимые варианты: "normal", "fill" и "'match".</value>
   </data>
+  <data name="tf_bot_reevaluate_class_in_spawnroom" xml:space="preserve">
+    <value>Разрешить / запретить ботам менять свои классы во время нахождения внутри комнат возрождения.</value>
+  </data>
   <data name="tf_bot_sniper_personal_space_range" xml:space="preserve">
     <value>Предел видимости ботов-снайперов.</value>
   </data>
@@ -2747,6 +3101,9 @@
   </data>
   <data name="tf_build_menu_controller_mode" xml:space="preserve">
     <value>Использовать консольные меню постройки объектов: 1 - вкл; 0 - выкл. Включает один PDA (постройка и уничтожение) вместо двух (отдельно постройка и отдельно уничтожение).</value>
+  </data>
+  <data name="tf_classlimit" xml:space="preserve">
+    <value>Задаёт максимальное число игроков одного класса. Не работает в режиме чемпионата.</value>
   </data>
   <data name="tf_coach_request_nevershowagain" xml:space="preserve">
     <value>1 - никогда не отображать сообщение о необходимости тренера.</value>
@@ -2786,6 +3143,9 @@
   </data>
   <data name="tf_disguise_menu_controller_mode" xml:space="preserve">
     <value>Использовать консольные меню маскировки: 1 - вкл; 0 - выкл.</value>
+  </data>
+  <data name="tf_dropped_weapon_lifetime" xml:space="preserve">
+    <value>Время в секундах, в течение которого будут доступны для подбора брошенные оружия в TF2. 0 - полное отключение.</value>
   </data>
   <data name="tf_explanations_backpackpanel" xml:space="preserve">
     <value>Включает / отключает панель описания вещей в TF2.</value>
@@ -2844,6 +3204,21 @@
   <data name="tf_forced_holiday" xml:space="preserve">
     <value>Включает / отключает на сервере праздничный режим: 0 - выключено, 2 - хэллоуин, 3 - день рождения.</value>
   </data>
+  <data name="tf_grapplinghook_enable" xml:space="preserve">
+    <value>Разрешает / запрещает использование крюка на картах режима Mannpower.</value>
+  </data>
+  <data name="tf_grapplinghook_jump_up_speed" xml:space="preserve">
+    <value>Задаёт ускорение свободного полёта после отпускания крюка.</value>
+  </data>
+  <data name="tf_grapplinghook_max_distance" xml:space="preserve">
+    <value>Задаёт максимальную дистанцию, на которой крюк может быть использован.</value>
+  </data>
+  <data name="tf_grapplinghook_prevent_fall_damage" xml:space="preserve">
+    <value>Включает / отключает урон от падения при падении с крюка.</value>
+  </data>
+  <data name="tf_gravetalk" xml:space="preserve">
+    <value>Включить / отключить возможность общаться мёртвым игрокам с живыми.</value>
+  </data>
   <data name="tf_halloween_boss_spawn_interval" xml:space="preserve">
     <value>Задаёт время между появлениями Пешего всадника без головы.</value>
   </data>
@@ -2877,11 +3252,23 @@
   <data name="tf_hud_num_building_alert_beeps" xml:space="preserve">
     <value>Количество предупреждающих сигналов перед тем, как новое предупреждение отобразится на объектах в строительном дисплее инженера.</value>
   </data>
+  <data name="tf_hud_target_id_alpha" xml:space="preserve">
+    <value>Разрешает / запрещает прозрачность рамки TargetID.</value>
+  </data>
+  <data name="tf_hud_target_id_disable_floating_health" xml:space="preserve">
+    <value>Отключает / включает плавающую панель здоровья над игроком. При отключении будет использоваться классический вид. Используйте в случае проблем с HUD, не поддерживающими TargetID.</value>
+  </data>
+  <data name="tf_hud_target_id_show_avatars" xml:space="preserve">
+    <value>Задаёт параметры отображения аватаров на панели Target ID HUD: выключены, включены для всех или включены только для друзей.</value>
+  </data>
   <data name="tf_invite_debug" xml:space="preserve">
     <value>Включает режим отладки для приглашений в игру.</value>
   </data>
   <data name="tf_last_store_pricesheet_version" xml:space="preserve">
     <value>Внутренняя переменная: хранит версию файла с ценами магазина MannCo.</value>
+  </data>
+  <data name="tf_listrounds" xml:space="preserve">
+    <value>Отладочная команда, выводящая список всех доступных на текущей карте стадий.</value>
   </data>
   <data name="tf_lobby_debug" xml:space="preserve">
     <value>Включает режим отладки для лобби.</value>
@@ -2903,6 +3290,24 @@
   </data>
   <data name="tf_matchmaking_noob_map_score_boost" xml:space="preserve">
     <value>Множитель очков начинающего игрока.</value>
+  </data>
+  <data name="tf_matchmaking_ping_a" xml:space="preserve">
+    <value>Позволяет указать допустимую задержку при выборе сервера посредством системы матчмейкинга TF2. Значение 1.</value>
+  </data>
+  <data name="tf_matchmaking_ping_a_score" xml:space="preserve">
+    <value>Позволяет указать допустимую задержку при выборе сервера посредством системы матчмейкинга TF2. Значение 1.</value>
+  </data>
+  <data name="tf_matchmaking_ping_b" xml:space="preserve">
+    <value>Позволяет указать допустимую задержку при выборе сервера посредством системы матчмейкинга TF2. Значение 2.</value>
+  </data>
+  <data name="tf_matchmaking_ping_b_score" xml:space="preserve">
+    <value>Позволяет указать допустимую задержку при выборе сервера посредством системы матчмейкинга TF2. Значение 2.</value>
+  </data>
+  <data name="tf_matchmaking_ping_c" xml:space="preserve">
+    <value>Позволяет указать допустимую задержку при выборе сервера посредством системы матчмейкинга TF2. Значение 3.</value>
+  </data>
+  <data name="tf_matchmaking_ping_c_score" xml:space="preserve">
+    <value>Позволяет указать допустимую задержку при выборе сервера посредством системы матчмейкинга TF2. Значение 3.</value>
   </data>
   <data name="tf_matchmaking_retry_cooldown_seconds" xml:space="preserve">
     <value>Задаёт время, в течение которого вы не сможете подключиться к тому же серверу во время быстрой игры.</value>
@@ -2958,6 +3363,12 @@
   <data name="tf_mvm_popfile" xml:space="preserve">
     <value>Перезапустить MvM карту с другим pop-файлом.</value>
   </data>
+  <data name="tf_mvm_respec_enabled" xml:space="preserve">
+    <value>Разрешает / запрещает перераспределение очков навыков в режиме MvM.</value>
+  </data>
+  <data name="tf_mvm_respec_limit" xml:space="preserve">
+    <value>Задаёт лимит времени на перераспределение очков навыков в режиме MvM.</value>
+  </data>
   <data name="tf_mvm_skill" xml:space="preserve">
     <value>Задаёт сложность волны роботов в режиме MvM: 1 - простейшая; 3 - нормальная; 5 - очень сложная.</value>
   </data>
@@ -2976,8 +3387,35 @@
   <data name="tf_particles_disable_weather" xml:space="preserve">
     <value>Отключает (1) / включает (0) погодные эффекты на картах.</value>
   </data>
+  <data name="tf_passtime_ball_model" xml:space="preserve">
+    <value>Задаёт модель мяча на картах режима PASS Time.</value>
+  </data>
+  <data name="tf_passtime_scores_per_round" xml:space="preserve">
+    <value>Задаёт необходимое количество забитых голов до окончания раунда в режиме PASS Time.</value>
+  </data>
+  <data name="tf_passtime_throwspeed_velocity" xml:space="preserve">
+    <value>Включает / отключает режим, при котором Jack в режиме PASS Time наследует часть скорости бросающего.</value>
+  </data>
+  <data name="tf_passtime_unstable" xml:space="preserve">
+    <value>Включает / отключает нестабильные тестовые возможности режима PASS Time.</value>
+  </data>
   <data name="tf_playergib" xml:space="preserve">
     <value>Включает / выключает "мясо" от взрывов тел игроков.</value>
+  </data>
+  <data name="tf_player_movement_restart_freeze" xml:space="preserve">
+    <value>Задаёт длительность "заморозки" игроков в начале раунда.</value>
+  </data>
+  <data name="tf_player_spell_drop_on_death_rate" xml:space="preserve">
+    <value>Включает / отключает выпадение одного хэллоуинского заклинания после смерти игрока.</value>
+  </data>
+  <data name="tf_playgrounds" xml:space="preserve">
+    <value>Отладочная команда, предназначенная для перехода на другую стадию на картах с несколькими стадиями.</value>
+  </data>
+  <data name="tf_powerup_mode" xml:space="preserve">
+    <value>Включает / отключает усилители на картах режима Mannpower.</value>
+  </data>
+  <data name="tf_preround_push_from_damage_enable" xml:space="preserve">
+    <value>Разрешает / запрещает игрокам отталкиваться при помощи взрывов во время предстартовой заморозки.</value>
   </data>
   <data name="tf_pressandhold_minduration" xml:space="preserve">
     <value>Минимальное время, необходимое для активации насмешки, требующей двух игроков.</value>
@@ -2999,6 +3437,9 @@
   </data>
   <data name="tf_respawn_on_loadoutchanges" xml:space="preserve">
     <value>Включает / отключает автоматический респаун при смене экипировки класса.</value>
+  </data>
+  <data name="tf_scoreboard_ping_as_text" xml:space="preserve">
+    <value>Включает / отключает отображение пинга в текстовом виде.</value>
   </data>
   <data name="tf_server_identity_account_id" xml:space="preserve">
     <value>SteamID владельца сервера.</value>
@@ -3039,8 +3480,17 @@
   <data name="tf_spectator_target_location" xml:space="preserve">
     <value>Задаёт расположение панели зрителя.</value>
   </data>
+  <data name="tf_spec_xray" xml:space="preserve">
+    <value>Разрешает / запрещает зрителям и мёртвым игрокам видеть других игроков и постройки через стены.</value>
+  </data>
+  <data name="tf_spells_enabled" xml:space="preserve">
+    <value>Разрешает / запрещает использование хэллоуинских заклинаний на обычных картах.</value>
+  </data>
   <data name="tf_stats_nogameplaycheck" xml:space="preserve">
     <value>Запретить / разрешить проверку правильности игровых данных.</value>
+  </data>
+  <data name="tf_taunt_first_person" xml:space="preserve">
+    <value>Включает / отключает вид насмешек от первого лица (рекомендуется для использования с устройствами виртуальной реальности).</value>
   </data>
   <data name="tf_teamtalk" xml:space="preserve">
     <value>Включить / отключить возможность общаться мёртвым игрокам с живыми. Объявлена устаревшей. Заменена на tf_gravetalk.</value>
@@ -3099,11 +3549,20 @@
   <data name="tf_weapon_criticals" xml:space="preserve">
     <value>1 - включает критические выстрелы (криты); 0 - выключает.</value>
   </data>
+  <data name="tf_weapon_criticals_melee" xml:space="preserve">
+    <value>Включает / отключает случайные криты у оружия ближнего боя.</value>
+  </data>
   <data name="tf_weapon_select_demo_start_delay" xml:space="preserve">
     <value>Задержка между респауном и доставанием оружия.</value>
   </data>
   <data name="tf_weapon_select_demo_time" xml:space="preserve">
     <value>Время, чтобы достать оружие: 0 - выкл.</value>
+  </data>
+  <data name="tf_workshop_map_sync" xml:space="preserve">
+    <value>Позволяет немедленно оформить подписку на указанную карту в Maps Workshop, а также загрузить её.</value>
+  </data>
+  <data name="tf_workshop_refresh" xml:space="preserve">
+    <value>Принудительно обновляет список подписок в Maps Workshop, а также в фоне загружает обновления для них.</value>
   </data>
   <data name="thirdperson" xml:space="preserve">
     <value>Включить / выключить вид от третьего лица (работает только при включённом sv_cheats).</value>
@@ -3117,8 +3576,20 @@
   <data name="toggleconsole" xml:space="preserve">
     <value>Показать / скрыть консоль разработчика.</value>
   </data>
+  <data name="trigger_passtime_ball" xml:space="preserve">
+    <value>Временно скрывает не реализованные функции в режиме PASS Time.</value>
+  </data>
+  <data name="tv_allow_camera_man_override" xml:space="preserve">
+    <value>Разрешает / запрещает игрокам, подключённым в SourceTV серверу, самостоятельно управлять камерой.</value>
+  </data>
+  <data name="tv_allow_camera_man_steamid2" xml:space="preserve">
+    <value>Дополнительный аккаунт для стримера, который подключается к особому TV1 серверу SourceTV с низкой задержкой.</value>
+  </data>
   <data name="tv_autorecord" xml:space="preserve">
     <value>Включить / выключить автоматическую запись каждой игры. Формат файла: auto-YYYYMMDD-hhmm-map.dem.</value>
+  </data>
+  <data name="tv_challenge_steam_iprange" xml:space="preserve">
+    <value>Список IP-адресов, разделённых запятыми, с которых может подключаться к SourceTV серверу стример. Используется как дополнительный слой защиты.</value>
   </data>
   <data name="tv_chattimelimit" xml:space="preserve">
     <value>Лимит на количество сообщений зрителей на сервере SourceTV.</value>
@@ -3128,6 +3599,9 @@
   </data>
   <data name="tv_delay" xml:space="preserve">
     <value>Задержка SourceTV в секундах.</value>
+  </data>
+  <data name="tv_delay1" xml:space="preserve">
+    <value>Задаёт задержку для особого TV1 сервера SourceTV.</value>
   </data>
   <data name="tv_delaymapchange" xml:space="preserve">
     <value>После смены карты будет ли SourceTV продолжать показывать последние секунды, указанные в tv_delay.</value>
@@ -3189,6 +3663,9 @@
   <data name="use_action_slot_item" xml:space="preserve">
     <value>Выполнить действие из слота Action, либо альтернативную насмешку.</value>
   </data>
+  <data name="vgui_cache_res_files" xml:space="preserve">
+    <value>Включает / отключает кэширование VGUI ресурсных файлов игрой.</value>
+  </data>
   <data name="vgui_message_dialog_modal" xml:space="preserve">
     <value>Включает / отключает модальные диалоги сообщений.</value>
   </data>
@@ -3240,6 +3717,15 @@
   <data name="wait" xml:space="preserve">
     <value>Ожидает указанное в параметре количество тиков (не кадров) до запуска следующей команды. Может быть отключена на сервере. Используется в скриптах.</value>
   </data>
+  <data name="weapon_air_spread_scale" xml:space="preserve">
+    <value>Задаёт коэффициент разброса пуль при стрельбе во время нахождения в воздухе.</value>
+  </data>
+  <data name="weapon_auto_cleanup_time" xml:space="preserve">
+    <value>Время в секундах, по истечении которого брошенное оружие будет удалено с карты (если рядом нет игроков).</value>
+  </data>
+  <data name="weapon_max_before_cleanup" xml:space="preserve">
+    <value>Задаёт максимальное количество брошенных предметов на карте. При исчерпании лимита, более старые начнут удаляться с карты.</value>
+  </data>
   <data name="weapon_recoil_scale" xml:space="preserve">
     <value>Задаёт коэффициент разброса пуль во время стрельбы.</value>
   </data>
@@ -3260,491 +3746,5 @@
   </data>
   <data name="zoom_sensitivity_ratio" xml:space="preserve">
     <value>Задаёт множитель чувствительности мыши при активном прицеле снайперских винтовок.</value>
-  </data>
-  <data name="cl_first_person_uses_world_model" xml:space="preserve">
-    <value>Разрешает / запрещает отображение модели игрока при использовании вида от первого лица.</value>
-  </data>
-  <data name="sv_motd_unload_on_dismissal" xml:space="preserve">
-    <value>Включает / отключает автоматическую выгрузку ресурсов MOTD после закрытия окна игроком.</value>
-  </data>
-  <data name="cash_player_get_killed" xml:space="preserve">
-    <value>Задаёт сумму, которую получит игрок в случае его убийства другим игроком.</value>
-  </data>
-  <data name="cash_player_respawn_amount" xml:space="preserve">
-    <value>Задаёт сумму, которую получит игрок при возрождении (если оно разрешено).</value>
-  </data>
-  <data name="mp_buy_allow_grenades" xml:space="preserve">
-    <value>Разрешить / запретить игрокам покупать гранаты через меню покупок.</value>
-  </data>
-  <data name="mp_buy_anywhere" xml:space="preserve">
-    <value>Разрешить / запретить осуществлять покупки в любом месте карты, а не только в зоне покупок.</value>
-  </data>
-  <data name="mp_buy_during_immunity" xml:space="preserve">
-    <value>Разрешить / запретить осуществлять покупки во время неуязвимости.</value>
-  </data>
-  <data name="mp_ct_default_grenades" xml:space="preserve">
-    <value>Указывает какие гранаты будут выданы игрокам команды Спецназа при возрождении. В случае если требуется выдать несколько, разделяйте их названия пробелом.</value>
-  </data>
-  <data name="mp_ct_default_melee" xml:space="preserve">
-    <value>Задаёт оружие ближнего боя по умолчанию, которое будет выдано игрокам команды Спецназа при возрождении. Внимание! Нож выдаётся всегда, даже если значение переменной пустое.</value>
-  </data>
-  <data name="mp_ct_default_primary" xml:space="preserve">
-    <value>Задаёт основное оружие, которое будет выдано игрокам команды Спецназа при возрождении.</value>
-  </data>
-  <data name="mp_ct_default_secondary" xml:space="preserve">
-    <value>Задаёт вторичное оружие (пистолеты), которое будет выдано игрокам команды Спецназа при возрождении.</value>
-  </data>
-  <data name="mp_damage_scale_ct_body" xml:space="preserve">
-    <value>Задаёт множитель урона при попадании в тело игрока команды Спецназа.</value>
-  </data>
-  <data name="mp_damage_scale_ct_head" xml:space="preserve">
-    <value>Задаёт множитель урона при попадании в голову игрока команды Спецназа.</value>
-  </data>
-  <data name="mp_damage_scale_t_body" xml:space="preserve">
-    <value>Задаёт множитель урона при попадании в тело игрока команды Террористов.</value>
-  </data>
-  <data name="mp_damage_scale_t_head" xml:space="preserve">
-    <value>Задаёт множитель урона при попадании в голову игрока команды Террористов.</value>
-  </data>
-  <data name="mp_default_team_winner_no_objective" xml:space="preserve">
-    <value>Позволяет переопределить определение победителя в случае если команды не выполнили задачу карты: -1 - по умолчанию, 0 - ничья, 2 - Террористы, 3 - Спецназ.</value>
-  </data>
-  <data name="mp_display_kill_assists" xml:space="preserve">
-    <value>Включить / отключить отображение информации о помощи в убийствах.</value>
-  </data>
-  <data name="mp_force_pick_time" xml:space="preserve">
-    <value>Задаёт время, в течение которого игрок может выбрать команду. По истечении сервер выберет игроку команду автоматически.</value>
-  </data>
-  <data name="mp_give_player_c4" xml:space="preserve">
-    <value>Включает / отключает автоматическую выдачу C4 произвольному игроку команды Террористов.</value>
-  </data>
-  <data name="mp_halftime" xml:space="preserve">
-    <value>Запрещает / разрешает смену команд по истечении половины раундов.</value>
-  </data>
-  <data name="mp_halftime_pausetimer" xml:space="preserve">
-    <value>При установке значения 1 перерыв будет длиться бесконечно.</value>
-  </data>
-  <data name="mp_radar_showall" xml:space="preserve">
-    <value>Задаёт параметры отображения игроков на радарах игроков: 0 - по умолчанию, 1 - обе команды, 2 - только Террористы, 3 - только Спецназ.</value>
-  </data>
-  <data name="mp_randomspawn" xml:space="preserve">
-    <value>Включает / отключает режим случайного возрождения для: 0 - по умолчанию, 1 - обе команды, 2 - только Террористы, 3 - только Спецназ.</value>
-  </data>
-  <data name="mp_respawnwavetime_ct" xml:space="preserve">
-    <value>Задаёт время между волнами возрождения для команды Спецназа.</value>
-  </data>
-  <data name="mp_respawnwavetime_t" xml:space="preserve">
-    <value>Задаёт время между волнами возрождения для команды Террористов.</value>
-  </data>
-  <data name="mp_respawn_immunitytime" xml:space="preserve">
-    <value>Задаёт время, в течение которого игрок после возрождения будет неуязвим.</value>
-  </data>
-  <data name="mp_respawn_on_death_ct" xml:space="preserve">
-    <value>Включить / отключить возрождение для убитых игроков команды Спецназа.</value>
-  </data>
-  <data name="mp_respawn_on_death_t" xml:space="preserve">
-    <value>Включить / отключить возрождение для убитых игроков команды Террористов.</value>
-  </data>
-  <data name="mp_roundtime_defuse" xml:space="preserve">
-    <value>Задаёт длительность (в секундах) раунда в режиме обезвреживания бомбы.</value>
-  </data>
-  <data name="mp_roundtime_hostage" xml:space="preserve">
-    <value>Задаёт длительность (в секундах) раунда в режиме спасения заложников.</value>
-  </data>
-  <data name="mp_teammates_are_enemies" xml:space="preserve">
-    <value>Включить режим, при котором товарищи по команде будут считаться врагами: за их убийство будут начисляться очки; они будут подсвечены красным.</value>
-  </data>
-  <data name="mp_t_default_grenades" xml:space="preserve">
-    <value>Указывает какие гранаты будут выданы игрокам команды Террористов при возрождении. В случае если требуется выдать несколько, разделяйте их названия пробелом.</value>
-  </data>
-  <data name="mp_t_default_melee" xml:space="preserve">
-    <value>Задаёт оружие ближнего боя по умолчанию, которое будет выдано игрокам команды Террористов при возрождении. Внимание! Нож выдаётся всегда, даже если значение переменной пустое.</value>
-  </data>
-  <data name="mp_t_default_primary" xml:space="preserve">
-    <value>Задаёт основное оружие, которое будет выдано игрокам команды Террористов при возрождении.</value>
-  </data>
-  <data name="mp_t_default_secondary" xml:space="preserve">
-    <value>Задаёт вторичное оружие (пистолеты), которое будет выдано игрокам команды Террористов при возрождении.</value>
-  </data>
-  <data name="mp_use_respawn_waves" xml:space="preserve">
-    <value>Включить / отключить режим возрождения волнами (как в Team Fortress 2).</value>
-  </data>
-  <data name="mp_warmup_pausetimer" xml:space="preserve">
-    <value>При установке значения 1 подготовка будет длиться бесконечно.</value>
-  </data>
-  <data name="mp_weapons_allow_map_placed" xml:space="preserve">
-    <value>Включает / отключает сохранение выброшенного оружия на карте между раундами.</value>
-  </data>
-  <data name="mp_weapons_glow_on_ground" xml:space="preserve">
-    <value>Включает / отключает эффект свечения выброшенного оружия на карте (видно через стены).</value>
-  </data>
-  <data name="host_info_show" xml:space="preserve">
-    <value>Задаёт режим ответа сервера клиентам. 0 - нет ответа, 1 или 2 - стандартный ответ.</value>
-  </data>
-  <data name="host_name_store" xml:space="preserve">
-    <value>Включает / отключает отправку клиентам названия игрового сервера.</value>
-  </data>
-  <data name="host_players_show" xml:space="preserve">
-    <value>1 - не выводит информации об игроках. 2 - выводить стандартную информацию (никнеймы игроков и их счёт).</value>
-  </data>
-  <data name="sv_max_queries_sec" xml:space="preserve">
-    <value>Задаёт максимальное число запросов к серверу в секунду с одного IP адреса.</value>
-  </data>
-  <data name="sv_max_queries_sec_global" xml:space="preserve">
-    <value>Задаёт максимальное число запросов к серверу в секунду глобально (для всех).</value>
-  </data>
-  <data name="cl_mute_all_comms" xml:space="preserve">
-    <value>Включает / отключает отображение чата для заглушенных пользователем игроков.</value>
-  </data>
-  <data name="sv_vote_issue_autobalance_allowed" xml:space="preserve">
-    <value>Включает / отключает возможность запуска на сервере голосования за отключение / включение автоматической балансировки команд.</value>
-  </data>
-  <data name="sv_vote_issue_classlimits_allowed" xml:space="preserve">
-    <value>Разрешить / запретить игрокам голосовать за включение или отключение класс-лимита.</value>
-  </data>
-  <data name="sv_vote_issue_classlimits_allowed_mvm" xml:space="preserve">
-    <value>Разрешить / запретить игрокам голосовать за включение или отключение класс-лимита для режима MvM.</value>
-  </data>
-  <data name="tf_classlimit" xml:space="preserve">
-    <value>Задаёт максимальное число игроков одного класса. Не работает в режиме чемпионата.</value>
-  </data>
-  <data name="tf_hud_target_id_alpha" xml:space="preserve">
-    <value>Разрешает / запрещает прозрачность рамки TargetID.</value>
-  </data>
-  <data name="tf_hud_target_id_disable_floating_health" xml:space="preserve">
-    <value>Отключает / включает плавающую панель здоровья над игроком. При отключении будет использоваться классический вид. Используйте в случае проблем с HUD, не поддерживающими TargetID.</value>
-  </data>
-  <data name="tf_player_spell_drop_on_death_rate" xml:space="preserve">
-    <value>Включает / отключает выпадение одного хэллоуинского заклинания после смерти игрока.</value>
-  </data>
-  <data name="tf_spells_enabled" xml:space="preserve">
-    <value>Разрешает / запрещает использование хэллоуинских заклинаний на обычных картах.</value>
-  </data>
-  <data name="tf_weapon_criticals_melee" xml:space="preserve">
-    <value>Включает / отключает случайные криты у оружия ближнего боя.</value>
-  </data>
-  <data name="connect" xml:space="preserve">
-    <value>Подключиться к указанному в качестве параметра серверу.</value>
-  </data>
-  <data name="ff_damage_bullet_penetration" xml:space="preserve">
-    <value>Задаёт множитель урона при атаке товарищей команде.</value>
-  </data>
-  <data name="mp_teamlogo_1" xml:space="preserve">
-    <value>Позволяет указать файл изображения для команды №1 в соревновательном режиме CS:GO.</value>
-  </data>
-  <data name="mp_teamlogo_2" xml:space="preserve">
-    <value>Позволяет указать файл изображения для команды №2 в соревновательном режиме CS:GO.</value>
-  </data>
-  <data name="redirect" xml:space="preserve">
-    <value>Функция. Используется для перенаправления игрока на другой сервер.</value>
-  </data>
-  <data name="r_drawtracers_firstperson" xml:space="preserve">
-    <value>Включает / отключает отрисовку трассирующих пуль во время стрельбы.</value>
-  </data>
-  <data name="sv_reliableavatardata" xml:space="preserve">
-    <value>Включает / отключает новый механизм гарантированной доставки и сохранения аватаров игроков на сервере GOTV (SourceTV). Также сохраняет их в файле STV-демки.</value>
-  </data>
-  <data name="tf_grapplinghook_jump_up_speed" xml:space="preserve">
-    <value>Задаёт ускорение свободного полёта после отпускания крюка.</value>
-  </data>
-  <data name="tf_grapplinghook_max_distance" xml:space="preserve">
-    <value>Задаёт максимальную дистанцию, на которой крюк может быть использован.</value>
-  </data>
-  <data name="tf_grapplinghook_prevent_fall_damage" xml:space="preserve">
-    <value>Включает / отключает урон от падения при падении с крюка.</value>
-  </data>
-  <data name="mat_phong" xml:space="preserve">
-    <value>Включает / отключает блеск моделек.</value>
-  </data>
-  <data name="sv_allow_point_servercommand" xml:space="preserve">
-    <value>Разрешает / запрещает картам выполнять на сервере специальные функции (например вызов ботов на картах для тренировок). Допустимые значения: official - разрешено только на картах Valve; disallow - запрещено для всех карт; always - разрешено.</value>
-  </data>
-  <data name="tf_workshop_map_sync" xml:space="preserve">
-    <value>Позволяет немедленно оформить подписку на указанную карту в Maps Workshop, а также загрузить её.</value>
-  </data>
-  <data name="tf_workshop_refresh" xml:space="preserve">
-    <value>Принудительно обновляет список подписок в Maps Workshop, а также в фоне загружает обновления для них.</value>
-  </data>
-  <data name="mp_tournament_readymode" xml:space="preserve">
-    <value>Разрешить / запретить каждому игроку самостоятельно задавать статус готовности в режиме чемпионата.</value>
-  </data>
-  <data name="mp_tournament_readymode_countdown" xml:space="preserve">
-    <value>Включает или отключает отображение счётчика до начала раунда при готовности команд.</value>
-  </data>
-  <data name="mp_tournament_readymode_min" xml:space="preserve">
-    <value>Задаёт минимальное количество игроков на сервере для появления возможности переключить статус готовности.</value>
-  </data>
-  <data name="mp_tournament_readymode_team_size" xml:space="preserve">
-    <value>Задаёт минимальное количество готовых игроков, по достижении которого начнётся раунд.</value>
-  </data>
-  <data name="tf_dropped_weapon_lifetime" xml:space="preserve">
-    <value>Время в секундах, в течение которого будут доступны для подбора брошенные оружия в TF2. 0 - полное отключение.</value>
-  </data>
-  <data name="tf_mvm_respec_enabled" xml:space="preserve">
-    <value>Разрешает / запрещает перераспределение очков навыков в режиме MvM.</value>
-  </data>
-  <data name="tf_mvm_respec_limit" xml:space="preserve">
-    <value>Задаёт лимит времени на перераспределение очков навыков в режиме MvM.</value>
-  </data>
-  <data name="tf_player_movement_restart_freeze" xml:space="preserve">
-    <value>Задаёт длительность "заморозки" игроков в начале раунда.</value>
-  </data>
-  <data name="tf_spec_xray" xml:space="preserve">
-    <value>Разрешает / запрещает зрителям и мёртвым игрокам видеть других игроков и постройки через стены.</value>
-  </data>
-  <data name="tf_hud_target_id_show_avatars" xml:space="preserve">
-    <value>Задаёт параметры отображения аватаров на панели Target ID HUD: выключены, включены для всех или включены только для друзей.</value>
-  </data>
-  <data name="mp_weapons_allow_typecount" xml:space="preserve">
-    <value>Задаёт сколько предметов может купить один игрок за раунд (CS:GO).</value>
-  </data>
-  <data name="sv_showbullethits" xml:space="preserve">
-    <value>Включает / отключает визуализацию попаданий по противнику на локальном слушающем сервере (CS:GO).</value>
-  </data>
-  <data name="sv_show_voip_indicator_for_enemies" xml:space="preserve">
-    <value>Включает / отключает отображение индикатора активности голосового чата над игроками команды противника (CS:GO).</value>
-  </data>
-  <data name="sv_vote_issue_extendlevel_allowed" xml:space="preserve">
-    <value>Разрешает / запрещает игрокам запускать голосование за продление текущей карты.</value>
-  </data>
-  <data name="sv_vote_issue_extendlevel_quorum" xml:space="preserve">
-    <value>Задаёт необходимое соотношение голосов за продление текущей карты.</value>
-  </data>
-  <data name="tf_passtime_throwspeed_velocity" xml:space="preserve">
-    <value>Включает / отключает режим, при котором Jack в режиме PASS Time наследует часть скорости бросающего.</value>
-  </data>
-  <data name="tf_passtime_unstable" xml:space="preserve">
-    <value>Включает / отключает нестабильные тестовые возможности режима PASS Time.</value>
-  </data>
-  <data name="hud_combattext_batching" xml:space="preserve">
-    <value>Включает / отключает суммирование урона, нанесённого противникам.</value>
-  </data>
-  <data name="hud_combattext_batching_window" xml:space="preserve">
-    <value>Время в секундах, за которое урон, нанесённый противникам, суммируется.</value>
-  </data>
-  <data name="tf_passtime_ball_model" xml:space="preserve">
-    <value>Задаёт модель мяча на картах режима PASS Time.</value>
-  </data>
-  <data name="tf_preround_push_from_damage_enable" xml:space="preserve">
-    <value>Разрешает / запрещает игрокам отталкиваться при помощи взрывов во время предстартовой заморозки.</value>
-  </data>
-  <data name="tf_scoreboard_ping_as_text" xml:space="preserve">
-    <value>Включает / отключает отображение пинга в текстовом виде.</value>
-  </data>
-  <data name="weapon_auto_cleanup_time" xml:space="preserve">
-    <value>Время в секундах, по истечении которого брошенное оружие будет удалено с карты (если рядом нет игроков).</value>
-  </data>
-  <data name="weapon_max_before_cleanup" xml:space="preserve">
-    <value>Задаёт максимальное количество брошенных предметов на карте. При исчерпании лимита, более старые начнут удаляться с карты.</value>
-  </data>
-  <data name="tf_taunt_first_person" xml:space="preserve">
-    <value>Включает / отключает вид насмешек от первого лица (рекомендуется для использования с устройствами виртуальной реальности).</value>
-  </data>
-  <data name="ds_dir" xml:space="preserve">
-    <value>Название каталога внутри каталога игры, в который будут сохраняться все записанные автоматизированной системой демки.</value>
-  </data>
-  <data name="ds_enable" xml:space="preserve">
-    <value>Включает / отключает автоматизированную систему записи демок и служебной информации. 0 - отключена; 1 - записывать только соревновательные матчи; 2 - записывать все матчи.</value>
-  </data>
-  <data name="ds_kill_delay" xml:space="preserve">
-    <value>Максимальное время между убийствами для расчёта серий убийств.</value>
-  </data>
-  <data name="ds_mark" xml:space="preserve">
-    <value>Создать закладку в текущей демо-записи. Параметр [comment] является опциональным и может содержать пользовательский комментарий.</value>
-  </data>
-  <data name="ds_min_streak" xml:space="preserve">
-    <value>Включает / отключает запись серии убийств, а также игровых событий в текстовый файл.</value>
-  </data>
-  <data name="ds_notify" xml:space="preserve">
-    <value>Задаёт режим вывода информации о событиях в работе автоматизированной системы записи демок: 0 - консоль; 1 - консоль и чат; 2 - консоль и HUD.</value>
-  </data>
-  <data name="ds_prefix" xml:space="preserve">
-    <value>Задаёт префикс имени файлов демо-записей. Максимальная длина - 24 символа.</value>
-  </data>
-  <data name="ds_record" xml:space="preserve">
-    <value>Начать запись демки вручную посредством системы автоматизированной записи демок.</value>
-  </data>
-  <data name="ds_status" xml:space="preserve">
-    <value>Вывести текущий статус автомазированной системы записи демок.</value>
-  </data>
-  <data name="ds_stop" xml:space="preserve">
-    <value>Остановить запись демки и освободить ресурсы.</value>
-  </data>
-  <data name="tf_grapplinghook_enable" xml:space="preserve">
-    <value>Разрешает / запрещает использование крюка на картах режима Mannpower.</value>
-  </data>
-  <data name="tf_matchmaking_ping_a" xml:space="preserve">
-    <value>Позволяет указать допустимую задержку при выборе сервера посредством системы матчмейкинга TF2. Значение 1.</value>
-  </data>
-  <data name="tf_matchmaking_ping_a_score" xml:space="preserve">
-    <value>Позволяет указать допустимую задержку при выборе сервера посредством системы матчмейкинга TF2. Значение 1.</value>
-  </data>
-  <data name="tf_matchmaking_ping_b" xml:space="preserve">
-    <value>Позволяет указать допустимую задержку при выборе сервера посредством системы матчмейкинга TF2. Значение 2.</value>
-  </data>
-  <data name="tf_matchmaking_ping_b_score" xml:space="preserve">
-    <value>Позволяет указать допустимую задержку при выборе сервера посредством системы матчмейкинга TF2. Значение 2.</value>
-  </data>
-  <data name="tf_matchmaking_ping_c" xml:space="preserve">
-    <value>Позволяет указать допустимую задержку при выборе сервера посредством системы матчмейкинга TF2. Значение 3.</value>
-  </data>
-  <data name="tf_matchmaking_ping_c_score" xml:space="preserve">
-    <value>Позволяет указать допустимую задержку при выборе сервера посредством системы матчмейкинга TF2. Значение 3.</value>
-  </data>
-  <data name="tf_passtime_scores_per_round" xml:space="preserve">
-    <value>Задаёт необходимое количество забитых голов до окончания раунда в режиме PASS Time.</value>
-  </data>
-  <data name="tf_powerup_mode" xml:space="preserve">
-    <value>Включает / отключает усилители на картах режима Mannpower.</value>
-  </data>
-  <data name="trigger_passtime_ball" xml:space="preserve">
-    <value>Временно скрывает не реализованные функции в режиме PASS Time.</value>
-  </data>
-  <data name="vgui_cache_res_files" xml:space="preserve">
-    <value>Включает / отключает кэширование VGUI ресурсных файлов игрой.</value>
-  </data>
-  <data name="sv_shutdown_cancel" xml:space="preserve">
-    <value>Позволяет отменить запланированное завершение работы выделенного сервера.</value>
-  </data>
-  <data name="tf_allow_server_hibernation" xml:space="preserve">
-    <value>Разрешает / запрещает спящий режим выделенного сервера.</value>
-  </data>
-  <data name="cl_avatar_convert_rgb" xml:space="preserve">
-    <value>Включает / отключает автоматическую конверсию картинок аватаров игроков в RGB.</value>
-  </data>
-  <data name="cl_crosshair_sniper_show_normal_inaccuracy" xml:space="preserve">
-    <value>Управляет размытием движения во время прицеливания из снайперской винтовки.</value>
-  </data>
-  <data name="cl_crosshair_sniper_width" xml:space="preserve">
-    <value>Позволяет изменить размер перекрестия прицела снайперских винтовок для игроков с дисплеями с большим DPI, либо несколькими мониторами.</value>
-  </data>
-  <data name="cl_drawhud_force_radar" xml:space="preserve">
-    <value>Включает / отключает отображение радара и мини-карты в ограниченных режимах отображения HUD.</value>
-  </data>
-  <data name="cl_draw_only_deathnotices" xml:space="preserve">
-    <value>Включает / отключает особый режим HUD, при котором отображается только журнал убийств.</value>
-  </data>
-  <data name="cl_spec_use_tournament_content_standards" xml:space="preserve">
-    <value>Включает / отключает на клиенте режим отображения настоящих имён игроков, а не никнеймов в режиме наблюдателя.</value>
-  </data>
-  <data name="cl_weapon_debug_print_accuracy" xml:space="preserve">
-    <value>Выводит отладочную информацию, связанную с точностью стрельбы игрока, в консоль.</value>
-  </data>
-  <data name="mp_spec_swapplayersides" xml:space="preserve">
-    <value>Позволяет принудительно сменить стороны в меню наблюдателя (спецназ - справа, террористы - слева).</value>
-  </data>
-  <data name="spec_lock_to_accountid" xml:space="preserve">
-    <value>Включает режим, при котором камера в режиме наблюдателя будет автоматически переключаться на игрока с указанным в качестве параметром SteamID64.</value>
-  </data>
-  <data name="spec_player_by_accountid" xml:space="preserve">
-    <value>Позволяет наблюдателю быстро переключиться на игрока с указанным в качестве параметра SteamID64.</value>
-  </data>
-  <data name="steam_controller_haptics" xml:space="preserve">
-    <value>Включает / отключает тактильную обратную связь при использовании Steam Controller.</value>
-  </data>
-  <data name="sv_autobunnyhopping" xml:space="preserve">
-    <value>Включает / отключает режим автоматического повторного прыжка при удерживании +jump (по умолчанию - пробела).</value>
-  </data>
-  <data name="sv_clamp_unsafe_velocities" xml:space="preserve">
-    <value>Позволяет разрешить / запретить скольжение игроков по ряду поверхностей.</value>
-  </data>
-  <data name="sv_enablebunnyhopping" xml:space="preserve">
-    <value>Разрешает / запрещает использовать распрыжку (bunny hop) на сервере.</value>
-  </data>
-  <data name="sv_jump_impulse" xml:space="preserve">
-    <value>Контролирует начальную скорость прыжка.</value>
-  </data>
-  <data name="sv_spec_post_death_additional_time" xml:space="preserve">
-    <value>Задаёт задержку, по истечении которой наблюдатель может переключиться на другого игрока после смерти текущего.</value>
-  </data>
-  <data name="sv_spec_use_tournament_content_standards" xml:space="preserve">
-    <value>Включает / отключает на сервере режим отображения настоящих имён игроков, а не никнеймов в режиме наблюдателя.</value>
-  </data>
-  <data name="sv_talk_enemy_dead" xml:space="preserve">
-    <value>Включает / отключает общий голосовой чат для всех мёртвых игроков.</value>
-  </data>
-  <data name="sv_talk_enemy_living" xml:space="preserve">
-    <value>Включает / отключает общий голосовой чат для всех живых игроков.</value>
-  </data>
-  <data name="sv_timebetweenducks" xml:space="preserve">
-    <value>Задаёт кулдаун в секундах до следующего приседания. Позволяет решить проблему со спамом приседаниями во время нахождения в воздухе.</value>
-  </data>
-  <data name="sv_vote_count_spectator_votes" xml:space="preserve">
-    <value>Позволяет / запрещает учитывать голоса наблюдателей при голосованиях.</value>
-  </data>
-  <data name="tf_gravetalk" xml:space="preserve">
-    <value>Включить / отключить возможность общаться мёртвым игрокам с живыми.</value>
-  </data>
-  <data name="weapon_air_spread_scale" xml:space="preserve">
-    <value>Задаёт коэффициент разброса пуль при стрельбе во время нахождения в воздухе.</value>
-  </data>
-  <data name="cl_drawhud_force_deathnotices" xml:space="preserve">
-    <value>Управляет режимом отображения отчёта об убийствах (deathnotices) HUD: -1 - не показывать никогда; 0 - режим по умолчанию; 2 - показывать всегда даже если другие элементы HUD отключены.</value>
-  </data>
-  <data name="cl_show_team_equipment" xml:space="preserve">
-    <value>Функция. Используется в биндах. При активации отображает экипировку союзников на экране.</value>
-  </data>
-  <data name="cl_teamid_overhead_always" xml:space="preserve">
-    <value>Разрешает / запрещает всегда отображать Team ID на экране.</value>
-  </data>
-  <data name="sv_show_team_equipment_prohibit" xml:space="preserve">
-    <value>Разрешает / запрещает использование на клиентах cl_show_team_equipment.</value>
-  </data>
-  <data name="sv_teamid_overhead_always_prohibit" xml:space="preserve">
-    <value>Позволяет разрешить / запретить использование на клиентах cl_teamid_overhead_always.</value>
-  </data>
-  <data name="logaddress_add_http" xml:space="preserve">
-    <value>Включает выгрузку серверных журналов на внешний сервис по протоколу HTTP POST.</value>
-  </data>
-  <data name="mp_items_prohibited" xml:space="preserve">
-    <value>Разделённый запятыми список предметов, покупка которых запрещена на сервере CS:GO.</value>
-  </data>
-  <data name="mp_logdetail" xml:space="preserve">
-    <value>Задаёт уровень детализации журналов работы сервера CS:GO.</value>
-  </data>
-  <data name="sv_allow_legacy_cmd_execution_from_client" xml:space="preserve">
-    <value>Разрешает / запрещает исполнение на сервере команд, полученных от подключённых клиентов.</value>
-  </data>
-  <data name="cl_crosshair_t" xml:space="preserve">
-    <value>Позволяет использовать T-shaped перекрестие прицела.</value>
-  </data>
-  <data name="cl_deathnotices_show_numbers" xml:space="preserve">
-    <value>Разрешает / запрещает отображать в ленте убийство количество наблюдателей.</value>
-  </data>
-  <data name="say_party" xml:space="preserve">
-    <value>Открыто окно чата группы. В качестве параметра может быть указан текст, который сразу будет отправлен без открытия окна.</value>
-  </data>
-  <data name="snd_mix_async" xml:space="preserve">
-    <value>Включает / отключает асинхронное микширование звуков клиента CS:GO.</value>
-  </data>
-  <data name="snd_occlusion" xml:space="preserve">
-    <value>Включает / отключает использование новой звуковой модели для окружающих звуков в CS:GO.</value>
-  </data>
-  <data name="sv_disable_motd" xml:space="preserve">
-    <value>Включает / отключает вывод окна MOTD при подключении к данному игровому серверу.</value>
-  </data>
-  <data name="sv_record_item_time_data" xml:space="preserve">
-    <value>Включает / отключает запись в журнал сервера информации об используемых игроками предметах.</value>
-  </data>
-  <data name="tf_listrounds" xml:space="preserve">
-    <value>Отладочная команда, выводящая список всех доступных на текущей карте стадий.</value>
-  </data>
-  <data name="tf_playgrounds" xml:space="preserve">
-    <value>Отладочная команда, предназначенная для перехода на другую стадию на картах с несколькими стадиями.</value>
-  </data>
-  <data name="tv_allow_camera_man_override" xml:space="preserve">
-    <value>Разрешает / запрещает игрокам, подключённым в SourceTV серверу, самостоятельно управлять камерой.</value>
-  </data>
-  <data name="tv_allow_camera_man_steamid2" xml:space="preserve">
-    <value>Дополнительный аккаунт для стримера, который подключается к особому TV1 серверу SourceTV с низкой задержкой.</value>
-  </data>
-  <data name="tv_challenge_steam_iprange" xml:space="preserve">
-    <value>Список IP-адресов, разделённых запятыми, с которых может подключаться к SourceTV серверу стример. Используется как дополнительный слой защиты.</value>
-  </data>
-  <data name="tv_delay1" xml:space="preserve">
-    <value>Задаёт задержку для особого TV1 сервера SourceTV.</value>
-  </data>
-  <data name="tf_bot_reevaluate_class_in_spawnroom" xml:space="preserve">
-    <value>Разрешить / запретить ботам менять свои классы во время нахождения внутри комнат возрождения.</value>
   </data>
 </root>
