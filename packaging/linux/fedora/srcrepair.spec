@@ -1,6 +1,6 @@
 %global debug_package %{nil}
 
-%global nuget_version 5.0.2
+%global nuget_version 5.4.0
 %global dotnetzip_version 1.13.5
 %global nlog_version 4.6.8
 
