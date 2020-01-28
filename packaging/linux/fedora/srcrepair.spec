@@ -5,7 +5,7 @@
 %global nlog_version 4.6.6
 
 Name: srcrepair
-Version: 35.0.0
+Version: 36.0.2
 Release: 1%{?dist}
 Summary: A free open source tool for tuning and cleaning up Source engine games
 
@@ -87,5 +87,8 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/%{name}.appdat
 %{_metainfodir}/%{name}.appdata.xml
 
 %changelog
+* Tue Jan 28 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 36.0.2-1
+- Updated to version 36.0.2.
+
 * Wed Jun 19 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 35.0.0-1
 - Initial SPEC release.
