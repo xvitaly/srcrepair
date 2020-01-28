@@ -117,17 +117,239 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AC_NoItemsSelected" xml:space="preserve">
+    <value>Вы не выбрали ни один элемент! Очистка невозможна.</value>
+  </data>
+  <data name="AppAlreadyLaunched" xml:space="preserve">
+    <value>Программа {0} уже запущена. Запуск второй копии невозможен!</value>
+  </data>
+  <data name="AppAlrLaunched" xml:space="preserve">
+    <value>Программа уже выполняется! Запуск нескольких копий не поддерживается.</value>
+  </data>
+  <data name="AppCVListURL" xml:space="preserve">
+    <value>http://www.easycoding.org/projects/srcrepair/cvarlist</value>
+  </data>
+  <data name="AppDefaultSteamLangID" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="AppExceptionTemplate" xml:space="preserve">
+    <value>Исключение "{0}" вызвано: "{1}".</value>
+  </data>
+  <data name="AppFailedToGetData" xml:space="preserve">
+    <value>Произошла ошибка при получении данных из базы поддерживаемых игр. Попробуйте ещё раз, либо выберите другую игру!</value>
+  </data>
+  <data name="AppGenericError" xml:space="preserve">
+    <value>Внимание! Произошла критическая ошибка. Работа приложения остановлена.</value>
+  </data>
+  <data name="AppHelpCHMNotFound" xml:space="preserve">
+    <value>Файл оффлайновой справочной системы не установлен, либо не поддерживается для данной языковой версии!</value>
+  </data>
+  <data name="AppIncorrectSrcVersion" xml:space="preserve">
+    <value>Обнаружена неподдерживаемая версия движка Source. Пожалуйста, сообщите об этой ошибке разработчикам!</value>
+  </data>
+  <data name="AppLangPrefix" xml:space="preserve">
+    <value>ru</value>
+  </data>
+  <data name="AppLibVersionMissmatch" xml:space="preserve">
+    <value>Обнаружено несоответствие между версиями приложения и основной библиотеки функций! Сообщите об этом разработчикам, либо переустановите программу.</value>
+  </data>
+  <data name="AppNoDebugFile" xml:space="preserve">
+    <value>Файл отладочного журнала не найден!</value>
+  </data>
+  <data name="AppNoGamesDetected" xml:space="preserve">
+    <value>Внимание! Не обнаружено ни одной управляемой игры. Пожалуйста, запустите нужные вам игры из Steam хотя бы один раз. После этого они появятся в списке и вы сможете ими управлять средствами данной программы.</value>
+  </data>
+  <data name="AppNoGamesDLog" xml:space="preserve">
+    <value>Не найдено ни одной поддерживаемой игры. Steam расположен в каталоге: {0}.</value>
+  </data>
+  <data name="AppNoGamesSelected" xml:space="preserve">
+    <value>Не выбрано ни одной игры! Пожалуйста выберите в главном окне поддерживаемую игру, а затем повторите вызов функции.</value>
+  </data>
+  <data name="AppNoSteamIDSetected" xml:space="preserve">
+    <value>Не обнаружено ни одного пользовательского профиля Steam! Запустите его хотя бы один раз, после чего повторите попытку.</value>
+  </data>
+  <data name="AppQuestionTemplate" xml:space="preserve">
+    <value>{0}?</value>
+  </data>
+  <data name="AppRestrSymbLog" xml:space="preserve">
+    <value>В пути обнаружены запрещённые символы: {0}.</value>
+  </data>
+  <data name="AppSafeClnDisabled" xml:space="preserve">
+    <value>Внимание! Вы отключили модуль безопасной очистки, поэтому резервные копии создаваться не будут до его повторной активации.</value>
+  </data>
+  <data name="AppSafeClnStTextOff" xml:space="preserve">
+    <value>Копии: выкл</value>
+  </data>
+  <data name="AppSafeClnStTextOn" xml:space="preserve">
+    <value>Копии: вкл</value>
+  </data>
+  <data name="AppSizeBytes" xml:space="preserve">
+    <value>Б</value>
+  </data>
+  <data name="AppSizeGigabytes" xml:space="preserve">
+    <value>ГБ</value>
+  </data>
+  <data name="AppSizeKilobytes" xml:space="preserve">
+    <value>КБ</value>
+  </data>
+  <data name="AppSizeMegabytes" xml:space="preserve">
+    <value>МБ</value>
+  </data>
+  <data name="AppStartSteamFailed" xml:space="preserve">
+    <value>Не удалось запустить Steam. Проверьте правильность его установки и повторите попытку позднее!</value>
+  </data>
+  <data name="AppSteamPathEnterInvalid" xml:space="preserve">
+    <value>Пользователь ввёл недействительный путь к каталогу установки Steam.</value>
+  </data>
+  <data name="AppSteamPathEnterWinClosed" xml:space="preserve">
+    <value>Пользователь закрыл диалог указания пути к каталогу установки Steam.</value>
+  </data>
+  <data name="AppUpdateAvailable" xml:space="preserve">
+    <value>Внимание! Доступно обновление программы {0}. Рекомендуем вам обновиться как можно скорее через меню Справка - Проверить наличие обновлений, либо вручную.</value>
+  </data>
+  <data name="AppVideoDbNotFound" xml:space="preserve">
+    <value>Не удалось загрузить графические настройки игры "{0}" из файла "{1}".</value>
+  </data>
+  <data name="AppXMLParseError" xml:space="preserve">
+    <value>Произошла ошибка при разборе XML файла со списком игр. Возможно он отсутствует или повреждён. Пожалуйста, переустановите программу.</value>
+  </data>
+  <data name="AR_UnpackException" xml:space="preserve">
+    <value>Во время распаковки произошла ошибка. Возможно, архив был распакован не до конца. Более подробная информация в журнале ошибок программы.</value>
+  </data>
+  <data name="BU_BinaryFile" xml:space="preserve">
+    <value>Выбранный файл является бинарным, поэтому его невозможно открыть в текстовом редакторе!</value>
+  </data>
+  <data name="BU_BName_Bud" xml:space="preserve">
+    <value>Архив от</value>
+  </data>
+  <data name="BU_BName_Config" xml:space="preserve">
+    <value>Конфиг игры от</value>
+  </data>
+  <data name="BU_BName_GameAuto" xml:space="preserve">
+    <value>Автокопия настроек игры от</value>
+  </data>
+  <data name="BU_BName_GRGame" xml:space="preserve">
+    <value>Граф. настройки от</value>
+  </data>
+  <data name="BU_BName_SRCAll" xml:space="preserve">
+    <value>Граф. настройки всех игр от</value>
+  </data>
+  <data name="BU_BName_SteamAll" xml:space="preserve">
+    <value>Настройки Steam от</value>
+  </data>
+  <data name="BU_BName_VChat" xml:space="preserve">
+    <value>База откл. игроков</value>
+  </data>
+  <data name="BU_BType_Cfg" xml:space="preserve">
+    <value>Конфиг</value>
+  </data>
+  <data name="BU_BType_Cont" xml:space="preserve">
+    <value>Архив</value>
+  </data>
+  <data name="BU_BType_DB" xml:space="preserve">
+    <value>База данных</value>
+  </data>
+  <data name="BU_BType_Reg" xml:space="preserve">
+    <value>Реестр</value>
+  </data>
+  <data name="BU_BType_Unkn" xml:space="preserve">
+    <value>Неизвестный</value>
+  </data>
+  <data name="BU_BType_Video" xml:space="preserve">
+    <value>Видео</value>
+  </data>
+  <data name="BU_DelFailed" xml:space="preserve">
+    <value>Произошла ошибка при попытке удаления резервных копий. Удаление не было произведено!</value>
+  </data>
+  <data name="BU_DelMsg" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить выбранные резервные копии?</value>
+  </data>
+  <data name="BU_DelSuccessful" xml:space="preserve">
+    <value>Выбранные резервные копии были успешно удалены!</value>
+  </data>
+  <data name="BU_NoFiles" xml:space="preserve">
+    <value>Действие невозможно: список резервных копий пуст!</value>
+  </data>
+  <data name="BU_NoSelected" xml:space="preserve">
+    <value>Действие невозможно: не выбрано ни одного файла!</value>
+  </data>
+  <data name="BU_QMsg" xml:space="preserve">
+    <value>Вы уверены, что хотите восстановить выбранные резервные копии?</value>
+  </data>
+  <data name="BU_RegCreate" xml:space="preserve">
+    <value>Создать резервную копию сейчас?</value>
+  </data>
+  <data name="BU_RegDone" xml:space="preserve">
+    <value>Файл резервной копии реестра был успешно создан!</value>
+  </data>
+  <data name="BU_RegErr" xml:space="preserve">
+    <value>Произошла ошибка при создании резервной копии реестра. Файл не был создан!</value>
+  </data>
+  <data name="BU_RestFailed" xml:space="preserve">
+    <value>Произошла ошибка при попытке восстановить резервную копию. Файл не был восстановлен!</value>
+  </data>
+  <data name="BU_RestSuccessful" xml:space="preserve">
+    <value>Резервная копия была успешно восстановлена!</value>
+  </data>
+  <data name="BU_UnknownType" xml:space="preserve">
+    <value>Отсутствуют правила для восстановления такого типа файлов!</value>
+  </data>
+  <data name="CE_BackUpCreated" xml:space="preserve">
+    <value>Резервная копия файла {0} была успешено создана!</value>
+  </data>
   <data name="CE_CfgSVVEx" xml:space="preserve">
     <value>Внимание! Во время сохранения файла произошла ошибка. Файл не был сохранён!</value>
   </data>
+  <data name="CE_ClNoDescr" xml:space="preserve">
+    <value>К сожалению, для этой переменной у нас нет описания. Вы можете помочь проекту, прислав его нам.</value>
+  </data>
+  <data name="CE_ClSelErr" xml:space="preserve">
+    <value>Переменная в выделенной строке не найдена!</value>
+  </data>
   <data name="CE_ExceptionDetected" xml:space="preserve">
     <value>Внимание! Во время открытия файла произошла ошибка парсера. Возможно, конфиг открыт не полностью, либо с ошибками.</value>
+  </data>
+  <data name="CE_NoFileOpened" xml:space="preserve">
+    <value>Для использования этой функции откройте файл.</value>
   </data>
   <data name="CE_OpenFailed" xml:space="preserve">
     <value>Невозможно считать содержимое конфига, т.к. файл не найден!</value>
   </data>
   <data name="CE_RestConfigOpenWarn" xml:space="preserve">
     <value>Внимание! Настоятельно не рекомендуется редактировать этот файл, т.к. это может привести к непредсказуемым последствиям. Редактируйте его на свой страх и риск.</value>
+  </data>
+  <data name="CS_FailedToOpenCfg" xml:space="preserve">
+    <value>Произошла ошибка при вызове модуля выбора конфига для редактирования.</value>
+  </data>
+  <data name="CS_NEParamsFormException" xml:space="preserve">
+    <value>Невозможно создать форму, т.к. передано недостаточное количество конфигов.</value>
+  </data>
+  <data name="DB_WrkInProgress" xml:space="preserve">
+    <value>Пожалуйста, дождитесь завершения проверки обновлений!</value>
+  </data>
+  <data name="FP_BtnInstallText" xml:space="preserve">
+    <value>Установить выбранный конфиг</value>
+  </data>
+  <data name="FP_BtnReplaceText" xml:space="preserve">
+    <value>Заменить на выбранный конфиг</value>
+  </data>
+  <data name="FP_BtnUninstallAllText" xml:space="preserve">
+    <value>Удалить имеющийся конфиг</value>
+  </data>
+  <data name="FP_BtnUninstallSelectedText" xml:space="preserve">
+    <value>Удалить выбранный конфиг</value>
+  </data>
+  <data name="FP_BtnUpdateText" xml:space="preserve">
+    <value>Обновить выбранный конфиг</value>
+  </data>
+  <data name="FP_DownloadError" xml:space="preserve">
+    <value>Не удалось загрузить архив с файлами FPS-конфига. Попробуйте повторить попытку позднее.</value>
+  </data>
+  <data name="FP_EditorLoadFailure" xml:space="preserve">
+    <value>Произошла ошибка при загрузке FPS-конфига в редактор!</value>
+  </data>
+  <data name="FP_HashError" xml:space="preserve">
+    <value>Произошла ошибка при проверке контрольной суммы загруженного архива с FPS-конфигом. Возможно, он был повреждён. Попробуйте ещё раз позднее!</value>
   </data>
   <data name="FP_InstallFailed" xml:space="preserve">
     <value>Произошла критическая ошибка: невозможно установить выбранный конфиг!</value>
@@ -150,8 +372,20 @@
   <data name="FP_RemoveSuccessful" xml:space="preserve">
     <value>Установленный FPS-конфиг был успешно удалён!</value>
   </data>
+  <data name="FP_SelectFromList" xml:space="preserve">
+    <value>Выберите конфиг из списка выше!</value>
+  </data>
+  <data name="FP_UninstallQuestion" xml:space="preserve">
+    <value>Удалить выбранный FPS-конфиг?</value>
+  </data>
   <data name="FrmCloseQuery" xml:space="preserve">
     <value>Закрыть программу {0}?</value>
+  </data>
+  <data name="GameNonASCIIDetected" xml:space="preserve">
+    <value>Внимание! В пути к выбранной игре обнаружены недопустимые символы. Steam и игра будут работать с ошибками. Переустановите игру в папку, путь до которой будет содержать только латинские буквы.</value>
+  </data>
+  <data name="GameNonASCIINotDetected" xml:space="preserve">
+    <value>Игра установлена верно: путь к каталогу игры не содержит запрещённых символов.</value>
   </data>
   <data name="GeneralErrorDetected" xml:space="preserve">
     <value>Обнаружено исключение, которое мы не смогли обработать. Пожалуйста, сообщите разработчикам на email: srcrepair@easycoding.org.</value>
@@ -165,8 +399,23 @@
   <data name="GT_MinPerfMsg" xml:space="preserve">
     <value>Вы действительно хотите установить все настройки видео на минимальные? Это увеличит FPS, но ухудшит графику в игре.</value>
   </data>
+  <data name="GT_NCFFailure" xml:space="preserve">
+    <value>Произошла ошибка во время сохранения графических настроек игры в файл!</value>
+  </data>
+  <data name="GT_NCFLoadFailure" xml:space="preserve">
+    <value>Произошла ошибка при загрузке графических настроек игры. Часть параметров загрузились некорректно. Пожалуйста сообщите об этом разработчикам.</value>
+  </data>
+  <data name="GT_NCFNReady" xml:space="preserve">
+    <value>Для сохранения графических настроек вы должны заполнить все параметры!</value>
+  </data>
   <data name="GT_PerfSet" xml:space="preserve">
     <value>Готово. Не забудьте подкорректировать и сохранить изменения в настройках!</value>
+  </data>
+  <data name="GT_RegOpenErr" xml:space="preserve">
+    <value>Произошла ошибка при открытии ключа реестра. Графические настройки не были загружены!</value>
+  </data>
+  <data name="GT_SaveFailure" xml:space="preserve">
+    <value>Произошла ошибка при попытке сохранения графических настроек!</value>
   </data>
   <data name="GT_SaveMsg" xml:space="preserve">
     <value>Сохранить сделанные вами изменения?</value>
@@ -174,11 +423,125 @@
   <data name="GT_SaveSuccess" xml:space="preserve">
     <value>Изменения были успешно сохранены!</value>
   </data>
+  <data name="HD_BtnInstallText" xml:space="preserve">
+    <value>Установить выбранный HUD</value>
+  </data>
+  <data name="HD_BtnUpdateText" xml:space="preserve">
+    <value>Обновить выбранный HUD</value>
+  </data>
+  <data name="HD_DbOutdated" xml:space="preserve">
+    <value>Проверка обновлений базы HUD не проводилась уже больше недели. Выполните её прямо сейчас из меню Справка.</value>
+  </data>
+  <data name="HD_DownloadError" xml:space="preserve">
+    <value>Не удалось загрузить архив с файлами HUD. Попробуйте повторить попытку позднее.</value>
+  </data>
+  <data name="HD_DynBarText" xml:space="preserve">
+    <value>База HUD {0}. Обновлена: {1}.</value>
+  </data>
+  <data name="HD_HashError" xml:space="preserve">
+    <value>Произошла ошибка при проверке контрольной суммы загруженного архива с HUD. Возможно, он был повреждён. Попробуйте ещё раз позднее!</value>
+  </data>
+  <data name="HD_InstallError" xml:space="preserve">
+    <value>При установке HUD произошла ошибка. Повторите попытку позднее.</value>
+  </data>
+  <data name="HD_InstallSuccessfull" xml:space="preserve">
+    <value>Установка HUD была успешно выполнена!</value>
+  </data>
+  <data name="HD_LastUpdateInfo" xml:space="preserve">
+    <value>Последнее обновление: {0}.</value>
+  </data>
+  <data name="HD_NotTested" xml:space="preserve">
+    <value>Внимание! Выбранный вами HUD не полностью совместим с последней версией игры. Рекомендуем выполнить обновление базы HUD из меню Справка.</value>
+  </data>
+  <data name="HD_Outdated" xml:space="preserve">
+    <value>Установка устаревших HUD не допускается. Обновите базу поддерживаемых HUD из меню "Справка" - "Проверить наличие обновлений" или выберите другой HUD.</value>
+  </data>
+  <data name="HD_StatusOutdated" xml:space="preserve">
+    <value>устарела</value>
+  </data>
+  <data name="HD_StatusUpdated" xml:space="preserve">
+    <value>актуальна</value>
+  </data>
   <data name="InputBoxCancelBtnName" xml:space="preserve">
     <value>Отмена</value>
   </data>
+  <data name="KB_ExException" xml:space="preserve">
+    <value>Произошла ошибка при выполнении. Убедитесь, что у вас есть права администратора!</value>
+  </data>
+  <data name="KB_ExQuestion" xml:space="preserve">
+    <value>Вы уверены, что хотите {0}?</value>
+  </data>
+  <data name="KB_ExRestore" xml:space="preserve">
+    <value>Восстановить настройки по умолчанию?</value>
+  </data>
+  <data name="KB_ExSuccess" xml:space="preserve">
+    <value>Требуемое действие успешно выполнено! Выполненные настройки будут применены после перезагрузки системы.</value>
+  </data>
+  <data name="LV_ClearEx" xml:space="preserve">
+    <value>Произошла ошибка при попытке очистки журнала ошибок программы! Повторите попытку позже.</value>
+  </data>
+  <data name="LV_LoadFailed" xml:space="preserve">
+    <value>Произошла ошибка при загрузке журнала ошибок программы.</value>
+  </data>
+  <data name="MM_ConvRest" xml:space="preserve">
+    <value>Преобразование выбранной строки в новый формат записи SteamID не требуется.</value>
+  </data>
+  <data name="MM_ExceptionDetected" xml:space="preserve">
+    <value>При загрузке содержимого файла произошла ошибка. Попробуйте ещё раз позже.</value>
+  </data>
+  <data name="MM_SavedOK" xml:space="preserve">
+    <value>Файл успешно сохранён!</value>
+  </data>
+  <data name="MM_SaveException" xml:space="preserve">
+    <value>Произошла ошибка при сохранении файла. Возможно, он был повреждён.</value>
+  </data>
+  <data name="Opts_Error" xml:space="preserve">
+    <value>Внимание! Произошла ошибка при попытке записи настроек!</value>
+  </data>
+  <data name="Opts_Saved" xml:space="preserve">
+    <value>Настройки были успешно сохранены. Внимание! Некоторые из них будут задействованы только после перезапуска программы.</value>
+  </data>
+  <data name="PS_AppRunning" xml:space="preserve">
+    <value>Обнаружено запущенное приложение {0}! Чтобы выполнить эту очистку завершите его работу.</value>
+  </data>
+  <data name="PS_ArchFailed" xml:space="preserve">
+    <value>Произошла ошибка при упаковке файлов в архив. Архив не был создан!</value>
+  </data>
+  <data name="PS_BwBusy" xml:space="preserve">
+    <value>Цели для очистки ещё не были построены! Пожалуйста повторите попытку через несколько секунд.</value>
+  </data>
+  <data name="PS_CacheChkReq" xml:space="preserve">
+    <value>Очистка успешно завершена, но сейчас необходимо запустить проверку целостности кэша игры!</value>
+  </data>
+  <data name="PS_CleanException" xml:space="preserve">
+    <value>Произошла ошибка во время процедуры очистки. Возможно, у вас отсутствуют необходимые права для этого действия.</value>
+  </data>
+  <data name="PS_CleanInProgress" xml:space="preserve">
+    <value>Выполняется...</value>
+  </data>
+  <data name="PS_CleanupErr" xml:space="preserve">
+    <value>Во время удаления файлов произошла ошибка. Некоторые файлы не были удалены!</value>
+  </data>
+  <data name="PS_CleanupExecuteQ" xml:space="preserve">
+    <value>Удалить выбранные файлы ({0})?</value>
+  </data>
+  <data name="PS_CleanupFull" xml:space="preserve">
+    <value>Удалить {0}?</value>
+  </data>
+  <data name="PS_CleanupSuccess" xml:space="preserve">
+    <value>Процесс очистки успешно завершён!</value>
+  </data>
+  <data name="PS_ClnWndInitError" xml:space="preserve">
+    <value>Произошла ошибка при открытии формы очистки. Дополнительная об инциденте информация добавлена в отладочный журнал.</value>
+  </data>
   <data name="PS_ExecuteMSG" xml:space="preserve">
     <value>Выполнить очистку?</value>
+  </data>
+  <data name="PS_FrFInfo" xml:space="preserve">
+    <value>В результате очистки может быть освобождено до {0}.</value>
+  </data>
+  <data name="PS_LoadErr" xml:space="preserve">
+    <value>Файлы для удаления не найдены! Очистка не требуется.</value>
   </data>
   <data name="PS_NoLangSelected" xml:space="preserve">
     <value>Вы неправильно выбрали язык Steam из выпадающего списка, поэтому будет использоваться английский!</value>
@@ -186,8 +549,53 @@
   <data name="PS_NothingSelected" xml:space="preserve">
     <value>Вы ничего не выбрали! Выберите хотя бы одну из опций очистки и повторите запуск!</value>
   </data>
+  <data name="PS_ProcessDetected" xml:space="preserve">
+    <value>Процесс Steam, обнаруженный в памяти был успешно завершён!</value>
+  </data>
+  <data name="PS_ProcessPrepare" xml:space="preserve">
+    <value>Подготовка к запуску очистки...</value>
+  </data>
+  <data name="PS_ProgressArchive" xml:space="preserve">
+    <value>Создание резервной копии...</value>
+  </data>
+  <data name="PS_ProgressCleanup" xml:space="preserve">
+    <value>Идёт очистка выбранных файлов...</value>
+  </data>
+  <data name="PS_ProgressFinished" xml:space="preserve">
+    <value>Очистка завершена.</value>
+  </data>
+  <data name="PS_SelectItemsMsg" xml:space="preserve">
+    <value>Файлы для очистки не выбраны! Пожалуйста выберите файлы для очистки из списка и повторите попытку.</value>
+  </data>
   <data name="PS_SeqCompleted" xml:space="preserve">
     <value>Очистка успешно выполнена. Steam будет запущен в режиме восстановления прямо сейчас!</value>
+  </data>
+  <data name="QI_Excpt" xml:space="preserve">
+    <value>Произошла ошибка во время установки выбранного файла!</value>
+  </data>
+  <data name="QI_GenVMTMsg" xml:space="preserve">
+    <value>В каталоге со спреем не найден VMT-файл. Сгенерировать его автоматически?</value>
+  </data>
+  <data name="QI_InstSuccessfull" xml:space="preserve">
+    <value>Установка выбранного файла успешно завершена!</value>
+  </data>
+  <data name="QI_InstUnav" xml:space="preserve">
+    <value>Установка невозможна, т.к. вы не выбрали файл, который нужно установить. Выберите файл и повторите попытку!</value>
+  </data>
+  <data name="RPB_CloseCpt" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="RPB_ComprGen" xml:space="preserve">
+    <value>Сжатый отчёт с именем {0} был успешно создан! Сейчас будет открыт каталог с отчётом для того, чтобы вы смогли загрузить его на форум.</value>
+  </data>
+  <data name="RPB_GenException" xml:space="preserve">
+    <value>Произошла ошибка. Невозможно выполнить утилиту Microsoft System Information. Возможно, она не установлена в данной ОС. Создание отчёта невозможно.</value>
+  </data>
+  <data name="RW_RmException" xml:space="preserve">
+    <value>Произошла ошибка во время удаления файлов. Не все файлы были удалены.</value>
+  </data>
+  <data name="SD_NEParamsFormException" xml:space="preserve">
+    <value>Невозможно создать форму, т.к. передано недостаточное количество SteamID.</value>
   </data>
   <data name="StatusNormal" xml:space="preserve">
     <value>Все системы работают в штатном режиме.</value>
@@ -197,6 +605,9 @@
   </data>
   <data name="SteamNonASCIIDetected" xml:space="preserve">
     <value>Внимание! В пути к Steam обнаружены недопустимые символы. Steam и игры будут работать с ошибками. Переустановите Steam в папку, путь до которой будет содержать только латинские буквы.</value>
+  </data>
+  <data name="SteamNonASCIINotDetected" xml:space="preserve">
+    <value>Steam установлен верно: путь к каталогу Steam не содержит запрещённых символов.</value>
   </data>
   <data name="SteamNotDetected" xml:space="preserve">
     <value>Ключи реестра, относящиеся к Steam не обнаружены. Вам не нужна их чистка. Нажмите OK для выхода из программы!</value>
@@ -216,236 +627,20 @@
   <data name="UnnamedFileName" xml:space="preserve">
     <value>Безымянный.cfg</value>
   </data>
-  <data name="FP_SelectFromList" xml:space="preserve">
-    <value>Выберите конфиг из списка выше!</value>
-  </data>
-  <data name="PS_CleanupErr" xml:space="preserve">
-    <value>Во время удаления файлов произошла ошибка. Некоторые файлы не были удалены!</value>
-  </data>
-  <data name="PS_CleanupExecuteQ" xml:space="preserve">
-    <value>Удалить выбранные файлы ({0})?</value>
-  </data>
-  <data name="PS_CleanupSuccess" xml:space="preserve">
-    <value>Процесс очистки успешно завершён!</value>
-  </data>
-  <data name="AppLangPrefix" xml:space="preserve">
-    <value>ru</value>
-  </data>
-  <data name="RPB_CloseCpt" xml:space="preserve">
-    <value>Закрыть</value>
-  </data>
-  <data name="RPB_ComprGen" xml:space="preserve">
-    <value>Сжатый отчёт с именем {0} был успешно создан! Сейчас будет открыт каталог с отчётом для того, чтобы вы смогли загрузить его на форум.</value>
-  </data>
-  <data name="RPB_GenException" xml:space="preserve">
-    <value>Произошла ошибка. Невозможно выполнить утилиту Microsoft System Information. Возможно, она не установлена в данной ОС. Создание отчёта невозможно.</value>
-  </data>
-  <data name="QI_Excpt" xml:space="preserve">
-    <value>Произошла ошибка во время установки выбранного файла!</value>
-  </data>
-  <data name="QI_GenVMTMsg" xml:space="preserve">
-    <value>В каталоге со спреем не найден VMT-файл. Сгенерировать его автоматически?</value>
-  </data>
-  <data name="QI_InstSuccessfull" xml:space="preserve">
-    <value>Установка выбранного файла успешно завершена!</value>
-  </data>
-  <data name="QI_InstUnav" xml:space="preserve">
-    <value>Установка невозможна, т.к. вы не выбрали файл, который нужно установить. Выберите файл и повторите попытку!</value>
-  </data>
-  <data name="BU_DelFailed" xml:space="preserve">
-    <value>Произошла ошибка при попытке удаления резервных копий. Удаление не было произведено!</value>
-  </data>
-  <data name="BU_DelMsg" xml:space="preserve">
-    <value>Вы уверены, что хотите удалить выбранные резервные копии?</value>
-  </data>
-  <data name="BU_DelSuccessful" xml:space="preserve">
-    <value>Выбранные резервные копии были успешно удалены!</value>
-  </data>
-  <data name="BU_NoFiles" xml:space="preserve">
-    <value>Действие невозможно: список резервных копий пуст!</value>
-  </data>
-  <data name="BU_QMsg" xml:space="preserve">
-    <value>Вы уверены, что хотите восстановить выбранные резервные копии?</value>
-  </data>
-  <data name="BU_RestFailed" xml:space="preserve">
-    <value>Произошла ошибка при попытке восстановить резервную копию. Файл не был восстановлен!</value>
-  </data>
-  <data name="BU_RestSuccessful" xml:space="preserve">
-    <value>Резервная копия была успешно восстановлена!</value>
-  </data>
-  <data name="BU_RegCreate" xml:space="preserve">
-    <value>Создать резервную копию сейчас?</value>
-  </data>
-  <data name="BU_RegDone" xml:space="preserve">
-    <value>Файл резервной копии реестра был успешно создан!</value>
-  </data>
-  <data name="BU_RegErr" xml:space="preserve">
-    <value>Произошла ошибка при создании резервной копии реестра. Файл не был создан!</value>
-  </data>
-  <data name="CE_ClNoDescr" xml:space="preserve">
-    <value>К сожалению, для этой переменной у нас нет описания. Вы можете помочь проекту, прислав его нам.</value>
-  </data>
-  <data name="CE_ClSelErr" xml:space="preserve">
-    <value>Переменная в выделенной строке не найдена!</value>
-  </data>
-  <data name="PS_LoadErr" xml:space="preserve">
-    <value>Файлы для удаления не найдены! Очистка не требуется.</value>
-  </data>
-  <data name="PS_SelectItemsMsg" xml:space="preserve">
-    <value>Файлы для очистки не выбраны! Пожалуйста выберите файлы для очистки из списка и повторите попытку.</value>
-  </data>
-  <data name="AppNoGamesDetected" xml:space="preserve">
-    <value>Внимание! Не обнаружено ни одной управляемой игры. Пожалуйста, запустите нужные вам игры из Steam хотя бы один раз. После этого они появятся в списке и вы сможете ими управлять средствами данной программы.</value>
-  </data>
-  <data name="BU_BName_GameAuto" xml:space="preserve">
-    <value>Автокопия настроек игры от</value>
-  </data>
-  <data name="BU_BName_GRGame" xml:space="preserve">
-    <value>Граф. настройки от</value>
-  </data>
-  <data name="BU_BName_SRCAll" xml:space="preserve">
-    <value>Граф. настройки всех игр от</value>
-  </data>
-  <data name="BU_BName_SteamAll" xml:space="preserve">
-    <value>Настройки Steam от</value>
-  </data>
-  <data name="BU_BType_Cfg" xml:space="preserve">
-    <value>Конфиг</value>
-  </data>
-  <data name="BU_BType_Reg" xml:space="preserve">
-    <value>Реестр</value>
-  </data>
-  <data name="UPD_ExceptionDetected" xml:space="preserve">
-    <value>Произошла ошибка во время проверки обновлений! Разрешите программе получить данные из сети Интернет и повторите попытку позднее.</value>
-  </data>
-  <data name="UPD_LatestInstalled" xml:space="preserve">
-    <value>Обновление не требуется, т.к. у вас установлена последняя версия программы.</value>
-  </data>
-  <data name="UPD_UpdateFailure" xml:space="preserve">
-    <value>Произошла ошибка при попытке запуска программы установки новой версии. Программа не была обновлена. Запустите обновление повторно позднее!</value>
-  </data>
-  <data name="UPD_UpdateSuccessful" xml:space="preserve">
-    <value>Новая версия была успешно получена с сервера. Сейчас будет произведена её установка!</value>
-  </data>
-  <data name="Opts_Error" xml:space="preserve">
-    <value>Внимание! Произошла ошибка при попытке записи настроек!</value>
-  </data>
-  <data name="Opts_Saved" xml:space="preserve">
-    <value>Настройки были успешно сохранены. Внимание! Некоторые из них будут задействованы только после перезапуска программы.</value>
-  </data>
-  <data name="PS_CleanupFull" xml:space="preserve">
-    <value>Удалить {0}?</value>
-  </data>
-  <data name="GT_SaveFailure" xml:space="preserve">
-    <value>Произошла ошибка при попытке сохранения графических настроек!</value>
-  </data>
-  <data name="BU_NoSelected" xml:space="preserve">
-    <value>Действие невозможно: не выбрано ни одного файла!</value>
-  </data>
-  <data name="KB_ExException" xml:space="preserve">
-    <value>Произошла ошибка при выполнении. Убедитесь, что у вас есть права администратора!</value>
-  </data>
-  <data name="KB_ExQuestion" xml:space="preserve">
-    <value>Вы уверены, что хотите {0}?</value>
-  </data>
-  <data name="KB_ExRestore" xml:space="preserve">
-    <value>Восстановить настройки по умолчанию?</value>
-  </data>
-  <data name="KB_ExSuccess" xml:space="preserve">
-    <value>Требуемое действие успешно выполнено! Выполненные настройки будут применены после перезагрузки системы.</value>
-  </data>
-  <data name="AppUpdateAvailable" xml:space="preserve">
-    <value>Внимание! Доступно обновление программы {0}. Рекомендуем вам обновиться как можно скорее через меню Справка - Проверить наличие обновлений, либо вручную.</value>
-  </data>
-  <data name="AppXMLParseError" xml:space="preserve">
-    <value>Произошла ошибка при разборе XML файла со списком игр. Возможно он отсутствует или повреждён. Пожалуйста, переустановите программу.</value>
-  </data>
-  <data name="AppDefaultSteamLangID" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="SteamNonASCIINotDetected" xml:space="preserve">
-    <value>Steam установлен верно: путь к каталогу Steam не содержит запрещённых символов.</value>
-  </data>
-  <data name="PS_CleanException" xml:space="preserve">
-    <value>Произошла ошибка во время процедуры очистки. Возможно, у вас отсутствуют необходимые права для этого действия.</value>
-  </data>
-  <data name="AppSafeClnStTextOff" xml:space="preserve">
-    <value>Копии: выкл</value>
-  </data>
-  <data name="AppSafeClnStTextOn" xml:space="preserve">
-    <value>Копии: вкл</value>
-  </data>
-  <data name="AppSafeClnDisabled" xml:space="preserve">
-    <value>Внимание! Вы отключили модуль безопасной очистки, поэтому резервные копии создаваться не будут до его повторной активации.</value>
-  </data>
-  <data name="CE_NoFileOpened" xml:space="preserve">
-    <value>Для использования этой функции откройте файл.</value>
-  </data>
-  <data name="AppCVListURL" xml:space="preserve">
-    <value>http://www.easycoding.org/projects/srcrepair/cvarlist</value>
-  </data>
-  <data name="AppAlreadyLaunched" xml:space="preserve">
-    <value>Программа {0} уже запущена. Запуск второй копии невозможен!</value>
-  </data>
-  <data name="CE_BackUpCreated" xml:space="preserve">
-    <value>Резервная копия файла {0} была успешено создана!</value>
-  </data>
-  <data name="GT_NCFFailure" xml:space="preserve">
-    <value>Произошла ошибка во время сохранения графических настроек игры в файл!</value>
-  </data>
-  <data name="GT_NCFNReady" xml:space="preserve">
-    <value>Для сохранения графических настроек вы должны заполнить все параметры!</value>
-  </data>
-  <data name="AppGenericError" xml:space="preserve">
-    <value>Внимание! Произошла критическая ошибка. Работа приложения остановлена.</value>
-  </data>
-  <data name="BU_BType_Cont" xml:space="preserve">
-    <value>Архив</value>
-  </data>
-  <data name="BU_UnknownType" xml:space="preserve">
-    <value>Отсутствуют правила для восстановления такого типа файлов!</value>
-  </data>
-  <data name="BU_BName_Bud" xml:space="preserve">
-    <value>Архив от</value>
-  </data>
-  <data name="BU_BType_Video" xml:space="preserve">
-    <value>Видео</value>
-  </data>
-  <data name="PS_ArchFailed" xml:space="preserve">
-    <value>Произошла ошибка при упаковке файлов в архив. Архив не был создан!</value>
-  </data>
-  <data name="PS_CleanInProgress" xml:space="preserve">
-    <value>Выполняется...</value>
-  </data>
-  <data name="AppNoGamesSelected" xml:space="preserve">
-    <value>Не выбрано ни одной игры! Пожалуйста выберите в главном окне поддерживаемую игру, а затем повторите вызов функции.</value>
-  </data>
-  <data name="PS_FrFInfo" xml:space="preserve">
-    <value>В результате очистки может быть освобождено до {0}.</value>
-  </data>
-  <data name="AppStartSteamFailed" xml:space="preserve">
-    <value>Не удалось запустить Steam. Проверьте правильность его установки и повторите попытку позднее!</value>
-  </data>
-  <data name="GT_RegOpenErr" xml:space="preserve">
-    <value>Произошла ошибка при открытии ключа реестра. Графические настройки не были загружены!</value>
-  </data>
-  <data name="AppNoGamesDLog" xml:space="preserve">
-    <value>Не найдено ни одной поддерживаемой игры. Steam расположен в каталоге: {0}.</value>
-  </data>
-  <data name="AppRestrSymbLog" xml:space="preserve">
-    <value>В пути обнаружены запрещённые символы: {0}.</value>
-  </data>
-  <data name="AppFailedToGetData" xml:space="preserve">
-    <value>Произошла ошибка при получении данных из базы поддерживаемых игр. Попробуйте ещё раз, либо выберите другую игру!</value>
-  </data>
-  <data name="BU_BinaryFile" xml:space="preserve">
-    <value>Выбранный файл является бинарным, поэтому его невозможно открыть в текстовом редакторе!</value>
+  <data name="UPD_AppCheckFailure" xml:space="preserve">
+    <value>Произошла ошибка во время проверки обновлений программы.</value>
   </data>
   <data name="UPD_AppNoUpdates" xml:space="preserve">
     <value>Нет новых обновлений программы. Установлена новейшая версия.</value>
   </data>
+  <data name="UPD_AppOtherPlatform" xml:space="preserve">
+    <value>Автоматическое обновление на платформе {0} временно не поддерживается. Пожалуйста установите его вручную с официального сайта.</value>
+  </data>
   <data name="UPD_AppUpdateAvail" xml:space="preserve">
     <value>Доступно обновление программы. Новая версия: {0}.</value>
+  </data>
+  <data name="UPD_DbCheckFailure" xml:space="preserve">
+    <value>Произошла ошибка во время проверки обновлений базы игр.</value>
   </data>
   <data name="UPD_DbNoUpdates" xml:space="preserve">
     <value>Нет новых обновлений базы игр. Используется свежайшая версия.</value>
@@ -453,20 +648,14 @@
   <data name="UPD_DbUpdateAvail" xml:space="preserve">
     <value>Доступно обновление базы игр. Новая версия: {0} ({1}).</value>
   </data>
-  <data name="DB_WrkInProgress" xml:space="preserve">
-    <value>Пожалуйста, дождитесь завершения проверки обновлений!</value>
+  <data name="UPD_ExceptionDetected" xml:space="preserve">
+    <value>Произошла ошибка во время проверки обновлений! Разрешите программе получить данные из сети Интернет и повторите попытку позднее.</value>
   </data>
-  <data name="BU_BType_Unkn" xml:space="preserve">
-    <value>Неизвестный</value>
+  <data name="UPD_HashFailure" xml:space="preserve">
+    <value>Контрольная сумма загруженного файла отличается от эталона. Обновление не было установлено!</value>
   </data>
-  <data name="BU_BName_Config" xml:space="preserve">
-    <value>Конфиг игры от</value>
-  </data>
-  <data name="HD_InstallSuccessfull" xml:space="preserve">
-    <value>Установка HUD была успешно выполнена!</value>
-  </data>
-  <data name="HD_InstallError" xml:space="preserve">
-    <value>При установке HUD произошла ошибка. Повторите попытку позднее.</value>
+  <data name="UPD_HUDCheckFailure" xml:space="preserve">
+    <value>Произошла ошибка во время проверки обновлений базы HUD.</value>
   </data>
   <data name="UPD_HUDNoUpdates" xml:space="preserve">
     <value>Нет новых обновлений базы HUD. Используется свежайшая версия.</value>
@@ -474,211 +663,22 @@
   <data name="UPD_HUDUpdateAvail" xml:space="preserve">
     <value>Доступно обновление базы HUD. Новая версия: {0} ({1}).</value>
   </data>
-  <data name="AR_UnpackException" xml:space="preserve">
-    <value>Во время распаковки произошла ошибка. Возможно, архив был распакован не до конца. Более подробная информация в журнале ошибок программы.</value>
+  <data name="UPD_LatestDBInstalled" xml:space="preserve">
+    <value>Установлена последняя версия базы данных. Обновление не требуется!</value>
   </data>
-  <data name="PS_ProcessPrepare" xml:space="preserve">
-    <value>Подготовка к запуску очистки...</value>
-  </data>
-  <data name="PS_ProgressArchive" xml:space="preserve">
-    <value>Создание резервной копии...</value>
-  </data>
-  <data name="PS_ProgressCleanup" xml:space="preserve">
-    <value>Идёт очистка выбранных файлов...</value>
-  </data>
-  <data name="PS_ProgressFinished" xml:space="preserve">
-    <value>Очистка завершена.</value>
-  </data>
-  <data name="AppNoDebugFile" xml:space="preserve">
-    <value>Файл отладочного журнала не найден!</value>
-  </data>
-  <data name="HD_NotTested" xml:space="preserve">
-    <value>Внимание! Выбранный вами HUD не полностью совместим с последней версией игры. Рекомендуем выполнить обновление базы HUD из меню Справка.</value>
-  </data>
-  <data name="HD_Outdated" xml:space="preserve">
-    <value>Установка устаревших HUD не допускается. Обновите базу поддерживаемых HUD из меню "Справка" - "Проверить наличие обновлений" или выберите другой HUD.</value>
-  </data>
-  <data name="PS_AppRunning" xml:space="preserve">
-    <value>Обнаружено запущенное приложение {0}! Чтобы выполнить эту очистку завершите его работу.</value>
-  </data>
-  <data name="PS_CacheChkReq" xml:space="preserve">
-    <value>Очистка успешно завершена, но сейчас необходимо запустить проверку целостности кэша игры!</value>
-  </data>
-  <data name="LV_LoadFailed" xml:space="preserve">
-    <value>Произошла ошибка при загрузке журнала ошибок программы.</value>
-  </data>
-  <data name="HD_DbOutdated" xml:space="preserve">
-    <value>Проверка обновлений базы HUD не проводилась уже больше недели. Выполните её прямо сейчас из меню Справка.</value>
-  </data>
-  <data name="HD_DynBarText" xml:space="preserve">
-    <value>База HUD {0}. Обновлена: {1}.</value>
-  </data>
-  <data name="HD_StatusOutdated" xml:space="preserve">
-    <value>устарела</value>
-  </data>
-  <data name="HD_StatusUpdated" xml:space="preserve">
-    <value>актуальна</value>
-  </data>
-  <data name="LV_ClearEx" xml:space="preserve">
-    <value>Произошла ошибка при попытке очистки журнала ошибок программы! Повторите попытку позже.</value>
-  </data>
-  <data name="GameNonASCIIDetected" xml:space="preserve">
-    <value>Внимание! В пути к выбранной игре обнаружены недопустимые символы. Steam и игра будут работать с ошибками. Переустановите игру в папку, путь до которой будет содержать только латинские буквы.</value>
-  </data>
-  <data name="GameNonASCIINotDetected" xml:space="preserve">
-    <value>Игра установлена верно: путь к каталогу игры не содержит запрещённых символов.</value>
-  </data>
-  <data name="AppSizeBytes" xml:space="preserve">
-    <value>Б</value>
-  </data>
-  <data name="AppSizeGigabytes" xml:space="preserve">
-    <value>ГБ</value>
-  </data>
-  <data name="AppSizeKilobytes" xml:space="preserve">
-    <value>КБ</value>
-  </data>
-  <data name="AppSizeMegabytes" xml:space="preserve">
-    <value>МБ</value>
-  </data>
-  <data name="AC_NoItemsSelected" xml:space="preserve">
-    <value>Вы не выбрали ни один элемент! Очистка невозможна.</value>
-  </data>
-  <data name="MM_ExceptionDetected" xml:space="preserve">
-    <value>При загрузке содержимого файла произошла ошибка. Попробуйте ещё раз позже.</value>
-  </data>
-  <data name="MM_SaveException" xml:space="preserve">
-    <value>Произошла ошибка при сохранении файла. Возможно, он был повреждён.</value>
-  </data>
-  <data name="MM_SavedOK" xml:space="preserve">
-    <value>Файл успешно сохранён!</value>
-  </data>
-  <data name="BU_BName_VChat" xml:space="preserve">
-    <value>База откл. игроков</value>
-  </data>
-  <data name="BU_BType_DB" xml:space="preserve">
-    <value>База данных</value>
-  </data>
-  <data name="HD_BtnUpdateText" xml:space="preserve">
-    <value>Обновить выбранный HUD</value>
-  </data>
-  <data name="HD_BtnInstallText" xml:space="preserve">
-    <value>Установить выбранный HUD</value>
-  </data>
-  <data name="RW_RmException" xml:space="preserve">
-    <value>Произошла ошибка во время удаления файлов. Не все файлы были удалены.</value>
+  <data name="UPD_LatestInstalled" xml:space="preserve">
+    <value>Обновление не требуется, т.к. у вас установлена последняя версия программы.</value>
   </data>
   <data name="UPD_NoWritePermissions" xml:space="preserve">
     <value>Нет прав на запись в каталог программы. Попробуйте исправить это запуском программы с правами локального администратора.</value>
   </data>
-  <data name="UPD_AppCheckFailure" xml:space="preserve">
-    <value>Произошла ошибка во время проверки обновлений программы.</value>
-  </data>
-  <data name="UPD_DbCheckFailure" xml:space="preserve">
-    <value>Произошла ошибка во время проверки обновлений базы игр.</value>
-  </data>
-  <data name="UPD_HUDCheckFailure" xml:space="preserve">
-    <value>Произошла ошибка во время проверки обновлений базы HUD.</value>
-  </data>
-  <data name="MM_ConvRest" xml:space="preserve">
-    <value>Преобразование выбранной строки в новый формат записи SteamID не требуется.</value>
-  </data>
-  <data name="AppVideoDbNotFound" xml:space="preserve">
-    <value>Не удалось загрузить графические настройки игры "{0}" из файла "{1}".</value>
-  </data>
-  <data name="PS_ProcessDetected" xml:space="preserve">
-    <value>Процесс Steam, обнаруженный в памяти был успешно завершён!</value>
-  </data>
-  <data name="AppQuestionTemplate" xml:space="preserve">
-    <value>{0}?</value>
-  </data>
-  <data name="HD_LastUpdateInfo" xml:space="preserve">
-    <value>Последнее обновление: {0}.</value>
-  </data>
-  <data name="GT_NCFLoadFailure" xml:space="preserve">
-    <value>Произошла ошибка при загрузке графических настроек игры. Часть параметров загрузились некорректно. Пожалуйста сообщите об этом разработчикам.</value>
-  </data>
-  <data name="UPD_HashFailure" xml:space="preserve">
-    <value>Контрольная сумма загруженного файла отличается от эталона. Обновление не было установлено!</value>
-  </data>
-  <data name="UPD_LatestDBInstalled" xml:space="preserve">
-    <value>Установлена последняя версия базы данных. Обновление не требуется!</value>
-  </data>
   <data name="UPD_UpdateDBSuccessful" xml:space="preserve">
     <value>Обновление базы данных было успешно установлено!</value>
   </data>
-  <data name="AppExceptionTemplate" xml:space="preserve">
-    <value>Исключение "{0}" вызвано: "{1}".</value>
+  <data name="UPD_UpdateFailure" xml:space="preserve">
+    <value>Произошла ошибка при попытке запуска программы установки новой версии. Программа не была обновлена. Запустите обновление повторно позднее!</value>
   </data>
-  <data name="CS_NEParamsFormException" xml:space="preserve">
-    <value>Невозможно создать форму, т.к. передано недостаточное количество конфигов.</value>
-  </data>
-  <data name="SD_NEParamsFormException" xml:space="preserve">
-    <value>Невозможно создать форму, т.к. передано недостаточное количество SteamID.</value>
-  </data>
-  <data name="CS_FailedToOpenCfg" xml:space="preserve">
-    <value>Произошла ошибка при вызове модуля выбора конфига для редактирования.</value>
-  </data>
-  <data name="AppIncorrectSrcVersion" xml:space="preserve">
-    <value>Обнаружена неподдерживаемая версия движка Source. Пожалуйста, сообщите об этой ошибке разработчикам!</value>
-  </data>
-  <data name="UPD_AppOtherPlatform" xml:space="preserve">
-    <value>Автоматическое обновление на платформе {0} временно не поддерживается. Пожалуйста установите его вручную с официального сайта.</value>
-  </data>
-  <data name="HD_HashError" xml:space="preserve">
-    <value>Произошла ошибка при проверке контрольной суммы загруженного архива с HUD. Возможно, он был повреждён. Попробуйте ещё раз позднее!</value>
-  </data>
-  <data name="AppHelpCHMNotFound" xml:space="preserve">
-    <value>Файл оффлайновой справочной системы не установлен, либо не поддерживается для данной языковой версии!</value>
-  </data>
-  <data name="AppNoSteamIDSetected" xml:space="preserve">
-    <value>Не обнаружено ни одного пользовательского профиля Steam! Запустите его хотя бы один раз, после чего повторите попытку.</value>
-  </data>
-  <data name="HD_DownloadError" xml:space="preserve">
-    <value>Не удалось загрузить архив с файлами HUD. Попробуйте повторить попытку позднее.</value>
-  </data>
-  <data name="PS_BwBusy" xml:space="preserve">
-    <value>Цели для очистки ещё не были построены! Пожалуйста повторите попытку через несколько секунд.</value>
-  </data>
-  <data name="PS_ClnWndInitError" xml:space="preserve">
-    <value>Произошла ошибка при открытии формы очистки. Дополнительная об инциденте информация добавлена в отладочный журнал.</value>
-  </data>
-  <data name="AppSteamPathEnterInvalid" xml:space="preserve">
-    <value>Пользователь ввёл недействительный путь к каталогу установки Steam.</value>
-  </data>
-  <data name="AppSteamPathEnterWinClosed" xml:space="preserve">
-    <value>Пользователь закрыл диалог указания пути к каталогу установки Steam.</value>
-  </data>
-  <data name="AppAlrLaunched" xml:space="preserve">
-    <value>Программа уже выполняется! Запуск нескольких копий не поддерживается.</value>
-  </data>
-  <data name="AppLibVersionMissmatch" xml:space="preserve">
-    <value>Обнаружено несоответствие между версиями приложения и основной библиотеки функций! Сообщите об этом разработчикам, либо переустановите программу.</value>
-  </data>
-  <data name="FP_DownloadError" xml:space="preserve">
-    <value>Не удалось загрузить архив с файлами FPS-конфига. Попробуйте повторить попытку позднее.</value>
-  </data>
-  <data name="FP_HashError" xml:space="preserve">
-    <value>Произошла ошибка при проверке контрольной суммы загруженного архива с FPS-конфигом. Возможно, он был повреждён. Попробуйте ещё раз позднее!</value>
-  </data>
-  <data name="FP_EditorLoadFailure" xml:space="preserve">
-    <value>Произошла ошибка при загрузке FPS-конфига в редактор!</value>
-  </data>
-  <data name="FP_BtnInstallText" xml:space="preserve">
-    <value>Установить выбранный конфиг</value>
-  </data>
-  <data name="FP_BtnUpdateText" xml:space="preserve">
-    <value>Обновить выбранный конфиг</value>
-  </data>
-  <data name="FP_BtnReplaceText" xml:space="preserve">
-    <value>Заменить на выбранный конфиг</value>
-  </data>
-  <data name="FP_BtnUninstallAllText" xml:space="preserve">
-    <value>Удалить имеющийся конфиг</value>
-  </data>
-  <data name="FP_BtnUninstallSelectedText" xml:space="preserve">
-    <value>Удалить выбранный конфиг</value>
-  </data>
-  <data name="FP_UninstallQuestion" xml:space="preserve">
-    <value>Удалить выбранный FPS-конфиг?</value>
+  <data name="UPD_UpdateSuccessful" xml:space="preserve">
+    <value>Новая версия была успешно получена с сервера. Сейчас будет произведена её установка!</value>
   </data>
 </root>

@@ -117,17 +117,242 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AC_NoItemsSelected" xml:space="preserve">
+    <value>No items selected. Please select and then try again!</value>
+  </data>
+  <data name="AppAlreadyLaunched" xml:space="preserve">
+    <value>{0} is already running. Starting the second copy is not allowed!</value>
+  </data>
+  <data name="AppAlrLaunched" xml:space="preserve">
+    <value>The program is already running. Starting the second copy is not allowed.</value>
+  </data>
+  <data name="AppCVListURL" xml:space="preserve">
+    <value>http://developer.valvesoftware.com/wiki/Console_Command_List</value>
+  </data>
+  <data name="AppDefaultSteamLangID" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="AppExceptionTemplate" xml:space="preserve">
+    <value>Exception "{0}" raised by: "{1}".</value>
+  </data>
+  <data name="AppFailedToGetData" xml:space="preserve">
+    <value>Warning! Failed to get data from game database. Please try again or select another game!</value>
+  </data>
+  <data name="AppGenericError" xml:space="preserve">
+    <value>Fatal error occurred! The application will be terminated.</value>
+  </data>
+  <data name="AppHelpCHMNotFound" xml:space="preserve">
+    <value>Offline help system is not installed or not available for your language yet!</value>
+  </data>
+  <data name="AppIncorrectSrcVersion" xml:space="preserve">
+    <value>Incorrect Source version detected. This game is not fully supported. Please report this bug to developers!</value>
+  </data>
+  <data name="AppLangPrefix" xml:space="preserve">
+    <value>en</value>
+  </data>
+  <data name="AppLibVersionMissmatch" xml:space="preserve">
+    <value>Core library version does not match application version. Please reinstall or report this issue to developers.</value>
+  </data>
+  <data name="AppNoDebugFile" xml:space="preserve">
+    <value>Debug log file not found!</value>
+  </data>
+  <data name="AppNoGamesDetected" xml:space="preserve">
+    <value>Attention! SRC Repair can't detect any installed supported games. Please run your desired game from Steam at least once. After that, they will appear in the list and you will be able to manage them by this program.</value>
+  </data>
+  <data name="AppNoGamesDLog" xml:space="preserve">
+    <value>No games detected. Steam located as: {0}.</value>
+  </data>
+  <data name="AppNoGamesSelected" xml:space="preserve">
+    <value>Warning! No games selected. Select game and try again later.</value>
+  </data>
+  <data name="AppNoSteamIDSetected" xml:space="preserve">
+    <value>No Steam user profiles detected! Please run Steam at least once and then try again.</value>
+  </data>
+  <data name="AppQuestionTemplate" xml:space="preserve">
+    <value>{0}?</value>
+  </data>
+  <data name="AppRestrSymbLog" xml:space="preserve">
+    <value>NonASCII characters detected. Path: {0}.</value>
+  </data>
+  <data name="AppSafeClnDisabled" xml:space="preserve">
+    <value>Attention! You have disabled SafeClean module, so backups will not be created until it will be re-activated.</value>
+  </data>
+  <data name="AppSafeClnStTextOff" xml:space="preserve">
+    <value>BackUp: OFF</value>
+  </data>
+  <data name="AppSafeClnStTextOn" xml:space="preserve">
+    <value>BackUp: ON</value>
+  </data>
+  <data name="AppSizeBytes" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="AppSizeGigabytes" xml:space="preserve">
+    <value>GB</value>
+  </data>
+  <data name="AppSizeKilobytes" xml:space="preserve">
+    <value>KB</value>
+  </data>
+  <data name="AppSizeMegabytes" xml:space="preserve">
+    <value>MB</value>
+  </data>
+  <data name="AppStartSteamFailed" xml:space="preserve">
+    <value>Unable to start Steam. Please reinstall and try again later.</value>
+  </data>
+  <data name="AppSteamPathEnterInvalid" xml:space="preserve">
+    <value>Invalid Steam directory entered by user.</value>
+  </data>
+  <data name="AppSteamPathEnterWinClosed" xml:space="preserve">
+    <value>User closed "Find Steam" window.</value>
+  </data>
+  <data name="AppUpdateAvailable" xml:space="preserve">
+    <value>Notice! Update for {0} is available. We recommend you upgrade as soon as possible via the menu Help - Check for updates, or manually.</value>
+  </data>
+  <data name="AppVideoDbNotFound" xml:space="preserve">
+    <value>Cannot find video database file of "{0}" in file "{1}".</value>
+  </data>
+  <data name="AppXMLParseError" xml:space="preserve">
+    <value>An error occurred while parsing XML file with a list of games. Perhaps it is missing or damaged. Please reinstall the program.</value>
+  </data>
+  <data name="AR_BkgWrkExText" xml:space="preserve">
+    <value>Archive not found.</value>
+  </data>
+  <data name="AR_UnpackException" xml:space="preserve">
+    <value>An error occured during unpacking selected archive. Additional information can be found in debug log.</value>
+  </data>
+  <data name="BU_BinaryFile" xml:space="preserve">
+    <value>The selected file is a binary. Unable open it in text editor!</value>
+  </data>
+  <data name="BU_BName_Bud" xml:space="preserve">
+    <value>Archive of</value>
+  </data>
+  <data name="BU_BName_Config" xml:space="preserve">
+    <value>Game config of</value>
+  </data>
+  <data name="BU_BName_GameAuto" xml:space="preserve">
+    <value>Graph. options autobackup of</value>
+  </data>
+  <data name="BU_BName_GRGame" xml:space="preserve">
+    <value>Graph. settings of</value>
+  </data>
+  <data name="BU_BName_SRCAll" xml:space="preserve">
+    <value>All SRC graph. settings of</value>
+  </data>
+  <data name="BU_BName_SteamAll" xml:space="preserve">
+    <value>Steam options of</value>
+  </data>
+  <data name="BU_BName_VChat" xml:space="preserve">
+    <value>Muted players</value>
+  </data>
+  <data name="BU_BType_Cfg" xml:space="preserve">
+    <value>Config</value>
+  </data>
+  <data name="BU_BType_Cont" xml:space="preserve">
+    <value>Archive</value>
+  </data>
+  <data name="BU_BType_DB" xml:space="preserve">
+    <value>Database</value>
+  </data>
+  <data name="BU_BType_Reg" xml:space="preserve">
+    <value>Registry</value>
+  </data>
+  <data name="BU_BType_Unkn" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="BU_BType_Video" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="BU_DelFailed" xml:space="preserve">
+    <value>An error occured. File was not removed!</value>
+  </data>
+  <data name="BU_DelMsg" xml:space="preserve">
+    <value>Remove selected backup file?</value>
+  </data>
+  <data name="BU_DelSuccessful" xml:space="preserve">
+    <value>Backup was successfully removed!</value>
+  </data>
+  <data name="BU_NoFiles" xml:space="preserve">
+    <value>No backup files detected. Please, refresh list and try again later!</value>
+  </data>
+  <data name="BU_NoSelected" xml:space="preserve">
+    <value>No files selected! Please select at least one and try again.</value>
+  </data>
+  <data name="BU_QMsg" xml:space="preserve">
+    <value>Restore selected backups?</value>
+  </data>
+  <data name="BU_RegCreate" xml:space="preserve">
+    <value>Create registry backup now?</value>
+  </data>
+  <data name="BU_RegDone" xml:space="preserve">
+    <value>Registry backup was successfully created!</value>
+  </data>
+  <data name="BU_RegErr" xml:space="preserve">
+    <value>An error occured. Backup file was not created!</value>
+  </data>
+  <data name="BU_RestFailed" xml:space="preserve">
+    <value>An error occured. BackUp was not restored!</value>
+  </data>
+  <data name="BU_RestSuccessful" xml:space="preserve">
+    <value>BackUp was successfully restored!</value>
+  </data>
+  <data name="BU_UnknownType" xml:space="preserve">
+    <value>Unknown file type. Can't restore it!</value>
+  </data>
+  <data name="CE_BackUpCreated" xml:space="preserve">
+    <value>Backup of {0} was successfully created!</value>
+  </data>
   <data name="CE_CfgSVVEx" xml:space="preserve">
     <value>Warning! An error occurred. File was not saved!</value>
   </data>
+  <data name="CE_ClNoDescr" xml:space="preserve">
+    <value>Unfortunately we have no description for this variable. You can help by sending it to us.</value>
+  </data>
+  <data name="CE_ClSelErr" xml:space="preserve">
+    <value>No variables detected in selected row!</value>
+  </data>
   <data name="CE_ExceptionDetected" xml:space="preserve">
     <value>Warning! Parse error detected. The config was opened with errors.</value>
+  </data>
+  <data name="CE_NoFileOpened" xml:space="preserve">
+    <value>Open file to use this feature!</value>
   </data>
   <data name="CE_OpenFailed" xml:space="preserve">
     <value>Could not read the contents of config file!</value>
   </data>
   <data name="CE_RestConfigOpenWarn" xml:space="preserve">
     <value>Warning! It is not recommended to edit this file, because this may lead to unpredictable consequences. Edit it at your own risk.</value>
+  </data>
+  <data name="CS_FailedToOpenCfg" xml:space="preserve">
+    <value>An error occured. Failed to open config selector! Try again later.</value>
+  </data>
+  <data name="CS_NEParamsFormException" xml:space="preserve">
+    <value>Not enough configs in list.</value>
+  </data>
+  <data name="DB_WrkInProgress" xml:space="preserve">
+    <value>Checking for updates. Please wait!</value>
+  </data>
+  <data name="FP_BtnInstallText" xml:space="preserve">
+    <value>Install selected config</value>
+  </data>
+  <data name="FP_BtnReplaceText" xml:space="preserve">
+    <value>Replace to selected config</value>
+  </data>
+  <data name="FP_BtnUninstallAllText" xml:space="preserve">
+    <value>Remove installed config</value>
+  </data>
+  <data name="FP_BtnUninstallSelectedText" xml:space="preserve">
+    <value>Remove selected config</value>
+  </data>
+  <data name="FP_BtnUpdateText" xml:space="preserve">
+    <value>Update selected config</value>
+  </data>
+  <data name="FP_DownloadError" xml:space="preserve">
+    <value>Cannot find downloaded archive with FPS-config. Please try again later.</value>
+  </data>
+  <data name="FP_EditorLoadFailure" xml:space="preserve">
+    <value>Failed to load FPS-config to Config Editor!</value>
+  </data>
+  <data name="FP_HashError" xml:space="preserve">
+    <value>Failed to check hash sum of downloaded file. Maybe it was damaged. Please try again later!</value>
   </data>
   <data name="FP_InstallFailed" xml:space="preserve">
     <value>A critical error: could not install the selected config!</value>
@@ -150,8 +375,20 @@
   <data name="FP_RemoveSuccessful" xml:space="preserve">
     <value>Installed FPS-config has been successfully removed!</value>
   </data>
+  <data name="FP_SelectFromList" xml:space="preserve">
+    <value>Select the config file from the list above!</value>
+  </data>
+  <data name="FP_UninstallQuestion" xml:space="preserve">
+    <value>Remove selected FPS-config?</value>
+  </data>
   <data name="FrmCloseQuery" xml:space="preserve">
     <value>Close {0}?</value>
+  </data>
+  <data name="GameNonASCIIDetected" xml:space="preserve">
+    <value>Warning! Restricted symbols detected in selected games' path. Steam and the games will not work correctly.</value>
+  </data>
+  <data name="GameNonASCIINotDetected" xml:space="preserve">
+    <value>Game installed correctly: directory path does not contain illegal characters.</value>
   </data>
   <data name="GeneralErrorDetected" xml:space="preserve">
     <value>Found an unhandled exception. Please inform the developers email: srcrepair@easycoding.org.</value>
@@ -165,8 +402,23 @@
   <data name="GT_MinPerfMsg" xml:space="preserve">
     <value>Do you really want to install all the video settings to minimum? This will increase the FPS, but worsen the graphics in the game.</value>
   </data>
+  <data name="GT_NCFFailure" xml:space="preserve">
+    <value>An error occurred during saving the game graphics settings into a file!</value>
+  </data>
+  <data name="GT_NCFLoadFailure" xml:space="preserve">
+    <value>Failed to load several graphical settings. Please report this bug.</value>
+  </data>
+  <data name="GT_NCFNReady" xml:space="preserve">
+    <value>Warning! To save the graphical settings, you must fill in all the forms!</value>
+  </data>
   <data name="GT_PerfSet" xml:space="preserve">
     <value>Done. Do not forget to adjust and save the changes in the settings!</value>
+  </data>
+  <data name="GT_RegOpenErr" xml:space="preserve">
+    <value>Could not open registry key. Please start game at least once and try again.</value>
+  </data>
+  <data name="GT_SaveFailure" xml:space="preserve">
+    <value>An error occurred while saving graphical settings!</value>
   </data>
   <data name="GT_SaveMsg" xml:space="preserve">
     <value>Save your changes?</value>
@@ -174,11 +426,125 @@
   <data name="GT_SaveSuccess" xml:space="preserve">
     <value>Changes have been successfully saved!</value>
   </data>
+  <data name="HD_BtnInstallText" xml:space="preserve">
+    <value>Install selected HUD</value>
+  </data>
+  <data name="HD_BtnUpdateText" xml:space="preserve">
+    <value>Update selected HUD</value>
+  </data>
+  <data name="HD_DbOutdated" xml:space="preserve">
+    <value>HUD database outdated. Please update database from menu Help.</value>
+  </data>
+  <data name="HD_DownloadError" xml:space="preserve">
+    <value>Cannot find downloaded HUD archive. Please try again later.</value>
+  </data>
+  <data name="HD_DynBarText" xml:space="preserve">
+    <value>HUD database {0}. Last update: {1}.</value>
+  </data>
+  <data name="HD_HashError" xml:space="preserve">
+    <value>Failed to check hash sum of downloaded file. Maybe it was damaged. Please try again later!</value>
+  </data>
+  <data name="HD_InstallError" xml:space="preserve">
+    <value>Error occured during installation. Please try again later.</value>
+  </data>
+  <data name="HD_InstallSuccessfull" xml:space="preserve">
+    <value>HUD installation successfull!</value>
+  </data>
+  <data name="HD_LastUpdateInfo" xml:space="preserve">
+    <value>Selected HUD last update: {0}.</value>
+  </data>
+  <data name="HD_NotTested" xml:space="preserve">
+    <value>Selected HUD is not fully compatible with the latest version of the game. We recommend you to upgrade the HUD database.</value>
+  </data>
+  <data name="HD_Outdated" xml:space="preserve">
+    <value>Installation of outdated HUDs is not allowed. Please update database or select another HUD.</value>
+  </data>
+  <data name="HD_StatusOutdated" xml:space="preserve">
+    <value>outdated</value>
+  </data>
+  <data name="HD_StatusUpdated" xml:space="preserve">
+    <value>actual</value>
+  </data>
   <data name="InputBoxCancelBtnName" xml:space="preserve">
     <value>Cancel</value>
   </data>
+  <data name="KB_ExException" xml:space="preserve">
+    <value>An error occurred during execution. Make sure you have administrator rights!</value>
+  </data>
+  <data name="KB_ExQuestion" xml:space="preserve">
+    <value>Do you really want to {0}?</value>
+  </data>
+  <data name="KB_ExRestore" xml:space="preserve">
+    <value>Restore default settings?</value>
+  </data>
+  <data name="KB_ExSuccess" xml:space="preserve">
+    <value>The required action has been successfully completed!</value>
+  </data>
+  <data name="LV_ClearEx" xml:space="preserve">
+    <value>Could not purge log file! Please try again later.</value>
+  </data>
+  <data name="LV_LoadFailed" xml:space="preserve">
+    <value>Failed to load error log. Try again later.</value>
+  </data>
+  <data name="MM_ConvRest" xml:space="preserve">
+    <value>Conversion from SteamIDv3 to legacy SteamID32 is not allowed!</value>
+  </data>
+  <data name="MM_ExceptionDetected" xml:space="preserve">
+    <value>An error detected while parsing game banlist file. Try again later.</value>
+  </data>
+  <data name="MM_SavedOK" xml:space="preserve">
+    <value>Successfully updated!</value>
+  </data>
+  <data name="MM_SaveException" xml:space="preserve">
+    <value>An error occured while saving database into file. It may be damaged.</value>
+  </data>
+  <data name="Opts_Error" xml:space="preserve">
+    <value>Warning! An error occurred during saving your settings!</value>
+  </data>
+  <data name="Opts_Saved" xml:space="preserve">
+    <value>The application settings has been saved successfully. Some of them will be activated only after restarting the application.</value>
+  </data>
+  <data name="PS_AppRunning" xml:space="preserve">
+    <value>{0} application is running! To execute this cleanup please close it.</value>
+  </data>
+  <data name="PS_ArchFailed" xml:space="preserve">
+    <value>Warning! An error occured during packing files. Archive was not created!</value>
+  </data>
+  <data name="PS_BwBusy" xml:space="preserve">
+    <value>Cleanup targets is not yet available! Please try again in 10 seconds.</value>
+  </data>
+  <data name="PS_CacheChkReq" xml:space="preserve">
+    <value>Cleanup successfully completed! You should run game cache integrity check now.</value>
+  </data>
+  <data name="PS_CleanException" xml:space="preserve">
+    <value>An error occurred during cleanup. Perhaps you have no rights necessary for this action.</value>
+  </data>
+  <data name="PS_CleanInProgress" xml:space="preserve">
+    <value>Cleaning up...</value>
+  </data>
+  <data name="PS_CleanupErr" xml:space="preserve">
+    <value>Error occured while deleting files. Some files were not deleted!</value>
+  </data>
+  <data name="PS_CleanupExecuteQ" xml:space="preserve">
+    <value>Clean selected {0}?</value>
+  </data>
+  <data name="PS_CleanupFull" xml:space="preserve">
+    <value>Clean {0}?</value>
+  </data>
+  <data name="PS_CleanupSuccess" xml:space="preserve">
+    <value>Cleanup has been successfully completed!</value>
+  </data>
+  <data name="PS_ClnWndInitError" xml:space="preserve">
+    <value>An error occured while trying to open cleanup window. Additional information about this issue has been added to logs.</value>
+  </data>
   <data name="PS_ExecuteMSG" xml:space="preserve">
     <value>Perform this cleanup?</value>
+  </data>
+  <data name="PS_FrFInfo" xml:space="preserve">
+    <value>We can free up to {0} hard-disk space after cleanup.</value>
+  </data>
+  <data name="PS_LoadErr" xml:space="preserve">
+    <value>Cleanup is not required.</value>
   </data>
   <data name="PS_NoLangSelected" xml:space="preserve">
     <value>You have chosen the wrong language Steam from the dropdown list, so we will use English!</value>
@@ -186,8 +552,53 @@
   <data name="PS_NothingSelected" xml:space="preserve">
     <value>Please select at least one of the cleaning options and then run this cleanup again!</value>
   </data>
+  <data name="PS_ProcessDetected" xml:space="preserve">
+    <value>Steam process has been successfully terminated!</value>
+  </data>
+  <data name="PS_ProcessPrepare" xml:space="preserve">
+    <value>Starting cleanup...</value>
+  </data>
+  <data name="PS_ProgressArchive" xml:space="preserve">
+    <value>Creating backup...</value>
+  </data>
+  <data name="PS_ProgressCleanup" xml:space="preserve">
+    <value>Cleanup in progress...</value>
+  </data>
+  <data name="PS_ProgressFinished" xml:space="preserve">
+    <value>Done.</value>
+  </data>
+  <data name="PS_SelectItemsMsg" xml:space="preserve">
+    <value>Files for cleanup is not selected! Please select files and try again later.</value>
+  </data>
   <data name="PS_SeqCompleted" xml:space="preserve">
     <value>The cleanup had been successfully completed. Steam will run in recovery mode right now!</value>
+  </data>
+  <data name="QI_Excpt" xml:space="preserve">
+    <value>There was an error during file installation. Please try again later!</value>
+  </data>
+  <data name="QI_GenVMTMsg" xml:space="preserve">
+    <value>Generate VMT file automatically?</value>
+  </data>
+  <data name="QI_InstSuccessfull" xml:space="preserve">
+    <value>Installation has been completed successfully!</value>
+  </data>
+  <data name="QI_InstUnav" xml:space="preserve">
+    <value>Please select file before pressing this button and try again!</value>
+  </data>
+  <data name="RPB_CloseCpt" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="RPB_ComprGen" xml:space="preserve">
+    <value>Compressed report {0} has been successfully created! Now we will open the directory with generated report file, so you can upload it to technical support service.</value>
+  </data>
+  <data name="RPB_GenException" xml:space="preserve">
+    <value>An error occurred. Unable to execute Microsoft System Information tool. Perhaps it is not installed on this operating system. Creating a report is impossible.</value>
+  </data>
+  <data name="RW_RmException" xml:space="preserve">
+    <value>An error occured during files removal. Some files were not deleted.</value>
+  </data>
+  <data name="SD_NEParamsFormException" xml:space="preserve">
+    <value>Not enough SteamIDs in list.</value>
   </data>
   <data name="StatusNormal" xml:space="preserve">
     <value>All systems operational.</value>
@@ -197,6 +608,9 @@
   </data>
   <data name="SteamNonASCIIDetected" xml:space="preserve">
     <value>Warning! Invalid characters detected in Steam path. Steam and some games will work incorrectly. Reinstall Steam to folder, the path to which will contain only latin characters and numbers.</value>
+  </data>
+  <data name="SteamNonASCIINotDetected" xml:space="preserve">
+    <value>Steam installation status: Steam directory path does not contain restricted characters.</value>
   </data>
   <data name="SteamNotDetected" xml:space="preserve">
     <value>Registry keys related to Steam was't found. You do not need their cleaning. Click OK to exit the program!</value>
@@ -216,236 +630,20 @@
   <data name="UnnamedFileName" xml:space="preserve">
     <value>Unnamed.cfg</value>
   </data>
-  <data name="FP_SelectFromList" xml:space="preserve">
-    <value>Select the config file from the list above!</value>
-  </data>
-  <data name="PS_CleanupErr" xml:space="preserve">
-    <value>Error occured while deleting files. Some files were not deleted!</value>
-  </data>
-  <data name="PS_CleanupExecuteQ" xml:space="preserve">
-    <value>Clean selected {0}?</value>
-  </data>
-  <data name="PS_CleanupSuccess" xml:space="preserve">
-    <value>Cleanup has been successfully completed!</value>
-  </data>
-  <data name="AppLangPrefix" xml:space="preserve">
-    <value>en</value>
-  </data>
-  <data name="RPB_CloseCpt" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="RPB_ComprGen" xml:space="preserve">
-    <value>Compressed report {0} has been successfully created! Now we will open the directory with generated report file, so you can upload it to technical support service.</value>
-  </data>
-  <data name="RPB_GenException" xml:space="preserve">
-    <value>An error occurred. Unable to execute Microsoft System Information tool. Perhaps it is not installed on this operating system. Creating a report is impossible.</value>
-  </data>
-  <data name="QI_Excpt" xml:space="preserve">
-    <value>There was an error during file installation. Please try again later!</value>
-  </data>
-  <data name="QI_GenVMTMsg" xml:space="preserve">
-    <value>Generate VMT file automatically?</value>
-  </data>
-  <data name="QI_InstSuccessfull" xml:space="preserve">
-    <value>Installation has been completed successfully!</value>
-  </data>
-  <data name="QI_InstUnav" xml:space="preserve">
-    <value>Please select file before pressing this button and try again!</value>
-  </data>
-  <data name="BU_DelFailed" xml:space="preserve">
-    <value>An error occured. File was not removed!</value>
-  </data>
-  <data name="BU_DelMsg" xml:space="preserve">
-    <value>Remove selected backup file?</value>
-  </data>
-  <data name="BU_DelSuccessful" xml:space="preserve">
-    <value>Backup was successfully removed!</value>
-  </data>
-  <data name="BU_NoFiles" xml:space="preserve">
-    <value>No backup files detected. Please, refresh list and try again later!</value>
-  </data>
-  <data name="BU_QMsg" xml:space="preserve">
-    <value>Restore selected backups?</value>
-  </data>
-  <data name="BU_RestFailed" xml:space="preserve">
-    <value>An error occured. BackUp was not restored!</value>
-  </data>
-  <data name="BU_RestSuccessful" xml:space="preserve">
-    <value>BackUp was successfully restored!</value>
-  </data>
-  <data name="BU_RegCreate" xml:space="preserve">
-    <value>Create registry backup now?</value>
-  </data>
-  <data name="BU_RegDone" xml:space="preserve">
-    <value>Registry backup was successfully created!</value>
-  </data>
-  <data name="BU_RegErr" xml:space="preserve">
-    <value>An error occured. Backup file was not created!</value>
-  </data>
-  <data name="CE_ClNoDescr" xml:space="preserve">
-    <value>Unfortunately we have no description for this variable. You can help by sending it to us.</value>
-  </data>
-  <data name="CE_ClSelErr" xml:space="preserve">
-    <value>No variables detected in selected row!</value>
-  </data>
-  <data name="PS_LoadErr" xml:space="preserve">
-    <value>Cleanup is not required.</value>
-  </data>
-  <data name="PS_SelectItemsMsg" xml:space="preserve">
-    <value>Files for cleanup is not selected! Please select files and try again later.</value>
-  </data>
-  <data name="AppNoGamesDetected" xml:space="preserve">
-    <value>Attention! SRC Repair can't detect any installed supported games. Please run your desired game from Steam at least once. After that, they will appear in the list and you will be able to manage them by this program.</value>
-  </data>
-  <data name="BU_BName_GameAuto" xml:space="preserve">
-    <value>Graph. options autobackup of</value>
-  </data>
-  <data name="BU_BName_GRGame" xml:space="preserve">
-    <value>Graph. settings of</value>
-  </data>
-  <data name="BU_BName_SRCAll" xml:space="preserve">
-    <value>All SRC graph. settings of</value>
-  </data>
-  <data name="BU_BName_SteamAll" xml:space="preserve">
-    <value>Steam options of</value>
-  </data>
-  <data name="BU_BType_Cfg" xml:space="preserve">
-    <value>Config</value>
-  </data>
-  <data name="BU_BType_Reg" xml:space="preserve">
-    <value>Registry</value>
-  </data>
-  <data name="UPD_ExceptionDetected" xml:space="preserve">
-    <value>An error occurred while checking for updates! Allow the program to get data from the Internet and try again later.</value>
-  </data>
-  <data name="UPD_LatestInstalled" xml:space="preserve">
-    <value>Update is not required because you have the latest version of the program.</value>
-  </data>
-  <data name="UPD_UpdateFailure" xml:space="preserve">
-    <value>An error occurred while trying to run installer. The program has not been updated. Run the update again later!</value>
-  </data>
-  <data name="UPD_UpdateSuccessful" xml:space="preserve">
-    <value>The new version has been successfully received from server. We will install it now!</value>
-  </data>
-  <data name="Opts_Error" xml:space="preserve">
-    <value>Warning! An error occurred during saving your settings!</value>
-  </data>
-  <data name="Opts_Saved" xml:space="preserve">
-    <value>The application settings has been saved successfully. Some of them will be activated only after restarting the application.</value>
-  </data>
-  <data name="PS_CleanupFull" xml:space="preserve">
-    <value>Clean {0}?</value>
-  </data>
-  <data name="GT_SaveFailure" xml:space="preserve">
-    <value>An error occurred while saving graphical settings!</value>
-  </data>
-  <data name="BU_NoSelected" xml:space="preserve">
-    <value>No files selected! Please select at least one and try again.</value>
-  </data>
-  <data name="KB_ExException" xml:space="preserve">
-    <value>An error occurred during execution. Make sure you have administrator rights!</value>
-  </data>
-  <data name="KB_ExQuestion" xml:space="preserve">
-    <value>Do you really want to {0}?</value>
-  </data>
-  <data name="KB_ExRestore" xml:space="preserve">
-    <value>Restore default settings?</value>
-  </data>
-  <data name="KB_ExSuccess" xml:space="preserve">
-    <value>The required action has been successfully completed!</value>
-  </data>
-  <data name="AppUpdateAvailable" xml:space="preserve">
-    <value>Notice! Update for {0} is available. We recommend you upgrade as soon as possible via the menu Help - Check for updates, or manually.</value>
-  </data>
-  <data name="AppXMLParseError" xml:space="preserve">
-    <value>An error occurred while parsing XML file with a list of games. Perhaps it is missing or damaged. Please reinstall the program.</value>
-  </data>
-  <data name="AppDefaultSteamLangID" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="SteamNonASCIINotDetected" xml:space="preserve">
-    <value>Steam installation status: Steam directory path does not contain restricted characters.</value>
-  </data>
-  <data name="PS_CleanException" xml:space="preserve">
-    <value>An error occurred during cleanup. Perhaps you have no rights necessary for this action.</value>
-  </data>
-  <data name="AppSafeClnStTextOff" xml:space="preserve">
-    <value>BackUp: OFF</value>
-  </data>
-  <data name="AppSafeClnStTextOn" xml:space="preserve">
-    <value>BackUp: ON</value>
-  </data>
-  <data name="AppSafeClnDisabled" xml:space="preserve">
-    <value>Attention! You have disabled SafeClean module, so backups will not be created until it will be re-activated.</value>
-  </data>
-  <data name="CE_NoFileOpened" xml:space="preserve">
-    <value>Open file to use this feature!</value>
-  </data>
-  <data name="AppCVListURL" xml:space="preserve">
-    <value>http://developer.valvesoftware.com/wiki/Console_Command_List</value>
-  </data>
-  <data name="AppAlreadyLaunched" xml:space="preserve">
-    <value>{0} is already running. Starting the second copy is not allowed!</value>
-  </data>
-  <data name="CE_BackUpCreated" xml:space="preserve">
-    <value>Backup of {0} was successfully created!</value>
-  </data>
-  <data name="GT_NCFFailure" xml:space="preserve">
-    <value>An error occurred during saving the game graphics settings into a file!</value>
-  </data>
-  <data name="GT_NCFNReady" xml:space="preserve">
-    <value>Warning! To save the graphical settings, you must fill in all the forms!</value>
-  </data>
-  <data name="AppGenericError" xml:space="preserve">
-    <value>Fatal error occurred! The application will be terminated.</value>
-  </data>
-  <data name="BU_BType_Cont" xml:space="preserve">
-    <value>Archive</value>
-  </data>
-  <data name="BU_UnknownType" xml:space="preserve">
-    <value>Unknown file type. Can't restore it!</value>
-  </data>
-  <data name="BU_BName_Bud" xml:space="preserve">
-    <value>Archive of</value>
-  </data>
-  <data name="BU_BType_Video" xml:space="preserve">
-    <value>Video</value>
-  </data>
-  <data name="PS_ArchFailed" xml:space="preserve">
-    <value>Warning! An error occured during packing files. Archive was not created!</value>
-  </data>
-  <data name="PS_CleanInProgress" xml:space="preserve">
-    <value>Cleaning up...</value>
-  </data>
-  <data name="AppNoGamesSelected" xml:space="preserve">
-    <value>Warning! No games selected. Select game and try again later.</value>
-  </data>
-  <data name="PS_FrFInfo" xml:space="preserve">
-    <value>We can free up to {0} hard-disk space after cleanup.</value>
-  </data>
-  <data name="AppStartSteamFailed" xml:space="preserve">
-    <value>Unable to start Steam. Please reinstall and try again later.</value>
-  </data>
-  <data name="GT_RegOpenErr" xml:space="preserve">
-    <value>Could not open registry key. Please start game at least once and try again.</value>
-  </data>
-  <data name="AppNoGamesDLog" xml:space="preserve">
-    <value>No games detected. Steam located as: {0}.</value>
-  </data>
-  <data name="AppRestrSymbLog" xml:space="preserve">
-    <value>NonASCII characters detected. Path: {0}.</value>
-  </data>
-  <data name="AppFailedToGetData" xml:space="preserve">
-    <value>Warning! Failed to get data from game database. Please try again or select another game!</value>
-  </data>
-  <data name="BU_BinaryFile" xml:space="preserve">
-    <value>The selected file is a binary. Unable open it in text editor!</value>
+  <data name="UPD_AppCheckFailure" xml:space="preserve">
+    <value>Update check failed. Please try again later.</value>
   </data>
   <data name="UPD_AppNoUpdates" xml:space="preserve">
     <value>No new updates available. Your application is up to date.</value>
   </data>
+  <data name="UPD_AppOtherPlatform" xml:space="preserve">
+    <value>Automatic updates on {0} platform is not supported yet. Please install update from official site manually.</value>
+  </data>
   <data name="UPD_AppUpdateAvail" xml:space="preserve">
     <value>Application update available. New version: {0}.</value>
+  </data>
+  <data name="UPD_DbCheckFailure" xml:space="preserve">
+    <value>Game database update check failed. Please try again later.</value>
   </data>
   <data name="UPD_DbNoUpdates" xml:space="preserve">
     <value>No new updates detected. SRC Repair is using latest version of game database.</value>
@@ -453,20 +651,14 @@
   <data name="UPD_DbUpdateAvail" xml:space="preserve">
     <value>Game database update available. New version: {0} ({1}).</value>
   </data>
-  <data name="DB_WrkInProgress" xml:space="preserve">
-    <value>Checking for updates. Please wait!</value>
+  <data name="UPD_ExceptionDetected" xml:space="preserve">
+    <value>An error occurred while checking for updates! Allow the program to get data from the Internet and try again later.</value>
   </data>
-  <data name="BU_BType_Unkn" xml:space="preserve">
-    <value>Unknown</value>
+  <data name="UPD_HashFailure" xml:space="preserve">
+    <value>Downloaded file has incorrect hash. Maybe it was corrupted. Please try again later!</value>
   </data>
-  <data name="BU_BName_Config" xml:space="preserve">
-    <value>Game config of</value>
-  </data>
-  <data name="HD_InstallSuccessfull" xml:space="preserve">
-    <value>HUD installation successfull!</value>
-  </data>
-  <data name="HD_InstallError" xml:space="preserve">
-    <value>Error occured during installation. Please try again later.</value>
+  <data name="UPD_HUDCheckFailure" xml:space="preserve">
+    <value>HUD database update check failed. Please try again later.</value>
   </data>
   <data name="UPD_HUDNoUpdates" xml:space="preserve">
     <value>No new updates detected. SRC Repair is using latest version of HUD database.</value>
@@ -474,214 +666,22 @@
   <data name="UPD_HUDUpdateAvail" xml:space="preserve">
     <value>HUD database update available. New version: {0} ({1}).</value>
   </data>
-  <data name="AR_UnpackException" xml:space="preserve">
-    <value>An error occured during unpacking selected archive. Additional information can be found in debug log.</value>
+  <data name="UPD_LatestDBInstalled" xml:space="preserve">
+    <value>Update is not required because you already have the latest version.</value>
   </data>
-  <data name="PS_ProgressArchive" xml:space="preserve">
-    <value>Creating backup...</value>
-  </data>
-  <data name="PS_ProgressCleanup" xml:space="preserve">
-    <value>Cleanup in progress...</value>
-  </data>
-  <data name="PS_ProgressFinished" xml:space="preserve">
-    <value>Done.</value>
-  </data>
-  <data name="PS_ProcessPrepare" xml:space="preserve">
-    <value>Starting cleanup...</value>
-  </data>
-  <data name="AppNoDebugFile" xml:space="preserve">
-    <value>Debug log file not found!</value>
-  </data>
-  <data name="HD_NotTested" xml:space="preserve">
-    <value>Selected HUD is not fully compatible with the latest version of the game. We recommend you to upgrade the HUD database.</value>
-  </data>
-  <data name="HD_Outdated" xml:space="preserve">
-    <value>Installation of outdated HUDs is not allowed. Please update database or select another HUD.</value>
-  </data>
-  <data name="PS_AppRunning" xml:space="preserve">
-    <value>{0} application is running! To execute this cleanup please close it.</value>
-  </data>
-  <data name="PS_CacheChkReq" xml:space="preserve">
-    <value>Cleanup successfully completed! You should run game cache integrity check now.</value>
-  </data>
-  <data name="LV_LoadFailed" xml:space="preserve">
-    <value>Failed to load error log. Try again later.</value>
-  </data>
-  <data name="HD_DbOutdated" xml:space="preserve">
-    <value>HUD database outdated. Please update database from menu Help.</value>
-  </data>
-  <data name="HD_DynBarText" xml:space="preserve">
-    <value>HUD database {0}. Last update: {1}.</value>
-  </data>
-  <data name="HD_StatusOutdated" xml:space="preserve">
-    <value>outdated</value>
-  </data>
-  <data name="HD_StatusUpdated" xml:space="preserve">
-    <value>actual</value>
-  </data>
-  <data name="LV_ClearEx" xml:space="preserve">
-    <value>Could not purge log file! Please try again later.</value>
-  </data>
-  <data name="GameNonASCIIDetected" xml:space="preserve">
-    <value>Warning! Restricted symbols detected in selected games' path. Steam and the games will not work correctly.</value>
-  </data>
-  <data name="GameNonASCIINotDetected" xml:space="preserve">
-    <value>Game installed correctly: directory path does not contain illegal characters.</value>
-  </data>
-  <data name="AppSizeBytes" xml:space="preserve">
-    <value>B</value>
-  </data>
-  <data name="AppSizeGigabytes" xml:space="preserve">
-    <value>GB</value>
-  </data>
-  <data name="AppSizeKilobytes" xml:space="preserve">
-    <value>KB</value>
-  </data>
-  <data name="AppSizeMegabytes" xml:space="preserve">
-    <value>MB</value>
-  </data>
-  <data name="AC_NoItemsSelected" xml:space="preserve">
-    <value>No items selected. Please select and then try again!</value>
-  </data>
-  <data name="MM_ExceptionDetected" xml:space="preserve">
-    <value>An error detected while parsing game banlist file. Try again later.</value>
-  </data>
-  <data name="MM_SaveException" xml:space="preserve">
-    <value>An error occured while saving database into file. It may be damaged.</value>
-  </data>
-  <data name="MM_SavedOK" xml:space="preserve">
-    <value>Successfully updated!</value>
-  </data>
-  <data name="BU_BName_VChat" xml:space="preserve">
-    <value>Muted players</value>
-  </data>
-  <data name="BU_BType_DB" xml:space="preserve">
-    <value>Database</value>
-  </data>
-  <data name="HD_BtnUpdateText" xml:space="preserve">
-    <value>Update selected HUD</value>
-  </data>
-  <data name="HD_BtnInstallText" xml:space="preserve">
-    <value>Install selected HUD</value>
-  </data>
-  <data name="RW_RmException" xml:space="preserve">
-    <value>An error occured during files removal. Some files were not deleted.</value>
+  <data name="UPD_LatestInstalled" xml:space="preserve">
+    <value>Update is not required because you have the latest version of the program.</value>
   </data>
   <data name="UPD_NoWritePermissions" xml:space="preserve">
     <value>Can not write into application directory. Start updater with admin rights!</value>
   </data>
-  <data name="UPD_AppCheckFailure" xml:space="preserve">
-    <value>Update check failed. Please try again later.</value>
-  </data>
-  <data name="UPD_DbCheckFailure" xml:space="preserve">
-    <value>Game database update check failed. Please try again later.</value>
-  </data>
-  <data name="UPD_HUDCheckFailure" xml:space="preserve">
-    <value>HUD database update check failed. Please try again later.</value>
-  </data>
-  <data name="MM_ConvRest" xml:space="preserve">
-    <value>Conversion from SteamIDv3 to legacy SteamID32 is not allowed!</value>
-  </data>
-  <data name="AppVideoDbNotFound" xml:space="preserve">
-    <value>Cannot find video database file of "{0}" in file "{1}".</value>
-  </data>
-  <data name="PS_ProcessDetected" xml:space="preserve">
-    <value>Steam process has been successfully terminated!</value>
-  </data>
-  <data name="AppQuestionTemplate" xml:space="preserve">
-    <value>{0}?</value>
-  </data>
-  <data name="HD_LastUpdateInfo" xml:space="preserve">
-    <value>Selected HUD last update: {0}.</value>
-  </data>
-  <data name="GT_NCFLoadFailure" xml:space="preserve">
-    <value>Failed to load several graphical settings. Please report this bug.</value>
-  </data>
-  <data name="UPD_HashFailure" xml:space="preserve">
-    <value>Downloaded file has incorrect hash. Maybe it was corrupted. Please try again later!</value>
-  </data>
-  <data name="UPD_LatestDBInstalled" xml:space="preserve">
-    <value>Update is not required because you already have the latest version.</value>
-  </data>
   <data name="UPD_UpdateDBSuccessful" xml:space="preserve">
     <value>The database has been updated successfully!</value>
   </data>
-  <data name="AppExceptionTemplate" xml:space="preserve">
-    <value>Exception "{0}" raised by: "{1}".</value>
+  <data name="UPD_UpdateFailure" xml:space="preserve">
+    <value>An error occurred while trying to run installer. The program has not been updated. Run the update again later!</value>
   </data>
-  <data name="CS_NEParamsFormException" xml:space="preserve">
-    <value>Not enough configs in list.</value>
-  </data>
-  <data name="SD_NEParamsFormException" xml:space="preserve">
-    <value>Not enough SteamIDs in list.</value>
-  </data>
-  <data name="CS_FailedToOpenCfg" xml:space="preserve">
-    <value>An error occured. Failed to open config selector! Try again later.</value>
-  </data>
-  <data name="AppIncorrectSrcVersion" xml:space="preserve">
-    <value>Incorrect Source version detected. This game is not fully supported. Please report this bug to developers!</value>
-  </data>
-  <data name="UPD_AppOtherPlatform" xml:space="preserve">
-    <value>Automatic updates on {0} platform is not supported yet. Please install update from official site manually.</value>
-  </data>
-  <data name="HD_HashError" xml:space="preserve">
-    <value>Failed to check hash sum of downloaded file. Maybe it was damaged. Please try again later!</value>
-  </data>
-  <data name="AppHelpCHMNotFound" xml:space="preserve">
-    <value>Offline help system is not installed or not available for your language yet!</value>
-  </data>
-  <data name="AppNoSteamIDSetected" xml:space="preserve">
-    <value>No Steam user profiles detected! Please run Steam at least once and then try again.</value>
-  </data>
-  <data name="HD_DownloadError" xml:space="preserve">
-    <value>Cannot find downloaded HUD archive. Please try again later.</value>
-  </data>
-  <data name="AR_BkgWrkExText" xml:space="preserve">
-    <value>Archive not found.</value>
-  </data>
-  <data name="PS_BwBusy" xml:space="preserve">
-    <value>Cleanup targets is not yet available! Please try again in 10 seconds.</value>
-  </data>
-  <data name="PS_ClnWndInitError" xml:space="preserve">
-    <value>An error occured while trying to open cleanup window. Additional information about this issue has been added to logs.</value>
-  </data>
-  <data name="AppSteamPathEnterInvalid" xml:space="preserve">
-    <value>Invalid Steam directory entered by user.</value>
-  </data>
-  <data name="AppSteamPathEnterWinClosed" xml:space="preserve">
-    <value>User closed "Find Steam" window.</value>
-  </data>
-  <data name="AppAlrLaunched" xml:space="preserve">
-    <value>The program is already running. Starting the second copy is not allowed.</value>
-  </data>
-  <data name="AppLibVersionMissmatch" xml:space="preserve">
-    <value>Core library version does not match application version. Please reinstall or report this issue to developers.</value>
-  </data>
-  <data name="FP_DownloadError" xml:space="preserve">
-    <value>Cannot find downloaded archive with FPS-config. Please try again later.</value>
-  </data>
-  <data name="FP_HashError" xml:space="preserve">
-    <value>Failed to check hash sum of downloaded file. Maybe it was damaged. Please try again later!</value>
-  </data>
-  <data name="FP_EditorLoadFailure" xml:space="preserve">
-    <value>Failed to load FPS-config to Config Editor!</value>
-  </data>
-  <data name="FP_BtnInstallText" xml:space="preserve">
-    <value>Install selected config</value>
-  </data>
-  <data name="FP_BtnUpdateText" xml:space="preserve">
-    <value>Update selected config</value>
-  </data>
-  <data name="FP_BtnReplaceText" xml:space="preserve">
-    <value>Replace to selected config</value>
-  </data>
-  <data name="FP_BtnUninstallAllText" xml:space="preserve">
-    <value>Remove installed config</value>
-  </data>
-  <data name="FP_BtnUninstallSelectedText" xml:space="preserve">
-    <value>Remove selected config</value>
-  </data>
-  <data name="FP_UninstallQuestion" xml:space="preserve">
-    <value>Remove selected FPS-config?</value>
+  <data name="UPD_UpdateSuccessful" xml:space="preserve">
+    <value>The new version has been successfully received from server. We will install it now!</value>
   </data>
 </root>
