@@ -114,13 +114,13 @@
         <Name>budhud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/budhud/budhud_fde1aeb3.zip</URI>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/budhud/budhud_a9a6a42b.zip</URI>
         <UpURI>https://github.com/WhiskerBiscuit/budhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.jpg</Preview>
         <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
-        <Hash>542ddbe80910d9bc1b1b8aa27cad2cd9</Hash>
-        <Hash2>ee0d135d02db8c13387f556053ca6a7f79de1c05b93f84b87d9289a5f3e3b90176e44c6904618bbf7ccd5c11209437869268ebbea7bca2459e1e8bbdadeb054f</Hash2>
-        <LastUpdate>1579237462</LastUpdate>
+        <Hash>2463fdfad8bcdae018dcce2a30d66b30</Hash>
+        <Hash2>f5bd661f40b24beb57fe418ebbd36cde8bacc62a97a3cb8d68172c9473eeeaeea483c1b616551cc2ec2d479adf493f2e5a5c36b19a6c7af1e1da90bf76eae714</Hash2>
+        <LastUpdate>1581195343</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=207</Site>
         <ArchiveDir>budhud-master</ArchiveDir>
         <InstallDir>budhud</InstallDir>
@@ -264,13 +264,13 @@
         <Name>FlawHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/flawhud/flawhud_8ab2bf90.zip</URI>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/flawhud/flawhud_4487a3f6.zip</URI>
         <UpURI>https://github.com/CriticalFlaw/FlawHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/flawhud.jpg</Preview>
         <RepoPath>https://github.com/CriticalFlaw/FlawHUD</RepoPath>
-        <Hash>b7fd0984667a2d0265b9409abe20ffd1</Hash>
-        <Hash2>f1a4943e9a4d895e049b0e798cca5f13951d1e58e7a7cf179bd561723e29a5e58ef1ca8b881fbf9bcf5a8debb58d00d958fa6f06f0c1a100c1df3d5ec3f45562</Hash2>
-        <LastUpdate>1578253998</LastUpdate>
+        <Hash>abb38e2d34fba51211175f956e984930</Hash>
+        <Hash2>e683fd8351413a369c480bcd2f78ae29cfa752f03c84c99438f706757e069f9316ea2c3be0ecc22e43c973e2680a7443ddfb05b90c98f87563e3d1e9928c28e8</Hash2>
+        <LastUpdate>1581719146</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=252</Site>
         <ArchiveDir>FlawHUD-master</ArchiveDir>
         <InstallDir>flawhud</InstallDir>
