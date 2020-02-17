@@ -36,14 +36,14 @@ echo Starting build process using MSBUILD...
 "%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" ..\srcrepair.sln /m /t:Build /p:Configuration=Release /p:TargetFramework=v4.7.2
 
 echo Generating documentation in HTML format...
-call "..\docs\help\ru\make.cmd" htmlhelp
+call "..\docs\help\make.cmd" htmlhelp
 
 echo Generating HTML help file...
-"%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "..\docs\help\ru\build\htmlhelp\srcrepair_ru.hhp"
+"%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "..\docs\help\build\htmlhelp\srcrepair.hhp"
 
 echo Installing generated CHM files...
 mkdir "..\srcrepair\bin\Release\help"
-move "..\docs\help\ru\build\htmlhelp\srcrepair_ru.chm" "..\srcrepair\bin\Release\help\srcrepair_ru.chm"
+move "..\docs\help\build\htmlhelp\srcrepair.chm" "..\srcrepair\bin\Release\help\srcrepair_ru.chm"
 
 echo Signing binaries...
 "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\srcrepair\bin\Release\srcrepair.exe
@@ -70,8 +70,8 @@ echo Signing built artifacts...
 "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\srcrepair_%RELVER%_dev.7z
 
 echo Removing temporary files and directories...
-rd /S /Q "..\docs\help\ru\build\doctrees"
-rd /S /Q "..\docs\help\ru\build\htmlhelp"
+rd /S /Q "..\docs\help\build\doctrees"
+rd /S /Q "..\docs\help\build\htmlhelp"
 rd /S /Q "..\srcrepair\bin"
 rd /S /Q "..\srcrepair\obj"
 rd /S /Q "..\corelib\bin"
