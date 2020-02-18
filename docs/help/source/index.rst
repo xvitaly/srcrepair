@@ -1,6 +1,6 @@
 .. _index:
 
-Справочная система SRC Repair
+SRC Repair offline help
 ======================================
 
 .. toctree::
