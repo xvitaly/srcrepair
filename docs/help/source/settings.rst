@@ -1,32 +1,31 @@
 .. _settings:
 
 *******************************
-Настройки программы
+Program settings
 *******************************
 
-.. index:: основные настройки, общие настройки
+.. index:: settings, main settings, generic settings, common settings
 .. _settings-main:
 
-Общие настройки программы
+Common settings
 ==========================================
 
- * **Подтверждать выход из программы** -- включает или отключает запрос на подтверждение выхода из программы.
- * **Скрывать не поддерживаемые игры** -- если включена, то не полностью поддерживаемые игры будут скрыты из списка даже если они корректно установлены в Steam.
- * **Выделять цветом старые резервные копии** -- включает или отключает подсветку жёлным цветом старых резервных копий на :ref:`одноимённой странице <backups>`, которые хранятся более 30 дней.
- * **Создавать бэкап перед запуском очистки** -- активирует функцию принудительного создания резервных копий любых удаляемых :ref:`модулем очистки <cleanup-wizard>` файлов. Не рекомендуется включать данную опцию, т.к. это, во-первых, замедлит работу модуля очиски программы, а, во-вторых, приведёт к хранению ненужных данных на диске.
- * **Удалять пустые каталоги после очистки** -- при активации автоматически удаляет пустые каталоги, которые остались в результате :ref:`очистки <cleanup-wizard>`;
- * **Разрешить установку новейших версий HUD** -- активирует функцию получения :ref:`файлов HUD <hud-manager>` напрямую из их репозиториев. Это может привести к установке не до конца протестированных нестабильных версий. Следует использовать с осторожностью.
+ * **Confirm exit** -- enable or disable exit confirmation dialog.
+ * **Hide unsupported by application games** -- if enabled, partially supported games will not be shown.
+ * **Auto-highlight old backup files** -- enable or disable highlighting of older than 30 days files on :ref:`backups page <backups>`.
+ * **Compress files to zip before deletion** -- if enabled, backups for all removed by :ref:`cleanup module <cleanup-wizard>` files will be created. Not recommended, because it will slow down process and create backup containers with garbage files on disk.
+ * **Remove empty directories after safe cleanup** -- enable or disable automatic removal of empty directories after running :ref:`cleanup process <cleanup-wizard>`.
+ * **Allow download and install latest (untested) HUDs** -- if enabled, :ref:`HUD manager <hud-manager>` will try to download latest versions of HUDs directly from their repositories. Installation of such untested HUDs may be dangerous. Proceed with caution.
 
-.. index:: дополнительные настройки, расширенные настройки
+.. index:: settings, advanced settings, additional settings
 .. _settings-advanced:
 
-Дополнительные настройки программы
+Advances settings
 ==========================================
 
- * **Включить ведение журнала ошибок программы** -- включает или отключает ведение отладочного журнала программы. По умолчанию данный файл расположен в **%APPDATA%\\SRC Repair\\debug.log**.
- * **Разрешить небезопасные методы очистки** -- позволяет активировать ряд небезопасных методов, что позволит :ref:`модулю очистки <cleanup-wizard>` обнаружить и удалить больше файлов. При использовании данной опции настоятельно рекомендуется по завершении процесса очистки выполнять :ref:`проверку целостности кэша <cleanup-advanced>`.
- * **Проверять обновления при запуске** -- включает или отключает встроенный модуль автоматической проверки наличия новых версий программы.
- * **Не показывать устаревшие HUD** -- разрешает или запрещает отображение в списке :ref:`установленных HUD <hud-manager>` устаревших версий, однако их установка и дальнейшее использование не рекомендуется.
- * **Загружать FPS-конфиги с зеркал** -- разрешает или запрещает скачивание :ref:`FPS-конфигов <fps-configs>` с зеркал вместо основного контент-сервера.
- * **Текстовый редактор** -- позволяет задать внешний текстовый редактор, который будет использоваться для отображения и редактирования текстовых файлов. Для выбора достаточно нажать кнопку **Обзор** и найти его на диске.
- * **Имя кастомного каталога** -- позволяет задать имя кастомного каталога, в который будут установлены нестандартные файлы, конфиги и модификации. Поддерживается не всеми играми.
+ * **Allow unsafe cleanup operations** -- allow some unsafe methods for :ref:`cleanup module <cleanup-wizard>`. It will find and remove more files, but can cause game data corruption. You should run :ref:`verification of game cache <cleanup-advanced>` to find and fix possible issues directly after performing cleanup with this feature enabled.
+ * **Automatically check for updates** -- enable or disable checking for updates on program startup (once a week).
+ * **Don't show outdated HUDs** -- if enabled, :ref:`HUD Manager <hud-manager>` will show outdated versions of HUDs. We do not recommend to install them.
+ * **Use mirrors to download FPS-configs** -- enable or disable downloading of :ref:`FPS-configs <fps-configs>` from mirrors instead of using or main content server.
+ * **Text editor binary** -- select text editor to load and edit text files instead of using default one. Press **Browse** button and find its executable on disk.
+ * **Custom directory name** -- specify directory name for custom stuff installation (only for games with its support).
