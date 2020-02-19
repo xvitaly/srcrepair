@@ -39,11 +39,11 @@ echo Generating documentation in HTML format...
 call "..\docs\help\make.cmd" htmlhelp
 
 echo Generating HTML help file...
-"%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "..\docs\help\build\htmlhelp\srcrepair.hhp"
+"%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "..\docs\help\build\htmlhelp\srcrepair_en.hhp"
 
 echo Installing generated CHM files...
 mkdir "..\srcrepair\bin\Release\help"
-move "..\docs\help\build\htmlhelp\srcrepair.chm" "..\srcrepair\bin\Release\help\srcrepair_ru.chm"
+move "..\docs\help\build\htmlhelp\srcrepair_en.chm" "..\srcrepair\bin\Release\help\srcrepair_en.chm"
 
 echo Signing binaries...
 "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\srcrepair\bin\Release\srcrepair.exe
