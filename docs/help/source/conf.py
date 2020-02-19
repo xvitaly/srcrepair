@@ -153,7 +153,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'srcrepair.tex', 'Справочная система SRC Repair',
+    (master_doc, 'srcrepair.tex', 'SRC Repair offline help',
      'EasyCoding Team', 'manual'),
 ]
 
@@ -163,7 +163,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'srcrepair', 'Справочная система SRC Repair',
+    (master_doc, 'srcrepair', 'SRC Repair offline help',
      [author], 1)
 ]
 
@@ -174,8 +174,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'srcrepair', 'Справочная система SRC Repair',
-     author, 'srcrepair', 'Справочная система SRC Repair.',
+    (master_doc, 'srcrepair', 'SRC Repair offline help',
+     author, 'srcrepair', 'SRC Repair offline help.',
      'Miscellaneous'),
 ]
 
