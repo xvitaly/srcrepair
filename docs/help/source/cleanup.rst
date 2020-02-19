@@ -1,80 +1,86 @@
 .. _cleanup:
 
 *******************************
-Устранение проблем и очистка
+Troubleshooting and cleanup
 *******************************
 
-Инструменты, представленные на этой странице позволяют решать большинство известных проблем, с которыми сталкиваются пользователи Steam и Source-игр, а также очищать выбранную игру от различного мусора, который накапливается при её использовании.
+With tools, presented on this page, you can resolve most of the known Steam and Source Engine games issues. Also you can clean up garbage, accumulated in game on regular daily use.
 
-.. index:: устранение проблем, восстановление, модуль восстановления
+.. index:: troubleshooting, blob files cleanup, registry entries cleanup
 .. _cleanup-troubleshooting:
 
-Устранение проблем и восстановление
+Troubleshooting and recovery
 ==========================================
 
-Чтобы запустить восстановление Steam, нужно установить галочки в чекбоксы **Очистить .blob-файлы из каталога Steam** и/или **Очистить записи Steam, хранящиеся в реестре** (недоступно на платформах, отличных от Microsoft Windows) и нажать кнопку **Выполнить!**.
+To run Steam client recovery, enable **Clean .blob files from Steam directory** or/and **Clean all registry entries** (require admin rights; not available on non-Windows platforms) checkboxes, then press button **Cleanup Now!**.
 
-Внимание! После нажатия кнопки **Выполнить**, все процессы Steam будут автоматически завершены (если он был запущен).
+Warning! Steam client will be automatically terminated (if running).
 
-Известные проблемы, исправляемые данным модулем:
+Known issues, can be resolved by this tool:
 
- * ошибки входа в Steam;
- * ошибки типа **Серверы Steam перегружены**, **Эта игра недоступна в настоящее время**, **Ошибка подключения к серверам Steam**;
- * ошибки бесконечного подключения к серверам (Steam делает вид, что подключается, но ничего не происходит);
- * ошибки, связанные со списком друзей (например, после выхода из игры статус остаётся **В игре** и не меняется длительное время и т.д.);
- * повреждённые файлы Steam, например, после неправильного выхода из него за счёт их принудительного обновления с официальных серверов;
- * множество других ошибок.
+ * Steam logon errors;
+ * errors like **Steam servers is not available**, **This game is not available at this time**, **No Steam connection**, **Cannot connect to Steam network**, etc.;
+ * endless Steam connection to servers;
+ * some issues, related to Friends system;
+ * damaged Steam installation (after running this, Steam client will be re-downloaded from official servers);
+ * some other issues.
 
-.. index:: принцип работы модуля восстановления, алгоритм восстановления
+.. index:: troubleshooting, principle of operation, recovery process
 .. _cleanup-principle:
 
-Принцип работы инструмента восстановления
+Principle of operation
 ============================================
 
- * При выборе пункта **Очистить .blob-файлы из каталога Steam**, программа получает из реестра путь установки Steam и удаляет оттуда файлы с расширением blob, а также прописывает следующий запуск Steam в режиме обновления. Внимание! При выборе этой опции при следующем запуске в режиме обновления Steam потребует повторно авторизоваться в сервисе, т.к. файлы blob, содержащие служебную информацию, были удалены.
- * При выборе пункта **Очистить записи Steam, хранящиеся в реестре**, программа удаляет содержимое ключа реестра ``HKEY_CURRENT_USER\Software\Valve\Steam``, модифицирует содержимое ``HKEY_LOCAL_MACHINE\Software\Valve\Steam``, исправляя известные ошибки в них, а также указывает Steam при следующем запуске запуститься в режиме восстановления. При выборе этой опции, нужно обязательно указать язык, который будет использовать внутри интерфейса Steam.
+ * if **Clean .blob files from Steam directory** is checked, SRC Repair will get Steam installation directory path, find and remove files with .blob extension, and force Steam recovery on next launch. Warning! Steam can force you to login again after performing this action.
+ * if **Clean all registry entries** is checked, SRC Repair will remove ``HKEY_CURRENT_USER\Software\Valve\Steam`` registry key, modify some values in ``HKEY_LOCAL_MACHINE\Software\Valve\Steam`` (only when running with admin rights), and force Steam recovery on next launch. You will need to specify Steam language from list.
 
-.. index:: проверка пути, модуль проверки пути
+.. index:: troubleshooting, path checker
 .. _cleanup-pathcheck:
 
-Служба обнаружения некорректного пути
+Installation path checker
 ============================================
 
-Проверяет путь Steam на наличие в нём запрещённых символов: русских, немецких, французских и т.д. букв, а также прочих символов юникода. Путь должен содержать только латинские буквы и цифры. Если запрещённые символы будут найдены, то будет выдано сообщение об этом, а также изменится информация на странице **Устранение проблем** в группе **Информация о текущей установке Steam**. Данная служба запускается автоматически при каждом запуске SRC Repair.
+This tool automatically check for restricted (non-ASCII) symbols in Steam installation directory path. Steam path should contain only latin letters and numbers. All other can cause major issues with games, compiled without Unicode support.
 
-.. index:: очистка игр
+If restricted symbols are found, a warning message will be shown. Also you will see red sign in **General information** section.
+
+This tool starts automatically with SRC Repair and cannot be disabled.
+
+.. index:: cleanup, game cleanup, safe cleanup
 .. _cleanup-wizard:
 
-Служба очистки игр и удаления ненужных данных
+Game cleanup wizard
 ===============================================
 
-Позволяет пользователю быстро и безболезненно удалить ненужные и/или устаревшие данные и кэши, которые способны занимать на жёстком диске несколько сотен мегабайт свободного места.
+This tool allow you to clean up garbage, accumulated in game on regular daily use. It can free-up lots of disk space.
 
-После выбора варианта очистки программа произведёт поиск ненужных данных и выдаст :ref:`отдельное окно модуля очистки<modules-cleanup>`, в котором вы сможете просмотреть список файлов, помеченных для удаления.
+After selecting cleanup action, you will see a separate :ref:`safe clean window <modules-cleanup>`. You can check the list of files, marked to deletion.
 
-Если около имени файла стоит флажок, значит он будет удалён при запуске очистки. Чтобы оставить файл, просто уберите флажок около него. Для запуска очистки нажмите кнопку **Выполнить очистку**, для выхода без очистки -- **Отмена**.
+All marked files will be removed. If you don't want to remove some files, uncheck checkbox near its name.
 
-В настоящее время SRC Repair способен выполнять следующие варианты очистки:
+When done, press **Execute cleanup** button to run cleanup sequence. If you changed your mind  -- press **Cancel**.
 
- * **кастомные карты** -- удаляет нестандартные карты, скачанные с серверов. Это позволит ускорить запуск игры (Source-игра при своём запуске их считывает чтобы добавить в список доступных карт) и освободить много места на жёстком диске (от нескольких сотен мегабайт до нескольких гигабайт);
- * **кэш загрузок** -- содержит данные, когда-либо скачанные с игровых серверов, спреи всех игроков, когда-либо игравших вместе с вами на игровом сервере, а также недокачанные и повреждённые во время скачивания файлы. Способен занимать сотни мегабайт. Содержит абсолютно ненужные данные. Рекомендуется очищать несколько раз в месяц;
- * **кастомный каталог** -- удаляет все установленные нестандартные модификации игры, расположенные в ``/custom``;
- * **кастомные звуки** -- очищает загруженные с серверов и установленные пользователем нестандартные звуковые файлы;
- * **FPS-конфиги** -- позволяет удалить все установленные FPS-конфиги;
- * **звуковой кэш** -- удаляет звуковой кэш, созданный игрой. Используйте в случаях его повреждения, либо для оптимизации. Кэш будет создан заново при следующем запуске игры;
- * **вторичный кэш** -- содержит данные, скачанные с игровых серверов. Рекомендуется очищать несколько раз в месяц;
- * **скриншоты** -- удаляет скриншоты из подкаталога ``/screenshots``. Удаление скриншотов способно освободить от нескольких сотен мегабайт до десятка гигабайт места на диске;
- * **записанные демки** -- удаляет все записанные или установленные демки (файлы \*.dem), находящиеся в каталоге игры. Это способно освободить от нескольких десятков до нескольких сотен мегабайт места на диске;
- * **модели и текстуры** -- позволяет удалить нестандартные текстуры и модели, установленные пользователем, либо скачанные с игровых серверов;
- * **глубокая очистка** -- запускает удаление всего возможного мусора, а также старых бинарников, кэшей и конфигов. По окончании **необходимо** запустить проверку целостности кэша;
- * **реплеи (повторы)** -- удаляет кэши, созданные системой Replay.
+Currently supported by SRC Repair cleanu actions:
 
-.. index:: глубокая очистка игр, модуль глубокой очистки
+ * **custom maps** -- remove downloaded or installed custom maps. This will free lots of disk space and can speed-up game startup;
+ * **download cache** -- remove downloaded from game servers data: personal sprays of all players, you ever seen on servers, different partial downloaded or damaged during download files, etc. Contains garbage. We recommend to run this cleanup at least once a week;
+ * **custom directory** -- remove installed custom modifications from ``/custom`` directory (only if supported by game);
+ * **custom sounds** -- remove sound files downloaded from game servers;
+ * **FPS-configs** -- remove installed :ref:`FPS-configs <fps-about>`;
+ * **graph and sound cache** -- remove sound and graphic caches, created by game. It can fix some issues. Will be automatically created on next game launch;
+ * **secondary cache** -- remove downloaded from game servers cache files. We recommend to run this cleanup at least once a month;
+ * **screenshots** -- remove screenshots from ``/screenshots`` directory. Can free-up lots of disk space;
+ * **recorded demos** -- remove downloaded or installed demo files (files \*.dem) from game directory;
+ * **models and textures** -- remove models and textures downloaded from game servers or installed by different custom modifications;
+ * **deep cleanup** -- try to remove all garbage from game at once. You **must** run game :ref:`cache verification <cleanup-advanced>` after running this cleanup;
+ * **replays** -- remove files, created by Replays system (only if supported by game).
+
+.. index:: cleanup, game cleanup, deep cleanup
 .. _cleanup-advanced:
 
-Служба специальной очистки
+Deep cleanup
 ============================================
 
- * **Очистить все настройки игры** -- позволяет полностью удалить графические и прочие настройки управляемой игры. Перед удалением будет создана резервная копия.
- * **Очистить старые бинарники и лаунчеры** -- полностью удаляет двоичные файлы, которые используются для запуска программы (содержимое каталогов ``/bin``, ``/{game}/bin`` и файл ``/hl2.exe``). Используйте данный вариант очистки если игра у Вас не запускается, либо вылетает сразу после запуска с ошибкой. Данный вариант полностью безопасен. После окончания очистки запустите проверку целостности кэша.
- * **Проверить целостность игрового кэша** -- запускает проверку файлов игры на наличие повреждений, а также докачивает отсутствующие. Рекомендуется запускать после выполнения глубокой очистки, а также удаления старых бинарников и лаунчеров.
+ * **Clean game settings (+video)** -- reset all in-game video settings. Backup file will be created.
+ * **Remove all binaries and launchers** -- remove game binaries and launchers (contents of ``/bin``, ``/{game}/bin`` directories and ``/hl2.exe`` file). Use this if you have issues with starting game, crashes of different origin, etc. You **must** verify game cache after running this cleanup.
+ * **Validate game cache files** -- force game cache verification. Will check all game files and re-download corrupted or missing. You must run this process after running deep cleanup or removing game binaries and launchers.
