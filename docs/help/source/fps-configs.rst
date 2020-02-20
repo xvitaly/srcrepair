@@ -51,7 +51,7 @@ FPS-config installation
 
 To install FPS-config, select it from the list of available configs, press **Install selected config** button and confirm this operation.
 
-If safe clean is enabled (green light in status bar) and you already has installed ``autoexec.cfg`` file, backup will be created automatically. You can restore or delete in on :ref:`BackUps <backups-about>` tab.
+If safe clean is enabled (green light in status bar) and you already has installed ``autoexec.cfg`` file, backup will be created automatically. You can restore or delete it on :ref:`BackUps <backups-about>` tab.
 
 Some configs are not supported by games. You will see warning message if so.
 
@@ -65,7 +65,7 @@ FPS-config uninstallation
 
 To remove FPS-config, select it from the list of available configs, press **Remove selected config** (or **Remove installed config**) button and confirm this operation.
 
-If safe clean is enabled (green light in status bar), backup will be created automatically. You can restore or delete in on :ref:`BackUps <backups-about>` tab.
+If safe clean is enabled (green light in status bar), backup will be created automatically. You can restore or delete it on :ref:`BackUps <backups-about>` tab.
 
 .. index:: FPS-configs, FPS-configs known issues, missing voice chat, missing sprays
 .. _fps-troubleshooting:

@@ -46,7 +46,7 @@ Loading config file
   2. Edit config as described in :ref:`working with config editor <editor-working>`.
   3. Press **Save config** button on main toolbar to save changes in config file.
 
-If safe clean is enabled (green light in status bar), backup file will be created automatically. You can restore or delete in on :ref:`BackUps <backups-about>` tab.
+If safe clean is enabled (green light in status bar), backup file will be created automatically. You can restore or delete it on :ref:`BackUps <backups-about>` tab.
 
 .. index:: config editor, useful information
 .. _editor-other:
