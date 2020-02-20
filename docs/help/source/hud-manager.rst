@@ -1,54 +1,62 @@
 .. _hud-manager:
 
 **********************************
-Управление пользовательскими HUD
+HUD manager
 **********************************
 
-На этой странице вы сможете быстро и безопасно установить, удалить или обновить один из протестированных нами HUD в выбранную игру.
-
-.. index:: управление HUD, информация о HUD
+.. index:: hud, hud manager
 .. _hud-about:
 
-Управление HUD
+HUD manager
 ==========================================
 
-Для начала необходимо выбрать HUD из списка доступных для данной игры. Через несколько секунд вы увидите скриншот игры с его использованием для удобства выбора подходящего. Если для выбранной игры в базе нет HUD, данный модуль будет недоступен. В настоящее время HUD поддерживаются только для игры Team Fortress 2.
+On this page you can install one of available and tested HUDs into selected game.
 
-Внимание! Не устанавливайте более одного HUD в игру, т.к. это может привести к непредсказуемым последствиям!
+Each HUD has a readme file and a screenshot. Select one from list and you will be able to see it.
 
-.. index:: установка HUD
+All HUDs are being downloaded from our cloud and provided by "as is" license.
+
+This module will be unavailable if current game does not support custom HUDs.
+
+.. index:: hud, hud installation
 .. _hud-install:
 
-Установка HUD
+HUD installation
 ==========================================
 
-Чтобы установить HUD, выберите его из списка, а затем нажмите кнопку **Установить выбранный HUD**. Все необходимые для работы файлы будут загружены с нашего CDN автоматически. По окончании вы получите сообщение об успешной установке или ошибке если она вдруг произойдёт.
+To install HUD, select it from the list of available HUDs, press **Install selected HUD** button and confirm this operation.
 
-.. index:: удаление HUD
+All required files will be downloaded and installed automatically.
+
+Do not install more than one HUD because it can lead to unpredictable consequences.
+
+.. index:: hud, hud unintallation
 .. _hud-uninstall:
 
-Удаление HUD
+HUD uninstallation
 ==========================================
 
-Чтобы удалить HUD, выберите его из списка и нажмите кнопку **Удалить выбранный HUD**. Данная кнопка доступна только для уже установленных HUD.
+To remove HUD, select it from the list of available HUDs, press **Remove selected HUD** button and confirm this operation.
 
-.. index:: обновление HUD, переустановка HUD
+This action available only for installed HUDs.
+
+.. index:: hud, hud updates, reinstalling hud
 .. _hud-update:
 
-Обновление или переустановка HUD
+Updating installed HUD
 ==========================================
 
-В любой момент вы можете переустановить, либо обновить до новейшей доступной версии любой установленный HUD. Для этого просто выберите его из списка и нажмите кнопку **Обновить выбранный HUD**.
+To update or reinstall installed HUD, select it from the list of available HUDs, press **Update selected HUD** button and confirm this operation.
 
-Внимание! Если вы производили какие-то изменения в файлах установленного HUD, они будут потеряны.
+Warning! All custom changes in installed HUD will be permanently lost.
 
-.. index:: домашняя страница HUD, ручное редактирование файлов HUD
+.. index:: hud, hud homepage, hud controls, hud buttons
 .. _hud-other:
 
-Прочие элементы управления
+Additional HUD manager buttons
 ==========================================
 
-Наряду с уже описанными кнопками модуля Менеджер HUD, существуют ещё две:
+Additional buttons:
 
- * переход на домашнюю страницу HUD в используемом по умолчанию веб-обозревателе;
- * кнопка с лупой -- показать файлы установленного HUD в файловом менеджере по умолчанию для используемой ОС (в Windows -- в Проводнике).
+  * button with house -- open HUD homepage in a default Web browser;
+  * button with magnifying glass -- show installed HUD files in a default file manager.
