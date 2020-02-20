@@ -1,159 +1,174 @@
 .. _graphic-tweaker:
 
 **********************************
-Редактор графических настроек
+Graphic tweaker
 **********************************
 
-Инструменты вкладки **Графические настройки** позволяют легко и быстро редактировать все основные настройки управляемой игры.
+Tools on this page allow to view or edit graphic settings of all supported Source Engine games without needed to launch them.
 
-.. index:: первый тип игры, Source Type1, настройки первого типа
+.. index:: graphic settings, source type 1
 .. _gt-type1:
 
-Настройки графики игр первого типа
+Graphic settings of Type 1 games
 ==========================================
 
-Доступные опции:
+Available settings:
 
- * **разрешение по горизонтали** -- целое число в диапазоне от 640 до 2000 пикселей;
- * **разрешение по вертикали** -- целое число в диапазоне от 480 до 1900 пикселей;
- * **режим запуска**: полноэкранный или оконный. В большинстве случаев рекомендуется полноэкранный режим, т.к. он работает наиболее стабильно на большинстве компьютеров. Оконный режим может вызывать сбои при запуске игры (появление чёрного экрана вместо игры, либо вылетов на рабочий стол) и требует намного больше системных ресурсов, т.к. наряду с игрой, приходится прорисовывать ещё и окружение Windows;
- * **детализация моделей**: низкая, средняя или высокая. Чем больше значение, тем более мощная видеокарта потребуется для игры;
- * **детализация текстур**: низкая, средняя или высокая (аналогично детализации моделей);
- * **шейдеры**: низк. и высок. -- управляет качеством эффектов, реализуемых с помощью шейдеров;
- * **отражения в воде**: простые (в воде не отображается ничего), отображать мир (игровой мир отображается в воде (баланс между качеством картинки и производительностью) или отображать всё (максимальное качество отражений, требуется мощная видеокарта и CPU));
- * **прорисовка теней**: низкая или высокая -- управляет качеством динамических теней. Чем выше значение, тем более мощный процессор и видеокарта потребуется для рассчётов. Отключить тени полностью можно только с помощью FPS-конфигов, либо в ручную через редактирование собственного файла автозапуска autoexec.cfg;
- * **коррекция цвета**: включена или выключена -- отвечает за программную коррекцию цветовой гаммы;
- * **сглаживание**: отключено, 2x, 4x, 8x или 16x -- задаёт параметры полноэкранного сглаживания (Anti-Aliasing (FSAA)) и алгоритм сглаживания: аппаратный (задействуются ресурсы только видеокарты) или программный (задействуется и видеокарта, и процессор; достигается наилучший результат, но расходуется слишком много ресурсов);
- * **фильтрация**: билинейная, трилинейная или анизотропная \*x (2x, 4x, 8x, 16x) -- задаёт параметры фильтрации текстур. Чем выше значение, тем более мощная видеокарта потребуется. Наилучшее соотношение производительность/качество достигается при анизотропной фильтрации 4x или 8x. Трилинейная фильтрация на большинстве видеокарт работает быстрее билинейной, поэтому и используется в большинстве конфигов по умолчанию;
- * **вертикальная синхронизация** (ограничитель кадров): выключена или включена -- управляет вертикальной синхронизацией. При включении, видеокарта будет выдавать столько кадров, сколько способен выдать Ваш монитор (на большинстве ЖК мониторов частота регенерации составляет 60 Гц, следовательно видеокарта будет также выдавать 60 кадров в секунду (если сможет, конечно ;-)). При отключении, видеокарта будет выдавать столько кадров, сколько сможет рассчитать. Совет: включите на современных компьютерах чтобы снизить шум кулера видеокарты;
- * **размытие движения**: выключено или включено -- включает или выключает постэффект Motion Blur (не рекомендуется включать);
- * **режим DirectX**: 8.0, 8.1, 9.0, 9.0c -- позволяет выбрать нужный режим DirectX. На слабых компьютерах рекомендуется выбирать 8.0 или 8.1 для того, чтобы увеличить кадровую частоту (FPS), а на современных 9.0c для достижения максимального качества картинки;
- * **HDR**: выключены или включены -- позволяет включить или выключить эффекты High Dynamic Range.
+  * **horisontal resolution** -- integer in range between *640* to *2000* pixels;
+  * **vertical resolution** -- integer in range between *480* to *1900* pixels;
+  * **display mode**: *fullscreen* or *windoweed*. Fullscreen is recommended in most cases to get maximum framerate;
+  * **model quality**: *low*, *medium* or *high*. Highest value will require the most powerful GPU;
+  * **texture quality**: *low*, *medium* or *high* (the same as models);
+  * **shaders quality**: *low* or *high* -- set shader effects quality;
+  * **water reflections**: *simple* (no water reflections at all), *reflect world* (balanced between quality and performance) or *reflect all* (maximum quality, all reflections will be enabled; will require high-end CPU and GPU);
+  * **shadow quality**: *low* or *high* -- set shadow quality. Shadows can be disabled completely only by :ref:`FPS-config installation <fps-install>`;
+  * **color correction**: *enabled* or *disabled* -- configure software color and gamma correction;
+  * **antialiasing mode**: *disabled*, *2x*, *4x*, *8x* or *16x* -- set anti-aliasing (FSAA) quality level and its alghorithm: hardware (only GPU will be used) or software (both GPU and CPU; maximum quality with huge resource consumption);
+  * **filtering mode**: *bilinear*, *trilinear* or *anisotropic* \*x (2x, 4x, 8x, 16x) -- set texture filtering level. The higher level, the most powerful GPU will be required. Optimal performance/quality ratio can be achieved with anisotropic 4x or 8x levels. Trilinear filtration is faster then bilinear or anisotropic;
+  * **vertical synchronization**: *disabled* or *enabled* -- control vertical synchronization (frame limiter). When enabled, framerate will be limited by your monitor refresh rate and prevent screen tearing;
+  * **motion blur**: *disabled* or *enabled* -- enable or disable motion blur post-effect;
+  * **DirectX mode**: *8.0*, *8.1*, *9.0*, *9.0c* -- set DirectX feature level. 8.x will disable some effects and significantly increase performance. Some games support only 9.0c;
+  * **High Dynamic Range**: *disabled* or *enabled* -- allow or disallow High Dynamic Range effects.
 
-.. index:: второй тип игры, Source Type2, настройки второго типа
+.. index:: graphic settings, source type 2
 .. _gt-type2:
 
-Настройки графики игр второго типа
+Graphic settings of Type 2 games
 ==========================================
 
-Графические настройки в играх данного типа отличаются от предыдущего не только по их количеству, но и по способу хранения (в играх 1 типа настройки хранятся в реестре Windows, а здесь -- в файле **video.txt**). Рассмотрим более подробно:
+Available settings:
 
- * **разрешение по горизонтали** -- целое число в диапазоне от 640 до 2000 пикселей;
- * **разрешение по вертикали** -- целое число в диапазоне от 480 до 1900 пикселей;
- * **формат экрана** -- обычный (4:3), широкоэкранный (16:9), широкоэкранный (16:10);
- * **яркость** -- задаёт яркость в самой игре. Позволяет уменьшать или увеличивать её путём перемещения ползунка по шкале. Нормальная (стандартная) яркость -- среднее значение шкалы;
- * **режим отображения**: полноэкранный или оконный. Аналогично GCF играм;
- * **режим сглаживания**: отключено, 2x, 4x, 8x или 16x -- задаёт параметры полноэкранного сглаживания (Anti-Aliasing (FSAA)) и алгоритм сглаживания. Аналогично GCF играм;
- * **режим фильтрации**: билинейная, трилинейная или анизотропная \*x (2x, 4x, 8x, 16x) -- задаёт параметры фильтрации текстур. Аналогично GCF играм;
- * **вертикальная синхронизация** (ограничитель кадров): выключена или включена -- управляет вертикальной синхронизацией;
- * **многоядерный рендеринг** -- выключено или включено. Позволяет задействовать для рендеринга все ядра многоядерных процессоров. Может вызывать вылеты, но значительно увеличивает кадровую частоту;
- * **шейдерные эффекты** -- низкие, средние, высокие и очень высокие. Управляет качеством эффектов, реализуемых с помощью шейдеров;
- * **детальность эффектов** -- низкая, средняя и высокая. Задаёт качество эффектов, для отрисовки которых используются ресурсы центрального процессора;
- * **доступный пул памяти** -- низкий, высокий. Задаёт объём памяти, который сможет адресовать игра. При достаточном объёме установленной оперативной памяти всегда выбирайте высокий;
- * **качество моделей и текстур** -- низкая, средняя и высокая. Задаёт качество отрисовки моделей и текстур и их детальность.
+  * **horisontal resolution** -- integer in range between *640* to *2000* pixels;
+  * **vertical resolution** -- integer in range between *480* to *1900* pixels;
+  * **aspect ratio** -- *normal (4:3)*, *widescreen (16:9)* or *widescreen (16:10)*;
+  * **brightness** -- set in-game brightness level;
+  * **shadow quality**: *low* or *high* -- set shadow quality. Shadows can be disabled completely only by :ref:`FPS-config installation <fps-install>`;
+  * **motion blur**: *disabled* or *enabled* -- enable or disable motion blur post-effect;
+  * **display mode** -- *fullscreen*, *windoweed*, *windoweed (no border)*;
+  * **antialiasing mode**: *disabled*, *2x*, *4x*, *8x* or *16x* -- set anti-aliasing (FSAA) quality level and its alghorithm: hardware (only GPU will be used) or software (both GPU and CPU; maximum quality with huge resource consumption);
+  * **filtering mode**: *bilinear*, *trilinear* or *anisotropic* \*x (2x, 4x, 8x, 16x) -- set texture filtering level. The higher level, the most powerful GPU will be required. Optimal performance/quality ratio can be achieved with anisotropic 4x or 8x levels. Trilinear filtration is faster then bilinear or anisotropic;
+  * **wait for vertical sync**: *disabled*, *enabled (double buffered)* or *enabled (triple buffered)* -- control vertical synchronization (frame limiter). When enabled, framerate will be limited by your monitor refresh rate and prevent screen tearing;
+  * **multicore rendeding** -- *disabled* or *enabled*. Allow to use all physical cores in multicore CPUs. Can cause crashes, but significantly increase framerate;
+  * **shader detail**: *low*, *medium*, *high* or *very high* -- set shader effects quality;
+  * **effect detail**: *low*, *medium*, or *high* -- set normal effects quality;
+  * **paged memory pool** -- *low*, *medium*, *high* - set maximum size of game memory pool;
+  * **model and texture detail**: *low*, *medium* or *high*. Highest value will require the most powerful GPU.
 
-.. index:: параметры запуска игры
+.. index:: launch options, game launch options
 .. _gt-params:
 
-Параметры запуска игры
+Game launch options
 =================================================
-Строка **Параметры запуска** позволяет указать параметры инициализации управляемой игры. Эта строка предназначена лишь для опытных пользователей. Если вы не знаете для чего она нужна и что сюда вводить -- не вводите ничего и оставьте строку пустой. Параметры нужно вводить в одну строку через один пробел, например:
+
+**Game launch options** allow user to see or to override game launch options. This option provided for power users only. Most of users should not use it.
+
+All parameters must be separated by spaces. For example:
 
 .. code-block:: text
 
     -novid -full -h 1280 -w 1024
 
+Warning! Do not use ``-dxlevel`` command-line option, because it will lead to the fact that the game video settings will no longer be saved correctly. This is a known issue for all Source Engine games.
 
-Внимание! Не используйте параметр запуска **-dxlevel**, т.к. это приведёт к тому, что настройки игры перестанут корректно сохраняться. Это известный баг всех игр на движке Source.
-
-.. index:: управление параметрами запуска игры
+.. index:: launch options, game launch options, changing launch options
 .. _gt-setparams:
 
-Управление параметрами запуска игры
+Changing game launch options
 =================================================
 
-Запустите Steam, выберите в списке нужную игру, нажмите по ней правой кнопкой мыши -- выберите **Свойства** -- нажмите кнопку **Параметры запуска** и укажите нужные вам параметры запуска, затем нажмите **OK** и запустите игру.
+Start Steam client -- select game from Steam Library -- press right mouse button -- select **Properties** -- press **Set launch options** button -- set new launch options -- press **OK** and **Close** -- launch game.
 
-.. index:: параметры запуска игры, список параметров запуска
+.. index:: launch options, game launch options, list of supported launch options
 .. _gt-launchopts:
 
-Основные параметры запуска игр
+List of supported launch options
 =================================================
 
- * **-novid** (**-novideo**) -- отключает видеоролик, проигрываемый при запуске игры;
- * **-autoconfig** -- восстанавливает настройки графики по умолчанию. Игнорирует любые установленные конфиги до удаления данного параметра;
- * **-full** (**-fullscreen**) -- запускать игру в полноэкранном режиме;
- * **-window** (**-sw** или **-windowed**) -- запускать игру в оконном режиме;
- * **-width** или **-w** -- указать разрешение или ширину окна по горизонтали;
- * **-height** или **-h** -- указать разрешение или высоту окна по вертикали;
- * **-console** -- включает и автоматически запускает консоль разработчика;
- * **-dxlevel** -- устанавливает режим DirectX (80, 81, 90, 95). Категорически не рекомендуется к использованию (подробности читайте выше). Вместо него лучше использовать выбор режима DirectX в одноимённом поле :ref:`графического твикера <gt-type1>`;
- * **-autoconfig** -- игнорирует настройки всех конфигов. Восстаналивает настройки по умолчанию;
- * **-heapsize ЧИСЛО** -- устанавливает количество занимаемой памяти. Рассчитывается по формуле: (оперативная память / 2 * 1024). Примеры чисел для ОП:
-   
-   * 512 МБ -> **262144**;
-   * 1 ГБ -> **524288**;
-   * 2 ГБ -> **1048576**;
-   * 3 ГБ -> **1572864**;
-   * 4 ГБ -> **2097152**;
- 
- * **-nojoy** -- отключает джойстик в игре;
- * **-noipx** -- не загружает IPX соединений, позволяет сэкономить оперативную память;
- * **-noborder** -- не отображать рамку и заголовок окна при запуске игры в оконном режиме;
- * **-noforcemspd** -- использовать настройки скорости мыши из Windows;
- * **-noforcemparms** -- использовать настройки кнопок мыши из Windows;
- * **-noforcemaccel** -- использовать настройки ускорения мыши из Windows;
- * **-freq ЧИСЛО** (**-refresh ЧИСЛО**) -- устанавливает частоту регенерации монитора (для ЖК мониторов рекомендуется 60 Гц, а для ЭЛТ -- 85 или 100 Гц);
- * **-nocrashdialog** -- запрещает встроенный в игру отладчик, позволяет сэкономить немного оперативной памяти;
- * **-32bit** -- запускает игру в 32-битном режиме на 64-битной операционной системе (x64);
- * **-dev** -- включает режим разработчика: последние строки консоли будут отображаться поверх HUD игры. Не рекомендуется использовать;
- * **-condebug** -- включает режим отладки, при котором всё содержимое консоли будет записываться в файл console.log;
- * **-toconsole** -- принудительно запускает консоль, даже есть указан параметр +map, заставляющий движок загрузить карту при запуске игры;
- * **-lv** -- включает режим Low Violence в Left 4 Dead (2);
- * **-sillygibs** -- включает режим Low Violence в Team Fortress 2.
+Available launch options:
 
-.. index:: максимальное качество
+  * **-novid** (**-novideo**) -- disable game intro video;
+  * **-autoconfig** -- restore default settings. Game will ignore all settings and :ref:`FPS-configs <fps-about>`;
+  * **-full** (**-fullscreen**) -- start game in fullscreen mode;
+  * **-window** (**-sw** или **-windowed**) -- start game in windowed mode;
+  * **-width** или **-w** -- set horisontal resolution or window size;
+  * **-height** или **-h** -- set vertical resolution or window size;
+  * **-console** -- enable and automatically launch developer console;
+  * **-dxlevel** -- enforce DirectX level (available values - *80*, *81*, *90*, *95*). Do not use it due to :ref:`known major issues <gt-params>`. Use :ref:`graphic tweaker <gt-type1>` instead;
+  * **-heapsize ЧИСЛО** -- set heap size. Can be calculated by following: (RAM / 2 * 1024). Examples for popular RAM sizes:
+
+    * 512 MB -> **262144**;
+    * 1 GB -> **524288**;
+    * 2 GB -> **1048576**;
+    * 3 GB -> **1572864**;
+    * 4 GB -> **2097152**;
+
+  * **-nojoy** -- disable gamepads initialization;
+  * **-noipx** -- disable IPX connections support;
+  * **-noborder** -- disable border in windowed mode;
+  * **-noforcemspd** -- use mouse speed settings from Windows;
+  * **-noforcemparms** -- use mouse buttons settings from Windows;
+  * **-noforcemaccel** -- use mouse acceleration settings from Windows;
+  * **-freq X** (**-refresh X**) -- set monitor refresh rate for fullscreen mode;
+  * **-nocrashdialog** -- disable built-in debugger. Will disable crash reports;
+  * **-32bit** -- start game in legacy 32-bit mode when running under 64-bit operating system (x64);
+  * **-dev** -- enable developer mode: game debug messages will be shown directly on HUD;
+  * **-condebug** -- write contents of developer console to ``console.log`` file;
+  * **-toconsole** -- force console mode even if ``+map`` parameter is used;
+  * **-lv** -- enable Low Violence mode in Left 4 Dead (2);
+  * **-sillygibs** -- enable Low Violence mode in Team Fortress 2.
+
+.. index:: video profiles, maximum quality profile
 .. _gt-maxquality:
 
-Профиль настроек: максимальное качество
+Video profiles: maximum quality
 =================================================
-Кнопка **Максимальное качество** устанавливает все графические настройки на рекомендуемый максимум:
 
- * **режим запуска** -> полноэкранный;
- * **детализация моделей** -> высокая;
- * **детализация текстур** -> высокая;
- * **шейдеры** -> высоко;
- * **отражения в воде** -> отражать мир;
- * **прорисовка теней** -> высокая;
- * **коррекция цвета** -> включена;
- * **сглаживание** -> нет (отключено);
- * **фильтрация** -> Анизотропная 4x;
- * **вертикальная синхронизация** -> выключена;
- * **размытие движения** -> выключено;
- * **режим DirectX** -> 9.0c;
- * **HDR** -> полные.
+**Maximum quality** button will set all graphic settings to recommended maximum:
 
-.. index:: максимальная производительность
+ * **display mode** -> fullscreen;
+ * **model quality** -> high;
+ * **texture quality** -> high;
+ * **shader quality** -> high;
+ * **water reflections** -> reflect world;
+ * **shadow quality** -> high;
+ * **color correction** -> enabled;
+ * **antialiasing** -> disabled;
+ * **filtering** -> anisotropic 4x;
+ * **vertical synchronization** -> disabled;
+ * **motion blur** -> disabled;
+ * **DirectX mode** -> 9.0c;
+ * **High Dynamic Range** -> полные.
+
+.. index:: video profiles, maximum performance profile
 .. _gt-maxfps:
 
-Профиль настроек: максимальная производительность
+Video profiles: maximum performance
 ===================================================
-Кнопка **Максимальная производительность**, наоборот, устанавливает все графические настройки на рекомендуемый минимум:
 
- * **режим запуска** -> полноэкранный;
- * **детализация моделей** -> низкая;
- * **детализация текстур** -> низкая;
- * **шейдеры** -> низко;
- * **отражения в воде** -> простые;
- * **прорисовка теней** -> низкая;
- * **коррекция цвета** -> выключена;
- * **сглаживание** -> нет (отключено);
- * **фильтрация** -> трилинейная;
- * **вертикальная синхронизация** -> выключена;
- * **размытие движения** -> выключено;
- * **режим DirectX** -> запрос на включение 8.0;
- * **HDR** -> выключены.
+**Maximium performance** button will set all graphic settings to recommended minimum:
 
-Чтобы ещё больше снизить качество изображения и получить наибольшее число кадров в секунду, воспользуйтесь одним из FPS-конфигов на странице :ref:`FPS-конфиги <fps-configs>`.
+ * **display mode** -> fullscreen;
+ * **model quality** -> low;
+ * **texture quality** -> low;
+ * **shader quality** -> low;
+ * **water reflections** -> simple;
+ * **shadow quality** -> low;
+ * **color correction** -> disabled;
+ * **antialiasing** -> disabled;
+ * **filtering** -> trilinear;
+ * **vertical synchronization** -> disabled;
+ * **motion blur** -> disabled;
+ * **DirectX mode** -> will ask user to enable 8.0;
+ * **High Dynamic Range** -> disabled.
 
-Внимание! Кнопки **Максимальное качество** и **Максимальная производительность** автоматически не сохраняют внесённые изменения, а дают вам возможность подкорректировать что-либо. Чтобы сохранить настройки, нажмите кнопку **Сохранить**.
+If you want to reach maximum performance, you should install special :ref:`FPS-config <fps-configs>`.
+
+.. index:: video profiles, useful information
+.. _gt-other:
+
+Other useful information about profiles
+================================================
+
+**Maximum quality** and **Maximium performance** will not automatically save video settings. You should check and save them manually by pressing **Save settings** button.
+
+If safe clean is enabled (green light in status bar), backup will be created automatically. You can restore or delete it on :ref:`BackUps <backups-about>` tab.
