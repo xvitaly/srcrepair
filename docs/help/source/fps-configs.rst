@@ -1,88 +1,103 @@
 .. _fps-configs:
 
 *******************************
-Управление FPS-конфигами
+FPS-config manager
 *******************************
 
-.. index:: FPS-конфиг
+.. index:: FPS-configs
 .. _fps-about:
 
-О FPS-конфигах
+About FPS configs
 ==========================================
 
-На этой странице вы можете быстро установить один из доступных и протестированных нами FPS-конфигов в выбранную игру. Конфиг (файл конфигурации) представляет собой текстовый файл с именем ``autoexec.cfg``, который способен значительно увеличить производительность игры со значительной потерей качества выдаваемой картинки. Установленный конфиг можно редактировать в модуле :ref:`Редактор конфигов <editor-working>`.
+On this page you can install one of available and tested FPS-configs into selected game. FPS-config is a text file with ``autoexec.cfg`` name. It can significantly increase game performance by changing extended video settings.
 
-Внимание! Если вы используете FPS-конфиг, то настройки, находящиеся на вкладке **Графические настройки** не будут влиять на игру, т.к. настройки, полученные из конфига, имеют более высокий приоритет.
+Settings, obtained from FPS-config, have higher priority than set by :ref:`Graphic tweaker <graphic-tweaker>` or by the game itself. Select config from list to read it's description.
 
-Все FPS-конфиги загружаются из облака и распространяются по лицензии "как есть".
+Installed FPS-configs can be edited in :ref:`Config editor <editor-working>`.
 
-.. index:: поддерживаемые FPS-конфиги
+All FPS-configs are being downloaded from our cloud and provided by "as is" license.
+
+.. index:: FPS-configs, supported FPS-configs
 .. _fps-available:
 
-Поддерживаемые FPS-конфиги
+Supported FPS-configs
 ==========================================
 
-В текущей версии доступно более 15 различных конфигов:
+The following FPS-configs are supported by current version of application:
 
- * v1tsk_high_fps;
- * m0refps;
- * m0rehighfps;
- * skullhighfps;
- * bonhighfps;
- * chrishighfps;
- * chrismaxfps;
- * chrismaxquality;
- * chrisdx9frames;
- * comangliastability;
- * comangliamaxfps;
- * comangliacinema;
- * dt_legal;
- * mastercomfig-maxperf;
- * mastercomfig-quality;
- * rhaprody-perf.
+  * v1tsk_high_fps;
+  * m0refps;
+  * m0rehighfps;
+  * skullhighfps;
+  * bonhighfps;
+  * chrishighfps;
+  * chrismaxfps;
+  * chrismaxquality (reverse);
+  * chrisdx9frames;
+  * comangliastability;
+  * comangliamaxfps;
+  * comangliacinema (reverse);
+  * dt_legal;
+  * mastercomfig-maxperf;
+  * mastercomfig-quality (reverse);
+  * rhaprody-perf.
 
-.. index:: установка FPS-конфига
+.. index:: FPS-configs, FPS-config installation
 .. _fps-install:
 
-Установка FPS-конфига
+FPS-config installation
 ==========================================
 
-Чтобы установить конфиг, выберите один из предустановленных конфигов, доступных для этой игры, нажмите на кнопку **Установить выбранный конфиг** и ответьте утвердительно на вопрос. Если включена опция безопасной очистки (в статусной строке программы горит зелёный индикатор), то при наличии уже существующего файла autoexec.cfg, будет автоматически создана его резервная копия, которую вы сможете восстановить в любое время на странице :ref:`Резервные копии <backups-restore>`.
+To install FPS-config, select it from the list of available configs, press **Install selected config** button and confirm this operation.
 
-Внимание! Далеко не все конфиги поддерживаются управляемой игрой. Если вы выбрали неподдерживаемый конфиг, будет выведено соответствующее сообщение. Не рекомендуется устанавливать неподдерживаемые конфиги в игру, т.к. это может привести к непредсказуемым последствиям.
+If safe clean is enabled (green light in status bar) and you already has installed ``autoexec.cfg`` file, backup will be created automatically. You can restore or delete in on :ref:`BackUps <backups-about>` tab.
 
-.. index:: удаление FPS-конфига
+Some configs are not supported by games. You will see warning message if so.
+
+Do not install multiple FPS-configs to game. It will cause unpredictable consequences.
+
+.. index:: FPS-configs, FPS-config uninstallation
 .. _fps-uninstall:
 
-Удаление FPS-конфига
+FPS-config uninstallation
 ==========================================
 
-Чтобы удалить имеющийся конфиг, нажмите на кнопку **Удалить имеющийся конфиг**. Также будет создана резервная копия удаляемого файла, которая может быть восстановлена позднее.
+To remove FPS-config, select it from the list of available configs, press **Remove selected config** (or **Remove installed config**) button and confirm this operation.
 
-.. index:: проблемы с FPS-конфигами, отсутствие спреев, отсутствие голосового чата
+If safe clean is enabled (green light in status bar), backup will be created automatically. You can restore or delete in on :ref:`BackUps <backups-about>` tab.
+
+.. index:: FPS-configs, FPS-configs known issues, missing voice chat, missing sprays
 .. _fps-troubleshooting:
 
-Возможные проблемы с FPS-конфигами
+Known issues with FPS-configs
 ==========================================
 
-Внимание! Если после удаления FPS-конфига у вас перестали отображаться спреи в игре или вы перестали слышать речь других людей в голосовом чате (некоторые FPS конфиги отключают данные функции), пропишите в консоли разработчика игры (или в файле **autoexec.cfg**) следующие строки::
+After installing FPS-configs voice chat can stop working, sprays and face animation can be disabled. This is conceived. Most of FPS-configs disable this functions in order to significantly increase game performance.
 
-  cl_allowdownload "1"
-  cl_allowupload "1"
-  cl_playerspraydisable "0"
-  r_decals "200"
-  r_spray_lifetime "2"
-  sv_voiceenable "1"
-  voice_modenable "1"
-  voice_scale "1"
-  voice_enable "1"
+If you want to enable them again, you will need to :ref:`remove all installed FPS-configs <fps-uninstall>` and then change following variables via ``autoexec.cfg`` file or developer console:
 
-Если вы прописываете строки в консоли разработчика (вызывается клавишей **~** (тильда)), не забывайте после каждой нажимать **Enter** на клавиатуре.
+.. code-block:: text
 
-.. index:: FPS-конфиг наоборот
+    cl_allowdownload "1"
+    cl_allowupload "1"
+    cl_playerspraydisable "0"
+    r_decals "200"
+    r_spray_lifetime "2"
+    sv_voiceenable "1"
+    voice_modenable "1"
+    voice_scale "1"
+    voice_enable "1"
+    r_eyes "1"
+
+If you use developer console (can be called by pressing **~** (tilde) button), don't forget to press **Enter** after entering each row.
+
+.. index:: FPS-configs, reverse FPS-configs, maximum quality configs
 .. _fps-maxquality:
 
-FPS-конфиги наоборот
+Reverse FPS-configs
 ==========================================
 
-Если вы хотите установить все настройки игры на максимум, установите специальный FPS-конфиг **chrismaxquality**. Это обеспечит наилучшее качество графики, но потребуется производительный компьютер.
+If you want to set all video settings to maxium to get best quality, you can install specical :ref:`reverse FPS-configs <fps-available>`.
+
+You will need a high-end computer to use them.
