@@ -1,55 +1,59 @@
 .. _config-editor:
 
 ************************************
-Редактор файлов конфигурации игр
+Config editor
 ************************************
 
-Редактор файлов конфигурации (далее **конфигов**) позволяет легко и быстро просматривать, создавать и редактировать конфиги любых Source игр и серверов в графическом режиме. Редактор позволяет открывать и сохранять любые конфиги Source-игр через стандартное для Windows окно открытия/сохранения файлов.
+Game configuration file editor (config editor) allow you easily create, view or edit any Source Engine game configs in a simple, but powerful GUI.
 
-.. index:: редактор конфигов, редактор файлов конфигурации игры
+.. index:: config editor, working with config editor
 .. _editor-working:
 
-Работа с редактором
+Working with config editor
 ==========================================
 
-Работать с редактором очень просто. В первом столбце **Переменная** пишется имя переменной, например, ``cl_cmdrate``, а во втором **Значение переменной** -- её значение, например, ``66``. Имя переменной не должно содержать пробелов, комментариев и т.д. Значение переменной можно писать как в кавычках, так и без них. Если значение содержит пробелы, то кавычки обязательны.
+In the first column **Variable** you must specify variable name (eg. ``cl_cmdrate``), and in the second **Value** -- its value (eg. ``66``).
 
-Комментарии в конфигах не допускаются и будут автоматически удалены для уменьшения размера конфига и увеличения скорости его загрузки игрой.
+Variable name must not contain any spaces, commentaries, etc. Value can be both double-quoted, or without them. If value contains spaces, double quotes are mandatory.
 
-Чтобы добавить новую строку просто начинайте набирать текст в последней пустой строке программы.
+All commentaries are forbidden and will be removed on save/load procedures to reduce config file size and increase its loading speed.
 
-Чтобы удалить активную строку, нажмите кнопку **Удалить строку** на панели инструментов редактора или клавишу **Delete** на клавиатуре компьютера. Присутствует возможность удаления сразу нескольких строк. Для этого выделите их мышью, либо с помощью клавиатуры.
+To add a new row, just start typing text in the last cell.
 
-При нажатии клавиши **F7** в ячейке, содержащей имя переменной, будет выведено окно с русскоязычным описанием данной переменной. Если для переменной в нашей базе нет описания, будет выдано соответствующее сообщение с предложением добавить её в БД.
+To remove currently selected row, press **Remove row** button on main toolbar, or press **Delete** on keybooard. You can select and remove multiple rows at once.
 
-Кнопка **Редактировать файл в Блокноте** загрузит редактируемый конфиг в Блокнот Windows (Windows Notepad), либо текстовый редактор по умолчанию в иных операционных системах.
+You can ask program to show hint. Select row and press **F7** to show description of current variable. If no variables found, an error message will be shown.
 
-.. index:: создание конфигов, создание файлов конфигурации игры
+If you want to edit config as text, press **Edit in Notepad** button. File will be loaded into :ref:`selected <settings-advanced>` (or system default) text editor.
+
+.. index:: config editor, creating new configs
 .. _editor-createcfg:
 
-Создание нового файла конфигурации игры
+Creating new configs
 ==========================================
 
- * Нажмите на панели инструментов кнопку **Создать новый конфиг**.
- * Начните заполнять таблицу как описано в **Работа с редактором** выше.
- * Закончив редактирование, нажмите кнопку **Сохранить изменения в файл**. Если файл ранее не сохранялся, то у вас будет запрошено имя файла (расширение вводить не обязательно).
+  1. Press **Create** button on main toolbar.
+  2. Edit config as described in :ref:`working with config editor <editor-working>`.
+  3. Press **Save** button on main toolbar to save changes in config file. If it was a new file, save as dialog will be shown. Extension is not required.
 
-.. index:: открытие конфигов, открытие файлов конфигурации игры
+.. index:: config editor, loading config file
 .. _editor-loadcfg:
 
-Открытие существующего файла конфигурации игры
+Loading config file
 ================================================
 
- * Нажмите кнопку **Открыть конфиг из файла** и выберите файл для редактирования. Окно открытия файла стандартно для Windows, поэтому не должно вызывать вопросов.
- * Произведите редактирование файла как описано в :ref:`Работа с редактором <editor-working>`.
- * Нажмите **Сохранить изменения в файл**. Если включён режим безопасной работы SRC Repair (горит зелёный индикатор в строке состояния), это будет автоматически создана резервная копия файла. Восстановить или удалить её можно на странице **Резервные копии**.
+  1. Press **Open** button on main toolbar and select file on disk with standard open file dialog (depends on platform).
+  2. Edit config as described in :ref:`working with config editor <editor-working>`.
+  3. Press **Save** button on main toolbar to save changes in config file.
 
-.. index:: информация о редакторе
+If safe clean is enabled (green light in status bar), backup file will be created automatically. You can restore or delete in on :ref:`BackUps <backups-about>` tab.
+
+.. index:: config editor, useful information
 .. _editor-other:
 
-Прочая полезная информация о редакторе
+Other useful information
 ================================================
 
-При нажатии кнопки **Создать новый конфиг**, либо **Открыть конфиг из файла** текущее содержимое редактора будет безвозвратно утеряно, поэтому сохраняйте изменения перед созданием нового, либо открытием существующего файла.
+If you :ref:`create a new <editor-createcfg>` or :ref:`load config <editor-loadcfg>`, all existing contents of editor will be removed. Save it before performing this actions.
 
-Чтобы закрыть файл и освободить его ресурсы, просто откройте другой, либо нажмите кнопку **Создать новый конфиг**.
+If you want to close current config file and free its resources, just open another one or press **New** button.
