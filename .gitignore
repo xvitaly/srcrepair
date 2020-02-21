@@ -67,6 +67,9 @@ packages/
 # Idea configs
 .idea
 
+# Doxygen compiled translations
+*.mo
+
 # Other
 /srcrepair/cfgs
 /packaging/results
