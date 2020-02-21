@@ -88,4 +88,4 @@ Uninstalling program
 
 If you want to uninstall SRC Repair from your compuler, use **Control panel** -- **Programs and components** -- **SRC Repair** -- **Uninstall**.
 
-Uninstaller will automatically remove all program files, shortcuts, registry entries, but will save created by user :ref:`data files <gs-backups>`. You can remove them manually.
+Uninstaller will automatically remove all program files, shortcuts, registry entries, but will save created by user :ref:`data files <gs-datafiles>`. You can remove them manually.
