@@ -77,7 +77,7 @@ All other data files -- ``%APPDATA%\SRC Repair``.
 Updating application
 ==========================================
 
-You can check for updates from **Help** -- **Check for updates** menu.
+You can :ref:`check for updates <modules-updater>` from **Help** -- **Check for updates** menu.
 
 SRC Repair will automatically check for new versions once a week (can be disabled in :ref:`advanced settings <settings-advanced>`).
 
