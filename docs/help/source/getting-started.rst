@@ -1,65 +1,92 @@
 .. _getting_started:
 
-***********************
-Приступая к работе
-***********************
+*******************************
+Getting started
+*******************************
 
-.. index:: запуск программы
+.. index:: getting started, starting program, launching application
 .. _gs-launch:
 
-Запуск программы
+Starting program
 ==========================================
 
-Запустить программу можно сразу после установки, либо из меню **Пуск** -- **(Все) Программы** -- **SRC Repair** -- **SRC Repair**.
+You can directly start SRC Repair from start menu after installation: **Start** - **Programs** - **SRC Repair** - **SRC Repair**.
 
-SRC Repair, запущенная стандартным способом, автоматически выбирает язык в зависимости от региональных настроек операционной системы Windows.
+SRC Repair will automatically detect and use system default language.
 
-Если вы запустите программу без прав локального администратора, ряд функций, включая :ref:`Редактор Hosts <modules-mhed>` и :ref:`Модуль отключения системных клавиш <modules-kbd>`, будут недоступны. Чтобы активировать отключённые функции просто запустите программу от учётной записи с правами администратора, а в Windows 7 и выше достаточно нажать правой кнопкой по ярлыку SRC Repair и выбрать в контекстном меню пункт **Запустить от имени администратора**.
 
-.. index:: действия при запуске
+.. index:: administrator rights, permissions, restricted modules, UAC
+.. _gs-admin:
+
+Admin permissions
+==========================================
+
+We recommended to run SRC Repair **without** administrator user rights, but some advanced features will be unavailable:
+
+  * :ref:`Hosts file editor <modules-mhed>`;
+  * :ref:`System hotkeys disabler <modules-kbd>`;
+
+If you want to use them, you will need to run program with administrator user rights. Press right mouse button on SRC Repair's shortcut in start menu or on desktop, select **Run with administrator** and confirm this action in Windows UAC dialog.
+
+After performing needed actions, please switch back to regular user. Staying as super-user is not completely safe.
+
+.. index:: startup actions
 .. _gs-startup:
 
-Действия, выполняемые при запуске
+Startup actions
 ==========================================
 
-При запуске SRC Repair получит из реестра Windows пути к Steam, проверит наличие каталога Steam и игровых данных на диске, а также считает список установленных поддерживаемых игр. Если при проверке не удастся получить путь к каталогу Steam из реестра, будет выдано окно с предложением указать его вручную. Путь, заданный вручную, сохранится в файле конфигурации SRC Repair и при следующем запуске запрошен вновь не будет.
+The following actions will be performed on SRC Repair's startup:
 
-Внимание! При использовании 64-битной версии SRC Repair на 64-битной операционной системе Windows при использовании 32-битного клиента Steam программа потребует указать путь вручную (только один раз). Это не баг, а особенности 64-битной платформы (32-битный Steam хранит свои параметры в 32-битном реестре). Если же установлен 64-битный Steam, никаких сообщений не возникнет.
+  1. getting Steam installation directory path;
+  2. checking if Steam installation directory exists;
+  3. checking if required Steam configuration files exists and can be read;
+  4. getting the list of supported games;
+  5. checking for installed supported games;
+  6. creating user-friendly GUI.
 
-.. index:: начало работы
+If program cannot find Steam installation directory path in registry (only on Microsoft Windows platform) or in known common locations, the **Find Steam directory** dialog will be shown (only once).
+
+.. index:: getting started, working with application, using application
 .. _gs-useapp:
 
-Начало работы с программой
+Using application
 ==========================================
 
-Для начала работы из списка одну из поддерживаемых игр. Если на вашем компьютере обнаружена только одна установленная игра, она будет выбрана автоматически. Ваш выбор сохраняется в настройках программы.
+First you will need to select game from the list of supported and installed Source Engine games. Your choise will be saved.
 
-Если программа не находит ни одной поддерживаемой игры, то просто хотя бы раз запустите эту игру из Steam. После выхода из неё и повторного запуска SRC Repair данная игра появится в списке.
+If only one game will be found, it will be selected automatically.
 
-.. index:: хранение резервных копий, хранение настроек программы
-.. _gs-backups:
+If program cannot find required game, please start it at least once from Steam, then restart SRC Repair.
 
-Хранение параметров и резервных копий
+.. index:: data files storage
+.. _gs-datafiles:
+
+Data files storage
 ==========================================
 
-Настройки SRC Repair хранятся в каталоге ``%LOCALAPPDATA%\EasyCoding_Team``, для каждой версии отдельно.
+All settings will be stored in ``%LOCALAPPDATA%\EasyCoding_Team`` directory (each subdirectory for every version).
 
-Резервные копии, создаваемые программой, хранятся в каталоге ``%APPDATA%\SRC Repair``.
+Created by program :ref:`backups <backups-about>` can found in ``%APPDATA%\SRC Repair\backups`` directory.
 
-.. index:: запуск модуля обновлений
+All other data files -- ``%APPDATA%\SRC Repair``.
+
+.. index:: updating program, application updates
 .. _gs-update:
 
-Обновление программы
+Updating application
 ==========================================
 
-Вы можете запустить обновление программы через меню **Справка** -- **Проверить наличие обновлений**.
+You can check for updates from **Help** -- **Check for updates** menu.
 
-.. index:: удаление программы, деинсталляция
+SRC Repair will automatically check for new versions once a week (can be disabled in :ref:`advanced settings <settings-advanced>`).
+
+.. index:: removing program, uninstalling program
 .. _gs-uninstall:
 
-Удаление программы
+Uninstalling program
 ==========================================
 
-Чтобы удалить программу, запустите встроенную программу удаления через **Панель управления** -- **Установка и удаление программ** -- **SRC Repair** -- **Удалить**.
+If you want to uninstall SRC Repair from your compuler, use **Control panel** -- **Programs and components** -- **SRC Repair** -- **Uninstall**.
 
-Программа автоматического удаления удалит все файлы программы, записи реестра, ярлыки, но не будет удалять её настройки, хранящиеся в XML-файлах, и резервные копии (на случай если вы решите когда-нибудь переустановить SRC Repair). Настройки и резервные копии вы можете удалить вручную из каталогов, которые указаны выше.
+Uninstaller will automatically remove all program files, shortcuts, registry entries, but will save created by user :ref:`data files <gs-backups>`. You can remove them manually.
