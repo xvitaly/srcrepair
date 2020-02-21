@@ -1,236 +1,228 @@
 .. _faq:
 
-******************************
-Часто задаваемые вопросы
-******************************
+*****************************************
+Frequently asked questions (FAQ)
+*****************************************
 
-.. index:: faq, Framework, NET version
+.. index:: faq, framework, dotnet version
 .. _faq-framework:
 
-При попытке запуска программы появляется сообщение об ошибке Microsoft .NET Framework 4.
+How to fix error with Microsoft .NET Framework 4 on program startup?
 ===========================================================================================
 
-Для работы программы необходим пакет Microsoft .NET Framework версии 4.7.2 или выше. Установите его с `официального сайта Microsoft <https://www.microsoft.com/net/download/dotnet-framework-runtime>`__.
+You need installed Microsoft .NET Framework version 4.7.2 or higher in order to start this program.
 
-.. index:: faq, Windows XP, Windows Vista
+You can download if from `official Microsoft website <https://www.microsoft.com/net/download/dotnet-framework-runtime>`__.
+
+.. index:: faq, windows xp, windows vista
 .. _faq-legacy:
 
-Как я могу запустить программу под Windows XP/Vista?
+How can I run program under Windows XP/Vista?
 =========================================================
 
-Поддержка данных устаревших операционных систем полностью прекращена.
+These legacy operating systems are no longer supported.
 
-.. index:: faq, медленный запуск
+.. index:: faq, slow startup
 .. _faq-slow-start:
 
-Программа медленно запускается.
-===================================
-
-Для ускорения запуска программы :ref:`установите <gs-install>` её с правами администратора для всех пользователей. При такой установке будут автоматически созданы и установлены машинные сборки, что значительно ускорит холодный запуск приложения.
-
-.. index:: faq, пиратские версии
-.. _faq-crrrr:
-
-Будет ли программа поддерживать пиратские версии игр?
-=========================================================
-
-Нет, не будет. Мы за лицензионный софт.
-
-.. index:: faq, Source 2
-.. _faq-source2:
-
-Будет ли поддержка игр на движке Source 2 и когда?
-=======================================================
-
-Да, планируется, но точная дата неизвестна.
-
-.. index:: faq, Source 2, Dota 2
-.. _faq-dota2:
-
-Почему не поддерживается Dota 2?
-===================================
-
-Данная игра использует движок Source 2, который в настоящее время не поддерживается.
-
-.. index:: faq, пароль
-.. _faq-password:
-
-Может ли программа украсть пароль?
-======================================
-
-Нет, не может. Вся функциональность программы документирована, а `исходный код открыт <https://github.com/xvitaly/srcrepair>`__ для всех желающих.
-
-.. index:: faq, steam, одновременный запуск
-.. _faq-steam-run:
-
-Безопасно ли запускать программу одновременно со Steam?
-==========================================================
-
-Да, если не выполнять :ref:`очистку кэшей Steam <modules-stmcln>`.
-
-.. index:: faq, одновременный запуск
-.. _faq-game-run:
-
-Безопасно ли использовать программу при запущенной игре, которой я управляю?
-===============================================================================
-
-Настоятельно не рекомендуется, т.к. не гаратируется монопольный доступ к настройкам и файлам конфигурации.
-
-.. index:: faq, VAC бан
-.. _faq-vac:
-
-Могут ли выдать VAC бан за использование программы?
-=======================================================
-
-Нет, но постарайтесь не использовать SRC Repair одновременно с любой защищённой VAC игрой.
-
-.. index:: faq, отзыв
-.. _faq-opinion:
-
-У меня есть предложения/замечания. Где я могу их высказать?
-===============================================================
-
-**Справка** -- **Оставить отзыв о программе**.
-
-.. index:: faq, язык программирования
-.. _faq-lang:
-
-На чём написана программа?
-==============================
-
-C#.
-
-.. index:: faq, брандмауэр, файрвол
-.. _faq-firewall:
-
-Мой файрвол (брандмауэр) заявляет, что SRC Repair хочет получить доступ к сети Интернет. Зачем?
-===================================================================================================
-
-Работает модуль автоматического обновления программы. Раз в неделю он проверяет наличие новых версий на нашем сервере. Если вы не хотите, чтобы программа проверяла обновления, отключите эту функцию в настройках.
-
-.. index:: faq, добавить игру
-.. _faq-add-game:
-
-Я хочу добавить поддержку модификации. Как это сделать?
-===========================================================
-
-Выберите пункт **Справка** -- **Сообщить об ошибке** и создайте заявку на добавление новой игры или модификации. Помните, что поддерживаются только игры на движке Source.
-
-.. index:: faq, Framework
-.. _faq-clr-space:
-
-Сколько занимает пакет Microsoft .NET Framework?
-====================================================
-
-Около 40-45 МБ.
-
-.. index:: faq, сборка из исходников
-.. _faq-sources:
-
-Как собрать программу из исходников?
-========================================
-
-См. `здесь <https://github.com/xvitaly/srcrepair/blob/dev/docs/building-from-sources.md>`__.
-
-.. index:: faq, сообщить об ошибке
-.. _faq-bugreport:
-
-Я нашёл ошибку. Как мне сообщить о ней?
+How to fix slow startup?
 ===========================================
 
-**Справка** -- **Сообщить об ошибке**.
+You can install SRC Repair for all users. Installer will use NGen to generate machine images, which should speed-up program cold startup.
 
-.. index:: faq, очистка мусора
+.. index:: faq, counterfeit, cracked versions
+.. _faq-crrrr:
+
+Can I use program with cracked versions of games?
+=========================================================
+
+No. We support only legal Steam versions of games.
+
+.. index:: faq, source 2
+.. _faq-source2:
+
+Will the Source 2 engine be supported and when?
+=======================================================
+
+Maybe, but no ETA yet.
+
+.. index:: faq, source 2, dota 2
+.. _faq-dota2:
+
+Is Dota 2 supported?
+===================================
+
+This game uses the Source 2 engine, which is not supported yet.
+
+.. index:: faq, steam account, steam password, steam
+.. _faq-password:
+
+Can this program steal my Steam account?
+============================================
+
+No. SRC Repair is a free and opensource program. You can check its `source code on GitHub <https://github.com/xvitaly/srcrepair>`__.
+
+.. index:: faq, steam, simultaneous launch
+.. _faq-steam-run:
+
+Is it safe to run this program with Steam simultaneously?
+===============================================================
+
+Yes, unless you use :ref:`Steam cleanup module <modules-stmcln>`.
+
+.. index:: faq, simultaneous launch
+.. _faq-game-run:
+
+Is it safe to run this program with controlled game simultaneously?
+===========================================================================
+
+We strongly do not recommend doing this, as SRC Repair cannot get exclusive access to its files and settings.
+
+.. index:: faq, vac ban
+.. _faq-vac:
+
+Can I get VAC ban for using this program?
+=======================================================
+
+No, but do not use this program with any running VAC-protected game.
+
+.. index:: faq, report issue, report bug, feature request
+.. _faq-opinion:
+
+How I can report bug or create a new feature request?
+===============================================================
+
+Please open a new issue in our `GitHub bug tracker <https://github.com/xvitaly/srcrepair/issues>`__.
+
+.. index:: faq, firewall, network activity
+.. _faq-firewall:
+
+SRC Repair require Internet access. For what purpose?
+===================================================================================================
+
+SRC Repair need Internet access for checking for updates once a week (can be disabled in :ref:`advanced settings <settings-advanced>`).
+
+.. index:: faq, adding a new game, report issue
+.. _faq-add-game:
+
+I want to add a new game. What should I do?
+===========================================================
+
+Please open a new issue in our `GitHub bug tracker <https://github.com/xvitaly/srcrepair/issues>`__.
+
+We support only Source Engine games.
+
+.. index:: faq, building from sources
+.. _faq-sources:
+
+Can I build SRC Repair from sources?
+=============================================
+
+`Yes, you can <https://github.com/xvitaly/srcrepair/blob/dev/docs/building-from-sources.md>`__.
+
+.. index:: faq, cleanup
 .. _faq-gb-games:
 
-Умеет ли данная программа очищать мусор, остающийся на диске в результате использования игр на движке Source?
+How I can remove garbage, accumulated by installed games?
 ================================================================================================================
 
-Да, умеет. Инструменты вы найдёте на странице :ref:`Устранение проблем и очистка <cleanup-wizard>`.
+Please use tools from :ref:`Troubleshooting and cleanup <cleanup-wizard>` tab.
 
-.. index:: faq, очистка мусора
+.. index:: faq, cleanup
 .. _faq-gb-steam:
 
-Умеет ли данная программа очищать мусор, остающийся на диске в результате использования клиента Steam?
+How I can remove garbage, accumulated by Steam?
 =========================================================================================================
 
-Да. Всё необходимое находится в меню **Инструменты** -- :ref:`Модуль очистки кэшей Steam <modules-stmcln>`.
+Please use :ref:`Steam cleanup module <modules-stmcln>`.
 
-.. index:: faq, установка программы, ошибка
+.. index:: faq, installation error, error
 .. _faq-install-error:
 
-Хочу установить программу в особый каталог, но при запуске установки появляется ошибка.
-==========================================================================================
+I want to change installation directory, but cannot do it due to error. What shall I do?
+====================================================================================================
 
-Чтобы установить программу в привилегированный каталог, установщик должен быть запущен с правами администратора. Нажмите правой кнопкой по установщику и выберите пункт **Запуск от имени администратора**.
+If you want to install program to a privileged directory, you will need to run installer with admininstrator rights.
 
-.. index:: faq, ошибка
+Press right mouse button on installer and select **Run as admininstrator** from context menu.
+
+.. index:: faq, error
 .. _faq-reg-error:
 
-При выборе игры появляется ошибка Произошла ошибка при открытие ключа реестра. Что делать?
+How I can fix "Could not open registry key" error?
 ==============================================================================================
 
-Для начала запустите данную игру из Steam хотя бы один раз, затем перезапустите SRC Repair. Если это не помогает, то скорее всего у вас включён :ref:`параметр запуска <gt-params>` ``-autoconfig`` или ``-dxlevel``.
+Please start selected game at least once from Steam, then restart SRC Repair.
 
-Откройте :ref:`окно изменения <gt-setparams>` параметров запуска и сотрите всё из данной строки, запустите игру, затем выйдите из неё. Теперь SRC Repair сможет управлять настройками графики.
+If that does not help, you have ``-autoconfig`` or ``-dxlevel`` :ref:`command-line options <gt-params>` enabled.
 
-.. index:: faq, ошибка
+Open command-line :ref:`options editor <gt-setparams>`, remove everything from this row, then launch the game.
+
+Now SRC Repair will load video settings corretly.
+
+.. index:: faq, error
 .. _faq-graph-na:
 
-Игра перестала подчиняться заданным настройкам графики. Как это исправить?
-==============================================================================
+Game do not respect settings set in graphic tweaker. How I can fix this?
+==================================================================================
 
-Это очень старый баг всех игр на движке Source, который провляется если задан параметр запуска ``-dxlevel``. Откройте :ref:`окно изменения <gt-setparams>` параметров запуска и сотрите всё из данной строки. При следующем запуске игра будет использовать правильные настройки графики.
+This is a known issue for all Source Engine games if ``-dxlevel`` :ref:`command-line option <gt-params>` is set.
 
-.. index:: faq, ошибка
+Open command-line :ref:`options editor <gt-setparams>`, remove everything from this row, then launch the game.
+
+.. index:: faq, error
 .. _faq-gm-dx8:
 
-Garry's Mod не использует режим DirectX 8.x после его установки в SRC Repair.
+Garry's Mod cannot use DirectX 8.x mode. How can I fix this?
 ================================================================================
 
-В одном из последних обновлений разработчики данной игры вырезали поддержку DirectX 8.0 и 8.1, поэтому вне зависимости от выбранных опций рендеринга в модуле :ref:`графических настроек <gt-type1>`, игра всё равно будет использовать 9.0c.
+DirectX 8.x support was removed from modern Garry's Mod versions. This game will use DirectX 9.0c, regardless of selected mode in :ref:`graphic tweaker <gt-type1>`.
 
-.. index:: faq, проблема с глазами персонажей, FPS-конфиг
+.. index:: faq, missing face animation, missing eyes, FPS-configs
 .. _faq-tf2-eyes:
 
-После установки FPS-конфига у персонажей в игре Team Fortress 2 нет глаз. Что делать?
+Missing eyes after installing FPS-config in Team Fortress 2. How can I fix this?
 =========================================================================================
 
- 1. Лицевая анимация потребляет очень много ресурсов, поэтому все FPS конфиги её полностью отключают.
- 2. Все конфиги из поставки SRC Repair поставляются по лицензии "как есть", т.е. мы не имеем права вносить в них каких-либо изменений.
- 3. Снова включить лицевую анимацию можно если изменить значение ``r_eyes 0`` на ``r_eyes 1``.
+  1. Most of FPS-configs disable face animations in order to significantly increase game performance.
+  2. All FPS-configs are licensed "as is". We cannot change them.
+  3. You can enable face animations by switching from ``r_eyes 0`` to ``r_eyes 1``.
 
-.. index:: faq, FPS-конфиг, редактирование FPS-конфига
+.. index:: faq, FPS-configs, FPS-config edit
 .. _faq-fps-edit:
 
-Как мне отредактировать установленный FPS-конфиг?
+How I can edit installed FPS-config?
 =====================================================
 
-Если у вас установлен FPS-конфиг, в левом нижнем углу страницы :ref:`Графические настройки <graphic-tweaker>` будет отображаться жёлтый восклицательный знак. Нажмите по нему левой кнопкой мыши и выберите FPS-конфиг для редактирования. Он будет автоматически загружен в :ref:`Редактор конфигов <config-editor>`.
+If you have installed :ref:`FPS-config <fps-about>`, you will see a yellow exclamation mark in :ref:`Graphic tweaker <graphic-tweaker>` tab.
 
-.. index:: faq, FPS-конфиг, совместимость FPS-конфигов
+Press left mouse button on it and select FPS-config to edit in :ref:`Config editor <config-editor>` or hold **Shift** to load it with :ref:`selected text editor <settings-advanced>`.
+
+.. index:: faq, FPS-configs, FPS-configs compatibility
 .. _faq-fps-compat:
 
-Почему в описании некоторых FPS-конфигов сказано, что они не полностью совместимы с игрой?
-===============================================================================================
+Why does the description of some FPS-configs say that they are not fully compatible with the game?
+=======================================================================================================
 
-Разработчики Source игр постоянно вносят в игру изменения, переименовывают названия переменных, блокируют работу без установленного ``sv_cheats 1`` и т.д. К сожалению, многие авторы FPS конфигов уже давно забросили их поддержку, поэтому мы соответствующим образом их помечаем. Их использовать можно, но корректная работа не гарантируется.
+Some console variables we marked as cheats and cannot be used on servers without ``sv_cheats 1``.
 
-.. index:: faq, FPS-конфиг, TF2, соревновательный режим
+Unfortunately, many authors of FPS-configs have abandoned their configs. You can still use them, but their effectiveness may be low.
+
+.. index:: faq, FPS-configs, TF2 competitive mode
 .. _faq-tf-comp:
 
-Почему установленный FPS конфиг не работает в соревновательном режиме Team Fortress 2?
+Why I cannot use FPS-config in a Team Fortress 2 competitive mode?
 ==========================================================================================
 
-Так решили Valve, полностью заблокировав возможность изменения графических настроек в соревновательном режиме.
+Valve have completely disabled all FPS-configs in Team Fortress 2 competitive mode.
 
-.. index:: faq, FPS-конфиг, ошибка загрузки FPS-конфига, ошибка загрузки HUD
+.. index:: faq, FPS-configs, hud, download error, FPS-config download error, hud download error
 .. _faq-download-error:
 
-При загрузке FPS-конфига или HUD появляется ошибка. Что делать?
+Cannot download FPS-config or HUD. How can I fix this?
 ===================================================================
 
-Попробуйте в :ref:`настройках программы <settings>` активировать следующие опции, установив около них флажок и нажав кнопку **OK**:
+Please open :ref:`program settings <settings>` and enable following checkboxes:
 
- * **Разрешить установку новейших версий HUD** (страница :ref:`общие настройки <settings-main>`) - должно решить проблему загрузки файлов HUD;
- * **Загружать FPS-конфиги с зеркал** (страница :ref:`дополнительные настройки <settings-advanced>`) - должно решить проблему загрузки файлов FPS-конфигов.
+  * **Allow download and install latest (untested) HUDs** (:ref:`common settings <settings-main>` tab) -- should fix issues with downloading HUD files;
+  * **Use mirrors to download FPS-configs** (:ref:`advanced settings <settings-advanced>` tab) -- should fix issues with downloading FPS-configs.
