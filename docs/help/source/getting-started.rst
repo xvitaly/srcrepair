@@ -23,8 +23,7 @@ Admin permissions
 
 We recommended to run SRC Repair **without** administrator user rights, but some advanced features will be unavailable:
 
-  * :ref:`Hosts file editor <modules-mhed>`;
-  * :ref:`System hotkeys disabler <modules-kbd>`;
+  * :ref:`System buttons disabler <modules-kbd>`;
 
 If you want to use them, you will need to run program with administrator user rights. Press right mouse button on SRC Repair's shortcut in start menu or on desktop, select **Run with administrator** and confirm this action in Windows UAC dialog.
 
