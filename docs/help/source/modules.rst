@@ -1,175 +1,188 @@
 .. _modules:
 
 *******************************
-Дополнительные модули
+Additional modules
 *******************************
 
-.. index:: отчёт для техподдержки, модуль создания отчётов
+.. index:: report builder, tech support reports
 .. _modules-reporter:
 
-Модуль создания отчётов для техподдержки
+Report builder
 ==========================================
 
-Данный модуль предназначен для полностью автоматического создания отчётов для официальной службы поддержки Valve, либо неофициальной поддержки различных форумов.
+This module will automatically generate reports for official support service or different community forums.
 
-Работать с данным плагином очень просто:
+Only Microsoft Windows platform is supported.
 
- * в меню **Инструменты** выберите пункт **Создание отчёта для Техподдержки** или просто нажмите клавишу **F12** на клавиатуре;
- * нажмите на кнопку **Создать отчёт** и через некоторое время (от 30 секунд до нескольких минут в зависимости от производительности системы) вы увидите созданный файл в Проводнике Windows.
+To create a new report:
 
-Для создания отчётов используется стандартная оснастка MSInfo и другие утилиты, входящие в состав Microsoft Windows. В отчёт будет включена следующая информация:
+  1. select **Tools** -- **Report builder** menu entry or just press **F12** on keyboard;
+  2. press **Generate report!** button and wait for 1 to to 5 minutes (depends on your system);
+  3. you will see generated Zip-file in a default file manager.
 
- * компьютере и комплектующих, запущенных процессах, установленном ПО;
- * сетевых маршрутах данного компьютера;
- * замеры потерь пакетов до серверов Valve;
- * замеры пинга до серверов Valve;
- * трассировка прохождения сетевых пакетов до серверов Steam;
- * конфиги управляемой игры;
- * краш-дампы управляемой игры и Steam;
- * содержимое файла Hosts.
+Report builder will use only integrated into Microsoft Windows tools. The following information will be included into final report:
 
-.. index:: обновление, центр обновлений, модуль установки обновлений
+  * common information about hardware, software and operation system using MSInfo;
+  * DirectX information;
+  * generic network information: routes, netstat;
+  * ping and traceroute to Valve servers;
+  * game configs;
+  * Steam logs;
+  * Steam crash dumps;
+  * contents of Hosts file.
+
+Report is a simple Zip-file, so you can load it into any archiver and check its contents before uploading to anywhere.
+
+.. index:: updating program, application updates
 .. _modules-updater:
 
-Модуль обновления программы
+Program updater
 ==========================================
 
-Вызывается из меню **Справка** -- **Проверить наличие обновлений**. Предназначен для быстрого обновления баз данных поддерживаемых игр, HUD, конфигов, а также самого приложения. По умолчанию быстрая проверка наличия обновлений приложения выполняется 1 раз в неделю при запуске программы и может быть отключена :ref:`в настройках <settings-advanced>`.
+You can start this module from **Help** -- **Check for updates** menu.
 
-Обновления баз данных загружаются из репозитория целиком, затем копируются в каталог установки. Обновления приложения загружаются в виде дистрибутива новой версии и все действия по обновлению уже установленного ПО выполняются непосредственно им.
+Updater will check updates for the following:
 
-При обнаружении обновлений будет предложено установить их. Для этого просто щёлкните левой кнопкой мыши по нужной строке. Все остальные действия будут произведены автоматически.
+  * main program;
+  * game database;
+  * HUD database.
 
-Если SRC Repair была установлена глобально для всех пользователей системы в каталог **%PROGRAMFILES%**, либо иное место, где у текущего пользователя нет прав на запись, то для установки обновлений потребуются права администратора.
+SRC Repair will automatically check for updates once a week (can be disabled in :ref:`advanced settings <settings-advanced>`).
 
-.. index:: быстрая установка, модуль быстрой установки
+Database are being download from repository and copying to installation directory.
+
+Program updates are being downloaded from CDN as a standalone installer.
+
+If updates we found, you can install them by clicking on message.
+
+If SRC Repair is installed for all users to a system protected directory **%PROGRAMFILES%**, UAC dialog will appear.
+
+.. index:: quick add-on installer
 .. _modules-installer:
 
-Модуль быстрой установки
+Quick add-on installer
 ==========================================
 
-Данный модуль позволяет легко и быстро установить в выбранную в главном окне SRC Repair игру следующий контент:
+This module will allow you to easily install into selected game the following custom content:
 
- * **спреи** (файлы **\*.vtf**);
- * **демки** (файлы **\*.dem**);
- * **конфиги** (файлы **\*.cfg**);
- * **карты** (файлы **\*.bsp**);
- * **игровые пакеты** (файлы **\*.vpk**);
- * **бинарные плагины** (файлы **\*.dll**);
- * **звуки попадания** по противнику (файлы **killsound.wav** или **hitsound.wav**);
- * **игровые архивы** (файлы файлы **\*.zip**).
+  * **sprays** (files **\*.vtf**);
+  * **demos** (files **\*.dem**);
+  * **game configs** (files **\*.cfg**);
+  * **custom maps** (files **\*.bsp**);
+  * **game packages** (files **\*.vpk**);
+  * **binary plugins** (files **\*.dll**);
+  * **hit and kill sounds** (files **killsound.wav** or **hitsound.wav**);
+  * **content archives** (files **\*.zip**).
 
-Для запуска установки просто нажмите кнопку **Найти** и укажите на диске нужный файл (не забудьте в пункте **Тип файлов** указать что именно планируете установить в игру), выберите его и нажмите **Открыть**. Теперь можете нажать кнопку **Установить** для запуска процесса. Выбранный файл будет установлен и программа сообщит вам о результате.
+Press **Browse** button and find required file on disk. Don't forget to change **File type** if you cannot find it.
 
-Внимание! Игровые архивы могут быть установлены только в игры, перешедшие на новую систему контента. Установка производится в пользовательский каталог. Не устанавливайте непроверенные файлы и конфиги в игру, т.к. это может привести к неприятным последствиям.
+Now press **Install** button to install selected file.
 
-.. index:: редактор Hosts, файл Hosts, модуль редактирования Hosts
-.. _modules-mhed:
+Installation will be performed into game custom directory (if supported). Do not install content from untrusted sources.
 
-Модуль редактирования файла Hosts
-==========================================
-
-Это простой и быстрый редактор файла hosts, основанный на нашем проекте `Micro Hosts Editor <https://www.easycoding.org/projects/mhed>`_. Позволяет легко и быстро редактировать, добавлять и удалять значения в файле hosts пользователю с любым уровнем подготовки. Начиная с версии 32.0 не входит в комплект поставки SRC Repair, но может быть загружен и установлен с официального сайта, из `раздела загрузок <https://www.easycoding.org/download>`_.
-
-Если в вашем файле hosts находится что-то ещё, кроме строки **127.0.0.1 localhost** (начиная с Windows 8 её может не быть), удалите эти строки вручную, либо выберите в меню **Дополнительно** пункт **Восстановить стандартные значения**. Не забудьте сохранить изменения в файле кнопкой **Сохранить изменения**, либо нажать на клавиатуре **Ctrl+S**.
-
-В меню **Дополнительно** вы также можете открыть файл hosts для редактирования в системном текстовом редакторе по умолчанию с помощью одноимённого пункта. Используйте этот пункт только если вы уверены в том, что делаете.
-
-Для работы этого модуля необходимы права локального администратора. При их отсутствии он будет работать в режиме только для чтения.
-
-.. index:: отключение системных клавиш, модуль отключения системных клавиш
+.. index:: system buttons disabler, windows keys
 .. _modules-kbd:
 
-Модуль отключения системных клавиш
+System buttons disabler
 ==========================================
 
-Большинство игроков раздражает случайное нажатие клавиши Windows на клавиатуре, т.к. игра при этом свёртывается, а на восстановление требуется достаточно длительное время. Некоторые даже удаляют её физически с клавиатуры. Теперь это не требуется. С помощью данного модуля вы можете отключить обе клавиши Windows и клавишу Menu (Context), которая также вызывает свёртывание игры и вызов контекстного меню окна.
+Most of gamers are getting annoyed by accidentally pressed Windows button. Some of them are even removing it physically from keyboard.
 
-Допустимые действия:
+This module will allow you to disable both Windows and Context keys.
 
- * **отключить левую WIN** -- отключает левую клавишу Windows, правая остаётся работоспособной;
- * **отключить обе WIN** -- отключает одновременно и левую, и правую клавиши Windows;
- * **отключить правую WIN и MENU** -- отключает правую клавишу Windows и клавишу Menu (Context); левая при этом остаётся работоспособной;
- * **отключить обе WIN и MENU** -- отключает обе клавиши Windows и Menu (Context);
- * **вернуть стандартные настройки** -- отменяет настройки, сделанные плагином и возвращает настройки Windows по умолчанию.
+Supported actions:
 
-Для работы этого модуля необходимы права локального администратора. Модуль отключения системных клавиш поддерживает только ОС Microsoft Windows.
+  * **Disable left WIN** -- disable only left Windows button;
+  * **Disable both WIN** -- disable both left and right Windows buttons;
+  * **Disable right WIN and MENU** -- disable right Windows and Menu (Context) buttons;
+  * **Disable both WIN and MENU** -- disable both left and right Windows and Menu (Context) buttons;
+  * **Restore default settings** -- restore Windows default settings.
 
-.. index:: управление отключёнными игроками, модуль управления отключёнными игроками
+Local administrator rights are required in order to change keyboard settings. Only Microsoft Windows platform is supported.
+
+.. index:: in-game mute manager, muted players manager
 .. _modules-mute:
 
-Модуль управления отключёнными игроками
+Muted players manager
 ==========================================
 
-Данный модуль предназначен для простого и быстрого управления базой данных игнорируемых игроков (тем, кому отключён голосовой и/или текстовый чат внутри игры).
+With the help of this module you can easily control list of muted and ignored players in selected game.
 
-Чтобы добавить новую строку просто начинайте набирать текст в последней пустой строке программы. Допускается ввод SteamID в форматах SteamID32 (устаревший) и SteamIDv3 (современный). В модуле присутствует штатная функция конвертирования SteamID из старого формата в новый. Для этого просто выберите строку и нажмите кнопку **Преобразовать SteamID**.
+To add a new row, just start typing text in the last cell.
 
-Чтобы удалить активную строку, нажмите кнопку **Удалить строку** на панели инструментов редактора или клавишу **Delete** на клавиатуре компьютера. Присутствует возможность удаления сразу нескольких строк. Для этого выделите их мышью, либо с помощью клавиатуры.
+SteamID32 (legacy) and SteamIDv3 formats are only supported. Legacy entry can be converted to a new one by pressing **Convert SteamID format** button on main toolbar or from context menu.
 
-При нажатии на кнопку **Показать профиль Steam** профиль выбранного в ячейке пользователя будет загружен в используемом по умолчанию веб-браузере.
+To remove currently selected row, press **Remove selected row** button on main toolbar, or press **Delete** on keybooard. You can select and remove multiple rows at once.
 
-Чтобы сохранить изменения, нажмите кнопку **Сохранить** на панели инструментов. Если включена безопасная очистка, то будет автоматически создана резервная копия.
+If you want to show selected user profile in Web browser, press **Open Steam profile** button on main toolbar or from context menu.
 
-.. index:: модуль очистки
+Press **Save** button on main toolbar to save changes.
+
+If safe clean is enabled (green light in status bar), backup file will be created automatically. You can restore or delete it on :ref:`BackUps <backups-about>` tab.
+
+.. index:: cleanup module, safe cleanup window
 .. _modules-cleanup:
 
-Модуль очистки
+Cleanup module
 ==========================================
 
-Данный модуль не может вызываться непосредственно пользователем. Его используют другие механизмы приложения, в частности инструменты с вкладки :ref:`Устранение проблем и очистка <cleanup-wizard>`, а также :ref:`модуль расширенной очистки Steam <modules-stmcln>`.
+This module cannot be invoked directly by user. It used by different cleanup methods from :ref:`trobleshooting and cleanup <cleanup-wizard>` tab and by :ref:`extended cleanup module <modules-stmcln>`.
 
-Главное окно модуля очистки отображает отмеченные для удаления файлы. В зависимости от вида очистки и заданного в главном окне режиме безопасности, они могут как помечаться автоматически.
+Main window consists of table with candidates for deletion, control buttons and progress bar.
 
-Все файлы, отмеченные флажком около имени, будут удалены *без возможности восстановления* если вы запустите очистку посредством нажатия кнопки **Выполнить очистку**. Если передумали, нажмите кнопку **Отмена**. В таком случае никаких действий предпринято не будет.
+Depending on cleanup type, files can be marked for deletion automatically or don't.
 
-Если вы хотите, чтобы перед удалением была создана резервная копия, в настройках программы установите флажок в чекбокс **Создавать бэкап перед запуском очистки**. Создание резервной копии может занять много времени (зависит от количества и размера удаляемых файлов). Созданную резервную копию вы сможете восстановить на странице :ref:`Резервные копии <backups-restore>`.
+Press **Execute cleanup button** to start cleanup sequence. All marked by checkbox files will be removed.
 
-В главном окне модуля очистки доступны следующие клавиатурные комбинации:
+If you changed your mind, press **Cancel** button. No actions will be performed.
 
- * **Ctrl + A** -- отметить все файлы;
- * **Ctrl + D** -- снять отметку со всех файлов;
- * **Ctrl + R** -- инвертировать выделение;
- * **Ctrl + C** -- скопировать имена выделенных файлов с полными путями в буфер обмена.
+If you want to create backups before running cleanup for all files, enable checkbox **Compress files to zip before deletion** in :ref:`common settings <settings-main>`. It will take a long time (depending on the number of files). You can restore or delete it on :ref:`BackUps <backups-about>` tab.
 
-Прогресс поиска кандидатов на удаление, работы модуля, а также примерное количество места, которое может быть освобождено на диске после завершения процедуры очистки, отображаются в строке статуса.
+You will see progress bar with status during operation.
 
-.. index:: очистка Steam, кэши Steam, модуль расширенной очистки Steam
+Cleanup module support the following hotkeys:
+
+ * **Ctrl + A** -- mark all files for deletion;
+ * **Ctrl + D** -- deselect all files;
+ * **Ctrl + R** -- invert selection;
+ * **Ctrl + C** -- copy marked file names with full path to clipboard.
+
+.. index:: extended cleanup, steam cleanup module
 .. _modules-stmcln:
 
-Модуль расширенной очистки кэшей Steam
+Steam cleanup module
 ==========================================
 
-Данный модуль предназначен для простой и быстрой очистки различных кэшей Steam, в которых накапливаются десятки гигабайт никому не нужных файлов. Рекомендуется производить запуск данного модуля не реже, чем раз в две недели для поддержания чистоты на диске.
+This module will find and remove garbage, accumulated on regular daily use. We recommend to run it at least once a month.
 
-Для начала работы сначала следует выбрать один или несколько чекбоксов, после чего нажать кнопку **Запустить очистку**. Далее вы увидите окно :ref:`модуля очистки <modules-cleanup>`.
+You need to select one or multiple checkboxes and then run **Execute cleanup** button. :ref:`Cleanup module <modules-cleanup>` window will be shown.
 
-Доступные опции очистки:
+Available cleanup options:
 
- * очистка кэшей:
- 
-   * **HTML кэш клиента и оверлея Steam** -- кэш встроенного в клиент Steam и игровой оверлей веб-браузера на базе Chromium Embedded Framework;
-   * **HTTP кэш клиента Steam** -- HTTP кэш клиента с различными заголовками и метаддаными;
-   * **depot кэш клиента Steam** -- кэш частично загруженных игр и обновлений;
-   * **кэш шейдеров клиента Steam** -- кэш загруженных или сгенерированных на клиенте шейдеров;
- 
- * базовая очистка:
- 
-   * **журналы работы клиента Steam** -- все найденные журналы работы клиента (файды **\*.log**);
-   * **старые бинарники Steam** -- все предыдущие и уже не актуальные версии бинарников и лаунчеров клиента (файлы **\*.old**);
-   * **краш-дампы клиента Steam** -- все созданные клиентом и запущенными играми краш-дампы (файлы **\*.dmp** и **\*.mdmp**);
-   * **временный каталог обновлений игр** -- всё содержимое временного каталога, в котором подготавливаются обновления к установке;
- 
- * улучшенная очистка:
- 
-   * **кэшированные значки игр** -- кэш значков игр из текущей Библиотеки Steam;
-   * **локальное зеркало Steam Cloud** -- содержимое локальной копии облачного хранилища клиента;
-   * **локальная игровая статистика** -- локальный дамп с файлами игровой статистики некоторых игр, допускающих её изменение в оффлайновом режиме;
-   * **база данных сервиса Steam Music** -- локальная база данных музыкального сервиса;
-   * **кастомные скины Steam** -- все установленные нестандартные обложки Steam;
- 
- * специальные виды очистки:
- 
-   * **очистка обновлений Steam** -- локальный кэш с эталонными файлами клиента и различных модулей;
-   * **очистка кэша Steam Guard** -- удаление файлов с авторизацией пользователя.
+  * basic caches:
 
+    * **Steam client and overlay HTML cache** -- Steam built-in Chromium Embedded Framework web cache;
+    * **Steam client HTTP download cache** -- HTTP client download cache;
+    * **Steam client depot cache** -- partially downloaded files and depots cache;
+    * **Steam shader cache** -- cache of downloaded compiled shader files;
+    * **Steam library cache** -- Steam Library cache;
+
+  * basic garbage:
+
+    * **Steam client logs** -- Steam client logs (files **\*.log**);
+    * **Steam old binaries** -- no longer needed old binaries and launchers (files **\*.old**);
+    * **Steam error dumps** -- generated by Steam crash reports and dumps (files **\*.dmp** and **\*.mdmp**);
+    * **Steam build cache** -- updates temporary directory;
+
+  * extended cleanup:
+
+    * **Steam cached game icons** -- Steam Library cached game icons;
+    * **Steam Cloud local storage** -- Steam Cloud local storage;
+    * **Steam local game stats** -- Steam achievements database for offline use;
+    * **Steam music database** -- Steam Music database files;
+    * **Steam custom skins** -- all installed custom skins;
+
+  * troubleshooting:
+
+    * **Steam updater cache** -- Steam updater cache with original downloaded files;
+    * **Steam Guard cache** -- Steam authorization files.
