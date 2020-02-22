@@ -1,0 +1,632 @@
+# This file is a part of SRC Repair project. For more information
+# visit official site: https://www.easycoding.org/projects/srcrepair
+# 
+# Copyright (c) 2011 - 2020 EasyCoding Team (ECTeam).
+# Copyright (c) 2005 - 2020 EasyCoding Team.
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+msgid ""
+msgstr ""
+"Project-Id-Version: SRC Repair 37.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-22 12:17+0100\n"
+"PO-Revision-Date: 2020-02-22 14:37+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
+"Language-Team: EasyCoding Team\n"
+"Language: ru\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ../../source/graphic-tweaker.rst:5
+msgid "Graphic tweaker"
+msgstr "Редактор графических настроек"
+
+#: ../../source/graphic-tweaker.rst:7
+msgid ""
+"Tools on this page allow to view or edit graphic settings of all supported "
+"Source Engine games without needed to launch them."
+msgstr ""
+"Инструменты вкладки **Графические настройки** позволяют легко и быстро "
+"редактировать все основные настройки управляемой игры без необходимости её "
+"запуска."
+
+#: ../../source/graphic-tweaker.rst:13
+msgid "Graphic settings of Type 1 games"
+msgstr "Настройки графики игр первого типа"
+
+#: ../../source/graphic-tweaker.rst:15 ../../source/graphic-tweaker.rst:39
+msgid "Available settings:"
+msgstr "Доступные опции:"
+
+#: ../../source/graphic-tweaker.rst:17 ../../source/graphic-tweaker.rst:41
+msgid ""
+"**horisontal resolution** -- integer in range between *640* to *2000* pixels;"
+msgstr ""
+"**разрешение по горизонтали** -- целое число в диапазоне от *640* до *2000* "
+"пикселей;"
+
+#: ../../source/graphic-tweaker.rst:18 ../../source/graphic-tweaker.rst:42
+msgid ""
+"**vertical resolution** -- integer in range between *480* to *1900* pixels;"
+msgstr ""
+"**разрешение по вертикали** -- целое число в диапазоне от *480* до *1900* "
+"пикселей;"
+
+#: ../../source/graphic-tweaker.rst:19
+msgid ""
+"**display mode**: *fullscreen* or *windoweed*. Fullscreen is recommended in "
+"the most cases to in order get maximum performance;"
+msgstr ""
+"**режим запуска**: *полноэкранный* или *оконный*. В большинстве случаев "
+"рекомендуется полноэкранный режим, т.к. он работает наиболее стабильно на "
+"большинстве компьютеров и обеспечивает максимальную производительность;"
+
+#: ../../source/graphic-tweaker.rst:20
+msgid ""
+"**model quality**: *low*, *medium* or *high*. Highest value will require the "
+"most powerful GPU;"
+msgstr ""
+"**детализация моделей**: *низкая*, *средняя* или *высокая*. Чем выше "
+"значение, тем более мощная видеокарта потребуется для игры;"
+
+#: ../../source/graphic-tweaker.rst:21
+msgid "**texture quality**: *low*, *medium* or *high* (the same as models);"
+msgstr ""
+"**детализация текстур**: *низкая*, *средняя* или *высокая* (аналогично "
+"детализации моделей);"
+
+#: ../../source/graphic-tweaker.rst:22
+msgid "**shaders quality**: *low* or *high* -- set shader effects quality;"
+msgstr ""
+"**шейдеры**: *низк.* или *высок.* -- управляет качеством эффектов, "
+"реализуемых с помощью шейдеров;"
+
+#: ../../source/graphic-tweaker.rst:23
+msgid ""
+"**water reflections**: *simple* (no water reflections at all), *reflect "
+"world* (balanced between quality and performance) or *reflect all* (maximum "
+"quality, all reflections will be enabled; will require high-end CPU and GPU);"
+msgstr ""
+"**отражения в воде**: *простые* (в воде не отображается ничего), *отображать "
+"мир* (баланс между качеством картинки и производительностью) или *отображать "
+"всё* (максимальное качество отражений, требуются мощная видеокарта и "
+"процессор);"
+
+#: ../../source/graphic-tweaker.rst:24 ../../source/graphic-tweaker.rst:45
+msgid ""
+"**shadow quality**: *low* or *high* -- set shadow quality. Shadows can be "
+"disabled completely only by :ref:`FPS-config installation <fps-install>`;"
+msgstr ""
+"**прорисовка теней**: *низкая* или *высокая* -- управляет качеством "
+"динамических теней. Отключить тени полностью можно только с помощью :ref:"
+"`установки FPS-конфига <fps-install>`;"
+
+#: ../../source/graphic-tweaker.rst:25
+msgid ""
+"**color correction**: *enabled* or *disabled* -- configure software color and "
+"gamma correction;"
+msgstr ""
+"**коррекция цвета**: *включена* или *выключена* -- отвечает за программную "
+"коррекцию цветовой гаммы;"
+
+#: ../../source/graphic-tweaker.rst:26 ../../source/graphic-tweaker.rst:48
+msgid ""
+"**antialiasing mode**: *disabled*, *2x*, *4x*, *8x* or *16x* -- set anti-"
+"aliasing (FSAA) quality level and its alghorithm: hardware (only GPU will be "
+"used) or software (both GPU and CPU; maximum quality with huge resource "
+"consumption);"
+msgstr ""
+"**сглаживание**: *отключено*, *2x*, *4x*, *8x* или *16x* -- задаёт параметры "
+"полноэкранного сглаживания (Anti-Aliasing (FSAA)) и алгоритм сглаживания: "
+"аппаратный (задействуются ресурсы только видеокарты) или программный "
+"(задействуется и видеокарта, и процессор; достигается наилучший результат, но "
+"расходуется слишком много ресурсов);"
+
+#: ../../source/graphic-tweaker.rst:27 ../../source/graphic-tweaker.rst:49
+msgid ""
+"**filtering mode**: *bilinear*, *trilinear* or *anisotropic* \\*x (2x, 4x, "
+"8x, 16x) -- set texture filtering level. The higher level, the most powerful "
+"GPU will be required. Optimal performance/quality ratio can be achieved with "
+"anisotropic 4x or 8x levels. Trilinear filtration is faster then bilinear or "
+"anisotropic;"
+msgstr ""
+"**фильтрация**: *билинейная*, *трилинейная* или *анизотропная* \\*x (2x, 4x, "
+"8x, 16x) -- задаёт параметры фильтрации текстур. Чем выше значение, тем более "
+"мощная видеокарта потребуется. Наилучшее соотношение производительность/"
+"качество достигается при анизотропной фильтрации 4x или 8x. Трилинейная "
+"фильтрация на большинстве видеокарт работает быстрее билинейной и "
+"анизотропной;"
+
+#: ../../source/graphic-tweaker.rst:28
+msgid ""
+"**vertical synchronization**: *disabled* or *enabled* -- control vertical "
+"synchronization (frame limiter). When enabled, framerate will be limited by "
+"your monitor refresh rate and prevent screen tearing;"
+msgstr ""
+"**вертикальная синхронизация**: *выключена* или *включена* -- управляет "
+"вертикальной синхронизацией (ограничителем кадров). При включении, видеокарта "
+"будет выдавать ровно столько кадров, сколько способен выдать монитор, что "
+"приведёт к подавлению эффекта разрыва изображения (тиринга);"
+
+#: ../../source/graphic-tweaker.rst:29 ../../source/graphic-tweaker.rst:46
+msgid ""
+"**motion blur**: *disabled* or *enabled* -- enable or disable motion blur "
+"post-effect;"
+msgstr ""
+"**размытие движения**: *выключено* или *включено* -- включает или выключает "
+"пост-эффект Motion Blur (размытие движущихся объектов);"
+
+#: ../../source/graphic-tweaker.rst:30
+msgid ""
+"**DirectX mode**: *8.0*, *8.1*, *9.0*, *9.0c* -- set DirectX feature level. 8."
+"x will disable some effects and significantly increase performance. :ref:"
+"`Some games <faq-gm-dx8>` supports only 9.0c;"
+msgstr ""
+"**режим DirectX**: *8.0*, *8.1*, *9.0*, *9.0c* -- позволяет выбрать нужный "
+"режим DirectX. На слабых компьютерах рекомендуется выбирать 8.0 или 8.1 для "
+"того, чтобы увеличить производительность, а на современных 9.0c для "
+"достижения максимального качества картинки. :ref:`Некоторые игры <faq-gm-"
+"dx8>` поддерживают только 9.0c;"
+
+#: ../../source/graphic-tweaker.rst:31
+msgid ""
+"**High Dynamic Range**: *disabled* or *enabled* -- allow or disallow High "
+"Dynamic Range effects."
+msgstr ""
+"**HDR**: *выключены* или *включены* -- позволяет включить или выключить "
+"эффекты High Dynamic Range."
+
+#: ../../source/graphic-tweaker.rst:37
+msgid "Graphic settings of Type 2 games"
+msgstr "Настройки графики игр второго типа"
+
+#: ../../source/graphic-tweaker.rst:43
+msgid ""
+"**aspect ratio** -- *normal (4:3)*, *widescreen (16:9)* or *widescreen "
+"(16:10)*;"
+msgstr ""
+"**формат экрана** -- *обычный (4:3)*, *широкоэкранный (16:9)* или "
+"*широкоэкранный (16:10)*;"
+
+#: ../../source/graphic-tweaker.rst:44
+msgid "**brightness** -- set in-game brightness level;"
+msgstr "**яркость** -- задаёт яркость внутри самой игры;"
+
+#: ../../source/graphic-tweaker.rst:47
+msgid "**display mode** -- *fullscreen*, *windoweed*, *windoweed (no border)*;"
+msgstr ""
+"**режим отображения**: *полноэкранный*, *оконный* или *оконный (без рамки)*;"
+
+#: ../../source/graphic-tweaker.rst:50
+msgid ""
+"**wait for vertical sync**: *disabled*, *enabled (double buffered)* or "
+"*enabled (triple buffered)* -- control vertical synchronization (frame "
+"limiter). When enabled, framerate will be limited by your monitor refresh "
+"rate and prevent screen tearing;"
+msgstr ""
+"**вертикальная синхронизация**: *выключена* или *включена* -- управляет "
+"вертикальной синхронизацией (ограничителем кадров). При включении, видеокарта "
+"будет выдавать ровно столько кадров, сколько способен выдать монитор, что "
+"приведёт к подавлению эффекта разрыва изображения (тиринга);"
+
+#: ../../source/graphic-tweaker.rst:51
+msgid ""
+"**multicore rendeding** -- *disabled* or *enabled*. Allow to use all physical "
+"cores in multicore CPUs. Can cause crashes, but significantly increase "
+"framerate;"
+msgstr ""
+"**многоядерный рендеринг** -- *выключено* или *включено*. Позволяет "
+"задействовать для рендеринга все ядра многоядерных процессоров. Может "
+"вызывать вылеты, но значительно увеличивает кадровую частоту;"
+
+#: ../../source/graphic-tweaker.rst:52
+msgid ""
+"**shader detail**: *low*, *medium*, *high* or *very high* -- set shader "
+"effects quality;"
+msgstr ""
+"**шейдерные эффекты** -- *низкие*, *средние*, *высокие* и *очень высокие*. "
+"Управляет качеством эффектов, реализуемых с помощью шейдеров;"
+
+#: ../../source/graphic-tweaker.rst:53
+msgid ""
+"**effect detail**: *low*, *medium*, or *high* -- set normal effects quality;"
+msgstr ""
+"**детальность эффектов** -- *низкая*, *средняя* и *высокая*. Задаёт качество "
+"эффектов, для отрисовки которых используются ресурсы центрального процессора;"
+
+#: ../../source/graphic-tweaker.rst:54
+msgid ""
+"**paged memory pool** -- *low*, *medium*, *high* - set maximum size of game "
+"memory pool;"
+msgstr ""
+"**доступный пул памяти** -- *низкий*, *средний* или *высокий*. Задаёт объём "
+"памяти, который сможет адресовать игра. При достаточном объёме установленной "
+"оперативной памяти всегда выбирайте высокий;"
+
+#: ../../source/graphic-tweaker.rst:55
+msgid ""
+"**model and texture detail**: *low*, *medium* or *high*. Highest value will "
+"require the most powerful GPU."
+msgstr ""
+"**качество моделей и текстур** -- *низкая*, *средняя* и *высокая*. Задаёт "
+"качество отрисовки моделей и текстур и их детальность."
+
+#: ../../source/graphic-tweaker.rst:61
+msgid "Game launch options"
+msgstr "Параметры запуска игры"
+
+#: ../../source/graphic-tweaker.rst:63
+msgid ""
+"**Game launch options** allow user to override game launch options. This "
+"option provided for power users only. Most of users should not use it."
+msgstr ""
+"Строка **Параметры запуска** позволяет указать параметры инициализации "
+"управляемой игры. Эта строка предназначена лишь для опытных пользователей. "
+"Если вы не знаете для чего она нужна и что сюда вводить -- не вводите ничего "
+"и оставьте строку пустой."
+
+#: ../../source/graphic-tweaker.rst:65
+msgid "All parameters must be separated by spaces. For example:"
+msgstr "Параметры нужно вводить в одну строку через один пробел, например:"
+
+#: ../../source/graphic-tweaker.rst:71
+msgid ""
+"Warning! Do not use ``-dxlevel`` command-line option, because it will lead to "
+"the fact that the game video settings will no longer be saved correctly. This "
+"is a known issue of all Source Engine games."
+msgstr ""
+"Внимание! Не используйте параметр запуска **-dxlevel**, т.к. это приведёт к "
+"тому, что настройки игры перестанут корректно сохраняться. Это известный баг "
+"всех игр на движке Source."
+
+#: ../../source/graphic-tweaker.rst:77
+msgid "Changing game launch options"
+msgstr "Изменение параметров запуска игры"
+
+#: ../../source/graphic-tweaker.rst:79
+msgid ""
+"Start Steam client -- select the game from Steam Library -- press right mouse "
+"button -- select **Properties** -- press **Set launch options** button -- set "
+"new launch options -- press **OK** and **Close** -- launch game."
+msgstr ""
+"Запустите Steam, выберите в списке нужную игру, нажмите по ней правой кнопкой "
+"мыши -- выберите **Свойства** -- нажмите кнопку **Параметры запуска** и "
+"укажите нужные вам параметры запуска, затем нажмите **OK** и запустите игру."
+
+#: ../../source/graphic-tweaker.rst:85
+msgid "List of supported launch options"
+msgstr "Поддерживаемые параметры запуска игр"
+
+#: ../../source/graphic-tweaker.rst:87
+msgid "Available launch options:"
+msgstr ""
+"Следующие параметры запуска поддерживаются большинством игр на движке Source:"
+
+#: ../../source/graphic-tweaker.rst:89
+msgid "**-novid** (**-novideo**) -- disable game intro video;"
+msgstr ""
+"**-novid** (**-novideo**) -- отключает видеоролик, проигрываемый при запуске "
+"игры;"
+
+#: ../../source/graphic-tweaker.rst:90
+msgid ""
+"**-autoconfig** -- restore default settings. The game will ignore all "
+"settings and :ref:`FPS-configs <fps-about>`;"
+msgstr ""
+"**-autoconfig** -- восстанавливает настройки графики по умолчанию. Игнорирует "
+"любые установленные настройки и :ref:`FPS-конфиги <fps-about>` до удаления "
+"данного параметра;"
+
+#: ../../source/graphic-tweaker.rst:91
+msgid "**-full** (**-fullscreen**) -- start the game in fullscreen mode;"
+msgstr "**-full** (**-fullscreen**) -- запускать игру в полноэкранном режиме;"
+
+#: ../../source/graphic-tweaker.rst:92
+msgid ""
+"**-window** (**-sw** или **-windowed**) -- start the game in windowed mode;"
+msgstr ""
+"**-window** (**-sw** или **-windowed**) -- запускать игру в оконном режиме;"
+
+#: ../../source/graphic-tweaker.rst:93
+msgid "**-width** или **-w** -- set horisontal resolution or window size;"
+msgstr ""
+"**-width** или **-w** -- указать разрешение или ширину окна по горизонтали;"
+
+#: ../../source/graphic-tweaker.rst:94
+msgid "**-height** или **-h** -- set vertical resolution or window size;"
+msgstr ""
+"**-height** или **-h** -- указать разрешение или высоту окна по вертикали;"
+
+#: ../../source/graphic-tweaker.rst:95
+msgid "**-console** -- enable and automatically launch developer console;"
+msgstr ""
+"**-console** -- включает и автоматически запускает консоль разработчика;"
+
+#: ../../source/graphic-tweaker.rst:96
+msgid "**-textmode** -- start the game in the text mode;"
+msgstr "**-textmode** -- запускать игру в текстовом режиме;"
+
+#: ../../source/graphic-tweaker.rst:97
+msgid ""
+"**-dxlevel** -- enforce DirectX level (available values are *80*, *81*, *90*, "
+"*95*). Do not use it due to :ref:`known major issues <gt-params>`. Use :ref:"
+"`graphic tweaker <gt-type1>` instead;"
+msgstr ""
+"**-dxlevel** -- устанавливает режим DirectX (допустимые значения -- *80*, "
+"*81*, *90*, *95*). Категорически не рекомендуется к использованию "
+"(подробности :ref:`здесь <gt-params>`). Вместо него лучше использовать выбор "
+"режима DirectX в одноимённом поле :ref:`графического твикера <gt-type1>`;"
+
+#: ../../source/graphic-tweaker.rst:98
+msgid ""
+"**-heapsize X** -- set heap size. Can be calculated by the following formula: "
+"(RAM / 2 * 1024). Examples for popular RAM sizes:"
+msgstr ""
+"**-heapsize ЧИСЛО** -- устанавливает объём занимаемой памяти. Рассчитывается "
+"по формуле: (оперативная память / 2 * 1024). Примеры чисел для популярных "
+"размеров ОП:"
+
+#: ../../source/graphic-tweaker.rst:100
+msgid "512 MB -> **262144**;"
+msgstr "512 МБ -> **262144**;"
+
+#: ../../source/graphic-tweaker.rst:101
+msgid "1 GB -> **524288**;"
+msgstr "1 ГБ -> **524288**;"
+
+#: ../../source/graphic-tweaker.rst:102
+msgid "2 GB -> **1048576**;"
+msgstr "2 ГБ -> **1048576**;"
+
+#: ../../source/graphic-tweaker.rst:103
+msgid "3 GB -> **1572864**;"
+msgstr "3 ГБ -> **1572864**;"
+
+#: ../../source/graphic-tweaker.rst:104
+msgid "4 GB -> **2097152**;"
+msgstr "4 ГБ -> **2097152**;"
+
+#: ../../source/graphic-tweaker.rst:106
+msgid "**-nojoy** -- disable gamepads initialization;"
+msgstr "**-nojoy** -- отключает инициализацию геймпадов в игре;"
+
+#: ../../source/graphic-tweaker.rst:107
+msgid "**-noipx** -- disable IPX connections support;"
+msgstr ""
+"**-noipx** -- не загружает IPX соединений, позволяет сэкономить оперативную "
+"память;"
+
+#: ../../source/graphic-tweaker.rst:108
+msgid "**-noborder** -- disable window border and controls in windowed mode;"
+msgstr ""
+"**-noborder** -- не отображать рамку и заголовок окна при запуске игры в "
+"оконном режиме;"
+
+#: ../../source/graphic-tweaker.rst:109
+msgid "**-noforcemspd** -- use mouse speed settings from Windows;"
+msgstr "**-noforcemspd** -- использовать настройки скорости мыши из Windows;"
+
+#: ../../source/graphic-tweaker.rst:110
+msgid "**-noforcemparms** -- use mouse buttons settings from Windows;"
+msgstr "**-noforcemparms** -- использовать настройки кнопок мыши из Windows;"
+
+#: ../../source/graphic-tweaker.rst:111
+msgid "**-noforcemaccel** -- use mouse acceleration settings from Windows;"
+msgstr "**-noforcemaccel** -- использовать настройки ускорения мыши из Windows;"
+
+#: ../../source/graphic-tweaker.rst:112
+msgid ""
+"**-freq X** (**-refresh X**) -- set monitor refresh rate for fullscreen mode;"
+msgstr ""
+"**-freq ЧИСЛО** (**-refresh ЧИСЛО**) -- устанавливает частоту регенерации "
+"монитора;"
+
+#: ../../source/graphic-tweaker.rst:113
+msgid ""
+"**-nocrashdialog** -- disable built-in debugger. Will disable crash reports;"
+msgstr ""
+"**-nocrashdialog** -- запрещает встроенный в игру отладчик, позволяет "
+"сэкономить немного оперативной памяти;"
+
+#: ../../source/graphic-tweaker.rst:114
+msgid ""
+"**-32bit** -- start game in legacy 32-bit mode when running under 64-bit "
+"operating system (x64);"
+msgstr ""
+"**-32bit** -- запускает игру в 32-битном режиме на 64-битной операционной "
+"системе (x64);"
+
+#: ../../source/graphic-tweaker.rst:115
+msgid ""
+"**-dev** -- enable developer mode: game debug messages will be shown directly "
+"on HUD;"
+msgstr ""
+"**-dev** -- включает режим разработчика: последние строки консоли будут "
+"отображаться поверх HUD игры;"
+
+#: ../../source/graphic-tweaker.rst:116
+msgid ""
+"**-condebug** -- write contents of developer console to ``console.log`` file;"
+msgstr ""
+"**-condebug** -- включает режим отладки, при котором всё содержимое консоли "
+"будет сохраняться в файл ``console.log``;"
+
+#: ../../source/graphic-tweaker.rst:117
+msgid "**-toconsole** -- force console mode even if ``+map`` parameter is used;"
+msgstr ""
+"**-toconsole** -- принудительно запускает консоль, даже есть указан параметр "
+"``+map``, заставляющий движок загрузить карту при запуске игры;"
+
+#: ../../source/graphic-tweaker.rst:118
+msgid "**-lv** -- enable Low Violence mode in Left 4 Dead (2);"
+msgstr "**-lv** -- включает режим Low Violence в Left 4 Dead (2);"
+
+#: ../../source/graphic-tweaker.rst:119
+msgid "**-sillygibs** -- enable Low Violence mode in Team Fortress 2."
+msgstr "**-sillygibs** -- включает режим Low Violence в Team Fortress 2."
+
+#: ../../source/graphic-tweaker.rst:125
+msgid "Video profiles: maximum quality"
+msgstr "Профиль настроек: максимальное качество"
+
+#: ../../source/graphic-tweaker.rst:127
+msgid ""
+"**Maximum quality** button will set all graphic settings to recommended "
+"maximum:"
+msgstr ""
+"Кнопка **Максимальное качество** устанавливает все графические настройки на "
+"рекомендуемый максимум:"
+
+#: ../../source/graphic-tweaker.rst:129 ../../source/graphic-tweaker.rst:151
+msgid "**display mode** -> fullscreen;"
+msgstr "**режим запуска** -> полноэкранный;"
+
+#: ../../source/graphic-tweaker.rst:130
+msgid "**model quality** -> high;"
+msgstr "**детализация моделей** -> высокая;"
+
+#: ../../source/graphic-tweaker.rst:131
+msgid "**texture quality** -> high;"
+msgstr "**детализация текстур** -> высокая;"
+
+#: ../../source/graphic-tweaker.rst:132
+msgid "**shader quality** -> high;"
+msgstr "**шейдеры** -> высоко;"
+
+#: ../../source/graphic-tweaker.rst:133
+msgid "**water reflections** -> reflect world;"
+msgstr "**отражения в воде** -> отражать мир;"
+
+#: ../../source/graphic-tweaker.rst:134
+msgid "**shadow quality** -> high;"
+msgstr "**прорисовка теней** -> высокая;"
+
+#: ../../source/graphic-tweaker.rst:135
+msgid "**color correction** -> enabled;"
+msgstr "**коррекция цвета** -> включена;"
+
+#: ../../source/graphic-tweaker.rst:136 ../../source/graphic-tweaker.rst:158
+msgid "**antialiasing** -> disabled;"
+msgstr "**сглаживание** -> нет (отключено);"
+
+#: ../../source/graphic-tweaker.rst:137
+msgid "**filtering** -> anisotropic 4x;"
+msgstr "**фильтрация** -> Анизотропная 4x;"
+
+#: ../../source/graphic-tweaker.rst:138 ../../source/graphic-tweaker.rst:160
+msgid "**vertical synchronization** -> disabled;"
+msgstr "**вертикальная синхронизация** -> выключена;"
+
+#: ../../source/graphic-tweaker.rst:139 ../../source/graphic-tweaker.rst:161
+msgid "**motion blur** -> disabled;"
+msgstr "**размытие движения** -> выключено;"
+
+#: ../../source/graphic-tweaker.rst:140
+msgid "**DirectX mode** -> 9.0c;"
+msgstr "**режим DirectX** -> 9.0c;"
+
+#: ../../source/graphic-tweaker.rst:141
+msgid "**High Dynamic Range** -> full."
+msgstr "**HDR** -> полные."
+
+#: ../../source/graphic-tweaker.rst:147
+msgid "Video profiles: maximum performance"
+msgstr "Профиль настроек: максимальная производительность"
+
+#: ../../source/graphic-tweaker.rst:149
+msgid ""
+"**Maximium performance** button will set all graphic settings to recommended "
+"minimum:"
+msgstr ""
+"Кнопка **Максимальная производительность**, наоборот, устанавливает все "
+"графические настройки на рекомендуемый минимум:"
+
+#: ../../source/graphic-tweaker.rst:152
+msgid "**model quality** -> low;"
+msgstr "**детализация моделей** -> низкая;"
+
+#: ../../source/graphic-tweaker.rst:153
+msgid "**texture quality** -> low;"
+msgstr "**детализация текстур** -> низкая;"
+
+#: ../../source/graphic-tweaker.rst:154
+msgid "**shader quality** -> low;"
+msgstr "**шейдеры** -> низко;"
+
+#: ../../source/graphic-tweaker.rst:155
+msgid "**water reflections** -> simple;"
+msgstr "**отражения в воде** -> простые;"
+
+#: ../../source/graphic-tweaker.rst:156
+msgid "**shadow quality** -> low;"
+msgstr "**прорисовка теней** -> низкая;"
+
+#: ../../source/graphic-tweaker.rst:157
+msgid "**color correction** -> disabled;"
+msgstr "**коррекция цвета** -> выключена;"
+
+#: ../../source/graphic-tweaker.rst:159
+msgid "**filtering** -> trilinear;"
+msgstr "**фильтрация** -> трилинейная;"
+
+#: ../../source/graphic-tweaker.rst:162
+msgid "**DirectX mode** -> will ask user to enable 8.0;"
+msgstr "**режим DirectX** -> запрос на включение 8.0;"
+
+#: ../../source/graphic-tweaker.rst:163
+msgid "**High Dynamic Range** -> disabled."
+msgstr "**HDR** -> выключены."
+
+#: ../../source/graphic-tweaker.rst:165
+msgid ""
+"If you want to reach maximum performance, you should install special :ref:"
+"`FPS-config <fps-configs>`."
+msgstr ""
+"Чтобы ещё больше снизить качество изображения и получить наибольшее число "
+"кадров в секунду, воспользуйтесь одним из FPS-конфигов на странице :ref:`FPS-"
+"конфиги <fps-configs>`."
+
+#: ../../source/graphic-tweaker.rst:171
+msgid "Other useful information about profiles"
+msgstr "Прочая полезная информация о профилях настроек"
+
+#: ../../source/graphic-tweaker.rst:173
+msgid ""
+"**Maximum quality** and **Maximium performance** will not automatically save "
+"video settings. You should check and save them manually by pressing **Save "
+"settings** button."
+msgstr ""
+"Кнопки **Максимальное качество** и **Максимальная производительность** "
+"автоматически не сохраняют внесённые изменения, а дают вам возможность "
+"подкорректировать что-либо. Чтобы сохранить настройки, нажмите кнопку "
+"**Сохранить**."
+
+#: ../../source/graphic-tweaker.rst:175
+msgid ""
+"If safe clean is enabled (green light in status bar), backup will be created "
+"automatically. You can restore or delete it on :ref:`BackUps <backups-about>` "
+"tab."
+msgstr ""
+"Если включена опция безопасной очистки (в статусной строке программы горит "
+"зелёный индикатор), то будет автоматически создана резервная копия, которую "
+"вы сможете восстановить в любое время на странице :ref:`Резервные копии "
+"<backups-about>`."
