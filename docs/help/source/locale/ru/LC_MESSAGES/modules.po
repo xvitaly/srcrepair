@@ -1,0 +1,621 @@
+# This file is a part of SRC Repair project. For more information
+# visit official site: https://www.easycoding.org/projects/srcrepair
+# 
+# Copyright (c) 2011 - 2020 EasyCoding Team (ECTeam).
+# Copyright (c) 2005 - 2020 EasyCoding Team.
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+msgid ""
+msgstr ""
+"Project-Id-Version: SRC Repair 37.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-22 12:17+0100\n"
+"PO-Revision-Date: 2020-02-22 15:23+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 "
+"&& (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
+"Language-Team: EasyCoding Team\n"
+"Language: ru\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ../../source/modules.rst:5
+msgid "Additional modules"
+msgstr "Дополнительные модули"
+
+#: ../../source/modules.rst:11
+msgid "Report builder"
+msgstr "Модуль создания отчётов для техподдержки"
+
+#: ../../source/modules.rst:13
+msgid ""
+"This module will automatically generate reports for official support service or "
+"different community forums."
+msgstr ""
+"Данный модуль предназначен для полностью автоматического создания отчётов для "
+"официальной службы поддержки Valve, либо неофициальной поддержки различных "
+"форумов."
+
+#: ../../source/modules.rst:15
+msgid "Only Microsoft Windows platform is supported."
+msgstr "Поддерживается лишь операционная система Microsoft Windows."
+
+#: ../../source/modules.rst:17
+msgid "To create a new report:"
+msgstr "Для того, чтобы создать отчёт, выполните следующие действия:"
+
+#: ../../source/modules.rst:19
+msgid ""
+"select **Tools** -- **Report builder** menu entry or just press **F12** on "
+"keyboard;"
+msgstr ""
+"в меню **Инструменты** выберите пункт **Создание отчёта для Техподдержки** или "
+"просто нажмите клавишу **F12** на клавиатуре;"
+
+#: ../../source/modules.rst:20
+msgid ""
+"press **Generate report!** button and wait from 1 to to 5 minutes (depends on "
+"your system);"
+msgstr ""
+"нажмите на кнопку **Создать отчёт** и подождите от 1 до 5 минут (зависит от "
+"производительности системы);"
+
+#: ../../source/modules.rst:21
+msgid "you will see generated Zip-file in a default file manager."
+msgstr "через некоторое время вы увидите созданный Zip-файл в Проводнике Windows."
+
+#: ../../source/modules.rst:23
+msgid ""
+"Report builder is using only integrated into Microsoft Windows utilities. The "
+"following information will be included in the final report:"
+msgstr ""
+"Для создания отчётов используются только утилиты, входящие в состав Microsoft "
+"Windows. В отчёт будет включена следующая информация:"
+
+#: ../../source/modules.rst:25
+msgid ""
+"common information about hardware, software and operation system using MSInfo;"
+msgstr ""
+"общая информация о компьютере и комплектующих, запущенных процессах, "
+"установленном ПО;"
+
+#: ../../source/modules.rst:26
+msgid "DirectX information;"
+msgstr "конфигурация DirectX;"
+
+#: ../../source/modules.rst:27
+msgid "generic network information: routes, netstat;"
+msgstr "о сетевых маршрутах данного компьютера;"
+
+#: ../../source/modules.rst:28
+msgid "ping and traceroute to Valve servers;"
+msgstr "замеры пинга и потерь пакетов до серверов Valve;"
+
+#: ../../source/modules.rst:29
+msgid "game configs;"
+msgstr "игровые конфиги текущей игры;"
+
+#: ../../source/modules.rst:30
+msgid "Steam logs;"
+msgstr "журналы работы Steam;"
+
+#: ../../source/modules.rst:31
+msgid "Steam crash dumps;"
+msgstr "краш-дампы Steam;"
+
+#: ../../source/modules.rst:32
+msgid "contents of Hosts file."
+msgstr "содержимое файла Hosts."
+
+#: ../../source/modules.rst:34
+msgid ""
+"Report is a simple Zip-file, so you can load it by any archiver and check its "
+"contents before uploading to anywhere."
+msgstr ""
+"Отчёт представляет собой обычный Zip-архив, поэтому он может быть открыт в "
+"любом архиваторе для изучения содержимого перед отправкой куда-либо."
+
+#: ../../source/modules.rst:40
+msgid "Program updater"
+msgstr "Модуль обновления программы"
+
+#: ../../source/modules.rst:42
+msgid "You can start this module from **Help** -- **Check for updates** menu."
+msgstr "Вызывается из меню **Справка** -- **Проверить наличие обновлений**."
+
+#: ../../source/modules.rst:44
+msgid "Updater will check updates for the following:"
+msgstr "Будут проверено наличие новых версий следующих компонентов:"
+
+#: ../../source/modules.rst:46
+msgid "main program;"
+msgstr "сама программа;"
+
+#: ../../source/modules.rst:47
+msgid "game database;"
+msgstr "база данных игр;"
+
+#: ../../source/modules.rst:48
+msgid "HUD database."
+msgstr "база данных HUD."
+
+#: ../../source/modules.rst:50
+msgid ""
+"SRC Repair will automatically check for updates once a week (can be disabled "
+"in :ref:`advanced settings <settings-advanced>`)."
+msgstr ""
+"SRC Repair будет автоматически проверять наличие новых версий один раз в неделю "
+"(может быть отключено в :ref:`дополнительных настройках <settings-advanced>`)."
+
+#: ../../source/modules.rst:52
+msgid ""
+"Database are being download from repository and copied to the installation "
+"directory."
+msgstr ""
+"Обновления баз данных загружаются из репозитория, а затем копируются в каталог "
+"установки программы."
+
+#: ../../source/modules.rst:54
+msgid "Program updates are being downloaded from CDN as a standalone installers."
+msgstr ""
+"Обновления самого приложения загружаются в виде дистрибутива новой версии и все "
+"действия по обновлению уже установленного выполняются непосредственно им."
+
+#: ../../source/modules.rst:56
+msgid "If updates we found, you can install them by left clicking on message."
+msgstr ""
+"В случае если найдено обновление какого-либо компонента, кликнете по сообщению "
+"левой кнопкой мыши для его скачивания и установки."
+
+#: ../../source/modules.rst:58
+msgid ""
+"If SRC Repair is installed for all users to a system protected directory like **"
+"%PROGRAMFILES%**, UAC dialog will appear."
+msgstr ""
+"Если SRC Repair была установлена глобально для всех пользователей системы в "
+"каталог **%PROGRAMFILES%**, либо иное место, где у текущего пользователя нет "
+"прав на запись, то для установки обновлений потребуются права администратора."
+
+#: ../../source/modules.rst:64
+msgid "Quick add-on installer"
+msgstr "Модуль быстрой установки"
+
+#: ../../source/modules.rst:66
+msgid ""
+"This module will allow you to easily install into selected game the following "
+"custom content:"
+msgstr ""
+"Данный модуль позволяет легко и быстро установить в выбранную в главном окне "
+"SRC Repair игру следующий контент:"
+
+#: ../../source/modules.rst:68
+msgid "**sprays** (files **\\*.vtf**);"
+msgstr "**спреи** (файлы **\\*.vtf**);"
+
+#: ../../source/modules.rst:69
+msgid "**demos** (files **\\*.dem**);"
+msgstr "**демки** (файлы **\\*.dem**);"
+
+#: ../../source/modules.rst:70
+msgid "**game configs** (files **\\*.cfg**);"
+msgstr "**конфиги** (файлы **\\*.cfg**);"
+
+#: ../../source/modules.rst:71
+msgid "**custom maps** (files **\\*.bsp**);"
+msgstr "**карты** (файлы **\\*.bsp**);"
+
+#: ../../source/modules.rst:72
+msgid "**game packages** (files **\\*.vpk**);"
+msgstr "**игровые пакеты** (файлы **\\*.vpk**);"
+
+#: ../../source/modules.rst:73
+msgid "**binary plugins** (files **\\*.dll**);"
+msgstr "**бинарные плагины** (файлы **\\*.dll**);"
+
+#: ../../source/modules.rst:74
+msgid "**hit and kill sounds** (files **killsound.wav** or **hitsound.wav**);"
+msgstr ""
+"**звуки попадания** по противнику (файлы **killsound.wav** или **hitsound."
+"wav**);"
+
+#: ../../source/modules.rst:75
+msgid "**content archives** (files **\\*.zip**)."
+msgstr "**игровые архивы** (файлы файлы **\\*.zip**)."
+
+#: ../../source/modules.rst:77
+msgid ""
+"Press **Browse** button and find required file on disk. Don't forget to change "
+"**File type** if you cannot find it."
+msgstr ""
+"Для запуска установки просто нажмите кнопку **Найти** и выберите на диске "
+"нужный файл (не забудьте в пункте **Тип файлов** указать что именно планируете "
+"установить в игру), затем нажмите **Открыть**."
+
+#: ../../source/modules.rst:79
+msgid "Now press **Install** button to install selected file."
+msgstr ""
+"Теперь можете нажать кнопку **Установить** для запуска процесса. Выбранный файл "
+"будет установлен и программа сообщит вам о результате."
+
+#: ../../source/modules.rst:81
+msgid ""
+"Installation will be performed in the game's custom directory (if supported). "
+"Do not install content from untrusted sources."
+msgstr ""
+"Установка производится в пользовательский каталог модификаций (если это "
+"поддерживается игрой). Не устанавливайте контент из непроверенных источников."
+
+#: ../../source/modules.rst:87
+msgid "System buttons disabler"
+msgstr "Модуль отключения системных клавиш"
+
+#: ../../source/modules.rst:89
+msgid ""
+"Most of gamers are getting annoyed by accidentally pressed Windows button. Some "
+"of them are even removing it physically from keyboard."
+msgstr ""
+"Большинство игроков раздражает случайное нажатие клавиши Windows на клавиатуре, "
+"т.к. игра при этом сворачивается, а на восстановление требуется достаточно "
+"длительное время. Некоторые даже удаляют её физически из клавиатуры."
+
+#: ../../source/modules.rst:91
+msgid "This module will allow you to disable both Windows and Context keys."
+msgstr ""
+"С помощью данного модуля вы можете отключить обе клавиши Windows и клавишу Menu "
+"(Context), которая также вызывает сворачивание игры и вызов контекстного меню "
+"окна."
+
+#: ../../source/modules.rst:93
+msgid "Supported actions:"
+msgstr "Допустимые действия:"
+
+#: ../../source/modules.rst:95
+msgid "**Disable left WIN** -- disable only left Windows button;"
+msgstr ""
+"**отключить левую WIN** -- отключает левую клавишу Windows, правая остаётся "
+"работоспособной;"
+
+#: ../../source/modules.rst:96
+msgid "**Disable both WIN** -- disable both left and right Windows buttons;"
+msgstr ""
+"**отключить обе WIN** -- отключает одновременно и левую, и правую клавиши "
+"Windows;"
+
+#: ../../source/modules.rst:97
+msgid ""
+"**Disable right WIN and MENU** -- disable right Windows and Menu (Context) "
+"buttons;"
+msgstr ""
+"**отключить правую WIN и MENU** -- отключает правую клавишу Windows и клавишу "
+"Menu (Context); левая при этом остаётся работоспособной;"
+
+#: ../../source/modules.rst:98
+msgid ""
+"**Disable both WIN and MENU** -- disable both left and right Windows and Menu "
+"(Context) buttons;"
+msgstr ""
+"**отключить обе WIN и MENU** -- отключает обе клавиши Windows и Menu (Context);"
+
+#: ../../source/modules.rst:99
+msgid "**Restore default settings** -- restore Windows default settings."
+msgstr ""
+"**вернуть стандартные настройки** -- отменяет настройки, сделанные плагином и "
+"возвращает настройки Windows по умолчанию."
+
+#: ../../source/modules.rst:101
+msgid ""
+"Local administrator rights are required in order to change keyboard settings. "
+"Only Microsoft Windows platform is supported."
+msgstr ""
+"Для работы этого модуля необходимы права локального администратора. Модуль "
+"отключения системных клавиш поддерживает только ОС Microsoft Windows."
+
+#: ../../source/modules.rst:107
+msgid "Muted players manager"
+msgstr "Модуль управления отключёнными игроками"
+
+#: ../../source/modules.rst:109
+msgid ""
+"With the help of this module you can easily control the list of muted and "
+"ignored players in a selected game."
+msgstr ""
+"Данный модуль предназначен для простого и быстрого управления базой данных "
+"игнорируемых игроков (тем, кому отключён голосовой и/или текстовый чат внутри "
+"игры)."
+
+#: ../../source/modules.rst:111
+msgid "To add a new row, just start typing text in the last cell."
+msgstr ""
+"Чтобы добавить новую строку просто начинайте набирать текст в последней пустой "
+"строке программы."
+
+#: ../../source/modules.rst:113
+msgid ""
+"SteamID32 (legacy) and SteamIDv3 formats are only supported. Legacy entry can "
+"be converted to a new one by pressing **Convert SteamID format** button on the "
+"main toolbar or from context menu."
+msgstr ""
+"Допускается ввод SteamID в форматах SteamID32 (устаревший) и SteamIDv3. В "
+"модуле присутствует штатная функция конвертирования SteamID из старого формата "
+"в новый. Для этого просто выберите строку и нажмите кнопку **Преобразовать "
+"SteamID** на панели инструментов или из контекстного меню."
+
+#: ../../source/modules.rst:115
+msgid ""
+"To remove currently selected row, press **Remove selected row** button on the "
+"main toolbar, or press **Delete** on keybooard. You can select and remove "
+"multiple rows at once."
+msgstr ""
+"Чтобы удалить активную строку, нажмите кнопку **Удалить строку** на панели "
+"инструментов редактора или клавишу **Delete** на клавиатуре компьютера. "
+"Присутствует возможность удаления сразу нескольких строк. Для этого выделите их "
+"мышью, либо с помощью клавиатуры."
+
+#: ../../source/modules.rst:117
+msgid ""
+"If you want to show selected user profile in Web browser, press **Open Steam "
+"profile** button on the main toolbar or from context menu."
+msgstr ""
+"При нажатии на кнопку **Показать профиль Steam** профиль выбранного в ячейке "
+"пользователя будет загружен в используемом по умолчанию веб-браузере."
+
+#: ../../source/modules.rst:119
+msgid "Press **Save** button on the main toolbar to save changes."
+msgstr ""
+"Чтобы сохранить изменения, нажмите кнопку **Сохранить** на панели инструментов."
+
+#: ../../source/modules.rst:121
+msgid ""
+"If safe clean is enabled (green light in status bar), backup file will be "
+"created automatically. You can restore or delete it on :ref:`BackUps <backups-"
+"about>` tab."
+msgstr ""
+"Если включена опция безопасной очистки (в статусной строке программы горит "
+"зелёный индикатор), то будет автоматически создана резервная копия, которую вы "
+"сможете восстановить в любое время на странице :ref:`Резервные копии <backups-"
+"about>`."
+
+#: ../../source/modules.rst:127
+msgid "Cleanup module"
+msgstr "Модуль очистки"
+
+#: ../../source/modules.rst:129
+msgid ""
+"This module cannot be invoked directly by user. It used by different cleanup "
+"methods from :ref:`trobleshooting and cleanup <cleanup-wizard>` tab and by :ref:"
+"`extended cleanup module <modules-stmcln>`."
+msgstr ""
+"Данный модуль не может вызываться непосредственно пользователем. Его используют "
+"другие механизмы приложения, в частности инструменты с вкладки :ref:`Устранение "
+"проблем и очистка <cleanup-wizard>`, а также :ref:`модуль расширенной очистки "
+"Steam <modules-stmcln>`."
+
+#: ../../source/modules.rst:131
+msgid ""
+"Main window consists of table with candidates for deletion, control buttons and "
+"a progress bar."
+msgstr "Главное окно модуля очистки отображает отмеченные для удаления файлы."
+
+#: ../../source/modules.rst:133
+msgid ""
+"Depending on cleanup type, files can be marked for deletion automatically or "
+"not."
+msgstr ""
+"В зависимости от вида очистки и заданного в главном окне режиме безопасности, "
+"они могут как помечаться автоматически, так и нет."
+
+#: ../../source/modules.rst:135
+msgid ""
+"Press **Execute cleanup button** to start cleanup sequence. All marked by "
+"checkbox files will be removed."
+msgstr ""
+"Все файлы, отмеченные флажком около имени, будут удалены *без возможности "
+"восстановления* если вы запустите очистку посредством нажатия кнопки "
+"**Выполнить очистку**."
+
+#: ../../source/modules.rst:137
+msgid ""
+"If you changed your mind, press **Cancel** button. No actions will be performed."
+msgstr ""
+"Если передумали, нажмите кнопку **Отмена**. В этом случае никаких действий "
+"предпринято не будет."
+
+#: ../../source/modules.rst:139
+msgid ""
+"If you want to create backups before running cleanup for all files, enable "
+"checkbox **Compress files to zip before deletion** in :ref:`common settings "
+"<settings-main>`. It will take a long time (depending on the number of files). "
+"You can restore or delete it on :ref:`BackUps <backups-about>` tab."
+msgstr ""
+"Если вы хотите, чтобы перед удалением была создана резервная копия, в "
+"настройках программы установите флажок в чекбокс **Создавать бэкап перед "
+"запуском очистки** (в :ref:`общих настройках <settings-main>`). Создание "
+"резервной копии может занять много времени (зависит от количества и размера "
+"удаляемых файлов). Созданную резервную копию вы сможете восстановить на "
+"странице :ref:`Резервные копии <backups-about>`."
+
+#: ../../source/modules.rst:141
+msgid "You will see progress bar with status during operation."
+msgstr "Во время работы будет подробно отображаться прогресс очистки."
+
+#: ../../source/modules.rst:143
+msgid "Cleanup module support the following hotkeys:"
+msgstr "В главном окне модуля очистки доступны следующие клавиатурные комбинации:"
+
+#: ../../source/modules.rst:145
+msgid "**Ctrl + A** -- mark all files for deletion;"
+msgstr "**Ctrl + A** -- отметить все файлы;"
+
+#: ../../source/modules.rst:146
+msgid "**Ctrl + D** -- deselect all files;"
+msgstr "**Ctrl + D** -- снять отметку со всех файлов;"
+
+#: ../../source/modules.rst:147
+msgid "**Ctrl + R** -- invert selection;"
+msgstr "**Ctrl + R** -- инвертировать выделение;"
+
+#: ../../source/modules.rst:148
+msgid "**Ctrl + C** -- copy marked file names with full path to clipboard."
+msgstr ""
+"**Ctrl + C** -- скопировать имена выделенных файлов с полными путями в буфер "
+"обмена."
+
+#: ../../source/modules.rst:154
+msgid "Steam cleanup module"
+msgstr "Модуль расширенной очистки кэшей Steam"
+
+#: ../../source/modules.rst:156
+msgid ""
+"This module will find and remove garbage, accumulated on regular daily use. We "
+"recommend to run it at least once a month."
+msgstr ""
+"Данный модуль предназначен для простой и быстрой очистки различных кэшей Steam, "
+"в которых накапливаются десятки гигабайт никому не нужных файлов. Рекомендуется "
+"производить запуск данного модуля не реже, чем раз в две недели для поддержания "
+"чистоты на диске."
+
+#: ../../source/modules.rst:158
+msgid ""
+"You need to select one or multiple checkboxes and then press **Execute "
+"cleanup** button. :ref:`Cleanup module <modules-cleanup>` window will appear."
+msgstr ""
+"Для начала работы сначала следует выбрать один или несколько чекбоксов, после "
+"чего нажать кнопку **Запустить очистку**. Далее вы увидите окно :ref:`модуля "
+"очистки <modules-cleanup>`."
+
+#: ../../source/modules.rst:160
+msgid "Available cleanup options:"
+msgstr "Доступные опции очистки:"
+
+#: ../../source/modules.rst:162
+msgid "basic caches:"
+msgstr "очистка кэшей:"
+
+#: ../../source/modules.rst:164
+msgid ""
+"**Steam client and overlay HTML cache** -- Steam built-in Chromium Embedded "
+"Framework web cache;"
+msgstr ""
+"**HTML кэш клиента и оверлея Steam** -- кэш встроенного в клиент Steam и "
+"игровой оверлей веб-браузера на базе Chromium Embedded Framework;"
+
+#: ../../source/modules.rst:165
+msgid "**Steam client HTTP download cache** -- HTTP client download cache;"
+msgstr ""
+"**HTTP кэш клиента Steam** -- HTTP кэш клиента с различными заголовками и "
+"метаддаными;"
+
+#: ../../source/modules.rst:166
+msgid ""
+"**Steam client depot cache** -- partially downloaded files and depots cache;"
+msgstr ""
+"**Depot кэш клиента Steam** -- кэш с частично загруженными файлами и различными "
+"блобами;"
+
+#: ../../source/modules.rst:167
+msgid "**Steam shader cache** -- cache of downloaded compiled shader files;"
+msgstr ""
+"**кэш шейдеров клиента Steam** -- кэш загруженных или сгенерированных на "
+"клиенте шейдеров;"
+
+#: ../../source/modules.rst:168
+msgid "**Steam library cache** -- Steam Library cache;"
+msgstr "**кэш библиотеки Steam** -- кэш файлов, используемых Библиотекой Steam;"
+
+#: ../../source/modules.rst:170
+msgid "basic garbage:"
+msgstr "базовая очистка:"
+
+#: ../../source/modules.rst:172
+msgid "**Steam client logs** -- Steam client logs (files **\\*.log**);"
+msgstr ""
+"**журналы работы клиента Steam** -- все найденные журналы работы клиента (файды "
+"**\\*.log**);"
+
+#: ../../source/modules.rst:173
+msgid ""
+"**Steam old binaries** -- no longer needed old binaries and launchers (files **"
+"\\*.old**);"
+msgstr ""
+"**старые бинарники Steam** -- все предыдущие и уже не актуальные версии "
+"бинарников и лаунчеров клиента (файлы **\\*.old**);"
+
+#: ../../source/modules.rst:174
+msgid ""
+"**Steam error dumps** -- generated by Steam crash reports and dumps (files **"
+"\\*.dmp** and **\\*.mdmp**);"
+msgstr ""
+"**краш-дампы клиента Steam** -- все созданные клиентом и запущенными играми "
+"краш-дампы (файлы **\\*.dmp** и **\\*.mdmp**);"
+
+#: ../../source/modules.rst:175
+msgid "**Steam build cache** -- updates temporary directory;"
+msgstr ""
+"**временный каталог обновлений игр** -- всё содержимое временного каталога, в "
+"котором подготавливаются обновления к установке;"
+
+#: ../../source/modules.rst:177
+msgid "extended cleanup:"
+msgstr "улучшенная очистка:"
+
+#: ../../source/modules.rst:179
+msgid "**Steam cached game icons** -- Steam Library cached game icons;"
+msgstr ""
+"**кэшированные значки игр** -- кэш значков игр из текущей Библиотеки Steam;"
+
+#: ../../source/modules.rst:180
+msgid "**Steam Cloud local storage** -- Steam Cloud local storage;"
+msgstr ""
+"**локальное зеркало Steam Cloud** -- содержимое локальной копии облачного "
+"хранилища клиента;"
+
+#: ../../source/modules.rst:181
+msgid "**Steam local game stats** -- Steam achievements database for offline use;"
+msgstr ""
+"**локальная игровая статистика** -- локальный дамп с файлами игровой статистики "
+"некоторых игр, допускающих её изменение в оффлайновом режиме;"
+
+#: ../../source/modules.rst:182
+msgid "**Steam music database** -- Steam Music database files;"
+msgstr ""
+"**база данных сервиса Steam Music** -- локальная база данных музыкального "
+"сервиса;"
+
+#: ../../source/modules.rst:183
+msgid "**Steam custom skins** -- all installed custom skins;"
+msgstr ""
+"**кастомные скины Steam** -- все установленные нестандартные обложки Steam;"
+
+#: ../../source/modules.rst:185
+msgid "troubleshooting:"
+msgstr "особые виды очистки:"
+
+#: ../../source/modules.rst:187
+msgid ""
+"**Steam updater cache** -- Steam updater cache with original downloaded files;"
+msgstr ""
+"**очистка обновлений Steam** -- локальный кэш с эталонными файлами клиента и "
+"различных модулей;"
+
+#: ../../source/modules.rst:188
+msgid "**Steam Guard cache** -- Steam authorization files."
+msgstr ""
+"**очистка кэша Steam Guard** -- удаление файлов с токенами авторизации "
+"пользователей."
