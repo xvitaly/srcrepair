@@ -32,10 +32,10 @@ BUD-files are standard Zip-archives, which contains removed by program files wit
 
 The names of the registry backup files (only in version for Microsoft Windows) are generated as follows:
 
- * ``Game_AutoBackUp_UNIXTIME.reg`` - automatic backup of game video settings;
- * ``Game_Options_UNIXTIME.reg`` - manual backup of game video settings;
- * ``Source_Options_UNIXTIME.reg`` - manual backup of all Source Engine games video settings;
- * ``Steam_BackUp_UNIXTIME.reg`` - manual backup of all Steam settings, stored in Windows registry.
+ * ``Game_AutoBackUp_UNIXTIME.reg`` -- automatic backup of game video settings;
+ * ``Game_Options_UNIXTIME.reg`` -- manual backup of game video settings;
+ * ``Source_Options_UNIXTIME.reg`` -- manual backup of all Source Engine games video settings;
+ * ``Steam_BackUp_UNIXTIME.reg`` -- manual backup of all Steam settings, stored in Windows registry.
 
 .. index:: backups, backup storage
 .. _backups-storage:
