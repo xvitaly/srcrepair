@@ -1,0 +1,268 @@
+# This file is a part of SRC Repair project. For more information
+# visit official site: https://www.easycoding.org/projects/srcrepair
+# 
+# Copyright (c) 2011 - 2020 EasyCoding Team (ECTeam).
+# Copyright (c) 2005 - 2020 EasyCoding Team.
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+msgid ""
+msgstr ""
+"Project-Id-Version: SRC Repair 37.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-22 12:17+0100\n"
+"PO-Revision-Date: 2020-02-22 13:42+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
+"Language-Team: EasyCoding Team\n"
+"Language: ru\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 "
+"&& (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ../../source/fps-configs.rst:5
+msgid "FPS-config manager"
+msgstr "Управление FPS-конфигами"
+
+#: ../../source/fps-configs.rst:11
+msgid "About FPS configs"
+msgstr "О FPS-конфигах"
+
+#: ../../source/fps-configs.rst:13
+msgid ""
+"On this page you can install one of available and tested FPS-configs into "
+"selected game. FPS-config is a text file with ``autoexec.cfg`` name. It can "
+"significantly increase game performance by changing hidden extended video "
+"settings."
+msgstr ""
+"На этой странице вы можете быстро установить один из доступных и "
+"протестированных нами FPS-конфигов в выбранную игру. Конфиг (файл конфигурации) "
+"представляет собой текстовый файл с именем ``autoexec.cfg``, который способен "
+"значительно увеличить производительность игры со значительной потерей качества "
+"выдаваемой картинки."
+
+#: ../../source/fps-configs.rst:15
+msgid ""
+"Settings, obtained from FPS-config, have higher priority than set by :ref:"
+"`Graphic tweaker <graphic-tweaker>` or by the game itself. Select config from "
+"list to read it's description."
+msgstr ""
+"Если вы используете FPS-конфиг, то настройки, находящиеся на вкладке :ref:"
+"`Графические настройки <graphic-tweaker>` не будут влиять на игру, т.к. опции, "
+"полученные из конфига, имеют более высокий приоритет."
+
+#: ../../source/fps-configs.rst:17
+msgid ""
+"Installed FPS-configs can be edited with :ref:`Config editor <editor-working>`."
+msgstr ""
+"Установленные FPS-конфиги могут быть загружены в :ref:`Редактор конфигов "
+"<editor-working>`."
+
+#: ../../source/fps-configs.rst:19
+msgid ""
+"All FPS-configs are being downloaded from our cloud and licensed \"as is\"."
+msgstr ""
+"Все FPS-конфиги загружаются из облака и распространяются по лицензии \"как есть"
+"\"."
+
+#: ../../source/fps-configs.rst:25
+msgid "Supported FPS-configs"
+msgstr "Поддерживаемые FPS-конфиги"
+
+#: ../../source/fps-configs.rst:27
+msgid "The following FPS-configs are supported by current version of application:"
+msgstr "Следующие FPS-конфиги поддерживаются в текущей версии программы:"
+
+#: ../../source/fps-configs.rst:29
+msgid "v1tsk_high_fps;"
+msgstr "v1tsk_high_fps;"
+
+#: ../../source/fps-configs.rst:30
+msgid "m0refps;"
+msgstr "m0refps;"
+
+#: ../../source/fps-configs.rst:31
+msgid "m0rehighfps;"
+msgstr "m0rehighfps;"
+
+#: ../../source/fps-configs.rst:32
+msgid "skullhighfps;"
+msgstr "skullhighfps;"
+
+#: ../../source/fps-configs.rst:33
+msgid "bonhighfps;"
+msgstr "bonhighfps;"
+
+#: ../../source/fps-configs.rst:34
+msgid "chrishighfps;"
+msgstr "chrishighfps;"
+
+#: ../../source/fps-configs.rst:35
+msgid "chrismaxfps;"
+msgstr "chrismaxfps;"
+
+#: ../../source/fps-configs.rst:36
+msgid "chrismaxquality (reverse);"
+msgstr "chrismaxquality (обратный);"
+
+#: ../../source/fps-configs.rst:37
+msgid "chrisdx9frames;"
+msgstr "chrisdx9frames;"
+
+#: ../../source/fps-configs.rst:38
+msgid "comangliastability;"
+msgstr "comangliastability;"
+
+#: ../../source/fps-configs.rst:39
+msgid "comangliamaxfps;"
+msgstr "comangliamaxfps;"
+
+#: ../../source/fps-configs.rst:40
+msgid "comangliacinema (reverse);"
+msgstr "comangliacinema (обратный);"
+
+#: ../../source/fps-configs.rst:41
+msgid "dt_legal;"
+msgstr "dt_legal;"
+
+#: ../../source/fps-configs.rst:42
+msgid "mastercomfig-maxperf;"
+msgstr "mastercomfig-maxperf;"
+
+#: ../../source/fps-configs.rst:43
+msgid "mastercomfig-quality (reverse);"
+msgstr "mastercomfig-quality (обратный);"
+
+#: ../../source/fps-configs.rst:44
+msgid "rhaprody-perf."
+msgstr "rhaprody-perf."
+
+#: ../../source/fps-configs.rst:50
+msgid "FPS-config installation"
+msgstr "Установка FPS-конфига"
+
+#: ../../source/fps-configs.rst:52
+msgid ""
+"To install FPS-config, select it from the list of available configs, press "
+"**Install selected config** button and confirm this operation."
+msgstr ""
+"Чтобы установить конфиг, выберите один из предустановленных конфигов, доступных "
+"для этой игры, нажмите на кнопку **Установить выбранный конфиг** и ответьте "
+"утвердительно на вопрос."
+
+#: ../../source/fps-configs.rst:54
+msgid ""
+"If safe clean is enabled (green light in status bar) and you already has "
+"installed ``autoexec.cfg`` file, backup will be created automatically. You can "
+"restore or delete it on :ref:`BackUps <backups-about>` tab."
+msgstr ""
+"Если включена опция безопасной очистки (в статусной строке программы горит "
+"зелёный индикатор), то при наличии уже существующего файла ``autoexec.cfg``, "
+"будет автоматически создана его резервная копия, которую вы сможете "
+"восстановить в любое время на странице :ref:`Резервные копии <backups-about>`."
+
+#: ../../source/fps-configs.rst:56
+msgid ""
+"Some configs are not supported by games. You will see warning message if so."
+msgstr ""
+"Внимание! Далеко не все конфиги поддерживаются управляемой игрой. Если вы "
+"выбрали неподдерживаемый конфиг, будет выведено соответствующее сообщение."
+
+#: ../../source/fps-configs.rst:58
+msgid ""
+"Do not install multiple FPS-configs to game. It will cause unpredictable "
+"consequences."
+msgstr ""
+"Не устанавливайте несколько FPS-конфигов одновременно, т.к. это может привести "
+"к непредсказуемым последствиям."
+
+#: ../../source/fps-configs.rst:64
+msgid "FPS-config uninstallation"
+msgstr "Удаление FPS-конфига"
+
+#: ../../source/fps-configs.rst:66
+msgid ""
+"To remove FPS-config, select it from the list of available configs, press "
+"**Remove selected config** (or **Remove installed config**) button and confirm "
+"this operation."
+msgstr ""
+"Чтобы удалить имеющийся конфиг, нажмите на кнопку **Удалить установленный "
+"конфиг** (или **Удалить имеющийся конфиг**)."
+
+#: ../../source/fps-configs.rst:68
+msgid ""
+"If safe clean is enabled (green light in status bar), backup will be created "
+"automatically. You can restore or delete it on :ref:`BackUps <backups-about>` "
+"tab."
+msgstr ""
+"Если включена опция безопасной очистки (в статусной строке программы горит "
+"зелёный индикатор), то будет автоматически создана резервная копия, которую вы "
+"сможете восстановить в любое время на странице :ref:`Резервные копии <backups-"
+"about>`."
+
+#: ../../source/fps-configs.rst:74
+msgid "Known issues with FPS-configs"
+msgstr "Возможные проблемы с FPS-конфигами"
+
+#: ../../source/fps-configs.rst:76
+msgid ""
+"After installing FPS-configs voice chat can stop working, sprays and face "
+"animation can be disabled. This is conceived. Most of FPS-configs disable this "
+"functions in order to significantly increase game performance."
+msgstr ""
+"После установки FPS-конфига у вас могут перестать отображаться спреи в игре, "
+"прекрат работу лицевая анимация, либо вы перестанете слышать речь других людей "
+"в голосовом чате. Это нормально, т.к. большинство FPS конфигов отключают данные "
+"функции в угоду повышения производительности."
+
+#: ../../source/fps-configs.rst:78
+msgid ""
+"If you want to enable them again, you will need to :ref:`remove all installed "
+"FPS-configs <fps-uninstall>` and then change the following variables via "
+"``autoexec.cfg`` file or by using developer console:"
+msgstr ""
+"Если вы снова хотите включить данные функции, полностью :ref:`удалите FPS-"
+"конфиги <fps-uninstall>`, а затем пропишите в консоли разработчика игры или в "
+"файле **autoexec.cfg** следующие строки:"
+
+#: ../../source/fps-configs.rst:93
+msgid ""
+"If you use developer console (can be called by pressing **~** (tilde) button), "
+"don't forget to press **Enter** after entering each row."
+msgstr ""
+"Если вы прописываете строки в консоли разработчика (вызывается клавишей **~** "
+"(тильда)), не забывайте после каждой нажимать **Enter** на клавиатуре."
+
+#: ../../source/fps-configs.rst:99
+msgid "Reverse FPS-configs"
+msgstr "FPS-конфиги наоборот"
+
+#: ../../source/fps-configs.rst:101
+msgid ""
+"If you want to set all video settings to maxium to get best quality, you can "
+"install specical :ref:`reverse FPS-configs <fps-available>`."
+msgstr ""
+"Если вы хотите установить все настройки игры на максимум, установите один из "
+"специальных :ref:`FPS-конфигов <fps-available>`, отмеченных словом **обратный**."
+
+#: ../../source/fps-configs.rst:103
+msgid "You will need a high-end computer in order to use them."
+msgstr ""
+"Это обеспечит наилучшее качество графики, но потребуется производительный "
+"компьютер."
