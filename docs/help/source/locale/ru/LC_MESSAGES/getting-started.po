@@ -1,0 +1,238 @@
+# This file is a part of SRC Repair project. For more information
+# visit official site: https://www.easycoding.org/projects/srcrepair
+# 
+# Copyright (c) 2011 - 2020 EasyCoding Team (ECTeam).
+# Copyright (c) 2005 - 2020 EasyCoding Team.
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+msgid ""
+msgstr ""
+"Project-Id-Version: SRC Repair 37.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-22 12:17+0100\n"
+"PO-Revision-Date: 2020-02-22 14:06+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
+"Language-Team: EasyCoding Team\n"
+"Language: ru\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ../../source/getting-started.rst:5
+msgid "Getting started"
+msgstr "Приступая к работе"
+
+#: ../../source/getting-started.rst:11
+msgid "Starting program"
+msgstr "Запуск программы"
+
+#: ../../source/getting-started.rst:13
+msgid ""
+"You can launch SRC Repair from start menu directly after installation: "
+"**Start** - **Programs** - **SRC Repair** - **SRC Repair**."
+msgstr ""
+"Запустить программу можно сразу после установки через меню **Пуск** -- "
+"**Программы** -- **SRC Repair** -- **SRC Repair**."
+
+#: ../../source/getting-started.rst:15
+msgid "SRC Repair will automatically detect and use system default language."
+msgstr ""
+"SRC Repair автоматически выбирает язык в зависимости от региональных "
+"настроек операционной системы."
+
+#: ../../source/getting-started.rst:21
+msgid "Admin permissions"
+msgstr "Запуск с повышенными правами"
+
+#: ../../source/getting-started.rst:23
+msgid ""
+"We recommended to run SRC Repair **without** administrator user rights, but "
+"some advanced features will be unavailable:"
+msgstr ""
+"Мы рекомендуем запускать и использовать SRC Repair **без** административных "
+"прав, хотя следующие функции окажутся при этом недоступны:"
+
+#: ../../source/getting-started.rst:25
+msgid ":ref:`System buttons disabler <modules-kbd>`;"
+msgstr ":ref:`Модуль отключения системных клавиш <modules-kbd>`;"
+
+#: ../../source/getting-started.rst:27
+msgid ""
+"If you want to use them, you will need to run program with administrator "
+"user rights. Press right mouse button on SRC Repair's shortcut in start "
+"menu or on desktop, select **Run with administrator** and confirm this "
+"action in Windows UAC dialog."
+msgstr ""
+"Чтобы активировать отключённые функции, запустите программу от учётной "
+"записи с правами администратора. Для этого достаточно нажать правой кнопкой "
+"по ярлыку SRC Repair в главном меню, либо на рабочем столе, а затем выбрать "
+"в контекстном меню пункт **Запустить от имени администратора** и "
+"подтвердить намерение."
+
+#: ../../source/getting-started.rst:29
+msgid ""
+"After performing needed actions, please switch back to a regular user. "
+"Staying as super-user is not completely safe."
+msgstr ""
+"После использования модулей, требующих повышенных прав, настоятельно "
+"рекомендуется сразу завершить работу программы и вернуться в обычный режим, "
+"т.к. постоянная работа в режиме администратора небезопасна."
+
+#: ../../source/getting-started.rst:35
+msgid "Startup actions"
+msgstr "Действия, выполняемые при запуске"
+
+#: ../../source/getting-started.rst:37
+msgid "The following actions will be performed on SRC Repair's startup:"
+msgstr "Следующие действия выполняются автоматически при запуске SRC Repair:"
+
+#: ../../source/getting-started.rst:39
+msgid "getting Steam installation directory path;"
+msgstr "получение полного пути к каталогу установки Steam;"
+
+#: ../../source/getting-started.rst:40
+msgid "checking if Steam installation directory exists;"
+msgstr "проверка существования каталога установки Steam;"
+
+#: ../../source/getting-started.rst:41
+msgid "checking if required Steam configuration files exists and can be read;"
+msgstr ""
+"проверка на существование необходимых файлов конфигурации Steam и "
+"возможности их чтения;"
+
+#: ../../source/getting-started.rst:42
+msgid "getting the list of supported games;"
+msgstr "получение списка поддерживаемых игр;"
+
+#: ../../source/getting-started.rst:43
+msgid "checking for installed supported games;"
+msgstr "поиск установленных игр;"
+
+#: ../../source/getting-started.rst:44
+msgid "creating user-friendly GUI."
+msgstr "создание графического интерфейса пользователя."
+
+#: ../../source/getting-started.rst:46
+msgid ""
+"If program cannot find Steam installation directory path in registry (only "
+"on Microsoft Windows platform) or in known common locations, the **Find "
+"Steam directory** dialog will appear (but only once)."
+msgstr ""
+"Если при проверке не удастся получить путь к каталогу Steam из реестра "
+"(только на платформе Microsoft Windows), будет выдано окно с предложением "
+"указать его на диске вручную. Путь, заданный вручную, сохранится в файле "
+"конфигурации SRC Repair и повторно запрашиваться не будет."
+
+#: ../../source/getting-started.rst:52
+msgid "Using application"
+msgstr "Начало работы с программой"
+
+#: ../../source/getting-started.rst:54
+msgid ""
+"First you will need to select game from the list of supported and installed "
+"Source Engine games. Your choise will be saved."
+msgstr ""
+"Для начала работы выберите из списка одну из поддерживаемых игр. Ваш выбор "
+"сохранится в настройках программы."
+
+#: ../../source/getting-started.rst:56
+msgid "If only one game is found, it will be selected automatically."
+msgstr ""
+"Если на вашем компьютере обнаружена только одна установленная игра, она "
+"будет выбрана автоматически."
+
+#: ../../source/getting-started.rst:58
+msgid ""
+"If program cannot find required game, please start it at least once from "
+"Steam, then restart SRC Repair."
+msgstr ""
+"Если программа не находит какую-либо из поддерживаемых игр, то просто хотя "
+"бы раз запустите её из Steam. После выхода из неё и повторного запуска SRC "
+"Repair, она появится в списке."
+
+#: ../../source/getting-started.rst:64
+msgid "Data files storage"
+msgstr "Хранение файлов программы"
+
+#: ../../source/getting-started.rst:66
+msgid ""
+"All program settings are stored in ``%LOCALAPPDATA%\\EasyCoding_Team`` "
+"directory (each subdirectory for every version)."
+msgstr ""
+"Настройки SRC Repair хранятся в каталоге ``%LOCALAPPDATA%"
+"\\EasyCoding_Team``, для каждой версии отдельно."
+
+#: ../../source/getting-started.rst:68
+msgid ""
+"Created by program :ref:`backups <backups-about>` can be found in ``%APPDATA"
+"%\\SRC Repair\\backups`` directory."
+msgstr ""
+"Созданные программой :ref:`резервные копии <backups-about>` хранятся в "
+"каталоге ``%APPDATA%\\SRC Repair\\backups``."
+
+#: ../../source/getting-started.rst:70
+msgid "All other data files -- ``%APPDATA%\\SRC Repair``."
+msgstr "Все остальные файлы -- ``%APPDATA%\\SRC Repair``."
+
+#: ../../source/getting-started.rst:76
+msgid "Updating application"
+msgstr "Обновление программы"
+
+#: ../../source/getting-started.rst:78
+msgid ""
+"You can :ref:`check for updates <modules-updater>` from **Help** -- **Check "
+"for updates** menu."
+msgstr ""
+"Вы можете запустить :ref:`проверку наличия обновлений <modules-updater>` "
+"программы через меню **Справка** -- **Проверить наличие обновлений**."
+
+#: ../../source/getting-started.rst:80
+msgid ""
+"SRC Repair will automatically check for new versions once a week (can be "
+"disabled in :ref:`advanced settings <settings-advanced>`)."
+msgstr ""
+"SRC Repair будет автоматически проверять наличие новых версий один раз в "
+"неделю (может быть отключено в :ref:`расширенных настройках <settings-"
+"advanced>`)."
+
+#: ../../source/getting-started.rst:86
+msgid "Uninstalling program"
+msgstr "Удаление программы"
+
+#: ../../source/getting-started.rst:88
+msgid ""
+"If you want to uninstall SRC Repair from your compuler, use **Control "
+"panel** -- **Programs and components** -- **SRC Repair** -- **Uninstall**."
+msgstr ""
+"Чтобы удалить программу, запустите встроенную программу удаления через "
+"**Панель управления** -- **Программы и компоненты** -- **SRC Repair** -- "
+"**Удалить**."
+
+#: ../../source/getting-started.rst:90
+msgid ""
+"Uninstaller will automatically remove all program files, shortcuts, "
+"registry entries, but will save created by user :ref:`data files <gs-"
+"datafiles>`. You can remove them manually."
+msgstr ""
+"Программа автоматического удаления сотрёт все файлы программы, записи "
+"реестра, ярлыки, но сохранит настройки и резервные копии на случай если вы "
+"решите когда-нибудь переустановить SRC Repair. Эти :ref:`файлы <gs-"
+"datafiles>` вы можете удалить вручную."
