@@ -1,0 +1,153 @@
+# This file is a part of SRC Repair project. For more information
+# visit official site: https://www.easycoding.org/projects/srcrepair
+# 
+# Copyright (c) 2011 - 2020 EasyCoding Team (ECTeam).
+# Copyright (c) 2005 - 2020 EasyCoding Team.
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+msgid ""
+msgstr ""
+"Project-Id-Version: SRC Repair 37.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-22 12:17+0100\n"
+"PO-Revision-Date: 2020-02-22 14:45+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
+"Language-Team: EasyCoding Team\n"
+"Language: ru\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ../../source/hud-manager.rst:5 ../../source/hud-manager.rst:11
+msgid "HUD manager"
+msgstr "Управление пользовательскими HUD"
+
+#: ../../source/hud-manager.rst:13
+msgid ""
+"On this page you can install one of available and tested HUDs into selected "
+"game."
+msgstr ""
+"На этой странице вы сможете быстро и безопасно установить, удалить или "
+"обновить один из протестированных нами HUD в выбранную игру."
+
+#: ../../source/hud-manager.rst:15
+msgid ""
+"Each HUD has a readme file and a screenshot. Select one from list and you "
+"will be able to see it."
+msgstr ""
+"Для каждого HUD доступно описание и скриншот. Выберите HUD из списка и "
+"сможете увидеть его."
+
+#: ../../source/hud-manager.rst:17
+msgid "All HUDs are being downloaded from our cloud and licensed \"as is\"."
+msgstr ""
+"Все файлы HUD загружаются из облака и распространяются по лицензии \"как "
+"есть\"."
+
+#: ../../source/hud-manager.rst:19
+msgid ""
+"This module will be unavailable if current game does not support custom "
+"HUDs."
+msgstr ""
+"Эта страница будет недоступна если выбранная игра не поддерживает установку "
+"нестандартных HUD."
+
+#: ../../source/hud-manager.rst:25
+msgid "HUD installation"
+msgstr "Установка HUD"
+
+#: ../../source/hud-manager.rst:27
+msgid ""
+"To install HUD, select it from the list of available HUDs, press **Install "
+"selected HUD** button and confirm this operation."
+msgstr ""
+"Чтобы установить HUD, выберите его из списка, а затем нажмите кнопку "
+"**Установить выбранный HUD** и подтвердите намерение."
+
+#: ../../source/hud-manager.rst:29
+msgid "All required files will be downloaded and installed automatically."
+msgstr ""
+"Все необходимые для работы файлы будут загружены с нашего CDN автоматически."
+
+#: ../../source/hud-manager.rst:31
+msgid ""
+"Do not install more than one HUD because it can lead to unpredictable "
+"consequences."
+msgstr ""
+"Не устанавливайте более одного HUD в игру, т.к. это может привести к "
+"непредсказуемым последствиям."
+
+#: ../../source/hud-manager.rst:37
+msgid "HUD uninstallation"
+msgstr "Удаление HUD"
+
+#: ../../source/hud-manager.rst:39
+msgid ""
+"To remove HUD, select it from the list of available HUDs, press **Remove "
+"selected HUD** button and confirm this operation."
+msgstr ""
+"Чтобы удалить HUD, выберите его из списка и нажмите кнопку **Удалить "
+"выбранный HUD**, после чего подтвердите намерение."
+
+#: ../../source/hud-manager.rst:41
+msgid "This action available only for installed HUDs."
+msgstr "Данное действие доступно только для уже установленных HUD."
+
+#: ../../source/hud-manager.rst:47
+msgid "Updating installed HUD"
+msgstr "Обновление или переустановка HUD"
+
+#: ../../source/hud-manager.rst:49
+msgid ""
+"To update or reinstall installed HUD, select it from the list of available "
+"HUDs, press **Update selected HUD** button and confirm this operation."
+msgstr ""
+"В любой момент вы можете переустановить, либо обновить до новейшей "
+"доступной версии любой установленный HUD. Для этого просто выберите его из "
+"списка и нажмите кнопку **Обновить выбранный HUD**."
+
+#: ../../source/hud-manager.rst:51
+msgid "Warning! All custom changes in installed HUD will be permanently lost."
+msgstr ""
+"Внимание! Если вы производили какие-то изменения в файлах установленного "
+"HUD, все они будут потеряны."
+
+#: ../../source/hud-manager.rst:57
+msgid "Additional HUD manager buttons"
+msgstr "Прочие элементы управления"
+
+#: ../../source/hud-manager.rst:59
+msgid "Additional buttons:"
+msgstr "Наряду с уже описанными кнопками, существуют ещё две:"
+
+#: ../../source/hud-manager.rst:61
+msgid "button with house -- open HUD homepage in a default Web browser;"
+msgstr ""
+"кнопка с домом -- переход на домашнюю страницу HUD в используемом по "
+"умолчанию веб-обозревателе;"
+
+#: ../../source/hud-manager.rst:62
+msgid ""
+"button with magnifying glass -- show installed HUD files in a default file "
+"manager."
+msgstr ""
+"кнопка с лупой -- показать файлы установленного HUD в файловом менеджере по "
+"умолчанию (в Microsoft Windows -- в Проводнике)."
