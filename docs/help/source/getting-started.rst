@@ -10,10 +10,9 @@ Getting started
 Starting program
 ==========================================
 
-You can directly start SRC Repair from start menu after installation: **Start** - **Programs** - **SRC Repair** - **SRC Repair**.
+You can launch SRC Repair from start menu directly after installation: **Start** - **Programs** - **SRC Repair** - **SRC Repair**.
 
 SRC Repair will automatically detect and use system default language.
-
 
 .. index:: administrator rights, permissions, restricted modules, UAC
 .. _gs-admin:
@@ -27,7 +26,7 @@ We recommended to run SRC Repair **without** administrator user rights, but some
 
 If you want to use them, you will need to run program with administrator user rights. Press right mouse button on SRC Repair's shortcut in start menu or on desktop, select **Run with administrator** and confirm this action in Windows UAC dialog.
 
-After performing needed actions, please switch back to regular user. Staying as super-user is not completely safe.
+After performing needed actions, please switch back to a regular user. Staying as super-user is not completely safe.
 
 .. index:: startup actions
 .. _gs-startup:
@@ -44,7 +43,7 @@ The following actions will be performed on SRC Repair's startup:
   5. checking for installed supported games;
   6. creating user-friendly GUI.
 
-If program cannot find Steam installation directory path in registry (only on Microsoft Windows platform) or in known common locations, the **Find Steam directory** dialog will be shown (only once).
+If program cannot find Steam installation directory path in registry (only on Microsoft Windows platform) or in known common locations, the **Find Steam directory** dialog will appear (but only once).
 
 .. index:: getting started, working with application, using application
 .. _gs-useapp:
@@ -54,7 +53,7 @@ Using application
 
 First you will need to select game from the list of supported and installed Source Engine games. Your choise will be saved.
 
-If only one game will be found, it will be selected automatically.
+If only one game is found, it will be selected automatically.
 
 If program cannot find required game, please start it at least once from Steam, then restart SRC Repair.
 
@@ -64,9 +63,9 @@ If program cannot find required game, please start it at least once from Steam, 
 Data files storage
 ==========================================
 
-All settings will be stored in ``%LOCALAPPDATA%\EasyCoding_Team`` directory (each subdirectory for every version).
+All program settings are stored in ``%LOCALAPPDATA%\EasyCoding_Team`` directory (each subdirectory for every version).
 
-Created by program :ref:`backups <backups-about>` can found in ``%APPDATA%\SRC Repair\backups`` directory.
+Created by program :ref:`backups <backups-about>` can be found in ``%APPDATA%\SRC Repair\backups`` directory.
 
 All other data files -- ``%APPDATA%\SRC Repair``.
 

@@ -17,10 +17,10 @@ Only Microsoft Windows platform is supported.
 To create a new report:
 
   1. select **Tools** -- **Report builder** menu entry or just press **F12** on keyboard;
-  2. press **Generate report!** button and wait for 1 to to 5 minutes (depends on your system);
+  2. press **Generate report!** button and wait from 1 to to 5 minutes (depends on your system);
   3. you will see generated Zip-file in a default file manager.
 
-Report builder will use only integrated into Microsoft Windows tools. The following information will be included into final report:
+Report builder is using only integrated into Microsoft Windows utilities. The following information will be included in the final report:
 
   * common information about hardware, software and operation system using MSInfo;
   * DirectX information;
@@ -31,7 +31,7 @@ Report builder will use only integrated into Microsoft Windows tools. The follow
   * Steam crash dumps;
   * contents of Hosts file.
 
-Report is a simple Zip-file, so you can load it into any archiver and check its contents before uploading to anywhere.
+Report is a simple Zip-file, so you can load it by any archiver and check its contents before uploading to anywhere.
 
 .. index:: updating program, application updates
 .. _modules-updater:
@@ -49,13 +49,13 @@ Updater will check updates for the following:
 
 SRC Repair will automatically check for updates once a week (can be disabled in :ref:`advanced settings <settings-advanced>`).
 
-Database are being download from repository and copying to installation directory.
+Database are being download from repository and copied to the installation directory.
 
-Program updates are being downloaded from CDN as a standalone installer.
+Program updates are being downloaded from CDN as a standalone installers.
 
-If updates we found, you can install them by clicking on message.
+If updates we found, you can install them by left clicking on message.
 
-If SRC Repair is installed for all users to a system protected directory **%PROGRAMFILES%**, UAC dialog will appear.
+If SRC Repair is installed for all users to a system protected directory like **%PROGRAMFILES%**, UAC dialog will appear.
 
 .. index:: quick add-on installer
 .. _modules-installer:
@@ -78,7 +78,7 @@ Press **Browse** button and find required file on disk. Don't forget to change *
 
 Now press **Install** button to install selected file.
 
-Installation will be performed into game custom directory (if supported). Do not install content from untrusted sources.
+Installation will be performed in the game's custom directory (if supported). Do not install content from untrusted sources.
 
 .. index:: system buttons disabler, windows keys
 .. _modules-kbd:
@@ -106,17 +106,17 @@ Local administrator rights are required in order to change keyboard settings. On
 Muted players manager
 ==========================================
 
-With the help of this module you can easily control list of muted and ignored players in selected game.
+With the help of this module you can easily control the list of muted and ignored players in a selected game.
 
 To add a new row, just start typing text in the last cell.
 
-SteamID32 (legacy) and SteamIDv3 formats are only supported. Legacy entry can be converted to a new one by pressing **Convert SteamID format** button on main toolbar or from context menu.
+SteamID32 (legacy) and SteamIDv3 formats are only supported. Legacy entry can be converted to a new one by pressing **Convert SteamID format** button on the main toolbar or from context menu.
 
-To remove currently selected row, press **Remove selected row** button on main toolbar, or press **Delete** on keybooard. You can select and remove multiple rows at once.
+To remove currently selected row, press **Remove selected row** button on the main toolbar, or press **Delete** on keybooard. You can select and remove multiple rows at once.
 
-If you want to show selected user profile in Web browser, press **Open Steam profile** button on main toolbar or from context menu.
+If you want to show selected user profile in Web browser, press **Open Steam profile** button on the main toolbar or from context menu.
 
-Press **Save** button on main toolbar to save changes.
+Press **Save** button on the main toolbar to save changes.
 
 If safe clean is enabled (green light in status bar), backup file will be created automatically. You can restore or delete it on :ref:`BackUps <backups-about>` tab.
 
@@ -128,9 +128,9 @@ Cleanup module
 
 This module cannot be invoked directly by user. It used by different cleanup methods from :ref:`trobleshooting and cleanup <cleanup-wizard>` tab and by :ref:`extended cleanup module <modules-stmcln>`.
 
-Main window consists of table with candidates for deletion, control buttons and progress bar.
+Main window consists of table with candidates for deletion, control buttons and a progress bar.
 
-Depending on cleanup type, files can be marked for deletion automatically or don't.
+Depending on cleanup type, files can be marked for deletion automatically or not.
 
 Press **Execute cleanup button** to start cleanup sequence. All marked by checkbox files will be removed.
 
@@ -155,7 +155,7 @@ Steam cleanup module
 
 This module will find and remove garbage, accumulated on regular daily use. We recommend to run it at least once a month.
 
-You need to select one or multiple checkboxes and then run **Execute cleanup** button. :ref:`Cleanup module <modules-cleanup>` window will be shown.
+You need to select one or multiple checkboxes and then press **Execute cleanup** button. :ref:`Cleanup module <modules-cleanup>` window will appear.
 
 Available cleanup options:
 

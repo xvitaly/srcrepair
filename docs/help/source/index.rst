@@ -1,6 +1,6 @@
 .. _index:
 
-SRC Repair offline help
+SRC Repair's offline help
 ======================================
 
 .. toctree::

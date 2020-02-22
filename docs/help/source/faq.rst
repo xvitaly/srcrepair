@@ -7,17 +7,17 @@ Frequently asked questions (FAQ)
 .. index:: faq, framework, dotnet version
 .. _faq-framework:
 
-How to fix error with Microsoft .NET Framework 4 on program startup?
+How to fix an error with Microsoft .NET Framework 4 on program startup?
 ===========================================================================================
 
-You need installed Microsoft .NET Framework version 4.7.2 or higher in order to start this program.
+You to download and install Microsoft .NET Framework version 4.7.2 or higher in order to use this program.
 
-You can download if from `official Microsoft website <https://www.microsoft.com/net/download/dotnet-framework-runtime>`__.
+You can download if from official `Microsoft Download website <https://www.microsoft.com/net/download/dotnet-framework-runtime>`__.
 
 .. index:: faq, windows xp, windows vista
 .. _faq-legacy:
 
-How can I run program under Windows XP/Vista?
+How can I run this program under Windows XP/Vista?
 =========================================================
 
 These legacy operating systems are no longer supported.
@@ -28,15 +28,15 @@ These legacy operating systems are no longer supported.
 How to fix slow startup?
 ===========================================
 
-You can install SRC Repair for all users. Installer will use NGen to generate machine images, which should speed-up program cold startup.
+You can install SRC Repair for all users. Installer will use NGen to generate native images, which should significantly increate cold startup speed.
 
 .. index:: faq, counterfeit, cracked versions
 .. _faq-crrrr:
 
-Can I use program with cracked versions of games?
-=========================================================
+Can I use this program with cracked version of game?
+=============================================================
 
-No. We support only legal Steam versions of games.
+No. We support only legal Steam versions.
 
 .. index:: faq, source 2
 .. _faq-source2:
@@ -76,7 +76,7 @@ Yes, unless you use :ref:`Steam cleanup module <modules-stmcln>`.
 Is it safe to run this program with controlled game simultaneously?
 ===========================================================================
 
-We strongly do not recommend doing this, as SRC Repair cannot get exclusive access to its files and settings.
+We strongly do not recommend doing this, as neither SRC Repair, nor the controled game cannot get exclusive access to files and settings.
 
 .. index:: faq, vac ban
 .. _faq-vac:
@@ -92,12 +92,12 @@ No, but do not use this program with any running VAC-protected game.
 How I can report bug or create a new feature request?
 ===============================================================
 
-Please open a new issue in our `GitHub bug tracker <https://github.com/xvitaly/srcrepair/issues>`__.
+Please open a new issue in our `bug tracker <https://github.com/xvitaly/srcrepair/issues>`__ on GitHub.
 
 .. index:: faq, firewall, network activity
 .. _faq-firewall:
 
-SRC Repair require Internet access. For what purpose?
+For what purposes does SRC Repair require Internet access?
 ===================================================================================================
 
 SRC Repair need Internet access for checking for updates once a week (can be disabled in :ref:`advanced settings <settings-advanced>`).
@@ -108,7 +108,7 @@ SRC Repair need Internet access for checking for updates once a week (can be dis
 I want to add a new game. What should I do?
 ===========================================================
 
-Please open a new issue in our `GitHub bug tracker <https://github.com/xvitaly/srcrepair/issues>`__.
+Please open a new issue in our `bug tracker <https://github.com/xvitaly/srcrepair/issues>`__ on GitHub.
 
 We support only Source Engine games.
 
@@ -139,10 +139,10 @@ Please use :ref:`Steam cleanup module <modules-stmcln>`.
 .. index:: faq, installation error, error
 .. _faq-install-error:
 
-I want to change installation directory, but cannot do it due to error. What shall I do?
+I want to change installation directory, but cannot do this due to an error. What shall I do?
 ====================================================================================================
 
-If you want to install program to a privileged directory, you will need to run installer with admininstrator rights.
+If you want to install program to a privileged directory, you will need to run installer with admininstrator user rights.
 
 Press right mouse button on installer and select **Run as admininstrator** from context menu.
 
@@ -176,7 +176,7 @@ Open command-line :ref:`options editor <gt-setparams>`, remove everything from t
 Garry's Mod cannot use DirectX 8.x mode. How can I fix this?
 ================================================================================
 
-DirectX 8.x support was removed from modern Garry's Mod versions. This game will use DirectX 9.0c, regardless of selected mode in :ref:`graphic tweaker <gt-type1>`.
+DirectX 8.x support was removed from the latest Garry's Mod versions. This game will always use DirectX 9.0c, regardless of the selected mode in :ref:`graphic tweaker <gt-type1>`.
 
 .. index:: faq, missing face animation, missing eyes, FPS-configs
 .. _faq-tf2-eyes:
@@ -196,7 +196,7 @@ How I can edit installed FPS-config?
 
 If you have installed :ref:`FPS-config <fps-about>`, you will see a yellow exclamation mark in :ref:`Graphic tweaker <graphic-tweaker>` tab.
 
-Press left mouse button on it and select FPS-config to edit in :ref:`Config editor <config-editor>` or hold **Shift** to load it with :ref:`selected text editor <settings-advanced>`.
+Press left mouse button on it and select FPS-config to edit by :ref:`Config editor <config-editor>` or hold **Shift** to edit it by a :ref:`selected text editor <settings-advanced>`.
 
 .. index:: faq, FPS-configs, FPS-configs compatibility
 .. _faq-fps-compat:
@@ -204,9 +204,9 @@ Press left mouse button on it and select FPS-config to edit in :ref:`Config edit
 Why does the description of some FPS-configs say that they are not fully compatible with the game?
 =======================================================================================================
 
-Some console variables we marked as cheats and cannot be used on servers without ``sv_cheats 1``.
+Some console variables were marked as cheats and cannot be used on servers without ``sv_cheats 1``.
 
-Unfortunately, many authors of FPS-configs have abandoned their configs. You can still use them, but their effectiveness may be low.
+Unfortunately, some authors of FPS-configs have abandoned their configs. You can still use them, but their effectiveness may be low.
 
 .. index:: faq, FPS-configs, TF2 competitive mode
 .. _faq-tf-comp:

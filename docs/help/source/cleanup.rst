@@ -12,14 +12,14 @@ With tools, presented on this page, you can resolve most of the known Steam and 
 Troubleshooting and recovery
 ==========================================
 
-To run Steam client recovery, enable **Clean .blob files from Steam directory** or/and **Clean all registry entries** (require admin rights; not available on non-Windows platforms) checkboxes, then press button **Cleanup Now!**.
+To run Steam client recovery, enable **Clean .blob files from Steam directory** or/and **Clean all registry entries** (require admin rights; not available on non-Windows platforms) checkboxes, then press **Cleanup Now!** button.
 
 Warning! Steam client will be automatically terminated (if running).
 
 Known issues, can be resolved by this tool:
 
  * Steam logon errors;
- * errors like **Steam servers is not available**, **This game is not available at this time**, **No Steam connection**, **Cannot connect to Steam network**, etc.;
+ * errors like **Steam servers are not available**, **This game is not available at this time**, **No Steam connection**, **Could not connect to Steam network**, etc.;
  * endless Steam connection to servers;
  * some issues, related to Friends system;
  * damaged Steam installation (after running this, Steam client will be re-downloaded from official servers);
@@ -31,8 +31,8 @@ Known issues, can be resolved by this tool:
 Principle of operation
 ============================================
 
- * if **Clean .blob files from Steam directory** is checked, SRC Repair will get Steam installation directory path, find and remove files with .blob extension, and force Steam recovery on next launch. Warning! Steam can force you to login again after performing this action.
- * if **Clean all registry entries** is checked, SRC Repair will remove ``HKEY_CURRENT_USER\Software\Valve\Steam`` registry key, modify some values in ``HKEY_LOCAL_MACHINE\Software\Valve\Steam`` (only when running with admin rights), and force Steam recovery on next launch. You will need to specify Steam language from list.
+ * If **Clean .blob files from Steam directory** is checked, SRC Repair will get Steam installation directory path, find and remove files with .blob extension, and force Steam recovery on next launch. Warning! Steam can force you to login again after performing this action.
+ * If **Clean all registry entries** is checked, SRC Repair will remove ``HKEY_CURRENT_USER\Software\Valve\Steam`` registry key, modify some values in ``HKEY_LOCAL_MACHINE\Software\Valve\Steam`` (only when running with admin rights), and force Steam recovery on next launch. You will need to select Steam language from list.
 
 .. index:: troubleshooting, path checker
 .. _cleanup-pathcheck:
@@ -40,9 +40,9 @@ Principle of operation
 Installation path checker
 ============================================
 
-This tool automatically check for restricted (non-ASCII) symbols in Steam installation directory path. Steam path should contain only latin letters and numbers. All other can cause major issues with games, compiled without Unicode support.
+This tool will automatically check for restricted (non-ASCII) symbols in Steam installation directory path. Steam path should contain only latin letters and numbers. All other can cause major issues with games, compiled without Unicode support.
 
-If restricted symbols are found, a warning message will be shown. Also you will see red sign in **General information** section.
+If any restricted symbols were found, a warning message will be shown. Also you will see a red sign in **General information** section.
 
 This tool starts automatically with SRC Repair and cannot be disabled.
 
@@ -54,9 +54,9 @@ Game cleanup wizard
 
 This tool allow you to clean up garbage, accumulated in game on regular daily use. It can free-up lots of disk space.
 
-After selecting cleanup action, you will see a separate :ref:`safe clean window <modules-cleanup>`. You can check the list of files, marked to deletion.
+After selecting cleanup action, :ref:`safe clean window <modules-cleanup>` will appear. You can manually check the list of files, marked to deletion.
 
-All marked files will be removed. If you don't want to remove some files, uncheck checkbox near its name.
+If you don't want to remove some file, uncheck checkbox near its name. All marked files will be removed.
 
 When done, press **Execute cleanup** button to run cleanup sequence. If you changed your mind  -- press **Cancel**.
 
@@ -82,5 +82,5 @@ Deep cleanup
 ============================================
 
  * **Clean game settings (+video)** -- reset all in-game video settings. Backup file will be created.
- * **Remove all binaries and launchers** -- remove game binaries and launchers (contents of ``/bin``, ``/{game}/bin`` directories and ``/hl2.exe`` file). Use this if you have issues with starting game, crashes of different origin, etc. You **must** verify game cache after running this cleanup.
+ * **Remove all binaries and launchers** -- remove game binaries and launchers (contents of ``/bin``, ``/{game}/bin`` directories and ``/hl2.exe`` file). Use this if you have issues with starting game, crashes of different origin, etc. You **must** validate game cache after running this cleanup.
  * **Validate game cache files** -- force game cache verification. Will check all game files and re-download corrupted or missing. You must run this process after running deep cleanup or removing game binaries and launchers.

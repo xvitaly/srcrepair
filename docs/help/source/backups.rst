@@ -16,7 +16,7 @@ When safe cleanup is on (green light in status bar), application will automatica
 
 You can select multiple backups by pressing **Ctrl** or **Shift**.
 
-Plain text backup files can be viewed or edited by a :ref:`default text editor <settings-advanced>`. Just select such file and press **Edit in notepad** button.
+Plain text backup files can be viewed or edited by a :ref:`default text editor <settings-advanced>`. Just select such file and press **Edit in Notepad** button on the main toolbar.
 
 Binary files with **bud** extension can be opened by any Zip-archiver.
 
@@ -28,7 +28,7 @@ BackUp types
 
 Typical backup file name ``Container_UNIXTIME.bud`` consists of prefix **Container**, **UNIXTIME** -- current datetime in UnixTime format and extension **bud**.
 
-BUD-files are Zip-archives, which contains removed by program files with keeping the original directory hierarchy.
+BUD-files are standard Zip-archives, which contains removed by program files with keeping the original directory hierarchy.
 
 The names of the registry backup files (only in version for Microsoft Windows) are generated as follows:
 
@@ -45,9 +45,9 @@ Backup storage
 
 All backup files are stored in ``%APPDATA%\SRC Repair\backups`` directory, in subdirectories for each game.
 
-The number of backups is not limited, so don't forget to remove them manually. No automatic removal performed.
+The number of backups is not limited, so don't forget to remove them manually. No automatic removal will be performed.
 
-Old backup files (older than 30 days) will be highlighted in list for your convenience (can be disabled in :ref:`settings <settings-main>`).
+Old backup files (older than 30 days) will be highlighted in list for your convenience (it can be disabled in :ref:`settings <settings-main>`).
 
 .. index:: backup restoration
 .. _backups-restore:
@@ -55,7 +55,7 @@ Old backup files (older than 30 days) will be highlighted in list for your conve
 Backup restoration
 ==========================================
 
-If you want to restore backup, just select file (or files) from list and press **Restore selected backup** button on main toolbar.
+If you want to restore backup, just select file (or files) from the list and press **Restore selected backup** button on the main toolbar.
 
 Confirm restoration.
 
@@ -65,7 +65,7 @@ Confirm restoration.
 Backup removal
 ==========================================
 
-If you want to remove backup, just select file (or files) from list and press **Remove selected backup** button on main toolbar.
+If you want to remove backup, just select file (or files) from the list and press **Remove selected backup** button on the main toolbar.
 
 Confirm deletion. Removed files cannot be restored!
 
@@ -75,4 +75,4 @@ Confirm deletion. Removed files cannot be restored!
 Creating registry backups
 ==========================================
 
-If you want to create backup of video settings, video settings of all Source Engine games or Steam settings, stored in Windows registry, press button **Create** on main toolbar and select option from dropdown menu. Backup file will be created and added to list.
+If you want to create backup of video settings, video settings of all Source Engine games or Steam settings, stored in Windows registry, press button **Create** on the main toolbar and select any option from dropdown menu. Backup file will be created and added to the list.

@@ -16,7 +16,7 @@ Available settings:
 
   * **horisontal resolution** -- integer in range between *640* to *2000* pixels;
   * **vertical resolution** -- integer in range between *480* to *1900* pixels;
-  * **display mode**: *fullscreen* or *windoweed*. Fullscreen is recommended in most cases to get maximum framerate;
+  * **display mode**: *fullscreen* or *windoweed*. Fullscreen is recommended in the most cases to in order get maximum performance;
   * **model quality**: *low*, *medium* or *high*. Highest value will require the most powerful GPU;
   * **texture quality**: *low*, *medium* or *high* (the same as models);
   * **shaders quality**: *low* or *high* -- set shader effects quality;
@@ -27,7 +27,7 @@ Available settings:
   * **filtering mode**: *bilinear*, *trilinear* or *anisotropic* \*x (2x, 4x, 8x, 16x) -- set texture filtering level. The higher level, the most powerful GPU will be required. Optimal performance/quality ratio can be achieved with anisotropic 4x or 8x levels. Trilinear filtration is faster then bilinear or anisotropic;
   * **vertical synchronization**: *disabled* or *enabled* -- control vertical synchronization (frame limiter). When enabled, framerate will be limited by your monitor refresh rate and prevent screen tearing;
   * **motion blur**: *disabled* or *enabled* -- enable or disable motion blur post-effect;
-  * **DirectX mode**: *8.0*, *8.1*, *9.0*, *9.0c* -- set DirectX feature level. 8.x will disable some effects and significantly increase performance. Some games support only 9.0c;
+  * **DirectX mode**: *8.0*, *8.1*, *9.0*, *9.0c* -- set DirectX feature level. 8.x will disable some effects and significantly increase performance. :ref:`Some games <faq-gm-dx8>` supports only 9.0c;
   * **High Dynamic Range**: *disabled* or *enabled* -- allow or disallow High Dynamic Range effects.
 
 .. index:: graphic settings, source type 2
@@ -60,7 +60,7 @@ Available settings:
 Game launch options
 =================================================
 
-**Game launch options** allow user to see or to override game launch options. This option provided for power users only. Most of users should not use it.
+**Game launch options** allow user to override game launch options. This option provided for power users only. Most of users should not use it.
 
 All parameters must be separated by spaces. For example:
 
@@ -68,7 +68,7 @@ All parameters must be separated by spaces. For example:
 
     -novid -full -h 1280 -w 1024
 
-Warning! Do not use ``-dxlevel`` command-line option, because it will lead to the fact that the game video settings will no longer be saved correctly. This is a known issue for all Source Engine games.
+Warning! Do not use ``-dxlevel`` command-line option, because it will lead to the fact that the game video settings will no longer be saved correctly. This is a known issue of all Source Engine games.
 
 .. index:: launch options, game launch options, changing launch options
 .. _gt-setparams:
@@ -76,7 +76,7 @@ Warning! Do not use ``-dxlevel`` command-line option, because it will lead to th
 Changing game launch options
 =================================================
 
-Start Steam client -- select game from Steam Library -- press right mouse button -- select **Properties** -- press **Set launch options** button -- set new launch options -- press **OK** and **Close** -- launch game.
+Start Steam client -- select the game from Steam Library -- press right mouse button -- select **Properties** -- press **Set launch options** button -- set new launch options -- press **OK** and **Close** -- launch game.
 
 .. index:: launch options, game launch options, list of supported launch options
 .. _gt-launchopts:
@@ -87,14 +87,15 @@ List of supported launch options
 Available launch options:
 
   * **-novid** (**-novideo**) -- disable game intro video;
-  * **-autoconfig** -- restore default settings. Game will ignore all settings and :ref:`FPS-configs <fps-about>`;
-  * **-full** (**-fullscreen**) -- start game in fullscreen mode;
-  * **-window** (**-sw** или **-windowed**) -- start game in windowed mode;
+  * **-autoconfig** -- restore default settings. The game will ignore all settings and :ref:`FPS-configs <fps-about>`;
+  * **-full** (**-fullscreen**) -- start the game in fullscreen mode;
+  * **-window** (**-sw** или **-windowed**) -- start the game in windowed mode;
   * **-width** или **-w** -- set horisontal resolution or window size;
   * **-height** или **-h** -- set vertical resolution or window size;
   * **-console** -- enable and automatically launch developer console;
-  * **-dxlevel** -- enforce DirectX level (available values - *80*, *81*, *90*, *95*). Do not use it due to :ref:`known major issues <gt-params>`. Use :ref:`graphic tweaker <gt-type1>` instead;
-  * **-heapsize ЧИСЛО** -- set heap size. Can be calculated by following: (RAM / 2 * 1024). Examples for popular RAM sizes:
+  * **-textmode** -- start the game in the text mode;
+  * **-dxlevel** -- enforce DirectX level (available values are *80*, *81*, *90*, *95*). Do not use it due to :ref:`known major issues <gt-params>`. Use :ref:`graphic tweaker <gt-type1>` instead;
+  * **-heapsize X** -- set heap size. Can be calculated by the following formula: (RAM / 2 * 1024). Examples for popular RAM sizes:
 
     * 512 MB -> **262144**;
     * 1 GB -> **524288**;
@@ -104,7 +105,7 @@ Available launch options:
 
   * **-nojoy** -- disable gamepads initialization;
   * **-noipx** -- disable IPX connections support;
-  * **-noborder** -- disable border in windowed mode;
+  * **-noborder** -- disable window border and controls in windowed mode;
   * **-noforcemspd** -- use mouse speed settings from Windows;
   * **-noforcemparms** -- use mouse buttons settings from Windows;
   * **-noforcemaccel** -- use mouse acceleration settings from Windows;
@@ -137,7 +138,7 @@ Video profiles: maximum quality
  * **vertical synchronization** -> disabled;
  * **motion blur** -> disabled;
  * **DirectX mode** -> 9.0c;
- * **High Dynamic Range** -> полные.
+ * **High Dynamic Range** -> full.
 
 .. index:: video profiles, maximum performance profile
 .. _gt-maxfps:

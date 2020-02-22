@@ -4,7 +4,7 @@
 Config editor
 ************************************
 
-Game configuration file editor (config editor) allow you easily create, view or edit any Source Engine game configs in a simple, but powerful GUI.
+Game configuration file editor (config editor) allow you to easily create, view or edit any Source Engine game configs in a simple, but powerful GUI.
 
 .. index:: config editor, working with config editor
 .. _editor-working:
@@ -12,7 +12,7 @@ Game configuration file editor (config editor) allow you easily create, view or 
 Working with config editor
 ==========================================
 
-In the first column **Variable** you must specify variable name (eg. ``cl_cmdrate``), and in the second **Value** -- its value (eg. ``66``).
+In the first column **Variable** you must specify variable name (eg. ``cl_cmdrate``), and in the second **Value** -- its value (eg. ``66``). Value can be omitted.
 
 Variable name must not contain any spaces, commentaries, etc. Value can be both double-quoted, or without them. If value contains spaces, double quotes are mandatory.
 
@@ -20,11 +20,11 @@ All commentaries are forbidden and will be removed on save/load procedures to re
 
 To add a new row, just start typing text in the last cell.
 
-To remove currently selected row, press **Delete selected row** button on main toolbar, or press **Delete** on keybooard. You can select and remove multiple rows at once.
+To remove currently selected row, press **Delete selected row** button on the main toolbar, or press **Delete** on keybooard. You can select and remove multiple rows at once.
 
-You can ask program to show hint. Select row and press **Show hint** button or press **F7** to show description of current variable. If no variables found, an error message will be shown.
+You can ask program to show hint. Select row and press **Show hint** button or press **F7** to show description of current variable. If no variables were found, an error message will be shown.
 
-If you want to edit config as text, press **Open config in Notepad** button. File will be loaded into :ref:`selected <settings-advanced>` (or system default) text editor.
+If you want to edit config as a text file, press **Open config in Notepad** button. File will be loaded by a :ref:`selected <settings-advanced>` (or system default) text editor.
 
 .. index:: config editor, creating new configs
 .. _editor-createcfg:
@@ -32,9 +32,9 @@ If you want to edit config as text, press **Open config in Notepad** button. Fil
 Creating new configs
 ==========================================
 
-  1. Press **Create a new config** button on main toolbar.
+  1. Press **Create a new config** button on the main toolbar.
   2. Edit config as described in :ref:`working with config editor <editor-working>`.
-  3. Press **Save config** button on main toolbar to save changes in config file. If it was a new file, save as dialog will be shown. Extension is not required.
+  3. Press **Save config** button on the main toolbar to save changes in config file. If it was a new file, save as dialog will be shown. Extension is not required.
 
 .. index:: config editor, loading config file
 .. _editor-loadcfg:
@@ -42,9 +42,9 @@ Creating new configs
 Loading config file
 ================================================
 
-  1. Press **Open config from file** button on main toolbar and select file on disk with standard open file dialog (depends on platform).
+  1. Press **Open config from file** button on the main toolbar and select file on disk with standard open file dialog (depends on platform).
   2. Edit config as described in :ref:`working with config editor <editor-working>`.
-  3. Press **Save config** button on main toolbar to save changes in config file.
+  3. Press **Save config** button on the main toolbar to save changes in config file.
 
 If safe clean is enabled (green light in status bar), backup file will be created automatically. You can restore or delete it on :ref:`BackUps <backups-about>` tab.
 

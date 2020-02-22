@@ -14,7 +14,7 @@ On this page you can install one of available and tested HUDs into selected game
 
 Each HUD has a readme file and a screenshot. Select one from list and you will be able to see it.
 
-All HUDs are being downloaded from our cloud and provided by "as is" license.
+All HUDs are being downloaded from our cloud and licensed "as is".
 
 This module will be unavailable if current game does not support custom HUDs.
 

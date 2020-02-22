@@ -10,13 +10,13 @@ FPS-config manager
 About FPS configs
 ==========================================
 
-On this page you can install one of available and tested FPS-configs into selected game. FPS-config is a text file with ``autoexec.cfg`` name. It can significantly increase game performance by changing extended video settings.
+On this page you can install one of available and tested FPS-configs into selected game. FPS-config is a text file with ``autoexec.cfg`` name. It can significantly increase game performance by changing hidden extended video settings.
 
 Settings, obtained from FPS-config, have higher priority than set by :ref:`Graphic tweaker <graphic-tweaker>` or by the game itself. Select config from list to read it's description.
 
-Installed FPS-configs can be edited in :ref:`Config editor <editor-working>`.
+Installed FPS-configs can be edited with :ref:`Config editor <editor-working>`.
 
-All FPS-configs are being downloaded from our cloud and provided by "as is" license.
+All FPS-configs are being downloaded from our cloud and licensed "as is".
 
 .. index:: FPS-configs, supported FPS-configs
 .. _fps-available:
@@ -75,7 +75,7 @@ Known issues with FPS-configs
 
 After installing FPS-configs voice chat can stop working, sprays and face animation can be disabled. This is conceived. Most of FPS-configs disable this functions in order to significantly increase game performance.
 
-If you want to enable them again, you will need to :ref:`remove all installed FPS-configs <fps-uninstall>` and then change following variables via ``autoexec.cfg`` file or developer console:
+If you want to enable them again, you will need to :ref:`remove all installed FPS-configs <fps-uninstall>` and then change the following variables via ``autoexec.cfg`` file or by using developer console:
 
 .. code-block:: text
 
@@ -100,4 +100,4 @@ Reverse FPS-configs
 
 If you want to set all video settings to maxium to get best quality, you can install specical :ref:`reverse FPS-configs <fps-available>`.
 
-You will need a high-end computer to use them.
+You will need a high-end computer in order to use them.
