@@ -23,6 +23,7 @@
 # serve to show the default.
 
 # Importing some Python modules.
+from os import getenv
 from time import strftime
 
 # -- General configuration ------------------------------------------------
@@ -75,7 +76,8 @@ release = '37.0.0'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'en'
+envlang = getenv('BUILDLANG')
+language = envlang if envlang else 'en'
 
 # Generating filename for output files.
 filename = 'srcrepair_{}'.format(language)
