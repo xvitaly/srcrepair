@@ -34,3 +34,5 @@ call "..\..\docs\help\make.cmd" htmlhelp
 "%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "..\..\docs\help\build\htmlhelp\srcrepair_ru.hhp"
 move "..\..\docs\help\build\htmlhelp\srcrepair_ru.chm" "..\..\srcrepair\bin\Release\help\srcrepair_ru.chm"
 call "..\..\docs\help\make.cmd" clean
+
+exit /b 0

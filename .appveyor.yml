@@ -29,15 +29,11 @@ after_build:
 
     pip3 install sphinx
 
-    pip3 install --upgrade sphinxcontrib-htmlhelp
-
     mkdir %CI_DIR%\help
 
     pushd packaging\helpers
 
     call build_chm_win.cmd
-
-    exit /b 0
 
     popd
 
