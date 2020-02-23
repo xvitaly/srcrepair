@@ -27,15 +27,17 @@ after_build:
 
     set CI_HASH=%APPVEYOR_REPO_COMMIT:~0,7%
 
-    pip3 install "sphinx==1.8.2"
+    pip3 install sphinx
 
-    call docs\help\make.cmd htmlhelp
-
-    "%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" docs\help\build\htmlhelp\srcrepair_en.hhp && exit /b 1 || exit /b 0
+    pip3 install --upgrade sphinxcontrib-htmlhelp
 
     mkdir %CI_DIR%\help
 
-    move docs\help\build\htmlhelp\srcrepair_en.chm %CI_DIR%\help\srcrepair_en.chm
+    pushd packaging\helpers
+
+    call build_chm_win.cmd && exit /b 1 || exit /b 0
+
+    popd
 
     7z a -m0=LZMA2 -mx9 -t7z -x!*.ico -x!DotNetZip.xml -x!NLog.xml packaging\results\snapshot_%CI_HASH%.7z %CI_DIR%\*
 
