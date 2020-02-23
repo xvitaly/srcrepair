@@ -35,7 +35,9 @@ after_build:
 
     pushd packaging\helpers
 
-    call build_chm_win.cmd && exit /b 1 || exit /b 0
+    call build_chm_win.cmd
+
+    exit /b 0
 
     popd
 
