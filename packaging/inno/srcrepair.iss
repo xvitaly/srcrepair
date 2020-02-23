@@ -65,8 +65,12 @@ BeveledLabel=EasyCoding Team
 [CustomMessages]
 OptNetStatus=Optimizing MSIL binary...
 OptNetUninstallStatus=Removing optimized MSIL binaries...
+LnkOfflineHelp=SRC Repair Documentation
+ChmFileName=srcrepair_en.chm
 russian.OptNetStatus=Идёт оптимизация MSIL приложения...
 russian.OptNetUninstallStatus=Идёт удаление машинных сборок MSIL...
+russian.LnkOfflineHelp=Справочная система SRC Repair
+russian.ChmFileName=srcrepair_ru.chm
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"; InfoBeforeFile: "readme_en.rtf"
@@ -100,6 +104,7 @@ Source: "{#BASEDIR}\bin\Release\*.sig"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{group}\SRC Repair"; Filename: "{app}\srcrepair.exe"
+Name: "{group}\{cm:LnkOfflineHelp}"; Filename: "{app}\help\{cm:ChmFileName}"
 Name: "{group}\{cm:ProgramOnTheWeb,SRC Repair}"; Filename: "https://github.com/xvitaly/srcrepair"
 Name: "{userdesktop}\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: desktopicon
 Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: quicklaunchicon
