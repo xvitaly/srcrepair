@@ -66,6 +66,8 @@ echo Signing built artifacts...
 "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\srcrepair_%RELVER%_dev.7z
 
 echo Removing temporary files and directories...
+rd /S /Q "..\docs\help\build\doctrees"
+rd /S /Q "..\docs\help\build\htmlhelp"
 rd /S /Q "..\srcrepair\bin"
 rd /S /Q "..\srcrepair\obj"
 rd /S /Q "..\corelib\bin"

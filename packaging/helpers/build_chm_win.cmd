@@ -25,7 +25,6 @@ echo Building offline help for default (EN) locale...
 call "..\..\docs\help\make.cmd" htmlhelp
 "%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "..\..\docs\help\build\htmlhelp\srcrepair_en.hhp"
 move "..\..\docs\help\build\htmlhelp\srcrepair_en.chm" "..\..\srcrepair\bin\Release\help\srcrepair_en.chm"
-call "..\..\docs\help\make.cmd" clean
 
 echo Building offline help for RU locale...
 set SPHINXOPTS=-D language=ru
@@ -33,4 +32,3 @@ set BUILDLANG=ru
 call "..\..\docs\help\make.cmd" htmlhelp
 "%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "..\..\docs\help\build\htmlhelp\srcrepair_ru.hhp"
 move "..\..\docs\help\build\htmlhelp\srcrepair_ru.chm" "..\..\srcrepair\bin\Release\help\srcrepair_ru.chm"
-call "..\..\docs\help\make.cmd" clean
