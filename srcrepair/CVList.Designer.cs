@@ -565,6 +565,24 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to How much money a player earns for defusing the bomb..
+        /// </summary>
+        internal static string cash_player_bomb_defused {
+            get {
+                return ResourceManager.GetString("cash_player_bomb_defused", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to How much money a player earns for planting the bomb..
+        /// </summary>
+        internal static string cash_player_bomb_planted {
+            get {
+                return ResourceManager.GetString("cash_player_bomb_planted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The penalty (or bonus) players get from harming a hostage..
         /// </summary>
         internal static string cash_player_damage_hostage {
@@ -610,6 +628,24 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The penalty (or bonus) players get for killing allies..
+        /// </summary>
+        internal static string cash_player_killed_teammate {
+            get {
+                return ResourceManager.GetString("cash_player_killed_teammate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The penalty (or bonus) players get for rescuing a hostage..
+        /// </summary>
+        internal static string cash_player_rescued_hostage {
+            get {
+                return ResourceManager.GetString("cash_player_rescued_hostage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The money bonus a play can get when they respawn (if respawning is enabled)..
         /// </summary>
         internal static string cash_player_respawn_amount {
@@ -619,11 +655,173 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The money each team member earns when they eliminate all enemies in a bomb defusal scenario map..
+        /// </summary>
+        internal static string cash_team_elimination_bomb_map {
+            get {
+                return ResourceManager.GetString("cash_team_elimination_bomb_map", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The money each team member earns when they eliminate all enemies in a hostage rescue scenario map..
+        /// </summary>
+        internal static string cash_team_elimination_hostage_map {
+            get {
+                return ResourceManager.GetString("cash_team_elimination_hostage_map", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The penalty (or bonus) players get for interacting with a hostage..
+        /// </summary>
+        internal static string cash_team_hostage_interaction {
+            get {
+                return ResourceManager.GetString("cash_team_hostage_interaction", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The money each team member earns on round loss..
+        /// </summary>
+        internal static string cash_team_loser_bonus {
+            get {
+                return ResourceManager.GetString("cash_team_loser_bonus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The money each team member earns after getting the loss streak..
+        /// </summary>
+        internal static string cash_team_loser_bonus_consecutive_rounds {
+            get {
+                return ResourceManager.GetString("cash_team_loser_bonus_consecutive_rounds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The money each team member earns if the bomb was planted, but successfully defused by the opposite team..
+        /// </summary>
+        internal static string cash_team_planted_bomb_but_defused {
+            get {
+                return ResourceManager.GetString("cash_team_planted_bomb_but_defused", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The money each team member earns when they successfully rescued a hostage..
+        /// </summary>
+        internal static string cash_team_rescued_hostage {
+            get {
+                return ResourceManager.GetString("cash_team_rescued_hostage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The money each team member earns when they successfully detonated the bomb..
+        /// </summary>
+        internal static string cash_team_terrorist_win_bomb {
+            get {
+                return ResourceManager.GetString("cash_team_terrorist_win_bomb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The money each team member earns when they successfully rescued all the hostages..
+        /// </summary>
+        internal static string cash_team_win_by_hostage_rescue {
+            get {
+                return ResourceManager.GetString("cash_team_win_by_hostage_rescue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The money each team member earns when they win due to the time ran out..
+        /// </summary>
+        internal static string cash_team_win_by_time_running_out {
+            get {
+                return ResourceManager.GetString("cash_team_win_by_time_running_out", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Closed captions language..
+        /// </summary>
+        internal static string cc_lang {
+            get {
+                return ResourceManager.GetString("cc_lang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Closed captions disappear delay..
+        /// </summary>
+        internal static string cc_linger_time {
+            get {
+                return ResourceManager.GetString("cc_linger_time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Closed captions delay..
+        /// </summary>
+        internal static string cc_predisplay_time {
+            get {
+                return ResourceManager.GetString("cc_predisplay_time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show sound effects in subtitles..
+        /// </summary>
+        internal static string cc_subtitles {
+            get {
+                return ResourceManager.GetString("cc_subtitles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Changes the player&apos;s class..
+        /// </summary>
+        internal static string changeclass {
+            get {
+                return ResourceManager.GetString("changeclass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Changes the map..
         /// </summary>
         internal static string changelevel {
             get {
                 return ResourceManager.GetString("changelevel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Changes the map on the next round..
+        /// </summary>
+        internal static string changelevel_next {
+            get {
+                return ResourceManager.GetString("changelevel_next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Changes the map and removes all players from server..
+        /// </summary>
+        internal static string changelevel2 {
+            get {
+                return ResourceManager.GetString("changelevel2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Changes the player&apos;s team..
+        /// </summary>
+        internal static string changeteam {
+            get {
+                return ResourceManager.GetString("changeteam", resourceCulture);
             }
         }
         
@@ -727,11 +925,47 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Automatically switch to more powerful weapon on pickup..
+        /// </summary>
+        internal static string cl_autowepswitch {
+            get {
+                return ResourceManager.GetString("cl_autowepswitch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Convert players avatars to RGB format..
         /// </summary>
         internal static string cl_avatar_convert_rgb {
             get {
                 return ResourceManager.GetString("cl_avatar_convert_rgb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adjusts how much your gun barrel moves back towards you when you&apos;re running..
+        /// </summary>
+        internal static string cl_bob_lower_amt {
+            get {
+                return ResourceManager.GetString("cl_bob_lower_amt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adjusts how much your gun barrel moves back towards you when you&apos;re running..
+        /// </summary>
+        internal static string cl_bobamt_lat {
+            get {
+                return ResourceManager.GetString("cl_bobamt_lat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adjusts how much your gun barrel moves back towards you when you&apos;re running..
+        /// </summary>
+        internal static string cl_bobamt_vert {
+            get {
+                return ResourceManager.GetString("cl_bobamt_vert", resourceCulture);
             }
         }
         
@@ -745,11 +979,47 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Use dynamic lights for C4..
+        /// </summary>
+        internal static string cl_c4dynamiclight {
+            get {
+                return ResourceManager.GetString("cl_c4dynamiclight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chat filter version (deprecated)..
+        /// </summary>
+        internal static string cl_chatfilter_version {
+            get {
+                return ResourceManager.GetString("cl_chatfilter_version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Stores the chat filter settings..
         /// </summary>
         internal static string cl_chatfilters {
             get {
                 return ResourceManager.GetString("cl_chatfilters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sets clan ID..
+        /// </summary>
+        internal static string cl_clanid {
+            get {
+                return ResourceManager.GetString("cl_clanid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sets clan tag (deprecated)..
+        /// </summary>
+        internal static string cl_clantag {
+            get {
+                return ResourceManager.GetString("cl_clantag", resourceCulture);
             }
         }
         
@@ -871,11 +1141,47 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Crosshair&apos;s blue component..
+        /// </summary>
+        internal static string cl_crosshair_blue {
+            get {
+                return ResourceManager.GetString("cl_crosshair_blue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sets crosshair picture. &quot;&quot; is standard-crosshairs..
         /// </summary>
         internal static string cl_crosshair_file {
             get {
                 return ResourceManager.GetString("cl_crosshair_file", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crosshair&apos;s green component..
+        /// </summary>
+        internal static string cl_crosshair_green {
+            get {
+                return ResourceManager.GetString("cl_crosshair_green", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crosshair&apos;s red component..
+        /// </summary>
+        internal static string cl_crosshair_red {
+            get {
+                return ResourceManager.GetString("cl_crosshair_red", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crosshair&apos;s scaling mode..
+        /// </summary>
+        internal static string cl_crosshair_scale {
+            get {
+                return ResourceManager.GetString("cl_crosshair_scale", resourceCulture);
             }
         }
         
@@ -903,6 +1209,60 @@ namespace srcrepair.gui {
         internal static string cl_crosshair_t {
             get {
                 return ResourceManager.GetString("cl_crosshair_t", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crosshair&apos;s transparency..
+        /// </summary>
+        internal static string cl_crosshairalpha {
+            get {
+                return ResourceManager.GetString("cl_crosshairalpha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set crosshair&apos;s color..
+        /// </summary>
+        internal static string cl_crosshaircolor {
+            get {
+                return ResourceManager.GetString("cl_crosshaircolor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show dot in the middle of the crosshair..
+        /// </summary>
+        internal static string cl_crosshairdot {
+            get {
+                return ResourceManager.GetString("cl_crosshairdot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crosshair&apos;s scale factor..
+        /// </summary>
+        internal static string cl_crosshairscale {
+            get {
+                return ResourceManager.GetString("cl_crosshairscale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Crosshair&apos;s size..
+        /// </summary>
+        internal static string cl_crosshairsize {
+            get {
+                return ResourceManager.GetString("cl_crosshairsize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use alpha channel for crosshair..
+        /// </summary>
+        internal static string cl_crosshairusealpha {
+            get {
+                return ResourceManager.GetString("cl_crosshairusealpha", resourceCulture);
             }
         }
         

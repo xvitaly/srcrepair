@@ -267,6 +267,12 @@
   <data name="cam_snapto" xml:space="preserve">
     <value>Snap camera to its default position in third person mode.</value>
   </data>
+  <data name="cash_player_bomb_defused" xml:space="preserve">
+    <value>How much money a player earns for defusing the bomb.</value>
+  </data>
+  <data name="cash_player_bomb_planted" xml:space="preserve">
+    <value>How much money a player earns for planting the bomb.</value>
+  </data>
   <data name="cash_player_damage_hostage" xml:space="preserve">
     <value>The penalty (or bonus) players get from harming a hostage.</value>
   </data>
@@ -282,11 +288,71 @@
   <data name="cash_player_killed_hostage" xml:space="preserve">
     <value>The penalty (or bonus) players get for killing a hostage.</value>
   </data>
+  <data name="cash_player_killed_teammate" xml:space="preserve">
+    <value>The penalty (or bonus) players get for killing allies.</value>
+  </data>
+  <data name="cash_player_rescued_hostage" xml:space="preserve">
+    <value>The penalty (or bonus) players get for rescuing a hostage.</value>
+  </data>
   <data name="cash_player_respawn_amount" xml:space="preserve">
     <value>The money bonus a play can get when they respawn (if respawning is enabled).</value>
   </data>
+  <data name="cash_team_elimination_bomb_map" xml:space="preserve">
+    <value>The money each team member earns when they eliminate all enemies in a bomb defusal scenario map.</value>
+  </data>
+  <data name="cash_team_elimination_hostage_map" xml:space="preserve">
+    <value>The money each team member earns when they eliminate all enemies in a hostage rescue scenario map.</value>
+  </data>
+  <data name="cash_team_hostage_interaction" xml:space="preserve">
+    <value>The penalty (or bonus) players get for interacting with a hostage.</value>
+  </data>
+  <data name="cash_team_loser_bonus" xml:space="preserve">
+    <value>The money each team member earns on round loss.</value>
+  </data>
+  <data name="cash_team_loser_bonus_consecutive_rounds" xml:space="preserve">
+    <value>The money each team member earns after getting the loss streak.</value>
+  </data>
+  <data name="cash_team_planted_bomb_but_defused" xml:space="preserve">
+    <value>The money each team member earns if the bomb was planted, but successfully defused by the opposite team.</value>
+  </data>
+  <data name="cash_team_rescued_hostage" xml:space="preserve">
+    <value>The money each team member earns when they successfully rescued a hostage.</value>
+  </data>
+  <data name="cash_team_terrorist_win_bomb" xml:space="preserve">
+    <value>The money each team member earns when they successfully detonated the bomb.</value>
+  </data>
+  <data name="cash_team_win_by_hostage_rescue" xml:space="preserve">
+    <value>The money each team member earns when they successfully rescued all the hostages.</value>
+  </data>
+  <data name="cash_team_win_by_time_running_out" xml:space="preserve">
+    <value>The money each team member earns when they win due to the time ran out.</value>
+  </data>
+  <data name="cc_lang" xml:space="preserve">
+    <value>Closed captions language.</value>
+  </data>
+  <data name="cc_linger_time" xml:space="preserve">
+    <value>Closed captions disappear delay.</value>
+  </data>
+  <data name="cc_predisplay_time" xml:space="preserve">
+    <value>Closed captions delay.</value>
+  </data>
+  <data name="cc_subtitles" xml:space="preserve">
+    <value>Show sound effects in subtitles.</value>
+  </data>
+  <data name="changeclass" xml:space="preserve">
+    <value>Changes the player's class.</value>
+  </data>
   <data name="changelevel" xml:space="preserve">
     <value>Changes the map.</value>
+  </data>
+  <data name="changelevel2" xml:space="preserve">
+    <value>Changes the map and removes all players from server.</value>
+  </data>
+  <data name="changelevel_next" xml:space="preserve">
+    <value>Changes the map on the next round.</value>
+  </data>
+  <data name="changeteam" xml:space="preserve">
+    <value>Changes the player's team.</value>
   </data>
   <data name="cl_allowdownload" xml:space="preserve">
     <value>Client downloads customization files.</value>
@@ -321,14 +387,38 @@
   <data name="cl_autorezoom" xml:space="preserve">
     <value>0/1 - turns Sniper Rifle re-zoom off/on.</value>
   </data>
+  <data name="cl_autowepswitch" xml:space="preserve">
+    <value>Automatically switch to more powerful weapon on pickup.</value>
+  </data>
   <data name="cl_avatar_convert_rgb" xml:space="preserve">
     <value>Convert players avatars to RGB format.</value>
+  </data>
+  <data name="cl_bobamt_lat" xml:space="preserve">
+    <value>Adjusts how much your gun barrel moves back towards you when you're running.</value>
+  </data>
+  <data name="cl_bobamt_vert" xml:space="preserve">
+    <value>Adjusts how much your gun barrel moves back towards you when you're running.</value>
+  </data>
+  <data name="cl_bob_lower_amt" xml:space="preserve">
+    <value>Adjusts how much your gun barrel moves back towards you when you're running.</value>
   </data>
   <data name="cl_burninggibs" xml:space="preserve">
     <value>0/1 - burning gibs off/on.</value>
   </data>
+  <data name="cl_c4dynamiclight" xml:space="preserve">
+    <value>Use dynamic lights for C4.</value>
+  </data>
   <data name="cl_chatfilters" xml:space="preserve">
     <value>Stores the chat filter settings.</value>
+  </data>
+  <data name="cl_chatfilter_version" xml:space="preserve">
+    <value>Chat filter version (deprecated).</value>
+  </data>
+  <data name="cl_clanid" xml:space="preserve">
+    <value>Sets clan ID.</value>
+  </data>
+  <data name="cl_clantag" xml:space="preserve">
+    <value>Sets clan tag (deprecated).</value>
   </data>
   <data name="cl_class" xml:space="preserve">
     <value>Default class when joining a game.</value>
@@ -369,8 +459,38 @@
   <data name="cl_coach_toggle" xml:space="preserve">
     <value>Toggle coach status.</value>
   </data>
+  <data name="cl_crosshairalpha" xml:space="preserve">
+    <value>Crosshair's transparency.</value>
+  </data>
+  <data name="cl_crosshaircolor" xml:space="preserve">
+    <value>Set crosshair's color.</value>
+  </data>
+  <data name="cl_crosshairdot" xml:space="preserve">
+    <value>Show dot in the middle of the crosshair.</value>
+  </data>
+  <data name="cl_crosshairscale" xml:space="preserve">
+    <value>Crosshair's scale factor.</value>
+  </data>
+  <data name="cl_crosshairsize" xml:space="preserve">
+    <value>Crosshair's size.</value>
+  </data>
+  <data name="cl_crosshairusealpha" xml:space="preserve">
+    <value>Use alpha channel for crosshair.</value>
+  </data>
+  <data name="cl_crosshair_blue" xml:space="preserve">
+    <value>Crosshair's blue component.</value>
+  </data>
   <data name="cl_crosshair_file" xml:space="preserve">
     <value>Sets crosshair picture. "" is standard-crosshairs.</value>
+  </data>
+  <data name="cl_crosshair_green" xml:space="preserve">
+    <value>Crosshair's green component.</value>
+  </data>
+  <data name="cl_crosshair_red" xml:space="preserve">
+    <value>Crosshair's red component.</value>
+  </data>
+  <data name="cl_crosshair_scale" xml:space="preserve">
+    <value>Crosshair's scaling mode.</value>
   </data>
   <data name="cl_crosshair_sniper_show_normal_inaccuracy" xml:space="preserve">
     <value>Includes standing inaccuracy and spread in your sniper crosshair blur.</value>

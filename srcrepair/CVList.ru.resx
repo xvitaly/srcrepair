@@ -285,6 +285,9 @@
   <data name="cash_player_killed_enemy_default" xml:space="preserve">
     <value>Задаёт сумму, которую получит игрок за убийство игрока команды соперника.</value>
   </data>
+  <data name="cash_player_killed_enemy_factor" xml:space="preserve">
+    <value>Множитель суммы, получаемой игроком за убийство противника.</value>
+  </data>
   <data name="cash_player_killed_hostage" xml:space="preserve">
     <value>Задаёт сумму, которая будет отнята у игрока, убившего заложника.</value>
   </data>
@@ -363,8 +366,23 @@
   <data name="cl_allowupload" xml:space="preserve">
     <value>Разрешить загрузку на сервер данных: личного спрея и т.д.</value>
   </data>
+  <data name="cl_animationinfo" xml:space="preserve">
+    <value>Выводит информацию о конкретном элементе HUD.</value>
+  </data>
+  <data name="cl_ask_blacklist_for_any_server" xml:space="preserve">
+    <value>Включить / выключить отображение вопроса о добавлении сервера в чёрный список для локальных серверов (используется для отладки).</value>
+  </data>
+  <data name="cl_ask_blacklist_max_session_duration" xml:space="preserve">
+    <value>Если игрок пробыл на сервере менее указанного здесь значения, будет предложено внести его в чёрный список.</value>
+  </data>
   <data name="cl_ask_blacklist_opt_out" xml:space="preserve">
     <value>Включить / выключить отображение вопроса о добавлении сервера в чёрный список после быстрого отключения от него.</value>
+  </data>
+  <data name="cl_ask_favorite_for_any_server" xml:space="preserve">
+    <value>Включить / выключить отображение вопроса о добавлении сервера в избранное для локальных серверов (используется для отладки).</value>
+  </data>
+  <data name="cl_ask_favorite_min_session_duration" xml:space="preserve">
+    <value>Если игрок пробыл на сервере более указанного здесь значения, будет предложено добавить его в избранное.</value>
   </data>
   <data name="cl_ask_favorite_opt_out" xml:space="preserve">
     <value>Включить / выключить отображение вопроса о добавлении сервера, находящегося в Избранном, в чёрный список после быстрого отключения от него.</value>
@@ -414,8 +432,38 @@
   <data name="cl_clearhinthistory" xml:space="preserve">
     <value>Очищает память подсказок на стороне клиента.</value>
   </data>
+  <data name="cl_clockdrift_max_ms" xml:space="preserve">
+    <value>Максимальное количество миллисекунд при превышении которых таймер считается клиента рассинхронизованным с сервером.</value>
+  </data>
+  <data name="cl_clockdrift_max_ms_threadmode" xml:space="preserve">
+    <value>Максимальное количество миллисекунд при превышении которых таймер считается клиента рассинхронизованным с сервером.</value>
+  </data>
+  <data name="cl_clock_correction" xml:space="preserve">
+    <value>Включает / отключает коррекцию таймера на клиенте.</value>
+  </data>
+  <data name="cl_clock_correction_adjustment_max_amount" xml:space="preserve">
+    <value>Задаёт максимальное количество миллисекунд в секунде, при превышении которых будет произведена коррекция.</value>
+  </data>
+  <data name="cl_clock_correction_adjustment_max_offset" xml:space="preserve">
+    <value>Количество миллисекунд для коррекции таймера на клиенте.</value>
+  </data>
+  <data name="cl_clock_correction_adjustment_min_offset" xml:space="preserve">
+    <value>Задаёт количество миллисекунд, до превышения которого коррекция таймера произведена не будет.</value>
+  </data>
+  <data name="cl_clock_correction_force_server_tick" xml:space="preserve">
+    <value>Задаёт принудительную синхронизацию клиента с тикрейтом сервера (-999 для отключения).</value>
+  </data>
+  <data name="cl_clock_showdebuginfo" xml:space="preserve">
+    <value>Включает / отключает вывод отладочной информации о рассинхронизации таймеров.</value>
+  </data>
   <data name="cl_cmdrate" xml:space="preserve">
     <value>Количество пакетов, которые клиент может отослать серверу.</value>
+  </data>
+  <data name="cl_coach_find_coach" xml:space="preserve">
+    <value>Включает / отключает режим поиска тренера для текущего матча.</value>
+  </data>
+  <data name="cl_coach_toggle" xml:space="preserve">
+    <value>Разрешает / запрещает игроку быть приглашённым другими игроками в качестве тренера.</value>
   </data>
   <data name="cl_crosshairalpha" xml:space="preserve">
     <value>Уровень прозрачности прицела; 0 - выкл.</value>
@@ -459,6 +507,9 @@
   <data name="cl_crosshair_t" xml:space="preserve">
     <value>Позволяет использовать T-shaped перекрестие прицела.</value>
   </data>
+  <data name="cl_customsounds" xml:space="preserve">
+    <value>Включает / отключает проигрывание нестандартных звуковых файлов.</value>
+  </data>
   <data name="cl_deathnotices_show_numbers" xml:space="preserve">
     <value>Разрешает / запрещает отображать в ленте убийство количество наблюдателей.</value>
   </data>
@@ -468,11 +519,17 @@
   <data name="cl_decline_first_notification" xml:space="preserve">
     <value>Ответить отрицательно на всплывающее уведомление (торговля, дуэли и т.д.).</value>
   </data>
+  <data name="cl_demoviewoverride" xml:space="preserve">
+    <value>Переопределяет режим отображения во время просмотра демок.</value>
+  </data>
   <data name="cl_detaildist" xml:space="preserve">
     <value>Определяет диапазон, в которых подробно указаны реквизиты (например, трава).</value>
   </data>
   <data name="cl_detailfade" xml:space="preserve">
     <value>Определяет дистанцию, на которой реквизиты начинают исчезать.</value>
+  </data>
+  <data name="cl_detail_multiplier" xml:space="preserve">
+    <value>Управляет детализацией некоторых предметов в мультиплеере.</value>
   </data>
   <data name="cl_disablehtmlmotd" xml:space="preserve">
     <value>Отключает (1) / включает (0) сообщения дня (MOTD) в формате HTML. Настоятельно рекомендуется значение 1 для защиты от вредоносных скриптов.</value>
