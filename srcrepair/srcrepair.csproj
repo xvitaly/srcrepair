@@ -79,16 +79,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppStrings.ru.resx</DependentUpon>
     </Compile>
-    <Compile Include="CVList.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CVList.resx</DependentUpon>
-    </Compile>
-    <Compile Include="CVList.ru.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CVList.ru.resx</DependentUpon>
-    </Compile>
     <Compile Include="DebugStrings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -210,14 +200,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppStrings.ru.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CVList.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>CVList.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CVList.ru.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>CVList.ru.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <EmbeddedResource Include="CVList.resx" />
+    <EmbeddedResource Include="CVList.ru.resx" />
     <EmbeddedResource Include="DebugStrings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DebugStrings.Designer.cs</LastGenOutput>
