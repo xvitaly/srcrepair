@@ -61,20 +61,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No items selected. Please select and then try again!.
+        ///   Looks up a localized string similar to No items selected. Please select at least one and then try again!.
         /// </summary>
         internal static string AC_NoItemsSelected {
             get {
                 return ResourceManager.GetString("AC_NoItemsSelected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {0} is already running. Starting the second copy is not allowed!.
-        /// </summary>
-        internal static string AppAlreadyLaunched {
-            get {
-                return ResourceManager.GetString("AppAlreadyLaunched", resourceCulture);
             }
         }
         
@@ -88,7 +79,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://developer.valvesoftware.com/wiki/Console_Command_List.
+        ///   Looks up a localized string similar to https://developer.valvesoftware.com/wiki/Console_Command_List.
         /// </summary>
         internal static string AppCVListURL {
             get {
@@ -106,16 +97,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception &quot;{0}&quot; raised by: &quot;{1}&quot;..
-        /// </summary>
-        internal static string AppExceptionTemplate {
-            get {
-                return ResourceManager.GetString("AppExceptionTemplate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Warning! Failed to get data from game database. Please try again or select another game!.
+        ///   Looks up a localized string similar to Failed to get data from the game database. Please try again later or select another game!.
         /// </summary>
         internal static string AppFailedToGetData {
             get {
@@ -133,7 +115,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Offline help system is not installed or not available for your language yet!.
+        ///   Looks up a localized string similar to The offline help system file is not found. Please reinstall application!.
         /// </summary>
         internal static string AppHelpCHMNotFound {
             get {
@@ -142,7 +124,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Incorrect Source version detected. This game is not fully supported. Please report this bug to developers!.
+        ///   Looks up a localized string similar to Incorrect Source Engine version has been detected. This game is not fully supported. Please report this bug to developers!.
         /// </summary>
         internal static string AppIncorrectSrcVersion {
             get {
@@ -160,7 +142,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Core library version does not match application version. Please reinstall or report this issue to developers..
+        ///   Looks up a localized string similar to The core library version does not match the application&apos;s version. Please reinstall or report this issue to developers..
         /// </summary>
         internal static string AppLibVersionMissmatch {
             get {
@@ -178,7 +160,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attention! SRC Repair can&apos;t detect any installed supported games. Please run your desired game from Steam at least once. After that, they will appear in the list and you will be able to manage them by this program..
+        ///   Looks up a localized string similar to SRC Repair can&apos;t detect any installed supported games. Please run the desired game from Steam at least once. After that, it will appear in the list, and you will be able to manage it by this program..
         /// </summary>
         internal static string AppNoGamesDetected {
             get {
@@ -187,7 +169,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No games detected. Steam located as: {0}..
+        ///   Looks up a localized string similar to No installed games found. Steam located at: {0}..
         /// </summary>
         internal static string AppNoGamesDLog {
             get {
@@ -196,7 +178,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! No games selected. Select game and try again later..
+        ///   Looks up a localized string similar to Please select the game first and then try again..
         /// </summary>
         internal static string AppNoGamesSelected {
             get {
@@ -205,7 +187,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No Steam user profiles detected! Please run Steam at least once and then try again..
+        ///   Looks up a localized string similar to No Steam user profiles found! Please start Steam at least once and then try again..
         /// </summary>
         internal static string AppNoSteamIDSetected {
             get {
@@ -232,7 +214,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Attention! You have disabled SafeClean module, so backups will not be created until it will be re-activated..
+        ///   Looks up a localized string similar to You have disabled SafeClean module. No backups will be created until you re-activate it..
         /// </summary>
         internal static string AppSafeClnDisabled {
             get {
@@ -322,7 +304,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Notice! Update for {0} is available. We recommend you upgrade as soon as possible via the menu Help - Check for updates, or manually..
+        ///   Looks up a localized string similar to A new update for {0} is available. We recommend you to upgrade as soon as possible via Help - Check for updates, or manually..
         /// </summary>
         internal static string AppUpdateAvailable {
             get {
@@ -331,7 +313,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannot find video database file of &quot;{0}&quot; in file &quot;{1}&quot;..
+        ///   Looks up a localized string similar to Cannot get video settings of &quot;{0}&quot; from file &quot;{1}&quot;..
         /// </summary>
         internal static string AppVideoDbNotFound {
             get {
@@ -340,7 +322,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while parsing XML file with a list of games. Perhaps it is missing or damaged. Please reinstall the program..
+        ///   Looks up a localized string similar to An error occurred while parsing XML game database file. Please reinstall this application..
         /// </summary>
         internal static string AppXMLParseError {
             get {
@@ -367,7 +349,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The selected file is a binary. Unable open it in text editor!.
+        ///   Looks up a localized string similar to The selected file is a binary. Unable open it in a text editor!.
         /// </summary>
         internal static string BU_BinaryFile {
             get {
@@ -520,7 +502,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No backup files detected. Please, refresh list and try again later!.
+        ///   Looks up a localized string similar to No backup files detected. Please refresh the list and try again later!.
         /// </summary>
         internal static string BU_NoFiles {
             get {
@@ -610,7 +592,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! An error occurred. File was not saved!.
+        ///   Looks up a localized string similar to An error occurred. File was not saved!.
         /// </summary>
         internal static string CE_CfgSVVEx {
             get {
@@ -628,7 +610,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No variables detected in selected row!.
+        ///   Looks up a localized string similar to No variables were found in the selected row!.
         /// </summary>
         internal static string CE_ClSelErr {
             get {
@@ -637,7 +619,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! Parse error detected. The config was opened with errors..
+        ///   Looks up a localized string similar to Parsing error were detected. The config was opened with errors. We do not recommend to save it..
         /// </summary>
         internal static string CE_ExceptionDetected {
             get {
@@ -646,7 +628,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open file to use this feature!.
+        ///   Looks up a localized string similar to Please open file first in order to use this funtion!.
         /// </summary>
         internal static string CE_NoFileOpened {
             get {
@@ -655,7 +637,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Could not read the contents of config file!.
+        ///   Looks up a localized string similar to Could not read the contents of the config file!.
         /// </summary>
         internal static string CE_OpenFailed {
             get {
@@ -664,7 +646,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! It is not recommended to edit this file, because this may lead to unpredictable consequences. Edit it at your own risk..
+        ///   Looks up a localized string similar to We not recommend to edit this file, because this may lead to unpredictable consequences. Edit it at your own risk..
         /// </summary>
         internal static string CE_RestConfigOpenWarn {
             get {
@@ -682,7 +664,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Not enough configs in list..
+        ///   Looks up a localized string similar to Not enough configs in the list..
         /// </summary>
         internal static string CS_NEParamsFormException {
             get {
@@ -691,7 +673,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Checking for updates. Please wait!.
+        ///   Looks up a localized string similar to Checking for updates... Please wait!.
         /// </summary>
         internal static string DB_WrkInProgress {
             get {
@@ -763,7 +745,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to check hash sum of downloaded file. Maybe it was damaged. Please try again later!.
+        ///   Looks up a localized string similar to Failed to check hash sum of the downloaded file. Maybe it was damaged during transfer. Please try again later!.
         /// </summary>
         internal static string FP_HashError {
             get {
@@ -772,7 +754,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A critical error: could not install the selected config!.
+        ///   Looks up a localized string similar to Could not install the selected config!.
         /// </summary>
         internal static string FP_InstallFailed {
             get {
@@ -781,7 +763,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Install selected FPS-config?.
+        ///   Looks up a localized string similar to Install the selected FPS-config?.
         /// </summary>
         internal static string FP_InstallQuestion {
             get {
@@ -799,7 +781,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! We have no FPS-configs for selected game, so this page will be disabled!.
+        ///   Looks up a localized string similar to We have no FPS-configs for the selected game. This page will be disabled..
         /// </summary>
         internal static string FP_NoCfgGame {
             get {
@@ -844,7 +826,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Remove selected FPS-config?.
+        ///   Looks up a localized string similar to Remove the selected FPS-config?.
         /// </summary>
         internal static string FP_UninstallQuestion {
             get {
@@ -862,7 +844,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! Restricted symbols detected in selected games&apos; path. Steam and the games will not work correctly..
+        ///   Looks up a localized string similar to Warning! Restricted symbols were detected in the game&apos;s installation path. Steam and the games may not work correctly..
         /// </summary>
         internal static string GameNonASCIIDetected {
             get {
@@ -871,7 +853,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Game installed correctly: directory path does not contain illegal characters..
+        ///   Looks up a localized string similar to The game was installed correctly: directory path does not contain any restricted symbols..
         /// </summary>
         internal static string GameNonASCIINotDetected {
             get {
@@ -880,16 +862,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Found an unhandled exception. Please inform the developers email: srcrepair@easycoding.org..
-        /// </summary>
-        internal static string GeneralErrorDetected {
-            get {
-                return ResourceManager.GetString("GeneralErrorDetected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Enable DirectX 8 mode rendering? This will significantly increase the performance of the game..
+        ///   Looks up a localized string similar to Enable DirectX 8 mode rendering? It can significantly increase performance, but some games does not support it..
         /// </summary>
         internal static string GT_DxLevelMsg {
             get {
@@ -898,7 +871,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Do you really want to set the graphics settings to the recommended maximum? This will require a powerful computer!.
+        ///   Looks up a localized string similar to Do you want to set the video settings to the recommended maximum? This will require a powerful computer!.
         /// </summary>
         internal static string GT_MaxPerfMsg {
             get {
@@ -907,7 +880,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Do you really want to install all the video settings to minimum? This will increase the FPS, but worsen the graphics in the game..
+        ///   Looks up a localized string similar to Do you want to set the video settings to the recommended minimum? This will increase the game&apos;s performance..
         /// </summary>
         internal static string GT_MinPerfMsg {
             get {
@@ -916,7 +889,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred during saving the game graphics settings into a file!.
+        ///   Looks up a localized string similar to An error occurred during saving the game video settings into a file!.
         /// </summary>
         internal static string GT_NCFFailure {
             get {
@@ -925,7 +898,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to load several graphical settings. Please report this bug..
+        ///   Looks up a localized string similar to Failed to load some video settings. Please report this bug..
         /// </summary>
         internal static string GT_NCFLoadFailure {
             get {
@@ -934,7 +907,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! To save the graphical settings, you must fill in all the forms!.
+        ///   Looks up a localized string similar to You need to set all video settings in order to save them into a file..
         /// </summary>
         internal static string GT_NCFNReady {
             get {
@@ -943,7 +916,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Done. Do not forget to adjust and save the changes in the settings!.
+        ///   Looks up a localized string similar to Done. Don&apos;t forget to adjust and save changes!.
         /// </summary>
         internal static string GT_PerfSet {
             get {
@@ -952,7 +925,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Could not open registry key. Please start game at least once and try again..
+        ///   Looks up a localized string similar to Could not open registry key. Please start the game at least once and try again..
         /// </summary>
         internal static string GT_RegOpenErr {
             get {
@@ -961,7 +934,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while saving graphical settings!.
+        ///   Looks up a localized string similar to An error occurred while saving video settings!.
         /// </summary>
         internal static string GT_SaveFailure {
             get {
@@ -979,7 +952,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Changes have been successfully saved!.
+        ///   Looks up a localized string similar to Changes ware saved successfully!.
         /// </summary>
         internal static string GT_SaveSuccess {
             get {
@@ -1006,7 +979,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to HUD database outdated. Please update database from menu Help..
+        ///   Looks up a localized string similar to HUD database outdated. Please update it from menu Help..
         /// </summary>
         internal static string HD_DbOutdated {
             get {
@@ -1033,7 +1006,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to check hash sum of downloaded file. Maybe it was damaged. Please try again later!.
+        ///   Looks up a localized string similar to Failed to check hash sum of the downloaded file. Maybe it was damaged during transfer. Please try again later!.
         /// </summary>
         internal static string HD_HashError {
             get {
@@ -1042,7 +1015,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Error occured during installation. Please try again later..
+        ///   Looks up a localized string similar to An error occured during HUD installation. Please try again later..
         /// </summary>
         internal static string HD_InstallError {
             get {
@@ -1051,7 +1024,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to HUD installation successfull!.
+        ///   Looks up a localized string similar to HUD was successfully installed!.
         /// </summary>
         internal static string HD_InstallSuccessfull {
             get {
@@ -1060,7 +1033,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Selected HUD last update: {0}..
+        ///   Looks up a localized string similar to Last HUD update time: {0}..
         /// </summary>
         internal static string HD_LastUpdateInfo {
             get {
@@ -1069,7 +1042,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Selected HUD is not fully compatible with the latest version of the game. We recommend you to upgrade the HUD database..
+        ///   Looks up a localized string similar to The selected HUD is not fully compatible with the latest version of the game..
         /// </summary>
         internal static string HD_NotTested {
             get {
@@ -1114,7 +1087,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred during execution. Make sure you have administrator rights!.
+        ///   Looks up a localized string similar to An error occurred during execution. Make sure you have the administrator rights!.
         /// </summary>
         internal static string KB_ExException {
             get {
@@ -1177,7 +1150,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error detected while parsing game banlist file. Try again later..
+        ///   Looks up a localized string similar to An error occured while parsing game banlist file. Please try again later..
         /// </summary>
         internal static string MM_ExceptionDetected {
             get {
@@ -1186,7 +1159,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Successfully updated!.
+        ///   Looks up a localized string similar to Your changes ware saved!.
         /// </summary>
         internal static string MM_SavedOK {
             get {
@@ -1195,7 +1168,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occured while saving database into file. It may be damaged..
+        ///   Looks up a localized string similar to An error occured while saving database file! It may be corrupted..
         /// </summary>
         internal static string MM_SaveException {
             get {
@@ -1204,7 +1177,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! An error occurred during saving your settings!.
+        ///   Looks up a localized string similar to An error occurred while saving your settings!.
         /// </summary>
         internal static string Opts_Error {
             get {
@@ -1213,7 +1186,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The application settings has been saved successfully. Some of them will be activated only after restarting the application..
+        ///   Looks up a localized string similar to Settings were saved successfully. Some of them will be activated only on next launch..
         /// </summary>
         internal static string Opts_Saved {
             get {
@@ -1222,7 +1195,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} application is running! To execute this cleanup please close it..
+        ///   Looks up a localized string similar to {0} application is running! To execute this cleanup please close it first..
         /// </summary>
         internal static string PS_AppRunning {
             get {
@@ -1231,7 +1204,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! An error occured during packing files. Archive was not created!.
+        ///   Looks up a localized string similar to An error occured during packing files. The archive was not created!.
         /// </summary>
         internal static string PS_ArchFailed {
             get {
@@ -1249,7 +1222,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cleanup successfully completed! You should run game cache integrity check now..
+        ///   Looks up a localized string similar to Cleanup was successfully completed. You must run the game cache integrity check right now!.
         /// </summary>
         internal static string PS_CacheChkReq {
             get {
@@ -1258,7 +1231,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred during cleanup. Perhaps you have no rights necessary for this action..
+        ///   Looks up a localized string similar to An error occurred during cleanup. Perhaps you have not enough rights for doing this..
         /// </summary>
         internal static string PS_CleanException {
             get {
@@ -1357,7 +1330,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please select at least one of the cleaning options and then run this cleanup again!.
+        ///   Looks up a localized string similar to Please select cleanup option and then run this again!.
         /// </summary>
         internal static string PS_NothingSelected {
             get {
@@ -1411,7 +1384,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Files for cleanup is not selected! Please select files and try again later..
+        ///   Looks up a localized string similar to No files for cleanup were selected! Please select them and run this process again..
         /// </summary>
         internal static string PS_SelectItemsMsg {
             get {
@@ -1420,7 +1393,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The cleanup had been successfully completed. Steam will run in recovery mode right now!.
+        ///   Looks up a localized string similar to The cleanup has been successfully completed. Steam will run in recovery mode right now!.
         /// </summary>
         internal static string PS_SeqCompleted {
             get {
@@ -1429,7 +1402,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to There was an error during file installation. Please try again later!.
+        ///   Looks up a localized string similar to An error occured during file installation. Please try again later!.
         /// </summary>
         internal static string QI_Excpt {
             get {
@@ -1474,7 +1447,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Compressed report {0} has been successfully created! Now we will open the directory with generated report file, so you can upload it to technical support service..
+        ///   Looks up a localized string similar to Compressed report {0} has been successfully created! Now we will show it in the Windows Explorer. You can check it and upload to the technical support service or forum..
         /// </summary>
         internal static string RPB_ComprGen {
             get {
@@ -1483,7 +1456,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred. Unable to execute Microsoft System Information tool. Perhaps it is not installed on this operating system. Creating a report is impossible..
+        ///   Looks up a localized string similar to Unable to execute Microsoft System Information tool. Perhaps it is not installed on this operating system. Creating a report will be impossible. Terminating..
         /// </summary>
         internal static string RPB_GenException {
             get {
@@ -1510,7 +1483,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to All systems operational..
+        ///   Looks up a localized string similar to Ready..
         /// </summary>
         internal static string StatusNormal {
             get {
@@ -1519,7 +1492,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to CE loaded file: {0}..
+        ///   Looks up a localized string similar to Opened file: {0}..
         /// </summary>
         internal static string StatusOpenedFile {
             get {
@@ -1528,7 +1501,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! Invalid characters detected in Steam path. Steam and some games will work incorrectly. Reinstall Steam to folder, the path to which will contain only latin characters and numbers..
+        ///   Looks up a localized string similar to Restricted symbols were detected in the Steam installation directory path. Steam and some games can work incorrectly. We recommend to reinstall Steam into a directory, which will contain only latin characters and numbers..
         /// </summary>
         internal static string SteamNonASCIIDetected {
             get {
@@ -1537,7 +1510,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Steam installation status: Steam directory path does not contain restricted characters..
+        ///   Looks up a localized string similar to No restricted symbols in the Steam installation directory path were detected. No actions needed..
         /// </summary>
         internal static string SteamNonASCIINotDetected {
             get {
@@ -1546,7 +1519,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Registry keys related to Steam was&apos;t found. You do not need their cleaning. Click OK to exit the program!.
+        ///   Looks up a localized string similar to Registry keys related to Steam were not found. You do not need to remove them..
         /// </summary>
         internal static string SteamNotDetected {
             get {
@@ -1564,7 +1537,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You have entered the wrong path! The program will be terminated..
+        ///   Looks up a localized string similar to You have entered the wrong Steam path! The program will be terminated..
         /// </summary>
         internal static string SteamPathEnterErr {
             get {
@@ -1582,7 +1555,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Warning! Critical error occured: could not get the path to the Steam from the registry, so you&apos;ll have to manually specify the correct path!.
+        ///   Looks up a localized string similar to Could not get the Steam installation directory path from the registry! You&apos;ll have to manually find it..
         /// </summary>
         internal static string SteamPathNotDetected {
             get {
@@ -1618,7 +1591,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Automatic updates on {0} platform is not supported yet. Please install update from official site manually..
+        ///   Looks up a localized string similar to Automatic updates on {0} platform is not supported yet. Please install update from official website manually..
         /// </summary>
         internal static string UPD_AppOtherPlatform {
             get {
@@ -1672,7 +1645,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Downloaded file has incorrect hash. Maybe it was corrupted. Please try again later!.
+        ///   Looks up a localized string similar to Downloaded file has incorrect hash. Maybe it was corrupted during transfer. Please try again later!.
         /// </summary>
         internal static string UPD_HashFailure {
             get {
@@ -1690,7 +1663,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No new updates detected. SRC Repair is using latest version of HUD database..
+        ///   Looks up a localized string similar to No new updates were found. SRC Repair is using the latest version of HUD database..
         /// </summary>
         internal static string UPD_HUDNoUpdates {
             get {
@@ -1726,7 +1699,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Can not write into application directory. Start updater with admin rights!.
+        ///   Looks up a localized string similar to Insufficient rights to install the update. Please start updater with admin rights!.
         /// </summary>
         internal static string UPD_NoWritePermissions {
             get {
@@ -1744,7 +1717,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while trying to run installer. The program has not been updated. Run the update again later!.
+        ///   Looks up a localized string similar to An error occurred while trying to run the installer. The program has not been updated. Run the update again later!.
         /// </summary>
         internal static string UPD_UpdateFailure {
             get {

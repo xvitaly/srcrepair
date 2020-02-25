@@ -120,20 +120,14 @@
   <data name="AC_NoItemsSelected" xml:space="preserve">
     <value>Вы не выбрали ни один элемент! Очистка невозможна.</value>
   </data>
-  <data name="AppAlreadyLaunched" xml:space="preserve">
-    <value>Программа {0} уже запущена. Запуск второй копии невозможен!</value>
-  </data>
   <data name="AppAlrLaunched" xml:space="preserve">
     <value>Программа уже выполняется! Запуск нескольких копий не поддерживается.</value>
   </data>
   <data name="AppCVListURL" xml:space="preserve">
-    <value>http://www.easycoding.org/projects/srcrepair/cvarlist</value>
+    <value>https://www.easycoding.org/projects/srcrepair/cvarlist</value>
   </data>
   <data name="AppDefaultSteamLangID" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="AppExceptionTemplate" xml:space="preserve">
-    <value>Исключение "{0}" вызвано: "{1}".</value>
   </data>
   <data name="AppFailedToGetData" xml:space="preserve">
     <value>Произошла ошибка при получении данных из базы поддерживаемых игр. Попробуйте ещё раз, либо выберите другую игру!</value>
@@ -386,9 +380,6 @@
   </data>
   <data name="GameNonASCIINotDetected" xml:space="preserve">
     <value>Игра установлена верно: путь к каталогу игры не содержит запрещённых символов.</value>
-  </data>
-  <data name="GeneralErrorDetected" xml:space="preserve">
-    <value>Обнаружено исключение, которое мы не смогли обработать. Пожалуйста, сообщите разработчикам на email: srcrepair@easycoding.org.</value>
   </data>
   <data name="GT_DxLevelMsg" xml:space="preserve">
     <value>Включить DirectX 8 режим рендера? Это значительно увеличит производительность игры.</value>
