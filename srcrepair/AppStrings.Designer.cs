@@ -1078,15 +1078,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cancel.
-        /// </summary>
-        internal static string InputBoxCancelBtnName {
-            get {
-                return ResourceManager.GetString("InputBoxCancelBtnName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to An error occurred during execution. Make sure you have the administrator rights!.
         /// </summary>
         internal static string KB_ExException {
@@ -1177,15 +1168,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while saving your settings!.
-        /// </summary>
-        internal static string Opts_Error {
-            get {
-                return ResourceManager.GetString("Opts_Error", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Settings were saved successfully. Some of them will be activated only on next launch..
         /// </summary>
         internal static string Opts_Saved {
@@ -1222,15 +1204,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cleanup was successfully completed. You must run the game cache integrity check right now!.
-        /// </summary>
-        internal static string PS_CacheChkReq {
-            get {
-                return ResourceManager.GetString("PS_CacheChkReq", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to An error occurred during cleanup. Perhaps you have not enough rights for doing this..
         /// </summary>
         internal static string PS_CleanException {
@@ -1263,15 +1236,6 @@ namespace srcrepair.gui {
         internal static string PS_CleanupExecuteQ {
             get {
                 return ResourceManager.GetString("PS_CleanupExecuteQ", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Clean {0}?.
-        /// </summary>
-        internal static string PS_CleanupFull {
-            get {
-                return ResourceManager.GetString("PS_CleanupFull", resourceCulture);
             }
         }
         
@@ -1326,15 +1290,6 @@ namespace srcrepair.gui {
         internal static string PS_NoLangSelected {
             get {
                 return ResourceManager.GetString("PS_NoLangSelected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Please select cleanup option and then run this again!.
-        /// </summary>
-        internal static string PS_NothingSelected {
-            get {
-                return ResourceManager.GetString("PS_NothingSelected", resourceCulture);
             }
         }
         
@@ -1519,15 +1474,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Registry keys related to Steam were not found. You do not need to remove them..
-        /// </summary>
-        internal static string SteamNotDetected {
-            get {
-                return ResourceManager.GetString("SteamNotDetected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to You refused to enter the path to Steam, so the program will be terminated!.
         /// </summary>
         internal static string SteamPathCancel {
@@ -1542,24 +1488,6 @@ namespace srcrepair.gui {
         internal static string SteamPathEnterErr {
             get {
                 return ResourceManager.GetString("SteamPathEnterErr", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Specify the path to Steam.
-        /// </summary>
-        internal static string SteamPathEnterTitle {
-            get {
-                return ResourceManager.GetString("SteamPathEnterTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Could not get the Steam installation directory path from the registry! You&apos;ll have to manually find it..
-        /// </summary>
-        internal static string SteamPathNotDetected {
-            get {
-                return ResourceManager.GetString("SteamPathNotDetected", resourceCulture);
             }
         }
         
@@ -1632,15 +1560,6 @@ namespace srcrepair.gui {
         internal static string UPD_DbUpdateAvail {
             get {
                 return ResourceManager.GetString("UPD_DbUpdateAvail", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error occurred while checking for updates! Allow the program to get data from the Internet and try again later..
-        /// </summary>
-        internal static string UPD_ExceptionDetected {
-            get {
-                return ResourceManager.GetString("UPD_ExceptionDetected", resourceCulture);
             }
         }
         

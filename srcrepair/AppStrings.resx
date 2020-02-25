@@ -456,9 +456,6 @@
   <data name="HD_StatusUpdated" xml:space="preserve">
     <value>actual</value>
   </data>
-  <data name="InputBoxCancelBtnName" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
   <data name="KB_ExException" xml:space="preserve">
     <value>An error occurred during execution. Make sure you have the administrator rights!</value>
   </data>
@@ -489,9 +486,6 @@
   <data name="MM_SaveException" xml:space="preserve">
     <value>An error occured while saving database file! It may be corrupted.</value>
   </data>
-  <data name="Opts_Error" xml:space="preserve">
-    <value>An error occurred while saving your settings!</value>
-  </data>
   <data name="Opts_Saved" xml:space="preserve">
     <value>Settings were saved successfully. Some of them will be activated only on next launch.</value>
   </data>
@@ -504,9 +498,6 @@
   <data name="PS_BwBusy" xml:space="preserve">
     <value>Cleanup targets is not yet available! Please try again in 10 seconds.</value>
   </data>
-  <data name="PS_CacheChkReq" xml:space="preserve">
-    <value>Cleanup was successfully completed. You must run the game cache integrity check right now!</value>
-  </data>
   <data name="PS_CleanException" xml:space="preserve">
     <value>An error occurred during cleanup. Perhaps you have not enough rights for doing this.</value>
   </data>
@@ -518,9 +509,6 @@
   </data>
   <data name="PS_CleanupExecuteQ" xml:space="preserve">
     <value>Clean selected {0}?</value>
-  </data>
-  <data name="PS_CleanupFull" xml:space="preserve">
-    <value>Clean {0}?</value>
   </data>
   <data name="PS_CleanupSuccess" xml:space="preserve">
     <value>Cleanup has been successfully completed!</value>
@@ -539,9 +527,6 @@
   </data>
   <data name="PS_NoLangSelected" xml:space="preserve">
     <value>You have chosen the wrong language Steam from the dropdown list, so we will use English!</value>
-  </data>
-  <data name="PS_NothingSelected" xml:space="preserve">
-    <value>Please select cleanup option and then run this again!</value>
   </data>
   <data name="PS_ProcessDetected" xml:space="preserve">
     <value>Steam process has been successfully terminated!</value>
@@ -603,20 +588,11 @@
   <data name="SteamNonASCIINotDetected" xml:space="preserve">
     <value>No restricted symbols in the Steam installation directory path were detected. No actions needed.</value>
   </data>
-  <data name="SteamNotDetected" xml:space="preserve">
-    <value>Registry keys related to Steam were not found. You do not need to remove them.</value>
-  </data>
   <data name="SteamPathCancel" xml:space="preserve">
     <value>You refused to enter the path to Steam, so the program will be terminated!</value>
   </data>
   <data name="SteamPathEnterErr" xml:space="preserve">
     <value>You have entered the wrong Steam path! The program will be terminated.</value>
-  </data>
-  <data name="SteamPathEnterTitle" xml:space="preserve">
-    <value>Specify the path to Steam</value>
-  </data>
-  <data name="SteamPathNotDetected" xml:space="preserve">
-    <value>Could not get the Steam installation directory path from the registry! You'll have to manually find it.</value>
   </data>
   <data name="UnnamedFileName" xml:space="preserve">
     <value>Unnamed.cfg</value>
@@ -641,9 +617,6 @@
   </data>
   <data name="UPD_DbUpdateAvail" xml:space="preserve">
     <value>Game database update available. New version: {0} ({1}).</value>
-  </data>
-  <data name="UPD_ExceptionDetected" xml:space="preserve">
-    <value>An error occurred while checking for updates! Allow the program to get data from the Internet and try again later.</value>
   </data>
   <data name="UPD_HashFailure" xml:space="preserve">
     <value>Downloaded file has incorrect hash. Maybe it was corrupted during transfer. Please try again later!</value>

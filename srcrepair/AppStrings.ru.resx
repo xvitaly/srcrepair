@@ -453,9 +453,6 @@
   <data name="HD_StatusUpdated" xml:space="preserve">
     <value>актуальна</value>
   </data>
-  <data name="InputBoxCancelBtnName" xml:space="preserve">
-    <value>Отмена</value>
-  </data>
   <data name="KB_ExException" xml:space="preserve">
     <value>Произошла ошибка при выполнении. Убедитесь, что у вас есть права администратора!</value>
   </data>
@@ -486,9 +483,6 @@
   <data name="MM_SaveException" xml:space="preserve">
     <value>Произошла ошибка при сохранении файла. Возможно, он был повреждён.</value>
   </data>
-  <data name="Opts_Error" xml:space="preserve">
-    <value>Внимание! Произошла ошибка при попытке записи настроек!</value>
-  </data>
   <data name="Opts_Saved" xml:space="preserve">
     <value>Настройки были успешно сохранены. Внимание! Некоторые из них будут задействованы только после перезапуска программы.</value>
   </data>
@@ -501,9 +495,6 @@
   <data name="PS_BwBusy" xml:space="preserve">
     <value>Цели для очистки ещё не были построены! Пожалуйста повторите попытку через несколько секунд.</value>
   </data>
-  <data name="PS_CacheChkReq" xml:space="preserve">
-    <value>Очистка успешно завершена, но сейчас необходимо запустить проверку целостности кэша игры!</value>
-  </data>
   <data name="PS_CleanException" xml:space="preserve">
     <value>Произошла ошибка во время процедуры очистки. Возможно, у вас отсутствуют необходимые права для этого действия.</value>
   </data>
@@ -515,9 +506,6 @@
   </data>
   <data name="PS_CleanupExecuteQ" xml:space="preserve">
     <value>Удалить выбранные файлы ({0})?</value>
-  </data>
-  <data name="PS_CleanupFull" xml:space="preserve">
-    <value>Удалить {0}?</value>
   </data>
   <data name="PS_CleanupSuccess" xml:space="preserve">
     <value>Процесс очистки успешно завершён!</value>
@@ -536,9 +524,6 @@
   </data>
   <data name="PS_NoLangSelected" xml:space="preserve">
     <value>Вы неправильно выбрали язык Steam из выпадающего списка, поэтому будет использоваться английский!</value>
-  </data>
-  <data name="PS_NothingSelected" xml:space="preserve">
-    <value>Вы ничего не выбрали! Выберите хотя бы одну из опций очистки и повторите запуск!</value>
   </data>
   <data name="PS_ProcessDetected" xml:space="preserve">
     <value>Процесс Steam, обнаруженный в памяти был успешно завершён!</value>
@@ -600,20 +585,11 @@
   <data name="SteamNonASCIINotDetected" xml:space="preserve">
     <value>Steam установлен верно: путь к каталогу Steam не содержит запрещённых символов.</value>
   </data>
-  <data name="SteamNotDetected" xml:space="preserve">
-    <value>Ключи реестра, относящиеся к Steam не обнаружены. Вам не нужна их чистка. Нажмите OK для выхода из программы!</value>
-  </data>
   <data name="SteamPathCancel" xml:space="preserve">
     <value>Вы отказались вводить путь к Steam, поэтому программа будет завершена!</value>
   </data>
   <data name="SteamPathEnterErr" xml:space="preserve">
     <value>Вы указали неправильный путь! Программа будет завершена.</value>
-  </data>
-  <data name="SteamPathEnterTitle" xml:space="preserve">
-    <value>Укажите путь к Steam</value>
-  </data>
-  <data name="SteamPathNotDetected" xml:space="preserve">
-    <value>Произошла критическая ошибка: не могу получить путь к Steam из реестра, поэтому вам придётся вручную указать правильный путь!</value>
   </data>
   <data name="UnnamedFileName" xml:space="preserve">
     <value>Безымянный.cfg</value>
@@ -638,9 +614,6 @@
   </data>
   <data name="UPD_DbUpdateAvail" xml:space="preserve">
     <value>Доступно обновление базы игр. Новая версия: {0} ({1}).</value>
-  </data>
-  <data name="UPD_ExceptionDetected" xml:space="preserve">
-    <value>Произошла ошибка во время проверки обновлений! Разрешите программе получить данные из сети Интернет и повторите попытку позднее.</value>
   </data>
   <data name="UPD_HashFailure" xml:space="preserve">
     <value>Контрольная сумма загруженного файла отличается от эталона. Обновление не было установлено!</value>
