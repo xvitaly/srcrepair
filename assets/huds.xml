@@ -264,13 +264,13 @@
         <Name>FlawHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/flawhud/flawhud_4487a3f6.zip</URI>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/flawhud/flawhud_8742ed34.zip</URI>
         <UpURI>https://github.com/CriticalFlaw/FlawHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/flawhud.jpg</Preview>
         <RepoPath>https://github.com/CriticalFlaw/FlawHUD</RepoPath>
-        <Hash>abb38e2d34fba51211175f956e984930</Hash>
-        <Hash2>e683fd8351413a369c480bcd2f78ae29cfa752f03c84c99438f706757e069f9316ea2c3be0ecc22e43c973e2680a7443ddfb05b90c98f87563e3d1e9928c28e8</Hash2>
-        <LastUpdate>1581719146</LastUpdate>
+        <Hash>726155c71861446ef1eb53630be0e02c</Hash>
+        <Hash2>0e7269c305eebc3cbfe798232729b26c8ddfae7d126745bb37f7e6d426129ce0616a56f799f9758488807e057611da79bde3c1d220477a9ebf25b3a1a096b0c5</Hash2>
+        <LastUpdate>1581953598</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=252</Site>
         <ArchiveDir>FlawHUD-master</ArchiveDir>
         <InstallDir>flawhud</InstallDir>
