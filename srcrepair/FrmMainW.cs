@@ -841,24 +841,18 @@ namespace srcrepair.gui
         {
             switch (GamesCount)
             {
-                case 0: // No games found.
-                    {
-                        Logger.Warn(String.Format(AppStrings.AppNoGamesDLog, App.SteamClient.FullSteamPath));
-                        MessageBox.Show(AppStrings.AppNoGamesDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        Environment.Exit(ReturnCodes.NoGamesDetected);
-                    }
+                case 0:
+                    Logger.Warn(String.Format(AppStrings.AppNoGamesDLog, App.SteamClient.FullSteamPath));
+                    MessageBox.Show(AppStrings.AppNoGamesDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Environment.Exit(ReturnCodes.NoGamesDetected);
                     break;
-                case 1: // Only one game found. Select it automatically.
-                    {
-                        AppSelector.SelectedIndex = 0;
-                        UpdateStatusBar();
-                    }
+                case 1:
+                    AppSelector.SelectedIndex = 0;
+                    UpdateStatusBar();
                     break;
-                default: // More than one game found. Selecting last used game.
-                    {
-                        int Ai = AppSelector.Items.IndexOf(Properties.Settings.Default.LastGameName);
-                        AppSelector.SelectedIndex = Ai != -1 ? Ai : 0;
-                    }
+                default:
+                    int Ai = AppSelector.Items.IndexOf(Properties.Settings.Default.LastGameName);
+                    AppSelector.SelectedIndex = Ai != -1 ? Ai : 0;
                     break;
             }
         }
