@@ -130,9 +130,12 @@ namespace srcrepair.gui
         {
             using (StreamWriter CFile = new StreamWriter(Path))
             {
-                for (int i = 0; i < CE_Editor.Rows.Count; i++)
+                foreach (DataGridViewRow Row in CE_Editor.Rows)
                 {
-                    CFile.WriteLine("{0} {1}", CE_Editor.Rows[i].Cells[0].Value, CE_Editor.Rows[i].Cells[1].Value);
+                    if (Row.Cells[0].Value != null)
+                    {
+                        CFile.WriteLine("{0} {1}", Row.Cells[0].Value, Row.Cells[1].Value);
+                    }
                 }
             }
         }
