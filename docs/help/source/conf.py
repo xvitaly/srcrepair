@@ -79,6 +79,16 @@ release = '37.0.0'
 envlang = getenv('BUILDLANG')
 language = envlang if envlang else 'en'
 
+# Creating dictionaries for localization purposes.
+name_dict = {
+    'en': 'SRC Repair offline help',
+    'ru': 'Справочная система SRC Repair'
+}
+version_dict = {
+    'en': 'version',
+    'ru': 'версия'
+}
+
 # Generating filename for output files.
 filename = 'srcrepair_{}'.format(language)
 
@@ -111,6 +121,9 @@ html_theme_options = {
     'font_size': '16px',
     'show_powered_by': False
 }
+
+# Overriding default title for HTML and HTML Help pages.
+html_title = '{} ({} {})'.format(name_dict[language], version_dict[language], version)
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -157,7 +170,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, filename, 'SRC Repair offline help',
+    (master_doc, filename, name_dict[language],
      'EasyCoding Team', 'manual'),
 ]
 
@@ -167,7 +180,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, filename, 'SRC Repair offline help',
+    (master_doc, filename, name_dict[language],
      [author], 1)
 ]
 
@@ -178,10 +191,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, filename, 'SRC Repair offline help',
-     author, filename, 'SRC Repair offline help.',
+    (master_doc, filename, name_dict[language],
+     author, filename, name_dict[language],
      'Miscellaneous'),
 ]
-
-
-
