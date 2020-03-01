@@ -243,6 +243,17 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Compresses all files in a specified directory.
+        /// </summary>
+        /// <param name="DirectoryPath">Full path to source directory.</param>
+        /// <param name="ArchiveName">Archive name with full path.</param>
+        /// <returns>Return True if archive was created successfully.</returns>
+        public static bool CompressDirectory(string DirectoryPath, string ArchiveName)
+        {
+            return CompressFiles(ExpandFileList(new List<string> { Path.Combine(DirectoryPath, "*.*") }, true), ArchiveName);
+        }
+
+        /// <summary>
         /// Returns size in bytes of specified file.
         /// </summary>
         /// <param name="FileName">Full file path.</param>
