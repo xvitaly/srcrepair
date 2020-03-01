@@ -1247,16 +1247,28 @@ namespace srcrepair.gui
         {
             if (Properties.Settings.Default.SafeCleanup)
             {
-                if (App.SourceGames[AppSelector.Text].FPSConfigs.Count > 0)
+                try
                 {
-                    try
+                    string BackUpFileName = FileManager.GenerateBackUpFileName(App.SourceGames[AppSelector.Text].FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
+                    if (App.SourceGames[AppSelector.Text].IsUsingUserDir)
                     {
-                        FileManager.CompressFiles(App.SourceGames[AppSelector.Text].FPSConfigs, FileManager.GenerateBackUpFileName(App.SourceGames[AppSelector.Text].FullBackUpDirPath, Properties.Resources.BU_PrefixCfg));
+                        string ConfigDir = Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir);
+                        if (Directory.Exists(ConfigDir))
+                        {
+                            FileManager.CompressDirectory(ConfigDir, BackUpFileName);
+                        }
                     }
-                    catch (Exception Ex)
+                    else
                     {
-                        Logger.Warn(Ex, DebugStrings.AppDbgExFpsInstBackup);
+                        if (App.SourceGames[AppSelector.Text].FPSConfigs.Count > 0)
+                        {
+                            FileManager.CompressFiles(App.SourceGames[AppSelector.Text].FPSConfigs, BackUpFileName);
+                        }
                     }
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex, DebugStrings.AppDbgExFpsInstBackup);
                 }
             }
         }
