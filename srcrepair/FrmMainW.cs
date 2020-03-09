@@ -535,10 +535,13 @@ namespace srcrepair.gui
             switch (App.SourceGames[AppSelector.Text].SourceType)
             {
                 case "1":
-                    if (App.Platform.OS == CurrentPlatform.OSType.Windows) { NullType1Settings(); } else { NullType2Settings(); }
+                    if (App.SourceGames[AppSelector.Text].IsUsingVideoFile) { NullType1Settings(); } else { NullType2Settings(); }
                     break;
                 case "2":
                     NullType2Settings();
+                    break;
+                case "4":
+                    NullType1Settings();
                     break;
             }
         }
