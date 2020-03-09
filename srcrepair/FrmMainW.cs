@@ -1737,6 +1737,8 @@ namespace srcrepair.gui
                 }
                 catch (NotSupportedException)
                 {
+                    NullType1Settings();
+                    NullType2Settings();
                     MessageBox.Show(AppStrings.AppIncorrectSrcVersion, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
