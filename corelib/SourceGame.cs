@@ -256,13 +256,12 @@ namespace srcrepair.core
         /// <param name="SID">Internal ID (from database).</param>
         /// <param name="SV">Source type (from database).</param>
         /// <param name="VFDir">Name of directory with video settings (from database).</param>
-        /// <param name="HasVF">Is using video file (from database).</param>
         /// <param name="UserDir">Is using custom directory (from database).</param>
         /// <param name="AUserDir">Full path to data directory.</param>
         /// <param name="SteamDir">Full path to Steam directory.</param>
         /// <param name="SteamAppsDirName">Platform-dependent SteamApps directory name.</param>
         /// <param name="OS">Operating system type.</param>
-        public SourceGame(string AppName, string DirName, string SmallName, string Executable, string SID, string SV, string VFDir, bool HasVF, bool UserDir, bool HUDAv, string AUserDir, string SteamDir, string SteamAppsDirName, string SelectedSteamID, List<String> GameDirs, CurrentPlatform.OSType OS)
+        public SourceGame(string AppName, string DirName, string SmallName, string Executable, string SID, string SV, string VFDir, bool UserDir, bool HUDAv, string AUserDir, string SteamDir, string SteamAppsDirName, string SelectedSteamID, List<String> GameDirs, CurrentPlatform.OSType OS)
         {
             // Setting basic properties...
             FullAppName = AppName;
