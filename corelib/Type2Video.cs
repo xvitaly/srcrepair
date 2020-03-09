@@ -766,7 +766,7 @@ namespace srcrepair.core
         /// </summary>
         /// <param name="LineA">Source string.</param>
         /// <returns>Extracted from source string value.</returns>
-        protected string ExtractCVFromLine(string LineA)
+        public static string ExtractCVFromLine(string LineA)
         {
             LineA = StringsManager.CleanString(LineA, true);
             return LineA.Substring(LineA.LastIndexOf(" ")).Trim();
