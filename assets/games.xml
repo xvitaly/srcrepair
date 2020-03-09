@@ -622,7 +622,7 @@
     </Game>
     <Game Name="Black Mesa">
         <Enabled>1</Enabled>
-        <HasVF>0</HasVF>
+        <HasVF>1</HasVF>
         <DirName>Black Mesa</DirName>
         <SmallName>bms</SmallName>
         <VFDir>bms</VFDir>
