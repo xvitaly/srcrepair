@@ -1826,6 +1826,7 @@ namespace srcrepair.gui
                 switch (App.SourceGames[AppSelector.Text].SourceType)
                 {
                     case "1":
+                    case "4":
                         GT_ScreenType.SelectedIndex = 0;
                         GT_ModelQuality.SelectedIndex = 2;
                         GT_TextureQuality.SelectedIndex = 2;
@@ -1872,6 +1873,7 @@ namespace srcrepair.gui
                 switch (App.SourceGames[AppSelector.Text].SourceType)
                 {
                     case "1":
+                    case "4":
                         GT_ScreenType.SelectedIndex = 0;
                         GT_ModelQuality.SelectedIndex = 0;
                         GT_TextureQuality.SelectedIndex = 0;
