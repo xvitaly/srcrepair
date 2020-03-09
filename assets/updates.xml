@@ -7,10 +7,10 @@
         <Hash2>2722b89806f2429be931c0c56bd744a097fdced869c39d5c903555eeab729a49157de233f2e02768b12dcfaf80aabaea8a3c301902e30d167c7bc964a9b48923</Hash2>
     </Application>
     <GameDB>
-        <Version>1</Version>
+        <Version>2</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/games.xml</URL>
-        <Hash>bdbd3101cd7eb69ecf9b9715ebfaed82</Hash>
-        <Hash2>e389440c948b0a312c01c48c4d02e0031d12e805892e5b5d1cf50bf03d4230cc42a0c570707c73da562e17594e75607b00d68069ca21b2880de6a4fd3d502df6</Hash2>
+        <Hash>6517522b657ba9df46029e0ef7a8afcc</Hash>
+        <Hash2>33b47b32bb243122d2ff965fa6630bf8a117b27b83eea7da5ea0058bf535b89b9ac1a7d08071083c8a0c197c214b84fbf389ee44167f11d4b58cd7a1bd5e431f</Hash2>
     </GameDB>
     <HUDDB>
         <Version>12</Version>
