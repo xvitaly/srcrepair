@@ -259,6 +259,40 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Fetches video settings of Type 4 game.
+        /// </summary>
+        private void ReadType4VideoSettings()
+        {
+            try
+            {
+                // Creating Type1Video instance for operating with video settings...
+                Type4Video Video = new Type4Video(App.SourceGames[AppSelector.Text].ConfDir, App.SourceGames[AppSelector.Text].GetActualVideoFile(), true);
+
+                // Reading settings and setting them on form...
+                GT_ResHor.Value = Video.ScreenWidth;
+                GT_ResVert.Value = Video.ScreenHeight;
+                GT_ScreenType.SelectedIndex = Video.DisplayMode;
+                GT_ModelQuality.SelectedIndex = Video.ModelQuality;
+                GT_TextureQuality.SelectedIndex = Video.TextureQuality;
+                GT_ShaderQuality.SelectedIndex = Video.ShaderQuality;
+                GT_WaterQuality.SelectedIndex = Video.ReflectionsQuality;
+                GT_ShadowQuality.SelectedIndex = Video.ShadowQuality;
+                GT_ColorCorrectionT.SelectedIndex = Video.ColorCorrection;
+                GT_AntiAliasing.SelectedIndex = Video.AntiAliasing;
+                GT_Filtering.SelectedIndex = Video.FilteringMode;
+                GT_VSync.SelectedIndex = Video.VSync;
+                GT_MotionBlur.SelectedIndex = Video.MotionBlur;
+                GT_DxMode.SelectedIndex = Video.DirectXMode;
+                GT_HDR.SelectedIndex = Video.HDRType;
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(AppStrings.GT_RegOpenErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, DebugStrings.AppDbgExT1LoadFail);
+            }
+        }
+
+        /// <summary>
         /// Fetches video settings of Type 2 game.
         /// </summary>
         private void ReadType2VideoSettings()
@@ -555,6 +589,9 @@ namespace srcrepair.gui
                 case "2": /* Source 1, Type 2 (ex. NCF). */
                     ReadType2VideoSettings();
                     break;
+                case "4": /* Source 1, Type 1 with custom file instead of Registry */
+                    ReadType4VideoSettings();
+                    break;
                 default:
                     throw new NotSupportedException();
             }
@@ -666,6 +703,7 @@ namespace srcrepair.gui
             switch (SType)
             {
                 case "1":
+                case "4":
                     GT_GType1.Visible = true;
                     GT_GType2.Visible = false;
                     break;
