@@ -535,7 +535,7 @@ namespace srcrepair.gui
             switch (App.SourceGames[AppSelector.Text].SourceType)
             {
                 case "1":
-                    if (App.SourceGames[AppSelector.Text].IsUsingVideoFile) { NullType1Settings(); } else { NullType2Settings(); }
+                    if (App.SourceGames[AppSelector.Text].IsUsingVideoFile) { NullType2Settings(); } else { NullType1Settings(); }
                     break;
                 case "2":
                     NullType2Settings();
@@ -689,7 +689,7 @@ namespace srcrepair.gui
             switch (App.SourceGames[AppSelector.Text].SourceType)
             {
                 case "1":
-                    if (App.Platform.OS == CurrentPlatform.OSType.Windows) { PrepareWriteType1VideoSettings(); } else { PrepareWriteType2VideoSettings(); }
+                    if (App.SourceGames[AppSelector.Text].IsUsingVideoFile) { PrepareWriteType2VideoSettings(); } else { PrepareWriteType1VideoSettings(); }
                     break;
                 case "2":
                     PrepareWriteType2VideoSettings();
@@ -1055,7 +1055,7 @@ namespace srcrepair.gui
             switch (App.SourceGames[AppSelector.Text].SourceType)
             {
                 case "1":
-                    Result = App.SourceGames[AppSelector.Text].IsUsingVideoFile ? CheckType1Settings() : CheckType2Settings();
+                    Result = App.SourceGames[AppSelector.Text].IsUsingVideoFile ? CheckType2Settings() : CheckType1Settings();
                     break;
                 case "2":
                     Result = CheckType2Settings();
