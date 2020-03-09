@@ -216,6 +216,7 @@ namespace srcrepair.core
         {
             VideoCfgFiles = GetCloudConfigs("video.txt");
             VideoCfgFiles.Add(Path.Combine(GamePath, ConfDir, "cfg", "video.txt"));
+            VideoCfgFiles.Add(Path.Combine(GamePath, ConfDir, "videoconfig.cfg"));
         }
 
         /// <summary>
