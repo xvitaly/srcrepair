@@ -100,6 +100,7 @@
     <Compile Include="Type2Video.cs" />
     <Compile Include="Type3Settings.cs" />
     <Compile Include="Type3Video.cs" />
+    <Compile Include="Type4Video.cs" />
     <Compile Include="UpdateManager.cs" />
   </ItemGroup>
   <ItemGroup>
