@@ -271,7 +271,7 @@ namespace srcrepair.core
             GameInternalID = SID;
             SourceType = SV;
             ConfDir = VFDir;
-            IsUsingVideoFile = HasVF;
+            IsUsingVideoFile = SourceType != "1" || OS != CurrentPlatform.OSType.Windows;
             IsUsingUserDir = UserDir;
             IsHUDsAvailable = HUDAv;
             SteamPath = SteamDir;
