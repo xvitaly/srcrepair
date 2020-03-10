@@ -196,7 +196,7 @@ namespace srcrepair.core
         /// <summary>
         /// Reads game video settings.
         /// </summary>
-        protected abstract void ReadSettings();
+        public abstract void ReadSettings();
 
         /// <summary>
         /// Writes game video settings.

@@ -594,7 +594,7 @@ namespace srcrepair.core
         /// <summary>
         /// Reads Type 1 game video settings from Windows registry.
         /// </summary>
-        protected override void ReadSettings()
+        public override void ReadSettings()
         {
             using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(RegKey, false))
             {
@@ -727,12 +727,10 @@ namespace srcrepair.core
         /// Type1Video class constructor.
         /// </summary>
         /// <param name="SAppName">The name of registry subkey, used for storing video settings.</param>
-        /// <param name="ReadNow">Enable immediate reading of video settings.</param>
-        public Type1Video(string SAppName, bool ReadNow = true)
+        public Type1Video(string SAppName)
         {
             VSettings = new Type1Settings();
             RegKey = GetGameRegKey(SAppName);
-            if (ReadNow) { ReadSettings(); }
         }
     }
 }

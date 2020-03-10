@@ -654,9 +654,21 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Reads Type 2 game video settings from file.
+        /// Reads contents of video config file.
         /// </summary>
-        protected override void ReadSettings()
+        private void ReadVideoFile()
+        {
+            VideoFile.AddRange(File.ReadAllLines(VideoFileName));
+            if (File.Exists(DefaultsFileName))
+            {
+                DefaultsFile.AddRange(File.ReadAllLines(DefaultsFileName));
+            }
+        }
+
+        /// <summary>
+        /// Parses video config file and sets values.
+        /// </summary>
+        private void SetVideoValues()
         {
             _ScreenWidth = GetNCFDWord(VSettings.ScreenWidth);
             _ScreenHeight = GetNCFDWord(VSettings.ScreenHeight);
@@ -676,6 +688,15 @@ namespace srcrepair.core
             _EffectDetails = GetNCFDWord(VSettings.EffectDetails);
             _MemoryPoolType = GetNCFDWord(VSettings.MemoryPoolType);
             _TextureModelQuality = GetNCFDWord(VSettings.TextureModelQuality);
+        }
+
+        /// <summary>
+        /// Reads Type 2 game video settings from file.
+        /// </summary>
+        public override void ReadSettings()
+        {
+            ReadVideoFile();
+            SetVideoValues();
         }
 
         /// <summary>
@@ -729,21 +750,13 @@ namespace srcrepair.core
         /// Type2Video class constructor.
         /// </summary>
         /// <param name="VFile">Full path to video settings file.</param>
-        /// <param name="ReadNow">Enable immediate reading of video settings.</param>
-        public Type2Video(string VFile, bool ReadNow = true)
+        public Type2Video(string VFile)
         {
             VSettings = new Type2Settings();
             VideoFileName = VFile;
             DefaultsFileName = Path.Combine(Path.GetDirectoryName(VideoFileName), "videodefaults.txt");
             VideoFile = new List<String>();
             DefaultsFile = new List<String>();
-
-            if (ReadNow)
-            {
-                VideoFile.AddRange(File.ReadAllLines(VideoFileName));
-                if (File.Exists(DefaultsFileName)) { DefaultsFile.AddRange(File.ReadAllLines(DefaultsFileName)); }
-                ReadSettings();
-            }
         }
     }
 }

@@ -170,7 +170,7 @@ namespace srcrepair.gui
         private void WriteType1VideoSettings()
         {
             // Creating Type1Video instance for operating with video settings...
-            Type1Video Video = new Type1Video(App.SourceGames[AppSelector.Text].ConfDir, false)
+            Type1Video Video = new Type1Video(App.SourceGames[AppSelector.Text].ConfDir)
             {
                 // Changing default properties by user selection...
                 ScreenWidth = (int)GT_ResHor.Value,
@@ -200,7 +200,7 @@ namespace srcrepair.gui
         private void WriteType2VideoSettings()
         {
             // Creating Type2Video instance for operating with video settings...
-            Type2Video Video = new Type2Video(App.SourceGames[AppSelector.Text].GetActualVideoFile(), false)
+            Type2Video Video = new Type2Video(App.SourceGames[AppSelector.Text].GetActualVideoFile())
             {
                 // Changing default properties by user selection...
                 ScreenWidth = (int)GT_NCF_HorRes.Value,
@@ -232,7 +232,8 @@ namespace srcrepair.gui
             try
             {
                 // Creating Type1Video instance for operating with video settings...
-                Type1Video Video = new Type1Video(App.SourceGames[AppSelector.Text].ConfDir, true);
+                Type1Video Video = new Type1Video(App.SourceGames[AppSelector.Text].ConfDir);
+                Video.ReadSettings();
 
                 // Reading settings and setting them on form...
                 GT_ResHor.Value = Video.ScreenWidth;
@@ -266,7 +267,8 @@ namespace srcrepair.gui
             try
             {
                 // Creating Type1Video instance for operating with video settings...
-                Type4Video Video = new Type4Video(App.SourceGames[AppSelector.Text].ConfDir, App.SourceGames[AppSelector.Text].GetActualVideoFile(), true);
+                Type4Video Video = new Type4Video(App.SourceGames[AppSelector.Text].GetActualVideoFile());
+                Video.ReadSettings();
 
                 // Reading settings and setting them on form...
                 GT_ResHor.Value = Video.ScreenWidth;
@@ -306,7 +308,8 @@ namespace srcrepair.gui
                 if (File.Exists(VFileName))
                 {
                     // Creating Type2Video instance for operating with video settings...
-                    Type2Video Video = new Type2Video(VFileName, true);
+                    Type2Video Video = new Type2Video(VFileName);
+                    Video.ReadSettings();
 
                     // Reading settings and setting them on form...
                     GT_NCF_HorRes.Value = Video.ScreenWidth;

@@ -67,9 +67,17 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Reads Type 4 game video settings from config file.
+        /// Reads contents of video config file.
         /// </summary>
-        protected new void ReadSettings()
+        private void ReadVideoFile()
+        {
+            VideoFile.AddRange(File.ReadAllLines(VideoFileName));
+        }
+
+        /// <summary>
+        /// Parses video config file and sets values.
+        /// </summary>
+        private void SetVideoValues()
         {
             _ScreenWidth = GetNCFDWord(VSettings.ScreenWidth);
             _ScreenHeight = GetNCFDWord(VSettings.ScreenHeight);
@@ -89,6 +97,15 @@ namespace srcrepair.core
             _MotionBlur = GetNCFDWord(VSettings.MotionBlur);
             _DirectXMode = GetNCFDWord(VSettings.DirectXMode);
             _HDRMode = GetNCFDWord(VSettings.HDRMode);
+        }
+
+        /// <summary>
+        /// Reads Type 4 game video settings from config file.
+        /// </summary>
+        public new void ReadSettings()
+        {
+            ReadVideoFile();
+            SetVideoValues();
         }
 
         /// <summary>
@@ -144,17 +161,11 @@ namespace srcrepair.core
         /// Type4Video class constructor.
         /// </summary>
         /// <param name="SAppName">The name of registry subkey, used for storing video settings.</param>
-        /// <param name="ReadNow">Enable immediate reading of video settings.</param>
-        public Type4Video(string SAppName, string VFile, bool ReadNow = true) : base (SAppName, false)
+        public Type4Video(string VFile) : base (String.Empty)
         {
             VSettings = new Type4Settings();
             VideoFileName = VFile;
             VideoFile = new List<String>();
-            if (ReadNow)
-            {
-                VideoFile.AddRange(File.ReadAllLines(VideoFileName));
-                ReadSettings();
-            }
         }
     }
 }
