@@ -30,7 +30,7 @@ namespace srcrepair.core
     /// <summary>
     /// Class for working with Type 2 game video settings.
     /// </summary>
-    public class Type2Video : ICommonVideo, IType2Video
+    public class Type2Video : CommonVideo, ICommonVideo, IType2Video
     {
         /// <summary>
         /// Stores full path to video settings file.
@@ -60,16 +60,6 @@ namespace srcrepair.core
         protected List<String> DefaultsFile;
 
         /// <summary>
-        /// Stores screen width.
-        /// </summary>
-        protected int _ScreenWidth = 800;
-
-        /// <summary>
-        /// Stores screen height.
-        /// </summary>
-        protected int _ScreenHeight = 600;
-
-        /// <summary>
         /// Stores screen aspect ratio: setting.aspectratiomode.
         /// </summary>
         protected int _ScreenRatio;
@@ -85,11 +75,6 @@ namespace srcrepair.core
         protected int _ShadowQuality;
 
         /// <summary>
-        /// Stores motion blur setting: setting.mat_motion_blur_enabled.
-        /// </summary>
-        protected int _MotionBlur;
-
-        /// <summary>
         /// Stores display mode (fullscreen, windowed): setting.fullscreen.
         /// </summary>
         protected int _DisplayMode;
@@ -98,16 +83,6 @@ namespace srcrepair.core
         /// Stores borderless window video setting: setting.nowindowborder.
         /// </summary>
         protected int _DisplayBorderless;
-
-        /// <summary>
-        /// Stores anti-aliasing setting: setting.mat_antialias.
-        /// </summary>
-        protected int _AntiAliasing;
-
-        /// <summary>
-        /// Stores anti-aliasing multiplier: setting.mat_aaquality.
-        /// </summary>
-        protected int _AntiAliasQuality;
 
         /// <summary>
         /// Stores filtering mode setting: setting.mat_forceaniso.
@@ -148,16 +123,6 @@ namespace srcrepair.core
         /// Stores texture quality: setting.gpu_mem_level.
         /// </summary>
         protected int _TextureModelQuality;
-
-        /// <summary>
-        /// Gets or sets screen width video setting.
-        /// </summary>
-        public int ScreenWidth { get => _ScreenWidth; set { _ScreenWidth = value; } }
-
-        /// <summary>
-        /// Gets or sets screen height video setting.
-        /// </summary>
-        public int ScreenHeight { get => _ScreenHeight; set { _ScreenHeight = value; } }
 
         /// <summary>
         /// Gets or sets screen aspect ratio video setting.
@@ -212,7 +177,7 @@ namespace srcrepair.core
         /// <summary>
         /// Gets or sets shadow effects quality video setting.
         /// </summary>
-        public int ShadowQuality
+        public override int ShadowQuality
         {
             get
             {
@@ -252,42 +217,6 @@ namespace srcrepair.core
                         break;
                     case 3:
                         _ShadowQuality = 3;
-                        break;
-                }
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets motion blur video setting.
-        /// </summary>
-        public int MotionBlur
-        {
-            get
-            {
-                int res = -1;
-
-                switch (_MotionBlur)
-                {
-                    case 0:
-                        res = 0;
-                        break;
-                    case 1:
-                        res = 1;
-                        break;
-                }
-
-                return res;
-            }
-
-            set
-            {
-                switch (value)
-                {
-                    case 0:
-                        _MotionBlur = 0;
-                        break;
-                    case 1:
-                        _MotionBlur = 1;
                         break;
                 }
             }
@@ -338,92 +267,6 @@ namespace srcrepair.core
                     case 2:
                         _DisplayMode = 1;
                         _DisplayBorderless = 0;
-                        break;
-                }
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets anti-aliasing video setting.
-        /// </summary>
-        public int AntiAliasing
-        {
-            get
-            {
-                int res = -1;
-
-                switch (_AntiAliasing)
-                {
-                    case 0:
-                        res = 0;
-                        break;
-                    case 1:
-                        res = 0;
-                        break;
-                    case 2:
-                        res = 1;
-                        break;
-                    case 4:
-                        switch (_AntiAliasQuality)
-                        {
-                            case 0:
-                                res = 2;
-                                break;
-                            case 2:
-                                res = 3;
-                                break;
-                            case 4:
-                                res = 4;
-                                break;
-                        }
-                        break;
-                    case 8:
-                        switch (_AntiAliasQuality)
-                        {
-                            case 0:
-                                res = 5;
-                                break;
-                            case 2:
-                                res = 6;
-                                break;
-                        }
-                        break;
-                }
-
-                return res;
-            }
-
-            set
-            {
-                switch (value)
-                {
-                    case 0:
-                        _AntiAliasing = 1;
-                        _AntiAliasQuality = 0;
-                        break;
-                    case 1:
-                        _AntiAliasing = 2;
-                        _AntiAliasQuality = 0;
-                        break;
-                    case 2:
-                        _AntiAliasing = 4;
-                        _AntiAliasQuality = 0;
-                        break;
-                    case 3:
-                        _AntiAliasing = 4;
-                        _AntiAliasQuality = 2;
-                        break;
-                    case 4:
-                        _AntiAliasing = 4;
-                        _AntiAliasQuality = 4;
-                        break;
-                    case 5:
-                        _AntiAliasing = 8;
-                        _AntiAliasQuality = 0;
-                        break;
-                    case 6:
-                        _AntiAliasing = 8;
-                        _AntiAliasQuality = 2;
                         break;
                 }
             }
@@ -495,7 +338,7 @@ namespace srcrepair.core
         /// <summary>
         /// Gets or sets vertical synchronization video setting.
         /// </summary>
-        public int VSync
+        public override int VSync
         {
             get
             {
@@ -762,17 +605,6 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Gets Cvar value from string.
-        /// </summary>
-        /// <param name="LineA">Source string.</param>
-        /// <returns>Extracted from source string value.</returns>
-        public static string ExtractCVFromLine(string LineA)
-        {
-            LineA = StringsManager.CleanString(LineA, true);
-            return LineA.Substring(LineA.LastIndexOf(" ")).Trim();
-        }
-
-        /// <summary>
         /// Gets Cvar value of integer type from video file.
         /// </summary>
         /// <param name="CVar">Cvar name.</param>
@@ -824,7 +656,7 @@ namespace srcrepair.core
         /// <summary>
         /// Reads Type 2 game video settings from file.
         /// </summary>
-        protected void ReadSettings()
+        protected override void ReadSettings()
         {
             _ScreenWidth = GetNCFDWord(VSettings.ScreenWidth);
             _ScreenHeight = GetNCFDWord(VSettings.ScreenHeight);
@@ -849,7 +681,7 @@ namespace srcrepair.core
         /// <summary>
         /// Writes Type 2 game video settings to file.
         /// </summary>
-        public void WriteSettings()
+        public override void WriteSettings()
         {
             // Checking if file exists. If not - create it...
             if (!(File.Exists(VideoFileName))) { FileManager.CreateFile(VideoFileName); }

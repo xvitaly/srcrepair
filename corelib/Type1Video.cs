@@ -28,7 +28,7 @@ namespace srcrepair.core
     /// <summary>
     /// Class for working with Type 1 game video settings.
     /// </summary>
-    public class Type1Video : ICommonVideo, IType1Video
+    public class Type1Video : CommonVideo, ICommonVideo, IType1Video
     {
         /// <summary>
         /// Logger instance for Type1Video class.
@@ -39,16 +39,6 @@ namespace srcrepair.core
         /// Stores instance of Type1Settings class.
         /// </summary>
         protected Type1Settings VSettings;
-
-        /// <summary>
-        /// Stores screen width.
-        /// </summary>
-        protected int _ScreenWidth = 800;
-
-        /// <summary>
-        /// Stores screen height.
-        /// </summary>
-        protected int _ScreenHeight = 600;
 
         /// <summary>
         /// Stores window mode settings: ScreenWidth.
@@ -91,16 +81,6 @@ namespace srcrepair.core
         protected int _ColorCorrection;
 
         /// <summary>
-        /// Stores anti-aliasing setting: mat_antialias.
-        /// </summary>
-        protected int _AntiAliasing;
-
-        /// <summary>
-        /// Stores anti-aliasing multiplier: mat_aaquality.
-        /// </summary>
-        protected int _AntiAliasQuality;
-
-        /// <summary>
         /// Stores filtering mode type: mat_forceaniso.
         /// </summary>
         protected int _FilteringMode;
@@ -116,11 +96,6 @@ namespace srcrepair.core
         protected int _VSync;
 
         /// <summary>
-        /// Stores motion blur setting: MotionBlur.
-        /// </summary>
-        protected int _MotionBlur;
-
-        /// <summary>
         /// Stores DirectX mode (effects level): DXLevel_V1.
         /// </summary>
         protected int _DirectXMode;
@@ -134,16 +109,6 @@ namespace srcrepair.core
         /// Stores graphic settings registry key full path.
         /// </summary>
         protected string RegKey;
-
-        /// <summary>
-        /// Gets or sets screen width video setting.
-        /// </summary>
-        public int ScreenWidth { get => _ScreenWidth; set { _ScreenWidth = value; } }
-
-        /// <summary>
-        /// Gets or sets screen height video setting.
-        /// </summary>
-        public int ScreenHeight { get => _ScreenHeight; set { _ScreenHeight = value; } }
 
         /// <summary>
         /// Gets or sets display mode (fullscreen, windowed) video setting.
@@ -360,7 +325,7 @@ namespace srcrepair.core
         /// <summary>
         /// Gets or sets shadow effects quality video setting.
         /// </summary>
-        public int ShadowQuality
+        public override int ShadowQuality
         {
             get
             {
@@ -424,92 +389,6 @@ namespace srcrepair.core
                         break;
                     case 1:
                         _ColorCorrection = 1;
-                        break;
-                }
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets anti-aliasing video setting.
-        /// </summary>
-        public int AntiAliasing
-        {
-            get
-            {
-                int res = -1;
-
-                switch (_AntiAliasing)
-                {
-                    case 0:
-                        res = 0;
-                        break;
-                    case 1:
-                        res = 0;
-                        break;
-                    case 2:
-                        res = 1;
-                        break;
-                    case 4:
-                        switch (_AntiAliasQuality)
-                        {
-                            case 0:
-                                res = 2;
-                                break;
-                            case 2:
-                                res = 3;
-                                break;
-                            case 4:
-                                res = 4;
-                                break;
-                        }
-                        break;
-                    case 8:
-                        switch (_AntiAliasQuality)
-                        {
-                            case 0:
-                                res = 5;
-                                break;
-                            case 2:
-                                res = 6;
-                                break;
-                        }
-                        break;
-                }
-
-                return res;
-            }
-
-            set
-            {
-                switch (value)
-                {
-                    case 0: // No AA
-                        _AntiAliasing = 1;
-                        _AntiAliasQuality = 0;
-                        break;
-                    case 1: // 2x MSAA
-                        _AntiAliasing = 2;
-                        _AntiAliasQuality = 0;
-                        break;
-                    case 2: // 4x MSAA
-                        _AntiAliasing = 4;
-                        _AntiAliasQuality = 0;
-                        break;
-                    case 3: // 8x CSAA
-                        _AntiAliasing = 4;
-                        _AntiAliasQuality = 2;
-                        break;
-                    case 4: // 16x CSAA
-                        _AntiAliasing = 4;
-                        _AntiAliasQuality = 4;
-                        break;
-                    case 5: // 8x MSAA
-                        _AntiAliasing = 8;
-                        _AntiAliasQuality = 0;
-                        break;
-                    case 6: // 16xQ CSAA
-                        _AntiAliasing = 8;
-                        _AntiAliasQuality = 2;
                         break;
                 }
             }
@@ -589,7 +468,7 @@ namespace srcrepair.core
         /// <summary>
         /// Gets or sets vertical synchronization video setting.
         /// </summary>
-        public int VSync
+        public override int VSync
         {
             get
             {
@@ -617,42 +496,6 @@ namespace srcrepair.core
                         break;
                     case 1:
                         _VSync = 1;
-                        break;
-                }
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets motion blur video setting.
-        /// </summary>
-        public int MotionBlur
-        {
-            get
-            {
-                int res = -1;
-
-                switch (_MotionBlur)
-                {
-                    case 0:
-                        res = 0;
-                        break;
-                    case 1:
-                        res = 1;
-                        break;
-                }
-
-                return res;
-            }
-
-            set
-            {
-                switch (value)
-                {
-                    case 0:
-                        _MotionBlur = 0;
-                        break;
-                    case 1:
-                        _MotionBlur = 1;
                         break;
                 }
             }
@@ -751,7 +594,7 @@ namespace srcrepair.core
         /// <summary>
         /// Reads Type 1 game video settings from Windows registry.
         /// </summary>
-        protected void ReadSettings()
+        protected override void ReadSettings()
         {
             using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(RegKey, false))
             {
@@ -786,7 +629,7 @@ namespace srcrepair.core
         /// <summary>
         /// Writes Type 1 game video settings to Windows registry.
         /// </summary>
-        public void WriteSettings()
+        public override void WriteSettings()
         {
             using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(RegKey, true))
             {
