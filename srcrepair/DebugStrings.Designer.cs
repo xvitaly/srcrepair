@@ -610,15 +610,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while filling Graphic tweaker for Type1 game..
-        /// </summary>
-        internal static string AppDbgExT1LoadFail {
-            get {
-                return ResourceManager.GetString("AppDbgExT1LoadFail", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to save Type1 graphical settings..
         /// </summary>
         internal static string AppDbgExT1SaveFail {
@@ -633,15 +624,6 @@ namespace srcrepair.gui {
         internal static string AppDbgExT2AutoFail {
             get {
                 return ResourceManager.GetString("AppDbgExT2AutoFail", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Exception while filling Graphic tweaker for Type2 game..
-        /// </summary>
-        internal static string AppDbgExT2LoadFail {
-            get {
-                return ResourceManager.GetString("AppDbgExT2LoadFail", resourceCulture);
             }
         }
         
@@ -732,6 +714,15 @@ namespace srcrepair.gui {
         internal static string AppDbgExValCache {
             get {
                 return ResourceManager.GetString("AppDbgExValCache", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while loading video settings..
+        /// </summary>
+        internal static string AppDbgExVideoLoadFail {
+            get {
+                return ResourceManager.GetString("AppDbgExVideoLoadFail", resourceCulture);
             }
         }
         

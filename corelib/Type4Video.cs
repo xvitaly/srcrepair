@@ -102,7 +102,7 @@ namespace srcrepair.core
         /// <summary>
         /// Reads Type 4 game video settings from config file.
         /// </summary>
-        public new void ReadSettings()
+        public override void ReadSettings()
         {
             ReadVideoFile();
             SetVideoValues();
@@ -111,7 +111,7 @@ namespace srcrepair.core
         /// <summary>
         /// Writes Type 2 game video settings to file.
         /// </summary>
-        public new void WriteSettings()
+        public override void WriteSettings()
         {
             // Checking if file exists. If not - create it...
             if (!File.Exists(VideoFileName)) { FileManager.CreateFile(VideoFileName); }

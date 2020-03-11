@@ -898,15 +898,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to load some video settings. Please report this bug..
-        /// </summary>
-        internal static string GT_NCFLoadFailure {
-            get {
-                return ResourceManager.GetString("GT_NCFLoadFailure", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to You need to set all video settings in order to save them into a file..
         /// </summary>
         internal static string GT_NCFNReady {
@@ -921,15 +912,6 @@ namespace srcrepair.gui {
         internal static string GT_PerfSet {
             get {
                 return ResourceManager.GetString("GT_PerfSet", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Could not open registry key. Please start the game at least once and try again..
-        /// </summary>
-        internal static string GT_RegOpenErr {
-            get {
-                return ResourceManager.GetString("GT_RegOpenErr", resourceCulture);
             }
         }
         
@@ -957,6 +939,15 @@ namespace srcrepair.gui {
         internal static string GT_SaveSuccess {
             get {
                 return ResourceManager.GetString("GT_SaveSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not read video settings of the selected game. Please start it at least once or remove -autoconfig command-line option..
+        /// </summary>
+        internal static string GT_VideoLoadErr {
+            get {
+                return ResourceManager.GetString("GT_VideoLoadErr", resourceCulture);
             }
         }
         

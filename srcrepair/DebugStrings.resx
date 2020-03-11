@@ -300,17 +300,11 @@
   <data name="AppDbgExStmmInit" xml:space="preserve">
     <value>Exception while initializing SteamManager class instance.</value>
   </data>
-  <data name="AppDbgExT1LoadFail" xml:space="preserve">
-    <value>Exception while filling Graphic tweaker for Type1 game.</value>
-  </data>
   <data name="AppDbgExT1SaveFail" xml:space="preserve">
     <value>Exception while trying to save Type1 graphical settings.</value>
   </data>
   <data name="AppDbgExT2AutoFail" xml:space="preserve">
     <value>Exception while trying to save auto backup before saving Type2 game settings.</value>
-  </data>
-  <data name="AppDbgExT2LoadFail" xml:space="preserve">
-    <value>Exception while filling Graphic tweaker for Type2 game.</value>
   </data>
   <data name="AppDbgExT2SaveFail" xml:space="preserve">
     <value>Exception while trying to save Type2 graphical settings.</value>
@@ -341,6 +335,9 @@
   </data>
   <data name="AppDbgExValCache" xml:space="preserve">
     <value>Exception on trying to launch Steam to validate game cache.</value>
+  </data>
+  <data name="AppDbgExVideoLoadFail" xml:space="preserve">
+    <value>Exception while loading video settings.</value>
   </data>
   <data name="AppDbgExXmlParse" xml:space="preserve">
     <value>Exception on parsing XML game database. Application will be terminated.</value>

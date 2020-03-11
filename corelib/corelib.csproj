@@ -104,7 +104,6 @@
     <Compile Include="Type4Settings.cs" />
     <Compile Include="Type4Video.cs" />
     <Compile Include="UpdateManager.cs" />
-    <Compile Include="VideoFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DebugStrings.resx">

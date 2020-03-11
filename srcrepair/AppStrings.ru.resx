@@ -393,17 +393,11 @@
   <data name="GT_NCFFailure" xml:space="preserve">
     <value>Произошла ошибка во время сохранения графических настроек игры в файл!</value>
   </data>
-  <data name="GT_NCFLoadFailure" xml:space="preserve">
-    <value>Произошла ошибка при загрузке графических настроек игры. Часть параметров загрузились некорректно. Пожалуйста сообщите об этом разработчикам.</value>
-  </data>
   <data name="GT_NCFNReady" xml:space="preserve">
     <value>Для сохранения графических настроек вы должны заполнить все параметры!</value>
   </data>
   <data name="GT_PerfSet" xml:space="preserve">
     <value>Готово. Не забудьте подкорректировать и сохранить изменения в настройках!</value>
-  </data>
-  <data name="GT_RegOpenErr" xml:space="preserve">
-    <value>Произошла ошибка при открытии ключа реестра. Графические настройки не были загружены!</value>
   </data>
   <data name="GT_SaveFailure" xml:space="preserve">
     <value>Произошла ошибка при попытке сохранения графических настроек!</value>
@@ -413,6 +407,9 @@
   </data>
   <data name="GT_SaveSuccess" xml:space="preserve">
     <value>Изменения были успешно сохранены!</value>
+  </data>
+  <data name="GT_VideoLoadErr" xml:space="preserve">
+    <value>Не удалось загрузить графические настройки выбранной игры. Запустите её как минимум один раз, а также убедитесь, что не используется параметр запуска -autoconfig.</value>
   </data>
   <data name="HD_BtnInstallText" xml:space="preserve">
     <value>Установить выбранный HUD</value>

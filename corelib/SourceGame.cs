@@ -30,6 +30,11 @@ namespace srcrepair.core
     public sealed class SourceGame
     {
         /// <summary>
+        /// Stores current OS type.
+        /// </summary>
+        private readonly CurrentPlatform.OSType OSType;
+
+        /// <summary>
         /// Gets full path to custom user stuff directory.
         /// </summary>
         public string CustomInstallDir { get; private set; }
@@ -179,6 +184,11 @@ namespace srcrepair.core
         private string SteamID { get; set; }
 
         /// <summary>
+        /// Gets or sets video settings of selected game.
+        /// </summary>
+        public CommonVideo Video { get; private set; }
+
+        /// <summary>
         /// Generates full path to installed game.
         /// </summary>
         /// <param name="AppName">Game directory name.</param>
@@ -247,6 +257,24 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Factory method. Creates video settings class instance.
+        /// </summary>
+        private CommonVideo GetVideoSettings()
+        {
+            switch (SourceType)
+            {
+                case "1":
+                    if (OSType == CurrentPlatform.OSType.Windows) { return new Type1Video(ConfDir); } else { return new Type2Video(GetActualVideoFile()); }
+                case "2":
+                    return new Type2Video(GetActualVideoFile());
+                case "4":
+                    return new Type4Video(GetActualVideoFile());
+                default:
+                    throw new NotSupportedException();
+            }
+        }
+
+        /// <summary>
         /// SourceGame class constructor.
         /// </summary>
         /// <param name="AppName">Name (from database).</param>
@@ -274,6 +302,7 @@ namespace srcrepair.core
             IsUsingUserDir = UserDir;
             IsHUDsAvailable = HUDAv;
             SteamPath = SteamDir;
+            OSType = OS;
 
             // Getting game installation directory...
             GamePath = GetGameDirectory(DirName, GameDirs, OS);
@@ -297,6 +326,7 @@ namespace srcrepair.core
                 if (IsUsingVideoFile) { UpdateVideoFilesList(); }
                 UpdateBanlistFilesList();
                 CloudConfigs = GetCloudConfigs();
+                Video = GetVideoSettings();
             }
         }
     }

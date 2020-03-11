@@ -227,117 +227,70 @@ namespace srcrepair.gui
         /// <summary>
         /// Fetches video settings of Type 1 game.
         /// </summary>
-        private void ReadType1VideoSettings()
+        private void ReadType1VideoSettings(Type1Video Video)
         {
-            try
-            {
-                // Creating Type1Video instance for operating with video settings...
-                Type1Video Video = new Type1Video(App.SourceGames[AppSelector.Text].ConfDir);
-                Video.ReadSettings();
-
-                // Reading settings and setting them on form...
-                GT_ResHor.Value = Video.ScreenWidth;
-                GT_ResVert.Value = Video.ScreenHeight;
-                GT_ScreenType.SelectedIndex = Video.DisplayMode;
-                GT_ModelQuality.SelectedIndex = Video.ModelQuality;
-                GT_TextureQuality.SelectedIndex = Video.TextureQuality;
-                GT_ShaderQuality.SelectedIndex = Video.ShaderQuality;
-                GT_WaterQuality.SelectedIndex = Video.ReflectionsQuality;
-                GT_ShadowQuality.SelectedIndex = Video.ShadowQuality;
-                GT_ColorCorrectionT.SelectedIndex = Video.ColorCorrection;
-                GT_AntiAliasing.SelectedIndex = Video.AntiAliasing;
-                GT_Filtering.SelectedIndex = Video.FilteringMode;
-                GT_VSync.SelectedIndex = Video.VSync;
-                GT_MotionBlur.SelectedIndex = Video.MotionBlur;
-                GT_DxMode.SelectedIndex = Video.DirectXMode;
-                GT_HDR.SelectedIndex = Video.HDRType;
-            }
-            catch (Exception Ex)
-            {
-                MessageBox.Show(AppStrings.GT_RegOpenErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, DebugStrings.AppDbgExT1LoadFail);
-            }
-        }
-
-        /// <summary>
-        /// Fetches video settings of Type 4 game.
-        /// </summary>
-        private void ReadType4VideoSettings()
-        {
-            try
-            {
-                // Creating Type1Video instance for operating with video settings...
-                Type4Video Video = new Type4Video(App.SourceGames[AppSelector.Text].GetActualVideoFile());
-                Video.ReadSettings();
-
-                // Reading settings and setting them on form...
-                GT_ResHor.Value = Video.ScreenWidth;
-                GT_ResVert.Value = Video.ScreenHeight;
-                GT_ScreenType.SelectedIndex = Video.DisplayMode;
-                GT_ModelQuality.SelectedIndex = Video.ModelQuality;
-                GT_TextureQuality.SelectedIndex = Video.TextureQuality;
-                GT_ShaderQuality.SelectedIndex = Video.ShaderQuality;
-                GT_WaterQuality.SelectedIndex = Video.ReflectionsQuality;
-                GT_ShadowQuality.SelectedIndex = Video.ShadowQuality;
-                GT_ColorCorrectionT.SelectedIndex = Video.ColorCorrection;
-                GT_AntiAliasing.SelectedIndex = Video.AntiAliasing;
-                GT_Filtering.SelectedIndex = Video.FilteringMode;
-                GT_VSync.SelectedIndex = Video.VSync;
-                GT_MotionBlur.SelectedIndex = Video.MotionBlur;
-                GT_DxMode.SelectedIndex = Video.DirectXMode;
-                GT_HDR.SelectedIndex = Video.HDRType;
-            }
-            catch (Exception Ex)
-            {
-                MessageBox.Show(AppStrings.GT_RegOpenErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, DebugStrings.AppDbgExT1LoadFail);
-            }
+            // Reading settings and setting them on form...
+            GT_ResHor.Value = Video.ScreenWidth;
+            GT_ResVert.Value = Video.ScreenHeight;
+            GT_ScreenType.SelectedIndex = Video.DisplayMode;
+            GT_ModelQuality.SelectedIndex = Video.ModelQuality;
+            GT_TextureQuality.SelectedIndex = Video.TextureQuality;
+            GT_ShaderQuality.SelectedIndex = Video.ShaderQuality;
+            GT_WaterQuality.SelectedIndex = Video.ReflectionsQuality;
+            GT_ShadowQuality.SelectedIndex = Video.ShadowQuality;
+            GT_ColorCorrectionT.SelectedIndex = Video.ColorCorrection;
+            GT_AntiAliasing.SelectedIndex = Video.AntiAliasing;
+            GT_Filtering.SelectedIndex = Video.FilteringMode;
+            GT_VSync.SelectedIndex = Video.VSync;
+            GT_MotionBlur.SelectedIndex = Video.MotionBlur;
+            GT_DxMode.SelectedIndex = Video.DirectXMode;
+            GT_HDR.SelectedIndex = Video.HDRType;
         }
 
         /// <summary>
         /// Fetches video settings of Type 2 game.
         /// </summary>
-        private void ReadType2VideoSettings()
+        private void ReadType2VideoSettings(Type2Video Video)
         {
-            try
-            {
-                // Retrieving actual file with video settings...
-                string VFileName = App.SourceGames[AppSelector.Text].GetActualVideoFile();
+            // Reading settings and setting them on form...
+            GT_NCF_HorRes.Value = Video.ScreenWidth;
+            GT_NCF_VertRes.Value = Video.ScreenHeight;
+            GT_NCF_Ratio.SelectedIndex = Video.ScreenRatio;
+            GT_NCF_Brightness.Text = Video.ScreenGamma;
+            GT_NCF_Shadows.SelectedIndex = Video.ShadowQuality;
+            GT_NCF_MBlur.SelectedIndex = Video.MotionBlur;
+            GT_NCF_DispMode.SelectedIndex = Video.ScreenMode;
+            GT_NCF_AntiAlias.SelectedIndex = Video.AntiAliasing;
+            GT_NCF_Filtering.SelectedIndex = Video.FilteringMode;
+            GT_NCF_VSync.SelectedIndex = Video.VSync;
+            GT_NCF_Multicore.SelectedIndex = Video.RenderingMode;
+            GT_NCF_ShaderE.SelectedIndex = Video.ShaderEffects;
+            GT_NCF_EffectD.SelectedIndex = Video.Effects;
+            GT_NCF_MemPool.SelectedIndex = Video.MemoryPool;
+            GT_NCF_Quality.SelectedIndex = Video.ModelQuality;
+        }
 
-                // Checking if file with video settings exists...
-                if (File.Exists(VFileName))
-                {
-                    // Creating Type2Video instance for operating with video settings...
-                    Type2Video Video = new Type2Video(VFileName);
-                    Video.ReadSettings();
-
-                    // Reading settings and setting them on form...
-                    GT_NCF_HorRes.Value = Video.ScreenWidth;
-                    GT_NCF_VertRes.Value = Video.ScreenHeight;
-                    GT_NCF_Ratio.SelectedIndex = Video.ScreenRatio;
-                    GT_NCF_Brightness.Text = Video.ScreenGamma;
-                    GT_NCF_Shadows.SelectedIndex = Video.ShadowQuality;
-                    GT_NCF_MBlur.SelectedIndex = Video.MotionBlur;
-                    GT_NCF_DispMode.SelectedIndex = Video.ScreenMode;
-                    GT_NCF_AntiAlias.SelectedIndex = Video.AntiAliasing;
-                    GT_NCF_Filtering.SelectedIndex = Video.FilteringMode;
-                    GT_NCF_VSync.SelectedIndex = Video.VSync;
-                    GT_NCF_Multicore.SelectedIndex = Video.RenderingMode;
-                    GT_NCF_ShaderE.SelectedIndex = Video.ShaderEffects;
-                    GT_NCF_EffectD.SelectedIndex = Video.Effects;
-                    GT_NCF_MemPool.SelectedIndex = Video.MemoryPool;
-                    GT_NCF_Quality.SelectedIndex = Video.ModelQuality;
-                }
-                else
-                {
-                    Logger.Warn(String.Format(AppStrings.AppVideoDbNotFound, App.SourceGames[AppSelector.Text].FullAppName, VFileName));
-                }
-            }
-            catch (Exception Ex)
-            {
-                MessageBox.Show(AppStrings.GT_NCFLoadFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, DebugStrings.AppDbgExT2LoadFail);
-            }
+        /// <summary>
+        /// Fetches video settings of Type 4 game.
+        /// </summary>
+        private void ReadType4VideoSettings(Type4Video Video)
+        {
+            // Reading settings and setting them on form...
+            GT_ResHor.Value = Video.ScreenWidth;
+            GT_ResVert.Value = Video.ScreenHeight;
+            GT_ScreenType.SelectedIndex = Video.DisplayMode;
+            GT_ModelQuality.SelectedIndex = Video.ModelQuality;
+            GT_TextureQuality.SelectedIndex = Video.TextureQuality;
+            GT_ShaderQuality.SelectedIndex = Video.ShaderQuality;
+            GT_WaterQuality.SelectedIndex = Video.ReflectionsQuality;
+            GT_ShadowQuality.SelectedIndex = Video.ShadowQuality;
+            GT_ColorCorrectionT.SelectedIndex = Video.ColorCorrection;
+            GT_AntiAliasing.SelectedIndex = Video.AntiAliasing;
+            GT_Filtering.SelectedIndex = Video.FilteringMode;
+            GT_VSync.SelectedIndex = Video.VSync;
+            GT_MotionBlur.SelectedIndex = Video.MotionBlur;
+            GT_DxMode.SelectedIndex = Video.DirectXMode;
+            GT_HDR.SelectedIndex = Video.HDRType;
         }
 
         /// <summary>
@@ -535,18 +488,8 @@ namespace srcrepair.gui
         /// </summary>
         private void NullGraphSettings()
         {
-            switch (App.SourceGames[AppSelector.Text].SourceType)
-            {
-                case "1":
-                    if (App.SourceGames[AppSelector.Text].IsUsingVideoFile) { NullType2Settings(); } else { NullType1Settings(); }
-                    break;
-                case "2":
-                    NullType2Settings();
-                    break;
-                case "4":
-                    NullType1Settings();
-                    break;
-            }
+            NullType1Settings();
+            NullType2Settings();
         }
 
         /// <summary>
@@ -587,19 +530,20 @@ namespace srcrepair.gui
             NullGraphSettings();
 
             // Reading video settings...
-            switch (App.SourceGames[AppSelector.Text].SourceType)
+            App.SourceGames[AppSelector.Text].Video.ReadSettings();
+            
+            // Updating form...
+            switch(App.SourceGames[AppSelector.Text].SourceType)
             {
-                case "1": /* Source 1, Type 1 (ex. GCF). */
-                    if (App.Platform.OS == CurrentPlatform.OSType.Windows) { ReadType1VideoSettings(); } else { ReadType2VideoSettings(); }
+                case "1":
+                    ReadType1VideoSettings((Type1Video)App.SourceGames[AppSelector.Text].Video);
                     break;
-                case "2": /* Source 1, Type 2 (ex. NCF). */
-                    ReadType2VideoSettings();
+                case "2":
+                    ReadType2VideoSettings((Type2Video)App.SourceGames[AppSelector.Text].Video);
                     break;
-                case "4": /* Source 1, Type 1 with custom file instead of Registry */
-                    ReadType4VideoSettings();
+                case "4":
+                    ReadType4VideoSettings((Type4Video)App.SourceGames[AppSelector.Text].Video);
                     break;
-                default:
-                    throw new NotSupportedException();
             }
 
             // Switching between graphic tweaker modes...
@@ -1782,11 +1726,11 @@ namespace srcrepair.gui
                 {
                     LoadGraphicSettings();
                 }
-                catch (NotSupportedException)
+                catch (Exception Ex)
                 {
-                    NullType1Settings();
-                    NullType2Settings();
-                    MessageBox.Show(AppStrings.AppIncorrectSrcVersion, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    NullGraphSettings();
+                    Logger.Error(Ex, DebugStrings.AppDbgExVideoLoadFail);
+                    MessageBox.Show(AppStrings.GT_VideoLoadErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 HandleSteamIDs(Properties.Settings.Default.LastSteamID);
