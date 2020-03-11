@@ -140,5 +140,14 @@ namespace srcrepair.core {
                 return ResourceManager.GetString("AppDbgExCoreType1VideoRegOpenError", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unknown version of Source Engine has been detected..
+        /// </summary>
+        internal static string AppDbgExCoreUnknownEngineVersion {
+            get {
+                return ResourceManager.GetString("AppDbgExCoreUnknownEngineVersion", resourceCulture);
+            }
+        }
     }
 }

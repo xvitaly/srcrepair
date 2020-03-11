@@ -270,7 +270,7 @@ namespace srcrepair.core
                 case "4":
                     return new Type4Video(GetActualVideoFile());
                 default:
-                    throw new NotSupportedException();
+                    throw new NotSupportedException(DebugStrings.AppDbgExCoreUnknownEngineVersion);
             }
         }
 
