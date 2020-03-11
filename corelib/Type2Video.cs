@@ -705,7 +705,7 @@ namespace srcrepair.core
         public override void WriteSettings()
         {
             // Checking if file exists. If not - create it...
-            if (!(File.Exists(VideoFileName))) { FileManager.CreateFile(VideoFileName); }
+            if (!File.Exists(VideoFileName)) { FileManager.CreateFile(VideoFileName); }
 
             // Writing to file...
             using (StreamWriter CFile = new StreamWriter(VideoFileName))
