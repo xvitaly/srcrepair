@@ -229,7 +229,6 @@ namespace srcrepair.gui
         /// </summary>
         private void ReadType1VideoSettings(Type1Video Video)
         {
-            // Reading settings and setting them on form...
             GT_ResHor.Value = Video.ScreenWidth;
             GT_ResVert.Value = Video.ScreenHeight;
             GT_ScreenType.SelectedIndex = Video.DisplayMode;
@@ -252,7 +251,6 @@ namespace srcrepair.gui
         /// </summary>
         private void ReadType2VideoSettings(Type2Video Video)
         {
-            // Reading settings and setting them on form...
             GT_NCF_HorRes.Value = Video.ScreenWidth;
             GT_NCF_VertRes.Value = Video.ScreenHeight;
             GT_NCF_Ratio.SelectedIndex = Video.ScreenRatio;
@@ -268,29 +266,6 @@ namespace srcrepair.gui
             GT_NCF_EffectD.SelectedIndex = Video.Effects;
             GT_NCF_MemPool.SelectedIndex = Video.MemoryPool;
             GT_NCF_Quality.SelectedIndex = Video.ModelQuality;
-        }
-
-        /// <summary>
-        /// Fetches video settings of Type 4 game.
-        /// </summary>
-        private void ReadType4VideoSettings(Type4Video Video)
-        {
-            // Reading settings and setting them on form...
-            GT_ResHor.Value = Video.ScreenWidth;
-            GT_ResVert.Value = Video.ScreenHeight;
-            GT_ScreenType.SelectedIndex = Video.DisplayMode;
-            GT_ModelQuality.SelectedIndex = Video.ModelQuality;
-            GT_TextureQuality.SelectedIndex = Video.TextureQuality;
-            GT_ShaderQuality.SelectedIndex = Video.ShaderQuality;
-            GT_WaterQuality.SelectedIndex = Video.ReflectionsQuality;
-            GT_ShadowQuality.SelectedIndex = Video.ShadowQuality;
-            GT_ColorCorrectionT.SelectedIndex = Video.ColorCorrection;
-            GT_AntiAliasing.SelectedIndex = Video.AntiAliasing;
-            GT_Filtering.SelectedIndex = Video.FilteringMode;
-            GT_VSync.SelectedIndex = Video.VSync;
-            GT_MotionBlur.SelectedIndex = Video.MotionBlur;
-            GT_DxMode.SelectedIndex = Video.DirectXMode;
-            GT_HDR.SelectedIndex = Video.HDRType;
         }
 
         /// <summary>
@@ -535,7 +510,7 @@ namespace srcrepair.gui
                     ReadType2VideoSettings((Type2Video)App.SourceGames[AppSelector.Text].Video);
                     break;
                 case "4":
-                    ReadType4VideoSettings((Type4Video)App.SourceGames[AppSelector.Text].Video);
+                    ReadType1VideoSettings((Type4Video)App.SourceGames[AppSelector.Text].Video);
                     break;
             }
         }
@@ -545,17 +520,10 @@ namespace srcrepair.gui
         /// </summary>
         private void LoadGraphicSettings()
         {
-            // Nulling controls of graphic tweaker...
             NullGraphSettings();
-
-            // Reading video settings...
             App.SourceGames[AppSelector.Text].Video.ReadSettings();
-
-            // Updating form...
             UpdateVideoFormControl();
-
-            // Switching between graphic tweaker modes...
-            SelectGraphicWidget((App.Platform.OS != CurrentPlatform.OSType.Windows) && (App.SourceGames[AppSelector.Text].SourceType == "1") ? "2" : App.SourceGames[AppSelector.Text].SourceType);
+            SelectGraphicWidget();
         }
 
         /// <summary>
@@ -644,7 +612,7 @@ namespace srcrepair.gui
             switch (App.SourceGames[AppSelector.Text].SourceType)
             {
                 case "1":
-                    if (App.SourceGames[AppSelector.Text].IsUsingVideoFile) { PrepareWriteType2VideoSettings(); } else { PrepareWriteType1VideoSettings(); }
+                    PrepareWriteType1VideoSettings();
                     break;
                 case "2":
                     PrepareWriteType2VideoSettings();
@@ -655,10 +623,9 @@ namespace srcrepair.gui
         /// <summary>
         /// Switches between different views of Graphic Tweaker.
         /// </summary>
-        /// <param name="SType">Source type.</param>
-        private void SelectGraphicWidget(string SType)
+        private void SelectGraphicWidget()
         {
-            switch (SType)
+            switch (App.SourceGames[AppSelector.Text].SourceType)
             {
                 case "1":
                 case "4":
