@@ -296,9 +296,9 @@ namespace srcrepair.core
             SmallAppName = SmallName;
             GameBinaryFile = Executable;
             GameInternalID = SID;
-            SourceType = SV;
+            SourceType = (OS != CurrentPlatform.OSType.Windows) && (SV == "1") ? "2" : SV;
             ConfDir = VFDir;
-            IsUsingVideoFile = SourceType != "1" || OS != CurrentPlatform.OSType.Windows;
+            IsUsingVideoFile = SourceType != "1";
             IsUsingUserDir = UserDir;
             IsHUDsAvailable = HUDAv;
             SteamPath = SteamDir;
