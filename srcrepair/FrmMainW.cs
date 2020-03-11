@@ -522,18 +522,11 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Loads video settings of selected game.
+        /// Set video settings on form.
         /// </summary>
-        private void LoadGraphicSettings()
+        private void UpdateVideoFormControl()
         {
-            // Nulling controls of graphic tweaker...
-            NullGraphSettings();
-
-            // Reading video settings...
-            App.SourceGames[AppSelector.Text].Video.ReadSettings();
-            
-            // Updating form...
-            switch(App.SourceGames[AppSelector.Text].SourceType)
+            switch (App.SourceGames[AppSelector.Text].SourceType)
             {
                 case "1":
                     ReadType1VideoSettings((Type1Video)App.SourceGames[AppSelector.Text].Video);
@@ -545,6 +538,21 @@ namespace srcrepair.gui
                     ReadType4VideoSettings((Type4Video)App.SourceGames[AppSelector.Text].Video);
                     break;
             }
+        }
+
+        /// <summary>
+        /// Loads video settings of selected game.
+        /// </summary>
+        private void LoadGraphicSettings()
+        {
+            // Nulling controls of graphic tweaker...
+            NullGraphSettings();
+
+            // Reading video settings...
+            App.SourceGames[AppSelector.Text].Video.ReadSettings();
+
+            // Updating form...
+            UpdateVideoFormControl();
 
             // Switching between graphic tweaker modes...
             SelectGraphicWidget((App.Platform.OS != CurrentPlatform.OSType.Windows) && (App.SourceGames[AppSelector.Text].SourceType == "1") ? "2" : App.SourceGames[AppSelector.Text].SourceType);
