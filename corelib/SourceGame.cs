@@ -264,7 +264,7 @@ namespace srcrepair.core
             switch (SourceType)
             {
                 case "1":
-                    if (OSType == CurrentPlatform.OSType.Windows) { return new Type1Video(ConfDir); } else { return new Type2Video(GetActualVideoFile()); }
+                    return new Type1Video(ConfDir);
                 case "2":
                     return new Type2Video(GetActualVideoFile());
                 case "4":
