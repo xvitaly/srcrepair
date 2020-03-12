@@ -610,29 +610,20 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to save Type1 graphical settings..
+        ///   Looks up a localized string similar to Exception while trying to create backup of Type 1 game video settings..
         /// </summary>
-        internal static string AppDbgExT1SaveFail {
+        internal static string AppDbgExT1AutoFail {
             get {
-                return ResourceManager.GetString("AppDbgExT1SaveFail", resourceCulture);
+                return ResourceManager.GetString("AppDbgExT1AutoFail", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to save auto backup before saving Type2 game settings..
+        ///   Looks up a localized string similar to Exception while trying to create backup of Type 2 game video settings..
         /// </summary>
         internal static string AppDbgExT2AutoFail {
             get {
                 return ResourceManager.GetString("AppDbgExT2AutoFail", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to save Type2 graphical settings..
-        /// </summary>
-        internal static string AppDbgExT2SaveFail {
-            get {
-                return ResourceManager.GetString("AppDbgExT2SaveFail", resourceCulture);
             }
         }
         

@@ -165,63 +165,47 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Saves video settings of Type 1 game.
+        /// Updates video settings of Type 1 game.
         /// </summary>
-        private void WriteType1VideoSettings()
+        private void UpdateType1VideoSettings(Type1Video Video)
         {
-            // Creating Type1Video instance for operating with video settings...
-            Type1Video Video = new Type1Video(App.SourceGames[AppSelector.Text].ConfDir)
-            {
-                // Changing default properties by user selection...
-                ScreenWidth = (int)GT_ResHor.Value,
-                ScreenHeight = (int)GT_ResVert.Value,
-                DisplayMode = GT_ScreenType.SelectedIndex,
-                ModelQuality = GT_ModelQuality.SelectedIndex,
-                TextureQuality = GT_TextureQuality.SelectedIndex,
-                ShaderQuality = GT_ShaderQuality.SelectedIndex,
-                ReflectionsQuality = GT_WaterQuality.SelectedIndex,
-                ShadowQuality = GT_ShadowQuality.SelectedIndex,
-                ColorCorrection = GT_ColorCorrectionT.SelectedIndex,
-                AntiAliasing = GT_AntiAliasing.SelectedIndex,
-                FilteringMode = GT_Filtering.SelectedIndex,
-                VSync = GT_VSync.SelectedIndex,
-                MotionBlur = GT_MotionBlur.SelectedIndex,
-                DirectXMode = GT_DxMode.SelectedIndex,
-                HDRType = GT_HDR.SelectedIndex
-            };
-
-            // Saving settings to disk or registry...
-            Video.WriteSettings();
+            Video.ScreenWidth = (int)GT_ResHor.Value;
+            Video.ScreenHeight = (int)GT_ResVert.Value;
+            Video.DisplayMode = GT_ScreenType.SelectedIndex;
+            Video.ModelQuality = GT_ModelQuality.SelectedIndex;
+            Video.TextureQuality = GT_TextureQuality.SelectedIndex;
+            Video.ShaderQuality = GT_ShaderQuality.SelectedIndex;
+            Video.ReflectionsQuality = GT_WaterQuality.SelectedIndex;
+            Video.ShadowQuality = GT_ShadowQuality.SelectedIndex;
+            Video.ColorCorrection = GT_ColorCorrectionT.SelectedIndex;
+            Video.AntiAliasing = GT_AntiAliasing.SelectedIndex;
+            Video.FilteringMode = GT_Filtering.SelectedIndex;
+            Video.VSync = GT_VSync.SelectedIndex;
+            Video.MotionBlur = GT_MotionBlur.SelectedIndex;
+            Video.DirectXMode = GT_DxMode.SelectedIndex;
+            Video.HDRType = GT_HDR.SelectedIndex;
         }
 
         /// <summary>
-        /// Saves video settings of Type 2 game.
+        /// Updates video settings of Type 2 game.
         /// </summary>
-        private void WriteType2VideoSettings()
+        private void UpdateType2VideoSettings(Type2Video Video)
         {
-            // Creating Type2Video instance for operating with video settings...
-            Type2Video Video = new Type2Video(App.SourceGames[AppSelector.Text].GetActualVideoFile())
-            {
-                // Changing default properties by user selection...
-                ScreenWidth = (int)GT_NCF_HorRes.Value,
-                ScreenHeight = (int)GT_NCF_VertRes.Value,
-                ScreenRatio = GT_NCF_Ratio.SelectedIndex,
-                ScreenGamma = GT_NCF_Brightness.Text,
-                ShadowQuality = GT_NCF_Shadows.SelectedIndex,
-                MotionBlur = GT_NCF_MBlur.SelectedIndex,
-                ScreenMode = GT_NCF_DispMode.SelectedIndex,
-                AntiAliasing = GT_NCF_AntiAlias.SelectedIndex,
-                FilteringMode = GT_NCF_Filtering.SelectedIndex,
-                VSync = GT_NCF_VSync.SelectedIndex,
-                RenderingMode = GT_NCF_Multicore.SelectedIndex,
-                ShaderEffects = GT_NCF_ShaderE.SelectedIndex,
-                Effects = GT_NCF_EffectD.SelectedIndex,
-                MemoryPool = GT_NCF_MemPool.SelectedIndex,
-                ModelQuality = GT_NCF_Quality.SelectedIndex
-            };
-
-            // Saving settings to disk or registry...
-            Video.WriteSettings();
+            Video.ScreenWidth = (int)GT_NCF_HorRes.Value;
+            Video.ScreenHeight = (int)GT_NCF_VertRes.Value;
+            Video.ScreenRatio = GT_NCF_Ratio.SelectedIndex;
+            Video.ScreenGamma = GT_NCF_Brightness.Text;
+            Video.ShadowQuality = GT_NCF_Shadows.SelectedIndex;
+            Video.MotionBlur = GT_NCF_MBlur.SelectedIndex;
+            Video.ScreenMode = GT_NCF_DispMode.SelectedIndex;
+            Video.AntiAliasing = GT_NCF_AntiAlias.SelectedIndex;
+            Video.FilteringMode = GT_NCF_Filtering.SelectedIndex;
+            Video.VSync = GT_NCF_VSync.SelectedIndex;
+            Video.RenderingMode = GT_NCF_Multicore.SelectedIndex;
+            Video.ShaderEffects = GT_NCF_ShaderE.SelectedIndex;
+            Video.Effects = GT_NCF_EffectD.SelectedIndex;
+            Video.MemoryPool = GT_NCF_MemPool.SelectedIndex;
+            Video.ModelQuality = GT_NCF_Quality.SelectedIndex;
         }
 
         /// <summary>
@@ -526,56 +510,31 @@ namespace srcrepair.gui
             SelectGraphicWidget();
         }
 
-        /// <summary>
-        /// Performes backup and then writes video settings of Type 1 game,
-        /// selected in main window.
-        /// </summary>
-        private void PrepareWriteType1VideoSettings()
+        private void Type1VideoSettingsBackup()
         {
-            // Generating registry key name for working with video settings...
             string GameRegKey = Type1Video.GetGameRegKey(App.SourceGames[AppSelector.Text].SmallAppName);
-
-            // Creating backup if Safe Clean feature is enabled...
-            if (Properties.Settings.Default.SafeCleanup)
-            {
-                try
-                {
-                    Type1Video.BackUpVideoSettings(GameRegKey, "Game_AutoBackUp", App.SourceGames[AppSelector.Text].FullBackUpDirPath);
-                }
-                catch (Exception Ex)
-                {
-                    Logger.Warn(Ex);
-                }
-            }
-
             try
             {
-                // Creating registry key if does not exists...
-                if (!Type1Video.CheckRegKeyExists(GameRegKey))
+                if (Type1Video.CheckRegKeyExists(GameRegKey))
+                {
+                    if (Properties.Settings.Default.SafeCleanup)
+                    {
+                        Type1Video.BackUpVideoSettings(GameRegKey, "Game_AutoBackUp", App.SourceGames[AppSelector.Text].FullBackUpDirPath);
+                    }
+                }
+                else
                 {
                     Type1Video.CreateRegKey(GameRegKey);
                 }
-
-                // Saving video settings to registry...
-                WriteType1VideoSettings();
-
-                // Showing message...
-                MessageBox.Show(AppStrings.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception Ex)
             {
-                MessageBox.Show(AppStrings.GT_SaveFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, DebugStrings.AppDbgExT1SaveFail);
+                Logger.Warn(Ex, DebugStrings.AppDbgExT1AutoFail);
             }
         }
 
-        /// <summary>
-        /// Performes backup and then writes video settings of Type 2 game,
-        /// selected in main window.
-        /// </summary>
-        private void PrepareWriteType2VideoSettings()
+        private void Type2VideoSettingsBackup()
         {
-            // Creating backup if Safe Clean feature is enabled...
             if (Properties.Settings.Default.SafeCleanup)
             {
                 try
@@ -587,20 +546,26 @@ namespace srcrepair.gui
                     Logger.Warn(Ex, DebugStrings.AppDbgExT2AutoFail);
                 }
             }
+        }
 
-            try
-            {
-                // Saving video settings to file...
-                WriteType2VideoSettings();
+        /// <summary>
+        /// Performes backup and then writes video settings of Type 1 game,
+        /// selected in main window.
+        /// </summary>
+        private void WriteType1VideoSettings()
+        {
+            Type1VideoSettingsBackup();
+            UpdateType1VideoSettings((Type1Video)App.SourceGames[AppSelector.Text].Video);
+        }
 
-                // Showing message...
-                MessageBox.Show(AppStrings.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception Ex)
-            {
-                MessageBox.Show(AppStrings.GT_NCFFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, DebugStrings.AppDbgExT2SaveFail);
-            }
+        /// <summary>
+        /// Performes backup and then writes video settings of Type 2 game,
+        /// selected in main window.
+        /// </summary>
+        private void WriteType2VideoSettings()
+        {
+            Type2VideoSettingsBackup();
+            UpdateType2VideoSettings((Type2Video)App.SourceGames[AppSelector.Text].Video);
         }
 
         /// <summary>
@@ -612,12 +577,13 @@ namespace srcrepair.gui
             switch (App.SourceGames[AppSelector.Text].SourceType)
             {
                 case "1":
-                    PrepareWriteType1VideoSettings();
+                    WriteType1VideoSettings();
                     break;
                 case "2":
-                    PrepareWriteType2VideoSettings();
+                    WriteType2VideoSettings();
                     break;
             }
+            App.SourceGames[AppSelector.Text].Video.WriteSettings();
         }
 
         /// <summary>
@@ -1841,7 +1807,16 @@ namespace srcrepair.gui
             {
                 if (MessageBox.Show(AppStrings.GT_SaveMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    WriteGraphicSettings();
+                    try
+                    {
+                        WriteGraphicSettings();
+                        MessageBox.Show(AppStrings.GT_SaveSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception Ex)
+                    {
+                        MessageBox.Show(AppStrings.GT_SaveFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        Logger.Error(Ex, DebugStrings.AppDbgExT1AutoFail);
+                    }
                 }
             }
             else

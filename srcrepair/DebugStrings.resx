@@ -300,14 +300,11 @@
   <data name="AppDbgExStmmInit" xml:space="preserve">
     <value>Exception while initializing SteamManager class instance.</value>
   </data>
-  <data name="AppDbgExT1SaveFail" xml:space="preserve">
-    <value>Exception while trying to save Type1 graphical settings.</value>
+  <data name="AppDbgExT1AutoFail" xml:space="preserve">
+    <value>Exception while trying to create backup of Type 1 game video settings.</value>
   </data>
   <data name="AppDbgExT2AutoFail" xml:space="preserve">
-    <value>Exception while trying to save auto backup before saving Type2 game settings.</value>
-  </data>
-  <data name="AppDbgExT2SaveFail" xml:space="preserve">
-    <value>Exception while trying to save Type2 graphical settings.</value>
+    <value>Exception while trying to create backup of Type 2 game video settings.</value>
   </data>
   <data name="AppDbgExUpdBinInst" xml:space="preserve">
     <value>Exception while trying to install binary update.</value>
