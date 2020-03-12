@@ -510,11 +510,14 @@ namespace srcrepair.gui
             SelectGraphicWidget();
         }
 
+        /// <summary>
+        /// Creates video settings backup of Type 1 game.
+        /// </summary>
         private void Type1VideoSettingsBackup()
         {
-            string GameRegKey = Type1Video.GetGameRegKey(App.SourceGames[AppSelector.Text].SmallAppName);
             try
             {
+                string GameRegKey = Type1Video.GetGameRegKey(App.SourceGames[AppSelector.Text].SmallAppName);
                 if (Type1Video.CheckRegKeyExists(GameRegKey))
                 {
                     if (Properties.Settings.Default.SafeCleanup)
@@ -533,18 +536,21 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// Creates video settings backup of Type 2 game.
+        /// </summary>
         private void Type2VideoSettingsBackup()
         {
-            if (Properties.Settings.Default.SafeCleanup)
+            try
             {
-                try
+                if (Properties.Settings.Default.SafeCleanup)
                 {
                     FileManager.CreateConfigBackUp(App.SourceGames[AppSelector.Text].VideoCfgFiles, App.SourceGames[AppSelector.Text].FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
                 }
-                catch (Exception Ex)
-                {
-                    Logger.Warn(Ex, DebugStrings.AppDbgExT2AutoFail);
-                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExT2AutoFail);
             }
         }
 
