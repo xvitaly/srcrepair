@@ -30,11 +30,6 @@ namespace srcrepair.core
     public sealed class SourceGame
     {
         /// <summary>
-        /// Stores current OS type.
-        /// </summary>
-        private readonly CurrentPlatform.OSType OSType;
-
-        /// <summary>
         /// Gets full path to custom user stuff directory.
         /// </summary>
         public string CustomInstallDir { get; private set; }
@@ -116,7 +111,7 @@ namespace srcrepair.core
         /// <summary>
         /// Gets Source engine type.
         /// </summary>
-        public string SourceType { get; private set; }
+        public int SourceType { get; private set; }
 
         /// <summary>
         /// Gets full paths to all found configs with video settings.
@@ -263,11 +258,11 @@ namespace srcrepair.core
         {
             switch (SourceType)
             {
-                case "1":
+                case 1:
                     return new Type1Video(ConfDir);
-                case "2":
+                case 2:
                     return new Type2Video(GetActualVideoFile());
-                case "4":
+                case 4:
                     return new Type4Video(GetActualVideoFile());
                 default:
                     throw new NotSupportedException(DebugStrings.AppDbgExCoreUnknownEngineVersion);
@@ -289,20 +284,19 @@ namespace srcrepair.core
         /// <param name="SteamDir">Full path to Steam directory.</param>
         /// <param name="SteamAppsDirName">Platform-dependent SteamApps directory name.</param>
         /// <param name="OS">Operating system type.</param>
-        public SourceGame(string AppName, string DirName, string SmallName, string Executable, string SID, string SV, string VFDir, bool UserDir, bool HUDAv, string AUserDir, string SteamDir, string SteamAppsDirName, string SelectedSteamID, List<String> GameDirs, CurrentPlatform.OSType OS)
+        public SourceGame(string AppName, string DirName, string SmallName, string Executable, string SID, int SV, string VFDir, bool UserDir, bool HUDAv, string AUserDir, string SteamDir, string SteamAppsDirName, string SelectedSteamID, List<String> GameDirs, CurrentPlatform.OSType OS)
         {
             // Setting basic properties...
             FullAppName = AppName;
             SmallAppName = SmallName;
             GameBinaryFile = Executable;
             GameInternalID = SID;
-            SourceType = (OS != CurrentPlatform.OSType.Windows) && (SV == "1") ? "2" : SV;
+            SourceType = (OS != CurrentPlatform.OSType.Windows) && (SV == 1) ? 2 : SV;
             ConfDir = VFDir;
-            IsUsingVideoFile = SourceType != "1";
+            IsUsingVideoFile = SourceType != 1;
             IsUsingUserDir = UserDir;
             IsHUDsAvailable = HUDAv;
             SteamPath = SteamDir;
-            OSType = OS;
 
             // Getting game installation directory...
             GamePath = GetGameDirectory(DirName, GameDirs, OS);
