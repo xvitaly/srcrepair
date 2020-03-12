@@ -487,13 +487,13 @@ namespace srcrepair.gui
         {
             switch (App.SourceGames[AppSelector.Text].SourceType)
             {
-                case "1":
+                case 1:
                     ReadType1VideoSettings((Type1Video)App.SourceGames[AppSelector.Text].Video);
                     break;
-                case "2":
+                case 2:
                     ReadType2VideoSettings((Type2Video)App.SourceGames[AppSelector.Text].Video);
                     break;
-                case "4":
+                case 4:
                     ReadType1VideoSettings((Type4Video)App.SourceGames[AppSelector.Text].Video);
                     break;
             }
@@ -582,10 +582,10 @@ namespace srcrepair.gui
         {
             switch (App.SourceGames[AppSelector.Text].SourceType)
             {
-                case "1":
+                case 1:
                     WriteType1VideoSettings();
                     break;
-                case "2":
+                case 2:
                     WriteType2VideoSettings();
                     break;
             }
@@ -599,12 +599,12 @@ namespace srcrepair.gui
         {
             switch (App.SourceGames[AppSelector.Text].SourceType)
             {
-                case "1":
-                case "4":
+                case 1:
+                case 4:
                     GT_GType1.Visible = true;
                     GT_GType2.Visible = false;
                     break;
-                case "2":
+                case 2:
                     GT_GType1.Visible = false;
                     GT_GType2.Visible = true;
                     break;
@@ -948,11 +948,11 @@ namespace srcrepair.gui
             bool Result;
             switch (App.SourceGames[AppSelector.Text].SourceType)
             {
-                case "1":
-                case "4":
+                case 1:
+                case 4:
                     Result = CheckType1Settings();
                     break;
-                case "2":
+                case 2:
                     Result = CheckType2Settings();
                     break;
                 default:
@@ -1720,8 +1720,8 @@ namespace srcrepair.gui
             {
                 switch (App.SourceGames[AppSelector.Text].SourceType)
                 {
-                    case "1":
-                    case "4":
+                    case 1:
+                    case 4:
                         GT_ScreenType.SelectedIndex = 0;
                         GT_ModelQuality.SelectedIndex = 2;
                         GT_TextureQuality.SelectedIndex = 2;
@@ -1736,7 +1736,7 @@ namespace srcrepair.gui
                         GT_DxMode.SelectedIndex = 3;
                         GT_HDR.SelectedIndex = 2;
                         break;
-                    case "2":
+                    case 2:
                         GT_NCF_DispMode.SelectedIndex = 0;
                         GT_NCF_Ratio.SelectedIndex = 1;
                         GT_NCF_Brightness.Text = "22";
@@ -1767,8 +1767,8 @@ namespace srcrepair.gui
             {
                 switch (App.SourceGames[AppSelector.Text].SourceType)
                 {
-                    case "1":
-                    case "4":
+                    case 1:
+                    case 4:
                         GT_ScreenType.SelectedIndex = 0;
                         GT_ModelQuality.SelectedIndex = 0;
                         GT_TextureQuality.SelectedIndex = 0;
@@ -1783,7 +1783,7 @@ namespace srcrepair.gui
                         GT_DxMode.SelectedIndex = MessageBox.Show(AppStrings.GT_DxLevelMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes ? 0 : 3;
                         GT_HDR.SelectedIndex = 0;
                         break;
-                    case "2":
+                    case 2:
                         GT_NCF_DispMode.SelectedIndex = 0;
                         GT_NCF_Ratio.SelectedIndex = 1;
                         GT_NCF_Brightness.Text = "22";
