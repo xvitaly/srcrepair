@@ -575,6 +575,16 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Performes backup and then writes video settings of Type 4 game,
+        /// selected in main window.
+        /// </summary>
+        private void WriteType4VideoSettings()
+        {
+            Type2VideoSettingsBackup();
+            UpdateType1VideoSettings((Type1Video)App.SourceGames[AppSelector.Text].Video);
+        }
+
+        /// <summary>
         /// Resets controls of video settings on Graphic Tweaker
         /// to default values.
         /// </summary>
@@ -587,6 +597,9 @@ namespace srcrepair.gui
                     break;
                 case 2:
                     WriteType2VideoSettings();
+                    break;
+                case 4:
+                    WriteType4VideoSettings();
                     break;
             }
             App.SourceGames[AppSelector.Text].Video.WriteSettings();
