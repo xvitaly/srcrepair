@@ -945,17 +945,18 @@ namespace srcrepair.gui
         /// </summary>
         private bool ValidateGameSettings()
         {
-            bool Result = false;
+            bool Result;
             switch (App.SourceGames[AppSelector.Text].SourceType)
             {
                 case "1":
-                    Result = App.SourceGames[AppSelector.Text].IsUsingVideoFile ? CheckType2Settings() : CheckType1Settings();
+                case "4":
+                    Result = CheckType1Settings();
                     break;
                 case "2":
                     Result = CheckType2Settings();
                     break;
-                case "4":
-                    Result = CheckType1Settings();
+                default:
+                    Result = false;
                     break;
             }
             return Result;
