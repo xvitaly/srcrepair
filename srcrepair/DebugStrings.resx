@@ -339,4 +339,7 @@
   <data name="AppDbgExXmlParse" xml:space="preserve">
     <value>Exception on parsing XML game database. Application will be terminated.</value>
   </data>
+  <data name="AppDebgExGTSave" xml:space="preserve">
+    <value>Exception during saving of video settings.</value>
+  </data>
 </root>

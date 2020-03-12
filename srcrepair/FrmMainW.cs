@@ -1820,8 +1820,8 @@ namespace srcrepair.gui
                     }
                     catch (Exception Ex)
                     {
+                        Logger.Error(Ex, DebugStrings.AppDebgExGTSave);
                         MessageBox.Show(AppStrings.GT_SaveFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        Logger.Error(Ex, DebugStrings.AppDbgExT1AutoFail);
                     }
                 }
             }

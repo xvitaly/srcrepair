@@ -725,5 +725,14 @@ namespace srcrepair.gui {
                 return ResourceManager.GetString("AppDbgExXmlParse", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception during saving of video settings..
+        /// </summary>
+        internal static string AppDebgExGTSave {
+            get {
+                return ResourceManager.GetString("AppDebgExGTSave", resourceCulture);
+            }
+        }
     }
 }
