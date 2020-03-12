@@ -390,9 +390,6 @@
   <data name="GT_MinPerfMsg" xml:space="preserve">
     <value>Вы действительно хотите установить все настройки видео на минимальные? Это увеличит FPS, но ухудшит графику в игре.</value>
   </data>
-  <data name="GT_NCFFailure" xml:space="preserve">
-    <value>Произошла ошибка во время сохранения графических настроек игры в файл!</value>
-  </data>
   <data name="GT_NCFNReady" xml:space="preserve">
     <value>Для сохранения графических настроек вы должны заполнить все параметры!</value>
   </data>

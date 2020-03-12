@@ -889,15 +889,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred during saving the game video settings into a file!.
-        /// </summary>
-        internal static string GT_NCFFailure {
-            get {
-                return ResourceManager.GetString("GT_NCFFailure", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to You need to set all video settings in order to save them into a file..
         /// </summary>
         internal static string GT_NCFNReady {

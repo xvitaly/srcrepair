@@ -393,9 +393,6 @@
   <data name="GT_MinPerfMsg" xml:space="preserve">
     <value>Do you want to set the video settings to the recommended minimum? This will increase the game's performance.</value>
   </data>
-  <data name="GT_NCFFailure" xml:space="preserve">
-    <value>An error occurred during saving the game video settings into a file!</value>
-  </data>
   <data name="GT_NCFNReady" xml:space="preserve">
     <value>You need to set all video settings in order to save them into a file.</value>
   </data>
