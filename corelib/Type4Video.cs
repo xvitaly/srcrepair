@@ -47,7 +47,7 @@ namespace srcrepair.core
         protected new Type4Settings VSettings;
 
         /// <summary>
-        /// Stores instance of Type4Settings class.
+        /// Stores instance of CultureInfo class.
         /// </summary>
         protected CultureInfo CI;
 

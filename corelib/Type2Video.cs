@@ -66,6 +66,11 @@ namespace srcrepair.core
         protected List<String> DefaultsFile;
 
         /// <summary>
+        /// Stores instance of CultureInfo class.
+        /// </summary>
+        protected CultureInfo CI;
+
+        /// <summary>
         /// Stores screen aspect ratio: setting.aspectratiomode.
         /// </summary>
         protected int _ScreenRatio;
@@ -643,7 +648,6 @@ namespace srcrepair.core
         protected decimal GetNCFDble(string CVar)
         {
             decimal Result;
-            CultureInfo CI = new CultureInfo("en-US");
             try
             {
                 string StrRes = VideoFile.FirstOrDefault(s => s.Contains(CVar) && Regex.IsMatch(s, "setting."));
@@ -721,9 +725,6 @@ namespace srcrepair.core
                 // Generating template...
                 string Templt = "\t\"setting.{0}\"\t\t\"{1}\"";
 
-                // Explicitly setting en-US locale for writing floating point numbers...
-                CultureInfo CI = new CultureInfo("en-US");
-
                 // Adding standard header...
                 CFile.WriteLine("\"VideoConfig\"");
                 CFile.WriteLine("{");
@@ -765,6 +766,7 @@ namespace srcrepair.core
             DefaultsFileName = Path.Combine(Path.GetDirectoryName(VideoFileName), "videodefaults.txt");
             VideoFile = new List<String>();
             DefaultsFile = new List<String>();
+            CI = new CultureInfo("en-US");
         }
     }
 }
