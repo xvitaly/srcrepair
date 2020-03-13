@@ -56,7 +56,7 @@ namespace srcrepair.core
             try
             {
                 string StrRes = VideoFile.FirstOrDefault(s => s.Contains(CVar));
-                Result = Convert.ToInt32(Type2Video.ExtractCVFromLine(StrRes));
+                Result = Convert.ToInt32(ExtractCVFromLine(StrRes));
             }
             catch (Exception Ex)
             {
