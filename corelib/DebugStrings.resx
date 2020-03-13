@@ -147,4 +147,7 @@
   <data name="AppDbgExCoreUnknownEngineVersion" xml:space="preserve">
     <value>Unknown version of Source Engine has been detected.</value>
   </data>
+  <data name="AppDbgExCoreVideoLoadCvar" xml:space="preserve">
+    <value>Cannot fetch value of {0} video setting.</value>
+  </data>
 </root>

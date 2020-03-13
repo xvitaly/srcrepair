@@ -149,5 +149,14 @@ namespace srcrepair.core {
                 return ResourceManager.GetString("AppDbgExCoreUnknownEngineVersion", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot fetch value of {0} video setting..
+        /// </summary>
+        internal static string AppDbgExCoreVideoLoadCvar {
+            get {
+                return ResourceManager.GetString("AppDbgExCoreVideoLoadCvar", resourceCulture);
+            }
+        }
     }
 }
