@@ -629,7 +629,7 @@ namespace srcrepair.core
             }
             catch (Exception Ex)
             {
-                Logger.Error(Ex);
+                Logger.Error(Ex, DebugStrings.AppDbgExCoreVideoLoadCvar, CVar);
                 Result = -1;
             }
             return Result;
@@ -655,7 +655,7 @@ namespace srcrepair.core
             }
             catch (Exception Ex)
             {
-                Logger.Error(Ex);
+                Logger.Error(Ex, DebugStrings.AppDbgExCoreVideoLoadCvar, CVar);
                 Result = 2.2M;
             }
             return Result;
