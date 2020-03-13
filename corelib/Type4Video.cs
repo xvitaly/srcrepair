@@ -52,6 +52,16 @@ namespace srcrepair.core
         protected CultureInfo CI;
 
         /// <summary>
+        /// Gets Cvar value as string from video file.
+        /// </summary>
+        /// <param name="CVar">Cvar name.</param>
+        /// <returns>Cvar value as string from video file.</returns>
+        protected string GetRawValue(string CVar)
+        {
+            return ExtractCVFromLine(VideoFile.FirstOrDefault(s => s.Contains(CVar)));
+        }
+
+        /// <summary>
         /// Gets Cvar value of integer type from video file.
         /// </summary>
         /// <param name="CVar">Cvar name.</param>
@@ -60,7 +70,7 @@ namespace srcrepair.core
         {
             try
             {
-                return Convert.ToInt32(ExtractCVFromLine(VideoFile.FirstOrDefault(s => s.Contains(CVar))));
+                return Convert.ToInt32(GetRawValue(CVar));
             }
             catch (Exception Ex)
             {
@@ -78,7 +88,7 @@ namespace srcrepair.core
         {
             try
             {
-                return Convert.ToDecimal(ExtractCVFromLine(VideoFile.FirstOrDefault(s => s.Contains(CVar))), CI);
+                return Convert.ToDecimal(GetRawValue(CVar), CI);
             }
             catch (Exception Ex)
             {
@@ -142,9 +152,6 @@ namespace srcrepair.core
             {
                 // Generating template...
                 string Templt = "\t\"{0}\"\t\t\"{1}\"";
-
-                // Explicitly setting en-US locale for writing floating point numbers...
-                //CultureInfo CI = new CultureInfo("en-US");
 
                 // Adding standard header...
                 CFile.WriteLine("\"videoconfig\"");
