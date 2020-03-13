@@ -24,6 +24,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using NLog;
 
 namespace srcrepair.core
 {
@@ -32,6 +33,11 @@ namespace srcrepair.core
     /// </summary>
     public class Type2Video : CommonVideo, ICommonVideo, IType2Video
     {
+        /// <summary>
+        /// Logger instance for Type2Video class.
+        /// </summary>
+        protected Logger Logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Stores full path to video settings file.
         /// </summary>
@@ -621,8 +627,9 @@ namespace srcrepair.core
                 }
                 Result = Convert.ToInt32(ExtractCVFromLine(StrRes));
             }
-            catch
+            catch (Exception Ex)
             {
+                Logger.Error(Ex);
                 Result = -1;
             }
             return Result;
@@ -646,8 +653,9 @@ namespace srcrepair.core
                 }
                 Result = Convert.ToDecimal(ExtractCVFromLine(StrRes), CI);
             }
-            catch
+            catch (Exception Ex)
             {
+                Logger.Error(Ex);
                 Result = 2.2M;
             }
             return Result;
