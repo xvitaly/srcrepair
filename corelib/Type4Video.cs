@@ -52,18 +52,15 @@ namespace srcrepair.core
         /// <returns>Cvar value from video file.</returns>
         protected int GetNCFDWord(string CVar)
         {
-            int Result = -1;
             try
             {
-                string StrRes = VideoFile.FirstOrDefault(s => s.Contains(CVar));
-                Result = Convert.ToInt32(ExtractCVFromLine(StrRes));
+                return Convert.ToInt32(ExtractCVFromLine(VideoFile.FirstOrDefault(s => s.Contains(CVar))));
             }
             catch (Exception Ex)
             {
                 Logger.Error(Ex);
-                Result = -1;
+                return -1;
             }
-            return Result;
         }
 
         /// <summary>
