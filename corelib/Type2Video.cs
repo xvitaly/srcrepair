@@ -616,28 +616,37 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Gets Cvar value as string from video file.
+        /// </summary>
+        /// <param name="CVar">Cvar name.</param>
+        /// <returns>Cvar value as string from video file.</returns>
+        protected string GetRawValue(string CVar)
+        {
+            string CVarRegex = String.Format("setting.{0}", CVar);
+            string StrRes = VideoFile.FirstOrDefault(s => Regex.IsMatch(s, CVarRegex));
+            if (String.IsNullOrEmpty(StrRes))
+            {
+                StrRes = DefaultsFile.FirstOrDefault(s => s.Contains(CVar));
+            }
+            return ExtractCVFromLine(StrRes);
+        }
+
+        /// <summary>
         /// Gets Cvar value of integer type from video file.
         /// </summary>
         /// <param name="CVar">Cvar name.</param>
         /// <returns>Cvar value from video file.</returns>
         protected int GetNCFDWord(string CVar)
         {
-            int Result;
             try
             {
-                string StrRes = VideoFile.FirstOrDefault(s => s.Contains(CVar) && Regex.IsMatch(s, "setting."));
-                if (String.IsNullOrEmpty(StrRes))
-                {
-                    StrRes = DefaultsFile.FirstOrDefault(s => s.Contains(CVar));
-                }
-                Result = Convert.ToInt32(ExtractCVFromLine(StrRes));
+                return Convert.ToInt32(GetRawValue(CVar));
             }
             catch (Exception Ex)
             {
                 Logger.Error(Ex, DebugStrings.AppDbgExCoreVideoLoadCvar, CVar);
-                Result = -1;
+                return -1;
             }
-            return Result;
         }
 
         /// <summary>
@@ -647,22 +656,15 @@ namespace srcrepair.core
         /// <returns>Cvar value from video file.</returns>
         protected decimal GetNCFDble(string CVar)
         {
-            decimal Result;
             try
             {
-                string StrRes = VideoFile.FirstOrDefault(s => s.Contains(CVar) && Regex.IsMatch(s, "setting."));
-                if (String.IsNullOrEmpty(StrRes))
-                {
-                    StrRes = DefaultsFile.FirstOrDefault(s => s.Contains(CVar));
-                }
-                Result = Convert.ToDecimal(ExtractCVFromLine(StrRes), CI);
+                return Convert.ToDecimal(GetRawValue(CVar), CI);
             }
             catch (Exception Ex)
             {
                 Logger.Error(Ex, DebugStrings.AppDbgExCoreVideoLoadCvar, CVar);
-                Result = 2.2M;
+                return 2.2M;
             }
-            return Result;
         }
 
         /// <summary>
