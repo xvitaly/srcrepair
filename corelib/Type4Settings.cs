@@ -25,5 +25,25 @@ namespace srcrepair.core
     /// </summary>
     public class Type4Settings : Type1Settings
     {
+        /// <summary>
+        /// Gets or sets borderless window video setting name.
+        /// </summary>
+        public string DisplayBorderless { get; protected set; }
+
+        /// <summary>
+        /// Sets properties data for Type 4 game.
+        /// </summary>
+        protected void SetSettingsV4()
+        {
+            DisplayBorderless = "ScreenWindoNoBorder";
+        }
+
+        /// <summary>
+        /// Type4Settings class constructor.
+        /// </summary>
+        public Type4Settings()
+        {
+            SetSettingsV4();
+        }
     }
 }

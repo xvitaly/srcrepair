@@ -32,6 +32,11 @@ namespace srcrepair.core
     public class Type4Video : Type1Video, ICommonVideo, IType1Video
     {
         /// <summary>
+        /// Stores borderless window video setting: ScreenWindoNoBorder.
+        /// </summary>
+        protected int _DisplayBorderless;
+
+        /// <summary>
         /// Stores full path to video settings file.
         /// </summary>
         protected string VideoFileName;
@@ -128,6 +133,7 @@ namespace srcrepair.core
             _MotionBlur = GetNCFDWord(VSettings.MotionBlur);
             _DirectXMode = GetNCFDWord(VSettings.DirectXMode);
             _HDRMode = GetNCFDWord(VSettings.HDRMode);
+            _DisplayBorderless = GetNCFDWord(VSettings.DisplayBorderless);
         }
 
         /// <summary>
@@ -179,6 +185,7 @@ namespace srcrepair.core
                 CFile.WriteLine(String.Format(Templt, VSettings.MotionBlur, _MotionBlur));
                 CFile.WriteLine(String.Format(Templt, VSettings.DirectXMode, _DirectXMode));
                 CFile.WriteLine(String.Format(Templt, VSettings.HDRMode, _HDRMode));
+                CFile.WriteLine(String.Format(Templt, VSettings.DisplayBorderless, _DisplayBorderless));
 
                 // Adding standard footer...
                 CFile.WriteLine("}");
