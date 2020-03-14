@@ -78,8 +78,8 @@ namespace srcrepair.core
         /// </summary>
         private void SetVideoValues()
         {
-            _ScreenWidth = GetNCFDWord(VSettings.ScreenWidth);
-            _ScreenHeight = GetNCFDWord(VSettings.ScreenHeight);
+            _ScreenWidth = GetNCFDWord(VSettings.ScreenWidth, 800);
+            _ScreenHeight = GetNCFDWord(VSettings.ScreenHeight, 600);
             _DisplayMode = GetNCFDWord(VSettings.DisplayMode);
             _Brightness = Convert.ToInt32(GetNCFDble(VSettings.Brightness) * 10);
             _ModelDetail = GetNCFDWord(VSettings.ModelDetail);
