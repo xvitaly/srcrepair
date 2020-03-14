@@ -101,7 +101,7 @@ namespace srcrepair.core
         /// </summary>
         private void ReadVideoFile()
         {
-            VideoFile.AddRange(File.ReadAllLines(VideoFileName));
+            VideoFile = File.ReadAllLines(VideoFileName).ToList<String>();
         }
 
         /// <summary>

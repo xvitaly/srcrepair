@@ -624,10 +624,10 @@ namespace srcrepair.core
         /// </summary>
         private void ReadVideoFile()
         {
-            VideoFile.AddRange(File.ReadAllLines(VideoFileName));
+            VideoFile = File.ReadAllLines(VideoFileName).ToList<String>();
             if (File.Exists(DefaultsFileName))
             {
-                DefaultsFile.AddRange(File.ReadAllLines(DefaultsFileName));
+                DefaultsFile = File.ReadAllLines(DefaultsFileName).ToList<String>();
             }
         }
 
