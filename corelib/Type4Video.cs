@@ -36,9 +36,14 @@ namespace srcrepair.core
         protected int _DisplayBorderless;
 
         /// <summary>
-        /// Stores brightness value: setting.mat_monitorgamma.
+        /// Stores brightness value: ScreenMonitorGamma.
         /// </summary>
         protected int _Brightness;
+
+        /// <summary>
+        /// Stores brightness value: ShadowDepthTexture.
+        /// </summary>
+        protected int _ShadowDepth;
 
         /// <summary>
         /// Stores full path to video settings file.
@@ -54,6 +59,32 @@ namespace srcrepair.core
         /// Stores instance of Type4Settings class.
         /// </summary>
         protected new Type4Settings VSettings;
+
+        /// <summary>
+        /// Gets or sets shadow effects quality video setting.
+        /// </summary>
+        public override int ShadowQuality
+        {
+            get
+            {
+                return base.ShadowQuality;
+            }
+
+            set
+            {
+                switch (value)
+                {
+                    case 0:
+                        _ShadowDetail = 0;
+                        _ShadowDepth = 0;
+                        break;
+                    case 1:
+                        _ShadowDetail = 1;
+                        _ShadowDepth = 1;
+                        break;
+                }
+            }
+        }
 
         /// <summary>
         /// Gets Cvar value as string from video file.
@@ -98,6 +129,7 @@ namespace srcrepair.core
             _DirectXMode = GetNCFDWord(VSettings.DirectXMode);
             _HDRMode = GetNCFDWord(VSettings.HDRMode);
             _DisplayBorderless = GetNCFDWord(VSettings.DisplayBorderless);
+            _ShadowDepth = GetNCFDWord(VSettings.ShadowDepth);
         }
 
         /// <summary>
@@ -150,6 +182,7 @@ namespace srcrepair.core
                 CFile.WriteLine(String.Format(Templt, VSettings.DirectXMode, _DirectXMode));
                 CFile.WriteLine(String.Format(Templt, VSettings.HDRMode, _HDRMode));
                 CFile.WriteLine(String.Format(Templt, VSettings.DisplayBorderless, _DisplayBorderless));
+                CFile.WriteLine(String.Format(Templt, VSettings.ShadowDepth, _ShadowDepth));
 
                 // Adding standard footer...
                 CFile.WriteLine("}");

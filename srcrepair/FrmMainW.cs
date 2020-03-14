@@ -209,6 +209,28 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Updates video settings of Type 4 game.
+        /// </summary>
+        private void UpdateType4VideoSettings(Type4Video Video)
+        {
+            Video.ScreenWidth = (int)GT_ResHor.Value;
+            Video.ScreenHeight = (int)GT_ResVert.Value;
+            Video.DisplayMode = GT_ScreenType.SelectedIndex;
+            Video.ModelQuality = GT_ModelQuality.SelectedIndex;
+            Video.TextureQuality = GT_TextureQuality.SelectedIndex;
+            Video.ShaderQuality = GT_ShaderQuality.SelectedIndex;
+            Video.ReflectionsQuality = GT_WaterQuality.SelectedIndex;
+            Video.ShadowQuality = GT_ShadowQuality.SelectedIndex;
+            Video.ColorCorrection = GT_ColorCorrectionT.SelectedIndex;
+            Video.AntiAliasing = GT_AntiAliasing.SelectedIndex;
+            Video.FilteringMode = GT_Filtering.SelectedIndex;
+            Video.VSync = GT_VSync.SelectedIndex;
+            Video.MotionBlur = GT_MotionBlur.SelectedIndex;
+            Video.DirectXMode = GT_DxMode.SelectedIndex;
+            Video.HDRType = GT_HDR.SelectedIndex;
+        }
+
+        /// <summary>
         /// Fetches video settings of Type 1 game.
         /// </summary>
         private void ReadType1VideoSettings(Type1Video Video)
@@ -250,6 +272,28 @@ namespace srcrepair.gui
             GT_NCF_EffectD.SelectedIndex = Video.Effects;
             GT_NCF_MemPool.SelectedIndex = Video.MemoryPool;
             GT_NCF_Quality.SelectedIndex = Video.ModelQuality;
+        }
+
+        /// <summary>
+        /// Fetches video settings of Type 4 game.
+        /// </summary>
+        private void ReadType4VideoSettings(Type4Video Video)
+        {
+            GT_ResHor.Value = Video.ScreenWidth;
+            GT_ResVert.Value = Video.ScreenHeight;
+            GT_ScreenType.SelectedIndex = Video.DisplayMode;
+            GT_ModelQuality.SelectedIndex = Video.ModelQuality;
+            GT_TextureQuality.SelectedIndex = Video.TextureQuality;
+            GT_ShaderQuality.SelectedIndex = Video.ShaderQuality;
+            GT_WaterQuality.SelectedIndex = Video.ReflectionsQuality;
+            GT_ShadowQuality.SelectedIndex = Video.ShadowQuality;
+            GT_ColorCorrectionT.SelectedIndex = Video.ColorCorrection;
+            GT_AntiAliasing.SelectedIndex = Video.AntiAliasing;
+            GT_Filtering.SelectedIndex = Video.FilteringMode;
+            GT_VSync.SelectedIndex = Video.VSync;
+            GT_MotionBlur.SelectedIndex = Video.MotionBlur;
+            GT_DxMode.SelectedIndex = Video.DirectXMode;
+            GT_HDR.SelectedIndex = Video.HDRType;
         }
 
         /// <summary>
@@ -494,7 +538,7 @@ namespace srcrepair.gui
                     ReadType2VideoSettings((Type2Video)App.SourceGames[AppSelector.Text].Video);
                     break;
                 case 4:
-                    ReadType1VideoSettings((Type4Video)App.SourceGames[AppSelector.Text].Video);
+                    ReadType4VideoSettings((Type4Video)App.SourceGames[AppSelector.Text].Video);
                     break;
             }
         }
@@ -581,7 +625,7 @@ namespace srcrepair.gui
         private void WriteType4VideoSettings()
         {
             Type2VideoSettingsBackup();
-            UpdateType1VideoSettings((Type1Video)App.SourceGames[AppSelector.Text].Video);
+            UpdateType4VideoSettings((Type4Video)App.SourceGames[AppSelector.Text].Video);
         }
 
         /// <summary>

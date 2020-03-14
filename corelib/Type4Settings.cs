@@ -36,12 +36,18 @@ namespace srcrepair.core
         public string Brightness { get; protected set; }
 
         /// <summary>
+        /// Gets or sets shadow delpth video setting name.
+        /// </summary>
+        public string ShadowDepth { get; protected set; }
+
+        /// <summary>
         /// Sets properties data for Type 4 game.
         /// </summary>
         protected void SetSettingsV4()
         {
             DisplayBorderless = "ScreenWindoNoBorder";
             Brightness = "ScreenMonitorGamma";
+            ShadowDepth = "ShadowDepthTexture";
         }
 
         /// <summary>
