@@ -20,7 +20,6 @@
 */
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 
@@ -57,54 +56,13 @@ namespace srcrepair.core
         protected new Type4Settings VSettings;
 
         /// <summary>
-        /// Stores instance of CultureInfo class.
-        /// </summary>
-        protected CultureInfo CI;
-
-        /// <summary>
         /// Gets Cvar value as string from video file.
         /// </summary>
         /// <param name="CVar">Cvar name.</param>
         /// <returns>Cvar value as string from video file.</returns>
-        protected string GetRawValue(string CVar)
+        protected override string GetRawValue(string CVar)
         {
             return ExtractCVFromLine(VideoFile.FirstOrDefault(s => s.Contains(CVar)));
-        }
-
-        /// <summary>
-        /// Gets Cvar value of integer type from video file.
-        /// </summary>
-        /// <param name="CVar">Cvar name.</param>
-        /// <returns>Cvar value from video file.</returns>
-        protected int GetNCFDWord(string CVar)
-        {
-            try
-            {
-                return Convert.ToInt32(GetRawValue(CVar));
-            }
-            catch (Exception Ex)
-            {
-                Logger.Error(Ex, DebugStrings.AppDbgExCoreVideoLoadCvar, CVar);
-                return -1;
-            }
-        }
-
-        /// <summary>
-        /// Gets Cvar value of decimal type from video file.
-        /// </summary>
-        /// <param name="CVar">Cvar name.</param>
-        /// <returns>Cvar value from video file.</returns>
-        protected decimal GetNCFDble(string CVar)
-        {
-            try
-            {
-                return Convert.ToDecimal(GetRawValue(CVar), CI);
-            }
-            catch (Exception Ex)
-            {
-                Logger.Error(Ex, DebugStrings.AppDbgExCoreVideoLoadCvar, CVar);
-                return 2.2M;
-            }
         }
 
         /// <summary>
@@ -207,7 +165,6 @@ namespace srcrepair.core
             VSettings = new Type4Settings();
             VideoFileName = VFile;
             VideoFile = new List<String>();
-            CI = new CultureInfo("en-US");
         }
     }
 }

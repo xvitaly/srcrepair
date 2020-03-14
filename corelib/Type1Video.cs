@@ -21,7 +21,6 @@
 using System;
 using System.IO;
 using Microsoft.Win32;
-using NLog;
 
 namespace srcrepair.core
 {
@@ -30,11 +29,6 @@ namespace srcrepair.core
     /// </summary>
     public class Type1Video : CommonVideo, ICommonVideo, IType1Video
     {
-        /// <summary>
-        /// Logger instance for Type1Video class.
-        /// </summary>
-        protected Logger Logger = LogManager.GetCurrentClassLogger();
-
         /// <summary>
         /// Stores instance of Type1Settings class.
         /// </summary>
@@ -589,6 +583,16 @@ namespace srcrepair.core
                         break;
                 }
             }
+        }
+
+        /// <summary>
+        /// Gets Cvar value as string from video file.
+        /// </summary>
+        /// <param name="CVar">Cvar name.</param>
+        /// <returns>Cvar value as string from video file.</returns>
+        protected override string GetRawValue(string CVar)
+        {
+            return String.Empty;
         }
 
         /// <summary>

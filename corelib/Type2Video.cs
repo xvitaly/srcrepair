@@ -20,11 +20,9 @@
 */
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using NLog;
 
 namespace srcrepair.core
 {
@@ -33,11 +31,6 @@ namespace srcrepair.core
     /// </summary>
     public class Type2Video : CommonVideo, ICommonVideo, IType2Video
     {
-        /// <summary>
-        /// Logger instance for Type2Video class.
-        /// </summary>
-        protected Logger Logger = LogManager.GetCurrentClassLogger();
-
         /// <summary>
         /// Stores full path to video settings file.
         /// </summary>
@@ -64,11 +57,6 @@ namespace srcrepair.core
         /// options for this system.
         /// </summary>
         protected List<String> DefaultsFile;
-
-        /// <summary>
-        /// Stores instance of CultureInfo class.
-        /// </summary>
-        protected CultureInfo CI;
 
         /// <summary>
         /// Stores screen aspect ratio: setting.aspectratiomode.
@@ -620,7 +608,7 @@ namespace srcrepair.core
         /// </summary>
         /// <param name="CVar">Cvar name.</param>
         /// <returns>Cvar value as string from video file.</returns>
-        protected string GetRawValue(string CVar)
+        protected override string GetRawValue(string CVar)
         {
             string CVarRegex = String.Format("setting.{0}", CVar);
             string StrRes = VideoFile.FirstOrDefault(s => Regex.IsMatch(s, CVarRegex));
@@ -629,42 +617,6 @@ namespace srcrepair.core
                 StrRes = DefaultsFile.FirstOrDefault(s => s.Contains(CVar));
             }
             return ExtractCVFromLine(StrRes);
-        }
-
-        /// <summary>
-        /// Gets Cvar value of integer type from video file.
-        /// </summary>
-        /// <param name="CVar">Cvar name.</param>
-        /// <returns>Cvar value from video file.</returns>
-        protected int GetNCFDWord(string CVar)
-        {
-            try
-            {
-                return Convert.ToInt32(GetRawValue(CVar));
-            }
-            catch (Exception Ex)
-            {
-                Logger.Error(Ex, DebugStrings.AppDbgExCoreVideoLoadCvar, CVar);
-                return -1;
-            }
-        }
-
-        /// <summary>
-        /// Gets Cvar value of decimal type from video file.
-        /// </summary>
-        /// <param name="CVar">Cvar name.</param>
-        /// <returns>Cvar value from video file.</returns>
-        protected decimal GetNCFDble(string CVar)
-        {
-            try
-            {
-                return Convert.ToDecimal(GetRawValue(CVar), CI);
-            }
-            catch (Exception Ex)
-            {
-                Logger.Error(Ex, DebugStrings.AppDbgExCoreVideoLoadCvar, CVar);
-                return 2.2M;
-            }
         }
 
         /// <summary>
@@ -768,7 +720,6 @@ namespace srcrepair.core
             DefaultsFileName = Path.Combine(Path.GetDirectoryName(VideoFileName), "videodefaults.txt");
             VideoFile = new List<String>();
             DefaultsFile = new List<String>();
-            CI = new CultureInfo("en-US");
         }
     }
 }

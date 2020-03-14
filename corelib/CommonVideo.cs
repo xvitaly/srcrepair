@@ -18,6 +18,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
+using System;
+using System.Globalization;
+using NLog;
+
 namespace srcrepair.core
 {
     /// <summary>
@@ -26,6 +30,16 @@ namespace srcrepair.core
     /// </summary>
     public abstract class CommonVideo : ICommonVideo
     {
+        /// <summary>
+        /// Logger instance for video classes.
+        /// </summary>
+        protected readonly Logger Logger = LogManager.GetCurrentClassLogger();
+
+        /// <summary>
+        /// Stores instance of CultureInfo class.
+        /// </summary>
+        protected readonly CultureInfo CI = new CultureInfo("en-US");
+
         /// <summary>
         /// Stores anti-aliasing setting: mat_antialias.
         /// </summary>
@@ -192,6 +206,51 @@ namespace srcrepair.core
         /// Gets or sets vertical synchronization video setting.
         /// </summary>
         public abstract int VSync { get; set; }
+
+        /// <summary>
+        /// Gets Cvar value as string from video file.
+        /// </summary>
+        /// <param name="CVar">Cvar name.</param>
+        /// <returns>Cvar value as string from video file.</returns>
+        protected abstract string GetRawValue(string CVar);
+
+        /// <summary>
+        /// Gets Cvar value of integer type from video file.
+        /// </summary>
+        /// <param name="CVar">Cvar name.</param>
+        /// <param name="DefaultValue">Cvar default value.</param>
+        /// <returns>Cvar value from video file.</returns>
+        protected int GetNCFDWord(string CVar, int DefaultValue = -1)
+        {
+            try
+            {
+                return Convert.ToInt32(GetRawValue(CVar));
+            }
+            catch (Exception Ex)
+            {
+                Logger.Error(Ex, DebugStrings.AppDbgExCoreVideoLoadCvar, CVar);
+                return DefaultValue;
+            }
+        }
+
+        /// <summary>
+        /// Gets Cvar value of decimal type from video file.
+        /// </summary>
+        /// <param name="CVar">Cvar name.</param>
+        /// <param name="DefaultValue">Cvar default value.</param>
+        /// <returns>Cvar value from video file.</returns>
+        protected decimal GetNCFDble(string CVar, decimal DefaultValue = 2.2M)
+        {
+            try
+            {
+                return Convert.ToDecimal(GetRawValue(CVar), CI);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Error(Ex, DebugStrings.AppDbgExCoreVideoLoadCvar, CVar);
+                return DefaultValue;
+            }
+        }
 
         /// <summary>
         /// Reads game video settings.
