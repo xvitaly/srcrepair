@@ -37,6 +37,11 @@ namespace srcrepair.core
         protected int _DisplayBorderless;
 
         /// <summary>
+        /// Stores brightness value: setting.mat_monitorgamma.
+        /// </summary>
+        protected int _Brightness;
+
+        /// <summary>
         /// Stores full path to video settings file.
         /// </summary>
         protected string VideoFileName;
@@ -118,6 +123,7 @@ namespace srcrepair.core
             _ScreenWidth = GetNCFDWord(VSettings.ScreenWidth);
             _ScreenHeight = GetNCFDWord(VSettings.ScreenHeight);
             _DisplayMode = GetNCFDWord(VSettings.DisplayMode);
+            _Brightness = Convert.ToInt32(GetNCFDble(VSettings.Brightness) * 10);
             _ModelDetail = GetNCFDWord(VSettings.ModelDetail);
             _TextureDetail = GetNCFDWord(VSettings.TextureDetail);
             _ShaderDetail = GetNCFDWord(VSettings.ShaderDetail);
@@ -173,7 +179,7 @@ namespace srcrepair.core
                 CFile.WriteLine(String.Format(Templt, VSettings.WaterDetail, _WaterDetail));
                 CFile.WriteLine(String.Format(Templt, VSettings.WaterReflections, _WaterReflections));
                 CFile.WriteLine(String.Format(Templt, VSettings.ShadowDetail, _ShadowDetail));
-                //CFile.WriteLine(String.Format(Templt, VSettings.Brightness, (_Brightness / 10.0).ToString(CI)));
+                CFile.WriteLine(String.Format(Templt, VSettings.Brightness, (_Brightness / 10.0).ToString(CI)));
                 CFile.WriteLine(String.Format(Templt, VSettings.ColorCorrection, _ColorCorrection));
                 CFile.WriteLine(String.Format(Templt, VSettings.AntiAliasing, _AntiAliasing));
                 CFile.WriteLine(String.Format(Templt, VSettings.AntiAliasQuality, _AntiAliasQuality));
