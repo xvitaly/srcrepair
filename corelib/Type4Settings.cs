@@ -46,6 +46,11 @@ namespace srcrepair.core
         public string VendorID { get; protected set; }
 
         /// <summary>
+        /// Gets or sets video card ID video setting name.
+        /// </summary>
+        public string DeviceID { get; protected set; }
+
+        /// <summary>
         /// Sets properties data for Type 4 game.
         /// </summary>
         protected void SetSettingsV4()
@@ -54,6 +59,7 @@ namespace srcrepair.core
             Brightness = "ScreenMonitorGamma";
             ShadowDepth = "ShadowDepthTexture";
             VendorID = "VendorID";
+            DeviceID = "DeviceID";
         }
 
         /// <summary>
