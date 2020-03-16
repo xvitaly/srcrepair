@@ -130,6 +130,7 @@ namespace srcrepair.core
             _HDRMode = GetNCFDWord(VSettings.HDRMode);
             _DisplayBorderless = GetNCFDWord(VSettings.DisplayBorderless);
             _ShadowDepth = GetNCFDWord(VSettings.ShadowDepth);
+            _VendorID = GetNCFDWord(VSettings.VendorID);
         }
 
         /// <summary>
@@ -183,6 +184,7 @@ namespace srcrepair.core
                 CFile.WriteLine(String.Format(Templt, VSettings.HDRMode, _HDRMode));
                 CFile.WriteLine(String.Format(Templt, VSettings.DisplayBorderless, _DisplayBorderless));
                 CFile.WriteLine(String.Format(Templt, VSettings.ShadowDepth, _ShadowDepth));
+                CFile.WriteLine(String.Format(Templt, VSettings.VendorID, _VendorID));
 
                 // Adding standard footer...
                 CFile.WriteLine("}");
