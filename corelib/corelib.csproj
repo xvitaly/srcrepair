@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="CleanupManager.cs" />
     <Compile Include="CleanupTarget.cs" />
+    <Compile Include="CommonSettings.cs" />
     <Compile Include="CommonVideo.cs" />
     <Compile Include="DebugStrings.Designer.cs">
       <AutoGen>True</AutoGen>
