@@ -63,12 +63,12 @@ namespace srcrepair.core
         /// <summary>
         /// Stores screen width.
         /// </summary>
-        protected int _ScreenWidth = 800;
+        protected int _ScreenWidth;
 
         /// <summary>
         /// Stores screen height.
         /// </summary>
-        protected int _ScreenHeight = 600;
+        protected int _ScreenHeight;
 
         /// <summary>
         /// Stores hardware vendor ID.
