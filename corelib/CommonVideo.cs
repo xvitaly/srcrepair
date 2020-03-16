@@ -66,6 +66,16 @@ namespace srcrepair.core
         protected int _ScreenHeight = 600;
 
         /// <summary>
+        /// Stores hardware vendor ID.
+        /// </summary>
+        protected int _VendorID;
+
+        /// <summary>
+        /// Stores video card ID.
+        /// </summary>
+        protected int _DeviceID;
+
+        /// <summary>
         /// Gets or sets anti-aliasing video setting.
         /// </summary>
         public int AntiAliasing
