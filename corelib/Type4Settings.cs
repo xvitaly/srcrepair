@@ -33,7 +33,7 @@ namespace srcrepair.core
         /// <summary>
         /// Sets properties data for Type 4 game.
         /// </summary>
-        protected void SetSettingsV4()
+        private void SetSettingsV4()
         {
             DisplayBorderless = "ScreenWindoNoBorder";
             Brightness = "ScreenMonitorGamma";
