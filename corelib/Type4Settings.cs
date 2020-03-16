@@ -26,16 +26,6 @@ namespace srcrepair.core
     public class Type4Settings : Type1Settings
     {
         /// <summary>
-        /// Gets or sets borderless window video setting name.
-        /// </summary>
-        public string DisplayBorderless { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets brightness video setting name.
-        /// </summary>
-        public string Brightness { get; protected set; }
-
-        /// <summary>
         /// Gets or sets shadow delpth video setting name.
         /// </summary>
         public string ShadowDepth { get; protected set; }

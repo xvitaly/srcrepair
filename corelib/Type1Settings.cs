@@ -23,23 +23,8 @@ namespace srcrepair.core
     /// <summary>
     /// Class for working with Type 1 game video settings names.
     /// </summary>
-    public class Type1Settings : IType1Settings
+    public class Type1Settings : CommonSettings, IType1Settings
     {
-        /// <summary>
-        /// Gets or sets screen width video setting name.
-        /// </summary>
-        public string ScreenWidth { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets screen height video setting name.
-        /// </summary>
-        public string ScreenHeight { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets display mode (fullscreen, windowed) video setting name.
-        /// </summary>
-        public string DisplayMode { get; protected set; }
-
         /// <summary>
         /// Gets or sets model quality video setting name.
         /// </summary>
@@ -76,19 +61,9 @@ namespace srcrepair.core
         public string ColorCorrection { get; protected set; }
 
         /// <summary>
-        /// Gets or sets anti-aliasing video setting name.
-        /// </summary>
-        public string AntiAliasing { get; protected set; }
-
-        /// <summary>
         /// Gets or sets anti-aliasing (MSAA) video setting name.
         /// </summary>
         public string AntiAliasingMSAA { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets anti-aliasing multiplier video setting name.
-        /// </summary>
-        public string AntiAliasQuality { get; protected set; }
 
         /// <summary>
         /// Gets or sets anti-aliasing multiplier (MSAA) video setting name.
@@ -96,24 +71,9 @@ namespace srcrepair.core
         public string AntiAliasQualityMSAA { get; protected set; }
 
         /// <summary>
-        /// Gets or sets filtering mode video setting name.
-        /// </summary>
-        public string FilteringMode { get; protected set; }
-
-        /// <summary>
         /// Gets or sets trilinear filtering mode video setting name.
         /// </summary>
         public string FilteringTrilinear { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets vertical synchronization video setting name.
-        /// </summary>
-        public string VSync { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets motion blur video setting name.
-        /// </summary>
-        public string MotionBlur { get; protected set; }
 
         /// <summary>
         /// Gets or sets DirectX mode (version) video setting name.
@@ -124,16 +84,6 @@ namespace srcrepair.core
         /// Gets or sets HDR level video setting name.
         /// </summary>
         public string HDRMode { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets hardware vendor ID video setting name.
-        /// </summary>
-        public string VendorID { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets video card ID video setting name.
-        /// </summary>
-        public string DeviceID { get; protected set; }
 
         /// <summary>
         /// Sets properties data.
