@@ -24,42 +24,12 @@ namespace srcrepair.core
     /// Interface with properties and methods for managing Type 2
     /// game video settings names.
     /// </summary>
-    public interface IType2Settings
+    public interface IType2Settings : ICommonSettings
     {
-        /// <summary>
-        /// Gets anti-aliasing video setting name.
-        /// </summary>
-        string AntiAliasing { get; }
-
-        /// <summary>
-        /// Gets anti-aliasing multiplier video setting name.
-        /// </summary>
-        string AntiAliasQuality { get; }
-
-        /// <summary>
-        /// Gets brightness video setting name.
-        /// </summary>
-        string Brightness { get; }
-
-        /// <summary>
-        /// Gets borderless window video setting name.
-        /// </summary>
-        string DisplayBorderless { get; }
-
-        /// <summary>
-        /// Gets display mode (fullscreen, windowed) video setting name.
-        /// </summary>
-        string DisplayMode { get; }
-
         /// <summary>
         /// Gets standard effects video setting name.
         /// </summary>
         string EffectDetails { get; }
-
-        /// <summary>
-        /// Gets filtering mode video setting name.
-        /// </summary>
-        string FilteringMode { get; }
 
         /// <summary>
         /// Gets grain scale video setting name.
@@ -77,24 +47,9 @@ namespace srcrepair.core
         string MemoryPoolType { get; }
 
         /// <summary>
-        /// Gets motion blur video setting name.
-        /// </summary>
-        string MotionBlur { get; }
-
-        /// <summary>
-        /// Gets screen height video setting name.
-        /// </summary>
-        string ScreenHeight { get; }
-
-        /// <summary>
         /// Gets screen aspect ratio video setting name.
         /// </summary>
         string ScreenRatio { get; }
-
-        /// <summary>
-        /// Gets screen width video setting name.
-        /// </summary>
-        string ScreenWidth { get; }
 
         /// <summary>
         /// Gets shader effects level video setting name.
@@ -110,11 +65,6 @@ namespace srcrepair.core
         /// Gets texture quality video setting name.
         /// </summary>
         string TextureModelQuality { get; }
-
-        /// <summary>
-        /// Gets vertical synchronization video setting name.
-        /// </summary>
-        string VSync { get; }
 
         /// <summary>
         /// Gets vertical synchronization quality video setting name.

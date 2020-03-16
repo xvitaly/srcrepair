@@ -18,72 +18,73 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
+
 namespace srcrepair.core
 {
     /// <summary>
-    /// Interface with properties and methods for managing Type 1
+    /// Interface with properties and methods for managing
     /// game video settings names.
     /// </summary>
-    public interface IType1Settings : ICommonSettings
+    public interface ICommonSettings
     {
         /// <summary>
-        /// Gets anti-aliasing (MSAA) video setting name.
+        /// Gets or sets anti-aliasing video setting name.
         /// </summary>
-        string AntiAliasingMSAA { get; }
+        string AntiAliasing { get; }
 
         /// <summary>
-        /// Gets anti-aliasing multiplier (MSAA) video setting name.
+        /// Gets or sets anti-aliasing multiplier video setting name.
         /// </summary>
-        string AntiAliasQualityMSAA { get; }
+        string AntiAliasQuality { get; }
 
         /// <summary>
-        /// Gets color correction video setting name.
+        /// Gets or sets brightness video setting name.
         /// </summary>
-        string ColorCorrection { get; }
+        string Brightness { get; }
 
         /// <summary>
-        /// Gets DirectX mode (version) video setting name.
+        /// Gets or sets video card ID video setting name.
         /// </summary>
-        string DirectXMode { get; }
+        string DeviceID { get; }
 
         /// <summary>
-        /// Gets trilinear filtering mode video setting name.
+        /// Gets or sets borderless window video setting name.
         /// </summary>
-        string FilteringTrilinear { get; }
+        string DisplayBorderless { get; }
 
         /// <summary>
-        /// Gets HDR level video setting name.
+        /// Gets or sets display mode (fullscreen, windowed) video setting name.
         /// </summary>
-        string HDRMode { get; }
+        string DisplayMode { get; }
 
         /// <summary>
-        /// Gets model quality video setting name.
+        /// Gets or sets filtering mode video setting name.
         /// </summary>
-        string ModelDetail { get; }
+        string FilteringMode { get; }
 
         /// <summary>
-        /// Gets shader effects level video setting name.
+        /// Gets or sets motion blur video setting name.
         /// </summary>
-        string ShaderDetail { get; }
+        string MotionBlur { get; }
 
         /// <summary>
-        /// Gets shadow effects quality video setting name.
+        /// Gets or sets screen height video setting name.
         /// </summary>
-        string ShadowDetail { get; }
+        string ScreenHeight { get; }
 
         /// <summary>
-        /// Gets texture quality video setting name.
+        /// Gets or sets screen width video setting name.
         /// </summary>
-        string TextureDetail { get; }
+        string ScreenWidth { get; }
 
         /// <summary>
-        /// Gets water quality video setting name.
+        /// Gets or sets hardware vendor ID video setting name.
         /// </summary>
-        string WaterDetail { get; }
+        string VendorID { get; }
 
         /// <summary>
-        /// Gets water reflections level video setting name.
+        /// Gets or sets vertical synchronization video setting name.
         /// </summary>
-        string WaterReflections { get; }
+        string VSync { get; }
     }
 }

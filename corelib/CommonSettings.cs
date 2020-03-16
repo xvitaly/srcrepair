@@ -21,7 +21,11 @@
 
 namespace srcrepair.core
 {
-    public abstract class CommonSettings
+    /// <summary>
+    /// Class with properties and methods for managing
+    /// game video settings names.
+    /// </summary>
+    public abstract class CommonSettings : ICommonSettings
     {
         /// <summary>
         /// Gets or sets screen width video setting name.

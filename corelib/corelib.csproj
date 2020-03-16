@@ -71,6 +71,7 @@
     <Compile Include="GameManager.cs" />
     <Compile Include="HUDManager.cs" />
     <Compile Include="HUDSingle.cs" />
+    <Compile Include="ICommonSettings.cs" />
     <Compile Include="ICommonVideo.cs" />
     <Compile Include="IType1Settings.cs" />
     <Compile Include="IType1Video.cs" />
