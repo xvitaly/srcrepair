@@ -51,6 +51,11 @@ namespace srcrepair.core
         protected int _AntiAliasQuality;
 
         /// <summary>
+        /// Stores video config schema version.
+        /// </summary>
+        protected int _ConfigVersion;
+
+        /// <summary>
         /// Stores motion blur setting: MotionBlur.
         /// </summary>
         protected int _MotionBlur;
