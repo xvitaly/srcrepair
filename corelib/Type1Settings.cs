@@ -126,6 +126,16 @@ namespace srcrepair.core
         public string HDRMode { get; protected set; }
 
         /// <summary>
+        /// Gets or sets hardware vendor ID video setting name.
+        /// </summary>
+        public string VendorID { get; protected set; }
+
+        /// <summary>
+        /// Gets or sets video card ID video setting name.
+        /// </summary>
+        public string DeviceID { get; protected set; }
+
+        /// <summary>
         /// Sets properties data.
         /// </summary>
         private void SetSettingsV1()
@@ -150,6 +160,8 @@ namespace srcrepair.core
             MotionBlur = "MotionBlur";
             DirectXMode = "DXLevel_V1";
             HDRMode = "mat_hdr_level";
+            VendorID = "VendorID";
+            DeviceID = "DeviceID";
         }
 
         /// <summary>

@@ -41,16 +41,6 @@ namespace srcrepair.core
         public string ShadowDepth { get; protected set; }
 
         /// <summary>
-        /// Gets or sets hardware vendor ID video setting name.
-        /// </summary>
-        public string VendorID { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets video card ID video setting name.
-        /// </summary>
-        public string DeviceID { get; protected set; }
-
-        /// <summary>
         /// Sets properties data for Type 4 game.
         /// </summary>
         protected void SetSettingsV4()
@@ -58,8 +48,6 @@ namespace srcrepair.core
             DisplayBorderless = "ScreenWindoNoBorder";
             Brightness = "ScreenMonitorGamma";
             ShadowDepth = "ShadowDepthTexture";
-            VendorID = "VendorID";
-            DeviceID = "DeviceID";
         }
 
         /// <summary>
