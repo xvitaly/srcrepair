@@ -29,7 +29,7 @@ namespace srcrepair.core
     /// <summary>
     /// Class for working with Type 2 game video settings.
     /// </summary>
-    public class Type2Video : CommonVideo, ICommonVideo, IType2Video
+    public class Type2Video : CommonVideo, IType2Video
     {
         /// <summary>
         /// Stores full path to video settings file.

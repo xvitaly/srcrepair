@@ -28,7 +28,7 @@ namespace srcrepair.core
     /// <summary>
     /// Class for working with Type 4 game video settings.
     /// </summary>
-    public class Type4Video : Type1Video, ICommonVideo, IType1Video
+    public class Type4Video : Type1Video, IType1Video
     {
         /// <summary>
         /// Stores borderless window video setting: ScreenWindoNoBorder.

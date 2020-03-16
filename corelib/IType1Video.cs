@@ -24,13 +24,8 @@ namespace srcrepair.core
     /// Interface with properties and methods for managing Type 1
     /// game video settings.
     /// </summary>
-    public interface IType1Video
+    public interface IType1Video : ICommonVideo
     {
-        /// <summary>
-        /// Gets or sets anti-aliasing video setting.
-        /// </summary>
-        int AntiAliasing { get; set; }
-
         /// <summary>
         /// Gets or sets color correction video setting.
         /// </summary>
@@ -62,24 +57,9 @@ namespace srcrepair.core
         int ModelQuality { get; set; }
 
         /// <summary>
-        /// Gets or sets motion blur video setting.
-        /// </summary>
-        int MotionBlur { get; set; }
-
-        /// <summary>
         /// Gets or sets water reflections quality video setting.
         /// </summary>
         int ReflectionsQuality { get; set; }
-
-        /// <summary>
-        /// Gets or sets screen height video setting.
-        /// </summary>
-        int ScreenHeight { get; set; }
-
-        /// <summary>
-        /// Gets or sets screen width video setting.
-        /// </summary>
-        int ScreenWidth { get; set; }
 
         /// <summary>
         /// Gets or sets shader effects quality video setting.
@@ -87,23 +67,8 @@ namespace srcrepair.core
         int ShaderQuality { get; set; }
 
         /// <summary>
-        /// Gets or sets shadow effects quality video setting.
-        /// </summary>
-        int ShadowQuality { get; set; }
-
-        /// <summary>
         /// Gets or sets texture quality video setting.
         /// </summary>
         int TextureQuality { get; set; }
-
-        /// <summary>
-        /// Gets or sets vertical synchronization video setting.
-        /// </summary>
-        int VSync { get; set; }
-
-        /// <summary>
-        /// Saves video settings to file or registry.
-        /// </summary>
-        void WriteSettings();
     }
 }

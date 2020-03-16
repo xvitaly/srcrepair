@@ -24,7 +24,7 @@ namespace srcrepair.core
     /// Interface with common properties and methods for
     /// all types of games.
     /// </summary>
-    interface ICommonVideo
+    public interface ICommonVideo
     {
         /// <summary>
         /// Gets and sets anti-aliasing video setting.

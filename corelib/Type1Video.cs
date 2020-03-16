@@ -27,7 +27,7 @@ namespace srcrepair.core
     /// <summary>
     /// Class for working with Type 1 game video settings.
     /// </summary>
-    public class Type1Video : CommonVideo, ICommonVideo, IType1Video
+    public class Type1Video : CommonVideo, IType1Video
     {
         /// <summary>
         /// Stores instance of Type1Settings class.
