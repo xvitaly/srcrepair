@@ -23,48 +23,8 @@ namespace srcrepair.core
     /// <summary>
     /// Class for working with Type 3 game video settings names.
     /// </summary>
-    public class Type3Settings
+    public class Type3Settings : Type2Settings
     {
-        /// <summary>
-        /// Gets or sets vendor ID of video adapter video setting name.
-        /// </summary>
-        public string VendorID { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets video adapter ID video setting name.
-        /// </summary>
-        public string DeviceID { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets standard effects video setting name.
-        /// </summary>
-        public string EffectDetails { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets memory pool video setting name.
-        /// </summary>
-        public string MemoryPoolType { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets model and texture quality video setting name.
-        /// </summary>
-        public string TextureModelQuality { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets screen width video setting name.
-        /// </summary>
-        public string ScreenWidth { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets screen height video setting name.
-        /// </summary>
-        public string ScreenHeight { get; protected set; }
-
-        /// <summary>
-        /// Хранит имя настройки качества шейдерных эффектов.
-        /// </summary>
-        public string ShaderEffects { get; protected set; }
-
         /// <summary>
         /// Gets or sets shader effects level video setting name.
         /// </summary>
@@ -85,16 +45,6 @@ namespace srcrepair.core
         /// video setting name.
         /// </summary>
         public string FullScreenModeCoop { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets borderless window video setting name.
-        /// </summary>
-        public string DisplayBorderless { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets vertical synchronization video setting name.
-        /// </summary>
-        public string VSync { get; protected set; }
 
         /// <summary>
         /// Gets or sets display mode on focus loss video setting name.
@@ -125,16 +75,6 @@ namespace srcrepair.core
         /// Gets or sets global shadow effects video setting name.
         /// </summary>
         public string GlobalShadowMode { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets anti-aliasing video setting name.
-        /// </summary>
-        public string AntiAliasing { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets anti-aliasing multiplier video setting name.
-        /// </summary>
-        public string AntiAliasQuality { get; protected set; }
 
         /// <summary>
         /// Gets or sets portrait animations video setting name.
@@ -187,11 +127,6 @@ namespace srcrepair.core
         public string ViewportScale { get; protected set; }
 
         /// <summary>
-        /// Gets or sets brightness video setting name.
-        /// </summary>
-        public string Brightness { get; protected set; }
-
-        /// <summary>
         /// Gets or sets advanced options video setting name.
         /// </summary>
         public string UseAdvanced { get; protected set; }
@@ -230,11 +165,6 @@ namespace srcrepair.core
         /// Gets or sets reset to defaults video setting name.
         /// </summary>
         public string ResetToDefaults { get; protected set; }
-
-        /// <summary>
-        /// Gets or sets screen aspect ratio video setting name.
-        /// </summary>
-        public string ScreenRatio { get; protected set; }
 
         /// <summary>
         /// Sets properties data.
