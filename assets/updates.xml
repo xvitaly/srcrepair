@@ -27,27 +27,27 @@
         <Hash2>2722b89806f2429be931c0c56bd744a097fdced869c39d5c903555eeab729a49157de233f2e02768b12dcfaf80aabaea8a3c301902e30d167c7bc964a9b48923</Hash2>
     </Application>
     <GameDB>
-        <Version>2</Version>
+        <Version>3</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/games.xml</URL>
-        <Hash>6517522b657ba9df46029e0ef7a8afcc</Hash>
-        <Hash2>33b47b32bb243122d2ff965fa6630bf8a117b27b83eea7da5ea0058bf535b89b9ac1a7d08071083c8a0c197c214b84fbf389ee44167f11d4b58cd7a1bd5e431f</Hash2>
+        <Hash>4e36315ae2fc411c3c6c00bd5988a9ea</Hash>
+        <Hash2>8748933d3e15c4caf97ee3f51c7ad7fcdf5ac0ea947f537f0becbb37f631ee40cc260e3f29a3548f892300fe72b5f912041a83dc7895117f7e6ad3bdb73b5698</Hash2>
     </GameDB>
     <HUDDB>
-        <Version>12</Version>
+        <Version>13</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/huds.xml</URL>
-        <Hash>397c3900543bd4dd665158654abed588</Hash>
-        <Hash2>9554e59a039a87d8eadf0736b56e96f47e799e6cbc070489dab14d5587e72aee73cffa37a7fcc21dd5d68d1cc751622c9f3204d89f806dd5f6d43af25201d5bd</Hash2>
+        <Hash>263d89a9be67e2bf6ac0208a72bcb0aa</Hash>
+        <Hash2>6c47cde3035e4d3c2bdcc0221e4fabed5d8b4811bda02a415c033ac00063edee0e9f60d9b0643f2bc8aa8a569738f02d7834de2bba973f51acd66437f923cf85</Hash2>
     </HUDDB>
     <CfgDB>
-        <Version>2</Version>
+        <Version>3</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/configs.xml</URL>
-        <Hash>8f666cd85150b325f231cf2d77fbae69</Hash>
-        <Hash2>fe0938a2f7db6c777779da3f2f07a94fe055b42661f9dbd2f61794a95048d35b43afbce86cac13ddc58d89aa9d444823a761ee50a7564108a2bb1eea839b669c</Hash2>
+        <Hash>da412cf5fce04c1f77e7c9cc6739712a</Hash>
+        <Hash2>b5e8c0a0dd408b15c2d74019f2215f307d63b7f1ba1a8d8c582ef5e5f3166ad5c188a0e6bdf708033f431320f25e695f1d8900825bba14ad2d81ee9c6810524e</Hash2>
     </CfgDB>
     <ClnDB>
-        <Version>3</Version>
+        <Version>4</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/cleanup.xml</URL>
-        <Hash>bfc4e3697746f4f56cb31df3a04a664a</Hash>
-        <Hash2>8165385cd874ebc220b8a723426e1117a9572ae77f99a0bc2cad9379ba8134fdf3cc6332f65a060b25da8ce37f7bbb06a7a2e3be852e621fa4b0b99c3bc5f4f9</Hash2>
+        <Hash>d3d3eed5f4e797244ff62874298181c1</Hash>
+        <Hash2>7f99b8673d4aa89fa3af36ab54b57b87f735a3d2649dc1bfeaa3d5dec5a89e147e67520a58542cd68103e5be71376d92d35ff2080db1602c2e1817562e330373</Hash2>
     </ClnDB>
 </Updates>
