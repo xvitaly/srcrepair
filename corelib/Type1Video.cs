@@ -35,11 +35,6 @@ namespace srcrepair.core
         protected Type1Settings VSettings;
 
         /// <summary>
-        /// Stores window mode settings: ScreenWidth.
-        /// </summary>
-        protected int _DisplayMode;
-
-        /// <summary>
         /// Stores model quality: r_rootlod.
         /// </summary>
         protected int _ModelDetail;
@@ -65,29 +60,14 @@ namespace srcrepair.core
         protected int _WaterReflections;
 
         /// <summary>
-        /// Stores shadow effects quality: r_shadowrendertotexture.
-        /// </summary>
-        protected int _ShadowDetail;
-
-        /// <summary>
         /// Stores color correction setting: mat_colorcorrection.
         /// </summary>
         protected int _ColorCorrection;
 
         /// <summary>
-        /// Stores filtering mode type: mat_forceaniso.
-        /// </summary>
-        protected int _FilteringMode;
-
-        /// <summary>
         /// Stores trilinear filtering mode type: mat_trilinear.
         /// </summary>
         protected int _FilteringTrilinear;
-
-        /// <summary>
-        /// Stores vertical synchronization setting: mat_vsync.
-        /// </summary>
-        protected int _VSync;
 
         /// <summary>
         /// Stores DirectX mode (effects level): DXLevel_V1.
@@ -325,7 +305,7 @@ namespace srcrepair.core
             {
                 int res = -1;
 
-                switch (_ShadowDetail)
+                switch (_ShadowQuality)
                 {
                     case 0:
                         res = 0;
@@ -343,10 +323,10 @@ namespace srcrepair.core
                 switch (value)
                 {
                     case 0:
-                        _ShadowDetail = 0;
+                        _ShadowQuality = 0;
                         break;
                     case 1:
-                        _ShadowDetail = 1;
+                        _ShadowQuality = 1;
                         break;
                 }
             }
@@ -612,7 +592,7 @@ namespace srcrepair.core
                     try { _ShaderDetail = Convert.ToInt32(ResKey.GetValue(VSettings.ShaderDetail)); } catch (Exception Ex) { Logger.Warn(Ex); }
                     try { _WaterDetail = Convert.ToInt32(ResKey.GetValue(VSettings.WaterDetail)); } catch (Exception Ex) { Logger.Warn(Ex); }
                     try { _WaterReflections = Convert.ToInt32(ResKey.GetValue(VSettings.WaterReflections)); } catch (Exception Ex) { Logger.Warn(Ex); }
-                    try { _ShadowDetail = Convert.ToInt32(ResKey.GetValue(VSettings.ShadowDetail)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { _ShadowQuality = Convert.ToInt32(ResKey.GetValue(VSettings.ShadowDetail)); } catch (Exception Ex) { Logger.Warn(Ex); }
                     try { _ColorCorrection = Convert.ToInt32(ResKey.GetValue(VSettings.ColorCorrection)); } catch (Exception Ex) { Logger.Warn(Ex); }
                     try { _AntiAliasing = Convert.ToInt32(ResKey.GetValue(VSettings.AntiAliasing)); } catch (Exception Ex) { Logger.Warn(Ex); }
                     try { _AntiAliasQuality = Convert.ToInt32(ResKey.GetValue(VSettings.AntiAliasQuality)); } catch (Exception Ex) { Logger.Warn(Ex); }
@@ -645,7 +625,7 @@ namespace srcrepair.core
                 try { ResKey.SetValue(VSettings.ShaderDetail, _ShaderDetail, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
                 try { ResKey.SetValue(VSettings.WaterDetail, _WaterDetail, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
                 try { ResKey.SetValue(VSettings.WaterReflections, _WaterReflections, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
-                try { ResKey.SetValue(VSettings.ShadowDetail, _ShadowDetail, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.ShadowDetail, _ShadowQuality, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
                 try { ResKey.SetValue(VSettings.ColorCorrection, _ColorCorrection, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
                 try { ResKey.SetValue(VSettings.AntiAliasing, _AntiAliasing, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
                 try { ResKey.SetValue(VSettings.AntiAliasQuality, _AntiAliasQuality, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }

@@ -41,12 +41,12 @@ namespace srcrepair.core
         protected readonly CultureInfo CI = new CultureInfo("en-US");
 
         /// <summary>
-        /// Stores anti-aliasing setting: mat_antialias.
+        /// Stores anti-aliasing setting.
         /// </summary>
         protected int _AntiAliasing;
 
         /// <summary>
-        /// Stores anti-aliasing multiplier: mat_aaquality.
+        /// Stores anti-aliasing multiplier.
         /// </summary>
         protected int _AntiAliasQuality;
 
@@ -79,6 +79,36 @@ namespace srcrepair.core
         /// Stores video card ID.
         /// </summary>
         protected int _DeviceID;
+
+        /// <summary>
+        /// Stores window mode settings: fullscreen, windoweed.
+        /// </summary>
+        protected int _DisplayMode;
+
+        /// <summary>
+        /// Stores vertical synchronization setting.
+        /// </summary>
+        protected int _VSync;
+
+        /// <summary>
+        /// Stores shadow effects quality.
+        /// </summary>
+        protected int _ShadowQuality;
+
+        /// <summary>
+        /// Stores filtering mode type.
+        /// </summary>
+        protected int _FilteringMode;
+
+        /// <summary>
+        /// Stores borderless window video setting.
+        /// </summary>
+        protected int _DisplayBorderless;
+
+        /// <summary>
+        /// Stores brightness value.
+        /// </summary>
+        protected int _Brightness;
 
         /// <summary>
         /// Gets or sets anti-aliasing video setting.

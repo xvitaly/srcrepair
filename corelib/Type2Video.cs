@@ -64,36 +64,6 @@ namespace srcrepair.core
         protected int _ScreenRatio;
 
         /// <summary>
-        /// Stores brightness value: setting.mat_monitorgamma.
-        /// </summary>
-        protected int _Brightness;
-
-        /// <summary>
-        /// Stores shadow effects quality: setting.csm_quality_level.
-        /// </summary>
-        protected int _ShadowQuality;
-
-        /// <summary>
-        /// Stores display mode (fullscreen, windowed): setting.fullscreen.
-        /// </summary>
-        protected int _DisplayMode;
-
-        /// <summary>
-        /// Stores borderless window video setting: setting.nowindowborder.
-        /// </summary>
-        protected int _DisplayBorderless;
-
-        /// <summary>
-        /// Stores filtering mode setting: setting.mat_forceaniso.
-        /// </summary>
-        protected int _FilteringMode;
-
-        /// <summary>
-        /// Stores vertical synchronization video setting: setting.mat_vsync.
-        /// </summary>
-        protected int _VSync;
-
-        /// <summary>
         /// Stores vertical synchronization quality: setting.mat_triplebuffered.
         /// </summary>
         protected int _VSyncMode;

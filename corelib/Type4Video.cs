@@ -31,16 +31,6 @@ namespace srcrepair.core
     public class Type4Video : Type1Video, IType1Video
     {
         /// <summary>
-        /// Stores borderless window video setting: ScreenWindoNoBorder.
-        /// </summary>
-        protected int _DisplayBorderless;
-
-        /// <summary>
-        /// Stores brightness value: ScreenMonitorGamma.
-        /// </summary>
-        protected int _Brightness;
-
-        /// <summary>
         /// Stores brightness value: ShadowDepthTexture.
         /// </summary>
         protected int _ShadowDepth;
@@ -75,11 +65,11 @@ namespace srcrepair.core
                 switch (value)
                 {
                     case 0:
-                        _ShadowDetail = 0;
+                        _ShadowQuality = 0;
                         _ShadowDepth = 0;
                         break;
                     case 1:
-                        _ShadowDetail = 1;
+                        _ShadowQuality = 1;
                         _ShadowDepth = 1;
                         break;
                 }
@@ -118,7 +108,7 @@ namespace srcrepair.core
             _ShaderDetail = GetNCFDWord(VSettings.ShaderDetail);
             _WaterDetail = GetNCFDWord(VSettings.WaterDetail);
             _WaterReflections = GetNCFDWord(VSettings.WaterReflections);
-            _ShadowDetail = GetNCFDWord(VSettings.ShadowDetail);
+            _ShadowQuality = GetNCFDWord(VSettings.ShadowDetail);
             _ColorCorrection = GetNCFDWord(VSettings.ColorCorrection);
             _AntiAliasing = GetNCFDWord(VSettings.AntiAliasing);
             _AntiAliasQuality = GetNCFDWord(VSettings.AntiAliasQuality);
@@ -170,7 +160,7 @@ namespace srcrepair.core
                 CFile.WriteLine(String.Format(Templt, VSettings.ShaderDetail, _ShaderDetail));
                 CFile.WriteLine(String.Format(Templt, VSettings.WaterDetail, _WaterDetail));
                 CFile.WriteLine(String.Format(Templt, VSettings.WaterReflections, _WaterReflections));
-                CFile.WriteLine(String.Format(Templt, VSettings.ShadowDetail, _ShadowDetail));
+                CFile.WriteLine(String.Format(Templt, VSettings.ShadowDetail, _ShadowQuality));
                 CFile.WriteLine(String.Format(Templt, VSettings.Brightness, (_Brightness / 10.0).ToString(CI)));
                 CFile.WriteLine(String.Format(Templt, VSettings.ColorCorrection, _ColorCorrection));
                 CFile.WriteLine(String.Format(Templt, VSettings.AntiAliasing, _AntiAliasing));
