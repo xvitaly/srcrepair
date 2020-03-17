@@ -20,136 +20,134 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 38.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-22 12:17+0100\n"
-"PO-Revision-Date: 2020-02-22 15:28+0100\n"
+"POT-Creation-Date: 2020-03-17 14:56+0100\n"
+"PO-Revision-Date: 2020-03-17 15:02+0100\n"
+"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
+"Language-Team: EasyCoding Team\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
-"Language-Team: EasyCoding Team\n"
-"Language: ru\n"
 "X-Generator: Poedit 2.3\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: ../../source/settings.rst:5
+#: ../../source/settings.rst:23
 msgid "Program settings"
 msgstr "Настройки программы"
 
-#: ../../source/settings.rst:11
+#: ../../source/settings.rst:29
 msgid "Common settings"
 msgstr "Общие настройки программы"
 
-#: ../../source/settings.rst:13
+#: ../../source/settings.rst:31
 msgid "**Confirm exit** -- enable or disable exit confirmation dialog."
 msgstr ""
 "**Подтверждать выход из программы** -- включает или отключает запрос на "
 "подтверждение выхода из программы."
 
-#: ../../source/settings.rst:14
+#: ../../source/settings.rst:32
 msgid ""
-"**Hide unsupported by application games** -- if enabled, partially "
-"supported games will not be shown."
+"**Hide unsupported by application games** -- if enabled, partially supported "
+"games will not be shown."
 msgstr ""
 "**Скрывать не поддерживаемые игры** -- если включена, то не полностью "
 "поддерживаемые игры будут скрыты из списка даже если они корректно "
 "установлены в Steam."
 
-#: ../../source/settings.rst:15
+#: ../../source/settings.rst:33
 msgid ""
 "**Auto-highlight old backup files** -- enable or disable highlighting of "
 "older than 30 days files on :ref:`backups page <backups>`."
 msgstr ""
 "**Выделять цветом старые резервные копии** -- включает или отключает "
-"подсветку жёлтым цветом старых резервных копий на :ref:`одноимённой "
-"странице <backups>`, которые хранятся более 30 дней."
+"подсветку жёлтым цветом старых резервных копий на :ref:`одноимённой странице "
+"<backups>`, которые хранятся более 30 дней."
 
-#: ../../source/settings.rst:16
+#: ../../source/settings.rst:34
 msgid ""
 "**Compress files to zip before deletion** -- if enabled, backups for all "
-"removed by :ref:`cleanup module <cleanup-wizard>` files will be created. "
-"Not recommended, because it will slow down process and create backup "
-"containers with garbage files on disk."
+"removed by :ref:`cleanup module <cleanup-wizard>` files will be created. Not "
+"recommended, because it will slow down process and create backup containers "
+"with garbage files on disk."
 msgstr ""
 "**Создавать бэкап перед запуском очистки** -- активирует функцию "
 "принудительного создания резервных копий любых удаляемых :ref:`модулем "
-"очистки <cleanup-wizard>` файлов. Не рекомендуется включать данную "
-"опцию, т.к. это, во-первых, замедлит работу модуля очистки программы, а, "
-"во-вторых, приведёт к хранению ненужных данных на диске."
+"очистки <cleanup-wizard>` файлов. Не рекомендуется включать данную опцию, т."
+"к. это, во-первых, замедлит работу модуля очистки программы, а, во-вторых, "
+"приведёт к хранению ненужных данных на диске."
 
-#: ../../source/settings.rst:17
+#: ../../source/settings.rst:35
 msgid ""
 "**Remove empty directories after safe cleanup** -- enable or disable "
-"automatic removal of empty directories after running :ref:`cleanup "
-"process <cleanup-wizard>`."
+"automatic removal of empty directories after running :ref:`cleanup process "
+"<cleanup-wizard>`."
 msgstr ""
 "**Удалять пустые каталоги после очистки** -- при активации автоматически "
 "удаляет пустые каталоги, которые остались в результате :ref:`очистки "
 "<cleanup-wizard>`."
 
-#: ../../source/settings.rst:18
+#: ../../source/settings.rst:36
 msgid ""
-"**Allow download and install latest (untested) HUDs** -- if enabled, :"
-"ref:`HUD manager <hud-manager>` will try to download latest versions of "
-"HUDs directly from their repositories. Installation of such untested "
-"HUDs may be dangerous. Proceed with caution."
+"**Allow download and install latest (untested) HUDs** -- if enabled, :ref:"
+"`HUD manager <hud-manager>` will try to download latest versions of HUDs "
+"directly from their repositories. Installation of such untested HUDs may be "
+"dangerous. Proceed with caution."
 msgstr ""
-"**Разрешить установку новейших версий HUD** -- активирует функцию "
-"получения :ref:`файлов HUD <hud-manager>` напрямую из их репозиториев. "
-"Это может привести к установке не до конца протестированных нестабильных "
-"версий. Следует использовать с осторожностью."
+"**Разрешить установку новейших версий HUD** -- активирует функцию получения :"
+"ref:`файлов HUD <hud-manager>` напрямую из их репозиториев. Это может "
+"привести к установке не до конца протестированных нестабильных версий. "
+"Следует использовать с осторожностью."
 
-#: ../../source/settings.rst:24
+#: ../../source/settings.rst:42
 msgid "Advances settings"
 msgstr "Дополнительные настройки программы"
 
-#: ../../source/settings.rst:26
+#: ../../source/settings.rst:44
 msgid ""
-"**Allow unsafe cleanup operations** -- allow some unsafe methods for :"
-"ref:`cleanup module <cleanup-wizard>`. It will find and remove more "
-"files, but can cause game data corruption. You should run :ref:"
-"`verification of game cache <cleanup-advanced>` to find and fix possible "
-"issues directly after performing cleanup with this feature enabled."
+"**Allow unsafe cleanup operations** -- allow some unsafe methods for :ref:"
+"`cleanup module <cleanup-wizard>`. It will find and remove more files, but "
+"can cause game data corruption. You should run :ref:`verification of game "
+"cache <cleanup-advanced>` to find and fix possible issues directly after "
+"performing cleanup with this feature enabled."
 msgstr ""
 "**Разрешить небезопасные методы очистки** -- позволяет активировать ряд "
-"небезопасных методов, что позволит :ref:`модулю очистки <cleanup-"
-"wizard>` обнаружить и удалить больше файлов. При использовании данной "
-"опции настоятельно рекомендуется по завершении процесса очистки "
-"выполнять :ref:`проверку целостности кэша <cleanup-advanced>`."
+"небезопасных методов, что позволит :ref:`модулю очистки <cleanup-wizard>` "
+"обнаружить и удалить больше файлов. При использовании данной опции "
+"настоятельно рекомендуется по завершении процесса очистки выполнять :ref:"
+"`проверку целостности кэша <cleanup-advanced>`."
 
-#: ../../source/settings.rst:27
+#: ../../source/settings.rst:45
 msgid ""
 "**Automatically check for updates** -- enable or disable checking for "
 "updates on program startup (once a week)."
 msgstr ""
-"**Проверять обновления при запуске** -- включает или отключает "
-"встроенный модуль автоматической проверки наличия новых версий программы."
+"**Проверять обновления при запуске** -- включает или отключает встроенный "
+"модуль автоматической проверки наличия новых версий программы."
 
-#: ../../source/settings.rst:28
+#: ../../source/settings.rst:46
 msgid ""
-"**Don't show outdated HUDs** -- if enabled, :ref:`HUD Manager <hud-"
-"manager>` will show outdated versions of HUDs. We do not recommend to "
-"install them."
+"**Don't show outdated HUDs** -- if enabled, :ref:`HUD Manager <hud-manager>` "
+"will show outdated versions of HUDs. We do not recommend to install them."
 msgstr ""
-"**Не показывать устаревшие HUD** -- разрешает или запрещает отображение "
-"в списке :ref:`установленных HUD <hud-manager>` устаревших версий, "
-"однако их установка и дальнейшее использование не рекомендуется."
+"**Не показывать устаревшие HUD** -- разрешает или запрещает отображение в "
+"списке :ref:`установленных HUD <hud-manager>` устаревших версий, однако их "
+"установка и дальнейшее использование не рекомендуется."
 
-#: ../../source/settings.rst:29
+#: ../../source/settings.rst:47
 msgid ""
-"**Use mirrors to download FPS-configs** -- enable or disable downloading "
-"of :ref:`FPS-configs <fps-configs>` from mirrors instead of using or "
-"main content server."
+"**Use mirrors to download FPS-configs** -- enable or disable downloading of :"
+"ref:`FPS-configs <fps-configs>` from mirrors instead of using or main "
+"content server."
 msgstr ""
-"**Загружать FPS-конфиги с зеркал** -- разрешает или запрещает "
-"скачивание :ref:`FPS-конфигов <fps-configs>` с зеркал вместо основного "
-"контент-сервера."
+"**Загружать FPS-конфиги с зеркал** -- разрешает или запрещает скачивание :"
+"ref:`FPS-конфигов <fps-configs>` с зеркал вместо основного контент-сервера."
 
-#: ../../source/settings.rst:30
+#: ../../source/settings.rst:48
 msgid ""
 "**Text editor binary** -- select text editor to load and edit text files "
 "instead of using default one. Press **Browse** button and find its "
@@ -157,14 +155,13 @@ msgid ""
 msgstr ""
 "**Текстовый редактор** -- позволяет задать внешний текстовый редактор, "
 "который будет использоваться для отображения и редактирования текстовых "
-"файлов. Для выбора достаточно нажать кнопку **Обзор** и найти его на "
-"диске."
+"файлов. Для выбора достаточно нажать кнопку **Обзор** и найти его на диске."
 
-#: ../../source/settings.rst:31
+#: ../../source/settings.rst:49
 msgid ""
 "**Custom directory name** -- specify directory name for custom stuff "
 "installation (only for games with its support)."
 msgstr ""
-"**Имя кастомного каталога** -- позволяет задать имя кастомного каталога, "
-"в который будут установлены нестандартные файлы, конфиги и модификации. "
+"**Имя кастомного каталога** -- позволяет задать имя кастомного каталога, в "
+"который будут установлены нестандартные файлы, конфиги и модификации. "
 "Поддерживается не всеми играми."

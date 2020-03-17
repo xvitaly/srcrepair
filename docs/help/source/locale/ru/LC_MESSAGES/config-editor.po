@@ -20,188 +20,184 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 38.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-22 12:17+0100\n"
-"PO-Revision-Date: 2020-02-22 15:32+0100\n"
+"POT-Creation-Date: 2020-03-17 14:56+0100\n"
+"PO-Revision-Date: 2020-03-17 15:00+0100\n"
+"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
+"Language-Team: EasyCoding Team\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
-"Language-Team: EasyCoding Team\n"
-"Language: ru\n"
 "X-Generator: Poedit 2.3\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: ../../source/config-editor.rst:5
+#: ../../source/config-editor.rst:23
 msgid "Config editor"
 msgstr "Редактор файлов конфигурации игр"
 
-#: ../../source/config-editor.rst:7
+#: ../../source/config-editor.rst:25
 msgid ""
-"Game configuration file editor (config editor) allow you to easily "
-"create, view or edit any Source Engine game configs in a simple, but "
-"powerful GUI."
+"Game configuration file editor (config editor) allow you to easily create, "
+"view or edit any Source Engine game configs in a simple, but powerful GUI."
 msgstr ""
-"Редактор файлов конфигурации (далее **конфигов**) позволяет легко и "
-"быстро просматривать, создавать и редактировать конфиги любых Source игр "
-"и серверов в графическом режиме. Редактор позволяет открывать и "
-"сохранять любые конфиги Source-игр через стандартное для Windows окно "
-"открытия/сохранения файлов."
+"Редактор файлов конфигурации (далее **конфигов**) позволяет легко и быстро "
+"просматривать, создавать и редактировать конфиги любых Source игр и серверов "
+"в графическом режиме. Редактор позволяет открывать и сохранять любые конфиги "
+"Source-игр через стандартное для Windows окно открытия/сохранения файлов."
 
-#: ../../source/config-editor.rst:13
+#: ../../source/config-editor.rst:31
 msgid "Working with config editor"
 msgstr "Работа с редактором"
 
-#: ../../source/config-editor.rst:15
+#: ../../source/config-editor.rst:33
 msgid ""
 "In the first column **Variable** you must specify variable name (eg. "
 "``cl_cmdrate``), and in the second **Value** -- its value (eg. ``66``). "
 "Value can be omitted."
 msgstr ""
-"Работать с редактором очень просто. В первом столбце **Переменная** "
-"пишется имя переменной, например, ``cl_cmdrate``, а во втором **Значение "
+"Работать с редактором очень просто. В первом столбце **Переменная** пишется "
+"имя переменной, например, ``cl_cmdrate``, а во втором **Значение "
 "переменной** -- её значение, например, ``66``. Поле значения может быть "
 "опущено."
 
-#: ../../source/config-editor.rst:17
+#: ../../source/config-editor.rst:35
 msgid ""
-"Variable name must not contain any spaces, commentaries, etc. Value can "
-"be both double-quoted, or without them. If value contains spaces, double "
-"quotes are mandatory."
+"Variable name must not contain any spaces, commentaries, etc. Value can be "
+"both double-quoted, or without them. If value contains spaces, double quotes "
+"are mandatory."
 msgstr ""
-"Имя переменной не должно содержать пробелов, комментариев и т.д. "
-"Значение переменной можно писать как в кавычках, так и без них. Однако "
-"если оно содержит пробелы, то кавычки обязательны."
+"Имя переменной не должно содержать пробелов, комментариев и т.д. Значение "
+"переменной можно писать как в кавычках, так и без них. Однако если оно "
+"содержит пробелы, то кавычки обязательны."
 
-#: ../../source/config-editor.rst:19
+#: ../../source/config-editor.rst:37
 msgid ""
-"All commentaries are forbidden and will be removed on save/load "
-"procedures to reduce config file size and increase its loading speed."
+"All commentaries are forbidden and will be removed on save/load procedures "
+"to reduce config file size and increase its loading speed."
 msgstr ""
 "Комментарии в конфигах не допускаются и будут автоматически удалены для "
 "уменьшения размера конфига и увеличения скорости его загрузки игрой."
 
-#: ../../source/config-editor.rst:21
+#: ../../source/config-editor.rst:39
 msgid "To add a new row, just start typing text in the last cell."
 msgstr ""
 "Чтобы добавить новую строку просто начинайте набирать текст в последней "
 "пустой строке программы."
 
-#: ../../source/config-editor.rst:23
+#: ../../source/config-editor.rst:41
 msgid ""
-"To remove currently selected row, press **Delete selected row** button "
-"on the main toolbar, or press **Delete** on keybooard. You can select "
-"and remove multiple rows at once."
+"To remove currently selected row, press **Delete selected row** button on "
+"the main toolbar, or press **Delete** on keybooard. You can select and "
+"remove multiple rows at once."
 msgstr ""
-"Чтобы удалить активную строку, нажмите кнопку **Удалить строку** на "
-"панели инструментов редактора или клавишу **Delete** на клавиатуре "
-"компьютера. Присутствует возможность удаления сразу нескольких строк. "
-"Для этого выделите их мышью, либо с помощью клавиатуры."
+"Чтобы удалить активную строку, нажмите кнопку **Удалить строку** на панели "
+"инструментов редактора или клавишу **Delete** на клавиатуре компьютера. "
+"Присутствует возможность удаления сразу нескольких строк. Для этого выделите "
+"их мышью, либо с помощью клавиатуры."
 
-#: ../../source/config-editor.rst:25
+#: ../../source/config-editor.rst:43
 msgid ""
-"You can ask program to show hint. Select row and press **Show hint** "
-"button or press **F7** to show description of current variable. If no "
-"variables were found, an error message will be shown."
+"You can ask program to show hint. Select row and press **Show hint** button "
+"or press **F7** to show description of current variable. If no variables "
+"were found, an error message will be shown."
 msgstr ""
 "При нажатии клавиши **F7** (или кнопки **Показать подсказку** на панели "
 "инструментов) в ячейке, содержащей имя переменной, будет выведено окно с "
-"русскоязычным описанием данной переменной. Если для переменной в нашей "
-"базе нет описания, будет выдано соответствующее сообщение с предложением "
-"добавить её в БД."
+"русскоязычным описанием данной переменной. Если для переменной в нашей базе "
+"нет описания, будет выдано соответствующее сообщение с предложением добавить "
+"её в БД."
 
-#: ../../source/config-editor.rst:27
+#: ../../source/config-editor.rst:45
 msgid ""
-"If you want to edit config as a text file, press **Open config in "
-"Notepad** button. File will be loaded by a :ref:`selected <settings-"
-"advanced>` (or system default) text editor."
+"If you want to edit config as a text file, press **Open config in Notepad** "
+"button. File will be loaded by a :ref:`selected <settings-advanced>` (or "
+"system default) text editor."
 msgstr ""
 "Кнопка **Редактировать файл в Блокноте** загрузит текущий конфиг в :ref:"
-"`выбранном текстовом редакторе <settings-advanced>` (или по умолчанию "
-"для текущей платформы)."
+"`выбранном текстовом редакторе <settings-advanced>` (или по умолчанию для "
+"текущей платформы)."
 
-#: ../../source/config-editor.rst:33
+#: ../../source/config-editor.rst:51
 msgid "Creating new configs"
 msgstr "Создание нового файла конфигурации игры"
 
-#: ../../source/config-editor.rst:35
+#: ../../source/config-editor.rst:53
 msgid "Press **Create a new config** button on the main toolbar."
 msgstr "Нажмите на панели инструментов кнопку **Создать новый конфиг**."
 
-#: ../../source/config-editor.rst:36 ../../source/config-editor.rst:46
+#: ../../source/config-editor.rst:54 ../../source/config-editor.rst:64
 msgid ""
 "Edit config as described in :ref:`working with config editor <editor-"
 "working>`."
 msgstr ""
-"Начните заполнять таблицу как описано в :ref:`работа с редактором "
-"<editor-working>` выше."
+"Начните заполнять таблицу как описано в :ref:`работа с редактором <editor-"
+"working>` выше."
 
-#: ../../source/config-editor.rst:37
+#: ../../source/config-editor.rst:55
 msgid ""
-"Press **Save config** button on the main toolbar to save changes in "
-"config file. If it was a new file, save as dialog will be shown. "
-"Extension is not required."
+"Press **Save config** button on the main toolbar to save changes in config "
+"file. If it was a new file, save as dialog will be shown. Extension is not "
+"required."
 msgstr ""
-"Закончив редактирование, нажмите кнопку **Сохранить изменения в файл** "
-"на панели инструментов. Если файл ранее не сохранялся, то у вас будет "
-"запрошено имя файла (расширение вводить не обязательно)."
+"Закончив редактирование, нажмите кнопку **Сохранить изменения в файл** на "
+"панели инструментов. Если файл ранее не сохранялся, то у вас будет запрошено "
+"имя файла (расширение вводить не обязательно)."
 
-#: ../../source/config-editor.rst:43
+#: ../../source/config-editor.rst:61
 msgid "Loading config file"
 msgstr "Открытие существующего файла конфигурации игры"
 
-#: ../../source/config-editor.rst:45
+#: ../../source/config-editor.rst:63
 msgid ""
-"Press **Open config from file** button on the main toolbar and select "
-"file on disk with standard open file dialog (depends on platform)."
+"Press **Open config from file** button on the main toolbar and select file "
+"on disk with standard open file dialog (depends on platform)."
 msgstr ""
-"Нажмите кнопку **Открыть конфиг из файла** на панели инструментов и "
-"выберите файл для редактирования. Окно открытия файла стандартно для "
-"используемой платформы, поэтому не должно вызывать вопросов."
+"Нажмите кнопку **Открыть конфиг из файла** на панели инструментов и выберите "
+"файл для редактирования. Окно открытия файла стандартно для используемой "
+"платформы, поэтому не должно вызывать вопросов."
 
-#: ../../source/config-editor.rst:47
+#: ../../source/config-editor.rst:65
 msgid ""
-"Press **Save config** button on the main toolbar to save changes in "
-"config file."
+"Press **Save config** button on the main toolbar to save changes in config "
+"file."
 msgstr ""
-"Нажмите **Сохранить изменения в файл** на панели инструментов для "
-"сохранения его на диске."
+"Нажмите **Сохранить изменения в файл** на панели инструментов для сохранения "
+"его на диске."
 
-#: ../../source/config-editor.rst:49
+#: ../../source/config-editor.rst:67
 msgid ""
-"If safe clean is enabled (green light in status bar), backup file will "
-"be created automatically. You can restore or delete it on :ref:`BackUps "
+"If safe clean is enabled (green light in status bar), backup file will be "
+"created automatically. You can restore or delete it on :ref:`BackUps "
 "<backups-about>` tab."
 msgstr ""
 "Если включён режим безопасной работы (горит зелёный индикатор в строке "
-"состояния), будет автоматически создана резервная копия файла. "
-"Восстановить или удалить её можно на странице :ref:`Резервные копии "
-"<backups-about>`."
+"состояния), будет автоматически создана резервная копия файла. Восстановить "
+"или удалить её можно на странице :ref:`Резервные копии <backups-about>`."
 
-#: ../../source/config-editor.rst:55
+#: ../../source/config-editor.rst:73
 msgid "Other useful information"
 msgstr "Прочая полезная информация о редакторе"
 
-#: ../../source/config-editor.rst:57
+#: ../../source/config-editor.rst:75
 msgid ""
-"If you :ref:`create a new <editor-createcfg>` or :ref:`load config "
-"<editor-loadcfg>`, all existing contents of editor will be removed. Save "
-"it before performing this actions."
+"If you :ref:`create a new <editor-createcfg>` or :ref:`load config <editor-"
+"loadcfg>`, all existing contents of editor will be removed. Save it before "
+"performing this actions."
 msgstr ""
-"При нажатии кнопки :ref:`Создать новый конфиг <editor-createcfg>`, либо :"
-"ref:`Открыть конфиг из файла <editor-loadcfg>` текущее содержимое "
-"редактора будет безвозвратно утеряно, поэтому убедитесь, что вы "
-"сохранили изменения перед созданием нового, либо открытием существующего "
-"файла."
+"При нажатии кнопки :ref:`Создать новый конфиг <editor-createcfg>`, либо :ref:"
+"`Открыть конфиг из файла <editor-loadcfg>` текущее содержимое редактора "
+"будет безвозвратно утеряно, поэтому убедитесь, что вы сохранили изменения "
+"перед созданием нового, либо открытием существующего файла."
 
-#: ../../source/config-editor.rst:59
+#: ../../source/config-editor.rst:77
 msgid ""
-"If you want to close current config file and free its resources, just "
-"open another one or press **Create a new config** button."
+"If you want to close current config file and free its resources, just open "
+"another one or press **Create a new config** button."
 msgstr ""
-"Чтобы закрыть файл и освободить его ресурсы, просто откройте другой, "
-"либо нажмите кнопку **Создать новый конфиг**."
+"Чтобы закрыть файл и освободить его ресурсы, просто откройте другой, либо "
+"нажмите кнопку **Создать новый конфиг**."
