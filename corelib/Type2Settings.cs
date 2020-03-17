@@ -73,7 +73,7 @@ namespace srcrepair.core
         /// <summary>
         /// Sets properties data.
         /// </summary>
-        private void SetSettingsV2()
+        private void SetSettings()
         {
             ScreenWidth = "defaultres";
             ScreenHeight = "defaultresheight";
@@ -103,7 +103,7 @@ namespace srcrepair.core
         /// </summary>
         public Type2Settings()
         {
-            SetSettingsV2();
+            SetSettings();
         }
     }
 }

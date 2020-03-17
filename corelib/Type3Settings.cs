@@ -239,7 +239,7 @@ namespace srcrepair.core
         /// <summary>
         /// Sets properties data.
         /// </summary>
-        protected void SetSettingsV3()
+        private void SetSettings()
         {
             VendorID = "VendorID";
             DeviceID = "DeviceID";
@@ -290,7 +290,7 @@ namespace srcrepair.core
         /// </summary>
         public Type3Settings()
         {
-            SetSettingsV3();
+            SetSettings();
         }
     }
 }
