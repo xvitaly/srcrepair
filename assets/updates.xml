@@ -33,10 +33,10 @@
         <Hash2>8748933d3e15c4caf97ee3f51c7ad7fcdf5ac0ea947f537f0becbb37f631ee40cc260e3f29a3548f892300fe72b5f912041a83dc7895117f7e6ad3bdb73b5698</Hash2>
     </GameDB>
     <HUDDB>
-        <Version>13</Version>
+        <Version>14</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/huds.xml</URL>
-        <Hash>263d89a9be67e2bf6ac0208a72bcb0aa</Hash>
-        <Hash2>6c47cde3035e4d3c2bdcc0221e4fabed5d8b4811bda02a415c033ac00063edee0e9f60d9b0643f2bc8aa8a569738f02d7834de2bba973f51acd66437f923cf85</Hash2>
+        <Hash>46644f2f7d6093840842a31ec97655b6</Hash>
+        <Hash2>f8ab69122ac54cd52ac9ddafea529c55c1c295d18eef19fcd3ea75cd0da1bc1d780d06a76c49979d3c5a06a64c53de50789840e6298294a4fc69d5f382494ba3</Hash2>
     </HUDDB>
     <CfgDB>
         <Version>3</Version>
