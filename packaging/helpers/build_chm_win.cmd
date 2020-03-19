@@ -12,7 +12,7 @@ rem the Free Software Foundation, either version 3 of the License, or
 rem (at your option) any later version.
 rem
 rem This program is distributed in the hope that it will be useful,
-rem but WITHOUT ANY WARRANTYrem without even the implied warranty of
+rem but WITHOUT ANY WARRANTY; without even the implied warranty of
 rem MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 rem GNU General Public License for more details.
 rem
