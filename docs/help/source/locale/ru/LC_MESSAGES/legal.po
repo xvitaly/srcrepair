@@ -1,0 +1,690 @@
+# This file is a part of SRC Repair project. For more information
+# visit official site: https://www.easycoding.org/projects/srcrepair
+#
+# Copyright (c) 2011 - 2020 EasyCoding Team (ECTeam).
+# Copyright (c) 2005 - 2020 EasyCoding Team.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+msgid ""
+msgstr ""
+"Project-Id-Version: SRC Repair 38.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-21 18:03+0100\n"
+"PO-Revision-Date: 2020-03-21 18:14+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 "
+"&& (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
+"Language-Team: EasyCoding Team\n"
+"Language: ru\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ../../source/legal.rst:23
+msgid "Legal"
+msgstr "Правовая информация"
+
+#: ../../source/legal.rst:29
+msgid "Icons licensing"
+msgstr "Лицензирование значков"
+
+#: ../../source/legal.rst:1
+msgid "**File name**"
+msgstr "**Имя файла**"
+
+#: ../../source/legal.rst:1
+msgid "**Author**"
+msgstr "**Автор**"
+
+#: ../../source/legal.rst:1
+msgid "**License name**"
+msgstr "**Лицензия**"
+
+#: ../../source/legal.rst:1
+msgid "**Source URL**"
+msgstr "**Дом. страница**"
+
+#: ../../source/legal.rst:1
+msgid "add.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "VisualPharm"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`CC Attribution No Derivatives <https://creativecommons.org/licenses/by-nd/4.0/"
+"legalcode>`_"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/add--880.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "bug.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Asher"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`CC Attribution Share Alike <https://creativecommons.org/licenses/by-sa/4.0/"
+"legalcode>`_"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/bug-8000.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "clear.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "GNOME icon artists"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`GNU General Public License, version 2 <https://www.gnu.org/licenses/old-"
+"licenses/gpl-2.0.html>`_"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/gnome-edit-clear-10--7.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "delete.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/delete--832.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Exit.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/gnome-application-exit-10-41."
+"html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "filesave.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Everaldo Coelho"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`GNU Lesser General Public License <https://opensource.org/licenses/LGPL-2.1>`_"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/save-file-4082.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "filesaveas.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/file-save-as-4083.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Help.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/help-8051.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "hint.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Mazenl77"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`CC Attribution <https://creativecommons.org/licenses/by/4.0/legalcode>`_"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/help-1601.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Home.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "IconsPedia"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Free for non commercial use"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/home--205.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Info.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/info--206.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "installer.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Celldrifter"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/installer-1817.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "new.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/new--84-.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "open.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/open--851.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "report.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "ArtistValley"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/task-report-hot-3-17.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Screwdriver.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Babasse"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/screwdriver-1468.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Warning.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "La Glanz Studio"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Free"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/warning-16712.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "TF2 Logo"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Lopagof"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`CC Attribution Non-Commercial No Derivatives <https://creativecommons.org/"
+"licenses/by-nc-nd/4.0/legalcode>`_"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/team-fortress-2-4585.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Wrench Icon"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Brsev"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/wrench-14054.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Refresh.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/gnome-view-refresh-111-4.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Restore.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/gnome-edit-undo-11006.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Xmas.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Iconspedia"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/santa-hat-17458.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "HostEd.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/gnome-text-html-11177.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "TextEditor.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Globe.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "PixelMixer"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/globe-11618.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Options.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Ahmad Hania"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`CC Attribution Non-Commercial Share Alike <https://creativecommons.org/"
+"licenses/by-nc-sa/4.0/legalcode>`_"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/options-1321-.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Config.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Asher Abbasi"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/systemconfiguration-12064.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "BackUp.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Icontoaster"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/backup-2047.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Graphics.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/gnome-applications-graphics-10-46."
+"html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Search.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Flahorn"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/search-26-2.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Keyboard.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/gnome-preferences-desktop-"
+"keyboard-1113-.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Donate.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Customicondesign"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/us-dollar-18656.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "green_circle.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Chris Ringeisen"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/green-circle-icon-25988.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "red_circle.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/red-circle-icon-25995.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "arrow.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Icon Leak"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/arrow-right-icon-26296.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "upd_av.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/update-recommended-4016.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "upd_chk.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "FatCow"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/update-icon-22163.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "upd_err.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Designkindle"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/cross-icon-40924.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "upd_nx.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/tick-11638.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Monitor.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Double-J Desig"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/monitor-icon-37548.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Interface.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/interface-preferences-icon-21275."
+"html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "LoadingFile.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Iconsolid"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/cloud-loading-icon-49831.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Notebook.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "LazyCrazy"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/elegant--notebook-160--.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Mute.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/mute-13212.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Convert.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Nikolay Verin"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/free-mp3-converter-icon-27169."
+"html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Steam.ico"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`IconsPedia <https://www.iconspedia.com/icon/steam-1402-.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:85
+msgid "Libraries licensing"
+msgstr "Лицензирование библиотек"
+
+#: ../../source/legal.rst:1
+msgid "**Library name**"
+msgstr "**Имя библиотеки**"
+
+#: ../../source/legal.rst:1
+msgid "**Linkage type**"
+msgstr "**Способ линковки**"
+
+#: ../../source/legal.rst:1
+msgid "**URL**"
+msgstr "**Дом. страница**"
+
+#: ../../source/legal.rst:1
+msgid "DotNetZip"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "Dynamic (shared)"
+msgstr "Динамическая (DLL)"
+
+#: ../../source/legal.rst:1
+msgid ""
+"`MPL + zlib <https://github.com/haf/DotNetZip.Semverd/blob/master/LICENSE>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`GitHub page <https://github.com/haf/DotNetZip.Semverd>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "NLog"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`BSD <https://github.com/NLog/NLog/blob/dev/LICENSE.txt>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`GitHub page <https://github.com/NLog/NLog>`__"
+msgstr ""
+
+#: ../../source/legal.rst:97
+msgid "Trademarks"
+msgstr "Торговые марки"
+
+#: ../../source/legal.rst:100
+msgid "Valve"
+msgstr ""
+
+#: ../../source/legal.rst:102
+msgid ""
+"Valve, the Valve logo, Half-Life, the Half-Life logo, the Lambda logo, Steam, "
+"the Steam logo, Team Fortress, the Team Fortress logo, Opposing Force, Day of "
+"Defeat, the Day of Defeat logo, Counter-Strike, the Counter-Strike logo, "
+"Source, the Source logo, Counter-Strike: Condition Zero, Portal, the Portal "
+"logo, Dota, the Dota 2 logo, and Defense of the Ancients are trademarks and/or "
+"registered trademarks of Valve Corporation."
+msgstr ""
+"Valve, логотип Valve, Half-Life, логотип Half-Life, логотип Lambda, Steam, "
+"логотип Steam, Team Fortress, логотип Team Fortress, Opposing Force, Day of "
+"Defeat, логотип Day of Defeat, Counter-Strike, логотип Counter-Strike, Source, "
+"логотип Source, Counter-Strike: Condition Zero, Portal, логотип Portal, Dota, "
+"логотип Dota 2, а также Defense of the Ancients являются торговыми марками и/"
+"или зарегистрированными торговыми марками Корпорации Valve."
+
+#: ../../source/legal.rst:105
+msgid "Microsoft"
+msgstr ""
+
+#: ../../source/legal.rst:107
+msgid ""
+"Microsoft, Windows are trademarks and/or registered trademarks of Microsoft "
+"Corporation."
+msgstr ""
+"Microsoft, Windows являются торговыми марками и/или зарегистрированными "
+"торговыми марками Корпорации Microsoft."
+
+#: ../../source/legal.rst:110
+msgid "Other"
+msgstr "Прочие"
+
+#: ../../source/legal.rst:112
+msgid "All other trademarks are property of their respective owners."
+msgstr "Все прочие торговые марки являются собственностью их владельцев."
