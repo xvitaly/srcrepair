@@ -22,7 +22,7 @@
 Legal
 **********************************
 
-.. index:: icons, licensing
+.. index:: icons, licensing, legal
 .. _legal-icons:
 
 Icons licensing
@@ -77,3 +77,15 @@ Icons licensing
     "Mute.png", "Ahmad Hania", "`CC Attribution Non-Commercial Share Alike <https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/mute-13212.html>`__"
     "Convert.png", "Nikolay Verin", "`CC Attribution No Derivatives <https://creativecommons.org/licenses/by-nd/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/free-mp3-converter-icon-27169.html>`__"
     "Steam.ico", "Brsev", "`CC Attribution Non-Commercial No Derivatives <https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/steam-1402-.html>`__"
+
+.. index:: libraries, licensing, legal
+.. _legal-libraries:
+
+Libraries licensing
+==========================================
+
+.. csv-table::
+    :header: "**Library name**", "**Linkage type**", "**License name**", "**URL**"
+
+    "DotNetZip", "Dynamic (shared)", "`MPL + zlib <https://github.com/haf/DotNetZip.Semverd/blob/master/LICENSE>`__", "`GitHub page <https://github.com/haf/DotNetZip.Semverd>`__"
+    "NLog", "Dynamic (shared)", "`BSD <https://github.com/NLog/NLog/blob/dev/LICENSE.txt>`__", "`GitHub page <https://github.com/NLog/NLog>`__"
