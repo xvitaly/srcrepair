@@ -34,5 +34,6 @@ SRC Repair offline help
    modules.rst
    settings.rst
    faq.rst
+   legal.rst
 
 
