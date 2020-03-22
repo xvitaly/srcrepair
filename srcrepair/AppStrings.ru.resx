@@ -568,7 +568,7 @@
     <value>Невозможно создать форму, т.к. передано недостаточное количество SteamID.</value>
   </data>
   <data name="StatusNormal" xml:space="preserve">
-    <value>Готов.</value>
+    <value>Готово.</value>
   </data>
   <data name="StatusOpenedFile" xml:space="preserve">
     <value>В редакторе открыт файл: {0}.</value>
