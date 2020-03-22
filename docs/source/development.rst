@@ -99,7 +99,7 @@ You will find results in a ``packaging/results`` directory.
 Cleanup database documentation
 ==========================================
 
-Original source file located at ``assets/cleanup.xml`` of current repository.
+The original source file is located in ``assets/cleanup.xml``.
 
 XML database example
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -131,16 +131,16 @@ Level 1:
 
 Level 2:
 
-  * ``ID`` -- unique identifier (integer, starting from 1);
+  * ``ID`` -- unique identifier (integer, starting from ``1``);
   * ``Name`` -- user-friendly name;
-  * ``Directories`` -- list of directories.
+  * ``Directories`` -- list of directories for cleanup.
 
 Level 3:
 
-  * ``Directory`` -- path to a single directory with templates support:
+  * ``Directory`` -- path to a single directory (with templates support):
 
     * ``Safe`` -- this directory can be safely cleaned;
-    * ``Unsafe`` -- cleaning up this directory may be dangerous (can be disabled in settings).
+    * ``Unsafe`` -- cleaning up this directory may be dangerous (can be allowed in settings).
 
 Directories
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -152,13 +152,13 @@ Use ``*.*`` to mark all files in a specified directory.
 Templates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Available templates (can be used within ``Directory`` property):
+Available templates (can be used within the ``Directory`` property):
 
-  * ``$GamePath$`` -- will be replaced by ``SelectedGame.GamePath``;
-  * ``$FullGamePath$`` -- will be replaced by ``SelectedGame.FullGamePath``;
-  * ``$AppWorkshopDir$`` -- will be replaced by ``SelectedGame.AppWorkshopDir``;
-  * ``$CloudScreenshotsPath$`` -- will be replaced by ``SelectedGame.CloudScreenshotsPath``;
-  * ``\`` -- will be replaced by correct trailing path directory separator character, depending on running platform.
+  * ``$GamePath$`` -- will be replaced by the ``SelectedGame.GamePath``;
+  * ``$FullGamePath$`` -- will be replaced by the ``SelectedGame.FullGamePath``;
+  * ``$AppWorkshopDir$`` -- will be replaced by the ``SelectedGame.AppWorkshopDir``;
+  * ``$CloudScreenshotsPath$`` -- will be replaced by the ``SelectedGame.CloudScreenshotsPath``;
+  * ``\`` -- will be replaced by the correct trailing path directory separator character, depending on running platform.
 
 Multiple templates are supported in a single entry.
 
@@ -168,7 +168,7 @@ Multiple templates are supported in a single entry.
 FPS-configs database documentation
 ================================================
 
-Original source file located at ``assets/configs.xml`` of current repository.
+The original source file is located in ``assets/configs.xml``.
 
 XML database example
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -207,15 +207,15 @@ Level 1:
 
 Level 2:
 
-  * ``Name`` -- user-friendly name of FPS-config;
+  * ``Name`` -- FPS-config user-friendly name;
   * ``URI`` -- fully-qualified Zip archive download URL (safe redirects (3XX HTTP codes) are allowed);
   * ``Mirror`` -- fully-qualified Zip archive download mirror URL (safe redirects (3XX HTTP codes) are allowed);
-  * ``SupportedGames`` -- comma-separated list of supported game IDs;
+  * ``SupportedGames`` -- the list of supported game IDs, separated by commas;
   * ``ru`` -- user-friendly description in Russian (CDATA escaping is required);
   * ``en`` -- user-friendly description in English (CDATA escaping is required);
-  * ``ArchiveDir`` -- name of directory in archive (subdirectories are supported (use ``/`` symbol));
+  * ``ArchiveDir`` -- directory name in the archive (subdirectories are supported (use ``/`` symbol));
   * ``InstallDir`` -- installation directory name;
-  * ``Hash2`` -- SHA2 (SHA-512) hash of download file, speficied in ``URI``.
+  * ``Hash2`` -- download file SHA2 (SHA-512) hash, speficied in the ``URI``.
 
 .. index:: development, games, database, games database
 .. _games-database:
@@ -223,7 +223,7 @@ Level 2:
 Games database documentation
 ================================================
 
-Original source file located at ``assets/games.xml`` of current repository.
+The original source file is located in ``assets/games.xml``.
 
 XML database example
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -261,14 +261,14 @@ Level 1:
 
 Level 2:
 
-  * ``Enabled`` -- ``1`` if current game is enabled or ``0`` -- if don't;
-  * ``HasVF`` -- ``1`` if current game use file to store video settings or ``0`` if current game use Windows registry to store video settings (deprecated);
+  * ``Enabled`` -- ``1`` if the current game is enabled or ``0`` -- if don't;
+  * ``HasVF`` -- ``1`` if the current game use files to store video settings or ``0`` if the current game use Windows registry to store video settings (**deprecated**);
   * ``DirName`` -- game installation directory in ``SteamApps/common``;
   * ``SmallName`` -- game subdirectory name in ``SteamApps/common/$DirName``;
   * ``VFDir`` -- directory (or registry key) name of video settings storage;
-  * ``UserDir`` -- ``1`` if current game supports custom user stuff, located in ``custom`` directory or ``0`` -- if don't;
-  * ``HUDsAvail`` -- ``1`` if current game supports custom HUDs or ``0`` -- if don't;
-  * ``SID`` -- Steam database game internal ID;
+  * ``UserDir`` -- ``1`` if the current game support custom user stuff, located in ``custom`` directory or ``0`` -- if don't;
+  * ``HUDsAvail`` -- ``1`` if the current game support custom HUDs or ``0`` -- if don't;
+  * ``SID`` -- Steam database internal ID for the current game;
   * ``SVer`` -- Source Engine version:
 
     * ``1`` -- Source Engine 1, Type 1 (use Windows registry to store video settings);
@@ -284,7 +284,7 @@ Level 2:
 HUDs database documentation
 ================================================
 
-Original source file located at ``assets/huds.xml`` of current repository.
+The original source file is located in ``assets/huds.xml``.
 
 XML database example
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -323,18 +323,18 @@ Level 1:
 
 Level 2:
 
-  * ``Name`` -- user-friendly name of HUD;
-  * ``Game`` -- short name of supported by this HUD game (``SmallName`` from :ref:`games database <games-database>`);
-  * ``IsUpdated`` -- ``1`` if HUD support latest version of game, ``0`` -- if don't;
+  * ``Name`` -- HUD user-friendly name;
+  * ``Game`` -- short name of the supported by this HUD game (``SmallName`` from :ref:`games database <games-database>`);
+  * ``IsUpdated`` -- ``1`` if HUD supports the latest version of the game, ``0`` -- if don't;
   * ``URI`` -- fully-qualified Zip archive download URL (safe redirects (3XX HTTP codes) are allowed);
   * ``UpURI`` -- upstream download archive URL (safe redirects (3XX HTTP codes) are allowed);
-  * ``Preview`` -- screenshot of game using this HUD or any custom image (JPEG and PNG formats are supported);
-  * ``RepoPath`` -- path to repository on GitHub or ``null``;
-  * ``Hash`` -- MD5 hash of download file, speficied in ``URI`` (deprecated);
-  * ``Hash2`` -- SHA2 (SHA-512) hash of download file, speficied in ``URI``;
+  * ``Preview`` -- screenshot of the game with this HUD or any custom image (JPEG and PNG formats are supported);
+  * ``RepoPath`` -- GitHub repository URL or ``null``;
+  * ``Hash`` -- download file MD5 hash, speficied in the ``URI`` (**deprecated**);
+  * ``Hash2`` -- download file SHA2 (SHA-512) hash, speficied in the ``URI``;
   * ``LastUpdate`` -- HUD last update time in Unix timestamp format;
   * ``Site`` -- website or homepage URL;
-  * ``ArchiveDir`` -- name of directory in archive (subdirectories are supported (use ``/`` symbol));
+  * ``ArchiveDir`` -- directory name in the archive (subdirectories are supported (use ``/`` symbol));
   * ``InstallDir`` -- installation directory name.
 
 .. index:: development, update, database, updates database
@@ -343,7 +343,7 @@ Level 2:
 Updates database documentation
 ================================================
 
-Original source file located at ``assets/updates.xml`` of current repository.
+The original source file is located in ``assets/updates.xml``.
 
 Properties
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -363,6 +363,6 @@ Level 1:
 Level 2:
 
   * ``Version`` -- application or database version;
-  * ``URL`` -- direct download URL (no redirects allowed);
-  * ``Hash`` -- MD5 hash of download file (deprecated);
-  * ``Hash2`` -- SHA2 (SHA-512) hash of download file.
+  * ``URL`` -- direct download URL (no redirects are allowed);
+  * ``Hash`` -- download file MD5 hash (**deprecated**);
+  * ``Hash2`` -- download file SHA2 (SHA-512) hash.

@@ -136,7 +136,7 @@ We support only Source Engine games.
 Can I build SRC Repair from sources?
 =============================================
 
-`Yes, you can <https://github.com/xvitaly/srcrepair/blob/dev/docs/building-from-sources.md>`__.
+:ref:`Yes, you can <building-from-sources>`.
 
 .. index:: faq, cleanup
 .. _faq-gb-games:
