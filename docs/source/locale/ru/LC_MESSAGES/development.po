@@ -1,0 +1,745 @@
+# This file is a part of SRC Repair project. For more information
+# visit official site: https://www.easycoding.org/projects/srcrepair
+#
+# Copyright (c) 2011 - 2020 EasyCoding Team (ECTeam).
+# Copyright (c) 2005 - 2020 EasyCoding Team.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+msgid ""
+msgstr ""
+"Project-Id-Version: SRC Repair 38.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-22 15:26+0100\n"
+"PO-Revision-Date: 2020-03-22 16:57+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.7.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 "
+"&& (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
+"Language-Team: EasyCoding Team\n"
+"Language: ru\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: ../../source/development.rst:23
+msgid "Development"
+msgstr "Разработка"
+
+#: ../../source/development.rst:29
+msgid "Building from sources"
+msgstr "Сборка из исходников"
+
+#: ../../source/development.rst:31
+msgid "There are two supported ways to build application from sources:"
+msgstr "Существует два поддерживаемых способа сборки программы из исходников:"
+
+#: ../../source/development.rst:33
+msgid "fully automatic build;"
+msgstr "полностью автоматический;"
+
+#: ../../source/development.rst:34
+msgid "manual build."
+msgstr "ручной."
+
+#: ../../source/development.rst:37
+msgid "Preparing to build"
+msgstr "Подготовка к сборке"
+
+#: ../../source/development.rst:39
+msgid ""
+"Clone this repository or download a source tarball from `releases page <https://"
+"github.com/xvitaly/srcrepair/releases>`_."
+msgstr ""
+"Клонируйте репозиторий с исходными кодами программы при помощи Git клиента, "
+"либо скачайте архив из `архива релизов <https://github.com/xvitaly/srcrepair/"
+"releases>`_."
+
+#: ../../source/development.rst:40
+msgid "Install pre-requirements."
+msgstr ""
+"Установите дополнительные компоненты, необходимые для сборки (зависимости)."
+
+#: ../../source/development.rst:43
+msgid "Installing pre-requirements"
+msgstr "Установка зависимостей"
+
+#: ../../source/development.rst:45
+msgid ""
+"First you will need to install C# complier, Microsoft .NET Framework SDK and "
+"other required tools (all steps are mandatory):"
+msgstr ""
+"Сначала потребуется установить компилятор языка программирования C#, комплект "
+"разработчика Microsoft .NET Framework и другие важные программные компоненты "
+"(все шаги являются обязательными):"
+
+#: ../../source/development.rst:47
+msgid ""
+"download `Microsoft Visual Studio 2019 Community <https://visualstudio."
+"microsoft.com/vs/community/>`_ installer and run it;"
+msgstr ""
+"скачайте программу установки `Microsoft Visual Studio 2019 Community <https://"
+"visualstudio.microsoft.com/vs/community/>`_ и запустите её;"
+
+#: ../../source/development.rst:48
+msgid ""
+"select **Microsoft Visual Studio 2019 Community**, enable **Classic .NET "
+"application development** component, then switch to **Additional components** "
+"tab and enable **NuGet package manager**;"
+msgstr ""
+"выберите **Microsoft Visual Studio 2019 Community**, установите флажок около "
+"компонента **Разработка классических приложений .NET**, перейдите на страницу "
+"**Дополнительные компоненты** и отметьте флажком **Пакетный менеджер NuGet**;"
+
+#: ../../source/development.rst:49
+msgid "install Microsoft Visual Studio 2019 Community;"
+msgstr "установите Microsoft Visual Studio 2019 Community;"
+
+#: ../../source/development.rst:50
+msgid ""
+"download the latest version of `NuGet CLI <https://www.nuget.org/downloads>`_ "
+"and copy executable to any directory, located in ``%PATH%`` environment "
+"variable;"
+msgstr ""
+"скачайте самую свежую версию `утилиты NuGet <https://www.nuget.org/downloads>`_ "
+"и скопируйте EXE-файл в любой каталог, указанный внутри переменной окружения ``"
+"%PATH%``;"
+
+#: ../../source/development.rst:51
+msgid ""
+"install `Doxygen for Windows <http://www.doxygen.nl/download.html>`_ to a "
+"default directory;"
+msgstr ""
+"установите `Doxygen для Windows <http://www.doxygen.nl/download.html>`_ в "
+"каталог по умолчанию;"
+
+#: ../../source/development.rst:52
+msgid ""
+"download and install `HTML Help Workshop <https://www.microsoft.com/en-us/"
+"download/details.aspx?id=21138>`_;"
+msgstr ""
+"скачайте и установите `HTML Help Workshop <https://www.microsoft.com/en-us/"
+"download/details.aspx?id=21138>`_;"
+
+#: ../../source/development.rst:53
+msgid ""
+"download and install `Gpg4Win <https://www.gpg4win.org/>`_ to a default "
+"directory;"
+msgstr ""
+"скачайте и установите `Gpg4Win <https://www.gpg4win.org/>`_ в каталог по "
+"умолчанию;"
+
+#: ../../source/development.rst:54
+msgid ""
+"download and install `Python 3.7 for Windows <https://www.python.org/downloads/"
+"windows/>`_;"
+msgstr ""
+"скачайте и установите `Python 3.7 для Windows <https://www.python.org/downloads/"
+"windows/>`_;"
+
+#: ../../source/development.rst:55
+msgid "open terminal and install Sphinx-doc using PIP: ``pip3 install sphinx``;"
+msgstr ""
+"откройте окно командной строки и установите Sphinx-doc при помощи пакетного "
+"менеджера Python -- PIP: ``pip3 install sphinx``;"
+
+#: ../../source/development.rst:56
+msgid ""
+"download and install `7-Zip for Windows <https://www.7-zip.org/download.html>`_ "
+"to a default directory;"
+msgstr ""
+"скачайте и установите `7-Zip для Windows <https://www.7-zip.org/download."
+"html>`_ в каталог по умолчанию;"
+
+#: ../../source/development.rst:57
+msgid ""
+"download and install `InnoSetup 6 <http://www.jrsoftware.org/isdl.php>`_ to a "
+"default directory."
+msgstr ""
+"скачайте и установите `InnoSetup 6 <http://www.jrsoftware.org/isdl.php>`_ в "
+"каталог по умолчанию."
+
+#: ../../source/development.rst:60
+msgid "Automatic build"
+msgstr "Автоматическая сборка"
+
+#: ../../source/development.rst:62
+msgid "If you want to use automatic build, follow this steps:"
+msgstr ""
+"Если вы хотите использовать автоматическую сборку, просто выполните следующие "
+"действия:"
+
+#: ../../source/development.rst:64
+msgid "install pre-requirements;"
+msgstr "установите все указанные выше зависимости;"
+
+#: ../../source/development.rst:65
+msgid "double click on ``packaging/build_win.cmd``."
+msgstr ""
+"дважды кликните в Проводнике Windows по файлу ``packaging/build_win.cmd``."
+
+#: ../../source/development.rst:67 ../../source/development.rst:94
+msgid "You will find results in a ``packaging/results`` directory."
+msgstr "Результат сборки можно найти в каталоге ``packaging/results``."
+
+#: ../../source/development.rst:70
+msgid "Manual build"
+msgstr "Ручная сборка"
+
+#: ../../source/development.rst:72
+msgid ""
+"If you don't want to use automatic method, you can build this project manually."
+msgstr ""
+"Если вы не желаете использовать автоматическую сборку, можно выполнить всё "
+"вручную."
+
+#: ../../source/development.rst:75
+msgid "Building main project"
+msgstr "Сборка основного проекта"
+
+#: ../../source/development.rst:77
+msgid "Start Microsoft Visual Studio 2019 Community."
+msgstr ""
+"Запустите интегрированную среду разработки Microsoft Visual Studio 2019 "
+"Community."
+
+#: ../../source/development.rst:78
+msgid ""
+"**File** -- **Open** -- **Project or solution**, select ``srcrepair.sln``, then "
+"press **Open** button."
+msgstr ""
+"**Файл** -- **Открыть** -- **Проект или решение**, выберите ``srcrepair.sln``, "
+"затем нажмите кнопку **Открыть**."
+
+#: ../../source/development.rst:79
+msgid ""
+"**Tools** -- **NuGet Package Manager** -- **Manage NuGet packages for "
+"Solution**, press **Restore** button."
+msgstr ""
+"**Инструменты** -- **Пакетный менеджер NuGet** -- **Управление пакетами NuGet "
+"для решения**, нажмите кнопку **Восстановить**."
+
+#: ../../source/development.rst:80
+msgid ""
+"**Build** -- **Configuration manager** -- **Active solution configuration** -- "
+"**Release**, then press **Close** button."
+msgstr ""
+"**Построение** -- **Менеджер конфигураций** -- **Активная конфигурация** -- "
+"**Release**, затем нажмите кнопку **Закрыть**."
+
+#: ../../source/development.rst:81
+msgid "**Build** -- **Build solution**."
+msgstr "**Построение** -- **Построить решение**."
+
+#: ../../source/development.rst:83
+msgid "You will find results in a ``srcrepair/bin/Release`` directory."
+msgstr "Результат сборки можно найти в каталоге ``srcrepair/bin/Release``."
+
+#: ../../source/development.rst:86
+msgid "Building installer"
+msgstr "Сборка программы установки"
+
+#: ../../source/development.rst:88
+msgid "Run InnoSetup Compiler."
+msgstr "Запустите InnoSetup Compiler."
+
+#: ../../source/development.rst:89
+msgid "Open file ``packaging/inno/srcrepair.iss``."
+msgstr "Откройте файл ``packaging/inno/srcrepair.iss``."
+
+#: ../../source/development.rst:90
+msgid "**Build** -- **Compile**."
+msgstr "Выберите **Build** -- **Compile**."
+
+#: ../../source/development.rst:92
+msgid ""
+"If InnoSetup will complain about missing ``*.sig`` files, you will need to "
+"manually sign (use detached signatures) compiled binaries with GnuPG by using "
+"Gpg4Win, or remove this rows from InnoSetup script."
+msgstr ""
+"Если компилятор InnoSetup будет жаловаться на отсутствие ``*.sig`` файлов, вам "
+"придётся самостоятельно подписать при помощи GnuPG (входит в набор Gpg4Win) "
+"собранные исполняемые файлы (используйте только отсоединённые подписи), либо "
+"просто удалить данные строки из сборочного скрипта."
+
+#: ../../source/development.rst:100
+msgid "Cleanup database documentation"
+msgstr "Документация базы очистки"
+
+#: ../../source/development.rst:102
+msgid "The original source file is located in ``assets/cleanup.xml``."
+msgstr "Исходный файл ``assets/cleanup.xml``."
+
+#: ../../source/development.rst:105 ../../source/development.rst:174
+#: ../../source/development.rst:229 ../../source/development.rst:290
+msgid "XML database example"
+msgstr "Пример базы данных в формате XML"
+
+#: ../../source/development.rst:122 ../../source/development.rst:198
+#: ../../source/development.rst:250 ../../source/development.rst:314
+#: ../../source/development.rst:349
+msgid "Properties"
+msgstr "Доступные свойства"
+
+#: ../../source/development.rst:124 ../../source/development.rst:200
+#: ../../source/development.rst:252 ../../source/development.rst:316
+#: ../../source/development.rst:351
+msgid "Level 0:"
+msgstr "Уровень 0:"
+
+#: ../../source/development.rst:126
+msgid "``Targets`` -- XML root element."
+msgstr "``Targets`` -- корневой элемент XML."
+
+#: ../../source/development.rst:128 ../../source/development.rst:204
+#: ../../source/development.rst:256 ../../source/development.rst:320
+#: ../../source/development.rst:355
+msgid "Level 1:"
+msgstr "Уровень 1:"
+
+#: ../../source/development.rst:130
+msgid "``Target`` -- database entry base element."
+msgstr "``Target`` -- базовый элемент."
+
+#: ../../source/development.rst:132 ../../source/development.rst:208
+#: ../../source/development.rst:262 ../../source/development.rst:324
+#: ../../source/development.rst:363
+msgid "Level 2:"
+msgstr "Уровень 2:"
+
+#: ../../source/development.rst:134
+msgid "``ID`` -- unique identifier (integer, starting from ``1``);"
+msgstr "``ID`` -- уникальный идентификатор (целое число, начинающееся с ``1``);"
+
+#: ../../source/development.rst:135
+msgid "``Name`` -- user-friendly name;"
+msgstr "``Name`` -- понятное конечному пользователю название;"
+
+#: ../../source/development.rst:136
+msgid "``Directories`` -- list of directories for cleanup."
+msgstr "``Directories`` -- список каталогов для очистки."
+
+#: ../../source/development.rst:138
+msgid "Level 3:"
+msgstr "Уровень 3:"
+
+#: ../../source/development.rst:140
+msgid "``Directory`` -- path to a single directory (with templates support):"
+msgstr ""
+"``Directory`` -- содержит путь к каталогу для очистки с поддержкой шаблонов и "
+"подстановок:"
+
+#: ../../source/development.rst:142
+msgid "``Safe`` -- this directory can be safely cleaned;"
+msgstr ""
+"``Safe`` -- эта директория не содержит важных файлов и может быть безопасно "
+"очищена;"
+
+#: ../../source/development.rst:143
+msgid ""
+"``Unsafe`` -- cleaning up this directory may be dangerous (can be allowed in "
+"settings)."
+msgstr ""
+"``Unsafe`` -- очистка этого каталога может быть небезопасной (может быть "
+"разрешено в настройках)."
+
+#: ../../source/development.rst:146
+msgid "Directories"
+msgstr "Каталоги для очистки"
+
+#: ../../source/development.rst:148
+msgid ""
+"Each path must ends with a file mask. All matched files will be marked to "
+"deletion."
+msgstr ""
+"Каждый путь должен в обязательном порядке заканчиваться маской файлов. Все "
+"файлы, удовлетворяющие данной маске, будут помечены на удаление."
+
+#: ../../source/development.rst:150
+msgid "Use ``*.*`` to mark all files in a specified directory."
+msgstr ""
+"Используйте символ подстановки ``*.*``, чтобы пометить все файлы в указанном "
+"каталоге."
+
+#: ../../source/development.rst:153
+msgid "Templates"
+msgstr "Шаблоны и подстановки"
+
+#: ../../source/development.rst:155
+msgid "Available templates (can be used within the ``Directory`` property):"
+msgstr ""
+"Доступны следующие шаблоны и подстановки (могут использоваться внутри свойства "
+"``Directory``):"
+
+#: ../../source/development.rst:157
+msgid "``$GamePath$`` -- will be replaced by the ``SelectedGame.GamePath``;"
+msgstr "``$GamePath$`` -- будет заменено на ``SelectedGame.GamePath``;"
+
+#: ../../source/development.rst:158
+msgid ""
+"``$FullGamePath$`` -- will be replaced by the ``SelectedGame.FullGamePath``;"
+msgstr "``$FullGamePath$`` -- будет заменено на ``SelectedGame.FullGamePath``;"
+
+#: ../../source/development.rst:159
+msgid ""
+"``$AppWorkshopDir$`` -- will be replaced by the ``SelectedGame.AppWorkshopDir``;"
+msgstr ""
+"``$AppWorkshopDir$`` -- будет заменено на ``SelectedGame.AppWorkshopDir``;"
+
+#: ../../source/development.rst:160
+msgid ""
+"``$CloudScreenshotsPath$`` -- will be replaced by the ``SelectedGame."
+"CloudScreenshotsPath``;"
+msgstr ""
+"``$CloudScreenshotsPath$`` -- будет заменено на ``SelectedGame."
+"CloudScreenshotsPath``;"
+
+#: ../../source/development.rst:161
+msgid ""
+"``\\`` -- will be replaced by the correct trailing path directory separator "
+"character, depending on running platform."
+msgstr ""
+"``\\`` -- будет заменён на корректный разделитель частей пути каталогов в "
+"зависимости от текущей платформы, на которой выполняется программа."
+
+#: ../../source/development.rst:163
+msgid "Multiple templates are supported in a single entry."
+msgstr ""
+"Внутри одной строки разрешается использовать сразу несколько шаблонов или "
+"подстановок."
+
+#: ../../source/development.rst:169
+msgid "FPS-configs database documentation"
+msgstr "Документация базы FPS-конфигов"
+
+#: ../../source/development.rst:171
+msgid "The original source file is located in ``assets/configs.xml``."
+msgstr "Исходный файл ``assets/configs.xml``."
+
+#: ../../source/development.rst:202
+msgid "``Configs`` -- XML root element."
+msgstr "``Configs`` -- корневой элемент XML."
+
+#: ../../source/development.rst:206
+msgid "``Config`` -- database entry base element."
+msgstr "``Config`` -- базовый элемент."
+
+#: ../../source/development.rst:210
+msgid "``Name`` -- FPS-config user-friendly name;"
+msgstr "``Name`` -- понятное конечному пользователю название;"
+
+#: ../../source/development.rst:211 ../../source/development.rst:329
+msgid ""
+"``URI`` -- fully-qualified Zip archive download URL (safe redirects (3XX HTTP "
+"codes) are allowed);"
+msgstr ""
+"``URI`` -- адрес Zip-архива для загрузки (редиректы с кодами 3XX разрешены);"
+
+#: ../../source/development.rst:212
+msgid ""
+"``Mirror`` -- fully-qualified Zip archive download mirror URL (safe redirects "
+"(3XX HTTP codes) are allowed);"
+msgstr ""
+"``Mirror`` -- адрес зеркала с Zip-архивом для загрузки (редиректы с кодами 3XX "
+"разрешены);"
+
+#: ../../source/development.rst:213
+msgid "``SupportedGames`` -- the list of supported game IDs, separated by commas;"
+msgstr "``SupportedGames`` -- список поддерживаемых ID игр, разделённый запятыми;"
+
+#: ../../source/development.rst:214
+msgid ""
+"``ru`` -- user-friendly description in Russian (CDATA escaping is required);"
+msgstr ""
+"``ru`` -- понятное конечному пользователю описание на русском языке (внутри "
+"тега необходимо использовать экранирование при помощи CDATA);"
+
+#: ../../source/development.rst:215
+msgid ""
+"``en`` -- user-friendly description in English (CDATA escaping is required);"
+msgstr ""
+"``en`` -- понятное конечному пользователю описание на английском языке (внутри "
+"тега необходимо использовать экранирование при помощи CDATA);"
+
+#: ../../source/development.rst:216 ../../source/development.rst:337
+msgid ""
+"``ArchiveDir`` -- directory name in the archive (subdirectories are supported "
+"(use ``/`` symbol));"
+msgstr ""
+"``ArchiveDir`` -- имя каталога внутри архива (подкаталоги также поддерживаются "
+"(используйте символ ``/`` в качестве разделителя));"
+
+#: ../../source/development.rst:217
+msgid "``InstallDir`` -- installation directory name;"
+msgstr "``InstallDir`` -- каталог назначения;"
+
+#: ../../source/development.rst:218
+msgid "``Hash2`` -- download file SHA2 (SHA-512) hash, speficied in the ``URI``."
+msgstr "``Hash2`` -- SHA2 (SHA-512) хеш загрузки, указанной в ``URI``."
+
+#: ../../source/development.rst:224
+msgid "Games database documentation"
+msgstr "Документация базы игр"
+
+#: ../../source/development.rst:226
+msgid "The original source file is located in ``assets/games.xml``."
+msgstr "Исходный файл ``assets/games.xml``."
+
+#: ../../source/development.rst:254
+msgid "``Games`` -- XML root element."
+msgstr "``Games`` -- корневой элемент XML."
+
+#: ../../source/development.rst:258
+msgid "``Game`` -- database entry base element:"
+msgstr "``Game`` -- базовый элемент:"
+
+#: ../../source/development.rst:260
+msgid "``Name`` -- user-friendly game name."
+msgstr "``Name`` -- понятное конечному пользователю название."
+
+#: ../../source/development.rst:264
+msgid "``Enabled`` -- ``1`` if the current game is enabled or ``0`` -- if don't;"
+msgstr ""
+"``Enabled`` -- ``1`` если игра разрешена для отображения, либо ``0`` если "
+"запрещена;"
+
+#: ../../source/development.rst:265
+msgid ""
+"``HasVF`` -- ``1`` if the current game use files to store video settings or "
+"``0`` if the current game use Windows registry to store video settings "
+"(**deprecated**);"
+msgstr ""
+"``HasVF`` -- ``1`` если игра использует файлы для хранения графических "
+"настроек, либо ``0`` если игра использует системный реестр Windows для этого "
+"(**устаревшее, не используется**);"
+
+#: ../../source/development.rst:266
+msgid "``DirName`` -- game installation directory in ``SteamApps/common``;"
+msgstr "``DirName`` -- имя каталога игры в ``SteamApps/common``;"
+
+#: ../../source/development.rst:267
+msgid "``SmallName`` -- game subdirectory name in ``SteamApps/common/$DirName``;"
+msgstr ""
+"``SmallName`` -- имя собственного подкаталога игры в ``SteamApps/common/"
+"$DirName``;"
+
+#: ../../source/development.rst:268
+msgid "``VFDir`` -- directory (or registry key) name of video settings storage;"
+msgstr ""
+"``VFDir`` -- имя каталога (или ключа реестра), в котором хранятся графические "
+"настройки игры;"
+
+#: ../../source/development.rst:269
+msgid ""
+"``UserDir`` -- ``1`` if the current game support custom user stuff, located in "
+"``custom`` directory or ``0`` -- if don't;"
+msgstr ""
+"``UserDir`` -- ``1`` если игра поддерживает пользовательский контент в виде "
+"каталога ``custom``, либо ``0`` если не поддерживает;"
+
+#: ../../source/development.rst:270
+msgid ""
+"``HUDsAvail`` -- ``1`` if the current game support custom HUDs or ``0`` -- if "
+"don't;"
+msgstr ""
+"``HUDsAvail`` -- ``1`` если игра поддерживает нестандартные HUD, либо ``0`` "
+"если не поддерживает;"
+
+#: ../../source/development.rst:271
+msgid "``SID`` -- Steam database internal ID for the current game;"
+msgstr "``SID`` -- внутренний ID игры в базе Steam;"
+
+#: ../../source/development.rst:272
+msgid "``SVer`` -- Source Engine version:"
+msgstr "``SVer`` -- версия и тип движка Source:"
+
+#: ../../source/development.rst:274
+msgid ""
+"``1`` -- Source Engine 1, Type 1 (use Windows registry to store video settings);"
+msgstr ""
+"``1`` -- Source Engine версии 1, тип 1 (использует системный реестр Windows для "
+"хранения графических настроек игры);"
+
+#: ../../source/development.rst:275
+msgid ""
+"``2`` -- Source Engine 1, Type 2 (use ``video.txt`` file to store video "
+"settings);"
+msgstr ""
+"``2`` -- Source Engine версии 1, тип 2 (использует файл ``video.txt`` для "
+"хранения графических настроек игры);"
+
+#: ../../source/development.rst:276
+msgid ""
+"``3`` -- Source Engine 2, generic (not yet implemented; reserved for future "
+"use);"
+msgstr ""
+"``3`` -- Source Engine версии 2, базовый тип (не реализовано в настоящее время; "
+"зарезервировано для использования в будущем);"
+
+#: ../../source/development.rst:277
+msgid ""
+"``4`` -- Source Engine 1, Type 4 (same as Type 1, but store video settings in "
+"``videoconfig.cfg`` file);"
+msgstr ""
+"``4`` -- Source Engine версии 1, тип 4 (то же, что и тип 1, но графические "
+"настройки игры сохраняются в файле ``videoconfig.cfg``);"
+
+#: ../../source/development.rst:279
+msgid "``Executable`` -- game executable file name (only for Windows)."
+msgstr ""
+"``Executable`` -- имя исполняемого файла игры (используется только версией для "
+"Windows)."
+
+#: ../../source/development.rst:285
+msgid "HUDs database documentation"
+msgstr "Документация базы HUD"
+
+#: ../../source/development.rst:287
+msgid "The original source file is located in ``assets/huds.xml``."
+msgstr "Исходный файл ``assets/huds.xml``."
+
+#: ../../source/development.rst:318
+msgid "``HUDs`` -- XML root element."
+msgstr "``HUDs`` -- корневой элемент XML."
+
+#: ../../source/development.rst:322
+msgid "``HUD`` -- database entry base element."
+msgstr "``HUD`` -- базовый элемент."
+
+#: ../../source/development.rst:326
+msgid "``Name`` -- HUD user-friendly name;"
+msgstr "``Name`` -- понятное конечному пользователю название;"
+
+#: ../../source/development.rst:327
+msgid ""
+"``Game`` -- short name of the supported by this HUD game (``SmallName`` from :"
+"ref:`games database <games-database>`);"
+msgstr ""
+"``Game`` -- короткое имя поддерживаемой данным HUD игры (значение ``SmallName`` "
+"из :ref:`базы игр <games-database>`);"
+
+#: ../../source/development.rst:328
+msgid ""
+"``IsUpdated`` -- ``1`` if HUD supports the latest version of the game, ``0`` -- "
+"if don't;"
+msgstr ""
+"``IsUpdated`` -- ``1`` если HUD поддерживает новейшие версии игры, либо ``0`` "
+"если не поддерживает;"
+
+#: ../../source/development.rst:330
+msgid ""
+"``UpURI`` -- upstream download archive URL (safe redirects (3XX HTTP codes) are "
+"allowed);"
+msgstr ""
+"``UpURI`` -- адрес Zip-архива для загрузки (редиректы с кодом 3XX разрешены);"
+
+#: ../../source/development.rst:331
+msgid ""
+"``Preview`` -- screenshot of the game with this HUD or any custom image (JPEG "
+"and PNG formats are supported);"
+msgstr ""
+"``Preview`` -- прямая ссылка на файл со скриншотом игры с данным HUD, либо "
+"любое другое изображение (поддерживаются форматы JPEG и PNG);"
+
+#: ../../source/development.rst:332
+msgid "``RepoPath`` -- GitHub repository URL or ``null``;"
+msgstr "``RepoPath`` -- ссылка на GitHub-репозиторий, либо ``null``;"
+
+#: ../../source/development.rst:333
+msgid ""
+"``Hash`` -- download file MD5 hash, speficied in the ``URI`` (**deprecated**);"
+msgstr ""
+"``Hash`` -- MD5 хеш загрузки, указанной в ``URI`` (**устаревшее, не "
+"используется**);"
+
+#: ../../source/development.rst:334
+msgid "``Hash2`` -- download file SHA2 (SHA-512) hash, speficied in the ``URI``;"
+msgstr "``Hash2`` -- SHA2 (SHA-512) хеш загрузки, указанной в ``URI``;"
+
+#: ../../source/development.rst:335
+msgid "``LastUpdate`` -- HUD last update time in Unix timestamp format;"
+msgstr "``LastUpdate`` -- дата последнего обновления HUD в формате UnixTime;"
+
+#: ../../source/development.rst:336
+msgid "``Site`` -- website or homepage URL;"
+msgstr "``Site`` -- адрес домашней страницы;"
+
+#: ../../source/development.rst:338
+msgid "``InstallDir`` -- installation directory name."
+msgstr "``InstallDir`` -- каталог назначения."
+
+#: ../../source/development.rst:344
+msgid "Updates database documentation"
+msgstr "Документация базы обновлений"
+
+#: ../../source/development.rst:346
+msgid "The original source file is located in ``assets/updates.xml``."
+msgstr "Исходный файл ``assets/updates.xml``."
+
+#: ../../source/development.rst:353
+msgid "``Updates`` -- XML root element."
+msgstr "``Updates`` -- корневой элемент XML."
+
+#: ../../source/development.rst:357
+msgid "``Application`` -- sub-element with application update metadata;"
+msgstr "``Application`` -- содержит метаданные обновления приложения;"
+
+#: ../../source/development.rst:358
+msgid ""
+"``GameDB`` -- sub-element with :ref:`games database <games-database>` update "
+"metadata;"
+msgstr ""
+"``GameDB`` -- содержит метаданные обновления :ref:`базы игр <games-database>`;"
+
+#: ../../source/development.rst:359
+msgid ""
+"``HUDDB`` -- sub-element with :ref:`HUDs database <huds-database>` update "
+"metadata;"
+msgstr ""
+"``HUDDB`` -- содержит метаданные обновления :ref:`базы HUD <huds-database>`;"
+
+#: ../../source/development.rst:360
+msgid ""
+"``CfgDB`` -- sub-element with :ref:`configs database <configs-database>` update "
+"metadata;"
+msgstr ""
+"``CfgDB`` -- содержит метаданные обновления :ref:`базы FPS-конфигов <configs-"
+"database>`;"
+
+#: ../../source/development.rst:361
+msgid ""
+"``ClnDB`` -- sub-element with :ref:`cleanup database <cleanup-database>` update "
+"metadata."
+msgstr ""
+"``ClnDB`` -- содержит метаданные обновления :ref:`базы очистки <cleanup-"
+"database>`."
+
+#: ../../source/development.rst:365
+msgid "``Version`` -- application or database version;"
+msgstr "``Version`` -- версия приложения или базы данных;"
+
+#: ../../source/development.rst:366
+msgid "``URL`` -- direct download URL (no redirects are allowed);"
+msgstr "``URL`` -- URL для загрузки (любые редиректы запрещены);"
+
+#: ../../source/development.rst:367
+msgid "``Hash`` -- download file MD5 hash (**deprecated**);"
+msgstr "``Hash`` -- MD5 хеш файла обновления (**устаревшее, не используется**);"
+
+#: ../../source/development.rst:368
+msgid "``Hash2`` -- download file SHA2 (SHA-512) hash."
+msgstr "``Hash2`` -- SHA2 (SHA-512) хеш файла файла обновления."
