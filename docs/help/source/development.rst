@@ -291,7 +291,7 @@ XML database example
 
 .. code-block:: xml
 
-    <?xml version="1.0" encoding="utf-8" ?>
+    <?xml version="1.0" encoding="utf-8"?>
     <HUDs>
         <HUD>
             <Name>7HUD</Name>
@@ -336,3 +336,33 @@ Level 2:
   * ``Site`` -- website or homepage URL;
   * ``ArchiveDir`` -- name of directory in archive (subdirectories are supported (use ``/`` symbol));
   * ``InstallDir`` -- installation directory name.
+
+.. index:: development, update, database, updates database
+.. _updates-database:
+
+Updates database documentation
+================================================
+
+Original source file located at ``assets/updates.xml`` of current repository.
+
+Properties
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Level 0:
+
+  * ``Updates`` -- XML root element.
+
+Level 1:
+
+  * ``Application`` -- sub-element with application update metadata;
+  * ``GameDB`` -- sub-element with :ref:`games database <games-database>` update metadata;
+  * ``HUDDB`` -- sub-element with :ref:`HUDs database <huds-database>` update metadata;
+  * ``CfgDB`` -- sub-element with :ref:`configs database <configs-database>` update metadata;
+  * ``ClnDB`` -- sub-element with :ref:`cleanup database <cleanup-database>` update metadata.
+
+Level 2:
+
+  * ``Version`` -- application or database version;
+  * ``URL`` -- direct download URL (no redirects allowed);
+  * ``Hash`` -- MD5 hash of download file (deprecated);
+  * ``Hash2`` -- SHA2 (SHA-512) hash of download file.
