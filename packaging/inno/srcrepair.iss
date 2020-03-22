@@ -39,7 +39,7 @@ AllowNoIcons=yes
 LicenseFile=..\..\COPYING
 OutputDir=..\results
 #ifdef _RELEASE
-OutputBaseFilename=srcrepair_380_final
+OutputBaseFilename=srcrepair_{#GetEnv('RELVER')}_final
 #else
 OutputBaseFilename=snapshot_{#CI_COMMIT}
 #endif
