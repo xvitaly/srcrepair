@@ -76,22 +76,5 @@ namespace srcrepair.gui
                 iconApp.Image = Properties.Resources.Xmas;
             }
         }
-
-        /// <summary>
-        /// "Legal info" label click event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void LabelLicense_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                ProcessManager.OpenWebPage(Properties.Resources.AppLegalURL);
-            }
-            catch (Exception Ex)
-            {
-                Logger.Warn(Ex);
-            }
-        }
     }
 }

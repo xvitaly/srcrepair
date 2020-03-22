@@ -98,15 +98,6 @@ namespace srcrepair.gui.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://github.com/xvitaly/srcrepair/tree/dev/docs#legal.
-        /// </summary>
-        internal static string AppLegalURL {
-            get {
-                return ResourceManager.GetString("AppLegalURL", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to SRC Repair.
         /// </summary>
         internal static string AppName {
