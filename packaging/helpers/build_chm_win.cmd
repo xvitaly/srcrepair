@@ -22,13 +22,13 @@ rem along with this program. If not, see <http://www.gnu.org/licenses/>.
 title CHM builder for SRC Repair
 
 echo Building offline help for default (EN) locale...
-call "..\..\docs\help\make.cmd" htmlhelp
-"%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "..\..\docs\help\build\htmlhelp\srcrepair_en.hhp"
-move "..\..\docs\help\build\htmlhelp\srcrepair_en.chm" "..\..\srcrepair\bin\Release\help\srcrepair_en.chm"
+call "..\..\docs\make.cmd" htmlhelp
+"%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "..\..\docs\build\htmlhelp\srcrepair_en.hhp"
+move "..\..\docs\build\htmlhelp\srcrepair_en.chm" "..\..\srcrepair\bin\Release\help\srcrepair_en.chm"
 
 echo Building offline help for RU locale...
 set SPHINXOPTS=-D language=ru
 set BUILDLANG=ru
-call "..\..\docs\help\make.cmd" htmlhelp
-"%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "..\..\docs\help\build\htmlhelp\srcrepair_ru.hhp"
-move "..\..\docs\help\build\htmlhelp\srcrepair_ru.chm" "..\..\srcrepair\bin\Release\help\srcrepair_ru.chm"
+call "..\..\docs\make.cmd" htmlhelp
+"%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "..\..\docs\build\htmlhelp\srcrepair_ru.hhp"
+move "..\..\docs\build\htmlhelp\srcrepair_ru.chm" "..\..\srcrepair\bin\Release\help\srcrepair_ru.chm"
