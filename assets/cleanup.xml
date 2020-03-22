@@ -82,6 +82,7 @@
         <Name>Replays</Name>
         <Directories>
             <Directory Class="Safe">$FullGamePath$/replay/*.*</Directory>
+            <Directory Class="Safe">$FullGamePath$/replays/*.*</Directory>
         </Directories>
     </Target>
     <Target>
@@ -134,6 +135,7 @@
             <Directory Class="Safe">$FullGamePath$/bin/*.*</Directory>
             <Directory Class="Safe">$GamePath$/*.exe</Directory>
             <Directory Class="Safe">$FullGamePath$/download/*.*</Directory>
+            <Directory Class="Safe">$FullGamePath$/downloads/*.*</Directory>
             <Directory Class="Safe">$FullGamePath$/custom/*.*</Directory>
             <Directory Class="Safe">$AppWorkshopDir$/*.*</Directory>
             <Directory Class="Safe">$FullGamePath$/cache/*.*</Directory>
