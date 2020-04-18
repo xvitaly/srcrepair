@@ -159,13 +159,13 @@
         <Name>rayshud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/rayshud/rayshud_3910db09.zip</URI>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/rayshud/rayshud_21006e3f.zip</URI>
         <UpURI>https://github.com/raysfire/rayshud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/rayshud.jpg</Preview>
         <RepoPath>https://github.com/raysfire/rayshud</RepoPath>
-        <Hash>ec399ff5bd24d20ddd2854402045ab2e</Hash>
-        <Hash2>442d3fe80a6d662ec9fb975ccb44829587117bcd051c4a95a6d8559152ad02b7d8112bd643ed227dbde6805ce75360fe025f417de9b5783d608a1df21ee97869</Hash2>
-        <LastUpdate>1586896179</LastUpdate>
+        <Hash>0925ce2ba6ab52991093168c183ea0f9</Hash>
+        <Hash2>4105d8dff4f5a98a7557a7e754252120a1885409873a0fba760e4ffcae31b65d2e803fa8934c6e6a3afeb777e6e1fae318853bd3ff72a5631cf049199b6e6718</Hash2>
+        <LastUpdate>1586976698</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=254</Site>
         <ArchiveDir>rayshud-master</ArchiveDir>
         <InstallDir>rayshud</InstallDir>
