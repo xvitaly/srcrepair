@@ -88,6 +88,15 @@ namespace srcrepair.core {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Helper application executable does not exists..
+        /// </summary>
+        internal static string AppDbgExCoreHelperNxExists {
+            get {
+                return ResourceManager.GetString("AppDbgExCoreHelperNxExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Minor exception while building HUD list object..
         /// </summary>
         internal static string AppDbgExCoreHudManConstructor {

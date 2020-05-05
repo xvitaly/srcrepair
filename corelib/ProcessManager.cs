@@ -228,6 +228,24 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Starts an external helper application.
+        /// </summary>
+        /// <param name="FileName">Full path to helper application.</param>
+        /// <param name="Elevated">Run with administrator privileges.</param>
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
+        public static void StartExternalHelper(string FileName, bool Elevated = false)
+        {
+            if (File.Exists(FileName))
+            {
+                if (Elevated) { StartWithUAC(FileName); } else { Process.Start(FileName); }
+            }
+            else
+            {
+                throw new FileNotFoundException(DebugStrings.AppDbgExCoreHelperNxExists, FileName);
+            }    
+        }
+
+        /// <summary>
         /// Shows specified file in a default file manager.
         /// </summary>
         /// <param name="FileName">Full path to file.</param>
