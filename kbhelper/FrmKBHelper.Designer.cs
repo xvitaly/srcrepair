@@ -1,4 +1,4 @@
-﻿namespace srcrepair.gui
+﻿namespace srcrepair.gui.kbhelper
 {
     partial class FrmKBHelper
     {

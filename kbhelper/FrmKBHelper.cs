@@ -21,20 +21,14 @@
 using System;
 using System.Windows.Forms;
 using Microsoft.Win32;
-using NLog;
 
-namespace srcrepair.gui
+namespace srcrepair.gui.kbhelper
 {
     /// <summary>
     /// Class of system keyboard keys disable window.
     /// </summary>
     public partial class FrmKBHelper : Form
     {
-        /// <summary>
-        /// Logger instance for FrmKBHelper class.
-        /// </summary>
-        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
-
         /// <summary>
         /// Stores registry value name with scan code overrides.
         /// </summary>
@@ -94,10 +88,9 @@ namespace srcrepair.gui
                     MessageBox.Show(AppStrings.KB_ExSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
-                catch (Exception Ex)
+                catch
                 {
                     MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, DebugStrings.AppDbgExKbLW);
                 }
             }
         }
@@ -119,10 +112,9 @@ namespace srcrepair.gui
                     MessageBox.Show(AppStrings.KB_ExSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
-                catch (Exception Ex)
+                catch
                 {
                     MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, DebugStrings.AppDbgExKbBW);
                 }
             }
         }
@@ -144,10 +136,9 @@ namespace srcrepair.gui
                     MessageBox.Show(AppStrings.KB_ExSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
-                catch (Exception Ex)
+                catch
                 {
                     MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, DebugStrings.AppDbgExKbRWCtx);
                 }
             }
         }
@@ -169,10 +160,9 @@ namespace srcrepair.gui
                     MessageBox.Show(AppStrings.KB_ExSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
-                catch (Exception Ex)
+                catch
                 {
                     MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, DebugStrings.AppDbgExKbBWCtx);
                 }
             }
         }
@@ -193,10 +183,9 @@ namespace srcrepair.gui
                     MessageBox.Show(AppStrings.KB_ExSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
-                catch (Exception Ex)
+                catch
                 {
                     MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, DebugStrings.AppDbgExKbRestore);
                 }
             }
         }

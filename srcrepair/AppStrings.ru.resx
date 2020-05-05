@@ -447,18 +447,6 @@
   <data name="HD_StatusUpdated" xml:space="preserve">
     <value>актуальна</value>
   </data>
-  <data name="KB_ExException" xml:space="preserve">
-    <value>Произошла ошибка при выполнении. Убедитесь, что у вас есть права администратора!</value>
-  </data>
-  <data name="KB_ExQuestion" xml:space="preserve">
-    <value>Вы уверены, что хотите {0}?</value>
-  </data>
-  <data name="KB_ExRestore" xml:space="preserve">
-    <value>Восстановить настройки по умолчанию?</value>
-  </data>
-  <data name="KB_ExSuccess" xml:space="preserve">
-    <value>Требуемое действие успешно выполнено! Выполненные настройки будут применены после перезагрузки системы.</value>
-  </data>
   <data name="LV_ClearEx" xml:space="preserve">
     <value>Произошла ошибка при попытке очистки журнала ошибок программы! Повторите попытку позже.</value>
   </data>

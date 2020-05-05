@@ -450,18 +450,6 @@
   <data name="HD_StatusUpdated" xml:space="preserve">
     <value>actual</value>
   </data>
-  <data name="KB_ExException" xml:space="preserve">
-    <value>An error occurred during execution. Make sure you have the administrator rights!</value>
-  </data>
-  <data name="KB_ExQuestion" xml:space="preserve">
-    <value>Do you really want to {0}?</value>
-  </data>
-  <data name="KB_ExRestore" xml:space="preserve">
-    <value>Restore default settings?</value>
-  </data>
-  <data name="KB_ExSuccess" xml:space="preserve">
-    <value>The required action has been successfully completed!</value>
-  </data>
   <data name="LV_ClearEx" xml:space="preserve">
     <value>Could not purge log file! Please try again later.</value>
   </data>

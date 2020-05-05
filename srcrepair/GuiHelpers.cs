@@ -231,17 +231,6 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Opens system keyboard keys disable window.
-        /// </summary>
-        public static void FormShowKBHelper()
-        {
-            using (FrmKBHelper KBHlp = new FrmKBHelper())
-            {
-                KBHlp.ShowDialog();
-            }
-        }
-
-        /// <summary>
         /// Opens log viewer window.
         /// </summary>
         /// <param name="LogFile">Full path to active log file.</param>

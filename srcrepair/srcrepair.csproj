@@ -114,12 +114,6 @@
     <Compile Include="FrmMainW.Designer.cs">
       <DependentUpon>FrmMainW.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmKBHelper.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmKBHelper.Designer.cs">
-      <DependentUpon>FrmKBHelper.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmAbout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,12 +229,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMainW.ru.resx">
       <DependentUpon>FrmMainW.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmKBHelper.resx">
-      <DependentUpon>FrmKBHelper.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmKBHelper.ru.resx">
-      <DependentUpon>FrmKBHelper.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAbout.resx">
       <DependentUpon>FrmAbout.cs</DependentUpon>
