@@ -1060,6 +1060,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to start keyboard helper plugin. Try again later!.
+        /// </summary>
+        internal static string KB_StartError {
+            get {
+                return ResourceManager.GetString("KB_StartError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Could not purge log file! Please try again later..
         /// </summary>
         internal static string LV_ClearEx {

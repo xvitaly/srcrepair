@@ -450,6 +450,9 @@
   <data name="HD_StatusUpdated" xml:space="preserve">
     <value>actual</value>
   </data>
+  <data name="KB_StartError" xml:space="preserve">
+    <value>Failed to start keyboard helper plugin. Try again later!</value>
+  </data>
   <data name="LV_ClearEx" xml:space="preserve">
     <value>Could not purge log file! Please try again later.</value>
   </data>

@@ -310,4 +310,7 @@
   <data name="AppHelpFileName" xml:space="preserve">
     <value>srcrepair_{0}.chm</value>
   </data>
+  <data name="AppKBHelperBin" xml:space="preserve">
+    <value>kbhelper.exe</value>
+  </data>
 </root>

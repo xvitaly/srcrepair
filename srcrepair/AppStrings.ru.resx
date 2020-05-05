@@ -447,6 +447,9 @@
   <data name="HD_StatusUpdated" xml:space="preserve">
     <value>актуальна</value>
   </data>
+  <data name="KB_StartError" xml:space="preserve">
+    <value>Не удалось запустить внешний модуль. Попробуйте ещё раз позднее!</value>
+  </data>
   <data name="LV_ClearEx" xml:space="preserve">
     <value>Произошла ошибка при попытке очистки журнала ошибок программы! Повторите попытку позже.</value>
   </data>

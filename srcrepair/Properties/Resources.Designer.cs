@@ -98,6 +98,15 @@ namespace srcrepair.gui.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to kbhelper.exe.
+        /// </summary>
+        internal static string AppKBHelperBin {
+            get {
+                return ResourceManager.GetString("AppKBHelperBin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to SRC Repair.
         /// </summary>
         internal static string AppName {

@@ -243,6 +243,9 @@
   <data name="AppDbgExKbRWCtx" xml:space="preserve">
     <value>Exception while trying to disable right WIN and CONTEXT keys.</value>
   </data>
+  <data name="AppDbgExKbStart" xml:space="preserve">
+    <value>Exception while trying to run external keyboard helper plugin.</value>
+  </data>
   <data name="AppDbgExLvClean" xml:space="preserve">
     <value>Exception while cleaning up debug log file.</value>
   </data>

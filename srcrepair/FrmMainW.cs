@@ -795,16 +795,10 @@ namespace srcrepair.gui
         /// Changes state of some controls, depending on current running
         /// platform or access level.
         /// </summary>
-        /// <param name="State">Current access level state.</param>
-        private void ChangePrvControlState(bool State)
+        private void ChangePrvControlState()
         {
             // Checking platform...
-            if (App.Platform.OS == CurrentPlatform.OSType.Windows)
-            {
-                // On Windows we will disable "Keyboard disabler" module due to absent admin rights...
-                MNUWinMnuDisabler.Enabled = State;
-            }
-            else
+            if (App.Platform.OS != CurrentPlatform.OSType.Windows)
             {
                 // On Linux and MacOS we will disable "Keyboard disabler" and Reporter modules...
                 MNUReportBuilder.Enabled = false;
@@ -1584,7 +1578,7 @@ namespace srcrepair.gui
         {
             InitializeApp();
             SetAppStrings();
-            ChangePrvControlState(ProcessManager.IsCurrentUserAdmin());
+            ChangePrvControlState();
             CheckSafeClnStatus();
             CheckSymbolsSteam();
             FindGames();
@@ -2896,7 +2890,15 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void MNUWinMnuDisabler_Click(object sender, EventArgs e)
         {
-            //
+            try
+            {
+                ProcessManager.StartExternalHelper(Path.Combine(App.FullAppPath, Properties.Resources.AppKBHelperBin), true);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExKbStart);
+                MessageBox.Show(AppStrings.KB_StartError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         /// <summary>

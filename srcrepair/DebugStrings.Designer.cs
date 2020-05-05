@@ -439,6 +439,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to run external keyboard helper plugin..
+        /// </summary>
+        internal static string AppDbgExKbStart {
+            get {
+                return ResourceManager.GetString("AppDbgExKbStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while cleaning up debug log file..
         /// </summary>
         internal static string AppDbgExLvClean {
