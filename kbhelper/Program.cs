@@ -21,9 +21,16 @@ namespace srcrepair.gui.kbhelper
             {
                 if (Mtx.WaitOne(0, false))
                 {
-                    Application.EnableVisualStyles();
-                    Application.SetCompatibleTextRenderingDefault(false);
-                    Application.Run(new FrmKBHelper());
+                    if (ProcessManager.IsCurrentUserAdmin())
+                    {
+                        Application.EnableVisualStyles();
+                        Application.SetCompatibleTextRenderingDefault(false);
+                        Application.Run(new FrmKBHelper());
+                    }
+                    else
+                    {
+                        MessageBox.Show(AppStrings.KB_NoAdminRights, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
