@@ -70,25 +70,43 @@ namespace srcrepair.gui.kbhelper {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred during execution. Make sure you have the administrator rights!.
-        /// </summary>
-        internal static string KB_ExException {
-            get {
-                return ResourceManager.GetString("KB_ExException", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Do you really want to {0}?.
         /// </summary>
-        internal static string KB_ExQuestion {
+        internal static string KB_DisableQuestion {
             get {
-                return ResourceManager.GetString("KB_ExQuestion", resourceCulture);
+                return ResourceManager.GetString("KB_DisableQuestion", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Restore default settings?.
+        ///   Looks up a localized string similar to An error occurred while trying to disable both WIN buttons!.
+        /// </summary>
+        internal static string KB_ExBothWin {
+            get {
+                return ResourceManager.GetString("KB_ExBothWin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to both WIN and MENU buttons!.
+        /// </summary>
+        internal static string KB_ExBothWinMenu {
+            get {
+                return ResourceManager.GetString("KB_ExBothWinMenu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to disable left WIN button!.
+        /// </summary>
+        internal static string KB_ExLeftWin {
+            get {
+                return ResourceManager.GetString("KB_ExLeftWin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to restore default settings!.
         /// </summary>
         internal static string KB_ExRestore {
             get {
@@ -97,11 +115,11 @@ namespace srcrepair.gui.kbhelper {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The required action has been successfully completed!.
+        ///   Looks up a localized string similar to An error occurred while trying to right WIN and MENU buttons!.
         /// </summary>
-        internal static string KB_ExSuccess {
+        internal static string KB_ExRWinMenu {
             get {
-                return ResourceManager.GetString("KB_ExSuccess", resourceCulture);
+                return ResourceManager.GetString("KB_ExRWinMenu", resourceCulture);
             }
         }
         
@@ -111,6 +129,24 @@ namespace srcrepair.gui.kbhelper {
         internal static string KB_NoAdminRights {
             get {
                 return ResourceManager.GetString("KB_NoAdminRights", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Restore default settings?.
+        /// </summary>
+        internal static string KB_RestoreQuestion {
+            get {
+                return ResourceManager.GetString("KB_RestoreQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The required action has been successfully completed!.
+        /// </summary>
+        internal static string KB_Success {
+            get {
+                return ResourceManager.GetString("KB_Success", resourceCulture);
             }
         }
     }

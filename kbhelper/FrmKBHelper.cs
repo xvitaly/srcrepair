@@ -80,17 +80,17 @@ namespace srcrepair.gui.kbhelper
         {
             // Disable left Windows button...
             // 00 00 00 00 00 00 00 00 02 00 00 00 00 00 5B E0 00 00 00 00
-            if (MessageBox.Show(String.Format(AppStrings.KB_ExQuestion, ((Button)sender).Text.ToLower()), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(AppStrings.KB_DisableQuestion, ((Button)sender).Text.ToLower()), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
                     WriteKBS(new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 91, 224, 0, 0, 0, 0 });
-                    MessageBox.Show(AppStrings.KB_ExSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.KB_Success, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
                 catch
                 {
-                    MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.KB_ExLeftWin, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -104,17 +104,17 @@ namespace srcrepair.gui.kbhelper
         {
             // Disable both Windows keys...
             // 00 00 00 00 00 00 00 00 03 00 00 00 00 00 5B E0 00 00 5C E0 00 00 00 00
-            if (MessageBox.Show(String.Format(AppStrings.KB_ExQuestion, ((Button)sender).Text.ToLower()), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(AppStrings.KB_DisableQuestion, ((Button)sender).Text.ToLower()), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
                     WriteKBS(new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 91, 224, 0, 0, 92, 224, 0, 0, 0, 0 });
-                    MessageBox.Show(AppStrings.KB_ExSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.KB_Success, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
                 catch
                 {
-                    MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.KB_ExBothWin, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -128,17 +128,17 @@ namespace srcrepair.gui.kbhelper
         {
             // Disable right Windows and Context keys...
             // 00 00 00 00 00 00 00 00 03 00 00 00 00 00 5C E0 00 00 5D E0 00 00 00 00
-            if (MessageBox.Show(String.Format(AppStrings.KB_ExQuestion, ((Button)sender).Text.ToLower()), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(AppStrings.KB_DisableQuestion, ((Button)sender).Text.ToLower()), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
                     WriteKBS(new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 91, 224, 0, 0, 93, 224, 0, 0, 0, 0 });
-                    MessageBox.Show(AppStrings.KB_ExSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.KB_Success, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
                 catch
                 {
-                    MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.KB_ExRWinMenu, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -152,17 +152,17 @@ namespace srcrepair.gui.kbhelper
         {
             // Disable both Windows and Context buttons...
             // 00 00 00 00 00 00 00 00 04 00 00 00 00 00 5B E0 00 00 5C E0 00 00 5D E0 00 00 00 00
-            if (MessageBox.Show(String.Format(AppStrings.KB_ExQuestion, ((Button)sender).Text.ToLower()), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(String.Format(AppStrings.KB_DisableQuestion, ((Button)sender).Text.ToLower()), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
                     WriteKBS(new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 92, 224, 0, 0, 93, 224, 0, 0, 0, 0 });
-                    MessageBox.Show(AppStrings.KB_ExSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.KB_Success, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
                 catch
                 {
-                    MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.KB_ExBothWinMenu, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -175,17 +175,17 @@ namespace srcrepair.gui.kbhelper
         private void Dis_Restore_Click(object sender, EventArgs e)
         {
             // Restoring default settings by removing manual overrides...
-            if (MessageBox.Show(AppStrings.KB_ExRestore, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(AppStrings.KB_RestoreQuestion, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
                     DeleteKBS(RegValueName);
-                    MessageBox.Show(AppStrings.KB_ExSuccess, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.KB_Success, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
                 catch
                 {
-                    MessageBox.Show(AppStrings.KB_ExException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.KB_ExRestore, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }

@@ -120,19 +120,31 @@
   <data name="KB_AlrLaunched" xml:space="preserve">
     <value>The program is already running. Starting the second copy is not allowed.</value>
   </data>
-  <data name="KB_ExException" xml:space="preserve">
-    <value>An error occurred during execution. Make sure you have the administrator rights!</value>
-  </data>
-  <data name="KB_ExQuestion" xml:space="preserve">
+  <data name="KB_DisableQuestion" xml:space="preserve">
     <value>Do you really want to {0}?</value>
   </data>
-  <data name="KB_ExRestore" xml:space="preserve">
-    <value>Restore default settings?</value>
+  <data name="KB_ExBothWin" xml:space="preserve">
+    <value>An error occurred while trying to disable both WIN buttons!</value>
   </data>
-  <data name="KB_ExSuccess" xml:space="preserve">
-    <value>The required action has been successfully completed!</value>
+  <data name="KB_ExBothWinMenu" xml:space="preserve">
+    <value>An error occurred while trying to both WIN and MENU buttons!</value>
+  </data>
+  <data name="KB_ExLeftWin" xml:space="preserve">
+    <value>An error occurred while trying to disable left WIN button!</value>
+  </data>
+  <data name="KB_ExRestore" xml:space="preserve">
+    <value>An error occurred while trying to restore default settings!</value>
+  </data>
+  <data name="KB_ExRWinMenu" xml:space="preserve">
+    <value>An error occurred while trying to right WIN and MENU buttons!</value>
   </data>
   <data name="KB_NoAdminRights" xml:space="preserve">
     <value>This program must be run with admin rights!</value>
+  </data>
+  <data name="KB_RestoreQuestion" xml:space="preserve">
+    <value>Restore default settings?</value>
+  </data>
+  <data name="KB_Success" xml:space="preserve">
+    <value>The required action has been successfully completed!</value>
   </data>
 </root>

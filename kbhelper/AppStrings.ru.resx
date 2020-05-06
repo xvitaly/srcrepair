@@ -120,19 +120,31 @@
   <data name="KB_AlrLaunched" xml:space="preserve">
     <value>Программа уже выполняется! Запуск нескольких копий не поддерживается.</value>
   </data>
-  <data name="KB_ExException" xml:space="preserve">
-    <value>Произошла ошибка при выполнении. Убедитесь, что у вас есть права администратора!</value>
-  </data>
-  <data name="KB_ExQuestion" xml:space="preserve">
+  <data name="KB_DisableQuestion" xml:space="preserve">
     <value>Вы уверены, что хотите {0}?</value>
   </data>
-  <data name="KB_ExRestore" xml:space="preserve">
-    <value>Восстановить настройки по умолчанию?</value>
+  <data name="KB_ExBothWin" xml:space="preserve">
+    <value>Произошла ошибка при попытке отключения обеих клавиш WIN!</value>
   </data>
-  <data name="KB_ExSuccess" xml:space="preserve">
-    <value>Требуемое действие успешно выполнено! Выполненные настройки будут применены после перезагрузки системы.</value>
+  <data name="KB_ExBothWinMenu" xml:space="preserve">
+    <value>Произошла ошибка при попытке отключения обеих клавиш WIN и MENU!</value>
+  </data>
+  <data name="KB_ExLeftWin" xml:space="preserve">
+    <value>Произошла ошибка при попытке отключения левой клавиши WIN!</value>
+  </data>
+  <data name="KB_ExRestore" xml:space="preserve">
+    <value>Произошла ошибка при попытке восстановления настроек по умолчанию!</value>
+  </data>
+  <data name="KB_ExRWinMenu" xml:space="preserve">
+    <value>Произошла ошибка при попытке отключения правой клавиши WIN и MENU!</value>
   </data>
   <data name="KB_NoAdminRights" xml:space="preserve">
     <value>Для работы этой программы она должна быть запущена с правами администратора!</value>
+  </data>
+  <data name="KB_RestoreQuestion" xml:space="preserve">
+    <value>Восстановить настройки по умолчанию?</value>
+  </data>
+  <data name="KB_Success" xml:space="preserve">
+    <value>Требуемое действие успешно выполнено! Выполненные настройки будут применены после перезагрузки системы.</value>
   </data>
 </root>
