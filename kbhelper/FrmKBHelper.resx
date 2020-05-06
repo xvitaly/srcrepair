@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="GB_Mn.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Dis_Restore.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Dis_Restore.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 135</value>
@@ -143,6 +149,9 @@
   <data name="&gt;&gt;Dis_Restore.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="Dis_BWinMnu.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="Dis_BWinMnu.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 106</value>
   </data>
@@ -167,6 +176,9 @@
   <data name="&gt;&gt;Dis_BWinMnu.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="Dis_RWinMnu.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="Dis_RWinMnu.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 77</value>
   </data>
@@ -191,6 +203,9 @@
   <data name="&gt;&gt;Dis_RWinMnu.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="Dis_BWIN.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="Dis_BWIN.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 48</value>
   </data>
@@ -215,6 +230,9 @@
   <data name="&gt;&gt;Dis_BWIN.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="Dis_LWIN.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="Dis_LWIN.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 19</value>
   </data>
@@ -261,6 +279,9 @@
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">

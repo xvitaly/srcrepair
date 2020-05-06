@@ -94,7 +94,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmKBHelper";
-            this.ShowInTaskbar = false;
             this.GB_Mn.ResumeLayout(false);
             this.ResumeLayout(false);
 
