@@ -42,13 +42,13 @@ namespace srcrepair.gui
                 // Locking mutex...
                 if (Mtx.WaitOne(0, false))
                 {
-                    // Enabling application visual styles...
-                    Application.EnableVisualStyles();
-                    Application.SetCompatibleTextRenderingDefault(false);
-
                     // Checking of core library version...
                     if (LibraryManager.CheckLibraryVersion())
                     {
+                        // Enabling application visual styles...
+                        Application.EnableVisualStyles();
+                        Application.SetCompatibleTextRenderingDefault(false);
+
                         // Starting main form...
                         Application.Run(new FrmMainW());
                     }
