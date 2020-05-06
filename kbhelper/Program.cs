@@ -2,8 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using srcrepair.core;
 
 namespace srcrepair.gui.kbhelper
 {
@@ -15,9 +17,20 @@ namespace srcrepair.gui.kbhelper
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmKBHelper());
+            using (Mutex Mtx = new Mutex(false, Properties.Resources.AppName))
+            {
+                if (Mtx.WaitOne(0, false))
+                {
+                    Application.EnableVisualStyles();
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    Application.Run(new FrmKBHelper());
+                }
+                else
+                {
+                    MessageBox.Show(AppStrings.KB_AlrLaunched, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Environment.Exit(ReturnCodes.AppAlreadyRunning);
+                }
+            }
         }
     }
 }

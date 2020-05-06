@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Keyboard helper")]
-[assembly: AssemblyDescription("Keyboard helper plugin for SRC Repair")]
+[assembly: AssemblyTitle("KB Helper plugin")]
+[assembly: AssemblyDescription("Keyboard Helper plugin for SRC Repair")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("EasyCoding Team")]
-[assembly: AssemblyProduct("Keyboard helper")]
+[assembly: AssemblyProduct("KB Helper plugin")]
 [assembly: AssemblyCopyright("(c) 2005-2020 EasyCoding Team. All rights reserved.")]
 [assembly: AssemblyTrademark("EasyCoding, EasyCoding Software Group and EasyCoding Team are trademarks of EasyCoding Team.")]
 [assembly: AssemblyCulture("")]

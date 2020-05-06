@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="KB_AlrLaunched" xml:space="preserve">
+    <value>Программа уже выполняется! Запуск нескольких копий не поддерживается.</value>
+  </data>
   <data name="KB_ExException" xml:space="preserve">
     <value>Произошла ошибка при выполнении. Убедитесь, что у вас есть права администратора!</value>
   </data>
@@ -128,5 +131,8 @@
   </data>
   <data name="KB_ExSuccess" xml:space="preserve">
     <value>Требуемое действие успешно выполнено! Выполненные настройки будут применены после перезагрузки системы.</value>
+  </data>
+  <data name="KB_NoAdminRights" xml:space="preserve">
+    <value>Для работы этой программы она должна быть запущена с правами администратора!</value>
   </data>
 </root>

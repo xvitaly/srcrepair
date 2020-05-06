@@ -61,6 +61,15 @@ namespace srcrepair.gui.kbhelper {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The program is already running. Starting the second copy is not allowed..
+        /// </summary>
+        internal static string KB_AlrLaunched {
+            get {
+                return ResourceManager.GetString("KB_AlrLaunched", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occurred during execution. Make sure you have the administrator rights!.
         /// </summary>
         internal static string KB_ExException {
@@ -93,6 +102,15 @@ namespace srcrepair.gui.kbhelper {
         internal static string KB_ExSuccess {
             get {
                 return ResourceManager.GetString("KB_ExSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This program must be run with admin rights!.
+        /// </summary>
+        internal static string KB_NoAdminRights {
+            get {
+                return ResourceManager.GetString("KB_NoAdminRights", resourceCulture);
             }
         }
     }

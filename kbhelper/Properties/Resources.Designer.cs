@@ -61,7 +61,7 @@ namespace srcrepair.gui.kbhelper.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Keyboard helper plugin.
+        ///   Looks up a localized string similar to KB Helper.
         /// </summary>
         internal static string AppName {
             get {
