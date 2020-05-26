@@ -1314,7 +1314,7 @@ namespace srcrepair.gui
         private void InstallFPSConfig()
         {
             // Checking hash of downloaded file...
-            if (FileManager.CalculateFileSHA512(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile) == App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].FileHash)
+            if (App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].CheckHash())
             {
                 // Checking if selected FPS-config is installed...
                 if (CheckIfFPSConfigInstalled())
