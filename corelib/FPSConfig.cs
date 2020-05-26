@@ -85,6 +85,14 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Checks hash sum of the locally downloaded file with the etalon.
+        /// </summary>
+        public bool CheckHash()
+        {
+            return FileManager.CalculateFileSHA512(LocalFile) == FileHash;
+        }
+
+        /// <summary>
         /// FPSConfig class constructor.
         /// </summary>
         /// <param name="CfName">FPS-config friendly name.</param>
