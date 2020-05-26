@@ -1301,6 +1301,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Downloads FPS config from the main or reserve server.
         /// </summary>
+        /// <param name="ForceMirror">Force use of the reserve server.</param>
         /// <returns>Returns True if the file was downloaded.</returns>
         private bool DownloadFPSConfig(bool ForceMirror = false)
         {
