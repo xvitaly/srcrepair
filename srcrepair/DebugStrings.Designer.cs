@@ -349,6 +349,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception during saving of video settings..
+        /// </summary>
+        internal static string AppDbgExGTSave {
+            get {
+                return ResourceManager.GetString("AppDbgExGTSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while removing HUD archive file..
         /// </summary>
         internal static string AppDbgExHudArchRem {
@@ -736,11 +745,20 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception during saving of video settings..
+        ///   Looks up a localized string similar to Failed to download FPS-config from the main server. Trying mirror..
         /// </summary>
-        internal static string AppDebgExGTSave {
+        internal static string AppDbgFPSDnlMain {
             get {
-                return ResourceManager.GetString("AppDebgExGTSave", resourceCulture);
+                return ResourceManager.GetString("AppDbgFPSDnlMain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to download FPS-config from the secondary server. All mirrors were tried..
+        /// </summary>
+        internal static string AppDbgFPSDnlMirror {
+            get {
+                return ResourceManager.GetString("AppDbgFPSDnlMirror", resourceCulture);
             }
         }
     }

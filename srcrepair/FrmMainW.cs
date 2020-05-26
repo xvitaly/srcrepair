@@ -1298,6 +1298,53 @@ namespace srcrepair.gui
             return App.SourceGames[AppSelector.Text].CFGMan.CheckInstalledConfig(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, App.SourceGames[AppSelector.Text].IsUsingUserDir);
         }
 
+        /// <summary>
+        /// Downloads FPS config from the main or reserve server.
+        /// </summary>
+        /// <returns>Returns True if the file was downloaded.</returns>
+        private bool DownloadFPSConfig(bool ForceMirror = false)
+        {
+            GuiHelpers.FormShowDownloader(Properties.Settings.Default.FPSUseMirror || ForceMirror ? App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].Mirror : App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].URI, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile);
+            return File.Exists(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile);
+        }
+
+        /// <summary>
+        /// Installs the downloaded FPS-config.
+        /// </summary>
+        private void InstallFPSConfig()
+        {
+            // Checking hash of downloaded file...
+            if (FileManager.CalculateFileSHA512(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile) == App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].FileHash)
+            {
+                // Checking if selected FPS-config is installed...
+                if (CheckIfFPSConfigInstalled())
+                {
+                    // Creating backup of current FPS-config files...
+                    BackUpFPSConfigs();
+
+                    // Removing installed files...
+                    GuiHelpers.FormShowRemoveFiles(Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir));
+                }
+
+                // Extracting downloaded archove...
+                GuiHelpers.FormShowArchiveExtract(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile, App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath);
+
+                // Moving archive contents for games without user directory support...
+                if (!App.SourceGames[AppSelector.Text].IsUsingUserDir)
+                {
+                    App.SourceGames[AppSelector.Text].CFGMan.MoveLegacyConfig(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, App.SourceGames[AppSelector.Text].FullCfgPath);
+                }
+
+                // Installation successful message...
+                MessageBox.Show(AppStrings.FP_InstallSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Hash missmatch. Show error...
+                MessageBox.Show(AppStrings.FP_HashError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         #endregion
 
         #region Internal Workers
@@ -1872,7 +1919,7 @@ namespace srcrepair.gui
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Error(Ex, DebugStrings.AppDebgExGTSave);
+                        Logger.Error(Ex, DebugStrings.AppDbgExGTSave);
                         MessageBox.Show(AppStrings.GT_SaveFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
@@ -1921,45 +1968,24 @@ namespace srcrepair.gui
             {
                 if (MessageBox.Show(AppStrings.FP_InstallQuestion, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    // Creating backup of current FPS-config files...
-                    BackUpFPSConfigs();
+                    // Downloading FPS-config...
+                    bool DownloadResult = DownloadFPSConfig();
 
-                    // Downloading FPS-config archive...
-                    GuiHelpers.FormShowDownloader(Properties.Settings.Default.FPSUseMirror ? App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].Mirror : App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].URI, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile);
-
-                    // Checking if downloaded archive exists...
-                    if (File.Exists(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile))
+                    // If cannot download from the main server, let's try mirrors...
+                    if (!DownloadResult)
                     {
-                        // Checking hash of downloaded file...
-                        if (FileManager.CalculateFileSHA512(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile) == App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].FileHash)
-                        {
-                            // Checking if selected FPS-config is installed...
-                            if (CheckIfFPSConfigInstalled())
-                            {
-                                // Removing installed files...
-                                GuiHelpers.FormShowRemoveFiles(Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir));
-                            }
+                        Logger.Warn(DebugStrings.AppDbgFPSDnlMain);
+                        DownloadResult = DownloadFPSConfig(true);
+                    }
 
-                            // Extracting downloaded archove...
-                            GuiHelpers.FormShowArchiveExtract(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile, App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath);
-
-                            // Moving archive contents for games without user directory support...
-                            if (!App.SourceGames[AppSelector.Text].IsUsingUserDir)
-                            {
-                                App.SourceGames[AppSelector.Text].CFGMan.MoveLegacyConfig(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, App.SourceGames[AppSelector.Text].FullCfgPath);
-                            }
-
-                            // Installation successful message...
-                            MessageBox.Show(AppStrings.FP_InstallSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            // Hash missmatch. Show error...
-                            MessageBox.Show(AppStrings.FP_HashError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
+                    // Installing downloaded FPS-config...
+                    if (DownloadResult)
+                    {
+                        InstallFPSConfig();
                     }
                     else
                     {
+                        Logger.Error(DebugStrings.AppDbgFPSDnlMirror);
                         MessageBox.Show(AppStrings.FP_DownloadError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
