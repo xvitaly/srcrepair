@@ -296,14 +296,14 @@
         <Name>m0re Hud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/m0rehud/m0rehud_30ba0d53.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/m0rehud/m0rehud_30ba0d53.zip</Mirror>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/m0rehud/m0rehud_2c3ad5da.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/huds/m0rehud/m0rehud_2c3ad5da.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/m0rehud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/m0rehud.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/m0rehud</RepoPath>
-        <Hash>2241c2ff4e7c05d69cdd6c8d91242837</Hash>
-        <Hash2>8fec500e93039b9d882c292886793353d422f1e7c88db7caf7aec52dc7a8cbcbe76cc05eb84be6135e874a70dafd1900d4939ed347e57c7e003f88a8df7f442c</Hash2>
-        <LastUpdate>1590071204</LastUpdate>
+        <Hash>3a995cba5ce51c5a266154bc27d6cc3d</Hash>
+        <Hash2>e0052e8a8b812db499042d9380e65e840c0fc9049831a23873b6d9f94494a579c2911b77fc5c45339cb483e56ea731920cb94abefa693b58ff024e1a23399f70</Hash2>
+        <LastUpdate>1590334190</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=248</Site>
         <ArchiveDir>m0rehud-master/m0rehud</ArchiveDir>
         <InstallDir>m0rehud</InstallDir>
@@ -392,14 +392,14 @@
         <Name>Hypnotize HUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/hypnotizehud/hypnotizehud_8afe3d57.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/hypnotizehud/hypnotizehud_8afe3d57.zip</Mirror>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/hypnotizehud/hypnotizehud_e552e98d.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/huds/hypnotizehud/hypnotizehud_e552e98d.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/Hypnotize-Hud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/hypnotizehud.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/Hypnotize-Hud</RepoPath>
-        <Hash>3c52ff2199e3e69d5c08efe385dadfa0</Hash>
-        <Hash2>a312173bd7899856b7d218bde1bb41fb2c71a1692dbfa9a4d21209302d51a45dc1a8c617c0057a35f2176bedfea9ee8741d0a23a66f169178af20a5d369e8758</Hash2>
-        <LastUpdate>1589227752</LastUpdate>
+        <Hash>3cbeb158f0fabc029c7e945ad0d4a67b</Hash>
+        <Hash2>3b8508f0a26c6a5cf488a0d8c07f387a914774d3542446f1466df7d79135c7aea61a4063d2ce38ae36075e92347a2af109c323ca8b57dd84506465c629ea1157</Hash2>
+        <LastUpdate>1590333131</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=341</Site>
         <ArchiveDir>Hypnotize-Hud-master/hypnotize hud</ArchiveDir>
         <InstallDir>hypnotizehud</InstallDir>
@@ -440,14 +440,14 @@
         <Name>BX-HUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/bxhud/bxhud_fea21466.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/bxhud/bxhud_fea21466.zip</Mirror>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/bxhud/bxhud_8d1d31e2.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/huds/bxhud/bxhud_8d1d31e2.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/BX-Hud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/bxhud.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/BX-Hud</RepoPath>
-        <Hash>2d4c2d49ba6f1e32da7f32e09af7538f</Hash>
-        <Hash2>799949198331f1f9a8a21839374b0ed1d5314ec1824765089ef334cbe1b87561420f692896832f1c9938ccc2ebde2eaaea5600810390888c9f2353cf3801084a</Hash2>
-        <LastUpdate>1556364496</LastUpdate>
+        <Hash>5422f297489aec86d377992c117c4a4e</Hash>
+        <Hash2>22d3a4e06cee655105ca0b5e70e8aec5b509bdc8cb1eac55c4e33ef59a2986b62620a6c82504cfc5f7b47d1f0492611d56c1408faefe4cac3b7079bb6d5dfcc4</Hash2>
+        <LastUpdate>1590344110</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=1437</Site>
         <ArchiveDir>BX-Hud-master/BX Hud</ArchiveDir>
         <InstallDir>bxhud</InstallDir>
@@ -456,14 +456,14 @@
         <Name>Garm3n-QL</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/garm3nql/garm3nql_d7338a2a.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/garm3nql/garm3nql_d7338a2a.zip</Mirror>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/garm3nql/garm3nql_4ab873fd.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/huds/garm3nql/garm3nql_4ab873fd.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/Garm3n-QL/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/garm3nql.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/Garm3n-QL</RepoPath>
-        <Hash>8338d02c1b8acf8bffed126182c8efba</Hash>
-        <Hash2>3d4df0f120b63d32ffe548b1c30018901bdcce34a258a9820076f398d7990f7449bb31fc2002239e29916062f51cae4f3fe8f5e165c1fef149eb98cecad2b165</Hash2>
-        <LastUpdate>1555169001</LastUpdate>
+        <Hash>5dc508250671595a845a415e599ddb80</Hash>
+        <Hash2>d3038da2450834ba38394e01a48cdcdeb70cb62b35e5b25ebd74ac7ba5bca93bb8259756998ca3901b8dffb1cb036fed49bb6c79e331f71ddc2b87f3789ccecf</Hash2>
+        <LastUpdate>1590343907</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=1436</Site>
         <ArchiveDir>Garm3n-QL-master/Garm3n QL</ArchiveDir>
         <InstallDir>garm3nql</InstallDir>
@@ -472,14 +472,14 @@
         <Name>Deli HUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://sourceforge.net/projects/srcrepair/files/huds/delihud/delihud_b0c6dba0.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/delihud/delihud_b0c6dba0.zip</Mirror>
+        <URI>https://sourceforge.net/projects/srcrepair/files/huds/delihud/delihud_2ee44d69.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/huds/delihud/delihud_2ee44d69.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/Deli-Hud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/delihud.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/Deli-Hud</RepoPath>
-        <Hash>eed341631fc23d77b275640e0ec51be8</Hash>
-        <Hash2>25e16b365167a18e77f3552420583b21b71d189fc3722e0b34213a042d98ec13ca39379c5387f9b0b923a405553b19801d0286331ba8f85ea81f06e35268b90b</Hash2>
-        <LastUpdate>1549298664</LastUpdate>
+        <Hash>31e4a8dd48b0992484c90cf6f2f4074b</Hash>
+        <Hash2>b9e2c4aa99de59b6730b27ad58803b6d50cfddf93a4663ab4967e75eff7acf9c57d519dbcfe75b3bfd28737e42c6afdc640f0dffdf661d15a22a6f08423f87c8</Hash2>
+        <LastUpdate>1590343956</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=1440</Site>
         <ArchiveDir>Deli-Hud-master/Deli Hud Normal</ArchiveDir>
         <InstallDir>delihud</InstallDir>
