@@ -26,7 +26,7 @@ Downloads
 =========
 Download application (always contains latest version):
 
-[![Download SRC Repair](https://www.easycoding.org/wp-content/uploads/sf_dn.png)](https://www.easycoding.org/files/srcrepair_latest.exe)
+[![Download SRC Repair](https://www.easycoding.org/files/images/download-now.png)](https://www.easycoding.org/files/srcrepair_latest.exe)
 
 # Supported games
 
