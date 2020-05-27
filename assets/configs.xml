@@ -22,7 +22,7 @@
 <Configs>
     <Config>
         <Name>bonhighfps</Name>
-        <URI>https://www.team-fortress.su/downloads/cfgs/bonhighfps/bonhighfps_8126e079.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2cfgs/releases/download/2019.12.20/bonhighfps_8126e079.zip</URI>
         <Mirror>https://www.team-fortress.su/downloads/cfgs/bonhighfps/bonhighfps_8126e079.zip</Mirror>
         <SupportedGames>240</SupportedGames>
         <ru>
@@ -46,7 +46,7 @@ Warning: outdated. Do not use on latest Team Fortress 2 versions!
     </Config>
     <Config>
         <Name>chrisdx9frames</Name>
-        <URI>https://www.team-fortress.su/downloads/cfgs/chrisdx9frames/chrisdx9frames_e7c8442e.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2cfgs/releases/download/2019.12.20/chrisdx9frames_e7c8442e.zip</URI>
         <Mirror>https://www.team-fortress.su/downloads/cfgs/chrisdx9frames/chrisdx9frames_e7c8442e.zip</Mirror>
         <SupportedGames>240</SupportedGames>
         <ru>
@@ -67,7 +67,7 @@ Graphics degradation: Some]]>
     </Config>
     <Config>
         <Name>chrishighframes</Name>
-        <URI>https://www.team-fortress.su/downloads/cfgs/chrishighframes/chrishighframes_22be2b5c.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2cfgs/releases/download/2019.12.20/chrishighframes_22be2b5c.zip</URI>
         <Mirror>https://www.team-fortress.su/downloads/cfgs/chrishighframes/chrishighframes_22be2b5c.zip</Mirror>
         <SupportedGames>240</SupportedGames>
         <ru>
@@ -88,7 +88,7 @@ Graphics degradation: Some]]>
     </Config>
     <Config>
         <Name>chrismaxfps</Name>
-        <URI>https://www.team-fortress.su/downloads/cfgs/chrismaxfps/chrismaxfps_b92d311a.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2cfgs/releases/download/2019.12.20/chrismaxfps_b92d311a.zip</URI>
         <Mirror>https://www.team-fortress.su/downloads/cfgs/chrismaxfps/chrismaxfps_b92d311a.zip</Mirror>
         <SupportedGames>240</SupportedGames>
         <ru>
@@ -109,7 +109,7 @@ Graphics degradation: Some]]>
     </Config>
     <Config>
         <Name>chrismaxquality</Name>
-        <URI>https://www.team-fortress.su/downloads/cfgs/chrismaxquality/chrismaxquality_11073360.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2cfgs/releases/download/2019.12.20/chrismaxquality_11073360.zip</URI>
         <Mirror>https://www.team-fortress.su/downloads/cfgs/chrismaxquality/chrismaxquality_11073360.zip</Mirror>
         <SupportedGames>240</SupportedGames>
         <ru>
@@ -130,7 +130,7 @@ Graphics degradation: None]]>
     </Config>
     <Config>
         <Name>comangliacinema</Name>
-        <URI>https://www.team-fortress.su/downloads/cfgs/comangliacinema/comangliacinema_beaa0b8e.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2cfgs/releases/download/2019.12.20/comangliacinema_beaa0b8e.zip</URI>
         <Mirror>https://www.team-fortress.su/downloads/cfgs/comangliacinema/comangliacinema_beaa0b8e.zip</Mirror>
         <SupportedGames>240;440</SupportedGames>
         <ru>
@@ -151,7 +151,7 @@ Graphics degradation: None]]>
     </Config>
     <Config>
         <Name>comangliamaxfps</Name>
-        <URI>https://www.team-fortress.su/downloads/cfgs/comangliamaxfps/comangliamaxfps_15d3910f.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2cfgs/releases/download/2019.12.20/comangliamaxfps_15d3910f.zip</URI>
         <Mirror>https://www.team-fortress.su/downloads/cfgs/comangliamaxfps/comangliamaxfps_15d3910f.zip</Mirror>
         <SupportedGames>240;440</SupportedGames>
         <ru>
@@ -172,7 +172,7 @@ Graphics degradation: 16-bit style]]>
     </Config>
     <Config>
         <Name>comangliastability</Name>
-        <URI>https://www.team-fortress.su/downloads/cfgs/comangliastability/comangliastability_14357fed.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2cfgs/releases/download/2019.12.20/comangliastability_14357fed.zip</URI>
         <Mirror>https://www.team-fortress.su/downloads/cfgs/comangliastability/comangliastability_14357fed.zip</Mirror>
         <SupportedGames>240;440</SupportedGames>
         <ru>
@@ -193,7 +193,7 @@ Graphics degradation: Moderate]]>
     </Config>
     <Config>
         <Name>dt_legal</Name>
-        <URI>https://www.team-fortress.su/downloads/cfgs/dt_legal/dt_legal_d4d38554.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2cfgs/releases/download/2019.12.20/dt_legal_d4d38554.zip</URI>
         <Mirror>https://www.team-fortress.su/downloads/cfgs/dt_legal/dt_legal_d4d38554.zip</Mirror>
         <SupportedGames>240</SupportedGames>
         <ru>
@@ -214,7 +214,7 @@ Graphics degradation: Medium]]>
     </Config>
     <Config>
         <Name>m0refps</Name>
-        <URI>https://www.team-fortress.su/downloads/cfgs/m0refps/m0refps_811f86a8.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2cfgs/releases/download/2019.12.20/m0refps_811f86a8.zip</URI>
         <Mirror>https://www.team-fortress.su/downloads/cfgs/m0refps/m0refps_811f86a8.zip</Mirror>
         <SupportedGames>240</SupportedGames>
         <ru>
@@ -235,7 +235,7 @@ Graphics degradation: Moderate]]>
     </Config>
     <Config>
         <Name>m0rehighfps</Name>
-        <URI>https://www.team-fortress.su/downloads/cfgs/m0rehighfps/m0rehighfps_8263b7a1.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2cfgs/releases/download/2019.12.20/m0rehighfps_8263b7a1.zip</URI>
         <Mirror>https://www.team-fortress.su/downloads/cfgs/m0rehighfps/m0rehighfps_8263b7a1.zip</Mirror>
         <SupportedGames>240</SupportedGames>
         <ru>
@@ -256,7 +256,7 @@ Graphics degradation: High]]>
     </Config>
     <Config>
         <Name>skullhighfps</Name>
-        <URI>https://www.team-fortress.su/downloads/cfgs/skullhighfps/skullhighfps_3a1aab60.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2cfgs/releases/download/2019.12.20/skullhighfps_3a1aab60.zip</URI>
         <Mirror>https://www.team-fortress.su/downloads/cfgs/skullhighfps/skullhighfps_3a1aab60.zip</Mirror>
         <SupportedGames>240</SupportedGames>
         <ru>
@@ -277,7 +277,7 @@ Graphics degradation: Moderate]]>
     </Config>
     <Config>
         <Name>v1tsk's_generic</Name>
-        <URI>https://www.team-fortress.su/downloads/cfgs/v1tsk_generic/v1tsk_generic_1a2fd59b.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2cfgs/releases/download/2019.12.20/v1tsk_generic_1a2fd59b.zip</URI>
         <Mirror>https://www.team-fortress.su/downloads/cfgs/v1tsk_generic/v1tsk_generic_1a2fd59b.zip</Mirror>
         <SupportedGames>240;440</SupportedGames>
         <ru>
@@ -298,7 +298,7 @@ Graphics degradation: No]]>
     </Config>
     <Config>
         <Name>mastercomfig-maxperf</Name>
-        <URI>https://www.team-fortress.su/downloads/cfgs/mastercomfigpf/mastercomfigpf_91337bb4.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2cfgs/releases/download/2019.12.20/mastercomfigpf_91337bb4.zip</URI>
         <Mirror>https://www.team-fortress.su/downloads/cfgs/mastercomfigpf/mastercomfigpf_91337bb4.zip</Mirror>
         <SupportedGames>440</SupportedGames>
         <ru>
@@ -319,7 +319,7 @@ Graphics degradation: 16-bit style]]>
     </Config>
     <Config>
         <Name>mastercomfig-quality</Name>
-        <URI>https://www.team-fortress.su/downloads/cfgs/mastercomfigmq/mastercomfigmq_5d678368.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2cfgs/releases/download/2019.12.20/mastercomfigmq_5d678368.zip</URI>
         <Mirror>https://www.team-fortress.su/downloads/cfgs/mastercomfigmq/mastercomfigmq_5d678368.zip</Mirror>
         <SupportedGames>440</SupportedGames>
         <ru>
@@ -340,7 +340,7 @@ Graphics degradation: None]]>
     </Config>
     <Config>
         <Name>rhaprody-perf</Name>
-        <URI>https://www.team-fortress.su/downloads/cfgs/rhapsodyfps/rhapsodyfps_cfe918ab.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2cfgs/releases/download/2019.12.20/rhapsodyfps_cfe918ab.zip</URI>
         <Mirror>https://www.team-fortress.su/downloads/cfgs/rhapsodyfps/rhapsodyfps_cfe918ab.zip</Mirror>
         <SupportedGames>440</SupportedGames>
         <ru>
