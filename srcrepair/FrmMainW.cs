@@ -3172,7 +3172,7 @@ namespace srcrepair.gui
                         if (File.Exists(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LocalFile))
                         {
                             // Checking hash of downloaded file...
-                            if (Properties.Settings.Default.HUDUseUpstream || FileManager.CalculateFileSHA512(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LocalFile) == App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].FileHash)
+                            if (Properties.Settings.Default.HUDUseUpstream || App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].CheckHash())
                             {
                                 // Checking if selected HUD is installed...
                                 if (HUDManager.CheckInstalledHUD(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir))

@@ -93,6 +93,14 @@ namespace srcrepair.core
         public string LocalFile { get; private set; }
 
         /// <summary>
+        /// Checks hash sum of the locally downloaded file with the etalon.
+        /// </summary>
+        public bool CheckHash()
+        {
+            return FileManager.CalculateFileSHA512(LocalFile) == FileHash;
+        }
+
+        /// <summary>
         /// HUDSingle class constructor.
         /// </summary>
         /// <param name="HDName">Value Name from database.</param>
