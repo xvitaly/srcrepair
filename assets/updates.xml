@@ -33,16 +33,16 @@
         <Hash2>4fa761c0a93a906383afbaad559d26f4ad7ab8eefe90ccb8f86bd4db6d343c73bcf40a0567e434ebc5d323d20ab0f226fb964d29bf0d1c93fca2426846042994</Hash2>
     </GameDB>
     <HUDDB>
-        <Version>20</Version>
+        <Version>21</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/huds.xml</URL>
-        <Hash>9f82f8162bec5c428747bcfbf432c9af</Hash>
-        <Hash2>06e5f9b84f9d7bc481e5e3f540059c5b7646df8660945a13e1ac76324defad8cb55270521130bacdc78dd5c6805f25c47f0f07037562f3d07960f0d57f32d08d</Hash2>
+        <Hash>be3865920c80cc56e730aebd6fb7094c</Hash>
+        <Hash2>0cb63b3b995725db30198a4f5a4857ca087aeacb068f7af5a93d602352c2707540a782fbae5dd06ddacccf353915d9da369d85d0903cce0269bd46702ee983a3</Hash2>
     </HUDDB>
     <CfgDB>
-        <Version>3</Version>
+        <Version>4</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/configs.xml</URL>
-        <Hash>da412cf5fce04c1f77e7c9cc6739712a</Hash>
-        <Hash2>b5e8c0a0dd408b15c2d74019f2215f307d63b7f1ba1a8d8c582ef5e5f3166ad5c188a0e6bdf708033f431320f25e695f1d8900825bba14ad2d81ee9c6810524e</Hash2>
+        <Hash>2f29425083efc435eb1f325b82e1dc89</Hash>
+        <Hash2>259bf340f1c0a32aa1058484c9b6de9f1f54a79d467b410b0e20a1b434f20f1eccda33fe773e01e78eb38625adfb7c49eb4a904435ff90a78a0051e3c0a1b3db</Hash2>
     </CfgDB>
     <ClnDB>
         <Version>5</Version>
