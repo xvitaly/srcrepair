@@ -298,6 +298,7 @@ XML database example
             <Game>tf</Game>
             <IsUpdated>1</IsUpdated>
             <URI>https://sourceforge.net/projects/srcrepair/files/huds/7hud/7hud_28903d1b.zip</URI>
+            <Mirror>https://www.team-fortress.su/downloads/huds/7hud/7hud_28903d1b.zip</Mirror>
             <UpURI>https://github.com/Sevin7/7HUD/archive/master.zip</UpURI>
             <Preview>https://www.easycoding.org/files/srcrepair/huds/7hud.jpg</Preview>
             <RepoPath>https://github.com/Sevin7/7HUD</RepoPath>
@@ -327,6 +328,7 @@ Level 2:
   * ``Game`` -- short name of the supported by this HUD game (``SmallName`` from :ref:`games database <games-database>`);
   * ``IsUpdated`` -- ``1`` if HUD supports the latest version of the game, ``0`` -- if don't;
   * ``URI`` -- fully-qualified Zip archive download URL (safe redirects (3XX HTTP codes) are allowed);
+  * ``Mirror`` -- fully-qualified Zip archive download mirror URL (safe redirects (3XX HTTP codes) are allowed);
   * ``UpURI`` -- upstream download archive URL (safe redirects (3XX HTTP codes) are allowed);
   * ``Preview`` -- screenshot of the game with this HUD or any custom image (JPEG and PNG formats are supported);
   * ``RepoPath`` -- GitHub repository URL or ``null``;
