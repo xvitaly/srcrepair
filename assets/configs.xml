@@ -22,8 +22,8 @@
 <Configs>
     <Config>
         <Name>bonhighfps</Name>
-        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/bonhighfps/bonhighfps_8126e079.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/cfgs/bonhighfps_8126e079.zip</Mirror>
+        <URI>https://www.team-fortress.su/downloads/cfgs/bonhighfps/bonhighfps_8126e079.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/cfgs/bonhighfps/bonhighfps_8126e079.zip</Mirror>
         <SupportedGames>240</SupportedGames>
         <ru>
         <![CDATA[Один из самых продвинутых FPS-конфигов. При его использовании изображение становится похожим на картинку на 16-битной консоли.
@@ -46,8 +46,8 @@ Warning: outdated. Do not use on latest Team Fortress 2 versions!
     </Config>
     <Config>
         <Name>chrisdx9frames</Name>
-        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/chrisdx9frames/chrisdx9frames_e7c8442e.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/cfgs/chrisdx9frames_e7c8442e.zip</Mirror>
+        <URI>https://www.team-fortress.su/downloads/cfgs/chrisdx9frames/chrisdx9frames_e7c8442e.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/cfgs/chrisdx9frames/chrisdx9frames_e7c8442e.zip</Mirror>
         <SupportedGames>240</SupportedGames>
         <ru>
         <![CDATA[Dx9frames - это специальная модификация конфига chrishighframes для работы в режиме DirectX 9.0. Рекомендуется на не слишком старых ПК.
@@ -67,8 +67,8 @@ Graphics degradation: Some]]>
     </Config>
     <Config>
         <Name>chrishighframes</Name>
-        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/chrishighframes/chrishighframes_22be2b5c.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/cfgs/chrishighframes_22be2b5c.zip</Mirror>
+        <URI>https://www.team-fortress.su/downloads/cfgs/chrishighframes/chrishighframes_22be2b5c.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/cfgs/chrishighframes/chrishighframes_22be2b5c.zip</Mirror>
         <SupportedGames>240</SupportedGames>
         <ru>
         <![CDATA[Неплохой FPS-конфиг, при значительном увеличении кадровой частоты, не сильно портящий изображение. Рекомендуется на не слишком старых ПК.
@@ -88,8 +88,8 @@ Graphics degradation: Some]]>
     </Config>
     <Config>
         <Name>chrismaxfps</Name>
-        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/chrismaxfps/chrismaxfps_b92d311a.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/cfgs/chrismaxfps_b92d311a.zip</Mirror>
+        <URI>https://www.team-fortress.su/downloads/cfgs/chrismaxfps/chrismaxfps_b92d311a.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/cfgs/chrismaxfps/chrismaxfps_b92d311a.zip</Mirror>
         <SupportedGames>240</SupportedGames>
         <ru>
         <![CDATA[Хороший FPS-конфиг, при значительном увеличении кадровой частоты, незначительно портящий изображение. Рекомендуется к использованию на старых ПК.
@@ -109,8 +109,8 @@ Graphics degradation: Some]]>
     </Config>
     <Config>
         <Name>chrismaxquality</Name>
-        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/chrismaxquality/chrismaxquality_11073360.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/cfgs/chrismaxquality_11073360.zip</Mirror>
+        <URI>https://www.team-fortress.su/downloads/cfgs/chrismaxquality/chrismaxquality_11073360.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/cfgs/chrismaxquality/chrismaxquality_11073360.zip</Mirror>
         <SupportedGames>240</SupportedGames>
         <ru>
         <![CDATA[FPS-конфиг "наоборот". Устанавливает все графические настройки игры на максимум, что позволит получить наилучшее качество графики. Устанавливайте только на мощном современном компьютере.
@@ -130,8 +130,8 @@ Graphics degradation: None]]>
     </Config>
     <Config>
         <Name>comangliacinema</Name>
-        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/comangliacinema/comangliacinema_beaa0b8e.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/cfgs/comangliacinema_beaa0b8e.zip</Mirror>
+        <URI>https://www.team-fortress.su/downloads/cfgs/comangliacinema/comangliacinema_beaa0b8e.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/cfgs/comangliacinema/comangliacinema_beaa0b8e.zip</Mirror>
         <SupportedGames>240;440</SupportedGames>
         <ru>
         <![CDATA[FPS-конфиг "наоборот". Устанавливает все графические настройки игры на максимум, что позволит получить наилучшее качество графики. Данный конфиг создан специально для создателей видеороликов. Используйте только на мощном современном компьютере.
@@ -151,8 +151,8 @@ Graphics degradation: None]]>
     </Config>
     <Config>
         <Name>comangliamaxfps</Name>
-        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/comangliamaxfps/comangliamaxfps_15d3910f.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/cfgs/comangliamaxfps_15d3910f.zip</Mirror>
+        <URI>https://www.team-fortress.su/downloads/cfgs/comangliamaxfps/comangliamaxfps_15d3910f.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/cfgs/comangliamaxfps/comangliamaxfps_15d3910f.zip</Mirror>
         <SupportedGames>240;440</SupportedGames>
         <ru>
         <![CDATA[Улучшенный вариант FPS-конфига от Chris. Обеспечивает значительный прирост кадровой частоты при сильном ухудшении качества картинки. Автор предупреждает о том, что данный конфиг нестабилен на системах с одноядерным процессором (вместо него следует использовать comangliastability.cfg).
@@ -172,8 +172,8 @@ Graphics degradation: 16-bit style]]>
     </Config>
     <Config>
         <Name>comangliastability</Name>
-        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/comangliastability/comangliastability_14357fed.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/cfgs/comangliastability_14357fed.zip</Mirror>
+        <URI>https://www.team-fortress.su/downloads/cfgs/comangliastability/comangliastability_14357fed.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/cfgs/comangliastability/comangliastability_14357fed.zip</Mirror>
         <SupportedGames>240;440</SupportedGames>
         <ru>
         <![CDATA[Неплохой FPS-конфиг, при значительном увеличении кадровой частоты, не сильно портящий изображение. Улучшенная версия конфига от Криса. Оптимизирован для максимальной стабильности. Рекомендуется на не слишком старых ПК.
@@ -193,8 +193,8 @@ Graphics degradation: Moderate]]>
     </Config>
     <Config>
         <Name>dt_legal</Name>
-        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/dt_legal/dt_legal_d4d38554.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/cfgs/dt_legal_d4d38554.zip</Mirror>
+        <URI>https://www.team-fortress.su/downloads/cfgs/dt_legal/dt_legal_d4d38554.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/cfgs/dt_legal/dt_legal_d4d38554.zip</Mirror>
         <SupportedGames>240</SupportedGames>
         <ru>
     <![CDATA[Хороший конфиг для слабых машин, обеспечивающий значительный прирост кадровой частоты. Полностью легален для использования в большинстве европейских киберспортивных лиг.
@@ -214,8 +214,8 @@ Graphics degradation: Medium]]>
     </Config>
     <Config>
         <Name>m0refps</Name>
-        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/m0refps/m0refps_811f86a8.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/cfgs/m0refps_811f86a8.zip</Mirror>
+        <URI>https://www.team-fortress.su/downloads/cfgs/m0refps/m0refps_811f86a8.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/cfgs/m0refps/m0refps_811f86a8.zip</Mirror>
         <SupportedGames>240</SupportedGames>
         <ru>
         <![CDATA[Довольно известный в кругу киберспортсменов конфиг, который при достаточно сильном снижении качества графики даёт не слишком большой прирост в FPS. Рекомендуется использовать сей конфиг лишь на «средних» компьютерах.
@@ -235,8 +235,8 @@ Graphics degradation: Moderate]]>
     </Config>
     <Config>
         <Name>m0rehighfps</Name>
-        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/m0rehighfps/m0rehighfps_8263b7a1.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/cfgs/m0rehighfps_8263b7a1.zip</Mirror>
+        <URI>https://www.team-fortress.su/downloads/cfgs/m0rehighfps/m0rehighfps_8263b7a1.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/cfgs/m0rehighfps/m0rehighfps_8263b7a1.zip</Mirror>
         <SupportedGames>240</SupportedGames>
         <ru>
         <![CDATA[Первый мощный и качественный FPS-конфиг, рассчитанный в основном на старые компьютеры. Очень сильно ухудшает качество графики TF2 (игра начинает напоминать CS 1.6), но позволяет играть даже на самых слабых компьютерах.
@@ -256,8 +256,8 @@ Graphics degradation: High]]>
     </Config>
     <Config>
         <Name>skullhighfps</Name>
-        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/skullhighfps/skullhighfps_3a1aab60.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/cfgs/skullhighfps_3a1aab60.zip</Mirror>
+        <URI>https://www.team-fortress.su/downloads/cfgs/skullhighfps/skullhighfps_3a1aab60.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/cfgs/skullhighfps/skullhighfps_3a1aab60.zip</Mirror>
         <SupportedGames>240</SupportedGames>
         <ru>
         <![CDATA[Конфиг от Skull'a. По производительности почти идентичен конфигу bon'a, но графика в игре становится немного лучше, чем при использовании bonhighfps. Рекомендуется использовать на старых ПК, страдающих острой нехваткой кадровой частоты.
@@ -277,8 +277,8 @@ Graphics degradation: Moderate]]>
     </Config>
     <Config>
         <Name>v1tsk's_generic</Name>
-        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/v1tsk_generic/v1tsk_generic_1a2fd59b.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/cfgs/v1tsk_generic_1a2fd59b.zip</Mirror>
+        <URI>https://www.team-fortress.su/downloads/cfgs/v1tsk_generic/v1tsk_generic_1a2fd59b.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/cfgs/v1tsk_generic/v1tsk_generic_1a2fd59b.zip</Mirror>
         <SupportedGames>240;440</SupportedGames>
         <ru>
         <![CDATA[Базовый конфиг (ранее назывался team-fortress.ru), обеспечивающий небольшой плюс к FPS, но и не портящий изображение. Он снижает только те параметры, которые обеспечивают максимальный прирост графики. Рекомендуется к использованию любому игроку.
@@ -298,8 +298,8 @@ Graphics degradation: No]]>
     </Config>
     <Config>
         <Name>mastercomfig-maxperf</Name>
-        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/mastercomfigpf/mastercomfigpf_91337bb4.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/cfgs/mastercomfigpf_91337bb4.zip</Mirror>
+        <URI>https://www.team-fortress.su/downloads/cfgs/mastercomfigpf/mastercomfigpf_91337bb4.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/cfgs/mastercomfigpf/mastercomfigpf_91337bb4.zip</Mirror>
         <SupportedGames>440</SupportedGames>
         <ru>
         <![CDATA[Доработанный и улучшенный вариант FPS-конфига. Обеспечивает значительный прирост кадровой частоты при очень сильном ухудшении качества картинки. Должен обеспечивать максимально высокий прирост производительности игры.
@@ -319,8 +319,8 @@ Graphics degradation: 16-bit style]]>
     </Config>
     <Config>
         <Name>mastercomfig-quality</Name>
-        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/mastercomfigmq/mastercomfigmq_5d678368.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/cfgs/mastercomfigmq_5d678368.zip</Mirror>
+        <URI>https://www.team-fortress.su/downloads/cfgs/mastercomfigmq/mastercomfigmq_5d678368.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/cfgs/mastercomfigmq/mastercomfigmq_5d678368.zip</Mirror>
         <SupportedGames>440</SupportedGames>
         <ru>
         <![CDATA[FPS-конфиг "наоборот". Устанавливает все графические настройки игры на максимум, что позволит получить наилучшее качество графики. Данный конфиг создан специально для создателей видеороликов. Используйте только на мощном современном компьютере.
@@ -340,8 +340,8 @@ Graphics degradation: None]]>
     </Config>
     <Config>
         <Name>rhaprody-perf</Name>
-        <URI>https://sourceforge.net/projects/srcrepair/files/cfgs/rhapsodyfps/rhapsodyfps_cfe918ab.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/cfgs/rhapsodyfps_cfe918ab.zip</Mirror>
+        <URI>https://www.team-fortress.su/downloads/cfgs/rhapsodyfps/rhapsodyfps_cfe918ab.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/cfgs/rhapsodyfps/rhapsodyfps_cfe918ab.zip</Mirror>
         <SupportedGames>440</SupportedGames>
         <ru>
         <![CDATA[Неплохой вариант FPS-конфига. Обеспечивает прирост кадровой частоты при среднем ухудшении качества графики. Должен обеспечивать приемлемую производительность игры на большинстве компьютеров.
