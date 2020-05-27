@@ -43,6 +43,11 @@ namespace srcrepair.core
         public string URI { get; private set; }
 
         /// <summary>
+        /// Gets HUD alternative download URL.
+        /// </summary>
+        public string Mirror { get; private set; }
+
+        /// <summary>
         /// Gets HUD upstream download URL.
         /// </summary>
         public string UpURI { get; private set; }
@@ -93,6 +98,7 @@ namespace srcrepair.core
         /// <param name="HDName">Value Name from database.</param>
         /// <param name="HDGame">Value Game from database.</param>
         /// <param name="HDURI">Value URI from database.</param>
+        /// <param name="HDMirror">Value URI from database.</param>
         /// <param name="HDUpURI">Value UpURI from database.</param>
         /// <param name="HDIsUp">Value IsUpdated from database.</param>
         /// <param name="HDPreview">Value Preview from database.</param>
@@ -101,11 +107,12 @@ namespace srcrepair.core
         /// <param name="HDId">Value InstallDir from database.</param>
         /// <param name="UPDHash">Value Hash from database.</param>
         /// <param name="HDLocal">Full path to HUD archive file on disk.</param>
-        public HUDSingle(string HDName, string HDGame, string HDURI, string HDUpURI, bool HDIsUp, string HDPreview, string HDUpTime, string HDSite, string HDAd, string HDId, string UPDHash, string HDLocal)
+        public HUDSingle(string HDName, string HDGame, string HDURI, string HDMirror, string HDUpURI, bool HDIsUp, string HDPreview, string HDUpTime, string HDSite, string HDAd, string HDId, string UPDHash, string HDLocal)
         {
             Name = HDName;
             Game = HDGame;
             URI = HDURI;
+            Mirror = HDMirror;
             UpURI = HDUpURI;
             IsUpdated = HDIsUp;
             Preview = HDPreview;
