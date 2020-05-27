@@ -1346,6 +1346,92 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// Checks if the selected HUD is installed.
+        /// </summary>
+        /// <returns>Returns True if selected HUD is installed.</returns>
+        private bool CheckIfHUDInstalled()
+        {
+            return HUDManager.CheckInstalledHUD(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir);
+        }
+
+        /// <summary>
+        /// Gets HUD download URI.
+        /// </summary>
+        /// <param name="ForceMirror">Force use of the reserve server.</param>
+        /// <returns>Returns HUD download URI.</returns>
+        private string GetHUDDownloadURI(bool ForceMirror)
+        {
+            string Result = App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].URI;
+
+            if (ForceMirror)
+            {
+                Result = App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].Mirror;
+            }
+            else
+            {
+                if (Properties.Settings.Default.HUDUseUpstream)
+                {
+                    Result = App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].UpURI;
+                }
+            }
+
+            return Result;
+        }
+
+        /// <summary>
+        /// Downloads HUD archive from the main or reserve server.
+        /// </summary>
+        /// <param name="ForceMirror">Force use of the reserve server.</param>
+        /// <returns>Returns True if the file was downloaded.</returns>
+        private bool DownloadHUD(bool ForceMirror = false)
+        {
+            GuiHelpers.FormShowDownloader(GetHUDDownloadURI(ForceMirror), App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LocalFile);
+            return File.Exists(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LocalFile);
+        }
+
+        /// <summary>
+        /// Installs the contents of the downloaded HUD archive.
+        /// </summary>
+        private void InstallHUD()
+        {
+            // Checking hash of downloaded file...
+            if (Properties.Settings.Default.HUDUseUpstream || App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].CheckHash())
+            {
+                // Checking if selected HUD is installed...
+                if (CheckIfHUDInstalled())
+                {
+                    // Removing installed files...
+                    GuiHelpers.FormShowRemoveFiles(Path.Combine(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir));
+                }
+
+                // Extracting downloaded archove...
+                GuiHelpers.FormShowArchiveExtract(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LocalFile, Path.Combine(App.SourceGames[AppSelector.Text].CustomInstallDir, "hudtemp"));
+
+                // Installing files in a separate thread...
+                HD_Install.Enabled = false;
+                if (!BW_HudInstall.IsBusy)
+                {
+                    BW_HudInstall.RunWorkerAsync(argument: new List<String> { AppSelector.Text, HD_HSel.Text });
+                }
+            }
+            else
+            {
+                // Hash missmatch. Show error...
+                MessageBox.Show(AppStrings.HD_HashError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            // Removing downloaded file...
+            try
+            {
+                File.Delete(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LocalFile);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExHudArchRem);
+            }
+        }
+
         #endregion
 
         #region Internal Workers
@@ -3166,49 +3252,23 @@ namespace srcrepair.gui
                     if (MessageBox.Show(String.Format("{0}?", ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
                         // Downloading HUD archive...
-                        GuiHelpers.FormShowDownloader(Properties.Settings.Default.HUDUseUpstream ? App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].UpURI : App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].URI, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LocalFile);
+                        bool DownloadResult = DownloadHUD();
 
-                        // Checking if downloaded archive exists...
-                        if (File.Exists(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LocalFile))
+                        // If cannot download from the main server, let's try mirrors...
+                        if (!DownloadResult)
                         {
-                            // Checking hash of downloaded file...
-                            if (Properties.Settings.Default.HUDUseUpstream || App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].CheckHash())
-                            {
-                                // Checking if selected HUD is installed...
-                                if (HUDManager.CheckInstalledHUD(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir))
-                                {
-                                    // Removing installed files...
-                                    GuiHelpers.FormShowRemoveFiles(Path.Combine(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir));
-                                }
+                            Logger.Warn(DebugStrings.AppDbgHUDDnlMain);
+                            DownloadResult = DownloadHUD(true);
+                        }
 
-                                // Extracting downloaded archove...
-                                GuiHelpers.FormShowArchiveExtract(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LocalFile, Path.Combine(App.SourceGames[AppSelector.Text].CustomInstallDir, "hudtemp"));
-
-                                // Installing files in a separate thread...
-                                ((Button)sender).Enabled = false;
-                                if (!BW_HudInstall.IsBusy)
-                                {
-                                    BW_HudInstall.RunWorkerAsync(argument: new List<String> { AppSelector.Text, HD_HSel.Text });
-                                }
-                            }
-                            else
-                            {
-                                // Hash missmatch. Show error...
-                                MessageBox.Show(AppStrings.HD_HashError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            }
-
-                            // Removing downloaded file...
-                            try
-                            {
-                                File.Delete(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LocalFile);
-                            }
-                            catch (Exception Ex)
-                            {
-                                Logger.Warn(Ex, DebugStrings.AppDbgExHudArchRem);
-                            }
+                        // Installing downloaded HUD...
+                        if (DownloadResult)
+                        {
+                            InstallHUD();
                         }
                         else
                         {
+                            Logger.Error(DebugStrings.AppDbgHUDDnlMirror);
                             MessageBox.Show(AppStrings.HD_DownloadError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }

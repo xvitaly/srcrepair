@@ -761,5 +761,23 @@ namespace srcrepair.gui {
                 return ResourceManager.GetString("AppDbgFPSDnlMirror", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to download HUD archive from the main server. Trying mirror..
+        /// </summary>
+        internal static string AppDbgHUDDnlMain {
+            get {
+                return ResourceManager.GetString("AppDbgHUDDnlMain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to download HUD archive from the secondary server. All mirrors were tried..
+        /// </summary>
+        internal static string AppDbgHUDDnlMirror {
+            get {
+                return ResourceManager.GetString("AppDbgHUDDnlMirror", resourceCulture);
+            }
+        }
     }
 }

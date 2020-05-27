@@ -351,4 +351,10 @@
   <data name="AppDbgFPSDnlMirror" xml:space="preserve">
     <value>Failed to download FPS-config from the secondary server. All mirrors were tried.</value>
   </data>
+  <data name="AppDbgHUDDnlMain" xml:space="preserve">
+    <value>Failed to download HUD archive from the main server. Trying mirror.</value>
+  </data>
+  <data name="AppDbgHUDDnlMirror" xml:space="preserve">
+    <value>Failed to download HUD archive from the secondary server. All mirrors were tried.</value>
+  </data>
 </root>
