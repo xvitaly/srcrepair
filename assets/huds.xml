@@ -57,7 +57,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://www.team-fortress.su/downloads/huds/toonhud/toonhud_75ebc5e4.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/toonhud/toonhud_75ebc5e4.zip</Mirror>
+        <Mirror>https://toonhud.com/downloads/toonhud_11-1.zip</Mirror>
         <UpURI>https://toonhud.com/downloads/toonhud_11-1.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/toonhud.jpg</Preview>
         <RepoPath>null</RepoPath>
@@ -184,14 +184,14 @@
         <Name>E.V.E. HUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://www.team-fortress.su/downloads/huds/evehud/evehud_1fb69b0d.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/evehud/evehud_1fb69b0d.zip</Mirror>
-        <UpURI>https://files.gamebanana.com/guis/eve_hud_v424.zip</UpURI>
+        <URI>https://www.team-fortress.su/downloads/huds/evehud/evehud_d29dfe7c.zip</URI>
+        <Mirror>https://files.gamebanana.com/guis/eve_hud_v426.zip</Mirror>
+        <UpURI>https://files.gamebanana.com/guis/eve_hud_v426.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/evehud.jpg</Preview>
         <RepoPath>null</RepoPath>
-        <Hash>f69706cf537269dd128f8bde3046b4fd</Hash>
-        <Hash2>270f0062d28442d3627a44dc2ae35417d97d27415ec8dc3ae9d02b2dc06a081bed7a01fd114a0c36cdf180a69a1303fad8ab6458c5e44fcf1dc320b1c398a73e</Hash2>
-        <LastUpdate>1522800000</LastUpdate>
+        <Hash>1f0ef2b47a7f020979b49f4190a185b2</Hash>
+        <Hash2>edc62a7129f230358928fb219350434e065ab80ed1098f00d56c2c3ee515a18322bbe35bb2c042af7035d93192ea3f0a59df923a6b5dd6c264ee6ca05f39b6a6</Hash2>
+        <LastUpdate>1553955477</LastUpdate>
         <Site>https://gamebanana.com/guis/25711</Site>
         <ArchiveDir>eve hud</ArchiveDir>
         <InstallDir>evehud</InstallDir>
