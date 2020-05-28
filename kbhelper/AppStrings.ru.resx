@@ -141,6 +141,9 @@
   <data name="KB_NoAdminRights" xml:space="preserve">
     <value>Для работы этой программы она должна быть запущена с правами администратора!</value>
   </data>
+  <data name="KB_OSNotSupported" xml:space="preserve">
+    <value>Используемая операционная система не поддерживается данным приложением!</value>
+  </data>
   <data name="KB_RestoreQuestion" xml:space="preserve">
     <value>Восстановить настройки по умолчанию?</value>
   </data>

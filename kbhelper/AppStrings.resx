@@ -141,6 +141,9 @@
   <data name="KB_NoAdminRights" xml:space="preserve">
     <value>This program must be run with admin rights!</value>
   </data>
+  <data name="KB_OSNotSupported" xml:space="preserve">
+    <value>Sorry, but this operating system is not supported by this application!</value>
+  </data>
   <data name="KB_RestoreQuestion" xml:space="preserve">
     <value>Restore default settings?</value>
   </data>

@@ -133,6 +133,15 @@ namespace srcrepair.gui.kbhelper {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sorry, but this operating system is not supported by this application!.
+        /// </summary>
+        internal static string KB_OSNotSupported {
+            get {
+                return ResourceManager.GetString("KB_OSNotSupported", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Restore default settings?.
         /// </summary>
         internal static string KB_RestoreQuestion {

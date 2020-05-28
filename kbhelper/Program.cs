@@ -33,26 +33,34 @@ namespace srcrepair.gui.kbhelper
         [STAThread]
         static void Main()
         {
-            using (Mutex Mtx = new Mutex(false, Properties.Resources.AppName))
+            CurrentPlatform Platform = new CurrentPlatform();
+            if (Platform.OS == CurrentPlatform.OSType.Windows)
             {
-                if (Mtx.WaitOne(0, false))
+                if (ProcessManager.IsCurrentUserAdmin())
                 {
-                    if (ProcessManager.IsCurrentUserAdmin())
+                    using (Mutex Mtx = new Mutex(false, Properties.Resources.AppName))
                     {
-                        Application.EnableVisualStyles();
-                        Application.SetCompatibleTextRenderingDefault(false);
-                        Application.Run(new FrmKBHelper());
-                    }
-                    else
-                    {
-                        MessageBox.Show(AppStrings.KB_NoAdminRights, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (Mtx.WaitOne(0, false))
+                        {
+                            Application.EnableVisualStyles();
+                            Application.SetCompatibleTextRenderingDefault(false);
+                            Application.Run(new FrmKBHelper());
+                        }
+                        else
+                        {
+                            MessageBox.Show(AppStrings.KB_AlrLaunched, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            Environment.Exit(ReturnCodes.AppAlreadyRunning);
+                        }
                     }
                 }
                 else
                 {
-                    MessageBox.Show(AppStrings.KB_AlrLaunched, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Environment.Exit(ReturnCodes.AppAlreadyRunning);
+                    MessageBox.Show(AppStrings.KB_NoAdminRights, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+            else
+            {
+                MessageBox.Show(AppStrings.KB_OSNotSupported, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
