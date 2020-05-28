@@ -6,7 +6,7 @@
 [![FPS-config downloads](https://img.shields.io/github/downloads/EasyCoding/tf2cfgs/total.svg?label=FPS%20configs&logo=pinboard)](https://github.com/xvitaly/srcrepair/releases)
 [![Build status](https://travis-ci.org/xvitaly/srcrepair.svg?branch=master)](https://travis-ci.org/xvitaly/srcrepair)
 [![Build status](https://ci.appveyor.com/api/projects/status/9r2yma3aab972blf?svg=true)](https://ci.appveyor.com/project/xvitaly/srcrepair)
-[![GitHub issues](https://img.shields.io/github/issues/xvitaly/srcrepair.svg?label=issues&maxAge=60)](https://github.com/xvitaly/srcrepair/issues)
+[![GitHub issues](https://img.shields.io/github/issues/xvitaly/srcrepair.svg?label=issues)](https://github.com/xvitaly/srcrepair/issues)
 ---
 
 **SRC Repair** (ex. TF2 Repair) is a free open source tool that can be used for tuning and cleaning up Steam and Source
