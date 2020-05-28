@@ -1299,13 +1299,23 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Downloads FPS config from the main or reserve server.
+        /// Gets FPS-config download URI.
+        /// </summary>
+        /// <param name="ForceMirror">Force use of the reserve server.</param>
+        /// <returns>Returns FPS-config download URI.</returns>
+        private string GetFPSConfigDownloadURI(bool ForceMirror)
+        {
+            return Properties.Settings.Default.FPSUseMirror || ForceMirror ? App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].Mirror : App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].URI;
+        }
+
+        /// <summary>
+        /// Downloads FPS-config from the main or reserve server.
         /// </summary>
         /// <param name="ForceMirror">Force use of the reserve server.</param>
         /// <returns>Returns True if the file was downloaded.</returns>
         private bool DownloadFPSConfig(bool ForceMirror = false)
         {
-            GuiHelpers.FormShowDownloader(Properties.Settings.Default.FPSUseMirror || ForceMirror ? App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].Mirror : App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].URI, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile);
+            GuiHelpers.FormShowDownloader(GetFPSConfigDownloadURI(ForceMirror), App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile);
             return File.Exists(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile);
         }
 
