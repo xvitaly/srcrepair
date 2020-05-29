@@ -60,29 +60,9 @@ VersionInfoCompany=EasyCoding Team
 [Messages]
 BeveledLabel=EasyCoding Team
 
-[CustomMessages]
-OptNetStatus=Optimizing MSIL binary...
-OptNetUninstallStatus=Removing optimized MSIL binaries...
-CompCoreDesc=Core files
-CompDebugDesc=Crash reporter data files
-CompPluginsMetaDesc=Additional plugins
-CompPluginKBHelperDesc=System hotkeys disabler
-CompLocalesMetaDesc=Localizations
-CompLocaleEnDesc=English (United States)
-CompLocaleRuDesc=Russian (Russian Federation)
-russian.OptNetStatus=Идёт оптимизация MSIL приложения...
-russian.OptNetUninstallStatus=Идёт удаление машинных сборок MSIL...
-russian.CompCoreDesc=Основные файлы программы
-russian.CompDebugDesc=Файлы для системы сообщения об ошибках
-russian.CompPluginsMetaDesc=Дополнительные внешние модули
-russian.CompPluginKBHelperDesc=Модуль отключения системных клавиш
-russian.CompLocalesMetaDesc=Локализации (многоязыковая поддержка)
-russian.CompLocaleEnDesc=Английский (English)
-russian.CompLocaleRuDesc=Русский (Russian)
-
 [Languages]
-Name: "english"; MessagesFile: "compiler:Default.isl"; InfoBeforeFile: "readme_en.rtf"
-Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"; InfoBeforeFile: "readme_ru.rtf"
+Name: "english"; MessagesFile: "compiler:Default.isl,locale\en\cm.isl"; InfoBeforeFile: "locale\en\readme.rtf"
+Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl,locale\ru\cm.isl"; InfoBeforeFile: "locale\ru\readme.rtf"
 
 [Components]
 Name: "core"; Description: "{cm:CompCoreDesc}"; Types: full compact custom; Flags: fixed
