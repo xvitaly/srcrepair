@@ -63,67 +63,92 @@ BeveledLabel=EasyCoding Team
 [CustomMessages]
 OptNetStatus=Optimizing MSIL binary...
 OptNetUninstallStatus=Removing optimized MSIL binaries...
-LnkOfflineHelp=SRC Repair Documentation
-ChmFileName=srcrepair_en.chm
+CompCoreDesc=Core files
+CompDebugDesc=Crash reporter data files
+CompPluginsMetaDesc=Additional plugins
+CompPluginKBHelperDesc=System hotkeys disabler
+CompLocalesMetaDesc=Localizations
+CompLocaleEnDesc=English (United States)
+CompLocaleRuDesc=Russian (Russian Federation)
 russian.OptNetStatus=Идёт оптимизация MSIL приложения...
 russian.OptNetUninstallStatus=Идёт удаление машинных сборок MSIL...
-russian.LnkOfflineHelp=Справочная система SRC Repair
-russian.ChmFileName=srcrepair_ru.chm
+russian.CompCoreDesc=Основные файлы программы
+russian.CompDebugDesc=Файлы для системы сообщения об ошибках
+russian.CompPluginsMetaDesc=Дополнительные внешние модули
+russian.CompPluginKBHelperDesc=Модуль отключения системных клавиш
+russian.CompLocalesMetaDesc=Локализации (многоязыковая поддержка)
+russian.CompLocaleEnDesc=Английский (English)
+russian.CompLocaleRuDesc=Русский (Russian)
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"; InfoBeforeFile: "readme_en.rtf"
 Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"; InfoBeforeFile: "readme_ru.rtf"
+
+[Components]
+Name: "core"; Description: "{cm:CompCoreDesc}"; Types: full compact custom; Flags: fixed
+Name: "debug"; Description: "{cm:CompDebugDesc}"; Types: full compact custom
+Name: "plugins"; Description: "{cm:CompPluginsMetaDesc}"; Types: full
+Name: "plugins\kbhelper"; Description: "{cm:CompPluginKBHelperDesc}"; Types: full
+Name: "locales"; Description: "{cm:CompLocalesMetaDesc}"; Types: full
+Name: "locales\en"; Description: "{cm:CompLocaleEnDesc}"; Types: full
+Name: "locales\ru"; Description: "{cm:CompLocaleRuDesc}"; Types: full
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "{#BASEDIR}\bin\Release\games.xml"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BASEDIR}\bin\Release\huds.xml"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BASEDIR}\bin\Release\configs.xml"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BASEDIR}\bin\Release\cleanup.xml"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BASEDIR}\bin\Release\DotNetZip.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BASEDIR}\bin\Release\NLog.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BASEDIR}\bin\Release\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BASEDIR}\bin\Release\srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BASEDIR}\bin\Release\kbhelper.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BASEDIR}\bin\Release\kbhelper.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BASEDIR}\bin\Release\corelib.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BASEDIR}\bin\Release\corelib.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BASEDIR}\bin\Release\srcrepair.exe.config"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BASEDIR}\bin\Release\kbhelper.exe.config"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BASEDIR}\bin\Release\srcrepair.VisualElementsManifest.xml"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#BASEDIR}\bin\Release\NLog.config"; DestDir: "{app}"; Flags: ignoreversion
-
-Source: "{#BASEDIR}\bin\Release\ru\*"; DestDir: "{app}\ru\"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "{#BASEDIR}\bin\Release\help\*"; DestDir: "{app}\help\"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#BASEDIR}\bin\Release\games.xml"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\huds.xml"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\configs.xml"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\cleanup.xml"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\DotNetZip.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\NLog.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion; Components: debug
+Source: "{#BASEDIR}\bin\Release\kbhelper.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: plugins\kbhelper
+Source: "{#BASEDIR}\bin\Release\kbhelper.pdb"; DestDir: "{app}"; Flags: ignoreversion; Components: plugins\kbhelper and debug
+Source: "{#BASEDIR}\bin\Release\corelib.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\corelib.pdb"; DestDir: "{app}"; Flags: ignoreversion; Components: debug
+Source: "{#BASEDIR}\bin\Release\srcrepair.exe.config"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\kbhelper.exe.config"; DestDir: "{app}"; Flags: ignoreversion; Components: plugins\kbhelper
+Source: "{#BASEDIR}\bin\Release\srcrepair.VisualElementsManifest.xml"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\NLog.config"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\ru\kbhelper.resources.dll"; DestDir: "{app}\ru"; Flags: ignoreversion; Components: locales\ru and plugins\kbhelper
+Source: "{#BASEDIR}\bin\Release\ru\srcrepair.resources.dll"; DestDir: "{app}\ru"; Flags: ignoreversion; Components: locales\ru
+Source: "{#BASEDIR}\bin\Release\help\srcrepair_en.chm"; DestDir: "{app}\help"; Flags: ignoreversion; Components: locales\en
+Source: "{#BASEDIR}\bin\Release\help\srcrepair_ru.chm"; DestDir: "{app}\help"; Flags: ignoreversion; Components: locales\ru
 
 #ifdef _RELEASE
-Source: "{#BASEDIR}\bin\Release\*.sig"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#BASEDIR}\bin\Release\srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\corelib.dll.sig"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\DotNetZip.dll.sig"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\NLog.dll.sig"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\kbhelper.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Components: plugins\kbhelper
+Source: "{#BASEDIR}\bin\Release\ru\srcrepair.resources.dll.sig"; DestDir: "{app}\ru"; Flags: ignoreversion; Components: locales\ru
+Source: "{#BASEDIR}\bin\Release\ru\kbhelper.resources.dll.sig"; DestDir: "{app}\ru"; Flags: ignoreversion; Components: locales\ru and plugins\kbhelper
 #endif
 
 [Icons]
-Name: "{group}\SRC Repair"; Filename: "{app}\srcrepair.exe"
-Name: "{group}\{cm:LnkOfflineHelp}"; Filename: "{app}\help\{cm:ChmFileName}"
-Name: "{group}\{cm:ProgramOnTheWeb,SRC Repair}"; Filename: "https://github.com/xvitaly/srcrepair"
-Name: "{userdesktop}\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: desktopicon
-Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: quicklaunchicon
+Name: "{group}\SRC Repair"; Filename: "{app}\srcrepair.exe"; Components: core
+Name: "{group}\{cm:ProgramOnTheWeb,SRC Repair}"; Filename: "https://github.com/xvitaly/srcrepair"; Components: core
+Name: "{userdesktop}\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: desktopicon; Components: core
+Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\SRC Repair"; Filename: "{app}\srcrepair.exe"; Tasks: quicklaunchicon; Components: core
 
 [Run]
-Filename: "{app}\srcrepair.exe"; Description: "{cm:LaunchProgram,SRC Repair}"; Flags: nowait postinstall skipifsilent
-Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\srcrepair.exe"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin()
-Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\kbhelper.exe"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin()
-Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\corelib.dll"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin()
-Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\DotNetZip.dll"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin()
-Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\NLog.dll"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin()
+Filename: "{app}\srcrepair.exe"; Description: "{cm:LaunchProgram,SRC Repair}"; Flags: nowait postinstall skipifsilent; Components: core
+Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\srcrepair.exe"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
+Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\kbhelper.exe"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin(); Components: plugins\kbhelper
+Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\corelib.dll"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
+Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\DotNetZip.dll"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
+Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\NLog.dll"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
 
 [UninstallRun]
-Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\srcrepair.exe"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdmin()
-Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\kbhelper.exe"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdmin()
-Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\corelib.dll"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdmin()
-Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\DotNetZip.dll"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdmin()
-Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\NLog.dll"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdmin()
+Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\srcrepair.exe"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
+Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\kbhelper.exe"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdmin(); Components: plugins\kbhelper
+Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\corelib.dll"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
+Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\DotNetZip.dll"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
+Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\NLog.dll"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
 
 [Code]
 function GetDefRoot(Param: String): String;
