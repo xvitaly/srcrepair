@@ -1,11 +1,11 @@
 # SRC Repair
 
-[![GitHub version](https://img.shields.io/github/v/release/xvitaly/srcrepair?sort=semver&color=brightgreen&logo=git)](https://github.com/xvitaly/srcrepair/releases)
+[![GitHub version](https://img.shields.io/github/v/release/xvitaly/srcrepair?sort=semver&color=brightgreen&logo=git&logoColor=white)](https://github.com/xvitaly/srcrepair/releases)
 [![SourceForge downloads](https://www.easycoding.org/files/images/sf_downloads.svg)](https://github.com/xvitaly/srcrepair/releases)
-[![Github downloads](https://img.shields.io/github/downloads/xvitaly/srcrepair/total.svg?label=GH%20downloads&logo=github)](https://github.com/xvitaly/srcrepair/releases)
-[![FPS-config downloads](https://img.shields.io/github/downloads/EasyCoding/tf2cfgs/total.svg?label=FPS%20configs&logo=pinboard)](https://github.com/xvitaly/srcrepair/releases)
-[![Build status](https://travis-ci.org/xvitaly/srcrepair.svg?branch=master)](https://travis-ci.org/xvitaly/srcrepair)
-[![Build status](https://ci.appveyor.com/api/projects/status/9r2yma3aab972blf?svg=true)](https://ci.appveyor.com/project/xvitaly/srcrepair)
+[![Github downloads](https://img.shields.io/github/downloads/xvitaly/srcrepair/total.svg?label=GH%20downloads&logo=github&logoColor=white)](https://github.com/xvitaly/srcrepair/releases)
+[![FPS-config downloads](https://img.shields.io/github/downloads/EasyCoding/tf2cfgs/total.svg?label=FPS%20configs&logo=pinboard&logoColor=white)](https://github.com/xvitaly/srcrepair/releases)
+[![AppVeyor status](https://ci.appveyor.com/api/projects/status/9r2yma3aab972blf?svg=true)](https://ci.appveyor.com/project/xvitaly/srcrepair)
+[![Travis status](https://travis-ci.org/xvitaly/srcrepair.svg?branch=master)](https://travis-ci.org/xvitaly/srcrepair)
 [![GitHub issues](https://img.shields.io/github/issues/xvitaly/srcrepair.svg?label=issues)](https://github.com/xvitaly/srcrepair/issues)
 ---
 
