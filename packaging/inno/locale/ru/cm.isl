@@ -1,8 +1,8 @@
 ﻿[CustomMessages]
-OptNetStatus=Идёт оптимизация MSIL приложения...
+OptNetStatus=Идёт создание машинных сборок MSIL...
 OptNetUninstallStatus=Идёт удаление машинных сборок MSIL...
 CompCoreDesc=Основные файлы программы
-CompDebugDesc=Файлы для системы сообщения об ошибках
+CompDebugDesc=Файлы для системы обнаружения ошибок
 CompPluginsMetaDesc=Дополнительные внешние модули
 CompPluginKBHelperDesc=Модуль отключения системных клавиш
 CompLocalesMetaDesc=Локализации (многоязыковая поддержка)
