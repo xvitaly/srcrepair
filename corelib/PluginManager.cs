@@ -31,7 +31,7 @@ namespace srcrepair.core
         /// <summary>
         /// Gets or sets collection of available plugins.
         /// </summary>
-        public List<PluginTarget> PluginAvailable { get; private set; }
+        public Dictionary<string, PluginTarget> AvailablePlugins { get; private set; }
 
         /// <summary>
         /// Find and add plugins to collection.
