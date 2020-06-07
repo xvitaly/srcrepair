@@ -19,6 +19,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
+using System.IO;
+
 namespace srcrepair.core
 {
     /// <summary>
@@ -27,11 +29,29 @@ namespace srcrepair.core
     public sealed class PluginTarget
     {
         /// <summary>
+        /// Gets or sets plugin's user-friendly name.
+        /// </summary>
+        public string Name { get; private set; }
+
+        /// <summary>
+        /// Gets or sets fully-qualified path to plugin's executable.
+        /// </summary>
+        public string Executable { get; private set; }
+
+        /// <summary>
+        /// Checks if the plugin is installed and available to launch.
+        /// </summary>
+        public bool Installed => File.Exists(Executable);
+
+        /// <summary>
         /// PluginTarget class constructor.
         /// </summary>
-        public PluginTarget()
+        /// <param name="CfName">Plugin's user-friendly name.</param>
+        /// <param name="CfExecutable">Full path to plugin's executable.</param>
+        public PluginTarget(string CfName, string CfExecutable)
         {
-            //
+            Name = CfName;
+            Executable = CfExecutable;
         }
     }
 }
