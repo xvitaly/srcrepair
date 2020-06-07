@@ -20,6 +20,7 @@
 */
 
 using System.Collections.Generic;
+using System.IO;
 
 namespace srcrepair.core
 {
@@ -28,6 +29,11 @@ namespace srcrepair.core
     /// </summary>
     public sealed class PluginManager
     {
+        /// <summary>
+        /// Stores path to SRC Repair installation directory.
+        /// </summary>
+        private readonly string FullAppPath;
+
         /// <summary>
         /// Gets or sets collection of available plugins.
         /// </summary>
@@ -38,14 +44,17 @@ namespace srcrepair.core
         /// </summary>
         private void FindPlugins()
         {
-            //
+            AvailablePlugins.Add("kbhelper", new PluginTarget("System buttons disabler", Path.Combine(FullAppPath, "kbhelper.exe")));
         }
 
         /// <summary>
         /// PluginManager class constructor.
         /// </summary>
-        public PluginManager()
+        /// <param name="CfFullAppPath">Path to SRC Repair installation directory.</param>
+        public PluginManager(string CfFullAppPath)
         {
+            AvailablePlugins = new Dictionary<string, PluginTarget>();
+            FullAppPath = CfFullAppPath;
             FindPlugins();
         }
     }
