@@ -40,6 +40,12 @@ namespace srcrepair.core
         public Dictionary<string, PluginTarget> AvailablePlugins { get; private set; }
 
         /// <summary>
+        /// Overloading inxeding operator to return plugin target instance
+        /// by specified name.
+        /// </summary>
+        public PluginTarget this[string key] => AvailablePlugins[key];
+
+        /// <summary>
         /// Find and add plugins to collection.
         /// TODO: automatically search for new plugins.
         /// </summary>
