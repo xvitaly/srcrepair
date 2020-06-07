@@ -132,6 +132,9 @@
   <data name="AppDbgExCoreHudManConstructor" xml:space="preserve">
     <value>Minor exception while building HUD list object.</value>
   </data>
+  <data name="AppDbgExCorePluginNotFound" xml:space="preserve">
+    <value>Cannot find plugin's executable file.</value>
+  </data>
   <data name="AppDbgExCoreStmManMountPointsFetchError" xml:space="preserve">
     <value>Minor exception while fetching Steam mount points.</value>
   </data>

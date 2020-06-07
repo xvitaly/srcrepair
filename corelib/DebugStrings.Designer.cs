@@ -106,6 +106,15 @@ namespace srcrepair.core {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cannot find plugin&apos;s executable file..
+        /// </summary>
+        internal static string AppDbgExCorePluginNotFound {
+            get {
+                return ResourceManager.GetString("AppDbgExCorePluginNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Minor exception while fetching Steam mount points..
         /// </summary>
         internal static string AppDbgExCoreStmManMountPointsFetchError {
