@@ -36,7 +36,12 @@ namespace srcrepair.core
         /// <summary>
         /// Gets or sets fully-qualified path to plugin's executable.
         /// </summary>
-        public string Executable { get; private set; }
+        private string Executable { get; set; }
+
+        /// <summary>
+        /// Gets or sets if elevation is required to run this plugin.
+        /// </summary>
+        private bool ElevationRequired { get; set; }
 
         /// <summary>
         /// Checks if the plugin is installed and available to launch.
@@ -44,14 +49,25 @@ namespace srcrepair.core
         public bool Installed => File.Exists(Executable);
 
         /// <summary>
+        /// Run plugin if installed.
+        /// </summary>
+        public void Run()
+        {
+            if (!Installed) { throw new FileNotFoundException(DebugStrings.AppDbgExCorePluginNotFound, Executable); }
+            ProcessManager.StartExternalHelper(Executable, ElevationRequired);
+        }
+
+        /// <summary>
         /// PluginTarget class constructor.
         /// </summary>
         /// <param name="CfName">Plugin's user-friendly name.</param>
         /// <param name="CfExecutable">Full path to plugin's executable.</param>
-        public PluginTarget(string CfName, string CfExecutable)
+        /// <param name="CfElevationRequired">If elevation is required to run this plugin..</param>
+        public PluginTarget(string CfName, string CfExecutable, bool CfElevationRequired)
         {
             Name = CfName;
             Executable = CfExecutable;
+            ElevationRequired = CfElevationRequired;
         }
     }
 }

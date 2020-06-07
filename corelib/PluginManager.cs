@@ -41,10 +41,11 @@ namespace srcrepair.core
 
         /// <summary>
         /// Find and add plugins to collection.
+        /// TODO: automatically search for new plugins.
         /// </summary>
         private void FindPlugins()
         {
-            AvailablePlugins.Add("kbhelper", new PluginTarget("System buttons disabler", Path.Combine(FullAppPath, "kbhelper.exe")));
+            AvailablePlugins.Add("kbhelper", new PluginTarget("System buttons disabler", Path.Combine(FullAppPath, "kbhelper.exe"), true));
         }
 
         /// <summary>
