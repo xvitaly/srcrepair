@@ -3049,7 +3049,7 @@ namespace srcrepair.gui
         {
             try
             {
-                ProcessManager.StartExternalHelper(Path.Combine(App.FullAppPath, Properties.Resources.AppKBHelperBin), true);
+                App.Plugins["kbhelper"].Run();
             }
             catch (Exception Ex)
             {
