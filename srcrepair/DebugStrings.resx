@@ -264,6 +264,12 @@
   <data name="AppDbgExMMSaveDb" xml:space="preserve">
     <value>Exception while writing to save muted users database.</value>
   </data>
+  <data name="AppDbgExPluginRegister" xml:space="preserve">
+    <value>Exception while trying to register available plugins.</value>
+  </data>
+  <data name="AppDbgExPluginsInit" xml:space="preserve">
+    <value>Exception while trying to create an instance of PluginManager class.</value>
+  </data>
   <data name="AppDbgExRegedit" xml:space="preserve">
     <value>Exception on trying to launch Windows registry editor to restore saved registry file.</value>
   </data>

@@ -502,6 +502,24 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to register available plugins..
+        /// </summary>
+        internal static string AppDbgExPluginRegister {
+            get {
+                return ResourceManager.GetString("AppDbgExPluginRegister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to create an instance of PluginManager class..
+        /// </summary>
+        internal static string AppDbgExPluginsInit {
+            get {
+                return ResourceManager.GetString("AppDbgExPluginsInit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception on trying to launch Windows registry editor to restore saved registry file..
         /// </summary>
         internal static string AppDbgExRegedit {
