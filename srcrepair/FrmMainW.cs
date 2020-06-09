@@ -787,7 +787,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Error(Ex, DebugStrings.AppDbgExPluginsInit);
+                Logger.Warn(Ex, DebugStrings.AppDbgExPluginsInit);
             }
         }
 
@@ -802,7 +802,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Error(Ex, DebugStrings.AppDbgExPluginRegister);
+                Logger.Warn(Ex, DebugStrings.AppDbgExPluginRegister);
             }
         }
 
