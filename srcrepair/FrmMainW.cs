@@ -787,7 +787,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Error(Ex, "Failed to find plugins.");
+                Logger.Error(Ex, DebugStrings.AppDbgExPluginsInit);
             }
         }
 
@@ -802,7 +802,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Error(Ex, "Failed to initialize plugins.");
+                Logger.Error(Ex, DebugStrings.AppDbgExPluginRegister);
             }
         }
 
