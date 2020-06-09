@@ -63,6 +63,11 @@ namespace srcrepair.core
         public SteamManager SteamClient { get; set; }
 
         /// <summary>
+        /// Get or set plugins configuration.
+        /// </summary>
+        public PluginManager Plugins { get; set; }
+
+        /// <summary>
         /// Get information about hardware architecture.
         /// </summary>
         private string SystemArch => Environment.Is64BitOperatingSystem ? "Amd64" : "x86";
