@@ -777,6 +777,36 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Find installed plugins.
+        /// </summary>
+        private void FindPlugins()
+        {
+            try
+            {
+                App.Plugins = new PluginManager(App.FullAppPath);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Error(Ex, "Failed to find plugins.");
+            }
+        }
+
+        /// <summary>
+        /// Register installed plugins.
+        /// </summary>
+        private void RegisterPlugins()
+        {
+            try
+            {
+                MNUWinMnuDisabler.Enabled = App.Plugins["kbhelper"].Installed;
+            }
+            catch (Exception Ex)
+            {
+                Logger.Error(Ex, "Failed to initialize plugins.");
+            }
+        }
+
+        /// <summary>
         /// Sets strings data for main form.
         /// </summary>
         private void SetAppStrings()
@@ -804,6 +834,9 @@ namespace srcrepair.gui
                 MNUReportBuilder.Enabled = false;
                 MNUWinMnuDisabler.Enabled = false;
             }
+
+            // Checking plugins state and registering installed...
+            RegisterPlugins();
         }
 
         /// <summary>
@@ -1721,6 +1754,7 @@ namespace srcrepair.gui
         private void FrmMainW_Load(object sender, EventArgs e)
         {
             InitializeApp();
+            FindPlugins();
             SetAppStrings();
             ChangePrvControlState();
             CheckSafeClnStatus();
