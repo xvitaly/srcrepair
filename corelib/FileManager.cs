@@ -440,5 +440,16 @@ namespace srcrepair.core
                 File.Move(SingleFile, FinalDest);
             }
         }
+
+        /// <summary>
+        /// Corrects directory separator characters in the source string
+        /// depending on the current platform.
+        /// </summary>
+        /// <param name="Source">Source string.</param>
+        /// <returns>Fixed string.</returns>
+        public static string NormalizeDirectorySeparators(string Source)
+        {
+            return Source.Replace('/', Path.DirectorySeparatorChar);
+        }
     }
 }
