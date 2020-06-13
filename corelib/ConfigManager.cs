@@ -147,6 +147,23 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Extracts the list of strings from the XML node.
+        /// </summary>
+        /// <param name="XmlItem">Source XML node item.</param>
+        /// <returns>List of strings.</returns>
+        private List<String> GetFilesListFromNode(XmlNode XmlItem)
+        {
+            List<String> Result = new List<String>();
+
+            foreach (XmlNode CtFiles in XmlItem.SelectSingleNode("Files"))
+            {
+                Result.Add(FileManager.NormalizeDirectorySeparators(CtFiles.InnerText));
+            }
+
+            return Result;
+        }
+
+        /// <summary>
         /// ConfigManager class constructor.
         /// </summary>
         /// <param name="FullAppPath">Path to SRC Repair installation directory.</param>
@@ -171,7 +188,7 @@ namespace srcrepair.core
                 {
                     try
                     {
-                        Configs.Add(XmlItem.SelectSingleNode("Name").InnerText, new FPSConfig(XmlItem.SelectSingleNode("Name").InnerText, XmlItem.SelectSingleNode("URI").InnerText, XmlItem.SelectSingleNode("Mirror").InnerText, XmlItem.SelectSingleNode(LangPrefix).InnerText, XmlItem.SelectSingleNode("SupportedGames").InnerText.Split(';'), XmlItem.SelectSingleNode("ArchiveDir").InnerText, XmlItem.SelectSingleNode("InstallDir").InnerText, XmlItem.SelectSingleNode("Hash2").InnerText, Path.Combine(AppCfgDir, Path.GetFileName(XmlItem.SelectSingleNode("URI").InnerText))));
+                        Configs.Add(XmlItem.SelectSingleNode("Name").InnerText, new FPSConfig(XmlItem.SelectSingleNode("Name").InnerText, XmlItem.SelectSingleNode("URI").InnerText, XmlItem.SelectSingleNode("Mirror").InnerText, XmlItem.SelectSingleNode(LangPrefix).InnerText, XmlItem.SelectSingleNode("SupportedGames").InnerText.Split(';'), XmlItem.SelectSingleNode("ArchiveDir").InnerText, GetFilesListFromNode(XmlItem), XmlItem.SelectSingleNode("InstallDir").InnerText, XmlItem.SelectSingleNode("Hash2").InnerText, Path.Combine(AppCfgDir, Path.GetFileName(XmlItem.SelectSingleNode("URI").InnerText))));
                     }
                     catch (Exception Ex)
                     {
