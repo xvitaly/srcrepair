@@ -97,6 +97,27 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Extracts the list of directories from the XML node.
+        /// </summary>
+        /// <param name="XmlItem">Source XML node item.</param>
+        /// <param name="AllowUnsafe">Allow or disallow to use unsafe cleanup methods.</param>
+        /// <returns>The list of directories.</returns>
+        private List<String> GetDirListFromNode(XmlNode XmlItem, bool AllowUnsafe)
+        {
+            List<String> Result = new List<String>();
+
+            foreach (XmlNode CtDir in XmlItem.SelectSingleNode("Directories"))
+            {
+                if (CtDir.Attributes["Class"].Value == "Safe" || AllowUnsafe)
+                {
+                    Result.Add(GetFullPath(CtDir.InnerText));
+                }
+            }
+
+            return Result;
+        }
+
+        /// <summary>
         /// CleanupManager class constructor.
         /// </summary>
         /// <param name="FullAppPath">Path to SRC Repair installation directory.</param>
@@ -125,17 +146,7 @@ namespace srcrepair.core
                 {
                     try
                     {
-                        List<String> DirList = new List<String>();
-
-                        foreach (XmlNode CtDir in XmlItem.SelectSingleNode("Directories"))
-                        {
-                            if (CtDir.Attributes["Class"].Value == "Safe" || AllowUnsafe)
-                            {
-                                DirList.Add(GetFullPath(CtDir.InnerText));
-                            }
-                        }
-
-                        CleanupTargets.Add(XmlItem.SelectSingleNode("ID").InnerText, new CleanupTarget(XmlItem.SelectSingleNode("Name").InnerText, DirList));
+                        CleanupTargets.Add(XmlItem.SelectSingleNode("ID").InnerText, new CleanupTarget(XmlItem.SelectSingleNode("Name").InnerText, GetDirListFromNode(XmlItem, AllowUnsafe)));
                     }
                     catch (Exception Ex)
                     {
