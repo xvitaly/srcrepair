@@ -41,6 +41,9 @@ Warning: outdated. Do not use on latest Team Fortress 2 versions!
 ]]>
         </en>
         <ArchiveDir>bonhighfps</ArchiveDir>
+        <Files>
+            <File>cfg/autoexec.cfg</File>
+        </Files>
         <InstallDir>bonhighfps</InstallDir>
         <Hash2>3e8872e572511df43f3b22a3be897341ae51c5f94a3ce7d945c90bd44e630fc9cf9a034f9ce5f306b4242200b0c2bba2a562e49434f39c5f493d3cacfc8905e1</Hash2>
     </Config>
@@ -62,6 +65,9 @@ FPS increase: High
 Graphics degradation: Some]]>
         </en>
         <ArchiveDir>chrisdx9frames</ArchiveDir>
+        <Files>
+            <File>cfg/autoexec.cfg</File>
+        </Files>
         <InstallDir>chrisdx9frames</InstallDir>
         <Hash2>b898e29e59e7cdaa2642fb197ea16098e0babaa5b7d6558572c30415321a4ca2e68b64efe7196c3b96eca3c7f8d498c539d9a9ac4cc9b10d31bb17a4b768bcd9</Hash2>
     </Config>
@@ -83,6 +89,9 @@ Graphics degradation: Some]]>
 Ухудшение качества графики: Высокое]]>
         </en>
         <ArchiveDir>chrishighframes</ArchiveDir>
+        <Files>
+            <File>cfg/autoexec.cfg</File>
+        </Files>
         <InstallDir>chrishighframes</InstallDir>
         <Hash2>b941c8565521084db1b4a824b803c92e248eefdb96880b0e3d4ec2bca268bd97070550df8cd63ee68912149c9a5508f8fb475372dac58c383d97de289307e198</Hash2>
     </Config>
@@ -104,6 +113,9 @@ FPS increase: High
 Graphics degradation: Some]]>
         </en>
         <ArchiveDir>chrismaxfps</ArchiveDir>
+        <Files>
+            <File>cfg/autoexec.cfg</File>
+        </Files>
         <InstallDir>chrismaxfps</InstallDir>
         <Hash2>710f1f0b270151a4cdc37aa25e5d0fce2609247de3952332ee492d80bf83bfec869fab07eddc34a46c26dee5e40bdb74aec0ba12ceb75a8e8e65df9158970ee5</Hash2>
     </Config>
@@ -125,6 +137,9 @@ FPS increase: None
 Graphics degradation: None]]>
         </en>
         <ArchiveDir>chrismaxquality</ArchiveDir>
+        <Files>
+            <File>cfg/autoexec.cfg</File>
+        </Files>
         <InstallDir>chrismaxquality</InstallDir>
         <Hash2>21b8548b901e57b8b229f019ee8aeed8411221c7caab42067f02bd45402ec6937c5b3a2be16cef66154c77992539e57afd282e07600d1475e270bcb124bb46ef</Hash2>
     </Config>
@@ -146,6 +161,9 @@ FPS increase: None
 Graphics degradation: None]]>
         </en>
         <ArchiveDir>comangliacinema</ArchiveDir>
+        <Files>
+            <File>cfg/autoexec.cfg</File>
+        </Files>
         <InstallDir>comangliacinema</InstallDir>
         <Hash2>40ef6816a12cb8cde84b0cf168950aa78465f3c110c52e1b90601db8a02047692069dd6e1d7d178b8e824dc23e94a77a16b3ace7108fc2aebbf20f9da69ad9d1</Hash2>
     </Config>
@@ -167,6 +185,9 @@ FPS increase: High
 Graphics degradation: 16-bit style]]>
         </en>
         <ArchiveDir>comangliamaxfps</ArchiveDir>
+        <Files>
+            <File>cfg/autoexec.cfg</File>
+        </Files>
         <InstallDir>comangliamaxfps</InstallDir>
         <Hash2>dbbb2961e3d03cc00a3636427a3a1995abd27591e4175df9d290f798926a91017bbc292c4c7435a9d17d1108214ec19f904c03787c4e99db733773b5e6c18d94</Hash2>
     </Config>
@@ -188,6 +209,9 @@ FPS increase: High
 Graphics degradation: Moderate]]>
         </en>
         <ArchiveDir>comangliastability</ArchiveDir>
+        <Files>
+            <File>cfg/autoexec.cfg</File>
+        </Files>
         <InstallDir>comangliastability</InstallDir>
         <Hash2>7820b9e52bcb10bd64742e7be71ba8f7f206c8106836c5f070b8b9259c4ad72e7d3fbbabd5eab6c899e6a659af6c468ec2165bf863adccc0b152cbe8edd8d85c</Hash2>
     </Config>
@@ -209,6 +233,9 @@ FPS increase: Pretty much
 Graphics degradation: Medium]]>
         </en>
         <ArchiveDir>dt_legal</ArchiveDir>
+        <Files>
+            <File>cfg/autoexec.cfg</File>
+        </Files>
         <InstallDir>dt_legal</InstallDir>
         <Hash2>b2eaba3318d4525e5be0a1e58083fe5a889daba8d468b72b8e9531e9d4c83462988398a6bb6f01e4efd1a3bd90fa7bede890e45a173e1e626fde08cc1a8289c9</Hash2>
     </Config>
@@ -230,6 +257,9 @@ FPS increase: Medium
 Graphics degradation: Moderate]]>
         </en>
         <ArchiveDir>m0refps</ArchiveDir>
+        <Files>
+            <File>cfg/autoexec.cfg</File>
+        </Files>
         <InstallDir>m0refps</InstallDir>
         <Hash2>8a049a008ce5ac88fff4c7c09c0f8bffe1f6b18ad7802cb445229ae202c0d76f6ab806a365e787ac726e14d6113b34bc31d27a02978ebeff3aeec994113a30ef</Hash2>
     </Config>
@@ -251,6 +281,9 @@ FPS increase: High
 Graphics degradation: High]]>
         </en>
         <ArchiveDir>m0rehighfps</ArchiveDir>
+        <Files>
+            <File>cfg/autoexec.cfg</File>
+        </Files>
         <InstallDir>m0rehighfps</InstallDir>
         <Hash2>9e69768ac371f5bd76b43fbb2d0f44b3c533d00495851f928f7de715571e4e199ebd5e78424c629573ffbb54f0812d4c5281cec89ff1df04759cfe50ce3848ba</Hash2>
     </Config>
@@ -272,6 +305,9 @@ FPS increase: High
 Graphics degradation: Moderate]]>
         </en>
         <ArchiveDir>skullhighfps</ArchiveDir>
+        <Files>
+            <File>cfg/autoexec.cfg</File>
+        </Files>
         <InstallDir>skullhighfps</InstallDir>
         <Hash2>88edfc8686f558e95cbc8fb9c4283d7c4bc142c8b0c0f797a3294b098f1da5939f2852c1197bba5aa5df6cd90d249357f17da9b89a010d66333cd20266275da8</Hash2>
     </Config>
@@ -293,6 +329,9 @@ FPS increase: Low
 Graphics degradation: No]]>
         </en>
         <ArchiveDir>v1tsk_generic</ArchiveDir>
+        <Files>
+            <File>cfg/autoexec.cfg</File>
+        </Files>
         <InstallDir>v1tsk_generic</InstallDir>
         <Hash2>6c4911f48dceab08688ad6e30d507a8c71978cda8f128b51023e97425bbbe28048113d1b7f84c12f9a4b9c59e9419403ef10845aed2cddb46a2e2b46b40ecddc</Hash2>
     </Config>
@@ -314,6 +353,9 @@ FPS increase: High
 Graphics degradation: 16-bit style]]>
         </en>
         <ArchiveDir>mastercomfigpf</ArchiveDir>
+        <Files>
+            <File>cfg/autoexec.cfg</File>
+        </Files>
         <InstallDir>mastercomfigpf</InstallDir>
         <Hash2>a17509f4fa2535f4c4c535f5d2a89406d90a9eb44afab0fac2e2ab4d8df9eaafabb0f1d2023f13ba59f0c8f21b5f195a44e94e0ac07e84cb755d9cda6bf4504e</Hash2>
     </Config>
@@ -335,6 +377,9 @@ FPS increase: None
 Graphics degradation: None]]>
         </en>
         <ArchiveDir>mastercomfigmq</ArchiveDir>
+        <Files>
+            <File>cfg/autoexec.cfg</File>
+        </Files>
         <InstallDir>mastercomfigmq</InstallDir>
         <Hash2>3ffcad6c0a5b04175b8fcfaf5c7edb2236dc120650faa7acbcdc7c19d55b020047e9400fd73510fae5f7af4cf66a1aa8b8a02b1fcc468aa14f6f8c180faecc38</Hash2>
     </Config>
@@ -356,6 +401,9 @@ FPS increase: Moderate
 Graphics degradation: Moderate]]>
         </en>
         <ArchiveDir>rhapsodyfps</ArchiveDir>
+        <Files>
+            <File>cfg/autoexec.cfg</File>
+        </Files>
         <InstallDir>rhapsodyfps</InstallDir>
         <Hash2>a7aaba287978bfeeda979d6b16761de67a8d907c71bb3e5aeda45a965d446dad02594b81fd69ca3fcadec64ca3a62123dd513bd09c667ba9d68c8a11845b4f5f</Hash2>
     </Config>
