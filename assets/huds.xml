@@ -120,14 +120,14 @@
         <Name>budhud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://www.team-fortress.su/downloads/huds/budhud/budhud_372cdcdf.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/budhud/budhud_372cdcdf.zip</Mirror>
+        <URI>https://www.team-fortress.su/downloads/huds/budhud/budhud_a6dcc1e4.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/huds/budhud/budhud_a6dcc1e4.zip</Mirror>
         <UpURI>https://github.com/WhiskerBiscuit/budhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.jpg</Preview>
         <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
-        <Hash>db2ed2e26dae81ac3f3e6756b0b3d930</Hash>
-        <Hash2>05fe24bf76c9ec7be116cc2aee5304a238478dc5d2ec0ba7c5396cb84cc746b65c77f10db7bbc8d0a80ac3df3ff982c731c891f12140c2926831fe71dee38448</Hash2>
-        <LastUpdate>1589695959</LastUpdate>
+        <Hash>c4bbd5283a8842600db5ec29aef564e7</Hash>
+        <Hash2>8def79b21f09ce4e4125221414e37a2d714521e9b6b74f72d405cca806f9055c3e7288688872c8de152a8862896acb92046433eb93b08bbe7b86e2ba8f58367c</Hash2>
+        <LastUpdate>1591919003</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=207</Site>
         <ArchiveDir>budhud-master</ArchiveDir>
         <InstallDir>budhud</InstallDir>
@@ -280,14 +280,14 @@
         <Name>FlawHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://www.team-fortress.su/downloads/huds/flawhud/flawhud_9018e26a.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/flawhud/flawhud_9018e26a.zip</Mirror>
+        <URI>https://www.team-fortress.su/downloads/huds/flawhud/flawhud_a02f0cbe.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/huds/flawhud/flawhud_a02f0cbe.zip</Mirror>
         <UpURI>https://github.com/CriticalFlaw/FlawHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/flawhud.jpg</Preview>
         <RepoPath>https://github.com/CriticalFlaw/FlawHUD</RepoPath>
-        <Hash>f3eda173519d0e4e5f09b88b117637e6</Hash>
-        <Hash2>40e41b2402aad9cbc6a841b43d5ee391b6eda2ce0cc3c45562edbef04ed57520e57425928f312737a69c88ef3d2f8831d255979eeaa41cd5f1283d47fc6803ff</Hash2>
-        <LastUpdate>1588815056</LastUpdate>
+        <Hash>30147f9390314803b339ccc281721316</Hash>
+        <Hash2>1e3d6286af31e3558e80f445f5fa99de58f98e56671fa3f8cd266e8c5307347288be0f9bf56a00d4098cb45a05c0f255a2f5951f4ae63b18967ad7ffffa3ed57</Hash2>
+        <LastUpdate>1592017960</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=252</Site>
         <ArchiveDir>FlawHUD-master</ArchiveDir>
         <InstallDir>flawhud</InstallDir>
