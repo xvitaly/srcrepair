@@ -9,10 +9,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Install mono and nuget
+    - name: Install nuget
       run: |
         sudo apt-get update
-        sudo apt-get -y install mono-devel ca-certificates-mono nuget
+        sudo apt-get -y install nuget
     - name: Restore nuget dependencies
       run: nuget restore srcrepair.sln
     - name: Build project
