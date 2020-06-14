@@ -9,15 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Install basic requirements
-      run: |
-        sudo apt-get update
-        sudo apt-get -y install software-properties-common gnupg ca-certificates
-    - name: Add mono repository
-      run: |
-        sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-        sudo add-apt-repository "deb https://download.mono-project.com/repo/ubuntu stable-bionic main"
-    - name: Install mono
+    - name: Install mono and nuget
       run: |
         sudo apt-get update
         sudo apt-get -y install mono-devel ca-certificates-mono nuget
