@@ -59,10 +59,10 @@ namespace srcrepair.core
                 string Dir = Path.GetDirectoryName(FileName);
 
                 // Check if destination directory exists. If not - creating...
-                if (!(Directory.Exists(Dir))) { Directory.CreateDirectory(Dir); }
+                if (!Directory.Exists(Dir)) { Directory.CreateDirectory(Dir); }
 
                 // Creating a mew empty file...
-                using (FileStream fs = File.Create(FileName)) { }
+                using (File.Create(FileName)) { /* Nothing here. */ }
             }
             catch { /* Do nothing */ }
         }
@@ -177,7 +177,7 @@ namespace srcrepair.core
         /// <returns>Return True if directory writable.</returns>
         public static bool IsDirectoryWritable(string DirName)
         {
-            try { using (FileStream fs = File.Create(Path.Combine(DirName, Path.GetRandomFileName()), 1, FileOptions.DeleteOnClose)) { /* Nothing here. */ } } catch { return false; }
+            try { using (File.Create(Path.Combine(DirName, Path.GetRandomFileName()), 1, FileOptions.DeleteOnClose)) { /* Nothing here. */ } } catch { return false; }
             return true;
         }
 
