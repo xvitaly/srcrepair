@@ -24,9 +24,9 @@ using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
 using System.Text.RegularExpressions;
 using Microsoft.Win32;
+using NLog;
 
 namespace srcrepair.core
 {
@@ -35,6 +35,11 @@ namespace srcrepair.core
     /// </summary>
     public static class FileManager
     {
+        /// <summary>
+        /// Logger instance for FileManager class.
+        /// </summary>
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
+
         /// <summary>
         /// Checks for non-ASCII characters in string.
         /// </summary>
@@ -64,7 +69,7 @@ namespace srcrepair.core
                 // Creating a mew empty file...
                 using (File.Create(FileName)) { /* Nothing here. */ }
             }
-            catch { /* Do nothing */ }
+            catch (Exception Ex) { Logger.Warn(Ex); }
         }
 
         /// <summary>
@@ -323,9 +328,19 @@ namespace srcrepair.core
                         DirectoryInfo DInfo = new DirectoryInfo(CleanDir);
                         FileInfo[] DirList = DInfo.GetFiles(CleanMask);
                         foreach (FileInfo DItem in DirList) { Result.Add(DItem.FullName); }
-                        if (IsRecursive) { try { List<String> SubDirs = new List<string>(); foreach (DirectoryInfo Dir in DInfo.GetDirectories()) { SubDirs.Add(Path.Combine(Dir.FullName, CleanMask)); } if (SubDirs.Count > 0) { Result.AddRange(ExpandFileList(SubDirs, true)); } } catch { } }
+
+                        if (IsRecursive)
+                        {
+                            try
+                            {
+                                List<String> SubDirs = new List<string>();
+                                foreach (DirectoryInfo Dir in DInfo.GetDirectories()) { SubDirs.Add(Path.Combine(Dir.FullName, CleanMask)); }
+                                if (SubDirs.Count > 0) { Result.AddRange(ExpandFileList(SubDirs, true)); }
+                            }
+                            catch (Exception Ex) { Logger.Warn(Ex); }
+                        }
                     }
-                    catch { }
+                    catch (Exception Ex) { Logger.Warn(Ex); }
                 }
             }
             return Result;
@@ -363,7 +378,7 @@ namespace srcrepair.core
         public static void CreateConfigBackUp(List<String> Configs, string BackUpDir, string Prefix)
         {
             // Checking if destination directory exists...
-            if (!(Directory.Exists(BackUpDir))) { Directory.CreateDirectory(BackUpDir); }
+            if (!Directory.Exists(BackUpDir)) { Directory.CreateDirectory(BackUpDir); }
 
             // Generating a new list only with existing files...
             Configs = GetRealFilesFromList(Configs);
