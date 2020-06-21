@@ -132,6 +132,9 @@
   <data name="AppDbgExCoreHudManConstructor" xml:space="preserve">
     <value>Minor exception while building HUD list object.</value>
   </data>
+  <data name="AppDbgExCorePluginManConstructor" xml:space="preserve">
+    <value>Minor exception while building the list of available plugins object.</value>
+  </data>
   <data name="AppDbgExCorePluginNotFound" xml:space="preserve">
     <value>Cannot find plugin's executable file.</value>
   </data>

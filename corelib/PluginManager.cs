@@ -19,8 +19,11 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Xml;
+using NLog;
 
 namespace srcrepair.core
 {
@@ -30,9 +33,9 @@ namespace srcrepair.core
     public sealed class PluginManager
     {
         /// <summary>
-        /// Stores path to SRC Repair installation directory.
+        /// Logger instance for PluginManager class.
         /// </summary>
-        private readonly string FullAppPath;
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
         /// Gets or sets collection of available plugins.
@@ -46,23 +49,34 @@ namespace srcrepair.core
         public PluginTarget this[string key] => AvailablePlugins[key];
 
         /// <summary>
-        /// Find and add plugins to collection.
-        /// TODO: automatically search for new plugins.
-        /// </summary>
-        private void FindPlugins()
-        {
-            AvailablePlugins.Add("kbhelper", new PluginTarget("System buttons disabler", Path.Combine(FullAppPath, "kbhelper.exe"), true));
-        }
-
-        /// <summary>
         /// PluginManager class constructor.
         /// </summary>
-        /// <param name="CfFullAppPath">Path to SRC Repair installation directory.</param>
-        public PluginManager(string CfFullAppPath)
+        /// <param name="FullAppPath">Path to SRC Repair installation directory.</param>
+        public PluginManager(string FullAppPath)
         {
+            // Initializing an empty dictionary...
             AvailablePlugins = new Dictionary<string, PluginTarget>();
-            FullAppPath = CfFullAppPath;
-            FindPlugins();
+
+            // Fetching the list of available plugins from the XML database file...
+            using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, StringsManager.PluginsDatabaseName), FileMode.Open, FileAccess.Read))
+            {
+                // Loading XML file from file stream...
+                XmlDocument XMLD = new XmlDocument();
+                XMLD.Load(XMLFS);
+
+                // Parsing XML and filling our structures...
+                foreach (XmlNode XmlItem in XMLD.SelectNodes("Plugins/Plugin"))
+                {
+                    try
+                    {
+                        AvailablePlugins.Add(XmlItem.SelectSingleNode("IntName").InnerText, new PluginTarget(XmlItem.SelectSingleNode("Name").InnerText, Path.Combine(FullAppPath, XmlItem.SelectSingleNode("ExeName").InnerText), XmlItem.SelectSingleNode("ElevationRequired").InnerText == "1"));
+                    }
+                    catch (Exception Ex)
+                    {
+                        Logger.Warn(Ex, DebugStrings.AppDbgExCorePluginManConstructor);
+                    }
+                }
+            }
         }
     }
 }

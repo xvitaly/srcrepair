@@ -106,6 +106,15 @@ namespace srcrepair.core {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Minor exception while building the list of available plugins object..
+        /// </summary>
+        internal static string AppDbgExCorePluginManConstructor {
+            get {
+                return ResourceManager.GetString("AppDbgExCorePluginManConstructor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cannot find plugin&apos;s executable file..
         /// </summary>
         internal static string AppDbgExCorePluginNotFound {
