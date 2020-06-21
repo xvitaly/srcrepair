@@ -66,6 +66,11 @@ namespace srcrepair.core
         public static string CleanupDatabaseName => Properties.Resources.CleanupDbFile;
 
         /// <summary>
+        /// Gets plugins database file name.
+        /// </summary>
+        public static string PluginsDatabaseName => Properties.Resources.PluginsDbFile;
+
+        /// <summary>
         /// Remove different special characters from specified string.
         /// </summary>
         /// <param name="RecvStr">Source string for cleanup.</param>

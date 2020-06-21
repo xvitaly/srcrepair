@@ -156,6 +156,9 @@
   <data name="PathValidateRegex" xml:space="preserve">
     <value>^[0-9a-zA-Z :()-_./\\\\]*$</value>
   </data>
+  <data name="PluginsDbFile" xml:space="preserve">
+    <value>plugins.xml</value>
+  </data>
   <data name="ShBinWin" xml:space="preserve">
     <value>explorer.exe</value>
   </data>

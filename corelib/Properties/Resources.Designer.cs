@@ -178,6 +178,15 @@ namespace srcrepair.core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to plugins.xml.
+        /// </summary>
+        internal static string PluginsDbFile {
+            get {
+                return ResourceManager.GetString("PluginsDbFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to explorer.exe.
         /// </summary>
         internal static string ShBinWin {
