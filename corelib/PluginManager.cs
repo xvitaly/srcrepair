@@ -38,15 +38,15 @@ namespace srcrepair.core
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Gets or sets collection of available plugins.
+        /// Stores the list of available plugins.
         /// </summary>
-        public Dictionary<string, PluginTarget> AvailablePlugins { get; private set; }
+        private readonly Dictionary<string, PluginTarget> Plugins;
 
         /// <summary>
         /// Overloading inxeding operator to return plugin target instance
         /// by specified name.
         /// </summary>
-        public PluginTarget this[string key] => AvailablePlugins[key];
+        public PluginTarget this[string key] => Plugins[key];
 
         /// <summary>
         /// PluginManager class constructor.
@@ -55,7 +55,7 @@ namespace srcrepair.core
         public PluginManager(string FullAppPath)
         {
             // Initializing an empty dictionary...
-            AvailablePlugins = new Dictionary<string, PluginTarget>();
+            Plugins = new Dictionary<string, PluginTarget>();
 
             // Fetching the list of available plugins from the XML database file...
             using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, StringsManager.PluginsDatabaseName), FileMode.Open, FileAccess.Read))
@@ -69,7 +69,7 @@ namespace srcrepair.core
                 {
                     try
                     {
-                        AvailablePlugins.Add(XmlItem.SelectSingleNode("IntName").InnerText, new PluginTarget(XmlItem.SelectSingleNode("Name").InnerText, Path.Combine(FullAppPath, XmlItem.SelectSingleNode("ExeName").InnerText), XmlItem.SelectSingleNode("ElevationRequired").InnerText == "1"));
+                        Plugins.Add(XmlItem.SelectSingleNode("IntName").InnerText, new PluginTarget(XmlItem.SelectSingleNode("Name").InnerText, Path.Combine(FullAppPath, XmlItem.SelectSingleNode("ExeName").InnerText), XmlItem.SelectSingleNode("ElevationRequired").InnerText == "1"));
                     }
                     catch (Exception Ex)
                     {
