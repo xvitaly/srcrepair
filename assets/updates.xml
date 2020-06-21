@@ -50,4 +50,10 @@
         <Hash>25bdfed6fe75590255b4456ca482876e</Hash>
         <Hash2>23159c98a845dabf20f0c708b4a7a4aa04a7e6015464c363df756c47bf2f82820118abccd52b2b683487d2237e7b99acbf4c5193fbcb859615e43adca9f2aa0c</Hash2>
     </ClnDB>
+    <PlgDB>
+        <Version>1</Version>
+        <URL>https://www.easycoding.org/files/srcrepair/updates/plugins.xml</URL>
+        <Hash>7a12cba7715b82c8f7de2b0d09ba8d13</Hash>
+        <Hash2>05db4ed2be680d9511b532a356c38b2c5ac1f5a8a509d2b49844ee9f60000837eab811e2d83e2cec04ea9b3e36a181852fd9beb8845e920c8754a6397a045546</Hash2>
+    </PlgDB>
 </Updates>
