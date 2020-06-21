@@ -107,6 +107,21 @@ namespace srcrepair.core
         public string ClnUpdateHash { get; private set; }
 
         /// <summary>
+        /// Gets or sets hash of the plugins database update file.
+        /// </summary>
+        public string PlgUpdateHash { get; private set; }
+
+        /// <summary>
+        /// Gets or sets latest available version of the plugins database.
+        /// </summary>
+        public int PlgUpdateVersion { get; private set; }
+
+        /// <summary>
+        /// Gets or sets download URL of the plugins database update.
+        /// </summary>
+        public string PlgUpdateURL { get; private set; }
+
+        /// <summary>
         /// Stores full path to installed application.
         /// </summary>
         private readonly string FullAppPath;
@@ -174,6 +189,12 @@ namespace srcrepair.core
             ClnUpdateVersion = Convert.ToInt32(ClnDbNode.SelectSingleNode("Version").InnerText);
             ClnUpdateURL = ClnDbNode.SelectSingleNode("URL").InnerText;
             ClnUpdateHash = ClnDbNode.SelectSingleNode("Hash2").InnerText;
+
+            // Extracting information about plugins database update...
+            XmlNode PlgDbNode = XMLD.SelectSingleNode("Updates/PlgDB");
+            PlgUpdateVersion = Convert.ToInt32(PlgDbNode.SelectSingleNode("Version").InnerText);
+            PlgUpdateURL = PlgDbNode.SelectSingleNode("URL").InnerText;
+            PlgUpdateHash = PlgDbNode.SelectSingleNode("Hash2").InnerText;
         }
 
         /// <summary>
@@ -229,6 +250,15 @@ namespace srcrepair.core
         public bool CheckClnUpdate()
         {
             return FileManager.CalculateFileSHA512(Path.Combine(FullAppPath, StringsManager.CleanupDatabaseName)) != ClnUpdateHash;
+        }
+
+        /// <summary>
+        /// Checks if the plugins database needs to be updated.
+        /// </summary>
+        /// <returns>Returns True if the plugins database update available.</returns>
+        public bool CheckPlgUpdate()
+        {
+            return FileManager.CalculateFileSHA512(Path.Combine(FullAppPath, StringsManager.PluginsDatabaseName)) != PlgUpdateHash;
         }
 
         /// <summary>
