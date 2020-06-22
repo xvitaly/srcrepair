@@ -368,3 +368,44 @@ Level 2:
   * ``URL`` -- direct download URL (no redirects are allowed);
   * ``Hash`` -- download file MD5 hash (**deprecated**);
   * ``Hash2`` -- download file SHA2 (SHA-512) hash.
+
+.. index:: development, plugins, database, plugins database
+.. _plugins-database:
+
+Plugins database documentation
+================================================
+
+The original source file is located in ``assets/plugins.xml``.
+
+XML database example
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <Plugins>
+        <Plugin>
+            <Name>KB Helper</Name>
+            <IntName>kbhelper</IntName>
+            <ExeName>kbhelper.exe</ExeName>
+            <ElevationRequired>1</ElevationRequired>
+        </Plugin>
+    </Plugins>
+
+Properties
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Level 0:
+
+  * ``Plugins`` -- XML root element.
+
+Level 1:
+
+  * ``Plugin`` -- database entry base element.
+
+Level 2:
+
+  * ``Name`` -- plugin user-friendly name;
+  * ``IntName`` -- internal name for different actions;
+  * ``ExeName`` -- executable file name;
+  * ``ElevationRequired`` -- ``1`` if plugin need local administrator rights in order to run, ``0`` -- if don't.
