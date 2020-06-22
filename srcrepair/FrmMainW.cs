@@ -781,13 +781,9 @@ namespace srcrepair.gui
         /// </summary>
         private void FindPlugins()
         {
-            try
+            if (!BW_PluginsList.IsBusy)
             {
-                App.Plugins = new PluginManager(App.FullAppPath);
-            }
-            catch (Exception Ex)
-            {
-                Logger.Warn(Ex, DebugStrings.AppDbgExPluginsInit);
+                BW_PluginsList.RunWorkerAsync();
             }
         }
 
@@ -834,9 +830,6 @@ namespace srcrepair.gui
                 MNUReportBuilder.Enabled = false;
                 MNUWinMnuDisabler.Enabled = false;
             }
-
-            // Checking plugins state and registering installed...
-            RegisterPlugins();
         }
 
         /// <summary>
@@ -1741,6 +1734,33 @@ namespace srcrepair.gui
             if (e.Error != null)
             {
                 Logger.Warn(e.Error);
+            }
+        }
+
+        /// <summary>
+        /// Gets collection of available plugins.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Additional arguments.</param>
+        private void BW_PluginsList_DoWork(object sender, DoWorkEventArgs e)
+        {
+            App.Plugins = new PluginManager(App.FullAppPath);
+        }
+
+        /// <summary>
+        /// Finalizes check of available plugins.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Completion arguments and results.</param>
+        private void BW_PluginsList_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error == null)
+            {
+                RegisterPlugins();
+            }
+            else
+            {
+                Logger.Warn(e.Error, DebugStrings.AppDbgExPluginsInit);
             }
         }
 

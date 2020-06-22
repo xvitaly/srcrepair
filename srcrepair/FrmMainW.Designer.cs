@@ -240,6 +240,7 @@
             this.BW_HudInstall = new System.ComponentModel.BackgroundWorker();
             this.AppRefresh = new System.Windows.Forms.Button();
             this.BW_ClnList = new System.ComponentModel.BackgroundWorker();
+            this.BW_PluginsList = new System.ComponentModel.BackgroundWorker();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
             this.GT_GType1.SuspendLayout();
@@ -1751,9 +1752,9 @@
             // 
             // MNUWinMnuDisabler
             // 
+            resources.ApplyResources(this.MNUWinMnuDisabler, "MNUWinMnuDisabler");
             this.MNUWinMnuDisabler.Image = global::srcrepair.gui.Properties.Resources.Keyboard;
             this.MNUWinMnuDisabler.Name = "MNUWinMnuDisabler";
-            resources.ApplyResources(this.MNUWinMnuDisabler, "MNUWinMnuDisabler");
             this.MNUWinMnuDisabler.Click += new System.EventHandler(this.MNUWinMnuDisabler_Click);
             // 
             // MNUMuteMan
@@ -1989,6 +1990,11 @@
             // 
             this.BW_ClnList.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_ClnList_DoWork);
             this.BW_ClnList.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BW_ClnList_RunWorkerCompleted);
+            // 
+            // BW_PluginsList
+            // 
+            this.BW_PluginsList.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_PluginsList_DoWork);
+            this.BW_PluginsList.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BW_PluginsList_RunWorkerCompleted);
             // 
             // FrmMainW
             // 
@@ -2265,6 +2271,7 @@
         private System.Windows.Forms.ComboBox FP_ConfigSel;
         private System.Windows.Forms.Button FP_Uninstall;
         private System.Windows.Forms.Label L_FP_ConfigSel;
+        private System.ComponentModel.BackgroundWorker BW_PluginsList;
     }
 }
 
