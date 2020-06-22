@@ -408,4 +408,4 @@ Level 2:
   * ``Name`` -- plugin user-friendly name;
   * ``IntName`` -- internal name for different actions;
   * ``ExeName`` -- executable file name;
-  * ``ElevationRequired`` -- ``1`` if plugin need local administrator rights in order to run, ``0`` -- if don't.
+  * ``ElevationRequired`` -- ``1`` if the plugin need a local administrator rights in order to run, ``0`` -- if don't.
