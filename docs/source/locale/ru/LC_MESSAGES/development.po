@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 38.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-27 19:42+0200\n"
-"PO-Revision-Date: 2020-05-27 19:42+0200\n"
+"POT-Creation-Date: 2020-06-22 14:20+0200\n"
+"PO-Revision-Date: 2020-06-22 14:24+0200\n"
 "Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -289,18 +289,19 @@ msgstr "Исходный файл ``assets/cleanup.xml``."
 
 #: ../../source/development.rst:105 ../../source/development.rst:174
 #: ../../source/development.rst:229 ../../source/development.rst:290
+#: ../../source/development.rst:381
 msgid "XML database example"
 msgstr "Пример базы данных в формате XML"
 
 #: ../../source/development.rst:122 ../../source/development.rst:198
 #: ../../source/development.rst:250 ../../source/development.rst:315
-#: ../../source/development.rst:351
+#: ../../source/development.rst:351 ../../source/development.rst:396
 msgid "Properties"
 msgstr "Доступные свойства"
 
 #: ../../source/development.rst:124 ../../source/development.rst:200
 #: ../../source/development.rst:252 ../../source/development.rst:317
-#: ../../source/development.rst:353
+#: ../../source/development.rst:353 ../../source/development.rst:398
 msgid "Level 0:"
 msgstr "Уровень 0:"
 
@@ -310,7 +311,7 @@ msgstr "``Targets`` -- корневой элемент XML."
 
 #: ../../source/development.rst:128 ../../source/development.rst:204
 #: ../../source/development.rst:256 ../../source/development.rst:321
-#: ../../source/development.rst:357
+#: ../../source/development.rst:357 ../../source/development.rst:402
 msgid "Level 1:"
 msgstr "Уровень 1:"
 
@@ -320,7 +321,7 @@ msgstr "``Target`` -- базовый элемент."
 
 #: ../../source/development.rst:132 ../../source/development.rst:208
 #: ../../source/development.rst:262 ../../source/development.rst:325
-#: ../../source/development.rst:365
+#: ../../source/development.rst:365 ../../source/development.rst:406
 msgid "Level 2:"
 msgstr "Уровень 2:"
 
@@ -759,3 +760,40 @@ msgstr ""
 #: ../../source/development.rst:370
 msgid "``Hash2`` -- download file SHA2 (SHA-512) hash."
 msgstr "``Hash2`` -- SHA2 (SHA-512) хеш файла файла обновления."
+
+#: ../../source/development.rst:376
+msgid "Plugins database documentation"
+msgstr "Документация базы внешних модулей"
+
+#: ../../source/development.rst:378
+msgid "The original source file is located in ``assets/plugins.xml``."
+msgstr "Исходный файл ``assets/plugins.xml``."
+
+#: ../../source/development.rst:400
+msgid "``Plugins`` -- XML root element."
+msgstr "``Plugins`` -- корневой элемент XML."
+
+#: ../../source/development.rst:404
+msgid "``Plugin`` -- database entry base element."
+msgstr "``Plugin`` -- базовый элемент."
+
+#: ../../source/development.rst:408
+msgid "``Name`` -- plugin user-friendly name;"
+msgstr "``Name`` -- понятное конечному пользователю название;"
+
+#: ../../source/development.rst:409
+msgid "``IntName`` -- internal name for different actions;"
+msgstr "``IntName`` -- внутреннее имя внешнего модуля для различных целей;"
+
+#: ../../source/development.rst:410
+msgid "``ExeName`` -- executable file name;"
+msgstr "``ExeName`` -- имя исполняемого файла;"
+
+#: ../../source/development.rst:411
+msgid ""
+"``ElevationRequired`` -- ``1`` if plugin need local administrator rights in "
+"order to run, ``0`` -- if don't."
+msgstr ""
+"``ElevationRequired`` -- ``1`` если для запуска внешнего модуля требуется "
+"повышение прав до локального администратора, ``0`` -- если в дополнительных "
+"правах нет необходимости."
