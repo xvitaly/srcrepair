@@ -794,7 +794,10 @@ namespace srcrepair.gui
         {
             try
             {
-                MNUWinMnuDisabler.Enabled = App.Plugins["kbhelper"].Installed;
+                if (App.Platform.OS == CurrentPlatform.OSType.Windows)
+                {
+                    MNUWinMnuDisabler.Enabled = App.Plugins["kbhelper"].Installed;
+                }
             }
             catch (Exception Ex)
             {
