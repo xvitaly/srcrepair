@@ -61,6 +61,24 @@ namespace srcrepair.core {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to basic_{0}.log.
+        /// </summary>
+        internal static string BasicInfoOutput {
+            get {
+                return ResourceManager.GetString("BasicInfoOutput", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /C systeminfo &gt; &quot;{0}&quot;.
+        /// </summary>
+        internal static string BasicInfoParams {
+            get {
+                return ResourceManager.GetString("BasicInfoParams", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to cmd.exe.
         /// </summary>
         internal static string CmdIntExe {
