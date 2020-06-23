@@ -797,5 +797,14 @@ namespace srcrepair.gui {
                 return ResourceManager.GetString("AppDbgHUDDnlMirror", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to perform elevation. User closed the UAC dialog..
+        /// </summary>
+        internal static string AppDbgUACCancel {
+            get {
+                return ResourceManager.GetString("AppDbgUACCancel", resourceCulture);
+            }
+        }
     }
 }
