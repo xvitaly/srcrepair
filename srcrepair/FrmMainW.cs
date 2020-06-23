@@ -3074,6 +3074,10 @@ namespace srcrepair.gui
             {
                 App.Plugins["kbhelper"].Run();
             }
+            catch (Win32Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgUACCancel);
+            }
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExKbStart);
