@@ -240,7 +240,7 @@ namespace srcrepair.gui
             Text = String.Format(Text, CleanInfo);
             
             // Starting searching for candidates...
-            if (!GttWrk.IsBusy) { GttWrk.RunWorkerAsync(); }
+            if (!GttWrk.IsBusy) { CM_FTable.BeginUpdate(); GttWrk.RunWorkerAsync(); }
 
             // Blocking selection if required...
             CM_FTable.Enabled = !IsReadOnly;
@@ -485,6 +485,9 @@ namespace srcrepair.gui
         /// <param name="e">Completion arguments and results.</param>
         private void GttWrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            // Unlocking ListView...
+            CM_FTable.EndUpdate();
+
             // Showing estimated of free space to be free after removing all found files...
             CM_Info.Text = String.Format(AppStrings.PS_FrFInfo, GuiHelpers.SclBytes(TotalSize));
 
