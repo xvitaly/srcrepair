@@ -39,10 +39,10 @@
         <Hash2>4c1381e0b0d3ec2288221328f87ffdf34bbe0841a5bd69358bcef885a8854367bf9d84a56c990d4595a87dbf0e73e8c1d50fa1685949d345dcad50765e4b5f45</Hash2>
     </HUDDB>
     <CfgDB>
-        <Version>8</Version>
+        <Version>9</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/configs.xml</URL>
-        <Hash>d80b44844c11228b42c3d71e24b2db46</Hash>
-        <Hash2>86891f9860bf33a2b784faec069c17c7a46566ba85b1f88ead50ebd1fd6f00426d7dfec2edb77bdfb8e7458b3c272cb94dc688d5fdaed865beaaec50da6fcc7f</Hash2>
+        <Hash>f71906ef5c8e803b2147fd62c7f96082</Hash>
+        <Hash2>e3178b9fc734636e8fd15438f1f4f6644018cdfdb16ab76b292df66d556447168733e025a8b4bd4be3f593e17d397722c1f6a42aacad140b5ce81edaaea1d947</Hash2>
     </CfgDB>
     <ClnDB>
         <Version>5</Version>
