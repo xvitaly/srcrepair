@@ -1091,6 +1091,21 @@ namespace srcrepair.gui
         {
             HUD_Panel.Visible = Mode;
             HUD_NotAvailable.Visible = !Mode;
+
+            if (Mode)
+            {
+                if (!MainTabControl.TabPages.Contains(HUDInstall))
+                {
+                    MainTabControl.TabPages.Insert(MainTabControl.TabPages.IndexOf(FPSCfgInstall) + 1, HUDInstall);
+                }
+            }
+            else
+            {
+                if (MainTabControl.TabPages.Contains(HUDInstall))
+                {
+                    MainTabControl.TabPages.Remove(HUDInstall);
+                }
+            }
         }
 
         /// <summary>
