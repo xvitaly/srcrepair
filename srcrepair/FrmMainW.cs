@@ -1089,9 +1089,6 @@ namespace srcrepair.gui
         /// <param name="Mode">If current game supports custom HUDs.</param>
         private void HandleHUDMode(bool Mode)
         {
-            HUD_Panel.Visible = Mode;
-            HUD_NotAvailable.Visible = !Mode;
-
             if (Mode)
             {
                 if (!MainTabControl.TabPages.Contains(HUDInstall))

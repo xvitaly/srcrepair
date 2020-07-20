@@ -174,9 +174,6 @@
             this.HD_HSel = new System.Windows.Forms.ComboBox();
             this.L_HD_HSel = new System.Windows.Forms.Label();
             this.HD_WelcMsg = new System.Windows.Forms.Label();
-            this.HUD_NotAvailable = new System.Windows.Forms.Panel();
-            this.HUD_NAText = new System.Windows.Forms.Label();
-            this.HUD_NAImg = new System.Windows.Forms.PictureBox();
             this.RescueCentre = new System.Windows.Forms.TabPage();
             this.BU_LVTable = new System.Windows.Forms.ListView();
             this.BU_LV_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -266,8 +263,6 @@
             this.HD_GB_Desc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HD_Warning)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HD_GB_Pbx)).BeginInit();
-            this.HUD_NotAvailable.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HUD_NAImg)).BeginInit();
             this.RescueCentre.SuspendLayout();
             this.BU_BToolbar.SuspendLayout();
             this.MainMenu.SuspendLayout();
@@ -1427,7 +1422,6 @@
             // 
             this.HUDInstall.Controls.Add(this.HUD_Panel);
             this.HUDInstall.Controls.Add(this.HD_WelcMsg);
-            this.HUDInstall.Controls.Add(this.HUD_NotAvailable);
             resources.ApplyResources(this.HUDInstall, "HUDInstall");
             this.HUDInstall.Name = "HUDInstall";
             this.HUDInstall.UseVisualStyleBackColor = true;
@@ -1521,25 +1515,6 @@
             // 
             resources.ApplyResources(this.HD_WelcMsg, "HD_WelcMsg");
             this.HD_WelcMsg.Name = "HD_WelcMsg";
-            // 
-            // HUD_NotAvailable
-            // 
-            this.HUD_NotAvailable.Controls.Add(this.HUD_NAText);
-            this.HUD_NotAvailable.Controls.Add(this.HUD_NAImg);
-            resources.ApplyResources(this.HUD_NotAvailable, "HUD_NotAvailable");
-            this.HUD_NotAvailable.Name = "HUD_NotAvailable";
-            // 
-            // HUD_NAText
-            // 
-            resources.ApplyResources(this.HUD_NAText, "HUD_NAText");
-            this.HUD_NAText.Name = "HUD_NAText";
-            // 
-            // HUD_NAImg
-            // 
-            this.HUD_NAImg.Image = global::srcrepair.gui.Properties.Resources.Warning_Large;
-            resources.ApplyResources(this.HUD_NAImg, "HUD_NAImg");
-            this.HUD_NAImg.Name = "HUD_NAImg";
-            this.HUD_NAImg.TabStop = false;
             // 
             // RescueCentre
             // 
@@ -2044,8 +2019,6 @@
             this.HD_GB_Desc.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HD_Warning)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HD_GB_Pbx)).EndInit();
-            this.HUD_NotAvailable.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.HUD_NAImg)).EndInit();
             this.RescueCentre.ResumeLayout(false);
             this.RescueCentre.PerformLayout();
             this.BU_BToolbar.ResumeLayout(false);
@@ -2253,9 +2226,6 @@
         private System.Windows.Forms.PictureBox HD_GB_Pbx;
         private System.Windows.Forms.ComboBox HD_HSel;
         private System.Windows.Forms.Label L_HD_HSel;
-        private System.Windows.Forms.Panel HUD_NotAvailable;
-        private System.Windows.Forms.Label HUD_NAText;
-        private System.Windows.Forms.PictureBox HUD_NAImg;
         private System.Windows.Forms.Label HD_LastUpdate;
         private System.Windows.Forms.ToolStripSeparator MNUSep5;
         private System.Windows.Forms.TextBox GT_LaunchOptions;

@@ -122,7 +122,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACC
-        DwAAAk1TRnQBSQFMAgEBBgEAAegBAAHoAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DwAAAk1TRnQBSQFMAgEBBgEAAfABAAHwAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -190,6 +190,24 @@
         AQAB/gFBAYABAQFAAQIBwAEHAf8BQAGAAQEBoAEBAcABAAH/AaABgAECAdABCQHfAfcB/wHQAYABBQHv
         AeUB4AEPAf8B6AGAAQkL
 </value>
+  </data>
+  <data name="GraphicTweaker.Text" xml:space="preserve">
+    <value>Графические настройки</value>
+  </data>
+  <data name="ConfigEditor.Text" xml:space="preserve">
+    <value>Редактор конфигов</value>
+  </data>
+  <data name="ProblemSolver.Text" xml:space="preserve">
+    <value>Устранение проблем и очистка</value>
+  </data>
+  <data name="FPSCfgInstall.Text" xml:space="preserve">
+    <value>FPS-конфиги</value>
+  </data>
+  <data name="HUDInstall.Text" xml:space="preserve">
+    <value>Менеджер HUD</value>
+  </data>
+  <data name="RescueCentre.Text" xml:space="preserve">
+    <value>Резервные копии</value>
   </data>
   <data name="L_GT_LaunchOptions.Text" xml:space="preserve">
     <value>Параметры запуска:</value>
@@ -588,9 +606,6 @@
   <data name="GT_Maximum_Graphics.Text" xml:space="preserve">
     <value>Максимальное качество</value>
   </data>
-  <data name="GraphicTweaker.Text" xml:space="preserve">
-    <value>Графические настройки</value>
-  </data>
   <data name="CE_New.Text" xml:space="preserve">
     <value>Создать новый конфиг</value>
   </data>
@@ -633,8 +648,8 @@
   <data name="CE_CVal.HeaderText" xml:space="preserve">
     <value>Значение переменной</value>
   </data>
-  <data name="ConfigEditor.Text" xml:space="preserve">
-    <value>Редактор конфигов</value>
+  <data name="PS_GB_AdvRepr.Text" xml:space="preserve">
+    <value>Расширенная очистка:</value>
   </data>
   <data name="PS_CheckCache.Text" xml:space="preserve">
     <value>Проверить целостность игрового кэша</value>
@@ -645,8 +660,8 @@
   <data name="PS_RemGameOpts.Text" xml:space="preserve">
     <value>Очистить настройки и конфиги игры</value>
   </data>
-  <data name="PS_GB_AdvRepr.Text" xml:space="preserve">
-    <value>Расширенная очистка:</value>
+  <data name="PS_GB_Remover.Text" xml:space="preserve">
+    <value>Безопасная очистка:</value>
   </data>
   <data name="PS_RemReplays.Text" xml:space="preserve">
     <value>Реплеи (повторы)</value>
@@ -684,8 +699,8 @@
   <data name="PS_RemCustMaps.Text" xml:space="preserve">
     <value>Кастомные карты</value>
   </data>
-  <data name="PS_GB_Remover.Text" xml:space="preserve">
-    <value>Безопасная очистка:</value>
+  <data name="PS_GB_SInfo.Text" xml:space="preserve">
+    <value>Информация о текущей установке</value>
   </data>
   <data name="PS_PathGame.Text" xml:space="preserve">
     <value>Путь к игре</value>
@@ -699,8 +714,8 @@
   <data name="PS_StPath.Text" xml:space="preserve">
     <value>Путь к Steam: {0}</value>
   </data>
-  <data name="PS_GB_SInfo.Text" xml:space="preserve">
-    <value>Информация о текущей установке</value>
+  <data name="PS_GB_Solver.Text" xml:space="preserve">
+    <value>Устранение проблем Steam</value>
   </data>
   <data name="PS_ExecuteNow.Text" xml:space="preserve">
     <value>Выполнить!</value>
@@ -729,20 +744,14 @@
   <data name="PS_CleanBlobs.Text" xml:space="preserve">
     <value>Очистить .blob-файлы из каталога Steam</value>
   </data>
-  <data name="PS_GB_Solver.Text" xml:space="preserve">
-    <value>Устранение проблем Steam</value>
-  </data>
-  <data name="ProblemSolver.Text" xml:space="preserve">
-    <value>Устранение проблем и очистка</value>
-  </data>
   <data name="FP_Install.Text" xml:space="preserve">
     <value>Установить выбранный конфиг</value>
   </data>
-  <data name="FP_Comp.Text" xml:space="preserve">
-    <value>Выбранный FPS-конфиг не полностью совместим с данной игрой!</value>
-  </data>
   <data name="FP_GB_Desc.Text" xml:space="preserve">
     <value>Подробное описание выбранного конфига</value>
+  </data>
+  <data name="FP_Comp.Text" xml:space="preserve">
+    <value>Выбранный FPS-конфиг не полностью совместим с данной игрой!</value>
   </data>
   <data name="FP_Uninstall.Text" xml:space="preserve">
     <value>Удалить имеющийся конфиг</value>
@@ -755,9 +764,6 @@
   </data>
   <data name="FP_TopLabel.Text" xml:space="preserve">
     <value>На этой странице вы можете установить один из доступных FPS-конфигов в игру. Настройки, полученные из конфига, имеют более высокий приоритет, чем заданные вручную в редаторе графических настроек или самой игре.</value>
-  </data>
-  <data name="FPSCfgInstall.Text" xml:space="preserve">
-    <value>FPS-конфиги</value>
   </data>
   <data name="HD_Uninstall.Text" xml:space="preserve">
     <value>Удалить выбранный HUD</value>
@@ -773,12 +779,6 @@
   </data>
   <data name="HD_WelcMsg.Text" xml:space="preserve">
     <value>Здесь вы можете установить один из протестированных нами HUD в игру. Не устанавливайте более одного HUD, т.к. это может привести к непредсказуемым последствиям. Выберите HUD из списка чтобы увидеть его скриншот.</value>
-  </data>
-  <data name="HUD_NAText.Text" xml:space="preserve">
-    <value>Нет доступных HUD для данной игры!</value>
-  </data>
-  <data name="HUDInstall.Text" xml:space="preserve">
-    <value>Менеджер HUD</value>
   </data>
   <data name="BU_LV_Name.Text" xml:space="preserve">
     <value>Имя</value>
@@ -807,6 +807,9 @@
   <data name="BUT_ExploreBUp.Text" xml:space="preserve">
     <value>Показать выбранную резервную копию в Проводнике</value>
   </data>
+  <data name="BUT_CrBkupReg.Text" xml:space="preserve">
+    <value>Создать резервную копию реестра</value>
+  </data>
   <data name="BUT_L_GameSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>295, 22</value>
   </data>
@@ -825,11 +828,11 @@
   <data name="BUT_L_AllSRC.Text" xml:space="preserve">
     <value>Создать бэкап настроек всех Source-игр</value>
   </data>
-  <data name="BUT_CrBkupReg.Text" xml:space="preserve">
-    <value>Создать резервную копию реестра</value>
+  <data name="ToolsMNU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 20</value>
   </data>
-  <data name="RescueCentre.Text" xml:space="preserve">
-    <value>Резервные копии</value>
+  <data name="ToolsMNU.Text" xml:space="preserve">
+    <value>&amp;Инструменты</value>
   </data>
   <data name="MNUShowEdHint.Size" type="System.Drawing.Size, System.Drawing">
     <value>307, 22</value>
@@ -870,6 +873,12 @@
   <data name="MNUMuteMan.Text" xml:space="preserve">
     <value>Управлен&amp;ие отключёнными игроками</value>
   </data>
+  <data name="MNUExtClnSub.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 22</value>
+  </data>
+  <data name="MNUExtClnSub.Text" xml:space="preserve">
+    <value>Модуль расширенной о&amp;чистки</value>
+  </data>
   <data name="MNUExtClnSteam.Size" type="System.Drawing.Size, System.Drawing">
     <value>249, 22</value>
   </data>
@@ -891,12 +900,6 @@
   <data name="MNUExtClnTmpDir.Text" xml:space="preserve">
     <value>&amp;Временные файлы системы</value>
   </data>
-  <data name="MNUExtClnSub.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 22</value>
-  </data>
-  <data name="MNUExtClnSub.Text" xml:space="preserve">
-    <value>Модуль расширенной о&amp;чистки</value>
-  </data>
   <data name="MNUSep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>304, 6</value>
   </data>
@@ -906,11 +909,11 @@
   <data name="MNUExit.Text" xml:space="preserve">
     <value>&amp;Выход</value>
   </data>
-  <data name="ToolsMNU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 20</value>
+  <data name="HelpMNU.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 20</value>
   </data>
-  <data name="ToolsMNU.Text" xml:space="preserve">
-    <value>&amp;Инструменты</value>
+  <data name="HelpMNU.Text" xml:space="preserve">
+    <value>&amp;Справка</value>
   </data>
   <data name="MNUHelp.Size" type="System.Drawing.Size, System.Drawing">
     <value>271, 22</value>
@@ -962,12 +965,6 @@
   </data>
   <data name="MNUAbout.Text" xml:space="preserve">
     <value>&amp;О программе</value>
-  </data>
-  <data name="HelpMNU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 20</value>
-  </data>
-  <data name="HelpMNU.Text" xml:space="preserve">
-    <value>&amp;Справка</value>
   </data>
   <data name="CE_OpenCfgDialog.Filter" xml:space="preserve">
     <value>Файлы конфигов (*.cfg)|*.cfg</value>

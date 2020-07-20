@@ -389,7 +389,6 @@
     <None Include="Resources\Cut.png" />
     <None Include="Resources\Paste.png" />
     <None Include="Resources\Convert.png" />
-    <None Include="Resources\Warning_Large.png" />
     <None Include="Resources\Warning.png" />
     <None Include="Resources\New.png" />
     <None Include="Resources\Open.png" />

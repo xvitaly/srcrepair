@@ -680,16 +680,6 @@ namespace srcrepair.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Warning_Large {
-            get {
-                object obj = ResourceManager.GetObject("Warning_Large", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Xmas {
             get {
                 object obj = ResourceManager.GetObject("Xmas", resourceCulture);
