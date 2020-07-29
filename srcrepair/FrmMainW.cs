@@ -1122,38 +1122,22 @@ namespace srcrepair.gui
         /// <summary>
         /// Generates internal offline help URL, based on current tab.
         /// </summary>
-        /// <param name="TabIndex">Current tab index.</param>
         /// <returns>Internal offline help URL.</returns>
-        private string GetHelpWebPage(int TabIndex)
+        private string GetHelpWebPage()
         {
-            // Creating variable for storing result...
-            string Result = String.Empty;
-
             // Generating page name, based on tab ID...
-            switch (TabIndex)
+            Dictionary<TabPage, String> TabMappings = new Dictionary<TabPage, String>
             {
-                case 0: // Graphic tweaker...
-                    Result = "graphic-tweaker";
-                    break;
-                case 1: // Config editor...
-                    Result = "config-editor";
-                    break;
-                case 2: // Problem solver...
-                    Result = "cleanup";
-                    break;
-                case 3: // FPS-config manager...
-                    Result = "fps-configs";
-                    break;
-                case 4: // HUD manager...
-                    Result = "hud-manager";
-                    break;
-                case 5: // BackUps manager...
-                    Result = "backups";
-                    break;
-            }
+                { GraphicTweaker, "graphic-tweaker" }, // Graphic tweaker...
+                { ConfigEditor, "config-editor" }, // Config editor...
+                { ProblemSolver, "cleanup" }, // Problem solver...
+                { FPSCfgInstall, "fps-configs" }, // FPS-config manager...
+                { HUDInstall, "hud-manager" }, // HUD manager...
+                { RescueCentre, "backups" } // BackUps manager...
+            };
 
             // Returns result...
-            return String.Format("{0}.html", Result);
+            return String.Format("{0}.html", TabMappings[MainTabControl.SelectedTab]);
         }
 
         /// <summary>
@@ -2800,7 +2784,7 @@ namespace srcrepair.gui
 
             if (File.Exists(CHMFile))
             {
-                Help.ShowHelp(this, CHMFile, HelpNavigator.Topic, GetHelpWebPage(MainTabControl.SelectedIndex));
+                Help.ShowHelp(this, CHMFile, HelpNavigator.Topic, GetHelpWebPage());
             }
             else
             {
