@@ -138,6 +138,9 @@
   <data name="AppHelpCHMNotFound" xml:space="preserve">
     <value>Файл оффлайновой справочной системы не установлен, либо не поддерживается для данной языковой версии!</value>
   </data>
+  <data name="AppHelpCHMPageError" xml:space="preserve">
+    <value>Не удалось найти запрошенную страницу в файле оффлайновой справочной системы!</value>
+  </data>
   <data name="AppIncorrectSrcVersion" xml:space="preserve">
     <value>Обнаружена неподдерживаемая версия движка Source. Пожалуйста, сообщите об этой ошибке разработчикам!</value>
   </data>

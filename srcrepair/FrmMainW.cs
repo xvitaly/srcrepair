@@ -2784,7 +2784,15 @@ namespace srcrepair.gui
 
             if (File.Exists(CHMFile))
             {
-                Help.ShowHelp(this, CHMFile, HelpNavigator.Topic, GetHelpWebPage());
+                try
+                {
+                    Help.ShowHelp(this, CHMFile, HelpNavigator.Topic, GetHelpWebPage());
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex, DebugStrings.AppDbgExHlpShow);
+                    MessageBox.Show(AppStrings.AppHelpCHMPageError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {

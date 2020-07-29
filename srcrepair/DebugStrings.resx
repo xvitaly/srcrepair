@@ -216,6 +216,9 @@
   <data name="AppDbgExGTSave" xml:space="preserve">
     <value>Exception during saving of video settings.</value>
   </data>
+  <data name="AppDbgExHlpShow" xml:space="preserve">
+    <value>Failed to open the offline help viewer with the required page.</value>
+  </data>
   <data name="AppDbgExHudArchRem" xml:space="preserve">
     <value>Exception while removing HUD archive file.</value>
   </data>

@@ -138,6 +138,9 @@
   <data name="AppHelpCHMNotFound" xml:space="preserve">
     <value>The offline help system file is not found. Please reinstall application!</value>
   </data>
+  <data name="AppHelpCHMPageError" xml:space="preserve">
+    <value>The required page could not be found in the offline help system file!</value>
+  </data>
   <data name="AppIncorrectSrcVersion" xml:space="preserve">
     <value>Incorrect Source Engine version has been detected. This game is not fully supported. Please report this bug to developers!</value>
   </data>

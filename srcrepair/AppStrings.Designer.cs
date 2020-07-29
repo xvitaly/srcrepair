@@ -124,6 +124,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The required page could not be found in the offline help system file!.
+        /// </summary>
+        internal static string AppHelpCHMPageError {
+            get {
+                return ResourceManager.GetString("AppHelpCHMPageError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Incorrect Source Engine version has been detected. This game is not fully supported. Please report this bug to developers!.
         /// </summary>
         internal static string AppIncorrectSrcVersion {

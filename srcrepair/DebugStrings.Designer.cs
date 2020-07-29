@@ -358,6 +358,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to open the offline help viewer with the required page..
+        /// </summary>
+        internal static string AppDbgExHlpShow {
+            get {
+                return ResourceManager.GetString("AppDbgExHlpShow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while removing HUD archive file..
         /// </summary>
         internal static string AppDbgExHudArchRem {
