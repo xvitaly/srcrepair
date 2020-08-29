@@ -38,7 +38,6 @@ namespace srcrepair.core
 
         /// <summary>
         /// Get SRC Repair's installation directory.
-        /// целей.
         /// </summary>
         public string FullAppPath { get; private set; }
 
