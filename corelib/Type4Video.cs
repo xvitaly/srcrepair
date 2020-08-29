@@ -134,7 +134,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Writes Type 2 game video settings to file.
+        /// Writes Type 4 game video settings to file.
         /// </summary>
         public override void WriteSettings()
         {
