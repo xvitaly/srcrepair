@@ -21,10 +21,10 @@
 -->
 <Updates>
     <Application>
-        <Version>40.0.1.7296</Version>
-        <URL>https://github.com/xvitaly/srcrepair/releases/download/v40.0.1/srcrepair_401_final.exe</URL>
-        <Hash>ff84a8bf110a5defe50de78439e4c2bd</Hash>
-        <Hash2>e9c82945af4fd029fcc5c1eab25bfee9d363c243ee0c7b1321a1d3d66e58ee19a711e4f78e46db0f75aaca08656fd24d6806184de72e2771b59f8972d083d02f</Hash2>
+        <Version>40.0.2.7308</Version>
+        <URL>https://github.com/xvitaly/srcrepair/releases/download/v40.0.2/srcrepair_402_final.exe</URL>
+        <Hash>b761c5d1d515a571030d2ebb21146c8e</Hash>
+        <Hash2>161c900cc143b32e9d428e03a188e337f79ea23312dadc09dbb04b43df97bd0fd06d8b9a15dd1c53928ed1b42f8db9a88b38b323b5c5e400b80882636392a350</Hash2>
     </Application>
     <GameDB>
         <Version>4</Version>
