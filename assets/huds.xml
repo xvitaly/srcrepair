@@ -152,14 +152,14 @@
         <Name>KBNHud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/kbnhud_7f20d840.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/kbnhud/kbnhud_7f20d840.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/kbnhud_6892fcc7.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/huds/kbnhud/kbnhud_6892fcc7.zip</Mirror>
         <UpURI>https://github.com/Jotunn/KBNHud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/kbnhud.jpg</Preview>
         <RepoPath>https://github.com/Jotunn/KBNHud</RepoPath>
-        <Hash>80da9a3427c9d4ebdebf8663c85132c1</Hash>
-        <Hash2>3e79382c66ccd1e407068fcac8d91d8cab1b8cc6c19ceeee75eb0aac1c96ab6044466fea9bc82a7c02a8809524c4c864c335529d1e74596931bcac84271383e5</Hash2>
-        <LastUpdate>1598586754</LastUpdate>
+        <Hash>24e801978d725a7d59a3ff8d1eb1e352</Hash>
+        <Hash2>68d944ee682c32fc0f21f342729a54e43bfbead05fb2b34b2692b088941bf6ae434f1c988cda77911172074b1ff745daf214422963d3439d3133cca7981a8b6a</Hash2>
+        <LastUpdate>1599009813</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=271</Site>
         <ArchiveDir>KBNHud-master</ArchiveDir>
         <InstallDir>kbnhud</InstallDir>
@@ -280,14 +280,14 @@
         <Name>FlawHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/flawhud_e89d8801.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/flawhud/flawhud_e89d8801.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/flawhud_e82dafb0.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/huds/flawhud/flawhud_e82dafb0.zip</Mirror>
         <UpURI>https://github.com/CriticalFlaw/FlawHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/flawhud.jpg</Preview>
         <RepoPath>https://github.com/CriticalFlaw/FlawHUD</RepoPath>
-        <Hash>c9015d5b17f3799e9f9a620aecd62d40</Hash>
-        <Hash2>c3b1d32ef8c0e79689916e0fbd5e3b17300c92b42b55c22cb798879f3b9bcbba7f7a08fbf8bd89d5932bee267eda906f143ff30b366d752a6c68736302148e22</Hash2>
-        <LastUpdate>1598623223</LastUpdate>
+        <Hash>0ac7762786fb9a9ea64f44d098d8bddb</Hash>
+        <Hash2>a955b16d7ad028f9067c99edb2125d5a20e596676233edad37117efc6bad39f77131f953f063377f3dfeed1230f7afd34f7d767310183ef0e103b0094342e11c</Hash2>
+        <LastUpdate>1599594362</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=252</Site>
         <ArchiveDir>FlawHUD-master</ArchiveDir>
         <InstallDir>flawhud</InstallDir>
@@ -296,14 +296,14 @@
         <Name>m0re Hud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/m0rehud_02abf036.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/m0rehud/m0rehud_02abf036.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/m0rehud_de973b1c.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/huds/m0rehud/m0rehud_de973b1c.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/m0rehud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/m0rehud.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/m0rehud</RepoPath>
-        <Hash>54be7d4c030577604eeba44db97b3242</Hash>
-        <Hash2>3a02e9cc3f2f7fa7166b9615788489157e9fdc151933287c155493cdcc75a68b7c7408ab3dd84d6472c806b357fb8624fdf2f9cf1a42c7d5f63187a544c0211f</Hash2>
-        <LastUpdate>1598283422</LastUpdate>
+        <Hash>7abc9d914e310d93036890c2b8476814</Hash>
+        <Hash2>53a7efe129f55b30054ae3f42f62cb1fabb5be145ae6614f216409b83666bd23a559030490cf586561b269a892f02c36cc0902ae5c05350b1d7f48b8eafeb89d</Hash2>
+        <LastUpdate>1598892988</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=248</Site>
         <ArchiveDir>m0rehud-master/m0rehud</ArchiveDir>
         <InstallDir>m0rehud</InstallDir>
