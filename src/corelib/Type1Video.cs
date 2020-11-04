@@ -692,7 +692,7 @@ namespace srcrepair.core
         /// <param name="DestDir">Directory for saving backups.</param>
         public static void CreateRegBackUpNow(string RegKey, string FileName, string DestDir)
         {
-            ProcessManager.StartProcessAndWait("regedit.exe", String.Format("/ea \"{0}\" {1}", Path.Combine(DestDir, String.Format("{0}_{1}.reg", FileName, FileManager.DateTime2Unix(DateTime.Now))), RegKey));
+            ProcessManager.StartProcessAndWait(Properties.Resources.RegExecutable, String.Format(Properties.Resources.RegExportCmdLine, RegKey, Path.Combine(DestDir, String.Format(Properties.Resources.RegOutFilePattern, FileName, FileManager.DateTime2Unix(DateTime.Now)))));
         }
 
         /// <summary>
