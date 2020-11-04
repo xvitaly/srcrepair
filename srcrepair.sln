@@ -3,20 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "srcrepair", "srcrepair\srcrepair.csproj", "{83A0493F-A5D9-4306-9AB6-FB722EBE85BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "srcrepair", "src\srcrepair\srcrepair.csproj", "{83A0493F-A5D9-4306-9AB6-FB722EBE85BD}"
 	ProjectSection(ProjectDependencies) = postProject
 		{2CE9E668-998B-4A77-911F-ED8A2D4E3153} = {2CE9E668-998B-4A77-911F-ED8A2D4E3153}
 		{F83B5FAB-E985-4A84-8ACB-3333D2AD86A9} = {F83B5FAB-E985-4A84-8ACB-3333D2AD86A9}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "corelib", "corelib\corelib.csproj", "{2CE9E668-998B-4A77-911F-ED8A2D4E3153}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "corelib", "src\corelib\corelib.csproj", "{2CE9E668-998B-4A77-911F-ED8A2D4E3153}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{42B5110B-3DA0-4623-A310-546D8336E682}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kbhelper", "kbhelper\kbhelper.csproj", "{F83B5FAB-E985-4A84-8ACB-3333D2AD86A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kbhelper", "src\kbhelper\kbhelper.csproj", "{F83B5FAB-E985-4A84-8ACB-3333D2AD86A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

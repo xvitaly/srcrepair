@@ -47,10 +47,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DotNetZip, Version=1.13.8.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
-      <HintPath>..\packages\DotNetZip.1.13.8\lib\net40\DotNetZip.dll</HintPath>
+      <HintPath>..\..\packages\DotNetZip.1.13.8\lib\net40\DotNetZip.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.4.7.4\lib\net45\NLog.dll</HintPath>
+      <HintPath>..\..\packages\NLog.4.7.4\lib\net45\NLog.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -183,7 +183,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
-    <Content Include="..\assets\plugins.xml">
+    <Content Include="..\..\assets\plugins.xml">
       <Link>plugins.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -299,19 +299,19 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Content Include="..\assets\cleanup.xml">
+    <Content Include="..\..\assets\cleanup.xml">
       <Link>cleanup.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\assets\configs.xml">
+    <Content Include="..\..\assets\configs.xml">
       <Link>configs.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\assets\huds.xml">
+    <Content Include="..\..\assets\huds.xml">
       <Link>huds.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\COPYING">
+    <Content Include="..\..\COPYING">
       <Link>COPYING</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -369,7 +369,7 @@
     <None Include="Resources\red_circle.png" />
     <None Include="Resources\green_circle.png" />
     <None Include="Resources\source.png" />
-    <Content Include="..\assets\games.xml">
+    <Content Include="..\..\assets\games.xml">
       <Link>games.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
