@@ -165,6 +165,9 @@
   <data name="RegExportCmdLine" xml:space="preserve">
     <value>export "{0}" "{1}" /y</value>
   </data>
+  <data name="RegImportCmdLine" xml:space="preserve">
+    <value>import "{0}"</value>
+  </data>
   <data name="RegOutFilePattern" xml:space="preserve">
     <value>{0}_{1}.reg</value>
   </data>

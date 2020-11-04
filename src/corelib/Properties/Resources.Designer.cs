@@ -205,6 +205,15 @@ namespace srcrepair.core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to import &quot;{0}&quot;.
+        /// </summary>
+        internal static string RegImportCmdLine {
+            get {
+                return ResourceManager.GetString("RegImportCmdLine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0}_{1}.reg.
         /// </summary>
         internal static string RegOutFilePattern {
