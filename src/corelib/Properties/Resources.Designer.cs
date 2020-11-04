@@ -187,6 +187,33 @@ namespace srcrepair.core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to reg.exe.
+        /// </summary>
+        internal static string RegExecutable {
+            get {
+                return ResourceManager.GetString("RegExecutable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to export &quot;{0}&quot; &quot;{1}&quot; /y.
+        /// </summary>
+        internal static string RegExportCmdLine {
+            get {
+                return ResourceManager.GetString("RegExportCmdLine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}_{1}.reg.
+        /// </summary>
+        internal static string RegOutFilePattern {
+            get {
+                return ResourceManager.GetString("RegOutFilePattern", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to explorer.exe.
         /// </summary>
         internal static string ShBinWin {
