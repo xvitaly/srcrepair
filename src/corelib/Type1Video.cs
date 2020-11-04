@@ -696,6 +696,15 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Restores a specified registry backup.
+        /// </summary>
+        /// <param name="FileName">Full path to the backup file.</param>
+        public static void RestoreRegBackUpNow(string FileName)
+        {
+            ProcessManager.StartProcessAndWait(Properties.Resources.RegExecutable, String.Format(Properties.Resources.RegImportCmdLine, FileName));
+        }
+
+        /// <summary>
         /// Creates a backup copy of specified registry subkey
         /// (HKEY_CURRENT_USER branch).
         /// </summary>
