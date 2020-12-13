@@ -156,7 +156,6 @@ namespace srcrepair.gui
 
                 // Adding found games to selector...
                 AppSelector.Items.AddRange(App.SourceGames.InstalledGameNames.ToArray());
-
             }
             catch (Exception Ex)
             {
