@@ -1599,7 +1599,6 @@ namespace srcrepair.gui
             App.SourceGames[(string)e.Argument].HUDMan = new HUDManager(App.SourceGames[(string)e.Argument].SmallAppName, App.FullAppPath, App.SourceGames[(string)e.Argument].AppHUDDir, Properties.Settings.Default.HUDHideOutdated);
         }
 
-
         /// <summary>
         /// Renders collection of available HUDs on its tab.
         /// </summary>
