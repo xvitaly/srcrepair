@@ -177,7 +177,6 @@ namespace srcrepair.gui
                     Logger.Error(Ex, DebugStrings.AppDbgExClnEmptyDirs);
                 }
             }
-
         }
 
         /// <summary>
