@@ -298,7 +298,6 @@ namespace srcrepair.gui
             {
                 Logger.Warn(Ex);
             }
-            
         }
 
         /// <summary>
