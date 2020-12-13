@@ -182,7 +182,6 @@
     <Compile Include="GuiHelpers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings.cs" />
     <Content Include="..\..\assets\plugins.xml">
       <Link>plugins.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
