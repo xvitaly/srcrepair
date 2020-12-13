@@ -349,7 +349,6 @@ namespace srcrepair.gui
                     // Writing issue to log...
                     Logger.Warn(e.Error);
                 }
-
             }
             catch (Exception Ex)
             {
