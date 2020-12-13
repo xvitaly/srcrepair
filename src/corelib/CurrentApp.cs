@@ -155,7 +155,7 @@ namespace srcrepair.core
             FullAppPath = Path.GetDirectoryName(Assembly.GetCallingAssembly().Location);
 
             // Getting full to application user directory...
-            AppUserDir = IsPortable ? Path.Combine(Path.GetDirectoryName(Assembly.GetCallingAssembly().Location), "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppName); ;
+            AppUserDir = IsPortable ? Path.Combine(Path.GetDirectoryName(Assembly.GetCallingAssembly().Location), "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppName);
 
             // Checking if user directory exists. If not - creating it...
             if (!(Directory.Exists(AppUserDir)))
