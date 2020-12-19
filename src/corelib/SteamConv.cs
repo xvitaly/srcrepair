@@ -41,7 +41,7 @@ namespace srcrepair.core
         public static long GetUserID(string Sid32)
         {
             string[] SidArr = Sid32.Split(':');
-            return Convert.ToInt64(SidArr[2]) * 2 + Convert.ToInt64(SidArr[1]);
+            return (Convert.ToInt64(SidArr[2]) * 2) + Convert.ToInt64(SidArr[1]);
         }
         
         /// <summary>
