@@ -296,14 +296,14 @@
         <Name>m0re Hud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/m0rehud_13a5a718.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/m0rehud/m0rehud_13a5a718.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/m0rehud_1679d7e9.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/huds/m0rehud/m0rehud_1679d7e9.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/m0rehud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/m0rehud.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/m0rehud</RepoPath>
-        <Hash>f12646f960ccc721b3c95bd69e75d6d9</Hash>
-        <Hash2>202b25b1eb68554f0f4880a8600b3c453bea721d39198381a0d8467a1046f88acf67eab6e2670ae6f1cc34cae15b219d4ddaff4c722d9b7a938fa7a47123b86d</Hash2>
-        <LastUpdate>1605039014</LastUpdate>
+        <Hash>1b4ba5ae223372a9b3156edc4f045945</Hash>
+        <Hash2>7ad23aad24cb29282faab8def8d781aab1946500a2fa7c618f4cd90e34580d1ed6a7a3aa71c30803abc78ae0f53bfe7c2603e95ff0afc1316407c9dc38635105</Hash2>
+        <LastUpdate>1608495936</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=248</Site>
         <ArchiveDir>m0rehud-master/m0rehud</ArchiveDir>
         <InstallDir>m0rehud</InstallDir>
@@ -392,14 +392,14 @@
         <Name>Hypnotize HUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/hypnotizehud_3889e3a4.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/hypnotizehud/hypnotizehud_3889e3a4.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/hypnotizehud_5737c12a.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/huds/hypnotizehud/hypnotizehud_5737c12a.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/Hypnotize-Hud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/hypnotizehud.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/Hypnotize-Hud</RepoPath>
-        <Hash>4a17c7c4e67e54e2171fab3a894979cd</Hash>
-        <Hash2>823533b827ec64427bbf55ca9fc595d0e6a89304a8e8a17663e9acdbfa2ae4e9b44aad2c63c615748aca8784bdf2d1dfb11170f0077e302b50cfd38b6de5944d</Hash2>
-        <LastUpdate>1605305447</LastUpdate>
+        <Hash>71081d22e25a1d01c59b76c07e7a5546</Hash>
+        <Hash2>600f6d573fbb952b0c611490ba1cd5d8e7e85b186a444948e9b719a7c04f4d81359aba45cdfe84987766db5cd22ab365e5501515945b918ef62e7dd8c9c9046c</Hash2>
+        <LastUpdate>1608496474</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=341</Site>
         <ArchiveDir>Hypnotize-Hud-master/hypnotize hud</ArchiveDir>
         <InstallDir>hypnotizehud</InstallDir>
