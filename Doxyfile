@@ -25,7 +25,7 @@ DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = srcrepair
 PROJECT_NUMBER         = 40.0.4
 PROJECT_BRIEF          = "Free open source tool that can be used for tuning and cleaning up Steam and Source engine games"
-PROJECT_LOGO           = srcrepair/srcrepair.ico
+PROJECT_LOGO           = src/srcrepair/srcrepair.ico
 OUTPUT_DIRECTORY       = doxyout
 CREATE_SUBDIRS         = NO
 ALLOW_UNICODE_NAMES    = NO
@@ -126,7 +126,7 @@ WARN_LOGFILE           =
 # Configuration options related to the input files
 #---------------------------------------------------------------------------
 
-INPUT                  = srcrepair corelib kbhelper README.md
+INPUT                  = src/srcrepair src/corelib src/kbhelper README.md
 INPUT_ENCODING         = UTF-8
 FILE_PATTERNS          = *.c \
                          *.cc \
