@@ -94,26 +94,15 @@ namespace srcrepair.gui
         /// <param name="e">Completion arguments and results.</param>
         private void DownloaderCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            try
+            // Download task completed. Checking for errors...
+            if (e.Error != null)
             {
-                // Checking for errors...
-                if (e.Error != null)
-                {
-                    Logger.Error(e.Error, DebugStrings.AppDbgExDnWrkDownloadFile);
-                }
-
-                // Download completed. Checking if file exists and is not empty...
-                FileInfo Fi = new FileInfo(LocalFile);
-                if (Fi.Exists && Fi.Length == 0)
-                {
-                    Fi.Delete();
-                }
+                Logger.Error(e.Error, DebugStrings.AppDbgExDnWrkDownloadFile);
             }
-            catch (Exception Ex) { Logger.Warn(Ex); }
 
-            // Finalizing and closing form...
-            IsRunning = false;
-            Close();
+            // Performing additional actions...
+            DownloaderVerifyResult();
+            DownloaderFinalize();
         }
 
         /// <summary>
@@ -138,6 +127,31 @@ namespace srcrepair.gui
                 }
             }
             catch (Exception Ex) { Logger.Warn(Ex); }
+        }
+
+        /// <summary>
+        /// Checks if the downloaded file exists and is not empty.
+        /// </summary>
+        private void DownloaderVerifyResult()
+        {
+            try
+            {
+                FileInfo Fi = new FileInfo(LocalFile);
+                if (Fi.Exists && Fi.Length == 0)
+                {
+                    Fi.Delete();
+                }
+            }
+            catch (Exception Ex) { Logger.Warn(Ex); }
+        }
+
+        /// <summary>
+        /// Performs finalizing actions and closes the form.
+        /// </summary>
+        private void DownloaderFinalize()
+        {
+            IsRunning = false;
+            Close();
         }
 
         /// <summary>
