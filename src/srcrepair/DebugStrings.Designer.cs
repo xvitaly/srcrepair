@@ -313,6 +313,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to download file from the remote server..
+        /// </summary>
+        internal static string AppDbgExDnWrkDownloadFile {
+            get {
+                return ResourceManager.GetString("AppDbgExDnWrkDownloadFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception on trying to load installed FPS-config to editor..
         /// </summary>
         internal static string AppDbgExEditCfg {

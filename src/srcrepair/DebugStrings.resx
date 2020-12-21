@@ -201,6 +201,9 @@
   <data name="AppDbgExCvarDescFetchFailure" xml:space="preserve">
     <value>Exception while fetching Cvar description from a separate resource file.</value>
   </data>
+  <data name="AppDbgExDnWrkDownloadFile" xml:space="preserve">
+    <value>Exception while trying to download file from the remote server.</value>
+  </data>
   <data name="AppDbgExEditCfg" xml:space="preserve">
     <value>Exception on trying to load installed FPS-config to editor.</value>
   </data>
