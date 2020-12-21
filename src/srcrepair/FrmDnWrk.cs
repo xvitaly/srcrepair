@@ -96,6 +96,12 @@ namespace srcrepair.gui
         {
             try
             {
+                // Checking for errors...
+                if (e.Error != null)
+                {
+                    Logger.Error(e.Error, DebugStrings.AppDbgExDnWrkDownloadFile);
+                }
+
                 // Download completed. Checking if file exists and is not empty...
                 FileInfo Fi = new FileInfo(LocalFile);
                 if (Fi.Exists && Fi.Length == 0)
