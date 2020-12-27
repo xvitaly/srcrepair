@@ -25,7 +25,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/7hud_271f1fc2.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/7hud/7hud_271f1fc2.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/7hud_271f1fc2.zip</Mirror>
         <UpURI>https://github.com/Sevin7/7HUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/7hud.jpg</Preview>
         <RepoPath>https://github.com/Sevin7/7HUD</RepoPath>
@@ -41,7 +41,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/broeselhudblue_e6b5ae64.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/broeselhudblue/broeselhudblue_e6b5ae64.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/broeselhudblue_e6b5ae64.zip</Mirror>
         <UpURI>https://github.com/fblue/broeselhud_blue/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/broeselhud_blue.jpg</Preview>
         <RepoPath>https://github.com/fblue/broeselhud_blue</RepoPath>
@@ -57,7 +57,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://toonhud.com/downloads/toonhud_11-1.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/toonhud/toonhud_75ebc5e4.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/toonhud_75ebc5e4.zip</Mirror>
         <UpURI>https://toonhud.com/downloads/toonhud_11-1.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/toonhud.jpg</Preview>
         <RepoPath>null</RepoPath>
@@ -73,7 +73,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/voidhud_8165dbad.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/voidhud/voidhud_8165dbad.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/voidhud_8165dbad.zip</Mirror>
         <UpURI>https://github.com/TheStaticVoid/VoidHUD2.0/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/voidhud.jpg</Preview>
         <RepoPath>https://github.com/TheStaticVoid/voidhud2.0</RepoPath>
@@ -89,7 +89,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/ahud_419f0b4b.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/ahud/ahud_419f0b4b.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/ahud_419f0b4b.zip</Mirror>
         <UpURI>https://github.com/n0kk/ahud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/ahud.jpg</Preview>
         <RepoPath>https://github.com/n0kk/ahud</RepoPath>
@@ -105,7 +105,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/bwhud_e3646579.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/bwhud/bwhud_e3646579.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/bwhud_e3646579.zip</Mirror>
         <UpURI>https://github.com/bw-/bwhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/bwhud.jpg</Preview>
         <RepoPath>https://github.com/bw-/bwhud</RepoPath>
@@ -121,7 +121,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/budhud_a72b9044.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/budhud/budhud_a72b9044.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/budhud_a72b9044.zip</Mirror>
         <UpURI>https://github.com/WhiskerBiscuit/budhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.jpg</Preview>
         <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
@@ -137,7 +137,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/idhud_1fadf345.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/idhud/idhud_1fadf345.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/idhud_1fadf345.zip</Mirror>
         <UpURI>https://github.com/Eniere/idhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/idhud.jpg</Preview>
         <RepoPath>https://github.com/Eniere/idhud</RepoPath>
@@ -153,7 +153,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/kbnhud_aa1d8c42.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/kbnhud/kbnhud_aa1d8c42.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/kbnhud_aa1d8c42.zip</Mirror>
         <UpURI>https://github.com/Jotunn/KBNHud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/kbnhud.jpg</Preview>
         <RepoPath>https://github.com/Jotunn/KBNHud</RepoPath>
@@ -169,7 +169,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/rayshud_64fbf271.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/rayshud/rayshud_64fbf271.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/rayshud_64fbf271.zip</Mirror>
         <UpURI>https://github.com/raysfire/rayshud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/rayshud.jpg</Preview>
         <RepoPath>https://github.com/raysfire/rayshud</RepoPath>
@@ -185,7 +185,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://files.gamebanana.com/guis/eve_hud_v427.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/evehud/evehud_bf92fb0a.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/evehud_bf92fb0a.zip</Mirror>
         <UpURI>https://files.gamebanana.com/guis/eve_hud_v427.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/evehud.jpg</Preview>
         <RepoPath>null</RepoPath>
@@ -201,7 +201,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/biscottihud_ea9282f3.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/biscottihud/biscottihud_ea9282f3.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/biscottihud_ea9282f3.zip</Mirror>
         <UpURI>https://github.com/MedicodiBiscotti/biscottiHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/biscottihud.jpg</Preview>
         <RepoPath>https://github.com/MedicodiBiscotti/biscottiHUD</RepoPath>
@@ -217,7 +217,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/frankenhud_993ed990.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/frankenhud/frankenhud_993ed990.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/frankenhud_993ed990.zip</Mirror>
         <UpURI>https://github.com/TheKins/frankenhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/frankenhud.jpg</Preview>
         <RepoPath>https://github.com/TheKins/frankenhud</RepoPath>
@@ -233,7 +233,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/yayahud_e753a9bf.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/yayahud/yayahud_e753a9bf.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/yayahud_e753a9bf.zip</Mirror>
         <UpURI>https://github.com/Yttrium-tYcLief/yayahud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/yayahud.jpg</Preview>
         <RepoPath>https://github.com/yttrium-tyclief/yayahud</RepoPath>
@@ -249,7 +249,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/solarhud_ae24f9b5.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/solarhud/solarhud_ae24f9b5.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/solarhud_ae24f9b5.zip</Mirror>
         <UpURI>https://github.com/Stochast1c/solarhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/solarhud.jpg</Preview>
         <RepoPath>https://github.com/Stochast1c/solarhud</RepoPath>
@@ -265,7 +265,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/boredhud_e7f83610.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/boredhud/boredhud_e7f83610.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/boredhud_e7f83610.zip</Mirror>
         <UpURI>https://github.com/TheStaticVoid/boredHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/boredhud.jpg</Preview>
         <RepoPath>https://github.com/TheStaticVoid/boredHUD</RepoPath>
@@ -281,7 +281,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/flawhud_498135ff.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/flawhud/flawhud_498135ff.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/flawhud_498135ff.zip</Mirror>
         <UpURI>https://github.com/CriticalFlaw/FlawHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/flawhud.jpg</Preview>
         <RepoPath>https://github.com/CriticalFlaw/FlawHUD</RepoPath>
@@ -297,7 +297,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/m0rehud_1679d7e9.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/m0rehud/m0rehud_1679d7e9.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/m0rehud_1679d7e9.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/m0rehud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/m0rehud.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/m0rehud</RepoPath>
@@ -313,7 +313,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/mkhud_7f6c2deb.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/mkhud/mkhud_7f6c2deb.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/mkhud_7f6c2deb.zip</Mirror>
         <UpURI>https://github.com/nimtra/mkHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/mkhud.jpg</Preview>
         <RepoPath>https://github.com/nimtra/mkHUD</RepoPath>
@@ -329,7 +329,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/mhud_ed89a10f.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/mhud/mhud_ed89a10f.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/mhud_ed89a10f.zip</Mirror>
         <UpURI>https://github.com/Marblr/mHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/mhud.jpg</Preview>
         <RepoPath>https://github.com/Marblr/mHUD</RepoPath>
@@ -345,7 +345,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/antshud_5cefe97e.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/antshud/antshud_5cefe97e.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/antshud_5cefe97e.zip</Mirror>
         <UpURI>https://github.com/AsianAntwan/AntsHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/antshud.jpg</Preview>
         <RepoPath>https://github.com/AsianAntwan/AntsHUD</RepoPath>
@@ -361,7 +361,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://huds.tf/forum/xthreads_attach.php/119_1548695581_32f5cd5d/18b7f8d9f144b851879b7df3409769c6/slimHUD.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/slimhud/slimhud_0cfd5b12.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/slimhud_0cfd5b12.zip</Mirror>
         <UpURI>https://huds.tf/forum/xthreads_attach.php/119_1548695581_32f5cd5d/18b7f8d9f144b851879b7df3409769c6/slimHUD.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/slimhud.jpg</Preview>
         <RepoPath>null</RepoPath>
@@ -377,7 +377,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/rebelhud_9b070a7a.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/rebelhud/rebelhud_9b070a7a.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/rebelhud_9b070a7a.zip</Mirror>
         <UpURI>https://github.com/TheRebelCreeper/RebelHud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/rebelhud.jpg</Preview>
         <RepoPath>https://github.com/TheRebelCreeper/RebelHud</RepoPath>
@@ -393,7 +393,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/hypnotizehud_2d920bd6.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/hypnotizehud/hypnotizehud_2d920bd6.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/hypnotizehud_2d920bd6.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/Hypnotize-Hud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/hypnotizehud.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/Hypnotize-Hud</RepoPath>
@@ -409,7 +409,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/moeshud_95a3a610.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/moeshud/moeshud_95a3a610.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/moeshud_95a3a610.zip</Mirror>
         <UpURI>https://github.com/MoeLesting/MoesHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/moeshud.jpg</Preview>
         <RepoPath>https://github.com/MoeLesting/MoesHUD</RepoPath>
@@ -425,7 +425,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/slaghud_0b8745d9.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/slaghud/slaghud_0b8745d9.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/slaghud_0b8745d9.zip</Mirror>
         <UpURI>https://github.com/MagmaDude/SlagHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/slaghud.jpg</Preview>
         <RepoPath>https://github.com/MagmaDude/SlagHUD</RepoPath>
@@ -441,7 +441,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/bxhud_0102fa8f.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/bxhud/bxhud_0102fa8f.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/bxhud_0102fa8f.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/BX-Hud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/bxhud.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/BX-Hud</RepoPath>
@@ -457,7 +457,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/garm3nql_21f05d47.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/garm3nql/garm3nql_21f05d47.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/garm3nql_21f05d47.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/Garm3n-QL/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/garm3nql.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/Garm3n-QL</RepoPath>
@@ -473,7 +473,7 @@
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/delihud_f75c909a.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/delihud/delihud_f75c909a.zip</Mirror>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/delihud_f75c909a.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/Deli-Hud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/delihud.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/Deli-Hud</RepoPath>
