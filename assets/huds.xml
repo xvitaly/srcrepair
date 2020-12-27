@@ -280,14 +280,14 @@
         <Name>FlawHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/flawhud_aa9fc9ef.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/flawhud/flawhud_aa9fc9ef.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/flawhud_498135ff.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/huds/flawhud/flawhud_498135ff.zip</Mirror>
         <UpURI>https://github.com/CriticalFlaw/FlawHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/flawhud.jpg</Preview>
         <RepoPath>https://github.com/CriticalFlaw/FlawHUD</RepoPath>
-        <Hash>ada83781ae444bdda8bfea4c2fdcd83a</Hash>
-        <Hash2>d2113f4ee8aff503e0373ca1fea3423e432e32119c9e25147afd76a59d02465ef6a213cb90c62dea7cdd144f6a4ad152be9c594dca7a211e99ed71e26ee23e39</Hash2>
-        <LastUpdate>1607565184</LastUpdate>
+        <Hash>ef4bdb23906b225b76fb8166165ae5f7</Hash>
+        <Hash2>a295a97848d5888bf2739f05dbf124816e1b30a5cca12227cd62d8f3dced71b5be99088acec6312a1f5d22771dd3d08251cc8fb31296adeedaceec4a5b3b4fb8</Hash2>
+        <LastUpdate>1608863610</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=252</Site>
         <ArchiveDir>FlawHUD-master</ArchiveDir>
         <InstallDir>flawhud</InstallDir>
@@ -392,14 +392,14 @@
         <Name>Hypnotize HUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/hypnotizehud_5737c12a.zip</URI>
-        <Mirror>https://www.team-fortress.su/downloads/huds/hypnotizehud/hypnotizehud_5737c12a.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/hypnotizehud_2d920bd6.zip</URI>
+        <Mirror>https://www.team-fortress.su/downloads/huds/hypnotizehud/hypnotizehud_2d920bd6.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/Hypnotize-Hud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/hypnotizehud.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/Hypnotize-Hud</RepoPath>
-        <Hash>71081d22e25a1d01c59b76c07e7a5546</Hash>
-        <Hash2>600f6d573fbb952b0c611490ba1cd5d8e7e85b186a444948e9b719a7c04f4d81359aba45cdfe84987766db5cd22ab365e5501515945b918ef62e7dd8c9c9046c</Hash2>
-        <LastUpdate>1608496474</LastUpdate>
+        <Hash>97174d14f284aaba8b6ff38dfb29a4d5</Hash>
+        <Hash2>9d888021d5778a72d37bd2a1c9b53e81151332f01105208992c2a0412a6c3da28e01c594160432632feecba92f9a08847cc42463310860555da838d417564197</Hash2>
+        <LastUpdate>1608758609</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=341</Site>
         <ArchiveDir>Hypnotize-Hud-master/hypnotize hud</ArchiveDir>
         <InstallDir>hypnotizehud</InstallDir>
