@@ -2138,7 +2138,7 @@ namespace srcrepair.gui
                     }
 
                     // Changing the state of some controls...
-                    SetFPSButtons(true);
+                    SetFPSButtons(DownloadResult);
                     HandleConfigs();
                 }
             }
