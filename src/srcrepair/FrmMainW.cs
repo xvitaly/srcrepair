@@ -1329,7 +1329,7 @@ namespace srcrepair.gui
         /// <returns>Returns FPS-config download URI.</returns>
         private string GetFPSConfigDownloadURI(bool ForceMirror)
         {
-            return Properties.Settings.Default.FPSUseMirror || ForceMirror ? App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].Mirror : App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].URI;
+            return ForceMirror ? App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].Mirror : App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].URI;
         }
 
         /// <summary>
