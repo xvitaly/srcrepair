@@ -145,9 +145,6 @@
   <data name="MO_TP1.Text" xml:space="preserve">
     <value>Общие настройки</value>
   </data>
-  <data name="MO_FPSUseMirror.Text" xml:space="preserve">
-    <value>Загружать FPS-конфиги с зеркал</value>
-  </data>
   <data name="MO_HideOutdatedHUDs.Text" xml:space="preserve">
     <value>Не показывать устаревшие HUD</value>
   </data>

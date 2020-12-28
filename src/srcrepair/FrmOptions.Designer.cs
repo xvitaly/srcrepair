@@ -40,7 +40,6 @@
             this.MO_HideUnsupported = new System.Windows.Forms.CheckBox();
             this.MO_ConfirmExit = new System.Windows.Forms.CheckBox();
             this.MO_TP2 = new System.Windows.Forms.TabPage();
-            this.MO_FPSUseMirror = new System.Windows.Forms.CheckBox();
             this.MO_HideOutdatedHUDs = new System.Windows.Forms.CheckBox();
             this.MO_AutoCheckUpdates = new System.Windows.Forms.CheckBox();
             this.MO_UnSafeOps = new System.Windows.Forms.CheckBox();
@@ -128,7 +127,6 @@
             // 
             // MO_TP2
             // 
-            this.MO_TP2.Controls.Add(this.MO_FPSUseMirror);
             this.MO_TP2.Controls.Add(this.MO_HideOutdatedHUDs);
             this.MO_TP2.Controls.Add(this.MO_AutoCheckUpdates);
             this.MO_TP2.Controls.Add(this.MO_UnSafeOps);
@@ -140,12 +138,6 @@
             resources.ApplyResources(this.MO_TP2, "MO_TP2");
             this.MO_TP2.Name = "MO_TP2";
             this.MO_TP2.UseVisualStyleBackColor = true;
-            // 
-            // MO_FPSUseMirror
-            // 
-            resources.ApplyResources(this.MO_FPSUseMirror, "MO_FPSUseMirror");
-            this.MO_FPSUseMirror.Name = "MO_FPSUseMirror";
-            this.MO_FPSUseMirror.UseVisualStyleBackColor = true;
             // 
             // MO_HideOutdatedHUDs
             // 
@@ -245,6 +237,5 @@
         private System.Windows.Forms.CheckBox MO_UseUpstream;
         private System.Windows.Forms.CheckBox MO_AutoCheckUpdates;
         private System.Windows.Forms.CheckBox MO_HideOutdatedHUDs;
-        private System.Windows.Forms.CheckBox MO_FPSUseMirror;
     }
 }
