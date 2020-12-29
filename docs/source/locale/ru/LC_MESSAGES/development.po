@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 38.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-29 17:52+0100\n"
-"PO-Revision-Date: 2020-12-29 17:53+0100\n"
+"POT-Creation-Date: 2020-12-29 18:02+0100\n"
+"PO-Revision-Date: 2020-12-29 18:03+0100\n"
 "Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -288,20 +288,20 @@ msgid "The original source file is located in ``assets/cleanup.xml``."
 msgstr "Исходный файл ``assets/cleanup.xml``."
 
 #: ../../source/development.rst:105 ../../source/development.rst:174
-#: ../../source/development.rst:229 ../../source/development.rst:290
-#: ../../source/development.rst:378
+#: ../../source/development.rst:229 ../../source/development.rst:289
+#: ../../source/development.rst:377
 msgid "XML database example"
 msgstr "Пример базы данных в формате XML"
 
 #: ../../source/development.rst:122 ../../source/development.rst:198
-#: ../../source/development.rst:250 ../../source/development.rst:314
-#: ../../source/development.rst:349 ../../source/development.rst:393
+#: ../../source/development.rst:250 ../../source/development.rst:313
+#: ../../source/development.rst:348 ../../source/development.rst:392
 msgid "Properties"
 msgstr "Доступные свойства"
 
 #: ../../source/development.rst:124 ../../source/development.rst:200
-#: ../../source/development.rst:252 ../../source/development.rst:316
-#: ../../source/development.rst:351 ../../source/development.rst:395
+#: ../../source/development.rst:252 ../../source/development.rst:315
+#: ../../source/development.rst:350 ../../source/development.rst:394
 msgid "Level 0:"
 msgstr "Уровень 0:"
 
@@ -310,8 +310,8 @@ msgid "``Targets`` -- XML root element."
 msgstr "``Targets`` -- корневой элемент XML."
 
 #: ../../source/development.rst:128 ../../source/development.rst:204
-#: ../../source/development.rst:256 ../../source/development.rst:320
-#: ../../source/development.rst:355 ../../source/development.rst:399
+#: ../../source/development.rst:256 ../../source/development.rst:319
+#: ../../source/development.rst:354 ../../source/development.rst:398
 msgid "Level 1:"
 msgstr "Уровень 1:"
 
@@ -320,8 +320,8 @@ msgid "``Target`` -- database entry base element."
 msgstr "``Target`` -- базовый элемент."
 
 #: ../../source/development.rst:132 ../../source/development.rst:208
-#: ../../source/development.rst:262 ../../source/development.rst:324
-#: ../../source/development.rst:363 ../../source/development.rst:403
+#: ../../source/development.rst:262 ../../source/development.rst:323
+#: ../../source/development.rst:362 ../../source/development.rst:402
 msgid "Level 2:"
 msgstr "Уровень 2:"
 
@@ -448,14 +448,14 @@ msgstr "``Config`` -- базовый элемент."
 msgid "``Name`` -- FPS-config user-friendly name;"
 msgstr "``Name`` -- понятное конечному пользователю название;"
 
-#: ../../source/development.rst:211 ../../source/development.rst:329
+#: ../../source/development.rst:211 ../../source/development.rst:328
 msgid ""
 "``URI`` -- fully-qualified Zip archive download URL (safe redirects (3XX "
 "HTTP codes) are allowed);"
 msgstr ""
 "``URI`` -- адрес Zip-архива для загрузки (редиректы с кодами 3XX разрешены);"
 
-#: ../../source/development.rst:212 ../../source/development.rst:330
+#: ../../source/development.rst:212 ../../source/development.rst:329
 msgid ""
 "``Mirror`` -- fully-qualified Zip archive download mirror URL (safe "
 "redirects (3XX HTTP codes) are allowed);"
@@ -483,7 +483,7 @@ msgstr ""
 "``en`` -- понятное конечному пользователю описание на английском языке "
 "(внутри тега необходимо использовать экранирование при помощи CDATA);"
 
-#: ../../source/development.rst:216 ../../source/development.rst:337
+#: ../../source/development.rst:216 ../../source/development.rst:336
 msgid ""
 "``ArchiveDir`` -- directory name in the archive (subdirectories are "
 "supported (use ``/`` symbol));"
@@ -528,34 +528,24 @@ msgstr ""
 "запрещена;"
 
 #: ../../source/development.rst:265
-msgid ""
-"``HasVF`` -- ``1`` if the current game use files to store video settings or "
-"``0`` if the current game use Windows registry to store video settings "
-"(**deprecated**);"
-msgstr ""
-"``HasVF`` -- ``1`` если игра использует файлы для хранения графических "
-"настроек, либо ``0`` если игра использует системный реестр Windows для этого "
-"(**устаревшее, не используется**);"
-
-#: ../../source/development.rst:266
 msgid "``DirName`` -- game installation directory in ``SteamApps/common``;"
 msgstr "``DirName`` -- имя каталога игры в ``SteamApps/common``;"
 
-#: ../../source/development.rst:267
+#: ../../source/development.rst:266
 msgid ""
 "``SmallName`` -- game subdirectory name in ``SteamApps/common/$DirName``;"
 msgstr ""
 "``SmallName`` -- имя собственного подкаталога игры в ``SteamApps/common/"
 "$DirName``;"
 
-#: ../../source/development.rst:268
+#: ../../source/development.rst:267
 msgid ""
 "``VFDir`` -- directory (or registry key) name of video settings storage;"
 msgstr ""
 "``VFDir`` -- имя каталога (или ключа реестра), в котором хранятся "
 "графические настройки игры;"
 
-#: ../../source/development.rst:269
+#: ../../source/development.rst:268
 msgid ""
 "``UserDir`` -- ``1`` if the current game support custom user stuff, located "
 "in ``custom`` directory or ``0`` -- if don't;"
@@ -563,7 +553,7 @@ msgstr ""
 "``UserDir`` -- ``1`` если игра поддерживает пользовательский контент в виде "
 "каталога ``custom``, либо ``0`` если не поддерживает;"
 
-#: ../../source/development.rst:270
+#: ../../source/development.rst:269
 msgid ""
 "``HUDsAvail`` -- ``1`` if the current game support custom HUDs or ``0`` -- "
 "if don't;"
@@ -571,15 +561,15 @@ msgstr ""
 "``HUDsAvail`` -- ``1`` если игра поддерживает нестандартные HUD, либо ``0`` "
 "если не поддерживает;"
 
-#: ../../source/development.rst:271
+#: ../../source/development.rst:270
 msgid "``SID`` -- Steam database internal ID for the current game;"
 msgstr "``SID`` -- внутренний ID игры в базе Steam;"
 
-#: ../../source/development.rst:272
+#: ../../source/development.rst:271
 msgid "``SVer`` -- Source Engine version:"
 msgstr "``SVer`` -- версия и тип движка Source:"
 
-#: ../../source/development.rst:274
+#: ../../source/development.rst:273
 msgid ""
 "``1`` -- Source Engine 1, Type 1 (use Windows registry to store video "
 "settings);"
@@ -587,7 +577,7 @@ msgstr ""
 "``1`` -- Source Engine версии 1, тип 1 (использует системный реестр Windows "
 "для хранения графических настроек игры);"
 
-#: ../../source/development.rst:275
+#: ../../source/development.rst:274
 msgid ""
 "``2`` -- Source Engine 1, Type 2 (use ``video.txt`` file to store video "
 "settings);"
@@ -595,7 +585,7 @@ msgstr ""
 "``2`` -- Source Engine версии 1, тип 2 (использует файл ``video.txt`` для "
 "хранения графических настроек игры);"
 
-#: ../../source/development.rst:276
+#: ../../source/development.rst:275
 msgid ""
 "``3`` -- Source Engine 2, generic (not yet implemented; reserved for future "
 "use);"
@@ -603,7 +593,7 @@ msgstr ""
 "``3`` -- Source Engine версии 2, базовый тип (не реализовано в настоящее "
 "время; зарезервировано для использования в будущем);"
 
-#: ../../source/development.rst:277
+#: ../../source/development.rst:276
 msgid ""
 "``4`` -- Source Engine 1, Type 4 (same as Type 1, but store video settings "
 "in ``videoconfig.cfg`` file);"
@@ -611,33 +601,33 @@ msgstr ""
 "``4`` -- Source Engine версии 1, тип 4 (то же, что и тип 1, но графические "
 "настройки игры сохраняются в файле ``videoconfig.cfg``);"
 
-#: ../../source/development.rst:279
+#: ../../source/development.rst:278
 msgid "``Executable`` -- game executable file name (only for Windows)."
 msgstr ""
 "``Executable`` -- имя исполняемого файла игры (используется только версией "
 "для Windows)."
 
-#: ../../source/development.rst:285
+#: ../../source/development.rst:284
 msgid "HUDs database documentation"
 msgstr "Документация базы HUD"
 
-#: ../../source/development.rst:287
+#: ../../source/development.rst:286
 msgid "The original source file is located in ``assets/huds.xml``."
 msgstr "Исходный файл ``assets/huds.xml``."
 
-#: ../../source/development.rst:318
+#: ../../source/development.rst:317
 msgid "``HUDs`` -- XML root element."
 msgstr "``HUDs`` -- корневой элемент XML."
 
-#: ../../source/development.rst:322
+#: ../../source/development.rst:321
 msgid "``HUD`` -- database entry base element."
 msgstr "``HUD`` -- базовый элемент."
 
-#: ../../source/development.rst:326
+#: ../../source/development.rst:325
 msgid "``Name`` -- HUD user-friendly name;"
 msgstr "``Name`` -- понятное конечному пользователю название;"
 
-#: ../../source/development.rst:327
+#: ../../source/development.rst:326
 msgid ""
 "``Game`` -- short name of the supported by this HUD game (``SmallName`` "
 "from :ref:`games database <games-database>`);"
@@ -645,7 +635,7 @@ msgstr ""
 "``Game`` -- короткое имя поддерживаемой данным HUD игры (значение "
 "``SmallName`` из :ref:`базы игр <games-database>`);"
 
-#: ../../source/development.rst:328
+#: ../../source/development.rst:327
 msgid ""
 "``IsUpdated`` -- ``1`` if HUD supports the latest version of the game, ``0`` "
 "-- if don't;"
@@ -653,14 +643,14 @@ msgstr ""
 "``IsUpdated`` -- ``1`` если HUD поддерживает новейшие версии игры, либо "
 "``0`` если не поддерживает;"
 
-#: ../../source/development.rst:331
+#: ../../source/development.rst:330
 msgid ""
 "``UpURI`` -- upstream download archive URL (safe redirects (3XX HTTP codes) "
 "are allowed);"
 msgstr ""
 "``UpURI`` -- адрес Zip-архива для загрузки (редиректы с кодом 3XX разрешены);"
 
-#: ../../source/development.rst:332
+#: ../../source/development.rst:331
 msgid ""
 "``Preview`` -- screenshot of the game with this HUD or any custom image "
 "(JPEG and PNG formats are supported);"
@@ -668,44 +658,44 @@ msgstr ""
 "``Preview`` -- прямая ссылка на файл со скриншотом игры с данным HUD, либо "
 "любое другое изображение (поддерживаются форматы JPEG и PNG);"
 
-#: ../../source/development.rst:333
+#: ../../source/development.rst:332
 msgid "``RepoPath`` -- GitHub repository URL or ``null``;"
 msgstr "``RepoPath`` -- ссылка на GitHub-репозиторий, либо ``null``;"
 
-#: ../../source/development.rst:334
+#: ../../source/development.rst:333
 msgid ""
 "``Hash2`` -- download file SHA2 (SHA-512) hash, speficied in the ``URI``;"
 msgstr "``Hash2`` -- SHA2 (SHA-512) хеш загрузки, указанной в ``URI``;"
 
-#: ../../source/development.rst:335
+#: ../../source/development.rst:334
 msgid "``LastUpdate`` -- HUD last update time in Unix timestamp format;"
 msgstr "``LastUpdate`` -- дата последнего обновления HUD в формате UnixTime;"
 
-#: ../../source/development.rst:336
+#: ../../source/development.rst:335
 msgid "``Site`` -- website or homepage URL;"
 msgstr "``Site`` -- адрес домашней страницы;"
 
-#: ../../source/development.rst:338
+#: ../../source/development.rst:337
 msgid "``InstallDir`` -- installation directory name."
 msgstr "``InstallDir`` -- каталог назначения."
 
-#: ../../source/development.rst:344
+#: ../../source/development.rst:343
 msgid "Updates database documentation"
 msgstr "Документация базы обновлений"
 
-#: ../../source/development.rst:346
+#: ../../source/development.rst:345
 msgid "The original source file is located in ``assets/updates.xml``."
 msgstr "Исходный файл ``assets/updates.xml``."
 
-#: ../../source/development.rst:353
+#: ../../source/development.rst:352
 msgid "``Updates`` -- XML root element."
 msgstr "``Updates`` -- корневой элемент XML."
 
-#: ../../source/development.rst:357
+#: ../../source/development.rst:356
 msgid "``Application`` -- sub-element with application update metadata;"
 msgstr "``Application`` -- содержит метаданные обновления приложения;"
 
-#: ../../source/development.rst:358
+#: ../../source/development.rst:357
 msgid ""
 "``GameDB`` -- sub-element with :ref:`games database <games-database>` update "
 "metadata;"
@@ -713,14 +703,14 @@ msgstr ""
 "``GameDB`` -- содержит метаданные обновления :ref:`базы игр <games-"
 "database>`;"
 
-#: ../../source/development.rst:359
+#: ../../source/development.rst:358
 msgid ""
 "``HUDDB`` -- sub-element with :ref:`HUDs database <huds-database>` update "
 "metadata;"
 msgstr ""
 "``HUDDB`` -- содержит метаданные обновления :ref:`базы HUD <huds-database>`;"
 
-#: ../../source/development.rst:360
+#: ../../source/development.rst:359
 msgid ""
 "``CfgDB`` -- sub-element with :ref:`configs database <configs-database>` "
 "update metadata;"
@@ -728,7 +718,7 @@ msgstr ""
 "``CfgDB`` -- содержит метаданные обновления :ref:`базы FPS-конфигов <configs-"
 "database>`;"
 
-#: ../../source/development.rst:361
+#: ../../source/development.rst:360
 msgid ""
 "``ClnDB`` -- sub-element with :ref:`cleanup database <cleanup-database>` "
 "update metadata."
@@ -736,47 +726,47 @@ msgstr ""
 "``ClnDB`` -- содержит метаданные обновления :ref:`базы очистки <cleanup-"
 "database>`."
 
-#: ../../source/development.rst:365
+#: ../../source/development.rst:364
 msgid "``Version`` -- application or database version;"
 msgstr "``Version`` -- версия приложения или базы данных;"
 
-#: ../../source/development.rst:366
+#: ../../source/development.rst:365
 msgid "``URL`` -- direct download URL (no redirects are allowed);"
 msgstr "``URL`` -- URL для загрузки (любые редиректы запрещены);"
 
-#: ../../source/development.rst:367
+#: ../../source/development.rst:366
 msgid "``Hash2`` -- download file SHA2 (SHA-512) hash."
 msgstr "``Hash2`` -- SHA2 (SHA-512) хеш файла файла обновления."
 
-#: ../../source/development.rst:373
+#: ../../source/development.rst:372
 msgid "Plugins database documentation"
 msgstr "Документация базы внешних модулей"
 
-#: ../../source/development.rst:375
+#: ../../source/development.rst:374
 msgid "The original source file is located in ``assets/plugins.xml``."
 msgstr "Исходный файл ``assets/plugins.xml``."
 
-#: ../../source/development.rst:397
+#: ../../source/development.rst:396
 msgid "``Plugins`` -- XML root element."
 msgstr "``Plugins`` -- корневой элемент XML."
 
-#: ../../source/development.rst:401
+#: ../../source/development.rst:400
 msgid "``Plugin`` -- database entry base element."
 msgstr "``Plugin`` -- базовый элемент."
 
-#: ../../source/development.rst:405
+#: ../../source/development.rst:404
 msgid "``Name`` -- plugin user-friendly name;"
 msgstr "``Name`` -- понятное конечному пользователю название;"
 
-#: ../../source/development.rst:406
+#: ../../source/development.rst:405
 msgid "``IntName`` -- internal name for different actions;"
 msgstr "``IntName`` -- внутреннее имя внешнего модуля для различных целей;"
 
-#: ../../source/development.rst:407
+#: ../../source/development.rst:406
 msgid "``ExeName`` -- executable file name;"
 msgstr "``ExeName`` -- имя исполняемого файла;"
 
-#: ../../source/development.rst:408
+#: ../../source/development.rst:407
 msgid ""
 "``ElevationRequired`` -- ``1`` if the plugin need a local administrator "
 "rights in order to run, ``0`` -- if don't."

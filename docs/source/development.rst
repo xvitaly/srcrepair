@@ -262,7 +262,6 @@ Level 1:
 Level 2:
 
   * ``Enabled`` -- ``1`` if the current game is enabled or ``0`` -- if don't;
-  * ``HasVF`` -- ``1`` if the current game use files to store video settings or ``0`` if the current game use Windows registry to store video settings (**deprecated**);
   * ``DirName`` -- game installation directory in ``SteamApps/common``;
   * ``SmallName`` -- game subdirectory name in ``SteamApps/common/$DirName``;
   * ``VFDir`` -- directory (or registry key) name of video settings storage;
