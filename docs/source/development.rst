@@ -302,7 +302,6 @@ XML database example
             <UpURI>https://github.com/Sevin7/7HUD/archive/master.zip</UpURI>
             <Preview>https://www.easycoding.org/files/srcrepair/huds/7hud.jpg</Preview>
             <RepoPath>https://github.com/Sevin7/7HUD</RepoPath>
-            <Hash>44e154bb825269e9e0c039759353d287</Hash>
             <Hash2>2c35b35d3e58dc75f3bc40134c4d137353d994d6dcc879e3edc35b837cbe2ae91cda0b2f698741fda17111a4543b7a002534b609de720e5125655d5b23e65217</Hash2>
             <LastUpdate>1572411245</LastUpdate>
             <Site>https://huds.tf/forum/showthread.php?tid=261</Site>
@@ -332,7 +331,6 @@ Level 2:
   * ``UpURI`` -- upstream download archive URL (safe redirects (3XX HTTP codes) are allowed);
   * ``Preview`` -- screenshot of the game with this HUD or any custom image (JPEG and PNG formats are supported);
   * ``RepoPath`` -- GitHub repository URL or ``null``;
-  * ``Hash`` -- download file MD5 hash, speficied in the ``URI`` (**deprecated**);
   * ``Hash2`` -- download file SHA2 (SHA-512) hash, speficied in the ``URI``;
   * ``LastUpdate`` -- HUD last update time in Unix timestamp format;
   * ``Site`` -- website or homepage URL;
@@ -366,7 +364,6 @@ Level 2:
 
   * ``Version`` -- application or database version;
   * ``URL`` -- direct download URL (no redirects are allowed);
-  * ``Hash`` -- download file MD5 hash (**deprecated**);
   * ``Hash2`` -- download file SHA2 (SHA-512) hash.
 
 .. index:: development, plugins, database, plugins database

@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 38.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-22 14:46+0200\n"
-"PO-Revision-Date: 2020-06-22 14:46+0200\n"
+"POT-Creation-Date: 2020-12-29 17:52+0100\n"
+"PO-Revision-Date: 2020-12-29 17:53+0100\n"
 "Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Generated-By: Babel 2.7.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 2.4.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -289,19 +289,19 @@ msgstr "Исходный файл ``assets/cleanup.xml``."
 
 #: ../../source/development.rst:105 ../../source/development.rst:174
 #: ../../source/development.rst:229 ../../source/development.rst:290
-#: ../../source/development.rst:381
+#: ../../source/development.rst:378
 msgid "XML database example"
 msgstr "Пример базы данных в формате XML"
 
 #: ../../source/development.rst:122 ../../source/development.rst:198
-#: ../../source/development.rst:250 ../../source/development.rst:315
-#: ../../source/development.rst:351 ../../source/development.rst:396
+#: ../../source/development.rst:250 ../../source/development.rst:314
+#: ../../source/development.rst:349 ../../source/development.rst:393
 msgid "Properties"
 msgstr "Доступные свойства"
 
 #: ../../source/development.rst:124 ../../source/development.rst:200
-#: ../../source/development.rst:252 ../../source/development.rst:317
-#: ../../source/development.rst:353 ../../source/development.rst:398
+#: ../../source/development.rst:252 ../../source/development.rst:316
+#: ../../source/development.rst:351 ../../source/development.rst:395
 msgid "Level 0:"
 msgstr "Уровень 0:"
 
@@ -310,8 +310,8 @@ msgid "``Targets`` -- XML root element."
 msgstr "``Targets`` -- корневой элемент XML."
 
 #: ../../source/development.rst:128 ../../source/development.rst:204
-#: ../../source/development.rst:256 ../../source/development.rst:321
-#: ../../source/development.rst:357 ../../source/development.rst:402
+#: ../../source/development.rst:256 ../../source/development.rst:320
+#: ../../source/development.rst:355 ../../source/development.rst:399
 msgid "Level 1:"
 msgstr "Уровень 1:"
 
@@ -320,8 +320,8 @@ msgid "``Target`` -- database entry base element."
 msgstr "``Target`` -- базовый элемент."
 
 #: ../../source/development.rst:132 ../../source/development.rst:208
-#: ../../source/development.rst:262 ../../source/development.rst:325
-#: ../../source/development.rst:365 ../../source/development.rst:406
+#: ../../source/development.rst:262 ../../source/development.rst:324
+#: ../../source/development.rst:363 ../../source/development.rst:403
 msgid "Level 2:"
 msgstr "Уровень 2:"
 
@@ -448,14 +448,14 @@ msgstr "``Config`` -- базовый элемент."
 msgid "``Name`` -- FPS-config user-friendly name;"
 msgstr "``Name`` -- понятное конечному пользователю название;"
 
-#: ../../source/development.rst:211 ../../source/development.rst:330
+#: ../../source/development.rst:211 ../../source/development.rst:329
 msgid ""
 "``URI`` -- fully-qualified Zip archive download URL (safe redirects (3XX "
 "HTTP codes) are allowed);"
 msgstr ""
 "``URI`` -- адрес Zip-архива для загрузки (редиректы с кодами 3XX разрешены);"
 
-#: ../../source/development.rst:212 ../../source/development.rst:331
+#: ../../source/development.rst:212 ../../source/development.rst:330
 msgid ""
 "``Mirror`` -- fully-qualified Zip archive download mirror URL (safe "
 "redirects (3XX HTTP codes) are allowed);"
@@ -483,7 +483,7 @@ msgstr ""
 "``en`` -- понятное конечному пользователю описание на английском языке "
 "(внутри тега необходимо использовать экранирование при помощи CDATA);"
 
-#: ../../source/development.rst:216 ../../source/development.rst:339
+#: ../../source/development.rst:216 ../../source/development.rst:337
 msgid ""
 "``ArchiveDir`` -- directory name in the archive (subdirectories are "
 "supported (use ``/`` symbol));"
@@ -625,19 +625,19 @@ msgstr "Документация базы HUD"
 msgid "The original source file is located in ``assets/huds.xml``."
 msgstr "Исходный файл ``assets/huds.xml``."
 
-#: ../../source/development.rst:319
+#: ../../source/development.rst:318
 msgid "``HUDs`` -- XML root element."
 msgstr "``HUDs`` -- корневой элемент XML."
 
-#: ../../source/development.rst:323
+#: ../../source/development.rst:322
 msgid "``HUD`` -- database entry base element."
 msgstr "``HUD`` -- базовый элемент."
 
-#: ../../source/development.rst:327
+#: ../../source/development.rst:326
 msgid "``Name`` -- HUD user-friendly name;"
 msgstr "``Name`` -- понятное конечному пользователю название;"
 
-#: ../../source/development.rst:328
+#: ../../source/development.rst:327
 msgid ""
 "``Game`` -- short name of the supported by this HUD game (``SmallName`` "
 "from :ref:`games database <games-database>`);"
@@ -645,7 +645,7 @@ msgstr ""
 "``Game`` -- короткое имя поддерживаемой данным HUD игры (значение "
 "``SmallName`` из :ref:`базы игр <games-database>`);"
 
-#: ../../source/development.rst:329
+#: ../../source/development.rst:328
 msgid ""
 "``IsUpdated`` -- ``1`` if HUD supports the latest version of the game, ``0`` "
 "-- if don't;"
@@ -653,14 +653,14 @@ msgstr ""
 "``IsUpdated`` -- ``1`` если HUD поддерживает новейшие версии игры, либо "
 "``0`` если не поддерживает;"
 
-#: ../../source/development.rst:332
+#: ../../source/development.rst:331
 msgid ""
 "``UpURI`` -- upstream download archive URL (safe redirects (3XX HTTP codes) "
 "are allowed);"
 msgstr ""
 "``UpURI`` -- адрес Zip-архива для загрузки (редиректы с кодом 3XX разрешены);"
 
-#: ../../source/development.rst:333
+#: ../../source/development.rst:332
 msgid ""
 "``Preview`` -- screenshot of the game with this HUD or any custom image "
 "(JPEG and PNG formats are supported);"
@@ -668,52 +668,44 @@ msgstr ""
 "``Preview`` -- прямая ссылка на файл со скриншотом игры с данным HUD, либо "
 "любое другое изображение (поддерживаются форматы JPEG и PNG);"
 
-#: ../../source/development.rst:334
+#: ../../source/development.rst:333
 msgid "``RepoPath`` -- GitHub repository URL or ``null``;"
 msgstr "``RepoPath`` -- ссылка на GitHub-репозиторий, либо ``null``;"
 
-#: ../../source/development.rst:335
-msgid ""
-"``Hash`` -- download file MD5 hash, speficied in the ``URI`` "
-"(**deprecated**);"
-msgstr ""
-"``Hash`` -- MD5 хеш загрузки, указанной в ``URI`` (**устаревшее, не "
-"используется**);"
-
-#: ../../source/development.rst:336
+#: ../../source/development.rst:334
 msgid ""
 "``Hash2`` -- download file SHA2 (SHA-512) hash, speficied in the ``URI``;"
 msgstr "``Hash2`` -- SHA2 (SHA-512) хеш загрузки, указанной в ``URI``;"
 
-#: ../../source/development.rst:337
+#: ../../source/development.rst:335
 msgid "``LastUpdate`` -- HUD last update time in Unix timestamp format;"
 msgstr "``LastUpdate`` -- дата последнего обновления HUD в формате UnixTime;"
 
-#: ../../source/development.rst:338
+#: ../../source/development.rst:336
 msgid "``Site`` -- website or homepage URL;"
 msgstr "``Site`` -- адрес домашней страницы;"
 
-#: ../../source/development.rst:340
+#: ../../source/development.rst:338
 msgid "``InstallDir`` -- installation directory name."
 msgstr "``InstallDir`` -- каталог назначения."
 
-#: ../../source/development.rst:346
+#: ../../source/development.rst:344
 msgid "Updates database documentation"
 msgstr "Документация базы обновлений"
 
-#: ../../source/development.rst:348
+#: ../../source/development.rst:346
 msgid "The original source file is located in ``assets/updates.xml``."
 msgstr "Исходный файл ``assets/updates.xml``."
 
-#: ../../source/development.rst:355
+#: ../../source/development.rst:353
 msgid "``Updates`` -- XML root element."
 msgstr "``Updates`` -- корневой элемент XML."
 
-#: ../../source/development.rst:359
+#: ../../source/development.rst:357
 msgid "``Application`` -- sub-element with application update metadata;"
 msgstr "``Application`` -- содержит метаданные обновления приложения;"
 
-#: ../../source/development.rst:360
+#: ../../source/development.rst:358
 msgid ""
 "``GameDB`` -- sub-element with :ref:`games database <games-database>` update "
 "metadata;"
@@ -721,14 +713,14 @@ msgstr ""
 "``GameDB`` -- содержит метаданные обновления :ref:`базы игр <games-"
 "database>`;"
 
-#: ../../source/development.rst:361
+#: ../../source/development.rst:359
 msgid ""
 "``HUDDB`` -- sub-element with :ref:`HUDs database <huds-database>` update "
 "metadata;"
 msgstr ""
 "``HUDDB`` -- содержит метаданные обновления :ref:`базы HUD <huds-database>`;"
 
-#: ../../source/development.rst:362
+#: ../../source/development.rst:360
 msgid ""
 "``CfgDB`` -- sub-element with :ref:`configs database <configs-database>` "
 "update metadata;"
@@ -736,7 +728,7 @@ msgstr ""
 "``CfgDB`` -- содержит метаданные обновления :ref:`базы FPS-конфигов <configs-"
 "database>`;"
 
-#: ../../source/development.rst:363
+#: ../../source/development.rst:361
 msgid ""
 "``ClnDB`` -- sub-element with :ref:`cleanup database <cleanup-database>` "
 "update metadata."
@@ -744,52 +736,47 @@ msgstr ""
 "``ClnDB`` -- содержит метаданные обновления :ref:`базы очистки <cleanup-"
 "database>`."
 
-#: ../../source/development.rst:367
+#: ../../source/development.rst:365
 msgid "``Version`` -- application or database version;"
 msgstr "``Version`` -- версия приложения или базы данных;"
 
-#: ../../source/development.rst:368
+#: ../../source/development.rst:366
 msgid "``URL`` -- direct download URL (no redirects are allowed);"
 msgstr "``URL`` -- URL для загрузки (любые редиректы запрещены);"
 
-#: ../../source/development.rst:369
-msgid "``Hash`` -- download file MD5 hash (**deprecated**);"
-msgstr ""
-"``Hash`` -- MD5 хеш файла обновления (**устаревшее, не используется**);"
-
-#: ../../source/development.rst:370
+#: ../../source/development.rst:367
 msgid "``Hash2`` -- download file SHA2 (SHA-512) hash."
 msgstr "``Hash2`` -- SHA2 (SHA-512) хеш файла файла обновления."
 
-#: ../../source/development.rst:376
+#: ../../source/development.rst:373
 msgid "Plugins database documentation"
 msgstr "Документация базы внешних модулей"
 
-#: ../../source/development.rst:378
+#: ../../source/development.rst:375
 msgid "The original source file is located in ``assets/plugins.xml``."
 msgstr "Исходный файл ``assets/plugins.xml``."
 
-#: ../../source/development.rst:400
+#: ../../source/development.rst:397
 msgid "``Plugins`` -- XML root element."
 msgstr "``Plugins`` -- корневой элемент XML."
 
-#: ../../source/development.rst:404
+#: ../../source/development.rst:401
 msgid "``Plugin`` -- database entry base element."
 msgstr "``Plugin`` -- базовый элемент."
 
-#: ../../source/development.rst:408
+#: ../../source/development.rst:405
 msgid "``Name`` -- plugin user-friendly name;"
 msgstr "``Name`` -- понятное конечному пользователю название;"
 
-#: ../../source/development.rst:409
+#: ../../source/development.rst:406
 msgid "``IntName`` -- internal name for different actions;"
 msgstr "``IntName`` -- внутреннее имя внешнего модуля для различных целей;"
 
-#: ../../source/development.rst:410
+#: ../../source/development.rst:407
 msgid "``ExeName`` -- executable file name;"
 msgstr "``ExeName`` -- имя исполняемого файла;"
 
-#: ../../source/development.rst:411
+#: ../../source/development.rst:408
 msgid ""
 "``ElevationRequired`` -- ``1`` if the plugin need a local administrator "
 "rights in order to run, ``0`` -- if don't."
