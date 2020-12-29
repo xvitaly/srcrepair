@@ -304,6 +304,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to configure cryptographic policy..
+        /// </summary>
+        internal static string AppDbgExCryptoPolicy {
+            get {
+                return ResourceManager.GetString("AppDbgExCryptoPolicy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while fetching Cvar description from a separate resource file..
         /// </summary>
         internal static string AppDbgExCvarDescFetchFailure {

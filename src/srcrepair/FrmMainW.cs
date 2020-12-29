@@ -103,6 +103,21 @@ namespace srcrepair.gui
         #region Internal Methods
 
         /// <summary>
+        /// Overrides system cryptographic policies.
+        /// </summary>
+        private void ConfigureCryptoPolicy()
+        {
+            try
+            {
+                ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls12;
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExCryptoPolicy);
+            }
+        }
+
+        /// <summary>
         /// Imports settings from previous versions of application.
         /// </summary>
         private void ImportSettings()
@@ -1770,6 +1785,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void FrmMainW_Load(object sender, EventArgs e)
         {
+            ConfigureCryptoPolicy();
             InitializeApp();
             FindPlugins();
             SetAppStrings();
