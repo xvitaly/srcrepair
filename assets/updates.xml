@@ -23,37 +23,31 @@
     <Application>
         <Version>40.0.5.7342</Version>
         <URL>https://github.com/xvitaly/srcrepair/releases/download/v40.0.5/srcrepair_405_final.exe</URL>
-        <Hash>f014c65eb984f64dd30c5870c8369e80</Hash>
         <Hash2>130e1178efd96e92b942f38a5236f0b874fbb32f37380a89d1517d019bec091883412e3e126231b15065aee78cc12959d2a18d824789cb4964dce33794596b89</Hash2>
     </Application>
     <GameDB>
         <Version>4</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/games.xml</URL>
-        <Hash>dc34e0826f2859d34760ced37151c842</Hash>
         <Hash2>4fa761c0a93a906383afbaad559d26f4ad7ab8eefe90ccb8f86bd4db6d343c73bcf40a0567e434ebc5d323d20ab0f226fb964d29bf0d1c93fca2426846042994</Hash2>
     </GameDB>
     <HUDDB>
         <Version>30</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/huds.xml</URL>
-        <Hash>6e9c0974c674371016b0f557beab5b68</Hash>
         <Hash2>cfdfaf55d771cad263a14df3cfed17917177924aeb06e446de50944a923b2927a196ec69090ffe0e2eb63f311ec2a991ff24b4ef71f36e9f480554627cfd75d5</Hash2>
     </HUDDB>
     <CfgDB>
         <Version>13</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/configs.xml</URL>
-        <Hash>d10a0528ddd1181e0e4b535a351f5ba1</Hash>
         <Hash2>93f789e067e4755869bd07b34a6f99fa0e6f07a1e88317cbae2259972914e71acff5b38b87aafc0360a112e608e5dd629b738ba7225c1a6b97064789c6430f44</Hash2>
     </CfgDB>
     <ClnDB>
         <Version>5</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/cleanup.xml</URL>
-        <Hash>25bdfed6fe75590255b4456ca482876e</Hash>
         <Hash2>23159c98a845dabf20f0c708b4a7a4aa04a7e6015464c363df756c47bf2f82820118abccd52b2b683487d2237e7b99acbf4c5193fbcb859615e43adca9f2aa0c</Hash2>
     </ClnDB>
     <PlgDB>
         <Version>1</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/plugins.xml</URL>
-        <Hash>7a12cba7715b82c8f7de2b0d09ba8d13</Hash>
         <Hash2>05db4ed2be680d9511b532a356c38b2c5ac1f5a8a509d2b49844ee9f60000837eab811e2d83e2cec04ea9b3e36a181852fd9beb8845e920c8754a6397a045546</Hash2>
     </PlgDB>
 </Updates>
