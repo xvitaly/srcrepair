@@ -29,12 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStmClean));
+            this.EC_Execute = new System.Windows.Forms.Button();
+            this.EC_Panel = new System.Windows.Forms.Panel();
             this.EC_GB_Basic = new System.Windows.Forms.GroupBox();
             this.EC_LibraryCache = new System.Windows.Forms.CheckBox();
             this.EC_ShaderCache = new System.Windows.Forms.CheckBox();
             this.EC_DepotCache = new System.Windows.Forms.CheckBox();
             this.EC_HTTPCache = new System.Windows.Forms.CheckBox();
             this.EC_HTMLCache = new System.Windows.Forms.CheckBox();
+            this.EC_GB_Trsh = new System.Windows.Forms.GroupBox();
+            this.EC_Guard = new System.Windows.Forms.CheckBox();
+            this.EC_Updater = new System.Windows.Forms.CheckBox();
             this.EC_GB_Garb = new System.Windows.Forms.GroupBox();
             this.EC_BuildCache = new System.Windows.Forms.CheckBox();
             this.EC_ErrDmps = new System.Windows.Forms.CheckBox();
@@ -46,15 +51,31 @@
             this.EC_Stats = new System.Windows.Forms.CheckBox();
             this.EC_Cloud = new System.Windows.Forms.CheckBox();
             this.EC_GameIcons = new System.Windows.Forms.CheckBox();
-            this.EC_Execute = new System.Windows.Forms.Button();
-            this.EC_GB_Trsh = new System.Windows.Forms.GroupBox();
-            this.EC_Guard = new System.Windows.Forms.CheckBox();
-            this.EC_Updater = new System.Windows.Forms.CheckBox();
+            this.EC_Cancel = new System.Windows.Forms.Button();
+            this.EC_Buttons = new System.Windows.Forms.TableLayoutPanel();
+            this.EC_Panel.SuspendLayout();
             this.EC_GB_Basic.SuspendLayout();
+            this.EC_GB_Trsh.SuspendLayout();
             this.EC_GB_Garb.SuspendLayout();
             this.EC_GB_ExCn.SuspendLayout();
-            this.EC_GB_Trsh.SuspendLayout();
+            this.EC_Buttons.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // EC_Execute
+            // 
+            resources.ApplyResources(this.EC_Execute, "EC_Execute");
+            this.EC_Execute.Name = "EC_Execute";
+            this.EC_Execute.UseVisualStyleBackColor = true;
+            this.EC_Execute.Click += new System.EventHandler(this.EC_Execute_Click);
+            // 
+            // EC_Panel
+            // 
+            resources.ApplyResources(this.EC_Panel, "EC_Panel");
+            this.EC_Panel.Controls.Add(this.EC_GB_Basic);
+            this.EC_Panel.Controls.Add(this.EC_GB_Trsh);
+            this.EC_Panel.Controls.Add(this.EC_GB_Garb);
+            this.EC_Panel.Controls.Add(this.EC_GB_ExCn);
+            this.EC_Panel.Name = "EC_Panel";
             // 
             // EC_GB_Basic
             // 
@@ -96,6 +117,26 @@
             resources.ApplyResources(this.EC_HTMLCache, "EC_HTMLCache");
             this.EC_HTMLCache.Name = "EC_HTMLCache";
             this.EC_HTMLCache.UseVisualStyleBackColor = true;
+            // 
+            // EC_GB_Trsh
+            // 
+            this.EC_GB_Trsh.Controls.Add(this.EC_Guard);
+            this.EC_GB_Trsh.Controls.Add(this.EC_Updater);
+            resources.ApplyResources(this.EC_GB_Trsh, "EC_GB_Trsh");
+            this.EC_GB_Trsh.Name = "EC_GB_Trsh";
+            this.EC_GB_Trsh.TabStop = false;
+            // 
+            // EC_Guard
+            // 
+            resources.ApplyResources(this.EC_Guard, "EC_Guard");
+            this.EC_Guard.Name = "EC_Guard";
+            this.EC_Guard.UseVisualStyleBackColor = true;
+            // 
+            // EC_Updater
+            // 
+            resources.ApplyResources(this.EC_Updater, "EC_Updater");
+            this.EC_Updater.Name = "EC_Updater";
+            this.EC_Updater.UseVisualStyleBackColor = true;
             // 
             // EC_GB_Garb
             // 
@@ -172,83 +213,75 @@
             this.EC_GameIcons.Name = "EC_GameIcons";
             this.EC_GameIcons.UseVisualStyleBackColor = true;
             // 
-            // EC_Execute
+            // EC_Cancel
             // 
-            resources.ApplyResources(this.EC_Execute, "EC_Execute");
-            this.EC_Execute.Name = "EC_Execute";
-            this.EC_Execute.UseVisualStyleBackColor = true;
-            this.EC_Execute.Click += new System.EventHandler(this.EC_Execute_Click);
+            resources.ApplyResources(this.EC_Cancel, "EC_Cancel");
+            this.EC_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.EC_Cancel.Name = "EC_Cancel";
+            this.EC_Cancel.UseVisualStyleBackColor = true;
+            this.EC_Cancel.Click += new System.EventHandler(this.EC_Cancel_Click);
             // 
-            // EC_GB_Trsh
+            // EC_Buttons
             // 
-            this.EC_GB_Trsh.Controls.Add(this.EC_Guard);
-            this.EC_GB_Trsh.Controls.Add(this.EC_Updater);
-            resources.ApplyResources(this.EC_GB_Trsh, "EC_GB_Trsh");
-            this.EC_GB_Trsh.Name = "EC_GB_Trsh";
-            this.EC_GB_Trsh.TabStop = false;
-            // 
-            // EC_Guard
-            // 
-            resources.ApplyResources(this.EC_Guard, "EC_Guard");
-            this.EC_Guard.Name = "EC_Guard";
-            this.EC_Guard.UseVisualStyleBackColor = true;
-            // 
-            // EC_Updater
-            // 
-            resources.ApplyResources(this.EC_Updater, "EC_Updater");
-            this.EC_Updater.Name = "EC_Updater";
-            this.EC_Updater.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.EC_Buttons, "EC_Buttons");
+            this.EC_Buttons.Controls.Add(this.EC_Execute, 0, 0);
+            this.EC_Buttons.Controls.Add(this.EC_Cancel, 1, 0);
+            this.EC_Buttons.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
+            this.EC_Buttons.Name = "EC_Buttons";
             // 
             // FrmStmClean
             // 
             this.AcceptButton = this.EC_Execute;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.EC_GB_Trsh);
-            this.Controls.Add(this.EC_Execute);
-            this.Controls.Add(this.EC_GB_ExCn);
-            this.Controls.Add(this.EC_GB_Garb);
-            this.Controls.Add(this.EC_GB_Basic);
+            this.CancelButton = this.EC_Cancel;
+            this.Controls.Add(this.EC_Panel);
+            this.Controls.Add(this.EC_Buttons);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmStmClean";
             this.ShowInTaskbar = false;
+            this.EC_Panel.ResumeLayout(false);
             this.EC_GB_Basic.ResumeLayout(false);
             this.EC_GB_Basic.PerformLayout();
+            this.EC_GB_Trsh.ResumeLayout(false);
+            this.EC_GB_Trsh.PerformLayout();
             this.EC_GB_Garb.ResumeLayout(false);
             this.EC_GB_Garb.PerformLayout();
             this.EC_GB_ExCn.ResumeLayout(false);
             this.EC_GB_ExCn.PerformLayout();
-            this.EC_GB_Trsh.ResumeLayout(false);
-            this.EC_GB_Trsh.PerformLayout();
+            this.EC_Buttons.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Button EC_Execute;
+        private System.Windows.Forms.Panel EC_Panel;
         private System.Windows.Forms.GroupBox EC_GB_Basic;
+        private System.Windows.Forms.CheckBox EC_LibraryCache;
+        private System.Windows.Forms.CheckBox EC_ShaderCache;
+        private System.Windows.Forms.CheckBox EC_DepotCache;
         private System.Windows.Forms.CheckBox EC_HTTPCache;
         private System.Windows.Forms.CheckBox EC_HTMLCache;
-        private System.Windows.Forms.GroupBox EC_GB_Garb;
-        private System.Windows.Forms.CheckBox EC_Logs;
-        private System.Windows.Forms.CheckBox EC_OldBins;
-        private System.Windows.Forms.CheckBox EC_ErrDmps;
-        private System.Windows.Forms.GroupBox EC_GB_ExCn;
-        private System.Windows.Forms.CheckBox EC_GameIcons;
-        private System.Windows.Forms.CheckBox EC_Cloud;
-        private System.Windows.Forms.CheckBox EC_Stats;
-        private System.Windows.Forms.CheckBox EC_Music;
-        private System.Windows.Forms.CheckBox EC_BuildCache;
-        private System.Windows.Forms.CheckBox EC_Skins;
-        private System.Windows.Forms.Button EC_Execute;
         private System.Windows.Forms.GroupBox EC_GB_Trsh;
         private System.Windows.Forms.CheckBox EC_Guard;
         private System.Windows.Forms.CheckBox EC_Updater;
-        private System.Windows.Forms.CheckBox EC_DepotCache;
-        private System.Windows.Forms.CheckBox EC_ShaderCache;
-        private System.Windows.Forms.CheckBox EC_LibraryCache;
+        private System.Windows.Forms.GroupBox EC_GB_Garb;
+        private System.Windows.Forms.CheckBox EC_BuildCache;
+        private System.Windows.Forms.CheckBox EC_ErrDmps;
+        private System.Windows.Forms.CheckBox EC_OldBins;
+        private System.Windows.Forms.CheckBox EC_Logs;
+        private System.Windows.Forms.GroupBox EC_GB_ExCn;
+        private System.Windows.Forms.CheckBox EC_Skins;
+        private System.Windows.Forms.CheckBox EC_Music;
+        private System.Windows.Forms.CheckBox EC_Stats;
+        private System.Windows.Forms.CheckBox EC_Cloud;
+        private System.Windows.Forms.CheckBox EC_GameIcons;
+        private System.Windows.Forms.Button EC_Cancel;
+        private System.Windows.Forms.TableLayoutPanel EC_Buttons;
     }
 }

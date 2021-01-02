@@ -190,5 +190,15 @@ namespace srcrepair.gui
                 MessageBox.Show(AppStrings.AC_NoItemsSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        /// <summary>
+        /// "Cancel" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void EC_Cancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
