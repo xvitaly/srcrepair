@@ -99,7 +99,7 @@ namespace srcrepair.gui
             // Downloaded shaders cache...
             if (EC_ShaderCache.Checked)
             {
-                CleanDirs.Add(Path.Combine(SteamPath, "shadercache", "*.*"));
+                CleanDirs.Add(Path.Combine(SteamPath, SteamAppsDirName, "shadercache", "*.*"));
             }
 
             // Steam library cache...
