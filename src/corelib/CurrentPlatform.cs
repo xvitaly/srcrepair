@@ -111,6 +111,24 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Starts an external helper application.
+        /// </summary>
+        /// <param name="FileName">Full path to helper application.</param>
+        /// <param name="Elevated">Run with administrator privileges.</param>
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
+        public virtual void StartExternalHelper(string FileName, bool Elevated = false)
+        {
+            if (File.Exists(FileName))
+            {
+                if (Elevated) { StartElevatedProcess(FileName); } else { Process.Start(FileName); }
+            }
+            else
+            {
+                throw new FileNotFoundException(DebugStrings.AppDbgExCoreHelperNxExists, FileName);
+            }
+        }
+
+        /// <summary>
         /// Get platform-dependent suffix for HTTP_USER_AGENT header.
         /// </summary>
         public virtual string UASuffix => Properties.Resources.AppUASuffixOther;

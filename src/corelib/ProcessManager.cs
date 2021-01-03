@@ -167,23 +167,5 @@ namespace srcrepair.core
         {
             return String.Format(Properties.Resources.AppOpenHandlerEscapeTemplate, Source);
         }
-
-        /// <summary>
-        /// Starts an external helper application.
-        /// </summary>
-        /// <param name="FileName">Full path to helper application.</param>
-        /// <param name="Elevated">Run with administrator privileges.</param>
-        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
-        public static void StartExternalHelper(string FileName, bool Elevated = false)
-        {
-            if (File.Exists(FileName))
-            {
-                if (Elevated) { StartWithUAC(FileName); } else { Process.Start(FileName); }
-            }
-            else
-            {
-                throw new FileNotFoundException(DebugStrings.AppDbgExCoreHelperNxExists, FileName);
-            }    
-        }
     }
 }
