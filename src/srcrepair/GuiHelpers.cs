@@ -210,10 +210,9 @@ namespace srcrepair.gui
         /// <param name="UserAgent">User-Agent header for outgoing HTTP queries.</param>
         /// <param name="FullAppPath">App's installation directory.</param>
         /// <param name="AppUserDir">App's user directory.</param>
-        /// <param name="Platform">Currently running operating system ID.</param>
-        public static void FormShowUpdater(string UserAgent, string FullAppPath, string AppUserDir, CurrentPlatform Platform)
+        public static void FormShowUpdater(string UserAgent, string FullAppPath, string AppUserDir)
         {
-            using (FrmUpdate UpdFrm = new FrmUpdate(UserAgent, FullAppPath, AppUserDir, Platform))
+            using (FrmUpdate UpdFrm = new FrmUpdate(UserAgent, FullAppPath, AppUserDir))
             {
                 UpdFrm.ShowDialog();
             }

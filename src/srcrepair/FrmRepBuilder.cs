@@ -40,6 +40,11 @@ namespace srcrepair.gui
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
+        /// CurrentPlatform instance for FrmRepBuilder class.
+        /// </summary>
+        private readonly CurrentPlatform Platform = CurrentPlatform.Create();
+
+        /// <summary>
         /// FrmRepBuilder class constructor.
         /// </summary>
         /// <param name="A">Path to app's user directory.</param>
@@ -170,9 +175,9 @@ namespace srcrepair.gui
                 }
 
                 // Adding Hosts file contents...
-                if (File.Exists(FileManager.GetHostsFileFullPath(CurrentPlatform.OSType.Windows)))
+                if (File.Exists(Platform.HostsFileFullPath))
                 {
-                    ZBkUp.AddFile(FileManager.GetHostsFileFullPath(CurrentPlatform.OSType.Windows), "hosts");
+                    ZBkUp.AddFile(Platform.HostsFileFullPath, "hosts");
                 }
 
                 // Adding application debug log...
@@ -287,7 +292,7 @@ namespace srcrepair.gui
                     try
                     {
                         MessageBox.Show(String.Format(AppStrings.RPB_ComprGen, Path.GetFileName(RepMan.ReportArchiveName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ProcessManager.OpenExplorer(RepMan.ReportArchiveName, CurrentPlatform.OSType.Windows);
+                        Platform.OpenExplorer(RepMan.ReportArchiveName);
                     }
                     catch (Exception Ex)
                     {

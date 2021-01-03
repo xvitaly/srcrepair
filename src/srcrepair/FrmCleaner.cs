@@ -41,6 +41,11 @@ namespace srcrepair.gui
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
+        /// CurrentPlatform instance for FrmCleaner class.
+        /// </summary>
+        private readonly CurrentPlatform Platform = CurrentPlatform.Create();
+
+        /// <summary>
         /// FrmCleaner class constructor.
         /// </summary>
         /// <param name="CD">List of files and directories for cleanup.</param>
@@ -460,7 +465,7 @@ namespace srcrepair.gui
             try
             {
                 // Starting default shell and selecting file in its window...
-                ProcessManager.OpenExplorer(CM_FTable.SelectedItems[0].ToolTipText, new CurrentPlatform().OS);
+                Platform.OpenExplorer(CM_FTable.SelectedItems[0].ToolTipText);
             }
             catch (Exception Ex)
             {

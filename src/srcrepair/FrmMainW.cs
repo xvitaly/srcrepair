@@ -1314,7 +1314,7 @@ namespace srcrepair.gui
             {
                 if (UseNotepad)
                 {
-                    ProcessManager.OpenTextEditor(ConfigFile, Properties.Settings.Default.EditorBin, App.Platform.OS);
+                    App.Platform.OpenTextEditor(ConfigFile, Properties.Settings.Default.EditorBin);
                 }
                 else
                 {
@@ -2541,7 +2541,7 @@ namespace srcrepair.gui
         {
             try
             {
-                ProcessManager.OpenWebPage(Properties.Resources.AppBtURL);
+                App.Platform.OpenWebPage(Properties.Resources.AppBtURL);
             }
             catch (Exception Ex)
             {
@@ -2823,7 +2823,7 @@ namespace srcrepair.gui
         {
             try
             {
-                ProcessManager.OpenWebPage(Properties.Resources.AppURLReply);
+                App.Platform.OpenWebPage(Properties.Resources.AppURLReply);
             }
             catch (Exception Ex)
             {
@@ -2846,7 +2846,7 @@ namespace srcrepair.gui
             {
                 try
                 {
-                    ProcessManager.OpenWebPage(Properties.Resources.AppURLSteamGroup);
+                    App.Platform.OpenWebPage(Properties.Resources.AppURLSteamGroup);
                 }
                 catch (Exception Ex)
                 {
@@ -2975,7 +2975,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void MNUUpdateCheck_Click(object sender, EventArgs e)
         {
-            GuiHelpers.FormShowUpdater(App.UserAgent, App.FullAppPath, App.AppUserDir, App.Platform);
+            GuiHelpers.FormShowUpdater(App.UserAgent, App.FullAppPath, App.AppUserDir);
             FindGames();
         }
 
@@ -2994,7 +2994,7 @@ namespace srcrepair.gui
                     {
                         try
                         {
-                            ProcessManager.OpenTextEditor(Path.Combine(App.SourceGames[AppSelector.Text].FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text), Properties.Settings.Default.EditorBin, App.Platform.OS);
+                            App.Platform.OpenTextEditor(Path.Combine(App.SourceGames[AppSelector.Text].FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text), Properties.Settings.Default.EditorBin);
                         }
                         catch (Exception Ex)
                         {
@@ -3052,7 +3052,7 @@ namespace srcrepair.gui
                 {
                     try
                     {
-                        ProcessManager.OpenExplorer(Path.Combine(App.SourceGames[AppSelector.Text].FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text), App.Platform.OS);
+                        App.Platform.OpenExplorer(Path.Combine(App.SourceGames[AppSelector.Text].FullBackUpDirPath, BU_LVTable.SelectedItems[0].SubItems[4].Text));
                     }
                     catch (Exception Ex)
                     {
@@ -3114,7 +3114,7 @@ namespace srcrepair.gui
             {
                 try
                 {
-                    ProcessManager.OpenTextEditor(CFGFileName, Properties.Settings.Default.EditorBin, App.Platform.OS);
+                    App.Platform.OpenTextEditor(CFGFileName, Properties.Settings.Default.EditorBin);
                 }
                 catch (Exception Ex)
                 {
@@ -3213,7 +3213,7 @@ namespace srcrepair.gui
         {
             try
             {
-                ProcessManager.OpenWebPage(AppStrings.AppCVListURL);
+                App.Platform.OpenWebPage(AppStrings.AppCVListURL);
             }
             catch (Exception Ex)
             {
@@ -3413,7 +3413,7 @@ namespace srcrepair.gui
             {
                 try
                 {
-                    ProcessManager.OpenWebPage(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].Site);
+                    App.Platform.OpenWebPage(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].Site);
                 }
                 catch (Exception Ex)
                 {
@@ -3491,7 +3491,7 @@ namespace srcrepair.gui
         {
             try
             {
-                ProcessManager.OpenExplorer(Path.Combine(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir), App.Platform.OS);
+                App.Platform.OpenExplorer(Path.Combine(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir));
             }
             catch (Exception Ex)
             {

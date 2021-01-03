@@ -54,7 +54,8 @@ namespace srcrepair.core
         public void Run()
         {
             if (!Installed) { throw new FileNotFoundException(DebugStrings.AppDbgExCorePluginNotFound, Executable); }
-            ProcessManager.StartExternalHelper(Executable, ElevationRequired);
+            CurrentPlatform Platform = CurrentPlatform.Create();
+            Platform.StartExternalHelper(Executable, ElevationRequired);
         }
 
         /// <summary>

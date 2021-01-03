@@ -40,19 +40,22 @@ namespace srcrepair.gui
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
+        /// CurrentPlatform instance for FrmMute class.
+        /// </summary>
+        private readonly CurrentPlatform Platform = CurrentPlatform.Create();
+
+        /// <summary>
         /// FrmUpdate class constructor.
         /// </summary>
         /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
         /// <param name="A">App's installation directory.</param>
         /// <param name="U">App's user directory.</param>
-        /// <param name="O">Currently running operating system ID.</param>
-        public FrmUpdate(string UA, string A, string U, CurrentPlatform O)
+        public FrmUpdate(string UA, string A, string U)
         {
             InitializeComponent();
             UserAgent = UA;
             FullAppPath = A;
             AppUserDir = U;
-            Platform = O;
         }
 
         /// <summary>
@@ -75,11 +78,6 @@ namespace srcrepair.gui
         /// Gets or sets app's installation directory.
         /// </summary>
         private string FullAppPath { get; set; }
-
-        /// <summary>
-        /// Gets or sets currently operating system ID.
-        /// </summary>
-        private CurrentPlatform Platform { get; set; }
 
         /// <summary>
         /// Sets time of last application update check.
@@ -220,7 +218,7 @@ namespace srcrepair.gui
                         else
                         {
                             // Running installer with UAC access rights elevation...
-                            ProcessManager.StartWithUAC(UpdateFileName);
+                            Platform.StartElevatedProcess(UpdateFileName);
                         }
                         Result = true;
                     }

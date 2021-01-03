@@ -37,6 +37,11 @@ namespace srcrepair.gui
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
+        /// CurrentPlatform instance for FrmStmSelector class.
+        /// </summary>
+        private readonly CurrentPlatform Platform = CurrentPlatform.Create();
+
+        /// <summary>
         /// Gets or sets Steam UserID.
         /// </summary>
         public string SteamID { get; private set; }
@@ -99,7 +104,7 @@ namespace srcrepair.gui
         {
             try
             {
-                ProcessManager.OpenWebPage(String.Format(Properties.Resources.MM_CommunityURL, SteamConv.ConvSidv3Sid64(SD_IDSel.Text)));
+                Platform.OpenWebPage(String.Format(Properties.Resources.MM_CommunityURL, SteamConv.ConvSidv3Sid64(SD_IDSel.Text)));
             }
             catch (Exception Ex)
             {
