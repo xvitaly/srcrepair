@@ -75,31 +75,6 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Runs an external executable with UAC-elevated access rights
-        /// (run as admininstrator).
-        /// </summary>
-        /// <param name="FileName">Full path to executable.</param>
-        /// <returns>Returns PID of newly created process.</returns>
-        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
-        public static int StartWithUAC(string FileName)
-        {
-            // Setting advanced properties...
-            ProcessStartInfo ST = new ProcessStartInfo()
-            {
-                FileName = FileName,
-                Verb = "runas",
-                WindowStyle = ProcessWindowStyle.Normal,
-                UseShellExecute = true
-            };
-
-            // Starting process...
-            Process NewProcess = Process.Start(ST);
-
-            // Returning PID of created process...
-            return NewProcess.Id;
-        }
-
-        /// <summary>
         /// Checks if current user has local adminstrators access rights
         /// (permissions).
         /// </summary>
@@ -184,16 +159,6 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Opens specified URL in default Web browser.
-        /// </summary>
-        /// <param name="URI">Full URL.</param>
-        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
-        public static void OpenWebPage(string URI)
-        {
-            Process.Start(URI);
-        }
-
-        /// <summary>
         /// Adds quotes to path.
         /// </summary>
         /// <param name="Source">Source string with path.</param>
@@ -201,30 +166,6 @@ namespace srcrepair.core
         public static string AddQuotesToPath(string Source)
         {
             return String.Format(Properties.Resources.AppOpenHandlerEscapeTemplate, Source);
-        }
-
-        /// <summary>
-        /// Opens specified text file in a default (or overrided in application's
-        /// settings (only on Windows platform)) text editor.
-        /// </summary>
-        /// <param name="FileName">Full path to text file.</param>
-        /// <param name="EditorBin">External text editor (Windows only).</param>
-        /// <param name="OS">Operating system type.</param>
-        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
-        public static void OpenTextEditor(string FileName, string EditorBin, CurrentPlatform.OSType OS)
-        {
-            switch (OS)
-            {
-                case CurrentPlatform.OSType.Windows:
-                    Process.Start(EditorBin, AddQuotesToPath(FileName));
-                    break;
-                case CurrentPlatform.OSType.Linux:
-                    Process.Start(Properties.Resources.AppOpenHandlerLin, AddQuotesToPath(FileName));
-                    break;
-                case CurrentPlatform.OSType.MacOSX:
-                    Process.Start(Properties.Resources.AppOpenHandlerMac, String.Format("{0} \"{1}\"", "-t", FileName));
-                    break;
-            }
         }
 
         /// <summary>
@@ -243,28 +184,6 @@ namespace srcrepair.core
             {
                 throw new FileNotFoundException(DebugStrings.AppDbgExCoreHelperNxExists, FileName);
             }    
-        }
-
-        /// <summary>
-        /// Shows specified file in a default file manager.
-        /// </summary>
-        /// <param name="FileName">Full path to file.</param>
-        /// <param name="OS">Operating system type.</param>
-        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
-        public static void OpenExplorer(string FileName, CurrentPlatform.OSType OS)
-        {
-            switch (OS)
-            {
-                case CurrentPlatform.OSType.Windows:
-                    Process.Start(Properties.Resources.ShBinWin, String.Format("{0} \"{1}\"", Properties.Resources.ShParamWin, FileName));
-                    break;
-                case CurrentPlatform.OSType.Linux:
-                    Process.Start(Properties.Resources.AppOpenHandlerLin, String.Format("\"{0}\"", Path.GetDirectoryName(FileName)));
-                    break;
-                case CurrentPlatform.OSType.MacOSX:
-                    Process.Start(Properties.Resources.AppOpenHandlerMac, String.Format("\"{0}\"", Path.GetDirectoryName(FileName)));
-                    break;
-            }
         }
     }
 }
