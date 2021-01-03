@@ -78,6 +78,9 @@
     <Compile Include="IType2Settings.cs" />
     <Compile Include="IType2Video.cs" />
     <Compile Include="LibraryManager.cs" />
+    <Compile Include="PlatformLinux.cs" />
+    <Compile Include="PlatformMac.cs" />
+    <Compile Include="PlatformWindows.cs" />
     <Compile Include="PluginManager.cs" />
     <Compile Include="PluginTarget.cs" />
     <Compile Include="ProcessManager.cs" />
