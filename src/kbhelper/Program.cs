@@ -33,7 +33,7 @@ namespace srcrepair.gui.kbhelper
         [STAThread]
         static void Main()
         {
-            CurrentPlatform Platform = new CurrentPlatform();
+            CurrentPlatform Platform = CurrentPlatform.Create();
             if (Platform.OS == CurrentPlatform.OSType.Windows)
             {
                 if (ProcessManager.IsCurrentUserAdmin())

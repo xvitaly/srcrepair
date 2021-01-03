@@ -142,6 +142,11 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Get the full path to the running assembly.
+        /// </summary>
+        public static string AssemblyLocation => Assembly.GetEntryAssembly().Location;
+
+        /// <summary>
         /// CurrentApp class constructor.
         /// </summary>
         /// <param name="IsPortable">Enable portable mode (with settings in the same directory as executable).</param>
@@ -149,7 +154,7 @@ namespace srcrepair.core
         public CurrentApp(bool IsPortable, string AppName)
         {
             // Getting information about operating system and platform...
-            Platform = new CurrentPlatform();
+            Platform = CurrentPlatform.Create();
 
             // Getting full path to application installation directory...
             FullAppPath = Path.GetDirectoryName(Assembly.GetCallingAssembly().Location);
