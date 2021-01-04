@@ -28,42 +28,76 @@ namespace srcrepair.gui
     /// <summary>
     /// Main class of application.
     /// </summary>
-    static class Program
+    public static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        /// Imports settings from previous versions of the application.
+        /// </summary>
+        private static void ImportSettings()
+        {
+            try
+            {
+                if (Properties.Settings.Default.CallUpgrade)
+                {
+                    Properties.Settings.Default.Upgrade();
+                    Properties.Settings.Default.CallUpgrade = false;
+                }
+            }
+            catch
+            {
+                Properties.Settings.Default.CallUpgrade = false;
+                MessageBox.Show(AppStrings.AppImportSettingsError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
+        /// Checks if the required library version is equal with the current library version.
+        /// </summary>
+        private static void CheckLibrary()
+        {
+            if (!LibraryManager.CheckLibraryVersion())
+            {
+                MessageBox.Show(AppStrings.AppLibVersionMissmatch, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(ReturnCodes.CoreLibVersionMissmatch);
+            }
+        }
+
+        /// <summary>
+        /// Initializes and shows the main form of the application.
+        /// </summary>
+        private static void ShowMainForm()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FrmMainW());
+        }
+
+        /// <summary>
+        /// Shows the message about already running application and exits.
+        /// </summary>
+        private static void HandleRunning()
+        {
+            MessageBox.Show(AppStrings.AppAlreadyRunning, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Environment.Exit(ReturnCodes.AppAlreadyRunning);
+        }
+
+        /// <summary>
+        /// The main entry point of the application.
         /// </summary>
         [STAThread]
         static void Main()
         {
-            // Creating global mutex...
             using (Mutex Mtx = new Mutex(false, Properties.Resources.AppName))
             {
-                // Locking mutex...
                 if (Mtx.WaitOne(0, false))
                 {
-                    // Checking of core library version...
-                    if (LibraryManager.CheckLibraryVersion())
-                    {
-                        // Enabling application visual styles...
-                        Application.EnableVisualStyles();
-                        Application.SetCompatibleTextRenderingDefault(false);
-
-                        // Starting main form...
-                        Application.Run(new FrmMainW());
-                    }
-                    else
-                    {
-                        // Version missmatch. Terminating...
-                        MessageBox.Show(AppStrings.AppLibVersionMissmatch, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        Environment.Exit(ReturnCodes.CoreLibVersionMissmatch);
-                    }
+                    ImportSettings();
+                    CheckLibrary();
+                    ShowMainForm();
                 }
                 else
                 {
-                    // Application is already running. Terminating...
-                    MessageBox.Show(AppStrings.AppAlrLaunched, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Environment.Exit(ReturnCodes.AppAlreadyRunning);
+                    HandleRunning();
                 }
             }
         }

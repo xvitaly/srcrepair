@@ -47,9 +47,6 @@ namespace srcrepair.gui
         {
             // Initializing controls...
             InitializeComponent();
-
-            // Importing settings from previous versions (if any)...
-            ImportSettings();
         }
 
         #region HiDPI hacks
@@ -114,25 +111,6 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExCryptoPolicy);
-            }
-        }
-
-        /// <summary>
-        /// Imports settings from previous versions of application.
-        /// </summary>
-        private void ImportSettings()
-        {
-            try
-            {
-                if (Properties.Settings.Default.CallUpgrade)
-                {
-                    Properties.Settings.Default.Upgrade();
-                    Properties.Settings.Default.CallUpgrade = false;
-                }
-            }
-            catch (Exception Ex)
-            {
-                Logger.Warn(Ex, DebugStrings.AppDbgExSettingsLoad);
             }
         }
         
