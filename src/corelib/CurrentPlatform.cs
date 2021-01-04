@@ -28,7 +28,7 @@ namespace srcrepair.core
     /// <summary>
     /// Class for working with platform-dependent functions.
     /// </summary>
-    public abstract class CurrentPlatform
+    public abstract class CurrentPlatform : IPlatform
     {
         /// <summary>
         /// Create a platform-dependent instance. Factory method.

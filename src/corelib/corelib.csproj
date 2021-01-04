@@ -73,6 +73,7 @@
     <Compile Include="HUDSingle.cs" />
     <Compile Include="ICommonSettings.cs" />
     <Compile Include="ICommonVideo.cs" />
+    <Compile Include="IPlatform.cs" />
     <Compile Include="IType1Settings.cs" />
     <Compile Include="IType1Video.cs" />
     <Compile Include="IType2Settings.cs" />
