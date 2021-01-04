@@ -28,7 +28,7 @@ namespace srcrepair.gui
     /// <summary>
     /// Main class of application.
     /// </summary>
-    public static class Program
+    internal static class Program
     {
         /// <summary>
         /// Imports settings from previous versions of the application.
@@ -85,7 +85,7 @@ namespace srcrepair.gui
         /// The main entry point of the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             using (Mutex Mtx = new Mutex(false, Properties.Resources.AppName))
             {
