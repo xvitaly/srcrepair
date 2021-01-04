@@ -120,7 +120,7 @@
   <data name="AC_NoItemsSelected" xml:space="preserve">
     <value>No items selected. Please select at least one and then try again!</value>
   </data>
-  <data name="AppAlrLaunched" xml:space="preserve">
+  <data name="AppAlreadyRunning" xml:space="preserve">
     <value>The program is already running. Starting the second copy is not allowed.</value>
   </data>
   <data name="AppCVListURL" xml:space="preserve">
@@ -140,6 +140,9 @@
   </data>
   <data name="AppHelpCHMPageError" xml:space="preserve">
     <value>The required page could not be found in the offline help system file!</value>
+  </data>
+  <data name="AppImportSettingsError" xml:space="preserve">
+    <value>Failed to import settings from the previous version of the application! All settings will be reset to default.</value>
   </data>
   <data name="AppIncorrectSrcVersion" xml:space="preserve">
     <value>Incorrect Source Engine version has been detected. This game is not fully supported. Please report this bug to developers!</value>

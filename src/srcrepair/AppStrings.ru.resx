@@ -120,7 +120,7 @@
   <data name="AC_NoItemsSelected" xml:space="preserve">
     <value>Вы не выбрали ни один элемент! Очистка невозможна.</value>
   </data>
-  <data name="AppAlrLaunched" xml:space="preserve">
+  <data name="AppAlreadyRunning" xml:space="preserve">
     <value>Программа уже выполняется! Запуск нескольких копий не поддерживается.</value>
   </data>
   <data name="AppCVListURL" xml:space="preserve">
@@ -140,6 +140,9 @@
   </data>
   <data name="AppHelpCHMPageError" xml:space="preserve">
     <value>Не удалось найти запрошенную страницу в файле оффлайновой справочной системы!</value>
+  </data>
+  <data name="AppImportSettingsError" xml:space="preserve">
+    <value>Произошла ошибка во время импортирования настроек из предыдущей версии программы! Параметры будут сброшены на стандартные значения.</value>
   </data>
   <data name="AppIncorrectSrcVersion" xml:space="preserve">
     <value>Обнаружена неподдерживаемая версия движка Source. Пожалуйста, сообщите об этой ошибке разработчикам!</value>

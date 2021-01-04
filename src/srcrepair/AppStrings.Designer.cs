@@ -72,9 +72,9 @@ namespace srcrepair.gui {
         /// <summary>
         ///   Looks up a localized string similar to The program is already running. Starting the second copy is not allowed..
         /// </summary>
-        internal static string AppAlrLaunched {
+        internal static string AppAlreadyRunning {
             get {
-                return ResourceManager.GetString("AppAlrLaunched", resourceCulture);
+                return ResourceManager.GetString("AppAlreadyRunning", resourceCulture);
             }
         }
         
@@ -129,6 +129,15 @@ namespace srcrepair.gui {
         internal static string AppHelpCHMPageError {
             get {
                 return ResourceManager.GetString("AppHelpCHMPageError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to import settings from the previous version of the application! All settings will be reset to default..
+        /// </summary>
+        internal static string AppImportSettingsError {
+            get {
+                return ResourceManager.GetString("AppImportSettingsError", resourceCulture);
             }
         }
         
