@@ -20,6 +20,7 @@
 */
 
 using System.IO;
+using System.Security.Permissions;
 
 namespace srcrepair.core
 {
@@ -51,10 +52,12 @@ namespace srcrepair.core
         /// <summary>
         /// Run plugin if installed.
         /// </summary>
-        public void Run()
+        /// <param name="Platform">An instance of the CurrentPlatform class for working
+        /// with platform-dependent functions.</param>
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
+        public void Run(CurrentPlatform Platform)
         {
             if (!Installed) { throw new FileNotFoundException(DebugStrings.AppDbgExCorePluginNotFound, Executable); }
-            CurrentPlatform Platform = CurrentPlatform.Create();
             Platform.StartExternalHelper(Executable, ElevationRequired);
         }
 

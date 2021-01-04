@@ -3090,7 +3090,7 @@ namespace srcrepair.gui
         {
             try
             {
-                App.Plugins["kbhelper"].Run();
+                App.Plugins["kbhelper"].Run(App.Platform);
             }
             catch (Win32Exception Ex)
             {
