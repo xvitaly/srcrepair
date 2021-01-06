@@ -83,22 +83,6 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Calculates MD5 hash of specified file.
-        /// </summary>
-        /// <param name="FileName">Full path to source file.</param>
-        /// <returns>Returns MD5 hash of specified file.</returns>
-        public static string CalculateFileMD5(string FileName)
-        {
-            using (MD5 MD5Crypt = MD5.Create())
-            {
-                using (FileStream SourceStream = File.OpenRead(FileName))
-                {
-                    return ConvertBytesToString(MD5Crypt.ComputeHash(SourceStream));
-                }
-            }
-        }
-
-        /// <summary>
         /// Calculates SHA-512 hash of specified file.
         /// </summary>
         /// <param name="FileName">Full path to source file.</param>
