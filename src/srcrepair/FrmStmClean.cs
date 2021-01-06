@@ -22,6 +22,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.IO;
+using srcrepair.core;
 
 namespace srcrepair.gui
 {
@@ -30,6 +31,11 @@ namespace srcrepair.gui
     /// </summary>
     public partial class FrmStmClean : Form
     {
+        /// <summary>
+        /// CurrentPlatform instance for FrmStmClean class.
+        /// </summary>
+        private readonly CurrentPlatform Platform = CurrentPlatform.Create();
+
         /// <summary>
         /// Gets or sets full path to Steam client directory.
         /// </summary>
@@ -41,16 +47,6 @@ namespace srcrepair.gui
         private string BackUpDir { get; set; }
 
         /// <summary>
-        /// Gets or sets platform-dependent SteamApps directory name.
-        /// </summary>
-        private string SteamAppsDirName { get; set; }
-
-        /// <summary>
-        /// Get or sets platform-dependent Steam process name.
-        /// </summary>
-        private string SteamProcName { get; set; }
-
-        /// <summary>
         /// Gets or sets the list of files and directories for cleanup.
         /// </summary>
         private List<String> CleanDirs { get; set; }
@@ -60,15 +56,11 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="SP">Full path to Steam client directory.</param>
         /// <param name="BD">Full path to directory for saving backups.</param>
-        /// <param name="SA">Platform-dependent SteamApps directory name.</param>
-        /// <param name="PN">Platform-dependent Steam process name.</param>
-        public FrmStmClean(string SP, string BD, string SA, string PN)
+        public FrmStmClean(string SP, string BD)
         {
             InitializeComponent();
             SteamPath = SP;
             BackUpDir = BD;
-            SteamAppsDirName = SA;
-            SteamProcName = PN;
             CleanDirs = new List<string>();
         }
 
@@ -115,7 +107,7 @@ namespace srcrepair.gui
         {
             if (EC_ShaderCache.Checked)
             {
-                CleanDirs.Add(Path.Combine(SteamPath, SteamAppsDirName, "shadercache", "*.*"));
+                CleanDirs.Add(Path.Combine(SteamPath, Platform.SteamAppsFolderName, "shadercache", "*.*"));
             }
         }
 
@@ -174,8 +166,8 @@ namespace srcrepair.gui
         {
             if (EC_BuildCache.Checked)
             {
-                CleanDirs.Add(Path.Combine(SteamPath, SteamAppsDirName, "downloading"));
-                CleanDirs.Add(Path.Combine(SteamPath, SteamAppsDirName, "temp"));
+                CleanDirs.Add(Path.Combine(SteamPath, Platform.SteamAppsFolderName, "downloading"));
+                CleanDirs.Add(Path.Combine(SteamPath, Platform.SteamAppsFolderName, "temp"));
             }
         }
 
@@ -307,7 +299,7 @@ namespace srcrepair.gui
         {
             if (CleanDirs.Count > 0)
             {
-                GuiHelpers.FormShowCleanup(CleanDirs, Text, AppStrings.PS_CleanupSuccess, BackUpDir, SteamProcName);
+                GuiHelpers.FormShowCleanup(CleanDirs, Text, AppStrings.PS_CleanupSuccess, BackUpDir, Platform.SteamProcName);
                 Close();
             }
             else

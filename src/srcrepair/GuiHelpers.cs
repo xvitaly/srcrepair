@@ -248,9 +248,9 @@ namespace srcrepair.gui
         /// <param name="FullBackUpDirPath">Path to directory for saving backups.</param>
         /// <param name="SteamAppsDirName">Platform-dependent SteamApps directory name.</param>
         /// <param name="SteamProcName">Platform-dependent Steam process name.</param>
-        public static void FormShowStmCleaner(string FullSteamPath, string FullBackUpDirPath, string SteamAppsDirName, string SteamProcName)
+        public static void FormShowStmCleaner(string FullSteamPath, string FullBackUpDirPath)
         {
-            using (FrmStmClean StmCln = new FrmStmClean(FullSteamPath, FullBackUpDirPath, SteamAppsDirName, SteamProcName))
+            using (FrmStmClean StmCln = new FrmStmClean(FullSteamPath, FullBackUpDirPath))
             {
                 StmCln.ShowDialog();
             }

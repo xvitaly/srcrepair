@@ -3484,7 +3484,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void MNUExtClnSteam_Click(object sender, EventArgs e)
         {
-            GuiHelpers.FormShowStmCleaner(App.SteamClient.FullSteamPath, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.Platform.SteamAppsFolderName, App.Platform.SteamProcName);
+            GuiHelpers.FormShowStmCleaner(App.SteamClient.FullSteamPath, App.SourceGames[AppSelector.Text].FullBackUpDirPath);
         }
 
         /// <summary>
