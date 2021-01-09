@@ -2953,7 +2953,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void MNUUpdateCheck_Click(object sender, EventArgs e)
         {
-            GuiHelpers.FormShowUpdater(App.UserAgent, App.FullAppPath, App.AppUserDir);
+            GuiHelpers.FormShowUpdater(App.UserAgent, App.FullAppPath, App.AppUpdateDir);
             FindGames();
         }
 

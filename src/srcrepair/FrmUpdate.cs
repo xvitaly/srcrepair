@@ -49,13 +49,13 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
         /// <param name="A">App's installation directory.</param>
-        /// <param name="U">App's user directory.</param>
+        /// <param name="U">App's local updates directory.</param>
         public FrmUpdate(string UA, string A, string U)
         {
             InitializeComponent();
             UserAgent = UA;
             FullAppPath = A;
-            AppUserDir = U;
+            AppUpdateDir = U;
         }
 
         /// <summary>
@@ -70,9 +70,9 @@ namespace srcrepair.gui
         private string UserAgent { get; set; }
 
         /// <summary>
-        /// Gets or sets app's user directory.
+        /// Gets or sets full path to the local updates directory.
         /// </summary>
-        private string AppUserDir { get; set; }
+        private string AppUpdateDir { get; set; }
 
         /// <summary>
         /// Gets or sets app's installation directory.
@@ -189,7 +189,7 @@ namespace srcrepair.gui
             bool Result = false;
 
             // Generating full paths to files...
-            string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(AppUserDir, Path.GetFileName(UpdateURL)));
+            string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(AppUpdateDir, Path.GetFileName(UpdateURL)));
 
             // Downloading update from server...
             GuiHelpers.FormShowDownloader(UpMan.AppUpdateURL, UpdateFileName);
