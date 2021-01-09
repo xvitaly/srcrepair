@@ -31,6 +31,11 @@ namespace srcrepair.core
     public static class StringsManager
     {
         /// <summary>
+        /// Gets local updates directory name.
+        /// </summary>
+        public static string UpdateLocalDirectoryName => Properties.Resources.UpdateLocalDir;
+
+        /// <summary>
         /// Gets config database file name.
         /// </summary>
         public static string ConfigDatabaseName => Properties.Resources.CfgDbFile;
