@@ -31,6 +31,11 @@ namespace srcrepair.core
     public static class StringsManager
     {
         /// <summary>
+        /// Gets HTTP_USER_AGENT header template.
+        /// </summary>
+        public static string HTTPUserAgentTemplate => Properties.Resources.AppDefUA;
+
+        /// <summary>
         /// Gets local updates directory name.
         /// </summary>
         public static string UpdateLocalDirectoryName => Properties.Resources.UpdateLocalDir;
