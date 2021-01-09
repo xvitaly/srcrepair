@@ -331,6 +331,15 @@ namespace srcrepair.core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to updates.
+        /// </summary>
+        internal static string UpdateLocalDir {
+            get {
+                return ResourceManager.GetString("UpdateLocalDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to workshop.
         /// </summary>
         internal static string WorkshopFolderName {
