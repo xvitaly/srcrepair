@@ -114,7 +114,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Checks if the destination directory exists. If not - creates it.
         /// </summary>
-        private void CheckLocalDirectory()
+        private void DownloaderCheckLocalDirectory()
         {
             if (!Directory.Exists(LocalDirectory))
             {
@@ -125,7 +125,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Checks if the destination file exists. If so - deletes it.
         /// </summary>
-        private void CheckLocalFile()
+        private void DownloaderCheckLocalFile()
         {
             if (File.Exists(LocalFile))
             {
@@ -136,10 +136,10 @@ namespace srcrepair.gui
         /// <summary>
         /// Performs preliminary checks.
         /// </summary>
-        private void RunChecks()
+        private void DownloaderRunChecks()
         {
-            CheckLocalDirectory();
-            CheckLocalFile();
+            DownloaderCheckLocalDirectory();
+            DownloaderCheckLocalFile();
         }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace srcrepair.gui
         {
             try
             {
-                RunChecks();
+                DownloaderRunChecks();
 
                 // Starting asynchronous download...
                 using (WebClient FileDownloader = new WebClient())
