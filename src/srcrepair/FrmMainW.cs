@@ -3410,7 +3410,8 @@ namespace srcrepair.gui
             List<String> CleanDirs = new List<string>
             {
                 Path.Combine(App.AppUserDir, StringsManager.HudDirectoryName, "*.*"),
-                Path.Combine(App.AppUserDir, StringsManager.ConfigDirectoryName, "*.*")
+                Path.Combine(App.AppUserDir, StringsManager.ConfigDirectoryName, "*.*"),
+                Path.Combine(App.AppUserDir, StringsManager.UpdateLocalDirectoryName, "*.*")
             };
             GuiHelpers.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
         }
