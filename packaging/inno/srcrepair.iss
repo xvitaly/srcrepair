@@ -51,7 +51,7 @@ PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=commandline
 ShowLanguageDialog=auto
 ArchitecturesInstallIn64BitMode=x64
-MinVersion=6.1.7601
+MinVersion=6.1sp1
 VersionInfoVersion={#VERSION}
 VersionInfoDescription=SRC Repair Setup
 VersionInfoCopyright=(c) 2005-2020 EasyCoding Team. All rights reserved.
@@ -125,11 +125,11 @@ Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\DotNetZip.dll"""; 
 Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\NLog.dll"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
 
 [UninstallRun]
-Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\srcrepair.exe"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
-Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\kbhelper.exe"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdmin(); Components: plugins\kbhelper
-Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\corelib.dll"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
-Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\DotNetZip.dll"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
-Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\NLog.dll"""; StatusMsg: {cm:OptNetUninstallStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
+Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\srcrepair.exe"""; RunOnceId: "NativeImage"; Flags: runhidden; Check: IsAdmin(); Components: core
+Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\kbhelper.exe"""; RunOnceId: "NativeImage"; Flags: runhidden; Check: IsAdmin(); Components: plugins\kbhelper
+Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\corelib.dll"""; RunOnceId: "NativeImage"; Flags: runhidden; Check: IsAdmin(); Components: core
+Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\DotNetZip.dll"""; RunOnceId: "NativeImage"; Flags: runhidden; Check: IsAdmin(); Components: core
+Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\NLog.dll"""; RunOnceId: "NativeImage"; Flags: runhidden; Check: IsAdmin(); Components: core
 
 [Code]
 function GetDefRoot(Param: String): String;
