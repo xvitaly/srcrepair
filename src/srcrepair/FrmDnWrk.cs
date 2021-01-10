@@ -53,6 +53,11 @@ namespace srcrepair.gui
         private string LocalFile { get; set; }
 
         /// <summary>
+        /// Gets or sets full path to the destination directory.
+        /// </summary>
+        private string LocalDirectory { get; set; }
+
+        /// <summary>
         /// FrmDnWrk class constructor.
         /// </summary>
         /// <param name="R">Download URL.</param>
@@ -62,6 +67,7 @@ namespace srcrepair.gui
             InitializeComponent();
             RemoteURI = R;
             LocalFile = L;
+            LocalDirectory = Path.GetDirectoryName(L);
         }
 
         /// <summary>
@@ -72,7 +78,7 @@ namespace srcrepair.gui
         private void FrmDnWrk_Load(object sender, EventArgs e)
         {
             // Starting asynchronous download process in a separate thread...
-            DownloaderStart(RemoteURI, LocalFile);
+            DownloaderStart();
         }
 
         /// <summary>
@@ -106,16 +112,44 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Checks if the destination directory exists. If not - creates it.
+        /// </summary>
+        private void CheckLocalDirectory()
+        {
+            if (!Directory.Exists(LocalDirectory))
+            {
+                Directory.CreateDirectory(LocalDirectory);
+            }
+        }
+
+        /// <summary>
+        /// Checks if the destination file exists. If so - deletes it.
+        /// </summary>
+        private void CheckLocalFile()
+        {
+            if (File.Exists(LocalFile))
+            {
+                File.Delete(LocalFile);
+            }
+        }
+
+        /// <summary>
+        /// Performs preliminary checks.
+        /// </summary>
+        private void RunChecks()
+        {
+            CheckLocalDirectory();
+            CheckLocalFile();
+        }
+
+        /// <summary>
         /// Downloads file from the Internet.
         /// </summary>
-        /// <param name="URI">Download URL.</param>
-        /// <param name="FileName">Full path to destination file.</param>
-        private void DownloaderStart(string URI, string FileName)
+        private void DownloaderStart()
         {
             try
             {
-                // Checking if destination file exists. If so, delete it...
-                if (File.Exists(FileName)) { File.Delete(FileName); }
+                RunChecks();
 
                 // Starting asynchronous download...
                 using (WebClient FileDownloader = new WebClient())
@@ -123,7 +157,7 @@ namespace srcrepair.gui
                     FileDownloader.Headers.Add("User-Agent", Properties.Resources.AppDnlUA);
                     FileDownloader.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloaderCompleted);
                     FileDownloader.DownloadProgressChanged += new DownloadProgressChangedEventHandler(DownloaderProgressChanged);
-                    FileDownloader.DownloadFileAsync(new Uri(URI), FileName);
+                    FileDownloader.DownloadFileAsync(new Uri(RemoteURI), LocalFile);
                 }
             }
             catch (Exception Ex) { Logger.Warn(Ex); }
