@@ -53,6 +53,11 @@ namespace srcrepair.core
         public string SteamID { get; set; }
 
         /// <summary>
+        /// Gets or sets full path to Steam userdata directory.
+        /// </summary>
+        private string UserDataPath { get; set; }
+
+        /// <summary>
         /// Checks if specified UserID currently available. If not,
         /// returns first available value.
         /// </summary>
@@ -157,9 +162,9 @@ namespace srcrepair.core
         public List<String> GetSteamLocalConfig()
         {
             List<String> Result = new List<String>();
-            foreach (string ID in GetUserIDs())
+            foreach (string ID in SteamIDs)
             {
-                Result.AddRange(FileManager.FindFiles(Path.Combine(FullSteamPath, "userdata", ID, "config"), "localconfig.vdf"));
+                Result.AddRange(FileManager.FindFiles(Path.Combine(UserDataPath, ID, "config"), "localconfig.vdf"));
             }
             return Result;
         }
@@ -168,24 +173,19 @@ namespace srcrepair.core
         /// Gets list of available UserIDs.
         /// </summary>
         /// <returns>List of available UserIDs.</returns>
-        private List<String> GetUserIDs()
+        private void GetUserIDs()
         {
-            List<String> Result = new List<String>();
-            string DDir = Path.Combine(FullSteamPath, "userdata");
-
-            if (Directory.Exists(DDir))
+            if (Directory.Exists(UserDataPath))
             {
-                DirectoryInfo DInfo = new DirectoryInfo(DDir);
+                DirectoryInfo DInfo = new DirectoryInfo(UserDataPath);
                 foreach (DirectoryInfo SubDir in DInfo.GetDirectories())
                 {
                     if (SteamConv.ValidateUserID(SubDir.Name))
                     {
-                        Result.Add(SubDir.Name);
+                        SteamIDs.Add(SubDir.Name);
                     }
                 }
             }
-
-            return Result;
         }
 
         /// <summary>
@@ -322,8 +322,10 @@ namespace srcrepair.core
         /// <param name="OS">Operating system type.</param>
         public SteamManager(string LastSteamID, CurrentPlatform.OSType OS)
         {
+            SteamIDs = new List<String>();
             FullSteamPath = OS == CurrentPlatform.OSType.Windows ? GetSteamPath() : TrySteamPath(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Steam"));
-            SteamIDs = GetUserIDs();
+            UserDataPath = Path.Combine(FullSteamPath, "userdata");
+            GetUserIDs();
             SteamID = GetCurrentSteamID(LastSteamID);
         }
     }
