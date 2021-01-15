@@ -43,7 +43,17 @@ namespace srcrepair.core
             string[] SidArr = Sid32.Split(':');
             return (Convert.ToInt64(SidArr[2]) * 2) + Convert.ToInt64(SidArr[1]);
         }
-        
+
+        /// <summary>
+        /// Validates UserID.
+        /// </summary>
+        /// <param name="Sidv3">UserID.</param>
+        /// <returns>Returns True if UserID has correct format.</returns>
+        public static bool ValidateUserID(string UserID)
+        {
+            return Regex.IsMatch(UserID, Properties.Resources.UserIDValidateRegex);
+        }
+
         /// <summary>
         /// Gets SteamIDv3 from SteamID32.
         /// </summary>
@@ -71,7 +81,7 @@ namespace srcrepair.core
         /// <returns>SteamID64.</returns>
         public static long ConvSidv3Sid64(string Sidv3)
         {
-            return Int64.Parse(Regex.Match(Sidv3, @"\d{2,12}").Value) + Multi;
+            return Int64.Parse(Regex.Match(Sidv3, Properties.Resources.UserIDParseRegex).Value) + Multi;
         }
     }
 }
