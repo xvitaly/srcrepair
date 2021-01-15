@@ -340,6 +340,24 @@ namespace srcrepair.core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to \d{2,12}.
+        /// </summary>
+        internal static string UserIDParseRegex {
+            get {
+                return ResourceManager.GetString("UserIDParseRegex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ^\d{2,12}$.
+        /// </summary>
+        internal static string UserIDValidateRegex {
+            get {
+                return ResourceManager.GetString("UserIDValidateRegex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to workshop.
         /// </summary>
         internal static string WorkshopFolderName {

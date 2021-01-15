@@ -210,6 +210,12 @@
   <data name="UpdateLocalDir" xml:space="preserve">
     <value>updates</value>
   </data>
+  <data name="UserIDParseRegex" xml:space="preserve">
+    <value>\d{2,12}</value>
+  </data>
+  <data name="UserIDValidateRegex" xml:space="preserve">
+    <value>^\d{2,12}$</value>
+  </data>
   <data name="WorkshopFolderName" xml:space="preserve">
     <value>workshop</value>
   </data>
