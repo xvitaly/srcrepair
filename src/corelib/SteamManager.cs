@@ -178,7 +178,10 @@ namespace srcrepair.core
                 DirectoryInfo DInfo = new DirectoryInfo(DDir);
                 foreach (DirectoryInfo SubDir in DInfo.GetDirectories())
                 {
-                    Result.Add(SubDir.Name);
+                    if (SteamConv.ValidateUserID(SubDir.Name))
+                    {
+                        Result.Add(SubDir.Name);
+                    }
                 }
             }
 
