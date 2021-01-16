@@ -295,6 +295,33 @@ namespace srcrepair.core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Steam.
+        /// </summary>
+        internal static string SteamFolderNameLin {
+            get {
+                return ResourceManager.GetString("SteamFolderNameLin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Steam.
+        /// </summary>
+        internal static string SteamFolderNameMac {
+            get {
+                return ResourceManager.GetString("SteamFolderNameMac", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Steam.
+        /// </summary>
+        internal static string SteamFolderNameWin {
+            get {
+                return ResourceManager.GetString("SteamFolderNameWin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to steam.
         /// </summary>
         internal static string SteamProcNameLin {
