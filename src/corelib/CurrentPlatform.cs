@@ -139,6 +139,11 @@ namespace srcrepair.core
         public abstract OSType OS { get; }
 
         /// <summary>
+        /// Get platform-dependent Steam installation folder (directory) name.
+        /// </summary>
+        public abstract string SteamFolderName { get; }
+
+        /// <summary>
         /// Get platform-dependent Steam launcher file name.
         /// </summary>
         public abstract string SteamBinaryName { get; }
@@ -157,6 +162,11 @@ namespace srcrepair.core
         /// Return platform-dependent location of the Hosts file.
         /// </summary>
         public virtual string HostsFileLocation => "/etc";
+
+        /// <summary>
+        /// Get platform-dependent Steam installation path.
+        /// </summary>
+        public virtual string SteamInstallPath => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), SteamFolderName);
 
         /// <summary>
         /// Return platform-dependent path to Hosts file.

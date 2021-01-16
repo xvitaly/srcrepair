@@ -56,6 +56,16 @@ namespace srcrepair.core
         string SteamBinaryName { get; }
 
         /// <summary>
+        /// Get platform-dependent Steam installation folder (directory) name.
+        /// </summary>
+        string SteamFolderName { get; }
+
+        /// <summary>
+        /// Get platform-dependent Steam installation path.
+        /// </summary>
+        string SteamInstallPath { get; }
+
+        /// <summary>
         /// Get platform-dependent Steam process name.
         /// </summary>
         string SteamProcName { get; }
