@@ -721,7 +721,7 @@ namespace srcrepair.gui
         {
             try
             {
-                App.SteamClient.FullSteamPath = CheckLastSteamPath(Properties.Settings.Default.LastSteamPath);
+                App.SteamClient = new SteamManager(CheckLastSteamPath(Properties.Settings.Default.LastSteamPath), Properties.Settings.Default.LastSteamID);
             }
             catch (FileNotFoundException Ex)
             {

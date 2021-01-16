@@ -40,7 +40,7 @@ namespace srcrepair.core
         /// <summary>
         /// Gets or sets full path to Steam client directory.
         /// </summary>
-        public string FullSteamPath { get; set; }
+        public string FullSteamPath { get; private set; }
 
         /// <summary>
         /// Gets list of available UserIDs.
@@ -280,17 +280,37 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Sets some private values of the SteamManager class.
+        /// </summary>
+        /// <param name="LastSteamID">Last used UserID.</param>
+        private void SetValues(string LastSteamID)
+        {
+            SteamIDs = new List<String>();
+            UserDataPath = Path.Combine(FullSteamPath, "userdata");
+            GetUserIDs();
+            SteamID = GetCurrentSteamID(LastSteamID);
+        }
+
+        /// <summary>
         /// SteamManager class constructor.
         /// </summary>
         /// <param name="LastSteamID">Last used UserID.</param>
         /// <param name="Platform">Instance of the CurrentPlatform class.</param>
         public SteamManager(string LastSteamID, CurrentPlatform Platform)
         {
-            SteamIDs = new List<String>();
             FullSteamPath = TrySteamPath(Platform.SteamInstallPath);
-            UserDataPath = Path.Combine(FullSteamPath, "userdata");
-            GetUserIDs();
-            SteamID = GetCurrentSteamID(LastSteamID);
+            SetValues(LastSteamID);
+        }
+
+        /// <summary>
+        /// SteamManager class alternative constructor.
+        /// </summary>
+        /// <param name="SteamPath">Manually specified Steam installation path.</param>
+        /// <param name="LastSteamID">Last used UserID.</param>
+        public SteamManager(string SteamPath, string LastSteamID)
+        {
+            FullSteamPath = TrySteamPath(SteamPath);
+            SetValues(LastSteamID);
         }
     }
 }
