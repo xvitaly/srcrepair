@@ -754,7 +754,7 @@ namespace srcrepair.gui
             // Create a new instance of SteamManager class and take care of possible errors...
             try
             {
-                App.SteamClient = new SteamManager(Properties.Settings.Default.LastSteamID, App.Platform.OS);
+                App.SteamClient = new SteamManager(Properties.Settings.Default.LastSteamID, App.Platform);
             }
             catch (ArgumentOutOfRangeException)
             {

@@ -73,42 +73,6 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Gets Steam installation directory from Windows registry.
-        /// </summary>
-        /// <returns>Steam path.</returns>
-        private string GetSteamPath()
-        {
-            // Creating an empty string for storing result...
-            string ResString = String.Empty;
-
-            // Opening registry key as read only...
-            using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false))
-            {
-                // Checking if registry key exists and available for reading...
-                if (ResKey != null)
-                {
-                    // Getting SteamPath value from previously opened key...
-                    object ResObj = ResKey.GetValue("SteamPath");
-
-                    // Checking if value exists...
-                    if (ResObj != null)
-                    {
-                        // Extracting result...
-                        ResString = Path.GetFullPath(Convert.ToString(ResObj));
-                    }
-                    else
-                    {
-                        // Does not exists. Throwing exception...
-                        throw new NullReferenceException(DebugStrings.AppDbgExCoreStmManNoInstallPathDetected);
-                    }
-                }
-            }
-
-            // Returning result...
-            return ResString;
-        }
-
-        /// <summary>
         /// Gets Steam language name from Windows registry.
         /// </summary>
         /// <returns>Steam language name.</returns>
@@ -319,11 +283,11 @@ namespace srcrepair.core
         /// SteamManager class constructor.
         /// </summary>
         /// <param name="LastSteamID">Last used UserID.</param>
-        /// <param name="OS">Operating system type.</param>
-        public SteamManager(string LastSteamID, CurrentPlatform.OSType OS)
+        /// <param name="Platform">Instance of the CurrentPlatform class.</param>
+        public SteamManager(string LastSteamID, CurrentPlatform Platform)
         {
             SteamIDs = new List<String>();
-            FullSteamPath = OS == CurrentPlatform.OSType.Windows ? GetSteamPath() : TrySteamPath(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Steam"));
+            FullSteamPath = TrySteamPath(Platform.SteamInstallPath);
             UserDataPath = Path.Combine(FullSteamPath, "userdata");
             GetUserIDs();
             SteamID = GetCurrentSteamID(LastSteamID);
