@@ -82,6 +82,11 @@ namespace srcrepair.core
         public override OSType OS => OSType.MacOSX;
 
         /// <summary>
+        /// Get platform-dependent Steam installation folder (directory) name.
+        /// </summary>
+        public override string SteamFolderName => Properties.Resources.SteamFolderNameMac;
+
+        /// <summary>
         /// Get platform-dependent Steam launcher file name.
         /// </summary>
         public override string SteamBinaryName => Properties.Resources.SteamExecBinMac;

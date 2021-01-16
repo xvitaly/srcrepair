@@ -88,6 +88,11 @@ namespace srcrepair.core
         public override OSType OS => OSType.Windows;
 
         /// <summary>
+        /// Get platform-dependent Steam installation folder (directory) name.
+        /// </summary>
+        public override string SteamFolderName => Properties.Resources.SteamFolderNameWin;
+
+        /// <summary>
         /// Get platform-dependent Steam launcher file name.
         /// </summary>
         public override string SteamBinaryName => Properties.Resources.SteamExecBinWin;
@@ -124,6 +129,44 @@ namespace srcrepair.core
                 }
 
                 return HostsDirectory;
+            }
+        }
+
+        /// <summary>
+        /// Return Steam installation directory from the Windows registry.
+        /// </summary>
+        public override string SteamInstallPath
+        {
+            get
+            {
+                // Creating an empty string for storing result...
+                string ResString = String.Empty;
+
+                // Opening registry key as read only...
+                using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false))
+                {
+                    // Checking if registry key exists and available for reading...
+                    if (ResKey != null)
+                    {
+                        // Getting SteamPath value from previously opened key...
+                        object ResObj = ResKey.GetValue("SteamPath");
+
+                        // Checking if value exists...
+                        if (ResObj != null)
+                        {
+                            // Extracting result...
+                            ResString = Path.GetFullPath(Convert.ToString(ResObj));
+                        }
+                        else
+                        {
+                            // Does not exists. Throwing exception...
+                            throw new NullReferenceException(DebugStrings.AppDbgExCoreStmManNoInstallPathDetected);
+                        }
+                    }
+                }
+
+                // Returning result...
+                return ResString;
             }
         }
     }
