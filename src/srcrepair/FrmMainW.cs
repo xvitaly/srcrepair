@@ -1799,7 +1799,7 @@ namespace srcrepair.gui
             {
                 try
                 {
-                    switch (App.SteamClient.GetSteamLanguage())
+                    switch (App.Platform.SteamLanguage)
                     {
                         case "russian":
                             PS_SteamLang.SelectedIndex = 1;
