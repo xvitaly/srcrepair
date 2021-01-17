@@ -66,6 +66,11 @@ namespace srcrepair.core
         string SteamInstallPath { get; }
 
         /// <summary>
+        /// Get platform-dependent Steam language.
+        /// </summary>
+        string SteamLanguage { get; }
+
+        /// <summary>
         /// Get platform-dependent Steam process name.
         /// </summary>
         string SteamProcName { get; }

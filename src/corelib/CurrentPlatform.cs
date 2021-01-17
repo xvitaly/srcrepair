@@ -169,6 +169,11 @@ namespace srcrepair.core
         public virtual string SteamInstallPath => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), SteamFolderName);
 
         /// <summary>
+        /// Get platform-dependent Steam language.
+        /// </summary>
+        public virtual string SteamLanguage => "english";
+
+        /// <summary>
         /// Return platform-dependent path to Hosts file.
         /// </summary>
         public virtual string HostsFileFullPath => Path.Combine(HostsFileLocation, "hosts");
