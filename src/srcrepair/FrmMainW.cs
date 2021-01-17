@@ -1795,30 +1795,25 @@ namespace srcrepair.gui
             PS_SteamLang.Enabled = PS_CleanRegistry.Checked;
 
             // Getting current language name from Registry...
-            if (App.Platform.OS == CurrentPlatform.OSType.Windows)
+            try
             {
-                try
+                switch (App.Platform.SteamLanguage)
                 {
-                    switch (App.Platform.SteamLanguage)
-                    {
-                        case "russian":
-                            PS_SteamLang.SelectedIndex = 1;
-                            break;
-                        default:
-                            PS_SteamLang.SelectedIndex = 0;
-                            break;
-                    }
-                }
-                catch (Exception Ex)
-                {
-                    Logger.Warn(Ex);
-                    PS_SteamLang.SelectedIndex = 0;
+                    case "russian":
+                        PS_SteamLang.SelectedIndex = 1;
+                        break;
+                    case "english":
+                        PS_SteamLang.SelectedIndex = 0;
+                        break;
+                    default:
+                        PS_SteamLang.SelectedIndex = Convert.ToInt32(AppStrings.AppDefaultSteamLangID);
+                        break;
                 }
             }
-            else
+            catch (Exception Ex)
             {
-                // Performing selection based on current application locale...
-                PS_SteamLang.SelectedIndex = Convert.ToInt32(AppStrings.AppDefaultSteamLangID);
+                Logger.Warn(Ex, DebugStrings.AppDbgExCleanRegistry);
+                PS_SteamLang.SelectedIndex = 0;
             }
 
             // Enable or disable button based on checkboxes...
