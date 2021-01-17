@@ -169,5 +169,43 @@ namespace srcrepair.core
                 return ResString;
             }
         }
+
+        /// <summary>
+        /// Get platform-dependent Steam language name from the Windows registry.
+        /// </summary>
+        public override string SteamLanguage
+        {
+            get
+            {
+                // Creating an empty string for storing result...
+                string Result = String.Empty;
+
+                // Opening registry key as read only...
+                using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false))
+                {
+                    // Checking if registry key exists and available for reading...
+                    if (ResKey != null)
+                    {
+                        // Getting SteamPath value from previously opened key...
+                        object ResObj = ResKey.GetValue("Language");
+
+                        // Checking if value exists...
+                        if (ResObj != null)
+                        {
+                            // Extracting result...
+                            Result = Convert.ToString(ResObj);
+                        }
+                        else
+                        {
+                            // Does not exists. Throwing exception...
+                            throw new NullReferenceException(DebugStrings.AppDbgExCoreStmManNoLangNameDetected);
+                        }
+                    }
+                }
+
+                // Returning result...
+                return Result;
+            }
+        }
     }
 }

@@ -73,31 +73,6 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Gets Steam language name from Windows registry.
-        /// </summary>
-        /// <returns>Steam language name.</returns>
-        public string GetSteamLanguage()
-        {
-            string Result = String.Empty;
-            using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false))
-            {
-                if (ResKey != null)
-                {
-                    object ResObj = ResKey.GetValue("Language");
-                    if (ResObj != null)
-                    {
-                        Result = Convert.ToString(ResObj);
-                    }
-                    else
-                    {
-                        throw new NullReferenceException(DebugStrings.AppDbgExCoreStmManNoLangNameDetected);
-                    }
-                }
-            }
-            return Result;
-        }
-
-        /// <summary>
         /// Checks if specified path is a real Steam installation directory.
         /// </summary>
         /// <returns>Steam installation directory path.</returns>
