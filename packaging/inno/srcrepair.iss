@@ -17,7 +17,7 @@
 ; You should have received a copy of the GNU General Public License
 ; along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-#define VERSION GetFileVersion("..\..\src\srcrepair\bin\Release\srcrepair.exe")
+#define VERSION GetVersionNumbersString("..\..\src\srcrepair\bin\Release\srcrepair.exe")
 #define BASEDIR "..\..\src\srcrepair"
 #define CI_COMMIT GetEnv('CI_HASH')
 #if CI_COMMIT == ''
