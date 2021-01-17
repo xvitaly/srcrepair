@@ -259,6 +259,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while fetching current Steam client language..
+        /// </summary>
+        internal static string AppDbgExCleanRegistry {
+            get {
+                return ResourceManager.GetString("AppDbgExCleanRegistry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while cleaning up Steam blob files..
         /// </summary>
         internal static string AppDbgExClnBlobs {

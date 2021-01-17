@@ -183,6 +183,9 @@
   <data name="AppDbgExCfgSelection" xml:space="preserve">
     <value>Exception during FPS config selection (click on warning icon).</value>
   </data>
+  <data name="AppDbgExCleanRegistry" xml:space="preserve">
+    <value>Exception while fetching current Steam client language.</value>
+  </data>
   <data name="AppDbgExClnBlobs" xml:space="preserve">
     <value>Exception while cleaning up Steam blob files.</value>
   </data>
