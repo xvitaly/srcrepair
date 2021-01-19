@@ -953,11 +953,22 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Evaluates and returns the real TabPage index (HUD Manager page will not be shown
+        /// if the selected game does not support custom HUDs, so we must exclude it).
+        /// </summary>
+        /// <param name="CurrentIndex">Current TabPage index.</param>
+        /// <returns>Re-evaluated TabPage index.</returns>
+        private int EvaluateRealTabPageIndex(int CurrentIndex)
+        {
+            return MainTabControl.TabPages.Contains(HUDInstall) ? CurrentIndex : CurrentIndex > 3 ? CurrentIndex + 1 : CurrentIndex;
+        }
+
+        /// <summary>
         /// Changes the state of the status bar depending of currently selected tab.
         /// </summary>
         private void UpdateStatusBar()
         {
-            switch (MainTabControl.SelectedIndex)
+            switch (EvaluateRealTabPageIndex(MainTabControl.SelectedIndex))
             {
                 case 1: // "Config Editor" page selected...
                     {
