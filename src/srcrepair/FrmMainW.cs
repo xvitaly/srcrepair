@@ -1829,7 +1829,7 @@ namespace srcrepair.gui
         {
             if (MessageBox.Show(AppStrings.PS_ExecuteMSG, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                if ((PS_CleanBlobs.Checked) || (PS_CleanRegistry.Checked))
+                if (PS_CleanBlobs.Checked || PS_CleanRegistry.Checked)
                 {
                     if (ProcessManager.ProcessTerminate("Steam") != 0)
                     {
