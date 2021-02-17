@@ -108,6 +108,32 @@ namespace srcrepair.core
         public override string SteamProcName => Properties.Resources.SteamProcNameWin;
 
         /// <summary>
+        /// Removes Steam settings, stored in the Windows registry.
+        /// </summary>
+        /// <param name="LangCode">Steam language ID.</param>
+        public static void CleanRegistrySettings(int LangCode)
+        {
+            // Removing key HKEY_LOCAL_MACHINE\Software\Valve recursive if we have admin rights...
+            if (ProcessManager.IsCurrentUserAdmin())
+            {
+                Registry.LocalMachine.DeleteSubKeyTree(Path.Combine("Software", "Valve"), false);
+            }
+
+            // Removing key HKEY_CURRENT_USER\Software\Valve recursive...
+            Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("Software", "Valve"), false);
+
+            // Creating a new registry key HKEY_CURRENT_USER\Software\Valve\Steam...
+            using (RegistryKey RegLangKey = Registry.CurrentUser.CreateSubKey(Path.Combine("Software", "Valve", "Steam")))
+            {
+                // Saving Steam language name...
+                if (RegLangKey != null)
+                {
+                    RegLangKey.SetValue("language", SteamManager.GetLanguageFromCode(LangCode));
+                }
+            }
+        }
+
+        /// <summary>
         /// Return platform-dependent location of the Hosts file.
         /// </summary>
         public override string HostsFileLocation
