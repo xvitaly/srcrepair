@@ -1853,7 +1853,7 @@ namespace srcrepair.gui
                     {
                         try
                         {
-                            App.SteamClient.CleanRegistryNow(PS_SteamLang.SelectedIndex != -1 ? PS_SteamLang.SelectedIndex : 0);
+                            App.SteamClient.CleanRegistryNow(PS_SteamLang.SelectedIndex);
                         }
                         catch (Exception Ex)
                         {
