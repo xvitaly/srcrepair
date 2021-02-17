@@ -88,15 +88,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 0.
-        /// </summary>
-        internal static string AppDefaultSteamLangID {
-            get {
-                return ResourceManager.GetString("AppDefaultSteamLangID", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Failed to get data from the game database. Please try again later or select another game!.
         /// </summary>
         internal static string AppFailedToGetData {

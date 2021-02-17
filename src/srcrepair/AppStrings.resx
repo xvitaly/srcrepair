@@ -126,9 +126,6 @@
   <data name="AppCVListURL" xml:space="preserve">
     <value>https://developer.valvesoftware.com/wiki/Console_Command_List</value>
   </data>
-  <data name="AppDefaultSteamLangID" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="AppFailedToGetData" xml:space="preserve">
     <value>Failed to get data from the game database. Please try again later or select another game!</value>
   </data>

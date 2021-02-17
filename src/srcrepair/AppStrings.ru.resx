@@ -126,9 +126,6 @@
   <data name="AppCVListURL" xml:space="preserve">
     <value>https://www.easycoding.org/projects/srcrepair/cvarlist</value>
   </data>
-  <data name="AppDefaultSteamLangID" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="AppFailedToGetData" xml:space="preserve">
     <value>Произошла ошибка при получении данных из базы поддерживаемых игр. Попробуйте ещё раз, либо выберите другую игру!</value>
   </data>
