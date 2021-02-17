@@ -510,9 +510,6 @@
   <data name="PS_LoadErr" xml:space="preserve">
     <value>Файлы для удаления не найдены! Очистка не требуется.</value>
   </data>
-  <data name="PS_NoLangSelected" xml:space="preserve">
-    <value>Вы неправильно выбрали язык Steam из выпадающего списка, поэтому будет использоваться английский!</value>
-  </data>
   <data name="PS_ProcessDetected" xml:space="preserve">
     <value>Процесс Steam, обнаруженный в памяти был успешно завершён!</value>
   </data>

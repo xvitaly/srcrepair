@@ -1249,15 +1249,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You have chosen the wrong language Steam from the dropdown list, so we will use English!.
-        /// </summary>
-        internal static string PS_NoLangSelected {
-            get {
-                return ResourceManager.GetString("PS_NoLangSelected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Steam process has been successfully terminated!.
         /// </summary>
         internal static string PS_ProcessDetected {
