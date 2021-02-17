@@ -89,6 +89,26 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Gets Steam language from the specified internal ID.
+        /// </summary>
+        /// <param name="LangCode">Steam language ID.</param>
+        /// <returns>Steam language name.</returns>
+        public static string GetLanguageFromCode(int LangCode)
+        {
+            string Result;
+            switch (LangCode)
+            {
+                case 1:
+                    Result = "russian";
+                    break;
+                default:
+                    Result = "english";
+                    break;
+            }
+            return Result;
+        }
+
+        /// <summary>
         /// Gets full path to the main Steam config.vdf configuration file.
         /// </summary>
         /// <returns>Full path to config.vdf file.</returns>
@@ -160,28 +180,13 @@ namespace srcrepair.core
             // Removing key HKEY_CURRENT_USER\Software\Valve recursive...
             Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("Software", "Valve"), false);
 
-            // Generating Steam language name...
-            string XLang;
-            switch (LangCode)
-            {
-                case 0:
-                    XLang = "english";
-                    break;
-                case 1:
-                    XLang = "russian";
-                    break;
-                default:
-                    XLang = "english";
-                    break;
-            }
-
             // Creating a new registry key HKEY_CURRENT_USER\Software\Valve\Steam...
             using (RegistryKey RegLangKey = Registry.CurrentUser.CreateSubKey(Path.Combine("Software", "Valve", "Steam")))
             {
                 // Saving Steam language name...
                 if (RegLangKey != null)
                 {
-                    RegLangKey.SetValue("language", XLang);
+                    RegLangKey.SetValue("language", GetLanguageFromCode(LangCode));
                 }
             }
         }
