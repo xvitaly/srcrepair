@@ -95,17 +95,29 @@ namespace srcrepair.core
         /// <returns>Steam language name.</returns>
         public static string GetLanguageFromCode(int LangCode)
         {
-            string Result;
             switch (LangCode)
             {
                 case 1:
-                    Result = "russian";
-                    break;
+                    return "russian";
                 default:
-                    Result = "english";
-                    break;
+                    return "english";
             }
-            return Result;
+        }
+
+        /// <summary>
+        /// Gets Steam language internal ID from the specified public name.
+        /// </summary>
+        /// <param name="LangString">Steam language string.</param>
+        /// <returns>Steam language internal ID.</returns>
+        public static int GetCodeFromLanguage(string LangString)
+        {
+            switch (LangString)
+            {
+                case "russian":
+                    return 1;
+                default:
+                    return 0;
+            }
         }
 
         /// <summary>
