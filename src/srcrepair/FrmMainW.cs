@@ -1853,15 +1853,7 @@ namespace srcrepair.gui
                     {
                         try
                         {
-                            if (PS_SteamLang.SelectedIndex != -1)
-                            {
-                                App.SteamClient.CleanRegistryNow(PS_SteamLang.SelectedIndex);
-                            }
-                            else
-                            {
-                                MessageBox.Show(AppStrings.PS_NoLangSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                App.SteamClient.CleanRegistryNow(0);
-                            }
+                            App.SteamClient.CleanRegistryNow(PS_SteamLang.SelectedIndex != -1 ? PS_SteamLang.SelectedIndex : 0);
                         }
                         catch (Exception Ex)
                         {
