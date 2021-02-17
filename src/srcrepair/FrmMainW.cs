@@ -1808,18 +1808,7 @@ namespace srcrepair.gui
             // Getting current language name from Registry...
             try
             {
-                switch (App.Platform.SteamLanguage)
-                {
-                    case "russian":
-                        PS_SteamLang.SelectedIndex = 1;
-                        break;
-                    case "english":
-                        PS_SteamLang.SelectedIndex = 0;
-                        break;
-                    default:
-                        PS_SteamLang.SelectedIndex = Convert.ToInt32(AppStrings.AppDefaultSteamLangID);
-                        break;
-                }
+                PS_SteamLang.SelectedIndex = SteamManager.GetCodeFromLanguage(App.Platform.SteamLanguage);
             }
             catch (Exception Ex)
             {
