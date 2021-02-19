@@ -591,38 +591,11 @@
   <data name="UPD_AppUpdateAvail" xml:space="preserve">
     <value>Доступно обновление программы. Новая версия: {0}.</value>
   </data>
-  <data name="UPD_DbCheckFailure" xml:space="preserve">
-    <value>Произошла ошибка во время проверки обновлений базы игр.</value>
-  </data>
-  <data name="UPD_DbNoUpdates" xml:space="preserve">
-    <value>Нет новых обновлений базы игр. Используется свежайшая версия.</value>
-  </data>
-  <data name="UPD_DbUpdateAvail" xml:space="preserve">
-    <value>Доступно обновление базы игр. Новая версия: {0} ({1}).</value>
-  </data>
   <data name="UPD_HashFailure" xml:space="preserve">
     <value>Контрольная сумма загруженного файла отличается от эталона. Обновление не было установлено!</value>
   </data>
-  <data name="UPD_HUDCheckFailure" xml:space="preserve">
-    <value>Произошла ошибка во время проверки обновлений базы HUD.</value>
-  </data>
-  <data name="UPD_HUDNoUpdates" xml:space="preserve">
-    <value>Нет новых обновлений базы HUD. Используется свежайшая версия.</value>
-  </data>
-  <data name="UPD_HUDUpdateAvail" xml:space="preserve">
-    <value>Доступно обновление базы HUD. Новая версия: {0} ({1}).</value>
-  </data>
-  <data name="UPD_LatestDBInstalled" xml:space="preserve">
-    <value>Установлена последняя версия базы данных. Обновление не требуется!</value>
-  </data>
   <data name="UPD_LatestInstalled" xml:space="preserve">
     <value>Обновление не требуется, т.к. у вас установлена последняя версия программы.</value>
-  </data>
-  <data name="UPD_NoWritePermissions" xml:space="preserve">
-    <value>Нет прав на запись в каталог программы. Попробуйте исправить это запуском программы с правами локального администратора.</value>
-  </data>
-  <data name="UPD_UpdateDBSuccessful" xml:space="preserve">
-    <value>Обновление базы данных было успешно установлено!</value>
   </data>
   <data name="UPD_UpdateFailure" xml:space="preserve">
     <value>Произошла ошибка при попытке запуска программы установки новой версии. Программа не была обновлена. Запустите обновление повторно позднее!</value>

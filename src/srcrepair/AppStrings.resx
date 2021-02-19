@@ -594,38 +594,11 @@
   <data name="UPD_AppUpdateAvail" xml:space="preserve">
     <value>Application update available. New version: {0}.</value>
   </data>
-  <data name="UPD_DbCheckFailure" xml:space="preserve">
-    <value>Game database update check failed. Please try again later.</value>
-  </data>
-  <data name="UPD_DbNoUpdates" xml:space="preserve">
-    <value>No new updates detected. SRC Repair is using latest version of game database.</value>
-  </data>
-  <data name="UPD_DbUpdateAvail" xml:space="preserve">
-    <value>Game database update available. New version: {0} ({1}).</value>
-  </data>
   <data name="UPD_HashFailure" xml:space="preserve">
     <value>Downloaded file has incorrect hash. Maybe it was corrupted during transfer. Please try again later!</value>
   </data>
-  <data name="UPD_HUDCheckFailure" xml:space="preserve">
-    <value>HUD database update check failed. Please try again later.</value>
-  </data>
-  <data name="UPD_HUDNoUpdates" xml:space="preserve">
-    <value>No new updates were found. SRC Repair is using the latest version of HUD database.</value>
-  </data>
-  <data name="UPD_HUDUpdateAvail" xml:space="preserve">
-    <value>HUD database update available. New version: {0} ({1}).</value>
-  </data>
-  <data name="UPD_LatestDBInstalled" xml:space="preserve">
-    <value>Update is not required because you already have the latest version.</value>
-  </data>
   <data name="UPD_LatestInstalled" xml:space="preserve">
     <value>Update is not required because you have the latest version of the program.</value>
-  </data>
-  <data name="UPD_NoWritePermissions" xml:space="preserve">
-    <value>Insufficient rights to install the update. Please start updater with admin rights!</value>
-  </data>
-  <data name="UPD_UpdateDBSuccessful" xml:space="preserve">
-    <value>The database has been updated successfully!</value>
   </data>
   <data name="UPD_UpdateFailure" xml:space="preserve">
     <value>An error occurred while trying to run the installer. The program has not been updated. Run the update again later!</value>

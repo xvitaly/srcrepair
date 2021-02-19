@@ -1492,33 +1492,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Game database update check failed. Please try again later..
-        /// </summary>
-        internal static string UPD_DbCheckFailure {
-            get {
-                return ResourceManager.GetString("UPD_DbCheckFailure", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No new updates detected. SRC Repair is using latest version of game database..
-        /// </summary>
-        internal static string UPD_DbNoUpdates {
-            get {
-                return ResourceManager.GetString("UPD_DbNoUpdates", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Game database update available. New version: {0} ({1})..
-        /// </summary>
-        internal static string UPD_DbUpdateAvail {
-            get {
-                return ResourceManager.GetString("UPD_DbUpdateAvail", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Downloaded file has incorrect hash. Maybe it was corrupted during transfer. Please try again later!.
         /// </summary>
         internal static string UPD_HashFailure {
@@ -1528,65 +1501,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to HUD database update check failed. Please try again later..
-        /// </summary>
-        internal static string UPD_HUDCheckFailure {
-            get {
-                return ResourceManager.GetString("UPD_HUDCheckFailure", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No new updates were found. SRC Repair is using the latest version of HUD database..
-        /// </summary>
-        internal static string UPD_HUDNoUpdates {
-            get {
-                return ResourceManager.GetString("UPD_HUDNoUpdates", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to HUD database update available. New version: {0} ({1})..
-        /// </summary>
-        internal static string UPD_HUDUpdateAvail {
-            get {
-                return ResourceManager.GetString("UPD_HUDUpdateAvail", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Update is not required because you already have the latest version..
-        /// </summary>
-        internal static string UPD_LatestDBInstalled {
-            get {
-                return ResourceManager.GetString("UPD_LatestDBInstalled", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Update is not required because you have the latest version of the program..
         /// </summary>
         internal static string UPD_LatestInstalled {
             get {
                 return ResourceManager.GetString("UPD_LatestInstalled", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Insufficient rights to install the update. Please start updater with admin rights!.
-        /// </summary>
-        internal static string UPD_NoWritePermissions {
-            get {
-                return ResourceManager.GetString("UPD_NoWritePermissions", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The database has been updated successfully!.
-        /// </summary>
-        internal static string UPD_UpdateDBSuccessful {
-            get {
-                return ResourceManager.GetString("UPD_UpdateDBSuccessful", resourceCulture);
             }
         }
         
