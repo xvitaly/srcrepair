@@ -88,93 +88,15 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Sets time of last HUD database update check.
-        /// </summary>
-        private void UpdateTimeSetHUD()
-        {
-            Properties.Settings.Default.LastHUDTime = DateTime.Now;
-        }
-
-        /// <summary>
         /// Starts update checking sequence in a separate thread.
         /// </summary>
         private void CheckForUpdates()
         {
             // Changing icons...
             UpdAppImg.Image = Properties.Resources.upd_chk;
-            UpdDBImg.Image = Properties.Resources.upd_chk;
-            UpdHUDDbImg.Image = Properties.Resources.upd_chk;
 
             // Starting updates check in a separate thread...
             if (!WrkChkApp.IsBusy) { WrkChkApp.RunWorkerAsync(new List<String> { FullAppPath, UserAgent }); }
-        }
-
-        /// <summary>
-        /// Installs database update.
-        /// </summary>
-        /// <param name="ResFileName">Full path to local file, to be updated.</param>
-        /// <param name="UpdateURL">Full download URL.</param>
-        /// <param name="UpdateHash">Download hash.</param>
-        /// <returns>Result of operation.</returns>
-        private bool InstallDatabaseUpdate(string ResFileName, string UpdateURL, string UpdateHash)
-        {
-            // Setting default value for result...
-            bool Result = false;
-
-            // Checking if app's installation directory is writable...
-            if (FileManager.IsDirectoryWritable(FullAppPath))
-            {
-                // Generating full paths to files...
-                string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(FullAppPath, ResFileName));
-                string UpdateTempFile = Path.GetTempFileName();
-
-                // Downloading update from server...
-                GuiHelpers.FormShowDownloader(UpdateURL, UpdateTempFile);
-
-                try
-                {
-                    // Checking hashes...
-                    if (FileManager.CalculateFileSHA512(UpdateTempFile) == UpdateHash)
-                    {
-                        // Overwriting old file by downloaded one...
-                        File.Copy(UpdateTempFile, UpdateFileName, true);
-
-                        // Showing message about successful update...
-                        MessageBox.Show(AppStrings.UPD_UpdateDBSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        // Setting result...
-                        Result = true;
-                    }
-                    else
-                    {
-                        // Showing message about hash missmatch...
-                        MessageBox.Show(AppStrings.UPD_HashFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                catch (Exception Ex)
-                {
-                    // An error occured. Showing message and writing this issue to log...
-                    MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Logger.Error(Ex, DebugStrings.AppDbgExUpdXmlDbInst);
-                }
-
-                // Removing downloaded file if it still exists...
-                if (File.Exists(UpdateTempFile))
-                {
-                    File.Delete(UpdateTempFile);
-                }
-
-                // Checking for updates again...
-                CheckForUpdates();
-            }
-            else
-            {
-                // Showing message if we have no permissions to rewrite existing files...
-                MessageBox.Show(AppStrings.UPD_NoWritePermissions, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            // Returning result...
-            return Result;
         }
 
         /// <summary>
@@ -250,9 +172,6 @@ namespace srcrepair.gui
                 MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            // Checking for updates again...
-            CheckForUpdates();
-
             // Returning result...
             return Result;
         }
@@ -308,41 +227,12 @@ namespace srcrepair.gui
                         UpdAppStatus.Text = AppStrings.UPD_AppNoUpdates;
                         UpdateTimeSetApp();
                     }
-
-                    // Checking for game database update...
-                    if (UpMan.CheckGameDBUpdate())
-                    {
-                        UpdDBImg.Image = Properties.Resources.upd_av;
-                        UpdDBStatus.Text = String.Format(AppStrings.UPD_DbUpdateAvail, UpMan.GameUpdateVersion, UpMan.GameUpdateHash.Substring(0, 7));
-                    }
-                    else
-                    {
-                        UpdDBImg.Image = Properties.Resources.upd_nx;
-                        UpdDBStatus.Text = AppStrings.UPD_DbNoUpdates;
-                    }
-
-                    // Checking for HUD database update...
-                    if (UpMan.CheckHUDUpdate())
-                    {
-                        UpdHUDDbImg.Image = Properties.Resources.upd_av;
-                        UpdHUDStatus.Text = String.Format(AppStrings.UPD_HUDUpdateAvail, UpMan.HUDUpdateVersion, UpMan.HUDUpdateHash.Substring(0, 7));
-                    }
-                    else
-                    {
-                        UpdHUDDbImg.Image = Properties.Resources.upd_nx;
-                        UpdHUDStatus.Text = AppStrings.UPD_HUDNoUpdates;
-                        UpdateTimeSetHUD();
-                    }
                 }
                 else
                 {
                     // Changing controls texts...
                     UpdAppImg.Image = Properties.Resources.upd_err;
                     UpdAppStatus.Text = AppStrings.UPD_AppCheckFailure;
-                    UpdDBImg.Image = Properties.Resources.upd_err;
-                    UpdDBStatus.Text = AppStrings.UPD_DbCheckFailure;
-                    UpdHUDDbImg.Image = Properties.Resources.upd_err;
-                    UpdHUDStatus.Text = AppStrings.UPD_HUDCheckFailure;
 
                     // Writing issue to log...
                     Logger.Warn(e.Error);
@@ -399,54 +289,13 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "Install HUD database update" button click event handler.
+        /// "Close" button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void UpdHUDStatus_Click(object sender, EventArgs e)
+        private void UpdClose_Click(object sender, EventArgs e)
         {
-            if (!WrkChkApp.IsBusy)
-            {
-                if (UpMan.CheckHUDUpdate())
-                {
-                    if (InstallDatabaseUpdate(StringsManager.HudDatabaseName, UpMan.HUDUpdateURL, UpMan.HUDUpdateHash))
-                    {
-                        UpdateTimeSetHUD();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show(AppStrings.UPD_LatestDBInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            else
-            {
-                MessageBox.Show(AppStrings.DB_WrkInProgress, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        /// <summary>
-        /// "Install game database update" button click event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void UpdDBStatus_Click(object sender, EventArgs e)
-        {
-            if (!WrkChkApp.IsBusy)
-            {
-                if (UpMan.CheckGameDBUpdate())
-                {
-                    InstallDatabaseUpdate(StringsManager.GameDatabaseName, UpMan.GameUpdateURL, UpMan.GameUpdateHash);
-                }
-                else
-                {
-                    MessageBox.Show(AppStrings.UPD_LatestDBInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            else
-            {
-                MessageBox.Show(AppStrings.DB_WrkInProgress, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            Close();
         }
     }
 }
