@@ -96,16 +96,15 @@ namespace srcrepair.gui
             UpdAppImg.Image = Properties.Resources.upd_chk;
 
             // Starting updates check in a separate thread...
-            if (!WrkChkApp.IsBusy) { WrkChkApp.RunWorkerAsync(new List<String> { FullAppPath, UserAgent }); }
+            if (!WrkChkApp.IsBusy) { WrkChkApp.RunWorkerAsync(UserAgent); }
         }
 
         /// <summary>
         /// Installs standalone update.
         /// </summary>
         /// <param name="UpdateURL">Full download URL.</param>
-        /// <param name="UpdateHash">Download hash.</param>
         /// <returns>Result of operation.</returns>
-        private bool InstallBinaryUpdate(string UpdateURL, string UpdateHash)
+        private bool InstallBinaryUpdate(string UpdateURL)
         {
             // Setting default value for result...
             bool Result = false;
@@ -120,7 +119,7 @@ namespace srcrepair.gui
             if (File.Exists(UpdateFileName))
             {
                 // Checking hashes...
-                if (FileManager.CalculateFileSHA512(UpdateFileName) == UpdateHash)
+                if (UpMan.CheckAppHash(FileManager.CalculateFileSHA512(UpdateFileName)))
                 {
                     // Setting last update check date...
                     UpdateTimeSetApp();
@@ -197,11 +196,8 @@ namespace srcrepair.gui
         /// <param name="e">Additional arguments.</param>
         private void WrkChkApp_DoWork(object sender, DoWorkEventArgs e)
         {
-            // Parsing arguments list...
-            List<String> Arguments = e.Argument as List<String>;
-
             // Checking for updates...
-            UpMan = new UpdateManager(Arguments[0], Arguments[1]);
+            UpMan = new UpdateManager((string)e.Argument);
         }
 
         /// <summary>
@@ -267,7 +263,7 @@ namespace srcrepair.gui
                 {
                     if (Platform.OS == CurrentPlatform.OSType.Windows)
                     {
-                        if (InstallBinaryUpdate(UpMan.AppUpdateURL, UpMan.AppUpdateHash))
+                        if (InstallBinaryUpdate(UpMan.AppUpdateURL))
                         {
                             Environment.Exit(9);
                         }
