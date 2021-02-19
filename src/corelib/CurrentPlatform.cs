@@ -120,12 +120,23 @@ namespace srcrepair.core
         {
             if (File.Exists(FileName))
             {
-                if (Elevated) { StartElevatedProcess(FileName); } else { Process.Start(FileName); }
+                if (Elevated) { StartElevatedProcess(FileName); } else { StartRegularProcess(FileName); }
             }
             else
             {
                 throw new FileNotFoundException(DebugStrings.AppDbgExCoreHelperNxExists, FileName);
             }
+        }
+
+        /// <summary>
+        /// Start the required application as the current user.
+        /// </summary>
+        /// <param name="FileName">Full path to the executable.</param>
+        /// <returns>PID of the newly created process.</returns>
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
+        public virtual int StartRegularProcess(string FileName)
+        {
+            return Process.Start(FileName).Id;
         }
 
         /// <summary>
