@@ -294,7 +294,7 @@ namespace srcrepair.gui
         /// <returns>Check result.</returns>
         private bool AutoUpdateCheck()
         {
-            UpdateManager UpMan = new UpdateManager(App.FullAppPath, App.UserAgent);
+            UpdateManager UpMan = new UpdateManager(App.UserAgent);
             return UpMan.CheckAppUpdate();
         }
 
