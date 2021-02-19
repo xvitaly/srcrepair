@@ -134,7 +134,7 @@ namespace srcrepair.gui
                         if (FileManager.IsDirectoryWritable(FullAppPath))
                         {
                             // Running installer with current access rights...
-                            Process.Start(UpdateFileName);
+                            Platform.StartRegularProcess(UpdateFileName);
                         }
                         else
                         {
