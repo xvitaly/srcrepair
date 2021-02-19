@@ -47,86 +47,6 @@ namespace srcrepair.core
         public string AppUpdateHash { get; private set; }
 
         /// <summary>
-        /// Gets or sets latest available version of game database.
-        /// </summary>
-        public int GameUpdateVersion { get; private set; }
-
-        /// <summary>
-        /// Gets or sets download URL of game database update.
-        /// </summary>
-        public string GameUpdateURL { get; private set; }
-
-        /// <summary>
-        /// Gets or sets hash of game database update file.
-        /// </summary>
-        public string GameUpdateHash { get; private set; }
-
-        /// <summary>
-        /// Gets or sets latest available version of HUD database.
-        /// </summary>
-        public int HUDUpdateVersion { get; private set; }
-
-        /// <summary>
-        /// Gets or sets download URL of HUD database update.
-        /// </summary>
-        public string HUDUpdateURL { get; private set; }
-
-        /// <summary>
-        /// Gets or sets hash of HUD database update file.
-        /// </summary>
-        public string HUDUpdateHash { get; private set; }
-
-        /// <summary>
-        /// Gets or sets latest available version of configs database.
-        /// </summary>
-        public int CfgUpdateVersion { get; private set; }
-
-        /// <summary>
-        /// Gets or sets download URL of configs database update.
-        /// </summary>
-        public string CfgUpdateURL { get; private set; }
-
-        /// <summary>
-        /// Gets or sets hash of configs database update file.
-        /// </summary>
-        public string CfgUpdateHash { get; private set; }
-
-        /// <summary>
-        /// Gets or sets latest available version of cleanup targets database.
-        /// </summary>
-        public int ClnUpdateVersion { get; private set; }
-
-        /// <summary>
-        /// Gets or sets download URL of cleanup targets database update.
-        /// </summary>
-        public string ClnUpdateURL { get; private set; }
-
-        /// <summary>
-        /// Gets or sets hash of cleanup targets database update file.
-        /// </summary>
-        public string ClnUpdateHash { get; private set; }
-
-        /// <summary>
-        /// Gets or sets hash of the plugins database update file.
-        /// </summary>
-        public string PlgUpdateHash { get; private set; }
-
-        /// <summary>
-        /// Gets or sets latest available version of the plugins database.
-        /// </summary>
-        public int PlgUpdateVersion { get; private set; }
-
-        /// <summary>
-        /// Gets or sets download URL of the plugins database update.
-        /// </summary>
-        public string PlgUpdateURL { get; private set; }
-
-        /// <summary>
-        /// Stores full path to installed application.
-        /// </summary>
-        private readonly string FullAppPath;
-
-        /// <summary>
         /// Stores HTTP UserAgent header, used during updates check.
         /// </summary>
         private readonly string UserAgent;
@@ -165,36 +85,6 @@ namespace srcrepair.core
             AppUpdateVersion = new Version(AppNode.SelectSingleNode("Version").InnerText);
             AppUpdateURL = AppNode.SelectSingleNode("URL").InnerText;
             AppUpdateHash = AppNode.SelectSingleNode("Hash2").InnerText;
-
-            // Extracting information about game database update...
-            XmlNode GameDbNode = XMLD.SelectSingleNode("Updates/GameDB");
-            GameUpdateVersion = Convert.ToInt32(GameDbNode.SelectSingleNode("Version").InnerText);
-            GameUpdateURL = GameDbNode.SelectSingleNode("URL").InnerText;
-            GameUpdateHash = GameDbNode.SelectSingleNode("Hash2").InnerText;
-
-            // Extracting information about hud database update...
-            XmlNode HudDbNode = XMLD.SelectSingleNode("Updates/HUDDB");
-            HUDUpdateVersion = Convert.ToInt32(HudDbNode.SelectSingleNode("Version").InnerText);
-            HUDUpdateURL = HudDbNode.SelectSingleNode("URL").InnerText;
-            HUDUpdateHash = HudDbNode.SelectSingleNode("Hash2").InnerText;
-
-            // Extracting information about config database update...
-            XmlNode CfgDbNode = XMLD.SelectSingleNode("Updates/CfgDB");
-            CfgUpdateVersion = Convert.ToInt32(CfgDbNode.SelectSingleNode("Version").InnerText);
-            CfgUpdateURL = CfgDbNode.SelectSingleNode("URL").InnerText;
-            CfgUpdateHash = CfgDbNode.SelectSingleNode("Hash2").InnerText;
-
-            // Extracting information about cleanup targets database update...
-            XmlNode ClnDbNode = XMLD.SelectSingleNode("Updates/ClnDB");
-            ClnUpdateVersion = Convert.ToInt32(ClnDbNode.SelectSingleNode("Version").InnerText);
-            ClnUpdateURL = ClnDbNode.SelectSingleNode("URL").InnerText;
-            ClnUpdateHash = ClnDbNode.SelectSingleNode("Hash2").InnerText;
-
-            // Extracting information about plugins database update...
-            XmlNode PlgDbNode = XMLD.SelectSingleNode("Updates/PlgDB");
-            PlgUpdateVersion = Convert.ToInt32(PlgDbNode.SelectSingleNode("Version").InnerText);
-            PlgUpdateURL = PlgDbNode.SelectSingleNode("URL").InnerText;
-            PlgUpdateHash = PlgDbNode.SelectSingleNode("Hash2").InnerText;
         }
 
         /// <summary>
@@ -217,51 +107,6 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Checks if game database needs to be updated.
-        /// </summary>
-        /// <returns>Returns True if game database update available.</returns>
-        public bool CheckGameDBUpdate()
-        {
-            return FileManager.CalculateFileSHA512(Path.Combine(FullAppPath, StringsManager.GameDatabaseName)) != GameUpdateHash;
-        }
-
-        /// <summary>
-        /// Checks if HUD database needs to be updated.
-        /// </summary>
-        /// <returns>Returns True if HUD database update available.</returns>
-        public bool CheckHUDUpdate()
-        {
-            return FileManager.CalculateFileSHA512(Path.Combine(FullAppPath, StringsManager.HudDatabaseName)) != HUDUpdateHash;
-        }
-
-        /// <summary>
-        /// Checks if configs database needs to be updated.
-        /// </summary>
-        /// <returns>Returns True if configs database update available.</returns>
-        public bool CheckCfgUpdate()
-        {
-            return FileManager.CalculateFileSHA512(Path.Combine(FullAppPath, StringsManager.ConfigDatabaseName)) != CfgUpdateHash;
-        }
-
-        /// <summary>
-        /// Checks if cleanup targets database needs to be updated.
-        /// </summary>
-        /// <returns>Returns True if cleanup targets database update available.</returns>
-        public bool CheckClnUpdate()
-        {
-            return FileManager.CalculateFileSHA512(Path.Combine(FullAppPath, StringsManager.CleanupDatabaseName)) != ClnUpdateHash;
-        }
-
-        /// <summary>
-        /// Checks if the plugins database needs to be updated.
-        /// </summary>
-        /// <returns>Returns True if the plugins database update available.</returns>
-        public bool CheckPlgUpdate()
-        {
-            return FileManager.CalculateFileSHA512(Path.Combine(FullAppPath, StringsManager.PluginsDatabaseName)) != PlgUpdateHash;
-        }
-
-        /// <summary>
         /// Gets local application update file name.
         /// </summary>
         /// <param name="Url">Download URL.</param>
@@ -274,12 +119,10 @@ namespace srcrepair.core
         /// <summary>
         /// UpdateManager class constructor.
         /// </summary>
-        /// <param name="AppPath">Application installation directory.</param>
         /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
-        public UpdateManager(string AppPath, string UA)
+        public UpdateManager(string UA)
         {
             // Saving paths...
-            FullAppPath = AppPath;
             UserAgent = UA;
 
             // Downloading and parsing XML...
