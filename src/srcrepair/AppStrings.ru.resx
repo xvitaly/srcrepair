@@ -417,14 +417,8 @@
   <data name="HD_BtnUpdateText" xml:space="preserve">
     <value>Обновить выбранный HUD</value>
   </data>
-  <data name="HD_DbOutdated" xml:space="preserve">
-    <value>Проверка обновлений базы HUD не проводилась уже больше недели. Выполните её прямо сейчас из меню Справка.</value>
-  </data>
   <data name="HD_DownloadError" xml:space="preserve">
     <value>Не удалось загрузить архив с файлами HUD. Попробуйте повторить попытку позднее.</value>
-  </data>
-  <data name="HD_DynBarText" xml:space="preserve">
-    <value>База HUD {0}. Обновлена: {1}.</value>
   </data>
   <data name="HD_HashError" xml:space="preserve">
     <value>Произошла ошибка при проверке контрольной суммы загруженного архива с HUD. Возможно, он был повреждён. Попробуйте ещё раз позднее!</value>
@@ -443,12 +437,6 @@
   </data>
   <data name="HD_Outdated" xml:space="preserve">
     <value>Установка устаревших HUD не допускается. Обновите базу поддерживаемых HUD из меню "Справка" - "Проверить наличие обновлений" или выберите другой HUD.</value>
-  </data>
-  <data name="HD_StatusOutdated" xml:space="preserve">
-    <value>устарела</value>
-  </data>
-  <data name="HD_StatusUpdated" xml:space="preserve">
-    <value>актуальна</value>
   </data>
   <data name="KB_StartError" xml:space="preserve">
     <value>Не удалось запустить внешний модуль. Попробуйте ещё раз позднее!</value>

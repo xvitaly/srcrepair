@@ -970,29 +970,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to HUD database outdated. Please update it from menu Help..
-        /// </summary>
-        internal static string HD_DbOutdated {
-            get {
-                return ResourceManager.GetString("HD_DbOutdated", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Cannot find downloaded HUD archive. Please try again later..
         /// </summary>
         internal static string HD_DownloadError {
             get {
                 return ResourceManager.GetString("HD_DownloadError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to HUD database {0}. Last update: {1}..
-        /// </summary>
-        internal static string HD_DynBarText {
-            get {
-                return ResourceManager.GetString("HD_DynBarText", resourceCulture);
             }
         }
         
@@ -1047,24 +1029,6 @@ namespace srcrepair.gui {
         internal static string HD_Outdated {
             get {
                 return ResourceManager.GetString("HD_Outdated", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to outdated.
-        /// </summary>
-        internal static string HD_StatusOutdated {
-            get {
-                return ResourceManager.GetString("HD_StatusOutdated", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to actual.
-        /// </summary>
-        internal static string HD_StatusUpdated {
-            get {
-                return ResourceManager.GetString("HD_StatusUpdated", resourceCulture);
             }
         }
         
