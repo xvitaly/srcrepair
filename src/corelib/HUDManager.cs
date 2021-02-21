@@ -96,16 +96,6 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Checks if HUD database need to be updated.
-        /// </summary>
-        /// <param name="LastHUDUpdate">Date of the last HUD database update.</param>
-        /// <returns>Returns True if database need to be updated.</returns>
-        public static bool CheckHUDDatabase(DateTime LastHUDUpdate)
-        {
-            return (DateTime.Now - LastHUDUpdate).Days >= 7;
-        }
-
-        /// <summary>
         /// ConfigManager class constructor.
         /// </summary>
         /// <param name="GameID">Game ID.</param>
