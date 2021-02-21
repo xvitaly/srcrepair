@@ -953,36 +953,17 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Evaluates and returns the real TabPage index (HUD Manager page will not be shown
-        /// if the selected game does not support custom HUDs, so we must exclude it).
-        /// </summary>
-        /// <param name="CurrentIndex">Current TabPage index.</param>
-        /// <returns>Re-evaluated TabPage index.</returns>
-        private int EvaluateRealTabPageIndex(int CurrentIndex)
-        {
-            return MainTabControl.TabPages.Contains(HUDInstall) ? CurrentIndex : CurrentIndex > 3 ? CurrentIndex + 1 : CurrentIndex;
-        }
-
-        /// <summary>
         /// Changes the state of the status bar depending of currently selected tab.
         /// </summary>
         private void UpdateStatusBar()
         {
-            switch (EvaluateRealTabPageIndex(MainTabControl.SelectedIndex))
+            switch (MainTabControl.SelectedIndex)
             {
                 case 1: // "Config Editor" page selected...
                     {
                         MNUShowEdHint.Enabled = true;
                         SB_Status.ForeColor = Color.Black;
                         SB_Status.Text = String.Format(AppStrings.StatusOpenedFile, String.IsNullOrEmpty(CFGFileName) ? AppStrings.UnnamedFileName : Path.GetFileName(CFGFileName));
-                    }
-                    break;
-                case 4: // "HUD manager" page selected...
-                    {
-                        bool HUDDbStatus = HUDManager.CheckHUDDatabase(Properties.Settings.Default.LastHUDTime);
-                        MNUShowEdHint.Enabled = false;
-                        SB_Status.ForeColor = HUDDbStatus ? Color.Red : Color.Black;
-                        SB_Status.Text = String.Format(AppStrings.HD_DynBarText, HUDDbStatus ? AppStrings.HD_StatusOutdated : AppStrings.HD_StatusUpdated, Properties.Settings.Default.LastHUDTime);
                     }
                     break;
                 default: // Any other page selected...
@@ -3299,42 +3280,35 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void HD_Install_Click(object sender, EventArgs e)
         {
-            if (!HUDManager.CheckHUDDatabase(Properties.Settings.Default.LastHUDTime))
+            if (App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].IsUpdated)
             {
-                if (App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].IsUpdated)
+                if (MessageBox.Show(String.Format("{0}?", ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
-                    if (MessageBox.Show(String.Format("{0}?", ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                    // Downloading HUD archive...
+                    bool DownloadResult = DownloadHUD();
+
+                    // If cannot download from the main server, let's try mirrors...
+                    if (!DownloadResult)
                     {
-                        // Downloading HUD archive...
-                        bool DownloadResult = DownloadHUD();
-
-                        // If cannot download from the main server, let's try mirrors...
-                        if (!DownloadResult)
-                        {
-                            Logger.Warn(DebugStrings.AppDbgHUDDnlMain);
-                            DownloadResult = DownloadHUD(true);
-                        }
-
-                        // Installing downloaded HUD...
-                        if (DownloadResult)
-                        {
-                            InstallHUD();
-                        }
-                        else
-                        {
-                            Logger.Error(DebugStrings.AppDbgHUDDnlMirror);
-                            MessageBox.Show(AppStrings.HD_DownloadError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
+                        Logger.Warn(DebugStrings.AppDbgHUDDnlMain);
+                        DownloadResult = DownloadHUD(true);
                     }
-                }
-                else
-                {
-                    MessageBox.Show(AppStrings.HD_Outdated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    // Installing downloaded HUD...
+                    if (DownloadResult)
+                    {
+                        InstallHUD();
+                    }
+                    else
+                    {
+                        Logger.Error(DebugStrings.AppDbgHUDDnlMirror);
+                        MessageBox.Show(AppStrings.HD_DownloadError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
             }
             else
             {
-                MessageBox.Show(AppStrings.HD_DbOutdated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.HD_Outdated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
