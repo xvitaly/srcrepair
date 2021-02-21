@@ -41,9 +41,6 @@
     <Setting Name="HUDUseUpstream" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="LastHUDTime" Type="System.DateTime" Scope="User">
-      <Value Profile="(Default)">2021-01-15</Value>
-    </Setting>
     <Setting Name="HighlightOldBackUps" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>

@@ -178,18 +178,6 @@ namespace srcrepair.gui.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2021-01-15")]
-        public global::System.DateTime LastHUDTime {
-            get {
-                return ((global::System.DateTime)(this["LastHUDTime"]));
-            }
-            set {
-                this["LastHUDTime"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
         public bool HighlightOldBackUps {
             get {
