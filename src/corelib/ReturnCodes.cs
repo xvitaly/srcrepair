@@ -72,5 +72,15 @@ namespace srcrepair.core
         /// Core library version missmatch.
         /// </summary>
         public const int CoreLibVersionMissmatch = 8;
+
+        /// <summary>
+        /// Hosts file does not exists.
+        /// </summary>
+        public const int HostsFileDoesNotExists = 9;
+
+        /// <summary>
+        /// Application update pending.
+        /// </summary>
+        public const int AppUpdatePending = 10;
     }
 }
