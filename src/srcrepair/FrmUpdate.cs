@@ -265,7 +265,7 @@ namespace srcrepair.gui
                     {
                         if (InstallBinaryUpdate(UpMan.AppUpdateURL))
                         {
-                            Environment.Exit(9);
+                            Environment.Exit(ReturnCodes.AppUpdatePending);
                         }
                     }
                     else
