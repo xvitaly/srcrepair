@@ -1846,7 +1846,7 @@ namespace srcrepair.gui
                     MessageBox.Show(AppStrings.PS_SeqCompleted, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (File.Exists(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName)))
                     {
-                        Process.Start(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName));
+                        App.Platform.StartRegularProcess(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName));
                     }
                 }
             }
@@ -2421,7 +2421,7 @@ namespace srcrepair.gui
             {
                 try
                 {
-                    Process.Start(String.Format("steam://validate/{0}", App.SourceGames[AppSelector.Text].GameInternalID));
+                    App.Platform.StartRegularProcess(String.Format("steam://validate/{0}", App.SourceGames[AppSelector.Text].GameInternalID));
                 }
                 catch (Exception Ex)
                 {
