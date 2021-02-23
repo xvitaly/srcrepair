@@ -1,0 +1,17 @@
+name: Windows CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: Build project using .NET Framework
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Configure MSBuild service
+      uses: microsoft/setup-msbuild@v1.0.2
+    - name: Restore nuget dependencies
+      run: nuget restore srcrepair.sln
+    - name: Build project
+      run: msbuild /p:Configuration=Release srcrepair.sln
