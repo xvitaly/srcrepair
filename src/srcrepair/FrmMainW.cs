@@ -2922,7 +2922,6 @@ namespace srcrepair.gui
         private void MNUUpdateCheck_Click(object sender, EventArgs e)
         {
             GuiHelpers.FormShowUpdater(App.UserAgent, App.FullAppPath, App.AppUpdateDir);
-            FindGames();
         }
 
         /// <summary>
