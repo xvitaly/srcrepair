@@ -22,6 +22,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Security.Permissions;
+using System.Windows.Forms;
 
 namespace srcrepair.core
 {
@@ -87,6 +88,24 @@ namespace srcrepair.core
         protected static string AddQuotesToPath(string Source)
         {
             return String.Format(Properties.Resources.AppOpenHandlerEscapeTemplate, Source);
+        }
+
+        /// <summary>
+        /// Immediately shut down application and return exit code.
+        /// </summary>
+        /// <param name="ReturnCode">Exit code.</param>
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
+        public virtual void Exit(int ReturnCode)
+        {
+            if (Application.MessageLoop)
+            {
+                Environment.ExitCode = ReturnCode;
+                Application.Exit();
+            }
+            else
+            {
+                Environment.Exit(ReturnCode);
+            }
         }
 
         /// <summary>
