@@ -23,7 +23,7 @@
 
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = srcrepair
-PROJECT_NUMBER         = 41.0.1
+PROJECT_NUMBER         = 42.0.0
 PROJECT_BRIEF          = "Free open source tool that can be used for tuning and cleaning up Steam and Source engine games"
 PROJECT_LOGO           = src/srcrepair/srcrepair.ico
 OUTPUT_DIRECTORY       = doxyout
