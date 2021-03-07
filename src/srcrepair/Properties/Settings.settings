@@ -12,7 +12,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="LastUpdateTime" Type="System.DateTime" Scope="User">
-      <Value Profile="(Default)">2021-01-15</Value>
+      <Value Profile="(Default)">2021-03-07</Value>
     </Setting>
     <Setting Name="RemoveEmptyDirs" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
