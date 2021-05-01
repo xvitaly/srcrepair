@@ -757,4 +757,15 @@
         <SVer>1</SVer>
         <Executable>hl2.exe</Executable>
     </Game>
+    <Game Name="Portal Reloaded">
+        <Enabled>1</Enabled>
+        <DirName>Portal Reloaded</DirName>
+        <SmallName>portalreloaded</SmallName>
+        <VFDir>portalreloaded</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>1255980</SID>
+        <SVer>2</SVer>
+        <Executable>portal2.exe</Executable>
+    </Game>
 </Games>

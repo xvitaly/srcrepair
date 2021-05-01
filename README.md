@@ -98,7 +98,8 @@ Supported mods and third-party Source engine games:
  * The Beginner's Guide;
  * Codename CURE;
  * INFRA;
- * Entropy: Zero.
+ * Entropy: Zero;
+ * Portal Reloaded.
 
 # 3rd party libraries
 
