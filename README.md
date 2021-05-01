@@ -26,82 +26,84 @@ sprays into the game with one click.
 
 **Dependencies on other OS**: [Mono 4.2.x](http://www.mono-project.com/download/) or above.
 
-Downloads
-=========
-Download application (always contains latest version):
+# Downloads
+
+Download application (always contains the latest version):
 
 [![Download SRC Repair](https://www.easycoding.org/wp-content/uploads/download-now.png)](https://www.easycoding.org/files/srcrepair_latest.exe)
 
 # Supported games
 
 Supported Valve games:
- * Team Fortress 2;
- * Counter-Strike: Source;
- * Counter-Strike Global Offensive;
- * Day of Defeat: Source;
- * Half-Life 2;
- * Half-Life 2: Deathmatch;
- * Half-Life 2: Episode One;
- * Half-Life 2: Episode Two;
- * Half-Life 2: Lost Coast;
- * Portal;
- * Half-Life: Source;
- * Half-Life Deathmatch: Source;
- * Left 4 Dead;
- * Left 4 Dead 2;
- * Portal 2;
- * Alien Swarm.
+
+  * Team Fortress 2;
+  * Counter-Strike: Source;
+  * Counter-Strike Global Offensive;
+  * Day of Defeat: Source;
+  * Half-Life 2;
+  * Half-Life 2: Deathmatch;
+  * Half-Life 2: Episode One;
+  * Half-Life 2: Episode Two;
+  * Half-Life 2: Lost Coast;
+  * Portal;
+  * Half-Life: Source;
+  * Half-Life Deathmatch: Source;
+  * Left 4 Dead;
+  * Left 4 Dead 2;
+  * Portal 2;
+  * Alien Swarm.
 
 Supported mods and third-party Source engine games:
- * Garry’s Mod;
- * Age of Chivalry;
- * D.I.P.R.I.P.: Warm Up;
- * Dystopia;
- * Insurgency: Modern Infantry Combat;
- * Pirates, Vikings, & Knights II;
- * Smashball;
- * Synergy;
- * Zombie Panic! Source;
- * Postal III;
- * E.Y.E.: Divine Cybermancy;
- * Dark Messiah Might and Magic;
- * The Ship;
- * SiN Episodes: Emergence;
- * Vampire: The Masquerade - Bloodlines;
- * Zeno Clash;
- * Dear Esther;
- * Eternal Silence;
- * Vindictus;
- * Bloody Good Time;
- * Revelations 2012;
- * MINERVA: Metastasis;
- * Insurgency;
- * No More Room in Hell;
- * Contagion;
- * NeoTokyo;
- * Half-Life: Update;
- * Lambda Wars;
- * Rexaura;
- * Black Mesa;
- * Portal Stories: Mel;
- * FIREFIGHT RELOADED;
- * Aperture Tag: The Paint Gun Testing Initiative;
- * Prospekt;
- * Transmissions: Element 120;
- * Half-Life 2: DownFall;
- * Alien Swarm: Reactive Drop;
- * Dino D-Day;
- * The Stanley Parable;
- * Double Action: Boogaloo;
- * CONSORTIUM;
- * Blade Symphony;
- * The Beginner's Guide;
- * Codename CURE;
- * INFRA;
- * Entropy: Zero;
- * Portal Reloaded.
+
+  * Garry’s Mod;
+  * Age of Chivalry;
+  * D.I.P.R.I.P.: Warm Up;
+  * Dystopia;
+  * Insurgency: Modern Infantry Combat;
+  * Pirates, Vikings, & Knights II;
+  * Smashball;
+  * Synergy;
+  * Zombie Panic! Source;
+  * Postal III;
+  * E.Y.E.: Divine Cybermancy;
+  * Dark Messiah Might and Magic;
+  * The Ship;
+  * SiN Episodes: Emergence;
+  * Vampire: The Masquerade - Bloodlines;
+  * Zeno Clash;
+  * Dear Esther;
+  * Eternal Silence;
+  * Vindictus;
+  * Bloody Good Time;
+  * Revelations 2012;
+  * MINERVA: Metastasis;
+  * Insurgency;
+  * No More Room in Hell;
+  * Contagion;
+  * NeoTokyo;
+  * Half-Life: Update;
+  * Lambda Wars;
+  * Rexaura;
+  * Black Mesa;
+  * Portal Stories: Mel;
+  * FIREFIGHT RELOADED;
+  * Aperture Tag: The Paint Gun Testing Initiative;
+  * Prospekt;
+  * Transmissions: Element 120;
+  * Half-Life 2: DownFall;
+  * Alien Swarm: Reactive Drop;
+  * Dino D-Day;
+  * The Stanley Parable;
+  * Double Action: Boogaloo;
+  * CONSORTIUM;
+  * Blade Symphony;
+  * The Beginner's Guide;
+  * Codename CURE;
+  * INFRA;
+  * Entropy: Zero;
+  * Portal Reloaded.
 
 # 3rd party libraries
 
- * [DotNetZip](https://github.com/haf/DotNetZip.Semverd) (MPL license + zlib license);
- * [NLog](https://github.com/NLog/NLog) (BSD license).
+  * [DotNetZip](https://github.com/haf/DotNetZip.Semverd) (MPL license + zlib license);
+  * [NLog](https://github.com/NLog/NLog) (BSD license).
