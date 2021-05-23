@@ -33,7 +33,7 @@ nuget restore
 popd
 
 echo Starting build process using MSBUILD...
-"%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" ..\srcrepair.sln /m /t:Build /p:Configuration=Release /p:TargetFramework=v4.7.2
+"%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" ..\srcrepair.sln /m /t:Build /p:Configuration=Release /p:TargetFramework=v4.8
 
 echo Generating documentation in HTML format...
 mkdir "..\src\srcrepair\bin\Release\help"
