@@ -22,7 +22,7 @@ sprays into the game with one click.
 
 **Supported platforms**: x86, x64.
 
-**Dependencies on Windows**: [Microsoft .NET Framework 4.7.2](https://www.microsoft.com/net/download/dotnet-framework-runtime) or above.
+**Dependencies on Windows**: [Microsoft .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) or above.
 
 **Dependencies on other OS**: [Mono 4.2.x](http://www.mono-project.com/download/) or above.
 
