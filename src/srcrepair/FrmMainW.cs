@@ -106,7 +106,7 @@ namespace srcrepair.gui
         {
             try
             {
-                ServicePointManager.SecurityProtocol |= SecurityProtocolType.Tls12 | SecurityProtocolType.Tls13;
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Tls13;
             }
             catch (Exception Ex)
             {
