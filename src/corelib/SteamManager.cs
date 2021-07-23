@@ -192,48 +192,51 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Reads and constructs a list of mount points from the specified
+        /// configuration file.
+        /// <param name="LibraryFoldersConfigFile">Full path to the libraryfolders.vdf file.</param>
+        /// </summary>
+        private List<String> ReadMountPointsFromFile(string LibraryFoldersConfigFile)
+        {
+            List<String> Result = new List<String>();
+            using (StreamReader SteamConfig = new StreamReader(LibraryFoldersConfigFile, Encoding.UTF8))
+            {
+                string RdStr;
+                while (SteamConfig.Peek() >= 0)
+                {
+                    RdStr = SteamConfig.ReadLine().Trim();
+                    if (!String.IsNullOrWhiteSpace(RdStr))
+                    {
+                        if (RdStr.IndexOf("path", StringComparison.CurrentCultureIgnoreCase) != -1)
+                        {
+                            RdStr = StringsManager.CleanString(RdStr, true, true);
+                            RdStr = RdStr.Remove(0, RdStr.IndexOf(" ") + 1);
+                            if (!String.IsNullOrWhiteSpace(RdStr)) { Result.Add(RdStr); }
+                        }
+                    }
+                }
+            }
+            return Result;
+        }
+
+        /// <summary>
         /// Gets list of all additional mount points from main configuration file.
         /// </summary>
         private List<String> GetSteamMountPoints()
         {
-            // Creating a new list for storing result...
             List<String> Result = new List<String> { FullSteamPath };
-
-            // Trying to get additional mount points by reading them from config...
             try
             {
-                // Opening file stream...
-                using (StreamReader SteamConfig = new StreamReader(GetSteamConfig(), Encoding.Default))
+                string LibraryFoldersConfigFile = GetLibraryFoldersConfig();
+                if (File.Exists(LibraryFoldersConfigFile))
                 {
-                    // Creating buffer variable...
-                    string RdStr;
-
-                    // Reading up to the end...
-                    while (SteamConfig.Peek() >= 0)
-                    {
-                        // Reading row and cleaning it up...
-                        RdStr = SteamConfig.ReadLine().Trim();
-
-                        // Checking if string is not empty...
-                        if (!(String.IsNullOrWhiteSpace(RdStr)))
-                        {
-                            // Finding additional game libraries...
-                            if (RdStr.IndexOf("BaseInstallFolder", StringComparison.CurrentCultureIgnoreCase) != -1)
-                            {
-                                RdStr = StringsManager.CleanString(RdStr, true, true);
-                                RdStr = RdStr.Remove(0, RdStr.IndexOf(" ") + 1);
-                                if (!(String.IsNullOrWhiteSpace(RdStr))) { Result.Add(RdStr); }
-                            }
-                        }
-                    }
+                    Result.AddRange(ReadMountPointsFromFile(LibraryFoldersConfigFile));
                 }
             }
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExCoreStmManMountPointsFetchError);
             }
-
-            // Returning final list...
             return Result;
         }
 
