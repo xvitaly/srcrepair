@@ -126,6 +126,12 @@ namespace srcrepair.core
         public string GetSteamConfig() => Path.Combine(FullSteamPath, "config", "config.vdf");
 
         /// <summary>
+        /// Gets full path to the libraryfolders.vdf Steam configuration file.
+        /// </summary>
+        /// <returns>Full path to the libraryfolders.vdf file.</returns>
+        public string GetLibraryFoldersConfig() => Path.Combine(FullSteamPath, "config", "libraryfolders.vdf");
+
+        /// <summary>
         /// Gets full path to Steam localconfig.vdf configuration file.
         /// </summary>
         /// <returns>Full path to localconfig.vdf file.</returns>
