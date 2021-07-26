@@ -106,4 +106,5 @@ Supported mods and third-party Source engine games:
 # 3rd party libraries
 
   * [DotNetZip](https://github.com/haf/DotNetZip.Semverd) (MPL license + zlib license);
-  * [NLog](https://github.com/NLog/NLog) (BSD license).
+  * [NLog](https://github.com/NLog/NLog) (BSD license);
+  * [Gameloop.Vdf](https://github.com/shravan2x/Gameloop.Vdf) (MIT license).

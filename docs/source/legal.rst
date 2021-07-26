@@ -89,6 +89,7 @@ Libraries licensing
 
     "DotNetZip", "Dynamic (shared)", "`MPL + zlib <https://github.com/haf/DotNetZip.Semverd/blob/master/LICENSE>`__", "`GitHub page <https://github.com/haf/DotNetZip.Semverd>`__"
     "NLog", "Dynamic (shared)", "`BSD <https://github.com/NLog/NLog/blob/dev/LICENSE.txt>`__", "`GitHub page <https://github.com/NLog/NLog>`__"
+    "Gameloop.Vdf", "Dynamic (shared)", "`MIT <https://github.com/shravan2x/Gameloop.Vdf/blob/master/LICENSE>`__", "`GitHub page <https://github.com/shravan2x/Gameloop.Vdf>`__"
 
 .. index:: trademarks, legal
 .. _legal-trademarks:
