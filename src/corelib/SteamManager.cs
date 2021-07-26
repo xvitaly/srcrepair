@@ -18,11 +18,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
+using Gameloop.Vdf;
+using Gameloop.Vdf.Linq;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using NLog;
+using System.Text.RegularExpressions;
 
 namespace srcrepair.core
 {
@@ -201,17 +204,14 @@ namespace srcrepair.core
             List<String> Result = new List<String>();
             using (StreamReader SteamConfig = new StreamReader(LibraryFoldersConfigFile, Encoding.UTF8))
             {
-                string RdStr;
-                while (SteamConfig.Peek() >= 0)
+                VProperty FoldersConfigVdf = VdfConvert.Deserialize(SteamConfig);
+                foreach (dynamic Folder in FoldersConfigVdf.Value)
                 {
-                    RdStr = SteamConfig.ReadLine().Trim();
-                    if (!String.IsNullOrWhiteSpace(RdStr))
+                    if (Regex.IsMatch(Folder.Key, @"^\d+$"))
                     {
-                        if (RdStr.IndexOf("path", StringComparison.CurrentCultureIgnoreCase) != -1)
+                        if (Folder.Value.mounted.Value == "1")
                         {
-                            RdStr = StringsManager.CleanString(RdStr, true, true);
-                            RdStr = RdStr.Remove(0, RdStr.IndexOf(" ") + 1);
-                            if (!String.IsNullOrWhiteSpace(RdStr)) { Result.Add(RdStr); }
+                            Result.Add(Folder.Value.path.Value);
                         }
                     }
                 }
