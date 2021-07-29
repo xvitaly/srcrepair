@@ -54,7 +54,7 @@ ArchitecturesInstallIn64BitMode=x64
 MinVersion=6.1sp1
 VersionInfoVersion={#VERSION}
 VersionInfoDescription=SRC Repair Setup
-VersionInfoCopyright=(c) 2005-2020 EasyCoding Team. All rights reserved.
+VersionInfoCopyright=(c) 2005-2021 EasyCoding Team. All rights reserved.
 VersionInfoCompany=EasyCoding Team
 
 [Messages]
