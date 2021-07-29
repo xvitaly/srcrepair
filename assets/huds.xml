@@ -54,9 +54,9 @@
         <Name>ToonHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://toonhud.com/downloads/toonhud_11-1.zip</URI>
+        <URI>https://toonhud.com/downloads/toonhud_11-2.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/toonhud_75ebc5e4.zip</Mirror>
-        <UpURI>https://toonhud.com/downloads/toonhud_11-1.zip</UpURI>
+        <UpURI>https://toonhud.com/downloads/toonhud_11-2.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/toonhud.jpg</Preview>
         <RepoPath>null</RepoPath>
         <Hash2>7338aa24865a50a1ab3c6bb125480d3b79c22930cd752c1932f98c6c75503d59ebf23551d718561351384b4fce02269d119ff68ab8aac9aa0e88de8cc1e04441</Hash2>
@@ -181,7 +181,7 @@
         <RepoPath>null</RepoPath>
         <Hash2>5dc6ea47814a22f26b646d3b1d589adeeb1e1a7ae9a500aab0750a6f3c1d97e49a1b904a196c8a1269618ae7853061e308632e1446d5a2947d9a6c242bfdbc33</Hash2>
         <LastUpdate>1598049944</LastUpdate>
-        <Site>https://gamebanana.com/guis/25711</Site>
+        <Site>https://gamebanana.com/mods/26852</Site>
         <ArchiveDir>eve hud</ArchiveDir>
         <InstallDir>evehud</InstallDir>
     </HUD>
