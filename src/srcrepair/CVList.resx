@@ -1881,8 +1881,17 @@
   <data name="sv_vote_kick_ban_duration" xml:space="preserve">
     <value>How long should a kick vote ban someone from the server? (in minutes)</value>
   </data>
+  <data name="sv_vote_late_join_cooldown" xml:space="preserve">
+    <value>Set the length of the vote cooldown.</value>
+  </data>
+  <data name="sv_vote_late_join_time" xml:space="preserve">
+    <value>Grace period after the match starts before the vote cooldown is applied.</value>
+  </data>
   <data name="sv_vote_ui_hide_disabled_issues" xml:space="preserve">
     <value>Suppress listing of disabled issues in the vote setup screen.</value>
+  </data>
+  <data name="tf_allow_player_name_change" xml:space="preserve">
+    <value>Controls if the players can change their name during a match.</value>
   </data>
   <data name="tf_allow_player_use" xml:space="preserve">
     <value>0/1 - disallows/allows the +use command on a server, useful for some custom maps, standard is 0.</value>

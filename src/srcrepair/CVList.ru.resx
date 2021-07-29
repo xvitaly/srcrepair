@@ -3039,6 +3039,12 @@
   <data name="sv_vote_kick_ban_duration" xml:space="preserve">
     <value>Время в минутах, на которое будет забанен игрок, выброшенный с сервера голосованием.</value>
   </data>
+  <data name="sv_vote_late_join_cooldown" xml:space="preserve">
+    <value>Задаёт минимальное время в минутах, которое игрок должен отыграть на сервере до появления возможности запуска голосований.</value>
+  </data>
+  <data name="sv_vote_late_join_time" xml:space="preserve">
+    <value>Задаёт время, по истечении которого на новоприбывших игроков накладываются ограничения по запуску голосований.</value>
+  </data>
   <data name="sv_vote_ui_hide_disabled_issues" xml:space="preserve">
     <value>Скрывать / отображать отключённые на сервере голосования.</value>
   </data>
@@ -3056,6 +3062,9 @@
   </data>
   <data name="taunt" xml:space="preserve">
     <value>Выполнить насмешку.</value>
+  </data>
+  <data name="tf_allow_player_name_change" xml:space="preserve">
+    <value>Разрешает / запрещает смену никнеймов игроками во время проходящего матча.</value>
   </data>
   <data name="tf_allow_player_use" xml:space="preserve">
     <value>Разрешить / запретить использование команды use на игрокам на сервере.</value>
