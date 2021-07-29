@@ -211,7 +211,7 @@ namespace srcrepair.core
                         {
                             RdStr = StringsManager.CleanString(RdStr, true, true);
                             RdStr = RdStr.Remove(0, RdStr.IndexOf(" ") + 1);
-                            if (!String.IsNullOrWhiteSpace(RdStr)) { Result.Add(RdStr); }
+                            if (!String.IsNullOrWhiteSpace(RdStr) && Directory.Exists(RdStr)) { Result.Add(RdStr); }
                         }
                     }
                 }
