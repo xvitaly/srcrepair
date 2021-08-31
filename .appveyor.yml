@@ -15,7 +15,7 @@ assembly_info:
   assembly_informational_version: '{version}'
 before_build:
 - cmd: >-
-    set PATH=C:\Python38-x64;C:\Python38-x64\Scripts;%PATH%
+    set PATH=C:\Python39-x64;C:\Python39-x64\Scripts;%PATH%
 
     pip3 install sphinx
 
@@ -26,7 +26,7 @@ build:
   verbosity: normal
 after_build:
 - cmd: >-
-    set PATH=C:\Python38-x64;C:\Python38-x64\Scripts;%PATH%
+    set PATH=C:\Python39-x64;C:\Python39-x64\Scripts;%PATH%
 
     set CI_DIR=%APPVEYOR_BUILD_FOLDER%\src\srcrepair\bin\%CONFIGURATION%
 
