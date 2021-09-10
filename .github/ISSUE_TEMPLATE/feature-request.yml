@@ -1,0 +1,10 @@
+name: Feature request
+description: Request a new feature
+labels: [request]
+body:
+  - type: textarea
+    attributes:
+      label: Feature request
+      placeholder: A clear and brief description of what you want to be implemented in future.
+    validations:
+      required: true
