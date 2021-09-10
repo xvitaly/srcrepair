@@ -1,6 +1,10 @@
 version: 43.0.1.{build}
 pull_requests:
   do_not_increment_build_number: true
+branches:
+  only:
+  - master
+  - dev
 image: Visual Studio 2019
 configuration: Release
 platform: Any CPU
