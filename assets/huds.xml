@@ -114,13 +114,13 @@
         <Name>budhud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/budhud_82b8b4dd.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/budhud_82b8b4dd.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/budhud_19668a75.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/budhud_19668a75.zip</Mirror>
         <UpURI>https://github.com/WhiskerBiscuit/budhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.jpg</Preview>
         <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
-        <Hash2>4b74f6c66cf8c294269acd1c78b1cd568c9ba57b271a2808a097b8b6ff43cee55352f5f923af4376766c68feda7519d71d4da9c97f2458ed4bda9643ea16b5c3</Hash2>
-        <LastUpdate>1630037474</LastUpdate>
+        <Hash2>0c32a5bbfe958c61c0f34628080dd3be58d4c5a8378cd8110b5d7ee9fa372fa9615f3666a228e5e3875e8f3252476efdd60559f5388fa460de0967961a690930</Hash2>
+        <LastUpdate>1632291138</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=207</Site>
         <ArchiveDir>budhud-master</ArchiveDir>
         <InstallDir>budhud</InstallDir>
@@ -144,13 +144,13 @@
         <Name>KBNHud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/kbnhud_fc4cc234.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/kbnhud_fc4cc234.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/kbnhud_1ef6da4a.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/kbnhud_1ef6da4a.zip</Mirror>
         <UpURI>https://github.com/Jotunn/KBNHud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/kbnhud.jpg</Preview>
         <RepoPath>https://github.com/Jotunn/KBNHud</RepoPath>
-        <Hash2>e4a9182a7b61bd153e2e622ede7184ed9ef4f3717880d4414632e38baaa5b0cfa3267c512b701e19853c808d71814c94a5e778a258f574ca374926cd5ec9ce52</Hash2>
-        <LastUpdate>1613698494</LastUpdate>
+        <Hash2>eea2e941678dab2fc79f437f8a045434cfa2ce63fcea27df265bdc7d411603fb4c96eef13d7dd1de96f54befde019a50c0f01212c073a1cd0cdb3466c6470af0</Hash2>
+        <LastUpdate>1631292336</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=271</Site>
         <ArchiveDir>KBNHud-master</ArchiveDir>
         <InstallDir>kbnhud</InstallDir>
@@ -159,13 +159,13 @@
         <Name>rayshud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/rayshud_a724f06f.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/rayshud_a724f06f.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/rayshud_bf54898b.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/rayshud_bf54898b.zip</Mirror>
         <UpURI>https://github.com/raysfire/rayshud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/rayshud.jpg</Preview>
         <RepoPath>https://github.com/raysfire/rayshud</RepoPath>
-        <Hash2>42af0b9d119ca469417caee109780890937ec5b8c6ffee693c7c6ef133d4587c2bc7485bbe12500418b90337bff3b1c6cd4d91f4692c962f2a67cee4f1b943a4</Hash2>
-        <LastUpdate>1629082017</LastUpdate>
+        <Hash2>dd013ae0b4f8c781d5529f52aaad67d4a9c10210414b288bc9d47fab68d2ee2906e1583cbdb22f24d2c4c0451eceb90cea8ecb6a1db1818ef7d958e9b8a55ac8</Hash2>
+        <LastUpdate>1631933146</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=254</Site>
         <ArchiveDir>rayshud-master</ArchiveDir>
         <InstallDir>rayshud</InstallDir>
@@ -264,13 +264,13 @@
         <Name>FlawHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/flawhud_02e4746e.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/flawhud_02e4746e.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/flawhud_d524840d.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/flawhud_d524840d.zip</Mirror>
         <UpURI>https://github.com/CriticalFlaw/FlawHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/flawhud.jpg</Preview>
         <RepoPath>https://github.com/CriticalFlaw/FlawHUD</RepoPath>
-        <Hash2>550bcc2f78c359d779e38e7b150f10246f112cf4eb6c3047b2116a68ce6fb332152e933824bb5c8ab3af0a24ad251b85ffd58612d289851e4d893d7b9d47f793</Hash2>
-        <LastUpdate>1629848385</LastUpdate>
+        <Hash2>ceb91c40caf4efcd1581cf15364d64242870fac42a8752915ab1de2b386d5e0cd47a9ead328581742942e72fc8756167372e2a4dfde308f4d13ba1007d94c3f8</Hash2>
+        <LastUpdate>1630693727</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=252</Site>
         <ArchiveDir>FlawHUD-master</ArchiveDir>
         <InstallDir>flawhud</InstallDir>
