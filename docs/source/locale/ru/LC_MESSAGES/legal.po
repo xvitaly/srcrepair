@@ -20,18 +20,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 38.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-21 18:03+0100\n"
-"PO-Revision-Date: 2020-03-21 18:14+0100\n"
+"POT-Creation-Date: 2021-09-23 16:57+0200\n"
+"PO-Revision-Date: 2021-09-23 16:57+0200\n"
+"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
+"Language-Team: EasyCoding Team\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.7.0\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 "
-"&& (n%100<12 || n%100>14) ? 1 : 2);\n"
-"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
-"Language-Team: EasyCoding Team\n"
-"Language: ru\n"
-"X-Generator: Poedit 2.3\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -70,8 +70,8 @@ msgstr ""
 
 #: ../../source/legal.rst:1
 msgid ""
-"`CC Attribution No Derivatives <https://creativecommons.org/licenses/by-nd/4.0/"
-"legalcode>`_"
+"`CC Attribution No Derivatives <https://creativecommons.org/licenses/by-"
+"nd/4.0/legalcode>`_"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -143,7 +143,8 @@ msgstr ""
 
 #: ../../source/legal.rst:1
 msgid ""
-"`GNU Lesser General Public License <https://opensource.org/licenses/LGPL-2.1>`_"
+"`GNU Lesser General Public License <https://opensource.org/licenses/"
+"LGPL-2.1>`_"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -175,7 +176,8 @@ msgid "Mazenl77"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "`CC Attribution <https://creativecommons.org/licenses/by/4.0/legalcode>`_"
+msgid ""
+"`CC Attribution <https://creativecommons.org/licenses/by/4.0/legalcode>`_"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -243,7 +245,8 @@ msgid "ArtistValley"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "`IconsPedia <https://www.iconspedia.com/icon/task-report-hot-3-17.html>`__"
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/task-report-hot-3-17.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -289,7 +292,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "`IconsPedia <https://www.iconspedia.com/icon/team-fortress-2-4585.html>`__"
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/team-fortress-2-4585.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -310,7 +314,8 @@ msgstr ""
 
 #: ../../source/legal.rst:1
 msgid ""
-"`IconsPedia <https://www.iconspedia.com/icon/gnome-view-refresh-111-4.html>`__"
+"`IconsPedia <https://www.iconspedia.com/icon/gnome-view-refresh-111-4."
+"html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -387,7 +392,8 @@ msgstr ""
 
 #: ../../source/legal.rst:1
 msgid ""
-"`IconsPedia <https://www.iconspedia.com/icon/systemconfiguration-12064.html>`__"
+"`IconsPedia <https://www.iconspedia.com/icon/systemconfiguration-12064."
+"html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -408,8 +414,8 @@ msgstr ""
 
 #: ../../source/legal.rst:1
 msgid ""
-"`IconsPedia <https://www.iconspedia.com/icon/gnome-applications-graphics-10-46."
-"html>`__"
+"`IconsPedia <https://www.iconspedia.com/icon/gnome-applications-"
+"graphics-10-46.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -531,7 +537,8 @@ msgid "Double-J Desig"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "`IconsPedia <https://www.iconspedia.com/icon/monitor-icon-37548.html>`__"
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/monitor-icon-37548.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -540,8 +547,8 @@ msgstr ""
 
 #: ../../source/legal.rst:1
 msgid ""
-"`IconsPedia <https://www.iconspedia.com/icon/interface-preferences-icon-21275."
-"html>`__"
+"`IconsPedia <https://www.iconspedia.com/icon/interface-preferences-"
+"icon-21275.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -554,7 +561,8 @@ msgstr ""
 
 #: ../../source/legal.rst:1
 msgid ""
-"`IconsPedia <https://www.iconspedia.com/icon/cloud-loading-icon-49831.html>`__"
+"`IconsPedia <https://www.iconspedia.com/icon/cloud-loading-icon-49831."
+"html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -617,12 +625,26 @@ msgid "**URL**"
 msgstr "**Дом. страница**"
 
 #: ../../source/legal.rst:1
-msgid "DotNetZip"
+msgid "BouncyCastle"
 msgstr ""
 
 #: ../../source/legal.rst:1
 msgid "Dynamic (shared)"
 msgstr "Динамическая (DLL)"
+
+#: ../../source/legal.rst:1
+msgid ""
+"`MIT + Apache 2.0 <https://github.com/bcgit/bc-csharp/blob/master/crypto/"
+"License.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "`GitHub page <https://github.com/bcgit/bc-csharp>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "DotNetZip"
+msgstr ""
 
 #: ../../source/legal.rst:1
 msgid ""
@@ -645,35 +667,36 @@ msgstr ""
 msgid "`GitHub page <https://github.com/NLog/NLog>`__"
 msgstr ""
 
-#: ../../source/legal.rst:97
+#: ../../source/legal.rst:98
 msgid "Trademarks"
 msgstr "Торговые марки"
 
-#: ../../source/legal.rst:100
+#: ../../source/legal.rst:101
 msgid "Valve"
 msgstr ""
 
-#: ../../source/legal.rst:102
+#: ../../source/legal.rst:103
 msgid ""
-"Valve, the Valve logo, Half-Life, the Half-Life logo, the Lambda logo, Steam, "
-"the Steam logo, Team Fortress, the Team Fortress logo, Opposing Force, Day of "
-"Defeat, the Day of Defeat logo, Counter-Strike, the Counter-Strike logo, "
-"Source, the Source logo, Counter-Strike: Condition Zero, Portal, the Portal "
-"logo, Dota, the Dota 2 logo, and Defense of the Ancients are trademarks and/or "
-"registered trademarks of Valve Corporation."
+"Valve, the Valve logo, Half-Life, the Half-Life logo, the Lambda logo, "
+"Steam, the Steam logo, Team Fortress, the Team Fortress logo, Opposing "
+"Force, Day of Defeat, the Day of Defeat logo, Counter-Strike, the Counter-"
+"Strike logo, Source, the Source logo, Counter-Strike: Condition Zero, "
+"Portal, the Portal logo, Dota, the Dota 2 logo, and Defense of the Ancients "
+"are trademarks and/or registered trademarks of Valve Corporation."
 msgstr ""
 "Valve, логотип Valve, Half-Life, логотип Half-Life, логотип Lambda, Steam, "
 "логотип Steam, Team Fortress, логотип Team Fortress, Opposing Force, Day of "
-"Defeat, логотип Day of Defeat, Counter-Strike, логотип Counter-Strike, Source, "
-"логотип Source, Counter-Strike: Condition Zero, Portal, логотип Portal, Dota, "
-"логотип Dota 2, а также Defense of the Ancients являются торговыми марками и/"
-"или зарегистрированными торговыми марками Корпорации Valve."
+"Defeat, логотип Day of Defeat, Counter-Strike, логотип Counter-Strike, "
+"Source, логотип Source, Counter-Strike: Condition Zero, Portal, логотип "
+"Portal, Dota, логотип Dota 2, а также Defense of the Ancients являются "
+"торговыми марками и/или зарегистрированными торговыми марками Корпорации "
+"Valve."
 
-#: ../../source/legal.rst:105
+#: ../../source/legal.rst:106
 msgid "Microsoft"
 msgstr ""
 
-#: ../../source/legal.rst:107
+#: ../../source/legal.rst:108
 msgid ""
 "Microsoft, Windows are trademarks and/or registered trademarks of Microsoft "
 "Corporation."
@@ -681,10 +704,10 @@ msgstr ""
 "Microsoft, Windows являются торговыми марками и/или зарегистрированными "
 "торговыми марками Корпорации Microsoft."
 
-#: ../../source/legal.rst:110
+#: ../../source/legal.rst:111
 msgid "Other"
 msgstr "Прочие"
 
-#: ../../source/legal.rst:112
+#: ../../source/legal.rst:113
 msgid "All other trademarks are property of their respective owners."
 msgstr "Все прочие торговые марки являются собственностью их владельцев."
