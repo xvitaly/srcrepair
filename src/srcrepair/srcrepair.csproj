@@ -46,6 +46,9 @@
     <ApplicationManifest>srcrepair.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="DotNetZip, Version=1.15.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
       <HintPath>..\..\packages\DotNetZip.1.15.0\lib\net40\DotNetZip.dll</HintPath>
     </Reference>
@@ -400,6 +403,10 @@
     <ProjectReference Include="..\corelib\corelib.csproj">
       <Project>{2ce9e668-998b-4a77-911f-ed8a2d4e3153}</Project>
       <Name>corelib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\gpglib\gpglib.csproj">
+      <Project>{84339fec-c596-4fca-bde3-1ffaa519dce6}</Project>
+      <Name>gpglib</Name>
     </ProjectReference>
     <ProjectReference Include="..\kbhelper\kbhelper.csproj">
       <Project>{f83b5fab-e985-4a84-8acb-3333d2ad86a9}</Project>
