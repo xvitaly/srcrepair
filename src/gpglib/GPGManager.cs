@@ -25,7 +25,7 @@ namespace srcrepair.gpg
     /// <summary>
     /// Class for working with GPG cryptographic functions.
     /// </summary>
-    public class GPGManager
+    public static class GPGManager
     {
     }
 }
