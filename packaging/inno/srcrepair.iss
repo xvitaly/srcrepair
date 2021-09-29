@@ -92,6 +92,8 @@ Source: "{#BASEDIR}\bin\Release\kbhelper.exe"; DestDir: "{app}"; Flags: ignoreve
 Source: "{#BASEDIR}\bin\Release\kbhelper.pdb"; DestDir: "{app}"; Flags: ignoreversion; Components: plugins\kbhelper and debug
 Source: "{#BASEDIR}\bin\Release\corelib.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "{#BASEDIR}\bin\Release\corelib.pdb"; DestDir: "{app}"; Flags: ignoreversion; Components: debug
+Source: "{#BASEDIR}\bin\Release\gpglib.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\gpglib.pdb"; DestDir: "{app}"; Flags: ignoreversion; Components: debug
 Source: "{#BASEDIR}\bin\Release\srcrepair.exe.config"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "{#BASEDIR}\bin\Release\kbhelper.exe.config"; DestDir: "{app}"; Flags: ignoreversion; Components: plugins\kbhelper
 Source: "{#BASEDIR}\bin\Release\srcrepair.VisualElementsManifest.xml"; DestDir: "{app}"; Flags: ignoreversion; Components: core
@@ -104,6 +106,7 @@ Source: "{#BASEDIR}\bin\Release\help\srcrepair_ru.chm"; DestDir: "{app}\help"; F
 #ifdef _RELEASE
 Source: "{#BASEDIR}\bin\Release\srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "{#BASEDIR}\bin\Release\corelib.dll.sig"; DestDir: "{app}"; Flags: ignoreversion; Components: core
+Source: "{#BASEDIR}\bin\Release\gpglib.dll.sig"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "{#BASEDIR}\bin\Release\BouncyCastle.Crypto.dll.sig"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "{#BASEDIR}\bin\Release\DotNetZip.dll.sig"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "{#BASEDIR}\bin\Release\NLog.dll.sig"; DestDir: "{app}"; Flags: ignoreversion; Components: core
@@ -123,6 +126,7 @@ Filename: "{app}\srcrepair.exe"; Description: "{cm:LaunchProgram,SRC Repair}"; F
 Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\srcrepair.exe"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
 Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\kbhelper.exe"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin(); Components: plugins\kbhelper
 Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\corelib.dll"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
+Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\gpglib.dll"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
 Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\BouncyCastle.Crypto.dll"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
 Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\DotNetZip.dll"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
 Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\NLog.dll"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
@@ -131,6 +135,7 @@ Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\NLog.dll"""; Statu
 Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\srcrepair.exe"""; RunOnceId: "NgenMainApp"; Flags: runhidden; Check: IsAdmin(); Components: core
 Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\kbhelper.exe"""; RunOnceId: "NgenKBHelper"; Flags: runhidden; Check: IsAdmin(); Components: plugins\kbhelper
 Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\corelib.dll"""; RunOnceId: "NgenCoreLib"; Flags: runhidden; Check: IsAdmin(); Components: core
+Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\gpglib.dll"""; RunOnceId: "NgenGpgLib"; Flags: runhidden; Check: IsAdmin(); Components: core
 Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\BouncyCastle.Crypto.dll"""; RunOnceId: "NgenBouncyCastle"; Flags: runhidden; Check: IsAdmin(); Components: core
 Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\DotNetZip.dll"""; RunOnceId: "NgenDotNetZip"; Flags: runhidden; Check: IsAdmin(); Components: core
 Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\NLog.dll"""; RunOnceId: "NgenNLog"; Flags: runhidden; Check: IsAdmin(); Components: core
