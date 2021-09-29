@@ -46,9 +46,6 @@
     <ApplicationManifest>srcrepair.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
-      <HintPath>..\..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
-    </Reference>
     <Reference Include="DotNetZip, Version=1.15.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
       <HintPath>..\..\packages\DotNetZip.1.15.0\lib\net40\DotNetZip.dll</HintPath>
     </Reference>
