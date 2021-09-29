@@ -1,4 +1,4 @@
-version: 43.0.2.{build}
+version: '{build}'
 pull_requests:
   do_not_increment_build_number: true
 branches:
@@ -11,12 +11,6 @@ platform: Any CPU
 clone_depth: 1
 init:
 - cmd: git config --global core.autocrlf true
-assembly_info:
-  patch: true
-  file: '**\AssemblyInfo.*'
-  assembly_version: '{version}'
-  assembly_file_version: '{version}'
-  assembly_informational_version: '{version}'
 before_build:
 - cmd: >-
     set PATH=C:\Python39-x64;C:\Python39-x64\Scripts;%PATH%
