@@ -1158,6 +1158,9 @@
   <data name="kill" xml:space="preserve">
     <value>Отправить игрока на респаун.</value>
   </data>
+  <data name="l4d_delete_temp_files" xml:space="preserve">
+    <value>Разрешает / запрещает автоматическое удаление временных файлов, включая загруженные спреи других игроков, при выходе из игры.</value>
+  </data>
   <data name="lastinv" xml:space="preserve">
     <value>Переключиться на предыдущее оружие.</value>
   </data>
