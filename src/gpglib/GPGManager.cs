@@ -27,5 +27,9 @@ namespace srcrepair.gpg
     /// </summary>
     public static class GPGManager
     {
+        public static void EncryptFile(string FileName)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
