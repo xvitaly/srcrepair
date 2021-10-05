@@ -27,11 +27,20 @@ namespace srcrepair.gpg
     /// </summary>
     public static class GPGManager
     {
+        /// <summary>
+        /// Encrypts file with pre-defined GPG public key.
+        /// </summary>
+        /// <param name="FileName">Full path to the source file.</param>
         public static void EncryptFile(string FileName)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Verifies the GPG-signature of the file.
+        /// </summary>
+        /// <param name="FileName">Full path to the detached signature file.</param>
+        /// <returns>Returns True if signature check passed.</returns>
         public static bool VerifySignedFile(string FileName)
         {
             throw new NotImplementedException();
