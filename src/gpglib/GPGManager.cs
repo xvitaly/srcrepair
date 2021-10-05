@@ -31,5 +31,10 @@ namespace srcrepair.gpg
         {
             throw new NotImplementedException();
         }
+
+        public static bool VerifySignedFile(string FileName)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
