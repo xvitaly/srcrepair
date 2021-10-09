@@ -18,7 +18,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
+using Org.BouncyCastle.Bcpg;
+using Org.BouncyCastle.Bcpg.OpenPgp;
+using Org.BouncyCastle.Security;
 using System;
+using System.IO;
+using System.Text;
 
 namespace srcrepair.gpg
 {
@@ -28,12 +33,58 @@ namespace srcrepair.gpg
     public static class GPGManager
     {
         /// <summary>
+        /// Gets and returns GPG public key instance.
+        /// </summary>
+        /// <returns>Returns GPG public key instance.</returns>
+        private static PgpPublicKey GetPublicKey()
+        {
+            PgpPublicKey Result = null;
+            using (MemoryStream KeyStream = new MemoryStream(Encoding.ASCII.GetBytes(Properties.Resources.GPGPublicKey)))
+            {
+                using (Stream DecoderStream = PgpUtilities.GetDecoderStream(KeyStream))
+                {
+                    PgpPublicKeyRingBundle RingBundle = new PgpPublicKeyRingBundle(DecoderStream);
+                    foreach (PgpPublicKeyRing Ring in RingBundle.GetKeyRings())
+                    {
+                        foreach (PgpPublicKey Key in Ring.GetPublicKeys())
+                        {
+                            if (Key.IsEncryptionKey && !Key.IsRevoked())
+                            {
+                                return Key;
+                            }
+                        }
+                    }
+                }
+            }
+            return Result;
+        }
+
+        /// <summary>
         /// Encrypts file with pre-defined GPG public key.
         /// </summary>
         /// <param name="FileName">Full path to the source file.</param>
         public static void EncryptFile(string FileName)
         {
-            throw new NotImplementedException();
+            using (FileStream InputFileStream = new FileStream(FileName, FileMode.Open))
+            {
+                using (FileStream OutputFileStream = new FileStream(FileName + ".gpg", FileMode.Create))
+                {
+                    PgpEncryptedDataGenerator EncryptedDataGenerator = new PgpEncryptedDataGenerator(SymmetricKeyAlgorithmTag.Aes256, true, new SecureRandom());
+                    EncryptedDataGenerator.AddMethod(GetPublicKey());
+                    using (Stream EncryptedDataGeneratorStream = EncryptedDataGenerator.Open(OutputFileStream, new byte[4096]))
+                    {
+                        PgpCompressedDataGenerator CompressedDataGenerator = new PgpCompressedDataGenerator(CompressionAlgorithmTag.Zip);
+                        using (Stream CompressedDataGeneratorStream = CompressedDataGenerator.Open(EncryptedDataGeneratorStream))
+                        {
+                            PgpLiteralDataGenerator LiteralDataGenerator = new PgpLiteralDataGenerator();
+                            using (Stream LiteralDataGeneratorStream = LiteralDataGenerator.Open(CompressedDataGeneratorStream, PgpLiteralData.Binary, String.Empty, InputFileStream.Length, DateTime.Now))
+                            {
+                                InputFileStream.CopyTo(LiteralDataGeneratorStream);
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         /// <summary>
@@ -43,7 +94,30 @@ namespace srcrepair.gpg
         /// <returns>Returns True if signature check passed.</returns>
         public static bool VerifySignedFile(string FileName)
         {
-            throw new NotImplementedException();
+            using (FileStream SignatureFileStream = new FileStream(FileName, FileMode.Open))
+            {
+                using (Stream SignatureFileDecoderStream = PgpUtilities.GetDecoderStream(SignatureFileStream))
+                {
+                    PgpObjectFactory pgpFact = new PgpObjectFactory(SignatureFileDecoderStream);
+                    if (!(pgpFact.NextPgpObject() is PgpSignatureList sList)) throw new InvalidOperationException("Failed to create an instance of the PgpObjectFactory.");
+                    PgpSignature firstSig = sList[0];
+                    firstSig.InitVerify(GetPublicKey());
+                    using (FileStream SourceFileStream = new FileStream(Path.Combine(Path.GetDirectoryName(FileName), Path.GetFileNameWithoutExtension(FileName)), FileMode.Open))
+                    {
+                        using (BufferedStream BufferedSourceFileStream = new BufferedStream(SourceFileStream))
+                        {
+                            const int BlockSize = 4096;
+                            byte[] Buffer = new byte[BlockSize];
+                            int BytesRead = 0;
+                            while ((BytesRead = BufferedSourceFileStream.Read(Buffer, 0, BlockSize)) != 0)
+                            {
+                                firstSig.Update(Buffer, 0, BytesRead);
+                            }
+                        }
+                    }
+                    return firstSig.Verify();
+                }
+            }
         }
     }
 }
