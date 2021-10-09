@@ -62,12 +62,13 @@ namespace srcrepair.gpg
         /// <summary>
         /// Encrypts file with pre-defined GPG public key.
         /// </summary>
-        /// <param name="FileName">Full path to the source file.</param>
-        public static void EncryptFile(string FileName)
+        /// <param name="SourceFileName">Full path to the source file.</param>
+        /// <param name="SignatureFileName">Full path to the detached signature file.</param>
+        public static void EncryptFile(string SourceFileName, string SignatureFileName)
         {
-            using (FileStream InputFileStream = new FileStream(FileName, FileMode.Open))
+            using (FileStream InputFileStream = new FileStream(SourceFileName, FileMode.Open))
             {
-                using (FileStream OutputFileStream = new FileStream(FileName + ".gpg", FileMode.Create))
+                using (FileStream OutputFileStream = new FileStream(SignatureFileName, FileMode.Create))
                 {
                     PgpEncryptedDataGenerator EncryptedDataGenerator = new PgpEncryptedDataGenerator(SymmetricKeyAlgorithmTag.Aes256, true, new SecureRandom());
                     EncryptedDataGenerator.AddMethod(GetPublicKey());
@@ -88,13 +89,23 @@ namespace srcrepair.gpg
         }
 
         /// <summary>
+        /// Encrypts file with pre-defined GPG public key.
+        /// </summary>
+        /// <param name="SourceFileName">Full path to the source file.</param>
+        public static void EncryptFile(string SourceFileName)
+        {
+            EncryptFile(SourceFileName, SourceFileName + ".gpg");
+        }
+
+        /// <summary>
         /// Verifies the GPG-signature of the file.
         /// </summary>
-        /// <param name="FileName">Full path to the detached signature file.</param>
+        /// <param name="SignatureFileName">Full path to the detached signature file.</param>
+        /// <param name="SourceFileName">Full path to the source file.</param>
         /// <returns>Returns True if signature check passed.</returns>
-        public static bool VerifySignedFile(string FileName)
+        public static bool VerifySignedFile(string SignatureFileName, string SourceFileName)
         {
-            using (FileStream SignatureFileStream = new FileStream(FileName, FileMode.Open))
+            using (FileStream SignatureFileStream = new FileStream(SignatureFileName, FileMode.Open))
             {
                 using (Stream SignatureFileDecoderStream = PgpUtilities.GetDecoderStream(SignatureFileStream))
                 {
@@ -102,7 +113,7 @@ namespace srcrepair.gpg
                     if (!(pgpFact.NextPgpObject() is PgpSignatureList sList)) throw new InvalidOperationException("Failed to create an instance of the PgpObjectFactory.");
                     PgpSignature firstSig = sList[0];
                     firstSig.InitVerify(GetPublicKey());
-                    using (FileStream SourceFileStream = new FileStream(Path.Combine(Path.GetDirectoryName(FileName), Path.GetFileNameWithoutExtension(FileName)), FileMode.Open))
+                    using (FileStream SourceFileStream = new FileStream(SourceFileName, FileMode.Open))
                     {
                         using (BufferedStream BufferedSourceFileStream = new BufferedStream(SourceFileStream))
                         {
@@ -118,6 +129,16 @@ namespace srcrepair.gpg
                     return firstSig.Verify();
                 }
             }
+        }
+
+        /// <summary>
+        /// Verifies the GPG-signature of the file.
+        /// </summary>
+        /// <param name="SignatureFileName">Full path to the detached signature file.</param>
+        /// <returns>Returns True if signature check passed.</returns>
+        public static bool VerifySignedFile(string SignatureFileName)
+        {
+            return VerifySignedFile(SignatureFileName, Path.Combine(Path.GetDirectoryName(SignatureFileName), Path.GetFileNameWithoutExtension(SignatureFileName)));
         }
     }
 }
