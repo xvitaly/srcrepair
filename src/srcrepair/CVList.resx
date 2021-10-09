@@ -2133,6 +2133,9 @@
   <data name="tf_decoy_lifetime" xml:space="preserve">
     <value>The lifetime of a decoy, in seconds.</value>
   </data>
+  <data name="tf_delete_temp_files" xml:space="preserve">
+    <value>Enable / disable automatic cleanup of temp files (including sprays) on game exit.</value>
+  </data>
   <data name="tf_dingalingaling" xml:space="preserve">
     <value>0/1 - turns weapon hit sound off/on.</value>
   </data>

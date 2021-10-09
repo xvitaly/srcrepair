@@ -3192,6 +3192,9 @@
   <data name="tf_damage_multiplier_red" xml:space="preserve">
     <value>Задаёт множитель, на которой будет умножен весь урон, получаемый командой Красных.</value>
   </data>
+  <data name="tf_delete_temp_files" xml:space="preserve">
+    <value>Разрешает / запрещает автоматическое удаление временных файлов, включая загруженные спреи других игроков, при выходе из игры.</value>
+  </data>
   <data name="tf_dingalingaling" xml:space="preserve">
     <value>Отключает / включает звук при попадании в противника.</value>
   </data>
