@@ -40,18 +40,16 @@ namespace srcrepair.gpg
         {
             PgpPublicKey Result = null;
             using (MemoryStream KeyStream = new MemoryStream(Encoding.ASCII.GetBytes(Properties.Resources.GPGPublicKey)))
+            using (Stream DecoderStream = PgpUtilities.GetDecoderStream(KeyStream))
             {
-                using (Stream DecoderStream = PgpUtilities.GetDecoderStream(KeyStream))
+                PgpPublicKeyRingBundle RingBundle = new PgpPublicKeyRingBundle(DecoderStream);
+                foreach (PgpPublicKeyRing Ring in RingBundle.GetKeyRings())
                 {
-                    PgpPublicKeyRingBundle RingBundle = new PgpPublicKeyRingBundle(DecoderStream);
-                    foreach (PgpPublicKeyRing Ring in RingBundle.GetKeyRings())
+                    foreach (PgpPublicKey Key in Ring.GetPublicKeys())
                     {
-                        foreach (PgpPublicKey Key in Ring.GetPublicKeys())
+                        if (Key.IsEncryptionKey && !Key.IsRevoked())
                         {
-                            if (Key.IsEncryptionKey && !Key.IsRevoked())
-                            {
-                                return Key;
-                            }
+                            return Key;
                         }
                     }
                 }
@@ -63,28 +61,21 @@ namespace srcrepair.gpg
         /// Encrypts file with pre-defined GPG public key.
         /// </summary>
         /// <param name="SourceFileName">Full path to the source file.</param>
-        /// <param name="SignatureFileName">Full path to the detached signature file.</param>
-        public static void EncryptFile(string SourceFileName, string SignatureFileName)
+        /// <param name="DestinationFileName">Full path to the destination file.</param>
+        public static void EncryptFile(string SourceFileName, string DestinationFileName)
         {
+            PgpEncryptedDataGenerator EncryptedDataGenerator = new PgpEncryptedDataGenerator(SymmetricKeyAlgorithmTag.Aes256, true, new SecureRandom());
+            PgpCompressedDataGenerator CompressedDataGenerator = new PgpCompressedDataGenerator(CompressionAlgorithmTag.Zip);
+            PgpLiteralDataGenerator LiteralDataGenerator = new PgpLiteralDataGenerator();
+            EncryptedDataGenerator.AddMethod(GetPublicKey());
+
             using (FileStream InputFileStream = new FileStream(SourceFileName, FileMode.Open))
+            using (FileStream OutputFileStream = new FileStream(DestinationFileName, FileMode.Create))
+            using (Stream EncryptedDataGeneratorStream = EncryptedDataGenerator.Open(OutputFileStream, new byte[4096]))
+            using (Stream CompressedDataGeneratorStream = CompressedDataGenerator.Open(EncryptedDataGeneratorStream))
+            using (Stream LiteralDataGeneratorStream = LiteralDataGenerator.Open(CompressedDataGeneratorStream, PgpLiteralData.Binary, String.Empty, InputFileStream.Length, DateTime.Now))
             {
-                using (FileStream OutputFileStream = new FileStream(SignatureFileName, FileMode.Create))
-                {
-                    PgpEncryptedDataGenerator EncryptedDataGenerator = new PgpEncryptedDataGenerator(SymmetricKeyAlgorithmTag.Aes256, true, new SecureRandom());
-                    EncryptedDataGenerator.AddMethod(GetPublicKey());
-                    using (Stream EncryptedDataGeneratorStream = EncryptedDataGenerator.Open(OutputFileStream, new byte[4096]))
-                    {
-                        PgpCompressedDataGenerator CompressedDataGenerator = new PgpCompressedDataGenerator(CompressionAlgorithmTag.Zip);
-                        using (Stream CompressedDataGeneratorStream = CompressedDataGenerator.Open(EncryptedDataGeneratorStream))
-                        {
-                            PgpLiteralDataGenerator LiteralDataGenerator = new PgpLiteralDataGenerator();
-                            using (Stream LiteralDataGeneratorStream = LiteralDataGenerator.Open(CompressedDataGeneratorStream, PgpLiteralData.Binary, String.Empty, InputFileStream.Length, DateTime.Now))
-                            {
-                                InputFileStream.CopyTo(LiteralDataGeneratorStream);
-                            }
-                        }
-                    }
-                }
+                InputFileStream.CopyTo(LiteralDataGeneratorStream);
             }
         }
 
@@ -106,28 +97,23 @@ namespace srcrepair.gpg
         public static bool VerifySignedFile(string SignatureFileName, string SourceFileName)
         {
             using (FileStream SignatureFileStream = new FileStream(SignatureFileName, FileMode.Open))
+            using (Stream SignatureFileDecoderStream = PgpUtilities.GetDecoderStream(SignatureFileStream))
             {
-                using (Stream SignatureFileDecoderStream = PgpUtilities.GetDecoderStream(SignatureFileStream))
+                PgpObjectFactory ObjectFactory = new PgpObjectFactory(SignatureFileDecoderStream);
+                if (!(ObjectFactory.NextPgpObject() is PgpSignatureList SignatureList)) throw new InvalidOperationException("Failed to create an instance of the PgpObjectFactory.");
+                SignatureList[0].InitVerify(GetPublicKey());
+                using (FileStream SourceFileStream = new FileStream(SourceFileName, FileMode.Open))
+                using (BufferedStream BufferedSourceFileStream = new BufferedStream(SourceFileStream))
                 {
-                    PgpObjectFactory pgpFact = new PgpObjectFactory(SignatureFileDecoderStream);
-                    if (!(pgpFact.NextPgpObject() is PgpSignatureList sList)) throw new InvalidOperationException("Failed to create an instance of the PgpObjectFactory.");
-                    PgpSignature firstSig = sList[0];
-                    firstSig.InitVerify(GetPublicKey());
-                    using (FileStream SourceFileStream = new FileStream(SourceFileName, FileMode.Open))
+                    const int BlockSize = 4096;
+                    byte[] Buffer = new byte[BlockSize];
+                    int BytesRead = 0;
+                    while ((BytesRead = BufferedSourceFileStream.Read(Buffer, 0, BlockSize)) != 0)
                     {
-                        using (BufferedStream BufferedSourceFileStream = new BufferedStream(SourceFileStream))
-                        {
-                            const int BlockSize = 4096;
-                            byte[] Buffer = new byte[BlockSize];
-                            int BytesRead = 0;
-                            while ((BytesRead = BufferedSourceFileStream.Read(Buffer, 0, BlockSize)) != 0)
-                            {
-                                firstSig.Update(Buffer, 0, BytesRead);
-                            }
-                        }
+                        SignatureList[0].Update(Buffer, 0, BytesRead);
                     }
-                    return firstSig.Verify();
                 }
+                return SignatureList[0].Verify();
             }
         }
 
