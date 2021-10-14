@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 38.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-23 16:57+0200\n"
-"PO-Revision-Date: 2021-09-23 16:57+0200\n"
+"POT-Creation-Date: 2021-10-14 16:59+0200\n"
+"PO-Revision-Date: 2021-10-14 16:59+0200\n"
 "Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -625,26 +625,12 @@ msgid "**URL**"
 msgstr "**Дом. страница**"
 
 #: ../../source/legal.rst:1
-msgid "BouncyCastle"
+msgid "DotNetZip"
 msgstr ""
 
 #: ../../source/legal.rst:1
 msgid "Dynamic (shared)"
 msgstr "Динамическая (DLL)"
-
-#: ../../source/legal.rst:1
-msgid ""
-"`MIT + Apache 2.0 <https://github.com/bcgit/bc-csharp/blob/master/crypto/"
-"License.html>`__"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "`GitHub page <https://github.com/bcgit/bc-csharp>`__"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "DotNetZip"
-msgstr ""
 
 #: ../../source/legal.rst:1
 msgid ""
@@ -667,15 +653,15 @@ msgstr ""
 msgid "`GitHub page <https://github.com/NLog/NLog>`__"
 msgstr ""
 
-#: ../../source/legal.rst:98
+#: ../../source/legal.rst:97
 msgid "Trademarks"
 msgstr "Торговые марки"
 
-#: ../../source/legal.rst:101
+#: ../../source/legal.rst:100
 msgid "Valve"
 msgstr ""
 
-#: ../../source/legal.rst:103
+#: ../../source/legal.rst:102
 msgid ""
 "Valve, the Valve logo, Half-Life, the Half-Life logo, the Lambda logo, "
 "Steam, the Steam logo, Team Fortress, the Team Fortress logo, Opposing "
@@ -692,11 +678,11 @@ msgstr ""
 "торговыми марками и/или зарегистрированными торговыми марками Корпорации "
 "Valve."
 
-#: ../../source/legal.rst:106
+#: ../../source/legal.rst:105
 msgid "Microsoft"
 msgstr ""
 
-#: ../../source/legal.rst:108
+#: ../../source/legal.rst:107
 msgid ""
 "Microsoft, Windows are trademarks and/or registered trademarks of Microsoft "
 "Corporation."
@@ -704,10 +690,10 @@ msgstr ""
 "Microsoft, Windows являются торговыми марками и/или зарегистрированными "
 "торговыми марками Корпорации Microsoft."
 
-#: ../../source/legal.rst:111
+#: ../../source/legal.rst:110
 msgid "Other"
 msgstr "Прочие"
 
-#: ../../source/legal.rst:113
+#: ../../source/legal.rst:112
 msgid "All other trademarks are property of their respective owners."
 msgstr "Все прочие торговые марки являются собственностью их владельцев."

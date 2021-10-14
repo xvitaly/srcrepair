@@ -29,11 +29,9 @@ using System.Net;
 using System.Resources;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using NLog;
 using srcrepair.core;
-using srcrepair.gpg;
 
 namespace srcrepair.gui
 {
@@ -1746,37 +1744,6 @@ namespace srcrepair.gui
         }
 
         #endregion
-
-        /// <summary>
-        /// Asynchronically verifies the GPG signature of the specified file.
-        /// </summary>
-        /// <param name="FileName">Full path to the source file.</param>
-        /// <returns>Returns True if signature check passed.</returns>
-        private async Task<bool> VerifySignaturesTask(string FileName)
-        {
-            return await Task.Run(() =>
-            {
-                return Task.FromResult(GPGManager.VerifySignedFile(FileName));
-            });
-        }
-
-        /// <summary>
-        /// Verifies GPG signatures of the project.
-        /// </summary>
-        private async void VerifySignatures()
-        {
-            try
-            {
-                if (!await VerifySignaturesTask(CurrentApp.AssemblyLocation))
-                {
-                    Logger.Error("GPG signatures verifications failed.");
-                }
-            }
-            catch (Exception Ex)
-            {
-                Logger.Error(Ex);
-            }
-        }
         
         /// <summary>
         /// "Form create" event handler.
@@ -1794,7 +1761,6 @@ namespace srcrepair.gui
             CheckSymbolsSteam();
             FindGames();
             CheckForUpdates();
-            VerifySignatures();
         }
 
         /// <summary>
