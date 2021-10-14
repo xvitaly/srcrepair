@@ -69,7 +69,7 @@ namespace srcrepair.gpg
             PgpLiteralDataGenerator LiteralDataGenerator = new PgpLiteralDataGenerator();
             EncryptedDataGenerator.AddMethod(GetPublicKey());
 
-            using (FileStream InputFileStream = new FileStream(SourceFileName, FileMode.Open))
+            using (FileStream InputFileStream = new FileStream(SourceFileName, FileMode.Open, FileAccess.Read))
             using (FileStream OutputFileStream = new FileStream(DestinationFileName, FileMode.Create))
             using (Stream EncryptedDataGeneratorStream = EncryptedDataGenerator.Open(OutputFileStream, new byte[4096]))
             using (Stream CompressedDataGeneratorStream = CompressedDataGenerator.Open(EncryptedDataGeneratorStream))
@@ -96,13 +96,13 @@ namespace srcrepair.gpg
         /// <returns>Returns True if signature check passed.</returns>
         public static bool VerifySignedFile(string SignatureFileName, string SourceFileName)
         {
-            using (FileStream SignatureFileStream = new FileStream(SignatureFileName, FileMode.Open))
+            using (FileStream SignatureFileStream = new FileStream(SignatureFileName, FileMode.Open, FileAccess.Read))
             using (Stream SignatureFileDecoderStream = PgpUtilities.GetDecoderStream(SignatureFileStream))
             {
                 PgpObjectFactory ObjectFactory = new PgpObjectFactory(SignatureFileDecoderStream);
                 if (!(ObjectFactory.NextPgpObject() is PgpSignatureList SignatureList)) throw new InvalidOperationException("Failed to create an instance of the PgpObjectFactory.");
                 SignatureList[0].InitVerify(GetPublicKey());
-                using (FileStream SourceFileStream = new FileStream(SourceFileName, FileMode.Open))
+                using (FileStream SourceFileStream = new FileStream(SourceFileName, FileMode.Open, FileAccess.Read))
                 using (BufferedStream BufferedSourceFileStream = new BufferedStream(SourceFileStream))
                 {
                     const int BlockSize = 4096;
