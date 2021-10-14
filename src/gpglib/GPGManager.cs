@@ -38,7 +38,6 @@ namespace srcrepair.gpg
         /// <returns>Returns GPG public key instance.</returns>
         private static PgpPublicKey GetPublicKey()
         {
-            PgpPublicKey Result = null;
             using (MemoryStream KeyStream = new MemoryStream(Encoding.ASCII.GetBytes(Properties.Resources.GPGPublicKey)))
             using (Stream DecoderStream = PgpUtilities.GetDecoderStream(KeyStream))
             {
@@ -54,7 +53,7 @@ namespace srcrepair.gpg
                     }
                 }
             }
-            return Result;
+            return null;
         }
 
         /// <summary>
