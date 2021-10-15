@@ -772,11 +772,16 @@ namespace srcrepair.gui
         /// <summary>
         /// Find installed plugins.
         /// </summary>
-        private void FindPlugins()
+        private async void FindPlugins()
         {
-            if (!BW_PluginsList.IsBusy)
+            try
             {
-                BW_PluginsList.RunWorkerAsync();
+                await FindPluginsTask();
+                RegisterPlugins();
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExPluginsInit);
             }
         }
 
@@ -1671,30 +1676,14 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Gets collection of available plugins.
+        /// Gets a collection of available plugins in a separate thread.
         /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Additional arguments.</param>
-        private void BW_PluginsList_DoWork(object sender, DoWorkEventArgs e)
+        private async Task FindPluginsTask()
         {
-            App.Plugins = new PluginManager(App.FullAppPath);
-        }
-
-        /// <summary>
-        /// Finalizes check of available plugins.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Completion arguments and results.</param>
-        private void BW_PluginsList_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            if (e.Error == null)
+            await Task.Run(() =>
             {
-                RegisterPlugins();
-            }
-            else
-            {
-                Logger.Warn(e.Error, DebugStrings.AppDbgExPluginsInit);
-            }
+                App.Plugins = new PluginManager(App.FullAppPath);
+            });
         }
 
         #endregion
