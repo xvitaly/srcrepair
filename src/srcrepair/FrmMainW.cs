@@ -1537,7 +1537,7 @@ namespace srcrepair.gui
 
         #endregion
 
-        #region Internal Workers
+        #region Asynchronous Methods
 
         /// <summary>
         /// Checks for application updates in a separate thread.
