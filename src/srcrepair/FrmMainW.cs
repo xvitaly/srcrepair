@@ -1287,6 +1287,26 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Installs the selected HUD.
+        /// </summary>
+        private async void HandleHUDInstallation()
+        {
+            try
+            {
+                HD_Install.Enabled = false;
+                await HandleHUDInstallationTask(AppSelector.Text, HD_HSel.Text);
+                HD_Install.Enabled = true;
+                MessageBox.Show(AppStrings.HD_InstallSuccessfull, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                SetHUDButtons(HUDManager.CheckInstalledHUD(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir));
+            }
+            catch (Exception Ex)
+            {
+                Logger.Error(Ex, DebugStrings.AppDbgExHUDInstall);
+                MessageBox.Show(AppStrings.HD_InstallError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
         /// Searches for available cleanup targets.
         /// </summary>
         private void HandleCleanupTargets()
@@ -1487,11 +1507,7 @@ namespace srcrepair.gui
                 GuiHelpers.FormShowArchiveExtract(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LocalFile, Path.Combine(App.SourceGames[AppSelector.Text].CustomInstallDir, "hudtemp"));
 
                 // Installing files in a separate thread...
-                HD_Install.Enabled = false;
-                if (!BW_HudInstall.IsBusy)
-                {
-                    BW_HudInstall.RunWorkerAsync(argument: new List<String> { AppSelector.Text, HD_HSel.Text });
-                }
+                HandleHUDInstallation();
             }
             else
             {
@@ -1607,53 +1623,34 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Finalizes installation of selected HUD.
+        /// Finalizes installation of the selected HUD in a separate thread.
         /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Additional arguments.</param>
-        private void BW_HudInstall_DoWork(object sender, DoWorkEventArgs e)
+        /// <param name="SelectedGame">Selected game name.</param>
+        /// <param name="SelectedHUD">Selected HUD name.</param>
+        private async Task HandleHUDInstallationTask(string SelectedGame, string SelectedHUD)
         {
-            List<String> Arguments = e.Argument as List<String>;
-            string InstallTmp = Path.Combine(App.SourceGames[Arguments[0]].CustomInstallDir, "hudtemp");
-
-            try
-            {
-                Directory.Move(Path.Combine(InstallTmp, HUDManager.FormatIntDir(App.SourceGames[Arguments[0]].HUDMan[Arguments[1]].ArchiveDir)), Path.Combine(App.SourceGames[Arguments[0]].CustomInstallDir, App.SourceGames[Arguments[0]].HUDMan[Arguments[1]].InstallDir));
-            }
-            finally
+            string InstallTmp = Path.Combine(App.SourceGames[SelectedGame].CustomInstallDir, "hudtemp");
+            await Task.Run(() =>
             {
                 try
                 {
-                    if (Directory.Exists(InstallTmp))
+                    Directory.Move(Path.Combine(InstallTmp, HUDManager.FormatIntDir(App.SourceGames[SelectedGame].HUDMan[SelectedHUD].ArchiveDir)), Path.Combine(App.SourceGames[SelectedGame].CustomInstallDir, App.SourceGames[SelectedGame].HUDMan[SelectedHUD].InstallDir));
+                }
+                finally
+                {
+                    try
                     {
-                        Directory.Delete(InstallTmp, true);
+                        if (Directory.Exists(InstallTmp))
+                        {
+                            Directory.Delete(InstallTmp, true);
+                        }
+                    }
+                    catch (Exception Ex)
+                    {
+                        Logger.Warn(Ex);
                     }
                 }
-                catch (Exception Ex)
-                {
-                    Logger.Warn(Ex);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Returns information with HUD installation result.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Completion arguments and results.</param>
-        private void BW_HudInstall_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            HD_Install.Enabled = true;
-            if (e.Error == null)
-            {
-                MessageBox.Show(AppStrings.HD_InstallSuccessfull, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show(AppStrings.HD_InstallError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Logger.Error(e.Error, DebugStrings.AppDbgExHUDInstall);
-            }
-            SetHUDButtons(HUDManager.CheckInstalledHUD(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir));
+            });
         }
 
         /// <summary>
@@ -1821,7 +1818,7 @@ namespace srcrepair.gui
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                e.Cancel = (Properties.Settings.Default.ConfirmExit && !(MessageBox.Show(String.Format(AppStrings.FrmCloseQuery, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)) || (UpdateBackUpListTask(AppSelector.Text).Status == TaskStatus.Running || HandleFpsConfigsTask(AppSelector.Text).Status == TaskStatus.Running || BW_HudInstall.IsBusy || HandleHUDsTask(AppSelector.Text).Status == TaskStatus.Running || HandleHUDScreenshotTask(AppSelector.Text, HD_HSel.Text).Status == TaskStatus.Running || BW_ClnList.IsBusy || CheckForUpdatesTask().Status == TaskStatus.Running);
+                e.Cancel = (Properties.Settings.Default.ConfirmExit && !(MessageBox.Show(String.Format(AppStrings.FrmCloseQuery, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes));
             }
         }
 
