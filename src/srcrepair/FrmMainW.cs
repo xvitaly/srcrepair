@@ -1216,17 +1216,18 @@ namespace srcrepair.gui
         /// <summary>
         /// Searches for available HUDs.
         /// </summary>
-        private void HandleHUDs()
+        private async void HandleHUDs()
         {
             if (App.SourceGames[AppSelector.Text].IsHUDsAvailable)
             {
-                // Creating local directory for saving HUDs if does not exists...
-                if (!Directory.Exists(App.SourceGames[AppSelector.Text].AppHUDDir)) { Directory.CreateDirectory(App.SourceGames[AppSelector.Text].AppHUDDir); }
-
-                // Updating HUDs list in a separate thread...
-                if (!BW_HUDList.IsBusy)
+                try
                 {
-                    BW_HUDList.RunWorkerAsync(AppSelector.Text);
+                    await HandleHUDsTask(AppSelector.Text);
+                    HD_HSel.Items.AddRange(App.SourceGames[AppSelector.Text].HUDMan.AvailableHUDNames.ToArray<object>());
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex);
                 }
             }
         }
@@ -1541,30 +1542,22 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Gets collection of available HUDs.
+        /// Gets a collection of available HUDs for the selected game
+        /// in a separate thread.
         /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Additional arguments.</param>
-        private void BW_HUDList_DoWork(object sender, DoWorkEventArgs e)
+        private async Task HandleHUDsTask(string SelectedGame)
         {
-            App.SourceGames[(string)e.Argument].HUDMan = new HUDManager(App.SourceGames[(string)e.Argument].SmallAppName, App.FullAppPath, App.SourceGames[(string)e.Argument].AppHUDDir, Properties.Settings.Default.HUDHideOutdated);
-        }
+            await Task.Run(() =>
+            {
+                // Creating if the local directory for HUDs exists. If not, creating it...
+                if (!Directory.Exists(App.SourceGames[SelectedGame].AppHUDDir))
+                {
+                    Directory.CreateDirectory(App.SourceGames[SelectedGame].AppHUDDir);
+                }
 
-        /// <summary>
-        /// Renders collection of available HUDs on its tab.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Completion arguments and results.</param>
-        private void BW_HUDList_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            if (e.Error == null)
-            {
-                HD_HSel.Items.AddRange(App.SourceGames[AppSelector.Text].HUDMan.AvailableHUDNames.ToArray<object>());
-            }
-            else
-            {
-                Logger.Warn(e.Error);
-            }
+                // Building the HUD collection...
+                App.SourceGames[SelectedGame].HUDMan = new HUDManager(App.SourceGames[SelectedGame].SmallAppName, App.FullAppPath, App.SourceGames[SelectedGame].AppHUDDir, Properties.Settings.Default.HUDHideOutdated);
+            });
         }
 
         /// <summary>
@@ -1827,7 +1820,7 @@ namespace srcrepair.gui
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                e.Cancel = (Properties.Settings.Default.ConfirmExit && !(MessageBox.Show(String.Format(AppStrings.FrmCloseQuery, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)) || (UpdateBackUpListTask(AppSelector.Text).Status == TaskStatus.Running || HandleFpsConfigsTask(AppSelector.Text).Status == TaskStatus.Running || BW_HudInstall.IsBusy || BW_HUDList.IsBusy || BW_HUDScreen.IsBusy || BW_ClnList.IsBusy || CheckForUpdatesTask().Status == TaskStatus.Running);
+                e.Cancel = (Properties.Settings.Default.ConfirmExit && !(MessageBox.Show(String.Format(AppStrings.FrmCloseQuery, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)) || (UpdateBackUpListTask(AppSelector.Text).Status == TaskStatus.Running || HandleFpsConfigsTask(AppSelector.Text).Status == TaskStatus.Running || BW_HudInstall.IsBusy || HandleHUDsTask(AppSelector.Text).Status == TaskStatus.Running || BW_HUDScreen.IsBusy || BW_ClnList.IsBusy || CheckForUpdatesTask().Status == TaskStatus.Running);
             }
         }
 
