@@ -229,7 +229,6 @@
             this.CE_OpenCfgDialog = new System.Windows.Forms.OpenFileDialog();
             this.CE_SaveCfgDialog = new System.Windows.Forms.SaveFileDialog();
             this.FldrBrwse = new System.Windows.Forms.FolderBrowserDialog();
-            this.BW_FPRecv = new System.ComponentModel.BackgroundWorker();
             this.BW_BkUpRecv = new System.ComponentModel.BackgroundWorker();
             this.BW_HUDList = new System.ComponentModel.BackgroundWorker();
             this.BW_HUDScreen = new System.ComponentModel.BackgroundWorker();
@@ -1922,11 +1921,6 @@
             resources.ApplyResources(this.FldrBrwse, "FldrBrwse");
             this.FldrBrwse.ShowNewFolderButton = false;
             // 
-            // BW_FPRecv
-            // 
-            this.BW_FPRecv.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_FPRecv_DoWork);
-            this.BW_FPRecv.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BW_FPRecv_RunWorkerCompleted);
-            // 
             // BW_BkUpRecv
             // 
             this.BW_BkUpRecv.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_BkUpRecv_DoWork);
@@ -2187,7 +2181,6 @@
         private System.Windows.Forms.Label L_GT_NCF_Multicore;
         private System.Windows.Forms.ComboBox GT_NCF_Quality;
         private System.Windows.Forms.Label PS_StPath;
-        private System.ComponentModel.BackgroundWorker BW_FPRecv;
         private System.ComponentModel.BackgroundWorker BW_BkUpRecv;
         private System.Windows.Forms.TabPage HUDInstall;
         private System.Windows.Forms.ImageList TabIcons;

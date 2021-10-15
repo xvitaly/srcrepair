@@ -1229,11 +1229,36 @@ namespace srcrepair.gui
         /// <summary>
         /// Searches for available FPS-configs.
         /// </summary>
-        private void HandleFpsConfigs()
+        private async void HandleFpsConfigs()
         {
-            if (!BW_FPRecv.IsBusy)
+            try
             {
-                BW_FPRecv.RunWorkerAsync(AppSelector.Text);
+                // Building collection in a separate thread...
+                await HandleFpsConfigsTask(AppSelector.Text);
+
+                // Adding configs to collection...
+                FP_ConfigSel.Items.AddRange(App.SourceGames[AppSelector.Text].CFGMan.ConfigNames.ToArray());
+
+                // Checking if collection contains any items...
+                if (FP_ConfigSel.Items.Count >= 1)
+                {
+                    FP_Description.Text = AppStrings.FP_SelectFromList;
+                    FP_Description.ForeColor = Color.Black;
+                }
+            }
+            catch (Exception Ex)
+            {
+                // Exception detected. Writing to log...
+                Logger.Warn(Ex);
+
+                // Showing message...
+                FP_Description.Text = AppStrings.FP_NoCfgGame;
+                FP_Description.ForeColor = Color.Red;
+
+                // Blockg some form controls...
+                FP_Install.Enabled = false;
+                FP_ConfigSel.Enabled = false;
+                FP_OpenNotepad.Enabled = false;
             }
         }
 
@@ -1478,48 +1503,16 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Gets collection of available FPS-configs.
+        /// Gets collection of available FPS-configs for the selected game
+        /// in a separate thread.
         /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Additional arguments.</param>
-        private void BW_FPRecv_DoWork(object sender, DoWorkEventArgs e)
+        /// <param name="SelectedGame">Selected game name.</param>
+        private async Task HandleFpsConfigsTask(string SelectedGame)
         {
-            App.SourceGames[(string)e.Argument].CFGMan = new ConfigManager(App.FullAppPath, App.SourceGames[(string)e.Argument].AppCfgDir, App.SourceGames[(string)e.Argument].IsUsingUserDir ? App.SourceGames[(string)e.Argument].CustomInstallDir : App.SourceGames[(string)e.Argument].FullGamePath, AppStrings.AppLangPrefix);
-        }
-
-        /// <summary>
-        /// Renders collection of available FPS-configs on its tab.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Completion arguments and results.</param>
-        private void BW_FPRecv_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            if (e.Error == null)
+            await Task.Run(() =>
             {
-                // Adding configs to collection...
-                FP_ConfigSel.Items.AddRange(App.SourceGames[AppSelector.Text].CFGMan.ConfigNames.ToArray());
-
-                // Checking if collection contains any items...
-                if (FP_ConfigSel.Items.Count >= 1)
-                {
-                    FP_Description.Text = AppStrings.FP_SelectFromList;
-                    FP_Description.ForeColor = Color.Black;
-                }
-            }
-            else
-            {
-                // Exception detected. Writing to log...
-                Logger.Warn(e.Error);
-
-                // Showing message...
-                FP_Description.Text = AppStrings.FP_NoCfgGame;
-                FP_Description.ForeColor = Color.Red;
-
-                // Blockg some form controls...
-                FP_Install.Enabled = false;
-                FP_ConfigSel.Enabled = false;
-                FP_OpenNotepad.Enabled = false;
-            }
+                App.SourceGames[SelectedGame].CFGMan = new ConfigManager(App.FullAppPath, App.SourceGames[SelectedGame].AppCfgDir, App.SourceGames[SelectedGame].IsUsingUserDir ? App.SourceGames[SelectedGame].CustomInstallDir : App.SourceGames[SelectedGame].FullGamePath, AppStrings.AppLangPrefix);
+            });
         }
 
         /// <summary>
@@ -1849,7 +1842,7 @@ namespace srcrepair.gui
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                e.Cancel = (Properties.Settings.Default.ConfirmExit && !(MessageBox.Show(String.Format(AppStrings.FrmCloseQuery, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)) || (BW_BkUpRecv.IsBusy || BW_FPRecv.IsBusy || BW_HudInstall.IsBusy || BW_HUDList.IsBusy || BW_HUDScreen.IsBusy || BW_ClnList.IsBusy || CheckForUpdatesTask().Status == TaskStatus.Running);
+                e.Cancel = (Properties.Settings.Default.ConfirmExit && !(MessageBox.Show(String.Format(AppStrings.FrmCloseQuery, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)) || (BW_BkUpRecv.IsBusy || HandleFpsConfigsTask(AppSelector.Text).Status == TaskStatus.Running || BW_HudInstall.IsBusy || BW_HUDList.IsBusy || BW_HUDScreen.IsBusy || BW_ClnList.IsBusy || CheckForUpdatesTask().Status == TaskStatus.Running);
             }
         }
 
