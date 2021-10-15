@@ -29,6 +29,7 @@ using System.Net;
 using System.Resources;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using NLog;
 using srcrepair.core;
@@ -1087,15 +1088,27 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Launches program update checker.
+        /// Launches a program update checker in a separate thread, waits for the
+        /// result and returns a message if found.
         /// </summary>
-        private void CheckForUpdates()
+        private async void CheckForUpdates()
         {
             if (Properties.Settings.Default.AutoUpdateCheck && IsAutoUpdateCheckNeeded())
             {
-                if (!BW_UpChk.IsBusy)
+                try
                 {
-                    BW_UpChk.RunWorkerAsync();
+                    if (await CheckForUpdatesTask())
+                    {
+                        MessageBox.Show(String.Format(AppStrings.AppUpdateAvailable, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        Properties.Settings.Default.LastUpdateTime = DateTime.Now;
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex, DebugStrings.AppDbgExBgWChk);
                 }
             }
         }
@@ -1456,34 +1469,12 @@ namespace srcrepair.gui
         /// Checks for application updates in a separate thread.
         /// </summary>
         /// <param name="sender">Sender object.</param>
-        /// <param name="e">Additional arguments.</param>
-        private void BW_UpChk_DoWork(object sender, DoWorkEventArgs e)
+        private async Task<bool> CheckForUpdatesTask()
         {
-            e.Result = AutoUpdateCheck();
-        }
-
-        /// <summary>
-        /// Handles result of application update check.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Completion arguments and results.</param>
-        private void BW_UpChk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            if (e.Error == null)
+            return await Task.Run(() =>
             {
-                if ((bool)e.Result)
-                {
-                    MessageBox.Show(String.Format(AppStrings.AppUpdateAvailable, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    Properties.Settings.Default.LastUpdateTime = DateTime.Now;
-                }
-            }
-            else
-            {
-                Logger.Warn(e.Error, DebugStrings.AppDbgExBgWChk);
-            }
+                return Task.FromResult(AutoUpdateCheck());
+            });
         }
 
         /// <summary>
@@ -1858,7 +1849,7 @@ namespace srcrepair.gui
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                e.Cancel = (Properties.Settings.Default.ConfirmExit && !(MessageBox.Show(String.Format(AppStrings.FrmCloseQuery, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)) || (BW_BkUpRecv.IsBusy || BW_FPRecv.IsBusy || BW_HudInstall.IsBusy || BW_HUDList.IsBusy || BW_HUDScreen.IsBusy || BW_UpChk.IsBusy || BW_ClnList.IsBusy);
+                e.Cancel = (Properties.Settings.Default.ConfirmExit && !(MessageBox.Show(String.Format(AppStrings.FrmCloseQuery, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)) || (BW_BkUpRecv.IsBusy || BW_FPRecv.IsBusy || BW_HudInstall.IsBusy || BW_HUDList.IsBusy || BW_HUDScreen.IsBusy || BW_ClnList.IsBusy || CheckForUpdatesTask().Status == TaskStatus.Running);
             }
         }
 
