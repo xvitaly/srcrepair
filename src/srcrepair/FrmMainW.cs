@@ -1517,7 +1517,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Checks for application updates in a separate thread.
         /// </summary>
-        /// <param name="sender">Sender object.</param>
+        /// <returns>Returns True if updates were found.</returns>
         private async Task<bool> CheckForUpdatesTask()
         {
             return await Task.Run(() =>
@@ -1543,6 +1543,8 @@ namespace srcrepair.gui
         /// Gets collection of available backups for the selected game
         /// in a separate thread.
         /// </summary>
+        /// <param name="SelectedGame">Selected game name.</param>
+        /// <returns>Returns array of available backup files.</returns>
         private async Task<FileInfo[]> UpdateBackUpListTask(string SelectedGame)
         {
             return await Task.Run(() =>
@@ -1563,6 +1565,7 @@ namespace srcrepair.gui
         /// Gets a collection of available HUDs for the selected game
         /// in a separate thread.
         /// </summary>
+        /// <param name="SelectedGame">Selected game name.</param>
         private async Task HandleHUDsTask(string SelectedGame)
         {
             await Task.Run(() =>
@@ -1581,6 +1584,9 @@ namespace srcrepair.gui
         /// <summary>
         /// Gets a screenshot of selected HUD in a separate thread.
         /// </summary>
+        /// <param name="SelectedGame">Selected game name.</param>
+        /// <param name="SelectedHUD">Selected HUD name.</param>
+        /// <returns>Returns full path to the HUD screenshot file.</returns>
         private async Task<string> HandleHUDScreenshotTask(string SelectedGame, string SelectedHUD)
         {
             // Generating full file name for HUD screenshot...
