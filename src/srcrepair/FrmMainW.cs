@@ -1036,11 +1036,16 @@ namespace srcrepair.gui
         /// <summary>
         /// Gets full list of available backups in a separate thread.
         /// </summary>
-        private void UpdateBackUpList()
+        private async void UpdateBackUpList()
         {
-            if (!BW_BkUpRecv.IsBusy)
+            try
             {
-                BW_BkUpRecv.RunWorkerAsync(AppSelector.Text);
+                BU_LVTable.Items.Clear();
+                AddBackUpsToTable(await UpdateBackUpListTask(AppSelector.Text));
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex);
             }
         }
 
@@ -1516,43 +1521,23 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Gets collection of available backups.
+        /// Gets collection of available backups for the selected game
+        /// in a separate thread.
         /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Additional arguments.</param>
-        private void BW_BkUpRecv_DoWork(object sender, DoWorkEventArgs e)
+        private async Task<FileInfo[]> UpdateBackUpListTask(string SelectedGame)
         {
-            if (!Directory.Exists(App.SourceGames[(string)e.Argument].FullBackUpDirPath))
+            return await Task.Run(() =>
             {
-                Directory.CreateDirectory(App.SourceGames[(string)e.Argument].FullBackUpDirPath);
-            }
-            DirectoryInfo DInfo = new DirectoryInfo(App.SourceGames[(string)e.Argument].FullBackUpDirPath);
-            e.Result = DInfo.GetFiles("*.*");
-        }
+                // Checking if the directory exists. If not, creating it...
+                if (!Directory.Exists(App.SourceGames[SelectedGame].FullBackUpDirPath))
+                {
+                    Directory.CreateDirectory(App.SourceGames[SelectedGame].FullBackUpDirPath);
+                }
 
-        /// <summary>
-        /// Renders collection of available backups on its tab.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Completion arguments and results.</param>
-        private void BW_BkUpRecv_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            if (e.Error == null)
-            {
-                try
-                {
-                    BU_LVTable.Items.Clear();
-                    AddBackUpsToTable((FileInfo[])e.Result);
-                }
-                catch (Exception Ex)
-                {
-                    Logger.Warn(Ex);
-                }
-            }
-            else
-            {
-                Logger.Warn(e.Error);
-            }
+                // Getting the list of files in the game backups directory...
+                DirectoryInfo DInfo = new DirectoryInfo(App.SourceGames[SelectedGame].FullBackUpDirPath);
+                return Task.FromResult(DInfo.GetFiles("*.*"));
+            });
         }
 
         /// <summary>
@@ -1842,7 +1827,7 @@ namespace srcrepair.gui
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                e.Cancel = (Properties.Settings.Default.ConfirmExit && !(MessageBox.Show(String.Format(AppStrings.FrmCloseQuery, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)) || (BW_BkUpRecv.IsBusy || HandleFpsConfigsTask(AppSelector.Text).Status == TaskStatus.Running || BW_HudInstall.IsBusy || BW_HUDList.IsBusy || BW_HUDScreen.IsBusy || BW_ClnList.IsBusy || CheckForUpdatesTask().Status == TaskStatus.Running);
+                e.Cancel = (Properties.Settings.Default.ConfirmExit && !(MessageBox.Show(String.Format(AppStrings.FrmCloseQuery, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)) || (UpdateBackUpListTask(AppSelector.Text).Status == TaskStatus.Running || HandleFpsConfigsTask(AppSelector.Text).Status == TaskStatus.Running || BW_HudInstall.IsBusy || BW_HUDList.IsBusy || BW_HUDScreen.IsBusy || BW_ClnList.IsBusy || CheckForUpdatesTask().Status == TaskStatus.Running);
             }
         }
 
