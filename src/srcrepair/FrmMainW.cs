@@ -909,6 +909,24 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Downloads and shows on the form screenshot of the selected HUD.
+        /// </summary>
+        private async void HandleHUDScreenshot()
+        {
+            string HUDScreenshotFile = String.Empty;
+            try
+            {
+                HUDScreenshotFile = await HandleHUDScreenshotTask(AppSelector.Text, HD_HSel.Text);
+                HD_GB_Pbx.Image = Image.FromFile(HUDScreenshotFile);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex);
+                if (File.Exists(HUDScreenshotFile)) { File.Delete(HUDScreenshotFile); }
+            }
+        }
+
+        /// <summary>
         /// Handles with current Steam UserID.
         /// </summary>
         /// <param name="SID">Last used Steam UserID.</param>
@@ -1561,17 +1579,12 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Gets screenshot of selected HUD from disk or URL.
+        /// Gets a screenshot of selected HUD in a separate thread.
         /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Additional arguments.</param>
-        private void BW_HUDScreen_DoWork(object sender, DoWorkEventArgs e)
+        private async Task<string> HandleHUDScreenshotTask(string SelectedGame, string SelectedHUD)
         {
-            // Parsing arguments...
-            List<String> Agruments = e.Argument as List<String>;
-
             // Generating full file name for HUD screenshot...
-            string ScreenFile = Path.Combine(App.SourceGames[Agruments[0]].AppHUDDir, Path.GetFileName(App.SourceGames[Agruments[0]].HUDMan[Agruments[1]].Preview));
+            string ScreenFile = Path.Combine(App.SourceGames[SelectedGame].AppHUDDir, Path.GetFileName(App.SourceGames[SelectedGame].HUDMan[SelectedHUD].Preview));
 
             // Downloading file if it doesn't exists...
             if (!File.Exists(ScreenFile))
@@ -1579,30 +1592,12 @@ namespace srcrepair.gui
                 using (WebClient Downloader = new WebClient())
                 {
                     Downloader.Headers.Add("User-Agent", App.UserAgent);
-                    Downloader.DownloadFile(App.SourceGames[Agruments[0]].HUDMan[Agruments[1]].Preview, ScreenFile);
+                    await Downloader.DownloadFileTaskAsync(App.SourceGames[SelectedGame].HUDMan[SelectedHUD].Preview, ScreenFile);
                 }
             }
 
             // Returning result to callback...
-            e.Result = ScreenFile;
-        }
-
-        /// <summary>
-        /// Renders screenshot of selected HUD on its tab.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Completion arguments and results.</param>
-        private void BW_HUDScreen_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            if (e.Error == null)
-            {
-                HD_GB_Pbx.Image = Image.FromFile((string)e.Result);
-            }
-            else
-            {
-                Logger.Warn(e.Error);
-                if (File.Exists((string)e.Result)) { File.Delete((string)e.Result); }
-            }
+            return ScreenFile;
         }
 
         /// <summary>
@@ -1820,7 +1815,7 @@ namespace srcrepair.gui
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                e.Cancel = (Properties.Settings.Default.ConfirmExit && !(MessageBox.Show(String.Format(AppStrings.FrmCloseQuery, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)) || (UpdateBackUpListTask(AppSelector.Text).Status == TaskStatus.Running || HandleFpsConfigsTask(AppSelector.Text).Status == TaskStatus.Running || BW_HudInstall.IsBusy || HandleHUDsTask(AppSelector.Text).Status == TaskStatus.Running || BW_HUDScreen.IsBusy || BW_ClnList.IsBusy || CheckForUpdatesTask().Status == TaskStatus.Running);
+                e.Cancel = (Properties.Settings.Default.ConfirmExit && !(MessageBox.Show(String.Format(AppStrings.FrmCloseQuery, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)) || (UpdateBackUpListTask(AppSelector.Text).Status == TaskStatus.Running || HandleFpsConfigsTask(AppSelector.Text).Status == TaskStatus.Running || BW_HudInstall.IsBusy || HandleHUDsTask(AppSelector.Text).Status == TaskStatus.Running || HandleHUDScreenshotTask(AppSelector.Text, HD_HSel.Text).Status == TaskStatus.Running || BW_ClnList.IsBusy || CheckForUpdatesTask().Status == TaskStatus.Running);
             }
         }
 
@@ -3225,10 +3220,7 @@ namespace srcrepair.gui
             SetHUDButtons(HUDManager.CheckInstalledHUD(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir));
 
             // Downloading screenshot...
-            if (Success && !BW_HUDScreen.IsBusy)
-            {
-                BW_HUDScreen.RunWorkerAsync(argument: new List<String> { AppSelector.Text, HD_HSel.Text });
-            }
+            if (Success) HandleHUDScreenshot();
         }
 
         /// <summary>

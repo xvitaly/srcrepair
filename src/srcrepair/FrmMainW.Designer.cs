@@ -229,7 +229,6 @@
             this.CE_OpenCfgDialog = new System.Windows.Forms.OpenFileDialog();
             this.CE_SaveCfgDialog = new System.Windows.Forms.SaveFileDialog();
             this.FldrBrwse = new System.Windows.Forms.FolderBrowserDialog();
-            this.BW_HUDScreen = new System.ComponentModel.BackgroundWorker();
             this.BW_HudInstall = new System.ComponentModel.BackgroundWorker();
             this.AppRefresh = new System.Windows.Forms.Button();
             this.BW_ClnList = new System.ComponentModel.BackgroundWorker();
@@ -1919,11 +1918,6 @@
             resources.ApplyResources(this.FldrBrwse, "FldrBrwse");
             this.FldrBrwse.ShowNewFolderButton = false;
             // 
-            // BW_HUDScreen
-            // 
-            this.BW_HUDScreen.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_HUDScreen_DoWork);
-            this.BW_HUDScreen.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BW_HUDScreen_RunWorkerCompleted);
-            // 
             // BW_HudInstall
             // 
             this.BW_HudInstall.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_HudInstall_DoWork);
@@ -2172,7 +2166,6 @@
         private System.Windows.Forms.TabPage HUDInstall;
         private System.Windows.Forms.ImageList TabIcons;
         private System.Windows.Forms.Label HD_WelcMsg;
-        private System.ComponentModel.BackgroundWorker BW_HUDScreen;
         private System.ComponentModel.BackgroundWorker BW_HudInstall;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnAppCache;
         private System.Windows.Forms.ToolStripMenuItem MNUExtClnTmpDir;
