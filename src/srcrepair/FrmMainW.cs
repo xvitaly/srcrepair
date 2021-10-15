@@ -1198,7 +1198,7 @@ namespace srcrepair.gui
         /// <param name="Targets">Additional targets for cleanup.</param>
         private void StartCleanup(string ID, string Title, List<String> Targets)
         {
-            if (!BW_ClnList.IsBusy)
+            if (HandleCleanupTargetsTask(AppSelector.Text).Status != TaskStatus.Running)
             {
                 try
                 {
@@ -1309,11 +1309,15 @@ namespace srcrepair.gui
         /// <summary>
         /// Searches for available cleanup targets.
         /// </summary>
-        private void HandleCleanupTargets()
+        private async void HandleCleanupTargets()
         {
-            if (!BW_ClnList.IsBusy)
+            try
             {
-                BW_ClnList.RunWorkerAsync(AppSelector.Text);
+                await HandleCleanupTargetsTask(AppSelector.Text);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex);
             }
         }
 
@@ -1654,26 +1658,16 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Gets collection of available cleanup targets for selected game.
+        /// Gets a collection of available cleanup targets for the selected
+        /// game in a separate thread.
         /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Additional arguments.</param>
-        private void BW_ClnList_DoWork(object sender, DoWorkEventArgs e)
+        /// <param name="SelectedGame">Selected game name.</param>
+        private async Task HandleCleanupTargetsTask(string SelectedGame)
         {
-            App.SourceGames[(string)e.Argument].ClnMan = new CleanupManager(App.FullAppPath, App.SourceGames[(string)e.Argument], Properties.Settings.Default.AllowUnSafeCleanup);
-        }
-
-        /// <summary>
-        /// Finalizes check of available cleanup targets for selected game.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Completion arguments and results.</param>
-        private void BW_ClnList_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            if (e.Error != null)
+            await Task.Run(() =>
             {
-                Logger.Warn(e.Error);
-            }
+                App.SourceGames[SelectedGame].ClnMan = new CleanupManager(App.FullAppPath, App.SourceGames[SelectedGame], Properties.Settings.Default.AllowUnSafeCleanup);
+            });
         }
 
         /// <summary>

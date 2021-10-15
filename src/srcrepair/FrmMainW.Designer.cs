@@ -230,7 +230,6 @@
             this.CE_SaveCfgDialog = new System.Windows.Forms.SaveFileDialog();
             this.FldrBrwse = new System.Windows.Forms.FolderBrowserDialog();
             this.AppRefresh = new System.Windows.Forms.Button();
-            this.BW_ClnList = new System.ComponentModel.BackgroundWorker();
             this.BW_PluginsList = new System.ComponentModel.BackgroundWorker();
             this.MainTabControl.SuspendLayout();
             this.GraphicTweaker.SuspendLayout();
@@ -1925,11 +1924,6 @@
             this.AppRefresh.UseVisualStyleBackColor = true;
             this.AppRefresh.Click += new System.EventHandler(this.AppRefresh_Click);
             // 
-            // BW_ClnList
-            // 
-            this.BW_ClnList.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_ClnList_DoWork);
-            this.BW_ClnList.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BW_ClnList_RunWorkerCompleted);
-            // 
             // BW_PluginsList
             // 
             this.BW_PluginsList.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BW_PluginsList_DoWork);
@@ -2189,7 +2183,6 @@
         private System.Windows.Forms.TextBox GT_LaunchOptions;
         private System.Windows.Forms.Label L_GT_LaunchOptions;
         private System.Windows.Forms.ToolStripStatusLabel SB_SteamID;
-        private System.ComponentModel.BackgroundWorker BW_ClnList;
         private System.Windows.Forms.Panel FPS_Panel;
         private System.Windows.Forms.Button FP_OpenNotepad;
         private System.Windows.Forms.Button FP_Install;
