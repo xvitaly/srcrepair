@@ -50,7 +50,7 @@ namespace srcrepair.core
         /// </summary>
         /// <param name="App">CurrentApp class instance.</param>
         /// <param name="HideUnsupported">Enable or disable adding unsupported games to list.</param>
-        public GameManager(CurrentApp App, bool HideUnsupported = true)
+        public GameManager(CurrentApp App, bool HideUnsupported)
         {
             // Creating empty dictionary...
             SourceGames = new Dictionary<string, SourceGame>();
