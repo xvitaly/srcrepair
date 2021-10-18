@@ -1309,7 +1309,34 @@
             this.PS_SteamLang.FormattingEnabled = true;
             this.PS_SteamLang.Items.AddRange(new object[] {
             resources.GetString("PS_SteamLang.Items"),
-            resources.GetString("PS_SteamLang.Items1")});
+            resources.GetString("PS_SteamLang.Items1"),
+            resources.GetString("PS_SteamLang.Items2"),
+            resources.GetString("PS_SteamLang.Items3"),
+            resources.GetString("PS_SteamLang.Items4"),
+            resources.GetString("PS_SteamLang.Items5"),
+            resources.GetString("PS_SteamLang.Items6"),
+            resources.GetString("PS_SteamLang.Items7"),
+            resources.GetString("PS_SteamLang.Items8"),
+            resources.GetString("PS_SteamLang.Items9"),
+            resources.GetString("PS_SteamLang.Items10"),
+            resources.GetString("PS_SteamLang.Items11"),
+            resources.GetString("PS_SteamLang.Items12"),
+            resources.GetString("PS_SteamLang.Items13"),
+            resources.GetString("PS_SteamLang.Items14"),
+            resources.GetString("PS_SteamLang.Items15"),
+            resources.GetString("PS_SteamLang.Items16"),
+            resources.GetString("PS_SteamLang.Items17"),
+            resources.GetString("PS_SteamLang.Items18"),
+            resources.GetString("PS_SteamLang.Items19"),
+            resources.GetString("PS_SteamLang.Items20"),
+            resources.GetString("PS_SteamLang.Items21"),
+            resources.GetString("PS_SteamLang.Items22"),
+            resources.GetString("PS_SteamLang.Items23"),
+            resources.GetString("PS_SteamLang.Items24"),
+            resources.GetString("PS_SteamLang.Items25"),
+            resources.GetString("PS_SteamLang.Items26"),
+            resources.GetString("PS_SteamLang.Items27"),
+            resources.GetString("PS_SteamLang.Items28")});
             this.PS_SteamLang.Name = "PS_SteamLang";
             // 
             // L_PS_SteamLang

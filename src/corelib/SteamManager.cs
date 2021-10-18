@@ -80,13 +80,21 @@ namespace srcrepair.core
         /// <returns>Steam language name.</returns>
         public static string GetLanguageFromCode(int LangCode)
         {
-            switch (LangCode)
+            Dictionary<int, string> LanguageMap = new Dictionary<int, string>
             {
-                case 1:
-                    return "russian";
-                default:
-                    return "english";
-            }
+                { 0, "arabic" }, { 1, "bulgarian" }, { 2, "schinese" },
+                { 3, "tchinese" }, { 4, "czech" }, { 5, "danish" },
+                { 6, "dutch" }, { 7, "english" }, { 8, "finnish" },
+                { 9, "french" }, { 10, "german" }, { 11, "greek" },
+                { 12, "hungarian" }, { 13, "italian" }, { 14, "japanese" },
+                { 15, "koreana" }, { 16, "norwegian" }, { 17, "polish" },
+                { 18, "portuguese" }, { 19, "brazilian" }, { 20, "romanian" },
+                { 21, "russian" }, { 22, "spanish" }, { 23, "latam" },
+                { 24, "swedish" }, { 25, "thai" }, { 26, "turkish" },
+                { 27, "ukrainian" }, { 28, "vietnamese" }
+            };
+
+            return LanguageMap[LangCode];
         }
 
         /// <summary>
@@ -96,13 +104,21 @@ namespace srcrepair.core
         /// <returns>Steam language internal ID.</returns>
         public static int GetCodeFromLanguage(string LangString)
         {
-            switch (LangString)
+            Dictionary<string, int> LanuageMapReverse = new Dictionary<string, int>
             {
-                case "russian":
-                    return 1;
-                default:
-                    return 0;
-            }
+                { "arabic", 0 }, { "bulgarian", 1 }, { "schinese", 2 },
+                { "tchinese", 3 }, { "czech", 4 }, { "danish", 5 },
+                { "dutch", 6 }, { "english", 7 }, { "finnish", 8 },
+                { "french", 9 }, { "german", 10 }, { "greek", 11 },
+                { "hungarian", 12 }, { "italian", 13 }, { "japanese", 14 },
+                { "koreana", 15 }, { "norwegian", 16 }, { "polish", 17 },
+                { "portuguese", 18 }, { "brazilian", 19 }, { "romanian", 20 },
+                { "russian", 21 }, { "spanish", 22 }, { "latam", 23 },
+                { "swedish", 24 }, { "thai", 25 }, { "turkish", 26 },
+                { "ukrainian", 27 }, { "vietnamese", 28 }
+            };
+
+            return LanuageMapReverse[LangString];
         }
 
         /// <summary>
