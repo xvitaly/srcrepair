@@ -80,21 +80,19 @@ namespace srcrepair.core
         /// <returns>Steam language name.</returns>
         public static string GetLanguageFromCode(int LangCode)
         {
-            Dictionary<int, string> LanguageMap = new Dictionary<int, string>
+            switch (LangCode)
             {
-                { 0, "arabic" }, { 1, "bulgarian" }, { 2, "schinese" },
-                { 3, "tchinese" }, { 4, "czech" }, { 5, "danish" },
-                { 6, "dutch" }, { 7, "english" }, { 8, "finnish" },
-                { 9, "french" }, { 10, "german" }, { 11, "greek" },
-                { 12, "hungarian" }, { 13, "italian" }, { 14, "japanese" },
-                { 15, "koreana" }, { 16, "norwegian" }, { 17, "polish" },
-                { 18, "portuguese" }, { 19, "brazilian" }, { 20, "romanian" },
-                { 21, "russian" }, { 22, "spanish" }, { 23, "latam" },
-                { 24, "swedish" }, { 25, "thai" }, { 26, "turkish" },
-                { 27, "ukrainian" }, { 28, "vietnamese" }
-            };
-
-            return LanguageMap[LangCode];
+                case 0: return "arabic"; case 1: return "bulgarian"; case 2: return "schinese";
+                case 3: return "tchinese"; case 4: return "czech"; case 5: return "danish";
+                case 6: return "dutch"; case 7: return "english"; case 8: return "finnish";
+                case 9: return "french"; case 10: return "german"; case 11: return "greek";
+                case 12: return "hungarian"; case 13: return "italian"; case 14: return "japanese";
+                case 15: return "koreana"; case 16: return "norwegian"; case 17: return "polish";
+                case 18: return "portuguese"; case 19: return "brazilian"; case 20: return "romanian";
+                case 21: return "russian"; case 22: return "spanish"; case 23: return "latam";
+                case 24: return "swedish"; case 25: return "thai"; case 26: return "turkish";
+                case 27: return "ukrainian"; case 28: return "vietnamese"; default: return "english";
+            }
         }
 
         /// <summary>
@@ -104,21 +102,19 @@ namespace srcrepair.core
         /// <returns>Steam language internal ID.</returns>
         public static int GetCodeFromLanguage(string LangString)
         {
-            Dictionary<string, int> LanuageMapReverse = new Dictionary<string, int>
+            switch (LangString)
             {
-                { "arabic", 0 }, { "bulgarian", 1 }, { "schinese", 2 },
-                { "tchinese", 3 }, { "czech", 4 }, { "danish", 5 },
-                { "dutch", 6 }, { "english", 7 }, { "finnish", 8 },
-                { "french", 9 }, { "german", 10 }, { "greek", 11 },
-                { "hungarian", 12 }, { "italian", 13 }, { "japanese", 14 },
-                { "koreana", 15 }, { "norwegian", 16 }, { "polish", 17 },
-                { "portuguese", 18 }, { "brazilian", 19 }, { "romanian", 20 },
-                { "russian", 21 }, { "spanish", 22 }, { "latam", 23 },
-                { "swedish", 24 }, { "thai", 25 }, { "turkish", 26 },
-                { "ukrainian", 27 }, { "vietnamese", 28 }
-            };
-
-            return LanuageMapReverse[LangString];
+                case "arabic": return 0; case "bulgarian": return 1; case "schinese": return 2;
+                case "tchinese": return 3; case "czech": return 4; case "danish": return 5;
+                case "dutch": return 6; case "english": return 7; case "finnish": return 8;
+                case "french": return 9; case "german": return 10; case "greek": return 11;
+                case "hungarian": return 12; case "italian": return 13; case "japanese": return 14;
+                case "koreana": return 15; case "norwegian": return 16; case "polish": return 17;
+                case "portuguese": return 18; case "brazilian": return 19; case "romanian": return 20;
+                case "russian": return 21; case "spanish": return 22; case "latam": return 23;
+                case "swedish": return 24; case "thai": return 25; case "turkish": return 26;
+                case "ukrainian": return 27; case "vietnamese": return 28; default: return 7;
+            }
         }
 
         /// <summary>
