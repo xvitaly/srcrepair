@@ -3192,7 +3192,10 @@ namespace srcrepair.gui
             SetHUDButtons(HUDManager.CheckInstalledHUD(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir));
 
             // Downloading screenshot...
-            if (Success) HandleHUDScreenshot();
+            if (Success)
+            {
+                HandleHUDScreenshot();
+            }
         }
 
         /// <summary>
