@@ -218,12 +218,13 @@ namespace srcrepair.core
 
         /// <summary>
         /// Finds files by specified mask in specified directory.
+        /// Recursion can be explicitly enabled or disabled.
         /// </summary>
         /// <param name="SearchPath">Start directory.</param>
         /// <param name="SrcMask">File mask (wildcards are supported).</param>
         /// <param name="IsRecursive">Use recursive (include subdirectories) search.</param>
         /// <returns>List of files with full paths, matches mask.</returns>
-        public static List<String> FindFiles(string SearchPath, string SrcMask, bool IsRecursive = true)
+        public static List<String> FindFiles(string SearchPath, string SrcMask, bool IsRecursive)
         {
             List<String> Result = new List<String>();
             if (Directory.Exists(SearchPath))
@@ -234,6 +235,17 @@ namespace srcrepair.core
                 if (IsRecursive) { foreach (DirectoryInfo Dir in DInfo.GetDirectories()) { Result.AddRange(FindFiles(Dir.FullName, SrcMask)); } }
             }
             return Result;
+        }
+
+        /// <summary>
+        /// Finds files by specified mask in specified directory recursively.
+        /// </summary>
+        /// <param name="SearchPath">Start directory.</param>
+        /// <param name="SrcMask">File mask (wildcards are supported).</param>
+        /// <returns>List of files with full paths, matches mask.</returns>
+        public static List<String> FindFiles(string SearchPath, string SrcMask)
+        {
+            return FindFiles(SearchPath, SrcMask, true);
         }
 
         /// <summary>
