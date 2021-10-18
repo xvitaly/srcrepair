@@ -1,0 +1,372 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: srcrepair
+Upstream-Contact: EasyCoding Team
+Source: https://github.com/xvitaly/srcrepair
+
+Files: .github/*.md
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: assets/img_sources/srcrepair.png
+Copyright: 2009 Lopagof
+License: CC-BY-NC-ND-4.0
+
+Files: assets/img_sources/srcrepair.svg
+Copyright: 2017 EasyCoding Team
+License: CC-BY-NC-ND-4.0
+
+Files: packaging/linux/*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/corelib/Properties/*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/corelib/corelib.csproj
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/corelib/DebugStrings.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/corelib/DebugStrings.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/corelib/*.config
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/corelib/ReportStrings.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/kbhelper/Properties/*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/kbhelper/*.config
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/kbhelper/AppStrings.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/kbhelper/FrmKBHelper.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/kbhelper/kbhelper.csproj
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/kbhelper/kbhelper.ico
+Copyright: 2003 GNOME icon artists
+License: GPL-2.0-only
+
+Files: src/kbhelper/kbhelper.manifest
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/kbhelper/Properties/*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/kbhelper/Properties/*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/kbhelper/Resources/Add.png
+Copyright: 2011 VisualPharm
+License: CC-BY-NC-ND-4.0
+
+Files: src/kbhelper/Resources/arrow.png
+Copyright: 2011 Icon Leak
+License: CC-BY-NC-ND-4.0
+
+Files: src/kbhelper/Resources/backup.png
+Copyright: 2011 Icontoaster
+License: CC0-1.0
+
+Files: src/kbhelper/Resources/bug.png
+Copyright: 2011 Asher
+License: CC-BY-SA-4.0
+
+Files: src/kbhelper/Resources/clean.png
+Copyright: 2003 GNOME icon artists
+License: GPL-2.0-only
+
+Files: src/kbhelper/Resources/Convert.png
+Copyright: 2011 Nikolay Verin
+License: CC-BY-NC-ND-4.0
+
+Files: src/kbhelper/Resources/Copy.png
+Copyright: 2007 Microsoft Corporation
+License: CC0-1.0
+
+Files: src/kbhelper/Resources/Cut.png
+Copyright: 2007 Microsoft Corporation
+License: CC0-1.0
+
+Files: src/kbhelper/Resources/Delete.png
+Copyright: 2011 VisualPharm
+License: CC-BY-NC-ND-4.0
+
+Files: src/kbhelper/Resources/Exit.png
+Copyright: 2003 GNOME icon artists
+License: GPL-2.0-only
+
+Files: src/kbhelper/Resources/Globe.png
+Copyright: 2011 PixelMixer
+License: CC-BY-SA-4.0
+
+Files: src/kbhelper/Resources/green_circle.png
+Copyright: 2011 Chris Ringeisen
+License: CC-BY-NC-ND-4.0
+
+Files: src/kbhelper/Resources/Help.png
+Copyright: 2011 Asher
+License: CC-BY-SA-4.0
+
+Files: src/kbhelper/Resources/hint.png
+Copyright: 2011 Mazenl77
+License: CC-BY-SA-4.0
+
+Files: src/kbhelper/Resources/Home.png
+Copyright: 2011 IconsPedia
+License: CC0-1.0
+
+Files: src/kbhelper/Resources/Info.png
+Copyright: 2011 IconsPedia
+License: CC0-1.0
+
+Files: src/kbhelper/Resources/installer.png
+Copyright: 2011 Celldrifter
+License: CC-BY-SA-4.0
+
+Files: src/kbhelper/Resources/Keyboard.png
+Copyright: 2003 GNOME icon artists
+License: GPL-2.0-only
+
+Files: src/kbhelper/Resources/LoadingFile.png
+Copyright: 2011 Iconsolid
+License: CC-BY-SA-4.0
+
+Files: src/kbhelper/Resources/Mhint.png
+Copyright: 2011 Mazenl77
+License: CC-BY-SA-4.0
+
+Files: src/kbhelper/Resources/Mhint.png
+Copyright: 2011 Mazenl77
+License: CC-BY-SA-4.0
+
+Files: src/kbhelper/Resources/Monitor.png
+Copyright: 2011 Double-J Desig
+License: CC-BY-SA-4.0
+
+Files: src/kbhelper/Resources/Mute.png
+Copyright: 2011 Ahmad Hania
+License: CC-BY-NC-SA-4.0
+
+Files: src/kbhelper/Resources/New.png
+Copyright: 2011 VisualPharm
+License: CC-BY-SA-4.0
+
+Files: src/kbhelper/Resources/Notebook.png
+Copyright: 2011 LazyCrazy
+License: CC0-1.0
+
+Files: src/kbhelper/Resources/Open.png
+Copyright: 2011 VisualPharm
+License: CC-BY-SA-4.0
+
+Files: src/kbhelper/Resources/Options.png
+Copyright: 2011 Ahmad Hania
+License: CC-BY-NC-SA-4.0
+
+Files: src/kbhelper/Resources/Paste.png
+Copyright: 2007 Microsoft Corporation
+License: CC0-1.0
+
+Files: src/kbhelper/Resources/red_circle.png
+Copyright: 2011 Chris Ringeisen
+License: CC-BY-NC-ND-4.0
+
+Files: src/kbhelper/Resources/Refresh.png
+Copyright: 2003 GNOME icon artists
+License: GPL-2.0-only
+
+Files: src/kbhelper/Resources/report.png
+Copyright: 2011 ArtistValley
+License: CC0-1.0
+
+Files: src/kbhelper/Resources/Restore.png
+Copyright: 2003 GNOME icon artists
+License: GPL-2.0-only
+
+Files: src/kbhelper/Resources/Save.png
+Copyright: 2011 Everaldo Coelho
+License: LGPL-2.1-only
+
+Files: src/kbhelper/Resources/SaveAs.png
+Copyright: 2011 Everaldo Coelho
+License: LGPL-2.1-only
+
+Files: src/kbhelper/Resources/Search.png
+Copyright: 2011 Flahorn
+License: CC-BY-NC-ND-4.0
+
+Files: src/kbhelper/Resources/source.png
+Copyright: 2011 Flahorn
+License: CC-BY-NC-ND-4.0
+
+Files: src/kbhelper/Resources/source.png
+Copyright: 2011 IconsPedia
+License: CC0-1.0
+
+Files: src/kbhelper/Resources/steam.png
+Copyright: 2011 Brsev
+License: CC-BY-NC-ND-4.0
+
+Files: src/kbhelper/Resources/TextEditor.png
+Copyright: 2003 GNOME icon artists
+License: GPL-2.0-only
+
+Files: src/kbhelper/Resources/upd_av.png
+Copyright: 2011 Everaldo Coelho
+License: LGPL-2.1-only
+
+Files: src/kbhelper/Resources/upd_chk.png
+Copyright: 2011 FatCow
+License: CC-BY-4.0
+
+Files: src/kbhelper/Resources/upd_err.png
+Copyright: 2011 Designkindle
+License: CC-BY-SA-4.0
+
+Files: src/kbhelper/Resources/upd_nx.png
+Copyright: 2011 PixelMixer
+License: CC-BY-SA-4.0
+
+Files: src/kbhelper/Resources/VtTemplate.txt
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/kbhelper/Resources/Warning.png
+Copyright: 2011 La Glanz Studio
+License: CC0-1.0
+
+Files: src/kbhelper/Resources/Xmas.png
+Copyright: 2011 Iconspedia
+License: CC0-1.0
+
+Files: src/srcrepair/*.config
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/AppStrings.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/CVList.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/DebugStrings.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/FrmAbout.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/FrmArchWrk.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/FrmCfgSelector.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/FrmCleaner.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/FrmDnWrk.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/FrmInstaller.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/FrmLogView.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/FrmMainW.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/FrmMute.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/FrmOptions.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/FrmRepBuilder.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/FrmRmWrk.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/FrmStmClean.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/FrmStmSelector.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/FrmUpdate.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/FrmUpdate.*
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/srcrepair.csproj
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/srcrepair.csproj
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/srcrepair.ico
+Copyright: 2009 Lopagof
+License: CC-BY-NC-ND-4.0
+
+Files: src/srcrepair/srcrepair.manifest
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: src/srcrepair/srcrepair.VisualElementsManifest.xml
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: README.md
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
+Files: srcrepair.sln
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
