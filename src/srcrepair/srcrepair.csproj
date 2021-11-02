@@ -186,7 +186,7 @@
       <Link>plugins.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="srcrepair.VisualElementsManifest.xml">
+    <Content Include="..\..\assets\manifests\srcrepair.VisualElementsManifest.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <EmbeddedResource Include="AppStrings.resx">

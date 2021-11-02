@@ -191,6 +191,10 @@ Files: assets/img_sources/srcrepair.svg
 Copyright: 2017 EasyCoding Team
 License: CC-BY-NC-ND-4.0
 
+Files: assets/manifests/srcrepair.VisualElementsManifest.xml
+Copyright: 2011-2021 EasyCoding Team
+License: GPL-3.0-or-later
+
 Files: assets/templates/VtTemplate.txt
 Copyright: 2011-2021 EasyCoding Team
 License: GPL-3.0-or-later
@@ -352,10 +356,6 @@ Copyright: 2009 Lopagof
 License: CC-BY-NC-ND-4.0
 
 Files: src/srcrepair/srcrepair.manifest
-Copyright: 2011-2021 EasyCoding Team
-License: GPL-3.0-or-later
-
-Files: src/srcrepair/srcrepair.VisualElementsManifest.xml
 Copyright: 2011-2021 EasyCoding Team
 License: GPL-3.0-or-later
 
