@@ -57,7 +57,6 @@ Icons licensing
     "upd_chk.png", "FatCow", "`CC Attribution <https://creativecommons.org/licenses/by/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/update-icon-22163.html>`__"
     "upd_err.png", "Designkindle", "`CC Attribution Share Alike <https://creativecommons.org/licenses/by-sa/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/cross-icon-40924.html>`__"
     "upd_nx.png", "PixelMixer", "`CC Attribution Share Alike <https://creativecommons.org/licenses/by-sa/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/tick-11638.html>`__"
-    "Monitor.png", "Double-J Desig", "`CC Attribution <https://creativecommons.org/licenses/by/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/monitor-icon-37548.html>`__"
     "Interface.png", "FatCow", "`CC Attribution <https://creativecommons.org/licenses/by/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/interface-preferences-icon-21275.html>`__"
     "LoadingFile.png", "Iconsolid", "`CC Attribution Share Alike <https://creativecommons.org/licenses/by-sa/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/cloud-loading-icon-49831.html>`__"
     "Notebook.png", "LazyCrazy", "Free for non commercial use", "`IconsPedia <https://www.iconspedia.com/icon/elegant--notebook-160--.html>`__"

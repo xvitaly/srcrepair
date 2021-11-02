@@ -379,7 +379,6 @@
     <None Include="Resources\upd_nx.png" />
     <None Include="Resources\upd_chk.png" />
     <None Include="Resources\upd_err.png" />
-    <None Include="Resources\Monitor.png" />
     <EmbeddedResource Include="Resources\VtTemplate.txt" />
     <None Include="Resources\LoadingFile.png" />
     <None Include="Resources\Notebook.png" />
