@@ -652,7 +652,7 @@ namespace srcrepair.gui.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to srcrepair.gui.Resources.VtTemplate.txt.
+        ///   Looks up a localized string similar to srcrepair.gui.Resources.TemplateVMTSpray.txt.
         /// </summary>
         internal static string PI_TemplateFile {
             get {
@@ -671,9 +671,9 @@ namespace srcrepair.gui.Properties {
         ///}
         ///.
         /// </summary>
-        internal static string VtTemplate {
+        internal static string TemplateVMTSpray {
             get {
-                return ResourceManager.GetString("VtTemplate", resourceCulture);
+                return ResourceManager.GetString("TemplateVMTSpray", resourceCulture);
             }
         }
     }
