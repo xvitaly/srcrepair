@@ -195,7 +195,7 @@ Files: assets/manifests/srcrepair.VisualElementsManifest.xml
 Copyright: 2011-2021 EasyCoding Team
 License: GPL-3.0-or-later
 
-Files: assets/templates/VtTemplate.txt
+Files: assets/templates/vmt_spray.txt
 Copyright: 2011-2021 EasyCoding Team
 License: GPL-3.0-or-later
 
