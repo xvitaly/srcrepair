@@ -59,7 +59,7 @@ namespace srcrepair.gui
             // Checking for the New Year eve...
             if (CurrentApp.IsNewYear)
             {
-                iconApp.Image = Properties.Resources.Xmas;
+                iconApp.Image = Properties.Resources.IconXmas;
             }
         }
     }

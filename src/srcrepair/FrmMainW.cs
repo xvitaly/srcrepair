@@ -655,12 +655,12 @@ namespace srcrepair.gui
             if (Properties.Settings.Default.SafeCleanup)
             {
                 SB_App.Text = AppStrings.AppSafeClnStTextOn;
-                SB_App.Image = Properties.Resources.green_circle;
+                SB_App.Image = Properties.Resources.IconGreenCircle;
             }
             else
             {
                 SB_App.Text = AppStrings.AppSafeClnStTextOff;
-                SB_App.Image = Properties.Resources.red_circle;
+                SB_App.Image = Properties.Resources.IconRedCircle;
             }
         }
 
@@ -865,7 +865,7 @@ namespace srcrepair.gui
             if (!FileManager.CheckNonASCII(App.SteamClient.FullSteamPath))
             {
                 PS_PathSteam.ForeColor = Color.Red;
-                PS_PathSteam.Image = Properties.Resources.upd_err;
+                PS_PathSteam.Image = Properties.Resources.IconUpdateError;
                 Logger.Warn(String.Format(AppStrings.AppRestrSymbLog, App.SteamClient.FullSteamPath));
             }
         }
@@ -879,13 +879,13 @@ namespace srcrepair.gui
             if (!FileManager.CheckNonASCII(App.SourceGames[AppSelector.Text].FullGamePath))
             {
                 PS_PathGame.ForeColor = Color.Red;
-                PS_PathGame.Image = Properties.Resources.upd_err;
+                PS_PathGame.Image = Properties.Resources.IconUpdateError;
                 Logger.Warn(String.Format(AppStrings.AppRestrSymbLog, App.SourceGames[AppSelector.Text].FullGamePath));
             }
             else
             {
                 PS_PathGame.ForeColor = Color.Green;
-                PS_PathGame.Image = Properties.Resources.upd_nx;
+                PS_PathGame.Image = Properties.Resources.IconUpdateNotAvailable;
             }
         }
 
@@ -3176,7 +3176,7 @@ namespace srcrepair.gui
             bool Success = !String.IsNullOrEmpty(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].Name);
 
             // Changing some controls state...
-            HD_GB_Pbx.Image = Properties.Resources.LoadingFile;
+            HD_GB_Pbx.Image = Properties.Resources.ImageLoadingFile;
             HD_Install.Enabled = Success;
             HD_Homepage.Enabled = Success;
             HD_Warning.Visible = Success && !App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].IsUpdated;

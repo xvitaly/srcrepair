@@ -39,7 +39,7 @@
             // UpdAppImg
             // 
             this.UpdAppImg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.UpdAppImg.Image = global::srcrepair.gui.Properties.Resources.upd_av;
+            this.UpdAppImg.Image = global::srcrepair.gui.Properties.Resources.IconUpdateAvailable;
             resources.ApplyResources(this.UpdAppImg, "UpdAppImg");
             this.UpdAppImg.Name = "UpdAppImg";
             this.UpdAppImg.TabStop = false;

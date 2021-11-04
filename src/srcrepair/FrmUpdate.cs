@@ -77,7 +77,7 @@ namespace srcrepair.gui
         private void CheckForUpdates()
         {
             // Changing icons...
-            UpdAppImg.Image = Properties.Resources.upd_chk;
+            UpdAppImg.Image = Properties.Resources.IconUpdateChecking;
 
             // Starting updates check in a separate thread...
             if (!WrkChkApp.IsBusy) { WrkChkApp.RunWorkerAsync(UserAgent); }
@@ -198,12 +198,12 @@ namespace srcrepair.gui
                     // Checking for application update...
                     if (UpMan.CheckAppUpdate())
                     {
-                        UpdAppImg.Image = Properties.Resources.upd_av;
+                        UpdAppImg.Image = Properties.Resources.IconUpdateAvailable;
                         UpdAppStatus.Text = String.Format(AppStrings.UPD_AppUpdateAvail, UpMan.AppUpdateVersion);
                     }
                     else
                     {
-                        UpdAppImg.Image = Properties.Resources.upd_nx;
+                        UpdAppImg.Image = Properties.Resources.IconUpdateNotAvailable;
                         UpdAppStatus.Text = AppStrings.UPD_AppNoUpdates;
                         UpdateTimeSetApp();
                     }
@@ -211,7 +211,7 @@ namespace srcrepair.gui
                 else
                 {
                     // Changing controls texts...
-                    UpdAppImg.Image = Properties.Resources.upd_err;
+                    UpdAppImg.Image = Properties.Resources.IconUpdateError;
                     UpdAppStatus.Text = AppStrings.UPD_AppCheckFailure;
 
                     // Writing issue to log...
