@@ -7,7 +7,7 @@ Files: .github/*.md
 Copyright: 2011-2021 EasyCoding Team
 License: GPL-3.0-or-later
 
-Files: assets/icons/Add.png
+Files: assets/icons/add.png
 Copyright: 2011 VisualPharm
 License: CC-BY-NC-ND-4.0
 
@@ -27,27 +27,27 @@ Files: assets/icons/clean.png
 Copyright: 2003 GNOME icon artists
 License: GPL-2.0-only
 
-Files: assets/icons/Convert.png
+Files: assets/icons/convert.png
 Copyright: 2011 Nikolay Verin
 License: CC-BY-NC-ND-4.0
 
-Files: assets/icons/Copy.png
+Files: assets/icons/copy.png
 Copyright: 2007 Microsoft Corporation
 License: CC0-1.0
 
-Files: assets/icons/Cut.png
+Files: assets/icons/cut.png
 Copyright: 2007 Microsoft Corporation
 License: CC0-1.0
 
-Files: assets/icons/Delete.png
+Files: assets/icons/delete.png
 Copyright: 2011 VisualPharm
 License: CC-BY-NC-ND-4.0
 
-Files: assets/icons/Exit.png
+Files: assets/icons/exit.png
 Copyright: 2003 GNOME icon artists
 License: GPL-2.0-only
 
-Files: assets/icons/Globe.png
+Files: assets/icons/globe.png
 Copyright: 2011 PixelMixer
 License: CC-BY-SA-4.0
 
@@ -55,7 +55,7 @@ Files: assets/icons/green_circle.png
 Copyright: 2011 Chris Ringeisen
 License: CC-BY-NC-ND-4.0
 
-Files: assets/icons/Help.png
+Files: assets/icons/help.png
 Copyright: 2011 Asher
 License: CC-BY-SA-4.0
 
@@ -63,11 +63,11 @@ Files: assets/icons/hint.png
 Copyright: 2011 Mazenl77
 License: CC-BY-SA-4.0
 
-Files: assets/icons/Home.png
+Files: assets/icons/home.png
 Copyright: 2011 IconsPedia
 License: CC0-1.0
 
-Files: assets/icons/Info.png
+Files: assets/icons/info.png
 Copyright: 2011 IconsPedia
 License: CC0-1.0
 
@@ -75,39 +75,39 @@ Files: assets/icons/installer.png
 Copyright: 2011 Celldrifter
 License: CC-BY-SA-4.0
 
-Files: assets/icons/Keyboard.png
+Files: assets/icons/keyboard.png
 Copyright: 2003 GNOME icon artists
 License: GPL-2.0-only
 
-Files: assets/icons/Mhint.png
+Files: assets/icons/mhint.png
 Copyright: 2011 Mazenl77
 License: CC-BY-SA-4.0
 
-Files: assets/icons/Mhint.png
+Files: assets/icons/mhint.png
 Copyright: 2011 Mazenl77
 License: CC-BY-SA-4.0
 
-Files: assets/icons/Mute.png
+Files: assets/icons/mute.png
 Copyright: 2011 Ahmad Hania
 License: CC-BY-NC-SA-4.0
 
-Files: assets/icons/New.png
+Files: assets/icons/new.png
 Copyright: 2011 VisualPharm
 License: CC-BY-SA-4.0
 
-Files: assets/icons/Notebook.png
+Files: assets/icons/notebook.png
 Copyright: 2011 LazyCrazy
 License: CC0-1.0
 
-Files: assets/icons/Open.png
+Files: assets/icons/open.png
 Copyright: 2011 VisualPharm
 License: CC-BY-SA-4.0
 
-Files: assets/icons/Options.png
+Files: assets/icons/options.png
 Copyright: 2011 Ahmad Hania
 License: CC-BY-NC-SA-4.0
 
-Files: assets/icons/Paste.png
+Files: assets/icons/paste.png
 Copyright: 2007 Microsoft Corporation
 License: CC0-1.0
 
@@ -115,7 +115,7 @@ Files: assets/icons/red_circle.png
 Copyright: 2011 Chris Ringeisen
 License: CC-BY-NC-ND-4.0
 
-Files: assets/icons/Refresh.png
+Files: assets/icons/refresh.png
 Copyright: 2003 GNOME icon artists
 License: GPL-2.0-only
 
@@ -123,19 +123,19 @@ Files: assets/icons/report.png
 Copyright: 2011 ArtistValley
 License: CC0-1.0
 
-Files: assets/icons/Restore.png
+Files: assets/icons/restore.png
 Copyright: 2003 GNOME icon artists
 License: GPL-2.0-only
 
-Files: assets/icons/Save.png
+Files: assets/icons/save.png
 Copyright: 2011 Everaldo Coelho
 License: LGPL-2.1-only
 
-Files: assets/icons/SaveAs.png
+Files: assets/icons/saveas.png
 Copyright: 2011 Everaldo Coelho
 License: LGPL-2.1-only
 
-Files: assets/icons/Search.png
+Files: assets/icons/search.png
 Copyright: 2011 Flahorn
 License: CC-BY-NC-ND-4.0
 
@@ -151,7 +151,7 @@ Files: assets/icons/steam.png
 Copyright: 2011 Brsev
 License: CC-BY-NC-ND-4.0
 
-Files: assets/icons/TextEditor.png
+Files: assets/icons/texteditor.png
 Copyright: 2003 GNOME icon artists
 License: GPL-2.0-only
 
@@ -171,15 +171,15 @@ Files: assets/icons/upd_nx.png
 Copyright: 2011 PixelMixer
 License: CC-BY-SA-4.0
 
-Files: assets/icons/Warning.png
+Files: assets/icons/warning.png
 Copyright: 2011 La Glanz Studio
 License: CC0-1.0
 
-Files: assets/images/LoadingFile.png
+Files: assets/images/loadingfile.png
 Copyright: 2011 Iconsolid
 License: CC-BY-SA-4.0
 
-Files: assets/images/Xmas.png
+Files: assets/images/xmas.png
 Copyright: 2011 Iconspedia
 License: CC0-1.0
 

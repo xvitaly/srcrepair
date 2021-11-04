@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 43.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 09:11+0100\n"
-"PO-Revision-Date: 2021-11-02 09:12+0100\n"
+"POT-Creation-Date: 2021-11-04 10:34+0100\n"
+"PO-Revision-Date: 2021-11-04 10:34+0100\n"
 "Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -111,7 +111,7 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/delete--832.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Exit.ico"
+msgid "exit.ico"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -147,7 +147,7 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/file-save-as-4083.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Help.ico"
+msgid "help.ico"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -172,7 +172,7 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/help-1601.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Home.ico"
+msgid "home.ico"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -188,7 +188,7 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/home--205.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Info.ico"
+msgid "info.ico"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -237,7 +237,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Screwdriver.png"
+msgid "screwdriver.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -249,7 +249,7 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/screwdriver-1468.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Warning.ico"
+msgid "warning.ico"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -296,7 +296,7 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/wrench-14054.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Refresh.ico"
+msgid "refresh.ico"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -306,7 +306,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Restore.ico"
+msgid "restore.ico"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -315,7 +315,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Xmas.png"
+msgid "xmas.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -327,20 +327,11 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/santa-hat-17458.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "HostEd.ico"
+msgid "texteditor.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid ""
-"`IconsPedia <https://www.iconspedia.com/icon/gnome-text-html-11177.html>`__"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "TextEditor.png"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "Globe.ico"
+msgid "globe.ico"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -352,7 +343,7 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/globe-11618.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Options.ico"
+msgid "options.ico"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -370,7 +361,7 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/options-1321-.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Config.png"
+msgid "config.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -384,7 +375,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "BackUp.png"
+msgid "backup.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -396,7 +387,7 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/backup-2047.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Graphics.png"
+msgid "graphics.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -406,7 +397,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Search.png"
+msgid "search.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -418,25 +409,13 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/search-26-2.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Keyboard.ico"
+msgid "keyboard.ico"
 msgstr ""
 
 #: ../../source/legal.rst:1
 msgid ""
 "`IconsPedia <https://www.iconspedia.com/icon/gnome-preferences-desktop-"
 "keyboard-1113-.html>`__"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "Donate.png"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "Customicondesign"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "`IconsPedia <https://www.iconspedia.com/icon/us-dollar-18656.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -516,7 +495,7 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/tick-11638.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Interface.png"
+msgid "interface.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -526,7 +505,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "LoadingFile.png"
+msgid "loadingfile.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -540,7 +519,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Notebook.png"
+msgid "notebook.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -553,7 +532,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Mute.png"
+msgid "mute.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -561,7 +540,7 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/mute-13212.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Convert.png"
+msgid "convert.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -575,14 +554,14 @@ msgid ""
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Steam.ico"
+msgid "steam.ico"
 msgstr ""
 
 #: ../../source/legal.rst:1
 msgid "`IconsPedia <https://www.iconspedia.com/icon/steam-1402-.html>`__"
 msgstr ""
 
-#: ../../source/legal.rst:71
+#: ../../source/legal.rst:69
 msgid "Libraries licensing"
 msgstr "Лицензирование библиотек"
 
@@ -627,15 +606,15 @@ msgstr ""
 msgid "`GitHub page <https://github.com/NLog/NLog>`__"
 msgstr ""
 
-#: ../../source/legal.rst:83
+#: ../../source/legal.rst:81
 msgid "Trademarks"
 msgstr "Торговые марки"
 
-#: ../../source/legal.rst:86
+#: ../../source/legal.rst:84
 msgid "Valve"
 msgstr ""
 
-#: ../../source/legal.rst:88
+#: ../../source/legal.rst:86
 msgid ""
 "Valve, the Valve logo, Half-Life, the Half-Life logo, the Lambda logo, "
 "Steam, the Steam logo, Team Fortress, the Team Fortress logo, Opposing "
@@ -652,11 +631,11 @@ msgstr ""
 "торговыми марками и/или зарегистрированными торговыми марками Корпорации "
 "Valve."
 
-#: ../../source/legal.rst:91
+#: ../../source/legal.rst:89
 msgid "Microsoft"
 msgstr ""
 
-#: ../../source/legal.rst:93
+#: ../../source/legal.rst:91
 msgid ""
 "Microsoft, Windows are trademarks and/or registered trademarks of Microsoft "
 "Corporation."
@@ -664,10 +643,10 @@ msgstr ""
 "Microsoft, Windows являются торговыми марками и/или зарегистрированными "
 "торговыми марками Корпорации Microsoft."
 
-#: ../../source/legal.rst:96
+#: ../../source/legal.rst:94
 msgid "Other"
 msgstr "Прочие"
 
-#: ../../source/legal.rst:98
+#: ../../source/legal.rst:96
 msgid "All other trademarks are property of their respective owners."
 msgstr "Все прочие торговые марки являются собственностью их владельцев."
