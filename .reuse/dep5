@@ -175,6 +175,30 @@ Files: assets/icons/warning.png
 Copyright: 2011 La Glanz Studio
 License: CC0-1.0
 
+Files: assets/icons/bundled/backup.png
+Copyright: 2011 Icontoaster
+License: CC0-1.0
+
+Files: assets/icons/bundled/config.png
+Copyright: 2011 Asher
+License: CC-BY-NC-ND-4.0
+
+Files: assets/icons/bundled/graphics.png
+Copyright: 2003 GNOME icon artists
+License: GPL-2.0-only
+
+Files: assets/icons/bundled/interface.png
+Copyright: 2011 FatCow
+License: CC-BY-4.0
+
+Files: assets/icons/bundled/screwdriver.png
+Copyright: 2011 Babasse
+License: CC-BY-4.0
+
+Files: assets/icons/bundled/texteditor.png
+Copyright: 2003 GNOME icon artists
+License: GPL-2.0-only
+
 Files: assets/images/loadingfile.png
 Copyright: 2011 Iconsolid
 License: CC-BY-SA-4.0
