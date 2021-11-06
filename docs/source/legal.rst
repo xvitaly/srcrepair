@@ -31,7 +31,6 @@ Icons licensing
     "graphics.png", "GNOME icon artists", "`GNU General Public License, version 2 <https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>`_", "`IconsPedia <https://www.iconspedia.com/icon/gnome-applications-graphics-10-46.html>`__"
     "green_circle.png", "Chris Ringeisen", "`CC Attribution Non-Commercial No Derivatives <https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/green-circle-icon-25988.html>`__"
     "help.png", "Asher", "`CC Attribution Share Alike <https://creativecommons.org/licenses/by-sa/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/help-8051.html>`__"
-    "hint.png", "Mazenl77", "`CC Attribution <https://creativecommons.org/licenses/by/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/help-1601.html>`__"
     "home.png", "IconsPedia", "Free for non commercial use", "`IconsPedia <https://www.iconspedia.com/icon/home--205.html>`__"
     "info.png", "IconsPedia", "Free for non commercial use", "`IconsPedia <https://www.iconspedia.com/icon/info--206.html>`__"
     "installer.png", "Celldrifter", "`CC Attribution Share Alike <https://creativecommons.org/licenses/by-sa/4.0/legalcode>`_", "`IconsPedia <https://www.iconspedia.com/icon/installer-1817.html>`__"

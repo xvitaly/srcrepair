@@ -1714,7 +1714,7 @@
             // MNUShowEdHint
             // 
             resources.ApplyResources(this.MNUShowEdHint, "MNUShowEdHint");
-            this.MNUShowEdHint.Image = global::srcrepair.gui.Properties.Resources.IconHint;
+            this.MNUShowEdHint.Image = global::srcrepair.gui.Properties.Resources.IconMHint;
             this.MNUShowEdHint.Name = "MNUShowEdHint";
             this.MNUShowEdHint.Click += new System.EventHandler(this.CE_ShowHint_Click);
             // 

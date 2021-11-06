@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 43.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-06 12:23+0100\n"
-"PO-Revision-Date: 2021-11-06 12:24+0100\n"
+"POT-Creation-Date: 2021-11-06 12:39+0100\n"
+"PO-Revision-Date: 2021-11-06 12:39+0100\n"
 "Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -223,23 +223,6 @@ msgid "`IconsPedia <https://www.iconspedia.com/icon/help-8051.html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "hint.png"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "Mazenl77"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid ""
-"`CC Attribution <https://creativecommons.org/licenses/by/4.0/legalcode>`_"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "`IconsPedia <https://www.iconspedia.com/icon/help-1601.html>`__"
-msgstr ""
-
-#: ../../source/legal.rst:1
 msgid "home.png"
 msgstr ""
 
@@ -277,6 +260,11 @@ msgstr ""
 
 #: ../../source/legal.rst:1
 msgid "FatCow"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`CC Attribution <https://creativecommons.org/licenses/by/4.0/legalcode>`_"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -555,7 +543,7 @@ msgstr ""
 msgid "`IconsPedia <https://www.iconspedia.com/icon/santa-hat-17458.html>`__"
 msgstr ""
 
-#: ../../source/legal.rst:68
+#: ../../source/legal.rst:67
 msgid "Libraries licensing"
 msgstr "Лицензирование библиотек"
 
@@ -600,15 +588,15 @@ msgstr ""
 msgid "`GitHub page <https://github.com/NLog/NLog>`__"
 msgstr ""
 
-#: ../../source/legal.rst:80
+#: ../../source/legal.rst:79
 msgid "Trademarks"
 msgstr "Торговые марки"
 
-#: ../../source/legal.rst:83
+#: ../../source/legal.rst:82
 msgid "Valve"
 msgstr ""
 
-#: ../../source/legal.rst:85
+#: ../../source/legal.rst:84
 msgid ""
 "Valve, the Valve logo, Half-Life, the Half-Life logo, the Lambda logo, "
 "Steam, the Steam logo, Team Fortress, the Team Fortress logo, Opposing "
@@ -625,11 +613,11 @@ msgstr ""
 "торговыми марками и/или зарегистрированными торговыми марками Корпорации "
 "Valve."
 
-#: ../../source/legal.rst:88
+#: ../../source/legal.rst:87
 msgid "Microsoft"
 msgstr ""
 
-#: ../../source/legal.rst:90
+#: ../../source/legal.rst:89
 msgid ""
 "Microsoft, Windows are trademarks and/or registered trademarks of Microsoft "
 "Corporation."
@@ -637,10 +625,10 @@ msgstr ""
 "Microsoft, Windows являются торговыми марками и/или зарегистрированными "
 "торговыми марками Корпорации Microsoft."
 
-#: ../../source/legal.rst:93
+#: ../../source/legal.rst:92
 msgid "Other"
 msgstr "Прочие"
 
-#: ../../source/legal.rst:95
+#: ../../source/legal.rst:94
 msgid "All other trademarks are property of their respective owners."
 msgstr "Все прочие торговые марки являются собственностью их владельцев."
