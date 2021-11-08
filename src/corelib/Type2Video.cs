@@ -18,6 +18,11 @@ namespace srcrepair.core
     public class Type2Video : CommonVideo, IType2Video
     {
         /// <summary>
+        /// Stores instance of Type2Settings class.
+        /// </summary>
+        private readonly Type2Settings VSettings;
+
+        /// <summary>
         /// Stores full path to video settings file.
         /// </summary>
         protected string VideoFileName;
@@ -27,11 +32,6 @@ namespace srcrepair.core
         /// options for this system.
         /// </summary>
         protected string DefaultsFileName;
-
-        /// <summary>
-        /// Stores instance of Type2Settings class.
-        /// </summary>
-        protected Type2Settings VSettings;
 
         /// <summary>
         /// Stores contents of video settings file.

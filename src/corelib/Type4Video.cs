@@ -17,6 +17,11 @@ namespace srcrepair.core
     public class Type4Video : Type1Video, IType1Video
     {
         /// <summary>
+        /// Stores instance of Type4Settings class.
+        /// </summary>
+        private readonly Type4Settings VSettings;
+
+        /// <summary>
         /// Stores brightness value: ShadowDepthTexture.
         /// </summary>
         protected int _ShadowDepth;
@@ -30,11 +35,6 @@ namespace srcrepair.core
         /// Stores contents of video settings file.
         /// </summary>
         protected List<String> VideoFile;
-
-        /// <summary>
-        /// Stores instance of Type4Settings class.
-        /// </summary>
-        protected new Type4Settings VSettings;
 
         /// <summary>
         /// Gets or sets shadow effects quality video setting.

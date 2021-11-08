@@ -18,7 +18,7 @@ namespace srcrepair.core
         /// <summary>
         /// Stores instance of Type1Settings class.
         /// </summary>
-        protected Type1Settings VSettings;
+        private readonly Type1Settings VSettings;
 
         /// <summary>
         /// Stores model quality: r_rootlod.
