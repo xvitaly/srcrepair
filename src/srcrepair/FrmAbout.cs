@@ -14,7 +14,7 @@ namespace srcrepair.gui
     /// <summary>
     /// Class of form "About".
     /// </summary>
-    partial class FrmAbout : Form
+    public partial class FrmAbout : Form
     {
         /// <summary>
         /// Logger instance for FrmAbout class.
