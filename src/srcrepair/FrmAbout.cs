@@ -47,7 +47,7 @@ namespace srcrepair.gui
         private void FrmAbout_Load(object sender, EventArgs e)
         {
             // Adding information about product version and copyrights...
-            Text = String.Format("About {0}...", CurrentApp.AppProduct);
+            Text = String.Format(Text, CurrentApp.AppProduct);
             AF_ProductName.Text = CurrentApp.AppProduct;
             #if DEBUG
             AF_ProductName.Text += " DEBUG";
