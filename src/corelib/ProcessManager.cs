@@ -94,7 +94,7 @@ namespace srcrepair.core
         public static void StartProcessAndWait(string SAppName, string SParameters)
         {
             // Setting advanced properties...
-            ProcessStartInfo ST = new ProcessStartInfo()
+            ProcessStartInfo ST = new ProcessStartInfo
             {
                 FileName = SAppName,
                 Arguments = SParameters,
