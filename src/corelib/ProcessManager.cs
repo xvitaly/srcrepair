@@ -121,7 +121,7 @@ namespace srcrepair.core
             string Result;
 
             // Setting advanced properties...
-            ProcessStartInfo ST = new ProcessStartInfo()
+            ProcessStartInfo ST = new ProcessStartInfo
             {
                 FileName = SAppName,
                 Arguments = SParameters,
