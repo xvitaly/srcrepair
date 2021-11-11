@@ -28,77 +28,77 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAbout));
-            this.iconApp = new System.Windows.Forms.PictureBox();
-            this.labelProductName = new System.Windows.Forms.Label();
-            this.labelVersion = new System.Windows.Forms.Label();
-            this.labelCompanyName = new System.Windows.Forms.Label();
-            this.textBoxDescription = new System.Windows.Forms.TextBox();
-            this.labelLicense = new System.Windows.Forms.Label();
-            this.labelCopyright = new System.Windows.Forms.Label();
-            this.okButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.iconApp)).BeginInit();
+            this.AF_ProductIcon = new System.Windows.Forms.PictureBox();
+            this.AF_ProductName = new System.Windows.Forms.Label();
+            this.AF_ProductVersion = new System.Windows.Forms.Label();
+            this.AF_CompanyName = new System.Windows.Forms.Label();
+            this.AF_Description = new System.Windows.Forms.TextBox();
+            this.AF_License = new System.Windows.Forms.Label();
+            this.AF_Copyright = new System.Windows.Forms.Label();
+            this.AF_About = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.AF_ProductIcon)).BeginInit();
             this.SuspendLayout();
             // 
-            // iconApp
+            // AF_ProductIcon
             // 
-            resources.ApplyResources(this.iconApp, "iconApp");
-            this.iconApp.Name = "iconApp";
-            this.iconApp.TabStop = false;
+            resources.ApplyResources(this.AF_ProductIcon, "AF_ProductIcon");
+            this.AF_ProductIcon.Name = "AF_ProductIcon";
+            this.AF_ProductIcon.TabStop = false;
             // 
-            // labelProductName
+            // AF_ProductName
             // 
-            resources.ApplyResources(this.labelProductName, "labelProductName");
-            this.labelProductName.Name = "labelProductName";
+            resources.ApplyResources(this.AF_ProductName, "AF_ProductName");
+            this.AF_ProductName.Name = "AF_ProductName";
             // 
-            // labelVersion
+            // AF_ProductVersion
             // 
-            resources.ApplyResources(this.labelVersion, "labelVersion");
-            this.labelVersion.Name = "labelVersion";
+            resources.ApplyResources(this.AF_ProductVersion, "AF_ProductVersion");
+            this.AF_ProductVersion.Name = "AF_ProductVersion";
             // 
-            // labelCompanyName
+            // AF_CompanyName
             // 
-            resources.ApplyResources(this.labelCompanyName, "labelCompanyName");
-            this.labelCompanyName.Name = "labelCompanyName";
+            resources.ApplyResources(this.AF_CompanyName, "AF_CompanyName");
+            this.AF_CompanyName.Name = "AF_CompanyName";
             // 
-            // textBoxDescription
+            // AF_Description
             // 
-            resources.ApplyResources(this.textBoxDescription, "textBoxDescription");
-            this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.ReadOnly = true;
-            this.textBoxDescription.TabStop = false;
+            resources.ApplyResources(this.AF_Description, "AF_Description");
+            this.AF_Description.Name = "AF_Description";
+            this.AF_Description.ReadOnly = true;
+            this.AF_Description.TabStop = false;
             // 
-            // labelLicense
+            // AF_License
             // 
-            resources.ApplyResources(this.labelLicense, "labelLicense");
-            this.labelLicense.Name = "labelLicense";
+            resources.ApplyResources(this.AF_License, "AF_License");
+            this.AF_License.Name = "AF_License";
             // 
-            // labelCopyright
+            // AF_Copyright
             // 
-            resources.ApplyResources(this.labelCopyright, "labelCopyright");
-            this.labelCopyright.Name = "labelCopyright";
+            resources.ApplyResources(this.AF_Copyright, "AF_Copyright");
+            this.AF_Copyright.Name = "AF_Copyright";
             // 
-            // okButton
+            // AF_About
             // 
-            this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            resources.ApplyResources(this.okButton, "okButton");
-            this.okButton.Name = "okButton";
-            this.okButton.UseVisualStyleBackColor = true;
-            this.okButton.Click += new System.EventHandler(this.OkButton_Click);
+            this.AF_About.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.AF_About, "AF_About");
+            this.AF_About.Name = "AF_About";
+            this.AF_About.UseVisualStyleBackColor = true;
+            this.AF_About.Click += new System.EventHandler(this.OkButton_Click);
             // 
             // FrmAbout
             // 
-            this.AcceptButton = this.okButton;
+            this.AcceptButton = this.AF_About;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.okButton;
-            this.Controls.Add(this.okButton);
-            this.Controls.Add(this.labelCopyright);
-            this.Controls.Add(this.labelLicense);
-            this.Controls.Add(this.textBoxDescription);
-            this.Controls.Add(this.labelCompanyName);
-            this.Controls.Add(this.labelVersion);
-            this.Controls.Add(this.labelProductName);
-            this.Controls.Add(this.iconApp);
+            this.CancelButton = this.AF_About;
+            this.Controls.Add(this.AF_About);
+            this.Controls.Add(this.AF_Copyright);
+            this.Controls.Add(this.AF_License);
+            this.Controls.Add(this.AF_Description);
+            this.Controls.Add(this.AF_CompanyName);
+            this.Controls.Add(this.AF_ProductVersion);
+            this.Controls.Add(this.AF_ProductName);
+            this.Controls.Add(this.AF_ProductIcon);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -107,7 +107,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.FrmAbout_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.iconApp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AF_ProductIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,14 +115,14 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox iconApp;
-        private System.Windows.Forms.Label labelProductName;
-        private System.Windows.Forms.Label labelVersion;
-        private System.Windows.Forms.Label labelCompanyName;
-        private System.Windows.Forms.TextBox textBoxDescription;
-        private System.Windows.Forms.Label labelLicense;
-        private System.Windows.Forms.Label labelCopyright;
-        private System.Windows.Forms.Button okButton;
+        private System.Windows.Forms.PictureBox AF_ProductIcon;
+        private System.Windows.Forms.Label AF_ProductName;
+        private System.Windows.Forms.Label AF_ProductVersion;
+        private System.Windows.Forms.Label AF_CompanyName;
+        private System.Windows.Forms.TextBox AF_Description;
+        private System.Windows.Forms.Label AF_License;
+        private System.Windows.Forms.Label AF_Copyright;
+        private System.Windows.Forms.Button AF_About;
 
     }
 }

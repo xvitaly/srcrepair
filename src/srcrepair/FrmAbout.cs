@@ -48,18 +48,18 @@ namespace srcrepair.gui
         {
             // Adding information about product version and copyrights...
             Text = String.Format("About {0}...", CurrentApp.AppProduct);
-            labelProductName.Text = CurrentApp.AppProduct;
+            AF_ProductName.Text = CurrentApp.AppProduct;
             #if DEBUG
-            labelProductName.Text += " DEBUG";
+            AF_ProductName.Text += " DEBUG";
             #endif
-            labelVersion.Text = String.Format("Version: {0}", CurrentApp.AppVersion);
-            labelCopyright.Text = CurrentApp.AppCopyright;
-            labelCompanyName.Text = CurrentApp.AppCompany;
+            AF_ProductVersion.Text = String.Format("Version: {0}", CurrentApp.AppVersion);
+            AF_Copyright.Text = CurrentApp.AppCopyright;
+            AF_CompanyName.Text = CurrentApp.AppCompany;
 
             // Checking for the New Year eve...
             if (CurrentApp.IsNewYear)
             {
-                iconApp.Image = Properties.Resources.IconXmas;
+                AF_ProductIcon.Image = Properties.Resources.IconXmas;
             }
         }
     }

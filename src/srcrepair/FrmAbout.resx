@@ -117,11 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="iconApp.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AF_ProductIcon.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="iconApp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="AF_ProductIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAG4AAABuCAYAAADGWyb7AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAABu
         ugAAbroB1t6xFwAAAAd0SU1FB+EIHwwgCcyEC+0AABXWSURBVHhe7V0HeFTFFo70GqpAQichAgmhgzya
@@ -221,138 +221,138 @@
         QmCC
 </value>
   </data>
-  <data name="iconApp.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AF_ProductIcon.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 36</value>
   </data>
-  <data name="iconApp.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AF_ProductIcon.Size" type="System.Drawing.Size, System.Drawing">
     <value>113, 105</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="iconApp.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+  <data name="AF_ProductIcon.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>CenterImage</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="iconApp.TabIndex" type="System.Int32, mscorlib">
+  <data name="AF_ProductIcon.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;iconApp.Name" xml:space="preserve">
-    <value>iconApp</value>
+  <data name="&gt;&gt;AF_ProductIcon.Name" xml:space="preserve">
+    <value>AF_ProductIcon</value>
   </data>
-  <data name="&gt;&gt;iconApp.Type" xml:space="preserve">
+  <data name="&gt;&gt;AF_ProductIcon.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;iconApp.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AF_ProductIcon.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;iconApp.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AF_ProductIcon.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <metadata name="labelProductName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AF_ProductName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="labelProductName.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="AF_ProductName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 14pt</value>
   </data>
-  <data name="labelProductName.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AF_ProductName.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 9</value>
   </data>
-  <data name="labelProductName.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AF_ProductName.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 24</value>
   </data>
-  <data name="labelProductName.TabIndex" type="System.Int32, mscorlib">
+  <data name="AF_ProductName.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="labelProductName.Text" xml:space="preserve">
+  <data name="AF_ProductName.Text" xml:space="preserve">
     <value>%PRODUCT_NAME%</value>
   </data>
-  <data name="labelProductName.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="AF_ProductName.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="&gt;&gt;labelProductName.Name" xml:space="preserve">
-    <value>labelProductName</value>
+  <data name="&gt;&gt;AF_ProductName.Name" xml:space="preserve">
+    <value>AF_ProductName</value>
   </data>
-  <data name="&gt;&gt;labelProductName.Type" xml:space="preserve">
+  <data name="&gt;&gt;AF_ProductName.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelProductName.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AF_ProductName.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;labelProductName.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AF_ProductName.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="labelVersion.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AF_ProductVersion.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="labelVersion.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AF_ProductVersion.Location" type="System.Drawing.Point, System.Drawing">
     <value>131, 36</value>
   </data>
-  <data name="labelVersion.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AF_ProductVersion.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 16</value>
   </data>
-  <data name="labelVersion.TabIndex" type="System.Int32, mscorlib">
+  <data name="AF_ProductVersion.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="labelVersion.Text" xml:space="preserve">
+  <data name="AF_ProductVersion.Text" xml:space="preserve">
     <value>%APPVERSION%</value>
   </data>
-  <data name="&gt;&gt;labelVersion.Name" xml:space="preserve">
-    <value>labelVersion</value>
+  <data name="&gt;&gt;AF_ProductVersion.Name" xml:space="preserve">
+    <value>AF_ProductVersion</value>
   </data>
-  <data name="&gt;&gt;labelVersion.Type" xml:space="preserve">
+  <data name="&gt;&gt;AF_ProductVersion.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelVersion.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AF_ProductVersion.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;labelVersion.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AF_ProductVersion.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="labelCompanyName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AF_CompanyName.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="labelCompanyName.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AF_CompanyName.Location" type="System.Drawing.Point, System.Drawing">
     <value>131, 52</value>
   </data>
-  <data name="labelCompanyName.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AF_CompanyName.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 14</value>
   </data>
-  <data name="labelCompanyName.TabIndex" type="System.Int32, mscorlib">
+  <data name="AF_CompanyName.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="labelCompanyName.Text" xml:space="preserve">
+  <data name="AF_CompanyName.Text" xml:space="preserve">
     <value>%COMPANY_NAME%</value>
   </data>
-  <data name="&gt;&gt;labelCompanyName.Name" xml:space="preserve">
-    <value>labelCompanyName</value>
+  <data name="&gt;&gt;AF_CompanyName.Name" xml:space="preserve">
+    <value>AF_CompanyName</value>
   </data>
-  <data name="&gt;&gt;labelCompanyName.Type" xml:space="preserve">
+  <data name="&gt;&gt;AF_CompanyName.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelCompanyName.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AF_CompanyName.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;labelCompanyName.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AF_CompanyName.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="textBoxDescription.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AF_Description.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="textBoxDescription.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AF_Description.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 189</value>
   </data>
-  <data name="textBoxDescription.Multiline" type="System.Boolean, mscorlib">
+  <data name="AF_Description.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="textBoxDescription.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+  <data name="AF_Description.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Vertical</value>
   </data>
-  <data name="textBoxDescription.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AF_Description.Size" type="System.Drawing.Size, System.Drawing">
     <value>241, 91</value>
   </data>
-  <data name="textBoxDescription.TabIndex" type="System.Int32, mscorlib">
+  <data name="AF_Description.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="textBoxDescription.Text" xml:space="preserve">
+  <data name="AF_Description.Text" xml:space="preserve">
     <value>Author: Vitaly Zaitsev (vitaly@easycoding.org)
 
 Special thanks to:
@@ -399,97 +399,97 @@ SRC Repair's icon by Lopagof (https://lopagof.deviantart.com). Licensed under th
  - DotNetZip (MPL license + zlib license);
  - NLog (BSD license).</value>
   </data>
-  <data name="&gt;&gt;textBoxDescription.Name" xml:space="preserve">
-    <value>textBoxDescription</value>
+  <data name="&gt;&gt;AF_Description.Name" xml:space="preserve">
+    <value>AF_Description</value>
   </data>
-  <data name="&gt;&gt;textBoxDescription.Type" xml:space="preserve">
+  <data name="&gt;&gt;AF_Description.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBoxDescription.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AF_Description.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBoxDescription.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AF_Description.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="labelLicense.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AF_License.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="labelLicense.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AF_License.Location" type="System.Drawing.Point, System.Drawing">
     <value>131, 72</value>
   </data>
-  <data name="labelLicense.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AF_License.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 69</value>
   </data>
-  <data name="labelLicense.TabIndex" type="System.Int32, mscorlib">
+  <data name="AF_License.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="labelLicense.Text" xml:space="preserve">
+  <data name="AF_License.Text" xml:space="preserve">
     <value>Licensed under the terms of GNU GPLv3+ (except for the graphic assets; get more info in the help system).</value>
   </data>
-  <data name="&gt;&gt;labelLicense.Name" xml:space="preserve">
-    <value>labelLicense</value>
+  <data name="&gt;&gt;AF_License.Name" xml:space="preserve">
+    <value>AF_License</value>
   </data>
-  <data name="&gt;&gt;labelLicense.Type" xml:space="preserve">
+  <data name="&gt;&gt;AF_License.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelLicense.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AF_License.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;labelLicense.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AF_License.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="labelCopyright.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AF_Copyright.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="labelCopyright.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AF_Copyright.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 152</value>
   </data>
-  <data name="labelCopyright.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AF_Copyright.Size" type="System.Drawing.Size, System.Drawing">
     <value>241, 34</value>
   </data>
-  <data name="labelCopyright.TabIndex" type="System.Int32, mscorlib">
+  <data name="AF_Copyright.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="labelCopyright.Text" xml:space="preserve">
+  <data name="AF_Copyright.Text" xml:space="preserve">
     <value>%COPYRIGHT%</value>
   </data>
-  <data name="&gt;&gt;labelCopyright.Name" xml:space="preserve">
-    <value>labelCopyright</value>
+  <data name="&gt;&gt;AF_Copyright.Name" xml:space="preserve">
+    <value>AF_Copyright</value>
   </data>
-  <data name="&gt;&gt;labelCopyright.Type" xml:space="preserve">
+  <data name="&gt;&gt;AF_Copyright.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelCopyright.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AF_Copyright.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;labelCopyright.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AF_Copyright.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="okButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AF_About.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="okButton.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AF_About.Location" type="System.Drawing.Point, System.Drawing">
     <value>89, 297</value>
   </data>
-  <data name="okButton.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AF_About.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 23</value>
   </data>
-  <data name="okButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="AF_About.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="okButton.Text" xml:space="preserve">
+  <data name="AF_About.Text" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="&gt;&gt;okButton.Name" xml:space="preserve">
-    <value>okButton</value>
+  <data name="&gt;&gt;AF_About.Name" xml:space="preserve">
+    <value>AF_About</value>
   </data>
-  <data name="&gt;&gt;okButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;AF_About.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;okButton.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AF_About.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;okButton.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AF_About.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
