@@ -7,7 +7,6 @@
 using System;
 using System.Windows.Forms;
 using srcrepair.core;
-using NLog;
 
 namespace srcrepair.gui
 {
@@ -16,11 +15,6 @@ namespace srcrepair.gui
     /// </summary>
     public partial class FrmAbout : Form
     {
-        /// <summary>
-        /// Logger instance for FrmAbout class.
-        /// </summary>
-        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
-
         /// <summary>
         /// FrmAbout class constructor.
         /// </summary>
