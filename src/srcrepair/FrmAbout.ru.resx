@@ -219,6 +219,6 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>О программе {0}</value>
+    <value>О программе</value>
   </data>
 </root>
