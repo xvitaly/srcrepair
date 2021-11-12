@@ -48,9 +48,6 @@ namespace srcrepair.gui
         {
             // Adding information about product version and copyrights...
             AF_ProductName.Text = CurrentApp.AppProduct;
-            #if DEBUG
-            AF_ProductName.Text += " DEBUG";
-            #endif
             AF_ProductVersion.Text = String.Format("Version: {0}", CurrentApp.AppVersion);
             AF_Copyright.Text = CurrentApp.AppCopyright;
             AF_CompanyName.Text = CurrentApp.AppCompany;
