@@ -216,10 +216,9 @@
             this.MNUSep3 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUOpinion = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUReportBug = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUSteamGroup = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUShowLog = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep4 = new System.Windows.Forms.ToolStripSeparator();
-            this.MNUSteamGroup = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNUSep5 = new System.Windows.Forms.ToolStripSeparator();
             this.MNUAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusBar = new System.Windows.Forms.StatusStrip();
             this.SB_Status = new System.Windows.Forms.ToolStripStatusLabel();
@@ -1815,10 +1814,9 @@
             this.MNUSep3,
             this.MNUOpinion,
             this.MNUReportBug,
+            this.MNUSteamGroup,
             this.MNUShowLog,
             this.MNUSep4,
-            this.MNUSteamGroup,
-            this.MNUSep5,
             this.MNUAbout});
             this.HelpMNU.Name = "HelpMNU";
             resources.ApplyResources(this.HelpMNU, "HelpMNU");
@@ -1856,6 +1854,13 @@
             resources.ApplyResources(this.MNUReportBug, "MNUReportBug");
             this.MNUReportBug.Click += new System.EventHandler(this.MNUReportBug_Click);
             // 
+            // MNUSteamGroup
+            // 
+            this.MNUSteamGroup.Image = global::srcrepair.gui.Properties.Resources.IconSteam;
+            this.MNUSteamGroup.Name = "MNUSteamGroup";
+            resources.ApplyResources(this.MNUSteamGroup, "MNUSteamGroup");
+            this.MNUSteamGroup.Click += new System.EventHandler(this.MNUSteamGroup_Click);
+            // 
             // MNUShowLog
             // 
             this.MNUShowLog.Image = global::srcrepair.gui.Properties.Resources.IconNotebook;
@@ -1867,18 +1872,6 @@
             // 
             this.MNUSep4.Name = "MNUSep4";
             resources.ApplyResources(this.MNUSep4, "MNUSep4");
-            // 
-            // MNUSteamGroup
-            // 
-            this.MNUSteamGroup.Image = global::srcrepair.gui.Properties.Resources.IconSteam;
-            this.MNUSteamGroup.Name = "MNUSteamGroup";
-            resources.ApplyResources(this.MNUSteamGroup, "MNUSteamGroup");
-            this.MNUSteamGroup.Click += new System.EventHandler(this.MNUSteamGroup_Click);
-            // 
-            // MNUSep5
-            // 
-            this.MNUSep5.Name = "MNUSep5";
-            resources.ApplyResources(this.MNUSep5, "MNUSep5");
             // 
             // MNUAbout
             // 
@@ -2200,7 +2193,6 @@
         private System.Windows.Forms.ComboBox HD_HSel;
         private System.Windows.Forms.Label L_HD_HSel;
         private System.Windows.Forms.Label HD_LastUpdate;
-        private System.Windows.Forms.ToolStripSeparator MNUSep5;
         private System.Windows.Forms.TextBox GT_LaunchOptions;
         private System.Windows.Forms.Label L_GT_LaunchOptions;
         private System.Windows.Forms.ToolStripStatusLabel SB_SteamID;
