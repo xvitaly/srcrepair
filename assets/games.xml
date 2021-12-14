@@ -194,14 +194,14 @@
     </Game>
     <Game Name="Zombie Panic! Source">
         <Enabled>1</Enabled>
-        <DirName>Source SDK Base 2007</DirName>
+        <DirName>Zombie Panic Source</DirName>
         <SmallName>zps</SmallName>
         <VFDir>zps</VFDir>
         <UserDir>0</UserDir>
         <HUDsAvail>0</HUDsAvail>
         <SID>17500</SID>
         <SVer>1</SVer>
-        <Executable>hl2.exe</Executable>
+        <Executable>zps.exe</Executable>
     </Game>
     <Game Name="Half-Life: Source">
         <Enabled>1</Enabled>
