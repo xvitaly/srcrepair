@@ -11,9 +11,9 @@
         <Hash2>b1beb0720fc1293ae7087b19c9afce56dce95c089f15b31a9112e6d1b24c690b5741e5081b431ae038dd3d59039d9324056b46b749f531ee778cd6ff5a322f74</Hash2>
     </Application>
     <GameDB>
-        <Version>7</Version>
+        <Version>8</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/games.xml</URL>
-        <Hash2>01eb8ed9ce0d4c12597d951014d3ff06d030c77ddce7ad4ceb0afda7a9ab8728c6ee64c6cbecd3bab576ff010101fdf45a77d2872acd06e7fa731bc3ce9768bd</Hash2>
+        <Hash2>81e693209d0be3be1cbefe0816ecf862c29098b2ff7830a117bec6d2f5bd882c570296b4bafa7d34b726797e3039a7d74c9cb062e9d9b6530163722b4d64995c</Hash2>
     </GameDB>
     <HUDDB>
         <Version>37</Version>
