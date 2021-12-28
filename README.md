@@ -21,13 +21,13 @@ sprays into the game with one click.
 
 **License**: [GNU GPL version 3](COPYING).
 
-**Supported OS**: Windows 7 SP1, 8.1, 10 (all editions except Starter), GNU/Linux (mono), MacOS X (mono).
+**Supported OS**: Windows 7 SP1, 8.1, 10, 11, GNU/Linux (mono), MacOS X (mono).
 
 **Supported platforms**: x86, x64.
 
 **Dependencies on Windows**: [Microsoft .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) or above.
 
-**Dependencies on other OS**: [Mono 4.2.x](http://www.mono-project.com/download/) or above.
+**Dependencies on other OS**: [Mono 6.12](https://www.mono-project.com/download/) or above.
 
 # Downloads
 
