@@ -11,6 +11,7 @@ on:
     branches:
     - 'master'
     - 'dev'
+    - 'release/*'
   pull_request:
     branches:
     - '*'
