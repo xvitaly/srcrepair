@@ -9,7 +9,7 @@ rem
 title Building SRC Repair release binaries...
 
 set GPGKEY=A989AAAA
-set RELVER=433
+set RELVER=440
 
 echo Removing previous build results...
 if exist results rd /S /Q results
