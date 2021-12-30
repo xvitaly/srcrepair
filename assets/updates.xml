@@ -23,16 +23,16 @@
     <CfgDB>
         <Version>17</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/configs.xml</URL>
-        <Hash2>b837620066ece9d2a0070f8d0a2308a80075c5a30c3cc7992cb3bd917ff21e6a0dba205327f087f7bdace9b1a307e8f89a06194b53299aae864fb558fa0da74d</Hash2>
+        <Hash2>ac337a84b7a8ff0175d3456eed336a4e810074671e3313dc16515413252a40e4e2160f9d2d23ff6b48cf6b0948275736186098b7fdba73269fe2d4c960e8d35a</Hash2>
     </CfgDB>
     <ClnDB>
         <Version>6</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/cleanup.xml</URL>
-        <Hash2>fb3fb6caf13cc178c3f3b4f747d7a2bb12944a772d8d2c66cca466c716be9fcc3c0bdd06f31635d8c8f52cd9c612313da193b798f3bd2a7398e26a462ff18432</Hash2>
+        <Hash2>f311327756cb5c37a9af573611bd563f9567a4d2183d7f0ecf93cb2c3691bddb79f8db12dcc0f0e9900638ded12c3fc393c9c5a762c7c9e972cdcffe8b79e148</Hash2>
     </ClnDB>
     <PlgDB>
         <Version>2</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/plugins.xml</URL>
-        <Hash2>cdc4e7d000f6b507ee3156ae7d1e8bf41fbfe6c0eb463aff546b0eddca67e784046c6123bf81c4c14aff87b9dae63127979440dc7d8e503309d637e5ee8a7a06</Hash2>
+        <Hash2>8ab6ada1727fcff2d1d8375e98fd36a61f72890e3323041877a51cd3bf1fa7ca4a4059ba0458cec36a683d1148c5ff90af85742313dbac881a0bcde1a16a1724</Hash2>
     </PlgDB>
 </Updates>
