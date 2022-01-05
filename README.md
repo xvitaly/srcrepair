@@ -3,7 +3,7 @@
 [![GitHub version](https://img.shields.io/github/v/release/xvitaly/srcrepair?sort=semver&color=brightgreen&logo=git&logoColor=white)](https://github.com/xvitaly/srcrepair/releases)
 [![SourceForge downloads](https://www.easycoding.org/files/images/sf_downloads.svg)](https://github.com/xvitaly/srcrepair/releases)
 [![Github downloads](https://img.shields.io/github/downloads/xvitaly/srcrepair/total.svg?label=GH%20downloads&logo=github&logoColor=white)](https://github.com/xvitaly/srcrepair/releases)
-[![FPS-config installations](https://img.shields.io/github/downloads/EasyCoding/tf2cfgs/total.svg?label=FPS%20configs&logo=sourceengine&logoColor=white)](https://github.com/xvitaly/srcrepair/releases)
+[![FPS-config installations](https://img.shields.io/github/downloads/EasyCoding/tf2cfgs/total.svg?label=FPS%20configs&logo=sourceengine&logoColor=white)](https://github.com/EasyCoding/tf2cfgs/releases)
 [![HUD installations](https://img.shields.io/github/downloads/EasyCoding/tf2huds/total.svg?label=HUDs&logo=pinboard&logoColor=white)](https://github.com/xvitaly/srcrepair/releases)
 [![AppVeyor status](https://ci.appveyor.com/api/projects/status/9r2yma3aab972blf?svg=true)](https://ci.appveyor.com/project/xvitaly/srcrepair)
 [![Linux CI status](https://github.com/xvitaly/srcrepair/actions/workflows/linux.yml/badge.svg)](https://github.com/xvitaly/srcrepair/actions/workflows/linux.yml)
