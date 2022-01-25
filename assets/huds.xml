@@ -16,7 +16,7 @@
         <RepoPath>https://github.com/Sevin7/7HUD</RepoPath>
         <Hash2>dcb4dee830b753a1d2c9e25aa5df428dbf46608c1091658cdf3ae9957e3f030cf99b68be4854262c83d8d9f19b966fe0a0d1490a7c47265017993629d1b8892c</Hash2>
         <LastUpdate>1624904633</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=261</Site>
+        <Site>https://huds.tf/site/s-7HUD</Site>
         <ArchiveDir>7HUD-master</ArchiveDir>
         <InstallDir>7hud</InstallDir>
     </HUD>
@@ -31,7 +31,7 @@
         <RepoPath>https://github.com/fblue/broeselhud_blue</RepoPath>
         <Hash2>bf856f3e41f34c924bc4327f3eeade3118f4bba55d95388bbe8d0356ac2a71ad705ac194e29178f7789eb32873d7bcc7024d6373d877067fb206bc5a0e216aa8</Hash2>
         <LastUpdate>1522659948</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=217</Site>
+        <Site>https://huds.tf/site/s-broeselhud-blue</Site>
         <ArchiveDir>broeselhud_blue-master</ArchiveDir>
         <InstallDir>broeselhudblue</InstallDir>
     </HUD>
@@ -46,7 +46,7 @@
         <RepoPath>null</RepoPath>
         <Hash2>7b8a3ef7c23bcdd24606d58f551bc3ce7b043db4a5b8de686c23ae04fbbed846db0c6b84f32c71beed6647bced86f69b359b315956c9de3ea2a48865bac54cc4</Hash2>
         <LastUpdate>1635603197</LastUpdate>
-        <Site>http://toonhud.com/</Site>
+        <Site>https://toonhud.com/</Site>
         <ArchiveDir>toonhud</ArchiveDir>
         <InstallDir>toonhud</InstallDir>
     </HUD>
@@ -61,7 +61,7 @@
         <RepoPath>https://github.com/TheStaticVoid/voidhud2.0</RepoPath>
         <Hash2>f797c6033f698e1a3c3d9131597be4b6bd0ccc8d4a2c90301044220a748404afd6d716a7e01133a241236730a07e72d0fdf2744962689e9dd8d3fb0e7b0a755a</Hash2>
         <LastUpdate>1598210316</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=226</Site>
+        <Site>https://huds.tf/site/s-VoidHUD-Classic</Site>
         <ArchiveDir>VoidHUD2.0-master</ArchiveDir>
         <InstallDir>voidhud</InstallDir>
     </HUD>
@@ -76,7 +76,7 @@
         <RepoPath>https://github.com/n0kk/ahud</RepoPath>
         <Hash2>1cab21f1c8b59bcb47c719a3c5799b0b03b4bedf5bc74f7cb855a284b994d3672b75c7098952b283039a6758d1a9751da990883df329d5d039c61e5f9d1813d6</Hash2>
         <LastUpdate>1605073284</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=191</Site>
+        <Site>https://huds.tf/site/s-ahud</Site>
         <ArchiveDir>ahud-master</ArchiveDir>
         <InstallDir>ahud</InstallDir>
     </HUD>
@@ -91,7 +91,7 @@
         <RepoPath>https://github.com/bw-/bwhud</RepoPath>
         <Hash2>ae823bbe0af1995c8f8e0587342e2a7dc0e6de13849d31288d18eba2699762c980c3e3ebdb9426aeadbe2495d67f6bf37728c8c09eb746033c7ff2e60b7a305f</Hash2>
         <LastUpdate>1522281493</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=224</Site>
+        <Site>https://huds.tf/site/s-bwhud</Site>
         <ArchiveDir>bwhud-master</ArchiveDir>
         <InstallDir>bwhud</InstallDir>
     </HUD>
@@ -106,7 +106,7 @@
         <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
         <Hash2>2e4c1c4ee6c19d2dadbd9b4e04721cf6475bf902c6ae4825f39c78f0754cec33673ae96f228f508884431d9a4838e17c3d7e6f7bf42091f35dfec031e2f103bf</Hash2>
         <LastUpdate>1633750820</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=207</Site>
+        <Site>https://huds.tf/site/s-budhud</Site>
         <ArchiveDir>budhud-master</ArchiveDir>
         <InstallDir>budhud</InstallDir>
     </HUD>
@@ -121,7 +121,7 @@
         <RepoPath>https://github.com/Eniere/idhud</RepoPath>
         <Hash2>e187dccfac513ba7d6af26e7a959138ed440d5d5ec7a5744d39396f9ae3143bc182637912f6b7290a477c7850f69401a98b28723ab62d4e9715546b08c315925</Hash2>
         <LastUpdate>1607761003</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=276</Site>
+        <Site>https://huds.tf/site/s-Improved-default-HUD</Site>
         <ArchiveDir>idhud-master</ArchiveDir>
         <InstallDir>idhud</InstallDir>
     </HUD>
@@ -136,7 +136,7 @@
         <RepoPath>https://github.com/Jotunn/KBNHud</RepoPath>
         <Hash2>017356192d1acf1a50d46b3cb9a3182f7dbf11deb914ecdea6a100e7c4ef00ea4201e84550be141d6e01f9bd405547f5fda71e541e740bedc6305e6c6768ad84</Hash2>
         <LastUpdate>1639280276</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=271</Site>
+        <Site>https://huds.tf/site/s-KBNHud</Site>
         <ArchiveDir>KBNHud-master</ArchiveDir>
         <InstallDir>kbnhud</InstallDir>
     </HUD>
@@ -151,7 +151,7 @@
         <RepoPath>https://github.com/raysfire/rayshud</RepoPath>
         <Hash2>650cda26664e4bcac9e1a0fdcffe8755e6b008876d671d4a873b5f3f12aecc70fdd1d91959b9b5f1d8231dbef8a01db695970b8b49fd5f86ec916cf869bf2c04</Hash2>
         <LastUpdate>1639859285</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=254</Site>
+        <Site>https://huds.tf/site/s-rayshud</Site>
         <ArchiveDir>rayshud-master</ArchiveDir>
         <InstallDir>rayshud</InstallDir>
     </HUD>
@@ -181,7 +181,7 @@
         <RepoPath>https://github.com/MedicodiBiscotti/biscottiHUD</RepoPath>
         <Hash2>46ad610bdb9f82d2740c206b013301934cfd18117d2aac8c0cfbb68b098f41fbe8a8288a7e92a39e3c05a5a15e81035367c32fa76682ae9625c509ceb34df3f3</Hash2>
         <LastUpdate>1577747940</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=236</Site>
+        <Site>https://huds.tf/site/s-biscottiHUD</Site>
         <ArchiveDir>biscottiHUD-master/biscottiHUD</ArchiveDir>
         <InstallDir>biscottihud</InstallDir>
     </HUD>
@@ -196,7 +196,7 @@
         <RepoPath>https://github.com/TheKins/frankenhud</RepoPath>
         <Hash2>b2201a1ebf0d337109d519986e893945b6db6b4e1d41be7966ca95179ffb35207b3941be52cc1e3843968c8cbb25fe6014cc157377fcb70ec8e41e7234c4183b</Hash2>
         <LastUpdate>1630350525</LastUpdate>
-        <Site>https://huds.tf/frankenhud/</Site>
+        <Site>https://huds.tf/site/s-Franken-Hud</Site>
         <ArchiveDir>frankenhud-master/hud_src</ArchiveDir>
         <InstallDir>frankenhud</InstallDir>
     </HUD>
@@ -211,7 +211,7 @@
         <RepoPath>https://github.com/yttrium-tyclief/yayahud</RepoPath>
         <Hash2>eadf73e77499a48765a72a7859c70e07473e165b9f1b956bf7505572b4173118cab3f4f8cc0878abb0e8dd8991cc3d1c0e6746aca39e7188d10c7f07d5f500a1</Hash2>
         <LastUpdate>1555972291</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=265</Site>
+        <Site>https://huds.tf/site/s-yayahud</Site>
         <ArchiveDir>yayahud-master/yayahud</ArchiveDir>
         <InstallDir>yayahud</InstallDir>
     </HUD>
@@ -226,7 +226,7 @@
         <RepoPath>https://github.com/Stochast1c/solarhud</RepoPath>
         <Hash2>5a20571690aa3d0bae777798ac4644c5ecf7bf12d405d9db66b95e9325338b0e275f45ef4ed2192d750b3f72c8fa1fe17d299a52b7766dec4d42c8e73b2a51eb</Hash2>
         <LastUpdate>1578855635</LastUpdate>
-        <Site>https://huds.tf/solarhud/</Site>
+        <Site>https://github.com/Stochast1c/solarhud</Site>
         <ArchiveDir>solarhud-master</ArchiveDir>
         <InstallDir>solarhud</InstallDir>
     </HUD>
@@ -241,7 +241,7 @@
         <RepoPath>https://github.com/TheStaticVoid/boredHUD</RepoPath>
         <Hash2>2e53798e22c92b204c09ed54b4f25e9134e3bed7c48afc369f5f454c13e4489f4334a2dd262d2b1063027604a10f479582eeb611a9722ced4a58786401bad560</Hash2>
         <LastUpdate>1598389290</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=209</Site>
+        <Site>https://huds.tf/site/s-boredHUD</Site>
         <ArchiveDir>boredHUD-master</ArchiveDir>
         <InstallDir>boredhud</InstallDir>
     </HUD>
@@ -256,7 +256,7 @@
         <RepoPath>https://github.com/CriticalFlaw/FlawHUD</RepoPath>
         <Hash2>b364bfcc137e2fa498d37e16e9ebd6dc5d5675deb894b662baa0ee7bc931f9ef19f685cf8a60ff00d08cd363b5a846c02be6956b476cb0c3f1d152c5286482b8</Hash2>
         <LastUpdate>1642917319</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=252</Site>
+        <Site>https://huds.tf/site/s-FlawHUD</Site>
         <ArchiveDir>FlawHUD-master</ArchiveDir>
         <InstallDir>flawhud</InstallDir>
     </HUD>
@@ -271,7 +271,7 @@
         <RepoPath>https://github.com/Hypnootize/m0rehud</RepoPath>
         <Hash2>b87b470193252d8ab130bb6ab3bce0514ec451536f8081469cb31b6d6c75a62a944ea9ccb6b0b4c04060087b7c11360d8bcb545a381736f6e49af3fdacf453d6</Hash2>
         <LastUpdate>1638638897</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=248</Site>
+        <Site>https://huds.tf/site/s-m0re-Hud</Site>
         <ArchiveDir>m0rehud-master/m0rehud</ArchiveDir>
         <InstallDir>m0rehud</InstallDir>
     </HUD>
@@ -286,7 +286,7 @@
         <RepoPath>https://github.com/nimtra/mkHUD</RepoPath>
         <Hash2>ca5e706896da88ab9a543035a44808794e1b626c9c86859f2343cc2ff89384c8a77c74684a9464d4d8775a7cfeca38255d9363ca997f23845a7eff0fd7e4fb70</Hash2>
         <LastUpdate>1619051285</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=231</Site>
+        <Site>https://huds.tf/site/s-mkhud</Site>
         <ArchiveDir>mkHUD-master</ArchiveDir>
         <InstallDir>mkhud</InstallDir>
     </HUD>
@@ -301,7 +301,7 @@
         <RepoPath>https://github.com/Marblr/mHUD</RepoPath>
         <Hash2>ccf5c1ddd3fc6ab948850a33c4f33a39b58027276120eaf1204099f0bfcb66be9f575cd5d7b277391311af4f0a396de1209dcd27813647841c93da14ebf575c1</Hash2>
         <LastUpdate>1540348335</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=250</Site>
+        <Site>https://huds.tf/site/s-mHUD</Site>
         <ArchiveDir>mHUD-master</ArchiveDir>
         <InstallDir>mhud</InstallDir>
     </HUD>
@@ -316,7 +316,7 @@
         <RepoPath>https://github.com/AsianAntwan/AntsHUD</RepoPath>
         <Hash2>17c88000351700641f267afee02e238a0b4e7be33471f2b704aa5a410536081ecabd44c4537b102a97299e55baf3b2e29e45f99e02ce90b902a8e1c2dc45c5a5</Hash2>
         <LastUpdate>1532634666</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=270</Site>
+        <Site>https://huds.tf/site/s-AntsHUD</Site>
         <ArchiveDir>AntsHUD-master</ArchiveDir>
         <InstallDir>antshud</InstallDir>
     </HUD>
@@ -331,7 +331,7 @@
         <RepoPath>null</RepoPath>
         <Hash2>d86f6aa7f91d4f1ccd62f04dd05d643cab1a2052dae137d22535e4341a6baf16234993273efed09739e14abccb23707d64978df52ac90a43963cb845098d984f</Hash2>
         <LastUpdate>1548695581</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=220</Site>
+        <Site>https://huds.tf/site/s-slimHUD</Site>
         <ArchiveDir>slimHUD</ArchiveDir>
         <InstallDir>slimhud</InstallDir>
     </HUD>
@@ -346,7 +346,7 @@
         <RepoPath>https://github.com/TheRebelCreeper/RebelHud</RepoPath>
         <Hash2>5892046e916af9208d81908685e25709696b4bbd8278fbeab5ababd54410ead34aeb48b04ac9c8241a90068e116470d50fed7aa10bdc229a736026fba71456cb</Hash2>
         <LastUpdate>1547093746</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=240</Site>
+        <Site>https://huds.tf/site/s-RebelHUD</Site>
         <ArchiveDir>RebelHud-master/custom/RebelHud</ArchiveDir>
         <InstallDir>rebelhud</InstallDir>
     </HUD>
@@ -361,7 +361,7 @@
         <RepoPath>https://github.com/Hypnootize/Hypnotize-Hud</RepoPath>
         <Hash2>e7443f3d011e4cd98570495d73f4c509ea53b4e5aec52b5ff090271924b21f768f9f3b59a2b60a84bc82ef5d4024e177651b20f95a4a5827f88bba1973e23ab2</Hash2>
         <LastUpdate>1643061039</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=341</Site>
+        <Site>https://huds.tf/site/s-Hypnotize-Hud</Site>
         <ArchiveDir>Hypnotize-Hud-master/hypnotize hud</ArchiveDir>
         <InstallDir>hypnotizehud</InstallDir>
     </HUD>
@@ -376,7 +376,7 @@
         <RepoPath>https://github.com/MoeLesting/MoesHUD</RepoPath>
         <Hash2>9106f84fa2ab9fabcc053ac7146df65ba7adc969baeb941161734645ed54a3d506864f447fd0b01e58e6c8e8c69ae7b05ee8cb2872667cacd1ea7e8304a25418</Hash2>
         <LastUpdate>1545271840</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=461</Site>
+        <Site>https://huds.tf/site/s-moeshud</Site>
         <ArchiveDir>moeshud-master</ArchiveDir>
         <InstallDir>moeshud</InstallDir>
     </HUD>
@@ -391,7 +391,7 @@
         <RepoPath>https://github.com/MagmaDude/SlagHUD</RepoPath>
         <Hash2>4f84e6e2bf9eade946f71551c5d5eb401df1328592a6510ecda6a1b0f3170c9345926577a7778aa58a52762aa63afbeea8f785a1a68b7f58376a057b9ebb91ae</Hash2>
         <LastUpdate>1523198816</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=652</Site>
+        <Site>https://huds.tf/site/s-SlagHUD</Site>
         <ArchiveDir>SlagHUD-master</ArchiveDir>
         <InstallDir>slaghud</InstallDir>
     </HUD>
@@ -406,7 +406,7 @@
         <RepoPath>https://github.com/Hypnootize/BX-Hud</RepoPath>
         <Hash2>0941154cd50e8ed2318ba6f64d51502cc3e9f4bc9f04c9a89f179b93b63eb9c12671737caa77080522880a90488ff73cddc0448a7329f5701d94ec7ec40d5f3a</Hash2>
         <LastUpdate>1607278606</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=1437</Site>
+        <Site>https://huds.tf/site/s-Bx-Hud</Site>
         <ArchiveDir>BX-Hud-master/BX Hud</ArchiveDir>
         <InstallDir>bxhud</InstallDir>
     </HUD>
@@ -421,7 +421,7 @@
         <RepoPath>https://github.com/Hypnootize/Garm3n-QL</RepoPath>
         <Hash2>48c87fa32fdb037224f9bab9dce3b64ec7baefe750db268c72fe19d660c203b36457010fbbabf4e8c43f4221b5100fea0d21446bfed0957608a14eaf372711a9</Hash2>
         <LastUpdate>1607287821</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=1436</Site>
+        <Site>https://huds.tf/site/s-Garm3n-QL</Site>
         <ArchiveDir>Garm3n-QL-master</ArchiveDir>
         <InstallDir>garm3nql</InstallDir>
     </HUD>
@@ -436,7 +436,7 @@
         <RepoPath>https://github.com/Hypnootize/Deli-Hud</RepoPath>
         <Hash2>767a3251f92b0dc2db505ec14af9267a2915975f6dc597d9ae16e3d9a023e067be5d9f40fb577408aa5b55af73dd24f4643dbf4d8f28b99fa649c8fef5862d7b</Hash2>
         <LastUpdate>1607286259</LastUpdate>
-        <Site>https://huds.tf/forum/showthread.php?tid=1440</Site>
+        <Site>https://huds.tf/site/s-Deli-Hud</Site>
         <ArchiveDir>Deli-Hud-master/Deli Hud Normal</ArchiveDir>
         <InstallDir>delihud</InstallDir>
     </HUD>
