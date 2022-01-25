@@ -455,4 +455,19 @@
         <ArchiveDir>lionHUD-master</ArchiveDir>
         <InstallDir>lionhud</InstallDir>
     </HUD>
+    <HUD>
+        <Name>SunsetHUD</Name>
+        <Game>tf</Game>
+        <IsUpdated>1</IsUpdated>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/sunsethud_9e2e3702.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/sunsethud_9e2e3702.zip</Mirror>
+        <UpURI>https://github.com/Hypnootize/Sunset-Hud/archive/master.zip</UpURI>
+        <Preview>https://www.easycoding.org/files/srcrepair/huds/sunsethud.jpg</Preview>
+        <RepoPath>https://github.com/Hypnootize/Sunset-Hud</RepoPath>
+        <Hash2>d42609fe685bfc5fd4f90d01f732c4b5945ff1916de1f2e6121683dd3421dc6f2bc7f6735ee87fefb679e68de20c70a14a33483cbc213ea37c2e30ce93474cda</Hash2>
+        <LastUpdate>1642964202</LastUpdate>
+        <Site>https://huds.tf/site/s-Sunset-Hud</Site>
+        <ArchiveDir>Sunset-Hud-master/sunsetlight</ArchiveDir>
+        <InstallDir>sunsethud</InstallDir>
+    </HUD>
 </HUDs>
