@@ -485,4 +485,19 @@
         <ArchiveDir>teahudv2-main</ArchiveDir>
         <InstallDir>teahudv2</InstallDir>
     </HUD>
+    <HUD>
+        <Name>ZeHud</Name>
+        <Game>tf</Game>
+        <IsUpdated>1</IsUpdated>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/zehud_625f38f9.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/zehud_625f38f9.zip</Mirror>
+        <UpURI>https://github.com/bo0bsy/ZeHud/archive/master.zip</UpURI>
+        <Preview>https://www.easycoding.org/files/srcrepair/huds/zehud.jpg</Preview>
+        <RepoPath>https://github.com/bo0bsy/ZeHud</RepoPath>
+        <Hash2>7c14b8dd6177bd4dfe09bae4b60241bc3ac1c534c7ddc87a41a143bb920bbff978cbda67bd1db24e8885fa284475580435e65fc4d78d518d5dcf49500c07a3f4</Hash2>
+        <LastUpdate>1642511669</LastUpdate>
+        <Site>https://huds.tf/site/s-ZeHud</Site>
+        <ArchiveDir>ZeHud-master</ArchiveDir>
+        <InstallDir>zehud</InstallDir>
+    </HUD>
 </HUDs>
