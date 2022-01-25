@@ -249,13 +249,13 @@
         <Name>FlawHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/flawhud_28bf04ad.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/flawhud_28bf04ad.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/flawhud_bec69241.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/flawhud_bec69241.zip</Mirror>
         <UpURI>https://github.com/CriticalFlaw/FlawHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/flawhud.jpg</Preview>
         <RepoPath>https://github.com/CriticalFlaw/FlawHUD</RepoPath>
-        <Hash2>9b485cd7187e31a70fd0589e5c909bc058a8c93c5294f2a327915579ce1bef1bce09b978d94bbc7c19c9982da8cc158066be481ba8fe77630bc4a75e8f7855c1</Hash2>
-        <LastUpdate>1640465447</LastUpdate>
+        <Hash2>b364bfcc137e2fa498d37e16e9ebd6dc5d5675deb894b662baa0ee7bc931f9ef19f685cf8a60ff00d08cd363b5a846c02be6956b476cb0c3f1d152c5286482b8</Hash2>
+        <LastUpdate>1642917319</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=252</Site>
         <ArchiveDir>FlawHUD-master</ArchiveDir>
         <InstallDir>flawhud</InstallDir>
@@ -354,13 +354,13 @@
         <Name>Hypnotize HUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/hypnotizehud_67b8163e.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/hypnotizehud_67b8163e.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/hypnotizehud_39afb2d5.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/hypnotizehud_39afb2d5.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/Hypnotize-Hud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/hypnotizehud.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/Hypnotize-Hud</RepoPath>
-        <Hash2>24c233aa292f674c9fd9c13f72fc85cee6b2d90a1d1ad73fa76707708397f9cd69ab23551720622ad969dd00422dd28b00dcdadc7f511c5bfcb8a599aee55551</Hash2>
-        <LastUpdate>1636565359</LastUpdate>
+        <Hash2>e7443f3d011e4cd98570495d73f4c509ea53b4e5aec52b5ff090271924b21f768f9f3b59a2b60a84bc82ef5d4024e177651b20f95a4a5827f88bba1973e23ab2</Hash2>
+        <LastUpdate>1643061039</LastUpdate>
         <Site>https://huds.tf/forum/showthread.php?tid=341</Site>
         <ArchiveDir>Hypnotize-Hud-master/hypnotize hud</ArchiveDir>
         <InstallDir>hypnotizehud</InstallDir>
