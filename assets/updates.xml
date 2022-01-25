@@ -13,7 +13,7 @@
     <GameDB>
         <Version>8</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/games.xml</URL>
-        <Hash2>81e693209d0be3be1cbefe0816ecf862c29098b2ff7830a117bec6d2f5bd882c570296b4bafa7d34b726797e3039a7d74c9cb062e9d9b6530163722b4d64995c</Hash2>
+        <Hash2>cfb31dfed4fe4f399f585f7ee118e4aaa4b51a2ea85230b55d12bf07b19a17db64457c1dda7686165a1636994a4a602b4eee602a54284926dd5bd82fde90f737</Hash2>
     </GameDB>
     <HUDDB>
         <Version>39</Version>
@@ -23,16 +23,16 @@
     <CfgDB>
         <Version>17</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/configs.xml</URL>
-        <Hash2>ac337a84b7a8ff0175d3456eed336a4e810074671e3313dc16515413252a40e4e2160f9d2d23ff6b48cf6b0948275736186098b7fdba73269fe2d4c960e8d35a</Hash2>
+        <Hash2>649bb984e946952d9452ab778ec6941e3307ae9df2699cc69b520eeddb9ad11083718c834e5b4e3d8291c6578c32b6b13acea21ad0361d452ac607ba6a3f14a4</Hash2>
     </CfgDB>
     <ClnDB>
         <Version>6</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/cleanup.xml</URL>
-        <Hash2>f311327756cb5c37a9af573611bd563f9567a4d2183d7f0ecf93cb2c3691bddb79f8db12dcc0f0e9900638ded12c3fc393c9c5a762c7c9e972cdcffe8b79e148</Hash2>
+        <Hash2>a39b2aedeceb9b5849c3ece95ae9008dfe62c252db32ddc16f3bb552aa18848b85126a86c898684d8f6d159ff203845c75d4a6e590024e7c2c4e0c02ea77d892</Hash2>
     </ClnDB>
     <PlgDB>
         <Version>2</Version>
         <URL>https://www.easycoding.org/files/srcrepair/updates/plugins.xml</URL>
-        <Hash2>8ab6ada1727fcff2d1d8375e98fd36a61f72890e3323041877a51cd3bf1fa7ca4a4059ba0458cec36a683d1148c5ff90af85742313dbac881a0bcde1a16a1724</Hash2>
+        <Hash2>9cfcf5d5837cba630088d65224902a63d06de47b61993ac4032489091fa4315c67e6b8e4841e3f672999885adcdbfced2b311df56df8d29e83c67c0ef71fdc4a</Hash2>
     </PlgDB>
 </Updates>
