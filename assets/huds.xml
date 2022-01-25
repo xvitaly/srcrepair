@@ -470,4 +470,19 @@
         <ArchiveDir>Sunset-Hud-master/sunsetlight</ArchiveDir>
         <InstallDir>sunsethud</InstallDir>
     </HUD>
+    <HUD>
+        <Name>TeaHudv2</Name>
+        <Game>tf</Game>
+        <IsUpdated>1</IsUpdated>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/teahudv2_ebf6da9a.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/teahudv2_ebf6da9a.zip</Mirror>
+        <UpURI>https://github.com/DrinkinTea22/teahudv2/archive/main.zip</UpURI>
+        <Preview>https://www.easycoding.org/files/srcrepair/huds/teahudv2.jpg</Preview>
+        <RepoPath>https://github.com/DrinkinTea22/teahudv2</RepoPath>
+        <Hash2>85cb45ac1bd1e5596ca2c5a518dd0673019452b38b405272d3af3b21253be02f7349455fdb75bb51ba55024744fae5aafa3cbb76e0d92ebf436f5418ed788bac</Hash2>
+        <LastUpdate>1642959531</LastUpdate>
+        <Site>https://huds.tf/site/s-TeaHud-V2--3867</Site>
+        <ArchiveDir>teahudv2-main</ArchiveDir>
+        <InstallDir>teahudv2</InstallDir>
+    </HUD>
 </HUDs>
