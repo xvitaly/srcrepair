@@ -440,4 +440,19 @@
         <ArchiveDir>Deli-Hud-master/Deli Hud Normal</ArchiveDir>
         <InstallDir>delihud</InstallDir>
     </HUD>
+    <HUD>
+        <Name>lionHUD</Name>
+        <Game>tf</Game>
+        <IsUpdated>1</IsUpdated>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/lionhud_bd333d98.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/lionhud_bd333d98.zip</Mirror>
+        <UpURI>https://github.com/Jofre-Problem/lionHUD/archive/master.zip</UpURI>
+        <Preview>https://www.easycoding.org/files/srcrepair/huds/lionhud.jpg</Preview>
+        <RepoPath>https://github.com/Jofre-Problem/lionHUD</RepoPath>
+        <Hash2>7981c53e2da24a254c3fdc7f05af8054c6ba2ecdc65921cc4f707cc1dd99364d26719ec5a9385e7298acde823b6039a92e44d39b03794f66073e9b9ffba3ea37</Hash2>
+        <LastUpdate>1639604763</LastUpdate>
+        <Site>https://huds.tf/site/s-Lion-HUD--3903</Site>
+        <ArchiveDir>lionHUD-master</ArchiveDir>
+        <InstallDir>lionhud</InstallDir>
+    </HUD>
 </HUDs>
