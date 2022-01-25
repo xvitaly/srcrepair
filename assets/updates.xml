@@ -6,9 +6,9 @@
 -->
 <Updates>
     <Application>
-        <Version>43.0.3.0</Version>
-        <URL>https://github.com/xvitaly/srcrepair/releases/download/v43.0.3/srcrepair_433_final.exe</URL>
-        <Hash2>17724df11a45c1a01bb7fa3e1687781b122e705ade85db449c0e6232e4320dc44062e2da5c998ce91f343d2d2f6103e5f01687c67c926945cdba669728a69b30</Hash2>
+        <Version>43.0.4.0</Version>
+        <URL>https://github.com/xvitaly/srcrepair/releases/download/v43.0.4/srcrepair_434_final.exe</URL>
+        <Hash2>b421351a80e417ce54dd7816b7648aa550147e78245eb5d4050b48292193b619bf778a1dbc5e0d6470f12f6fe8c219296187c993386ab1cfa44112685b3e099d</Hash2>
     </Application>
     <GameDB>
         <Version>8</Version>
