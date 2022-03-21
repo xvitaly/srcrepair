@@ -33,7 +33,7 @@ sprays into the game with one click.
 
 Download application (always contains the latest version):
 
-[![Download SRC Repair](https://www.easycoding.org/wp-content/uploads/download-now.png)](https://github.com/xvitaly/srcrepair/releases/latest)
+[![Download SRC Repair](https://www.easycoding.org/wp-content/uploads/download-now.png)](https://github.com/xvitaly/srcrepair/releases/latest/download/srcrepair_434_final.exe)
 
 # Supported games
 
