@@ -11,10 +11,12 @@ on:
     branches:
     - 'master'
     - 'dev'
-    - 'release/*'
+    - 'legacy'
   pull_request:
     branches:
-    - '*'
+    - 'master'
+    - 'dev'
+    - 'legacy'
 
 jobs:
   build:
@@ -22,12 +24,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Install nuget
-      run: |
-        sudo apt-get update
-        sudo apt-get -y install nuget
-    - name: Restore nuget dependencies
+    - name: Fetching sources
+      uses: actions/checkout@v3
+    - name: Updating apt package metadata
+      run: sudo apt-get update
+    - name: Installing nuget
+      run: sudo apt-get -y install nuget
+    - name: Restoring nuget dependencies
       run: nuget restore srcrepair.sln
-    - name: Build project
+    - name: Building project with msbuild
       run: msbuild /p:Configuration=Release srcrepair.sln
