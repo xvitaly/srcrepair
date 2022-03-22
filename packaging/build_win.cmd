@@ -20,7 +20,7 @@ nuget restore
 popd
 
 echo Starting build process using MSBUILD...
-"%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" ..\srcrepair.sln /m /t:Build /p:Configuration=Release /p:TargetFramework=v4.8
+"%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\msbuild.exe" ..\srcrepair.sln /m:1 /t:Build /p:Configuration=Release /p:TargetFramework=v4.8
 
 echo Generating documentation in HTML format...
 mkdir "..\src\srcrepair\bin\Release\help"
@@ -29,23 +29,31 @@ call "build_chm_win.cmd"
 popd
 
 echo Signing binaries...
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\srcrepair.exe
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\kbhelper.exe
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\corelib.dll
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\DotNetZip.dll
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\NLog.dll
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\ru\srcrepair.resources.dll
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\ru\kbhelper.resources.dll
+if "%CI_HASH%" == "" (
+    "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\srcrepair.exe
+    "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\kbhelper.exe
+    "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\corelib.dll
+    "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\DotNetZip.dll
+    "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\NLog.dll
+    "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\ru\srcrepair.resources.dll
+    "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\ru\kbhelper.resources.dll
+)
 
 echo Compiling Installer...
 "%ProgramFiles(x86)%\Inno Setup 6\ISCC.exe" inno\srcrepair.iss
 
 echo Generating archive for non-Windows platforms...
-"%PROGRAMFILES%\7-Zip\7z.exe" a -tzip -mx9 -mm=Deflate -x!*.ico -x!DotNetZip.xml -x!NLog.xml "results\srcrepair_%RELVER%_other.zip" ".\..\src\srcrepair\bin\Release\*"
+if "%CI_HASH%" == "" (
+    "%PROGRAMFILES%\7-Zip\7z.exe" a -tzip -mx9 -mm=Deflate -x!*.ico -x!DotNetZip.xml -x!NLog.xml "results\srcrepair_%RELVER%_other.zip" ".\..\src\srcrepair\bin\Release\*"
+) else (
+    "%PROGRAMFILES%\7-Zip\7z.exe" a -tzip -mx9 -mm=Deflate -x!*.ico -x!DotNetZip.xml -x!NLog.xml "results\snapshot_%CI_HASH%.zip" ".\..\src\srcrepair\bin\Release\*"
+)
 
 echo Signing built artifacts...
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\srcrepair_%RELVER%_setup.exe
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\srcrepair_%RELVER%_other.zip
+if "%CI_HASH%" == "" (
+    "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\srcrepair_%RELVER%_setup.exe
+    "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\srcrepair_%RELVER%_other.zip
+)
 
 echo Removing temporary files and directories...
 rd /S /Q "..\docs\build\doctrees"
