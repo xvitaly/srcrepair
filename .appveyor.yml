@@ -11,7 +11,7 @@ branches:
   only:
   - master
   - dev
-  - /release\/.+/
+  - legacy
 image: Visual Studio 2019
 configuration: Release
 platform: Any CPU

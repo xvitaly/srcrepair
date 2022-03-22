@@ -11,10 +11,12 @@ on:
     branches:
     - 'master'
     - 'dev'
-    - 'release/*'
+    - 'legacy'
   pull_request:
     branches:
-    - '*'
+    - 'master'
+    - 'dev'
+    - 'legacy'
 
 jobs:
   build:
@@ -22,10 +24,11 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Configure MSBuild service
-      uses: microsoft/setup-msbuild@v1.0.2
-    - name: Restore nuget dependencies
+    - name: Fetching sources
+      uses: actions/checkout@v3
+    - name: Configuring msbuild service
+      uses: microsoft/setup-msbuild@v1.1
+    - name: Restoring nuget dependencies
       run: nuget restore srcrepair.sln
-    - name: Build project
+    - name: Building project with msbuild
       run: msbuild /p:Configuration=Release srcrepair.sln
