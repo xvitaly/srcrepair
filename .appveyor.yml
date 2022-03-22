@@ -35,4 +35,4 @@ artifacts:
 - path: packaging\results\snapshot_*.zip
   name: archive
 - path: packaging\results\snapshot_*.exe
-  name: setup
+  name: installer

@@ -11,6 +11,12 @@ title Building SRC Repair release binaries...
 set GPGKEY=A989AAAA
 set RELVER=435
 
+if [%CI_HASH%] == [] (
+    set PREFIX=srcrepair_%RELVER%
+) else (
+    set PREFIX=snapshot_%CI_HASH%
+)
+
 echo Removing previous build results...
 if exist results rd /S /Q results
 
@@ -29,7 +35,7 @@ call "build_chm_win.cmd"
 popd
 
 echo Signing binaries...
-if "%CI_HASH%" == "" (
+if [%CI_HASH%] == [] (
     "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\srcrepair.exe
     "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\kbhelper.exe
     "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\corelib.dll
@@ -43,16 +49,12 @@ echo Compiling Installer...
 "%ProgramFiles(x86)%\Inno Setup 6\ISCC.exe" inno\srcrepair.iss
 
 echo Generating archive for non-Windows platforms...
-if "%CI_HASH%" == "" (
-    "%PROGRAMFILES%\7-Zip\7z.exe" a -tzip -mx9 -mm=Deflate -x!*.ico -x!DotNetZip.xml -x!NLog.xml "results\srcrepair_%RELVER%_other.zip" ".\..\src\srcrepair\bin\Release\*"
-) else (
-    "%PROGRAMFILES%\7-Zip\7z.exe" a -tzip -mx9 -mm=Deflate -x!*.ico -x!DotNetZip.xml -x!NLog.xml "results\snapshot_%CI_HASH%.zip" ".\..\src\srcrepair\bin\Release\*"
-)
+"%PROGRAMFILES%\7-Zip\7z.exe" a -tzip -mx9 -mm=Deflate -x!*.ico -x!DotNetZip.xml -x!NLog.xml "results\%PREFIX%_other.zip" ".\..\src\srcrepair\bin\Release\*"
 
 echo Signing built artifacts...
-if "%CI_HASH%" == "" (
-    "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\srcrepair_%RELVER%_setup.exe
-    "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\srcrepair_%RELVER%_other.zip
+if [%CI_HASH%] == [] (
+    "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\%PREFIX%_setup.exe
+    "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\%PREFIX%_other.zip
 )
 
 echo Removing temporary files and directories...
